@@ -1,0 +1,101 @@
+---
+layout: post
+title: Getting-Started
+description: getting started
+platform: ejmvc
+control: Rotator
+documentation: ug
+---
+
+# Getting Started
+
+This section explains briefly about how to create a Rotator in your ASP.NET MVC application.
+
+## Create your first Rotator in MVC
+
+ASP.NET MVC Rotator provides support to display the provided number of images within your webpage in a rotating manner. Refer the following guidelines to create a Rotator widget for a real-time website banner scenario that has five images that slide automatically. When you click the center button, images slide in a rotating manner and on second click, the rotation stops.
+
+The following screenshot illustrates a Rotator widget.
+
+
+
+{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{:.image }
+
+
+
+
+_Figure_ _3__: Rotator_
+
+Create a Rotator
+
+Essential Studio ASP.NET MVCRotator widget has built-in features such as unobtrusive and flexible APIs. You can easily create the Rotator widget using simple HTML helper as follows.
+
+1. Create a MVC Project and add necessary assemblies, styles, and scripts to it.
+Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
+2. Add the following code example to the corresponding view page to render Rotator. Move the images under the folder ~/Images/rotator.
+
+
+
+
+
+[View]
+
+
+
+&lt;div class="frame"&gt;
+
+    @{Html.EJ().Rotator("content").Items(item =>
+
+    {
+
+      item.Add().ContentTemplate(@&lt;div&gt;
+
+      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled.png")" /&gt;
+
+  &lt;/div&gt;);
+
+      item.Add().ContentTemplate(@&lt;div&gt;
+
+      &lt;a href="~/Views/Home/Index.cshtml"&gt;&lt;/a&gt;
+
+      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled1.png")" /&gt; 
+
+      &lt;/div&gt;);
+
+      item.Add().ContentTemplate(@&lt;div&gt;
+
+      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled2.png")" /&gt;
+
+      &lt;/div&gt;);
+
+      item.Add().ContentTemplate(@&lt;div&gt;
+
+      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled3.png")" /&gt;
+
+      &lt;/div&gt;);
+
+      item.Add().ContentTemplate(@&lt;div&gt;
+
+      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled4.png")" /&gt;
+
+      &lt;/div&gt;);
+
+      }) .SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true).Render();}
+
+
+
+  &lt;/div&gt;
+
+
+
+
+
+3. The following banner is displayed as output.
+
+
+
+{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{:.image }
+
+

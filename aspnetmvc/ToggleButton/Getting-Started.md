@@ -1,0 +1,58 @@
+---
+layout: post
+title: Getting-Started
+description: getting started
+platform: ejmvc
+control: Toggle Button
+documentation: ug
+---
+
+# Getting Started
+
+This section explains briefly about how to create a ToggleButton in your ASP.NET MVC application.
+
+## Create your first Toggle Button in MVC
+
+The Toggle Button control displays both text and images. The text displayed on the Toggle Button is contained in the Text property. The Toggle Button control display images using the SpriteCssClass and ImagePosition properties. The Toggle Buttons has theme support also.
+
+The following screenshot illustrates a Toggle Button control. 
+
+{ ![C:/Users/labuser/AppData/Local/Temp/SNAGHTML9472710.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{:.image }
+
+
+_Figure 1: Toggle Button in OFF state_ 
+
+{ ![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94b6c62.PNG](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{:.image }
+
+
+_Figure 2: Toggle Button in ON state_
+
+
+
+Create a Toggle Button
+
+Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to customize the size, text and images of button.
+
+
+
+1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+2. Add the following code example to the corresponding view page to render the Toggle Button. 
+
+
+
+@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
+
+
+
+3. Output of the above steps.
+
+
+
+{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{:.image }
+
+
+
+

@@ -1,0 +1,35 @@
+---
+layout: post
+title: Persistence-Support
+description: persistence support
+platform: ejmvc
+control: Slider
+documentation: ug
+---
+
+## Persistence Support
+
+This feature supports you to save current model value to browser cookies for state maintenance. When you refresh the web page, the Slider control retains the model value apply from browser cookies. The data type of EnablePersistence is Boolean type. 
+
+The following steps explains you on how to enable the EnablePersistence property.
+
+1. In an VIEW page, add a helper element to render it as a Slider widget.
+
+
+
+
+
+[_cshtml]
+
+/ / Add this code in your view page
+
+@(Html.EJ().Slider("BasicSlider").Height("20").Width("500").EnablePersistence(true))
+
+
+
+After execute the code, Increase the value and reload the page. The state is maintained in the Slider control.
+
+{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderpersis.PNG](Persistence-Support_images/Persistence-Support_img1.png) | markdownify }
+{:.image }
+
+

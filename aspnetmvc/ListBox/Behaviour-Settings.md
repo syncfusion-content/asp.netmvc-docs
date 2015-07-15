@@ -1,0 +1,215 @@
+---
+layout: post
+title: Behaviour-Settings
+description: behaviour settings
+platform: ejmvc
+control: ListBox
+documentation: ug
+---
+
+## Behaviour Settings
+
+The following are some miscellaneous properties that helps you to change the behaviour of ListBox control.
+
+Target ID
+
+You can append a list with ListBox by using TargetId property. Define a &lt;ul&gt;,&lt; li&gt; tag that you want to display on ListBox and then set the id of parent &lt;ul&gt; tag to TargetId property. And its data type is string. 
+
+The following steps explains you the configuration of TargetID property in ListBox.
+
+1. Add the below code in your page to render the ListBox 
+
+
+
+
+
+[View]
+
+// Add the following code in View page to configure ListBox widget
+
+&lt;div id="control"&gt;
+
+    &lt;h5 class="ctrllabel"&gt;
+
+        Select a font style
+
+    &lt;/h5&gt;
+
+    @Html.EJ().ListBox("listboxsample").TargetID("targetlist")
+
+    &lt;ul id="targetlist"&gt;
+
+        <li>Algerian</li>
+
+        <li>ARIAL</li>
+
+        <li>Bimini</li>
+
+        <li>Courier</li>
+
+        <li>Cursive</li>
+
+        <li>Fantasy</li>
+
+        <li>Georgia</li>
+
+        <li>Impact</li>
+
+        <li>New york</li>
+
+        <li>Sans-Serif</li>
+
+        <li>Scripts</li>
+
+        <li>Times</li>
+
+        <li>Times New Roman</li>
+
+        <li>Verdana</li>
+
+        <li>Western</li>
+
+        <li>Zapfellipt bt</li>
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+1. Output of the above steps.
+
+
+
+{ ![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png) | markdownify }
+{:.image }
+
+
+Select the value by index 
+
+ListBox widget provides you support to select an item by mentioning the index of the item. The SelectedItemIndex property helps you to select the particular item from the list. Its date type is number. 
+
+The following steps explains you the configuration of SelectedItemIndex property in ListBox.
+
+1. Add the below code in your page to render the ListBox
+
+
+
+[View]
+
+&lt;div id="control"&gt;
+
+    &lt;h5 class="ctrllabel"&gt;
+
+        Select a skill
+
+    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
+
+    => df.Text("text")).SelectedItemIndex(2)
+
+&lt;/div&gt;
+
+
+
+
+
+2.  Output of the above steps.
+
+
+{ ![](Behaviour-Settings_images/Behaviour-Settings_img2.png) | markdownify }
+{:.image }
+
+
+Enable or Disable the ListBox Widget
+
+This features enables you to set the enable or disable options for ListBox by setting Boolean type value to Enabled property. 
+
+The following steps explains you the configuration of Enabled property in ListBox.
+
+1. Add the below code in your view page to render the Disabled ListBox
+
+
+
+[View]
+
+// Add the following code in View page to configure ListBox widget
+
+&lt;div id="control"&gt;
+
+    &lt;h5 class="ctrllabel"&gt;
+
+        Select a skill
+
+    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
+
+&lt;/div&gt;
+
+[CS]
+
+// Add the following code to add list items in the controller page
+
+        public class skillset
+
+        {
+
+            public string text { get; set; }
+
+        }
+
+        public ActionResult Index()
+
+        {
+
+            List<skillset> skill = new List<skillset>();
+
+            skill.Add(new skillset { text = "ASP.NET" });
+
+            skill.Add(new skillset { text = "ActionScript" });
+
+            skill.Add(new skillset { text = "Basic" });
+
+            skill.Add(new skillset { text = "C++" });
+
+            skill.Add(new skillset { text = "C#" });
+
+            skill.Add(new skillset { text = "dBase" });
+
+            skill.Add(new skillset { text = "Delphi" });
+
+            skill.Add(new skillset { text = "ESPOL" });
+
+            skill.Add(new skillset { text = "F#" });
+
+            skill.Add(new skillset { text = "FoxPro" });
+
+            skill.Add(new skillset { text = "Java" });
+
+            skill.Add(new skillset { text = "J#" });
+
+            skill.Add(new skillset { text = "Lisp" });
+
+            skill.Add(new skillset { text = "Logo" });
+
+            skill.Add(new skillset { text = "PHP" });
+
+            ViewBag.datasource = skill;
+
+            return View();
+
+        }
+
+
+
+
+
+2. Output of the above steps.
+
+
+{ ![](Behaviour-Settings_images/Behaviour-Settings_img3.png) | markdownify }
+{:.image }
+
+

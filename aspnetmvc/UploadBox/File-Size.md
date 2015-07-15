@@ -1,0 +1,67 @@
+---
+layout: post
+title: File-Size
+description: file size 
+platform: ejmvc
+control: UploadBox
+documentation: ug
+---
+
+## File Size 
+
+Maximum File Size for UploadBox
+
+In the UploadBox control, you can browse files with the size going up to gigabytes. You can restrict the files from being browsed using the FileSize property. When you do not use this property, it takes a default size, 31457280B, that is, 31MB. When this size exceeds, we cannot browse the file. 
+
+1. Add the following code example to the corresponding View page to render the UploadBox control with the customized file size.
+
+
+
+[CSHTML]
+
+&lt;div class="control"&gt;                 @Html.EJ().Uploadbox("UploadBox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").FileSize(848576).ClientSideEvents(e => e.Error("fileuploaderror"))
+
+&lt;/div&gt;
+
+
+
+[Javascript]
+
+&lt;script type="text/javascript"&gt;
+
+           function fileuploaderror(e) {
+
+            alert(e.error);
+
+        }
+
+&lt;/script&gt;
+
+
+
+To know about file action, we need to refer link:
+
+[http://help.syncfusion.com/ug/js/default.htm#!documents/fileactions.htm](http://help.syncfusion.com/ug/js/default.htm)
+
+The following screenshot displays UploadBox control with customized file size.
+
+When you want to browse the file within the fileSize, you can browse and upload the files.
+
+
+
+{ ![](File-Size_images/File-Size_img1.png) | markdownify }
+{:.image }
+
+
+
+
+When you try to browse the file with exceeded FileSize, we cannot browse and upload the files.
+
+
+
+{ ![](File-Size_images/File-Size_img2.png) | markdownify }
+{:.image }
+
+
+
+
