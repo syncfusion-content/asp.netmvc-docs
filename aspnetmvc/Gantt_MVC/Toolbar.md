@@ -73,7 +73,7 @@ The following screenshot shows the toolbar option in Gantt control.
 
 
 
-{ ![](Toolbar_images/Toolbar_img1.png) | markdownify }
+{{ '![](Toolbar_images/Toolbar_img1.png)' | markdownify }}
 {:.image }
 
 

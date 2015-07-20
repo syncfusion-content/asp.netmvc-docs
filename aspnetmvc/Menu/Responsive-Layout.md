@@ -13,7 +13,7 @@ Responsive Layout is aimed at crafting sites to provide an optimal viewing exper
 
 [http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
 
-> { ![C:/Users/ApoorvahR/Desktop/Note.png](Responsive-Layout_images/Responsive-Layout_img1.png) | markdownify }
+> {{ '![C:/Users/ApoorvahR/Desktop/Note.png](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
 {:.image }
 _Note: Refer to the ej.responsive.css file after the ej.widgets.all.min.css file_
 
@@ -27,7 +27,7 @@ Add the above css link in the code sample.
 
 // Add the following code in your CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -99,7 +99,7 @@ Add the above css link in the code sample.
 
         }).Width("200")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -107,7 +107,7 @@ Add the above css link in the code sample.
 
 The following screenshot displays the output for the above code. 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img2.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img2.png)' | markdownify }}
 {:.image }
 
 

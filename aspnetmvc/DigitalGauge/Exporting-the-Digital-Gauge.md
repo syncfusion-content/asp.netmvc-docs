@@ -23,11 +23,11 @@ Digital Gauge has an exporting feature where Gauge control is converted into ima
 
 .Value("Syncfusion"))
 
-&lt;script&gt;
+<script>
 
 $("#DigitalGauge1").ejDigitalGauge("exportImage", "Digital", "PNG");
 
-&lt;script/&gt;
+<script/>
 
 
 
@@ -35,7 +35,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Exporting-the-Digital-Gauge_images/Exporting-the-Digital-Gauge_img1.png) | markdownify }
+{{ '![](Exporting-the-Digital-Gauge_images/Exporting-the-Digital-Gauge_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -69,13 +69,13 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -130,7 +130,7 @@ Show/Hide All Day Show
 
 The following screenshot displays the Schedule control with all-day row hidden,
 
-{ ![C:/Users/maheshp/Pictures/sshot-8.png](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![C:/Users/maheshp/Pictures/sshot-8.png](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -180,7 +180,7 @@ The following screenshot displays the Schedule control with the height set to �
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -225,7 +225,7 @@ The following code example explains how to change the width of the Schedule cont
 
 )
 
-&lt;/head&gt;
+</head>
 
 
 
@@ -233,7 +233,7 @@ The following screenshot displays the Schedule control with the width set to “
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -298,7 +298,7 @@ The following screenshot displays the Schedule control with the cell width set t
 
 
 
-{ ![C:/Users/maheshp/Desktop/schedule1.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![C:/Users/maheshp/Desktop/schedule1.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -326,11 +326,11 @@ Replace the following code in Layout file -> View page to apply different theme 
 
 
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" /&gt; &lt;!—this is CDN Link  --&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" /> <!—this is CDN Link  -->
 
 
 
-&lt;!—You can replace the highlighted theme with any one of the above mentiond 12 themes--&gt;
+<!—You can replace the highlighted theme with any one of the above mentiond 12 themes-->
 
 
 
@@ -338,7 +338,7 @@ Replace the following code in Layout file -> View page to apply different theme 
 
 The schedule control will render as follows
 
-{ ![C:/Users/karthigeyan/Desktop/q.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/q.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -410,7 +410,7 @@ The following screenshot displays the Schedule control with the hidden header 
 
 
 
-{ ![C:/Users/maheshp/AppData/Roaming/Skype/My Skype Received Files/mvc(1).PNG](Appearance-and-Styling_images/Appearance-and-Styling_img8.png) | markdownify }
+{{ '![C:/Users/maheshp/AppData/Roaming/Skype/My Skype Received Files/mvc(1).PNG](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
 {:.image }
 
 

@@ -63,7 +63,7 @@ $("#DiagramContent").ejDiagram("model.locale","es-ES"); ej.datavisualization.Dia
 
 
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 

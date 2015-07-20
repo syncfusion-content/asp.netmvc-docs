@@ -55,7 +55,7 @@ Refer to the following code examples.
 
 Screenshot:
 
-{ ![](18-Dimensions_images/18-Dimensions_img1.png) | markdownify }
+{{ '![](18-Dimensions_images/18-Dimensions_img1.png)' | markdownify }}
 {:.image }
 
 

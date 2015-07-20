@@ -23,7 +23,7 @@ The following code example is used to render the Tab element in RTL format.
 
 
 
-&lt;div style="width:550px"&gt;
+<div style="width:550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -31,21 +31,21 @@ The following code example is used to render the Tab element in RTL format.
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@&lt;div&gt;
+                   .ContentTemplate(@<div>
 
                        Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-                   &lt;/div&gt;);
+                   </div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).EnableRTL(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -53,7 +53,7 @@ The following code example is used to render the Tab element in RTL format.
 
 2. The following screenshot illustrates the Tab with RTL format.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

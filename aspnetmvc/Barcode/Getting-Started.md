@@ -13,7 +13,7 @@ This section explains you briefly on how to create a Barcode in your application
 
 Control Structure
 
-{ ![Description: C:/Users/labuser/Desktop/barcode.png](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![Description: C:/Users/labuser/Desktop/barcode.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -25,7 +25,7 @@ The following guideline explains you on how to create a QR Barcode for a real ti
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -50,7 +50,7 @@ Configure Web.Config
 Web.config file is configured according to the referenced assemblies. The steps to configure the file are as follows.
 
 * On the Solution Explorer, double-click the Web.config file in the root folder. The Web.config page appears.
-* Add the following assemblies in the Web.config page under the &lt;compilation&gt; tag:
+* Add the following assemblies in the Web.config page under the <compilation> tag:
 * Syncfusion.Core
 * Syncfusion.EJ
 * Syncfusion.EJ.MVC
@@ -87,13 +87,13 @@ Web.config file is configured according to the referenced assemblies. The steps 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 _Note: X.X.X.X in the above code corresponds to the correct version number of the Essential Studio version that you are currently using._
 
 
 
-* Add the following namespaces under the &lt;namespaces&gt; tag.
+* Add the following namespaces under the <namespaces> tag.
 * Syncfusion.JavaScript
 * Syncfusion.JavaScript.DataVisualization
 * Syncfusion.Mvc.EJ
@@ -168,7 +168,7 @@ _Note: X.X.X.X in the above code corresponds to the correct version number of th
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 

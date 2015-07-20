@@ -39,7 +39,7 @@ The following steps explain you how to get the highlighted week end and special 
 
 2. Add the following styles to get the special dates highlighted.
 
-{ ![](Week-end-and-Special-dates-highlight_images/Week-end-and-Special-dates-highlight_img1.jpeg) | markdownify }
+{{ '![](Week-end-and-Special-dates-highlight_images/Week-end-and-Special-dates-highlight_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed._
 
@@ -47,7 +47,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .flag .e-image {
 
@@ -71,7 +71,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -79,7 +79,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
 
 
-{ ![](Week-end-and-Special-dates-highlight_images/Week-end-and-Special-dates-highlight_img2.png) | markdownify }
+{{ '![](Week-end-and-Special-dates-highlight_images/Week-end-and-Special-dates-highlight_img2.png)' | markdownify }}
 {:.image }
 
 

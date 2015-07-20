@@ -37,13 +37,13 @@ Refer to the following code examples.
 
 
 
-&lt;div id="temp1" style="background-image:url('http://js.syncfusion.com/ug/web/content/tile/people_1.png'); width:100%; height:100%;"&gt;
+<div id="temp1" style="background-image:url('http://js.syncfusion.com/ug/web/content/tile/people_1.png'); width:100%; height:100%;">
 
-&lt;/div&gt;
+</div>
 
-&lt;div id="temp2" style="background-image: url('http://js.syncfusion.com/ug/web/content/tile/people_2.png'); width:100%; height:100%;"&gt;
+<div id="temp2" style="background-image: url('http://js.syncfusion.com/ug/web/content/tile/people_2.png'); width:100%; height:100%;">
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -57,7 +57,7 @@ Refer to the following code examples.
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).ImageClass(new string[] { "people1", "people2" }); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)
 
-&lt;style&gt;
+<style>
 
     .people1 {
 
@@ -73,7 +73,7 @@ Refer to the following code examples.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 

@@ -15,7 +15,7 @@ This section briefly describes how to create and use RichTextEditor control usin
 
 The ASP.NET MVC RichTextEditor (RTE) control allows you to edit contents, insert tables, images and to get the HTML content. In this section you can learn how to use RichTextEditor in order to get Feedback from the user. 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 The following screenshot demonstrates how the RTE control is used in Feedback form.
 
@@ -36,7 +36,7 @@ ASP.NET MVC RTE widget basically renders by using the simple text area element.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 The following RTE screenshot renders the output of the above steps.
 
@@ -66,7 +66,7 @@ The following code example renders the additional inbuilt toolbar items to RTE t
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
  The following screenshot displays the RTE with inbuilt toolbar item.
 
@@ -88,7 +88,7 @@ For example, consider ‘create table’ toolbar item is not necessary for the F
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     var editorObj;
 
@@ -106,7 +106,7 @@ For example, consider ‘create table’ toolbar item is not necessary for the F
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -114,7 +114,7 @@ The following screenshot displays ‘create table’ toolbar item is removed fro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -136,7 +136,7 @@ The following code example creates the custom toolbar item in the RTE control.
 
   Add the following styles for the customtoolbaritem.
 
-&lt;style&gt;
+<style>
 
     .Feedback {
 
@@ -152,13 +152,13 @@ The following code example creates the custom toolbar item in the RTE control.
 
     }
 
-&lt;/style&gt; 
+</style> 
 
 
 
 The following screenshot displays RTE with custom toolbar item.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -166,7 +166,7 @@ Validate the Content
 
 In some cases, to send the Feedback form without contents you can validate them before submitting the Feedback contents. To achieve this validation, you can use getText() method in RTE control.
 
-When the content area is empty, you can set the notification message displayed in the &lt;div&gt; element area in order to give an alert message. The following HTML code example creates the Feedback form editor with the support of RTE control.
+When the content area is empty, you can set the notification message displayed in the <div> element area in order to give an alert message. The following HTML code example creates the Feedback form editor with the support of RTE control.
 
 During the Feedback sending time, you can validate whether the content area is empty or not. To achieve this validation, you can use RTE client-side events. RTE provides the ‘action’ function to perform the client-side events to custom tool.
 
@@ -176,17 +176,17 @@ You can specify the custom tool same as previous section with validation operati
 
 
 
-&lt;div class="commentSection" style="width: 810px"&gt;
+<div class="commentSection" style="width: 810px">
 
-    &lt;div class="titleSection"&gt;
+    <div class="titleSection">
 
-        <label>Title:&lt;/label&gt;
+        <label>Title:</label>
 
-        &lt;input type="text" class="input ejinput" /&gt;
+        <input type="text" class="input ejinput" />
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;!--RTE element section--&gt;
+    <!--RTE element section-->
 
 
 
@@ -196,17 +196,17 @@ You can specify the custom tool same as previous section with validation operati
 
 
 
-&lt;!-- validation message display area--&gt;
+<!-- validation message display area-->
 
-        &lt;div class="output"&gt;&lt;/div&gt;
+        <div class="output"></div>
 
-&lt;/div&gt;
-
-
+</div>
 
 
 
-&lt;script type="text/javascript"&gt;
+
+
+<script type="text/javascript">
 
 function validate() {
 
@@ -230,7 +230,7 @@ function validate() {
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -238,7 +238,7 @@ function validate() {
 
 You can add the following styles to achieve the Feedback form editor application.
 
-&lt;style&gt;
+<style>
 
     .commentSection {
 
@@ -302,7 +302,7 @@ You can add the following styles to achieve the Feedback form editor application
 
         }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -313,7 +313,7 @@ The following screenshot displays the Feedback sending without content.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

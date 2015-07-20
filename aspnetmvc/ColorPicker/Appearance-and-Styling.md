@@ -57,7 +57,7 @@ In the following code example, the ColorPicker popup model type is set as Palett
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -170,7 +170,7 @@ PresetType(PresetsType.CandyCrush)</td></tr>
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -198,13 +198,13 @@ The CustomPalette property is a dependent property of Palette and ModelType prop
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
 DisplayInline
 
-The ColorPicker control allows you to embed the popup in the order of DOM element flow by using the DisplayInline property. Using DisplayInline property to make ColorPicker popup always in visible state. Also associate ColorPicker with &lt;div&gt; element instead of input. 
+The ColorPicker control allows you to embed the popup in the order of DOM element flow by using the DisplayInline property. Using DisplayInline property to make ColorPicker popup always in visible state. Also associate ColorPicker with <div> element instead of input. 
 
 The DisplayInline property is Boolean type and its default value is false.
 
@@ -224,7 +224,7 @@ The following steps explain you how to get the ColorPicker popup in DisplayInlin
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -261,43 +261,43 @@ The following list is the twelve themes supported by ColorPicker:
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
-&lt;!doctype html&gt;
+<!doctype html>
 
-&lt;html&gt;
+<html>
 
-&lt;head&gt;
+<head>
 
     <title>Essential Studio for JavaScript : ColorPicker – Built-in ThemeSupport</title>
 
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"  /&gt;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"  />
 
-    &lt;link href=" http://cdn.syncfusion.com/js/web/flat-saffron-dark/ej.web.all-latest.min.css" rel="stylesheet" /&gt;
+    <link href=" http://cdn.syncfusion.com/js/web/flat-saffron-dark/ej.web.all-latest.min.css" rel="stylesheet" />
 
-    &lt;script src="http://code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-    &lt;script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    &lt;script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js"></script>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-    &lt;div id="control"&gt;
+    <div id="control">
 
         @Html.EJ().ColorPicker("colorPicker").Value("#278787")
 
-    &lt;/div&gt;                    
+    </div>                    
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -321,7 +321,7 @@ Using this property you can override the existing styles under the theme style s
 
 
 
-&lt;style&gt;
+<style>
 
      .Light-Blue.e-colorwidget.e-widget, .Light-Blue.e-colorpicker.e-popup,.Light-Blue.e-colorwidget .e-in-wrap.e-box .e-select, .Light-Blue.e-colorwidget .e-in-wrap.e-box, .Light-Blue.e-colorwidget .e-down-arrow {           
 
@@ -337,13 +337,13 @@ Using this property you can override the existing styles under the theme style s
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screenshot displays the output of above steps.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 

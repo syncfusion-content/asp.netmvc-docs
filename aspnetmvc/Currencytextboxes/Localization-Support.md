@@ -25,7 +25,7 @@ You can refer the following online link reference for globalize.culture.js
 
 You can get the script file of various cultures from the following path also:
 
-"&lt;Installed Location&gt;\Syncfusion\Essential Studio\&lt;version&gt;\JavaScript\assets\external\cultures"
+"<Installed Location>\Syncfusion\Essential Studio\<version>\JavaScript\assets\external\cultures"
 
 You can dynamically change the language based on their culture.
 
@@ -49,13 +49,13 @@ Output of CurrencyTextBox with localization.
 
 
 
-{ ![](Localization-Support_images/Localization-Support_img1.png) | markdownify }
+{{ '![](Localization-Support_images/Localization-Support_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Localization-Support_images/Localization-Support_img2.png) | markdownify }
+{{ '![](Localization-Support_images/Localization-Support_img2.png)' | markdownify }}
 {:.image }
 
 

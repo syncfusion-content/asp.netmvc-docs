@@ -58,7 +58,7 @@ In the Week schedule mode, the upper part of the schedule header displays the we
 
 The following screenshot illustrates the Week Schedule in Gantt control.
 
-{ ![](Schedule-Modes_images/Schedule-Modes_img1.png) | markdownify }
+{{ '![](Schedule-Modes_images/Schedule-Modes_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -102,7 +102,7 @@ In the Week schedule mode, the upper part of the schedule header displays the Mo
 
 The following screenshot illustrates the Month Schedule in Gantt control.
 
-{ ![](Schedule-Modes_images/Schedule-Modes_img2.png) | markdownify }
+{{ '![](Schedule-Modes_images/Schedule-Modes_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -140,7 +140,7 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 The following screen shot shows the Year Schedule in Gantt control.
 
 
-{ ![](Schedule-Modes_images/Schedule-Modes_img3.png) | markdownify }
+{{ '![](Schedule-Modes_images/Schedule-Modes_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -178,7 +178,7 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 
 The following screenshot illustrates the Day Schedule in Gantt control.
 
-{ ![](Schedule-Modes_images/Schedule-Modes_img4.png) | markdownify }
+{{ '![](Schedule-Modes_images/Schedule-Modes_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -258,7 +258,7 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 
 
 
-{ ![](Schedule-Modes_images/Schedule-Modes_img5.png) | markdownify }
+{{ '![](Schedule-Modes_images/Schedule-Modes_img5.png)' | markdownify }}
 {:.image }
 
 

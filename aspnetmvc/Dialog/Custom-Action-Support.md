@@ -31,11 +31,11 @@ The following steps explains you the implementation of custom action.
 
 
 
-@{Html.EJ().Dialog("customaction").Title("Audi-R8").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("customaction").Title("Audi-R8").ContentTemplate(@<div>
 
-   &lt;img src="@Url.Content("~/Content/images/r8-coupe.png")" /&gt;
+   <img src="@Url.Content("~/Content/images/r8-coupe.png")" />
 
-       The Audi R8 was initially equipped with a 4.2 litre V8 engine. Specifically, it is an all-aluminum alloy 32-valve (four valves per cylinder) petrol engine, utilising Fuel Stratified Injection (FSI), and has a displacement of 4,163 cubic centimetres (254.0 cu in).&lt;/div&gt;).Width(300).ActionButtons(icon).Render();}
+       The Audi R8 was initially equipped with a 4.2 litre V8 engine. Specifically, it is an all-aluminum alloy 32-valve (four valves per cylinder) petrol engine, utilising Fuel Stratified Injection (FSI), and has a displacement of 4,163 cubic centimetres (254.0 cu in).</div>).Width(300).ActionButtons(icon).Render();}
 
 
 
@@ -45,7 +45,7 @@ The following steps explains you the implementation of custom action.
 
 2. The output of ActionButtons in Dialog widget is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogaction.PNG](Custom-Action-Support_images/Custom-Action-Support_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogaction.PNG](Custom-Action-Support_images/Custom-Action-Support_img1.png)' | markdownify }}
 {:.image }
 
 

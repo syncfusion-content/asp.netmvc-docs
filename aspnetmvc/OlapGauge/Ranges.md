@@ -133,7 +133,7 @@ You can set the background color for the ranges in OlapGauge using “background
 
 
 
-{ ![I:/OlapGuage/Gauge/ranges.-color.png](Ranges_images/Ranges_img1.png) | markdownify }
+{{ '![I:/OlapGuage/Gauge/ranges.-color.png](Ranges_images/Ranges_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -199,7 +199,7 @@ You can customize the Rangesize using “size” property.
 
 
 
-{ ![I:/OlapGuage/Gauge/Range size.png](Ranges_images/Ranges_img2.png) | markdownify }
+{{ '![I:/OlapGuage/Gauge/Range size.png](Ranges_images/Ranges_img2.png)' | markdownify }}
 {:.image }
 
 

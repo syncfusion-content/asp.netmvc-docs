@@ -149,7 +149,7 @@ public Array GetData(){
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -181,7 +181,7 @@ The following code illustrates how to bind remote data to the Diagram.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -213,7 +213,7 @@ model.DataSourceSettings.Id = "Id";
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img3.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -397,7 +397,7 @@ The following code example illustrates how to convert HTML table to diagram.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img4.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
 {:.image }
 
 

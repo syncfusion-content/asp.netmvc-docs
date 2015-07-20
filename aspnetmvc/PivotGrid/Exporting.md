@@ -58,21 +58,21 @@ public void Export(System.IO.Stream stream)
 
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridExcelMVC.png](Exporting_images/Exporting_img1.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridExcelMVC.png](Exporting_images/Exporting_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridWordMVC.png](Exporting_images/Exporting_img2.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridWordMVC.png](Exporting_images/Exporting_img2.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridPdfMVC.png](Exporting_images/Exporting_img3.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridPdfMVC.png](Exporting_images/Exporting_img3.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridCSVJS.png](Exporting_images/Exporting_img4.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridCSVJS.png](Exporting_images/Exporting_img4.png)' | markdownify }}
 {:.image }
 
 

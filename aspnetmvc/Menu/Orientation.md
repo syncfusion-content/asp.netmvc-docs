@@ -23,7 +23,7 @@ The following steps explains you the details on rendering the Menu control.
 
 // In the CSHTML page, add the following code to configure Menu control.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -95,7 +95,7 @@ The following steps explains you the details on rendering the Menu control.
 
         }).Width("500")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -103,7 +103,7 @@ The following steps explains you the details on rendering the Menu control.
 
 The following screenshot displays the output of the above code.        
 
-{ ![](Orientation_images/Orientation_img1.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -123,7 +123,7 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 // Add the following code in the CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -195,7 +195,7 @@ You can also render Menu control in vertical direction using orientation.To set 
 
         }).Width("200").Orientation(Orientation.Vertical)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -203,7 +203,7 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 The following screen shot displays the output of the above code.                       
 
-{ ![](Orientation_images/Orientation_img2.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img2.png)' | markdownify }}
 {:.image }
 
 

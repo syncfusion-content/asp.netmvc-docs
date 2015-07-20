@@ -49,7 +49,7 @@ Searching is a basic query technique in the Data Manager. It is used to filter t
 
 Result of above code example is illustrated as follows.
 
-{ ![](Searching_images/Searching_img1.png) | markdownify }
+{{ '![](Searching_images/Searching_img1.png)' | markdownify }}
 {:.image }
 
 

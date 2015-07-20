@@ -21,7 +21,7 @@ Gantt chart is used to edit and visualize project schedule and also to track pro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -29,7 +29,7 @@ Gantt chart is used to edit and visualize project schedule and also to track pro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -44,7 +44,7 @@ Gantt chart is used to edit and visualize project schedule and also to track pro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -54,13 +54,13 @@ In this tutorial, you will learn how to create a simple Gantt chart, add tasks a
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
 1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) documentation to create new project and add necessary DLL’s and script files.
 
-2. Next, create a simple &lt;div&gt; tag in index.cshtml file to render Gantt control.
+2. Next, create a simple <div> tag in index.cshtml file to render Gantt control.
 
 
 
@@ -254,11 +254,11 @@ public class DefaultData
 
 
 
-4. Add the following code example in the Index.cshtml file to create a Gantt control in the View page, using the id of &lt;div&gt; element created initially.	
+4. Add the following code example in the Index.cshtml file to create a Gantt control in the View page, using the id of <div> element created initially.	
 
 
 
-  &lt;div id="GanttContainer" style="width: 100%; height: 100%"&gt;
+  <div id="GanttContainer" style="width: 100%; height: 100%">
 
 
 
@@ -290,14 +290,14 @@ public class DefaultData
 
 
 
-&lt;/div&gt;
+</div>
 
 
 The following screen shot displays the Gantt.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -369,13 +369,13 @@ Gantt control contains the toolbar options to edit, search, expand and collapse 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.jpeg) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.jpeg)' | markdownify }}
 {:.image }
 _Note:__add, edit, delete options are enabled when enabling the allowEditing, allowAdding, allowDelete in the edit Options._
 
@@ -474,11 +474,11 @@ The following screen shot displays the Gantt control with Enable Editing options
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img9.jpeg) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.jpeg)' | markdownify }}
 {:.image }
 _Note: Both cellEditing and normal editing operations are performed through double click action._
 
@@ -510,7 +510,7 @@ The following screen shot displays Gantt chart with Enable Context menu option.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img10.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -564,7 +564,7 @@ The following screen shot displays the relationship between tasks.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img11.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -674,7 +674,7 @@ The following screen shot displays resource allocation for tasks in Gantt.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img12.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img12.png)' | markdownify }}
 {:.image }
 
 

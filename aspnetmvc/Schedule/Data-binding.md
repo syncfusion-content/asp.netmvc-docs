@@ -167,7 +167,7 @@ location
 
 On executing the above specified code the Location field will be added in the create appointment window as follows:
 
-{ ![C:/Users/karthigeyan/Desktop/a.png](Data-binding_images/Data-binding_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/a.png](Data-binding_images/Data-binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -200,7 +200,7 @@ On executing the above specified code the Scheduler displays the appointments ac
 
 
 
-{ ![](Data-binding_images/Data-binding_img2.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -256,7 +256,7 @@ Remote data
 The following screenshot displays the remote data bound to the Schedule control.
 
 
-{ ![](Data-binding_images/Data-binding_img3.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -268,7 +268,7 @@ Figure 51: Schedule with Remote Data BindingLoad On Demand
 
 
 
-{ ![C:/Users/maheshp/Pictures/a2.PNG](Data-binding_images/Data-binding_img4.png) | markdownify }
+{{ '![C:/Users/maheshp/Pictures/a2.PNG](Data-binding_images/Data-binding_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -454,7 +454,7 @@ return DateTime.Now;
 
 The following screenshot is the result of the above code example.
 
-{ ![C:/Users/maheshp/Pictures/s1.PNG](Data-binding_images/Data-binding_img5.png) | markdownify }
+{{ '![C:/Users/maheshp/Pictures/s1.PNG](Data-binding_images/Data-binding_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -596,9 +596,9 @@ Step 4: In the view page, the dataManger with the specific Url is created as fol
 
 [JavaScript]
 
-&lt;div id="Schedule1"&gt; &lt;/div&gt;
+<div id="Schedule1"> </div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 $(function () {
 
@@ -704,7 +704,7 @@ Important: Add the required script and theme files for the JS schedule control a
 
 Step 5: Then run the code example. The control will be rendering with the MySQL table data as shown in following screenshot.
 
-{ ![](Data-binding_images/Data-binding_img6.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img6.png)' | markdownify }}
 {:.image }
 
 

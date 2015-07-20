@@ -31,27 +31,27 @@ Each item has a variety of options and these options are also specified in the l
 
          {
 
-             data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@&lt;div&gt;
+             data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
 
                 Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
                 @firstTab()
 
-            &lt;/div&gt;);
+            </div>);
 
-             data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@&lt;div&gt;
+             data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
 
                 Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
                 @secondTab()
 
-            &lt;/div&gt;);
+            </div>);
 
-             data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@&lt;div&gt;
+             data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
 
                 Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-            &lt;/div&gt;);
+            </div>);
 
          }).Render();
 
@@ -101,63 +101,63 @@ Each item has a variety of options and these options are also specified in the l
 
 2.   The file ‘cornSpinach.html’ content is as follows. 
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;body&gt;
+<body>
 
-    &lt;div class="e-content"&gt;
+    <div class="e-content">
 
-        &lt;img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach-05.png" alt="corn-spinach"&gt;
+        <img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach-05.png" alt="corn-spinach">
 
-        &lt;div class="ingredients"&gt;
+        <div class="ingredients">
 
             Rate    : $70<br/> Ingredients : cheese, sweet corn &amp; green capsicums.
 
-            &lt;br /&gt;
+            <br />
 
-            Description: Small pizza bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.                    &lt;/div&gt;
+            Description: Small pizza bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.                    </div>
 
-    &lt;/div&gt;   
+    </div>   
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 
 
 3. The file ‘chickenDelite.html’ content is as follows.
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;body&gt;
+<body>
 
-    &lt;div class="e-content"&gt;
+    <div class="e-content">
 
-        &lt;img src="http://js.syncfusion.com/demos/web/images/accordion/chicken-delite.png" alt="chicken-delite"&gt;
+        <img src="http://js.syncfusion.com/demos/web/images/accordion/chicken-delite.png" alt="chicken-delite">
 
-        &lt;div class="ingredients"&gt;
+        <div class="ingredients">
 
-            Rate    : $100<br /> Ingredients : cheese, chicken chunks, onions &amp; pineapple chunks.   &lt;br /&gt; 
+            Rate    : $100<br /> Ingredients : cheese, chicken chunks, onions &amp; pineapple chunks.   <br /> 
 
              Description: This is a tasty, elegant chicken dish that is easy to prepare.
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 
 
 The following screenshot illustrates the First Tab with the sub Tab control using Load on Demand. 
 
-{ ![](Ajax-Content-Load-Load-on-Demand_images/Ajax-Content-Load-Load-on-Demand_img1.png) | markdownify }
+{{ '![](Ajax-Content-Load-Load-on-Demand_images/Ajax-Content-Load-Load-on-Demand_img1.png)' | markdownify }}
 {:.image }
 
 

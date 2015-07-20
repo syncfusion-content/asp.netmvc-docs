@@ -95,7 +95,7 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 [View]\\ To configure TreeView in the CSHTML page@Html.EJ().TreeView("treeview").Items(items =>      {             items.Add().Text("Favorites").Expanded(true).Children(child =>             {                   child.Add().Text("Desktop");                   child.Add().Text("Downloads");                   child.Add().Text("Recent places");             });             items.Add().Text("Libraries").Expanded(true).Children(child =>             {                    child.Add().Text("Documents").Children(child1 =>                    {                                child1.Add().Text("My Documents");                                child1.Add().Text("Public Documents");                    });                    child.Add().Text("Pictures").Children(child1 =>                    {                            child1.Add().Text("My Pictures");                            child1.Add().Text("Public Pictures");                    });                    child.Add().Text("Music").Children(child1 =>                     {                            child1.Add().Text("My Music");                            child1.Add().Text("Public Music");                     });                     child.Add().Text("Subversion");              });              items.Add().Text("Computer").Children(child =>              {                     child.Add().Text("Folder(C)");                     child.Add().Text("Folder(D)");                     child.Add().Text("Folder(E)");               });     }).ShowCheckbox(true).AllowEditing(true).AllowKeyboardNavigation(true)</td></tr>
 <tr>
 <td>
-[JavaScript]&lt;script type="text/javascript"&gt;                    //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) {                    // j- key code.                    $(".e-treeview-wrap").focus();                }            });	    &lt;/script&gt;</td></tr>
+[JavaScript]<script type="text/javascript">                    //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) {                    // j- key code.                    $(".e-treeview-wrap").focus();                }            });	    </script></td></tr>
 </table>
 
 
@@ -109,7 +109,7 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 
 
 
-&lt;style&gt;
+<style>
 
     .Treeview {
 
@@ -123,7 +123,7 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 
 
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -131,7 +131,7 @@ The output for TreeView when AllowKeyboardNavigation is set to “True”.
 
 
 
-{ ![](Accessibility_images/Accessibility_img1.png) | markdownify }
+{{ '![](Accessibility_images/Accessibility_img1.png)' | markdownify }}
 {:.image }
 
 

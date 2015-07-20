@@ -61,7 +61,7 @@ ViewData["overview"] = overview;
 
 
 
-{ ![C:/Users/swarneshk/AppData/Local/Microsoft/Windows/INetCache/Content.Word/overview final.png](Overview-Control_images/Overview-Control_img1.png) | markdownify }
+{{ '![C:/Users/swarneshk/AppData/Local/Microsoft/Windows/INetCache/Content.Word/overview final.png](Overview-Control_images/Overview-Control_img1.png)' | markdownify }}
 {:.image }
 
 

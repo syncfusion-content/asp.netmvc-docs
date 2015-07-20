@@ -47,27 +47,27 @@ Render input button controls for performing open and close actions.
 
 
 
-@{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-        &lt;p&gt;
+        <p>
 
             Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
 
-        &lt;/p&gt;
+        </p>
 
-        <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.&lt;/span&gt; &lt;/p&gt;
+        <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
 
-        <p>Essential Grid is designed for performance and can easily handle millions of records. &lt;/p&gt;
+        <p>Essential Grid is designed for performance and can easily handle millions of records. </p>
 
-        <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.&lt;/p&gt;
+        <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
 
-    &lt;/div&gt;).Render();}
+    </div>).Render();}
 
 
 
-    &lt;input type="button" id="btnDialogOpen" class="e-btn" value="Dialog Open" /&gt;
+    <input type="button" id="btnDialogOpen" class="e-btn" value="Dialog Open" />
 
-    &lt;input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" /&gt;
+    <input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" />
 
 
 
@@ -85,7 +85,7 @@ Render input button controls for performing open and close actions.
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     $("#dialogAPI").ejDialog({
 
@@ -123,7 +123,7 @@ Render input button controls for performing open and close actions.
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -161,7 +161,7 @@ Render input button controls for performing open and close actions.
 
 The output of Dialog open is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -213,7 +213,7 @@ _Figure_ _21__: Dialog is opened_
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -239,75 +239,75 @@ Render input button controls for performing open and close actions.
 
 @Html.EJ().Button("btnOpen").Text("Click to open dialog").ClientSideEvents(evt => evt.Click("onclick"))
 
-&lt;div class="control"&gt;
+<div class="control">
 
-    @{Html.EJ().Dialog("dialogAPI").Title("Essential Grid").ContentTemplate(@&lt;div style="margin: 5px 14px"&gt;
+    @{Html.EJ().Dialog("dialogAPI").Title("Essential Grid").ContentTemplate(@<div style="margin: 5px 14px">
 
-            &lt;p&gt;
+            <p>
 
                 Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
 
-            &lt;/p&gt;
+            </p>
 
-            <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.&lt;/span&gt; &lt;/p&gt;
+            <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
 
-            <p>Essential Grid is designed for performance and can easily handle millions of records. &lt;/p&gt;
+            <p>Essential Grid is designed for performance and can easily handle millions of records. </p>
 
-            <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.&lt;/p&gt;
+            <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
 
-        &lt;/div&gt;).Content(".control").ClientSideEvents(evt => evt.Close("onDialogClose")).Render();}
+        </div>).Content(".control").ClientSideEvents(evt => evt.Close("onDialogClose")).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
-&lt;div class="row"&gt;
+<div class="row">
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         Dialog Open
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         @Html.EJ().Button("btnDialogOpen").Width("107px").Text("Dialog Open").ClientSideEvents(evt => evt.Click("onOpen"))
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;
+<div class="row">
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         Dialog Close
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         @Html.EJ().Button("btnDialogClose").Width("107px").Text("Dialog Close").ClientSideEvents(evt => evt.Click("onClose"))
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;
+<div class="row">
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         Dialog IsOpened
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div class="col-md-3"&gt;
+    <div class="col-md-3">
 
         @Html.EJ().Button("btnDialogIsOpen").Width("107px").Text("Dialog IsOpen").ClientSideEvents(evt => evt.Click("onIsOpen"))
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -321,7 +321,7 @@ At initially set the width and height to the dialog then create object for that 
 
 
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
         $("#dialogAPI").ejDialog({
 
@@ -389,7 +389,7 @@ var _isopen = eDialog.isOpened(); /* checking the state of ejDialog widget */
 
 
 
-     &lt;/script&gt;
+     </script>
 
 
 
@@ -397,7 +397,7 @@ var _isopen = eDialog.isOpened(); /* checking the state of ejDialog widget */
 
 2. The output of Dialog Open is as follows.    
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -407,7 +407,7 @@ _Figure_ _23__: Dialog is in open state_
 
 3. The output of Dialog Close is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img4.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img4.png)' | markdownify }}
 {:.image }
 
 

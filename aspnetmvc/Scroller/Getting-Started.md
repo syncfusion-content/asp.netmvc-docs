@@ -24,15 +24,15 @@ Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize
 
 
 
-&lt;div id="scrollcontent"&gt;
+<div id="scrollcontent">
 
-        &lt;div&gt; @* Wrapper div for Scroller.*@
+        <div> @* Wrapper div for Scroller.*@
 
-            &lt;div class="innercontent"&gt; @* Content div*@
+            <div class="innercontent"> @* Content div*@
 
-                &lt;h3&gt; MVC &lt;/h3&gt;
+                <h3> MVC </h3>
 
-                &lt;p&gt;
+                <p>
 
                  Model–view–controller (MVC) is a software architecture pattern which   
 
@@ -44,13 +44,13 @@ Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize
 
                  or a diagram. 
 
-                &lt;/p&gt;
+                </p>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;   
+</div>   
 
 
 
@@ -64,7 +64,7 @@ Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .innercontent{
 
@@ -74,11 +74,11 @@ Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize
 
     }
 
-&lt;/style&gt;
+</style>
 
 4. Execute the above example code to get the following output. 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 

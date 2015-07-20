@@ -25,7 +25,7 @@ The following steps explain how to disable the ProgressBar widget when ‘Enable
 [CSHTML]// Add the following code example to the corresponding CSHTML page to disable the ProgressBar control.@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").Enabled(false)</td></tr>
 <tr>
 <td>
-[JavaScript]   &lt;script&gt;            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});            });    &lt;/script&gt;</td></tr>
+[JavaScript]   <script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});            });    </script></td></tr>
 </table>
 
 
@@ -33,7 +33,7 @@ The following steps explain how to disable the ProgressBar widget when ‘Enable
 
 The following screenshot displays the output for the above code.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/pro disable.PNG](Enabling-the-ProgressBar_images/Enabling-the-ProgressBar_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/pro disable.PNG](Enabling-the-ProgressBar_images/Enabling-the-ProgressBar_img1.png)' | markdownify }}
 {:.image }
 
 

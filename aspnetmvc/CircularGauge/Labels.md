@@ -43,7 +43,7 @@ lb.Angle(30).Add();
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/karthigeyan/Desktop/Untitled.png](Labels_images/Labels_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/Untitled.png](Labels_images/Labels_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -127,7 +127,7 @@ lb.Angle(30)
 
 Execute the above code to render the following output.
 
-{ ![](Labels_images/Labels_img2.png) | markdownify }
+{{ '![](Labels_images/Labels_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -196,7 +196,7 @@ ran.DistanceFromScale(-30).StartValue(80).EndValue(100).BackgroundColor("Red").P
 
 Execute the above code to render the following output.
 
-{ ![](Labels_images/Labels_img3.png) | markdownify }
+{{ '![](Labels_images/Labels_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -270,7 +270,7 @@ po.Length(110)
 
 Execute the above code to render the following output.
 
-{ ![](Labels_images/Labels_img4.png) | markdownify }
+{{ '![](Labels_images/Labels_img4.png)' | markdownify }}
 {:.image }
 
 

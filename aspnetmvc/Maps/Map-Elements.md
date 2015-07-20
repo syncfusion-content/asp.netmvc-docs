@@ -180,7 +180,7 @@ The Markers property has a list of objects that contains the data for Annotation
 
 {% endhighlight %}
 
-{ ![](Map-Elements_images/Map-Elements_img1.png) | markdownify }
+{{ '![](Map-Elements_images/Map-Elements_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -264,7 +264,7 @@ Without Datasource, n number of markers can be added to shape layers with Marker
 
 
 
-{ ![](Map-Elements_images/Map-Elements_img2.png) | markdownify }
+{{ '![](Map-Elements_images/Map-Elements_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -395,7 +395,7 @@ To add bubbles to a map, the bubble marker setting is added to the shape file la
 
 
 
-{ ![](Map-Elements_images/Map-Elements_img3.png) | markdownify }
+{{ '![](Map-Elements_images/Map-Elements_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -500,7 +500,7 @@ The Layer shape type legends can be generated for each color mappings in shape s
 
 
 
-{ ![](Map-Elements_images/Map-Elements_img4.png) | markdownify }
+{{ '![](Map-Elements_images/Map-Elements_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -580,7 +580,7 @@ Models.LegendMode.Interactive)
 
 
 
-{ ![](Map-Elements_images/Map-Elements_img5.png) | markdownify }
+{{ '![](Map-Elements_images/Map-Elements_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -670,7 +670,7 @@ Models.LegendType.Bubbles)
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Map-Elements_images/Map-Elements_img6.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Map-Elements_images/Map-Elements_img6.png)' | markdownify }}
 {:.image }
 
 

@@ -19,7 +19,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 // Add the following code in the CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -89,7 +89,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 
 
-        }).Width("500").EnableSeparator(true)    &lt;/div&gt;
+        }).Width("500").EnableSeparator(true)    </div>
 
 
 
@@ -99,7 +99,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 The following screenshot displays the output for the above code sample.
 
-{ ![](Separators_images/Separators_img1.png) | markdownify }
+{{ '![](Separators_images/Separators_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -113,7 +113,7 @@ _Figure_ _36__: Menu with Separators_
 
 [CSHTML]
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -189,7 +189,7 @@ _Figure_ _36__: Menu with Separators_
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -199,7 +199,7 @@ _Figure_ _36__: Menu with Separators_
 
 The following screenshot displays the output for the above code. 
 
-{ ![](Separators_images/Separators_img2.png) | markdownify }
+{{ '![](Separators_images/Separators_img2.png)' | markdownify }}
 {:.image }
 
 

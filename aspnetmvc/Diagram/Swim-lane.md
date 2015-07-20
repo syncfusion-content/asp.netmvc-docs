@@ -13,7 +13,7 @@ A swim lane is a visual element used in process flow diagrams or flowcharts. A t
 
 
 
-{ ![](Swim-lane_images/Swim-lane_img1.png) | markdownify }
+{{ '![](Swim-lane_images/Swim-lane_img1.png)' | markdownify }}
 {:.image }
 
 

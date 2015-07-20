@@ -25,7 +25,7 @@ The following code example is used to render the Tab widget with CloseButton.
 
 
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -33,17 +33,17 @@ The following code example is used to render the Tab widget with CloseButton.
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).ShowCloseButton(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -51,7 +51,7 @@ The following code example is used to render the Tab widget with CloseButton.
 
 2. The following screenshot illustrates the Tab with CloseButton. 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ The following code example is used to render the sub Tab widget in the vertical 
 
 // Add the following code example to the corresponding CSHTML page to render Tab with customized orientation.
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -77,17 +77,17 @@ The following code example is used to render the sub Tab widget in the vertical 
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).HeaderPosition(HeaderPosition.Left).Height("220").Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -95,7 +95,7 @@ The following code example is used to render the sub Tab widget in the vertical 
 
 2. The following screenshot illustrates the sub Tab with vertical orientation. 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img2.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -113,7 +113,7 @@ The following code example is used to render the Tab widget with state maintenan
 
 // Add the following code example to the corresponding CSHTML page to render Tab with state maintenance.
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -121,17 +121,17 @@ The following code example is used to render the Tab widget with state maintenan
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                     .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).EnablePersistence(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -139,7 +139,7 @@ The following code example is used to render the Tab widget with state maintenan
 
 2. The following screenshot illustrates the Tab with Statemaintenance.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img3.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -147,7 +147,7 @@ _Figure_ _10__: State before page refresh_
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

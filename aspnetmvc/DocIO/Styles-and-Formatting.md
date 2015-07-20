@@ -23,7 +23,7 @@ The following are the types of formattings supported by DocIO.
 * Paragraph formatting
 * List style fromatting
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img1.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: DocIO currently does not support table styles._
 
@@ -33,7 +33,7 @@ Introduction to styles and formatting in DocIO
 
 DocIO allows you to create your own paragraph style and list styles (user-defined style), which can be applied to any paragraph or list item. Refer to the Paragraph formatting section to know more about the user-defined styles.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img2.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img2.jpeg)' | markdownify }}
 {:.image }
 _Note: In a Word document style hierarchy, “Normal” is the base style and is the default style for paragraphs and tables, if the user has not specified style definition._
 
@@ -145,7 +145,7 @@ Character Styles
 
 This sections elaborates how to deal with the Character Styles. The class CharacterStyle takes resposibilty for handling the character styles. 
 
-> { ![http://help.syncfusion.com/ug/windows%20forms/docio/ImagesExt/image9_7.png](Styles-and-Formatting_images/Styles-and-Formatting_img3.png) | markdownify }
+> {{ '![http://help.syncfusion.com/ug/windows%20forms/docio/ImagesExt/image9_7.png](Styles-and-Formatting_images/Styles-and-Formatting_img3.png)' | markdownify }}
 {:.image }
 _Note: DocIO does not provide support to add user-defined character styles to the document_
 
@@ -644,7 +644,7 @@ Paragraph Style
 
 WParagraphStyle class represents paragraph style in DocIO. Paragraph Style is a pattern of paragraph formatting. You can also apply custom paragraph styles to the paragraph. The following screenshot illustrates how to achieve this in Microsoft Word.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img4.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -908,7 +908,7 @@ Paragraph Format
 
 WParagraphFormat class represents paragraph formatting in Essential DocIO. The following screenshot illustrates how to define Paragraph Format to a paragraph in Microsoft Word.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img5.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -1257,7 +1257,7 @@ You can specify the type of the list style by using the ListType property. Eve
 
 The following screenshot demonstrates how to create list styles by using Microsoft Word.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img6.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -2079,7 +2079,7 @@ section.AddParagraph()
 
 Text Box control is a container that provides support to insert text, images, and so on. DocIO supports text box and its methods. The WTextBoxFormat class specifies formatting for the Text Box.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img7.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -2799,20 +2799,20 @@ The following code illustrates how to insert a HTML string into the body part of
 <table>
 <tr>
 <td>
-[C#]//Inserts XHTML String.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”);</td></tr>
+[C#]//Inserts XHTML String.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”);</td></tr>
 <tr>
 <td>
-[VB.NET]'Inserts XHTML String.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”)</td></tr>
+[VB.NET]'Inserts XHTML String.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”)</td></tr>
 </table>
 You can also insert the HTML string in the particular position of the document by specifying the index of the paragraph in the InsertXHTML overload of the TextBody class.
 
 <table>
 <tr>
 <td>
-[C#]//Inserts XHTML with Paragraph index.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”,1);</td></tr>
+[C#]//Inserts XHTML with Paragraph index.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”,1);</td></tr>
 <tr>
 <td>
-[VB.NET]'Inserts XHTML with Paragraph index.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”,1)</td></tr>
+[VB.NET]'Inserts XHTML with Paragraph index.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”,1)</td></tr>
 </table>
 
 
@@ -2822,17 +2822,17 @@ You can also insert the HTML string in the particular position of the document b
 <table>
 <tr>
 <td>
-[C#]//Inserts XHTML with Paragraph and Paragraph item index.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”,1,2);</td></tr>
+[C#]//Inserts XHTML with Paragraph and Paragraph item index.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”,1,2);</td></tr>
 <tr>
 <td>
-[VB.NET]'Inserts XHTML with Paragraph and Paragraph item index.section.Body.InsertXHTML(“&lt;html&gt;&lt;body&gt;<p>Welcome</p>&lt;/body&gt;&lt;/html&gt;”,1,2)</td></tr>
+[VB.NET]'Inserts XHTML with Paragraph and Paragraph item index.section.Body.InsertXHTML(“<html><body><p>Welcome</p></body></html>”,1,2)</td></tr>
 </table>
 
 
 It is possible to insert XHTML formatted text inside a Paragraph with the following limitations:
 
-* The content is placed inside a &lt;p&gt; tag, to validate against the XHTML schemas as explained before.
-* This HTML example cannot contain any block elements like div, and so on, and results in an exception being thrown otherwise. The only exception to this case is a single &lt;p&gt; tag.
+* The content is placed inside a <p> tag, to validate against the XHTML schemas as explained before.
+* This HTML example cannot contain any block elements like div, and so on, and results in an exception being thrown otherwise. The only exception to this case is a single <p> tag.
 * Among the supported XHTML tags, only the inline tags are used for formatting text.
 
 
@@ -2849,7 +2849,7 @@ The following code example illustrates, appending a HTML formatted string into a
 </table>
 
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img8.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img8.jpeg)' | markdownify }}
 {:.image }
 _Notes: Currently inserting XHTML formatted string in the Word document is not supported in Silverlight and Windows Phone 8 applications._
 
@@ -2883,11 +2883,11 @@ Description</td></tr>
 <tr>
 <td>
 Strict</td><td>
-The strict type validation does not support any HTML presentation elements (such as &lt;p&gt;, &lt;a&gt;, &lt;b&gt;, etc.). This is the low-featured XHTML validation type.</td></tr>
+The strict type validation does not support any HTML presentation elements (such as <p>, <a>, <b>, etc.). This is the low-featured XHTML validation type.</td></tr>
 <tr>
 <td>
 Transitional</td><td>
-The Transitional type DTD adds support for HTML presentation elements. That means you can use HTML elements (such as &lt;p&gt;, &lt;a&gt;, &lt;b&gt;, etc.) directly inside of your XHTML document. </td></tr>
+The Transitional type DTD adds support for HTML presentation elements. That means you can use HTML elements (such as <p>, <a>, <b>, etc.) directly inside of your XHTML document. </td></tr>
 </table>
 The following code illustrates how to validate a HTML string.
 
@@ -2906,7 +2906,7 @@ Parameter Description
 1. htmlString: The desired HTML string to be validated.
 2. XHTMLValidationType: It defines the validation type. It could be Strict, Transitional, or None.
 > 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img9.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img9.jpeg)' | markdownify }}
 {:.image }
 _Notes: Currently XHTML Validation is not supported in Windows Store applications._
 
@@ -3363,7 +3363,7 @@ Underline</td><td>
 Partial</td><td>
 Underline types and colors are ignored.</td></tr>
 </table>
-> { ![](Styles-and-Formatting_images/Styles-and-Formatting_img10.jpeg) | markdownify }
+> {{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img10.jpeg)' | markdownify }}
 {:.image }
 _Notes: Currently Doc to Html conversion and vice-versa is not supported in Silverlight and Windows Phone 8 applications._
 
@@ -3454,7 +3454,7 @@ Assembly Dependencies for this Conversion
 * Syncfusion.Core.dll
 * Syncfusion.Compression.Base.dll
 > 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img11.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img11.jpeg)' | markdownify }}
 {:.image }
 _Note:_ 
 
@@ -3603,7 +3603,7 @@ Essential DocIO supports conversion of Microsoft Word documents to EPub v2.0.1. 
 
 By default, Table of Contents (TOC) is enabled in the EPub document. It is generated based on the built-in heading styles or custom styles mentioned in the TOC field. 
 
-> { ![](Styles-and-Formatting_images/Styles-and-Formatting_img12.jpeg) | markdownify }
+> {{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img12.jpeg)' | markdownify }}
 {:.image }
 _Note: You need to have an EPub reader installed in the machine to view the resultant EPub document._
 
@@ -3632,7 +3632,7 @@ The following code example illustrates how to convert a Word document to EPub fi
 
 The following screenshot illustrates the resultant EPub document.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img13.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -3658,7 +3658,7 @@ The following code example illustrates how to embed font file.
 
 The following screenshot illustrates the resultant EPub document.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img14.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -3686,7 +3686,7 @@ The following code example illustrates how to export header and footer.
 
 The following is the screenshot of the resultant EPub document with the disabled header and footer contents.
 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img15.png) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -3717,7 +3717,7 @@ The following are the known limitations:
 * Embedding font files can increase the size of the EPub document
 * Embedding font files is not supported in medium trust
 > 
-{ ![](Styles-and-Formatting_images/Styles-and-Formatting_img16.jpeg) | markdownify }
+{{ '![](Styles-and-Formatting_images/Styles-and-Formatting_img16.jpeg)' | markdownify }}
 {:.image }
 _Note: Currently Doc to EPub conversion is not supported in Silverlight application._
 
@@ -3732,7 +3732,7 @@ The following overloads of the RenderAsImages method can be used to convert a Wo
 * WordDocument.RenderAsImages(pageIndex, imageType): This is used to render/convert a particular page of the document into an image; it returns the resultant image of type Image.
 * WordDocument.RenderAsImages(pageIndex, noOfPages, imageType): This is used to render/convert multiple number of pages in the document, starting from the specified page index. It returns the resultant image of type Image[] array.
 
-{ ![http://help.syncfusion.com/ug/windows%20forms/ImagesExt/image21_0.jpg](Styles-and-Formatting_images/Styles-and-Formatting_img17.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/windows%20forms/ImagesExt/image21_0.jpg](Styles-and-Formatting_images/Styles-and-Formatting_img17.jpeg)' | markdownify }}
 {:.image }
 _Note:_
 

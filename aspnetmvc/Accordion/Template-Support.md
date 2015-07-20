@@ -17,79 +17,79 @@ The following code example explains how to use content template option in the Ac
 
 
 
-&lt;div style="width:500px;"&gt;
+<div style="width:500px;">
 
     @{Html.EJ().Accordion("pizzaMenu").Items(data =>
 
                {
 
-                   data.Add().Text("GARDEN FRESH (Veg)").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("GARDEN FRESH (Veg)").ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" />
 
-                                        &lt;div class="ingredients"&gt;
+                                        <div class="ingredients">
 
                         Rate    : $50
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, onions, green capsicums & tomatoes.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("CORN & SPINACH (Veg)").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("CORN & SPINACH (Veg)").ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $70
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, sweet corn & green capsicums.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("CHICKEN DELITE (Non-veg)").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("CHICKEN DELITE (Non-veg)").ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $100
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, chicken chunks, onions & pineapple chunks.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
-                     data.Add().Text("KEEMA LA JAWAB (Non-veg)").ContentTemplate(@&lt;div&gt;
+                     data.Add().Text("KEEMA LA JAWAB (Non-veg)").ContentTemplate(@<div>
 
-                    &lt;img src="@Url.Content("~/Images/accordion/chicken-delite.png")" alt="garden-fresh" /&gt;
+                    <img src="@Url.Content("~/Images/accordion/chicken-delite.png")" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $95
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : lamb keema, onions, garlic & tandoori seasoning.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
                }).EnableMultipleOpen(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -97,7 +97,7 @@ The following code example explains how to use content template option in the Ac
 
 Output:
 
-{ ![](Template-Support_images/Template-Support_img1.png) | markdownify }
+{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -39,7 +39,7 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 @section ScriptSection{
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         function btnClick(e) {
 
@@ -49,7 +49,7 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
         }
 
-&lt;/script&gt;
+</script>
 
 }
 
@@ -65,7 +65,7 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 
 
-{ ![Description: excelexport2](Export_images/Export_img1.png) | markdownify }
+{{ '![Description: excelexport2](Export_images/Export_img1.png)' | markdownify }}
 {:.image }
 
 

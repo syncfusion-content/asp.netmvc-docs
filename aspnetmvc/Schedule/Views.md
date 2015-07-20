@@ -66,7 +66,7 @@ The following code example describes how to customize the display of view option
 
 * The following screenshot displays the output of the above code with the view customizations by displaying only two views namely Week and Workweek in the toolbar.
 
-{ ![](Views_images/Views_img1.png) | markdownify }
+{{ '![](Views_images/Views_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -123,7 +123,7 @@ The following code example explains how to change the current view of the Schedu
 
 * Execute the above code to render the following screenshot that displays day view as the currentView of the Schedule control,
 
-{ ![](Views_images/Views_img2.png) | markdownify }
+{{ '![](Views_images/Views_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -206,7 +206,7 @@ fields.Datasource(ViewBag.datasource)
 
 The output of the above code example is as follows.
 
-{ ![](Views_images/Views_img3.png) | markdownify }
+{{ '![](Views_images/Views_img3.png)' | markdownify }}
 {:.image }
 
 

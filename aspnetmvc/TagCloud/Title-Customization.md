@@ -23,7 +23,7 @@ The following step explains you on how to configure title for a TagCloud.
 
 [CSHTML]
 
-&lt;%-- Configure datasource referring local data binding section and assign it to datasource property -- %&gt;
+<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
 
 
@@ -37,7 +37,7 @@ The following screenshot illustrates a TagCloud control when you set false to Sh
 
 
 
-{ ![](Title-Customization_images/Title-Customization_img1.png) | markdownify }
+{{ '![](Title-Customization_images/Title-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ The following step explain to us on how to configure Title for a TagCloud.
 
 The following screenshot illustrates the TagCloud control with customized title text.
 
-{ ![](Title-Customization_images/Title-Customization_img2.png) | markdownify }
+{{ '![](Title-Customization_images/Title-Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -79,7 +79,7 @@ The following step explains us to configure TitleImage for a TagCloud.
 
 [CSHTML]    
 
-&lt;%-- Configure datasource referring local data binding section and assign it to datasource property -- %&gt;
+<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
 
 
@@ -105,13 +105,13 @@ style type="text/css">
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
 The following screenshot illustrates the TagCloud control with customized title image.
 
-{ ![](Title-Customization_images/Title-Customization_img3.png) | markdownify }
+{{ '![](Title-Customization_images/Title-Customization_img3.png)' | markdownify }}
 {:.image }
 
 

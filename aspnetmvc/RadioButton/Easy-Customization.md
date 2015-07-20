@@ -73,7 +73,7 @@ The following image is displayed as the output for the above steps.
 
 
 
-{ ![](Easy-Customization_images/Easy-Customization_img1.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -133,7 +133,7 @@ Configure the CSS styles to align the radio buttons.
 
 The following image is displayed as the output for the above steps.
 
-{ ![](Easy-Customization_images/Easy-Customization_img2.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -240,7 +240,7 @@ The following image is displayed as the output for the above steps.
 
 
 
-{ ![](Easy-Customization_images/Easy-Customization_img3.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -334,7 +334,7 @@ The following image is displayed as the output for the above steps.
 
 
 
-{ ![](Easy-Customization_images/Easy-Customization_img4.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img4.png)' | markdownify }}
 {:.image }
 
 

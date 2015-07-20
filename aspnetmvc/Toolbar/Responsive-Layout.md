@@ -21,7 +21,7 @@ Add the above css link in the code sample.        
 
 [CSHTML]
 
-&lt;div class="control"&gt;
+<div class="control">
 
     @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).Items(s =>
 
@@ -47,9 +47,9 @@ Add the above css link in the code sample.        
 
         s1.Add().Id("Next").SpriteCssClass("PdfDocument e-icon next ").TooltipText("Show next page ( Right Arrow )");
 
-        s1.Add().Id("page").SpriteCssClass("PdfDocument ").ContentTemplate(@&lt;input type="text" value="1" /&gt;);
+        s1.Add().Id("page").SpriteCssClass("PdfDocument ").ContentTemplate(@<input type="text" value="1" />);
 
-        s1.Add().Id("count").ContentTemplate(@&lt;span&gt;/1</span>);
+        s1.Add().Id("count").ContentTemplate(@<span>/1</span>);
 
     }).Items(s2 =>
 
@@ -59,11 +59,11 @@ Add the above css link in the code sample.        
 
         s2.Add().Id("ZoomIn").SpriteCssClass("PdfDocument e-icon zoomIn ").TooltipText("Zoom In");
 
-        s2.Add().Id("ZoomValue").SpriteCssClass("PdfDocument ").ContentTemplate(@&lt;div&gt;
+        s2.Add().Id("ZoomValue").SpriteCssClass("PdfDocument ").ContentTemplate(@<div>
 
             @dropdown()
 
-        &lt;/div&gt;);
+        </div>);
 
     }).Items(s3 =>
 
@@ -81,41 +81,41 @@ Add the above css link in the code sample.        
 
 {
 
-    &lt;div id="percentlist"&gt;
+    <div id="percentlist">
 
-        &lt;ul&gt;
+        <ul>
 
-            <li>10%&lt;/li&gt;
+            <li>10%</li>
 
-            <li>25%&lt;/li&gt;
+            <li>25%</li>
 
-            <li>50%&lt;/li&gt;
+            <li>50%</li>
 
-            <li>100%&lt;/li&gt;
+            <li>100%</li>
 
-            <li>400%&lt;/li&gt;
+            <li>400%</li>
 
-            <li>800%&lt;/li&gt;
+            <li>800%</li>
 
-            <li>1600%&lt;/li&gt;
+            <li>1600%</li>
 
-            <li>3200%&lt;/li&gt;
+            <li>3200%</li>
 
-            <li>6400%&lt;/li&gt;
+            <li>6400%</li>
 
-        &lt;/ul&gt;
+        </ul>
 
-    &lt;/div&gt;        
+    </div>        
 
     @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
 
 }
 
-&lt;/div&gt;
+</div>
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .e-tooltxt .PdfDocument.e-icon {
 
@@ -281,7 +281,7 @@ Add the above css link in the code sample.        
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -289,7 +289,7 @@ Add the above css link in the code sample.        
 
 Execute the above code to render the following output.
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img1.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
 {:.image }
 
 

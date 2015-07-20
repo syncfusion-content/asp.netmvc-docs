@@ -205,7 +205,7 @@ The following image is the output for AutoComplete control with local data bindi
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -247,7 +247,7 @@ The following steps explain the remote data binding to an AutoComplete textbox.
 
 The following image is the output for AutoComplete control with remote data binding.
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 

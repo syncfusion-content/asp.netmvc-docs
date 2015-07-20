@@ -41,7 +41,7 @@ Positioning
 
 Execute the above code to render the following output.
 
-{ ![](Gauge-Position_images/Gauge-Position_img1.png) | markdownify }
+{{ '![](Gauge-Position_images/Gauge-Position_img1.png)' | markdownify }}
 {:.image }
 
 

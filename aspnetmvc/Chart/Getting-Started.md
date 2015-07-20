@@ -19,7 +19,7 @@ This section encompasses how to configure the MVC Charts for your business needs
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -31,16 +31,16 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
 2. You can create a simple div tag.
 
 
-&lt;div&gt;
+<div>
 
-&lt;/div&gt;
+</div>
 
 
 
 3. You can add the following code in the index.cshtml file to create the Chart control in the View page. 
 
 
-    &lt;div&gt; 
+    <div> 
 
 
 
@@ -50,7 +50,7 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
 
            ) 
 
-    &lt;/div&gt; 
+    </div> 
 
 
 
@@ -60,7 +60,7 @@ The following screenshot displays the Chart.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -119,7 +119,7 @@ By default, line series is used. To create a series, you need to add the followi
 The following screenshot displays a Chart series:
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

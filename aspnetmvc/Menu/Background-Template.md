@@ -29,35 +29,35 @@ Initialize the Template Menu as illustrated in the following code example.
 
         {
 
-            child.Add().ContentTemplate(@&lt;div class="temp temp1"&gt;
+            child.Add().ContentTemplate(@<div class="temp temp1">
 
                     <span>BOOKS</span>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>New Releases</a>&lt;/li&gt;
+                        <li><a>New Releases</a></li>
 
-                        &lt;li&gt;<a>Bestsellers</a>&lt;/li&gt;
+                        <li><a>Bestsellers</a></li>
 
-                        &lt;li&gt;<a>Upcoming</a>&lt;/li&gt;
+                        <li><a>Upcoming</a></li>
 
-                        &lt;li&gt;<a>Box Sets</a>&lt;/li&gt;
+                        <li><a>Box Sets</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>HTML Basics</a>&lt;/li&gt;
+                        <li><a>HTML Basics</a></li>
 
-                        &lt;li&gt;<a>JavaScript</a>&lt;/li&gt;
+                        <li><a>JavaScript</a></li>
 
-                        &lt;li&gt;<a>JQuery</a>&lt;/li&gt;
+                        <li><a>JQuery</a></li>
 
-                        &lt;li&gt;<a>PHP Basics</a>&lt;/li&gt;
+                        <li><a>PHP Basics</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
         });
 
@@ -65,35 +65,35 @@ Initialize the Template Menu as illustrated in the following code example.
 
         {
 
-            child.Add().ContentTemplate(@&lt;div class="temp temp2"&gt;
+            child.Add().ContentTemplate(@<div class="temp temp2">
 
                     <span>CAMERAS</span>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Point & Shoots</a>&lt;/li&gt;
+                        <li><a>Point & Shoots</a></li>
 
-                        &lt;li&gt;<a>Digital SLR</a>&lt;/li&gt;
+                        <li><a>Digital SLR</a></li>
 
-                        &lt;li&gt;<a>Camcorders</a>&lt;/li&gt;
+                        <li><a>Camcorders</a></li>
 
-                        &lt;li&gt;<a>Bestsellers</a>&lt;/li&gt;
+                        <li><a>Bestsellers</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Still Camera</a>&lt;/li&gt;
+                        <li><a>Still Camera</a></li>
 
-                        &lt;li&gt;<a>Digital Camera</a>&lt;/li&gt;
+                        <li><a>Digital Camera</a></li>
 
-                        &lt;li&gt;<a>Video Camera</a>&lt;/li&gt;
+                        <li><a>Video Camera</a></li>
 
-                        &lt;li&gt;<a>Virtual Camera</a>&lt;/li&gt;
+                        <li><a>Virtual Camera</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
         });
 
@@ -101,31 +101,31 @@ Initialize the Template Menu as illustrated in the following code example.
 
         {
 
-            child.Add().ContentTemplate(@&lt;div class="temp temp3"&gt;
+            child.Add().ContentTemplate(@<div class="temp temp3">
 
                     <span>MOVIES</span>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Genobili Actions</a>&lt;/li&gt;
+                        <li><a>Genobili Actions</a></li>
 
-                        &lt;li&gt;<a>Jackie Rocks</a>&lt;/li&gt;
+                        <li><a>Jackie Rocks</a></li>
 
-                        &lt;li&gt;<a>Men In Blue</a>&lt;/li&gt;
+                        <li><a>Men In Blue</a></li>
 
-                        &lt;li&gt;<a>Human vs Alien</a>&lt;/li&gt;
+                        <li><a>Human vs Alien</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Million Dreams</a>&lt;/li&gt;
+                        <li><a>Million Dreams</a></li>
 
-                        &lt;li&gt;<a>Kung-fu</a>&lt;/li&gt;
+                        <li><a>Kung-fu</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
         });
 
@@ -133,31 +133,31 @@ Initialize the Template Menu as illustrated in the following code example.
 
         {
 
-            child.Add().ContentTemplate(@&lt;div class="temp temp4"&gt;
+            child.Add().ContentTemplate(@<div class="temp temp4">
 
                     <span>MUSICS</span>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>New Releases</a>&lt;/li&gt;
+                        <li><a>New Releases</a></li>
 
-                        &lt;li&gt;<a>Bestsellers</a>&lt;/li&gt;
+                        <li><a>Bestsellers</a></li>
 
-                        &lt;li&gt;<a>Devotional</a>&lt;/li&gt;
+                        <li><a>Devotional</a></li>
 
-                        &lt;li&gt;<a>Sufi & Ghazal</a>&lt;/li&gt;
+                        <li><a>Sufi & Ghazal</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Pop songs</a>&lt;/li&gt;
+                        <li><a>Pop songs</a></li>
 
-                        &lt;li&gt;<a>Rock Music</a>&lt;/li&gt;
+                        <li><a>Rock Music</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
         });
 
@@ -165,39 +165,39 @@ Initialize the Template Menu as illustrated in the following code example.
 
         {
 
-            child.Add().ContentTemplate(@&lt;div class="temp temp5"&gt;
+            child.Add().ContentTemplate(@<div class="temp temp5">
 
                     <span>GAMING</span>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>Upcoming</a>&lt;/li&gt;
+                        <li><a>Upcoming</a></li>
 
-                        &lt;li&gt;<a>PC</a>&lt;/li&gt;
+                        <li><a>PC</a></li>
 
-                        &lt;li&gt;<a>PS Vista</a>&lt;/li&gt;
+                        <li><a>PS Vista</a></li>
 
-                        &lt;li&gt;<a>PS3</a>&lt;/li&gt;
+                        <li><a>PS3</a></li>
 
-                        &lt;li&gt;<a>XBox</a>&lt;/li&gt;
+                        <li><a>XBox</a></li>
 
-                        &lt;li&gt;<a>Consoles</a>&lt;/li&gt;
+                        <li><a>Consoles</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;<a>FIFA 2999</a>&lt;/li&gt;
+                        <li><a>FIFA 2999</a></li>
 
-                        &lt;li&gt;<a>NBA Actions</a>&lt;/li&gt;
+                        <li><a>NBA Actions</a></li>
 
-                        &lt;li&gt;<a>Crick Champions</a>&lt;/li&gt;
+                        <li><a>Crick Champions</a></li>
 
-                        &lt;li&gt;<a>Carom legend</a>&lt;/li&gt;
+                        <li><a>Carom legend</a></li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
         });
 
@@ -213,7 +213,7 @@ Initialize the Template Menu as illustrated in the following code example.
 
 
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .temp {
 
@@ -341,13 +341,13 @@ Initialize the Template Menu as illustrated in the following code example.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 Execute the above code to render the following output.                       
 
-{ ![](Background-Template_images/Background-Template_img1.png) | markdownify }
+{{ '![](Background-Template_images/Background-Template_img1.png)' | markdownify }}
 {:.image }
 
 

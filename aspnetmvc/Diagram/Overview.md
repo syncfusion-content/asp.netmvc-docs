@@ -13,7 +13,7 @@ EssentialDiagramASP.NET MVC creates rich Visio-like applications. Its framework 
 
 
 
-{ ![](Overview_images/Overview_img1.png) | markdownify }
+{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 

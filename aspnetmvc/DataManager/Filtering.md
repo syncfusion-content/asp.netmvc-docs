@@ -57,7 +57,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img1.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -79,7 +79,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img2.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -99,7 +99,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img3.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -145,7 +145,7 @@ This operator is used to get the records with values greater than or equal to th
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Filtering_images/Filtering_img4.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -191,7 +191,7 @@ This operator is used to get the records with values equal to that of the filter
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Filtering_images/Filtering_img5.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -239,7 +239,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img6.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -289,7 +289,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img7.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -335,7 +335,7 @@ This operator is used to get the records that starts with the filter value speci
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Filtering_images/Filtering_img8.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -381,7 +381,7 @@ This operator is used to get the records that ends with the filter value specifi
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Filtering_images/Filtering_img9.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -431,7 +431,7 @@ The and predicate is used to add n-number of predicates with and condition and f
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Filtering_images/Filtering_img10.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -479,7 +479,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Filtering_images/Filtering_img11.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img11.png)' | markdownify }}
 {:.image }
 
 

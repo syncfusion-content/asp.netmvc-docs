@@ -150,7 +150,7 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 
 
 
-{ ![](Tools_images/Tools_img1.png) | markdownify }
+{{ '![](Tools_images/Tools_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -206,7 +206,7 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 
 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image682_23.jpg](Tools_images/Tools_img2.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image682_23.jpg](Tools_images/Tools_img2.jpeg)' | markdownify }}
 {:.image }
 
 

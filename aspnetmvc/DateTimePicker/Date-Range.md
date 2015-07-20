@@ -41,7 +41,7 @@ In the following example May 10, 2015 09:00 AM is set as MinDateTime and May 20,
 
 
 
-{ ![](Date-Range_images/Date-Range_img1.png) | markdownify }
+{{ '![](Date-Range_images/Date-Range_img1.png)' | markdownify }}
 {:.image }
 
 

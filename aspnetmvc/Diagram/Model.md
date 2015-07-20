@@ -67,7 +67,7 @@ public ActionResult Diagram()
 
 
 
-{ ![](Model_images/Model_img1.png) | markdownify }
+{{ '![](Model_images/Model_img1.png)' | markdownify }}
 {:.image }
 
 

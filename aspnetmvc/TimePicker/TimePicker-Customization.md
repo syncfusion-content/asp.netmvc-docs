@@ -27,7 +27,7 @@ The following steps explains you to create a TimePicker widget.
 
 2. The following screenshot illustrates you a default TimePicker.
 
-{ ![](TimePicker-Customization_images/TimePicker-Customization_img1.png) | markdownify }
+{{ '![](TimePicker-Customization_images/TimePicker-Customization_img1.png)' | markdownify }}
 {:.image }
 
 

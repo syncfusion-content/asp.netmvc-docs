@@ -283,7 +283,7 @@ return View();
 
 The following screenshot illustrates the group New with the group expander.
 
-{ ![](Group-Expander_images/Group-Expander_img1.png) | markdownify }
+{{ '![](Group-Expander_images/Group-Expander_img1.png)' | markdownify }}
 {:.image }
 
 

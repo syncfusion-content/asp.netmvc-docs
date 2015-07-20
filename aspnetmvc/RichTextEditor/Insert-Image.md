@@ -15,11 +15,11 @@ Steps to Insert the Image
 
 1. Specify the URL of the image.
 
-{ ![](Insert-Image_images/Insert-Image_img1.png) | markdownify }
+{{ '![](Insert-Image_images/Insert-Image_img1.png)' | markdownify }}
 {:.image }
 2. Description of the images is mandatory.
 
-{ ![](Insert-Image_images/Insert-Image_img2.png) | markdownify }
+{{ '![](Insert-Image_images/Insert-Image_img2.png)' | markdownify }}
 {:.image }
 
 

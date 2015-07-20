@@ -27,7 +27,7 @@ You can use the following code example to render the Tab widget with scroll butt
 
 @*Add the following code example to the corresponding CSHTML page to render Tab with scroll button.*@
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
             @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -35,31 +35,31 @@ You can use the following code example to render the Tab widget with scroll butt
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("pastatype").Text("Pasta Type")
 
-                   .ContentTemplate(@<div>Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("burgertype").Text("Burger Type")
 
-                   .ContentTemplate(@<div>Burger cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Burger cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("spaghettitype").Text("Spaghetti Type")
 
-                   .ContentTemplate(@<div>Spaghetti cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Spaghetti cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("ramentype").Text("Ramen Type")
 
-                   .ContentTemplate(@<div>Ramen cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Ramen cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
            }).EnableTabScroll(true).Render();}
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -67,7 +67,7 @@ You can use the following code example to render the Tab widget with scroll butt
 
 The following screenshot illustrates you the Tab control with scroll button. 
 
-{ ![](Scroll-Support_images/Scroll-Support_img1.png) | markdownify }
+{{ '![](Scroll-Support_images/Scroll-Support_img1.png)' | markdownify }}
 {:.image }
 
 

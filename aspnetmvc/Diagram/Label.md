@@ -43,7 +43,7 @@ connector.Labels.Add(label);
 
 
 
-{ ![](Label_images/Label_img1.png) | markdownify }
+{{ '![](Label_images/Label_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -77,7 +77,7 @@ connector.Constraints = ConnectorConstraints.Default| ConnectorConstraints.DragL
 
 
 
-{ ![](Label_images/Label_img2.png) | markdownify }
+{{ '![](Label_images/Label_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -123,7 +123,7 @@ Node node = new Node()
 
 
 
-{ ![](Label_images/Label_img3.png) | markdownify }
+{{ '![](Label_images/Label_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -157,11 +157,11 @@ label.RotateAngle = 45;
 
 
 
-{ ![](Label_images/Label_img4.png) | markdownify }
+{{ '![](Label_images/Label_img4.png)' | markdownify }}
 {:.image }
 
 
-> { ![](Label_images/Label_img5.png) | markdownify }
+> {{ '![](Label_images/Label_img5.png)' | markdownify }}
 {:.image }
 _Note: No built-in support is added to rotate labels interactively._
 
@@ -209,7 +209,7 @@ label.TextDecoration = TextDecorations.LineThrough;
 
 
 
-{ ![](Label_images/Label_img6.png) | markdownify }
+{{ '![](Label_images/Label_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -247,7 +247,7 @@ label.Mode = LabelEditMode.View;
 
 
 
-{ ![](Label_images/Label_img7.png) | markdownify }
+{{ '![](Label_images/Label_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -373,13 +373,13 @@ Bottom</td><td>
 </table>
 
 
-{ ![](Label_images/Label_img11.png) | markdownify }
+{{ '![](Label_images/Label_img11.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Label_images/Label_img12.png) | markdownify }
+{{ '![](Label_images/Label_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -405,7 +405,7 @@ label.Wrapping = WrapText.Wrap;
 
 
 
-{ ![](Label_images/Label_img13.png) | markdownify }
+{{ '![](Label_images/Label_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -511,7 +511,7 @@ node.Labels.Add(label);
 
 
 
-{ ![](Label_images/Label_img17.png) | markdownify }
+{{ '![](Label_images/Label_img17.png)' | markdownify }}
 {:.image }
 
 

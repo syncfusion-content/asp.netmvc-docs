@@ -100,7 +100,7 @@ Spacing
 
 The following example illustrates the horizontal and vertical spacing of Hierarchical Layout.
 
-{ ![](Automatic-Layout_images/Automatic-Layout_img1.png) | markdownify }
+{{ '![](Automatic-Layout_images/Automatic-Layout_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -115,7 +115,7 @@ The Orientation property, LayoutOrientations, of layout is used to specify the t
 
 The following image displays Bottom to Top orientation of layout.
 
-{ ![](Automatic-Layout_images/Automatic-Layout_img2.png) | markdownify }
+{{ '![](Automatic-Layout_images/Automatic-Layout_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -247,7 +247,7 @@ model.DataSourceSettings.Parent = "Supervisor";
 
 
 
-{ ![](Automatic-Layout_images/Automatic-Layout_img3.png) | markdownify }
+{{ '![](Automatic-Layout_images/Automatic-Layout_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -451,7 +451,7 @@ function getLayoutInfo(diagram, node, options) {
 
 
 
-{ ![](Automatic-Layout_images/Automatic-Layout_img10.png) | markdownify }
+{{ '![](Automatic-Layout_images/Automatic-Layout_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -495,7 +495,7 @@ function getLayoutInfo(diagram, node, options) {
 
 
 
-{ ![](Automatic-Layout_images/Automatic-Layout_img11.png) | markdownify }
+{{ '![](Automatic-Layout_images/Automatic-Layout_img11.png)' | markdownify }}
 {:.image }
 
 

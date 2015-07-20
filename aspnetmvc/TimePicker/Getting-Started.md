@@ -15,7 +15,7 @@ This section explains briefly about how to create a TimePicker in your applicati
 
 Essential MVCTimePicker provides support to display the time in your webpage and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -36,9 +36,9 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-&lt;table&gt;
+<table>
 
-    &lt;tr&gt;
+    <tr>
 
         <td class="tdclass">Date</td>
 
@@ -46,61 +46,61 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
         <td class="tdclass">Person</td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().DatePicker("startDate")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().TimePicker("timestart")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td&gt;&lt;/td&gt;
+        <td></td>
 
-        &lt;td&gt;&lt;/td&gt;
+        <td></td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-&lt;/table&gt;
+</table>
 
 
 
@@ -108,7 +108,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .tdclass {
 
@@ -128,7 +128,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -136,7 +136,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     function button()
 
@@ -146,13 +146,13 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
     }
 
-&lt;/script&gt;
+</script>
 
 __
 
 5. The following screenshot displays the output for the above code.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -162,7 +162,7 @@ __
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -178,9 +178,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-&lt;table&gt;
+<table>
 
-    &lt;tr&gt;
+    <tr>
 
         <td class="tdclass">Date</td>
 
@@ -190,73 +190,73 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
         <td class="tdclass">Person</td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td&gt;&lt;/td&gt;
+        <td></td>
 
-        &lt;td&gt;&lt;/td&gt;
+        <td></td>
 
-        &lt;td&gt;&lt;/td&gt;
+        <td></td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-&lt;/table&gt;
+</table>
 
 
 
@@ -264,7 +264,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .tdclass {
 
@@ -284,7 +284,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -292,7 +292,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     function selectedStartTime(sender) {
 
@@ -312,13 +312,13 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
     }
 
-&lt;/script&gt;
+</script>
 
 __
 
 4. The following screenshot displays the output for the above code. 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -328,11 +328,11 @@ You can select the Start time in the first TimePicker and select the End time wi
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -342,7 +342,7 @@ An acknowledgement message appears when you click the Submit button.
 
 You can specify the alert message in the script as follows.
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         function button()
 
@@ -372,11 +372,11 @@ You can specify the alert message in the script as follows.
 
             }
 
-&lt;/script&gt;
+</script>
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 

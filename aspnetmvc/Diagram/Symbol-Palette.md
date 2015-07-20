@@ -11,7 +11,7 @@ documentation: ug
 
 The SymbolPalette displays a collection of palettes. The Palette shows nodes and connectors. It allows you to drag and drop the nodes and connectors on the Diagram. The Palette has a header that displays the name and also has an option that allows you to expand or collapse its items. Each node or connector in the palette is called a Palette Item.
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image147_82.jpg](Symbol-Palette_images/Symbol-Palette_img1.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image147_82.jpg](Symbol-Palette_images/Symbol-Palette_img1.jpeg)' | markdownify }}
 {:.image }
 
 
@@ -71,7 +71,7 @@ public void GenerateConnectors(SymbolPaletteProperties symbolPalettes)
 
 The Diagram provides support for adding nodes and connectors through the Symbol Palette. To add a node to the Diagram, drag the desired symbol from the SymbolPalette to the drawing area and release the pointer. The desired palette item that is clicked, is added to the Diagram when you set the desired Diagram ID to the Symbol Palette’s DiagramId.
 
-{ ![](Symbol-Palette_images/Symbol-Palette_img2.png) | markdownify }
+{{ '![](Symbol-Palette_images/Symbol-Palette_img2.png)' | markdownify }}
 {:.image }
 
 

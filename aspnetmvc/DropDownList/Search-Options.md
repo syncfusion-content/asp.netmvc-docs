@@ -33,9 +33,9 @@ The following steps explains you the configuration of search options in DropDown
 
 
 
-&lt;div id="list"&gt;
+<div id="list">
 
-    &lt;ul&gt;
+    <ul>
 
         <li>Art</li>
 
@@ -49,9 +49,9 @@ The following steps explains you the configuration of search options in DropDown
 
         <li>Science</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -59,7 +59,7 @@ The following steps explains you the configuration of search options in DropDown
 
 Output of the above steps
 
-{ ![](Search-Options_images/Search-Options_img1.png) | markdownify }
+{{ '![](Search-Options_images/Search-Options_img1.png)' | markdownify }}
 {:.image }
 
 

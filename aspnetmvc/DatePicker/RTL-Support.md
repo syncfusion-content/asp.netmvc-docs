@@ -27,7 +27,7 @@ The following steps explain you how to enable the EnableRTL property of the Date
 
 2.  The following screenshot displays the output for the above code.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

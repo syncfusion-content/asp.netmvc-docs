@@ -23,7 +23,7 @@ The range of the ProgressBar is set by using minimum and maximum values. The Min
  [CSHTML]// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized range.@Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Value(80).Height("20").Width("500")</td></tr>
 <tr>
 <td>
-[JavaScript]&lt;script&gt;            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getPercentage() + " %" });            });        &lt;/script&gt;        </td></tr>
+[JavaScript]<script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getPercentage() + " %" });            });        </script>        </td></tr>
 </table>
 
 
@@ -45,7 +45,7 @@ The range of the ProgressBar is set by using minimum and maximum values. The Min
 
  The following screenshot displays the output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/pro100%.PNG](Setting-Range_images/Setting-Range_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/pro100%.PNG](Setting-Range_images/Setting-Range_img1.png)' | markdownify }}
 {:.image }
 
 

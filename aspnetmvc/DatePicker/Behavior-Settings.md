@@ -29,7 +29,7 @@ The following steps explains how to set the ButtonText for DatePicker widget.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -137,7 +137,7 @@ The following steps explain you how to specify the fieldsmapping in DatePicker w
 
 2. Add the following styles to specify the fields mapping in DatePicker widget.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img3.jpeg) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.jpeg)' | markdownify }}
 {:.image }
 _Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed._
 
@@ -145,7 +145,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .flag .e-image {
 
@@ -169,7 +169,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -177,7 +177,7 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -199,7 +199,7 @@ The following steps explain you how to specify the StartDay of the week in DateP
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img5.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -241,7 +241,7 @@ The following steps explain you how to specify the selected value.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img6.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -265,7 +265,7 @@ The following steps explain you how to specify the WatermarkText in DatePicker w
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img7.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
 {:.image }
 
 

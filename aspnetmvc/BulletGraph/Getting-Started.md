@@ -19,21 +19,21 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-1. Create a &lt;div&gt; tag.
+1. Create a <div> tag.
 
 
 
-&lt;div&gt;
+<div>
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -41,7 +41,7 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 
 
-&lt;div&gt;
+<div>
 
 
 
@@ -53,7 +53,7 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -61,7 +61,7 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -225,7 +225,7 @@ Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGrap
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ After adding QualitativeRanges to the BulletGraph, the control appears as follow
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -357,7 +357,7 @@ When you customize the ticks and measure bar, the BulletGraph appears as follows
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -443,7 +443,7 @@ The following screenshot displays a BulletGraph with a Caption and Subtitle.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -529,31 +529,31 @@ You can use a Tooltip in your application to display the values of forecasted ra
 
 
 
-&lt;divid="Tooltip"style="display:none; width:125px;padding-top: 10px;padding-bottom:10px"&gt;
+<divid="Tooltip"style="display:none; width:125px;padding-top: 10px;padding-bottom:10px">
 
 
 
-&lt;divalign="center"style="font-weight:bold"&gt;
+<divalign="center"style="font-weight:bold">
 
-           Rainfall &lt;/div&gt;
+           Rainfall </div>
 
-&lt;table&gt;
+<table>
 
-&lt;tr&gt;<td>Actual</td>
+<tr><td>Actual</td>
 
-&lt;td&gt;: {{:currentValue}}mm</td>&lt;/tr&gt;
+<td>: {{:currentValue}}mm</td></tr>
 
-&lt;tr&gt;<td>Forecast</td>
+<tr><td>Forecast</td>
 
-&lt;td&gt;: {{:targetValue}}mm</td>&lt;/tr&gt;
+<td>: {{:targetValue}}mm</td></tr>
 
-&lt;tr&gt;<td>Year</td>
+<tr><td>Year</td>
 
-&lt;td&gt;: {{:category}}&lt;/td&gt;&lt;/tr&gt;
+<td>: {{:category}}</td></tr>
 
-&lt;/table&gt;
+</table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -561,7 +561,7 @@ The following screenshot displays a customized BulletGraph.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 

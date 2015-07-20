@@ -19,21 +19,21 @@ Digital Gauge contains angular support. It is possible to add object as well as 
 
 ej-DigitalGauge is the control tag, where ej is tag prefix and DigitalGauge is the control name.Digital Gauge is rendered with the following code example.
 
-&lt;div ng-app="syncApp"&gt;
+<div ng-app="syncApp">
 
-&lt;div ng-controller="DigitalGauge"&gt;
+<div ng-controller="DigitalGauge">
 
-&lt;ej-DigitalGauge id="digitalCore" e-height="500" e-load="loadGaugeTheme"&gt;
+<ej-DigitalGauge id="digitalCore" e-height="500" e-load="loadGaugeTheme">
 
-&lt;/ej-DigitalGauge&gt;
+</ej-DigitalGauge>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
-&lt;!—binding the value to the scope variables in application controller--&gt;
+<!—binding the value to the scope variables in application controller-->
 
 angular.module('syncApp', ['ejangular'])
 
@@ -43,7 +43,7 @@ $scope.nvalue = “text”;
 
 });
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -51,7 +51,7 @@ $scope.nvalue = “text”;
 
 Execute the above code to render the following output.
 
-{ ![](MVVM_images/MVVM_img1.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -65,13 +65,13 @@ Example: e-position-x.
 
 
 
-&lt;!--To Render the Digital gauge--&gt;
+<!--To Render the Digital gauge-->
 
-&lt;ej-DigitalGauge id="digitalCore"&gt;
+<ej-DigitalGauge id="digitalCore">
 
-&lt;!--Adding Item collection to the digital gauge--&gt;
+<!--Adding Item collection to the digital gauge-->
 
-&lt;e-items&gt;
+<e-items>
 
 <e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
 
@@ -79,17 +79,17 @@ e-value="Syncfusion" e-characterSetting-opacity="0.8"
 
 e-position-x="52" e-position-y="52">
 
-&lt;/e-item&gt;
+</e-item>
 
-&lt;/e-items&gt;
+</e-items>
 
-&lt;/ej-DigitalGauge&gt;
+</ej-DigitalGauge>
 
 
 
 Finally while running the above codes, the following output will be rendered.
 
-{ ![](MVVM_images/MVVM_img2.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -99,13 +99,13 @@ Finally while running the above codes, the following output will be rendered.
 
 Digital Gauge supports the two way biding for the property value as mentioned earlier. Following code example explains how to achieve the two way binding to the Digital Gauge.
 
-&lt;div ng-app="syncApp"&gt;
+<div ng-app="syncApp">
 
-&lt;div ng-controller="DigitalGauge"&gt;
+<div ng-controller="DigitalGauge">
 
-&lt;ej-DigitalGauge id="digitalCore" e-height="200" e-load="loadGaugeTheme"&gt;
+<ej-DigitalGauge id="digitalCore" e-height="200" e-load="loadGaugeTheme">
 
-&lt;e-items&gt;
+<e-items>
 
 <e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
 
@@ -113,25 +113,25 @@ e-characterSetting-opacity="0.8" e-position-x="52"
 
 e-value="nvalue" e-position-y="52">
 
-&lt;/e-item&gt;
+</e-item>
 
-&lt;/e-items&gt;
+</e-items>
 
-&lt;/ej-DigitalGauge&gt;
+</ej-DigitalGauge>
 
-Type here &lt;input type="text" id="txtValue" ng-model="nvalue" Style="width:110px"/&gt;
+Type here <input type="text" id="txtValue" ng-model="nvalue" Style="width:110px"/>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
-
-
-
-&lt;script type="text/javascript"&gt;
+</div>
 
 
 
-&lt;!—binding the value to the scope variables in application controller--&gt;
+<script type="text/javascript">
+
+
+
+<!—binding the value to the scope variables in application controller-->
 
 
 
@@ -143,7 +143,7 @@ $scope.nvalue = "Syncfusion";
 
 });
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -151,7 +151,7 @@ $scope.nvalue = "Syncfusion";
 
 Execute the above code to render the following output.
 
-{ ![](MVVM_images/MVVM_img3.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -181,9 +181,9 @@ value: samplevalue,
 
                     }">
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
         $(function () {
 
@@ -201,7 +201,7 @@ value: samplevalue,
 
         });
 
-    &lt;/script&gt;
+    </script>
 
 
 Execute the above code to render the following output.
@@ -210,7 +210,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![C:/Users/karthigeyan/Desktop/q.png](MVVM_images/MVVM_img4.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/q.png](MVVM_images/MVVM_img4.png)' | markdownify }}
 {:.image }
 
 

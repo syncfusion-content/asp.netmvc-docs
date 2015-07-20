@@ -65,7 +65,7 @@ The following steps explain you how to set the date format as "d MM, y".
 
 
 
-{ ![](Display-Format_images/Display-Format_img1.png) | markdownify }
+{{ '![](Display-Format_images/Display-Format_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -117,7 +117,7 @@ The following steps explain you how to get the DayHeaderFormat for DatePicker wi
 
 
 
-{ ![](Display-Format_images/Display-Format_img2.png) | markdownify }
+{{ '![](Display-Format_images/Display-Format_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -145,7 +145,7 @@ The following steps explain you how to the header format to be displayed in the 
 
 
 
-{ ![](Display-Format_images/Display-Format_img3.png) | markdownify }
+{{ '![](Display-Format_images/Display-Format_img3.png)' | markdownify }}
 {:.image }
 
 

@@ -109,7 +109,7 @@ public ActionResult AutocompleteFeatures()
 
 The following image is the output for AutoComplete control that provides Grouping.
 
-{ ![](Grouping_images/Grouping_img1.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img1.png)' | markdownify }}
 {:.image }
 
 

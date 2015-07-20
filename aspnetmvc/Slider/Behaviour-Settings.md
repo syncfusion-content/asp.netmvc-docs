@@ -35,7 +35,7 @@ The following steps explains you on how to configure the Height and Width of the
 
 Execute the above code example to render the following output.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img1.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ The following steps explains you on how to configure the IncrementStep property.
 
 Execute the above code example to render the following output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/s1.PNG](Behaviour-Settings_images/Behaviour-Settings_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/s1.PNG](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -89,7 +89,7 @@ The following steps explains you on how to enable the ReadOnly property.
 
 After you execute the above code example, the Slider values cannot be changed in any ways.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderread.PNG](Behaviour-Settings_images/Behaviour-Settings_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderread.PNG](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
 {:.image }
 
 

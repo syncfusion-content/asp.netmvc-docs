@@ -23,7 +23,7 @@ Responsive layout is aimed at crafting sites to provide an optimal viewing exper
 
 @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/wcf/OlapClientService.svc")).Title("OLAP Browser").ClientSideEvents(oEve => { oEve.ChartLoad("setChartProperties"); }).IsResponsive(true)
 
-&lt;script&gt;
+<script>
 
     function setChartProperties(args) {
 
@@ -31,27 +31,27 @@ Responsive layout is aimed at crafting sites to provide an optimal viewing exper
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img1.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img2.png) | markdownify }
-{:.image }
-
-
-
-
-{ ![](Responsive-Layout_images/Responsive-Layout_img3.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img2.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img4.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img3.png)' | markdownify }}
+{:.image }
+
+
+
+
+{{ '![](Responsive-Layout_images/Responsive-Layout_img4.png)' | markdownify }}
 {:.image }
 
 

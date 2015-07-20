@@ -71,7 +71,7 @@ diagram.align("center");
 
 
 
-{ ![](Commands_images/Commands_img1.png) | markdownify }
+{{ '![](Commands_images/Commands_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -103,7 +103,7 @@ diagram.align("middle");
 
 
 
-{ ![](Commands_images/Commands_img2.png) | markdownify }
+{{ '![](Commands_images/Commands_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -147,7 +147,7 @@ diagram.spaceAcross();
 
 
 
-{ ![](Commands_images/Commands_img3.png) | markdownify }
+{{ '![](Commands_images/Commands_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -171,7 +171,7 @@ diagram.spaceDown();
 
 
 
-{ ![](Commands_images/Commands_img4.png) | markdownify }
+{{ '![](Commands_images/Commands_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -233,7 +233,7 @@ diagram.sameWidth();
 
 
 
-{ ![](Commands_images/Commands_img5.png) | markdownify }
+{{ '![](Commands_images/Commands_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -307,7 +307,7 @@ diagram.paste();
 
 
 
-{ ![](Commands_images/Commands_img6.png) | markdownify }
+{{ '![](Commands_images/Commands_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -381,7 +381,7 @@ diagram.bringToFront();
 
 
 
-{ ![](Commands_images/Commands_img7.png) | markdownify }
+{{ '![](Commands_images/Commands_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -407,7 +407,7 @@ diagram.sendToBack();
 
 
 
-{ ![](Commands_images/Commands_img8.png) | markdownify }
+{{ '![](Commands_images/Commands_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -435,7 +435,7 @@ diagram.moveForward();
 
 
 
-{ ![](Commands_images/Commands_img9.png) | markdownify }
+{{ '![](Commands_images/Commands_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -459,7 +459,7 @@ diagram.sendBackward();
 
 
 
-{ ![](Commands_images/Commands_img10.png) | markdownify }
+{{ '![](Commands_images/Commands_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -560,7 +560,7 @@ Nudge by using Arrow Keys
 
 The corresponding arrow keys are used to move the selected elements up, down, left, or right by 1 pixel.
 
-{ ![http://help.syncfusion.com/ug/wpf/diagram/ImagesExt/image69_163.png](Commands_images/Commands_img11.png) | markdownify }
+{{ '![http://help.syncfusion.com/ug/wpf/diagram/ImagesExt/image69_163.png](Commands_images/Commands_img11.png)' | markdownify }}
 {:.image }
 
 

@@ -12,13 +12,13 @@ documentation: ug
 The OLAP Grid inside the OLAP Client component can be exported to an Excel worksheet. A toolbar icon has been added for the implementation of the Excel export feature. On clicking the icon, the OLAP Grid is exported in cell mode to the worksheet of an Excel workbook. The workbook can be saved from the browser to the local disk drive.
 
 
-{ ![](Export_images/Export_img1.png) | markdownify }
+{{ '![](Export_images/Export_img1.png)' | markdownify }}
 {:.image }
 
 
 __
 
-{ ![Description: Description: excelexport2](Export_images/Export_img2.png) | markdownify }
+{{ '![Description: Description: excelexport2](Export_images/Export_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -31,35 +31,35 @@ The following steps explain the implementation of the Collapsible option in Spli
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                &lt;div style="padding: 0px 15px;"&gt;
+                <div style="padding: 0px 15px;">
 
-                    <h3 class="h3">Tools &lt;/h3&gt;
+                    <h3 class="h3">Tools </h3>
 
                     Essential Tools is an collection of user interface components used to create interactive
 
                     ASP.NET MVC applications.
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;).Collapsible(false);
+            </div>).Collapsible(false);
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                &lt;div style="padding: 0px 15px;"&gt;
+                <div style="padding: 0px 15px;">
 
-                    <h3 class="h3">Grid &lt;/h3&gt;
+                    <h3 class="h3">Grid </h3>
 
                     Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                     Grouping and the display of hierarchical data.
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;);
+            </div>);
 
     })
 
@@ -71,13 +71,13 @@ The output for Splitter when collapsible is set to “True” is as follows.
 
 1. 
 
-{ ![](Enabling-Collapsible_images/Enabling-Collapsible_img1.png) | markdownify }
+{{ '![](Enabling-Collapsible_images/Enabling-Collapsible_img1.png)' | markdownify }}
 {:.image }
 
 
 The output for Splitter when collapsible is “False”.
 
-{ ![](Enabling-Collapsible_images/Enabling-Collapsible_img2.png) | markdownify }
+{{ '![](Enabling-Collapsible_images/Enabling-Collapsible_img2.png)' | markdownify }}
 {:.image }
 
 

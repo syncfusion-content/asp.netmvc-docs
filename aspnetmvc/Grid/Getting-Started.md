@@ -13,9 +13,9 @@ This section explains briefly about how to create a Grid in your application wit
 
 ## Create your first Grid in MVC
 
-The Grid can be easily configured to the DOM element, such as &lt;div&gt;. You can create a Grid with a highly customizable look and feel. You can use the Grid control to generate complex grid-based reports with rich formatting. In the following example, you can take a look at how the transaction of product is managed, analysis of a particular sale using filtering and grouping feature. This section explains you about adding group, filtering and paging of sales products.
+The Grid can be easily configured to the DOM element, such as <div>. You can create a Grid with a highly customizable look and feel. You can use the Grid control to generate complex grid-based reports with rich formatting. In the following example, you can take a look at how the transaction of product is managed, analysis of a particular sale using filtering and grouping feature. This section explains you about adding group, filtering and paging of sales products.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -56,7 +56,7 @@ The Grid can be easily configured to the DOM element, such as &lt;div&gt;. You c
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -96,7 +96,7 @@ The following screenshot displays a Grid with sales data.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -142,7 +142,7 @@ Use AllowPaging to switch between pages.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -156,9 +156,9 @@ Filtering feature in Grid is usedto facilitate the extraction of a subset of rec
 
 To enable filtering, use AllowFiltering property of Grid as follows.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -198,7 +198,7 @@ The following screenshot illustrates how to filter sales data.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -252,7 +252,7 @@ The following screenshot shows the analysis of sales data by grouping unit stock
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -327,7 +327,7 @@ The following code example shows the option to enable group summary.
 
 The following screenshot shows the group summary.
 
-{ ![](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 

@@ -79,7 +79,7 @@ Radius of the Scale Bar is changed with the help of scaleRadius property and in 
 
 
 
-{ ![](Scales_images/Scales_img1.png) | markdownify }
+{{ '![](Scales_images/Scales_img1.png)' | markdownify }}
 {:.image }
 
 

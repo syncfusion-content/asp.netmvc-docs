@@ -22,7 +22,7 @@ Shortcut Key</td><td>
 Description</td></tr>
 <tr>
 <td>
-{ [Access key](http://en.wikipedia.org/wiki/Access_key) | markdownify } + j</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
 Focuses the control</td></tr>
 <tr>
 <td>
@@ -65,7 +65,7 @@ Run the above example and press [Access key](http://en.wikipedia.org/wiki/Access
 
 
 
-{ ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png) | markdownify }
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 

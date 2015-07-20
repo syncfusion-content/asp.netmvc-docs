@@ -95,7 +95,7 @@ You can customize the labels of the legenditem using LegendLabel property of Ran
 
 
 
-{ ![](TreeMap-Elements_images/TreeMap-Elements_img1.png) | markdownify }
+{{ '![](TreeMap-Elements_images/TreeMap-Elements_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -177,7 +177,7 @@ You can set headers for each level by setting the ShowHeader propery of the each
 
 
 
-{ ![](TreeMap-Elements_images/TreeMap-Elements_img2.png) | markdownify }
+{{ '![](TreeMap-Elements_images/TreeMap-Elements_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ You can also set labels for the leaf nodes by setting the ShowLabels property as
 
 
 
-{ ![](TreeMap-Elements_images/TreeMap-Elements_img3.png) | markdownify }
+{{ '![](TreeMap-Elements_images/TreeMap-Elements_img3.png)' | markdownify }}
 {:.image }
 
 

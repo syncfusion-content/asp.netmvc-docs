@@ -15,7 +15,7 @@ Configure a TreeMap
 
 You can configure an MVC TreeMap in simple steps. This manual provides instructions on how to configure TreeMap with grouping of populated datum based on population growth in population in each continent.  It also provides a walk-through on some of the customization feature available in TreeMap control.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -101,7 +101,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 Initialize TreeMap
 
-1. Create a &lt;div&gt; tag with a specific id and set the height and width to determine the TreeMap size to be rendered in “TreeMap.cshtml” file
+1. Create a <div> tag with a specific id and set the height and width to determine the TreeMap size to be rendered in “TreeMap.cshtml” file
 {% highlight html %}
 
 
@@ -275,7 +275,7 @@ ej.widgets.all.min.js"></script>
 
 The following image displays a TreeMap with default properties using the above code. 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -323,7 +323,7 @@ The following code sample explains how to group TreeMap Items using ‘Levels’
 
 The following screenshot displays grouping of TreeMapItems using Levels.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -383,7 +383,7 @@ The following code sample explains how to customize TreeMap Appearance by Range.
 
 The following screenshot displays customized TreeMap Appearance by Range
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -453,7 +453,7 @@ The following code sample displays how the tooltip is enabled.
 
 The following screenshot displays the TreeMap when the Tooltip is enabled.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -527,7 +527,7 @@ The following code sample displays how to add labels for legend in a TreeMap.
 
 The following screenshot displays the TreeMap when Labels are enabled.
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

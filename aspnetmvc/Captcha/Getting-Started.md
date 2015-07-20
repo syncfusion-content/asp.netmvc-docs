@@ -13,7 +13,7 @@ documentation: ug
 
 This section enables you to configure the Captcha control in your ASP.NET MVC application and also in learning how to use captcha with auto validation in web forms.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -28,11 +28,11 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 
 [CSHTML]
 
-&lt;div&gt;
+<div>
 
     @Html.EJ().Captcha("SignUpCaptcha")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -42,33 +42,33 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 
 [web.config]
 
-&lt;!--add the following code in &lt;system.web&gt;-->
+<!--add the following code in <system.web>-->
 
- &lt;system.web&gt;
+ <system.web>
 
-    &lt;httpHandlers&gt;
+    <httpHandlers>
 
-      &lt;add verb="*" path="captimage.axd" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89" /&gt;
+      <add verb="*" path="captimage.axd" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89" />
 
-    &lt;/httpHandlers&gt;
+    </httpHandlers>
 
-&lt;/system.web&gt;
+</system.web>
 
-&lt;!--add the following code in &lt;system.webserver&gt;-->
+<!--add the following code in <system.webserver>-->
 
-&lt;system.webserver&gt;    
-
------------------------
+<system.webserver>    
 
 -----------------------
 
-    &lt;handlers&gt;      
+-----------------------
 
-      &lt;add verb="*" path="captimage.axd" name="syncfusion_generatetools" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;      
+    <handlers>      
 
-    &lt;/handlers&gt;
+      <add verb="*" path="captimage.axd" name="syncfusion_generatetools" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />      
 
-&lt;/system.webserver&gt;
+    </handlers>
+
+</system.webserver>
 
 
 
@@ -80,7 +80,7 @@ Note: Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version an
 
 The following screen shot displays the output of the above codes.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -94,9 +94,9 @@ The Captcha controlsupports captcha in the form of audio and when you click the 
 
 [CSHTML]
 
-   &lt;div&gt;        @Html.EJ().Captcha("SignUpCaptcha").EnableAudio(true).EnableRefreshImage(true).RequestMapper("Refresh")
+   <div>        @Html.EJ().Captcha("SignUpCaptcha").EnableAudio(true).EnableRefreshImage(true).RequestMapper("Refresh")
 
-   &lt;/div&gt;
+   </div>
 
 
 
@@ -122,7 +122,7 @@ The Captcha controlsupports captcha in the form of audio and when you click the 
 
 The following screenshot displays the output of the above codes.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -142,143 +142,143 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
 {  
 
-&lt;div class="frame" style="width: 500px"&gt;
+<div class="frame" style="width: 500px">
 
-        &lt;div class="control" style="width: 560px;"&gt;
+        <div class="control" style="width: 560px;">
 
-            &lt;table class="tableprop"&gt;
+            <table class="tableprop">
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;h2 style="text-align:center"&gt;
+                        <h2 style="text-align:center">
 
                             Sign Up</h2>
 
-                        &lt;br&gt;
+                        <br>
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         <span class="NodeText">Enter Your Name</span>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;input type="text" name="username" /&gt;
+                        <input type="text" name="username" />
 
                         @if (!(bool)ViewBag.NameStatus)
 
                         {<span style="color: red">Invalid Value</span>}
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         <span class="NodeText">Email</span>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;input type="text" name="email" /&gt;
+                        <input type="text" name="email" />
 
                         @if (!(bool)ViewBag.EmailStatus)
 
                         {<span style="color: red">Invalid Value</span>}
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         <span class="NodeText">Enter Your Password</span>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;input type="password" name="password" /&gt;
+                        <input type="password" name="password" />
 
                         @if (!(bool)ViewBag.PasswordStatus)
 
                         {<span style="color: red">Invalid Password</span>}
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         <span class="NodeText">Re-Enter Your Password</span>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;input type="password" name="repassword" /&gt;
+                        <input type="password" name="repassword" />
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
-                        &lt;div&gt;
+                        <div>
 
                             @Html.EJ().Captcha("myCaptcha").EnableRefreshImage(true).EnableAudio(true).EnableAutoValidation(true).RequestMapper("Refresh").CustomErrorMessage("Invalid captcha code entered. Please try again.").TargetButton("submit")
 
-                        &lt;/div&gt;
+                        </div>
 
-                        &lt;br /&gt;
+                        <br />
 
-                        &lt;br /&gt;
+                        <br />
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
-                    &lt;/td&gt;
+                    </td>
 
-                    &lt;td&gt;
+                    <td>
 
                         @Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit").Type(ButtonType.Submit)
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/table&gt;           
+            </table>           
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;       
+    </div>       
 
 }
 
@@ -292,33 +292,33 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
     background: #f9f9f9">
 
-    &lt;div class="control"&gt;
+    <div class="control">
 
-        &lt;table&gt;
+        <table>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td style="padding: 50px;"&gt;
+                <td style="padding: 50px;">
 
-                    &lt;br&gt;
+                    <br>
 
-                    &lt;br&gt;
+                    <br>
 
-                    &lt;h2&gt;
+                    <h2>
 
-                        Thank you for registering.&lt;/h2&gt;
+                        Thank you for registering.</h2>
 
-                    &lt;br&gt;
+                    <br>
 
-                &lt;/td&gt;
+                </td>
 
-            &lt;/tr&gt;
+            </tr>
 
-        &lt;/table&gt;
+        </table>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt; 
+</div> 
 
 
 
@@ -408,11 +408,11 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
 The following screenshot is the output for the above code example.
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

@@ -32,45 +32,45 @@ For more information about Knockout binding, you can refer to the online documen
 
 @*Add the following script in view page for knockout support*@
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/knockout.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/knockout.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/ej.widget.ko.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/ej.widget.ko.min.js"> </script>
 
 
 
-&lt;div class="content-container-fluid"&gt;
+<div class="content-container-fluid">
 
-    &lt;div class="row" style="width: 100%"&gt;
+    <div class="row" style="width: 100%">
 
-        &lt;div class="cols-sample-area" style="width: 100%"&gt;
+        <div class="cols-sample-area" style="width: 100%">
 
-            &lt;div class="frame" style="width: 420px"&gt;
+            <div class="frame" style="width: 420px">
 
-                &lt;div id="control" style="float: left; width: 70%; margin-left: 10px"&gt;
+                <div id="control" style="float: left; width: 70%; margin-left: 10px">
 
-                    &lt;input id="colorpick" data-bind="ejColorPicker: { value: value, modelType: palette }" /&gt;
+                    <input id="colorpick" data-bind="ejColorPicker: { value: value, modelType: palette }" />
 
-                    &lt;h6&gt;<span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px;">Note:Two Way Knockout Support</span>&lt;/h6&gt;
+                    <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px;">Note:Two Way Knockout Support</span></h6>
 
-                &lt;/div&gt;
+                </div>
 
-                &lt;div id="binding" style="float: left; width: 23%"&gt;
+                <div id="binding" style="float: left; width: 23%">
 
-                    &lt;input id="colorpick1" data-bind="ejColorPicker: { value: value, modelType: picker }" /&gt;
+                    <input id="colorpick1" data-bind="ejColorPicker: { value: value, modelType: picker }" />
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
-&lt;script&gt;
+<script>
 
     window.viewModel = {
 
@@ -88,9 +88,9 @@ For more information about Knockout binding, you can refer to the online documen
 
     });
 
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
 
     .element {
 
@@ -116,7 +116,7 @@ For more information about Knockout binding, you can refer to the online documen
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -124,7 +124,7 @@ The following screenshot displays the output of the above code example.
 
 
 
-{ ![](Knockout-Binding_images/Knockout-Binding_img1.png) | markdownify }
+{{ '![](Knockout-Binding_images/Knockout-Binding_img1.png)' | markdownify }}
 {:.image }
 
 

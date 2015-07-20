@@ -15,19 +15,19 @@ The following code example illustrates how the model is made observable and upda
 
     @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc"))
 
-    &lt;div&gt;
+    <div>
 
-        &lt;div id="Grid" data-bind="ejGrid: { dataSource: dataSource, allowPaging: true, pageSettings: { currentPage: currentPage, pageSize: 4 }}"&gt;&lt;/div&gt;
+        <div id="Grid" data-bind="ejGrid: { dataSource: dataSource, allowPaging: true, pageSettings: { currentPage: currentPage, pageSize: 4 }}"></div>
 
-    &lt;/div&gt;
+    </div>
 
 
 
-    &lt;script src="~/Scripts/knockout-min.js"&gt;&lt;/script&gt;
+    <script src="~/Scripts/knockout-min.js"></script>
 
-    &lt;script src="~/Scripts/ej/ej.widget.ko.min.js"&gt;&lt;/script&gt;
+    <script src="~/Scripts/ej/ej.widget.ko.min.js"></script>
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         function onClick(arg) {
 
@@ -49,9 +49,9 @@ The following code example illustrates how the model is made observable and upda
 
 
 
-    &lt;/script&gt;
+    </script>
 
- &lt;/asp:Content&gt;
+ </asp:Content>
 
 
 
@@ -61,7 +61,7 @@ Before changing the model, EmployeeID 1 has FullName value as Nancy Davolio. Aft
 
 
 
-{ ![](KO-ResultSet_images/KO-ResultSet_img1.png) | markdownify }
+{{ '![](KO-ResultSet_images/KO-ResultSet_img1.png)' | markdownify }}
 {:.image }
 
 

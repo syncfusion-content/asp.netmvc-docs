@@ -101,13 +101,13 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 
 
 
-{ ![C:/Users/NitishS/Desktop/Screenshot (106).png](Drill-Down-Support_images/Drill-Down-Support_img1.png) | markdownify }
+{{ '![C:/Users/NitishS/Desktop/Screenshot (106).png](Drill-Down-Support_images/Drill-Down-Support_img1.png)' | markdownify }}
 {:.image }
 
 
 _Before Drill Down_
 
-{ ![DrillDown](Drill-Down-Support_images/Drill-Down-Support_img2.png) | markdownify }
+{{ '![DrillDown](Drill-Down-Support_images/Drill-Down-Support_img2.png)' | markdownify }}
 {:.image }
 
 

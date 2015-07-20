@@ -15,7 +15,7 @@ documentation: ug
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -60,7 +60,7 @@ ASP.NET MVC Digital Gauge widget basically renders with flexible APIs. You can e
 
 Run the above code example and you will get a default Digital Gauge as follows.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -82,7 +82,7 @@ Basic attributes of each canvas elements are height and width. You can set the h
 
 Run the above code example and you will see a default gauge with the specified height and width values.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -130,13 +130,13 @@ item.SegmentSettings(seg=>seg.Length(20).Width(2))            .Value("102")
 
 Run the above code example and you will see the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
 Add Background Image
 
-* Add a &lt;div&gt; element to set the background for the Digital Gauge. 
+* Add a <div> element to set the background for the Digital Gauge. 
 * Add a style tag in the View page to add the background image for the Digital Gauge.
 * Add the required properties to show the background image such as position, margin, display, etc.,
 
@@ -144,7 +144,7 @@ Add Background Image
 
 
 
-&lt;div id="frameDiv"&gt;
+<div id="frameDiv">
 
 @(Html.EJ().DigitalGauge("digitalGauge")
 
@@ -166,11 +166,11 @@ item.SegmentSettings(seg=>seg.Length(20).Width(2))            .Value("102")
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
-&lt;style&gt;
+<style>
 
 #frameDiv {
 
@@ -188,7 +188,7 @@ background-repeat :no-repeat;
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -198,7 +198,7 @@ Run the above code example and you will see the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -232,7 +232,7 @@ Run the above code example and you will see the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -284,7 +284,7 @@ item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))       
 
 Run the above code example and you will see the following output.                    
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 

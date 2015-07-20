@@ -17,13 +17,13 @@ ASP.NET MVC FileExplorer widget provides support to access the online file syst
 
 The following screenshot demonstrates the functionality of FileExplorer with Details view and Thumbnail view.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -165,7 +165,7 @@ Details</td></tr>
 <td>
 Read</td><td>
 String ActionType,String Path,String ExtensionsAllow</td><td>
-Should return data in array of JSON format and JSON fields need to be in following field names{{ '_“name, size, type, dateModified, hasChild”_' | markdownify }}{{ '_For example:_' | markdownify }}[{name: "7.png", type: "File", size: 11439, dateModified: "3/31/2015 3:16:38 PM", hasChild: false},{name: "human.png", type: "File", size: 11059, dateModified: "3/31/2015 3:16:35 PM", hasChild: false}]</td><td>
+Should return data in array of JSON format and JSON fields need to be in following field names{{{ ''_“name, size, type, dateModified, hasChild”_'' | markdownify }}}{{{ ''_For example:_'' | markdownify }}}[{name: "7.png", type: "File", size: 11439, dateModified: "3/31/2015 3:16:38 PM", hasChild: false},{name: "human.png", type: "File", size: 11059, dateModified: "3/31/2015 3:16:35 PM", hasChild: false}]</td><td>
 Read the data from the given path</td></tr>
 <tr>
 <td>
@@ -214,7 +214,7 @@ To upload the data from the given path</td></tr>
 
 The following screenshot displays a FileExplorer control.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

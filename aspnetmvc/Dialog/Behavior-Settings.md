@@ -33,7 +33,7 @@ The following steps explains you the implementation of resize option in the Dial
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 EnableResize(true).Render();}
 
@@ -45,7 +45,7 @@ EnableResize(true).Render();}
 
 2. The output for Dialog control when “EnableResize” is “true” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ The following steps explains you the implementation of drag option in the Dialog
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 AllowDraggable(true).Render();}
 
@@ -85,7 +85,7 @@ AllowDraggable(true).Render();}
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -110,7 +110,7 @@ The following steps explains you the implementation of close icon tooltip option
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;)
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
    .Width(300).Height("200").CloseIconTooltip("close").Render();}
 
@@ -122,7 +122,7 @@ The following steps explains you the implementation of close icon tooltip option
 
 2. The output for Dialog control when “CloseIconTooltip” is “close” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/closeicon1.PNG](Behavior-Settings_images/Behavior-Settings_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/closeicon1.PNG](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -148,7 +148,7 @@ The following steps explains the implementation of persistence support in the Di
 
 
 
-    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;)
+    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
       .Width(300).Height("200").EnablePersistence(true).Render();}
 
@@ -159,7 +159,7 @@ The following steps explains the implementation of persistence support in the Di
 
 Make resize and reload the web page. The state is maintained in the Dialog control. The output for Dialog control when “EnablePersistence” is “true” is as follows. 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/persistance1.PNG](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/persistance1.PNG](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -185,7 +185,7 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;)
+    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
       .Width(300).Height("200").Enabled(false).Render();}
 
@@ -197,7 +197,7 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -231,21 +231,21 @@ The Dialog provides the option to place the control based upon its X-axis and Y-
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-            The Syncfusion Dialog control is rendered.&lt;br /&gt;
+            The Syncfusion Dialog control is rendered.<br />
 
             Position
 
-            &lt;br /&gt;
+            <br />
 
             X-Axis : 20
 
-            &lt;br /&gt;
+            <br />
 
             Y-Axis : 26
 
-        &lt;/div&gt;).Width(300).Height("200").Position(p => p.XValue("20").YValue("26")).
+        </div>).Width(300).Height("200").Position(p => p.XValue("20").YValue("26")).
 
 Render();}
 
@@ -259,7 +259,7 @@ Render();}
 
 2. The output for Dialog control after setting X-axis and Y-axis value.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/position1.PNG](Behavior-Settings_images/Behavior-Settings_img6.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/position1.PNG](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -281,7 +281,7 @@ Show Header
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 ShowHeader(true).Render();}
 
@@ -293,7 +293,7 @@ ShowHeader(true).Render();}
 
 2. The output for Dialog control when ShowHeader is “true” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img7.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -313,7 +313,7 @@ Hide Header
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 ShowHeader(false).Render();}
 
@@ -327,7 +327,7 @@ ShowHeader(false).Render();}
 
 2. The output for Dialog control when ShowHeader is “false” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/hideheader1.PNG](Behavior-Settings_images/Behavior-Settings_img8.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/hideheader1.PNG](Behavior-Settings_images/Behavior-Settings_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -347,7 +347,7 @@ The Dialog control contains an option to be opened state or closed state at init
 
 // In the CSHTML page add the Dialog widget using helpers and set the ShowOnInit to ‘true’.
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 ShowOnInit(true).Render();}
 
@@ -357,7 +357,7 @@ ShowOnInit(true).Render();}
 
 2. The output for Dialog control when ShowOnInit is “true” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img9.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -379,7 +379,7 @@ The Dialog can support with rounded corner appearance, the default value for Sho
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 ShowRoundedCorner(true).Render();}
 
@@ -391,7 +391,7 @@ ShowRoundedCorner(true).Render();}
 
 2. The output for Dialog control when ShowRoundedCorner is “true” is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/roundcorner1.PNG](Behavior-Settings_images/Behavior-Settings_img10.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/roundcorner1.PNG](Behavior-Settings_images/Behavior-Settings_img10.png)' | markdownify }}
 {:.image }
 
 

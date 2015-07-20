@@ -77,13 +77,13 @@ List<String> formatStyle = new List<string>() { "format" };
 
 }
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).ShowFooter(true).Tools(tool => tool.Clear(clear).FormatStyle(formatStyle).Tables(tables).Links(links).Images(images).Scripts(scripts).Casing(casing).Font(font).Styles(style).Alignment(alignment).Lists(lists).CopyPaste(copyPaste).DoAction(doAction)).Render();} 
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).ShowFooter(true).Tools(tool => tool.Clear(clear).FormatStyle(formatStyle).Tables(tables).Links(links).Images(images).Scripts(scripts).Casing(casing).Font(font).Styles(style).Alignment(alignment).Lists(lists).CopyPaste(copyPaste).DoAction(doAction)).Render();} 
 
 
 
 
 
-{ ![](Toolbar-Support_images/Toolbar-Support_img1.png) | markdownify }
+{{ '![](Toolbar-Support_images/Toolbar-Support_img1.png)' | markdownify }}
 {:.image }
 The following screenshot displays the List of Toolbar items with RTE control.
 
@@ -93,7 +93,7 @@ The following image consists of formatted content by using the available toolbar
 
 
 
-{ ![](Toolbar-Support_images/Toolbar-Support_img2.png) | markdownify }
+{{ '![](Toolbar-Support_images/Toolbar-Support_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -108,14 +108,14 @@ The following example illustrates how to insert an HTML, JavaScript, or CSS code
 <table>
 <tr>
 <td>
-[_cshtml]\\ Add the following code in your view page&lt;div class="rte"&gt;    @*initialization of RTE*@@(Html.EJ().RTE("rteSample").Width("700px").ContentTemplate(@&lt;p&gt;Place the content in this RTE Text area.By Clicking the "AddText" toolbar item in the RTE toolbar,you can add the text at the place of cursor.&lt;/p&gt;).ShowFooter(true)        .Tools(tool => tool.CustomTool(custom =>        {            custom.Name("insert code").Tooltip("Insert Code Snippets").Css("codeInsert").Action("click").Add();        })))    @*Dialog option code for adding the text*@    &lt;div id="cutomSourceCode" title="Paste your content and inset to RTE"&gt;        &lt;table&gt;            &lt;tr&gt;                &lt;td colspan="2"&gt;                    &lt;textarea id="srcCode" style="width: 550px; height: 250px"&gt;                        &lt;div id="srcArea"&gt;&lt;/div&gt;                    &lt;/textarea&gt;                &lt;/td&gt;            &lt;/tr&gt;            &lt;tr&gt;                &lt;td colspan="2"&gt;                    &lt;div class="e-rte-button e-fieldseparate"&gt;                        <button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        <button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    &lt;/div&gt;                &lt;/td&gt;            &lt;/tr&gt;        &lt;/table&gt;    &lt;/div&gt;&lt;/div&gt;</td></tr>
+[_cshtml]\\ Add the following code in your view page<div class="rte">    @*initialization of RTE*@@(Html.EJ().RTE("rteSample").Width("700px").ContentTemplate(@<p>Place the content in this RTE Text area.By Clicking the "AddText" toolbar item in the RTE toolbar,you can add the text at the place of cursor.</p>).ShowFooter(true)        .Tools(tool => tool.CustomTool(custom =>        {            custom.Name("insert code").Tooltip("Insert Code Snippets").Css("codeInsert").Action("click").Add();        })))    @*Dialog option code for adding the text*@    <div id="cutomSourceCode" title="Paste your content and inset to RTE">        <table>            <tr>                <td colspan="2">                    <textarea id="srcCode" style="width: 550px; height: 250px">                        <div id="srcArea"></div>                    </textarea>                </td>            </tr>            <tr>                <td colspan="2">                    <div class="e-rte-button e-fieldseparate">                        <button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        <button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    </div>                </td>            </tr>        </table>    </div></div></td></tr>
 <tr>
 <td>
 [JavaScript]\\ Add the following code in your script section to render RTE and set the action of the new tool item.     var rteObj;    $(function () {        $("#cutomSourceCode").ejDialog({ enableResize: false, enableModal: true, showOnInit: false, width: "auto" }); //dialog initialization        $("#cutomSourceCode").find(".e-rte-btn").ejButton({ click: "allowText" });    });    function click() {        $("#srcCode").val("").show();        $("#cutomSourceCode").ejDialog("open"); @*dialog initialization*@        }    function allowText() {        rteObj = $("#rteSample").data("ejRTE");        if (this._id == "src_insert") {            rteObj.executeCommand("inserthtml", $("#srcCode")[0].value); @*add the text in RTE*@            }        $("#cutomSourceCode").ejDialog("close");    }</td></tr>
 </table>
 The following screenshot demonstrates the functionality of new tool item.
 
-{ ![](Toolbar-Support_images/Toolbar-Support_img3.png) | markdownify }
+{{ '![](Toolbar-Support_images/Toolbar-Support_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -132,7 +132,7 @@ In some cases, you may have to remove a particular item from existing toolbar it
 <table>
 <tr>
 <td>
-[_cshtml]@*Add the following code in your view page.*@@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).Render(); }</td></tr>
+[_cshtml]@*Add the following code in your view page.*@@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }</td></tr>
 <tr>
 <td>
 [JavaScript]@*Add the following code in script section*@.var rteeObj  = $("#rteSample").data("ejRTE");rteeObj.removeToolbarItem("rteSamplecreateTable"); // remove toolbar item</td></tr>
@@ -145,7 +145,7 @@ The following screenshot demonstrates the functionality of removing tool item.
 
 
 
-{ ![](Toolbar-Support_images/Toolbar-Support_img4.png) | markdownify }
+{{ '![](Toolbar-Support_images/Toolbar-Support_img4.png)' | markdownify }}
 {:.image }
 
 

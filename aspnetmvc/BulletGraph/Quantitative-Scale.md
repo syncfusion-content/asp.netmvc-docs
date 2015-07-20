@@ -33,7 +33,7 @@ Quantitative Scale range is set using the properties Minimum, Maximum and Interv
 
 The following screenshot displays a Bullet Graph with start range 0, end range 10 and interval 1 with 4 minor ticks per interval
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img1.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -59,7 +59,7 @@ Bullet Graph does not position Quantitativescale automatically based on its size
 
 The following screenshot displays Bullet Graph with Quantitative scale at 20 pixels from left and 20 pixels from top
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img2.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -89,7 +89,7 @@ Color, size and width of Major tick lines are customized using MajorTickSettings
 
 The following screenshot displays Major ticks in gray color with a width of 3 pixels and height 15 pixels
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img3.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -115,7 +115,7 @@ Minor ticks can also be customized similar to major ticks. The properties Stroke
 
 The following screenshot displays Bullet Graph with customized Minor ticks in quantitative scale
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img4.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -139,7 +139,7 @@ Ticks are positioned below, above or inside the quantitative scale. By default t
 
 The following screenshot displays Bullet Graph with ticks positioned above quantitative scale
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img5.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -179,7 +179,7 @@ Quantitativescaleticks can be placed either inside or outside the scale using â€
 
 The following screenshot displays Bullet Graph ticks inside Quantitative Scale
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img6.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -229,7 +229,7 @@ Quantitativescalelabels are customized with prefix, suffix, font, color and size
 
 The following screenshot displays Bullet Graph labels in blue color
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img7.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -271,7 +271,7 @@ Quantitativescalelabels can be placed either inside or outside the scale using â
 
 The following screenshot displays Bullet Graph labels inside Quantitative Scale
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img8.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -295,7 +295,7 @@ Performancemeasurebar is customized using FeaturedMeasureSettings in Quantitativ
 
 The following screenshot displays Bullet Graph with customized Performance measure bar.
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img9.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -321,7 +321,7 @@ Comparative symbol color and width are customized using ComparativeMeasureSettin
 
 The following screenshot displays Bullet Graph with customized Comparative measure value.
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img10.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -359,7 +359,7 @@ Bullet Graph supports comparing more than one performance at a time, given that 
 
 The following screenshot displays Bullet Graph that compares 3 related performance measures.
 
-{ ![](Quantitative-Scale_images/Quantitative-Scale_img11.png) | markdownify }
+{{ '![](Quantitative-Scale_images/Quantitative-Scale_img11.png)' | markdownify }}
 {:.image }
 
 

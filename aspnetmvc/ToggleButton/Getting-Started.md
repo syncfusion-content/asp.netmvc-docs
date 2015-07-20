@@ -17,13 +17,13 @@ The Toggle Button control displays both text and images. The text displayed on t
 
 The following screenshot illustrates a Toggle Button control. 
 
-{ ![C:/Users/labuser/AppData/Local/Temp/SNAGHTML9472710.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML9472710.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
 _Figure 1: Toggle Button in OFF state_ 
 
-{ ![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94b6c62.PNG](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94b6c62.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -50,7 +50,7 @@ Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to cus
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

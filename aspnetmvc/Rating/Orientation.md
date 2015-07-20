@@ -23,27 +23,27 @@ Add the following code in your view page to render the Rating with customizedOri
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").Orientation(Orientation.Vertical)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;             
+        </tr>             
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -51,7 +51,7 @@ Add the following code in your view page to render the Rating with customizedOri
 
 The following screenshot illustrates the Rating with Vertical orientation.
 
-{ ![](Orientation_images/Orientation_img1.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
 {:.image }
 
 

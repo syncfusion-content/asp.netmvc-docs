@@ -25,7 +25,7 @@ The following code example is used to render the Captcha with Minimum and Maximu
 
 2. The following screenshot illustrates the Captcha with Minimum and Maximum length support. 
 
-{ ![](Maximum-and-Minimum-length_images/Maximum-and-Minimum-length_img1.png) | markdownify }
+{{ '![](Maximum-and-Minimum-length_images/Maximum-and-Minimum-length_img1.png)' | markdownify }}
 {:.image }
 
 

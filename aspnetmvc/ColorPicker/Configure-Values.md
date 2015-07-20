@@ -29,7 +29,7 @@ The OpacityValue property is Number type and its default value is 100.
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Configure-Values_images/Configure-Values_img1.png) | markdownify }
+{{ '![](Configure-Values_images/Configure-Values_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -155,7 +155,7 @@ tooltip.Sandy("arenoso"))
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Configure-Values_images/Configure-Values_img2.png) | markdownify }
+{{ '![](Configure-Values_images/Configure-Values_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -13,7 +13,7 @@ RichTextEditor (RTE) control enables you to visually edit HTML content. It enabl
 
 Control structure
 
-{ ![](Overview_images/Overview_img1.png) | markdownify }
+{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 

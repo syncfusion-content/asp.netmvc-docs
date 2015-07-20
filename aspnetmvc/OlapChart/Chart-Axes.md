@@ -37,7 +37,7 @@ Primary axis title font appearance is further customized with the help of the fo
 
 
 
-{ ![](Chart-Axes_images/Chart-Axes_img1.png) | markdownify }
+{{ '![](Chart-Axes_images/Chart-Axes_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ Axis line is drawn in Chart to represent the end of the axis in ChartArea. It is
 
 
 
-{ ![](Chart-Axes_images/Chart-Axes_img2.png) | markdownify }
+{{ '![](Chart-Axes_images/Chart-Axes_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -67,7 +67,7 @@ Position of the primary X and Y axis is set to the top with the help opposedPosi
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(PrimaryXAxis=>PrimaryXAxis.OpposedPosition(true)).PrimaryYAxis(PrimaryXAxis=>PrimaryXAxis.OpposedPosition(true))
 
-{ ![](Chart-Axes_images/Chart-Axes_img3.png) | markdownify }
+{{ '![](Chart-Axes_images/Chart-Axes_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -93,7 +93,7 @@ Width – sets the width for the border.
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/chartArea.png](Chart-Axes_images/Chart-Axes_img4.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/chartArea.png](Chart-Axes_images/Chart-Axes_img4.png)' | markdownify }}
 {:.image }
 
 

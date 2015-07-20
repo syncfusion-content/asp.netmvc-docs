@@ -19,7 +19,7 @@ The following screenshot illustrates a Rotator widget.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -43,49 +43,49 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
     @{Html.EJ().Rotator("content").Items(item =>
 
     {
 
-      item.Add().ContentTemplate(@&lt;div&gt;
+      item.Add().ContentTemplate(@<div>
 
-      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled.png")" /&gt;
+      <img class="image" src="@Url.Content("~/Images/rotator/Untitled.png")" />
 
-  &lt;/div&gt;);
+  </div>);
 
-      item.Add().ContentTemplate(@&lt;div&gt;
+      item.Add().ContentTemplate(@<div>
 
-      &lt;a href="~/Views/Home/Index.cshtml"&gt;&lt;/a&gt;
+      <a href="~/Views/Home/Index.cshtml"></a>
 
-      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled1.png")" /&gt; 
+      <img class="image" src="@Url.Content("~/Images/rotator/Untitled1.png")" /> 
 
-      &lt;/div&gt;);
+      </div>);
 
-      item.Add().ContentTemplate(@&lt;div&gt;
+      item.Add().ContentTemplate(@<div>
 
-      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled2.png")" /&gt;
+      <img class="image" src="@Url.Content("~/Images/rotator/Untitled2.png")" />
 
-      &lt;/div&gt;);
+      </div>);
 
-      item.Add().ContentTemplate(@&lt;div&gt;
+      item.Add().ContentTemplate(@<div>
 
-      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled3.png")" /&gt;
+      <img class="image" src="@Url.Content("~/Images/rotator/Untitled3.png")" />
 
-      &lt;/div&gt;);
+      </div>);
 
-      item.Add().ContentTemplate(@&lt;div&gt;
+      item.Add().ContentTemplate(@<div>
 
-      &lt;img class="image" src="@Url.Content("~/Images/rotator/Untitled4.png")" /&gt;
+      <img class="image" src="@Url.Content("~/Images/rotator/Untitled4.png")" />
 
-      &lt;/div&gt;);
+      </div>);
 
       }) .SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true).Render();}
 
 
 
-  &lt;/div&gt;
+  </div>
 
 
 
@@ -95,7 +95,7 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -36,9 +36,9 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").PopupWidth("250px").PopupHeight("100px")
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -52,9 +52,9 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -64,7 +64,7 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -96,9 +96,9 @@ The following steps explains you the configuration of Height & Width properties 
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").Height("50px").Width("250px")
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -112,9 +112,9 @@ The following steps explains you the configuration of Height & Width properties 
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -123,7 +123,7 @@ The following steps explains you the configuration of Height & Width properties 
 Output of the above steps
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -149,9 +149,9 @@ The following steps explains the configuration of WaterMarkText properties in Dr
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").WatermarkText("Select")
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -165,9 +165,9 @@ The following steps explains the configuration of WaterMarkText properties in Dr
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -176,7 +176,7 @@ The following steps explains the configuration of WaterMarkText properties in Dr
 Output of the above steps
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -200,9 +200,9 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowRoundedCorner(true)        
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -216,9 +216,9 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -227,7 +227,7 @@ The following steps explains you the configuration of Rounded corner of the Drop
 2. Output of the above steps
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -238,7 +238,7 @@ Icons Support
 You can add the icons or images with list items in dropdown popup by using sprite CSS class. The following steps explains you the configuration about the icons support with Dropdownlist
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 _Note: Images for this sample are available in ‘installed location /themes/images’ and you need to define images in mentioned CSS. Henceforth the images display._ 
 
@@ -253,63 +253,63 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("mailtoolslist").Width("200px")
 
-        &lt;div id="mailtoolslist"&gt;
+        <div id="mailtoolslist">
 
-            &lt;ul&gt;
+            <ul>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools categorize"&gt;&lt;/div&gt;
+                    <div class="mailtools categorize"></div>
 
                     Categorize and Move
 
-                &lt;/li&gt;
+                </li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools done"&gt;&lt;/div&gt;
+                    <div class="mailtools done"></div>
 
                     Done
 
-                &lt;/li&gt;
+                </li>
 
 
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools movetofolder"&gt;&lt;/div&gt;
+                    <div class="mailtools movetofolder"></div>
 
                     Move to Folder
 
-                &lt;/li&gt;
+                </li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools newmail"&gt;&lt;/div&gt;
+                    <div class="mailtools newmail"></div>
 
                     New E-mail
 
-                &lt;/li&gt;
+                </li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools meeting"&gt;&lt;/div&gt;
+                    <div class="mailtools meeting"></div>
 
                     New Meeting
 
-                &lt;/li&gt;
+                </li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;div class="mailtools reply"&gt;&lt;/div&gt;
+                    <div class="mailtools reply"></div>
 
                     Reply & Delete
 
-                &lt;/li&gt;
+                </li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -323,7 +323,7 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         /*controls*/
 
@@ -423,7 +423,7 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
         }
 
-   &lt;/style&gt;
+   </style>
 
 
 
@@ -431,7 +431,7 @@ Output of the above steps
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -461,9 +461,9 @@ The following steps explains you the configuration of EnableAnimation properties
 
 
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -477,9 +477,9 @@ The following steps explains you the configuration of EnableAnimation properties
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -523,9 +523,9 @@ The following steps explains you the configuration of CssClass properties in Dro
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").CssClass("customclass")
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -539,9 +539,9 @@ The following steps explains you the configuration of CssClass properties in Dro
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -553,7 +553,7 @@ The following steps explains you the configuration of CssClass properties in Dro
 
 [CSS]  
 
-  &lt;style type="text/css"&gt;
+  <style type="text/css">
 
         .customclass {
 
@@ -565,14 +565,14 @@ The following steps explains you the configuration of CssClass properties in Dro
 
         }
 
- &lt;/style&gt;
+ </style>
 
 
 
 3. Output of the above steps
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 

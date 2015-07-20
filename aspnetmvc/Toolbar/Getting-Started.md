@@ -15,11 +15,11 @@ This section explains briefly about how to create a Toolbar in your ASP.NET MVC 
 
 Create Toolbar for PDF Reader
 
-Toolbar control displays a list of tools in a webpage. It is used to customize Toolbar items of any functionality, by using enriched client-side methods. This control consists of a collection of unordered lists, containing text and images into a &lt;div&gt;. From the following section, you can learn how to customize Toolbar control for a PDF Reader scenario. The following screen shot shows the appearance of Toolbar in PDF Reader simulator application.
+Toolbar control displays a list of tools in a webpage. It is used to customize Toolbar items of any functionality, by using enriched client-side methods. This control consists of a collection of unordered lists, containing text and images into a <div>. From the following section, you can learn how to customize Toolbar control for a PDF Reader scenario. The following screen shot shows the appearance of Toolbar in PDF Reader simulator application.
 
 Here, the Toolbar consists of a Toolbar with title and text area as PDF Reader.
 
-{ ![C:/Users/Rajaveni/Desktop/rte final/toolbar - Copy.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/rte final/toolbar - Copy.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -51,7 +51,7 @@ The following output is displayed.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -61,61 +61,61 @@ _Figure 2: Toolbar without Toolbar items_
 
 Initialize Toolbar Items
 
-Toolbar consists of a list of items. From the following guidelines, you can learn how to initialize the Toolbaritems with &lt;UL&gt; &lt;LI&gt; template. 								
+Toolbar consists of a list of items. From the following guidelines, you can learn how to initialize the Toolbaritems with <UL> <LI> template. 								
 
-Initialize the Toolbaritems with &lt;UL&gt; &lt;LI&gt; template as follows. 
+Initialize the Toolbaritems with <UL> <LI> template as follows. 
 
 [CSHTML]
 
-&lt;div id="ToolbarItem"&gt;
+<div id="ToolbarItem">
 
-    &lt;!--list of toolbar items--&gt;
-
-
-
-    &lt;ul&gt;
-
-        &lt;li id="OtherFormat" title="Convert PDF files to Word or Excel Online…"&gt;
-
-            &lt;div class="PdfDocument e-icon convertToOthers "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
-
-        &lt;li id="PDFOnline" title="Convert files to PDF Online"&gt;
-
-            &lt;div class="PdfDocument e-icon convertToPdf "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
-
-        &lt;li id="Signature" title="Sign, add text or send a document for signature"&gt;
-
-            &lt;div class=" PdfDocument e-icon signature "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
-
-        &lt;li id="Save" title="Save file ( Ctrl+S )"&gt;
-
-            &lt;div class=" PdfDocument e-icon save "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
-
-        &lt;li id="Print" title="Print file ( Ctrl+P ) "&gt;
-
-            &lt;div class=" PdfDocument e-icon print "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
+    <!--list of toolbar items-->
 
 
 
-        &lt;li id="Message" title="Message"&gt;
+    <ul>
 
-            &lt;div class=" PdfDocument e-icon msg "&gt;&lt;/div&gt;
+        <li id="OtherFormat" title="Convert PDF files to Word or Excel Online…">
 
-        &lt;/li&gt;
+            <div class="PdfDocument e-icon convertToOthers "></div>
 
-    &lt;/ul&gt;
+        </li>
 
-&lt;/div&gt;
+        <li id="PDFOnline" title="Convert files to PDF Online">
+
+            <div class="PdfDocument e-icon convertToPdf "></div>
+
+        </li>
+
+        <li id="Signature" title="Sign, add text or send a document for signature">
+
+            <div class=" PdfDocument e-icon signature "></div>
+
+        </li>
+
+        <li id="Save" title="Save file ( Ctrl+S )">
+
+            <div class=" PdfDocument e-icon save "></div>
+
+        </li>
+
+        <li id="Print" title="Print file ( Ctrl+P ) ">
+
+            <div class=" PdfDocument e-icon print "></div>
+
+        </li>
+
+
+
+        <li id="Message" title="Message">
+
+            <div class=" PdfDocument e-icon msg "></div>
+
+        </li>
+
+    </ul>
+
+</div>
 
     @Html.EJ().Toolbar("ToolbarItem").Width("auto").EnableSeparator(true).Height("33px")
 
@@ -131,7 +131,7 @@ Apply the given styles in the code table to show the Toolbar items as follows. Y
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
 
 
@@ -197,7 +197,7 @@ Apply the given styles in the code table to show the Toolbar items as follows. Y
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -207,7 +207,7 @@ Execute the code to render a Toolbar with a list of Toolbar items.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -217,139 +217,139 @@ _Figure 3: Toolbar with list of toolbar items_
 
 Render remaining Toolbar Items
 
-To achieve the requirements, you need to render all the Toolbar items. You can separate or group the Toolbar items. The separation or grouping of Toolbar items is achieved when you give Toolbar items as a list of &lt;UL&gt; &lt;LI&gt; values inside the toolbar &lt;div&gt; or span element. From the following sections, you can learn how to initialize the remaining Toolbar items with &lt;UL&gt; &lt;LI&gt; template and how to group the toolbar items. 
+To achieve the requirements, you need to render all the Toolbar items. You can separate or group the Toolbar items. The separation or grouping of Toolbar items is achieved when you give Toolbar items as a list of <UL> <LI> values inside the toolbar <div> or span element. From the following sections, you can learn how to initialize the remaining Toolbar items with <UL> <LI> template and how to group the toolbar items. 
 
-Initialize the Toolbar items with &lt;UL&gt; &lt;LI&gt; template as follows.
-
-
+Initialize the Toolbar items with <UL> <LI> template as follows.
 
 
 
-&lt;div id="ToolbarItem"&gt;
+
+
+<div id="ToolbarItem">
 
 
 
-    &lt;!--Initialize toolbar items from above code snippet --&gt;
+    <!--Initialize toolbar items from above code snippet -->
 
 
 
-    &lt;!-- Separator will be added at the end of each ul inside the toolbar element--&gt;
+    <!-- Separator will be added at the end of each ul inside the toolbar element-->
 
 
 
-    &lt;!-- list of Remaining toolbar items with item separator --&gt;
+    <!-- list of Remaining toolbar items with item separator -->
 
 
 
-    &lt;ul&gt;
+    <ul>
 
-        &lt;li id="Previous" title="Show previous page ( Left Arrow )"&gt;
+        <li id="Previous" title="Show previous page ( Left Arrow )">
 
-            &lt;div class=" PdfDocument e-icon previous "&gt;&lt;/div&gt;
+            <div class=" PdfDocument e-icon previous "></div>
 
-        &lt;/li&gt;
+        </li>
 
-        &lt;li id="Next" title="Show next page ( Right Arrow )"&gt;
+        <li id="Next" title="Show next page ( Right Arrow )">
 
-            &lt;div class="PdfDocument e-icon next "&gt;&lt;/div&gt;
+            <div class="PdfDocument e-icon next "></div>
 
-        &lt;/li&gt;
+        </li>
 
-        &lt;li id="page"&gt;
+        <li id="page">
 
-            &lt;div class="PdfDocument"&gt;
+            <div class="PdfDocument">
 
-                &lt;input type="text" value="1" /&gt;
+                <input type="text" value="1" />
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/li&gt;
+        </li>
 
-        &lt;li id="count"&gt;
+        <li id="count">
 
-            &lt;span&gt;/ 1</span>&lt;/li&gt;
+            <span>/ 1</span></li>
 
-    &lt;/ul&gt;
+    </ul>
 
 
 
-    &lt;ul&gt;
+    <ul>
 
-        &lt;li id="ZoomOut" title="Zoom Out"&gt;
+        <li id="ZoomOut" title="Zoom Out">
 
-            &lt;div class=" PdfDocument e-icon zoomOut "&gt;&lt;/div&gt;
+            <div class=" PdfDocument e-icon zoomOut "></div>
 
-        &lt;/li&gt;
+        </li>
 
-        &lt;li id="ZoomIn" title="Zoom In"&gt;
+        <li id="ZoomIn" title="Zoom In">
 
-            &lt;div class=" PdfDocument e-icon zoomIn "&gt;&lt;/div&gt;
+            <div class=" PdfDocument e-icon zoomIn "></div>
 
-        &lt;/li&gt;
+        </li>
 
-        &lt;li id="ZoomValue"&gt;
+        <li id="ZoomValue">
 
-            &lt;div id="carlist"&gt;
+            <div id="carlist">
 
-                &lt;ul&gt;
+                <ul>
 
-                    <li>10%&lt;/li&gt;
+                    <li>10%</li>
 
-                    <li>25%&lt;/li&gt;
+                    <li>25%</li>
 
-                    <li>50%&lt;/li&gt;
+                    <li>50%</li>
 
-                    <li>100%&lt;/li&gt;
+                    <li>100%</li>
 
-                    <li>400%&lt;/li&gt;
+                    <li>400%</li>
 
-                    <li>800%&lt;/li&gt;
+                    <li>800%</li>
 
-                    <li>1600%&lt;/li&gt;
+                    <li>1600%</li>
 
-                    <li>3200%&lt;/li&gt;
+                    <li>3200%</li>
 
-                    <li>6400%&lt;/li&gt;
+                    <li>6400%</li>
 
-                &lt;/ul&gt;
+                </ul>
 
-            &lt;/div&gt;
+            </div>
 
             @Html.EJ().DropDownList("car").Width("90").Value("100%").TargetID("carlist")
 
-        &lt;/li&gt;
+        </li>
 
-    &lt;/ul&gt;
-
-
-
-    &lt;ul&gt;
-
-        &lt;li id="FitFull" title="Fit one full page to window"&gt;
-
-            &lt;div class=" PdfDocument e-icon fitOne "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
+    </ul>
 
 
 
-        &lt;li id="StickyNote" title="Add stick note ( Ctrl+6 ) "&gt;
+    <ul>
 
-            &lt;div class=" PdfDocument e-icon sticky "&gt;&lt;/div&gt;
+        <li id="FitFull" title="Fit one full page to window">
 
-        &lt;/li&gt;
+            <div class=" PdfDocument e-icon fitOne "></div>
 
-        &lt;li id="ReadMode" title="View File in Read Mode"&gt;
-
-            &lt;div class=" PdfDocument e-icon readMode "&gt;&lt;/div&gt;
-
-        &lt;/li&gt;
-
-    &lt;/ul&gt;
+        </li>
 
 
 
-&lt;/div&gt;
+        <li id="StickyNote" title="Add stick note ( Ctrl+6 ) ">
+
+            <div class=" PdfDocument e-icon sticky "></div>
+
+        </li>
+
+        <li id="ReadMode" title="View File in Read Mode">
+
+            <div class=" PdfDocument e-icon readMode "></div>
+
+        </li>
+
+    </ul>
+
+
+
+</div>
 
 
 
@@ -361,7 +361,7 @@ Add the following styles in the code table to display the Toolbar items as follo
 
     /*Additional style for Remaining toolbar items*/
 
-&lt;style&gt;
+<style>
 
     .zoomIn {
 
@@ -453,11 +453,11 @@ Add the following styles in the code table to display the Toolbar items as follo
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
-Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with &lt;UL&gt; &lt;LI&gt; elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
+Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with <UL> <LI> elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
 
 [Dropdown – GettingStarted](http://help.syncfusion.com/aspnetmvc/)
 
@@ -465,7 +465,7 @@ Execute the code to render Toolbar items with separator.
 
 
 
-{ ![C:/Users/Rajaveni/Desktop/rte final/itemssssssssssssss.PNG](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/rte final/itemssssssssssssss.PNG](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -473,7 +473,7 @@ Add Actions to Toolbar Items
 
 Now that the Toolbar is rendered, you need to render the header and content area to create a PDF Reader. In the following section, you can learn how to render the header (Toolbar), contentsection (PDF viewer area) and how to set the action to Toolbar items.
 
-{ ![C:/Users/labuser/Desktop/note.jpg](Getting-Started_images/Getting-Started_img5.jpeg) | markdownify }
+{{ '![C:/Users/labuser/Desktop/note.jpg](Getting-Started_images/Getting-Started_img5.jpeg)' | markdownify }}
 {:.image }
 _Note: PDF reading or rendering is not shown here. Simulation of the PDF Reader app to demonstrate the usage of Toolbar control is provided. PDF rendering area is ignored._
 
@@ -483,33 +483,33 @@ Initialize the contentarea and header as specified in the code table.
 
 
 
-&lt;!—“control” class used for aligns the pdf reader in center of a page. --&gt;
+<!—“control” class used for aligns the pdf reader in center of a page. -->
 
-&lt;div class="control"&gt;
-
-
-
-    &lt;div class="ctrllabel"&gt;&lt;/div&gt;
-
-    &lt;div id="ToolbarItem"&gt;
+<div class="control">
 
 
 
-    &lt;!--Add toolbar items from above code snippet --&gt;
+    <div class="ctrllabel"></div>
+
+    <div id="ToolbarItem">
 
 
 
-    &lt;/div&gt;
+    <!--Add toolbar items from above code snippet -->
 
 
 
-    &lt;!-- Here Initialize the Toolbar items as like above code sample --&gt;
+    </div>
 
 
 
-    &lt;div id="contentSection"&gt;
+    <!-- Here Initialize the Toolbar items as like above code sample -->
 
-        &lt;textarea id="content" rows="10" cols="30"&gt; 
+
+
+    <div id="contentSection">
+
+        <textarea id="content" rows="10" cols="30"> 
 
    Description:
 
@@ -519,13 +519,13 @@ Initialize the contentarea and header as specified in the code table.
 
    Is composed of collection of unordered lists containing text and images contained into a div.
 
-&lt;/textarea&gt;
+</textarea>
 
-    &lt;/div&gt;
+    </div>
 
 
 
-&lt;/div&gt; 
+</div> 
 
 
 
@@ -535,7 +535,7 @@ You can apply the following styles with the above styles to design the PDF heade
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #content {
 
@@ -571,9 +571,9 @@ You can apply the following styles with the above styles to design the PDF heade
 
     }
 
-&lt;/style&gt;
+</style>
 
-{ ![C:/Users/Rajaveni/Desktop/rte final/edited.PNG](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/rte final/edited.PNG](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -597,19 +597,19 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 [View]
 
-&lt;div id="ToolbarItem"&gt;
+<div id="ToolbarItem">
 
 
 
-    &lt;!--Add toolbar items from above code snippet --&gt;
+    <!--Add toolbar items from above code snippet -->
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
-&lt;!-- Here Initialize the Toolbar items as shown in above code sample and add Client side Event as follows --&gt;
+<!-- Here Initialize the Toolbar items as shown in above code sample and add Client side Event as follows -->
 
 
 
@@ -621,7 +621,7 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 
 
@@ -765,7 +765,7 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-&lt;/script&gt;
+</script>
 
 
 

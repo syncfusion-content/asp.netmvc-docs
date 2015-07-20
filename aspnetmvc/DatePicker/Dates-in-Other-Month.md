@@ -31,7 +31,7 @@ The following steps explain you how to get the current month date alone.
 
 2.  The following screenshot displays the output for the above code.
 
-{ ![](Dates-in-Other-Month_images/Dates-in-Other-Month_img1.png) | markdownify }
+{{ '![](Dates-in-Other-Month_images/Dates-in-Other-Month_img1.png)' | markdownify }}
 {:.image }
 
 

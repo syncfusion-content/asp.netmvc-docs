@@ -95,7 +95,7 @@ $(function () {
 
 
 
-{ ![](Knockout-Binding_images/Knockout-Binding_img1.png) | markdownify }
+{{ '![](Knockout-Binding_images/Knockout-Binding_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -45,7 +45,7 @@ Also in the button sample, you can use the icon class names as follows,
 
 Execute the above code to render the following output.
 
-{ ![](Icons_images/Icons_img1.png) | markdownify }
+{{ '![](Icons_images/Icons_img1.png)' | markdownify }}
 {:.image }
 
 

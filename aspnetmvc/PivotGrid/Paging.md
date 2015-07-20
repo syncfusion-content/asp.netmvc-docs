@@ -29,7 +29,7 @@ The page size for categorical and series axes are set in the OlapReport. Pager i
 
 
 
-{ ![](Paging_images/Paging_img1.png) | markdownify }
+{{ '![](Paging_images/Paging_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -43,13 +43,13 @@ The large PivotGrid data content is viewed page-by-page using VirtualScrolling. 
 
 
 
-{ ![](Paging_images/Paging_img2.png) | markdownify }
+{{ '![](Paging_images/Paging_img2.png)' | markdownify }}
 {:.image }
 
 
 _PivotGrid with Virtual Scroller_
 
-{ ![Description: C:/Users/Narendhran Muthuvel/Pictures/sshot-1.png](Paging_images/Paging_img3.png) | markdownify }
+{{ '![Description: C:/Users/Narendhran Muthuvel/Pictures/sshot-1.png](Paging_images/Paging_img3.png)' | markdownify }}
 {:.image }
 
 

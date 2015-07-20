@@ -33,27 +33,27 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                &lt;div class="content" style="padding: 0px 15px;"&gt;
+                <div class="content" style="padding: 0px 15px;">
 
-                    &lt;h3 class="h3"&gt;
+                    <h3 class="h3">
 
                         ASP.NET MVC
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;).PaneSize("60");
+            </div>).PaneSize("60");
 
         p.Add().ContentTemplate(
 
-            @&lt;div style="height: 100%; width: 100%"&gt;
+            @<div style="height: 100%; width: 100%">
 
                 @innerSplitter()
 
-            &lt;/div&gt;);
+            </div>);
 
     }).Render();}
 
@@ -67,57 +67,57 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
                 {
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-                        &lt;div class="content"&gt;
+                        <div class="content">
 
-                            &lt;h3 class="h3"&gt;
+                            <h3 class="h3">
 
                                 Tools
 
-                            &lt;/h3&gt;
+                            </h3>
 
                             Essential Tools is an collection of user interface components used to create interactive
 
                             ASP.NET MVC applications.
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/div&gt;).PaneSize("200");
+                    </div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-            &lt;div class="content"&gt;
+            <div class="content">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     Chart
 
-                &lt;/h3&gt;
+                </h3>
 
                 Essential Chart is a business-oriented charting component.
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;).PaneSize("200");
+        </div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-            &lt;div class="content"&gt;
+            <div class="content">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     Grid
 
-                &lt;/h3&gt;
+                </h3>
 
                 Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                 Grouping and the display of hierarchical data.
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;).PaneSize("200");
+        </div>).PaneSize("200");
 
                 })
 
@@ -125,7 +125,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     #outterSplitter {
 
@@ -151,7 +151,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -163,7 +163,7 @@ The output for Splitter when EnableRTL is “True”.
 
 
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

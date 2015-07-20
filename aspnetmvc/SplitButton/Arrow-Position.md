@@ -49,57 +49,57 @@ The following steps explain you the details on rendering the Split Button with
 
 @Html.EJ().SplitButton("spltbutton11").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.ImageOnly).TargetID("Ul11").PrefixIcon("e-uiLight e-login").ArrowPosition(ArrowPosition.Left)
 
-&lt;ul id="Ul11"&gt;
+<ul id="Ul11">
 
-    &lt;li&gt;<span>User</span>&lt;/li&gt;
+    <li><span>User</span></li>
 
-    &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+    <li><span>Guest</span></li>
 
-    &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+    <li><span>Admin</span></li>
 
-&lt;/ul&gt;
+</ul>
 
 @Html.EJ().SplitButton("spltbutton21").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextOnly).TargetID("Ul21").ArrowPosition(ArrowPosition.Top)
 
-&lt;ul id="Ul21"&gt;
+<ul id="Ul21">
 
-    &lt;li&gt;<span>User</span>&lt;/li&gt;
+    <li><span>User</span></li>
 
-    &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+    <li><span>Guest</span></li>
 
-    &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+    <li><span>Admin</span></li>
 
-&lt;/ul&gt;
+</ul>
 
 @Html.EJ().SplitButton("spltbutton31").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextOnly).TargetID("Ul31").ArrowPosition(ArrowPosition.Bottom)
 
-&lt;ul id="Ul31"&gt;
+<ul id="Ul31">
 
-    &lt;li&gt;<span>User</span>&lt;/li&gt;
+    <li><span>User</span></li>
 
-    &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+    <li><span>Guest</span></li>
 
-    &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+    <li><span>Admin</span></li>
 
-&lt;/ul&gt;
+</ul>
 
 @Html.EJ().SplitButton("spltbutton41").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("Ul41").ArrowPosition(ArrowPosition.Right)
 
-&lt;ul id="Ul41"&gt;
+<ul id="Ul41">
 
-    &lt;li&gt;<span>User</span>&lt;/li&gt;
+    <li><span>User</span></li>
 
-    &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+    <li><span>Guest</span></li>
 
-    &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+    <li><span>Admin</span></li>
 
-&lt;/ul&gt;
+</ul>
 
 2. Execute the above code to render the following output.
 
 
 
-{ ![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^C01B0D02455D95BBD327414D1C3C7167250FB1C68D0B3EFD4A^pimgpsh_fullsize_distr.jpg](Arrow-Position_images/Arrow-Position_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^C01B0D02455D95BBD327414D1C3C7167250FB1C68D0B3EFD4A^pimgpsh_fullsize_distr.jpg](Arrow-Position_images/Arrow-Position_img1.png)' | markdownify }}
 {:.image }
 
 

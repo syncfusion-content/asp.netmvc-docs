@@ -43,7 +43,7 @@ node.Shape = BasicShapes.Plus;
 
  The list of basic shapes are as follows.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img1.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -73,7 +73,7 @@ node.Shape = FlowShapes.Document;
 
 The list of flow shapes are as follows.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img2.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -92,7 +92,7 @@ The BPMN shapesare categorized as follows.
 
 The shapes are listed as follows.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img3.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -395,7 +395,7 @@ The different activities in the BPMN shape are listed as follows.
 
 The task that is internally looped.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img23.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img23.png)' | markdownify }}
 {:.image }
 
 
@@ -403,7 +403,7 @@ The task that is internally looped.
 
 The task for sending, receiving, user based task, etc…
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img24.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img24.png)' | markdownify }}
 {:.image }
 
 
@@ -411,19 +411,19 @@ The task for sending, receiving, user based task, etc…
 
 Compensation is triggered when operation partially fails.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img25.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img25.png)' | markdownify }}
 {:.image }
 
 
 4. Call
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img26.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img26.png)' | markdownify }}
 {:.image }
 
 
 5. Ad-Hoc
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img27.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img27.png)' | markdownify }}
 {:.image }
 
 
@@ -431,7 +431,7 @@ Compensation is triggered when operation partially fails.
 
 Boundary represents the type of task that is processed.
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img28.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img28.png)' | markdownify }}
 {:.image }
 
 
@@ -469,7 +469,7 @@ node.Shapes = BPMNShapes.DataSource;
 
 
 
-{ ![](Predefined-Shapes_images/Predefined-Shapes_img29.png) | markdownify }
+{{ '![](Predefined-Shapes_images/Predefined-Shapes_img29.png)' | markdownify }}
 {:.image }
 
 

@@ -21,7 +21,7 @@ The following code explains about loading accordion content using AjaxUrl proper
 
 
 
-&lt;div style="width: 800px; float:left;"&gt;
+<div style="width: 800px; float:left;">
 
 @{Html.EJ().Accordion("accordion").Items(data =>
 
@@ -31,13 +31,13 @@ The following code explains about loading accordion content using AjaxUrl proper
 
             data.Add().Text("WPF").AjaxUrl("../../Content/wpfcontent.html");
 
-            data.Add().Text("WCF").ContentTemplate(@&lt;div&gt;
+            data.Add().Text("WCF").ContentTemplate(@<div>
 
-               WCF is a tool often used to implement and deploy a service-oriented architecture (SOA).It is designed using service-oriented architecture principles to support distributed computing where services have remote consumers. Clients can consume multiple services; services can be consumed by multiple clients. Services are loosely coupled to each other. Services typically have a WSDL interface (Web Services Description Language) that any WCF client can use to consume the service, regardless of which platform the service is hosted on. WCF implements many advanced Web services (WS) standards such as WS-Addressing, WS-ReliableMessaging and WS-Security. With the release of .NET Framework 4.0, WCF also provides RSS Syndication Services, WS-Discovery, routing and better support for REST services.&lt;/div&gt;);
+               WCF is a tool often used to implement and deploy a service-oriented architecture (SOA).It is designed using service-oriented architecture principles to support distributed computing where services have remote consumers. Clients can consume multiple services; services can be consumed by multiple clients. Services are loosely coupled to each other. Services typically have a WSDL interface (Web Services Description Language) that any WCF client can use to consume the service, regardless of which platform the service is hosted on. WCF implements many advanced Web services (WS) standards such as WS-Addressing, WS-ReliableMessaging and WS-Security. With the release of .NET Framework 4.0, WCF also provides RSS Syndication Services, WS-Discovery, routing and better support for REST services.</div>);
 
        }).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -45,7 +45,7 @@ Output for Accordion control with loaded Ajax content is as follows.
 
 
 
-{ ![](Ajax-settings_images/Ajax-settings_img1.png) | markdownify }
+{{ '![](Ajax-settings_images/Ajax-settings_img1.png)' | markdownify }}
 {:.image }
 
 

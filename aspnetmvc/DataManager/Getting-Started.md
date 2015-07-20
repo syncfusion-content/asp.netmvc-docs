@@ -23,7 +23,7 @@ To define connection to data source, you can use the DataManager control. The da
 
 The local data is set as data source by using the following code example.
 
-&lt;%--connection local reference--%&gt;
+<%--connection local reference--%>
 
 @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
 
@@ -120,7 +120,7 @@ You can bind the DataManager with Grid by defining the ID of DataManager in the 
 
 When you run, the following table is displayed.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -172,7 +172,7 @@ When you run the filter query and bind the result to the Grid, the following tab
 
 __
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -219,7 +219,7 @@ The sortBy property of ejQuery is used to sort the records based on the field an
 
 When you run the sort query and bind the result to the table, the following table is displayed.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -281,7 +281,7 @@ The Page property of ejQuery is used to retrieve the records based on the given 
 
 
 
-__{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+__{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 

@@ -51,7 +51,7 @@ A grid is a tabular representation of data, arranged in the form of rows and col
 </table>
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img1.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -209,7 +209,7 @@ The slicer axis is used as a filter to narrow the focus of the multidimensional
 
 
 
-.{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img10.png) | markdownify }
+.{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -221,7 +221,7 @@ The dimension, hierarchy and level elements can be dragged from the Cube Dimensi
 
 
 
-{ ![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img11.png) | markdownify }
+{{ '![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -229,7 +229,7 @@ The dimension, hierarchy and level elements can be dragged from the Cube Dimensi
 
 The measure elements can be dragged from Cube Dimension Browser and dropped into Axis Element Builder using drag-and-drop operation. Also user can move the measure elements from one axis to another by moving the Split Button named Measures.
 
-{ ![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img12.png) | markdownify }
+{{ '![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -241,7 +241,7 @@ In order to remove dimension, hierarchy and level element from the Axis Element 
 
 
 
-{ ![Description: C:/Users/Tamilarasu .M/Pictures/document/remove.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img13.png) | markdownify }
+{{ '![Description: C:/Users/Tamilarasu .M/Pictures/document/remove.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -251,7 +251,7 @@ To remove the measure element from the Axis Element Builder, click the Remove sy
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img14.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -261,13 +261,13 @@ Rearranging can be done by dragging an element one below the other.
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img15.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img15.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img16.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -275,14 +275,14 @@ Rearranging can be done by dragging an element one below the other.
 
 Split Button highlights the elements in the Axis Element Builder. It holds dimensions/measures. When you drag and drop a node from Cube Dimensional Browser into Axis Element Builder, a Split Button is created, displaying the dimension name.
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img17.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img17.png)' | markdownify }}
 {:.image }
 
 
 When you drag and drop a measure, the Axis Element Builder will create a Split Button only for the first measure. The next time a measure is added, it maintains the same single Split Button to hold the entire measure collection. 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img18.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img18.png)' | markdownify }}
 {:.image }
 
 
@@ -292,7 +292,7 @@ Split Button can be removed with the help of the Remove option available while h
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img19.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img19.png)' | markdownify }}
 {:.image }
 
 
@@ -304,7 +304,7 @@ Measure Editor is a dialog that displays the collection of measures in the curre
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img20.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img20.png)' | markdownify }}
 {:.image }
 
 
@@ -314,7 +314,7 @@ To remove a measure, click the Remove button next to the corresponding measure
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img21.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img21.png)' | markdownify }}
 {:.image }
 
 
@@ -324,7 +324,7 @@ Member Editor is a tree-view control that displays the member elements of the cu
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img22.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img22.png)' | markdownify }}
 {:.image }
 
 
@@ -343,7 +343,7 @@ Unchecking the check box option is provided in such a way that on deselecting th
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img23.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img23.png)' | markdownify }}
 {:.image }
 
 
@@ -354,7 +354,7 @@ Check All and Uncheck All
 
 
 
-{ ![Description: C:/Users/Tamilarasu .M/Pictures/document/check all.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img24.png) | markdownify }
+{{ '![Description: C:/Users/Tamilarasu .M/Pictures/document/check all.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img24.png)' | markdownify }}
 {:.image }
 
 
@@ -362,7 +362,7 @@ Check All and Uncheck All
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img25.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img25.png)' | markdownify }}
 {:.image }
 
 
@@ -424,13 +424,13 @@ Report List will hold all the reports of the current session of the OLAP Client
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img26.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img26.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img27.png) | markdownify }
+{{ '![](OLAP-Client-Elements_images/OLAP-Client-Elements_img27.png)' | markdownify }}
 {:.image }
 
 

@@ -25,13 +25,13 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-    &lt;div class="one"&gt;
+    <div class="one">
 
     @*enable right to left alignment*@
 
                  @Html.EJ().ToggleButton("toggleButton_rtl").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").EnableRTL(true)       
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -41,7 +41,7 @@ Output of above steps
 
 
 
-{ ![](RTL-support_images/RTL-support_img1.png) | markdownify }
+{{ '![](RTL-support_images/RTL-support_img1.png)' | markdownify }}
 {:.image }
 
 

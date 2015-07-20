@@ -149,7 +149,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -291,7 +291,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -435,7 +435,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -579,7 +579,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -725,7 +725,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -869,7 +869,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -997,7 +997,7 @@ top: -4px;
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -1117,7 +1117,7 @@ $(function(){
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -1221,7 +1221,7 @@ var content = {
 
 The following output is displayed as a result of the above code example.
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Appearance-and-Styling_images/Appearance-and-Styling_img9.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -1319,7 +1319,7 @@ ribbonObj.collapse();
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -1411,7 +1411,7 @@ ribbonObj.expand();
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img11.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -1525,7 +1525,7 @@ $(function () {
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img12.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -1644,7 +1644,7 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
 The following screenshot displays the output of the above code example.
 
-{ ![C:/Users/Giftline/Desktop/a.png](Appearance-and-Styling_images/Appearance-and-Styling_img13.png) | markdownify }
+{{ '![C:/Users/Giftline/Desktop/a.png](Appearance-and-Styling_images/Appearance-and-Styling_img13.png)' | markdownify }}
 {:.image }
 
 

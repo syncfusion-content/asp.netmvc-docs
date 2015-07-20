@@ -55,13 +55,13 @@ You can add the page content with text-area by referring to this section.
 
 The following screenshot illustrates the output while selecting the text in the page.
 
-{ ![](Width_images/Width_img1.png) | markdownify }
+{{ '![](Width_images/Width_img1.png)' | markdownify }}
 {:.image }
 
 
 The following screenshot illustrates the Radial Menu while clicking on the settings icon.
 
-{ ![](Width_images/Width_img2.png) | markdownify }
+{{ '![](Width_images/Width_img2.png)' | markdownify }}
 {:.image }
 
 

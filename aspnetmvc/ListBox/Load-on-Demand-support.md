@@ -20,10 +20,10 @@ The following steps explains you the behaviour of Load-onDemand support in ListB
 <table>
 <tr>
 <td>
-[View]  // Add the following code in View page to configure ListBox widget&lt;div class="control"&gt;    &lt;h5 class="ctrllabel"&gt; Select Customer ID</h5>    @Html.EJ().ListBox("customerList").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers')").ListBoxFields(f => f.Text("CustomerID")).ItemsCount(91) .EnableLoadOnDemand(true).ClientSideEvents(e => e.ItemRequest("itemRequested"))&lt;/div&gt;</td></tr>
+[View]  // Add the following code in View page to configure ListBox widget<div class="control">    <h5 class="ctrllabel"> Select Customer ID</h5>    @Html.EJ().ListBox("customerList").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers')").ListBoxFields(f => f.Text("CustomerID")).ItemsCount(91) .EnableLoadOnDemand(true).ClientSideEvents(e => e.ItemRequest("itemRequested"))</div></td></tr>
 <tr>
 <td>
-[JavaScript]  &lt;script type="text/javascript"&gt;    function itemRequested(args) {        var target = $("#customerList").data("ejListBox");        //to load 20 items        target.model.query = ej.Query().from('Customers').range(args.start, args.start + 20);        this.model.itemsCount = 20;    }&lt;/script&gt;</td></tr>
+[JavaScript]  <script type="text/javascript">    function itemRequested(args) {        var target = $("#customerList").data("ejListBox");        //to load 20 items        target.model.query = ej.Query().from('Customers').range(args.start, args.start + 20);        this.model.itemsCount = 20;    }</script></td></tr>
 </table>
 
 
@@ -32,7 +32,7 @@ The following steps explains you the behaviour of Load-onDemand support in ListB
 1. Output of the above steps.
 
 
-{ ![C:/Users/Rajaveni/Desktop/docs/LD/LD.png](Load-on-Demand-support_images/Load-on-Demand-support_img1.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/docs/LD/LD.png](Load-on-Demand-support_images/Load-on-Demand-support_img1.png)' | markdownify }}
 {:.image }
 
 

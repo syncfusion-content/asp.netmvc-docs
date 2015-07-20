@@ -159,7 +159,7 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 
 
-{ ![](Layers_images/Layers_img1.png) | markdownify }
+{{ '![](Layers_images/Layers_img1.png)' | markdownify }}
 {:.image }
 
 

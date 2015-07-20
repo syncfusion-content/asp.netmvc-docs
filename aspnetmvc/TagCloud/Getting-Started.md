@@ -17,7 +17,7 @@ ASP.NET MVC TagCloud provides support to display a weighted list, where the weig
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -48,7 +48,7 @@ Essential Studio ASP.NET MVC TagCloud widget has built-in features such as click
 
 
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
         #tagEvents {
 
@@ -56,7 +56,7 @@ Essential Studio ASP.NET MVC TagCloud widget has built-in features such as click
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 Set the Min and Max Font Size
 
@@ -92,7 +92,7 @@ You can set the minimum and maximum font size in frequency property by adding th
 
 //Refer the Model in the controller
 
-using &lt;Applicationname&gt;.Models;
+using <Applicationname>.Models;
 
 
 
@@ -146,7 +146,7 @@ public ActionResult Index()
 
 }
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -164,9 +164,9 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 
 
-&lt;div id="tagCloudTarget"&gt;
+<div id="tagCloudTarget">
 
-    &lt;ul&gt;
+    <ul>
 
         <li>mouseover</li>
 
@@ -174,13 +174,13 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
         <li>click</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
     @Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("evtpropscheckedevent"))
 
-    &lt;style type="text/css"&gt;
+    <style type="text/css">
 
         #tagEvents {
 
@@ -188,9 +188,9 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
         }
 
-    &lt;/style&gt;
+    </style>
 
-&lt;script&gt;
+<script>
 
         function evtpropscheckedevent(args) {
 
@@ -240,7 +240,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
         }              
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -252,7 +252,7 @@ When you move the mouse to latest technology (weighted) list, it is denoted in A
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

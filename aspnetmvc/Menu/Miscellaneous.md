@@ -23,7 +23,7 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 
 // You can specify the height of the Menu control in the CSHTML page as follows.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -95,7 +95,7 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 
         }).Height("50")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -113,7 +113,7 @@ Specifies the width of the main menu. You can customize the width of the Menu co
 
 // You can specify the width of the Menu control in the CSHTML page as follows.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -187,7 +187,7 @@ Specifies the width of the main menu. You can customize the width of the Menu co
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -205,7 +205,7 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 // Add the following code in the CSHTML page. 
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -277,13 +277,13 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
         }).Width("500").OpenOnClick(true)
 
-&lt;/div&gt;
+</div>
 
 
 
 Output screenshot for the above code example is as follows.
 
-{ ![](Miscellaneous_images/Miscellaneous_img1.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -303,7 +303,7 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 // Add the following code in the CSHTML page. 
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -375,7 +375,7 @@ Animation type is used to enable or disable the Animation when hover or click on
 
         }).Width("500").AnimationType(AnimationType.Default)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -384,7 +384,7 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 Output screenshot for the above code sample is as follows.
 
-{ ![](Miscellaneous_images/Miscellaneous_img2.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -404,7 +404,7 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 // You can specify the title of the Menu control in the CSHTML page as follows.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -476,7 +476,7 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
         }).Width("500").TitleText("Title of the Menu")
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -486,7 +486,7 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 The following screenshot displays the output of the above code.
 
-{ ![](Miscellaneous_images/Miscellaneous_img3.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -506,7 +506,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 // Add the following code in the CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
   @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -578,7 +578,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
         }).Width("500").ShowRooltLevelArrows(false)
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -588,7 +588,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 The following screenshot displays the output of the above code.
 
-{ ![](Miscellaneous_images/Miscellaneous_img4.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -608,7 +608,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 // Add the following code in the CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -680,7 +680,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
         }).Width("500").ShowSubLevelArrows(false)
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -690,7 +690,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 The following screenshot displays the output of the above code.
 
-{ ![](Miscellaneous_images/Miscellaneous_img5.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img5.png)' | markdownify }}
 {:.image }
 
 

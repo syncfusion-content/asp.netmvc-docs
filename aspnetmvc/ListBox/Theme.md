@@ -28,11 +28,11 @@ By default, there are 12 themes support available for ListBox control namely,
 
 The following screenshot illustrates the ListBox with Flat-lime and Flat-Saffron built-in themes.
 
-{ ![C:/Users/Rajaveni/Desktop/docs/UG images/blog/flatlime.png](Theme_images/Theme_img1.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/docs/UG images/blog/flatlime.png](Theme_images/Theme_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Rajaveni/Desktop/docs/UG images/blog/flatsaffron.png](Theme_images/Theme_img2.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/docs/UG images/blog/flatsaffron.png](Theme_images/Theme_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -51,7 +51,7 @@ The following steps explains you the configuration of CssClass properties in Lis
 <table>
 <tr>
 <td>
-[View]// Add the following code in View page to configure ListBox widget&lt;div id="control"&gt;    &lt;h5 class="ctrllabel"&gt;        Select a skill    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")) .CssClass("customclass")&lt;/div&gt;</td></tr>
+[View]// Add the following code in View page to configure ListBox widget<div id="control">    <h5 class="ctrllabel">        Select a skill    </h5>    @Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")) .CssClass("customclass")</div></td></tr>
 <tr>
 <td>
 [CS]// Add the following code to add list items in the controller page        public class skillset        {            public string text { get; set; }        }        public ActionResult Index()        {            List<skillset> skill = new List<skillset>();            skill.Add(new skillset { text = "ASP.NET" });            skill.Add(new skillset { text = "ActionScript" });            skill.Add(new skillset { text = "Basic" });            skill.Add(new skillset { text = "C++" });            skill.Add(new skillset { text = "C#" });            skill.Add(new skillset { text = "dBase" });            skill.Add(new skillset { text = "Delphi" });            skill.Add(new skillset { text = "ESPOL" });            skill.Add(new skillset { text = "F#" });            skill.Add(new skillset { text = "FoxPro" });            skill.Add(new skillset { text = "Java" });            skill.Add(new skillset { text = "J#" });            skill.Add(new skillset { text = "Lisp" });            skill.Add(new skillset { text = "Logo" });            skill.Add(new skillset { text = "PHP" });            ViewBag.datasource = skill;            return View();        }</td></tr>
@@ -66,7 +66,7 @@ The following steps explains you the configuration of CssClass properties in Lis
 
 [CSS]  
 
-&lt;style&gt;
+<style>
 
     .customclass {
 
@@ -78,14 +78,14 @@ The following steps explains you the configuration of CssClass properties in Lis
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 2. Output of the above steps.
 
 
-{ ![](Theme_images/Theme_img3.png) | markdownify }
+{{ '![](Theme_images/Theme_img3.png)' | markdownify }}
 {:.image }
 
 

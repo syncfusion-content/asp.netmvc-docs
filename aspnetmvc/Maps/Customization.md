@@ -82,7 +82,7 @@ The above properties of ShapeSettings are applied only when AutoFill property va
 
 
 
-{ ![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Customization_images/Customization_img1.png) | markdownify }
+{{ '![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Customization_images/Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -210,7 +210,7 @@ When the underlying object value is 700000, then the Fill color of the correspon
 
 When the underlying value is below any of the given sorted range or above the sorted range, then the Fill is set from Fill.
 
-{ ![](Customization_images/Customization_img2.png) | markdownify }
+{{ '![](Customization_images/Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -312,7 +312,7 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 
 {% endhighlight %}
 
-{ ![](Customization_images/Customization_img3.png) | markdownify }
+{{ '![](Customization_images/Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -370,7 +370,7 @@ The ColorPalette property can be set with Palette1, Palette2, Palette3 and Custo
 
 
 
-{ ![](Customization_images/Customization_img4.png) | markdownify }
+{{ '![](Customization_images/Customization_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -432,7 +432,7 @@ This property is enabled only when ColorPalette property value is set to “Cust
 
 
 
-{ ![](Customization_images/Customization_img5.png) | markdownify }
+{{ '![](Customization_images/Customization_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -482,7 +482,7 @@ The tooltip is displayed only when you set ShowTooltip to “True” in the shap
 
 
 
-{ ![](Customization_images/Customization_img6.png) | markdownify }
+{{ '![](Customization_images/Customization_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -570,7 +570,7 @@ The following screenshot illustrates a map control displaying a Tooltip with tem
 
 
 
-{ ![C:/Users/labuser/Desktop/a.png](Customization_images/Customization_img7.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Customization_images/Customization_img7.png)' | markdownify }}
 {:.image }
 
 

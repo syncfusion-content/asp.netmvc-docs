@@ -19,11 +19,11 @@ RTL control supports right-to-left functionality and features for languages th
 
 \\ Add the following code in your view page to render the RTE.
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).EnableRTL(true).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).EnableRTL(true).Render(); }
 
 
 
-{ ![](RTL_images/RTL_img1.png) | markdownify }
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
 {:.image }
 The following screenshot displays the output.
 

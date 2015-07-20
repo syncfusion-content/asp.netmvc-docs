@@ -13,7 +13,7 @@ Custom label provides information about the members associated behind each OlapG
 
 
 
-{ ![I:/OlapGuage/Gauge/Range size.png](Custom-Label_images/Custom-Label_img1.png) | markdownify }
+{{ '![I:/OlapGuage/Gauge/Range size.png](Custom-Label_images/Custom-Label_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -79,7 +79,7 @@ customLabel.Position(location => location.X(280).Y(390)).Add();
 
 
 
-{ ![](Custom-Label_images/Custom-Label_img2.png) | markdownify }
+{{ '![](Custom-Label_images/Custom-Label_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -145,7 +145,7 @@ You can customize the custom label font with fontstyle, font family, and size pr
 
 
 
-{ ![](Custom-Label_images/Custom-Label_img3.png) | markdownify }
+{{ '![](Custom-Label_images/Custom-Label_img3.png)' | markdownify }}
 {:.image }
 
 

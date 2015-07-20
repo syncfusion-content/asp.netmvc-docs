@@ -17,7 +17,7 @@ Control Structure
 
 The following screenshot shows the control structure of ReportViewer.
 
-{ ![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer1.png](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer1.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -29,13 +29,13 @@ This section explains how to configure a ReportViewer component in web applicati
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category, select the ASP.NET MVC4 Web Application template, and then click OK. The following screenshot displays the Project Creation Wizard.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
 The following screenshot displays how to select Internet application template with razor view engine.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -45,7 +45,7 @@ Add References
 
 1. In the Solution Explorer, right-click the References folder and then click Add Reference
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -71,7 +71,7 @@ Add References
 * Syncfusion.Gauge.Wpf
 * Syncfusion.SfMaps.Wpf 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img5.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img5.jpeg)' | markdownify }}
 {:.image }
 _Note: Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package._
 
@@ -81,23 +81,23 @@ _Note: Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and
 
 Add Scripts and Styles
 
-Add the script files and CSS files in the &lt;title&gt; tag of the _Layout.cshtml page.
+Add the script files and CSS files in the <title> tag of the _Layout.cshtml page.
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img6.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img6.jpeg)' | markdownify }}
 {:.image }
 _Note: Use the following code example while adding scripts and styles._
 
 [CSHTML]
 
-&lt;link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" /&gt;
+<link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" />
 
-&lt;script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"&gt;&lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"></script>
 
-&lt;script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"&gt;&lt;/script&gt;
+<script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"></script>
 
 
 
@@ -129,13 +129,13 @@ Add the following code example in the Index.cshtml page that is already create
 
 
 
-&lt;div&gt;
+<div>
 
    @Html.EJ().ReportViewer("viewer").ReportPath("~/App_Data/Sales Dashboard.rdl").ReportServiceUrl("/api/ReportApi").Render();
 
-&lt;/div&gt;
+</div>
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img7.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img7.jpeg)' | markdownify }}
 {:.image }
 _Note: Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version._
 
@@ -143,7 +143,7 @@ Add WebAPI controller for ReportViewer
 
 The MVC ReportViewer uses WebApi services to process the report file and process the request from control.
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ Run the Application
 
 Run the sample application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-{ ![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer.png](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer.png](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -321,9 +321,9 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 
 
 
-&lt;div&gt;    @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
+<div>    @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
 
-&lt;/div&gt;      
+</div>      
 
 2. Add the credential information in ReportApiController’sOnInitReportOptions method that is inherited in IReportController.
 
@@ -347,7 +347,7 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-{ ![](Getting-Started_images/Getting-Started_img10.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -443,7 +443,7 @@ namespace ReportViewerDemo.Controllers
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img11.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
 {:.image }
 
 

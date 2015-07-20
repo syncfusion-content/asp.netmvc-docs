@@ -83,7 +83,7 @@ tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
 
 The following screenshot illustrates _Ribbon_ with application menu.
 
-{ ![](Application-Tab_images/Application-Tab_img1.png) | markdownify }
+{{ '![](Application-Tab_images/Application-Tab_img1.png)' | markdownify }}
 {:.image }
 
 

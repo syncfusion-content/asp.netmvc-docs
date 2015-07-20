@@ -13,7 +13,7 @@ The following are some miscellaneous properties that helps you to change the beh
 
 Target ID
 
-You can append a list with ListBox by using TargetId property. Define a &lt;ul&gt;,&lt; li&gt; tag that you want to display on ListBox and then set the id of parent &lt;ul&gt; tag to TargetId property. And its data type is string. 
+You can append a list with ListBox by using TargetId property. Define a <ul>,< li> tag that you want to display on ListBox and then set the id of parent <ul> tag to TargetId property. And its data type is string. 
 
 The following steps explains you the configuration of TargetID property in ListBox.
 
@@ -27,17 +27,17 @@ The following steps explains you the configuration of TargetID property in ListB
 
 // Add the following code in View page to configure ListBox widget
 
-&lt;div id="control"&gt;
+<div id="control">
 
-    &lt;h5 class="ctrllabel"&gt;
+    <h5 class="ctrllabel">
 
         Select a font style
 
-    &lt;/h5&gt;
+    </h5>
 
     @Html.EJ().ListBox("listboxsample").TargetID("targetlist")
 
-    &lt;ul id="targetlist"&gt;
+    <ul id="targetlist">
 
         <li>Algerian</li>
 
@@ -71,9 +71,9 @@ The following steps explains you the configuration of TargetID property in ListB
 
         <li>Zapfellipt bt</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -85,7 +85,7 @@ The following steps explains you the configuration of TargetID property in ListB
 
 
 
-{ ![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png) | markdownify }
+{{ '![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -101,17 +101,17 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 [View]
 
-&lt;div id="control"&gt;
+<div id="control">
 
-    &lt;h5 class="ctrllabel"&gt;
+    <h5 class="ctrllabel">
 
         Select a skill
 
-    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
+    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
 
     => df.Text("text")).SelectedItemIndex(2)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -120,7 +120,7 @@ The following steps explains you the configuration of SelectedItemIndex property
 2.  Output of the above steps.
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img2.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -138,15 +138,15 @@ The following steps explains you the configuration of Enabled property in ListBo
 
 // Add the following code in View page to configure ListBox widget
 
-&lt;div id="control"&gt;
+<div id="control">
 
-    &lt;h5 class="ctrllabel"&gt;
+    <h5 class="ctrllabel">
 
         Select a skill
 
-    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
+    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
 
-&lt;/div&gt;
+</div>
 
 [CS]
 
@@ -209,7 +209,7 @@ The following steps explains you the configuration of Enabled property in ListBo
 2. Output of the above steps.
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img3.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
 {:.image }
 
 

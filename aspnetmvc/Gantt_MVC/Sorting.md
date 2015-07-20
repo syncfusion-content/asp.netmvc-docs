@@ -75,7 +75,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt contro
 
 
 
-{ ![](Sorting_images/Sorting_img1.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img1.png)' | markdownify }}
 {:.image }
 
 

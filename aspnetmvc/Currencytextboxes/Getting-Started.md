@@ -15,7 +15,7 @@ This section explains briefly about how to create a EJMVC CurrencyTextBox in ASP
 
 From the following steps you can learn how to create and use CurrencyTextBox in your application. Here we have showcased, a small Electric bill calculator application using EJMVC Editors widgets.The Essential ASP.NET MVC Editors control includes numeric, percentage, currency and maskedit textbox controls. This will guide you to use the wide range of Editors functionalities to complete this application. 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -28,95 +28,95 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 
 
-&lt;div class="editors"&gt;
+<div class="editors">
 
-&lt;div class="ele-icon"&gt;&lt;/div&gt;
+<div class="ele-icon"></div>
 
 <div class="ele-txt" style="">Electricity Bill Calculator</div>
 
-&lt;br /&gt;
+<br />
 
-&lt;table class="editors"&gt;
+<table class="editors">
 
-     &lt;tbody&gt;
+     <tbody>
 
-         &lt;tr&gt;
+         <tr>
 
-           &lt;td&gt;
+           <td>
 
               <label>Unit meters</label>
 
-           &lt;/td&gt;
+           </td>
 
-           &lt;td&gt;    @* NumericTextBox creation with watermark text *@
+           <td>    @* NumericTextBox creation with watermark text *@
 
               @Html.EJ().NumericTextbox("numeric").WatermarkText("Units")
 
-           &lt;/td&gt;
+           </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Service Tax</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;     @* PercentageTextBox creation with watermark text *@
+            <td>     @* PercentageTextBox creation with watermark text *@
 
                  @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax")
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-             &lt;td&gt;
+             <td>
 
                <label>Fare</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;    @* CurrencyTextBox creation with watermark text *@
+            <td>    @* CurrencyTextBox creation with watermark text *@
 
                 @Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit")
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Mobile No</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;    @* MaskEditTextBox creation with watermark text *@
+            <td>    @* MaskEditTextBox creation with watermark text *@
 
                @Html.EJ().MaskEdit("maskedit").WatermarkText("Phone number")
 
-            &lt;/td&gt;
+            </td>
 
-       &lt;/tr&gt;
+       </tr>
 
-     &lt;/tbody&gt;&lt;/table&gt;
+     </tbody></table>
 
-  &lt;div class="paybill"&gt;      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
+  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 3. The following styles are added to arrange the Editors.  You can add the following location in the URL path for the background image and to apply styling [http://js.syncfusion.com/UG/Web/Content/electricity.png](http://js.syncfusion.com/UG/Web/Content/electricity.png)
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .ele-icon
 
@@ -198,13 +198,13 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 4. Execute the code to render Editors as follows
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -214,91 +214,91 @@ Set MinValue, MaxValue and value in CurrencyTextBox
 
 You can set the “MinValue”,“MaxValue” and “Value” in Currency, percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the Maskedit widget by using the”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
 
-&lt;div class="editors"&gt;
+<div class="editors">
 
-&lt;div class="ele-icon"&gt;&lt;/div&gt;
+<div class="ele-icon"></div>
 
 <div class="ele-txt" style="">Electricity Bill Calculator</div>
 
-&lt;br /&gt;
+<br />
 
-&lt;table class="editors"&gt;
+<table class="editors">
 
-     &lt;tbody&gt;
+     <tbody>
 
-         &lt;tr&gt;
+         <tr>
 
-           &lt;td&gt;
+           <td>
 
               <label>Unit meters</label>
 
-           &lt;/td&gt;
+           </td>
 
-           &lt;td&gt;    @Html.EJ().NumericTextbox("numeric").WatermarkText("Units").MinValue(1).MaxValue(10000).Value("70")
+           <td>    @Html.EJ().NumericTextbox("numeric").WatermarkText("Units").MinValue(1).MaxValue(10000).Value("70")
 
-           &lt;/td&gt;
+           </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Service Tax</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;                 @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax").MinValue(5).MaxValue(100).Value("15")
+            <td>                 @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax").MinValue(5).MaxValue(100).Value("15")
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-             &lt;td&gt;
+             <td>
 
                <label>Fare</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;                @Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit").MinValue(0.00).MaxValue(100000.00).Value("350.00").DecimalPlaces(2)
+            <td>                @Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit").MinValue(0.00).MaxValue(100000.00).Value("350.00").DecimalPlaces(2)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Mobile No</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                @Html.EJ().MaskEdit("maskedit").WatermarkText("Phone number").MaskFormat("99-999-99999").Value("9090909090")
 
-            &lt;/td&gt;
+            </td>
 
-       &lt;/tr&gt;
+       </tr>
 
-     &lt;/tbody&gt;
+     </tbody>
 
-&lt;/table&gt;
+</table>
 
-  &lt;div class="paybill"&gt;
+  <div class="paybill">
 
     @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 The following screenshot illustrates the output of the above code examples. 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -306,89 +306,89 @@ Setting the Strict Mode Option
 
 You can set the “StrictMode” option to restrict entering values defined outside the range. The following code example illustrates how to set strict mode option. 
 
-&lt;div class="editors"&gt;
+<div class="editors">
 
-&lt;div class="ele-icon"&gt;&lt;/div&gt;
+<div class="ele-icon"></div>
 
-<div class="ele-txt" style="">ElectricityBill Calculator</div>&lt;br /&gt;
+<div class="ele-txt" style="">ElectricityBill Calculator</div><br />
 
-&lt;table class="editors"&gt;
+<table class="editors">
 
-     &lt;tbody&gt;
+     <tbody>
 
-         &lt;tr&gt;
+         <tr>
 
-           &lt;td&gt;
+           <td>
 
               <label>Unit meters</label>
 
-           &lt;/td&gt;
+           </td>
 
-           &lt;td&gt;                  @Html.EJ().NumericTextbox("numeric").WatermarkText("Units").MinValue(1).MaxValue(10000).Value("70").EnableStrictMode(true)
+           <td>                  @Html.EJ().NumericTextbox("numeric").WatermarkText("Units").MinValue(1).MaxValue(10000).Value("70").EnableStrictMode(true)
 
-           &lt;/td&gt;
+           </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Service Tax</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;     
+            <td>     
 
 @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax").MinValue(5).MaxValue(100).Value("15")
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-             &lt;td&gt;
+             <td>
 
                <label>Fare</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;   
+            <td>   
 
 @Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit").MinValue(0.00).MaxValue(100000.00).Value("350.00").DecimalPlaces(2)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
-            &lt;td&gt;
+            <td>
 
                <label>Mobile No</label>
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;    
+            <td>    
 
                @Html.EJ().MaskEdit("maskedit").WatermarkText("Phone number").MaskFormat("99-999-99999").Value("9090909090")
 
-            &lt;/td&gt;
+            </td>
 
-       &lt;/tr&gt;
+       </tr>
 
-     &lt;/tbody&gt;
+     </tbody>
 
-&lt;/table&gt;
+</table>
 
-  &lt;div class="paybill"&gt;
+  <div class="paybill">
 
 @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 Run the above code example and you can see that it restricts entering a value exceeding the MinValue and MaxValue range mentioned in the numeric textbox.
 
@@ -398,23 +398,23 @@ You can use events to calculate the total and displays the value. You can achiev
 
 To customize the button, set the ContentType as TextAndImage to include the icon before the text. Add the PrefixIcon value as “e-calender” and add the ClientSideEvents for click event.
 
-&lt;div class="editors"&gt;
+<div class="editors">
 
 
 
 @* Please refer the table format for textboxes customization *@
 
-  &lt;div class="paybill"&gt;
+  <div class="paybill">
 
    @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender").ClientSideEvents(c=>c.Click("calculateBill"))
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 
 
-&lt;script type="text/javascript"&gt;   
+<script type="text/javascript">   
 
 function calculateBill() {
 
@@ -444,11 +444,11 @@ function calculateBill() {
 
     }
 
-&lt;/script&gt;
+</script>
 
 Run the above code sample, fill the required Textbox fields and click the Calculate button. The values are displayed and an alert message is shown. The following screen shot illustrates the final output of the Electricity bill calculator. 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 

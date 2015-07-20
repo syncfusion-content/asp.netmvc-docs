@@ -37,27 +37,27 @@ The following steps explain the implementation of AutoResize option in the Split
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                &lt;div class="content" style="padding: 0px 15px;"&gt;
+                <div class="content" style="padding: 0px 15px;">
 
-                    &lt;h3 class="h3"&gt;
+                    <h3 class="h3">
 
                         ASP.NET MVC
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;).PaneSize("60");
+            </div>).PaneSize("60");
 
         p.Add().ContentTemplate(
 
-            @&lt;div style="height: 100%; width: 100%"&gt;
+            @<div style="height: 100%; width: 100%">
 
                 @innerSplitter()
 
-            &lt;/div&gt;);
+            </div>);
 
     }).Render();}
 
@@ -71,43 +71,43 @@ The following steps explain the implementation of AutoResize option in the Split
 
                 {
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-                        &lt;div class="content"&gt;
+                        <div class="content">
 
-                            &lt;h3 class="h3"&gt;
+                            <h3 class="h3">
 
                                 Tools
 
-                            &lt;/h3&gt;
+                            </h3>
 
                             Essential Tools is an collection of user interface components used to create interactive
 
                             ASP.NET MVC applications.
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/div&gt;);
+                    </div>);
 
 
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-            &lt;div class="content"&gt;
+            <div class="content">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     Grid
 
-                &lt;/h3&gt;
+                </h3>
 
                 Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                 Grouping and the display of hierarchical data.
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;);
+        </div>);
 
                 });
 
@@ -117,7 +117,7 @@ The following steps explain the implementation of AutoResize option in the Split
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     #outterSplitter {
 
@@ -143,7 +143,7 @@ The following steps explain the implementation of AutoResize option in the Split
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -155,13 +155,13 @@ The output for Splitter when EnableAutoResize is “True”.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -187,35 +187,35 @@ The following steps explain the implementation of EnableAnimation option in the 
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Tools &lt;/h3&gt;
+                     <h3 class="h3">Tools </h3>
 
                      Essential Tools is an collection of user interface components used to create interactive
 
                      ASP.NET MVC applications.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Grid &lt;/h3&gt;
+                     <h3 class="h3">Grid </h3>
 
                      Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                      Grouping and the display of hierarchical data.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
     }).Render();}
 
@@ -227,7 +227,7 @@ The output for Splitter when EnableAnimation is “True”. Expanding or collaps
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -275,35 +275,35 @@ The following steps explain the implementation of Splitter properties.
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Tools &lt;/h3&gt;
+                     <h3 class="h3">Tools </h3>
 
                      Essential Tools is an collection of user interface components used to create interactive
 
                      ASP.NET MVC applications.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Grid &lt;/h3&gt;
+                     <h3 class="h3">Grid </h3>
 
                      Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                      Grouping and the display of hierarchical data.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;).Collapsible(true).MinSize("100").MaxSize("150").PaneSize("150").Resizable(true);
+            </div>).Collapsible(true).MinSize("100").MaxSize("150").PaneSize("150").Resizable(true);
 
     }).Render();}
 
@@ -315,25 +315,25 @@ The output for Splitter after adding the properties.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -376,35 +376,35 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Tools &lt;/h3&gt;
+                     <h3 class="h3">Tools </h3>
 
                      Essential Tools is an collection of user interface components used to create interactive
 
                      ASP.NET MVC applications.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Grid &lt;/h3&gt;
+                     <h3 class="h3">Grid </h3>
 
                      Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                      Grouping and the display of hierarchical data.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;).Collapsible(true).MinSize("100").Resizable(true);
+            </div>).Collapsible(true).MinSize("100").Resizable(true);
 
     }).Render();}
 
@@ -420,7 +420,7 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
 
 
 
-    &lt;style&gt;
+    <style>
 
         .customCSS {            
 
@@ -450,7 +450,7 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
 
         }     
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -460,7 +460,7 @@ The output for Splitter after customizing the CSS class.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
 {:.image }
 
 

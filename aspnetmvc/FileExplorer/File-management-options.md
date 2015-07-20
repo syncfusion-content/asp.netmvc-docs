@@ -15,7 +15,7 @@ By clicking the New Folder Icon, the highlighted model dialog opens as shown in 
 
 
 
-{ ![](File-management-options_images/File-management-options_img1.png) | markdownify }
+{{ '![](File-management-options_images/File-management-options_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -25,7 +25,7 @@ The Download option is used to download the required files from the online file 
 
 
 
-{ ![](File-management-options_images/File-management-options_img2.png) | markdownify }
+{{ '![](File-management-options_images/File-management-options_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -35,7 +35,7 @@ You can upload files to the required place using the built-in Upload box control
 
 
 
-{ ![](File-management-options_images/File-management-options_img3.png) | markdownify }
+{{ '![](File-management-options_images/File-management-options_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -45,7 +45,7 @@ To easily search the files in file system, you are provided with the Search bar 
 
 
 
-{ ![](File-management-options_images/File-management-options_img4.png) | markdownify }
+{{ '![](File-management-options_images/File-management-options_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ In the Details view, you can sort the files using required fields. For example, 
 
 
 
-{ ![](File-management-options_images/File-management-options_img5.png) | markdownify }
+{{ '![](File-management-options_images/File-management-options_img5.png)' | markdownify }}
 {:.image }
 
 

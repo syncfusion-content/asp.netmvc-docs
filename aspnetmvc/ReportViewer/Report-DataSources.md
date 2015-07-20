@@ -109,13 +109,13 @@ public class ReportsController : ApiController, IReportController
 
     {
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Report loaded method that is triggered when report and sub report are loaded.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="reportOptions">The ReportViewer options.&lt;/param&gt;
+        /// <param name="reportOptions">The ReportViewer options.</param>
 
         public void OnReportLoaded(ReportViewerOptions reportOptions)
 
@@ -193,13 +193,13 @@ The DataSource credentials can be given at Web API Controller to connect data so
 
 
 
-                   /// &lt;summary&gt;
+                   /// <summary>
 
         /// Report Initialization method that is triggered when report begins to process.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="reportOptions">The ReportViewer options.&lt;/param&gt;
+        /// <param name="reportOptions">The ReportViewer options.</param>
 
         public void OnInitReportOptions(ReportViewerOptions reportOptions)
 

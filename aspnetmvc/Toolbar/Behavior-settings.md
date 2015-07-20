@@ -21,15 +21,15 @@ Enabled property is Boolean type, which allow us to enable or disable the Toolba
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Enabled(false)
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Enabled(false)
 
-&lt;/div&gt;
+</div>
 
 
 
 The following screenshot illustrates a Toolbar with Disable mode.
 
-{ ![](Behavior-settings_images/Behavior-settings_img1.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -47,9 +47,9 @@ The Hide property is Boolean type, which allow us to show or hide the Toolbar. D
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Hide(true)
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Hide(true)
 
-&lt;/div&gt;
+</div>
 
 
 

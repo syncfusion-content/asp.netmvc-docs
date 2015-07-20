@@ -25,7 +25,7 @@ In the above code example, width is set as 500 pixel and height is set as 100 pi
 
 
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img1.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -43,7 +43,7 @@ The feature measure bar value is customized using the Value property. Default va
 
 The following screenshot displays Bullet Graph with a performance measure value of 5
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img2.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -63,7 +63,7 @@ The following screenshot displays Bullet Graph with comparative measure value of
 
 
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img3.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -85,7 +85,7 @@ The following screenshot displays Bullet Graph with flatdark theme
 
 
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img4.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img4.png)' | markdownify }}
 {:.image }
 
 _Figure_ _12__: Bullet Graph with theme_
@@ -120,7 +120,7 @@ The Flow direction of Bullet Graph is customized using FlowDirection property. D
 
 The following screenshot displays Bullet Graph in a backward direction.
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img5.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -138,7 +138,7 @@ Size of the Qualitativerange is customized using QualitativeRangeSize property. 
 
 The following screenshot displays Bullet Graph with Qualitative range of size 50
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img6.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -156,7 +156,7 @@ Length of the Quantitativescale is customized using QuantitativeScaleLength prop
 
 The following screenshot displays Bullet Graph with Quantitative scale length of 500
 
-{ ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img7.png) | markdownify }
+{{ '![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img7.png)' | markdownify }}
 {:.image }
 
 

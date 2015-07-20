@@ -78,7 +78,7 @@ In the following example, set DateTimeFormat to fulldatetime format.
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Display-format_images/Display-format_img1.png) | markdownify }
+{{ '![](Display-format_images/Display-format_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -130,7 +130,7 @@ You can also customize the format according to your needs. This is achieved by c
 
 
 
-{ ![](Display-format_images/Display-format_img2.png) | markdownify }
+{{ '![](Display-format_images/Display-format_img2.png)' | markdownify }}
 {:.image }
 
 

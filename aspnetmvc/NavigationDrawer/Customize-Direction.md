@@ -43,7 +43,7 @@ By using this property, you can set the drawer to be open from right to left dir
 
 The following screenshot displays the output by swiping from right to left at the right side end of the screen.
 
-{ ![](Customize-Direction_images/Customize-Direction_img1.png) | markdownify }
+{{ '![](Customize-Direction_images/Customize-Direction_img1.png)' | markdownify }}
 {:.image }
 
 

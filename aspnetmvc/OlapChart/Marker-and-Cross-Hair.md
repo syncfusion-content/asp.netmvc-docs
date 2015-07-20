@@ -17,7 +17,7 @@ You can view the information while moving the mouse pointer over the Chart Area 
 
 
 
-{ ![](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img1.png) | markdownify }
+{{ '![](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -33,7 +33,7 @@ In OlapChart, you can customize the marker shape with different symbols like rec
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function onSeriesRenders(args) {
 
@@ -43,13 +43,13 @@ function onSeriesRenders(args) {
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/markershape.png](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img2.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/markershape.png](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img2.png)' | markdownify }}
 {:.image }
 _Figure: Marker Shape Customization_
 
@@ -63,7 +63,7 @@ In order to view the value at mouse position or touch contact point, you can use
 
 
 
-{ ![](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img3.png) | markdownify }
+{{ '![](Marker-and-Cross-Hair_images/Marker-and-Cross-Hair_img3.png)' | markdownify }}
 {:.image }
 
 

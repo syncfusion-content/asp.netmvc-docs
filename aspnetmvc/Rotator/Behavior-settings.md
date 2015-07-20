@@ -23,7 +23,7 @@ Enabled property is a Boolean type, which allow us to enables or disable the Rot
 
 The following banner displaying as output.
 
-{ ![](Behavior-settings_images/Behavior-settings_img1.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -96,7 +96,7 @@ You can specify the property PagerPosition in the script as follows.
 
 
 
-{ ![](Behavior-settings_images/Behavior-settings_img2.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -118,7 +118,7 @@ This property turns on or off the pager support in the Rotator control. The Page
 
 
 
-{ ![](Behavior-settings_images/Behavior-settings_img3.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -140,7 +140,7 @@ ShowPlayButton property is Boolean type which allow us to enable play / pause bu
 
 
 
-{ ![](Behavior-settings_images/Behavior-settings_img4.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -158,7 +158,7 @@ This property turns on or off the slide buttons (next and previous) in the Rotat
 
 
 
-{ ![](Behavior-settings_images/Behavior-settings_img5.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -176,7 +176,7 @@ When the Rotator Item is an image, you can specify a caption for the Rotator Ite
 
 
 
-{ ![](Behavior-settings_images/Behavior-settings_img6.png) | markdownify }
+{{ '![](Behavior-settings_images/Behavior-settings_img6.png)' | markdownify }}
 {:.image }
 
 

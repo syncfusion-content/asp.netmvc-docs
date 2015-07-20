@@ -13,7 +13,7 @@ The following are some miscellaneous properties that helps you to change the beh
 
 Target ID
 
-You can append a list with dropdown textbox by using TargetId property. You need to define a &lt;ul&gt;, &lt; li&gt; tag that you want to show on Dropdown List and then set the id of parent &lt;ul&gt; tag to TargetId property. Its data type is string. 
+You can append a list with dropdown textbox by using TargetId property. You need to define a <ul>, < li> tag that you want to show on Dropdown List and then set the id of parent <ul> tag to TargetId property. Its data type is string. 
 
 The following steps explains you the configuration of TargetID property in Dropdownlist
 
@@ -29,9 +29,9 @@ The following steps explains you the configuration of TargetID property in Dropd
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list") 
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -45,9 +45,9 @@ The following steps explains you the configuration of TargetID property in Dropd
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -69,9 +69,9 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
 
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -85,11 +85,11 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -99,7 +99,7 @@ Output of the above steps
 
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img1.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -122,9 +122,9 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").SelectedItemIndex(1)
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -138,11 +138,11 @@ The following steps explains you the configuration of SelectedItemIndex property
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -151,7 +151,7 @@ The following steps explains you the configuration of SelectedItemIndex property
 Output of the above steps
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img2.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -176,9 +176,9 @@ The following steps explains you the configuration of ShowPopupOnLoad property i
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowPopupOnLoad(true)
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -192,11 +192,11 @@ The following steps explains you the configuration of ShowPopupOnLoad property i
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -227,9 +227,9 @@ The following steps explains you the configuration of selectedItems property in 
 
 
 
-&lt;div id="list"&gt;
+<div id="list">
 
-    &lt;ul&gt;
+    <ul>
 
         <li>Art</li>
 
@@ -243,16 +243,16 @@ The following steps explains you the configuration of selectedItems property in 
 
         <li>Science</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
 
 
 Output of the above steps
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img3.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -276,9 +276,9 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ReadOnly(true)
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -292,11 +292,11 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -318,9 +318,9 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").Enabled(false)
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -334,11 +334,11 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -347,7 +347,7 @@ The following steps explains you the configuration of Enabled property in Dropdo
 Output of the above steps 
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img4.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -371,9 +371,9 @@ The following steps explains you the configuration of EnablePersistence property
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").EnablePersistence(true)
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -387,11 +387,11 @@ The following steps explains you the configuration of EnablePersistence property
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 

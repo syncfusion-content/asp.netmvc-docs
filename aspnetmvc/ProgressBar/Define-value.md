@@ -29,7 +29,7 @@ The following steps explain you on how to set the Value for the ProgressBar widg
 [CSHTML]// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized value.@Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Value(60).Height("20").Width("500")</td></tr>
 <tr>
 <td>
-[JavaScript]&lt;script&gt;            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue()});            });        &lt;/script&gt;</td></tr>
+[JavaScript]<script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue()});            });        </script></td></tr>
 </table>
 
 
@@ -39,7 +39,7 @@ The following steps explain you on how to set the Value for the ProgressBar widg
 
 The following screenshot displays the output for the above code.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetvalue.PNG](Define-value_images/Define-value_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetvalue.PNG](Define-value_images/Define-value_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -67,7 +67,7 @@ The following steps explain you on how to set the value in Percentage for the Pr
 [CSHTML]// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized percentage.@Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Percentage(60).Height("20").Width("500")</td></tr>
 <tr>
 <td>
-[JavaScript]&lt;script&gt;            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getPercentage() + " %"});            }); &lt;/script&gt;</td></tr>
+[JavaScript]<script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getPercentage() + " %"});            }); </script></td></tr>
 </table>
 
 
@@ -75,7 +75,7 @@ The following steps explain you on how to set the value in Percentage for the Pr
 
 The following screenshot displays the output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetperc.PNG](Define-value_images/Define-value_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetperc.PNG](Define-value_images/Define-value_img2.png)' | markdownify }}
 {:.image }
 
 

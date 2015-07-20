@@ -18,7 +18,7 @@ The CircularGauge control visualizes the numerical values of scales in a circula
 * Ranges
 * Indicators
 
-{ ![](Overview_images/Overview_img1.png) | markdownify }
+{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 

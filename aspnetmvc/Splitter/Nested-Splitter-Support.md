@@ -33,27 +33,27 @@ The following steps explain the implementation of the “nestedsplitter”option
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                &lt;div class="content" style="padding: 0px 15px;"&gt;
+                <div class="content" style="padding: 0px 15px;">
 
-                    &lt;h3 class="h3"&gt;
+                    <h3 class="h3">
 
                         ASP.NET MVC
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;).PaneSize("60");
+            </div>).PaneSize("60");
 
         p.Add().ContentTemplate(
 
-            @&lt;div style="height: 100%; width: 100%"&gt;
+            @<div style="height: 100%; width: 100%">
 
                 @innerSplitter()
 
-            &lt;/div&gt;);
+            </div>);
 
     }).Render();}
 
@@ -67,57 +67,57 @@ The following steps explain the implementation of the “nestedsplitter”option
 
                 {
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-                        &lt;div class="content"&gt;
+                        <div class="content">
 
-                            &lt;h3 class="h3"&gt;
+                            <h3 class="h3">
 
                                 Tools
 
-                            &lt;/h3&gt;
+                            </h3>
 
                            Essential Tools is an collection of user interface components used to create interactive
 
                             ASP.NET MVC applications.
 
-                        &lt;/div&gt;
+                        </div>
 
-                    &lt;/div&gt;).PaneSize("200");
+                    </div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-            &lt;div class="content"&gt;
+            <div class="content">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     Chart
 
-                &lt;/h3&gt;
+                </h3>
 
                 Essential Chart is a business-oriented charting component.
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;).PaneSize("200");
+        </div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@&lt;div&gt;
+                    p1.Add().ContentTemplate(@<div>
 
-            &lt;div class="content"&gt;
+            <div class="content">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     Grid
 
-                &lt;/h3&gt;
+                </h3>
 
                 Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                 Grouping and the display of hierarchical data.
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;).PaneSize("200");
+        </div>).PaneSize("200");
 
                 })
 
@@ -129,7 +129,7 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 
 
-    &lt;style type="text/css" &gt;
+    <style type="text/css" >
 
         #outterSplitter {
 
@@ -155,7 +155,7 @@ The following steps explain the implementation of the “nestedsplitter”option
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -171,7 +171,7 @@ The output for nested Splitter.
 
 
 
-{ ![](Nested-Splitter-Support_images/Nested-Splitter-Support_img1.png) | markdownify }
+{{ '![](Nested-Splitter-Support_images/Nested-Splitter-Support_img1.png)' | markdownify }}
 {:.image }
 
 

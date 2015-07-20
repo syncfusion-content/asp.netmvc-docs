@@ -83,7 +83,7 @@ You can set the number of gauges to be displayed in row using rowsCount property
 
 
 
-{ ![](Layout_images/Layout_img1.png) | markdownify }
+{{ '![](Layout_images/Layout_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -153,7 +153,7 @@ You can set the number of gauges to be displayed in column using columnsCount pr
 
 
 
-{ ![](Layout_images/Layout_img2.png) | markdownify }
+{{ '![](Layout_images/Layout_img2.png)' | markdownify }}
 {:.image }
 
 

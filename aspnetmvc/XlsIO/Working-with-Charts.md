@@ -1538,7 +1538,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img1.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -2467,7 +2467,7 @@ excelEngine.Dispose()
 
 In MS Excel, the Sparklines can be inserted by selecting any of the sparklines type from the Insert tab. 
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img2.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -2644,7 +2644,7 @@ Sparklines Options by XlsIO
 
 MS Excel provides various options through Sparklines tool ribbon in order to customize the appearance of the Sparklines.
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img3.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -3630,7 +3630,7 @@ Hidden and Empty Cell Settings
 
 Normally,  in a sparkline group data there is a possibility of an empty cell or a hidden cell. MS Excel 2010 provides a dialog box to apply settings on hidden and empty cells.
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img4.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -4313,7 +4313,7 @@ excelEngine.Dispose()
 
 Excel allows you to insert a picture through the Insert tab -> Illustrations section,and then clicking Pictures button. It allows you to customize the image by sizing, formatting, and positioning the image.
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img5.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -4445,7 +4445,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img6.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -4563,7 +4563,7 @@ excelEngine.Dispose()
 
 Microsoft Excel has the ability to insert comments in cells. Comments give additional information about a cell, such as, what the value represents. You can insert and format comments through the Insert menu in Excel. You can also format the comments inserted through the Format Comment dialog box.
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img7.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -4725,7 +4725,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Charts_images/Working-with-Charts_img8.png) | markdownify }
+{{ '![](Working-with-Charts_images/Working-with-Charts_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -4981,7 +4981,7 @@ excelEngine.Dispose()
 
 XlsIO also provides options to resize the comment size and move/size with cell by using the IsMoveWithCell and IsSizeWithCell properties. You can also autofit the size of the comment by using the AutoFit property.
 
-> { ![](Working-with-Charts_images/Working-with-Charts_img9.jpeg) | markdownify }
+> {{ '![](Working-with-Charts_images/Working-with-Charts_img9.jpeg)' | markdownify }}
 {:.image }
 _Note: Currently it is not possible to insert preformatted RTF tags in Excel by using XlsIO._
 

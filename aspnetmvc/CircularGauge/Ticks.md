@@ -43,7 +43,7 @@ tc.Type(CircularTickTypes.Major).Color("Red").Add();
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/karthigeyan/Desktop/sa.png](Ticks_images/Ticks_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/sa.png](Ticks_images/Ticks_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -103,7 +103,7 @@ tc.Type(CircularTickTypes.Minor)
 
 Execute the above code to render the following output.
 
-{ ![](Ticks_images/Ticks_img2.png) | markdownify }
+{{ '![](Ticks_images/Ticks_img2.png)' | markdownify }}
 {:.image }
 
 

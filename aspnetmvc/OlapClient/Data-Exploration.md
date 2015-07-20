@@ -25,7 +25,7 @@ After you click Split Button, Member Editor Dialog opens and through that you ca
 
 
 
-{ ![](Data-Exploration_images/Data-Exploration_img1.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -53,7 +53,7 @@ The options in Filtering tab are as follows:
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_31.png](Data-Exploration_images/Data-Exploration_img2.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_31.png](Data-Exploration_images/Data-Exploration_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ The following screenshot displays data before Filtering.
 
 
 
-{ ![](Data-Exploration_images/Data-Exploration_img3.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -71,7 +71,7 @@ The following screenshot displays the data after Filtering.
 
 
 
-{ ![](Data-Exploration_images/Data-Exploration_img4.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -101,7 +101,7 @@ The following screenshot displays the Sorting and Filtering dialog box.
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_28.png](Data-Exploration_images/Data-Exploration_img5.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_28.png](Data-Exploration_images/Data-Exploration_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -149,7 +149,7 @@ The following screenshot displays the data before sorting.
 
 
 
-{ ![](Data-Exploration_images/Data-Exploration_img6.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -183,7 +183,7 @@ __
 
 The following screenshot displays the data after sorting.
 
-{ ![](Data-Exploration_images/Data-Exploration_img7.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -193,7 +193,7 @@ The data can be grouped when more than one dimension element is dropped into Cat
 
 
 
-{ ![](Data-Exploration_images/Data-Exploration_img8.png) | markdownify }
+{{ '![](Data-Exploration_images/Data-Exploration_img8.png)' | markdownify }}
 {:.image }
 
 

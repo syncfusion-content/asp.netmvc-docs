@@ -179,7 +179,7 @@ private Node CreateNode(string name, int marginTop, int marginLeft, string color
 
 
 
-{ ![](Layout-Panel_images/Layout-Panel_img1.png) | markdownify }
+{{ '![](Layout-Panel_images/Layout-Panel_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -273,7 +273,7 @@ private Node CreateNode(string name, string color, HorizontalAlignment alignment
 
 
 
-{ ![](Layout-Panel_images/Layout-Panel_img2.png) | markdownify }
+{{ '![](Layout-Panel_images/Layout-Panel_img2.png)' | markdownify }}
 {:.image }
 
 

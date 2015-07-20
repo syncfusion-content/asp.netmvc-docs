@@ -104,7 +104,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 
-{ ![](Summary_images/Summary_img1.png) | markdownify }
+{{ '![](Summary_images/Summary_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -224,7 +224,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Summary_images/Summary_img2.png) | markdownify }
+{{ '![](Summary_images/Summary_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -318,7 +318,7 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
 
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
 
 
@@ -338,7 +338,7 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -390,7 +390,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 
-{ ![](Summary_images/Summary_img3.png) | markdownify }
+{{ '![](Summary_images/Summary_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -500,7 +500,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Summary_images/Summary_img4.png) | markdownify }
+{{ '![](Summary_images/Summary_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -610,7 +610,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Summary_images/Summary_img5.png) | markdownify }
+{{ '![](Summary_images/Summary_img5.png)' | markdownify }}
 {:.image }
 
 

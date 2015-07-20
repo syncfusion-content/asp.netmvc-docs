@@ -17,7 +17,7 @@ Digital Gauge for Essential Studio encompasses the visualization of the segmente
 * EightCrossEightDotMatrix
 * EightCrossEightSquareMatrix
 
-{ ![](Overview_images/Overview_img1.png) | markdownify }
+{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 

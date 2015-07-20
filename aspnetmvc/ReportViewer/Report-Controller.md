@@ -71,19 +71,19 @@ public class ReportsController : ApiController, IReportController
 
     {
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Action (HttpGet) method for getting resource for report.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="key">The unique key to get the required resource.&lt;/param&gt;
+        /// <param name="key">The unique key to get the required resource.</param>
 
-        /// <param name="resourceType">The type of the requested resource.&lt;/param&gt;
+        /// <param name="resourceType">The type of the requested resource.</param>
 
-        /// <param name="isPrinting">If set to &lt;see langword="true"/&gt;, then the resource is generated for printing.&lt;/param&gt;
+        /// <param name="isPrinting">If set to <see langword="true"/>, then the resource is generated for printing.</param>
 
-        /// <returns>The object data.&lt;/returns&gt;
+        /// <returns>The object data.</returns>
 
         public object GetResource(string key, string resourceType, bool isPrinting)
 
@@ -97,13 +97,13 @@ public class ReportsController : ApiController, IReportController
 
 
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Report Initialization method that is triggered when report begin processed.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="reportOptions">The ReportViewer options.&lt;/param&gt;
+        /// <param name="reportOptions">The ReportViewer options.</param>
 
         public void OnInitReportOptions(ReportViewerOptions reportOptions)
 
@@ -115,13 +115,13 @@ public class ReportsController : ApiController, IReportController
 
 
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Report loaded method that is triggered when report and sub report begins to be loaded.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="reportOptions">The ReportViewer options.&lt;/param&gt;
+        /// <param name="reportOptions">The ReportViewer options.</param>
 
         public void OnReportLoaded(ReportViewerOptions reportOptions)
 
@@ -133,15 +133,15 @@ public class ReportsController : ApiController, IReportController
 
 
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Action (HttpPost) method for posting the request for report process. 
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="jsonData">The JSON data posted for processing report.&lt;/param&gt;
+        /// <param name="jsonData">The JSON data posted for processing report.</param>
 
-        /// <returns>The object data.&lt;/returns&gt;
+        /// <returns>The object data.</returns>
 
         public object PostReportAction(Dictionary<string, object> jsonData)
 

@@ -25,27 +25,27 @@ Add the following code in your view page to render the Rating with the customize
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").Value(4)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -55,7 +55,7 @@ The following screenshot illustrates the Rating with custom defined value.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img1.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -75,27 +75,27 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 
 
-&lt;div id="container" style="width: 300px; padding: 2px"&gt;
+<div id="container" style="width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").MinValue(3)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -103,7 +103,7 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 The following screenshot Rating value starts with 4 since MinValuevalue is set as 3.
 
-{ ![](Rating-Customization_images/Rating-Customization_img2.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -127,27 +127,27 @@ Add the following code in your view pageto render the Rating with maximumvalue.
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").MaxValue(10)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -157,7 +157,7 @@ The following screenshot illustrates the Rating with maximumvalue.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img3.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -177,55 +177,55 @@ Add the following code in your view page to render the Rating with Precision.
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("FullRating").Precision(Precision.Full).Value(4)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("HalfRating").Precision(Precision.Half).Value(3.5)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("ExactRating").Precision(Precision.Exact).Value(4.7)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -233,7 +233,7 @@ The following screenshot illustrates the Rating with Precision.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img4.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -253,27 +253,27 @@ Add the followingcode in your view page to render the Rating with customized inc
 
 
 
-    &lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+    <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").IncrementStep(2).MaxValue(10)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;      
+        </tr>      
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -281,9 +281,9 @@ Add the followingcode in your view page to render the Rating with customized inc
 
 The following screenshot illustrates the Rating with customized increment.
 
-{ ![](Rating-Customization_images/Rating-Customization_img5.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img5.png)' | markdownify }}
 {:.image }
-{ ![](Rating-Customization_images/Rating-Customization_img6.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -303,41 +303,41 @@ Add the following code in your view page to render the Rating with AllowReset.
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("ResetRating").AllowReset(true)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;  
+        </tr>  
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").AllowReset(false)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;    
+        </tr>    
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt; 
+</div> 
 
 
 
@@ -345,7 +345,7 @@ The following illustrates the Rating with allowReset.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img7.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -365,29 +365,29 @@ Add the following code in your view page to render Rating with readOnly.
 
 
 
-&lt;div id="container" style="width: 300px; padding: 2px"&gt;
+<div id="container" style="width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").ReadOnly(true).Value(2).MaxValue(10) 
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;  
+        </tr>  
 
 
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -395,7 +395,7 @@ The following screenshot illustrates the Rating with ReadOnly.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img8.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -415,27 +415,27 @@ Add the following code in your view page to render the Rating with enable or dis
 
 .
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").Enabled(false)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -443,7 +443,7 @@ The following screenshot illustrates the Rating in a disabled form.
 
 
 
-{ ![](Rating-Customization_images/Rating-Customization_img9.png) | markdownify }
+{{ '![](Rating-Customization_images/Rating-Customization_img9.png)' | markdownify }}
 {:.image }
 
 

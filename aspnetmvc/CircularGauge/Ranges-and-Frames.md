@@ -100,7 +100,7 @@ ran.StartValue(20)
 
 Execute the above code to render the following output.
 
-{ ![](Ranges-and-Frames_images/Ranges-and-Frames_img1.png) | markdownify }
+{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -161,7 +161,7 @@ ran.StartValue(20)
 
 Execute the above code to render the following output.
 
-{ ![](Ranges-and-Frames_images/Ranges-and-Frames_img2.png) | markdownify }
+{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -231,7 +231,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Ranges-and-Frames_images/Ranges-and-Frames_img3.png) | markdownify }
+{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -321,7 +321,7 @@ ran.StartValue(80)
 
 Execute the above code to render the following output.
 
-{ ![](Ranges-and-Frames_images/Ranges-and-Frames_img4.png) | markdownify }
+{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -390,7 +390,7 @@ po.NeedleType(NeedleType.Rectangle)
 
 Execute the above code to render the following output.
 
-{ ![](Ranges-and-Frames_images/Ranges-and-Frames_img5.png) | markdownify }
+{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img5.png)' | markdownify }}
 {:.image }
 
 

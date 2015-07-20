@@ -121,7 +121,7 @@ public ActionResult AutocompleteFeatures()
 
 
 
-2. Configure template structure for AutoComplete control as follows, including a &lt;div&gt; element with image and text in every row of the popup panel. Assign the corresponding variable name within ${&lt;field name&gt;} to map them into the list.
+2. Configure template structure for AutoComplete control as follows, including a <div> element with image and text in every row of the popup panel. Assign the corresponding variable name within ${<field name>} to map them into the list.
 
 
 
@@ -135,7 +135,7 @@ public ActionResult AutocompleteFeatures()
 
     .AutocompleteFields(fields => fields.Text("Text"))
 
-    .Template("&lt;div class='flag ${Sprite}'&gt;&lt;/div&gt;&lt;div class='txt'&gt; ${_Text_} &lt;/div&gt;")
+    .Template("<div class='flag ${Sprite}'></div><div class='txt'> ${_Text_} </div>")
 
 
 
@@ -149,7 +149,7 @@ public ActionResult AutocompleteFeatures()
 
 [Style]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
         /* Sprite css for country flags */
 
@@ -253,7 +253,7 @@ public ActionResult AutocompleteFeatures()
 
         }  
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -265,7 +265,7 @@ The following image is the output for AutoComplete widget with Template support.
 
 
 
-{ ![](Templates_images/Templates_img1.png) | markdownify }
+{{ '![](Templates_images/Templates_img1.png)' | markdownify }}
 {:.image }
 
 

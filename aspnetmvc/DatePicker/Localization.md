@@ -41,7 +41,7 @@ The following steps explain you how to get the Localization.
 
 
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 

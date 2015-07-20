@@ -53,7 +53,7 @@ You can color, all the leaf nodes with the same color by setting the color value
 
 
 
-{ ![](Customization_images/Customization_img1.png) | markdownify }
+{{ '![](Customization_images/Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -99,7 +99,7 @@ You can group the leaf nodes based on the range of the data’s color values. Yo
 
 
 
-{ ![](Customization_images/Customization_img2.png) | markdownify }
+{{ '![](Customization_images/Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -137,7 +137,7 @@ You can differentiate all the leaf nodes using the DesaturationColorMapping prop
 
 
 
-{ ![](Customization_images/Customization_img3.png) | markdownify }
+{{ '![](Customization_images/Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -245,7 +245,7 @@ You can customize the Leaf level TreeMapitems using LeafItemsSetting. The Label 
 
 
 
-{ ![](Customization_images/Customization_img4.png) | markdownify }
+{{ '![](Customization_images/Customization_img4.png)' | markdownify }}
 {:.image }
 
 

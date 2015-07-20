@@ -43,47 +43,47 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-    &lt;div class="one"&gt;
+    <div class="one">
 
         @*set toggle button type using type property*@
 
-        &lt;table&gt;
+        <table>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td class="btnsht"&gt;
+                <td class="btnsht">
 
                     @Html.EJ().ToggleButton("toggleButton_button").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("button").ActiveText("Next").Type(ButtonType.Button)
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td class="btnsht"&gt;
+                <td class="btnsht">
 
                     @Html.EJ().ToggleButton("toggleButton_submit").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("submit").ActiveText("Next").Type(ButtonType.Submit)
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td class="btnsht"&gt;
+                <td class="btnsht">
 
                     @Html.EJ().ToggleButton("toggleButton_reset").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("reset").ActiveText("Next").Type(ButtonType.Reset)
 
-                &lt;/td&gt;
+                </td>
 
 
 
-            &lt;/tr&gt;
+            </tr>
 
-        &lt;/table&gt;
+        </table>
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -91,7 +91,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1589dc08.PNG](Button-types_images/Button-types_img1.png) | markdownify }
+{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1589dc08.PNG](Button-types_images/Button-types_img1.png)' | markdownify }}
 {:.image }
 
 

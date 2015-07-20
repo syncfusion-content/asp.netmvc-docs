@@ -13,7 +13,7 @@ Nodes are graphical object that represent visual data to be placed on the page.
 
 
 
-{ ![C:/Users/labuser/Desktop/a.png](Node_images/Node_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Node_images/Node_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -57,7 +57,7 @@ model.Nodes.Add(node);
 
 
 
-{ ![](Node_images/Node_img2.png) | markdownify }
+{{ '![](Node_images/Node_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -111,7 +111,7 @@ node.Shape = BasicShapes.Ellipse;
 
 
 
-{ ![](Node_images/Node_img3.png) | markdownify }
+{{ '![](Node_images/Node_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -165,7 +165,7 @@ node.Value="button";
 
 
 
-{ ![](Node_images/Node_img4.png) | markdownify }
+{{ '![](Node_images/Node_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -199,7 +199,7 @@ node.TextBlock = block;
 
 
 
-{ ![](Node_images/Node_img5.png) | markdownify }
+{{ '![](Node_images/Node_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -231,7 +231,7 @@ node.PathData = "M 67.2947 100 L 67.2947 0.00102291 L 59.138 0.00102291 M 100 50
 
 
 
-{ ![C:/Users/labuser/Desktop/a.png](Node_images/Node_img6.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Node_images/Node_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ node.Points = points;
 
 
 
-{ ![](Node_images/Node_img7.png) | markdownify }
+{{ '![](Node_images/Node_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -347,11 +347,11 @@ node.Text="Mail";
 
 
 
-{ ![](Node_images/Node_img8.png) | markdownify }
+{{ '![](Node_images/Node_img8.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Node_images/Node_img9.png) | markdownify }
+{{ '![](Node_images/Node_img9.png)' | markdownify }}
 {:.image }
 _Note:_ 
 
@@ -395,7 +395,7 @@ node.Source = "sample/Syncfusion.PNG";
 
 
 
-{ ![](Node_images/Node_img10.png) | markdownify }
+{{ '![](Node_images/Node_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -403,7 +403,7 @@ node.Source = "sample/Syncfusion.PNG";
 
 Dropshadoweffect for a node can be enabled or disabled by using the NodeConstraints.Shadow. The following image represents the drop shadow effect for a Node.
 
-{ ![](Node_images/Node_img11.png) | markdownify }
+{{ '![](Node_images/Node_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -455,7 +455,7 @@ node.Shadow.Angle = 50;
 
 
 
-{ ![](Node_images/Node_img12.png) | markdownify }
+{{ '![](Node_images/Node_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -567,7 +567,7 @@ node.LinearGradient = gradient;
 
 
 
-{ ![](Node_images/Node_img13.png) | markdownify }
+{{ '![](Node_images/Node_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -687,7 +687,7 @@ node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
 
 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image59_17.jpg](Node_images/Node_img14.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_17.jpg](Node_images/Node_img14.jpeg)' | markdownify }}
 {:.image }
 
 
@@ -709,11 +709,11 @@ node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
 
 {% endhighlight %}
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image59_18.jpg](Node_images/Node_img15.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_18.jpg](Node_images/Node_img15.jpeg)' | markdownify }}
 {:.image }
 
 
-> { ![C:/Users/labuser/Desktop/note.jpg](Node_images/Node_img16.jpeg) | markdownify }
+> {{ '![C:/Users/labuser/Desktop/note.jpg](Node_images/Node_img16.jpeg)' | markdownify }}
 {:.image }
 _Note: Node’s constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
 

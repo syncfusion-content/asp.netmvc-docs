@@ -191,7 +191,7 @@ public class treeviewData
 
 //Refer the Model in the controller
 
-using &lt;Applicationname&gt;.Models;
+using <Applicationname>.Models;
 
 
 
@@ -253,7 +253,7 @@ public ActionResult Index()
 
 
 
-3. In the View page, add TreeView helper and map the properties defined in &lt;list&gt; to the corresponding fields in datasource.
+3. In the View page, add TreeView helper and map the properties defined in <list> to the corresponding fields in datasource.
 
 
 
@@ -271,7 +271,7 @@ The output for TreeView control with Local Data binding is as follows.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -317,7 +317,7 @@ The output for TreeView control with Remote Data binding is as follows.
 
 
 
-{ ![D:/RESPONSE/UG DOC/remotedata.PNG](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![D:/RESPONSE/UG DOC/remotedata.PNG](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 

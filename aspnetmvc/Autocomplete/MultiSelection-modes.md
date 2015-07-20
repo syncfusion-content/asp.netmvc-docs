@@ -31,9 +31,9 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
-&lt;div style="width: 600px"&gt;
+<div style="width: 600px">
 
-    &lt;div style="display:inline-block; float:left; margin-right:25px"&gt;
+    <div style="display:inline-block; float:left; margin-right:25px">
 
     <span style="display:block; margin-bottom:12px">Using Delimiter</span> 
 
@@ -49,9 +49,9 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
 
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div style="display:inline-block; float:left; margin-right:25px"&gt;
+    <div style="display:inline-block; float:left; margin-right:25px">
 
     <span style="display:block; margin-bottom:12px">Using VisualMode</span> 
 
@@ -65,9 +65,9 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
 
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div style="display:inline-block; float:left;"&gt;
+    <div style="display:inline-block; float:left;">
 
         <span style="display:block; margin-bottom:12px">Single selection</span>
 
@@ -83,9 +83,9 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
 
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -95,7 +95,7 @@ The following image is the output for AutoComplete control with configured multi
 
 
 
-{ ![](MultiSelection-modes_images/MultiSelection-modes_img1.png) | markdownify }
+{{ '![](MultiSelection-modes_images/MultiSelection-modes_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -25,11 +25,11 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 
 
-&lt;div id="target"&gt;
+<div id="target">
 
     @Html.EJ().WaitingPopup("target").ShowOnInit(true)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -43,7 +43,7 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #control {
 
@@ -53,13 +53,13 @@ The following steps explains you on how to display the WaitingPopup on page load
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screenshot illustrates the WaitingPopup when ShowOnInit is set to “true”.
 
-{ ![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png) | markdownify }
+{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -83,23 +83,23 @@ The following steps explains you to enable / disable popup indicator in WaitingP
 
 Enable popup indicator:
 
-&lt;div id="target"&gt;
+<div id="target">
 
     @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(true).Text("Loading... Please wait...")
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
 Disable popup indicator:
 
-&lt;div id="target"&gt;
+<div id="target">
 
    @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(false).Text("Loading... Please wait...")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -113,7 +113,7 @@ Disable popup indicator:
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #control {
 
@@ -123,19 +123,19 @@ Disable popup indicator:
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png) | markdownify }
+{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
 _Figure 6: Enabled popup indicator WaitingPopup widget_
 
-{ ![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png) | markdownify }
+{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -154,10 +154,10 @@ The following steps explains you to show / hide the WaitingPopup widget.
 <table>
 <tr>
 <td>
-[CSHTML]&lt;div id="target"&gt;    @Html.EJ().WaitingPopup("target").ShowOnInit(true)&lt;/div&gt;</td></tr>
+[CSHTML]<div id="target">    @Html.EJ().WaitingPopup("target").ShowOnInit(true)</div></td></tr>
 <tr>
 <td>
-[JavaScript]Show WaitingPopup:&lt;script type="text/javascript"&gt;    var popUpObj;    $(function () {        $("#target").ejWaitingPopup();        popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.show();    });&lt;/script&gt;Hide WaitingPopup:&lt;script type="text/javascript"&gt;    var popUpObj    $(function () {        $("#target").ejWaitingPopup();         popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.hide();    });&lt;/script&gt;</td></tr>
+[JavaScript]Show WaitingPopup:<script type="text/javascript">    var popUpObj;    $(function () {        $("#target").ejWaitingPopup();        popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.show();    });</script>Hide WaitingPopup:<script type="text/javascript">    var popUpObj    $(function () {        $("#target").ejWaitingPopup();         popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.hide();    });</script></td></tr>
 </table>
 
 
@@ -171,7 +171,7 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #control {
 
@@ -181,13 +181,13 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screenshot illustrates a WaitingPopup when Show() method is invoked.
 
-{ ![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png) | markdownify }
+{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

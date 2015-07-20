@@ -42,7 +42,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
 // Add the following code in your CSHTML page.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
         @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -114,7 +114,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
         }).Width("500").CssClass("Purple-dark")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -126,7 +126,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .Purple-dark {
 
@@ -142,13 +142,13 @@ Using this CssClass you can override the existing styles under the theme style s
 
      }
 
-&lt;/style&gt;
+</style>
 
 
 
 Following screenshot displays the output of the above code.
 
-{ ![C:/Users/kaliswaran/Desktop/M-CSS.png](Look-and-feel_images/Look-and-feel_img1.png) | markdownify }
+{{ '![C:/Users/kaliswaran/Desktop/M-CSS.png](Look-and-feel_images/Look-and-feel_img1.png)' | markdownify }}
 {:.image }
 
 

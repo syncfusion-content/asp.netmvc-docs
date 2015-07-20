@@ -51,7 +51,7 @@ Title is set to Bullet Graph using Text property in CaptionSettings. Caption set
 
 The following screenshot displays a Bullet Graph with customized caption using the above code
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img1.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -103,7 +103,7 @@ Subtitle is added to Bullet Braph using Text property of Subtitle in CaptionSett
 
 The following screenshot displays Bullet Graph with a subtitle
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img2.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -177,7 +177,7 @@ Indicator displays a symbol along with text which is different from caption and 
 
 The following screenshot displays a bullet graph with indicator.
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img3.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -199,7 +199,7 @@ The title, subtitle and indicator text can be overlapped to the scale group. You
 
 The following screenshot displays the BulletGraph with Trim.
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img4.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -237,7 +237,7 @@ The property TextPosition, is used to position the text at the top, bottom, left
 
 The following screenshot displays the Bullet Graph with the title positioned above.
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img5.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ Alignment of text at different positions with respect to scale can be customized
 
 The following screenshot displays the Bullet Graph with the title and subtitle at different alignments.
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img6.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -335,7 +335,7 @@ Text elements aligned at the same position are anchored by using the TextAnchor 
 
 
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img7.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -371,7 +371,7 @@ The space required between text and quantitative scale is customized by using th
 
 
 
-{ ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img8.png) | markdownify }
+{{ '![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img8.png)' | markdownify }}
 {:.image }
 
 

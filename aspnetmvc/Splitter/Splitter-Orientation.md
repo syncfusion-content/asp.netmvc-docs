@@ -33,35 +33,35 @@ Configure Splitter Orientation
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Tools &lt;/h3&gt;
+                     <h3 class="h3">Tools </h3>
 
                      Essential Tools is an collection of user interface components used to create interactive
 
                      ASP.NET MVC applications.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
         p.Add().ContentTemplate(
 
-            @&lt;div&gt;
+            @<div>
 
-                 &lt;div style="padding: 0px 15px;"&gt;
+                 <div style="padding: 0px 15px;">
 
-                     <h3 class="h3">Grid &lt;/h3&gt;
+                     <h3 class="h3">Grid </h3>
 
                      Essential Mvc Grid offers full featured a Grid control with extensive support for
 
                      Grouping and the display of hierarchical data.
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;);
+            </div>);
 
     }).Render();}
 
@@ -69,7 +69,7 @@ Configure Splitter Orientation
 
 The output for Splitter with ej.Orientation.Vertical.
 
-{ ![](Splitter-Orientation_images/Splitter-Orientation_img1.png) | markdownify }
+{{ '![](Splitter-Orientation_images/Splitter-Orientation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -77,7 +77,7 @@ The output for Splitter with ej.Orientation.Horizontal.
 
 
 
-{ ![](Splitter-Orientation_images/Splitter-Orientation_img2.png) | markdownify }
+{{ '![](Splitter-Orientation_images/Splitter-Orientation_img2.png)' | markdownify }}
 {:.image }
 
 

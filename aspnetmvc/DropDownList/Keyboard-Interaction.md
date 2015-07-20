@@ -20,7 +20,7 @@ Shortcut Key</td><td>
 Description</td></tr>
 <tr>
 <td>
-{ [Access key](http://en.wikipedia.org/wiki/Access_key) | markdownify } + j	</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
 Focuses into the Dropdown text box</td></tr>
 <tr>
 <td>
@@ -67,7 +67,7 @@ Configure Keyboard Interaction
 
 The following steps explains you to enable keyboard interaction for a dropdown textbox.
 
-1. In an HTML page, add a &lt;input&gt; element to configure Dropdownlist widget and enable keyboard interaction by setting the accesskey property
+1. In an HTML page, add a <input> element to configure Dropdownlist widget and enable keyboard interaction by setting the accesskey property
 
 
 
@@ -78,10 +78,10 @@ The following steps explains you to enable keyboard interaction for a dropdown t
 <table>
 <tr>
 <td>
-[CSHTML]// Add a DropDownList element using the helper class in CSHTML@Html.EJ().DropDownList("dropdownlist").TargetID("list")           &lt;div id="list"&gt;    &lt;ul&gt;        <li>Art</li>        <li>Architecture</li>        <li>Biography</li>        <li>Comics</li>        <li>Sports</li>        <li>Science</li>    &lt;/ul&gt;&lt;/div&gt;</td></tr>
+[CSHTML]// Add a DropDownList element using the helper class in CSHTML@Html.EJ().DropDownList("dropdownlist").TargetID("list")           <div id="list">    <ul>        <li>Art</li>        <li>Architecture</li>        <li>Biography</li>        <li>Comics</li>        <li>Sports</li>        <li>Science</li>    </ul></div></td></tr>
 <tr>
 <td>
-[JavaScript]// Render Dropdown list control     &lt;script type="text/javascript"&gt;        $(function () {            //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#dropdownlist_wrapper").focus();                }            });                    });    &lt;/script&gt; </td></tr>
+[JavaScript]// Render Dropdown list control     <script type="text/javascript">        $(function () {            //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#dropdownlist_wrapper").focus();                }            });                    });    </script> </td></tr>
 </table>
 
 
@@ -90,7 +90,7 @@ The following steps explains you to enable keyboard interaction for a dropdown t
 Run the sample, press Alt + J to focus in the Dropdownlist widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 
 
-{ ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png) | markdownify }
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 

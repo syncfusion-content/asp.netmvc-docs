@@ -24,7 +24,7 @@ A combination Chart combines two or more series types in a single Chart. But the
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function onSeriesRenders(args) {
 
@@ -34,13 +34,13 @@ this.model.series[5].marker.visible = true;
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/Customizingchartseries.png](Series_images/Series_img1.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/Customizingchartseries.png](Series_images/Series_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -54,7 +54,7 @@ OlapChart series is customized using fill, border width and border color. The st
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function onSeriesRenders(args) {
 
@@ -64,7 +64,7 @@ function onSeriesRenders(args) {
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 

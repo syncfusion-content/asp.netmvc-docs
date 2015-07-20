@@ -27,7 +27,7 @@ Consider you are going to calculate the monthly report of your company’s emplo
 
 
 
-{ ![](Date-in-other-months_images/Date-in-other-months_img1.png) | markdownify }
+{{ '![](Date-in-other-months_images/Date-in-other-months_img1.png)' | markdownify }}
 {:.image }
 
 

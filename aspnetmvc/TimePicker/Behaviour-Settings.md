@@ -29,7 +29,7 @@ The following steps explains you on how to set the default value of the TimePick
 
 Execute the above code to render the following output.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img1.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ The following steps explain you to enable/disable property in TimePicker widget.
 
 _Figure 10: Disabled TimePicker widget_
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img2.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
 {:.image }
 Execute the above code to render the following output.
 
@@ -85,7 +85,7 @@ The following screenshot illustrates a TimePicker textbox configured to restrict
 
 
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img3.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -113,7 +113,7 @@ The following steps explain you to change the edges of the textbox to rounded co
 
 The following screenshot illustrates a TimePicker when ShowRoundedCorner is set to “true”.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img4.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -139,7 +139,7 @@ You can use Height and Width property to customize TimePicker width and height.
 
 Execute the above code to render the following output.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img5.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -163,7 +163,7 @@ You can use PopupHeight and PopupWidth property to customize TimePicker width an
 
 Execute the above code to render the following output.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img6.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -206,7 +206,7 @@ The following steps explains you to use EnableStrictMode property.
 
 Execute the above code to render the following output.
 
-{ ![](Behaviour-Settings_images/Behaviour-Settings_img7.png) | markdownify }
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img7.png)' | markdownify }}
 {:.image }
 
 

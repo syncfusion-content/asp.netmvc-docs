@@ -148,11 +148,11 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Gallery_images/Gallery_img1.png) | markdownify }
+{{ '![](Gallery_images/Gallery_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Gallery_images/Gallery_img2.png) | markdownify }
+{{ '![](Gallery_images/Gallery_img2.png)' | markdownify }}
 {:.image }
 
 

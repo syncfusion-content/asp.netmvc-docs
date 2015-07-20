@@ -53,7 +53,7 @@ The following steps explains you on how to configure the Orientation property.
 
 Execute the above code example to render the following output.
 
-{ ![](Orientation_images/Orientation_img1.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
 {:.image }
 
 

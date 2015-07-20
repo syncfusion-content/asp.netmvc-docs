@@ -25,7 +25,7 @@ Refer to the following code examples.
 
 
 
-{ ![](Configure-Badge_images/Configure-Badge_img1.png) | markdownify }
+{{ '![](Configure-Badge_images/Configure-Badge_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -17,7 +17,7 @@ This section encompasses the details on how to configure the RangeNavigator and 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -27,7 +27,7 @@ Create a simple MVC Application for RangeNavigator
 
 1. On the File menu, click New Project. The New Project dialog box opens.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -43,7 +43,7 @@ Create a simple MVC Application for RangeNavigator
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ The following screenshot shows the folder structure of the newly created MVC pro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -66,7 +66,7 @@ The following screenshot shows the folder structure of the newly created MVC pro
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -79,13 +79,13 @@ _Figure 5: Adding Reference Assemblies_
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -98,49 +98,49 @@ _Figure 5: Adding Reference Assemblies_
 
 
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;head&gt;
-
-
-
-&lt;script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-
-&lt;script src="@Url.Content("~/Scripts/jquery.globalize.min.js")" type="text/javascript" &gt;&lt;/script&gt;
-
-&lt;script src="@Url.Content("~/Scripts/ej.web.all.min.js")" type="text/javascript"&gt;&lt;/script&gt;
-
- &lt;script src="@Url.Content("~/Scripts/ej.unobtrusive.min.js")" type="text/javascript"&gt;&lt;/script&gt;
+<head>
 
 
 
-&lt;/head&gt;
+<script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
+
+<script src="@Url.Content("~/Scripts/jquery.globalize.min.js")" type="text/javascript" ></script>
+
+<script src="@Url.Content("~/Scripts/ej.web.all.min.js")" type="text/javascript"></script>
+
+ <script src="@Url.Content("~/Scripts/ej.unobtrusive.min.js")" type="text/javascript"></script>
 
 
 
-* Add the ScriptManager() at the end of &lt;body&gt; tag in _Layout page.
+</head>
+
+
+
+* Add the ScriptManager() at the end of <body> tag in _Layout page.
 
 [HTML]
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;head&gt;
+<head>
 
 
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
     @(Html.EJ().ScriptManager())
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 
 
@@ -149,26 +149,26 @@ _Figure 5: Adding Reference Assemblies_
 
 [Web.config]
 
-  &lt;compilation debug="true" targetFramework="4.0" &gt;
+  <compilation debug="true" targetFramework="4.0" >
 
-  &lt;assemblies&gt;       
+  <assemblies>       
 
-&lt;add assembly="Syncfusion.Core, Version=XX.XXXX.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" /&gt;
-
-
-
-&lt;add assembly="Syncfusion.EJ, Version= XX.XXXX.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+<add assembly="Syncfusion.Core, Version=XX.XXXX.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
 
 
 
-&lt;add assembly="Syncfusion.EJ.Mvc, Version= XX.XXXX.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
-
-&lt;/assemblies&gt;
-
-  &lt;/assemblies&gt;
+<add assembly="Syncfusion.EJ, Version= XX.XXXX.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+
+<add assembly="Syncfusion.EJ.Mvc, Version= XX.XXXX.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+
+</assemblies>
+
+  </assemblies>
+
+
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 _Note: Add the following namespaces in web.config file within the Views folder._
 
@@ -178,25 +178,25 @@ _Note: Add the following namespaces in web.config file within the Views folder._
 
 
 
-&lt;namespaces&gt;
+<namespaces>
 
-        &lt;add namespace="System.Web.Mvc" /&gt;
+        <add namespace="System.Web.Mvc" />
 
-        &lt;add namespace="System.Web.Mvc.Ajax" /&gt;
-
-         …….
+        <add namespace="System.Web.Mvc.Ajax" />
 
          …….
 
-        &lt;add namespace="Syncfusion.JavaScript" /&gt;
+         …….
 
-        &lt;add namespace="Syncfusion.JavaScript.DataVisualization" /&gt;
+        <add namespace="Syncfusion.JavaScript" />
 
-        &lt;add namespace="Syncfusion.MVC.EJ" /&gt;
+        <add namespace="Syncfusion.JavaScript.DataVisualization" />
 
-        &lt;add namespace="Syncfusion.EJ" /&gt;
+        <add namespace="Syncfusion.MVC.EJ" />
 
-&lt;/namespaces&gt;
+        <add namespace="Syncfusion.EJ" />
+
+</namespaces>
 
 
 
@@ -207,9 +207,9 @@ Configure RangeNavigator
 
 Getting started with your MVC RangeNavigator is simple; all you need to do is initialize the RangeNavigator by setting range values.
 
-1. Create a simple &lt;div&gt; tag.
+1. Create a simple <div> tag.
 
-&lt;div&gt;  &lt;/div&gt;
+<div>  </div>
 
 
 
@@ -217,7 +217,7 @@ Getting started with your MVC RangeNavigator is simple; all you need to do is in
 
 The following code example renders a RangeNavigator with a range from 2010 January 1st to December 31st.
 
-    &lt;div&gt; 
+    <div> 
 
 
 
@@ -235,7 +235,7 @@ The following code example renders a RangeNavigator with a range from 2010 Janua
 
 
 
-    &lt;/div&gt;  
+    </div>  
 
 
 
@@ -258,7 +258,7 @@ return View();
 
 The following Screen shot displays the RangeNavigator with a range from 2010 January 1st to December 31st.
 
-{ ![](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 

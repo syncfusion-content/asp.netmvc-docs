@@ -37,9 +37,9 @@ The following steps explains you the configuration of checkbox options in Dropdo
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowCheckbox(true).CheckAll(true).Width("200px")
 
-&lt;div id="list"&gt;
+<div id="list">
 
-    &lt;ul&gt;
+    <ul>
 
         <li>Art</li>
 
@@ -53,9 +53,9 @@ The following steps explains you the configuration of checkbox options in Dropdo
 
         <li>Science</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -65,7 +65,7 @@ Output of the above steps
 
 
 
-{ ![](Checkbox-Support_images/Checkbox-Support_img1.png) | markdownify }
+{{ '![](Checkbox-Support_images/Checkbox-Support_img1.png)' | markdownify }}
 {:.image }
 
 

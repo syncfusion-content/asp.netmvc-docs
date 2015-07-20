@@ -61,7 +61,7 @@ The result of above code example is illustrated as follows.
 
 
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img1.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -153,7 +153,7 @@ The result of the above code example is illustrated as follows.
 
 
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img2.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -201,7 +201,7 @@ Odata Adaptor that is extended from Url Adaptor is used for consuming data throu
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img3.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -249,7 +249,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img4.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -351,7 +351,7 @@ public class HomeController : Controller
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img5.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -395,7 +395,7 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         $(function () {// Document is ready.
 
@@ -431,13 +431,13 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
 Result of above code example is as follows.
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img6.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img6.png)' | markdownify }}
 {:.image }
 
 

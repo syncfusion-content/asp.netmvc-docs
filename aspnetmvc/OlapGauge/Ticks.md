@@ -78,7 +78,7 @@ ticks.Type(CircularTickTypes.Major).Height(16).Width(2).Color("red").Add();
 
 
 
-{ ![](Ticks_images/Ticks_img1.png) | markdownify }
+{{ '![](Ticks_images/Ticks_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -148,7 +148,7 @@ You can change the distance from the scale and the Ticks using “distanceFromSc
 
 
 
-{ ![](Ticks_images/Ticks_img2.png) | markdownify }
+{{ '![](Ticks_images/Ticks_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -216,7 +216,7 @@ You can set the height and width of the Ticks using the “tickWidth” and “t
 
 
 
-{ ![I:/OlapGuage/Gauge/Tick customizatoion.png](Ticks_images/Ticks_img3.png) | markdownify }
+{{ '![I:/OlapGuage/Gauge/Tick customizatoion.png](Ticks_images/Ticks_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -286,7 +286,7 @@ You can hide the Ticks that indicate the range values using “showTicks” prop
 
 
 
-{ ![](Ticks_images/Ticks_img4.png) | markdownify }
+{{ '![](Ticks_images/Ticks_img4.png)' | markdownify }}
 {:.image }
 
 

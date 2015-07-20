@@ -21,7 +21,7 @@ The following code block showcases how to use content template option in the Tab
 
 
 
-&lt;div style="width:650px"&gt;
+<div style="width:650px">
 
     @{Html.EJ().Tab("pizzaMenu").Items(data =>
 
@@ -29,61 +29,61 @@ The following code block showcases how to use content template option in the Tab
 
                data.Add().ID("gardenfresh").Text("GARDEN FRESH (Veg)")
 
-                   .ContentTemplate(@&lt;div&gt;
+                   .ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $50
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, onions, green capsicums & tomatoes.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
                data.Add().ID("cornandspinach").Text("CORN & SPINACH (Veg)")
 
-                   .ContentTemplate(@&lt;div&gt;
+                   .ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $70
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, sweet corn & green capsicums.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
                data.Add().ID("chickendelite").Text("CHICKEN DELITE (Non-veg)")
 
-                   .ContentTemplate(@&lt;div&gt;
+                   .ContentTemplate(@<div>
 
-                    &lt;img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" /&gt;
+                    <img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" />
 
-                    &lt;div class="ingredients"&gt;
+                    <div class="ingredients">
 
                         Rate    : $100
 
-                        &lt;br /&gt;
+                        <br />
 
                         Ingredients : cheese, chicken chunks, onions & pineapple chunks.
 
-                    &lt;/div&gt;
+                    </div>
 
-                &lt;/div&gt;);
+                </div>);
 
            }).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -93,7 +93,7 @@ The following code block showcases how to use content template option in the Tab
 
 Output:
 
-{ ![](Template-Support_images/Template-Support_img1.png) | markdownify }
+{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
 {:.image }
 
 

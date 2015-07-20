@@ -30,9 +30,9 @@ The CSS properties can be customized by using CSS Class in the Dialog control. T
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").
+The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 CssClass("customCss").Render();}
 
@@ -50,7 +50,7 @@ CssClass("customCss").Render();}
 
 
 
-    &lt;style&gt;
+    <style>
 
         .customCss {            
 
@@ -80,7 +80,7 @@ CssClass("customCss").Render();}
 
          }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -88,7 +88,7 @@ CssClass("customCss").Render();}
 
 3. The output for Dialog control after customizing the “CssClass” is as follows.
 
-{ ![C:/Users/ApoorvahR/Desktop/13.png](Look-and-Feel_images/Look-and-Feel_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/13.png](Look-and-Feel_images/Look-and-Feel_img1.png)' | markdownify }}
 {:.image }
 
 

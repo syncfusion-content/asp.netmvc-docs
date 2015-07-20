@@ -21,25 +21,25 @@ Details Template feature provides a detailed view about additional information o
 
 
 
-&lt;script id="tabGridContents" type="text/x-jsrender"&gt;
+<script id="tabGridContents" type="text/x-jsrender">
 
-    &lt;div id="contact{{:EmployeeID}}" style="font-weight:bold; padding:5px;"&gt;
+    <div id="contact{{:EmployeeID}}" style="font-weight:bold; padding:5px;">
 
-        &lt;div id="cont"&gt;
+        <div id="cont">
 
-            contact:{{:Address}}&lt;br /&gt;
+            contact:{{:Address}}<br />
 
-            city:{{:City}}&lt;br /&gt;
+            city:{{:City}}<br />
 
-            Country:{{:Country}}&lt;br /&gt;
+            Country:{{:Country}}<br />
 
-            phone:{{:HomePhone}}&lt;br /&gt;
+            phone:{{:HomePhone}}<br />
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/script&gt;
+</script>
 
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
@@ -93,7 +93,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Row_images/Row_img1.png) | markdownify }
+{{ '![](Row_images/Row_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -125,23 +125,23 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 
 
 
-&lt;script src="~/Scripts/jsondata.min.js"&gt;&lt;/script&gt;
+<script src="~/Scripts/jsondata.min.js"></script>
 
-&lt;script id="tabGridContents" type="text/x-jsrender"&gt;
+<script id="tabGridContents" type="text/x-jsrender">
 
-&lt;div class="tabcontrol" id="Test"&gt;
+<div class="tabcontrol" id="Test">
 
-&lt;div id="detailGrid"&gt;
+<div id="detailGrid">
 
-&lt;/div&gt;
+</div>
 
-&lt;label id="employeeDet" style="display: none"&gt;{{:EmployeeID}}&lt;/label&gt;
+<label id="employeeDet" style="display: none">{{:EmployeeID}}</label>
 
-&lt;/div&gt;
+</div>
 
-&lt;/script&gt;
+</script>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function detailGridData(e) {
 
@@ -163,7 +163,7 @@ dataSource: data,
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -213,7 +213,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Row_images/Row_img2.png) | markdownify }
+{{ '![](Row_images/Row_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -229,85 +229,85 @@ RowTemplate is used to render your template in every row. It is used to place el
 
 
 
-&lt;script id="templateData" type="text/x-jsrender"&gt;
+<script id="templateData" type="text/x-jsrender">
 
-&lt;tr&gt;
+<tr>
 
-&lt;td class="photo"&gt;
+<td class="photo">
 
-&lt;img style="width:130px;height: 160px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" /&gt;
+<img style="width:130px;height: 160px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
 
-&lt;/td&gt;
+</td>
 
-&lt;td class="details"&gt;
+<td class="details">
 
-&lt;table class="CardTable" cellpadding="3" cellspacing="6"&gt;
+<table class="CardTable" cellpadding="3" cellspacing="6">
 
-&lt;colgroup&gt;
+<colgroup>
 
-&lt;col width="50%"&gt;
+<col width="50%">
 
-&lt;col width="50%"&gt;
+<col width="50%">
 
-&lt;/colgroup&gt;
+</colgroup>
 
-&lt;tbody&gt;
+<tbody>
 
-&lt;tr&gt;
+<tr>
 
-<td class="CardHeader">First Name: &lt;/td&gt;
+<td class="CardHeader">First Name: </td>
 
-&lt;td style="padding:20px"&gt;{{:FirstName}} &lt;/td&gt;
+<td style="padding:20px">{{:FirstName}} </td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 
 
-&lt;td class="CardHeader"&gt;
+<td class="CardHeader">
 
 Birth Date:
 
-&lt;/td&gt;
+</td>
 
-&lt;td style="padding:20px"&gt;
+<td style="padding:20px">
 
 {{:BirthDate.toLocaleDateString()}}
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 
 
-&lt;td class="CardHeader"&gt;
+<td class="CardHeader">
 
 Hire Date:
 
-&lt;/td&gt;
+</td>
 
-&lt;td style="padding:20px"&gt;
+<td style="padding:20px">
 
 {{:HireDate.toLocaleDateString()}}
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;/tbody&gt;
+</tbody>
 
-&lt;/table&gt;
+</table>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
 
 .CardHeader {
 
@@ -319,7 +319,7 @@ padding:20px;
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -387,7 +387,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Row_images/Row_img3.png) | markdownify }
+{{ '![](Row_images/Row_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -407,7 +407,7 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 @*custom style*@
 
-&lt;style&gt;
+<style>
 
 .e-grid .e-alt_row {
 
@@ -423,7 +423,7 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -479,7 +479,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Row_images/Row_img4.png) | markdownify }
+{{ '![](Row_images/Row_img4.png)' | markdownify }}
 {:.image }
 
 

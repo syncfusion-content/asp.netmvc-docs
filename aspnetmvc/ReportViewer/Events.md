@@ -67,7 +67,7 @@ Fires when the report is loaded.</td></tr>
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         function reportLoaded(senderObj) {
 
@@ -115,7 +115,7 @@ Fires when the report is loaded.</td></tr>
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 

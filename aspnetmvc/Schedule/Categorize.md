@@ -193,7 +193,7 @@ public string color { set; get; }
 
 The output of the above code is illustrated as follows.
 
-{ ![C:/Users/hariprasanths/Desktop/imagess/123/Capture1.PNG](Categorize_images/Categorize_img1.png) | markdownify }
+{{ '![C:/Users/hariprasanths/Desktop/imagess/123/Capture1.PNG](Categorize_images/Categorize_img1.png)' | markdownify }}
 {:.image }
 
 

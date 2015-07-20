@@ -21,27 +21,27 @@ The following code example explains how to get the reminder list and display it 
 
 
 
-&lt;!-- Reminder list div elements--&gt;
+<!-- Reminder list div elements-->
 
-&lt;div id="reminder" class="media" data-content=" "&gt;
+<div id="reminder" class="media" data-content=" ">
 
-&lt;a class="pull-left" href="#" style="margin-top: 9px; outline: medium none;"&gt;
+<a class="pull-left" href="#" style="margin-top: 9px; outline: medium none;">
 
-&lt;div class="reminder-icon"&gt;
+<div class="reminder-icon">
 
-&lt;/div&gt;
+</div>
 
-<span id="reminderCount" class="badge badge-success pull-right">0</span> &lt;/a&gt;
+<span id="reminderCount" class="badge badge-success pull-right">0</span> </a>
 
-&lt;/div&gt;
+</div>
 
-&lt;!-- Notification div element--&gt;
+<!-- Notification div element-->
 
-&lt;div class='notifications bottom-right'&gt;
+<div class='notifications bottom-right'>
 
-&lt;/div&gt;
+</div>
 
-&lt;div&gt;
+<div>
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -73,9 +73,9 @@ The following code example explains how to get the reminder list and display it 
 
 
 
-&lt;/div&gt;
+</div>
 
-&lt;style&gt;
+<style>
 
 #reminderCount
 
@@ -157,9 +157,9 @@ top: 25% !important;
 
 }
 
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function onCreate() {
 
@@ -231,17 +231,17 @@ $("#reminderCount").html(parseInt($("#reminderCount").text()) + 1);
 
 checkList();
 
-$_remList += "&lt;div class='outerDiv'&gt;&lt;span class='e-quicksubject'&gt;" + args.reminderAppointment.Subject +
+$_remList += "<div class='outerDiv'><span class='e-quicksubject'>" + args.reminderAppointment.Subject +
 
-"&lt;/span&gt;&lt;div class='e-quickstartendtime'&gt;" + args.reminderAppointment.StartTime +
+"</span><div class='e-quickstartendtime'>" + args.reminderAppointment.StartTime +
 
-"&lt;/div&gt;&lt;a class='close pull-right' href='#' style='margin-top: -56px;display: none;'&gt;×&lt;/a&gt;&lt;/div&gt;";
+"</div><a class='close pull-right' href='#' style='margin-top: -56px;display: none;'>×</a></div>";
 
-var notifiList = "&lt;div&gt;&lt;span class='e-quicksubject'&gt;" + args.reminderAppointment.Subject +
+var notifiList = "<div><span class='e-quicksubject'>" + args.reminderAppointment.Subject +
 
-"&lt;/span&gt;&lt;div class='e-quickstartendtime'&gt;" + args.reminderAppointment.StartTime +
+"</span><div class='e-quickstartendtime'>" + args.reminderAppointment.StartTime +
 
-"&lt;/div&gt;&lt;/div&gt;";
+"</div></div>";
 
 // Show the notification div
 
@@ -261,7 +261,7 @@ enabled: false
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -269,7 +269,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Reminder_images/Reminder_img1.png) | markdownify }
+{{ '![](Reminder_images/Reminder_img1.png)' | markdownify }}
 {:.image }
 
 

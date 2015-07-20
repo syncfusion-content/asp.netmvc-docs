@@ -11,7 +11,7 @@ documentation: ug
 
 
 
-{ ![](OLAP-Chart-Elements_images/OLAP-Chart-Elements_img1.png) | markdownify }
+{{ '![](OLAP-Chart-Elements_images/OLAP-Chart-Elements_img1.png)' | markdownify }}
 {:.image }
 
 

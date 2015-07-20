@@ -29,7 +29,7 @@ The following steps explains you to change the Range of the TimePicker.
 
 Execute the above code to render the following output.
 
-{ ![](Range_images/Range_img1.png) | markdownify }
+{{ '![](Range_images/Range_img1.png)' | markdownify }}
 {:.image }
 
 

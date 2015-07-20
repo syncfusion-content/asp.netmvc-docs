@@ -45,7 +45,7 @@ In this example, globalize.min.js file is used that includes all the cultures in
 
 [JavaScript]
 
-&lt;script&gt;
+<script>
 
        ej.FileExplorer.Locale["es-ES"] = {
 
@@ -193,12 +193,12 @@ In this example, globalize.min.js file is used that includes all the cultures in
 
     }; 
 
-&lt;/script&gt;
+</script>
 
 
 
 3. _Figure 13: Showcase of FileExplorer with Spanish culture_
-{ ![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img1.png) | markdownify }
+{{ '![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img1.png)' | markdownify }}
 {:.image }
 There is no change in the controller part, it is the same controller part used as mentioned above.
 
@@ -221,7 +221,7 @@ RTL control supports right-to-left functionality and features for languages th
 
 _Figure 14:Showcase of FileExplorer with right to left appearance_
 
-{ ![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img2.png) | markdownify }
+{{ '![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img2.png)' | markdownify }}
 {:.image }
 
 

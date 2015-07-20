@@ -27,7 +27,7 @@ The output is as follows.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -51,11 +51,11 @@ Output of NumericTextBox with EnablePersistence is as follows.
 
 
 
-1. { ![](Behavior-Settings_images/Behavior-Settings_img2.png) | markdownify }
+1. {{ '![](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img3.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -73,7 +73,7 @@ Configure Strict Mode Support
 
 Output when EnableStrictMode is “True” is as follows.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -99,11 +99,11 @@ Output when Enabled is “True” and when Enabled is “False”.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img5.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img6.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -125,7 +125,7 @@ Configure Height and Width
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img7.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -147,13 +147,13 @@ Output of Numeric textbox with IncrementStep is as follows.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img8.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img8.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img9.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -189,7 +189,7 @@ Configure Value
 
 Output of NumericTextBox with the value property is as follows.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img10.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -219,13 +219,13 @@ Output of NumericTextBox with MaxValue and MinValue is as follows.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img11.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img11.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img12.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -243,7 +243,7 @@ In the View page add NumericTextBox helper, and configure the ReadOnly property.
 
 Output of NumericTextBox when ReadOnly is “True” is as follows. NumericTextBox values cannot be edited or changed.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img13.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -288,7 +288,7 @@ Configure CSS Class
 
 
 
-    &lt;style&gt;
+    <style>
 
         .customCss .e-box {
 
@@ -310,13 +310,13 @@ Configure CSS Class
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
 Output of NumericTextBox after applying CssClass is as follows.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img14.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -336,7 +336,7 @@ Configure Rounded Corner Support
 
 Output of NumericTextBox when ShowRoundedCorner is “True”.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img15.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -358,7 +358,7 @@ In the View page add NumericTextBox helper, and configure the ShowSpinButton pro
 
 Output of NumericTextBox when ShowSpinButton is “False”.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img16.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -384,7 +384,7 @@ Output of NumericTextBox after applying WaterMarkText is as follows.
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img17.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img17.png)' | markdownify }}
 {:.image }
 
 

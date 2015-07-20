@@ -23,7 +23,7 @@ You can also use the “Create custom table” link given in the grid. This link
 
 This popup window contains options to change the width and height of cells, cells spacing, cells padding, and many more.
 
-> { ![](Insert-Table_images/Insert-Table_img1.png) | markdownify }
+> {{ '![](Insert-Table_images/Insert-Table_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -39,7 +39,7 @@ You can modify the existing information or add new information in a table by usi
 * Delete column
 * Delete table
 
-{ ![](Insert-Table_images/Insert-Table_img2.png) | markdownify }
+{{ '![](Insert-Table_images/Insert-Table_img2.png)' | markdownify }}
 {:.image }
 
 

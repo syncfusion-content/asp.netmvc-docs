@@ -11,7 +11,7 @@ documentation: ug
 
 The content in the OLAP Client control can be exported to Excel, Word and PDF documents.
 
-{ ![](Exporting_images/Exporting_img1.png) | markdownify }
+{{ '![](Exporting_images/Exporting_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -49,15 +49,15 @@ public void Export(Stream stream)
 
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientExcelMVC.png](Exporting_images/Exporting_img2.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientExcelMVC.png](Exporting_images/Exporting_img2.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientWordMVC.png](Exporting_images/Exporting_img3.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientWordMVC.png](Exporting_images/Exporting_img3.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientPdfMVC.png](Exporting_images/Exporting_img4.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientPdfMVC.png](Exporting_images/Exporting_img4.png)' | markdownify }}
 {:.image }
 
 

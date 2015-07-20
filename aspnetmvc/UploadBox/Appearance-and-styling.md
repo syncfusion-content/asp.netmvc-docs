@@ -63,7 +63,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Appearance-and-styling_images/Appearance-and-styling_img1.png) | markdownify }
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -117,7 +117,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Appearance-and-styling_images/Appearance-and-styling_img2.png) | markdownify }
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -186,7 +186,7 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
 [CSS]
 
-  &lt;style class="cssStyles"&gt;
+  <style class="cssStyles">
 
       .customcss .e-select{
 
@@ -198,7 +198,7 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -206,7 +206,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Appearance-and-styling_images/Appearance-and-styling_img3.png) | markdownify }
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img3.png)' | markdownify }}
 {:.image }
 
 

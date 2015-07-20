@@ -22,7 +22,7 @@ Important: Exporting feature is not applicable for JS as it is performed in Serv
 <table>
 <tr>
 <td>
-[Razor]@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)&lt;script type="text/javascript"&gt;$(document).ready(function () {// Function to bind the button click event$('.print').bind("click", function () {var obj = $("#Schedule1").data("ejSchedule");// need to specify the Action name as parameterobj.export("ExportToICS");});});&lt;/script&gt;</td></tr>
+[Razor]@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)<script type="text/javascript">$(document).ready(function () {// Function to bind the button click event$('.print').bind("click", function () {var obj = $("#Schedule1").data("ejSchedule");// need to specify the Action name as parameterobj.export("ExportToICS");});});</script></td></tr>
 <tr>
 <td>
 [Controller]public partial class ScheduleController : Controller{ScheduleDataDataContext db = new ScheduleDataDataContext();public ActionResult ScheduleICSExport(){var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();ViewBag.dataSource = DataSource;return View();}// Action name denoted in the scriptpublic void ExportToICS(FormCollection form){string JSONModel = Request.Form["ScheduleModel"];var model = JsonConvert.DeserializeObject<Dictionary<string, object>>(JSONModel);IEnumerable data = db.DefaultSchedules.Take(5);// method for ICS File export has been called.ScheduleExport obj = new ScheduleExport(model, data);}    }</td></tr>
@@ -31,7 +31,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Exporting_images/Exporting_img1.png) | markdownify }
+{{ '![](Exporting_images/Exporting_img1.png)' | markdownify }}
 {:.image }
 
 

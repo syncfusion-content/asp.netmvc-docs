@@ -388,9 +388,9 @@ _Table_ _2__: List of keys and string values_
 
 
 
-&lt;div id="scheduleTarget"&gt;
+<div id="scheduleTarget">
 
-&lt;ul&gt;
+<ul>
 
 <li>en-US</li>
 
@@ -398,31 +398,31 @@ _Table_ _2__: List of keys and string values_
 
 <li>fr-FR</li>
 
-&lt;/ul&gt;
+</ul>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;
+<div class="row">
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
 Select culture
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
 @Html.EJ().DropDownList("language").TargetID("scheduleTarget").Width("120px").SelectedItemIndex(2).ClientSideEvents(evt => evt.Change("onChange"))
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
 
 
 // Define the localized words for fr-FR culture as below,(Only some of the words are given below)
 
-&lt;script&gt;
+<script>
 
 ej.Schedule.Locale["fr-FR"] = {
 
@@ -582,7 +582,7 @@ $("#Schedule1").ejSchedule({ locale: args.text });
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -606,13 +606,13 @@ Important: An important note while making use of localization in the schedule co
 
 @section ScriptReferenceSection{
 
-&lt;script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"&gt;&lt;/script&gt;
+<script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
 
 
 
 //To use the fr-FR culture in the schedule control, refer the below script file
 
-&lt;script src="@Url.Content("~/Scripts/cultures/globalize.culture.fr-FR.min.js")"&gt;&lt;/script&gt;
+<script src="@Url.Content("~/Scripts/cultures/globalize.culture.fr-FR.min.js")"></script>
 
 }
 
@@ -622,7 +622,7 @@ Important: An important note while making use of localization in the schedule co
 
 
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -674,7 +674,7 @@ fields.Datasource( ViewBag.datasource)
 
 * When the rtl is set to ‘true’, the Schedule control is displayed as follows.
 
-{ ![](Localization_images/Localization_img2.png) | markdownify }
+{{ '![](Localization_images/Localization_img2.png)' | markdownify }}
 {:.image }
 
 

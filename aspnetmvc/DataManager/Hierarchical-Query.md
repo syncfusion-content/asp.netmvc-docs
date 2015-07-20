@@ -51,7 +51,7 @@ The following code example illustrates the hierarchical query and foreignkey met
 
 The result for the above code example is illustrated as follows.
 
-{ ![](Hierarchical-Query_images/Hierarchical-Query_img1.png) | markdownify }
+{{ '![](Hierarchical-Query_images/Hierarchical-Query_img1.png)' | markdownify }}
 {:.image }
 
 

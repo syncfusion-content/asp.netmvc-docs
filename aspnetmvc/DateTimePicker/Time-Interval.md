@@ -27,7 +27,7 @@ You can set time interval between two adjacent time values in the time popup man
 
 
 
-{ ![](Time-Interval_images/Time-Interval_img1.png) | markdownify }
+{{ '![](Time-Interval_images/Time-Interval_img1.png)' | markdownify }}
 {:.image }
 
 

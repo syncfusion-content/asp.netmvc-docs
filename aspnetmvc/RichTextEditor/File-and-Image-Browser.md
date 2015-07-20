@@ -11,13 +11,13 @@ documentation: ug
 
 Image Browser
 
-{ ![](File-and-Image-Browser_images/File-and-Image-Browser_img1.png) | markdownify }
+{{ '![](File-and-Image-Browser_images/File-and-Image-Browser_img1.png)' | markdownify }}
 {:.image }
 The RTE control normally allows you to insert the images based on the online URL only, optionally specifies the tooltip support.
 
 A new feature is added, in that you can include an image by browsing a list of predefined files and directories. And also supports to showcase the dynamically uploaded images in the directory. 
 
-{ ![](File-and-Image-Browser_images/File-and-Image-Browser_img2.png) | markdownify }
+{{ '![](File-and-Image-Browser_images/File-and-Image-Browser_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -129,13 +129,13 @@ This property specifies the settings for loading and saving data. This property 
 
 The following screenshot displays the output.
 
-{ ![](File-and-Image-Browser_images/File-and-Image-Browser_img3.png) | markdownify }
+{{ '![](File-and-Image-Browser_images/File-and-Image-Browser_img3.png)' | markdownify }}
 {:.image }
 
 
 File Browser
 
-{ ![](File-and-Image-Browser_images/File-and-Image-Browser_img4.png) | markdownify }
+{{ '![](File-and-Image-Browser_images/File-and-Image-Browser_img4.png)' | markdownify }}
 {:.image }
 The RTE control provides the supports file browsing that is same as image browsing, instead of image the selected file path is displayed in the RTE.
 
@@ -245,7 +245,7 @@ ajaxAction
 
 This property specifies the settings for loading and saving data. This property includes the actions such as Read, CreateFolder, Paste, Delete, Rename, GetDetails, Download and Upload.
 
-{ ![](File-and-Image-Browser_images/File-and-Image-Browser_img5.png) | markdownify }
+{{ '![](File-and-Image-Browser_images/File-and-Image-Browser_img5.png)' | markdownify }}
 {:.image }
 The following screenshot displays the output.
 

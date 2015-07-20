@@ -19,7 +19,7 @@ The following screenshot illustrates the functionality of a date picker with dat
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -32,41 +32,41 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 
 
 
-&lt;table&gt;
+<table>
 
-    &lt;tr&gt;
+    <tr>
 
         <td class="tdclass">Onward Date</td>
 
         <td class="tdclass">Return date</td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().DatePicker("startDate")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;
+            <span class="innerdp">
 
                 @Html.EJ().DatePicker("endDate")
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-&lt;/table&gt;
+</table>
 
 
 
@@ -76,7 +76,7 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .tdclass {
 
@@ -92,7 +92,7 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -100,7 +100,7 @@ By executing the above code samples, you can create two DatePicker widgets in a 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -110,41 +110,41 @@ In the real time ticket booking scenario, the booking is open for limited number
 
 
 
-  &lt;table&gt;
+  <table>
 
-      &lt;tr&gt;
+      <tr>
 
          <td class="tdclass">Onward Date</td>
 
          <td class="tdclass">Return date</td>
 
-      &lt;/tr&gt;
+      </tr>
 
-      &lt;tr&gt;
+      <tr>
 
-         &lt;td class="tdclass"&gt;
+         <td class="tdclass">
 
-             &lt;span class="innerdp"&gt;
+             <span class="innerdp">
 
                      @Html.EJ().DatePicker("startDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014")
 
-             &lt;/span&gt;
+             </span>
 
-         &lt;/td&gt;
+         </td>
 
-         &lt;td class="tdclass"&gt;
+         <td class="tdclass">
 
-             &lt;span class="innerdp"&gt;
+             <span class="innerdp">
 
                  @Html.EJ().DatePicker("endDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014")
 
-     &lt;/span&gt;
+     </span>
 
-         &lt;/td&gt;
+         </td>
 
-       &lt;/tr&gt;
+       </tr>
 
-  &lt;/table&gt;
+  </table>
 
 
 
@@ -154,7 +154,7 @@ The following screenshot shows the output of the above code example.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -166,43 +166,43 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 
 
-&lt;table&gt;
+<table>
 
-    &lt;tr&gt;
+    <tr>
 
         <td class="tdclass">Onward Date</td>
 
         <td class="tdclass">Return date</td>
 
-    &lt;/tr&gt;
+    </tr>
 
-    &lt;tr&gt;
+    <tr>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;                @Html.EJ().DatePicker("startDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(sd => sd.Select("selectedStartDate"))
+            <span class="innerdp">                @Html.EJ().DatePicker("startDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(sd => sd.Select("selectedStartDate"))
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-        &lt;td class="tdclass"&gt;
+        <td class="tdclass">
 
-            &lt;span class="innerdp"&gt;                @Html.EJ().DatePicker("endDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(ed => ed.Select("selectedEndDate"))
+            <span class="innerdp">                @Html.EJ().DatePicker("endDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(ed => ed.Select("selectedEndDate"))
 
-            &lt;/span&gt;
+            </span>
 
-        &lt;/td&gt;
+        </td>
 
-    &lt;/tr&gt;
+    </tr>
 
-&lt;/table&gt;
-
-
+</table>
 
 
 
-&lt;script type="text/javascript"&gt;
+
+
+<script type="text/javascript">
 
     function selectedStartDate(sender) {
 
@@ -224,7 +224,7 @@ You can select the “onward journey date” in the first DatePicker and then th
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -234,11 +234,11 @@ This scenario is illustrated in the following screenshot.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 By using the min/max date range property, you can select a date within a given range as follows. 
 

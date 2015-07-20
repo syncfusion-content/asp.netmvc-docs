@@ -27,7 +27,7 @@ In the View page add PercentageTextBox helper, and configure the EnableRTL prope
 
 Output of PercentageTextBox when EnableRTL is “True” is as follows. 
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

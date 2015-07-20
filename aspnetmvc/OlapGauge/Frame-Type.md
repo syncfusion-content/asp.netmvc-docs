@@ -82,7 +82,7 @@ By default, frame type is Full Circle. You can also set frame type with frameTyp
 
 
 
-{ ![](Frame-Type_images/Frame-Type_img1.png) | markdownify }
+{{ '![](Frame-Type_images/Frame-Type_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -152,7 +152,7 @@ You can set frame type as halfCircle with the help of frameType property to visu
 
 
 
-{ ![](Frame-Type_images/Frame-Type_img2.png) | markdownify }
+{{ '![](Frame-Type_images/Frame-Type_img2.png)' | markdownify }}
 {:.image }
 
 

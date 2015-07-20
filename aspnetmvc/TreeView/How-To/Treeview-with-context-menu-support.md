@@ -31,7 +31,7 @@ In the View page, add TreeView helper to configure TreeView.
 
 \\ To configure TreeView in the CSHTML page
 
-&lt;div style="width: 250px"&gt;
+<div style="width: 250px">
 
    @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -107,9 +107,9 @@ In the View page, add TreeView helper to configure TreeView.
 
 
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div&gt;
+    <div>
 
 
 
@@ -129,7 +129,7 @@ In the View page, add TreeView helper to configure TreeView.
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -137,7 +137,7 @@ Define the events in the script as follows,
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         var tabIndex = 1, treeviewObj, selectedNode;
 
@@ -191,7 +191,7 @@ Define the events in the script as follows,
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -199,7 +199,7 @@ The output for the context menu for TreeView control is as follows.
 
 
 
-{ ![](Treeview-with-context-menu-support_images/Treeview-with-context-menu-support_img1.png) | markdownify }
+{{ '![](Treeview-with-context-menu-support_images/Treeview-with-context-menu-support_img1.png)' | markdownify }}
 {:.image }
 
 

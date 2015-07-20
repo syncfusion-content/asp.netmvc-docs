@@ -32,47 +32,47 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 @*Add the following scripts in your view page for angular support*@
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/angular.min.js"&gt;&lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/angular.min.js"></script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/ej.widget.angular.min.js"&gt; &lt;/script&gt;
-
-
-
-&lt;div class="content-container-fluid" ng-app="PickerCtrl"&gt;
-
-    &lt;div class="row" style="width: 100%" ng-controller="ColorPickerCtrl"&gt;
-
-        &lt;div class="cols-sample-area" style="width: 100%"&gt;
-
-            &lt;div class="frame"&gt;
-
-                &lt;div id="control"&gt;
-
-                    &lt;div class="element" style="margin-left: 45px;"&gt;
-
-                        &lt;input id="picker" ej-colorpicker e-value="colorValue" e-modeltype="palette" /&gt;
-
-                    &lt;/div&gt;
-
-                    &lt;div class="element" style="margin-left: 234px"&gt;
-
-                        &lt;input id="custom" ej-colorpicker e-value="colorValue" e-modeltype="picker" /&gt;
-
-                    &lt;/div&gt;
-
-                    &lt;h6&gt;<span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px; margin-left: 45px;">Note:Two Way Angular Support</span>&lt;/h6&gt;
-
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-
-        &lt;/div&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/ej.widget.angular.min.js"> </script>
 
 
 
-        &lt;script&gt;
+<div class="content-container-fluid" ng-app="PickerCtrl">
+
+    <div class="row" style="width: 100%" ng-controller="ColorPickerCtrl">
+
+        <div class="cols-sample-area" style="width: 100%">
+
+            <div class="frame">
+
+                <div id="control">
+
+                    <div class="element" style="margin-left: 45px;">
+
+                        <input id="picker" ej-colorpicker e-value="colorValue" e-modeltype="palette" />
+
+                    </div>
+
+                    <div class="element" style="margin-left: 234px">
+
+                        <input id="custom" ej-colorpicker e-value="colorValue" e-modeltype="picker" />
+
+                    </div>
+
+                    <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px; margin-left: 45px;">Note:Two Way Angular Support</span></h6>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script>
 
             angular.module('PickerCtrl', ['ejangular'])
 
@@ -82,15 +82,15 @@ To know more about the Angular binding, you can refer to the online documentatio
 
               });
 
-        &lt;/script&gt;
+        </script>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
-&lt;style&gt;
+<style>
 
     .element {
 
@@ -116,7 +116,7 @@ To know more about the Angular binding, you can refer to the online documentatio
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -124,7 +124,7 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Angular-Binding_images/Angular-Binding_img1.png) | markdownify }
+{{ '![](Angular-Binding_images/Angular-Binding_img1.png)' | markdownify }}
 {:.image }
 
 

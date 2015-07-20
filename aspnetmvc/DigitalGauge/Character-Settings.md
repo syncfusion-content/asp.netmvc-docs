@@ -45,7 +45,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Character-Settings_images/Character-Settings_img1.png) | markdownify }
+{{ '![](Character-Settings_images/Character-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -108,7 +108,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Character-Settings_images/Character-Settings_img2.png) | markdownify }
+{{ '![](Character-Settings_images/Character-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -160,7 +160,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Character-Settings_images/Character-Settings_img3.png) | markdownify }
+{{ '![](Character-Settings_images/Character-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -218,7 +218,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Character-Settings_images/Character-Settings_img4.png) | markdownify }
+{{ '![](Character-Settings_images/Character-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

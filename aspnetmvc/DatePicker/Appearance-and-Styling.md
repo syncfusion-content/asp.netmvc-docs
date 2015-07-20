@@ -46,7 +46,7 @@ The following code example is used to render the DatePicker widget with customiz
 
 2.  Add the following styles to render DatePicker with customized style.
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .custom .e-header {
 
@@ -54,7 +54,7 @@ The following code example is used to render the DatePicker widget with customiz
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -62,7 +62,7 @@ The following code example is used to render the DatePicker widget with customiz
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -81,7 +81,7 @@ Keys</td><td>
 Function</td></tr>
 <tr>
 <td>
-{ [Access key](http://en.wikipedia.org/wiki/Access_key) | markdownify } + j</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
 Focuses the control</td></tr>
 <tr>
 <td>
@@ -154,7 +154,7 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 

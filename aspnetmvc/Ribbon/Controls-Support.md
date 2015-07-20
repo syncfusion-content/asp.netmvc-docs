@@ -363,7 +363,7 @@ return View();
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Controls-Support_images/Controls-Support_img1.png) | markdownify }
+{{ '![](Controls-Support_images/Controls-Support_img1.png)' | markdownify }}
 {:.image }
 
 

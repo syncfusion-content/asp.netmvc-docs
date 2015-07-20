@@ -190,7 +190,7 @@ The following screenshot shows Gantt with French culture.
 
 
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 

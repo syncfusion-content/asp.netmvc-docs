@@ -23,7 +23,7 @@ In OlapChart, you can customize the legend symbol with different shapes like rec
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/Legendshape.png](Legend_images/Legend_img1.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/Legendshape.png](Legend_images/Legend_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -35,7 +35,7 @@ You can customize the legend position in top, bottom, left and right position of
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Legend(legend =>legend.Visible(true).RowCount(3).Shape(ChartShape.Star).Position(LegendPosition.Top))
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/Legend position.png](Legend_images/Legend_img2.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/Legend position.png](Legend_images/Legend_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -51,7 +51,7 @@ You can align the legend using alignment property of legend. This allows you to 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/legendalignment.png](Legend_images/Legend_img3.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/legendalignment.png](Legend_images/Legend_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ You can draw and customize the outline of Chart legend using border property of 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/legend border.png](Legend_images/Legend_img4.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/legend border.png](Legend_images/Legend_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -91,7 +91,7 @@ Legend item is represented by an icon or image and a text. This gets rendered au
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/legenditemborder.png](Legend_images/Legend_img5.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/legenditemborder.png](Legend_images/Legend_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -107,7 +107,7 @@ You can customize the legend text - font family, font style, font weight and siz
 
 
 
-{ ![](Legend_images/Legend_img6.png) | markdownify }
+{{ '![](Legend_images/Legend_img6.png)' | markdownify }}
 {:.image }
 
 

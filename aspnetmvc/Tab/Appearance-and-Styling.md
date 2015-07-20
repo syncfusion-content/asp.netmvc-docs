@@ -23,31 +23,31 @@ The following code example is used to add the header image for the root Tab head
 
 // Add the following code example to the corresponding CSHTML page to render Tab with header image.
 
- &lt;div id="dishtab" style="width:550px"&gt;
+ <div id="dishtab" style="width:550px">
 
-    &lt;ul&gt;
+    <ul>
 
-        &lt;li&gt;&lt;span class="dish pizzaImg"&gt;&lt;/span&gt;<a href="#pizzatype">Pizza Type</a>&lt;/li&gt;
+        <li><span class="dish pizzaImg"></span><a href="#pizzatype">Pizza Type</a></li>
 
-        &lt;li&gt;&lt;span class="dish sandwichImg"&gt;&lt;/span&gt;<a href="#sandwichtype">Sandwich Type</a>&lt;/li&gt;
+        <li><span class="dish sandwichImg"></span><a href="#sandwichtype">Sandwich Type</a></li>
 
-    &lt;/ul&gt;
+    </ul>
 
-    &lt;div id="pizzatype" style="background-color: #F5F5F5"&gt;
+    <div id="pizzatype" style="background-color: #F5F5F5">
 
-        <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/p&gt;
+        <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
-    &lt;/div&gt;	
+    </div>	
 
-    &lt;div id="sandwichtype" style="background-color: #F5F5F5"&gt;        
+    <div id="sandwichtype" style="background-color: #F5F5F5">        
 
-        <p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/p&gt;
+        <p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
-    &lt;/div&gt;
+    </div>
 
     @Html.EJ().Tab("dishtab")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -57,7 +57,7 @@ The following code example is used to add the header image for the root Tab head
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         .dish {
 
@@ -93,11 +93,11 @@ The following code example is used to add the header image for the root Tab head
 
         }
 
-&lt;/style&gt; 
+</style> 
 
 3. The following screenshot illustrates the Tab with the customized header image. 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -119,7 +119,7 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
 
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -127,17 +127,17 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).ShowRoundedCorner(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -145,7 +145,7 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
 2. The following screenshot illustrates the Tab with Rounded corner.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -167,7 +167,7 @@ The following code example is used to render the Tab widget with enable/disable.
 
 
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -175,17 +175,17 @@ The following code example is used to render the Tab widget with enable/disable.
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).Enabled(false).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -193,7 +193,7 @@ The following code example is used to render the Tab widget with enable/disable.
 
 2. The following screenshot illustrates the Tab with disabled format.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -215,7 +215,7 @@ The following code example is used to render the Tab widget with Reload icon.
 
 
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -223,23 +223,23 @@ The following code example is used to render the Tab widget with Reload icon.
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).ShowReloadIcon(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
 2. The following screenshot illustrates the Tab with Reload icon.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -261,7 +261,7 @@ The following code example is used to render the Tab widget with customized coll
 
 // Add the following code example to the corresponding CSHTML page to render Tab with collapsible mode.
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -269,17 +269,17 @@ The following code example is used to render the Tab widget with customized coll
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).Collapsible(true).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -287,7 +287,7 @@ The following code example is used to render the Tab widget with customized coll
 
 2. The following screenshot illustrates the Tab with customized collapsible mode.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -311,7 +311,7 @@ The following code example is used to render the Tab widget with customized heig
 
 
 
-&lt;div style="width: 550px"&gt;
+<div style="width: 550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -319,17 +319,17 @@ The following code example is used to render the Tab widget with customized heig
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
               data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).HeightAdjustMode(HeightAdjustMode.Fill).Height("300px").Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -337,7 +337,7 @@ The following code example is used to render the Tab widget with customized heig
 
 2. The following screenshot illustrates the Tab with customized height and height adjust mode.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -361,7 +361,7 @@ The following code example is used to render the Tab widget with customized widt
 
 
 
-&lt;div&gt;
+<div>
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -369,17 +369,17 @@ The following code example is used to render the Tab widget with customized widt
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).Width("450").Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -387,7 +387,7 @@ The following code example is used to render the Tab widget with customized widt
 
 2. The following screenshot illustrates the Tab with customized width.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -429,7 +429,7 @@ The following code example is used to render the Tab widget with customized styl
 
 
 
-&lt;div&gt;
+<div>
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -437,17 +437,17 @@ The following code example is used to render the Tab widget with customized styl
 
                data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.&lt;/div&gt;);
+                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
                    .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).CssClass("custom").Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -459,7 +459,7 @@ The following code example is used to render the Tab widget with customized styl
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
         .custom {
 
@@ -467,11 +467,11 @@ The following code example is used to render the Tab widget with customized styl
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 3. The following screenshot illustrates the Tab with customized style.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
 {:.image }
 
 

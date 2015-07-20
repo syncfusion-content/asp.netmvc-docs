@@ -14,7 +14,7 @@ documentation: ug
 In this section, you can learn how to create a simple navigation drawer.
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -174,13 +174,13 @@ Set the TargetId property as follows.
 
 Run the application to render the following output. 
 
-.{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+.{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
 You can display the drawer either by clicking on the target icon or by swiping from left on the page. Refer to the following screenshot.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -269,7 +269,7 @@ You can define the image classes specified for the list items as follows.
 
 Run the application to render the following output. 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -379,7 +379,7 @@ function slideMenuClick(e) {
 
 Run the application to render the following output. 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

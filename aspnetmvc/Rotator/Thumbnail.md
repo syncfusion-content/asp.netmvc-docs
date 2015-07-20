@@ -21,73 +21,73 @@ You can refer the following code example of Thumbnail in Rotator.
 
 [CSHTML]
 
-&lt;ul id="slide" style="display: none"&gt;
+<ul id="slide" style="display: none">
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/green.jpg")" title="Green" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/green.jpg")" title="Green" /></li>
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/snow.jpg")" title="Snow" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/snow.jpg")" title="Snow" /></li>
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/wheat.jpg")" title="Wheat" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/wheat.jpg")" title="Wheat" /></li>
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/tablet.jpg")" title="Tablet" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/tablet.jpg")" title="Tablet" /></li>
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/sea.jpg")" title="Sea" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/sea.jpg")" title="Sea" /></li>
 
-    &lt;li&gt;
+    <li>
 
-        &lt;img src="@Url.Content("~/Images/rotator/bread.jpg")" title="Bread" /&gt;&lt;/li&gt;
+        <img src="@Url.Content("~/Images/rotator/bread.jpg")" title="Bread" /></li>
 
-&lt;/ul&gt;
+</ul>
 
 @Html.EJ().Rotator("slidercontent").Items(itemElement =>
 
                        {
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" /&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" />
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" /&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" />
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" /&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" />
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" /&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" />
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" /&gt;
+                               <img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" />
 
-                           &lt;/div&gt;);
+                           </div>);
 
                        }).SlideWidth("600px").SlideHeight("350px").ShowThumbnail(true).ThumbnailSourceID("slide")          
 
@@ -95,7 +95,7 @@ You can refer the following code example of Thumbnail in Rotator.
 
 
 
-{ ![](Thumbnail_images/Thumbnail_img1.png) | markdownify }
+{{ '![](Thumbnail_images/Thumbnail_img1.png)' | markdownify }}
 {:.image }
 
 

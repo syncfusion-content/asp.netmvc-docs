@@ -90,7 +90,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Filtering_images/Filtering_img1.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -195,7 +195,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Filtering_images/Filtering_img2.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -209,7 +209,7 @@ The filter menu contains options such as Sorting, Clear filter, submenu for the 
 
 The Checkbox list is available in the menu that contains the possible filter value for the column. It shows the list of possible filter values with the checkbox. The filter value can be selected by clicking the checkbox corresponding to that value. By clicking the Ok button, the column is filtered based on the values checked in the checkbox list. The SelectAll checkbox is also present in the checkbox list that allows either select or deselect all the checkboxes.
 
-{ ![](Filtering_images/Filtering_img3.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -221,11 +221,11 @@ The Submenu items in the filter menu provide the advanced filtering options for 
 
 
 
-{ ![](Filtering_images/Filtering_img4.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img4.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Filtering_images/Filtering_img5.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -375,19 +375,19 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 [razor]
 
-&lt;div&gt;
+<div>
 
-    &lt;div class="row"&gt;
+    <div class="row">
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
             Columns
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
-            &lt;select id="columns"&gt;
+            <select id="columns">
 
                 <option value="OrderID">Order ID</option>
 
@@ -399,25 +399,25 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
                 <option value="Verified">Verified</option>
 
-            &lt;/select&gt;
+            </select>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div class="row"&gt;
+    <div class="row">
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
             Operator
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
-            &lt;select id="operator"&gt;
+            <select id="operator">
 
                 <option value="contains">Contains</option>
 
@@ -437,45 +437,45 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
                 <option value="startswith">StartsWith</option>
 
-            &lt;/select&gt;
+            </select>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div class="row"&gt;
+    <div class="row">
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
             Value
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="col-md-1"&gt;
+        <div class="col-md-1">
 
-            &lt;input type="text" class="e-ejinputtext" id="value" style="width: 143px;height:26px" /&gt;
+            <input type="text" class="e-ejinputtext" id="value" style="width: 143px;height:26px" />
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div class="row"&gt;
+    <div class="row">
 
-        &lt;div class="col-md-2"&gt;
+        <div class="col-md-2">
 
-            &lt;input type="button" id="filter" value="filter" /&gt;
+            <input type="button" id="filter" value="filter" />
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -507,7 +507,7 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 [javascript]
 
-&lt;script&gt;
+<script>
 
     $("#filter").ejButton({
 
@@ -521,7 +521,7 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 
 
-&lt;/script&gt;
+</script>
 
 [controller]
 
@@ -565,7 +565,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Filtering_images/Filtering_img6.png) | markdownify }
+{{ '![](Filtering_images/Filtering_img6.png)' | markdownify }}
 {:.image }
 
 

@@ -94,7 +94,7 @@ In the View page, add Toolbar helper to configure Toolbar.
 <table>
 <tr>
 <td>
-[Model]// Add the following data list to be bind in the controller page and define the corresponding data.// Define local data source elements with  fields          public class ToolbarLocalBinding        {            public string IconId { get; set; }            public string SpriteCss { get; set; }            public string Tooltip { get; set; }        }[Controller]//Refer the Model in the controllerusing &lt;Applicationname&gt;.Models;public ActionResult Index()        {            List<ToolbarLocalBinding> toolslist = new List<ToolbarLocalBinding>();            toolslist.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });            toolslist.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "centre" });            toolslist.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });            toolslist.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });            toolslist.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });            toolslist.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" });            toolslist.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });            toolslist.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" });            ViewBag.datasource = toolslist;            return View();        }[View] &lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Orientation.Horizontal)&lt;/div&gt;</td></tr>
+[Model]// Add the following data list to be bind in the controller page and define the corresponding data.// Define local data source elements with  fields          public class ToolbarLocalBinding        {            public string IconId { get; set; }            public string SpriteCss { get; set; }            public string Tooltip { get; set; }        }[Controller]//Refer the Model in the controllerusing <Applicationname>.Models;public ActionResult Index()        {            List<ToolbarLocalBinding> toolslist = new List<ToolbarLocalBinding>();            toolslist.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });            toolslist.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "centre" });            toolslist.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });            toolslist.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });            toolslist.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });            toolslist.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" });            toolslist.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });            toolslist.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" });            ViewBag.datasource = toolslist;            return View();        }[View] <div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Orientation.Horizontal)</div></td></tr>
 <tr>
 <td>
 </td></tr>
@@ -105,7 +105,7 @@ In the View page, add Toolbar helper to configure Toolbar.
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     .darktheme .cols-sample-area .e-tooltxt .ToolbarItems {
 
@@ -207,11 +207,11 @@ In the View page, add Toolbar helper to configure Toolbar.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -235,7 +235,7 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -29,9 +29,9 @@ The following code explain you the configuration of the AllowMultiSelection for 
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").AllowMultiSelection(true).ShowCheckbox(true).Width("200px")
 
-&lt;div id="list"&gt;
+<div id="list">
 
-    &lt;ul&gt;
+    <ul>
 
         <li>Art</li>
 
@@ -45,16 +45,16 @@ The following code explain you the configuration of the AllowMultiSelection for 
 
         <li>Science</li>
 
-    &lt;/ul&gt;
+    </ul>
 
-&lt;/div&gt;
+</div>
 
 
 
 Output for Dropdown control that provides multiple selection is as follows.
 
 
-{ ![](MultiSelection-modes_images/MultiSelection-modes_img1.png) | markdownify }
+{{ '![](MultiSelection-modes_images/MultiSelection-modes_img1.png)' | markdownify }}
 {:.image }
 
 

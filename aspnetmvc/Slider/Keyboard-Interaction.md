@@ -67,7 +67,7 @@ The following steps explains you on how to enable keyboard support in Slider.
 
 
 
-  &lt;script&gt;
+  <script>
 
         $(document).on("keydown", function (e) {
 
@@ -79,7 +79,7 @@ The following steps explains you on how to enable keyboard support in Slider.
 
             });
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -87,7 +87,7 @@ Run the sample and press, Alt + j keys to set focus in the Slider handle and you
 
 When clicked the Alt + J key, the slider was focused.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slikey.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slikey.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 

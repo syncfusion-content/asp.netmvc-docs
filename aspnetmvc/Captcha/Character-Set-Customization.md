@@ -23,7 +23,7 @@ The following code example is used to render the Captcha with customized charact
 
 2. The following screenshot illustrates the Captcha with customized character set. 
 
-{ ![](Character-Set-Customization_images/Character-Set-Customization_img1.png) | markdownify }
+{{ '![](Character-Set-Customization_images/Character-Set-Customization_img1.png)' | markdownify }}
 {:.image }
 
 

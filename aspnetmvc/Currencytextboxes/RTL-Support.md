@@ -31,7 +31,7 @@ Output of CurrencyTextBox when EnableRTL is “True” is as follows.
 
 
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

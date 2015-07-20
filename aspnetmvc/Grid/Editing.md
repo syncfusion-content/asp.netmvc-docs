@@ -111,7 +111,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img1.png) | markdownify }
+{{ '![](Editing_images/Editing_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -222,7 +222,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img2.png) | markdownify }
+{{ '![](Editing_images/Editing_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -230,7 +230,7 @@ The following output is displayed as a result of the above code example.
 
 By default, the datasource for Dropdown Edit Column is set by Grid Control from its datasource. You can also bind external datasource to the Dropdown control of corresponding column in edit mode by using “DataSource” Grid Column property.
 
-> { ![C:/Users/ApoorvahR/Desktop/Note.png](Editing_images/Editing_img3.png) | markdownify }
+> {{ '![C:/Users/ApoorvahR/Desktop/Note.png](Editing_images/Editing_img3.png)' | markdownify }}
 {:.image }
 _Note: The external datasource must be given in a structure that it should contain properties “text” and_  
 _“value” which holds the data_
@@ -318,7 +318,7 @@ ViewBag.dataSource2 = data;
 
 
 
-{ ![](Editing_images/Editing_img4.png) | markdownify }
+{{ '![](Editing_images/Editing_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -388,11 +388,11 @@ The following code example is for Edit Template.
 
     )
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
         function create() {
 
-            return $("&lt;input&gt;");
+            return $("<input>");
 
         }
 
@@ -412,7 +412,7 @@ The following code example is for Edit Template.
 
         }
 
-    &lt;/script&gt;
+    </script>
 
  [Controller]
 
@@ -450,7 +450,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 
-{ ![](Editing_images/Editing_img5.png) | markdownify }
+{{ '![](Editing_images/Editing_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -569,7 +569,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img6.png) | markdownify }
+{{ '![](Editing_images/Editing_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -669,7 +669,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img7.png) | markdownify }
+{{ '![](Editing_images/Editing_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -775,7 +775,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img8.png) | markdownify }
+{{ '![](Editing_images/Editing_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -887,7 +887,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img9.png) | markdownify }
+{{ '![](Editing_images/Editing_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -909,63 +909,63 @@ In Inline Template, you can specify the template inside the script tag and selec
 
 [Script]
 
-&lt;script id="template" type="text/template"&gt;
+<script id="template" type="text/template">
 
-        &lt;table cellspacing="10"&gt;
+        <table cellspacing="10">
 
-            &lt;tr&gt;
+            <tr>
 
                 <td style="text-align: right;">Order ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" /&gt;
+                    <input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" />
 
-                &lt;/td&gt;
+                </td>
 
                 <td style="text-align: right;">Customer ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" /&gt;
+                    <input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" />
 
-                &lt;/td&gt;
+                </td>
 
-            &lt;/tr&gt;
+            </tr>
 
-            &lt;tr&gt;
+            <tr>
 
                 <td style="text-align: right;">Employee ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" /&gt;
+                    <input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" />
 
-                &lt;/td&gt;
+                </td>
 
                 <td style="text-align: right;">Ship City
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" /&gt;
+                    <input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
 
-                &lt;/td&gt;
+                </td>
 
 
 
-            &lt;/tr&gt;
+            </tr>
 
-        &lt;/table&gt;
+        </table>
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -1067,7 +1067,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img10.png) | markdownify }
+{{ '![](Editing_images/Editing_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -1101,7 +1101,7 @@ Through the ActionCompleteGrid event, you can achieve this.
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         function complete(args) {
 
@@ -1113,7 +1113,7 @@ Through the ActionCompleteGrid event, you can achieve this.
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -1157,63 +1157,63 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
 [Script]
 
-&lt;script id="template" type="text/template"&gt;
+<script id="template" type="text/template">
 
-        &lt;table cellspacing="10"&gt;
+        <table cellspacing="10">
 
-            &lt;tr&gt;
+            <tr>
 
                 <td style="text-align: right;">Order ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" /&gt;
+                    <input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" />
 
-                &lt;/td&gt;
+                </td>
 
                 <td style="text-align: right;">Customer ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" /&gt;
+                    <input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" />
 
-                &lt;/td&gt;
+                </td>
 
-            &lt;/tr&gt;
+            </tr>
 
-            &lt;tr&gt;
+            <tr>
 
                 <td style="text-align: right;">Employee ID
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" /&gt;
+                    <input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" />
 
-                &lt;/td&gt;
+                </td>
 
                 <td style="text-align: right;">Ship City
 
-                &lt;/td&gt;
+                </td>
 
-                &lt;td style="text-align: left"&gt;
+                <td style="text-align: left">
 
-                    &lt;input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" /&gt;
+                    <input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
 
-                &lt;/td&gt;
+                </td>
 
 
 
-            &lt;/tr&gt;
+            </tr>
 
-        &lt;/table&gt;
+        </table>
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -1279,7 +1279,7 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         function complete(args) {
 
@@ -1291,7 +1291,7 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -1331,7 +1331,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img11.png) | markdownify }
+{{ '![](Editing_images/Editing_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -1363,7 +1363,7 @@ The following screenshot shows External Template Form Editing.
 
 
 
-{ ![](Editing_images/Editing_img12.png) | markdownify }
+{{ '![](Editing_images/Editing_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -1397,7 +1397,7 @@ The following screenshot shows Dialog Template Form Editing.
 
 
 
-{ ![](Editing_images/Editing_img13.png) | markdownify }
+{{ '![](Editing_images/Editing_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -1502,7 +1502,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img14.png) | markdownify }
+{{ '![](Editing_images/Editing_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -1512,7 +1512,7 @@ The following screenshot shows the Confirmation Dialog box.
 
 
 
-{ ![](Editing_images/Editing_img15.png) | markdownify }
+{{ '![](Editing_images/Editing_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -1701,7 +1701,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img16.png) | markdownify }
+{{ '![](Editing_images/Editing_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -1799,7 +1799,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     $(function () {
 
@@ -1823,7 +1823,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
     });
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -1833,7 +1833,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Editing_images/Editing_img17.png) | markdownify }
+{{ '![](Editing_images/Editing_img17.png)' | markdownify }}
 {:.image }
 
 
@@ -1917,7 +1917,7 @@ The output for the Server Binding of records is as follows:
 
 
 
-{ ![](Editing_images/Editing_img18.png) | markdownify }
+{{ '![](Editing_images/Editing_img18.png)' | markdownify }}
 {:.image }
 
 
@@ -1925,11 +1925,11 @@ _Figure_ _63__: Edit_
 
 
 
-{ ![](Editing_images/Editing_img19.png) | markdownify }
+{{ '![](Editing_images/Editing_img19.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Editing_images/Editing_img20.png) | markdownify }
+{{ '![](Editing_images/Editing_img20.png)' | markdownify }}
 {:.image }
 
 
@@ -1947,7 +1947,7 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 
 
-{ ![](Editing_images/Editing_img21.png) | markdownify }
+{{ '![](Editing_images/Editing_img21.png)' | markdownify }}
 {:.image }
 
 
@@ -1960,7 +1960,7 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 
 
-{ ![](Editing_images/Editing_img22.png) | markdownify }
+{{ '![](Editing_images/Editing_img22.png)' | markdownify }}
 {:.image }
 
 
@@ -1969,7 +1969,7 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 
 
-{ ![](Editing_images/Editing_img23.png) | markdownify }
+{{ '![](Editing_images/Editing_img23.png)' | markdownify }}
 {:.image }
 
 
@@ -1977,7 +1977,7 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 
 
-{ ![](Editing_images/Editing_img24.png) | markdownify }
+{{ '![](Editing_images/Editing_img24.png)' | markdownify }}
 {:.image }
 
 
@@ -1985,7 +1985,7 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 
 
-{ ![](Editing_images/Editing_img25.png) | markdownify }
+{{ '![](Editing_images/Editing_img25.png)' | markdownify }}
 {:.image }
 
 
@@ -1993,7 +1993,7 @@ When you are finished, you can see the following image.
 
 
 
-{ ![](Editing_images/Editing_img26.png) | markdownify }
+{{ '![](Editing_images/Editing_img26.png)' | markdownify }}
 {:.image }
 
 
@@ -2002,7 +2002,7 @@ When you are finished, you can see the following image.
 
 
 
-{ ![](Editing_images/Editing_img27.png) | markdownify }
+{{ '![](Editing_images/Editing_img27.png)' | markdownify }}
 {:.image }
 
 
@@ -2122,7 +2122,7 @@ The output for the above Grid creation with editing options code example is as f
 
 
 
-{ ![](Editing_images/Editing_img28.png) | markdownify }
+{{ '![](Editing_images/Editing_img28.png)' | markdownify }}
 {:.image }
 
 
@@ -2203,7 +2203,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Editing_images/Editing_img29.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Editing_images/Editing_img29.png)' | markdownify }}
 {:.image }
 
 
@@ -2309,7 +2309,7 @@ namespace MvcApplication2.Controllers
 
 The following screenshot is the output of the above code example.
 
-{ ![](Editing_images/Editing_img30.png) | markdownify }
+{{ '![](Editing_images/Editing_img30.png)' | markdownify }}
 {:.image }
 
 

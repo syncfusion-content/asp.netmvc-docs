@@ -21,7 +21,7 @@ The following code illustrates how to connect to an offline cube:
 
 [C#]
 
-string connectionString = @"DataSource= C:\Users\&lt;UserName&gt;\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
+string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
@@ -33,7 +33,7 @@ The following code illustrates how to connect to a Cube available in local SQL S
 
 [C#]
 
-string connectionString = @"DataSource= C:\Users\&lt;UserName&gt;\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
+string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 

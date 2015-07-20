@@ -80,7 +80,7 @@ The output of the above code looks as follows.
 
 
 
-{ ![](Resources_images/Resources_img1.png) | markdownify }
+{{ '![](Resources_images/Resources_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -296,7 +296,7 @@ gr.Resources(ViewBag.Resources);
 
 * Execute the above code to render the output as follows.
 
-{ ![](Resources_images/Resources_img2.png) | markdownify }
+{{ '![](Resources_images/Resources_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -329,7 +329,7 @@ Multiple Appointment Creation
 
 
 
-{ ![](Resources_images/Resources_img3.png) | markdownify }
+{{ '![](Resources_images/Resources_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -340,7 +340,7 @@ Multiple Appointment Creation
 
 
 
-{ ![](Resources_images/Resources_img4.png) | markdownify }
+{{ '![](Resources_images/Resources_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -350,7 +350,7 @@ _Figure_ _90__:  schedule with multiple appointment window._
 
 
 
-{ ![](Resources_images/Resources_img5.png) | markdownify }
+{{ '![](Resources_images/Resources_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -360,7 +360,7 @@ _Figure_ _91__:  schedule with multiple appointment window with different type o
 
 
 
-{ ![](Resources_images/Resources_img6.png) | markdownify }
+{{ '![](Resources_images/Resources_img6.png)' | markdownify }}
 {:.image }
 
 

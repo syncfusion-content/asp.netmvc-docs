@@ -22,7 +22,7 @@ Key Features
 
 Control Structure
 
-{ ![C:/Users/labuser/Desktop/a.png](Overview_images/Overview_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 

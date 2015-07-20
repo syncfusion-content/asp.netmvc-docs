@@ -53,7 +53,7 @@ The select query of the DataManager is used to select only some particular field
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Query_images/Query_img1.png) | markdownify }
+{{ '![](Query_images/Query_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -97,7 +97,7 @@ The from query of the DataManager is used to select the table from where the dat
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Query_images/Query_img2.png) | markdownify }
+{{ '![](Query_images/Query_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -135,7 +135,7 @@ The clone query of the DataManager is used to duplicate the query. The following
 
 )
 
-&lt;script type="text/javascript" class="jsScript"&gt;
+<script type="text/javascript" class="jsScript">
 
         var flag = true;
 
@@ -161,13 +161,13 @@ The clone query of the DataManager is used to duplicate the query. The following
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Query_images/Query_img3.png) | markdownify }
+{{ '![](Query_images/Query_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -209,7 +209,7 @@ The expand query of the DataManager is used to perform complex data binding.
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Query_images/Query_img4.png) | markdownify }
+{{ '![](Query_images/Query_img4.png)' | markdownify }}
 {:.image }
 
 

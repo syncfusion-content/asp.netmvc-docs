@@ -28,9 +28,9 @@ By default the Orientation property sets the Toolbar in horizontal orientation. 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -40,7 +40,7 @@ The following screenshot illustrates a Toolbar with horizontal orientation.
 
 
 
-{ ![](Orientation_images/Orientation_img1.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -62,9 +62,9 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -72,7 +72,7 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 
 The following screenshot illustrates a Toolbar with vertical orientation.
 
-{ ![](Orientation_images/Orientation_img2.png) | markdownify }
+{{ '![](Orientation_images/Orientation_img2.png)' | markdownify }}
 {:.image }
 
 

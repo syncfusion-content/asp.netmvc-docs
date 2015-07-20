@@ -23,7 +23,7 @@ Field List (also known as Pivot Schema Designer) is powerful tool that allows yo
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 
 
@@ -49,13 +49,13 @@ Field List (also known as Pivot Schema Designer) is powerful tool that allows yo
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 
 
 
-{ ![](Field-List_images/Field-List_img1.png) | markdownify }
+{{ '![](Field-List_images/Field-List_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -65,7 +65,7 @@ Drag and Drop
 
 You can change the report on the fly through simple drag-and-drop operation. You can drag from the filed list and drop them either into the column, row, value or filter section available at the bottom of the Field list. 
 
-{ ![](Field-List_images/Field-List_img2.png) | markdownify }
+{{ '![](Field-List_images/Field-List_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -73,7 +73,7 @@ Check and Uncheck
 
 You can alter the report on the fly through check and uncheck option (as an alternate). By default, fields are added to the row label when checked.
 
-{ ![](Field-List_images/Field-List_img3.png) | markdownify }
+{{ '![](Field-List_images/Field-List_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -81,13 +81,13 @@ Filtering
 
 Filter pop-up window can be launched by clicking on the expander icon available at the right-hand corner of each field item. Values can be filtered by checking/unchecking the check box besides them in the filter pop-up window. As a result of the filtering operation, PivotGrid is refresh showing the updated values. 
 
-{ ![](Field-List_images/Field-List_img4.png) | markdownify }
+{{ '![](Field-List_images/Field-List_img4.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Field-List_images/Field-List_img5.png) | markdownify }
+{{ '![](Field-List_images/Field-List_img5.png)' | markdownify }}
 {:.image }
 
 

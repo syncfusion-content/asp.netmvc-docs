@@ -75,7 +75,7 @@ You can hide the Indicator by changing the “showIndicator” property to “fa
 
 
 
-{ ![](Indicators_images/Indicators_img1.png) | markdownify }
+{{ '![](Indicators_images/Indicators_img1.png)' | markdownify }}
 {:.image }
 
 

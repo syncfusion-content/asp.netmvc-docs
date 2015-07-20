@@ -35,7 +35,7 @@ The following steps explain the configuration of SaveUrl property in the UploadB
 
 
 
-{ ![](File-Actions_images/File-Actions_img1.png) | markdownify }
+{{ '![](File-Actions_images/File-Actions_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -63,7 +63,7 @@ The following steps explain the configuration of RemoveUrl property in UploadBox
 
 The following screenshot displays the output. 
 
-{ ![](File-Actions_images/File-Actions_img2.png) | markdownify }
+{{ '![](File-Actions_images/File-Actions_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -93,7 +93,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](File-Actions_images/File-Actions_img3.png) | markdownify }
+{{ '![](File-Actions_images/File-Actions_img3.png)' | markdownify }}
 {:.image }
 
 

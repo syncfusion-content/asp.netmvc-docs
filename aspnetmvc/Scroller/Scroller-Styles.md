@@ -41,19 +41,19 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 [CSHTML]
 
-// In the CSHTML page, add a &lt;div&gt; element to configure Scroller widget and initialize the control.
+// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
 
 
-&lt;div id="scrollcontent"&gt;
+<div id="scrollcontent">
 
-  &lt;div&gt;                              @*Wrapper div for Scroller.*@
+  <div>                              @*Wrapper div for Scroller.*@
 
-     &lt;div id="innercontent"&gt;         @*Content div*@
+     <div id="innercontent">         @*Content div*@
 
-        <h3>MVC &lt;/h3&gt;
+        <h3>MVC </h3>
 
-         &lt;p&gt;
+         <p>
 
            Model–view–controller (MVC) is a software architecture pattern which   
 
@@ -65,13 +65,13 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
            or a diagram.
 
-         &lt;/p&gt;
+         </p>
 
-    &lt;/div&gt;
+    </div>
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -88,7 +88,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
 
 
@@ -110,13 +110,13 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screenshot displays the Scroller control with basic styles
 
-{ ![C:/Users/labuser/Desktop/scroller.png](Scroller-Styles_images/Scroller-Styles_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/scroller.png](Scroller-Styles_images/Scroller-Styles_img1.png)' | markdownify }}
 {:.image }
 
 

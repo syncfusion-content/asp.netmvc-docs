@@ -55,7 +55,7 @@ The UrlTemplate property determines the format of tile map. You can specify the 
 
 
 
-{ ![](Map-Providers_images/Map-Providers_img1.png) | markdownify }
+{{ '![](Map-Providers_images/Map-Providers_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -101,7 +101,7 @@ The bing Map Key is provided as input to this key property. The Bing Map key can
 
 
 
-{ ![F:/trunk/Build/Platforms/Images/javascript/maps/bing.png](Map-Providers_images/Map-Providers_img2.png) | markdownify }
+{{ '![F:/trunk/Build/Platforms/Images/javascript/maps/bing.png](Map-Providers_images/Map-Providers_img2.png)' | markdownify }}
 {:.image }
 
 

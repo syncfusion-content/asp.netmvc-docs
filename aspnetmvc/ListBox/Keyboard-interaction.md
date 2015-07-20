@@ -20,7 +20,7 @@ Shortcut Key</td><td>
 Description</td></tr>
 <tr>
 <td>
-{ [Access key](http://en.wikipedia.org/wiki/Access_key) | markdownify } + j	</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
 Focuses into the ListBox text box</td></tr>
 <tr>
 <td>
@@ -64,10 +64,10 @@ The following steps explains you to enable keyboard interaction for a ListBox.
 <table>
 <tr>
 <td>
-[View]// Add the following code in View page to configure ListBox widget&lt;div id="control"&gt;    &lt;h5 class="ctrllabel"&gt;        Select a skill    &lt;/h5&gt;  @Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text"))&lt;/div&gt;</td></tr>
+[View]// Add the following code in View page to configure ListBox widget<div id="control">    <h5 class="ctrllabel">        Select a skill    </h5>  @Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text"))</div></td></tr>
 <tr>
 <td>
-<br>[JavaScript]// Render ListBox control&lt;script type="text/javascript"&gt;    $(document).on("keydown", function (e) {        if (e.altKey && e.keyCode === 74) { // j- key code.            var target = $('#listboxsample').data("ejListBox");            target.selectItemByIndex(1);            $("#listboxsample_container").focus();        }    });&lt;/script&gt;</td></tr>
+<br>[JavaScript]// Render ListBox control<script type="text/javascript">    $(document).on("keydown", function (e) {        if (e.altKey && e.keyCode === 74) { // j- key code.            var target = $('#listboxsample').data("ejListBox");            target.selectItemByIndex(1);            $("#listboxsample_container").focus();        }    });</script></td></tr>
 </table>
 
 
@@ -76,7 +76,7 @@ The following steps explains you to enable keyboard interaction for a ListBox.
 2. Run the sample, press Alt + J to focus in the ListBox widget that enables it and you can navigate using arrow keys.
 
 
-{ ![](Keyboard-interaction_images/Keyboard-interaction_img1.png) | markdownify }
+{{ '![](Keyboard-interaction_images/Keyboard-interaction_img1.png)' | markdownify }}
 {:.image }
 
 

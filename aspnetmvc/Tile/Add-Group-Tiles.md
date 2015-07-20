@@ -35,31 +35,31 @@ To render group tile, refer to the following code example.
 
 
 
-&lt;div class="group"&gt;
+<div class="group">
 
-    &lt;div class="column"&gt;
+    <div class="column">
 
-           &lt;!— Add tile control here --&gt;
+           <!— Add tile control here -->
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
-
-
+</div>
 
 
 
-To render column grouped tile, you need to render the number of tiles inside a &lt;div&gt; element with class ‘column’. Then that column group element is appended to a &lt;div&gt; with class ‘group’.     
 
-To render small-col-2 grouped tile, you need to render the number of tiles inside a &lt;div&gt; element with class ‘small-col-2’. Then that small-col-2 group element is appended to a &lt;div&gt; with class ‘column’. Then you need to append those column inside the main group &lt;div&gt; element.                                                     
+
+To render column grouped tile, you need to render the number of tiles inside a <div> element with class ‘column’. Then that column group element is appended to a <div> with class ‘group’.     
+
+To render small-col-2 grouped tile, you need to render the number of tiles inside a <div> element with class ‘small-col-2’. Then that small-col-2 group element is appended to a <div> with class ‘column’. Then you need to append those column inside the main group <div> element.                                                     
 
  Refer the following code examples.
 
 
 
-&lt;div class="group"&gt;
+<div class="group">
 
-            &lt;div class="column"&gt;
+            <div class="column">
 
 @Html.EJ().Tile("tile1").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/alerts.png").Text("Alert").TileSize(TileSize.Medium)
 
@@ -71,9 +71,9 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
 @Html.EJ().Tile("tile5").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/games.png").Text("Games").TileSize(TileSize.Wide)
 
-            &lt;/div&gt;
+            </div>
 
-            &lt;div class="column"&gt;
+            <div class="column">
 
 @Html.EJ().Tile("tile6").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/map.png").Text("Map").TileSize(TileSize.Medium)
 
@@ -87,15 +87,15 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
 @Html.EJ().Tile("tile11").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/music.png").Text("Music").TileSize(TileSize.Medium)
 
-            &lt;/div&gt;
+            </div>
 
-&lt;/div&gt;
-
-
+</div>
 
 
 
-{ ![](Add-Group-Tiles_images/Add-Group-Tiles_img1.png) | markdownify }
+
+
+{{ '![](Add-Group-Tiles_images/Add-Group-Tiles_img1.png)' | markdownify }}
 {:.image }
 
 

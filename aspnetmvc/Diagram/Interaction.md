@@ -114,7 +114,7 @@ diagram.addSelection(node);
 
 
 
-{ ![](Interaction_images/Interaction_img1.png) | markdownify }
+{{ '![](Interaction_images/Interaction_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -128,7 +128,7 @@ Rubber band selection is done by clicking and dragging mouse pointer on the Diag
 
 
 
-{ ![](Interaction_images/Interaction_img2.png) | markdownify }
+{{ '![](Interaction_images/Interaction_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -326,7 +326,7 @@ $(“#Diagram”).ejDiagram({ userHandles: userHandles });
 
 
 
-{ ![](Interaction_images/Interaction_img3.png) | markdownify }
+{{ '![](Interaction_images/Interaction_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -541,7 +541,7 @@ The snap-to-object feature provides visual cues to assist with aligning and spac
 
 
 
-{ ![](Interaction_images/Interaction_img4.png) | markdownify }
+{{ '![](Interaction_images/Interaction_img4.png)' | markdownify }}
 {:.image }
 
 

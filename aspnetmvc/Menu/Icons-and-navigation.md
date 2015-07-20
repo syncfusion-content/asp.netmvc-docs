@@ -37,7 +37,7 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 
 
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
         #menujson {
 
@@ -99,13 +99,13 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 
         .mail-es { background-position: -1157px -43px    }
 
-    &lt;/style&gt;
+    </style>
 
 
 
 The following screenshot displays the output for the above code.                                                                                                       
 
-{ ![](Icons-and-navigation_images/Icons-and-navigation_img1.png) | markdownify }
+{{ '![](Icons-and-navigation_images/Icons-and-navigation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -123,7 +123,7 @@ Navigation in Menu control is the default usage to navigate into the other web p
 
 // Add the following code in your CSHTML page.
 
-    &lt;div class="imgframe"&gt;
+    <div class="imgframe">
 
     @Html.EJ().Menu("weblink").Items(items =>
 
@@ -167,7 +167,7 @@ Navigation in Menu control is the default usage to navigate into the other web p
 
         }).Width("500")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -175,7 +175,7 @@ Navigation in Menu control is the default usage to navigate into the other web p
 
 The following screenshot displays the output for the above code example.            
 
-{ ![](Icons-and-navigation_images/Icons-and-navigation_img2.png) | markdownify }
+{{ '![](Icons-and-navigation_images/Icons-and-navigation_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -183,7 +183,7 @@ _Figure_ _25__: Navigation of Menu_
 
 When you click on “Google” that is present under “Search engine”, it navigates to the link that you specified in the sample code. Then the output is as follows.
 
-{ ![C:/Users/kaliswaran/Desktop/menu2.PNG](Icons-and-navigation_images/Icons-and-navigation_img3.png) | markdownify }
+{{ '![C:/Users/kaliswaran/Desktop/menu2.PNG](Icons-and-navigation_images/Icons-and-navigation_img3.png)' | markdownify }}
 {:.image }
 
 

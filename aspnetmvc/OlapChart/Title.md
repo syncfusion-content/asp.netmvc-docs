@@ -25,7 +25,7 @@ Title property allows you to set the default title for a Chart as follows.
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/ChartSettingtitile.png](Title_images/Title_img1.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/ChartSettingtitile.png](Title_images/Title_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -41,7 +41,7 @@ You can customize the title text font using title.font property.
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     function load(args) {
 
@@ -53,13 +53,13 @@ You can customize the title text font using title.font property.
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/chartTitle.png](Title_images/Title_img2.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/chartTitle.png](Title_images/Title_img2.png)' | markdownify }}
 {:.image }
 
 

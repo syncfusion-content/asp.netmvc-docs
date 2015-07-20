@@ -25,7 +25,7 @@ Here, flat-saffron theme is used. Similarly you can change the themes.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -53,7 +53,7 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -73,97 +73,97 @@ The following code example illustrates how to set the content in Dialog control.
 
 
 
-&lt;div style="border: 1px solid black"&gt;
+<div style="border: 1px solid black">
 
 
 
-@{Html.EJ().Dialog("loginForm").Title("Sign Up").ClientSideEvents(events => events.BeforeClose("onValidation")).ContentTemplate(@&lt;div id="loginForm"&gt;
+@{Html.EJ().Dialog("loginForm").Title("Sign Up").ClientSideEvents(events => events.BeforeClose("onValidation")).ContentTemplate(@<div id="loginForm">
 
-        &lt;!-- Sign up form elements --&gt;
+        <!-- Sign up form elements -->
 
-    &lt;form method="get" name="signup" id="signup_form"&gt;
+    <form method="get" name="signup" id="signup_form">
 
-        &lt;!-- Sign up form elements --&gt;
+        <!-- Sign up form elements -->
 
-        &lt;div class="heading"&gt;
+        <div class="heading">
 
             <div class="text-center">Sign Up</div>
 
             <div class="text-center content">It's free and always will be</div>
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="information"&gt;
+        <div class="information">
 
-            &lt;div class="row"&gt;
+            <div class="row">
 
-                &lt;span class="info"&gt;
+                <span class="info">
 
-                    &lt;!-- input element for First name field --&gt;
+                    <!-- input element for First name field -->
 
-                    &lt;input type="text" id="firstname" name="first name" class="input ejinputtext name" placeholder="First Name" /&gt;
+                    <input type="text" id="firstname" name="first name" class="input ejinputtext name" placeholder="First Name" />
 
-                &lt;/span&gt;
+                </span>
 
-                &lt;span class="info last"&gt;
+                <span class="info last">
 
-                    &lt;!-- input element for last name field --&gt;
-
-
-
-                    &lt;input type="text" id="lastname" name="last name" class="input ejinputtext name" placeholder="Last Name" /&gt;
-
-                &lt;/span&gt;
-
-            &lt;/div&gt;
-
-            &lt;div class="row"&gt;
-
-                &lt;!-- input element for email field --&gt;
-
-                &lt;input type="text" id="email" name="email" class="input ejinputtext email" placeholder="Your Email" /&gt;
-
-            &lt;/div&gt;
-
-            &lt;div class="row"&gt;
-
-                &lt;!-- input element for Re-enter email field --&gt;
+                    <!-- input element for last name field -->
 
 
 
-                &lt;input type="text" id="reptemail" name="re-enter email" class="input ejinputtext email" placeholder="Re-enter Email" /&gt;
+                    <input type="text" id="lastname" name="last name" class="input ejinputtext name" placeholder="Last Name" />
 
-            &lt;/div&gt;
+                </span>
 
-            &lt;div class="row"&gt;
+            </div>
 
-                &lt;!-- input element for Password field --&gt;
+            <div class="row">
+
+                <!-- input element for email field -->
+
+                <input type="text" id="email" name="email" class="input ejinputtext email" placeholder="Your Email" />
+
+            </div>
+
+            <div class="row">
+
+                <!-- input element for Re-enter email field -->
 
 
 
-                &lt;input type="password" maxlength="8" name="password" id="password" class="input ejinputtext" placeholder="Password" /&gt;
+                <input type="text" id="reptemail" name="re-enter email" class="input ejinputtext email" placeholder="Re-enter Email" />
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+            <div class="row">
 
-        &lt;div class="signupbtn"&gt;
+                <!-- input element for Password field -->
 
-            &lt;!--Sign Up button --&gt;
 
-            &lt;input type="button" class="btn btn-lg btn-primary" onclick="onSignUp()" name="Submit" value="Sign Up" /&gt;
 
-        &lt;/div&gt;
+                <input type="password" maxlength="8" name="password" id="password" class="input ejinputtext" placeholder="Password" />
 
-        &lt;!-- Sign up form elements are ended here--&gt;
+            </div>
 
-        &lt;!-- element for error message --&gt;
+        </div>
 
-        &lt;div class="errormsg"&gt;&lt;/div&gt;
+        <div class="signupbtn">
 
-    &lt;/form&gt;
+            <!--Sign Up button -->
 
-    &lt;/div&gt;
+            <input type="button" class="btn btn-lg btn-primary" onclick="onSignUp()" name="Submit" value="Sign Up" />
+
+        </div>
+
+        <!-- Sign up form elements are ended here-->
+
+        <!-- element for error message -->
+
+        <div class="errormsg"></div>
+
+    </form>
+
+    </div>
 
 
 
@@ -173,7 +173,7 @@ The following code example illustrates how to set the content in Dialog control.
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -185,7 +185,7 @@ The following code example illustrates how to set the content in Dialog control.
 
 [_CSS] 
 
-&lt;style type="text/css" &gt;
+<style type="text/css" >
 
       #loginForm{
 
@@ -297,7 +297,7 @@ The following code example illustrates how to set the content in Dialog control.
 
     }    
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -305,7 +305,7 @@ Execute the above code example to render following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -323,13 +323,13 @@ Initialize the Dialog control using following code example.
 
 
 
-@{Html.EJ().Dialog("loginForm").Title("SignUp").ContentTemplate(@&lt;div id="loginForm"&gt;
+@{Html.EJ().Dialog("loginForm").Title("SignUp").ContentTemplate(@<div id="loginForm">
 
-            &lt;!—Initialize using above Form elements--&gt;
+            <!—Initialize using above Form elements-->
 
-        &lt;/div&gt;).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
+        </div>).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
 
-&lt;!—use above styles --&gt;
+<!—use above styles -->
 
 
 
@@ -337,7 +337,7 @@ Execute this code example to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -357,11 +357,11 @@ Initialize the Dialog control with the following code example.
 
 
 
-@{Html.EJ().Dialog("loginForm").Title("SignUp").ClientSideEvents(events => events.BeforeClose("onValidation")).ContentTemplate(@&lt;div id="loginForm"&gt;
+@{Html.EJ().Dialog("loginForm").Title("SignUp").ClientSideEvents(events => events.BeforeClose("onValidation")).ContentTemplate(@<div id="loginForm">
 
-            &lt;!—Initialize using above Form elements--&gt;
+            <!—Initialize using above Form elements-->
 
-&lt;/div&gt;).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
+</div>).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
 
 
 
@@ -371,21 +371,21 @@ You can add an HTML element in the form to display the error message in Dialog.
 
 
 
-&lt;!-- element for error message --&gt;
+<!-- element for error message -->
 
-                  &lt;div class="errormsg"&gt;&lt;/div&gt;  
+                  <div class="errormsg"></div>  
 
-&lt;!-- inserts the element at the end of the Sign up form --&gt;
+<!-- inserts the element at the end of the Sign up form -->
 
 
 
-You can add the following code example in &lt;script&gt; tag to add validation to form elements.
+You can add the following code example in <script> tag to add validation to form elements.
 
 
 
 [_JavaScript]
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
     //onSignUp function trigger when click on Sign up Button.
 
@@ -415,7 +415,7 @@ You can add the following code example in &lt;script&gt; tag to add validation t
 
         //Regular expression for validating email address value
 
-        regEmail = /^(([^&lt;&gt;()[\]\\.,;:\s@@\"]+(\.[^&lt;&gt;()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        regEmail = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         //Validating FirstName and Lastname field
 
@@ -457,7 +457,7 @@ You can add the following code example in &lt;script&gt; tag to add validation t
 
             error.push('Please provide a password');
 
-        else if (($('#loginForm input#password').val().length &lt; 5) || ($('# loginForm  input#password').val().length &gt; 8))
+        else if (($('#loginForm input#password').val().length < 5) || ($('# loginForm  input#password').val().length > 8))
 
             error.push('Your password must be at least 5 and at most 8 characters long');
 
@@ -471,7 +471,7 @@ You can add the following code example in &lt;script&gt; tag to add validation t
 
             liTag = $(document.createElement('li'));
 
-            liTag.append("&lt;span&gt;-" + error[i] + "&lt;/span&gt;");
+            liTag.append("<span>-" + error[i] + "</span>");
 
             ulTag.append(liTag);
 
@@ -489,7 +489,7 @@ You can add the following code example in &lt;script&gt; tag to add validation t
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -499,7 +499,7 @@ You can add the following styles to customize the styles of error message.
 
 [_css]
 
-&lt;!—add this with above styles --&gt;
+<!—add this with above styles -->
 
        .errormsg li {
 
@@ -531,7 +531,7 @@ Execute the code example to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

@@ -50,7 +50,7 @@ HTML documents can be converted to PDF through the following methods:
 
 The ConvertToImage method converts the URL into an image. It recognizes tables, images, lists, etc. The URL parameter can be a HTTP or HTTPS address such as "http://www.server.com/path/file.html", or a local physical path such as "c:\path\file.html".
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img1.png)' | markdownify }}
 {:.image }
 _Note: If you want to open a dynamically generated document such as .asp or aspx file, you need to invoke it through HTTP even if this file is local to your own script._
 
@@ -159,7 +159,7 @@ pdfDocument.Close(True)
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img2.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img2.png)' | markdownify }}
 {:.image }
 _Note: HTML To PDF conversion allows text selection and search within the generated document. However, in machines where IE9 is installed, document would contain Bitmap image of the converted page/file thereby restricting text selection and search. This behavior can be changed for certain webpages by changing the registry value. For more details, refer to Frequently Asked Questions section._
 
@@ -293,7 +293,7 @@ SizeF pageSize = page.Size;
 
 AspectRatio dimension = AspectRatio.None;
 
-string html = "&lt;html&gt;&lt;body&gt;<p>Hello World</p>&lt;/body&gt;&lt;/html&gt;";
+string html = "<html><body><p>Hello World</p></body></html>";
 
 //Declares layout format for the image.
 
@@ -341,7 +341,7 @@ Dim pageSize As SizeF = page.Size
 
 Dim dimension As AspectRatio = AspectRatio.None
 
-Dim html As String = "&lt;html&gt;&lt;body&gt;<p>Hello World</p>&lt;/body&gt;&lt;/html&gt;";
+Dim html As String = "<html><body><p>Hello World</p></body></html>";
 
 'Declaring the layout format for the image.
 
@@ -373,7 +373,7 @@ pdfDocument.Close(True)
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img3.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img3.png)' | markdownify }}
 {:.image }
 _Note: Both ConvertToImage() and FromString() methods are used to convert the HTML pages whose height is less than 32767 pixels as image, and the options like  EnableHyperlinks, EnableJavascript  and AutoDetectPageBreak has no effect._
 
@@ -392,7 +392,7 @@ EnableJavaScript
 You can control the JavaScript by using the EnableJavaScript property of the HtmlConverter class library. By default this property is set to False. So the JavaScript code is disabled during conversion. Set the EnableJavaScript property to True to activate the JavaScript code during conversion.
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img4.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img4.png)' | markdownify }}
 {:.image }
 _Note: If JavaScript code is not executed by setting the EnableJavaScript property, it means the Internet Security Settings on the server does not allow the JavaScript execution._
 
@@ -755,7 +755,7 @@ doc.Save("HtmlToPdf.pdf")
 
 Essential DocIO enables to export the Word document into a PDF document. By using the ConvertToPDF method of the DocToPDFConverter class, you can convert the Word document to PDF and save the PDF document.
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img5.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img5.png)' | markdownify }}
 {:.image }
 _Note: You need to have Essential PDF and Essential DocIO installed in your system. This is because "Syncfusion.DocToPDFConverter.Base.dll" is conditionally shipped when both DocIO.Base and Pdf.Base is installed._
 
@@ -1201,7 +1201,7 @@ The XPS document format consists of XML structured markup that defines the layou
 
 XPS documents can be converted to PDF using the Convert method of the XPSToPdfConverter class.
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img6.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img6.png)' | markdownify }}
 {:.image }
 _Note: You need to add the Syncfusion.XPS namespace to work with the XPSToPdfConverter class._
 
@@ -1468,7 +1468,7 @@ document.Close(True)
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img7.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img7.png)' | markdownify }}
 {:.image }
 _Note: The HTML to PDF conversion that creates a metafile during the evolution, would interpret the content as either text or an image. The outcome of this PDF would contain only paragraph and figure tags; hyperlinks are not supported._
 
@@ -1518,7 +1518,7 @@ Dim s As String = page.ExtractText()
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img8.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img8.png)' | markdownify }}
 {:.image }
 _Note: The text is  extracted in the order in which it is written in the document stream and not in the order in which it is viewed in the PDF viewer._
 

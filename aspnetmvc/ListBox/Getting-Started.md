@@ -19,7 +19,7 @@ The following screenshot demonstrates the functionality of ListBox with Multi-Se
 
 
 
-{ ![F:/UG/screen shot/1.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![F:/UG/screen shot/1.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -38,29 +38,29 @@ The following steps are used to create ListBox control.
 
 [Layout._cshtml]
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
-
-
-
-    &lt;!--Scripts--&gt;
-
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt;&lt;/script&gt;
+    <!--Scripts-->
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-&lt;/head&gt;
+
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+</head>
 
      Create a CSHTML file in View page and add the following code sample to it. 
 
@@ -70,45 +70,45 @@ The following steps are used to create ListBox control.
 
 [view]    
 
-&lt;div id="sample"&gt;
+<div id="sample">
 
-    &lt;h5&gt;
+    <h5>
 
-        <b>Add people</b>&lt;/h5&gt;
+        <b>Add people</b></h5>
 
-    &lt;p&gt;
+    <p>
 
         Choose a contact and click move button to add in group
 
-    &lt;/p&gt;
+    </p>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div id="control"&gt;
+    <div id="control">
 
-        &lt;div id="container1"&gt;
+        <div id="container1">
 
-            &lt;p&gt;
+            <p>
 
                 Contacts List</p>
 
             @Html.EJ().ListBox("list1")
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div id="container2"&gt;
+        <div id="container2">
 
-            &lt;p&gt;
+            <p>
 
                 People in this group</p>
 
             @Html.EJ().ListBox("list2")
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -120,7 +120,7 @@ The following steps are used to create ListBox control.
 
 [Css]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #control {
 
@@ -188,7 +188,7 @@ The following steps are used to create ListBox control.
 
 
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -196,169 +196,169 @@ The following steps are used to create ListBox control.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
-_Figure 2: Render ListBox with &lt;ul&gt;&lt;/ul&gt; element_
+_Figure 2: Render ListBox with <ul></ul> element_
 
 Configure ListBox with Items
 
-To populate items inside ListBox, you have to add list items inside &lt;ul&gt; as &lt;li&gt;&lt;/li&gt; elements. The TargetID property is used to get the list items from the target. The Id of the ul that has the list items is given as the TargetID. Include the following &lt;ul&gt;, &lt;li&gt; elements in your sample.
+To populate items inside ListBox, you have to add list items inside <ul> as <li></li> elements. The TargetID property is used to get the list items from the target. The Id of the ul that has the list items is given as the TargetID. Include the following <ul>, <li> elements in your sample.
 
 
 
 [view]    
 
-&lt;div id="sample"&gt;
+<div id="sample">
 
-    &lt;h5&gt;
+    <h5>
 
-        <b>Add people</b>&lt;/h5&gt;
+        <b>Add people</b></h5>
 
-    &lt;p&gt;
+    <p>
 
         Choose a contact and click move button to add in group
 
-    &lt;/p&gt;
+    </p>
 
-    &lt;br /&gt;
+    <br />
 
-    &lt;div id="control"&gt;
+    <div id="control">
 
-        &lt;div id="container1"&gt;
+        <div id="container1">
 
-            &lt;p&gt;
+            <p>
 
                 Contacts List</p>
 
             @Html.EJ().ListBox("list1").TargetID("select")
 
-            &lt;ul id="select"&gt;
+            <ul id="select">
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/busy.png" alt="Categorize" /&gt;
+                    <img src="~/images/listbox/busy.png" alt="Categorize" />
 
                     Nancy</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/busy.png" alt="Done" /&gt;
+                    <img src="~/images/listbox/busy.png" alt="Done" />
 
                     Andrew</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Flag" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Flag" />
 
                     Janet</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/away.png" alt="Forward" /&gt;
+                    <img src="~/images/listbox/away.png" alt="Forward" />
 
                     Margaret</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/away.png" alt="Move" /&gt;
+                    <img src="~/images/listbox/away.png" alt="Move" />
 
                     Michael</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="E-mail" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="E-mail" />
 
                     Robert</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Meeting" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Meeting" />
 
                     Laura</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Reply" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
 
                     Anne</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/away.png" alt="Move" /&gt;
+                    <img src="~/images/listbox/away.png" alt="Move" />
 
                     Suyama</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="E-mail" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="E-mail" />
 
                     Callahan</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Meeting" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Meeting" />
 
                     Peacock</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Reply" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
 
                     Fuller</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Reply" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
 
                     Davolio</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Reply" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
 
                     Dodsworth</li>
 
-                &lt;li&gt;
+                <li>
 
-                    &lt;img src="~/images/listbox/avail.png" alt="Reply" /&gt;
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
 
                     Louis</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="middlebuttons"&gt;
+        <div class="middlebuttons">
 
             @Html.EJ().Button("Add").Text(">>").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("add"))
 
-            &lt;br /&gt;
+            <br />
 
-            &lt;br /&gt;
+            <br />
 
-            @Html.EJ().Button("Remove").Text("&lt;&lt;").ShowRoundedCorner(true).ClientSideEvents(e =&gt; e.Click("remove"))
+            @Html.EJ().Button("Remove").Text("<<").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("remove"))
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div id="container2"&gt;
+        <div id="container2">
 
-            &lt;p&gt;
+            <p>
 
                 People in this group</p>
 
             @Html.EJ().ListBox("list2")
 
-            &lt;ul id="selecteditems"&gt;
+            <ul id="selecteditems">
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -368,7 +368,7 @@ Run the above code to render ListBox with list items rendered inside ListBox. Li
 
 
 
-{ ![F:/UG/screen shot/3.PNG](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![F:/UG/screen shot/3.PNG](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -392,7 +392,7 @@ Run the above code example to render the following ListBox with Drag and drop fe
 
 
 
-{ ![F:/UG/screen shot/4.png](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![F:/UG/screen shot/4.png](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -416,7 +416,7 @@ Run the above code example to render the following ListBox with Multiple selecti
 
 
 
-{ ![F:/UG/screen shot/5.PNG](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![F:/UG/screen shot/5.PNG](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -432,7 +432,7 @@ The following code sample explains how to add an item to a second ListBox.
 
 [JS]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function add(e) {
 
@@ -478,7 +478,7 @@ function add(e) {
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -486,7 +486,7 @@ Run this code and you can see the output. Selected items from the first ListBox 
 
 
 
-{ ![F:/UG/screen shot/1.PNG](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![F:/UG/screen shot/1.PNG](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

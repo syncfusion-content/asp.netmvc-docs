@@ -52,7 +52,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Context-Menu_images/Context-Menu_img1.png) | markdownify }
+{{ '![](Context-Menu_images/Context-Menu_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -163,7 +163,7 @@ public string color { set; get; }
 
 * Execute the above code to render the following output with categorized appointments. Also when you right click “Appointment”, the context menu with categorize option is displayed as follows.
 
-{ ![C:/Users/hariprasanths/Desktop/imagess/123/Capture2.PNG](Context-Menu_images/Context-Menu_img2.png) | markdownify }
+{{ '![C:/Users/hariprasanths/Desktop/imagess/123/Capture2.PNG](Context-Menu_images/Context-Menu_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -177,7 +177,7 @@ Cells
 <table>
 <tr>
 <td>
-[Razor]@section SampleHeading{&lt;span class="sampleName"&gt; Schedule / Context Menu</span>}@section ControlsSection{&lt;div&gt;@{}@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1  ))// Custom context menu items.ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell)).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")))}&lt;/div&gt;</td></tr>
+[Razor]@section SampleHeading{<span class="sampleName"> Schedule / Context Menu</span>}@section ControlsSection{<div>@{}@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1  ))// Custom context menu items.ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell)).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")))}</div></td></tr>
 <tr>
 <td>
 [Controller]namespace MVCSampleBrowser.Controllers{public partial class ScheduleController : Controller{//// GET: /Default/public ActionResult ContextMenu(){List<Cells> cells = new List<Cells>();cells.Add(new Cells() { Id = "new", Text = "New Appointment" });cells.Add(new Cells() { Id = "recurrence", Text = "New Recurring Appointment" });cells.Add(new Cells() { Id = "today", Text = "Today" });cells.Add(new Cells() { Id = "gotodate", Text = "Go to date" });cells.Add(new Cells() { Id = "settings", Text = "Settings" });cells.Add(new Cells() { Id = "view", Text = "View", ParentId = "settings" });cells.Add(new Cells() { Id = "timemode", Text = "TimeMode", ParentId = "settings" });cells.Add(new Cells() { Id = "view_Day", Text = "Day", ParentId = "view" });cells.Add(new Cells() { Id = "view_Week", Text = "Week", ParentId = "view" });cells.Add(new Cells() { Id = "view_Workweek", Text = "Workweek", ParentId = "view" });cells.Add(new Cells() { Id = "view_Month", Text = "Month", ParentId = "view" });cells.Add(new Cells() { Id = "timemode_Hour12", Text = "12 Hours", ParentId = "timemode" });cells.Add(new Cells() { Id = "timemode_Hour24", Text = "24 Hours", ParentId = "timemode" });cells.Add(new Cells() { Id = "businesshours", Text = "Business Hours", ParentId = "settings" });cells.Add(new Cells() { Id = "custommenu1", Text = "Custom Menu1" });cells.Add(new Cells() { Id = "custommenu2", Text = "Custom Menu2" });List<person> persons = new List<person>();persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU" });persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 1, 6, 0, 20), EndTime = new DateTime(2014, 4, 1, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });persons.Add(new person() { Id = 103, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 5, 6, 0, 20), EndTime = new DateTime(2014, 4, 5, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU" });ViewBag.dataSource = persons;ViewBag.cell = cells;return View();}}}</td></tr>
@@ -192,7 +192,7 @@ Execute the above code to render the following output when you right-click on th
 
 
 
-{ ![](Context-Menu_images/Context-Menu_img3.png) | markdownify }
+{{ '![](Context-Menu_images/Context-Menu_img3.png)' | markdownify }}
 {:.image }
 
 

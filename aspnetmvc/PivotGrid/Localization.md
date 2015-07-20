@@ -63,7 +63,7 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
 @section ScriptSection{
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         ej.PivotGrid.locale["fr-FR"] = {
 
@@ -93,7 +93,7 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
            };
 
-      &lt;/script&gt;             
+      </script>             
 
 }
 
@@ -148,7 +148,7 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 The following screenshot displays the PivotGrid with French localization:
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 

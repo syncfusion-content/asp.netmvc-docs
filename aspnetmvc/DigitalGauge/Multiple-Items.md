@@ -83,7 +83,7 @@ Execute the above code example to render the DigitalGauge as follows.
 
 
 
-{ ![](Multiple-Items_images/Multiple-Items_img1.png) | markdownify }
+{{ '![](Multiple-Items_images/Multiple-Items_img1.png)' | markdownify }}
 {:.image }
 
 

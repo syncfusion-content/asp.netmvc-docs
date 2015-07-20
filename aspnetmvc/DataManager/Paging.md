@@ -51,7 +51,7 @@ Refer to the following code example for the paging options.
 
 Result for the above code example is illustrated as follows.
 
-{ ![](Paging_images/Paging_img1.png) | markdownify }
+{{ '![](Paging_images/Paging_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -89,15 +89,15 @@ The paging operation can be dynamically performed by using the DataManager. With
 
         }))
 
-pageIndex: &lt;input id="pageindx" type="text" placeholder="pageindex" /&gt;
+pageIndex: <input id="pageindx" type="text" placeholder="pageindex" />
 
-pageSize:  &lt;input id="pagesize" type="text" placeholder="pagesize" /&gt;
+pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 @Html.EJ().Button("submit").Text("Execute").ClientSideEvents(e => { e.Click("onClick"); })
 
 
 
-&lt;script type="text/javascript" class="jsScript"&gt;
+<script type="text/javascript" class="jsScript">
 
     function onClick(e) {
 
@@ -119,13 +119,13 @@ pageSize:  &lt;input id="pagesize" type="text" placeholder="pagesize" /&gt;
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
 Result of above code example is illustrated as follows.
 
-{ ![](Paging_images/Paging_img2.png) | markdownify }
+{{ '![](Paging_images/Paging_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -167,7 +167,7 @@ In this section, you can learn how to use the customized paging. The following c
 
 Result of above code example is illustrated as follows.
 
-{ ![](Paging_images/Paging_img3.png) | markdownify }
+{{ '![](Paging_images/Paging_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -211,7 +211,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Paging_images/Paging_img4.png) | markdownify }
+{{ '![](Paging_images/Paging_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -253,7 +253,7 @@ The take query is used to get some number of records from the data source of the
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Paging_images/Paging_img5.png) | markdownify }
+{{ '![](Paging_images/Paging_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -295,7 +295,7 @@ The requiresCount query is used to get the count of the total number of records 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Paging_images/Paging_img6.png) | markdownify }
+{{ '![](Paging_images/Paging_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -337,7 +337,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Paging_images/Paging_img7.png) | markdownify }
+{{ '![](Paging_images/Paging_img7.png)' | markdownify }}
 {:.image }
 
 

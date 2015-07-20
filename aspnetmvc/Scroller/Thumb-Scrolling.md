@@ -21,19 +21,19 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 [CSHTML]
 
-// In the CSHTML page, add a &lt;div&gt; element to configure Scroller widget and initialize the control.
+// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
 
 
-&lt;div id="scrollcontent"&gt;
+<div id="scrollcontent">
 
-  &lt;div&gt;                              @*Wrapper div for Scroller.*@
+  <div>                              @*Wrapper div for Scroller.*@
 
-     &lt;div id="innercontent"&gt;         @*Content div*@
+     <div id="innercontent">         @*Content div*@
 
-        <h3>MVC &lt;/h3&gt;
+        <h3>MVC </h3>
 
-         &lt;p&gt;
+         <p>
 
            Model–view–controller (MVC) is a software architecture pattern which   
 
@@ -45,13 +45,13 @@ The following steps explains you the configuration of EnableTouchScroll property
 
            or a diagram.
 
-         &lt;/p&gt;
+         </p>
 
-    &lt;/div&gt;
+    </div>
 
-  &lt;/div&gt;
+  </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -65,7 +65,7 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 The following screenshot displays Scroller control with disabled touch support.
 
-{ ![](Thumb-Scrolling_images/Thumb-Scrolling_img1.png) | markdownify }
+{{ '![](Thumb-Scrolling_images/Thumb-Scrolling_img1.png)' | markdownify }}
 {:.image }
 
 

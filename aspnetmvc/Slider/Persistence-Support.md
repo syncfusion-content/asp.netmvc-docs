@@ -29,7 +29,7 @@ The following steps explains you on how to enable the EnablePersistence property
 
 After execute the code, Increase the value and reload the page. The state is maintained in the Slider control.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderpersis.PNG](Persistence-Support_images/Persistence-Support_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderpersis.PNG](Persistence-Support_images/Persistence-Support_img1.png)' | markdownify }}
 {:.image }
 
 

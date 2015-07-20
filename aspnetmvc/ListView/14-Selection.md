@@ -53,7 +53,7 @@ Refer the following code examples.
 
 Screenshot:
 
-{ ![](14-Selection_images/14-Selection_img1.png) | markdownify }
+{{ '![](14-Selection_images/14-Selection_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -145,7 +145,7 @@ Refer the following code examples.
 
 Screenshot:
 
-{ ![](14-Selection_images/14-Selection_img2.png) | markdownify }
+{{ '![](14-Selection_images/14-Selection_img2.png)' | markdownify }}
 {:.image }
 
 

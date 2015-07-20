@@ -45,7 +45,7 @@ The following steps explain the configuration of the filtering conditions for an
 
 The following image is the output for AutoComplete control that filters list items based on the ‘contains’ option.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -87,7 +87,7 @@ The following steps explain how to enable the AutoFill property for an AutoCompl
 
 The following image is the output for AutoComplete when EnableAutoFill is set to ‘True’.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img2.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -131,7 +131,7 @@ The following image is the output for AutoComplete when “SortOrder” is confi
 
 
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img3.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -157,13 +157,13 @@ The following steps explain you how to enable this property.
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
-&lt;div style="width: 400px"&gt;
+<div style="width: 400px">
 
-    &lt;div style="float: left;"&gt;
+    <div style="float: left;">
 
-        &lt;h6&gt;&lt;span style="font-style: italic; font-weight: normal; position: absolute; margin-top: -30px;"&gt;
+        <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: -30px;">
 
-                Distinct disabled</span>&lt;/h6&gt;  
+                Distinct disabled</span></h6>  
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -175,13 +175,13 @@ The following steps explain you how to enable this property.
 
 
 
-    &lt;/div&gt;
+    </div>
 
-    &lt;div id="binding" style="float: right;"&gt;
+    <div id="binding" style="float: right;">
 
-        &lt;h6&gt;&lt;span style="font-style: italic; font-weight: normal; position: absolute; margin-top: -30px;"&gt;
+        <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: -30px;">
 
-                Distinct enabled</span>&lt;/h6&gt;
+                Distinct enabled</span></h6>
 
         @Html.EJ().Autocomplete("autocompletedistinct")
 
@@ -193,9 +193,9 @@ The following steps explain you how to enable this property.
 
 
 
-    &lt;/div&gt;	
+    </div>	
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -203,7 +203,7 @@ The following steps explain you how to enable this property.
 
 The following images are the outputs for AutoComplete when EnableDistinct is set to “True” and “False”.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -245,7 +245,7 @@ The following steps explains you how to configure the Popupbutton for an AutoCom
 
 The following image is the output for AutoComplete when ShowPopupButton is enabled.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img5.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -289,7 +289,7 @@ The following steps help you to disable editing in an AutoComplete textbox.
 
 The following image is the output for the AutoComplete textbox configured to restrict editing.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img6.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -331,7 +331,7 @@ The following steps allow you to set text for emptyresults of an AutoComplete te
 
 The following image is the output of the AutoComplete textbox when the list doesn’t return any value.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img7.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
 {:.image }
 
 

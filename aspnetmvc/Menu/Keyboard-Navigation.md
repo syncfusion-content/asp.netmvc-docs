@@ -55,10 +55,10 @@ Navigates to next group.</td></tr>
 <table>
 <tr>
 <td>
-[CSHTML]// Add the following code for Keyboard navigation in our Menu control.&lt;div class="imgframe"&gt;    @Html.EJ().Menu("keyboard").Items(items =>        {            items.Add().Id("Home").Text("Home").Children(child =>                {                    child.Add().Text("Foundation");                    child.Add().Text("Launch");                    child.Add().Text("About").Children(child1 =>                    {                        child1.Add().Text("Company");                        child1.Add().Text("Location");                    });                });            items.Add().Text("Services").Children(child =>                {                    child.Add().Text("Consulting");                    child.Add().Text("Outsourcing");                });            items.Add().Text("About");            items.Add().Id("Contact").Text("Contact Us").Children(child =>                {                    child.Add().Text("Contact number");                    child.Add().Text("E-mail");                });            items.Add().Id("Careers").Text("Careers").Children(child =>                 {                     child.Add().Text("Position").Children(child1 =>                             {                                 child1.Add().Text("Developer");                                 child1.Add().Text("Manager");                             });                     child.Add().Text("Apply online");                 });        }).Width("500")    &lt;/div&gt;</td></tr>
+[CSHTML]// Add the following code for Keyboard navigation in our Menu control.<div class="imgframe">    @Html.EJ().Menu("keyboard").Items(items =>        {            items.Add().Id("Home").Text("Home").Children(child =>                {                    child.Add().Text("Foundation");                    child.Add().Text("Launch");                    child.Add().Text("About").Children(child1 =>                    {                        child1.Add().Text("Company");                        child1.Add().Text("Location");                    });                });            items.Add().Text("Services").Children(child =>                {                    child.Add().Text("Consulting");                    child.Add().Text("Outsourcing");                });            items.Add().Text("About");            items.Add().Id("Contact").Text("Contact Us").Children(child =>                {                    child.Add().Text("Contact number");                    child.Add().Text("E-mail");                });            items.Add().Id("Careers").Text("Careers").Children(child =>                 {                     child.Add().Text("Position").Children(child1 =>                             {                                 child1.Add().Text("Developer");                                 child1.Add().Text("Manager");                             });                     child.Add().Text("Apply online");                 });        }).Width("500")    </div></td></tr>
 <tr>
 <td>
-[JavaScript]// Add the following code in your &lt;script&gt; section.&lt;script type="text/javascript"&gt;        jQuery(function ($) {            //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#keyboard").focus();                }            });        });&lt;/script&gt;</td></tr>
+[JavaScript]// Add the following code in your <script> section.<script type="text/javascript">        jQuery(function ($) {            //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#keyboard").focus();                }            });        });</script></td></tr>
 </table>
 
 
@@ -68,7 +68,7 @@ Navigates to next group.</td></tr>
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     #keyboard {
 
@@ -76,11 +76,11 @@ Navigates to next group.</td></tr>
 
     }
 
-&lt;/style&gt;
+</style>
 
 Following screenshot displays the output of the above code. 
 
-{ ![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png) | markdownify }
+{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -88,7 +88,7 @@ _Figure_ _39__: Accessibility_
 
 When you press alt+j, the first item of the Menu control only gets focused as displayed in the following screenshot.
 
-{ ![](Keyboard-Navigation_images/Keyboard-Navigation_img2.png) | markdownify }
+{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img2.png)' | markdownify }}
 {:.image }
 
 

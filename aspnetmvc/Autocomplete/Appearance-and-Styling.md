@@ -49,7 +49,7 @@ The following image is the output for AutoComplete textbox with customized dimen
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -93,7 +93,7 @@ The following image is the output for AutoComplete when ShowRoundedCorner is set
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -135,7 +135,7 @@ The following image is the output for AutoComplete when WatermarkText is defined
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -179,7 +179,7 @@ The following image is the output for AutoComplete, after configuring the height
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -256,7 +256,7 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         /* Customize the PopUp panel */
 
@@ -284,7 +284,7 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 
        }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -318,7 +318,7 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 
 The following image is of an AutoComplete textbox configured based on CSS class.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
 {:.image }
 
 

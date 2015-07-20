@@ -29,57 +29,57 @@ The following steps explains you the implementation of modal dialog.
 
 
 
-@{Html.EJ().Dialog("dialogLoginForm").Title("Login Form").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("dialogLoginForm").Title("Login Form").ContentTemplate(@<div>
 
-            &lt;table&gt;
+            <table>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         User Name
 
-                        &lt;input type="text" id="txtName" class="ejinputtext" style="width: 100%" /&gt;
+                        <input type="text" id="txtName" class="ejinputtext" style="width: 100%" />
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;
+                    <td>
 
                         Password
 
-                        &lt;input type="text" id="Text1" class="ejinputtext" style="width: 100%" /&gt;
+                        <input type="text" id="Text1" class="ejinputtext" style="width: 100%" />
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td align="center"&gt;
+                    <td align="center">
 
-                        &lt;input type="button" id="downloadBtn" value="Login" class="e-btn" style="width: 100px; height: 30px" /&gt;
+                        <input type="button" id="downloadBtn" value="Login" class="e-btn" style="width: 100px; height: 30px" />
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td align="center"&gt;
+                    <td align="center">
 
                         <a href="#">Forgot Password</a>
 
-                    &lt;/td&gt;
+                    </td>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/table&gt;
+            </table>
 
-        &lt;/div&gt;).Width(250).Height("250").EnableModal(true).Render();}
+        </div>).Width(250).Height("250").EnableModal(true).Render();}
 
 
 
@@ -91,7 +91,7 @@ The following steps explains you the implementation of modal dialog.
 
 2. The output of modal dialog control. 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diacenter.PNG](Modal-Dialog-Support_images/Modal-Dialog-Support_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diacenter.PNG](Modal-Dialog-Support_images/Modal-Dialog-Support_img1.png)' | markdownify }}
 {:.image }
 
 

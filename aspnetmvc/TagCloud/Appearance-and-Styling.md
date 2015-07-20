@@ -29,7 +29,7 @@ The following steps explains you on how to configure font sizes for a TagCloud.
 
 The following screenshot illustrates the TagCloud control with customized font sizes.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -45,7 +45,7 @@ The following steps explains you to configure format for a TagCloud.
 
 [CSHTML]
 
-&lt;%-- Configure datasource referring local data binding section and assign it to datasource property -- %&gt;
+<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
 
 
@@ -59,7 +59,7 @@ The following steps explains you to configure format for a TagCloud.
 
 The following screenshot illustrates the TagCloud control with customized formats.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -98,7 +98,7 @@ The following steps allows you to configure CssClass for TagCloud.
 
 [CSHTML]
 
-&lt;%-- Configure datasource referring local data binding section and assign it to datasource property -- %&gt;
+<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
 
 
@@ -112,7 +112,7 @@ The following steps allows you to configure CssClass for TagCloud.
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         /* Customize the TagCloud div element */
 
@@ -136,13 +136,13 @@ The following steps allows you to configure CssClass for TagCloud.
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
 The following screenshot illustrates the TagCloud with customized CSS class,
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 

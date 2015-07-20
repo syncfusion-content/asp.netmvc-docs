@@ -57,7 +57,7 @@ model.Nodes.Add(group);
 
 
 
-{ ![](Group_images/Group_img1.png) | markdownify }
+{{ '![](Group_images/Group_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ The following steps illustrate how to select an object that has two groups.
 
 
 
-{ ![](Group_images/Group_img2.png) | markdownify }
+{{ '![](Group_images/Group_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -78,7 +78,7 @@ The following steps illustrate how to select an object that has two groups.
 
 
 
-{ ![](Group_images/Group_img3.png) | markdownify }
+{{ '![](Group_images/Group_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -86,7 +86,7 @@ The following steps illustrate how to select an object that has two groups.
 
 
 
-{ ![](Group_images/Group_img4.png) | markdownify }
+{{ '![](Group_images/Group_img4.png)' | markdownify }}
 {:.image }
 
 

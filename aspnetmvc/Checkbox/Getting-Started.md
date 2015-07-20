@@ -17,7 +17,7 @@ Essential ASP.NET MVC Checkbox provides support to multiple selections within yo
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -174,13 +174,13 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
 ### Create a Tri-State Checkbox
 
-ASP.NET MVC Tri-State Checkbox widget renders by setting EnableTriState property to True. You can add the following code to create Tri-state Checkbox in the &lt;div&gt; element of the corresponding view page.
+ASP.NET MVC Tri-State Checkbox widget renders by setting EnableTriState property to True. You can add the following code to create Tri-state Checkbox in the <div> element of the corresponding view page.
 
 
 
@@ -226,13 +226,13 @@ Run the above code to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
 ### Receive Hobbies and Interest
 
-You can receive the Hobbies and Interest values using Checkbox. You can create a button in your corresponding view page &lt;div&gt; element using @Html.EJ().Button() and add the script section to the view page. The following steps illustrate how to create and set action to the button.
+You can receive the Hobbies and Interest values using Checkbox. You can create a button in your corresponding view page <div> element using @Html.EJ().Button() and add the script section to the view page. The following steps illustrate how to create and set action to the button.
 
  Add the following code for Button creation.
 
@@ -300,7 +300,7 @@ Execute the above code example to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -308,7 +308,7 @@ Execute the above code example to render the following output.
 
 You can get the Media Player file type application like video, audio and picture using Checkbox. You can refer the following steps to render Media Player file types.
 
-1. Add the following code in &lt;div&gt; element of the corresponding view page.
+1. Add the following code in <div> element of the corresponding view page.
 
 
 
@@ -398,7 +398,7 @@ You can get the Media Player file type application like video, audio and picture
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

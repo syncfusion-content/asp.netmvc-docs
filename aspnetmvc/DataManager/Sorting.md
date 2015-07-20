@@ -53,7 +53,7 @@ Result of the above code example is illustrated as follows.
 
 
 
-{ ![](Sorting_images/Sorting_img1.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -97,7 +97,7 @@ The sortByDesc query of the DataManager is used to sort the specified field in d
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Sorting_images/Sorting_img2.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -139,11 +139,11 @@ The table can be dynamically sorted by using an external button click event. The
 
 )
 
-&lt;input id="field" type="text" placeholder="fieldName" /&gt;
+<input id="field" type="text" placeholder="fieldName" />
 
 @Html.EJ().Button("submit").Text("Sort").ClientSideEvents(e => { e.Click("onClick"); })
 
-&lt;script type="text/javascript" class="jsScript"&gt;
+<script type="text/javascript" class="jsScript">
 
         function onClick(e) {
 
@@ -165,13 +165,13 @@ The table can be dynamically sorted by using an external button click event. The
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
 Result of above code example is illustrated as follows.
 
-{ ![](Sorting_images/Sorting_img3.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -219,7 +219,7 @@ Result of above code example is illustrated as follows.
 
 
 
-{ ![](Sorting_images/Sorting_img4.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img4.png)' | markdownify }}
 {:.image }
 
 

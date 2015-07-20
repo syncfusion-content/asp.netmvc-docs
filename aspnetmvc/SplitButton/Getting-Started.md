@@ -13,7 +13,7 @@ This section explains briefly about how to create a Split Button in ASP.NET MVC 
 
 ## 1.2.1 Create your first Split Button in MVC
 
-The HTML button element and the &lt;UL&gt;, &lt;LI&gt; can be easily configured as Essential ASP.NET MVC Split Button control.  The basic rendering of Essential ASP.NET MVC Split Button is achieved by using default functionality. Initially the TargetID is a mandatory one, without this field it acts as normal button on two sides.
+The HTML button element and the <UL>, <LI> can be easily configured as Essential ASP.NET MVC Split Button control.  The basic rendering of Essential ASP.NET MVC Split Button is achieved by using default functionality. Initially the TargetID is a mandatory one, without this field it acts as normal button on two sides.
 
 Create Split Button Control in MVC
 
@@ -30,19 +30,19 @@ Essential ASP.NET MVC Split Button control contains built-in features such as Cl
 
 
 
-3. Add the following &lt;UL&gt;, &lt;LI&gt; elements to render Split Button with popup option.
+3. Add the following <UL>, <LI> elements to render Split Button with popup option.
 
 
 
-       &lt;ul id="target"&gt;
+       <ul id="target">
 
-            &lt;li&gt;<span>Open</span>&lt;/li&gt;
+            <li><span>Open</span></li>
 
-            &lt;li&gt;<span>Save</span>&lt;/li&gt;
+            <li><span>Save</span></li>
 
-            &lt;li&gt;<span>Delete</span>&lt;/li&gt;
+            <li><span>Delete</span></li>
 
-        &lt;/ul&gt;      
+        </ul>      
 
 
 
@@ -50,7 +50,7 @@ Output of the above scripts,
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 

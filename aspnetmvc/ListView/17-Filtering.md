@@ -53,7 +53,7 @@ Refer the following code examples.
 
 Screenshot:
 
-{ ![](17-Filtering_images/17-Filtering_img1.png) | markdownify }
+{{ '![](17-Filtering_images/17-Filtering_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ _Enable Filtering_
 
 
 
-{ ![](17-Filtering_images/17-Filtering_img2.png) | markdownify }
+{{ '![](17-Filtering_images/17-Filtering_img2.png)' | markdownify }}
 {:.image }
 
 

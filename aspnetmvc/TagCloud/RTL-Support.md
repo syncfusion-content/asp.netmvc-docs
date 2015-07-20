@@ -19,7 +19,7 @@ The following steps explains you the EnableRTL property in TagCloud.
 
 [CSHTML]
 
-&lt;%-- Configure datasource referring local data binding section and assign it to datasource property -- %&gt;
+<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
 
 
@@ -29,7 +29,7 @@ The following steps explains you the EnableRTL property in TagCloud.
 
 The following screenshot illustrates the TagCloud control with RTL support.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

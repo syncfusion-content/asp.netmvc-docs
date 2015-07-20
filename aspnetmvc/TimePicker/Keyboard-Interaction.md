@@ -22,7 +22,7 @@ Shortcut Key</td><td>
 Description</td></tr>
 <tr>
 <td>
-{ [Access key](http://en.wikipedia.org/wiki/Access_key) | markdownify } + j</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
 Focuses into Timepicker widget</td></tr>
 <tr>
 <td>
@@ -95,7 +95,7 @@ The following steps explains you on how to enable keyboard interaction for the T
 
 
 
-{ ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png) | markdownify }
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -45,7 +45,7 @@ Grouping technique is also supported in the DataManager. When you want to analys
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Grouping_images/Grouping_img1.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img1.png)' | markdownify }}
 {:.image }
 
 

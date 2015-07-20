@@ -17,15 +17,15 @@ ASP.NET MVCProgress Bar control provides support to display a Progress Bar that 
 
 The following screenshot illustrates the functionality of a Progress Bar and displays the final result of the Password Strength Validation for your password using Progress Bar.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -44,15 +44,15 @@ Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettings
 
 
 
-&lt;div class="start" &gt;
+<div class="start" >
 
          <label for="start">Password</label>
 
-               &lt;input type="password" id="password"/&gt;
+               <input type="password" id="password"/>
 
   @Html.EJ().ProgressBar("progressBar").Value(20).Height("20px").Width("180px") 
 
- &lt;/div&gt;
+ </div>
 
 
 
@@ -60,7 +60,7 @@ Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettings
 
 
 
- &lt;style&gt;
+ <style>
 
  .start {
 
@@ -88,7 +88,7 @@ Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettings
 
    }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -96,7 +96,7 @@ Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettings
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prodefault.PNG](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prodefault.PNG](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -105,7 +105,7 @@ Find the Strength of the Password
 In this scenario, the advancement of the Progress Bar is changed according to the length and special characters present in the text of the password field. This is achieved by binding the change in the properties of your control and by checking the length of the password field.
 
 
-       &lt;script&gt; 
+       <script> 
 
             var progresObj, k = 10, i = 0;
 
@@ -181,7 +181,7 @@ In this scenario, the advancement of the Progress Bar is changed according to th
 
 
 
-        &lt;/script&gt;
+        </script>
 
 
 
@@ -193,15 +193,15 @@ The following screenshot displays a Progress Bar control for the above scenario.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Arulraj/Desktop/Untitled-4.png](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![C:/Users/Arulraj/Desktop/Untitled-4.png](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 

@@ -20,7 +20,7 @@ You can print the Schedule control by using print() method. Use the following co
 <table>
 <tr>
 <td>
-[Razor]&lt;div&gt;&lt;input class="print" type="button" value="Print" /&gt;@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)&lt;script type="text/javascript"&gt;$(document).ready(function () {// function to bind the click event to the button$('.print').bind("click", function () {var obj = $("#Schedule1").data("ejSchedule");// Public method to print the scheduleobj.print();});});&lt;/script&gt;</td></tr>
+[Razor]<div><input class="print" type="button" value="Print" />@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)<script type="text/javascript">$(document).ready(function () {// function to bind the click event to the button$('.print').bind("click", function () {var obj = $("#Schedule1").data("ejSchedule");// Public method to print the scheduleobj.print();});});</script></td></tr>
 <tr>
 <td>
 [Controller]           // follow the code as same as declared in Read Only part</td></tr>
@@ -29,7 +29,7 @@ You can print the Schedule control by using print() method. Use the following co
 
 Execute the above code to render the following output.
 
-{ ![](Print_images/Print_img1.png) | markdownify }
+{{ '![](Print_images/Print_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -39,7 +39,7 @@ Click the print button to render the following output.
 
 
 
-{ ![](Print_images/Print_img2.png) | markdownify }
+{{ '![](Print_images/Print_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -63,7 +63,7 @@ Appointment Print
 
 
 
-{ ![](Print_images/Print_img3.png) | markdownify }
+{{ '![](Print_images/Print_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -73,7 +73,7 @@ _Figure_ _123__: Schedule with Print option in Context Menu_
 
 
 
-{ ![](Print_images/Print_img4.png) | markdownify }
+{{ '![](Print_images/Print_img4.png)' | markdownify }}
 {:.image }
 
 

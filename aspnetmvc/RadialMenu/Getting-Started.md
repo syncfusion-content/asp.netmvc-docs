@@ -13,7 +13,7 @@ documentation: ug
 
 In this section, you can learn how to create a simple Radial Menu in the MVC application.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -165,7 +165,7 @@ You can display the Radial Menu by performing the desired action on the target w
 
 Run the above code and select any text inside the target. The settings icon is displayed. Click that icon to render the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 

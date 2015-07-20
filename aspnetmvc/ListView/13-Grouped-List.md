@@ -81,7 +81,7 @@ Refer the following code example.
 
 
 
-{ ![](13-Grouped-List_images/13-Grouped-List_img1.png) | markdownify }
+{{ '![](13-Grouped-List_images/13-Grouped-List_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -168,7 +168,7 @@ Refer the following code examples.
 
 
 
-{ ![](13-Grouped-List_images/13-Grouped-List_img2.png) | markdownify }
+{{ '![](13-Grouped-List_images/13-Grouped-List_img2.png)' | markdownify }}
 {:.image }
 
 

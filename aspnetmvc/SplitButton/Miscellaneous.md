@@ -31,28 +31,28 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 
-    &lt;div class="spltspan"&gt;
+    <div class="spltspan">
 
         @Html.EJ().SplitButton("spltbutton_text").Text("signin").Size(ButtonSize.Small).TargetID("Ul11")
 
-        &lt;ul id="Ul11"&gt;
+        <ul id="Ul11">
 
-            &lt;li&gt;<span>User</span>&lt;/li&gt;
+            <li><span>User</span></li>
 
-            &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+            <li><span>Guest</span></li>
 
-            &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+            <li><span>Admin</span></li>
 
-        &lt;/ul&gt;
+        </ul>
 
-    &lt;/div&gt;
+    </div>
 
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Miscellaneous_images/Miscellaneous_img1.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -76,23 +76,23 @@ The following steps explains you the details about rendering the Split Button wi
 
     @*Enable the rounded corner for split button control as follows.*@
 
-    &lt;div class="spltspan"&gt;
+    <div class="spltspan">
 
         @Html.EJ().SplitButton("spltbutton_roundedCorner").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).TargetID("Ul11")
 
-        &lt;ul id="Ul11"&gt;
+        <ul id="Ul11">
 
-            &lt;li&gt;<span>User</span>&lt;/li&gt;
+            <li><span>User</span></li>
 
-            &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+            <li><span>Guest</span></li>
 
-            &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+            <li><span>Admin</span></li>
 
-        &lt;/ul&gt;
+        </ul>
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -100,7 +100,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 Execute the above code to render the following output.
 
-{ ![](Miscellaneous_images/Miscellaneous_img2.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
 {:.image }
 
 

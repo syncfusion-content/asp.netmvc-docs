@@ -27,7 +27,7 @@ It is the root class of the Tile.</td></tr>
 <tr>
 <td>
 e-child-tile</td><td>
-It class is applied to the child &lt;div&gt; of the Tile.</td></tr>
+It class is applied to the child <div> of the Tile.</td></tr>
 <tr>
 <td>
 e-enabled-text</td><td>

@@ -60,7 +60,7 @@ The following screenshot is the result of the above code example.
 
 
 
-{ ![](Data-Adaptors_images/Data-Adaptors_img1.png) | markdownify }
+{{ '![](Data-Adaptors_images/Data-Adaptors_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -144,7 +144,7 @@ The following screenshot is the result of the above code example.
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Data-Adaptors_images/Data-Adaptors_img2.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Data-Adaptors_images/Data-Adaptors_img2.png)' | markdownify }}
 {:.image }
 
 

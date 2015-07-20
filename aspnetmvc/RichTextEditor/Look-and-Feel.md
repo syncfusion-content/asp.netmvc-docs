@@ -37,13 +37,13 @@ The following is the list of the twelve themes supported by RTE.
 
 @*Add the following code in your view page.*@
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }
 
 
 
 The following screenshot displays the output.
 
-{ ![](Look-and-Feel_images/Look-and-Feel_img1.png) | markdownify }
+{{ '![](Look-and-Feel_images/Look-and-Feel_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ You can override the existing styles under the theme style sheet by using this p
 
 @*Add the following code in your view page to initialize the RTE.*@
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).CssClass("light-Pink").Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).CssClass("light-Pink").Render(); }
 
 
 
@@ -103,7 +103,7 @@ In the following style sheet, the active theme style sheet file has been overrid
 
 The following screenshot displays the output.
 
-{ ![](Look-and-Feel_images/Look-and-Feel_img2.png) | markdownify }
+{{ '![](Look-and-Feel_images/Look-and-Feel_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -19,7 +19,7 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
 
 // Add the following code in CSHTML section.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -89,7 +89,7 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
 
 
 
-        }).Width("500").EnableCenterAlign(true)&lt;/div&gt;
+        }).Width("500").EnableCenterAlign(true)</div>
 
 
 
@@ -99,7 +99,7 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
 
 The following screenshot displays the output of the above code.
 
-{ ![](Center-Menu_images/Center-Menu_img1.png) | markdownify }
+{{ '![](Center-Menu_images/Center-Menu_img1.png)' | markdownify }}
 {:.image }
 
 

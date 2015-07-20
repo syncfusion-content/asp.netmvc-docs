@@ -52,7 +52,7 @@ The following code example explains how to set the value for enableAppointmentNa
 
 * The Schedule control with the appointment navigation tabs (marked with a box) enabled looks like the following screenshot.
 
-{ ![](Navigation_images/Navigation_img1.png) | markdownify }
+{{ '![](Navigation_images/Navigation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -67,7 +67,7 @@ The following screenshot displays the calendar that pops down on clicking the da
 
 
 
-{ ![](Navigation_images/Navigation_img2.png) | markdownify }
+{{ '![](Navigation_images/Navigation_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -173,7 +173,7 @@ Once the required cells are selected, then a new appointment can be created for 
 <table>
 <tr>
 <td>
-[Razor]&lt;style&gt;.e-monthappointment {height: auto !important;}&lt;/style&gt;@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).AllowKeyboardNavigation(true).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))&lt;script id="MyTemplate" type="text/x-jsrender"&gt;&lt;div style="height: 100%"&gt;&lt;div style="float: left; width: 50px;"&gt;{{:~format(StartTime)}}&lt;/div&gt;&lt;div&gt;&lt;div&gt;{{:Subject}}&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/script&gt;&lt;script&gt;function _getImages(date) {switch (new Date(date).getDay()) {case 0:return "&lt;img src='../images/schedule/cake.png'/&gt;"break;case 1:return "&lt;img src='../images/schedule/basketball.png'/&gt;"break;case 2:return "&lt;img src='../images/schedule/rugby.png'/&gt;"break;case 3:return "&lt;img src='../images/schedule/guitar.png'/&gt;"break;case 4:return "&lt;img src='../images/schedule/music.png'/&gt;"break;case 5:return "&lt;img src='../images/schedule/doctor.png'/&gt;"break;case 6:return "&lt;img src='../images/schedule/beach.png'/&gt;"break;}}$.views.helpers({ format: _getImages });&lt;/script&gt;</td></tr>
+[Razor]<style>.e-monthappointment {height: auto !important;}</style>@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).AllowKeyboardNavigation(true).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))<script id="MyTemplate" type="text/x-jsrender"><div style="height: 100%"><div style="float: left; width: 50px;">{{:~format(StartTime)}}</div><div><div>{{:Subject}}<div></div></div></script><script>function _getImages(date) {switch (new Date(date).getDay()) {case 0:return "<img src='../images/schedule/cake.png'/>"break;case 1:return "<img src='../images/schedule/basketball.png'/>"break;case 2:return "<img src='../images/schedule/rugby.png'/>"break;case 3:return "<img src='../images/schedule/guitar.png'/>"break;case 4:return "<img src='../images/schedule/music.png'/>"break;case 5:return "<img src='../images/schedule/doctor.png'/>"break;case 6:return "<img src='../images/schedule/beach.png'/>"break;}}$.views.helpers({ format: _getImages });</script></td></tr>
 <tr>
 <td>
 [Controller]// follow the code as same as declared in Read Only part</td></tr>
@@ -184,7 +184,7 @@ Once the required cells are selected, then a new appointment can be created for 
 
 
 
-{ ![](Navigation_images/Navigation_img3.png) | markdownify }
+{{ '![](Navigation_images/Navigation_img3.png)' | markdownify }}
 {:.image }
 
 

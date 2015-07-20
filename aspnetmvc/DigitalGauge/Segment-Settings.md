@@ -50,7 +50,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Segment-Settings_images/Segment-Settings_img1.png) | markdownify }
+{{ '![](Segment-Settings_images/Segment-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -93,7 +93,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Segment-Settings_images/Segment-Settings_img2.png) | markdownify }
+{{ '![](Segment-Settings_images/Segment-Settings_img2.png)' | markdownify }}
 {:.image }
 
 

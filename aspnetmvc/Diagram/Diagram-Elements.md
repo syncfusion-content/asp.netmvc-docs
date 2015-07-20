@@ -19,7 +19,7 @@ documentation: ug
 
 
 
-{ ![C:/Users/labuser/Desktop/a.png](Diagram-Elements_images/Diagram-Elements_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Diagram-Elements_images/Diagram-Elements_img1.png)' | markdownify }}
 {:.image }
 
 

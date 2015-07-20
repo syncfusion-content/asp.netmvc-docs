@@ -58,7 +58,7 @@ You can use GroupGap property to separate the items from every flat level and t
 
 
 
-{ ![](TreeMapLevels_images/TreeMapLevels_img1.png) | markdownify }
+{{ '![](TreeMapLevels_images/TreeMapLevels_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -204,7 +204,7 @@ TreeMap Hierarchical level is used to define levels for hierarchical data collec
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](TreeMapLevels_images/TreeMapLevels_img2.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](TreeMapLevels_images/TreeMapLevels_img2.png)' | markdownify }}
 {:.image }
 
 

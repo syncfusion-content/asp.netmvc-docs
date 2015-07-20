@@ -21,15 +21,15 @@ The following steps explains you the configuration of EnablePersistence property
 
 // Add the following code in View page to configure ListBox widget
 
-&lt;div id="control"&gt;
+<div id="control">
 
-    &lt;h5 class="ctrllabel"&gt;
+    <h5 class="ctrllabel">
 
         Select a skill
 
-    &lt;/h5&gt;    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")) .EnablePersistence(true)
+    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")) .EnablePersistence(true)
 
-&lt;/div&gt;
+</div>
 
 [CS]
 

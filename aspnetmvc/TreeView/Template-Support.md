@@ -57,7 +57,7 @@ public class template
 
 //Refer the Model in the controller
 
-using &lt;Applicationname&gt;.Models;
+using <Applicationname>.Models;
 
 
 
@@ -95,7 +95,7 @@ using &lt;Applicationname&gt;.Models;
 
 3. In the View page, define the template structure in which the TreeView has to be rendered. 
 > 
-{ ![C:/Users/labuser/Desktop/note.jpg](Template-Support_images/Template-Support_img1.jpeg) | markdownify }
+{{ '![C:/Users/labuser/Desktop/note.jpg](Template-Support_images/Template-Support_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder._
 
@@ -103,43 +103,43 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 [View]
 
-&lt;script id="treeTemplate" type="text/x-jsrender"&gt;
+<script id="treeTemplate" type="text/x-jsrender">
 
 
 
 {{if hasChild}}
 
-    <div class={{>name}} -style>{{>name}}&lt;/div&gt;
+    <div class={{>name}} -style>{{>name}}</div>
 
 {{else}}
 
-    &lt;div class="cont-list"&gt;
+    <div class="cont-list">
 
         <img class="con-img" src="../Content/Images/template-image-{{>imgId}}.png" />
 
-        &lt;div class="cont-del"&gt;&lt;/div&gt;
+        <div class="cont-del"></div>
 
-        &lt;div class="cont-details"&gt;
+        <div class="cont-details">
 
-            &lt;b&gt;{{>name}}&lt;/b&gt;&lt;br /&gt;
+            <b>{{>name}}</b><br />
 
-            &lt;span&gt;{{>city}}&lt;/span&gt;
+            <span>{{>city}}</span>
 
-            &lt;br /&gt;
+            <br />
 
-            &lt;span&gt;{{>phone}}&lt;/span&gt;
+            <span>{{>phone}}</span>
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="treeFooter"&gt;&lt;/div&gt;
+        <div class="treeFooter"></div>
 
-    &lt;/div&gt;
+    </div>
 
 {{/if}}
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -149,11 +149,11 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 [View]
 
-&lt;div style="width: 280px"&gt;
+<div style="width: 280px">
 
     @Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<template>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded")).Template("#treeTemplate").ClientSideEvents(e => e.Create("oncreate"))
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -161,7 +161,7 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 [View]
 
-&lt;style&gt;
+<style>
 
             #treeview .e-node-hover, #treeview .e-active
 
@@ -259,7 +259,7 @@ _Note: We need to include jsrender.js script file to use the following template.
 
         }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -267,7 +267,7 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 [View]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     function oncreate(evt) {
 
@@ -281,7 +281,7 @@ _Note: We need to include jsrender.js script file to use the following template.
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -289,7 +289,7 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 Output of the TreeView after specifying the Template structure.
 
-{ ![](Template-Support_images/Template-Support_img2.png) | markdownify }
+{{ '![](Template-Support_images/Template-Support_img2.png)' | markdownify }}
 {:.image }
 
 

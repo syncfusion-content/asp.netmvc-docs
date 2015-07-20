@@ -27,7 +27,7 @@ The following steps explain you how to get the Date Range of DatePicker widget.
 
 2.  The following screenshot displays the output for the above code.
 
-{ ![](Date-Range_images/Date-Range_img1.png) | markdownify }
+{{ '![](Date-Range_images/Date-Range_img1.png)' | markdownify }}
 {:.image }
 
 

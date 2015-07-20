@@ -82,7 +82,7 @@ The following code example shows how to localize OlapChart’sUser Interface (UI
 
 @section ScriptSection{
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
          ej.olap.OlapChart.locale["fr-FR"] = {
 
@@ -114,7 +114,7 @@ The following code example shows how to localize OlapChart’sUser Interface (UI
 
             };	
 
-    &lt;/script&gt;
+    </script>
 
 }
 
@@ -128,7 +128,7 @@ The following code example shows how to localize OlapChart’sUser Interface (UI
 
 
 
-{ ![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-support_images/Localization-and-Translation-support_img1.jpeg) | markdownify }
+{{ '![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-support_images/Localization-and-Translation-support_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: In order to render the localized OLAP Chart, you are required to reset the content available in both_
 
@@ -172,7 +172,7 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 The output for the LocalizedOlapChart is as follows:
 
-{ ![C:/Users/labuser/Desktop/a.png](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png)' | markdownify }}
 {:.image }
 
 

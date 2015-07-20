@@ -19,7 +19,7 @@ ASP.NET MVC MaskEdit control allows you to set the type and format of the input 
 
 The following screenshot illustrates the functionality of a MaskEdit. Using MaskEdit control textbox, you can enter only the assigned text format and no other formats. The input mask prevents you from entering invalid characters into the control. In this application, MobileNumber textbox has a mask value.
 
-{ ![Description: C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![Description: C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -36,105 +36,105 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-        &lt;div class="control"&gt;
+        <div class="control">
 
-            &lt;table class="editors"&gt;
+            <table class="editors">
 
-                &lt;tbody&gt;
+                <tbody>
 
-                    &lt;tr&gt;
+                    <tr>
 
-                        &lt;td&gt;
+                        <td>
 
-                            &lt;label&gt;
+                            <label>
 
                                 Kilometers</label>
 
-                        &lt;/td&gt;
+                        </td>
 
-                        &lt;td&gt;
+                        <td>
 
                             @Html.EJ().NumericTextbox("numeric").Value("1000")
 
-                        &lt;/td&gt;
+                        </td>
 
-                    &lt;/tr&gt;
+                    </tr>
 
-                    &lt;tr&gt;
+                    <tr>
 
-                        &lt;td&gt;
+                        <td>
 
-                            &lt;label&gt;
+                            <label>
 
                                 Service Tax</label>
 
-                        &lt;/td&gt;
+                        </td>
 
-                        &lt;td&gt;
+                        <td>
 
                             @Html.EJ().PercentageTextbox("percent").Value("100")
 
-                        &lt;/td&gt;
+                        </td>
 
-                    &lt;/tr&gt;
+                    </tr>
 
-                    &lt;tr&gt;
+                    <tr>
 
-                        &lt;td&gt;
+                        <td>
 
-                            &lt;label&gt;
+                            <label>
 
                                 Fare</label>
 
-                        &lt;/td&gt;
+                        </td>
 
-                        &lt;td&gt;
+                        <td>
 
                             @Html.EJ().CurrencyTextbox("currency").Value("50")
 
-                        &lt;/td&gt;
+                        </td>
 
-                    &lt;/tr&gt;
+                    </tr>
 
-                    &lt;tr&gt;
+                    <tr>
 
-                        &lt;td&gt;
+                        <td>
 
-                            &lt;label&gt;
+                            <label>
 
                                 Mobile No</label>
 
-                        &lt;/td&gt;
+                        </td>
 
-                        &lt;td&gt;
+                        <td>
 
  @*creating MaskEdit control*@                           @Html.EJ().MaskEdit("maskedit").MaskFormat("99-999-99999").InputMode(InputMode.Text) 
 
-                        &lt;/td&gt;
+                        </td>
 
-                    &lt;/tr&gt;
+                    </tr>
 
-                &lt;/tbody&gt;
+                </tbody>
 
-            &lt;/table&gt;
+            </table>
 
-            &lt;div class="paybill"&gt;
+            <div class="paybill">
 
                 @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("PayBill")
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
 3. Add the following styles to show MaskEdit and place it in a particular position.
 
 
 
-    &lt;style&gt;
+    <style>
 
         .frame {
 
@@ -186,11 +186,11 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 Execute the above code example to render the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -215,49 +215,49 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-  &lt;div class="frame"&gt;
+  <div class="frame">
 
-        &lt;div class="control"&gt;
+        <div class="control">
 
-            &lt;table class="editors"&gt;
+            <table class="editors">
 
-                &lt;tbody&gt;
+                <tbody>
 
-                    &lt;tr&gt;
+                    <tr>
 
-                        &lt;td&gt;
+                        <td>
 
-                            &lt;label&gt;
+                            <label>
 
                                 Product Key</label>
 
-                        &lt;/td&gt;
+                        </td>
 
-                        &lt;td&gt;
+                        <td>
 
-                         @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for productkey validation*@                        &lt;/td&gt;
+                         @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for productkey validation*@                        </td>
 
-                    &lt;/tr&gt;
+                    </tr>
 
-                &lt;/tbody&gt;
+                </tbody>
 
-            &lt;/table&gt;
+            </table>
 
-            &lt;div class="productkey"&gt;
+            <div class="productkey">
 
                 @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Submit")
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
 3. Add the following styles to show the MaskEdit, and place it in a particular position.
 
 
 
-    &lt;style&gt;
+    <style>
 
         .frame {
 
@@ -309,13 +309,13 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
 4. Run the above code example to render the following output. 
 
-{ ![C:/Users/ApoorvahR/Desktop/7.png](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/7.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

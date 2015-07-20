@@ -248,7 +248,7 @@ recurrenceRule: "RecurrenceRule"
 
 )
 
-&lt;script&gt;
+<script>
 
 function onCreate(args) {
 
@@ -256,7 +256,7 @@ this._dataManager.dataSource.crudUrl = "/Home/CRUD";
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -415,7 +415,7 @@ public DefaultSchedule Value { get; set; }
 
 
 
-{ ![](Appointment_images/Appointment_img1.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -530,7 +530,7 @@ Public string RecurrenceRule;
 
 The following screenshot displays the Schedule control with ReadOnly property set to true,
 
-{ ![C:/Users/maheshp/Pictures/sshot-3.png](Appointment_images/Appointment_img2.png) | markdownify }
+{{ '![C:/Users/maheshp/Pictures/sshot-3.png](Appointment_images/Appointment_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -554,7 +554,7 @@ The following screenshot displays the appointment window filled with the specifi
 
 
 
-{ ![](Appointment_images/Appointment_img3.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -562,7 +562,7 @@ The following screenshot displays the appointment window filled with the specifi
 
 
 
-{ ![](Appointment_images/Appointment_img4.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -577,13 +577,13 @@ Using quick appointment window
 
 
 
-{ ![](Appointment_images/Appointment_img5.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img5.png)' | markdownify }}
 {:.image }
 
 
 * When the appointment is saved, the Schedule control displays the created appointment as follows,
 
-{ ![](Appointment_images/Appointment_img6.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -602,7 +602,7 @@ The following screenshot displays the Contextmenu with a “New Appointment” o
 
 
 
-{ ![](Appointment_images/Appointment_img7.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -618,13 +618,13 @@ Using Normal Appointment window
 
 The following screenshot depicts the edit appointment window with its filled-in details.
 
-{ ![](Appointment_images/Appointment_img8.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img8.png)' | markdownify }}
 {:.image }
 
 
 * In the above image, the end time has been changed from 8.00 AM to 7.00 AM, and once the changes are done, click the Done button. The appointment duration is changed and looks as follows.
 
-{ ![](Appointment_images/Appointment_img9.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -637,14 +637,14 @@ The following screenshot displays the Schedule control with the quick appointmen
 
 
 
-{ ![](Appointment_images/Appointment_img10.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img10.png)' | markdownify }}
 {:.image }
 
 
 * Click on the Edit Appointment option to open the edit appointment window as follows.
 
 
-{ ![](Appointment_images/Appointment_img11.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -652,7 +652,7 @@ The following screenshot displays the Schedule control with the quick appointmen
 
 
 
-{ ![](Appointment_images/Appointment_img12.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -662,7 +662,7 @@ Using Context menu
 
 * To edit the appointments using context menu option, right-click on the appointment to be edited and then select Open Appointment option from the context menu that pops up as displayed in the following screenshot.
 
-{ ![](Appointment_images/Appointment_img13.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -672,7 +672,7 @@ _Figure_ _66__:  schedule with open appointment using context menu._
 
 
 
-{ ![](Appointment_images/Appointment_img14.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -690,7 +690,7 @@ Using quick appointment window
 
 
 
-{ ![](Appointment_images/Appointment_img15.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -700,7 +700,7 @@ _Figure_ _69__: schedule with Appointment deletion._
 
 
 
-{ ![](Appointment_images/Appointment_img16.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -712,7 +712,7 @@ Using Context menu
 
 
 
-{ ![](Appointment_images/Appointment_img17.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img17.png)' | markdownify }}
 {:.image }
 
 
@@ -727,13 +727,13 @@ _Figure_ _71__: schedule with appointment deletion using context menu._
 
 
 
-{ ![](Appointment_images/Appointment_img18.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img18.png)' | markdownify }}
 {:.image }
 
 
 * Save the appointment so that the All-day appointment will be displayed in the All-day row as follows.
 
-{ ![](Appointment_images/Appointment_img19.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img19.png)' | markdownify }}
 {:.image }
 
 
@@ -765,7 +765,7 @@ The following code explains how the appointment resizing option is enabled for t
 
 
 
-{ ![](Appointment_images/Appointment_img20.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img20.png)' | markdownify }}
 {:.image }
 
 
@@ -775,7 +775,7 @@ _Figure_ _75__: schedule with appointment resize._
 
 
 
-{ ![](Appointment_images/Appointment_img21.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img21.png)' | markdownify }}
 {:.image }
 
 
@@ -805,7 +805,7 @@ Use the following code example to search the appointment on the schedule datasou
 <table>
 <tr>
 <td>
-[Razor]&lt;input id="txtSearch" type="text" /&gt;&lt;input id="btnSearch" class="searchApp" type="button" value="Search" /&gt;&lt;div&gt;@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)&lt;/div&gt;&lt;div id="grid1"&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;$(function () {// To bind the click event to the button$('.searchApp').bind("click", function () {var _searchString = $("#txtSearch").val();var schObj = $("#Schedule1").data("ejSchedule");// method to retrieve the appointment based on search stringvar result = schObj.searchAppointments(_searchString);showResult(result, _searchString);});});// method to show the result in a gridfunction showResult(list, _searchString) {if (!ej.isNullOrUndefined(list) && list.length != 0 && _searchString != "") {$("#grid1").show();$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");$("#grid1").ejGrid({dataSource: list,allowPaging: true,});}}&lt;/script&gt;</td></tr>
+[Razor]<input id="txtSearch" type="text" /><input id="btnSearch" class="searchApp" type="button" value="Search" /><div>@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)</div><div id="grid1"></div><script type="text/javascript">$(function () {// To bind the click event to the button$('.searchApp').bind("click", function () {var _searchString = $("#txtSearch").val();var schObj = $("#Schedule1").data("ejSchedule");// method to retrieve the appointment based on search stringvar result = schObj.searchAppointments(_searchString);showResult(result, _searchString);});});// method to show the result in a gridfunction showResult(list, _searchString) {if (!ej.isNullOrUndefined(list) && list.length != 0 && _searchString != "") {$("#grid1").show();$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");$("#grid1").ejGrid({dataSource: list,allowPaging: true,});}}</script></td></tr>
 <tr>
 <td>
 [Controller]// follow the code as same as declared in Read Only part</td></tr>
@@ -814,7 +814,7 @@ Use the following code example to search the appointment on the schedule datasou
 
 Execute the above code to render the following output.
 
-{ ![](Appointment_images/Appointment_img22.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img22.png)' | markdownify }}
 {:.image }
 
 
@@ -826,7 +826,7 @@ _Figure_ _125__: Schedule with appointment search_
 
 
 
-{ ![](Appointment_images/Appointment_img23.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img23.png)' | markdownify }}
 {:.image }
 
 
@@ -839,7 +839,7 @@ Using Filters
 <table>
 <tr>
 <td>
-<br>[Razor]&lt;input id="btnSearch" class="searchApp" type="button" value="Search" /&gt;&lt;div&gt;@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)&lt;/div&gt;&lt;div id="grid1"&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt;$(function () {// Method to bind the button click event$('.searchApp').bind("click", function () {// Add the filter data as like in the below formatvar filter=[{field: "Subject",operator: "contains",value: "gold",predicate: "or"},{field: "Recurrence",operator: "contains",value: "false",predicate: "or"}];var schObj = $("#Schedule1").data("ejSchedule");// Method to get the Filtered appointmentvar result = schObj.filterAppointments(filter);showResult(result);});});function showResult(list) {if (!ej.isNullOrUndefined(list) && list.length != 0) {$("#Schedule1").hide();$("#grid1").show();$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");$("#grid1").ejGrid({dataSource: list,allowPaging: true,});}}&lt;/script&gt;</td></tr>
+<br>[Razor]<input id="btnSearch" class="searchApp" type="button" value="Search" /><div>@(Html.EJ().Schedule("Schedule1")// Add the necessary schedule properties here)</div><div id="grid1"></div><script type="text/javascript">$(function () {// Method to bind the button click event$('.searchApp').bind("click", function () {// Add the filter data as like in the below formatvar filter=[{field: "Subject",operator: "contains",value: "gold",predicate: "or"},{field: "Recurrence",operator: "contains",value: "false",predicate: "or"}];var schObj = $("#Schedule1").data("ejSchedule");// Method to get the Filtered appointmentvar result = schObj.filterAppointments(filter);showResult(result);});});function showResult(list) {if (!ej.isNullOrUndefined(list) && list.length != 0) {$("#Schedule1").hide();$("#grid1").show();$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");$("#grid1").ejGrid({dataSource: list,allowPaging: true,});}}</script></td></tr>
 <tr>
 <td>
 [Controller]public ActionResult Print(){var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();ViewBag.dataSource = DataSource;return View();}</td></tr>
@@ -848,7 +848,7 @@ Using Filters
 
 Execute the above code to render the following output.
 
-{ ![](Appointment_images/Appointment_img24.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img24.png)' | markdownify }}
 {:.image }
 
 
@@ -858,7 +858,7 @@ _Figure_ _127__: Schedule with search appointment filters_
 
 
 
-{ ![](Appointment_images/Appointment_img25.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img25.png)' | markdownify }}
 {:.image }
 
 
@@ -889,7 +889,7 @@ _Figure_ _128__: Grid with appointment search result_
 
 
 
-{ ![](Appointment_images/Appointment_img26.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img26.png)' | markdownify }}
 {:.image }
 
 
@@ -899,7 +899,7 @@ _Figure_ _72__: schedule with appointment drag and drop._
 
 
 
-{ ![](Appointment_images/Appointment_img27.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img27.png)' | markdownify }}
 {:.image }
 
 
@@ -909,7 +909,7 @@ _Figure_ _73__: schedule with appointment while dragging in the cell._
 
 
 
-{ ![](Appointment_images/Appointment_img28.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img28.png)' | markdownify }}
 {:.image }
 
 
@@ -935,7 +935,7 @@ _Figure_ _74__:  schedule with appointment dropped in the cell._
 
 * To create a recurrence appointment, you can select (check) the repeat option in the normal appointment window else you can select the New Recurring Appointment option from the Contextmenu that pops up when you right-click on the Schedule cells as follows.
 
-{ ![](Appointment_images/Appointment_img29.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img29.png)' | markdownify }}
 {:.image }
 
 
@@ -945,7 +945,7 @@ _Figure_ _77__: schedule with new recurrence appointment._
 
 
 
-{ ![](Appointment_images/Appointment_img30.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img30.png)' | markdownify }}
 {:.image }
 
 
@@ -955,7 +955,7 @@ _Figure_ _78__: schedule with creating the new recurrence._
 
 
 
-{ ![](Appointment_images/Appointment_img31.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img31.png)' | markdownify }}
 {:.image }
 
 
@@ -963,7 +963,7 @@ _Figure_ _79__: schedule with after created the new recurrence._
 
 * The recurrence appointment after getting saved to the Schedule is displayed as follows.
 
-{ ![](Appointment_images/Appointment_img32.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img32.png)' | markdownify }}
 {:.image }
 
 
@@ -974,7 +974,7 @@ _Figure_ _80__: schedule with after created the new recurrence appointment in we
 
 
 
-{ ![](Appointment_images/Appointment_img33.png) | markdownify }
+{{ '![](Appointment_images/Appointment_img33.png)' | markdownify }}
 {:.image }
 
 

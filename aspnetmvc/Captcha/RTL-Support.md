@@ -23,7 +23,7 @@ The following code example is used to render the Captcha with RTL support.
 
 2. The following screenshot illustrates the Captcha with RTL support. 
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

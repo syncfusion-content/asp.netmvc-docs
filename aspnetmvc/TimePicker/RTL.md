@@ -31,7 +31,7 @@ The following screenshot illustrates a TimePicker control when EnableRTL is set 
 
 
 
-{ ![](RTL_images/RTL_img1.png) | markdownify }
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
 {:.image }
 
 

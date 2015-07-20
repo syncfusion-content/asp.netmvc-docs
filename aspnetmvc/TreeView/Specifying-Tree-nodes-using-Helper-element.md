@@ -27,7 +27,7 @@ The following steps explain configuring the template option for TreeView.
 [View]\\ To configure TreeView in the CSHTML page@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();  htmlAttribute.Add("class", "cont-del");  }@Html.EJ().TreeView("treeview").Items(items =>                {                    items.Add().Text("Favorites").Expanded(true).Children(child =>                    {                        child.Add().Text("Desktop").HtmlAttributes(htmlAttribute);                        child.Add().Text("Downloads").HtmlAttributes(htmlAttribute);                        child.Add().Text("Recent places").HtmlAttributes(htmlAttribute);                    });                    items.Add().Text("Libraries").Expanded(true).Children(child =>                   {                       child.Add().Text("Documents").Children(child1 =>                            {                                child1.Add().Text("My Documents").HtmlAttributes(htmlAttribute);                                child1.Add().Text("Public Documents").HtmlAttributes(htmlAttribute);                            });                       child.Add().Text("Pictures").Children(child1 =>                        {                            child1.Add().Text("My Pictures").HtmlAttributes(htmlAttribute);                            child1.Add().Text("Public Pictures").HtmlAttributes(htmlAttribute);                        });                       child.Add().Text("Music").Children(child1 =>                       {                           child1.Add().Text("My Music").HtmlAttributes(htmlAttribute);                           child1.Add().Text("Public Music").HtmlAttributes(htmlAttribute);                       });                       child.Add().Text("Subversion");                   });                    items.Add().Text("Computer").Children(child =>                    {                        child.Add().Text("Folder(C)").HtmlAttributes(htmlAttribute);                        child.Add().Text("Folder(D)").HtmlAttributes(htmlAttribute);                        child.Add().Text("Folder(E)").HtmlAttributes(htmlAttribute);                    });                })</td></tr>
 <tr>
 <td>
-[JavaScript]&lt;script&gt;    $(function () {       $("#treeview").ejTreeView();       var treeObj = $("#treeview").data("ejTreeView");       $("#treeview").find(".cont-del").bind("click", function (e) {                treeObj.removeNode($(e.target));       });    });&lt;/script&gt;</td></tr>
+[JavaScript]<script>    $(function () {       $("#treeview").ejTreeView();       var treeObj = $("#treeview").data("ejTreeView");       $("#treeview").find(".cont-del").bind("click", function (e) {                treeObj.removeNode($(e.target));       });    });</script></td></tr>
 </table>
 
 
@@ -39,7 +39,7 @@ The following steps explain configuring the template option for TreeView.
 
 [CSS]
 
-&lt;style class="cssStyles"&gt;
+<style class="cssStyles">
 
         .cont-details {
 
@@ -77,7 +77,7 @@ The following steps explain configuring the template option for TreeView.
 
             }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -87,7 +87,7 @@ The TreeView control template displays the following output.
 
 
 
-{ ![](Specifying-Tree-nodes-using-Helper-element_images/Specifying-Tree-nodes-using-Helper-element_img1.png) | markdownify }
+{{ '![](Specifying-Tree-nodes-using-Helper-element_images/Specifying-Tree-nodes-using-Helper-element_img1.png)' | markdownify }}
 {:.image }
 
 

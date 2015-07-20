@@ -15,7 +15,7 @@ This section explains briefly on how to create a Tile control in your applicatio
 
 The Essential Studio for ASP.NET MVC Web Tiles are simple, opaque rectangles or squares that are arrayed on the Start screen in a grid-like pattern and it can be either static or live. Tapping or selecting a Tile launches the app or other experience that is represented by the Tile.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -41,7 +41,7 @@ The following steps guide you to add group of Tiles for creating a home page tha
 
 4. Run the application to render the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -49,11 +49,11 @@ In this scenario, a home page is designed using tile for easy navigation. Theref
 
 Refer to the following code example.
 
-&lt;div id="tile" style="margin-top: 45px;"&gt;
+<div id="tile" style="margin-top: 45px;">
 
-        &lt;div class="group"&gt;
+        <div class="group">
 
-            &lt;div class="column"&gt;
+            <div class="column">
 
                 @Html.EJ().Tile("tile1").ImagePosition(TileImagePosition.Fill).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/ web/content/tile/people_1.png").Text("People")
 
@@ -69,9 +69,9 @@ Refer to the following code example.
 
                 @Html.EJ().Tile("tile7").TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/map.png").Text("Maps")
 
-            &lt;/div&gt;
+            </div>
 
-            &lt;div class="column"&gt;
+            <div class="column">
 
                 @Html.EJ().Tile("tile9").ImagePosition(TileImagePosition.Fill).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/people_2.png").Text("People")
 
@@ -79,11 +79,11 @@ Refer to the following code example.
 
                 @Html.EJ().Tile("tile11").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Wide).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/weather.png").Text("Weather")
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;    
+    </div>    
 
 
 
@@ -91,7 +91,7 @@ Refer to the following code example.
 
 Run the application to render the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

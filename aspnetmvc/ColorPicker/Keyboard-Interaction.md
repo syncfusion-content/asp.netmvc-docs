@@ -77,7 +77,7 @@ The following steps explain how you can enable keyboard interaction for ColorPic
 [CSHTML]@*In the CSHTML page, add the Html helpers to render ColorPicker widget and enable keyboard interaction by the accesskey property*@ @Html.EJ().ColorPicker("colorPicker").Value("#278787")</td></tr>
 <tr>
 <td>
-[JAVASCRIPT]&lt;script&gt;    jQuery(function ($) {                $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#colorPickerWrapper").focus();                }            });    });&lt;/script&gt;</td></tr>
+[JAVASCRIPT]<script>    jQuery(function ($) {                $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#colorPickerWrapper").focus();                }            });    });</script></td></tr>
 </table>
 
 
@@ -85,7 +85,7 @@ The following screenshot displays the output of the above code example.
 
 
 
-{ ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png) | markdownify }
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -75,7 +75,7 @@ Data available in client-side (local data) can be bound with Bullet Graph using 
 
 The following screenshot displays Bullet Graph with local data generated using Javascript
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -127,7 +127,7 @@ Bullet Graph provides option to bind data from a remote server using ejDataManag
 
 
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
         //Creating data manager instance
 
@@ -161,13 +161,13 @@ Bullet Graph provides option to bind data from a remote server using ejDataManag
 
         });
 
-        &lt;/script&gt;
+        </script>
 
 
 
 The following screenshot displays a Bullet Graph bounded with data from a remote server
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 

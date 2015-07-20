@@ -77,7 +77,7 @@ You can customize the Tooltip by overriding the existing style attributes and re
 
 [CSS]
 
-&lt;style&gt;
+<style>
 
 .e-olapgauge-tooltip {
 
@@ -99,13 +99,13 @@ You can customize the Tooltip by overriding the existing style attributes and re
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
 
 
-{ ![](Tooltip_images/Tooltip_img1.png) | markdownify }
+{{ '![](Tooltip_images/Tooltip_img1.png)' | markdownify }}
 {:.image }
 
 

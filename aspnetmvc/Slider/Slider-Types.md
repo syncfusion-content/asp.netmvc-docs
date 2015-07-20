@@ -63,7 +63,7 @@ Execute the above code example to render the following output.
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/ss3.PNG](Slider-Types_images/Slider-Types_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/ss3.PNG](Slider-Types_images/Slider-Types_img1.png)' | markdownify }}
 {:.image }
 
 

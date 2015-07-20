@@ -33,13 +33,13 @@ The following steps explain you how to group data items in the DropDownList cont
 
 
 
-{ ![](Grouping-Support_images/Grouping-Support_img1.png) | markdownify }
+{{ '![](Grouping-Support_images/Grouping-Support_img1.png)' | markdownify }}
 {:.image }
 
 
 Grouping Support using UL and LI structure
 
-Another way to group DropDownList is by using UL and LI structure. Here, you have to specify the group category in the &lt;span&gt; tag. The ID of the &lt;div&gt; tag should be given as the TargetId for the DropDownList control. The following code example illustrates how to achieve Grouping in DropDownList control by using UL and LI structure.
+Another way to group DropDownList is by using UL and LI structure. Here, you have to specify the group category in the <span> tag. The ID of the <div> tag should be given as the TargetId for the DropDownList control. The following code example illustrates how to achieve Grouping in DropDownList control by using UL and LI structure.
 
 1. Add the input element and the UL and LI structures to group the DropDownList control.
 
@@ -51,9 +51,9 @@ Another way to group DropDownList is by using UL and LI structure. Here, you hav
 
 @Html.EJ().DropDownList("dropdownlist").TargetID(“vegetablelist"). AllowGrouping(true)
 
-                        &lt;div id="vegetablelist"&gt;
+                        <div id="vegetablelist">
 
-                            &lt;ul&gt;
+                            <ul>
 
                                 <span>Leafy and Salad</span>
 
@@ -65,7 +65,7 @@ Another way to group DropDownList is by using UL and LI structure. Here, you hav
 
                                 <li>Wheatgrass</li>
 
-                                <li>Yarrow &lt;/li&gt;
+                                <li>Yarrow </li>
 
                                 <span>Beans</span>
 
@@ -85,13 +85,13 @@ Another way to group DropDownList is by using UL and LI structure. Here, you hav
 
                                 <li>Carrot</li>
 
-                            &lt;/ul&gt;
+                            </ul>
 
-                        &lt;/div&gt;
+                        </div>
 
 
 
-{ ![](Grouping-Support_images/Grouping-Support_img2.png) | markdownify }
+{{ '![](Grouping-Support_images/Grouping-Support_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -17,7 +17,7 @@ The DropDownList control provides a list of options and allows you to choose an 
 
 The following screen shot illustrates the functionality of DropDownList control with a Cascading Feature.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -47,29 +47,29 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 [layout._cshtml]
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
-
-
-
-    &lt;!--Scripts--&gt;
-
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt;&lt;/script&gt;
+    <!--Scripts-->
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-&lt;/head&gt;
+
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+</head>
 
 
 
@@ -83,55 +83,55 @@ Create a CSHTML file in View page and add the following code sample to it.
 
 [CSHTML]
 
-&lt;div class="content"&gt;
+<div class="content">
 
-    &lt;div class="control"&gt;
+    <div class="control">
 
-        &lt;div class="ball-icon"&gt;&lt;/div&gt;
+        <div class="ball-icon"></div>
 
         <div class="ball-txt" style="">WORLD CUP FOOTBALL</div>
 
-        &lt;br /&gt;
+        <br />
 
-        &lt;table&gt;
+        <table>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td class="tdcls"&gt;&lt;span class="txt"&gt;
+                <td class="tdcls"><span class="txt">
 
-                    <label>Select Group</label>&lt;/span&gt;&lt;/td&gt;
+                    <label>Select Group</label></span></td>
 
-                &lt;td class="tdcls"&gt;&lt;span class="txt"&gt;
+                <td class="tdcls"><span class="txt">
 
-                    <label>Select Country</label>&lt;/span&gt;&lt;/td&gt;
+                    <label>Select Country</label></span></td>
 
-            &lt;/tr&gt;
+            </tr>
 
-            &lt;tr&gt;
+            <tr>
 
-                &lt;td class="tdcls"&gt;
+                <td class="tdcls">
 
                 @Html.EJ().DropDownList("GroupsList").WatermarkText("group")
 
-                &lt;td class="tdcls"&gt;
+                <td class="tdcls">
 
                 @Html.EJ().DropDownList("CountryList").WatermarkText("country")
 
-            &lt;/tr&gt;
+            </tr>
 
-        &lt;/table&gt;
+        </table>
 
 
 
-        &lt;div class="votebox"&gt;
+        <div class="votebox">
 
             @Html.EJ().Button("voter").Text("Vote").CssClass("e-btn")
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -143,7 +143,7 @@ Create a CSHTML file in View page and add the following code sample to it.
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .content {
 
@@ -233,7 +233,7 @@ Create a CSHTML file in View page and add the following code sample to it.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -243,7 +243,7 @@ Create a CSHTML file in View page and add the following code sample to it.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -261,19 +261,19 @@ The following code example explains you on how to configure the Data Source.
 
 [CSHTML]
 
-&lt;tr&gt;
+<tr>
 
-                &lt;td class="tdcls"&gt;
+                <td class="tdcls">
 
-&lt;!—Declaration for DropDownList with Datasource--&gt;
+<!—Declaration for DropDownList with Datasource-->
 
                 @Html.EJ().DropDownList("GroupsList").Datasource(ds =>ds.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('TeamGroups')").DropDownListFields(f=>f.Text("GroupName").Value("GroupId")).WatermarkText("group")
 
-                &lt;td class="tdcls"&gt;
+                <td class="tdcls">
 
                 @Html.EJ().DropDownList("CountryList").Datasource(ds =>ds.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('TeamCountries')").PopupWidth("200px").DropDownListFields(f=>f.Text("CountryName").Value("CountryId").SpriteCssClass ("CountryFlag")).WatermarkText("country")
 
-            &lt;/tr&gt;
+            </tr>
 
 
 
@@ -281,7 +281,7 @@ Execute the above code example to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -601,13 +601,13 @@ Execute the above code sample to render the following DropDownList with DataSour
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -623,31 +623,31 @@ The following code example explains you on how to set the Cascading Option.
 
 [CSHTML]
 
-&lt;!--use the following codes with above Html --&gt;
+<!--use the following codes with above Html -->
 
-&lt;tr&gt;
+<tr>
 
-    &lt;td class="tdcls"&gt;
+    <td class="tdcls">
 
-      &lt;!—Declaration for DropDownList with Datasource--&gt;
+      <!—Declaration for DropDownList with Datasource-->
 
-       @Html.EJ().DropDownList("GroupsList").Datasource(ds => ds.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('TeamGroups')").DropDownListFields(f => f.Text("GroupName").Value("GroupId")).CascadeTo("CountryList").WatermarkText("group")&lt;!--Set DropDownList id to load the dynamic data  --&gt;
+       @Html.EJ().DropDownList("GroupsList").Datasource(ds => ds.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('TeamGroups')").DropDownListFields(f => f.Text("GroupName").Value("GroupId")).CascadeTo("CountryList").WatermarkText("group")<!--Set DropDownList id to load the dynamic data  -->
 
 
 
-     &lt;td class="tdcls"&gt;
+     <td class="tdcls">
 
        @Html.EJ().DropDownList("CountryList").Datasource(ds => ds.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('TeamCountries')").PopupWidth("200px").DropDownListFields(f => f.Text("CountryName").Value("CountryId").SpriteCssClass("CountryFlag")).WatermarkText("country")
 
-     &lt;/td&gt;           
+     </td>           
 
- &lt;/tr&gt;
+ </tr>
 
 
 
 Execute the above code example to render the DropDownList with Cascading Option.  
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -655,7 +655,7 @@ Initially, you can select the group from the popup of the first DropDownList. Af
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -667,7 +667,7 @@ _Figure_ _17__: Cascading DropDown Apperance for Select country_
 
 From the DropDownList called Country, you can select the desired country.
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -681,13 +681,13 @@ The following code sample explains how to set the Vote process in the DropDownLi
 
 [CSHTML]
 
-&lt;!--use the following codes with Html --&gt;
+<!--use the following codes with Html -->
 
-&lt;div class="votebox"&gt;
+<div class="votebox">
 
             @Html.EJ().Button("voter").Text("Vote").CssClass("e-btn").Width("80px").Height("25px").ShowRoundedCorner(true).PrefixIcon("e-uiLight e-userlogin").ContentType(ContentType.TextAndImage).ClientSideEvents(e => e.Click("selectVoted"))
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -697,7 +697,7 @@ Include the following script
 
 [Script]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     function selectVoted() {   
 
@@ -709,13 +709,13 @@ Include the following script
 
     }	
 
-&lt;/script&gt;
+</script>
 
 
 
 Execute the above code sample to display the DropDownList widgets. Select the values and click on Vote button. The button click event is processed and the values are displayed as illustrated in the following screenshot.     
 
-{ ![](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 

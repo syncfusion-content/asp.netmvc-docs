@@ -22,7 +22,7 @@ This example explains you on how to add the customized appointment window using 
 
 
 
-@section SampleHeading{&lt;span class="sampleName"&gt; Schedule / Default</span>}
+@section SampleHeading{<span class="sampleName"> Schedule / Default</span>}
 
 @section ControlsSection{
 
@@ -54,7 +54,7 @@ This example explains you on how to add the customized appointment window using 
 
 )
 
-&lt;style&gt;
+<style>
 
 .customcheck {
 
@@ -72,119 +72,119 @@ background-color: #FF8A8A;
 
 }
 
-&lt;/style&gt;
+</style>
 
-&lt;div id="customWindow" style="display: none"&gt;
+<div id="customWindow" style="display: none">
 
-&lt;form id="custom"&gt;
+<form id="custom">
 
-&lt;table width="100%" cellpadding="5"&gt;
+<table width="100%" cellpadding="5">
 
-&lt;tbody&gt;
+<tbody>
 
-&lt;tr style="display: none"&gt;
+<tr style="display: none">
 
 <td>Id:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;input id="customId" type="text" name="Id" /&gt;
+<input id="customId" type="text" name="Id" />
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>Subject:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;input id="subject" type="text" value="" name="Subject" onfocus="temp()" style="width: 100%" /&gt;
+<input id="subject" type="text" value="" name="Subject" onfocus="temp()" style="width: 100%" />
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>Description:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"&gt;&lt;/textarea&gt;
+<textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>StartTime:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
 @Html.EJ().DateTimePicker("StartTime").Width("150px")
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>EndTime:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
 @Html.EJ().DateTimePicker("EndTime").Width("150px")
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
-&lt;td colspan="3"&gt;
+<td colspan="3">
 
-<div class="customcheck">AllDay:&lt;/div&gt;
+<div class="customcheck">AllDay:</div>
 
-&lt;div class="customcheck"&gt;
+<div class="customcheck">
 
-&lt;input id="allday" type="checkbox" name="AllDay" /&gt;
+<input id="allday" type="checkbox" name="AllDay" />
 
-&lt;/div&gt;
+</div>
 
-<div class="customcheck">Recurrence:&lt;/div&gt;
+<div class="customcheck">Recurrence:</div>
 
-&lt;div&gt;
+<div>
 
-&lt;input id="recurrence" type="checkbox" name="Recurrence" onchange="recurCheck()" /&gt;
+<input id="recurrence" type="checkbox" name="Recurrence" onchange="recurCheck()" />
 
-&lt;/div&gt;
+</div>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr class="recurrence" style="display: none"&gt;
+<tr class="recurrence" style="display: none">
 
 <td>Type:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
-&lt;select id="rType" name="freq"&gt;
+<select id="rType" name="freq">
 
 <option value="daily">Daily</option>
 
@@ -194,37 +194,37 @@ background-color: #FF8A8A;
 
 <option value="yearly">Yearly</option>
 
-&lt;/select&gt;
+</select>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;/tbody&gt;
+</tbody>
 
-&lt;/table&gt;
+</table>
 
-&lt;/form&gt;
+</form>
 
-&lt;div&gt;
+<div>
 
-&lt;button type="submit" onclick="save()"&gt;
+<button type="submit" onclick="save()">
 
 Submit</button>
 
-&lt;button type="submit" onclick="cancel()"&gt;
+<button type="submit" onclick="cancel()">
 
 Cancel</button>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
 }
 
 @section ScriptSection{
 
-&lt;script&gt;
+<script>
 
 $(function () {
 
@@ -458,7 +458,7 @@ $("#customWindow").ejDialog("close");
 
 }
 
-&lt;/script&gt;
+</script>
 
 }
 
@@ -468,7 +468,7 @@ Execute the above code and then double-click on the required Schedule cells. The
 
 
 
-{ ![](Customization_images/Customization_img1.png) | markdownify }
+{{ '![](Customization_images/Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -489,7 +489,7 @@ The following code example is added to the previous code example of appointment 
 
 
 
-@section SampleHeading{&lt;span class="sampleName"&gt; Schedule / Default</span>}
+@section SampleHeading{<span class="sampleName"> Schedule / Default</span>}
 
 @section ControlsSection{
 
@@ -521,7 +521,7 @@ The following code example is added to the previous code example of appointment 
 
 )
 
-&lt;style&gt;
+<style>
 
 .customcheck {
 
@@ -539,119 +539,119 @@ background-color: #FF8A8A;
 
 }
 
-&lt;/style&gt;
+</style>
 
-&lt;div id="customWindow" style="display: none"&gt;
+<div id="customWindow" style="display: none">
 
-&lt;form id="custom"&gt;
+<form id="custom">
 
-&lt;table width="100%" cellpadding="5"&gt;
+<table width="100%" cellpadding="5">
 
-&lt;tbody&gt;
+<tbody>
 
-&lt;tr style="display: none"&gt;
+<tr style="display: none">
 
 <td>Id:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;input id="customId" type="text" name="Id" /&gt;
+<input id="customId" type="text" name="Id" />
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>Subject:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;input id="subject" type="text" value="" name="Subject" onfocus="temp()" style="width: 100%" /&gt;
+<input id="subject" type="text" value="" name="Subject" onfocus="temp()" style="width: 100%" />
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>Description:
 
-&lt;/td&gt;
+</td>
 
-&lt;td colspan="2"&gt;
+<td colspan="2">
 
-&lt;textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"&gt;&lt;/textarea&gt;
+<textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>StartTime:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
 @Html.EJ().DateTimePicker("StartTime").Width("150px")
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
 <td>EndTime:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
 @Html.EJ().DateTimePicker("EndTime").Width("150px")
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr&gt;
+<tr>
 
-&lt;td colspan="3"&gt;
+<td colspan="3">
 
-<div class="customcheck">AllDay:&lt;/div&gt;
+<div class="customcheck">AllDay:</div>
 
-&lt;div class="customcheck"&gt;
+<div class="customcheck">
 
-&lt;input id="allday" type="checkbox" name="AllDay" /&gt;
+<input id="allday" type="checkbox" name="AllDay" />
 
-&lt;/div&gt;
+</div>
 
-<div class="customcheck">Recurrence:&lt;/div&gt;
+<div class="customcheck">Recurrence:</div>
 
-&lt;div&gt;
+<div>
 
-&lt;input id="recurrence" type="checkbox" name="Recurrence" onchange="recurCheck()" /&gt;
+<input id="recurrence" type="checkbox" name="Recurrence" onchange="recurCheck()" />
 
-&lt;/div&gt;
+</div>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;tr class="recurrence" style="display: none"&gt;
+<tr class="recurrence" style="display: none">
 
 <td>Type:
 
-&lt;/td&gt;
+</td>
 
-&lt;td&gt;
+<td>
 
-&lt;select id="rType" name="freq"&gt;
+<select id="rType" name="freq">
 
 <option value="daily">Daily</option>
 
@@ -661,37 +661,37 @@ background-color: #FF8A8A;
 
 <option value="yearly">Yearly</option>
 
-&lt;/select&gt;
+</select>
 
-&lt;/td&gt;
+</td>
 
-&lt;/tr&gt;
+</tr>
 
-&lt;/tbody&gt;
+</tbody>
 
-&lt;/table&gt;
+</table>
 
-&lt;/form&gt;
+</form>
 
-&lt;div&gt;
+<div>
 
-&lt;button type="submit" onclick="save()"&gt;
+<button type="submit" onclick="save()">
 
 Submit</button>
 
-&lt;button type="submit" onclick="cancel()"&gt;
+<button type="submit" onclick="cancel()">
 
 Cancel</button>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
 }
 
 @section ScriptSection{
 
-&lt;script&gt;
+<script>
 
 $(function () {
 
@@ -925,7 +925,7 @@ $("#customWindow").ejDialog("close");
 
 }
 
-&lt;/script&gt;
+</script>
 
 }
 
@@ -937,7 +937,7 @@ $("#customWindow").ejDialog("close");
 
 
 
-{ ![](Customization_images/Customization_img2.png) | markdownify }
+{{ '![](Customization_images/Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -1007,7 +1007,7 @@ Execute the above code to render the output as follows with the Schedule control
 
 
 
-{ ![](Customization_images/Customization_img3.png) | markdownify }
+{{ '![](Customization_images/Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -1082,7 +1082,7 @@ businessEndHour
 
 Execute the above code to render the following output that explains the highlighting of business hours in the Schedule control from 10.00am to 3.00pm.
 
-{ ![](Customization_images/Customization_img4.png) | markdownify }
+{{ '![](Customization_images/Customization_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -1139,7 +1139,7 @@ Execute the above code and the following screenshot displays the Schedule contro
 
 
 
-{ ![](Customization_images/Customization_img5.png) | markdownify }
+{{ '![](Customization_images/Customization_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -1196,7 +1196,7 @@ The following screenshot displays the Schedule control with the dateFormat set a
 
 
 
-{ ![C:/Users/karthigeyan/Desktop/a.png](Customization_images/Customization_img6.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/a.png](Customization_images/Customization_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -1252,7 +1252,7 @@ The following code example explains how to set the minimum and maximum date of t
 
 The following screenshot displays the Schedule control with MinDate and MaxDate set to 11/25/2014 and 12/4/2014, respectively.
 
-{ ![](Customization_images/Customization_img7.png) | markdownify }
+{{ '![](Customization_images/Customization_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -1287,7 +1287,7 @@ The following screenshot displays the Schedule control when time mode is set to 
 
 
 
-{ ![](Customization_images/Customization_img8.png) | markdownify }
+{{ '![](Customization_images/Customization_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -1308,7 +1308,7 @@ You can set the timezone to the Schedule control as follows.
 <table>
 <tr>
 <td>
-[Razor]&lt;style&gt;.e-monthappointment {height: auto !important;}&lt;/style&gt;@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).TimeZone("UTC +3:00").AppointmentSettings(fields => fields.Datasource(ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))&lt;script id="MyTemplate" type="text/x-jsrender"&gt;&lt;div style="height: 100%"&gt;&lt;div style="float: left; width: 50px;"&gt;{{:~format(StartTime)}}&lt;/div&gt;&lt;div&gt;&lt;div&gt;{{:”UTC +3:00” }}&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/script&gt;&lt;script&gt;function _getImages(date) {switch (new Date(date).getDay()) {case 0:return "&lt;img src='../images/schedule/cake.png'/&gt;"break;case 1:return "&lt;img src='../images/schedule/basketball.png'/&gt;"break;case 2:return "&lt;img src='../images/schedule/rugby.png'/&gt;"break;case 3:return "&lt;img src='../images/schedule/guitar.png'/&gt;"break;case 4:return "&lt;img src='../images/schedule/music.png'/&gt;"break;case 5:return "&lt;img src='../images/schedule/doctor.png'/&gt;"break;case 6:return "&lt;img src='../images/schedule/beach.png'/&gt;"break;}}$.views.helpers({ format: _getImages });&lt;/script&gt;}</td></tr>
+[Razor]<style>.e-monthappointment {height: auto !important;}</style>@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).TimeZone("UTC +3:00").AppointmentSettings(fields => fields.Datasource(ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))<script id="MyTemplate" type="text/x-jsrender"><div style="height: 100%"><div style="float: left; width: 50px;">{{:~format(StartTime)}}</div><div><div>{{:”UTC +3:00” }}<div></div></div></script><script>function _getImages(date) {switch (new Date(date).getDay()) {case 0:return "<img src='../images/schedule/cake.png'/>"break;case 1:return "<img src='../images/schedule/basketball.png'/>"break;case 2:return "<img src='../images/schedule/rugby.png'/>"break;case 3:return "<img src='../images/schedule/guitar.png'/>"break;case 4:return "<img src='../images/schedule/music.png'/>"break;case 5:return "<img src='../images/schedule/doctor.png'/>"break;case 6:return "<img src='../images/schedule/beach.png'/>"break;}}$.views.helpers({ format: _getImages });</script>}</td></tr>
 <tr>
 <td>
 [Controller]           // follow the code as same as declared in Read Only part</td></tr>
@@ -1337,7 +1337,7 @@ You can set the timezone to the Schedule control as follows.
 
 
 
-{ ![](Customization_images/Customization_img9.png) | markdownify }
+{{ '![](Customization_images/Customization_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -1358,7 +1358,7 @@ The following screenshot displays the Schedule control with the current time ind
 
 
 
-{ ![](Customization_images/Customization_img10.png) | markdownify }
+{{ '![](Customization_images/Customization_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -1404,7 +1404,7 @@ The following code example explains how to disable the current time indicator fr
 
 
 
-{ ![](Customization_images/Customization_img11.png) | markdownify }
+{{ '![](Customization_images/Customization_img11.png)' | markdownify }}
 {:.image }
 
 

@@ -69,7 +69,7 @@ The following steps describes you on how the events are added to the Dialog cont
 
 [CHTML]
 
-@{Html.EJ().Dialog("dialog").Title("WinRT").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.&lt;/div&gt;).Width(300).Height("200").ClientSideEvents(evt => evt.Create("onCreate").BeforeClose("onBeforeClose")
+@{Html.EJ().Dialog("dialog").Title("WinRT").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").ClientSideEvents(evt => evt.Create("onCreate").BeforeClose("onBeforeClose")
 
     .Close("onDialogClose").BeforeOpen("onBeforeOpen").Open("onOpen").Drag("onDrag").DragStart("onDragStart").DragStop("onDragStop").Resize("onResize")
 
@@ -93,7 +93,7 @@ The following steps describes you on how the events are added to the Dialog cont
 
 
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
         function onCreate(args) {
 
@@ -263,7 +263,7 @@ alert("Event triggered is " + args.type);
 
         }
 
-     &lt;/script&gt;
+     </script>
 
 
 
@@ -337,7 +337,7 @@ _Figure 29: Dialog triggered Resize and ResizeStart event_
 
 __
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png)' | markdownify }}
 {:.image }
 
 

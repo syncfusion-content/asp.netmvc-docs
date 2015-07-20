@@ -98,7 +98,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![C:/Users/karthigeyan/Desktop/p1.png](Priority_images/Priority_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/p1.png](Priority_images/Priority_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -133,7 +133,7 @@ The following code example illustrates on how to render priority feature with us
 
 .ShowLocationField(true)
 
-.PrioritySettings(eve => eve.Enable(true).Text("text").Id("id").Value("value").Template("&lt;div class='${value}'&gt;&lt;/div&gt;").Datasource((System.Collections.IEnumerable)ViewBag.Priority))  // To display the Priority option in the appointment window while passing custom datasource we need to mention the Template and DataSource like this
+.PrioritySettings(eve => eve.Enable(true).Text("text").Id("id").Value("value").Template("<div class='${value}'></div>").Datasource((System.Collections.IEnumerable)ViewBag.Priority))  // To display the Priority option in the appointment window while passing custom datasource we need to mention the Template and DataSource like this
 
 
 
@@ -202,7 +202,7 @@ public string value { set; get; }
 
 
 * And then need to define the styles to display the “priority icon/images (you can use your desired images)” with the priority options. 
-* The class name (while defining styles) should be the field name in template. For example if you define the template (ex: Template ("&lt;div class='${value}'&gt;&lt;/div&gt;")) then you need to define class with “value field and its value should be a class name (ex: critical)”. 
+* The class name (while defining styles) should be the field name in template. For example if you define the template (ex: Template ("<div class='${value}'></div>")) then you need to define class with “value field and its value should be a class name (ex: critical)”. 
 
 
 
@@ -216,7 +216,7 @@ The following code example illustrates how to define the css style while using t
 
 
 
-&lt;style&gt;
+<style>
 
 .critical,
 
@@ -260,7 +260,7 @@ background-position: 2px;
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -284,7 +284,7 @@ background-position: 2px;
 
 .ShowLocationField(true)
 
-.PrioritySettings(eve => eve.Enable(true).Text("text").Id("id").Value("value").Template("&lt;img class='eimg' src='../images/schedule/${value}.png' height='20px' width='20px'/&gt;").Datasource((System.Collections.IEnumerable)ViewBag.Priority))
+.PrioritySettings(eve => eve.Enable(true).Text("text").Id("id").Value("value").Template("<img class='eimg' src='../images/schedule/${value}.png' height='20px' width='20px'/>").Datasource((System.Collections.IEnumerable)ViewBag.Priority))
 
 // We can use the image tag directly to display the priority icon/image
 
@@ -362,7 +362,7 @@ On excuting the above mentioned codes will render the same output as follows.
 
 
 
-{ ![](Priority_images/Priority_img2.png) | markdownify }
+{{ '![](Priority_images/Priority_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -372,7 +372,7 @@ On excuting the above mentioned codes will render the same output as follows.
 
 
 
-{ ![](Priority_images/Priority_img3.png) | markdownify }
+{{ '![](Priority_images/Priority_img3.png)' | markdownify }}
 {:.image }
 
 

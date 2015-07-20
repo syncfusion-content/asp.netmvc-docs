@@ -45,7 +45,7 @@ The following screenshot shows the baseline in Gantt control.
 
 
 
-{ ![](Baseline_images/Baseline_img1.png) | markdownify }
+{{ '![](Baseline_images/Baseline_img1.png)' | markdownify }}
 {:.image }
 
 

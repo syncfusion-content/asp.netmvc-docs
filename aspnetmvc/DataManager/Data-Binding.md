@@ -97,7 +97,7 @@ public class HomeController : Controller
 
 The result of the above code example is illustrated as follows.
 
-__{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+__{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -145,7 +145,7 @@ OData is a standardized protocol for creating and consuming data. You can retrie
 
 The result of the above code example is illustrated as follows.__
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -157,7 +157,7 @@ You can refer to the following code example for consuming OData v4 services and 
 
 
 
-&lt;ej:DataManager ID="FlatData" runat="server" URL="http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/" CrossDomain="true" /&gt;
+<ej:DataManager ID="FlatData" runat="server" URL="http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/" CrossDomain="true" />
 
 
 
@@ -167,21 +167,21 @@ You can refer to the following code example for consuming OData v4 services and 
 
 
 
-            &lt;Columns&gt;
+            <Columns>
 
-                &lt;ej:Column Field="OrderID" HeaderText="Order ID" IsPrimaryKey="True" TextAlign="Right" Width="75" /&gt;
+                <ej:Column Field="OrderID" HeaderText="Order ID" IsPrimaryKey="True" TextAlign="Right" Width="75" />
 
-                &lt;ej:Column Field="CustomerID" HeaderText="Customer ID" Width="75" /&gt;
+                <ej:Column Field="CustomerID" HeaderText="Customer ID" Width="75" />
 
-                &lt;ej:Column Field="EmployeeID" HeaderText="Employee ID" Width="75" /&gt;
+                <ej:Column Field="EmployeeID" HeaderText="Employee ID" Width="75" />
 
-                &lt;ej:Column Field="ShipCity" HeaderText="Ship City" Width="75" /&gt;
+                <ej:Column Field="ShipCity" HeaderText="Ship City" Width="75" />
 
-                &lt;ej:Column Field="Freight" HeaderText="Freight" Width="75" /&gt;
+                <ej:Column Field="Freight" HeaderText="Freight" Width="75" />
 
-            &lt;/Columns&gt;
+            </Columns>
 
-&lt;/ej:Grid&gt;
+</ej:Grid>
 
 
 
@@ -191,13 +191,13 @@ The request and response to the service from the DataManager are illustrated as 
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img3.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img4.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -241,7 +241,7 @@ Refer to the following code example for consuming the Web API data by using the 
 
 The request to the Web API and response is illustrated as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img5.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -257,7 +257,7 @@ The result for the above code example is illustrated as follows.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img6.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -303,7 +303,7 @@ Refer to the following code example to know how the DataManager can be used to c
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img7.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -347,7 +347,7 @@ In the following code example, the offline property of the DataManager is set as
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img8.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -389,15 +389,15 @@ You can use the following code example for implementing load on demand by using 
 
         }))
 
-pageIndex: &lt;input id="pageindx" type="text" placeholder="pageindex" /&gt;
+pageIndex: <input id="pageindx" type="text" placeholder="pageindex" />
 
-pageSize:  &lt;input id="pagesize" type="text" placeholder="pagesize" /&gt;
+pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 @Html.EJ().Button("submit").Text("Loadondemand").ClientSideEvents(e => { e.Click("onClick"); })
 
 
 
-&lt;script type="text/javascript" class="jsScript"&gt;
+<script type="text/javascript" class="jsScript">
 
     function onClick(e) {
 
@@ -419,19 +419,19 @@ pageSize:  &lt;input id="pagesize" type="text" placeholder="pagesize" /&gt;
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img9.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img9.png)' | markdownify }}
 {:.image }
 
 
 The request and the response for the above code are sent as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img10.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -479,7 +479,7 @@ You can add custom request headers to every request made by the DataManager by u
 
 The above method generates the request header with custom header as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img11.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -525,7 +525,7 @@ Result of above code example is illustrated as follows.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img12.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -535,13 +535,13 @@ Other than JSON and Remote datasource, the DataManager can also fetch and use da
 
 Refer to the following code example for the HTML element binding by using the DataManager.
 
-&lt;script id="_table1" type="text/template"&gt;
+<script id="_table1" type="text/template">
 
-        &lt;table id="datasource" style="display:none"&gt;
+        <table id="datasource" style="display:none">
 
-            &lt;thead&gt;
+            <thead>
 
-                &lt;tr&gt;
+                <tr>
 
                     <th>OrderID</th>
 
@@ -549,27 +549,27 @@ Refer to the following code example for the HTML element binding by using the Da
 
                     <th>CustomerID</th>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/thead&gt;
+            </thead>
 
-            &lt;tbody&gt;
+            <tbody>
 
-                &lt;tr&gt;<td>10248</td><td>VINET</td><td>5</td>&lt;/tr&gt;
+                <tr><td>10248</td><td>VINET</td><td>5</td></tr>
 
-                &lt;tr&gt;<td>10249</td><td>TOMSP</td><td>6</td>&lt;/tr&gt;
+                <tr><td>10249</td><td>TOMSP</td><td>6</td></tr>
 
-                &lt;tr&gt;<td>10250</td><td>HANAR</td><td>4</td>&lt;/tr&gt;
+                <tr><td>10250</td><td>HANAR</td><td>4</td></tr>
 
-                &lt;tr&gt;<td>10251</td><td>VICTE</td><td>3</td>&lt;/tr&gt;
+                <tr><td>10251</td><td>VICTE</td><td>3</td></tr>
 
-                &lt;tr&gt;<td>10252</td><td>SUPRD</td><td>4</td>&lt;/tr&gt;
+                <tr><td>10252</td><td>SUPRD</td><td>4</td></tr>
 
-            &lt;/tbody&gt;
+            </tbody>
 
-        &lt;/table&gt;
+        </table>
 
-  &lt;/script&gt;
+  </script>
 
 @(Html.EJ().DataManager("FlatData").Table("#_table1"))
 
@@ -599,7 +599,7 @@ Refer to the following code example for the HTML element binding by using the Da
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Data-Binding_images/Data-Binding_img13.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img13.png)' | markdownify }}
 {:.image }
 
 

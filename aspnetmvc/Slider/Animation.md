@@ -29,7 +29,7 @@ The following steps explains you on how to disable the animation effect in Slide
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slianimation.PNG](Animation_images/Animation_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slianimation.PNG](Animation_images/Animation_img1.png)' | markdownify }}
 {:.image }
 
 

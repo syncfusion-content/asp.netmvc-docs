@@ -15,7 +15,7 @@ This section explains briefly about how to create Maps in your application with 
 
 You can configure an EssentialASP.NETMVC Map with simple steps. In this example, you can learn how to configure USA population map with customized appearance and tooltip.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -303,7 +303,7 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 Initialize Map
 
-1. Create a &lt;div&gt; tag and set the height and width to determine the map size. 
+1. Create a <div> tag and set the height and width to determine the map size. 
 
 
 
@@ -429,7 +429,7 @@ The above code renders a map with default properties and shape input provided th
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -549,7 +549,7 @@ You can customize the shape’s color by using Fill, Stroke and StrokeThickness 
 
 
 
-{ ![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -637,7 +637,7 @@ The following screenshot illustrates a Map with gradient color property enable.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -693,7 +693,7 @@ The following screenshot illustrates a map control displaying a Tooltip.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -822,7 +822,7 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

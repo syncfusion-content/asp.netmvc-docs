@@ -15,7 +15,7 @@ The following screenshot displays the drag and drop support.
 
 
 
-{ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img1.png) | markdownify }
+{{ '![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -33,13 +33,13 @@ The following steps explain how to enable the drag and drop in the UploadBox con
 
 //Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-          &lt;div class="control"&gt;                @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true)
+          <div class="control">                @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true)
 
-               &lt;/div&gt;
+               </div>
 
-  &lt;/div&gt;
+  </div>
 
 
 
@@ -47,7 +47,7 @@ To know about file action, refer to the following link: [http://help.syncfusion.
 
 1. The following screenshot displays the output for the above code.
 
-{ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img2.png) | markdownify }
+{{ '![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -67,19 +67,19 @@ In the VIEW page, add the below script to enable the drag and drop in the Upload
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-                      &lt;div class="control"&gt;                        @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DragAreaText("Drop files here")
+                      <div class="control">                        @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DragAreaText("Drop files here")
 
-                      &lt;/div&gt;
+                      </div>
 
-&lt;/div&gt;
+</div>
 
 
 
 2.  The following screenshot displays the output for the above code.
 
-{ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img3.png) | markdownify }
+{{ '![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -101,21 +101,21 @@ In the VIEW page, add the below script to enable the drag and drop in UploadBox 
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-                      &lt;div class="control"&gt;
+                      <div class="control">
 
                           @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DropAreaHeight("300px").DropAreaWidth("600px")
 
-                      &lt;/div&gt;
+                      </div>
 
-                  &lt;/div&gt;
+                  </div>
 
 
 
 3. The following screenshot displays the output for the above code.
 
-{ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img4.png) | markdownify }
+{{ '![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -135,9 +135,9 @@ In the VIEW page, add the below script to enable drag and drop in the UploadBox 
 
 //Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
 
-       &lt;div class="control"&gt;                      @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).ShowBrowseButton(false)
+       <div class="control">                      @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).ShowBrowseButton(false)
 
- &lt;/div&gt;
+ </div>
 
 
 
@@ -145,7 +145,7 @@ In the VIEW page, add the below script to enable drag and drop in the UploadBox 
 
 
 
-{ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img5.png) | markdownify }
+{{ '![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img5.png)' | markdownify }}
 {:.image }
 
 

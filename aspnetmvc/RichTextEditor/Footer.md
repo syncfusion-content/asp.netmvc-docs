@@ -22,7 +22,7 @@ Refer to the following code example to enable the footer in RTE.
 
 [_cshtml]
 
-     @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).ShowFooter(true).Render(); }
+     @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).ShowFooter(true).Render(); }
 
 
 
@@ -30,7 +30,7 @@ Refer to the following code example to enable the footer in RTE.
 
 The following screenshot displays the output.
 
-{ ![](Footer_images/Footer_img1.png) | markdownify }
+{{ '![](Footer_images/Footer_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -38,7 +38,7 @@ Get HTML
 
 RTE control provides support to view the source code of the editing area’s content as XHTML markup language. Text area is considered as div and the contents of the editing area are considered as the child of this div. All the styles, formatting, tables, image sources are maintained in that HTML. To get equivalent XHTML source code of editing area, use tool item in RTE Footer. Click this option to get the popup window that contains XHTML code. This also enables you to edit the HTML code and update the changes to the editing area content.
 
-{ ![](Footer_images/Footer_img2.png) | markdownify }
+{{ '![](Footer_images/Footer_img2.png)' | markdownify }}
 {:.image }
 __
 

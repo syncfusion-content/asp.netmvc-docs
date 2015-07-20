@@ -42,7 +42,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Digital-Elements_images/Digital-Elements_img1.png) | markdownify }
+{{ '![](Digital-Elements_images/Digital-Elements_img1.png)' | markdownify }}
 {:.image }
 
 

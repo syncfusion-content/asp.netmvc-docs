@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains briefly about how to create an Accordion in your application with ASP.NET MVC.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -25,7 +25,7 @@ This section explains you the details on how to configure the Accordion control 
 
 The following screenshot illustrates you the usage of Accordion control in listing the controls under the Essential Studio products. 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -40,29 +40,29 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
 [layout._cshtml]
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
-
-
-
-    &lt;!--Scripts--&gt;
-
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt;&lt;/script&gt;
+    <!--Scripts-->
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-&lt;/head&gt;
+
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+</head>
 
 
 
@@ -76,125 +76,125 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
                {
 
-                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
                             <h4>DocIO</h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Pdf  &lt;/h4&gt;
+                            <h4>Pdf  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gauge  &lt;/h4&gt;
+                            <h4>Gauge  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Tools &lt;/h4&gt;
+                            <h4>Tools </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
                }).Render();}
 
@@ -202,7 +202,7 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
 Execute the above code example to display the Accordion control with simple control list.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -212,7 +212,7 @@ Configure Multiple Open
 
 You can open multiple Accordion tabs to view all products at a time. To render this set the EnableMultipleOpen property of the Accordion control to true.
 
-{ ![http://help.syncfusion.com/UG/orubase/ImagesExt/image751_4.png](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![http://help.syncfusion.com/UG/orubase/ImagesExt/image751_4.png](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 _Note: EnableMultipleOpenproperty is false by default._ 
 
@@ -232,131 +232,131 @@ You can also open all the panels during initialization using the SelectedItems p
 
                {
 
-                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
                             <h4>DocIO</h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Pdf  &lt;/h4&gt;
+                            <h4>Pdf  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gauge  &lt;/h4&gt;
+                            <h4>Gauge  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Tools &lt;/h4&gt;
+                            <h4>Tools </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
                }).Render();}  
 
 Accordion control with EnableMultipleOpen property is illustrated in the following screenshot.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -364,7 +364,7 @@ Set Rounded corner
 
 Accordion control by default is rendered in a regular rectangle. You can modify the regular rectangles with rounded corners by setting the ShowRoundedCorner property to true.
 
-> { ![http://help.syncfusion.com/UG/orubase/ImagesExt/image751_4.png](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+> {{ '![http://help.syncfusion.com/UG/orubase/ImagesExt/image751_4.png](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 _Note: ShowRoundedCorner property is false by default._
 
@@ -372,7 +372,7 @@ _Note: ShowRoundedCorner property is false by default._
 
 [CSHTML]
 
-&lt;div id="ProductsAccordion" style="width: 400px"&gt;
+<div id="ProductsAccordion" style="width: 400px">
 
     @{
 
@@ -386,131 +386,131 @@ _Note: ShowRoundedCorner property is false by default._
 
                {
 
-                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
                             <h4>DocIO</h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Pdf  &lt;/h4&gt;
+                            <h4>Pdf  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gauge  &lt;/h4&gt;
+                            <h4>Gauge  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Tools &lt;/h4&gt;
+                            <h4>Tools </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
                }).Render();}  
 
 The following screenshot illustrates the Accordion control with rounded corners.
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -530,131 +530,131 @@ You can set the Up/Down arrow icon to Accordion header, by adding e-arrowheadup 
 
                {
 
-                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
                             <h4>DocIO</h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Pdf  &lt;/h4&gt;
+                            <h4>Pdf  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gauge  &lt;/h4&gt;
+                            <h4>Gauge  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Tools &lt;/h4&gt;
+                            <h4>Tools </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio ASP.NET MVC").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
-                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@&lt;div&gt;
+                   data.Add().Text("Essential Studio JavaScript").ContentTemplate(@<div>
 
-                    &lt;ul&gt;
+                    <ul>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Chart &lt;/h4&gt;
+                            <h4>Chart </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Grid  &lt;/h4&gt;
+                            <h4>Grid  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Gantt  &lt;/h4&gt;
+                            <h4>Gantt  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Schedule  &lt;/h4&gt;
+                            <h4>Schedule  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                        &lt;li&gt;
+                        <li>
 
-                            <h4>Diagram  &lt;/h4&gt;
+                            <h4>Diagram  </h4>
 
-                        &lt;/li&gt;
+                        </li>
 
-                    &lt;/ul&gt;
+                    </ul>
 
-                &lt;/div&gt;);
+                </div>);
 
                }).Render();}  
 
 The following screenshot illustrates the customization of SelectedHeader and Header of the Accordion control.
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 

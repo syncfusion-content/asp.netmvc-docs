@@ -9,7 +9,7 @@ documentation: ug
 
 ## Display Inline
 
-DisplayInline allows you to make DatePicker widget similar to a Calendar date. Also associate DatePicker with &lt;div&gt; element instead of input. Default value for DisplayInline property is set as ‘false’ 
+DisplayInline allows you to make DatePicker widget similar to a Calendar date. Also associate DatePicker with <div> element instead of input. Default value for DisplayInline property is set as ‘false’ 
 
 The following steps explain you how to get the Calendar control using DatePicker.
 
@@ -27,7 +27,7 @@ The following steps explain you how to get the Calendar control using DatePicker
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Display-Inline_images/Display-Inline_img1.png) | markdownify }
+{{ '![](Display-Inline_images/Display-Inline_img1.png)' | markdownify }}
 {:.image }
 
 

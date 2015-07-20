@@ -23,21 +23,21 @@ Set the list for DropDown control inside a list element and define this element 
 
 {
 
-    s.Add().ContentTemplate(@&lt;div&gt;
+    s.Add().ContentTemplate(@<div>
 
 
 
         @Html.EJ().RadioButton("radio1").Checked(false)
 
-    &lt;/div&gt;);
+    </div>);
 
-    s.Add().ContentTemplate(@&lt;div&gt;
+    s.Add().ContentTemplate(@<div>
 
         @Html.EJ().DropDownList("selectcar").Height("23").Width("100").TargetID("cars").SelectedItemIndex(0)
 
-        &lt;div id="cars"&gt;
+        <div id="cars">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Audi A4</li>
 
@@ -47,11 +47,11 @@ Set the list for DropDown control inside a list element and define this element 
 
                 <li>Audi A7</li>
 
-            &lt;/ul&gt;
+            </ul>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;);
+    </div>);
 
 })
 
@@ -59,7 +59,7 @@ Set the list for DropDown control inside a list element and define this element 
 
 The following screenshot displays a Toolbar with embedded controls.
 
-{ ![](Template-Support_images/Template-Support_img1.png) | markdownify }
+{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
 {:.image }
 
 

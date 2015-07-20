@@ -56,7 +56,7 @@ The following steps explains you the details about rendering the button with dif
 
 
 
-    &lt;div class="control"&gt;        @Html.EJ().Button("button_normal").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+    <div class="control">        @Html.EJ().Button("button_normal").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
 
 
 
@@ -80,13 +80,13 @@ The following steps explains you the details about rendering the button with dif
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Easy-Customization_images/Easy-Customization_img1.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -170,7 +170,7 @@ The following steps explains you the details about rendering the Button with abo
 
   @* Set the different content types and use the necessary build-in icons for button control as follows.*@
 
-  &lt;div class="control"&gt;           
+  <div class="control">           
 
                         @Html.EJ().Button("button_imageOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
 
@@ -190,9 +190,9 @@ The following steps explains you the details about rendering the Button with abo
 
                         @Html.EJ().Button("button_imageTextImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
 
-            &lt;br /&gt;
+            <br />
 
-            &lt;br /&gt;
+            <br />
 
                         @Html.EJ().Button("button_small_imageOnly").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
 
@@ -214,13 +214,13 @@ The following steps explains you the details about rendering the Button with abo
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Easy-Customization_images/Easy-Customization_img2.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -266,7 +266,7 @@ The following steps explains you the details about rendering the Button with the
 
 @* Set the different image position for button control as follows.*@
 
-    &lt;div class="control"&gt;
+    <div class="control">
 
 
 
@@ -288,9 +288,9 @@ The following steps explains you the details about rendering the Button with the
 
         @Html.EJ().Button("button_large_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
 
-        &lt;br /&gt;
+        <br />
 
-        &lt;br /&gt;
+        <br />
 
         @Html.EJ().Button("button_normal_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
@@ -310,9 +310,9 @@ The following steps explains you the details about rendering the Button with the
 
         @Html.EJ().Button("button_large_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
-        &lt;br /&gt;
+        <br />
 
-        &lt;br /&gt;
+        <br />
 
         @Html.EJ().Button("button_imageTop").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageTop).Width("60")
 
@@ -322,13 +322,13 @@ The following steps explains you the details about rendering the Button with the
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Easy-Customization_images/Easy-Customization_img3.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -371,7 +371,7 @@ The following steps explains you the details about rendering the Button with cus
 
   @* Set Custom CSS class for button control as follows.*@
 
-&lt;div class="control"&gt;
+<div class="control">
 
 
 
@@ -395,7 +395,7 @@ The following steps explains you the details about rendering the Button with cus
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -405,7 +405,7 @@ The following steps explains you the details about rendering the Button with cus
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         /* Customize the button background */
 
@@ -465,12 +465,12 @@ The following steps explains you the details about rendering the Button with cus
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 Execute the above code to render the following output.
 
-{ ![](Easy-Customization_images/Easy-Customization_img4.png) | markdownify }
+{{ '![](Easy-Customization_images/Easy-Customization_img4.png)' | markdownify }}
 {:.image }
 
 

@@ -25,7 +25,7 @@ There is no change in the controller part, the same controller part is used as m
 
 
 
-{ ![](Customization-layout_images/Customization-layout_img1.png) | markdownify }
+{{ '![](Customization-layout_images/Customization-layout_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -41,7 +41,7 @@ There is no change in the controller part, the same controller part is used as m
 
 There is no change in the controller part, the same controller part is used as mentioned above.
 
-{ ![](Customization-layout_images/Customization-layout_img2.png) | markdownify }
+{{ '![](Customization-layout_images/Customization-layout_img2.png)' | markdownify }}
 {:.image }
 
 

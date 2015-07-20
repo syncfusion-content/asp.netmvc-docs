@@ -19,7 +19,7 @@ The following screenshot illustrates a Splitter control.
 
 
 
-{ ![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -40,13 +40,13 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
         p.Add().ContentTemplate(
 
-            @&lt;div class="cont"&gt;
+            @<div class="cont">
 
-                &lt;h3 class="h3"&gt;
+                <h3 class="h3">
 
                     ASP.NET MVC
 
-                &lt;/h3&gt;
+                </h3>
 
 
 
@@ -54,67 +54,67 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
 
 
-            &lt;/div&gt;).PaneSize("200");
+            </div>).PaneSize("200");
 
         p.Add().ContentTemplate(
 
-            @&lt;div class="cont"&gt;
+            @<div class="cont">
 
-                &lt;div class="_content"&gt;
+                <div class="_content">
 
                     Select any product from the tree to show the description.
 
-                &lt;/div&gt;
+                </div>
 
-                &lt;div class="tools des"&gt;
+                <div class="tools des">
 
-                    &lt;h3&gt;
+                    <h3>
 
                         Tools
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                    &lt;p&gt;
+                    <p>
 
                         Essential Tools is an collection of user interface components used to create interactive
 
                         ASP.NET MVC applications.
 
-                    &lt;/p&gt;
+                    </p>
 
-                &lt;/div&gt;
+                </div>
 
-                &lt;div class="chart des"&gt;
+                <div class="chart des">
 
-                    &lt;h3&gt;
+                    <h3>
 
                         Chart
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                    &lt;p&gt; Essential Chart is a business-oriented charting component.&lt;/p&gt;
+                    <p> Essential Chart is a business-oriented charting component.</p>
 
-                &lt;/div&gt;
+                </div>
 
-                &lt;div class="grid des"&gt;
+                <div class="grid des">
 
-                    &lt;h3&gt;
+                    <h3>
 
                         Grid
 
-                    &lt;/h3&gt;
+                    </h3>
 
-                    &lt;p&gt;
+                    <p>
 
                         Essential MVC Grid offers full featured a Grid control with extensive support for
 
                         Grouping and the display of hierarchical data.
 
-                    &lt;/p&gt;
+                    </p>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;).PaneSize("200");
+            </div>).PaneSize("200");
 
     }).Height("400").Width("100%").Render();}
 
@@ -124,7 +124,7 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
 
 
-        &lt;style type="text/css" class="cssStyles"&gt;
+        <style type="text/css" class="cssStyles">
 
     #outterSplitter {
 
@@ -156,7 +156,7 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
     }
 
-&lt;/style&gt;
+</style>
 
 Configure Tree View
 
@@ -216,7 +216,7 @@ Add the following code example in the view page to set action in Splitter contro
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 
 
@@ -232,7 +232,7 @@ Add the following code example in the view page to set action in Splitter contro
 
     }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -248,7 +248,7 @@ Execute the above code example to render the following output.
 
 
 
-{ ![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 

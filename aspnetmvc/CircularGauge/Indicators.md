@@ -51,7 +51,7 @@ ind.Height(10)
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/karthigeyan/Desktop/das.png](Indicators_images/Indicators_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/das.png](Indicators_images/Indicators_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -126,7 +126,7 @@ ind.Height(10)
 
 Execute the above code to render the following output.
 
-{ ![](Indicators_images/Indicators_img2.png) | markdownify }
+{{ '![](Indicators_images/Indicators_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -235,7 +235,7 @@ st.EndValue(100)
 
 Execute the above code to render the following output.
 
-{ ![](Indicators_images/Indicators_img3.png) | markdownify }
+{{ '![](Indicators_images/Indicators_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -361,7 +361,7 @@ st.EndValue(100)
 
 Execute the above code to render the following output.
 
-{ ![](Indicators_images/Indicators_img4.png) | markdownify }
+{{ '![](Indicators_images/Indicators_img4.png)' | markdownify }}
 {:.image }
 
 

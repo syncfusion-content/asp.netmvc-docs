@@ -139,7 +139,7 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
 The following screenshot displays _Ribbon control_ without resizing the window.
 
-{ ![C:/Users/Giftline/Desktop/a.png](Resize_images/Resize_img1.png) | markdownify }
+{{ '![C:/Users/Giftline/Desktop/a.png](Resize_images/Resize_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -147,7 +147,7 @@ When you resize the window, the ribbon groups are converted  into _group button_
 
 
 
-{ ![](Resize_images/Resize_img2.png) | markdownify }
+{{ '![](Resize_images/Resize_img2.png)' | markdownify }}
 {:.image }
 
 

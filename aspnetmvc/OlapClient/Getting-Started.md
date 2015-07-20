@@ -17,13 +17,13 @@ Control Structure
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
 Syncfusion OLAP Controls – Architecture
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -61,7 +61,7 @@ This section encompasses on how to configure the OLAP Client control in an appli
 
 In this example you can see how OLAPClient component plots the data about Customer Count over different fiscal years.
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/screenshots/Capture.PNG](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/screenshots/Capture.PNG](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ You can open Visual Studio and create a new project by clicking New Project. Sel
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -77,7 +77,7 @@ Select Internet application template with razor view engine.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -87,13 +87,13 @@ Add References
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/screenshots/sshot-4.png](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/screenshots/sshot-4.png](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -108,31 +108,31 @@ Add Scripts and Styles
 1. Add the script files and CSS files in the head tag of the _Layout.cshtml page.
 
 > 
-{ ![](Getting-Started_images/Getting-Started_img8.jpeg) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.jpeg)' | markdownify }}
 {:.image }
 _Note: 1. Use the following code sample while adding scripts and styles._ 
 
 >                  _2. Apart from cdn files rest of them can be acquired from the following location_
 
-> _C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&gt;\JavaScript\assets\_
+> _C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\_
 
 [CSHTML]
 
 
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
 
-&lt;/head&gt;
+</head>
 
 
 
@@ -146,13 +146,13 @@ _Note: 1. Use the following code sample while adding scripts and styles._
 
 [CSHTML]
 
-&lt;body&gt;
+<body>
 
    @RenderBody()
 
    @Html.EJ().ScriptManager()   
 
-&lt;/body&gt;
+</body>
 
 Add Control in View page
 
@@ -168,13 +168,13 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 
 
-&lt;div&gt;
+<div>
 
 
 
 @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/wcf/OlapClientService.svc"))
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -186,7 +186,7 @@ Creating WCF Services
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -194,7 +194,7 @@ Creating WCF Services
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img10.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -202,7 +202,7 @@ Creating WCF Services
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img11.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -814,51 +814,51 @@ DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(currentReport
 
 Configuring Web.Config
 
-1. Register the assemblies by adding the following code sample inside the &lt;system.web&gt; tag in web.config__file at root folder.
+1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config__file at root folder.
 
 
 
 [web.config]
 
-&lt;compilation debug="true" targetFramework="4.5"&gt;
+<compilation debug="true" targetFramework="4.5">
 
-      &lt;assemblies&gt;
+      <assemblies>
 
-        &lt;add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" /&gt;
+        <add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
 
-        &lt;add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Compression.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Compression.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.XlsIO.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.XlsIO.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
 
 
-      &lt;/assemblies&gt;
+      </assemblies>
 
-    &lt;/compilation&gt;
+    </compilation>
 
 > 
 
-> { ![](Getting-Started_images/Getting-Started_img12.jpeg) | markdownify }
+> {{ '![](Getting-Started_images/Getting-Started_img12.jpeg)' | markdownify }}
 {:.image }
 _Note: x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system._
 
@@ -904,29 +904,29 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;namespaces&gt;
+<namespaces>
 
-        &lt;add namespace="System.Web.Helpers" /&gt;
+        <add namespace="System.Web.Helpers" />
 
-        &lt;add namespace="System.Web.Mvc" /&gt;
+        <add namespace="System.Web.Mvc" />
 
-        &lt;add namespace="System.Web.Mvc.Ajax" /&gt;
+        <add namespace="System.Web.Mvc.Ajax" />
 
-        &lt;add namespace="System.Web.Mvc.Html" /&gt;
+        <add namespace="System.Web.Mvc.Html" />
 
-        &lt;add namespace="System.Web.Optimization" /&gt;
+        <add namespace="System.Web.Optimization" />
 
-        &lt;add namespace="System.Web.Routing" /&gt;
+        <add namespace="System.Web.Routing" />
 
-        &lt;add namespace="System.Web.WebPages" /&gt;
+        <add namespace="System.Web.WebPages" />
 
-        &lt;add namespace="Syncfusion.MVC.EJ"/&gt;
+        <add namespace="Syncfusion.MVC.EJ"/>
 
-        &lt;add namespace="Syncfusion.JavaScript"/&gt;
+        <add namespace="Syncfusion.JavaScript"/>
 
-        &lt;add namespace="Syncfusion.JavaScript.DataVisualization"/&gt;
+        <add namespace="Syncfusion.JavaScript.DataVisualization"/>
 
-&lt;/namespaces&gt;
+</namespaces>
 
 
 
@@ -943,21 +943,21 @@ The following are the properties that meet the appropriate endpoint.
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;services&gt;
+    <services>
 
-      &lt;service name="MvcApplication1.OlapClientService"&gt;
+      <service name="MvcApplication1.OlapClientService">
 
         <endpoint address="" behaviorConfiguration="MvcApplication1.OlapClientServiceAspNetAjaxBehavior"
 
           binding="webHttpBinding" contract="MvcApplication1.IOlapClientService" />
 
-      &lt;/service&gt;
+      </service>
 
-    &lt;/services&gt;
+    </services>
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 
 
@@ -973,27 +973,27 @@ The following are the properties that meet the appropriate endpoint.
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;behaviors&gt;
+    <behaviors>
 
-      &lt;endpointBehaviors&gt;
+      <endpointBehaviors>
 
-        &lt;behavior name="MvcApplication1.OlapClientServiceAspNetAjaxBehavior"&gt;
+        <behavior name="MvcApplication1.OlapClientServiceAspNetAjaxBehavior">
 
-          &lt;enableWebScript /&gt;
+          <enableWebScript />
 
-        &lt;/behavior&gt;
+        </behavior>
 
-      &lt;/endpointBehaviors&gt;
+      </endpointBehaviors>
 
-    &lt;/behaviors&gt;    
+    </behaviors>    
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 
 
-> { ![](Getting-Started_images/Getting-Started_img13.jpeg) | markdownify }
+> {{ '![](Getting-Started_images/Getting-Started_img13.jpeg)' | markdownify }}
 {:.image }
 _Note: In this example, “MvcApplication1” indicates the name of the project and “OlapClientService” indicates the name of the WCF service created._
 
@@ -1005,19 +1005,19 @@ _Note: In this example, “MvcApplication1” indicates the name of the project 
 
 [web.config]
 
-&lt;appSettings&gt;
+<appSettings>
 
-    &lt;add key="webpages:Version" value="2.0.0.0" /&gt;
+    <add key="webpages:Version" value="2.0.0.0" />
 
-    &lt;add key="webpages:Enabled" value="false" /&gt;
+    <add key="webpages:Enabled" value="false" />
 
-    &lt;add key="PreserveLoginUrl" value="true" /&gt;
+    <add key="PreserveLoginUrl" value="true" />
 
-    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    <add key="ClientValidationEnabled" value="true" />
 
-    &lt;add key="UnobtrusiveJavaScriptEnabled" value="false" /&gt;
+    <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
-&lt;/appSettings&gt;
+</appSettings>
 
 Configuring routing file
 
@@ -1065,7 +1065,7 @@ public class RouteConfig
 
 In summary, this getting started tutorial gives you an overview of OLAP Client, its architecture, process flow, how to configure and integrate with a VS application through a simple example that is self-explanatory.
 
-{ ![](Getting-Started_images/Getting-Started_img14.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img14.png)' | markdownify }}
 {:.image }
 
 

@@ -55,7 +55,7 @@ The following steps explain you how to specify the Start Level view in DatePicke
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img1.png) | markdownify }
+{{ '![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -107,7 +107,7 @@ The following steps explain you how to get the DepthLevel.
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img2.png) | markdownify }
+{{ '![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -48,7 +48,7 @@ The following list is of the twelve themes supported by DateTimePicker:
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -134,7 +134,7 @@ In the following style sheet the exiting theme style sheet file has been over-ri
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 

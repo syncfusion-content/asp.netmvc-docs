@@ -67,11 +67,11 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Sorting_images/Sorting_img1.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img1.png)' | markdownify }}
 {:.image }
 
 
-> { ![](Sorting_images/Sorting_img2.png) | markdownify }
+> {{ '![](Sorting_images/Sorting_img2.png)' | markdownify }}
 {:.image }
 _Note: Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid._
 
@@ -89,7 +89,7 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
 [razor]
 
-        &lt;select id="columns"&gt;
+        <select id="columns">
 
             <option value="OrderID">Order ID</option>
 
@@ -99,23 +99,23 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
             <option value="ShipCity">Ship City</option>
 
-        &lt;/select&gt;
+        </select>
 
-        &lt;br/&gt;
+        <br/>
 
-        &lt;select id="direction"&gt;
+        <select id="direction">
 
             <option>Ascending</option>
 
             <option>Descending</option>
 
-        &lt;/select&gt;     
+        </select>     
 
-        &lt;br/&gt;
+        <br/>
 
-        &lt;input type="button" value="sort" id="sort"/&gt;
+        <input type="button" value="sort" id="sort"/>
 
-        &lt;br/&gt;
+        <br/>
 
       @(Html.EJ().Grid<object>("Grid")
 
@@ -131,7 +131,7 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
 [JavaScript]
 
-   &lt;script type="text/javascript"&gt;
+   <script type="text/javascript">
 
     $("#columns,#direction").ejDropDownList();
 
@@ -145,7 +145,7 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
     });
 
-   &lt;/script&gt;
+   </script>
 
 
 
@@ -181,7 +181,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Sorting_images/Sorting_img3.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -193,7 +193,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Sorting_images/Sorting_img4.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -217,7 +217,7 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
 
 [razor]
 
- &lt;input type="button" id="clearsorting" name="sorting" value="clear sorting" /&gt;
+ <input type="button" id="clearsorting" name="sorting" value="clear sorting" />
 
 
 
@@ -237,7 +237,7 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
 
 [Javascript]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     $("#clearsorting").ejButton({
 
@@ -249,7 +249,7 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
 
     });
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -285,13 +285,13 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Sorting_images/Sorting_img5.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img5.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![](Sorting_images/Sorting_img6.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -335,11 +335,11 @@ In the normal way of sorting, first preference is given to capital letters and t
 
     )
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 ej.support.enableLocalizedSort = true
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -373,7 +373,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 
-{ ![](Sorting_images/Sorting_img7.png) | markdownify }
+{{ '![](Sorting_images/Sorting_img7.png)' | markdownify }}
 {:.image }
 
 

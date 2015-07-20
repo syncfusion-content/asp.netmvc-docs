@@ -15,7 +15,7 @@ Refer to the following code examples.
 
 Add the following code example for MVC samples 
 
-    &lt;style&gt;
+    <style>
 
         #appimage {
 
@@ -51,7 +51,7 @@ Add the following code example for MVC samples
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -61,23 +61,23 @@ Add the following code example for MVC samples
 
 @Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").CaptionTemplateId("captionTemplate").TileSize(TileSize.Wide)
 
-&lt;div id="imageTemplate"&gt;
+<div id="imageTemplate">
 
-        &lt;div id="appimage"&gt;
+        <div id="appimage">
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="tileMargin"&gt;
+        <div class="tileMargin">
 
-            <span class="caption">Google Search</span>&lt;br /&gt;
+            <span class="caption">Google Search</span><br />
 
-            <span class="description">The world’s information</span>&lt;br /&gt;
+            <span class="description">The world’s information</span><br />
 
             <span class="sub">Free</span>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
     <div id="captionTemplate" class="title">Windows Store</div>
 
@@ -85,7 +85,7 @@ Add the following code example for MVC samples
 
 
 
-{ ![](Template-Support_images/Template-Support_img1.png) | markdownify }
+{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
 {:.image }
 
 

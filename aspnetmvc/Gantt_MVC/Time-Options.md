@@ -299,7 +299,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Time-Options_images/Time-Options_img1.png) | markdownify }
+{{ '![](Time-Options_images/Time-Options_img1.png)' | markdownify }}
 {:.image }
 
 

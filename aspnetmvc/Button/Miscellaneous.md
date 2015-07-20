@@ -27,11 +27,11 @@ The following steps explains you the details about rendering the button with spe
 
 @* Set the text for button control as follows.*@
 
-    &lt;div class="control"&gt;
+    <div class="control">
 
         @Html.EJ().Button("button_text").Text("Enter").Size(ButtonSize.Mini)
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -39,7 +39,7 @@ In the above code, the content of button “button” is replaced by the text va
 
 Execute the above code to render the following output.
 
-{ ![](Miscellaneous_images/Miscellaneous_img1.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -63,18 +63,18 @@ The following steps explains you the details about rendering the button with rou
 
   @* Enable the rounded corner for button control as follows.*@
 
-    &lt;div class="control"&gt;
+    <div class="control">
 
         @Html.EJ().Button("button_roundedCorner").Text("button").Size(ButtonSize.Mini).ShowRoundedCorner(true)
 
-    &lt;/div&gt;
+    </div>
 
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Miscellaneous_images/Miscellaneous_img2.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
 {:.image }
 
 

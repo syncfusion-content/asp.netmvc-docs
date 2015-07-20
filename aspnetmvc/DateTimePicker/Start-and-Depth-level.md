@@ -66,7 +66,7 @@ In the following example DateTimePicker popup Start level view is set to “cent
 
 
 
-{ ![](Start-and-Depth-level_images/Start-and-Depth-level_img1.png) | markdownify }
+{{ '![](Start-and-Depth-level_images/Start-and-Depth-level_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -96,7 +96,7 @@ The following code snippet is set to DepthLevel in DateTimePicker.
 
 
 
-{ ![](Start-and-Depth-level_images/Start-and-Depth-level_img2.png) | markdownify }
+{{ '![](Start-and-Depth-level_images/Start-and-Depth-level_img2.png)' | markdownify }}
 {:.image }
 
 

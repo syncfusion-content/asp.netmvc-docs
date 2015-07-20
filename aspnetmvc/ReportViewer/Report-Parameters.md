@@ -45,13 +45,13 @@ public class ReportsController : ApiController, IReportController
 
     {
 
-        /// &lt;summary&gt;
+        /// <summary>
 
         /// Report Initialization method that is triggered when report begins to be processed.
 
-        /// &lt;/summary&gt;
+        /// </summary>
 
-        /// <param name="reportOptions">The ReportViewer options.&lt;/param&gt;
+        /// <param name="reportOptions">The ReportViewer options.</param>
 
         public void OnInitReportOptions(ReportViewerOptions reportOptions)
 

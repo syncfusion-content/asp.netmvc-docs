@@ -22,7 +22,7 @@ The following screenshot displays the Schedule control with daily important acti
 
 
 
-{ ![](Getting-started_images/Getting-started_img1.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -74,7 +74,7 @@ return View();
 
 
 
-{ ![](Getting-started_images/Getting-started_img2.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -118,7 +118,7 @@ Pass data to Schedule control
 
 The following screenshot display a Schedule control with the appointments in a normal style.
 
-{ ![](Getting-started_images/Getting-started_img3.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -171,7 +171,7 @@ Add Templates to the appointments
 
 // method to choose images for the appointments
 
-&lt;script&gt;
+<script>
 
 $.views.helpers({ format: _getImages });
 
@@ -181,43 +181,43 @@ switch (new Date(date).getDay()) {
 
 case 0:
 
-return "&lt;img src='../images/schedule/cake.png'/&gt;"
+return "<img src='../images/schedule/cake.png'/>"
 
 break;
 
 case 1:
 
-return "&lt;img src='../images/schedule/basketball.png'/&gt;"
+return "<img src='../images/schedule/basketball.png'/>"
 
 break;
 
 case 2:
 
-return "&lt;img src='../images/schedule/rugby.png'/&gt;"
+return "<img src='../images/schedule/rugby.png'/>"
 
 break;
 
 case 3:
 
-return "&lt;img src='../images/schedule/guitar.png'/&gt;"
+return "<img src='../images/schedule/guitar.png'/>"
 
 break;
 
 case 4:
 
-return "&lt;img src='../images/schedule/music.png'/&gt;"
+return "<img src='../images/schedule/music.png'/>"
 
 break;
 
 case 5:
 
-return "&lt;img src='../images/schedule/doctor.png'/&gt;"
+return "<img src='../images/schedule/doctor.png'/>"
 
 break;
 
 case 6:
 
-return "&lt;img src='../images/schedule/beach.png'/&gt;"
+return "<img src='../images/schedule/beach.png'/>"
 
 break;
 
@@ -225,27 +225,27 @@ break;
 
 }
 
-&lt;/script&gt;
+</script>
 
 [Template Content]
 
-&lt;script id="MyTemplate" type="text/x-jsrender"&gt;
+<script id="MyTemplate" type="text/x-jsrender">
 
-&lt;div style="height: 100%"&gt;
+<div style="height: 100%">
 
-&lt;div style="float: left; width: 50px;"&gt;
+<div style="float: left; width: 50px;">
 
 {{:~format(StartTime)}}
 
-&lt;/div&gt;
+</div>
 
-&lt;div&gt;
+<div>
 
-&lt;div&gt;{{:Subject}}&lt;/div&gt;
+<div>{{:Subject}}</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;&lt;/script&gt;
+</div></script>
 
 
 
@@ -260,7 +260,7 @@ For example: $system drive: \Program Files\ Syncfusion\EssentialStudio\12.1.0.43
 * You can create a folder named “Images” in the same location of your newly created MVC Project and then move all the images from the installation folder to the newly created “Images” folder. This helps you in referring appointments appropriately within the Schedule control.
 * Once you set the template for the appointments, the scheduler is displayed with the customized appointments as shown in the following screenshot.
 
-{ ![](Getting-started_images/Getting-started_img4.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -308,7 +308,7 @@ Change the Schedule View
 
 )
 
-&lt;script&gt;
+<script>
 
 // method to choose images for the appointments
 
@@ -320,43 +320,43 @@ switch (new Date(date).getDay()) {
 
 case 0:
 
-return "&lt;img src='../images/schedule/cake.png'/&gt;"
+return "<img src='../images/schedule/cake.png'/>"
 
 break;
 
 case 1:
 
-return "&lt;img src='../images/schedule/basketball.png'/&gt;"
+return "<img src='../images/schedule/basketball.png'/>"
 
 break;
 
 case 2:
 
-return "&lt;img src='../images/schedule/rugby.png'/&gt;"
+return "<img src='../images/schedule/rugby.png'/>"
 
 break;
 
 case 3:
 
-return "&lt;img src='../images/schedule/guitar.png'/&gt;"
+return "<img src='../images/schedule/guitar.png'/>"
 
 break;
 
 case 4:
 
-return "&lt;img src='../images/schedule/music.png'/&gt;"
+return "<img src='../images/schedule/music.png'/>"
 
 break;
 
 case 5:
 
-return "&lt;img src='../images/schedule/doctor.png'/&gt;"
+return "<img src='../images/schedule/doctor.png'/>"
 
 break;
 
 case 6:
 
-return "&lt;img src='../images/schedule/beach.png'/&gt;"
+return "<img src='../images/schedule/beach.png'/>"
 
 break;
 
@@ -364,29 +364,29 @@ break;
 
 }
 
-&lt;/script&gt;
+</script>
 
 [Template Content]
 
-&lt;script id="MyTemplate" type="text/x-jsrender"&gt;
+<script id="MyTemplate" type="text/x-jsrender">
 
-&lt;div style="height: 100%"&gt;
+<div style="height: 100%">
 
-&lt;div style="float: left; width: 50px;"&gt;
+<div style="float: left; width: 50px;">
 
 {{:~format(StartTime)}}
 
-&lt;/div&gt;
+</div>
 
-&lt;div&gt;
+<div>
 
-&lt;div&gt;{{:Subject}}&lt;/div&gt;
+<div>{{:Subject}}</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -394,7 +394,7 @@ break;
 
 
 
-{ ![](Getting-started_images/Getting-started_img5.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -410,7 +410,7 @@ Change the appointment height through CSS
 
 [Style CSS]
 
-&lt;style&gt;
+<style>
 
 .e-monthappointment {
 
@@ -418,7 +418,7 @@ height: auto !important;
 
 }
 
-&lt;/style&gt;
+</style>
 
 [View]
 
@@ -458,7 +458,7 @@ height: auto !important;
 
 )
 
-&lt;script&gt;
+<script>
 
 // method to choose images for the appointments
 
@@ -470,43 +470,43 @@ switch (new Date(date).getDay()) {
 
 case 0:
 
-return "&lt;img src='../images/schedule/cake.png'/&gt;"
+return "<img src='../images/schedule/cake.png'/>"
 
 break;
 
 case 1:
 
-return "&lt;img src='../images/schedule/basketball.png'/&gt;"
+return "<img src='../images/schedule/basketball.png'/>"
 
 break;
 
 case 2:
 
-return "&lt;img src='../images/schedule/rugby.png'/&gt;"
+return "<img src='../images/schedule/rugby.png'/>"
 
 break;
 
 case 3:
 
-return "&lt;img src='../images/schedule/guitar.png'/&gt;"
+return "<img src='../images/schedule/guitar.png'/>"
 
 break;
 
 case 4:
 
-return "&lt;img src='../images/schedule/music.png'/&gt;"
+return "<img src='../images/schedule/music.png'/>"
 
 break;
 
 case 5:
 
-return "&lt;img src='../images/schedule/doctor.png'/&gt;"
+return "<img src='../images/schedule/doctor.png'/>"
 
 break;
 
 case 6:
 
-return "&lt;img src='../images/schedule/beach.png'/&gt;"
+return "<img src='../images/schedule/beach.png'/>"
 
 break;
 
@@ -514,29 +514,29 @@ break;
 
 }
 
-&lt;/script&gt;
+</script>
 
 [Template Content]
 
-&lt;script id="MyTemplate" type="text/x-jsrender"&gt;
+<script id="MyTemplate" type="text/x-jsrender">
 
-&lt;div style="height: 100%"&gt;
+<div style="height: 100%">
 
-&lt;div style="float: left; width: 50px;"&gt;
+<div style="float: left; width: 50px;">
 
 {{:~format(StartTime)}}
 
-&lt;/div&gt;
+</div>
 
-&lt;div&gt;
+<div>
 
-&lt;div&gt;{{:Subject}}&lt;/div&gt;
+<div>{{:Subject}}</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -544,7 +544,7 @@ After you set the height for appointments in “month” view, the Schedule cont
 
 
 
-{ ![](Getting-started_images/Getting-started_img6.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -571,14 +571,14 @@ Important: While adding new appointments to the schedule control either by using
 
 The following screenshot displays an appointment window pop-up that appears when you double click on the schedule cells.
 
-{ ![](Getting-started_images/Getting-started_img7.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img7.png)' | markdownify }}
 {:.image }
 
 
 The following screenshot illustrates a quick appointment pop-up window.
 
 
-{ ![](Getting-started_images/Getting-started_img8.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -597,7 +597,7 @@ Edit/Delete Appointments
 * In order to edit the appointments, double-click the desired appointment, and then edit the required fields in the appointment pop-up as shown in the following screenshot.
 
 
-{ ![](Getting-started_images/Getting-started_img9.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -605,7 +605,7 @@ Edit/Delete Appointments
 
 
 
-{ ![](Getting-started_images/Getting-started_img10.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -618,21 +618,21 @@ Add Recurrence Appointment
 * To add recurrence appointments, you need to check the “repeat” option in the appointment window as shown in the following screenshot.
 
 
-{ ![](Getting-started_images/Getting-started_img11.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img11.png)' | markdownify }}
 {:.image }
 
 
 * When you check the “repeat” option the sub-options available in the recurrence category are shown in the appointment pop-up as follows.
 
 
-{ ![](Getting-started_images/Getting-started_img12.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img12.png)' | markdownify }}
 {:.image }
 
 
 * You can choose the required recurrence pattern from the available options and then click “Done”. The main appointment pop-up appears as shown in the following screenshot.
 
 
-{ ![](Getting-started_images/Getting-started_img13.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -640,7 +640,7 @@ Add Recurrence Appointment
 
 
 
-{ ![](Getting-started_images/Getting-started_img14.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -652,7 +652,7 @@ Edit/Delete Recurrence Appointment
 * When you double-click the recurrence appointment a pop-up window appears as shown in the following screenshot. 
 
 
-{ ![](Getting-started_images/Getting-started_img15.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -664,7 +664,7 @@ _Figure_ _32__: Edit recurrence appointment_
 
 
 
-{ ![](Getting-started_images/Getting-started_img16.png) | markdownify }
+{{ '![](Getting-started_images/Getting-started_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -715,7 +715,7 @@ eventt.AppointmentWindowOpen("onAppointmentBeforeOpen"))
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function onAppointmentBeforeOpen(args){
 
@@ -725,7 +725,7 @@ args.cancel = true;  // prevents the opening of appointment pop-up
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 

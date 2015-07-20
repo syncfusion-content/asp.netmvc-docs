@@ -109,7 +109,7 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
 
 
-{ ![](Hierarchical-data-with-Editingcutpaste-support_images/Hierarchical-data-with-Editingcutpaste-support_img1.png) | markdownify }
+{{ '![](Hierarchical-data-with-Editingcutpaste-support_images/Hierarchical-data-with-Editingcutpaste-support_img1.png)' | markdownify }}
 {:.image }
 
 

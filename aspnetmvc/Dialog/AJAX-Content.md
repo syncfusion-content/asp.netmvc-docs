@@ -41,15 +41,15 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;head&gt;
+<head>
 
-    &lt;title&gt;&lt;/title&gt;
+    <title></title>
 
-    &lt;style&gt;
+    <style>
 
         .twitter-logo {
 
@@ -151,33 +151,33 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
         }
 
-    &lt;/style&gt;
+    </style>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-    &lt;div&gt;
+    <div>
 
-        &lt;div class="twitter-logo"&gt;
+        <div class="twitter-logo">
 
-            &lt;img src="../Content/Images/twitter.jpg" alt="twitter" /&gt;
+            <img src="../Content/Images/twitter.jpg" alt="twitter" />
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="comments-list"&gt;
+        <div class="comments-list">
 
-            &lt;div class="cont-list"&gt;
+            <div class="cont-list">
 
-                &lt;img src="../Content/Images/8.png" alt="contact" /&gt;
+                <img src="../Content/Images/8.png" alt="contact" />
 
                 <div class="time-panel">1 hr</div>
 
-                <b class="headername">Erik Linden</b>&lt;br /&gt;
+                <b class="headername">Erik Linden</b><br />
 
                 Orubase is the only mobile application development framework built especially for developing complex line-of-business mobile applications targeting iOS, Android, and Windows Phone platforms in the shortest possible timeframe. 
 
-                &lt;div class="comments"&gt;
+                <div class="comments">
 
                     <div class="c-list">Retweet</div>
 
@@ -185,21 +185,21 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
                     <div class="c-list">Share</div>
 
-                &lt;/div&gt;
+                </div>
 
-            &lt;/div&gt;
+            </div>
 
-            &lt;div class="cont-list"&gt;
+            <div class="cont-list">
 
-                &lt;img src="../Content/Images/6.png" alt="contact" /&gt;
+                <img src="../Content/Images/6.png" alt="contact" />
 
                 <div class="time-panel">2 hr</div>
 
-                <b class="headername">John Louis</b>&lt;br /&gt;
+                <b class="headername">John Louis</b><br />
 
                 All the components in the ASP.NET MVC Essential Studio have been built from the ground up with performance in mind and are extremely lightweight.
 
-                 &lt;div class="comments"&gt;
+                 <div class="comments">
 
                      <div class="c-list">Retweet</div>
 
@@ -207,17 +207,17 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
                      <div class="c-list">Share</div>
 
-                 &lt;/div&gt;
+                 </div>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 
 
@@ -225,7 +225,7 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 3. The output of Dialog with AJAX content.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)' | markdownify }}
 {:.image }
 
 

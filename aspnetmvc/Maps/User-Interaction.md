@@ -71,7 +71,7 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 
 
-{ ![](User-Interaction_images/User-Interaction_img1.png) | markdownify }
+{{ '![](User-Interaction_images/User-Interaction_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -190,7 +190,7 @@ When the map is double-tapped using mouse, the zoom in operation is performed.
 
 
 
-{ ![](User-Interaction_images/User-Interaction_img2.png) | markdownify }
+{{ '![](User-Interaction_images/User-Interaction_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -324,7 +324,7 @@ Navigation control is built-in with Maps control. With Navigation control, Maps 
 
 Structure of Navigation Control
 
-{ ![C:/Users/labuser/Desktop/a.png](User-Interaction_images/User-Interaction_img3.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](User-Interaction_images/User-Interaction_img3.png)' | markdownify }}
 {:.image }
 
 

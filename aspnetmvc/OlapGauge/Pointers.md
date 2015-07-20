@@ -84,7 +84,7 @@ pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement
 
 
 
-{ ![](Pointers_images/Pointers_img1.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -152,7 +152,7 @@ You can customize the Pointer length and width using the “pointerLength” and
 
 
 
-{ ![](Pointers_images/Pointers_img2.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -222,7 +222,7 @@ You can customize the Pointer background color using “backgroundcolor”proper
 
 
 
-{ ![](Pointers_images/Pointers_img3.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -294,7 +294,7 @@ You can customize Pointershapes using the “needlestyle” property.
 
 
 
-{ ![I:/OlapGuage/Gauge/pointerstyle.png](Pointers_images/Pointers_img4.png) | markdownify }
+{{ '![I:/OlapGuage/Gauge/pointerstyle.png](Pointers_images/Pointers_img4.png)' | markdownify }}
 {:.image }
 
 

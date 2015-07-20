@@ -27,7 +27,7 @@ In your script section please add following code to disable toolbar tool.
 
 [JavaScript]
 
-&lt;script&gt;
+<script>
 
         $(function () {          
 
@@ -39,7 +39,7 @@ In your script section please add following code to disable toolbar tool.
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -47,7 +47,7 @@ There is no change in the controller part, it is the same controller part used a
 
 
 
-{ ![](Disable-or-Enabling-toolbar-tool_images/Disable-or-Enabling-toolbar-tool_img1.png) | markdownify }
+{{ '![](Disable-or-Enabling-toolbar-tool_images/Disable-or-Enabling-toolbar-tool_img1.png)' | markdownify }}
 {:.image }
 
 

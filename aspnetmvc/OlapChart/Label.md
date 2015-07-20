@@ -27,7 +27,7 @@ Font style and color of the label text is customized with the help of font and c
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/Label font-color.png](Label_images/Label_img1.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/Label font-color.png](Label_images/Label_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -45,7 +45,7 @@ You can rotate the labels to desired angle. The axis labels are rendered in the 
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Chart/lable rotation.png](Label_images/Label_img2.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Chart/lable rotation.png](Label_images/Label_img2.png)' | markdownify }}
 {:.image }
 
 

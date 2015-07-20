@@ -27,19 +27,19 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-    &lt;div class="one"&gt;
+    <div class="one">
 
         @*set rounded corner for toggle button*@       
 
                  @Html.EJ().ToggleButton("toggleButton_roundedCorner").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")       
 
-    &lt;/div&gt;
+    </div>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](Miscellaneous_images/Miscellaneous_img1.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -63,13 +63,13 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-    &lt;div class="one"&gt;
+    <div class="one">
 
         @* set prevent toggle property for preventing states*@       
 
                  @Html.EJ().ToggleButton("toggleButton_preventToggle").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").PreventToggle(true)       
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -77,7 +77,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Miscellaneous_images/Miscellaneous_img2.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
 {:.image }
 
 

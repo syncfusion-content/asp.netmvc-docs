@@ -225,7 +225,7 @@ __
 
 [HTML]    
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     {
 
@@ -347,11 +347,11 @@ __
 
   }
 
- &lt;/script&gt;           
+ </script>           
 
 
 
-{ ![C:/Users/labuser/Desktop/note.jpg](Localization_images/Localization_img1.jpeg) | markdownify }
+{{ '![C:/Users/labuser/Desktop/note.jpg](Localization_images/Localization_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: In order to render the localized OLAP Client, we need to reset the content available in both OLAP Client Control and OLAP Cube_
 
@@ -395,7 +395,7 @@ The following screenshot shows the OLAP Client with French localization.
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_140.png](Localization_images/Localization_img2.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_140.png](Localization_images/Localization_img2.png)' | markdownify }}
 {:.image }
 
 

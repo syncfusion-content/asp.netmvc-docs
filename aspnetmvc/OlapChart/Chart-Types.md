@@ -53,7 +53,7 @@ The following screenshot displays a Column Chart.
 
 
 
-{ ![](Chart-Types_images/Chart-Types_img1.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -79,7 +79,7 @@ Stacking Column Chart is similar to column charts except the “Y-values”. The
 The following screenshot displays the stacking Column Chart.
 
 
-{ ![](Chart-Types_images/Chart-Types_img2.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -106,7 +106,7 @@ The Bar Chart is the simplest and most versatile chart of statistical diagrams. 
 The following screenshot displays a Bar Chart.
 
 
-{ ![](Chart-Types_images/Chart-Types_img3.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -135,7 +135,7 @@ Stacking BarChart is a Regularbarchart with the X-values stacked on top of each 
 
 The following screenshot displays the Stacking Bar Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img4.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -164,7 +164,7 @@ The following screenshot displays a Pie Chart.
 
 
 
-{ ![](Chart-Types_images/Chart-Types_img5.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -192,7 +192,7 @@ The Pyramid Chart type displays the data in the form of a triangle. It helps you
 The following screen shot displays the Pyramid Chart.
 
 
-{ ![](Chart-Types_images/Chart-Types_img6.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -225,7 +225,7 @@ The Line Chart joins the data points on a plot using straight lines that show tr
 
 The following screenshot displays the Line Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img7.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -258,7 +258,7 @@ Step LineChart uses horizontal and vertical lines to connect the data points res
 The following screenshot displays the Step Line Chart.
 
 
-{ ![](Chart-Types_images/Chart-Types_img8.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -288,7 +288,7 @@ The spline chart is similar to line charts except it connects different data poi
 
 The following screenshot displays the Spline Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img9.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -317,7 +317,7 @@ Area Chart emphasizes the degree of change of values over a period of time. Inst
 
 The following screenshot displays the Area Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img10.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -347,7 +347,7 @@ Step Area chart is similar to the regular area chart except for a straight line 
 
 The following screenshot displays a Step Area Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img11.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -377,7 +377,7 @@ Spline Area chart is similar to Area Chart with the difference in which the data
 
 The following Screenshot displays a Spline Area Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img12.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -405,7 +405,7 @@ Stacking Area chart is similar to regular area chart except the “Y-values”. 
 
 The following screenshot displays a Stacking Area Chart.
 
-{ ![](Chart-Types_images/Chart-Types_img13.png) | markdownify }
+{{ '![](Chart-Types_images/Chart-Types_img13.png)' | markdownify }}
 {:.image }
 
 

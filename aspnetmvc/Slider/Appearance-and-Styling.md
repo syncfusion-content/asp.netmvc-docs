@@ -34,7 +34,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
 <table>
 <tr>
 <td>
-<br>[_Layout.cshtml]//In _Layout page, specify the desired “ej.widgets.all.min.css” file to load the corresponding theme.&lt;head&gt;    <title>Slider</title>    &lt;!--Flat-saffron theme--&gt;    &lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" /&gt;    &lt;!--scripts--&gt;        &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt;&lt;/script&gt;    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt; &lt;/script&gt;    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"&gt; &lt;/script&gt;    &lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt;&lt;/script&gt;&lt;/head&gt;</td><td>
+<br>[_Layout.cshtml]//In _Layout page, specify the desired “ej.widgets.all.min.css” file to load the corresponding theme.<head>    <title>Slider</title>    <!--Flat-saffron theme-->    <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" />    <!--scripts-->        <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script></head></td><td>
 </td></tr>
 <tr>
 <td>
@@ -45,7 +45,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
 
 Execute the above code example to render the following output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlay.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlay.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -139,7 +139,7 @@ The following steps explains you on how to configure the Slider with custom them
 
 Execute the above code example to render the following output.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -157,7 +157,7 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").ShowTooltip(false))
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slitooltip.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slitooltip.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -181,7 +181,7 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 Execute the above code example to render the following output.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 

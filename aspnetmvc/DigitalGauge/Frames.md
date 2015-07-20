@@ -37,7 +37,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Frames_images/Frames_img1.png) | markdownify }
+{{ '![](Frames_images/Frames_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -81,7 +81,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Frames_images/Frames_img2.png) | markdownify }
+{{ '![](Frames_images/Frames_img2.png)' | markdownify }}
 {:.image }
 
 

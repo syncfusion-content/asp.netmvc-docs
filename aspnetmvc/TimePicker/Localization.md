@@ -33,7 +33,7 @@ The following steps explains you on how to enable Locale property for TimePicker
 
 Execute the above code to render the following output.
 
-{ ![](Localization_images/Localization_img1.png) | markdownify }
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
 {:.image }
 
 

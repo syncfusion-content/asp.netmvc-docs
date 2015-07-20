@@ -21,7 +21,7 @@ In the following example, the Sub menus opens in the Left side of the menu.
 
 // Add the following code in your CSHTML page.
 
- &lt;div class="imgframe"&gt;
+ <div class="imgframe">
 
 @Html.EJ().Menu("syncfusionProducts").Items(items =>
 
@@ -201,7 +201,7 @@ In the following example, the Sub menus opens in the Left side of the menu.
 
                }).Width("600").SubMenuDirection(Direction.Left)
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -211,7 +211,7 @@ In the following example, the Sub menus opens in the Left side of the menu.
 
 The output for the above code example is as follows.          
 
-{ ![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img1.png) | markdownify }
+{{ '![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -225,21 +225,21 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
 // Add the following code in your CSHTML page.
 
-&lt;div id="target" class="textarea"&gt;
+<div id="target" class="textarea">
 
         HTML is written in the form of HTML elements consisting of tags enclosed in angle
 
-        brackets (like &lt;html&gt; ),within the web page content. HTML tags most commonly
+        brackets (like <html> ),within the web page content. HTML tags most commonly
 
         come in pairs like and ,although some tags, known as empty elements, are unpaired,
 
-        for example &lt;img&gt;. The purpose of a web browser is to read HTML documents
+        for example <img>. The purpose of a web browser is to read HTML documents
 
         and compose them into visible or audible web pages. The browser does not display
 
         the HTML tags, but uses the tags to interpret the content of the page.
 
-    &lt;/div&gt;
+    </div>
 
     @Html.EJ().Menu("docfile").Items(items =>
 
@@ -279,7 +279,7 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
 
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .textarea {
 
@@ -299,12 +299,12 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 The output for the above code example is as follows.
 
-{ ![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img2.png) | markdownify }
+{{ '![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img2.png)' | markdownify }}
 {:.image }
 
 

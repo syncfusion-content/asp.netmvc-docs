@@ -25,21 +25,21 @@ In the following example, a context menu for the division containing text is cre
 
 // Add the following code in your CSHTML page.
 
-   &lt;div id="target" class="textarea"&gt;
+   <div id="target" class="textarea">
 
         HTML is written in the form of HTML elements consisting of tags enclosed in angle
 
-        brackets (like &lt;html&gt; ),within the web page content. HTML tags most commonly
+        brackets (like <html> ),within the web page content. HTML tags most commonly
 
         come in pairs like and ,although some tags, known as empty elements, are unpaired,
 
-        for example &lt;img&gt;. The purpose of a web browser is to read HTML documents
+        for example <img>. The purpose of a web browser is to read HTML documents
 
         and compose them into visible or audible web pages. The browser does not display
 
         the HTML tags, but uses the tags to interpret the content of the page.
 
-    &lt;/div&gt;
+    </div>
 
     @Html.EJ().Menu("docfile").Items(items =>
 
@@ -75,7 +75,7 @@ In the following example, a context menu for the division containing text is cre
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .textarea {
 
@@ -95,13 +95,13 @@ In the following example, a context menu for the division containing text is cre
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screen shot displays the output of the above code.
 
-{ ![](Context-Menu_images/Context-Menu_img1.png) | markdownify }
+{{ '![](Context-Menu_images/Context-Menu_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -118,7 +118,7 @@ Hides the context Menu control. Add the following script code in the sample in o
 
 [Javascript]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     jQuery(function ($) {
 
@@ -142,7 +142,7 @@ Hides the context Menu control. Add the following script code in the sample in o
 
     });
 
-&lt;/script&gt;
+</script>
 
 ShowContextMenu
 
@@ -151,7 +151,7 @@ Shows the context menu control. Add the following script code in the sample in o
 
 [Javascript]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
     jQuery(function ($) {
 
@@ -177,7 +177,7 @@ Shows the context menu control. Add the following script code in the sample in o
 
     });
 
-&lt;/script&gt;
+</script>
 
 
 

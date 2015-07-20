@@ -45,7 +45,7 @@ SC.Radius(130).Add();
 
 Execute the above code to render the following output.
 
-{ ![](Scales_images/Scales_img1.png) | markdownify }
+{{ '![](Scales_images/Scales_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -105,7 +105,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Scales_images/Scales_img2.png) | markdownify }
+{{ '![](Scales_images/Scales_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -154,7 +154,7 @@ pc.Radius(10)
 
 Execute the above code to render the following output.
 
-{ ![](Scales_images/Scales_img3.png) | markdownify }
+{{ '![](Scales_images/Scales_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -219,7 +219,7 @@ sc.Size(30)
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/karthigeyan/Desktop/1.png](Scales_images/Scales_img4.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/1.png](Scales_images/Scales_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -299,7 +299,7 @@ sc.Size(10)
 
 Execute the above code to render the following output.
 
-{ ![](Scales_images/Scales_img5.png) | markdownify }
+{{ '![](Scales_images/Scales_img5.png)' | markdownify }}
 {:.image }
 
 

@@ -1146,7 +1146,7 @@ By default, documents are signed with standard signature types. Certificated p
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Metadata-XMP_images/Metadata-XMP_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Metadata-XMP_images/Metadata-XMP_img1.png)' | markdownify }}
 {:.image }
 _Note: This implementation of certification will only work with Acrobat 7 and higher versions._
 

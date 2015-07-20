@@ -31,7 +31,7 @@ Refer to the following code examples.
 
 
 
-{ ![](Image-Configuration_images/Image-Configuration_img1.png) | markdownify }
+{{ '![](Image-Configuration_images/Image-Configuration_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -43,7 +43,7 @@ Refer to the following code examples.
 
 @Html.EJ().Tile("tile").Text("Pictures").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageClass("pictures")
 
-       &lt;style&gt;
+       <style>
 
         .pictures
 
@@ -55,11 +55,11 @@ Refer to the following code examples.
 
          }
 
-    &lt;/style&gt;
+    </style>
 
 
 
-{ ![](Image-Configuration_images/Image-Configuration_img2.png) | markdownify }
+{{ '![](Image-Configuration_images/Image-Configuration_img2.png)' | markdownify }}
 {:.image }
 
 

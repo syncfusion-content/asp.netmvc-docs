@@ -29,7 +29,7 @@ The following steps explains you to change the time format for the TimePicker.
 
 Execute the above code to render the following output.
 
-{ ![](Time-Format_images/Time-Format_img1.png) | markdownify }
+{{ '![](Time-Format_images/Time-Format_img1.png)' | markdownify }}
 {:.image }
 
 

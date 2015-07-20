@@ -26,7 +26,7 @@ The Normal layout is the default Layout of the PivotGrid where the summary cel
 
 
 
-{ ![](Grid-Layout_images/Grid-Layout_img1.png) | markdownify }
+{{ '![](Grid-Layout_images/Grid-Layout_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -44,7 +44,7 @@ In the Excel-like layout, the summary cells are positioned at the bottom of th
 
 
 
-{ ![](Grid-Layout_images/Grid-Layout_img2.png) | markdownify }
+{{ '![](Grid-Layout_images/Grid-Layout_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -60,7 +60,7 @@ Normal Top Summary
 
 In the NormalTopSummary Layout, the summary cells are positioned at the top of each parent member and the child member appears next to their parent.
 
-{ ![](Grid-Layout_images/Grid-Layout_img3.png) | markdownify }
+{{ '![](Grid-Layout_images/Grid-Layout_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -76,7 +76,7 @@ No Summaries
 
 In No Summaries Layout, the summary cells are hidden and the child members appear next to their parent member.
 
-{ ![](Grid-Layout_images/Grid-Layout_img4.png) | markdownify }
+{{ '![](Grid-Layout_images/Grid-Layout_img4.png)' | markdownify }}
 {:.image }
 
 

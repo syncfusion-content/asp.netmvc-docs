@@ -13,7 +13,7 @@ Connectors are objects used to create a link between two nodes. A connector is a
 
 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image59_20.jpg](Connector_images/Connector_img1.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_20.jpg](Connector_images/Connector_img1.jpeg)' | markdownify }}
 {:.image }
 
 
@@ -57,7 +57,7 @@ model.Connectors.Push(connector);
 
 
 
-{ ![](Connector_images/Connector_img2.png) | markdownify }
+{{ '![](Connector_images/Connector_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -119,7 +119,7 @@ model.Connectors.Push(connector);
 
 
 
-{ ![](Connector_images/Connector_img3.png) | markdownify }
+{{ '![](Connector_images/Connector_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -179,7 +179,7 @@ model.Connectors.Push(connector);
 
 
 
-{ ![](Connector_images/Connector_img4.png) | markdownify }
+{{ '![](Connector_images/Connector_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -243,13 +243,13 @@ model.Connectors.Push(connector);
 
 
 
-{ ![C:/Users/lakshmipriya/Desktop/IMG_07112014_125619.png](Connector_images/Connector_img5.png) | markdownify }
+{{ '![C:/Users/lakshmipriya/Desktop/IMG_07112014_125619.png](Connector_images/Connector_img5.png)' | markdownify }}
 {:.image }
 
 
 _Polyline_
 
-{ ![](Connector_images/Connector_img6.png) | markdownify }
+{{ '![](Connector_images/Connector_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -316,7 +316,7 @@ model.Connectors.Push(connector);
 
 
 
-{ ![](Connector_images/Connector_img7.png) | markdownify }
+{{ '![](Connector_images/Connector_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -368,7 +368,7 @@ model.Connectors.Push(connector);
 
 
 
-{ ![](Connector_images/Connector_img8.png) | markdownify }
+{{ '![](Connector_images/Connector_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -380,7 +380,7 @@ The segments can be edited during runtime by dragging control thumbs. Segments c
 
 
 
-{ ![](Connector_images/Connector_img9.png) | markdownify }
+{{ '![](Connector_images/Connector_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -416,7 +416,7 @@ connector.TargetPadding = 20;
 
 
 
-{ ![](Connector_images/Connector_img10.png) | markdownify }
+{{ '![](Connector_images/Connector_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -442,7 +442,7 @@ node.ConnectorPadding = 20;
 
 
 
-{ ![](Connector_images/Connector_img11.png) | markdownify }
+{{ '![](Connector_images/Connector_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -470,7 +470,7 @@ port.ConnectorPadding = 20;
 
 
 
-{ ![](Connector_images/Connector_img12.png) | markdownify }
+{{ '![](Connector_images/Connector_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -508,7 +508,7 @@ DiagramContent.Constraints = DiagramConstraints.Default | DiagramConstraints.Bri
 
 
 
-{ ![](Connector_images/Connector_img13.png) | markdownify }
+{{ '![](Connector_images/Connector_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -564,7 +564,7 @@ model.BridgeDirection = BridgeDirection.Top;
 
 
 
-{ ![](Connector_images/Connector_img14.png) | markdownify }
+{{ '![](Connector_images/Connector_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -595,7 +595,7 @@ model.BridgeDirection = BridgeDirection.Left;
 
 
 
-{ ![](Connector_images/Connector_img15.png) | markdownify }
+{{ '![](Connector_images/Connector_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -649,7 +649,7 @@ Connector.CornerRadius=20;
 
 
 
-{ ![](Connector_images/Connector_img16.png) | markdownify }
+{{ '![](Connector_images/Connector_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -683,7 +683,7 @@ connector.TargetNode = "tailNode"; //Sets name of targetNode
 
 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image59_22.jpg](Connector_images/Connector_img17.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_22.jpg](Connector_images/Connector_img17.jpeg)' | markdownify }}
 {:.image }
 
 
@@ -881,7 +881,7 @@ connector.SourceDecorator.FillColor = "yellow";
 
 
 
-{ ![http://help.syncfusion.com/ug/js/ImagesExt/image59_23.jpg](Connector_images/Connector_img18.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_23.jpg](Connector_images/Connector_img18.jpeg)' | markdownify }}
 {:.image }
 
 
@@ -971,7 +971,7 @@ connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
 
 
 
-> { ![Description: C:/Users/labuser/Desktop/note.jpg](Connector_images/Connector_img19.jpeg) | markdownify }
+> {{ '![Description: C:/Users/labuser/Desktop/note.jpg](Connector_images/Connector_img19.jpeg)' | markdownify }}
 {:.image }
 _Note: Connector’s constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm)_._ 
 

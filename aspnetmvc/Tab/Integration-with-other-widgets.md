@@ -27,7 +27,7 @@ The following code example explains you the Rating control creation. The input e
 
 
 
-&lt;div style="width:550px"&gt;
+<div style="width:550px">
 
     @{Html.EJ().Tab("dishtab").Items(data =>
 
@@ -39,7 +39,7 @@ The following code example explains you the Rating control creation. The input e
 
                        Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-                   &lt;/div&gt;);
+                   </div>);
 
                data.Add().ID("sandwichtype").Text("Sandwich Type")
 
@@ -47,11 +47,11 @@ The following code example explains you the Rating control creation. The input e
 
                    Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               &lt;/div&gt;);
+               </div>);
 
            }).Render();}
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -61,7 +61,7 @@ To render the rating controls in the first Tab element refer the styles mentione
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         .dishRating {
 
@@ -71,13 +71,13 @@ To render the rating controls in the first Tab element refer the styles mentione
 
         }       
 
-    &lt;/style&gt;
+    </style>
 
 
 
 2. The following screenshot illustrates the Tab content with rating control. 
 
-{ ![](Integration-with-other-widgets_images/Integration-with-other-widgets_img1.png) | markdownify }
+{{ '![](Integration-with-other-widgets_images/Integration-with-other-widgets_img1.png)' | markdownify }}
 {:.image }
 
 

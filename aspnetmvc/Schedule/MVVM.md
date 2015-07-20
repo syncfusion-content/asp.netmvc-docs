@@ -23,11 +23,11 @@ Example: e-contextMenuSettings-enable.
 
 
 
-&lt;!--To Render the Schedule--&gt;
+<!--To Render the Schedule-->
 
-&lt;div ng-app="syncApp"&gt;
+<div ng-app="syncApp">
 
-&lt;div ng-controller="Schedule"&gt;
+<div ng-controller="Schedule">
 
 <ej-Schedule style="float: left" id="Schedule1"
 
@@ -55,11 +55,11 @@ e-currentdate="setDate" e-contextMenuSettings-enable="true">
 
 
 
-&lt;/ej-Schedule&gt;
+</ej-Schedule>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -71,43 +71,43 @@ Adding Context menu settings
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
 
-&lt;!--To Render the Schedule--&gt;
+<!--To Render the Schedule-->
 
 
 
-&lt;ej-Schedule style="float: left" id="Schedule1"&gt;
+<ej-Schedule style="float: left" id="Schedule1">
 
 
 
-&lt;!--Adding content menu item for appointment --&gt;
+<!--Adding content menu item for appointment -->
 
 
 
-&lt;e-contextMenuSettings-menuItems-appointment&gt;
+<e-contextMenuSettings-menuItems-appointment>
 
-&lt; e-appointment e-id="open" e-text="Open Appointment"&gt;&lt;/ e-appointment&gt;
+< e-appointment e-id="open" e-text="Open Appointment"></ e-appointment>
 
-&lt; e-appointment e-id="delete" e-text="Delete Appointment"&gt;&lt;/ e-appointment&gt;
+< e-appointment e-id="delete" e-text="Delete Appointment"></ e-appointment>
 
-&lt; e-appointment e-id="categorize" e-text="Delete Appointment"&gt;
+< e-appointment e-id="categorize" e-text="Delete Appointment">
 
-&lt;/ e-appointment&gt;
+</ e-appointment>
 
-&lt;/e-contextMenuSettings-menuItems-appointment&gt;
-
-
-
-&lt;!--Adding content menu item for cells --&gt;
+</e-contextMenuSettings-menuItems-appointment>
 
 
 
-&lt;e-contextMenuSettings-menuItems-cells&gt;
+<!--Adding content menu item for cells -->
+
+
+
+<e-contextMenuSettings-menuItems-cells>
 
 <e-contextMenuSettings-menuItems-cell
 
 e-id="new" e-text="Create New Appointment">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
 
 
@@ -115,15 +115,15 @@ e-id="new" e-text="Create New Appointment">
 
 e-id="recurrence" e-text="Create recurrence Appointment">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
 
 
-&lt;/e-contextMenuSettings-menuItems-cells&gt;
+</e-contextMenuSettings-menuItems-cells>
 
 
 
-&lt;/ej-Schedule&gt;
+</ej-Schedule>
 
 
 
@@ -133,7 +133,7 @@ Adding Categorize option
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
 
-&lt;!--To Render the Schedule--&gt;
+<!--To Render the Schedule-->
 
 
 
@@ -147,25 +147,25 @@ e-categorizesetting-fontcolor="fontcolor" e-categorizesetting-id="id">
 
 
 
-&lt;!--Adding content menu item for appointment --&gt;
+<!--Adding content menu item for appointment -->
 
-&lt;e-contextMenuSettings-menuItems-appointment&gt;
+<e-contextMenuSettings-menuItems-appointment>
 
-&lt;/e-contextMenuSettings-menuItems-appointment&gt;
-
-
-
-&lt;!--Adding content menu item for cells --&gt;
+</e-contextMenuSettings-menuItems-appointment>
 
 
 
-&lt;e-contextMenuSettings-menuItems-cells&gt;
-
-&lt;/e-contextMenuSettings-menuItems-cells&gt;
+<!--Adding content menu item for cells -->
 
 
 
-&lt;e-categorizesetting-datasource&gt;
+<e-contextMenuSettings-menuItems-cells>
+
+</e-contextMenuSettings-menuItems-cells>
+
+
+
+<e-categorizesetting-datasource>
 
 
 
@@ -173,7 +173,7 @@ e-categorizesetting-fontcolor="fontcolor" e-categorizesetting-id="id">
 
 color="Blue" fontcolor="Red" id="1">
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
 
 
@@ -181,7 +181,7 @@ color="Blue" fontcolor="Red" id="1">
 
 color="yellow" fontcolor="Red" id="2">
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
 
 
@@ -189,7 +189,7 @@ color="yellow" fontcolor="Red" id="2">
 
 fontcolor="Red" id="3">
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
 
 
@@ -197,15 +197,15 @@ fontcolor="Red" id="3">
 
 fontcolor="Red" id="4">
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
 
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
 
 
-&lt;/ej-Schedule&gt;
+</ej-Schedule>
 
 
 
@@ -213,7 +213,7 @@ fontcolor="Red" id="4">
 
 Execute the above codes to render the Resultant schedule as follows.
 
-{ ![](MVVM_images/MVVM_img1.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -223,25 +223,25 @@ Two Way Binding
 * The following code example explains how to achieve the two way binding to the Schedule control.
 * [Click here](http://mvc.syncfusion.com/demos/web/schedule/angularsupport) to see how Angular JS works with schedule.
 
-&lt;div ng-app="syncApp"&gt;
+<div ng-app="syncApp">
 
-&lt;div ng-controller="ScheduleCtrl"&gt;
+<div ng-controller="ScheduleCtrl">
 
-&lt;div&gt;
+<div>
 
 Current View
 
-&lt;/div&gt;
+</div>
 
-&lt;input id="ddlView" ej-dropdownlist e-datasource="dataList" e-value="drpvalue" e-width="107px" /&gt;
+<input id="ddlView" ej-dropdownlist e-datasource="dataList" e-value="drpvalue" e-width="107px" />
 
-&lt;div&gt;
+<div>
 
 Current Date
 
-&lt;/div&gt;
+</div>
 
-&lt;input id="datepick1" ej-datepicker e-value="setDate" e-width="107px" /&gt;
+<input id="datepick1" ej-datepicker e-value="setDate" e-width="107px" />
 
 
 
@@ -273,67 +273,67 @@ e-categorizesetting-text="text" e-categorizesetting-color="color"
 
 e-categorizesetting-fontcolor="fontcolor" e-categorizesetting-id="id">
 
-&lt;e-categorizesetting-datasource&gt;
+<e-categorizesetting-datasource>
 
-&lt;e-categorizesetting-datasource text="Blue category" color="Blue" fontcolor="Red" id="1"&gt;&lt;/e-categorizesetting-datasource&gt;
+<e-categorizesetting-datasource text="Blue category" color="Blue" fontcolor="Red" id="1"></e-categorizesetting-datasource>
 
-&lt;e-categorizesetting-datasource text="yellow category" color="yellow" fontcolor="Red" id="2"&gt;&lt;/e-categorizesetting-datasource&gt;
+<e-categorizesetting-datasource text="yellow category" color="yellow" fontcolor="Red" id="2"></e-categorizesetting-datasource>
 
-&lt;e-categorizesetting-datasource text="red category" color="red" fontcolor="Red" id="3"&gt;&lt;/e-categorizesetting-datasource&gt;
+<e-categorizesetting-datasource text="red category" color="red" fontcolor="Red" id="3"></e-categorizesetting-datasource>
 
-&lt;e-categorizesetting-datasource text="orange category" color="orange" fontcolor="Red" id="4"&gt;&lt;/e-categorizesetting-datasource&gt;
+<e-categorizesetting-datasource text="orange category" color="orange" fontcolor="Red" id="4"></e-categorizesetting-datasource>
 
-&lt;/e-categorizesetting-datasource&gt;
+</e-categorizesetting-datasource>
 
-&lt;e-contextMenuSettings-menuItems-appointment&gt;
+<e-contextMenuSettings-menuItems-appointment>
 
-&lt;appointment e-id="open" e-text="Open Appointment"&gt;&lt;/appointment&gt;
+<appointment e-id="open" e-text="Open Appointment"></appointment>
 
-&lt;appointment e-id="delete" e-text="Delete Appointment"&gt;&lt;/appointment&gt;
+<appointment e-id="delete" e-text="Delete Appointment"></appointment>
 
-&lt;/e-contextMenuSettings-menuItems-appointment&gt;
+</e-contextMenuSettings-menuItems-appointment>
 
-&lt;e-contextMenuSettings-menuItems-cells&gt;
+<e-contextMenuSettings-menuItems-cells>
 
 <e-contextMenuSettings-menuItems-cell
 
 e-id="new" e-text="Create New Appointment">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
 <e-contextMenuSettings-menuItems-cell
 
 e-id="recurrence" e-text="Create recurrence Appointment">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
 <e-contextMenuSettings-menuItems-cell
 
 e-id="today" e-text="Today">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
 <e-contextMenuSettings-menuItems-cell
 
 e-id="gotodate" -text="Go to date">
 
-&lt;/e-contextMenuSettings-menuItems-cell&gt;
+</e-contextMenuSettings-menuItems-cell>
 
-&lt;/e-contextMenuSettings-menuItems-cells&gt;
+</e-contextMenuSettings-menuItems-cells>
 
-&lt;/ej-Schedule&gt;
+</ej-Schedule>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
-
-
-
-&lt;script&gt;
+</div>
 
 
 
-&lt;!—binding the value to the scope variables in application controller--&gt;
+<script>
+
+
+
+<!—binding the value to the scope variables in application controller-->
 
 var data = [
 
@@ -369,13 +369,13 @@ $scope.setDate = new Date();
 
 $("#sampleProperties").ejPropertiesPanel();
 
-&lt;/script&gt;
+</script>
 
 
 
 Execute the above code to render the following output.
 
-{ ![](MVVM_images/MVVM_img2.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -400,11 +400,11 @@ Knockout binding
 
 
 
-@section SampleHeading{&lt;span class="sampleName"&gt; Schedule / KO Support</span>}
+@section SampleHeading{<span class="sampleName"> Schedule / KO Support</span>}
 
 @section StyleSection{
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
 b {
 
@@ -412,73 +412,73 @@ white-space: nowrap;
 
 }
 
-&lt;/style&gt;
+</style>
 
 }
 
 @section ControlsSection{
 
-&lt;div style="float: left" id="Schedule1" data-bind="ejSchedule: { width: '100%', height: '525px', appointmentSettings: { dataSource: appointments, id: 'Id', subject: 'Subject', location: 'Location', description: 'Description', startTime: 'StartTime', endTime: 'EndTime', allday: 'AllDay', recurrence: 'Recurrence', recurrenceRule: 'RecurrenceRule' }, currentView: view, currentDate: date }"&gt;
+<div style="float: left" id="Schedule1" data-bind="ejSchedule: { width: '100%', height: '525px', appointmentSettings: { dataSource: appointments, id: 'Id', subject: 'Subject', location: 'Location', description: 'Description', startTime: 'StartTime', endTime: 'EndTime', allday: 'AllDay', recurrence: 'Recurrence', recurrenceRule: 'RecurrenceRule' }, currentView: view, currentDate: date }">
 
-&lt;/div&gt;
+</div>
 
 }
 
 @section PropertiesSection{
 
-&lt;div id="sampleProperties"&gt;
+<div id="sampleProperties">
 
-&lt;div class="row"&gt;
+<div class="row">
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
 Current View
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;&lt;/div&gt;
+<div class="row"></div>
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
-&lt;input type="text" name="view" value="" style="width: 100px" data-bind="value: view" /&gt;
+<input type="text" name="view" value="" style="width: 100px" data-bind="value: view" />
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;&lt;/div&gt;
+<div class="row"></div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="row"&gt;
+<div class="row">
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
 Current Date
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="col-md-3"&gt;&lt;/div&gt;
+<div class="col-md-3"></div>
 
-&lt;div class="col-md-3"&gt;
+<div class="col-md-3">
 
-&lt;input id="datepick" data-bind="ejDatePicker: { value: date, width: '107px' }" /&gt;
+<input id="datepick" data-bind="ejDatePicker: { value: date, width: '107px' }" />
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="col-md-3"&gt;&lt;/div&gt;
+<div class="col-md-3"></div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
 }
 
 @section ScriptSection{
 
-&lt;script src="~/Scripts/knockout-min.js"&gt;&lt;/script&gt;
+<script src="~/Scripts/knockout-min.js"></script>
 
-&lt;script src="~/Scripts/ej/ej.widget.ko.min.js"&gt;&lt;/script&gt;
+<script src="~/Scripts/ej/ej.widget.ko.min.js"></script>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 $(function () {
 
@@ -518,7 +518,7 @@ $("#sampleProperties").ejPropertiesPanel();
 
 
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -528,7 +528,7 @@ $("#sampleProperties").ejPropertiesPanel();
 
 Output of the above code example is as follows.
 
-{ ![](MVVM_images/MVVM_img3.png) | markdownify }
+{{ '![](MVVM_images/MVVM_img3.png)' | markdownify }}
 {:.image }
 
 

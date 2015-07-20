@@ -51,7 +51,7 @@ List<String> formatStyle = new List<string>() { "format" };
 
 }
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).ShowFooter(true).Tools(tool => tool.Clear(clear).FormatStyle(formatStyle).Tables(tables).Links(links).Images(images).Scripts(scripts).Casing(casing).Font(font).Styles(style).Alignment(alignment).Lists(lists).CopyPaste(copyPaste).DoAction(doAction)).Render();}
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).ShowFooter(true).Tools(tool => tool.Clear(clear).FormatStyle(formatStyle).Tables(tables).Links(links).Images(images).Scripts(scripts).Casing(casing).Font(font).Styles(style).Alignment(alignment).Lists(lists).CopyPaste(copyPaste).DoAction(doAction)).Render();}
 
 
 
@@ -63,7 +63,7 @@ List<String> formatStyle = new List<string>() { "format" };
 
 This popup window contains options to add the hyperlink, text, tooltip to selected text.
 
-{ ![](Insert-Hyperlink_images/Insert-Hyperlink_img1.png) | markdownify }
+{{ '![](Insert-Hyperlink_images/Insert-Hyperlink_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -75,7 +75,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Insert-Hyperlink_images/Insert-Hyperlink_img2.png) | markdownify }
+{{ '![](Insert-Hyperlink_images/Insert-Hyperlink_img2.png)' | markdownify }}
 {:.image }
 
 

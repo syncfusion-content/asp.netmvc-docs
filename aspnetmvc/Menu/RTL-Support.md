@@ -19,7 +19,7 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 
 // The following code example depicts how to enable the rtl property of the Menu control.
 
-&lt;div class="imgframe"&gt;
+<div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -91,7 +91,7 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 
         }).Width("500").EnableRTL(true)    
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -101,7 +101,7 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 
 Following screenshot displays the output for the above code.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

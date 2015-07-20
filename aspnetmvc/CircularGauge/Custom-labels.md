@@ -116,7 +116,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Custom-labels_images/Custom-labels_img1.png) | markdownify }
+{{ '![](Custom-labels_images/Custom-labels_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -188,7 +188,7 @@ cl.TextAngle(10)
 
 Execute the above code to render the following output.
 
-{ ![](Custom-labels_images/Custom-labels_img2.png) | markdownify }
+{{ '![](Custom-labels_images/Custom-labels_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -217,7 +217,7 @@ Execute the above code to render the following output.
 
 Execute the above code to render the following output.
 
-{ ![](Custom-labels_images/Custom-labels_img3.png) | markdownify }
+{{ '![](Custom-labels_images/Custom-labels_img3.png)' | markdownify }}
 {:.image }
 
 

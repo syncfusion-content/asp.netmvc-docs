@@ -42,7 +42,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Horizontal-View_images/Horizontal-View_img1.png) | markdownify }
+{{ '![](Horizontal-View_images/Horizontal-View_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -66,7 +66,7 @@ The above example illustrates the horizontal view of Schedule control. Similarly
 
 Execute the above code to render the following output.
 
-{ ![](Horizontal-View_images/Horizontal-View_img2.png) | markdownify }
+{{ '![](Horizontal-View_images/Horizontal-View_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -144,7 +144,7 @@ gr.Resources(ViewBag.Resources);
 
 Execute the above code to render the following output.
 
-{ ![](Horizontal-View_images/Horizontal-View_img3.png) | markdownify }
+{{ '![](Horizontal-View_images/Horizontal-View_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -223,7 +223,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Horizontal-View_images/Horizontal-View_img4.png) | markdownify }
+{{ '![](Horizontal-View_images/Horizontal-View_img4.png)' | markdownify }}
 {:.image }
 
 

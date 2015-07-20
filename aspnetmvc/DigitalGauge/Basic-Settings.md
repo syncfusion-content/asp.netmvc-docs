@@ -33,7 +33,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Basic-Settings_images/Basic-Settings_img1.png) | markdownify }
+{{ '![](Basic-Settings_images/Basic-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -64,7 +64,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Basic-Settings_images/Basic-Settings_img2.png) | markdownify }
+{{ '![](Basic-Settings_images/Basic-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -95,7 +95,7 @@ Themes give the good appearance to the control. There are two types of Themes av
 
 Execute the above code examples to render the DigitalGauge as follows. 
 
-{ ![](Basic-Settings_images/Basic-Settings_img3.png) | markdownify }
+{{ '![](Basic-Settings_images/Basic-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -125,7 +125,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-{ ![](Basic-Settings_images/Basic-Settings_img4.png) | markdownify }
+{{ '![](Basic-Settings_images/Basic-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

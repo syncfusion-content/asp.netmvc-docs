@@ -1262,7 +1262,7 @@ excelEngine.Dispose()
 
 Excel has the sheet tab bar that appears at the bottom of the screen with tab scrolling buttons displayed on the left side. Excel provides an option to show/hide a sheet from your view. This is done by selecting the Hide item in the context menu of the sheet.
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img1.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -1584,7 +1584,7 @@ excelEngine.Dispose()
 
 To allow viewing of a particular worksheet, hide the content in the last part of the worksheet, hide the scrollbars by turning off either scrollbar checkbox in the View tab of the Options dialog box.
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img2.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -1708,7 +1708,7 @@ Some may find it easier to work with the worksheet applications withoutgrid line
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img3.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -1930,7 +1930,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img4.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -2040,7 +2040,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img5.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -2048,7 +2048,7 @@ excelEngine.Dispose()
 
 It is difficult to read and understand very large spreadsheets. When you scroll too far to the right or down, you cannot be able to view the headings that are located at the top and at the left side of the worksheet. Without the headings, it is hard to keep track of the columns or rows of data viewed. Excel features Freeze Panes to avoid this problem. This feature can be enabled by selecting Freeze option from the View tab. It allows you to freeze certain areas or panes of the spreadsheet, so that they remain visible at all times while scrolling to the right or bottom. Headings make it easier to read the data in the spreadsheet.
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img6.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -2158,7 +2158,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img7.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -2282,7 +2282,7 @@ excelEngine.Dispose()
 
 
 
-> { ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img8.jpeg) | markdownify }
+> {{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img8.jpeg)' | markdownify }}
 {:.image }
 _Note: FirstVisibleColumn and FirstVisibleRow indexes are "zero-based"._
 
@@ -2413,7 +2413,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img9.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -2995,7 +2995,7 @@ The protection of the chart sheet is removed.
 
 In MS Excel, the way the spreadsheet fits into paper can be controlled through the Page Setup dialog box. You can select the size and orientation of the paper, the width of the margins, what goes into the header and footer of each page, and the order of printing cells for sheets that will take several pieces of paper.
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img10.jpeg) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img10.jpeg)' | markdownify }}
 {:.image }
 _Note: Though the code example uses sheet object, it is possible to read/write page setup options for chart worksheet and embedded chart by using IChartPageSetup interface._
 
@@ -3099,7 +3099,7 @@ Page Breaks are dividers that break a worksheet into separate pages for printing
 
 XlsIO provides support for inserting/removing horizontal and vertical page breaks in a worksheet by using the IHPagebreak and IVPagebreak interfaces respectively. 
 
-> { ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img11.jpeg) | markdownify }
+> {{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img11.jpeg)' | markdownify }}
 {:.image }
 _Note: By default, page breaks are not shown in the Normal view. However, you can view them by inserting new page breaks._
 
@@ -3249,7 +3249,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img12.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -3263,7 +3263,7 @@ Excel allows you to change the orientation of the page from the Page Setup tab. 
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img13.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img13.png)' | markdownify }}
 {:.image }
 
 
@@ -3383,7 +3383,7 @@ Scaling lets you specify a certain percentage to reduce or enlarge your workshee
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img14.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -3503,7 +3503,7 @@ Page margins are the blank spaces between the worksheet data and the edges of th
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img15.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img15.png)' | markdownify }}
 {:.image }
 
 
@@ -3633,7 +3633,7 @@ excelEngine.Dispose()
 
 MS Excel enables setting the background for the worksheet with an image that covers the entire worksheet. Depending upon the image size and type, the background graphic may either be stretched across your worksheet or tiled. 
 
-> { ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img16.jpeg) | markdownify }
+> {{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img16.jpeg)' | markdownify }}
 {:.image }
 _Note: The sheet backgrounds may tremendously increase the file size of the workbooks._
 
@@ -3755,7 +3755,7 @@ excelEngine.Dispose()
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img17.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img17.png)' | markdownify }}
 {:.image }
 
 
@@ -3765,7 +3765,7 @@ In order to fit information on a page or change the appearance of the page, you 
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img18.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img18.png)' | markdownify }}
 {:.image }
 
 
@@ -3879,11 +3879,11 @@ Often, there is a need to include some information about your document at the to
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img19.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img19.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img20.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img20.png)' | markdownify }}
 {:.image }
 
 
@@ -4113,7 +4113,7 @@ excelEngine.Dispose()
 
 
 
-> { ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img21.jpeg) | markdownify }
+> {{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img21.jpeg)' | markdownify }}
 {:.image }
 _Note: XlsIO does not provide any option to get the page count. You can only insert the page count by using the format string as illustrated in the following code example._
 
@@ -4371,7 +4371,7 @@ MS Excel enables customization of print settings through the following options.
 
 
 
-{ ![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img22.png) | markdownify }
+{{ '![](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img22.png)' | markdownify }}
 {:.image }
 
 

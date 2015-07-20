@@ -20,7 +20,7 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 <table>
 <tr>
 <td>
-[_cshtml]@*Add the following code in your view page.*@    @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).Render(); }</td></tr>
+[_cshtml]@*Add the following code in your view page.*@    @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }</td></tr>
 <tr>
 <td>
 [JavaScript]\\ Add the following code in your script section to render RTE with disabled image iconvar rteobj = $("#rteSample").data("ejRTE");rteobj.disableToolbarItem("rteSampleimage");</td></tr>
@@ -31,7 +31,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Enable-or-disable_images/Enable-or-disable_img1.png) | markdownify }
+{{ '![](Enable-or-disable_images/Enable-or-disable_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -45,7 +45,7 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 @*Add the following code in your view page.*@
 
-    @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@&lt;p&gt;&lt;/p&gt;).Enabled(false).Render(); }
+    @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Enabled(false).Render(); }
 
 
 
@@ -53,7 +53,7 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 The following screenshot displays the output.
 
-{ ![](Enable-or-disable_images/Enable-or-disable_img2.png) | markdownify }
+{{ '![](Enable-or-disable_images/Enable-or-disable_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -19,7 +19,7 @@ RTL control supports right-to-left functionality and features for languages th
 
 @Html.EJ().DateTimePicker("DateTime").EnableRTL(true).Width("175px")
 
-2. { ![](Right-to-Left_images/Right-to-Left_img1.png) | markdownify }
+2. {{ '![](Right-to-Left_images/Right-to-Left_img1.png)' | markdownify }}
 {:.image }
 The following screenshot displays the output for the above code.
 

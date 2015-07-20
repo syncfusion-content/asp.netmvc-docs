@@ -33,7 +33,7 @@ In Tile View representation, both Grid and Chart will be displayed one over the 
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img1.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -51,7 +51,7 @@ In Tab View representation, both Grid and Chart will be displayed in a separate 
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img2.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -72,7 +72,7 @@ To display/visualize Chart control by default, set defaultView to Chart.
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img3.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -90,7 +90,7 @@ To display/visualize Grid control by default, set defaultView to Grid.
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img4.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -110,7 +110,7 @@ After you set thedisplayMode option to GridOnly, the Chart is hidden and the da
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img5.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -128,7 +128,7 @@ After you set the displayMode option to ChartOnly, the Grid is hidden and data 
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img6.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -146,7 +146,7 @@ After you set the displayMode option to ChartAndGrid, data is displayed in both
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img7.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -164,7 +164,7 @@ You are provided with an option to toggle the visibility of Axis Element Builder
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img8.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -174,7 +174,7 @@ You can maximize OLAP Grid and OLAP Chart to full screen mode inside OLAP Client
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img9.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -191,7 +191,7 @@ The following screenshot shows the maximized view of OLAP Grid and OLAP Chart.
 
 
 
-{ ![](Layout-Customization_images/Layout-Customization_img10.png) | markdownify }
+{{ '![](Layout-Customization_images/Layout-Customization_img10.png)' | markdownify }}
 {:.image }
 
 

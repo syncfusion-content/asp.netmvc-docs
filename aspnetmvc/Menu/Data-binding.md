@@ -89,7 +89,7 @@ To define the local data to the Menu control, map the user-defined JSON data nam
 
 The following screenshot displays the output of the above code.
 
-{ ![](Data-binding_images/Data-binding_img1.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -123,7 +123,7 @@ In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](htt
 
 The following screenshot displays the output of the above code. 
 
-{ ![](Data-binding_images/Data-binding_img2.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -75,11 +75,11 @@ Responsive layout is aimed at crafting sites to provide an optimal viewing exper
 
 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img1.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Responsive-Layout_images/Responsive-Layout_img2.png) | markdownify }
+{{ '![](Responsive-Layout_images/Responsive-Layout_img2.png)' | markdownify }}
 {:.image }
 
 

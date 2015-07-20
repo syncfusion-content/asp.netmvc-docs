@@ -37,7 +37,7 @@ The following steps explains you the configuration of ShowScale property.
 
 Execute the above code example to render the following output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderscale.PNG](Scale-Settings_images/Scale-Settings_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderscale.PNG](Scale-Settings_images/Scale-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -70,7 +70,7 @@ The following steps explains you on how to disable the small ticks in Slider.
 Execute the above code example to render the following output.
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slidersmall.PNG](Scale-Settings_images/Scale-Settings_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slidersmall.PNG](Scale-Settings_images/Scale-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -103,7 +103,7 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 Execute the above code example to render the following output.
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlarge.PNG](Scale-Settings_images/Scale-Settings_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlarge.PNG](Scale-Settings_images/Scale-Settings_img3.png)' | markdownify }}
 {:.image }
 
 

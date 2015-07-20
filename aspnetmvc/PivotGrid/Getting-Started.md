@@ -19,7 +19,7 @@ Control structure
 
 The following screenshot displays the PivotGrid Control.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -31,7 +31,7 @@ You can also pass the required data to PivotGrid and customize it according to y
 
 In this example you can see how PivotGrid component tabulates the Internet Sales Amount over Fiscal year in different Customer Geographic locations 
 
-{ ![Capture](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![Capture](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -41,13 +41,13 @@ The following screenshot displays project creation wizard
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
 Then select Internet application template with Razor view engine and click OK
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -57,13 +57,13 @@ Add References
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
 
 
-{ ![sshot-4](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![sshot-4](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -72,14 +72,14 @@ Add References
 
 Add Scripts and Styles
 
-1. Add the script files and CSS files in the &lt;head&gt; tag of the _Layout.cshtml page.
+1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 > 
 _Note:_ 
 
 1. _Use the following code sample while adding scripts and styles_             
 2. _Apart from cdn files rest of them can be acquired from the following location_
 > 
-_C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&gt;\JavaScript\assets\_
+_C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\_
 
 > 
 
@@ -87,17 +87,17 @@ _C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&
 
 
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
 
-&lt;/head&gt;
+</head>
 
 
 
@@ -105,13 +105,13 @@ _C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&
 
 [CSHTML]
 
-&lt;body&gt;
+<body>
 
    @RenderBody()
 
    @Html.EJ().ScriptManager()   
 
-&lt;/body&gt;
+</body>
 
 Add Control in View page
 
@@ -121,11 +121,11 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 @using Syncfusion.JavaScript;
 
-&lt;div&gt;
+<div>
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("/wcf/PivotGridService.svc")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -135,13 +135,13 @@ Create WCF Services
 
 1. Right-click the project and select Add > New Folder.  Name the folder as wcf.
 
-{ ![](Getting-Started_images/Getting-Started_img7.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
 {:.image }
 
 
 2. Now right click the wcf folder created and select Add > New Item.  
 
-{ ![](Getting-Started_images/Getting-Started_img8.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -150,7 +150,7 @@ Create WCF Services
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img9.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -462,41 +462,41 @@ You can add the following methods to the service that are invoked for any server
 
 Configure Web.Config
 
-1. Register the assemblies by adding the following code sample inside the &lt;system.web&gt; tag in web.config file at root folder.
+1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config file at root folder.
 
 [web.config]
 
-&lt;compilation debug="true" targetFramework="4.5"&gt;
+<compilation debug="true" targetFramework="4.5">
 
-      &lt;assemblies&gt;
+      <assemblies>
 
-        &lt;add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" /&gt;
+        <add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
 
-        &lt;add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-      &lt;/assemblies&gt;
+      </assemblies>
 
-&lt;/compilation&gt;
+</compilation>
 
 
 
@@ -540,29 +540,29 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;namespaces&gt;
+<namespaces>
 
-        &lt;add namespace="System.Web.Helpers" /&gt;
+        <add namespace="System.Web.Helpers" />
 
-        &lt;add namespace="System.Web.Mvc" /&gt;
+        <add namespace="System.Web.Mvc" />
 
-        &lt;add namespace="System.Web.Mvc.Ajax" /&gt;
+        <add namespace="System.Web.Mvc.Ajax" />
 
-        &lt;add namespace="System.Web.Mvc.Html" /&gt;
+        <add namespace="System.Web.Mvc.Html" />
 
-        &lt;add namespace="System.Web.Optimization" /&gt;
+        <add namespace="System.Web.Optimization" />
 
-        &lt;add namespace="System.Web.Routing" /&gt;
+        <add namespace="System.Web.Routing" />
 
-        &lt;add namespace="System.Web.WebPages" /&gt;
+        <add namespace="System.Web.WebPages" />
 
-        &lt;add namespace="Syncfusion.MVC.EJ"/&gt;
+        <add namespace="Syncfusion.MVC.EJ"/>
 
-        &lt;add namespace="Syncfusion.JavaScript"/&gt;
+        <add namespace="Syncfusion.JavaScript"/>
 
-        &lt;add namespace="Syncfusion.JavaScript.DataVisualization"/&gt;
+        <add namespace="Syncfusion.JavaScript.DataVisualization"/>
 
-&lt;/namespaces&gt;
+</namespaces>
 
 
 
@@ -576,21 +576,21 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;services&gt;
+    <services>
 
-      &lt;service name="MvcApplication1.PivotGridService"&gt;
+      <service name="MvcApplication1.PivotGridService">
 
         <endpoint address="" behaviorConfiguration="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"
 
           binding="webHttpBinding" contract="MvcApplication1.IPivotGridService" />
 
-      &lt;/service&gt;
+      </service>
 
-    &lt;/services&gt;
+    </services>
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 
 
@@ -598,23 +598,23 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;behaviors&gt;
+    <behaviors>
 
-      &lt;endpointBehaviors&gt;
+      <endpointBehaviors>
 
-        &lt;behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"&gt;
+        <behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior">
 
-          &lt;enableWebScript /&gt;
+          <enableWebScript />
 
-        &lt;/behavior&gt;
+        </behavior>
 
-      &lt;/endpointBehaviors&gt;
+      </endpointBehaviors>
 
-    &lt;/behaviors&gt;
+    </behaviors>
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 > 
 
@@ -631,19 +631,19 @@ _lap_
 
 [web.config]
 
-&lt;appSettings&gt;
+<appSettings>
 
-    &lt;add key="webpages:Version" value="2.0.0.0" /&gt;
+    <add key="webpages:Version" value="2.0.0.0" />
 
-    &lt;add key="webpages:Enabled" value="false" /&gt;
+    <add key="webpages:Enabled" value="false" />
 
-    &lt;add key="PreserveLoginUrl" value="true" /&gt;
+    <add key="PreserveLoginUrl" value="true" />
 
-    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    <add key="ClientValidationEnabled" value="true" />
 
-    &lt;add key="UnobtrusiveJavaScriptEnabled" value="false" /&gt;
+    <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
-&lt;/appSettings&gt;
+</appSettings>
 
 Configuring routing file
 
@@ -689,7 +689,7 @@ public class RouteConfig
 
 In summary, this getting started tutorial gives you an overview of PivotGrid, its architecture, process flow, how to configure and integrate with a VS application through a simple example that is self-explanatory.
 
-{ ![Capture](Getting-Started_images/Getting-Started_img10.png) | markdownify }
+{{ '![Capture](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -699,7 +699,7 @@ Control structure
 
 The following screenshot displays the PivotGrid Control.
 
-{ ![](Getting-Started_images/Getting-Started_img11.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -713,7 +713,7 @@ This example illustrates how the PivotGrid component tabulates the sales/revenue
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img12.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img12.png)' | markdownify }}
 {:.image }
 
 
@@ -721,13 +721,13 @@ You can open Visual Studio and create a new project by clicking New Project and 
 
 The following screenshot displays project creation wizard.
 
-{ ![](Getting-Started_images/Getting-Started_img13.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img13.png)' | markdownify }}
 {:.image }
 
 
 Select Internet application template with Razor view engine and click OK
 
-{ ![](Getting-Started_images/Getting-Started_img14.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img14.png)' | markdownify }}
 {:.image }
 
 
@@ -737,11 +737,11 @@ Add References
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-{ ![](Getting-Started_images/Getting-Started_img15.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img15.png)' | markdownify }}
 {:.image }
 
 
-{ ![sshot-4](Getting-Started_images/Getting-Started_img16.png) | markdownify }
+{{ '![sshot-4](Getting-Started_images/Getting-Started_img16.png)' | markdownify }}
 {:.image }
 
 
@@ -752,7 +752,7 @@ Add References
 
 Add Scripts and Styles
 
-1. Add the script files and CSS files in the &lt;head&gt; tag of the _Layout.cshtml page.
+1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 > 
 
 
@@ -761,7 +761,7 @@ Add Scripts and Styles
 1. _Use the following code sample while adding scripts and styles_             
 2. _Apart from cdn files rest of them can be acquired from the following location_
 > 
-_C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&gt;\JavaScript\assets\_
+_C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\_
 
 > 
 
@@ -771,19 +771,19 @@ _C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&
 
 
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
 
-&lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
 
-&lt;/head&gt;
+</head>
 
 
 
@@ -791,13 +791,13 @@ _C:\Users\&lt;UserName&gt;\AppData\Local\Syncfusion\EssentialStudio\&lt;Version&
 
 [CSHTML]
 
-&lt;body&gt;
+<body>
 
    @RenderBody()
 
    @Html.EJ().ScriptManager()   
 
-&lt;/body&gt;
+</body>
 
 Add Control in View page
 
@@ -807,11 +807,11 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 @using Syncfusion.JavaScript;
 
-&lt;div&gt;
+<div>
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("/wcf/PivotGridService.svc")
 
-&lt;/div&gt;
+</div>
 
 Add WCF service for PivotGrid
 
@@ -819,13 +819,13 @@ Create WCF Services
 
 1. Right-click the project and select Add > New Folder.  Name the folder as wcf.
 
-{ ![](Getting-Started_images/Getting-Started_img17.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img17.png)' | markdownify }}
 {:.image }
 
 
 2. Right-click the wcf folder created and select Add > New Item.  
 
-{ ![](Getting-Started_images/Getting-Started_img18.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img18.png)' | markdownify }}
 {:.image }
 
 
@@ -834,7 +834,7 @@ Create WCF Services
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img19.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img19.png)' | markdownify }}
 {:.image }
 
 
@@ -1246,41 +1246,41 @@ namespace MvcApplication1
 
 Configure Web.Config
 
-1. Register the assemblies by adding the following code example inside the &lt;system.web&gt; tag in web.config file at root folder.
+1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at root folder.
 
 [web.config]
 
-&lt;compilation debug="true" targetFramework="4.5"&gt;
+<compilation debug="true" targetFramework="4.5">
 
-      &lt;assemblies&gt;
+      <assemblies>
 
-        &lt;add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" /&gt;
+        <add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        &lt;add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" /&gt;
+        <add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
 
-        &lt;add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        &lt;add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /&gt;
+        <add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-      &lt;/assemblies&gt;
+      </assemblies>
 
-&lt;/compilation&gt;
+</compilation>
 
 > 
 
@@ -1323,29 +1323,29 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;namespaces&gt;
+<namespaces>
 
-        &lt;add namespace="System.Web.Helpers" /&gt;
+        <add namespace="System.Web.Helpers" />
 
-        &lt;add namespace="System.Web.Mvc" /&gt;
+        <add namespace="System.Web.Mvc" />
 
-        &lt;add namespace="System.Web.Mvc.Ajax" /&gt;
+        <add namespace="System.Web.Mvc.Ajax" />
 
-        &lt;add namespace="System.Web.Mvc.Html" /&gt;
+        <add namespace="System.Web.Mvc.Html" />
 
-        &lt;add namespace="System.Web.Optimization" /&gt;
+        <add namespace="System.Web.Optimization" />
 
-        &lt;add namespace="System.Web.Routing" /&gt;
+        <add namespace="System.Web.Routing" />
 
-        &lt;add namespace="System.Web.WebPages" /&gt;
+        <add namespace="System.Web.WebPages" />
 
-        &lt;add namespace="Syncfusion.MVC.EJ"/&gt;
+        <add namespace="Syncfusion.MVC.EJ"/>
 
-        &lt;add namespace="Syncfusion.JavaScript"/&gt;
+        <add namespace="Syncfusion.JavaScript"/>
 
-        &lt;add namespace="Syncfusion.JavaScript.DataVisualization"/&gt;
+        <add namespace="Syncfusion.JavaScript.DataVisualization"/>
 
-&lt;/namespaces&gt;
+</namespaces>
 
 
 
@@ -1360,21 +1360,21 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;services&gt;
+    <services>
 
-      &lt;service name="MvcApplication1.PivotGridService"&gt;
+      <service name="MvcApplication1.PivotGridService">
 
         <endpoint address="" behaviorConfiguration="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"
 
           binding="webHttpBinding" contract="MvcApplication1.IPivotGridService" />
 
-      &lt;/service&gt;
+      </service>
 
-    &lt;/services&gt;
+    </services>
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 
 
@@ -1382,23 +1382,23 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;system.serviceModel&gt;
+<system.serviceModel>
 
-    &lt;behaviors&gt;
+    <behaviors>
 
-      &lt;endpointBehaviors&gt;
+      <endpointBehaviors>
 
-        &lt;behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"&gt;
+        <behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior">
 
-          &lt;enableWebScript /&gt;
+          <enableWebScript />
 
-        &lt;/behavior&gt;
+        </behavior>
 
-      &lt;/endpointBehaviors&gt;
+      </endpointBehaviors>
 
-    &lt;/behaviors&gt;
+    </behaviors>
 
-&lt;/system.serviceModel&gt;
+</system.serviceModel>
 
 > 
 
@@ -1408,19 +1408,19 @@ MVC5</td><td>
 
 [web.config]
 
-&lt;appSettings&gt;
+<appSettings>
 
-    &lt;add key="webpages:Version" value="2.0.0.0" /&gt;
+    <add key="webpages:Version" value="2.0.0.0" />
 
-    &lt;add key="webpages:Enabled" value="false" /&gt;
+    <add key="webpages:Enabled" value="false" />
 
-    &lt;add key="PreserveLoginUrl" value="true" /&gt;
+    <add key="PreserveLoginUrl" value="true" />
 
-    &lt;add key="ClientValidationEnabled" value="true" /&gt;
+    <add key="ClientValidationEnabled" value="true" />
 
-    &lt;add key="UnobtrusiveJavaScriptEnabled" value="false" /&gt;
+    <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
-&lt;/appSettings&gt;
+</appSettings>
 
 Configuring routing file
 
@@ -1468,7 +1468,7 @@ public class RouteConfig
 
 In summary, this getting started tutorial gives you an overview of PivotGrid, its architecture, process flow, how to configure and integrate with a VS application through a simple example that is self-explanatory.
 
-{ ![](Getting-Started_images/Getting-Started_img20.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img20.png)' | markdownify }}
 {:.image }
 
 

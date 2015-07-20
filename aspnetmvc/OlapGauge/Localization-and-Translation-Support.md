@@ -71,7 +71,7 @@ The following code example illustrates you on how to localize OlapGuage’s User
 
 @ScriptSection{
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
 
 ej.olap.OlapGauge.locale["fr-FR"] = {
 
@@ -95,7 +95,7 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
 
                     }
 
-    &lt;/script&gt;
+    </script>
 
 }
 
@@ -155,7 +155,7 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
 
 
 
-{ ![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img1.jpeg) | markdownify }
+{{ '![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: In order to render the localized OLAP Gauge, You are required to reset the content available in both_
 
@@ -197,7 +197,7 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 The following screenshot displays the OlapGauge with French localization.
 
-{ ![](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img2.png) | markdownify }
+{{ '![](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img2.png)' | markdownify }}
 {:.image }
 
 

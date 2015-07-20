@@ -20,7 +20,7 @@ Key Features
 * Themes: Essential ASP.NET MVC controls consist of 12 built-in themes (6 – flat and 6 – gradient effects), and also support custom skin options to set user-defined themes.
 
 
-{ ![](Overview_images/Overview_img1.jpeg) | markdownify }
+{{ '![](Overview_images/Overview_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: As the DateTimePicker inherits the functionalities of the DatePicker and TimePicker controls, it supports the basic functionalities of both controls._
 

@@ -19,15 +19,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 [MVC]
 
-&lt;head&gt;
+<head>
 
-&lt;link href="@Url.Content("~/Content/ej/ej.widgets.core.min.css")" rel="stylesheet" /&gt;
+<link href="@Url.Content("~/Content/ej/ej.widgets.core.min.css")" rel="stylesheet" />
 
-    &lt;link href="@Url.Content("~/Content/ej/flat-saffron/ej.theme.min.css")" rel="stylesheet" /&gt;
+    <link href="@Url.Content("~/Content/ej/flat-saffron/ej.theme.min.css")" rel="stylesheet" />
 
-    &lt;link href="@Url.Content("~/Content/Custom-theme/ej.customtheme.css")" rel="stylesheet" /&gt;
+    <link href="@Url.Content("~/Content/Custom-theme/ej.customtheme.css")" rel="stylesheet" />
 
-&lt;/head&gt;
+</head>
 
 
 
@@ -995,7 +995,7 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 
 
-{ ![C:/Users/Tamilarasu .M/Pictures/document/Customtheme.png](Appearance--Styling_images/Appearance--Styling_img1.png) | markdownify }
+{{ '![C:/Users/Tamilarasu .M/Pictures/document/Customtheme.png](Appearance--Styling_images/Appearance--Styling_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -20,7 +20,7 @@ The following code example illustrates how to connect to an offline cube.
 
 [C#]
 
-string connectionString = @"DataSource= C:\Users\&lt;UserName&gt;\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
+string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
@@ -60,7 +60,7 @@ Connect to Mondrian Server
 The following code example illustrates how to connect to the Mondrian Server.
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_125.png](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_125.png](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -70,7 +70,7 @@ Add a new report along with the existing report collection.
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_126.png](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_126.png](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -78,7 +78,7 @@ Replace the existing report name with the altered report name.
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_127.png](Data-Binding_images/Data-Binding_img3.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_127.png](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -88,7 +88,7 @@ Removes the current report from the report collection. If only one report is ava
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_128.png](Data-Binding_images/Data-Binding_img4.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_128.png](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -98,7 +98,7 @@ The OLAPReport collection bound to the OLAPClient component can be passed to a w
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img5.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -106,7 +106,7 @@ On clicking the Save icon, a dialog is displayed to enter the name with which th
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_130.png](Data-Binding_images/Data-Binding_img6.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_130.png](Data-Binding_images/Data-Binding_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -114,7 +114,7 @@ Similarly, on clicking the load icon, a pop-up window is displayed, containing a
 
 
 
-{ ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_131.png](Data-Binding_images/Data-Binding_img7.png) | markdownify }
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_131.png](Data-Binding_images/Data-Binding_img7.png)' | markdownify }}
 {:.image }
 
 

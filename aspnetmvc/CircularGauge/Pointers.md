@@ -41,7 +41,7 @@ PO.Value(30).Add();
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/karthigeyan/Desktop/q.png](Pointers_images/Pointers_img1.png) | markdownify }
+{{ '![C:/Users/karthigeyan/Desktop/q.png](Pointers_images/Pointers_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -113,7 +113,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Pointers_images/Pointers_img2.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -184,7 +184,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Pointers_images/Pointers_img3.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -251,7 +251,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Pointers_images/Pointers_img4.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -325,7 +325,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Pointers_images/Pointers_img5.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Pointers_images/Pointers_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -387,7 +387,7 @@ In this type, needle pointer is completely replaced by image. You can implement 
 </table>
 
 
-{ ![](Pointers_images/Pointers_img6.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -407,7 +407,7 @@ In this type, the marker pointer is completely replaced by the image. You can im
 </table>
 
 
-{ ![](Pointers_images/Pointers_img7.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -425,7 +425,7 @@ In this type, marker pointer is drawn first and then the image is loaded. You ca
 </table>
 
 
-{ ![](Pointers_images/Pointers_img8.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -501,7 +501,7 @@ PO.Placement(PointerPlacement.Near)
 
 Execute the above code to render the following output.
 
-{ ![](Pointers_images/Pointers_img9.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -530,7 +530,7 @@ Run the above code to render the output as follows.
 
 
 
-{ ![](Pointers_images/Pointers_img10.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -563,7 +563,7 @@ Run the above code to render the output as follows.
 
 
 
-{ ![](Pointers_images/Pointers_img11.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -591,7 +591,7 @@ Run the above code to render the output as follows.
 
 
 
-{ ![](Pointers_images/Pointers_img12.png) | markdownify }
+{{ '![](Pointers_images/Pointers_img12.png)' | markdownify }}
 {:.image }
 
 

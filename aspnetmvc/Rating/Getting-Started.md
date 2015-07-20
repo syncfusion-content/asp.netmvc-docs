@@ -19,7 +19,7 @@ The following screenshot demonstrates the functionality of a Rating control with
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -36,7 +36,7 @@ Add the following code example to the corresponding view page to render Rating i
 
 
 
-            &lt;div class="frame"&gt;  
+            <div class="frame">  
 
 
 
@@ -46,145 +46,145 @@ Add the following code example to the corresponding view page to render Rating i
 
                  evt.Add().ID("steelman").Text("Man of Steel").ContentTemplate(
 
-                     @&lt;div&gt;
+                     @<div>
 
-                        &lt;table&gt;
+                        <table>
 
-                            &lt;tr&gt;
+                            <tr>
 
-                                &lt;td class="movies-img" valign="top"&gt;                                    
+                                <td class="movies-img" valign="top">                                    
 
-                                    &lt;img src="@Url.Content("~/Images/rating/mos.png")" alt="mos" /&gt;
+                                    <img src="@Url.Content("~/Images/rating/mos.png")" alt="mos" />
 
-                                &lt;/td&gt;
+                                </td>
 
-                                &lt;td valign="top"&gt;
+                                <td valign="top">
 
-                                    &lt;div&gt;
+                                    <div>
 
-                                        <span class="movie-header">Man of Steel</span>&lt;br /&gt;
+                                        <span class="movie-header">Man of Steel</span><br />
 
                                         Rating :
 
-                                                        &lt;br /&gt;
+                                                        <br />
 
 
 
                                          @Html.EJ().Rating("univRating").Value(4)
 
-                                        <span>Movie Info:&lt;/span&gt;
+                                        <span>Movie Info:</span>
 
-                                        &lt;p&gt;
+                                        <p>
 
                                             A young boy learns that he has extraordinary powers and is not of this Earth.
 
-                                        &lt;/p&gt;
+                                        </p>
 
-                                    &lt;/div&gt;
+                                    </div>
 
-                                &lt;/td&gt;
+                                </td>
 
-                            &lt;/tr&gt;
+                            </tr>
 
-                        &lt;/table&gt;
+                        </table>
 
-                    &lt;/div&gt;);
+                    </div>);
 
 
 
                  evt.Add().ID("woldwar").Text("World War Z").ContentTemplate(
 
-                     @&lt;div&gt;
+                     @<div>
 
-                    &lt;table&gt;
+                    <table>
 
-                        &lt;tr&gt;
+                        <tr>
 
-                            &lt;td class="movies-img" valign="top"&gt;                                
+                            <td class="movies-img" valign="top">                                
 
-                                &lt;img src="@Url.Content("~/Images/rating/wwz.png")" alt="mos" /&gt;
+                                <img src="@Url.Content("~/Images/rating/wwz.png")" alt="mos" />
 
-                            &lt;/td&gt;
+                            </td>
 
-                            &lt;td valign="top"&gt;
+                            <td valign="top">
 
-                                &lt;div&gt;
+                                <div>
 
-                                    <span class="movie-header">World War Z</span>&lt;br /&gt;
+                                    <span class="movie-header">World War Z</span><br />
 
                                     Rating :
 
-                                                    &lt;br /&gt;                                  
+                                                    <br />                                  
 
                                     @Html.EJ().Rating("wwzRating"). Value(4)
 
-                                    <span>Movie Info:&lt;/span&gt;
+                                    <span>Movie Info:</span>
 
-                                    &lt;p&gt;
+                                    <p>
 
                                         The story revolves around United Nations employee Gerry Lane (Pitt).
 
-                                    &lt;/p&gt;
+                                    </p>
 
-                                &lt;/div&gt;
+                                </div>
 
-                            &lt;/td&gt;
+                            </td>
 
-                        &lt;/tr&gt;
+                        </tr>
 
-                    &lt;/table&gt;
+                    </table>
 
-                &lt;/div&gt;);
+                </div>);
 
                  evt.Add().ID("unive").Text("Monsters University").ContentTemplate(
 
-                     @&lt;div&gt;
+                     @<div>
 
-                    &lt;table&gt;
+                    <table>
 
-                        &lt;tr&gt;
+                        <tr>
 
-                            &lt;td class="movies-img" valign="top"&gt;                                
+                            <td class="movies-img" valign="top">                                
 
-                                &lt;img src="@Url.Content("~/Images/rating/mu.png")" alt="mos" /&gt;
+                                <img src="@Url.Content("~/Images/rating/mu.png")" alt="mos" />
 
-                            &lt;/td&gt;
+                            </td>
 
-                            &lt;td valign="top"&gt;
+                            <td valign="top">
 
-                                &lt;div&gt;
+                                <div>
 
-                                    <span class="movie-header">Monsters University</span>&lt;br /&gt;
+                                    <span class="movie-header">Monsters University</span><br />
 
                                     Rating :
 
-                                                    &lt;br /&gt;
+                                                    <br />
 
 
 
                                     @Html.EJ().Rating("mosRating").Value(3)
 
-                                    <span>Movie Info:&lt;/span&gt;
+                                    <span>Movie Info:</span>
 
-                                    &lt;p&gt;
+                                    <p>
 
                                         Mike Wazowski and James P. Sullivan are an inseparable pair, but that wasn't always the case. 
 
-                                    &lt;/p&gt;
+                                    </p>
 
-                                &lt;/div&gt;
+                                </div>
 
-                            &lt;/td&gt;
+                            </td>
 
-                        &lt;/tr&gt;
+                        </tr>
 
-                    &lt;/table&gt;
+                    </table>
 
-                &lt;/div&gt;);
+                </div>);
 
             }).Render();}
 
-         &lt;/div&gt;
+         </div>
 
 
 
@@ -193,7 +193,7 @@ Add the following code example to the corresponding view page to render Rating i
 Add the following styles to the corresponding view page to show the Rating in a horizontal order.
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
         .movies-img {
 
@@ -219,7 +219,7 @@ Add the following styles to the corresponding view page to show the Rating in a 
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
@@ -229,13 +229,13 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 _Note: Add necessary images to the mentioned directory._
 
-> _&lt;project directory&gt;/Images/rating/yourimage.png_
+> _<project directory>/Images/rating/yourimage.png_
 

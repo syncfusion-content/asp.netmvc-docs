@@ -63,7 +63,7 @@ public class Localdata
 
 //Refer the Model in the controller 
 
-using &lt;Application name&gt;.Models;
+using <Application name>.Models;
 
 
 
@@ -105,7 +105,7 @@ using &lt;Application name&gt;.Models;
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 

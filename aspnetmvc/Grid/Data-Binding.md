@@ -83,7 +83,7 @@ Result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img1.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -135,13 +135,13 @@ The following output is the result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img2.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 
 
 
-> { ![](Data-Binding_images/Data-Binding_img3.png) | markdownify }
+> {{ '![](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
 {:.image }
 _Note: For information about DataManager with Grid check DataAdaptors concept._
 
@@ -189,7 +189,7 @@ The following output is the result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img4.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -239,7 +239,7 @@ The following screenshot is the result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img5.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -247,7 +247,7 @@ If you have developer tools, you can capture network transfer to check Grid cons
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img6.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -295,7 +295,7 @@ The following screenshot is the result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img7.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -345,7 +345,7 @@ The following screenshot is the result of the above code example.
 
 
 
-{ ![](Data-Binding_images/Data-Binding_img8.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -437,45 +437,45 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
 
 
-&lt;script id="table1" type="text/template" &gt;
+<script id="table1" type="text/template" >
 
-        &lt;table&gt;
+        <table>
 
-            &lt;thead&gt;
+            <thead>
 
-                &lt;tr&gt;
+                <tr>
 
                     <th>Laptop
 
-                    &lt;/th&gt;
+                    </th>
 
                     <th>Model
 
-                    &lt;/th&gt;
+                    </th>
 
                     <th>Price
 
-                    &lt;/th&gt;
+                    </th>
 
                     <th>OS
 
-                    &lt;/th&gt;
+                    </th>
 
                     <th>RAM
 
-                    &lt;/th&gt;
+                    </th>
 
                     <th>ScreenSize
 
-                    &lt;/th&gt;
+                    </th>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/thead&gt;
+            </thead>
 
-            &lt;tbody&gt;
+            <tbody>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Dell Vostro</td>
 
@@ -489,9 +489,9 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
                     <td>15.6</td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>HP Pavilion Sleekbook</td>
 
@@ -505,9 +505,9 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
                     <td>14</td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Sony Vaio</td>
 
@@ -521,9 +521,9 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
                     <td>14</td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Lenovo</td>
 
@@ -537,9 +537,9 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
                     <td>11.6</td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Toshiba</td>
 
@@ -553,13 +553,13 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
                     <td>15.6</td>
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/tbody&gt;
+            </tbody>
 
-        &lt;/table&gt;
+        </table>
 
-        &lt;/script&gt;
+        </script>
 
 
 
@@ -593,7 +593,7 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
 The following screenshot is the result of the above code example.
 
-{ ![](Data-Binding_images/Data-Binding_img9.png) | markdownify }
+{{ '![](Data-Binding_images/Data-Binding_img9.png)' | markdownify }}
 {:.image }
 
 

@@ -33,11 +33,11 @@ valueCellClick = function (evt) {
 
 
 
-{ ![C:/Users/labuser/Desktop/CellSelectionmvc.png](Cell-Selection_images/Cell-Selection_img1.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/CellSelectionmvc.png](Cell-Selection_images/Cell-Selection_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/labuser/Desktop/chart series.png](Cell-Selection_images/Cell-Selection_img2.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/chart series.png](Cell-Selection_images/Cell-Selection_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -131,7 +131,7 @@ sg.ControlID("Subgauge1")
 
 Execute the above code to render the following output.
 
-{ ![](Sub-Gauges_images/Sub-Gauges_img1.png) | markdownify }
+{{ '![](Sub-Gauges_images/Sub-Gauges_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -209,7 +209,7 @@ sg.ControlID("Subgauge2")
 
 Execute the above code to render the following output.
 
-{ ![](Sub-Gauges_images/Sub-Gauges_img2.png) | markdownify }
+{{ '![](Sub-Gauges_images/Sub-Gauges_img2.png)' | markdownify }}
 {:.image }
 
 

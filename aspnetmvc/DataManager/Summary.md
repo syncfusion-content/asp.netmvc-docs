@@ -53,7 +53,7 @@ The Sum summary type provides the sum of the data. The Sum data utilization meth
 
 )
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
 
@@ -63,11 +63,11 @@ The Sum summary type provides the sum of the data. The Sum data utilization meth
 
             var sum = ej.sum(data, "EmployeeID");//Calculates the sum Freight
 
-            $("body").append("<span>Sum:" + sum + "&lt;/spn&gt;");
+            $("body").append("<span>Sum:" + sum + "</spn>");
 
         }, 3000);
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -75,7 +75,7 @@ The Sum summary type provides the sum of the data. The Sum data utilization meth
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Summary_images/Summary_img1.png) | markdownify }
+{{ '![](Summary_images/Summary_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -117,7 +117,7 @@ The minimum of particular field can be calculated as follows.
 
 
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
 
@@ -127,11 +127,11 @@ The minimum of particular field can be calculated as follows.
 
             var min = ej.min(data, "EmployeeID");//Calculates the min Freight
 
-            $("body").append("<span>Min:" + min.EmployeeID + "&lt;/spn&gt;");
+            $("body").append("<span>Min:" + min.EmployeeID + "</spn>");
 
         }, 3000);
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -139,7 +139,7 @@ The minimum of particular field can be calculated as follows.
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Summary_images/Summary_img2.png) | markdownify }
+{{ '![](Summary_images/Summary_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -181,7 +181,7 @@ The maximum of particular field can be calculated as follows.
 
 
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
 
@@ -191,11 +191,11 @@ The maximum of particular field can be calculated as follows.
 
             var max = ej.max(data, "EmployeeID"); //Calculates the max Freight
 
-            $("body").append("<span>Max:" + max.EmployeeID + "&lt;/spn&gt;");
+            $("body").append("<span>Max:" + max.EmployeeID + "</spn>");
 
         }, 3000);
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -203,7 +203,7 @@ The maximum of particular field can be calculated as follows.
 
 The result for the above code example is illustrated as follows.
 
-{ ![](Summary_images/Summary_img3.png) | markdownify }
+{{ '![](Summary_images/Summary_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -241,7 +241,7 @@ The Average summary type provides the average of the given data. The Average dat
 
 )
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
 
@@ -251,11 +251,11 @@ The Average summary type provides the average of the given data. The Average dat
 
             var avg = ej.avg(data, "EmployeeID");//Calculates the avg Freight
 
-            $("body").append("<span>Avg:" + avg + "&lt;/spn&gt;");
+            $("body").append("<span>Avg:" + avg + "</spn>");
 
         }, 3000);
 
-    &lt;/script&gt;
+    </script>
 
 
 
@@ -263,7 +263,7 @@ The Average summary type provides the average of the given data. The Average dat
 
 The result of the above code example is illustrated as follows.
 
-{ ![](Summary_images/Summary_img4.png) | markdownify }
+{{ '![](Summary_images/Summary_img4.png)' | markdownify }}
 {:.image }
 _Summary - Average_
 
@@ -303,7 +303,7 @@ The following code example illustrates how to use the ej.distinct method. In the
 
 )
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
 
@@ -317,13 +317,13 @@ The following code example illustrates how to use the ej.distinct method. In the
 
         }, 3000);
 
-    &lt;/script&gt;
+    </script>
 
 
 
 The result for the above code example is illustrated as follows.
 
-{ ![](Summary_images/Summary_img5.png) | markdownify }
+{{ '![](Summary_images/Summary_img5.png)' | markdownify }}
 {:.image }
 
 

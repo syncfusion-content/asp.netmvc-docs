@@ -23,27 +23,27 @@ The following code example is used to render the Rating control without tooltip.
 
 // Add the following code example to the corresponding CSHTML page to render Rating without Tooltip
 
-&lt;div id="container" style="width: 300px; padding: 2px"&gt;
+<div id="container" style="width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").ShowTooltip(false)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;           
+        </tr>           
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -53,7 +53,7 @@ The following screenshot illustrates Rating without Tooltip.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -77,27 +77,27 @@ Add the following code in your view page to render the Rating with customized Sh
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").Value(4).ShapeWidth(29).ShapeHeight(29)
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;
+        </tr>
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -109,7 +109,7 @@ Add the following styles.
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
         .e-rating
 
@@ -173,7 +173,7 @@ margin-left: 2px;
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -181,7 +181,7 @@ The following screenshot illustrates Rating with customized ShapeWidth and Shape
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -220,27 +220,27 @@ Add the following HTML to render the Rating with customized style. In this, hove
 
 
 
-&lt;div id="container" style="border: 1px solid black; width: 300px; padding: 2px"&gt;
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
-    &lt;table&gt;
+    <table>
 
-        &lt;tr&gt;
+        <tr>
 
             <td valign="top">Rating:
 
-            &lt;/td&gt;
+            </td>
 
-            &lt;td&gt;
+            <td>
 
                 @Html.EJ().Rating("Rating").CssClass("custom")
 
-            &lt;/td&gt;
+            </td>
 
-        &lt;/tr&gt;             
+        </tr>             
 
-    &lt;/table&gt;
+    </table>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -252,7 +252,7 @@ Add the following styles.
 
 [CSS]
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
     .customCss {
 
@@ -336,7 +336,7 @@ Add the following styles.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -346,7 +346,7 @@ The following screenshot illustrates the Rating with customized style.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 

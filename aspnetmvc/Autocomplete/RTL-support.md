@@ -45,7 +45,7 @@ The following image is the output for AutoComplete when EnableRTL is set to “T
 
 
 
-{ ![](RTL-support_images/RTL-support_img1.png) | markdownify }
+{{ '![](RTL-support_images/RTL-support_img1.png)' | markdownify }}
 {:.image }
 
 

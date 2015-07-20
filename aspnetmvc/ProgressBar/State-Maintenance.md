@@ -25,7 +25,7 @@ The following steps explain the State Maintenance in the ProgressBar control.
 [CSHTML]// Add the following code example to the corresponding CSHTML page to enable the state maintenance in the ProgressBar control.@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnablePersistence(true)</td></tr>
 <tr>
 <td>
-[JavaScript]     &lt;script&gt;            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});          });     &lt;/script&gt;        </td></tr>
+[JavaScript]     <script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});          });     </script>        </td></tr>
 </table>
 
 
@@ -33,7 +33,7 @@ The following steps explain the State Maintenance in the ProgressBar control.
 
 The following screenshot displays the output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/propersis.PNG](State-Maintenance_images/State-Maintenance_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/propersis.PNG](State-Maintenance_images/State-Maintenance_img1.png)' | markdownify }}
 {:.image }
 
 

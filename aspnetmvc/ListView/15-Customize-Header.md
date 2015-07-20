@@ -55,7 +55,7 @@ Refer the following code example.
 
 Screenshot:
 
-{ ![](15-Customize-Header_images/15-Customize-Header_img1.png) | markdownify }
+{{ '![](15-Customize-Header_images/15-Customize-Header_img1.png)' | markdownify }}
 {:.image }
 
 

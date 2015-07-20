@@ -156,7 +156,7 @@ FileExplorerOperations is a predefined Class, which is used to perform File Expl
 
 
 
-{ ![](Toolbar-Support_images/Toolbar-Support_img1.png) | markdownify }
+{{ '![](Toolbar-Support_images/Toolbar-Support_img1.png)' | markdownify }}
 {:.image }
 
 

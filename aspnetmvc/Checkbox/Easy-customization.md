@@ -47,7 +47,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Easy-customization_images/Easy-customization_img1.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -95,7 +95,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Easy-customization_images/Easy-customization_img2.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -162,7 +162,7 @@ The following steps explains you the details about rendering the Checkbox with s
 Execute the above code to render the following output.
 
 
-{ ![](Easy-customization_images/Easy-customization_img3.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -217,7 +217,7 @@ The following steps explains you the details about rendering the Checkbox with d
 Execute the above code to render the following output.
 
 
-{ ![](Easy-customization_images/Easy-customization_img4.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -250,7 +250,7 @@ The following steps explains you the details about rendering the Checkbox with t
 Execute the above code to render the following output.
 
 
-{ ![](Easy-customization_images/Easy-customization_img5.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -286,7 +286,7 @@ The following steps explains you the details about rendering the Checkbox with r
 Execute the above code to render the following output.
 
 
-{ ![](Easy-customization_images/Easy-customization_img6.png) | markdownify }
+{{ '![](Easy-customization_images/Easy-customization_img6.png)' | markdownify }}
 {:.image }
 
 

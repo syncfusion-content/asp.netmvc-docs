@@ -19,15 +19,15 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 [CSHTML]
 
-&lt;div class="control"&gt;                 @Html.EJ().Uploadbox("UploadBox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").FileSize(848576).ClientSideEvents(e => e.Error("fileuploaderror"))
+<div class="control">                 @Html.EJ().Uploadbox("UploadBox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").FileSize(848576).ClientSideEvents(e => e.Error("fileuploaderror"))
 
-&lt;/div&gt;
+</div>
 
 
 
 [Javascript]
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
            function fileuploaderror(e) {
 
@@ -35,7 +35,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
         }
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -49,7 +49,7 @@ When you want to browse the file within the fileSize, you can browse and upload 
 
 
 
-{ ![](File-Size_images/File-Size_img1.png) | markdownify }
+{{ '![](File-Size_images/File-Size_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -59,7 +59,7 @@ When you try to browse the file with exceeded FileSize, we cannot browse and upl
 
 
 
-{ ![](File-Size_images/File-Size_img2.png) | markdownify }
+{{ '![](File-Size_images/File-Size_img2.png)' | markdownify }}
 {:.image }
 
 

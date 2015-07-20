@@ -155,7 +155,7 @@ You can use the following code example to give you the exact output.
 
 Screenshot:
 
-{ ![](16-Data-Binding_images/16-Data-Binding_img1.png) | markdownify }
+{{ '![](16-Data-Binding_images/16-Data-Binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -211,7 +211,7 @@ Please refer the following code examples.
 
 Screenshots:
 
-{ ![](16-Data-Binding_images/16-Data-Binding_img2.png) | markdownify }
+{{ '![](16-Data-Binding_images/16-Data-Binding_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -221,7 +221,7 @@ When you click on the parent item, it navigates to its corresponding child list 
 
 
 
-{ ![](16-Data-Binding_images/16-Data-Binding_img3.png) | markdownify }
+{{ '![](16-Data-Binding_images/16-Data-Binding_img3.png)' | markdownify }}
 {:.image }
 
 

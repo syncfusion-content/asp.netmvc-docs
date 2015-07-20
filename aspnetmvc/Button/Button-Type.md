@@ -43,32 +43,32 @@ The following steps explains you the details about rendering the Button with abo
 
   @* Set the different types for button control as follows.*@
 
-&lt;div class="control"&gt;
+<div class="control">
 
 
 
         @Html.EJ().Button("button_button").Text("button").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Button)
 
-        &lt;br /&gt;
+        <br />
 
-        &lt;br /&gt;
+        <br />
 
         @Html.EJ().Button("button_submit").Text("submit").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Submit)
 
-        &lt;br /&gt;
+        <br />
 
-        &lt;br /&gt;
+        <br />
 
         @Html.EJ().Button("button_reset").Text("reset").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Reset)
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 Execute the above code to render the following output.
 
-{ ![](Button-Type_images/Button-Type_img1.png) | markdownify }
+{{ '![](Button-Type_images/Button-Type_img1.png)' | markdownify }}
 {:.image }
 
 

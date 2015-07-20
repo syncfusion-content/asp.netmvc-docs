@@ -21,15 +21,15 @@ Description/Usage </td></tr>
 <tr>
 <td>
 ej.core.min.js</td><td>
-Must always be referred to before using all the {{ '_ASP.NET MVC_'  | markdownify }}controls.</td></tr>
+Must always be referred to before using all the {{{ ''_ASP.NET MVC_' ' | markdownify }}}controls.</td></tr>
 <tr>
 <td>
 ej.data.min.js</td><td>
-Used to handle datamanger operation and should be used while binding data to {{ '_ASP.NET MVC_' | markdownify }} controls.</td></tr>
+Used to handle datamanger operation and should be used while binding data to {{{ ''_ASP.NET MVC_'' | markdownify }}} controls.</td></tr>
 <tr>
 <td>
 ej.ribbon.min.js</td><td>
-Should be referred when using {{ '_Ribbon_' | markdownify }}control.</td></tr>
+Should be referred when using {{{ ''_Ribbon_'' | markdownify }}}control.</td></tr>
 <tr>
 <td>
 ej.menu.min.js</td><td>
@@ -37,15 +37,15 @@ This file is used to render menu in the application tab.</td></tr>
 <tr>
 <td>
 ej.scroller.min.js</td><td>
-This file is used to render scroller in the {{ '_Ribbon_' | markdownify }} control.</td></tr>
+This file is used to render scroller in the {{{ ''_Ribbon_'' | markdownify }}} control.</td></tr>
 <tr>
 <td>
 ej.checkbox.min.js</td><td>
-This file is used to render checkboxes in the {{ '_Ribbon_' | markdownify }} control.</td></tr>
+This file is used to render checkboxes in the {{{ ''_Ribbon_'' | markdownify }}} control.</td></tr>
 <tr>
 <td>
 ej.tab.min.js</td><td>
-This file is used to render tabs into the {{ '_Ribbon_' | markdownify }} control.</td></tr>
+This file is used to render tabs into the {{{ ''_Ribbon_'' | markdownify }}} control.</td></tr>
 <tr>
 <td>
 ej.dropdownlist.min.js</td><td rowspan = "4">

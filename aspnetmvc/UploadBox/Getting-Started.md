@@ -15,7 +15,7 @@ This section explains briefly about how to create an UploadBox in ASP.NET MVC ap
 
 ASP.NET MVC UploadBox provides support to upload the files or photos within your webpage. From the following guidelines, you can learn how to upload the file that is used in a Resume Upload scenario. This helps you to restrict some file extensions, while uploading the resume in the server by using UploadBox control. The following screenshot demonstrates the functionality of UploadBox with file extension.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -36,7 +36,7 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
 
 
 
-3. Add the following script in your controller page.{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+3. Add the following script in your controller page.{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -102,7 +102,7 @@ public ActionResult RemoveDefault(string[] fileNames)
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -112,11 +112,11 @@ public ActionResult RemoveDefault(string[] fileNames)
 
 
 
- &lt;script src="@Url.Content("~/Scripts/properties.js")"&gt;&lt;/script&gt;
+ <script src="@Url.Content("~/Scripts/properties.js")"></script>
 
 
 
-      &lt;script type="text/javascript"&gt;
+      <script type="text/javascript">
 
           $(function () {
 
@@ -132,14 +132,14 @@ public ActionResult RemoveDefault(string[] fileNames)
 
           });
 
-    &lt;/script&gt;
+    </script>
 
 
 
 7. Execute the project to render the following output for the given steps. The file is being uploaded.
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -161,7 +161,7 @@ The following screenshot displays an UploadBox control with multiple files selec
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

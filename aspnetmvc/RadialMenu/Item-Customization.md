@@ -55,7 +55,7 @@ You can add the page content with text-area by referring to this section.
 
 The following screenshot illustrates the output.
 
-{ ![](Item-Customization_images/Item-Customization_img1.png) | markdownify }
+{{ '![](Item-Customization_images/Item-Customization_img1.png)' | markdownify }}
 {:.image }
 
 

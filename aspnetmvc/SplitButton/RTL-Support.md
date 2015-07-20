@@ -29,23 +29,23 @@ The following steps explains you the details about rendering the button with Rig
 
 
 
-&lt;div class="spltspan"&gt;
+<div class="spltspan">
 
         @Html.EJ().SplitButton("spltbutton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
 
-        &lt;ul id="Ul11"&gt;
+        <ul id="Ul11">
 
-            &lt;li&gt;<span>User</span>&lt;/li&gt;
+            <li><span>User</span></li>
 
-            &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+            <li><span>Guest</span></li>
 
-            &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+            <li><span>Admin</span></li>
 
-        &lt;/ul&gt;
+        </ul>
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 
@@ -53,7 +53,7 @@ The following steps explains you the details about rendering the button with Rig
 
 Execute the above code to render the following output.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -19,45 +19,45 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
                        {
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;div class="leftPanel"&gt;
+                               <div class="leftPanel">
 
-                                   &lt;img src="@Url.Content("~/Images/rotator/tablet.jpg")" /&gt;
+                                   <img src="@Url.Content("~/Images/rotator/tablet.jpg")" />
 
-                               &lt;/div&gt;
+                               </div>
 
-                               &lt;div class="rightPanel blck"&gt;
+                               <div class="rightPanel blck">
 
-                                   <div class="contentPanel">Tablet &lt;/div&gt;
+                                   <div class="contentPanel">Tablet </div>
 
-                                   &lt;ul&gt;
+                                   <ul>
 
-                                       <li>A tablet computer, or simply tablet, is a mobile computer with display, circuitry and battery in a single unit.&lt;/li&gt;
+                                       <li>A tablet computer, or simply tablet, is a mobile computer with display, circuitry and battery in a single unit.</li>
 
-                                       &lt;li&gt;
+                                       <li>
 
                                        Tablets are equipped with sensors, including cameras, microphone, accelerometer and touchscreen,
 
-                                   &lt;/ul&gt;
+                                   </ul>
 
-                               &lt;/div&gt;
+                               </div>
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;div class="leftPanel"&gt;
+                               <div class="leftPanel">
 
-                                   &lt;img src="@Url.Content("~/Images/rotator/rose.jpg")" /&gt;
+                                   <img src="@Url.Content("~/Images/rotator/rose.jpg")" />
 
-                               &lt;/div&gt;
+                               </div>
 
-                               &lt;div class="rightPanel"&gt;
+                               <div class="rightPanel">
 
-                                   <div class="contentPanel">Rose &lt;/div&gt;
+                                   <div class="contentPanel">Rose </div>
 
-                                   &lt;ul&gt;
+                                   <ul>
 
                                        <li>A rose is a woody perennial of the genus Rosa, within the family Rosaceae</li>
 
@@ -65,77 +65,77 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
                     There are over 100 species
 
-                                       &lt;/li&gt;
+                                       </li>
 
-                                   &lt;/ul&gt;
+                                   </ul>
 
-                               &lt;/div&gt;
+                               </div>
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;div class="leftPanel"&gt;
+                               <div class="leftPanel">
 
-                                   &lt;img src="@Url.Content("~/Images/rotator/snowfall.jpg")" /&gt;
+                                   <img src="@Url.Content("~/Images/rotator/snowfall.jpg")" />
 
-                               &lt;/div&gt;
+                               </div>
 
-                               &lt;div class="rightPanel rightSide"&gt;
+                               <div class="rightPanel rightSide">
 
-                                   <div class="contentPanel">Snowfall &lt;/div&gt;
+                                   <div class="contentPanel">Snowfall </div>
 
-                                   &lt;ul&gt;
+                                   <ul>
 
                                        <li>Mt. Baker ski area in Washington State has the world record for snowfall at 1,140 inches of snow in the 1998/1999 winter season</li>
 
                                        <li>Mt. Baker ski area is located near but not on the real 10,781’ Mount Baker</li>
 
-                                   &lt;/ul&gt;
+                                   </ul>
 
-                               &lt;/div&gt;
+                               </div>
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;div class="leftPanel"&gt;
+                               <div class="leftPanel">
 
-                                   &lt;img src="@Url.Content("~/Images/rotator/nature.jpg")" /&gt;
+                                   <img src="@Url.Content("~/Images/rotator/nature.jpg")" />
 
-                               &lt;/div&gt;
+                               </div>
 
-                               &lt;div class="rightPanel"&gt;
+                               <div class="rightPanel">
 
-                                   <div class="contentPanel">Nature &lt;/div&gt;
+                                   <div class="contentPanel">Nature </div>
 
-                                   &lt;ul&gt;
+                                   <ul>
 
                                        <li>The health of the natural environment is critical to the long-term future of the planet</li>
 
-                                       <li>Nature, in the broadest sense, is equivalent to the natural, physical, or material world or universe.&lt;/li&gt;
+                                       <li>Nature, in the broadest sense, is equivalent to the natural, physical, or material world or universe.</li>
 
 
 
-                                   &lt;/ul&gt;
+                                   </ul>
 
-                               &lt;/div&gt;
+                               </div>
 
-                           &lt;/div&gt;);
+                           </div>);
 
-                           itemElement.Add().ContentTemplate(@&lt;div&gt;
+                           itemElement.Add().ContentTemplate(@<div>
 
-                               &lt;div class="leftPanel"&gt;
+                               <div class="leftPanel">
 
-                                   &lt;img src="@Url.Content("~/Images/rotator/card.jpg")" /&gt;
+                                   <img src="@Url.Content("~/Images/rotator/card.jpg")" />
 
-                               &lt;/div&gt;
+                               </div>
 
-                               &lt;div class="rightPanel credit"&gt;
+                               <div class="rightPanel credit">
 
-                                   <div class="contentPanel">Credit card &lt;/div&gt;
+                                   <div class="contentPanel">Credit card </div>
 
-                                   &lt;ul&gt;
+                                   <ul>
 
                                        <li>A credit card is a payment card issued to users as a system of payment</li>
 
@@ -143,11 +143,11 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-                                   &lt;/ul&gt;
+                                   </ul>
 
-                               &lt;/div&gt;
+                               </div>
 
-                           &lt;/div&gt;);
+                           </div>);
 
                        }).SlideWidth("700px").SlideHeight("300px").ShowPlayButton(true).Render();}
 
@@ -157,7 +157,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #sliderContent > li {
 
@@ -319,13 +319,13 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 
 
-{ ![](Image-with-Contents_images/Image-with-Contents_img1.png) | markdownify }
+{{ '![](Image-with-Contents_images/Image-with-Contents_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -347,7 +347,7 @@ This property specifies the number of Rotator Items to be displayed. The default
 
 
 
-{ ![](Image-with-Contents_images/Image-with-Contents_img2.png) | markdownify }
+{{ '![](Image-with-Contents_images/Image-with-Contents_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -365,7 +365,7 @@ This property specifies the number of Rotator Items to navigate on a single clic
 
 
 
-{ ![](Image-with-Contents_images/Image-with-Contents_img3.png) | markdownify }
+{{ '![](Image-with-Contents_images/Image-with-Contents_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -387,7 +387,7 @@ This property sets the index of the slide that is displayed first. The default v
 
 
 
-__{ ![](Image-with-Contents_images/Image-with-Contents_img4.png) | markdownify }
+__{{ '![](Image-with-Contents_images/Image-with-Contents_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -405,7 +405,7 @@ This property sets the space between the Rotator Items.  The value set to this p
 
 @Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").DisplayItemCount("2").FrameSpace("40px")
 
-{ ![](Image-with-Contents_images/Image-with-Contents_img5.png) | markdownify }
+{{ '![](Image-with-Contents_images/Image-with-Contents_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -486,7 +486,7 @@ Add the following code in your Css.
 
 [CSS]
 
-&lt;style&gt;
+<style>
 
     .flat-lime {
 
@@ -494,13 +494,13 @@ Add the following code in your Css.
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 [CSS]
 
-    &lt;style type="text/css"&gt;
+    <style type="text/css">
 
         .blue {
 
@@ -508,11 +508,11 @@ Add the following code in your Css.
 
         }
 
-    &lt;/style&gt;
+    </style>
 
 
 
-{ ![](Image-with-Contents_images/Image-with-Contents_img6.png) | markdownify }
+{{ '![](Image-with-Contents_images/Image-with-Contents_img6.png)' | markdownify }}
 {:.image }
 
 

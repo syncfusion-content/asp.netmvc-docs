@@ -17,7 +17,7 @@ EnableRTL property is Boolean type, which allow us to change the left-to-right a
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).EnableRTL(true) &lt;/div&gt;
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).EnableRTL(true) </div>
 
 
 
@@ -25,7 +25,7 @@ EnableRTL property is Boolean type, which allow us to change the left-to-right a
 
 
 
-{ ![](RTL_images/RTL_img1.png) | markdownify }
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
 {:.image }
 
 

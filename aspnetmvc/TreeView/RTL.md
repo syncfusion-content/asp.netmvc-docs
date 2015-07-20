@@ -101,7 +101,7 @@ The output for TreeView when EnableRTL is set to “True” is as follows.
 
 
 
-{ ![](RTL_images/RTL_img1.png) | markdownify }
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
 {:.image }
 
 

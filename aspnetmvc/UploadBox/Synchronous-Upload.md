@@ -11,7 +11,7 @@ documentation: ug
 
 This features allow you to upload and remove the files synchronously. To achieve this, set the AsyncUpload property to ‘false’. The data type is Boolean.
 
-{ ![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](Synchronous-Upload_images/Synchronous-Upload_img1.jpeg) | markdownify }
+{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](Synchronous-Upload_images/Synchronous-Upload_img1.jpeg)' | markdownify }}
 {:.image }
 _Note: By default, UploadBox widget works with asynchronous upload option only__._
 
@@ -37,7 +37,7 @@ The following steps guide you in uploading the file synchronously.
 
     @Html.EJ().Uploadbox("uploadbox").AsyncUpload(false)
 
-    &lt;input type="submit" value="Submit" /&gt;
+    <input type="submit" value="Submit" />
 
 }
 
@@ -49,7 +49,7 @@ The following screenshot displays the output.
 
 
 
-{ ![](Synchronous-Upload_images/Synchronous-Upload_img2.png) | markdownify }
+{{ '![](Synchronous-Upload_images/Synchronous-Upload_img2.png)' | markdownify }}
 {:.image }
 
 

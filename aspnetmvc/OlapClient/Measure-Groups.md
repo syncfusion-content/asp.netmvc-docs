@@ -29,11 +29,11 @@ On selecting a measure group from the drop-down list, the Cube Dimension Browser
 
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Capture7.PNG](Measure-Groups_images/Measure-Groups_img1.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Capture7.PNG](Measure-Groups_images/Measure-Groups_img1.png)' | markdownify }}
 {:.image }
 
 
-{ ![C:/Users/Narendhran Muthuvel/Desktop/Capture44.PNG](Measure-Groups_images/Measure-Groups_img2.png) | markdownify }
+{{ '![C:/Users/Narendhran Muthuvel/Desktop/Capture44.PNG](Measure-Groups_images/Measure-Groups_img2.png)' | markdownify }}
 {:.image }
 
 

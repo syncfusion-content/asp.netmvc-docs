@@ -33,7 +33,7 @@ The following steps explain the configuration of Enabled property in UploadBox.
 
 
 
-{ ![](Enable-or-Disable-the-UploadBox_images/Enable-or-Disable-the-UploadBox_img1.png) | markdownify }
+{{ '![](Enable-or-Disable-the-UploadBox_images/Enable-or-Disable-the-UploadBox_img1.png)' | markdownify }}
 {:.image }
 
 

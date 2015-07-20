@@ -103,7 +103,7 @@ model.PageSettings.PageOrientation = PageOrientation.Portrait;
 
 
 
-{ ![](Page-Settings_images/Page-Settings_img1.png) | markdownify }
+{{ '![](Page-Settings_images/Page-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -111,7 +111,7 @@ model.PageSettings.PageOrientation = PageOrientation.Portrait;
 
 When MultiplePage is enabled, the size of the page dynamically increases or decreases in multiples of page width and height and completely fits diagram within the page boundaries. PageBreaks is used as a visual guide to see how pages are split into multiple pages.
 
-{ ![](Page-Settings_images/Page-Settings_img2.png) | markdownify }
+{{ '![](Page-Settings_images/Page-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -185,7 +185,7 @@ The scroll limit allows you to scroll the Diagram page along X and Y axes based 
 * When scroll limit is set as diagram, you are restricted to scroll the page beyond the Diagram content. 
 * By specifying the value as limited, you can set the limit of the scrollable area through scrollable area property. 
 > 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Page-Settings_images/Page-Settings_img3.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Page-Settings_images/Page-Settings_img3.png)' | markdownify }}
 {:.image }
 _Note: Refer to the scrollable area for more details_
 
@@ -237,7 +237,7 @@ model.PageSettings.ScrollLimit= ScrollLimit.Limited;
 
 
 
-{ ![](Page-Settings_images/Page-Settings_img4.png) | markdownify }
+{{ '![](Page-Settings_images/Page-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

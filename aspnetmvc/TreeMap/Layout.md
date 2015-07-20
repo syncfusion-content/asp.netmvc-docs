@@ -56,7 +56,7 @@ Squarifiedlayout creates rectangles with best aspect ratio.
 
 
 
-{ ![](Layout_images/Layout_img1.png) | markdownify }
+{{ '![](Layout_images/Layout_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -88,7 +88,7 @@ SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays t
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Layout_images/Layout_img2.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Layout_images/Layout_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -118,7 +118,7 @@ SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and disp
 
 
 
-{ ![](Layout_images/Layout_img3.png) | markdownify }
+{{ '![](Layout_images/Layout_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -150,7 +150,7 @@ SliceAndDiceVertical layout creates rectangles with high aspect ratio and displa
 
 
 
-{ ![](Layout_images/Layout_img4.png) | markdownify }
+{{ '![](Layout_images/Layout_img4.png)' | markdownify }}
 {:.image }
 
 

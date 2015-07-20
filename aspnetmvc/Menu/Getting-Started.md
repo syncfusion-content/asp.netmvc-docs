@@ -17,7 +17,7 @@ The Essential ASP.NET MVC Menu control supports displaying a Menu out of list it
 
 The following screenshot illustrates the appearance of Syncfusion’s website Menu.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -34,29 +34,29 @@ Essential ASP.NET MVC Menu widget basically renders with built-in features like 
 
 [layout._cshtml]
 
-&lt;head&gt;
+<head>
 
-&lt;link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /&gt;
-
-
-
-    &lt;!--Scripts--&gt;
-
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"&gt;&lt;/script&gt;
+    <!--Scripts-->
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"&gt;&lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-    &lt;script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"&gt; &lt;/script&gt;
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-&lt;/head&gt;
+
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+</head>
 
 
 
@@ -74,7 +74,7 @@ Essential ASP.NET MVC Menu widget basically renders with built-in features like 
 
 4. Execute the above code to render Empty Menu bar.
 
-{ ![C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -104,7 +104,7 @@ Execute the above code to display the Root level Menu items.
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -125,7 +125,7 @@ The following code example explains the initialization of first level sub menu i
 
 Execute the above code to render the following output.
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -148,7 +148,7 @@ The following code example explains the initialization of multiple level sub men
 
 Execute the above code to render the multiple sub menus in a hierarchy
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 

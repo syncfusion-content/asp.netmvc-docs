@@ -45,7 +45,7 @@ OnAfterServiceInvoke = function (evt) {
 
 
 
-{ ![](Grouping-Bar_images/Grouping-Bar_img1.png) | markdownify }
+{{ '![](Grouping-Bar_images/Grouping-Bar_img1.png)' | markdownify }}
 {:.image }
 
 

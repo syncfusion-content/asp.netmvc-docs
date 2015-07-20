@@ -89,7 +89,7 @@ The following steps explains you the details of data binding with DropdownList.
 <table>
 <tr>
 <td>
-<br>[CSHTML]// Add a DropDownList element using the helper class in CSHTML&lt;div class="control"&gt;        <div class="ctrllabel">Select a bike</div>        @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<Data>)ViewData["BikeList"] ).DropDownListFields(f => f.Text("Text")).DropDownListFields(f => f.Value("Id")).Width("150px")                        &lt;/div&gt;</td></tr>
+<br>[CSHTML]// Add a DropDownList element using the helper class in CSHTML<div class="control">        <div class="ctrllabel">Select a bike</div>        @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<Data>)ViewData["BikeList"] ).DropDownListFields(f => f.Text("Text")).DropDownListFields(f => f.Value("Id")).Width("150px")                        </div></td></tr>
 <tr>
 <td>
 [CS]// Initialize Datasource in the controller        public ActionResult DropdownlistFeatures()        {                    List<Data> ListOrder = new List<Data>();            ListOrder.Add(new Data() { Id = "bk1", Text = "Aache RTR" });            ListOrder.Add(new Data() { Id = "bk2", Text = "CBR 150-R" });            ListOrder.Add(new Data() { Id = "bk3", Text = "CBZ Xtreme" });            ListOrder.Add(new Data() { Id = "bk4", Text = "Discover" });            ListOrder.Add(new Data() { Id = "bk5", Text = "Dazzler" });            ListOrder.Add(new Data() { Id = "bk6", Text = "Flame" });            ListOrder.Add(new Data() { Id = "bk7", Text = "Fazzer" });            ListOrder.Add(new Data() { Id = "bk8", Text = "FZ-S" });            ListOrder.Add(new Data() { Id = "bk9", Text = "Pulsar" });            ListOrder.Add(new Data() { Id = "bk10", Text = "Shine" });            ListOrder.Add(new Data() { Id = "bk11", Text = "R15" });            ListOrder.Add(new Data() { Id = "bk12", Text = "Unicorn" });            ViewData["BikeList"] = ListOrder;            return View();       }       public class Data       {            public string Id { get; set; }            public string Text { get; set; }       }</td></tr>
@@ -102,7 +102,7 @@ Output of the above steps
 
 
 
-{ ![](Data-binding_images/Data-binding_img1.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -136,7 +136,7 @@ Output of the above steps
 
 
 
-{ ![](Data-binding_images/Data-binding_img2.png) | markdownify }
+{{ '![](Data-binding_images/Data-binding_img2.png)' | markdownify }}
 {:.image }
 
 

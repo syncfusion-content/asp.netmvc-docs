@@ -81,7 +81,7 @@ The following steps explain you how to highlight the current week section.
 
 2. The following screenshot displays the output for the above code.   
 
-{ ![](Miscellaneous_images/Miscellaneous_img1.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -137,7 +137,7 @@ The following steps explain you how to hide the popupbutton in the DatePicker wi
 
 2. The following screenshot displays the output for the above code.
 
-{ ![](Miscellaneous_images/Miscellaneous_img2.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -163,7 +163,7 @@ The following steps explain you how to show Roundedcorner in the DatePicker.
 
 
 
-{ ![](Miscellaneous_images/Miscellaneous_img3.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -185,7 +185,7 @@ The following steps explain you how to hide the ToolTip in the DatePicker.
 
 
 
-{ ![](Miscellaneous_images/Miscellaneous_img4.png) | markdownify }
+{{ '![](Miscellaneous_images/Miscellaneous_img4.png)' | markdownify }}
 {:.image }
 
 

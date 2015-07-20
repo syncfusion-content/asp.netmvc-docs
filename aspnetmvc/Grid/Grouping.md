@@ -81,7 +81,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Grouping_images/Grouping_img1.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -147,7 +147,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Grouping_images/Grouping_img2.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -157,7 +157,7 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 
 
 
-{ ![](Grouping_images/Grouping_img3.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -221,7 +221,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Grouping_images/Grouping_img4.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -287,7 +287,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Grouping_images/Grouping_img5.png) | markdownify }
+{{ '![](Grouping_images/Grouping_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -355,7 +355,7 @@ namespace MvcApplication11.Controllers
 
 The following output is displayed as a result of the above code example.
 
-{ ![C:/Users/NandhiniK/Desktop/Capture.PNG](Grouping_images/Grouping_img6.png) | markdownify }
+{{ '![C:/Users/NandhiniK/Desktop/Capture.PNG](Grouping_images/Grouping_img6.png)' | markdownify }}
 {:.image }
 
 

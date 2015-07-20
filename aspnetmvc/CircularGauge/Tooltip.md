@@ -30,7 +30,7 @@ documentation: ug
 
 Execute the above code to render the following output.
 
-{ ![](Tooltip_images/Tooltip_img1.png) | markdownify }
+{{ '![](Tooltip_images/Tooltip_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Tooltip_images/Tooltip_img2.png) | markdownify }
+{{ '![](Tooltip_images/Tooltip_img2.png)' | markdownify }}
 {:.image }
 
 

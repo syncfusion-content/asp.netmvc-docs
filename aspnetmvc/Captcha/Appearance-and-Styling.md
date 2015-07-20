@@ -78,7 +78,7 @@ The following code example is used to render the Captcha with hard visibility mo
 
 2. The following screenshot illustrates the Captcha with disabled pattern. 
 
-{ ![C:/Users/ApoorvahR/Desktop/3.png](Appearance-and-Styling_images/Appearance-and-Styling_img6.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/3.png](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -98,7 +98,7 @@ The following code example is used to render the Captcha with customized appeara
 
 2. The following screenshot illustrates the Captcha with customized appearance. 
 
-{ ![C:/Users/ApoorvahR/Desktop/3.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/3.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -122,7 +122,7 @@ The following code example is used to render the Captcha with customized Height 
 
 2. The following screenshot illustrates the Captcha with customized Height and Width. 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -147,13 +147,13 @@ By default, there are 12 themes support available for Captcha control.
 
 Appearance for gradient-azure,
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img9.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)' | markdownify }}
 {:.image }
 
 
 Appearance for flat-lime,
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png)' | markdownify }}
 {:.image }
 
 

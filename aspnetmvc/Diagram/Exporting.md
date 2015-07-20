@@ -148,7 +148,7 @@ Format specifies the type/format of the exported file.
 
 It includes jpg, png, bmp, and svg.
 
-{ ![](Exporting_images/Exporting_img1.png) | markdownify }
+{{ '![](Exporting_images/Exporting_img1.png)' | markdownify }}
 {:.image }
 
 

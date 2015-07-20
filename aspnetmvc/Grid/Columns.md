@@ -103,7 +103,7 @@ The following is the result of column formatting.
 
 
 
-{ ![](Columns_images/Columns_img1.png) | markdownify }
+{{ '![](Columns_images/Columns_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -119,11 +119,11 @@ A Template is used to render a specific template to a particular column using Te
 
 
 
-&lt;script type="text/x-jsrender" id="columnTemplate"&gt;  &lt;!--jsrender script--&gt;
+<script type="text/x-jsrender" id="columnTemplate">  <!--jsrender script-->
 
-    &lt;img style="width:130px;height:100px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" /&gt;
+    <img style="width:130px;height:100px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
 
-        &lt;/script&gt;
+        </script>
 
     @(Html.EJ().Grid<EmployeeView>("ColumnTemplate")
 
@@ -191,7 +191,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img2.png) | markdownify }
+{{ '![](Columns_images/Columns_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -207,7 +207,7 @@ CustomAttributes are a powerful feature of Columns. This is used to modify the s
 
  [razor]
 
-&lt;style&gt;
+<style>
 
         .e-rowcell[employeeid = "5"] {
 
@@ -215,7 +215,7 @@ CustomAttributes are a powerful feature of Columns. This is used to modify the s
 
         }	
 
-    &lt;/style&gt;
+    </style>
 
   @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -287,7 +287,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img3.png) | markdownify }
+{{ '![](Columns_images/Columns_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -377,7 +377,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img4.png) | markdownify }
+{{ '![](Columns_images/Columns_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -471,7 +471,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img5.png) | markdownify }
+{{ '![](Columns_images/Columns_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -539,7 +539,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img6.png) | markdownify }
+{{ '![](Columns_images/Columns_img6.png)' | markdownify }}
 {:.image }
 
 
@@ -631,7 +631,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{ ![](Columns_images/Columns_img7.png) | markdownify }
+{{ '![](Columns_images/Columns_img7.png)' | markdownify }}
 {:.image }
 
 
@@ -675,7 +675,7 @@ col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
 
 .ClientSideEvents(eve => { eve.MergeCellInfo("cellmerge"); }))
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function cellmerge(args) {
 
@@ -699,7 +699,7 @@ function cellmerge(args) {
 
     	}
 
-&lt;/script&gt;
+</script>
 
 [controller]
 
@@ -739,7 +739,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img8.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img8.png)' | markdownify }}
 {:.image }
 
 
@@ -821,7 +821,7 @@ namespace MVCSampleBrowser.Controllers
 
 Execute the above code to render the following output.
 
-{ ![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img9.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img9.png)' | markdownify }}
 {:.image }
 
 
@@ -909,7 +909,7 @@ namespace MVCSampleBrowser.Controllers
 
 Execute the above code to render the following output.
 
-{ ![](Columns_images/Columns_img10.png) | markdownify }
+{{ '![](Columns_images/Columns_img10.png)' | markdownify }}
 {:.image }
 
 
@@ -987,7 +987,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 The following output is displayed as a result of the above code example.
 
-{ ![](Columns_images/Columns_img11.png) | markdownify }
+{{ '![](Columns_images/Columns_img11.png)' | markdownify }}
 {:.image }
 
 
@@ -1103,11 +1103,11 @@ namespace MVCSampleBrowser.Controllers
 
 
 
-{ ![](Columns_images/Columns_img12.png) | markdownify }
+{{ '![](Columns_images/Columns_img12.png)' | markdownify }}
 {:.image }
 
 
-{ ![](Columns_images/Columns_img13.png) | markdownify }
+{{ '![](Columns_images/Columns_img13.png)' | markdownify }}
 {:.image }
 
 

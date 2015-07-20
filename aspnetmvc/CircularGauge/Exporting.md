@@ -18,11 +18,11 @@ documentation: ug
 
 @(Html.EJ().CircularGauge("circulargauge"))
 
-&lt;input type="submit" value="Export Image" id="btnExportImage" /&gt;
+<input type="submit" value="Export Image" id="btnExportImage" />
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
         $(function () {
 
@@ -42,12 +42,12 @@ documentation: ug
 
 
 
-    &lt;/script&gt;
+    </script>
 
 
 Execute the above code to render the following output.
 
-{ ![](Exporting_images/Exporting_img1.png) | markdownify }
+{{ '![](Exporting_images/Exporting_img1.png)' | markdownify }}
 {:.image }
 
 

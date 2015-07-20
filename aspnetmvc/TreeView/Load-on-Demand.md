@@ -67,7 +67,7 @@ public class treeviewData
 
 //Refer the Model in the controller
 
-using &lt;Applicationname&gt;.Models;
+using <Applicationname>.Models;
 
 
 

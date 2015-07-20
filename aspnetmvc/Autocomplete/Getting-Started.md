@@ -19,7 +19,7 @@ In this section,  the flat-saffron theme (default) for the Autocomplete is expla
 
 The following screen shot illustrates the AutoComplete control that searches the list of components available in the database. 
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -36,13 +36,13 @@ ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features
 
 
 
-&lt;div&gt;
+<div>
 
     Select Component/s: 
 
 @Html.EJ().Autocomplete("ComponentList")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -52,7 +52,7 @@ ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -68,13 +68,13 @@ You can assign the required Data from the remote URL by using the DataSource pro
 
 
 
-&lt;div&gt;
+<div>
 
 Select Component/s: 
 
 @Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -82,7 +82,7 @@ Select Component/s:
 
 Run this code to render the AutoComplete with components list.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -100,7 +100,7 @@ By default, the AutoComplete is rendered with single-value selection. For multip
 
 
 
-&lt;div&gt;
+<div>
 
     Select Component/s: 
 
@@ -108,7 +108,7 @@ By default, the AutoComplete is rendered with single-value selection. For multip
 
 
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -116,7 +116,7 @@ By default, the AutoComplete is rendered with single-value selection. For multip
 
 The following screen shot displays the AutoCompletetextbox with selection visual mode.
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
@@ -126,13 +126,13 @@ Configure Highlight Search and Rounded corners
 
 
 
-&lt;div&gt;
+<div>
 
     Select Component/s: 
 
 @Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -143,7 +143,7 @@ When you set the HighlightSearch property to ‘true’, the characters typed in
 
 The following screen shot displays the AutoCompletetextbox with highlight search enabled.
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -156,16 +156,16 @@ To enable the DropDown button, you can set ShowPopupButton property to ‘true�
 <table>
 <tr>
 <td>
-[CSS]&lt;style&gt;.e-icon.e-search:before {               content:"\e63b";        }&lt;/style&gt;</td></tr>
+[CSS]<style>.e-icon.e-search:before {               content:"\e63b";        }</style></td></tr>
 <tr>
 <td>
-[CSHTML]&lt;div&gt;    Select Component/s: @Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)&lt;/div&gt;</td></tr>
+[CSHTML]<div>    Select Component/s: @Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)</div></td></tr>
 </table>
 
 
 The following screen shot displays the AutoCompletetextbox with dropdown icon.
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

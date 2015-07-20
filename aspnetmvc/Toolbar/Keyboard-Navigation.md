@@ -61,15 +61,15 @@ The following code example illustrates shortcuts associated with the Toolbar ite
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-&lt;div class="cols-sample-area"&gt;    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")) 
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")) 
 
-&lt;/div&gt;
-
-
+</div>
 
 
 
-{ ![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png) | markdownify }
+
+
+{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)' | markdownify }}
 {:.image }
 
 

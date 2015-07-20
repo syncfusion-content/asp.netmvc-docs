@@ -17,7 +17,7 @@ ASP.NET MVC Slider provides support to display a Slider within the webpage. The 
 
 The following screenshot illustrates the functionality of Slider control. You can select a mobile model in the dropdown to purchase it at any rate specified in the Mobile RateSlider and you can also specify the number of mobiles you need by selecting the Mobile CountSlider. Simultaneously, you can observe the change in mobile rate and count using Sliders.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -35,19 +35,19 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-    &lt;div class="inner"&gt;
+    <div class="inner">
 
-&lt;div class="ctrllabel"&gt;
+<div class="ctrllabel">
 
         Select a Mobile
 
-    &lt;/div&gt;    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
+    </div>    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
 
-    &lt;div id="mobileList"&gt;
+    <div id="mobileList">
 
-        &lt;ul&gt;
+        <ul>
 
             <li>Nokia Lumia</li>
 
@@ -59,37 +59,37 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
             <li>Moto G</li>
 
-        &lt;/ul&gt; 
+        </ul> 
 
-    &lt;/div&gt;
+    </div>
 
-        &lt;span class="columnleft"&gt;
+        <span class="columnleft">
 
         <span>Mobile Rate</span>
 
-    &lt;/span&gt;
+    </span>
 
-    &lt;span class="columnright"&gt;
+    <span class="columnright">
 
-        <span>Rs &lt;/span&gt;&lt;span class="value"&gt;&lt;/span&gt;
+        <span>Rs </span><span class="value"></span>
 
-&lt;/span&gt;    
+</span>    
 
 @Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-&lt;span class="Columnleft"&gt;
+<span class="Columnleft">
 
             <span>Mobile Count</span>
 
-        &lt;/span&gt;        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+        </span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
         You are choosing:
 
-        &lt;span id="EventLog"&gt;&lt;/span&gt;
+        <span id="EventLog"></span>
 
-       &lt;/div&gt;
+       </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -97,7 +97,7 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-&lt;style&gt;
+<style>
 
 .frame
 
@@ -151,7 +151,7 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -159,7 +159,7 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 
 
-&lt;script&gt;
+<script>
 
             var mobileObj, rateObj, countObj;
 
@@ -189,13 +189,13 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 }
 
-&lt;/script&gt;
+</script>
 
 
 
 5. The following screenshot displays the final output in Slider creation.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -203,68 +203,68 @@ EMI Calculator
 
 This section explains how to use the Slider control for EMI Calculation. The final result of EMI amount is calculated automatically based on the loan amount, interest rate and tenure amount based on the amount you choose using Slider.
 
-1. You can create an MVC Project and add necessary &lt;DLL&gt; and script to it.  Refer MVC-Getting Started Documentation.
+1. You can create an MVC Project and add necessary <DLL> and script to it.  Refer MVC-Getting Started Documentation.
 2. Add the following code for Slider to the corresponding view page.
 
 
 
 
 
-&lt;div class="frame"&gt;
+<div class="frame">
 
-    &lt;div class="inner"&gt;
+    <div class="inner">
 
-        &lt;div id="loanheading"&gt;
+        <div id="loanheading">
 
             Details of Loan
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;span class="columnleft"&gt;
+        <span class="columnleft">
 
             <span>Loan Amount</span>
 
-        &lt;/span&gt;
+        </span>
 
-        &lt;span class="columnright"&gt;
+        <span class="columnright">
 
-            <span>Rs &lt;/span&gt;<span class="value">25000</span>
+            <span>Rs </span><span class="value">25000</span>
 
-        &lt;/span&gt;    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+        </span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-        &lt;span class="columnleft"&gt;
+        <span class="columnleft">
 
             <span>Interest Rate</span>
 
-        &lt;/span&gt;
+        </span>
 
-        &lt;span class="columnright"&gt;
+        <span class="columnright">
 
-            &lt;span class="value"&gt;&lt;/span&gt;&lt;span&gt;% pa</span>
+            <span class="value"></span><span>% pa</span>
 
-        &lt;/span&gt;        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+        </span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-        &lt;span class="columnleft"&gt;
+        <span class="columnleft">
 
             <span>Tenure</span>
 
-        &lt;/span&gt;
+        </span>
 
-        &lt;span class="columnright"&gt;
+        <span class="columnright">
 
-            &lt;span class="value"&gt;&lt;/span&gt;<span>Years</span>
+            <span class="value"></span><span>Years</span>
 
-        &lt;/span&gt;        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
+        </span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
 
             Your Monthly EMI Amount is
 
-            &lt;span id="EventLog"&gt;&lt;/span&gt;
+            <span id="EventLog"></span>
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -272,7 +272,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 
 
-&lt;style&gt;
+<style>
 
 .frame
 
@@ -324,7 +324,7 @@ font-weight:bold;
 
 }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -336,7 +336,7 @@ font-weight:bold;
 
 
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
             var loanObj, interestObj, tenureObj;
 
@@ -380,13 +380,13 @@ font-weight:bold;
 
             }
 
-        &lt;/script&gt;
+        </script>
 
 The following screenshot displays the calculated EMI amount using Slider.
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss1.PNG](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss1.PNG](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

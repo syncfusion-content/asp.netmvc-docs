@@ -43,15 +43,15 @@ Batch Editing is a unique feature, where requests to add, remove and change are 
 
 Employee ID
 
-&lt;input id="EmployeeID" class="e-ejinputtext" type="text" value="" /&gt;
+<input id="EmployeeID" class="e-ejinputtext" type="text" value="" />
 
 First Name
 
-&lt;input id="FirstName" class="e-ejinputtext" type="text" value="" /&gt;
+<input id="FirstName" class="e-ejinputtext" type="text" value="" />
 
 Last Name 
 
-&lt;input id="LastName" class="e-ejinputtext" type="text" value="" /&gt;
+<input id="LastName" class="e-ejinputtext" type="text" value="" />
 
 @Html.EJ().Button("submit").Text("Add").ClientSideEvents(e => { e.Click("onClick"); })
 
@@ -61,7 +61,7 @@ Last Name
 
 @Html.EJ().Button("submit").Text("Save All").ClientSideEvents(e => { e.Click("onClick"); })
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         window.changes = { changed: [], added: [], deleted: [] };
 
@@ -119,15 +119,15 @@ Last Name
 
         }
 
-    &lt;/script&gt;
+    </script>
 
-&lt;/asp:Content&gt;
+</asp:Content>
 
 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Editing_images/Editing_img1.png) | markdownify }
+{{ '![](Editing_images/Editing_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -161,7 +161,7 @@ The insert method of the DataManager is used to add a new record to the table. T
 
 )
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
 
@@ -177,13 +177,13 @@ The insert method of the DataManager is used to add a new record to the table. T
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Editing_images/Editing_img2.png) | markdownify }
+{{ '![](Editing_images/Editing_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -219,7 +219,7 @@ The update method is used to update the modified changes made to a record in the
 
 
 
-    &lt;script type="text/javascript" class="jsScript"&gt;
+    <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
 
@@ -235,13 +235,13 @@ The update method is used to update the modified changes made to a record in the
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Editing_images/Editing_img3.png) | markdownify }
+{{ '![](Editing_images/Editing_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -277,7 +277,7 @@ The remove method is used to delete a record from the data source of the DataMan
 
 
 
-&lt;script type="text/javascript" class="jsScript"&gt;
+<script type="text/javascript" class="jsScript">
 
         function onClick(e) {
 
@@ -293,13 +293,13 @@ The remove method is used to delete a record from the data source of the DataMan
 
         }
 
-    &lt;/script&gt;
+    </script>
 
 
 
 Result of the above code example is illustrated as follows.
 
-{ ![](Editing_images/Editing_img4.png) | markdownify }
+{{ '![](Editing_images/Editing_img4.png)' | markdownify }}
 {:.image }
 
 

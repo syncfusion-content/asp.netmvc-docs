@@ -17,7 +17,7 @@ The Essential StudioListView widget builds an interactive list view interface.
 
 __
 
-{ ![C:/Users/isuriyar/Desktop/listview.PNG](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![C:/Users/isuriyar/Desktop/listview.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -64,7 +64,7 @@ Create a simple ListView
 
 Run the above code to render the following output.
 
-{ ![C:/Users/isuriyar/Desktop/normal list.PNG](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![C:/Users/isuriyar/Desktop/normal list.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -114,7 +114,7 @@ You can add a header for ListView using ShowHeader property. Refer to the follow
 
 Run the above code to render the following output.
 
-{ ![C:/Users/isuriyar/Desktop/listview.PNG](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![C:/Users/isuriyar/Desktop/listview.PNG](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 

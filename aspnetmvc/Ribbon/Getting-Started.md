@@ -13,9 +13,9 @@ This section explains briefly how to create a _Ribbon_ in your application with
 
 ## Create your Ribbon in MVC
 
-The _Ribbon_ can be easily configured to the DOM element, such as _&lt;div&gt;_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
+The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
 
-{ ![](Getting-Started_images/Getting-Started_img1.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -124,7 +124,7 @@ ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
 
 4. The following screenshot illustrates the _Ribbon_ control.
 
-{ ![](Getting-Started_images/Getting-Started_img2.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -384,7 +384,7 @@ return View();
 
 The following screenshot illustrates Ribbon with controls.
 
-{ ![](Getting-Started_images/Getting-Started_img3.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -394,13 +394,13 @@ The _Ribbon_ has expand/collapse support. The following screenshot illustrates _
 
 
 
-{ ![](Getting-Started_images/Getting-Started_img4.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
 {:.image }
 
 
 The following screenshot illustrates _Ribbon_ in the collapsed state,
 
-{ ![](Getting-Started_images/Getting-Started_img5.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
 {:.image }
 
 
@@ -676,7 +676,7 @@ return View();
 
 The following screenshot illustrates the control separator after the Italic Button control.
 
-{ ![](Getting-Started_images/Getting-Started_img6.png) | markdownify }
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 {:.image }
 
 

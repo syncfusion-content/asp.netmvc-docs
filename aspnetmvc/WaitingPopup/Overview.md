@@ -28,7 +28,7 @@ ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your 
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -52,51 +52,51 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-&lt;div class="content-container-fluid"&gt;
+<div class="content-container-fluid">
 
-    &lt;div class="row"&gt;
+    <div class="row">
 
-        &lt;div class="cols-sample-area"&gt;
+        <div class="cols-sample-area">
 
-            &lt;table id="target"&gt;
+            <table id="target">
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Username</td>
 
-                    &lt;td&gt;&lt;input type="text"&gt;&lt;/td&gt;
+                    <td><input type="text"></td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
                     <td>Password</td>
 
-                    &lt;td&gt;&lt;input type="password"&gt;&lt;/td&gt;
+                    <td><input type="password"></td>
 
-                &lt;/tr&gt;
+                </tr>
 
-                &lt;tr&gt;
+                <tr>
 
-                    &lt;td&gt;&lt;/td&gt;                       
+                    <td></td>                       
 
-                 &lt;td&gt;                         @Html.EJ().Button("buttonnormal").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("btnload").Click("btnClick"))
+                 <td>                         @Html.EJ().Button("buttonnormal").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("btnload").Click("btnClick"))
 
-                 &lt;/td&gt;                    
+                 </td>                    
 
 @Html.EJ().WaitingPopup("target").ShowOnInit(false)
 
-                &lt;/tr&gt;
+                </tr>
 
-            &lt;/table&gt;
+            </table>
 
 
 
-        &lt;/div&gt;
+        </div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -106,7 +106,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #target {
 
@@ -132,7 +132,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -142,7 +142,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-&lt;script&gt;
+<script>
 
             function btnClick(e)
 
@@ -166,7 +166,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
             }                  
 
-&lt;/script&gt;
+</script>
 
 
 
@@ -174,7 +174,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/wait.PNG](Overview_images/Overview_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/wait.PNG](Overview_images/Overview_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -184,7 +184,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -192,7 +192,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 The following screenshot displays an alert box displayed with the message “Signed in successfully” after loading.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/w3.PNG](Overview_images/Overview_img4.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/w3.PNG](Overview_images/Overview_img4.png)' | markdownify }}
 {:.image }
 
 

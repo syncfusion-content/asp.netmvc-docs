@@ -27,9 +27,9 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").EnableRTL(true) 
 
-        &lt;div id="list"&gt;
+        <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -43,11 +43,11 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
                 <li>Science</li>
 
-            &lt;/ul&gt;
+            </ul>
 
 
 
-        &lt;/div&gt;
+        </div>
 
 
 
@@ -57,15 +57,15 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 
 
-&lt;div class="control"&gt;
+<div class="control">
 
-      &lt;ej:DropDownList ID="dropdownlist" TargetID="list" Width="200px" EnableRTL="true"  runat="server"&gt;
+      <ej:DropDownList ID="dropdownlist" TargetID="list" Width="200px" EnableRTL="true"  runat="server">
 
-      &lt;/ej:DropDownList&gt;
+      </ej:DropDownList>
 
-     &lt;div id="list"&gt;
+     <div id="list">
 
-            &lt;ul&gt;
+            <ul>
 
                 <li>Art</li>
 
@@ -79,18 +79,18 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
                 <li>Science</li>
 
-             &lt;/ul&gt;
+             </ul>
 
-     &lt;/div&gt;
+     </div>
 
-&lt;/div&gt;    
+</div>    
 
 
 
 Output of the above steps
 
 
-{ ![](RTL_images/RTL_img1.png) | markdownify }
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
 {:.image }
 
 

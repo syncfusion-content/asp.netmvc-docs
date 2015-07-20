@@ -47,7 +47,7 @@ The following steps explain how you can enable the HighlightSearch property for 
 
 The following image is the output for AutoComplete when HighlightSearch is set to ‘True’.
 
-{ ![](Search-Customization_images/Search-Customization_img1.png) | markdownify }
+{{ '![](Search-Customization_images/Search-Customization_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -89,7 +89,7 @@ The following steps explain you how to enable the CaseSensitiveSearch property f
 
 The following image is the output for AutoComplete when CaseSensitiveSearch is set to ‘True’.
 
-{ ![](Search-Customization_images/Search-Customization_img2.png) | markdownify }
+{{ '![](Search-Customization_images/Search-Customization_img2.png)' | markdownify }}
 {:.image }
 
 

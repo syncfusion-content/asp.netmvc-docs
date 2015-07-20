@@ -25,7 +25,7 @@ The following steps explains the details about rendering the button with Right t
 
   @* Enable the alignment format for button control as follows.*@
 
-&lt;div class="control"&gt;
+<div class="control">
 
 
 
@@ -33,14 +33,14 @@ The following steps explains the details about rendering the button with Right t
 
 
 
-    &lt;/div&gt;
+    </div>
 
 
 In above mentioned code example PrefixIcon property is used and the icon that is to be on left side, (before text) is rendered on right side as EnableRTL property is used with PrefixIcon.  Consequently, the alignment is changed in right to left order.
 
 Execute the above code to render the following output.
 
-{ ![](RTL-Support_images/RTL-Support_img1.png) | markdownify }
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
 {:.image }
 
 

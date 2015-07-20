@@ -27,15 +27,15 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 @Html.EJ().SplitButton("dropdownbtn").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("menu1").ButtonMode(ButtonMode.Dropdown)
 
-&lt;ul id="menu1"&gt;
+<ul id="menu1">
 
-    &lt;li&gt;<span>User</span>&lt;/li&gt;
+    <li><span>User</span></li>
 
-    &lt;li&gt;<span>Guest</span>&lt;/li&gt;
+    <li><span>Guest</span></li>
 
-    &lt;li&gt;<span>Admin</span>&lt;/li&gt;
+    <li><span>Admin</span></li>
 
-&lt;/ul&gt;
+</ul>
 
 
 
@@ -45,7 +45,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 
-{ ![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^FBB9E285A6F3042DAB9B40116599699BB899EC45D623A2651A^pimgpsh_fullsize_distr.jpg](Dropdown-Button_images/Dropdown-Button_img1.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^FBB9E285A6F3042DAB9B40116599699BB899EC45D623A2651A^pimgpsh_fullsize_distr.jpg](Dropdown-Button_images/Dropdown-Button_img1.png)' | markdownify }}
 {:.image }
 
 

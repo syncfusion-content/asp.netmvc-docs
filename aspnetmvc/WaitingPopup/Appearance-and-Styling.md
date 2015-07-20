@@ -25,11 +25,11 @@ The following steps explains you the configuration of the custom text for Waitin
 
 
 
-&lt;div id="target"&gt;
+<div id="target">
 
         @Html.EJ().WaitingPopup("target").ShowOnInit(true).Text("Loading... Please wait...")
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -41,7 +41,7 @@ The following steps explains you the configuration of the custom text for Waitin
 
 
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #control {
 
@@ -51,7 +51,7 @@ The following steps explains you the configuration of the custom text for Waitin
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
@@ -59,7 +59,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -83,33 +83,33 @@ The following steps explains you on how to define template to display a text and
 
 [CSHTML]
 
-&lt;div id="target"&gt;
+<div id="target">
 
     @Html.EJ().WaitingPopup("target").ShowOnInit(true).Template("#content")
 
-    &lt;div id="content"&gt;
+    <div id="content">
 
-        &lt;div class="block"&gt;
+        <div class="block">
 
-            &lt;div class="logo"&gt;&lt;/div&gt;
+            <div class="logo"></div>
 
-            &lt;div class="txt"&gt;
+            <div class="txt">
 
-                <p>Create cutting edge &lt;/p&gt;
+                <p>Create cutting edge </p>
 
-                &lt;p&gt;<b>HTML5</b> web application &lt;/p&gt;
+                <p><b>HTML5</b> web application </p>
 
-                <p>with ease &lt;/p&gt;
+                <p>with ease </p>
 
-            &lt;/div&gt;
+            </div>
 
-        &lt;/div&gt;
+        </div>
 
-        &lt;div class="loader"&gt;&lt;/div&gt;
+        <div class="loader"></div>
 
-    &lt;/div&gt;
+    </div>
 
-&lt;/div&gt;
+</div>
 
 
 
@@ -118,7 +118,7 @@ The following steps explains you on how to define template to display a text and
 2. In CSS, you can configure the custom styles for WaitingPopup.
 
 
-{ ![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img2.png) | markdownify }
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
 {:.image }
 _Note: Images for this sample are available ‘installed location /Content/images’ and we need to define images in mentioned CSS. Henceforth the images will display._
 
@@ -128,7 +128,7 @@ _Note: Images for this sample are available ‘installed location /Content/image
 
 [Stylesheet]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     #waitingPopUp {
 
@@ -210,14 +210,14 @@ _Note: Images for this sample are available ‘installed location /Content/image
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 Execute the above code to render the following output.
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/w5.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/w5.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -241,9 +241,9 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 
 
-&lt;div id="target"&gt;
+<div id="target">
 
- @Html.EJ().WaitingPopup("target").ShowOnInit(true).CssClass("custom").Text("Loading... Please wait...")&lt;/div&gt;
+ @Html.EJ().WaitingPopup("target").ShowOnInit(true).CssClass("custom").Text("Loading... Please wait...")</div>
 
 
 
@@ -255,7 +255,7 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 [CSS]
 
-&lt;style type="text/css" class="cssStyles"&gt;
+<style type="text/css" class="cssStyles">
 
     /*Customize the panel property*/
 
@@ -283,13 +283,13 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
     }
 
-&lt;/style&gt;
+</style>
 
 
 
 The following screenshot displays the output for the above code.
 
-{ ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png) | markdownify }
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
 {:.image }
 
 

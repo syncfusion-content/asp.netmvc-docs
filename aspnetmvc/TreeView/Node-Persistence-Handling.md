@@ -103,7 +103,7 @@ The output for TreeView when EnablePersistence is set to True is as follows.
 
 
 
-{ ![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png) | markdownify }
+{{ '![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -34,7 +34,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Interaction-and-Animation_images/Interaction-and-Animation_img1.png) | markdownify }
+{{ '![](Interaction-and-Animation_images/Interaction-and-Animation_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -69,7 +69,7 @@ Execute the above code to render the following output.
 
 
 
-{ ![](Interaction-and-Animation_images/Interaction-and-Animation_img2.png) | markdownify }
+{{ '![](Interaction-and-Animation_images/Interaction-and-Animation_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -31,7 +31,7 @@ The ShowPreview property is Boolean type and its default value is true.
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img1.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -55,7 +55,7 @@ The ShowRecentColors property is Boolean type and its default value is false.
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img2.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
 {:.image }
 
 
@@ -79,7 +79,7 @@ The EnableOpacity property is Boolean type and its default value is true.
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img3.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
 {:.image }
 
 
@@ -103,7 +103,7 @@ The Columns property is Number type and its default value is 10.
 
 The following screenshot displays the output of the above code example.
 
-{ ![](Behavior-Settings_images/Behavior-Settings_img4.png) | markdownify }
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
 {:.image }
 
 

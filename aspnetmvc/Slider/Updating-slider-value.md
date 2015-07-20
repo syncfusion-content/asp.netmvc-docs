@@ -42,7 +42,7 @@ The following steps explains you the configuration of “Value” and “Values�
 Execute the above code example to render the following output.
 
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderrange1.PNG](Updating-slider-value_images/Updating-slider-value_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderrange1.PNG](Updating-slider-value_images/Updating-slider-value_img1.png)' | markdownify }}
 {:.image }
 
 
@@ -80,7 +80,7 @@ The following steps explains you on how to configure MinValue and MaxValue prope
 
 Execute the above code example to render the following output.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/s2.PNG](Updating-slider-value_images/Updating-slider-value_img2.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/s2.PNG](Updating-slider-value_images/Updating-slider-value_img2.png)' | markdownify }}
 {:.image }
 
 

@@ -61,7 +61,7 @@ The following screenshot shows stripline in Gantt control.
 
 
 
-{ ![](Stripline_images/Stripline_img1.png) | markdownify }
+{{ '![](Stripline_images/Stripline_img1.png)' | markdownify }}
 {:.image }
 
 

@@ -27,41 +27,41 @@ The following steps explains the implementation of multiple Dialog in the same w
 
 
 
-@{Html.EJ().Dialog("mvcdialog").Title("MVC").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("mvcdialog").Title("MVC").ContentTemplate(@<div>
 
-            &lt;p&gt;
+            <p>
 
                 Essential Studio for ASP.NET MVC contains all the controls you need to build line-of-business web applications including grids, charts, gauges, menus, calendars, editors, and much more.
 
-            &lt;/p&gt;
+            </p>
 
-       &lt;/div&gt;).Position(p => p.XValue("296").YValue("207")).Render();}
+       </div>).Position(p => p.XValue("296").YValue("207")).Render();}
 
 
 
-@{Html.EJ().Dialog("orubasedialog").Title("Orubase").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("orubasedialog").Title("Orubase").ContentTemplate(@<div>
 
-            &lt;p&gt;
+            <p>
 
                 Orubase is the only mobile application development framework built especially for developing complex line-of-business mobile applications targeting iOS, Android, and Windows Phone platforms in the shortest possible timeframe.
 
-            &lt;/p&gt;
+            </p>
 
-        &lt;/div&gt;).Position(p => p.XValue("721").YValue("207")).Render();}
+        </div>).Position(p => p.XValue("721").YValue("207")).Render();}
 
 
 
-@{Html.EJ().Dialog("winrtdialog").Title("WinRT").ContentTemplate(@&lt;div&gt;
+@{Html.EJ().Dialog("winrtdialog").Title("WinRT").ContentTemplate(@<div>
 
-            &lt;p&gt;
+            <p>
 
                 Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.
 
                 It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps.
 
-            &lt;/p&gt;
+            </p>
 
-        &lt;/div&gt;).Position(p => p.XValue("500").YValue("407")).Render();}
+        </div>).Position(p => p.XValue("500").YValue("407")).Render();}
 
 
 
@@ -69,7 +69,7 @@ The following steps explains the implementation of multiple Dialog in the same w
 
 2. The output of multiple Dialog control is as follows.
 
-{ ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/multi.PNG](Multiple-Dialog-Support_images/Multiple-Dialog-Support_img1.png) | markdownify }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/multi.PNG](Multiple-Dialog-Support_images/Multiple-Dialog-Support_img1.png)' | markdownify }}
 {:.image }
 
 
