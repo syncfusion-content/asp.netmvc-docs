@@ -26,8 +26,8 @@ The formatting tools allow you to change the appearance of the text. Formatted 
 * Subscript and Superscript 
 * Text with subscript and superscript placed after or before the baseline respectively.
 * Font options
-  * [Font Name](http://docs.cksource.com/CKEditor_3.x/Users_Guide/Styling/Font) – Typeface that is applied to the document text.
-  * [Font Size](http://docs.cksource.com/CKEditor_3.x/Users_Guide/Styling/Size) – Determines how big or small the text will be.
+  * Font Name – To change the font type of text.
+  * Font Size – To change the size of text.
 * Format
 * Predefined sets of formatting features that can be applied to block and to make elements of the document inline.
 * Upper & lower case conversion
