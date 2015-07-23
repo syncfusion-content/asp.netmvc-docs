@@ -7,9 +7,9 @@ control: ColorPicker
 documentation: ug
 ---
 
-## Configure Values
+# Configure Values
 
-OpacityValue
+## OpacityValue
 
 The ColorPicker control allows you to change the opacity value by using the OpacityValue property. The selected color opacity is adjusted by using the OpacityValue. 
 
@@ -18,36 +18,36 @@ The OpacityValue property is Number type and its default value is 100.
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-
+{% highlight html %}
 [CSHTML]
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").OpacityValue(40)   
 
-
+{% endhighlight  %}
 
 The following screenshot displays the output of the above code example.
 
-{{ '![](Configure-Values_images/Configure-Values_img1.png)' | markdownify }}
-{:.image }
+![](Configure-Values_images/Configure-Values_img1.png)
 
 
-Button and TooltipText
 
-ButtonText
+## Button and TooltipText
+
+## ButtonText
 
 The ColorPicker control allows you to define the text to be displayed in button elements. You can specify the text by using ButtonText property. In ColorPicker control, popup contains two button elements “Apply” and “Cancel”.
 
 To configure the ButtonText property for the button elements, use the corresponding default values listed in the following table.
 
-_Table_ _1__: List of Button elements_
+_Table1: List of Button elements_
 
 <table>
 <tr>
-<td>
-Element</td><td>
-Default value</td></tr>
+<th>
+Element</th><th>
+Default value</th></tr>
 <tr>
 <td>
 Apply</td><td>
@@ -63,13 +63,13 @@ The ColorPicker control consists of more number of sub controls and elements. To
 
 To configure the TooltipText, usethe following listed elements and its corresponding default value.
 
-_Table_ _2__: List of Tooltip elements_
+_Table2: List of Tooltip elements_
 
 <table>
 <tr>
-<td>
-Element</td><td>
-Default value</td></tr>
+<th>
+Element</th><th>
+Default value</th></tr>
 <tr>
 <td>
 Switcher</td><td>
@@ -141,7 +141,7 @@ When it is necessary to set the button text and TooltipText values in Spanish cu
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -151,11 +151,11 @@ When it is necessary to set the button text and TooltipText values in Spanish cu
 
 tooltip.Sandy("arenoso"))  
 
-
+{% endhighlight %}
 
 The following screenshot displays the output of the above code example.
 
-{{ '![](Configure-Values_images/Configure-Values_img2.png)' | markdownify }}
-{:.image }
+![](Configure-Values_images/Configure-Values_img2.png)
+
 
 

@@ -19,11 +19,11 @@ This section encompasses how to configure the MVC Charts for your business needs
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
-Configure Chart
+
+### Configure Chart
 
 Getting started with your MVC Chart is very easy. You can start by creating a simple line Chart.
 
@@ -39,7 +39,7 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
 
 3. You can add the following code in the index.cshtml file to create the Chart control in the View page. 
 
-
+{% highlight html %}
     <div> 
 
 
@@ -52,7 +52,7 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
 
     </div> 
 
-
+{% endhighlight %}
 
 The above code example renders a Chart with the default Columnseries type and some random values assigned to the column series. 
 
@@ -60,11 +60,11 @@ The following screenshot displays the Chart.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Add a Chart series
+
+### Add a Chart series
 
 By default, line series is used. To create a series, you need to add the following code example to the scripts. For example, the following steps illustrate how to add a column series to the Chart.
 
@@ -72,7 +72,7 @@ By default, line series is used. To create a series, you need to add the followi
 2. Then, you need to specify the type of series you want to render using “type” property.
 3. You can add x and y points to the series as in the following code example.
 
-
+{% highlight html %}
   @(Html.EJ().Chart("chartcontainer")
 
      .Series(sr =>
@@ -115,21 +115,21 @@ By default, line series is used. To create a series, you need to add the followi
 
         )
 
-
+{% endhighlight %}
 The following screenshot displays a Chart series:
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-Add JSON data to the Chart
+
+### Add JSON data to the Chart
 
 You can add JSON data to the Chart using the datasource property in Chart series.
 
 In Controllers/HomeController.cs.
 
-
+{% highlight c# %}
 
 public ArrayList GetData()
 
@@ -161,4 +161,5 @@ public ArrayList GetData()
 
             dataTable.Add(new ChartData("Nov", 55, 38, 2.83));
 
-            d
+           }
+		   {% endhighlight  %}
