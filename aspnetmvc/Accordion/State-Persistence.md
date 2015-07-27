@@ -7,15 +7,15 @@ control: Accordion
 documentation: ug
 ---
 
-## State Persistence
+# State Persistence
 
 Accordion widget can store the model value in the browser cookies and on every time after initial rendering, the control get the model from the cookie only. Using EnablePersistence property you can store the model value in cookies. Thus when any changes are made dynamically then those values are updated in cookie. On refreshing the page the past state of the Accordion control is maintained in cookie and control is rendered from it.
 
-Configure state persistence of Accordion panel
+## Configure state persistence of Accordion panel
 
 The following code explains to enable state maintenance for Accordion.
 
-[CSHTML]
+{% highlight html %}
 
 // In the View page, configure Accordion with corresponding data and enable the state persistence.
 
@@ -47,13 +47,13 @@ The following code explains to enable state maintenance for Accordion.
 
 </div>
 
-
+{% endhighlight %}
 
 Output after page refresh maintaining the previous state of Accordion widget is as follows.
 
 
 
-{{ '![](State-Persistence_images/State-Persistence_img1.png)' | markdownify }}
+![](State-Persistence_images/State-Persistence_img1.png)
 {:.image }
 
 
@@ -61,8 +61,7 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 1. Accordion Selected Item changed
 
-{{ '![](State-Persistence_images/State-Persistence_img2.png)' | markdownify }}
-{:.image }
+![](State-Persistence_images/State-Persistence_img2.png)
 
 
 

@@ -7,14 +7,15 @@ control: Accordion
 documentation: ug
 ---
 
-## Ajax settings
+# Ajax settings
 
 Accordion widgets allow you to load content for the Accordion panel using Ajax. This renders content from the specified URL location that is set to the anchor tag. You can set the destination file URL string by using AjaxUrl property Ajax contents enables you to load the content of the Accordion panel when it is expanded. This enhances the Accordion control efficiency when a large content is to be loaded into the panel.
 
-Populate accordion with AJAX content
+## Populate accordion with AJAX content
 
 The following code explains about loading accordion content using AjaxUrl property.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and set AjaxUrl property for the corresponding headers.
@@ -39,13 +40,12 @@ The following code explains about loading accordion content using AjaxUrl proper
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion control with loaded Ajax content is as follows.
 
 
 
-{{ '![](Ajax-settings_images/Ajax-settings_img1.png)' | markdownify }}
-{:.image }
+![](Ajax-settings_images/Ajax-settings_img1.png)
 
 

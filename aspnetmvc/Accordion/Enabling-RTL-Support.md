@@ -7,8 +7,9 @@ control: Accordion
 documentation: ug
 ---
 
-## Enabling RTL Support
+# Enabling RTL Support
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with corresponding data and set EnableRTL property value as true.
@@ -41,11 +42,10 @@ documentation: ug
 
 </div> 
 
-
+{% endhighlight %}
 
 Output for accordion when “EnableRTL” is set to “true” is as follows,
 
-{{ '![](Enabling-RTL-Support_images/Enabling-RTL-Support_img1.png)' | markdownify }}
-{:.image }
+![](Enabling-RTL-Support_images/Enabling-RTL-Support_img1.png)
 
 

@@ -7,16 +7,17 @@ control: Accordion
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Adjusting Accordion size
+## Adjusting Accordion size
 
 You can customize the Accordion panel height using HeightAdjustMode property. It can be set to enum values like content, fill or auto. By default HeightAdjustMode is set to content so the panel height is adjusted to the content size.
 
-Configure Height of Accordion panel
+### Configure Height of Accordion panel
 
 The following code explains to configure the height of ther Accordion content panel.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with corresponding data and define HeightAdjustMode.
@@ -63,24 +64,24 @@ The following code explains to configure the height of ther Accordion content pa
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion control when panel height is set to auto so that the maximum content height and Fill for minimum content height in all the panels is as follows.
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-Rounded corner
+## Rounded corner
 
 You can customize the shape of the Accordion widget from regular rectangular shape to rounded rectangle shape enabling RoundedCorner property that is set to false by default.
 
-Enabling Rounded corner property
+### Enabling Rounded corner property
 
 The following code explains you in enabling the ShowRoundedCorner property for an Accordion control.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with corresponding data and enable the ShowRoundedCorner property for it.
@@ -113,21 +114,21 @@ The following code explains you in enabling the ShowRoundedCorner property for a
 
 </div>
 
-
+{% endhighlight %}
 
 Output for accordion widget when “ShowRoundedCorner” is set to “true” is as follows.
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
-Customize Accordion icon
+## Customize Accordion icon
 
 Accordion widget allows you to customize the icons using CustomIcon option that has two properties header and SelectedHeader. By default, the classes of header and selectedHeader are e-collapse and e-expand respectively. By setting the desired CSS class names for these properties as required overrides the default icons with customized icons.
 
-Configuring custom icon for Accordion
+### Configuring custom icon for Accordion
 
 The following code explains you the configuration of icon for an Accordion control.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with corresponding data and set the “e-arrowheaddown” and “e-arrowheadup” classes to Header and SelectedHeader properties.  “E-arrowheaddown” and “e-arrowheadup” are available in ej.widgets.core.min.css file.
@@ -160,22 +161,23 @@ The following code explains you the configuration of icon for an Accordion contr
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion widget with customized icons is as follows.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 {:.image }
 
 
-Animation Options
+## Animation Options
 
-Set animation
+### Set animation
 
 By default the Animation for expanding and collapsing is enabled. To remove the Animation you can set the EnableAnimation property to false. This restricts customizing animations as well. By default EnableAnimation is set to true.
 
 Following code disables Animation for Accordion.
 
+{% highlight html %}
 [CSHTML]
 
 @{Html.EJ().Accordion("accordion").Items(data =>
@@ -201,8 +203,8 @@ Following code disables Animation for Accordion.
         }).EnableAnimation(false).Render();}
 
 
-
-Expand and collapse speed
+{% endhighlight %}
+### Expand and collapse speed
 
 This feature allows you to set the speed for expanding and collapsing the Accordion panels. By default it is set to 300 in milliseconds. By configuring the animation speed you can optimize the delay in loading the panel content.
 
@@ -238,7 +240,7 @@ The following code sample sets value for ExpandSpeed and CollapseSpeed propertie
 
 </div>
 
-Theme
+## Theme
 
 You can control the style and appearance of Accordion control based on CSS classes. In order to apply styles to the Accordion control, you can refer two files, ej.widgets.core.min.css and ej.theme.min.css. When you refer ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -258,7 +260,7 @@ By default, there are 13 themes support available for Accordion control namely
 * gradient-saffron-dark
 * bootstrap-theme
 
-CSS class
+## CSS class
 
 CSS class can be used to customize the Accordion control appearance. Define a CSS class as you’re your requirement and assign the class name to CssClass property. The custom CSS class must override the predefined CSS styles applied in the Accordion control.
 
@@ -288,6 +290,7 @@ Configure Accordion using CSS class
 
 The following code allows you to configure CSS class for an Accordion widget.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with corresponding data and set the CssClass property with corresponding CSS class name.
@@ -320,12 +323,12 @@ The following code allows you to configure CSS class for an Accordion widget.
 
 </div>
 
-
+{% endhighlight %}
 
 Define CSS class for customizing the Accordion.
 
 
-
+{% highlight html %}
 [Style]
 
 <style class="cssStyles">
@@ -358,13 +361,13 @@ Define CSS class for customizing the Accordion.
 
     </style>
 
-
+{% endhighlight %}
 
 
 
 Output for Accordion with customized CSS property to hide the Accordion icon and format its content is as follows.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+
 
 
