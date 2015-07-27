@@ -14,10 +14,7 @@ documentation: ug
 In this section, you can learn how to create a simple navigation drawer.
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
-
-
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 ### Create Navigation Drawer Widget
@@ -27,7 +24,6 @@ The following steps guide you in adding a Navigation Drawer control for a web ap
 You can create an MVC Project and add the necessary assemblies, styles and scripts to it.  Refer to the [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 
 To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set thetext for list itemsby using Text property. You can paste the following code in corresponding view page.
-
 
 
 {% highlight html %}
@@ -55,7 +51,6 @@ To add a Navigation Drawer control, call NavigationDrawer helper. You can displa
 {% endhighlight %}
 
 
-
 Create the target element as follows to display the drawer by clicking target icon.
 
 {% highlight html %}
@@ -65,10 +60,6 @@ Create the target element as follows to display the drawer by clicking target ic
      <div id="target" class="icon-target"> Drawer</div>
 
 </div>
-
-
-
-
 
 {% endhighlight %}
 
@@ -144,8 +135,6 @@ To set the target icon image from sprite and to position the target icon properl
 
 Set the TargetId property as follows.
 
-
-
 {% highlight html %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
@@ -171,17 +160,16 @@ Set the TargetId property as follows.
 {% endhighlight %}
 
 
-
 Run the application to render the following output. 
 
-.{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 You can display the drawer either by clicking on the target icon or by swiping from left on the page. Refer to the following screenshot.
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 
 You can set the images for Navigation Drawer by using the ImageClass property as follows.    
@@ -269,8 +257,8 @@ You can define the image classes specified for the list items as follows.
 
 Run the application to render the following output. 
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img4.png)
+
 
 
 Create corresponding content elements for each options in the navigation list as follows.
@@ -379,7 +367,7 @@ function slideMenuClick(e) {
 
 Run the application to render the following output. 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
+
 
 

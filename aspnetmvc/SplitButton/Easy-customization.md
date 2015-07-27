@@ -7,11 +7,11 @@ control: Split Button
 documentation: ug
 ---
 
-## Easy customization
+# Easy customization
 
 Split Button is used in many applications. Split Button Size, mages and Content are varied according to each application. The following sections describes you some customizable options for Split Button that can perform easily. 
 
-Content for Split button
+## Content for Split button
 
 The TargetId is a mandatory one, without this field it acts as normal button on two sides. This TargetId property is used to specify the list of content for Split Button. The list of content is rendered as a vertical menu list. This vertical menu list is open, when you click on the down arrow of the Split Button.
 
@@ -20,7 +20,7 @@ The following script explains you the details about rendering the Split Button w
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
 
-
+{% highlight html %}
 [CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
@@ -47,22 +47,22 @@ The following script explains you the details about rendering the Split Button w
 
     </div>
 
-
+{% endhighlight %}
 Execute the above code to render the following output.
 
 
 
 {{ '![](Easy-customization_images/Easy-customization_img1.png)' | markdownify }}
-{:.image }
 
 
 
 
-Button Size
+
+## Button Size
 
 You can render the Split Button in different sizes by using Size property. The following table contains some predefined size option for rendering a Split Button in easiest way. Each size option has different height and width. Mainly it avoids the complexity in rendering Split Button with complex CSS class. 
 
-_Table_ _1__: List of Button size_
+_Table_ _1_: List of Button size_
 
 <table>
 <tr>
@@ -95,7 +95,7 @@ The following steps explains you the details about rendering the Split Button wi
 1. In the View page, add the following button elements to configure Split Button widget.
 
 
-
+{% highlight html %}
 [CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
@@ -214,7 +214,7 @@ The following steps explains you the details about rendering the Split Button wi
 
     </div>
 
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
@@ -222,14 +222,14 @@ Execute the above code to render the following output.
 
 
 {{ '![](Easy-customization_images/Easy-customization_img2.png)' | markdownify }}
-{:.image }
 
 
-ContentType
+
+## ContentType
 
 The content of the Split Button is mainly rendered as text and images. Instead of using complex CSS classes to render Split Button with different content types, you can use some predefined content type options listed in the following table. Using this ContentType propertyyou can easily add different types of content for Split Button. Split Button supports the following content types.
 
-_Table_ _2__: List of content types_
+_Table_ _2_: List of content types_
 
 <table>
 <tr>
@@ -253,7 +253,8 @@ Supports image with the text content.</td></tr>
 ImageTextImage</td><td>
 Supports image with both ends and middle in text.</td></tr>
 </table>
-Prefix and Suffix icons
+
+## Prefix and Suffix icons
 
 Icons inside the Split Button is added easily using PrefixIcon and SuffixIcon property. Location of the icon in Split Button is a necessary thing. You can customize the location of Icon easily using the following mentioned options.
 
@@ -270,11 +271,11 @@ For example the following build-in CSS classes are used to display the font icon
 * e-mediapause
 * e-mediaplay
 
-Prefix Icon
+## Prefix Icon
 
 It inserts the icon at the starting position of Split Button. After this prefix icon, you can use text or suffix icon.
 
-Suffix Icon
+## Suffix Icon
 
 It inserts the icon at the ending position of Split Button. Before this SuffixIcon, you can use Text or PrefixIcon.
 
@@ -285,7 +286,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 //Add the code in the CSHTML page to configure and initialize the control
@@ -390,16 +391,16 @@ The following steps explains you the details on rendering the Split Button with 
 
     </div>
 
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
 {{ '![](Easy-customization_images/Easy-customization_img3.png)' | markdownify }}
-{:.image }
 
 
-Image Position
+
+## Image Position
 
 To provide the best look and feel for Split Button, position of images in Split Button is important. Using ImagePosition property, you can easily customize the position of images inside Split Button without using any complex CSS. ImagePosition property is applicable only with the TextAndImage content type property. This property represent the position of images with respect to text.
 
@@ -430,7 +431,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 
@@ -635,16 +636,16 @@ The following steps explains you the details on rendering the Split Button with 
     </div>
 
 
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
 {{ '![](Easy-customization_images/Easy-customization_img4.png)' | markdownify }}
-{:.image }
 
 
-Theme support
+
+## Theme support
 
 You can control the style and appearance of Split Button based on CSS classes. In order to apply styles to the Split Button control, you can refer two files namely, ej.widgets.core.min.css and ej.theme.min.css. When you refer the ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -663,7 +664,7 @@ By default, there are 12 themes support available for Split Button control namel
 * gradient-saffron
 * gradient-saffron-dark
 
-Custom CSS
+## Custom CSS
 
 You can use the CSS class to customize the Split Button control appearance. Define a CSS class as per requirement and assign the class name to CssClass property.
 
@@ -674,7 +675,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
@@ -779,14 +780,14 @@ The following steps explains you the details about rendering the Split Button wi
 
     </div>
 
-
+{% endhighlight %}
 
 
 
 2. Configure the CSS styles to apply on buttons
 
 
-
+{% highlight html %}
 [CSS]
 
 <style type="text/css">
@@ -851,13 +852,13 @@ The following steps explains you the details about rendering the Split Button wi
 
     </style>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
 
 {{ '![](Easy-customization_images/Easy-customization_img5.png)' | markdownify }}
-{:.image }
+
 
 

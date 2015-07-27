@@ -11,10 +11,9 @@ documentation: ug
 
 This section explains you briefly on how to create a Barcode in your application with ASP.NET MVC.
 
-Control Structure
+## Control Structure
 
-{{ '![Description: C:/Users/labuser/Desktop/barcode.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![Description: C:/Users/labuser/Desktop/barcode.png](Getting-Started_images/Getting-Started_img1.png)
 
 
 ## Create your first Barcode in MVC
@@ -25,8 +24,8 @@ The following guideline explains you on how to create a QR Barcode for a real ti
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 By default, ASP.NET MVC Barcode renders gray scale colors with predefined Quiet zone. Quiet zone is the blank margin on the side(s) that denotes the reader with the start and stop of the Barcode. It also provides flexible API’s to customize the appearance of the Barcode. 
@@ -59,10 +58,6 @@ Web.config file is configured according to the referenced assemblies. The steps 
 
 {% highlight xml %}
 
-[Web.Config]
-
-
-
 <system.web>
 
     <compilation>
@@ -82,14 +77,13 @@ Web.config file is configured according to the referenced assemblies. The steps 
 </system.web>
 
 
-
 {% endhighlight %}
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
-_Note: X.X.X.X in the above code corresponds to the correct version number of the Essential Studio version that you are currently using._
+![](Getting-Started_images/Getting-Started_img3.png)
+
+Note: X.X.X.X in the above code corresponds to the correct version number of the Essential Studio version that you are currently using.
 
 
 
@@ -103,10 +97,6 @@ _Note: X.X.X.X in the above code corresponds to the correct version number of th
 
 
 {% highlight xml %}
-
-[Web.Config]
-
-
 
 <system.web>
 
@@ -136,10 +126,6 @@ _Note: X.X.X.X in the above code corresponds to the correct version number of th
 {% highlight html %}
 
 
-[Index.cshtml]
-
-
-
 <div>
 
 <div>
@@ -156,10 +142,6 @@ _Note: X.X.X.X in the above code corresponds to the correct version number of th
 
 </div>
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -168,7 +150,6 @@ _Note: X.X.X.X in the above code corresponds to the correct version number of th
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 

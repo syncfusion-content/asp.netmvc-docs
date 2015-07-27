@@ -7,7 +7,7 @@ control: Split Button
 documentation: ug
 ---
 
-## Dropdown Button
+# Dropdown Button
 
 You can change the Split Button as Dropdown Button that consists of a single button that when clicked displays a drop-down list of mutually exclusive items. You can achieve this by using default functionality of Split Button with ButtonMode as ButtonMode.Dropdown. Initially the TargetID is a mandatory one.
 
@@ -18,7 +18,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
@@ -37,7 +37,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 </ul>
 
-
+{% endhighlight %}
 
 
 
@@ -46,7 +46,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 {{ '![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^FBB9E285A6F3042DAB9B40116599699BB899EC45D623A2651A^pimgpsh_fullsize_distr.jpg](Dropdown-Button_images/Dropdown-Button_img1.png)' | markdownify }}
-{:.image }
+
 
 
 

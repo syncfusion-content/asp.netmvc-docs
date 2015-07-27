@@ -15,18 +15,18 @@ This section explains briefly about how to create a EJMVC NumericTextBox in ASP.
 
 From the following steps you can learn how to create and use NumericTextBox in your application. Here we have showcased, a small Electric bill calculator application using EJMVC Editors widgets.The Essential ASP.NET MVC Editors control includes numeric, percentage, currency and maskedit textbox controls. This will guide you to use the wide range of Editors functionalities to complete this application. 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
-Create Editors 
+
+## Create Editors 
 
 ASP.NET MVC Editors renders built-in features like keyboard navigation, min and max range and flexible API’s. 
 
 1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
 2. Add necessary helper elements to render the Editor components.
 
-
+{% highlight html %}
 
 <div class="editors">
 
@@ -112,9 +112,12 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 </div>
 
+
+{% endhighlight %}
+
 3. The following styles are added to arrange the Editors.  You can add the following location in the URL path for the background image and to apply styling [http://js.syncfusion.com/UG/Web/Content/electricity.png](http://js.syncfusion.com/UG/Web/Content/electricity.png)
 
-
+{% highlight html %}
 
 <style type="text/css" class="cssStyles">
 
@@ -200,21 +203,23 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 </style>
 
-
+{% endhighlight %}
 
 4. Execute the code to render Editors as follows
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 _NumericTextBox with watermark text_
 
-Set MinValue, MaxValue and value in NumericTextBox
+## Set MinValue, MaxValue and value in NumericTextBox
 
 You can set the “MinValue”,“MaxValue” and “Value” in Numeric, percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the Maskedit widget by using the”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
+
+{% highlight html %}
 
 <div class="editors">
 
@@ -298,15 +303,19 @@ You can set the “MinValue”,“MaxValue” and “Value” in Numeric, percen
 
 </div>
 
+{% endhighlight %}
+
 The following screenshot illustrates the output of the above code examples. 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-Setting the Strict Mode Option
+
+## Setting the Strict Mode Option
 
 You can set the “StrictMode” option to restrict entering values defined outside the range. The following code example illustrates how to set strict mode option. 
+
+{% highlight html %}
 
 <div class="editors">
 
@@ -392,13 +401,17 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 </div>
 
+{% endhighlight %}
+
 Run the above code example and you can see that it restricts entering a value exceeding the MinValue and MaxValue range mentioned in the numeric textbox.
 
-Set Calculation process with NumericTextBox Widgets
+## Set Calculation process with NumericTextBox Widgets
 
 You can use events to calculate the total and displays the value. You can achieve this with the help of Click event in the button widget. The calculation steps are written in the call back function of Click event button.
 
 To customize the button, set the ContentType as TextAndImage to include the icon before the text. Add the PrefixIcon value as “e-calender” and add the ClientSideEvents for click event.
+
+{% highlight html %}
 
 <div class="editors">
 
@@ -448,9 +461,11 @@ function calculateBill() {
 
 </script>
 
+{% endhighlight %}
+
 Run the above code sample, fill the required Textbox fields and click the Calculate button. The values are displayed and an alert message is shown. The following screen shot illustrates the final output of the Electricity bill calculator. 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
+
 
 

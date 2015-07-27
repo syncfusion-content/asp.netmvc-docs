@@ -7,7 +7,7 @@ control: Navigation Drawer
 documentation: ug
 ---
 
-## Customize Direction
+# Customize Direction
 
 By using this property, you can set the drawer to be open from right to left direction or left to right direction. The possible direction values are Right, Left and the default value is Left. Refer to the following code example.
 
@@ -43,7 +43,7 @@ By using this property, you can set the drawer to be open from right to left dir
 
 The following screenshot displays the output by swiping from right to left at the right side end of the screen.
 
-{{ '![](Customize-Direction_images/Customize-Direction_img1.png)' | markdownify }}
-{:.image }
+![](Customize-Direction_images/Customize-Direction_img1.png)
+
 
 

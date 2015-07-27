@@ -17,7 +17,7 @@ This section enables you to configure the Captcha control in your ASP.NET MVC 
 {:.image }
 
 
-Create Captcha Control
+## Create Captcha Control
 
 The Captcha is one of the way to prevent dictionary attacks, it basically comes with the random text. The following steps are used to create Captcha control.  
 
@@ -25,7 +25,7 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 2. Add the following code to the corresponding view page for Captcha rendering.
 
 
-
+{% highlight html %}
 [CSHTML]
 
 <div>
@@ -34,12 +34,12 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 
 </div>
 
-
+{% endhighlight %}
 
 3. Add the following handler codes to the web.config file for Captcha image rendering.
 
 
-
+{% highlight html %}
 [web.config]
 
 <!--add the following code in <system.web>-->
@@ -70,7 +70,7 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 
 </system.webserver>
 
-
+{% endhighlight %}
 
 Note: Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36
 
@@ -84,26 +84,26 @@ The following screen shot displays the output of the above codes.
 {:.image }
 
 
-Enable Audio and Refresh 
+## Enable Audio and Refresh 
 
 The Captcha controlsupports captcha in the form of audio and when you click the audio button it readouts the captcha characters. You can achieve this by setting “EnableAudio” property to true. Enable refresh is used to refresh or change the captcha image without full page refresh. This is achieved by adding “EnableRefreshImage” property to true. Also include RequestMapper for refresh support.
 
 1. Add the following code example to view page to render captcha with Audio and Refresh.
 
 
-
+{% highlight html %}
 [CSHTML]
 
    <div>        @Html.EJ().Captcha("SignUpCaptcha").EnableAudio(true).EnableRefreshImage(true).RequestMapper("Refresh")
 
    </div>
 
-
+{% endhighlight %}
 
 2. Add the following code example to corresponding controller page to render captcha with Audio and Refresh.
 
 
-
+{% highlight html %}
 [CONTROLLER]
 
 
@@ -118,7 +118,7 @@ The Captcha controlsupports captcha in the form of audio and when you click the 
 
 
 
-
+{% endhighlight %}
 
 The following screenshot displays the output of the above codes.
 
@@ -126,14 +126,14 @@ The following screenshot displays the output of the above codes.
 {:.image }
 
 
-Auto Validation  
+## Auto Validation  
 
 The Captcha supports automatic validation by enabling the property EnableAutoValidation. When you set this property to true, captcha validation is done automatically. When the validation fails, CustomErrorMessage property supports to display the customized error message.
 
 1. Add the following code example to view page for auto validation.
 
 
-
+{% highlight html %}
 [CSHTML]( CaptchaFeatures)
 
 
@@ -285,7 +285,6 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
 
 
-
 [CSHTML]( CaptchaSuccess)
 
 <div class="frame" style="height: 300px; width: 500px; border: 1px solid gray; padding: 10px;
@@ -320,12 +319,12 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
 </div> 
 
-
+{% endhighlight %}
 
 2. Add the following code example to corresponding controller page for captcha with Auto-Validation support.
 
 
-
+{% highlight c# %}
 [CONTROLLER]
 
 
@@ -405,7 +404,7 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
         }
 
 
-
+{% endhighlight %}
 The following screenshot is the output for the above code example.
 
 {{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}

@@ -7,7 +7,7 @@ control: PercentageTextBox
 documentation: ug
 ---
 
-## Keyboard Interaction
+# Keyboard Interaction
 
 With the keyboard navigation enabled in the PercentageTextBox control, it is possible to control the actions with the provided shortcut keys. Almost all the PercentageTextBox functionality that are done through mouse can be controlled with shortcut keys.
 
@@ -17,9 +17,9 @@ _Keyboard Shortcuts_
 
 <table>
 <tr>
-<td>
-Shortcut Key</td><td>
-Description</td></tr>
+<th>
+Shortcut Key</th><th>
+Description</th></tr>
 <tr>
 <td>
 {{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
@@ -37,7 +37,8 @@ Decrements the value</td></tr>
 Tab</td><td>
 Focus the next element</td></tr>
 </table>
-Configuring Keyboard Navigation
+
+### Configuring Keyboard Navigation
 
 The following steps explain the implementation of keyboard interaction in PercentageTextBox.
 
@@ -45,7 +46,7 @@ In the View page add PercentageTextBox helper. Set the accesskey property to the
 
 
 
-[_cshtml]
+{% highlight html %}
 
 @{IDictionary<string, object> percentAttribute = new Dictionary<string, object>();
 
@@ -57,14 +58,14 @@ percentAttribute.Add("accesskey", "k");
 
 @Html.EJ().PercentageTextbox("percentage").Name("percent").Value("22").HtmlAttributes(percentAttribute)
 
-
+{% endhighlight %}
 
  Run the above example and press [Access key](http://en.wikipedia.org/wiki/Access_key) + j key to focus the PercentageTextBox widget. Perform provided functionality by using keyboard shortcuts.
 
 
 
-{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
-{:.image }
+![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+
 
 
 

@@ -7,19 +7,19 @@ control: DropDownList
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Popup Customization  
+## Popup Customization  
 
-Popup Height
+### Popup Height
 
 Dropdownlist widget provides you support to customize the dimensions of the dropdown popup. By using PopupHeight property, you can set the height of the popup list. Its data type is string. 
 
-Popup Width
+### Popup Width
 
 Dropdown list widget provides you support to customize the dimensions of the dropdown popup. By using PopupWidth property, you can set the width of the popup list. Its data type is string. 
 
-Defining the popup customizing properties
+### Defining the popup customizing properties
 
 The following steps explains you the configuration of PopupHeight & PopupWidth properties in Dropdownlist
 
@@ -28,7 +28,7 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -59,28 +59,27 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
 
 
-
+{% endhighlight %}
 2. Output of the above steps
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
 _Figure 19: Dropdown with popup customization property_  
 
-Adjusting Dropdown size
+## Adjusting Dropdown size
 
-Width
+### Width
 
 Dropdownlist widget provides you support to customize the dimensions of the dropdown textbox. By using Width property you can set the width of the dropdown textbox. Its data type is string.
 
-Height
+### Height
 
 Dropdownlist widget provides you support to customize the dimensions of the dropdown textbox. By using Height property, you can set the height of the dropdown textbox. Its data type is string.
 
-Defining the dropdown size properties
+### Defining the dropdown size properties
 
 The following steps explains you the configuration of Height & Width properties in Dropdownlist
 
@@ -88,7 +87,7 @@ The following steps explains you the configuration of Height & Width properties 
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -118,30 +117,28 @@ The following steps explains you the configuration of Height & Width properties 
 
 
 
-
+{% endhighlight %}
 
 Output of the above steps
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
 _Figure 20: Dropdown with dropdown textbox customization property_  
 
-Water Mark 
+### Water Mark 
 
 Dropdownlist widget provides the support to water mark of the dropdown textbox. The WaterMarkText defines the text that display on page load. Its data type is string.
 
-Defining the Water Mark property
+### Defining the Water Mark property
 
 The following steps explains the configuration of WaterMarkText properties in Dropdownlist.
 
 1. Add the below code snippet with water mark text
 
 
-
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -170,19 +167,19 @@ The following steps explains the configuration of WaterMarkText properties in Dr
         </div>
 
 
-
+{% endhighlight %}
 
 
 Output of the above steps
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+
 
 
 _Figure 21__: Dropdown with WaterMark property_  
 
-Enabling Rounded corner
+## Enabling Rounded corner
 
 Dropdownlist widget provides you support to change the appearance of dropdown textbox. By using ShowRoundedCorner you can create a rounded corner on the dropdown textbox. Its data type is Boolean.
 
@@ -192,7 +189,7 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -221,31 +218,30 @@ The following steps explains you the configuration of Rounded corner of the Drop
         </div>
 
 
-
+{% endhighlight %}
 
 
 2. Output of the above steps
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
 
 _Figure 22: Dropdown with Rounded corner property_  
 
-Icons Support 
+## Icons Support 
 
 You can add the icons or images with list items in dropdown popup by using sprite CSS class. The following steps explains you the configuration about the icons support with Dropdownlist
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
+
 _Note: Images for this sample are available in ‘installed location /themes/images’ and you need to define images in mentioned CSS. Henceforth the images display._ 
 
 
 1111.Add the below code 1. add tgh
 
-[CSHTML]   
+{% highlight html %}   
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -311,7 +307,7 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
         </div>
 
-
+{% endhighlight %}
 
 
 
@@ -319,7 +315,7 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
 
 
-[CSS]
+{% highlight css %}
 
 
 
@@ -425,23 +421,22 @@ _Note: Images for this sample are available in ‘installed location /themes/ima
 
    </style>
 
-
+{% endhighlight %}
 
 Output of the above steps
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
 
 _Figure 23: Dropdown with Icons property_  
 
-Animation with Dropdown list 
+## Animation with Dropdown list 
 
 This feature adds some animation effect to dropdown widget when show /hide the popup list. This is achieved by setting Boolean value to EnableAnimation property.
 
-Defining the Animation property
+### Defining the Animation property
 
 The following steps explains you the configuration of EnableAnimation properties in Dropdownlist
 
@@ -451,7 +446,7 @@ The following steps explains you the configuration of EnableAnimation properties
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -481,9 +476,9 @@ The following steps explains you the configuration of EnableAnimation properties
 
         </div>
 
+{% endhighlight %}
 
-
-Theme
+## Theme
 
 Dropdownlist control’s style and appearance can be controlled based on CSS classes. In order to apply styles to the Dropdownlist control, you need to refer two files namely, ej.widgets.core.min.css and ej.theme.min.css. If the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -503,11 +498,11 @@ By default, there are 12 themes support available for Dropdownlist control namel
 * gradient-saffron
 * gradient-saffron-dark
 
-Custom class with dropdown 
+## Custom class with dropdown 
 
 CSS class can be used to customize the Dropdown control appearance. Define a CSS class as per your requirement and assign the class name to CssClass property. The data type of CssClass property is string. 
 
-Configuring the Custom CSS property
+### Configuring the Custom CSS property
 
 The following steps explains you the configuration of CssClass properties in Dropdownlist
 
@@ -515,7 +510,7 @@ The following steps explains you the configuration of CssClass properties in Dro
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -544,14 +539,14 @@ The following steps explains you the configuration of CssClass properties in Dro
         </div>
 
 
-
+{% endhighlight %}
 
 
 2. Configure the CSS styles to apply on Dropdownlist
 
 
 
-[CSS]  
+{% highlight css %} 
 
   <style type="text/css">
 
@@ -567,13 +562,12 @@ The following steps explains you the configuration of CssClass properties in Dro
 
  </style>
 
-
+{% endhighlight %}
 
 3. Output of the above steps
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
 
 _Figure 24: Dropdown with cssClass property_  

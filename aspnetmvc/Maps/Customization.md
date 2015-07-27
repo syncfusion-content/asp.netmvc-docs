@@ -7,11 +7,11 @@ control: Maps
 documentation: ug
 ---
 
-## Customization
+# Customization
 
 Maps control supports color customization to determine the exact combination of colors for shapes displayed in Maps and tooltip support to display additional information of shape data.
 
-Shapes Color Customization
+## Shapes Color Customization
 
 The Map control highly supports the customization of the shape’s color. The shape’s color can be customized using the following ways:
 
@@ -19,7 +19,7 @@ The Map control highly supports the customization of the shape’s color. The sh
 2. Color Mapping support.
 3. Color Palette support.
 
-Shape Settings 
+### Shape Settings 
 
 The ShapeSettings defines the basic customization settings of shapes in the map. 
 
@@ -37,10 +37,6 @@ The above properties of ShapeSettings are applied only when AutoFill property va
 
 
 {% highlight html %}
-
-[MVC]
-
-[CSHTML]
 
 @(Html.EJ().Map("container")            
 
@@ -82,11 +78,10 @@ The above properties of ShapeSettings are applied only when AutoFill property va
 
 
 
-{{ '![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Customization_images/Customization_img1.png)' | markdownify }}
-{:.image }
+![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Customization_images/Customization_img1.png)
 
 
-Color Mapping
+## Color Mapping
 
 The Color Mapping support enables the customization of shape colors based on the underlying value of shape received from bounded data.
 
@@ -106,10 +101,10 @@ _Property Table_
 
 <table>
 <tr>
-<td>
-Property</td><td>
-Type</td><td>
-Description</td></tr>
+<th>
+Property</th><th>
+Type</th><th>
+Description</th></tr>
 <tr>
 <td>
 From</td><td>
@@ -139,10 +134,6 @@ Gets or sets the start point and end point gradient colors to be applied for spe
 
 
 {% highlight html %}
-
-[MVC]
-
-[CSHTML]
 
 @(Html.EJ().Map("map")            
 
@@ -210,8 +201,7 @@ When the underlying object value is 700000, then the Fill color of the correspon
 
 When the underlying value is below any of the given sorted range or above the sorted range, then the Fill is set from Fill.
 
-{{ '![](Customization_images/Customization_img2.png)' | markdownify }}
-{:.image }
+![](Customization_images/Customization_img2.png)
 
 
 * Equal Color Mapping - The Equal color mapping is used to differentiate the shape’s fill based on its underlying Value and Color. The properties of Equal color mapping is listed in the following table.
@@ -220,10 +210,10 @@ _Property table_
 
 <table>
 <tr>
-<td>
-Property</td><td>
-Type</td><td>
-Description</td></tr>
+<th>
+Property</th><th>
+Type</th><th>
+Description</th></tr>
 <tr>
 <td>
 Value</td><td>
@@ -242,21 +232,94 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 
 
 
-<table>
-<tr>
-<td>
-[MapController.cs]        public ActionResult Map()        {            // ...            ViewData["datasource"] = GetElectionResults();            return View();        }         // ...       public List<ElectionData> GetElectionResults()        {            List<ElectionData> electionResults = new List<ElectionData>            {            new ElectionData {State = "Alabama", Candidate = "Romney", Electors = 9 },            new ElectionData { State = "Alaska", Candidate = "Romney", Electors = 3 },            new ElectionData { State = "Arizona", Candidate = "Romney", Electors = 11 },            new ElectionData { State = "Arkansas", Candidate = "Romney", Electors = 6 },            new ElectionData { State = "California", Candidate = "Obama", Electors = 55},            new ElectionData { State = "Colorado", Candidate = "Obama", Electors = 9 },           new ElectionData { State = "Connecticut", Candidate = "Obama", Electors = 7 },           new ElectionData { State = "Delaware", Candidate = "Obama", Electors = 3 },           new ElectionData { State = "District of Columbia", Candidate = "Obama", Electors = 3 },           new ElectionData { State = "Florida", Candidate = "Obama", Electors = 29 },           new ElectionData { State = "Georgia", Candidate = "Romney", Electors = 16 },           new ElectionData { State = "Hawaii", Candidate = "Obama", Electors = 4 },           new ElectionData { State = "Idaho", Candidate = "Romney", Electors = 4 },           new ElectionData { State = "Illinois", Candidate = "Obama", Electors = 20 },           new ElectionData { State = "Indiana", Candidate = "Romney", Electors = 11 },           new ElectionData { State = "Iowa", Candidate = "Obama", Electors = 6 },           new ElectionData { State = "Kansas", Candidate = "Romney", Electors = 6 },           new ElectionData { State = "Kentucky", Candidate = "Romney", Electors = 8 },           new ElectionData { State = "Louisiana", Candidate = "Romney", Electors = 8 },           new ElectionData { State = "Maine", Candidate = "Obama", Electors = 4 },           new ElectionData { State = "Maryland", Candidate = "Obama", Electors = 10 },           new ElectionData { State = "Massachusetts", Candidate = "Obama", Electors = 11},           new ElectionData { State = "Michigan", Candidate = "Obama", Electors = 16 },           new ElectionData { State = "Minnesota", Candidate = "Obama", Electors = 10 },           new ElectionData { State = "Mississippi", Candidate = "Romney", Electors = 6},           new ElectionData { State = "Missouri", Candidate = "Romney", Electors = 10 },           new ElectionData { State = "Montana", Candidate = "Romney", Electors = 3 },           new ElectionData { State = "Nebraska", Candidate = "Romney", Electors = 5 },           new ElectionData { State = "Nevada", Candidate = "Obama", Electors = 6 },           new ElectionData { State = "New Hampshire", Candidate = "Obama", Electors = 4},           new ElectionData { State = "New Jersey", Candidate = "Obama", Electors = 14 },           new ElectionData { State = "New Mexico", Candidate = "Obama", Electors = 5 },           new ElectionData { State = "New York", Candidate = "Obama", Electors = 29 },           new ElectionData { State = "North Carolina", Candidate = "Romney", Electors = 15 },           new ElectionData { State = "North Dakota", Candidate = "Romney", Electors = 3},           new ElectionData { State = "Ohio", Candidate = "Obama", Electors = 18 },           new ElectionData { State = "Oklahoma", Candidate = "Romney", Electors = 7 },           new ElectionData { State = "Oregon", Candidate = "Obama", Electors = 7 },           new ElectionData { State = "Pennsylvania", Candidate = "Obama", Electors = 20},           new ElectionData { State = "Rhode Island", Candidate = "Obama", Electors = 4},           new ElectionData { State = "South Carolina", Candidate = "Romney", Electors = 9 },           new ElectionData { State = "South Dakota", Candidate = "Romney", Electors = 3},           new ElectionData { State = "Tennessee", Candidate = "Romney", Electors = 11 },           new ElectionData { State = "Texas", Candidate = "Romney", Electors = 38 },           new ElectionData { State = "Utah", Candidate = "Romney", Electors = 6 },           new ElectionData { State = "Vermont", Candidate = "Obama", Electors = 3 },           new ElectionData { State = "Virginia", Candidate = "Obama", Electors = 13 },           new ElectionData { State = "Washington", Candidate = "Obama", Electors = 12 },           new ElectionData { State = "West Virginia", Candidate = "Romney", Electors = 5},           new ElectionData { State = "Wisconsin", Candidate = "Obama", Electors = 10 },           new ElectionData { State = "Wyoming", Candidate = "Romney", Electors = 3 }            };            return electionResults;        }    public class ElectionData    {        private string state;        public string State        {            get { return state; }            set { state = value; }        }        public string candidate;        public string Candidate        {            get { return candidate; }            set { candidate = value; }        }        private double electors;        public double Electors        {            get { return electors; }            set { electors = value; }        }    } </td></tr>
-<tr>
-<td>
-</td></tr>
-</table>
+{% highlight html %}
+  public ActionResult Map()
+  {
+     // ...
+	 ViewData["datasource"] = GetElectionResults();
+	 return View();
+  }         
+     // ...       
+  public List<ElectionData> GetElectionResults()
+  {            
+	  List<ElectionData> electionResults = new List<ElectionData>{new ElectionData {State = "Alabama", Candidate = "Romney", Electors = 9 },
+	                                                              new ElectionData { State = "Alaska", Candidate = "Romney", Electors = 3 }, 
+																  new ElectionData { State = "Arizona", Candidate = "Romney", Electors = 11 }, 
+																  new ElectionData { State = "Arkansas", Candidate = "Romney", Electors = 6 }, 
+																  new ElectionData { State = "California", Candidate = "Obama", Electors = 55}, 
+																  new ElectionData { State = "Colorado", Candidate = "Obama", Electors = 9 },           
+																  new ElectionData { State = "Connecticut", Candidate = "Obama", Electors = 7 }, 
+																  new ElectionData { State = "Delaware", Candidate = "Obama", Electors = 3 },           
+																  new ElectionData { State = "District of Columbia", Candidate = "Obama", Electors = 3 },           
+																  new ElectionData { State = "Florida", Candidate = "Obama", Electors = 29 },           
+																  new ElectionData { State = "Georgia", Candidate = "Romney", Electors = 16 },           
+																  new ElectionData { State = "Hawaii", Candidate = "Obama", Electors = 4 },           
+																  new ElectionData { State = "Idaho", Candidate = "Romney", Electors = 4 },           
+																  new ElectionData { State = "Illinois", Candidate = "Obama", Electors = 20 },           
+																  new ElectionData { State = "Indiana", Candidate = "Romney", Electors = 11 },           
+																  new ElectionData { State = "Iowa", Candidate = "Obama", Electors = 6 },           
+																  new ElectionData { State = "Kansas", Candidate = "Romney", Electors = 6 },           
+																  new ElectionData { State = "Kentucky", Candidate = "Romney", Electors = 8 },           
+																  new ElectionData { State = "Louisiana", Candidate = "Romney", Electors = 8 },           
+																  new ElectionData { State = "Maine", Candidate = "Obama", Electors = 4 },           
+																  new ElectionData { State = "Maryland", Candidate = "Obama", Electors = 10 },           
+																  new ElectionData { State = "Massachusetts", Candidate = "Obama", Electors = 11},           
+																  new ElectionData { State = "Michigan", Candidate = "Obama", Electors = 16 },           
+																  new ElectionData { State = "Minnesota", Candidate = "Obama", Electors = 10 },           
+																  new ElectionData { State = "Mississippi", Candidate = "Romney", Electors = 6},           
+																  new ElectionData { State = "Missouri", Candidate = "Romney", Electors = 10 },           
+																  new ElectionData { State = "Montana", Candidate = "Romney", Electors = 3 },           
+																  new ElectionData { State = "Nebraska", Candidate = "Romney", Electors = 5 },           
+																  new ElectionData { State = "Nevada", Candidate = "Obama", Electors = 6 },           
+																  new ElectionData { State = "New Hampshire", Candidate = "Obama", Electors = 4},           
+																  new ElectionData { State = "New Jersey", Candidate = "Obama", Electors = 14 },           
+																  new ElectionData { State = "New Mexico", Candidate = "Obama", Electors = 5 },           
+																  new ElectionData { State = "New York", Candidate = "Obama", Electors = 29 },           
+																  new ElectionData { State = "North Carolina", Candidate = "Romney", Electors = 15 },           
+																  new ElectionData { State = "North Dakota", Candidate = "Romney", Electors = 3},           
+																  new ElectionData { State = "Ohio", Candidate = "Obama", Electors = 18 },           
+																  new ElectionData { State = "Oklahoma", Candidate = "Romney", Electors = 7 },           
+																  new ElectionData { State = "Oregon", Candidate = "Obama", Electors = 7 },           
+																  new ElectionData { State = "Pennsylvania", Candidate = "Obama", Electors = 20},           
+																  new ElectionData { State = "Rhode Island", Candidate = "Obama", Electors = 4},           
+																  new ElectionData { State = "South Carolina", Candidate = "Romney", Electors = 9 },           
+																  new ElectionData { State = "South Dakota", Candidate = "Romney", Electors = 3},           
+																  new ElectionData { State = "Tennessee", Candidate = "Romney", Electors = 11 },           
+																  new ElectionData { State = "Texas", Candidate = "Romney", Electors = 38 },           
+																  new ElectionData { State = "Utah", Candidate = "Romney", Electors = 6 },           
+																  new ElectionData { State = "Vermont", Candidate = "Obama", Electors = 3 },           
+																  new ElectionData { State = "Virginia", Candidate = "Obama", Electors = 13 },           
+																  new ElectionData { State = "Washington", Candidate = "Obama", Electors = 12 },           
+																  new ElectionData { State = "West Virginia", Candidate = "Romney", Electors = 5},           
+																  new ElectionData { State = "Wisconsin", Candidate = "Obama", Electors = 10 },           
+																  new ElectionData { State = "Wyoming", Candidate = "Romney", Electors = 3 }};            
+																 return electionResults; 
+    }
+    public class ElectionData
+    {
+       	private string state;
+        public string State
+        {
+    		get { return state; }
+            set { state = value; }
+		}
+        public string candidate;
+        public string Candidate 
+		{            
+		    get { return candidate; }
+            set { candidate = value; }
+		}        
+		private double electors;
+        public double Electors
+        {
+		    get { return electors; }
+            set { electors = value; }
+		}
+	} </td></tr>
+{% endhighlight %}
 
 
 {% highlight html %}
-
-[CSHTML]
-
-
 
 @(Html.EJ().Map("maps") 
 
@@ -308,19 +371,16 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 
 
 
-
-
 {% endhighlight %}
 
-{{ '![](Customization_images/Customization_img3.png)' | markdownify }}
-{:.image }
+![](Customization_images/Customization_img3.png)
 
 
-ColorPalette
+## ColorPalette
 
 When AutoFill property is set to true, shapes are filled with default colors from built-in palettes or custom palette.
 
-ColorPalette
+### ColorPalette
 
 The ColorPalette property determines whether the auto fill colors are fetched from built-in color palettes or custom palette.
 
@@ -330,9 +390,6 @@ The ColorPalette property can be set with Palette1, Palette2, Palette3 and Custo
 
 {% highlight html %}
 
- [MVC]
-
-[CSHTML]
 
 @(Html.EJ().Map("maps") 
 
@@ -370,11 +427,9 @@ The ColorPalette property can be set with Palette1, Palette2, Palette3 and Custo
 
 
 
-{{ '![](Customization_images/Customization_img4.png)' | markdownify }}
-{:.image }
+![](Customization_images/Customization_img4.png)
 
-
-CustomPalette
+### CustomPalette
 
 The CustomPalette property is used to set an array of colors to be auto filled in shapes.
 
@@ -383,10 +438,6 @@ This property is enabled only when ColorPalette property value is set to “Cust
 
 
 {% highlight html %}
-
- [MVC]
-
-[CSHTML]
 
 @(Html.EJ().Map("container")
 
@@ -432,23 +483,16 @@ This property is enabled only when ColorPalette property value is set to “Cust
 
 
 
-{{ '![](Customization_images/Customization_img5.png)' | markdownify }}
-{:.image }
+![](Customization_images/Customization_img5.png)
 
 
-Tooltip
+## Tooltip
 
 The tooltip is displayed only when you set ShowTooltip to “True” in the shape layers. By default, it takes the property of the bound object that is referred in the ValuePath and displays its content on hovering the corresponding shape. 
 
 
 
 {% highlight html %}
-
- [MVC]   
-
-[CSHTML] 
-
-
 
  @(Html.EJ().Map("container")
 
@@ -482,23 +526,16 @@ The tooltip is displayed only when you set ShowTooltip to “True” in the shap
 
 
 
-{{ '![](Customization_images/Customization_img6.png)' | markdownify }}
-{:.image }
+![](Customization_images/Customization_img6.png)
 
 
-Tooltip Template
+### Tooltip Template
 
 The ToolTipTemplate property is used for customizing the template for tooltip.
 
 
 
 {% highlight html %}
-
-  [MVC]   
-
-[CSHTML] 
-
-
 
  @(Html.EJ().Map("container")
 
@@ -570,7 +607,5 @@ The following screenshot illustrates a map control displaying a Tooltip with tem
 
 
 
-{{ '![C:/Users/labuser/Desktop/a.png](Customization_images/Customization_img7.png)' | markdownify }}
-{:.image }
-
+![C:/Users/labuser/Desktop/a.png](Customization_images/Customization_img7.png)
 

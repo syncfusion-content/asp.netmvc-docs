@@ -17,10 +17,7 @@ The DropDownList control provides a list of options and allows you to choose an 
 
 The following screen shot illustrates the functionality of DropDownList control with a Cascading Feature.
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
-
-
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 _Figure_ _1__: DropDownList Appearance_
@@ -35,7 +32,7 @@ To create a DropDownList, the steps are as follows:
 * Set the Cascading Option
 * Set the Vote process in the DropDownList Widget
 
-Create DropDownList Widgets 
+## Create DropDownList Widgets 
 
 ASP.NET MVCDropDownList widget basically renders with built-in features.
 
@@ -45,7 +42,7 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 2. Please add the below code in layout._cshtml file head section to add the necessary script and CSS files to render the DropDownList.
 
-[layout._cshtml]
+{% highlight html %}
 
 <head>
 
@@ -71,7 +68,7 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 </head>
 
-
+{% endhighlight %}
 
 Create a CSHTML file in View page and add the following code sample to it. 
 
@@ -81,7 +78,7 @@ Create a CSHTML file in View page and add the following code sample to it.
 
 
 
-[CSHTML]
+{% highlight html %}
 
 <div class="content">
 
@@ -134,14 +131,14 @@ Create a CSHTML file in View page and add the following code sample to it.
 </div>
 
 
-
+{% endhighlight %}
 
 
 4. Add the following style section for the DropDownList widgets alignment. Add the following location in the URL path for the background image. [http://js.syncfusion.com/UG/Web/Content/football.png](http://js.syncfusion.com/UG/Web/Content/football.png)
 
 
 
-[CSS]
+{% highlight css %}
 
 <style type="text/css">
 
@@ -236,18 +233,18 @@ Create a CSHTML file in View page and add the following code sample to it.
 </style>
 
 
-
+{% endhighlight %}
 
 
 5. Execute the above code example to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Configure Data Source 
+
+## Configure Data Source 
 
 Configure the DropDownList widgets using online services. Here, two different online data services, group data service for the group selection DropDownList and countries data service for the country selection DropDownList are created for the two DropDownList Widgets. Both the data services are referred from the following service location.
 
@@ -259,7 +256,7 @@ The following code example explains you on how to configure the Data Source.
 
 
 
-[CSHTML]
+{% highlight html %}
 
 <tr>
 
@@ -275,19 +272,19 @@ The following code example explains you on how to configure the Data Source.
 
             </tr>
 
-
+{% endhighlight %}
 
 Execute the above code example to render the following output.     
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
 
 
-Configure DropDownList with Sprite Icons
+
+### Configure DropDownList with Sprite Icons
 
 To style the DropDownList popup with the country flag, you can create the SpriteCSS styles using the flag icons from the following image source location.  You can add the following location in the URL path for the background image
 
@@ -299,7 +296,7 @@ To load the Sprite image icons for the countries in a DropDownList, add the foll
 
 
 
-[CSS]
+{% highlight css %}
 
         #CountryList_popup_wrapper .e-align
 
@@ -595,23 +592,23 @@ To load the Sprite image icons for the countries in a DropDownList, add the foll
 
             }
 
-
+{% endhighlight %}
 
 Execute the above code sample to render the following DropDownList with DataSource.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
-Set the Cascading Option 
+
+## Set the Cascading Option 
 
 In this application, select the group in the first DropDownList to list the corresponding countries in the country DropDownList for the group selected. To render this, you can set the “CascadeTo” property that points the DropDownList, where the data is loaded dynamically and you can disable the second DropDownList till the data is loaded dynamically.
 
@@ -621,7 +618,7 @@ The following code example explains you on how to set the Cascading Option.
 
 
 
-[CSHTML]
+{% highlight html %}
 
 <!--use the following codes with above Html -->
 
@@ -643,20 +640,20 @@ The following code example explains you on how to set the Cascading Option.
 
  </tr>
 
-
+{% endhighlight %}
 
 Execute the above code example to render the DropDownList with Cascading Option.  
 
-{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img6.png)
+
 
 
 Initially, you can select the group from the popup of the first DropDownList. After you select the option,   selected value is loaded.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img7.png)
+
 
 
 Based on the group selection in the first DropDownList, the DataSource in the second DropDownList is loaded, and the corresponding countries are shown when clicking the drop-down button as illustrated in the following screen shot.
@@ -667,11 +664,11 @@ _Figure_ _17__: Cascading DropDown Apperance for Select country_
 
 From the DropDownList called Country, you can select the desired country.
 
-{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
-Set the Vote process in the DropDownList Widget
+
+## Set the Vote process in the DropDownList Widget
 
 The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: [http://help.syncfusion.com/ug/js/default.htm#!Documents/gettingstarted4.htm](http://help.syncfusion.com/ug/js/default.htm)
 
@@ -679,7 +676,7 @@ The following code sample explains how to set the Vote process in the DropDownLi
 
 
 
-[CSHTML]
+{% highlight html %}
 
 <!--use the following codes with Html -->
 
@@ -689,13 +686,14 @@ The following code sample explains how to set the Vote process in the DropDownLi
 
         </div>
 
-
+{% endhighlight %}
 
 Include the following script 
 
 
 
-[Script]
+
+{% highlight javascript %}
 
 <script type="text/javascript">
 
@@ -711,11 +709,11 @@ Include the following script
 
 </script>
 
-
+{% endhighlight %}
 
 Execute the above code sample to display the DropDownList widgets. Select the values and click on Vote button. The button click event is processed and the values are displayed as illustrated in the following screenshot.     
 
-{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img9.png)
+
 
 
