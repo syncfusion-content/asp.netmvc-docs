@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-## Keyboard Interaction	
+# Keyboard Interaction	
 
 The Dialog provides you to interact with the keyboard actions instead of mouse actions. All the Dialog actions can be achieved by using Keyboard shortcuts.
 
@@ -85,9 +85,7 @@ The following steps explains you to enable keyboard interaction for Dialog contr
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia key.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
-{:.image }
-
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia key.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
 
 

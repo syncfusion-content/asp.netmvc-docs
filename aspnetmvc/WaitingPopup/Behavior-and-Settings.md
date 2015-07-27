@@ -7,9 +7,9 @@ control: WaitingPopup
 documentation: ug
 ---
 
-## Behavior and Settings
+# Behavior and Settings
 
-Automatic Initializing WaitingPopup widget
+## Automatic Initializing WaitingPopup widget
 
 WaitingPopup widget contains ShowOnInit property that allows the popup to display over a target on page load automatically. By default, ShowOnInit property is set as false.
 
@@ -21,7 +21,7 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 
 
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -32,15 +32,14 @@ The following steps explains you on how to display the WaitingPopup on page load
 </div>
 
 
-
+{% endhighlight %}
 
 
 2. Add the following styles to render WaitingPopup widget.
 
 
 
-[css]
-
+{% highlight css %}
 
 
 <style type="text/css" class="cssStyles">
@@ -55,12 +54,12 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 </style>
 
-
+{% endhighlight %}
 
 The following screenshot illustrates the WaitingPopup when ShowOnInit is set to “true”.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)
+
 
 
 _Figure 5: WaitingPopup with enabled showOnInit property_
@@ -77,8 +76,7 @@ The following steps explains you to enable / disable popup indicator in WaitingP
 
 
 
-[CSHTML]
-
+{% highlight html %}
 
 
 Enable popup indicator:
@@ -101,7 +99,7 @@ Disable popup indicator:
 
 </div>
 
-
+{% endhighlight %}
 
 
 
@@ -109,8 +107,7 @@ Disable popup indicator:
 
 
 
-[css]
-
+{% highlight css %}
 
 
 <style type="text/css" class="cssStyles">
@@ -125,23 +122,23 @@ Disable popup indicator:
 
 </style>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)
+
 
 
 _Figure 6: Enabled popup indicator WaitingPopup widget_
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)
+
 
 
 _Figure 7: Disabled popup indicator WaitingPopup widget_
 
-Show / Hide WaitingPopup
+## Show / Hide WaitingPopup
 
 Using Show() and Hide() methods, you can display or hide the WaitingPopup widget over the target area.
 
@@ -167,7 +164,7 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
 
 
-[css]
+{% highlight css %}
 
 
 
@@ -182,13 +179,13 @@ The following steps explains you to show / hide the WaitingPopup widget.
     }
 
 </style>
-
+{% endhighlight %}
 
 
 The following screenshot illustrates a WaitingPopup when Show() method is invoked.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)
+
 
 
 _Figure 8: WaitingPopup with Show() method_

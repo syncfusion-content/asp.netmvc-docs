@@ -11,7 +11,7 @@ documentation: ug
 
 The WaitingPopup controlfor MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
-Key Features
+## Key Features
 
 * Custom text: Supports custom text inside the pop-up panel.
 * Template: Supports including HTML content instead of the default image.

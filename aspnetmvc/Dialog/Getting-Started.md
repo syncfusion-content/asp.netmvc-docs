@@ -25,11 +25,11 @@ Here, flat-saffron theme is used. Similarly you can change the themes.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
-Create a Dialog
+
+### Create a Dialog
 
 ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog content can be text, graphics or HTML. It shows the model popup window such as model form. You can easily create a Dialog control by using simple HTML helper as follows.
 
@@ -41,25 +41,25 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
 2. You can add the following code example to the corresponding view page to render Dialog.
 
-
+{% highlight html %}
 
 [_cshtml]
 
 @Html.EJ().Dialog("loginForm").Title("Sign Up")
 
+{% endhighlight %}
 
 
 3. The following screenshot displays a Dialog control without any content.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 By default, the Dialog control shows the header element. You can use the title text from Dialog element.
 
-Set content 
+### Set content 
 
 To display the content in Dialog control using content template.
 
@@ -69,7 +69,7 @@ The following code example illustrates how to set the content in Dialog control.
 
 
 
-[_cshtml]
+{% highlight html %}
 
 
 
@@ -175,15 +175,16 @@ The following code example illustrates how to set the content in Dialog control.
 
 </div>
 
+{% endhighlight %}
 
 
 
 
       You can use the following styles to customize the styles of sign up form. You can use Bootstrap for aligning the login page header in center and styling the sign up button. You can also include bootstrap.min.css file from CDN location. 
 
+{% highlight css %}
 
 
-[_CSS] 
 
 <style type="text/css" >
 
@@ -299,19 +300,19 @@ The following code example illustrates how to set the content in Dialog control.
 
     </style>
 
-
+{% endhighlight %}
 
 Execute the above code example to render following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 
 The above screenshot displays the Dialog control with header and resizable option. These options are enabled in Dialog control by default
 
-Configure a Dialog 
+### Configure a Dialog 
 
 To remove the header and resizable options from Dialog, you can use EnableResize and ShowHeader properties. By default the width of the Dialog control is based on the content inside it. You can also set the width of the Dialog control using width property. To render the appearance of signup control, you can set the width of Dialog control.
 
@@ -319,8 +320,7 @@ Initialize the Dialog control using following code example.
 
 
 
-[_cshtml]
-
+{% highlight html %}
 
 
 @{Html.EJ().Dialog("loginForm").Title("SignUp").ContentTemplate(@<div id="loginForm">
@@ -330,20 +330,20 @@ Initialize the Dialog control using following code example.
         </div>).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
 
 <!—use above styles -->
-
+{% endhighlight %}
 
 
 Execute this code example to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
+
 
 
 You can also add additional functionalities to Dialog control such as Ajax content, list of header icon actions such as close, minimize, maximize actions and model Dialog.__
 
-Add Validation
+### Add Validation
 
 This section explains you to set the validation to each form elements inside the Dialog control. Here we are doing manual validation. To validate each form element, click sign up button. The Dialog closes when the signup button is clicked raising the BeforeClose event. The BeforeClose event validates each and every form elements manually. Once the validation is succeeds, the Dialog closes.
 
@@ -353,7 +353,7 @@ Initialize the Dialog control with the following code example.
 
 
 
-[_cshtml]
+{% highlight html %}
 
 
 
@@ -363,7 +363,7 @@ Initialize the Dialog control with the following code example.
 
 </div>).ShowHeader(false).EnableAutoResize(false).Width(330).Render();}
 
-
+{% endhighlight %}
 
 You can add an HTML element in the form to display the error message in Dialog.
 
@@ -381,7 +381,7 @@ You can add an HTML element in the form to display the error message in Dialog.
 
 You can add the following code example in <script> tag to add validation to form elements.
 
-
+{% highlight JS %}
 
 [_JavaScript]
 
@@ -491,13 +491,12 @@ You can add the following code example in <script> tag to add validation to form
 
 </script>
 
-
+{% endhighlight %}
 
 You can add the following styles to customize the styles of error message.
 
+{% highlight css %}
 
-
-[_css]
 
 <!—add this with above styles -->
 
@@ -521,7 +520,7 @@ You can add the following styles to customize the styles of error message.
 
         }
 
-
+{% endhighlight %}
 
 To check the validation process if we click the submit button without specifying any values.
 
@@ -531,8 +530,8 @@ Execute the code example to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
+
 
 
 The above screenshot displays an error message when an invalid input is given to form elements. The dialog is closed when the value is in a valid format Otherwise dialog will not close.	 

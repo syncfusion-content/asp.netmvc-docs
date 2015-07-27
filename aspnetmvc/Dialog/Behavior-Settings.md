@@ -7,13 +7,13 @@ control: Dialog
 documentation: ug
 ---
 
-## Behavior Settings 
+# Behavior Settings 
 
-Resize Support
+## Resize Support
 
 The Dialog control can be resized using this feature. You can resize the Dialog by dragging the bottom right corner area.
 
-Enable Resize Option
+## Enable Resize Option
 
 The following steps explains you the implementation of resize option in the Dialog control. 
 
@@ -25,9 +25,9 @@ The following steps explains you the implementation of resize option in the Dial
 
 
 
+{% highlight html %}
 
 
-[CSHTML]
 
 // In the CSHTML page, add the Dialog widget using helpers and set EnableResize to ‘true’. 
 
@@ -37,7 +37,7 @@ The following steps explains you the implementation of resize option in the Dial
 
 EnableResize(true).Render();}
 
-
+{% endhighlight %}
 
 
 
@@ -45,17 +45,17 @@ EnableResize(true).Render();}
 
 2. The output for Dialog control when “EnableResize” is “true” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
-{:.image }
+'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png)' 
+
 
 
 _Figure_ _6__: Dialog with “EnableResize”_                                                                                 
 
-Drag Support
+## Drag Support
 
 The Dialog control supports the drag functionality. You can click the Dialog header and drag the control anywhere in the web page.
 
-Allow Drag Option
+## Allow Drag Option
 
 The following steps explains you the implementation of drag option in the Dialog control. 
 
@@ -63,7 +63,7 @@ The following steps explains you the implementation of drag option in the Dialog
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set AllowDraggable to ‘true’.
 
@@ -73,7 +73,7 @@ The following steps explains you the implementation of drag option in the Dialog
 
 AllowDraggable(true).Render();}
 
-
+{% endhighlight  %}
 
 
 
@@ -85,17 +85,17 @@ AllowDraggable(true).Render();}
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
-{:.image }
+'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png)' 
+
 
 
 _Figure_ _7__: Dialog with "AllowDraggable"_                                                                  
 
-Close Icon ToolTip Support
+## Close Icon ToolTip Support
 
 1. You can change the close icon tooltip in the Dialog control by using CloseIconTooltipproperty. The default value for CloseIconTooltip is close in the Dialog control.
 
-Define Close Icon ToolTip
+## Define Close Icon ToolTip
 
 The following steps explains you the implementation of close icon tooltip option in the Dialog control. 
 
@@ -104,7 +104,7 @@ The following steps explains you the implementation of close icon tooltip option
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and assign the CloseIconTooltip property as close.
 
@@ -113,7 +113,8 @@ The following steps explains you the implementation of close icon tooltip option
 @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
    .Width(300).Height("200").CloseIconTooltip("close").Render();}
-
+   
+{% endhighlight  %}
 
 
 
@@ -122,17 +123,17 @@ The following steps explains you the implementation of close icon tooltip option
 
 2. The output for Dialog control when “CloseIconTooltip” is “close” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/closeicon1.PNG](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
-{:.image }
+'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/closeicon1.PNG](Behavior-Settings_images/Behavior-Settings_img3.png)' 
+
 
 
 _Figure_ _8__: Dialog with "CloseIconTooltip_     
 
-Persistence Support
+## Persistence Support
 
 The Dialog control supports the state maintenance where you can maintain the state of the Dialog control in the web page. The default value for EnablePersistence is false in the Dialog control.
 
-Enable Persistence Option
+## Enable Persistence Option
 
 The following steps explains the implementation of persistence support in the Dialog control. 
 
@@ -141,8 +142,7 @@ The following steps explains the implementation of persistence support in the Di
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set EnablePersistence to ‘true’.
 
@@ -153,23 +153,23 @@ The following steps explains the implementation of persistence support in the Di
       .Width(300).Height("200").EnablePersistence(true).Render();}
 
 
-
+{% endhighlight %}
 
 
 
 Make resize and reload the web page. The state is maintained in the Dialog control. The output for Dialog control when “EnablePersistence” is “true” is as follows. 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/persistance1.PNG](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/persistance1.PNG](Behavior-Settings_images/Behavior-Settings_img4.png)
+
 
 
 _Figure_ _9__: Dialog with “EnablePersistence"_
 
-Enabled or Disabled
+## Enabled or Disabled
 
 The Dialog control supports the Enabled or Disabled option that allows you to enable or disable the Dialog control in the web page.
 
-Disable Dialog Control
+## Disable Dialog Control
 
 The following steps explains you the implementation of disable option in the Dialog control. 
 
@@ -178,8 +178,7 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set Enabled to ‘false’.
 
@@ -189,7 +188,7 @@ The following steps explains you the implementation of disable option in the Dia
 
       .Width(300).Height("200").Enabled(false).Render();}
 
-
+{% endhighlight %}
 
 
 
@@ -197,8 +196,8 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
-{:.image }
+'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)
+
 
 
 
@@ -225,7 +224,7 @@ The Dialog provides the option to place the control based upon its X-axis and Y-
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set the Position values.
 
@@ -249,7 +248,7 @@ The Dialog provides the option to place the control based upon its X-axis and Y-
 
 Render();}
 
-
+{% endhighlight %}
 
 
 
@@ -259,23 +258,23 @@ Render();}
 
 2. The output for Dialog control after setting X-axis and Y-axis value.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/position1.PNG](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/position1.PNG](Behavior-Settings_images/Behavior-Settings_img6.png)
+
 
 
 _Figure_ _12__: Dialog with “Position"_
 
-Header Option
+## Header Option
 
 You can show or hide the Dialog header by setting ShowHeader property. The following steps explains you the implementation of Dialog header option.
 
-Show Header
+## Show Header
 
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set the ShowHeader as true. 
 
@@ -285,7 +284,7 @@ Show Header
 
 ShowHeader(true).Render();}
 
-
+{% endhighlight  %}
 
 
 
@@ -293,13 +292,13 @@ ShowHeader(true).Render();}
 
 2. The output for Dialog control when ShowHeader is “true” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
+
 
 
 _Figure_ _13__: Dialog with “ShowHeader" as “true”_                                           
 
-Hide Header
+## Hide Header
 
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
@@ -307,7 +306,7 @@ Hide Header
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set the ShowHeader to ‘false’. 
 
@@ -317,7 +316,7 @@ Hide Header
 
 ShowHeader(false).Render();}
 
-
+{% endhighlight  %}
 
 
 
@@ -327,13 +326,13 @@ ShowHeader(false).Render();}
 
 2. The output for Dialog control when ShowHeader is “false” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/hideheader1.PNG](Behavior-Settings_images/Behavior-Settings_img8.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/hideheader1.PNG](Behavior-Settings_images/Behavior-Settings_img8.png)
+
 
 
 _Figure_ _14__: Dialog with “ShowHeader" as “false”_                                     
 
-Show at Initial
+## Show at Initial
 
 The Dialog control contains an option to be opened state or closed state at initial.
 
@@ -342,8 +341,7 @@ The Dialog control contains an option to be opened state or closed state at init
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set the ShowOnInit to ‘true’.
 
@@ -351,19 +349,21 @@ The Dialog control contains an option to be opened state or closed state at init
 
 ShowOnInit(true).Render();}
 
+{% endhighlight %}
+
 
 
 
 
 2. The output for Dialog control when ShowOnInit is “true” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img9.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img9.png)
+
 
 
 _Figure_ _15__: Dialog with “ShowOnInit"_                               
 
-Rounded Corner Support
+## Rounded Corner Support
 
 The Dialog can support with rounded corner appearance, the default value for ShowRoundedCorner is false. 
 
@@ -371,9 +371,7 @@ The Dialog can support with rounded corner appearance, the default value for Sho
 
 
 
-
-
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and set ShowRoundedCorner to ‘true’.
 
@@ -384,15 +382,15 @@ The Dialog can support with rounded corner appearance, the default value for Sho
 ShowRoundedCorner(true).Render();}
 
 
-
+{% endhighlight %}
 
 
 
 
 2. The output for Dialog control when ShowRoundedCorner is “true” is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/roundcorner1.PNG](Behavior-Settings_images/Behavior-Settings_img10.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/roundcorner1.PNG](Behavior-Settings_images/Behavior-Settings_img10.png)
+
 
 
 _Figure_ _16__: Dialog with “ShowRoundedCorner"_
