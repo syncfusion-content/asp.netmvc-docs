@@ -7,7 +7,7 @@ control: FileExplorer
 documentation: ug
 ---
 
-## Key Features
+# Key Features
 
 The FileExplorer control contains the following key features.
 

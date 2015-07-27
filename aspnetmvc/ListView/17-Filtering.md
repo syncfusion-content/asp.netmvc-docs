@@ -7,17 +7,13 @@ control: ListView
 documentation: ug
 ---
 
-## 1.7 Filtering
+# 1.7 Filtering
 
 Filtering is one of the key features of ListView control. The Filtering option is added into the ListView control when the EnableFiltering property is set to “True”. This enables a simple interface to filter items from a large collection of ListView items.
 
 Refer the following code examples.
 
-
-
 {% highlight html %}
-
-
 
 @Html.EJ().ListView("lb").Width(300).EnableFiltering(true).Items(items => {    
 
@@ -43,27 +39,18 @@ Refer the following code examples.
 
 })
 
-
-
-
-
 {% endhighlight %}
 
 
 
-Screenshot:
+### Screenshot:
 
-{{ '![](17-Filtering_images/17-Filtering_img1.png)' | markdownify }}
-{:.image }
+![](17-Filtering_images/17-Filtering_img1.png)
 
 
 _Enable Filtering_
 
-
-
-{{ '![](17-Filtering_images/17-Filtering_img2.png)' | markdownify }}
-{:.image }
-
+![](17-Filtering_images/17-Filtering_img2.png)
 
 _Enable Filtering_
 
