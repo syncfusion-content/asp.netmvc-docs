@@ -7,9 +7,9 @@ control: DateTimePicker
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Theme
+## Theme
 
 DateTimePicker control support rich appearance. This control consist of six flat themes and six gradient themes. To use these twelve themes, refer the themes files in HTML file. 
 
@@ -36,23 +36,26 @@ The following list is of the twelve themes supported by DateTimePicker:
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget. 
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
+	    @Html.EJ().DateTimePicker("DateTime").Width("175px")
 
-[_cshtml]   
-
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
-
-@Html.EJ().DateTimePicker("DateTime").Width("175px")
-
-
+   ~~~
+   {:.prettyprint }
+   
+   
 
 2. The following screenshot displays the output for the above code.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+	![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-Css Class
+
+## Css Class
 
 DateTimePicker control also allows you to customize its appearance using user-defined CSS and custom skin options such as colors and backgrounds. To apply custom themes you have a property called CssClass. CssClass property sets the root class for DateTimePicker theme.
 
@@ -61,13 +64,16 @@ Using this CssClass you can override the existing styles under the theme style s
 1. Add the following code in your CSHTML page to render the DateTimePicker.
 
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code in your view page to render the DateTimePicker.*@
 
-[_cshtml]
+	    @Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
 
-@*Add the following code in your view page to render the DateTimePicker.*@
-
-@Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
-
+   ~~~
+   {:.prettyprint }
 
 
 In the following style sheet the exiting theme style sheet file has been over-ridden using root class “Purple-dark”. 
@@ -75,66 +81,73 @@ In the following style sheet the exiting theme style sheet file has been over-ri
 1. Add the following code in your style section.
 
 
+   ~~~ js
+   
+     [Style]
+	 
+			.Purple-dark .e-week-header {
 
-[Style]
+			color: #EBADD6;
 
-    .Purple-dark .e-week-header {
+		}
 
-        color: #EBADD6;
+			.Purple-dark .e-text {
 
-    }
+			color: black;
 
-    .Purple-dark .e-text {
+		}
 
-        color: black;
+			.Purple-dark .e-state-default {
 
-    }
+			color: pink;
 
-    .Purple-dark .e-state-default {
+		}
 
-        color: pink;
+			.Purple-dark .e-active {
 
-    }
+			background-color: #FF1975;
 
-    .Purple-dark .e-active {
+		}
 
-        background-color: #FF1975;
+			.Purple-dark .e-state-default:hover {
 
-    }
+			color: #EBADD6;
 
-    .Purple-dark .e-state-default:hover {
+		}
 
-        color: #EBADD6;
+			.Purple-dark .e-dt-button {
 
-    }
+			color: black;
 
-    .Purple-dark .e-dt-button {
+			background-color: #E085C2;
 
-        color: black;
+		}
 
-        background-color: #E085C2;
+			.Purple-dark .e-header {
 
-    }
+			background-color: #E085C2;
 
-    .Purple-dark .e-header {
+			color: black;
 
-        background-color: #E085C2;
+		}
 
-        color: black;
+			.Purple-dark .e-timecontainer .e-header {
 
-    }
+			background-color: #E085C2;
 
-    .Purple-dark .e-timecontainer .e-header {
+			color: black;
 
-        background-color: #E085C2;
+		}
 
-        color: black;
-
-    }
-
+   ~~~
+   {:.prettyprint }
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+    
+
+
+
+	![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+
 
 
