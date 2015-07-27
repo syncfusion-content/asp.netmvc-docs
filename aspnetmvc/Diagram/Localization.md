@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Localization 
+# Localization 
 
 Localization is the process of providing controls in different cultures to help you set your own culture easily.
 
@@ -17,9 +17,8 @@ The following code illustrates how to provide localization support for ContextMe
 
 {% highlight html %}
 
-[EJMVC]
 
-[CSHTML]
+
 
 
 
@@ -63,7 +62,7 @@ $("#DiagramContent").ejDiagram("model.locale","es-ES"); ej.datavisualization.Dia
 
 
 
-{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
-{:.image }
+![](Localization_images/Localization_img1.png)
+
 
 

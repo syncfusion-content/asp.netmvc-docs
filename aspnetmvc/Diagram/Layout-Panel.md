@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Layout Panel
+# Layout Panel
 
 The Container property of Group can be set to any of the available layout panel. It is used to control the size and position of Group’s children.
 
@@ -19,7 +19,7 @@ There are two types of layout panels.
 The following properties are used to align the child element on the Group. This property is applicable for all panels.
 
 _Group properties_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -77,15 +77,14 @@ PaddingRight</td><td>
 Int</td><td>
 Gets or sets the right padding value of the group.</td></tr>
 </table>
-### Canvas Panel
+{% endhighlight %}
+## Canvas Panel
 
 The Canvas panel supports absolute positioning and provides the least layout functionality to its contained diagram elements. Canvas allows you to position contained elements at an offset and also elements can be arranged either horizontally or vertically.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 private void GenerateNodes(DiagramProperties diagram)
 
@@ -179,11 +178,11 @@ private Node CreateNode(string name, int marginTop, int marginLeft, string color
 
 
 
-{{ '![](Layout-Panel_images/Layout-Panel_img1.png)' | markdownify }}
-{:.image }
+![](Layout-Panel_images/Layout-Panel_img1.png)
 
 
-### Stack panel
+
+## Stack panel
 
 Stack panel is used to arrange its children in a single line or stack order, either vertically or horizontally. It controls spacing by setting Margin properties of child and Padding properties of group. By default, a Stack Panel’s orientation is vertical.
 
@@ -191,9 +190,7 @@ The following code illustrates how to add stack panel.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 private void GenerateNodes(DiagramProperties diagram)
 
@@ -273,7 +270,7 @@ private Node CreateNode(string name, string color, HorizontalAlignment alignment
 
 
 
-{{ '![](Layout-Panel_images/Layout-Panel_img2.png)' | markdownify }}
-{:.image }
+![](Layout-Panel_images/Layout-Panel_img2.png)
+
 
 

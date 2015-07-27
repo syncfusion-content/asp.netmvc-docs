@@ -7,13 +7,13 @@ control: Diagram
 documentation: ug
 ---
 
-## Automatic Layout
+# Automatic Layout
 
 Diagram automatically provides support to layout nodes. It includes the following:
 
 * Hierarchical Layout
 * Organization Chart
-### Hierarchical Layout
+## Hierarchical Layout
 
 
 The Hierarchical Tree Layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root.
@@ -22,9 +22,7 @@ The following code illustrates how to arrange the nodes in a hierarchical struct
 
 {% highlight c# %}
 
-[EJMVC]
 
-[CSHTML]
 
 // node template.
 
@@ -46,7 +44,6 @@ function nodeTemplate(diagram, node) {
 
 
 
-[Controller]
 
   //Configures data source for diagram.
 
@@ -96,15 +93,15 @@ function nodeTemplate(diagram, node) {
 
 {% endhighlight %}
 
-Spacing
+##Spacing
 
 The following example illustrates the horizontal and vertical spacing of Hierarchical Layout.
 
-{{ '![](Automatic-Layout_images/Automatic-Layout_img1.png)' | markdownify }}
-{:.image }
+![](Automatic-Layout_images/Automatic-Layout_img1.png)
 
 
-Orientation
+
+##Orientation
 
 The Orientation property, LayoutOrientations, of layout is used to specify the tree orientation.
 
@@ -115,11 +112,11 @@ The Orientation property, LayoutOrientations, of layout is used to specify the t
 
 The following image displays Bottom to Top orientation of layout.
 
-{{ '![](Automatic-Layout_images/Automatic-Layout_img2.png)' | markdownify }}
-{:.image }
+![](Automatic-Layout_images/Automatic-Layout_img2.png)
 
 
-### Organizational Chart
+
+## Organizational Chart
 
 An organizational chart is a Diagram that displays the structure of an organization and the relationships. Diagram provides support to layout the nodes automatically. 
 
@@ -129,7 +126,6 @@ The following code example illustrates how to create an organizational chart.
 
 {% highlight html %}
 
-[JSON]
 
 //Data source
 
@@ -195,9 +191,7 @@ var data = [
 
 {% highlight c# %}
 
-[EJMVC]
 
-[CSHTML]
 
 //Creates the node template
 
@@ -209,7 +203,6 @@ function nodeTemplate(diagram, node) {
 
 
 
-[Controller]
 
 DiagramProperties model = new DiagramProperties();
 
@@ -247,19 +240,19 @@ model.DataSourceSettings.Parent = "Supervisor";
 
 
 
-{{ '![](Automatic-Layout_images/Automatic-Layout_img3.png)' | markdownify }}
-{:.image }
+![](Automatic-Layout_images/Automatic-Layout_img3.png)
 
 
-Customizing the organizational chart
+
+##Customizing the organizational chart
 
 Organizational chart layout starts parsing from root and iterates through all its child elements. GetLayoutInfo method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.,) them. You can customize the arrangements by overriding this function, as follows.
 
-GetLayoutInfo
+##GetLayoutInfo
 
 You can set Chart orientations, chart types and offset to be left between parent and child nodes by overriding the method DiagramProperties.Layout.GetLayoutInfo.
 
-Arguments
+##Arguments
 
 The GetLayoutInfo method is called to configure every subtree of the organizational chart and it takes the following arguments.
 
@@ -271,9 +264,7 @@ The following code example illustrates how to define the method getLayoutInfo.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[CSHTML]
 
 //Defines getLayoutInfo
 
@@ -289,7 +280,6 @@ function getLayoutInfo(diagram, node, options) {
 
 
 
-[Controller]
 
 
 
@@ -312,7 +302,7 @@ model.Layout.GetLayoutInfo = "getLayoutInfo";
 The following table illustrates the properties that options argument takes.
 
 _Properties of argument "option"_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -360,7 +350,9 @@ options.enableRouting</td><td>
 By default, Connections are routed based on the chart type and orientations.This property gets or sets whether default routing is to be enabled or disabled.</td><td>
 true</td></tr>
 </table>
-Orientations
+
+{% endhighlight %}
+##Orientations
 
 Diagram provides the following orientation options.
 
@@ -370,7 +362,7 @@ Diagram provides the following orientation options.
 The following table illustrates the different chart orientations and chart types.
 
 _Chart Orientations and Chart Types_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -383,53 +375,53 @@ Example</td></tr>
 Horizontal</td><td>
 Left</td><td>
 Arranges the child nodes horizontally at the left side of parent.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img4.png)
-{:.image }
+{ '![](Automatic-Layout_images/Automatic-Layout_img4.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Right</td><td>
 Arranges the child nodes horizontally at the right side of parent.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img5.png)
-{:.image }
+{'![](Automatic-Layout_images/Automatic-Layout_img5.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Center</td><td>
 Arranges the children at the bottom/left/right/top center of parent based on layout orientation.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img6.png)
-{:.image }
+{ '![](Automatic-Layout_images/Automatic-Layout_img6.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td rowspan = "3">
 Vertical</td><td>
 Left</td><td>
 Vertically arranges the children at the left side of parent.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img7.png)
-{:.image }
+( '![](Automatic-Layout_images/Automatic-Layout_img7.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Right</td><td>
 Vertically arranges the children at the right side of parent.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img8.png)
-{:.image }
+{ '![](Automatic-Layout_images/Automatic-Layout_img8.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Alternate</td><td>
 Vertically arranges the children at both left and right sides of the parent.</td><td>
-![](Automatic-Layout_images/Automatic-Layout_img9.png)
-{:.image }
+( '![](Automatic-Layout_images/Automatic-Layout_img9.png)' | markdownify }
+
 </td></tr>
 </table>
-
+{% endhighlight %}
 
 The following code example illustrates how to set the horizontal right arrangement to the leaf level trees.
 
 {% highlight js %}
 
-[JS]
+
 
 //Horizontal right layout arrangement
 
@@ -451,11 +443,11 @@ function getLayoutInfo(diagram, node, options) {
 
 
 
-{{ '![](Automatic-Layout_images/Automatic-Layout_img10.png)' | markdownify }}
-{:.image }
+![](Automatic-Layout_images/Automatic-Layout_img10.png)
 
 
-Assistant Support
+
+##Assistant Support
 
 Diagram provides support to layout assistant nodes.
 
@@ -467,7 +459,7 @@ The following code example illustrates how to add assistants to layout.
 
 {% highlight js %}
 
-[JS]
+
 
 //Defines getLayoutInfo
 
@@ -495,7 +487,7 @@ function getLayoutInfo(diagram, node, options) {
 
 
 
-{{ '![](Automatic-Layout_images/Automatic-Layout_img11.png)' | markdownify }}
-{:.image }
+![](Automatic-Layout_images/Automatic-Layout_img11.png)
+
 
 

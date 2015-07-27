@@ -7,20 +7,20 @@ control: Diagram
 documentation: ug
 ---
 
-## Swim lane 
+# Swim lane 
 
 A swim lane is a visual element used in process flow diagrams or flowcharts. A typical swim lane contains a header and a collection of lanes that can be arranged horizontally or vertically.
 
 
 
-{{ '![](Swim-lane_images/Swim-lane_img1.png)' | markdownify }}
-{:.image }
+![](Swim-lane_images/Swim-lane_img1.png)
+
 
 
 Swim lane contains the following properties.
 
 _Swim lane Properties_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -78,12 +78,13 @@ Phases</td><td>
 Array</td><td>
 Gets or sets the phases as collection.</td></tr>
 </table>
-### Lane
+{% endhighlight %}
+## Lane
 
 The lane is an object that controls the diagram elements in the swim lane. Lane has the following properties.
 
 _Lane Properties_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -111,12 +112,13 @@ Orientation</td><td>
 String</td><td>
 Gets or sets the orientation of the swim lane.</td></tr>
 </table>
-### Header
+{% endhighlight %}
+## Header
 
 This is used to define header for a swim lane. It has the following properties.
 
 _Header Properties_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -134,12 +136,13 @@ Text</td><td>
 String</td><td>
 Gets or sets the text value for the header.</td></tr>
 </table>
-### Phase
+{% endhighlight %}
+## Phase
 
 A Phase is a line that separates the swim lane. Phase has the following properties.
 
 _Phase Properties_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -177,7 +180,7 @@ Parent</td><td>
 string</td><td>
 Gets or sets the parent of the phase</td></tr>
 </table>
-
+{% endhighlight %}
 
 The following code illustrates how to create a simple swim lane.
 
@@ -185,9 +188,7 @@ The following code illustrates how to create a simple swim lane.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
         private void GenerateNodes(DiagramProperties diagram)
 

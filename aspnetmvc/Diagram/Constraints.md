@@ -7,12 +7,12 @@ control: Diagram
 documentation: ug
 ---
 
-## Constraints
+# Constraints
 
 Diagram provides support to enable or disable certain Diagram behaviors.
 
 _Constraints_
-
+{% highlight c# %}
 <table>
 <tr>
 <td>
@@ -55,15 +55,14 @@ Enables or Disables undo actions.</td></tr>
 Default</td><td>
 Enables all the constraints.</td></tr>
 </table>
-
+{% endhighlight %}
 
 Default value for the Diagram constraints property is DiagramConstraints.Default.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Disables PageEditing 
 

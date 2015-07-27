@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Model
+# Model
 
 The Diagram model represents data for rendering the Diagram and manipulating the Diagram elements.
 
@@ -17,9 +17,6 @@ The following code illustrates how to create a Diagram with some model propertie
 
 {% highlight html %}
 
-[EJMVC]
-
-[CSHTML]
 
 
 
@@ -29,7 +26,6 @@ The following code illustrates how to create a Diagram with some model propertie
 
 
 
-[Controller]
 
 
 
@@ -67,7 +63,7 @@ public ActionResult Diagram()
 
 
 
-{{ '![](Model_images/Model_img1.png)' | markdownify }}
-{:.image }
+![](Model_images/Model_img1.png)
+
 
 

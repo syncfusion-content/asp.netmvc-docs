@@ -7,9 +7,9 @@ control: Diagram
 documentation: ug
 ---
 
-## Predefined Shapes
+# Predefined Shapes
 
-### In-built Shapes
+## In-built Shapes
 
 Diagram has several in-built shapes .The in-built shapes are categorized as follows.
 
@@ -17,7 +17,7 @@ Diagram has several in-built shapes .The in-built shapes are categorized as foll
 2. Flow Shapes
 3. BPMN shapes
 
-Basic Shape
+###Basic Shape
 
 The Basic shapes are common shapes used to represent geometrical information visually.
 
@@ -25,9 +25,8 @@ The following code example illustrates how to create a basic shape.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Creates a basic shape
 
@@ -43,11 +42,11 @@ node.Shape = BasicShapes.Plus;
 
  The list of basic shapes are as follows.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img1.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img1.png)
 
 
-Flow Shape
+
+###Flow Shape
 
 The flow shapes are used to represent the process flow. It is used for analysing, designing, managing, or for documentation process. 
 
@@ -55,9 +54,7 @@ The following code example illustrates how to create a flow shape.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates a flow shape
 
@@ -73,11 +70,11 @@ node.Shape = FlowShapes.Document;
 
 The list of flow shapes are as follows.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img2.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img2.png)
 
 
-BPMN Shape
+
+###BPMN Shape
 
 BPMN shapes are used to represent internal business procedure in graphical notation and enables you to communicate the procedures in a standard manner.
 
@@ -92,8 +89,8 @@ The BPMN shapesare categorized as follows.
 
 The shapes are listed as follows.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img3.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img3.png)
+
 
 
 The BPMN shapes and its types are explained as follows.
@@ -105,10 +102,8 @@ An event is represented with a circle and it denotes something that happens. Ico
 The following code example illustrates how to create an event in BPMN shape.
 
 {% highlight c# %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
-[EJMVC]
-
-[Controller]
 
 //Creates an event shape in BPMN 
 
@@ -125,7 +120,7 @@ node.Trigger = BPMNTriggers.None;
 {% endhighlight %}
 
 _Events_ 
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -152,8 +147,9 @@ Non-Interrupting</td></tr>
 End Event</td><td>
              -----</td></tr>
 </table>
+{% endhighlight %}
 _Representation of different BPMN events_ 
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -162,36 +158,37 @@ Image</td></tr>
 <tr>
 <td>
 Start Interrupting</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img4.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img4.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Start Non-Interrupting</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img5.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img5.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Intermediate Interrupting</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img6.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img6.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Intermediate Non-Interrupting</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img7.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img7.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 End</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img8.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img8.png)' | markdownify }
+
 </td></tr>
 </table>
+{% endhighlight %}
 _Representation of event trigger states_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -200,61 +197,61 @@ Image</td></tr>
 <tr>
 <td>
  Message</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img9.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img9.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Timer</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img10.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img10.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Escalation</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img11.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img11.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Link </td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img12.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img12.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Error</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img13.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img13.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Compensation</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img14.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img14.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Signal</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img15.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img15.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Multiple</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img16.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img16.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Parallel</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img17.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img17.png)' | markdownify }
+
 </td></tr>
 </table>
+{% endhighlight %}
 
-
-Gateway
+##Gateway
 
 Gateway is used to control the flow of a process. It is represented as a diamond shape.
 
@@ -271,9 +268,7 @@ The following code example illustrates how to create a gateway in BPMN shape.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates a gateway shape in BPMN 
 
@@ -286,7 +281,7 @@ The following code example illustrates how to create a gateway in BPMN shape.
 {% endhighlight %}
 
 _Types of Gateway_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -295,37 +290,37 @@ Image</td></tr>
 <tr>
 <td>
 Exclusive Gateway</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img18.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img18.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Parallel Gateway</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img19.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img19.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Inclusive Gateway</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img20.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img20.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Complex Gateway</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img21.png)
-{:.image }
+{ '[](Predefined-Shapes_images/Predefined-Shapes_img21.png)' | markdownify }
+
 </td></tr>
 <tr>
 <td>
 Event Based</td><td>
-![](Predefined-Shapes_images/Predefined-Shapes_img22.png)
-{:.image }
+{ '![](Predefined-Shapes_images/Predefined-Shapes_img22.png)' | markdownify }
+
 </td></tr>
 </table>
+{% endhighlight %}
 
-
-Activity
+##Activity
 
 The activity is the task that is performed in a process. It is represented by rounded rectangle.
 
@@ -335,7 +330,7 @@ There are two types of activities.They are listed as follows.
 2. Subprocess - Occurs within a process broken down to finer level of detail.
 
 _Activity Type_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -365,15 +360,13 @@ SubProcess</td><td>
 </td><td>
 </td></tr>
 </table>
-
+{% endhighlight %}
 
 The following code example illustrates how to create activity in BPMN shape.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates an activity shape in BPMN
 
@@ -395,47 +388,47 @@ The different activities in the BPMN shape are listed as follows.
 
 The task that is internally looped.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img23.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img23.png)
+
 
 
 2. Tasks
 
-The task for sending, receiving, user based task, etc…
+The task for sending, receiving, user based task, etc
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img24.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img24.png)
+
 
 
 3. Compensation
 
 Compensation is triggered when operation partially fails.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img25.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img25.png)
+
 
 
 4. Call
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img26.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img26.png)
+
 
 
 5. Ad-Hoc
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img27.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img27.png)
+
 
 
 6. Boundary
 
 Boundary represents the type of task that is processed.
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img28.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img28.png)
 
 
-Data
+
+##Data
 
 Data object is used to represent the data produced by activities in process.
 
@@ -447,9 +440,7 @@ The following code example illustrates how to create connecting objects in BPMN 
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates a DataObject shape in BPMN
 
@@ -469,7 +460,7 @@ node.Shapes = BPMNShapes.DataSource;
 
 
 
-{{ '![](Predefined-Shapes_images/Predefined-Shapes_img29.png)' | markdownify }}
-{:.image }
+![](Predefined-Shapes_images/Predefined-Shapes_img29.png)
+
 
 

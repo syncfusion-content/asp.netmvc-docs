@@ -7,19 +7,19 @@ control: Diagram
 documentation: ug
 ---
 
-## Connector
+# Connector
 
 Connectors are objects used to create a link between two nodes. A connector is a line that has connection points at the ends of the line and stays connected to the elements that you attach it to.
 
 
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_20.jpg](Connector_images/Connector_img1.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/js/ImagesExt/image59_20.jpg](Connector_images/Connector_img1.jpeg)
+
 
 
 _Connector_
 
-Create Connector
+##Create Connector
 
 Connector is created from JSON data and added to the Diagram model by using Diagram Model’s Connectors property. The connector’s name must be unique. 
 
@@ -31,9 +31,7 @@ The following code illustrates how to create a Connector and add it to Diagram.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 
 
@@ -57,13 +55,13 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![](Connector_images/Connector_img2.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img2.png)
+
 
 
 _Connector_
 
-### Segments
+## Segments
 
 The connector has three types of segments.
 
@@ -71,7 +69,7 @@ The connector has three types of segments.
 * Straight Segments
 * Bezier Segments
 
-Orthogonal Segments
+###Orthogonal Segments
 
 Orthogonal segments are visually represented based on the specified length and direction values. 
 
@@ -81,9 +79,8 @@ The following code example illustrates how to add a Connector with an Orthogonal
 
 {% highlight c# %}
 
-[EJMVC] 
 
-[Controller] 
+ 
 
 //Creates a connector with orthogonal line segment
 
@@ -120,7 +117,7 @@ model.Connectors.Push(connector);
 
 
 {{ '![](Connector_images/Connector_img3.png)' | markdownify }}
-{:.image }
+
 
 
 _Orthogonal Segment_
@@ -130,10 +127,8 @@ The following code illustrates how to customize Orthogonal Segment.
 
 
 {% highlight c# %}
+ 
 
-[EJMVC] 
-
-[Controller] 
 
 //Creates a connector with orthogonal line segment
 
@@ -179,13 +174,13 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![](Connector_images/Connector_img4.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img4.png)
+
 
 
 _Orthogonal Segment_
 
-Straight Segment
+###Straight Segment
 
 The straight segments can be added by specifying points as to where the line has to be drawn. The segment end point links the SourcePoint and TargetPoint of the connector. 
 
@@ -193,9 +188,8 @@ The following code example illustrates how to add straight segment through code.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -243,21 +237,21 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![C:/Users/lakshmipriya/Desktop/IMG_07112014_125619.png](Connector_images/Connector_img5.png)' | markdownify }}
-{:.image }
+![C:/Users/lakshmipriya/Desktop/IMG_07112014_125619.png](Connector_images/Connector_img5.png)
+
 
 
 _Polyline_
 
-{{ '![](Connector_images/Connector_img6.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img6.png)
+
 
 
 _Single Line_
 
 The control points can be added or deleted at runtime with shortcut key combination ctrl + shift +click on the control point.
 
-Bezier Segment
+##Bezier Segment
 
 Bezier segments can be added through points or vector.
 
@@ -270,9 +264,8 @@ The following code example illustrates how to add Bezier segments.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -316,8 +309,8 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![](Connector_images/Connector_img7.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img7.png)
+
 
 
 _Bezier Segments_
@@ -328,9 +321,8 @@ The following code example illustrates how to add vector point to Bezier segment
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller] 
+ 
 
 //Creates a connector with bezier line segment
 
@@ -368,25 +360,25 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![](Connector_images/Connector_img8.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img8.png)
+
 
 
 _Bezier segment with vectors_
 
-Editing Segments
+##Editing Segments
 
 The segments can be edited during runtime by dragging control thumbs. Segments can be updated when neighboring segments are adjusted.
 
 
 
-{{ '![](Connector_images/Connector_img9.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img9.png)
+
 
 
 _Segment Editing_ 
 
-### Connector Padding
+## Connector Padding
 
 Connector Padding allows you to adjust the space between connector’s end point and the object where it is connected (Node, Group, or Port). 
 
@@ -400,9 +392,8 @@ The following code example illustrates how to adjust the distance by using paddi
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 Connector connector = new Connector();
 
@@ -417,7 +408,7 @@ connector.TargetPadding = 20;
 
 
 {{ '![](Connector_images/Connector_img10.png)' | markdownify }}
-{:.image }
+
 
 
 Endpoint adjustment specific to nodes
@@ -428,9 +419,8 @@ The following code examples illustrate how to pad edges connected to a node.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 Node node = new Node();
 
@@ -442,8 +432,8 @@ node.ConnectorPadding = 20;
 
 
 
-{{ '![](Connector_images/Connector_img11.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img11.png)
+
 
 
 Endpoint adjustment specific to ports
@@ -454,9 +444,8 @@ The following code examples illustrate how to pad edges connected to a port.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Sets Padding for a port.
 
@@ -470,11 +459,11 @@ port.ConnectorPadding = 20;
 
 
 
-{{ '![](Connector_images/Connector_img12.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img12.png)
 
 
-### Line Bridging
+
+## Line Bridging
 
 Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. When two line connectors meet each other, the line with the higher z-order draws an arc over the line with lower z-order.
 
@@ -488,9 +477,8 @@ The following code illustrates how to enable line bridging.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Enables Line Bridging for a single connector
 
@@ -508,8 +496,8 @@ DiagramContent.Constraints = DiagramConstraints.Default | DiagramConstraints.Bri
 
 
 
-{{ '![](Connector_images/Connector_img13.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img13.png)
+
 
 
 _Line Bridging_
@@ -523,7 +511,7 @@ Direction of the Line Bridge can be customized by using the BridgeDirection prop
 The default value for the Diagram model’s BridgeDirection property is BridgeDirection.Top.
 
 _BridgeDirection Property_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -536,7 +524,7 @@ BridgeDirection</td><td>
 Gets or sets the BridgeDirection for horizontal and vertical lines.</td><td>
 EnumBridgeDirection.LeftBridgeDirection.RightBridgeDirection.TopBridgeDirection.Bottom</td></tr>
 </table>
-
+{% endhighlight %}
 The following code example is used to set Bridge Direction.
 
 
@@ -546,9 +534,7 @@ Example 1: Bridge for Horizontal Connector with BridgeDirection as Top.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 
 
@@ -564,8 +550,8 @@ model.BridgeDirection = BridgeDirection.Top;
 
 
 
-{{ '![](Connector_images/Connector_img14.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img14.png)
+
 
 
 _BridgeDirection.Top_
@@ -577,9 +563,8 @@ Example 2: Bridge for Vertical Connector with BridgeDirection as Left.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -595,8 +580,8 @@ model.BridgeDirection = BridgeDirection.Left;
 
 
 
-{{ '![](Connector_images/Connector_img15.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img15.png)
+
 
 
 _BridgeDirection.Left_
@@ -619,7 +604,7 @@ diagram.update({ bridgeDirection: ej.datavisualization.Diagram.BridgeDirection.T
 
 {% endhighlight %}
 
-### Corner Radius
+## Corner Radius
 
 CornerRadius support enables you to create connectors with rounded corners. 
 
@@ -629,9 +614,8 @@ The following code example illustrates how to set corner radius for connectors.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //For node creation refer the link Node Creation
 
@@ -649,13 +633,13 @@ Connector.CornerRadius=20;
 
 
 
-{{ '![](Connector_images/Connector_img16.png)' | markdownify }}
-{:.image }
+![](Connector_images/Connector_img16.png)
+
 
 
 _Corner Radius_
 
-Connecting Nodes
+##Connecting Nodes
 
 Connector is connected to the bounds of the node and at a specific point on the node.You are required to assign the source node name to connector’s SourceNode property and target node name to connector’s TargetNode property, in order to establish the connection. The port to port connection between specific points on node is established by assigning the name of the node’s port to connector’s TargetPort /SourcePort. At runtime, you can change the point of connection while dragging or rotating node.
 
@@ -663,9 +647,8 @@ Connector is connected to the bounds of the node and at a specific point on the 
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //for node creation refer to the link [Node creation](http://help.syncfusion.com/ug/js/documents/createyourfirstdiagr.htm)
 
@@ -683,26 +666,26 @@ connector.TargetNode = "tailNode"; //Sets name of targetNode
 
 
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_22.jpg](Connector_images/Connector_img17.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/js/ImagesExt/image59_22.jpg](Connector_images/Connector_img17.jpeg)
+
 
 
 _Node to Node Connection_
 
 The point of connection is changed optimally at runtime while performing operations such as Rotating and Dragging on Source/Target Node of Connector. In case of static or specific point connection at runtime, the Port assists to maintain specific point connection between Nodes.
 
-### Connecting Ports
+## Connecting Ports
 
 Port establishes the connection with nodes at a specific point.
 
 For creating specific port connection, refer to the link [Port to Port Connection.](http://help.syncfusion.com/ug/js/default.htm)
 
-### Appearance
+## Appearance
 
 You can customize the appearance of the connector by setting a desired value to the appropriate appearance properties. The following code illustrates how to customize the appearance of connector.
 
 _Appearance_
-
+{% highlight c# %}
 <table>
 <tr>
 <td>
@@ -730,13 +713,12 @@ Opacity</td><td>
 Int</td><td>
 Gets or sets the opacity of the connector</td></tr>
 </table>
-
+{% endhighlight %}
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
  //Sets various appearance properties to connector
 
@@ -760,7 +742,7 @@ connector.TargetPoint = new DiagramPoint(70, 40);
 
 {% endhighlight %}
 
-###  Decorator
+##  Decorator
 
 You can decorate the source point and target point of the connector by using decorator shape. The SourceDecorator and TargetDecorator properties are used to add decorators to connector.The following code illustrates how decorator is created and added at connector’s target point.
 
@@ -768,9 +750,8 @@ You can decorate the source point and target point of the connector by using dec
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -798,12 +779,12 @@ connector.SourceDecorator.Height = 10;
 
 {% endhighlight %}
 
-Decorator Appearance
+##Decorator Appearance
 
 Decorator appearance is customized by setting the desired value to the appropriate appearance properties.
 
 _Decorator Appearance_
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -842,16 +823,15 @@ String</td><td>
 Gets or sets the path data of the decorator.</td></tr>
 </table>
 
-
+{% endhighlight %}
 The following code illustrates how to customize Decorator Shape.
 
 
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -881,20 +861,20 @@ connector.SourceDecorator.FillColor = "yellow";
 
 
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_23.jpg](Connector_images/Connector_img18.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/js/ImagesExt/image59_23.jpg](Connector_images/Connector_img18.jpeg)
+
 
 
 _Decorator Shape_
 
-Constraints
+##Constraints
 
 Connector Constraints
 
 You can enable or disable certain behaviors of Connectors by using the Constraints property.__
 
 _Constraints_
-
+{% highlight c# %}
 <table>
 <tr>
 <td>
@@ -945,7 +925,7 @@ Enables or disables bridging based on the diagram constraints.</td></tr>
 Default</td><td>
 Enables all constraints.</td></tr>
 </table>
-
+{% endhighlight %}
 
 The default value for the connector constraints property is ConnectorConstraints.Default.
 
@@ -957,9 +937,8 @@ The following code illustrates how to disable select constraints of connector. D
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
  //Disables select constraint
 
@@ -971,7 +950,7 @@ connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
 
 
 
-> {{ '![Description: C:/Users/labuser/Desktop/note.jpg](Connector_images/Connector_img19.jpeg)' | markdownify }}
-{:.image }
-_Note: Connector’s constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm)_._ 
+![Description: C:/Users/labuser/Desktop/note.jpg](Connector_images/Connector_img19.jpeg)
+
+Note: Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm) 
 
