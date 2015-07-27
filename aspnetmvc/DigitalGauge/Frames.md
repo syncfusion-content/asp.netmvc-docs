@@ -7,17 +7,15 @@ control: Digital Gauge
 documentation: ug
 ---
 
-## Frames
+# Frames
 
-### Inner and Outer Customization
+## Inner and Outer Customization
 
 Frames are space that enclose the Digital Gauge. The inner width of the Frame is the distance between the canvas element and the frame. The outer width is the distance from the frame. The code example to set frame’s innerWidth and outerWidth is as follow.
 
-[MVC]
+{% highlight html %}
 
 @*For Digital Gauge rendering *@
-
-
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -33,25 +31,20 @@ Frames are space that enclose the Digital Gauge. The inner width of the Frame is
 
 .OuterWidth(10)))
 
+{% endhighlight %}
+
+
+
 Execute the above code examples to render the DigitalGauge as follows.
 
+![](Frames_images/Frames_img1.png)
 
 
-{{ '![](Frames_images/Frames_img1.png)' | markdownify }}
-{:.image }
-
-
-
-
-
-
-### Setting Background Image
+## Setting Background Image
 
 For a better appearance, you can set the backgroundimage for the Digital Gauge using the property backgroundImageUrl. 
 
-
-
-[MVC]
+{% highlight html %}
 
 @*For Digital Gauge rendering *@
 
@@ -73,19 +66,10 @@ For a better appearance, you can set the backgroundimage for the Digital Gauge u
 
 .Position(Pos=>Pos.X(80).Y(10)).Add();}))
 
+{% endhighlight %}
 
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 
-
-
-
-{{ '![](Frames_images/Frames_img2.png)' | markdownify }}
-{:.image }
-
-
-
-
-
-
+![](Frames_images/Frames_img2.png)

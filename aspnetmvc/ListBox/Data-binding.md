@@ -7,11 +7,11 @@ control: ListBox
 documentation: ug
 ---
 
-## Data-binding 
+# Data-binding 
 
 The ListBox is populated with the node information taken from a data source. The ListBox supports binding data sources containing hierarchical data and supports Object data, Remote data, XML Data, SQL Data and LinqToSql Data, for retrieving data from a specified data source.
 
-Data fields and configuration 
+## Data fields and configuration 
 
 The following sub-properties provides you a way to bind either the local or remote data to the ListBox control.
 
@@ -19,9 +19,9 @@ _Table 1: Property Table for ASP.NET MVC ListBox_
 
 <table>
 <tr>
-<td>
-Name</td><td>
-Description</td></tr>
+<th>
+Name</th><th>
+Description</th></tr>
 <tr>
 <td>
 Datasource</td><td>
@@ -79,7 +79,8 @@ It specifies the category of the tag</td></tr>
 TableName</td><td>
 It defines the table name for tag value or display text while render with remote data</td></tr>
 </table>
-Local data
+
+## Local data
 
 ListBox provides data binding support. Thus, you can bind the data from JSON Data source. To achieve this, map the corresponding fields with their column names.
 
@@ -88,25 +89,71 @@ And also, provide support to add and customize the list item by using appropriat
 The following code explains you the details of data binding with ListBox. 
 
 1. Add the below code in your page to render the ListBox with local data.
-<table>
-<tr>
-<td>
-<br>[View]// Add the following code in View page to configure ListBox widget<div id="control">    <h5 class="ctrllabel">        Select a skill    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df=>df.Text("text"))</div></td></tr>
-<tr>
-<td>
-[CS]// Add the following code to add list items in the controller page        public class skillset        {            public string text { get; set; }        }        public ActionResult Index()        {            List<skillset> skill = new List<skillset>();            skill.Add(new skillset { text = "ASP.NET" });            skill.Add(new skillset { text = "ActionScript" });            skill.Add(new skillset { text = "Basic" });            skill.Add(new skillset { text = "C++" });            skill.Add(new skillset { text = "C#" });            skill.Add(new skillset { text = "dBase" });            skill.Add(new skillset { text = "Delphi" });            skill.Add(new skillset { text = "ESPOL" });            skill.Add(new skillset { text = "F#" });            skill.Add(new skillset { text = "FoxPro" });            skill.Add(new skillset { text = "Java" });            skill.Add(new skillset { text = "J#" });            skill.Add(new skillset { text = "Lisp" });            skill.Add(new skillset { text = "Logo" });            skill.Add(new skillset { text = "PHP" });            ViewBag.datasource = skill;            return View();        }	</td></tr>
-</table>
+
+   ~~~ html
+
+			// Add the following code in View page to configure ListBox widget
+			
+			<div id="control">   
+				
+				<h5 class="ctrllabel">        Select a skill    </h5>   
+
+				@Html.EJ().ListBox("listboxsample").Width("240")
+				
+				.Datasource((IEnumerable<skillset>)ViewBag.datasource)
+				
+				.ListBoxFields(df=>df.Text("text"))
+			
+			</div>
+			
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ cs
+
+			// Add the following code to add list items in the controller page       
+
+			public class skillset 
+			{  
+			
+				public string text 
+					{ get; set; }        
+			}       
+
+			public ActionResult Index()       
+			{            
+				List<skillset> skill = new List<skillset>();            
+				skill.Add(new skillset { text = "ASP.NET" });            
+				skill.Add(new skillset { text = "ActionScript" });            
+				skill.Add(new skillset { text = "Basic" });            
+				skill.Add(new skillset { text = "C++" });            
+				skill.Add(new skillset { text = "C#" });            
+				skill.Add(new skillset { text = "dBase" });            
+				skill.Add(new skillset { text = "Delphi" });            
+				skill.Add(new skillset { text = "ESPOL" });            
+				skill.Add(new skillset { text = "F#" });            
+				skill.Add(new skillset { text = "FoxPro" });            
+				skill.Add(new skillset { text = "Java" });            
+				skill.Add(new skillset { text = "J#" });            
+				skill.Add(new skillset { text = "Lisp" });            
+				skill.Add(new skillset { text = "Logo" });            
+				skill.Add(new skillset { text = "PHP" });            
+				ViewBag.datasource = skill;            
+				return View();       
+			}	
+			
+   ~~~
+   {:.prettyprint }
+
 
 
 2. Output of the above steps
 
+	![](Data-binding_images/Data-binding_img1.png)
 
 
-{{ '![](Data-binding_images/Data-binding_img1.png)' | markdownify }}
-{:.image }
 
-
-Remote data 
+## Remote data 
 
 You can bind the data for the ListBox from remote that can fetch the data from remote web service. You can pass the query string to filter the data that helps to avoid the extensive properties look up by using Query options. 
 
@@ -115,34 +162,30 @@ The following steps explains you the details of data binding from remote.
 1. Add the below code in your page to render the ListBox with remote data
 
 
+   ~~~ html
 
-[View]
+		// Add the following code in View page to configure ListBox widget
 
-// Add the following code in View page to configure ListBox widget
+		<div class="control">
 
-<div class="control">
+			<div class="ctrllabel">
 
-    <div class="ctrllabel">
+					Select a customer
 
-        Select a customer
+			</div>
 
-    </div>
+			@Html.EJ().ListBox("listboxsample").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
+	
+			.Query("ej.Query().from('Customers').take(10)")
+	
+			.ListBoxFields(f => f.Text("CustomerID"))
 
-    @Html.EJ().ListBox("listboxsample").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(10)").ListBoxFields(f => f.Text("CustomerID"))
+		</div>
 
-</div>
-
-
-
-
-
+   ~~~
+   {:.prettyprint }
 
 
 3. Output of the above steps.
 
-
-
-{{ '![C:/Users/Rajaveni/Desktop/docs/UG images/remoteLB.PNG](Data-binding_images/Data-binding_img2.png)' | markdownify }}
-{:.image }
-
-
+   ![C:/Users/Rajaveni/Desktop/docs/UG images/remoteLB.PNG](Data-binding_images/Data-binding_img2.png)
