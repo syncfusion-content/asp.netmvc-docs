@@ -11,7 +11,7 @@ documentation: ug
 
 The WaitingPopup controlfor MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
-Key Features
+### Key Features
 
 * Custom text: Supports custom text inside the pop-up panel.
 * Template: Supports including HTML content instead of the default image.
@@ -28,8 +28,8 @@ ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your 
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img1.png)
+
 
 
 
@@ -50,7 +50,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-
+{% highlight html %}
 
 <div class="content-container-fluid">
 
@@ -98,13 +98,13 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 </div>
 
-
+{% endhighlight %}
 
 2. Add the following styles in the view page to show the Waiting Popup.
 
 
 
-
+{% highlight html %}
 
 <style type="text/css" class="cssStyles">
 
@@ -134,13 +134,13 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 </style>
 
-
+{% endhighlight %}
 
 3. Add the following script in the view page.
 
 
 
-
+{% highlight html %}
 
 <script>
 
@@ -168,14 +168,14 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 </script>
 
-
+{% endhighlight %}
 
 4. The following screenshot displays the Userlogin.
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/wait.PNG](Overview_images/Overview_img2.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/wait.PNG](Overview_images/Overview_img2.png)
+
 
 
 
@@ -184,16 +184,16 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img3.png)
+
 
 
 
 
 The following screenshot displays an alert box displayed with the message “Signed in successfully” after loading.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/w3.PNG](Overview_images/Overview_img4.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/w3.PNG](Overview_images/Overview_img4.png)
+
 
 
 

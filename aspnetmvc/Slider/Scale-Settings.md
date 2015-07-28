@@ -7,11 +7,11 @@ control: Slider
 documentation: ug
 ---
 
-## Scale Settings
+# Scale Settings
 
 Slider widget includes option to display the scale on the Slider. Scale in Slider supports you to easily identify the current value/values of the Slider. Scale contains “small ticks” and “large ticks”. Values of the Slider is displayed above each large ticks.
 
-Show Scale
+## Show Scale
 
 This property enables the scale in the Slider. By default, its value is “false”. Data type of this property is “Boolean”.
 
@@ -23,7 +23,7 @@ The following steps explains you the configuration of ShowScale property.
 
 
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
@@ -34,14 +34,15 @@ The following steps explains you the configuration of ShowScale property.
     @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
 
     .ShowScale(true))
-
+{% endhighlight %}
+	
 Execute the above code example to render the following output.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderscale.PNG](Scale-Settings_images/Scale-Settings_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderscale.PNG](Scale-Settings_images/Scale-Settings_img1.png)
 
 
-Enable Small Ticks
+
+## Enable Small Ticks
 
 Slider widget provides you an option to enable/disable the small ticks present in the scale. By default, when you enable “ShowScale” property, small ticks is displayed in the scale. Use the ShowSmallTicks property to disable the small ticks present in the scale. Data type of this property is “Boolean”.
 
@@ -49,7 +50,7 @@ The following steps explains you on how to disable the small ticks in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
@@ -57,28 +58,26 @@ The following steps explains you on how to disable the small ticks in Slider.
 
 .ShowScale(true).ShowSmallTicks(false))
 
-
-
 @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
 
 .ShowScale(true).ShowSmallTicks(false))
 
-
+{% endhighlight %}
 
 
 
 Execute the above code example to render the following output.
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slidersmall.PNG](Scale-Settings_images/Scale-Settings_img2.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slidersmall.PNG](Scale-Settings_images/Scale-Settings_img2.png)
 
 
-Small step
+
+### Small step
 
 This property specifies the distance between the two small ticks present in the scale and the position of the small ticks in the Slider scale. Data type of this property is “Number”.
 
-Large step
+### Large step
 
 This property specifies the distance between the two small ticks present in the scale and the position of the large ticks in the Slider scale. Data type of this property is “Number”.
 
@@ -86,7 +85,7 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
@@ -98,13 +97,12 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 
     .ShowScale(true).SmallStep(5).LargeStep(20))
 
-
-
+{% endhighlight %}
 Execute the above code example to render the following output.
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlarge.PNG](Scale-Settings_images/Scale-Settings_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlarge.PNG](Scale-Settings_images/Scale-Settings_img3.png)
+
 
 
 In the above example, for “Default Slider” the “SmallStep” value is specified as “5”, so for each 5 values from the starting value, small ticks is enabled. Also, “LargeStep” value is specified as “20”, so for each 20 values from the starting value, large ticks is enabled.

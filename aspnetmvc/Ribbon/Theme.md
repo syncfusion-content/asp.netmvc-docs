@@ -7,11 +7,11 @@ control: Ribbon
 documentation: ug
 ---
 
-## Theme
+# Theme
 
-_Ribbon_ control’s style and appearance are controlled based on _CSS_ classes. In order to apply styles to the _Ribbon_control, refer to two files namely, _ej.widgets.core.min.css and ej.theme.min.css_. When the file _ej.widgets.all.min.css_is referred, it is not necessary to include the files _ej.widgets.core.min.css and ej.theme.min.css_ in your project as _ej.widgets.all.min.css_ is the combination of these two files. 
+_Ribbon_ control’s style and appearance are controlled based on _CSS_ classes. In order to apply styles to the _Ribbon_ control, refer to two files namely, _ej.widgets.core.min.css and ej.theme.min.css_ . When the file _ej.widgets.all.min.css_ is referred, it is not necessary to include the files _ej.widgets.core.min.css and ej.theme.min.css_ in your project as _ej.widgets.all.min.css_ is the combination of these two files. 
 
-By default, there are 12 theme supports available for _Ribbon_control namely,   
+By default, there are 12 theme supports available for _Ribbon_ control namely,   
 
 
 

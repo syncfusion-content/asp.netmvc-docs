@@ -15,10 +15,6 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
 {% highlight html %}
 
-[MVC]
-
-[CSHTML]
-
 @(Html.EJ().Ribbon("defaultRibbon")
 
      .Width("100%")
@@ -101,7 +97,7 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
 The following output is displayed as a result of the above code example.
 
-{{ '![](Custom-Tooltip_images/Custom-Tooltip_img1.png)' | markdownify }}
-{:.image }
+![](Custom-Tooltip_images/Custom-Tooltip_img1.png)
+
 
 

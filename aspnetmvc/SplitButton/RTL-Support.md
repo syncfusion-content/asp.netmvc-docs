@@ -19,7 +19,6 @@ The following steps explains you the details about rendering the button with Rig
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -53,7 +52,7 @@ The following steps explains you the details about rendering the button with Rig
 
 Execute the above code to render the following output.
 
-{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+![](RTL-Support_images/RTL-Support_img1.png)
 
 
 
