@@ -7,21 +7,19 @@ control: Menu
 documentation: ug
 ---
 
-## Responsive Layout
+# Responsive Layout
 
 Responsive Layout is aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors). In order to get responsive layout, you can add ej.responsive.css file in this sample. CDN link for the responsive css file is as follows.
 
 [http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
 
-> {{ '![C:/Users/ApoorvahR/Desktop/Note.png](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
-{:.image }
-_Note: Refer to the ej.responsive.css file after the ej.widgets.all.min.css file_
+> Note: Refer to the ej.responsive.css file after the ej.widgets.all.min.css file
 
 Add the above css link in the code sample.         
 
 1. Add the following code in your View page.
 
-
+{% highlight html %}
 
 [CSHTML]   
 
@@ -102,14 +100,14 @@ Add the above css link in the code sample.
 </div>
 
 
-
+{% endhighlight  %}
 
 
 The following screenshot displays the output for the above code. 
 
-{{ '![](Responsive-Layout_images/Responsive-Layout_img2.png)' | markdownify }}
-{:.image }
+![](Responsive-Layout_images/Responsive-Layout_img2.png)
 
 
-_Figure_ _38__: Menu with responsive layout_
+
+_Figure38: Menu with responsive layout_
 

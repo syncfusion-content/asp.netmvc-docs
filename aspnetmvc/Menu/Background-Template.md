@@ -7,7 +7,7 @@ control: Menu
 documentation: ug
 ---
 
-## Background Template
+# Background Template
 
 Menu control also provides support for template support. Normally Menu control can be created by using UL and LI tags in the preferred way. But in template supporting, you can customize the appearance of sub menu items rendering. 
 
@@ -15,8 +15,7 @@ Initialize the Template Menu as illustrated in the following code example.
 
 1. Add the following code in your View page.
 
-
-
+{% highlight html %}
 [CSHTML]
 
 // Add the following code in your CSHTML page.
@@ -203,12 +202,12 @@ Initialize the Template Menu as illustrated in the following code example.
 
     })
 
-
+{% endhighlight %}
 
 
 
 2. Add the following code in your style section.
-
+{% highlight css %}
 [CSS]
 
 
@@ -343,13 +342,13 @@ Initialize the Template Menu as illustrated in the following code example.
 
 </style>
 
+{% endhighlight  %}
+
+Execute the above code to render the following output.    
+                   
+![](Background-Template_images/Background-Template_img1.png)
 
 
-Execute the above code to render the following output.                       
 
-{{ '![](Background-Template_images/Background-Template_img1.png)' | markdownify }}
-{:.image }
-
-
-_Figure_ _32__: Template_
+_Figure32: Template_
 

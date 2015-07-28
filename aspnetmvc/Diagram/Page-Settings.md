@@ -12,7 +12,7 @@ documentation: ug
 Page settings enable you to customize the width and height of the Diagram page. The properties of Pagesetting are listed as follows.
 
 _Page settings_
-{% highlight c# %}
+{% highlight html %}
 <table>
 <tr>
 <td>

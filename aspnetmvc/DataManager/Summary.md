@@ -7,7 +7,7 @@ control: DataManager
 documentation: ug
 ---
 
-## Summary 
+# Summary 
 
 Summary is a key feature in the DataManager that helps to aggregate any data. DataManager provides several summary type by default, they are as follows.
 
@@ -19,10 +19,10 @@ Summary is a key feature in the DataManager that helps to aggregate any data. Da
 
 The ej provides several data utilization methods to achieve summary. 
 
-Sum
+## Sum
 
 The Sum summary type provides the sum of the data. The Sum data utilization method accepts two parameters, they are JSON data and the fieldname where the sum is calculated. The following code example illustrates the Default Summary Types.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -52,7 +52,8 @@ The Sum summary type provides the sum of the data. The Sum data utilization meth
         })
 
 )
-
+{% endhighlight  %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
@@ -70,21 +71,21 @@ The Sum summary type provides the sum of the data. The Sum data utilization meth
     </script>
 
 
-
+{% endhighlight %}
 
 
 The result of the above code example is illustrated as follows.
 
-{{ '![](Summary_images/Summary_img1.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img1.png)
 
 
-Min
+
+## Min
 
 The Minimum of a particular field can be calculated by using the ej.min data utilization method and this method accepts the arguments such as JSON data/array, field name and the comparer used for the comparison. When the data to the min method is a JSON array, then the whole record is returned.
 
 The minimum of particular field can be calculated as follows.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -115,8 +116,8 @@ The minimum of particular field can be calculated as follows.
 
 )
 
-
-
+{% endhighlight %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
@@ -133,22 +134,22 @@ The minimum of particular field can be calculated as follows.
 
     </script>
 
-
+{% endhighlight  %}
 
 
 
 The result of the above code example is illustrated as follows.
 
-{{ '![](Summary_images/Summary_img2.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img2.png)
 
 
-Max
+
+## Max
 
 The Maximum of a particular field can be calculated by using the ej.max data utilization method and this method accepts the arguments such as JSON data/array, field name and the comparer used for the comparison. When the data to the max method is a JSON array, then the whole record is returned.
 
 The maximum of particular field can be calculated as follows.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -179,7 +180,8 @@ The maximum of particular field can be calculated as follows.
 
 )
 
-
+{% endhighlight %}
+{% highlight js  %}
 
     <script type="text/javascript" class="jsScript">
 
@@ -196,21 +198,21 @@ The maximum of particular field can be calculated as follows.
         }, 3000);
 
     </script>
-
+{% endhighlight  %}
 
 
 
 
 The result for the above code example is illustrated as follows.
 
-{{ '![](Summary_images/Summary_img3.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img3.png)
 
 
-Avg
+
+## Avg
 
 The Average summary type provides the average of the given data. The Average data utilization method accepts two parameters, they are JSON/Array data and the fieldname where the sum is calculated. Use the following code example for calculating the average of the given JSON data.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -240,7 +242,8 @@ The Average summary type provides the average of the given data. The Average dat
         })
 
 )
-
+{% endhighlight %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
@@ -257,22 +260,22 @@ The Average summary type provides the average of the given data. The Average dat
 
     </script>
 
-
+{% endhighlight  %}
 
 
 
 The result of the above code example is illustrated as follows.
 
-{{ '![](Summary_images/Summary_img4.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img4.png)
+
 _Summary - Average_
 
-Distinct
+## Distinct
 
 In a data, a field may contain many duplicate values; and sometimes you are required only to list the different (distinct) values. This can be achieved by using the ej.distinct method. This method accepts three parameters such as JSON/Array data, fieldname that you want to fetch as distinct and the third Boolean parameter set as true, returns the whole record when the data is a JSON array. 
 
 The following code example illustrates how to use the ej.distinct method. In the following code, the third parameter of distinct method is set as true and hence it fetches the whole record from the provided data.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -302,7 +305,8 @@ The following code example illustrates how to use the ej.distinct method. In the
         })
 
 )
-
+{% endhighlight  %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         setTimeout(function () {
@@ -319,11 +323,11 @@ The following code example illustrates how to use the ej.distinct method. In the
 
     </script>
 
-
+{% endhighlight  %}
 
 The result for the above code example is illustrated as follows.
 
-{{ '![](Summary_images/Summary_img5.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img5.png)
+
 
 

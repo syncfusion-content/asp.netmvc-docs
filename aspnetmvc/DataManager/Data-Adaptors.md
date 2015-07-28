@@ -7,7 +7,7 @@ control: DataManager
 documentation: ug
 ---
 
-## Data Adaptors
+# Data Adaptors
 
 DataManger uses adaptors to process data. There are three types of adaptors in the DataManger. They are
 
@@ -17,11 +17,11 @@ DataManger uses adaptors to process data. There are three types of adaptors in t
 
 Here, you can learn when and how each adaptor is used.
 
-JSON Adaptor
+## JSON Adaptor
 
 JSONAdaptor is used to process JSON data. It contains methods to process the given JSON data based on the queries. The following code example illustrates on how to use the JSONAdaptor.
 
-
+{% highlight html %}
 
 @(Html.EJ().DataManager("FlatData").Json((IEnumerable<object>)ViewBag.dataSource))
 
@@ -54,22 +54,22 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
         })
 
 )
-
+{% endhighlight %}
 
 
 The result of above code example is illustrated as follows.
 
 
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img1.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img1.png)
 
 
-URL Adaptor
+
+## URL Adaptor
 
 Url Adaptor of the DataManager can be used when you are required to use remote service to retrieve data. It interacts with server-side for all DataManager Queries and CRUD operations. Now, in the following code example, the data is retrived from the MVCController. 
 
-
+{% highlight html %}
 
 @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
 
@@ -103,8 +103,8 @@ Url Adaptor of the DataManager can be used when you are required to use remote s
 
 )
 
-
-
+{% endhighlight %}
+{% highlight c# %}
 [Controller]
 
 public class HomeController : Controller
@@ -147,21 +147,21 @@ public class HomeController : Controller
 
         }
 
-
+{% endhighlight %}
 
 The result of the above code example is illustrated as follows.
 
 
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img2.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img2.png)
 
 
-OData Adaptor
+
+## OData Adaptor
 
 Odata Adaptor that is extended from Url Adaptor is used for consuming data through oData Service. You can use the following code example to use oData adaptor.
 
-
+{% highlight html %}
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true).CrossDomain(true))
 
@@ -196,19 +196,19 @@ Odata Adaptor that is extended from Url Adaptor is used for consuming data throu
 )
 
 
-
+{% endhighlight %}
 
 
 The result of the above code example is illustrated as follows.
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img3.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img3.png)
 
 
-WebAPI Adaptor
+
+## WebAPI Adaptor
 
 WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrieving data from WebAPI service. Refer to the following code example.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
 
 
@@ -242,26 +242,26 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
 )
 
 
-
+{% endhighlight %}
 
 
 Result of the above code example is illustrated as follows.
 
 
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img4.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img4.png)
+
 
 
 
 
 _Web API Adaptor_
 
-RemoteSave Adaptor
+## RemoteSave Adaptor
 
 RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for binding local data and performs all DataManager queries in client-side. It interacts with server-side only for CRUD operations to pass the modified records. Refer to the following code example.
 
-
+{% highlight html %}
 
 [View]
 
@@ -299,9 +299,9 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
 
 )
 
+{% endhighlight  %}
 
-
-
+{% highlight c# %}
 
 [Controller]
 
@@ -347,19 +347,19 @@ public class HomeController : Controller
 
         }
 
-
+{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img5.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img5.png)
 
 
-Custom Adaptor
+
+## Custom Adaptor
 
 Custom Adaptor is a key technique to customize adaptors in the DataManager. It is useful to write own adaptor. Normally ej.Adaptor is base class for all adaptors. Therefore, first inherit the ej.Adaptor to develop the customized one and then override functionality in Custom Adaptor with base class. The following code example illustrates you how to create the Custom Adaptor.
 
-
+{% highlight html %}
 
 @(Html.EJ().DataManager("FlatData”))
 
@@ -393,7 +393,8 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
 )
 
-
+{% endhighlight %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -432,12 +433,12 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
 
 </script>
-
+{% endhighlight %}
 
 
 Result of above code example is as follows.
 
-{{ '![](Data-Adaptors_images/Data-Adaptors_img6.png)' | markdownify }}
-{:.image }
+![](Data-Adaptors_images/Data-Adaptors_img6.png)
+
 
 

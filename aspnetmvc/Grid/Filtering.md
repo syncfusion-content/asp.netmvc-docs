@@ -7,19 +7,19 @@ control: Grid
 documentation: ug
 ---
 
-## Filtering
+# Filtering
 
 Filtering is used to filter particular or related records in Grid to review details of records. To enable filtering behavior in Grid you can add AllowFiltering property at Grid initialize. There are three types of filtering features in grid. They are
 
 * Filter menu
 * Filter Bar
 * Excel styled menu
-### Filter Menu 
+## Filter Menu 
 
 
 After you enable Filter Menu in Grid, it shows filter menu to filter records. This menu contains filtering options based on column type.
 
-Filter menu types
+##Filter menu types
 
 * String menu filtering 
 * Numeric menu filtering
@@ -31,12 +31,7 @@ Filter menus are a good UI based filtering option. It visibly denotes filtering 
 
 
 
-
-[MVC]
-
-
-
-[razor]
+{% highlight html %}
 
 
 
@@ -52,9 +47,9 @@ Filter menus are a good UI based filtering option. It visibly denotes filtering 
 
     )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -82,7 +77,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -90,16 +85,16 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Filtering_images/Filtering_img1.png)' | markdownify }}
-{:.image }
+![](Filtering_images/Filtering_img1.png)
+
 
 
 ### Filter Bar
 
 Filter bar is one of the types of filtering. It is otherwise called text filtering as filter bar working is based on text boxes. Through this you can filter records. Filter bars have expression to filter records. They are based on type of column. 
 
-_Table_ _2__: List of Filter Bar Expressions_
-
+_Table 2 : List of Filter Bar Expressions_
+{% highlight html %}
 <table>
 <tr>
 <td rowspan = "4">
@@ -132,14 +127,10 @@ Equal</td><td>
 Boolean filter bar works with either true or false.</td></tr>
 </table>
 
+{% endhighlight %}
 
 
-
-[MVC]
-
-
-
-[razor]
+{% highlight html %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -153,9 +144,9 @@ Boolean filter bar works with either true or false.</td></tr>
 
     )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -184,7 +175,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
+{% endhighlight %}
 
 
 
@@ -195,13 +186,13 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Filtering_images/Filtering_img2.png)' | markdownify }}
-{:.image }
+![](Filtering_images/Filtering_img2.png)
+
 
 
 ### Excel styled menu
 
-You can enable the Excel like filter menu by setting the FilterType as “excel” of the FilterSettings property. The Filter menu is displayed after clicking the filter icon in the column headers. 
+You can enable the Excel like filter menu by setting the FilterType as 'excel' of the FilterSettings property. The Filter menu is displayed after clicking the filter icon in the column headers. 
 
 The filter menu contains options such as Sorting, Clear filter, submenu for the advanced filter options, 
 
@@ -209,8 +200,8 @@ The filter menu contains options such as Sorting, Clear filter, submenu for the 
 
 The Checkbox list is available in the menu that contains the possible filter value for the column. It shows the list of possible filter values with the checkbox. The filter value can be selected by clicking the checkbox corresponding to that value. By clicking the Ok button, the column is filtered based on the values checked in the checkbox list. The SelectAll checkbox is also present in the checkbox list that allows either select or deselect all the checkboxes.
 
-{{ '![](Filtering_images/Filtering_img3.png)' | markdownify }}
-{:.image }
+![](Filtering_images/Filtering_img3.png)
+
 
 
 A Search box is available at the top of the check box list that is used to search the possible filter choices. The number of possible filter choices are restricted by the setting the MaxFilterChoices property of the FilterSettings. 
@@ -221,23 +212,19 @@ The Submenu items in the filter menu provide the advanced filtering options for 
 
 
 
-{{ '![](Filtering_images/Filtering_img4.png)' | markdownify }}
-{:.image }
+![](Filtering_images/Filtering_img4.png)
 
 
-{{ '![](Filtering_images/Filtering_img5.png)' | markdownify }}
-{:.image }
 
-
+![](Filtering_images/Filtering_img5.png)
 
 
 
 
-[MVC]
 
 
 
-[controller]
+{% highlight C# %}
 
 
 
@@ -287,11 +274,11 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
+{% endhighlight %}
 
 
-[razor]
 
-
+{% highlight html %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -328,7 +315,7 @@ namespace MVCSampleBrowser.Controllers
     .Render())
 
 
-
+{% endhighlight %}
 
 
 
@@ -337,8 +324,8 @@ namespace MVCSampleBrowser.Controllers
 
 Grid uses filter operators from ejDataManager, that are used at the time of filtering. Filter operators are used to denote filtering type.
 
-_Table_ _3__: List of Column type and Filter operators_
-
+_Table 3 : List of Column type and Filter operators_
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -361,19 +348,17 @@ ej.FilterOperators.equalej.FilterOperators.notEqual</td></tr>
 Date</td><td>
 ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOperators.lessThanej.FilterOperators.lessThanOrEqualej.FilterOperators.equal</td></tr>
 </table>
+
+{% endhighlight %}
 ### External Filtering
 
 Grid contains an API to do filtering dynamically after Grid initialize, without the use of User Interaction. It is useful to do filtering dynamically.
 
 
 
+{% highlight html %}
 
 
-[MVC]
-
-
-
-[razor]
 
 <div>
 
@@ -480,7 +465,6 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 
 
-
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -503,9 +487,9 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 @(Html.EJ().Button("filter"))
 
+{% endhighlight %}
 
-
-[javascript]
+{% highlight js %}
 
 <script>
 
@@ -522,8 +506,9 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 
 </script>
+{% endhighlight %}
 
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -557,7 +542,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -565,7 +550,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Filtering_images/Filtering_img6.png)' | markdownify }}
-{:.image }
+![](Filtering_images/Filtering_img6.png)
+
 
 
