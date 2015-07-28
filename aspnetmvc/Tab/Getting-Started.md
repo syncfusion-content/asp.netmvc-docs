@@ -17,13 +17,13 @@ The ASP.NET MVCTab control is an interface that displays the content in multiple
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 _Figure 1: Tab control with Hotel Menu items_
 
-Create Tab Control
+### Create Tab Control
 
 The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven interface from your content. The content can be text, graphics or HTML. You can create the Tab headers using Text and Content templateproperty
 
@@ -33,7 +33,7 @@ The following steps are used to create Tab control.
 2. Add the mentioned code to the corresponding view page for Tab rendering.
 
 
-
+{% highlight html %}
 
 
   @Html.EJ().Tab("DishType").Items(data =>
@@ -48,23 +48,25 @@ The following steps are used to create Tab control.
 
 })
 
+{% endhighlight %}
 
 
 The following output is displayed.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)' 
+
 
 
 _Figure 2__: Tab control with Header_
 
-Configure Content
+### Configure Content
 
 In this application, a detailed description is provided to each item. You can specify the contents in the Tab section within the Content template. 
 
 
+{% highlight html %}
 
   @Html.EJ().Tab("DishType").Items(data =>
 
@@ -84,11 +86,12 @@ In this application, a detailed description is provided to each item. You can sp
 
     })
 
+{% endhighlight %}
 
 
 You can provide more customization to the Tab by using rating control, to describe an item’s price.
 
-Create the Rating 
+### Create the Rating 
 
 The ASP.NET MVCRating control provides an intuitive rating experience that allows you to select the number of stars that represents the rating. The following code example explains you the creation of rating control. We can create the Rating control using html helper. We can render the rating control and its description inside the content template of first tab control.
 
@@ -96,7 +99,7 @@ For more information about rating, refer to the following link:
 
 [http://help.syncfusion.com/aspnetmvc/](http://help.syncfusion.com/aspnetmvc/)
 
-
+{% highlight html %}
 
 <!--Use the following codes with above Html contents-->
 
@@ -124,17 +127,18 @@ For more information about rating, refer to the following link:
 
 })
 
+{% endhighlight %}
 
 
 The following screenshot is the output for the given code example.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-Sub Tab with Content 
+
+### Sub Tab with Content 
 
 Each item has a variety of options, and these options are also specified in the limited space. So you can choose the Tab control that is used within the root Tab to specify more details.
 
@@ -144,7 +148,7 @@ The following code example represents sub Tab control rendering using helper fun
 
 <!--Use the following codes with in the  above Html -->
 
-
+{% highlight html %}
 
   @Html.EJ().Tab("DishType").Items(data =>
 
@@ -230,11 +234,12 @@ The following code example represents sub Tab control rendering using helper fun
 
 }
 
+{% endhighlight %}
 
 
 The following code example is used to position the image and content.
 
-
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -258,23 +263,23 @@ The following code example is used to position the image and content.
 
     </style>
 
-
+{% endhighlight %}
 
 The following screenshot illustrates the first Tab with the sub Tab control.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
-Orientation Change
+
+### Orientation Change
 
 Now, you can learn how to set the sub Tab orientation to vertical. By default, Tab control is rendered in horizontal orientation. You can change this orientation to vertical by using the HeaderPosition property. In the following code section, set the Tab header orientation as Left.
 
 The following code section renders the sub Tab element in the vertical orientation.
 
-
+{% highlight html %}
 
 <!--Use the following codes with in the  above Html -->
 
@@ -358,17 +363,18 @@ The following code section renders the sub Tab element in the vertical orientati
 
 });
 
+{% endhighlight %}
 
 
 The following screenshot is the output of above steps.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
-Configure Contents to remaining Tab items
+
+### Configure Contents to remaining Tab items
 
 The second and third Tab contents are declared in the same method as of the first Tab content declaration. These Tabs also consist of rating and sub Tab controls. 
 
@@ -398,7 +404,7 @@ Add third Tab contents in element during initialization using content template o
 
 Apply the following styles to the Tab.
 
-
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -426,13 +432,14 @@ Apply the following styles to the Tab.
 
 </style>
 
+{% endhighlight %}
 
 
 The following screenshot illustrates the second Tab contents in Tab and the final hotel menu with rating, description and ingredients of the item in the Tab interface.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img6.png)
+
 
 

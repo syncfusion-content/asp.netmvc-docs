@@ -11,7 +11,7 @@ documentation: ug
 
 The Essential ASP.NET MVC TreeView control represents hierarchical data in a tree-like structure. It allows editing, dragging items to other tree views, adding check boxes, and more. TreeView can be generated from UL LI elements, List of Objects or using OData service.
 
-Key Features
+## Key Features
 
 * Node editing: The TreeView control permits you to edit a node.
 * Node cut, and paste: Cut a node and paste in same TreeView node.

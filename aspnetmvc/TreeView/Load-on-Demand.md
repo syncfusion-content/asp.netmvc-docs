@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-## Load on Demand
+# Load on Demand
 
 Loadon Demand option is useful when the full content of the TreeView is too large to be loaded completely, up front. The mechanism lets the nodes load their child nodes as you expand the parent by clicking the expandicon. While clicking on the parent node it first loads their particular child nodes and then loads the first level of nodes.
 
@@ -22,8 +22,7 @@ As explained in the local data source add a class in the models with required pr
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below
 
 
-
-[Model]
+{% highlight hmtl %}
 
 // Define local data source elements with  fields            
 
@@ -53,17 +52,14 @@ public class treeviewData
 
     }
 
-
+{% endhighlight %}
 
 
 
 2. In the controller page, create a List of specified class type.
 
+{% highlight html %}
 
-
-
-
-[Controller]
 
 //Refer the Model in the controller
 
@@ -89,6 +85,12 @@ public ActionResult Index()
 
             localData.Add(new treeviewData{ id= 6, pid= 5, name= "Documents", hasChild= true });
 
+			
+			
+			
+			
+			
+			
             localData.Add(new treeviewData{ id= 7, pid= 6, name= "My Documents" });
 
             localData.Add(new treeviewData{ id= 8, pid= 6, name= "Public Documents" });
@@ -126,10 +128,9 @@ public ActionResult Index()
 
 
 
+{% endhighlight %}
 
-
-
-[View]
+{% highlight html %}
 
 // Map Local datasource to corresponding fields and enable LoadOnDemand for TreeView control
 
@@ -137,7 +138,7 @@ public ActionResult Index()
 
 
 
-
+{% endhighlight %}
 
 
 
@@ -156,11 +157,11 @@ The output for TreeView when LoadOnDemand is set to “True” is as follows.
 <table>
 <tr>
 <td>
-![](Load-on-Demand_images/Load-on-Demand_img1.png)
-{:.image }
+{ ' ![](Load-on-Demand_images/Load-on-Demand_img1.png)' | markdownfy }}
+
 While Loading</td><td>
-![](Load-on-Demand_images/Load-on-Demand_img2.png)
-{:.image }
+{ '![](Load-on-Demand_images/Load-on-Demand_img2.png)' | markdownfy }}
+
 After Loading</td></tr>
 </table>
 

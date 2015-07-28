@@ -7,28 +7,24 @@ control: TreeMap
 documentation: ug
 ---
 
-## TreeMapLevels
+# TreeMapLevels
 
 The levels of TreeMap can be categorized into two types as,
 
 * FlatLevel
 * Hierarchical Level
 
-Flat Level
+## Flat Level
 
-Group Path
+### Group Path
 
 You can use GroupPath property for every flat level of the TreeMap control. It is a path to a field on the source object that serves as the “Group” for the level specified. You can group the data based on the GroupPath in the TreeMap control. When the GroupPath is not specified, then the items are not grouped and the data is displayed in the order specified in the DataSource.
 
-Group Gap
+### Group Gap
 
 You can use GroupGap property to separate the items from every flat level and to differentiate the levels mentioned in the TreeMap control.
 
 {% highlight html %}
-
-[MVC]
-
-[CSHTML]
 
      @(Html.EJ().TreeMap("treemap")
 
@@ -58,20 +54,15 @@ You can use GroupGap property to separate the items from every flat level and t
 
 
 
-{{ '![](TreeMapLevels_images/TreeMapLevels_img1.png)' | markdownify }}
-{:.image }
+![](TreeMapLevels_images/TreeMapLevels_img1.png)
 
-
-Hierarchical Level
+## Hierarchical Level
 
 TreeMap Hierarchical level is used to define levels for hierarchical data collection that contains tree-structured data.
 
 {% highlight html %}
 
- [MVC]
-
-[CSHTML]
-
+ 
 @(Html.EJ().TreeMap("treemap")
 
                 .DataSource(datasource)
@@ -82,7 +73,9 @@ TreeMap Hierarchical level is used to define levels for hierarchical data collec
 
 
 
-[C#]
+{% endhighlight %}
+
+{% highlight C# %}
 
    public class ContinentData
 
@@ -204,7 +197,4 @@ TreeMap Hierarchical level is used to define levels for hierarchical data collec
 
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](TreeMapLevels_images/TreeMapLevels_img2.png)' | markdownify }}
-{:.image }
-
-
+![C:/Users/ApoorvahR/Desktop/1.png](TreeMapLevels_images/TreeMapLevels_img2.png)

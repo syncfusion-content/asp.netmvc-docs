@@ -7,11 +7,11 @@ control: TimePicker
 documentation: ug
 ---
 
-## TimePicker Customization
+# TimePicker Customization
 
 The TimePicker provides support to display a TimePicker in your webpage and allows you to pick a time from it.
 
-Creating TimePicker Widget
+## Creating TimePicker Widget
 
 The following steps explains you to create a TimePicker widget.
 
@@ -19,16 +19,16 @@ The following steps explains you to create a TimePicker widget.
 
 
 
-[_cshtml]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
 @Html.EJ().TimePicker("time")
 
-2. The following screenshot illustrates you a default TimePicker.
+{% endhighlight %}
 
-{{ '![](TimePicker-Customization_images/TimePicker-Customization_img1.png)' | markdownify }}
-{:.image }
+2. The following screenshot illustrates you a default TimePicker.
+![](TimePicker-Customization_images/TimePicker-Customization_img1.png)
 
 
 _Figure 8: TimePicker Control_

@@ -7,9 +7,9 @@ control: DatePicker
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Theme
+## Theme
 
 DatePicker control’s style and appearance are controlled based on CSSclasses. In order to apply Theme to the DatePicker widget, you can refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these both. 
 
@@ -28,7 +28,7 @@ By default, there are 12 themes support available for DatePicker widget namely,
 * gradient-saffron
 * gradient-saffron-dark
 
-Custom CSS
+## Custom CSS
 
 To apply custom styles to your DatePicker widget, you can specify CssClass property. The specified CSS name is added in the root of the DatePicker widget.
 
@@ -36,15 +36,17 @@ The following code example is used to render the DatePicker widget with customiz
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-[CSHTML]
+{% highlight html %}
 
 @*The following code example depicts the way to bind data to the DatePicker widget with customized stylet*@
 
 @Html.EJ().DatePicker("datepicker").CssClass("custom")
 
-
+{% endhighlight %}
 
 2.  Add the following styles to render DatePicker with customized style.
+
+{% highlight css %}
 
 <style type="text/css">
 
@@ -56,17 +58,15 @@ The following code example is used to render the DatePicker widget with customiz
 
 </style>
 
-
+{% endhighlight %}
 
 3. The following screenshot displays the output for the above code.
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
-Keyboard Navigation
+### Keyboard Navigation
 
 With the Keyboard Navigationenabled in the DatePicker widget, it is possible to widget the actions of the DatePicker with the provided shortcut keys. Almost all the DatePicker actions that are done through mouse are controlled with shortcut keys. For enabling the keyboard navigation, we need to set the access key to DatePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictinary object. The IDictionary represents a generic collection of key/value pairs.
 
@@ -76,9 +76,9 @@ _Table_ _5_: Keyboard navigation_
 
 <table>
 <tr>
-<td>
-Keys</td><td>
-Function</td></tr>
+<th>
+Keys</th><th>
+Function</th></tr>
 <tr>
 <td>
 {{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
@@ -134,9 +134,7 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 1. In the CSHTML page, add the following code to render the DatePicker widget and enable keyboard interaction with accesskey “j”.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget and enable keyboard interaction by setting the accesskey property.*@
 
@@ -148,13 +146,10 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 @Html.EJ().DatePicker("datepicker").HtmlAttributes(parameters)
 
-
+{% endhighlight %}
 
 2. Run the sample, press [Access key](http://en.wikipedia.org/wiki/Access_key) + J to focus in the DatePicker widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 
 
-
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
-
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 

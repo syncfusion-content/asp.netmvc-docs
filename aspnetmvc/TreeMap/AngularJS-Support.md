@@ -7,7 +7,7 @@ control: TreeMap
 documentation: ug
 ---
 
-## AngularJS Support
+# AngularJS Support
 
 AngularJS is a JavaScript framework added to a HTML page with a <script> tag. It extends HTML attributes with directives and binds data to HTML with expressions. AngularJS directives allow you to specify custom and reusable HTML tags that moderate the behavior of certain elements. Angularbinding uses directives to plug its action into the page. Directives, all prefaced with ng-, are placed in HTML attributes. To know more about Angular binding refer to: [http://help.syncfusion.com/ug/js/#!documents/angularjs.htm](http://help.syncfusion.com/ug/js/)
 
@@ -61,9 +61,6 @@ Apply the plugin and property assigning the Treemap element through the direct
 
 {% highlight html %}
 
- [MVC]
-
-[CSHTML]
 
 //References to be added for angular support.
 
@@ -165,7 +162,6 @@ $scope.ncolor = "#2380BB";
 
 {% highlight c# %}
 
-[Controller]
 
 
 
@@ -187,7 +183,7 @@ public partial class TreeMapController : Controller
 
 {% endhighlight %}
 
-{{ '![](AngularJS-Support_images/AngularJS-Support_img1.png)' | markdownify }}
-{:.image }
+![](AngularJS-Support_images/AngularJS-Support_img1.png)
+
 
 

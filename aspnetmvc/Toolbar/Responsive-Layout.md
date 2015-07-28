@@ -7,7 +7,7 @@ control: Toolbar
 documentation: ug
 ---
 
-## Responsive Layout
+# Responsive Layout
 
 Responsive Layout is aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors). You can achieve Responsive Layout by using default functionality of Toolbar with IsResponsive as true and also you need to give Toolbar Width as in percentage value and add ej.responsive.css file in this sample. CDN link for the responsive css file is as follows.
 
@@ -18,8 +18,7 @@ Add the above css link in the code sample.        
 1. Add the following code example in your HTML page.
 
 
-
-[CSHTML]
+{% highlight html %}
 
 <div class="control">
 
@@ -113,7 +112,10 @@ Add the above css link in the code sample.        
 
 </div>
 
-[CSS]
+{% endhighlight %}
+
+{% highlight css %}
+
 
 <style type="text/css" class="cssStyles">
 
@@ -283,14 +285,14 @@ Add the above css link in the code sample.        
 
 </style>
 
-
+{% endhighlight %}
 
 
 
 Execute the above code to render the following output.
 
-{{ '![](Responsive-Layout_images/Responsive-Layout_img1.png)' | markdownify }}
-{:.image }
+![](Responsive-Layout_images/Responsive-Layout_img1.png)
+
 
 
 

@@ -7,13 +7,13 @@ control: Toolbar
 documentation: ug
 ---
 
-## RTL
+# RTL
 
 EnableRTL property is Boolean type, which allow us to change the left-to-right alignment of the Toolbar to right-to-left (RTL) that sets the Toolbar to do its actions from right to left. Default value of EnableRTL is false. You can specify the EnableRTL property in the script as below, 
 
 
 
-[CSHTML] 
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -21,12 +21,11 @@ EnableRTL property is Boolean type, which allow us to change the left-to-right a
 
 
 
+{% endhighlight %}
 
 
 
-
-{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
-{:.image }
+![](RTL_images/RTL_img1.png)
 
 
 _Figure_ _31__: Toolbar from RTL_

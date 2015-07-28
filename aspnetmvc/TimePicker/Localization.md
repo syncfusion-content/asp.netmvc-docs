@@ -7,7 +7,7 @@ control: TimePicker
 documentation: ug
 ---
 
-## Localization
+# Localization
 
 You can globalize the TimePicker, so that users of different cultures can make use of it and post their content. For your convenience, you can format the TimePicker control to your culture. When your blog is in your culture, the viewers of your culture can understand about your company and its products. You can achieve localization using the “Locale” property. 
 
@@ -15,7 +15,7 @@ TimePicker support all the cultures. Globalize.js is a simple JavaScript library
 
 In this example, globalize.min.js file is used that includes all the cultures information. And in this example Spanish culture is used.
 
-Enabling Localization Support
+## Enabling Localization Support
 
 The following steps explains you on how to enable Locale property for TimePicker.
 
@@ -23,18 +23,17 @@ The following steps explains you on how to enable Locale property for TimePicker
 
 
 
-[_cshtml]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with Spanish culture*@
 
 @Html.EJ().TimePicker("time").Locale("es-ES")
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
-{:.image }
+![](Localization_images/Localization_img1.png)
 
 
 _Figure 9: TimePicker with es-ES Localization_
