@@ -7,7 +7,7 @@ control: OLAP Chart
 documentation: ug
 ---
 
-## Localization and Translation support
+# Localization and Translation support
 
 Localization is the process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, data is displayed in a language and culture specific to a particular country or region. The ASP.NET MVC OlapChart control provides inherent support to localize its UI.
 
@@ -17,9 +17,9 @@ _Table: List of default English localization User Interface based on “French�
 
 <table>
 <tr>
-<td>
-KEYWORDS</td><td>
-VALUES</td></tr>
+<th>
+KEYWORDS</th><th>
+VALUES</th></tr>
 <tr>
 <td>
 Measure</td><td>
@@ -77,7 +77,7 @@ RenderingFailed</td><td>
 
 The following code example shows how to localize OlapChart’sUser Interface (UI) based on “French” culture.
 
-
+{% highlight js %}
 [MVC]
 
 @section ScriptSection{
@@ -119,28 +119,29 @@ The following code example shows how to localize OlapChart’sUser Interface (UI
 }
 
 
+{% endhighlight %}
 
+{% highlight html %}
 @section ControlsSection{
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Locale("fr-FR")
 
 } 
 
+{% endhighlight  %}
 
 
-{{ '![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-support_images/Localization-and-Translation-support_img1.jpeg)' | markdownify }}
-{:.image }
-_Note: In order to render the localized OLAP Chart, you are required to reset the content available in both_
+> Note: In order to render the localized OLAP Chart, you are required to reset the content available in both
 
 1. _OLAP Chart Control_
 2. _OLAP Cube_
 
-Localizing Control Information:
+## Localizing Control Information:
 
 To apply control side localization, refer the following code example:
 
 
-
+{% highlight html %}
 [HTML]
 
 ej.olap.OlapChart.locale["zh-CN"] = {
@@ -148,12 +149,13 @@ ej.olap.OlapChart.locale["zh-CN"] = {
 //Corresponding keyword values needs to be set here.
 
 }
+{% endhighlight  %}
 
-Localizing Cube Information:
+## Localizing Cube Information:
 
 To get the localized Cube information, “_Locale__Identifier"_ has to be set in the connection string:
 
-
+{% highlight c# %}
 
 [C#]
 
@@ -167,12 +169,12 @@ DataManager.Culture = new System.Globalization.CultureInfo(1036);
 
 DataManager.OverrideDefaultFormatStrings = true;
 
-
+{% endhighlight %}
 
 
 The output for the LocalizedOlapChart is as follows:
 
-{{ '![C:/Users/labuser/Desktop/a.png](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/Desktop/a.png](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png)
+
 
 

@@ -7,7 +7,7 @@ control: Radial Menu
 documentation: ug
 ---
 
-## Width
+# Width
 
 You can customize the Radial Menu width or radius by using the width property. By default, the Radial Menu width is set as 300px. Refer to the following code example.
 
@@ -55,13 +55,13 @@ You can add the page content with text-area by referring to this section.
 
 The following screenshot illustrates the output while selecting the text in the page.
 
-{{ '![](Width_images/Width_img1.png)' | markdownify }}
-{:.image }
+![](Width_images/Width_img1.png)
+
 
 
 The following screenshot illustrates the Radial Menu while clicking on the settings icon.
 
-{{ '![](Width_images/Width_img2.png)' | markdownify }}
-{:.image }
+![](Width_images/Width_img2.png)
+
 
 

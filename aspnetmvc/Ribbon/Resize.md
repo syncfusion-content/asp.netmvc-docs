@@ -7,19 +7,13 @@ control: Ribbon
 documentation: ug
 ---
 
-## Resize 
+# Resize 
 
 _Ribbon control_ supports resizing functionality .To enable resizing in the ribbon, you need to set the _AllowResizing_ property to _true_. When you resize the ribbon window, the _Ribbon control_ automatically resizes to fit into the layout panel. 
 
 
 
 {% highlight html %}
-
-
-
-[MVC]
-
-[CSHTML]
 
      @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -139,15 +133,15 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
 The following screenshot displays _Ribbon control_ without resizing the window.
 
-{{ '![C:/Users/Giftline/Desktop/a.png](Resize_images/Resize_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Giftline/Desktop/a.png](Resize_images/Resize_img1.png)
+
 
 
 When you resize the window, the ribbon groups are converted  into _group button_ based on the window width.When you click the group button, the corresponding group items are displayed .The following screenshot displays the _Ribbon_ control when  clicking the group button _Actions_.
 
 
 
-{{ '![](Resize_images/Resize_img2.png)' | markdownify }}
-{:.image }
+![](Resize_images/Resize_img2.png)
+
 
 

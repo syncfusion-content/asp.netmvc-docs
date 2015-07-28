@@ -15,56 +15,49 @@ This section explains briefly about how to create a TagCloud in your ASP.NET MVC
 
 ASP.NET MVC TagCloud provides support to display a weighted list, where the weight of each item is reflected by the size of the item's text. TagCloud is rendered as a link and as you click it, you can drill into the selected category. Refer the following guidelines to create TagCloud scenario. This allows you to display a weighted list.
 
-
-
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 In the above screenshot, you can see the weighted list and a click on any item drills into the respective category.
 
-Create a TagCloud 
+## Create a TagCloud 
 
 Essential Studio ASP.NET MVC TagCloud widget has built-in features such as clicking on one of the sites in the TagCloud brings all relevant results only from the selected source. You can easily create the TagCloud widget element as follows.
 
 1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 2. Add the following code to the corresponding view page to render TagCloud.
 
+   ~~~ html
+
+		@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech Sites")
 
 
-
-
-[View]
-
-
-
-@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech Sites")
-
-
-
-
+   ~~~
+   {:.prettyprint }
 
 3. Add the following style to show the weighted list.
 
+   ~~~ html
 
+		<style type="text/css">
 
-<style type="text/css">
+			#tagEvents {
 
-        #tagEvents {
+				margin: 0 auto;
 
-            margin: 0 auto;
+			}
 
-        }
+		</style>
 
-    </style>
+   ~~~
+   {:.prettyprint }
 
-Set the Min and Max Font Size
+## Set the Min and Max Font Size
 
 Create the class for WebsiteCollection and define the necessary data members. Add the following code in WebsiteCollection.cs part.
 
 
-
-[Model]
+{% highlight c# %}
 
 // Define local data source elements with  fields            
 
@@ -80,15 +73,11 @@ public class WebsiteCollection
 
     }
 
-
+{% endhighlight %}
 
 You can set the minimum and maximum font size in frequency property by adding the following code example in the Controller.
 
-
-
-
-
-[Controller] 
+{% highlight c# %}
 
 //Refer the Model in the controller
 
@@ -146,19 +135,15 @@ public ActionResult Index()
 
 }
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+{% endhighlight %}
 
+![](Getting-Started_images/Getting-Started_img2.png)
 
-Set an event to perform operation
+## Set an event to perform operation
 
 You can perform the event operations like MouseOver, MouseOut and Click by adding the following code example inside View page.      
 
-
-
-[CSHTML]
-
-
+{% highlight html %}
 
 @Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("oncreate").MouseOver("onmouseover").MouseOut("onmouseout").Click("onclick"))
 
@@ -242,19 +227,8 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
     </script>
 
-
-
-
-
-
+{% endhighlight %}
 
 When you move the mouse to latest technology (weighted) list, it is denoted in Alert box. You can execute the above code to render the following output. 
 
-
-
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
-
-
-
-
+![](Getting-Started_images/Getting-Started_img3.png)

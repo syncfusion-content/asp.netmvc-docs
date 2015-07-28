@@ -7,39 +7,37 @@ control: Scroller
 documentation: ug
 ---
 
-## Scroller Styles
+# Scroller Styles
 
 The Essential ASP.NET MVCScroller control allows you to customize the look and function of scrollbars. You can vary it significantly by setting the scrollbar button size, scrollbar position, height and width of the Scroller control. This section describes you the custom styles to be used when creating Scroller.
 
-Button Size
+## Button Size
 
 In Scroller control, it allows you to customize the scroll arrows width and height. In horizontal scroller the ButtonSize customizes the top and down arrow and in vertical scroller the ButtonSize customizes the left and right arrow.
 
-Scroller Size
+## Scroller Size
 
 The ScrollerSize property is used to customize the scrollbar width and height. It is applicable for both horizontal and vertical scroller.
 
-Scroll Top
+## Scroll Top
 
 The ScrollerTop property is used to move the Scroller content and scrollbars in top position with the specified value. It is used for only vertical scroller.
 
-Scroll Left
+## Scroll Left
 
 The ScrollerLeft property is used to move the Scroller content and scrollbars in left position with the specified value. It is used for only horizontal scroller.
 
-Height
+## Height
 
 The Height property is used to set the height for Scroller outer wrapper.
 
-Width
+## Width
 
 The width property is used to set the Width for Scroller outer wrapper.
 
 In the View page, add the Scroller helper to configure Scroller widget.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
@@ -47,9 +45,9 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 <div id="scrollcontent">
 
-  <div>                              @*Wrapper div for Scroller.*@
+  <div> @*Wrapper div for Scroller.*@
 
-     <div id="innercontent">         @*Content div*@
+     <div id="innercontent"> @*Content div*@
 
         <h3>MVC </h3>
 
@@ -73,52 +71,40 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 </div>
 
-
-
 @{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).ScrollTop(10).ScrollLeft(20).ButtonSize(20).Render();}
 
-
-
-
+{% endhighlight %}
 
 1. Configure the styles 
 
 
-[CSS]
+   ~~~ html
+
+		<style type="text/css">
+	
+			#innercontent {
+
+			width: 400px;
+
+			padding: 15px;
+	
+			}
 
 
 
-<style type="text/css">
+			#scrollcontent {
 
+			border: 1px solid grey;
 
+			}
 
-    #innercontent {
+		</style>
 
-        width: 400px;
-
-        padding: 15px;
-
-    }
-
-
-
-    #scrollcontent {
-
-        border: 1px solid grey;
-
-    }
-
-
-
-</style>
-
-
+   ~~~
+   {:.prettyprint }
 
 The following screenshot displays the Scroller control with basic styles
 
-{{ '![C:/Users/labuser/Desktop/scroller.png](Scroller-Styles_images/Scroller-Styles_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/Desktop/scroller.png](Scroller-Styles_images/Scroller-Styles_img1.png)
 
-
-_Figure_ _5__: Scroller control rendered with basic styles_
-
+_Figure_ _5_: _Scroller control rendered with basic styles_

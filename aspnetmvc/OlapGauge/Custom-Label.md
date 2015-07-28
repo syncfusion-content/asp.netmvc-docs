@@ -7,21 +7,21 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-## Custom Label
+# Custom Label
 
 Custom label provides information about the members associated behind each OlapGauge. You can define multiple labels for OlapGauge and it can be positioned along X and Y co-ordinates based on location settings.
 
 
 
-{{ '![I:/OlapGuage/Gauge/Range size.png](Custom-Label_images/Custom-Label_img1.png)' | markdownify }}
-{:.image }
+![I:/OlapGuage/Gauge/Range size.png](Custom-Label_images/Custom-Label_img1.png)
 
 
-### Positioning the Custom Label
+
+## Positioning the Custom Label
 
 You can set the location of the custom label in circular gauge using “location” property. Refer the following code example.
 
-
+{% highlight html %}
 
 [MVC]
 
@@ -76,18 +76,18 @@ customLabel.Position(location => location.X(280).Y(390)).Add();
 })
 
 
+{% endhighlight  %}
+
+
+![](Custom-Label_images/Custom-Label_img2.png)
 
 
 
-{{ '![](Custom-Label_images/Custom-Label_img2.png)' | markdownify }}
-{:.image }
-
-
-### Font and Style Customization of Custom Label
+## Font and Style Customization of Custom Label
 
 You can customize the custom label font with fontstyle, font family, and size properties.
 
-
+{% highlight html %}
 
 [MVC]
 
@@ -141,11 +141,11 @@ You can customize the custom label font with fontstyle, font family, and size pr
 
 })
 
+{% endhighlight  %}
 
 
 
+![](Custom-Label_images/Custom-Label_img3.png)
 
-{{ '![](Custom-Label_images/Custom-Label_img3.png)' | markdownify }}
-{:.image }
 
 

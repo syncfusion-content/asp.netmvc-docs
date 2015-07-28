@@ -7,18 +7,18 @@ control: Menu
 documentation: ug
 ---
 
-## Orientation
+# Orientation
 
 It gets or sets the direction in which the Menu control renders and specifies the orientation of the normal menu.  According to the orientation property the Menu control renders in horizontal or vertical.
 
-Horizontal Menu
+## Horizontal Menu
 
 Horizontal orientation displays the menu items horizontally and it is the default orientation behavior of Menu control. 
 
 The following steps explains you the details on rendering the Menu control. 
 
 1. Add the below code in your view page to render the horizontal menu
-
+{% highlight html %}
 [CSHTML]    
 
 // In the CSHTML page, add the following code to configure Menu control.
@@ -98,18 +98,18 @@ The following steps explains you the details on rendering the Menu control.
 </div>
 
 
-
+{% endhighlight %}
 
 
 The following screenshot displays the output of the above code.        
 
-{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
-{:.image }
+![](Orientation_images/Orientation_img1.png)
 
 
-_Figure_ _16__: Horizontal Menu_
 
-Vertical Menu
+_Figure16: Horizontal Menu_
+
+## Vertical Menu
 
 You can also render Menu control in vertical direction using orientation.To set the vertical orientation of Menu control, replace the following script in the above sample code example.
 
@@ -117,7 +117,7 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -197,15 +197,15 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 </div>
 
-
+{% endhighlight  %}
 
 
 
 The following screen shot displays the output of the above code.                       
 
-{{ '![](Orientation_images/Orientation_img2.png)' | markdownify }}
-{:.image }
+![](Orientation_images/Orientation_img2.png)
 
 
-_Figure_ _17__: Vertical Menu_
+
+_Figure17: Vertical Menu_
 

@@ -7,16 +7,16 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-## Indicators
+# Indicators
 
 KPIs are displayed with Trend and Status visualizations that supports Traffic Light, Road Signs and Standard Arrow .Status and Trend values are highlighted through user friendly images__within the OlapGauge that is known as indicators.
 
-### Hiding Indicators
+## Hiding Indicators
 
 You can hide the Indicator by changing the “showIndicator” property to “false”.
 
 
-
+{% highlight html %}
 [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -71,11 +71,11 @@ You can hide the Indicator by changing the “showIndicator” property to “fa
 
 
 
+{% endhighlight  %}
 
 
 
+![](Indicators_images/Indicators_img1.png)
 
-{{ '![](Indicators_images/Indicators_img1.png)' | markdownify }}
-{:.image }
 
 

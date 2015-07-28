@@ -21,7 +21,6 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 {% highlight html %}
-[CSHTML]
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -52,7 +51,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 Execute the above code to render the following output.
 
-{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
+![](Miscellaneous_images/Miscellaneous_img1.png)
 
 
 
@@ -68,7 +67,6 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 {% highlight html %}
-[CSHTML]
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -100,7 +98,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 Execute the above code to render the following output.
 
-{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
+![](Miscellaneous_images/Miscellaneous_img2.png)
 
 
 

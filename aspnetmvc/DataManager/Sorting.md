@@ -7,14 +7,14 @@ control: DataManager
 documentation: ug
 ---
 
-## Sorting
+# Sorting
 
-Default 
+## Default 
 
 Sorting is basic query in the DataManager. It enables you to view the items or records in ascending or descending order based on a particular field and sorting direction. The query parameter of the DataManager enables you to retrieve the data in the sorted fashion and thus utilizing the resultant data obtained.
 
 
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -47,20 +47,20 @@ Sorting is basic query in the DataManager. It enables you to view the items or r
 
 )
 
-
+{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
 
 
-{{ '![](Sorting_images/Sorting_img1.png)' | markdownify }}
-{:.image }
+![](Sorting_images/Sorting_img1.png)
 
 
-SortByDesc
+
+## SortByDesc
 
 The sortByDesc query of the DataManager is used to sort the specified field in descending order, by default. You can use the following code example for sortByDesc query.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -93,20 +93,20 @@ The sortByDesc query of the DataManager is used to sort the specified field in d
 
 )
 
-
+{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
-{{ '![](Sorting_images/Sorting_img2.png)' | markdownify }}
-{:.image }
+![](Sorting_images/Sorting_img2.png)
 
 
-Dynamic sorting
+
+## Dynamic sorting
 
 The table can be dynamically sorted by using an external button click event. The value of the column to be sorted can be obtained by the sortBy query and thus the sorted data is retrieved and bounded to the table. The following code example illustrates you to dynamically sort the data source.
 
 
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -142,7 +142,8 @@ The table can be dynamically sorted by using an external button click event. The
 <input id="field" type="text" placeholder="fieldName" />
 
 @Html.EJ().Button("submit").Text("Sort").ClientSideEvents(e => { e.Click("onClick"); })
-
+{% endhighlight  %}
+{% highlight js %}
 <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -167,18 +168,18 @@ The table can be dynamically sorted by using an external button click event. The
 
     </script>
 
-
+{% endhighlight  %}
 
 Result of above code example is illustrated as follows.
 
-{{ '![](Sorting_images/Sorting_img3.png)' | markdownify }}
-{:.image }
+![](Sorting_images/Sorting_img3.png)
 
 
-Multi sorting
+
+## Multi sorting
 
 Multi sorting is a special technique, where you can sort multiple fields by adding multiple sorting queries to the DataManager.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -211,7 +212,7 @@ Multi sorting is a special technique, where you can sort multiple fields by addi
 
 )
 
-
+{% endhighlight  %}
 
 
 
@@ -219,7 +220,7 @@ Result of above code example is illustrated as follows.
 
 
 
-{{ '![](Sorting_images/Sorting_img4.png)' | markdownify }}
-{:.image }
+![](Sorting_images/Sorting_img4.png)
+
 
 
