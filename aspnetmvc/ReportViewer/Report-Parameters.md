@@ -7,19 +7,15 @@ control: ReportViewer
 documentation: ug
 ---
 
-## Report Parameters
+# Report Parameters
 
 The ReportViewer has support to add report parameters to ReportViewer at runtime. The ReportViewer has Parameters property that is the list of ReportParameter type to add collection of report parameters to it. You can add report parameters either through ReportViewer model when creating ReportViewer control or through Web API.
 
 The following code example illustrates how to add ReportParameter at control creation.
 
-
-
-
+{% highlight html %}
 
 [EJMVC]
-
-[CSHTML]
 
 @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportPath("InvoiceTemplate.rdl")
 
@@ -31,15 +27,12 @@ The following code example illustrates how to add ReportParameter at control cre
 
                   }))
 
-
-
-
+{% endhighlight %}
 
 The following code example illustrates how to add ReportParameter in Web API.
 
-[C#]
 
-
+{% highlight c# %}
 
 public class ReportsController : ApiController, IReportController
 
@@ -69,5 +62,4 @@ public class ReportsController : ApiController, IReportController
 
     }
 
-
-
+{% endhighlight %}

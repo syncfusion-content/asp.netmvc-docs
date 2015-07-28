@@ -7,23 +7,23 @@ control: ReportViewer
 documentation: ug
 ---
 
-## Report Controller
+# Report Controller
 
 The ReportViewer uses Web API services to process the report file, process the request from control, and to return the processed data to control. The Syncfusion.EJ.ReportViewer assembly has helper APIs to define the service actions and process the service requests. 
 
-IReportController
+## IReportController
 
 The interface IReportController has the declaration of action methods that is defined in WebApi Controller for processing the RDL/RDLC files and for processing request from ReportViewer control. The IReportController has the following action methods declaration. 
 
 
 
-_Table_ _1__: Report Controller methods_
+_Table_ _1_: _Report Controller methods_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 GetResource</td><td>
@@ -41,17 +41,18 @@ Report initialization method that is triggered when report begins to be processe
 OnReportLoaded</td><td>
 Report loaded method that is triggered when report and sub report begin loading.</td></tr>
 </table>
-ReportHelper
+
+## ReportHelper
 
 The class ReportHelper contains helper methods that helps process Post/Get request from ReportViewer control and returns the response to ReportViewer control. The ReportHelper has the following methods. 
 
-_Table_ _2__: Report Helper methods_
+_Table_ _2_: _Report Helper methods_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 GetResource</td><td>
@@ -63,9 +64,7 @@ Processes the report request and returns the result.</td></tr>
 </table>
 
 
-[C#]
-
-
+{% highlight c# %}
 
 public class ReportsController : ApiController, IReportController
 
@@ -154,6 +153,12 @@ public class ReportsController : ApiController, IReportController
         }
 
     }
+
+{% endhighlight %}
+
+
+
+
 
 
 

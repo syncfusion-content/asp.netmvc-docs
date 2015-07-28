@@ -7,63 +7,53 @@ control: TagCloud
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Minimum and maximum Font size
+## Minimum and maximum Font size
 
 The TagCloud content are set to different font sizes from minimum to maximum based on its frequency values. By default, MinFontSize is “10px” and MaxFontSize is “40px”, using these properties you can customize the minimum and maximum font sizes.
 
-Customizing font sizes of TagCloud
+### Customizing font sizes of TagCloud
 
 The following steps explains you on how to configure font sizes for a TagCloud.
 
 
-
-[CSHTML]   
-
-
+{% highlight c# %}
 
 @Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").MinFontSize("20px").MaxFontSize("50px")
 
+{% endhighlight %}   
 
 
 The following screenshot illustrates the TagCloud control with customized font sizes.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-Display Formats
+## Display Formats
 
 You can set the TagCloud content display format using Format property. The Format has two variant. By default Format is set to Cloud, which displays content in TagCloud. Another one format is as List to display the content in linear format.
 
-Defining Cloud and List format
+### Defining Cloud and List format
 
 The following steps explains you to configure format for a TagCloud.
 
 
-
-[CSHTML]
+{% highlight c# %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
-
-
 @Html.EJ().TagCloud("tagcloudformat").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.Cloud)
 
- @Html.EJ().TagCloud("tagCloudlist").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.List)
+@Html.EJ().TagCloud("tagCloudlist").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.List)
 
-
-
-
+{% endhighlight %}
 
 The following screenshot illustrates the TagCloud control with customized formats.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
-Theme
+## Theme
 
 You can control the style and appearance of TagCloud based on CSS classes. To apply styles to the TagCloud control, you can refer two files, ej.widgets.core.min.css and ej.theme.min.css. When you refer ej.widgets.all.min.css file, it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -84,65 +74,61 @@ By default, there are 12 themes support available for TagCloud control namely,
 
 
 
-CssClass
+## CssClass
 
 You can use the CssClass to customize the TagCloud appearance. Any of the CssClass properties can be used to modify look and feel of tag cloud based on the requirement. Define a CSS class as per requirement and assign the class name to CssClass property.
 
-Configure TagCloud using CSS class
+### Configure TagCloud using CSS class
 
 The following steps allows you to configure CssClass for TagCloud.
 
 1. In the View page, add thebelow script to configure TagCloud widget.
 
+   ~~~ html
+   
+		<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
-
-[CSHTML]
-
-<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
-
-
-
-@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").CssClass("CustomCss")
-
-
+		@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
+		.TagCloudFields(tag => tag.Text("Text").Url("Url")
+		.Frequency("Frequency")).Title("Tech sites")
+		.CssClass("CustomCss")
+		
+   ~~~
+   {:.prettyprint }
 
 2. Define CSS class for customizing the TagCloud widget.
 
+   ~~~ html
 
+		<style type="text/css" class="cssStyles">
 
-[CSS]
+			/* Customize the TagCloud div element */
 
-<style type="text/css" class="cssStyles">
+			.CustomCss
 
-        /* Customize the TagCloud div element */
+			{
 
-        .CustomCss
+				background-color: #DDC;
 
-        {
+				width: 400px;
 
-            background-color: #DDC;
+			}
+	
+			/* Customize the TagCloud header element */        
 
-            width: 400px;
+			.CustomCss .e-header.e-title {
 
-        }
+				text-align: center;
 
-        /* Customize the TagCloud header element */        
+				font-weight: bold;
 
-        .CustomCss .e-header.e-title {
+			}
 
-            text-align: center;
+		</style>
 
-            font-weight: bold;
-
-        }
-
-    </style>
-
-
+   ~~~
+   {:.prettyprint }
 
 The following screenshot illustrates the TagCloud with customized CSS class,
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
-
-
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
