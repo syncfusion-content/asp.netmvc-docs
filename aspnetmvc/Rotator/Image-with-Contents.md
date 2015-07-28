@@ -7,13 +7,11 @@ control: Rotator
 documentation: ug
 ---
 
-## Image with Contents 
+# Image with Contents 
 
 This feature allows you to add text along with the image in Rotator control. This is achieved by splitting the content into two panels. In the following code example, image is given in the left panel and text is given in the right panel.
 
-
-
-[CSHTML]           
+{% highlight html %}           
 
 @{Html.EJ().Rotator("sliderContent").Items(itemElement =>
 
@@ -151,11 +149,9 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
                        }).SlideWidth("700px").SlideHeight("300px").ShowPlayButton(true).Render();}
 
+{% endhighlight %}
 
-
-
-
-[CSS]
+{% highlight html %}
 
 <style type="text/css" class="cssStyles">
 
@@ -165,9 +161,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
     }
 
-
-
-        #sliderContent > li .leftPanel {
+    #sliderContent > li .leftPanel {
 
             float: left;
 
@@ -177,19 +171,15 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
             padding-right: 0px;
 
-        }
+    }
 
-
-
-            #sliderContent > li .leftPanel img {
+    #sliderContent > li .leftPanel img {
 
                 width: 700px;
 
                 height: 300px;
 
-            }
-
-
+    }
 
     #sliderContent .rightPanel {
 
@@ -213,23 +203,23 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-        #sliderContent .rightPanel.credit {
+    #sliderContent .rightPanel.credit {
 
             opacity: 0.6;
 
-        }
+    }
 
 
 
-        #sliderContent .rightPanel.blck {
+    #sliderContent .rightPanel.blck {
 
             background-color: black;
 
-        }
+    }
 
 
 
-            #sliderContent .rightPanel.blck li {
+    #sliderContent .rightPanel.blck li {
 
                 color: white;
 
@@ -237,21 +227,21 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
                 line-height: 2;
 
-            }
+    }
 
 
 
-            #sliderContent .rightPanel.blck .contentPanel {
+    #sliderContent .rightPanel.blck .contentPanel {
 
                 padding-top: 30px;
 
                 color: white;
 
-            }
+    }
 
 
 
-        #sliderContent .rightPanel .contentPanel {
+    #sliderContent .rightPanel .contentPanel {
 
             color: #000000;
 
@@ -265,11 +255,11 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
             position: relative;
 
-        }
+    }
 
 
 
-        #sliderContent .rightPanel li {
+    #sliderContent .rightPanel li {
 
             color: black;
 
@@ -277,21 +267,21 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
             line-height: 2;
 
-        }
+    }
 
 
 
-        #sliderContent .rightPanel.rightSide {
+    #sliderContent .rightPanel.rightSide {
 
             margin-left: 20px;
 
             background-color: black;
 
-        }
+    }
 
 
 
-            #sliderContent .rightPanel.rightSide li {
+    #sliderContent .rightPanel.rightSide li {
 
                 color: white;
 
@@ -299,17 +289,17 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
                 line-height: 2;
 
-            }
+    }
 
 
 
-            #sliderContent .rightPanel.rightSide .contentPanel {
+    #sliderContent .rightPanel.rightSide .contentPanel {
 
                 padding-top: 30px;
 
                 color: white;
 
-            }
+    }
 
 
 
@@ -321,135 +311,127 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 </style>
 
+{% endhighlight %}
 
+![](Image-with-Contents_images/Image-with-Contents_img1.png)
 
+## Display items
 
-
-{{ '![](Image-with-Contents_images/Image-with-Contents_img1.png)' | markdownify }}
-{:.image }
-
-
-Display items
-
-DisplayItemCount 
+### DisplayItemCount 
 
 This property specifies the number of Rotator Items to be displayed. The default value is ‘1’. The value set to this property is string or number.
 
 
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").DisplayItemCount("3")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
+.SlideHeight("350px").DisplayItemCount("3")
 
+{% endhighlight %}
 
+![](Image-with-Contents_images/Image-with-Contents_img2.png)
 
-
-
-{{ '![](Image-with-Contents_images/Image-with-Contents_img2.png)' | markdownify }}
-{:.image }
-
-
-NavigateSteps
+## NavigateSteps
 
 This property specifies the number of Rotator Items to navigate on a single click (next/previous/play buttons). The NavigateSteps property value must be less than or equal to the DisplayItemCount property value. The default value is ‘1’. The value set to this property is string or number.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").DisplayItemCount("2").NavigateSteps("2")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px").SlideHeight("350px")
+.DisplayItemCount("2").NavigateSteps("2")
 
+{% endhighlight %}
 
+![](Image-with-Contents_images/Image-with-Contents_img3.png)
 
-{{ '![](Image-with-Contents_images/Image-with-Contents_img3.png)' | markdownify }}
-{:.image }
-
-
-StartIndex
+## StartIndex
 
 This property sets the index of the slide that is displayed first. The default value is ‘0’. The value set to this property is string or number.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").StartIndex("4")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
+.SlideHeight("350px").StartIndex("4")
 
+{% endhighlight %}
 
+![](Image-with-Contents_images/Image-with-Contents_img4.png)
 
-
-
-
-
-__{{ '![](Image-with-Contents_images/Image-with-Contents_img4.png)' | markdownify }}
-{:.image }
-
-
-
-
-FrameSpace
+## FrameSpace
 
 This property sets the space between the Rotator Items.  The value set to this property is string or number.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").DisplayItemCount("2").FrameSpace("40px")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
+.SlideHeight("350px").DisplayItemCount("2").FrameSpace("40px")
 
-{{ '![](Image-with-Contents_images/Image-with-Contents_img5.png)' | markdownify }}
-{:.image }
+{% endhighlight %}
 
+![](Image-with-Contents_images/Image-with-Contents_img5.png)
 
-
-
-AnimationType 
+## AnimationType 
 
 AnimationType property specifies the Type of Animation for the Rotator Item. AnimationType options include slide, fastSlide, slowSlide, and other custom easing Animation Types. The default value is ‘slide’. The value set to this property is string. 
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").AnimationType("fastSlide")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px")
+.SlideHeight("350px")
+.AnimationType("fastSlide")
 
+{% endhighlight %}
 
-
-AnimationSpeed
+## AnimationSpeed
 
 This property sets the speed of slide transition. The default value of AnimationSpeed is ‘600’. The value set to this property is string or number.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").AnimationSpeed(2000)
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text")
+.Url("Url")).SlideWidth("600px")
+.SlideHeight("350px")
+.AnimationSpeed(2000)
 
+{% endhighlight %}
 
-
-Delay
+## Delay
 
 This property sets the delay between the Rotator Items to move after the slide transition. The default value is 500. The value set to this property is string or number.
 
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").Delay(2000)
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px")
+.SlideHeight("350px")
+.Delay(2000)
 
-Theme
+{% endhighlight %}
+
+## Theme
 
 Rotator control’s style and appearance are controlled based on CSSclasses. In order to apply styles to the Rotator control, you can refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these both. 
 
@@ -468,23 +450,25 @@ By default, there are 12 themes support available for Rotator control as follows
 * gradient-saffron
 * gradient-saffron-dark
 
-CssClass
+## CssClass
 
 This property is used to set rootclass for Rotator control theme. The value set to this property is string type.
 
-
-
-[CSHTML]
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").CssClass("mycss")
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px")
+.SlideHeight("350px")
+.CssClass("mycss")
 
-
+{% endhighlight %}
 
 Add the following code in your Css.
 
-[CSS]
+{% highlight html %}
 
 <style>
 
@@ -496,9 +480,9 @@ Add the following code in your Css.
 
 </style>
 
+{% endhighlight %}
 
-
-[CSS]
+{% highlight html %}
 
     <style type="text/css">
 
@@ -510,9 +494,6 @@ Add the following code in your Css.
 
     </style>
 
+{% endhighlight %}
 
-
-{{ '![](Image-with-Contents_images/Image-with-Contents_img6.png)' | markdownify }}
-{:.image }
-
-
+![](Image-with-Contents_images/Image-with-Contents_img6.png)

@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-## Summary 
+# Summary 
 
 Summary is a key feature of Grid that is used to aggregate a particular column. This is useful to analyse the details of a particular column. It has the following types:
 
@@ -17,7 +17,7 @@ Summary is a key feature of Grid that is used to aggregate a particular column. 
 * Minimum
 * Maximum
 * Custom
-### Default Summary
+## Default Summary
 
 
 There are some default summary types available for basic summary formula. The following code example is for Default Summary Types.
@@ -26,9 +26,7 @@ There are some default summary types available for basic summary formula. The fo
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
@@ -70,9 +68,9 @@ There are some default summary types available for basic summary formula. The fo
 
     )
 
+{% endhighlight %}
 
-
-[Controller]
+{% highlight C# %}
 
 
 
@@ -100,12 +98,12 @@ namespace SyncfusionMvcApplication3.Controllers
 
 }
 
+{% endhighlight %}
 
 
 
+![](Summary_images/Summary_img1.png)
 
-{{ '![](Summary_images/Summary_img1.png)' | markdownify }}
-{:.image }
 
 
 ### Custom Summary by String
@@ -114,9 +112,7 @@ This property helps you to create custom summary formula for summary. The follow
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -156,9 +152,9 @@ This property helps you to create custom summary formula for summary. The follow
 
     )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 
 
@@ -216,7 +212,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -224,8 +220,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Summary_images/Summary_img2.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img2.png)
+
 
 
 ### Custom Summary by Function
@@ -235,12 +231,7 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
 
 
-
-[MVC]
-
-
-
-[razor]
+{% highlight html %}
 
 
 
@@ -341,10 +332,10 @@ Custom Summary is used to create custom summary formula for summary. The followi
     </script>
 
 
+{% endhighlight %}
 
 
-
-[Controller]
+{% highlight C# %}
 
 
 
@@ -386,12 +377,12 @@ namespace MVCSampleBrowser.Controllers
 
 
 
+{% endhighlight %}
 
 
 
+![](Summary_images/Summary_img3.png)
 
-{{ '![](Summary_images/Summary_img3.png)' | markdownify }}
-{:.image }
 
 
 ### Group Summary
@@ -402,9 +393,7 @@ This property helps you to enable the group summary column in Grid. The followin
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -464,9 +453,9 @@ This property helps you to enable the group summary column in Grid. The followin
 
           )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -493,15 +482,15 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
+{% endhighlight %}
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Summary_images/Summary_img4.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img4.png)
+
 
 
 ### Caption Summary
@@ -512,9 +501,7 @@ This property is used to create Caption Summary column in Grid. The following co
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -575,8 +562,10 @@ This property is used to create Caption Summary column in Grid. The following co
           })
 
           )
+{% endhighlight %}
 
-[controller]
+
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -602,7 +591,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -610,7 +599,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Summary_images/Summary_img5.png)' | markdownify }}
-{:.image }
+![](Summary_images/Summary_img5.png)
+
 
 

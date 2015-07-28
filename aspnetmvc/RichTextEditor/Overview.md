@@ -11,13 +11,11 @@ documentation: ug
 
 RichTextEditor (RTE) control enables you to visually edit HTML content. It enables you to edit the contents with insert table and images, and can get the HTML content for the displayed content. A RichTextEditor control provides a toolbar that helps to apply rich text formats to the text entered in the text area.  
 
-Control structure
+## Control structure
 
-{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
-{:.image }
+![](Overview_images/Overview_img1.png)
 
-
-Key Feature
+### Key Feature
 
 1. ToolBar Support:-Provides the tool bar support, it’s also customizable.
    1. Formatting Tool – Left, right, center, and justify

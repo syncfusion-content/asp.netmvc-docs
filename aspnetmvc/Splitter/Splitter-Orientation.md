@@ -7,11 +7,11 @@ control: Splitter
 documentation: ug
 ---
 
-## Splitter Orientation
+# Splitter Orientation
 
 The Splitter supports both vertical and horizontal orientation of the pane. You can declare the orientation by using enum, ej.Orientation.Vertical or ej.Orientation.Horizontal, that have the corresponding value of vertical and horizontal as a string.
 
-Configure Splitter Orientation
+## Configure Splitter Orientation
 
  The following steps explain the implementation of Splitter orientation option.
 
@@ -21,7 +21,7 @@ Configure Splitter Orientation
 
 
 
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -65,19 +65,19 @@ Configure Splitter Orientation
 
     }).Render();}
 
-
+{% endhighlight %}
 
 The output for Splitter with ej.Orientation.Vertical.
 
-{{ '![](Splitter-Orientation_images/Splitter-Orientation_img1.png)' | markdownify }}
-{:.image }
+![](Splitter-Orientation_images/Splitter-Orientation_img1.png)
+
 
 
 The output for Splitter with ej.Orientation.Horizontal.
 
 
 
-{{ '![](Splitter-Orientation_images/Splitter-Orientation_img2.png)' | markdownify }}
-{:.image }
+![](Splitter-Orientation_images/Splitter-Orientation_img2.png)
+
 
 

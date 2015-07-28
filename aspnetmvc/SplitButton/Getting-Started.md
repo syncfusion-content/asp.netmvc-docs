@@ -24,16 +24,15 @@ Essential ASP.NET MVC Split Button control contains built-in features such as Cl
 
 
 {% highlight html %}
-[CSHTML]
 
 @Html.EJ().SplitButton("sbutton").Text("Save").ShowRoundedCorner(true).Size(ButtonSize.Large).TargetID("target")
 
-
+{% endhighlight %}
 
 3. Add the following <UL>, <LI> elements to render Split Button with popup option.
 
 
-
+{% highlight html %}
        <ul id="target">
 
             <li><span>Open</span></li>
@@ -50,7 +49,7 @@ Output of the above scripts,
 
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)
 
 
 

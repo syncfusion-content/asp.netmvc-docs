@@ -7,9 +7,9 @@ control: Progress Bar
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Adjusting ProgressBar size
+## Adjusting ProgressBar size
 
 ProgressBar widget provides the ability to change or adjust the ProgressBar size. The ‘Height’ and ‘Width’ properties in the ProgressBar widget allows you to set the maximum height and maximum width for the ProgressBar. The value set to this property is string or Number type.
 
@@ -21,25 +21,32 @@ The following steps explain you on how to adjust the ProgressBar size.
 
 
 
-<table>
-<tr>
-<td>
- [CSHTML]// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized size.@Html.EJ().ProgressBar("progressbar").Value(40).Height("40").Width("400")</td></tr>
-<tr>
-<td>
-[JavaScript]<script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});            });        </script></td></tr>
+
+ {% highlight html %}
+ // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized size.
+ @Html.EJ().ProgressBar("progressbar").Value(40).Height("40").Width("400")
+{% endhighlight %}
+{% highlight javascript %}
+<script>
+            var progress;
+            $(document).ready(function ()
+			{                
+			     progress = $("#progressbar").data("ejProgressBar");
+				 progress.setModel({ text: progress.getValue() + " %"});
+				 });        
+		</script></td></tr>
 </table>
 
-
+{% endhighlight %}
 
 
 The following screenshot displays the output.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proadjust.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proadjust.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-Custom text
+
+### Custom text
 
 Custom text is displayed when the ProgressBar shows different levels of progress in the ProgressBar. Support for Custom Text to mention the percentage or any other message inside the ProgressBar is possible.
 
@@ -49,7 +56,7 @@ The following steps explain the configuration of the Custom Text for the Progres
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized text.
 
@@ -61,11 +68,11 @@ The following steps explain the configuration of the Custom Text for the Progres
 
 
 
-The following screenshot displays the output.       {{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proloading.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+The following screenshot displays the output.       ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proloading.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
+{% endhighlight %}
 
-Theme
+### Theme
 
 The ProgressBar widget style and appearance are controlled based on CSS classes. In order to apply Theme to the ProgressBar widget, you can refer two files, namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these both. 
 
@@ -84,7 +91,7 @@ By default, there are 12 themes’ support available for the ProgressBar widget 
 * Gradient-saffron
 * Gradient-saffron-dark
 
-CSS class
+### CSS class
 
 To apply custom styles to the ProgressBar widget, you can specify the CssClass property. The specified CSS name is added in the root of the ProgressBar widget.
 
@@ -96,21 +103,27 @@ The following code example is used to render the ProgressBar widget with customi
 
 
 
-<table>
-<tr>
-<td>
-[CSHTML]// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized style.@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").CssClass("custom")</td></tr>
-<tr>
-<td>
-[JavaScript]   <script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});            });        </script></td></tr>
-</table>
+
+{% highlight html %}
+// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized style.
+@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").CssClass("custom")
+{% endhighlight %}
+
+{% highlight javascript %}
+   <script> 
+   var progress;
+   $(document).ready(function () {
+   progress = $("#progressbar").data("ejProgressBar");
+   progress.setModel({ text: progress.getValue() + " %"});
+   });       
+{% endhighlight %}
 
 
 
 
 2. Add the following styles to render the ProgressBar with customized style.
 
-[CSS]
+{% highlight html %}
 
 
 
@@ -126,11 +139,11 @@ The following code example is used to render the ProgressBar widget with customi
 
 </style>
 
-
+{% endhighlight %}
 
 The following screenshot displays the output.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+
 
 

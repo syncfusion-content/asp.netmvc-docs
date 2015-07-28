@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-## Gallery
+# Gallery
 
 The Ribbon control has _Gallery_ support. By using the _Gallery_in Ribbon, items are displayed with good look and feel and it also enables to classify the items as groups for easy navigation.Gallery can be included in the tabgroups.
 
@@ -25,14 +25,6 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
 
 {% highlight html %}
-
-
-
-[MVC]
-
-
-
-[CSHTML]
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -148,11 +140,11 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
 The following output is displayed as a result of the above code example.
 
-{{ '![](Gallery_images/Gallery_img1.png)' | markdownify }}
-{:.image }
+![](Gallery_images/Gallery_img1.png)
 
 
-{{ '![](Gallery_images/Gallery_img2.png)' | markdownify }}
-{:.image }
+
+![](Gallery_images/Gallery_img2.png)
+
 
 

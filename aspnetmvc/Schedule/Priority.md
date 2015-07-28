@@ -7,11 +7,12 @@ control: Schedule
 documentation: ug
 ---
 
-## Priority
+# Priority
 
 * This feature allows you to prioritize the appointments with various priority options each differentiated with its individual icons/images. 
 * You can also denote the priority of the appointments using this priority option and can specify your own user-defined priority collection.
-### Priority settings
+
+## Priority settings
 
 * The prioritySettings is an object collection that holds the priority related information. 
 * For example enable property enables/disables the priority value to be displayed.
@@ -22,25 +23,24 @@ documentation: ug
 
 The following are the sub-properties used within the prioritySettings.
 
-enable
+### enable
 
 * This option accepts either true or false, denoting whether to enable/disable the priority option.
 
-datasource 
+### datasource 
 
 * It either accepts the local JSON data or remote data for binding the priority related information.
 
-text
+### text
 
 * It holdsthe binding name for text field in the priority dataSource.
 
-id
+### id
 
 * It holds the binding name for id field in the priority dataSource.
 
 
-
-value
+### value
 
 * It holds the binding name for value field in the priority dataSource.
 
@@ -50,7 +50,7 @@ The following code example illustrates on how to render priority feature in the�
 
 
 
-[MVC-Razor]
+{% highlight html %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -88,27 +88,21 @@ The following code example illustrates on how to render priority feature in the�
 
 
 
-[Controller]
+{% highlight c# %}
 
 // Follow the code declared in Read only part
 
-
+{% endhighlight %}
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
 
-{{ '![C:/Users/karthigeyan/Desktop/p1.png](Priority_images/Priority_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/karthigeyan/Desktop/p1.png](Priority_images/Priority_img1.png)
 
 
-
-
-
-
-
-
-template
+### template
 
 * The Priority option can be customized based on the user- defined datasource. 
 * You need to mention the “template” value also while passing the user-defined datasource. 
@@ -119,7 +113,8 @@ The following code example illustrates on how to render priority feature with us
 
 
 
-[MVC-Razor]
+{% highlight html %}
+
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -157,7 +152,7 @@ The following code example illustrates on how to render priority feature with us
 
 
 
-[Controller]
+{% highlight c# %}
 
 
 
@@ -197,7 +192,8 @@ public string value { set; get; }
 
 // For appointment data follow the code declared in Read only part
 
-
+{% endhighlight %}
+{% endhighlight %}
 
 
 
@@ -208,14 +204,9 @@ public string value { set; get; }
 
 The following code example illustrates how to define the css style while using the template.
 
-
-
-
+{% highlight html %}
 
 // Her we are defining the style of the “custom priority icon”
-
-
-
 <style>
 
 .critical,
@@ -262,7 +253,7 @@ background-position: 2px;
 
 </style>
 
-
+{% endhighlight %}
 
 
 
@@ -270,7 +261,7 @@ background-position: 2px;
 
 
 
-[MVC- Razor]
+{% highlight html %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -312,7 +303,7 @@ background-position: 2px;
 
 
 
-[Controller]
+{% highlight c# %}
 
 
 
@@ -353,7 +344,8 @@ public string value { set; get; }
 // For appointment data follow the code declared in Read only part
 
 
-
+{% endhighlight %}
+{% endhighlight %}
 
 
 On excuting the above mentioned codes will render the same output as follows.
@@ -362,8 +354,7 @@ On excuting the above mentioned codes will render the same output as follows.
 
 
 
-{{ '![](Priority_images/Priority_img2.png)' | markdownify }}
-{:.image }
+![](Priority_images/Priority_img2.png)
 
 
 
@@ -372,8 +363,9 @@ On excuting the above mentioned codes will render the same output as follows.
 
 
 
-{{ '![](Priority_images/Priority_img3.png)' | markdownify }}
-{:.image }
+
+![](Priority_images/Priority_img3.png)
+
 
 
 

@@ -11,17 +11,7 @@ documentation: ug
 
 The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _ClientSideOnGroupExpand_.
 
-
-
-
-
 {% highlight html %}
-
-[MVC]
-
-
-
-[CSHTML]
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -217,7 +207,7 @@ content: "\e634";
 
 
 
-[Controller]
+{% highlight c# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -273,7 +263,7 @@ return View();
 
 }
 
-
+{% endhighlight %}
 
 {% endhighlight %}
 
@@ -283,7 +273,7 @@ return View();
 
 The following screenshot illustrates the group New with the group expander.
 
-{{ '![](Group-Expander_images/Group-Expander_img1.png)' | markdownify }}
-{:.image }
+![](Group-Expander_images/Group-Expander_img1.png)
+
 
 

@@ -19,7 +19,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 {% highlight html %}
-[CSHTML]
+
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -45,7 +45,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 
-{{ '![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^FBB9E285A6F3042DAB9B40116599699BB899EC45D623A2651A^pimgpsh_fullsize_distr.jpg](Dropdown-Button_images/Dropdown-Button_img1.png)' | markdownify }}
+![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^FBB9E285A6F3042DAB9B40116599699BB899EC45D623A2651A^pimgpsh_fullsize_distr.jpg](Dropdown-Button_images/Dropdown-Button_img1.png)
 
 
 

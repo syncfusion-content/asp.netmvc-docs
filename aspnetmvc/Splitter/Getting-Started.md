@@ -19,11 +19,11 @@ The following screenshot illustrates a Splitter control.
 
 
 
-{{ '![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img1.png)
 
 
-Create a Splitter
+
+## Create a Splitter
 
 Essential Studio ASP.NET MVC Splitter control has a built-in feature to split the display into horizontal and vertical order.
 
@@ -32,7 +32,7 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
 
 
-
+{% highlight html %}
 
 @{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
 
@@ -118,11 +118,11 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
     }).Height("400").Width("100%").Render();}
 
-
+{% endhighlight %}
 
 3. Add the following style in the view page to set the height and width of the Splitter.
 
-
+{% highlight html %}
 
         <style type="text/css" class="cssStyles">
 
@@ -157,13 +157,14 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
     }
 
 </style>
+{% endhighlight %}
 
-Configure Tree View
+##Configure Tree View
 
 Add the following code example in the corresponding view page. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string, object> to specify the HTML attributes. Please check the below code.
 
 
-
+{% highlight html %}
 
 
 @{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
@@ -208,13 +209,13 @@ Add the following code example in the corresponding view page. ‘HtmlAttributes
 
                 }).ClientSideEvents(e => e.NodeSelect("treeClicked"))
 
-Set Actions to Splitter control to view the image
+{% endhighlight %}
+
+## Set Actions to Splitter control to view the image
 
 Add the following code example in the view page to set action in Splitter control to view the image.
 
-
-
-
+{% highlight html %}
 
 <script type="text/javascript">
 
@@ -235,7 +236,7 @@ Add the following code example in the view page to set action in Splitter contro
 </script>
 
 
-
+{% endhighlight %}
 Execute the above code example to render the following output.
 
 
@@ -248,7 +249,7 @@ Execute the above code example to render the following output.
 
 
 
-{{ '![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img2.png)
+
 
 

@@ -7,11 +7,11 @@ control: Gantt
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
 You can customize the look and feel of the Gantt control by applying themes and formatting the schedule header.
 
-### Schedule Header Customization
+## Schedule Header Customization
 
 You can customize the week header format and day header format in the Schedule part of the Gantt control by using the following code example.
 
@@ -53,11 +53,11 @@ The following screenshot shows the customized format schedule header in Gantt co
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-### Taskbar Customization
+
+## Taskbar Customization
 
 You can customize the Taskbar based on the task information in Gantt control to highlight the task. The following code example shows how to customize the Taskbar in Gantt control.
 
@@ -139,11 +139,11 @@ The following screenshot shows the customized taskbar in Gantt control.
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
-### Themes
+
+## Themes
 
  You are provided the following twelve different themes in Gantt control.
 
@@ -205,7 +205,7 @@ You can apply the theme (Gradient lime) to the Gantt control by using the style 
 
 The following screenshot shows the Gantt control with Gradient-lime theme.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+
 
 
