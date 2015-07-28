@@ -7,17 +7,15 @@ control: Grid
 documentation: ug
 ---
 
-## Row
+# Row
 
-### Details Template
+## Details Template
 
 Details Template feature provides a detailed view about additional information of each row. If you want to view the detailed information, you can expand a row. To enable Details Template, used DetailsTemplate property of Grid as follows:
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -50,10 +48,10 @@ Details Template feature provides a detailed view about additional information o
    .DetailsTemplate("#tabGridContents") // detail template
 
  )
+{% endhighlight %}
 
 
-
-[controller]
+{% highlight C# %}
 
 
 
@@ -83,7 +81,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -93,8 +91,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img1.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img1.png)
+
 
 
 
@@ -107,9 +105,7 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -165,9 +161,9 @@ dataSource: data,
 
 </script>
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 
 
@@ -206,15 +202,15 @@ return View();
 }
 
 
-
+{% endhighlight %}
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img2.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img2.png)
+
 
 
 ### Row Template
@@ -223,9 +219,7 @@ RowTemplate is used to render your template in every row. It is used to place el
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -343,9 +337,9 @@ col.HeaderText("Employee Details").TextAlign(TextAlign.Left).Width(70).Add();
 
 )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 
 
@@ -380,15 +374,15 @@ return View();
 }
 
 
-
+{% endhighlight %}
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img3.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img3.png)
+
 
 
 ### Customize Hover and AltRow 
@@ -399,9 +393,7 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 
 
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -441,9 +433,9 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
     )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 
 
@@ -470,7 +462,7 @@ namespace MVCSampleBrowser.Controllers
     }
 
 }
-
+{% endhighlight %}
 
 
 
@@ -479,7 +471,7 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img4.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img4.png)
+
 
 

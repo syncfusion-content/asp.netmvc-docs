@@ -7,21 +7,17 @@ control: Grid
 documentation: ug
 ---
 
-## Data Binding
+# Data Binding
 
-### Local data
+## Local data
 
 The DataSource property is used to bind the List collection to grid.It is used to bind records in client-side using List collection that is mostly helpful in Single Page Application (SPA).
 
 
 
 
+{% highlight html %}
 
-[MVC]
-
-
-
- [razor]
 
 @( Html.EJ().Grid<Person>("FlatGrid")
 
@@ -41,9 +37,9 @@ The DataSource property is used to bind the List collection to grid.It is used t
 
         )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -75,7 +71,7 @@ List<Person> Persons = new List<Person>();
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -83,27 +79,23 @@ Result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img1.png)
 
 
-### Remote data
 
-#### oData Binding	
+## Remote data
+
+### oData Binding	
 
 oData is standardized protocol for creating and consuming data. You can retrieve data from oDataservice using DataManager. The following code is a simple example of remote data binding using oDataservice.
 
 
 
+{% highlight html %}
 
 
 
 
-[MVC]
-
-
-
-[razor]
 
 @( Html.EJ().Grid<object>("Grid")
 
@@ -128,33 +120,29 @@ oData is standardized protocol for creating and consuming data. You can retrieve
  )
 
 
-
+{% endhighlight %}
 
 
 The following output is the result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img2.png)
 
 
 
 
-> {{ '![](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
-{:.image }
-_Note: For information about DataManager with Grid check DataAdaptors concept._
 
-#### Load at once
+![](Data-Binding_images/Data-Binding_img3.png)
+
+Note: For information about DataManager with Grid check DataAdaptors concept.
+
+### Load at once
 
 Through this load at once technique, you can load all remote data from the server to the Grid and process records in client-side. To enable load at once technique, use the Offline property set as true. The following code example shows load at once with Grid.
 
-[MVC]
 
-
-
-[razor]
-
+{% highlight html %}
 
 
 @( Html.EJ().Grid<object>("Grid")
@@ -182,28 +170,25 @@ Through this load at once technique, you can load all remote data from the serve
  )
 
 
-
+{% endhighlight %}
 
 
 The following output is the result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img4.png)
 
 
-#### Load on demand
+
+### Load on demand
 
 Load on demand is a powerful technique that is used to reduce bandwidth size of consuming data. In Grid, you have support to use load on demand. In the following example, oDataservice is used. At load time, it retrieves required data from service, only for the visible page and not for all records. And if you move to another page, it loads for current page. You do not have to configure Grid to enable load on demand, since load on demand is enabled by default in Grid. The following code example shows you how load on demand works with Grid.
 
 
 
+{% highlight html %}
 
-
-[MVC]
-
-[razor]
 
 @(Html.EJ().Grid<object>("Grid")
 
@@ -231,7 +216,7 @@ Load on demand is a powerful technique that is used to reduce bandwidth size of 
 
 
 
-
+{% endhighlight %}
 
 
 
@@ -239,31 +224,26 @@ The following screenshot is the result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img5.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img5.png)
+
 
 
 If you have developer tools, you can capture network transfer to check Grid consumed data. The following screenshot shows demanded data being loaded in Grid.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img6.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img6.png)
 
 
-#### Cross domain
+
+### Cross domain
 
 Grid can use cross domain data service with the help of DataManager. You must configure the server as well, to retrieve data from server code. For server configuration, you can refer this link ([https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)). The following code example shows you how to use or retrieve cross domain data from Grid.
 
 
+{% highlight html %}
 
 
-
-[MVC]
-
-
-
-[razor]
 
 @(Html.EJ().Grid<object>("Grid")
 
@@ -288,30 +268,26 @@ Grid can use cross domain data service with the help of DataManager. You must co
  )
 
 
-
+{% endhighlight %}
 
 
 The following screenshot is the result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img7.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img7.png)
 
 
-#### HTTP additional parameters
+
+### HTTP additional parameters
 
 In this section, you can learn how to customize or add an extra parameter for HTTP request. You can add parameter to oDataserviceURL using the Query property in Grid. DataManager uses this Query internally in Grid.
 
 
 
+{% highlight html %}
 
 
-[MVC]
-
-
-
-[razor]
 
 @(Html.EJ().Grid<object>("Grid")
 
@@ -337,7 +313,7 @@ In this section, you can learn how to customize or add an extra parameter for HT
 
  )
 
-
+{% endhighlight %}
 
 
 
@@ -345,22 +321,18 @@ The following screenshot is the result of the above code example.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img8.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img8.png)
 
 
-#### Supported DataTypes
+
+### Supported DataTypes
 
 Grid supports various DataTypes are string, number, datetime and Boolean. By default, Grid reads DataTypes from Grid data source. Using these data types, Grid uses it at to edit, add, save, filter and other such operations. You can also customize these DataTypes through column property Type. It can override default data type reading.
 
 
 
-[MVC]
 
-
-
- [razor]
-
+{% highlight html %}
 
 
  @(Html.EJ().Grid<object>("Grid")
@@ -387,10 +359,9 @@ Grid supports various DataTypes are string, number, datetime and Boolean. By def
 
     )
 
+{% endhighlight %}
 
-
-[controller]
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -423,7 +394,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -433,8 +404,8 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
 
 
 
-[MVC]
 
+{% highlight html %}
 
 
 <script id="table1" type="text/template" >
@@ -588,12 +559,12 @@ Grid provides support to form Grid from HTML table. It is flexible to convert fr
           )
 
 
-
+{% endhighlight %}
 
 
 The following screenshot is the result of the above code example.
 
-{{ '![](Data-Binding_images/Data-Binding_img9.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img9.png)
+
 
 

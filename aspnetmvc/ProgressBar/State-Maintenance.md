@@ -16,24 +16,27 @@ The following steps explain the State Maintenance in the ProgressBar control.
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
 
+{% highlight html %}
+// Add the following code example to the corresponding CSHTML page to enable the state maintenance in the ProgressBar control.
+@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnablePersistence(true)
+{% endhighlight %}
 
-
-
-<table>
-<tr>
-<td>
-[CSHTML]// Add the following code example to the corresponding CSHTML page to enable the state maintenance in the ProgressBar control.@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnablePersistence(true)</td></tr>
-<tr>
-<td>
-[JavaScript]     <script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});          });     </script>        </td></tr>
-</table>
+{% highlight javascript %}
+<script>
+	var progress;
+	$(document).ready(function () {
+	progress = $("#progressbar").data("ejProgressBar");
+	progress.setModel({ text: progress.getValue() + " %"});
+	});
+</script>      
+{% endhighlight %}
 
 
 
 
 The following screenshot displays the output.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/propersis.PNG](State-Maintenance_images/State-Maintenance_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/propersis.PNG](State-Maintenance_images/State-Maintenance_img1.png)
+
 
 

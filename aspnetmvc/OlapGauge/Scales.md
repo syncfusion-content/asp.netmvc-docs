@@ -7,17 +7,17 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-## Scales
+# Scales
 
 Scale is a basic unit of radial gauge. You can customize the gauge scales by using properties such as radius, minimum, scale direction, interval values etc. 
 
-### Resizing the Scale Bar
+## Resizing the Scale Bar
 
 Radius of the Scale Bar is changed with the help of scaleRadius property and in order to make ScaleBar visible, set showScaleBar property to ‘true’. You can set size of the Scale Bar with the help of scaleBareSize and border width using scaleBorderWidth property. 
 
 
 
-
+{% highlight html %}
 
 [MVC]
 
@@ -77,9 +77,9 @@ Radius of the Scale Bar is changed with the help of scaleRadius property and in 
 
 
 
+{% endhighlight  %}
 
+![](Scales_images/Scales_img1.png)
 
-{{ '![](Scales_images/Scales_img1.png)' | markdownify }}
-{:.image }
 
 

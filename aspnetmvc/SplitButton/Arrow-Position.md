@@ -11,7 +11,7 @@ documentation: ug
 
 To provide a good look and feel for Split Button, position of arrow in Split Button is important. Using ArrowPosition property, you can easily customize the position of arrow inside Split Button without using any complex CSS. ArrowPosition property is applicable for both Split Button and Dropdown Button. This property represent the position of arrow with menu content.
 
-_Table_ _3_: List of arrow position_
+_Table_ _3_: List of arrow position
 
 <table>
 <tr>
@@ -41,7 +41,6 @@ The following steps explain you the details on rendering the Split Button with
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -94,12 +93,14 @@ The following steps explain you the details on rendering the Split Button with
     <li><span>Admin</span></li>
 
 </ul>
+
 {% endhighlight %}
+
 2. Execute the above code to render the following output.
 
 
 
-{{ '![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^C01B0D02455D95BBD327414D1C3C7167250FB1C68D0B3EFD4A^pimgpsh_fullsize_distr.jpg](Arrow-Position_images/Arrow-Position_img1.png)' | markdownify }}
+![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^C01B0D02455D95BBD327414D1C3C7167250FB1C68D0B3EFD4A^pimgpsh_fullsize_distr.jpg](Arrow-Position_images/Arrow-Position_img1.png)
 
 
 

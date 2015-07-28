@@ -7,7 +7,7 @@ control: Schedule
 documentation: ug
 ---
 
-## Categorize	
+# Categorize	
 
 * This feature allows you to differentiate the appointments with various categorize options and individual colors. You can also denote the status of the appointments using this categorize option and can specify your own user-defined category collection.
 
@@ -19,7 +19,8 @@ You can use the following code example to include the categorize option.
 
 
 
-[razor]
+{% highlight html %}
+
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -27,37 +28,39 @@ You can use the following code example to include the categorize option.
 
 )
 
-Categorize Settings
+{% endhighlight %}
+
+## Categorize Settings
 
 * The categorizeSettings is an object collection that holds the categorize related information such as the dataSource. It provides the collection of categorize values that are to be used in appointments, allowMultiple that enables/disables the multiple selection of categorize values and other mapper field names to bind the fields of the dataSource. 
 
 The following are the sub-properties used within the categorizeSettings.
 
-enable
+## enable
 
 * This option accepts either true or false, denoting whether to enable/disable the categorize option.
 
-allowMultiple
+## allowMultiple
 
 * This property enables or disables the multiple selection of categories in the appointment window. 
 
-dataSource
+## dataSource
 
 * It either accepts the local JSON data or remote data for binding the category related information. 
 
-text
+## text
 
 * It holdsthe binding name for text field in the categorize dataSource.
 
-id
+## id
 
 * It holds the binding name for id field in the categorize dataSource.
 
-color
+## color
 
 * It holds the binding name for color field in the categorize dataSource.
 
-fontColor
+## fontColor
 
 * It holds the binding name for fontcolor field in the categorize dataSource.
 
@@ -69,7 +72,8 @@ The following code example illustrates on how to render categorize feature in th
 
 
 
-[Razor]
+{% highlight html %}
+
 
 
 
@@ -104,10 +108,9 @@ The following code example illustrates on how to render categorize feature in th
 )
 
 
+{% endhighlight %}
 
-
-
-[controller]
+{% highlight c# %}
 
 public partial class ScheduleController : Controller
 
@@ -189,11 +192,11 @@ public string color { set; get; }
 
 }
 
-
+{% endhighlight %}
 
 The output of the above code is illustrated as follows.
 
-{{ '![C:/Users/hariprasanths/Desktop/imagess/123/Capture1.PNG](Categorize_images/Categorize_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/hariprasanths/Desktop/imagess/123/Capture1.PNG](Categorize_images/Categorize_img1.png)
+
 
 

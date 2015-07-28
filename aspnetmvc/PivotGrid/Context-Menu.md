@@ -7,14 +7,14 @@ control: PivotGrid
 documentation: ug
 ---
 
-## Context Menu
+# Context Menu
 
 Cell Context support in PivotGrid allows you to choose the right-click event to access each cell for any desired operation. CellContext is enabled by setting the enableCellContext property to ‘True’. The name of the event to trigger on right-clicking is stored in the cellContextEvent property. After enabling CellContext on right-clicking a cell, the event triggers. The information about the cell is carried through a parameter.
 
 The following code example illustrates how to create the PivotGrid control with the enabled CellContext. Here, the CellContext event displays a pop-up menu as follows.
 
 
-
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -24,10 +24,10 @@ The following code example illustrates how to create the PivotGrid control with 
 </td></tr>
 </table>
 
-
+{% endhighlight %}
 The output of the above code creates a PivotGrid with CellContext options as shown in the following screenshot.
 
-{{ '![](Context-Menu_images/Context-Menu_img1.png)' | markdownify }}
-{:.image }
+![](Context-Menu_images/Context-Menu_img1.png)
+
 
 

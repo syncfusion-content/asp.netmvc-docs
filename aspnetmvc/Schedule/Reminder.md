@@ -7,7 +7,7 @@ control: Schedule
 documentation: ug
 ---
 
-## Reminder
+# Reminder
 
 * Reminder option provides the list of reminder appointments and you can use those appointments for your own customized scenarios like displaying it as an end-user notification. To enable the reminder settings for the Schedule control, you can set the enable property as ‘true’ within the reminderSettings option. 
 * The reminderSettings option includes another optional property alertBefore that accepts integer value to denote the time before how long the reminder is notified to the user.
@@ -17,7 +17,7 @@ The following code example explains how to get the reminder list and display it 
 
 
 
-[Razor]
+{% highlight html %}
 
 
 
@@ -263,15 +263,15 @@ enabled: false
 
 </script>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
 
-{{ '![](Reminder_images/Reminder_img1.png)' | markdownify }}
-{:.image }
+![](Reminder_images/Reminder_img1.png)
 
 
-   _Figure_ _106__:  schedule with Reminder._
+
+   _Figure_ _106_:  schedule with Reminder.
 

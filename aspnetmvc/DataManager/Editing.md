@@ -7,14 +7,14 @@ control: DataManager
 documentation: ug
 ---
 
-## Editing
+# Editing
 
 Editing is a key feature in the DataManager and it provides support to add a new record, edit an existing record and remove a record from the table. Here, you can learn in detail how these operations are performed by using the DataManager.
 
-Batch Edit
+## Batch Edit
 
 Batch Editing is a unique feature, where requests to add, remove and change are handled altogether at a time rather than passing the request separately for each operation.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 
@@ -40,9 +40,10 @@ Batch Editing is a unique feature, where requests to add, remove and change are 
         })
 
 )
+{% endhighlight  %}
 
-Employee ID
-
+## Employee ID
+{% highlight html %}
 <input id="EmployeeID" class="e-ejinputtext" type="text" value="" />
 
 First Name
@@ -123,18 +124,19 @@ Last Name
 
 </asp:Content>
 
-
+{% endhighlight %}
 
 Result of the above code example is illustrated as follows.
 
-{{ '![](Editing_images/Editing_img1.png)' | markdownify }}
-{:.image }
+![](Editing_images/Editing_img1.png)
 
 
-Insert
+
+## Insert
 
 The insert method of the DataManager is used to add a new record to the table. The JSON data is passed as a parameter to the insert method that is inserted to the data source of the DataManager.
 
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Insert").ClientSideEvents(e => { e.Click("onClick"); })
@@ -160,7 +162,8 @@ The insert method of the DataManager is used to add a new record to the table. T
         })
 
 )
-
+{% endhighlight  %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -179,18 +182,18 @@ The insert method of the DataManager is used to add a new record to the table. T
 
     </script>
 
-
+{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
-{{ '![](Editing_images/Editing_img2.png)' | markdownify }}
-{:.image }
+![](Editing_images/Editing_img2.png)
 
 
-Update
+
+## Update
 
 The update method is used to update the modified changes made to a record in the data source of the DataManager.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })
@@ -217,8 +220,8 @@ The update method is used to update the modified changes made to a record in the
 
 )
 
-
-
+{% endhighlight %}
+{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -238,17 +241,17 @@ The update method is used to update the modified changes made to a record in the
     </script>
 
 
-
+{% endhighlight  %}
 Result of the above code example is illustrated as follows.
 
-{{ '![](Editing_images/Editing_img3.png)' | markdownify }}
-{:.image }
+![](Editing_images/Editing_img3.png)
 
 
-Remove
+
+## Remove
 
 The remove method is used to delete a record from the data source of the DataManager.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })
@@ -274,9 +277,9 @@ The remove method is used to delete a record from the data source of the DataMan
         })
 
 )
+{% endhighlight %}
 
-
-
+{% highlight js %}
 <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -295,11 +298,11 @@ The remove method is used to delete a record from the data source of the DataMan
 
     </script>
 
-
+{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
-{{ '![](Editing_images/Editing_img4.png)' | markdownify }}
-{:.image }
+![](Editing_images/Editing_img4.png)
+
 
 
