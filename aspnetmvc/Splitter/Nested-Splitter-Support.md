@@ -7,11 +7,11 @@ control: Splitter
 documentation: ug
 ---
 
-## Nested Splitter Support
+# Nested Splitter Support
 
 The Splitter provides nested pane support that allows you to add a pane between two pane elements.
 
-Configure Nested Splitter
+## Configure Nested Splitter
 
 The following steps explain the implementation of the “nestedsplitter”option.
 
@@ -21,7 +21,7 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 
 
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -123,9 +123,9 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 }
 
+{% endhighlight %}
 
-
-[CSS]
+{% highlight html %}
 
 
 
@@ -159,19 +159,13 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 
 
-
-
-
-
-
-
-
+{% endhighlight %}
 
 The output for nested Splitter.
 
 
 
-{{ '![](Nested-Splitter-Support_images/Nested-Splitter-Support_img1.png)' | markdownify }}
-{:.image }
+![](Nested-Splitter-Support_images/Nested-Splitter-Support_img1.png)
+
 
 

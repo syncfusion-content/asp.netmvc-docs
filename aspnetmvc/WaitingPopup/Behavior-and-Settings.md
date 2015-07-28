@@ -7,7 +7,7 @@ control: WaitingPopup
 documentation: ug
 ---
 
-## Behavior and Settings
+# Behavior and Settings
 
 Automatic Initializing WaitingPopup widget
 
@@ -18,10 +18,7 @@ The following steps explains you on how to display the WaitingPopup on page load
 1. In an VIEW page, add a helper element to render WaitingPopup widget.
 
 
-
-
-
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -32,14 +29,14 @@ The following steps explains you on how to display the WaitingPopup on page load
 </div>
 
 
-
+{% endhighlight %}
 
 
 2. Add the following styles to render WaitingPopup widget.
 
 
 
-[css]
+{% highlight css %}
 
 
 
@@ -55,17 +52,17 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 </style>
 
-
+{% endhighlight %}
 
 The following screenshot illustrates the WaitingPopup when ShowOnInit is set to “true”.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)
+
 
 
 _Figure 5: WaitingPopup with enabled showOnInit property_
 
-Enable / Disable Popup Indicator
+## Enable / Disable Popup Indicator
 
 You can show or hide the popup indicator of WaitingPopup widget using ShowImage property. By default, ShowImage property is set as true.
 
@@ -74,10 +71,7 @@ The following steps explains you to enable / disable popup indicator in WaitingP
 1. In the VIEW page, add a helper element to render WaitingPopup widget.
 
 
-
-
-
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -91,17 +85,18 @@ Enable popup indicator:
 
 </div>
 
-
+{% endhighlight %}
 
 Disable popup indicator:
 
+{% highlight html %}
 <div id="target">
 
    @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(false).Text("Loading... Please wait...")
 
 </div>
 
-
+{% endhighlight %}
 
 
 
@@ -109,7 +104,7 @@ Disable popup indicator:
 
 
 
-[css]
+{% highlight css %}
 
 
 
@@ -125,18 +120,18 @@ Disable popup indicator:
 
 </style>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)
+
 
 
 _Figure 6: Enabled popup indicator WaitingPopup widget_
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)
+
 
 
 _Figure 7: Disabled popup indicator WaitingPopup widget_
@@ -151,25 +146,33 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
 
 
-<table>
-<tr>
-<td>
-[CSHTML]<div id="target">    @Html.EJ().WaitingPopup("target").ShowOnInit(true)</div></td></tr>
-<tr>
-<td>
-[JavaScript]Show WaitingPopup:<script type="text/javascript">    var popUpObj;    $(function () {        $("#target").ejWaitingPopup();        popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.show();    });</script>Hide WaitingPopup:<script type="text/javascript">    var popUpObj    $(function () {        $("#target").ejWaitingPopup();         popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.hide();    });</script></td></tr>
-</table>
 
+{% highlight html %}
+<div id="target">
+    @Html.EJ().WaitingPopup("target").ShowOnInit(true)
+</div>
+{% endhighlight %}
 
-
+{% highlight javascript %}
+Show WaitingPopup:<script type="text/javascript">
+    var popUpObj;
+    $(function () {
+	$("#target").ejWaitingPopup();
+	popUpObj = $("#target").data("ejWaitingPopup");
+	popUpObj.show();
+    });
+	</script>Hide WaitingPopup:<script type="text/javascript">
+    var popUpObj    $(function () {
+	$("#target").ejWaitingPopup();
+	popUpObj = $("#target").data("ejWaitingPopup");
+	popUpObj.hide();
+    });
+	</script>
+{% endhighlight %}
 
 2. Add the following styles to render WaitingPopup widget.
 
-
-
-[css]
-
-
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -183,12 +186,12 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
 </style>
 
-
+{% endhighlight %}
 
 The following screenshot illustrates a WaitingPopup when Show() method is invoked.
 
-{{ '![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)' | markdownify }}
-{:.image }
+![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)
+
 
 
 _Figure 8: WaitingPopup with Show() method_

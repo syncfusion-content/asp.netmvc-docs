@@ -7,7 +7,7 @@ control: Slider
 documentation: ug
 ---
 
-## Keyboard Interaction
+# Keyboard Interaction
 
 You can use Keyboard shortcut keys as an alternative to the mouse for using the Slider widget. All options in the Slider can be accessed using keyboard shortcuts. The following table explains the keyboard shortcut keys and the operations that can be performed using the corresponding keys.
 
@@ -15,9 +15,9 @@ _List of Keyboard shortcuts_
 
 <table>
 <tr>
-<td>
-Shortcut Key</td><td>
-Description</td></tr>
+<th>
+Shortcut Key</th><th>
+Description</th></tr>
 <tr>
 <td>
 Alt + j</td><td>
@@ -43,13 +43,14 @@ Slider handle moves to the end value</td></tr>
 Esc</td><td>
 Focuses out from the Slider handle</td></tr>
 </table>
-Configure keyboard interaction
+
+## Configure keyboard interaction
 
 The following steps explains you on how to enable keyboard support in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Range Slider.
 
-[_cshtml]
+{% highlight html %}
 
 // Add this code in your view page
 
@@ -57,9 +58,9 @@ The following steps explains you on how to enable keyboard support in Slider.
 
     .Width("500").EnableRTL(true))
 
+{% endhighlight %}
 
-
-[JavaScript]  
+{% highlight javascript %}  
 
 
 
@@ -82,13 +83,13 @@ The following steps explains you on how to enable keyboard support in Slider.
     </script>
 
 
-
+{% endhighlight %}
 Run the sample and press, Alt + j keys to set focus in the Slider handle and you can handle the Slider operations using the keyboard shortcut keys.
 
 When clicked the Alt + J key, the slider was focused.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slikey.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slikey.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+
 
 
 _Slider with Keyboard Interaction._

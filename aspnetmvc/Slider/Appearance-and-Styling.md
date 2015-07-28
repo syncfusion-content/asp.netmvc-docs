@@ -7,7 +7,7 @@ control: Slider
 documentation: ug
 ---
 
-## Appearance and Styling	
+# Appearance and Styling	
 
 Slider widget looks sleek and enriched with good UI appearance. It is included with both metro (flat) theme and gradient theme support. Totally twelve inbuilt themes are provided including six flat themes and six gradient themes. The themes include three colour variations such as “Azure”, “Lime” and “Saffron”. The themes supported by the Slider widgets are as follows,
 
@@ -31,25 +31,37 @@ In order to apply different themes, you can refer the “ej.widgets.all.min.css�
 The following steps explains you on how to apply “flat-lime-dark” theme to the Slider widget
 
 1. In an VIEW page, specify the desired “ej.widgets.all.min.css” file to load the corresponding theme.
-<table>
-<tr>
-<td>
-<br>[_Layout.cshtml]//In _Layout page, specify the desired “ej.widgets.all.min.css” file to load the corresponding theme.<head>    <title>Slider</title>    <!--Flat-saffron theme-->    <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" />    <!--scripts-->        <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script></head></td><td>
-</td></tr>
-<tr>
-<td>
-[_cshtml]/ / Add this code in your view page    @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)    .ShowScale(true).SmallStep(5).LargeStep(20))    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")    .ShowScale(true).SmallStep(5).LargeStep(20))</td><td>
-</td></tr>
-</table>
+
+{% highlight html %}
+//In _Layout page, specify the desired
+ “ej.widgets.all.min.css” file to load the corresponding theme.
+ <head>
+ <title>Slider</title>
+ <!--Flat-saffron theme-->
+ <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" />
+ <!--scripts-->        <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js">
+ </script>
+ <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
+ <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>
+ <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script>
+ </head></td><td>
+{% endhighlight %}
+
+{% highlight html %}
+// Add this code in your view page
+    @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)    .ShowScale(true).SmallStep(5).LargeStep(20))
+    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")    .ShowScale(true).SmallStep(5).LargeStep(20))
+{% endhighlight %}
+
 
 
 Execute the above code example to render the following output.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlay.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlay.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
-Css Class
+
+## Css Class
 
 When you want to display the Slider widget in a different style based on the appearance of your application, you can use this CssClass property to apply custom theme for the Slider. Specify a class name as the value for CssClass property. The specified class is added to the wrapper of the Slider widget. Now, you can easily override the styles of the Slider widget by accessing the styles from the root level (using the cssclass specified).
 
@@ -57,7 +69,7 @@ The following steps explains you on how to configure the Slider with custom them
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
@@ -65,14 +77,14 @@ The following steps explains you on how to configure the Slider with custom them
 
     .Width("500").CssClass("purple"))
 
-
+{% endhighlight %}
 
 2. Include the “CssClass” value before each style of the Slider widget and customize the styles as follows.
 
 
 
 
-[CSS]
+{% highlight html %}
 
 
 
@@ -135,15 +147,15 @@ The following steps explains you on how to configure the Slider with custom them
   background-image: url(images/dot.png);
 
 }
-
+{% endhighlight %}
 
 Execute the above code example to render the following output.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
-Show Tooltip
+
+### Show Tooltip
 
 Slider displays the tooltip to indicate the current value when you click on the Slider handle. By default, Slider displays the tooltip. Using the ShowTooltip option you can enable or disable the Tooltip. Data type of this property is “boolean”.
 
@@ -151,19 +163,21 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Default Slider.
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").ShowTooltip(false))
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slitooltip.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
+{% endhighlight %}
+
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slitooltip.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 
 
 
-Show Rounded Corner
+
+### Show Rounded Corner
 
 This property is used to display the Slider and its handle with rounded corners. By default ShowRoundedCorner is in disabled state. Data type of this property is “Boolean”.
 
@@ -171,17 +185,17 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider”.
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").ShowRoundedCorner(true))
 
-
+{% endhighlight %}
 
 Execute the above code example to render the following output.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+
 
 

@@ -21,7 +21,6 @@ The following script explains you the details about rendering the Split Button w
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -48,11 +47,12 @@ The following script explains you the details about rendering the Split Button w
     </div>
 
 {% endhighlight %}
+
 Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-customization_images/Easy-customization_img1.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img1.png)
 
 
 
@@ -62,7 +62,7 @@ Execute the above code to render the following output.
 
 You can render the Split Button in different sizes by using Size property. The following table contains some predefined size option for rendering a Split Button in easiest way. Each size option has different height and width. Mainly it avoids the complexity in rendering Split Button with complex CSS class. 
 
-_Table_ _1_: List of Button size_
+_Table_ _1_: List of Button size
 
 <table>
 <tr>
@@ -96,7 +96,6 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -221,7 +220,7 @@ Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-customization_images/Easy-customization_img2.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img2.png)
 
 
 
@@ -229,7 +228,7 @@ Execute the above code to render the following output.
 
 The content of the Split Button is mainly rendered as text and images. Instead of using complex CSS classes to render Split Button with different content types, you can use some predefined content type options listed in the following table. Using this ContentType propertyyou can easily add different types of content for Split Button. Split Button supports the following content types.
 
-_Table_ _2_: List of content types_
+_Table_ _2_: List of content types
 
 <table>
 <tr>
@@ -283,11 +282,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
-
-
-
 {% highlight html %}
-[CSHTML]
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -396,7 +391,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 Execute the above code to render the following output.
 
-{{ '![](Easy-customization_images/Easy-customization_img3.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img3.png)
 
 
 
@@ -429,14 +424,9 @@ The following steps explains you the details on rendering the Split Button with 
 1. In the View page, add the following button elements to configure Split Button widget.
 
 
-
-
 {% highlight html %}
-[CSHTML]
-
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
-
 
 
     <div class="control">
@@ -641,7 +631,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 Execute the above code to render the following output.
 
-{{ '![](Easy-customization_images/Easy-customization_img4.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img4.png)
 
 
 
@@ -676,7 +666,6 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
@@ -782,13 +771,10 @@ The following steps explains you the details about rendering the Split Button wi
 
 {% endhighlight %}
 
-
-
 2. Configure the CSS styles to apply on buttons
 
 
 {% highlight html %}
-[CSS]
 
 <style type="text/css">
 
@@ -858,7 +844,7 @@ Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-customization_images/Easy-customization_img5.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img5.png)
 
 
 
