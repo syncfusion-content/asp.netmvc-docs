@@ -7,10 +7,10 @@ control: DataManager
 documentation: ug
 ---
 
-## Searching
+# Searching
 
 Searching is a basic query technique in the Data Manager. It is used to filter the records from the entire data source based on the search key parameter.
-
+{% highlight html %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -45,11 +45,11 @@ Searching is a basic query technique in the Data Manager. It is used to filter t
 
 
 
-
+{% endhighlight  %}
 
 Result of above code example is illustrated as follows.
 
-{{ '![](Searching_images/Searching_img1.png)' | markdownify }}
-{:.image }
+![](Searching_images/Searching_img1.png)
+
 
 
