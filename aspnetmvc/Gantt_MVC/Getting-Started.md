@@ -21,16 +21,16 @@ Gantt chart is used to edit and visualize project schedule and also to track pro
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 * Toolbar – It is a collection of toolbar buttons to add, edit, delete a task. You can outdent and indent a task using outdent and indent buttons. Following screen shot illustrates the function of each toolbar button,
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 * Search Textbox – It is used to search tasks, which contains the search string.
@@ -44,8 +44,8 @@ Gantt chart is used to edit and visualize project schedule and also to track pro
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 
 ### Create your Gantt chart
@@ -54,8 +54,8 @@ In this tutorial, you will learn how to create a simple Gantt chart, add tasks a
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
+
 
 
 1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) documentation to create new project and add necessary DLL’s and script files.
@@ -78,7 +78,7 @@ In this tutorial, you will learn how to create a simple Gantt chart, add tasks a
 
 
 
-{% highlight html %}
+{% highlight C# %}
 
 public class DefaultData
 
@@ -256,7 +256,7 @@ public class DefaultData
 
 4. Add the following code example in the Index.cshtml file to create a Gantt control in the View page, using the id of <div> element created initially.	
 
-
+{% highlight html %}
 
   <div id="GanttContainer" style="width: 100%; height: 100%">
 
@@ -292,16 +292,16 @@ public class DefaultData
 
 </div>
 
-
+{% endhighlight %}
 The following screen shot displays the Gantt.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
-Enable Toolbar
+
+##Enable Toolbar
 
 Gantt control contains the toolbar options to edit, search, expand and collapse all records, indent, outdent, delete, and add a task. You can enable toolbar using Toolbar option.
 
@@ -369,21 +369,21 @@ Gantt control contains the toolbar options to edit, search, expand and collapse 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img6.png)
 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img7.jpeg)' | markdownify }}
-{:.image }
-_Note:__add, edit, delete options are enabled when enabling the allowEditing, allowAdding, allowDelete in the edit Options._
 
-Enable sorting 
+![](Getting-Started_images/Getting-Started_img7.jpeg)
+
+Note: add, edit, delete options are enabled when enabling the allowEditing, allowAdding, allowDelete in the edit Options.
+
+##Enable sorting 
 
 Gantt control has the sorting functionality for arranging the tasks in ascending or descending based on the particular column.
 
-Multicolumn sorting:
+###Multicolumn sorting:
 
 Enable the multicolumn sorting in Gantt by setting AllowMultiSorting to “True”. You can sort multiple columns in Gantt by selecting the desired column header while holding the CTRL key.
 
@@ -474,15 +474,15 @@ The following screen shot displays the Gantt control with Enable Editing options
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
-{{ '![](Getting-Started_images/Getting-Started_img9.jpeg)' | markdownify }}
-{:.image }
-_Note: Both cellEditing and normal editing operations are performed through double click action._
 
-Enable Context Menu
+![](Getting-Started_images/Getting-Started_img9.jpeg)
+
+Note: Both cellEditing and normal editing operations are performed through double click action.
+
+##Enable Context Menu
 
 You can enable the context menu in Gantt by setting the EnableContextMenu to “True”.
 
@@ -510,11 +510,11 @@ The following screen shot displays Gantt chart with Enable Context menu option.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img10.png)
 
 
-Provide tasks relationship
+
+##Provide tasks relationship
 
 In Gantt control, you have the predecessor support to show the relationship between two different tasks.
 
@@ -564,17 +564,17 @@ The following screen shot displays the relationship between tasks.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img11.png)
 
 
-Provide Resources
+
+##Provide Resources
 
 In ASP.NET MVCGantt, you can display and assign the resource for each task. Create a collection of JSON object, which contains id and name of the resource and assign it to ResourceCollection option. Then, specify the field name for id and name of the resource in the resource collection to ResourceIdMapping and ResourceNameMapping properties. The name of the field which contains the actual resources assigned for a particular task in the DataSource is specified using ResourceInfoMapping.
 
 
 
-{% highlight html %}
+{% highlight C# %}
 
 public class ResourceListData
 
@@ -674,8 +674,8 @@ The following screen shot displays resource allocation for tasks in Gantt.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img12.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img12.png)
+
 
 
 This section explains briefly about the control structure and how to create a Gantt chart.
