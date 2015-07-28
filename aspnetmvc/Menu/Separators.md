@@ -7,13 +7,13 @@ control: Menu
 documentation: ug
 ---
 
-## Separators
+# Separators
 
 Menu can also contain separators that are horizontal bars between menu items. You cannot select a separator. Separators are somewhat similar to [borders](http://docs.oracle.com/javase/tutorial/uiswing/components/border.html), except that they are genuine components and, as such, are drawn inside a control, rather than around the edges of the Menu control. EnableSeparator is the property that is used to display the separators in the Menu control. It accepts the Boolean type value. Its default value is true. 
 
 1. Add the following code in your view page.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -95,21 +95,19 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 
 
-
+{% endhighlight %}
 
 The following screenshot displays the output for the above code sample.
 
-{{ '![](Separators_images/Separators_img1.png)' | markdownify }}
-{:.image }
+![](Separators_images/Separators_img1.png)
 
 
-_Figure_ _36__: Menu with Separators_
+
+_Figure36: Menu with Separators_
 
 2. Add the following codein your view page to display the Menu control without separator by setting EnableSeparator as false.
 
-
-
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -193,15 +191,15 @@ _Figure_ _36__: Menu with Separators_
 
 
 
-
+{% endhighlight %}
 
 
 
 The following screenshot displays the output for the above code. 
 
-{{ '![](Separators_images/Separators_img2.png)' | markdownify }}
-{:.image }
+![](Separators_images/Separators_img2.png)
 
 
-_Figure_ _37__: Menu without Separators_
+
+_Figure37: Menu without Separators_
 
