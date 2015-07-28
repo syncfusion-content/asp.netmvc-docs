@@ -7,11 +7,11 @@ control: Grid
 documentation: ug
 ---
 
-## Columns
+# Columns
 
 Colums are a key feature in Grid to define schema in a control based on datasource. It is useful to map field to datasource values.
 
-### Formatting
+## Formatting
 
 Formatting is used to convert data values to human readable formats using specific culture settings. In Grid, you have an option to format a particular column through the Format property. For more details about globalize.js, refer to the link ([https://github.com/jquery/globalize](https://github.com/jquery/globalize)). The following code example shows you how to use formatting in Grid.
 
@@ -19,10 +19,7 @@ Formatting is used to convert data values to human readable formats using specif
 
 
 
-[MVC]
-
-[razor]
-
+{% highlight html %}
 
 
 @(Html.EJ().Grid<object>("format")
@@ -48,10 +45,9 @@ Formatting is used to convert data values to human readable formats using specif
     )
 
 )
+{% endhighlight %}
 
-
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -96,27 +92,24 @@ public class GridController : Controller
 }
 
 
-
+{% endhighlight %}
 
 
 The following is the result of column formatting.
 
 
 
-{{ '![](Columns_images/Columns_img1.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img1.png)
 
 
-### Template
+
+## Template
 
 A Template is used to render a specific template to a particular column using Template and TemplateID property. These columns are not bound to Grid.
 
 
 
-[MVC]
-
-[razor]
-
+{% highlight html %}
 
 
 <script type="text/x-jsrender" id="columnTemplate">  <!--jsrender script-->
@@ -151,10 +144,9 @@ A Template is used to render a specific template to a particular column using Te
 
         )  
 
+{% endhighlight %}
 
-
-[controller]
-
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 
 {
@@ -183,7 +175,7 @@ namespace MVCSampleBrowser.Controllers
 
 }  
 
-
+{% endhighlight %}
 
 
 
@@ -191,21 +183,16 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img2.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img2.png)
 
 
-### Custom Attribute
+
+## Custom Attribute
 
 CustomAttributes are a powerful feature of Columns. This is used to modify the styles and appearance of a particular column.
 
 
-
-[MVC]
-
-
-
- [razor]
+{% highlight html %}
 
 <style>
 
@@ -245,10 +232,9 @@ CustomAttributes are a powerful feature of Columns. This is used to modify the s
 
         )
 
+{% endhighlight %}
 
-
-[controller]
-
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 
 {
@@ -279,7 +265,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -287,23 +273,18 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img3.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img3.png)
 
 
-### Read only
+
+## Read only
 
 AllowEditing enables you to edit a column, but it prevents the fields from showing it as editable. If you want to make a column as read-only then set AllowEditing as False for that column. The following code example shows Essential JavaScript Grid column as read-only.
 
 
 
 
-
-[MVC]
-
-
-
- [razor]
+{% highlight html %}
 
 
 
@@ -332,10 +313,9 @@ AllowEditing enables you to edit a column, but it prevents the fields from showi
            })
 
         )
+{% endhighlight %}
 
-
-
-[controller]
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -367,7 +347,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -377,19 +357,16 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img4.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img4.png)
 
 
-### Controlling Grid actions
+
+## Controlling Grid actions
 
 In Grid, you can control Grid actions through AllowSorting, AllowGrouping, AllowFiltering. The following code example shows you how to disable a particular column. The following example has controlled grouping action in CustomerID column, filtering in EmployeeID column and sorting in Freight column.
 
 
-
-[MVC]
-
-[razor]
+{% highlight html %}
 
 
 
@@ -427,10 +404,9 @@ In Grid, you can control Grid actions through AllowSorting, AllowGrouping, Allow
 
  )
 
+{% endhighlight %}
 
-
-[controller]
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -464,29 +440,24 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
+{% endhighlight %}
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img5.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img5.png)
 
 
-### Auto-generate column
+
+## Auto-generate column
 
 The columns are automatically generated from the datasource and you do not need specific column declarations. The following code example shows auto-generate column behavior with Grid.
 
 
 
-[MVC]
-
-
-
-[razor]
-
+{% highlight html%}
 
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -499,9 +470,9 @@ The columns are automatically generated from the datasource and you do not need 
 
 )
 
+{% endhighlight %}
 
-
-[controller]
+{% highlight C#%}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -531,7 +502,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -539,20 +510,17 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img6.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img6.png)
 
 
-### Foreign key columns
+
+## Foreign key columns
 
 Foreign key is a field in relational table. It matches the specific key columns of another table. 
 
 To enable the Foreing key field , use ForeignKeyField and ForeignKeyValue propertyof Grid as follows:
 
-[MVC]
-
-[razor]
-
+{% highlight html %}
 
 
  @(Html.EJ().Grid<OrdersView>("ForeignKey")
@@ -583,10 +551,10 @@ To enable the Foreing key field , use ForeignKeyField and ForeignKeyValue proper
 
         )
 
+{% endhighlight %}
 
 
-[controller]
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -621,7 +589,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -631,21 +599,18 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Columns_images/Columns_img7.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img7.png)
 
 
-### Cell Merging
+
+## Cell Merging
 
 Cell merging feature enables to merge cells based on your requirement. To enable cell merging , use AllowCellMerging property of Grid as follows.
 
 
+{% highlight html %}
 
 
-
-[MVC]
-
-[razor] 
 
 @(Html.EJ().Grid<MVCCellMerging.Models.Order>("FlatGrid")
 
@@ -700,10 +665,9 @@ function cellmerge(args) {
     	}
 
 </script>
+{% endhighlight %}
 
-[controller]
-
-
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -729,7 +693,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
@@ -739,23 +703,21 @@ Execute the above code to render the following output.
 
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img8.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img8.png)
 
 
-_Figure_ _25__: Cell Merging_
 
-### AutoWrap Column Cells
+_Figure 25: Cell Merging_
+
+## AutoWrap Column Cells
 
 AllowTextWrap feature allows you to wrap cell content to next line when the content exceeds the boundary of the Column cells. Use the following code example for Auto wrap in column cells.
 
 
 
+{% highlight html %}
 
 
-[MVC]
-
-[razor]
 
 @(Html.EJ().Grid<MVCAutowrap.Models.Order>("FlatGrid")
 
@@ -784,9 +746,9 @@ col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
         	}))
 
 
+{% endhighlight %}
 
-[controller]
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -812,7 +774,7 @@ namespace MVCSampleBrowser.Controllers
     }
 
 }
-
+{% endhighlight %}
 
 
 
@@ -821,23 +783,18 @@ namespace MVCSampleBrowser.Controllers
 
 Execute the above code to render the following output.
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img9.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/1.png](Columns_images/Columns_img9.png)
 
 
-### Column Chooser
+
+## Column Chooser
 
 Column Chooser is used to view or hide particular column. To enable column chooser, use ShowColumnChooser property of Grid as follows.
 
 
 
 
-
-[MVC]
-
-
-
-[razor]
+{% highlight html %}
 
 
 
@@ -866,13 +823,12 @@ Column Chooser is used to view or hide particular column. To enable column choos
         }))
 
 
+{% endhighlight %}
 
 
 
-[controller]
 
-
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -903,33 +859,28 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
+{% endhighlight %}
 
 
 
 Execute the above code to render the following output.
 
-{{ '![](Columns_images/Columns_img10.png)' | markdownify }}
-{:.image }
-
-
-_Figure_ _27__: Grid with Column chooser_
+![](Columns_images/Columns_img10.png)
 
 
 
-### DisableHtmlEncode
+_Figure 27: Grid with Column chooser_
+
+
+
+## DisableHtmlEncode
 
 DisableHtmlEncode property helps you show the encoded HTML view of Grid content and header elements. 
 
 The following code example shows you how to set disableHtmlEncode:
 
 
-
-[MVC]
-
-
-
-[razor]
+{% highlight html %}
 
   @(Html.EJ().Grid<object>("Grid")
 
@@ -953,11 +904,9 @@ The following code example shows you how to set disableHtmlEncode:
 
     Col.Field(“ShipCountry”).HeaderText(“Ship Country”).Add() 
 
+{% endhighlight %}
 
-
-[Controller]
-
-
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -982,25 +931,23 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 
 
-
+{% endhighlight %}
 
 
 The following output is displayed as a result of the above code example.
 
-{{ '![](Columns_images/Columns_img11.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img11.png)
 
 
-### Stacked Header
+
+## Stacked Header
 
 The Stacked Header feature allows additional header rows that span across the grid columns. Columns can be grouped under such headers. You can effectively group extensive data with the help of multilevel Stacked Headers as well. Enable the Stacked Header by setting the ShowStackedHeader property to true and set the stacked header row by using the StakedHeaderRows property. The Stacked Header feature also supports all other grid features including Grouping, Sorting, Filtering, Reordering, etc. 
 
 
 
-[MVC]
 
-[razor]
-
+{% highlight html %}
 
 
 @(Html.EJ().Grid<OrdersView>(“StackedHeaderGrid”)
@@ -1064,11 +1011,10 @@ The Stacked Header feature allows additional header rows that span across the gr
         }))
 
 
+{% endhighlight %}
 
 
-
-[Controller]
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -1098,16 +1044,14 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
+{% endhighlight %}
 
 
 
+![](Columns_images/Columns_img12.png)
 
 
-{{ '![](Columns_images/Columns_img12.png)' | markdownify }}
-{:.image }
+![](Columns_images/Columns_img13.png)
 
-
-{{ '![](Columns_images/Columns_img13.png)' | markdownify }}
-{:.image }
 
 

@@ -7,7 +7,7 @@ control: Gantt
 documentation: ug
 ---
 
-## Resources
+# Resources
 
 Resources are represented by staff, equipment and materials etc. In Gantt control you can show /allocate the resources (human resources) for each task. The following steps explain how to configure Gantt with Resources
 
@@ -23,7 +23,6 @@ Step 3: The name of the field, which contains the actual resources assigned for 
 
 {% highlight html %}
 
-CONTROLLER[CS]
 
 //..
 
@@ -71,7 +70,7 @@ ViewBag.resource = this.GetResources();
 
  #endregion  
 
-VIEW[MVC]
+
 
 
 
@@ -107,7 +106,7 @@ The following screenshot shows Gantt control with Resources.
 
 
 
-{{ '![](Resources_images/Resources_img1.png)' | markdownify }}
-{:.image }
+![](Resources_images/Resources_img1.png)
+
 
 

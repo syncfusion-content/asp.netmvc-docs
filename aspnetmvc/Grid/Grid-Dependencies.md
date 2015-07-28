@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-## Grid Dependencies
+# Grid Dependencies
 
 ej.web.all.js is a bundle of all EssentialJavaScript controls. If you use ej.web.all.js in your application, you can leave this section or else you can try to render grid in your application using ej.grid.min.js file. You can refer the following frameworks and controls in your project.
 
@@ -15,8 +15,8 @@ ej.web.all.js is a bundle of all EssentialJavaScript controls. If you use ej.web
 
 
 
-_Table_ _1__: Grid Dependency_ 
-
+_Table 1 : Grid Dependency_ 
+{% highlight html %}
 <table>
 <tr>
 <td>
@@ -81,4 +81,4 @@ ej.checkbox.min.js</td></tr>
 ej.editor.min.js</td></tr>
 </table>
 
-
+{% endhighlight %}

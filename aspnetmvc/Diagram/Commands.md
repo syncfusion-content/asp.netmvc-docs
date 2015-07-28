@@ -244,7 +244,7 @@ Clipboardcommands are used to cut, copy, and paste the selected elements on Diag
 * copy
 * paste
 
-Cut
+###Cut
 
 Cuts the selected elements from the Diagram to the Diagram’s clipboard. 
 
@@ -264,7 +264,7 @@ diagram.cut();
 
 {% endhighlight %}
 
-##Copy
+###Copy
 
 Copies the selected elements from the Diagram to the Diagram’s clipboard. 
 
@@ -284,7 +284,7 @@ diagram.copy();
 
 {% endhighlight %}
 
-##Paste
+###Paste
 
 Pastes the Diagram’s clipboard data (nodes/connectors) into the Diagram.
 
