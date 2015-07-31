@@ -11,7 +11,7 @@ documentation: ug
 
 Essential ASP.NET MVC CurrencyTextBox is used to display only currency values. It has Spin buttons to increase or decrease the values in the Text Box. 
 
-## Key Features
+Key Features
 
 * Min and Max Values—Specifies value range for the textbox.
 * Spin Buttons—Enable you to increase or decrease the current value in the textbox.

@@ -7,11 +7,11 @@ control: Dialog
 documentation: ug
 ---
 
-# AJAX Content
+## AJAX Content
 
 The Dialog provides AJAX content support where you can add the HTML content to the Dialog content. 
 
-## Configure AJAX Content
+Configure AJAX Content
 
 The following steps explains you the implementation of AJAX content in the Dialog control. 
 
@@ -21,7 +21,7 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-{% highlight html %}
+[CHTML]
 
 // In the CHTML page add the Dialog widget and set the ContentUrl from the file reference and set ContentType as ajax.
 
@@ -29,7 +29,7 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentUrl("../Content/Dialog/twitter.html").ContentType("ajax").Width(300).Height("200").Render();}
 
-{% endhighlight %}
+
 
 
 
@@ -37,7 +37,9 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-{% highlight html %}
+[twitter.html]
+
+
 
 <!DOCTYPE html>
 
@@ -217,14 +219,14 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 </html>
 
-{% endhighlight  %}
+
 
 
 
 3. The output of Dialog with AJAX content.
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)
-
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 1__7__: Dialog with “AJAX Content_                                                           

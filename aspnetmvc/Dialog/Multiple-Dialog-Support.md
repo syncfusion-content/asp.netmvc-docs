@@ -7,11 +7,11 @@ control: Dialog
 documentation: ug
 ---
 
-# Multiple Dialog Support
+## Multiple Dialog Support
 
 The Dialog supports multiple controls in the same web page. You can use more number of Dialog control with different content and different functionalities in the same web page.
 
-## Configure Multiple Dialog
+Configure Multiple Dialog
 
 The following steps explains the implementation of multiple Dialog in the same web page. 
 
@@ -21,7 +21,7 @@ The following steps explains the implementation of multiple Dialog in the same w
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page add the Dialog widgets using helpers and set the Position values. 
 
@@ -63,14 +63,14 @@ The following steps explains the implementation of multiple Dialog in the same w
 
         </div>).Position(p => p.XValue("500").YValue("407")).Render();}
 
-{% endhighlight %}
+
 
 
 
 2. The output of multiple Dialog control is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/multi.PNG](Multiple-Dialog-Support_images/Multiple-Dialog-Support_img1.png)
-
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/multi.PNG](Multiple-Dialog-Support_images/Multiple-Dialog-Support_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _18__: Multiple Dialog_                                                                                            
