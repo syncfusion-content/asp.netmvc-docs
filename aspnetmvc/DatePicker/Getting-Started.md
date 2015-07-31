@@ -19,9 +19,11 @@ The following screenshot illustrates the functionality of a date picker with dat
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
-### Create a DatePicker 
+
+Create a DatePicker 
 
 ASP.NET MVC DatePicker widget basically renders with built-in features such as keyboard navigation, other months navigation with animations and flexible API’s. You can easily create the DatePicker widget by using simple input textbox element as follows.
 
@@ -71,7 +73,7 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 3. Apply the given styles to show the DatePicker in the Horizontal order.
 
 
-{% highlight css %}
+
 
 
 <style type="text/css" class="cssStyles">
@@ -92,15 +94,17 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 
 </style>
 
-{% endhighlight %}
+
 
 By executing the above code samples, you can create two DatePicker widgets in a page as shown as follows.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
-### Set the Min and Max Date
+
+Set the Min and Max Date
 
 In the real time ticket booking scenario, the booking is open for limited number of days. You have to, select a date from the given range. This can be achieved by using the properties “MinDate” and “MaxDate”. In this way, only those dates ranging between the “MinDate” and “MaxDate” are enabled in the DatePicker.
 
@@ -150,9 +154,11 @@ The following screenshot shows the output of the above code example.
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
-### Set Event to Process the Min and Max Date Validations
+
+Set Event to Process the Min and Max Date Validations
 
 You can select the “onward journey date” in the first DatePicker and then the “Return journey date” in the second DatePicker. This validation process is done after the selection of “onward journey date” and the changes are reflected in the Return Date selection DatePicker. You can manipulate this process on the “Select” Event of Onward Date Selection DatePicker.
 
@@ -195,7 +201,7 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 
 
-{% highlight script %}
+
 <script type="text/javascript">
 
     function selectedStartDate(sender) {
@@ -220,7 +226,7 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 </script>
 
-{% endhighlight %}
+
 
 You can execute the above code and achieve the desired result. By selecting the onward journey date in the first DatePicker, you can select the Return Journey date within the given range. This restricts you from selecting the false date.
 
@@ -228,10 +234,12 @@ This scenario is illustrated in the following screenshot.
 
 
 
-![](Getting-Started_images/Getting-Started_img4.png)
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
-![](Getting-Started_images/Getting-Started_img5.png)
 
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 By using the min/max date range property, you can select a date within a given range as follows. 
 
 You can add additional functionalities like localization and date formats to the DatePicker.

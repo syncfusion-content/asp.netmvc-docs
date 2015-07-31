@@ -7,7 +7,7 @@ control: Toggle Button
 documentation: ug
 ---
 
-# Button types
+## Button types
 
 Toggle Button is used as normal clickable button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the Toggle Button in the following three types by using the Type property.
 
@@ -36,7 +36,8 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-{% highlight html %}
+
+[CSHTML]
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
@@ -85,12 +86,13 @@ The following steps explains you the details about rendering the Toggle Button w
     </div>
 
 
-{% endhighlight %}
+
 
 
 Execute the above code to render the following output.
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1589dc08.PNG](Button-types_images/Button-types_img1.png)
+{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1589dc08.PNG](Button-types_images/Button-types_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _17__: Types of Toggle button_

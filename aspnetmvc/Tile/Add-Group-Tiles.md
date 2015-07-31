@@ -7,15 +7,15 @@ control: Tile
 documentation: ug
 ---
 
-# Add Group Tiles
+## Add Group Tiles
 
 To make a Tile as grouped tile, you can use the following mentioned pre-defined classes.
 
 <table>
 <tr>
-<th>
-Class Name</th><h>
-Explanation</th></tr>
+<td>
+Class Name</td><td>
+Explanation</td></tr>
 <tr>
 <td>
 group</td><td>
@@ -33,7 +33,6 @@ To align the small size tiles</td></tr>
 
 To render group tile, refer to the following code example.
 
-{% highlight html %}
 
 
 <div class="group">
@@ -47,7 +46,7 @@ To render group tile, refer to the following code example.
 </div>
 
 
-{% endhighlight %}
+
 
 
 To render column grouped tile, you need to render the number of tiles inside a <div> element with class ‘column’. Then that column group element is appended to a <div> with class ‘group’.     
@@ -56,7 +55,7 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
  Refer the following code examples.
 
-{% highlight html %}
+
 
 <div class="group">
 
@@ -93,10 +92,10 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 </div>
 
 
-{% endhighlight %}
 
 
-![](Add-Group-Tiles_images/Add-Group-Tiles_img1.png)
 
+{{ '![](Add-Group-Tiles_images/Add-Group-Tiles_img1.png)' | markdownify }}
+{:.image }
 
 

@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Accessibility
+## Accessibility
 
 TreeView provides full keyboard support. You can interact with the TreeView control using the keyboard. It is compatible with the standard keyboard navigation and you can focus on TreeView with a predefined Alt and Key combination. Also, you can navigate through the nodes, expand or collapse, select, check and uncheck nodes with the provided shortcut keys. You can access the TreeView with the shortcut keys by using the AllowKeyboardNavigation property.
 
@@ -19,9 +19,9 @@ _Table_ _3__: Keyboard Shortcuts_
 
 <table>
 <tr>
-<th>
-Keys </th><th>
-Functions</th></tr>
+<td>
+Keys </td><td>
+Functions</td></tr>
 <tr>
 <td>
       Alt+j</td><td>
@@ -104,7 +104,9 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 2. Define CSS class for customizing the TreeView.
 
 
-{% highlight css %}
+
+[CSS]
+
 
 
 <style>
@@ -123,13 +125,15 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 
 </style>
 
-{% endhighlight %}
+
 
 The output for TreeView when AllowKeyboardNavigation is set to “True”.
 
 
 
-![](Accessibility_images/Accessibility_img1.png)
+{{ '![](Accessibility_images/Accessibility_img1.png)' | markdownify }}
+{:.image }
+
 
 _Figure_ _58__: TreeView with allowKeyboardNavigation_
 

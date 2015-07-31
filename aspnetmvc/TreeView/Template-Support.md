@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Template Support
+## Template Support
 
 TreeView supports Template option to reduce code. We can specify the template structrure in which the TreeView should be rendered. We can define the template using JSRender also. The look of the default tree elements are completely modified by creating a specific template, defining how an element is going to be rendered. 
 
@@ -15,7 +15,9 @@ The following steps explains how to reder the TreeView using Template.
 
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below
 
-{% highlight html %}
+
+
+[Model]
 
 // Define local data source elements with  fields            
 
@@ -43,13 +45,15 @@ public class template
 
 }
 
-{% endhighlight %}
+
 
 2.  In the controller page, create a List of specified class type and specify the DataSource to render the TreeView.
 
 
-{% highlight html %}
 
+
+
+[Controller]
 
 //Refer the Model in the controller
 
@@ -86,15 +90,18 @@ using <Applicationname>.Models;
          }
 
 
-{% endhighlight %}
+
 
 
 3. In the View page, define the template structure in which the TreeView has to be rendered. 
 > 
-
+{{ '![C:/Users/labuser/Desktop/note.jpg](Template-Support_images/Template-Support_img1.jpeg)' | markdownify }}
+{:.image }
 _Note: We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder._
 
-{% highlight html %}
+
+
+[View]
 
 <script id="treeTemplate" type="text/x-jsrender">
 
@@ -134,13 +141,13 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 </script>
 
-{% endhighlight %}
+
 
 
 
 4. Using the TreeView helper, specify the Datasource for the TreeView and map the corresponding fields. In the “Template” property specify the “id” of your template as shown below.
 
-{% highlight html %}
+[View]
 
 <div style="width: 280px">
 
@@ -148,11 +155,11 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 </div>
 
-{% endhighlight %}
+
 
 5. Add the following style to customize the appearance of the Template structure.
 
-{% highlight css %}
+[View]
 
 <style>
 
@@ -254,11 +261,11 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 </style>
 
-{% endhighlight %}
+
 
 6. Add the following script to delete the Tree nodes on clicking the delete icon.
 
-{% highlight html %}
+[View]
 
 <script type="text/javascript">
 
@@ -276,13 +283,14 @@ _Note: We need to include jsrender.js script file to use the following template.
 
 </script>
 
-{% endhighlight %}
+
 
 
 
 Output of the TreeView after specifying the Template structure.
 
-![](Template-Support_images/Template-Support_img2.png)
+{{ '![](Template-Support_images/Template-Support_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _53__: TreeView with Template_

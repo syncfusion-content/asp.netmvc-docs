@@ -7,7 +7,7 @@ control: Rating
 documentation: ug
 ---
 
-# Orientation
+## Orientation
 
 Rating provides support for Vertical orientation. By default Rating renders with Horizontal orientation. You can change the orientation by the Orientation property.
 
@@ -17,7 +17,7 @@ Add the following code in your view page to render the Rating with customizedOri
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized orientation.
 
@@ -44,14 +44,14 @@ Add the following code in your view page to render the Rating with customizedOri
     </table>
 
 </div>
-{% endhighlight %}
+
 
 
 
 
 The following screenshot illustrates the Rating with Vertical orientation.
 
-![](Orientation_images/Orientation_img1.png)
-
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
+{:.image }
 
 

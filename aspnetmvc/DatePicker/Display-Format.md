@@ -7,9 +7,9 @@ control: DatePicker
 documentation: ug
 ---
 
-# Display Format
+## Display Format
 
-## Date Format
+Date Format
 
 DateFormat defines a format or structure of the displayed date in the textbox. You can change the Date Format by using “DateFormat” property.
 
@@ -53,22 +53,23 @@ The following steps explain you how to set the date format as "d MM, y".
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
 
 @Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
 
-{% endhighlight %}
+
 
 2.  The following screenshot displays the output for the above code.
 
 
 
-![](Display-Format_images/Display-Format_img1.png)
+{{ '![](Display-Format_images/Display-Format_img1.png)' | markdownify }}
+{:.image }
 
 
-## Day header format
+Day header format
 
 It specifies the header format of days in short, long or min types. You can set the DatePickerdayheader format by using “DayHeaderFormat” property. By default “DayHeaderFormat” property is set as “ShowHeaderMin” in DatePicker widget. 
 
@@ -76,9 +77,9 @@ Enum for DatePicker startLevel and depthLevel
 
 <table>
 <tr>
-<th>
-Day header</th><th>
-Description</th></tr>
+<td>
+Day header</td><td>
+Description</td></tr>
 <tr>
 <td>
 ShowHeaderShort</td><td>
@@ -103,20 +104,24 @@ The following steps explain you how to get the DayHeaderFormat for DatePicker wi
 1. In the CSHTML page, add the following code to render the DatePicker widget with DayHeaderFormat.
 
 
-{% highlight html %}
+
+[CSHTML]
+
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
 
 @Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
-{% endhighlight %}
+
 
 
 2.  The following screenshot displays the output for the above code.
 
 
 
-![](Display-Format_images/Display-Format_img2.png)
+{{ '![](Display-Format_images/Display-Format_img2.png)' | markdownify }}
+{:.image }
 
-## Header format
+
+Header format
 
 It specifies the Header format to be displayed in the pop up of DatePicker. The header in the DatePicker popup is displayed in the specified format. By default “DayHeaderFormat” property is set as “MMMM yyyy” in DatePicker widget. 
 
@@ -127,15 +132,20 @@ The following steps explain you how to the header format to be displayed in the 
 1. In the CSHTML page, add the following code to render the DatePicker widget with header format.
 
 
-{% highlight html %}
+
+[CSHTML]
+
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
 
 @Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
 
-{% endhighlight %}
+
 
 2. The following screenshot displays the output for the above code.
 
 
 
-![](Display-Format_images/Display-Format_img3.png)
+{{ '![](Display-Format_images/Display-Format_img3.png)' | markdownify }}
+{:.image }
+
+

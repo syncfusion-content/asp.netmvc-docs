@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Drag and Drop
+## Drag and Drop
 
 You can Drag and Drop the nodes within the TreeView control or drag a particular node from one tree to another tree.
 
@@ -18,7 +18,8 @@ The following steps explain enabling the AllowDragAndDrop property for TreeView.
 1.	In the View page, add TreeView helper as shown below 
 
 
-{% highlight html %}
+
+[View]
 
 \\ To configure TreeView in the CSHTML page
 
@@ -93,7 +94,7 @@ The following steps explain enabling the AllowDragAndDrop property for TreeView.
 }).AllowDragAndDrop(true)
 
 
-{% endhighlight %}
+
 
 
 The output for TreeView when AllowDragAndDrop is set to True.
@@ -103,21 +104,24 @@ The output for TreeView when AllowDragAndDrop is set to True.
 <table>
 <tr>
 <td>
-{{ ' ![](Drag-and-Drop_images/Drag-and-Drop_img1.png)' | markdownfy }}
-
+![](Drag-and-Drop_images/Drag-and-Drop_img1.png)
+{:.image }
 </td><td>
-
-{{ '![](Drag-and-Drop_images/Drag-and-Drop_img2.png)' | markdownfy }}
-
+![](Drag-and-Drop_images/Drag-and-Drop_img2.png)
+{:.image }
 </td></tr>
 </table>
 _Figure_ _41__: Drag And Drop TreeView_
 
-## Allow Drop Child
+Allow Drop Child
 
 We can prevent the TreeNodes from dropping as child. If we specify the value as false for the AllowDropChild property means, then we can only reorder the Tree nodes, we cannot drop the nodes as child element. Refer the below code to disable the AllowDropChild property.
 
-{% highlight html %}
+
+
+
+
+[View]
 
     @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -191,18 +195,20 @@ We can prevent the TreeNodes from dropping as child. If we specify the value as 
 
     }).AllowDragAndDrop(true).AllowDropChild(false)
 
-{% endhighlight %}
 
 
 
- ## Allow Drop Sibling
+
+ Allow Drop Sibling
 
 You can drag the root node and drop it into the same level of node that is a sibling node in TreeView by using the property AllowDropSibling. You can disable this option using the property AllowDropSibling in TreeView control as follows.
 
 
 
 
-{% highlight html %}
+
+[View]
+
 
 
    @Html.EJ().TreeView("treeview").Items(items =>
@@ -279,5 +285,5 @@ You can drag the root node and drop it into the same level of node that is a sib
 
 
 
-{% endhighlight %}
+
 

@@ -7,13 +7,19 @@ control: TreeMap
 documentation: ug
 ---
 
-# DataBinding
+## DataBinding
 
 TreeMap control supports Data Binding and it can be achieved using DataSource property.
 
 The DataSource property accepts the collection values as input. For example, you can provide the list of objects as input. The following code illustrates you on how to bind a flat collection as datasource for TreeMap.
 
 {% highlight html %}
+
+ [MVC] 
+
+
+
+[CSHTML]
 
        @(Html.EJ().TreeMap("treemap")
 
@@ -25,9 +31,9 @@ The DataSource property accepts the collection values as input. For example, you
 
                 .Render())
 
-{% endhighlight %}
 
-{% highlight html %}
+
+[C#]
 
    public class TreeMapPopulationData
 

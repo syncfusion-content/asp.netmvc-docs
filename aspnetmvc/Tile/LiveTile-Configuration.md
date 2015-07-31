@@ -7,7 +7,7 @@ control: Tile
 documentation: ug
 ---
 
-# LiveTile Configuration
+## LiveTile Configuration
 
 Live Tiles are used to display the current or up to date information like scores, stocks, weather, etc. You can enable Live Tile using enabled property by setting it to true. Type property allows you to specify the type of animation while updating the information in Tile. There are three types of Tile animation supported: Flip, Slide and Carousel.
 
@@ -18,12 +18,11 @@ You can specify time interval for each Tile update/animation using UpdateInterva
 Refer to the following code examples.
 
 
-{% highlight html %}
+
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).Type(LiveTileType.Flip).UpdateInterval(2500).ImageUrl(new string[] { "http://js.syncfusion.com/UG/Web/Content/tile/people_1.png","http://js.syncfusion.com/UG/Web/Content/tile/people_2.png"}); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)                    
 
-{% endhighlight %}
 
 
 In ImageTemplateId property, you can give Live Tile images outside the Tile rendering. To achieve this, you are required to give image content inside the element where the path is specified by templateid. You can update the ImageTemplateId dynamically through updateTemplateID public method.
@@ -31,7 +30,7 @@ In ImageTemplateId property, you can give Live Tile images outside the Tile rend
 Refer to the following code examples. 
 
 
-{% highlight html %}
+
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).ImageTemplateId(new string[] { "temp1", "temp2" }); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)
@@ -46,14 +45,14 @@ Refer to the following code examples.
 
 </div>
 
-{% endhighlight %}
+
 
 You can specify the array of images for Live Tile through CSS classes by using ImageClass property and you can define the desired styles in the specified class.
 
 Refer to the following code examples.
 
 
-{% highlight html %}
+
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).ImageClass(new string[] { "people1", "people2" }); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)
@@ -76,6 +75,5 @@ Refer to the following code examples.
 
 </style>
 
-{% endhighlight %}
 
 

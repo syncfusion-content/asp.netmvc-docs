@@ -11,18 +11,19 @@ documentation: ug
 
 This section explains briefly about how to create a TreeMap in your application with ASP.NET MVC .
 
-## Configure a TreeMap
+Configure a TreeMap
 
 You can configure an MVC TreeMap in simple steps. This manual provides instructions on how to configure TreeMap with grouping of populated datum based on population growth in population in each continent.  It also provides a walk-through on some of the customization feature available in TreeMap control.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
-## Create a simple MVC Application
+Create a simple MVC Application
 
 You can create a new ASP.NET MVC project Razor application by adding the necessary dll's and scripts.
 
-## Add Data 
+Add Data 
 
 You can populate the TreeMap data inside the controller. For example, you can populate data of few countries from the following location.
 
@@ -98,7 +99,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 > _Note: Population data is referred from_ [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population)_._
 
-## Initialize TreeMap
+Initialize TreeMap
 
 1. Create a <div> tag with a specific id and set the height and width to determine the TreeMap size to be rendered in “TreeMap.cshtml” file
 {% highlight html %}
@@ -122,6 +123,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 {% highlight html %}
 
 
+[TreeMap.cshtml]
 
           <div style="width:700px; height:400px;"> 
 
@@ -145,6 +147,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 {% highlight c# %}
 
 
+[TreeMapController.cs]
 
  public ActionResult TreeMap()
 
@@ -160,17 +163,19 @@ return View();
 
 {% endhighlight %}
 
-## Data Source
+Data Source
 
 The DataSource property accepts the collection values as input. For example, you can provide the list of objects as input.
 
-## Weight Value Path 
+Weight Value Path 
 
 You can calculate the size of the object using WeightValuePath of TreeMap.
 
 1. Populate the TreeMap by using the above properties.
 {% highlight html %}
 
+
+[TreeMap.cshtml]
 
 @{
 
@@ -216,6 +221,7 @@ You can calculate the size of the object using WeightValuePath of TreeMap.
 {% highlight html %}
 
 
+[TreeMap.cshtml]
 
 @{
 
@@ -269,23 +275,27 @@ ej.widgets.all.min.js"></script>
 
 The following image displays a TreeMap with default properties using the above code. 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
-## GroupTreeMap Items using Levels
+
+GroupTreeMap Items using Levels
 
 You can group TreeMap Items using levels in TreeMap.
 
-### Group Path
+Group Path
 
 You can use GroupPath property for every flat level of the TreeMap control. It is a path to a field on the source object that serves as the “Group” for the level specified. You can group the data based on the GroupPath in the TreeMap control. When the GroupPath is not specified, then the items are not grouped and the data is displayed in the order specified in the DataSource.
 
-### Group Gap
+Group Gap
 
 You can use GroupGap property to separate the items from every flat level and to differentiate the levels mentioned in the TreeMap control.
 
 The following code sample explains how to group TreeMap Items using ‘Levels’
 
 {% highlight html %}
+
+[CSHTML]
 
 @(Html.EJ().TreeMap("treemap")
 
@@ -313,19 +323,23 @@ The following code sample explains how to group TreeMap Items using ‘Levels’
 
 The following screenshot displays grouping of TreeMapItems using Levels.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
-## Customize TreeMap Appearance by Range
+
+Customize TreeMap Appearance by Range
 
 You can differentiate the nodes based on its value and color ranges using Range color. You can also define the color value range using From and To properties. 
 
-### Color Value Path
+Color Value Path
 
 The ColorValuePath of TreeMap is a path to a field on the source object. You can determine the color for the object using ColorValuePath of TreeMap.
 
 The following code sample explains how to customize TreeMap Appearance by Range.
 
 {% highlight html %}
+
+[CSHTML] 
 
 @(Html.EJ().TreeMap("treemap")
 
@@ -369,19 +383,23 @@ The following code sample explains how to customize TreeMap Appearance by Range.
 
 The following screenshot displays customized TreeMap Appearance by Range
 
-![](Getting-Started_images/Getting-Started_img4.png)
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
-## Enable Tooltip
+
+Enable Tooltip
 
 You can enable the tooltip by setting ShowTooltip property to ‘true’. By default, it takes the property of the bound object that is referred in the WeightValuePath and displays its content when the corresponding node is hovered. You can customize the template for tooltip using TooltipTemplate property.
 
-### Leaf Item Settings
+Leaf Item Settings
 
 You can customize the Leaf level TreeMap items using LeafItemSettings. The Label and tooltip values take the property of bound object that is referred in the LabelPath when defined.
 
 The following code sample displays how the tooltip is enabled.
 
 {% highlight html %}
+
+[CSHTML]
 
       @(Html.EJ().TreeMap("treemap")
 
@@ -435,21 +453,25 @@ The following code sample displays how the tooltip is enabled.
 
 The following screenshot displays the TreeMap when the Tooltip is enabled.
 
-![](Getting-Started_images/Getting-Started_img5.png)
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
-## Legend
+
+Legend
 
 You can set the color value of leaf nodes using TreeMap Legend. This legend is appropriate only for the TreeMap whose leaf nodes are colored using RangeColorMapping.
 
 You can set ShowLegend property value to ‘_true_’ to make a Legend visible.
 
-### Label for Legend
+Label for Legend
 
 You can customize the labels of the legend item using LegendLabel property of RangeColorMapping. 
 
 The following code sample displays how to add labels for legend in a TreeMap.
 
 {% highlight html %}
+
+[CSHTML]
 
       @(Html.EJ().TreeMap("treemap")
 
@@ -505,5 +527,7 @@ The following code sample displays how to add labels for legend in a TreeMap.
 
 The following screenshot displays the TreeMap when Labels are enabled.
 
-![](Getting-Started_images/Getting-Started_img6.png)
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
+
 

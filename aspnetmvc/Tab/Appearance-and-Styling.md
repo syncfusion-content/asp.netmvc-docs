@@ -7,9 +7,9 @@ control: Tab Control
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## Header Image Customization
+Header Image Customization
 
  To set the Tab header image for each Tab item you need to specify image in “ImageCssClass” property during the TabItem declaration.
 
@@ -19,7 +19,7 @@ The following code example is used to add the header image for the root Tab head
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with header image.
 
@@ -49,13 +49,13 @@ The following code example is used to add the header image for the root Tab head
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. Add following CSS for header image customization.
 
-{% highlight css %}
+[CSS]
 
 <style type="text/css" class="cssStyles">
 
@@ -95,17 +95,15 @@ The following code example is used to add the header image for the root Tab head
 
 </style> 
 
-{% endhighlight %}
-
 3. The following screenshot illustrates the Tab with the customized header image. 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 12: Header Image Customization_
 
-## Rounded corner
+Rounded corner
 
 By enabling ‘ShowRoundedCorner’ property, you can customize the shape of the Tab widget from regular rectangular shape to rounded rectangle shape that is set to ‘false’ by default. 
 
@@ -115,7 +113,7 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with rounded corner.
 
@@ -141,18 +139,19 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
 </div>
 
-{% endhighlight %}
+
+
 
 
 2. The following screenshot illustrates the Tab with Rounded corner.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 13: Tab with rounded corner_
 
-## Enable/Disable
+Enable/Disable
 
 You can enable or disable the Tab widget by ‘Enabled’ property. By default, the property set to ‘true’.
 
@@ -162,7 +161,7 @@ The following code example is used to render the Tab widget with enable/disable.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with Enable/Disable format.
 
@@ -188,19 +187,19 @@ The following code example is used to render the Tab widget with enable/disable.
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the Tab with disabled format.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure 14: Tab with disabled format_
 
-## Enabling Reload Icon
+Enabling Reload Icon
 
 Without refresh/reload the whole page, you can reload a particular Tab using Reload icon. The Reload icon is appeared at right corner of the Tab by enabling the property ‘ShowReloadIcon’ to ‘true’. When you move cursor over the Tab headers, the Reload icon is displayed. By default the property value is set to ‘false’.   
 
@@ -210,7 +209,7 @@ The following code example is used to render the Tab widget with Reload icon.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with reload icon.
 
@@ -235,20 +234,20 @@ The following code example is used to render the Tab widget with Reload icon.
            }).ShowReloadIcon(true).Render();}
 
 </div>
-{% endhighlight %}
+
 
 
 2. The following screenshot illustrates the Tab with Reload icon.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
+{:.image }
 
 
 _Figure 15: Tab with reload icon_
 
 
 
-## Collapsible Tabs
+Collapsible Tabs
 
 You can collapse the Tab content by enabling the ‘Collapsible’ property to ‘true’. When the property is set to ‘true’ then click the active Tab header, the Tab contents are hided. By default, the property value is set to ‘false’.
 
@@ -258,7 +257,7 @@ The following code example is used to render the Tab widget with customized coll
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with collapsible mode.
 
@@ -281,22 +280,22 @@ The following code example is used to render the Tab widget with customized coll
            }).Collapsible(true).Render();}
 
 </div>
-{% endhighlight %}
+
 
 
 
 
 2. The following screenshot illustrates the Tab with customized collapsible mode.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
+{:.image }
 
 
 _Figure 16: Tab with customized collapsible mode_
 
-## Adjusting Tab Size
+Adjusting Tab Size
 
-### Height Adjust Mode and Height
+Height Adjust Mode and Height
 
 The height of the Tab widget is customized by ‘height’ property. The Tab widget height depends on ‘HeightAdjustMode’ property. Using the HeightAdjustMode property, you can adjust height by “Content”, “Auto”, “Fill”. By default the HeightAdjustMode is set as content.
 
@@ -306,7 +305,7 @@ The following code example is used to render the Tab widget with customized heig
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with customized height and height adjust mode.
 
@@ -332,21 +331,21 @@ The following code example is used to render the Tab widget with customized heig
 
 </div>
 
-{% endhighlight %}
 
 
 
 
 2. The following screenshot illustrates the Tab with customized height and height adjust mode.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
+{:.image }
 
 
 _Figure 17: Tab with customized height and height adjust mode_
 
 
 
-### Width
+Width
 
 The width of the Tab widget is customized by using ‘Width’ property that accepts only the pixel values.
 
@@ -356,7 +355,7 @@ The following code example is used to render the Tab widget with customized widt
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with customized width.
 
@@ -382,18 +381,19 @@ The following code example is used to render the Tab widget with customized widt
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the Tab with customized width.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
+{:.image }
 
 
 _Figure 18: Tab with customized width_
 
-### Theme
+Theme
 
 Tab control’s style and appearance are controlled based on CSS classes. In order to apply styles to the Tab control, you can refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -413,7 +413,7 @@ By default, there are 13 themes support available for Tab control namely
 * gradient-saffron
 * gradient-saffron-dark
 
-### Custom styles
+Custom styles
 
 The style of the Tab widget is customized by ‘CssClass’ property. 
 
@@ -423,7 +423,7 @@ The following code example is used to render the Tab widget with customized styl
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with customized style.
 
@@ -452,12 +452,12 @@ The following code example is used to render the Tab widget with customized styl
 
 
 
-{% endhighlight %}
+
 
 
 2. Add the following styles
 
-{% highlight css %}
+[CSS]
 
 <style type="text/css">
 
@@ -469,12 +469,10 @@ The following code example is used to render the Tab widget with customized styl
 
     </style>
 
-{% endhighlight %}
-
 3. The following screenshot illustrates the Tab with customized style.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
+{:.image }
 
 
 _Figure 19: Tab with customized style_

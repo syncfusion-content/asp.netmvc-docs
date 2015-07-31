@@ -7,7 +7,7 @@ control: Tab Control
 documentation: ug
 ---
 
-# RTL Support
+## RTL Support
 
 Tab control provides support for load contents in right to left format. This is achieved by setting ‘EnableRTL’ property to “true”.
 
@@ -17,7 +17,7 @@ The following code example is used to render the Tab element in RTL format.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab in Rtl format.
 
@@ -47,12 +47,13 @@ The following code example is used to render the Tab element in RTL format.
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the Tab with RTL format.
 
-![](RTL-Support_images/RTL-Support_img1.png)
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
 
 

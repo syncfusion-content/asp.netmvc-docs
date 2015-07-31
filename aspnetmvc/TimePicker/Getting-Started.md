@@ -15,15 +15,15 @@ This section explains briefly about how to create a TimePicker in your applicati
 
 Essential MVCTimePicker provides support to display the time in your webpage and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
 
-![](Getting-Started_images/Getting-Started_img1.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
 The above screenshot illustrates the functionality of a TimePicker, with a time range from morning to evening. You can select the time to book a table ranging from 9.00 AM to 10.00 PM in the current day. This avoids selecting a time prior to that day.
 
 
 
-### Create a TimePicker
+Create a TimePicker
 
 Essential MVC TimePicker widget has built-in features such as keyboard navigation, other time navigation with animations, and flexible APIs. You can easily create the TimePicker widget using simple TimePicker element as follows.
 
@@ -32,7 +32,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -103,12 +103,10 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 </table>
 
 
-{% endhighlight %}
 
 3.   Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
 
-{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -132,12 +130,11 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 </style>
 
-{% endhighlight %}
 
 
 4.  Add the following code to the Layout page for DatePicker and TimePicker initialization.
 
-{% highlight JS %}
+
 
 <script type="text/javascript">
 
@@ -151,12 +148,12 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 </script>
 
-{% endhighlight %}
+__
 
 5. The following screenshot displays the output for the above code.
 
-![](Getting-Started_images/Getting-Started_img2.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
 
@@ -165,11 +162,11 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
-
-### Set Min and Max Date
+Set Min and Max Date
 
 In a real-time scenario, the booking is open only for a limited time. You can select a date and time from the given range using the properties MinDate, MinTime and MaxDate, MaxTime that enables only the dates and times ranging between the MinDate, MinTime and MaxDate, MaxTime in the DatePicker and TimePicker.
 
@@ -177,7 +174,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -261,12 +258,11 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 </table>
 
-{% endhighlight %}
+
 
 2.  Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
 
-{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -287,16 +283,14 @@ In a real-time scenario, the booking is open only for a limited time. You can se
         display: inline-block;
 
     }
-	
 
 </style>
 
-{% endhighlight %}
 
 
 3.  Add the following code to the Layout page for DatePicker and TimePicker initialization.
 
-{% highlight JS %}
+
 
 <script type="text/javascript">
 
@@ -320,14 +314,12 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 </script>
 
-{% endhighlight %}
-
-
+__
 
 4. The following screenshot displays the output for the above code. 
 
-![](Getting-Started_images/Getting-Started_img4.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
 
 
@@ -336,20 +328,19 @@ You can select the Start time in the first TimePicker and select the End time wi
 
 
 
-![](Getting-Started_images/Getting-Started_img5.png)
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
 
-![](Getting-Started_images/Getting-Started_img6.png)
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
 
 
-
-### Display Reserved Time 
+Display Reserved Time 
 
 An acknowledgement message appears when you click the Submit button. 
 
 You can specify the alert message in the script as follows.
-
-{% highlight JS %}
 
 <script type="text/javascript">
 
@@ -383,10 +374,9 @@ You can specify the alert message in the script as follows.
 
 </script>
 
-{% endhighlight %}
 
 
-![](Getting-Started_images/Getting-Started_img7.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
+{:.image }
 
 

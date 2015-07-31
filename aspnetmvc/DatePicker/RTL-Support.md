@@ -7,7 +7,7 @@ control: DatePicker
 documentation: ug
 ---
 
-# RTL Support
+## RTL Support
 
 Right-to-left starts from the right of the page and continues to the left. By default, this option is set to “false” in the DatePicker widget. 
 
@@ -17,16 +17,17 @@ The following steps explain you how to enable the EnableRTL property of the Date
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with right to left direction*@
 
 @Html.EJ().DatePicker("datePicker").EnableRTL(true)
 
-{% endhighlight %}
+
 
 2.  The following screenshot displays the output for the above code.
 
-![](RTL-Support_images/RTL-Support_img1.png)
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
 
 

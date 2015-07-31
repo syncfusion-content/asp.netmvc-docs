@@ -7,7 +7,7 @@ control: DatePicker
 documentation: ug
 ---
 
-# Dates in Other Month
+## Dates in Other Month
 
 Dates from the previous and next month are showed in DatePicker calendar. 
 
@@ -20,15 +20,18 @@ The following steps explain you how to get the current month date alone.
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight html %}
+
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with current month date alone*@
 
 @Html.EJ().DatePicker("datePicker").ShowOtherMonths(false)
 
-{% endhighlight %}
+
 
 2.  The following screenshot displays the output for the above code.
 
-![](Dates-in-Other-Month_images/Dates-in-Other-Month_img1.png)
+{{ '![](Dates-in-Other-Month_images/Dates-in-Other-Month_img1.png)' | markdownify }}
+{:.image }
+
 

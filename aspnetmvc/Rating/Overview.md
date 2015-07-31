@@ -11,7 +11,7 @@ documentation: ug
 
 Essential Studio ASP.NET MVC Rating control provides an intuitive Rating experience that enables you to select a number of stars representing a Rating. You can configure the item size, orientation and the number of displayed items in the Rating control. You can also customize the Rating star image by using custom CSS.
 
-## Key Features
+Key Features
 
 Some important features of the Rating control are as follows:
 

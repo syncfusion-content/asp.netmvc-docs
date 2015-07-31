@@ -7,7 +7,7 @@ control: TreeMap
 documentation: ug
 ---
 
-# Layout
+## Layout
 
 You can decide on the visual representation of nodes belonging to all the treemap levels using the ItemsLayoutMode property of the TreeMap.
 
@@ -18,11 +18,15 @@ There are four different TreeMap layouts such as
 * SliceAndDiceHorizontal Layout
 * SliceAndDiceVertical Layout
 
-## Squarified Layout
+Squarified Layout
 
 Squarifiedlayout creates rectangles with best aspect ratio.
 
 {% highlight html %}
+
+[MVC]
+
+[CSHTML]
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -52,13 +56,19 @@ Squarifiedlayout creates rectangles with best aspect ratio.
 
 
 
-![](Layout_images/Layout_img1.png)
+{{ '![](Layout_images/Layout_img1.png)' | markdownify }}
+{:.image }
 
-## SliceAndDiceAuto Layout
+
+SliceAndDiceAuto Layout
 
 SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
 
 {% highlight html %}
+
+ [MVC]
+
+[CSHTML]
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -78,13 +88,19 @@ SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays t
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Layout_images/Layout_img2.png)
+{{ '![C:/Users/ApoorvahR/Desktop/1.png](Layout_images/Layout_img2.png)' | markdownify }}
+{:.image }
 
-## SliceAndDiceHorizontal Layout
+
+SliceAndDiceHorizontal Layout
 
 SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and displays them sorted horizontally.
 
 {% highlight html %}
+
+[MVC]
+
+[CSHTML]
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -102,13 +118,19 @@ SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and disp
 
 
 
-![](Layout_images/Layout_img3.png)
+{{ '![](Layout_images/Layout_img3.png)' | markdownify }}
+{:.image }
 
-## SliceAndDiceVertical Layout
+
+SliceAndDiceVertical Layout
 
 SliceAndDiceVertical layout creates rectangles with high aspect ratio and displays them sorted vertical.
 
 {% highlight html %}
+
+[MVC]
+
+[CSHTML]
 
          @(Html.EJ().TreeMap("treemap")
 
@@ -128,5 +150,7 @@ SliceAndDiceVertical layout creates rectangles with high aspect ratio and displa
 
 
 
-![](Layout_images/Layout_img4.png)
+{{ '![](Layout_images/Layout_img4.png)' | markdownify }}
+{:.image }
+
 

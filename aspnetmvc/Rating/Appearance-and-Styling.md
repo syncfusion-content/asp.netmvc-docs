@@ -7,9 +7,9 @@ control: Rating
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## Show ToolTip
+Show ToolTip
 
 Rating control provides support for Tooltip values. This is achieved by enabling the ShowTooltip property to True. When you move the mouse over the Rating control, it displays the Tooltip value as ratingvalue. By default, this property value is set to True.
 
@@ -19,7 +19,7 @@ The following code example is used to render the Rating control without tooltip.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating without Tooltip
 
@@ -44,7 +44,7 @@ The following code example is used to render the Rating control without tooltip.
     </table>
 
 </div>
-{% endhighlight %}
+
 
 
 
@@ -53,13 +53,13 @@ The following screenshot illustrates Rating without Tooltip.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
+### Adjusting Rating Size
 
-## Adjusting Rating Size
-
-### Adjust Shape Width and Shape Height
+Adjust Shape Width and Shape Height
 
 You can customize the width and height of the Rating by ShapeWidth and ShapeHeight properties. These properties completely depend on rating image’s size. The ShapeWidth and ShapeHeight are adjusted within the rating image size.
 
@@ -71,7 +71,7 @@ Add the following code in your view page to render the Rating with customized Sh
 
 
 
-{% highlight html %}
+ [CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized ShapeWidth and ShapeHeight.
 
@@ -100,14 +100,14 @@ Add the following code in your view page to render the Rating with customized Sh
 </div>
 
 
-{% endhighlight %}
+
 
 
 Add the following styles.
 
 
 
-{% highlight css %}
+[CSS]
 
 <style type="text/css">
 
@@ -176,17 +176,16 @@ margin-left: 2px;
 </style>
 
 
-{% endhighlight %}
 
 The following screenshot illustrates Rating with customized ShapeWidth and ShapeHeight.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 
-
-### Theme
+Theme
 
 Rating control’s style and appearance are controlled based on CSS classes. In order to apply styles to the Rating control, refer to 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these both. 
 
@@ -205,7 +204,7 @@ By default, there are 12 themes support available for Rating control namely:
 * gradient-saffron
 * gradient-saffron-dark
 
-### Custom styles
+Custom styles
 
 The style of the Rating control is customized by CssClass property. 
 
@@ -215,7 +214,7 @@ Add the following HTML to render the Rating with customized style. In this, hove
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized styles.
 
@@ -244,14 +243,14 @@ Add the following HTML to render the Rating with customized style. In this, hove
 </div>
 
 
-{% endhighlight %}
+
 
 
 Add the following styles.
 
 
 
-{% highlight css %}
+[CSS]
 
 <style type="text/css">
 
@@ -339,7 +338,7 @@ Add the following styles.
 
 </style>
 
-{% endhighlight %}
+
 
 
 
@@ -347,7 +346,7 @@ The following screenshot illustrates the Rating with customized style.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 

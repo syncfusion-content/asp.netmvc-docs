@@ -7,9 +7,9 @@ control: Tab Control
 documentation: ug
 ---
 
-# Behavior Settings
+## Behavior Settings
 
-## Close Button
+Close Button
 
 By default, Tab contents are rendered without CloseButton. You can add the CloseButton by setting the ‘ShowCloseButton’ property to ‘true’. When you move cursor over the Tab headers, the CloseButton is displayed.   
 
@@ -19,7 +19,7 @@ The following code example is used to render the Tab widget with CloseButton.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with close button.
 
@@ -45,16 +45,17 @@ The following code example is used to render the Tab widget with CloseButton.
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the Tab with CloseButton. 
 
-![](Behavior-Settings_images/Behavior-Settings_img1.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
+{:.image }
 
 
-## Orientation
+Orientation
 
 By default, Tab control renders in horizontal orientation. You can change the Orientation to vertical using the ‘HeaderPosition’ property. Using  this property, you can customize the header by ” Top”,” Bottom”, “Left”, and  “Right”.
 
@@ -64,7 +65,7 @@ The following code example is used to render the sub Tab widget in the vertical 
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with customized orientation.
 
@@ -88,17 +89,17 @@ The following code example is used to render the sub Tab widget in the vertical 
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the sub Tab with vertical orientation. 
 
-![](Behavior-Settings_images/Behavior-Settings_img2.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## State Maintenance
+State Maintenance
 
 When the page gets refreshed or reloaded, the Tab state is changed (i.e.) the focus is moved to start Tab. You can maintain the state of the Tab by using ‘EnablePersistence’ property. When this property is set to ‘true’, it retains the state. 
 
@@ -108,7 +109,7 @@ The following code example is used to render the Tab widget with state maintenan
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Tab with state maintenance.
 
@@ -132,21 +133,21 @@ The following code example is used to render the Tab widget with state maintenan
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 2. The following screenshot illustrates the Tab with Statemaintenance.
 
-![](Behavior-Settings_images/Behavior-Settings_img3.png)
-
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _10__: State before page refresh_
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img4.png)
-
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
+{:.image }
 
 

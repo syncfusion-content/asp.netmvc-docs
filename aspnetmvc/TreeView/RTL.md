@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# RTL
+## RTL
 
 TreeView supports right-to-left layout and the node text is displayed in the RTL languages. Arabic and Hebrew are languages written from right to left. When you desire to change the display of TreeView as right to left direction, you can do so by using the EnableRTL property. To enable or disable this option, set the appropriate value for the EnableRTL property. When EnableRTL is enabled, the appearance of the TreeView is displayed in the right to left direction. You can display the TreeView as right to left direction by using this feature.
 
@@ -16,9 +16,10 @@ The following steps explain enabling the EnableRTL property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight html %}
 
 
+
+[View]
 
 \\ To configure TreeView in the CSHTML page
 
@@ -92,7 +93,7 @@ The following steps explain enabling the EnableRTL property for TreeView.
 
 }).EnableRTL(true)
 
-{% endhighlight %}
+
 
 
 
@@ -100,7 +101,8 @@ The output for TreeView when EnableRTL is set to “True” is as follows.
 
 
 
-![](RTL_images/RTL_img1.png)
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 54: TreeView with EnableRTL_

@@ -7,9 +7,9 @@ control: TreeView
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## Css Class
+Css Class
 
 Sets the root class for TreeView theme. This CssClassAPI helps you to use custom skinning option for TreeView control. By defining the root class using this API, you can include this root class in CSS.
 
@@ -17,7 +17,11 @@ The following steps explain enabling the CssClass property for TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight html %}
+
+
+
+
+[View]
 
 \\ To configure TreeView in the CSHTML page.
 
@@ -93,13 +97,15 @@ The following steps explain enabling the CssClass property for TreeView.
 
                 }).CssClass("customCss")
 
-{% endhighlight %}
+
 
 
 
 2. Define CSS class for customizing the TreeView.
 
-{% highlight css %}
+
+
+[CSS]
 
     .customCss .e-treeview {
 
@@ -116,7 +122,7 @@ The following steps explain enabling the CssClass property for TreeView.
     }
 
 
-{% endhighlight %}
+
 
 
 
@@ -127,15 +133,17 @@ The following screenshot displays the TreeView component, configured based on CS
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
+
 
 _Figure_ _59__: TreeView based on CSS class_
 
-## Adjusting TreeView Size
+Adjusting TreeView Size
 
 You can adjust the TreeView size, height and width, by using the properties Width and Height.
 
-### Height
+Height
 
 You can customize the Height of the TreeView control by using the height property.
 
@@ -143,8 +151,11 @@ The following steps explain how to use the Height property of TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight html %}
 
+
+
+
+[View]
 
 \\ To configure TreeView in the CSHTML page
 
@@ -220,7 +231,7 @@ The following steps explain how to use the Height property of TreeView.
 
             }).Height("75px")
 
-{% endhighlight %}
+
 
 
 
@@ -230,12 +241,13 @@ The following screenshot displays the appearance of Height of the TreeView compo
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _60__: TreeView with height property_
 
-### Width
+Width
 
 You can customize the width of the TreeView control by using the Width property. 
 
@@ -244,7 +256,10 @@ The following steps explain how to use the width property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight html %}
+
+
+
+[View]
 
 \\ To configure TreeView in the CSHTML page
 
@@ -321,7 +336,7 @@ The following steps explain how to use the width property for TreeView.
                 }).Width("300px")
 
 
-{% endhighlight %}
+
 
 
 
@@ -330,7 +345,8 @@ The following screenshot displays the appearance of width of the TreeView compon
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure_ _61__: TreeView with width property_

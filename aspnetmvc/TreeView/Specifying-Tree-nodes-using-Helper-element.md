@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Specifying Tree nodes using Helper element
+## Specifying Tree nodes using Helper element
 
 Sometimes we may not need a DataSource for rendering TreeView. We can simply make use of the TreeView helper to render the TreeView. You can customize the TreeView appearance, and give it a new look or style. Using the Items property, we can achieve this.
 
@@ -35,7 +35,9 @@ The following steps explain configuring the template option for TreeView.
 
 2. Adding the style for TreeView control as follows.
 
-{% highlight css %}
+
+
+[CSS]
 
 <style class="cssStyles">
 
@@ -78,14 +80,16 @@ The following steps explain configuring the template option for TreeView.
     </style>
 
 
-{% endhighlight %}
+
 
 
 The TreeView control template displays the following output.
 
 
 
-![](Specifying-Tree-nodes-using-Helper-element_images/Specifying-Tree-nodes-using-Helper-element_img1.png)
+{{ '![](Specifying-Tree-nodes-using-Helper-element_images/Specifying-Tree-nodes-using-Helper-element_img1.png)' | markdownify }}
+{:.image }
+
 
 
 

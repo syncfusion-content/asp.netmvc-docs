@@ -13,19 +13,19 @@ This section explains briefly about how to create a Toolbar in your ASP.NET MVC 
 
 ## Create your first Toolbar in MVC
 
-### Create Toolbar for PDF Reader
+Create Toolbar for PDF Reader
 
 Toolbar control displays a list of tools in a webpage. It is used to customize Toolbar items of any functionality, by using enriched client-side methods. This control consists of a collection of unordered lists, containing text and images into a <div>. From the following section, you can learn how to customize Toolbar control for a PDF Reader scenario. The following screen shot shows the appearance of Toolbar in PDF Reader simulator application.
 
 Here, the Toolbar consists of a Toolbar with title and text area as PDF Reader.
 
-![C:/Users/Rajaveni/Desktop/rte final/toolbar - Copy.PNG](Getting-Started_images/Getting-Started_img1.png)
+{{ '![C:/Users/Rajaveni/Desktop/rte final/toolbar - Copy.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-### Create a Toolbar
+Create a Toolbar
 
 Using the following steps, you can create a Toolbar control. The basic rendering of ASP.NET MVC Toolbar is achieved with default functionality.
 
@@ -39,11 +39,11 @@ Using the following steps, you can create a Toolbar control. The basic rendering
 
 
 
-{% highlight html %}   
+[CSHTML]     
 
 @Html.EJ().Toolbar("ToolbarItem")
 
-{% endhighlight %}
+
 
 
 
@@ -51,19 +51,21 @@ The following output is displayed.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
+
 
 
 
 _Figure 2: Toolbar without Toolbar items_
 
-### Initialize Toolbar Items
+Initialize Toolbar Items
 
 Toolbar consists of a list of items. From the following guidelines, you can learn how to initialize the Toolbaritems with <UL> <LI> template. 								
 
 Initialize the Toolbaritems with <UL> <LI> template as follows. 
 
-{% highlight html %}
+[CSHTML]
 
 <div id="ToolbarItem">
 
@@ -119,13 +121,15 @@ Initialize the Toolbaritems with <UL> <LI> template as follows.
 
 
 
-{% endhighlight %}
+
 
 Apply the given styles in the code table to show the Toolbar items as follows. You can refer images from any location. For the following code example, the images have been referred from the given location.
 
 [http://js.syncfusion.com/UG/Web/Content/](http://js.syncfusion.com/UG/Web/Content/)pdf-icon.png
 
-{% highlight css %}
+.
+
+[CSS]
 
 <style type="text/css" class="cssStyles">
 
@@ -195,7 +199,7 @@ Apply the given styles in the code table to show the Toolbar items as follows. Y
 
 </style>
 
-{% endhighlight %}
+
 
 
 
@@ -203,20 +207,22 @@ Execute the code to render a Toolbar with a list of Toolbar items.
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
+
 
 _Figure 3: Toolbar with list of toolbar items_
 
 
 
-### Render remaining Toolbar Items
+Render remaining Toolbar Items
 
 To achieve the requirements, you need to render all the Toolbar items. You can separate or group the Toolbar items. The separation or grouping of Toolbar items is achieved when you give Toolbar items as a list of <UL> <LI> values inside the toolbar <div> or span element. From the following sections, you can learn how to initialize the remaining Toolbar items with <UL> <LI> template and how to group the toolbar items. 
 
 Initialize the Toolbar items with <UL> <LI> template as follows.
 
 
-{% highlight html %}
+
 
 
 <div id="ToolbarItem">
@@ -345,11 +351,11 @@ Initialize the Toolbar items with <UL> <LI> template as follows.
 
 </div>
 
-{% endhighlight %}
+
 
 Add the following styles in the code table to display the Toolbar items as follows. 
 
-{% highlight css %}
+
 
 
 
@@ -390,6 +396,8 @@ Add the following styles in the code table to display the Toolbar items as follo
         background-position: -131px -1px;
 
     }
+
+
 
     #ZoomValue.e-tooltxt .e-icon {
 
@@ -448,10 +456,8 @@ Add the following styles in the code table to display the Toolbar items as follo
 </style>
 
 
-{% endhighlight %}
 
-
-### Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with <UL> <LI> elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
+Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with <UL> <LI> elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
 
 [Dropdown – GettingStarted](http://help.syncfusion.com/aspnetmvc/)
 
@@ -459,13 +465,16 @@ Execute the code to render Toolbar items with separator.
 
 
 
-![C:/Users/Rajaveni/Desktop/rte final/itemssssssssssssss.PNG](Getting-Started_images/Getting-Started_img4.png)
+{{ '![C:/Users/Rajaveni/Desktop/rte final/itemssssssssssssss.PNG](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
 
-### Add Actions to Toolbar Items
+Add Actions to Toolbar Items
 
 Now that the Toolbar is rendered, you need to render the header and content area to create a PDF Reader. In the following section, you can learn how to render the header (Toolbar), contentsection (PDF viewer area) and how to set the action to Toolbar items.
 
+{{ '![C:/Users/labuser/Desktop/note.jpg](Getting-Started_images/Getting-Started_img5.jpeg)' | markdownify }}
+{:.image }
 _Note: PDF reading or rendering is not shown here. Simulation of the PDF Reader app to demonstrate the usage of Toolbar control is provided. PDF rendering area is ignored._
 
 
@@ -473,7 +482,6 @@ _Note: PDF reading or rendering is not shown here. Simulation of the PDF Reader 
 Initialize the contentarea and header as specified in the code table.
 
 
-{% highlight html %}
 
 <!—“control” class used for aligns the pdf reader in center of a page. -->
 
@@ -519,11 +527,11 @@ Initialize the contentarea and header as specified in the code table.
 
 </div> 
 
-{% endhighlight %}
+
 
 You can apply the following styles with the above styles to design the PDF header and content area. 
 
-{% highlight css %}
+
 
 
 
@@ -565,9 +573,8 @@ You can apply the following styles with the above styles to design the PDF heade
 
 </style>
 
-{% endhighlight %}
-
-![C:/Users/Rajaveni/Desktop/rte final/edited.PNG](Getting-Started_images/Getting-Started_img6.png)
+{{ '![C:/Users/Rajaveni/Desktop/rte final/edited.PNG](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
 
 
 
@@ -586,7 +593,9 @@ So far, you have added the required toolbar items and configured its appearance.
 
 Toolbar items, the operation is performed through client-slide click event. The following code example explains how to perform operations, when you click on the Toolbar items.
 
-{% highlight html %}
+
+
+[View]
 
 <div id="ToolbarItem">
 
@@ -608,9 +617,9 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-{% endhighlight %}
 
-{% highlight JS %}
+
+
 
 <script type="text/javascript">
 
@@ -759,6 +768,6 @@ Toolbar items, the operation is performed through client-slide click event. The 
 </script>
 
 
-{% endhighlight %}
+
 
 

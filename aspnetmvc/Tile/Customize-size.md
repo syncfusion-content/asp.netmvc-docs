@@ -7,7 +7,7 @@ control: Tile
 documentation: ug
 ---
 
-# Customize size
+## Customize size
 
 You can customize the size of the Tile by using TileSize property. The following built-in tile sizes are supported.
 
@@ -20,15 +20,15 @@ The default TileSize value is set to Small.
 
 Refer to the following code examples.
 
-{% highlight html %}
+
 
 @Html.EJ().Tile("tile").Text("Pictures").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/pictures.png ")
 
 
-{% endhighlight %}
 
 
-![](Customize-size_images/Customize-size_img1.png)
 
+{{ '![](Customize-size_images/Customize-size_img1.png)' | markdownify }}
+{:.image }
 
 

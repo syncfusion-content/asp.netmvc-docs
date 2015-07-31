@@ -15,11 +15,11 @@ This section explains briefly on how to create a Tile control in your applicatio
 
 The Essential Studio for ASP.NET MVC Web Tiles are simple, opaque rectangles or squares that are arrayed on the Start screen in a grid-like pattern and it can be either static or live. Tapping or selecting a Tile launches the app or other experience that is represented by the Tile.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
-
-### Create Tile Widget
+Create Tile Widget
 
 The following steps guide you to add group of Tiles for creating a home page that displays all the available applications.
 
@@ -27,7 +27,7 @@ The following steps guide you to add group of Tiles for creating a home page tha
 2. To add a Tile control, call Tile helper. You can specify the tile name, size and image url as follows.
 3. Add the following code example to the corresponding view page.
 
-{% highlight html %}
+
 
        @Html.EJ().Tile("tile1")
 
@@ -37,18 +37,17 @@ The following steps guide you to add group of Tiles for creating a home page tha
 
           .Text("Maps")
 
-{% endhighlight %}
+
 
 4. Run the application to render the following output.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
 In this scenario, a home page is designed using tile for easy navigation. Therefore, you require many different sizes of tiles aligned in a grid-like manner. To align the tiles automatically, define the necessary tile elements inside the wrapper element that contains a ‘column’ class. You can define all columns elements under the wrapper element with ‘group’ class to make ‘n’ number of tiles as a grouped tile.
 
 Refer to the following code example.
-
-{% highlight html %}
 
 <div id="tile" style="margin-top: 45px;">
 
@@ -86,14 +85,14 @@ Refer to the following code example.
 
     </div>    
 
-{% endhighlight %}
+
 
 
 
 Run the application to render the following output.
 
-![](Getting-Started_images/Getting-Started_img3.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 

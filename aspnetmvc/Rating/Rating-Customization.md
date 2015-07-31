@@ -7,9 +7,9 @@ control: Rating
 documentation: ug
 ---
 
-# Rating Customization
+## Rating Customization
 
-## Setting Value
+### Setting Value
 
 The Value property sets the display value of the Rating. For example, when the Value property is set to 4, the Rating control renders 4 ratings. By default, Value property’s value is one.
 
@@ -19,7 +19,7 @@ Add the following code in your view page to render the Rating with the customize
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized value.
 
@@ -47,7 +47,7 @@ Add the following code in your view page to render the Rating with the customize
 
 </div>
 
-{% endhighlight %}
+
 
 
 
@@ -55,11 +55,11 @@ The following screenshot illustrates the Rating with custom defined value.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img1.png)' 
+{{ '![](Rating-Customization_images/Rating-Customization_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Min Value
+### Min Value
 
 Rating control provides support for setting the MinimumValue. This is achieved by adding the MinValue property. When the MinValue property is set, the Rating value starts with MinValue+1.
 
@@ -69,7 +69,7 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized minimum value.
 
@@ -97,21 +97,21 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 The following screenshot Rating value starts with 4 since MinValuevalue is set as 3.
 
-![](Rating-Customization_images/Rating-Customization_img2.png)
-
+{{ '![](Rating-Customization_images/Rating-Customization_img2.png)' | markdownify }}
+{:.image }
 
 
 
 
 _Rating with minimum value as 4_
 
-## Max Value
+### Max Value
 
 Rating controlprovides support for setting Maximumvalue. This is achieved by adding the MaxValue property. By default, MaxValue is five.
 
@@ -121,7 +121,7 @@ Add the following code in your view pageto render the Rating with maximumvalue.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized maximum value.
 
@@ -149,7 +149,7 @@ Add the following code in your view pageto render the Rating with maximumvalue.
 
 </div>
 
-{% endhighlight %}
+
 
 
 
@@ -157,10 +157,11 @@ The following screenshot illustrates the Rating with maximumvalue.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img3.png)
+{{ '![](Rating-Customization_images/Rating-Customization_img3.png)' | markdownify }}
+{:.image }
 
 
-## Set Precision
+### Set Precision
 
 You can set Precision in Rating value between two whole numbers such as 2.5 or 3.7 and it is done by using the property Precision by changing the value to Precision.Half or Precision.Exact. By default, value of Precision is Full.
 
@@ -170,7 +171,7 @@ Add the following code in your view page to render the Rating with Precision.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with Precison.
 
@@ -226,17 +227,17 @@ Add the following code in your view page to render the Rating with Precision.
 
 </div>
 
-{% endhighlight %}
+
 
 The following screenshot illustrates the Rating with Precision.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img4.png)
+{{ '![](Rating-Customization_images/Rating-Customization_img4.png)' | markdownify }}
+{:.image }
 
 
-
-## Increment Step
+### Increment Step
 
 Rating control supports customized increment value for Rating. This is achieved by adding the IncrementStep property.
 
@@ -246,7 +247,7 @@ Add the followingcode in your view page to render the Rating with customized inc
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized increment.
 
@@ -274,19 +275,19 @@ Add the followingcode in your view page to render the Rating with customized inc
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 The following screenshot illustrates the Rating with customized increment.
 
-![](Rating-Customization_images/Rating-Customization_img5.png)
+{{ '![](Rating-Customization_images/Rating-Customization_img5.png)' | markdownify }}
+{:.image }
+{{ '![](Rating-Customization_images/Rating-Customization_img6.png)' | markdownify }}
+{:.image }
 
-![](Rating-Customization_images/Rating-Customization_img6.png)
 
-
-
-## Resetting values
+### Resetting values
 
 Rating control provides support for value reset at runtime. This is achieved by enabling the AllowReset property to True. By default, the property value is set to True.
 
@@ -296,7 +297,7 @@ Add the following code in your view page to render the Rating with AllowReset.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with allowReset.
 
@@ -338,17 +339,17 @@ Add the following code in your view page to render the Rating with AllowReset.
 
 </div> 
 
-{% endhighlight %}
+
 
 The following illustrates the Rating with allowReset.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img7.png)
+{{ '![](Rating-Customization_images/Rating-Customization_img7.png)' | markdownify }}
+{:.image }
 
 
-
-## Read only
+Read only
 
 Rating control provides support for changeable or unchangeable values for Rating control. This is achieved by the ReadOnly property. When this property is set to True, the Rating value becomes unchangeable. By default, this property value is set to False.
 
@@ -358,7 +359,7 @@ Add the following code in your view page to render Rating with readOnly.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with readOnly.
 
@@ -388,17 +389,17 @@ Add the following code in your view page to render Rating with readOnly.
 
 </div>
 
-{% endhighlight %}
+
 
 The following screenshot illustrates the Rating with ReadOnly.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img8.png)
+{{ '![](Rating-Customization_images/Rating-Customization_img8.png)' | markdownify }}
+{:.image }
 
 
-
-## Enable or Disable
+### Enable or Disable
 
 Rating control provides support to Enable or Disable the control. This is achieved by the Enabled property. By default the property value is True.
 
@@ -408,7 +409,7 @@ Add the following code in your view page to render the Rating with enable or dis
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add the following code example to the corresponding CSHTML page to render Rating with Enable/Disable support.
 
@@ -435,14 +436,14 @@ Add the following code in your view page to render the Rating with enable or dis
     </table>
 
 </div>
-{% endhighlight %}
+
 
 
 The following screenshot illustrates the Rating in a disabled form.
 
 
 
-![](Rating-Customization_images/Rating-Customization_img9.png)
-
+{{ '![](Rating-Customization_images/Rating-Customization_img9.png)' | markdownify }}
+{:.image }
 
 

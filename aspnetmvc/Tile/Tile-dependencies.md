@@ -7,15 +7,15 @@ control: Tile
 documentation: ug
 ---
 
-# Tile dependencies
+## Tile dependencies
 
 This section deals with the dependency files for Tile control. The file ej.web.all.min.js is a mass collection of Web Controls. When you are using this file, you can skip this section. Otherwise, refer to the following mentioned script files to render the Tile control.
 
 <table>
 <tr>
-<th>
-File</th><th>
-Description/Usage</th></tr>
+<td>
+File</td><td>
+Description/Usage</td></tr>
 <tr>
 <td>
 ej.core.min.js</td><td>

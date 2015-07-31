@@ -7,7 +7,7 @@ control: Toolbar
 documentation: ug
 ---
 
-# Orientation
+## Orientation
 
 The Toolbar control supports both vertical and horizontal orientations, allowing it to fit into any scenario. The Orientation property of Toolbar defines the orientation in which the control is rendered. Set the value to this property as enum or string type. It accepts the following values.
 
@@ -16,7 +16,7 @@ The Toolbar control supports both vertical and horizontal orientations, allowing
 
 The following section explains you on how to set orientation for the toolbar.
 
-## Horizontal
+Horizontal
 
 By default the Orientation property sets the Toolbar in horizontal orientation. You can refer the following steps to set horizontal orientation for Toolbar control. Default value of Orientation is Horizontal.
 
@@ -24,7 +24,7 @@ By default the Orientation property sets the Toolbar in horizontal orientation. 
 2. Add the following code in your CSHTML page.
 
 
-{% highlight html %}
+[CSHTML] 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -32,7 +32,7 @@ By default the Orientation property sets the Toolbar in horizontal orientation. 
 
 </div>
 
-{% endhighlight %}
+
 
 3. Build and run the application.
 
@@ -40,13 +40,15 @@ The following screenshot illustrates a Toolbar with horizontal orientation.
 
 
 
-![](Orientation_images/Orientation_img1.png)
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
+{:.image }
+
 
 _Figure_ _9__: Toolbar with Horizontal Orientation_
 
 
 
-## Vertical
+Vertical
 
 This property sets the Toolbar in vertical orientation. You can refer the following steps to set Vertical Orientation for Toolbar control.
 
@@ -54,7 +56,9 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 2. Add the following script in your HTML page.
 
 
-{% highlight html %}
+
+
+[CSHTML] 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -62,13 +66,14 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 
 </div>
 
-{% endhighlight %}
+
 
 3. Build and run the application.
 
 The following screenshot illustrates a Toolbar with vertical orientation.
 
-![](Orientation_images/Orientation_img2.png)
+{{ '![](Orientation_images/Orientation_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 10: Toolbar with Vertical Orientation_

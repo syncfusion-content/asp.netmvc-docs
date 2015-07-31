@@ -7,9 +7,9 @@ control: DatePicker
 documentation: ug
 ---
 
-# Behavior Settings
+## Behavior Settings
 
-## Button Text
+Button Text
 
 Set the display text for the Button in the DatePicker popup. By default, ButtonText is set Today (String). Change this default value by using ButtonText property to change the ButtonText.
 
@@ -17,21 +17,23 @@ The following steps explains how to set the ButtonText for DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized ButtonText*@
 
 @Html.EJ().DatePicker("datepicker").ButtonText("Todaydate")
 
-{% endhighlight %}
+
 
 2. The following screenshot displays the output for the above code.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img1.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img1.png)' | markdownify }}
+{:.image }
 
-## Display Default Date
+
+Display Default Date
 
 You can allow or not allow to display default date value in input textbox. By default “DisplayDefaultDate” property is set to ‘true’ in DatePicker widget. You can not allow to display default date value in input textbox of DatePicker widget by setting “DisplayDefaultDate” property as ‘false’.
 
@@ -39,15 +41,15 @@ The following steps explain DisplayDefaultDate in DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with out default date.
 
-{% highlight html %}
+
+
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget without default date*@
 
 @Html.EJ().DatePicker("datepicker").DisplayDefaultDate(false).Value("5/8/2014")
 
-{% endhighlight %}
-
-## Enabled
+Enabled
 
 You can Enable or Disable the DatePicker widget. By default “Enabled” property is set to ‘true’ in DatePicker widget. You can disable the DatePicker widget by setting “Enabled” property as ‘false’.
 
@@ -55,14 +57,13 @@ The following steps explain you how to disable the DatePicker widget.
 
 1. In the CSHTML page, add the following code to disable the DatePicker widget.
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to disable DatePicker widget*@
 
 @Html.EJ().DatePicker("datepicker").Enabled(false)
-{% endhighlight %}
 
-## Enable strict mode
+Enable strict mode
 
 When EnableStrictMode is set to ‘false’, DatePicker doesn’t allow the value out of the range, it is internally changed to the correct value. By default “EnableStrictMode” property is set as ‘false’ in DatePicker.
 
@@ -71,15 +72,14 @@ The following steps explain you how to enable the “EnableStrictMode” for Dat
 1. In the CSHTML page, add the following code to render the DatePicker widget with EnableStrictMode.
 
 
-{% highlight html %}
+
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized EnableStrictMode*@
 
 @Html.EJ().DatePicker("datepicker").EnableStrictMode(true)
 
-{% endhighlight %}
-
-## Fields
+Fields
 
 You can specify the fieldsmapping in DatePicker. You can also provide the support to add image, image styles, sprite css class, query, and HTML attributes.
 
@@ -89,11 +89,11 @@ _Table_ _1_: MVC table_
 
 <table>
 <tr>
-<th>
-Name</th><th>
-Description</th><th>
-Default value</th><th>
-Data type</th></tr>
+<td>
+Name</td><td>
+Description</td><td>
+Default value</td><td>
+Data type</td></tr>
 <tr>
 <td>
 Date</td><td>
@@ -120,7 +120,8 @@ String</td></tr>
 The following steps explain you how to specify the fieldsmapping in DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with fields mapping.
-{% highlight html %}
+
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized fields mapping*@
 
@@ -132,15 +133,17 @@ The following steps explain you how to specify the fieldsmapping in DatePicker w
 
        })
 
-{% endhighlight %}
+
 
 2. Add the following styles to specify the fields mapping in DatePicker widget.
 
+{{ '![](Behavior-Settings_images/Behavior-Settings_img3.jpeg)' | markdownify }}
+{:.image }
 _Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed._
 
 
 
-{% highlight css %}
+[CSS]
 
 <style type="text/css" class="cssStyles">
 
@@ -168,15 +171,17 @@ _Note: Images for this example are available in ‘installed location /Content/i
 
 </style>
 
-{% endhighlight %}
+
 
 3. The following screenshot displays the output for the above code.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img4.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img4.png)' | markdownify }}
+{:.image }
 
-### Define start day of the week
+
+Define start day of the week
 
 It specifies the StartDay of the week in DatePicker calendar. By default “Value” is set to 0 (Sunday). 
 
@@ -184,19 +189,21 @@ The following steps explain you how to specify the StartDay of the week in DateP
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with StartDay (Tuesday)
 
-{% highlight html %}
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to specify the start day of the week in DatePicker widget*@
 
 @Html.EJ().DatePicker("datePicker").StartDay(2)
 
-{% endhighlight %}
+
 
 2. The following screenshot displays the output for the above code.
 
-![](Behavior-Settings_images/Behavior-Settings_img5.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img5.png)' | markdownify }}
+{:.image }
 
-## Step months
+
+Step months
 
 It specifies the number of months to navigate at one click in next and previous button that is achieved by “StepMonths” property. You can change the StepMonths by changing the default value using “StepMonths” property. 
 
@@ -205,15 +212,14 @@ The following steps explain you how to specify the number of months to navigate 
 1. In the CSHTML page, add the following code to render the DatePicker widget with stepMonths.
 
 
-{% highlight html %}
+
+[CSHTML]
 
 @*Add the following code example to the corresponding CSHTML page to specify the number of months to navigate at one click in DatePicker widget*@
 
 @Html.EJ().DatePicker("datePicker").StepMonths(2)
 
-{% endhighlight %}
-
-## Define value
+Define value
 
 It specifies the selected date value. You can specify the selected date value by using “Value” property.
 
@@ -222,21 +228,24 @@ The following steps explain you how to specify the selected value.
 1. In the CSHTML page, add the following code to render the DatePicker widget with selected value.
 
 
-{% highlight html %}
+
+[CSHTML]
+
 @*Add the following code example to the corresponding CSHTML page to specify selected value in DatePicker widget*@
 
 @Html.EJ().DatePicker("datePicker").Value("5/8/2014")
 
-{% endhighlight %}
+
 
 2.  The following screenshot displays the output for the above code.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img6.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img6.png)' | markdownify }}
+{:.image }
 
 
-### Watermark Text
+Watermark Text
 
 It specifies the WatermarkText to display the input text in DatePicker. By default “WatermarkText” property is set as “select date” in DatePicker. 
 
@@ -244,15 +253,19 @@ The following steps explain you how to specify the WatermarkText in DatePicker w
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with watermark text.
 
-{% highlight html %}
+ [CSHTML]
+
 @*Add the following code example to the corresponding CSHTML page to specify Watermark Text in DatePicker widget*@
 
 @Html.EJ().DatePicker("datePicker").WatermarkText("Enter Date")
 
-{% endhighlight %}
+
 
 2. The following screenshot displays the output for the above code.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img7.png)
+{{ '![](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
+{:.image }
+
+

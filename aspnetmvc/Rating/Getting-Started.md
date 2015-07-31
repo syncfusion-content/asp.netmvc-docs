@@ -19,8 +19,8 @@ The following screenshot demonstrates the functionality of a Rating control with
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
 In the above screenshot, you can rate the movie by selecting a corresponding movie.
@@ -34,7 +34,7 @@ Refer to [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettin
 
 Add the following code example to the corresponding view page to render Rating inside the Tab control.	
 
-{% highlight html %}
+
 
             <div class="frame">  
 
@@ -187,12 +187,11 @@ Add the following code example to the corresponding view page to render Rating i
          </div>
 
 
-{% endhighlight %}
+
 
 
 Add the following styles to the corresponding view page to show the Rating in a horizontal order.
 
-{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -222,7 +221,7 @@ Add the following styles to the corresponding view page to show the Rating in a 
 
     </style>
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
@@ -230,10 +229,12 @@ Execute the above code to render the following output.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
-
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 _Note: Add necessary images to the mentioned directory._
 
 > _<project directory>/Images/rating/yourimage.png_
