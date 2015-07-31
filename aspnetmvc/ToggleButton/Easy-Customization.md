@@ -7,20 +7,18 @@ control: Toggle Button
 documentation: ug
 ---
 
-## Easy Customization
+# Easy Customization
 
 Toggle Button is used in all applications. ToggleButton size, content and content location is varied according to each application. The following section contains some customizable option for Toggle Button that can perform easily. 
 
-Toggle State
+## Toggle State
 
 Toggle button has two states like off / on state in a switch. By default you can set any state at initial and then you can move from one state to another state by clicking on the Toggle Button. These two states are Default and Active.ToggleState property is used toset the state of Toggle Button as default state or active state. Default value of ToggleState is false.
 
 The following steps explains you the details about rendering the Toggle Button with different ToggleState.
 
 
-
-[CSHTML]   
-
+{% highlight html %}
 //Add the code in CSHTML page to configure the widget and initialize the control
 
 
@@ -33,23 +31,24 @@ The following steps explains you the details about rendering the Toggle Button w
 
         @Html.EJ().ToggleButton("toggleButton_active").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Pause").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").ToggleState(true)
 
+		{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
 
 
-{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94dcff5.PNG](Easy-Customization_images/Easy-Customization_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94dcff5.PNG](Easy-Customization_images/Easy-Customization_img1.png)
+
 
 
 _Figure 4: Toggle button with two different toggle states_
 
 
 
-ToggleState with icons
+## ToggleState with icons
 
-Prefix and Suffix Icons
+### Prefix and Suffix Icons
 
 You can add icons in prefix and suffix position of Toggle Button. Location of Icon is customized easily using the following mentioned option. This is applicable for the content type’s ImageOnly, TextAndImage, ImageTextImage and ImageBoth.
 
@@ -66,11 +65,11 @@ For example the following mentioned build-in CSS class are used to show the font
 * e-mediapause
 * e-mediaplay
 
-Prefix Icon
+#### Prefix Icon
 
 It inserts the icon at the starting position of Toggle Button. After this prefix icon, you can use text or suffix icon.
 
-Suffix Icon
+#### Suffix Icon
 
 It inserts the icon at the ending position of Toggle Button. Before this suffix icon, you can use text or prefix icon.
 
@@ -110,7 +109,7 @@ The following script explains you the details about rendering the Toggle Button 
 
 
 
-[CSHTML]
+{% highlight html %}
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
@@ -118,25 +117,25 @@ The following script explains you the details about rendering the Toggle Button 
 
     @Html.EJ().ToggleButton("toggleButton_iconsAndStates").ContentType(ContentType.ImageTextImage).ShowRoundedCorner(true).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-redo ").ActiveSuffixIcon("e-undo ")
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Easy-Customization_images/Easy-Customization_img2.png)' | markdownify }}
-{:.image }
+![](Easy-Customization_images/Easy-Customization_img2.png)
+
 
 
 _Figure 5: Before clicking the toggle button_
 
-{{ '![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1569f0f4.PNG](Easy-Customization_images/Easy-Customization_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1569f0f4.PNG](Easy-Customization_images/Easy-Customization_img3.png)
+
 
 
 _Figure 6: After clicking the toggle button_
 
 
 
-Toggle button size
+## Toggle button size
 
 You can render the Toggle Button in different sizes by using Size property. You can use some predefined size option for rendering a Toggle Button in easiest way. Each size option has different height and width. It mainly avoids the complexity in rendering Toggle Button with complex CSS class. You can mention the size of the Toggle Button using the following five predefined size options. 
 
@@ -176,7 +175,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-[CSHTML]
+{% highlight html %}
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
@@ -233,20 +232,20 @@ The following steps explains you the details about rendering the Toggle Button w
     </div>
 
 
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-Customization_images/Easy-Customization_img4.png)' | markdownify }}
-{:.image }
+![](Easy-Customization_images/Easy-Customization_img4.png)
+
 
 
 _Figure_ _13__: Toggle button in different sizes_
 
-Content type
+## Content type
 
 The content of the Toggle Button is mainly text and images. Instead of using complex CSS classes to render Toggle Button with different content types, you can use some predefined content type options as listed in the following table. Using this ContentType property you can easily add different types of content for Toggle Button. The Toggle Button supports the following content types.
 
@@ -282,7 +281,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-[CSHTML]
+{% highlight html %}
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
@@ -376,14 +375,14 @@ The following steps explains you the details about rendering the Toggle Button w
 
     </div>
 
-
+{% endhighlight %}
 
 
 
 Execute the above code to render the following output.
 
-{{ '![](Easy-Customization_images/Easy-Customization_img5.png)' | markdownify }}
-{:.image }
+![](Easy-Customization_images/Easy-Customization_img5.png)
+
 
 
 _Figure_ _14__: Toggle button with different content types_
@@ -424,7 +423,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-[CSHTML]
+{% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
@@ -550,19 +549,18 @@ The following steps explains you the details about rendering the Toggle Button w
 
     </div>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
+![](Easy-Customization_images/Easy-Customization_img6.png)
 
-{{ '![](Easy-Customization_images/Easy-Customization_img6.png)' | markdownify }}
-{:.image }
 
 
 _Figure_ _15__: Toggle button with different type of image position_
 
-Theme support
+## Theme support
 
 You can control the style and appearance of Toggle Button based on CSS classes. To apply styles to the Toggle Button control, you can refer two files, ej.widgets.core.min.css and ej.theme.min.css. When you refer ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -581,7 +579,7 @@ By default, there are 12 themes support available for Toggle Button control name
 * gradient-saffron
 * gradient-saffron-dark
 
-Custom CSS
+## Custom CSS
 
 You can use the CSS to customize the Toggle Button control appearance. Define a CSS class as per requirement and assign the class name to CssClass property.
 
@@ -592,8 +590,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
@@ -647,7 +644,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
   </div>
 
-
+{% endhighlight %}
 
 
 
@@ -655,7 +652,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-[CSS]
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -719,14 +716,14 @@ The following steps explains you the details about rendering the Toggle Button w
 
     </style>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-Customization_images/Easy-Customization_img7.png)' | markdownify }}
-{:.image }
+![](Easy-Customization_images/Easy-Customization_img7.png)
+
 
 
 _Figure_ _16__: Toggle button with Custom CSS_

@@ -7,13 +7,13 @@ control: Tab Control
 documentation: ug
 ---
 
-## Ajax Content Load (Load on Demand)
+# Ajax Content Load (Load on Demand)
 
 You can change the contents in sub Tab element periodically and you are provided with a support to change the contents without any problems. To achieve the content load, use the Load on Demand concept.
 
 In Load On-Demand, the external HTML file with the necessary details is referred in url section during Tab header declaration section. Also include “DataType”, “ContentType”, and “Asnync” in the script like the following example when rendering the control. When you click the Tab header, the Ajax automatically calls the content from the external files and displays in a Tab content section. 
 
-Sub Tab with Ajax Content
+## Sub Tab with Ajax Content
 
 Each item has a variety of options and these options are also specified in the limited space. So you can choose the Tab control that is used within the root Tab to specify more details.
 
@@ -21,7 +21,7 @@ Each item has a variety of options and these options are also specified in the l
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // Add the following code example to the corresponding CSHTML page to render sub Tab with ajax content.
 
@@ -97,9 +97,12 @@ Each item has a variety of options and these options are also specified in the l
 
     }
 
+	{% endhighlight %}
 
 
 2.   The file ‘cornSpinach.html’ content is as follows. 
+
+{% highlight html %}
 
 <!DOCTYPE html>
 
@@ -125,9 +128,11 @@ Each item has a variety of options and these options are also specified in the l
 
 </html>
 
-
+{% endhighlight %}
 
 3. The file ‘chickenDelite.html’ content is as follows.
+
+{% highlight html %}
 
 <!DOCTYPE html>
 
@@ -153,12 +158,13 @@ Each item has a variety of options and these options are also specified in the l
 
 </html>
 
+{% endhighlight %}
 
 
 The following screenshot illustrates the First Tab with the sub Tab control using Load on Demand. 
 
-{{ '![](Ajax-Content-Load-Load-on-Demand_images/Ajax-Content-Load-Load-on-Demand_img1.png)' | markdownify }}
-{:.image }
+![](Ajax-Content-Load-Load-on-Demand_images/Ajax-Content-Load-Load-on-Demand_img1.png)
+
 
 
 _Figure 21: Tab section with sub Tab control using Load on Demand._

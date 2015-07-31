@@ -7,9 +7,9 @@ control: Tab Control
 documentation: ug
 ---
 
-## Template Support
+# Template Support
 
-ASP.NET MVC
+## ASP.NET MVC
 
 The Content template option provided in MVC is used to specify the HTML elements inside the Tab control. We can use this option to load any HTML elements and showcase it in the Tab panels as per our requirement.
 
@@ -17,7 +17,7 @@ The following code block showcases how to use content template option in the Tab
 
 
 
-[CSHTML]
+{% highlight html %}
 
 
 
@@ -86,15 +86,15 @@ The following code block showcases how to use content template option in the Tab
 </div>
 
 
-
+{% endhighlight %}
 
 
 
 
 Output:
 
-{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
-{:.image }
+![](Template-Support_images/Template-Support_img1.png)
+
 
 
 _Figure 25: Tab control with template support_

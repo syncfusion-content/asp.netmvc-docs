@@ -7,9 +7,9 @@ control: WaitingPopup
 documentation: ug
 ---
 
-## Appearance and Styling 
+# Appearance and Styling 
 
-Custom Text
+## Custom Text
 
 WaitingPopup control provides support for Custom Text to mention any message inside the pop-up panel.  You can specify a custom text through the option Text that displays when the Waiting Popup is loading.
 
@@ -20,9 +20,7 @@ The following steps explains you the configuration of the custom text for Waitin
 
 
 
-
-[CSHTML]
-
+{% highlight html %}
 
 
 <div id="target">
@@ -30,14 +28,14 @@ The following steps explains you the configuration of the custom text for Waitin
         @Html.EJ().WaitingPopup("target").ShowOnInit(true).Text("Loading... Please wait...")
 
 </div>
-
+{% endhighlight %}
 
 
 
 
 2. Add the following styles to render WaitingPopup widget.
 
-[css]
+{% highlight css %}
 
 
 
@@ -52,15 +50,15 @@ The following steps explains you the configuration of the custom text for Waitin
     }
 
 </style>
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
 
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+
 
 
 _Figure 9: Custom Text in WaitingPopup_
@@ -81,7 +79,7 @@ The following steps explains you on how to define template to display a text and
 
 
 
-[CSHTML]
+{% highlight html %}
 
 <div id="target">
 
@@ -111,22 +109,21 @@ The following steps explains you on how to define template to display a text and
 
 </div>
 
-
+{% endhighlight %}
 
 
 
 2. In CSS, you can configure the custom styles for WaitingPopup.
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
-{:.image }
+
 _Note: Images for this sample are available ‘installed location /Content/images’ and we need to define images in mentioned CSS. Henceforth the images will display._
 
 
 
 
 
-[Stylesheet]
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -212,13 +209,13 @@ _Note: Images for this sample are available ‘installed location /Content/image
 
 </style>
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/w5.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/w5.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+
 
 
 _Figure 10: WaitingPopup with Custom Template_
@@ -237,14 +234,13 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 
 
-[CSHTML]
-
+{% highlight html %}
 
 
 <div id="target">
 
  @Html.EJ().WaitingPopup("target").ShowOnInit(true).CssClass("custom").Text("Loading... Please wait...")</div>
-
+{% endhighlight %}
 
 
 
@@ -253,7 +249,7 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 
 
-[CSS]
+{% highlight %}
 
 <style type="text/css" class="cssStyles">
 
@@ -285,12 +281,13 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 </style>
 
+{% endhighlight %}
 
 
 The following screenshot displays the output for the above code.
 
-{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
-{:.image }
+![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+
 
 
 _Figure 11: WaitingPopup with customized CSS_

@@ -7,7 +7,7 @@ control: TimePicker
 documentation: ug
 ---
 
-## Keyboard Interaction
+# Keyboard Interaction
 
 You can use Keyboard shortcut keys as an alternative to the mouse on using TimePicker widget. TimePicker widget allows you to perform all kinds of actions using keyboard shortcuts. For enabling the keyboard navigation, we need to set the access key to TimePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictinary object. The IDictionary represents a generic collection of key/value pairs.
 
@@ -17,9 +17,9 @@ _Table_ _1__: List of keyboard shortcuts_
 
 <table>
 <tr>
-<td>
-Shortcut Key</td><td>
-Description</td></tr>
+<th>
+Shortcut Key</th><th>
+Description</th></tr>
 <tr>
 <td>
 {{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
@@ -43,15 +43,15 @@ Decrements the value</td></tr>
 </table>
 
 
-When popup is open
+## When popup is open
 
 _Table_ _2__: List of keyboard shortcuts_
 
 <table>
 <tr>
-<td>
-Shortcut Key</td><td>
-Description</td></tr>
+<th>
+Shortcut Key</th><th>
+Description</th></tr>
 <tr>
 <td>
 Up</td><td>
@@ -69,7 +69,9 @@ Moves to the first / last item</td></tr>
 Esc</td><td>
 Closes the popup</td></tr>
 </table>
-Configure Keyboard Interaction
+
+
+## Configure Keyboard Interaction
 
 The following steps explains you on how to enable keyboard interaction for the TimePicker widget with accesskey as “j”. We can set the any other key as accesskey in TimePicker control.
 
@@ -77,7 +79,7 @@ The following steps explains you on how to enable keyboard interaction for the T
 
 
 
-[_cshtml]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -88,15 +90,14 @@ The following steps explains you on how to enable keyboard interaction for the T
 }
 
 @Html.EJ().TimePicker("time").HtmlAttributes(parameters)
-
-
+{% endhighlight %}
 
 2. Run the code sample, press [Access key](http://en.wikipedia.org/wiki/Access_key) + J to focus in the TimePicker widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 
 
 
-{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
-{:.image }
+![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+
 
 
 _Figure 19: TimePicker focused with keyboard shortcut_

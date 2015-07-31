@@ -7,11 +7,11 @@ control: Toolbar
 documentation: ug
 ---
 
-## Data Binding
+# Data Binding
 
 Toolbar provides you a flexible approach for binding data from various data sources. There are various properties in Toolbar for Data Binding.
 
-Data fields and configuration 
+## Data fields and configuration 
 
 The following sub-properties provides a way to bind either the local/remote data to the Toolbar control.
 
@@ -21,10 +21,10 @@ _Table: Property Table of MVC Toolbar control_
 
 <table>
 <tr>
-<td>
-Property</td><td>
-Value type</td><td>
-Description</td></tr>
+<th>
+Property</th><th>
+Value type</th><th>
+Description</th></tr>
 <tr>
 <td>
 Datasource</td><td>
@@ -81,7 +81,9 @@ Group</td><td>
 string</td><td>
 It groups the given Toolbar items.</td></tr>
 </table>
-Local data
+
+
+## Local data
 
 To bind the Local Data to the Toolbar control, map the user-defined JSON data names with its appropriate data source field. You can bind data to Toolbar by mapping fields such as Id, SpriteCssClass, ImageUrl, group and TooltipText.
 
@@ -101,7 +103,7 @@ In the View page, add Toolbar helper to configure Toolbar.
 </table>
 
 
-
+{% highlight css%}
 
 [CSS]
 
@@ -209,15 +211,14 @@ In the View page, add Toolbar helper to configure Toolbar.
 
 </style>
 
+{% endhighlight %}
 
-
-{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img1.png)
 
 
 _Figure 6: ToolBar control bounded to Local Data_
 
-Remote data
+## Remote data
 
 You can bind Toolbar to Remote Data using DataManager and the query in fields is used to retrieve the data. DataManager supports the following types of data-binding: JSON, Web Services and OData. It uses two different classes; ej.DataManager for processing, and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are read by the DataManager. In the following link, how to create DataManager is explained in full detail.
 
@@ -229,14 +230,14 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 
 
-[CSHTML]
+{% highlight html %}
 
 @Html.EJ().Toolbar("toolbarcontent").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
 
+{% endhighlight %}
 
+![](Data-Binding_images/Data-Binding_img2.png)
 
-{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
-{:.image }
 
 
 _Figure_ _7__: ToolBar control bounded to Remote Data_

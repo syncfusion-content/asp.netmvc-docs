@@ -7,11 +7,11 @@ control: TreeMap
 documentation: ug
 ---
 
-## Drill Down Support
+# Drill Down Support
 
 Treemap enables drill down to expose the hierarchy achieved by clicking on a node and this results in enabling the Treemap to move to the next level or sub level and can return back to the normal Treemap view by clicking on the node header. Only a single level of the Treemap is visible at once.
 
-Enabling Drill Down
+## Enabling Drill Down
 
 Treemap elements can be drilled down by setting the EnableDrillDown property to true. You can view the hierarchy of the Treemap by clicking on the treemap items and can move to the previous level by clicking on the drill down header. The header color can be customized by changing the values in the property DrillDownHeaderColor and the selection color can be done by changing the DrillDownSelectionColor property.
 
@@ -19,10 +19,10 @@ _Drill down Properties_
 
 <table>
 <tr>
-<td>
-Property</td><td>
-Type</td><td>
-Description</td></tr>
+<th>
+Property</th><th>
+Type</th><th>
+Description</th></tr>
 <tr>
 <td>
 enableDrillDown</td><td>
@@ -42,11 +42,6 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 
 
 {% highlight html %}
-
-[MVC]
-
-[CSHTML]
-
 
 
 @(Html.EJ().TreeMap("treemap")
@@ -101,14 +96,12 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 
 
 
-{{ '![C:/Users/NitishS/Desktop/Screenshot (106).png](Drill-Down-Support_images/Drill-Down-Support_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/NitishS/Desktop/Screenshot (106).png](Drill-Down-Support_images/Drill-Down-Support_img1.png)
 
 
 _Before Drill Down_
 
-{{ '![DrillDown](Drill-Down-Support_images/Drill-Down-Support_img2.png)' | markdownify }}
-{:.image }
+![DrillDown](Drill-Down-Support_images/Drill-Down-Support_img2.png)
 
 
 _After Drill Down_

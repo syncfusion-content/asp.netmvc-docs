@@ -7,13 +7,15 @@ control: Tile
 documentation: ug
 ---
 
-## Template Support
+# Template Support
 
 ImageTemplateId property is used to customize the image of Tile with template feature by setting the id. CaptionTemplateId property is used to customize the text of Tile with template feature by setting the id. 
 
 Refer to the following code examples.
 
 Add the following code example for MVC samples 
+
+{% highlight css %}
 
     <style>
 
@@ -53,10 +55,11 @@ Add the following code example for MVC samples
 
     </style>
 
+	{% endhighlight %}
 
 
 
-
+{% highlight html %}
 
 
 @Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").CaptionTemplateId("captionTemplate").TileSize(TileSize.Wide)
@@ -81,11 +84,11 @@ Add the following code example for MVC samples
 
     <div id="captionTemplate" class="title">Windows Store</div>
 
+{% endhighlight %}
 
 
 
+![](Template-Support_images/Template-Support_img1.png)
 
-{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
-{:.image }
 
 

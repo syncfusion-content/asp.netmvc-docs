@@ -7,11 +7,11 @@ control: TimePicker
 documentation: ug
 ---
 
-## Time Format
+# Time Format
 
 TimePicker widget provides you an option to change the TimeFormat property.
 
-Steps to change Time Format of TimePicker widget
+## Steps to change Time Format of TimePicker widget
 
 The following steps explains you to change the time format for the TimePicker.
 
@@ -19,18 +19,19 @@ The following steps explains you to change the time format for the TimePicker.
 
 
 
-[_cshtml]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with time format*@
 
 @Html.EJ().TimePicker("time").TimeFormat("hh:mm:ss tt")
 
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
-{{ '![](Time-Format_images/Time-Format_img1.png)' | markdownify }}
-{:.image }
+![](Time-Format_images/Time-Format_img1.png)
+
 
 
 _Figure 17: TimePicker with TimeFormat._

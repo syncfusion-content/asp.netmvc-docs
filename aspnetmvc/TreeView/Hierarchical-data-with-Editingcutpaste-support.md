@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-## Hierarchical data with Editing,cut,paste support
+# Hierarchical data with Editing,cut,paste support
 
 The TreeView control permits you to edit a node and also allows you to cut, copy and paste the node. You can edit the tree node name when it is required. This is achieved by using the AllowEditing property. By setting the property as “True”, you can select a node and press F2 or double click the node to initiate editing.
 
@@ -18,10 +18,8 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
 
 
+{% highlight html %}
 
-
-
-[View]
 
 \\ To configure TreeView in the CSHTML page
 
@@ -97,7 +95,7 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
     }).AllowEditing(true).AllowDragAndDrop(true)
 
-
+{% endhighlight %}
 
 
 
@@ -109,8 +107,8 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
 
 
-{{ '![](Hierarchical-data-with-Editingcutpaste-support_images/Hierarchical-data-with-Editingcutpaste-support_img1.png)' | markdownify }}
-{:.image }
+![](Hierarchical-data-with-Editingcutpaste-support_images/Hierarchical-data-with-Editingcutpaste-support_img1.png)
+
 
 
 _Figure_ _40__: Node Editing-cut-copy-paste_
