@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-## Client-Side-API’s
+# Client-Side-API’s
 
 The Dialog Widget provides some Client side Methods to process the control from script side.
 
@@ -43,8 +43,7 @@ To open or close the Dialog widget by using client side API:
 
 Render input button controls for performing open and close actions.
 
-[CHTML]
-
+{% highlight html %}
 
 
 @{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@<div>
@@ -69,6 +68,7 @@ Render input button controls for performing open and close actions.
 
     <input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" />
 
+{% endhighlight %}
 
 
 
@@ -76,8 +76,7 @@ Render input button controls for performing open and close actions.
 
 
 
-
-
+{% highlight JS %}
 
 [Javascript]
 
@@ -125,7 +124,7 @@ Render input button controls for performing open and close actions.
 
 </script>
 
-
+{% endhighlight  %}
 
 
 
@@ -161,8 +160,8 @@ Render input button controls for performing open and close actions.
 
 The output of Dialog open is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img1.png)
+
 
 
 _Figure_ _21__: Dialog is opened_

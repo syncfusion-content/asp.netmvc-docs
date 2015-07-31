@@ -7,17 +7,16 @@ control: Circular Gauge
 documentation: ug
 ---
 
-# Tooltip
+## Tooltip
 
 * Tooltip feature has been added to the Circular Gauge. Circular Gauge has several elements such as pointers, label, customLabel, scales, etc.  
 * There is a need for Tooltip feature in the Circular Gauge control because whenever the text hides or overrides with other gauge elements, it may not be fully visible. For resolving those problems Tooltip feature has been implemented in the Circular Gauge control.
-
-## Default Tooltip
+### Default Tooltip
 
 * Tooltip has three attributes in it. The first two attributes such as showLabelTooltip and showCustomLabelTooltip are for enabling the Tooltip for label as well as custom label in default appearance. 
 * ShowLabelTooltip is to enable the Tooltip for labels and showCustomLabelTooltip is for enabling the Tooltip option for customLabels.
 
-{% highlight html %}
+
 
 <table>
 <tr>
@@ -28,21 +27,21 @@ documentation: ug
 [Controller]public partial class CircularGaugeController : Controller{//// GET: /ToolTip/public ActionResult Tooltip(){return View();}}</td></tr>
 </table>
 
-{% endhighlight %}
 
 Execute the above code to render the following output.
 
-![](Tooltip_images/Tooltip_img1.png)
+{{ '![](Tooltip_images/Tooltip_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-## Tooltip Template
+### Tooltip Template
 
 In Tooltip option, you can customize the Tooltip window by adding the tooltip template on that page with the help of API TemplateID. Refer to the following code example to know more about Tooltip template.
 
 
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -52,14 +51,12 @@ In Tooltip option, you can customize the Tooltip window by adding the tooltip te
 [Controller]public partial class CircularGaugeController : Controller{// GET: /ToolTip/public ActionResult Tooltip(){return View();}}</td></tr>
 </table>
 
-{% endhighlight %}
-
 Execute the above code to render the following output.
 
 
 
-![](Tooltip_images/Tooltip_img2.png)
-
+{{ '![](Tooltip_images/Tooltip_img2.png)' | markdownify }}
+{:.image }
 
 
 

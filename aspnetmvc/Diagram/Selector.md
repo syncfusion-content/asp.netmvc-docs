@@ -7,14 +7,14 @@ control: Diagram
 documentation: ug
 ---
 
-# Selector
+## Selector
 
 Selector behaves like a container for the selected elements and enables you to update the size, position, and rotation angle of the selected elements.
 
 The properties of Selector are listed as follows.
 
 _Selector Properties_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -62,13 +62,13 @@ userHandles</td><td>
 collection</td><td>
 Gets or sets the value that is used to draw the custom handles on the selected elements.</td></tr>
 </table>
-{% endhighlight %}
 Move, Resize, or Rotate selected items:
 
 The following code example is used to update the size and position of the selected elements.
 
 {% highlight js %}
 
+[JS]
 
 
 
@@ -92,6 +92,7 @@ The following code example is used to get the selected elements.
 
 {% highlight js %}
 
+[JS]
 
 
 
@@ -117,6 +118,7 @@ User Handles:
 
 {% highlight js %}
 
+[JS]
 
 
 

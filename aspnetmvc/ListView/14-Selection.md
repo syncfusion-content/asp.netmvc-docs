@@ -7,9 +7,9 @@ control: ListView
 documentation: ug
 ---
 
-# 1.4 Selection
+## 1.4 Selection
 
-## MultiSelection
+MultiSelection
 
 ListView has a checklist feature that is used to select multiple list items at the same time in the ListView. For this, set EnableCheckMark to “True”.
 
@@ -51,19 +51,19 @@ Refer the following code examples.
 
 
 
-### Screenshot:
+Screenshot:
 
-![](14-Selection_images/14-Selection_img1.png)
-
+{{ '![](14-Selection_images/14-Selection_img1.png)' | markdownify }}
+{:.image }
 
 
 _Enable Check Mark_
 
-## PreventSelection
+PreventSelection
 
 When selecting a specific list item, it is highlighted with an active color. PreventSelection property is used to prevent this behavior by setting it to “True”. 
 
-> Note: When the click or select action is completed, the highlight is undone automatically even when the property is set to “False”.
+> _Note: When the click or select action is completed, the highlight is undone automatically even when the property is set to “False”._
 
 Refer the following code examples.
 
@@ -94,9 +94,13 @@ Refer the following code examples.
 
 })
 
+
+
+
+
 {% endhighlight %}
 
-## PersistSelection
+PersistSelection
 
 PersistSelection property is used to highlight the selected item in the ListView control even after touch end happens. By default, the active state is removed once the touch end happens.
 
@@ -139,10 +143,10 @@ Refer the following code examples.
 
 
 
-### Screenshot:
+Screenshot:
 
-![](14-Selection_images/14-Selection_img2.png)
-
+{{ '![](14-Selection_images/14-Selection_img2.png)' | markdownify }}
+{:.image }
 
 
 _Persist Selection_

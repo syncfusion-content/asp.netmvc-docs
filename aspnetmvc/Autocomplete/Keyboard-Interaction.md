@@ -7,7 +7,7 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Keyboard Interaction
+## Keyboard Interaction
 
 You can use keyboard shortcut keys as an alternative to the mouse while using the AutoComplete widget. The AutoComplete widget allows you to perform all kinds of actions using keyboard shortcuts.
 
@@ -15,9 +15,9 @@ _Keyboard shortcut keys_
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><th>
-Description</th></tr>
+<td>
+Shortcut Key</td><td>
+Description</td></tr>
 <tr>
 <td>
 {{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
@@ -41,7 +41,7 @@ Closes the popup</td></tr>
 </table>
 
 
-## Configure Keyboard Interaction
+Configure Keyboard Interaction
 
 The following steps explain how you can enable keyboard interaction for an AutoComplete textbox.
 
@@ -50,7 +50,10 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 1. In the View page, define the AutoComplete control.
 
 
-{% highlight html %}
+
+[CSHTML]
+
+
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -59,6 +62,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 htmlAttribute.Add("accesskey", "j");
 
 }
+
 
 
 @(Html.EJ().Autocomplete("autocomplete").HtmlAttributes(htmlAttribute)
@@ -71,14 +75,14 @@ htmlAttribute.Add("accesskey", "j");
 
     .Width("200px"))    
 
-{% endhighlight %}
+
 
 2. Run the sample, press AccessKey + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
 
 
 
-![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
+{:.image }
 
 
 _AutoComplete focused with keyboard shortcut_

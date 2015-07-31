@@ -7,16 +7,16 @@ control: DataManager
 documentation: ug
 ---
 
-# Paging
+## Paging
 
 Paging is a very important query in the DataManager used to display only some records from the large data source. Here, you can learn the paging query in detail.
 
-## Default
+Default
 
 The paging index and the paging size parameters of the paging query determine the number of records to be retrieved from the data source of the DataManager.
 
 Refer to the following code example for the paging options.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -48,17 +48,17 @@ Refer to the following code example for the paging options.
 )
 
 
-{% endhighlight %}
+
 Result for the above code example is illustrated as follows.
 
-![](Paging_images/Paging_img1.png)
+{{ '![](Paging_images/Paging_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Dynamic Paging
+Dynamic Paging
 
 The paging operation can be dynamically performed by using the DataManager. With the help of an external button click event, the required page records can be obtained and processed accordingly. The following code example illustrates the dynamic paging.
-{% highlight html %}
+
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true))
 
 
@@ -95,8 +95,8 @@ pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 @Html.EJ().Button("submit").Text("Execute").ClientSideEvents(e => { e.Click("onClick"); })
 
-{% endhighlight  %}
-{% highlight js %}
+
+
 <script type="text/javascript" class="jsScript">
 
     function onClick(e) {
@@ -121,18 +121,18 @@ pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 </script>
 
-{% endhighlight  %}
+
 
 Result of above code example is illustrated as follows.
 
-![](Paging_images/Paging_img2.png)
+{{ '![](Paging_images/Paging_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Custom paging
+Custom paging
 
 In this section, you can learn how to use the customized paging. The following code example illustrates the custom paging.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -163,18 +163,18 @@ In this section, you can learn how to use the customized paging. The following c
 
 )
 
-{% endhighlight %}
+
 
 Result of above code example is illustrated as follows.
 
-![](Paging_images/Paging_img3.png)
+{{ '![](Paging_images/Paging_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## Skip
+Skip
 
 The skip query is used to skip some number of records.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -206,18 +206,19 @@ The skip query is used to skip some number of records.
 )
 
 
-{% endhighlight %}
+
 Result of the above code example is illustrated as follows.
 
 
-![](Paging_images/Paging_img4.png)
+
+{{ '![](Paging_images/Paging_img4.png)' | markdownify }}
+{:.image }
 
 
-
-## Take
+Take
 
 The take query is used to get some number of records from the data source of the DataManager.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -248,18 +249,17 @@ The take query is used to get some number of records from the data source of the
 
 )
 
-{% endhighlight %}
+
 
 Result of the above code example is illustrated as follows.
 
-![](Paging_images/Paging_img5.png)
+{{ '![](Paging_images/Paging_img5.png)' | markdownify }}
+{:.image }
 
 
-
-## RequiresCount
+RequiresCount
 
 The requiresCount query is used to get the count of the total number of records in the data source of the DataManager.
-{% highlight html %}
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
@@ -291,18 +291,18 @@ The requiresCount query is used to get the count of the total number of records 
 
 )
 
-{% endhighlight %}
+
 
 Result of the above code example is illustrated as follows.
 
-![](Paging_images/Paging_img6.png)
+{{ '![](Paging_images/Paging_img6.png)' | markdownify }}
+{:.image }
 
 
-
-## Range
+Range
 
 The range query is used to get some particular range of records from the data source of the DataManager.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -332,12 +332,12 @@ The range query is used to get some particular range of records from the data so
         })
 
 )
-{% endhighlight  %}
+
 Result of the above code example is illustrated as follows.
 
 
 
-![](Paging_images/Paging_img7.png)
-
+{{ '![](Paging_images/Paging_img7.png)' | markdownify }}
+{:.image }
 
 

@@ -7,12 +7,12 @@ control: Diagram
 documentation: ug
 ---
 
-# Tools
+## Tools
 
-When interacting on a diagrams surface, the Tool property decides the action to be performed. When more than one tool is applied, by using bitwise OR, the necessary tool is picked based on the interaction gesture, the value of Tool property and precedence.
+When interacting on a diagram’s surface, the Tool property decides the action to be performed. When more than one tool is applied, by using bitwise OR, the necessary tool is picked based on the interaction gesture, the value of Tool property and precedence.
 
 _Tools_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -50,14 +50,15 @@ Allows you to select individual nodes or connectors.</td></tr>
 None</td><td>
 Disables all tools</td></tr>
 </table>
-{% endhighlight %}
-Single Tool Selection
+ Single Tool Selection
 
 The following code illustrates how to enable SingleSelect tool.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 //Enables SingleSelection 
 
@@ -77,8 +78,9 @@ Diagram provides support to enable multiple tools at a time. The following code 
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 //Enables Multiple Selection
 
@@ -90,7 +92,7 @@ model.Tool= Tool.SingleSelect| Tool.ZoomPan;
 
 {% endhighlight %}
 
-## Drawing Tools
+### Drawing Tools
 
 Drawing tool allows you to draw any node during runtime by clicking and dragging the Diagram page. To draw a node by using drawing tool, the required node is assigned to the drawType property.
 
@@ -100,6 +102,7 @@ The following code example illustrates how to draw the rectangle shape at run ti
 
 {% highlight html %}
 
+[JS]
 
 
 
@@ -147,8 +150,8 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 
 
 
-![](Tools_images/Tools_img1.png)
-
+{{ '![](Tools_images/Tools_img1.png)' | markdownify }}
+{:.image }
 
 
 Similarly, you can draw any node by using drawing tool, by assigning the required node to diagram.model.drawType property.
@@ -163,6 +166,7 @@ The following code example illustrates how to draw a straight connector at runti
 
 {% highlight html %}
 
+[JS]
 
 
 
@@ -201,7 +205,8 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 {% endhighlight %}
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image682_23.jpg](Tools_images/Tools_img2.jpeg)
 
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image682_23.jpg](Tools_images/Tools_img2.jpeg)' | markdownify }}
+{:.image }
 
 

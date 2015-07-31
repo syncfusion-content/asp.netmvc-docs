@@ -19,20 +19,15 @@ The following steps explain how to enable the RTL property of the ProgressBar co
 
 
 
-{% highlight html %}
-// Add the following code example to the corresponding CSHTML page to render ProgressBar control to display it in the right-to-left direction.
-@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnableRTL(true)
-{% endhighlight %}
-{% highlight javascript %}
-<script>            
-var progress;
-            $(document).ready(function () {
-			progress = $("#progressbar").data("ejProgressBar");
-			progress.setModel({ text: progress.getValue() + " %"});
-            });
-</script>       
+<table>
+<tr>
+<td>
+[CSHTML]// Add the following code example to the corresponding CSHTML page to render ProgressBar control to display it in the right-to-left direction.@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnableRTL(true)</td></tr>
+<tr>
+<td>
+[JavaScript]<script>            var progress;            $(document).ready(function () {                progress = $("#progressbar").data("ejProgressBar");                progress.setModel({ text: progress.getValue() + " %"});            });        </script>        </td></tr>
+</table>
 
-{% endhighlight %}
 
 
 
@@ -40,8 +35,8 @@ var progress;
 
  The following screenshot displays the output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prortl.PNG](RTL-Support_images/RTL-Support_img1.png)
-
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prortl.PNG](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
 
 
 

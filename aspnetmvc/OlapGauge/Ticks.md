@@ -7,7 +7,7 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-# Ticks
+## Ticks
 
 Ticks indicate values that are present in the scale area. The different types of ticks available are:
 
@@ -17,7 +17,7 @@ Ticks indicate values that are present in the scale area. The different types of
 You can further customize Ticks by setting color, width and height.
 
 
-{% highlight html %}
+
 
 
 [MVC]
@@ -76,18 +76,18 @@ ticks.Type(CircularTickTypes.Major).Height(16).Width(2).Color("red").Add();
 
 
 
-{% endhighlight  %}
-
-![](Ticks_images/Ticks_img1.png)
 
 
+{{ '![](Ticks_images/Ticks_img1.png)' | markdownify }}
+{:.image }
 
-## Customizing the distance from Scale
+
+### Customizing the distance from Scale
 
 You can change the distance from the scale and the Ticks using “distanceFromScale” property.
 
 
-{% highlight html %}
+
 
 
 [MVC]
@@ -146,17 +146,17 @@ You can change the distance from the scale and the Ticks using “distanceFromSc
 
 
 
-{% endhighlight  %}
-
-![](Ticks_images/Ticks_img2.png)
 
 
+{{ '![](Ticks_images/Ticks_img2.png)' | markdownify }}
+{:.image }
 
-## Height and Width Customization
+
+### Height and Width Customization
 
 You can set the height and width of the Ticks using the “tickWidth” and “tickHeight” property.
 
-{% highlight html %}
+
 
 [MVC]
 
@@ -214,17 +214,20 @@ You can set the height and width of the Ticks using the “tickWidth” and “t
 
 
 
-{% endhighlight  %}
-
-![I:/OlapGuage/Gauge/Tick customizatoion.png](Ticks_images/Ticks_img3.png)
 
 
-## Hiding Ticks
+{{ '![I:/OlapGuage/Gauge/Tick customizatoion.png](Ticks_images/Ticks_img3.png)' | markdownify }}
+{:.image }
+
+
+### 
+
+### Hiding Ticks
 
 You can hide the Ticks that indicate the range values using “showTicks” property.
 
 
-{% highlight html %}
+
  [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -280,10 +283,10 @@ You can hide the Ticks that indicate the range values using “showTicks” prop
 })
 
 
-{% endhighlight %}
 
 
-![](Ticks_images/Ticks_img4.png)
 
+{{ '![](Ticks_images/Ticks_img4.png)' | markdownify }}
+{:.image }
 
 

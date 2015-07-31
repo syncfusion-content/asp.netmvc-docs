@@ -7,17 +7,17 @@ control: Diagram
 documentation: ug
 ---
 
-# Node
+## Node
 
 Nodes are graphical object that represent visual data to be placed on the page.
 
 
 
-![C:/Users/labuser/Desktop/a.png](Node_images/Node_img1.png)
+{{ '![C:/Users/labuser/Desktop/a.png](Node_images/Node_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Create Node
+### Create Node
 
 Node is created from Node object and added to the Diagram model by using diagram model’s Nodes property. The node’s name must be unique. The following code illustrates how to create a node and add it to the Diagram.
 
@@ -25,7 +25,9 @@ Node is created from Node object and added to the Diagram model by using diagram
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 
 
@@ -55,13 +57,13 @@ model.Nodes.Add(node);
 
 
 
-![](Node_images/Node_img2.png)
-
+{{ '![](Node_images/Node_img2.png)' | markdownify }}
+{:.image }
 
 
 List of preloaded nodes from symbol palette are added to the Diagram by clicking the palette nodes or by dragging a node and dropping on the Diagram. The method to add node/connector to palette and drag and drop on Diagram is explained in palette section
 
-## Node Shapes
+### Node Shapes
 
 Diagram has a collection of predefined shapes. The shape to be drawn can be set by using a set of shape specific properties. The most commonly used shapes are:
 
@@ -73,7 +75,7 @@ Diagram has a collection of predefined shapes. The shape to be drawn can be set 
 * Path (A type of basic shape)
 * Polygon (A type of basic shape)
 
-##Rectangle
+Rectangle
 
 You can create a rectangle with the help of BasicShape and by setting node’s shape as BasicShapes.Rectangle. The following code illustrates how a rectangle node is created.
 
@@ -81,7 +83,9 @@ You can create a rectangle with the help of BasicShape and by setting node’s s
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 
 
@@ -107,11 +111,11 @@ node.Shape = BasicShapes.Ellipse;
 
 
 
-![](Node_images/Node_img3.png)
+{{ '![](Node_images/Node_img3.png)' | markdownify }}
+{:.image }
 
 
-
-##Html
+Html
 
 Html elements are embedded in a Diagram through the CustomNodenode. The following code illustrates how a Html node is created.
 
@@ -119,6 +123,9 @@ Html elements are embedded in a Diagram through the CustomNodenode. The followin
 
 {% highlight c# %}
 
+[EJMVC]
+
+[CSHTML]
 
 //dependency scripts
 
@@ -138,6 +145,7 @@ Html elements are embedded in a Diagram through the CustomNodenode. The followin
 
 
 
+[Controller]
 
 
 
@@ -157,11 +165,11 @@ node.Value="button";
 
 
 
-![](Node_images/Node_img4.png)
+{{ '![](Node_images/Node_img4.png)' | markdownify }}
+{:.image }
 
 
-
-##Text Node
+Text Node
 
 You can add Text to the Diagram by using Textshapenode. The text shape has Textblock that contains text, font style, and align properties.The following code illustrates how to create a Text node.
 
@@ -169,7 +177,9 @@ You can add Text to the Diagram by using Textshapenode. The text shape has Textb
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 //Creates a node with text content
 
@@ -189,11 +199,11 @@ node.TextBlock = block;
 
 
 
-![](Node_images/Node_img5.png)
+{{ '![](Node_images/Node_img5.png)' | markdownify }}
+{:.image }
 
 
-
-##Path
+Path
 
 You can create complex shapes by using Pathshapenode. It is achieved by assigning path string to shape’s PathData. The following code illustrates how a Pathnode is created.
 
@@ -201,8 +211,9 @@ You can create complex shapes by using Pathshapenode. It is achieved by assignin
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 
 
@@ -220,11 +231,11 @@ node.PathData = "M 67.2947 100 L 67.2947 0.00102291 L 59.138 0.00102291 M 100 50
 
 
 
-![C:/Users/labuser/Desktop/a.png](Node_images/Node_img6.png)
+{{ '![C:/Users/labuser/Desktop/a.png](Node_images/Node_img6.png)' | markdownify }}
+{:.image }
 
 
-
-##Polygon
+Polygon
 
 You can create Polygon by setting the BasicShape node’s type as BasicShapes.Polygon and assigning the desired points to the node’s Point property.
 
@@ -232,7 +243,9 @@ The following code illustrates how to create a Polygonnode.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 
 
@@ -274,17 +287,19 @@ node.Points = points;
 
 
 
-![](Node_images/Node_img7.png)
+{{ '![](Node_images/Node_img7.png)' | markdownify }}
+{:.image }
 
 
-
-##Native 
+Native 
 
 Diagram supports adding SVG content as shape content. It is achieved by creating node by using CustomNode and assigning the template ID to the TemplateId property. The TemplateId property receives id svg template. The following code illustrates how a Native node is created.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[CSHTML]
 
 
 
@@ -312,6 +327,7 @@ Diagram supports adding SVG content as shape content. It is achieved by creating
 
 
 
+[Controller]
 
 
 
@@ -331,17 +347,17 @@ node.Text="Mail";
 
 
 
-![](Node_images/Node_img8.png)
+{{ '![](Node_images/Node_img8.png)' | markdownify }}
+{:.image }
 
 
+{{ '![](Node_images/Node_img9.png)' | markdownify }}
+{:.image }
+_Note:_ 
 
-![](Node_images/Node_img9.png)
+> _Shapes of type Node or HTML cannot be exported to an image format like JPEG, PNG and BMP. It is by design that while exporting, diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML and SVG elements is not feasible. So, this limitation._ 
 
-Note: 
-
-Shapes of type Node or HTML cannot be exported to an image format like JPEG, PNG and BMP. It is by design that while exporting, diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML and SVG elements is not feasible. So, this limitation.
-
-Note that fill color is applied to the Native Node only when its inline style, or fill, for an SVG child element is not specified. In the following example, the node’s fill color is overridden by the specified color for the group.
+> _Note that fill color is applied to the Native Node only when its inline style, or fill, for an SVG child element is not specified. In the following example, the node’s fill color is overridden by the specified color for the group._
 
 
 {% highlight html %}
@@ -357,14 +373,15 @@ Note that fill color is applied to the Native Node only when its inline style, o
 
 {% endhighlight %}
 
-##Image
+Image
 
 You can add Image as a node to the Diagram by creating ImageNode and setting the image URL to Source property of shape. The following code illustrates how an Image node is created.
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 // Creates a node with image
 
@@ -378,23 +395,25 @@ node.Source = "sample/Syncfusion.PNG";
 
 
 
-![](Node_images/Node_img10.png)
+{{ '![](Node_images/Node_img10.png)' | markdownify }}
+{:.image }
 
 
-
-## Shadow
+### Shadow
 
 Dropshadoweffect for a node can be enabled or disabled by using the NodeConstraints.Shadow. The following image represents the drop shadow effect for a Node.
 
-![](Node_images/Node_img11.png)
-
+{{ '![](Node_images/Node_img11.png)' | markdownify }}
+{:.image }
 
 
 The following code example illustrates how to enable or disable the shadow.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 Node node = new Node ();
 
@@ -410,13 +429,15 @@ node.Constraints = node.Constraints &~ NodeConstraints.Shadow;
 
 {% endhighlight %}
 
-##Customizing Shadow
+Customizing Shadow
 
 Position and opacity of the shadow can be customized by using opacity, angle, and distance of the shadow. The following code example illustrates how to customize the shadow.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 Node node = new Node ();
 
@@ -434,16 +455,16 @@ node.Shadow.Angle = 50;
 
 
 
-![](Node_images/Node_img12.png)
+{{ '![](Node_images/Node_img12.png)' | markdownify }}
+{:.image }
 
 
-
-## Appearance
+### Appearance
 
 You can customize the appearance of the shapes by using node customization properties.
 
 _Appearance_
-{% highlight c# %}
+
 <table>
 <tr>
 <td>
@@ -486,12 +507,13 @@ BorderWidth</td><td>
 Int</td><td>
 Gets or sets the width of node border.</td></tr>
 </table>
-{% endhighlight %}
+
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 
 
@@ -545,18 +567,18 @@ node.LinearGradient = gradient;
 
 
 
-![](Node_images/Node_img13.png)
+{{ '![](Node_images/Node_img13.png)' | markdownify }}
+{:.image }
 
 
+### Constraints
 
-## Constraints
-
-###NodeConstraints
+NodeConstraints
 
 You can enable or disable certain behaviors of Nodes by using Node’s Constraints property.
 
 _Constraints_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -643,7 +665,6 @@ Enables all the constraints.</td></tr>
 None</td><td>
 Disables all the constraints.</td></tr>
 </table>
-{% endhighlight %}
 The Default value for the node constraints property is NodeConstraints.Default.
 
 The following code illustrates how to enable rotate, select constraints, and disable other constraints.
@@ -652,7 +673,9 @@ The following code illustrates how to enable rotate, select constraints, and dis
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller] 
 
 //Applies selection and rotation constraints only.
 
@@ -664,8 +687,8 @@ node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_17.jpg](Node_images/Node_img14.jpeg)
-
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_17.jpg](Node_images/Node_img14.jpeg)' | markdownify }}
+{:.image }
 
 
 The following code illustrates how to disable rotate constraints. Disabling rotate constraint does not allow you to rotate the node.
@@ -674,8 +697,9 @@ The following code illustrates how to disable rotate constraints. Disabling rota
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
  //Disables rotate constraint.
 
@@ -685,11 +709,11 @@ node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
 
 {% endhighlight %}
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_18.jpg](Node_images/Node_img15.jpeg)
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image59_18.jpg](Node_images/Node_img15.jpeg)' | markdownify }}
+{:.image }
 
 
-
-![C:/Users/labuser/Desktop/note.jpg](Node_images/Node_img16.jpeg)
-
-Note: Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
+> {{ '![C:/Users/labuser/Desktop/note.jpg](Node_images/Node_img16.jpeg)' | markdownify }}
+{:.image }
+_Note: Node’s constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
 

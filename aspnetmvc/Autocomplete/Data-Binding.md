@@ -7,41 +7,41 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Data-Binding
+## Data-Binding
 
 In order to render the AutoComplete control, the data needs to be bound to it in a proper way. The following sub-properties provide a way to bind either the local or remote data to the AutoComplete widget by binding the appropriate data fields to the corresponding options.
 
-## Fields
+Fields
 
-### DataSource 
+DataSource 
 
 This property assigns the List of objects to the AutoComplete control. Either local data or remote data can be specified.  
 
-### Query 
+Query 
 
 It accepts the data of object type, usually the query string to fetch the required data from a specific table based on certain condition. This property is optional hence when it is not specified the entire records that are initially assigned through DataSource are taken into consideration.
 
-### Key
+Key
 
 It maps the corresponding key field name from the data table or the List of objects that is assigned to the DataSource with the Key property of the AutoComplete control. The Key value that is fetched from the table is unique for each records.
 
-### Text
+Text
 
 It maps the corresponding Text field name from the data table or the List of Objects that is assigned to the DataSource with the Text property of the AutoComplete control. The text value that is fetched from the table represents the value to be displayed in the AutoComplete textbox.
 
-### Category
+Category
 
 It maps the Category field name from the data table or the List of Objects that is assigned to the DataSource. The Category value that is fetched from the table is made available when Grouping is enabled.
 
-### HtmlAttributes
+HtmlAttributes
 
 This allows you to map the CSS styles or classes to the corresponding data from table or the List of Objects data with the AutoComplete items. The HtmlAttributes value customizes the AutoComplete items based on html styling or class assigned to it. 
 
-### Local data
+Local data
 
 AutoComplete provides extensive data binding support to populate AutoComplete items, so that the values are mapped to the AutoComplete fields, namely Key and Text. DataBinding helps you bind a key value pair to AutoComplete textbox. Key field takes the unique id of the dataSource elements. Text field gets the value to be displayed in the AutoComplete textbox.
 
-## Defining the Local data for AutoComplete
+Defining the Local data for AutoComplete
 
 The following steps explain local data binding to an AutoComplete textbox.
 
@@ -49,7 +49,9 @@ The following steps explain local data binding to an AutoComplete textbox.
 
 
 
-{% highlight C# %}
+
+
+[Controller]
 
 
 
@@ -173,14 +175,15 @@ public partial class AutocompleteController : Controller
 
     }
 
-{% endhighlight %}
+
 
 2.   In the View page, add Autocomplete helper and map the Local   data list to corresponding DataSource and AutoCompleteFields.
 
 
 
 
-{% highlight html %}
+
+[CSHTML]
 
 
 
@@ -192,7 +195,7 @@ public partial class AutocompleteController : Controller
 
 
 
-{% endhighlight %}
+
 
 
 
@@ -202,18 +205,19 @@ The following image is the output for AutoComplete control with local data bindi
 
 
 
-![](Data-Binding_images/Data-Binding_img1.png)
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
+{:.image }
 
 
 _AutoComplete with local data-binding_
 
-## Remote data
+Remote data
 
 AutoComplete provides remote data binding support to populate AutoComplete items, so that the values are mapped to the AutoComplete fields from a remote web service using DataManager and Query. 
 
 DataManager is used to manage relational data. It supports CRUD that is Create, Read, Update, and Destroy, in individual requests and batches. DataManager uses two different classes, ej.DataManager, for processing and ej.Query, for serving data. ej.DataManager communicates with dataSource and ej.Query generates data queries that are read by the DataManager.
 
-### Configuring remote data for AutoComplete
+Configuring remote data for AutoComplete
 
 The following steps explain the remote data binding to an AutoComplete textbox.
 
@@ -222,7 +226,8 @@ The following steps explain the remote data binding to an AutoComplete textbox.
 1. In the View page, map the Local data list to the corresponding DataSource and AutoCompleteFields.
 
 
-{% highlight html %}
+
+[CSHTML]
 
 
 
@@ -235,15 +240,15 @@ The following steps explain the remote data binding to an AutoComplete textbox.
     .AutocompleteFields(f => f.Text("ComponentName").Key("ComponentId"))
 
 
-{% endhighlight %}
+
 
 
 
 
 The following image is the output for AutoComplete control with remote data binding.
 
-![](Data-Binding_images/Data-Binding_img2.png)
-
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
+{:.image }
 
 
 _AutoComplete with remote data binding_

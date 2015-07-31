@@ -7,7 +7,7 @@ control: Navigation Drawer
 documentation: ug
 ---
 
-# TargetId
+## TargetId
 
 This property is used to define the target Id for Navigation Drawer. The drawer opens while you click on the specified target element.
 
@@ -61,13 +61,13 @@ This property is used to define the target Id for Navigation Drawer. The drawer 
 
 The following screenshots illustrates the output.
 
-![](TargetId_images/TargetId_img1.png)
+{{ '![](TargetId_images/TargetId_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-![](TargetId_images/TargetId_img2.png)
-
+{{ '![](TargetId_images/TargetId_img2.png)' | markdownify }}
+{:.image }
 
 

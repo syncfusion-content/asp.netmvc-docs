@@ -7,7 +7,7 @@ control: Gantt
 documentation: ug
 ---
 
-# Time Options
+## Time Options
 
 Start date and End date in the datasource defines the starting point and ending point of a task in the project. It can be of two data types,
 
@@ -43,8 +43,9 @@ Use the following code example for setting different time scales of working hour
 
 Use the following code example for including time options in start date and end date of a task.
 
-{% highlight C# %}
+{% highlight html %}
 
+CONTROLLER [CS]
 
 
 
@@ -213,9 +214,10 @@ public class GanttController : Controller
         }
 
     }
-{% endhighlight %}
 
-{% highlight html %}
+
+
+VIEW [CSHTML]
 
 @using Syncfusion.JavaScript
 
@@ -297,7 +299,7 @@ Execute the above code to render the following output.
 
 
 
-![](Time-Options_images/Time-Options_img1.png)
-
+{{ '![](Time-Options_images/Time-Options_img1.png)' | markdownify }}
+{:.image }
 
 

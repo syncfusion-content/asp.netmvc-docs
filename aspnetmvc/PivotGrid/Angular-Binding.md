@@ -7,9 +7,9 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Angular Binding
+## Angular Binding
 
-Note: This feature is applicable only for OLAP datasource.
+> _Note:__This feature is applicable only for OLAP datasource._
 
 Angularbinding is a structural framework for dynamic web apps. You can use HTML as your template language and extend HTML's syntax to express your application's components clearly and briefly.
 

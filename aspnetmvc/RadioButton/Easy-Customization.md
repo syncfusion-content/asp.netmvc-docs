@@ -7,9 +7,9 @@ control: RadioButton
 documentation: ug
 ---
 
-# Easy Customization
+## Easy Customization
 
-## Checked status
+### Checked status
 
 You have options to set the state of the radio button as either checked or unchecked. When you select any option from the group of radio buttons, a dot mark appears inside the circle. This is called the checkedstate. Previously selected radio buttons in this group are unselected that is they go to the unchecked state. The Checked property is used to set the state of the radio button.
 
@@ -21,11 +21,13 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 {% highlight html %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@* Here checked and unchecked type of radio buttons are rendered in same group
+@* Here checked and unchecked type of radio buttons are rendered in same group
 
     set checked state of radio button as follows*@
+
+
 
     @Html.EJ().RadioButton("Radio_checked").Name("Gender").Size(RadioButtonSize.Small).Checked(true)
 
@@ -38,10 +40,14 @@ In the CSHTML page, add the following input elements to configure Radio Button w
     <label for="Radio_unchecked" class="clslab">Female</label>
 
 
+
 {% endhighlight %}
 
 
-### Configure the CSS styles to align the radio buttons.
+
+
+
+Configure the CSS styles to align the radio buttons.
 
 
 
@@ -57,16 +63,21 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
     </style>
 
+
+
 {% endhighlight %}
+
 
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
 
 
+{{ '![](Easy-Customization_images/Easy-Customization_img1.png)' | markdownify }}
+{:.image }
 
-## Text
+
+### Text
 
 Specifies the text content for the radio button. In previous programs, separate labels were created for each radio button. But now you have the option to set the text for radio button using the Text property. So here you do not have to add a label tag for each radio button in the HTML code.
 
@@ -75,22 +86,28 @@ The following steps explain the details about rendering the Radio Button with Te
 In the CSHTML page, add the following input elements to configure the Radio Button widget.
 
 
+
+
+
 {% highlight html %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@*radio button with text property*@
+@*radio button with text property*@
 
-    @Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male")
+      @Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male")
 
     <br />
 
     @Html.EJ().RadioButton("RadBtn_female").Name("Gender").Size(RadioButtonSize.Small).Checked(false).Text("Female")
 
+
+
 {% endhighlight %}
 
 
-### Configure the CSS styles to align the radio buttons.
+
+Configure the CSS styles to align the radio buttons.
 
 
 
@@ -103,8 +120,12 @@ In the CSHTML page, add the following input elements to configure the Radio Butt
             margin: 100px;
 
         }
-		
+
+
+
     </style>
+
+
 
 {% endhighlight %}
 
@@ -112,21 +133,21 @@ In the CSHTML page, add the following input elements to configure the Radio Butt
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img2.png)
+{{ '![](Easy-Customization_images/Easy-Customization_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Size
+### Size
 
 You can render the Radio Button in different sizes. There are some predefined size options available for rendering a Radio Button in an easy way. Each size option has different height and width. It mainly avoids the complexity in rendering Radio Button with complex CSS class. 
 
-_Table_ _1_: _Size_
+_Table_ _1_: Size_
 
 <table>
 <tr>
-<th>
-Property</th><th>
-Description</th></tr>
+<td>
+Property</td><td>
+Description</td></tr>
 <tr>
 <td>
 Small</td><td>
@@ -146,13 +167,17 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 {% highlight html %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@* small and medium size of radio buttons in same group
 
-    By default, here no one radio button is checked*@
-	
-	Small size radio buttons
+
+@* small and medium size of radio buttons in same group
+
+            By default, here no one radio button is checked*@
+
+
+
+    Small size radio buttons
 
     <br />
 
@@ -182,9 +207,15 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
     <label for="Radio1_Female" >Female</label>
 
+
+
 {% endhighlight %}
 
-### Configure the CSS styles to align the radio buttons.
+
+
+
+
+Configure the CSS styles to align the radio buttons.
 
 
 {% highlight css %}
@@ -199,17 +230,21 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
     </style>
 
+
+
 {% endhighlight %}
 
 
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img3.png)
 
 
+{{ '![](Easy-Customization_images/Easy-Customization_img3.png)' | markdownify }}
+{:.image }
 
-## RTL Support 
+
+### RTL Support 
 
 In some cases you need to use right-to-left alignment. You can give RTL support by using EnableRTL property.  RTL mode works when you use the Text property in Radio Button. The Radio Buttons and text are aligned in the right-to-left format. For example, when text is right-aligned and Radio Button is left-aligned, after you apply right-to-left alignment, these positions are interchanged. 
 
@@ -217,11 +252,17 @@ The following steps explain the details about rendering the Radio Button with ri
 
 In the CSHTML page, add the following button elements to configure Radio Button widget.
 
+
+
+
+
 {% highlight html %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@*set radio button with right to left format*@
+
+
+@*set radio button with right to left format*@
 
      <div class="page-align">
 
@@ -251,11 +292,19 @@ In the CSHTML page, add the following button elements to configure Radio Button 
 
     </div>
 
+
+
 {% endhighlight %}
+
+
+
+
 
 In the above mentioned code, the text property has been used. In LTR format, the Radio Button is on the left side. In RTL format, the Radio Button appears on the right side. Here the Text property is used and the EnableRTL property is set as “True”. It changes the alignment to right-to-left.
 
-### Configure the CSS styles to align the Radio Buttons.
+Configure the CSS styles to align the Radio Buttons.
+
+
 
 {% highlight css %}
 
@@ -275,9 +324,17 @@ In the above mentioned code, the text property has been used. In LTR format, the
 
     </style>
 
+
+
 {% endhighlight %}
+
 
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
+
+
+{{ '![](Easy-Customization_images/Easy-Customization_img4.png)' | markdownify }}
+{:.image }
+
+

@@ -7,11 +7,11 @@ control: Circular Gauge
 documentation: ug
 ---
 
-# Gauge Position
+## Gauge Position
 
 Semi-circular Gauge can be positioned within the canvas element which provides better appearance for the gauge in the canvas.
 
-## Positioning
+Positioning
 
 * Semi-circular Gauge can be positioned with the help of the attribute called gaugePosition. It is an enumerable value. You can position the gauge away from the corner with the help of the distanceFromCorner attribute. 
 * The possible enum values for the gaugePosition are as follows:
@@ -27,7 +27,7 @@ Semi-circular Gauge can be positioned within the canvas element which provides b
 
 
 
-{% highlight html%}
+
 
 <table>
 <tr>
@@ -38,10 +38,10 @@ Semi-circular Gauge can be positioned within the canvas element which provides b
 [Controller]public partial class CircularGaugeController : Controller    {        //        // GET: /ToolTip/        public ActionResult Semicircular()        {            return View();        }}</td></tr>
 </table>
 
-{% endhighlight %}
+
 Execute the above code to render the following output.
 
-![](Gauge-Position_images/Gauge-Position_img1.png)
-
+{{ '![](Gauge-Position_images/Gauge-Position_img1.png)' | markdownify }}
+{:.image }
 
 

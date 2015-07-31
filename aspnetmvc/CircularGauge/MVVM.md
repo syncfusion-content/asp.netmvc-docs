@@ -7,17 +7,16 @@ control: Circular Gauge
 documentation: ug
 ---
 
-# MVVM
+## MVVM
 
-## Angular JS
+Angular JS
 
 Circular Gauge contains angular support. You can add object as well as array object in the Circular Gauge. The two way binding support is given to the pointer value, minimum scale value and maximum scale value. 
 
 
 
-## Rendering the Circular Gauge
+### Rendering the Circular Gauge
 
-{% highlight html %}
 ej-CircularGauge is the control tag in which ej is tag prefix and CircularGauge is the control name.The following code example helps you to render Circular Gauge.
 
 <div ng-app="syncApp">
@@ -37,8 +36,7 @@ e-enableAnimation="false">
 </div>
 
 </div>
-{% endhighlight  %}
-{% highlight js %}
+
 <script type="text/javascript">
 
 
@@ -64,23 +62,23 @@ $scope.nmaximum = 120;
 </script>
 
 
-{% endhighlight  %}
+
 
 
 Execute the above code to render the output as follows.
 
-![](MVVM_images/MVVM_img1.png)
+{{ '![](MVVM_images/MVVM_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Adding Scale Collection
+### Adding Scale Collection
 
 Scale is an array object and you can use the inner tag for it. Object in the array collection (i.e. border) is extended with hyphen in the same tag.
 
 Example: e-border-width and e-border-color. 
-{% highlight html %}
+
 <!--To Render the Circular gauge-->
 
 <ej-CircularGauge id="CircularGauge1">
@@ -104,23 +102,23 @@ e-border-width="0.5">
 </ej-CircularGauge>
 
 
-{% endhighlight  %}
+
 
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img2.png)
+{{ '![](MVVM_images/MVVM_img2.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Adding Pointer Collection
+### Adding Pointer Collection
 
 Pointer is an array object and you can use the inner tag for it. Object in the array collection (i.e. pointer cap) is extended with hyphen in the same tag.
 
 Example: e-pointerCap-radius. 
-{% highlight html %}
+
 <!--To Render the Circular gauge-->
 
 <ej-CircularGauge id="CircularGauge1">
@@ -152,19 +150,19 @@ e-pointerCap-radius="12">
 </ej-CircularGauge>
 
 
-{% endhighlight %}
+
 Execute the above code to render the output as follows.
 
-![](MVVM_images/MVVM_img3.png)
+{{ '![](MVVM_images/MVVM_img3.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Adding Label Collection
+### Adding Label Collection
 
 Label is also an array object. You can use the inner tag for it. 
-{% highlight html %}
+
 <!--To Render the Circular gauge-->
 
 <ej-CircularGauge id="CircularGauge1">
@@ -195,20 +193,20 @@ Label is also an array object. You can use the inner tag for it.
 
 </ej-CircularGauge>
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img4.png)
+{{ '![](MVVM_images/MVVM_img4.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Adding Tick Collection
+### Adding Tick Collection
 
 Tick is an array object. You can use the inner tag for it. 
-{% highlight html %}
+
 <!--To Render the Circular gauge-->
 
 <ej-CircularGauge id="CircularGauge1">
@@ -251,22 +249,22 @@ e-width="1" e-color="#8c8c8c">
 
 </ej-CircularGauge>
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img5.png)
+{{ '![](MVVM_images/MVVM_img5.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Adding Range Collection
+### Adding Range Collection
 
 Range is an array object. You can use the inner tag for it. Object in the array collection (i.e. border) is extended with hyphen in the same tag.
 
 Example: e-border-color. 
-{% highlight html %}
+
 <!--To Render the Circular gauge-->
 
 <ej-CircularGauge id="CircularGauge1">
@@ -321,22 +319,22 @@ e-border-color="#f5b43f">
 
 </ej-CircularGauge>
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img6.png)
+{{ '![](MVVM_images/MVVM_img6.png)' | markdownify }}
+{:.image }
 
 
 
 
 
 
-
-## Two Way Binding 
+### Two Way Binding 
 
 Circular Gauge support the two way binding for the property value, minimum and maximum as mentioned earlier. The following code example explains how to achieve the two way binding in Circular Gauge.
-{% highlight html %}
+
 <div ng-app="syncApp">
 
 <div ng-controller="CircularGauge">
@@ -438,8 +436,7 @@ e-border-color="#f5b43f">
 </div>
 
 </div>
-{% endhighlight  %}
-{% highlight js %}
+
 <script type="text/javascript">
 
 
@@ -464,17 +461,17 @@ $scope.nmaximum = 120;
 
 </script>
 
-{% endhighlight  %}
+
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img7.png)
-
+{{ '![](MVVM_images/MVVM_img7.png)' | markdownify }}
+{:.image }
 
 
 Figure 62: Circular gauge with two way binding in Angular JS
 
-## Knockout JS
+### Knockout JS
 
 * Knockout support allows you to bind the HTML elements against any of the available data models.Two types of knockout binding is supported as of angular,
 1. one-way binding
@@ -486,7 +483,7 @@ Figure 62: Circular gauge with two way binding in Angular JS
 3. minimum
 
 
-{% highlight html %}
+
 
 
 [MVC]
@@ -504,8 +501,7 @@ maximum:maximumValue
 }">
 
 </div>
-{% endhighlight  %}
-{% highlight js %}
+
 <script type="text/javascript">
 
 $(function () {
@@ -529,15 +525,15 @@ ko.applyBindings(viewModel);
 });
 
 </script>
-{% endhighlight  %}
+
 
 
 Execute the above code to render the following output. The following screenshot is the output of ASP.
 
 
 
-![](MVVM_images/MVVM_img8.png)
-
+{{ '![](MVVM_images/MVVM_img8.png)' | markdownify }}
+{:.image }
 
 
 

@@ -7,9 +7,9 @@ control: Toggle Button
 documentation: ug
 ---
 
-## Miscellaneous
+# Miscellaneous
 
-ShowRoundedCorner 
+## ShowRoundedCorner 
 
 It sets the corner of Toggle Button in rounded shape. The Toggle Button, by default doesn’t have rounded corner. To set rounded corner, you can enable ShowRoundedCorner property.
 
@@ -20,8 +20,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
@@ -35,17 +34,17 @@ The following steps explains you the details about rendering the Toggle Button w
 
     </div>
 
-
+{%  endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
-{:.image }
+![](Miscellaneous_images/Miscellaneous_img1.png)
+
 
 
 _Figure_ _19__: Toggle button with Rounder corner_
 
-PreventToggle
+## PreventToggle
 
 This property is used to prevent the state change of Toggle Button when it is clicked. When you set PreventToggle propertyas true, then the state of the Toggle Button is not changed even though it is clicked. Default value of PreventToggle is false.
 
@@ -57,7 +56,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-[CSHTML]
+{% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
@@ -70,6 +69,8 @@ The following steps explains you the details about rendering the Toggle Button w
                  @Html.EJ().ToggleButton("toggleButton_preventToggle").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").PreventToggle(true)       
 
     </div>
+	
+	{% endhighlight %}
 
 
 
@@ -77,8 +78,8 @@ Execute the above code to render the following output.
 
 
 
-{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
-{:.image }
+![](Miscellaneous_images/Miscellaneous_img2.png)
+
 
 
 _Figure_ _20__: Toggle button with prevent Toggle_

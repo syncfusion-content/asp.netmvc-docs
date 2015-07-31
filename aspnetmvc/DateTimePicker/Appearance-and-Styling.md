@@ -7,9 +7,9 @@ control: DateTimePicker
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## Theme
+Theme
 
 DateTimePicker control support rich appearance. This control consist of six flat themes and six gradient themes. To use these twelve themes, refer the themes files in HTML file. 
 
@@ -36,26 +36,23 @@ The following list is of the twelve themes supported by DateTimePicker:
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget. 
 
-   ~~~ html
-   
-     [_cshtml]
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
-	    @Html.EJ().DateTimePicker("DateTime").Width("175px")
 
-   ~~~
-   {:.prettyprint }
-   
-   
+[_cshtml]   
+
+@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
+
+@Html.EJ().DateTimePicker("DateTime").Width("175px")
+
+
 
 2. The following screenshot displays the output for the above code.
 
-	![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Css Class
+Css Class
 
 DateTimePicker control also allows you to customize its appearance using user-defined CSS and custom skin options such as colors and backgrounds. To apply custom themes you have a property called CssClass. CssClass property sets the root class for DateTimePicker theme.
 
@@ -64,16 +61,13 @@ Using this CssClass you can override the existing styles under the theme style s
 1. Add the following code in your CSHTML page to render the DateTimePicker.
 
 
-   ~~~ html
-   
-     [_cshtml]
-	 
-	    @*Add the following code in your view page to render the DateTimePicker.*@
 
-	    @Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
+[_cshtml]
 
-   ~~~
-   {:.prettyprint }
+@*Add the following code in your view page to render the DateTimePicker.*@
+
+@Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
+
 
 
 In the following style sheet the exiting theme style sheet file has been over-ridden using root class “Purple-dark”. 
@@ -81,73 +75,66 @@ In the following style sheet the exiting theme style sheet file has been over-ri
 1. Add the following code in your style section.
 
 
-   ~~~ js
-   
-     [Style]
-	 
-			.Purple-dark .e-week-header {
 
-			color: #EBADD6;
+[Style]
 
-		}
+    .Purple-dark .e-week-header {
 
-			.Purple-dark .e-text {
+        color: #EBADD6;
 
-			color: black;
+    }
 
-		}
+    .Purple-dark .e-text {
 
-			.Purple-dark .e-state-default {
+        color: black;
 
-			color: pink;
+    }
 
-		}
+    .Purple-dark .e-state-default {
 
-			.Purple-dark .e-active {
+        color: pink;
 
-			background-color: #FF1975;
+    }
 
-		}
+    .Purple-dark .e-active {
 
-			.Purple-dark .e-state-default:hover {
+        background-color: #FF1975;
 
-			color: #EBADD6;
+    }
 
-		}
+    .Purple-dark .e-state-default:hover {
 
-			.Purple-dark .e-dt-button {
+        color: #EBADD6;
 
-			color: black;
+    }
 
-			background-color: #E085C2;
+    .Purple-dark .e-dt-button {
 
-		}
+        color: black;
 
-			.Purple-dark .e-header {
+        background-color: #E085C2;
 
-			background-color: #E085C2;
+    }
 
-			color: black;
+    .Purple-dark .e-header {
 
-		}
+        background-color: #E085C2;
 
-			.Purple-dark .e-timecontainer .e-header {
+        color: black;
 
-			background-color: #E085C2;
+    }
 
-			color: black;
+    .Purple-dark .e-timecontainer .e-header {
 
-		}
+        background-color: #E085C2;
 
-   ~~~
-   {:.prettyprint }
+        color: black;
 
-
-    
+    }
 
 
 
-	![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 

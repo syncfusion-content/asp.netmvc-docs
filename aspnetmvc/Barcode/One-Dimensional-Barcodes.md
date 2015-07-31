@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# One Dimensional Barcodes
+## One Dimensional Barcodes
 
 Code 39
 
@@ -16,6 +16,10 @@ The Code 39 character set includes the digits 0-9, the letters A-Z (upper case o
 Here is the code example to create Code 39 barcode:
 
 {% highlight html %}
+
+[CSHTML]
+
+
 
 <div>
 

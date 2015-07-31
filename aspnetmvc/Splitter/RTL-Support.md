@@ -7,11 +7,11 @@ control: Splitter
 documentation: ug
 ---
 
-# RTL Support
+## RTL Support
 
 The Splitter provides you with RTL (Right-To-Left) support. The alignment of Splitter can be changed from Left-To-Right to Right-To-Left.
 
-## Enable RTL
+Enable RTL
 
 The following steps explain enabling the right-to-left property for Splitter widget.
 
@@ -19,7 +19,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 
 
@@ -122,9 +122,8 @@ In the View page add the Splitter helper to enable the RTL functionality.
                 })
 
 }
-{% endhighlight %}
 
-{% highlight html %}
+[CSS]
 
 <style type="text/css">
 
@@ -155,7 +154,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 </style>
 
 
-{% endhighlight %}
+
 
 
 
@@ -164,6 +163,15 @@ The output for Splitter when EnableRTL is “True”.
 
 
 
-![](RTL-Support_images/RTL-Support_img1.png)
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
 
+
+
+
+
+
+
+
+__
 

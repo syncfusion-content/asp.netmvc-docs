@@ -15,7 +15,7 @@ The Dialog control displays a Dialog window within a webpage. The Dialog enables
 
 
 
-Key Features
+## Key Features
 
 * Drag support: Drag the Dialog within the page.
 * AJAX Load: Load AJAX content in dialog content panel.

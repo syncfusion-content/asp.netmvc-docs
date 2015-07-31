@@ -7,11 +7,11 @@ control: Grid
 documentation: ug
 ---
 
-# Grouping
+## Grouping
 
 Grouping is an important feature in Grid. If you want to analysis any particular records, based on its category, you can simply group that column and analyse records based on category. There are several flexible options, such as grouped buttons, group close etc. To enable Grouping in Grid, add AllowGrouping at Grid Initialize. 
 
-## Initial Grouping
+### Initial Grouping
 
 In Grid, there is an option to group columns at Grid Initialize that is rendered through GroupedColumns property in Grid. This is an important option because in some scenarios, need to analyse Grid records with Grouping may arise, at the time of initialize.
 
@@ -19,7 +19,11 @@ In Grid, there is an option to group columns at Grid Initialize that is rendered
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+[razor]
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -33,9 +37,9 @@ In Grid, there is an option to group columns at Grid Initialize that is rendered
 
         )
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -68,7 +72,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-{% endhighlight %}
+
 
 
 
@@ -77,8 +81,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Grouping_images/Grouping_img1.png)
-
+{{ '![](Grouping_images/Grouping_img1.png)' | markdownify }}
+{:.image }
 
 
 ### Group Buttons
@@ -87,7 +91,11 @@ Group buttons is one of the features under Grouping. It is helpful to do Groupin
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+[razor]
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -101,9 +109,9 @@ Group buttons is one of the features under Grouping. It is helpful to do Groupin
 
         )
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -128,7 +136,7 @@ namespace MVCSampleBrowser.Controllers
     }
 
 }
-{% endhighlight %}
+
 
 
 
@@ -139,8 +147,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Grouping_images/Grouping_img2.png)
-
+{{ '![](Grouping_images/Grouping_img2.png)' | markdownify }}
+{:.image }
 
 
 ### Hide Ungroup Button
@@ -149,15 +157,19 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 
 
 
-![](Grouping_images/Grouping_img3.png)
+{{ '![](Grouping_images/Grouping_img3.png)' | markdownify }}
+{:.image }
 
 
 
 
 
 
+[MVC]
 
-{% highlight html %}
+
+
+[razor]
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -171,9 +183,9 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 
         )
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -199,7 +211,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-{% endhighlight %}
+
 
 
 
@@ -209,8 +221,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Grouping_images/Grouping_img4.png)
-
+{{ '![](Grouping_images/Grouping_img4.png)' | markdownify }}
+{:.image }
 
 
 ### AutoSize Drop Area
@@ -221,7 +233,11 @@ If you drag any header to Group column in Grid, it expands smoothly its Group Dr
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+ [razor]
 
 
 
@@ -236,9 +252,8 @@ If you drag any header to Group column in Grid, it expands smoothly its Group Dr
         .AllowPaging()
 
         )
-{% endhighlight %}
 
-{% highlight C# %}
+[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -263,7 +278,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-{% endhighlight %}
+
 
 
 
@@ -272,8 +287,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Grouping_images/Grouping_img5.png)
-
+{{ '![](Grouping_images/Grouping_img5.png)' | markdownify }}
+{:.image }
 
 
 ### Hide Group Drop Area from Grid
@@ -284,7 +299,9 @@ When the ShowDropArea property is set to false, the groupDropArea is hidden.
 
 
 
-{% highlight html %}
+[MVC]
+
+[razor]
 
 
 
@@ -298,9 +315,9 @@ When the ShowDropArea property is set to false, the groupDropArea is hidden.
 
 .GroupSettings(group => { group.GroupedColumns(col => { col.Add("ShipCountry"); }).ShowDropArea(false); }))  
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[Controller]
 
 
 
@@ -331,14 +348,14 @@ namespace MvcApplication11.Controllers
     }
 
 }
-{% endhighlight %}
+
 
 
 
 
 The following output is displayed as a result of the above code example.
 
-![C:/Users/NandhiniK/Desktop/Capture.PNG](Grouping_images/Grouping_img6.png)
-
+{{ '![C:/Users/NandhiniK/Desktop/Capture.PNG](Grouping_images/Grouping_img6.png)' | markdownify }}
+{:.image }
 
 

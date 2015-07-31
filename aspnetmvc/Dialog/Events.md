@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-## Events
+# Events
 
  The Dialog widget provides the following events,
 
@@ -59,7 +59,9 @@ Triggered when the control resize start</td></tr>
 ResizeStop</td><td>
 Triggered when the control resize stop</td></tr>
 </table>
-Configure Events
+
+
+## Configure Events
 
 The following steps describes you on how the events are added to the Dialog control.
 
@@ -67,14 +69,15 @@ The following steps describes you on how the events are added to the Dialog cont
 
 
 
-[CHTML]
+{% highlight html %}
 
 @{Html.EJ().Dialog("dialog").Title("WinRT").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").ClientSideEvents(evt => evt.Create("onCreate").BeforeClose("onBeforeClose")
 
     .Close("onDialogClose").BeforeOpen("onBeforeOpen").Open("onOpen").Drag("onDrag").DragStart("onDragStart").DragStop("onDragStop").Resize("onResize")
 
     .ResizeStart("onResizeStart").ResizeStop("onResizeStop")).Render();}
-
+	
+{% endhighlight %}
 
 
 
@@ -87,7 +90,7 @@ The following steps describes you on how the events are added to the Dialog cont
 
 2. Define the script for handling Dialog events.
 
-
+{% highlight JS %}
 
 [JavaScript]
 
@@ -265,46 +268,52 @@ alert("Event triggered is " + args.type);
 
      </script>
 
-
+{% endhighlight  %}
 
 3. Output of Dialog widget when the events trigger is as follows.
 
 <table>
 <tr>
 <td>
-<br>![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaevt.PNG](Events_images/Events_img1.png)
-{:.image }
+<br>
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaevt.PNG](Events_images/Events_img1.png)' | markdownfy }}
+
 </td><td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diab4open.PNG](Events_images/Events_img2.png)
-{:.image }
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diab4open.PNG](Events_images/Events_img2.png)' | markdownfy }}
+
+
 </td></tr>
 </table>
 _Figure 25: Dialog triggered Create and BeforeOpen event_               
 
-__
+
 
 <table>
 <tr>
 <td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isopen.PNG](Events_images/Events_img3.png)
-{:.image }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isopen.PNG](Events_images/Events_img3.png)' | markdownfy }}
+
+
 </td><td>
 </td><td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isbeforeclose.PNG](Events_images/Events_img4.png)
-{:.image }
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isbeforeclose.PNG](Events_images/Events_img4.png)' | markdownfy }}
+
+
 </td></tr>
 </table>
 _Figure 26: Dialog triggered Open and BeforeClose event_  
-__
+
 
 <table>
 <tr>
 <td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaafterclose.PNG](Events_images/Events_img5.png)
-{:.image }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaafterclose.PNG](Events_images/Events_img5.png)' | markdownfy }}
+
+
 </td><td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogevtdrag.PNG](Events_images/Events_img6.png)
-{:.image }
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogevtdrag.PNG](Events_images/Events_img6.png)' | markdownfy }}
+
+
 </td></tr>
 </table>
 _Figure 27: Dialog triggered Close and Drag event_
@@ -313,11 +322,13 @@ _Figure 27: Dialog triggered Close and Drag event_
 <table>
 <tr>
 <td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstart.PNG](Events_images/Events_img7.png)
-{:.image }
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstart.PNG](Events_images/Events_img7.png)' | markdownfy }}
+
+
 </td><td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstop.PNG](Events_images/Events_img8.png)
-{:.image }
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstop.PNG](Events_images/Events_img8.png)' | markdownfy }}
+
+
 </td></tr>
 </table>
 _Figure 28: Dialog triggered DragStart and DragStop event_
@@ -326,19 +337,19 @@ _Figure 28: Dialog triggered DragStart and DragStop event_
 <table>
 <tr>
 <td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresize.PNG](Events_images/Events_img9.png)
-{:.image }
+<td>
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresize.PNG](Events_images/Events_img9.png)' | markdownfy }}
 </td><td>
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestart.PNG](Events_images/Events_img10.png)
-{:.image }
+<td>
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestart.PNG](Events_images/Events_img10.png)' | markdownfy }}
+
 </td></tr>
 </table>
 _Figure 29: Dialog triggered Resize and ResizeStart event_
 
-__
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png)' | markdownify }}
-{:.image }
+'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png)
+
 
 
 _Figure 30: Dialog triggered ResizeStop event_

@@ -7,7 +7,7 @@ control: DateTimePicker
 documentation: ug
 ---
 
-# Date in other months
+## Date in other months
 
 DateTimePicker calendar can display the dates in other months at the start or end of the current month. To enable or disable the display of other month dates in the current month, you can use the property called ShowOtherMonths. By setting this property value as “True” you can display the dates in other months at the start or end of the current month. By default the value of this property is “True”. 
 
@@ -15,21 +15,19 @@ Consider you are going to calculate the monthly report of your company’s emplo
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
-   
-     [_cshtml]
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized other months*@
+[_cshtml]    
 
-		@Html.EJ().DateTimePicker("DateTime").ShowOtherMonths(false).Width("175px")
+@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized other months*@
 
-   ~~~
-   {:.prettyprint }
-   
+@Html.EJ().DateTimePicker("DateTime").ShowOtherMonths(false).Width("175px")
+
+
 
 2. The following screenshot displays the output for the above code.
 
-	![](Date-in-other-months_images/Date-in-other-months_img1.png)
 
+
+{{ '![](Date-in-other-months_images/Date-in-other-months_img1.png)' | markdownify }}
+{:.image }
 
 

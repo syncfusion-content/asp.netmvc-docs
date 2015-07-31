@@ -7,11 +7,11 @@ control: AutoComplete
 documentation: ug
 ---
 
-# RTL support
+## RTL support
 
 This feature allows you to change the alignment of the AutoComplete textbox widget from left-to-right to right-to-left (RTL). The custom template AutoComplete textbox also supports RTL. 
 
-## Enabling RTL Support
+Enabling RTL Support
 
 The following steps explain how you can enable the right-to-left property for an AutoComplete textbox.
 
@@ -20,7 +20,9 @@ The following steps explain how you can enable the right-to-left property for an
 1. In the View page, define the AutoComplete control and enable the RTL property.
 
 
-{% highlight html %}
+
+[CSHTML]
+
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -33,7 +35,9 @@ The following steps explain how you can enable the right-to-left property for an
 
     .Width("250px").EnableRTL(true)
 
-{% endhighlight %}
+
+
+
 
 
 
@@ -41,8 +45,8 @@ The following image is the output for AutoComplete when EnableRTL is set to “T
 
 
 
-![](RTL-support_images/RTL-support_img1.png)
-
+{{ '![](RTL-support_images/RTL-support_img1.png)' | markdownify }}
+{:.image }
 
 
 _AutoComplete template with RTL support_

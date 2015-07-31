@@ -7,39 +7,41 @@ control: Rotator
 documentation: ug
 ---
 
-# Data Binding
+## Data Binding
 
 Rotator provides a flexible approach for binding the data from various data sources. There are various properties in Rotator for Data Binding. The value set to this property is object type.
 
-## Data Fields and Configuration
+Data Fields and Configuration
 
 The following sub-properties provide a way to bind the data either locally/remotely to the Rotator control. 
 
-### DataSource
+DataSource
 
 This property specifies the list of data that contains a set of data fields. Each data value is used to render an item for the Rotator. Datasource receives Essential DataManager object and JSON object. The value set to this property is object type.
 
-### Fields
+Fields
 
 It defines mapping fields for the data items of the Rotator. The value set to this property is object type.
 
-### Text
+Text
 
 It specifies the text content of the Image in Rotator control. The value set to this property is string type.
 
-### Url
+Url
 
 This property specifies the URL for an image. The value set to this property is string type.
 
-### Query
+Query
 
 This property receives query to retrieve data from the table (query is same as SQL).This property is applicable only when a remote data source is used. Each data value is used to render an item for the Rotator. The value set to this property is object type.
 
-## Local data binding
+Local data binding
 
 Rotator provides the data binding support for the Rotatoritem. So you can bind the data from JSONData. For this behavior, you need to map the corresponding filed with their column names. The data can be bound as a list and it is assigned to Datasource property. You can refer the following code example to bind local data.
 
-{% highlight c# %}
+
+
+[Model]
 
 // Add the following data list to be bind in the controller page and define the corresponding data.
 
@@ -55,9 +57,9 @@ public class Localdata
 
         }
 
-{% endhighlight %}
 
-{% highlight c# %} 
+
+[Controller] 
 
 //Refer the Model in the controller 
 
@@ -91,18 +93,21 @@ using <Application name>.Models;
 
         }  
 
-{% endhighlight %}
 
-{% highlight c# %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
-.RotatorFields(t => t.Text("Text")
-.Url("Url")).SlideWidth("600px")
-.SlideHeight("350px")
-.ShowPlayButton(true)
+[View]
 
-{% endhighlight %}
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true)
 
-![](Data-Binding_images/Data-Binding_img1.png)
 
-_Figure_ _7_: _Rotator control with local data binding_
+
+
+
+
+
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
+{:.image }
+
+
+_Figure_ _7__: Rotator control with local data binding_
+

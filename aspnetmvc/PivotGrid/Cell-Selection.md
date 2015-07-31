@@ -7,13 +7,11 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Cell Selection
+## Cell Selection
 
 The PivotGrid control provides support to select specific ranges of value cells and display them in a format based on your requirement. The Selection can be done through simple mouse down and drag operation. This functionality is not available by default. To enable this, you need to set the “enableCellSelection” property to “true”.
 
 The following code example explains on how to enable cell selection in the PivotGrid control.
-
-{% highlight html %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc")).EnableCellSelection(true).ClientSideEvents(events => events.CellSelection("valueCellClick")).IsResponsive(true)
 
@@ -32,15 +30,15 @@ valueCellClick = function (evt) {
     colheaders = evt.columnHeader;
 
 }
-{% endhighlight %}
-
-
-![C:/Users/labuser/Desktop/CellSelectionmvc.png](Cell-Selection_images/Cell-Selection_img1.png)
 
 
 
-![C:/Users/labuser/Desktop/chart series.png](Cell-Selection_images/Cell-Selection_img2.png)
+{{ '![C:/Users/labuser/Desktop/CellSelectionmvc.png](Cell-Selection_images/Cell-Selection_img1.png)' | markdownify }}
+{:.image }
 
+
+{{ '![C:/Users/labuser/Desktop/chart series.png](Cell-Selection_images/Cell-Selection_img2.png)' | markdownify }}
+{:.image }
 
 
 

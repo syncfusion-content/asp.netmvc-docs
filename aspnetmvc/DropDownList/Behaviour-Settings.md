@@ -7,11 +7,11 @@ control: DropDownList
 documentation: ug
 ---
 
-# Behaviour Settings
+## Behaviour Settings
 
 The following are some miscellaneous properties that helps you to change the behaviour of DropdownList control 
 
-## Target ID
+Target ID
 
 You can append a list with dropdown textbox by using TargetId property. You need to define a <ul>, < li> tag that you want to show on Dropdown List and then set the id of parent <ul> tag to TargetId property. Its data type is string. 
 
@@ -21,7 +21,7 @@ The following steps explains you the configuration of TargetID property in Dropd
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -49,9 +49,9 @@ The following steps explains you the configuration of TargetID property in Dropd
 
         </div>
 
-{% endhighlight %}
 
-## Number of items in the list
+
+Number of items in the list
 
 Dropdown widget provides you support to customize the items visible on popup visible. The ItemsCount property defines the number of items that is displayed on Dropdown List. Its data type is number.
 
@@ -59,7 +59,7 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
 1. Add the below code in view page to render the dropdown list with 3 items in popup panel.
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -93,20 +93,20 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
 
 
-{% endhighlight %}
+
 
 Output of the above steps
 
 
 
-![](Behaviour-Settings_images/Behaviour-Settings_img1.png)
-
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
+{:.image }
 
 
 
 _Figure 12: Dropdown with itemsCount property_  
 
-## Select the value by index 
+Select the value by index 
 
 Dropdown widget provides you support to select an item by mentioning the index of the item. The SelectedItemIndex property helps you to select the particular item from the list. Its date type is number. 
 
@@ -116,8 +116,6 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 1. add the below code in your page to render the dropdown list with index 2 items is selected[CSHTML]
 
-
-{% highlight html %}
 // Add a DropDownList element using the helper class in CSHTML
 
 
@@ -147,19 +145,19 @@ The following steps explains you the configuration of SelectedItemIndex property
         </div>
 
 
-{% endhighlight %}
+
 
 
 Output of the above steps
 
 
-![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
-
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 13: Dropdown with selecteditemindex property_  
 
-## Show Popup on load
+Show Popup on load
 
 You can display the popup panel when page load itself using ShowPopupOnLoad property. Its data type is Boolean. 
 
@@ -170,7 +168,7 @@ The following steps explains you the configuration of ShowPopupOnLoad property i
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -200,9 +198,9 @@ The following steps explains you the configuration of ShowPopupOnLoad property i
 
         </div>
 
-{% endhighlight %}
 
-## Multiple selection through index 
+
+Multiple selection through index 
 
 You can select the list of items from the Dropdownlist using SelectedItems property. Its data type is array. To achieve this, you need to set true to checkbox property in Dropdownlist. 
 
@@ -211,7 +209,7 @@ The following steps explains you the configuration of selectedItems property in 
 1. Add the below code snippet to select multiple items in dropdown list.
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -249,18 +247,18 @@ The following steps explains you the configuration of selectedItems property in 
 
 </div>
 
-{% endhighlight %}
+
 
 Output of the above steps
 
 
-![](Behaviour-Settings_images/Behaviour-Settings_img3.png)
-
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure 14: Dropdown with selecteditems property_  
 
-## Read-only
+Read-only
 
 This feature supports to make the dropdown as readable. That is, you can make the dropdown as editable or non-editable by setting Boolean type value to ReadOnly property.
 
@@ -270,7 +268,7 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -300,9 +298,9 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
         </div>
 
-{% endhighlight %}
 
-## Enable or Disable the Dropdown Widget
+
+Enable or Disable the Dropdown Widget
 
 This features enables you to set the enable or disable options for dropdown by setting Boolean type value to Enabled property. 
 
@@ -312,7 +310,7 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -344,18 +342,18 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
 
 
-{% endhighlight %}
+
 
 Output of the above steps 
 
 
-![](Behaviour-Settings_images/Behaviour-Settings_img4.png)
-
+{{ '![](Behaviour-Settings_images/Behaviour-Settings_img4.png)' | markdownify }}
+{:.image }
 
 
 _Figure 15: Dropdown with enable property_  
 
-## Persistence support 
+Persistence support 
 
 This features enables you to save current model value to browser cookies for state maintains. When you refresh the DropDownList control page, it retains the model value apply from browser cookies. The date type of EnablePersistence is Boolean type. 
 
@@ -365,7 +363,7 @@ The following steps explains you the configuration of EnablePersistence property
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -395,5 +393,5 @@ The following steps explains you the configuration of EnablePersistence property
 
         </div>
 
-{% endhighlight %}
+
 

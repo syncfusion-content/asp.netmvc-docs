@@ -11,7 +11,7 @@ documentation: ug
 
 The Essential ASP.NET MVC AutoComplete control is a textbox control that provides a list of suggestions based on the user query.  When users enter text into the text box, the control performs a search operation and provides a list of results. There are several filter types available to perform the search.
 
-### Key Features
+Key Features
 
 * Delimiter: Supports search for multiple words using a delimiter symbol.
 * Suggestion box customization: Supports customization of the suggestion box height and width, and also provides you option to customize the items count to be displayed in the suggestion list.

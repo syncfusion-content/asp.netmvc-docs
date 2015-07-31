@@ -7,7 +7,7 @@ control: Tab Control
 documentation: ug
 ---
 
-## Integration with other widgets
+# Integration with other widgets
 
 You can provide more customization to the Tab with Rating control as content in it for describing the item rating value.
 
@@ -21,7 +21,7 @@ The following code example explains you the Rating control creation. The input e
 
 
 
-[CSHTML]  
+{% highlight html %}
 
 // Add the following code example to the corresponding CSHTML page to render Tab with other widgets.
 
@@ -53,13 +53,13 @@ The following code example explains you the Rating control creation. The input e
 
 </div>
 
-
+{% endhighlight %}
 
 To render the rating controls in the first Tab element refer the styles mentioned in the following code example. 
 
 1. Add the following styles to render Tab.
 
-[CSS]
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -73,12 +73,13 @@ To render the rating controls in the first Tab element refer the styles mentione
 
     </style>
 
+{% endhighlight %}
 
 
 2. The following screenshot illustrates the Tab content with rating control. 
 
-{{ '![](Integration-with-other-widgets_images/Integration-with-other-widgets_img1.png)' | markdownify }}
-{:.image }
+![](Integration-with-other-widgets_images/Integration-with-other-widgets_img1.png)
+
 
 
 _Figure 20__: Tab content section with Rating Control_

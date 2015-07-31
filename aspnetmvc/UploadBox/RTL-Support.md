@@ -7,7 +7,7 @@ control: UploadBox
 documentation: ug
 ---
 
-# RTL Support 
+## RTL Support 
 
 The EnableRTL property is Boolean type, which allow us to change of left-to-right alignment of the UploadBox widget to right-to-left (RTL). That is, it sets the UploadBox to right-to-left actions. Default value of EnableRTL property is false. 
 
@@ -19,19 +19,19 @@ In the VIEW page, add the below script to configure the UploadBox element.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add the UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").EnableRTL(true)
 
-{% endhighlight %}
+
 
 The following screenshot displays the output.
 
 
 
-![](RTL-Support_images/RTL-Support_img1.png)
-
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
 
 

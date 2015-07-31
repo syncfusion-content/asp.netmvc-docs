@@ -11,7 +11,7 @@ documentation: ug
 
 The Split Button allows you to perform an action by clicking the button and choosing extra options from the dropdown button. The SplitButton can also display both text and images. By default the DropDown button is given to the right most corner of the button.
 
-### Key Features
+Key Features
 
 * Trendy Look : Rich Appearance with Theme Support
 * RTL : Supports for Right to Left alignment

@@ -7,7 +7,7 @@ control: OLAP Client
 documentation: ug
 ---
 
-# Localization 
+## Localization 
 
 Localization is theprocess of customizing the UI (User Interface) as locale-specific, in order to display regional data. Using this feature, data can be displayed in a specific language and culture, of a particular country or region. The ASP.NETMVCOLAP Client control provides inherent support to localize its UI.
 
@@ -17,9 +17,9 @@ _Table: List of default English localization User Interface based on French cult
 
 <table>
 <tr>
-<th>
-KEYWORDS</th><th>
-VALUES</th></tr>
+<td>
+KEYWORDS</td><td>
+VALUES</td></tr>
 <tr>
 <td>
 Column</td><td>
@@ -213,16 +213,17 @@ And</td><td>
 
 The following code example shows how to localize OLAP Client’s User Interface (UI) based on French culture.
 
+__
 
-{% highlight c# %}
+[MVC]
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc").Locale("fr-FR")
-
-{% endhighlight %}
+@Html.EJ().Olap().OlapClient("OlapClient1").Url("../wcf/OlapClientService.svc").Locale("fr-FR")
 
 
-{% highlight html %}
+
+
+
+[HTML]    
 
 <script type="text/javascript">
 
@@ -346,33 +347,37 @@ The following code example shows how to localize OLAP Client’s User Interface 
 
   }
 
- </script> 
+ </script>           
 
-{% endhighlight %} 
 
-> Note: In order to render the localized OLAP Client, we need to reset the content available in both OLAP Client Control and OLAP Cube
 
-## Localizing Control Information
+{{ '![C:/Users/labuser/Desktop/note.jpg](Localization_images/Localization_img1.jpeg)' | markdownify }}
+{:.image }
+_Note: In order to render the localized OLAP Client, we need to reset the content available in both OLAP Client Control and OLAP Cube_
+
+Localizing Control Information
 
 To apply control side localization, use the following code example.
 
 
-{% highlight html %}
 
-ej.olap.OlapClient.locale["zh-CN"] = {
+[HTML]
+
+ ej.olap.OlapClient.locale["zh-CN"] = {
 
 //Corresponding keyword values needs to be set here.
 
 }
 
-{% endhighlight %}
 
-## Localizing Cube Information
+
+Localizing Cube Information
 
 To get the localized Cube information, set LocaleIdentifier__in the connection string.
 
 
-{% highlight c# %}
+
+[C#]
 
 //1036 refers to“fr-FR” culture.
 
@@ -384,8 +389,13 @@ DataManager.Culture = new System.Globalization.CultureInfo(1036);
 
 DataManager.OverrideDefaultFormatStrings = true;
 
-{% endhighlight %}
+
 
 The following screenshot shows the OLAP Client with French localization.
 
-![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_140.png](Localization_images/Localization_img2.png)
+
+
+{{ '![Description: http://help.syncfusion.com/ug/js/ImagesExt/image49_140.png](Localization_images/Localization_img2.png)' | markdownify }}
+{:.image }
+
+

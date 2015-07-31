@@ -15,8 +15,8 @@ This section explains briefly how to create a _Ribbon_ in your application with
 
 The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
 
-![](Getting-Started_images/Getting-Started_img1.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
 ###  Create Ribbon Control                     
@@ -27,6 +27,9 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 
 
 {% highlight html %}
+
+[CSHTML]
+
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -121,8 +124,8 @@ ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
 
 4. The following screenshot illustrates the _Ribbon_ control.
 
-![](Getting-Started_images/Getting-Started_img2.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
 ###  Add Controls
@@ -132,6 +135,9 @@ Add controls to each _Ribbon_ tab by using the property _Content_. You can also 
 
 
 {% highlight html %}
+
+[CSHTML]
+
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -314,7 +320,7 @@ content: "\e636";
 
 
 
-{% highlight c# %}
+[Controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -370,7 +376,7 @@ return View();
 
 }
 
-{% endhighlight %}
+
 
 {% endhighlight %}
 
@@ -378,8 +384,8 @@ return View();
 
 The following screenshot illustrates Ribbon with controls.
 
-![](Getting-Started_images/Getting-Started_img3.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 ### Expand/Collapse
@@ -388,14 +394,14 @@ The _Ribbon_ has expand/collapse support. The following screenshot illustrates _
 
 
 
-![](Getting-Started_images/Getting-Started_img4.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
 
 The following screenshot illustrates _Ribbon_ in the collapsed state,
 
-![](Getting-Started_images/Getting-Started_img5.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
 
 ### Separator for Controls
@@ -405,6 +411,9 @@ _Control Separator_ support has been provided in the _Ribbon_ control. Set _Enab
 
 
 {% highlight html %}
+
+[CSHTML]
+
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -600,7 +609,10 @@ content: "\e634";
 </style>
 
 
-{% highlight c# %}
+
+
+
+[Controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -657,14 +669,14 @@ return View();
 }
 
 
-{% endhighlight %}
+
 {% endhighlight %}
 
 
 
 The following screenshot illustrates the control separator after the Italic Button control.
 
-![](Getting-Started_images/Getting-Started_img6.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
 
 

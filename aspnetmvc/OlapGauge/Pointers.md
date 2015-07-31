@@ -7,23 +7,22 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-# Pointers
+## Pointers
 
 Pointers are used to indicate the range on scale area based on the values passed for the range values.
 
-## Types of Pointers
+### Types of Pointers
 
 Two different types of pointer available in OlapGuage are:
 
 1. Needle
 2. Marker
-
-## Changing Pointer Types
+### Changing Pointer Types
 
 
 You can set the pointer to Needle type by setting “pointerType”property to “Needle” and the pointer to Marker type by setting the “pointerType” properties to “Marker”.
 
-{% highlight html %}
+
 
 [MVC]
 
@@ -81,20 +80,20 @@ pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement
 
 })
 
-{% endhighlight  %}
 
 
 
-![](Pointers_images/Pointers_img1.png)
+
+{{ '![](Pointers_images/Pointers_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Length and Width Customization
+### Length and Width Customization
 
 You can customize the Pointer length and width using the “pointerLength” and “pointerWidth” property.
 
 
-{% highlight html %}
+
 [MVC]
 
 
@@ -151,18 +150,18 @@ You can customize the Pointer length and width using the “pointerLength” and
 
 })
 
-{% endhighlight %}
-
-![](Pointers_images/Pointers_img2.png)
 
 
+{{ '![](Pointers_images/Pointers_img2.png)' | markdownify }}
+{:.image }
 
-## Background Customization 
+
+### Background Customization 
 
 You can customize the Pointer background color using “backgroundcolor”property.
 
 
-{% highlight html %}
+
 [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -220,20 +219,20 @@ You can customize the Pointer background color using “backgroundcolor”proper
 
 
 
-{% endhighlight %}
-
-
-![](Pointers_images/Pointers_img3.png)
 
 
 
-## Shapes Customization
+{{ '![](Pointers_images/Pointers_img3.png)' | markdownify }}
+{:.image }
+
+
+### Shapes Customization
 
 You can customize Pointershapes using the “needlestyle” property. 
 
 
 
-{% highlight html %}
+
 
 [MVC]
 
@@ -291,11 +290,11 @@ You can customize Pointershapes using the “needlestyle” property.
 
 })
 
-{% endhighlight  %}
 
 
 
-![I:/OlapGuage/Gauge/pointerstyle.png](Pointers_images/Pointers_img4.png)
 
+{{ '![I:/OlapGuage/Gauge/pointerstyle.png](Pointers_images/Pointers_img4.png)' | markdownify }}
+{:.image }
 
 

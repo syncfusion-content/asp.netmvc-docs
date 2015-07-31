@@ -7,9 +7,9 @@ control: FileExplorer
 documentation: ug
 ---
 
-# Localization and RTL Support
+## Localization and RTL Support
 
-## Localization
+Localization
 
 You can globalize the FileExplorer, so that users of different cultures can make use of it and post their content. For your convenience, you can format the FileExplorer control to your culture. When your blog is in your culture, the viewers of your culture can understand about your company and its products. You can achieve localization using the “Locale” property. 
 
@@ -19,9 +19,11 @@ In this example, globalize.min.js file is used that includes all the cultures in
 
 1. Add the following code in your CSHTML page to initialize the FileExplorer with Spanish content.
 
-   ~~~ html
 
-			@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).Locale("es-ES").GridSettings(settings => settings.Column(col =>
+
+[_cshtml]
+
+@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).Locale("es-ES").GridSettings(settings => settings.Column(col =>
 
                         {
 
@@ -36,188 +38,190 @@ In this example, globalize.min.js file is used that includes all the cultures in
                         })).Layout(LayoutType.Tile)
 
 
-   ~~~
-   {:.prettyprint }
 
 2. Add the following code in your script section to render FileExplorer with Spanish culture.
 
 
-   ~~~ html
 
-			<script>
+[JavaScript]
 
-				ej.FileExplorer.Locale["es-ES"] = {
+<script>
 
-				Back: "hacia atrás",
+       ej.FileExplorer.Locale["es-ES"] = {
 
-				Forward: "adelante",
+        Back: "hacia atrás",
 
-				Refresh: "refrescar",
+        Forward: "adelante",
 
-				Addressbar: "Addressbar",
+        Refresh: "refrescar",
 
-				Upload: "Subir",
+        Addressbar: "Addressbar",
 
-				Rename: "rebautizar",
+        Upload: "Subir",
 
-				Delete: "borrar",
+        Rename: "rebautizar",
 
-				Download: "Descargar Archivo",
+        Delete: "borrar",
 
-				Cut: "cortada",
+        Download: "Descargar Archivo",
 
-				Copy: "copia",
+        Cut: "cortada",
 
-				Paste: "pasta",
+        Copy: "copia",
 
-				Details: "Obtener detalles",
+        Paste: "pasta",
 
-				Searchbar: "barra de búsqueda",
+        Details: "Obtener detalles",
 
-				Open: "abierto",
+        Searchbar: "barra de búsqueda",
 
-				Search: "búsqueda",
+        Open: "abierto",
 
-				NewFolder: "Agregar carpeta",
+        Search: "búsqueda",
 
-				SelectedFileUrl: "dirección Web",
+        NewFolder: "Agregar carpeta",
 
-				SelectedFileName: "título",
+        SelectedFileUrl: "dirección Web",
 
-				ImageWidth: "ancho",
+        SelectedFileName: "título",
 
-				ImageHeight: "altura",
+        ImageWidth: "ancho",
 
-				Insert: "Insertar",
+        ImageHeight: "altura",
 
-				Cancel: "cancelar",
+        Insert: "Insertar",
 
-				RenameAlert: "Por favor, introduzca el nuevo nombre",
+        Cancel: "cancelar",
 
-				NewFolderAlert: "Introduzca el nuevo nombre de la carpeta",
+        RenameAlert: "Por favor, introduzca el nuevo nombre",
 
-				DownloadTitle: "Confirmación ..!",
+        NewFolderAlert: "Introduzca el nuevo nombre de la carpeta",
 
-				DownloadAlert: "¿Seguro que quieres descargar",
+        DownloadTitle: "Confirmación ..!",
 
-				DownloadConfirmation: "Okay, Descargar",
+        DownloadAlert: "¿Seguro que quieres descargar",
 
-				ContextMenuOpen: "abierto",
+        DownloadConfirmation: "Okay, Descargar",
 
-				ContextMenuNewFolder: "nueva carpeta",
+        ContextMenuOpen: "abierto",
 
-				ContextMenuDelete: "borrar",
+        ContextMenuNewFolder: "nueva carpeta",
 
-				ContextMenuRename: "rebautizar",
+        ContextMenuDelete: "borrar",
 
-				ContextMenuUpload: "Subir",
+        ContextMenuRename: "rebautizar",
 
-				ContextMenuDownload: "descargar",
+        ContextMenuUpload: "Subir",
 
-				ContextMenuCut: "cortada",
+        ContextMenuDownload: "descargar",
 
-				ContextMenuCopy: "copia",
+        ContextMenuCut: "cortada",
 
-				ContextMenuPaste: "pasta",
+        ContextMenuCopy: "copia",
 
-				ContextMenuGetinfo: "Obtén información",
+        ContextMenuPaste: "pasta",
 
-				OkButton: "Okay",
+        ContextMenuGetinfo: "Obtén información",
 
-				CancelButton: "cancelar",
+        OkButton: "Okay",
 
-				YesButton: "sí",
+        CancelButton: "cancelar",
 
-				NoButton: "No",
+        YesButton: "sí",
 
-				Size: "tamaño",
+        NoButton: "No",
 
-				Item: " artículo",
+        Size: "tamaño",
 
-				Items: " artículos",
+        Item: " artículo",
 
-				Grid: "Vista de cuadrícula",
+        Items: " artículos",
 
-				Tile: "vista de mosaicos",
+        Grid: "Vista de cuadrícula",
 
-				ErrorOnFolderCreation: "Nombre de la carpeta ya existe en el directorio, por favor, dar un nuevo nombre",
+        Tile: "vista de mosaicos",
 
-				GeneralError: "Por favor, vea ventana de la consola del navegador para obtener más información",
+        ErrorOnFolderCreation: "Nombre de la carpeta ya existe en el directorio, por favor, dar un nuevo nombre",
 
-				ErrorPath: "FileExplorer no puede encontrar '{0}'. Revisa la ortografía y vuelva a intentarlo.",
+        GeneralError: "Por favor, vea ventana de la consola del navegador para obtener más información",
 
-				InvalidFileUpload: " tipo de archivo seleccionado no es válido. Tipos de archivo admitidos son ",
+        ErrorPath: "FileExplorer no puede encontrar '{0}'. Revisa la ortografía y vuelva a intentarlo.",
 
-				Name: "nombre",
+        InvalidFileUpload: " tipo de archivo seleccionado no es válido. Tipos de archivo admitidos son ",
 
-				FullName: "Nombre Completo",
+        Name: "nombre",
 
-				Extension: "extensión",
+        FullName: "Nombre Completo",
 
-				Format: "formato",
+        Extension: "extensión",
 
-				Length: "longitud",
+        Format: "formato",
 
-				CreationTime: "Hora de creación",
+        Length: "longitud",
 
-				LastAccessTime: "Última Tiempo de acceso",
+        CreationTime: "Hora de creación",
 
-				LastWriteTime: "Última Hora Comentario",
+        LastAccessTime: "Última Tiempo de acceso",
 
-				};
+        LastWriteTime: "Última Hora Comentario",
 
-				ej.Uploadbox.Locale["es-ES"] = {
+    };
 
-				buttonText: {
+    ej.Uploadbox.Locale["es-ES"] = {
 
-				upload: "Subir",
+        buttonText: {
 
-				browse: "Explorar",
+            upload: "Subir",
 
-				cancel: "cancelar"
+            browse: "Explorar",
 
-				},
+            cancel: "cancelar"
 
-				dialogText: {
+        },
 
-				title: "Subir Box",
+        dialogText: {
 
-				name: "nombre",
+            title: "Subir Box",
 
-				size: "tamaño",
+            name: "nombre",
 
-				status: "estado"
+            size: "tamaño",
 
-					}
+            status: "estado"
 
-				}; 
+        }
 
-			</script>
+    }; 
 
-   ~~~
-   {:.prettyprint }
-   
+</script>
+
+
+
 3. _Figure 13: Showcase of FileExplorer with Spanish culture_
-    ![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img1.png)
+{{ '![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img1.png)' | markdownify }}
+{:.image }
+There is no change in the controller part, it is the same controller part used as mentioned above.
 
-	There is no change in the controller part, it is the same controller part used as mentioned above.
-
-## RTL
+RTL
 
 RTL control supports right-to-left functionality and features for languages that work in a right-to-left way for entering, editing, and displaying text. You can change your display to read right-to-left. Arabic and Hebrew are written from right to left. The customers with writing style from right-to left can use this feature in FileExplorer. You can achieve this in the editing area by using the EnableRTL property. Setting this property to “True” allows you to write in the right-to-left format. Position of the toolbars also changes from right to left.
 
 1. Add the following code to the script section in your CSHTML page to initialize the FileExplorer.
 
 
-   ~~~ html
 
-		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).EnableRTL(true).Layout(LayoutType.Tile)
-   
-   ~~~
-   {:.prettyprint }
+[_cshtml]
+
+@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).EnableRTL(true).Layout(LayoutType.Tile)
+
+
 
 2. There is no change in the controller part, it is the same controller part used as mentioned above
 
-	_Figure 14:Showcase of FileExplorer with right to left appearance_
 
-	![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img2.png)
+_Figure 14:Showcase of FileExplorer with right to left appearance_
+
+{{ '![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img2.png)' | markdownify }}
+{:.image }
+
+

@@ -7,9 +7,9 @@ control: UploadBox
 documentation: ug
 ---
 
-# File Size 
+## File Size 
 
-## Maximum File Size for UploadBox
+Maximum File Size for UploadBox
 
 In the UploadBox control, you can browse files with the size going up to gigabytes. You can restrict the files from being browsed using the FileSize property. When you do not use this property, it takes a default size, 31457280B, that is, 31MB. When this size exceeds, we cannot browse the file. 
 
@@ -17,20 +17,15 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 
 
-{% highlight html %}
+[CSHTML]
 
-<div class="control"> 
-    @Html.EJ().Uploadbox("UploadBox")
-	.SaveUrl("Uploadbox/Save")
-	.RemoveUrl("UploadBox/Remove")
-	.FileSize(848576)
-	.ClientSideEvents(e => e.Error("fileuploaderror"))
+<div class="control">                 @Html.EJ().Uploadbox("UploadBox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").FileSize(848576).ClientSideEvents(e => e.Error("fileuploaderror"))
 
 </div>
 
 
 
-{% highlight javascript %}
+[Javascript]
 
 <script type="text/javascript">
 
@@ -42,8 +37,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 </script>
 
-{% endhighlight %}
-{% endhighlight %}
+
 
 To know about file action, we need to refer link:
 
@@ -55,8 +49,8 @@ When you want to browse the file within the fileSize, you can browse and upload 
 
 
 
-![](File-Size_images/File-Size_img1.png)
-
+{{ '![](File-Size_images/File-Size_img1.png)' | markdownify }}
+{:.image }
 
 
 
@@ -65,8 +59,8 @@ When you try to browse the file with exceeded FileSize, we cannot browse and upl
 
 
 
-![](File-Size_images/File-Size_img2.png)
-
+{{ '![](File-Size_images/File-Size_img2.png)' | markdownify }}
+{:.image }
 
 
 

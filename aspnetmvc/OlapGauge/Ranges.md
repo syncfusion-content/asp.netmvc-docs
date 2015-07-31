@@ -7,16 +7,16 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-# Ranges
+## Ranges
 
 Ranges are objects that highlight a range of values and can display different ranges in different colors. You can customize Ranges using various attributes such as height, color of the range. 
 
-## Distance from Scale
+### Distance from Scale
 
 You can set the distance between the ranges and scales in OlapGauge using “distanceFromScale”.
 
 
-{% highlight html %}
+
 [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -69,13 +69,13 @@ You can set the distance between the ranges and scales in OlapGauge using “dis
 
 })
 
-{% endhighlight  %}
 
-## Style Customization 
+
+### Style Customization 
 
 You can set the background color for the ranges in OlapGauge using “backgroundColor”.
 
-{% highlight html %}
+
 
 [MVC]
 
@@ -130,19 +130,19 @@ You can set the background color for the ranges in OlapGauge using “background
 })
 
 
-{% endhighlight %}
-
-
-![I:/OlapGuage/Gauge/ranges.-color.png](Ranges_images/Ranges_img1.png)
 
 
 
-## Size Setting
+{{ '![I:/OlapGuage/Gauge/ranges.-color.png](Ranges_images/Ranges_img1.png)' | markdownify }}
+{:.image }
+
+
+### Size Setting
 
 You can customize the Rangesize using “size” property.
 
 
-{% highlight html %}
+
 [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -195,11 +195,11 @@ You can customize the Rangesize using “size” property.
 
 })
 
-{% endhighlight  %}
 
 
 
-![I:/OlapGuage/Gauge/Range size.png](Ranges_images/Ranges_img2.png)
 
+{{ '![I:/OlapGuage/Gauge/Range size.png](Ranges_images/Ranges_img2.png)' | markdownify }}
+{:.image }
 
 

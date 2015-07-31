@@ -7,15 +7,14 @@ control: Accordion
 documentation: ug
 ---
 
-# Accordion Panel enabler
+## Accordion Panel enabler
 
-## Enable or Disable control
+Enable or Disable control
 
 You can enable or disable the Accordion widget on initial rendering using the Enabled property. By default Enabled property is set to true and the Accordion panels are active always. 
 
 The following code explains you on how to enable or disable the Accordion widget
 
-{% highlight html %}
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and disable the control actions.
@@ -48,25 +47,24 @@ The following code explains you on how to enable or disable the Accordion widget
 
 </div>
 
-{% endhighlight %}
+
 
 Output for disabled Accordion control is as follows.
 
- ![](Accordion-Panel-enabler_images/Accordion-Panel-enabler_img1.png)
+{{ '![](Accordion-Panel-enabler_images/Accordion-Panel-enabler_img1.png)' | markdownify }}
 {:.image }
 
 
-## Enable panel items
+Enable panel items
 
 You can enable the Accordion widget items on initial loading using EnabledItems property. This property takes array of indices whose panel needs to be enabled in Accordion widget. 
 
 The DisabledItems property disables the Accordion items based on the index. This takes array of indices whose panel is to be disabled. 
 
-### Enabling accordion panel items
+Enabling accordion panel items
 
 The following code explains you on how to enable the panel items in Accordion widget.
 
-{% highlight html %}
 [CSHTML]
 
 // In the View page, configure Accordion with the corresponding data, and to enable and disable Accordion panel items set the values for EnabledItems and DisabledItems.
@@ -107,13 +105,13 @@ The following code explains you on how to enable the panel items in Accordion wi
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 Output for Accordion control with some enabled and disabled items, where first panel is disabled and it can’t be expanded or collapsed is as follows.
 
- ![](Accordion-Panel-enabler_images/Accordion-Panel-enabler_img2.png)
-
+{{ '![](Accordion-Panel-enabler_images/Accordion-Panel-enabler_img2.png)' | markdownify }}
+{:.image }
 
 

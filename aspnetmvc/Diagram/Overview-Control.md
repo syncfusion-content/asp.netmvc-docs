@@ -19,7 +19,9 @@ The following code illustrates how to create Overview control.
 
 {% highlight c# %}
 
+[EJMVC]
 
+[CSHTML]
 
 //Initializes overview
 
@@ -59,7 +61,7 @@ ViewData["overview"] = overview;
 
 
 
-![C:/Users/swarneshk/AppData/Local/Microsoft/Windows/INetCache/Content.Word/overview final.png](Overview-Control_images/Overview-Control_img1.png)
-
+{{ '![C:/Users/swarneshk/AppData/Local/Microsoft/Windows/INetCache/Content.Word/overview final.png](Overview-Control_images/Overview-Control_img1.png)' | markdownify }}
+{:.image }
 
 

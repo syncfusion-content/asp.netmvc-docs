@@ -7,19 +7,19 @@ control: Tile
 documentation: ug
 ---
 
-## Styles and Appearance
+# Styles and Appearance
 
 Styles and appearance of Tile works based on CSS class. You need two style sheets to apply styles to the Tile control: ej.widget.core.min.css and ej.theme.min.css.
 
-### Customize styles
+## Customize styles
 
 To change the color or design of the Tile control appearance, you can override default styles of the Tile control by using its class names. The following are the specific class names to modify styles and appearance in the Tile.
 
 <table>
 <tr>
-<td>
-File</td><td>
-Description/Usage</td></tr>
+<th>
+File</th><th>
+Description/Usage</th></tr>
 <tr>
 <td>
 e-tile</td><td>

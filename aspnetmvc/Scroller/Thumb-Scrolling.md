@@ -7,7 +7,7 @@ control: Scroller
 documentation: ug
 ---
 
-# Thumb Scrolling
+## Thumb Scrolling
 
 Normally the scrollbar position can be changed by dragging the scrollbar handle or clicking the arrows. The Scroller control allows you for panning or dragging the scroll content area to drag by dragging inside the scroll content. To achieve this in your Scroller control, enable the EnableTouchScroll to true_._ By default the value for__EnableTouchScroll is true. When you want to prevent the panning or dragging the scroll content area, set EnableTouchScroll as false.
 
@@ -15,45 +15,59 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 1. In the View page, add a scroller helper to configure the EnableTouchScroll property.
 
-   ~~~ html
 
-		// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
-		<div id="scrollcontent">
 
-			<div> @*Wrapper div for Scroller.*@
 
-				<div id="innercontent">  @*Content div*@
+[CSHTML]
 
-					<h3>MVC </h3>
+// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
-					<p>
 
-						Model–view–controller (MVC) is a software architecture pattern which   
 
-						separates the representation of information from the user's interaction
+<div id="scrollcontent">
 
-						with it. The model consists of application data, business rules, logic, and
+  <div>                              @*Wrapper div for Scroller.*@
 
-						functions. A view can be any output representation of data, such as a chart
+     <div id="innercontent">         @*Content div*@
 
-						or a diagram.
+        <h3>MVC </h3>
 
-					</p>
+         <p>
 
-				</div>
+           Model–view–controller (MVC) is a software architecture pattern which   
 
-			</div>
+           separates the representation of information from the user's interaction
 
-		</div>
+           with it. The model consists of application data, business rules, logic, and
 
-		@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableTouchScroll(false).Render();}
+           functions. A view can be any output representation of data, such as a chart
 
-   ~~~
-   {:.prettyprint }
+           or a diagram.
 
-	The following screenshot displays Scroller control with disabled touch support.
+         </p>
 
-	![](Thumb-Scrolling_images/Thumb-Scrolling_img1.png)
+    </div>
 
-_Figure_ _6_: _Scroller control with disabled touch support_
+  </div>
+
+</div>
+
+
+
+@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableTouchScroll(false).Render();}
+
+
+
+
+
+
+
+The following screenshot displays Scroller control with disabled touch support.
+
+{{ '![](Thumb-Scrolling_images/Thumb-Scrolling_img1.png)' | markdownify }}
+{:.image }
+
+
+_Figure_ _6__: Scroller control with disabled touch support_
+

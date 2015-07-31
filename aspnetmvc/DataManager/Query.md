@@ -7,14 +7,14 @@ control: DataManager
 documentation: ug
 ---
 
-# Query
+## Query
 
 DataManager provides support for multiple queries in order to perform various operations like filtering, sorting, cloning, expanding, searching, grouping etc., in the data source. Here, you can learn the query options in detail.
 
-## Select
+Select
 
 The select query of the DataManager is used to select only some particular fields or columns from the data source. The following code example illustrates on how to select only particular fields by using the select query.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -50,19 +50,19 @@ The select query of the DataManager is used to select only some particular field
 
 
 
-{% endhighlight %}
+
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img1.png)
+{{ '![](Query_images/Query_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## From
+From
 
 The from query of the DataManager is used to select the table from where the data is retrieved and bound to the table. The following code example illustrates how to use the from query.
 
 
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
 
 
@@ -94,17 +94,17 @@ The from query of the DataManager is used to select the table from where the dat
 )
 
 
-{% endhighlight  %}
+
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img2.png)
+{{ '![](Query_images/Query_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Clone
+Clone
 
 The clone query of the DataManager is used to duplicate the query. The following code example illustrates how to clone a query.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
 
 
@@ -134,8 +134,7 @@ The clone query of the DataManager is used to duplicate the query. The following
         })
 
 )
-{% endhighlight  %}
-{% highlight js %}
+
 <script type="text/javascript" class="jsScript">
 
         var flag = true;
@@ -164,18 +163,18 @@ The clone query of the DataManager is used to duplicate the query. The following
 
 </script>
 
-{% endhighlight  %}
+
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img3.png)
+{{ '![](Query_images/Query_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## Expand
+Expand
 
 The expand query of the DataManager is used to perform complex data binding.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
 
 
@@ -206,12 +205,12 @@ The expand query of the DataManager is used to perform complex data binding.
 
 )
 
-{% endhighlight  %}
+
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img4.png)
-
+{{ '![](Query_images/Query_img4.png)' | markdownify }}
+{:.image }
 
 
 

@@ -7,15 +7,15 @@ control: ColorPicker
 documentation: ug
 ---
 
-# Miscellaneous
+## Miscellaneous
 
-## getValue
+getValue
 
 The getValue() method in ColorPicker returns the hexadecimal value.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 <table>
 <tr>
@@ -25,15 +25,13 @@ The getValue() method in ColorPicker returns the hexadecimal value.
 <td>
 [JAVASCRIPT] <script>   var ColorObj;   jQuery(function ($) {      ColorObj = $("#colorPicker").ejColorPicker({ value: "#278787" }).data('ejColorPicker');      ColorObj.getValue();    }); </script></td></tr>
 </table>
-{% endhighlight  %}
-
-## setValue
+setValue
 
 The setValue() method in ColorPicker is used to set the color value. The given value is in hexadecimal form.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 <table>
 <tr>
@@ -43,15 +41,13 @@ The setValue() method in ColorPicker is used to set the color value. The given v
 <td>
 [JAVASCRIPT] <script>   var ColorObj;   jQuery(function ($) {      ColorObj = $("#colorPicker").ejColorPicker().data('ejColorPicker');      ColorObj.setValue("#278787");    }); </script></td></tr>
 </table>
-{% endhighlight  %}
-
-## getColor
+getColor
 
 The getColor() method in ColorPicker control returns the color value in r,g,b,a form.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 <table>
 <tr>
@@ -62,4 +58,4 @@ The getColor() method in ColorPicker control returns the color value in r,g,b,a 
 [JAVASCRIPT] <script>   var ColorObj;   jQuery(function ($) {      ColorObj = $("#colorPicker").ejColorPicker({value: "#278787" }).data('ejColorPicker');      ColorObj.getColor();    }); </script></td></tr>
 </table>
 
-{% endhighlight  %}
+

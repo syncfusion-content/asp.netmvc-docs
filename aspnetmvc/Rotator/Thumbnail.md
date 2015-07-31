@@ -7,7 +7,7 @@ control: Rotator
 documentation: ug
 ---
 
-# Thumbnail 
+## Thumbnail 
 
 This feature implements Thumbnail in Rotator control. You can view or access any of the Rotator items instantly. All the images are given as Thumb Element to use this feature. 
 
@@ -17,7 +17,9 @@ The property ThumbnailSourceID specifies the source for thumbnail elements. The 
 
 You can refer the following code example of Thumbnail in Rotator.
 
-{% highlight html %}
+
+
+[CSHTML]
 
 <ul id="slide" style="display: none">
 
@@ -89,6 +91,11 @@ You can refer the following code example of Thumbnail in Rotator.
 
                        }).SlideWidth("600px").SlideHeight("350px").ShowThumbnail(true).ThumbnailSourceID("slide")          
 
-{% endhighlight %}
 
-![](Thumbnail_images/Thumbnail_img1.png)
+
+
+
+{{ '![](Thumbnail_images/Thumbnail_img1.png)' | markdownify }}
+{:.image }
+
+

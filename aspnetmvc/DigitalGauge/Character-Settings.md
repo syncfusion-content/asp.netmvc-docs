@@ -7,15 +7,15 @@ control: Digital Gauge
 documentation: ug
 ---
 
-# Character Settings
+## Character Settings
 
-## Appearance
+### Appearance
 
 The opacityof the character is adjustable with the help of opacity property. The space between two characters are adjusted with spacing property as like in the segment settings.
 
 
 
-{% highlight html %}
+[MVC]
 
 @* For Digital Gauge rendering *@
 
@@ -40,18 +40,18 @@ The opacityof the character is adjustable with the help of opacity property. The
 }))
 
 
-{% endhighlight %}
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 
-![](Character-Settings_images/Character-Settings_img1.png)
+
+{{ '![](Character-Settings_images/Character-Settings_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Count and Type
+### Count and Type
 
 * The number of text to be displayed can be limited by the attribute called count. In Digital Gauge five different types of characters are supported. They are as follows, 
 1. EightCrossEightDotMatrix
@@ -61,7 +61,10 @@ Execute the above code examples to render the DigitalGauge as follows.
 5. EightCrossEightSquareMatrix.
 
 
-{% highlight html %}
+
+
+
+[MVC]
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -97,21 +100,27 @@ ss.Length(8)
 
 }))
 
-{% endhighlight %}
+
+
 
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img2.png)
+{{ '![](Character-Settings_images/Character-Settings_img2.png)' | markdownify }}
+{:.image }
 
 
-## Text Positioning
+
+
+### Text Positioning
 
 The text in the DigitalGauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and the y variable positions the text in the vertical axis.
 
-{% highlight html %}
+
+
+[MVC]
 
 @* For Digital Gauge rendering *@
 
@@ -144,21 +153,28 @@ The text in the DigitalGauge is positioned with position object. This object con
 .Y(10)).Add();}))
 
 
-{% endhighlight %}
+
 
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img3.png)
+{{ '![](Character-Settings_images/Character-Settings_img3.png)' | markdownify }}
+{:.image }
 
 
-## Shadow Effects
+
+
+
+
+### Shadow Effects
 
 The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
 
-{% highlight html %}
+
+
+[MVC]
 
 @* For Digital Gauge rendering*@
 
@@ -194,15 +210,16 @@ The text in the Digital Gauge is positioned with position object. This object co
 
 cs.Length(3) .Width(3)).Add();}))
 
-{% endhighlight %}
+
+
 
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img4.png)
-
+{{ '![](Character-Settings_images/Character-Settings_img4.png)' | markdownify }}
+{:.image }
 
 
 

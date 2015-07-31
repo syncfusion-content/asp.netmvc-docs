@@ -7,17 +7,17 @@ control: ColorPicker
 documentation: ug
 ---
 
-# Keyboard Interaction
+## Keyboard Interaction
 
 You can use keyboard shortcut keys as an alternative to the mouse while using the ColorPicker widget. The ColorPicker widget allows you to perform all kinds of actions using keyboard shortcuts.
 
-_Table6: Keyboard shortcut keys_
+_Table_ _6__: Keyboard shortcut keys_
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><th>
-Description</th></tr>
+<td>
+Shortcut Key</td><td>
+Description</td></tr>
 <tr>
 <td>
 Alt + j               </td><td>
@@ -63,14 +63,13 @@ Downwards to value 0</td></tr>
 End</td><td>
 Upwards to value 100</td></tr>
 </table>
-
-## Configure Keyboard Interaction
+Configure Keyboard Interaction
 
 The following steps explain how you can enable keyboard interaction for ColorPicker textbox.
 
 1. In the CSHTML page, configure the ColorPicker widget and enable keyboard interaction by the accesskey property.
 
-{% highlight html %}
+
 
 <table>
 <tr>
@@ -80,13 +79,13 @@ The following steps explain how you can enable keyboard interaction for ColorPic
 <td>
 [JAVASCRIPT]<script>    jQuery(function ($) {                $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#colorPickerWrapper").focus();                }            });    });</script></td></tr>
 </table>
-{% endhighlight  %}
+
 
 The following screenshot displays the output of the above code example.
 
 
 
-![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
+{:.image }
 
 

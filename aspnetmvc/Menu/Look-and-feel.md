@@ -7,7 +7,7 @@ control: Menu
 documentation: ug
 ---
 
-# Look and feel
+## Look and feel
 
 Essential JavaScript controls feature 12 built-in themes, six flat and gradient effects, and also supports custom skin options for user-defined themes.
 
@@ -26,7 +26,7 @@ Essential JavaScript controls feature 12 built-in themes, six flat and gradient 
 * gradient-saffron
 * gradient-saffron-dark
 
-## Cssclass
+Cssclass
 
 Menu control also customizes its appearance using user-defined CSS and custom skin options (colors and backgrounds). To apply custom themes you can use the “CssClass” property. “CssClass” property sets the root class for Menu control theme.
 
@@ -36,7 +36,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -118,10 +118,10 @@ Using this CssClass you can override the existing styles under the theme style s
 
 
 
-{% endhighlight  %}
+
 
 2. Add the following code in your style section.
-{% highlight css %}
+
 [CSS]
 
 
@@ -144,13 +144,13 @@ Using this CssClass you can override the existing styles under the theme style s
 
 </style>
 
-{% endhighlight  %}
+
 
 Following screenshot displays the output of the above code.
 
-![C:/Users/kaliswaran/Desktop/M-CSS.png](Look-and-feel_images/Look-and-feel_img1.png)
+{{ '![C:/Users/kaliswaran/Desktop/M-CSS.png](Look-and-feel_images/Look-and-feel_img1.png)' | markdownify }}
+{:.image }
 
 
-
-_Figure31: Look and feel of a Menu_
+_Figure_ _31__: Look and feel of a Menu_
 

@@ -7,14 +7,14 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-# Tooltip
+## Tooltip
 
 Tooltip provides the information about the OlapGauge when you move the mouse pointer over the control. You can enable it using “showtooltip”property.
 
 
 
 
-{% highlight html %}
+
 [MVC]
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -67,13 +67,13 @@ Tooltip provides the information about the OlapGauge when you move the mouse poi
 
 })
 
-{% endhighlight %}
 
-## Customizing the tooltip using CSS
+
+### Customizing the tooltip using CSS
 
 You can customize the Tooltip by overriding the existing style attributes and referring it in web page.
 
-{% highlight css %}
+
 
 [CSS]
 
@@ -102,10 +102,10 @@ You can customize the Tooltip by overriding the existing style attributes and re
 </style>
 
 
-{% endhighlight  %}
 
 
-![](Tooltip_images/Tooltip_img1.png)
 
+{{ '![](Tooltip_images/Tooltip_img1.png)' | markdownify }}
+{:.image }
 
 

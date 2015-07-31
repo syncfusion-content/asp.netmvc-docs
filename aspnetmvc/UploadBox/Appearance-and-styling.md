@@ -7,7 +7,7 @@ control: UploadBox
 documentation: ug
 ---
 
-# Appearance and styling 
+## Appearance and styling 
 
 The UploadBox widget provides support to customize the dialog box text and button text. 
 
@@ -15,7 +15,7 @@ Customizing Button Text
 
 The following table contains the subproperties available under UploadBoxButtonText property. To customize the text, pass the alternate text with corresponding subproperties. 
 
-_Table_ _3_: Sub-properties under buttonText property
+_Table_ _3__: Sub-properties under buttonText property_
 
 <table>
 <tr>
@@ -49,7 +49,7 @@ The following steps explain the configuration of UploadBoxButtonText property in
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add the UploadBox element.
 
@@ -57,22 +57,21 @@ The following steps explain the configuration of UploadBoxButtonText property in
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").UploadBoxButtonText(text=>text.Browse("Choose Files").Cancel("Cancel upload").Upload("Upload file"))
 
-{% endhighlight %}
 
 
 The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img1.png)
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Customizing Upload Dialog
+Customizing Upload Dialog
 
 The following table contains the subproperties available under UploadBoxDialogText property. To customize the text, pass the alternate text with corresponding subproperties. 
 
-_Table_ _4_: Subproperties under dialogText property
+_Table_ _4__: Subproperties under dialogText property_
 
 <table>
 <tr>
@@ -106,24 +105,23 @@ The following steps explain the configuration of UploadBoxDialogText property in
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add the UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").UploadBoxDialogText(text=>text.Title("Upload File List").Name("File Name").Size("File Size").Status("File Status"))
 
-{% endhighlight %}
 
 
 The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img2.png)
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Show or Hide File details 
+Show or Hide File details 
 
 The ShowFileDetails property is Boolean type, which allow us to show or hidefiledetails in the uploaded file listdialog. To hide the uploaded file details, set ShowFileDetails property is set to ‘false’. By default value of ShowFileDetails property is set to ‘true’.
 
@@ -135,16 +133,15 @@ The following steps explains the configuration of ShowFileDetails property in Up
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add the UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").ShowFileDetails(false)
 
-{% endhighlight %}
 
 
-## Theme
+Theme
 
 UploadBox control’s style and appearance are controlled based on CSS classes. In order to apply styles to the UploadBox control, you can refer to two files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these both files. 
 
@@ -163,7 +160,7 @@ By default, there are 12-theme support available for UploadBox control namely,
 * Gradient-saffron
 * Gradient-saffron-dark
 
-## Custom CSS
+Custom CSS
 
 CSSclass customizes the UploadBox control’s appearance. Define a CSSclass as per the requirement and assign the class name to CssClass property. The data type is string. 
 
@@ -175,20 +172,19 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add the UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").CssClass("customcss")
 
 
-{% endhighlight %}
 
 
 
 2. In CSS, configure Custom Styles for the UploadBox.
 
-{% highlight html %}
+[CSS]
 
   <style class="cssStyles">
 
@@ -204,14 +200,13 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
     </style>
 
-{% endhighlight %}
 
 
 The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img3.png)
-
+{{ '![](Appearance-and-styling_images/Appearance-and-styling_img3.png)' | markdownify }}
+{:.image }
 
 

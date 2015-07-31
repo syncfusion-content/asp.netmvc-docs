@@ -7,14 +7,14 @@ control: Diagram
 documentation: ug
 ---
 
-# Interaction
+## Interaction
 
-## Tool
+### Tool
 
 There are many interactive features on Diagram surface. A collection of predefined tools are available in Diagram.
 
 _Tool_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -50,14 +50,14 @@ rotateTool</td><td>
 Allow you to rotate nodes</td></tr>
 </table>
 
-{% endhighlight %}
+
 The following code illustrates how to activate and deactivate the desired tool.
 
 
 
 {% highlight js %}
 
-
+[JS]
 
 //Activates pan tool
 
@@ -75,32 +75,32 @@ diagram.deactivateTool();
 
 {% endhighlight %}
 
-## Selection
+### Selection
 
 Selection feature allows you to select single or multiple Nodes/Connectors.
 
 * Single selection
 * Multiple selection
 
-###Single selection
+Single selection
 
 The Nodes/Connectors on Diagram surface is selected when the Select constraint is enabled. Selection is done through the following two ways. 
 
 * Mouse Click
 * addSelection method.
 
-####Mouse Click
+Mouse Click
 
 The node/connector is selected by clicking a desired node/connector.
 
-####addSelection method
+addSelection method
 
 Diagram provides public API addSelection for adding node/connector to the selection.
 The following code illustrates how to add node/connector to selection.
 
 {% highlight js %}
 
-
+[JS]
 
 var node = diagram.model.nodes[0];
 
@@ -114,32 +114,32 @@ diagram.addSelection(node);
 
 
 
-![](Interaction_images/Interaction_img1.png)
+{{ '![](Interaction_images/Interaction_img1.png)' | markdownify }}
+{:.image }
 
 
-
-###Multiple Selections
+Multiple Selections
 
 Multiple selections are done by using rubber band selection, Ctrl + Click and Ctrl + A.  During Multipleselections, the selector binds all the selected items.
 
-###Rubber band Selection
+Rubber band Selection
 
 Rubber band selection is done by clicking and dragging mouse pointer on the Diagram canvas and rectangle helper appears during Rubber band selection. The Diagram Nodes/Connectors that intersect in the selection rectangle bounds are added to the selection list.
 
 
 
-![](Interaction_images/Interaction_img2.png)
+{{ '![](Interaction_images/Interaction_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## User Handle
+### User Handle
 
 Diagram has an option to create additional selection handles around the selector called User handles. You can create additional handles and assign their command/tool to the desired handles.
 
 The following is the list of User handle properties.
 
 _User Handle_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -202,7 +202,7 @@ enableMultipleSelection</td><td>
 boolean</td><td>
 Gets or sets whether the User handle is enabled for  multiple selection </td></tr>
 </table>
-{% endhighlight %}
+
 
 The following example describes how to create delete user handle in Diagram
 
@@ -210,7 +210,7 @@ The following example describes how to create delete user handle in Diagram
 * Create tool for handle
 * Add handle in diagram
 
-##Create Delete Userhandle
+Create Delete Userhandle
 
 The following code illustrates how to create Delete User handle.
 
@@ -218,7 +218,7 @@ The following code illustrates how to create Delete User handle.
 
 {% highlight js %}
 
-
+[JS]
 
 //Creates handle
 
@@ -240,6 +240,7 @@ The following code illustrates how to create tool for Delete User handle
 
 {% highlight js %}
 
+[JS]
 
 
 
@@ -313,7 +314,7 @@ The following code illustrates how to add Delete handle in Diagram.
 
 {% highlight js %}
 
-
+[JS]
 
 //Adds user handles to diagram
 
@@ -325,22 +326,22 @@ $(“#Diagram”).ejDiagram({ userHandles: userHandles });
 
 
 
-![](Interaction_images/Interaction_img3.png)
+{{ '![](Interaction_images/Interaction_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## Zoom 
+### Zoom 
 
 The Diagram is zoomed in and out. Zooming is achieved in the following ways.
 
 * Using the zoom commands.
 * Using the mouse wheel.
 
-##MouseWheel
+MouseWheel
 
 Press the CTRL key and roll the mouse wheel up to zoom in or down to zoom out.
 
-##Zoom Factor
+Zoom Factor
 
 Diagram allows you to set the ZoomFactor where you can zoom in or out. This factor can be specified by using the ZoomFactor property. The default value is 0.2.
 
@@ -354,16 +355,16 @@ diagram.Model.ZoomFactor = 0.2;
 
 {% endhighlight %}
 
-###ZoomCommands
+ZoomCommands
 
 Refer to the link ZoomCommand
 
-###Keyboard
+Keyboard
 
 Diagram has several keyboard functions support and they are listed as follows.
 
 _Keyboard_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -422,8 +423,7 @@ nudgeRight (move the selected elements towards right by one pixel).</td></tr>
 Ctrl+MouseScroll</td><td>
 Zoom (Zoom in/Zoom out the diagram).</td></tr>
 </table>
-{% endhighlight %}
-## Touch
+### Touch
 
 Touch support for Diagram view has the following features:
 
@@ -433,7 +433,7 @@ Touch support for Diagram view has the following features:
 * Multiple selection.
 * Contextmenu (touch and hold).
 * Text Editing (double tap).
-## Snapping
+### Snapping
 
 
 Snapping feature handles snapping operation with gridlines and Nodes/Connectors
@@ -441,14 +441,14 @@ Snapping feature handles snapping operation with gridlines and Nodes/Connectors
 * SnapToGrid
 * SnapToObject
 
-###SnapToGrid
+SnapToGrid
 
 The snap-to-grid feature allows Diagram objects to snap the nearest intersection of gridlines when being dragged or resized. This feature enables easier alignment during layout or design. 
 
 The SnapToGrid feature is enabled by using a snapSetting’s SnapConstraints property.
 
 _SnapToGrid_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -481,8 +481,7 @@ SnapConstraints</td><td>
 SnapConstraints</td><td>
 Gets or sets whether snapping to gridlines option is enabled or not</td></tr>
 </table>
-{% endhighlight %}
-##Enable snapping 
+Enable snapping 
 
 Snapping to gridlines is enabled or disabled by changing the value of snap Setting’s SnapConstraints as SnapConstraints.
 
@@ -490,7 +489,9 @@ Snapping to gridlines is enabled or disabled by changing the value of snap Setti
 
 {% highlight c# %}
 
+[EJMVC]
 
+[Controller]
 
 //Enables snap to horizontal gridlines constraint
 
@@ -508,7 +509,7 @@ model.SnapSettings.SnapConstraints = SnapConstraints.SnapToLines;
 
 {% endhighlight %}
 
-###SnapInterval
+SnapInterval
 
 You can customize the position where a Diagram object snaps by changing the value of the SnapInterval property of grid lines.
 
@@ -518,8 +519,9 @@ SnapInterval is a double collection that determines the space between patterns o
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 //Sets snap interval
 
@@ -533,14 +535,14 @@ model.SnapSettings.HorizontalGridlines.SnapInterval = interval;
 
 {% endhighlight %}
 
-###SnapToObject
+SnapToObject
 
 The snap-to-object feature provides visual cues to assist with aligning and spacing diagram nodes. You can snap a node with its neighboring objects based on its size and position. Such alignments are visually represented as guidelines.
 
 
 
-![](Interaction_images/Interaction_img4.png)
-
+{{ '![](Interaction_images/Interaction_img4.png)' | markdownify }}
+{:.image }
 
 
 Enabling and Disabling snapping to objects
@@ -549,8 +551,9 @@ SnapSettings.EnableSnapToObject determines whether nodes are snapped to object o
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 //Enables snap to object behavior
 
@@ -560,14 +563,15 @@ model.SnapSettings.EnableSnapToObject = true;
 
 {% endhighlight %}
 
-###SnapAngle
+SnapAngle
 
 You can rotate the Node with multiples of SnapAngle.
 
 {% highlight c# %}
 
+[EJMVC]
 
-
+[Controller]
 
 //Sets snap angle
 

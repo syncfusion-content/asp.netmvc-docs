@@ -11,7 +11,7 @@ documentation: ug
 
 The Essential ASP.NET MVC Scroller control has a sliding document whose position corresponds to a value. The document has text, HTML content or images. You can also customize the Scroller control by resizing the scrolling bar and changing the theme.
 
-### Key Features
+Key Features
 
 * Height and Width—Set the height and width of the scroll panel.
 * Button Size—Customize the width and height of the buttons (UP, DOWN, RIGHT and LEFT).
@@ -20,6 +20,9 @@ The Essential ASP.NET MVC Scroller control has a sliding document whose position
 * RTL Support—Sets the alignment of the horizontal Scroller to the right, the reading order to right-to-left and the layout of the control to flow from right to left.
 * Theme—Essential ASP.NET MVC controls consists of 12 built in themes ( 6 – flat and 6 – gradient effects), and also supports custom skins to set user-defined themes.
 
-## Control Structure
+Control Structure
 
-![C:/Users/labuser/Desktop/a.png](Overview_images/Overview_img1.png)
+{{ '![C:/Users/labuser/Desktop/a.png](Overview_images/Overview_img1.png)' | markdownify }}
+{:.image }
+
+

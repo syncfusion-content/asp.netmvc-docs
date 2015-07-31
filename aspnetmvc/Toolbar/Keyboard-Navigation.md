@@ -7,7 +7,7 @@ control: Toolbar
 documentation: ug
 ---
 
-## Keyboard Navigation
+# Keyboard Navigation
 
 The entire Toolbar commands can be accessed through the keyboard by specifying the Keyboard Shortcut listed in the following table.
 
@@ -15,9 +15,9 @@ _Table_ _4__: List of keyboard shortcuts_
 
 <table>
 <tr>
-<td>
-Keyboard Shortcut</td><td>
-Function</td></tr>
+<th>
+Keyboard Shortcut</th><th>
+Function</th></tr>
 <tr>
 <td>
 Alt + j</td><td>
@@ -55,9 +55,8 @@ Selects the focused item</td></tr>
 
 The following code example illustrates shortcuts associated with the Toolbar items.
 
+{% highlight html %}
 
-
-[CSHTML] 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -66,11 +65,10 @@ The following code example illustrates shortcuts associated with the Toolbar ite
 </div>
 
 
+{% endhighlight %}
 
 
-
-{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)' | markdownify }}
-{:.image }
+![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
 
 
 _Figure_ _32__: ToolBar control with Keyboard shortcuts_

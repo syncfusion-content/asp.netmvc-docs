@@ -7,14 +7,14 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Localization
+## Localization
 
-Note: This feature is currently not applicable for PivotTable Field List.
+> _Note:__This feature is currently not applicable for PivotTable Field List._
 
 Localization is the process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, data is displayed in a specific language and culture of a particular country or region. The ASP.NET MVC PivotGrid control provides inherent support to localize its UI.The following table lists the default English localization user interface based on French culture. 
 
 _List of default English localization user interface based on French culture_
-{% highlight html %}
+
 <table>
 <tr>
 <td>
@@ -53,12 +53,13 @@ RenderingSucceeded</td><td>
 RenderingFailed</td><td>
 "Rendant pas"</td></tr>
 </table>
-{% endhighlight %}
+
 
 The following code example illustrates how to localize PivotGrid’s user interface based on “French” culture.
 
 
- {% highlight js %}
+
+[MVC] 
 
 @section ScriptSection{
 
@@ -95,9 +96,6 @@ The following code example illustrates how to localize PivotGrid’s user interf
       </script>             
 
 }
-{% endhighlight %}
-
-{% highlight html %}
 
 @section ControlsSection{
 
@@ -107,17 +105,18 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
 }
 
-{% endhighlight %}
 
-Note: In order to render the localized PivotGrid, you can reset the content available in both
+
+> _Note: In order to render the localized PivotGrid, you can reset the content available in both_
 
 1. _OLAP Grid Control_
 2. _OLAP Cube_
 
-##Localizing Control Information: 
+Localizing Control Information: 
 
 To apply control side Localization, you can refer the following code example.
 
+[HTML]
 
 ej.PivotGrid.locale["zh-CN"] = {
 
@@ -127,13 +126,13 @@ ej.PivotGrid.locale["zh-CN"] = {
 
 
 
-##Localizing Cube Information
+Localizing Cube Information
 
 To get the LocalizedCubeInformation, “_Locale__Identifier__"_ is set in the connection string
 
 
-{% highlight C# %}
 
+[C#]
 
 //1036 refers to “fr-FR” culture.
 
@@ -145,12 +144,12 @@ DataManager.Culture = new System.Globalization.CultureInfo(1036);
 
 DataManager.OverrideDefaultFormatStrings = true;
 
-{% endhighlight %}
+
 
 The following screenshot displays the PivotGrid with French localization:
 
-![](Localization_images/Localization_img1.png)
-
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
+{:.image }
 
 
 _Localized PivotGrid_

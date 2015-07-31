@@ -7,11 +7,11 @@ control: DropDownList
 documentation: ug
 ---
 
-# RTL
+## RTL
 
 This feature supports to change the left-to-right alignment of the Dropdown widget to right-to-left (RTL). 
 
-## Defining the RTL property
+Defining the RTL property
 
 The following steps explains you the configuration of EnableRTL properties in Dropdownlist.
 
@@ -19,7 +19,7 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -51,6 +51,7 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 
 
+[ASPX]
 
 // Add Dropdown list widget in ASPX page
 
@@ -84,13 +85,13 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 </div>    
 
-{% endhighlight %}
+
 
 Output of the above steps
 
 
-![](RTL_images/RTL_img1.png)
-
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 30: Dropdown with EnableRTL property_  

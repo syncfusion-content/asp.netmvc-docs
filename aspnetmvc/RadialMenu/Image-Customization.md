@@ -145,13 +145,13 @@ Add the following common style codes for both JS and MVC samples.
 
 The following screenshot illustrates the output.
 
-![](Image-Customization_images/Image-Customization_img1.png)
-
+{{ '![](Image-Customization_images/Image-Customization_img1.png)' | markdownify }}
+{:.image }
 
 
 When you click the arrow, it navigates to the child item as illustrated in the following screenshot.
 
-![](Image-Customization_images/Image-Customization_img2.png)
-
+{{ '![](Image-Customization_images/Image-Customization_img2.png)' | markdownify }}
+{:.image }
 
 

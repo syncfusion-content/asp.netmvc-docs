@@ -7,7 +7,7 @@ control: Tab Control
 documentation: ug
 ---
 
-## Keyboard Navigation
+# Keyboard Navigation
 
 Tab control provides supports keyboard interaction. Using this functionality you can interact with control using keyboard. This is achieved by enabling ‘AllowKeyboardNavigation’to ‘true’. By default this property value is set to ‘true’.
 
@@ -15,9 +15,9 @@ Following table illustrates the accessible key and their usage
 
 <table>
 <tr>
-<td>
-Keys</td><td>
-Behavior</td></tr>
+<th>
+Keys</th><th>
+Behavior</th></tr>
 <tr>
 <td>
 Up</td><td>
@@ -63,7 +63,7 @@ The following code example is used to render the Tab element in RTL format.
 
 2. The following screenshot illustrates the Tab with keyboard navigation.
 
-{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)' | markdownify }}
-{:.image }
+![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
+
 
 

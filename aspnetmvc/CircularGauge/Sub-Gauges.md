@@ -7,15 +7,15 @@ control: Circular Gauge
 documentation: ug
 ---
 
-# Sub Gauges
+## Sub Gauges
 
 A Circular Gauge containing another circular gauge is said to be Sub Gauges. Inorder to make  a sample like watch that has second gauge, minute gauge and hour gauge, sub gauges are used.
 
-## Adding SubGauges
+### Adding SubGauges
 
 Sub gauge collection is directly added to the scale object. Refer the following code example to add custom sub gauge collection in a Gauge control
 
-{% highlight html %}
+
 
 [View]
 
@@ -58,13 +58,12 @@ sg.ControlID("Subgauge1")
 .Scales(sc=>{sc.Radius(150).Add();})
 
 )
-{% endhighlight  %}
 
-### Basic Customization
+Basic Customization
 
 Basic attributes such as height and width property are used to set height and width of the sub gauge. You can easily position the gauge in another gauge using the position object and by giving the X and Y Coordinates value. controlID attribute is used to specify the sub gauge ID.
 
-{% highlight html %}
+
 
 [View]
 
@@ -128,21 +127,21 @@ sg.ControlID("Subgauge1")
 
 
 
-{% endhighlight  %}
+
 
 Execute the above code to render the following output.
 
-![](Sub-Gauges_images/Sub-Gauges_img1.png)
+{{ '![](Sub-Gauges_images/Sub-Gauges_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-## Multiple SubGauges
+### Multiple SubGauges
 
 You can set multiple sub gauges in a single Circular Gauge by adding an array of sub gauge objects. Refer the following code example for multiple sub gauges functionality.
 
-{% highlight html %}
+
 
 [View]
 
@@ -205,13 +204,13 @@ sg.ControlID("Subgauge2")
 )
 
 
-{% endhighlight %}
+
 
 
 Execute the above code to render the following output.
 
-![](Sub-Gauges_images/Sub-Gauges_img2.png)
-
+{{ '![](Sub-Gauges_images/Sub-Gauges_img2.png)' | markdownify }}
+{:.image }
 
 
 

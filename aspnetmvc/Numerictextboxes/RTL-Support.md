@@ -7,25 +7,30 @@ control: NumericTextBox
 documentation: ug
 ---
 
-# RTL Support
+## RTL Support
 
 NumericTextBox provides RTL (Right-To-Left) support. The alignment of NumericTextBox can be changed from Left-To-Right into Right-To-Left.
 
-## Enable RTL
+Enable RTL
 
 In the View page add NumericTextBox helper, and configure the EnableRTL property.
 
 
 
-{% highlight html %}
+[_cshtml]
 
 @Html.EJ().NumericTextbox("numeric").Value("11").EnableRTL(true)
 
-{% endhighlight %}
+
 
 Output of NumericTextBox when EnableRTL is “True” is as follows. 
 
-![](RTL-Support_images/RTL-Support_img1.png)
+{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
+{:.image }
+
+
+
+
 
 
 _NumericTextBox with enableRTL_

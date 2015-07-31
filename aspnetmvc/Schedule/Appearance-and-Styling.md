@@ -7,15 +7,15 @@ control: Schedule
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## Adaptive Schedule
+Adaptive Schedule
 
 * The Schedule control has been provided with the built-in support for adaptive functionality. With this behaviour enabled, the Schedule control can be accessed in any of the mobile devices as per the screen size. 
 * To enable the adaptive layout of the Schedule control, it is necessary to set the property isResponsive to True. By default, it is set to false. 
 * When the isResponsive property is set to true, the Schedule control automatically chooses the appropriate rendering method to display it either on the mobile or desktop mode, based on the screen size it is rendered. Except the horizontal mode orientation, all the other default functionalities of the Schedule control are supported in this feature. 
 
-## Dependencies
+Dependencies
 
 For Adaptive Schedule, you can refer to the following css file in the application that can be downloaded from the link,
 
@@ -23,7 +23,9 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight c# %}
+[MVC]
+
+[razor]
 
 @(Html.EJ().Schedule("AdaptiveSchedule")
 
@@ -59,23 +61,22 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight c# %}
+[Controller]
 
 
 
 // follow the code as same as declared in Read Only part
 
-{% endhighlight %}
-{% endhighlight %}
-
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 
 
@@ -84,14 +85,14 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-## Show/Hide All Day Show 
+Show/Hide All Day Show 
 
 * The all-day cells row in the Schedule control can be displayed or hidden from the user. When the showAllDayRow is set to false, the allday row is hidden from the user.
 *  By default, this property is set to true.The following code example explains how to use the showAllDayRow property of the Schedule control.  
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -125,19 +126,19 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 )
 
-{% endhighlight %}
+
 
 The following screenshot displays the Schedule control with all-day row hidden,
 
-![C:/Users/maheshp/Pictures/sshot-8.png](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
-
+{{ '![C:/Users/maheshp/Pictures/sshot-8.png](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure 2: Schedule with disabled all day row_
 
-## Adjust Schedule Size
+Adjust Schedule Size
 
-### Height
+Height
 
 * The height of the Schedule control is handled using the height property that accepts only the pixel values.
 * By default, the Schedule control is set with the height of 800px.
@@ -145,7 +146,7 @@ _Figure 2: Schedule with disabled all day row_
 The following code eample explains how to change the height of the Schedule control.  
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -173,21 +174,21 @@ The following code eample explains how to change the height of the Schedule cont
 
 )
 
-{% endhighlight %}
+
 
 The following screenshot displays the Schedule control with the height set to “500px”. 
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
+{:.image }
+
+
+   _Figure_ _111__:  Adjusting schedule size height._
 
 
 
-   _Figure_ _111_:  Adjusting schedule size height.
-
-
-
-### width
+width
 
 * The width of the Schedule control is handled with the width property that accepts both the pixel values as well as percentage values. 
 * By default, the schedule control is set with the width of 800px.
@@ -196,7 +197,9 @@ The following code example explains how to change the width of the Schedule cont
 
 
 
-{% highlight html %}
+[Razor]
+
+
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -225,28 +228,27 @@ The following code example explains how to change the width of the Schedule cont
 </head>
 
 
-{% endhighlight %}
 
 The following screenshot displays the Schedule control with the width set to “600px”.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
+{:.image }
 
 
    _Figure_ _112__:  Adjusting schedule size width_
 
-### Adjust Cell Size
+Adjust Cell Size
 
 * The size of the cells within the Schedule control can be customized with two of the available options, cellWidth and cellHeight. 
 * In order to view the appointments more clearly within the schedule control, you can enhance the height and width of the cells using these options.
 
-### cellHeight
+cellHeight
 
 * The cell height of the Schedule control is handled with the cellHeight property that accepts only the pixel values.
 
-### cellWidth
+cellWidth
 
 * The cell width of the Schedule control is handled with the cellWidth property that accepts only the pixel values.
 
@@ -254,7 +256,9 @@ The following code example explains how to change the cell height and width of t
 
 
 
-{% highlight html %}
+[Razor]
+
+
 
 // Setting the cell height and width of the schedule
 
@@ -288,17 +292,17 @@ The following code example explains how to change the cell height and width of t
 
 )
 
-{% endhighlight %}
+
 
 The following screenshot displays the Schedule control with the cell width set to “160px” and cell height set to “60px”.
 
 
 
-![C:/Users/maheshp/Desktop/schedule1.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+{{ '![C:/Users/maheshp/Desktop/schedule1.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
+{:.image }
 
 
-
-### Theme
+Theme
 
 * Schedule control’s style and appearance is controlled based on CSS classes. In order to apply styles to the Schedule control, you are required to refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. 
 * When the ej.widgets.all.min.css fileis referred, it is not necessary to include the ej.widgets.core.min.css and ej.theme.min.css files in your project as ej.widgets.all.min.css is the combination of these two files. 
@@ -334,10 +338,33 @@ Replace the following code in Layout file -> View page to apply different theme 
 
 The schedule control will render as follows
 
-![C:/Users/karthigeyan/Desktop/q.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
+{{ '![C:/Users/karthigeyan/Desktop/q.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
+{:.image }
 
 
-### Show/Hide Header Bar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Show/Hide Header Bar
 
 In the Schedule control, you can show/hide the header bar by using the showHeaderBar property. By default, this property is set to true and when it is set to false, the Schedule control is rendered without the date and view navigation options.
 
@@ -345,7 +372,6 @@ The following code example explains on how to use the showHeaderBar property.
 
 
 
-{% highlight html %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -379,14 +405,13 @@ The following code example explains on how to use the showHeaderBar property.
         )
 
 
-{% endhighlight %}
 
 The following screenshot displays the Schedule control with the hidden header bar. 
 
 
 
-![C:/Users/maheshp/AppData/Roaming/Skype/My Skype Received Files/mvc(1).PNG](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
-
+{{ '![C:/Users/maheshp/AppData/Roaming/Skype/My Skype Received Files/mvc(1).PNG](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
+{:.image }
 
 
 _Schedule with header bar hidden_

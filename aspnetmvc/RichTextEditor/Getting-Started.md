@@ -15,42 +15,44 @@ This section briefly describes how to create and use RichTextEditor control usin
 
 The ASP.NET MVC RichTextEditor (RTE) control allows you to edit contents, insert tables, images and to get the HTML content. In this section you can learn how to use RichTextEditor in order to get Feedback from the user. 
 
-![](Getting-Started_images/Getting-Started_img1.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 The following screenshot demonstrates how the RTE control is used in Feedback form.
 
 In the above screenshot , the RTE consists of content editable area with Feedback title.In this RTE application, you can click the PostFeedback toolbar item to send the Feedback information.
 
-## Create a RichTextEditor 
+Create a RichTextEditor 
 
 ASP.NET MVC RTE widget basically renders by using the simple text area element. 
 
 1. You can create a MVC Project and add the necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page to render the RichTextEditor.
 
-   ~~~ html
 
-		@Html.EJ().RTE("FeedbackEditor")
 
-   ~~~
-   {:.prettyprint }
 
-	![](Getting-Started_images/Getting-Started_img2.png)
 
-	The following RTE screenshot renders the output of the above steps.
+@Html.EJ().RTE("FeedbackEditor")
 
-## Configure the Toolbar
+
+
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
+The following RTE screenshot renders the output of the above steps.
+
+Configure the Toolbar
 
 The RichTextEditor configures the toolbar items to provide editing and styling functionalities. In this scenario, you can use the default RTE toolbar item to provide Feedback form support. 
 
-### Add the Toolbar Item
+Add the Toolbar Item
 
 The additional functionality toolbar item is necessary to perform the required operation. The RTE provides some additional toolbar items that are already predefined, but not rendered in without specifying the toolbar items.  
 
 The following code example renders the additional inbuilt toolbar items to RTE toolbar list.
 
 
-{% highlight c# %}
+
+
 
 @{
 
@@ -58,17 +60,19 @@ The following code example renders the additional inbuilt toolbar items to RTE t
 
 }
 
+
+
 @Html.EJ().RTE("FeedbackEditor").Tools(tool => tool.Font(font)) 
 
-{% endhighlight %}
-
-![](Getting-Started_images/Getting-Started_img3.png)
-
-The following screenshot displays the RTE with inbuilt toolbar item.
 
 
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
+ The following screenshot displays the RTE with inbuilt toolbar item.
 
-### Remove the ToolbarItem
+
+
+Remove the ToolbarItem
 
 Sometimes, an existing toolbar item is not necessary to perform the required operation. You can remove the particular toolbar item by using the remove ToolbarItem method. 
 
@@ -76,9 +80,13 @@ For example, consider ‘create table’ toolbar item is not necessary for the F
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @Html.EJ().RTE("FeedbackEditor")
+
+
+
+
 
 <script type="text/javascript">
 
@@ -95,22 +103,28 @@ For example, consider ‘create table’ toolbar item is not necessary for the F
         editorObj.removeToolbarItem("FeedbackEditorcreateTable");
 
     });
-	
+
+
+
 </script>
 
-{% endhighlight %}
+
 
 The following screenshot displays ‘create table’ toolbar item is removed from the toolbar list.
 
-![](Getting-Started_images/Getting-Started_img4.png)
 
-## Configure Custom Toolbar item
+
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
+
+
+Configure Custom Toolbar item
 
 To post the Feedback directly, you need additional Toolbar item. The RTE control provides support to create the custom toolbar item for custom action. 
 
 The following code example creates the custom toolbar item in the RTE control. 
 
-{% highlight c# %}
+
 
 @Html.EJ().RTE("FeedbackEditor").Width("820px").Tools(tool => tool.CustomTool(custom =>
 
@@ -118,7 +132,9 @@ The following code example creates the custom toolbar item in the RTE control.
 
 
 
-					Add the following styles for the customtoolbaritem.
+
+
+  Add the following styles for the customtoolbaritem.
 
 <style>
 
@@ -132,17 +148,21 @@ The following code example creates the custom toolbar item in the RTE control.
 
         text-align: center;
 
-        font-weight: bold;    }
+        font-weight: bold;
+
+    }
 
 </style> 
 
-{% endhighlight %}
+
 
 The following screenshot displays RTE with custom toolbar item.
 
-![](Getting-Started_images/Getting-Started_img5.png)
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
-## Validate the Content
+
+Validate the Content
 
 In some cases, to send the Feedback form without contents you can validate them before submitting the Feedback contents. To achieve this validation, you can use getText() method in RTE control.
 
@@ -153,7 +173,7 @@ During the Feedback sending time, you can validate whether the content area is e
 You can specify the custom tool same as previous section with validation operations.
 
 
-{% highlight c# %}
+
 
 
 <div class="commentSection" style="width: 810px">
@@ -182,6 +202,10 @@ You can specify the custom tool same as previous section with validation operati
 
 </div>
 
+
+
+
+
 <script type="text/javascript">
 
 function validate() {
@@ -208,11 +232,11 @@ function validate() {
 
 </script>
 
-{% endhighlight %}
+
+
+
 
 You can add the following styles to achieve the Feedback form editor application.
-
-{% highlight c# %}
 
 <style>
 
@@ -280,8 +304,16 @@ You can add the following styles to achieve the Feedback form editor application
 
 </style>
 
-{% endhighlight %}
+
 
 The following screenshot displays the Feedback sending without content.
 
-![](Getting-Started_images/Getting-Started_img6.png)
+
+
+
+
+
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
+
+

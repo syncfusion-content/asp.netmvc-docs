@@ -7,7 +7,7 @@ control: ListBox
 documentation: ug
 ---
 
-# Persistence support 
+## Persistence support 
 
 This features enables you to save current model value to browser cookies for state maintains. When you refresh the ListBox control page, it retains the model value apply from browser cookies. The date type of EnablePersistence is Boolean type. 
 
@@ -17,7 +17,7 @@ The following steps explains you the configuration of EnablePersistence property
 
 
 
-{% highlight html %}
+[View]
 
 // Add the following code in View page to configure ListBox widget
 
@@ -31,9 +31,7 @@ The following steps explains you the configuration of EnablePersistence property
 
 </div>
 
-{% endhighlight %}
-
-{% highlight c# %}
+[CS]
 
 // Add the following code to add list items in the controller page
 
@@ -89,4 +87,5 @@ The following steps explains you the configuration of EnablePersistence property
 
         }
 
-{% endhighlight %}
+
+

@@ -7,12 +7,14 @@ control: DropDownList
 documentation: ug
 ---
 
-# Cascading Support 
+## Cascading Support 
 
 Using Cascade option, you can create a behaviour of cascade between dropdown list controls. For this, you need to create database with single field as common between two dropdown data fields and then mention that column id in field. With this, you need to set second dropdown id in CascadeTo property in first one. 
 
 
-Note: In case the second dropdown is to disabled, until the first one is selected, you need to set enable property as false in second dropdown, which enables automatically once the value is selected in first one.
+{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Cascading-Support_images/Cascading-Support_img1.png)' | markdownify }}
+{:.image }
+_Note: In case the second dropdown is to disabled, until the first one is selected, you need to set enable property as false in second dropdown, which enables automatically once the value is selected in first one._ 
 
 
 The following steps explains you the behaviour of cascade dropdown. 
@@ -21,56 +23,14 @@ The following steps explains you the behaviour of cascade dropdown.
 
 
 
-{% highlight html %}
- // Add a DropDownList element using the helper class in CSHTML
- <div class="control" style="float: left;">
- <span class="txt">Select Group</span>
- @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) ViewData["groups"]).DropDownListFields(f=>f.Value("parentId")).CascadeTo("dropdownlist1")</div>
- <div class="control" style="float: left;"><span class="txt">Select Country</span>
- @Html.EJ().DropDownList("dropdownlist1").Datasource((IEnumerable<Countries>)ViewData["countries"]).Enabled(false)
- </div></td></tr>
-{% endhighlight %}
-
-{% highlight c# %}
- // Initialize the control in controller
- public ActionResult Property()
- {                
-    List<Groups> dataOne = new List<Groups>();
-    dataOne.Add(new Groups() { Id = "a", Text = "Group A" });
-    dataOne.Add(new Groups() { Id = "b", Text = "Group B" });
-    dataOne.Add(new Groups() { Id = "c", Text = "Group C" });
-    dataOne.Add(new Groups() { Id = "d", Text = "Group D" });
-    ViewData["groups"] = dataOne;    
-	List<Countries> dataTwo = new List<Countries>();
-    dataTwo.Add(new Countries() { Value = 12, Id = "a", Text = "Armenia" });
-    dataTwo.Add(new Countries() { Value = 13, Id = "a", Text = "Bangladesh" });
-    dataTwo.Add(new Countries() { Value = 14, Id = "a", Text = "Cuba" });
-    dataTwo.Add(new Countries() { Value = 15, Id = "b", Text = "Denmark" });
-    dataTwo.Add(new Countries() { Value = 16, Id = "b", Text = "Egypt" });
-    dataTwo.Add(new Countries() { Value = 17, Id = "c", Text = "Finland" });
-    dataTwo.Add(new Countries() { Value = 18, Id = "c", Text = "India" });
-    dataTwo.Add(new Countries() { Value = 19, Id = "c", Text = "Malaysia" });
-    dataTwo.Add(new Countries() { Value = 20, Id = "d", Text = "New Zealand" });
-    dataTwo.Add(new Countries() { Value = 21, Id = "d", Text = "Norway" });
-    dataTwo.Add(new Countries() { Value = 22, Id = "d", Text = "Poland" });
-    dataTwo.Add(new Countries() { Value = 23, Id = "d", Text = "Romania" });
-    dataTwo.Add(new Countries() { Value = 24, Id = "d", Text = "Singapore" });
-    dataTwo.Add(new Countries() { Value = 25, Id = "d", Text = "Thailand" });
-    dataTwo.Add(new Countries() { Value = 26, Id = "d", Text = "Ukraine" });
-    ViewData["countries"] = dataTwo;
- } 
- public class Groups
- {
-    public string Id;
-	public string Text;
- }
- public class Countries
- {        
-    public int Value;
-	public string Id;
-	public string Text;
- } } </td></tr>
-{% endhighlight %}
+<table>
+<tr>
+<td>
+[CSHTML]  // Add a DropDownList element using the helper class in CSHTML<div class="control" style="float: left;"><span class="txt">Select Group</span>@Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) ViewData["groups"]).DropDownListFields(f=>f.Value("parentId")).CascadeTo("dropdownlist1")</div><div class="control" style="float: left;"><span class="txt">Select Country</span>@Html.EJ().DropDownList("dropdownlist1").Datasource((IEnumerable<Countries>)ViewData["countries"]).Enabled(false)</div></td></tr>
+<tr>
+<td>
+[CS]   // Initialize the control in controller public ActionResult Property() {                List<Groups> dataOne = new List<Groups>();    dataOne.Add(new Groups() { Id = "a", Text = "Group A" });    dataOne.Add(new Groups() { Id = "b", Text = "Group B" });    dataOne.Add(new Groups() { Id = "c", Text = "Group C" });    dataOne.Add(new Groups() { Id = "d", Text = "Group D" });    ViewData["groups"] = dataOne;    List<Countries> dataTwo = new List<Countries>();    dataTwo.Add(new Countries() { Value = 12, Id = "a", Text = "Armenia" });    dataTwo.Add(new Countries() { Value = 13, Id = "a", Text = "Bangladesh" });    dataTwo.Add(new Countries() { Value = 14, Id = "a", Text = "Cuba" });    dataTwo.Add(new Countries() { Value = 15, Id = "b", Text = "Denmark" });    dataTwo.Add(new Countries() { Value = 16, Id = "b", Text = "Egypt" });    dataTwo.Add(new Countries() { Value = 17, Id = "c", Text = "Finland" });    dataTwo.Add(new Countries() { Value = 18, Id = "c", Text = "India" });    dataTwo.Add(new Countries() { Value = 19, Id = "c", Text = "Malaysia" });    dataTwo.Add(new Countries() { Value = 20, Id = "d", Text = "New Zealand" });    dataTwo.Add(new Countries() { Value = 21, Id = "d", Text = "Norway" });    dataTwo.Add(new Countries() { Value = 22, Id = "d", Text = "Poland" });    dataTwo.Add(new Countries() { Value = 23, Id = "d", Text = "Romania" });    dataTwo.Add(new Countries() { Value = 24, Id = "d", Text = "Singapore" });    dataTwo.Add(new Countries() { Value = 25, Id = "d", Text = "Thailand" });    dataTwo.Add(new Countries() { Value = 26, Id = "d", Text = "Ukraine" });    ViewData["countries"] = dataTwo; } public class Groups  {        public string Id;        public string Text; } public class Countries {        public int Value;        public string Id;        public string Text; }  }</td></tr>
+</table>
 
 
 
@@ -79,8 +39,8 @@ Output of the above steps
 
 
 
-![](Cascading-Support_images/Cascading-Support_img2.png)
-
+{{ '![](Cascading-Support_images/Cascading-Support_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 25: Dropdown with cascade property_  
@@ -89,9 +49,9 @@ _Figure 25: Dropdown with cascade property_
 
 Using multi cascade option, you can create a behavior of cascade between dropdown list controls. To achieve this, map the common field from table to “Fields” property of all the dropdown lists. Also, specify the ID of cascading DropDownList in “CascadeTo” property of parent DropDownList. 
 
-
-Note: In case, when you want to show the cascading dropdowns in disabled state initially, then set the value of enable property as “false” in each cascading dropdowns. It is then enabled automatically once a value is selected in parent (first) dropdown list.
-
+> {{ '![C:/Users/ApoorvahR/Desktop/Note.png](Cascading-Support_images/Cascading-Support_img3.png)' | markdownify }}
+{:.image }
+_Note: In case, when you want to show the cascading dropdowns in disabled state initially, then set the value of enable property as “false” in each cascading dropdowns. It is then enabled automatically once a value is selected in parent (first) dropdown list._
 
 The following steps explains you the behavior of multiple cascade dropdown.
 
@@ -99,7 +59,9 @@ The following steps explains you the behavior of multiple cascade dropdown.
 
 
 
-{% highlight html %}
+
+
+[CSHTML]
 
 <div class="control" style="float: left; padding:10px;">
 
@@ -124,9 +86,8 @@ The following steps explains you the behavior of multiple cascade dropdown.
     @Html.EJ().DropDownList("capitalList").Datasource((IEnumerable<Countries>)ViewBag.datasource2).Enabled(false)
 
 </div>
-{% endhighlight %}
 
-{% highlight c# %}       
+[CS]        
 
 public ActionResult Index()
 
@@ -249,14 +210,14 @@ public class Countries
 }
 
 
-{% endhighlight %}
+
 
 
 
 
 The following screenshot displays the output of the above code example.
 
-![](Cascading-Support_images/Cascading-Support_img4.png)
-
+{{ '![](Cascading-Support_images/Cascading-Support_img4.png)' | markdownify }}
+{:.image }
 
 

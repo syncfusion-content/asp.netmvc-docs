@@ -7,7 +7,7 @@ control: Slider
 documentation: ug
 ---
 
-# Orientation
+## Orientation
 
 This property is used to set the Slider in either horizontal or vertical direction. By default, Slider renders in horizontal direction. Data type of this property is “Enum”.
 
@@ -17,10 +17,10 @@ _Property Table for MVC_
 
 <table>
 <tr>
-<th>
-Property</th><th>
-Allowed values</th><th>
-Description</th></tr>
+<td>
+Property</td><td>
+Allowed values</td><td>
+Description</td></tr>
 <tr>
 <td rowspan = "2">
 Orientation</td><td>
@@ -41,20 +41,20 @@ The following steps explains you on how to configure the Orientation property.
 
 
 
-{% highlight html %}
+[_cshtml]
 
 / / Add this code in your view page
 
 @(Html.EJ().Slider("BasicSlider").Height("150").Width("20").Orientation(Orientation.Vertical))
 
 
-{% endhighlight %}
+
 
 
 Execute the above code example to render the following output.
 
-![](Orientation_images/Orientation_img1.png)
-
+{{ '![](Orientation_images/Orientation_img1.png)' | markdownify }}
+{:.image }
 
 
 _Slider in vertical Orientation_

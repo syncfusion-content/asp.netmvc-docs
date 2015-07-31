@@ -7,7 +7,7 @@ control: Rotator
 documentation: ug
 ---
 
-# Orientation
+## Orientation
 
 The Rotator control supports both vertical and horizontal orientations allowing it to fit into any scenario. The Orientation property defines the Orientation where the control is rendered. The value set to this property is enum or string type. It accepts the following values.
 
@@ -16,26 +16,24 @@ The Rotator control supports both vertical and horizontal orientations allowing 
 
 The following steps explain you how to set Orientation for the Rotator.
 
-## Horizontal
+Horizontal
 
 This property sets the Rotator in HorizontalOrientation. You can refer the following steps to set Horizontal Orientation for Rotator control. In Rotator control, the Default value of Orientation is Horizontal. 
 
 1. In View, create ul-li list of Rotator items and invoke the Rotator helper.
 2. Add the following script in your CSHTML page.
 
-{% highlight html %}
 
-// Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
-.RotatorFields(t => t.Text("Text").Url("Url"))
-.SlideWidth("600px")
-.SlideHeight("350px")
-.Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
+[CSHTML]
 
-{% endhighlight %}
+/ / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-## Vertical
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
+
+
+
+Vertical
 
 This property sets the Rotator in verticalorientation. You can refer the following steps to set VerticalOrientation for Rotator control.
 
@@ -43,13 +41,14 @@ This property sets the Rotator in verticalorientation. You can refer the followi
 2. Add the following script in your CSHTML page.
 
 
-{% highlight html %}
 
-// Add this code in your CSHTML page and refer local data section for binding Rotator items.
+[CSHTML]
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
-.RotatorFields(t => t.Text("Text").Url("Url"))
-.SlideWidth("600px").SlideHeight("350px")
-.Orientation(Syncfusion.JavaScript.Orientation.Vertical)
+/ / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-{% endhighlight %}
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").Orientation(Syncfusion.JavaScript.Orientation.Vertical)
+
+
+
+
+

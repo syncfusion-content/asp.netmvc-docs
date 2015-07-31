@@ -7,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-## Node Persistence Handling
+# Node Persistence Handling
 
 The TreeView allows for Persistence of its expanded and collapsed state across page view. When you want to maintain the state of the node, like expand or collapse the node, check or uncheck the node, or node display arrangement after a post back, this behavior is achieved by using the EnablePersistence property.
 
@@ -18,10 +18,7 @@ The following steps explain how you can enable the EnablePersistence property fo
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-
-
-
-[View]
+{% highlight html %}
 
 // To configure TreeView in the CSHTML page
 
@@ -95,7 +92,7 @@ The following steps explain how you can enable the EnablePersistence property fo
 
 }).EnablePersistence(true)
 
-
+{% endhighhlight %}
 
 
 
@@ -103,8 +100,7 @@ The output for TreeView when EnablePersistence is set to True is as follows.
 
 
 
-{{ '![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png)' | markdownify }}
-{:.image }
+![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png)
 
 
 _Figure_ _54__: TreeView with enablePersistence_

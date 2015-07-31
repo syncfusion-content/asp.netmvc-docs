@@ -17,129 +17,135 @@ ASP.NET MVC FileExplorer widget provides support to access the online file syst
 
 The following screenshot demonstrates the functionality of FileExplorer with Details view and Thumbnail view.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-![](Getting-Started_images/Getting-Started_img2.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
 In the above screenshot, you can access and manage the remote file system. While you perform the operation on files like delete or rename, this is handled in the controller part.
 
-## Create FileExplorer
+Create FileExplorer
 
 ASP.NET MVC FileExplorer widget renders built-in features like accessing online file system through web and managing files like creating a folder, upload files, delete, rename, move or copy and search files.  You can easily create the FileExplorer widget by using the following steps.
 
 1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding View page to render the FileExplorer.
 
-   ~~~ html
 
-		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
 
-   ~~~
-   {:.prettyprint }
+[CSHTML]
+
+
+
+@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
+
+
 
 3. Add the following code example to the corresponding controller page, FileActionDefault method is triggered, when you have made Ajax request on client-side. This FileActionDefault method finds out the specific operations using the ActionType property and calls the FileExplorerOperations methods according to that.
 
-   ~~~ cs
-
-		using System;
-
-		using System.Collections.Generic;
-
-		using System.Linq;
-
-		using System.Web;
-
-		using System.Web.Mvc;
-
-		using Syncfusion.JavaScript;
-
-		using MVCSampleBrowser.Models;
-
-		namespace MVCSampleBrowser.Controllers
-
-		{
-
-			public partial class FileExplorerController : Controller
-
-			{                
-
-				public ActionResult Default()
-
-				{
-
-					return View();
-
-				}
 
 
-			public ActionResult FileActionDefault(FileExplorerParams args)
+using System;
 
-			{
+using System.Collections.Generic;
 
-				switch (args.ActionType)
+using System.Linq;
 
-				{	
+using System.Web;
 
-					case "Read":
+using System.Web.Mvc;
 
-						return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
+using Syncfusion.JavaScript;
 
-					case "CreateFolder":
+using MVCSampleBrowser.Models;
 
-						return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
 
-					case "Paste":
 
-						FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
+namespace MVCSampleBrowser.Controllers
 
-						break;
+{
 
-					case "Delete":
+    public partial class FileExplorerController : Controller
 
-						FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+    {                
 
-                        break;
+        public ActionResult Default()
 
-					case "Rename":
+        {
 
-						FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+            return View();
 
-						break;
+        }
 
-					case "GetDetails":
 
-						return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
 
-					case "Download":
+        public ActionResult FileActionDefault(FileExplorerParams args)
 
-						FileExplorerOperations.Download(args.Path);
+        {
 
-						break;
+            switch (args.ActionType)
 
-					case "Upload":
+            {
 
-						FileExplorerOperations.Upload(args.FileUpload, args.Path);
+                case "Read":
 
-						break;
+                    return Json(FileExplorerOperations.Read(args.Path,                        args.ExtensionsAllow));
 
-				}
+                case "CreateFolder":
 
-              return Json("");
+                    return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
 
-				}
+                case "Paste":
 
-			}
+                    FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
 
-		}
-   
-   ~~~
-   {:.prettyprint }
+                    break;
+
+                case "Delete":
+
+                    FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+
+                    break;
+
+                case "Rename":
+
+                    FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+
+                    break;
+
+                case "GetDetails":
+
+                    return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
+
+                case "Download":
+
+                    FileExplorerOperations.Download(args.Path);
+
+                    break;
+
+                case "Upload":
+
+                    FileExplorerOperations.Upload(args.FileUpload, args.Path);
+
+                    break;
+
+            }
+
+            return Json("");
+
+        }
+
+    }
+
+}
+
+
+
 
 
 FileExplorerOperations is a predefined Class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side. 
@@ -150,16 +156,16 @@ _Table1: FileExplorerOperations_
 
 <table>
 <tr>
-<th>
-Operation</th><th>
-Default Request Parameter</th><th>
-Response data</th><th>
-Details</th></tr>
+<td>
+Operation</td><td>
+Default Request Parameter</td><td>
+Response data</td><td>
+Details</td></tr>
 <tr>
 <td>
 Read</td><td>
 String ActionType,String Path,String ExtensionsAllow</td><td>
-Should return data in array of JSON format and JSON fields need to be in following field names{{ '_“name, size, type, dateModified, hasChild”_' | markdownify }}{{ '_For example:_' | markdownify }}[{name: "7.png", type: "File", size: 11439, dateModified: "3/31/2015 3:16:38 PM", hasChild: false},{name: "human.png", type: "File", size: 11059, dateModified: "3/31/2015 3:16:35 PM", hasChild: false}]</td><td>
+Should return data in array of JSON format and JSON fields need to be in following field names{{{ ''_“name, size, type, dateModified, hasChild”_'' | markdownify }}}{{{ ''_For example:_'' | markdownify }}}[{name: "7.png", type: "File", size: 11439, dateModified: "3/31/2015 3:16:38 PM", hasChild: false},{name: "human.png", type: "File", size: 11059, dateModified: "3/31/2015 3:16:35 PM", hasChild: false}]</td><td>
 Read the data from the given path</td></tr>
 <tr>
 <td>
@@ -208,7 +214,7 @@ To upload the data from the given path</td></tr>
 
 The following screenshot displays a FileExplorer control.
 
-![](Getting-Started_images/Getting-Started_img3.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 

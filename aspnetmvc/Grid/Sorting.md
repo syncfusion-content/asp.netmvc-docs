@@ -7,15 +7,19 @@ control: Grid
 documentation: ug
 ---
 
-# Sorting
+## Sorting
 
-## Default Sorting
+### Default Sorting
 
 Sorting is a basic technique in Grid. It helps you view Grid records in ascending or descending, based on a particular column. If you want to enable sorting in Grid then use AllowSorting property at Grid initialize. By default, sorting operation can be performed by user interaction (UI) on Grid header.
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+[razor]
 
   @(Html.EJ().Grid<object>("Grid")
 
@@ -27,9 +31,9 @@ Sorting is a basic technique in Grid. It helps you view Grid records in ascendin
 
     )
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[Controller]
 
 
 
@@ -55,7 +59,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 }
 
-{% endhighlight %}
+
 
 
 
@@ -63,13 +67,13 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Sorting_images/Sorting_img1.png)
+{{ '![](Sorting_images/Sorting_img1.png)' | markdownify }}
+{:.image }
 
 
-
-![](Sorting_images/Sorting_img2.png)
-
-Note: Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid.
+> {{ '![](Sorting_images/Sorting_img2.png)' | markdownify }}
+{:.image }
+_Note: Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid._
 
 ### External Sorting
 
@@ -79,7 +83,11 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+[razor]
 
         <select id="columns">
 
@@ -119,9 +127,7 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
       )
 
-{% endhighlight %}
 
-{% highlight js %}
 
 [JavaScript]
 
@@ -141,9 +147,9 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
    </script>
 
-{% endhighlight %}
 
-{% highlight C# %}
+
+[Controller]
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -168,15 +174,15 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 
 
-{% endhighlight %}
+
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-![](Sorting_images/Sorting_img3.png)
-
+{{ '![](Sorting_images/Sorting_img3.png)' | markdownify }}
+{:.image }
 
 
 ### Multi sorting in Touch device
@@ -187,8 +193,8 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Sorting_images/Sorting_img4.png)
-
+{{ '![](Sorting_images/Sorting_img4.png)' | markdownify }}
+{:.image }
 
 
 Note : To enable Multi Sorting, use AllowMultiSorting() property of Grid
@@ -205,7 +211,11 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
 
 
 
-{% highlight html %}
+[MVC]
+
+
+
+[razor]
 
  <input type="button" id="clearsorting" name="sorting" value="clear sorting" />
 
@@ -222,10 +232,10 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
       .AllowPaging()
 
       )
-{% endhighlight %}
 
 
-{% highlight js %}
+
+[Javascript]
 
 <script type="text/javascript">
 
@@ -241,9 +251,9 @@ In Grid, you have an API to clear sorted columns. Through this API, you can clea
 
 </script>
 
-{% endhighlight %}
 
-{% highlight C# %}       
+
+[Controller]       
 
 namespace MVCSampleBrowser.Controllers
 
@@ -267,7 +277,7 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-{% endhighlight %}
+
 
 
 
@@ -275,25 +285,27 @@ The following output is displayed as a result of the above code example.
 
 
 
-![](Sorting_images/Sorting_img5.png)
+{{ '![](Sorting_images/Sorting_img5.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-![](Sorting_images/Sorting_img6.png)
-
+{{ '![](Sorting_images/Sorting_img6.png)' | markdownify }}
+{:.image }
 
 
 ### Merge Sort
 
-In the normal way of sorting, first preference is given to capital letters and then small letters. When you do not want discrimination between small and capital letters, you can set 'enableLocalizedSort' API as true to sort both small and capital letters.
+In the normal way of sorting, first preference is given to capital letters and then small letters. When you do not want discrimination between small and capital letters, you can set “enableLocalizedSort” API as true to sort both small and capital letters.
 
 
 
 
 
-{% highlight html %}
+[MVC]
+
+[razor]
 
   @(Html.EJ().Grid<object>("Grid")
 
@@ -328,10 +340,10 @@ In the normal way of sorting, first preference is given to capital letters and t
 ej.support.enableLocalizedSort = true
 
 </script>
-{% endhighlight %}
 
 
-{% highlight C# %}
+
+[Controller]
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -355,13 +367,13 @@ namespace SyncfusionMvcApplication3.Controllers
 
 }
 
-{% endhighlight %}
+
 
  The following output is displayed as a result of the above code example.
 
 
 
-![](Sorting_images/Sorting_img7.png)
-
+{{ '![](Sorting_images/Sorting_img7.png)' | markdownify }}
+{:.image }
 
 

@@ -17,11 +17,11 @@ ASP.NET MVC Slider provides support to display a Slider within the webpage. The 
 
 The following screenshot illustrates the functionality of Slider control. You can select a mobile model in the dropdown to purchase it at any rate specified in the Mobile RateSlider and you can also specify the number of mobiles you need by selecting the Mobile CountSlider. Simultaneously, you can observe the change in mobile rate and count using Sliders.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img1.png)
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
-
-### Create a Slider
+Create a Slider
 
 ASP.NET MVC Slider controlallows you to switch between different ranges of input. The basic Slider is horizontal and has a single handle that can be moved with the mouse or by using the arrow keys. You can easily create the Slider control using @Html.helper as follows.
 
@@ -31,7 +31,9 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 2. Add the following code example for Slider to the corresponding view page.
 
-{% highlight html %}
+
+
+
 
 <div class="frame">
 
@@ -89,12 +91,12 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 </div>
 
-{% endhighlight %}
+
 
 3. Add the following styles for Sliders.
 
 
-{% highlight html %}
+
 <style>
 
 .frame
@@ -151,11 +153,11 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 </style>
 
-{% endhighlight %}
+
 
 4. Add the following script to the Slider.
 
-{% highlight html %}
+
 
 <script>
 
@@ -189,15 +191,15 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
 </script>
 
-{% endhighlight %}
+
 
 5. The following screenshot displays the final output in Slider creation.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img2.png)
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## EMI Calculator
+EMI Calculator
 
 This section explains how to use the Slider control for EMI Calculation. The final result of EMI amount is calculated automatically based on the loan amount, interest rate and tenure amount based on the amount you choose using Slider.
 
@@ -206,7 +208,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 
 
-{% highlight html %}
+
 
 <div class="frame">
 
@@ -264,12 +266,12 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 </div>
 
-{% endhighlight %}
+
 
 3. Include the following styles for Slider.
 
 
-{% highlight html %}
+
 <style>
 
 .frame
@@ -325,14 +327,14 @@ font-weight:bold;
 </style>
 
 
-{% endhighlight %}
+
 
 
 4. Include the following script to calculate the EMI amount.
 
 
 
-{% highlight html %}
+
 
 <script type="text/javascript">
 
@@ -379,15 +381,13 @@ font-weight:bold;
             }
 
         </script>
-		
-{% endhighlight %}
 
 The following screenshot displays the calculated EMI amount using Slider.
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss1.PNG](Getting-Started_images/Getting-Started_img3.png)
-
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss1.PNG](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 The Slider component lets you to select a value such as number, percentage by moving the slider handle. It also allows you to specify a range of values between its minimum and maximum values. You can use Slider to influence other object. For example, Slider can be associated with a picture so that the picture enlarges or shrinks based upon the value in the slider.

@@ -15,10 +15,11 @@ This section briefly describes you on how to create a QuizApp and RegistrationAp
 
 ASP.NET MVC RadioButton provides support to display the RadioButton within your webpage, and allows you to pick your choice. Using the following guidelines, you can customize RadioButton for a real-time QuizApp and RegistrationApp scenarios. This allows you to select the corresponding choice for each question.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
-## Create your QuizApp
+### Create your QuizApp
 
 Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select a single option from the QuizApp. You can create the RadioButton widget using the following steps.
 
@@ -218,7 +219,7 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 
 {% endhighlight %}
 
-### Add Script
+#### Add Script
 
 
 
@@ -254,7 +255,7 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 
 {% endhighlight %}
 
-### Configure Style
+#### Configure Style
 
 Add the following code example in the index page.
 
@@ -278,14 +279,14 @@ Add the following code example in the index page.
  Execute the above code example to render the following output.
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
+### Create RegistrationApp
 
-## Create RegistrationApp
-
-![](Getting-Started_images/Getting-Started_img3.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 {% highlight html %}
@@ -454,7 +455,7 @@ Add the following code example in the index page.
 
 {% endhighlight %}
 
-### Add Script
+#### Add Script
 
 
 
@@ -490,7 +491,7 @@ Add the following code example in the index page.
 
 {% endhighlight %}
 
-### Add Style
+#### Add Style
 
 
 
@@ -514,9 +515,17 @@ Add the following code example in the index page.
 
 Execute the above code example to render the following outputs.
 
-![](Getting-Started_images/Getting-Started_img4.png)
 
-![](Getting-Started_images/Getting-Started_img5.png)
+
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
+
+
+
+
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
+
 
 The whole purpose of Radio Button is to enable you to make one selection, only one, from a list. When you want to make multiple selections, you do not require a Radio Button, you need to use a CheckBox.
 

@@ -7,13 +7,13 @@ control: TreeView
 documentation: ug
 ---
 
-## Data Binding 
+# Data Binding 
 
 The TreeView is populated with the node information taken from a data source. The TreeView supports binding data sources containing hierarchical data and supports both local data and remote data, for retrieving data from a specified data source. You can also display the hierarchical data in TreeView. TreeView exposes its specific data-related properties allowing you to specify which data source field the node information has to be retrieved from.
 
 You can populate TreeView items using data binding support such as Local (List of Objects) and OData services. 
 
-Fields
+## Fields
 
 The Field property in TreeView includes the data source fields and it can be set with appropriate values as follows.
 
@@ -23,11 +23,11 @@ _Table_ _2__: MVC field properties_
 
 <table>
 <tr>
-<td>
-Name</td><td>
-Type</td><td>
-Default</td><td>
-Description</td></tr>
+<th>
+Name</th><th>
+Type</th><th>
+Default</th><th>
+Description</th></tr>
 <tr>
 <td>
 DataSource</td><td>
@@ -131,7 +131,9 @@ String</td><td>
 Null</td><td>
 Specifies the value of the TreeView node items.</td></tr>
 </table>
-Local Data
+
+
+## Local Data
 
 To bind the Local Data to the TreeView control, create List of Objects as shown in the following code snippet and map the List properties with its appropriate data source field. You can bind data to TreeView by mapping fields such as DataSource, Id, ParentId, Text, HasChild and Expanded. 
 
@@ -140,8 +142,7 @@ The following steps explain how you can bind local data to TreeView.
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below.
 
 
-
-[Model]
+{% highlight html %}
 
 // Add the following data list to be bind in the controller page and define the corresponding data.
 
@@ -175,7 +176,7 @@ public class treeviewData
 
 
 
-
+{% endhighlight %}
 
 
 
@@ -184,7 +185,7 @@ public class treeviewData
 
 
 
-
+{% highlight html %}
 
 
 [Controller]
@@ -247,7 +248,7 @@ public ActionResult Index()
 
     }
 
-
+{% endhighlight %}
 
 
 
@@ -257,27 +258,23 @@ public ActionResult Index()
 
 
 
-
-
-[View]
-
+{% highlight html %}
 
 
       @Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<treeviewData>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild"))
 
-
+{% endhighlight %}
 
 The output for TreeView control with Local Data binding is as follows.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img1.png)
 
 
 _Figure_ _43__: TreeView with local data-binding_
 
-Remote Data
+## Remote Data
 
 You can bind TreeView to Remote Data using DataManager and the query in fields is used to retrieve the data. DataManager supports the following types of data-binding: Lsit of Objects, Web Services, oData. It uses two different classes; ej.DataManager for processing, and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are read by the DataManager. In the following link, how to create DataManager is explained in full detail.
 
@@ -301,23 +298,17 @@ The following steps explain how you can bind remote data to TreeView control.
 
 
 
-
-
-[View]
-
+{% highlight html %}
 
 
       @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource(s1 => s1.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query(" ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)").Id("CategoryID").Text("CategoryName").Child(s2 => s2.Datasource(s3 => s3.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).TableName("Products").Id("ProductID").ParentId("CategoryID").Text("ProductName"))) 
 
 
-
+{% endhighlight %}
 
 
 The output for TreeView control with Remote Data binding is as follows.
 
 
-
-{{ '![D:/RESPONSE/UG DOC/remotedata.PNG](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
-{:.image }
-
+![D:/RESPONSE/UG DOC/remotedata.PNG](Data-Binding_images/Data-Binding_img2.png)
 

@@ -7,13 +7,13 @@ control: DropDownList
 documentation: ug
 ---
 
-# Search Options 
+## Search Options 
 
 Incremental Search 
 
 This feature provides support to Dropdown List with search options that enables the search options by quick typing in the textbox when popup is displayed. In case if the matched optio`ns is not available in list, it automatically selects the last one in the list.  The data type of EnableIncrementalSearch is Boolean type.
 
-## Case-Sensitive Search 
+Case-Sensitive Search 
 
 This features provides support to search option with case sensitive. To achieve this you need to enable the incremental search on dropdown and the data type of CaseSensitiveSearch is Boolean type. 
 
@@ -25,7 +25,7 @@ The following steps explains you the configuration of search options in DropDown
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -53,14 +53,14 @@ The following steps explains you the configuration of search options in DropDown
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 Output of the above steps
 
-![](Search-Options_images/Search-Options_img1.png)
-
+{{ '![](Search-Options_images/Search-Options_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 16: Dropdown with incremental search with case sensitive property_  

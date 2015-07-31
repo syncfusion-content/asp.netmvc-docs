@@ -7,7 +7,7 @@ control: Tab Control
 documentation: ug
 ---
 
-## Scroll Support
+# Scroll Support
 
 Tab control provides you scrolling support on Tab items to display a larger number of tabs with scroll buttons to get rid of the extending page size. The enabled Scroll buttons can be used to traverse through the elements.
 
@@ -20,10 +20,9 @@ You can use the following code example to render the Tab widget with scroll butt
 1. Add the following code in your view page to create a simple Tab with scroll button.
 
 
+{% highlight html %}
 
 
-
-[CHTML]
 
 @*Add the following code example to the corresponding CSHTML page to render Tab with scroll button.*@
 
@@ -62,13 +61,13 @@ You can use the following code example to render the Tab widget with scroll butt
         </div>
 
 
-
+{% endhighlight %}
 
 
 The following screenshot illustrates you the Tab control with scroll button. 
 
-{{ '![](Scroll-Support_images/Scroll-Support_img1.png)' | markdownify }}
-{:.image }
+![](Scroll-Support_images/Scroll-Support_img1.png)
+
 
 
 _Figure 24: Tab control with scroll support_

@@ -7,16 +7,22 @@ control: Barcode
 documentation: ug
 ---
 
-# Customizing the appearance
+## Customizing the appearance
 
 A page or printed media with Barcode often appears colorful in the background and surrounding region with other contents. In such cases the Barcode can also be customized to suit the needs. You can achieve this by changing the darkBarColor property.
 
 
-Note: This color customization is possible only for one dimensional barcodes and it is not supported for two dimensional barcodes.
+{{ '![C:/Users/labuser/Desktop/note.jpg](Customizing-the-appearance_images/Customizing-the-appearance_img1.jpeg)' | markdownify }}
+{:.image }
+_Note: This color customization is possible only for one dimensional barcodes and it is not supported for two dimensional barcodes._
 
 
 
 {% highlight html %}
+
+[CSHTML]
+
+
 
 <div>
 
@@ -64,16 +70,21 @@ Execute the above code to render the following output.
 
 
 
-![](Customizing-the-appearance_images/Customizing-the-appearance_img2.png)
+{{ '![](Customizing-the-appearance_images/Customizing-the-appearance_img2.png)' | markdownify }}
+{:.image }
 
 
-_Figure_ _4_: Customized Barcode_
+_Figure_ _4__: Customized Barcode_
 
 The height of the barcode can be changed using the BarHeight property. The equivalent property to change the block size for two dimensional barcode is XDimension.
 
 
 
 {% highlight html %}
+
+[CSHTML]
+
+
 
 <div>
 
@@ -108,10 +119,11 @@ The height of the barcode can be changed using the BarHeight property. The equiv
 Execute the above code to render the following output.
 
 
-![](Customizing-the-appearance_images/Customizing-the-appearance_img3.png)
+{{ '![](Customizing-the-appearance_images/Customizing-the-appearance_img3.png)' | markdownify }}
+{:.image }
 
 
-_Figure_ _5_: Barcode with customized height_
+_Figure_ _5__: Barcode with customized height_
 
 
 

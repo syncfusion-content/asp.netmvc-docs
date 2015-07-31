@@ -7,22 +7,22 @@ control: Schedule
 documentation: ug
 ---
 
-# MVVM
+## MVVM
 
-## Angular JS
+Angular JS
 
 * Schedule contains angular support. You can add object as well as array object in the Schedule.
 * The two way binding support is given to the currentView, currentDate and datasource properties. 
 * ej-Schedule is the control tag in which ej is tag prefix and Schedule is the control name.
 
-## Rendering the Schedule
+Rendering the Schedule
 
 You can render the Schedule by using the following code example. Object in the array collection such as appointmentSetting, contextMenuSettings, etc. are extended with hyphen in the same tag.
 
 Example: e-contextMenuSettings-enable.
 
 
-{% highlight html %}
+
 <!--To Render the Schedule-->
 
 <div ng-app="syncApp">
@@ -61,17 +61,15 @@ e-currentdate="setDate" e-contextMenuSettings-enable="true">
 
 </div>
 
-{% endhighlight %}
 
 
 
-## Adding Context menu settings
+
+Adding Context menu settings
 
 * Context menu is an object type that has inner array object. 
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
-
-{% highlight html %}
 
 <!--To Render the Schedule-->
 
@@ -127,15 +125,14 @@ e-id="recurrence" e-text="Create recurrence Appointment">
 
 </ej-Schedule>
 
-{% endhighlight %}
 
-## Adding Categorize option
+
+Adding Categorize option
 
 * Categorizeoption is an array object. 
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
 
-{% highlight html %}
 <!--To Render the Schedule-->
 
 
@@ -210,23 +207,22 @@ fontcolor="Red" id="4">
 
 </ej-Schedule>
 
-{% endhighlight %}
+
 
 
 
 Execute the above codes to render the Resultant schedule as follows.
 
-![](MVVM_images/MVVM_img1.png)
+{{ '![](MVVM_images/MVVM_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Two Way Binding 
+Two Way Binding 
 
 * Schedule control supports two way binding for the property currentView , currentDate and datasource as mentioned earlier. 
 * The following code example explains how to achieve the two way binding to the Schedule control.
 * [Click here](http://mvc.syncfusion.com/demos/web/schedule/angularsupport) to see how Angular JS works with schedule.
 
-{% highlight html %}
 <div ng-app="syncApp">
 
 <div ng-controller="ScheduleCtrl">
@@ -336,7 +332,7 @@ e-id="gotodate" -text="Go to date">
 <script>
 
 
-{% highlight c# %}
+
 <!—binding the value to the scope variables in application controller-->
 
 var data = [
@@ -375,16 +371,15 @@ $("#sampleProperties").ejPropertiesPanel();
 
 </script>
 
-{% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](MVVM_images/MVVM_img2.png)
+{{ '![](MVVM_images/MVVM_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Knockout binding
+Knockout binding
 
 * Knockoutsupport allows you to bind the html elements against the available data models.Two types of knockoutbinding are supported,
 1. one-way binding
@@ -401,7 +396,7 @@ Execute the above code to render the following output.
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -529,12 +524,12 @@ $("#sampleProperties").ejPropertiesPanel();
 
 }
 
-{% endhighlight %}
+
 
 Output of the above code example is as follows.
 
-![](MVVM_images/MVVM_img3.png)
-
+{{ '![](MVVM_images/MVVM_img3.png)' | markdownify }}
+{:.image }
 
 
 

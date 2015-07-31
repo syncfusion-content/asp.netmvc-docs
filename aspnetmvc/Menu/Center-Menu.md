@@ -7,13 +7,13 @@ control: Menu
 documentation: ug
 ---
 
-# Center Menu
+## Center Menu
 
 You can align the Menu items to center by setting “EnableCenterAlign” property as true. “EnableCenterAlign” property accepts Boolean value. By default, its value is false. When set to true, then the root menu items is aligned in center.
 
 1. Add the following code in your view section.
 
-{% highlight html %}
+
 
 [CSHTML]  
 
@@ -92,13 +92,16 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
         }).Width("500").EnableCenterAlign(true)</div>
 
 
-{% endhighlight  %}
+
+
+
 
 
 The following screenshot displays the output of the above code.
 
-![](Center-Menu_images/Center-Menu_img1.png)
+{{ '![](Center-Menu_images/Center-Menu_img1.png)' | markdownify }}
+{:.image }
 
 
-_Figure34: Center Menu_
+_Figure_ _34__: Center Menu_
 

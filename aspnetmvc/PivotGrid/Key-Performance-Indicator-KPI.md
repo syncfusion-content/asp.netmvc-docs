@@ -7,11 +7,11 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Key Performance Indicator (KPI)
+## Key Performance Indicator (KPI)
 
 KeyPerformanceIndicators are a collection of calculations associated with a measure group that evaluates business success. Typically, these calculations are a combination of multi-dimensional expressions (MDX) or calculated members. KPIs also have additional metadata that provide information about how grid applications display the results of the KPI calculations.
 
-Note: This feature is applicable only for OLAP datasource.
+> _Note:__This feature is applicable only for OLAP datasource._
 
 The different types of available indicators are as follows:
 
@@ -22,14 +22,15 @@ The different types of available indicators are as follows:
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image49_164.jpg](Key-Performance-Indicator-KPI_images/Key-Performance-Indicator-KPI_img1.jpeg)
-
+{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image49_164.jpg](Key-Performance-Indicator-KPI_images/Key-Performance-Indicator-KPI_img1.jpeg)' | markdownify }}
+{:.image }
 
 
  The following code example illustrates how to initialize KPI element within the OLAP Report:
 
 
-{% highlight c# %}
+
+[C#]
 
    private OlapReport CreateOlapReport()
 
@@ -78,4 +79,4 @@ The different types of available indicators are as follows:
         }
 
 
-{% endhighlight %}
+

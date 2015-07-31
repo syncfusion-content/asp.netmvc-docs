@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Knockout Binding
+## Knockout Binding
 
 KnockoutBinding allows you to bind HTML elements against any data model. It uses a Model-View-ViewModel (MVVM) design pattern, where the Model is your stored data, View is the visual representation of that data (UI), and ViewModel acts as the intermediary between the Model and the View. For more information about the Knockoutbinding, refer to the online documentation: [http://help.syncfusion.com/ug/js/default.htm#!documents/knockoutjs.htm](http://help.syncfusion.com/ug/js/default.htm)
 
@@ -19,8 +19,9 @@ The following code example illustrates how to bind data to the Diagram through K
 
 {% highlight html %}
 
+[EJMVC]
 
- 
+[CSHTML] 
 
 //References to be added for knockout support. 
 
@@ -94,7 +95,7 @@ $(function () {
 
 
 
-![](Knockout-Binding_images/Knockout-Binding_img1.png)
-
+{{ '![](Knockout-Binding_images/Knockout-Binding_img1.png)' | markdownify }}
+{:.image }
 
 

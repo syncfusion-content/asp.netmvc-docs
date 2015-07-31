@@ -7,11 +7,11 @@ control: Gantt
 documentation: ug
 ---
 
-# Schedule Modes
+## Schedule Modes
 
 Gantt contains built-in support to switch over to various schedule mode. You can achieve this by defining a schedule header type for the Gantt.
 
-##Schedule Header Types
+Schedule Header Types
 
 Gantt contains the following built-in schedule header types:
 
@@ -58,13 +58,13 @@ In the Week schedule mode, the upper part of the schedule header displays the we
 
 The following screenshot illustrates the Week Schedule in Gantt control.
 
-![](Schedule-Modes_images/Schedule-Modes_img1.png)
+{{ '![](Schedule-Modes_images/Schedule-Modes_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-_Figure 41 : Week Schedule in Gantt control_
+_Figure_ _41__: Week Schedule in Gantt control_
 
 ### Month Schedule Mode
 
@@ -102,8 +102,8 @@ In the Week schedule mode, the upper part of the schedule header displays the Mo
 
 The following screenshot illustrates the Month Schedule in Gantt control.
 
-![](Schedule-Modes_images/Schedule-Modes_img2.png)
-
+{{ '![](Schedule-Modes_images/Schedule-Modes_img2.png)' | markdownify }}
+{:.image }
 
 
 ### Year Schedule Mode
@@ -140,8 +140,8 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 The following screen shot shows the Year Schedule in Gantt control.
 
 
-![](Schedule-Modes_images/Schedule-Modes_img3.png)
-
+{{ '![](Schedule-Modes_images/Schedule-Modes_img3.png)' | markdownify }}
+{:.image }
 
 
 ### Day Schedule Mode
@@ -178,8 +178,8 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 
 The following screenshot illustrates the Day Schedule in Gantt control.
 
-![](Schedule-Modes_images/Schedule-Modes_img4.png)
-
+{{ '![](Schedule-Modes_images/Schedule-Modes_img4.png)' | markdownify }}
+{:.image }
 
 
 ### Hour Schedule Mode
@@ -258,7 +258,7 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 
 
 
-![](Schedule-Modes_images/Schedule-Modes_img5.png)
-
+{{ '![](Schedule-Modes_images/Schedule-Modes_img5.png)' | markdownify }}
+{:.image }
 
 

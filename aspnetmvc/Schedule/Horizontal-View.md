@@ -7,14 +7,14 @@ control: Schedule
 documentation: ug
 ---
 
-# Horizontal View
+## Horizontal View
 
 * You can customize the appearance of the Schedule control by using schedule modes. This can change the view of the schedule. 
 * It is possible to change the mode of the schedule. It can be customized by using orientation property.
 
 
 
-## Orientation
+Orientation
 
 * It defines the orientation type of the Schedule control. It renders the Schedule  either in horizontal mode or vertical mode. By default, orientation property is set as “Vertical”. 
 * The valid enum values that are accepted by orientation property are as follows,
@@ -24,7 +24,7 @@ documentation: ug
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -36,21 +36,21 @@ documentation: ug
 
 )
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
 
 
-![](Horizontal-View_images/Horizontal-View_img1.png)
-
+{{ '![](Horizontal-View_images/Horizontal-View_img1.png)' | markdownify }}
+{:.image }
 
 
 The above example illustrates the horizontal view of Schedule control. Similarly you can also set the mode of the Schedule as “vertical”.
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -62,17 +62,17 @@ The above example illustrates the horizontal view of Schedule control. Similarly
 
 )
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](Horizontal-View_images/Horizontal-View_img2.png)
+{{ '![](Horizontal-View_images/Horizontal-View_img2.png)' | markdownify }}
+{:.image }
 
 
+Resources
 
-## Resources
-
-### Horizontal Multiple Resources
+Horizontal Multiple Resources
 
 * Horizontal Multiple Resource feature provides support for rendering multiple resources on the Schedule control. You can group multiple resources under certain categories. You can also save the appointments simultaneously on multiple resources or within the multiple categories using allowMultiple property enabled for different levels of resources.
 * Horizontal Multiple Resources is varied from Multiple resources by including the orientation property.It can change the appearance of the Schedule.
@@ -80,7 +80,7 @@ Execute the above code to render the following output.
 
 
 
-{% highlight html %}
+[Razor]
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -136,27 +136,26 @@ gr.Resources(ViewBag.Resources);
 
 
 
-{% highlight c# %}
+[controller]
 
 // follow the code as same as declared in Resources part
 
-{% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](Horizontal-View_images/Horizontal-View_img3.png)
+{{ '![](Horizontal-View_images/Horizontal-View_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## Horizontal Resource Grouping
+Horizontal Resource Grouping
 
 * The Schedule control supports another important property as group related to the multiple resources that accepts the unique name assigned to each resources in the resource collection. The names that are all listed in this option is grouped in the Schedule control.
 * It is possible to change the orientation in horizontal resource grouping. Horizontal view has another one property as resourceHeaderTemplateId. It allows to render the resource header of the schedule. When the orientation is in horizontal mode, resourceHeaderTemplateId can be applied.
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -214,18 +213,17 @@ gr.Resources(ViewBag.Resources);
 
 
 
-{% highlight c# %}
+[controller]
 
 // follow the code as same as declared in Resource Grouping  part
 
-{% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
 
 
-![](Horizontal-View_images/Horizontal-View_img4.png)
-
+{{ '![](Horizontal-View_images/Horizontal-View_img4.png)' | markdownify }}
+{:.image }
 
 

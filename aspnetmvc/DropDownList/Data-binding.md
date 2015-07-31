@@ -7,19 +7,19 @@ control: DropDownList
 documentation: ug
 ---
 
-# Data-binding 
+## Data-binding 
 
-## Data fields and configuration 
+Data fields and configuration 
 
 The following sub-properties provides you a way to bind either the local or remote data to the Dropdown control.
 
-_Table_ _1_: Properties ofndropdown list in MVC for data binding_
+_Table_ _1__: Properties ofndropdown list in MVC for data binding_
 
 <table>
 <tr>
-<th>
-Properties</th><th>
-Description</th></tr>
+<td>
+Properties</td><td>
+Description</td></tr>
 <tr>
 <td>
 DataSource</td><td>
@@ -77,7 +77,7 @@ It defines the table name for the tag value or displays text while rendering rem
 
 
 
-## Local data
+Local data
 
 Dropdown provides data binding support for DropdownList. Thus you can bind the data from JSON Data. To achieve this, you need to map the corresponding file with their column names
 
@@ -86,14 +86,14 @@ And also you need to provide support to add and customize the images and list it
 The following steps explains you the details of data binding with DropdownList. 
 
 1. Add the below code in your page with to render the dropdown list with local data
-
-{% highlight html %}
-[CSHTML]// Add a DropDownList element using the helper class in CSHTML<div class="control">        <div class="ctrllabel">Select a bike</div>        @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<Data>)ViewData["BikeList"] ).DropDownListFields(f => f.Text("Text")).DropDownListFields(f => f.Value("Id")).Width("150px")                        </div></td></tr>
-{% endhighlight %}
-
-{% highlight c# %}
+<table>
+<tr>
+<td>
+<br>[CSHTML]// Add a DropDownList element using the helper class in CSHTML<div class="control">        <div class="ctrllabel">Select a bike</div>        @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<Data>)ViewData["BikeList"] ).DropDownListFields(f => f.Text("Text")).DropDownListFields(f => f.Value("Id")).Width("150px")                        </div></td></tr>
+<tr>
+<td>
 [CS]// Initialize Datasource in the controller        public ActionResult DropdownlistFeatures()        {                    List<Data> ListOrder = new List<Data>();            ListOrder.Add(new Data() { Id = "bk1", Text = "Aache RTR" });            ListOrder.Add(new Data() { Id = "bk2", Text = "CBR 150-R" });            ListOrder.Add(new Data() { Id = "bk3", Text = "CBZ Xtreme" });            ListOrder.Add(new Data() { Id = "bk4", Text = "Discover" });            ListOrder.Add(new Data() { Id = "bk5", Text = "Dazzler" });            ListOrder.Add(new Data() { Id = "bk6", Text = "Flame" });            ListOrder.Add(new Data() { Id = "bk7", Text = "Fazzer" });            ListOrder.Add(new Data() { Id = "bk8", Text = "FZ-S" });            ListOrder.Add(new Data() { Id = "bk9", Text = "Pulsar" });            ListOrder.Add(new Data() { Id = "bk10", Text = "Shine" });            ListOrder.Add(new Data() { Id = "bk11", Text = "R15" });            ListOrder.Add(new Data() { Id = "bk12", Text = "Unicorn" });            ViewData["BikeList"] = ListOrder;            return View();       }       public class Data       {            public string Id { get; set; }            public string Text { get; set; }       }</td></tr>
-{% endhighlight %}
+</table>
 
 
 
@@ -102,13 +102,13 @@ Output of the above steps
 
 
 
-![](Data-binding_images/Data-binding_img1.png)
+{{ '![](Data-binding_images/Data-binding_img1.png)' | markdownify }}
+{:.image }
 
 
+_Figure_ _10__: Dropdown with Data binding -local_ 
 
-_Figure_ _10_: Dropdown with Data binding -local_ 
-
-## Remote data 
+Remote data 
 
 You can bind the data’s for the DropdownList from remote, that can fetch the data from any other server that is located as remote web service. By using Query options, you can pass the query string to filter the data that helps to avoid the extensive properties look up. 
 
@@ -118,7 +118,7 @@ The following steps explains you the details of data binding from remote.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -129,15 +129,15 @@ The following steps explains you the details of data binding from remote.
    @Html.EJ().DropDownList("dropdownlist").Datasource(ds=>ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(6)").DropDownListFields(f => f.Text("CustomerID")).Width("150px")                      
 
 
-{% endhighlight %}
+
 
 
 Output of the above steps
 
 
 
-![](Data-binding_images/Data-binding_img2.png)
-
+{{ '![](Data-binding_images/Data-binding_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 11: Dropdown with Data binding -Remote_ 

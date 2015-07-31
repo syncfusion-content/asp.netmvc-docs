@@ -7,17 +7,17 @@ control: ReportViewer
 documentation: ug
 ---
 
-# Events
+## Events
 
 The ReportViewer has the following client-side events support to listen to the control action.
 
-_Table_ _3_: _Client-Side events_
+_Table_ _3__: Client-Side events_
 
 <table>
 <tr>
-<th>
-Events</th><th>
-Description</th></tr>
+<td>
+Events</td><td>
+Description</td></tr>
 <tr>
 <td>
 destroy</td><td>
@@ -45,9 +45,11 @@ Fires when the report is loaded.</td></tr>
 </table>
 
 
-{% highlight c# %}
+
 
 [EJMVC]
+
+[CSHTML]
 
 @(
 
@@ -59,9 +61,11 @@ Fires when the report is loaded.</td></tr>
 
         )
 
-{% endhighlight %}
 
-{% highlight c# %}
+
+[JS]
+
+
 
 <script type="text/javascript">
 
@@ -113,7 +117,15 @@ Fires when the report is loaded.</td></tr>
 
 </script>
 
-{% endhighlight %}
+
+
+
+
+
+
+
+
+
 
 
 

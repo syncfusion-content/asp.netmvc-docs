@@ -13,23 +13,23 @@ This section explains briefly about how to create an OLAP Gauge in your applicat
 
 ## Create your first OLAP Gauge in MVC
 
-## Control structure
+Control structure
 
 The following screen shot shows the structure of an OLAP Gauge control.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
 
 
+Syncfusion OLAP Controls – Architecture
 
-## Syncfusion OLAP Controls – Architecture
-
-![blockdiagram](Getting-Started_images/Getting-Started_img2.png)
-
+{{ '![blockdiagram](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
 As shown in an above architecture, control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
 
-## Service for OLAP Controls
+Service for OLAP Controls
 
 The primary reasons for using service in an OLAP processing are:
 
@@ -52,41 +52,42 @@ Further operations are carried with updated OlapReports only and you can send th
 
 This process has the OlapReport always updated. You cannot operate serialized OlapReport in client-side and hence it is carried to service having its class in Syncfusion.Olap.Base assembly to perform the update operation_._
 
-## Create an application
+Create an application
 
 This section encompasses on how to configure the OLAP Gauge control in applications. You can also learn how to pass the required data to OLAP Gauge and to customize its various options according to your requirements. 
 
 In the following example, OLAP gauge is used to visualize the Revenue for Reseller over a Fiscal Year 2004 on the product category - Accessories.
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
 
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category, select the ASP.NET MVC4 Web Application template, and then click OK.
 
-![sshot-3](Getting-Started_images/Getting-Started_img4.png)
-
+{{ '![sshot-3](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
 
 Select Internet application template with razor view engine.
 
-![sshot-1](Getting-Started_images/Getting-Started_img5.png)
+{{ '![sshot-1](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
 
+Add References, Scripts, Styles and Control
 
-## Add References, Scripts, Styles and Control
-
-### Add References
+Add References
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-![sshot-2](Getting-Started_images/Getting-Started_img6.png)
+{{ '![sshot-2](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
 
 
-
-![sshot-4](Getting-Started_images/Getting-Started_img7.png)
-
+{{ '![sshot-4](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
+{:.image }
 
 
 1. Select the following assemblies: 
@@ -106,16 +107,19 @@ Syncfusion.Olap.Base.dll
 
 2. Click OK.
 
-### Adding Scripts and Styles
+Adding Scripts and Styles
 
 1. Add the script files and CSS files in the head tag of the _Layout.cshtml page.
-> Note: 1. Please follow the given order while adding scripts and styles.
+> 
+{{ '![](Getting-Started_images/Getting-Started_img8.jpeg)' | markdownify }}
+{:.image }
+_Note: 1. Please follow the given order while adding scripts and styles._
 
-> 2. Apart from cdn files rest of them can be acquired from the following location
+>    _2. Apart from cdn files rest of them can be acquired from the following location_
 
 C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -133,10 +137,10 @@ C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScrip
 
 </head>
 
-{% endhighlight %}
+
 
 2. Add the below code snippet in the body tag of the _Layout.cshtml page.
-{% highlight html %}
+
 [CSHTML]
 
 <body>
@@ -146,12 +150,11 @@ C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScrip
    @Html.EJ().ScriptManager()   
 
 </body>
-{% endhighlight  %}
 
-### Add Control in View page
+Add Control in View page
 
 Add the following code in the Index.cshtml page
-{% highlight html %}
+
 [CSHTML]  
 
 @using Syncfusion.JavaScript;
@@ -211,24 +214,23 @@ Add the following code in the Index.cshtml page
     }).Add();
 
 }).ClientSideEvents(oCli => { oCli.RenderSuccess("loadOLAPGaugeTheme"); })
-{% endhighlight %}
 
-## Add WCF service for OLAP Gauge
+Add WCF service for OLAP Gauge
 
-### Create WCF Services
+Create WCF Services
 
 1. Right-click on the project and select Add > New Folder.  Name the folder as wcf.
 2. Now right click the wcf folder created and select Add > New Item. In the Add New Item window, select WCF Service and name it OlapGaugeService.svc
 3. Click Add. 
 
-![sshot-14](Getting-Started_images/Getting-Started_img9.png)
+{{ '![sshot-14](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
+{:.image }
 
 
-
-### Add service methods inside Interface
+Add service methods inside Interface
 
 Add the following code inside the IOlapGaugeService interface available in the IOlapGaugeService.cs file.
-{% highlight html %}
+
 [C#]
 
 [ServiceContract]
@@ -240,12 +242,11 @@ Add the following code inside the IOlapGaugeService interface available in the I
         [OperationContract]
 
         Dictionary<string, object> InitializeGauge(string action,string customObject);                    }
-{% endhighlight  %}
 
-### Add Namespaces
+Add Namespaces
 
 Add the following necessary namespaces required to implement the service methods.
-{% highlight c# %}
+
 [C#]
 
 using System;
@@ -269,12 +270,11 @@ using System.Web.Script.Serialization;
 using Syncfusion.Olap.Manager;
 
 using Syncfusion.Olap.Reports;
-{% endhighlight %}
 
-### Create Class in Service file
+Create Class in Service file
 
 Create the OlapGaugeService class to implement the service methods. Inherit the class from the IOlapGaugeService interface created automatically when any new service is added.
-{% highlight c# %}
+
 [C#]
 
 namespace MvcApplication1
@@ -290,14 +290,13 @@ namespace MvcApplication1
     }
 
 }
-{% endhighlight %}
 
-### Implement Service Methods
+Implement Service Methods
 
 Add the following methods to the service invoked for any server-side operations to be performed in OlapGauge.
 
 1. Initialize the OlapGauges helper class.
-{% highlight c# %}
+
 [C#]
 
         OlapGauge htmlHelper = new OlapGauge();       
@@ -312,10 +311,10 @@ Add the following methods to the service invoked for any server-side operations 
 
 
 
-{% endhighlight %}
+
 
 2. Initialize the following relevant service methods need to be added.
-{% highlight c# %}
+
 [C#]
 
 
@@ -411,9 +410,9 @@ Add the following methods to the service invoked for any server-side operations 
         }
 
 Configure Web.Config
-{% endhighlight %}
+
 1. Register the assemblies by adding the given code inside the <system.web> tag in web_._config__file at root folder_._
-{% highlight html %}
+
 [web.config]
 
 <compilation debug="true" targetFramework="4.5">
@@ -445,9 +444,10 @@ Configure Web.Config
       </assemblies>
 
 </compilation>
-{% endhighlight  %}
 
-> Note: x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system.
+> {{ '![](Getting-Started_images/Getting-Started_img10.jpeg)' | markdownify }}
+{:.image }
+_Note: x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system._
 
 The version of Syncfusion dlls according to the .NET framework and MVC version are as follows.  For example, 12.1 version is illustrated here.
 
@@ -455,12 +455,12 @@ _Table: List of MVC versions_
 
 <table>
 <tr>
-<th>
-MVC Version</th><th>
-MVC Version of Syncfusion dlls</th><th>
-Base Version of Syncfusion dlls</th><th>
-System.Web.Mvc</th><th>
-System.Web.WebPages</th></tr>
+<td>
+MVC Version</td><td>
+MVC Version of Syncfusion dlls</td><td>
+Base Version of Syncfusion dlls</td><td>
+System.Web.Mvc</td><td>
+System.Web.WebPages</td></tr>
 <tr>
 <td>
 MVC3</td><td>
@@ -486,7 +486,7 @@ MVC5</td><td>
 
 
 1. Add the following Namespaces to the web.config files in both root folder and View folder.
-{% highlight html %}
+
 [web.config]
 
 <namespaces>
@@ -513,7 +513,7 @@ MVC5</td><td>
 
 </namespaces>
 
-{% endhighlight  %}
+
 
 2. Register the wcf services in web.config file at root folder by adding given code examples.
 4. You can expose services through the properties such as binding, contract and address etc. using an endpoint. In this application the service name is "MvcApplication1.OlapGaugeService" where "OlapGaugeService" is the service class name and “MvcApplication1" is the namespace name under which the service class appears.
@@ -526,7 +526,7 @@ binding: In this application you can use webHttpBinding to post and receive the 
 
 behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
 
-{% highlight html %}
+
 
 [web.config]
 
@@ -546,10 +546,10 @@ behaviorConfiguration: This property contains the name of the behavior to be use
 
 </system.serviceModel>
 
-{% endhighlight %}
+
 
 5. The endpointBehaviors contains all the behavior for an endpoint.  You can link each endpoint to the respective behavior only using the name property. In the following code example "MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior" refers to the OlapGaugeService class under the namespace MvcApplication1 in OlapGaugeService.svc.cs file, that is the appropriate behavior for the endpoint. 
-{% highlight html %}
+
 [web.config]
 
 <system.serviceModel>
@@ -569,12 +569,13 @@ behaviorConfiguration: This property contains the name of the behavior to be use
     </behaviors>
 
 </system.serviceModel>
-{% endhighlight  %}
 
-> Note: In this example, “MvcApplication1” indicates the name of the project and “OlapGaugeService” indicates the name of the WCF service created.
+> {{ '![](Getting-Started_images/Getting-Started_img11.jpeg)' | markdownify }}
+{:.image }
+_Note: In this example, “MvcApplication1” indicates the name of the project and “OlapGaugeService” indicates the name of the WCF service created._
 
 3. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
-{% highlight html %}
+
 [web.config]
 
 <appSettings>
@@ -590,11 +591,11 @@ behaviorConfiguration: This property contains the name of the behavior to be use
     <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
 </appSettings>
-{% endhighlight %}
+
 Configure routing file
 
 Add the following highlighted line in RouteConfig.cs file to avoid issues while picking the WCFservice methods.
-{% highlight c# %}
+
 [C#]
 
 public class RouteConfig
@@ -629,11 +630,11 @@ public class RouteConfig
 
     }
 
-{% endhighlight  %}
+
 
 This getting started tutorial give you an overview of OlapGauge, its architecture, process flow, how to configure and integrate with a VS application using a simple example.
 
-![](Getting-Started_images/Getting-Started_img12.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img12.png)' | markdownify }}
+{:.image }
 
 

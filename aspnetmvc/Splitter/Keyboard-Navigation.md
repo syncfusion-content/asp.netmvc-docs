@@ -17,9 +17,9 @@ _Table_ _1__: Keyboard Shortcuts_
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><td>
-Description</th></tr>
+<td>
+Shortcut Key</td><td>
+Description</td></tr>
 <tr>
 <td>
 Left</td><td>
@@ -68,38 +68,15 @@ The following steps explain to enable keyboard interaction for Splitter widget.
 1. In the View page add Splitter helper to render the control. 
 
 
-{% highlight html %}
-@{Html.EJ().Splitter("Splitter").Height("200").Width("500").PaneProperties(
-    p =>    {        p.Add().ContentTemplate(
-	@<div> 
-	<div style="padding: 0px 15px;">
-	<h3 class="h3">Tools </h3>
-	Essential Tools is an collection of user interface components used to create interactive
-	ASP.NET MVC applications.
-	</div> 
-	</div>);
-	p.Add().ContentTemplate(
-	@<div>
-	<div style="padding: 0px 15px;">
-	<h3 class="h3">Grid </h3>
-	Essential Mvc Grid offers full featured a Grid control with extensive support for
-	Grouping and the display of hierarchical data.
-	</div>
-	</div>);
-    }).Render();}
-{% endhighlight %}
 
-{% highlight javascript %}
-    <script type="text/javascript">
-	//Control focus key
-	$(document).on("keydown", function (e) {
-	if (e.altKey && e.keyCode === 74) { // j- key code.
-	$("#Splitter .e-splitbar")[0].focus();
-	}
-	});
-</script>
-
-{% endhighlight %}
+<table>
+<tr>
+<td>
+[CSHTML]@{Html.EJ().Splitter("Splitter").Height("200").Width("500").PaneProperties(    p =>    {        p.Add().ContentTemplate(            @<div>                 <div style="padding: 0px 15px;">                     <h3 class="h3">Tools </h3>                     Essential Tools is an collection of user interface components used to create interactive                     ASP.NET MVC applications.                 </div>            </div>);        p.Add().ContentTemplate(            @<div>                 <div style="padding: 0px 15px;">                     <h3 class="h3">Grid </h3>                     Essential Mvc Grid offers full featured a Grid control with extensive support for                     Grouping and the display of hierarchical data.                 </div>            </div>);    }).Render();}</td></tr>
+<tr>
+<td>
+[JavaScript]    <script type="text/javascript">//Control focus key        $(document).on("keydown", function (e) {            if (e.altKey && e.keyCode === 74) { // j- key code.                $("#Splitter .e-splitbar")[0].focus();            }        });    </script></td></tr>
+</table>
 
 
 
@@ -110,7 +87,7 @@ The following steps explain to enable keyboard interaction for Splitter widget.
 
 
 
-![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
-
+{{ '![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)' | markdownify }}
+{:.image }
 
 

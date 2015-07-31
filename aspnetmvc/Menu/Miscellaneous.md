@@ -7,9 +7,9 @@ control: Menu
 documentation: ug
 ---
 
-# Miscellaneous
+## Miscellaneous
 
-## Height
+Height
 
 Specifies the height of the root menu. You can customize the height of the Menu control by using Height property. 
 
@@ -17,7 +17,7 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -100,15 +100,15 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 
 
 
-{% endhighlight  %}
 
 
-## Width
+
+Width
 
 Specifies the width of the main menu. You can customize the width of the Menu control by using Width property.
 
 1. You can specify the width of the Menu control using helper as follows.
-{% highlight html %}
+
 [CSHTML]
 
 // You can specify the width of the Menu control in the CSHTML page as follows.
@@ -189,9 +189,9 @@ Specifies the width of the main menu. You can customize the width of the Menu co
 
 </div>
 
-{% endhighlight  %}
 
-## Open on click
+
+Open on click
 
 Specifies the sub menu items to be show or open only on click. It accepts the Boolean value. Its default value is false. If we set “OpenOnClick” property to true then the submenu items will open only on click. By default the submenu will open when we hover on menu items.
 
@@ -199,7 +199,7 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -279,17 +279,17 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 </div>
 
-{% endhighlight  %}
+
 
 Output screenshot for the above code example is as follows.
 
-![](Miscellaneous_images/Miscellaneous_img1.png)
+{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
+{:.image }
 
 
+_Figure_ _41__: Sub menu items to open on click_
 
-_Figure41: Sub menu items to open on click_
-
-## Animation
+Animation
 
 Animation type is used to enable or disable the Animation when hover or click on menu items. Its value type is string. It accepts two values such as “none” and “default”. Support to disable the Animation Type when hover or click on menu items is none. Support to enable the Animation Type when hover or click on menu items is default. 
 
@@ -297,7 +297,7 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -379,18 +379,18 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 
 
-{% endhighlight  %}
+
 
 
 Output screenshot for the above code sample is as follows.
 
-![](Miscellaneous_images/Miscellaneous_img2.png)
+{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
+{:.image }
 
 
+_Figure_ _42__: Animation_
 
-_Figure42: Animation_
-
-## Title text
+Title text
 
 Specifies the title to the responsive menu. You can provide title to the Menu control by using TitleText property. 
 
@@ -398,7 +398,7 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -480,19 +480,19 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 
 
-{% endhighlight  %}
+
 
 
 
 The following screenshot displays the output of the above code.
 
-![](Miscellaneous_images/Miscellaneous_img3.png)
+{{ '![](Miscellaneous_images/Miscellaneous_img3.png)' | markdownify }}
+{:.image }
 
 
+_Figure_ _43__: Title text for Responsive Layout_
 
-_Figure43: Title text for Responsive Layout_
-
-## Show root level arrows
+Show root level arrows
 
 Specifies the main menu item arrows to display only when it contains child menu items. You can use “ShowRooltLevelArrows” property to display the arrows of main menu items only when it contains child menu items. This property accepts Boolean value. Its default value is true. 
 
@@ -500,7 +500,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -582,19 +582,19 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 
 
-{% endhighlight %}
+
 
 
 
 The following screenshot displays the output of the above code.
 
-![](Miscellaneous_images/Miscellaneous_img4.png)
+{{ '![](Miscellaneous_images/Miscellaneous_img4.png)' | markdownify }}
+{:.image }
 
 
+_Figure_ _44__: Show root level arrows_
 
-_Figure44: Show root level arrows_
-
-## Show sub level arrows
+Show sub level arrows
 
 Specifies the sub menu items arrows to display only when it contains child menu items. You can use “ShowSubLevelArrows” property to show the arrows of sub menu items only when it contains child menu items. This property accepts Boolean value. Its default value is true. 
 
@@ -602,7 +602,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -683,18 +683,18 @@ Specifies the sub menu items arrows to display only when it contains child menu 
     </div>
 
 
-{% endhighlight %}
+
 
 
 
 
 The following screenshot displays the output of the above code.
 
-![](Miscellaneous_images/Miscellaneous_img5.png)
+{{ '![](Miscellaneous_images/Miscellaneous_img5.png)' | markdownify }}
+{:.image }
 
 
-
-_Figure45: Show sub level arrows_
+_Figure_ _45__: Show sub level arrows_
 
 
 

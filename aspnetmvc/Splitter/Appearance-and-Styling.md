@@ -7,13 +7,13 @@ control: Splitter
 documentation: ug
 ---
 
-# Appearance and Styling 
+## Appearance and Styling 
 
-## Responsive
+Responsive
 
 The EnableAutoResize option allows the Splitter control to adapt its rendering based on the parent container where it is actually placed. When this option is set to true, the Splitter control adjusts its height and width based on the outer container that contains it, and also the sub-elements within it adjust to its height, width and position, appropriately.
 
-### Enabling Auto Resize
+Enabling Auto Resize
 
 The following steps explain the implementation of AutoResize option in the Splitter control. 
 
@@ -21,7 +21,7 @@ The following steps explain the implementation of AutoResize option in the Split
 
 
 
-{% highlight html %}
+[CSHTML]
 
 
 
@@ -113,9 +113,9 @@ The following steps explain the implementation of AutoResize option in the Split
 
 }
 
-{% endhighlight %}
 
-{% highlight html %}
+
+[CSS]
 
 <style type="text/css">
 
@@ -146,7 +146,7 @@ The following steps explain the implementation of AutoResize option in the Split
 </style>
 
 
-{% endhighlight %}
+
 
 
 
@@ -155,17 +155,17 @@ The output for Splitter when EnableAutoResize is “True”.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
 
 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
-
-## Animation Support
+Animation Support
 
 The Splitter provides you animation support when you expand or collapse the pane. The animation speed can be modified by using the AnimationSpeed property, that has values in milliseconds.
 
@@ -177,7 +177,7 @@ The following steps explain the implementation of EnableAnimation option in the 
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @{Html.EJ().Splitter("Splitter").Height("200").Width("500").EnableAnimation(true).AnimationSpeed(300).PaneProperties(
 
@@ -221,39 +221,39 @@ The following steps explain the implementation of EnableAnimation option in the 
 
 
 
-{% endhighlight %}
+
 
 The output for Splitter when EnableAnimation is “True”. Expanding or collapsing the outer pane in the Splitter produces the animation effect with the animation speed.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 
+Adjusting Splitter Size
 
-## Adjusting Splitter Size
-
-### Height
+Height
 
 The height of Splitter can be modified by using the Height property. The default value for Height property is null in Splitter. You can set the Height property by pixel or percentage values.
 
-### Width
+Width
 
 The width of Splitter can be modified by using the Width property. The default value for Width property is null in Splitter. You can set the Width property by pixel or percentage values.
 
-### Max Size
+Max Size
 
 Defines the maximum resizable size of the pane when you resize the Splitter widget. The default value of MaxSize is null in Splitter. You can set the MaxSize property by pixel values.
 
-### Min Size
+Min Size
 
 Defines the minimum resizable size of the pane when you resize  the Splitter widget. The default value of MinSize is 10 in Splitter. You can set the MinSize property by pixel values.
 
-### Pane Size
+Pane Size
 
 Defines the pane size in the Splitter widget. The default value of PaneSize is 0px in Splitter. You can set the PaneSize property by pixel or percentage values.
 
-### Resizable
+Resizable
 
 Defines whether the pane in the Splitter is resizable or not. Setting the resizable property as “False” disables the resize option to the pane. The default value of Resizable property is true in Splitter.
 
@@ -263,7 +263,7 @@ The following steps explain the implementation of Splitter properties.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 
 
@@ -308,36 +308,36 @@ The following steps explain the implementation of Splitter properties.
     }).Render();}
 
 
-{% endhighlight %}
+
 
 
 The output for Splitter after adding the properties.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
+{:.image }
 
 
 
 
-
-![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
-
-
-
-
-
-![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
+{:.image }
 
 
 
 
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
+{:.image }
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
 
 
-## Theme
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' | markdownify }}
+{:.image }
+
+
+Theme
 
 Splitter control’s style and appearance can be controlled based on CSS classes. In order to apply styles to the Splitter control, refer 2 files namely: ej.widgets.core.min.css and ej.theme.min.css. If the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -356,7 +356,7 @@ By default, there are 12 themes support available for Autocomplete control namel
 * gradient-saffron
 * gradient-saffron-dark
 
-## CSS Class
+CSS Class
 
 The CSS properties can be customized by using CssClass in the Splitter widget. The following steps explain the implementation of CssClass option in the Splitter widget.
 
@@ -366,7 +366,7 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
 
 
 
-{% highlight html %}
+[CSHTML]
 
 @{Html.EJ().Splitter("Splitter").Height("200").Width("500").CssClass("customCSS").PaneProperties(
 
@@ -409,14 +409,14 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
     }).Render();}
 
 
-{% endhighlight %}
+
 
 
 1. Customize the CSS class by setting CSS properties. 
 
 
 
-{% highlight html %}
+[CSS]
 
 
 
@@ -453,14 +453,14 @@ The CSS properties can be customized by using CssClass in the Splitter widget. T
     </style>
 
 
-{% endhighlight %}
+
 
 
 The output for Splitter after customizing the CSS class.
 
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)' | markdownify }}
+{:.image }
 
 

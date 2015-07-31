@@ -7,7 +7,7 @@ control: DatePicker
 documentation: ug
 ---
 
-## Localization
+# Localization
 
 Localization is language support based on the culture in DatePicker. You can achieve the Localization using “Locale” property in DatePicker.
 
@@ -28,20 +28,17 @@ The following steps explain you how to get the Localization.
 1. In the CSHTML page, add the following code to render the DatePicker widget with localization.
 
 
-
-[CSHTML]
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized localization*@
 
 @Html.EJ().DatePicker("datePicker").Locale("vi-VN").ButtonText("Hôm nay")
 
-
+{% endhighlight %}
 
 2.  The following screenshot displays the output for the above code.
 
 
 
-{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
-{:.image }
-
+![](Localization_images/Localization_img1.png)
 

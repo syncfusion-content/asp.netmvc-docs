@@ -7,13 +7,15 @@ control: UploadBox
 documentation: ug
 ---
 
-# Restricting uploading files based on its extension
+## Restricting uploading files based on its extension
 
-### Allow Extension
+Allow Extension
 
 Files are filtered before they are uploaded. You can select the files to be filtered by using browse button. The ExtensionsAllow property allows upload of the selected extensions only. You can give multiple extensions by using comma (,).  The data type is string.
 
-Note: Prepend dot (.) symbol with extension like “.pdf”.
+{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](Restricting-uploading-files-based-on-its-extension_images/Restricting-uploading-files-based-on-its-extension_img1.jpeg)' | markdownify }}
+{:.image }
+_Note: Prepend dot (.) symbol with extension like “.pdf”._
 
 
 
@@ -23,19 +25,22 @@ The following steps explain the configuration of ExtensionsAllow property in Upl
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").ExtensionsAllow(".docx,.pdf")
 
-{% endhighlight %}
 
-### Deny Extension
+
+Deny Extension
 
 Files are filtered before they are uploaded. You can select the files to be filtered by using browse button. The ExtensionsDeny property denies upload of the selected extensions. You can give multiple extensions by using comma (,).  The data type is string.
 
-Note: Prepend dot (.) symbol with extension like “.pdf”.
+{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](Restricting-uploading-files-based-on-its-extension_images/Restricting-uploading-files-based-on-its-extension_img2.jpeg)' | markdownify }}
+{:.image }
+_Note: Prepend dot (.) symbol with extension like “.pdf”._
+
 
 
 The following steps explain the configuration of ExtensionsDeny property in UploadBox
@@ -46,11 +51,11 @@ The following steps explain the configuration of ExtensionsDeny property in Uplo
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the CSHTML page, add UploadBox ox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").ExtensionsDeny(".docx,.pdf")
 
-{% endhighlight %}
+
 

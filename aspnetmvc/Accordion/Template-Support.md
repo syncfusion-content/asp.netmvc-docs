@@ -7,13 +7,12 @@ control: Accordion
 documentation: ug
 ---
 
-# Template Support
+## Template Support
 
 The Content template option provided in MVC is used to specify the HTML elements inside the Accordion control. You can use this option to load any HTML elements and display it in the Accordion panels as per your requirement.
 
 The following code example explains how to use content template option in the Accordion control.
 
-{% highlight html %}
 [CSHTML]
 
 
@@ -92,13 +91,14 @@ The following code example explains how to use content template option in the Ac
 
 </div>
 
-{% endhighlight %}
+
 
 
 
 Output:
 
-![](Template-Support_images/Template-Support_img1.png)
+{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
+{:.image }
 
 
 

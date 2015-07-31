@@ -7,7 +7,7 @@ control: DateTimePicker
 documentation: ug
 ---
 
-# Localization
+## Localization
 
 You can globalize your DateTimePicker control. People of different culture can make use of it. All culture files are supported by Syncfusion components
 
@@ -16,7 +16,7 @@ Globalize.js is a simple JavaScript library that allows you to format and parse 
 [http://cdnjs.com/libraries/globalize/](http://cdnjs.com/libraries/globalize/)
 
 You can get the script file of various cultures from the following path also:
-"&lt;Installed Location&gt;\Syncfusion\Essential Studio\<version>\JavaScript\assets\external\cultures"
+"<Installed Location>\Syncfusion\Essential Studio\<version>\JavaScript\assets\external\cultures"
 
 If you want to use any cultures, add the script files of those corresponding culture in the sample. In order to add UK Culture in the DateTimePicker you can refer a script file named "globalize.culture.es-ES.js". 
 
@@ -25,37 +25,35 @@ You can also customize the culture to your own, using the following steps.
 1. Open the Culture script file, included in your project.
 2. Replace existing calendar locale information by your own culture information or to your customized format.
 
-   Refer this section for more details: [localization](http://help.syncfusion.com/ug/js/default.htm)
+Refer this section for more details: [localization](http://help.syncfusion.com/ug/js/default.htm)
 
-   For example, if you want to change month names to your culture month just replace month names with your culture month names or your customized format.
+For example, if you want to change month names to your culture month just replace month names with your culture month names or your customized format.
 
-   The following code snippet is used to know Spanish calendar locale information.
+The following code snippet is used to know Spanish calendar locale information.
 
-   ~~~ html
-        
-		calendars: {
+calendars: {
 
               standard: {
 
                   firstDay: 1,
 
-		days: {
+days: {
 
-			   names: ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+names: ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
 
-			   namesAbbr: ["do.","lu.","ma.","mi.","ju.","vi.","sá."],
+namesAbbr: ["do.","lu.","ma.","mi.","ju.","vi.","sá."],
 
-			   namesShort: ["D","L","M","X","J","V","S"]
+namesShort: ["D","L","M","X","J","V","S"]
 
-              },
+                  },
 
-		months: {
+months: {
 
-			   names: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],
+names: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],
 
-			   namesAbbr: ["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""]
+namesAbbr: ["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""]
 
-                },
+                  },
 
                   AM: null,
 
@@ -81,34 +79,33 @@ You can also customize the culture to your own, using the following steps.
 
                       Y: "MMMM' de 'yyyy"
 
-                              }
+                  }
 
-                        }
+              }
 
-                    }
-     
+      }
 
-   ~~~
-   {:.prettyprint }
-   
-   The following code example can be used to get Spanish culture in DateTimePicker.
+
+
+
+
+The following code example can be used to get Spanish culture in DateTimePicker.
 
 3. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
-   
-     [_cshtml]
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized localization*@
 
-		@Html.EJ().DateTimePicker("DateTime").Locale("es-ES").Width("175px")
 
-   ~~~
-   {:.prettyprint }
-   
+[_cshtml]    
+
+@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized localization*@
+
+@Html.EJ().DateTimePicker("DateTime").Locale("es-ES").Width("175px")
+
+
+
 4. The following screenshot displays the output for the above code.
 
-	![](Localization_images/Localization_img1.png)
-
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
+{:.image }
 
 

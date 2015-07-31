@@ -7,22 +7,22 @@ control: ColorPicker
 documentation: ug
 ---
 
-# Appearance and Styling
+## Appearance and Styling
 
-## modelType
+modelType
 
 The ColorPicker allows you to define the model type to be displayed in control at initial time by using the property _ModelType_. 
 
 The ModelType property is Enum type and its default value is default.
 
-_Table3: List of modelType_
+_Table_ _3__: List of modelType_
 
 <table>
 <tr>
-<th>
-ModelType</th><th>
-Syntax</th><th>
-Description</th></tr>
+<td>
+ModelType</td><td>
+Syntax</td><td>
+Description</td></tr>
 <tr>
 <td>
 Default</td><td>
@@ -45,7 +45,7 @@ In the following code example, the ColorPicker popup model type is set as Palett
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -53,27 +53,27 @@ In the following code example, the ColorPicker popup model type is set as Palett
 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").ModelType(ModelType.Palette)
 
-{% endhighlight %}
+
 
 The following screenshot displays the output of the above code example.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## Palette
+Palette
 
 The ColorPicker allow you to define the palette type to be displayed in control at initial time by using the Palette property. The Palette property is Enum type and its default value is BasicPalette.
 
-_Table4: List of palette_
+_Table_ _4__: List of palette_
 
 <table>
 <tr>
-<th>
-Palette</th><th>
-Syntax</th><th>
-Description</th><th>
-Dependent Property</th></tr>
+<td>
+Palette</td><td>
+Syntax</td><td>
+Description</td><td>
+Dependent Property</td></tr>
 <tr>
 <td>
 BasicPalette</td><td>
@@ -86,25 +86,24 @@ CustomPalette</td><td>
 Palette(PaletteType.CustomPalette)</td><td>
 The palette model renders with the specified custom color values.</td></tr>
 </table>
-
-## BasicPalette
+BasicPalette
 
 The BasicPalette type renders with predefined color values. The BasicPalette model has 12 different preset patterns. Each pattern consists of 50 colors and over 600 colors are available by default. 
 
-## PresetType
+PresetType
 
 The ColorPicker control allows you to define the preset model to be rendered initially in palette type. This can be achieved by using the “PresetType” property. Totally 12 types of presets are available.
 
 The PresetType property is Enum type and its default value is “Basic”.
 
-_Table5: Property Table_
+_Table_ _5__: Property Table_
 
 <table>
 <tr>
-<th>
-PresetType</th><th>
-Syntax</th><th>
-Dependent Property</th></tr>
+<td>
+PresetType</td><td>
+Syntax</td><td>
+Dependent Property</td></tr>
 <tr>
 <td>
 Basic</td><td>
@@ -159,7 +158,7 @@ PresetType(PresetsType.CandyCrush)</td></tr>
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -167,15 +166,15 @@ PresetType(PresetsType.CandyCrush)</td></tr>
 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").ModelType(ModelType.Palette).PresetType(PresetsType.FlatColors)
 
-{% endhighlight  %}
+
 
 The following screenshot displays the output of the above code example.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## CustomPalette
+CustomPalette
 
 The ColorPicker control allows you to define the custom colors in the palette model by using Palette property. Custom palettes are created by passing a comma delimited string of HEX values or an array of colors in Custom property. The CustomPalette model is only applicable when you set ModelType as Palette.
 
@@ -183,7 +182,7 @@ The CustomPalette property is a dependent property of Palette and ModelType prop
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -196,14 +195,14 @@ The CustomPalette property is a dependent property of Palette and ModelType prop
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").ModelType(ModelType.Palette).Palette(PaletteType.CustomPalette).Custom(colors)
 
 
-{% endhighlight %}
+
 The following screenshot displays the output of the above code example.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## DisplayInline
+DisplayInline
 
 The ColorPicker control allows you to embed the popup in the order of DOM element flow by using the DisplayInline property. Using DisplayInline property to make ColorPicker popup always in visible state. Also associate ColorPicker with <div> element instead of input. 
 
@@ -214,7 +213,7 @@ The following steps explain you how to get the ColorPicker popup in DisplayInlin
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight html %}
+
 [CSHTML]
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
@@ -222,14 +221,14 @@ The following steps explain you how to get the ColorPicker popup in DisplayInlin
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").DisplayInline(true).TagName("div")
 
 
-{% endhighlight %}
+
 The following screenshot displays the output of the above code example.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)' | markdownify }}
+{:.image }
 
 
-
-## Theme Support
+Theme Support
 
 The ColorPicker control supports rich appearance. It supports 12 different themes of Essential ASP.NET MVC and bootstrap themes. To use these twelve themes, refer the themes files in HTML page. 
 
@@ -237,7 +236,7 @@ You require two style sheets to apply styles to ColorPicker control; one ej.widg
 
 The core style sheet applies styles related to positioning and size, but are not related to the color scheme and always require the control to look correct and function properly. The theme style sheet applies theme-specific styles like colors and backgrounds.
 
-## The following list is the twelve themes supported by ColorPicker:
+The following list is the twelve themes supported by ColorPicker:
 
 * default-theme
 * flat-azure-dark
@@ -256,7 +255,7 @@ The core style sheet applies styles related to positioning and size, but are not
 
 1. In the CSHTML page, configure the ColorPicker widget with built in theme support.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -294,33 +293,33 @@ The core style sheet applies styles related to positioning and size, but are not
 
 </html>
 
-{% endhighlight  %}
+
 
 The following screenshot displays the output of the above code example.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)' | markdownify }}
+{:.image }
 
 
-
-## CustomCss
+CustomCss
 
 The ColorPicker control also allows you to customize its appearance using user-defined CSS and custom skin options such as colors and backgrounds. To apply custom themes use the CssClass property. CssClass property sets the root class for ColorPicker theme.
 
 Using this property you can override the existing styles under the theme style sheet. The theme style sheet applies theme-specific styles like colors and backgrounds. In the following example, the value of CssClass property is set as Light-Blue. Light-Blue is added as root class to ColorPicker control at the runtime. From this root class you can customize the ColorPicker control theme.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
-{% highlight html %}
+
 [CSHTML]
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").CssClass("Light-Blue")
 
-{% endhighlight %}
+
 
 2. Custom Css Styles.
 
-{% highlight css %}
+
 
 <style>
 
@@ -341,10 +340,10 @@ Using this property you can override the existing styles under the theme style s
 </style>
 
 
-{% endhighlight  %}
+
 The following screenshot displays the output of above steps.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
-
+{{ '![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)' | markdownify }}
+{:.image }
 
 

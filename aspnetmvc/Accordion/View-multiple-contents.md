@@ -7,16 +7,16 @@ control: Accordion
 documentation: ug
 ---
 
-# View multiple contents
+## View multiple contents
 
 By default Accordion allows only one panel to be in expanded state. You can enable multiple panels in expand state by setting EnableMultipleOpen to true.
 
-## Enabling multiple panel open
+Enabling multiple panel open
 
 The following code explains you to enable multiple panel for Accordion.
 
 
-{% highlight html %}
+
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and set EnableMultipleOpen property as true.
@@ -49,12 +49,13 @@ The following code explains you to enable multiple panel for Accordion.
 
 </div>
 
-{% endhighlight %}
+
 
 Following screenshot is the output for Accordion control on EnableMultipleOpen set to true.
 
 
-![](View-multiple-contents_images/View-multiple-contents_img1.png)
+{{ '![](View-multiple-contents_images/View-multiple-contents_img1.png)' | markdownify }}
+{:.image }
 
 
 

@@ -7,11 +7,11 @@ control: DataManager
 documentation: ug
 ---
 
-# Filtering
+## Filtering
 
 Filtering is a basic technique in the DataManager query. The where query is used to filter some particular or related records from the data source to review details of records. 
 
-## Filter Operators
+Filter Operators
 
 Filter operators are generally used to specify the filter type. The various filter operators corresponding to the type of the column are listed in the following table.
 
@@ -19,9 +19,9 @@ _Filter Operators_
 
 <table>
 <tr>
-<th>
-Column type</th><th>
-Filter operators</th></tr>
+<td>
+Column type</td><td>
+Filter operators</td></tr>
 <tr>
 <td>
 Number</td><td>
@@ -41,31 +41,37 @@ ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOper
 </table>
 
 
-## lessThan
+lessThan
 
 This operator is used to get the records with values lesser than the filter value.
-{% highlight html %}
 
+<table>
+<tr>
+<td>
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'lessThan', 10252, false)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)</td><td>
+</td></tr>
+</table>
 
-{% endhighlight  %}
 
 Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img1.png)
+{{ '![](Filtering_images/Filtering_img1.png)' | markdownify }}
+{:.image }
 
 
-
-## greaterThan
+greaterThan
 
 This operator is used to get the records with values greater than that of the filter value.
-{% highlight html %}
 
+<table>
+<tr>
+<td>
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'greaterThan', 10252, false).take(5)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)</td><td>
+</td></tr>
+</table>
 
-{% endhighlight %}
 
 
 
@@ -73,31 +79,34 @@ Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img2.png)
+{{ '![](Filtering_images/Filtering_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## lessThanOrEqual
+lessThanOrEqual
 
 This operator is used to get the records with values lesser than or equal to the filter value.
-{% highlight html %}
 
+<table>
+<tr>
+<td>
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'lessThanOrEqual', 10252, false)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)</td><td>
+</td></tr>
+</table>
 
 
-{% endhighlight  %}
 Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img3.png)
+{{ '![](Filtering_images/Filtering_img3.png)' | markdownify }}
+{:.image }
 
 
-
-## greaterThanOrEqual
+greaterThanOrEqual
 
 This operator is used to get the records with values greater than or equal to the filter value.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -131,19 +140,19 @@ This operator is used to get the records with values greater than or equal to th
 )
 
 
-{% endhighlight %}
+
 
 
 Result of the above code example is illustrated as follows.
 
-![](Filtering_images/Filtering_img4.png)
+{{ '![](Filtering_images/Filtering_img4.png)' | markdownify }}
+{:.image }
 
 
-
-## equal
+equal
 
 This operator is used to get the records with values equal to that of the filter value.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -176,20 +185,20 @@ This operator is used to get the records with values equal to that of the filter
 
 )
 
-{% endhighlight %}
+
 
 
 
 Result of the above code example is illustrated as follows.
 
-![](Filtering_images/Filtering_img5.png)
+{{ '![](Filtering_images/Filtering_img5.png)' | markdownify }}
+{:.image }
 
 
-
-## notEqual
+notEqual
 
 This operator is used to get the records with values not equal to that of the filter value specified.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -222,7 +231,7 @@ This operator is used to get the records with values not equal to that of the fi
 
 )
 
-{% endhighlight %}
+
 
 
 
@@ -230,15 +239,15 @@ Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img6.png)
+{{ '![](Filtering_images/Filtering_img6.png)' | markdownify }}
+{:.image }
 
 
-
-## contains
+contains
 
 This operator is used to get the records that contains the filter value.
 
-{% highlight html %}
+
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
@@ -273,21 +282,21 @@ This operator is used to get the records that contains the filter value.
 )
 
 
-{% endhighlight  %}
+
 
 
 Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img7.png)
+{{ '![](Filtering_images/Filtering_img7.png)' | markdownify }}
+{:.image }
 
 
-
-## startswith
+startswith
 
 This operator is used to get the records that starts with the filter value specified.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -320,20 +329,20 @@ This operator is used to get the records that starts with the filter value speci
 
 )
 
-{% endhighlight  %}
+
 
 
 
 Result of the above code example is illustrated as follows.
 
-![](Filtering_images/Filtering_img8.png)
+{{ '![](Filtering_images/Filtering_img8.png)' | markdownify }}
+{:.image }
 
 
-
-## endswith
+endswith
 
 This operator is used to get the records that ends with the filter value specified.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -366,24 +375,24 @@ This operator is used to get the records that ends with the filter value specifi
 
 )
 
-{% endhighlight  %}
+
 
 
 
 Result of the above code example is illustrated as follows.
 
-![](Filtering_images/Filtering_img9.png)
+{{ '![](Filtering_images/Filtering_img9.png)' | markdownify }}
+{:.image }
 
 
-
-## Predicate
+Predicate
 
 and predicate
 
 The and predicate is used to add n-number of predicates with and condition and filter the data.
 
 
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -418,18 +427,18 @@ The and predicate is used to add n-number of predicates with and condition and f
 
 
 
-{% endhighlight %}
+
 
 Result of the above code example is illustrated as follows.
 
-![](Filtering_images/Filtering_img10.png)
-
+{{ '![](Filtering_images/Filtering_img10.png)' | markdownify }}
+{:.image }
 
 
 or predicate
 
 By using this method, you can add n-number of predicates with or condition and filter the data.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -463,14 +472,14 @@ By using this method, you can add n-number of predicates with or condition and f
 )
 
 
-{% endhighlight  %}
+
 
 
 Result of the above code example is illustrated as follows.
 
 
 
-![](Filtering_images/Filtering_img11.png)
-
+{{ '![](Filtering_images/Filtering_img11.png)' | markdownify }}
+{:.image }
 
 

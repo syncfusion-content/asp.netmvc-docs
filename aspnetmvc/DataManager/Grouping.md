@@ -7,10 +7,10 @@ control: DataManager
 documentation: ug
 ---
 
-# Grouping
+## Grouping
 
 Grouping technique is also supported in the DataManager. When you want to analyse any particular record based on its category, simply you can group that column and analyze the records based on category. The following code example illustrates the grouping behavior in table.
-{% highlight html %}
+
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -40,12 +40,12 @@ Grouping technique is also supported in the DataManager. When you want to analys
         })
 
 )
-{% endhighlight %}
+
 
 
 Result of the above code example is illustrated as follows.
 
-![](Grouping_images/Grouping_img1.png)
-
+{{ '![](Grouping_images/Grouping_img1.png)' | markdownify }}
+{:.image }
 
 

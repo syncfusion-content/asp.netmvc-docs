@@ -7,15 +7,15 @@ control: Button
 documentation: ug
 ---
 
-# Easy Customization
+## Easy Customization
 
 Button is used in all applications. Button size, content and content location is varied according to each application. Here you can see some customizable option for button that can perform easily. 
 
-## Button Size
+Button Size
 
 You can render the button in different sizes. Here, you have some predefined size options for rendering a button with different sizes in easiest way. Each size option has different height and width. Mainly it avoids the complexity in rendering button with complex CSS class. 
 
-_Table1: List of predefined button size_
+_Table_ _1__: List of predefined button size_
 
 <table>
 <tr>
@@ -45,7 +45,7 @@ The following steps explains you the details about rendering the button with dif
 
 1. In the CSHTML page, configure the button widget as follows.
 
-{% highlight html %}
+
 [CSHTML]
 
 @*Add the code in CSHTML page to configure and initialize the control*@
@@ -82,20 +82,21 @@ The following steps explains you the details about rendering the button with dif
 
     </div>
 
-{% endhighlight  %}
+
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
+{{ '![](Easy-Customization_images/Easy-Customization_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 5: Button with different sizes_
 
-### Content Type
+Content Type
 
 The content of the Button is mainly text and images. Instead of using complex CSS classes to render Button with different content types, you can use some predefined content type options provided for button control. Using this content types you can easily add different types of content for button. Button supports the following content types.
 
-_Table2: List of content types for button_
+_Table_ _2__: List of content types for button_
 
 <table>
 <tr>
@@ -119,8 +120,7 @@ Supports image with the text content.</td></tr>
 ImageTextImage</td><td>
 Supports image with both ends and middle in text.</td></tr>
 </table>
-
-### Prefix and Suffix icons
+Prefix and Suffix icons
 
 Icons inside the Button is added easily using PrefixIcon and SuffixIcon property. Location of the icon in button is a necessary thing and you can easily customize it using the following mentioned options.
 
@@ -144,11 +144,11 @@ e-mediapause
 
 e-mediaplay
 
-### Prefix Icon
+Prefix Icon
 
 It inserts the icon at the starting position of button. After this prefix icon, you can use text or suffix icon.
 
-### Suffix Icon
+Suffix Icon
 
 It inserts the icon at the ending position of button. Before this suffix icon, you can use text or prefix icon.
 
@@ -156,7 +156,7 @@ The following steps explains you the details about rendering the Button with abo
 
 1. In the CSHTML page, configure the Button widget as follows.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -216,21 +216,21 @@ The following steps explains you the details about rendering the Button with abo
 
         </div>
 
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img2.png)
-
+{{ '![](Easy-Customization_images/Easy-Customization_img2.png)' | markdownify }}
+{:.image }
 
 
 _Figure 6: Button with different content types_
 
-### Image Position
+Image Position
 
 To provide the best look and feel for Button, position of button images is an important customizable option. With ImagePosition property you can easily customize the position of images inside button without using any complex CSS. ImagePosition property is applicable only with the TextAndImageContentType property. This property supports the following values.
 
-_Table3: List of values supported by ContentType property_
+_Table_ _3__: List of values supported by ContentType property_
 
 <table>
 <tr>
@@ -257,7 +257,7 @@ The following steps explains you the details about rendering the Button with the
 2. In the CSHTML page, configure the Button widget as follows.
 
 
-{% highlight html %}
+
 [CSHTML]
 
 @*Add the code in CSHTML page to configure and initialize the control*@
@@ -323,18 +323,18 @@ The following steps explains you the details about rendering the Button with the
 
 
     </div>
-{% endhighlight  %}
+
 
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img3.png)
-
+{{ '![](Easy-Customization_images/Easy-Customization_img3.png)' | markdownify }}
+{:.image }
 
 
 _Figure 7: Button with different image positions_
 
-### Theme support
+Theme support
 
 You can control the style and appearance of Button control based on CSS classes. In order to apply styles to the Button control, you can refer two files namely, ej.widgets.core.min.css and ej.theme.min.css. When you refer the ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
@@ -353,7 +353,7 @@ By default, there are 12 themes support available for Button control.
 * gradient-saffron
 * gradient-saffron-dark
 
-### Custom CSS
+Custom CSS
 
 You can customize the appearance of Button control using CSS class. Define a CSS class as per requirement and assign the class name to CssClass property.
 
@@ -361,7 +361,7 @@ The following steps explains you the details about rendering the Button with cus
 
 3. In the CSHTML page, configure the Button widget as follows.
 
-{% highlight html %}
+
 
 [CSHTML]
 
@@ -397,11 +397,11 @@ The following steps explains you the details about rendering the Button with cus
 
     </div>
 
-{% endhighlight %}
+
 
 4. Configure the CSS styles to apply on buttons.
 
-{% highlight css %}
+
 
 [CSS]
 
@@ -466,12 +466,12 @@ The following steps explains you the details about rendering the Button with cus
         }
 
     </style>
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
-
+{{ '![](Easy-Customization_images/Easy-Customization_img4.png)' | markdownify }}
+{:.image }
 
 
 _Figure 8: Button with Custom CSS_

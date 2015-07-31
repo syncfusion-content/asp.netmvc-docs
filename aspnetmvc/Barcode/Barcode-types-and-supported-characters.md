@@ -7,7 +7,7 @@ control: Barcode
 documentation: ug
 ---
 
-# Barcode types and supported characters
+## Barcode types and supported characters
 
 The following table contains the supported types and associated valid characters.
 
@@ -15,11 +15,11 @@ _Table_ _1_: Table of Barcode types and supported character_
 
 <table>
 <tr>
-<th>
-Symbol</th><th>
-Enum Value</th><th>
-Supported characters</th><th>
-Length</th></tr>
+<td>
+Symbol</td><td>
+Enum Value</td><td>
+Supported characters</td><td>
+Length</td></tr>
 <tr>
 <td>
 QR Barcode</td><td>

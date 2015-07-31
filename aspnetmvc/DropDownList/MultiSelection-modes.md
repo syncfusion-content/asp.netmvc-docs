@@ -7,11 +7,11 @@ control: DropDownList
 documentation: ug
 ---
 
-# MultiSelection modes
+## MultiSelection modes
 
 Dropdownlist widget allows you to select multiple values from the suggestion list using AllowMultiSelection property. You can select multiple values by setting AllowMultiSelection value to true.
 
-## Configuring MultiSelection Mode
+Configuring MultiSelection Mode
 
 The following code explain you the configuration of the AllowMultiSelection for a Dropdownlist textbox.
 
@@ -21,7 +21,7 @@ The following code explain you the configuration of the AllowMultiSelection for 
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -49,13 +49,13 @@ The following code explain you the configuration of the AllowMultiSelection for 
 
 </div>
 
-{% endhighlight %}
+
 
 Output for Dropdown control that provides multiple selection is as follows.
 
 
-![](MultiSelection-modes_images/MultiSelection-modes_img1.png)
-
+{{ '![](MultiSelection-modes_images/MultiSelection-modes_img1.png)' | markdownify }}
+{:.image }
 
 
 _Figure 18: Dropdown with_ AllowMultiSelection _property_ 

@@ -7,7 +7,7 @@ control: Scroller
 documentation: ug
 ---
 
-# RTL
+## RTL
 
 EnableRTL API provides right-to-left functionality and features for languages that work in a right-to-left for selecting, editing. Arabic and Hebrew are written from right to left. If you have a working style from right to left, you can use this feature in scroller. You can achieve this in your Scroller by using EnableRTL property. Setting this property to true, the Scroller content text is displayed in the right to left format. The vertical scrollbar move to right to left side.
 
@@ -15,15 +15,23 @@ The following steps explains you the configuration of EnableRTL property in Scro
 
 In the View page, add a scroller helper to configure Scroller widget.
 
-{% highlight html %}
+
+
+
+
+[CSHTML]
 
 // In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
+
+
+
+
 <div id="scrollcontent">
 
-  <div>  @*Wrapper div for Scroller.*@
+  <div>                              @*Wrapper div for Scroller.*@
 
-     <div id="innercontent"> @*Content div*@
+     <div id="innercontent">         @*Content div*@
 
         <h3>MVC </h3>
 
@@ -47,12 +55,21 @@ In the View page, add a scroller helper to configure Scroller widget.
 
 </div>
 
+
+
 @{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableRTL(true).Render();}
 
-{% endhighlight %}
+
+
+
 
 The following screenshot displays the Scroller control in RTL direction.
 
-![](RTL_images/RTL_img1.png)
+{{ '![](RTL_images/RTL_img1.png)' | markdownify }}
+{:.image }
 
-_Figure_ _8_: _Scroller control in RTL direction_
+
+_Figure_ _8__: Scroller control in RTL direction_
+
+
+

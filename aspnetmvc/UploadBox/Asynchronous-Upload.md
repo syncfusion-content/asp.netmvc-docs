@@ -7,7 +7,7 @@ control: UploadBox
 documentation: ug
 ---
 
-# Asynchronous Upload
+## Asynchronous Upload
 
 The AsyncUpload property is Boolean type, which allow us to upload and remove files asynchronously. To achieve this, set the AsyncUpload property to ‘true’. The default value of AsyncUpload property is ‘true’.
 
@@ -19,12 +19,11 @@ The following steps guide you in uploading the file asynchronously.
 
 
 
-{% highlight html %}
+[CSHTML]
 
 // In the view page, add the UploadBox element.
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AsyncUpload(true)
 
-{% endhighlight %}
 
 

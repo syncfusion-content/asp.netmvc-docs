@@ -15,67 +15,72 @@ This section explains briefly about how to create a Scroller in your ASP.NET MVC
 
 ASP.NET MVCScroller control allows you to slide document whose position corresponds to a value. The document has text, HTML content or images. Refer the following guidelines to create a Scroller control for horizontal and vertical Scrolling.
 
-### Add Scroller Control to your MVC Application
+Add Scroller Control to your MVC Application
 
 Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize the resizing and changing the Scrollbar theme.
 
 1. Create an MVC Project and add required assemblies, scripts, and styles to it. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page to render the Scroller. 
 
-   ~~~ html
 
-		<div id="scrollcontent">
 
-			<div> @* Wrapper div for Scroller.*@
+<div id="scrollcontent">
 
-				<div class="innercontent"> @* Content div*@
+        <div> @* Wrapper div for Scroller.*@
 
-					<h3> MVC </h3>
+            <div class="innercontent"> @* Content div*@
 
-					<p>
+                <h3> MVC </h3>
 
-						Model–view–controller (MVC) is a software architecture pattern which   
+                <p>
 
-						separates the representation of information from the user's interaction 
+                 Model–view–controller (MVC) is a software architecture pattern which   
 
-						with it. The model consists of application data, business rules, logic, and 
+                 separates the representation of information from the user's interaction 
 
-						functions. A view can be any output representation of data, such as a chart 
+                 with it. The model consists of application data, business rules, logic, and 
 
-						or a diagram. 
+                 functions. A view can be any output representation of data, such as a chart 
 
-					</p>
+                 or a diagram. 
 
-				</div>
+                </p>
 
-			</div>
+</div>
 
-		</div>  
+</div>
 
-		@{ Html.EJ().Scroller("scrollcontent").Height(150).Width(300).Render(); }
+</div>   
 
-   ~~~
-   {:.prettyprint }
-   
+
+
+    @{ Html.EJ().Scroller("scrollcontent").Height(150).Width(300).Render(); }
+
+
+
+
+
 3. Add the following style in the view page to set the height and width of the Scroller.
 
-   ~~~ html
 
-		<style type="text/css" class="cssStyles">
 
-			.innercontent{
+<style type="text/css" class="cssStyles">
 
-			width: 400px;
+    .innercontent{
 
-			padding:15px;
+        width: 400px;
 
-			}
+        padding:15px;
 
-		</style>
-		
-   ~~~
-   {:.prettyprint }
+    }
+
+</style>
 
 4. Execute the above example code to get the following output. 
 
-	![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
+
+
+
+

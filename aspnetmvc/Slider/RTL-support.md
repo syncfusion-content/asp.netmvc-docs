@@ -7,11 +7,11 @@ control: Slider
 documentation: ug
 ---
 
-# RTL support
+## RTL support
 
 Slider includes the Right to Left alignment support. Operations in the Slider is performed from Right to Left.
 
-## Enabling RTL
+Enabling RTL
 
 Use the EnableRTL property to enable the RTL support. By default this property is disabled. Data type of this property is “Boolean”.
 
@@ -21,7 +21,7 @@ The following steps explains you on how to enable RTL support in Slider.
 
 
 
-{% highlight html %}
+[_cshtml]
 
 / / Add this code in your view page
 
@@ -30,13 +30,13 @@ The following steps explains you on how to enable RTL support in Slider.
     .Width("500").EnableRTL(true))
 
 
-{% endhighlight %}
+
 
 
 Execute the above code example to render the following output.
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/s3.PNG](RTL-support_images/RTL-support_img1.png)
-
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/s3.PNG](RTL-support_images/RTL-support_img1.png)' | markdownify }}
+{:.image }
 
 

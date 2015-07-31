@@ -16,13 +16,13 @@ Localization String for Schedule control
 
 * The following table contains the Key values and its corresponding localized String values for en-US culture. Therefore, to apply your localization/culture to the schedule control, change the “value (string value)” against the “each Key”.
 
-_Table_ _2_: List of keys and string values
+_Table_ _2__: List of keys and string values_
 
 <table>
 <tr>
-<th>
-    Key</th><th>
-   Value</th></tr>
+<td>
+    Key</td><td>
+   Value</td></tr>
 <tr>
 <td>
     ReminderWindowTitle</td><td>
@@ -354,7 +354,7 @@ _Table_ _2_: List of keys and string values
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -585,13 +585,22 @@ $("#Schedule1").ejSchedule({ locale: args.text });
 </script>
 
 
-{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
 
 Important: An important note while making use of localization in the schedule control, it is necessary to refer the required culture script file (globalize.culture.xx-XX.min.js) in the script reference section of the sample as follows.
 
 
 
-{% highlight html %}
+[Razor]
 
 
 
@@ -607,19 +616,19 @@ Important: An important note while making use of localization in the schedule co
 
 }
 
-{% endhighlight %}
+
 
 * Once the fr-Fr culture is set to the Schedule control, the Schedule control with localization applied is displayed as follows.
 
 
 
-![](Localization_images/Localization_img1.png)
-
+{{ '![](Localization_images/Localization_img1.png)' | markdownify }}
+{:.image }
 
 
   _Figure_ _104__:  schedule with localization._
 
-## RTL
+RTL
 
 * The enableRTL option allows the schedule control to display it in the right to left direction. By default, this option is set to ‘false’ in the Schedule control.
 
@@ -627,7 +636,9 @@ The following code example explains how to enable the rtl property of the Schedu
 
 
 
-{% highlight html %}
+[Razor]
+
+
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -659,14 +670,13 @@ fields.Datasource( ViewBag.datasource)
 
 )
 
-{% endhighlight %}
 
 
 * When the rtl is set to ‘true’, the Schedule control is displayed as follows.
 
-![](Localization_images/Localization_img2.png)
+{{ '![](Localization_images/Localization_img2.png)' | markdownify }}
+{:.image }
 
 
-
-   _Figure_ _105_:  schedule with RTL.
+   _Figure_ _105__:  schedule with RTL._
 

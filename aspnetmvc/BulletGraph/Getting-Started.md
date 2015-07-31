@@ -19,49 +19,67 @@ In the following screenshot, a BulletGraph is used to compare the actual monsoon
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
+{:.image }
+
+
+
 
 1. Create a <div> tag.
-	
-   ~~~ html
-	
-		<div>
-		
-		</div>
-	
-   ~~~
-   {:.prettyprint }
+
+
+
+<div>
+
+
+
+</div>
+
 
 
 2. Add the following code in the index.cshtml file to create the BulletGraph control in the View page.
 
-   ~~~ html
 
-		<div>
 
-		@(Html.EJ().BulletGraph("Bullet").Render())
+<div>
 
-		</div>
 
-   ~~~
-   {:.prettyprint }
+
+@(Html.EJ().BulletGraph("Bullet")
+
+
+
+      .Render())
+
+
+
+</div>
+
+
 
 3. Execute the above code to display the BulletGraph. To customize the measure bars in the BulletGraph, you can pass the data either locally or remotely.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
+{:.image }
 
 
-
-## Provide Required Data
+Provide Required Data
 
 You can customize the values of feature and comparative measure bars in a BulletGraph, either locally or remotely. The category data is optional, and it is used to display label values parallel to the measure bars. 
 
 Assign the data in BulletLocalDataBind variable to the DataSource property of BulletGraph as illustrated in the following code example. 
 
 
-{% highlight css %}
+
+[MVC]
+
+
+
+[CS]
+
+
 
 publicActionResult LocalDataBinding()
 
@@ -125,14 +143,21 @@ return View();
 
         }
 
-{% endhighlight %}
+
 
 
 
 Once the DataSource property is assigned with the required values, you can bind the variable names used in the JSON data to the corresponding fields of the BulletGraph as shown in the following code example.
 
 
-{% highlight html %}
+
+[MVC]
+
+
+
+[CSHTML]
+
+
 
 @(Html.EJ().BulletGraph("Bullet")
 
@@ -152,9 +177,9 @@ Once the DataSource property is assigned with the required values, you can bind 
 
   .Render())
 
-{% endhighlight %}
 
-## Set Default and Scale Values
+
+Set Default and Scale Values
 
 You can plot any number of measure bars within the BulletGraph by increasing the height and width of the control to locate all the measure bars within the graph. Set the QualitativeRangesize and QuantitativeScaleLength properties according to the following code example.
 
@@ -163,7 +188,10 @@ By default, the BulletGraph is rendered in the horizontal orientation with its f
 Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGraph are set, as illustrated in the following code example. The ticks and labels within the scale are also positioned.
 
 
-{% highlight html %}
+
+[MVC]
+
+
 
 @(Html.EJ().BulletGraph("Bullet").Width(850).Height(540)
 
@@ -194,21 +222,24 @@ Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGrap
     .Render())
 
 
-{% endhighlight %}
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
 
+{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
+{:.image }
 
 
 The above image illustrates the BulletGraph without any ranges displayed in the background.
 
-## Add Qualitative Ranges
+Add Qualitative Ranges
 
 By default, 3 ranges are displayed in the BulletGraph control during the initial rendering of the control with its default values. To customize it, you can set appropriate values for the RangeEnd and RangeStroke properties.  Any number of QualitativeRanges can be added to the control.
 
 
-{% highlight html %}
+
+[MVC]
+
+
 
 @(Html.EJ().BulletGraph("Bullet").Width(850).Height(540)
 
@@ -250,22 +281,25 @@ By default, 3 ranges are displayed in the BulletGraph control during the initial
 
       .Render())
 
-{% endhighlight %}
+
 
 After adding QualitativeRanges to the BulletGraph, the control appears as follows.
 
 
 
-![](Getting-Started_images/Getting-Started_img4.png)
+{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
+{:.image }
 
 
-
-## Ticks and Measure Bars Customization
+Ticks and Measure Bars Customization
 
 You can do the following code changes in the quantitative scale to customize the tick size, the color of the feature bar and the comparative measure symbols.
 
 
-{% highlight html %}
+
+[MVC]
+
+
 
 @(Html.EJ().BulletGraph("Bullet").Width(850).Height(540)
 
@@ -315,7 +349,7 @@ You can do the following code changes in the quantitative scale to customize the
 
    .Render())
 
-{% endhighlight %}
+
 
 
 
@@ -323,16 +357,19 @@ When you customize the ticks and measure bar, the BulletGraph appears as follows
 
 
 
-![](Getting-Started_images/Getting-Started_img5.png)
+{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
+{:.image }
 
 
-
-## Add Caption and Subtitle
+Add Caption and Subtitle
 
 You can add the following code example to display an appropriate Caption and Subtitle to the BulletGraph.
 
 
-{% highlight html %}
+
+[MVC]
+
+
 
 @(Html.EJ().BulletGraph("Bullet").Width(850).Height(540)
 
@@ -399,23 +436,26 @@ You can add the following code example to display an appropriate Caption and Sub
      .Render())
 
 
-{% endhighlight %}
+
 
 
 The following screenshot displays a BulletGraph with a Caption and Subtitle.
 
 
 
-![](Getting-Started_images/Getting-Started_img6.png)
+{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+{:.image }
 
 
-
-## Show Tooltip
+Show Tooltip
 
 You can use a Tooltip in your application to display the values of forecasted rainfall, actual rainfall received in millimeter and also the appropriate year. The Tooltip Visible property is set to True to enable the Tooltip option. To set the template Tooltip, you can pass the template id to it as illustrated in the following code example.
 
 
-{% highlight html %}
+
+[MVC]
+
+
 
 @(Html.EJ().BulletGraph("Bullet").Width(850).Height(540)
 
@@ -515,13 +555,13 @@ You can use a Tooltip in your application to display the values of forecasted ra
 
 </div>
 
-{% endhighlight %}
+
 
 The following screenshot displays a customized BulletGraph.
 
 
 
-![](Getting-Started_images/Getting-Started_img7.png)
-
+{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
+{:.image }
 
 

@@ -7,7 +7,7 @@ control: NumericTextBox
 documentation: ug
 ---
 
-# Keyboard Interaction
+## Keyboard Interaction
 
 With the keyboard navigation enabled in the NumericTextBox control, it is possible to control the actions with the provided shortcut keys. Almost all the NumericTextBox functionality that are done through mouse can be controlled with shortcut keys.
 
@@ -17,9 +17,9 @@ _Keyboard Shortcuts_
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><th>
-Description</th></tr>
+<td>
+Shortcut Key</td><td>
+Description</td></tr>
 <tr>
 <td>
 {{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j</td><td>
@@ -37,8 +37,7 @@ Decrements the value</td></tr>
 Tab</td><td>
 Focus the next element</td></tr>
 </table>
-
-## Configuring Keyboard Navigation
+Configuring Keyboard Navigation
 
 The following steps explain the implementation of keyboard interaction in NumericTextBox.
 
@@ -46,7 +45,7 @@ In the View page add NumericTextBox helper. Set the accesskey property to the Nu
 
 
 
-{% highlight html %}
+[_cshtml]
 
 @{IDictionary<string, object> numericAttribute = new Dictionary<string, object>();
 
@@ -60,14 +59,14 @@ In the View page add NumericTextBox helper. Set the accesskey property to the Nu
 
 @Html.EJ().NumericTextbox("numeric").Name("numeric").Value("11").HtmlAttributes(numericAttribute)
 
-{% endhighlight %}
+
 
 Run the above example and press [Access key](http://en.wikipedia.org/wiki/Access_key) + j key to focus the NumericTextBox widget. Perform provided functionality by using keyboard shortcuts.
 
 
 
-![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
+{{ '![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)' | markdownify }}
+{:.image }
 
 
 

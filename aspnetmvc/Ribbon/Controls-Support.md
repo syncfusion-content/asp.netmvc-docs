@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Controls Support
+## Controls Support
 
 In _Ribbon_ control, Button,SplitButton,DropDownList Toggle button, Gallery and Custom controls provide support to the groups.
 
@@ -33,11 +33,19 @@ In _Ribbon_ control, Button,SplitButton,DropDownList Toggle button, Gallery and 
 
 * RibbonButtonType.Custom -to add custom controls.
 
-The _default_ _type_ is _button_.
+The _default__type_ is _button_.
 
 
 
 {% highlight html %}
+
+[MVC]
+
+
+
+[CSHTML]
+
+
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -301,9 +309,9 @@ right: 10px;
 
 </style>
 
-{% endhighlight %}
 
-{% highlight c# %}
+
+[Controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -355,7 +363,7 @@ return View();
 
 The following output is displayed as a result of the above code example.
 
-![](Controls-Support_images/Controls-Support_img1.png)
-
+{{ '![](Controls-Support_images/Controls-Support_img1.png)' | markdownify }}
+{:.image }
 
 

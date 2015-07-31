@@ -7,12 +7,12 @@ control: Dialog
 documentation: ug
 ---
 
-## Look and Feel
+# Look and Feel
 
 You can customize the appearance of Dialog widget using various themes that are available in Essential JavaScript. Applying themes customizes the entire control and its appearances. Refer the following link.
 [http://help.syncfusion.com/ug/js/Documents/theming.htm](http://help.syncfusion.com/ug/js/Documents/theming.htm)
 
-CSS Class
+## CSS Class
 
 The CSS properties can be customized by using CSS Class in the Dialog control. The following steps explains the implementation of CSS Class option in the Dialog widget.
 
@@ -22,7 +22,7 @@ The CSS properties can be customized by using CSS Class in the Dialog control. T
 
 
 
-[CSHTML]
+{% highlight html %}
 
 // In the CSHTML page add the Dialog widget using helpers and assign the CssClass value from the custom class name.
 
@@ -36,7 +36,7 @@ The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
 CssClass("customCss").Render();}
 
-
+{% endhighlight %}
 
 
 
@@ -46,8 +46,7 @@ CssClass("customCss").Render();}
 
 
 
-[CSS]
-
+{% highlight css %}
 
 
     <style>
@@ -82,14 +81,14 @@ CssClass("customCss").Render();}
 
     </style>
 
-
+{% endhighlight %}
 
 
 
 3. The output for Dialog control after customizing the “CssClass” is as follows.
 
-{{ '![C:/Users/ApoorvahR/Desktop/13.png](Look-and-Feel_images/Look-and-Feel_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/13.png](Look-and-Feel_images/Look-and-Feel_img1.png)
+
 
 
 _Figure_ _33__: Dialog with “CssClass"_

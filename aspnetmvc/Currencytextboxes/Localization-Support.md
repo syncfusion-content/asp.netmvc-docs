@@ -7,7 +7,7 @@ control: CurrencyTextBox
 documentation: ug
 ---
 
-## Localization Support
+# Localization Support
 
 Localization is language support based on the culture in CurrencyTextBox. You can achieve the Localization using “Locale” property in CurrencyTextBox. 
 
@@ -29,17 +29,17 @@ You can get the script file of various cultures from the following path also:
 
 You can dynamically change the language based on their culture.
 
-Configure Localization
+## Configure Localization
 
 
 
 The following example describes the way to use localization in CurrencyTextBox.
 
-[_cshtml]
+{% highlight html %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33").Locale("de-DE")
 
-
+{% endhighlight %}
 
 
 
@@ -49,13 +49,13 @@ Output of CurrencyTextBox with localization.
 
 
 
-{{ '![](Localization-Support_images/Localization-Support_img1.png)' | markdownify }}
-{:.image }
+![](Localization-Support_images/Localization-Support_img1.png)
 
 
 
 
-{{ '![](Localization-Support_images/Localization-Support_img2.png)' | markdownify }}
-{:.image }
+
+![](Localization-Support_images/Localization-Support_img2.png)
+
 
 
