@@ -27,37 +27,19 @@ ASP.NET MVC Linear Gauge widget basically renders with flexible APIs. You can ea
 1. First create an MVC Project and add necessary Dlls and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
 2. Add the following code example to the corresponding view page to render Linear Gauge.
 
-
-
-   [View]
-
-
-
+   ~~~
    @(Html.EJ().LinearGauge("thermoLinear"))
-
-
-
+   ~~~
 
 
 3. Add the following code example in the Controller page.
 
-
-
-[Controller]
-
-
-
-Pu  public ActionResult Default()
-
-
-
-{{
-
-return View( );
-
-}
-
-
+   ~~~
+   public ActionResult Default()
+   {
+   return View( );
+   }
+   ~~~
 
 Run the above code example to get a default Linear Gauge with default values as follows.
 
@@ -71,10 +53,7 @@ Set Height and Width values
 
 Basic attributes of each canvas elements are height and width. You can set the height and width of the gauge using the following code example. It sets the height and width of the canvas image where the thermometer is to be rendered.
 
-
-[View]
-
-
+~~~
 
 @(Html.EJ().LinearGauge("thermoLinear")
 
@@ -82,7 +61,7 @@ Basic attributes of each canvas elements are height and width. You can set the h
 
 .Width(500))
 
-
+~~~
 
 Run the above code example and you will get the following gauge as similar to default. Here height and width of the canvas are set for given values.
 
@@ -97,9 +76,7 @@ Set Animation option and Label Color
 
 
 
-[View]
-
-
+~~~
 
 @(Html.EJ().LinearGauge("thermoLinear")
 
@@ -111,7 +88,7 @@ Set Animation option and Label Color
 
 .Width(500))
 
-
+~~~
 
 Run the above code example and you will get the following gauge as the output.
 
@@ -128,7 +105,7 @@ Provide Scale Values
 
 
 
-[View]
+~~~
 
 @(Html.EJ().LinearGauge("thermoLinear")
 
@@ -174,7 +151,7 @@ s.Width(20)
 
 }))
 
-
+~~~
 
 Run the above code example and you will get the following gauge as the output.
 
@@ -197,9 +174,7 @@ In Linear Gauge the two types of pointers available are: Marker pointer and Bar 
 
 
 
-[View]
-
-
+~~~
 
 @(Html.EJ().LinearGauge("thermoLinear")
 
@@ -242,6 +217,7 @@ bp.Width(10)
 }))
 
 
+~~~
 
 Run the above code example to get the following gauge as your output.
 
@@ -258,7 +234,7 @@ Add Label Customization
 
 
 
-[View]
+~~~
 
 
 
@@ -312,7 +288,7 @@ lbl.Placement(LabelPlacement.Far)
 
 }))
 
-
+~~~
 
 Run the above code example and you will get the following gauge as output.
 
@@ -327,7 +303,7 @@ Add Tick Details
 
 
 
-[View]
+~~~
 
 
 
@@ -415,7 +391,7 @@ tic.Type(TickType.MinorInterval)
 
 }))
 
-
+~~~
 
 Run the above code example and you will get the following gauge as output.
 
@@ -432,8 +408,7 @@ Add Custom Label Details
 
 
 
-[View]
-
+~~~
 
 
 @(Html.EJ().LinearGauge("thermoLinear")
@@ -520,6 +495,7 @@ f.FontStyle("bold")
 
 }))
 
+~~~
 
 
 Run the above code example to get the following gauge as output.
@@ -535,7 +511,7 @@ Change Scale from Degree to Fahrenheit
 Add the function that converts the temperature in degree to Fahrenheit in the label, with an index value of 1.
 
 
-[View]
+~~~
 
 
 
@@ -603,7 +579,7 @@ args.style.font = "Normal 10px Segoe UI";
 
 &lt;/script&gt;
 
-
+~~~
 
 Run the above code example and you will get the following gauge as output.
 
@@ -615,9 +591,7 @@ Add Custom Label for Current Value
 
 Add the function that displays the current temperature value in the custom label.
 
-[View]
-
-
+~~~
 
 @(Html.EJ().LinearGauge("thermoLinear")
 
@@ -736,6 +710,8 @@ args.style.textValue = "Boiling point of Water" + " (" + fahValue.toFixed(1) + "
 }
 
 &lt;/script&gt;
+
+~~~
 
 ![](Getting-Started_images/Getting-Started_img11.png)
 {:.image }
