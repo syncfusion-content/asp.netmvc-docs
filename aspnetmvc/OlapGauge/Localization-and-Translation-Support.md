@@ -176,7 +176,7 @@ ej.olap.OlapGauge.locale["zh-CN"] = {
 
 }
 
-Localizing Cube Information:
+## Localizing Cube Information:
 
 To render the localized Cube information,__set “_Locale__Identifier”___in the connection string.
 
