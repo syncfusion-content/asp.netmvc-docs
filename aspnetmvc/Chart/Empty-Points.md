@@ -1,0 +1,57 @@
+---
+layout: post
+title: Empty-Points
+description: empty points
+platform: wpf
+control: Chart
+documentation: ug
+---
+
+# Empty Points
+
+The data that is passed to the Chart can have null or undefined values that are considered as empty points. Series type like line, spline, area, splinearea, stepline, steparea, column, bar, bubble, scatter, hilo, hiloopenclose, candle, rangecolumn and stacking series having empty point support. 
+{% highlight html %}
+[MVC]
+
+
+
+@(Html.EJ().Chart("chartcontainer")
+
+// ...
+
+   .Series(sr =>
+
+    {
+
+sr.Points(pt =>
+
+{
+
+	  pt.X(1).Y(210).Add(); 
+
+         pt.X(2).Y(150).Add(); 
+
+         pt.X(3).Y(200).Add(); 
+
+         pt.X(4).Y(null).Add(); 
+
+         pt.X(5).Y(170).Add(); 
+
+         pt.X(6).Y(230).Add(); 
+
+         pt.X(7).Y(120).Add(); 
+
+        }).Name("Course").Type(SeriesType.Column).Add();
+
+     })
+
+// ...
+
+    )
+
+{% endhighlight  %}
+
+![](Empty-Points_images/Empty-Points_img1.png)
+
+
+
