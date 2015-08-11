@@ -2,7 +2,7 @@
 layout: post
 title: Selection
 description: selection
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

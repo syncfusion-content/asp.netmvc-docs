@@ -2,7 +2,7 @@
 layout: post
 title: Chart-Types
 description: chart types
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Working-with-Data
 description: working with data
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

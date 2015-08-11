@@ -2,7 +2,7 @@
 layout: post
 title: Hierarchy-Grid
 description: hierarchy grid
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

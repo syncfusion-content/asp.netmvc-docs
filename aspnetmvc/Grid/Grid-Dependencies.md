@@ -2,7 +2,7 @@
 layout: post
 title: Grid-Dependencies
 description: grid dependencies
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

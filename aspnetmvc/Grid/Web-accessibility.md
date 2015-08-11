@@ -2,7 +2,7 @@
 layout: post
 title: Web-accessibility
 description: web accessibility
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

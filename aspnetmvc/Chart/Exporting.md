@@ -2,7 +2,7 @@
 layout: post
 title: Exporting
 description: exporting
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

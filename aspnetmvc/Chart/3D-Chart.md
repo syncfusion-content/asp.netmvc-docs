@@ -2,7 +2,7 @@
 layout: post
 title: 3D-Chart
 description: 3d chart
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

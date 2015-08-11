@@ -2,7 +2,7 @@
 layout: post
 title: Toolbar
 description: toolbar
-platform: wpf
+platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---

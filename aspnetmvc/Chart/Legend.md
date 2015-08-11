@@ -2,7 +2,7 @@
 layout: post
 title: Legend
 description: legend
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

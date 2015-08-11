@@ -2,7 +2,7 @@
 layout: post
 title: Data-Binding
 description: data binding
-platform: wpf
+platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---

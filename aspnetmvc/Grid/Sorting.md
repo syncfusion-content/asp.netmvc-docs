@@ -2,7 +2,7 @@
 layout: post
 title: Sorting
 description: sorting
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

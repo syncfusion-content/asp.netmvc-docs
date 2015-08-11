@@ -2,7 +2,7 @@
 layout: post
 title: Grouping
 description: grouping
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

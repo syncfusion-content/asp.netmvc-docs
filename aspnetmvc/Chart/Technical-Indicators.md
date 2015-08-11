@@ -2,7 +2,7 @@
 layout: post
 title: Technical-Indicators
 description: technical indicators
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

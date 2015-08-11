@@ -2,7 +2,7 @@
 layout: post
 title: Context-Menu
 description: context menu
-platform: wpf
+platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---

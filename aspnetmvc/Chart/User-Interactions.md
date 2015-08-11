@@ -2,7 +2,7 @@
 layout: post
 title: User-Interactions
 description: user interactions
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

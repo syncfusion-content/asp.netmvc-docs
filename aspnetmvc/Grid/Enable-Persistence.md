@@ -2,7 +2,7 @@
 layout: post
 title: Enable-Persistence
 description: enable persistence
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Chart-Elements
 description: chart elements
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

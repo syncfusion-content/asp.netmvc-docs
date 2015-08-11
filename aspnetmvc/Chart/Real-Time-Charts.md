@@ -2,7 +2,7 @@
 layout: post
 title: Real-Time-Charts
 description: real-time charts
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

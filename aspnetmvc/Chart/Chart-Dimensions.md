@@ -2,7 +2,7 @@
 layout: post
 title: Chart-Dimensions
 description: chart dimensions
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Series
 description: series
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

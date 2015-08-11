@@ -2,7 +2,7 @@
 layout: post
 title: Data-Adaptors
 description: data adaptors
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

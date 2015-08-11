@@ -2,7 +2,7 @@
 layout: post
 title: Editing
 description: editing
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

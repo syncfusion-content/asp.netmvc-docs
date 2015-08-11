@@ -2,7 +2,7 @@
 layout: post
 title: Axis
 description: axis
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Empty-Points
 description: empty points
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

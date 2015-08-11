@@ -2,7 +2,7 @@
 layout: post
 title: Style-and-Appearance
 description: style and appearance
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Canvas-Chart
 description: canvas chart
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

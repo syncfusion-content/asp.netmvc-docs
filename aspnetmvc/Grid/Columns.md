@@ -2,7 +2,7 @@
 layout: post
 title: Columns
 description: columns
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

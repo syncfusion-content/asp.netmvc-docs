@@ -2,7 +2,7 @@
 layout: post
 title: Behaviour-Customization
 description: behaviour customization
-platform: wpf
+platform: ejmvc
 control: Chart
 documentation: ug
 ---

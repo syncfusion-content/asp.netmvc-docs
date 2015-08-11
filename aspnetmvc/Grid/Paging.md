@@ -2,7 +2,7 @@
 layout: post
 title: Paging
 description: paging
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

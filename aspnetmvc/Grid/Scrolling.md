@@ -2,7 +2,7 @@
 layout: post
 title: Scrolling
 description: scrolling
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Localization
 description: localization
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

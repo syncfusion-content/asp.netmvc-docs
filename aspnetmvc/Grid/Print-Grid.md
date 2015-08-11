@@ -2,7 +2,7 @@
 layout: post
 title: Print-Grid
 description: print grid
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

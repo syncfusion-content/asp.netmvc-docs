@@ -2,7 +2,7 @@
 layout: post
 title: Row
 description: row
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---

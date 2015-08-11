@@ -2,7 +2,7 @@
 layout: post
 title: Rows
 description: rows
-platform: wpf
+platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---

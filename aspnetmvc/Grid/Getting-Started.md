@@ -2,7 +2,7 @@
 layout: post
 title: Getting-Started
 description: getting started
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---
