@@ -34,9 +34,9 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 
     <tr>
 
-        <td class="tdclass">Onward Date</td>
+        <th class="tdclass">Onward Date</th>
 
-        <td class="tdclass">Return date</td>
+        <th class="tdclass">Return date</th>
 
     </tr>
 
@@ -110,9 +110,9 @@ In the real time ticket booking scenario, the booking is open for limited number
 
       <tr>
 
-         <td class="tdclass">Onward Date</td>
+         <th class="tdclass">Onward Date</th>
 
-         <td class="tdclass">Return date</td>
+         <th class="tdclass">Return date</th>
 
       </tr>
 
@@ -164,9 +164,9 @@ You can select the “onward journey date” in the first DatePicker and then th
 
     <tr>
 
-        <td class="tdclass">Onward Date</td>
+        <th class="tdclass">Onward Date</th>
 
-        <td class="tdclass">Return date</td>
+        <th class="tdclass">Return date</th>
 
     </tr>
 
@@ -195,7 +195,7 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 
 
-{% highlight script %}
+{% highlight js %}
 <script type="text/javascript">
 
     function selectedStartDate(sender) {

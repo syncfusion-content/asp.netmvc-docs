@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Exporting
+# Exporting
 
 You can export the Diagram to the following formats.
 
@@ -22,7 +22,7 @@ The following code illustrates how to export the diagram as image
 
 {% highlight js %}
 
-[JS]
+
 
 var diagram = $("#DiagramContent").ejDiagram("instance");
 
@@ -34,7 +34,7 @@ diagram.exportDiagram();
 
 {% endhighlight %}
 
-Exporting options
+## Exporting options
 
 Diagram provides support to export the desired region of the Diagram to desired formats. 
 
@@ -42,7 +42,7 @@ The following code example illustrates how to export and download the positive r
 
 {% highlight js %}
 
-[JS]
+
 
 var diagram = $("#DiagramContent").ejDiagram("instance");
 
@@ -88,11 +88,11 @@ diagram.exportDiagram(options);
 
 
 
-File Name
+## File Name
 
 Name of the file to be downloaded. By default, the file name is set as Diagram.
 
-Mode
+## Mode
 
 Diagram provides support to export and download diagram as files. You can also export Diagram as data of ImageURL/SVG formats.
 
@@ -104,9 +104,9 @@ _Exporting modes_
 
 <table>
 <tr>
-<td>
-Modes</td><td>
-Description</td></tr>
+<th>
+Modes</th><th>
+Description</th></tr>
 <tr>
 <td>
 Download</td><td>
@@ -118,7 +118,7 @@ Exports Diagram as data of formats ImageURL/SVG.</td></tr>
 </table>
 
 
-Region
+## Region
 
 You can export any particular region of the Diagram. The region to be exported is based on the region and bounds properties.
 
@@ -128,9 +128,9 @@ _Diagram Region_
 
 <table>
 <tr>
-<td>
-Regions</td><td>
-Description</td></tr>
+<th>
+Regions</th><th>
+Description</th></tr>
 <tr>
 <td>
 Content</td><td>
@@ -142,13 +142,13 @@ Export Diagram is based on page setting (page size, multiple page, page margin, 
 </table>
 
 
-Format
+## Format
 
 Format specifies the type/format of the exported file.
 
 It includes jpg, png, bmp, and svg.
 
-{{ '![](Exporting_images/Exporting_img1.png)' | markdownify }}
-{:.image }
+![](Exporting_images/Exporting_img1.png)
+
 
 

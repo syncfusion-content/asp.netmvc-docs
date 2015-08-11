@@ -223,9 +223,9 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 3. The output of Dialog with AJAX content.
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)
 
 
 
-_Figure 1__7__: Dialog with “AJAX Content_                                                           
+_Figure 17: Dialog with “AJAX Content_                                                           
 

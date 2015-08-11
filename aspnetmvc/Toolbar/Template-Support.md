@@ -59,9 +59,8 @@ Set the list for DropDown control inside a list element and define this element 
 
 The following screenshot displays a Toolbar with embedded controls.
 
-{{ '![](Template-Support_images/Template-Support_img1.png)' | markdownify }}
-{:.image }
+![](Template-Support_images/Template-Support_img1.png)
 
 
-_Figure_ _30__: Toolbar with Template_
+_Figure 30: Toolbar with Template_
 

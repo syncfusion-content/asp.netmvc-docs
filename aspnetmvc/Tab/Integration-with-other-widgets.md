@@ -82,5 +82,5 @@ To render the rating controls in the first Tab element refer the styles mentione
 
 
 
-_Figure 20__: Tab content section with Rating Control_
+_Figure 20: Tab content section with Rating Control_
 

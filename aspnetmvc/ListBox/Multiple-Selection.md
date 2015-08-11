@@ -2,172 +2,104 @@
 layout: post
 title: Multiple-Selection
 description: multiple selection
-platform: ejmvc
-control: ListBox
+platform: aspnet
+control: Control Name undefined
 documentation: ug
 ---
 
-## Multiple Selection
+# Multiple Selection
 
-Allow multiple selection
+## Allow multiple selections
 
-ListBox widget allows you to select multiple values from the list Items using AllowMultiSelection property. You can select multiple list items along with Control key and Shift key press. To select multiple values we need to set AllowMultiSelection value to true.
+ListBox widget allows you to select multiple values from the list Items by using AllowMultiSelection property. You can select multiple list items along with Control key and Shift key press. To select multiple values, set AllowMultiSelection value to true.
 
-Configuring multiple selection
+### Configuring multiple selection
 
 The following steps explain you the configuration of the AllowMultiSelection for a ListBox.
 
-Add the below code in your view page to render the ListBox
+In an ASPX page, add an element to configure ListBox.
 
 
 
-[View]
-
-<div id="control">
-
-    <h5 class="ctrllabel">
-
-        Select a skill
-
-    </h5>
-
-    @{List<int> indexList = new List<int>();
-
-
-
-    indexList.Add(0);
-
-
-
-    indexList.Add(3);
-
-
-
-    }       @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
-
-</div>
-
-
-
-
-
-
-
-1. Output for ListBox control that provides multiple selection is as follows.
-
-
-{{ '![](Multiple-Selection_images/Multiple-Selection_img1.png)' | markdownify }}
-{:.image }
-
-
-Multiple selection through index 
-
-You can select the list of items from the ListBox using selectedItemlist property. Its data type is array. To achieve this, you need to set true to AllowMultiSelection property in ListBox. 
-
-The following steps explains you the configuration of SelectedItemlist property in ListBox
-
-1. Add the below code in your view page to render the ListBox with allow multiple selection enabled.
-
-
-
-<table>
-<tr>
-<td>
-[View]// Add the following code in View page to configure ListBox widget<div id="control">    <h5 class="ctrllabel">        Select a skill    </h5>    @{List<int> indexList = new List<int>();    indexList.Add(1);    indexList.Add(4);    }       @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)</div></td></tr>
-<tr>
-<td>
-[CS]// Add the following code to add list items in the controller page        public class skillset        {            public string text { get; set; }        }        public ActionResult Index()        {            List<skillset> skill = new List<skillset>();            skill.Add(new skillset { text = "ASP.NET" });            skill.Add(new skillset { text = "ActionScript" });            skill.Add(new skillset { text = "Basic" });            skill.Add(new skillset { text = "C++" });            skill.Add(new skillset { text = "C#" });            skill.Add(new skillset { text = "dBase" });            skill.Add(new skillset { text = "Delphi" });            skill.Add(new skillset { text = "ESPOL" });            skill.Add(new skillset { text = "F#" });            skill.Add(new skillset { text = "FoxPro" });            skill.Add(new skillset { text = "Java" });            skill.Add(new skillset { text = "J#" });            skill.Add(new skillset { text = "Lisp" });            skill.Add(new skillset { text = "Logo" });            skill.Add(new skillset { text = "PHP" });            ViewBag.datasource = skill;            return View();        }</td></tr>
-</table>
-
-
-
-
-2. Output of the above steps.
-
-
-{{ '![](Multiple-Selection_images/Multiple-Selection_img2.png)' | markdownify }}
-{:.image }
-
-
-Checkbox Support
-
-Show Checkbox 
-
-You can enable the checkbox in the ListBox with this property. The data type of ShowCheckbox value is Boolean type. It maintains multiple selection and gets the checked items on its ListBox client side events.  
-
-Defining the Checkbox support
-
-The following steps explains you the configuration of checkbox options in ListBox.
-
-1. Add the below code in your view page to render the ListBox with checkbox
-
-
-
-[View]
-
-// Add the following code in View page to configure ListBox widget
+{% highlight html %}
 
 <div id="control">
 
-    <h5 class="ctrllabel">
+    <div class="ctrllabel">
 
-        Select a skill
+        Select a skill</div>
 
-    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).ShowCheckbox(true)
+<ej:listbox id="listboxsample" DataTextField="Name" llowMultiSelection="true"
 
-</div>
+ runat="server" Width="240"></ej:listbox>
 
-[CS]
+</div> 
 
-// Add the following code to add list items in the controller page
 
-        public class skillset
+
+
+
+{% endhighlight %}
+
+
+
+{% highlight c# %}
+
+protected void Page_Load(object sender, EventArgs e)
 
         {
 
-            public string text { get; set; }
+            listboxsample.DataSource = GetData();
 
         }
 
-        public ActionResult Index()
+        private List<Languages> GetData()
 
         {
 
-            List<skillset> skill = new List<skillset>();
+            List<Languages> data = new List<Languages>();
 
-            skill.Add(new skillset { text = "ASP.NET" });
+            data.Add(new Languages() { Name = "ASP.NET" });
 
-            skill.Add(new skillset { text = "ActionScript" });
+            data.Add(new Languages() { Name = "ActionScript" });
 
-            skill.Add(new skillset { text = "Basic" });
+            data.Add(new Languages() { Name = "Basic" });
 
-            skill.Add(new skillset { text = "C++" });
+            data.Add(new Languages() { Name = "C++" });
 
-            skill.Add(new skillset { text = "C#" });
+            data.Add(new Languages() { Name = "C#" });
 
-            skill.Add(new skillset { text = "dBase" });
+            data.Add(new Languages() { Name = "dBase" });
 
-            skill.Add(new skillset { text = "Delphi" });
+            data.Add(new Languages() { Name = "Delphi" });
 
-            skill.Add(new skillset { text = "ESPOL" });
+            data.Add(new Languages() { Name = "ESPOL" });
 
-            skill.Add(new skillset { text = "F#" });
+            data.Add(new Languages() { Name = "F#" });
 
-            skill.Add(new skillset { text = "FoxPro" });
+            data.Add(new Languages() { Name = "FoxPro" });
 
-            skill.Add(new skillset { text = "Java" });
+            data.Add(new Languages() { Name = "Java" });
 
-            skill.Add(new skillset { text = "J#" });
+            data.Add(new Languages() { Name = "J#" });
 
-            skill.Add(new skillset { text = "Lisp" });
+            data.Add(new Languages() { Name = "Lisp" });
 
-            skill.Add(new skillset { text = "Logo" });
+            data.Add(new Languages() { Name = "Logo" });
 
-            skill.Add(new skillset { text = "PHP" });
+            data.Add(new Languages() { Name = "PHP" });
 
-            ViewBag.datasource = skill;
+            return data;
 
-            return View();
+        }
+
+
+
+        public class Languages
+
+        {
+
+            public string Name;
 
         }
 
@@ -175,45 +107,128 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-2. Output of the above steps.
+{% endhighlight %}
 
 
 
-{{ '![](Multiple-Selection_images/Multiple-Selection_img3.png)' | markdownify }}
-{:.image }
+Output for ListBox control that provides multiple selections is as follows.
 
 
-Check All 
-
-You can check all the check box in the list by using this property. The data type of CheckAll is Boolean type. To achieve this, set ShowCheckbox property as true.
-
-The following steps explains you the configuration of checkbox options in ListBox.
-
-1. Add the below code in your view page to render the ListBox with all items checked initially.
+ ![](Multiple-Selection_images/Multiple-Selection_img1.png)
 
 
 
-<table>
-<tr>
-<td>
-[View]// Add the following code in View page to configure ListBox widget<div id="control">    <h5 class="ctrllabel">        Select a skill    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")) .ShowCheckbox(true).CheckAll(true)</div></td></tr>
-<tr>
-<td>
-[CS]// Add the following code to add list items in the controller page        public class skillset        {            public string text { get; set; }        }        public ActionResult Index()        {            List<skillset> skill = new List<skillset>();            skill.Add(new skillset { text = "ASP.NET" });            skill.Add(new skillset { text = "ActionScript" });            skill.Add(new skillset { text = "Basic" });            skill.Add(new skillset { text = "C++" });            skill.Add(new skillset { text = "C#" });            skill.Add(new skillset { text = "dBase" });            skill.Add(new skillset { text = "Delphi" });            skill.Add(new skillset { text = "ESPOL" });            skill.Add(new skillset { text = "F#" });            skill.Add(new skillset { text = "FoxPro" });            skill.Add(new skillset { text = "Java" });            skill.Add(new skillset { text = "J#" });            skill.Add(new skillset { text = "Lisp" });            skill.Add(new skillset { text = "Logo" });            skill.Add(new skillset { text = "PHP" });            ViewBag.datasource = skill;            return View();        }</td></tr>
-</table>
+### Multiple selections through index 
+
+You can select the list of items from the ListBox by using SelectedItemlist property. Its data type is array. To achieve this, set AllowMultiSelection property as true in ListBox. 
+
+The following steps explains you the configuration of SelectedItemlist property in ListBox 
+
+In an ASPX page, add an element to configure ListBox.
+
+
+{% highlight html %}
+
+<div id="control">
+
+    <div class="ctrllabel">
+
+        Select a skill</div>
+
+<ej:listbox id="listboxsample" AllowMultiSelection="true" DataTextField="Name" runat="server" Width="240"></ej:listbox>
+
+</div> 
 
 
 
 
-2. Output of the above steps.
+
+{% endhighlight %}
 
 
 
-{{ '![](Multiple-Selection_images/Multiple-Selection_img4.png)' | markdownify }}
-{:.image }
+{% highlight c# %}
+
+private List<int> indexList = new List<int>();
 
 
-Uncheck All
 
-You can uncheck all the check box in the list by using this property. The data type of UncheckAll is Boolean type. To achieve this, set ShowCheckbox property as true.
+        protected void Page_Load(object sender, EventArgs e)
+
+        {
+
+            listboxsample.DataSource = GetData();
+
+            indexList.Add(0);
+
+            indexList.Add(3);
+
+listboxsample.selectedItemlist = indexList;
+
+
+
+        }
+
+        private List<Languages> GetData()
+
+        {
+
+            List<Languages> data = new List<Languages>();
+
+            data.Add(new Languages() { Name = "ActionScript" });
+
+            data.Add(new Languages() { Name = "Basic" });
+
+            data.Add(new Languages() { Name = "C++" });
+
+            data.Add(new Languages() { Name = "C#" });
+
+            data.Add(new Languages() { Name = "dBase" });
+
+            data.Add(new Languages() { Name = "Delphi" });
+
+            data.Add(new Languages() { Name = "ESPOL" });
+
+            data.Add(new Languages() { Name = "F#" });
+
+            data.Add(new Languages() { Name = "FoxPro" });
+
+            data.Add(new Languages() { Name = "Java" });
+
+            data.Add(new Languages() { Name = "J#" });
+
+            data.Add(new Languages() { Name = "Lisp" });
+
+            data.Add(new Languages() { Name = "Logo" });
+
+            data.Add(new Languages() { Name = "PHP" });
+
+            return data;
+
+        }
+
+
+
+        public class Languages
+
+        {
+
+            public string Name;
+
+        }
+
+
+
+
+
+{% endhighlight %}
+
+
+
+Output of the above steps.
+
+
+ ![](Multiple-Selection_images/Multiple-Selection_img2.png)
+
+
 

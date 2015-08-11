@@ -151,10 +151,10 @@ The following steps explains you to show / hide the WaitingPopup widget.
 <table>
 <tr>
 <td>
-[CSHTML]<div id="target">    @Html.EJ().WaitingPopup("target").ShowOnInit(true)</div></td></tr>
+{% highlight html %}[CSHTML]<div id="target">    @Html.EJ().WaitingPopup("target").ShowOnInit(true)</div>{% endhighlight %}</td></tr>
 <tr>
 <td>
-[JavaScript]Show WaitingPopup:<script type="text/javascript">    var popUpObj;    $(function () {        $("#target").ejWaitingPopup();        popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.show();    });</script>Hide WaitingPopup:<script type="text/javascript">    var popUpObj    $(function () {        $("#target").ejWaitingPopup();         popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.hide();    });</script></td></tr>
+{% highlight js %}[JavaScript]Show WaitingPopup:<script type="text/javascript">    var popUpObj;    $(function () {        $("#target").ejWaitingPopup();        popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.show();    });</script>Hide WaitingPopup:<script type="text/javascript">    var popUpObj    $(function () {        $("#target").ejWaitingPopup();         popUpObj = $("#target").data("ejWaitingPopup");        popUpObj.hide();    });</script>{% endhighlight %}</td></tr>
 </table>
 
 

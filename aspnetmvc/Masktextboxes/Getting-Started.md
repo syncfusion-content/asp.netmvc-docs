@@ -19,13 +19,13 @@ ASP.NET MVC MaskEdit control allows you to set the type and format of the input 
 
 The following screenshot illustrates the functionality of a MaskEdit. Using MaskEdit control textbox, you can enter only the assigned text format and no other formats. The input mask prevents you from entering invalid characters into the control. In this application, MobileNumber textbox has a mask value.
 
-{{ '![Description: C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![Description: C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 In the above screenshot, you can type only numbers and it does not allow text format.
 
-Create a MaskEdit control
+### Create a MaskEdit control
 
 ASP.NET MVC MaskEdit control renders built-in features like text masking, number masking and flexible APIs. You can easily create the MaskEdit control using simple HTML helper class as follows:
 
@@ -34,7 +34,7 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 
 
-
+{% highlight html %}
 
 <div class="frame">
 
@@ -129,10 +129,12 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
         </div>
 
     </div>
+	
+{% endhighlight %}
 
 3. Add the following styles to show MaskEdit and place it in a particular position.
 
-
+{% highlight html %}
 
     <style>
 
@@ -187,23 +189,23 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
         }
 
     </style>
-
+{% endhighlight %}
 Execute the above code example to render the following output.
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Set Mask value to Mobile Number textbox
+
+## Set Mask value to Mobile Number textbox
 
 In this section, you can learn how to set mask value for MobileNumber textbox. To achieve this, set the mask value in the MaskEdit control to the desired values.
 
 
 @Html.EJ().MaskEdit("maskedit").MaskFormat("99-999-99999").InputMode(InputMode.Text)
 
-Create a MaskEdit control for Product Key Validation
+## Create a MaskEdit control for Product Key Validation
 
-Create a MaskEdit
+### Create a MaskEdit
 
 You can easily create the MaskEdit control using simple HTML helper class as follows.
 
@@ -214,7 +216,7 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 2. Add the following code to the corresponding view page to render MaskEdit.
 
 
-
+{% highlight html %}
   <div class="frame">
 
         <div class="control">
@@ -253,9 +255,11 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
     </div>
 
+{% endhighlight %}
+
 3. Add the following styles to show the MaskEdit, and place it in a particular position.
 
-
+{% highlight html %}
 
     <style>
 
@@ -311,15 +315,15 @@ Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingst
 
     </style>
 
-
+{% endhighlight %}
 
 4. Run the above code example to render the following output. 
 
-{{ '![C:/Users/ApoorvahR/Desktop/7.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/7.png](Getting-Started_images/Getting-Started_img3.png)
 
 
-Set Mask value to Product key textbox
+
+## Set Mask value to Product key textbox
 
 You can set mask value for Productkey textbox by setting the desired values to the MaskEdit control.
 

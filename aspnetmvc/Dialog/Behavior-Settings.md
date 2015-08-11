@@ -45,11 +45,11 @@ EnableResize(true).Render();}
 
 2. The output for Dialog control when “EnableResize” is “true” is as follows.
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png)' 
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png) 
 
 
 
-_Figure_ _6__: Dialog with “EnableResize”_                                                                                 
+_Figure6: Dialog with “EnableResize”_                                                                                 
 
 ## Drag Support
 
@@ -85,11 +85,11 @@ AllowDraggable(true).Render();}
 
 
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png)' 
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png) 
 
 
 
-_Figure_ _7__: Dialog with "AllowDraggable"_                                                                  
+_Figure7: Dialog with "AllowDraggable"_                                                                  
 
 ## Close Icon ToolTip Support
 
@@ -127,7 +127,7 @@ The following steps explains you the implementation of close icon tooltip option
 
 
 
-_Figure_ _8__: Dialog with "CloseIconTooltip_     
+_Figure8: Dialog with "CloseIconTooltip_     
 
 ## Persistence Support
 
@@ -163,7 +163,7 @@ Make resize and reload the web page. The state is maintained in the Dialog contr
 
 
 
-_Figure_ _9__: Dialog with “EnablePersistence"_
+_Figure9: Dialog with “EnablePersistence"_
 
 ## Enabled or Disabled
 
@@ -196,7 +196,7 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)
 
 
 
@@ -212,9 +212,9 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-_Figure_ _11__: Dialog with “Enabled" as “false”_                                                                  
+_Figure11: Dialog with “Enabled" as “false”_                                                                  
 
- Positioning Dialog
+## Positioning Dialog
 
 The Dialog provides the option to place the control based upon its X-axis and Y-axis position in the web page. The following steps explains you the implementation of dialog position option.
 
@@ -262,7 +262,7 @@ Render();}
 
 
 
-_Figure_ _12__: Dialog with “Position"_
+_Figure12: Dialog with “Position"_
 
 ## Header Option
 
@@ -296,7 +296,7 @@ ShowHeader(true).Render();}
 
 
 
-_Figure_ _13__: Dialog with “ShowHeader" as “true”_                                           
+_Figure13: Dialog with “ShowHeader" as “true”_                                           
 
 ## Hide Header
 
@@ -330,7 +330,7 @@ ShowHeader(false).Render();}
 
 
 
-_Figure_ _14__: Dialog with “ShowHeader" as “false”_                                     
+_Figure14: Dialog with “ShowHeader" as “false”_                                     
 
 ## Show at Initial
 
@@ -361,7 +361,7 @@ ShowOnInit(true).Render();}
 
 
 
-_Figure_ _15__: Dialog with “ShowOnInit"_                               
+_Figure15: Dialog with “ShowOnInit"_                               
 
 ## Rounded Corner Support
 
@@ -393,5 +393,5 @@ ShowRoundedCorner(true).Render();}
 
 
 
-_Figure_ _16__: Dialog with “ShowRoundedCorner"_
+_Figure16: Dialog with “ShowRoundedCorner"_
 

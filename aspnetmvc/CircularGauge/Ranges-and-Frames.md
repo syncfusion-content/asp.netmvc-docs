@@ -7,14 +7,14 @@ control: Circular Gauge
 documentation: ug
 ---
 
-##  Ranges and Frames
+#  Ranges and Frames
 
 Ranges are used to specify or group the scale values. By using ranges, you can describe the values in the pointers. 
 
-### Add Range Collection
+## Add Range Collection
 
 Range collection is directly added to the scale object. Refer the following code example to add range collection in a Gauge control. 
-
+{% highlight html %}
 [View]
 
 //For circular gauge rendering
@@ -44,15 +44,15 @@ ran.StartValue(20)
 })
 
 )
+{% endhighlight %}
+### Range Customization
 
-Range Customization
-
-Appearance
+### Appearance
 
 * The API size is used to specify the width of the ranges.  The major attributes for ranges are startValue and endValue. startValue defines the start position of the ranges and endValue defines the end position of the ranges.
 * StartWidth and endWidth are used to specify the range width at the starting and ending position of the ranges. You can add the gradient effects to the ranges by using gradient object.
 
-
+{% highlight html %}
 
 [View]
 
@@ -96,20 +96,20 @@ ran.StartValue(20)
 
 )
 
-
+{% endhighlight  %}
 
 Execute the above code to render the following output.
 
-{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img1.png)' | markdownify }}
-{:.image }
+![](Ranges-and-Frames_images/Ranges-and-Frames_img1.png)
 
 
-Colors and Border
+
+### Colors and Border
 
 * By customizing the ranges, the appearance of the Gauge can be improved. The range border is modified with the object called border. It has two border property such as color and width. These are used to customize the border color of the ranges and border width of the ranges. 
 * You can set the background color to improve the look and feel of the Circular Gauge. For customizing the background color of the ranges, backgroundColor is used.
 
-
+{% highlight html %}
 
 [View]
 
@@ -157,23 +157,23 @@ ran.StartValue(20)
 
 )
 
-
+{% endhighlight  %}
 
 Execute the above code to render the following output.
 
-{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img2.png)' | markdownify }}
-{:.image }
+![](Ranges-and-Frames_images/Ranges-and-Frames_img2.png)
 
 
 
 
-Position the ranges
+
+### Position the ranges
 
 * You can position ranges using two properties such as distanceFromScale and placement. 
 * distanceFromScale property defines the distance between the scale and range. 
 * Placement property is used to locate the pointer with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
 
-
+{% highlight html %}
 
 [View]
 
@@ -225,24 +225,24 @@ ran.StartValue(0)
 
 )
 
-
+{% endhighlight  %}
 
 Execute the above code to render the following output.
 
 
 
-{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img3.png)' | markdownify }}
-{:.image }
+![](Ranges-and-Frames_images/Ranges-and-Frames_img3.png)
 
 
 
 
-### Multiple Ranges
+
+## Multiple Ranges
 
 You can set multiple ranges by adding an array of ranges objects. Refer the following code example for multiple ranges functionality.
 
 
-
+{% highlight html %}
 [View]
 
 // For Circular Gauge rendering
@@ -317,22 +317,22 @@ ran.StartValue(80)
 
 )
 
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 
-{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img4.png)' | markdownify }}
-{:.image }
+![](Ranges-and-Frames_images/Ranges-and-Frames_img4.png)
 
 
 
 
-### Frames
+
+## Frames
 
 * Frame is the element that decides the appearance of the Circular Gauge. You can customize it using the object called frame.  It has the properties such as frameType, backGroundUrl, halfCircleFrameStartAngle and halfCircleFrameEndAngle.
 * frameType is used to specify whether frame is a half circle frame or full circle frame. halfCircleFrameStartAngle and halfCircleFrameEndAngle are used to specify the angle for Gauge with frame type as half circle. backgroundUrl is used to set the background image for the frame.
 
-
+{% highlight html %}
 
 [View]
 
@@ -386,12 +386,12 @@ po.NeedleType(NeedleType.Rectangle)
 
 )
 
-
+{% endhighlight  %}
 
 Execute the above code to render the following output.
 
-{{ '![](Ranges-and-Frames_images/Ranges-and-Frames_img5.png)' | markdownify }}
-{:.image }
+![](Ranges-and-Frames_images/Ranges-and-Frames_img5.png)
+
 
 
 Figure 46: Circular Gauge with multiple ranges

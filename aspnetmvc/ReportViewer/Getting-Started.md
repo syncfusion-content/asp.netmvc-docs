@@ -13,99 +13,88 @@ This section explains briefly about how to create a ReportViewer in your web ap
 
 ## Create your first ReportViewer in MVC
 
-Control Structure
+### Control Structure
 
 The following screenshot shows the control structure of ReportViewer.
 
-{{ '![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer1.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer1.png](Getting-Started_images/Getting-Started_img1.png)
 
 
-
-
-Create an Application
+### Create an Application
 
 This section explains how to configure a ReportViewer component in web application. As ReportViewer uses WebApi to process the report file, you can also learn how to create WebApi Service to process the report for ReportViewer. In the following example, the ReportViewer component displays the Sales Dashboard Report. 
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category, select the ASP.NET MVC4 Web Application template, and then click OK. The following screenshot displays the Project Creation Wizard.
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 The following screenshot displays how to select Internet application template with razor view engine.
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-Add References, Scripts, Styles and Control in CSHTML Page
 
-Add References
+### Add References, Scripts, Styles and Control in CSHTML Page
+
+#### Add References
 
 1. In the Solution Explorer, right-click the References folder and then click Add Reference
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
-
+	![](Getting-Started_images/Getting-Started_img4.png)
 
 2. Add the following assemblies
-* System.Web.Routing,  
-* System.Web.Http,
-* System.Web.WebHost
-* System.Net.Http,
-* System.Net.Http.WebRequest,
-* System.Net.Http.Formatting,
-* Syncfusion.Core.dll,
-* Syncfusion.Linq.Base.dll,
-* Syncfusion.EJ,
-* Syncfusion.EJ.MVC,
-* Syncfusion.EJ.ReportViewer,
-* Syncfusion.ReportControls.Wpf
-* Syncfusion.ReportWriter.Base
-* Syncfusion.Pdf.Base,
-* Syncfusion.XlsIO.Base,
-* Syncfusion.DocIO.Base
-* Synfusion.Shared.Wpf
-* Syncfusion.Chart.Wpf
-* Syncfusion.Gauge.Wpf
-* Syncfusion.SfMaps.Wpf 
+	* System.Web.Routing,  
+	* System.Web.Http,
+	* System.Web.WebHost
+	* System.Net.Http,
+	* System.Net.Http.WebRequest,
+	* System.Net.Http.Formatting,
+	* Syncfusion.Core.dll,
+	* Syncfusion.Linq.Base.dll,
+	* Syncfusion.EJ,
+	* Syncfusion.EJ.MVC,
+	* Syncfusion.EJ.ReportViewer,
+	* Syncfusion.ReportControls.Wpf
+	* Syncfusion.ReportWriter.Base
+	* Syncfusion.Pdf.Base,
+	* Syncfusion.XlsIO.Base,
+	* Syncfusion.DocIO.Base
+	* Synfusion.Shared.Wpf
+	* Syncfusion.Chart.Wpf
+	* Syncfusion.Gauge.Wpf
+	* Syncfusion.SfMaps.Wpf 
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img5.jpeg)' | markdownify }}
-{:.image }
-_Note: Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package._
-
-
+    > Note: Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package.
 
 3. Click OK
 
-Add Scripts and Styles
+#### Add Scripts and Styles
 
-Add the script files and CSS files in the <title> tag of the _Layout.cshtml page.
+Add the script files and CSS files in the &lt;title&gt; tag of the _Layout.cshtml page.
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img6.jpeg)' | markdownify }}
-{:.image }
-_Note: Use the following code example while adding scripts and styles._
+> Note: Use the following code example while adding scripts and styles.
 
-[CSHTML]
+{% highlight html %}
+   
+		<link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" />
 
-<link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" />
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"> </script>
 
-<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"> </script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"> </script>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"> </script>
+		<script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"></script>
 
-<script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"></script>
+		<script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"></script>
 
-<script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"></script>
+{% endhighlight %}
 
-
-
-Add Control in View page
+#### Add Control in View page
 
 Add the following code example in the Index.cshtml page that is already created. Set the desired ReportPath and ReportServiceUrl to ReportViewer.
 
-[CSHTML]
+{% highlight c# %}
 
 @using Syncfusion.MVC.EJ
 
@@ -115,19 +104,11 @@ Add the following code example in the Index.cshtml page that is already create
 
 @using Syncfusion.JavaScript.ReportViewer
 
-
-
 @{
-
     ViewBag.Title = "Index";
-
 }
 
-
-
 <h2>Index</h2>
-
-
 
 <div>
 
@@ -135,25 +116,23 @@ Add the following code example in the Index.cshtml page that is already create
 
 </div>
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image355_7.jpg](Getting-Started_images/Getting-Started_img7.jpeg)' | markdownify }}
-{:.image }
-_Note: Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version._
+{% endhighlight %}
 
-Add WebAPI controller for ReportViewer
+> Note: Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version.
+
+
+### Add WebAPI controller for ReportViewer
 
 The MVC ReportViewer uses WebApi services to process the report file and process the request from control.
 
-{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
-
-
-Inherit IReportController
+## Inherit IReportController
 
 The ApiController inherits the IReportController and you can add the following code example to its methods definition in order to process the report file. The interface IReportController contains the required actions and helper methods declaration to process the report. The ReportHelper class contains helper methods that helps to process Post/Get request from control and return the response to control.
 
-[C#]
+{% highlight c# %}
 
 using Syncfusion.EJ.ReportViewer;
 
@@ -169,16 +148,12 @@ using System.Net.Http;
 
 using System.Web.Http;
 
-
-
 namespace ReportViewerDemo.Api
 
 {
-
     public class ReportApiController : ApiController, IReportController
 
     {
-
         //Post action for processing the rdl/rdlc report
 
         public object PostReportAction(Dictionary<string, object> jsonResult)
@@ -188,8 +163,6 @@ namespace ReportViewerDemo.Api
             return ReportHelper.ProcessReport(jsonResult, this);
 
         }
-
-
 
         //Get action for getting resources from the report
 
@@ -205,8 +178,6 @@ namespace ReportViewerDemo.Api
 
         }
 
-
-
         //Method will be called when initialize the report options before start processing the report
 
         public void OnInitReportOptions(ReportViewerOptions reportOption)
@@ -217,8 +188,6 @@ namespace ReportViewerDemo.Api
 
         }
 
-
-
         //Method will be called when reported is loaded
 
         public void OnReportLoaded(ReportViewerOptions reportOption)
@@ -228,16 +197,19 @@ namespace ReportViewerDemo.Api
 //You can update report options here
 
         }   
-
     }
 
 }
 
-WebAPI Routing
+{% endhighlight %}
+
+
+
+## WebAPI Routing
 
 You can route the WebAPI in Application_Start event into Global.asax file as follows.
 
-[C#]
+{% highlight c# %}
 
 using System;
 
@@ -253,12 +225,9 @@ using System.Web.SessionState;
 
 using System.Web.Http;
 
-
-
 namespace ReportViewerDemo
 
 {
-
     public class Global : System.Web.HttpApplication
 
     {
@@ -276,66 +245,61 @@ namespace ReportViewerDemo
           defaults: new { id = RouteParameter.Optional });
 
         }
-
     }
-
 }
 
+{% endhighlight %}
 
 
-Run the Application
+### Run the Application
 
 Run the sample application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-{{ '![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer.png](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
-{:.image }
+![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer.png](Getting-Started_images/Getting-Started_img9.png)
 
 
-Load SSRS Server Reports
+## Load SSRS Server Reports
 
 ReportViewer supports to load RDL/RDLC files from SSRS Server. The following steps help you to load reports from SSRS Server.
 
 1. Set the ReportPath from SSRS and SSRS ReportServerUrl in the ReportViewer properties.
 
-[CSHTML]
+   ~~~ cs
+	
+		@using Syncfusion.MVC.EJ
 
-@using Syncfusion.MVC.EJ
+		@using Syncfusion.JavaScript.Models
 
-@using Syncfusion.JavaScript.Models
+		@using Syncfusion.JavaScript
 
-@using Syncfusion.JavaScript
+		@using Syncfusion.JavaScript.ReportViewer
 
-@using Syncfusion.JavaScript.ReportViewer
+		@{
 
+			ViewBag.Title = "Index";
 
+		}
 
-@{
+		<h2>Index</h2>
 
-    ViewBag.Title = "Index";
+		<div>    
+	
+			@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
 
-}
-
-
-
-<h2>Index</h2>
-
-
-
-<div>    @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
-
-</div>      
+		</div> 
+	
+   ~~~
+   {:.prettyprint }     
 
 2. Add the credential information in ReportApiController’sOnInitReportOptions method that is inherited in IReportController.
 
-[CS]
+   ~~~ cs
 
-        public void OnInitReportOptions(ReportViewerOptions reportOption)
+		public void OnInitReportOptions(ReportViewerOptions reportOption)
 
         {
 
-//Add SSRS Server and database credentials here
-
-
+			//Add SSRS Server and database credentials here
 
             reportOption.ReportModel.ReportServerCredential = new System.Net.NetworkCredential("ssrs", "RDLReport1");
 
@@ -343,107 +307,104 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 
         }
 
-
+   ~~~
+   {:.prettyprint }
 
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-{{ '![](Getting-Started_images/Getting-Started_img10.png)' | markdownify }}
-{:.image }
+	![](Getting-Started_images/Getting-Started_img10.png)
 
-
-
-
-Load RDLC Reports
+## Load RDLC Reports
 
 The ReportViewer has data binding support to visualize the RDLC reports. The following code example helps you to bind data to ReportViewer.
 
 1. Assign the RDLC report path to ReportViewer’sReportPath property and set the data sources to the ReportViewer’sDataSources property.
 
-[CSHTML]
+   ~~~ html
+  
+		@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("~/App_Data/Product List.rdlc")
 
-@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("~/App_Data/Product List.rdlc")
+		.ReportServiceUrl("/api/ReportApi").DataSources(ds => ds.Name("list").Value(ViewData["reportDsource"]).Add()))
+  
+   ~~~
+   {:.prettyprint }
 
-.ReportServiceUrl("/api/ReportApi").DataSources(ds => ds.Name("list").Value(ViewData["reportDsource"]).Add()))
 
 2. The following code example illustrates the creation of business object data source.
 
-[CS]
+   ~~~ cs
 
-namespace ReportViewerDemo.Controllers
+		namespace ReportViewerDemo.Controllers
 
-{
+		{
 
-    public partial class ReportViewerController : Controller
+			public partial class ReportViewerController : Controller
 
-    {
+			{
 
-        public ActionResult ProductList()
+				public ActionResult ProductList()
 
-        {
+				{
 
-            ProductList prodlist = new ProductList();
+					ProductList prodlist = new ProductList();
 
-            ViewData["reportDsource"] = prodlist.GetData();
+					ViewData["reportDsource"] = prodlist.GetData();
 
-            return View();
+					return View();
 
-        }
+				}
 
-    }
-
-
-
-    public class ProductList
-
-    {
-
-        public string ProductName { get; set; }
-
-        public string OrderId { get; set; }
-
-        public double Price { get; set; }
-
-        public string Category { get; set; }
-
-        public string Ingredients { get; set; }
-
-        public string ProductImage { get; set; }
+			}
 
 
 
-        public IList GetData()
+			public class ProductList
 
-        {
+			{
 
-            List<ProductList> datas = new List<ProductList>();
+				public string ProductName { get; set; }
 
-            ProductList data = null;
+				public string OrderId { get; set; }
 
-            data = new ProductList() {ProductName = "Baked Chicken and Cheese",OrderId = "323B60",Price = 55,Category = "Non-Veg",Ingredients = "grilled chicken, corn and olives.",ProductImage = "" };
+				public double Price { get; set; }
 
-            datas.Add(data);
+				public string Category { get; set; }
 
-            data = new ProductList() {ProductName = "Chicken Delite",OrderId = "323B61",Price = 100,Category = "Non-Veg",Ingredients = "cheese, chicken chunks, onions & pineapple chunks.",ProductImage = ""};
+				public string Ingredients { get; set; }
 
-            datas.Add(data);
+				public string ProductImage { get; set; }
 
-            data = new ProductList() {ProductName = "Chicken Tikka",OrderId = "323B62",Price = 64,Category = "Non-Veg",Ingredients = "onions, grilled chicken, chicken salami & tomatoes.",ProductImage = ""};
+				public IList GetData()
 
-            datas.Add(data);
+				{
 
-            return datas;
+					List<ProductList> datas = new List<ProductList>();
 
-        }
+					ProductList data = null;
 
-    }
+					data = new ProductList() {ProductName = "Baked Chicken and Cheese",OrderId = "323B60",Price = 55,Category = "Non-Veg",Ingredients = "grilled chicken, corn and olives.",ProductImage = "" };
 
-}
+					datas.Add(data);
+
+					data = new ProductList() {ProductName = "Chicken Delite",OrderId = "323B61",Price = 100,Category = "Non-Veg",Ingredients = "cheese, chicken chunks, onions & pineapple chunks.",ProductImage = ""};
+
+					datas.Add(data);
+
+					data = new ProductList() {ProductName = "Chicken Tikka",OrderId = "323B62",Price = 64,Category = "Non-Veg",Ingredients = "onions, grilled chicken, chicken salami & tomatoes.",ProductImage = ""};
+
+					datas.Add(data);
+
+					return datas;
+
+				}
+
+			}
+
+		}
+
+   ~~~
+   {:.prettyprint }
 
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-
-
-{{ '![](Getting-Started_images/Getting-Started_img11.png)' | markdownify }}
-{:.image }
-
-
+	![](Getting-Started_images/Getting-Started_img11.png)

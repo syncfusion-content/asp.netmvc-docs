@@ -92,7 +92,7 @@ The following steps explain how you can enable the EnablePersistence property fo
 
 }).EnablePersistence(true)
 
-{% endhighhlight %}
+{% endhighlight %}
 
 
 
@@ -103,5 +103,5 @@ The output for TreeView when EnablePersistence is set to True is as follows.
 ![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png)
 
 
-_Figure_ _54__: TreeView with enablePersistence_
+_Figure54: TreeView with enablePersistence_
 

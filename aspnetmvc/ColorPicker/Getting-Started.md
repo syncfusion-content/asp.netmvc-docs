@@ -17,8 +17,8 @@ The Essential ASP.NET MVCColorPicker control provides support for selecting the 
 
 In this example, you can learn how to customize ColorPicker control in a category Application. 
 
-{{ '![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 In the following sections you can learn, How to:
@@ -27,14 +27,14 @@ In the following sections you can learn, How to:
 * Initialize the other widgets
 * Add Value to ListBox Control
 
-Create ColorPicker Control
+## Create ColorPicker Control
 
 Use the following steps to create the ColorPicker control.
 
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page for rendering the ColorPicker window.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -42,15 +42,15 @@ Use the following steps to create the ColorPicker control.
 
 @Html.EJ().ColorPicker("CategoryColor").Value("#278787")
 
-
+{% endhighlight  %}
 
 3. Run this code to render the resultant output of the above steps.
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Initialize the other widgets
+
+## Initialize the other widgets
 
 To add the priority value to the ListBox, the text value is obtained from the input element and color for each priority is received by ColorPicker control. To add each new priority value to ListBox control, click the Add button.
 
@@ -62,7 +62,7 @@ You can refer to the following link for more information on creation on ListBox
 
 1. The following code example is used to create the Priority form using ListBox control and ColorPicker control.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -146,11 +146,11 @@ You can refer to the following link for more information on creation on ListBox
 
     </div>
 
-
+{% endhighlight %}
 
 2. Add the following style section to align form fields. 
 
-
+{% highlight css %}
 
 [CSS]
 
@@ -260,11 +260,11 @@ You can refer to the following link for more information on creation on ListBox
 
 </style>
 
-
+{% endhighlight  %}
 
 3. Initialize the element in <script> tag.
 
-
+{% highlight js %}
 
 [JavaScript]
 
@@ -286,23 +286,23 @@ You can refer to the following link for more information on creation on ListBox
 
 </script>
 
-
+{% endhighlight  %}
 
 4. Run the above code to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-Add value to ListBox Control 
+
+## Add value to ListBox Control 
 
 You can add the value to ListBox with selected color by performing the button click event. The following script section define the click event for the button element.
 
 1. Initialize the click event to button element in <script> tag.
 
-
+{% highlight js %}
 
 [JavaScript]
 
@@ -329,14 +329,14 @@ You can add the value to ListBox with selected color by performing the button cl
         }
 
 </script>
-
+{% endhighlight  %}
 
 
 2. The following screenshot illustrates the resultant output after you click Add button.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
+
 
 

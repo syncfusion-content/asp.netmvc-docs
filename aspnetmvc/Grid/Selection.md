@@ -1,0 +1,1074 @@
+---
+layout: post
+title: Selection
+description: selection
+platform: wpf
+control: Grid
+documentation: ug
+---
+
+# Selection
+
+The Selection property is used to highlight a row that you select. 
+
+## Types of selection
+
+ There are two types of Selections. 
+
+* Single
+* Multiple
+
+Single selection is used to select a single row, cell or column in Grid. In Multiple selection you can select more than one row, cell or column. Refer to the following code examples of Selection types.
+
+### Single Selection
+
+By default, the selection type is “Single”.
+
+### Selection Modes
+
+#### Row
+
+By default, the selection mode of the grid is “Row”. This enables you to select the row in the grid. Refer to the following code example.
+
+{% highlight c# %}
+
+[MVC]
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+{% endhighlight  %}
+{% highlight html %}
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+.AllowSelection()
+
+        .AllowPaging()
+
+.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row);})      
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+{% endhighlight %}
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img1.png)
+
+
+
+#### Cell
+
+Cell selection can be enabled using the SelectionMode property. This enables you to select a cell in the grid. Refer to the following code example.
+
+
+{% highlight c# %}
+[MVC]
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+{% highlight html %}
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging() 
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Cell);})
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+{% endhighlight  %}
+
+
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img2.png)
+
+
+
+#### Column
+
+Column selection can be enabled using the SelectionMode property. This enables you to select a particular column in the grid. Refer to the following code example.
+
+
+{% highlight c# %}
+[MVC]
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+{% highlight html %}
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+.AllowSelection()
+
+        .AllowPaging()
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Column);})
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+
+
+{% endhighlight  %}
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img3.png)
+
+
+
+### Multiple Selection
+
+Multiple selection can be enabled using SelectionType property. This allows you to select more than one row, cell and column at a time.
+
+#### Selection Modes
+
+Row
+
+By default, the selection mode of the grid is “Row”. This enable you to select the row in the grid. Refer to the following code example.
+
+
+
+
+{% highlight c# %}
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+{% endhighlight  %}
+{% highlight html %}
+
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging()
+
+        .SelectionType(SelectionType.Multiple)
+
+.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row);})      
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+
+
+{% endhighlight  %}
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img4.png)
+
+
+
+#### Cell
+
+Cell selection can be enabled using the SelectionMode property. This enables you to select a cell in the grid. Refer to the following code example.
+
+
+
+{% highlight c# %}
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+{% endhighlight  %}
+{% highlight html %}
+
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging() 
+
+        .SelectionType(SelectionType.Multiple)
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Cell);})
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+
+
+{% endhighlight  %}
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img5.png)
+
+
+
+#### Column
+
+Column selection can be enabled using the SelectionMode property. This enables you to select a particular column in the grid. Refer to the following code example.
+
+
+
+
+{% highlight c# %}
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+{% highlight html %}
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging()
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Column);})
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+{% endhighlight  %}
+
+
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img6.png)
+
+
+
+## Enable All Modes of selection
+
+You can also enable all the three modes of selection. Refer to the following code example.
+
+
+
+{% highlight c# %}
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+{% highlight html %}
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging()
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row). SelectionMode(SelectionMode.Cell) SelectionMode(SelectionMode.Column)); })
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+
+
+{% endhighlight  %}
+
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img7.png)
+
+
+
+## Enable toggle
+
+You can toggle the selection using the EnableToggle property. This provides support to toggle selection based on the Boolean value specified to the property. By default the EnableToggle property is set to disabled. Refer to the following code example.
+
+
+
+{% highlight c# %}
+
+[controller]
+
+
+
+using MVCSampleBrowser.Models;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Web;
+
+using System.Web.Mvc;
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        //
+
+        // GET: /Default/
+
+
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = OrderRepository.GetAllRecords();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+{% endhighlight  %}
+{% highlight html %}
+
+
+[razor]
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+        .AllowSelection()
+
+        .AllowPaging()
+
+        .SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row).EnableToggle(true); })
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+
+        })
+
+        )
+
+
+
+
+
+
+{% endhighlight  %}
+The following screenshot displays the result of the above code.
+
+![](Selection_images/Selection_img8.png)
+
+
+
+![](Selection_images/Selection_img9.png)
+
+
+
+## Customize Selection Color
+
+In this section, you can learn how to customize or override selection background color through css. The following code example is for Selection color customization.
+
+
+
+{% highlight html %}
+
+[MVC]
+
+[razor]
+
+
+
+<style>
+
+.e-grid td.e-active {
+
+        background-color: lightseagreen !important;
+
+    }
+
+</style>
+
+
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+
+.Datasource((IEnumerable<object>)ViewBag.datasource)
+
+.AllowPaging()
+
+.PageSettings(page => page.PageSize(8))  
+
+.SelectionType(SelectionType.Multiple)
+
+)
+
+
+{% endhighlight  %}
+{% highlight c# %}
+[controller]
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        public ActionResult Default()
+
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+
+
+The following output is displayed as a result of the above code example.
+
+
+
+![](Selection_images/Selection_img10.png)
+
+
+
+## Get selected record data
+
+In this section, you can learn how to get selected records from one Grid and how this selected record is used to update datasource of another Grid. 
+
+
+{% highlight html %}
+
+
+[MVC]
+
+
+
+[razor]
+
+    <div class="label1">
+
+        Master Grid
+
+    </div>
+
+    @(Html.EJ().Grid<EmployeeView>("MasterGrid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource1)      
+
+        .ClientSideEvents(eve => { eve.RowSelected("rowSelected"); })
+
+        )
+
+    <div class="label1">
+
+        Detail Grid</div>
+
+    @(Html.EJ().Grid<OrdersView>("DetailGrid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource2)       
+
+        .AllowPaging(false)
+
+        )
+
+
+{% endhighlight  %}
+{% highlight js %}
+[javascript]
+
+    <script src="http://js.syncfusion.com/demos/web/scripts/jsondata.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {           
+
+            window.rowSelected = function (args) {
+
+                var employeeID = args.currentData.EmployeeID;
+
+                var detaildata = ej.DataManager(window.gridData).executeLocal(ej.Query().where("EmployeeID", ej.FilterOperators.equal, employeeID, false).take(10));
+
+                var gridObj = $("#DetailGrid").ejGrid("instance");
+
+                gridObj.model.dataSource = ej.DataManager(detaildata.slice(0, 5));
+
+                $("#DetailGrid").ejGrid("refreshContent");
+
+            }
+
+        });
+
+    </script>
+
+{% endhighlight  %}
+{% highlight c# %}
+
+[controller]
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+    public partial class GridController : Controller
+
+    {
+
+        public ActionResult MasterDetails()
+
+        {
+
+            var MasterData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
+
+            ViewBag.dataSource1 = MasterData;
+
+
+
+            var DetailData = new NorthwindDataContext().OrdersViews.Where(ord => ord.EmployeeID == 1).Take(5).ToList();
+
+            ViewBag.dataSource2 = DetailData;
+
+            return View();
+
+        }
+
+    }
+
+}
+
+
+{% endhighlight  %}
+
+
+The following output is displayed as a result of the above code example.
+
+![](Selection_images/Selection_img11.png)
+
+
+

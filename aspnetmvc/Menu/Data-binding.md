@@ -77,7 +77,7 @@ To define the local data to the Menu control, map the user-defined JSON data nam
 
 {% highlight html %}
 
-[CSHTML]       // Add the following code in your CSHTML page.@Html.EJ().Menu("menujson").MenuFields(f => f.Datasource((IEnumerable<Check.Controllers.CheckController.MenuJson>)ViewBag.datasource).Id("pid").Text("mtext").ParentId("parent"))
+[CSHTML]       // Add the following code in your CSHTML page.@Html.EJ().Menu("menujson").MenuFields(f => f.Datasource((IEnumerable<Check.Controllers.CheckController.MenuJson>)ViewBag.datasource).Id("pid").Text("mtext").ParentId("parent"))</td></tr>
 
 {% endhighlight %}
 {% highlight c# %}

@@ -85,7 +85,7 @@ You can specify the fieldsmapping in DatePicker. You can also provide the suppor
 
 The DatePicker widget provides support to customize the particular date. i.e. you can customize the date with image and tooltip options. The following table specifies the special date fields and its configuration.
 
-_Table_ _1_: MVC table_
+_Table1: MVC table_
 
 <table>
 <tr>
@@ -109,9 +109,8 @@ String </td></tr>
 <tr>
 <td>
 Icon </td><td>
-![](Behavior-Settings_images/Behavior-Settings_img2.jpeg)
-{:.image }
-You can set the customized css with this property. {{     '_Note: You need to set the image as background url and its styles within this class_ '| markdownify }}</td><td>
+{{'![](Behavior-Settings_images/Behavior-Settings_img2.jpeg)'|markdownify}}
+You can set the customized css with this property. {{     '_Note: You need to set the image as background url and its styles within this class_'| markdownify }}</td><td>
 Null </td><td>
 String</td></tr>
 </table>
@@ -136,7 +135,7 @@ The following steps explain you how to specify the fieldsmapping in DatePicker w
 
 2. Add the following styles to specify the fields mapping in DatePicker widget.
 
-_Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed._
+> Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
 
 
 

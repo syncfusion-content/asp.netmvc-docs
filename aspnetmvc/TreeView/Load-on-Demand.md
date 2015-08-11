@@ -22,7 +22,7 @@ As explained in the local data source add a class in the models with required pr
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below
 
 
-{% highlight hmtl %}
+{% highlight html %}
 
 // Define local data source elements with  fields            
 
@@ -58,7 +58,7 @@ public class treeviewData
 
 2. In the controller page, create a List of specified class type.
 
-{% highlight html %}
+{% highlight c# %}
 
 
 //Refer the Model in the controller
@@ -157,14 +157,14 @@ The output for TreeView when LoadOnDemand is set to “True” is as follows.
 <table>
 <tr>
 <td>
-{ ' ![](Load-on-Demand_images/Load-on-Demand_img1.png)' | markdownfy }}
+{{ '![](Load-on-Demand_images/Load-on-Demand_img1.png)' | markdownify }}
 
 While Loading</td><td>
-{ '![](Load-on-Demand_images/Load-on-Demand_img2.png)' | markdownfy }}
+{ '![](Load-on-Demand_images/Load-on-Demand_img2.png)' | markdownify }}
 
 After Loading</td></tr>
 </table>
 
 
-_Figure_ _51__: TreeView with loadOnDemand_
+_Figure51: TreeView with loadOnDemand_
 

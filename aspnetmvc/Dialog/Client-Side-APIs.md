@@ -11,13 +11,13 @@ documentation: ug
 
 The Dialog Widget provides some Client side Methods to process the control from script side.
 
-_Table_ _1__: Client side API for Dialog Table_
+_Table1: Client side API for Dialog Table_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 Open</td><td>
@@ -35,7 +35,8 @@ This method will check whether the Dialog widget is in open state or not and ret
 Destroy</td><td>
 This method destroy the Dialog widget</td></tr>
 </table>
-Open and Close
+
+## Open and Close
 
 To open or close the Dialog widget by using client side API:
 
@@ -164,45 +165,7 @@ The output of Dialog open is as follows.
 
 
 
-_Figure_ _21__: Dialog is opened_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_Figure21: Dialog is opened_
 
 3.The output of Dialog close is as follows.     
 
@@ -212,13 +175,13 @@ _Figure_ _21__: Dialog is opened_
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img2.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img2.png)
 
 
-_Figure_ _22__: Dialog is closed_                                                                     
 
-IsOpened
+_Figure22: Dialog is closed_                                                                     
+
+## IsOpened
 
 This API is used to check whether the dialog is opened state or closed state through alert message.
 
@@ -228,7 +191,7 @@ To check the Dialog widget state by using client side API:
 
 Render input button controls for performing open and close actions.
 
-
+{% highlight html %}
 
 [CHTML]
 
@@ -309,12 +272,13 @@ Render input button controls for performing open and close actions.
 </div>
 
 
+{% endhighlight %}
 
 At initially set the width and height to the dialog then create object for that dialog component, using this object to accessing the methods whether the dialog is open or not.
 
 
 
-
+{% highlight js %}
 
 [JavaScript]
 
@@ -392,25 +356,24 @@ var _isopen = eDialog.isOpened(); /* checking the state of ejDialog widget */
 
 
 
-
+{% endhighlight %}
 
 2. The output of Dialog Open is as follows.    
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img3.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img3.png)
 
 
-_Figure_ _23__: Dialog is in open state_            
+_Figure23: Dialog is in open state_            
 
 
 
 3. The output of Dialog Close is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img4.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img4.png)
 
 
-_Figure_ _24__: Dialog is in Closed state_
+
+_Figure24: Dialog is in Closed state_
 
 
 

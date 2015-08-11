@@ -15,11 +15,11 @@ documentation: ug
 
 
 
-{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
-{:.image }
+![](Overview_images/Overview_img1.png)
 
 
-Key Features
+
+## Key Features
 
 Below are the key features of Schedule control:
 

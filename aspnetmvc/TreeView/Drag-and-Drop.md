@@ -103,15 +103,16 @@ The output for TreeView when AllowDragAndDrop is set to True.
 <table>
 <tr>
 <td>
-{{ ' ![](Drag-and-Drop_images/Drag-and-Drop_img1.png)' | markdownfy }}
+{{ ' ![](Drag-and-Drop_images/Drag-and-Drop_img1.png)' | markdownify }}
 
 </td><td>
 
-{{ '![](Drag-and-Drop_images/Drag-and-Drop_img2.png)' | markdownfy }}
+{{ '![](Drag-and-Drop_images/Drag-and-Drop_img2.png)' | markdownify }}
 
 </td></tr>
 </table>
-_Figure_ _41__: Drag And Drop TreeView_
+
+_Figure41: Drag And Drop TreeView_
 
 ## Allow Drop Child
 
@@ -195,7 +196,7 @@ We can prevent the TreeNodes from dropping as child. If we specify the value as 
 
 
 
- ## Allow Drop Sibling
+## Allow Drop Sibling
 
 You can drag the root node and drop it into the same level of node that is a sibling node in TreeView by using the property AllowDropSibling. You can disable this option using the property AllowDropSibling in TreeView control as follows.
 

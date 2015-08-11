@@ -7,15 +7,15 @@ control: Diagram
 documentation: ug
 ---
 
-## Symbol Palette
+# Symbol Palette
 
 The SymbolPalette displays a collection of palettes. The Palette shows nodes and connectors. It allows you to drag and drop the nodes and connectors on the Diagram. The Palette has a header that displays the name and also has an option that allows you to expand or collapse its items. Each node or connector in the palette is called a Palette Item.
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image147_82.jpg](Symbol-Palette_images/Symbol-Palette_img1.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/js/ImagesExt/image147_82.jpg](Symbol-Palette_images/Symbol-Palette_img1.jpeg)
 
 
-### Create and Add Symbols in the Palette
+
+## Create and Add Symbols in the Palette
 
 Nodes and Connectors are added to the Palette as Palette Items.
 
@@ -23,9 +23,7 @@ The following code example illustrates how to create and add symbols in Palette.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[controller]
 
 //Creates palette nodes and add it in symbolpalette
 
@@ -67,15 +65,15 @@ public void GenerateConnectors(SymbolPaletteProperties symbolPalettes)
 
 {% endhighlight %}
 
-### Add Nodes and Connectors
+## Add Nodes and Connectors
 
 The Diagram provides support for adding nodes and connectors through the Symbol Palette. To add a node to the Diagram, drag the desired symbol from the SymbolPalette to the drawing area and release the pointer. The desired palette item that is clicked, is added to the Diagram when you set the desired Diagram ID to the Symbol Palette’s DiagramId.
 
-{{ '![](Symbol-Palette_images/Symbol-Palette_img2.png)' | markdownify }}
-{:.image }
+![](Symbol-Palette_images/Symbol-Palette_img2.png)
 
 
-### Appearance
+
+## Appearance
 
 The following properties are used to customize the appearance of the Symbol Palette.
 
@@ -83,10 +81,10 @@ _Appearance_
 
 <table>
 <tr>
-<td>
-Properties</td><td>
-Data Type</td><td>
-Description</td></tr>
+<th>
+Properties</th><th>
+Data Type</th><th>
+Description</th></tr>
 <tr>
 <td>
  Width</td><td>
@@ -144,9 +142,7 @@ The following code illustrates how to customize the Appearance ofthe Palette.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 
 
@@ -178,11 +174,11 @@ The following code illustrates how to customize the Appearance ofthe Palette.
 
 {% endhighlight %}
 
-### Preview for Drag and Drop
+## Preview for Drag and Drop
 
 Diagram provides preview support for Paletteitem during drag and drop. When you drag an item from the palette to Diagram, a preview of the dragged item is displayed.
 
-Preview Appearance
+### Preview Appearance
 
 You can customize the preview size and position by using the following properties.
 
@@ -190,10 +186,10 @@ _Preview Appearance_
 
 <table>
 <tr>
-<td>
-Properties</td><td>
-Data Type</td><td>
-Description</td></tr>
+<th>
+Properties</th><th>
+Data Type</th><th>
+Description</th></tr>
 <tr>
 <td>
 PreviewWidth</td><td>
@@ -216,9 +212,7 @@ The following code example illustrates how to customize Preview Content.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[controller]
 
 //Sets properties to symbol palette preview
 

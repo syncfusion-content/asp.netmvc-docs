@@ -7,55 +7,54 @@ control: PivotGrid
 documentation: ug
 ---
 
-## Paging
+# Paging
 
-> _Note:__This feature is applicable only for OLAP datasource._
+Note: This feature is applicable only for OLAP datasource.
 
-Pager
+##Pager
 
 The PivotGrid is viewed page-by-page through Pager option. The Pager is set to PivotGrid using following code example.
 
 
-
-[MVC]
+{% highlight html %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc")
 
 @Html.EJ().Pivot().PivotPager("PivotPager1").TargetControlID("PivotGrid1")
 
-
+{% endhighlight %}
 
 The page size for categorical and series axes are set in the OlapReport. Pager is loaded with current page and total pages of PivotGrid is automatically displayed as illustrated in the following screenshot. The icons to move pages to next, last, previous and first are added.  Also you can directly navigate to the desired page by entering the appropriate numeric value into the text box.
 
 
 
-{{ '![](Paging_images/Paging_img1.png)' | markdownify }}
-{:.image }
+![](Paging_images/Paging_img1.png)
 
 
-Virtual Scrolling
+
+##Virtual Scrolling
 
 The large PivotGrid data content is viewed page-by-page using VirtualScrolling. The page size for categorical and series axes are set in OlapReport. By enabling VirtualScrolling, the number of rows and columns for the PivotGrid are set as entered in the OlapReport. By scrolling the horizontal and vertical scrollbars, the categorical and series page numbers are obtained and PivotGrid contents are refreshed accordingly.
 
-[MVC] 
+{% highlight html %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc").EnableVirtualScrolling(true) 
 
+{% endhighlight %}
 
+![](Paging_images/Paging_img2.png)
 
-{{ '![](Paging_images/Paging_img2.png)' | markdownify }}
-{:.image }
 
 
 _PivotGrid with Virtual Scroller_
 
-{{ '![Description: C:/Users/Narendhran Muthuvel/Pictures/sshot-1.png](Paging_images/Paging_img3.png)' | markdownify }}
-{:.image }
+![Description: C:/Users/Narendhran Muthuvel/Pictures/sshot-1.png](Paging_images/Paging_img3.png)
 
 
-OLAP Report for Paging and Virtual Scrolling
 
-[C#]
+##OLAP Report for Paging and Virtual Scrolling
+
+{% highlight C# %}
 
 
 
@@ -108,6 +107,6 @@ measureElementColumn.Elements.Add(new MeasureElement { Name = "Sales Amount"}
 olapReport.CategoricalElements.Add(measureElementColumn);
 
 
-
+{% endhighlight %}
 
 

@@ -72,7 +72,7 @@ With the Keyboard Navigationenabled in the DatePicker widget, it is possible to 
 
 The various keyboard shortcuts available within the DatePicker widget are discussed in the following table.
 
-_Table_ _5_: Keyboard navigation_
+_Table5: Keyboard navigation_
 
 <table>
 <tr>

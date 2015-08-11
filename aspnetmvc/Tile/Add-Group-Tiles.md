@@ -14,7 +14,7 @@ To make a Tile as grouped tile, you can use the following mentioned pre-defined 
 <table>
 <tr>
 <th>
-Class Name</th><h>
+Class Name</th><th>
 Explanation</th></tr>
 <tr>
 <td>
@@ -29,12 +29,9 @@ To align the tile in column manner</td></tr>
 small-col-2</td><td>
 To align the small size tiles</td></tr>
 </table>
-
-
 To render group tile, refer to the following code example.
 
 {% highlight html %}
-
 
 <div class="group">
 
@@ -94,6 +91,7 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
 
 {% endhighlight %}
+
 
 
 ![](Add-Group-Tiles_images/Add-Group-Tiles_img1.png)

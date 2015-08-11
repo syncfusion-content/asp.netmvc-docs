@@ -42,7 +42,7 @@ The following screenshot illustrates a Toolbar with horizontal orientation.
 
 ![](Orientation_images/Orientation_img1.png)
 
-_Figure_ _9__: Toolbar with Horizontal Orientation_
+_Figure 9: Toolbar with Horizontal Orientation_
 
 
 

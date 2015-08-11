@@ -341,7 +341,7 @@ Execute this code example to render the following output.
 
 
 
-You can also add additional functionalities to Dialog control such as Ajax content, list of header icon actions such as close, minimize, maximize actions and model Dialog.__
+You can also add additional functionalities to Dialog control such as Ajax content, list of header icon actions such as close, minimize, maximize actions and model Dialog.
 
 ### Add Validation
 

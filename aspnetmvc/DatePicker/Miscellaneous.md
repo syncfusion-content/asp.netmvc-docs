@@ -43,7 +43,7 @@ The following steps explain you how to specify the width of the DatePicker input
 
 Highlight section highlights the current month, current week, current workdays. You can highlight a week, month, and work days by using “HighlightSection” property.
 
-_Table_ _6__: Highlight Selection_
+_Table6: Highlight Selection_
 
 <table>
 <tr>
@@ -169,7 +169,7 @@ The following steps explain you how to hide the ToolTip in the DatePicker.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{ % highlight html %}
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized tooltip*@
 

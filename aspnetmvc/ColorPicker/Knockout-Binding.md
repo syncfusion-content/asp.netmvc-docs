@@ -7,7 +7,7 @@ control: ColorPicker
 documentation: ug
 ---
 
-## Knockout Binding
+# Knockout Binding
 
 Knockout support allows you to bind the HTML elements against any of the available data models.
 
@@ -26,7 +26,7 @@ For more information about Knockout binding, you can refer to the online documen
 
 1. The following example depicts how you can bind data to the ColorPicker widget through knockout support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -69,7 +69,8 @@ For more information about Knockout binding, you can refer to the online documen
     </div>
 
 </div>
-
+{% endhighlight  %}
+{% highlight js %}
 <script>
 
     window.viewModel = {
@@ -89,7 +90,8 @@ For more information about Knockout binding, you can refer to the online documen
     });
 
 </script>
-
+{% endhighlight  %}
+{% highlight css %}
 <style>
 
     .element {
@@ -118,13 +120,13 @@ For more information about Knockout binding, you can refer to the online documen
 
 </style>
 
-
+{% endhighlight  %}
 
 The following screenshot displays the output of the above code example.
 
 
 
-{{ '![](Knockout-Binding_images/Knockout-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Knockout-Binding_images/Knockout-Binding_img1.png)
+
 
 

@@ -48,7 +48,7 @@ The Essential ASP.NET MVC Splitter is a layout control that allows you to divide
 
     })
 
-{% endhighight %}
+{% endhighlight %}
 
 
 
@@ -170,7 +170,7 @@ Create the Data Source as List of Objects for TreeView and initialize as follows
 Add the following data list to bind in the controller page and define the corresponding data.
 
 
-{% highlight html %}
+{% highlight c# %}
 
 
 
@@ -296,7 +296,7 @@ To design the TreeView tolook like Mail options application, you can create the 
 
 _[Installed Drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\XX.X.X.XX\MVC \Samples\web\Images\mail\ mailicons.png_
 
-_Note: XX.X.X.XX represents the Essential Studio version number that you are using currently._
+> Note: XX.X.X.XX represents the Essential Studio version number that you are using currently.
 
 Copy the “mailicons.png” from the above location and paste it in your MVC application.
 

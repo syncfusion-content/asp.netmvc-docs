@@ -73,5 +73,5 @@ The following steps explains the implementation of multiple Dialog in the same w
 
 
 
-_Figure_ _18__: Multiple Dialog_                                                                                            
+_Figure18: Multiple Dialog_                                                                                            
 

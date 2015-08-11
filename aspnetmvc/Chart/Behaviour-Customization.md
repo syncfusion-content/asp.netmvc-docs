@@ -413,7 +413,7 @@ This event is handled before the marker of each series point gets rendered; a pa
 
 {% endhighlight  %}
 
-DisplayTextRendering: function
+### DisplayTextRendering: function
 
 This event is handled before the dataLabel of each series points gets rendered; a parameter sender is passed to the handler. Using sender.data.text you can change the dataLabel of each point in the series.
 
@@ -566,7 +566,8 @@ This event is handled when you click the legend item; a parameter sender is pass
 
 
 {% endhighlight  %}
-LegendItemMouseMove: function
+
+### LegendItemMouseMove: function
 
 This event is handled when you move the mouse over the legend item; a parameter sender is passed to the handler. Using sender.data.legendItem.Text you can change the text of each legend text.
 

@@ -44,5 +44,5 @@ Output of above steps
 ![](RTL-support_images/RTL-support_img1.png)
 
 
-_Figure_ _18__: Toggle button with RTL support_
+_Figure 18: Toggle button with RTL support_
 

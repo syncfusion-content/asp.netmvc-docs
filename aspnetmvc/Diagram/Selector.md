@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Selector
+# Selector
 
 Selector behaves like a container for the selected elements and enables you to update the size, position, and rotation angle of the selected elements.
 
@@ -17,10 +17,10 @@ _Selector Properties_
 
 <table>
 <tr>
-<td>
-Names</td><td>
-Type </td><td>
-Description.</td></tr>
+<th>
+Names</th><th>
+Type </th><th>
+Description.</th></tr>
 <tr>
 <td>
 offset</td><td>
@@ -62,13 +62,13 @@ userHandles</td><td>
 collection</td><td>
 Gets or sets the value that is used to draw the custom handles on the selected elements.</td></tr>
 </table>
-Move, Resize, or Rotate selected items:
+
+## Move, Resize, or Rotate selected items:
 
 The following code example is used to update the size and position of the selected elements.
 
 {% highlight js %}
 
-[JS]
 
 
 
@@ -86,13 +86,12 @@ diagram.updateSelector({ offsetX: 100, offsetY: 100,
 
 {% endhighlight %}
 
-Iterate though selected items:
+## Iterate though selected items:
 
 The following code example is used to get the selected elements.
 
 {% highlight js %}
 
-[JS]
 
 
 
@@ -112,13 +111,12 @@ for(var i=0; i< diagram.model.selectedItems.children.length; i++)
 
 {% endhighlight %}
 
-User Handles:
+## User Handles:
 
  The following code example is used to draw custom handles on the selected elements.
 
 {% highlight js %}
 
-[JS]
 
 
 

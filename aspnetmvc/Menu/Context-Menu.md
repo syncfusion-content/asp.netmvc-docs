@@ -7,7 +7,7 @@ control: Menu
 documentation: ug
 ---
 
-## Context Menu
+# Context Menu
 
 A context menu is a type of menu in a graphical user interface (GUI) that appears when you perform right click operation. In this Menu control you can use a context menu by specifying the type of menu as ContextMenu. A context also provides support for nested level of menu items.
 
@@ -20,7 +20,7 @@ In the following example, a context menu for the division containing text is cre
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 // Add the following code in your CSHTML page.
@@ -69,10 +69,10 @@ In the following example, a context menu for the division containing text is cre
 
 
 
-
+{% endhighlight  %}
 
 2. Add the following code in your style section.
-
+{% highlight css %}
 [CSS]
 
 <style type="text/css">
@@ -97,25 +97,25 @@ In the following example, a context menu for the division containing text is cre
 
 </style>
 
-
+{% endhighlight %}
 
 The following screen shot displays the output of the above code.
 
-{{ '![](Context-Menu_images/Context-Menu_img1.png)' | markdownify }}
-{:.image }
+![](Context-Menu_images/Context-Menu_img1.png)
 
 
-_Figure_ _33__: Context Menu_
+
+_Figure33: Context Menu_
 
 
 
 You can hide and show the context menu using the following methods.
 
-HideContextMenu
+## HideContextMenu
 
 Hides the context Menu control. Add the following script code in the sample in order to hide the context menu.
 
-
+{% highlight js %}
 [Javascript]
 
 <script type="text/javascript">
@@ -143,11 +143,12 @@ Hides the context Menu control. Add the following script code in the sample in o
     });
 
 </script>
+{% endhighlight  %}
 
-ShowContextMenu
+## ShowContextMenu
 
 Shows the context menu control. Add the following script code in the sample in order to show the context menu.
-
+{% highlight js %}
 
 [Javascript]
 
@@ -180,4 +181,4 @@ Shows the context menu control. Add the following script code in the sample in o
 </script>
 
 
-
+{% endhighlight  %}

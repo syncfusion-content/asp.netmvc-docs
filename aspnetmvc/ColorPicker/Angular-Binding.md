@@ -7,7 +7,7 @@ control: ColorPicker
 documentation: ug
 ---
 
-## Angular Binding
+# Angular Binding
 
 The ColorPicker widget is availed with two types of angularJS support namely, 
 
@@ -26,7 +26,7 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 1. The following code example depicts the way to bind data to the ColorPicker widget through angular support.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -87,9 +87,9 @@ To know more about the Angular binding, you can refer to the online documentatio
     </div>
 
 </div>
+{% endhighlight  %}
 
-
-
+{% highlight css %}
 <style>
 
     .element {
@@ -118,13 +118,13 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 </style>
 
-
+{% endhighlight  %}
 
 
 
 The following screenshot displays the output of the above code example.
 
-{{ '![](Angular-Binding_images/Angular-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Angular-Binding_images/Angular-Binding_img1.png)
+
 
 

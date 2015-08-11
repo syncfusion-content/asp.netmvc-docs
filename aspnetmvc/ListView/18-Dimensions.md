@@ -7,12 +7,11 @@ control: ListView
 documentation: ug
 ---
 
-## 1.8 Dimensions
+# 1.8 Dimensions
 
 To customize the ListView dimensions, Width and Height properties are used.
 
 Refer to the following code examples.
-
 
 
 {% highlight html %}
@@ -41,25 +40,15 @@ Refer to the following code examples.
 
     items.Add().Text("School-age Crafts");
 
-
-
 })
-
-
-
 
 
 {% endhighlight %}
 
 
 
-Screenshot:
+### Screenshot:
 
-{{ '![](18-Dimensions_images/18-Dimensions_img1.png)' | markdownify }}
-{:.image }
-
+![](18-Dimensions_images/18-Dimensions_img1.png)
 
 _Height_
-
-
-

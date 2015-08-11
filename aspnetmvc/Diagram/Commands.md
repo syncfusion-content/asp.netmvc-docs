@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Commands
+# Commands
 
 There are several commands available in Diagram. They are listed as follows.
 
@@ -20,7 +20,8 @@ There are several commands available in Diagram. They are listed as follows.
 * Zoom
 * Nudge
 * Undo/Redo
-### Alignment Command
+
+## Alignment Command
 
 
 Alignment commands are used to align selected nodes/connectors on the Diagram page. The alignment is based on the selection boundary. The alignment command is as follows.
@@ -29,23 +30,23 @@ _Alignment Command_
 
 <table>
 <tr>
-<td>
-Command</td><td>
-Parameter</td><td>
-Description</td></tr>
+<th>
+Command</th><th>
+Parameter</th><th>
+Description</th></tr>
 <tr>
 <td>
 align</td><td>
 direction (string)Values accepted-(“left”/”right”/”center”/”top”/”bottom”/”middle”)</td><td>
 Aligns all the nodes/connectors in the selection list to the left/right/center/top/bottom/middle of the selection boundary</td></tr>
 </table>
-VerticalAlignment commands
+
+## VerticalAlignment commands
 
 The node is aligned vertically to left, right, and center by using alignment commands. The following code illustrates how to execute the vertical alignment command.
 
 {% highlight js %}
 
-[JS]
 
 
 
@@ -71,17 +72,16 @@ diagram.align("center");
 
 
 
-{{ '![](Commands_images/Commands_img1.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img1.png)
 
 
-Horizontal Alignment commands
+
+##Horizontal Alignment commands
 
 The node is aligned horizontally to top, bottom, and middle by using alignment commands. The following code illustrates how to execute the horizontal alignment command.
 
 {% highlight js %}
 
-[JS]
 
 
 
@@ -102,12 +102,11 @@ diagram.align("middle");
 {% endhighlight %}
 
 
-
-{{ '![](Commands_images/Commands_img2.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img2.png)
 
 
-### Spacing Command
+
+## Spacing Command
 
 Spacing commands are used to place selected nodes on the diagram at equal intervals from each other. The objects are spaced within the bounds of the first and last objects in the selection.
 
@@ -115,9 +114,9 @@ _Spacing Command_
 
 <table>
 <tr>
-<td>
-Commands</td><td>
-Description</td></tr>
+<th>
+Commands</th><th>
+Description</th></tr>
 <tr>
 <td>
 spaceAcross</td><td>
@@ -127,7 +126,9 @@ Aligns the nodes/connectors in the selection list with equal horizontal distance
 spaceDown</td><td>
 Aligns the nodes/connectors in the selection list with equal vertical distance between them.</td></tr>
 </table>
-spaceAcross Command
+
+
+##spaceAcross Command
 
 The spaceAcrosscommand spaces selected nodes with equal horizontal distance between them.
 
@@ -135,7 +136,7 @@ The following code illustrates how to run spaceAcrosscommand.
 
 {% highlight js %}
 
-[JS]
+
 
 //SpaceAcross
 
@@ -147,11 +148,11 @@ diagram.spaceAcross();
 
 
 
-{{ '![](Commands_images/Commands_img3.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img3.png)
 
 
-spaceDown Command
+
+##spaceDown Command
 
 The spaceDowncommand spaces selected nodes with equal vertical distance between them.
 
@@ -159,7 +160,7 @@ The following code illustrate how to run spaceDowncommand.
 
 {% highlight js %}
 
-[JS]
+
 
 //space down
 
@@ -171,11 +172,11 @@ diagram.spaceDown();
 
 
 
-{{ '![](Commands_images/Commands_img4.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img4.png)
 
 
-### Sizing Command
+
+## Sizing Command
 
 Sizingcommands are used to size the selected nodes on the Diagram.
 
@@ -185,9 +186,9 @@ _Sizing Command_
 
 <table>
 <tr>
-<td>
-Commands</td><td>
-Description</td></tr>
+<th>
+Commands</th><th>
+Description</th></tr>
 <tr>
 <td>
 sameSize</td><td>
@@ -207,7 +208,7 @@ The following code illustrate how to run the Sizing commands.
 
 {% highlight js %}
 
-[JS]
+
 
 
 
@@ -233,11 +234,11 @@ diagram.sameWidth();
 
 
 
-{{ '![](Commands_images/Commands_img5.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img5.png)
 
 
-### Clipboard commands 
+
+## Clipboard commands 
 
 Clipboardcommands are used to cut, copy, and paste the selected elements on Diagram. The following are the Clipboardcommands.
 
@@ -245,7 +246,7 @@ Clipboardcommands are used to cut, copy, and paste the selected elements on Diag
 * copy
 * paste
 
-Cut
+### Cut
 
 Cuts the selected elements from the Diagram to the Diagram’s clipboard. 
 
@@ -255,7 +256,7 @@ The following code illustrates how to run Cutcommand.
 
 {% highlight js %}
 
-[JS]
+
 
 //Cuts the selected nodes/connectors
 
@@ -265,7 +266,7 @@ diagram.cut();
 
 {% endhighlight %}
 
-Copy
+### Copy
 
 Copies the selected elements from the Diagram to the Diagram’s clipboard. 
 
@@ -275,7 +276,7 @@ The following code illustrates how to run the Copycommand.
 
 {% highlight js %}
 
-[JS]
+
 
 //Copies the nodes/connectors
 
@@ -285,7 +286,7 @@ diagram.copy();
 
 {% endhighlight %}
 
-Paste
+### Paste
 
 Pastes the Diagram’s clipboard data (nodes/connectors) into the Diagram.
 
@@ -295,7 +296,7 @@ The following code illustrates how to run Paste command.
 
 {% highlight js %}
 
-[JS]
+
 
 //Pastes the cut/copied nodes/connectors on diagram
 
@@ -307,15 +308,15 @@ diagram.paste();
 
 
 
-{{ '![](Commands_images/Commands_img6.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img6.png)
 
 
-### Grouping Commands
+
+## Grouping Commands
 
 Grouping commands are used to group/ungroup the selected elements on Diagram.
 
-Group
+## Group
 
 The following code illustrates how to Group the selected elements on Diagram
 
@@ -323,7 +324,7 @@ The following code illustrates how to Group the selected elements on Diagram
 
 {% highlight js %}
 
-[JS]
+
 
 //Groups the selected nodes/connectors
 
@@ -333,13 +334,13 @@ diagram.group();
 
 {% endhighlight %}
 
-Ungroup
+## Ungroup
 
 The following code illustrates how to Ungroup the selected group on diagram.
 
 {% highlight js %}
 
-[JS]
+
 
 //Ungroups the selected group 
 
@@ -349,7 +350,7 @@ diagram.ungroup();
 
 {% endhighlight %}
 
-### Z-Order Commands
+## Z-Order Commands
 
 Z-order commands are used to move the selected elements to the front of other elements. To send it back, move it one step (z-index) forward and move it one step (z-index) backward.
 These commands provide support to control overlapping objects.
@@ -359,7 +360,7 @@ These commands provide support to control overlapping objects.
 * moveForward
 * sendBackward
 
-bringToFront Commands
+## bringToFront Commands
 
 The bringToFront command moves the selected element over other elements by increasing the selected element’s z-index to Diagram element’s maximum value.
 
@@ -369,7 +370,7 @@ The following code illustrates how to execute the BringToFront command.
 
 {% highlight js %}
 
-[JS]
+
 
 //Brings to front
 
@@ -381,11 +382,11 @@ diagram.bringToFront();
 
 
 
-{{ '![](Commands_images/Commands_img7.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img7.png)
 
 
-sendToBackCommands
+
+## sendToBackCommands
 
 The sendToBack command moves the selected element behind all other elements by setting the selected element’s z-index to zero.  
 
@@ -395,7 +396,7 @@ The following code illustrates how to run sendToBack command.
 
 {% highlight js %}
 
-[JS]
+
 
 //Sends back
 
@@ -407,11 +408,11 @@ diagram.sendToBack();
 
 
 
-{{ '![](Commands_images/Commands_img8.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img8.png)
 
 
-moveForward Commands
+
+## moveForward Commands
 
 The moveForward command increases the z-index value of the selected element by 1.
 
@@ -421,7 +422,6 @@ The following code illustrates how to run the moveForward Command.
 
 {% highlight js %}
 
-[JS]
 
 
 
@@ -435,11 +435,11 @@ diagram.moveForward();
 
 
 
-{{ '![](Commands_images/Commands_img9.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img9.png)
 
 
-sendBackwardCommands
+
+## sendBackwardCommands
 
 The sendBackward command decreases the z-index value of the selected element by 1.
 
@@ -447,7 +447,7 @@ The following code illustrates how to run sendBackward command.
 
 {% highlight js %}
 
-[JS]
+
 
 //Sends backward
 
@@ -459,11 +459,11 @@ diagram.sendBackward();
 
 
 
-{{ '![](Commands_images/Commands_img10.png)' | markdownify }}
-{:.image }
+![](Commands_images/Commands_img10.png)
 
 
-### Zoom Commands
+
+## Zoom Commands
 
 Zoom feature is used to zoom-in and zoom-out the Diagram view and also zooming based on the center of current Diagram view. 
 
@@ -473,7 +473,7 @@ The following code illustrates how to zoom-in the Diagram.
 
 {% highlight js %}
 
-[JS]
+
 
 //ZoomIn
 
@@ -501,7 +501,7 @@ The following code illustrates how to zoom-out the Diagram.
 
 {% highlight js %}
 
-[JS]
+
 
 
 
@@ -523,7 +523,7 @@ function ZoomOut()
 
 {% endhighlight %}
 
-### Nudge Commands
+## Nudge Commands
 
 Nudge commands move selected elements on the Diagram up, down, left, or right by 1 pixel. The Nudge command is as follows.
 
@@ -531,10 +531,10 @@ _Nudge Commands_
 
 <table>
 <tr>
-<td>
-Command</td><td>
-Parameter</td><td>
-Description</td></tr>
+<th>
+Command</th><th>
+Parameter</th><th>
+Description</th></tr>
 <tr>
 <td>
 nudge</td><td>
@@ -546,7 +546,7 @@ The following code illustrates how to execute Nudge command.
 
 {% highlight js %}
 
-[JS]
+
 
 //Nudges up
 
@@ -556,17 +556,17 @@ diagram.nudge("up" , 5);
 
 {% endhighlight %}
 
-Nudge by using Arrow Keys
+## Nudge by using Arrow Keys
 
 The corresponding arrow keys are used to move the selected elements up, down, left, or right by 1 pixel.
 
-{{ '![http://help.syncfusion.com/ug/wpf/diagram/ImagesExt/image69_163.png](Commands_images/Commands_img11.png)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/wpf/diagram/ImagesExt/image69_163.png](Commands_images/Commands_img11.png)
+
 
 
 Nudge commands are particularly useful for accurate placement of Diagram elements on the Diagram as it allows you to move by 1 pixel each time.
 
-### FitToPage commands
+## FitToPage commands
 
 FitToPage command helps to fit the Diagram content into the view with respect to width, height, or the whole.
 
@@ -574,10 +574,10 @@ _FittoPage Commands_
 
 <table>
 <tr>
-<td>
-Command</td><td>
-Parameter</td><td>
-Description</td></tr>
+<th>
+Command</th><th>
+Parameter</th><th>
+Description</th></tr>
 <tr>
 <td>
 fitToPage</td><td>
@@ -590,7 +590,7 @@ The following code illustrates how to execute FitToPage command.
 
 {% highlight js %}
 
-[JS] 
+ 
 
 //Fits to page – Fits Diagram based on elements
 
@@ -602,7 +602,7 @@ diagram.fitToPage("page", "content", { "left": 25, "top": 25, "right": 25, "bott
 
 
 
-FitToMode
+## FitToMode
 
 Mode is to specify whether the Diagram content can be fit into view with respect to width, height or entire bounds of Diagram.
 
@@ -610,9 +610,9 @@ _Fit To Modes_
 
 <table>
 <tr>
-<td>
-Modes</td><td>
-Description</td></tr>
+<th>
+Modes</th><th>
+Description</th></tr>
 <tr>
 <td>
 Page</td><td>
@@ -628,7 +628,8 @@ Fits the height of Diagram content into view</td></tr>
 </table>
 
 
-Region
+
+## Region
 
 Region is to specify the region/bounds of Diagram content to fit into view.
 
@@ -636,9 +637,9 @@ _Diagram Region_
 
 <table>
 <tr>
-<td>
-Region</td><td>
-Description</td></tr>
+<th>
+Region</th><th>
+Description</th></tr>
 <tr>
 <td>
 Content</td><td>
@@ -650,6 +651,7 @@ Specifies the region based on page settings.</td></tr>
 </table>
 
 
-Undo/Redo
+
+## Undo/Redo
 Refer to the Link for Undo/Redo Commands.
 

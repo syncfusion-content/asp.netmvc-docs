@@ -62,7 +62,7 @@ It specifies the drill down level of DatePicker. You can restrict the drill down
 
 It accepts the following values. 
 
-_Table_ _4_: Depth level_
+_Table4: Depth level_
 
 <table>
 <tr>

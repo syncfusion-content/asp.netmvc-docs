@@ -7,7 +7,7 @@ control: Menu
 documentation: ug
 ---
 
-## Customizing the Submenu direction
+# Customizing the Submenu direction
 
 You can customize the direction to open the sub menu items using SubMenuDirection property. SubMenuDirection accepts the type as string or enum and value as “Left” and “Right”. 
 
@@ -16,7 +16,7 @@ In the following example, the Sub menus opens in the Left side of the menu.
 1. Add the following code in your View page.
 
 
-
+{% highlight html %}
 [CSHTML]   
 
 // Add the following code in your CSHTML page.
@@ -205,22 +205,22 @@ In the following example, the Sub menus opens in the Left side of the menu.
 
 
 
-
+{% endhighlight  %}
 
 
 
 The output for the above code example is as follows.          
 
-{{ '![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img1.png)' | markdownify }}
-{:.image }
+![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img1.png)
 
 
-_Figure_ _29__: Customizing Submenu Direction_
+
+_Figure29: Customizing Submenu Direction_
 
 You can even achieve auto positioning for Context Menu. Use the following code sample for context menu in order to open the submenu items of context menu in left side.
 
 1. Add the following code in your View page.
-
+{% highlight html %}
 [CSHTML]     
 
 // Add the following code in your CSHTML page.
@@ -271,10 +271,10 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
 
 
-
+{% endhighlight %}
 
 2. Add the following code in your style section.
-
+{% highlight html %}
 [CSS]
 
 
@@ -301,12 +301,12 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
 </style>
 
-
+{% endhighlight %}
 The output for the above code example is as follows.
 
-{{ '![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img2.png)' | markdownify }}
-{:.image }
+![](Customizing-the-Submenu-direction_images/Customizing-the-Submenu-direction_img2.png)
 
 
-_Figure_ _30__: Customizing Submenu direction in Context Menu_
+
+_Figure30: Customizing Submenu direction in Context Menu_
 

@@ -2,19 +2,19 @@
 layout: post
 title: Row
 description: row
-platform: ejmvc
+platform: wpf
 control: Grid
 documentation: ug
 ---
 
-## Row
+# Row
 
-### Details Template
+## Details Template
 
 Details Template feature provides a detailed view about additional information of each row. If you want to view the detailed information, you can expand a row. To enable Details Template, used DetailsTemplate property of Grid as follows:
 
 
-
+{% highlight js %}
 [MVC]
 
 [razor]
@@ -40,7 +40,8 @@ Details Template feature provides a detailed view about additional information o
     </div>
 
 </script>
-
+{% endhighlight  %}
+{% highlight html %}
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
 .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -52,7 +53,8 @@ Details Template feature provides a detailed view about additional information o
  )
 
 
-
+{% endhighlight  %}
+{% highlight c# %}
 [controller]
 
 
@@ -84,7 +86,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
+{% endhighlight  %}
 
 
 
@@ -93,20 +95,20 @@ The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img1.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img1.png)
 
 
 
 
-### Hierarchy
+
+## Hierarchy
 
 
 
 In this section, you can learn how to use the Hierachytree in GridView. The following code example is of HierachyGrid.
 
 
-
+{% highlight html %}
 [MVC]
 
 [razor]
@@ -123,7 +125,8 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 
 )
 
-
+{% endhighlight  %}
+{% highlight js %}
 
 <script src="~/Scripts/jsondata.min.js"></script>
 
@@ -166,7 +169,8 @@ dataSource: data,
 </script>
 
 
-
+{% endhighlight  %}
+{% highlight c# %}
 [controller]
 
 
@@ -207,22 +211,22 @@ return View();
 
 
 
-
+{% endhighlight  %}
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img2.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img2.png)
 
 
-### Row Template
+
+## Row Template
 
 RowTemplate is used to render your template in every row. It is used to place elements inside Grid rows. This feature makes it easier to customise Grid rows with HTML elements.
 
 
-
+{% highlight html %}
 [MVC]
 
 [razor]
@@ -343,8 +347,8 @@ col.HeaderText("Employee Details").TextAlign(TextAlign.Left).Width(70).Add();
 
 )
 
-
-
+{% endhighlight  %}
+{% highlight c# %}
 [controller]
 
 
@@ -381,23 +385,23 @@ return View();
 
 
 
-
+{% endhighlight  %}
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img3.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img3.png)
 
 
-### Customize Hover and AltRow 
+
+## Customize Hover and AltRow 
 
 EnableAltRow and EnableRowHover are graphical features in Grid that are used to enable alternate row color in Grid and enable hover effects while hovering over row cells. By default, these two features are enabled in Grid. In this section, you can learn how to cutomize alternative rows color and hover color in the ejGrid controls.
 
 
 
-
+{% highlight html %}
 
 [MVC]
 
@@ -442,7 +446,8 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
     )
 
 
-
+{% endhighlight  %}
+{% highlight c# %}
 [controller]
 
 
@@ -472,14 +477,14 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
+{% endhighlight  %}
 
 
 The following output is displayed as a result of the above code example.
 
 
 
-{{ '![](Row_images/Row_img4.png)' | markdownify }}
-{:.image }
+![](Row_images/Row_img4.png)
+
 
 

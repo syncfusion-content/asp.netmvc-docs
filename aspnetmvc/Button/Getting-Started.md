@@ -19,14 +19,14 @@ The following screenshot illustrates the functionality of Button in Multimedia p
 
 Figure 1: Multimedia Player
 
-Create Button Control in MVC
+## Create Button Control in MVC
 
 Essential ASP.NET MVC Button control contains built-in features like Click and different display option. You can easily create the Button control by using HTML helper as follows.
 
 1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 2. Add the following code example to the corresponding view page to render Button.
 
-
+{% highlight html %}
 
   <table>
 
@@ -54,15 +54,15 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 </table>
 
+{% endhighlight  %}
 
 
 
-
-Create Multimedia Player
+### Create Multimedia Player
 
 1. Add the Action Result for Audio control in HomeController.cs file.
 
-
+{% highlight c# %}
 
 public ActionResult MyAudio()
 
@@ -74,12 +74,12 @@ public ActionResult MyAudio()
 
         }
 
-
+{% endhighlight  %}
 
 2. Add the following code example to your view page to display Audio control and render the Button.
 
 
-
+{% highlight html %}
   <div class="audiodiv">
 
     <audio controls>
@@ -122,13 +122,13 @@ public ActionResult MyAudio()
 
 </div>
 
-
+{% endhighlight %}
 
 3. Add the following event function to script section in your view page to use Button control feature as the Multimedia player control.
 
 
 
-
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -186,22 +186,21 @@ public ActionResult MyAudio()
 
  </script>
 
-
+{% endhighlight  %}
 
 4. The following screenshot displays Multimedia player control.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
-Create Office Ribbon
+### Create Office Ribbon
 
 In this section, you can learn how to create a MS Office Ribbon used to change the style of the selected text. You can achieve this by using ASP.NET MVC Toggle Button control. You can change the styles by toggling the Button. Add the following code example to your view page to display OfficeRibbon control and render the Button.
 
 
-
+{% highlight html %}
 <table>
 
    <tr>
@@ -238,25 +237,25 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
  </table>
 
-
+{% endhighlight  %}
 
 1. Add the following code example in your view page for sample text.
 
 
-
+{% highlight html %}
 <div class="sample">
 
     <span id="sampletext">Hi Welcome!</span>
 
 </div>
 
-
+{% endhighlight %}
 
 
 
 2. Add the following event function to the script section in your view page to use Button control feature as the Multimedia player control.
 
-
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -316,7 +315,7 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
         </script>
 
-
+{% endhighlight %}
 
 
 
@@ -324,13 +323,13 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 

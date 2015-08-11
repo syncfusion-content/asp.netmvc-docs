@@ -34,5 +34,5 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _1__6: Range for TimePicker widget_
+_Figure 16: Range for TimePicker widget_
 

@@ -49,6 +49,7 @@ cl.TextAngle(10)
 
 )
 {% endhighlight %}
+
 ### Basic Customization
 
 * You can customize Customlabels using the properties such as textAngle, color and font. textAngle attribute is used to display the custom labels in the specified angles and color attribute is used to display the custom labels in specified color. 
@@ -201,14 +202,16 @@ Execute the above code to render the following output.
 4. Bottom
 * When a custom label is to be displayed as an Outer Custom Label, set the API customLabelType as Outer. Refer to the following code example to get the Outer Custom Label.
 
-{% highlight html %}
+{% highlight html%}
+
+
 [Razor]@(Html.EJ().CircularGauge("circularGaugeTooltip")//Defines the outer label position..OuterCustomLabelPosition(OuterCustomLabelPosition.Right)//Defines the tooltip object..Tooltip(ttp=>ttp// Enables the label tooltip..ShowLabelTooltip(true)// Enables the custom label tooltip..ShowCustomLabelTooltip(true))// Customizes the scale options..Scales(SC =>{SC.Radius(130).ShowLabels(true)// Customizes the custom label options..CustomLabels(cl => {cl.Value("AverageSpeed").Font(f =>f.Size("20px").FontFamily("Arial").FontStyle("bold")).Position(p =>p.X(360).Y(30)).Add();})// Customizes the pointers options..Pointers(PO =>{PO.Value(60).Length(90).Add();}).Add();}))
 {% endhighlight %}
-
 {% highlight c# %}
 [Controller]public ActionResult Print(){var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();ViewBag.dataSource = DataSource;return View();}
-{% endhighlight %}
 
+
+{% endhighlight %}
 Execute the above code to render the following output.
 
 ![](Custom-labels_images/Custom-labels_img3.png)

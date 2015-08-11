@@ -7,24 +7,21 @@ control: DateTimePicker
 documentation: ug
 ---
 
-## Start and Depth level
+# Start and Depth level
 
-Start Level
+## Start Level
 
 DateTimePicker allows you to change the starting level view of Calendar inside the DateTimePicker popup. Consider you are creating a login form for your blog. If the “Birth date” field in the form starts from year, it is easy to select date from year, month and date. By default, the Start Level of DateTimePicker is “Month” level view. The “StartLevel” property receives “enum” value. The “Period” class contains four types of levels. Refer the following table to know the different types of start level.
 
 
-
-
-
-_Table_ _3__: Start Level_
+_Table_ _3_: _Start Level_
 
 <table>
 <tr>
-<td>
-StartLevel</td><td>
-Syntax</td><td>
-Description</td></tr>
+<th>
+StartLevel</th><th>
+Syntax</th><th>
+Description</th></tr>
 <tr>
 <td>
 Month</td><td>
@@ -52,25 +49,24 @@ In the following example DateTimePicker popup Start level view is set to “cent
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Start level*@
 
+		@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).Width("175px")
 
-[_cshtml]   
-
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Start level*@
-
-@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).Width("175px")
-
-
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot displays the output for the above code.
 
+   ![](Start-and-Depth-level_images/Start-and-Depth-level_img1.png)
 
 
-{{ '![](Start-and-Depth-level_images/Start-and-Depth-level_img1.png)' | markdownify }}
-{:.image }
 
-
-Depth Level
+## Depth Level
 
 DateTimePicker enables you to set the drill down level of DateTimePicker. Consider, you are going to take the monthly report of sales in your company. In that case, there is no need for selecting date from month view. You can restrict the drill-down of DateTimePicker popup to month view.
 
@@ -80,23 +76,17 @@ The following code snippet is set to DepthLevel in DateTimePicker.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Depth level*@
 
+		@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).DepthLevel(Period.Year) .Width("175px")
 
-[_cshtml]
-
-
-
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Depth level*@
-
-@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).DepthLevel(Period.Year) .Width("175px")
-
-
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot displays the output for the above code.
 
-
-
-{{ '![](Start-and-Depth-level_images/Start-and-Depth-level_img2.png)' | markdownify }}
-{:.image }
-
-
+	![](Start-and-Depth-level_images/Start-and-Depth-level_img2.png)

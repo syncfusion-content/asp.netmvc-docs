@@ -7,7 +7,7 @@ control: Slider
 documentation: ug
 ---
 
-## Slider Types
+# Slider Types
 
 This feature allows you to specify the type of Slider. There are three different types of Slider, Default Slider, Min-Range Slider and Range Slider. By default, Default Slider renders. You can use the SliderType property to choose the type of Slider. Data type of this property is “Enum”
 
@@ -19,10 +19,10 @@ _Property Table for MVC_
 
 <table>
 <tr>
-<td>
-Property</td><td>
-Allowed values</td><td>
-Description</td></tr>
+<th>
+Property</th><th>
+Allowed values</th><th>
+Description</th></tr>
 <tr>
 <td rowspan = "3">
 SliderType</td><td>
@@ -47,7 +47,7 @@ The following steps explains you on how to configure the SliderType property to 
 
 
 
-[_cshtml]
+{% highlight html %}
 
 / / Add this code in your view page
 
@@ -57,14 +57,14 @@ The following steps explains you on how to configure the SliderType property to 
 
 @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("30,60").Width("500"))
 
-
+{% endhighlight %}
 
 Execute the above code example to render the following output.
 
 
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/ss3.PNG](Slider-Types_images/Slider-Types_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/ss3.PNG](Slider-Types_images/Slider-Types_img1.png)
+
 
 
 _Shows different Slider types (Range and Min-Range sliders)_

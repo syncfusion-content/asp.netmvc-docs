@@ -7,21 +7,21 @@ control: DateTimePicker
 documentation: ug
 ---
 
-## Display format
+# Display format
 
-DateTime format
+## DateTime format
 
 DateTimePicker allows you to define the text representation of a date and time value to be displayed in the DateTimePicker control. The format specified is achieved by the DateTimeFormat property. Default value of this property is “M/d/yyyy h: mm tt”. To change the “Time Popup” display format, “TimeDisplayFormat” is used here. The default value of this property is “h:mm t”. 
 
 If your company’s website is going to be used all over the world, following the UTC time is better. Main benefit of UTC Time is that the time is always guaranteed to be _consistent_. In other words, whenever the time zone of customer is changed you don't have to go back or forth in time from the logging time of the customer to your time zone.
 
-_Table_ _1__: DateTime format_
+_Table1: _DateTime format_
 
 <table>
 <tr>
-<td>
-Format</td><td>
-Display in DateTimePicker</td></tr>
+<th>
+Format</th><th>
+Display in DateTimePicker</th></tr>
 <tr>
 <td>
 Short Date and Time– d/M/yy h:mm tt</td><td>
@@ -64,35 +64,34 @@ In the following example, set DateTimeFormat to fulldatetime format.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized date time format*@
 
+		@Html.EJ().DateTimePicker("DateTime").TimePopupWidth(150).TimeDisplayFormat("hh:mm:ss tt").Width("300px").DateTimeFormat("dddd, MMMM dd, yyyy hh:mm:ss tt")
 
-[cshtml]
-
-
-
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized date time format*@
-
-@Html.EJ().DateTimePicker("DateTime").TimePopupWidth(150).TimeDisplayFormat("hh:mm:ss tt").Width("300px").DateTimeFormat("dddd, MMMM dd, yyyy hh:mm:ss tt")
-
-
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot displays the output for the above code.
 
-{{ '![](Display-format_images/Display-format_img1.png)' | markdownify }}
-{:.image }
+	![](Display-format_images/Display-format_img1.png)
 
 
-Day Header Format
+
+## Day Header Format
 
 You can change the format for the days of the week names using DayHeaderFormat property. By default in our DateTimePicker day of the week format in ShowHeaderMin format. For example, Sun for Sunday. To know the different types of day format refer the following table.
 
-_Table_ _2__: DayHeaderFormat_
+_Table_ _2_: _DayHeaderFormat_
 
 <table>
 <tr>
-<td>
-Header Format types</td><td>
-Description</td></tr>
+<th>
+Header Format types</th><th>
+Description</th></tr>
 <tr>
 <td>
 ShowHeaderNone</td><td>
@@ -116,21 +115,21 @@ You can also customize the format according to your needs. This is achieved by c
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
+   ~~~ html
+   
+     [_cshtml]
+	 
+	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized day header format*@
 
+		@Html.EJ().DateTimePicker("DateTime").DayHeaderFormat(Header.ShowHeaderLong).Width("175px").Value("5/15/2015 09:00 AM")
 
-[_cshtml]    
-
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized day header format*@
-
-@Html.EJ().DateTimePicker("DateTime").DayHeaderFormat(Header.ShowHeaderLong).Width("175px").Value("5/15/2015 09:00 AM")
-
+   ~~~
+   {:.prettyprint }
 
 
 2. The following screenshot displays the output for the above code.
 
+	![](Display-format_images/Display-format_img2.png)
 
-
-{{ '![](Display-format_images/Display-format_img2.png)' | markdownify }}
-{:.image }
 
 

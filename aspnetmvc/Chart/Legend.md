@@ -63,7 +63,7 @@ You can position the legend at top, bottom, left or right position of the Chart.
 
 ## Customization
 
-Legend border and shape:
+### Legend border and shape:
 
 In Essential Chart, you can customize the legend shape with different symbols like rectangle, circle, cross, diamond, pentagon, hexagon, star, ellipse, triangle etc. Default value of legend “Shape” is “Rectangle”. And you can draw and customize the outline of Chart legends using border property of legend. Default value of legend border color is “Transparent”. 
 

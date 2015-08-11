@@ -7,15 +7,15 @@ control: Diagram
 documentation: ug
 ---
 
-## Gridlines
+# Gridlines
 
 Gridlines are horizontal and vertical lines behind the Diagram elements. They provide visual guidance when dragging or arranging objects on the Diagram surface.
 
-{{ '![](Gridlines_images/Gridlines_img1.png)' | markdownify }}
-{:.image }
+![](Gridlines_images/Gridlines_img1.png)
 
 
-### SnapConstraints
+
+## SnapConstraints
 
 The Diagram model’s snapSettings.SnapContraints property is used to control snap to grid behavior and visibility of gridlines. 
 
@@ -23,9 +23,9 @@ _SnapConstraints_
 
 <table>
 <tr>
-<td>
-Constraints</td><td>
-Description</td></tr>
+<th>
+Constraints</th><th>
+Description</th></tr>
 <tr>
 <td>
 SnapToHorizontalLines</td><td>
@@ -65,9 +65,8 @@ The following code illustrates how to show or hide gridlines by using constraint
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -91,7 +90,7 @@ model.SnapSettings.SnapConstraints = SnapConstraints.None;
 
 {% endhighlight %}
 
-### Appearance
+## Appearance
 
 You can customize the Appearance of the gridlines by using following properties.
 
@@ -99,10 +98,10 @@ _Appearance_
 
 <table>
 <tr>
-<td>
-Properties</td><td>
-Data Type</td><td>
-Description</td></tr>
+<th>
+Properties</th><th>
+Data Type</td><th>
+Description</th></tr>
 <tr>
 <td>
 LineInterval</td><td>
@@ -130,9 +129,8 @@ The following code illustrates how to customize the Gridlineappearance.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 // Sets various appearance properties to gridlines
 
@@ -172,7 +170,6 @@ model.SnapSettings.HorizontalGridlines.Strokes.LineDashArray = "2 2";
 
 
 
-{{ '![](Gridlines_images/Gridlines_img2.png)' | markdownify }}
-{:.image }
 
+{{'![](Gridlines_images/Gridlines_img2.png)'|markdownify}} 
 

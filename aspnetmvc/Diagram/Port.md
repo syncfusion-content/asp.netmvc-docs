@@ -7,11 +7,11 @@ control: Diagram
 documentation: ug
 ---
 
-## Port
+# Port
 
 Port is a specific connection point on node to make a static connection with node. You can define any number of ports on a node. 
 
-### Create Port
+## Create Port
 
 The following code illustrates how to create a port and add it to nodes port array.
 
@@ -19,9 +19,7 @@ The following code illustrates how to create a port and add it to nodes port arr
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates a port and it to node’s ports collection.
 
@@ -43,11 +41,11 @@ node.Ports.Add(port);
 
 
 
-{{ '![](Port_images/Port_img1.png)' | markdownify }}
-{:.image }
+![](Port_images/Port_img1.png)
 
 
-### Connecting Ports
+
+## Connecting Ports
 
 The connection between specific ports on the node is established by assigning the name of the node’s port to connector’s target port/source port.
 
@@ -57,9 +55,7 @@ The following code illustrates how to establish a port connection:
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates nodes with ports
 
@@ -117,11 +113,11 @@ private Port GetPort(float offsetX, float offsetY, string name){
 
 
 
-{{ '![](Port_images/Port_img2.png)' | markdownify }}
-{:.image }
+![](Port_images/Port_img2.png)
 
 
-### Appearance
+
+## Appearance
 
 You can customize the Port appearance by setting the desired values to the appropriate appearance property.
 
@@ -129,10 +125,10 @@ _Properties_
 
 <table>
 <tr>
-<td>
-Properties</td><td>
-Data Type</td><td>
-Description </td></tr>
+<th>
+Properties</th><th>
+Data Type</th><th>
+Description </th></tr>
 <tr>
 <td>
  Visibility</td><td>
@@ -175,9 +171,7 @@ The following code illustrates how to customize the port.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Sets various appearance properties to port
 
@@ -199,7 +193,7 @@ port.BorderWidth = 2;
 
 {% endhighlight %}
 
-### Constraints
+## Constraints
 
 You can enable or disable certain behaviors of Port by using Port’s constraints property. 
 
@@ -207,9 +201,9 @@ _Constraints_
 
 <table>
 <tr>
-<td>
-Constraints</td><td>
-Description</td></tr>
+<th>
+Constraints</th><th>
+Description</th></tr>
 <tr>
 <td>
 None</td><td>
@@ -225,11 +219,9 @@ The following code illustrates how to set port constraints.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
-//Sets port’s “Connect” constraint
+//Sets ports 'Connect' constraint
 
 Port port = new Port();
 
@@ -241,7 +233,7 @@ port.Constraints = PortConstraints.Connect;
 
 
 
-> {{ '![C:/Users/labuser/Desktop/note.jpg](Port_images/Port_img3.jpeg)' | markdownify }}
-{:.image }
-_Note: Port’s constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
+
+
+> Note: Ports constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
 

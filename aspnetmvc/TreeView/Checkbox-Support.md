@@ -106,7 +106,7 @@ The following image is the output for TreeView when ShowCheckbox is set to “Tr
 ![](Checkbox-Support_images/Checkbox-Support_img1.png)
 
 
-_Figure_ _42__: TreeView with checkbox_
+_Figure42: TreeView with checkbox_
 
 ## Auto Check Parent Node
 
@@ -191,7 +191,7 @@ To overcome the default functionality of TreeView, when you don’t want the par
 ![](Checkbox-Support_images/Checkbox-Support_img2.png)
 
 
-_Figure_ _42__: TreeView with AutoCheckParentNode enabled_
+_Figure42: TreeView with AutoCheckParentNode enabled_
 
 ## Auto Check Nodes
 
@@ -275,7 +275,7 @@ By default while checking a parent node, it will affect the child nodes and vice
 
 ![](Checkbox-Support_images/Checkbox-Support_img3.png)
 
-_Figure_ _42__: TreeView with AutoCheck disabled_
+_Figure42: TreeView with AutoCheck disabled_
 
 
 
@@ -368,7 +368,7 @@ You can specify the Checked Nodes in TreeView initially by using the property Ch
 ![](Checkbox-Support_images/Checkbox-Support_img4.png)
 
 
-_Figure_ _42__: TreeView with Checkednodes_
+_Figure42: TreeView with Checkednodes_
 
 
 

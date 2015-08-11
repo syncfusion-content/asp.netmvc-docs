@@ -2,7 +2,7 @@
 layout: post
 title: Getting-Started
 description: getting started
-platform: ejmvc
+platform: wpf
 control: Grid
 documentation: ug
 ---
@@ -15,8 +15,8 @@ This section explains briefly about how to create a Grid in your application wit
 
 The Grid can be easily configured to the DOM element, such as <div>. You can create a Grid with a highly customizable look and feel. You can use the Grid control to generate complex grid-based reports with rich formatting. In the following example, you can take a look at how the transaction of product is managed, analysis of a particular sale using filtering and grouping feature. This section explains you about adding group, filtering and paging of sales products.
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 
@@ -27,7 +27,7 @@ The Grid can be easily configured to the DOM element, such as <div>. You can cre
 
 
 
-
+{% highlight html %}
 [cshtml]
 
 @(Html.EJ().Grid<object>("FlatGrid")
@@ -51,20 +51,20 @@ The Grid can be easily configured to the DOM element, such as <div>. You can cre
         })
 
  )
-
+{% endhighlight  %}
 3. You can execute the above code sample to render an empty Grid is rendered with specified column headers, where the data must be specified.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Set Sales Data
+
+### Set Sales Data
 
 You can add the following code example in index page to render grid. In DataSource definition, CrossDomain property is enabled to retrieve data from another domain and Offline property allows you to load data on time from server.
 
-
+{% highlight html %}
 [cshtml]
 
 @(Html.EJ().Grid<object>("FlatGrid")
@@ -89,26 +89,26 @@ col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(
 
 )
 
-
+{% endhighlight  %}
 The following screenshot displays a Grid with sales data.
 
 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 
 
 
 _Figure 3: Management of sales data_
 
-Enable Paging
+### Enable Paging
 
 Paging feature in Grid offers complete navigation support to easily switch between the pages, using the page bar available at the bottom of the Grid control. To enable paging, use AllowPaging property of Grid as follows.
 
-
+{% highlight html %}
 
 [cshtml]
 
@@ -134,7 +134,7 @@ Paging feature in Grid offers complete navigation support to easily switch betwe
 
  )
 
-
+{% endhighlight  %}
 
 Use AllowPaging to switch between pages.
 
@@ -142,26 +142,26 @@ Use AllowPaging to switch between pages.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 
 
-_Figure_ _4__: Sales data with paging_
 
-Enable Filtering
+_Figure4: Sales data with paging_
+
+### Enable Filtering
 
 Filtering feature in Grid is usedto facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. This feature is used to filter particular sales data to review details.
 
 To enable filtering, use AllowFiltering property of Grid as follows.
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
-{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
+
+![](Getting-Started_images/Getting-Started_img6.png)
 
 
+{% highlight html %}
 [cshtml]
 
 @(Html.EJ().Grid<object>("FlatGrid")  .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
@@ -190,7 +190,7 @@ To enable filtering, use AllowFiltering property of Grid as follows.
 
  )
 
-
+{% endhighlight  %}
 
 The following screenshot illustrates how to filter sales data.
 
@@ -198,21 +198,21 @@ The following screenshot illustrates how to filter sales data.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img7.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img7.png)
+
 
 
 
 
 _Figure 5: Filtered sales data_
 
-Enable Grouping
+### Enable Grouping
 
 The Grouping feature in Grid is used to consolidate Grid data into groups. Grouping allows the categorization of records based on specified columns. You can easily group a particular column by simply dragging the column to the upper portion of the Grid. The Grid data is automatically grouped when you drop a particular column. In this example, Grouping feature is used to analyze the shipment details of products.
 
 To enable grouping, use AllowGrouping property of Grid as follows.
 
-
+{% highlight html %}
 
 [cshtml]
 
@@ -246,23 +246,23 @@ To enable grouping, use AllowGrouping property of Grid as follows.
 
  )
 
-
+{% endhighlight  %}
 
 The following screenshot shows the analysis of sales data by grouping unit stock.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img8.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
-Enable Group Summary
+
+### Enable Group Summary
 
 Enable ShowSummary property allows you to summarize the Grid data into groups. Grouping allows the categorization of records based on specified columns. Group summary summarizes the data present in the group. In this example, Group summary is used to summarize freight data of grouped ship name category.
 
 The following code example shows the option to enable group summary.
 
-
+{% highlight html %}
 [cshtml]
 
 @(Html.EJ().Grid<object>("FlatGrid")
@@ -323,15 +323,15 @@ The following code example shows the option to enable group summary.
 
  )
 
-
+{% endhighlight  %}
 
 The following screenshot shows the group summary.
 
-{{ '![](Getting-Started_images/Getting-Started_img9.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img9.png)
 
 
 
 
-_Figure_ _7__: Group summary_
+
+_Figure7: Group summary_
 

@@ -7,21 +7,19 @@ control: Diagram
 documentation: ug
 ---
 
-## Label
+# Label
 
 Label is a block of text that is displayed over a node or a connector. Label is used to textually represent an object with a string that can be edited at run time. Label has properties for text appearance, customization, and alignment. You can add MultipleLabels to a node/connector.
 
-### Create Label
+## Create Label
 
-Node’s/Connector’s Labels property holds an array of Label objects.
+Node Connector  Labels property holds an array of Label objects.
 
 The following code illustrates how to create a Label
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Creates a label
 
@@ -43,11 +41,11 @@ connector.Labels.Add(label);
 
 
 
-{{ '![](Label_images/Label_img1.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img1.png)
 
 
-### Displacement
+
+## Displacement
 
 A Label can be displaced from its original position both by dragging and programmatically. The following code illustrates how to enable Label Displacement through interaction.
 
@@ -55,9 +53,7 @@ A Label can be displaced from its original position both by dragging and program
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Enables Label Dragging for node.
 
@@ -77,8 +73,8 @@ connector.Constraints = ConnectorConstraints.Default| ConnectorConstraints.DragL
 
 
 
-{{ '![](Label_images/Label_img2.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img2.png)
+
 
 
 
@@ -87,9 +83,7 @@ The following code illustrates how to displace labels through API.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 Node node = new Node()
 
@@ -123,11 +117,11 @@ Node node = new Node()
 
 
 
-{{ '![](Label_images/Label_img3.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img3.png)
 
 
-### Label Rotation
+
+## Label Rotation
 
 Diagram provides support to rotate labels. You can rotate labels to specified angles. The following code illustrates how to specify the rotation angle for labels.
 
@@ -135,9 +129,7 @@ Diagram provides support to rotate labels. You can rotate labels to specified an
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 
 
@@ -157,23 +149,22 @@ label.RotateAngle = 45;
 
 
 
-{{ '![](Label_images/Label_img4.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img4.png)
 
 
-> {{ '![](Label_images/Label_img5.png)' | markdownify }}
-{:.image }
-_Note: No built-in support is added to rotate labels interactively._
 
-### Appearance 
+
+
+> Note: No built-in support is added to rotate labels interactively.
+
+## Appearance 
 
 You cancustomizethe Labelappearance and position by using its properties.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -209,11 +200,11 @@ label.TextDecoration = TextDecorations.LineThrough;
 
 
 
-{{ '![](Label_images/Label_img6.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img6.png)
 
 
-### Label Editing
+
+## Label Editing
 
 Labelcan be edited at runtime, programmatically or interactively. By default, label is in View mode. But it can be brought to edit mode in two ways; by double clicking on the label, or by programmatically setting the mode to Edit as shown in the following code example. Label editing is automatically terminated when the Edit box loses its focus or by setting its mode back to View.
 
@@ -221,9 +212,8 @@ Labelcan be edited at runtime, programmatically or interactively. By default, la
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -247,19 +237,18 @@ label.Mode = LabelEditMode.View;
 
 
 
-{{ '![](Label_images/Label_img7.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img7.png)
 
 
-### Read-only Label
+
+## Read-only Label
 
 To prevent label editing, set Label’s ReadOnly property as True. After setting the Label to ReadOnly mode, when you double click the Label, it is not moved to Edit mode. However, even after ReadOnly is set to true, you can programmatically move the label to edit mode.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Labels readOnly mode
 
@@ -271,7 +260,7 @@ label.ReadOnly = true;
 
 {% endhighlight %}
 
-### Label Alignment
+## Label Alignment
 
 You can align the Label by using its alignment properties.
 
@@ -279,10 +268,10 @@ _Label Alignment_
 
 <table>
 <tr>
-<td>
-Names</td><td>
-Type</td><td>
-Description</td></tr>
+<th>
+Names</th><th>
+Type</th><th>
+Description</th></tr>
 <tr>
 <td>
  TextAlign</td><td>
@@ -313,9 +302,7 @@ Gets or sets the position for the label.</td></tr>
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Aligns label and its text
 
@@ -341,49 +328,49 @@ _Alignment_
 
 <table>
 <tr>
-<td>
-Horizontal Alignment</td><td>
-Vertical Alignment</td><td>
-Offset</td><td>
-Image</td></tr>
+<th>
+Horizontal Alignment</th><th>
+Vertical Alignment</th><th>
+Offset</th><th>
+Image</th></tr>
 <tr>
 <td>
 Center</td><td>
 Top</td><td>
 (0.2,1)</td><td>
-![](Label_images/Label_img8.png)
-{:.image }
+{{ '![](Label_images/Label_img8.png)' | markdownify }}
+
 </td></tr>
 <tr>
 <td>
 Right</td><td>
 Middle</td><td>
 (0.5,0.3)</td><td>
-![](Label_images/Label_img9.png)
-{:.image }
+{{ '![](Label_images/Label_img9.png)' | markdownify }}
+
 </td></tr>
 <tr>
 <td>
 Left</td><td>
 Bottom</td><td>
 (0.5,0.7)</td><td>
-![](Label_images/Label_img10.png)
-{:.image }
+{{ '![](Label_images/Label_img10.png)' | markdownify }}
+
 </td></tr>
 </table>
 
 
-{{ '![](Label_images/Label_img11.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img11.png)
 
 
 
 
-{{ '![](Label_images/Label_img12.png)' | markdownify }}
-{:.image }
+
+![](Label_images/Label_img12.png)
 
 
-### Text Wrapping
+
+## Text Wrapping
 
 Wrapping property of label allows to specify whether or not to wrap the text, when it reaches the edge of the containing node. 
 
@@ -391,9 +378,7 @@ The following code illustrates how to wrap text.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 Label label = new Label();
 
@@ -405,41 +390,43 @@ label.Wrapping = WrapText.Wrap;
 
 
 
-{{ '![](Label_images/Label_img13.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img13.png)
+
 
 
 _Text Wrapping_
 
 <table>
 <tr>
-<td>
-Values</td><td>
-Description</td><td>
-Image</td></tr>
+<th>
+Values</th><th>
+Description</th><th>
+Image</th></tr>
 <tr>
 <td>
 NoWrap</td><td>
 Text is not wrapped.</td><td>
-![](Label_images/Label_img14.png)
-{:.image }
+{{ '![](Label_images/Label_img14.png)' | markdownify }}
+
 </td></tr>
 <tr>
 <td>
 Wrap (Default)</td><td>
 Text-wrapping occurs when the text overflows beyond the available node width.</td><td>
-![](Label_images/Label_img15.png)
-{:.image }
+{{ '![](Label_images/Label_img15.png)' | markdownify }}
+
 </td></tr>
 <tr>
 <td>
 WrapWithOverflow</td><td>
 Text-wrapping occurs when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word.</td><td>
-![](Label_images/Label_img16.png)
-{:.image }
+{{ '![](Label_images/Label_img16.png)' | markdownify }}
+
 </td></tr>
 </table>
-Width
+
+
+## Width
 
 By default, label wraps the text based on its parent element’s size (node/group/connector). You can override this by using Width property. When the label width is set, label acts like a container and wraps the label based on width specified.
 
@@ -447,9 +434,7 @@ The following code example illustrates how to set the label width.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 Label label = new Label();
 
@@ -459,7 +444,7 @@ label.Width = 50;
 
 {% endhighlight %}
 
-### Multiple Labels 
+## Multiple Labels 
 
 You can add Multiple Labels to the node /connector.
 
@@ -469,9 +454,7 @@ The following code illustrates how to create multiple labels to node
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
 
 //Adds multiple labels to node
 
@@ -511,7 +494,7 @@ node.Labels.Add(label);
 
 
 
-{{ '![](Label_images/Label_img17.png)' | markdownify }}
-{:.image }
+![](Label_images/Label_img17.png)
+
 
 

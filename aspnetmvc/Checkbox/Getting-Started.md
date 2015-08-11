@@ -17,8 +17,8 @@ Essential ASP.NET MVC Checkbox provides support to multiple selections within yo
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 
@@ -27,7 +27,7 @@ _Checkboxes Control_
 
 In the above screenshot, you can select hobbies, interest list and social networks receiving app using Checkbox. The Checkbox performs the action to render the checked values when button clicked.
 
-### Create a Checkbox
+## Create a Checkbox
 
 ASP.NET MVC Checkbox widget has built-in features like multiple selections. You can easily create the Checkbox widget using simple HTML helper “@Html.EJ().CheckBox()” as follows.
 
@@ -174,11 +174,11 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-### Create a Tri-State Checkbox
+
+## Create a Tri-State Checkbox
 
 ASP.NET MVC Tri-State Checkbox widget renders by setting EnableTriState property to True. You can add the following code to create Tri-state Checkbox in the <div> element of the corresponding view page.
 
@@ -226,11 +226,11 @@ Run the above code to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
-### Receive Hobbies and Interest
+
+## Receive Hobbies and Interest
 
 You can receive the Hobbies and Interest values using Checkbox. You can create a button in your corresponding view page <div> element using @Html.EJ().Button() and add the script section to the view page. The following steps illustrate how to create and set action to the button.
 
@@ -300,11 +300,11 @@ Execute the above code example to render the following output.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
-### Receive Media Player
+
+## Receive Media Player
 
 You can get the Media Player file type application like video, audio and picture using Checkbox. You can refer the following steps to render Media Player file types.
 
@@ -398,7 +398,7 @@ You can get the Media Player file type application like video, audio and picture
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
+
 
 

@@ -13,8 +13,8 @@ EssentialDiagramASP.NET MVC creates rich Visio-like applications. Its framework 
 
 
 
-{{ '![](Overview_images/Overview_img1.png)' | markdownify }}
-{:.image }
+![](Overview_images/Overview_img1.png)
+
 
 
 The list of features of the Diagram control in ASP.NET MVC are as follows.

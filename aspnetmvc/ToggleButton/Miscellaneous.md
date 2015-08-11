@@ -42,7 +42,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _19__: Toggle button with Rounder corner_
+_Figure 19: Toggle button with Rounder corner_
 
 ## PreventToggle
 
@@ -82,7 +82,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _20__: Toggle button with prevent Toggle_
+_Figure 20: Toggle button with prevent Toggle_
 
 
 

@@ -142,7 +142,7 @@ The following code example is used to render the Tab widget with state maintenan
 
 
 
-_Figure_ _10__: State before page refresh_
+_Figure10: State before page refresh_
 
 
 

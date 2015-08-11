@@ -7,15 +7,16 @@ control: Digital Gauge
 documentation: ug
 ---
 
-## MVVM
+# MVVM
 
-Angular JS
+## Angular JS
 
 Digital Gauge contains angular support. It is possible to add object as well as array object in the Digital Gauge. The two way binding support is given to the value for displaying the text.
 
 
+## Rendering the Digital Gauge
 
-### Rendering the Digital Gauge
+{% highlight html %}
 
 ej-DigitalGauge is the control tag, where ej is tag prefix and DigitalGauge is the control name.Digital Gauge is rendered with the following code example.
 
@@ -45,25 +46,21 @@ $scope.nvalue = “text”;
 
 </script>
 
-
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
-{{ '![](MVVM_images/MVVM_img1.png)' | markdownify }}
-{:.image }
+![](MVVM_images/MVVM_img1.png)
 
 
-
-
-### Adding the Digital Gauge Items
+## Adding the Digital Gauge Items
 
 Digital Gauge is rendered with the following code example. You can extend the Object in the array collection such as, position, characterSetting, segmentSetting, etc. with hyphen in the same tag.
 
-Example: e-position-x. 
+### Example: e-position-x. 
 
-
+{% highlight html %}
 
 <!--To Render the Digital gauge-->
 
@@ -85,19 +82,19 @@ e-position-x="52" e-position-y="52">
 
 </ej-DigitalGauge>
 
+{% endhighlight %}
 
 
 Finally while running the above codes, the following output will be rendered.
 
-{{ '![](MVVM_images/MVVM_img2.png)' | markdownify }}
-{:.image }
+![](MVVM_images/MVVM_img2.png)
 
 
-
-
-### Two Way Binding
+## Two Way Binding
 
 Digital Gauge supports the two way biding for the property value as mentioned earlier. Following code example explains how to achieve the two way binding to the Digital Gauge.
+
+{% highlight html %}
 
 <div ng-app="syncApp">
 
@@ -125,15 +122,9 @@ Type here <input type="text" id="txtValue" ng-model="nvalue" Style="width:110px"
 
 </div>
 
-
-
 <script type="text/javascript">
 
-
-
 <!—binding the value to the scope variables in application controller-->
-
-
 
 angular.module('syncApp', ['ejangular'])
 
@@ -145,35 +136,27 @@ $scope.nvalue = "Syncfusion";
 
 </script>
 
-
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
-{{ '![](MVVM_images/MVVM_img3.png)' | markdownify }}
-{:.image }
+![](MVVM_images/MVVM_img3.png)
 
 
-
-
-### Knockout Binding
-
+## Knockout Binding
 
 
 * Knockout support allows you to bind the html elements against any of the available data models.Two types of knockout binding is supported as of angular,
-1. one-way binding
-2. two-way binding
+	1. one-way binding
+	2. two-way binding
 * One way binding refers to the process of applying observable values to all the available properties of the Digital Gauge control, but the changes made in it does not reflect and trigger in turn to the observable collection. This kind of binding applies to all the properties of the Digital Gauge control.
 * Two-way binding supports both the processes – it applies the observable values to the Digital Gauge properties as well as the changes made in it is also reflected back and triggered within the observable collections. Only Value of the schedule properties support two-way binding.
 
 
+{% highlight html %}
 
-[MVC]
-
- [CSHTML]
-
-    <div id="digitalCore" 
+<div id="digitalCore" 
 
          data-bind="ejDigitalGauge: { 
 
@@ -203,36 +186,15 @@ value: samplevalue,
 
     </script>
 
+{% endhighlight %}   
+
 
 Execute the above code to render the following output.
 
+![C:/Users/karthigeyan/Desktop/q.png](MVVM_images/MVVM_img4.png)
 
 
-
-
-{{ '![C:/Users/karthigeyan/Desktop/q.png](MVVM_images/MVVM_img4.png)' | markdownify }}
-{:.image }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_Figure_ _4__1: Digital Gauge with Knockout binding_
+_Figure_ _4_1_: _Digital Gauge with Knockout binding_
 
 
 

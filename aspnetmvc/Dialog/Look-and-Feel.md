@@ -91,7 +91,7 @@ CssClass("customCss").Render();}
 
 
 
-_Figure_ _33__: Dialog with “CssClass"_
+_Figure33: Dialog with “CssClass"_
 
 
 

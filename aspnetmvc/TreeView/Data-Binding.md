@@ -19,7 +19,7 @@ The Field property in TreeView includes the data source fields and it can be set
 
 
 
-_Table_ _2__: MVC field properties_
+_Table2: MVC field properties_
 
 <table>
 <tr>
@@ -185,7 +185,7 @@ public class treeviewData
 
 
 
-{% highlight html %}
+{% highlight c# %}
 
 
 [Controller]
@@ -272,7 +272,7 @@ The output for TreeView control with Local Data binding is as follows.
 ![](Data-Binding_images/Data-Binding_img1.png)
 
 
-_Figure_ _43__: TreeView with local data-binding_
+_Figure43: TreeView with local data-binding_
 
 ## Remote Data
 

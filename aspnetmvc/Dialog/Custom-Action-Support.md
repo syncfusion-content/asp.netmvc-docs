@@ -7,11 +7,11 @@ control: Dialog
 documentation: ug
 ---
 
-## Custom Action Support
+# Custom Action Support
 
 The Dialog provides custom action buttons such as close, collapsible, maximize, minimize and pin. You can set the action buttons as per your requirement in the Dialog.
 
-Configure Custom Action
+## Configure Custom Action
 
 The following steps explains you the implementation of custom action. 
 
@@ -20,7 +20,7 @@ The following steps explains you the implementation of custom action.
 
 
 
-
+{% highlight html %}
 [CSHTML]
 
 // In the CSHTML page add the Dialog widget using helpers and assign the ActionButtons value. 
@@ -40,14 +40,14 @@ The following steps explains you the implementation of custom action.
 
 
 
-
+{% endhighlight  %}
 
 
 2. The output of ActionButtons in Dialog widget is as follows.
 
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogaction.PNG](Custom-Action-Support_images/Custom-Action-Support_img1.png)' | markdownify }}
-{:.image }
+![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogaction.PNG](Custom-Action-Support_images/Custom-Action-Support_img1.png)
 
 
-_Figure_ _19__: Dialog with “ActionButtons_                                                   
+
+_Figure19: Dialog with “ActionButtons_                                                   
 

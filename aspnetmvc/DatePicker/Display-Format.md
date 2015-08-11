@@ -15,13 +15,13 @@ DateFormat defines a format or structure of the displayed date in the textbox. Y
 
 The standard formats are listed as follows,
 
-_Table_ _2_: Date format_
+_Table2: Date format_
 
 <table>
 <tr>
-<td>
-Format Name</td><td>
-   Formats</td></tr>
+<th>
+Format Name</th><th>
+   Formats</th></tr>
 <tr>
 <td>
 Default</td><td>

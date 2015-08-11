@@ -7,13 +7,13 @@ control: Diagram
 documentation: ug
 ---
 
-## Data Binding
+# Data Binding
 
 Diagram can be populated with the node and connector based on information from an external data source by using data binding. Diagram supports binding data sources containing hierarchical data and also supports both local data and remote data for retrieving data from a specified data source. Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved.
 
 You can populate Diagram elements by using data binding support such as JSON and OData services.
 
-DataSource Settings
+## DataSource Settings
 
 The DataSourceSettings property of Diagram includes the required data source fields and it can be set with appropriate values as follows.
 
@@ -21,11 +21,11 @@ _Feld properties_
 
 <table>
 <tr>
-<td>
-Name</td><td>
-Type</td><td>
-Default</td><td>
-Description</td></tr>
+<th>
+Name</th><th>
+Type</th><th>
+Default</th><th>
+Description</th></tr>
 <tr>
 <td>
 DataSource</td><td>
@@ -59,7 +59,7 @@ Specifies the parent id of the table.</td></tr>
 </table>
 
 
-### Local Data
+## Local Data
 
 To bind the Local Data to the Diagram control, map the user-defined JSON data names with its appropriate data source field. You can bind data to the Diagram by mapping fields such as DataSource, ID, and Parent.
 
@@ -67,9 +67,7 @@ The following code example illustrates how to bind local data to the Diagram.
 
 {% highlight c# %}
 
-[EJMVC]
 
-[CSHTML]
 
 // Node template.
 
@@ -89,7 +87,6 @@ $(window).load(function () {
 
 
 
-[Controller]
 
 DiagramProperties model = new DiagramProperties();
 
@@ -149,11 +146,11 @@ public Array GetData(){
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img1.png)
 
 
-### Remote Data
+
+## Remote Data
 
 You can bind the Diagram to Remote Data by using DataManager and the query in fields is used to retrieve the data. DataManager supports the following types of data-binding: JSON, Web Services, oData. It uses two different classes; ej.DataManager for processing, and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are read by the dataManager. The following link explains in detail the way to create dataManager.
 
@@ -163,9 +160,7 @@ The following code illustrates how to bind remote data to the Diagram.
 
 {% highlight html %}
 
-[EJMVC]
 
-[CSHTML]
 
 
 
@@ -181,11 +176,11 @@ The following code illustrates how to bind remote data to the Diagram.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img2.png)
 
 
-Root
+
+## Root
 
 During automatic layout, node without parent is treated as root of the layout. You can specify this root by using the data source settings.
 
@@ -193,9 +188,7 @@ The following code example illustrates how to specify the root object for the Di
 
 {% highlight c# %}
 
-[EJMVC]
-
-[Controller] 
+ 
 
 //Configures data source for Diagram
 
@@ -213,21 +206,19 @@ model.DataSourceSettings.Id = "Id";
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img3.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img3.png)
 
 
-### HTML Binding
+
+## HTML Binding
 
 The Diagram provides support to form diagram from the HTML table. It is easy to convert HTML table to Diagram by using Data Manager.
 
 The following code example illustrates how to convert HTML table to diagram.
 
-{% highlight html %}
+{% highlight js %}
 
-[EJMVC]
 
-[CSHTML]
 
 <script id="htmlbinding" type="text/template" >
 
@@ -397,7 +388,7 @@ The following code example illustrates how to convert HTML table to diagram.
 
 
 
-{{ '![](Data-Binding_images/Data-Binding_img4.png)' | markdownify }}
-{:.image }
+![](Data-Binding_images/Data-Binding_img4.png)
+
 
 

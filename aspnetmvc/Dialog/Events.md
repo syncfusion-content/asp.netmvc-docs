@@ -11,13 +11,13 @@ documentation: ug
 
  The Dialog widget provides the following events,
 
-_Table_ _2__: Events of Dialog_
+_Table2: Events of Dialog_
 
 <table>
 <tr>
-<td>
-Event</td><td>
-Description</td></tr>
+<th>
+Event</th><th>
+Description</th></tr>
 <tr>
 <td>
 BeforeClose</td><td>
@@ -276,14 +276,15 @@ alert("Event triggered is " + args.type);
 <tr>
 <td>
 <br>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaevt.PNG](Events_images/Events_img1.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaevt.PNG](Events_images/Events_img1.png)'| markdownify}}
 
 </td><td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diab4open.PNG](Events_images/Events_img2.png)' | markdownfy }}
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diab4open.PNG](Events_images/Events_img2.png)'| markdownify }}
 
 
 </td></tr>
 </table>
+
 _Figure 25: Dialog triggered Create and BeforeOpen event_               
 
 
@@ -291,12 +292,12 @@ _Figure 25: Dialog triggered Create and BeforeOpen event_
 <table>
 <tr>
 <td>
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isopen.PNG](Events_images/Events_img3.png)' | markdownfy }}
+{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isopen.PNG](Events_images/Events_img3.png)' | markdownify }}
 
 
 </td><td>
 </td><td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isbeforeclose.PNG](Events_images/Events_img4.png)' | markdownfy }}
+{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog isbeforeclose.PNG](Events_images/Events_img4.png)' | markdownify }}
 
 
 </td></tr>
@@ -307,30 +308,32 @@ _Figure 26: Dialog triggered Open and BeforeClose event_
 <table>
 <tr>
 <td>
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaafterclose.PNG](Events_images/Events_img5.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaafterclose.PNG](Events_images/Events_img5.png)'|markdownify }}
 
 
 </td><td>
-{{ '![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogevtdrag.PNG](Events_images/Events_img6.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogevtdrag.PNG](Events_images/Events_img6.png)'|markdownify }}
 
 
 </td></tr>
 </table>
+
 _Figure 27: Dialog triggered Close and Drag event_
 
 
 <table>
 <tr>
 <td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstart.PNG](Events_images/Events_img7.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstart.PNG](Events_images/Events_img7.png)'|markdownify }}
 
 
 </td><td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstop.PNG](Events_images/Events_img8.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogdragstop.PNG](Events_images/Events_img8.png)'| markdownify }}
 
 
 </td></tr>
 </table>
+
 _Figure 28: Dialog triggered DragStart and DragStop event_
 
 
@@ -338,18 +341,18 @@ _Figure 28: Dialog triggered DragStart and DragStop event_
 <tr>
 <td>
 <td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresize.PNG](Events_images/Events_img9.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresize.PNG](Events_images/Events_img9.png)'| markdownify }}
 </td><td>
 <td>
-{{ ' ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestart.PNG](Events_images/Events_img10.png)' | markdownfy }}
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestart.PNG](Events_images/Events_img10.png)'| markdownify }}
 
 </td></tr>
 </table>
+
 _Figure 29: Dialog triggered Resize and ResizeStart event_
 
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png)
-
+{{'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialogresizestop.PNG](Events_images/Events_img11.png)'|markdownify}}
 
 
 _Figure 30: Dialog triggered ResizeStop event_

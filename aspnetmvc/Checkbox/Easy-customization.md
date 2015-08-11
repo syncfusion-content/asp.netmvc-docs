@@ -7,12 +7,11 @@ control: Checkbox
 documentation: ug
 ---
 
-## Easy customization
+# Easy customization
 
-### Checked state
+## Checked state
 
 Using Checked property, you can set the state of Checkbox. When checked property is true then tick mark is displayed and Checkbox is in checked state. When it is false, the tick mark is not displayed is in non tri-state and Checkbox is in unchecked state. When you want to use this Checked property, then checkbox should be in non Tri-state and EnableTriState property should be false.
-
 
 
 {% highlight html %}
@@ -47,13 +46,13 @@ Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-customization_images/Easy-customization_img1.png)' | markdownify }}
-{:.image }
+![](Easy-customization_images/Easy-customization_img1.png)
+
 
 
 _Checkbox in binary states_
 
-### Enable Tri-State
+## Enable Tri-State
 
 Sometimes, it is essential for you to represent the answer in partially true state. To represent the partially true types, an indeterminate state option is present. The state between checked and unchecked state is called indeterminate state. For example, a Checkbox presented to select files to send via [FTP](http://en.wikipedia.org/wiki/File_Transfer_Protocol) can use a [tree view](http://en.wikipedia.org/wiki/Tree_view) so that files can be selected one at a time, or by folder. When only some of the files in a folder are selected, then the checkbox for that folder could be in indeterminate state.
 
@@ -95,13 +94,13 @@ Execute the above code to render the following output.
 
 
 
-{{ '![](Easy-customization_images/Easy-customization_img2.png)' | markdownify }}
-{:.image }
+![](Easy-customization_images/Easy-customization_img2.png)
+
 
 
 _Checkbox with Non-Tri state and Tri-state_
 
-### Check State
+## Check State
 
 You require an option to set indeterminate state for Checkbox. By using CheckState property, you can set any state that is illustrated in following table. Before using this property, enable the Tri-state for Checkbox. EnableTriState propertyis set true.
 
@@ -162,13 +161,13 @@ The following steps explains you the details about rendering the Checkbox with s
 Execute the above code to render the following output.
 
 
-{{ '![](Easy-customization_images/Easy-customization_img3.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img3.png)
 {:.image }
 
 
 _Checkbox in three different states_
 
-### Checkbox Size
+## Checkbox Size
 
 You can render Checkbox in different sizes. The following table contains some predefined size option for rendering a Checkbox in easiest way. Each size option has different height and width. Mainly it avoids the complexity in rendering Checkbox with complex CSS class. 
 
@@ -217,13 +216,13 @@ The following steps explains you the details about rendering the Checkbox with d
 Execute the above code to render the following output.
 
 
-{{ '![](Easy-customization_images/Easy-customization_img4.png)' | markdownify }}
-{:.image }
+![](Easy-customization_images/Easy-customization_img4.png)
+
 
 
 _Checkbox in different sizes_
 
-### Text
+## Text
 
 It specifies the text content for Checkbox. In previous programs, separate label for each Checkbox is created. You can also set the text for checkbox using Text property. Therefore, it is not essential to add label tag for each checkbox in HTML code.
 
@@ -250,13 +249,13 @@ The following steps explains you the details about rendering the Checkbox with t
 Execute the above code to render the following output.
 
 
-{{ '![](Easy-customization_images/Easy-customization_img5.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img5.png)
 {:.image }
 
 
 _Checkbox with text content_
 
-### Rounded corner for checkbox
+## Rounded corner for checkbox
 
 Specifies the corner of Checkbox in rounded shape. Checkbox doesn’t have rounded corner by default. To set rounded corner, you can enable ShowRoundedCorner property.
 
@@ -286,7 +285,7 @@ The following steps explains you the details about rendering the Checkbox with r
 Execute the above code to render the following output.
 
 
-{{ '![](Easy-customization_images/Easy-customization_img6.png)' | markdownify }}
+![](Easy-customization_images/Easy-customization_img6.png)
 {:.image }
 
 

@@ -7,11 +7,11 @@ control: Button
 documentation: ug
 ---
 
-## Button Type
+# Button Type
 
 Button is used as normal clickable button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the button in three types. Using the Type property, you can easily render the button in following types.
 
-_Table_ _4__: List of Button types_
+_Table4: List of Button types_
 
 <table>
 <tr>
@@ -33,7 +33,7 @@ The following steps explains you the details about rendering the Button with abo
 
 1. In the CSHTML page, configure the Button widget as follows.
 
-
+{% highlight html %}
 
 [CSHTML]
 
@@ -64,11 +64,11 @@ The following steps explains you the details about rendering the Button with abo
 
 
     </div>
-
+{% endhighlight  %}
 
 Execute the above code to render the following output.
 
-{{ '![](Button-Type_images/Button-Type_img1.png)' | markdownify }}
+![](Button-Type_images/Button-Type_img1.png)
 {:.image }
 
 

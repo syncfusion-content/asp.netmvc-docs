@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-## Constraints
+# Constraints
 
 Diagram provides support to enable or disable certain Diagram behaviors.
 
@@ -15,9 +15,9 @@ _Constraints_
 
 <table>
 <tr>
-<td>
-Constraints</td><td>
-Description</td></tr>
+<th>
+Constraints</th><th>
+Description</th></tr>
 <tr>
 <td>
 None</td><td>
@@ -61,9 +61,8 @@ Default value for the Diagram constraints property is DiagramConstraints.Default
 
 {% highlight c# %}
 
-[EJMVC]
 
-[Controller]
+
 
 //Disables PageEditing 
 

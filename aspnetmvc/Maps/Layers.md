@@ -7,23 +7,23 @@ control: Maps
 documentation: ug
 ---
 
-## Layers
+# Layers
 
 Map is maintained through Layers and it can accommodate one or more layers.
 
-Multilayers
+## Multilayers
 
 The Multilayer support allows you to load multiple shape files in a single container, enabling maps to display more information.
 
-Loading Multiple Shape files in a Single Container
+### Loading Multiple Shape files in a Single Container
 
 This feature allows the map to load multiple types of shape files in a single container.
 
-Adding Multiple Layers in the Map 
+### Adding Multiple Layers in the Map 
 
 The shape layers is the core layer of the map. The multiple layers can be added in the shape Layers as SubShapeFileLayers within the shape Layers.
 
-SubLayer
+#### SubLayer
 
 The subLayer is the collection of shape Layers. 
 
@@ -31,7 +31,7 @@ In this example, World Map shape is used as shape data by utilizing the “World
 
 ..\ Maps_GeoJSON\
 
-MVC
+#### MVC
 
 Here “MapController.cs” is populated with datas of World Map in “MapController.cs”.
 
@@ -40,9 +40,6 @@ Here “MapController.cs” is populated with datas of World Map in “MapContro
 
 
 {% highlight c# %}
-
-[MapController.cs]
-
 
 
         public ActionResult Map()
@@ -87,12 +84,7 @@ System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
 
 Refer both USA data and world map data as illustrated in the following “Map.cshtml”.
 
-
-
-[Map.cshtml]
-
-
-
+{% highlight c# %}
 @{       
 
         var mapData = ViewData["mapdata"];
@@ -101,14 +93,9 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
  } 
 
- [MVC]
+{% endhighlight %}
 
-
-
-[CSHTML]
-
-
-
+{% highlight html %}
 @(Html.EJ().Map("maps")
 
             .Layers(lr =>
@@ -157,9 +144,8 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
    )            
 
+{% endhighlight %}
 
-
-{{ '![](Layers_images/Layers_img1.png)' | markdownify }}
-{:.image }
+![](Layers_images/Layers_img1.png)
 
 

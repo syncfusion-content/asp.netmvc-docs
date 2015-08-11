@@ -129,7 +129,7 @@ The following screenshot displays the TreeView component, configured based on CS
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-_Figure_ _59__: TreeView based on CSS class_
+_Figure59: TreeView based on CSS class_
 
 ## Adjusting TreeView Size
 
@@ -233,7 +233,7 @@ The following screenshot displays the appearance of Height of the TreeView compo
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
-_Figure_ _60__: TreeView with height property_
+_Figure60: TreeView with height property_
 
 ### Width
 
@@ -333,5 +333,5 @@ The following screenshot displays the appearance of width of the TreeView compon
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 
-_Figure_ _61__: TreeView with width property_
+_Figure61: TreeView with width property_
 

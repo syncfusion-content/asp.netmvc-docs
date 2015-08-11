@@ -11,7 +11,7 @@ documentation: ug
 
 Essential Presentation is a native .NET class library that is used by developers to easily create, read, write and convert Microsoft PowerPoint files by using C#, VB.NET and managed C++ code from any of the following .NET platforms – Windows Forms, WPF, ASP.NET and ASP.NET MVC. It is a non-UI component that provides a full-fledged document instance which that is easy to access & manipulate the contents without any dependency of Microsoft Office COM libraries & Microsoft Office. It supports only *.PPTX format documentst only; also it provides support to render the PowerPoint files (*.pptx) as an image and PDF files.
 
-Key Features
+## Key Features
 
 Important features of Essential Presentation are as follows.
 
@@ -23,21 +23,18 @@ Important features of Essential Presentation are as follows.
 * Support to export the Presentation as PDF file.
 
 
-
-> {{ '![](Overview_images/Overview_img1.jpeg)' | markdownify }}
-{:.image }
-_The current version of Essential Presentation is in preview. It does not support some features in MS PowerPoint such as Word Art, Smart Art, Notes slide, editing Master slides, Animations, Transitions, Comment, Header & Footer, Ole Object, creation & editing of Handsouts, equations, built-in themes & its variants._ 
+Note: The current version of Essential Presentation is in preview. It does not support some features in MS PowerPoint such as Word Art, Smart Art, Notes slide, editing Master slides, Animations, Transitions, Comment, Header & Footer, Ole Object, creation & editing of Handsouts, equations, built-in themes & its variants.
 
 ## System Requirement
 
 <table>
 <tr>
-<td>
-Supported .NET Frameworks versions</td><td>
+<th>
+Supported .NET Frameworks versions</th><td>
 * .NET 2.0* .NET 3.5* .NET 4.0* .NET 4.5 * .NET 4.5.1</td></tr>
 <tr>
-<td>
-<br>Compatible MS PowerPoint versions</td><td>
+<th>
+<br>Compatible MS PowerPoint versions</th><td>
 * MS PowerPoint 2007* MS PowerPoint 2010* MS PowerPoint 2013</td></tr>
 </table>
 
@@ -86,9 +83,9 @@ For converting a Presentation file into PDF, the following assemblies need to be
 
 <table>
 <tr>
-<td>
-Assembly Name</td><td>
-Short Description</td></tr>
+<th>
+Assembly Name</th><th>
+Short Description</th></tr>
 <tr>
 <td>
 Syncfusion.Presentation.Base</td><td>

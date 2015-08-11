@@ -7,9 +7,9 @@ control: PivotGrid
 documentation: ug
 ---
 
-## Export
+# Export
 
-> _Note:__This feature is applicable only for OLAP datasource._
+> Note: This feature is applicable only for OLAP datasource.
 
 The PivotGrid is exported from cell mode to a worksheet of an Excel Workbook. The Excel Workbook is saved from the browser to the local disk drive.
 
@@ -17,7 +17,7 @@ The following code example illustrates how to save the document to Excel via ser
 
 For PivotGrid
 
-[C#]
+{% highlight C# %} 
 
 public void ExportOptions(Stream stream)
 
@@ -31,11 +31,11 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 }
 
+{% endhighlight %}
 
 
+{% highlight js %}
 
-
-[MVC]
 
 @section ScriptSection{
 
@@ -53,7 +53,9 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 }
 
+{% endhighlight %}
 
+{% highlight html %}
 
 @section ControlsSection{
 
@@ -63,9 +65,9 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 }
 
+{% endhighlight %}
 
+![Description: excelexport2](Export_images/Export_img1.png)
 
-{{ '![Description: excelexport2](Export_images/Export_img1.png)' | markdownify }}
-{:.image }
 
 

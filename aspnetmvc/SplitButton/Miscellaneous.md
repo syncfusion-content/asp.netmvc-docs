@@ -7,9 +7,9 @@ control: Split Button
 documentation: ug
 ---
 
-## Miscellaneous
+# Miscellaneous
 
-Text
+## Text
 
 It is necessary to display the user defined text for Split Button. Using Text property, you can easily set text content for Split Button.
 
@@ -20,8 +20,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -47,16 +46,16 @@ The following steps explains you the details about rendering the Split Button wi
 
     </div>
 
-
+{% endhighlight %}
 
 
 Execute the above code to render the following output.
 
-{{ '![](Miscellaneous_images/Miscellaneous_img1.png)' | markdownify }}
-{:.image }
+![](Miscellaneous_images/Miscellaneous_img1.png)
 
 
-ShowRoundedCorner
+
+## ShowRoundedCorner
 
 Specifies the corner of Split Button in rounded shape. By default, the edges of Split Button is not rounded. To set rounded corner, you can enable ShowRoundedCorner property.
 
@@ -67,8 +66,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 
 
-
-[CSHTML]
+{% highlight html %}
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -94,14 +92,14 @@ The following steps explains you the details about rendering the Split Button wi
 
     </div>
 
-
+{% endhighlight %}
 
 
 
 Execute the above code to render the following output.
 
-{{ '![](Miscellaneous_images/Miscellaneous_img2.png)' | markdownify }}
-{:.image }
+![](Miscellaneous_images/Miscellaneous_img2.png)
+
 
 
 

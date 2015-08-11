@@ -15,15 +15,14 @@ This section explains briefly about how to create Maps in your application with 
 
 You can configure an EssentialASP.NETMVC Map with simple steps. In this example, you can learn how to configure USA population map with customized appearance and tooltip.
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
-Create a simple MVC Application 
+### Create a simple MVC Application 
 
 To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 
-Preparing Shape Data
+#### Preparing Shape Data
 
 The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](http://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
 
@@ -38,9 +37,6 @@ You can store the “United States of America.json” file in App_Data folder as
 
 
 {% highlight c# %}
-
-[MapController.cs]
-
 
 
         public ActionResult Map()
@@ -77,7 +73,7 @@ System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
 
 
-Prepare Data Source
+### Prepare Data Source
 
 The dataSource is populated with USA population data inside the controller relative to shape data. For better understanding, “MapController.cs” is populated with datas of USA Population in “MapController.cs”.
 
@@ -301,7 +297,7 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 {% endhighlight %}
 
-Initialize Map
+## Initialize Map
 
 1. Create a <div> tag and set the height and width to determine the map size. 
 
@@ -309,13 +305,7 @@ Initialize Map
 
 {% highlight html %}
 
-
-
 <div style="width: 900px; height: 600px;"></div>
-
-
-
-
 
 {% endhighlight %}
 
@@ -327,7 +317,6 @@ Initialize Map
 
 {% highlight html %}
 
-[Map.cshtml]
 
           <div style="width:900px; height:600px;"> 
 
@@ -357,7 +346,6 @@ Initialize Map
 
 {% highlight html %}
 
-[Map.cshtml]
 
 @{
 
@@ -429,11 +417,11 @@ The above code renders a map with default properties and shape input provided th
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
-Data Binding in Map
+
+## Data Binding in Map
 
 The following properties in shape layers is used for binding datas in Maps control.
 
@@ -441,25 +429,21 @@ The following properties in shape layers is used for binding datas in Maps contr
 * ShapeDataPath
 * ShapePropertyPath
 
-DataSource
+### DataSource
 
 The DataSource property accepts collection values as input. For example, you can provide the list of objects as input.
 
-Shape Data Path 
+### Shape Data Path 
 
 The ShapeDataPath property is used to refer the data ID in DataSource. For example, population MapData contains data ids ‘Name’ and ‘Population’. The ShapeDataPath and the ShapePropertyPath properties are related to each other (refer to ShapePropertyPath for more details).
 
-Shape Property Path
+### Shape Property Path
 
 The ShapePropertyPath property is similar to the ShapeDataPath that refers the column name in the Data property of shape layers to identify the shape. When the values of the ShapeDataPath property in the DataSource property and the value of ShapePropertyPath in the Data property match, then the associated object from the DataSource is bound to the corresponding shape.
 
 
 
 {% highlight html %}
-
-[CSHTML]
-
-
 
         @(Html.EJ().Map("container")            
 
@@ -489,16 +473,13 @@ The ShapePropertyPath property is similar to the ShapeDataPath that refers the c
 
 {% endhighlight %}
 
-Customize Map Appearance 
+### Customize Map Appearance 
 
 You can customize the shape’s color by using Fill, Stroke and StrokeThickness properties in ShapeSettings.
 
 
 
 {% highlight html %}
-
-[CSHTML]
-
 
 
 @(Html.EJ().Map("container")            
@@ -549,21 +530,18 @@ You can customize the shape’s color by using Fill, Stroke and StrokeThickness 
 
 
 
-{{ '![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Getting-Started_images/Getting-Started_img3.png)
 
 
-Customizing Map Appearance by Range
+### Customizing Map Appearance by Range
 
 The Range color mapping is used to differentiate the shape’s fill based on its underlying value and color ranges. The From and To properties defines the value ranges and the GradientColors property defines the equivalent color ranges respective to their value ranges.
 
-> _Note: The EnableGradient property value should be true to apply gradient colors for maps._
+> Note: The EnableGradient property value should be true to apply gradient colors for maps.
 
 
 
 {% highlight html %}
-
-[CSHTML]
 
 @(Html.EJ().Map("container")
 
@@ -637,11 +615,10 @@ The following screenshot illustrates a Map with gradient color property enable.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img4.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
-Enable Tooltip
+## Enable Tooltip
 
 The tooltip is displayed only when ShowTooltip is set to _‘_True’ in the shape layers. By default, it takes the property of the bound object that is referred in the ValuePath and displays its content on hovering the corresponding shape. The TooltipTemplate property is used for customizing the template for tooltip.
 
@@ -649,7 +626,6 @@ The tooltip is displayed only when ShowTooltip is set to _‘_True’ in the sha
 
 {% highlight html %}
 
-[CSHTML] 
 
         @(Html.EJ().Map("container")
 
@@ -693,31 +669,28 @@ The following screenshot illustrates a map control displaying a Tooltip.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img5.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
-Legend
+## Legend
 
 A Legend can be made visible by setting the ShowLegend property in LegendSetting. 
 
-Interactive Legend
+### Interactive Legend
 
 The legends can be made interactive with an arrow mark indicating the exact range color in the legend, when the mouse hovers the corresponding shapes. You can enable this option by setting Mode property in LegendSettings value as _‘_Interactive’. The default value of Mode property is ‘Default’ to enable the normal legend.
 
-Title for Interactive Legend
+### Title for Interactive Legend
 
 Use Title property to provide title for interactive legend.
 
-Label for Interactive Legend
+### Label for Interactive Legend
 
 You can use LeftLabel and RightLabel property to provide left and right labels for interactive legend. 
 
 
 
 {% highlight html %}
-
-[CSHTML]
 
 @(Html.EJ().Map("container")
 
@@ -822,8 +795,7 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 
 
-{{ '![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img6.png)
 
 
 The complete code sample can be found [here](http://www.syncfusion.com/uploads/user/directTrac/General/MapsMVCGettingStarted2077091750.zip).

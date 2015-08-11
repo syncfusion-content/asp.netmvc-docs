@@ -13,7 +13,7 @@ You can use Keyboard shortcut keys as an alternative to the mouse on using TimeP
 
 The various keyboard shortcuts available within the TimePicker widget are discussed in the following table.
 
-_Table_ _1__: List of keyboard shortcuts_
+_Table 1: List of keyboard shortcuts_
 
 <table>
 <tr>
@@ -45,7 +45,7 @@ Decrements the value</td></tr>
 
 ## When popup is open
 
-_Table_ _2__: List of keyboard shortcuts_
+_Table 2: List of keyboard shortcuts_
 
 <table>
 <tr>

@@ -7,35 +7,30 @@ control: Rotator
 documentation: ug
 ---
 
-## Appearance and Styling
+# Appearance and Styling
 
-Adjusting rotator item size
+## Adjusting rotator item size
 
-SlideWidth
+### SlideWidth
 
 This property sets the Width of a Rotator Item. The value set to this property is string or number.
 
+{% highlight html %}
 
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px").SlideHeight("350px")
 
-[CSHTML]
+{% endhighlight %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px")
-
-
-
-
-
-SlideHeight
+### SlideHeight
 
 This property sets the Height of a Rotator Item. The value set to this property is string or number.
 
+{% highlight html %}
 
+@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+.RotatorFields(t => t.Text("Text").Url("Url"))
+.SlideWidth("600px").SlideHeight("350px")
 
-[CSHTML]
-
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px")
-
-
-
-
-
+{% endhighlight %}

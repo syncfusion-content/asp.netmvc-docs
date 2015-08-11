@@ -249,7 +249,7 @@ The following steps allows you to configure CSS class for an auto-complete textb
 
 
 
-{% highlight %}
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 

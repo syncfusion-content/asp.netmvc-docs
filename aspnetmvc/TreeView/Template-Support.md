@@ -15,7 +15,7 @@ The following steps explains how to reder the TreeView using Template.
 
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below
 
-{% highlight html %}
+{% highlight c# %}
 
 // Define local data source elements with  fields            
 
@@ -48,7 +48,7 @@ public class template
 2.  In the controller page, create a List of specified class type and specify the DataSource to render the TreeView.
 
 
-{% highlight html %}
+{% highlight c# %}
 
 
 //Refer the Model in the controller
@@ -90,11 +90,9 @@ using <Applicationname>.Models;
 
 
 3. In the View page, define the template structure in which the TreeView has to be rendered. 
-> 
+> Note: We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder.
 
-_Note: We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder._
-
-{% highlight html %}
+{% highlight js %}
 
 <script id="treeTemplate" type="text/x-jsrender">
 
@@ -285,7 +283,7 @@ Output of the TreeView after specifying the Template structure.
 ![](Template-Support_images/Template-Support_img2.png)
 
 
-_Figure_ _53__: TreeView with Template_
+_Figure53: TreeView with Template_
 
 
 

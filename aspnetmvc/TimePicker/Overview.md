@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview
 
-![](Overview_images/Overview_img1.png)
+ ![](Overview_images/Overview_img1.png)
 
 The Essential ASP.NET MVC TimePicker control allows users to select a time value. The available times can be restricted to a range by setting minimum and maximum time values. The TimePicker sets the time as a mask to prevent users from entering invalid values. 
 

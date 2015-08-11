@@ -34,7 +34,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _1__2: TimePicker default value_
+_Figure 9: TimePicker default value_
 
 ## Enable/Disable TimePicker widget
 
@@ -90,7 +90,7 @@ The following screenshot illustrates a TimePicker textbox configured to restrict
 
 
 
-_Figure_ _1__1: TimePicker with PopUp button and enable ReadOnly property_
+_Figure 11: TimePicker with PopUp button and enable ReadOnly property_
 
 ## Rounded Corner
 
@@ -118,7 +118,7 @@ The following screenshot illustrates a TimePicker when ShowRoundedCorner is set 
 
 
 
-_Figure_ _1__2: Rounded corner of_ _TimePicker_ _Textbox_
+_Figure 12: Rounded corner of_ _TimePicker_ _Textbox_
 
 ## Scaling
 
@@ -146,7 +146,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _1__3: Changing Width and Height of the TimePicker._
+_Figure 13: Changing Width and Height of the TimePicker._
 
 ### Changing TimePicker PopupHeight and PopupWidth
 
@@ -170,7 +170,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _1__4: Changing popup height and width_
+_Figure 14: Changing popup height and width_
 
 ## State persistence
 
@@ -214,7 +214,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _1__5: Using EnableStrictMode property_
+_Figure 15: Using EnableStrictMode property_
 
 ## Interval
 

@@ -7,9 +7,9 @@ control: Schedule
 documentation: ug
 ---
 
-## Navigation
+# Navigation
 
-Appointment Navigation
+## Appointment Navigation
 
 * The enableAppointmentNavigation option allows the Schedule control to show/hide the previous and next appointment navigation tabs that is usually rendered parallel to each other when it is set to ‘true’. 
 * When you click on the previous/next appointment tab, it takes you to the previous/next corresponding closest date on the Schedule that contains appointments on that particular day. By default, it is set to ‘true’.
@@ -18,7 +18,7 @@ The following code example explains how to set the value for enableAppointmentNa
 
 
 
-[Razor]
+{% highlight html %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -48,17 +48,17 @@ The following code example explains how to set the value for enableAppointmentNa
 
 )
 
-
+{% endhighlight %}
 
 * The Schedule control with the appointment navigation tabs (marked with a box) enabled looks like the following screenshot.
 
-{{ '![](Navigation_images/Navigation_img1.png)' | markdownify }}
-{:.image }
+![](Navigation_images/Navigation_img1.png)
 
 
-_Figure_ _101__:  schedule with Appointment Navigation._
 
-Calendar Navigation
+_Figure_ _101_:  schedule with Appointment Navigation.
+
+## Calendar Navigation
 
 * The dates on the Schedule control is navigated randomly to another date with the help of calendar available within the Schedule control. To open the calendar, click on the date value displayed in the header bar. You will see the calendar pops down.
 * You can click on any dates on the calendar, so that the Schedule control navigates to the selected date in the calendar.
@@ -67,15 +67,15 @@ The following screenshot displays the calendar that pops down on clicking the da
 
 
 
-{{ '![](Navigation_images/Navigation_img2.png)' | markdownify }}
-{:.image }
-
-
- _Figure_ _102__:  schedule with Calendar Navigation._
+![](Navigation_images/Navigation_img2.png)
 
 
 
-Keyboard navigation
+ _Figure_ _102_:  schedule with Calendar Navigation.
+
+
+
+## Keyboard navigation
 
 * By enabling the keyboard navigation in the Schedule control, you can control the actions of the Schedule with the provided shortcut keys. Almost all the Schedule actions that are done using mouse are controlled with shortcut keys. 
 * By default, the keyboard navigation is set to ‘true’ for the control and it is controlled with the property allowKeyboardNavigation.
@@ -84,13 +84,13 @@ The various keyboard shortcuts available within the Schedule control are as foll
 
 
 
-_Table_ _1__: List of keys and its usage_
+_Table_ _1_: List of keys and its usage
 
 <table>
 <tr>
-<td>
-Keys</td><td>
-Usage</td></tr>
+<th>
+Keys</th><th>
+Usage</th></tr>
 <tr>
 <td>
 Esc</td><td>
@@ -170,23 +170,41 @@ Once the required cells are selected, then a new appointment can be created for 
 
 
 
-<table>
-<tr>
-<td>
-[Razor]<style>.e-monthappointment {height: auto !important;}</style>@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).AllowKeyboardNavigation(true).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))<script id="MyTemplate" type="text/x-jsrender"><div style="height: 100%"><div style="float: left; width: 50px;">{{:~format(StartTime)}}</div><div><div>{{:Subject}}<div></div></div></script><script>function _getImages(date) {switch (new Date(date).getDay()) {case 0:return "<img src='../images/schedule/cake.png'/>"break;case 1:return "<img src='../images/schedule/basketball.png'/>"break;case 2:return "<img src='../images/schedule/rugby.png'/>"break;case 3:return "<img src='../images/schedule/guitar.png'/>"break;case 4:return "<img src='../images/schedule/music.png'/>"break;case 5:return "<img src='../images/schedule/doctor.png'/>"break;case 6:return "<img src='../images/schedule/beach.png'/>"break;}}$.views.helpers({ format: _getImages });</script></td></tr>
-<tr>
-<td>
-[Controller]// follow the code as same as declared in Read Only part</td></tr>
-</table>
+
+{% highlight html %}
+<style>
+.e-monthappointment {height: auto !important;}</style>
+@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).AllowKeyboardNavigation(true).AppointmentSettings(
+fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")).AppointmentTemplateId("#MyTemplate"))
+<script id="MyTemplate" type="text/x-jsrender"><div style="height: 100%">
+<div style="float: left; width: 50px;">{
+{:~format(StartTime)}}</div><div><div>{
+{:Subject}}<div></div></div></script>
+<script>function _getImages(date) {
+switch (new Date(date).getDay()) {
+case 0:return "<img src='../images/schedule/cake.png'/>"break;
+case 1:return "<img src='../images/schedule/basketball.png'/>"break;
+case 2:return "<img src='../images/schedule/rugby.png'/>"break;
+case 3:return "<img src='../images/schedule/guitar.png'/>"break;
+case 4:return "<img src='../images/schedule/music.png'/>"break;
+case 5:return "<img src='../images/schedule/doctor.png'/>"break;
+case 6:return "<img src='../images/schedule/beach.png'/>"break;
+}}$.views.helpers({ format: _getImages });
+</script>
+{% endhighlight %}
+
+{% highlight c# %}
+// follow the code as same as declared in Read Only part
+{% endhighlight %}
 
 
 * Since the keyboard navigation functionality is enabled by default, the Schedule control below indicates the multiple cell selection through the shift + right arrow key combination as follows.
 
 
 
-{{ '![](Navigation_images/Navigation_img3.png)' | markdownify }}
-{:.image }
+![](Navigation_images/Navigation_img3.png)
 
 
-   _Figure_ _103__:  schedule with keyboard Navigation._
+
+   _Figure103:  schedule with keyboard Navigation.
 

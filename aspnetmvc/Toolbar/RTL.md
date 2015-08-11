@@ -28,5 +28,5 @@ EnableRTL property is Boolean type, which allow us to change the left-to-right a
 ![](RTL_images/RTL_img1.png)
 
 
-_Figure_ _31__: Toolbar from RTL_
+_Figure 31: Toolbar from RTL_
 

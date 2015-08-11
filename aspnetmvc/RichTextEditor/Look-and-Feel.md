@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-## Look and Feel
+# Look and Feel
 
 RTE control supports a rich appearance. This control consist of six flat themes and six gradient themes. To use these twelve themes, you can refer to the themes files in HTML. 
 
@@ -33,21 +33,20 @@ The following is the list of the twelve themes supported by RTE.
 
 
 
-[_cshtml]
+{% highlight html %}
 
-@*Add the following code in your view page.*@
+	@*Add the following code in your view page.*@
 
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }
+	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }
 
-
+{% endhighlight %}
 
 The following screenshot displays the output.
 
-{{ '![](Look-and-Feel_images/Look-and-Feel_img1.png)' | markdownify }}
-{:.image }
+![](Look-and-Feel_images/Look-and-Feel_img1.png)
 
 
-Css Class
+## Css Class
 
 RTE control also allows you to customize its appearance by using the user-defined CSS and custom skin options for colors and backgrounds. To apply custom themes, use this cssClass property . cssClass property sets the root class for RTE theme.
 
@@ -55,57 +54,48 @@ You can override the existing styles under the theme style sheet by using this p
 
 1. Add the following code in your CSHTML page.
 
+   ~~~ html
 
+		@*Add the following code in your view page to initialize the RTE.*@
 
-[_cshtml]
+		@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).CssClass("light-Pink").Render(); }
 
-@*Add the following code in your view page to initialize the RTE.*@
-
-@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).CssClass("light-Pink").Render(); }
-
-
-
-
-
-In the following style sheet, the active theme style sheet file has been overridden by using the root class “light-Pink”.
+   ~~~
+   {:.prettyprint }
+   
+	In the following style sheet, the active theme style sheet file has been overridden by using the root class “light-Pink”.
 
 2. Add the following styles in your styles section.
 
+   ~~~ css
 
+		.light-Pink .e-toolbar {
 
-[Style]
+			color: black;
 
-    .light-Pink .e-toolbar {
+			}
 
-        color: black;
+		.light-Pink .e-toolbarspan {
 
-    }
+			background-color: #E9A1CE;
 
-    .light-Pink .e-toolbarspan {
+			}
 
-        background-color: #E9A1CE;
+		.light-Pink .e-toolbar .e-active {
 
-    }
+			background-color: #4C0F2E;
 
-    .light-Pink .e-toolbar .e-active {
+			}
 
-        background-color: #4C0F2E;
+		.light-Pink .editarea {
 
-    }
+			background-color: pink;
 
-    .light-Pink .editarea {
+			}
 
-        background-color: pink;
+   ~~~
+   {:.prettyprint } 
 
-    }
+	The following screenshot displays the output.
 
-
-
-The following screenshot displays the output.
-
-{{ '![](Look-and-Feel_images/Look-and-Feel_img2.png)' | markdownify }}
-{:.image }
-
-
-
-
+	![](Look-and-Feel_images/Look-and-Feel_img2.png)

@@ -387,11 +387,11 @@ The following screenshot shows the Title and Subtitle in Chart control.
 
 You can customize the background for different portion of Chart.
 
-To Chart:
+### To Chart:
 
 Using the Background property you can customize the background color of the Chart.
 
-Code:
+### Code:
 {% highlight html %}
 [MVC]
 
@@ -413,11 +413,11 @@ Code:
 
 
 
-To Chart Area:
+### To Chart Area:
 
 Using Background property in ChartArea you can customize the background color of the Chart area.
 
-Code: 
+### Code: 
 {% highlight html %}
 [MVC]
 
@@ -439,7 +439,7 @@ Code:
 
 
 
-BackGround Image:
+### BackGround Image:
 
 Essential Chart allows you to add background image for your Chart using BackGroundImageUrl property.
 
@@ -476,7 +476,8 @@ Chart has built-in theme support. The theme configures the colors of following C
 5. Tooltip
 6. Background
 
-Code: 
+### Code: 
+
 {% highlight html %}
 [MVC]
 

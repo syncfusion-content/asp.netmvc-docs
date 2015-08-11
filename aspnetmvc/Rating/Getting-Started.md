@@ -234,7 +234,7 @@ Execute the above code to render the following output.
 
 
 
-_Note: Add necessary images to the mentioned directory._
+> Note: Add necessary images to the mentioned directory. 
 
 > _<project directory>/Images/rating/yourimage.png_
 

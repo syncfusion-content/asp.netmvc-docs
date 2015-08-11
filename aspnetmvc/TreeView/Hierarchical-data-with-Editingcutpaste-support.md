@@ -111,5 +111,5 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
 
 
-_Figure_ _40__: Node Editing-cut-copy-paste_
+_Figure40: Node Editing-cut-copy-paste_
 

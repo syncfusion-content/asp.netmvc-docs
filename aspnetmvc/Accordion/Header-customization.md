@@ -7,19 +7,17 @@ control: Accordion
 documentation: ug
 ---
 
-## Header customization
+# Header customization
 
-Collapsible
+## Collapsible
 
 Accordion widget allows you to set Collapsible state for an Accordion header. Thus you can expand and collapse accordion contents. By default Collapsible is set to false.
 
-Enable Collapsible settings
+## Enable Collapsible settings
 
 The following code explains to enable Collapsible state for Accordion using mvc helper.
 
 {% highlight html %}
-
-
 
 [CSHTML]
 
@@ -53,36 +51,31 @@ The following code explains to enable Collapsible state for Accordion using mvc 
 
 </div>
 
-
-
-
-
 {% endhighlight %}
 
 
 
  Output for Accordion control with collapsible headers.
 
-{{ '![](Header-customization_images/Header-customization_img1.png)' | markdownify }}
-{:.image }
+![](Header-customization_images/Header-customization_img1.png)
 
 
 
 
 
 
-{{ '![](Header-customization_images/Header-customization_img2.png)' | markdownify }}
-{:.image }
+![](Header-customization_images/Header-customization_img2.png)
 
 
-Enable Header expand
+### Enable Header expand
 
 Accordion widget provides you support to set the event, where the headers should expand and collapse. The events properties takes default events like mouseout, mouseover, and click.
 
-Configure header expand event
+### Configure header expand event
 
 The following code explains you to configure header expand event for Accordion.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and configure the Events property.
@@ -115,22 +108,19 @@ The following code explains you to configure header expand event for Accordion.
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion control that expands header on mouseout event is as follows.
 
 
-{{ '![](Header-customization_images/Header-customization_img3.png)' | markdownify }}
-{:.image }
+![](Header-customization_images/Header-customization_img3.png)
 
 
-Set selected header
-
-Single selection
+## Single selection
 
 BY using SelectedItemIndex property you can modify the expanded panel when the control is rendered. By default SelectedItemIndex is ‘0’ that always activate the first Accordion panel.
 
-Specify the selected item in Accordion panel
+### Specify the selected item in Accordion panel
 
 Using SelectedItemIndex property you can modify the expanded panel when the control is rendered. By default SelectedItemIndex is ‘0’ that always activate the first Accordion panel.
 
@@ -138,6 +128,7 @@ Specify the selected item in Accordion panel
 
 The following code explains you to configure selected item for Accordion.
 
+{% highlight html %}
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and configure selected item for Accordion based on the index.
@@ -172,24 +163,23 @@ The following code explains you to configure selected item for Accordion.
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion control with the selected item by index is as follows.
 
-{{ '![](Header-customization_images/Header-customization_img4.png)' | markdownify }}
-{:.image }
+![](Header-customization_images/Header-customization_img4.png)
 
 
 
 
-Multiple selection
+## Multiple selection
 
 In Accordion widget you can select multiple panel items using SelectedItems property. It takes array of indices that needs to be selected on rendering the control. As you need to select multiple items, you can set EnableMultipleOpen to true.
 
-Configure multiple selection in Accordion panel
+### Configure multiple selection in Accordion panel
 
 The following code explains to configure selected items for Accordion.
-
+{% highlight html %}
 [CSHTML]
 
 // In the View page, render Accordion with corresponding data and configure multiple items selection for Accordion.
@@ -230,12 +220,11 @@ The following code explains to configure selected items for Accordion.
 
 </div>
 
-
+{% endhighlight %}
 
 Output for Accordion control with the multiple selected items is as follows.
 
 
-{{ '![](Header-customization_images/Header-customization_img5.png)' | markdownify }}
-{:.image }
+![](Header-customization_images/Header-customization_img5.png)
 
 

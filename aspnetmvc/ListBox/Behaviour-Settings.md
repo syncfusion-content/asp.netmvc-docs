@@ -2,114 +2,174 @@
 layout: post
 title: Behaviour-Settings
 description: behaviour settings
-platform: ejmvc
-control: ListBox
+platform: aspnet
+control: Control Name undefined
 documentation: ug
 ---
 
-## Behaviour Settings
+# Behaviour Settings
 
 The following are some miscellaneous properties that helps you to change the behaviour of ListBox control.
 
-Target ID
+## Target ID
 
-You can append a list with ListBox by using TargetId property. Define a <ul>,< li> tag that you want to display on ListBox and then set the id of parent <ul> tag to TargetId property. And its data type is string. 
+You can append a list with ListBox by using targetId property. Define a <ul>, < li> tag that you want to display on ListBox and then set the id of parent <ul> tag to targetId property. And its data type is string. 
 
-The following steps explains you the configuration of TargetID property in ListBox.
+The following steps explains you the configuration of targetID property in ListBox.
 
-1. Add the below code in your page to render the ListBox 
+In an ASPX page, add an element to configure ListBox.
 
-
-
-
-
-[View]
-
-// Add the following code in View page to configure ListBox widget
+{% highlight html %}
 
 <div id="control">
 
-    <h5 class="ctrllabel">
+        <div class="ctrllabel">
 
-        Select a font style
+            Select a font style</div>
 
-    </h5>
+        <ej:listbox id="listboxsample" TargetID="targetlist" runat="server" Width="240"></ej:listbox>
 
-    @Html.EJ().ListBox("listboxsample").TargetID("targetlist")
+        <ul id="targetlist">
 
-    <ul id="targetlist">
+            <li>Algerian</li>
 
-        <li>Algerian</li>
+            <li>ARIAL</li>
 
-        <li>ARIAL</li>
+            <li>Bimini</li>
 
-        <li>Bimini</li>
+            <li>Courier</li>
 
-        <li>Courier</li>
+            <li>Cursive</li>
 
-        <li>Cursive</li>
+            <li>Fantasy</li>
 
-        <li>Fantasy</li>
+            <li>Georgia</li>
 
-        <li>Georgia</li>
+            <li>Impact</li>
 
-        <li>Impact</li>
+            <li>New york</li>
 
-        <li>New york</li>
+            <li>Sans-Serif</li>
 
-        <li>Sans-Serif</li>
+            <li>Scripts</li>
 
-        <li>Scripts</li>
+            <li>Times</li>
 
-        <li>Times</li>
+            <li>Times New Roman</li>
 
-        <li>Times New Roman</li>
+            <li>Verdana</li>
 
-        <li>Verdana</li>
+            <li>Western</li>
 
-        <li>Western</li>
+            <li>Zapfellipt bt</li>
 
-        <li>Zapfellipt bt</li>
+        </ul>
 
-    </ul>
-
-</div>
+    </div>
 
 
 
 
 
-
-
-1. Output of the above steps.
+{% endhighlight %}
 
 
 
-{{ '![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png)' | markdownify }}
-{:.image }
+Output of the above steps.
 
 
-Select the value by index 
+
+ ![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png)
+
+
+
+## Select the value by index 
 
 ListBox widget provides you support to select an item by mentioning the index of the item. The SelectedItemIndex property helps you to select the particular item from the list. Its date type is number. 
 
 The following steps explains you the configuration of SelectedItemIndex property in ListBox.
 
-1. Add the below code in your page to render the ListBox
+In an ASPX page, add an element to configure ListBox.
 
 
 
-[View]
+{% highlight c# %}
+
+    protected void Page_Load(object sender, EventArgs e)
+
+    {
+
+        listboxsample.DataSource = GetData();
+
+    }
+
+    private List<Languages> GetData()
+
+    {
+
+        List<Languages> data = new List<Languages>();
+
+        data.Add(new Languages() { Name = "ASP.NET" });
+
+        data.Add(new Languages() { Name = "ActionScript" });
+
+        data.Add(new Languages() { Name = "Basic" });
+
+        data.Add(new Languages() { Name = "C++" });
+
+        data.Add(new Languages() { Name = "C#" });
+
+        data.Add(new Languages() { Name = "dBase" });
+
+        data.Add(new Languages() { Name = "Delphi" });
+
+        data.Add(new Languages() { Name = "ESPOL" });
+
+        data.Add(new Languages() { Name = "F#" });
+
+        data.Add(new Languages() { Name = "FoxPro" });
+
+        data.Add(new Languages() { Name = "Java" });
+
+        data.Add(new Languages() { Name = "J#" });
+
+        data.Add(new Languages() { Name = "Lisp" });
+
+        data.Add(new Languages() { Name = "Logo" });
+
+        data.Add(new Languages() { Name = "PHP" });
+
+        return data;
+
+    }
+
+
+
+
+
+    public class Languages
+
+    {
+
+        public string Name;
+
+    }
+
+
+
+{% endhighlight %}
+
+
+
+{% highlight html %}
 
 <div id="control">
 
-    <h5 class="ctrllabel">
+    <div class="ctrllabel">
 
-        Select a skill
+        Select your skill</div>
 
-    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
-
-    => df.Text("text")).SelectedItemIndex(2)
+<ej:listbox id="listboxsample" DataTextField="Name" SelectedItemIndex="2" runat="server" Width="240"></ej:listbox>
 
 </div>
 
@@ -117,88 +177,103 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 
 
-2.  Output of the above steps.
+{% endhighlight %}
 
 
-{{ '![](Behaviour-Settings_images/Behaviour-Settings_img2.png)' | markdownify }}
-{:.image }
+
+Output of the above steps.
 
 
-Enable or Disable the ListBox Widget
+ ![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
+
+
+
+## Enable or Disable the ListBox Control
 
 This features enables you to set the enable or disable options for ListBox by setting Boolean type value to Enabled property. 
 
 The following steps explains you the configuration of Enabled property in ListBox.
 
-1. Add the below code in your view page to render the Disabled ListBox
+In an ASPX page, add an element to configure ListBox.
 
 
-
-[View]
-
-// Add the following code in View page to configure ListBox widget
+{% highlight html %}
 
 <div id="control">
 
-    <h5 class="ctrllabel">
+    <div class="ctrllabel">
 
-        Select a skill
+        Select a skill</div>
 
-    </h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
+    <ej:listbox id="listboxsample" DataTextField="Name" Enabled="false" runat="server" Width="240"></ej:listbox>
 
 </div>
 
-[CS]
 
-// Add the following code to add list items in the controller page
 
-        public class skillset
 
-        {
 
-            public string text { get; set; }
+{% endhighlight %}
 
-        }
 
-        public ActionResult Index()
+
+{% highlight c# %}
+
+protected void Page_Load(object sender, EventArgs e)
 
         {
 
-            List<skillset> skill = new List<skillset>();
+            listboxsample.DataSource = GetData();
 
-            skill.Add(new skillset { text = "ASP.NET" });
+        }
 
-            skill.Add(new skillset { text = "ActionScript" });
+        private List<Languages> GetData()
 
-            skill.Add(new skillset { text = "Basic" });
+        {
 
-            skill.Add(new skillset { text = "C++" });
+            List<Languages> data = new List<Languages>();
 
-            skill.Add(new skillset { text = "C#" });
+            data.Add(new Languages() { Name = "ASP.NET" });
 
-            skill.Add(new skillset { text = "dBase" });
+            data.Add(new Languages() { Name = "ActionScript" });
 
-            skill.Add(new skillset { text = "Delphi" });
+            data.Add(new Languages() { Name = "Basic" });
 
-            skill.Add(new skillset { text = "ESPOL" });
+            data.Add(new Languages() { Name = "C++" });
 
-            skill.Add(new skillset { text = "F#" });
+            data.Add(new Languages() { Name = "C#" });
 
-            skill.Add(new skillset { text = "FoxPro" });
+            data.Add(new Languages() { Name = "dBase" });
 
-            skill.Add(new skillset { text = "Java" });
+            data.Add(new Languages() { Name = "Delphi" });
 
-            skill.Add(new skillset { text = "J#" });
+            data.Add(new Languages() { Name = "ESPOL" });
 
-            skill.Add(new skillset { text = "Lisp" });
+            data.Add(new Languages() { Name = "F#" });
 
-            skill.Add(new skillset { text = "Logo" });
+            data.Add(new Languages() { Name = "FoxPro" });
 
-            skill.Add(new skillset { text = "PHP" });
+            data.Add(new Languages() { Name = "Java" });
 
-            ViewBag.datasource = skill;
+            data.Add(new Languages() { Name = "J#" });
 
-            return View();
+            data.Add(new Languages() { Name = "Lisp" });
+
+            data.Add(new Languages() { Name = "Logo" });
+
+            data.Add(new Languages() { Name = "PHP" });
+
+            return data;
+
+        }
+
+
+
+        public class Languages
+
+        {
+
+            public string Name;
 
         }
 
@@ -206,10 +281,14 @@ The following steps explains you the configuration of Enabled property in ListBo
 
 
 
-2. Output of the above steps.
+{% endhighlight %}
 
 
-{{ '![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' | markdownify }}
-{:.image }
+
+Output of the above steps.
+
+
+ ![C:/Users/Rajaveni/Desktop/docs/UG images/enabled.PNG](Behaviour-Settings_images/Behaviour-Settings_img3.png)
+
 
 

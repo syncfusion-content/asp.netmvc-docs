@@ -95,5 +95,5 @@ The following steps explains you the implementation of modal dialog.
 
 
 
-_Figure_ _20__: Modal Dialog_
+_Figure20: Modal Dialog_
 

@@ -382,6 +382,7 @@ An integer property used to indicate the preferred total number of intervals to 
 MaximumLabels</td><td>
 An Integer property used to indicate number of labels per 100 pixels. By default, 3 labels renders for 100 pixels of length.</td></tr>
 </table>
+
 ## Multiple Axis
 
 In cases of multiple series, a Chart can have multiple x and y axes to represent each series. The axes can be arranged in stacking or side-by-side mode. By default, the axes are arranged in side-by-side mode. In order to arrange the axis in a stacking mode, you can split the Chart into number of rows or columns using RowDefinitions and ColumnDefinitions and then you can place the required axis in the desired row and column. Heights of the vertical axes are customized using the RowHeight property in RowDefinitions and the width of the horizontal axes are customized using ColumnWidth property in ColumnDefinitions.
@@ -682,7 +683,6 @@ Essential Chart supports TrimmingAxisTitles with the properties, EnableTrim and 
 
 
 
-__
 {% highlight html %}
 [MVC]
 

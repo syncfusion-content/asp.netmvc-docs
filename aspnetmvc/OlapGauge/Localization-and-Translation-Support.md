@@ -7,9 +7,9 @@ control: OLAP Gauge
 documentation: ug
 ---
 
-## Localization and Translation Support
+# Localization and Translation Support
 
-Localization is the__process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, you can display the data in a specific language and culture, of a particular country or region. The ASP.NET MVC OlapGauge control provides inherent support to localize its UI.
+Localization is the process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, you can display the data in a specific language and culture, of a particular country or region. The ASP.NET MVC OlapGauge control provides inherent support to localize its UI.
 
 The following table lists the default English localization User Interface based on French culture.
 
@@ -21,9 +21,9 @@ _Table: List of default English localization User Interface based on French cult
 
 <table>
 <tr>
-<td>
-KEYWORDS</td><td>
-VALUES</td></tr>
+<th>
+KEYWORDS</th><th>
+VALUES</th></tr>
 <tr>
 <td>
 RevenueGoal</td><td>
@@ -66,7 +66,7 @@ RenderingFailed</td><td>
 The following code example illustrates you on how to localize OlapGuage’s User Interface (UI) based on “French” culture.
 
 
-
+{% highlight js %}
 [MVC]
 
 @ScriptSection{
@@ -98,7 +98,8 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
     </script>
 
 }
-
+{% endhighlight  %}
+{% highlight html %}
 @Controlsection{
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").Locale("fr-FR").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -153,20 +154,19 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
 
 
 
+{% endhighlight %}
 
 
-{{ '![C:/Users/labuser/Desktop/note.jpg](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img1.jpeg)' | markdownify }}
-{:.image }
-_Note: In order to render the localized OLAP Gauge, You are required to reset the content available in both_
+> Note: In order to render the localized OLAP Gauge, You are required to reset the content available in both
 
 1. _OLAP Gauge Control_
 2. _OLAP Cube_
 
-Localizing Control Information:
+## Localizing Control Information:
 
 To apply control side localization, refer the following code example:
 
-
+{% highlight html %}
 
 [HTML]
 
@@ -175,12 +175,13 @@ ej.olap.OlapGauge.locale["zh-CN"] = {
 //Corresponding keyword values needs to be set here.
 
 }
+{% endhighlight  %}
 
-## Localizing Cube Information:
+### Localizing Cube Information:
 
 To render the localized Cube information,__set “_Locale__Identifier”___in the connection string.
 
-
+{% highlight c# %}
 
 [C#]
 
@@ -193,11 +194,11 @@ DataManager = new OlapDataManager(connectionString);
 DataManager.Culture = new System.Globalization.CultureInfo(1036);
 
 DataManager.OverrideDefaultFormatStrings = true;
-
+{% endhighlight  %}
 
 The following screenshot displays the OlapGauge with French localization.
 
-{{ '![](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img2.png)' | markdownify }}
-{:.image }
+![](Localization-and-Translation-Support_images/Localization-and-Translation-Support_img2.png)
+
 
 

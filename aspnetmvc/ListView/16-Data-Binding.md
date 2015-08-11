@@ -7,15 +7,13 @@ control: ListView
 documentation: ug
 ---
 
-## 1.6 Data Binding
+# 1.6 Data Binding
 
-Local Data Binding
+## Local Data Binding
 
 Essential Studio WebJS ListView provides support for Data Binding. Data Binding provides a simple and consistent way for applications to present and interact with data. Elements can be bounded to data from a variety of data sources. In local databinding, the data source is written inside the program. Then it is handled by the ListView control. DataSource is used to get the data source that holds the list items.
 
 Please refer the following code examples.
-
-
 
 
 
@@ -95,10 +93,6 @@ For MVC Wrapper example, you need to create model file for data-binding. Add the
 
     }
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -106,9 +100,7 @@ For MVC Wrapper example, you need to create model file for data-binding. Add the
 You have to modify the controller as the model is added to the sample. You can modify the controller as follows.
 
 
-
 {% highlight c# %}
-
 
 
         public ActionResult LocalDataBinding()
@@ -122,9 +114,6 @@ You have to modify the controller as the model is added to the sample. You can m
         }
 
 
-
-
-
 {% endhighlight %}
 
 
@@ -136,7 +125,6 @@ You can use the following code example to give you the exact output.
 {% highlight c# %}
 
 
-
 @model List<ListLocalData>
 
 @{
@@ -146,22 +134,19 @@ You can use the following code example to give you the exact output.
 }
 
 
-
-
-
 {% endhighlight %}
 
 
 
-Screenshot:
+### Screenshot:
 
 {{ '![](16-Data-Binding_images/16-Data-Binding_img1.png)' | markdownify }}
-{:.image }
+
 
 
 _Local Data Binding_
 
-FieldSettings
+## FieldSettings
 
 The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://help.syncfusion.com/ug/js/documents/groupedlist.htm), the following fields are available while mapping.
 
@@ -169,9 +154,9 @@ _FieldSettings_
 
 <table>
 <tr>
-<td>
-Properties</td><td>
-Definition</td></tr>
+<th>
+Properties</th><th>
+Definition</th></tr>
 <tr>
 <td>
 ParentPrimaryKey</td><td>
@@ -209,10 +194,10 @@ Please refer the following code examples.
 
 
 
-Screenshots:
+### Screenshots:
 
 {{ '![](16-Data-Binding_images/16-Data-Binding_img2.png)' | markdownify }}
-{:.image }
+
 
 
 _Field Settings_
@@ -221,8 +206,8 @@ When you click on the parent item, it navigates to its corresponding child list 
 
 
 
-{{ '![](16-Data-Binding_images/16-Data-Binding_img3.png)' | markdownify }}
-{:.image }
+![](16-Data-Binding_images/16-Data-Binding_img3.png)
+
 
 
 _Field Settings_

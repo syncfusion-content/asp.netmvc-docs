@@ -11,7 +11,7 @@ documentation: ug
 
 DataManager helps in managing relational data in the ASP.NET MVC. Its rich features make querying data sources easier. The ODataClient supports oData queries that are enabled in the Web API & WCF data services.
 
-DataManager supports different types of data binding such as:
+## DataManager supports different types of data binding such as:
 
 1. JSON
 2. Web Services
@@ -19,7 +19,7 @@ DataManager supports different types of data binding such as:
 
 Basically, all services that have JSON acts as a transport.
 
-Key Features
+## Key Features
 
 Some important features of the DataManager for MVC are:
 

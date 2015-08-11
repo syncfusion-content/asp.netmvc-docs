@@ -15,19 +15,19 @@ This section explains briefly how to create the Diagram in your application with
 
 The following screenshot illustrates the structure of the Diagram control.
 
-{{ '![](Getting-Started_images/Getting-Started_img1.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img1.png)
+
 
 
 ## Create your first Diagram in MVC
 
-Initialize Diagram
+### Initialize Diagram
 
 1. Create a CSHTML file and add the necessary script and CSS files in the Head tag as shown in the following code example.
 {% highlight html %}
 
 
-[CSHTML]
+
 
  <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -66,9 +66,7 @@ Initialize Diagram
 {% highlight html %}
 
 
-[EJMVC]
 
-[CSHTML]
 
 
 
@@ -92,9 +90,8 @@ Initialize Diagram
 {% highlight c# %}
 
 
-[EJMVC]
 
-[Controller]
+
 
 
 
@@ -122,8 +119,8 @@ Initialize Diagram
 
 4. This creates an empty Diagram. In the following section, you can learn how to add employee details in the Diagram.
 
-{{ '![http://help.syncfusion.com/ug/js/ImagesExt/image147_3.png](Getting-Started_images/Getting-Started_img2.png)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/js/ImagesExt/image147_3.png](Getting-Started_images/Getting-Started_img2.png)
+
 
 
 Initialize Data
@@ -134,7 +131,7 @@ Initially, you can create hierarchical employee information, JSONData, and assig
 
 {% highlight html %}
 
-[JS] 
+
 
 <head>
 
@@ -184,9 +181,7 @@ Initially, you can create hierarchical employee information, JSONData, and assig
 
 {% highlight html %}
 
-[EJMVC]
 
-[CSHTML]
 
 //Customizes node before rendering
 
@@ -204,7 +199,6 @@ function nodeTemplate(diagram, node) {
 
 
 
-[Controller]
 
 //Configures data source for diagram.
 
@@ -286,8 +280,8 @@ function nodeTemplate(diagram, node) {
 
 The employee data is displayed in the following Diagram .
 
-{{ '![](Getting-Started_images/Getting-Started_img3.png)' | markdownify }}
-{:.image }
+![](Getting-Started_images/Getting-Started_img3.png)
+
 
 
 _Organization Chart_

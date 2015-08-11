@@ -75,13 +75,13 @@ It inserts the icon at the ending position of Toggle Button. Before this suffix 
 
 You can also set icon in different location (prefix, suffix) and in different state (default, active) by using the option provided. The following properties are defined for merging the option to add text, icon with different position and in toggle states.
 
-_Table_ _1__: Property Table_
+_Table 1: Property Table_
 
 <table>
 <tr>
-<td>
-ActiveText</td><td>
-Specifies the text of toggle button in active state</td></tr>
+<th>
+ActiveText</th><th>
+Specifies the text of toggle button in active state</th></tr>
 <tr>
 <td>
 ActivePrefixIcon</td><td>
@@ -139,13 +139,13 @@ _Figure 6: After clicking the toggle button_
 
 You can render the Toggle Button in different sizes by using Size property. You can use some predefined size option for rendering a Toggle Button in easiest way. Each size option has different height and width. It mainly avoids the complexity in rendering Toggle Button with complex CSS class. You can mention the size of the Toggle Button using the following five predefined size options. 
 
-_Table_ _2__: Predefined Toggle Button size_
+_Table 2: Predefined Toggle Button size_
 
 <table>
 <tr>
-<td>
-Normal</td><td>
-Creates toggle button with content size.</td></tr>
+<th>
+Normal</th><th>
+Creates toggle button with content size.</th></tr>
 <tr>
 <td>
 Mini</td><td>
@@ -243,19 +243,19 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _13__: Toggle button in different sizes_
+_Figure 13: Toggle button in different sizes_
 
 ## Content type
 
 The content of the Toggle Button is mainly text and images. Instead of using complex CSS classes to render Toggle Button with different content types, you can use some predefined content type options as listed in the following table. Using this ContentType property you can easily add different types of content for Toggle Button. The Toggle Button supports the following content types.
 
-_Table_ _3__: List of Content types_
+_Table 3: List of Content types_
 
 <table>
 <tr>
-<td>
-TextOnly</td><td>
-Supports only for text content only.</td></tr>
+<th>
+TextOnly</th><th>
+Supports only for text content only.</th></tr>
 <tr>
 <td>
 ImageOnly</td><td>
@@ -385,19 +385,19 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _14__: Toggle button with different content types_
+_Figure 14: Toggle button with different content types_
 
 ImagePosition
 
 To provide the best look and feel for Toggle Button, position of images in toggle button is important. You can easily customize the position of images inside toggle button using ImagePosition property without using any complex CSS. ImagePosition property is applicable only with the TextAndImage content type property. This property represent the position of images with respect to text.
 
-_Table_ _4__: Property Table_
+_Table 4: Property Table_
 
 <table>
 <tr>
-<td>
-ImageLeft</td><td>
-Support for aligning text in right and image in left.</td></tr>
+<th>
+ImageLeft</th><th>
+Support for aligning text in right and image in left.</th></tr>
 <tr>
 <td>
 ImageRight</td><td>
@@ -558,7 +558,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _15__: Toggle button with different type of image position_
+_Figure 15: Toggle button with different type of image position_
 
 ## Theme support
 
@@ -726,7 +726,7 @@ Execute the above code to render the following output.
 
 
 
-_Figure_ _16__: Toggle button with Custom CSS_
+_Figure 16: Toggle button with Custom CSS_
 
 
 
