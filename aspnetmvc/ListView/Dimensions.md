@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 18-Dimensions
-description: 1.8 dimensions
+title: Dimensions
+description: dimensions
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# 1.8 Dimensions
+# Dimensions
 
 To customize the ListView dimensions, Width and Height properties are used.
 
@@ -49,6 +49,6 @@ Refer to the following code examples.
 
 ### Screenshot:
 
-![](18-Dimensions_images/18-Dimensions_img1.png)
+![](Dimensions_images/Dimensions_img1.png)
 
 _Height_

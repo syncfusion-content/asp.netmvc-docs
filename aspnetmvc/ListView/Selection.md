@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 14-Selection
-description: 1.4 selection
+title: Selection
+description: selection
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# 1.4 Selection
+# Selection
 
 ## MultiSelection
 
@@ -53,7 +53,7 @@ Refer the following code examples.
 
 ### Screenshot:
 
-![](14-Selection_images/14-Selection_img1.png)
+![](Selection_images/Selection_img1.png)
 
 
 
@@ -141,7 +141,7 @@ Refer the following code examples.
 
 ### Screenshot:
 
-![](14-Selection_images/14-Selection_img2.png)
+![](Selection_images/Selection_img2.png)
 
 
 

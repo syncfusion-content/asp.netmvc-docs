@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 16-Data-Binding
-description: 1.6 data binding
+title: Data-Binding
+description: data binding
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# 1.6 Data Binding
+# Data Binding
 
 ## Local Data Binding
 
@@ -140,7 +140,7 @@ You can use the following code example to give you the exact output.
 
 ### Screenshot:
 
-{{ '![](16-Data-Binding_images/16-Data-Binding_img1.png)' | markdownify }}
+{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
 
 
 
@@ -196,7 +196,7 @@ Please refer the following code examples.
 
 ### Screenshots:
 
-{{ '![](16-Data-Binding_images/16-Data-Binding_img2.png)' | markdownify }}
+{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
 
 
 
@@ -206,7 +206,7 @@ When you click on the parent item, it navigates to its corresponding child list 
 
 
 
-![](16-Data-Binding_images/16-Data-Binding_img3.png)
+![](Data-Binding_images/Data-Binding_img3.png)
 
 
 

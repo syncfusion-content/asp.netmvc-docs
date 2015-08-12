@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 15-Customize-Header
-description: 1.5 customize header
+title: Customize-Header
+description: customize header
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# 1.5 Customize Header
+# Customize Header
 
 In Listview, you can enable the built-in Header support. To show or hide the Header in ListView, use the ShowHeader property. By default, ListView is rendered with the Header. You can set the title for the Header by using the HeaderTitle property.
 
@@ -52,7 +52,7 @@ Refer the following code example.
 
 ### Screenshot:
 
-![](15-Customize-Header_images/15-Customize-Header_img1.png)
+![](Customize-Header_images/Customize-Header_img1.png)
 
 
 

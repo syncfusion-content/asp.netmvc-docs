@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 13-Grouped-List
-description: 1.3 grouped list
+title: Grouped-List
+description: grouped list
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# 1.3 Grouped List
+# Grouped List
 
 ## First Level Group List
 
@@ -81,7 +81,7 @@ Refer the following code example.
 
 
 
-![](13-Grouped-List_images/13-Grouped-List_img1.png)
+![](Grouped-List_images/Grouped-List_img1.png)
 
 
 _First Level Group List_
@@ -167,7 +167,7 @@ Refer the following code examples.
 
 
 
-![](13-Grouped-List_images/13-Grouped-List_img2.png)
+![](Grouped-List_images/Grouped-List_img2.png)
 
 
 
