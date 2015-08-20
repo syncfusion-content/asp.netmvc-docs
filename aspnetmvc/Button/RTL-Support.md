@@ -17,7 +17,6 @@ The following steps explains the details about rendering the button with Right t
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -27,13 +26,10 @@ The following steps explains the details about rendering the button with Right t
 
 <div class="control">
 
-
-
         @Html.EJ().Button("button_rtl").Text("button").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").EnableRTL(true)
 
+</div>
 
-
-    </div>
 {% endhighlight  %}
 
 In above mentioned code example PrefixIcon property is used and the icon that is to be on left side, (before text) is rendered on right side as EnableRTL property is used with PrefixIcon.  Consequently, the alignment is changed in right to left order.

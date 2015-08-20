@@ -24,20 +24,17 @@ The following steps explains you the implementation of resize option in the Dial
 1. In a VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
 
+   ~~~ js
 
-{% highlight html %}
+	   // In the CSHTML page, add the Dialog widget using helpers and set EnableResize to ‘true’. 
 
+	   @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
+	   EnableResize(true).Render();}
 
-// In the CSHTML page, add the Dialog widget using helpers and set EnableResize to ‘true’. 
+   ~~~
+   {:.prettyprint }
 
-
-
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
-
-EnableResize(true).Render();}
-
-{% endhighlight %}
 
 
 
@@ -45,11 +42,11 @@ EnableResize(true).Render();}
 
 2. The output for Dialog control when “EnableResize” is “true” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/resize1.PNG](Behavior-Settings_images/Behavior-Settings_img1.png) 
+   ![](Behavior-Settings_images/Behavior-Settings_img1.png) 
 
+   _Figure 6: Dialog with “EnableResize”_
 
-
-_Figure6: Dialog with “EnableResize”_                                                                                 
+                                                                              
 
 ## Drag Support
 
@@ -63,17 +60,18 @@ The following steps explains you the implementation of drag option in the Dialog
 
 
 
-{% highlight html %}
+   ~~~ js
 
-// In the CSHTML page add the Dialog widget using helpers and set AllowDraggable to ‘true’.
+	   // In the CSHTML page add the Dialog widget using helpers and set AllowDraggable to ‘true’.
 
 
+	   @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
+	   AllowDraggable(true).Render();}
 
-AllowDraggable(true).Render();}
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight  %}
 
 
 
@@ -81,15 +79,10 @@ AllowDraggable(true).Render();}
 
 2. The output for Dialog control when “AllowDraggable” is “true” is as follows.
 
+   ![](Behavior-Settings_images/Behavior-Settings_img2.png) 
 
-
-
-
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diadrag22.PNG](Behavior-Settings_images/Behavior-Settings_img2.png) 
-
-
-
-_Figure7: Dialog with "AllowDraggable"_                                                                  
+   _Figure 7: Dialog with "AllowDraggable"_
+                                                          
 
 ## Close Icon ToolTip Support
 
@@ -102,32 +95,27 @@ The following steps explains you the implementation of close icon tooltip option
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
+   ~~~ js
 
-
-{% highlight html %}
-
-// In the CSHTML page add the Dialog widget using helpers and assign the CloseIconTooltip property as close.
+		// In the CSHTML page add the Dialog widget using helpers and assign the CloseIconTooltip property as close.
 
 
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
-   .Width(300).Height("200").CloseIconTooltip("close").Render();}
+		   .Width(300).Height("200").CloseIconTooltip("close").Render();}
    
-{% endhighlight  %}
-
-
-
+   ~~~
+   {:.prettyprint }
 
 
 
 2. The output for Dialog control when “CloseIconTooltip” is “close” is as follows.
 
-'![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/closeicon1.PNG](Behavior-Settings_images/Behavior-Settings_img3.png)' 
+   ![](Behavior-Settings_images/Behavior-Settings_img3.png)
+   
+   _Figure 8: Dialog with "CloseIconTooltip_
 
-
-
-_Figure8: Dialog with "CloseIconTooltip_     
 
 ## Persistence Support
 
@@ -159,11 +147,10 @@ The following steps explains the implementation of persistence support in the Di
 
 Make resize and reload the web page. The state is maintained in the Dialog control. The output for Dialog control when “EnablePersistence” is “true” is as follows. 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/persistance1.PNG](Behavior-Settings_images/Behavior-Settings_img4.png)
+![](Behavior-Settings_images/Behavior-Settings_img4.png)
 
+_Figure 9: Dialog with “EnablePersistence"_
 
-
-_Figure9: Dialog with “EnablePersistence"_
 
 ## Enabled or Disabled
 
@@ -178,17 +165,19 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-{% highlight html %}
+   ~~~ js
 
-// In the CSHTML page add the Dialog widget using helpers and set Enabled to ‘false’.
+		// In the CSHTML page add the Dialog widget using helpers and set Enabled to ‘false’.
 
 
 
-    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
+			@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>)
 
-      .Width(300).Height("200").Enabled(false).Render();}
+			  .Width(300).Height("200").Enabled(false).Render();}
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 
 
@@ -196,23 +185,9 @@ The following steps explains you the implementation of disable option in the Dia
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dialog disabled.PNG](Behavior-Settings_images/Behavior-Settings_img5.png)
+   ![](Behavior-Settings_images/Behavior-Settings_img5.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_Figure11: Dialog with “Enabled" as “false”_                                                                  
+   _Figure11: Dialog with “Enabled" as “false”_                                                                  
 
 ## Positioning Dialog
 
@@ -221,48 +196,39 @@ The Dialog provides the option to place the control based upon its X-axis and Y-
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
+   ~~~ js
+
+		// In the CSHTML page add the Dialog widget using helpers and set the Position values.
 
 
 
-{% highlight html %}
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-// In the CSHTML page add the Dialog widget using helpers and set the Position values.
+					The Syncfusion Dialog control is rendered.<br />
 
+					Position
 
+					<br />
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
+					X-Axis : 20
 
-            The Syncfusion Dialog control is rendered.<br />
+					<br />
 
-            Position
+					Y-Axis : 26
 
-            <br />
+				</div>).Width(300).Height("200").Position(p => p.XValue("20").YValue("26")).
 
-            X-Axis : 20
+		Render();}
 
-            <br />
-
-            Y-Axis : 26
-
-        </div>).Width(300).Height("200").Position(p => p.XValue("20").YValue("26")).
-
-Render();}
-
-{% endhighlight %}
-
-
-
-
-
+   ~~~
+   {:.prettyprint }
 
 
 2. The output for Dialog control after setting X-axis and Y-axis value.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/position1.PNG](Behavior-Settings_images/Behavior-Settings_img6.png)
+   ![](Behavior-Settings_images/Behavior-Settings_img6.png)
 
-
-
-_Figure12: Dialog with “Position"_
+   _Figure12: Dialog with “Position"_
 
 ## Header Option
 
@@ -272,19 +238,17 @@ You can show or hide the Dialog header by setting ShowHeader property. The follo
 
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
+   ~~~ js
 
+		// In the CSHTML page add the Dialog widget using helpers and set the ShowHeader as true. 
 
-{% highlight html %}
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
-// In the CSHTML page add the Dialog widget using helpers and set the ShowHeader as true. 
+		ShowHeader(true).Render();}
 
+   ~~~
+   {:.prettyprint }
 
-
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
-
-ShowHeader(true).Render();}
-
-{% endhighlight  %}
 
 
 
@@ -292,9 +256,7 @@ ShowHeader(true).Render();}
 
 2. The output for Dialog control when ShowHeader is “true” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
-
-
+![](Behavior-Settings_images/Behavior-Settings_img7.png)' | markdownify }}
 
 _Figure13: Dialog with “ShowHeader" as “true”_                                           
 
@@ -303,34 +265,23 @@ _Figure13: Dialog with “ShowHeader" as “true”_
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
+   ~~~ js
+   
+		// In the CSHTML page add the Dialog widget using helpers and set the ShowHeader to ‘false’. 
 
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
+		ShowHeader(false).Render();}
 
-{% highlight html %}
-
-// In the CSHTML page add the Dialog widget using helpers and set the ShowHeader to ‘false’. 
-
-
-
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
-
-ShowHeader(false).Render();}
-
-{% endhighlight  %}
-
-
-
-
-
+   ~~~
+   {:.prettyprint }
 
 
 2. The output for Dialog control when ShowHeader is “false” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/hideheader1.PNG](Behavior-Settings_images/Behavior-Settings_img8.png)
-
-
-
-_Figure14: Dialog with “ShowHeader" as “false”_                                     
+   ![](Behavior-Settings_images/Behavior-Settings_img8.png)
+   
+   _Figure14: Dialog with “ShowHeader" as “false”_                                     
 
 ## Show at Initial
 
@@ -341,23 +292,21 @@ The Dialog control contains an option to be opened state or closed state at init
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
 
-{% highlight html %}
+   ~~~ js
 
-// In the CSHTML page add the Dialog widget using helpers and set the ShowOnInit to ‘true’.
+		// In the CSHTML page add the Dialog widget using helpers and set the ShowOnInit to ‘true’.
 
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
-ShowOnInit(true).Render();}
+		ShowOnInit(true).Render();}
 
-{% endhighlight %}
-
-
-
+   ~~~
+   {:.prettyprint }
 
 
 2. The output for Dialog control when ShowOnInit is “true” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/drag1.PNG](Behavior-Settings_images/Behavior-Settings_img9.png)
+   ![](Behavior-Settings_images/Behavior-Settings_img9.png)
 
 
 
@@ -371,25 +320,27 @@ The Dialog can support with rounded corner appearance, the default value for Sho
 
 
 
-{% highlight html %}
+   ~~~ js
 
-// In the CSHTML page add the Dialog widget using helpers and set ShowRoundedCorner to ‘true’.
-
-
-
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
-
-ShowRoundedCorner(true).Render();}
+		// In the CSHTML page add the Dialog widget using helpers and set ShowRoundedCorner to ‘true’.
 
 
-{% endhighlight %}
+
+		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
+
+		ShowRoundedCorner(true).Render();}
+
+
+   ~~~
+   {:.prettyprint }
+
 
 
 
 
 2. The output for Dialog control when ShowRoundedCorner is “true” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/roundcorner1.PNG](Behavior-Settings_images/Behavior-Settings_img10.png)
+   ![](Behavior-Settings_images/Behavior-Settings_img10.png)
 
 
 

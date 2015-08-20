@@ -37,13 +37,9 @@ The following steps explains you on how to configure the Orientation property.
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("BasicSlider").Height("150").Width("20").Orientation(Orientation.Vertical))
 

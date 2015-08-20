@@ -16,13 +16,15 @@ It specifies the height of the DatePicker input text. The “Height” property 
 The following steps explain you how to specify the height of the DatePicker input text.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
-{% highlight html %}
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized height*@
+{% highlight js %}
 
-@Html.EJ().DatePicker("datepicker").Height("22")
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized height*@
+
+		@Html.EJ().DatePicker("datepicker").Height("22")
 
 {% endhighlight %}
+
 
 ## Define width
 
@@ -31,7 +33,7 @@ It specifies the width of the DatePicker input text. The “Width” property al
 The following steps explain you how to specify the width of the DatePicker input text.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized width*@
 
@@ -73,13 +75,15 @@ The following steps explain you how to highlight the current week section.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ html
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized highlight section*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized highlight section*@
 
-@Html.EJ().DatePicker("datepicker").HighlightSection(Section.Week)
+		@Html.EJ().DatePicker("datepicker").HighlightSection(Section.Week)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 
 2. The following screenshot displays the output for the above code.   
@@ -95,7 +99,7 @@ The following steps explain you how to set the DatePicker value as readonly.
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight html %}
+{% highlight js %}
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized Readonly*@
 
 @Html.EJ().DatePicker("datepicker").ReadOnly(true)
@@ -109,7 +113,7 @@ The following steps explain you how to hide footer in the DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to hide footer in DatePicker widget*@
 
@@ -120,19 +124,19 @@ The following steps explain you how to hide footer in the DatePicker widget.
 
 It shows the date icon button at right side of textbox and shows DatePicker popup on clicking it that can be achieved by using “ShowPopupButton “property. By default “ShowPopupButton” property is set as “true” in DatePicker widget. 
 
-
-
 The following steps explain you how to hide the popupbutton in the DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to hide popupbutton in DatePicker widget*@
+		@*Add the following code example to the corresponding CSHTML page to hide popupbutton in DatePicker widget*@
 
-@Html.EJ().DatePicker("datepicker").ShowPopupButton(false)
+		@Html.EJ().DatePicker("datepicker").ShowPopupButton(false)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 
@@ -147,12 +151,15 @@ The following steps explain you how to show Roundedcorner in the DatePicker.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized rounder corner*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized rounder corner*@
 
-@Html.EJ().DatePicker("datepicker").ShowRoundedCorner(true)
-{% endhighlight %}
+		@Html.EJ().DatePicker("datepicker").ShowRoundedCorner(true)
+
+   ~~~
+   {:.prettyprint }
+
 
 
 2.  The following screenshot displays the output for the above code.
@@ -169,13 +176,15 @@ The following steps explain you how to hide the ToolTip in the DatePicker.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized tooltip*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized tooltip*@
 
-@Html.EJ().DatePicker("datepicker").ShowTooltip(true)
+		@Html.EJ().DatePicker("datepicker").ShowTooltip(true)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 

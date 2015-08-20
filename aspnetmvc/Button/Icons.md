@@ -25,9 +25,7 @@ Refer to the following link to know what are the values passed in the “Content
 
 Also in the button sample, you can use the icon class names as follows,
 
-{% highlight html %}
- [CSHTML]
-
+{% highlight js %}
 
 
 @Html.EJ().Button("button").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")

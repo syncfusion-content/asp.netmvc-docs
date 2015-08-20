@@ -24,96 +24,95 @@ The following screenshot illustrates the structure of the Diagram control.
 ### Initialize Diagram
 
 1. Create a CSHTML file and add the necessary script and CSS files in the Head tag as shown in the following code example.
-{% highlight html %}
+
+   ~~~ html
 
 
 
 
- <html xmlns="http://www.w3.org/1999/xhtml">
+		 <html xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
+			<head>
 
-        <title>
+				<title>
 
-            Getting Started with the Diagram control for MVC
+					Getting Started with the Diagram control for MVC
 
-        </title>
-
-
-
-        <!-- jQuery Script -->
-
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+				</title>
 
 
 
-        <!--script to create Diagram-->
+				<!-- jQuery Script -->
 
-        <script src="http://cdn.syncfusion.com/js/ej.widgets.all-latest.min.js"></script>
-
-    </head>
-    <body>
-    </body>
-</html>
+				<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 
 
-{% endhighlight %}
+				<!--script to create Diagram-->
+
+				<script src="http://cdn.syncfusion.com/js/ej.widgets.all-latest.min.js"></script>
+
+			</head>
+			<body>
+			</body>
+		</html>
+
+
+
+   ~~~
+   {:.prettyprint }
+
 
 
 
 2. Add the @Html.EJ().Diagram() element in the <body> tag to render the Diagram.
-{% highlight html %}
+
+
+   ~~~ js
+   
+		<html>
+
+			<body>
+
+				@Html.EJ().Diagram("DiagramContent", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)     
+
+			</body>
+
+		</html>
 
 
 
+   ~~~
+   {:.prettyprint }
 
-
-
-<html>
-
-    <body>
-
-        @Html.EJ().Diagram("DiagramContent", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)     
-
-    </body>
-
-</html>
-
-
-
-{% endhighlight %}
 
 
 
 3. Initialize the Diagram widget as follows.
-{% highlight c# %}
+
+   ~~~ cs
 
 
+		  public ActionResult RenderDiagram()
+
+		  {
+
+				DiagramProperties model = new DiagramProperties();
+
+				 model.Height = "600px";
+
+				 model.Width = "600px"; 
+
+				 ViewData["diagramModel"] = model;
+
+				 return View();
+
+		  }
 
 
+   ~~~
+   {:.prettyprint }
 
-
-
-  public ActionResult RenderDiagram()
-
-  {
-
-        DiagramProperties model = new DiagramProperties();
-
-         model.Height = "600px";
-
-         model.Width = "600px"; 
-
-         ViewData["diagramModel"] = model;
-
-         return View();
-
-  }
-
-
-
-{% endhighlight %}
 
 
 
@@ -129,7 +128,7 @@ Initially, you can create hierarchical employee information, JSONData, and assig
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -179,7 +178,7 @@ Initially, you can create hierarchical employee information, JSONData, and assig
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -283,6 +282,6 @@ The employee data is displayed in the following Diagram .
 ![](Getting-Started_images/Getting-Started_img3.png)
 
 
-
+ 
 _Organization Chart_
 

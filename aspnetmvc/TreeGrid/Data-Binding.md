@@ -28,13 +28,9 @@ The following code example shows you how to bind the Hierarchical local data int
 
 {% highlight c# %}
 
-CONTROLLER [CS]
-
-
-
 public partial class TreeGridController : Controller
 
-    {
+{
 
         //
 
@@ -257,12 +253,9 @@ public partial class TreeGridController : Controller
 
 
         }
-
+}
 {% endhighlight  %}
-{% highlight html %}
-
-VIEW [CSHTML]
-
+{% highlight js %}
 
 
 @using Syncfusion.JavaScript
@@ -359,7 +352,6 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 
 {% highlight c# %}
 
-CONTROLLER [CS]
 
 public partial class TreeGridController : Controller
 
@@ -507,12 +499,6 @@ public partial class TreeGridController : Controller
 
             });
 
-
-
-
-
-
-
             list.Add(new BusinessObject()
 
             {
@@ -545,11 +531,7 @@ public partial class TreeGridController : Controller
 
         }
 
-
-
     }
-
-
 
     public class BusinessObject
 
@@ -593,10 +575,7 @@ public partial class TreeGridController : Controller
 
     }
 {% endhighlight  %}
-{% highlight html %}
-VIEW [CSHTML]
-
-
+{% highlight js %}
 
     @(Html.EJ().TreeGrid("TreeGridContainer")                                   
 
@@ -632,12 +611,7 @@ VIEW [CSHTML]
 
        )
 
-
-
 {% endhighlight %}
-
-
-
 
 
 The following screenshot shows the output of the above steps,

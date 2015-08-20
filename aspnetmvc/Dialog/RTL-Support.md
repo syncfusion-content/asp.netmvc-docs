@@ -17,31 +17,28 @@ The following steps explain enabling the right-to-left property for Dialog contr
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
+   ~~~ js
+   
+		// In the CSHTML page add the Dialog widget using helpers and set EnableRTL to ‘true’. 
 
 
 
+		@{Html.EJ().Dialog("rtldialog").Title("WinRT").ContentTemplate(@<div>
 
-{% highlight html %}
+		Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span>
 
-// In the CSHTML page add the Dialog widget using helpers and set EnableRTL to ‘true’. 
+		It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps.</div>).Width(550).EnableRTL(true).Render();}
 
+   ~~~
+   {:.prettyprint }
 
-
-@{Html.EJ().Dialog("rtldialog").Title("WinRT").ContentTemplate(@<div>
-
-Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span>
-
-It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps.</div>).Width(550).EnableRTL(true).Render();}
-{% endhighlight %}
 
 
 
 
 2. The output for Dialog when EnabelRTL is “True” is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/rtl.PNG](RTL-Support_images/RTL-Support_img1.png)
+   ![](RTL-Support_images/RTL-Support_img1.png)
 
-
-
-_Figure 31: Dialog with “EnableRTL"_
+   _Figure 31: Dialog with “EnableRTL"_
 

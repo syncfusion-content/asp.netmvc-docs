@@ -19,13 +19,9 @@ The following steps explains you the configuration of ShowScale property.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80).ShowScale(true))
 
@@ -38,7 +34,7 @@ The following steps explains you the configuration of ShowScale property.
 	
 Execute the above code example to render the following output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderscale.PNG](Scale-Settings_images/Scale-Settings_img1.png)
+![](Scale-Settings_images/Scale-Settings_img1.png)
 
 
 
@@ -50,9 +46,9 @@ The following steps explains you on how to disable the small ticks in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)
 
@@ -69,7 +65,7 @@ The following steps explains you on how to disable the small ticks in Slider.
 Execute the above code example to render the following output.
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slidersmall.PNG](Scale-Settings_images/Scale-Settings_img2.png)
+![](Scale-Settings_images/Scale-Settings_img2.png)
 
 
 
@@ -85,9 +81,9 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)
 
@@ -101,7 +97,7 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 Execute the above code example to render the following output.
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlarge.PNG](Scale-Settings_images/Scale-Settings_img3.png)
+![](Scale-Settings_images/Scale-Settings_img3.png)
 
 
 

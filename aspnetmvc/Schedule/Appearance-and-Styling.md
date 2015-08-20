@@ -23,7 +23,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight c# %}
+{% highlight js %}
 
 @(Html.EJ().Schedule("AdaptiveSchedule")
 
@@ -53,20 +53,15 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 )
 
-
-
-
-
-
+{% endhighlight %}
 
 {% highlight c# %}
 
-
-
 // follow the code as same as declared in Read Only part
 
+
 {% endhighlight %}
-{% endhighlight %}
+
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
@@ -91,7 +86,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -129,7 +124,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 The following screenshot displays the Schedule control with all-day row hidden,
 
-![C:/Users/maheshp/Pictures/sshot-8.png](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 
 
@@ -145,7 +140,7 @@ _Figure 2: Schedule with disabled all day row_
 The following code eample explains how to change the height of the Schedule control.  
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -196,7 +191,7 @@ The following code example explains how to change the width of the Schedule cont
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -233,9 +228,7 @@ The following screenshot displays the Schedule control with the width set to “
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
-
-
-   _Figure112:  Adjusting schedule size width_
+_Figure112:  Adjusting schedule size width_
 
 ### Adjust Cell Size
 
@@ -254,7 +247,7 @@ The following code example explains how to change the cell height and width of t
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Setting the cell height and width of the schedule
 
@@ -294,7 +287,7 @@ The following screenshot displays the Schedule control with the cell width set t
 
 
 
-![C:/Users/maheshp/Desktop/schedule1.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
 
 
@@ -334,7 +327,7 @@ Replace the following code in Layout file -> View page to apply different theme 
 
 The schedule control will render as follows
 
-![C:/Users/karthigeyan/Desktop/q.png](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
 
 ### Show/Hide Header Bar
@@ -345,7 +338,7 @@ The following code example explains on how to use the showHeaderBar property.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -385,7 +378,7 @@ The following screenshot displays the Schedule control with the hidden header 
 
 
 
-![C:/Users/maheshp/AppData/Roaming/Skype/My Skype Received Files/mvc(1).PNG](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
 
 

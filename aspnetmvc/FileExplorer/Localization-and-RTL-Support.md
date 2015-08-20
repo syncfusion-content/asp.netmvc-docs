@@ -197,8 +197,10 @@ In this example, globalize.min.js file is used that includes all the cultures in
    ~~~
    {:.prettyprint }
    
-3. _Figure 13: Showcase of FileExplorer with Spanish culture_
+3.  
     ![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img1.png)
+	
+	_Figure 13: Showcase of FileExplorer with Spanish culture_
 
 	There is no change in the controller part, it is the same controller part used as mentioned above.
 
@@ -218,6 +220,7 @@ RTL control supports right-to-left functionality and features for languages th
 
 2. There is no change in the controller part, it is the same controller part used as mentioned above
 
-	_Figure 14:Showcase of FileExplorer with right to left appearance_
-
+	
 	![](Localization-and-RTL-Support_images/Localization-and-RTL-Support_img2.png)
+	
+	_Figure 14:Showcase of FileExplorer with right to left appearance_

@@ -16,7 +16,7 @@ The TreeGrid column displays the information from a bounded data source and it
 You can change the width of the column in TreeGrid to show the entire text of the column by resizing the column. The following code example shows you how to enable the Column Resize feature at Gantt initialize.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
  @(Html.EJ().TreeGrid("TreeGridContainer")    
@@ -41,13 +41,9 @@ The following code example shows you how to display the icon in the TreeGrid c
 
 {% highlight c# %}
 
-CONTROLLER [CS]
-
-
-
 public partial class TreeGridController : Controller
 
-    {
+{
 
         //
 
@@ -288,14 +284,9 @@ public partial class TreeGridController : Controller
 
 
         }
-
+}
 {% endhighlight  %}
 {% highlight js %}
-
-VIEW [CSHTML]
-
-
-
 
 
       <script type="text/x-jsrender" id="customColumnTemplate">     
@@ -320,12 +311,9 @@ VIEW [CSHTML]
 
 
 {% endhighlight  %}
+
 {% highlight css %}
    <style>
-
-
-
-
 
         .e-treegrid .e-treegridexpand {
 
@@ -382,7 +370,8 @@ VIEW [CSHTML]
     </style> 
 
 {% endhighlight  %}
-{% highlight html %}
+
+{% highlight js %}
 
        @(Html.EJ().TreeGrid("TreeGridContainer")      
 
@@ -410,13 +399,7 @@ VIEW [CSHTML]
 
     }   
 
-
-
 {% endhighlight %}
-
-
-
-
 
 The following screenshot displays the customized column in TreeGrid control.
 
@@ -445,12 +428,7 @@ Filtering type can be defined by FilterEditType property in each column object.
 * Datetimepicker
 
 
-
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
@@ -512,11 +490,7 @@ The Sort Ascending and Sort Descending options are enabled or disabled by using 
 
 You can also disable the visibility of the particular column in column collection manually by setting the Visible property to false.
 
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
@@ -549,10 +523,6 @@ You can also disable the visibility of the particular column in column collectio
 
 
 {% endhighlight %}
-
-
-
-
 
 ![](Columns_images/Columns_img4.png)
 

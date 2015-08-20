@@ -18,7 +18,7 @@ The following steps explains you in enabling the right-to-left property for the 
 1. Add the following code to the corresponding view page to render the TimePicker.   
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with right to left apperence*@
 

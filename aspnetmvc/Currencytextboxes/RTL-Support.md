@@ -15,11 +15,7 @@ CurrencyTextBox provides RTL (Right-To-Left) support. The alignment of CurrencyT
 
 In the View page add CurrencyTextBox helper, and configure the EnableRTL property.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33").EnableRTL(true)
 
@@ -32,11 +28,6 @@ Output of CurrencyTextBox when EnableRTL is “True” is as follows.
 
 
 ![](RTL-Support_images/RTL-Support_img1.png)
-
-
-
-
-
 
 
 _CurrencyTextBox with enableRTL_

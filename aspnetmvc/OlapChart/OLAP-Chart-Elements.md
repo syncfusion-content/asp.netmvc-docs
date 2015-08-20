@@ -3,13 +3,11 @@ layout: post
 title: OLAP-Chart-Elements
 description: olap chart :elements
 platform: ejmvc
-control: OLAP Chart
+control: OLAPChart
 documentation: ug
 ---
 
 # OLAP Chart: Elements
-
-
 
 ![](OLAP-Chart-Elements_images/OLAP-Chart-Elements_img1.png)
 

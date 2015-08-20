@@ -386,45 +386,45 @@ The different activities in the BPMN shape are listed as follows.
 
 1. Loop
 
-The task that is internally looped.
+   The task that is internally looped.
 
-![](Predefined-Shapes_images/Predefined-Shapes_img23.png)
+   ![](Predefined-Shapes_images/Predefined-Shapes_img23.png)
 
 
 
 2. Tasks
 
-The task for sending, receiving, user based task, etc
+   The task for sending, receiving, user based task, etc
 
-![](Predefined-Shapes_images/Predefined-Shapes_img24.png)
+   ![](Predefined-Shapes_images/Predefined-Shapes_img24.png)
 
 
 
 3. Compensation
 
-Compensation is triggered when operation partially fails.
+   Compensation is triggered when operation partially fails.
 
-![](Predefined-Shapes_images/Predefined-Shapes_img25.png)
+   ![](Predefined-Shapes_images/Predefined-Shapes_img25.png)
 
 
 
 4. Call
 
-![](Predefined-Shapes_images/Predefined-Shapes_img26.png)
+   ![](Predefined-Shapes_images/Predefined-Shapes_img26.png)
 
 
 
 5. Ad-Hoc
 
-![](Predefined-Shapes_images/Predefined-Shapes_img27.png)
+   ![](Predefined-Shapes_images/Predefined-Shapes_img27.png)
 
 
 
 6. Boundary
 
-Boundary represents the type of task that is processed.
-
-![](Predefined-Shapes_images/Predefined-Shapes_img28.png)
+   Boundary represents the type of task that is processed.
+ 
+   ![](Predefined-Shapes_images/Predefined-Shapes_img28.png)
 
 
 

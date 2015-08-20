@@ -23,7 +23,7 @@ The following steps explain the configuration of ExtensionsAllow property in Upl
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // In the CSHTML page, add UploadBox element.
 
@@ -43,10 +43,7 @@ The following steps explain the configuration of ExtensionsDeny property in Uplo
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 // In the CSHTML page, add UploadBox ox element.
 

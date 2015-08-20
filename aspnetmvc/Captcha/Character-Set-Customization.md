@@ -14,16 +14,17 @@ The Captcha characters can be customized by CharacterSet property. Depending on 
 The following code example is used to render the Captcha with customized character set.
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with customized character set.
-{% highlight html %}
-[CSHTML]
 
-@Html.EJ().Captcha("captcha").CharacterSet("qwertyuiop1234") 
+   ~~~ javascript
 
-{% endhighlight %}
+
+		@Html.EJ().Captcha("captcha").CharacterSet("qwertyuiop1234") 
+
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot illustrates the Captcha with customized character set. 
 
-{{ '![](Character-Set-Customization_images/Character-Set-Customization_img1.png)' | markdownify }}
-{:.image }
+![](Character-Set-Customization_images/Character-Set-Customization_img1.png)
 
 

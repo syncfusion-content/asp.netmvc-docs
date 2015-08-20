@@ -27,10 +27,7 @@ The following code example illustrates you on how to change the schedule mode.
 In the Week schedule mode, the upper part of the schedule header displays the weeks whereas the bottom half of the header displays the days. Refer the following code example.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -48,8 +45,6 @@ In the Week schedule mode, the upper part of the schedule header displays the we
 
 )
 
-
-
 {% endhighlight %}
 
 
@@ -60,10 +55,6 @@ The following screenshot illustrates the Week Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img1.png)
 
-
-
-
-
 _Figure 41 : Week Schedule in Gantt control_
 
 ### Month Schedule Mode
@@ -71,10 +62,7 @@ _Figure 41 : Week Schedule in Gantt control_
 In the Week schedule mode, the upper part of the schedule header displays the Months whereas the bottom header of the schedule displays its corresponding Weeks. Refer the following code example.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -104,7 +92,7 @@ The following screenshot illustrates the Month Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img2.png)
 
-
+_Figure 42: Month Schedule in Gantt control_
 
 ### Year Schedule Mode
 
@@ -112,7 +100,7 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -142,7 +130,7 @@ The following screen shot shows the Year Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img3.png)
 
-
+_Figure 43: Year Schedule in Gantt control_
 
 ### Day Schedule Mode
 
@@ -180,7 +168,7 @@ The following screenshot illustrates the Day Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img4.png)
 
-
+_Figure 44: Day Schedule in Gantt control_
 
 ### Hour Schedule Mode
 
@@ -202,11 +190,7 @@ ScheduleEndDate, whereas the other enumeration values splits up accordingly.
 
 The Hour Schedule Mode supports both the Minute and Hour duration units.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -260,5 +244,5 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 
 ![](Schedule-Modes_images/Schedule-Modes_img5.png)
 
-
+_Figure 45: Hour-Minute schedule mode in Gantt control_
 

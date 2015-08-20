@@ -44,13 +44,15 @@ The following steps explain you how to specify the Start Level view in DatePicke
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized start level view*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized start level view*@
 
-@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century)
+		@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 
@@ -92,14 +94,16 @@ The following steps explain you how to get the DepthLevel.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
+   ~~~ js
 
-{% highlight html %}
-@*Add the following code example to the corresponding CSHTML page to restrict the drill down depth level DatePicker widget*@
+		@*Add the following code example to the corresponding CSHTML page to restrict the drill down depth level DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century).DepthLevel(Period.Year)
+		@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century).DepthLevel(Period.Year)
 
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 

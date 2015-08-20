@@ -16,7 +16,7 @@ The following steps explain enabling the EnableRTL property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

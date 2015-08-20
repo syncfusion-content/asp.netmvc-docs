@@ -218,8 +218,6 @@ The following code illustrates how to create Delete User handle.
 
 {% highlight js %}
 
-
-
 //Creates handle
 
 var userHandles = [];
@@ -230,8 +228,6 @@ deletHandle.tool = new DeleteTool(deleteHandle.name);
 
 userHandles.push(deletHandle);
 
-
-
 {% endhighlight %}
 
 ### Create tool for Delete Userhandle
@@ -239,9 +235,6 @@ userHandles.push(deletHandle);
 The following code illustrates how to create tool for Delete User handle
 
 {% highlight js %}
-
-
-
 
 //Creates tool for delete handle
 

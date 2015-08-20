@@ -24,7 +24,7 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -72,7 +72,7 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
                     cntgrp.Id("Galleryribbon").Type(RibbonButtonType.Gallery).ItemWidth(68).ItemHeight(54).Columns(2).ExpandedColumns(3)
 
-.GalleryItems(gi =>
+					.GalleryItems(gi =>
 
                     {
 

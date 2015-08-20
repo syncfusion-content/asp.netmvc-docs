@@ -13,7 +13,7 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -45,7 +45,7 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
                     cntgrp.Id("paste").Text("Paste")
 
-.CustomToolTip(new CustomToolTip()
+				.CustomToolTip(new CustomToolTip()
 
                     {
 
@@ -57,7 +57,7 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
                     })
 
-.ButtonSettings(new ButtonProperties(){
+						.ButtonSettings(new ButtonProperties(){
 
                         ContentType=ContentType.ImageOnly,
 

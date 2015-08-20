@@ -3,7 +3,7 @@ layout: post
 title: Sub-Gauges
 description: sub gauges
 platform: ejmvc
-control: Circular Gauge
+control: CircularGauge
 documentation: ug
 ---
 
@@ -15,9 +15,7 @@ A Circular Gauge containing another circular gauge is said to be Sub Gauges. Ino
 
 Sub gauge collection is directly added to the scale object. Refer the following code example to add custom sub gauge collection in a Gauge control
 
-{% highlight html %}
-
-[View]
+{% highlight js %}
 
 @(Html.EJ().CircularGauge("circulargauge")
 
@@ -64,10 +62,7 @@ sg.ControlID("Subgauge1")
 
 Basic attributes such as height and width property are used to set height and width of the sub gauge. You can easily position the gauge in another gauge using the position object and by giving the X and Y Coordinates value. controlID attribute is used to specify the sub gauge ID.
 
-{% highlight html %}
-
-[View]
-
+{% highlight js %}
 
 
 @(Html.EJ().CircularGauge("Subgauge1")
@@ -81,9 +76,6 @@ Basic attributes such as height and width property are used to set height and wi
 .Scales(sc=>{sc.Radius(110).Add();})
 
 )
-
-
-
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -126,8 +118,6 @@ sg.ControlID("Subgauge1")
 
 )
 
-
-
 {% endhighlight  %}
 
 Execute the above code to render the following output.
@@ -142,9 +132,8 @@ Execute the above code to render the following output.
 
 You can set multiple sub gauges in a single Circular Gauge by adding an array of sub gauge objects. Refer the following code example for multiple sub gauges functionality.
 
-{% highlight html %}
+{% highlight js %}
 
-[View]
 
 @(Html.EJ().CircularGauge("Subgauge1")
 

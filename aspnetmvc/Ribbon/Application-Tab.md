@@ -13,7 +13,7 @@ The_Application Menu_ support is provided in the _Ribbon_ control _Application t
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 

@@ -23,12 +23,7 @@ The following code example is for the Grid with default options.
 
 
 
-{% highlight html %}
-
-[MVC]
-
-[razor]
-
+{% highlight js %}
 
 
 @(Html.EJ().Grid<OrdersView>("Grid")
@@ -44,7 +39,7 @@ The following code example is for the Grid with default options.
 {% endhighlight  %}
 {% highlight c# %}
 
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -78,25 +73,15 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 The following output is displayed as a result of the above code example.
 
-
-
 ![](Paging_images/Paging_img1.png)
 
-
+_Figure : Paging_
 
 ## External Paging
 
 In this section, you can see how to use external paging. The following code example is for external paging.
 
-
-
-
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Paging")
 
@@ -136,6 +121,7 @@ In this section, you can see how to use external paging. The following code exam
 
         </div>
 {% endhighlight  %}
+
 {% highlight js %}
 <script type="text/javascript">
 
@@ -151,10 +137,8 @@ In this section, you can see how to use external paging. The following code exam
 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-
-
-[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -190,19 +174,13 @@ The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img2.png)
 
-
+_Figure : External Paging_
 
 ## Pager Templates
 
 Pager Templates feature provide support to render a specific custom template to a Grid pager using EnableTemplates and Template properties of PageSettings. ShowDefaults property is used to show/hide default pager for Grid.
 
-{% highlight html %}
-
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Paging")
 
@@ -231,6 +209,7 @@ Pager Templates feature provide support to render a specific custom template to 
     ) 
 
 {% endhighlight  %}
+
 {% highlight js %}
 
  <script type="text/x-jsrender" id="template">
@@ -246,7 +225,7 @@ Pager Templates feature provide support to render a specific custom template to 
    </script>   
 {% endhighlight  %}
 {% highlight c# %}
- [Controller]
+ 
 
 
 
@@ -284,7 +263,7 @@ public partial class GridController : Controller
 
 ![](Paging_images/Paging_img3.png)
 
-
+_Figure : Pager Template_
 
 ## Methods
 
@@ -296,16 +275,7 @@ The following are the public methods of pager.
 In this section, you can see how to use paging methods in Grid control. The following code example is for paging methods. 
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[razor]
-
-
-
-
+{% highlight js %}
 
  @(Html.EJ().Grid<OrdersView>("Paging")
 
@@ -391,9 +361,6 @@ In this section, you can see how to use paging methods in Grid control. The foll
 
 </div>
 
-{% endhighlight  %}
-{% highlight js %}
-
 <script type="text/javascript">
 
     function pageChange(args) {
@@ -419,7 +386,7 @@ In this section, you can see how to use paging methods in Grid control. The foll
 
 {% endhighlight  %}
 {% highlight c# %}
-  [controller]
+  
 
 namespace MVCSampleBrowser.Controllers
 
@@ -455,6 +422,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img4.png)
 
+_Figure : Paging Methods_
 
 
 ## Localization for paging
@@ -463,7 +431,7 @@ Localization is the process of customizing the user interface (UI) as locale-spe
 
 The following UIs are provided to localize based on culture. The default English localization UIs are as follows.
 
-
+{% highlight js %}
 
 pagerInfo: "{0} of {1} pages ({2} items)",
 
@@ -479,20 +447,15 @@ nextPagerTooltip: "Go to next pager",
 
 previousPagerTooltip: "Go to previous pager "
 
-
+{% endhighlight  %}
 
 In this section, you can see how to use Globilzation in Grid pager. The following code example is for pager localization in German and Spanish. 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-  [MVC]
-
-[razor]
-
-
-
+  
 @(Html.EJ().Grid<OrdersView>("Localization")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -546,9 +509,6 @@ In this section, you can see how to use Globilzation in Grid pager. The followin
         </div>
 
     </div>
-
-{% endhighlight  %}
-{% highlight js %}
 
     <script type="text/javascript">
 
@@ -627,9 +587,6 @@ ej.Pager.locale["es-ES"] = {
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -671,5 +628,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img5.png)
 
-
+_Figure : Pager Localization_
 

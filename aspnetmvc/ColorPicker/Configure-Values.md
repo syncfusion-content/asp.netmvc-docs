@@ -18,8 +18,8 @@ The OpacityValue property is Number type and its default value is 100.
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight html %}
-[CSHTML]
+{% highlight js %}
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -35,7 +35,7 @@ The following screenshot displays the output of the above code example.
 
 ## Button and TooltipText
 
-## ButtonText
+### ButtonText
 
 The ColorPicker control allows you to define the text to be displayed in button elements. You can specify the text by using ButtonText property. In ColorPicker control, popup contains two button elements “Apply” and “Cancel”.
 
@@ -57,7 +57,8 @@ Apply</td></tr>
 Cancel</td><td>
 Cancel</td></tr>
 </table>
-TooltipText
+
+#### TooltipText
 
 The ColorPicker control consists of more number of sub controls and elements. To provide some information about each element and sub control, you can use the tooltip concept and you can achieve this by using TooltipText property.
 
@@ -141,9 +142,9 @@ When it is necessary to set the button text and TooltipText values in Spanish cu
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 

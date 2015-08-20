@@ -13,7 +13,7 @@ You can add _Contextual Tabs_ and _Tab Set_ in the _Ribbon_ control. In _Context
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 

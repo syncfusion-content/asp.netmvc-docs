@@ -15,7 +15,7 @@ Range Padding adds padding for range in RangeNavigator. It allows you to space t
 
 The RangePadding property allows you to customize the automatic range calculation using the default auto range calculation for RangeNavigator. 
 {% highlight html %}
- [MVC]
+ 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -77,7 +77,7 @@ The following screenshot illustrates a RangeNavigator with RangePadding set to R
 
 Using the default range calculation for RangeNavigator, the RangePadding property allows you to customize the range. 
 {% highlight html %}
- [MVC]
+ 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -116,7 +116,7 @@ RangeNavigator calculates the range automatically based on the values of series 
 
 The following code example renders a RangeNavigator with a range from 2010 January 1st to 2013 January 1st. 
 {% highlight html %}
- [MVC]
+ 
 
 
 

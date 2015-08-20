@@ -19,9 +19,9 @@ Add the above css link in the code sample.
 
 1. Add the following code in your View page.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]   
+   
 
 // Add the following code in your CSHTML page.
 

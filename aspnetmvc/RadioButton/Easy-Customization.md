@@ -19,7 +19,7 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 	// Add the code in CSHTML page to configure Radio Button
 
@@ -144,7 +144,7 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 	// Add the code in CSHTML page to configure Radio Button
 

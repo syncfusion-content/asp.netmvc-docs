@@ -44,9 +44,21 @@ ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOper
 ## lessThan
 
 This operator is used to get the records with values lesser than the filter value.
-{% highlight html %}
+{% highlight js %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'lessThan', 10252, false)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)
+@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
+@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+        .DataManagerID("FlatData")
+        .Query("new ej.Query().where('OrderID', 'lessThan', 10252, false)")
+        .Columns(col => 
+		{ 
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();  
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add(); 
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})	
+ )
 
 {% endhighlight  %}
 
@@ -61,9 +73,20 @@ Result of the above code example is illustrated as follows.
 ## greaterThan
 
 This operator is used to get the records with values greater than that of the filter value.
-{% highlight html %}
+{% highlight js %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'greaterThan', 10252, false).take(5)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)
+@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
+@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+        .DataManagerID("FlatData")
+        .Query("new ej.Query().where('OrderID', 'greaterThan', 10252, false).take(5)")
+        .Columns(col =>        { 
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add(); 
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();  
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add(); 
+			})	
+ )
 
 {% endhighlight %}
 
@@ -80,9 +103,20 @@ Result of the above code example is illustrated as follows.
 ## lessThanOrEqual
 
 This operator is used to get the records with values lesser than or equal to the filter value.
-{% highlight html %}
+{% highlight js %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")        .DataManagerID("FlatData")        .Query("new ej.Query().where('OrderID', 'lessThanOrEqual', 10252, false)")        .Columns(col =>        {            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();        })	)
+@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
+@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+        .DataManagerID("FlatData")
+        .Query("new ej.Query().where('OrderID', 'lessThanOrEqual', 10252, false)")
+        .Columns(col =>        {
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add(); 
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();  
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add(); 
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();  
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add(); 
+		})
+ )
 
 
 {% endhighlight  %}
@@ -97,10 +131,8 @@ Result of the above code example is illustrated as follows.
 ## greaterThanOrEqual
 
 This operator is used to get the records with values greater than or equal to the filter value.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
-
-
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -143,7 +175,7 @@ Result of the above code example is illustrated as follows.
 ## equal
 
 This operator is used to get the records with values equal to that of the filter value.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -189,7 +221,7 @@ Result of the above code example is illustrated as follows.
 ## notEqual
 
 This operator is used to get the records with values not equal to that of the filter value specified.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -238,7 +270,7 @@ Result of the above code example is illustrated as follows.
 
 This operator is used to get the records that contains the filter value.
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
@@ -287,7 +319,7 @@ Result of the above code example is illustrated as follows.
 ## startswith
 
 This operator is used to get the records that starts with the filter value specified.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -333,7 +365,7 @@ Result of the above code example is illustrated as follows.
 ## endswith
 
 This operator is used to get the records that ends with the filter value specified.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -383,7 +415,7 @@ and predicate
 The and predicate is used to add n-number of predicates with and condition and filter the data.
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -392,7 +424,8 @@ The and predicate is used to add n-number of predicates with and condition and f
 
         .DataManagerID("FlatData")
 
-        .Query("new ej.Query().where(ej.Predicate('OrderID', ej.FilterOperators.greaterThan, 10399, true).and('CustomerID', ej.FilterOperators.startsWith, 'V', true)).take(5)")
+        .Query("new ej.Query().where(ej.Predicate('OrderID', ej.FilterOperators.greaterThan, 10399, true)
+								.and('CustomerID', ej.FilterOperators.startsWith, 'V', true)).take(5)")
 
 
 
@@ -424,12 +457,10 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img10.png)
 
-
-
 or predicate
 
 By using this method, you can add n-number of predicates with or condition and filter the data.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -438,9 +469,8 @@ By using this method, you can add n-number of predicates with or condition and f
 
         .DataManagerID("FlatData")
 
-        .Query("new ej.Query().where(ej.Predicate('OrderID', ej.FilterOperators.greaterThan, 10399, true).or('CustomerID', ej.FilterOperators.startsWith, 'V', true)).take(5)")
-
-
+        .Query("new ej.Query().where(ej.Predicate('OrderID', ej.FilterOperators.greaterThan, 10399, true)
+							  .or('CustomerID', ej.FilterOperators.startsWith, 'V', true)).take(5)")
 
         .Columns(col =>
 

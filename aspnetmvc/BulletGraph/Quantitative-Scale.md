@@ -207,6 +207,7 @@ Quantitativescalelabels are customized with prefix, suffix, font, color and size
 
 
 {% endhighlight %}
+
 The following screenshot displays Bullet Graph labels in blue color
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img7.png)
@@ -215,12 +216,12 @@ The following screenshot displays Bullet Graph labels in blue color
 
 
 
-_Figure_ _32_: Bullet Graph quantitative scale with customized labels_
+_Figure_ _32_: Bullet Graph quantitative scale with customized labels
 
 ## Label Placement
 
 Quantitativescalelabels can be placed either inside or outside the scale using “LabelPlacement” property. By default labels are placed 15 pixels outside the scale. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(50)
 
@@ -255,7 +256,7 @@ The following screenshot displays Bullet Graph labels inside Quantitative Scale
 ## Performance measure bar
 
 Performancemeasurebar is customized using FeaturedMeasureSettings in QuantitativeScaleSettings property. Color of the bar is customized using Stroke property and width using Width property. By default bar is drawn in black color with 6 pixels of width. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
@@ -276,7 +277,7 @@ The following screenshot displays Bullet Graph with customized Performance measu
 ## Comparative measure symbol
 
 Comparative symbol color and width are customized using ComparativeMeasureSettings through QuantitativeScaleSettings property. Color of the symbol is customized using Stroke property and width using Width property. By default Comparative measure symbol is displayed in black color with a width of 5 pixels. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
@@ -299,7 +300,7 @@ The following screenshot displays Bullet Graph with customized Comparative measu
 ## Multiple performance measures comparison
 
 Bullet Graph supports comparing more than one performance at a time, given that all the comparisons are related using FeatureMeasure in QuantitativeScaleSettings property. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 

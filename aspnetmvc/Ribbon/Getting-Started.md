@@ -26,96 +26,97 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 
 
 
-{% highlight html %}
+   ~~~ html
 
 
-@(Html.EJ().Ribbon("Ribbon")
+		@(Html.EJ().Ribbon("Ribbon")
 
-.Width("500px")
+		.Width("500px")
 
-.ApplicationTab(apptab =>
+		.ApplicationTab(apptab =>
 
-{
+		{
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+		apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
 
-{
+		{
 
-OpenOnClick = false
+		OpenOnClick = false
 
-});
+		});
 
-})
+		})
 
-.RibbonTabs(tab =>
+		.RibbonTabs(tab =>
 
-{
+		{
 
-tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+		tab.Id("home").Text("HOME").TabGroups(tabgrp =>
 
-{
+		{
 
-tabgrp.Text("New").Type("custom").ContentID("ribbonContent").Add();
+		tabgrp.Text("New").Type("custom").ContentID("ribbonContent").Add();
 
-}).Add();
+		}).Add();
 
-tab.Id("calculator").Text("CALCULATOR").TabGroups(tabgrp =>
+		tab.Id("calculator").Text("CALCULATOR").TabGroups(tabgrp =>
 
-{
+		{
 
-tabgrp.Text("Numbers").Type("custom").ContentID("inserttab").Add();
+		tabgrp.Text("Numbers").Type("custom").ContentID("inserttab").Add();
 
-}).Add();
+		}).Add();
 
-})
+		})
 
-.ContextualTabs(ctabs => {
+		.ContextualTabs(ctabs => {
 
-ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
+		ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
 
-{
+		{
 
-ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
+		ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
 
-{
+		{
 
-ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
+		ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
 
-}).Add();
+		}).Add();
 
-});
+		});
 
-})
+		})
 
-)
-
-
-
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-<li><a>Open</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="ribbonContent">Ribbon control</div>
-
-<div id="inserttab">Insert Tab</div>
-
-<div id="designtab">Design Tab</div>
+		)
 
 
 
-{% endhighlight %}
+		<ul id="menu">
+
+		<li><a>FILE</a>
+
+		<ul>
+
+		<li><a>New</a></li>
+
+		<li><a>Open</a></li>
+
+		</ul>
+
+		</li>
+
+		</ul>
+
+		<div id="ribbonContent">Ribbon control</div>
+
+		<div id="inserttab">Insert Tab</div>
+
+		<div id="designtab">Design Tab</div>
+
+
+
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -131,7 +132,7 @@ Add controls to each _Ribbon_ tab by using the property _Content_. You can also 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -312,7 +313,7 @@ content: "\e636";
 
 </style>
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -372,8 +373,6 @@ return View();
 
 {% endhighlight %}
 
-{% endhighlight %}
-
 
 
 The following screenshot illustrates Ribbon with controls.
@@ -404,7 +403,7 @@ _Control Separator_ support has been provided in the _Ribbon_ control. Set _Enab
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -599,7 +598,7 @@ content: "\e634";
 
 </style>
 
-
+{% endhighlight %}
 {% highlight c# %}
 
 namespace MVCSampleBrowser.Controllers
@@ -650,14 +649,11 @@ return View();
 
 }
 
-
-
 }
 
 }
 
 
-{% endhighlight %}
 {% endhighlight %}
 
 

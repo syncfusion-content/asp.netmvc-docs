@@ -15,10 +15,10 @@ MaskEditTextBox provides state maintenance support. You can maintain the previou
 
 ### Configure Persistence Support 
 
-1. In the View page add MaskEditTextBox helper, and configure the EnablePersistence property as follows.
+In the View page add MaskEditTextBox helper, and configure the EnablePersistence property as follows.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").EnablePersistence(true)
 
@@ -28,13 +28,13 @@ Output of MaskEditTextBox with EnablePersistence is as follows.
 
 
 
-2. ![](Behavior-Settings_images/Behavior-Settings_img1.png)
+![](Behavior-Settings_images/Behavior-Settings_img1.png)
 
-
+_MaskEditTextBox at initial load_
 
 ![](Behavior-Settings_images/Behavior-Settings_img2.png)
 
-
+_MaskEditTextBox after changing the value and after page refresh_
 
 ## Enabled or Disabled
 
@@ -42,11 +42,11 @@ MaskEditTextBox has an option to enable or disable its element. You can set the 
 
 ### Configure Enabled or Disabled 
 
-3. In the View page add MaskEditTextBox helper, and configure the Enabled property.
+In the View page add MaskEditTextBox helper, and configure the Enabled property.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().MaskEdit("mask").Enabled(false).MaskFormat("99-999-99999")
 
@@ -54,16 +54,13 @@ MaskEditTextBox has an option to enable or disable its element. You can set the 
 
 Output when Enabled is “True” and when Enabled is “False”.
 
-4.![](Behavior-Settings_images/Behavior-Settings_img3.png)
-
-
-
-
+![](Behavior-Settings_images/Behavior-Settings_img3.png)
 
 _Textboxes with enabled as True_
 
 ![](Behavior-Settings_images/Behavior-Settings_img4.png)
 
+_Textboxes with enabled as False_
 
 
 ## Adjusting Txtbox Size
@@ -74,7 +71,7 @@ MaskEditTextBox size can be modified by using the Height and Width properties. Y
 
 MaskEditTextBox size can be modified by using the Height and Width properties. 
 
-{% highlight html %}
+{% highlight js %}
 
 [_cshtml] @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Width("100").Height("50")
 
@@ -82,9 +79,7 @@ MaskEditTextBox size can be modified by using the Height and Width properties.
 
 Output of MaskEditTextBox after setting “Height” and “Width” is as follows.
 
-5. ![](Behavior-Settings_images/Behavior-Settings_img5.png)
-
-
+![](Behavior-Settings_images/Behavior-Settings_img5.png)
 
 _MaskEditTextBox with height and width_
 
@@ -94,9 +89,9 @@ The value of MaskEditTextBox can be assigned by using the Value property. The de
 
 ### Configure Value
 
-6. In the View page add MaskEditTextBox helper, and configure the Value property 
+In the View page add MaskEditTextBox helper, and configure the Value property 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Value("1234567890")
 
@@ -107,13 +102,7 @@ The value of MaskEditTextBox can be assigned by using the Value property. The de
 Output of MaskEditTextBox with the value property is as follows.
 
 
-{% highlight html %}
-
 ![](Behavior-Settings_images/Behavior-Settings_img6.png)
-
-{% endhighlight %}
-
-
 
 _MaskEditTextBox with value_
 
@@ -125,9 +114,7 @@ MaskEditTextBox supports read only option. When you enable the ReadOnly property
 
 In the View page add MaskEditTextBox helper, and configure the ReadOnly property.
 
-7. 
-
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Value("123456").ReadOnly(true)
 
@@ -139,7 +126,7 @@ Output of MaskEditTextBox when ReadOnly is “True” is as follows. MaskEditTex
 
 ![](Behavior-Settings_images/Behavior-Settings_img7.png)
 
-
+_MaskEditTextBox with readOnly _
 
 ## Error Visibility
 
@@ -147,11 +134,11 @@ The MaskEditTextBox has an option that shows the error value with red colored te
 
 ### Configure Error Visibility
 
-8. In the View page use the corresponding Textbox helperfor rendering Textbox controls. 
+In the View page use the corresponding Textbox helperfor rendering Textbox controls. 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @* Add the following code in your view page to render Textbox controls.*@
 
@@ -165,13 +152,13 @@ Output for MaskEditTextBox when ShowError is “True” is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img8.png)
 
-
+_Textbox with showError_
 
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img9.png)
 
-
+_Textbox without error_
 
 ## Mask Edit Properties
 
@@ -197,7 +184,7 @@ In the View page use the corresponding Textbox helperfor rendering MaskEdit cont
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @* Add the following code in your view page to render Textbox controls.*@
 
@@ -215,31 +202,31 @@ The output for MaskEditTextBox with its properties is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img10.png)
 
-
+_MaskEdit with MaskFormat_
 
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img11.png)
 
-
+_MaskEdit with HidePromtOnLeave_
 
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img12.png)
 
-
+_MaskEdit with prompt focus_
 
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img13.png)
 
-
+_MaskEdit with InputMode text_
 
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img14.png)
 
-
+_MaskEdit with CustomCharacter_
 
 ## Appearance
 
@@ -268,46 +255,48 @@ The CSS can be customized by using the CssClass in the MaskEditTextBox. You can 
 
 #### Configure CSS Class
 
-9. In the View page add MaskEditTextBox helper, and configure the CssClass property. 
+1. In the View page add MaskEditTextBox helper, and configure the CssClass property. 
 
 
-{% highlight css %}
+   ~~~ css
 
-[_cshtml] @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Value("123456").CssClass("customCss")
+		@Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Value("123456").CssClass("customCss")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
-1. Customize the CSS properties in custom CSS class.
+2. Customize the CSS properties in custom CSS class.
 
-{% highlight css %}
+   ~~~ css
 
 
 
-    <style>
+			<style>
 
-        .customCss .e-box {
+				.customCss .e-box {
 
-            border-color: #9d241b;
+					border-color: #9d241b;
 
-        }
+				}
 
-        .customCss .e-input {
+				.customCss .e-input {
 
-            background-color: #f6db8d;            
+					background-color: #f6db8d;            
 
-        }
+				}
 
-        .customCss .e-select {
+				.customCss .e-select {
 
-            background-color: #ecf6ac;
+					background-color: #ecf6ac;
 
-            border-color: #3c36e7;
+					border-color: #3c36e7;
 
-        }
+				}
 
-    </style>
+			</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 The output for MaskEditTextBox after applying CssClass is as follows.
 
@@ -315,7 +304,7 @@ The output for MaskEditTextBox after applying CssClass is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img15.png)
 
-
+_Textboxes with cssClass_
 
 ### Rounded Corner Support
 
@@ -323,19 +312,21 @@ MaskEditTextBox provides you with rounded corner support whose appearance is dif
 
 #### Configure Rounded Corner Support
 
-2. In the View page add MaskEditTextBox helper, and configure the ShowRoundedCorner property. 
+In the View page add MaskEditTextBox helper, and configure the ShowRoundedCorner property. 
 
 
 
-{% highlight html %} 
+{% highlight js %} 
 
 @Html.EJ().MaskEdit("mask").Value("123456").ShowRoundedCorner(true)
 
 Output of MaskEditTextBox when ShowRoundedCorner is “True”.
 
+{% endhighlight %}
+
 ![](Behavior-Settings_images/Behavior-Settings_img16.png)
 
-{% endhighlight %}
+_Textboxes with showRoundedCorner_
 
 ### Watr Mark Text Support
 
@@ -345,15 +336,17 @@ The Textboxes provide water mark text support. You can display the initial value
 
 In the View page use the corresponding Textbox helperfor rendering Textbox controls. 
 
-3. @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").WatermarkText("MaskEdit")
+{% highlight js %} 
 
+ @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").WatermarkText("MaskEdit")
 
+{% endhighlight %}
 
 Output of MaskEditTextBox when ShowRoundedCorner is “True”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img17.png)
 
-
+_MaskEditTextBox with watermark text_
 
 ### Text Alignment Support
 
@@ -365,7 +358,7 @@ In the View page use the corresponding MaskEdit helperfor rendering MaskEdit con
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").Value("12345677").TextAlign(TextAlign.Right)
 
@@ -375,11 +368,11 @@ The output for Textboxes when TextAlign is set to “right”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img18.png)
 
-
+_MaskEditTextBox with textAlign_
 
 ### HTML Attributes Support
 
-4. The MaskEditTextBox provides support for adding HTML attributes to the component. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string,object> to specify the HTML attributes. 
+The MaskEditTextBox provides support for adding HTML attributes to the component. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string,object> to specify the HTML attributes. 
 
 #### Configure HTMLAttributes property
 
@@ -387,51 +380,52 @@ The output for Textboxes when TextAlign is set to “right”.
 
 
 
-{% highlight html %}
+   ~~~ html
 
-@{IDictionary<string, object> maskAttribute = new Dictionary<string, object>();
+		@{IDictionary<string, object> maskAttribute = new Dictionary<string, object>();
 
-maskAttribute.Add("accesskey", "j");
+		maskAttribute.Add("accesskey", "j");
 
-}
+		}
+		
+		@Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").HtmlAttributes(maskAttribute)
 
-{% endhighlight %}
-
-5. @Html.EJ().MaskEdit("mask").MaskFormat("99-999-99999").HtmlAttributes(maskAttribute)
-
+   ~~~
+   {:.prettyprint }
 
 
 2. Add the following JavaScript code to focus the MaskEditTextBox
 
-{% highlight javascript %}
+   ~~~ js
 
 
 
-    <script type="text/javascript">
+			<script type="text/javascript">
 
-    $(function () {
+			$(function () {
 
-        $(document).on("keydown", function (e) {
+				$(document).on("keydown", function (e) {
 
-            if (e.altKey && e.keyCode === 74) { // j- key code.
+					if (e.altKey && e.keyCode === 74) { // j- key code.
 
-                $("#mask").focus();
+						$("#mask").focus();
 
-            }
+					}
 
-        });
+				});
 
-    });
+			});
 
-</script>
+		</script>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 The output for MaskEditTextBox after configuring the HtmlAttributes property
 
 ![](Behavior-Settings_images/Behavior-Settings_img19.png)
 
-
+_MaskEditTextBox with focus_
 
 
 

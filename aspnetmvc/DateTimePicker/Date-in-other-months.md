@@ -15,9 +15,7 @@ Consider you are going to calculate the monthly report of your company’s emplo
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
-   
-     [_cshtml]
+   ~~~ js
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized other months*@
 

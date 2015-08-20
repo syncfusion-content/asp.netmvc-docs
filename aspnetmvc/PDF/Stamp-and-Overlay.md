@@ -7,25 +7,25 @@ control: PDF
 documentation: ug
 ---
 
-## Stamp and Overlay
+# Stamp and Overlay
 
 You apply stamp to a PDF in much the same way as you apply a rubber stamp to a paper document. You can create your own stamps and can stamp PDF using text or images. Overlay feature is used to overlap two PDF pages one above other.
 
-{{ '![](Stamp-and-Overlay_images/Stamp-and-Overlay_img1.png)' | markdownify }}
-{:.image }
+![](Stamp-and-Overlay_images/Stamp-and-Overlay_img1.png)
 
 
-### Stamp Documents
+
+## Stamp Documents
 
 Essential PDF provides you support to stamp over newly created document as well as an existing PDF document.
 
-#### Adding Text Stamp in the PDF document
+### Adding Text Stamp in the PDF document
 
 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -51,9 +51,9 @@ g.DrawString("Imported using Essential PDF", font, PdfPens.Red, PdfBrushes.Red, 
 
 lDoc.Save("Stamp.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -79,9 +79,11 @@ g.DrawString("Imported using Essential PDF", Font, PdfPens.Red, PdfBrushes.Red, 
 
 lDoc.Save("Stamp.pdf")
 
-#### Adding Image Stamp in the PDF document
+{% endhighlight %}
 
-[C#]
+### Adding Image Stamp in the PDF document
+
+{% highlight c# %}
 
 
 
@@ -107,9 +109,9 @@ g.DrawImage(image, new PointF(0, 0), lPage.Graphics.ClientSize);
 
 lDoc.Save("Stamp.pdf"); 
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -135,13 +137,15 @@ g.DrawImage(image, New PointF(0, 0), lPage.Graphics.ClientSize)
 
 lDoc.Save("Stamp.pdf")
 
-### Overlay Documents
+{% endhighlight %}
+
+## Overlay Documents
 
 Overlay documents support for importing pages from existing PDF documents as templates. This feature can be used to overlap two PDF pages one above the other.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -173,9 +177,9 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize());
 
 doc.Save("NewPDF.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -207,11 +211,13 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize())
 
 doc.Save("NewPDF.pdf")
 
-### Transform PDF
+{% endhighlight %}
+
+## Transform PDF
 
 PDF pages can be converted to PdfTemplate object if you want to create a booklet or just place a few pages onto a single page like an image. You can create the template using the following code.
 
-[C#]
+{% highlight c# %}
 
 //Creates a new document.
 
@@ -241,9 +247,9 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize());
 
 doc.Save("NewPDF.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -275,12 +281,12 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize())
 
 doc.Save("NewPDF.pdf")
 
+{% endhighlight %}
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Stamp-and-Overlay_images/Stamp-and-Overlay_img2.png)' | markdownify }}
-{:.image }
-_Note: This template can be scaled, rotated, placed at different coordinates, and so on._
 
-Restrictions
+> Note: This template can be scaled, rotated, placed at different coordinates, and so on._
+
+#### Restrictions
 
 This above process can also convert annotations, but with some limitations as follows.
 

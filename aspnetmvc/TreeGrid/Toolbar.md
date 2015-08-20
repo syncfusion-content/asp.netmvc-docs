@@ -22,7 +22,7 @@ You can enable toolbar for TreeGrid, using the following code example.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
 

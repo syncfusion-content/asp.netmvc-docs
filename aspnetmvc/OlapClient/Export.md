@@ -3,7 +3,7 @@ layout: post
 title: Export
 description: export
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 
@@ -23,11 +23,11 @@ public void ExportOptions(Stream stream)
 
 {
 
-OlapGrid olapGridHelper = new OlapGrid();
+	OlapGrid olapGridHelper = new OlapGrid();
 
-OlapDataManager DataManager=new OlapDataManager(connectionString);
+	OlapDataManager DataManager=new OlapDataManager(connectionString);
 
-olapGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(), "Sample.xls",HttpContext.Current.Response);
+	olapGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(), "Sample.xls",HttpContext.Current.Response);
 
 }
 

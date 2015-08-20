@@ -78,19 +78,20 @@ The following steps explains you on how to enable keyboard interaction for the T
 1. Add the following code to the corresponding view page to render the TimePicker.
 
 
+   ~~~ js
 
-{% highlight html %}
+		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+		@{IDictionary<string, object> parameters = new Dictionary<string, object>();
 
-@{IDictionary<string, object> parameters = new Dictionary<string, object>();
+			parameters.Add("accesskey", "j");
 
-    parameters.Add("accesskey", "j");
+		}
 
-}
+		@Html.EJ().TimePicker("time").HtmlAttributes(parameters)
 
-@Html.EJ().TimePicker("time").HtmlAttributes(parameters)
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Run the code sample, press [Access key](http://en.wikipedia.org/wiki/Access_key) + J to focus in the TimePicker widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 

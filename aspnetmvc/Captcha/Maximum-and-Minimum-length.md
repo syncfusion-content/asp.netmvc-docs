@@ -16,12 +16,13 @@ The following code example is used to render the Captcha with Minimum and Maximu
 1. Add the following code example to the corresponding CSHTML page to render Captcha with Minimum and Maximum length support.
 
 
-{% highlight html %}
-[CSHTML]
+   ~~~ javascript
 
-@Html.EJ().Captcha("captcha").MaximumLength(6).MinimumLength(5)
 
-{% endhighlight %}
+		@Html.EJ().Captcha("captcha").MaximumLength(6).MinimumLength(5)
+
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot illustrates the Captcha with Minimum and Maximum length support. 
 

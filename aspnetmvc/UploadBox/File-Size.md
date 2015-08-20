@@ -28,9 +28,9 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 </div>
 
+{% endhighlight %}
 
-
-{% highlight javascript %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -43,7 +43,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 </script>
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 To know about file action, we need to refer link:
 

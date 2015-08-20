@@ -11,9 +11,8 @@ documentation: ug
 
 The ReportViewer has support to load RDL/RDLC reports from SSRS server. You have to set your SSRS server URL to ReportViewer’sreportServerUrl property and set the relative path of RDL/RDLC file in SSRS to ReportViewer’sreportPath property. 
 
-{% highlight c# %}
+{% highlight html %}
 
-[EJMVC]
 
 @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote)
 .ReportServiceUrl("/api/SSRSReport")
@@ -28,7 +27,7 @@ The Network credentials can be given at WebAPI Controller to connect the SSRS se
 
 {% highlight c# %}
 
-                   /// <summary>
+         /// <summary>
 
         /// Report Initialization method that is triggered when report begins to process.
 

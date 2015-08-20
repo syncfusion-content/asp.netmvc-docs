@@ -19,7 +19,7 @@ In the View page add PercentageTextBox helper, and configure the DecimalPlaces p
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -49,7 +49,7 @@ In the View page add PercentageTextBox helper, and configure the EnablePersisten
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -59,7 +59,7 @@ In the View page add PercentageTextBox helper, and configure the EnablePersisten
 
 Output of PercentageTextBox with EnablePersistence is as follows. 
 
-1. ![](Behavior-Settings_images/Behavior-Settings_img2.png)
+![](Behavior-Settings_images/Behavior-Settings_img2.png)
 
 
 
@@ -73,11 +73,11 @@ PercentageTextBox allows you to use the strict mode option by setting the Enable
 
 ### Configure Strict Mode Support 
 
-2. In the View page add PercentageTextBox helper, and configure the EnableStrictMode property.
+In the View page add PercentageTextBox helper, and configure the EnableStrictMode property.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").MinValue(-5).MaxValue(3).EnableStrictMode(true).Value(10)
 
@@ -97,11 +97,11 @@ PercentageTextBox has an option to enable or disable its element. You can set th
 
 ### Configure Enabled or Disabled 
 
-3. In the View page add PercentageTextBox helper, and configure the Enabled property.
+In the View page add PercentageTextBox helper, and configure the Enabled property.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").Value("2").Enabled(false)
 
@@ -127,13 +127,9 @@ PercentageTextBox size can be modified by using the Height and Width properties.
 
 ### Configure Height and Width 
 
-4. In the View page add PercentageTextBox helper, and configure the Height and Width property.
+In the View page add PercentageTextBox helper, and configure the Height and Width property.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").Value("2").Width("100").Height("50")
 
@@ -157,9 +153,7 @@ The IncrementStep property is used to increase or decrease the amount of value i
 
 In the View page add PercentageTextBox helper, and configure the IncrementStep property.
 
-5. 
-
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").IncrementStep(3).Value("1")
 
@@ -184,10 +178,10 @@ When you have placed the PercentageTextBox in a form, the Name property is used 
 
 ### Configure Name
 
-6. In the View page add PercentageTextBox helper, and configure the Name property.  
+In the View page add PercentageTextBox helper, and configure the Name property.  
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").Name("Percentage")
 
@@ -199,11 +193,11 @@ The value of PercentageTextBox can be assigned by using the Value property. The 
 
 ### Configure Value
 
-7. In the View page add PercentageTextBox helper, and configure the Value property.  
+In the View page add PercentageTextBox helper, and configure the Value property.  
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").Value("21")
 
@@ -227,11 +221,11 @@ The minimum limit value can be assigned to the PercentageTextBox by using the Mi
 
 ### Configure MaxValue and MinValue
 
-8. In the View page add PercentageTextBox helper, and configure the MinValue and MaxValue property.  .  
+In the View page add PercentageTextBox helper, and configure the MinValue and MaxValue property.  .  
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percent").Value("3").MinValue(-2).MaxValue(3)
 
@@ -257,9 +251,8 @@ PercentageTextBox supports read only option. When you enable the ReadOnly proper
 
 In the View page add PercentageTextBox helper, and configure the ReadOnly property.
 
-9. 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ReadOnly(true)
 
@@ -300,17 +293,17 @@ The CSS can be customized by using the CssClass in the PercentageTextBox. You ca
 
 ### Configure CSS Class
 
-10. In the View page add PercentageTextBox helper, and configure the CssClass property. 
+In the View page add PercentageTextBox helper, and configure the CssClass property. 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").CssClass("customCss")
 
 {% endhighlight %}
 
-1. Customize the CSS properties in custom CSS class.
+Customize the CSS properties in custom CSS class.
 
 {% highlight css %}
 
@@ -356,11 +349,11 @@ PercentageTextBox provides you with rounded corner support whose appearance is d
 
 ### Configure Rounded Corner Support
 
-2. In the View page add PercentageTextBox helper, and configure the ShowRoundedCorner property. 
+In the View page add PercentageTextBox helper, and configure the ShowRoundedCorner property. 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ShowRoundedCorner(true)
 
@@ -384,7 +377,7 @@ In the View page add PercentageTextBox helper, and configure the ShowSpinButton 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ShowSpinButton(false)
 
@@ -408,7 +401,7 @@ In the View page add PercentageTextBox helper, and configure the ShowSpinButton 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").WatermarkText("Percentage")
 

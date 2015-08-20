@@ -21,26 +21,11 @@ The globalize.culture.en-US.min.js scripts are changeable based on the culture n
 The following code example demonstrates how to switch the culture of Grid as de-DE (German - Germany).
 
 
-{% highlight html %}
-
-
-[MVC]
-
-
-
-[_Layout.cshtml]
-
-
+{% highlight js %}
 
 <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
 
     <script src="@Url.Content("~/Scripts/cultures/globalize.culture.de-DE.min.js")"></script>
-
-
-
-[cshtml]
-
-
 
     @(Html.EJ().Grid<OrdersView>("Localization")
 
@@ -75,32 +60,27 @@ The following code example demonstrates how to switch the culture of Grid as de-
 {% endhighlight  %}
 {% highlight c# %}
 
-[Controller]
-
 public partial class GridController : Controller
 
-    {
+{
 
-        //
+	//
 
-        // GET: /Localization/
+	// GET: /Localization/
 
-        public ActionResult Localization()
+	public ActionResult Localization()
 
-        {
+	{
 
-            var DataSource = new NorthwindDataContext().OrdersViews.Take(30).ToList();
+		var DataSource = new NorthwindDataContext().OrdersViews.Take(30).ToList();
 
-            ViewBag.dataSource = DataSource;
+		ViewBag.dataSource = DataSource;
 
-            return View();
+		return View();
 
-        }
+	}
 
-    }
-
-
-
+}
 
 
 {% endhighlight  %}
@@ -161,11 +141,13 @@ The output for the above code example is displayed as the following screenshot.
 
 ![](Localization_images/Localization_img1.png)
 
-
+_Figure : Localization._
 
 
 
 The default values of locale labels in Grid and Pager are listed out in the following code example. You can change the label values based on the cultures with its corresponding meaning of words.
+
+{% highlight js %}
 
 ej.Grid.locale["en-US"] = {
 
@@ -293,7 +275,7 @@ ej.Pager.locale["en-US"] = {
 
     };
 
-
+{% endhighlight  %}
 
 
 

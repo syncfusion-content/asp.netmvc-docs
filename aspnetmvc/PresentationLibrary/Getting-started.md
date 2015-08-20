@@ -260,7 +260,7 @@ Finally set the hanging indent of the paragraph with the property “FirstLineIn
 
 
 
-{% highlight html %}
+{% highlight c# %}
 
 
 // adding a new paragraph with the text in the left hand side textbox. 
@@ -332,7 +332,7 @@ Now, at this instance the slide will look like the below.Refer to the following 
 
 
 
-{{ '![](Getting-started_images/Getting-started_img5.png)' | markdownify }}
+![](Getting-started_images/Getting-started_img5.png)
 
 
 
@@ -372,10 +372,6 @@ paragraph.IndentLevelNumber = 2;
 
 paragraph.FirstLineIndent = -20;
 
-
-
-
-
 paragraph = leftShape.TextBody.AddParagraph("Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 
 //Set the list type as bulleted
@@ -407,8 +403,7 @@ paragraph.FirstLineIndent = -20;
 On saving the presentation at this instance, the second slide with the list will look like the belowis as follows.
 
 
-{{ '![](Getting-started_images/Getting-started_img6.png)' | markdownify }}
-
+![](Getting-started_images/Getting-started_img6.png)
 
 
 Now we are going to seeThis section explains how to create numbered list. 

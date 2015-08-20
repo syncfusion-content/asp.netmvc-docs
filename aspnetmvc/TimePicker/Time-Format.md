@@ -19,7 +19,7 @@ The following steps explains you to change the time format for the TimePicker.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with time format*@
 

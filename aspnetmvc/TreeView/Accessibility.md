@@ -85,43 +85,86 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 
 1. In the View page, add TreeView helper to configure TreeView.
 
+   ~~~ js
 
+		\\ To configure TreeView in the CSHTML page@Html.EJ().TreeView("treeview").Items(items =>
+		{items.Add().Text("Favorites").Expanded(true).Children(child =>  
+		{          
+			child.Add().Text("Desktop");    
+			child.Add().Text("Downloads"); 
+			child.Add().Text("Recent places");  
+		});    
+		items.Add().Text("Libraries").Expanded(true).Children(child => 
+		{      
+			child.Add().Text("Documents").Children(child1 =>  
+			{   
+				child1.Add().Text("My Documents");  
+				child1.Add().Text("Public Documents"); 
+			});         
+			child.Add().Text("Pictures").Children(child1 =>  
+			{                   
+				child1.Add().Text("My Pictures");   
+				child1.Add().Text("Public Pictures");  
+			});     
+			child.Add().Text("Music").Children(child1 =>  
+			{                  
+				child1.Add().Text("My Music");     
+				child1.Add().Text("Public Music"); 
+			});    
+			child.Add().Text("Subversion");  
+            });        
+			items.Add().Text("Computer").Children(child =>  
+            {                
+				child.Add().Text("Folder(C)");  
+				child.Add().Text("Folder(D)");      
+				child.Add().Text("Folder(E)");    
+			});   
+		}).ShowCheckbox(true).AllowEditing(true).AllowKeyboardNavigation(true)
 
-
-
-{% highlight html %}
-[View]\\ To configure TreeView in the CSHTML page@Html.EJ().TreeView("treeview").Items(items =>      {             items.Add().Text("Favorites").Expanded(true).Children(child =>             {                   child.Add().Text("Desktop");                   child.Add().Text("Downloads");                   child.Add().Text("Recent places");             });             items.Add().Text("Libraries").Expanded(true).Children(child =>             {                    child.Add().Text("Documents").Children(child1 =>                    {                                child1.Add().Text("My Documents");                                child1.Add().Text("Public Documents");                    });                    child.Add().Text("Pictures").Children(child1 =>                    {                            child1.Add().Text("My Pictures");                            child1.Add().Text("Public Pictures");                    });                    child.Add().Text("Music").Children(child1 =>                     {                            child1.Add().Text("My Music");                            child1.Add().Text("Public Music");                     });                     child.Add().Text("Subversion");              });              items.Add().Text("Computer").Children(child =>              {                     child.Add().Text("Folder(C)");                     child.Add().Text("Folder(D)");                     child.Add().Text("Folder(E)");               });     }).ShowCheckbox(true).AllowEditing(true).AllowKeyboardNavigation(true)
-{% endhighlight %}
-{% highlight js %}
-[JavaScript]<script type="text/javascript">                    //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) {                    // j- key code.                    $(".e-treeview-wrap").focus();                }            });	    </script>
-{% endhighlight  %}
-
-
+   ~~~
+   {:.prettyprint }
+		
+   ~~~ js
+		
+		<script type="text/javascript">
+		
+		//Control focus key
+		$(document).on("keydown", function (e) {
+			if (e.altKey && e.keyCode === 74) {   
+				// j- key code.  
+				$(".e-treeview-wrap").focus();   
+			}         
+		});	
+		</script>
+		
+   ~~~
+   {:.prettyprint }
 
 
 2. Define CSS class for customizing the TreeView.
 
+   ~~~ css
 
-{% highlight css %}
+		<style>
 
+		    .Treeview {
 
-<style>
+			display: inline-block;
 
-    .Treeview {
+			float: left;
 
-        display: inline-block;
+			width: 153px;
 
-        float: left;
-
-        width: 153px;
-
-    }
+		    }
 
 
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
+
 
 The output for TreeView when AllowKeyboardNavigation is set to “True”.
 

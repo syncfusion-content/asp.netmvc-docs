@@ -45,9 +45,8 @@ Fires when the report is loaded.</td></tr>
 </table>
 
 
-{% highlight c# %}
+{% highlight html %}
 
-[EJMVC]
 
 @(
 
@@ -61,7 +60,7 @@ Fires when the report is loaded.</td></tr>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight js %}
 
 <script type="text/javascript">
 

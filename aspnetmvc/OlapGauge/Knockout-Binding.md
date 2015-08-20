@@ -3,7 +3,7 @@ layout: post
 title: Knockout-Binding
 description: knockout binding
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 

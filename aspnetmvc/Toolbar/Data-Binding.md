@@ -92,20 +92,44 @@ The following steps explain how you can bind local data to Toolbar Control.
 In the View page, add Toolbar helper to configure Toolbar. 
 
 
+{% highlight C# %}
+// Add the following data list to be bind in the controller page and define the corresponding data.
+// Define local data source elements with  fields 
+ public class ToolbarLocalBinding 
+ {     
+	public string IconId { get; set; } 
+	public string SpriteCss { get; set; }
+	public string Tooltip { get; set; }   
+	}
+ 
+ //Refer the Model in the controller
+ using <Applicationname>.Models;
+ public ActionResult Index()
+ { 
+	List<ToolbarLocalBinding> toolslist = new List<ToolbarLocalBinding>(); 
+	toolslist.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });
+	toolslist.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "centre" }); 
+	toolslist.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });  
+	toolslist.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });  
+	toolslist.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });  
+	toolslist.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" }); 
+	toolslist.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });  
+	toolslist.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" }); 
+	ViewBag.datasource = toolslist; 
+	return View();    
+ }
+{% endhighlight %} 
 
-<table>
-<tr>
-<td>
-{% highlight C# %}// Add the following data list to be bind in the controller page and define the corresponding data.// Define local data source elements with  fields          public class ToolbarLocalBinding        {            public string IconId { get; set; }            public string SpriteCss { get; set; }            public string Tooltip { get; set; }        }{% endhighlight %} {% highlight C# %} [Controller]//Refer the Model in the controllerusing <Applicationname>.Models;public ActionResult Index()        {            List<ToolbarLocalBinding> toolslist = new List<ToolbarLocalBinding>();            toolslist.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });            toolslist.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "centre" });            toolslist.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });            toolslist.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });            toolslist.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });            toolslist.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" });            toolslist.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });            toolslist.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" });            ViewBag.datasource = toolslist;            return View();        } {% endhighlight %} {% highlight html %} [View] <div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Orientation.Horizontal)</div>{% endhighlight %}</td></tr>
-<tr>
-<td>
-</td></tr>
-</table>
+{% highlight html %} 
+ <div class="cols-sample-area"> 
+ @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)
+ ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip"))
+ .Orientation(Orientation.Horizontal)
+ </div>
+ {% endhighlight %}
 
 
 {% highlight css%}
-
-[CSS]
 
 <style type="text/css" class="cssStyles">
 
@@ -230,7 +254,7 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Toolbar("toolbarcontent").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
 

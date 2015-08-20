@@ -119,10 +119,7 @@ font-weight: bold;
     </style>
 
 {% endhighlight  %}
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -169,7 +166,7 @@ sr.Points(pt =>
 {% endhighlight  %}
 
 
-![F:/Skype Download/IMG_14052014_050616.png](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
 
@@ -253,11 +250,7 @@ You customize a data label with required template by adding a “div” element 
     </style>
 
 {% endhighlight  %}
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -306,9 +299,7 @@ You customize a data label with required template by adding a “div” element 
 ### Numerical Axis:
 
 By default, the label texts are automatically determined based on the axis data points and the generated intervals. You can make the Chart readable and understandable by formatting axes labels. For example, add "$" prefix when values are given in dollars and add "°F" postfix when values are given in Fahrenheit degrees. To achieve this “LabelFormat” property in axis is used. 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -338,10 +329,7 @@ For datetime axis, all globalized date time formats are supported. By default, b
 * 'hh:mm:ss:tt'
 
 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -364,10 +352,7 @@ For datetime axis, all globalized date time formats are supported. By default, b
 ## Title and Subtitle
 
 EJ Chart provides Title and Subtitle support that is used to give additional information about the chart data. It also has various options to customize the font alignment of the Title and Subtitle.
-{% highlight html %}
-[MVC]  
-
-
+{% highlight js %}
 
          @(Html.EJ().Chart("chartcontainer")
 
@@ -392,10 +377,7 @@ You can customize the background for different portion of Chart.
 Using the Background property you can customize the background color of the Chart.
 
 ### Code:
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -418,9 +400,7 @@ Using the Background property you can customize the background color of the Char
 Using Background property in ChartArea you can customize the background color of the Chart area.
 
 ### Code: 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -443,10 +423,7 @@ Using Background property in ChartArea you can customize the background color of
 
 Essential Chart allows you to add background image for your Chart using BackGroundImageUrl property.
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -478,10 +455,7 @@ Chart has built-in theme support. The theme configures the colors of following C
 
 ### Code: 
 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -515,9 +489,7 @@ Following predefined themes are available in Essential Chart.
 ## Custom Color palette 
 
 Apart from the themes, to define custom set of color you can use “Palette” property. Palette customizes the color of series in the Chart. 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chart").Palette(

@@ -3,7 +3,7 @@ layout: post
 title: Data-Exploration
 description: data exploration
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

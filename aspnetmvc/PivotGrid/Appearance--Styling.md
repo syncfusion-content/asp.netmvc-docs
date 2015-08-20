@@ -995,7 +995,7 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 {% endhighlight %}
 
 
-![C:/Users/Tamilarasu .M/Pictures/document/Customtheme.png](Appearance--Styling_images/Appearance--Styling_img1.png)
+![](Appearance--Styling_images/Appearance--Styling_img1.png)
 
 
 

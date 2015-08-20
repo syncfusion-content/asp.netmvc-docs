@@ -18,7 +18,7 @@ The TagCloud content are set to different font sizes from minimum to maximum bas
 The following steps explains you on how to configure font sizes for a TagCloud.
 
 
-{% highlight c# %}
+{% highlight js %}
 
 @Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").MinFontSize("20px").MaxFontSize("50px")
 
@@ -39,7 +39,7 @@ You can set the TagCloud content display format using Format property. The Forma
 The following steps explains you to configure format for a TagCloud.
 
 
-{% highlight c# %}
+{% highlight js %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
@@ -84,7 +84,7 @@ The following steps allows you to configure CssClass for TagCloud.
 
 1. In the View page, add thebelow script to configure TagCloud widget.
 
-   ~~~ html
+   ~~~ js
    
 		<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 

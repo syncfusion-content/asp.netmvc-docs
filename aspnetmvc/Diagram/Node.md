@@ -13,7 +13,7 @@ Nodes are graphical object that represent visual data to be placed on the page.
 
 
 
-![C:/Users/labuser/Desktop/a.png](Node_images/Node_img1.png)
+![](Node_images/Node_img1.png)
 
 
 
@@ -24,10 +24,6 @@ Node is created from Node object and added to the Diagram model by using diagram
 
 
 {% highlight c# %}
-
-
-
-
 
 //Creates a node with default shape (Rectangle)
 
@@ -80,10 +76,6 @@ You can create a rectangle with the help of BasicShape and by setting node’s s
 
 
 {% highlight c# %}
-
-
-
-
 
 BasicShape node = new BasicShape();
 
@@ -170,8 +162,6 @@ You can add Text to the Diagram by using Textshapenode. The text shape has Textb
 
 {% highlight c# %}
 
-
-
 //Creates a node with text content
 
 TextNode node = new TextNode();
@@ -183,8 +173,6 @@ block.TextAlign = TextAlign.Center;
 block.Text = "TextNode";
 
 node.TextBlock = block;
-
-
 
 {% endhighlight %}
 
@@ -202,11 +190,6 @@ You can create complex shapes by using Pathshapenode. It is achieved by assignin
 
 {% highlight c# %}
 
-
-
-
-
-
 BasicShape node = new BasicShape();
 
 //Creates a node with path shape
@@ -221,7 +204,7 @@ node.PathData = "M 67.2947 100 L 67.2947 0.00102291 L 59.138 0.00102291 M 100 50
 
 
 
-![C:/Users/labuser/Desktop/a.png](Node_images/Node_img6.png)
+![](Node_images/Node_img6.png)
 
 
 

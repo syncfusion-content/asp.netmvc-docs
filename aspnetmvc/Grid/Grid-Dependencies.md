@@ -11,10 +11,6 @@ documentation: ug
 
 ej.web.all.js is a bundle of all EssentialJavaScript controls. If you use ej.web.all.js in your application, you can leave this section or else you can try to render grid in your application using ej.grid.min.js file. You can refer the following frameworks and controls in your project.
 
-
-
-
-
 _Table1: Grid Dependency_ 
 
 <table>

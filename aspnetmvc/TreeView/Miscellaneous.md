@@ -14,7 +14,7 @@ documentation: ug
 You can enable or disable the TreeView control by using the property Enabled. You can enable the TreeView control by setting the property enabled to “True” and you can specify the property Enabled in the script as follows.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
   @Html.EJ().TreeView("treeview").Items(items =>
@@ -96,11 +96,7 @@ You can enable or disable the TreeView control by using the property Enabled. Yo
 You can specify the expandednode level in TreeView by using the property ExpandedNodes. Expandednodes index collection is given to integer array. Add the following code in your script section.
 
 
-{% highlight html %}
-
-
-
-
+{% highlight js %}
 
 @{List<int> nodes = new List<int>() { 0,4 }; }
 
@@ -184,12 +180,7 @@ You can specify the expandednode level in TreeView by using the property Expande
 
 Node can be expanded for specified events. You can specify the property ExpandOn in TreeView control in the script as follows.
 
-
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().TreeView("treeview").Items(items =>

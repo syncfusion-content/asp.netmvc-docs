@@ -18,10 +18,6 @@ The following code illustrates how to provide localization support for ContextMe
 {% highlight html %}
 
 
-
-
-
-
 $("#DiagramContent").ejDiagram("model.locale","es-ES"); ej.datavisualization.Diagram.Locale["es-ES"] = {
 
             cut: "Corte",

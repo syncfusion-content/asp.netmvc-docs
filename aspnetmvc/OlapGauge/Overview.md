@@ -3,7 +3,7 @@ layout: post
 title: Overview
 description: overview
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -23,3 +23,4 @@ The key features of the OLAP Gauge control is as follows:
 * Ranges: Highlighting the range of values in OLAP Gauge scale.
 * Pointers:  Points the actual KPI value and goal information.
 * Header labels: Support to show or hide OLAP Gauge header labels and indicators.
+

@@ -311,8 +311,6 @@ The following code illustrates how to create a simple swim lane.
 
         }
 
-
-
 {% endhighlight %}
 
 

@@ -32,12 +32,8 @@ Context Menu is one of the user interaction controls related with Grid. It is ha
 To enable Context Menu in Grid use EnableContextMenu property in ContextMenuSettings at Grid initialize. The following code example illustrates you on how to set Context Menu.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
-
-
-[razor]
 
   @(Html.EJ().Grid<object>("Grid")
 
@@ -82,12 +78,6 @@ contextMenu.EnableContextMenu();
 {% endhighlight  %}
 {% highlight c# %}
 
-
-
-[Controller]
-
-
-
 namespace SyncfusionMvcApplication3.Controllers
 
 {
@@ -118,25 +108,19 @@ The following output is displayed as a result of the above code example.
 
 Content
 
-![C:/Users/ApoorvahR/Desktop/1.png](Context-Menu_images/Context-Menu_img1.png)
-
-
+![](Context-Menu_images/Context-Menu_img1.png)
 
 _Figure131: Context Menu in content_
 
 Header
 
-![C:/Users/ApoorvahR/Desktop/2.png](Context-Menu_images/Context-Menu_img2.png)
-
-
+![](Context-Menu_images/Context-Menu_img2.png)
 
 _Figure112: Context Menu in Header_
 
 Footer
 
 ![](Context-Menu_images/Context-Menu_img3.png)
-
-
 
 _Figure113: Context Menu in Footer_
 

@@ -14,12 +14,7 @@ Exporting feature provides support to export Grid data into excel, word and pdf 
 ## MVC
 
 In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter. You need to serialize it into Grid Property. Using Export() server method you can export the Grid into excel, pdf and word documents.
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
   @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -60,19 +55,13 @@ items.AddTool(ToolBarItems.ExcelExport);
 {% endhighlight  %}
 {% highlight c# %}
 
-[Controller]
-
-
-
 public partial class GridController : Controller
 
+{
+
+	public ActionResult ExportingGrid()
+
     {
-
-
-
-public ActionResult ExportingGrid()
-
-        {
 
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
@@ -80,85 +69,86 @@ public ActionResult ExportingGrid()
 
             return View();
 
-        }
+    }
 
-        public void ExportToExcel(string GridModel)
+    public void ExportToExcel(string GridModel)
 
-        {
+    {
 
-            ExcelExport exp = new ExcelExport();
+		ExcelExport exp = new ExcelExport();
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-            GridProperties obj = ConvertGridObject(GridModel);
+		GridProperties obj = ConvertGridObject(GridModel);
 
-            exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
+		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
-        }
+	}
 
-        public void ExportToWord(string GridModel)
+	public void ExportToWord(string GridModel)
 
-        {
+	{
 
-            WordExport exp = new WordExport();
+		WordExport exp = new WordExport();
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-            GridProperties obj = ConvertGridObject(GridModel);
+		GridProperties obj = ConvertGridObject(GridModel);
 
-            exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron");
+		exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron");
 
-        }
+	}
 
-        public void ExportToPdf(string GridModel)
+	public void ExportToPdf(string GridModel)
 
-        {
+	{
 
-            PdfExport exp = new PdfExport();
+		PdfExport exp = new PdfExport();
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-            GridProperties obj = ConvertGridObject(GridModel);
+		GridProperties obj = ConvertGridObject(GridModel);
 
-            exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
+		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
-        }
+	}
 
-        private GridProperties ConvertGridObject(string gridProperty)
+	private GridProperties ConvertGridObject(string gridProperty)
 
-        {
+	{
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+		JavaScriptSerializer serializer = new JavaScriptSerializer();
 
-            IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
+		IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
 
-            GridProperties gridProp = new GridProperties();
+		GridProperties gridProp = new GridProperties();
 
-            foreach (KeyValuePair<string, object> ds in div)
+		foreach (KeyValuePair<string, object> ds in div)
 
-            {
+		{
 
-                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
+			var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
 
-                if (property != null)
+			if (property != null)
 
-                {
+			{
 
-                    Type type = property.PropertyType;
+				Type type = property.PropertyType;
 
-                    string serialize = serializer.Serialize(ds.Value);
+				string serialize = serializer.Serialize(ds.Value);
 
-                    object value = serializer.Deserialize(serialize, type);
+				object value = serializer.Deserialize(serialize, type);
 
-                    property.SetValue(gridProp, value, null);
+				property.SetValue(gridProp, value, null);
 
-                }
+			}
 
-            }
+		}
 
-            return gridProp;
+		return gridProp;
 
-        }    }
+	} 
+}
 
 {% endhighlight  %}
 
@@ -170,15 +160,10 @@ On Exporting the default routing path to server-side that contains the action na
 
 Mappers Grid property is used to modify the default routing path during exporting. By using Mappers, you can use any action name in Controller for exporting and the action can be in any controller (Need not to be in Grid View Page Controller).
 
-{% highlight html %}
-
-[MVC]
-
-[razor]
+{% highlight js %}
 
 
-
-  @(Html.EJ().Grid<OrdersView>("FlatGrid")
+ @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
 
@@ -221,17 +206,12 @@ items.AddTool(ToolBarItems.ExcelExport);
         })) 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-
-[Controller]
-
-
 
 public partial class GridController : Controller
 
     {
-
-
 
 public ActionResult ExportingGrid()
 
@@ -321,10 +301,8 @@ public ActionResult ExportingGrid()
 
             return gridProp;
 
-        }    }
-
-
-
+        }  
+}
 
 {% endhighlight  %}
 

@@ -20,13 +20,15 @@ The following steps explain you how to get the current month date alone.
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with current month date alone*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with current month date alone*@
 
-@Html.EJ().DatePicker("datePicker").ShowOtherMonths(false)
+		@Html.EJ().DatePicker("datePicker").ShowOtherMonths(false)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2.  The following screenshot displays the output for the above code.
 

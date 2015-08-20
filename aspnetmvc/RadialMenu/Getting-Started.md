@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started
 platform: ejmvc
-control: Radial Menu
+control: RadialMenu
 documentation: ug
 ---
 
@@ -27,7 +27,7 @@ Add the following code example to the corresponding view page to render the Radi
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

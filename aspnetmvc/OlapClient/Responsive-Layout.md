@@ -3,7 +3,7 @@ layout: post
 title: Responsive-Layout
 description: responsive layout
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

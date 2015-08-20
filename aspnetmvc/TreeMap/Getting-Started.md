@@ -30,8 +30,6 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 {% highlight c# %}
 
-[TreeMapController.cs]
-
     public class TreeMapPopulationData
 
     {
@@ -80,10 +78,6 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
             population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Southern Africa", Growth = 0.91, Population = 60425000});
 
-
-
-
-
             return population;
 
         }
@@ -96,69 +90,67 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 
 
- _Note: Population data is referred from_ [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population)_._
-
+ > Note: Population data is referred from [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population)
+ 
 ## Initialize TreeMap
 
 1. Create a <div> tag with a specific id and set the height and width to determine the TreeMap size to be rendered in “TreeMap.cshtml” file
-{% highlight html %}
+   
+   ~~~ html
+
+		  <div style="width:700px; height:400px;"> 
+
+		  </div>            
 
 
-
-
-          <div style="width:700px; height:400px;"> 
-
-          </div>            
-
-
-
-
-
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 2. Add the following code in “TreeMap.cshtml” file to create the TreeMap control in a View page.
-{% highlight html %}
+
+   ~~~ html
+
+
+		  <div style="width:700px; height:400px;"> 
+
+			  @(Html.EJ().TreeMap("treemap")                
 
 
 
-          <div style="width:700px; height:400px;"> 
+			   .Render())
 
-              @(Html.EJ().TreeMap("treemap")                
-
-
-
-               .Render())
-
-          </div>            
+		  </div>            
 
 
 
 
 
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 3. Add the TreeMap() action in “TreeMapController.cs” as illustrated in the following code sample.
-{% highlight c# %}
+
+   ~~~ cs
+
+
+		public ActionResult TreeMap()
+
+		{
+
+			ViewData["datasource"] = TreeMapPopulationData.GetData();
+
+			return View();
+
+		}
 
 
 
- public ActionResult TreeMap()
-
-{
-
-ViewData["datasource"] = TreeMapPopulationData.GetData();
-
-return View();
-
-}
+   ~~~
+   {:.prettyprint }
 
 
-
-{% endhighlight %}
 
 ## Data Source
 
@@ -169,101 +161,100 @@ The DataSource property accepts the collection values as input. For example, you
 You can calculate the size of the object using WeightValuePath of TreeMap.
 
 1. Populate the TreeMap by using the above properties.
-{% highlight html %}
+
+   ~~~ html
+
+		@{
+
+		    var datasource = ViewData["datasource"];    
+
+		}
+
+		<html xmlns="http://www.w3.org/1999/xhtml">
+
+		<head> // ...
+
+		</head>
+
+		<body>
+
+		<div style="height:400px;width:700px;">
+
+		@(Html.EJ().TreeMap("treemap")
+
+				.DataSource(datasource)
+
+				.WeightValuePath("Population")
+
+			       .Render())
+
+		</div>
+
+		// ...
+
+		</body>
+
+		</html>
+
+   ~~~
+   {:.prettyprint }
 
 
-@{
-
-    var datasource = ViewData["datasource"];    
-
-}
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head> // ...
-
-</head>
-
-<body>
-
-<div style="height:400px;width:700px;">
-
-@(Html.EJ().TreeMap("treemap")
-
-                .DataSource(datasource)
-
-                .WeightValuePath("Population")
-
-               .Render())
-
-</div>
-
-// ...
-
-</body>
-
-</html>
-
-
-
-
-
-{% endhighlight %}
 
 
 
 2. Final TreeMap.cshtml file is illustrated in the following code sample.
-{% highlight html %}
+
+   ~~~ html
+
+		@{
+
+		    var datasource = ViewData["datasource"];    
+
+		}
 
 
 
-@{
+		<html xmlns="http://www.w3.org/1999/xhtml">
 
-    var datasource = ViewData["datasource"];    
+		<head> 
 
-}
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/
 
+		ej.widgets.all.min.js"></script>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+		<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
 
-<head> 
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js" type="text/javascript"></script>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" type="text/javascript"></script><body>
 
-<script src="http://cdn.syncfusion.com/13.1.0.21/js/
+		<div style="height:400px;width:700px;">
 
-ej.widgets.all.min.js"></script>
+		@(Html.EJ().TreeMap("treemap")
 
-<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
+				.DataSource(datasource)
 
-<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js" type="text/javascript"></script>
+				.WeightValuePath("Population") 
 
-<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" type="text/javascript"></script><body>
+			       .Render())
 
-<div style="height:400px;width:700px;">
-
-@(Html.EJ().TreeMap("treemap")
-
-                .DataSource(datasource)
-
-                .WeightValuePath("Population") 
-
-               .Render())
-
-    </div>   
+		    </div>   
 
 
 
-    @(Html.EJ().ScriptManager())
+		    @(Html.EJ().ScriptManager())
 
-</body>
+		</body>
 
-</html>
+		</html>
 
 
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
 
 
 
@@ -285,7 +276,7 @@ You can use GroupGap property to separate the items from every flat level and t
 
 The following code sample explains how to group TreeMap Items using ‘Levels’
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().TreeMap("treemap")
 
@@ -325,7 +316,7 @@ The ColorValuePath of TreeMap is a path to a field on the source object. You can
 
 The following code sample explains how to customize TreeMap Appearance by Range.
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().TreeMap("treemap")
 
@@ -381,7 +372,7 @@ You can customize the Leaf level TreeMap items using LeafItemSettings. The Label
 
 The following code sample displays how the tooltip is enabled.
 
-{% highlight html %}
+{% highlight js %}
 
       @(Html.EJ().TreeMap("treemap")
 
@@ -449,7 +440,7 @@ You can customize the labels of the legend item using LegendLabel property of Ra
 
 The following code sample displays how to add labels for legend in a TreeMap.
 
-{% highlight html %}
+{% highlight js %}
 
       @(Html.EJ().TreeMap("treemap")
 

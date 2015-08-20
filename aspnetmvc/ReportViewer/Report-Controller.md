@@ -66,7 +66,7 @@ Processes the report request and returns the result.</td></tr>
 
 {% highlight c# %}
 
-public class ReportsController : ApiController, IReportController
+	public class ReportsController : ApiController, IReportController
 
     {
 

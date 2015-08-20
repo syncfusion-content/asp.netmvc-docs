@@ -28,13 +28,15 @@ The following steps explain you how to get the Localization.
 1. In the CSHTML page, add the following code to render the DatePicker widget with localization.
 
 
-{% highlight html %}
+   ~~~ html
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized localization*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized localization*@
 
-@Html.EJ().DatePicker("datePicker").Locale("vi-VN").ButtonText("Hôm nay")
+		@Html.EJ().DatePicker("datePicker").Locale("vi-VN").ButtonText("Hôm nay")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2.  The following screenshot displays the output for the above code.
 

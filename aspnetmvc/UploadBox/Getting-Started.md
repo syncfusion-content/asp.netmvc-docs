@@ -28,9 +28,9 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
 1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page to render the UploadBox.
    
-   ~~~ html
+   ~~~ js
 
-   @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove"))
+		@Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove"))
 
    ~~~
    {:.prettyprint }
@@ -100,7 +100,7 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+   ![](Getting-Started_images/Getting-Started_img3.png)
 
 
 
@@ -140,7 +140,7 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
 
 
 
-_Figure8: UploadBox after uploading
+_Figure8: UploadBox after uploading_
 
 
 
@@ -152,7 +152,7 @@ The following screenshot displays an UploadBox control with multiple files selec
 
 
 
-{% highlight c# %}
+{% highlight js %}
 
 @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove")).MultipleFilesSelection(true)
 

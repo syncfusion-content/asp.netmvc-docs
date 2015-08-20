@@ -55,9 +55,6 @@ The following code example describes how to customize the display of view option
 )
 
 
-
-[controller]
-
 // follow the code as same as declared in Read Only part
 
 
@@ -87,7 +84,7 @@ The following code example explains how to change the current view of the Schedu
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -150,10 +147,6 @@ List<string> views = new List<string>()
 
 }
 
-
-
-
-
 @(Html.EJ().Schedule("Schedule1")
 
 .Width("100%")
@@ -194,9 +187,6 @@ fields.Datasource(ViewBag.datasource)
 
 .RecurrenceRule("RecurrenceRule")))
 
-
-
-[controller]
 
 // follow the code as same as declared in Read Only part
 

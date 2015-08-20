@@ -19,13 +19,12 @@ The following screenshot demonstrates the functionality of FileExplorer with D
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-
+_Figure 1: FileExplorer Control with Grid view_
 
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
+_Figure 2: FileExplorer Control with Thumbnail view_
 
 In the above screenshot, you can access and manage the remote file system. While you perform the operation on files like delete or rename, this is handled in the controller part.
 
@@ -36,7 +35,7 @@ ASP.NET MVC FileExplorer widget renders built-in features like accessing online
 1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding View page to render the FileExplorer.
 
-   ~~~ html
+   ~~~ js
 
 		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
 
@@ -200,7 +199,7 @@ To download the data from the given path</td></tr>
 <tr>
 <td>
 Upload</td><td>
-String ActionType, IEnumerable<HttpPostedFileBase> FileUpload, String Path</td><td>
+String ActionType, IEnumerable&lt;HttpPostedFileBase&gt; FileUpload, String Path</td><td>
 Void </td><td>
 To upload the data from the given path</td></tr>
 </table>
@@ -210,5 +209,5 @@ The following screenshot displays a FileExplorer control.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+_Figure 3: FileExplorer Control with Grid view_
 

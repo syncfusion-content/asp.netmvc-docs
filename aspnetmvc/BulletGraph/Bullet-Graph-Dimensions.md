@@ -12,7 +12,7 @@ documentation: ug
 This section explains you on how to change the dimensions of the Bullet Graph. You can change various dimensions and properties of Bullet Graph like width, height, quantitative scale length, qualitative range size etc. By default, Bullet Graph uses 595 pixel width and 90 pixel height. You can customize width and height of a Bullet Graph using Width and Height properties of Bullet Graph respectively.
 
 ## Size
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").Width(500).Height(100))
 
@@ -29,7 +29,7 @@ In the above code example, width is set as 500 pixel and height is set as 100 pi
 ## Value for performance bar
 
 The feature measure bar value is customized using the Value property. Default value of this property is 0. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").Value(5))
 
@@ -44,12 +44,10 @@ The following screenshot displays Bullet Graph with a performance measure value 
 ## Comparative measure value
 
 The Comparative measure value is set using ComparativeMeasureValue property. The default value of this property is 0. 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").ComparativeMeasureValue(5))
+
 {% endhighlight %}
 
 
@@ -66,7 +64,7 @@ The following screenshot displays Bullet Graph with comparative measure value of
 ## Theme
 
 Bullet Graph Theme is customized using Theme property. Default value is flatlight. Bullet Graph supports flatlight and flatdark themes. Flatdark theme improves Bullet Graph appearance when background of Bullet Graph container uses dark color like black. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").Theme("flatdark”))
 
@@ -85,7 +83,7 @@ _Figure_ _12_: Bullet Graph with theme_
 
 Bullet Graph is oriented either horizontally or vertically using Orientation property. Default value of this property is Horizontal. 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").Orientation(Orientation.Vertical)
 
@@ -101,7 +99,7 @@ Bullet Graph is oriented either horizontally or vertically using Orientation pro
 The Flow direction of Bullet Graph is customized using FlowDirection property. Default value of this property is Forward. Setting Forward renders Bullet Graph left to right and Backward renders from right to left.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").ComparativeMeasureValue(2).FlowDirection(FlowDirection.Backward))
 
@@ -115,7 +113,7 @@ The following screenshot displays Bullet Graph in a backward direction.
 ## Qualitative range size
 
 Size of the Qualitativerange is customized using QualitativeRangeSize property. Default value of this property is 32. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(50))
 
@@ -130,7 +128,7 @@ The following screenshot displays Bullet Graph with Qualitative range of size 50
 ## Quantitative scale length
 
 Length of the Quantitativescale is customized using QuantitativeScaleLength property. Default value of this property is 475. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleLength(500))
 

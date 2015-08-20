@@ -3,7 +3,7 @@ layout: post
 title: Multiple-Items
 description: multiple items 
 platform: ejmvc
-control: Digital Gauge
+control: DigitalGauge
 documentation: ug
 ---
 
@@ -12,7 +12,7 @@ documentation: ug
 The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -51,3 +51,5 @@ cs.Color("Green")).Position(pos => pos.X(80).Y(40)).Add();
 Execute the above code example to render the DigitalGauge as follows.
 
 ![](Multiple-Items_images/Multiple-Items_img1.png)
+
+_Figure 36: Digital Gauge control with multiple items_

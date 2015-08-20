@@ -28,7 +28,7 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 {% highlight html %}
 
-[CSHTML]
+
 
 @*Add the following scripts in your view page for angular support*@
 

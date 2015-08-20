@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started
 platform: ejmvc
-control: Digital Gauge
+control: DigitalGauge
 documentation: ug
 ---
 
@@ -16,6 +16,7 @@ documentation: ug
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+_Figure 9: Digital Thermometer_
 
 ## Create a Digital Gauge
 
@@ -35,28 +36,27 @@ ASP.NET MVC Digital Gauge widget basically renders with flexible APIs. You can e
 
    ~~~ cs   
    
-	    public ActionResult Default()		
-
-         {
- 
-           return View();
-
-         }		
+		public ActionResult Default()		
+        {
+            return View();
+        }		
 
    ~~~
    {:.prettyprint }
 
+
    
-	Run the above code example and you will get a default Digital Gauge as follows.
+Run the above code example and you will get a default Digital Gauge as follows.
 
-	![](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
+_Figure 10: Digital Gauge_
 
 ## Set Height and Width values
 
 Basic attributes of each canvas elements are height and width. You can set the height and width of the gauge.
 
-~~~ html
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("digitalGauge")
 
@@ -66,13 +66,13 @@ Basic attributes of each canvas elements are height and width. You can set the h
 
 )
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 Run the above code example and you will see a default gauge with the specified height and width values.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+_Figure 11: Digital Gauge with Height and Width_
 
 ## Set Items Property
 
@@ -88,7 +88,7 @@ Items have different properties to customize the Digital Gauge.
 	4. SixteenSegment 
 	5. EightCrossEightSquareMatrix.
 
-~~~ html
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("digitalGauge")
 
@@ -107,13 +107,13 @@ item.SegmentSettings(seg=>seg.Length(20).Width(2))
 
 }))
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 Run the above code example and you will see the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
+_Figure 12: Digital Gauge Segment Properties_
 
 
 ## Add Background Image
@@ -123,7 +123,7 @@ Run the above code example and you will see the following output.
 * Add the required properties to show the background image such as position, margin, display, etc.,
 
 
-~~~ html
+{% highlight js %}
 
 <div id="frameDiv">
 
@@ -168,20 +168,20 @@ background-repeat :no-repeat;
 </style>
 
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 
 Run the above code example and you will see the following output.                    
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
+_Figure 13: Digital Gauge Background Image_
 
 ## Add Location
 
 The Location property is used to position the digital letters inside the canvas element.
 
-~~~ html
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1").Height(145).Width(260).Items(item=>
 
@@ -195,21 +195,20 @@ item.SegmentSettings(seg=>seg.Length(20).Width(2))
 
 }))
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 
 Run the above code example and you will see the following output. 
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-
+_Figure 14: Digital Gauge with Segment Location_
 
 ## Add Items Collection 
 
 You can further add the Items Collection to display the temperature value like Digital Thermometer.
 
-~~~ html
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("digitalGauge").Height(145).Width(260).Items(item=>
 
@@ -246,10 +245,11 @@ item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))
 }))
 
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 
 Run the above code example and you will see the following output.                    
 
 ![](Getting-Started_images/Getting-Started_img7.png)
+
+_Figure 15: Digital Gauge with Item Collection_

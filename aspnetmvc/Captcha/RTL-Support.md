@@ -14,16 +14,17 @@ Right to Left alignment of Captcha can be achieved by enabling EnableRTL propert
 The following code example is used to render the Captcha with RTL support.
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with RTL support.
-{% highlight html %}
-[CSHTML] 
+ 
+   ~~~ javascript
+ 
 
-@(Html.EJ().Captcha("captcha").EnableRTL(true).EnableRefreshImage(true).EnableAudio(true).EnableAutoValidation(true))
+		@(Html.EJ().Captcha("captcha").EnableRTL(true).EnableRefreshImage(true).EnableAudio(true).EnableAutoValidation(true))
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot illustrates the Captcha with RTL support. 
 
-{{ '![](RTL-Support_images/RTL-Support_img1.png)' | markdownify }}
-{:.image }
+![](RTL-Support_images/RTL-Support_img1.png)
 
 

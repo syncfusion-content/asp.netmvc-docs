@@ -19,10 +19,7 @@ The following steps explain you on how to adjust the ProgressBar size.
 
 
 
-
-
-
- {% highlight html %}
+ {% highlight js %}
  // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized size.
  @Html.EJ().ProgressBar("progressbar").Value(40).Height("40").Width("400")
 {% endhighlight %}
@@ -42,7 +39,7 @@ The following steps explain you on how to adjust the ProgressBar size.
 
 The following screenshot displays the output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proadjust.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
 
@@ -56,7 +53,7 @@ The following steps explain the configuration of the Custom Text for the Progres
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized text.
 
@@ -64,13 +61,15 @@ The following steps explain the configuration of the Custom Text for the Progres
 
 @Html.EJ().ProgressBar("progressbar").Text("loading").Value(40).Height("20").Width("500")
 
-
-
-
-
-The following screenshot displays the output.       ![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/proloading.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
-
 {% endhighlight %}
+
+
+
+The following screenshot displays the output. 
+     
+![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+
+
 
 ### Theme
 
@@ -100,46 +99,47 @@ The following code example is used to render the ProgressBar widget with customi
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
 
+   ~~~ js
+   
+		// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized style.
+		@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").CssClass("custom")
 
+   ~~~
+   {:.prettyprint }
 
-
-
-{% highlight html %}
-// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized style.
-@Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").CssClass("custom")
-{% endhighlight %}
-
-{% highlight javascript %}
-   <script> 
-   var progress;
-   $(document).ready(function () {
-   progress = $("#progressbar").data("ejProgressBar");
-   progress.setModel({ text: progress.getValue() + " %"});
-   });       
-{% endhighlight %}
+   ~~~ js
+   
+	   <script> 
+	   var progress;
+	   $(document).ready(function () {
+	   progress = $("#progressbar").data("ejProgressBar");
+	   progress.setModel({ text: progress.getValue() + " %"});
+	   });  
+   
+   ~~~
+   {:.prettyprint }
 
 
 
 
 2. Add the following styles to render the ProgressBar with customized style.
 
-{% highlight html %}
+   ~~~ css
 
 
 
-<style type="text/css">
+		<style type="text/css">
 
-    .custom .e-progress {
+			.custom .e-progress {
 
-      background-color:gray;
+			  background-color:gray;
 
-    }
+			}
 
+		</style>
 
-
-</style>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 The following screenshot displays the output.
 

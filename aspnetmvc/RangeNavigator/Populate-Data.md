@@ -17,7 +17,7 @@ The Series property provides access to a collection of all series that are defin
 
 
 {% highlight html %}
- [MVC]
+ 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -48,7 +48,7 @@ The Series property provides access to a collection of all series that are defin
         .Render())
 {% endhighlight %}
 {% highlight js %}
-[JS]
+
 
 <script type="text/javascript">
 

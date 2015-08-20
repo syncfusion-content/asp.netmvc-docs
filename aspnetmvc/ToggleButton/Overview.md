@@ -3,7 +3,7 @@ layout: post
 title: Overview
 description: overview
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 

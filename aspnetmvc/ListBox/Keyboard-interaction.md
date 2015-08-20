@@ -2,14 +2,16 @@
 layout: post
 title: Keyboard-interaction
 description: keyboard interaction
-platform: aspnet
-control: Control Name undefined
+platform: ejmvc
+control: ListBox
 documentation: ug
 ---
 
 # Keyboard interaction
 
-You can use Keyboard shortcut keys as an alternative to the mouse on using ListBox widget. ListBox Widget allows you to perform all kind of actions by using keyboard shortcuts.
+You can use Keyboard shortcut keys as an alternative to the mouse on using ListBox widget. ListBox Widget allows you to perform all kind of actions using keyboard shortcuts.
+
+_Table_ _4_: Keyboard shortcut keys
 
 <table>
 <tr>
@@ -18,7 +20,7 @@ Shortcut Key</th><th>
 Description</th></tr>
 <tr>
 <td>
-Access key + j</td><td>
+{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
 Focuses into the ListBox text box</td></tr>
 <tr>
 <td>
@@ -49,139 +51,48 @@ Navigates to the starting item </td></tr>
 End</td><td>
 Navigates to the end item </td></tr>
 </table>
+Configure keyboard interaction
 
-### Configure keyboard interaction
+The following steps explains you to enable keyboard interaction for a ListBox.
 
-The following steps explain you to enable keyboard interaction for a ListBox.
+1. Add the below code in your page to render the ListBox
 
-In an ASPX page, add an elementto configure ListBox widget and enable keyboard interaction by setting the accesskey property.
 
+   ~~~ js
 
+		// Add the following code in View page to configure ListBox widget
+		<div id="control">  
+			<h5 class="ctrllabel"> 
+				Select a skill 
+			</h5>
+			@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
+			=> df.Text("text"))
+		</div>
+		
+   ~~~
+   {:.prettyprint }
 
-{% highlight html %}
+   ~~~ js
+   
+		// Render ListBox control
+		<script type="text/javascript">
+			$(document).on("keydown", function (e) {
+				if (e.altKey && e.keyCode === 74) { // j- key code. 
+					var target = $('#listboxsample').data("ejListBox");
+					target.selectItemByIndex(1);  
+					$("#listboxsample_container").focus(); 
+				}  
+			});
+		</script>
 
-<div id="control">
 
-    <div class="ctrllabel">
+   ~~~
+   {:.prettyprint }
 
-        Select a skill</div>
 
-    <ej:listbox id="listboxsample" runat="server" DataTextField="Name"></ej:listbox>
+2. Run the sample, press Alt + J to focus in the ListBox widget that enables it and you can navigate using arrow keys.
 
-</div>
 
-
-
-
-
-{% endhighlight %}
-
-
-
-{% highlight c# %}
-
-        protected void Page_Load(object sender, EventArgs e)
-
-        {
-
-            listboxsample.DataSource = GetData();
-
-
-
-        }
-
-        private List<Languages> GetData()
-
-        {
-
-            List<Languages> data = new List<Languages>();
-
-            data.Add(new Languages() { Name = "ASP.NET" });
-
-            data.Add(new Languages() { Name = "ActionScript" });
-
-            data.Add(new Languages() { Name = "Basic" });
-
-            data.Add(new Languages() { Name = "C++" });
-
-            data.Add(new Languages() { Name = "C#" });
-
-            data.Add(new Languages() { Name = "dBase" });
-
-            data.Add(new Languages() { Name = "Delphi" });
-
-            data.Add(new Languages() { Name = "ESPOL" });
-
-            data.Add(new Languages() { Name = "F#" });
-
-            data.Add(new Languages() { Name = "FoxPro" });
-
-            data.Add(new Languages() { Name = "Java" });
-
-            data.Add(new Languages() { Name = "J#" });
-
-            data.Add(new Languages() { Name = "Lisp" });
-
-            data.Add(new Languages() { Name = "Logo" });
-
-            data.Add(new Languages() { Name = "PHP" });
-
-            return data;
-
-        }
-
-
-
-        public class Languages
-
-        {
-
-            public string Name;
-
-        }
-
-
-
-
-
-{% endhighlight %}
-
-
-
-
-
-{% highlight js %}
-
-$(function () {
-
-        $(document).on("keydown", function (e) {
-
-            if (e.altKey && e.keyCode === 74) { // j- key code.
-
-                var target = $('#<%=listboxSample.ClientID%>').data("ejListBox");
-
-                target.selectItemByIndex(1);
-
-                $("#<%=listboxSample.ClientID%>" + "_container").focus();
-
-
-
-            }
-
-        });
-
-    });
-
-
-
-{% endhighlight %}
-
-
-
-Run the sample, press Alt + J to focus in the ListBox widget that enables it and you can navigate by using arrow keys.
-
-
- ![](Keyboard-interaction_images/Keyboard-interaction_img1.png)
-
+![](Keyboard-interaction_images/Keyboard-interaction_img1.png)
 
 

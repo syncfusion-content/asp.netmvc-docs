@@ -17,13 +17,7 @@ Update the task details through grid Cell Editing by setting EditMode as Cell
 
 The following code example shows you how to enable CellEditing in TreeGrid control.
 
-
-
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
 
@@ -41,13 +35,7 @@ The following code example shows you how to enable CellEditing in TreeGrid c
 
 )
 
-
-
 {% endhighlight %}
-
-
-
-
 
 The output of TreeGrid with CellEditing is as follows.
 

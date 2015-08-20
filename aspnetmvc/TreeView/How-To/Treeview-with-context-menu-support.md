@@ -7,11 +7,11 @@ control: TreeView
 documentation: ug
 ---
 
-### Treeview with context menu support
+# Treeview with context menu support
 
 TreeView control is availed with the context menu options that open on right-click, over the node. Other than the default menu items available, you can add the new node dynamically in TreeView and also delete the item, enable and disable the item in TreeView. It is achieved by adding the Context Menu option to the TreeView.
 
-Menu Item
+## Menu Item
 
 By default, the context menu options are provided with four items namely: Add New Item, Delete Item, Enable Item and Disable Item. When you want to customize and use your own custom menu items, then you can customize the TreeView with the desired collections. 
 
@@ -25,9 +25,7 @@ In the View page, add TreeView helper to configure TreeView.
 
 
 
-
-
-[View]
+{% highlight html %}
 
 \\ To configure TreeView in the CSHTML page
 
@@ -131,11 +129,11 @@ In the View page, add TreeView helper to configure TreeView.
 
     </div>
 
-
+{% endhighlight %}
 
 Define the events in the script as follows,
 
-
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -193,17 +191,16 @@ Define the events in the script as follows,
 
     </script>
 
-
+{% endhighlight %}
 
 The output for the context menu for TreeView control is as follows.
 
 
 
-{{ '![](Treeview-with-context-menu-support_images/Treeview-with-context-menu-support_img1.png)' | markdownify }}
-{:.image }
+![](Treeview-with-context-menu-support_images/Treeview-with-context-menu-support_img1.png)
 
 
-_Figure_ _62__: Context Menu for TreeView_
+_Figure_ _62_: Context Menu for TreeView
 
 
 

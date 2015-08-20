@@ -17,13 +17,6 @@ EJ Chart provides you an option to bind the data to the Chart using the DataSour
 
 In Controllers:
 {% highlight c# %}
-[MVC]
-
-
-
-[CS]
-
-
 
   public ArrayList GetData()
 
@@ -142,18 +135,7 @@ In Controllers:
                 this.fat = fat;
 
             }
-
-
-
-
-
-
-
         }
-
-
-
-
 
         public ActionResult SimpleChart()
 
@@ -167,18 +149,11 @@ In Controllers:
 
         }
 
-
 {% endhighlight  %}
 In View:
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[CSHTML]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -228,8 +203,8 @@ You can bind the Essential Chart to remote data using DataManager and the Query 
 3. oData
 
 The following code example illustrates binding EJ Chart to oData service.   
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 

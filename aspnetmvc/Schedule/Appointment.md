@@ -18,237 +18,227 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
 1. First create the Schedule control sample (MVC) with the necessary database (.sdf/.mdf) tables. Refer to the [getting started](http://help.syncfusion.com/ug/js/default.htm) to create the sample.
 2. Add the following code in the view page to call the action method (GetData) from the view page to bind the data to Schedule control.
 
-{% highlight javascript %}
+   ~~~ js
 
-$(function () {
-
-
-
-var localServ = "/Home/GetData";
-
-var dManager = ej.DataManager({
-
-url: localServ,
-
-crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
-
-});
-
-dManager.adaptor = new ej.UrlAdaptor();
-
-var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
+		$(function () {
 
 
 
+		var localServ = "/Home/GetData";
 
+		var dManager = ej.DataManager({
 
-$("#Schedule1").ejSchedule({
+		url: localServ,
 
-enableAppointmentNavigation: false,
+		crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
 
-currentDate: new Date(2014, 4, 2),
+		});
 
-appointmentSettings: {
+		dManager.adaptor = new ej.UrlAdaptor();
 
-dataSource: dManager,
-
-tableName: "DefaultSchedules",
-
-query: query,
-
-id: "Id",
-
-subject: "Subject",
-
-location: "Location",
-
-description: "Description",
-
-startTime: "StartTime",
-
-endTime: "EndTime",
-
-allDay: "AllDay",
-
-recurrence: "Recurrence",
-
-recurrenceRule: "RecurrenceRule"
-
-}
-
-});
+		var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
 
 
 
-});
+
+
+		$("#Schedule1").ejSchedule({
+
+		enableAppointmentNavigation: false,
+
+		currentDate: new Date(2014, 4, 2),
+
+		appointmentSettings: {
+
+		dataSource: dManager,
+
+		tableName: "DefaultSchedules",
+
+		query: query,
+
+		id: "Id",
+
+		subject: "Subject",
+
+		location: "Location",
+
+		description: "Description",
+
+		startTime: "StartTime",
+
+		endTime: "EndTime",
+
+		allDay: "AllDay",
+
+		recurrence: "Recurrence",
+
+		recurrenceRule: "RecurrenceRule"
+
+		}
+
+		});
 
 
 
-[MVC – Razor]
+		});
 
 
+		@(Html.EJ().Schedule("Schedule1")
 
-@(Html.EJ().Schedule("Schedule1")
+		.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
 
-.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
+		.Id("Id")
 
-.Id("Id")
+		.Subject("Subject")
 
-.Subject("Subject")
+		.Description("Description")
 
-.Description("Description")
+		.StartTime("StartTime")
 
-.StartTime("StartTime")
+		.EndTime("EndTime")
 
-.EndTime("EndTime")
+		.AllDay("AllDay")
 
-.AllDay("AllDay")
+		.Recurrence("Recurrence")
 
-.Recurrence("Recurrence")
+		.RecurrenceRule("RecurrenceRule"))
 
-.RecurrenceRule("RecurrenceRule"))
+		)
 
-)
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Define the “JsonResult” action method (Ex: GetData) in the controller page with the following code example to read the appointments details from the data base.
 
 
 
-{% highlight c# %}
+   ~~~ cs
 
 
 
-public JsonResult GetData()
+		public JsonResult GetData()
 
-{
+		{
 
-IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
+		IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
 
-return Json(data, JsonRequestBehavior.AllowGet);
+		return Json(data, JsonRequestBehavior.AllowGet);
 
-}
+		}
 
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 4. Then, call the action method (CRUD) defined in the controller page from the view page as mentioned in the following code example.
 
 
+   ~~~ js
 
 
 
-{% highlight javascript %}
+		$(function () {
 
 
 
-$(function () {
+		var localServ = "/Home/GetData";
 
+		var dManager = ej.DataManager({
 
+		url: localServ,
 
-var localServ = "/Home/GetData";
+		crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
 
-var dManager = ej.DataManager({
+		});
 
-url: localServ,
+		dManager.adaptor = new ej.UrlAdaptor();
 
-crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
-
-});
-
-dManager.adaptor = new ej.UrlAdaptor();
-
-var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
+		var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
 
 
 
 
 
-$("#Schedule1").ejSchedule({
+		$("#Schedule1").ejSchedule({
 
-enableAppointmentNavigation: false,
+		enableAppointmentNavigation: false,
 
-currentDate: new Date(2014, 4, 2),
+		currentDate: new Date(2014, 4, 2),
 
-appointmentSettings: {
+		appointmentSettings: {
 
-dataSource: dManager,
+		dataSource: dManager,
 
-tableName: "DefaultSchedules",
+		tableName: "DefaultSchedules",
 
-query: query,
+		query: query,
 
-id: "Id",
+		id: "Id",
 
-subject: "Subject",
+		subject: "Subject",
 
-location: "Location",
+		location: "Location",
 
-description: "Description",
+		description: "Description",
 
-startTime: "StartTime",
+		startTime: "StartTime",
 
-endTime: "EndTime",
+		endTime: "EndTime",
 
-allDay: "AllDay",
+		allDay: "AllDay",
 
-recurrence: "Recurrence",
+		recurrence: "Recurrence",
 
-recurrenceRule: "RecurrenceRule"
+		recurrenceRule: "RecurrenceRule"
 
-}
+		}
 
-});
+		});
 
-});
-
-
-
-[MVC- Razor]
+		});
 
 
+		@(Html.EJ().Schedule("Schedule1")
 
-@(Html.EJ().Schedule("Schedule1")
+		.Width("100%")
 
-.Width("100%")
+		.Height("525px")
 
-.Height("525px")
+		.ScheduleClientSideEvents(eve=>eve.Create("onCreate"))
 
-.ScheduleClientSideEvents(eve=>eve.Create("onCreate"))
+		.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
 
-.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
+		.Id("Id")
 
-.Id("Id")
+		.Subject("Subject")
 
-.Subject("Subject")
+		.Description("Description")
 
-.Description("Description")
+		.StartTime("StartTime")
 
-.StartTime("StartTime")
+		.EndTime("EndTime")
 
-.EndTime("EndTime")
+		.AllDay("AllDay")
 
-.AllDay("AllDay")
+		.Recurrence("Recurrence")
 
-.Recurrence("Recurrence")
+		.RecurrenceRule("RecurrenceRule"))
 
-.RecurrenceRule("RecurrenceRule"))
+		)
 
-)
+		<script>
 
-<script>
+		function onCreate(args) {
 
-function onCreate(args) {
+		this._dataManager.dataSource.crudUrl = "/Home/CRUD";
 
-this._dataManager.dataSource.crudUrl = "/Home/CRUD";
+		}
 
-}
+		</script>
 
-</script>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -256,150 +246,144 @@ this._dataManager.dataSource.crudUrl = "/Home/CRUD";
 
 
 
-{% highlight c# %}
+   ~~~ cs
+
+
+		public JsonResult CRUD(EditParams Param)
+
+		{
+
+			if (Param.Action == "insert" || (Param.Action == "batch" && Param.Added != null))          // this block of code will execute while inserting the appointments
+
+			{
+
+				var value = Param.Action == "insert" ? Param.Value : Param.Added[0];
+
+				int intMax = db.DefaultSchedules.ToList().Count > 0 ? db.DefaultSchedules.ToList().Max(p => p.Id) : 1;
+
+				DateTime startTime = Convert.ToDateTime(value.StartTime);
+
+				DateTime endTime = Convert.ToDateTime(value.EndTime);
+
+				DefaultSchedule appoint = new DefaultSchedule()
+
+				{
+
+					Id = intMax + 1,
+
+					StartTime = startTime.ToUniversalTime(),
+
+					EndTime = endTime.ToUniversalTime(),
+
+					Subject = value.Subject,
+
+					Description = value.Description,
+
+					AllDay=value.AllDay,
+
+					Recurrence = value.Recurrence,
+
+					RecurrenceRule = value.RecurrenceRule
+
+				};
+
+				db.DefaultSchedules.InsertOnSubmit(appoint);
+
+				db.SubmitChanges();
+
+			}
+
+			else if (Param.Action == "remove")                                        // this block of code will execute while removing the appointment
+
+			{
+
+				DefaultSchedule app = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(Param.Key)).FirstOrDefault();
 
 
 
-[HttpPost]
+				if (app != null) db.DefaultSchedules.DeleteOnSubmit(app);
 
-public JsonResult CRUD(EditParams Param)
+				db.SubmitChanges();
 
-{
+			}
 
-if (Param.Action == "insert" || (Param.Action == "batch" && Param.Added != null))          // this block of code will execute while inserting the appointments
+			else if ((Param.Action == "batch" && Param.Changed != null) || Param.Action == "update")   // this block of code will execute while updating the appointment
 
-{
+			{
 
-var value = Param.Action == "insert" ? Param.Value : Param.Added[0];
+				var value = Param.Action == "update" ? Param.Value : Param.Changed[0];
 
-int intMax = db.DefaultSchedules.ToList().Count > 0 ? db.DefaultSchedules.ToList().Max(p => p.Id) : 1;
-
-DateTime startTime = Convert.ToDateTime(value.StartTime);
-
-DateTime endTime = Convert.ToDateTime(value.EndTime);
-
-DefaultSchedule appoint = new DefaultSchedule()
-
-{
-
-Id = intMax + 1,
-
-StartTime = startTime.ToUniversalTime(),
-
-EndTime = endTime.ToUniversalTime(),
-
-Subject = value.Subject,
-
-Description = value.Description,
-
-AllDay=value.AllDay,
-
-Recurrence = value.Recurrence,
-
-RecurrenceRule = value.RecurrenceRule
-
-};
-
-db.DefaultSchedules.InsertOnSubmit(appoint);
-
-db.SubmitChanges();
-
-}
-
-else if (Param.Action == "remove")                                        // this block of code will execute while removing the appointment
-
-{
-
-DefaultSchedule app = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(Param.Key)).FirstOrDefault();
+				var filterData = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(value.Id));
 
 
 
-if (app != null) db.DefaultSchedules.DeleteOnSubmit(app);
+				if (filterData.Count() > 0)
 
-db.SubmitChanges();
+				{
 
-}
+					DateTime startTime = Convert.ToDateTime(value.StartTime);
 
-else if ((Param.Action == "batch" && Param.Changed != null) || Param.Action == "update")   // this block of code will execute while updating the appointment
+					DateTime endTime = Convert.ToDateTime(value.EndTime);
 
-{
+					DefaultSchedule appoint = db.DefaultSchedules.Single(A => A.Id == Convert.ToInt32(value.Id));
 
-var value = Param.Action == "update" ? Param.Value : Param.Changed[0];
+					appoint.StartTime = startTime.ToUniversalTime();
 
-var filterData = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(value.Id));
+					appoint.EndTime = endTime.ToUniversalTime();
 
+					appoint.Subject = value.Subject;
 
+					appoint.Description = value.Description;
 
-if (filterData.Count() > 0)
+					appoint.AllDay = value.AllDay;
 
-{
+					appoint.Recurrence = Convert.ToByte(value.Recurrence);
 
-DateTime startTime = Convert.ToDateTime(value.StartTime);
+					appoint.RecurrenceRule = value.RecurrenceRule;
 
-DateTime endTime = Convert.ToDateTime(value.EndTime);
+				}
 
-DefaultSchedule appoint = db.DefaultSchedules.Single(A => A.Id == Convert.ToInt32(value.Id));
+				db.SubmitChanges();
 
-appoint.StartTime = startTime.ToUniversalTime();
+			}
 
-appoint.EndTime = endTime.ToUniversalTime();
+			IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
 
-appoint.Subject = value.Subject;
+			return Json(data, JsonRequestBehavior.AllowGet);
 
-appoint.Description = value.Description;
+		}
 
-appoint.AllDay = value.AllDay;
-
-appoint.Recurrence = Convert.ToByte(value.Recurrence);
-
-appoint.RecurrenceRule = value.RecurrenceRule;
-
-}
-
-db.SubmitChanges();
-
-}
-
-IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
-
-return Json(data, JsonRequestBehavior.AllowGet);
-
-}
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 6. Create the model (Ex. EditParams.cs) and define the class as illustrated in the following code example to take effect of the above “CRUD” action method. This class enables you to receive the value in the controller page while performing the CRUD operation. 
-* Key - this holds the “appointment id” value when you delete the appointment.
-* Action - this holds the action value that is, insert / batch/ update.
-* Added - this holds the value of the saved appointment while saving the appointment in the detailed window.
-* Changed - this holds the details of the updated appointment while editing the appointment.
-* Value - this holds the details of the appointment while adding the appointment through “quickappwindow”.
+   * Key - this holds the “appointment id” value when you delete the appointment.
+   * Action - this holds the action value that is, insert / batch/ update.
+   * Added - this holds the value of the saved appointment while saving the appointment in the detailed window.
+   * Changed - this holds the details of the updated appointment while editing the appointment.
+   * Value - this holds the details of the appointment while adding the appointment through “quickappwindow”.
 
 
+   ~~~ cs
 
+		public class EditParams
 
+		{
 
-{% highlight c# %}
+			public string Key { get; set; }
 
+			public string Action { get; set; }
 
+			public List<DefaultSchedule> Added { get; set; }
 
-public class EditParams
+			public List<DefaultSchedule> Changed { get; set; }
 
-{
+			public DefaultSchedule Value { get; set; }
 
-public string Key { get; set; }
+		}
 
-public string Action { get; set; }
-
-public List<DefaultSchedule> Added { get; set; }
-
-public List<DefaultSchedule> Changed { get; set; }
-
-public DefaultSchedule Value { get; set; }
-
-}
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 7. Run the sample and perform the CRUD operation. You can notice that the changes are reflected in the "Data base Table" also.
@@ -421,7 +405,7 @@ The following code example explains how to enable ReadOnly property in the Sched
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -454,6 +438,8 @@ The following code example explains how to enable ReadOnly property in the Sched
 .RecurrenceRule("RecurrenceRule"))
 
 )
+
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -518,18 +504,14 @@ Public string RecurrenceRule;
 }
 
 {% endhighlight %}
-{% endhighlight %}
 
 The following screenshot displays the Schedule control with ReadOnly property set to true,
 
-![C:/Users/maheshp/Pictures/sshot-3.png](Appointment_images/Appointment_img2.png)
+![](Appointment_images/Appointment_img2.png)
 
 
 
 _Figure 1: Schedule with Read Only property_
-
-
-
 
 
 ### Appointment Creation
@@ -555,10 +537,6 @@ The following screenshot displays the appointment window filled with the specifi
 
 
 ![](Appointment_images/Appointment_img4.png)
-
-
-
-
 
 
 
@@ -736,7 +714,7 @@ The following code explains how the appointment resizing option is enabled for t
 
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -751,6 +729,8 @@ fields.Datasource(ViewBag.datasource)
 .AllDay("AllDay")
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")))
+
+{% endhighlight %}
 
 {% highlight c# %}
 namespace MVCSampleBrowser.Controllers
@@ -779,8 +759,6 @@ namespace MVCSampleBrowser.Controllers
 		}
 	}
 }
-
-{% endhighlight %}
 
 {% endhighlight %}
 
@@ -857,13 +835,13 @@ $(function (){
 	allowPaging: true,});}}
 	</script>
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 // follow the code as same as declared in Read Only part</td></tr>
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
@@ -909,9 +887,17 @@ var schObj = $("#Schedule1").data("ejSchedule");
 // Method to get the Filtered appointment
 var result = schObj.filterAppointments(filter);showResult(result);});});
 function showResult(list)
- {if (!ej.isNullOrUndefined(list) && list.length != 0) {$("#Schedule1").hide();$("#grid1").show();$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");$("#grid1").ejGrid({dataSource: list,allowPaging: true,});}}</script></td></tr>
-<tr>
-<td>
+ {
+	if (!ej.isNullOrUndefined(list) && list.length != 0)
+		{$("#Schedule1").hide();
+		$("#grid1").show();
+		$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");
+		$("#grid1").ejGrid({dataSource: list,allowPaging: true,});
+		}
+ }
+ </script>
+
+{% endhighlight %}
 {% highlight c# %}
 public ActionResult Print()
 {
@@ -921,7 +907,7 @@ public ActionResult Print()
 
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
@@ -952,7 +938,7 @@ _Figure_ _128_: Grid with appointment search result
 
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -968,6 +954,8 @@ fields.Datasource(ViewBag.datasource)
 .AllDay("AllDay")
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")))
+
+{% endhighlight %}
 
 {% highlight c# %}
 namespace MVCSampleBrowser.Controllers
@@ -1000,7 +988,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight %}
-{% endhighlight %}
+
 * In the following screenshot, the Schedule control is displayed with the appointments in an order before the drag and drop action takes place.
 
 

@@ -23,16 +23,18 @@ By default the Orientation property sets the Toolbar in horizontal orientation. 
 1. In View, create ul-li list of toolbar items and invoke the toolbar helper.
 2. Add the following code in your CSHTML page.
 
+   ~~~ html
 
-{% highlight html %}
+		// Add this code in your CSHTML page and refer local data section for data source
 
-/ / Add this code in your CSHTML page and refer local data section for data source
+		<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
 
-<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
+		</div>
 
-</div>
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
+
 
 3. Build and run the application.
 
@@ -53,16 +55,18 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 1. Create ul-li list of toolbar items and invoke the toolbar helper.
 2. Add the following script in your HTML page.
 
+   ~~~ html
 
-{% highlight html %}
+       // Add this code in your CSHTML page and refer local data section for data source
 
-/ / Add this code in your CSHTML page and refer local data section for data source
+		<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
 
-<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
+		</div>
 
-</div>
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
+
 
 3. Build and run the application.
 

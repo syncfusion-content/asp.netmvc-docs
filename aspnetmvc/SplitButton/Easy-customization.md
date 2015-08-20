@@ -3,7 +3,7 @@ layout: post
 title: Easy-customization
 description: easy customization
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 
@@ -662,183 +662,182 @@ The following steps explains you the details about rendering the Split Button wi
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
+   ~~~ html
+
+		@*Add the code in the CSHTML page to configure and initialize the control*@
 
 
 
-{% highlight html %}
+			<div class="control">
 
-@*Add the code in the CSHTML page to configure and initialize the control*@
+				@*Set Custom CSS class for split button control as follows*@
 
+				<table>
 
+					<tr>
 
-    <div class="control">
+						<td class="btnsht">
 
-        @*Set Custom CSS class for split button control as follows*@
+							<div class="spltspan">
 
-        <table>
+								@Html.EJ().SplitButton("spltbutton_customCSS1").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").CssClass("customCss1")
 
-            <tr>
+								<ul id="Ul11">
 
-                <td class="btnsht">
+									<li><span>User</span></li>
 
-                    <div class="spltspan">
+									<li><span>Guest</span></li>
 
-                        @Html.EJ().SplitButton("spltbutton_customCSS1").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").CssClass("customCss1")
+									<li><span>Admin</span></li>
 
-                        <ul id="Ul11">
+								</ul>
 
-                            <li><span>User</span></li>
+							</div>
 
-                            <li><span>Guest</span></li>
+						</td>
 
-                            <li><span>Admin</span></li>
+						<td>
 
-                        </ul>
+							@Html.EJ().SplitButton("spltbutton_customCSS2").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21").CssClass("customCss2")
 
-                    </div>
+							<ul id="Ul21">
 
-                </td>
+								<li><span>User</span></li>
 
-                <td>
+								<li><span>Guest</span></li>
 
-                    @Html.EJ().SplitButton("spltbutton_customCSS2").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21").CssClass("customCss2")
+								<li><span>Admin</span></li>
 
-                    <ul id="Ul21">
+							</ul>
 
-                        <li><span>User</span></li>
+						</td>
 
-                        <li><span>Guest</span></li>
+						<td class="btnsht">
 
-                        <li><span>Admin</span></li>
+							@Html.EJ().SplitButton("spltbutton_customCSS3").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31").CssClass("customCss3")
 
-                    </ul>
+							<ul id="Ul31">
 
-                </td>
+								<li><span>User</span></li>
 
-                <td class="btnsht">
+								<li><span>Guest</span></li>
 
-                    @Html.EJ().SplitButton("spltbutton_customCSS3").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31").CssClass("customCss3")
+								<li><span>Admin</span></li>
 
-                    <ul id="Ul31">
+							</ul>
 
-                        <li><span>User</span></li>
+						</td>
 
-                        <li><span>Guest</span></li>
+						<td class="btnsht">
 
-                        <li><span>Admin</span></li>
+							@Html.EJ().SplitButton("spltbutton_customCSS4").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41").CssClass("customCss4")
 
-                    </ul>
+							<ul id="Ul41">
 
-                </td>
+								<li><span>User</span></li>
 
-                <td class="btnsht">
+								<li><span>Guest</span></li>
 
-                    @Html.EJ().SplitButton("spltbutton_customCSS4").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41").CssClass("customCss4")
+								<li><span>Admin</span></li>
 
-                    <ul id="Ul41">
+							</ul>
 
-                        <li><span>User</span></li>
+						</td>
 
-                        <li><span>Guest</span></li>
+						<td class="btnsht">
 
-                        <li><span>Admin</span></li>
+							@Html.EJ().SplitButton("spltbutton_customCSS5").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul51").CssClass("customCss5")
 
-                    </ul>
+							<ul id="Ul51">
 
-                </td>
+								<li><span>User</span></li>
 
-                <td class="btnsht">
+								<li><span>Guest</span></li>
 
-                    @Html.EJ().SplitButton("spltbutton_customCSS5").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul51").CssClass("customCss5")
+								<li><span>Admin</span></li>
 
-                    <ul id="Ul51">
+							</ul>
 
-                        <li><span>User</span></li>
+						</td>
 
-                        <li><span>Guest</span></li>
+					</tr>
 
-                        <li><span>Admin</span></li>
+				</table>
 
-                    </ul>
+			</div>
 
-                </td>
-
-            </tr>
-
-        </table>
-
-    </div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Configure the CSS styles to apply on buttons
 
 
-{% highlight html %}
+   ~~~ css
 
-<style type="text/css">
+		<style type="text/css">
 
-        /* Customize the button background */
+				/* Customize the button background */
 
-       .e-split .customCss1 {
+			   .e-split .customCss1 {
 
-            background-color: #121111;
+					background-color: #121111;
 
-        }
+				}
 
-        .e-split .customCss2 {
+				.e-split .customCss2 {
 
-            background-color: #94bbd5;
+					background-color: #94bbd5;
 
-        }
+				}
 
-        .e-split .customCss3 {
+				.e-split .customCss3 {
 
-            background-color: #f3533c;
+					background-color: #f3533c;
 
-        }
+				}
 
-        .e-split .customCss4 {
+				.e-split .customCss4 {
 
-            background-color: #d1eeed;
+					background-color: #d1eeed;
 
-        }
+				}
 
-        .e-split .customCss5 {
+				.e-split .customCss5 {
 
-            background-color: #deb66e;
+					background-color: #deb66e;
 
-        }
+				}
 
-         /* Customize the button image & text color */
+				 /* Customize the button image & text color */
 
-        .e-split .customCss1.e-btn.e-select .e-icon, .e-split .customCss1.e-btn.e-select .e-btntxt {
+				.e-split .customCss1.e-btn.e-select .e-icon, .e-split .customCss1.e-btn.e-select .e-btntxt {
 
-            color: #94bbd5;
+					color: #94bbd5;
 
-        }
+				}
 
-        .e-split .customCss2.e-btn.e-select .e-icon, .e-split .customCss2.e-btn.e-select .e-btntxt {
+				.e-split .customCss2.e-btn.e-select .e-icon, .e-split .customCss2.e-btn.e-select .e-btntxt {
 
-            color: #121111;
+					color: #121111;
 
-        }
+				}
 
-        .e-split .customCss3.e-btn.e-select .e-icon, .e-split .customCss3.e-btn.e-select .e-btntxt {
+				.e-split .customCss3.e-btn.e-select .e-icon, .e-split .customCss3.e-btn.e-select .e-btntxt {
 
-            color: #cef6f7;
+					color: #cef6f7;
 
-        }
+				}
 
-        .e-split .customCss5.e-btn.e-select .e-icon, .e-split .customCss5.e-btn.e-select .e-btntxt {
+				.e-split .customCss5.e-btn.e-select .e-icon, .e-split .customCss5.e-btn.e-select .e-btntxt {
 
-            color: #534f4f;
+					color: #534f4f;
 
-        }
+				}
 
-    </style>
+			</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 Execute the above code to render the following output.
 

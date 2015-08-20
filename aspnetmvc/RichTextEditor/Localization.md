@@ -17,7 +17,7 @@ In this example, globalize.min.js file is used to include all the cultures infor
 
 1. Add the following code in your CSHTML page to initialize the RTE with Spanish content.
 
-{% highlight html %}
+{% highlight js %}
 
 	@*Add the following code in your view page to render the RTE with Spanish content.*@
 

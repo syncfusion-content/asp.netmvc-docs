@@ -24,7 +24,7 @@ To retrieve or upload the images in the image browser, it requires a server side
 
 Add the following code to initialize the RTE control in the page.
 
-{% highlight html %}
+{% highlight js %}
 
 	//the FileActionDefault is method to perform the all file related operations. 
 
@@ -130,7 +130,7 @@ The RTE control provides the supports file browsing that is same as image browsi
 
 Add the following code to initialize the RTE control in the page.
 
-{% highlight html %}
+{% highlight js %}
 
 	//the FileActionDefault is method to perform the all file related operations. 
 	

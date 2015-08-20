@@ -23,8 +23,6 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
 {% highlight css %}
 
- [CSHTML]
-
 <style>
 
 
@@ -47,13 +45,13 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
  }
 
-
-
 </style>
 
 
 {% endhighlight  %}
+
 {% highlight js %}
+
 <script id="rowTemplateScript" type="text/x-jsrender">
 
 
@@ -188,12 +186,11 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
  </tr>
 
-
-
 </script>
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
+
 @(Html.EJ().TreeGrid("TreeGridContainer")
 
    .ChildMapping("Children")
@@ -226,10 +223,8 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
 
 {% endhighlight %}
+
 {% highlight c# %}
-[cs]
-
-
 
 public ActionResult TreeGridRowTemplate()
 
@@ -347,17 +342,10 @@ public class RowData
 
 }
 
-
-
 {% endhighlight %}
 
 
-
-
-
 The output of TreeGrid with Row Template is as follows.
-
-
 
 ![](Rows_images/Rows_img1.png)
 
@@ -371,11 +359,7 @@ The ShowTooltip property is used to enable or disable the tooltip. By default, t
 
 The following code explains about enabling the row drag and drop with the default tooltip in the TreeGrid.
 
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
   @(Html.EJ().TreeGrid("TreeGridContainer")       
 
@@ -409,10 +393,6 @@ The following code explains about enabling the row drag and drop with the defaul
 
         .Render())
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -429,11 +409,7 @@ The TooltipItems property is used to customize the tooltip items. By using this 
 
 The following code shows how to render row drag tooltip with the desired field items
 
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")       
 
@@ -453,10 +429,6 @@ The following code shows how to render row drag tooltip with the desired field i
 
      .Render())
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -465,15 +437,9 @@ The TooltipTemplate property renders the template tooltip for row drag and drop 
 
 The following code shows how to render row drag tooltip with tooltip template.	
 
-
-
 {% highlight html %}
 
-
-
     <script id="customTooltip" type="text/x-jsrender">
-
-
 
         <tr>
 
@@ -489,13 +455,9 @@ The following code shows how to render row drag tooltip with tooltip template.
 
             </td>        
 
-
-
         </tr>
 
     </script>
-
-
 
      @(Html.EJ().TreeGrid("TreeGridContainer")       
 
@@ -515,14 +477,7 @@ The following code shows how to render row drag tooltip with tooltip template.
 
       .Render())
 
-
-
-
-
 {% endhighlight %}
-
-
-
 
 
 ![](Rows_images/Rows_img3.png)

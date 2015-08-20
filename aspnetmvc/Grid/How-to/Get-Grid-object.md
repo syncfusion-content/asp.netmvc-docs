@@ -13,11 +13,7 @@ After Grid initialization, Grid object is stored in a container element of Grid.
 {% highlight js %}
 var gridObject = $("#Grid").ejGrid("instance");
 
-
-
                 [or]
-
-
 
 var gridObject = $("#Grid").data("ejGrid");
 

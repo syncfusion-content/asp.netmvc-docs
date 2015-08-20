@@ -14,7 +14,7 @@ The Content template option provided in MVC is used to specify the HTML elements
 The following code example explains how to use content template option in the Accordion control.
 
 {% highlight html %}
-[CSHTML]
+
 
 
 

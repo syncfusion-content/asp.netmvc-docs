@@ -3,7 +3,7 @@ layout: post
 title: Scales
 description: scales
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -17,11 +17,7 @@ Radius of the Scale Bar is changed with the help of scaleRadius property and in 
 
 
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 

@@ -31,11 +31,11 @@ Note: The current version of Essential Presentation is in preview. It does not s
 <tr>
 <th>
 Supported .NET Frameworks versions</th><td>
-* .NET 2.0* .NET 3.5* .NET 4.0* .NET 4.5 * .NET 4.5.1</td></tr>
+<ul> <li>.NET 2.0</li><li>.NET 3.5 </li><li> .NET 4.0 </li> <li>.NET 4.5 </li><li>.NET 4.5.1</li></ul></td></tr>
 <tr>
 <th>
 <br>Compatible MS PowerPoint versions</th><td>
-* MS PowerPoint 2007* MS PowerPoint 2010* MS PowerPoint 2013</td></tr>
+<li> MS PowerPoint 2007</li><li> MS PowerPoint 2010</li><li> MS PowerPoint 2013</li></td></tr>
 </table>
 
 

@@ -15,9 +15,7 @@ In this section, you can learn about Grid’s mandatory property to render a sim
 
     @(Html.EJ().Grid<object>("Grid")
 
-
-
-    .Columns(col =>
+   .Columns(col =>
 
                 {
 
@@ -35,5 +33,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Initialize-ejGrid_images/Initialize-ejGrid_img1.png)
 
-
+_Figure : Empty Grid_
 

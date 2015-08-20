@@ -21,17 +21,22 @@ The following steps explains you the behaviour of cascade dropdown.
 
 
 
-{% highlight html %}
+{% highlight js %}
+ 
  // Add a DropDownList element using the helper class in CSHTML
  <div class="control" style="float: left;">
  <span class="txt">Select Group</span>
- @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) ViewData["groups"]).DropDownListFields(f=>f.Value("parentId")).CascadeTo("dropdownlist1")</div>
- <div class="control" style="float: left;"><span class="txt">Select Country</span>
+ @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) 
+	ViewData["groups"]).DropDownListFields(f=>f.Value("parentId")).CascadeTo("dropdownlist1")
+ </div>
+ <div class="control" style="float: left;">
+ <span class="txt">Select Country</span>
  @Html.EJ().DropDownList("dropdownlist1").Datasource((IEnumerable<Countries>)ViewData["countries"]).Enabled(false)
- </div></td></tr>
+ 
 {% endhighlight %}
 
 {% highlight c# %}
+ 
  // Initialize the control in controller
  public ActionResult Property()
  {                
@@ -69,8 +74,8 @@ The following steps explains you the behaviour of cascade dropdown.
     public int Value;
 	public string Id;
 	public string Text;
- } } </td></tr>
-{% endhighlight %}
+ } } 
+ {% endhighlight %}
 
 
 
@@ -80,8 +85,6 @@ Output of the above steps
 
 
 ![](Cascading-Support_images/Cascading-Support_img2.png)
-
-
 
 _Figure 25: Dropdown with cascade property_  
 

@@ -17,7 +17,7 @@ The following steps explain how to disable the ProgressBar widget when ‘Enable
 
 
 
-{% highlight html %}
+{% highlight js %}
 // Add the following code example to the corresponding CSHTML page to disable the ProgressBar control.
 @Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").Enabled(false)
 {% endhighlight %}
@@ -36,11 +36,11 @@ The following steps explain how to disable the ProgressBar widget when ‘Enable
 
 The following screenshot displays the output for the above code.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/pro disable.PNG](Enabling-the-ProgressBar_images/Enabling-the-ProgressBar_img1.png)
+![](Enabling-the-ProgressBar_images/Enabling-the-ProgressBar_img1.png)
 
 
 
 
 
-_Figure_ _12__: Disabled Progress Bar_
+_Figure_ _12_: Disabled Progress Bar
 

@@ -32,12 +32,6 @@ By default, the selection mode of the grid is “Row”. This enables you to sel
 
 {% highlight c# %}
 
-[MVC]
-
-[controller]
-
-
-
 using MVCSampleBrowser.Models;
 
 using System;
@@ -83,10 +77,8 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
-{% highlight html %}
-[razor]
 
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -126,7 +118,7 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img1.png)
 
-
+_Figure : Row Selection - Single_
 
 #### Cell
 
@@ -134,10 +126,6 @@ Cell selection can be enabled using the SelectionMode property. This enables you
 
 
 {% highlight c# %}
-[MVC]
-
-[controller]
-
 
 
 using MVCSampleBrowser.Models;
@@ -186,10 +174,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-{% highlight html %}
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -231,7 +216,7 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img2.png)
 
-
+_Figure : Cell Selection - Single_
 
 #### Column
 
@@ -239,11 +224,6 @@ Column selection can be enabled using the SelectionMode property. This enables y
 
 
 {% highlight c# %}
-[MVC]
-
-[controller]
-
-
 
 using MVCSampleBrowser.Models;
 
@@ -291,10 +271,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-{% highlight html %}
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -336,7 +313,7 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img3.png)
 
-
+_Figure : Cell Selection - Single_
 
 ### Multiple Selection
 
@@ -344,7 +321,7 @@ Multiple selection can be enabled using SelectionType property. This allows you 
 
 #### Selection Modes
 
-Row
+#### Row
 
 By default, the selection mode of the grid is “Row”. This enable you to select the row in the grid. Refer to the following code example.
 
@@ -352,7 +329,7 @@ By default, the selection mode of the grid is “Row”. This enable you to sele
 
 
 {% highlight c# %}
-[controller]
+
 
 
 
@@ -401,11 +378,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
-{% highlight html %}
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -449,19 +422,13 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img4.png)
 
-
+_Figure : Row Selection - Multiple_
 
 #### Cell
 
 Cell selection can be enabled using the SelectionMode property. This enables you to select a cell in the grid. Refer to the following code example.
 
-
-
 {% highlight c# %}
-
-[controller]
-
-
 
 using MVCSampleBrowser.Models;
 
@@ -508,11 +475,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
-{% highlight html %}
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -556,19 +519,14 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img5.png)
 
+_Figure : Cell Selection - Multiple_
 
 
 #### Column
 
 Column selection can be enabled using the SelectionMode property. This enables you to select a particular column in the grid. Refer to the following code example.
 
-
-
-
 {% highlight c# %}
-[controller]
-
-
 
 using MVCSampleBrowser.Models;
 
@@ -617,9 +575,6 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 {% highlight html %}
-[razor]
-
-
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -661,7 +616,7 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img6.png)
 
-
+_Figure : Column Selection - Multiple_
 
 ## Enable All Modes of selection
 
@@ -671,7 +626,7 @@ You can also enable all the three modes of selection. Refer to the following cod
 
 {% highlight c# %}
 
-[controller]
+
 
 
 
@@ -721,10 +676,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-{% highlight html %}
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -766,7 +718,7 @@ The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img7.png)
 
-
+_Figure : Enable all modes - Multiple_
 
 ## Enable toggle
 
@@ -775,10 +727,6 @@ You can toggle the selection using the EnableToggle property. This provides supp
 
 
 {% highlight c# %}
-
-[controller]
-
-
 
 using MVCSampleBrowser.Models;
 
@@ -791,8 +739,6 @@ using System.Linq;
 using System.Web;
 
 using System.Web.Mvc;
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -826,11 +772,6 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 {% highlight html %}
 
-
-[razor]
-
-
-
 @(Html.EJ().Grid<OrdersView>("Grid")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -861,35 +802,23 @@ namespace MVCSampleBrowser.Controllers
 
         )
 
-
-
-
-
-
 {% endhighlight  %}
 The following screenshot displays the result of the above code.
 
 ![](Selection_images/Selection_img8.png)
 
-
+_Figure : Select Row_
 
 ![](Selection_images/Selection_img9.png)
 
-
+_Figure : Unselect row_
 
 ## Customize Selection Color
 
 In this section, you can learn how to customize or override selection background color through css. The following code example is for Selection color customization.
 
 
-
 {% highlight html %}
-
-[MVC]
-
-[razor]
-
-
 
 <style>
 
@@ -918,7 +847,7 @@ In this section, you can learn how to customize or override selection background
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
+
 
 
 
@@ -956,7 +885,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Selection_images/Selection_img10.png)
 
-
+_Figure : Selection color customization_
 
 ## Get selected record data
 
@@ -964,13 +893,6 @@ In this section, you can learn how to get selected records from one Grid and how
 
 
 {% highlight html %}
-
-
-[MVC]
-
-
-
-[razor]
 
     <div class="label1">
 
@@ -1001,7 +923,6 @@ In this section, you can learn how to get selected records from one Grid and how
 
 {% endhighlight  %}
 {% highlight js %}
-[javascript]
 
     <script src="http://js.syncfusion.com/demos/web/scripts/jsondata.min.js"></script>
 
@@ -1029,8 +950,6 @@ In this section, you can learn how to get selected records from one Grid and how
 
 {% endhighlight  %}
 {% highlight c# %}
-
-[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -1070,5 +989,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Selection_images/Selection_img11.png)
 
-
+_Figure : Get selected record data_
 

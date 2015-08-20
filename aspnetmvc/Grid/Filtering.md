@@ -32,15 +32,6 @@ Filter menus are a good UI based filtering option. It visibly denotes filtering 
 
 {% highlight html %}
 
-
-[MVC]
-
-
-
-[razor]
-
-
-
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
       .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -54,9 +45,10 @@ Filter menus are a good UI based filtering option. It visibly denotes filtering 
     )
 
 {% endhighlight  %}
+
 {% highlight c# %}
 
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -94,7 +86,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Filtering_images/Filtering_img1.png)
 
-
+_Figure : Filter menu_
 
 ## Filter Bar
 
@@ -136,12 +128,7 @@ Boolean filter bar works with either true or false.</td></tr>
 
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -158,7 +145,7 @@ Boolean filter bar works with either true or false.</td></tr>
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -200,7 +187,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Filtering_images/Filtering_img2.png)
 
-
+_Figure : Filter Bar_
 
 ## Excel styled menu
 
@@ -214,7 +201,7 @@ The Checkbox list is available in the menu that contains the possible filter val
 
 ![](Filtering_images/Filtering_img3.png)
 
-
+_Figure : Checkbox list_
 
 A Search box is available at the top of the check box list that is used to search the possible filter choices. The number of possible filter choices are restricted by the setting the MaxFilterChoices property of the FilterSettings. 
 
@@ -226,23 +213,16 @@ The Submenu items in the filter menu provide the advanced filtering options for 
 
 ![](Filtering_images/Filtering_img4.png)
 
+_Figure : Advanced Filter_
 
 
 ![](Filtering_images/Filtering_img5.png)
 
-
+_Figure : Custom Filter_
 
 
 
 {% highlight c# %}
-
-[MVC]
-
-
-
-[controller]
-
-
 
 using MVCSampleBrowser.Models;
 
@@ -291,11 +271,8 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
+
 {% highlight html %}
-
-[razor]
-
-
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -370,15 +347,7 @@ ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOper
 
 Grid contains an API to do filtering dynamically after Grid initialize, without the use of User Interaction. It is useful to do filtering dynamically.
 
-
-
 {% highlight html %}
-
-[MVC]
-
-
-
-[razor]
 
 <div>
 
@@ -483,9 +452,6 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 </div>
 
 
-
-
-
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -511,8 +477,6 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 {% endhighlight  %}
 {% highlight js %}
 
-[javascript]
-
 <script>
 
     $("#filter").ejButton({
@@ -529,8 +493,9 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 
 </script>
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -564,9 +529,6 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
-
 {% endhighlight  %}
 The following output is displayed as a result of the above code example.
 
@@ -574,5 +536,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Filtering_images/Filtering_img6.png)
 
-
+_Figure : Dynamic Filtering_
 

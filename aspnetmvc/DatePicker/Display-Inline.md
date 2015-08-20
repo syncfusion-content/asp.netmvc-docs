@@ -15,15 +15,15 @@ The following steps explain you how to get the Calendar control using DatePicker
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with display inline.
 
+   ~~~ js
 
+		@*Add the following code example to the corresponding CSHTML page to get the Calendar control using DatePicker*@
 
-{% highlight html %}
+		@Html.EJ().DatePicker("datePicker").TagName("div").DisplayInline(true)
 
-@*Add the following code example to the corresponding CSHTML page to get the Calendar control using DatePicker*@
+   ~~~
+   {:.prettyprint }
 
-@Html.EJ().DatePicker("datePicker").TagName("div").DisplayInline(true)
-
-{% endhighlight %}
 
 2. The following screenshot displays the output for the above code.
 

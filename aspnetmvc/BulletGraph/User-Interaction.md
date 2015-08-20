@@ -12,22 +12,26 @@ documentation: ug
 ## Animation
 
 Bullet Graph supports animation that makes the performance measure bar to animate when rendering the Bullet Graph. Animation is enabled or disabled using EnableAnimation property. By default, Animation is enabled in Bullet Graph. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").EnableAnimation(true).Value(8).ComparativeMeasureValue(5))
+
 {% endhighlight %}
 
 ## Responsiveness during browser resize
 
 Bullet Graph is made responsive when resizing the browser by using EnableResizing property. By default the value of this property is true in Bullet Graph. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").EnableResizing(true).Value(8).ComparativeMeasureValue(5))
+
 {% endhighlight %}
+
 ## Applying same color to all ticks and labels in a range
 
 Background color for qualitative range is applied to major ticks and minor ticks of the Bullet Graph using ApplyRangeStrokeToTicks property. The range colors are applied to labels using ApplyRangeStrokeToLabels property. By default same colors are not applied to a qualitative range and its corresponding ticks or labels. 
-{% highlight html %}
+
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").ApplyRangeStrokeToLabels(true).ApplyRangeStrokeToTicks(true)
 
@@ -51,6 +55,7 @@ Background color for qualitative range is applied to major ticks and minor ticks
 
     .Value(8).ComparativeMeasureValue(5))
 {% endhighlight %}
+
 ![](User-Interaction_images/User-Interaction_img1.png)
 
 
@@ -64,7 +69,7 @@ By default Bullet Graph displays Tooltip when mouse is hovered over feature meas
 
 
 Bullet Graph supports Tooltip template instead of defaultTooltip to customize the appearance and contents of Tooltip. The Tooltip template should be a <div> element with display set to ‘none’, so it is displayed only when mouse is placed on feature measure bar. The id value of the <div> element should be provided as value to the Template property in TooltipSettings of Bullet Graph to display the customized <div> element as Tooltip instead of default Tooltip. The values displayed in default Tooltip such as current value, target value and category are accessed in template <div> element by using {{currentValue}}, {{targetValue}} and {{category}} respectively. 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().BulletGraph("Bullets").Value(8).ComparativeMeasureValue(6).Height(150)
 

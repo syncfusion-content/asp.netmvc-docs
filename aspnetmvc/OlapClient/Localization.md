@@ -3,7 +3,7 @@ layout: post
 title: Localization
 description: localization 
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

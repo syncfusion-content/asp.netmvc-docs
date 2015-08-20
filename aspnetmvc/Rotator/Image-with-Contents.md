@@ -151,7 +151,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight css %}
 
 <style type="text/css" class="cssStyles">
 
@@ -322,7 +322,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 This property specifies the number of Rotator Items to be displayed. The default value is ‘1’. The value set to this property is string or number.
 
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -338,7 +338,7 @@ This property specifies the number of Rotator Items to be displayed. The default
 
 This property specifies the number of Rotator Items to navigate on a single click (next/previous/play buttons). The NavigateSteps property value must be less than or equal to the DisplayItemCount property value. The default value is ‘1’. The value set to this property is string or number.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -355,7 +355,7 @@ This property specifies the number of Rotator Items to navigate on a single clic
 
 This property sets the index of the slide that is displayed first. The default value is ‘0’. The value set to this property is string or number.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -371,7 +371,7 @@ This property sets the index of the slide that is displayed first. The default v
 
 This property sets the space between the Rotator Items.  The value set to this property is string or number.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -403,7 +403,7 @@ AnimationType property specifies the Type of Animation for the Rotator Item. Ani
 
 This property sets the speed of slide transition. The default value of AnimationSpeed is ‘600’. The value set to this property is string or number.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -419,7 +419,7 @@ This property sets the speed of slide transition. The default value of Animation
 
 This property sets the delay between the Rotator Items to move after the slide transition. The default value is 500. The value set to this property is string or number.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -454,7 +454,7 @@ By default, there are 12 themes support available for Rotator control as follows
 
 This property is used to set rootclass for Rotator control theme. The value set to this property is string type.
 
-{% highlight html %}
+{% highlight js %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -482,7 +482,7 @@ Add the following code in your Css.
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
 
     <style type="text/css">
 

@@ -38,8 +38,6 @@ The following list is of the twelve themes supported by DateTimePicker:
 
    ~~~ html
    
-     [_cshtml]
-	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
 	    @Html.EJ().DateTimePicker("DateTime").Width("175px")
@@ -64,10 +62,8 @@ Using this CssClass you can override the existing styles under the theme style s
 1. Add the following code in your CSHTML page to render the DateTimePicker.
 
 
-   ~~~ html
-   
-     [_cshtml]
-	 
+   ~~~ js
+   	 
 	    @*Add the following code in your view page to render the DateTimePicker.*@
 
 	    @Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
@@ -76,14 +72,12 @@ Using this CssClass you can override the existing styles under the theme style s
    {:.prettyprint }
 
 
-In the following style sheet the exiting theme style sheet file has been over-ridden using root class “Purple-dark”. 
+   In the following style sheet the exiting theme style sheet file has been over-ridden using root class “Purple-dark”. 
 
-1. Add the following code in your style section.
+2. Add the following code in your style section.
 
 
-   ~~~ js
-   
-     [Style]
+   ~~~ js    
 	 
 			.Purple-dark .e-week-header {
 

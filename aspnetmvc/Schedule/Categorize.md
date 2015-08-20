@@ -13,12 +13,6 @@ documentation: ug
 
 You can use the following code example to include the categorize option.
 
-
-
-
-
-
-
 {% highlight html %}
 
 
@@ -67,15 +61,7 @@ The following are the sub-properties used within the categorizeSettings.
 The following code example illustrates on how to render categorize feature in the Schedule control.
 
 
-
-
-
-
-
 {% highlight html %}
-
-
-
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -196,7 +182,7 @@ public string color { set; get; }
 
 The output of the above code is illustrated as follows.
 
-![C:/Users/hariprasanths/Desktop/imagess/123/Capture1.PNG](Categorize_images/Categorize_img1.png)
+![](Categorize_images/Categorize_img1.png)
 
 
 

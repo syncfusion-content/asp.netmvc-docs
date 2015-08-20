@@ -14,7 +14,7 @@ documentation: ug
 Sorting is basic query in the DataManager. It enables you to view the items or records in ascending or descending order based on a particular field and sorting direction. The query parameter of the DataManager enables you to retrieve the data in the sorted fashion and thus utilizing the resultant data obtained.
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -60,7 +60,7 @@ Result of the above code example is illustrated as follows.
 ## SortByDesc
 
 The sortByDesc query of the DataManager is used to sort the specified field in descending order, by default. You can use the following code example for sortByDesc query.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -106,7 +106,7 @@ Result of the above code example is illustrated as follows.
 The table can be dynamically sorted by using an external button click event. The value of the column to be sorted can be obtained by the sortBy query and thus the sorted data is retrieved and bounded to the table. The following code example illustrates you to dynamically sort the data source.
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 
@@ -179,7 +179,7 @@ Result of above code example is illustrated as follows.
 ## Multi sorting
 
 Multi sorting is a special technique, where you can sort multiple fields by adding multiple sorting queries to the DataManager.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 

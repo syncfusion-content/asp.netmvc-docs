@@ -81,7 +81,7 @@ The following code example explains on how to include the Daylight saving time o
 
 
 
-{% highlight html %}
+{% highlight js %}
 
     @(Html.EJ().Schedule("Schedule1")
 
@@ -93,7 +93,7 @@ The following code example explains on how to include the Daylight saving time o
 
         // enable the Daylight saving time property to the schedule 
 
-.IsDST(false)
+        .IsDST(false)
 
         .AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
 
@@ -126,7 +126,7 @@ The following code example explains on how to include the Daylight saving time o
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -159,17 +159,17 @@ The following code example explains on how to include the Daylight saving time o
 .RecurrenceRule("RecurrenceRule"))
 
 )
-
+{% endhighlight %}
 {% highlight c# %}
 
 // Follow the code declared in Read only part
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 On executing the above specified code the Location field will be added in the create appointment window as follows:
 
-![C:/Users/karthigeyan/Desktop/a.png](Data-binding_images/Data-binding_img1.png)
+![](Data-binding_images/Data-binding_img1.png)
 
 
 
@@ -184,7 +184,7 @@ On executing the above specified code the Location field will be added in the cr
 
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -199,8 +199,8 @@ fields.Datasource(ViewBag.datasource)
 .AllDay("AllDay")
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")))
-
-[controller]
+{% endhighlight %}
+{% highlight c# %}
 namespace MVCSampleBrowser.Controllers
 {
    public partial class ScheduleController : Controller
@@ -247,7 +247,7 @@ _Figure_ _50_: schedule with Local Data Binding
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -302,7 +302,7 @@ Figure 51: Schedule with Remote Data BindingLoad On Demand
 
 
 
-![C:/Users/maheshp/Pictures/a2.PNG](Data-binding_images/Data-binding_img4.png)
+![](Data-binding_images/Data-binding_img4.png)
 
 
 
@@ -313,13 +313,27 @@ _Figure 3: Schedule Demanded data_
 The following code example shows you how load on demand works with Schedule.
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
 .Height("525px")
-// Enable load on demand property to the schedule.EnableLoadOnDemand(true).CurrentDate(new DateTime(2014, 5, 2)).EnableAppointmentNavigation(false).AppointmentSettings(fields => fields.Datasource(ds => ds.URL("GetRecords").Adaptor(AdaptorType.UrlAdaptor)).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").Description("Description").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")))
-
+// Enable load on demand property to the schedule
+.EnableLoadOnDemand(true)
+.CurrentDate(new DateTime(2014, 5, 2))
+.EnableAppointmentNavigation(false)
+.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("GetRecords")
+.Adaptor(AdaptorType.UrlAdaptor))
+.Id("Id")
+.Subject("Subject")
+.StartTime("StartTime")
+.EndTime("EndTime")
+.Description("Description")
+.AllDay("AllDay")
+.Recurrence("Recurrence")
+.RecurrenceRule("RecurrenceRule"))
+)
+{% endhighlight %}
 {% highlight c# %}
 public partial class ScheduleController : Controller
 {
@@ -343,7 +357,6 @@ public partial class ScheduleController : Controller
   }
 }
 {% endhighlight %}
-{% endhighlight %}
 
 
 * Add the file “AppointmentRepository.cs” in the Models folder of your project that contains the code example for filtering appointments – it filters the appointment data to be retrieved from the database and returned to Schedule.
@@ -354,153 +367,153 @@ public static class AppointmentRepository
 
 {
 
-public static IList<DefaultSchedule> GetAllRecords()
+	public static IList<DefaultSchedule> GetAllRecords()
 
-{
+	{
 
-IList<DefaultSchedule> appoint = (IList<DefaultSchedule>)HttpContext.Current.Session["Appointments"];
+		IList<DefaultSchedule> appoint = (IList<DefaultSchedule>)HttpContext.Current.Session["Appointments"];
 
-if (appoint == null)
+		if (appoint == null)
 
-HttpContext.Current.Session["Appointments"] = appoint = new ScheduleDataDataContext().DefaultSchedules.ToList();
+		HttpContext.Current.Session["Appointments"] = appoint = new ScheduleDataDataContext().DefaultSchedules.ToList();
 
-return appoint;
+		return appoint;
 
-}
+	}
 
-//To filter the appointment based on current date, current action and current view
+	//To filter the appointment based on current date, current action and current view
 
-public static List<DefaultSchedule> FilterAppointment(DateTime CurrentDate, String CurrentAction, String CurrentView)
+	public static List<DefaultSchedule> FilterAppointment(DateTime CurrentDate, String CurrentAction, String CurrentView)
 
-{
+	{
 
-DateTime CurrDate = Convert.ToDateTime(CurrentDate);
+		DateTime CurrDate = Convert.ToDateTime(CurrentDate);
 
-DateTime StartDate = FirstWeekDate(CurrDate.Date);
+		DateTime StartDate = FirstWeekDate(CurrDate.Date);
 
-DateTime EndDate = FirstWeekDate(CurrDate.Date);
+		DateTime EndDate = FirstWeekDate(CurrDate.Date);
 
-List<DefaultSchedule> appointmentList = GetAllRecords().ToList();
+		List<DefaultSchedule> appointmentList = GetAllRecords().ToList();
 
-switch (CurrentView)
+		switch (CurrentView)
 
-{
+		{
 
-case "day":
+			case "day":
 
-StartDate = CurrentDate;
+			StartDate = CurrentDate;
 
-EndDate = CurrentDate;
+			EndDate = CurrentDate;
 
-break;
+			break;
 
-case "week":
+			case "week":
 
-EndDate = EndDate.AddDays(7);
+			EndDate = EndDate.AddDays(7);
 
-break;
+			break;
 
-case "workweek":
+			case "workweek":
 
-EndDate = EndDate.AddDays(5);
+			EndDate = EndDate.AddDays(5);
 
-break;
+			break;
 
-case "month":
+			case "month":
 
-StartDate = CurrDate.Date.AddDays(-CurrDate.Day + 1);
+			StartDate = CurrDate.Date.AddDays(-CurrDate.Day + 1);
 
-EndDate = StartDate.AddMonths(1);
+			EndDate = StartDate.AddMonths(1);
 
-break;
+			break;
 
-}
+		}
 
-DateTime st; DateTime et;
+		DateTime st; DateTime et;
 
-appointmentList = GetAllRecords().ToList().Where(app => DateTime.TryParse(app.StartTime.ToString(), out st) &&
+		appointmentList = GetAllRecords().ToList().Where(app => DateTime.TryParse(app.StartTime.ToString(), out st) &&
 
-((st.ToLocalTime().Date >= Convert.ToDateTime(StartDate.Date)) &&
+		((st.ToLocalTime().Date >= Convert.ToDateTime(StartDate.Date)) &&
 
-DateTime.TryParse(app.EndTime.ToString(), out et) && (et.ToLocalTime().Date <= Convert.ToDateTime(EndDate.Date))) || app.Recurrence == 1).ToList();
+		DateTime.TryParse(app.EndTime.ToString(), out et) && (et.ToLocalTime().Date <= Convert.ToDateTime(EndDate.Date))) || app.Recurrence == 1).ToList();
 
-return appointmentList;
+		return appointmentList;
 
-}
+	}
 
-//To Get first day of schedule based on current date
+	//To Get first day of schedule based on current date
 
-internal static DateTime FirstWeekDate(DateTime CurrentDate)
+	internal static DateTime FirstWeekDate(DateTime CurrentDate)
 
-{
+	{
 
-try
+		try
 
-{
+		{
 
-DateTime FirstDayOfWeek = CurrentDate;
+			DateTime FirstDayOfWeek = CurrentDate;
 
-DayOfWeek WeekDay = FirstDayOfWeek.DayOfWeek;
+			DayOfWeek WeekDay = FirstDayOfWeek.DayOfWeek;
 
-switch (WeekDay)
+			switch (WeekDay)
 
-{
+			{
 
-case DayOfWeek.Sunday:
+				case DayOfWeek.Sunday:
 
-break;
+				break;
 
-case DayOfWeek.Monday:
+				case DayOfWeek.Monday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-1);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-1);
 
-break;
+				break;
 
-case DayOfWeek.Tuesday:
+				case DayOfWeek.Tuesday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-2);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-2);
 
-break;
+				break;
 
-case DayOfWeek.Wednesday:
+				case DayOfWeek.Wednesday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-3);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-3);
 
-break;
+				break;
 
-case DayOfWeek.Thursday:
+				case DayOfWeek.Thursday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-4);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-4);
 
-break;
+				break;
 
-case DayOfWeek.Friday:
+				case DayOfWeek.Friday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-5);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-5);
 
-break;
+				break;
 
-case DayOfWeek.Saturday:
+				case DayOfWeek.Saturday:
 
-FirstDayOfWeek = FirstDayOfWeek.AddDays(-6);
+				FirstDayOfWeek = FirstDayOfWeek.AddDays(-6);
 
-break;
+				break;
 
-}
+			}
 
-return (FirstDayOfWeek);
+			return (FirstDayOfWeek);
 
-}
+		}
 
-catch
+		catch
 
-{
+		{
 
-return DateTime.Now;
+			return DateTime.Now;
 
-}
+		}
 
-}
+	}
 
 }
 
@@ -508,7 +521,7 @@ return DateTime.Now;
 
 The following screenshot is the result of the above code example.
 
-![C:/Users/maheshp/Pictures/s1.PNG](Data-binding_images/Data-binding_img5.png)
+![](Data-binding_images/Data-binding_img5.png)
 
 
 
@@ -712,12 +725,7 @@ resourceFields:"Owner"
 
 
 {% endhighlight %}
-{% highlight html %}
-[MVC - Razor]
-
-
-
-
+{% highlight js %}
 
 @(Html.EJ().Schedule("Schedule1")
 

@@ -17,7 +17,7 @@ This section explains briefly about how to create a ReportViewer in your web ap
 
 The following screenshot shows the control structure of ReportViewer.
 
-![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer1.png](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 ### Create an Application
@@ -94,7 +94,7 @@ Add the script files and CSS files in the &lt;title&gt; tag of the _Layout.cs
 
 Add the following code example in the Index.cshtml page that is already created. Set the desired ReportPath and ReportServiceUrl to ReportViewer.
 
-{% highlight c# %}
+{% highlight js %}
 
 @using Syncfusion.MVC.EJ
 
@@ -184,7 +184,7 @@ namespace ReportViewerDemo.Api
 
         {
 
-//You can update report options here
+			//You can update report options here
 
         }
 
@@ -194,7 +194,7 @@ namespace ReportViewerDemo.Api
 
         {
 
-//You can update report options here
+			//You can update report options here
 
         }   
     }
@@ -255,7 +255,7 @@ namespace ReportViewerDemo
 
 Run the sample application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-![C:/Users/pandimurugana/AppData/Local/Microsoft/Windows/INetCache/Content.Word/reportviewer.png](Getting-Started_images/Getting-Started_img9.png)
+![](Getting-Started_images/Getting-Started_img9.png)
 
 
 ## Load SSRS Server Reports

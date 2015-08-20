@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-## Merge Documents
+# Merge Documents
 
 Merging feature in the Essential PDF enables you in appending all documents to the target document. When merging, all bookmarks and attachments are copied.
 
@@ -20,14 +20,15 @@ You can also merge the documents in the following ways: 
 
 * Append all the documents one after another by using the Append method.
 * Import the pages from different documents by using the ImportPageRange or ImportPage method.
-### Merging Multiple Documents from Disk
+
+## Merging Multiple Documents from Disk
 
 
 In this method, path of the source PDF files is provided in a string array. They are merged in the order of their appearance in the array. The following code example illustrates how to merge multiple documents.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -45,9 +46,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -65,13 +66,15 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-### Merging Multiple Documents from Stream
+{% endhighlight %}
+
+## Merging Multiple Documents from Stream
 
 It is also possible to merge multiple PDF documents from stream using the static merge method of PdfDocument class. The following code example illustrates this. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -101,9 +104,9 @@ stream1.Dispose();
 
 stream2.Dispose();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -133,13 +136,15 @@ stream1.Dispose()
 
 stream2.Dispose()
 
-### Merging Two Files using Append method
+{% endhighlight %}
+
+## Merging Two Files using Append method
 
 Two files can also be merged by appending one file after another using append method in the PdfDocumentBase class. The following code example illustrates this.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -161,9 +166,9 @@ document1.Close(true);
 
 document2.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -185,13 +190,15 @@ document1.Close(True)
 
 document2.Close(True)
 
-### Merging pages of different Documents
+{% endhighlight %}
+
+## Merging pages of different Documents
 
 Another way of merging is to import all the pages from one document to another using ImportPageRange method. The following code example illustrates this.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -213,9 +220,9 @@ document1.Close(true);
 
 document2.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -229,7 +236,7 @@ Dim document2 As New PdfLoadedDocument("Input1.pdf")
 
 document1.ImportPageRange(document2, 0, document2.Pages.Count - 1)
 
-'Saves the document.
+'Saves the document. 
 
 document1.Save("Merged.pdf")
 
@@ -237,18 +244,17 @@ document1.Close(True)
 
 document2.Close(True)
 
-### Best practices
+{% endhighlight %}
+
+## Best practices
 
 Merging multiple large PDF documents can lead to high memory usage. To optimize memory usage, you can use the following code sample. First, parent PDF document needs to be created, loaded, and then import pages and its contents to the parent PDF document and dispose the loaded PDF document. Setting EnableMemoryOptimization to true also reduces the memory usage once the document instance is closed.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Merge-Documents_images/Merge-Documents_img1.png)' | markdownify }}
-{:.image }
-_Note: The PDF document (parent document) contents are still in run time memory. It releases the memory once the PDF document instance is disposed._
+> Note: The PDF document (parent document) contents are still in run time memory. It releases the memory once the PDF document instance is disposed.
 
 
 
-[C#]
-
+{% highlight c# %}
 
 
 //Inputs PDF documents.
@@ -293,9 +299,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -337,5 +343,5 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-
+{% endhighlight %}
 

@@ -19,9 +19,9 @@ The ShowPreview property is Boolean type and its default value is true.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -43,9 +43,7 @@ The ShowRecentColors property is Boolean type and its default value is false.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
-
-[CSHTML]
+{% highlight js %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -68,8 +66,8 @@ The EnableOpacity property is Boolean type and its default value is true.
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight html %}
-[CSHTML]
+{% highlight js %}
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -92,8 +90,8 @@ The Columns property is Number type and its default value is 10.
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight html %}
-[CSHTML]
+{% highlight js %}
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 

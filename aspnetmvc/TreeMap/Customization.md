@@ -25,7 +25,7 @@ ColorMapping is categorized into three different types such as,
 
 You can color, all the leaf nodes with the same color by setting the color value of the UniColorMapping property of the TreeMap.
 
-{% highlight html %}
+{% highlight js %}
 
      @(Html.EJ().TreeMap("treemap")
 
@@ -57,7 +57,7 @@ You can color, all the leaf nodes with the same color by setting the color value
 
 You can group the leaf nodes based on the range of the data’s color values. You can set a unique color for every ranges. To achieve this, specify the “to” and “from” values as range bound and “color” value to fill the leaf nodes of the particular range, through the RangeColorMapping property of the TreeMap.
 
-{% highlight html %}
+{% highlight js %}
 
 
            @(Html.EJ().TreeMap("treemap")
@@ -97,7 +97,7 @@ You can group the leaf nodes based on the range of the data’s color values. Yo
 
 You can differentiate all the leaf nodes using the DesaturationColorMapping property of the TreeMap. Differentiation is achieved, even though same color is applied for all the leaf nodes by varying the opacity of the leaf nodes based on the color value specified in the color value range using RangeMinimum and RangeMaximum value of the data collection. You can also bound the opacity range by setting from and to property of the DesaturationColorMapping.
 
-{% highlight html %}
+{% highlight js %}
 
 
            @(Html.EJ().TreeMap("treemap")
@@ -136,7 +136,7 @@ You can enable the tooltip support for the TreeMap by setting the ShowTooltip pr
 
 You can customize the Leaf level TreeMapitems using LeafItemsSetting. The Label and tooltip values take the property of bound object that is referred in the LabelPath when defined.
 
-{% highlight html %}
+{% highlight js %}
 
          @(Html.EJ().TreeMap("treemap")
 

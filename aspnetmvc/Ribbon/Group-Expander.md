@@ -7,11 +7,11 @@ control: Ribbon
 documentation: ug
 ---
 
-## Group Expander
+# Group Expander
 
 The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _ClientSideOnGroupExpand_.
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -205,7 +205,7 @@ content: "\e634";
 
 </style>
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -257,13 +257,11 @@ return View();
 
 }
 
-
-
 }
 
 }
 
-{% endhighlight %}
+
 
 {% endhighlight %}
 

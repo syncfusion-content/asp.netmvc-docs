@@ -11,12 +11,12 @@ documentation: ug
 
 Conditional formatting in the PivotGrid control allows you to define conditions on the meeting that the cells can be formatted with font, color and border settings. Conditional formatting dialog provides options at the UI-level to customize the appearance of the PivotGrid when the conditions are satisfied. 
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/New folder/conditionrulejs.png](Conditional-Formatting_images/Conditional-Formatting_img1.png)
+![](Conditional-Formatting_images/Conditional-Formatting_img1.png)
 
 
 
 Conditional formatting dialog can be launched by clicking a simple button in the application. The following code example explains on how to launch the conditional formatting dialog.
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc"))
 

@@ -21,7 +21,7 @@ Here, you can learn when and how each adaptor is used.
 
 JSONAdaptor is used to process JSON data. It contains methods to process the given JSON data based on the queries. The following code example illustrates on how to use the JSONAdaptor.
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DataManager("FlatData").Json((IEnumerable<object>)ViewBag.dataSource))
 
@@ -69,7 +69,7 @@ The result of above code example is illustrated as follows.
 
 Url Adaptor of the DataManager can be used when you are required to use remote service to retrieve data. It interacts with server-side for all DataManager Queries and CRUD operations. Now, in the following code example, the data is retrived from the MVCController. 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
 
@@ -105,9 +105,9 @@ Url Adaptor of the DataManager can be used when you are required to use remote s
 
 {% endhighlight %}
 {% highlight c# %}
-[Controller]
 
-public class HomeController : Controller
+
+		public class HomeController : Controller
 
         {
 
@@ -161,7 +161,7 @@ The result of the above code example is illustrated as follows.
 
 Odata Adaptor that is extended from Url Adaptor is used for consuming data through oData Service. You can use the following code example to use oData adaptor.
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true).CrossDomain(true))
 
@@ -208,7 +208,7 @@ The result of the above code example is illustrated as follows.
 ## WebAPI Adaptor
 
 WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrieving data from WebAPI service. Refer to the following code example.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
 
 
@@ -261,9 +261,9 @@ _Web API Adaptor_
 
 RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for binding local data and performs all DataManager queries in client-side. It interacts with server-side only for CRUD operations to pass the modified records. Refer to the following code example.
 
-{% highlight html %}
+{% highlight js %}
 
-[View]
+
 
 
 
@@ -303,11 +303,11 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
 
 {% highlight c# %}
 
-[Controller]
 
 
 
-public class HomeController : Controller
+
+		public class HomeController : Controller
 
         {
 

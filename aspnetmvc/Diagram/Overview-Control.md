@@ -17,8 +17,7 @@ Overview control solves these problems by showing you a preview, an overall view
 
 The following code illustrates how to create Overview control.
 
-{% highlight c# %}
-
+{% highlight js %}
 
 
 //Initializes overview
@@ -37,10 +36,6 @@ The following code illustrates how to create Overview control.
 
  </div>
 
-
-
-[Controller]
-
 OverviewProperties overview = new OverviewProperties();
 
 overview.Height = "300px";
@@ -52,14 +47,11 @@ overview.SourceID = "Diagram1";
 ViewData["overview"] = overview;   
 
 
-
-
-
 {% endhighlight %}
 
 
 
-![C:/Users/swarneshk/AppData/Local/Microsoft/Windows/INetCache/Content.Word/overview final.png](Overview-Control_images/Overview-Control_img1.png)
+![](Overview-Control_images/Overview-Control_img1.png)
 
 
 

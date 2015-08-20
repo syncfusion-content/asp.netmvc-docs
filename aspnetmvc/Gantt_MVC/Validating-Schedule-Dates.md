@@ -15,7 +15,7 @@ PrevTimeSpan and NextTimeSpan toolbar items are used to create new time span bas
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -52,5 +52,5 @@ The following screenshot illustrates the output of the above code.
 
 ![](Validating-Schedule-Dates_images/Validating-Schedule-Dates_img1.png)
 
-
+_Figure 57: Validating schedule dates_
 

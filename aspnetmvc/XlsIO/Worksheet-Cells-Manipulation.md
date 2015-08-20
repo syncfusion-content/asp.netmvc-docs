@@ -7,17 +7,15 @@ control: XlsIO
 documentation: ug
 ---
 
-## Worksheet Cells Manipulation
+# Worksheet Cells Manipulation
 
 The IRange interface represents a single cell or a group of cells in a worksheet. XlsIO has several useful methods for manipulating data and formatting it in the ranges.
 
-### Accessing a Cell or a Range
+## Accessing a Cell or a Range
 
 Range of cells can be accessed through the IRange interface. The following code example illustrates this.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -43,15 +41,13 @@ IRange this[string name, bool IsR1C1Notation] { get; }
 
 IRange this[int row, int column, int lastRow, int lastColumn] { get; }
 
+{% endhighlight %}
+
+> Note: Here row and column indexes in the range are "one based". Following code example explains various ways of accessing cells.
 
 
-> {{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img1.jpeg)' | markdownify }}
-{:.image }
-_Note: Here row and column indexes in the range are "one based". Following code example explains various ways of accessing cells._
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -130,10 +126,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -215,15 +211,15 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-Accessing Discontinuous Ranges
+##Accessing Discontinuous Ranges
 
 You can also access different discontinuous ranges and add them to the RangesCollection so that the same format is applied to different ranges. The following code example explains the same.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -284,10 +280,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -350,16 +346,15 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-Access by using IMigrantRange for better performance
+##Access by using IMigrantRange for better performance
 
 The IMigrantRange interface can be used to access a worksheet range and manipulate it. This is an optimal method of writing data with better performance. The following code example illustrates this.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -428,10 +423,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -505,21 +500,17 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-### Accessing used range of a Worksheet 
+## Accessing used range of a Worksheet 
 
 XlsIO enables you to get the range of cells used in a given sheet. This helps you to apply the same format to all the cells used in the worksheet. You can also get the first row/column, last row/column, and number of rows/columns used in the sheet by using the various methods of IRange.
 
-> {{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img2.jpeg)' | markdownify }}
-{:.image }
-_Note: By default, XlsIO considers a cell as used, even when there exists some formatting. You can disable this behavior, and make XlsIO consider a cell as used, only when there exists data, by using the UsedRangeIncludesFormatting property._
+> Note: By default, XlsIO considers a cell as used, even when there exists some formatting. You can disable this behavior, and make XlsIO consider a cell as used, only when there exists data, by using the UsedRangeIncludesFormatting property.
 
 The following code example is used to format the Used Range.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -570,10 +561,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -624,18 +615,15 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-### Clear a Cell or a Range
+## Clear a Cell or a Range
 
 While editing Excel workbooks, one of the most common action that is performed is clearing or deleting cells. Clearing cells mean erasing everything within them, whereas deleting actually deletes the entire cell. You can clear the cell content by using the Clear method. XlsIO also provides options to clear styles or data alone.
 
 The following code example illustrates how to clear a range along with its formatting.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -684,10 +672,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -738,22 +726,22 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
 
-
-### Copy or Move a Range
+## Copy or Move a Range
 
 Moving or copying cells is a very common procedure while creating or editing your worksheets. XlsIO provides support to copy a range of cells from one end to another. CopyTo method enables copying range of cells from the source to the destination. It has an option to copy all the formats or only specific formats to the destination range by using the ExcelCopyRangeOptions enumerator. Following.
 
 
 
-_Table_ _14__: Values set for the ExcelCopyRangeOptions_
+_Values set for the ExcelCopyRangeOptions_
 
 <table>
 <tr>
-<td>
-Members </td><td>
-Description</td></tr>
+<th>
+Members </th><th>
+Description</th></tr>
 <tr>
 <td>
 None</td><td>
@@ -790,10 +778,8 @@ Indicates functionionality of all the above flags. </td></tr>
 
 
 The following code example illustrates how to copy a range of cells from the source to the destination.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -848,10 +834,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -904,18 +890,15 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
-
-
+{% endhighlight %}
 
 MoveTo method is used to move a range of cells to the destination. The only difference between copy and move operation is that Move does not create a copy in the source. This is similar to the Cut and Paste options in the Excel. 
 
-> {{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img3.jpeg)' | markdownify }}
-{:.image }
-_Note: Move does not update formulas._
+> Note: Move does not update formulas.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -970,10 +953,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -1026,16 +1009,17 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-### Find and Replace
+## Find and Replace
 
 Find and Replace feature in Excel enables you to navigate between large spreadsheets. It carries out a simultaneous search in Microsoft Excel values, formulas, and also comments. XlsIO also supports finding and replacing contents in a worksheet. It has various options to find the first matching entry, find all the matching entries, and replace the found content with various data and data sources.
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img4.png)' | markdownify }}
-{:.image }
+ ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img1.png)
 
+
+
+_Find and Replace Dialog Box_
 
 XlsIO has the following common find and replace methods and properties and their usage. This section describes all the methods listed.
 
@@ -1047,15 +1031,13 @@ XlsIO has the following common find and replace methods and properties and their
 
 The following are the possible types of params of the ExcelFindType enumerator in the FindFirst and FindAll methods.
 
-
-
-_Table_ _15__: Types of params of the ExcelFindType enumerator_
+_Types of params of the ExcelFindType enumerator_
 
 <table>
 <tr>
-<td>
-Members </td><td>
-Description</td></tr>
+<th>
+Members </th><th>
+Description</th></tr>
 <tr>
 <td>
 Text</td><td>
@@ -1082,18 +1064,15 @@ FormulaValue</td><td>
 Represents that the type to be found is FormulaValue. </td></tr>
 </table>
 
-
 Following are the possible types of params of the ExcelFindOptions enumerator in the FindFirst and FindAll methods.
 
-
-
-_Table_ _16__: Params of the ExcelFindOptions enumerator_
+_Params of the ExcelFindOptions enumerator_
 
 <table>
 <tr>
-<td>
-Members </td><td>
-Description </td></tr>
+<th>
+Members </th><th>
+Description </th></tr>
 <tr>
 <td>
 Match Case</td><td>
@@ -1103,13 +1082,12 @@ Matches case while finding the value.</td></tr>
 MatchEntireCell</td><td>
 Matches the whole word being searched while finding the value.</td></tr>
 </table>
-Find First
+
+###Find First
 
 This method has overloads for searching the first cell with the specified typed value. The ExcelFindType enumerator provides options to set the data type of the string (that is, value and formula value) to be searched, and the ExcelFindOptions enumerator provides the options to match the strings associated with the find value.
 
-
-
-_Table_ _17__: Find First Methods_
+ _Find First Methods_
 
 <table>
 <tr>
@@ -1117,29 +1095,29 @@ _Table_ _17__: Find First Methods_
 Methods</th><th>
 Description</th></tr>
 <tr>
-<th>
-FindFirst(Boolean)</th><th>
-This method searches for the cell with specified boolean value. </th></tr>
+<td>
+FindFirst(Boolean)</td><td>
+This method searches for the cell with specified boolean value. </td></tr>
 <tr>
-<th>
-FindFirst (DateTime)</th><th>
-This method searches for the cell with specified DateTime value. </th></tr>
+<td>
+FindFirst (DateTime)</td><td>
+This method searches for the cell with specified DateTime value. </td></tr>
 <tr>
-<th>
-FindFirst (TimeSpan)</th><th>
-This method searches for the cell with specified TimeSpan value. </th></tr>
+<td>
+FindFirst (TimeSpan)</td><td>
+This method searches for the cell with specified TimeSpan value. </td></tr>
 <tr>
-<th>
-FindFirst (Double, ExcelFindType)</th><th>
-This method searches for the cell with specified double value. </th></tr>
+<td>
+FindFirst (Double, ExcelFindType)</td><td>
+This method searches for the cell with specified double value. </td></tr>
 <tr>
-<th>
-FindFirst (String, ExcelFindType, ExcelFindOptions)</th><th>
-This method searches for the cell with specified string value, again based on the Find options</th></tr>
+<td>
+FindFirst (String, ExcelFindType, ExcelFindOptions)</td><td>
+This method searches for the cell with specified string value, again based on the Find options</td></tr>
 </table>
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -1193,10 +1171,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB]
 
 
 
@@ -1259,21 +1237,18 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-
-FindAll
-
+###FindAll
 This method searches all the cells and returns all the entries in the sheet that matches the specified data.
 
-_Table_ _18__: Find All Methods_
+_Find All Methods_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 FindAll(Boolean)</td><td>
@@ -1296,8 +1271,8 @@ FindAll (String, ExcelFindType, ExcelFindOptions)</td><td>
 This method searches for all the cells with specified string value, again based on the Find options</td></tr>
 </table>
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -1351,10 +1326,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
-
-
- [VB]
+{% highlight vbnet %}
+ 
 
 
 
@@ -1416,20 +1391,20 @@ workbook.Version = ExcelVersion.Excel2010
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-FindStringStartswith
+##FindStringStartswith
 
 This method has overloads to search for the first cell that starts with the specified value. The ExcelFindType enumerator provides options to set the data type of the string that is, value and formula value) to be searched.
 
 
-_Table_ _19__: FindStringStartswith Methods_
+_FindStringStartswith Methods_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 FindStringStartsWith( String , ExcelFindType)</td><td>
@@ -1440,8 +1415,8 @@ FindStringStartsWith( String, ExcelFindType,bool)</td><td>
 These methods search for cells that start with the specified string value for the given find type and Boolean value.</td></tr>
 </table>
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -1495,10 +1470,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB]
 
 
 
@@ -1561,20 +1536,20 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-FindStringEndswith
+###FindStringEndswith
 
 This method has overloads to search for cells that have the first cell ending with the specified typed value. ExcelFindType enumerator provides options to set the data type of the value and formula value/string to be searched.
 
 
-_Table_ _20__: FindStringEndswith_
+_FindStringEndswith_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 FindStringEndsWith ( String, ExcelFindType) </td><td>
@@ -1585,8 +1560,8 @@ FindStringStartsWith ( String, ExcelFindType,bool)</td><td>
 These methods search for the cell that ends with the specified string value for the given find type and bool value.</td></tr>
 </table>
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -1640,10 +1615,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB]
 
 
 
@@ -1705,19 +1680,19 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-Replace
+##Replace
 
 This method enables to replace a string, with the data of various data types and data sources, such as data table, data column and array. Following are the overloads for the Replace method.
 
-_Table_ _21__: Overloads for the Replace method_
+_Overloads for the Replace method_
 
 <table>
 <tr>
-<td>
-Methods</td><td>
-Description</td></tr>
+<th>
+Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 Replace(String, DateTime)</td><td>
@@ -1751,13 +1726,11 @@ Replaces specified string by data from array. </td></tr>
 Replace(String, String[], Boolean)</td><td>
 Replaces specified string by data from array. </td></tr>
 </table>
-
-
 The following code example illustrates how to replace strings with various data.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -1826,10 +1799,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -1898,551 +1871,556 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-### Data Sorting 
+## Data Sorting 
 
 This feature allows sorting any range of cells dynamically at runtime without any dependency on MS Excel. You can sort a given range of cells in a worksheet by applying the sort feature to a range that changes the related data within the range. The ranges can be sorted in the following ways:
 
 1. Sorting by Cell Values
 2. Sorting by Font Color
 3. Sorting by Cell Color
-> 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img5.jpeg)' | markdownify }}
-{:.image }
-_Note: Presently, sorting based on cell icon, parsing, and serialization of its sorting details are not supported._
+
+
+
+> Note: Presently, sorting based on cell icon, parsing, and serialization of its sorting details are not supported.
 
 1. Sort by Cell Values
-This is used to sort a range of cells by values at runtime. This is explained in the following code samples.
 
+   This is used to sort a range of cells by values at runtime. This is explained in the following code samples.
 
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img6.png)' | markdownify }}
-{:.image }
 
+   ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img2.png)
 
 
 
-[C#]
+   _Column “Salary” is sorted in Descending order_
 
+   ~~~ cs
 
 
-// Step 1: Instantiates the spreadsheet creation engine.
 
-ExcelEngine excelEngine = new ExcelEngine();
 
+		// Step 1: Instantiates the spreadsheet creation engine.
 
+		ExcelEngine excelEngine = new ExcelEngine();
 
-// Step 2: Instantiates the excel application object.
 
-IApplication application = excelEngine.Excel;
 
+		// Step 2: Instantiates the excel application object.
 
+		IApplication application = excelEngine.Excel;
 
-// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
 
-// The new workbook will have 2 worksheets.
 
-IWorkbook workbook = application.Workbooks.Create(2);
+		// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
 
+		// The new workbook will have 2 worksheets.
 
+		IWorkbook workbook = application.Workbooks.Create(2);
 
-IWorksheet sheet = workbook.Worksheets[0];
 
-// Creates the data sorter.
 
-IDataSort sorter = workbook.CreateDataSorter();
+		IWorksheet sheet = workbook.Worksheets[0];
 
+		// Creates the data sorter.
 
+		IDataSort sorter = workbook.CreateDataSorter();
 
-// Range to sort.
 
-IRange range = sheet.Range["D3:D16"];
 
-sorter.SortRange = range;
+		// Range to sort.
 
+		IRange range = sheet.Range["D3:D16"];
 
+		sorter.SortRange = range;
 
-// Adds the sort field with the column index, sort based on and order by attribute.
 
-ISortField sortField = sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
 
+		// Adds the sort field with the column index, sort based on and order by attribute.
 
+		ISortField sortField = sorter.SortFields.Add(0, SortOn.Values, OrderBy.Ascending);
 
-// Adds another sort field.
 
-ISortField sortField2 = sorter.SortFields.Add(1, SortOn.Values, OrderBy.Ascending);
 
+		// Adds another sort field.
 
+		ISortField sortField2 = sorter.SortFields.Add(1, SortOn.Values, OrderBy.Ascending);
 
-// Sort based on the sort Field attribute.
 
-sorter.Sort();
 
+		// Sort based on the sort Field attribute.
 
+		sorter.Sort();
 
-string fileName = "Output.xlsx";
 
-workbook.Version = ExcelVersion.Excel2010;
 
+		string fileName = "Output.xlsx";
 
+		workbook.Version = ExcelVersion.Excel2010;
 
-workbook.SaveAs(fileName);
 
 
+		workbook.SaveAs(fileName);
 
-// Closes the workbook.
 
-workbook.Close();
 
-excelEngine.Dispose();
+		// Closes the workbook.
 
+		workbook.Close();
 
+		excelEngine.Dispose();
 
-[VB.NET]
+   ~~~
+   {:.prettyprint }
 
+   ~~~ vbnet
 
 
-' Step 1: Instantiates the spreadsheet creation engine.
 
-Dim excelEngine As ExcelEngine = New ExcelEngine
 
+		' Step 1: Instantiates the spreadsheet creation engine.
 
+		Dim excelEngine As ExcelEngine = New ExcelEngine
 
-' Step 2: Instantiates the excel application object.
 
-Dim application As IApplication = excelEngine.Excel
 
+		' Step 2: Instantiates the excel application object.
 
+		Dim application As IApplication = excelEngine.Excel
 
-' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
 
-'The new workbook will have 2 worksheets.
 
-Dim workbook As IWorkbook = application.Workbooks.Create(2)
+		' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
 
+		'The new workbook will have 2 worksheets.
 
+		Dim workbook As IWorkbook = application.Workbooks.Create(2)
 
-' Accesses via index.
 
-Dim sheet As IWorkbook = workbook.Worksheets(0)
 
+		' Accesses via index.
 
+		Dim sheet As IWorkbook = workbook.Worksheets(0)
 
-' Creates the Data sorter.
 
-Dim sorter As IDataSort = workbook.CreateDataSorter()
 
+		' Creates the Data sorter.
 
+		Dim sorter As IDataSort = workbook.CreateDataSorter()
 
-' Specifies the sort range.
 
-IRange range = sheet.Range("D3:D16")
 
-sorter.SortRange = range
+		' Specifies the sort range.
 
+		IRange range = sheet.Range("D3:D16")
 
+		sorter.SortRange = range
 
-' Adds the sort field with column index, sort based on and order by attribute.
 
-Dim field As ISortField = sorter.SortFields.Add(2, SortOn.Values, OrderBy.OnTop)
 
+		' Adds the sort field with column index, sort based on and order by attribute.
 
+		Dim field As ISortField = sorter.SortFields.Add(2, SortOn.Values, OrderBy.OnTop)
 
-' Adds the second sort field.
 
-field = sorter.SortFields.Add(2,SortOn.Values,OrderBy.OnTop)
 
+		' Adds the second sort field.
 
+		field = sorter.SortFields.Add(2,SortOn.Values,OrderBy.OnTop)
 
-' Sorts the data with the sort field attribute.
 
-sorter.Sort()
 
+		' Sorts the data with the sort field attribute.
 
+		sorter.Sort()
 
-Dim fileName As String = "Output.xlsx"
 
-workbook.Version = ExcelVersion.Excel2010
 
+		Dim fileName As String = "Output.xlsx"
 
+		workbook.Version = ExcelVersion.Excel2010
 
-workbook.SaveAs(fileName)
 
 
+		workbook.SaveAs(fileName)
 
-' Closes the workbook.
 
-workbook.Close()
 
-excelEngine.Dispose()
+		' Closes the workbook.
 
+		workbook.Close()
 
+		excelEngine.Dispose()
+
+   ~~~
+   {:.prettyprint }
 
 2. Sort by Font Color
 
-With this feature, MS Excel moves the text that is applied with the selected color to the specified location (bottom or top) of the sorting range.
+   With this feature, MS Excel moves the text that is applied with the selected color to the specified location (bottom or top) of the sorting range.
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img7.png)' | markdownify }}
-{:.image }
+   ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img3.png)
 
 
-This is explained in the following code examples.
 
+   _Sorting by Font Color_
 
+   This is explained in the following code examples.
 
-[C#]
+   ~~~ cs
 
+		// Step 1: Instantiates the spreadsheet creation engine.
 
+		ExcelEngine excelEngine = new ExcelEngine();
 
-// Step 1: Instantiates the spreadsheet creation engine.
 
-ExcelEngine excelEngine = new ExcelEngine();
 
+		// Step 2: Instantiates the excel application object.
 
+		IApplication application = excelEngine.Excel;
 
-// Step 2: Instantiates the excel application object.
 
-IApplication application = excelEngine.Excel;
 
+		// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
 
+		// The new workbook will have 2 worksheets.
 
-// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
+		IWorkbook workbook = application.Workbooks.Create(2);
 
-// The new workbook will have 2 worksheets.
 
-IWorkbook workbook = application.Workbooks.Create(2);
 
+		IWorksheet sheet = workbook.Worksheets[0];
 
 
-IWorksheet sheet = workbook.Worksheets[0];
 
+		// Creates the data sorter.
 
+		IDataSort sorter = workbook.CreateDataSorter();
 
-// Creates the data sorter.
 
-IDataSort sorter = workbook.CreateDataSorter();
 
+		// Range to sort.
 
+		IRange range = sheet.Range["D3:D16"];
 
-// Range to sort.
+		sorter.SortRange = range;
 
-IRange range = sheet.Range["D3:D16"];
 
-sorter.SortRange = range;
 
+		// Creates the sort field with the column index, sort based on and order by attribute.
 
+		ISortField sortField = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop);
 
-// Creates the sort field with the column index, sort based on and order by attribute.
 
-ISortField sortField = sorter.SortFields.Add(2, SortOn.FontColor, OrderBy.OnTop);
 
+		// Specifies the color to sort the data.
 
+		sortField.Color = Color.Red;
 
-// Specifies the color to sort the data.
 
-sortField.Color = Color.Red;
 
+		// Sort based on the sort Field attribute.
 
+		sorter.Sort();
 
-// Sort based on the sort Field attribute.
 
-sorter.Sort();
 
+		string fileName = "Output.xlsx";
 
+		workbook.Version = ExcelVersion.Excel2010;
 
-string fileName = "Output.xlsx";
 
-workbook.Version = ExcelVersion.Excel2010;
 
+		workbook.SaveAs(fileName);
 
 
-workbook.SaveAs(fileName);
 
+		// Close the workbook.
 
+		workbook.Close();
 
-// Close the workbook.
+		excelEngine.Dispose();
 
-workbook.Close();
+   ~~~
+   {:.prettyprint }
 
-excelEngine.Dispose();
+   ~~~ vbnet
 
 
 
-[VB.NET]
 
+		' Step 1: Instantiates the spreadsheet creation engine.
 
+		Dim excelEngine As ExcelEngine = New ExcelEngine
 
-' Step 1: Instantiates the spreadsheet creation engine.
 
-Dim excelEngine As ExcelEngine = New ExcelEngine
 
+		' Step 2: Instantiates the excel application object.
 
+		Dim application As IApplication = excelEngine.Excel
 
-' Step 2: Instantiates the excel application object.
 
-Dim application As IApplication = excelEngine.Excel
 
+		' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
 
+		' The new workbook will have 2 worksheets.
 
-' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
+		Dim workbook As IWorkbook = application.Workbooks.Create(2)
 
-' The new workbook will have 2 worksheets.
 
-Dim workbook As IWorkbook = application.Workbooks.Create(2)
 
+		' Accesses via index.
 
+		Dim sheet As IWorkbook = workbook.Worksheets(0)
 
-' Accesses via index.
 
-Dim sheet As IWorkbook = workbook.Worksheets(0)
 
+		' Creates the Data sorter.
 
+		Dim sorter As IDataSort = workbook.CreateDataSorter()
 
-' Creates the Data sorter.
 
-Dim sorter As IDataSort = workbook.CreateDataSorter()
 
+		' Specifies the sort range.
 
+		IRange range = sheet.Range("D3:D16")
 
-' Specifies the sort range.
 
-IRange range = sheet.Range("D3:D16")
 
+		sorter.SortRange = range
 
 
-sorter.SortRange = range
 
+		Dim field As ISortField
 
+		' Adds the sort field with column index, sort based on and order by attribute.
 
-Dim field As ISortField
+		field = sorter.SortFields.Add(2, SortOn.FontColor,OrderBy.OnTop)
 
-' Adds the sort field with column index, sort based on and order by attribute.
 
-field = sorter.SortFields.Add(2, SortOn.FontColor,OrderBy.OnTop)
 
+		' Sorts the data based on this color.
 
+		field.Color = Color.Red
 
-' Sorts the data based on this color.
 
-field.Color = Color.Red
 
+		' Sorts the data with the sort field attribute.
 
+		sorter.Sort()
 
-' Sorts the data with the sort field attribute.
 
-sorter.Sort()
 
+		Dim fileName As String = "Output.xlsx"
 
+		workbook.Version = ExcelVersion.Excel2010
 
-Dim fileName As String = "Output.xlsx"
 
-workbook.Version = ExcelVersion.Excel2010
 
+		workbook.SaveAs(fileName)
 
 
-workbook.SaveAs(fileName)
 
+		' Closes the workbook.
 
+		workbook.Close()
 
-' Closes the workbook.
+		excelEngine.Dispose()
 
-workbook.Close()
+   ~~~
+   {:.prettyprint }
 
-excelEngine.Dispose()
+3. Sort by Cell Color
 
+   With this feature, MS Excel moves the cell text and color to the specified location (bottom or top) of the sorting range.
 
+   ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img4.png)
 
-> 3. Sort by Cell Color
 
-With this feature, MS Excel moves the cell text and color to the specified location (bottom or top) of the sorting range.
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img8.png)' | markdownify }}
-{:.image }
+   _Sorting by Cell Color_
 
+   This is explained in the following code sample.
 
-This is explained in the following code sample.
+   
+   ~~~ cs
 
+		// Step 1: Instantiates the spreadsheet creation engine.
 
+		ExcelEngine excelEngine = new ExcelEngine();
 
-[C#]
 
 
+		// Step 2: Instantiates the excel application object.
 
-// Step 1: Instantiates the spreadsheet creation engine.
+		IApplication application = excelEngine.Excel;
 
-ExcelEngine excelEngine = new ExcelEngine();
 
 
+		// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
 
-// Step 2: Instantiates the excel application object.
+		// The new workbook will have 2 worksheets.
 
-IApplication application = excelEngine.Excel;
+		IWorkbook workbook = application.Workbooks.Create(2);
 
 
 
-// A new workbook is created. [Equivalent to creating a new workbook in MS Excel).
+		IWorksheet sheet = workbook.Worksheets[0];
 
-// The new workbook will have 2 worksheets.
 
-IWorkbook workbook = application.Workbooks.Create(2);
 
+		// Creates the data sorter.
 
+		IDataSort sorter = workbook.CreateDataSorter();
 
-IWorksheet sheet = workbook.Worksheets[0];
 
 
+		// Range to sort.
 
-// Creates the data sorter.
+		IRange range = sheet.Range["D3:D16"];
 
-IDataSort sorter = workbook.CreateDataSorter();
+		sorter.SortRange = range;
 
 
 
-// Range to sort.
+		// Creates the sort field with the column index, sort based on and order by attribute.
 
-IRange range = sheet.Range["D3:D16"];
+		ISortField sortField = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop);
 
-sorter.SortRange = range;
 
 
+		// Specifies the color to sort the data.
 
-// Creates the sort field with the column index, sort based on and order by attribute.
+		sortField.Color = Color.Red;
 
-ISortField sortField = sorter.SortFields.Add(2, SortOn.CellColor, OrderBy.OnTop);
 
 
+		// Sort based on the sort field attribute.
 
-// Specifies the color to sort the data.
+		sorter.Sort();
 
-sortField.Color = Color.Red;
 
 
+		string fileName = "Output.xlsx";
 
-// Sort based on the sort field attribute.
+		workbook.Version = ExcelVersion.Excel2010;
 
-sorter.Sort();
 
 
+		workbook.SaveAs(fileName);
 
-string fileName = "Output.xlsx";
 
-workbook.Version = ExcelVersion.Excel2010;
 
+		// Closes the workbook.
 
+		workbook.Close();
 
-workbook.SaveAs(fileName);
+		excelEngine.Dispose();
 
+   ~~~
+   {:.prettyprint }
 
+   ~~~ vbnet
 
-// Closes the workbook.
+		' Step 1: Instantiates the spreadsheet creation engine.
 
-workbook.Close();
+		Dim excelEngine As ExcelEngine = New ExcelEngine
 
-excelEngine.Dispose();
 
 
+		' Step 2: Instantiates the excel application object.
 
-[VB.NET]
+		Dim application As IApplication = excelEngine.Excel
 
 
 
-' Step 1: Instantiates the spreadsheet creation engine.
+		' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
 
-Dim excelEngine As ExcelEngine = New ExcelEngine
+		' The new workbook will have 2 worksheets.
 
+		Dim workbook As IWorkbook = application.Workbooks.Create(2)
 
 
-' Step 2: Instantiates the excel application object.
 
-Dim application As IApplication = excelEngine.Excel
+		' Accesses via index.
 
+		Dim sheet As IWorkbook = workbook.Worksheets(0)
 
 
-' A new workbook is created. [Equivalent to creating a new workbook in MS Excel].
 
-' The new workbook will have 2 worksheets.
+		' Creates the Data sorter.
 
-Dim workbook As IWorkbook = application.Workbooks.Create(2)
+		Dim sorter As IDataSort = book.CreateDataSorter()
 
 
 
-' Accesses via index.
+		' Specifies the sort range.
 
-Dim sheet As IWorkbook = workbook.Worksheets(0)
+		IRange range = sheet.Range("D3:D16")
 
+		sorter.SortRange = range
 
 
-' Creates the Data sorter.
 
-Dim sorter As IDataSort = book.CreateDataSorter()
+		' Adds the sort field with column index, sort based on and order by attribute.
 
+		Dim field As ISortField
 
+		field = sorter.SortFields.Add(2, SortOn.CellColor,OrderBy.OnTop)
 
-' Specifies the sort range.
 
-IRange range = sheet.Range("D3:D16")
 
-sorter.SortRange = range
+		' Sorts the data based on this color.
 
+		field.Color = Color.Red
 
 
-' Adds the sort field with column index, sort based on and order by attribute.
 
-Dim field As ISortField
+		' Sorts the data with the sort field attribute.
 
-field = sorter.SortFields.Add(2, SortOn.CellColor,OrderBy.OnTop)
+		sorter.Sort()
 
 
 
-' Sorts the data based on this color.
+		Dim fileName As String = "Output.xlsx"
 
-field.Color = Color.Red
+		workbook.Version = ExcelVersion.Excel2010
 
 
 
-' Sorts the data with the sort field attribute.
+		workbook.SaveAs(fileName)
 
-sorter.Sort()
 
 
+		' Closes the workbook.
 
-Dim fileName As String = "Output.xlsx"
+		workbook.Close()
 
-workbook.Version = ExcelVersion.Excel2010
+		excelEngine.Dispose()
 
+   ~~~
+   {:.prettyprint }
 
 
-workbook.SaveAs(fileName)
-
-
-
-' Closes the workbook.
-
-workbook.Close()
-
-excelEngine.Dispose()
-
-
-
-### Data Filtering  
+## Data Filtering  
 
 MS Excel AutoFilter feature literally makes filtering out unwanted data in a data list as easy as clicking a button. When the cell pointer is located within any cell in your data list, open the Data tab, click Filter button. Once this is done, the program adds drop-down buttons to each of the field names in the top row of the list. This feature is specifically used in large spreadsheets when you want to look for a particular data based on specific criteria.
 
 
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img9.png)' | markdownify }}
-{:.image }
+  ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img5.png)
 
 
-AutoFilters in Essential XlsIO
+
+_AutoFilter from Data Menu_
+
+##AutoFilters in Essential XlsIO
 
 Essential XlsIO also comes with APIs for reading and writing AutoFilters in a worksheet. You can specify the range of data that needs to be viewed through the FilterRange property. The following code example illustrates writing AutoFilters.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -2485,10 +2463,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -2537,14 +2515,11 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
-
-
+{% endhighlight %}
 
 XlsIO also provides options to set the built-in conditions for filters by using various properties of IAutoFilter. The following code example illustrates various conditions based on the data that is to be filtered.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -2603,10 +2578,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -2667,24 +2642,28 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
+
+
+![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img6.png)
 
 
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img10.png)' | markdownify }}
-{:.image }
+_Writing Autofilters with XlsIO_
 
-
-### Data Validation 
+## Data Validation 
 
 The Data Validation feature available in MS Excel dynamically validates the data that is entered into a cell. Data Validation in MS Excel is achieved by clicking the Data Validation button in the Data tab. Excel has various validation types for each data type and options to show error box for invalid data through the Data Validation dialog box that is shown in the following screenshot.
 
 
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img11.png)' | markdownify }}
-{:.image }
+  ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img7.png)
 
 
-Data Validation in Essential XlsIO
+
+_Data Validation Settings_
+
+##Data Validation in Essential XlsIO
 
 Essential XlsIO, equivalent to the MS Excel, is built with APIs to read and write data validation in a worksheet by using the IDataValidation class.
 
@@ -2699,7 +2678,9 @@ The following are some validation types that XlsIO supports.
 
 
 
-[C#]
+
+{% highlight C# %}
+
 
 
 
@@ -2758,10 +2739,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -2822,26 +2803,27 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
-
-
+{% endhighlight %}
 
 The following screenshots illustrate the error alert settings through the Data Validation dialog box in MS Excel.
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img12.png)' | markdownify }}
-{:.image }
+![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img8.png)
 
 
 
+_Error Alert Options in MS Excel_
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img13.png)' | markdownify }}
-{:.image }
 
+
+  ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img9.png)
+
+
+
+_Error box_
 
 XlsIO has numerous validation rules and features that are demonstrated in the following code example. AllowType property sets the type of validation, CompareOperator sets the validation criteria and ShowErrorBox shows the error box with an error message.
+{% highlight C# %}
 
-
-
-[C#]
 
 
 
@@ -2936,10 +2918,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -3036,16 +3018,15 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
-
-
-Reading the Existing Data Validation Settings
+##Reading the Existing Data Validation Settings
 
 You can also read the Data Validation settings in an existing workbook. The following code example illustrates this.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -3094,10 +3075,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -3149,15 +3130,17 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-### Adding Hyperlinks 
+## Adding Hyperlinks 
 
 A Hyperlink is a convenient way to instantly access another place in the workbook, or another workbook, or a file associated with another application. A hyperlink can be inserted in a cell or a shape in Excel. Select the cell or shape, and select Hyperlink from the Insert menu, or right-click anywhere in the cell or shape, and then select Hyperlink from the pop-up menu. You can enter a cell reference in the current workbook, browse to another workbook, a different file, or a web page, and even enter an email address and subject line. You can also edit the text for a hyperlink in a cell. Following is the Insert Hyperlink dialog box of MS Excel that allows setting various hyperlinks.
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img14.png)' | markdownify }}
-{:.image }
+![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img10.png)
 
+
+
+_Inserting Hyperlink_
 
 
 
@@ -3168,11 +3151,13 @@ XlsIO provides support to set the following types of hyperlinks with the Type an
 * Hyperlink to e-mail
 * Hyperlink to external files
 
+
+
 You can also set the text to be displayed in a hyperlink and a tooltip that shows the purpose of the link by using the TextToDisplay and ScreenTip properties. The following code example illustrates how to insert various hyperlinks.
 
 
+{% highlight C# %}
 
-[C#]
 
 
 
@@ -3281,10 +3266,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
+{% highlight vbnet %}
 
-
-[VB.NET]
 
 
 
@@ -3394,9 +3379,9 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
+  ![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img11.png)
 
-{{ '![](Worksheet-Cells-Manipulation_images/Worksheet-Cells-Manipulation_img15.png)' | markdownify }}
-{:.image }
 
 

@@ -80,10 +80,6 @@ diagram.updateSelector({ offsetX: 100, offsetY: 100,
 
      width: 100, height: 100 });
 
-
-
-
-
 {% endhighlight %}
 
 ## Iterate though selected items:
@@ -91,9 +87,6 @@ diagram.updateSelector({ offsetX: 100, offsetY: 100,
 The following code example is used to get the selected elements.
 
 {% highlight js %}
-
-
-
 
 var diagram = $("#diagram").ejDiagram("instance");
 
@@ -107,8 +100,6 @@ for(var i=0; i< diagram.model.selectedItems.children.length; i++)
 
 }
 
-
-
 {% endhighlight %}
 
 ## User Handles:
@@ -116,9 +107,6 @@ for(var i=0; i< diagram.model.selectedItems.children.length; i++)
  The following code example is used to draw custom handles on the selected elements.
 
 {% highlight js %}
-
-
-
 
      var userHandle= [];
 

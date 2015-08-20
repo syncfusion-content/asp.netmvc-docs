@@ -43,7 +43,10 @@ Data available in client-side (local data) can be bound with Bullet Graph using 
             data.Add(new BulletData() { BulletValue = 9.5, ComparisonValue = 5, Category = "2002" });
 
             ViewBag.DataSource = data;
+			
+{% endhighlight %}
 
+{% highlight javascript %}
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60).QuantitativeScaleSettings( qs=>
 
@@ -73,7 +76,7 @@ The following screenshot displays Bullet Graph with local data generated using J
 
 Bullet Graph provides option to bind data from a remote server using ejDataManager as data source in fields property. A query object should also be passed to query property when using data manager as data source.
 
-{% highlight html %}
+{% highlight javascript %}
 
     @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60)
 
@@ -151,7 +154,7 @@ Bullet Graph provides option to bind data from a remote server using ejDataManag
 
 The following screenshot displays a Bullet Graph bounded with data from a remote server
 
-{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
+![](Data-Binding_images/Data-Binding_img2.png)
 
 
 

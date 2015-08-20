@@ -15,88 +15,84 @@ The following steps explain how to enable the AllowEditing property for TreeView
 
 1. In the View page, add TreeView helper as shown below. It will render the TreeView with specified items and with allow editing, cut and paste options enabled. Cut and paste options will be enabled only when drag and drop option is enabled.
 
+   ~~~ js
+
+		\\ To configure TreeView in the CSHTML page
+
+		@Html.EJ().TreeView("treeview").Items(items =>
+
+		    {
+
+			items.Add().Text("Favorites").Expanded(true).Children(child =>
+
+				   {
+
+				       child.Add().Text("Desktop");
+
+				       child.Add().Text("Downloads");
+
+				       child.Add().Text("Recent places");
+
+				   });
+
+			items.Add().Text("Libraries").Expanded(true).Children(child =>
+
+			{
+
+			    child.Add().Text("Documents").Children(child1 =>
+
+				{
+
+				    child1.Add().Text("My Documents");
+
+				    child1.Add().Text("Public Documents");
+
+				});
+
+			    child.Add().Text("Pictures").Children(child1 =>
+
+			    {
+
+				child1.Add().Text("My Pictures");
+
+				child1.Add().Text("Public Pictures");
+
+			    });
+
+			    child.Add().Text("Music").Children(child1 =>
+
+			    {
+
+				child1.Add().Text("My Music");
+
+				child1.Add().Text("Public Music");
+
+			    });
+
+			    child.Add().Text("Subversion");
 
 
 
-{% highlight html %}
+			});
 
+			items.Add().Text("Computer").Children(child =>
 
-\\ To configure TreeView in the CSHTML page
+			{
 
-@Html.EJ().TreeView("treeview").Items(items =>
+			    child.Add().Text("Folder(C)");
 
-    {
+			    child.Add().Text("Folder(D)");
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+			    child.Add().Text("Folder(E)");
 
-                   {
-
-                       child.Add().Text("Desktop");
-
-                       child.Add().Text("Downloads");
-
-                       child.Add().Text("Recent places");
-
-                   });
-
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
-
-        {
-
-            child.Add().Text("Documents").Children(child1 =>
-
-                {
-
-                    child1.Add().Text("My Documents");
-
-                    child1.Add().Text("Public Documents");
-
-                });
-
-            child.Add().Text("Pictures").Children(child1 =>
-
-            {
-
-                child1.Add().Text("My Pictures");
-
-                child1.Add().Text("Public Pictures");
-
-            });
-
-            child.Add().Text("Music").Children(child1 =>
-
-            {
-
-                child1.Add().Text("My Music");
-
-                child1.Add().Text("Public Music");
-
-            });
-
-            child.Add().Text("Subversion");
+			});
 
 
 
-        });
+		    }).AllowEditing(true).AllowDragAndDrop(true)
 
-        items.Add().Text("Computer").Children(child =>
-
-        {
-
-            child.Add().Text("Folder(C)");
-
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
-
-
-
-    }).AllowEditing(true).AllowDragAndDrop(true)
-
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 

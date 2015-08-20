@@ -20,15 +20,7 @@ Hierarchy Data-source Binding
 The following code example shows how to bind the hierarchical local data into the Gantt control.
 
 
-
-
-
 {% highlight C# %}
-
-
-
-
-
 
 public class GanttController : Controller
 
@@ -309,7 +301,7 @@ The output of the above steps is as follows.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
+_Figure 31: Data Binding_
 
 ## Self-Referential Data Binding (Flat Data)
 
@@ -724,5 +716,5 @@ The following screenshot shows the output of the above steps.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-
+_Figure 32: Self-Referential Data Binding_
 

@@ -36,137 +36,135 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 
 
-{% highlight html %}
+   ~~~ html
 
 
 
-   <div class="frame">
+		   <div class="frame">
 
-        <div class="control">
+				<div class="control">
 
-            <div class="chkalign">
+					<div class="chkalign">
 
-                <h4>Hobbies</h4>
+						<h4>Hobbies</h4>
 
-                <table>
+						<table>
 
-                    <tr>
+							<tr>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("check1").Value("Music")
+									@Html.EJ().CheckBox("check1").Value("Music")
 
-                            <label for="check1" class="clslab">
+									<label for="check1" class="clslab">
 
-                                Music
+										Music
 
-                            </label>
+									</label>
 
-                        </td>
+								</td>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("Checkbox3").Value("Sports")
+									@Html.EJ().CheckBox("Checkbox3").Value("Sports")
 
-                            <label for="Checkbox3" class="clslab">
+									<label for="Checkbox3" class="clslab">
 
-                                Sports
+										Sports
 
-                            </label>
+									</label>
 
-                        </td>
+								</td>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("Checkbox4").Value("Bike Riding")
+									@Html.EJ().CheckBox("Checkbox4").Value("Bike Riding")
 
-                            <label for="Checkbox4" class="clslab">
+									<label for="Checkbox4" class="clslab">
 
-                                Bike Riding
+										Bike Riding
 
-                            </label>
+									</label>
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                </table>
+						</table>
 
-                <h4>Interest List</h4>
+						<h4>Interest List</h4>
 
-                <table>
+						<table>
 
-                    <tr>
+							<tr>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("Checkbox1").Value("Playing Games").Size(Size.Medium)
+									@Html.EJ().CheckBox("Checkbox1").Value("Playing Games").Size(Size.Medium)
 
-                            <label for="Checkbox1" class="clslab">Playing Games</label>
+									<label for="Checkbox1" class="clslab">Playing Games</label>
 
-                        </td>
+								</td>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("Checkbox5").Value("Hearing Songs").Size(Size.Medium)
+									@Html.EJ().CheckBox("Checkbox5").Value("Hearing Songs").Size(Size.Medium)
 
-                            <label for="Checkbox5" class="clslab">Hearing Songs</label>
+									<label for="Checkbox5" class="clslab">Hearing Songs</label>
 
-                        </td>
+								</td>
 
-                        <td class="chkrad">
+								<td class="chkrad">
 
-                            @Html.EJ().CheckBox("Checkbox6").Value("Reading Books").Size(Size.Medium)
+									@Html.EJ().CheckBox("Checkbox6").Value("Reading Books").Size(Size.Medium)
 
-                            <label for="Checkbox6" class="clslab">Reading Books</label>
+									<label for="Checkbox6" class="clslab">Reading Books</label>
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                </table>
+						</table>
 
-            </div>
+					</div>
 
-        </div>
+				</div>
 
-    </div>
+			</div>
 
 
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
 3. Add the following styles to the corresponding view page to show the Checkbox in horizontal order.
 
-
-
-{% highlight css %}
-
-
-
-<style>
-
-    td {
-
-        float: left;
-
-    }
-
-    label
-
-    {
-
-        float: right; margin:5px 10px;
-
-    }
-
-</style>
+   ~~~ css
 
 
 
-{% endhighlight %}
+		<style>
+
+			td {
+
+				float: left;
+
+			}
+
+			label
+
+			{
+
+				float: right; margin:5px 10px;
+
+			}
+
+		</style>
+
+
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -184,7 +182,7 @@ ASP.NET MVC Tri-State Checkbox widget renders by setting EnableTriState property
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -238,7 +236,7 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -312,89 +310,89 @@ You can get the Media Player file type application like video, audio and picture
 
 
 
-{% highlight html %}
+   ~~~ html
 
 
 
-    <table>
+			<table>
 
-        <label for="check2" class="clslab">
+				<label for="check2" class="clslab">
 
-            Audio
+					Audio
 
-        </label>
+				</label>
 
-        <tr>
+				<tr>
 
-            <td class="chkrad">
+					<td class="chkrad">
 
-                @Html.EJ().CheckBox("Checkboxs3").Value(".mp3").Size(Size.Medium)
+						@Html.EJ().CheckBox("Checkboxs3").Value(".mp3").Size(Size.Medium)
 
-                <label for="Checkboxs3" class="clslab">
+						<label for="Checkboxs3" class="clslab">
 
-                    .mp3
+							.mp3
 
-                </label>
+						</label>
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-        <tr>
+				<tr>
 
-            <td class="chkrad">
+					<td class="chkrad">
 
-                @Html.EJ().CheckBox("Checkboxs4").Value(".avi").Size(Size.Medium)
+						@Html.EJ().CheckBox("Checkboxs4").Value(".avi").Size(Size.Medium)
 
-                <label for="Checkboxs4" class="clslab">
+						<label for="Checkboxs4" class="clslab">
 
-                    .avi
+							.avi
 
-                </label>
+						</label>
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-    </table>
+			</table>
 
-    <table>
+			<table>
 
-        <label for="Checkboxs1" class="clslab">Video</label>
+				<label for="Checkboxs1" class="clslab">Video</label>
 
-        <tr>
+				<tr>
 
-            <td class="chkrad">
+					<td class="chkrad">
 
-                @Html.EJ().CheckBox("Checkboxs5").Value(".mp4").Size(Size.Medium)
+						@Html.EJ().CheckBox("Checkboxs5").Value(".mp4").Size(Size.Medium)
 
-                <label for="Checkboxs5" class="clslab">.mp4</label>
+						<label for="Checkboxs5" class="clslab">.mp4</label>
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-        <tr>
+				<tr>
 
-            <td class="chkrad">
+					<td class="chkrad">
 
-                @Html.EJ().CheckBox("Checkboxs6").Value(".wave").Size(Size.Medium)
+						@Html.EJ().CheckBox("Checkboxs6").Value(".wave").Size(Size.Medium)
 
-                <label for="Checkboxs6" class="clslab">.wave</label>
+						<label for="Checkboxs6" class="clslab">.wave</label>
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-    </table>
-
-
-
-{% endhighlight %}
+			</table>
 
 
+   ~~~
+   {:.prettyprint }
 
-        Execute the above code to render the following output.	
+
+
+Execute the above code to render the following output.	
 
 
 

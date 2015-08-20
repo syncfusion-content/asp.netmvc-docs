@@ -3,7 +3,7 @@ layout: post
 title: Ticks
 description: ticks
 platform: ejmvc
-control: Circular Gauge
+control: CircularGauge
 documentation: ug
 ---
 
@@ -15,9 +15,8 @@ Ticks are used to mark some values on the scale. Based on the tick’s value you
 
 Tick collection is directly added to the scale object. Refer the following code example to add tick collection in a Gauge control.
 
-{% highlight html %}
+{% highlight js %}
 
-[View]
 
 //For circular gauge rendering
 
@@ -43,7 +42,7 @@ tc.Type(CircularTickTypes.Major).Color("Red").Add();
 {% endhighlight %}
 Execute the above code to render the following output.
 
-![C:/Users/karthigeyan/Desktop/sa.png](Ticks_images/Ticks_img1.png)
+![](Ticks_images/Ticks_img1.png)
 
 
 
@@ -55,8 +54,6 @@ Execute the above code to render the following output.
 * Major type ticks are for major interval values and minor type ticks are for minor interval values.You can position ticks with the help of two properties such as distanceFromScale and placement. distanceFromScale property defines the distance between the scale and ticks.  Placement property is used to locate the ticks with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
 
 {% highlight html %}
-
-[View]
 
 // For Circular Gauge rendering
 

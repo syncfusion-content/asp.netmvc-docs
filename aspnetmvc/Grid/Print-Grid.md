@@ -12,12 +12,7 @@ documentation: ug
 Printing is easy with Grid control by using Print Grid feature. Toolbar has the Print icon, it allows to print the Grid records. When you click the Print icon, it internally calls the public print() method of Grid object to print the Grid. You can also use print() method manually to print.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 
@@ -56,9 +51,6 @@ Printing is easy with Grid control by using Print Grid feature. Toolbar has the 
         }))
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]
-
-
 
 public partial class GridController : Controller
 
@@ -92,5 +84,5 @@ public partial class GridController : Controller
 
 ![](Print-Grid_images/Print-Grid_img1.png)
 
-
+_Figure : Print Grid_
 

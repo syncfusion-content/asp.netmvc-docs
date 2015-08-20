@@ -19,8 +19,6 @@ The following code explains to enable state maintenance for Accordion.
 
 // In the View page, configure Accordion with corresponding data and enable the state persistence.
 
-
-
 <div style="width: 400px">
 
 @{Html.EJ().Accordion("accordion").Items(data =>
@@ -53,15 +51,15 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 
 
-![](State-Persistence_images/State-Persistence_img1.png)
-{:.image }
+   ![](State-Persistence_images/State-Persistence_img1.png)
+
 
 
 
 
 1. Accordion Selected Item changed
 
-![](State-Persistence_images/State-Persistence_img2.png)
+   ![](State-Persistence_images/State-Persistence_img2.png)
 
 
 

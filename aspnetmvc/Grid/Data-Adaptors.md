@@ -20,16 +20,7 @@ DataManager consists of three concepts, commonly called as adaptors, that are us
 Now a days oData is a very useful technique in consuming data. You can use oData protocol through DataManager’s ODataadaptor. The following code example demonstrates how you can use oDataadaptor with Grid.
 
 
-
-
-
-
-{% highlight html %}
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<object>("Grid")
 
@@ -63,7 +54,7 @@ The following screenshot is the result of the above code example.
 
 ![](Data-Adaptors_images/Data-Adaptors_img1.png)
 
-
+_Figure : OData Adaptor_
 
 
 
@@ -75,11 +66,6 @@ Cache Adaptor is a technique used to cache multiple page data by using the prope
 
 
 {% highlight html %}
-[MVC]
-
-[razor]
-
-
 
   @(Html.EJ().Grid<OrdersView>("CacheAdaptor")
 
@@ -112,10 +98,6 @@ Cache Adaptor is a technique used to cache multiple page data by using the prope
 {% highlight c# %}
 
 
-[CS]
-
-
-
 public partial class GridController : Controller
 
     {
@@ -146,7 +128,7 @@ The following screenshot is the result of the above code example.
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Data-Adaptors_images/Data-Adaptors_img2.png)
+![](Data-Adaptors_images/Data-Adaptors_img2.png)
 
 
 

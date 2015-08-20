@@ -171,5 +171,5 @@ model.SnapSettings.HorizontalGridlines.Strokes.LineDashArray = "2 2";
 
 
 
-{{'![](Gridlines_images/Gridlines_img2.png)'|markdownify}} 
+![](Gridlines_images/Gridlines_img2.png) 
 

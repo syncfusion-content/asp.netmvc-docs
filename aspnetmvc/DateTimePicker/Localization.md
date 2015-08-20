@@ -31,7 +31,7 @@ You can also customize the culture to your own, using the following steps.
 
    The following code snippet is used to know Spanish calendar locale information.
 
-   ~~~ html
+   ~~~ js
         
 		calendars: {
 
@@ -95,9 +95,7 @@ You can also customize the culture to your own, using the following steps.
 
 3. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
-   
-     [_cshtml]
+   ~~~ js
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized localization*@
 

@@ -18,7 +18,7 @@ The following steps explain how you can enable the EnablePersistence property fo
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight html %}
+{% highlight js %}
 
 // To configure TreeView in the CSHTML page
 

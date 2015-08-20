@@ -3,7 +3,7 @@ layout: post
 title: Miscellaneous
 description: miscellaneous
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 
@@ -17,18 +17,11 @@ The following steps explains you the details about rendering the Split Button wi
 
 1. In the VIEW page, add the following button elements to configure Split Button widget
 
-
-
-
 {% highlight html %}
 
 //Add the code in the CSHTML page to configure and initialize the control
 
-
-
     @*Set the text for split button control as follows. *@
-
-
 
     <div class="spltspan">
 
@@ -62,9 +55,6 @@ Specifies the corner of Split Button in rounded shape. By default, the edges of 
 The following steps explains you the details about rendering the Split Button with rounded corner.
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
-
-
-
 
 {% highlight html %}
 

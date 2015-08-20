@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EnableDisable-the-Slider
-description: enable/disable the slider
+description: enable-disable the slider
 platform: ejmvc
 control: Slider
 documentation: ug
@@ -21,7 +21,7 @@ The following steps explains you on how to disable the Slider.
 
 {% highlight html %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").Enabled(false))
 

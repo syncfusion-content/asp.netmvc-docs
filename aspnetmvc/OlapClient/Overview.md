@@ -3,7 +3,7 @@ layout: post
 title: Overview
 description: overview
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

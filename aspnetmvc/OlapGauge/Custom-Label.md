@@ -3,7 +3,7 @@ layout: post
 title: Custom-Label
 description: custom label
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ Custom label provides information about the members associated behind each OlapG
 
 
 
-![I:/OlapGuage/Gauge/Range size.png](Custom-Label_images/Custom-Label_img1.png)
+![](Custom-Label_images/Custom-Label_img1.png)
 
 
 
@@ -21,9 +21,7 @@ Custom label provides information about the members associated behind each OlapG
 
 You can set the location of the custom label in circular gauge using “location” property. Refer the following code example.
 
-{% highlight html %}
-
-[MVC]
+{% highlight js %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 
@@ -87,9 +85,7 @@ customLabel.Position(location => location.X(280).Y(390)).Add();
 
 You can customize the custom label font with fontstyle, font family, and size properties.
 
-{% highlight html %}
-
-[MVC]
+{% highlight js %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 

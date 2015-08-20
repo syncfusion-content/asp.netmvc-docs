@@ -15,11 +15,7 @@ The TreeGrid control for JavaScript has built-in support for Sorting one or 
 
 TreeGrid allows the items to be sorted in ascending or descending order based on the selected column by enabling the AllowSorting option in TreeGrid control. The following code example shows you how to enable Sorting in TreeGrid control.
 
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")    
 
@@ -29,25 +25,14 @@ TreeGrid allows the items to be sorted in ascending or descending order based o
 
 )        
 
-
-
-
-
 {% endhighlight %}
-
-
-
-
 
 ## Multicolumn sorting
 
 TreeGrid allows you to sort multiple columns by clicking the desired column headers while holding the CTRL key. The following code example shows you how to enable Multicolumn sorting in TreeGrid control.
 
 
-
-
-{% highlight html %}
-
+{% highlight js %}
 
        @(Html.EJ().TreeGrid("TreeGridContainer")   
 
@@ -58,9 +43,6 @@ TreeGrid allows you to sort multiple columns by clicking the desired column hea
        .AllowMultiSorting(true)    
 
         )
-
-
-
 
 {% endhighlight  %}
 

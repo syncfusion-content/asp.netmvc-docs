@@ -14,7 +14,7 @@ You can easily customize the layout of the FileExplorer control, show or hide th
 1. To render FileExplorer in MVC with above customizing options, include the following code in your View page.
 
 
-   ~~~ html
+   ~~~ js
 	
 	 @Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).ShowToolbar(false)
 
@@ -25,13 +25,14 @@ You can easily customize the layout of the FileExplorer control, show or hide th
 
     
 	![](Customization-layout_images/Customization-layout_img1.png)
-
+    
+	_Figure 5: FileExplorer with toolbar disabled_
 
 
 2. To render FileExplorer in MVC with disable tree view and footer options, include the following code in your View page.
 
 
-   ~~~ html
+   ~~~ js
 	
 		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault")).ShowTreeview(false).ShowFooter(false).Layout(LayoutType.Tile)
 
@@ -42,5 +43,5 @@ You can easily customize the layout of the FileExplorer control, show or hide th
 
     ![](Customization-layout_images/Customization-layout_img2.png)
 
-
+    _Figure 6: FileExplorer with tree view and footer disabled_
 

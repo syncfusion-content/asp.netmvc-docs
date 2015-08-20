@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started
 platform: ejmvc
-control: Circular Gauge
+control: CircularGauge
 documentation: ug
 ---
 
@@ -28,33 +28,25 @@ ASP.NET MVC Circular Gauge widget basically renders with animation and flexible 
 1. First create an MVC Project and add necessary Dlls and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
 2. Add the following code example to the corresponding view page to render CircularGauge.
 
-{% highlight html%}
-
-[view]
+   ~~~ javascript
 
 
+		@(Html.EJ().CircularGauge("circulargauge"))
 
-@(Html.EJ().CircularGauge("circulargauge"))
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
 3. Add the following code example in the controller page.
 
 
-{% highlight c#%}
-[Controller]
-
-
+{% highlight c# %}
 
 public ActionResult Default()
-
-
-
 {
 
-return View();
+	return View();
 
 }
 
@@ -72,9 +64,8 @@ Run the above code example to get a default CircularGauge with default values.
 
 Pointers have different height and width so you can set the height and width of the gauge according to your requirements.Set the basic values of the gauge such as height and width of the canvas element values that are to be rendered.
 
-{% highlight html%}
+{% highlight js %}
 
-[view]
 
 @(Html.EJ().CircularGauge("circulargauge")
 
@@ -99,9 +90,7 @@ Run the above code example and you will see the following output.
 The speedometer must have some dark color as background so that its value is clearly visible and you can vary the speed of the pointer by setting ReadOnly as False for user interaction.
 
 
-{% highlight html%}
-[view]
-
+{% highlight js %}
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -134,10 +123,7 @@ Run the above code example and you will see the following output.
 * The speed limit in the gauge has maximum value of 200 kmph. So you can set maximum value for the gauge as 200.
 * Major Ticks have the interval value of 20 and minor ticks have the interval value of 5. Show ranges and show indicators are used to display the ranges and indicators in their respective positions.
 
-{% highlight html%}
-
-[view]
-
+{% highlight js %}
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -196,10 +182,7 @@ _Add Label Customization_
 
 To display the value around the scales, labels are used. By customizing the label color it displays as specified.
 
-{% highlight html%}
-
-[view]
-
+{% highlight js%}
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -242,39 +225,11 @@ _Figure7: Circular Gauge with Label_
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Add Pointers
 
 Here, you have three pointers that denote the kilometer value, rotation per minute value and torque value.The torque value pointer needs not be similar to the other two pointers. You can set torque pointer as marker pointer. And you can set other attributes for pointer such as background color, border color, length, width and distance from scale.
 
-{% highlight html %}
-
-[view]
-
-
+{% highlight js %}
 
 @(Html.EJ().CircularGauge("circulargauge")
 
@@ -375,10 +330,7 @@ Run the above code example and you will see the following output.
 * To display and customize the tick value add the following code example. 
 
 
-{% highlight html %}
-[view]
-
-
+{% highlight js %}
 
 @(Html.EJ().CircularGauge("circulargauge")
 
@@ -444,28 +396,6 @@ _Figure9: Circular Gauge with Ticks_
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Add Range Values
 
 * Ranges denote the property of the scale value in the speedometer. The color values of the ranges denote speed variation. Set ShowRanges as True for showing the ranges in the Circular Gauge.
@@ -473,9 +403,7 @@ _Figure9: Circular Gauge with Ticks_
 * You can customize the range with properties such as start value, end value, start width, end width,  background color , border color, etc.,
 
 
-{% highlight html %}
-[view]
-
+{% highlight js %}
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -563,9 +491,7 @@ Run the above code example and you will see the following output.
 * Indicators denote whether the pointers values are in their respective zones or not. Positioning the indicator on the respective range value gives you the required changes.
 * By using Position property, you can set the location of the indicator. StateRanges defines how the indicator should behave when the pointer is in certain values. 
 
-{% highlight html %}
-
-[view]
+{% highlight js %}
 
 
 
@@ -738,9 +664,7 @@ Run the above code example and you will see the following output.
 Custom labels are used to specify the texts that need to be displayed in the gauge. You can customize it through various properties.To display the three range description, custom texts are used here.
 
 
-{% highlight html %}
-[view]
-
+{% highlight js %}
 
 
 @(Html.EJ().CircularGauge("circulargauge")
@@ -806,10 +730,11 @@ clbl.Value("Danger")
 }).Add();
 
 }))
+
 {% endhighlight  %}
 Run the above code example and you will see the following output.
 
-![C:/Users/apoorvah.ramanathan/Desktop/1.png](Getting-Started_images/Getting-Started_img11.png)
+![](Getting-Started_images/Getting-Started_img11.png)
 
 
 

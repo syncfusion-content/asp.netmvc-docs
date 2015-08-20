@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-## Shapes
+# Shapes
 
 Essential PDF has a comprehensive set of API that can be used for drawing a variety of shapes such as: 
 
@@ -32,9 +32,7 @@ Each set of methods accepts parameters specific to each primitive type (for exam
 * If pen is used, the primitive are drawn 
 * If brush is used, the primitive are filled. 
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Shapes_images/Shapes_img1.png)' | markdownify }}
-{:.image }
- _Note: You must add the Syncfusion.Pdf.Graphics namespace to work with graphic objects._ 
+ > Note: You must add the Syncfusion.Pdf.Graphics namespace to work with graphic objects.
 
 
 The following code example illustrates how to draw shapes.
@@ -43,7 +41,7 @@ The following code example illustrates how to draw shapes.
 
 
 
-[C#]
+{% highlight c# %}
 
 //Creates a document.
 
@@ -79,9 +77,9 @@ page.Graphics.DrawPolygon(pen, PdfBrushes.Green, points);
 
 doc.Save("Shapes.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -119,13 +117,13 @@ page.Graphics.DrawPolygon(pen, PdfBrushes.Green, points)
 
 doc.Save("Shapes.pdf")
 
-
+{% endhighlight %}
 
 You can paginate the element as follows.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -163,11 +161,11 @@ ellipse.Draw(page, 20, 20, format);
 
 doc.Save("Shapes.pdf");
 
+{% endhighlight %}
 
 
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -205,5 +203,5 @@ ellipse.Draw(page, 20, 20, format)
 
 doc.Save("Shapes.pdf")
 
-
+{% endhighlight %}
 

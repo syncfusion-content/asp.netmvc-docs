@@ -33,22 +33,25 @@ The following steps are used to create Tab control.
 2. Add the mentioned code to the corresponding view page for Tab rendering.
 
 
-{% highlight html %}
+   ~~~ js
 
 
-  @Html.EJ().Tab("DishType").Items(data =>
+		  @Html.EJ().Tab("DishType").Items(data =>
 
-{
+		{
 
-    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div></div>);
+		    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div></div>);
 
-    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+		    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
 
-    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+		    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
-})
+		})
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
+
 
 
 The following output is displayed.
@@ -99,7 +102,7 @@ For more information about rating, refer to the following link:
 
 [http://help.syncfusion.com/aspnetmvc/](http://help.syncfusion.com/aspnetmvc/)
 
-{% highlight html %}
+{% highlight js %}
 
 <!--Use the following codes with above Html contents-->
 
@@ -144,11 +147,10 @@ Each item has a variety of options, and these options are also specified in the 
 
 The following code example represents sub Tab control rendering using helper function.
 
-
+{% highlight js %}
 
 <!--Use the following codes with in the  above Html -->
 
-{% highlight html %}
 
   @Html.EJ().Tab("DishType").Items(data =>
 
@@ -279,7 +281,7 @@ Now, you can learn how to set the sub Tab orientation to vertical. By default, T
 
 The following code section renders the sub Tab element in the vertical orientation.
 
-{% highlight html %}
+{% highlight js %}
 
 <!--Use the following codes with in the  above Html -->
 
@@ -381,18 +383,113 @@ The second and third Tab contents are declared in the same method as of the firs
 
 
 {% highlight html %}
-@{Html.EJ().Tab("DishType").Items(data =>         {             data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>                Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.                @firstTab()            </div>);             data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>                Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.                @secondTab()            </div>);             data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>     </div>);         }).Render();
+@{Html.EJ().Tab("DishType").Items(data => 
+        {
+			data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div> 
+			Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+			@firstTab()
+            </div>);
+			data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+			Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
+			@secondTab() 
+			</div>);  
+			data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+			</div>);  
+		}).Render();
 
-@helper secondTab(){                @Html.EJ().Tab("SandwichMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>    {        data.Add().ID("GardenVeggie").Text("Garden Veggie").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/garden-veggie.png" alt="garden-veggie ">            <div class="ingredients">                Rate    : $55<br />                Ingredients : grilled chicken, corn &amp;olives.             <br />                Description: To make an appetizer pizza made with crescent roll dough, baked and topped with flavored cream cheese and crispy fresh vegetables. Broccoli, carrots, and bell peppers make this a wonderfully delicious vegetarian treat             </div>        </div>);        data.Add().ID("ChickenTikka").Text("Chicken Tikka ").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/chicken-tikka.png" alt="chicken-tikka">            <div class="ingredients">                Rate    : $100<br />                Ingredients : onions, grilled chicken, chicken salami &amp; tomatoes.                  <br />                Description: Juicy chunks of boneless chicken roasted on open fire.This takeaway favourite is freezer-friendly and quick to reheat, giving you the chance to get ahead.             </div>        </div>);        data.Add().ID("PaneerTikka").Text("Paneer Tikka  ").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/paneer-tikka.png" alt="paneer-tikka">            <div class="ingredients">                Rate    : $150                <br />                Ingredients : onions, paneer & tomatoes.                  <br />                Description: Delve into the tasty Paneer Tikka Kebabs made from marinated paneer or cottage cubes. Relish these grilled delicacies with green mint chutney and onion rings.             </div>        </div>);    })            }        </div>
+		@helper secondTab(){ 
+		   @Html.EJ().Tab("SandwichMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
+		   {       
+				data.Add().ID("GardenVeggie").Text("Garden Veggie").ContentTemplate(@<div class="e-content">
+				<img src="http://js.syncfusion.com/demos/web/images/accordion/garden-veggie.png" alt="garden-veggie "> 
+				<div class="ingredients"> 
+				Rate    : $55<br />  
+				Ingredients : grilled chicken, corn &amp;olives.
+				<br />    
+				Description: To make an appetizer pizza made with crescent roll dough, baked and topped with flavored cream cheese and crispy fresh vegetables.
+				Broccoli, carrots, and bell peppers make this a wonderfully delicious vegetarian treat
+				</div> 
+				</div>);
+				data.Add().ID("ChickenTikka").Text("Chicken Tikka ").ContentTemplate(@<div class="e-content">  
+				<img src="http://js.syncfusion.com/demos/web/images/accordion/chicken-tikka.png" alt="chicken-tikka"> 
+				<div class="ingredients">  
+				Rate    : $100<br /> 
+				Ingredients : onions, grilled chicken, chicken salami &amp; tomatoes.   
+				<br />      
+				Description: Juicy chunks of boneless chicken roasted on open fire.This takeaway favourite is freezer-friendly and quick to reheat, giving you the chance to get ahead. 
+				</div>   
+				</div>); 
+				data.Add().ID("PaneerTikka").Text("Paneer Tikka  ").ContentTemplate(@<div class="e-content"> 
+				<img src="http://js.syncfusion.com/demos/web/images/accordion/paneer-tikka.png" alt="paneer-tikka"> 
+				<div class="ingredients"> 
+				Rate    : $150  
+				<br /> 
+				Ingredients : onions, paneer & tomatoes.
+				<br />
+				Description: Delve into the tasty Paneer Tikka Kebabs made from marinated paneer or cottage cubes.
+				Relish these grilled delicacies with green mint chutney and onion rings.
+				</div> 
+				</div>);
+			})   
+		}   
+			</div>
 {% endhighlight  %}
 
 
 Add third Tab contents in element during initialization using content template option.
 
-{% highlight html %}
-@{Html.EJ().Tab("DishType").Items(data =>         {             data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>                Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.                @firstTab()            </div>);             data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>                Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.                @secondTab()            </div>);             data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>                Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.                @thirdTab()            </div>);         }).Render();   
+{% highlight js %}
+@{Html.EJ().Tab("DishType").Items(data =>  
+       {   
+			data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
+			Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+			@firstTab()  
+			</div>); 
+            data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+			Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
+			@secondTab() 
+			</div>); 
+            data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+			Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.  
+			@thirdTab() 
+			</div>); 
+			}).Render();   
 
-     @helper thirdTab(){            @Html.EJ().Tab("PastaMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>    {        data.Add().ID("KheemaPasta").Text("Kheema Pasta ").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach.png" alt="kheema-pasta ">            <div class="ingredients">                <p>                    Rate : $30<br />                    Ingredients : chicken, onions, chilly, garlic &amp; tomatoes.<br />                    Description: Kheema pasta dish make with veg or non-veg type.It is delicious and can be served for dinner, brunch or evening snack.                 </p>            </div>        </div>);        data.Add().ID("TunaPasta").Text("Tuna Pasta").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/garden-fresh.png" alt="tuna-pasta">            <div class="ingredients">                <p>                    Rate : $55<br />                    Ingredients : tomato ,olive, oninor &amp;garlic.<br />                    Description: Canned tuna is used to make this yummy tomato sauce.                </p>            </div>        </div> );        data.Add().ID("ChannaPasta").Text("Channa Pasta").ContentTemplate(@<div class="e-content">            <img src="http://js.syncfusion.com/demos/web/images/accordion/zesty-mushroons-and-tomatoes.png" alt="channa-asta">            <div class="ingredients">                <p>                    Rate : $30<br />                    Ingredients : sautered spinach mix, sweet corn, parsley &amp;mozarella cheese. .<br />                    Description: This is a pasta dish make with leftover channa masala (chole). This can be made from scratch too by making the channa masala first and then tossing in the cooked pasta.                </p>            </div>        </div>);    })        }
+     @helper thirdTab(){
+	 @Html.EJ().Tab("PastaMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
+	 {     
+		data.Add().ID("KheemaPasta").Text("Kheema Pasta ").ContentTemplate(@<div class="e-content">
+		<img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach.png" alt="kheema-pasta "> 
+		<div class="ingredients"> 
+		<p>     
+		Rate : $30<br /> 
+		Ingredients : chicken, onions, chilly, garlic &amp; tomatoes.<br />
+		Description: Kheema pasta dish make with veg or non-veg type.It is delicious and can be served for dinner, brunch or evening snack. 
+		</p> 
+		</div>  
+		</div>); 
+		data.Add().ID("TunaPasta").Text("Tuna Pasta").ContentTemplate(@<div class="e-content">
+		<img src="http://js.syncfusion.com/demos/web/images/accordion/garden-fresh.png" alt="tuna-pasta">
+		<div class="ingredients">  
+		<p>     
+		Rate : $55<br /> 
+		Ingredients : tomato ,olive, oninor &amp;garlic.<br />  
+		Description: Canned tuna is used to make this yummy tomato sauce.
+		</p>       
+		</div> 
+		</div> );   
+		data.Add().ID("ChannaPasta").Text("Channa Pasta").ContentTemplate(@<div class="e-content"> 
+		<img src="http://js.syncfusion.com/demos/web/images/accordion/zesty-mushroons-and-tomatoes.png" alt="channa-asta"> 
+		<div class="ingredients">   
+		<p>              
+		Rate : $30<br />     
+		Ingredients : sautered spinach mix, sweet corn, parsley &amp;mozarella cheese. .<br /> 
+		Description: This is a pasta dish make with leftover channa masala (chole). This can be made from scratch too by making the channa masala first and then tossing in the cooked pasta. 
+		</p>     
+		</div>      
+		</div>); 
+		})     
+		}
 {% endhighlight  %}
 
 

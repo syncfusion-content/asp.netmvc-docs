@@ -227,14 +227,11 @@ Add the following styles to the corresponding view page to show the Rating in a 
 Execute the above code to render the following output.
 
 
-
-
-
 ![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
 > Note: Add necessary images to the mentioned directory. 
-
-> _<project directory>/Images/rating/yourimage.png_
+>
+> &lt;project directory&gt;/Images/rating/yourimage.png
 

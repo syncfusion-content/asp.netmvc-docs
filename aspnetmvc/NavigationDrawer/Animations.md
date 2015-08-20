@@ -3,7 +3,7 @@ layout: post
 title: Animations
 description: animations
 platform: ejmvc
-control: Navigation Drawer
+control: NavigationDrawer
 documentation: ug
 ---
 

@@ -11,9 +11,9 @@ documentation: ug
 
 Essential Chart allows you to create dynamic Charts that update at given interval. They are highly useful in network monitoring applications, stock/finance monitoring applications and manufacturing process indicators where the most up-to-date data are displayed. Dynamic updates are supported by all Chart types including line, area, column, spline, spline area, polar and radar series.
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -29,10 +29,6 @@ Essential Chart allows you to create dynamic Charts that update at given interva
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
-
 
 <script type="text/javascript">
 
@@ -51,11 +47,6 @@ Essential Chart allows you to create dynamic Charts that update at given interva
             intervalId = window.setInterval(OnRefresh, 80);
 
         }
-
-
-
-
-
 
 
    function OnRefresh() {
@@ -98,7 +89,7 @@ Essential Chart allows you to create dynamic Charts that update at given interva
 {% endhighlight  %}
 
 
-![C:/Users/ApoorvahR/Desktop/2.png](Real-Time-Charts_images/Real-Time-Charts_img1.png)
+![](Real-Time-Charts_images/Real-Time-Charts_img1.png)
 
 
 

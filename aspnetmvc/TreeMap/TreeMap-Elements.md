@@ -29,7 +29,7 @@ You can decide the size of the legend icons by setting IconWidth and IconHeight 
 
 You can customize the labels of the legenditem using LegendLabel property of RangeColorMapping. 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -99,7 +99,7 @@ You can customize the labels of the legenditem using LegendLabel property of Ran
 
 You can set headers for each level by setting the ShowHeader propery of the each TreeMap levels. The HeaderHeight property helps to set the height of the header and Group path value determines the header value. You can customize the default header appearance by setting the HeaderTemplate of the TreeMap levels.
 
-{% highlight html %}
+{% highlight js %}
 
            @(Html.EJ().TreeMap("treemap")
 
@@ -176,7 +176,7 @@ You can set headers for each level by setting the ShowHeader propery of the each
 
 You can also set labels for the leaf nodes by setting the ShowLabels property as true. Group path value is displayed as a label for leaf nodes. You can customize the default label appearance by setting the LabelTemplate of the TreeMap levels.
 
-{% highlight html %}
+{% highlight js %}
 
 
 

@@ -3,7 +3,7 @@ layout: post
 title: Data-Binding
 description: data binding
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -19,8 +19,6 @@ The following code illustrates how to connect to an offline cube:
 
 {% highlight c# %}
 
-[C#]
-
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -35,7 +33,7 @@ The following code illustrates how to connect to a Cube available in local SQL S
 
 
 {% highlight c# %}
-[C#]
+
 
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
@@ -56,7 +54,7 @@ The following code illustrates how to connect to the SSAS server available onlin
 
 {% highlight c# %}
 
-[C#]
+
 
 static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
 
@@ -68,8 +66,6 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 The following code illustrates how to connect to the Mondrian Server:
 
 {% highlight c#  %}
-
-[C#]
 
 // Connecting to Mondrian Server
 
@@ -86,7 +82,7 @@ The following code illustrates how to connect to Active Pivot Server:
 
 
 {% highlight c#  %}
-[C#]
+
 
 // Connecting to Active Pivot Server
 

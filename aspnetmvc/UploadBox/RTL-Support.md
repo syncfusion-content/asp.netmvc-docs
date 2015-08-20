@@ -15,11 +15,7 @@ The following steps explain the configuration of EnableRTL property in UploadBox
 
 In the VIEW page, add the below script to configure the UploadBox element.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 // In the CSHTML page, add the UploadBox element.
 

@@ -2,268 +2,165 @@
 layout: post
 title: Cascading-Support
 description: cascading support 
-platform: aspnet
-control: Control Name undefined
+platform: ejmvc
+control: ListBox
 documentation: ug
 ---
 
 # Cascading Support 
 
-By using cascade option, you can create a behaviour of cascade between ListBox controls. For this, create a database with single field that is common between two ListBox data fields and then mention that column id in value field. With this, you can set second ListBox id in CascadeTo property in first ListBox. 
+Using cascade option, you can create a behaviour of cascade between ListBox controls. For this, create a database with single field that is common between two ListBox data fields and then mention that column id in value field. With this, you can set second ListBox id in CascadeTo property in first ListBox. 
 
 In the following code example, in the first and second ListBox, "categoryid" is the common field. 
 
-The "categoryid" value of the selected item in the First Listbox that matches with "categoryid" value in the second Listbox is retreived and the item is loaded.
+The "categoryid" value of the selected item in the First Listbox that matches with "categoryid" value in the second Listbox, is retreived and the item is loaded.
 
 
-Note: In case the second ListBox is to be disabled, until the first one is selected, you can set enable property as false in second ListBox that enables automatically once the value is selected in first one. 
+> Note: In case the second ListBox is to be disabled, until the first one is selected, you can set enable property as false in second ListBox that enables automatically once the value is selected in first one.
 
 You can add any number of cascading ListBoxes. For this, create a Datasource with single field value that is common between the two consecutive cascading ListBoxes and cascading is achieved based on that common field.”  
 
 The following steps explains you the behaviour of cascade ListBox. 
 
-In an ASPX page, add an elementto configure ListBox.
+1. Add the below code in your view page to render the ListBox with cascade option/
+
+   ~~~ html
+
+		 // Add the following code in View page to configure ListBox widget
+		 <div class="controlitem"> 
+		 <span class="txt">
+			Cascading Listboxes
+		 </span>
+		 @Html.EJ().ListBox("groupsList").Datasource((IEnumerable<groups>)ViewBag.datasource).ListBoxFields(df => 
+		 df.Value("categoryid")).CascadeTo("subcategoryList")
+		 </div>
+		 <div class="controlitem">
+			 @Html.EJ().ListBox("subcategoryList").Datasource((IEnumerable<category>)ViewBag.datasource1).ListBoxFields(df => 
+			 df.Value("subcategoryid")).CascadeTo("productList").Enabled(false)
+		 </div>
+		 <div class="controlitem">
+			@Html.EJ().ListBox("productList").Datasource((IEnumerable<subCategory>)ViewBag.datasource2).ListBoxFields(df => 
+			df.Value("productid")).CascadeTo("subproductList").Enabled(false)
+		 </div>
+		 <div class="controlitem"> 
+			@Html.EJ().ListBox("subproductList").Datasource((IEnumerable<subProduct>)ViewBag.datasource3).Enabled(false)
+		 </div>
+ 
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ cs
+   
+		// Add the following code to add list items in the controller page
+		public partial class ListBoxController : Controller
+		{    
+			List<groups> group = new List<groups>();
+			List<category> firstLevel = new List<category>(); 
+			List<subCategory> secondLevel = new List<subCategory>();
+			List<subProduct> thirdLevel = new List<subProduct>(); 
+			public ActionResult Cascading()  
+			{       
+				group.Add(new groups { categoryid = "a", text = "Clothing" });  
+				group.Add(new groups { categoryid = "b", text = "Furniture" }); 
+				ViewBag.datasource = group;  
+				//first level child 
+				firstLevel.Add(new category { subcategoryid = 11, categoryid = "a", text = "Women" });   
+				firstLevel.Add(new category { subcategoryid = 12, categoryid = "b", text = "Home furniture" });  
+				firstLevel.Add(new category { subcategoryid = 13, categoryid = "b", text = "Bedding" });
+				ViewBag.datasource1 = firstLevel; 
+
+				//second level child  
+				secondLevel.Add(new subCategory { productid = 101, subcategoryid = 11, text = "men shirts" }); 
+				secondLevel.Add(new subCategory { productid = 102, subcategoryid = 11, text = "men pants" });
+				secondLevel.Add(new subCategory { productid = 103, subcategoryid = 12, text = "women shirts" });
+				secondLevel.Add(new subCategory { productid = 104, subcategoryid = 12, text = "women pants" });
+				secondLevel.Add(new subCategory { productid = 105, subcategoryid = 13, text = "sofa" });   
+				secondLevel.Add(new subCategory { productid = 106, subcategoryid = 13, text = "chairs" });
+				secondLevel.Add(new subCategory { productid = 106, subcategoryid = 14, text = "bedsheets" }); 
+				secondLevel.Add(new subCategory { productid = 108, subcategoryid = 14, text = "pillows" }); 
+				ViewBag.datasource2 = secondLevel; 
+
+				//third level child 
+				thirdLevel.Add(new subProduct { productid = 101, text = "red men shirts" }); 
+				thirdLevel.Add(new subProduct { productid = 101, text = "blue men shirts" }); 
+				thirdLevel.Add(new subProduct { productid = 102, text = "red men pants" });  
+				thirdLevel.Add(new subProduct { productid = 102, text = "blue men pants" }); 
+				thirdLevel.Add(new subProduct { productid = 103, text = "blue women shirts" }); 
+				thirdLevel.Add(new subProduct { productid = 103, text = "red women shirts" });  
+				thirdLevel.Add(new subProduct { productid = 104, text = "red women pants" });  
+				thirdLevel.Add(new subProduct { productid = 104, text = "blue women pants" });  
+				thirdLevel.Add(new subProduct { productid = 105, text = "red sofa" });   
+				thirdLevel.Add(new subProduct { productid = 105, text = "blue sofa" }); 
+				thirdLevel.Add(new subProduct { productid = 106, text = "red chairs" }); 
+				thirdLevel.Add(new subProduct { productid = 106, text = "blue chairs" });   
+				thirdLevel.Add(new subProduct { productid = 107, text = "red bedsheets" }); 
+				thirdLevel.Add(new subProduct { productid = 107, text = "blue bedsheets" });
+				thirdLevel.Add(new subProduct { productid = 108, text = "red pillows" });    
+				thirdLevel.Add(new subProduct { productid = 108, text = "blue pillows" });  
+				ViewBag.datasource3 = thirdLevel; 
+				return View();
+			}
+		}
+
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ cs
+		
+		public class groups
+		{    
+			public string text { get; set; }
+			public string categoryid { get; set; }
+			public class category
+			{   
+				public string text { get; set; } 
+				public string categoryid { get; set; }
+				public int subcategoryid { get; set; }
+			}
+			public class subCategory
+			{  
+				public string text { get; set; }  
+				public int productid { get; set; }
+				public int subcategoryid { get; set; }
+			}
+			public class subProduct
+			{
+				public string text { get; set; }
+				public int productid { get; set; }
+			}
+			
+		}
 
+   ~~~
+   {:.prettyprint }
 
-{% highlight html %}
 
-<div id="control">
+2. Configure the styles as follows.
 
-    <div class="controlitem">
 
-        <h6>
 
-            Cascading Listboxes</h6>
+   ~~~ html 
 
-        <ej:ListBox ID="groupsList" DataValueField="CategoryId" DataTextField="Text" CascadeTo="MainContent_subcategoryList" runat="server">
+		<style>
 
-        </ej:ListBox>
+			.controlitem {
 
-    </div>
+				margin-left: 50px;
 
-    <div class="controlitem">
+				display: inline-block;
 
-        <ej:ListBox ID="subcategoryList" CascadeTo="MainContent_productList" DataValueField="SubcategoryId" DataTextField="Text" Enabled="false" runat="server">
+			}
 
-        </ej:ListBox>
+		</style>
 
-    </div>
+   ~~~
+   {:.prettyprint }
 
-    <div class="controlitem">
+3. Output of the above steps.
 
-        <ej:ListBox ID="productList" CascadeTo="MainContent_subproductList" DataValueField="ProductId" DataTextField="Text" Enabled="false" runat="server">
 
-        </ej:ListBox>
 
-    </div>
-
-    <div class="controlitem">
-
-        <ej:ListBox ID="subproductList" DataValueField="ProductId" DataTextField="Text" Enabled="false" runat="server">
-
-        </ej:ListBox>
-
-    </div>
-
-</div>
-
-
-
-
-
-{% endhighlight %}
-
-
-
-{% highlight c# %}
-
-    protected void Page_Load(object sender, EventArgs e)
-
-    {
-
-        groupsList.DataSource = GetGroup();
-
-        subcategoryList.DataSource = GetCategory();
-
-        productList.DataSource = GetSubCategory();
-
-        subproductList.DataSource = GetSubProduct();
-
-    }
-
-    private List<Groups> GetGroup()
-
-    {
-
-        List<Groups> datas = new List<Groups>();
-
-        datas.Add(new Groups() { CategoryId = "a", Text = "Clothing" });
-
-        datas.Add(new Groups() { CategoryId = "b", Text = "Furniture" });
-
-        return datas;
-
-    }
-
-    private List<Category> GetCategory()
-
-    {
-
-        List<Category> datas = new List<Category>();
-
-        datas.Add(new Category() { SubcategoryId = 11, CategoryId = "a", Text = "Men" });
-
-        datas.Add(new Category() { SubcategoryId = 12, CategoryId = "a", Text = "Women" });
-
-        datas.Add(new Category() { SubcategoryId = 13, CategoryId = "b", Text = "Home furniture" });
-
-        datas.Add(new Category() { SubcategoryId = 14, CategoryId = "b", Text = "Bedding" });
-
-        return datas;
-
-    }
-
-    private List<SubCategory> GetSubCategory()
-
-    {
-
-        List<SubCategory> datas = new List<SubCategory>();
-
-        datas.Add(new SubCategory() { ProductId = 101, SubcategoryId = 11, Text = "men shirts" });
-
-        datas.Add(new SubCategory() { ProductId = 102, SubcategoryId = 11, Text = "men pants" });
-
-        datas.Add(new SubCategory() { ProductId = 103, SubcategoryId = 12, Text = "Women shirts" });
-
-        datas.Add(new SubCategory() { ProductId = 104, SubcategoryId = 12, Text = "Women pants" });
-
-        datas.Add(new SubCategory() { ProductId = 105, SubcategoryId = 13, Text = "sofa" });
-
-        datas.Add(new SubCategory() { ProductId = 106, SubcategoryId = 13, Text = "chairs" });
-
-        datas.Add(new SubCategory() { ProductId = 107, SubcategoryId = 14, Text = "bedsheets" });
-
-        datas.Add(new SubCategory() { ProductId = 108, SubcategoryId = 14, Text = "pillows" });
-
-        return datas;
-
-    }
-
-    private List<SubProduct> GetSubProduct()
-
-    {
-
-        List<SubProduct> datas = new List<SubProduct>();
-
-        datas.Add(new SubProduct() { ProductId = 101, Text = "red men shirts" });
-
-        datas.Add(new SubProduct() { ProductId = 101, Text = "blue men shirts" });
-
-        datas.Add(new SubProduct() { ProductId = 102, Text = "red men pants" });
-
-        datas.Add(new SubProduct() { ProductId = 102, Text = "blue men pants" });
-
-        datas.Add(new SubProduct() { ProductId = 103, Text = "blueWomen shirts" });
-
-        datas.Add(new SubProduct() { ProductId = 103, Text = "red Women shirts" });
-
-        datas.Add(new SubProduct() { ProductId = 104, Text = "red women pants" });
-
-        datas.Add(new SubProduct() { ProductId = 104, Text = "blue women pants" });
-
-        datas.Add(new SubProduct() { ProductId = 105, Text = "red sofa" });
-
-        datas.Add(new SubProduct() { ProductId = 105, Text = "blue sofa" });
-
-        datas.Add(new SubProduct() { ProductId = 106, Text = "red chairs" });
-
-        datas.Add(new SubProduct() { ProductId = 106, Text = "blue chairs" });
-
-        datas.Add(new SubProduct() { ProductId = 107, Text = "red bedsheets" });
-
-        datas.Add(new SubProduct() { ProductId = 107, Text = "blue bedsheets" });
-
-        datas.Add(new SubProduct() { ProductId = 108, Text = "red pillows" });
-
-        datas.Add(new SubProduct() { ProductId = 108, Text = "blue pillows" });
-
-        return datas;
-
-    }
-
-    public class Groups
-
-    {
-
-        public string Text, CategoryId;
-
-    }
-
-    public class Category
-
-    {
-
-        public int SubcategoryId;
-
-        public string Text, CategoryId;
-
-    }
-
-    public class SubCategory
-
-    {
-
-        public int ProductId, SubcategoryId;
-
-        public string Text;
-
-    }
-
-    public class SubProduct
-
-    {
-
-        public int ProductId;
-
-        public string Text;
-
-    }
-
-
-
-
-
-
-
-{% endhighlight %}
-
-
-
-Configure the styles as follows.
-
-
-{% highlight css %}
-[CSS]  
-
-<style>
-
-    .controlitem {
-
-        margin-left: 50px;
-
-        display: inline-block;
-
-    }
-
-</style>
-{% endhighlight  %}
-
-
-Output of the above steps.
-
-
-
- ![](Cascading-Support_images/Cascading-Support_img1.png)
+![](Cascading-Support_images/Cascading-Support_img2.png)
 
 
 

@@ -19,39 +19,46 @@ The following steps explain you how to group data items in the DropDownList cont
 
 
 
-{% highlight html %}
-// Add the following code example in CSHTML page.
-@H@Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Check.Models.Books>)ViewBag.datasource).DropDownListFields(df => df.ID("id").Text("text").Category("category")).Width("200px").AllowGrouping(true)</td></tr>
-{% endhighlight %}
+   ~~~ js
+   
+		// Add the following code example in CSHTML page.
+		@H@Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Check.Models.Books>)ViewBag.datasource)
+		.DropDownListFields(df => df.ID("id").Text("text").Category("category")).Width("200px").AllowGrouping(true)
 
-{% highlight c# %}
-// Define the DataSource in the controller page as follows.
-  List<Books> book = new List<Books>();
-  public ActionResult Index()
-  {            
-      book.Add(new Books { id = 1,  text= "Austria", category= "A"});
-	  book.Add(new Books { id = 2, text= "Australia", category= "A" });
-	  book.Add(new Books { id = 3, text =  "Bangladesh", category= "B"  });
-	  book.Add(new Books { id = 4, text = "Belgium", category= "B"  });
-	  book.Add(new Books { id = 5, text = "Canada", category= "C" });
-	  book.Add(new Books { id = 6, text = "Denmark", category= "D" });
-	  book.Add(new Books { id = 7, text = "Egypt", category= "E"});
-	  book.Add(new Books { id = 8, text = "England", category= "E" });
-	  book.Add(new Books { id = 9, text = "India", category= "I"  });
-	  book.Add(new Books { id = 10, text = "Italy", category= "I"  });
-	  book.Add(new Books { id = 11, text = "Haiti", category= "H" });
-	  book.Add(new Books { id = 12, text = "Jordan", category= "J" });
-	  book.Add(new Books { id = 13, text = "Jamaica", category= "J" });
-	  ViewBag.datasource = book;
-	  return View();
-   }
-   public class Books
-   {
-      public int id { get; set; }
-	  public string text { get; set; }
-	  public string category { get; set; }
-	}</td></tr>
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
+   ~~~ cs
+   
+		// Define the DataSource in the controller page as follows.
+		  List<Books> book = new List<Books>();
+		  public ActionResult Index()
+		  {            
+			  book.Add(new Books { id = 1,  text= "Austria", category= "A"});
+			  book.Add(new Books { id = 2, text= "Australia", category= "A" });
+			  book.Add(new Books { id = 3, text =  "Bangladesh", category= "B"  });
+			  book.Add(new Books { id = 4, text = "Belgium", category= "B"  });
+			  book.Add(new Books { id = 5, text = "Canada", category= "C" });
+			  book.Add(new Books { id = 6, text = "Denmark", category= "D" });
+			  book.Add(new Books { id = 7, text = "Egypt", category= "E"});
+			  book.Add(new Books { id = 8, text = "England", category= "E" });
+			  book.Add(new Books { id = 9, text = "India", category= "I"  });
+			  book.Add(new Books { id = 10, text = "Italy", category= "I"  });
+			  book.Add(new Books { id = 11, text = "Haiti", category= "H" });
+			  book.Add(new Books { id = 12, text = "Jordan", category= "J" });
+			  book.Add(new Books { id = 13, text = "Jamaica", category= "J" });
+			  ViewBag.datasource = book;
+			  return View();
+		   }
+		   public class Books
+		   {
+			  public int id { get; set; }
+			  public string text { get; set; }
+			  public string category { get; set; }
+			}
+			
+   ~~~
+   {:.prettyprint }
 
 
 2. The above code example illustrates the following output.
@@ -117,5 +124,5 @@ Another way to group DropDownList is by using UL and LI structure. Here, you hav
 
 ![](Grouping-Support_images/Grouping-Support_img2.png)
 
-
+_Figure 28: Grouping in Dropdownlist by using UL and LI structure_
 

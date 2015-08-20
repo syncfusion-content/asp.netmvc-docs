@@ -3,7 +3,7 @@ layout: post
 title: Width
 description: width
 platform: ejmvc
-control: Radial Menu
+control: RadialMenu
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ You can add the page content with text-area by referring to this section.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

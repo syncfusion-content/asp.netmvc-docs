@@ -2,157 +2,109 @@
 layout: post
 title: Drag-and-Drop-Support
 description: drag and drop support
-platform: aspnet
-control: Control Name undefined
+platform: ejmvc
+control: ListBox
 documentation: ug
 ---
 
 # Drag and Drop Support
 
-ListBox widget provides the Drag and Drop support. A list item can be dragged from a ListBox control and can be dropped in any droppable element. To enable Drag and Drop support, set the AllowDragAndDropproperty as true. In control, enable the AllowDragAndDropproperty where you want to drop list Item.
+ListBox widget provides the Drag and Drop support. A list item can be dragged from a ListBox control and can be dropped in any droppable element. To enable Drag and Drop support, set the AllowDragAndDrop property as true. In control, enable the AllowDragAndDrop property where you want to drop list Item.
 
 The following steps explains you the behaviour of template support with ListBox.
 
-In an ASPX page, add an elementto configure ListBox.
+1. Add the below code in your page to render the ListBox
 
 
+   ~~~ html
 
-{% highlight html %}
+		// Add the following code in View page to configure ListBox widget 
+		<div class="control1"> 
+			<h5 class="ctrllabel">
+				Drag and drop skills 
+			</h5>
+			@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df =>
+			df.Text("text")) .AllowDragAndDrop(true)
+		</div>
+		<div class="control2"> 
+			@Html.EJ().ListBox("dragsample").AllowDragAndDrop(true)
+		</div>
+		
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ cs
+		
+		// Add the following code to add list items in the controller page  
+		public class skillset 
+		{          
+			public string text { get; set; }     
+		}       
+		public ActionResult Index()   
+		{        
+			List<skillset> skill = new List<skillset>();   
+			skill.Add(new skillset { text = "ASP.NET" });    
+			skill.Add(new skillset { text = "ActionScript" }); 
+			skill.Add(new skillset { text = "Basic" });      
+			skill.Add(new skillset { text = "C++" });       
+			skill.Add(new skillset { text = "C#" });      
+			skill.Add(new skillset { text = "dBase" });   
+			skill.Add(new skillset { text = "Delphi" });      
+			skill.Add(new skillset { text = "ESPOL" });     
+			skill.Add(new skillset { text = "F#" });      
+			skill.Add(new skillset { text = "FoxPro" });  
+			skill.Add(new skillset { text = "Java" });   
+			skill.Add(new skillset { text = "J#" });    
+			skill.Add(new skillset { text = "Lisp" });  
+			skill.Add(new skillset { text = "Logo" });   
+			skill.Add(new skillset { text = "PHP" });  
+			ViewBag.datasource = skill;     
+			return View();  
+		}
 
-<div class="control">
+   ~~~
+   {:.prettyprint }
 
-    <div class="ctrllabel">
 
-        Drag and drop skills</div>
+2. Add the following class in CSS. 
 
-    <div class="control1" style="float: left;">
 
-        <ej:listbox id="listboxsample" DataTextField="Name"  AllowDragAndDrop="true" runat="server" Width="240"></ej:listbox>
+   ~~~ html 
 
-    </div>
+		<style type="text/css" class="cssStyles">
 
-    <div class="control2">
+			.control {
 
-        <ej:listbox id="draganddrop" AllowDragAndDrop="true" runat="server" Width="240"></ej:listbox>
+				margin-left: 20px;
 
-    </div>
+			}
 
-</div>
 
 
+			.ctrllabel {
 
+				padding-bottom: 3px;
 
+			}
 
-{% endhighlight %}
 
 
+			.control2 {
 
-{% highlight c# %}
+				padding-left: 350px;
 
-        protected void Page_Load(object sender, EventArgs e)
+			}
 
-        {
+		</style>
 
-            listboxsample.DataSource = GetData();
 
+   ~~~
+   {:.prettyprint }
 
 
-        }
+3. Output of the above steps.
 
-        private List<Languages> GetData()
-
-        {
-
-            List<Languages> data = new List<Languages>();
-
-            data.Add(new Languages() { Name = "ASP.NET" });
-
-            data.Add(new Languages() { Name = "ActionScript" });
-
-            data.Add(new Languages() { Name = "Basic" });
-
-            data.Add(new Languages() { Name = "C++" });
-
-            data.Add(new Languages() { Name = "C#" });
-
-            data.Add(new Languages() { Name = "dBase" });
-
-            data.Add(new Languages() { Name = "Delphi" });
-
-            data.Add(new Languages() { Name = "ESPOL" });
-
-            data.Add(new Languages() { Name = "F#" });
-
-            data.Add(new Languages() { Name = "FoxPro" });
-
-            data.Add(new Languages() { Name = "Java" });
-
-            data.Add(new Languages() { Name = "J#" });
-
-            data.Add(new Languages() { Name = "Lisp" });
-
-            data.Add(new Languages() { Name = "Logo" });
-
-            data.Add(new Languages() { Name = "PHP" });
-
-            return data;
-
-        }
-
-
-
-        public class Languages
-
-        {
-
-            public string Name;
-
-        }
-
-
-
-
-
-{% endhighlight %}
-
-
-
-Add the following class in CSS. 
-
-
-{% highlight css %}
-
-    .control {
-
-        margin-left: 20px;
-
-    }
-
-
-
-    .ctrllabel {
-
-        padding-bottom: 3px;
-
-    }
-
-
-
-    .control2 {
-
-        padding-left: 350px;
-
-    }
-
-
-
-{% endhighlight %}
-
-
-
-Output of the above steps.
-
- ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img1.png)
+![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img1.png)
 
 
 

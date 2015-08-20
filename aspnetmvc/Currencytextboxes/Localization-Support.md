@@ -35,7 +35,7 @@ You can dynamically change the language based on their culture.
 
 The following example describes the way to use localization in CurrencyTextBox.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33").Locale("de-DE")
 

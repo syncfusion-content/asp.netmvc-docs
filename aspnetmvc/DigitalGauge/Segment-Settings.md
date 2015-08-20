@@ -3,7 +3,7 @@ layout: post
 title: Segment-Settings
 description: segment settings
 platform: ejmvc
-control: Digital Gauge
+control: DigitalGauge
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ documentation: ug
 * You can add gradient effects to the segments with the help of gradient attribute. The opacity of the segment is also adjustable. The space between two  segments are adjusted with spacing property.
 
 
-~~~ html
+{% highlight js %}
 
 @* For Digital Gauge rendering *@
 
@@ -41,15 +41,14 @@ ss.Opacity(0.1)
 
 .Color("Green")).Add();   }))
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 
 Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Segment-Settings_images/Segment-Settings_img1.png)
 
-
+_Figure 30: Digital Gauge control with segment settings_
 
 ## Dimension Modification
 
@@ -57,7 +56,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 * You can add gradient effects to the segments with the help of gradient attribute. The opacity of the segment is also adjustable. The space between two  segments are adjusted with spacing property.
 
 
-~~~ html
+{% highlight js %}
 
 @* For Digital Gauge rendering *@
 
@@ -81,8 +80,7 @@ ss.Length(3)
 
 }))
 
-~~~
-{:.prettyprint }
+{% endhighlight %}
 
 
 Execute the above code examples to render the DigitalGauge as follows.
@@ -90,5 +88,5 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Segment-Settings_images/Segment-Settings_img2.png)
 
-
+_Figure 31: Digital Gauge control with segment dimension_
 

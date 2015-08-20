@@ -3,7 +3,7 @@ layout: post
 title: Exporting
 description: exporting
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 
@@ -52,8 +52,8 @@ public void Export(Stream stream)
 
 {% endhighlight %}
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientExcelMVC.png](Exporting_images/Exporting_img2.png)
+![](Exporting_images/Exporting_img2.png)
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientWordMVC.png](Exporting_images/Exporting_img3.png)
+![](Exporting_images/Exporting_img3.png)
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/OlapClientPdfMVC.png](Exporting_images/Exporting_img4.png)
+![](Exporting_images/Exporting_img4.png)

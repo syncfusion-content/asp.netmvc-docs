@@ -32,7 +32,10 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
       <tr>                
 
-        <td>                    @Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).ToggleState(true).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
+        <td>                   
+			@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
+			.ContentType(ContentType.TextAndImage).ToggleState(true).DefaultPrefixIcon("e-mediaplay")
+			.ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
 
 
 
@@ -62,132 +65,137 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 1. Add the Action Result for Audio control in HomeController.cs file.
 
-{% highlight c# %}
+   ~~~ cs
 
-public ActionResult MyAudio()
+		public ActionResult MyAudio()
 
-        {
+		{
 
-            var file = Server.MapPath("../song.mp3");
+			var file = Server.MapPath("../song.mp3");
 
-            return File(file, "audio/mp3");
+			return File(file, "audio/mp3");
 
-        }
+		}
 
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 2. Add the following code example to your view page to display Audio control and render the Button.
 
 
-{% highlight html %}
-  <div class="audiodiv">
+   ~~~ html
+   
+		  <div class="audiodiv">
 
-    <audio controls>
+			<audio controls>
 
-        <source src="@Url.Action("MyAudio","Home")" type="audio/mp3" />
+				<source src="@Url.Action("MyAudio","Home")" type="audio/mp3" />
 
-        <p>Your browser does not support HTML 5 audio element</p>
+				<p>Your browser does not support HTML 5 audio element</p>
 
-    </audio>
+			</audio>
 
-   </div>
+		   </div>
 
-<div>
+		<div>
 
-<table>
+		<table>
 
-      <tr>                
+			  <tr>                
 
-        <td>                    @Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).ToggleState(true).ClientSideEvents(e => e.Create("play").Click("pause").Change("play")).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
+				<td>                   
+					@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
+					.ContentType(ContentType.TextAndImage).ToggleState(true).ClientSideEvents(e => e.Create("play").Click("pause")
+					.Change("play")).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
 
+				   </td>
 
+				   <td>                    @Html.EJ().Button("mute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("mute")).Text("Mute")
 
-           </td>
+				   </td>
 
-           <td>                    @Html.EJ().Button("mute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("mute")).Text("Mute")
+				   <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("unmute")).Text("Unmute")
 
-           </td>
+				   </td>           
 
-           <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("unmute")).Text("Unmute")
+					<td>                    @Html.EJ().Button("stop").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("stop")).Text("stop")
 
-           </td>           
+					</td>            
 
-            <td>                    @Html.EJ().Button("stop").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("stop")).Text("stop")
+				 </tr>
 
-            </td>            
+		</table>
 
-         </tr>
+		</div>
 
-</table>
-
-</div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following event function to script section in your view page to use Button control feature as the Multimedia player control.
 
 
 
-{% highlight js %}
+   ~~~ js
 
-<script type="text/javascript">
+		<script type="text/javascript">
 
-           //getting audio control access and stored in variable v
+				   //getting audio control access and stored in variable v
 
-           var v = document.getElementsByTagName("audio")[0];
+				   var v = document.getElementsByTagName("audio")[0];
 
-            //trigger the audio control using variable v
+					//trigger the audio control using variable v
 
-           function play(e) {
+				   function play(e) {
 
-                if (e.isChecked) {
+						if (e.isChecked) {
 
-                    v.play();
+							v.play();
 
-                }
+						}
 
-                else {
+						else {
 
-                    v.pause();
+							v.pause();
 
-                }
+						}
 
-            }
+					}
 
 
 
-            function start() {
+					function start() {
 
-                v.play();
+						v.play();
 
-            }
+					}
 
-            function stop() {
+					function stop() {
 
-                v.pause();
+						v.pause();
 
-            }
+					}
 
-            function mute()
+					function mute()
 
-            {                       
+					{                       
 
-                v.volume = 0;
+						v.volume = 0;
 
-             }
+					 }
 
-            function unmute()
+					function unmute()
 
-            {
+					{
 
-               v.volume = 1;
+					   v.volume = 1;
 
-            }
+					}
 
- </script>
+		</script>
 
-{% endhighlight  %}
-
+   ~~~
+   {:.prettyprint }
+   
 4. The following screenshot displays Multimedia player control.
 
 
@@ -225,8 +233,6 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
                     @Html.EJ().ToggleButton("underline").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("U").ActiveText("<u>U</u>").ClientSideEvents(e => e.Click("underline"))
 
-
-
         </td>
 
 
@@ -241,81 +247,83 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
 1. Add the following code example in your view page for sample text.
 
+   ~~~ html 
 
-{% highlight html %}
-<div class="sample">
+		<div class="sample">
 
-    <span id="sampletext">Hi Welcome!</span>
+			<span id="sampletext">Hi Welcome!</span>
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Add the following event function to the script section in your view page to use Button control feature as the Multimedia player control.
 
-{% highlight js %}
+   ~~~ javascript
 
-<script type="text/javascript">
-
-
-
-            function bold(e) {                
-
-                if (e.isChecked) {
+		<script type="text/javascript">
 
 
 
-                    $(".sample span").wrap("<b></b>");
+					function bold(e) {                
 
-                } else {
-
-
-
-                    $(".sample span").unwrap("<b></b>");
-
-                }
-
-            }
-
-            function italic(e) {
-
-                if (e.isChecked) {
-
-                    $(".sample span").wrap("<i></i>");
-
-                } else {
+						if (e.isChecked) {
 
 
 
-                    $(".sample span").unwrap("<i></i>");
+							$(".sample span").wrap("<b></b>");
 
-                }
-
-            }
-
-            function underline(e) {
-
-                if (e.isChecked) {
-
-                    $(".sample span").wrap("<u></u>");
-
-                } else {
+						} else {
 
 
 
-                    $(".sample span").unwrap("<u></u>");
+							$(".sample span").unwrap("<b></b>");
 
-                }
+						}
 
-            }
+					}
+
+					function italic(e) {
+
+						if (e.isChecked) {
+
+							$(".sample span").wrap("<i></i>");
+
+						} else {
 
 
 
-        </script>
+							$(".sample span").unwrap("<i></i>");
 
-{% endhighlight %}
+						}
+
+					}
+
+					function underline(e) {
+
+						if (e.isChecked) {
+
+							$(".sample span").wrap("<u></u>");
+
+						} else {
+
+
+
+							$(".sample span").unwrap("<u></u>");
+
+						}
+
+					}
+
+
+
+				</script>
+
+   ~~~
+   {:.prettyprint }
 
 
 

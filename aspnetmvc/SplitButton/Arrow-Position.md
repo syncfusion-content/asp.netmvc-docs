@@ -3,7 +3,7 @@ layout: post
 title: Arrow-Position
 description: arrow position
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 
@@ -37,70 +37,68 @@ The following steps explain you the details on rendering the Split Button with
 
 1. In the View page, add the following button elements to configure Split Button widget.
 
+   ~~~ js
+
+		@*Add the code in the CSHTML page to configure and initialize the control*@
 
 
 
-{% highlight html %}
+		@Html.EJ().SplitButton("spltbutton11").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.ImageOnly).TargetID("Ul11").PrefixIcon("e-uiLight e-login").ArrowPosition(ArrowPosition.Left)
 
-@*Add the code in the CSHTML page to configure and initialize the control*@
+		<ul id="Ul11">
 
+			<li><span>User</span></li>
 
+			<li><span>Guest</span></li>
 
-@Html.EJ().SplitButton("spltbutton11").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.ImageOnly).TargetID("Ul11").PrefixIcon("e-uiLight e-login").ArrowPosition(ArrowPosition.Left)
+			<li><span>Admin</span></li>
 
-<ul id="Ul11">
+		</ul>
 
-    <li><span>User</span></li>
+		@Html.EJ().SplitButton("spltbutton21").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextOnly).TargetID("Ul21").ArrowPosition(ArrowPosition.Top)
 
-    <li><span>Guest</span></li>
+		<ul id="Ul21">
 
-    <li><span>Admin</span></li>
+			<li><span>User</span></li>
 
-</ul>
+			<li><span>Guest</span></li>
 
-@Html.EJ().SplitButton("spltbutton21").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextOnly).TargetID("Ul21").ArrowPosition(ArrowPosition.Top)
+			<li><span>Admin</span></li>
 
-<ul id="Ul21">
+		</ul>
 
-    <li><span>User</span></li>
+		@Html.EJ().SplitButton("spltbutton31").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextOnly).TargetID("Ul31").ArrowPosition(ArrowPosition.Bottom)
 
-    <li><span>Guest</span></li>
+		<ul id="Ul31">
 
-    <li><span>Admin</span></li>
+			<li><span>User</span></li>
 
-</ul>
+			<li><span>Guest</span></li>
 
-@Html.EJ().SplitButton("spltbutton31").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextOnly).TargetID("Ul31").ArrowPosition(ArrowPosition.Bottom)
+			<li><span>Admin</span></li>
 
-<ul id="Ul31">
+		</ul>
 
-    <li><span>User</span></li>
+		@Html.EJ().SplitButton("spltbutton41").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("Ul41").ArrowPosition(ArrowPosition.Right)
 
-    <li><span>Guest</span></li>
+		<ul id="Ul41">
 
-    <li><span>Admin</span></li>
+			<li><span>User</span></li>
 
-</ul>
+			<li><span>Guest</span></li>
 
-@Html.EJ().SplitButton("spltbutton41").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("Ul41").ArrowPosition(ArrowPosition.Right)
+			<li><span>Admin</span></li>
 
-<ul id="Ul41">
+		</ul>
 
-    <li><span>User</span></li>
-
-    <li><span>Guest</span></li>
-
-    <li><span>Admin</span></li>
-
-</ul>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Execute the above code to render the following output.
 
 
 
-![C:/Users/ApoorvahR/AppData/Roaming/Skype/apoorvahr_1880/media_messaging/media_cache/^C01B0D02455D95BBD327414D1C3C7167250FB1C68D0B3EFD4A^pimgpsh_fullsize_distr.jpg](Arrow-Position_images/Arrow-Position_img1.png)
+![](Arrow-Position_images/Arrow-Position_img1.png)
 
 
 

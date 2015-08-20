@@ -31,18 +31,18 @@ ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features
 2. Initialize the corresponding AutoComplete widget in the view page.
 
 
-{% highlight html %}
+   ~~~ html
 
-<div>
+		<div>
 
-    Select Component/s: 
+			Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList")
+		@Html.EJ().Autocomplete("ComponentList")
 
-</div>
+		</div>
 
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 3.  Execute the code to render a AutoComplete widget as follows
@@ -67,8 +67,9 @@ You can assign the required Data from the remote URL by using the DataSource pro
 
 Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
-
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 
+'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
 </div>
 
 
@@ -96,7 +97,9 @@ By default, the AutoComplete is rendered with single-value selection. For multip
 
     Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).Width("500")
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
+ 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).Width("500")
 
 </div>
 
@@ -118,7 +121,9 @@ The following screen shot displays the AutoCompletetextbox with selection visual
 
     Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500")
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
+'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500")
 
 </div>
 
@@ -153,7 +158,10 @@ To enable the DropDown button, you can set ShowPopupButton property to â€˜trueâ€
 {% highlight html %}
 
 <div>
-    Select Component/s: @Html.EJ().Autocomplete("ComponentList").Datasource(d=> d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)
+    Select Component/s: 
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=>
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=>
+f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)
 </div>
 {% endhighlight %}
 

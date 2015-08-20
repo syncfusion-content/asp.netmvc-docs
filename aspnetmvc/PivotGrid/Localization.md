@@ -97,7 +97,7 @@ The following code example illustrates how to localize PivotGrid’s user interf
 }
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
 
 @section ControlsSection{
 
@@ -118,6 +118,7 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
 To apply control side Localization, you can refer the following code example.
 
+{% highlight css %}
 
 ej.PivotGrid.locale["zh-CN"] = {
 
@@ -125,7 +126,7 @@ ej.PivotGrid.locale["zh-CN"] = {
 
 } 
 
-
+{% endhighlight %}
 
 ##Localizing Cube Information
 

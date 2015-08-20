@@ -3,7 +3,7 @@ layout: post
 title: Layout-Customization
 description: layout customization
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

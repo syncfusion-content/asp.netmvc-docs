@@ -3,7 +3,7 @@ layout: post
 title: Angular-Binding
 description: angular binding
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

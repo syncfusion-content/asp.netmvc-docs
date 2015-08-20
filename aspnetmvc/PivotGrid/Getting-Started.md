@@ -31,7 +31,7 @@ You can also pass the required data to PivotGrid and customize it according to y
 
 In this example you can see how PivotGrid component tabulates the Internet Sales Amount over Fiscal year in different Customer Geographic locations 
 
-![Capture](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -57,13 +57,13 @@ Then select Internet application template with Razor view engine and click OK
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-![](Getting-Started_images/Getting-Started_img5.png)
+   ![](Getting-Started_images/Getting-Started_img5.png)
 
 
 
 
 
-![sshot-4](Getting-Started_images/Getting-Started_img6.png)
+   ![](Getting-Started_images/Getting-Started_img6.png)
 
 
 
@@ -74,37 +74,46 @@ Then select Internet application template with Razor view engine and click OK
 
 1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 
-> Note: 1. Use the following code sample while adding scripts and styles  2. Apart from cdn files rest of them can be acquired from the following locationC:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+   > Note:
+   >
+   > 1. Use the following code sample while adding scripts and styles
+   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-{% highlight html %}
-
-
-
-<head>
-
-<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
-
-<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-
-<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
-
-</head>
+   ~~~ html
 
 
-{% endhighlight %}
+
+		<head>
+
+		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
+
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+		</head>
+
+   ~~~
+   {:.prettyprint }
+
+		
 2. Add the below code snippet in the body tag of the _Layout.cshtml page.
 
-{% highlight html %}
-<body>
+   ~~~ html
+   
+		<body>
 
-   @RenderBody()
+		   @RenderBody()
 
-   @Html.EJ().ScriptManager()   
+		   @Html.EJ().ScriptManager()   
 
-</body>
-{% endhighlight %}
+		</body>
+
+   ~~~
+   {:.prettyprint }
 
 ### Add Control in View page
 
@@ -127,13 +136,13 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 1. Right-click the project and select Add > New Folder.  Name the folder as wcf.
 
-![](Getting-Started_images/Getting-Started_img7.png)
+   ![](Getting-Started_images/Getting-Started_img7.png)
 
 
 
 2. Now right click the wcf folder created and select Add > New Item.  
 
-![](Getting-Started_images/Getting-Started_img8.png)
+   ![](Getting-Started_images/Getting-Started_img8.png)
 
 
 
@@ -205,12 +214,15 @@ public interface IPivotGridService
         Dictionary<string, object> MemberExpanded(string action, bool checkedStatus, string parentNode, string tag, string cubeName, string currentReport);
 
     }
-	{% endhighlight %}
+	
+{% endhighlight %}
 	
 ### Add Namespaces
 
 Add the following necessary namespaces required to implement the service methods.
+
 {% highlight C# %}
+
 using System;
 
 using System.Collections.Generic;
@@ -262,23 +274,24 @@ You can add the following methods to the service that are invoked for any server
 
 1. Initialize the PivotGrids helper class. 
 
-{% highlight C# %}
+   ~~~ cs
         PivotGrid htmlHelper = new PivotGrid();        
 
         static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
 
         JavaScriptSerializer serializer = new JavaScriptSerializer();
 
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Add the following relevant service methods.
 
 
-{% highlight C# %}
+   ~~~ cs
 
-//This method provides the required information from the server side when initializing the PivotGrid. 
+		//This method provides the required information from the server side when initializing the PivotGrid. 
 
         public Dictionary<string, object> InitializeGrid(string action, string gridLayout, bool enablePivotFieldList, object customObject)
 
@@ -298,7 +311,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when drill up/down operation is performed in PivotGrid.
+		//This method provides the required information from the server side when drill up/down operation is performed in PivotGrid.
 
         public Dictionary<string, object> DrillGrid(string action, string cellPosition, string currentReport, string headerInfo, string layout, object customObject)
 
@@ -318,7 +331,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when tree node is dropped in PivotTable Field List.
+		//This method provides the required information from the server side when tree node is dropped in PivotTable Field List.
 
         public Dictionary<string, object> NodeDropped(string action, string dropType, string nodeInfo, string filterParams, string currentReport)
 
@@ -332,7 +345,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when filtering values in PivotTable Field List.
+		//This method provides the required information from the server side when filtering values in PivotTable Field List.
 
         public Dictionary<string, object> Filtering(string action, string filterParams, string currentReport)
 
@@ -346,7 +359,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when opening the editor in PivotTable Field List.
+		//This method provides the required information from the server side when opening the editor in PivotTable Field List.
 
          public Dictionary<string, object> FetchMembers(string action, string headerTag, string currentReport)
 
@@ -360,7 +373,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when paging is done in PivotGrid.
+		//This method provides the required information from the server side when paging is done in PivotGrid.
 
         public Dictionary<string, object> Paging(string action, string pagingInfo, string currentReport, string gridLayout, object customObject)
 
@@ -374,7 +387,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when removing the split button from PivotTable Field List.
+		//This method provides the required information from the server side when removing the split button from PivotTable Field List.
 
         public Dictionary<string, object> RemoveButton(string action, string headerInfo, string currentReport)
 
@@ -388,7 +401,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method provides the required information from the server side when expanding member in member editor.
+		//This method provides the required information from the server side when expanding member in member editor.
 
         public Dictionary<string, object> MemberExpanded(string action, bool     checkedStatus, string parentNode, string tag, string cubeName, string currentReport)
 
@@ -404,7 +417,7 @@ You can add the following methods to the service that are invoked for any server
 
         }
 
-//This method carries the information about the default report which when be rendered within PivotGrid initially. 
+		//This method carries the information about the default report which when be rendered within PivotGrid initially. 
 
         private OlapReport CreateOlapReport()
 
@@ -449,187 +462,199 @@ You can add the following methods to the service that are invoked for any server
             return olapReport;
 
         }    
-{% endhighlight %}	
+
+   ~~~
+   {:.prettyprint }		
 
 ### Configure Web.Config
 
 1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config file at root folder.
-{% highlight html %}
+   
+   ~~~ html
 
-<compilation debug="true" targetFramework="4.5">
+		<compilation debug="true" targetFramework="4.5">
 
-      <assemblies>
+		  <assemblies>
 
-        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			<add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        <add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			<add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			<add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        <add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			<add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        <add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			<add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
 
-        <add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
+			<add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
 
-        <add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        <add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        <add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        <add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        <add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.PivotAnalysis.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-        <add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+			<add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
-      </assemblies>
+		  </assemblies>
 
-</compilation>
-{% endhighlight %}
+		</compilation>
 
-> Note: xx.x.x.xx in the above code sample refers to the current version of the Essential Studio running in your system.
+   ~~~
+   {:.prettyprint }
+   
+   > Note: xx.x.x.xx in the above code sample refers to the current version of the Essential Studio running in your system.
 
-The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned as follows.  For example, 12.1 version is illustrated.
+   The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned as follows.  For example, 12.1 version is illustrated.
 
-<table>
-<tr>
-<th>
-MVC Version</th><th>
-MVC Version of Syncfusion dlls</th><th>
-Base Version of Syncfusion dlls</th><th>
-System.Web.Mvc</th><th>
-System.Web.WebPages</th></tr>
-<tr>
-<td>
-MVC3</td><td>
-12.1300.0.43</td><td>
-12.1350.0.43</td><td>
-3.0</td><td>
-1.0</td></tr>
-<tr>
-<td>
-MVC4</td><td>
-12.1400.0.43</td><td>
-12.1400.0.43</td><td>
-4.0</td><td>
-2.0</td></tr>
-<tr>
-<td>
-MVC5</td><td>
-12.1500.0.43</td><td>
-12.1450.0.43</td><td>
-5.0</td><td>
-3.0</td></tr>
-</table>
+   <table>
+   <tr>
+   <th>
+   MVC Version</th><th>
+   MVC Version of Syncfusion dlls</th><th>
+   Base Version of Syncfusion dlls</th><th>
+   System.Web.Mvc</th><th>
+   System.Web.WebPages</th></tr>
+   <tr>
+   <td>
+   MVC3</td><td>
+   12.1300.0.43</td><td>
+   12.1350.0.43</td><td>
+   3.0</td><td>
+   1.0</td></tr>
+   <tr>
+   <td>
+   MVC4</td><td>
+   12.1400.0.43</td><td>
+   12.1400.0.43</td><td>
+   4.0</td><td>
+   2.0</td></tr>
+   <tr>
+   <td>
+   MVC5</td><td>
+   12.1500.0.43</td><td>
+   12.1450.0.43</td><td>
+   5.0</td><td>
+   3.0</td></tr>
+   </table>
 
 2. Add the following Namespaces file using the following code sample to the web.config files at both the root folder and View folder.
 
-{% highlight C# %}
-<namespaces>
+   ~~~ cs
+		<namespaces>
 
-        <add namespace="System.Web.Helpers" />
+			<add namespace="System.Web.Helpers" />
 
-        <add namespace="System.Web.Mvc" />
+			<add namespace="System.Web.Mvc" />
 
-        <add namespace="System.Web.Mvc.Ajax" />
+			<add namespace="System.Web.Mvc.Ajax" />
 
-        <add namespace="System.Web.Mvc.Html" />
+			<add namespace="System.Web.Mvc.Html" />
 
-        <add namespace="System.Web.Optimization" />
+			<add namespace="System.Web.Optimization" />
 
-        <add namespace="System.Web.Routing" />
+			<add namespace="System.Web.Routing" />
 
-        <add namespace="System.Web.WebPages" />
+			<add namespace="System.Web.WebPages" />
 
-        <add namespace="Syncfusion.MVC.EJ"/>
+			<add namespace="Syncfusion.MVC.EJ"/>
 
-        <add namespace="Syncfusion.JavaScript"/>
+			<add namespace="Syncfusion.JavaScript"/>
 
-        <add namespace="Syncfusion.JavaScript.DataVisualization"/>
+			<add namespace="Syncfusion.JavaScript.DataVisualization"/>
 
-</namespaces>
+		</namespaces>
 
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
+   
 3. Register the wcf services in web.config file at root folder by adding the following codes.
 4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.In your appliacation the service name is MvcApplication1. PivotGridService where OlapGridService is the service class name and MvcApplication1 is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
-1. contract: This property indicates the contract of the endpoint is exposing. Here you are referring IPivotGridService contract and hence it is MvcApplication1.IPivotGridService.
-2. binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
-3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
+	1. contract: This property indicates the contract of the endpoint is exposing. Here you are referring IPivotGridService contract and hence it is MvcApplication1.IPivotGridService.
+	2. binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
+	3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
 
 
+   ~~~ html
+   
+		<system.serviceModel>
 
-{% highlight C# %}
-<system.serviceModel>
+			<services>
 
-    <services>
+			  <service name="MvcApplication1.PivotGridService">
 
-      <service name="MvcApplication1.PivotGridService">
+				<endpoint address="" behaviorConfiguration="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"
 
-        <endpoint address="" behaviorConfiguration="MvcApplication1.PivotGridServiceAspNetAjaxBehavior"
+				  binding="webHttpBinding" contract="MvcApplication1.IPivotGridService" />
 
-          binding="webHttpBinding" contract="MvcApplication1.IPivotGridService" />
+			  </service>
 
-      </service>
+			</services>
 
-    </services>
-
-</system.serviceModel>
+		</system.serviceModel>
 
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+   
 5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code sample MvcApplication1.PivotGridServiceAspNetAjaxBehavior would point the OlapGridService class under the namespace MvcApplication1 in PivotGridService.svc.cs file that is the appropriate behavior for the endpoint. 
 
-{% highlight C# %}
-<system.serviceModel>
+   ~~~ html
+   
+		<system.serviceModel>
 
-    <behaviors>
+			<behaviors>
 
-      <endpointBehaviors>
+			  <endpointBehaviors>
 
-        <behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior">
+				<behavior name="MvcApplication1.PivotGridServiceAspNetAjaxBehavior">
 
-          <enableWebScript />
+				  <enableWebScript />
 
-        </behavior>
+				</behavior>
 
-      </endpointBehaviors>
+			  </endpointBehaviors>
 
-    </behaviors>
+			</behaviors>
 
-</system.serviceModel>
-
-
-{% endhighlight %}
-
-> Note: In this example, “MvcApplication1” indicates the name of the project and “PivotGridService” indicates the name of the WCF service created.
+		</system.serviceModel>
 
 
+   ~~~
+   {:.prettyprint }
 
-_. ender()gcriptManager()_ 
+   > Note: In this example, “MvcApplication1” indicates the name of the project and “PivotGridService” indicates the name of the WCF service created.
 
-_lap_
+
+
+   _. ender()gcriptManager()_ 
+
+   _lap_
 
 6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
 
-{% highlight C# %}
-<appSettings>
+   ~~~ cs
+   
+		<appSettings>
 
-    <add key="webpages:Version" value="2.0.0.0" />
+			<add key="webpages:Version" value="2.0.0.0" />
 
-    <add key="webpages:Enabled" value="false" />
+			<add key="webpages:Enabled" value="false" />
 
-    <add key="PreserveLoginUrl" value="true" />
+			<add key="PreserveLoginUrl" value="true" />
 
-    <add key="ClientValidationEnabled" value="true" />
+			<add key="ClientValidationEnabled" value="true" />
 
-    <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+			<add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
-</appSettings>
+		</appSettings>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 ## Configuring routing file
 
@@ -675,7 +700,7 @@ public class RouteConfig
 
 In summary, this getting started tutorial gives you an overview of PivotGrid, its architecture, process flow, how to configure and integrate with a VS application through a simple example that is self-explanatory.
 
-![Capture](Getting-Started_images/Getting-Started_img10.png)
+![](Getting-Started_images/Getting-Started_img10.png)
 
 
 

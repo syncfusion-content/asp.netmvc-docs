@@ -17,7 +17,7 @@ In the View page add NumericTextBox helper, and configure the EnableRTL property
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().NumericTextbox("numeric").Value("11").EnableRTL(true)
 

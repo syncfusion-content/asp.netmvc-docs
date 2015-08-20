@@ -45,9 +45,9 @@ In the following code example, the ColorPicker popup model type is set as Palett
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -159,9 +159,9 @@ PresetType(PresetsType.CandyCrush)</td></tr>
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -183,9 +183,9 @@ The CustomPalette property is a dependent property of Palette and ModelType prop
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -214,8 +214,8 @@ The following steps explain you how to get the ColorPicker popup in DisplayInlin
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight html %}
-[CSHTML]
+{% highlight js %}
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -258,7 +258,7 @@ The core style sheet applies styles related to positioning and size, but are not
 
 {% highlight html %}
 
-[CSHTML]
+
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -309,14 +309,16 @@ The ColorPicker control also allows you to customize its appearance using user-d
 Using this property you can override the existing styles under the theme style sheet. The theme style sheet applies theme-specific styles like colors and backgrounds. In the following example, the value of CssClass property is set as Light-Blue. Light-Blue is added as root class to ColorPicker control at the runtime. From this root class you can customize the ColorPicker control theme.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
-{% highlight html %}
-[CSHTML]
+   
+   ~~~ js
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
- @Html.EJ().ColorPicker("colorPicker").Value("#278787").CssClass("Light-Blue")
+		@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
-{% endhighlight %}
+		 @Html.EJ().ColorPicker("colorPicker").Value("#278787").CssClass("Light-Blue")
+
+   ~~~
+   {:.prettyprint }
 
 2. Custom Css Styles.
 

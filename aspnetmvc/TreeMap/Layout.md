@@ -22,7 +22,7 @@ There are four different TreeMap layouts such as
 
 Squarifiedlayout creates rectangles with best aspect ratio.
 
-{% highlight html %}
+{% highlight js %}
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -58,7 +58,7 @@ Squarifiedlayout creates rectangles with best aspect ratio.
 
 SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
 
-{% highlight html %}
+{% highlight js %}
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -78,13 +78,13 @@ SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays t
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Layout_images/Layout_img2.png)
+![](Layout_images/Layout_img2.png)
 
 ## SliceAndDiceHorizontal Layout
 
 SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and displays them sorted horizontally.
 
-{% highlight html %}
+{% highlight js %}
 
           @(Html.EJ().TreeMap("treemap")
 
@@ -108,7 +108,7 @@ SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and disp
 
 SliceAndDiceVertical layout creates rectangles with high aspect ratio and displays them sorted vertical.
 
-{% highlight html %}
+{% highlight js %}
 
          @(Html.EJ().TreeMap("treemap")
 

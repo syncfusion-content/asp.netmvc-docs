@@ -17,7 +17,7 @@ The Essential ASP.NET MVCColorPicker control provides support for selecting the 
 
 In this example, you can learn how to customize ColorPicker control in a category Application. 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -34,15 +34,12 @@ Use the following steps to create the ColorPicker control.
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page for rendering the ColorPicker window.
 
-{% highlight html %}
+   ~~~ js
 
-[CSHTML]
+		@Html.EJ().ColorPicker("CategoryColor").Value("#278787")
 
-
-
-@Html.EJ().ColorPicker("CategoryColor").Value("#278787")
-
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 3. Run this code to render the resultant output of the above steps.
 
@@ -62,231 +59,228 @@ You can refer to the following link for more information on creation on ListBox
 
 1. The following code example is used to create the Priority form using ListBox control and ColorPicker control.
 
-{% highlight html %}
+   ~~~ html
 
-[CSHTML]
 
-<div class="content-container-fluid">
 
-        <div class="row">
+		<div class="content-container-fluid">
 
-            <div class="sample-area">
+				<div class="row">
 
-                <div class="frame">
+					<div class="sample-area">
 
-                    <div id="control">
+						<div class="frame">
 
-                        <ul id="ColorValues">
+							<div id="control">
 
-                            <li><span class="color high"></span>High</li>
+								<ul id="ColorValues">
 
-                            <li><span class="color normal"></span>Normal</li>
+									<li><span class="color high"></span>High</li>
 
-                            <li><span class="color low"></span>Low</li>
+									<li><span class="color normal"></span>Normal</li>
 
-                        </ul>
+									<li><span class="color low"></span>Low</li>
 
-                        @Html.EJ().ListBox("selectPriority").TargetID("ColorValues")
+								</ul>
 
-                    </div>
+								@Html.EJ().ListBox("selectPriority").TargetID("ColorValues")
 
-                </div>
+							</div>
 
-            </div>
+						</div>
 
-            <div id="Properties">
+					</div>
 
-                <table class="prop-grid">
+					<div id="Properties">
 
-                    <tr class="row">
+						<table class="prop-grid">
 
-                        <td class="column">Name
+							<tr class="row">
 
-                        </td>
+								<td class="column">Name
 
-                        <td class="column">
+								</td>
 
-                            <input type="text" id="categoryName" />
+								<td class="column">
 
-                        </td>
+									<input type="text" id="categoryName" />
 
-                    </tr>
+								</td>
 
-                    <tr class="row">
+							</tr>
 
-                        <td class="column">Color
+							<tr class="row">
 
-                        </td>
+								<td class="column">Color
 
-                        <td class="column">
+								</td>
 
-                            <!--Colorpicker element-->
+								<td class="column">
 
-                            @Html.EJ().ColorPicker("CategoryColor").Value("#278787")
+									<!--Colorpicker element-->
 
-                        </td>
+									@Html.EJ().ColorPicker("CategoryColor").Value("#278787")
 
-                        <td class="column">
+								</td>
 
-                            <!--Add button for add the new category-->                                @Html.EJ().Button("AddCategory").Text("Add").Width("82px").Height("28px").Type(ButtonType.Button).ClientSideEvents(events => events.Click("addCategoryValue"))
+								<td class="column">
 
-                        </td>
+									<!--Add button for add the new category-->                                @Html.EJ().Button("AddCategory").Text("Add").Width("82px").Height("28px").Type(ButtonType.Button).ClientSideEvents(events => events.Click("addCategoryValue"))
 
-                    </tr>
+								</td>
 
-                    <tr class="row">
+							</tr>
 
-                    </tr>
+							<tr class="row">
 
-                </table>
+							</tr>
 
-            </div>
+						</table>
 
-        </div>
+					</div>
 
-    </div>
+				</div>
 
-{% endhighlight %}
+			</div>
+
+   ~~~
+   {:.prettyprint }
 
 2. Add the following style section to align form fields. 
 
-{% highlight css %}
+   ~~~ css
 
-[CSS]
+		<style>
 
+			.content-container-fluid > .row {
 
+				width: 410px;
 
-<style>
+				border: 1px solid #bbbcbb;
 
-    .content-container-fluid > .row {
+				padding: 16px;
 
-        width: 410px;
+			}
 
-        border: 1px solid #bbbcbb;
 
-        padding: 16px;
 
-    }
+			.color.high {
 
+				background-color: red;
 
+			}
 
-    .color.high {
 
-        background-color: red;
 
-    }
+			.color.normal {
 
+				background-color: green;
 
+			}
 
-    .color.normal {
 
-        background-color: green;
 
-    }
+			.color.low {
 
+				background-color: blue;
 
+			}
 
-    .color.low {
 
-        background-color: blue;
 
-    }
+			.sample-area {
 
+				width: 205px;
 
+			}
 
-    .sample-area {
 
-        width: 205px;
 
-    }
+			.sample-area, #Properties {
 
+				display: inline-block;
 
+				float: left;
 
-    .sample-area, #Properties {
+			}
 
-        display: inline-block;
 
-        float: left;
 
-    }
+			#Properties #categoryName {
 
+				width: 140px;
 
+				height: 20px;
 
-    #Properties #categoryName {
+			}
 
-        width: 140px;
 
-        height: 20px;
 
-    }
+			#Properties .column {
 
+				display: inline-block;
 
+				width: 45px;
 
-    #Properties .column {
+				margin: 10px 0 0;
 
-        display: inline-block;
+			}
 
-        width: 45px;
 
-        margin: 10px 0 0;
 
-    }
+			#Properties .row {
 
+				padding: 10px 0px 5px 0px;
 
+			}
 
-    #Properties .row {
 
-        padding: 10px 0px 5px 0px;
 
-    }
+			.color {
 
+				width: 13px;
 
+				height: 13px;
 
-    .color {
+				border: 1px solid;
 
-        width: 13px;
+				display: inline-block;
 
-        height: 13px;
+				margin-right: 6px;
 
-        border: 1px solid;
+				margin-bottom: -3px;
 
-        display: inline-block;
+			}
 
-        margin-right: 6px;
+		</style>
 
-        margin-bottom: -3px;
-
-    }
-
-</style>
-
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 3. Initialize the element in <script> tag.
 
-{% highlight js %}
+   ~~~ js
 
-[JavaScript]
+		<script>
 
-<script>
+			var listBoxObj, colorObj;
 
-    var listBoxObj, colorObj;
+			jQuery(function ($) {
 
-    jQuery(function ($) {
+				//initliaze the listbox with object creation
 
-        //initliaze the listbox with object creation
+				listBoxObj = $("#selectPriority").data('ejListBox');
 
-        listBoxObj = $("#selectPriority").data('ejListBox');
+				//initliaze the colorpicker with object creation
 
-        //initliaze the colorpicker with object creation
+				colorObj = $("#CategoryColor").data('ejColorPicker');        
 
-        colorObj = $("#CategoryColor").data('ejColorPicker');        
+			});
 
-    });
+		</script>
 
-</script>
-
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 4. Run the above code to render the following output.
 
@@ -302,34 +296,34 @@ You can add the value to ListBox with selected color by performing the button cl
 
 1. Initialize the click event to button element in <script> tag.
 
-{% highlight js %}
+   ~~~ js
 
-[JavaScript]
+		<script>
 
-<script>
+				jQuery(function ($) {
 
-        jQuery(function ($) {
+				//reuse the previous section script block            
 
-        //reuse the previous section script block            
+				 //The following function used to add the new value to the listbox control
 
-         //The following function used to add the new value to the listbox control
+				function addCategoryValue() {
 
-        function addCategoryValue() {
+					if ($("#categoryName").val() !== "") {
 
-            if ($("#categoryName").val() !== "") {
+						//To get the selected color from the colorpicker by using getValue()
 
-                //To get the selected color from the colorpicker by using getValue()
+						listBoxObj.addItem("<span class='color' style='background-color: " + colorObj.getValue() + "' ></span>" + $("#categoryName").val());
 
-                listBoxObj.addItem("<span class='color' style='background-color: " + colorObj.getValue() + "' ></span>" + $("#categoryName").val());
+						$("#categoryName").val("");
 
-                $("#categoryName").val("");
+					}
 
-            }
+				}
 
-        }
+		</script>
 
-</script>
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 
 2. The following screenshot illustrates the resultant output after you click Add button.

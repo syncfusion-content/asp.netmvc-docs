@@ -19,7 +19,7 @@ The following screenshot illustrates a Splitter control.
 
 
 
-![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -30,134 +30,141 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page to render the Splitter. You can download the desired mobile and name it as galaxy.jpg. ‘ContentTemplate’ property is used to specify the HTML tags within the helper elements. Here we have used the contentTemplate property to specify the contents of the splitter control.
 
+   ~~~ html
 
 
-{% highlight html %}
+		@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
 
-@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
+		    {
 
-    {
+			p.Add().ContentTemplate(
 
-        p.Add().ContentTemplate(
+			    @<div class="cont">
 
-            @<div class="cont">
+				<h3 class="h3">
 
-                <h3 class="h3">
+				    ASP.NET MVC
 
-                    ASP.NET MVC
-
-                </h3>
-
-
-
-    @*Add Tree Element here*@
+				</h3>
 
 
 
-            </div>).PaneSize("200");
+		    @*Add Tree Element here*@
 
-        p.Add().ContentTemplate(
 
-            @<div class="cont">
 
-                <div class="_content">
+			    </div>).PaneSize("200");
 
-                    Select any product from the tree to show the description.
+			p.Add().ContentTemplate(
 
-                </div>
+			    @<div class="cont">
 
-                <div class="tools des">
+				<div class="_content">
 
-                    <h3>
+				    Select any product from the tree to show the description.
 
-                        Tools
+				</div>
 
-                    </h3>
+				<div class="tools des">
 
-                    <p>
+				    <h3>
 
-                        Essential Tools is an collection of user interface components used to create interactive
+					Tools
 
-                        ASP.NET MVC applications.
+				    </h3>
 
-                    </p>
+				    <p>
 
-                </div>
+					Essential Tools is an collection of user interface components used to create interactive
 
-                <div class="chart des">
+					ASP.NET MVC applications.
 
-                    <h3>
+				    </p>
 
-                        Chart
+				</div>
 
-                    </h3>
+				<div class="chart des">
 
-                    <p> Essential Chart is a business-oriented charting component.</p>
+				    <h3>
 
-                </div>
+					Chart
 
-                <div class="grid des">
+				    </h3>
 
-                    <h3>
+				    <p> Essential Chart is a business-oriented charting component.</p>
 
-                        Grid
+				</div>
 
-                    </h3>
+				<div class="grid des">
 
-                    <p>
+				    <h3>
 
-                        Essential MVC Grid offers full featured a Grid control with extensive support for
+					Grid
 
-                        Grouping and the display of hierarchical data.
+				    </h3>
 
-                    </p>
+				    <p>
 
-                </div>
+					Essential MVC Grid offers full featured a Grid control with extensive support for
 
-            </div>).PaneSize("200");
+					Grouping and the display of hierarchical data.
 
-    }).Height("400").Width("100%").Render();}
+				    </p>
 
-{% endhighlight %}
+				</div>
+
+			    </div>).PaneSize("200");
+
+		    }).Height("400").Width("100%").Render();}
+
+   ~~~
+   {:.prettyprint }
+
+
 
 3. Add the following style in the view page to set the height and width of the Splitter.
 
-{% highlight html %}
+   ~~~ css
 
-        <style type="text/css" class="cssStyles">
+			<style type="text/css" class="cssStyles">
 
-    #outterSplitter {
+		    #outterSplitter {
 
-        margin: 0 auto;
+			margin: 0 auto;
 
-    }
+		    }
 
-    .cont #treeView_Container {
+		    .cont #treeView_Container {
 
-        margin-bottom: 0;
+			margin-bottom: 0;
 
-        border: none;
+			border: none;
 
-    }
+		    }
 
-    .h3, ._content, p {
+		    .h3, ._content, p {
 
-        font-size: 14px;
+			font-size: 14px;
 
-        margin-top: 10px;
+			margin-top: 10px;
 
-        text-indent: 10px;
+			text-indent: 10px;
 
-    }
+		    }
 
-    .des {
+		    .des {
 
-        display: none;
+			display: none;
 
-    }
+		    }
 
-</style>
-{% endhighlight %}
+		</style>
+   ~~~
+   {:.prettyprint }
+
+
+
+
 
 ##Configure Tree View
 
@@ -215,7 +222,7 @@ Add the following code example in the corresponding view page. ‘HtmlAttributes
 
 Add the following code example in the view page to set action in Splitter control to view the image.
 
-{% highlight html %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -239,17 +246,7 @@ Add the following code example in the view page to set action in Splitter contro
 {% endhighlight %}
 Execute the above code example to render the following output.
 
-
-
-
-
-
-
-
-
-
-
-![C:/Users/labuser/Desktop/autocomplete imgs/mysplit.PNG](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 

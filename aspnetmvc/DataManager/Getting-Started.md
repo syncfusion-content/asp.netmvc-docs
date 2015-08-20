@@ -22,12 +22,12 @@ This section briefly describes how to make a connection to WCF “Northwind” O
 To define connection to data source, you can use the DataManager control. The data source can be local or remote. Local data source is the local data and remote data source is any web service. 
 
 The local data is set as data source by using the following code example.
-{% highlight html %}
+{% highlight js %}
 <%--connection local reference--%>
 
 @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
 
-[Controller]
+
 
 public class HomeController : Controller
 
@@ -73,7 +73,7 @@ public class HomeController : Controller
 {% endhighlight  %}
 In this application, as you have web service for NorthWind database, you can assign the web service URL link to the URL property of DataManager, and you can enable crossDomain to retrieve data from another domain.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
@@ -83,12 +83,8 @@ You can use the ej.Query to generate the report from web service.
 ## Binding with Grid Control
 
 You can bind the DataManager with Grid by defining the ID of DataManager in the DataManagerID property of the Grid control.
-{% highlight html %}
+{% highlight js %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
-
-
-
-
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -132,13 +128,9 @@ The where function is used to filter the records based on the specified filter c
 
 The select property of ejQuery is used to retrieve the specified columns from the data source.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
-
-
-
-
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -181,7 +173,7 @@ You can generate the Sort query to sort the Freight column in descending order a
 
 The sortBy property of ejQuery is used to sort the records based on the field and direction specified.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
@@ -220,20 +212,6 @@ When you run the sort query and bind the result to the table, the following tabl
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 _Data with Sorting_
 
 
@@ -243,7 +221,7 @@ _Data with Sorting_
 You can generate the Paging query to get the top four orders and it is ran by using the DataManager.  
 
 The Page property of ejQuery is used to retrieve the records based on the given pageIndex and pageSize.
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)

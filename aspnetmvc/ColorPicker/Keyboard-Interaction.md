@@ -70,16 +70,22 @@ The following steps explain how you can enable keyboard interaction for ColorPic
 
 1. In the CSHTML page, configure the ColorPicker widget and enable keyboard interaction by the accesskey property.
 
-{% highlight html %}
+{% highlight js %}
 
-<table>
-<tr>
-<td>
-[CSHTML]@*In the CSHTML page, add the Html helpers to render ColorPicker widget and enable keyboard interaction by the accesskey property*@ @Html.EJ().ColorPicker("colorPicker").Value("#278787")</td></tr>
-<tr>
-<td>
-[JAVASCRIPT]<script>    jQuery(function ($) {                $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#colorPickerWrapper").focus();                }            });    });</script></td></tr>
-</table>
+@*In the CSHTML page, add the Html helpers to render ColorPicker widget and enable keyboard interaction by the accesskey property*@
+@Html.EJ().ColorPicker("colorPicker").Value("#278787")
+{% endhighlight  %}
+{% highlight js %}
+<script> 
+   jQuery(function ($) {
+   $(document).on("keydown", function (e) { 
+		if (e.altKey && e.keyCode === 74) { // j- key code.    
+			$("#colorPickerWrapper").focus();       
+		}   
+	});
+  });
+</script>
+
 {% endhighlight  %}
 
 The following screenshot displays the output of the above code example.

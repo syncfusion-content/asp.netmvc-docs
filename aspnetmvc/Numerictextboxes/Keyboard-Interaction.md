@@ -46,17 +46,13 @@ In the View page add NumericTextBox helper. Set the accesskey property to the Nu
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @{IDictionary<string, object> numericAttribute = new Dictionary<string, object>();
 
   numericAttribute.Add("accesskey", "j");
 
 }
-
-
-
-
 
 @Html.EJ().NumericTextbox("numeric").Name("numeric").Value("11").HtmlAttributes(numericAttribute)
 

@@ -10,7 +10,7 @@ documentation: ug
 # Searching
 
 Searching is a basic query technique in the Data Manager. It is used to filter the records from the entire data source based on the search key parameter.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders"))
 
 

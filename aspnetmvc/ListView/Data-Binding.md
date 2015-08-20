@@ -140,7 +140,7 @@ You can use the following code example to give you the exact output.
 
 ### Screenshot:
 
-{{ '![](Data-Binding_images/Data-Binding_img1.png)' | markdownify }}
+![](Data-Binding_images/Data-Binding_img1.png)
 
 
 
@@ -196,9 +196,7 @@ Please refer the following code examples.
 
 ### Screenshots:
 
-{{ '![](Data-Binding_images/Data-Binding_img2.png)' | markdownify }}
-
-
+![](Data-Binding_images/Data-Binding_img2.png)
 
 _Field Settings_
 
@@ -207,8 +205,6 @@ When you click on the parent item, it navigates to its corresponding child list 
 
 
 ![](Data-Binding_images/Data-Binding_img3.png)
-
-
 
 _Field Settings_
 

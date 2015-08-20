@@ -42,207 +42,206 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 2. Please add the below code in layout._cshtml file head section to add the necessary script and CSS files to render the DropDownList.
 
-{% highlight html %}
+   ~~~ html
 
-<head>
+		<head>
 
-<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-
-
-    <!--Scripts-->
-
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+			<!--Scripts-->
+
+			<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-</head>
 
-{% endhighlight %}
 
-Create a CSHTML file in View page and add the following code sample to it. 
+			<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+		</head>
+
+   ~~~
+   {:.prettyprint }
+
+   Create a CSHTML file in View page and add the following code sample to it. 
 
 3. Add the below code to render the DropDownList widgets.
 
+   ~~~ html
+
+		<div class="content">
+
+			<div class="control">
+
+				<div class="ball-icon"></div>
+
+				<div class="ball-txt" style="">WORLD CUP FOOTBALL</div>
+
+				<br />
+
+				<table>
+
+					<tr>
+
+						<td class="tdcls"><span class="txt">
+
+							<label>Select Group</label></span></td>
+
+						<td class="tdcls"><span class="txt">
+
+							<label>Select Country</label></span></td>
+
+					</tr>
+
+					<tr>
+
+						<td class="tdcls">
+
+						@Html.EJ().DropDownList("GroupsList").WatermarkText("group")
+
+						<td class="tdcls">
+
+						@Html.EJ().DropDownList("CountryList").WatermarkText("country")
+
+					</tr>
+
+				</table>
 
 
 
+				<div class="votebox">
 
-{% highlight html %}
+					@Html.EJ().Button("voter").Text("Vote").CssClass("e-btn")
 
-<div class="content">
+				</div>
 
-    <div class="control">
+			</div>
 
-        <div class="ball-icon"></div>
-
-        <div class="ball-txt" style="">WORLD CUP FOOTBALL</div>
-
-        <br />
-
-        <table>
-
-            <tr>
-
-                <td class="tdcls"><span class="txt">
-
-                    <label>Select Group</label></span></td>
-
-                <td class="tdcls"><span class="txt">
-
-                    <label>Select Country</label></span></td>
-
-            </tr>
-
-            <tr>
-
-                <td class="tdcls">
-
-                @Html.EJ().DropDownList("GroupsList").WatermarkText("group")
-
-                <td class="tdcls">
-
-                @Html.EJ().DropDownList("CountryList").WatermarkText("country")
-
-            </tr>
-
-        </table>
+		</div>
 
 
-
-        <div class="votebox">
-
-            @Html.EJ().Button("voter").Text("Vote").CssClass("e-btn")
-
-        </div>
-
-    </div>
-
-</div>
-
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 4. Add the following style section for the DropDownList widgets alignment. Add the following location in the URL path for the background image. [http://js.syncfusion.com/UG/Web/Content/football.png](http://js.syncfusion.com/UG/Web/Content/football.png)
 
 
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css">
+		<style type="text/css">
 
-    .content {
+			.content {
 
-        height: 250px;
+				height: 250px;
 
-        width: 400px;
+				width: 400px;
 
-        border:1px groove;
+				border:1px groove;
 
-    }
-
-
-
-    .control {
-
-        margin-left: 20px;
-
-        margin-top: 10px;
-
-    }
+			}
 
 
 
-    .ball-icon {
+			.control {
 
-        display: inline-block;
+				margin-left: 20px;
 
-        background-image: url("http://js.syncfusion.com/UG/Web/Content/football.png");
+				margin-top: 10px;
 
-        background-repeat: no-repeat;
-
-        background-size: contain;
-
-        height: 50px;
-
-        width: 50px;
-
-    }
+			}
 
 
 
-    .ball-txt {
+			.ball-icon {
 
-        display: inline-block;
+				display: inline-block;
 
-        font-size: 20px;
+				background-image: url("http://js.syncfusion.com/UG/Web/Content/football.png");
 
-        font-weight: bolder;
+				background-repeat: no-repeat;
 
-        height: 50px;
+				background-size: contain;
 
-        position: relative;
+				height: 50px;
 
-        text-align: center;
+				width: 50px;
 
-        top: -20px;
-
-    }
+			}
 
 
 
+			.ball-txt {
+
+				display: inline-block;
+
+				font-size: 20px;
+
+				font-weight: bolder;
+
+				height: 50px;
+
+				position: relative;
+
+				text-align: center;
+
+				top: -20px;
+
+			}
 
 
-    .votebox {
-
-        margin-left: 150px;
-
-        margin-top: 50px;
-
-    }
 
 
 
-    .txt {
+			.votebox {
 
-        display: block;
+				margin-left: 150px;
 
-        margin-bottom: 12px;
+				margin-top: 50px;
 
-    }
-
-
-
-    .tdcls {
-
-        width: 200px;
-
-    }
-
-</style>
+			}
 
 
-{% endhighlight %}
+
+			.txt {
+
+				display: block;
+
+				margin-bottom: 12px;
+
+			}
+
+
+
+			.tdcls {
+
+				width: 200px;
+
+			}
+
+		</style>
+
+
+   ~~~
+   {:.prettyprint }
 
 
 5. Execute the above code example to render the following output.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+   ![](Getting-Started_images/Getting-Started_img2.png)
 
-
+   _Figure 2: DropDown Appearance without DropDown content_
 
 ## Configure Data Source 
 
@@ -280,7 +279,7 @@ Execute the above code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+_Figure 3: DropDown Appearance with Datasource content_
 
 
 
@@ -600,13 +599,13 @@ Execute the above code sample to render the following DropDownList with DataSour
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
+_Figure 4: DropDown Appearance with Datasource content for group_
 
 
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-
+_Figure 5: DropDown Appearance for Datasource contents with country flag_
 
 ## Set the Cascading Option 
 
@@ -646,7 +645,7 @@ Execute the above code example to render the DropDownList with Cascading Option.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-
+_Figure 6: DropDown Appearance for cascading_
 
 Initially, you can select the group from the popup of the first DropDownList. After you select the option,   selected value is loaded.
 
@@ -654,7 +653,7 @@ Initially, you can select the group from the popup of the first DropDownList. Af
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-
+_Figure 7: Cascading DropDown Apperance for Select group_
 
 Based on the group selection in the first DropDownList, the DataSource in the second DropDownList is loaded, and the corresponding countries are shown when clicking the drop-down button as illustrated in the following screen shot.
 
@@ -666,7 +665,7 @@ From the DropDownList called Country, you can select the desired country.
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
-
+_Figure 8: DropDown Appearance for cascading after selection of group and country_
 
 ## Set the Vote process in the DropDownList Widget
 
@@ -715,5 +714,5 @@ Execute the above code sample to display the DropDownList widgets. Select the va
 
 ![](Getting-Started_images/Getting-Started_img9.png)
 
-
+_Figure 9: DropDown Apperance for Vote process_
 

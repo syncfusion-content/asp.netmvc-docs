@@ -50,45 +50,38 @@ The following steps explains you to enable keyboard interaction for Dialog contr
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
+   ~~~ html
+   
+		// In the CSHTML page add the Dialog widget using helpers.
+		@{Html.EJ().Dialog("keyboardDialog").Title("WinRT")
+		.ContentTemplate(@<div>Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span> It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps. </div>).Width(550).Render();}
 
+   ~~~
+   {:.prettyprint }
 
+   ~~~ js
+    
+	<script type="text/javascript">
+	
+	//Control focus key
+	$(document).on("keydown", function (e) { 
+	if (e.altKey && e.keyCode === 74) { 
+		// j- key code.
+		$("#keyboardDialog").focus(); 
+	    }
+	});
+	</script>
 
-
-{% highlight html %}
-[CSHTML]// In the CSHTML page add the Dialog widget using helpers. @{Html.EJ().Dialog("keyboardDialog").Title("WinRT").ContentTemplate(@<div>Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span> It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps. </div>).Width(550).Render();}
-{% endhighlight  %}
-{% highlight js %}
-[JavaScript]    <script type="text/javascript">//Control focus key        $(document).on("keydown", function (e) {            if (e.altKey && e.keyCode === 74) { // j- key code.                $("#keyboardDialog").focus();            }        });     </script>
-{% endhighlight  %}
-
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Run the sample and press Alt + j key to focus the Dialog control. You can perform the specified option using keyboard shortcuts.
 
+   ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia key.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
-
-
-_Figure 32: Dialog with keyboard interaction._
+   _Figure 32: Dialog with keyboard interaction._
 
 
 

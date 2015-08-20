@@ -27,17 +27,19 @@ The following steps guide you to add group of Tiles for creating a home page tha
 2. To add a Tile control, call Tile helper. You can specify the tile name, size and image url as follows.
 3. Add the following code example to the corresponding view page.
 
-{% highlight html %}
+   ~~~ js
 
-       @Html.EJ().Tile("tile1")
+		       @Html.EJ().Tile("tile1")
 
-          .TileSize(TileSize.Medium)
+			  .TileSize(TileSize.Medium)
 
-          .ImageUrl("http://js.syncfusion.com/ug/web/content/tile/map.png")
+			  .ImageUrl("http://js.syncfusion.com/ug/web/content/tile/map.png")
 
-          .Text("Maps")
+			  .Text("Maps")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 4. Run the application to render the following output.
 
@@ -48,7 +50,7 @@ In this scenario, a home page is designed using tile for easy navigation. Theref
 
 Refer to the following code example.
 
-{% highlight html %}
+{% highlight js %}
 
 <div id="tile" style="margin-top: 45px;">
 

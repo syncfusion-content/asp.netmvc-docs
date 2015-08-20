@@ -17,7 +17,7 @@ ASP.NET MVC Slider provides support to display a Slider within the webpage. The 
 
 The following screenshot illustrates the functionality of Slider control. You can select a mobile model in the dropdown to purchase it at any rate specified in the Mobile RateSlider and you can also specify the number of mobiles you need by selecting the Mobile CountSlider. Simultaneously, you can observe the change in mobile rate and count using Sliders.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -27,173 +27,176 @@ ASP.NET MVC Slider controlallows you to switch between different ranges of input
 
 1. Create an MVC Project and add necessary assembly, scripts, and styles to it.
 
-Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+   Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 
 2. Add the following code example for Slider to the corresponding view page.
 
-{% highlight html %}
+   ~~~ html
 
-<div class="frame">
+		<div class="frame">
 
-    <div class="inner">
+			<div class="inner">
 
-<div class="ctrllabel">
+		<div class="ctrllabel">
 
-        Select a Mobile
+				Select a Mobile
 
-    </div>    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
+			</div>    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
 
-    <div id="mobileList">
+			<div id="mobileList">
 
-        <ul>
+				<ul>
 
-            <li>Nokia Lumia</li>
+					<li>Nokia Lumia</li>
 
-            <li>Nokia Asha</li>
+					<li>Nokia Asha</li>
 
-            <li>Xolo</li>
+					<li>Xolo</li>
 
-            <li>Samsung Galaxy</li>
+					<li>Samsung Galaxy</li>
 
-            <li>Moto G</li>
+					<li>Moto G</li>
 
-        </ul> 
+				</ul> 
 
-    </div>
+			</div>
 
-        <span class="columnleft">
+				<span class="columnleft">
 
-        <span>Mobile Rate</span>
+				<span>Mobile Rate</span>
 
-    </span>
+			</span>
 
-    <span class="columnright">
+			<span class="columnright">
 
-        <span>Rs </span><span class="value"></span>
+				<span>Rs </span><span class="value"></span>
 
-</span>    
+		</span>    
 
-@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+		@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-<span class="Columnleft">
+		<span class="Columnleft">
 
-            <span>Mobile Count</span>
+					<span>Mobile Count</span>
 
-        </span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+				</span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-        You are choosing:
+				You are choosing:
 
-        <span id="EventLog"></span>
+				<span id="EventLog"></span>
 
-       </div>
+			   </div>
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following styles for Sliders.
 
 
-{% highlight html %}
-<style>
+   ~~~ css
+		<style>
 
-.frame
+		.frame
 
-{
+		{
 
-    width:400px;
+			width:400px;
 
-    height:200px;
+			height:200px;
 
-    border:1px solid black;
+			border:1px solid black;
 
-    margin-right:100px;
+			margin-right:100px;
 
-}
+		}
 
-.ctrllabel, .loan
+		.ctrllabel, .loan
 
-{
+		{
 
-    font-weight:bold;
+			font-weight:bold;
 
-}
+		}
 
-.columnright
+		.columnright
 
-{
+		{
 
-    font-weight:bold;
+			font-weight:bold;
 
-    float:right;
+			float:right;
 
-}
+		}
 
-.inner
+		.inner
 
-{
+		{
 
-    width:300px;
+			width:300px;
 
-    height:150px;
+			height:150px;
 
-    padding:20px 40px 20px 30px;
+			padding:20px 40px 20px 30px;
 
- } 
+		 } 
 
-.mobileList
+		.mobileList
 
-    {
+			{
 
-        display:block;
+				display:block;
 
-    }
+			}
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 4. Add the following script to the Slider.
 
-{% highlight html %}
+   ~~~ js
 
-<script>
+		<script>
 
-            var mobileObj, rateObj, countObj;
+				var mobileObj, rateObj, countObj;
 
-            function onchange(args) {
+				function onchange(args) {
 
-                $('#' + args.id).parent().prev().find('.value').html(args.value)
+					$('#' + args.id).parent().prev().find('.value').html(args.value)
 
-                show();
+					show();
 
-            }
+				}
 
-            function show() {
+				function show() {
 
-                selectObj = $('#selectMobile').data('ejDropDownList');
+					selectObj = $('#selectMobile').data('ejDropDownList');
 
-                rateObj = $('#rateSlider').data('ejSlider');
+					rateObj = $('#rateSlider').data('ejSlider');
 
-                countObj = $('#countSlider').data('ejSlider');
+					countObj = $('#countSlider').data('ejSlider');
 
-                var x = selectObj.getValue();
+					var x = selectObj.getValue();
 
-                var y = rateObj.getValue();
+					var y = rateObj.getValue();
 
-                var z = countObj.getValue();
+					var z = countObj.getValue();
 
-     $('#EventLog').html("\n" + x + "\n" + "at Rs: " + y + "\n" + "and count is " + z);
+					$('#EventLog').html("\n" + x + "\n" + "at Rs: " + y + "\n" + "and count is " + z);
 
-}
+					}
 
-</script>
+		</script>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 5. The following screenshot displays the final output in Slider creation.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss.PNG](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -206,187 +209,191 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 
 
-{% highlight html %}
+   ~~~ html
 
-<div class="frame">
+		<div class="frame">
 
-    <div class="inner">
+			<div class="inner">
 
-        <div id="loanheading">
+				<div id="loanheading">
 
-            Details of Loan
+					Details of Loan
 
-        </div>
+				</div>
 
-        <span class="columnleft">
+				<span class="columnleft">
 
-            <span>Loan Amount</span>
+					<span>Loan Amount</span>
 
-        </span>
+				</span>
 
-        <span class="columnright">
+				<span class="columnright">
 
-            <span>Rs </span><span class="value">25000</span>
+					<span>Rs </span><span class="value">25000</span>
 
-        </span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+				</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-        <span class="columnleft">
+				<span class="columnleft">
 
-            <span>Interest Rate</span>
+					<span>Interest Rate</span>
 
-        </span>
+				</span>
 
-        <span class="columnright">
+				<span class="columnright">
 
-            <span class="value"></span><span>% pa</span>
+					<span class="value"></span><span>% pa</span>
 
-        </span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+				</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-        <span class="columnleft">
+				<span class="columnleft">
 
-            <span>Tenure</span>
+					<span>Tenure</span>
 
-        </span>
+				</span>
 
-        <span class="columnright">
+				<span class="columnright">
 
-            <span class="value"></span><span>Years</span>
+					<span class="value"></span><span>Years</span>
 
-        </span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
+				</span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
 
-            Your Monthly EMI Amount is
+					Your Monthly EMI Amount is
 
-            <span id="EventLog"></span>
+					<span id="EventLog"></span>
 
-        </div>
+				</div>
 
-    </div>
+			</div>
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Include the following styles for Slider.
 
 
-{% highlight html %}
-<style>
+   ~~~ html
+   
+		<style>
 
-.frame
+		.frame
 
-{
+		{
 
-    width:350px;
+			width:350px;
 
-    height:200px;
+			height:200px;
 
-    border:1px solid black;
+			border:1px solid black;
 
-}
+		}
 
-.inner
+		.inner
 
-{
+		{
 
-     width:250px;
+			 width:250px;
 
-    height:150px;
+			height:150px;
 
-    padding:20px 30px;
+			padding:20px 30px;
 
-}
+		}
 
-#loanheading
+		#loanheading
 
-{
+		{
 
-font-weight:bold;
+		font-weight:bold;
 
-}
+		}
 
-.columnleft
+		.columnleft
 
-{
+		{
 
-    font-weight:bold;
+			font-weight:bold;
 
-}
+		}
 
-.columnright
+		.columnright
 
-{
+		{
 
-    float:right;
+			float:right;
 
-    font-weight:normal;
+			font-weight:normal;
 
-}
+		}
 
-</style>
+		</style>
 
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 4. Include the following script to calculate the EMI amount.
 
 
 
-{% highlight html %}
+   ~~~ html
 
-<script type="text/javascript">
+		<script type="text/javascript">
 
-            var loanObj, interestObj, tenureObj;
+				var loanObj, interestObj, tenureObj;
 
-            function onchange(args) {
+				function onchange(args) {
 
-                $('#' + args.id).parent().prev().find('.value').html(args.value)
+					$('#' + args.id).parent().prev().find('.value').html(args.value)
 
-                calculate();
+					calculate();
 
-            }
+				}
 
-            function calculate() {
+				function calculate() {
 
-                loanObj = $('#loanSlider').data('ejSlider');
+					loanObj = $('#loanSlider').data('ejSlider');
 
-                interestObj = $('#interestSlider').data('ejSlider');
+					interestObj = $('#interestSlider').data('ejSlider');
 
-                tenureObj = $('#tenureSlider').data('ejSlider');
+					tenureObj = $('#tenureSlider').data('ejSlider');
 
-                var loan = loanObj.getValue(), interest = interestObj.getValue(), tenure = tenureObj.getValue();
+					var loan = loanObj.getValue(), interest = interestObj.getValue(), tenure = tenureObj.getValue();
 
-                var P = loan;
+					var P = loan;
 
-                var y = interest / 1200;
+					var y = interest / 1200;
 
-                var tenureamt = tenure * 12;
+					var tenureamt = tenure * 12;
 
-                //actual processing
+					//actual processing
 
-                var top = y * (Math.pow((1 + y), tenureamt));
+					var top = y * (Math.pow((1 + y), tenureamt));
 
-                var bottom = (Math.pow((1 + y), tenureamt)) - 1;
+					var bottom = (Math.pow((1 + y), tenureamt)) - 1;
 
-                var ans = top / bottom;
+					var ans = top / bottom;
 
-                var final = P * ans;
+					var final = P * ans;
 
-                var z = Math.round(final);
+					var z = Math.round(final);
 
-                $('#EventLog').html("Rs: " + z);
+					$('#EventLog').html("Rs: " + z);
 
-            }
+				}
 
-        </script>
+			</script>
 		
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 The following screenshot displays the calculated EMI amount using Slider.
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/ss1.PNG](Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img3.png)
 
 
 

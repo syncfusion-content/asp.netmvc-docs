@@ -36,67 +36,70 @@ Figure 1: Progress Bar
 ASP.NET MVC Progress Bar control indicates the current progress of an operation like uploading a document through a simple interface. You can easily create the Progress bar control using simple HTML helpers as follows.
 
 1. Create an MVC Project and add necessary assemblies, scripts and styles to it. 
-Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+   Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 
 
 
 2. Add the following code to the corresponding view page to render Progress Bar.
 
+   ~~~ html
+   
+		<div class="start" >
 
-{% highlight html %}
-<div class="start" >
+				 <label for="start">Password</label>
 
-         <label for="start">Password</label>
+					   <input type="password" id="password"/>
 
-               <input type="password" id="password"/>
+		  @Html.EJ().ProgressBar("progressBar").Value(20).Height("20px").Width("180px") 
 
-  @Html.EJ().ProgressBar("progressBar").Value(20).Height("20px").Width("180px") 
+		 </div>
 
- </div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following styles to show the Progress Bar and Textbox.
 
 
-{% highlight html %}
- <style>
+   ~~~ css
+   
+		 <style>
 
- .start {
+		 .start {
 
-            margin-left: 105px;
+					margin-left: 105px;
 
-            color: green;
+					color: green;
 
-            font-size: 18px;
+					font-size: 18px;
 
-        }
+				}
 
-.control {
+		.control {
 
-            margin-bottom: 5px;
+					margin-bottom: 5px;
 
-             margin-left: 230px;
+					 margin-left: 230px;
 
-        }
+				}
 
- #progressBar
+		 #progressBar
 
-   {
+		   {
 
-    margin-top: 10px;
+			margin-top: 10px;
 
-   }
+		   }
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 4. Execute the above code to render the following output. 
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prodefault.PNG](Getting-Started_images/Getting-Started_img5.png)
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
 
@@ -104,84 +107,85 @@ Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettings
 
 In this scenario, the advancement of the Progress Bar is changed according to the length and special characters present in the text of the password field. This is achieved by binding the change in the properties of your control and by checking the length of the password field.
 
-{% highlight html %}
-       <script> 
+{% highlight js %}
 
-            var progresObj, k = 10, i = 0;
+		   <script> 
 
-            $(document).keydown(function() {
+				var progresObj, k = 10, i = 0;
 
-                i = $("#password").val().length;
+				$(document).keydown(function() {
 
-                if (i < 4) {
+					i = $("#password").val().length;
 
-                    progress2();
+					if (i < 4) {
 
-                    $('.e-progress').css({ background: 'red' });
+						progress2();
 
-                } else if (i > 4 && i < 7) {
+						$('.e-progress').css({ background: 'red' });
 
-                    progress1();
+					} else if (i > 4 && i < 7) {
 
-                    $('.e-progress').css({ background: 'yellow' });
+						progress1();
 
-                } else if (i > 7) {
+						$('.e-progress').css({ background: 'yellow' });
 
-                    var pwd = $("#password").val();
+					} else if (i > 7) {
 
-
-
-                    if (/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
-
-                        progress();
-
-                        $('.e-progress').css({ background: 'green' });
-
-                    }
-
-                }
-
-            });
+						var pwd = $("#password").val();
 
 
 
+						if (/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
 
+							progress();
 
-            $(function () {
+							$('.e-progress').css({ background: 'green' });
 
-                progresObj = $("#progressBar").data("ejProgressBar");       
+						}
 
-            });
+					}
 
-            function progress() {
-
-                progresObj.option("text", " verystrong");
-
-                progresObj.option("percentage", k + 90);
-
-            }
-
-            function progress1() {
-
-                progresObj.option("text", "strong");
-
-                progresObj.option("percentage", k + 50);
-
-            }
-
-            function progress2() {
-
-                progresObj.option("percentage", k + 10);
-
-                progresObj.option("text", "weak");  
+				});
 
 
 
-            }
+
+
+				$(function () {
+
+					progresObj = $("#progressBar").data("ejProgressBar");       
+
+				});
+
+				function progress() {
+
+					progresObj.option("text", " verystrong");
+
+					progresObj.option("percentage", k + 90);
+
+				}
+
+				function progress1() {
+
+					progresObj.option("text", "strong");
+
+					progresObj.option("percentage", k + 50);
+
+				}
+
+				function progress2() {
+
+					progresObj.option("percentage", k + 10);
+
+					progresObj.option("text", "weak");  
 
 
 
-        </script>
+				}
+
+
+
+			</script>
 
 {% endhighlight %}
 
@@ -201,7 +205,7 @@ The following screenshot displays a Progress Bar control for the above scenario.
 
 
 
-![C:/Users/Arulraj/Desktop/Untitled-4.png](Getting-Started_images/Getting-Started_img8.png)
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
 

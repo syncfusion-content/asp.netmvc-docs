@@ -17,7 +17,7 @@ The following code explains you to enable multiple panel for Accordion.
 
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, render Accordion with corresponding data and set EnableMultipleOpen property as true.
 

@@ -18,10 +18,7 @@ The Splitter supports both vertical and horizontal orientation of the pane. You 
 1. In the View page, add the Splitter helper and configure the ‘Orientation’ property as shown below.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 

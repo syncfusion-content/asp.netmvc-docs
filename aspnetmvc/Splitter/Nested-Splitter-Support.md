@@ -18,10 +18,7 @@ The following steps explain the implementation of the “nestedsplitter”option
 1. In the View page, add the Splitter helper and configure the outer and inner splitters. As you can see we have specified a heper function to render the inner splitter. A helper is a reusable snippet of Razor sytnax exposed as a method, and is intended for rendering HTML to the browse. To use helper within another helper we have specified as a separate function as shown below.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -125,7 +122,7 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight css %}
 
 
 

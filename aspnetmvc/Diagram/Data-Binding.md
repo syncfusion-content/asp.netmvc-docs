@@ -166,7 +166,16 @@ The following code illustrates how to bind remote data to the Diagram.
 
 <div id="main">
 
-        @Html.EJ().Diagram("OrgChart").DataSourceSettings(s => s.DataSource("http://mvc.syncfusion.com/Services/Northwnd.svc/").Query(" ej.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName')").Id("EmployeeID").Parent("ReportsTo").TableName("Employees")).Layout(s => s.Type(Syncfusion.JavaScript.DataVisualization.DiagramEnums.LayoutTypes.HierarchicalTree)).DefaultSettings(s => s.Node(new Syncfusion.JavaScript.DataVisualization.Models.Diagram.Node() { Width = 50, Height = 50, FillColor = "blue", Labels = new Syncfusion.JavaScript.DataVisualization.Models.Collections.Collection() { new Syncfusion.JavaScript.DataVisualization.Models.Diagram.Label() { Name = "label1"} } }));
+        @Html.EJ().Diagram("OrgChart").DataSourceSettings(s =>
+		s.DataSource("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+		.Query(" ej.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName')")
+		.Id("EmployeeID").Parent("ReportsTo").TableName("Employees")).Layout(s => 
+		s.Type(Syncfusion.JavaScript.DataVisualization.DiagramEnums.LayoutTypes.HierarchicalTree)).DefaultSettings(s => 
+		s.Node(new Syncfusion.JavaScript.DataVisualization.Models.Diagram.Node() {
+		Width = 50, Height = 50, FillColor = "blue", Labels = new Syncfusion.JavaScript.DataVisualization.Models.Collections.Collection() {
+		new Syncfusion.JavaScript.DataVisualization.Models.Diagram.Label() { Name = "label1"} 
+		} 
+		}));
 
  </div>    
 

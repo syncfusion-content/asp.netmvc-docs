@@ -18,7 +18,7 @@ You can specify time interval for each Tile update/animation using UpdateInterva
 Refer to the following code examples.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).Type(LiveTileType.Flip).UpdateInterval(2500).ImageUrl(new string[] { "http://js.syncfusion.com/UG/Web/Content/tile/people_1.png","http://js.syncfusion.com/UG/Web/Content/tile/people_2.png"}); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)                    
@@ -31,7 +31,7 @@ In ImageTemplateId property, you can give Live Tile images outside the Tile rend
 Refer to the following code examples. 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).ImageTemplateId(new string[] { "temp1", "temp2" }); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)
@@ -53,7 +53,7 @@ You can specify the array of images for Live Tile through CSS classes by using I
 Refer to the following code examples.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Tile("tile").LiveTile(live => { live.Enabled(true).ImageClass(new string[] { "people1", "people2" }); }).ImagePosition(TileImagePosition.Fill).Text("Peoples").TileSize(TileSize.Medium)

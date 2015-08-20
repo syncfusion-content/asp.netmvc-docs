@@ -25,54 +25,56 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
 2. Add the following code to the corresponding view page for Captcha rendering.
 
 
-{% highlight html %}
-[CSHTML]
+   ~~~ javascript
 
-<div>
 
-    @Html.EJ().Captcha("SignUpCaptcha")
+		<div>
 
-</div>
+			@Html.EJ().Captcha("SignUpCaptcha")
 
-{% endhighlight %}
+		</div>
+
+   ~~~
+   {:.prettyprint }
 
 3. Add the following handler codes to the web.config file for Captcha image rendering.
 
 
-{% highlight html %}
-[web.config]
+   ~~~ html
 
-<!--add the following code in <system.web>-->
 
- <system.web>
+		<!--add the following code in <system.web>-->
 
-    <httpHandlers>
+		 <system.web>
 
-      <add verb="*" path="captimage.axd" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89" />
+			<httpHandlers>
 
-    </httpHandlers>
+			  <add verb="*" path="captimage.axd" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3D67ED1F87D44C89" />
 
-</system.web>
+			</httpHandlers>
 
-<!--add the following code in <system.webserver>-->
+		</system.web>
 
-<system.webserver>    
+		<!--add the following code in <system.webserver>-->
 
------------------------
+		<system.webserver>    
 
------------------------
+		-----------------------
 
-    <handlers>      
+		-----------------------
 
-      <add verb="*" path="captimage.axd" name="syncfusion_generatetools" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />      
+			<handlers>      
 
-    </handlers>
+			  <add verb="*" path="captimage.axd" name="syncfusion_generatetools" type="Syncfusion.JavaScript.ImageHandler, Syncfusion.EJ, Version=XX.XXXX.X.XX, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />      
 
-</system.webserver>
+			</handlers>
 
-{% endhighlight %}
+		</system.webserver>
 
-> Note: Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36
+   ~~~
+   {:.prettyprint }
+
+> Note: Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36 
 
 
 
@@ -91,20 +93,20 @@ The Captcha controlsupports captcha in the form of audio and when you click the 
 1. Add the following code example to view page to render captcha with Audio and Refresh.
 
 
-{% highlight html %}
-[CSHTML]
+   ~~~ javascript
 
-   <div>        @Html.EJ().Captcha("SignUpCaptcha").EnableAudio(true).EnableRefreshImage(true).RequestMapper("Refresh")
 
-   </div>
+		   <div>        @Html.EJ().Captcha("SignUpCaptcha").EnableAudio(true).EnableRefreshImage(true).RequestMapper("Refresh")
 
-{% endhighlight %}
+		   </div>
+
+   ~~~
+   {:.prettyprint }
 
 2. Add the following code example to corresponding controller page to render captcha with Audio and Refresh.
 
 
-{% highlight html %}
-[CONTROLLER]
+   ~~~ cs
 
 
 
@@ -117,8 +119,8 @@ The Captcha controlsupports captcha in the form of audio and when you click the 
         }
 
 
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 The following screenshot displays the output of the above codes.
 
@@ -133,200 +135,202 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 1. Add the following code example to view page for auto validation.
 
 
-{% highlight html %}
-[CSHTML]( CaptchaFeatures)
+   ~~~ javascript
+   
+		( CaptchaFeatures)
 
 
 
-@using (Html.BeginForm("CaptchaFeatures", "Captcha", FormMethod.Post))
+		@using (Html.BeginForm("CaptchaFeatures", "Captcha", FormMethod.Post))
 
-{  
+		{  
 
-<div class="frame" style="width: 500px">
+		<div class="frame" style="width: 500px">
 
-        <div class="control" style="width: 560px;">
+				<div class="control" style="width: 560px;">
 
-            <table class="tableprop">
+					<table class="tableprop">
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                        <h2 style="text-align:center">
+								<h2 style="text-align:center">
 
-                            Sign Up</h2>
+									Sign Up</h2>
 
-                        <br>
+								<br>
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                        <span class="NodeText">Enter Your Name</span>
+								<span class="NodeText">Enter Your Name</span>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        <input type="text" name="username" />
+								<input type="text" name="username" />
 
-                        @if (!(bool)ViewBag.NameStatus)
+								@if (!(bool)ViewBag.NameStatus)
 
-                        {<span style="color: red">Invalid Value</span>}
+								{<span style="color: red">Invalid Value</span>}
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                        <span class="NodeText">Email</span>
+								<span class="NodeText">Email</span>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        <input type="text" name="email" />
+								<input type="text" name="email" />
 
-                        @if (!(bool)ViewBag.EmailStatus)
+								@if (!(bool)ViewBag.EmailStatus)
 
-                        {<span style="color: red">Invalid Value</span>}
+								{<span style="color: red">Invalid Value</span>}
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                        <span class="NodeText">Enter Your Password</span>
+								<span class="NodeText">Enter Your Password</span>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        <input type="password" name="password" />
+								<input type="password" name="password" />
 
-                        @if (!(bool)ViewBag.PasswordStatus)
+								@if (!(bool)ViewBag.PasswordStatus)
 
-                        {<span style="color: red">Invalid Password</span>}
+								{<span style="color: red">Invalid Password</span>}
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                        <span class="NodeText">Re-Enter Your Password</span>
+								<span class="NodeText">Re-Enter Your Password</span>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        <input type="password" name="repassword" />
+								<input type="password" name="repassword" />
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        <div>
+								<div>
 
-                            @Html.EJ().Captcha("myCaptcha").EnableRefreshImage(true).EnableAudio(true).EnableAutoValidation(true).RequestMapper("Refresh").CustomErrorMessage("Invalid captcha code entered. Please try again.").TargetButton("submit")
+									@Html.EJ().Captcha("myCaptcha").EnableRefreshImage(true).EnableAudio(true).EnableAutoValidation(true).RequestMapper("Refresh").CustomErrorMessage("Invalid captcha code entered. Please try again.").TargetButton("submit")
 
-                        </div>
+								</div>
 
-                        <br />
+								<br />
 
-                        <br />
+								<br />
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-                <tr>
+						<tr>
 
-                    <td>
+							<td>
 
-                    </td>
+							</td>
 
-                    <td>
+							<td>
 
-                        @Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit").Type(ButtonType.Submit)
+								@Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit").Type(ButtonType.Submit)
 
-                    </td>
+							</td>
 
-                </tr>
+						</tr>
 
-            </table>           
+					</table>           
 
-        </div>
+				</div>
 
-    </div>       
+			</div>       
 
-}
+		}
 
 
 
 
-[CSHTML]( CaptchaSuccess)
+		( CaptchaSuccess)
 
-<div class="frame" style="height: 300px; width: 500px; border: 1px solid gray; padding: 10px;
+		<div class="frame" style="height: 300px; width: 500px; border: 1px solid gray; padding: 10px;
 
-    background: #f9f9f9">
+			background: #f9f9f9">
 
-    <div class="control">
+			<div class="control">
 
-        <table>
+				<table>
 
-            <tr>
+					<tr>
 
-                <td style="padding: 50px;">
+						<td style="padding: 50px;">
 
-                    <br>
+							<br>
 
-                    <br>
+							<br>
 
-                    <h2>
+							<h2>
 
-                        Thank you for registering.</h2>
+								Thank you for registering.</h2>
 
-                    <br>
+							<br>
 
-                </td>
+						</td>
 
-            </tr>
+					</tr>
 
-        </table>
+				</table>
 
-    </div>
+			</div>
 
-</div> 
+		</div> 
+		
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
+
 
 2. Add the following code example to corresponding controller page for captcha with Auto-Validation support.
 
 
-{% highlight c# %}
-[CONTROLLER]
-
+   ~~~ cs
 
 
         public ActionResult CaptchaFeatures()
@@ -343,7 +347,6 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
 
         }
 
-        [HttpPost]
 
         public ActionResult CaptchaFeatures(FormCollection Values)
 
@@ -404,7 +407,9 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
         }
 
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+   
 The following screenshot is the output for the above code example.
 
 ![](Getting-Started_images/Getting-Started_img4.png)

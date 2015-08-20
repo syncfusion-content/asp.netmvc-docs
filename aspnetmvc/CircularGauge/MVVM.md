@@ -3,7 +3,7 @@ layout: post
 title: MVVM
 description: mvvm
 platform: ejmvc
-control: Circular Gauge
+control: CircularGauge
 documentation: ug
 ---
 
@@ -12,8 +12,6 @@ documentation: ug
 ## Angular JS
 
 Circular Gauge contains angular support. You can add object as well as array object in the Circular Gauge. The two way binding support is given to the pointer value, minimum scale value and maximum scale value. 
-
-
 
 ## Rendering the Circular Gauge
 
@@ -488,8 +486,6 @@ Figure 62: Circular gauge with two way binding in Angular JS
 
 {% highlight html %}
 
-
-[MVC]
 
 <div id="CircularGauge1"
 

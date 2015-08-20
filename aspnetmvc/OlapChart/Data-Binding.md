@@ -3,7 +3,7 @@ layout: post
 title: Data-Binding
 description: data binding
 platform: ejmvc
-control: OLAP Chart
+control: OLAPChart
 documentation: ug
 ---
 
@@ -19,13 +19,13 @@ The following code illustrates how to connect to an offline cube:
 
 {% highlight c# %}
 
-[C#]
 
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\
 
 Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
+
 {% endhighlight  %}
 
 ### Binding OLAP Chart to the SQL Server (Local)
@@ -34,11 +34,11 @@ The following code illustrates how to connect to a local Cube in SQL Server:
 
 {% highlight c# %}
 
-[C#]
 
 string connectionString = "Data source=localhost; Initial Catalog=Adventure Works DW;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
+
 {% endhighlight %}
 
 ### XML/A
@@ -55,7 +55,6 @@ The following code illustrates how to connect to the SSAS server available onlin
 
 {% highlight c# %}
 
-[C#]
 
 static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
 
@@ -68,7 +67,6 @@ The following code illustrates how to connect to the Mondrian Server:
 
 
 {% highlight c# %}
-[C#]
 
 string connectionString = @"Data Source = http://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;";
 
@@ -83,7 +81,6 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers
 The following code illustrates how to connect to Active Pivot Server:
 
 {% highlight c# %}
-[C#]
 
 string connectionString= @"Data Source=http://localhost:8081/var_s/xmla;  Initial Catalog=VaRCubes; User ID=; Password=; Transport Compression=None;";
 

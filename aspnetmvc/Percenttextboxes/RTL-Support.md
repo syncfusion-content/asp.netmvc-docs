@@ -15,11 +15,7 @@ PercentageTextBox provides RTL (Right-To-Left) support. The alignment of Percent
 
 In the View page add PercentageTextBox helper, and configure the EnableRTL property.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("22").EnableRTL(true)
 

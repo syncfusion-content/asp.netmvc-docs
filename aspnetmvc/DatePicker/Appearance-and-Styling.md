@@ -36,29 +36,33 @@ The following code example is used to render the DatePicker widget with customiz
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ js
 
-@*The following code example depicts the way to bind data to the DatePicker widget with customized stylet*@
+		@*The following code example depicts the way to bind data to the DatePicker widget with customized stylet*@
 
-@Html.EJ().DatePicker("datepicker").CssClass("custom")
+		@Html.EJ().DatePicker("datepicker").CssClass("custom")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
-2.  Add the following styles to render DatePicker with customized style.
 
-{% highlight css %}
+2. Add the following styles to render DatePicker with customized style.
 
-<style type="text/css">
+   ~~~ css
 
-    .custom .e-header {
+		<style type="text/css">
 
-      background-color:blue;
+			.custom .e-header {
 
-    }
+			  background-color:blue;
 
-</style>
+			}
 
-{% endhighlight %}
+		</style>
+
+   ~~~
+   {:.prettyprint }
+
 
 3. The following screenshot displays the output for the above code.
 
@@ -134,19 +138,21 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 1. In the CSHTML page, add the following code to render the DatePicker widget and enable keyboard interaction with accesskey “j”.
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget and enable keyboard interaction by setting the accesskey property.*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget and enable keyboard interaction by setting the accesskey property.*@
 
-@{IDictionary<string, object> parameters = new Dictionary<string, object>();
+		@{IDictionary<string, object> parameters = new Dictionary<string, object>();
 
-    parameters.Add("accesskey", "j");
+			parameters.Add("accesskey", "j");
 
-}
+		}
 
-@Html.EJ().DatePicker("datepicker").HtmlAttributes(parameters)
+		@Html.EJ().DatePicker("datepicker").HtmlAttributes(parameters)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. Run the sample, press [Access key](http://en.wikipedia.org/wiki/Access_key) + J to focus in the DatePicker widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 

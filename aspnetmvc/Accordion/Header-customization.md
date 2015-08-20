@@ -19,7 +19,7 @@ The following code explains to enable Collapsible state for Accordion using mvc 
 
 {% highlight html %}
 
-[CSHTML]
+
 
 // In the View page, render Accordion with corresponding data and enable Collapsible property.
 
@@ -76,7 +76,7 @@ Accordion widget provides you support to set the event, where the headers should
 The following code explains you to configure header expand event for Accordion.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, render Accordion with corresponding data and configure the Events property.
 
@@ -129,7 +129,7 @@ Specify the selected item in Accordion panel
 The following code explains you to configure selected item for Accordion.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, render Accordion with corresponding data and configure selected item for Accordion based on the index.
 
@@ -180,7 +180,7 @@ In Accordion widget you can select multiple panel items using SelectedItems prop
 
 The following code explains to configure selected items for Accordion.
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, render Accordion with corresponding data and configure multiple items selection for Accordion.
 

@@ -3,7 +3,7 @@ layout: post
 title: Data-Binding
 description: data binding
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: RTL-Support
 description: rtl support
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 
@@ -15,9 +15,6 @@ The following steps explains you the details about rendering the button with Rig
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
-
-
-
 {% highlight html %}
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
@@ -28,7 +25,7 @@ The following steps explains you the details about rendering the button with Rig
 
 
 
-<div class="spltspan">
+	<div class="spltspan">
 
         @Html.EJ().SplitButton("spltbutton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
 

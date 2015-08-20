@@ -68,11 +68,11 @@ Opens the popup window </td></tr>
 
 The following steps explains you to enable keyboard interaction for a dropdown textbox.
 
-1. In an HTML page, add a <input> element to configure Dropdownlist widget and enable keyboard interaction by setting the accesskey property
+1. In an HTML page, add a &lt;input&gt; element to configure Dropdownlist widget and enable keyboard interaction by setting the accesskey property
 
 
 
-1. Add the below code to render the dropdown list.
+2. Add the below code to render the dropdown list.
 
 
 
@@ -91,7 +91,7 @@ EJ().DropDownList("dropdownlist").TargetID("list")
 		   </ul></div></td></tr>
 {% endhighlight %}
 
-{% highlight JavaScript %}
+{% highlight js %}
 // Render Dropdown list control
      <script type="text/javascript">
 	 $(function () {

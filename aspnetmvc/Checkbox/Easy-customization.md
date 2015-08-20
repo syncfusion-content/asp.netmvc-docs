@@ -14,9 +14,9 @@ documentation: ug
 Using Checked property, you can set the state of Checkbox. When checked property is true then tick mark is displayed and Checkbox is in checked state. When it is false, the tick mark is not displayed is in non tri-state and Checkbox is in unchecked state. When you want to use this Checked property, then checkbox should be in non Tri-state and EnableTriState property should be false.
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
     @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -60,13 +60,7 @@ When you enable Tri-state, then the Checkbox includes the indeterminate state. T
 
 The following steps explains you the details about rendering the Checkbox with Tri-state options.
 
-
-
-
-
-{% highlight html %}
-
-[CSHTML]
+{% highlight js %}
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -126,9 +120,9 @@ The following steps explains you the details about rendering the Checkbox with s
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -162,7 +156,6 @@ Execute the above code to render the following output.
 
 
 ![](Easy-customization_images/Easy-customization_img3.png)
-{:.image }
 
 
 _Checkbox in three different states_
@@ -189,9 +182,9 @@ The following steps explains you the details about rendering the Checkbox with d
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -230,9 +223,9 @@ The following steps explains you the details about rendering the Checkbox with t
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -261,9 +254,9 @@ Specifies the corner of Checkbox in rounded shape. Checkbox doesn’t have round
 
 The following steps explains you the details about rendering the Checkbox with rounded corner.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -286,8 +279,6 @@ Execute the above code to render the following output.
 
 
 ![](Easy-customization_images/Easy-customization_img6.png)
-{:.image }
-
 
 _Checkbox with non-rounded & rounded corner_
 

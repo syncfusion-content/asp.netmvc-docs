@@ -7,15 +7,15 @@ control: PDF
 documentation: ug
 ---
 
-## TextElement
+# TextElement
 
 TextElement is used to render texts using custom fonts, size and style in the page of the PDF document. You can also modify it to include hyperlinks, ordered and unordered list, html styled text, and so on. These are explained in the following topics.
 
-{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_52.jpg](TextElement_images/TextElement_img1.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_52.jpg](TextElement_images/TextElement_img1.jpeg)
 
 
-### Draw Right-To-Left Text
+
+## Draw Right-To-Left Text
 
 Essential PDF provides support for drawing RTL languages into the PDF document.
 
@@ -30,7 +30,7 @@ The StringFormat class encapsulates text layout information (such as alignment, 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -76,9 +76,9 @@ doc.Save("Output.pdf");
 
 doc.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -124,7 +124,9 @@ doc.Save("Output.pdf")
 
 doc.Close(True)
 
-### HTML STYLED TEXT
+{% endhighlight %}
+
+## HTML STYLED TEXT
 
 Essential PDF provides you support to render the HTML string in a PDF document that can flow to multiple pages by using the PdfHTMLTextElement class. The PdfHTMLTextElement class provides you support for a limited set of HTML tags that are sufficient to render format text in the PDF document. It draws the HTML string at the specified location with the selected size, brush and font. You can also align the text by using the TextAlign property.
 
@@ -145,7 +147,7 @@ The following code example illustrates how to render the HTML string in a PDF do
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -199,9 +201,9 @@ doc.Save("Output.pdf");
 
 doc.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -251,7 +253,9 @@ doc.Save("Output.pdf")
 
 doc.Close(True)
 
-### Automatic Fields
+{% endhighlight %}
+
+## Automatic Fields
 
 Automatic Fields are special objects that display information calculated automatically just before the document is saved. The automatic fields are usually used to display information like page number, page count, etc., when you are not sure about the value while laying out objects across multiple pages.
 
@@ -263,9 +267,7 @@ The following are the fields displayed:
 * Creation and current date
 * Other document information
 
-{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](TextElement_images/TextElement_img2.jpeg)' | markdownify }}
-{:.image }
-_Note: These fields are not always evaluated at the moment of constructing the document._
+> Note: These fields are not always evaluated at the moment of constructing the document.
 
 
 
@@ -283,13 +285,13 @@ Numeric fields have an additional NumberingStyle property. There are five poss
 
 Brief descriptions on the various numbering fields are given as follows.
 
-_Table_ _4__: List of Numbering fields with description_
+_Table_ _4_: List of Numbering fields with description
 
 <table>
 <tr>
-<td>
-PdfPageNumberField</td><td>
-Specifies thepage number on which the field is drawn.</td></tr>
+<th>
+PdfPageNumberField</th><th>
+Specifies thepage number on which the field is drawn.</th></tr>
 <tr>
 <td>
 PdfPageCountField</td><td>
@@ -311,7 +313,8 @@ Specifies thenumber of sections within a document.</td></tr>
 PdfCreationDateField</td><td>
 Specifies the creation date of the document.</td></tr>
 </table>
-#### Page number field
+
+### Page number field
 
 The Essential PDF has the ability to number document's pages in an automated way. Page number field defines a common numbering system for a set of consecutive pages and the visual aspect of the printed page number.
 
@@ -319,7 +322,7 @@ The following code example illustrates how to display page numbers. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -361,9 +364,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -403,7 +406,9 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-Page count field
+{% endhighlight %}
+
+#### Page count field
 
 The Essential PDF provides the ability to display document's page count in an automated way.  Page count field displays the actual number of pages added to the document.
 
@@ -411,7 +416,7 @@ The Essential PDF provides the ability to display document's page count in an au
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -453,9 +458,9 @@ document.Save("Output.pdf");
 
 document.Close(true);          
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -495,7 +500,9 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-Creation Date Time field
+{% endhighlight %}
+
+#### Creation Date Time field
 
 The Essential PDF provides the ability to display creation date time in an automated way. You can draw the Automatic Fields on the PdfTemplate and set them as the document template or manually draw them on the necessary pages. The values of the fields are automatically populated on each copy of the template.
 
@@ -503,7 +510,7 @@ The following code example illustrates how to use datetime field in template
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -553,9 +560,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -603,7 +610,9 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-Composite field
+{% endhighlight %}
+
+#### Composite field
 
 Composite field comprises any number of automatic fields. You can add many number of automatic fields in the composite field.
 
@@ -611,7 +620,7 @@ The following code example illustrates how to use composite fields
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -661,9 +670,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -711,7 +720,9 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-### Hyperlinks
+{% endhighlight %}
+
+## Hyperlinks
 
 In PDF, a hyperlink in a document can open webpages using the default browser, activated by clicking on the text. 
 
@@ -721,7 +732,7 @@ You can create hyperlinks in a PDF document by using the PdfTextWebLink class.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -765,9 +776,9 @@ document.Save("Output.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -811,13 +822,15 @@ document.Save("Output.pdf")
 
 document.Close(True)
 
-### Pagination
+{% endhighlight %}
+
+## Pagination
 
 Text in a PDF document can flow through multiple pages. Layout format plays an important role in drawing or adding very large contents to the Pdf document. You may or may not need the text to flow across pages. Also, you might want to specify a location where the contents should start to paginate. In such cases, the layout format plays an important role. . The PdfLayoutFormat class helps you in specifying the layout type (paginate or fit page) and the paginate bounds. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -881,9 +894,9 @@ PdfTextLayoutResult result = element.Draw(page, bounds, layoutFormat);
 
 doc.Save("Output.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -947,15 +960,15 @@ Dim result As PdfTextLayoutResult = element.Draw(page, bounds, layoutFormat)
 
 doc.Save("Output.pdf")
 
+{% endhighlight %}
 
 
 
-
-{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_53.jpg](TextElement_images/TextElement_img3.jpeg)' | markdownify }}
-{:.image }
+![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_53.jpg](TextElement_images/TextElement_img3.jpeg)
 
 
-### Ordered Lists
+
+## Ordered Lists
 
 Essential PDF allows you to create an ordered list in the document. Ordered List isrepresented by the PdfOrderedList class and can be numerical or alphabetical.
 
@@ -965,13 +978,13 @@ Initialize Lists
 
 You can create new instances of the PdfOrderedList class by using the following constructors.
 
-_Table_ _5__: List of constructors_
+_Table_ _5_: List of constructors_
 
 <table>
 <tr>
-<td>
-PdfOrderedList():</td><td>
-Creates list with default settings.</td></tr>
+<th>
+PdfOrderedList():</th><th>
+Creates list with default settings.</th></tr>
 <tr>
 <td>
 PdfOrderedList(PdfListItemCollection items):</td><td>
@@ -997,13 +1010,13 @@ List Marker
 
 Ordered list has ordered markers that are represented by the PdfOrderedMarker class. To create a new instance of the ordered marker, you can use the following constructors.
 
-_Table_ _6__: List of constructors_
+_Table_ _6_: List of constructors_
 
 <table>
 <tr>
-<td>
-PdfOrderedMarker(PdfNumberStyle style, PdfFont font):</td><td>
-Creates marker by using the PdfNumberStyle and specified font.</td></tr>
+<th>
+PdfOrderedMarker(PdfNumberStyle style, PdfFont font):</th><th>
+Creates marker by using the PdfNumberStyle and specified font.</th></tr>
 <tr>
 <td>
 PdfOrderedMarker (PdfNumberStyle style, string finalizer, PdfFont font):</td><td>
@@ -1017,7 +1030,7 @@ Creates marker with the number style, font, finalizer, delimiter, and the specif
 
 Default list marker contains Number style.
 
-### UnOrdered List 
+## UnOrdered List 
 
 Essential Pdf also provides support to render unordered List that isrepresented by the PdfUnorderedList class. An Unordered list can be bullets, circle or an image. 
 
@@ -1025,7 +1038,7 @@ Initialize Lists
 
 You can create a new instance of the PdfUnorderedList class by using the following constructors.
 
-_Table_ _7__: List of constructors_
+_Table_ _7_: List of constructors_
 
 <table>
 <tr>
@@ -1053,7 +1066,8 @@ Creates list from the specified text. It splits the text by using the "\n" symbo
 PdfUnorderedList (string text, PdfUnorderedMarker marker):</td><td>
 Creates list from the specified text and with the specified marker. It splits text by using the "\n" symbol and creates a collection of items.</td></tr>
 </table>
-List Marker
+
+#### List Marker
 
 Unordered list has an unordered marker that is represented by the PdfUnorderedMarker class. Unordered marker has the marker style represented by thePdfUnorderedMarkerStyle class. The following marker styles are supported. 
 
@@ -1072,7 +1086,7 @@ To use the CustomString, CustomImage or CustomTemplate style, you need to s
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1172,9 +1186,9 @@ document.Save("Sample.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1274,7 +1288,9 @@ document.Save("Sample.pdf")
 
 document.Close(True)
 
-### Rich Text 
+{% endhighlight %}
+
+## Rich Text 
 
 The Rich Text Format (RTF) specification provides you a format for text and graphics interchange that can be used with different output devices, operating environments, and operating systems.
 
@@ -1287,7 +1303,7 @@ The following code illustrates how to draw an RTF text into bitmap and metafile 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1331,9 +1347,9 @@ doc.Save("Output.pdf");
 
 doc.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1377,9 +1393,9 @@ doc.Save("Output.pdf")
 
 doc.Close(True)
 
+{% endhighlight %}
 
+![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_54.jpg](TextElement_images/TextElement_img4.jpeg)
 
-{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_54.jpg](TextElement_images/TextElement_img4.jpeg)' | markdownify }}
-{:.image }
 
 

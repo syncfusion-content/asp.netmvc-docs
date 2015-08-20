@@ -35,7 +35,7 @@ The following example describes the way to use localization in NumericTextBox.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().NumericTextbox("numeric").Value("12345").Locale("de-DE")
 

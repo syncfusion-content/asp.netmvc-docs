@@ -42,144 +42,98 @@ To open or close the Dialog widget by using client side API:
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
-Render input button controls for performing open and close actions.
+   Render input button controls for performing open and close actions.
 
-{% highlight html %}
+   ~~~ html
 
 
-@{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@<div>
+		@{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-        <p>
+				<p>
 
-            Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
+					Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
 
-        </p>
+				</p>
 
-        <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
+				<p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
 
-        <p>Essential Grid is designed for performance and can easily handle millions of records. </p>
+				<p>Essential Grid is designed for performance and can easily handle millions of records. </p>
 
-        <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
+				<p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
 
-    </div>).Render();}
+			</div>).Render();}
 
 
 
-    <input type="button" id="btnDialogOpen" class="e-btn" value="Dialog Open" />
+			<input type="button" id="btnDialogOpen" class="e-btn" value="Dialog Open" />
 
-    <input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" />
+			<input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" />
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
+   ~~~ js
 
 
+		<script type="text/javascript">
 
+			$("#dialogAPI").ejDialog({
 
+				width: 500,
 
-{% highlight JS %}
+				height: 300
 
-[Javascript]
+			});
 
 
 
+			eDialog = $("#dialogAPI").data("ejDialog"); /* getting ejDialog object */
 
 
-<script type="text/javascript">
 
-    $("#dialogAPI").ejDialog({
+			$("#btnDialogOpen").ejButton({ "click": "onOpen", width: "95px" });
 
-        width: 500,
+			$("#btnDialogClose").ejButton({ "click": "onClose", width: "95px" });
 
-        height: 300
 
-    });
 
+			function onOpen() {
 
+				if (eDialog.model)
 
-    eDialog = $("#dialogAPI").data("ejDialog"); /* getting ejDialog object */
+					eDialog.open(); /* open the ejDialog widget */
 
+			}
 
 
-    $("#btnDialogOpen").ejButton({ "click": "onOpen", width: "95px" });
 
-    $("#btnDialogClose").ejButton({ "click": "onClose", width: "95px" });
+			function onClose() {
 
+				eDialog.close(); /* close the ejDialog widget */
 
+			}
 
-    function onOpen() {
+		</script>
 
-        if (eDialog.model)
+   ~~~
+   {:.prettyprint }
 
-            eDialog.open(); /* open the ejDialog widget */
 
-    }
 
+   The output of Dialog open is as follows.
 
+   ![](Client-Side-APIs_images/Client-Side-APIs_img1.png)
 
-    function onClose() {
+   _Figure21: Dialog is opened_
 
-        eDialog.close(); /* close the ejDialog widget */
+2. The output of Dialog close is as follows.     
 
-    }
+   If we click the dialog close button, in the click event  dialog close method calls to close the dialog.
 
-</script>
+   ![](Client-Side-APIs_images/Client-Side-APIs_img2.png)
 
-{% endhighlight  %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The output of Dialog open is as follows.
-
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img1.png)
-
-
-
-_Figure21: Dialog is opened_
-
-3.The output of Dialog close is as follows.     
-
-
-
-            If we click the dialog close button, in the click event  dialog close method calls to close the dialog.
-
-
-
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img2.png)
-
-
-
-_Figure22: Dialog is closed_                                                                     
+   _Figure22: Dialog is closed_                                                                     
 
 ## IsOpened
 
@@ -189,191 +143,186 @@ To check the Dialog widget state by using client side API:
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
-Render input button controls for performing open and close actions.
+   Render input button controls for performing open and close actions.
 
-{% highlight html %}
+   ~~~ html
 
-[CHTML]
 
-// In the CSHTML page add the Dialog widget using helpers and set IsOpened to ‘true’. 
+		// In the CSHTML page add the Dialog widget using helpers and set IsOpened to ‘true’. 
 
 
 
-@Html.EJ().Button("btnOpen").Text("Click to open dialog").ClientSideEvents(evt => evt.Click("onclick"))
+		@Html.EJ().Button("btnOpen").Text("Click to open dialog").ClientSideEvents(evt => evt.Click("onclick"))
 
-<div class="control">
+		<div class="control">
 
-    @{Html.EJ().Dialog("dialogAPI").Title("Essential Grid").ContentTemplate(@<div style="margin: 5px 14px">
+			@{Html.EJ().Dialog("dialogAPI").Title("Essential Grid").ContentTemplate(@<div style="margin: 5px 14px">
 
-            <p>
+					<p>
 
-                Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
+						Essential Grid for ASP.NET MVC is a <span>lightweight, AJAX-enabled, high-performance grid component</span> built especially to suit the programming model of the ASP.NET MVC framework.
 
-            </p>
+					</p>
 
-            <p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
+					<p>It has a rich feature set that includes <span>hierarchies, grouping, sorting, paging, data binding, editing, filtering, and several built-in styles.</span> </p>
 
-            <p>Essential Grid is designed for performance and can easily handle millions of records. </p>
+					<p>Essential Grid is designed for performance and can easily handle millions of records. </p>
 
-            <p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
+					<p>AJAX is extensively used to reduce traffic—only the required data is sent between the client and server, minimizing data transfer and response time.</p>
 
-        </div>).Content(".control").ClientSideEvents(evt => evt.Close("onDialogClose")).Render();}
+				</div>).Content(".control").ClientSideEvents(evt => evt.Close("onDialogClose")).Render();}
 
-</div>
+		</div>
 
 
 
-<div class="row">
+		<div class="row">
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        Dialog Open
+				Dialog Open
 
-    </div>
+			</div>
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        @Html.EJ().Button("btnDialogOpen").Width("107px").Text("Dialog Open").ClientSideEvents(evt => evt.Click("onOpen"))
+				@Html.EJ().Button("btnDialogOpen").Width("107px").Text("Dialog Open").ClientSideEvents(evt => evt.Click("onOpen"))
 
-    </div>
+			</div>
 
-</div>
+		</div>
 
-<div class="row">
+		<div class="row">
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        Dialog Close
+				Dialog Close
 
-    </div>
+			</div>
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        @Html.EJ().Button("btnDialogClose").Width("107px").Text("Dialog Close").ClientSideEvents(evt => evt.Click("onClose"))
+				@Html.EJ().Button("btnDialogClose").Width("107px").Text("Dialog Close").ClientSideEvents(evt => evt.Click("onClose"))
 
-    </div>
+			</div>
 
-</div>
+		</div>
 
-<div class="row">
+		<div class="row">
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        Dialog IsOpened
+				Dialog IsOpened
 
-    </div>
+			</div>
 
-    <div class="col-md-3">
+			<div class="col-md-3">
 
-        @Html.EJ().Button("btnDialogIsOpen").Width("107px").Text("Dialog IsOpen").ClientSideEvents(evt => evt.Click("onIsOpen"))
+				@Html.EJ().Button("btnDialogIsOpen").Width("107px").Text("Dialog IsOpen").ClientSideEvents(evt => evt.Click("onIsOpen"))
 
-    </div>
+			</div>
 
-</div>
+		</div>
 
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
 
-At initially set the width and height to the dialog then create object for that dialog component, using this object to accessing the methods whether the dialog is open or not.
+   At initially set the width and height to the dialog then create object for that dialog component, using this object to accessing the methods whether the dialog is open or not.
 
 
 
-{% highlight js %}
+   ~~~ js
 
-[JavaScript]
+			<script type="text/javascript">
 
+				$("#dialogAPI").ejDialog({
 
+					width: 500,
 
-    <script type="text/javascript">
+					height: 300
 
-        $("#dialogAPI").ejDialog({
+				});
 
-            width: 500,
 
-            height: 300
 
-        });
+		   eDialog = $("#dialogAPI").data("ejDialog"); /* getting ejDialog object */
 
 
 
-eDialog = $("#dialogAPI").data("ejDialog"); /* getting ejDialog object */
+				$("#btnDialogOpen").ejButton({ "click": "onOpen", width: "95px" });
 
+				$("#btnDialogClose").ejButton({ "click": "onClose", width: "95px" });
 
+				$("#btnDialogIsOpen").ejButton({ "click": "onIsOpen", width: "95px" });
 
-        $("#btnDialogOpen").ejButton({ "click": "onOpen", width: "95px" });
 
-        $("#btnDialogClose").ejButton({ "click": "onClose", width: "95px" });
 
-        $("#btnDialogIsOpen").ejButton({ "click": "onIsOpen", width: "95px" });
+			   function onOpen() {
 
+					if (eDialog.model) 
 
+						eDialog.open(); /* open the ejDialog widget */
 
-       function onOpen() {
+				}
 
-            if (eDialog.model) 
 
-                eDialog.open(); /* open the ejDialog widget */
 
-        }
+				function onClose() {
 
+		eDialog.close(); /* close the ejDialog widget */
 
+				}   
 
-        function onClose() {
 
-eDialog.close(); /* close the ejDialog widget */
 
-        }   
+				function onIsOpen() {
 
+					if (eDialog.model) {
 
+		var _isopen = eDialog.isOpened(); /* checking the state of ejDialog widget */ 
 
-        function onIsOpen() {
+						if (_isopen)
 
-            if (eDialog.model) {
+							alert("Dialog Open");
 
-var _isopen = eDialog.isOpened(); /* checking the state of ejDialog widget */ 
+						else
 
-                if (_isopen)
+							alert("Dialog Closed");
 
-                    alert("Dialog Open");
+					}
 
-                else
+					else
 
-                    alert("Dialog Closed");
+						alert("Dialog is in Destoryed state");
 
-            }
+				}
 
-            else
+					eDialog = $("#dialogAPI").data("ejDialog");            
 
-                alert("Dialog is in Destoryed state");
 
-        }
 
-            eDialog = $("#dialogAPI").data("ejDialog");            
+			 </script>
 
 
+   ~~~
+   {:.prettyprint }
 
-     </script>
-
-
-
-{% endhighlight %}
 
 2. The output of Dialog Open is as follows.    
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisopen.PNG](Client-Side-APIs_images/Client-Side-APIs_img3.png)
+   ![](Client-Side-APIs_images/Client-Side-APIs_img3.png)
 
 
-_Figure23: Dialog is in open state_            
+   _Figure23: Dialog is in open state_            
 
 
 
 3. The output of Dialog Close is as follows.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/diaisclose.PNG](Client-Side-APIs_images/Client-Side-APIs_img4.png)
+   ![](Client-Side-APIs_images/Client-Side-APIs_img4.png)
 
-
-
-_Figure24: Dialog is in Closed state_
+   _Figure24: Dialog is in Closed state_
 
 
 

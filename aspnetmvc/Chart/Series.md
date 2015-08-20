@@ -14,8 +14,8 @@ The Series property provides access to a collection of all series that are defin
 ## Multiple Series
 
 You can plot multipleseries on the same Chart. Series are defined by adding them to the "Series" collection and rendering order of each series can be controlled using the ZOrder properties of the series. Series with 0 as ZOrder renders first. 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -90,10 +90,7 @@ po.X("Italy").Y(35).Add();
 ### CommonSeriesOptions
 
 You can specify the properties common to all series of the Chart in CommonSeriesOptions. 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -170,10 +167,7 @@ A combination Chart combines two or more Charts types in single Charts. For exam
 1. You cannot combine Column and Bar series
 
 2. Pie, Doughnut Series cannot be used with other series types.
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -260,8 +254,8 @@ A combination Chart combines two or more Charts types in single Charts. For exam
 ## Customize Series
 
 You can customize the Chart series using fill, border width and border color. You can customize the series color using ‘Fill’ property of series, the stroke-width of the line, spline series using ‘Width’ property of series, the border color and width of the column/bar using ‘Border’ property of series and rect in the column/bar Chart using the ‘Fill’ and ‘Border’ property of each point.
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -320,11 +314,6 @@ Data labels refer to the y values of data points that appear on each point. You 
      <div id="point">#point.x#:#point.y#%</div>
 
  </div>
-
-
-
-[MVC]
-
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -388,10 +377,7 @@ Data labels refer to the y values of data points that appear on each point. You 
 ### ConnectorLine:
 
 ConnectorLine in data Label is used to customize the line that connects the outside labels of the pie series in terms of color, height, width and type of line. 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -449,9 +435,9 @@ _Data labels_ refer to the y values of data points, which appear on each point. 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
   @(Html.EJ().Chart("container") 
 

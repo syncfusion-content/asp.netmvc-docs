@@ -35,7 +35,6 @@ The following steps explains you the details about rendering the Button with abo
 
 {% highlight html %}
 
-[CSHTML]
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -61,15 +60,13 @@ The following steps explains you the details about rendering the Button with abo
 
         @Html.EJ().Button("button_reset").Text("reset").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Reset)
 
-
-
     </div>
+
 {% endhighlight  %}
 
 Execute the above code to render the following output.
 
 ![](Button-Type_images/Button-Type_img1.png)
-{:.image }
 
 
 _Figure 9: Different button types_

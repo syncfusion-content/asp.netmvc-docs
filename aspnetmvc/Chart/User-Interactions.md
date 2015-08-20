@@ -19,7 +19,7 @@ Essential Chart provides you an option Tooltip to display a pop up with the poin
 
 By default the visibility of tooltip is set to false, but you can change the visibility. When format or template is not specified for tooltip, then it displays the x and y values of the point. 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -55,7 +55,7 @@ format: " #point.x# #series.name# #point.high# #point.low# #point.open# #point.c
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -83,7 +83,7 @@ Essential Chart provides you options to customize the border of the tooltip. You
 
 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -113,7 +113,7 @@ You can modify the fill color of tooltip. By default the tooltip renders with th
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -141,7 +141,7 @@ Essential Chart provides you support to customize the text display in the toolti
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -169,7 +169,7 @@ Essential Chart provides you support to customize the text display in the toolti
 
 Essential Chart provides you animation support for tooltip template. You can enable this by setting “EnableAnimation” to true. The “Duration” property in tooltip specificies the time taken to animate the tooltip, by default the duration is set to “500ms”.
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -192,7 +192,7 @@ Essential Chart has RX and RY property in tooltip to customize the corners radiu
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -222,7 +222,7 @@ Essential Chart provides you an option to zoom the Chart. Using this option you 
 
 By default zooming is not enabled. You can enable it using the “Enable” option in “Zooming” property.
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -272,7 +272,7 @@ Essential Chart provides you support to zoom the Chart by scrolling the mouse wh
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -293,7 +293,7 @@ Essential Chart supports three types of zooming. You can zoom only the x axis or
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -325,7 +325,7 @@ To display the label containing the relevant data point value information, enabl
 
 The following code example illustrates you on how to enable the Crosshair. 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -355,7 +355,7 @@ The following code example illustrates you on how to enable the Crosshair.
 
 In order to track a data point closer to the mouse position or touch contact point, you can use Trackball. You can customize the track ball appearance using the Marker and Line property in the crosshair. To display a label containing the relevant data point value information, you can enable the CrosshairLabel.Visible property in the corresponding axis of the Chart. For example, to display the x-axis label, set the Visible property of CrosshairLabel inthe PrimaryAxis to true. 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -385,7 +385,7 @@ Drill Down allows you to view the data’s in depth, for example yearly data to 
 
 {% highlight html %}
 
-[MVC]
+
 
 
 

@@ -27,7 +27,7 @@ Here, flat-saffron theme is used. Similarly you can change the themes.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
+_Figure 1:Sign Up Form Appearance_
 
 ### Create a Dialog
 
@@ -35,27 +35,26 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
 1. Create a MVC Project and add necessary Dll’s and Scripts. Refer below link
 
-[http://help.syncfusion.com/ug/js/index.html#!Documents/createmanually.htm](http://help.syncfusion.com/ug/js/index.html)
+   [http://help.syncfusion.com/ug/js/index.html#!Documents/createmanually.htm](http://help.syncfusion.com/ug/js/index.html)
 
 
 
 2. You can add the following code example to the corresponding view page to render Dialog.
 
-{% highlight html %}
+   ~~~ js
 
-[_cshtml]
+		@Html.EJ().Dialog("loginForm").Title("Sign Up")
 
-@Html.EJ().Dialog("loginForm").Title("Sign Up")
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
 
 
 3. The following screenshot displays a Dialog control without any content.
 
-
-
-![](Getting-Started_images/Getting-Started_img2.png)
-
+   ![](Getting-Started_images/Getting-Started_img2.png)
+   
+   _Figure 2: Dialog Control Appearance without Dialog content_
 
 By default, the Dialog control shows the header element. You can use the title text from Dialog element.
 
@@ -308,7 +307,7 @@ Execute the above code example to render following output.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+_Figure 3: Dialog Control Appearance with Sign up form elements_
 
 The above screenshot displays the Dialog control with header and resizable option. These options are enabled in Dialog control by default
 
@@ -320,7 +319,7 @@ Initialize the Dialog control using following code example.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @{Html.EJ().Dialog("loginForm").Title("SignUp").ContentTemplate(@<div id="loginForm">
@@ -339,7 +338,7 @@ Execute this code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
+_Figure 4: Dialog Control with Sign up form elements_
 
 You can also add additional functionalities to Dialog control such as Ajax content, list of header icon actions such as close, minimize, maximize actions and model Dialog.
 
@@ -353,7 +352,7 @@ Initialize the Dialog control with the following code example.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -381,9 +380,8 @@ You can add an HTML element in the form to display the error message in Dialog.
 
 You can add the following code example in <script> tag to add validation to form elements.
 
-{% highlight JS %}
+{% highlight js %}
 
-[_JavaScript]
 
     <script type="text/javascript">
 
@@ -522,6 +520,28 @@ You can add the following styles to customize the styles of error message.
 
 {% endhighlight %}
 
+
+1. Name the control by using the Name attribute.
+
+   ~~~ html
+   
+		<Syncfusion:CalendarEdit Name=”calendar”>
+		</Syncfusion:CalendarEdit> 
+
+   ~~~
+   {:.prettyprint }
+	
+2. Name the control by using the Name attribute.
+
+   ~~~ html
+   
+		<Syncfusion:CalendarEdit Name=”calendar”>
+		</Syncfusion:CalendarEdit> 
+
+   ~~~
+   {:.prettyprint }
+
+ 
 To check the validation process if we click the submit button without specifying any values.
 
 
@@ -532,7 +552,7 @@ Execute the code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-
+_Figure 5: Sign up form with validation_
 
 The above screenshot displays an error message when an invalid input is given to form elements. The dialog is closed when the value is in a valid format Otherwise dialog will not close.	 
 

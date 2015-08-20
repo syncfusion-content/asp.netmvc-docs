@@ -16,14 +16,7 @@ Grouping is an important feature in Grid. If you want to analysis any particular
 In Grid, there is an option to group columns at Grid Initialize that is rendered through GroupedColumns property in Grid. This is an important option because in some scenarios, need to analyse Grid records with Grouping may arise, at the time of initialize.
 
 
-{% highlight html %}
-
-
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -39,8 +32,6 @@ In Grid, there is an option to group columns at Grid Initialize that is rendered
 
 {% endhighlight  %}
 {% highlight c# %}
-
-[controller]
 
 namespace MVCSampleBrowser.Controllers
 
@@ -84,19 +75,14 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img1.png)
 
-
+_Figure : Load Grid with Grouping_
 
 ## Group Buttons
 
 Group buttons is one of the features under Grouping. It is helpful to do Grouping easily without doing drag and drop. To enable this feature use ShowToggleButton at Grid Initialize.  
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -113,7 +99,7 @@ Group buttons is one of the features under Grouping. It is helpful to do Groupin
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -134,7 +120,6 @@ namespace MVCSampleBrowser.Controllers
         }
 
 
-
     }
 
 }
@@ -151,7 +136,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img2.png)
 
-
+_Figure : Group Buttons_
 
 ## Hide Ungroup Button
 
@@ -161,17 +146,9 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 
 ![](Grouping_images/Grouping_img3.png)
 
-
+_Figure : Ungroup Button_
 
 {% highlight html %}
-
-
-
-[MVC]
-
-
-
-[razor]
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -188,7 +165,7 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 {% endhighlight  %}
 {% highlight c# %}
 
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -226,7 +203,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img4.png)
 
-
+_Figure : Hide ungroup button_
 
 ## AutoSize Drop Area
 
@@ -235,14 +212,6 @@ If you drag any header to Group column in Grid, it expands smoothly its Group Dr
 
 
 {% highlight html %}
-
-[MVC]
-
-
-
- [razor]
-
-
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -256,8 +225,9 @@ If you drag any header to Group column in Grid, it expands smoothly its Group Dr
 
         )
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -293,7 +263,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img5.png)
 
-
+_Figure : Stop group animation_
 
 ## Hide Group Drop Area from Grid
 
@@ -301,13 +271,7 @@ In Grid, there is an option to hide the Group Drop Area at Grid Initialize that 
 
 When the ShowDropArea property is set to false, the groupDropArea is hidden. 
 
-{% highlight html %}
-
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<MvcApplication11.OrdersView>("FlatGrid")
 
@@ -321,10 +285,6 @@ When the ShowDropArea property is set to false, the groupDropArea is hidden.
 
 {% endhighlight %}
 {% highlight c# %}
-
-[Controller]
-
-
 
 namespace MvcApplication11.Controllers
 
@@ -360,7 +320,8 @@ namespace MvcApplication11.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![C:/Users/NandhiniK/Desktop/Capture.PNG](Grouping_images/Grouping_img6.png)
+![](Grouping_images/Grouping_img6.png)
 
+_Figure : Hide Group Drop Area from Grid_
 
 

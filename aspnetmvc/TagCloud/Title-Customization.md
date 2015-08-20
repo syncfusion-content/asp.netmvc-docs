@@ -17,7 +17,7 @@ The TagCloud items are displayed with a Title element by default. ShowTitle is a
 
 The following step explains you on how to configure title for a TagCloud.
 
-{% highlight c# %}
+{% highlight js %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
@@ -41,7 +41,7 @@ TagCloud widget allows us to set a custom Title text by using the Title property
 
 The following step explain to us on how to configure Title for a TagCloud.
 
-{% highlight c# %}
+{% highlight js %}
 
 @Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
 .TagCloudFields(tag => tag.Text("Text").Url("Url")
@@ -62,7 +62,7 @@ TagCloud widget provides TitleImage to set an image for the title. You can set t
 
 The following step explains us to configure TitleImage for a TagCloud.
 
-{% highlight c# %}
+{% highlight js %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
@@ -75,7 +75,7 @@ The following step explains us to configure TitleImage for a TagCloud.
 
 1. Using CSS class you can resize the Title image content as follows.
 
-   ~~~ html
+   ~~~ css
 
         <style type="text/css">
 

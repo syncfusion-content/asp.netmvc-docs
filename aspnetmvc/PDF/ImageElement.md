@@ -7,16 +7,16 @@ control: PDF
 documentation: ug
 ---
 
-## ImageElement
+# ImageElement
 
 ImageElement is used to render images in the page of the PDF document. It can also support replacing images; HTML to image and PDF to image. These are explained in the following topics.
 
 
-{{ '![](ImageElement_images/ImageElement_img1.png)' | markdownify }}
-{:.image }
+![](ImageElement_images/ImageElement_img1.png)
 
 
-### Insert image into the PDF pages
+
+## Insert image into the PDF pages
 
 Adobe PDF supports several image formats and various masking techniques to create high quality reports. Essential PDF supports both raster and vector images. The supported image formats are gas follows:
 
@@ -31,11 +31,9 @@ Essential PDF provides you support for loading image streams, files on disk, and
 
 Images are supported through the PdfImage class that is an abstract base class that provides the common functionality for PdfBitmap and PdfMetafile classes. There are static methods in PdfImage providing the capability to create a PdfImage instance from different sources.
 
-{{ '![http://help.syncfusion.com/ug/windows%20forms/pdf/ImagesExt/image517_36.jpg](ImageElement_images/ImageElement_img2.jpeg)' | markdownify }}
-{:.image }
-_Note: Image quality is 100 by default, which increases the resultant file size and quality. Reducing the quality will reduce the file size._
+> Note: Image quality is 100 by default, which increases the resultant file size and quality. Reducing the quality will reduce the file size.
 
-#### Working with Bitmap
+### Working with Bitmap
 
 PdfBitmap class provides functionality of raster images described above. Masks and alpha channels are supported. There are two different kinds of masks: color mask that is implemented by the PdfColorMask class, and image mask that is implemented by the PdfImageMask class. Masks are set by using the Maskproperty of the PdfBitmap object.
 
@@ -43,7 +41,7 @@ DrawImage method of the PdfGraphics class draws a given image at a specified loc
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -75,9 +73,9 @@ doc.Save("Output.pdf");
 
 doc.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -109,13 +107,15 @@ doc.Save("Output.pdf")
 
 doc.Close(True)
 
+{% endhighlight %}
+
 ### Working with TIFF
 
 Essential PDF provides you the ability to convert single page or multipage TIFF file into PDF document. When you render a MultiFrame image (Gif, Tif), only the active frame of the image is rendered. The following code illustrates how to draw multipage tiff files using Essential PDF API.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -159,10 +159,10 @@ doc.Save("Output.pdf");
 
 doc.Close();
 
+{% endhighlight %}
 
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -204,19 +204,21 @@ doc.Save("Output.pdf")
 
 doc.Close()
 
+{% endhighlight %}
+
 #### Working with Metafile
 
 EMF ONLY, EMF PLUS and EMF PLUS DUAL formats are supported by Essential PDF through the PdfMetafile class. PdfMetafile supports multipage layout. In addition, it also supports handling text that does not split across pages.  Enabling SplitTextLines and SplitImages properties of PdfMetafileLayoutFormat class allows splitting the text and images in the PDF document.
 
 The following are the public properties of the PdfMetafileLayoutFormat class.
 
-_Table_ _8__: List of public properties of PdfMetafileLayoutFormat class_
+_Table_ _8_: List of public properties of PdfMetafileLayoutFormat class
 
 <table>
 <tr>
-<td>
-Name</td><td>
-Description</td></tr>
+<th>
+Name</th><th>
+Description</th></tr>
 <tr>
 <td>
 Break</td><td>
@@ -246,7 +248,7 @@ Gets a value that indicates whether PaginateBounds should be used or not.</td></
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -288,9 +290,9 @@ doc.Save("Output.pdf");
 
 doc.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -328,6 +330,8 @@ doc.Save("Output.pdf")
 
 doc.Close()
 
+{% endhighlight %}
+
 #### Working with Image Masking
 
 Using an image as a mask, a mask image is simply an image where some of the pixel intensity values are zero, and others are non-zero. Wherever the pixel intensity value is zero in the mask image, then the pixel intensity of the resulting masked image is set to the background value.
@@ -336,7 +340,7 @@ A soft mask specifies the transparency level for each pixel of the image. You ca
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -370,9 +374,9 @@ doc.Save("Output.pdf");
 
 doc.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -406,13 +410,15 @@ doc.Save("Output.pdf")
 
 doc.Close()
 
-### Replacing images
+{% endhighlight %}
+
+## Replacing images
 
 Essential PDF allows you to replace images in an existing document. The ReplaceImage method of the page collection allows you to replace an image. Once the image is replaced, you can save the Updated PDF document.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -436,9 +442,9 @@ doc.Save("Output.pdf");
 
 doc.Close();
 
+{% endhighlight %}
 
-
- [VB]
+ {% highlight vbnet %}
 
 
 
@@ -462,7 +468,9 @@ doc.Save("Output.pdf")
 
 doc.Close()
 
-### HTML to Image
+{% endhighlight %}
+
+## HTML to Image
 
 Essential PDF allows you to convert HTML file to Image using ConvertToImage. The ConvertToImage method converts URL into an image. The URL parameter can be a HTTP or HTTPS address such as [http://www.syncfusion.com](http://www.syncfusion.com) or a physical path that refers an HTML file on the disk.
 
@@ -470,7 +478,7 @@ The overloaded ConvertToImage method enables an HTML page to convert into an ima
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -488,9 +496,9 @@ image.Save("img.jpeg");
 
 html.Dispose();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -508,13 +516,15 @@ image.Save("webImage.jpeg")
 
 html.Dispose()
 
-### PDF to Image
+{% endhighlight %}
+
+## PDF to Image
 
 Essential PDF allows export of PDF pages as images. PDF viewer instance needs to be created and the PDF document loaded in order to export the images. Specific pages of the PDF document can also be exported.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -542,9 +552,9 @@ view.Unload();
 
 view.Dispose();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -572,5 +582,5 @@ Next
 
 view.Unload()
 
-
+{% endhighlight %}
 

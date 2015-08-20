@@ -31,8 +31,10 @@ EndTime("EndTime").
 AllDay("AllDay").
 Recurrence("Recurrence").
 RecurrenceRule("RecurrenceRule"))
+
 // specify the template id
 .AppointmentTemplateId("#MyTemplate"))
+
 // appointment template definition
 <script id="MyTemplate" type="text/x-jsrender">
 <div style="height: 100%">
@@ -48,7 +50,7 @@ RecurrenceRule("RecurrenceRule"))
 {% endhighlight %}
 
 > Note: The following used images should be present in a separate images folder, so that it will be referred properly.
-{% highlight c# %}
+{% highlight js %}
 function _getImages(date)
  {switch (new Date(date).getDay())
  {
@@ -103,10 +105,6 @@ namespace MVCSampleBrowser.Controllers{public partial class ScheduleController :
 
 * The resources are provided with rich template support, so that the customizations are done easily. You can add the resource header template to the Schedule control as follows.
 
-
-
-
-
 {% highlight html %}
 @(Html.EJ()
 .Schedule("Schedule1")
@@ -114,8 +112,10 @@ namespace MVCSampleBrowser.Controllers{public partial class ScheduleController :
 .Height("525px")
 .CurrentDate(new DateTime(2014,4,1))
 .CurrentView(CurrentView.Month)
+
 // resource data collection.Resources(res=> {
 res.Field("OwnerId").Title("Owner").Name("Owners")
+
 // enable the multiple selection of resources in the appointment window.
 .AllowMultiple(true)
 .ResourceSettings(flds => 
@@ -128,8 +128,13 @@ flds.Datasource(ViewBag.Owners).Text("text").Id("id").Color("color")).Add();})
 .AllDay("AllDay")
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")
-// bind the resource id fields collection of each level.ResourceFields("OwnerId"))
-// specify the template id.ResourceHeaderTemplateId("#resourceHeaderTemplateId"))
+
+// bind the resource id fields collection of each level
+.ResourceFields("OwnerId"))
+
+// specify the template id
+.ResourceHeaderTemplateId("#resourceHeaderTemplateId"))
+
 // resourceHeader template definition
 <script type="text/x-jsrender" id="resourceHeaderTemplateId">
 <img style="width: 40px; height: 40px" src=".../images/schedule/{{:id}}.png" alt="{{:id}}" />
@@ -185,29 +190,6 @@ Important: The above used images should be present in a separate images folder, 
 
 The output of the above code looks as follows.
 
-![C:/Users/karthigeyan/Desktop/a.png](Template_images/Template_img2.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](Template_images/Template_img2.png)
 
 

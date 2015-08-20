@@ -26,9 +26,9 @@ For more information about Knockout binding, you can refer to the online documen
 
 1. The following example depicts how you can bind data to the ColorPicker widget through knockout support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 @*Add the following script in view page for knockout support*@
 
@@ -70,6 +70,7 @@ For more information about Knockout binding, you can refer to the online documen
 
 </div>
 {% endhighlight  %}
+
 {% highlight js %}
 <script>
 

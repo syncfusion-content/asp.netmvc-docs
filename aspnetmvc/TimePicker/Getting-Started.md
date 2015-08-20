@@ -30,132 +30,140 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 1. You can create an MVC Project and add necessary assemblies and scripts to it. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code to the corresponding view page to render the TimePicker.
 
+   ~~~ html
 
 
-{% highlight html %}
+		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+		<table>
 
-<table>
+		    <tr>
 
-    <tr>
+			<td class="tdclass">Date</td>
 
-        <td class="tdclass">Date</td>
+			<td class="tdclass">Time</td>
 
-        <td class="tdclass">Time</td>
+			<td class="tdclass">Person</td>
 
-        <td class="tdclass">Person</td>
+		    </tr>
 
-    </tr>
+		    <tr>
 
-    <tr>
+			<td class="tdclass">
 
-        <td class="tdclass">
+			    <span class="innerdp">
 
-            <span class="innerdp">
+				@Html.EJ().DatePicker("startDate")
 
-                @Html.EJ().DatePicker("startDate")
+			    </span>
 
-            </span>
+			</td>
 
-        </td>
+			<td class="tdclass">
 
-        <td class="tdclass">
+			    <span class="innerdp">
 
-            <span class="innerdp">
+				@Html.EJ().TimePicker("timestart")
 
-                @Html.EJ().TimePicker("timestart")
+			    </span>
 
-            </span>
+			</td>
 
-        </td>
+			<td class="tdclass">
 
-        <td class="tdclass">
+			    <span class="innerdp">
 
-            <span class="innerdp">
+				@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-                @Html.EJ().NumericTextbox("NumericTextbox").Value("0")
+			    </span>
 
-            </span>
+			</td>
 
-        </td>
+		    </tr>
 
-    </tr>
+		    <tr>
 
-    <tr>
+			<td></td>
 
-        <td></td>
+			<td></td>
 
-        <td></td>
+			<td class="tdclass">
 
-        <td class="tdclass">
+			    <span class="innerdp">
 
-            <span class="innerdp">
+				@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-                @Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
+			    </span>
 
-            </span>
+			</td>
 
-        </td>
+		    </tr>
 
-    </tr>
+		</table>
 
-</table>
-
-
-{% endhighlight %}
-
-3.   Add the following styles to show the TimePicker control in horizontal order in the Content folder.
+   ~~~
+   {:.prettyprint }
 
 
-{% highlight css %}
 
-<style type="text/css" class="cssStyles">
+3. Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
-    .tdclass {
-
-        width: 70px;
-
-        height: 10px;
-
-        font-weight: bold;
-
-        padding: 10px;
-
-    }
-
-    .innerdp {
-
-        display: inline-block;
-
-    }
-
-</style>
-
-{% endhighlight %}
+   ~~~ css
 
 
-4.  Add the following code to the Layout page for DatePicker and TimePicker initialization.
+		<style type="text/css" class="cssStyles">
 
-{% highlight JS %}
+		    .tdclass {
 
-<script type="text/javascript">
+			width: 70px;
 
-    function button()
+			height: 10px;
 
-    {
+			font-weight: bold;
 
-        alert("You have Successfully booked");
+			padding: 10px;
 
-    }
+		    }
 
-</script>
+		    .innerdp {
 
-{% endhighlight %}
+			display: inline-block;
+
+		    }
+
+		</style>
+
+   ~~~
+   {:.prettyprint }
+
+
+
+
+4. Add the following code to the Layout page for DatePicker and TimePicker initialization.
+
+   ~~~ js
+
+
+		<script type="text/javascript">
+
+		    function button()
+
+		    {
+
+			alert("You have Successfully booked");
+
+		    }
+
+		</script>
+
+   ~~~
+   {:.prettyprint }
+
+
 
 5. The following screenshot displays the output for the above code.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+   ![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -165,7 +173,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+   ![](Getting-Started_images/Getting-Started_img3.png)
 
 
 
@@ -175,152 +183,159 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
+   ~~~ html
 
+		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-{% highlight html %}
+		<table>
 
-@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+			<tr>
 
-<table>
+				<td class="tdclass">Date</td>
 
-    <tr>
+				<td class="tdclass">StartTime</td>
 
-        <td class="tdclass">Date</td>
+				<td class="tdclass">EndTime</td>
 
-        <td class="tdclass">StartTime</td>
+				<td class="tdclass">Person</td>
 
-        <td class="tdclass">EndTime</td>
+			</tr>
 
-        <td class="tdclass">Person</td>
+			<tr>
 
-    </tr>
+				<td class="tdclass">
 
-    <tr>
+					<span class="innerdp">
 
-        <td class="tdclass">
+						@Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
 
-            <span class="innerdp">
+					</span>
 
-                @Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
+				</td>
 
-            </span>
+				<td class="tdclass">
 
-        </td>
+					<span class="innerdp">
 
-        <td class="tdclass">
+						@Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
 
-            <span class="innerdp">
+					</span>
 
-                @Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
+				</td>
 
-            </span>
+				<td class="tdclass">
 
-        </td>
+					<span class="innerdp">
 
-        <td class="tdclass">
+						@Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
 
-            <span class="innerdp">
+					</span>
 
-                @Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
+				</td>
 
-            </span>
+				<td class="tdclass">
 
-        </td>
+					<span class="innerdp">
 
-        <td class="tdclass">
+						@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-            <span class="innerdp">
+					</span>
 
-                @Html.EJ().NumericTextbox("NumericTextbox").Value("0")
+				</td>
 
-            </span>
+			</tr>
 
-        </td>
+			<tr>
 
-    </tr>
+				<td></td>
 
-    <tr>
+				<td></td>
 
-        <td></td>
+				<td></td>
 
-        <td></td>
+				<td class="tdclass">
 
-        <td></td>
+					<span class="innerdp">
 
-        <td class="tdclass">
+						@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-            <span class="innerdp">
+					</span>
 
-                @Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
+				</td>
 
-            </span>
+			</tr>
 
-        </td>
+		</table>
 
-    </tr>
+   ~~~
+   {:.prettyprint }
 
-</table>
+2. Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
-{% endhighlight %}
+   ~~~ css
 
-2.  Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
 
-{% highlight css %}
+		<style type="text/css" class="cssStyles">
 
-<style type="text/css" class="cssStyles">
+		    .tdclass {
 
-    .tdclass {
+			width: 70px;
 
-        width: 70px;
+			height: 10px;
 
-        height: 10px;
+			font-weight: bold;
 
-        font-weight: bold;
+			padding: 10px;
 
-        padding: 10px;
+		    }
 
-    }
+		    .innerdp {
 
-    .innerdp {
+			display: inline-block;
 
-        display: inline-block;
+		    }
 
-    }
-	
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
-3.  Add the following code to the Layout page for DatePicker and TimePicker initialization.
 
-{% highlight JS %}
 
-<script type="text/javascript">
+3. Add the following code to the Layout page for DatePicker and TimePicker initialization.
 
-    function selectedStartTime(sender) {
+   ~~~ js
 
-        var selDate = sender.value; // mentions the selected time.
 
-        minTimepicker = $("#timeend").data("ejTimePicker");// creating TimePicker object
+		<script type="text/javascript">
 
-        minTimepicker.setModel({ "minTime": selDate });// setting minTime property through setModel of TimePicker object.
+		    function selectedStartTime(sender) {
 
-    }
+			var selDate = sender.value; // mentions the selected time.
 
-    function button()
+			minTimepicker = $("#timeend").data("ejTimePicker");// creating TimePicker object
 
-    {
+			minTimepicker.setModel({ "minTime": selDate });// setting minTime property through setModel of TimePicker object.
 
-        alert("You have Successfully booked");
+		    }
 
-    }
+		    function button()
 
-</script>
+		    {
 
-{% endhighlight %}
+			alert("You have Successfully booked");
+
+		    }
+
+		</script>
+
+   ~~~
+   {:.prettyprint }
+
+
 
 
 

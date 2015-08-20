@@ -18,8 +18,8 @@ Horizontal orientation displays the menu items horizontally and it is the defaul
 The following steps explains you the details on rendering the Menu control. 
 
 1. Add the below code in your view page to render the horizontal menu
-{% highlight html %}
-[CSHTML]    
+{% highlight js %}
+    
 
 // In the CSHTML page, add the following code to configure Menu control.
 
@@ -117,9 +117,9 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 // Add the following code in the CSHTML page.
 

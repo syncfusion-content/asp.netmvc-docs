@@ -19,7 +19,7 @@ Toolbar control displays a list of tools in a webpage. It is used to customize T
 
 Here, the Toolbar consists of a Toolbar with title and text area as PDF Reader.
 
-![C:/Users/Rajaveni/Desktop/rte final/toolbar - Copy.PNG](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -37,13 +37,16 @@ Using the following steps, you can create a Toolbar control. The basic rendering
 
 2. Add the mentioned code to the corresponding view page for Toolbar rendering.
 
+   ~~~ html
 
 
-{% highlight html %}   
 
-@Html.EJ().Toolbar("ToolbarItem")
+		@Html.EJ().Toolbar("ToolbarItem")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
+
 
 
 
@@ -459,7 +462,7 @@ Execute the code to render Toolbar items with separator.
 
 
 
-![C:/Users/Rajaveni/Desktop/rte final/itemssssssssssssss.PNG](Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 ### Add Actions to Toolbar Items
@@ -525,8 +528,6 @@ You can apply the following styles with the above styles to design the PDF heade
 
 {% highlight css %}
 
-
-
 <style type="text/css" class="cssStyles">
 
     #content {
@@ -567,18 +568,7 @@ You can apply the following styles with the above styles to design the PDF heade
 
 {% endhighlight %}
 
-![C:/Users/Rajaveni/Desktop/rte final/edited.PNG](Getting-Started_images/Getting-Started_img6.png)
-
-
-
-
-
-
-
-
-
-
-
+![](Getting-Started_images/Getting-Started_img6.png)
 
 _Figure 5: PDF Reader Appearance_
 
@@ -610,7 +600,7 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 {% endhighlight %}
 
-{% highlight JS %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -618,139 +608,67 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
     function onItemclick(args) {
 
-
-
-
-
         //Finds Out the Item that was Clicked in Toolbar
-
-
-
-
 
         //args.currentTarget returns the clicked Toolbar element
 
-
-
-
-
         var option = args.currentTarget.id; /* Find Out the Id of Clicked item. */
-
-
-
-
-
-
 
         switch (option) {
 
-
-
-            case "OtherFormat":
-
-
+			case "OtherFormat":
 
                 //writes a code for Convert pdf files to Other format.
 
-
-
             case "PdfOnline":
 
-
-
-                //writes a code for Convert files to Pdf online.
-
-
+               //writes a code for Convert files to Pdf online.
 
             case "Signature":
 
-
-
                 //writes a code for Send a document for signature.
-
-
 
             case "Save":
 
-
-
-                //writes a code for Save content.
-
-
+               //writes a code for Save content.
 
             case "Print":
 
-
-
-                //writes a code for Print content.
-
-
+               //writes a code for Print content.
 
             case "Message":
 
-
-
-                //writes a code for Send a Message.
-
-
+               //writes a code for Send a Message.
 
             case "Previous":
 
-
-
-                //writes a code for Show previous page.
-
-
+               //writes a code for Show previous page.
 
             case "Next":
 
-
-
-                //writes a code for Show Next page.
-
-
+               //writes a code for Show Next page.
 
             case "ZoomOut":
 
-
-
-                //writes a code for Zoom out the page.
-
-
+               //writes a code for Zoom out the page.
 
             case "ZoomIn":
 
-
-
-                //writes a code for Zoom In the page.
-
-
+			   //writes a code for Zoom In the page.
 
             case "FitFull":
 
-
-
-                //writes a code for Fit one full page to window.
-
-
+               //writes a code for Fit one full page to window.
 
             case "StickyNote":
 
-
-
-                //writes a code for Add Sticky Note.
-
-
+               //writes a code for Add Sticky Note.
 
             case "ReadMode":
 
-
-
-                //writes a code for view file in read mode.
+               //writes a code for view file in read mode.
 
         }
-
-
 
     }
 

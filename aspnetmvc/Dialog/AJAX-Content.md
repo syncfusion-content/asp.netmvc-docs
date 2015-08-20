@@ -17,19 +17,15 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 1. In the VIEW page set a helper element for rendering the Dialog control. 
 
+   ~~~ js
 
+   // In the CHTML page add the Dialog widget and set the ContentUrl from the file reference and set ContentType as ajax.
 
+   @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentUrl("../Content/Dialog/twitter.html").ContentType("ajax").Width(300).Height("200").Render();}
 
+   ~~~
+   {:.prettyprint }
 
-{% highlight html %}
-
-// In the CHTML page add the Dialog widget and set the ContentUrl from the file reference and set ContentType as ajax.
-
-
-
-@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentUrl("../Content/Dialog/twitter.html").ContentType("ajax").Width(300).Height("200").Render();}
-
-{% endhighlight %}
 
 
 
@@ -37,195 +33,195 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-{% highlight html %}
+   ~~~ html
 
-<!DOCTYPE html>
+		<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+		<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
+		<head>
 
-    <title></title>
+			<title></title>
 
-    <style>
+			<style>
 
-        .twitter-logo {
+				.twitter-logo {
 
-            background-color: #FFFFFF;
+					background-color: #FFFFFF;
 
-        }
+				}
 
 
 
-        .cont-list img {
+				.cont-list img {
 
-            float: left;
+					float: left;
 
-            height: 40px;
+					height: 40px;
 
-            padding-right: 6px;
+					padding-right: 6px;
 
-            padding-left: 6px;
+					padding-left: 6px;
 
-        }
+				}
 
 
 
-        .comments-list {
+				.comments-list {
 
-            /* background-color: #EFEFEF; */
+					/* background-color: #EFEFEF; */
 
-            height: 210px;
+					height: 210px;
 
-        }
+				}
 
 
 
-        .comments {
+				.comments {
 
-            padding: 10px;
+					padding: 10px;
 
-            color: #074B92;
+					color: #074B92;
 
-            font-weight: 600;
+					font-weight: 600;
 
-        }
+				}
 
 
 
-        .cont-list {
+				.cont-list {
 
-            border-bottom: 1px solid #BBBCBB;
+					border-bottom: 1px solid #BBBCBB;
 
-            padding-top: 9px;
+					padding-top: 9px;
 
-            padding-bottom: 9px;
+					padding-bottom: 9px;
 
-        }
+				}
 
 
 
-            .cont-list:last-child {
+					.cont-list:last-child {
 
-                border-bottom: none;
+						border-bottom: none;
 
-                padding-bottom: 0;
+						padding-bottom: 0;
 
-            }
+					}
 
 
 
-        .time-panel {
+				.time-panel {
 
-            float: right;
+					float: right;
 
-            color: #2382C3;
+					color: #2382C3;
 
-            margin-right: 10px;
+					margin-right: 10px;
 
-        }
+				}
 
 
 
-        .headername {
+				.headername {
 
-            font-size: 16px;
+					font-size: 16px;
 
-            font-weight: 600;
+					font-weight: 600;
 
-            color: #074B92;
+					color: #074B92;
 
-        }
+				}
 
 
 
-        .c-list {
+				.c-list {
 
-            float: right;
+					float: right;
 
-            margin-top: -11px;
+					margin-top: -11px;
 
-            padding-right: 12px;
+					padding-right: 12px;
 
-        }
+				}
 
-    </style>
+			</style>
 
-</head>
+		</head>
 
-<body>
+		<body>
 
-    <div>
+			<div>
 
-        <div class="twitter-logo">
+				<div class="twitter-logo">
 
-            <img src="../Content/Images/twitter.jpg" alt="twitter" />
+					<img src="../Content/Images/twitter.jpg" alt="twitter" />
 
-        </div>
+				</div>
 
-        <div class="comments-list">
+				<div class="comments-list">
 
-            <div class="cont-list">
+					<div class="cont-list">
 
-                <img src="../Content/Images/8.png" alt="contact" />
+						<img src="../Content/Images/8.png" alt="contact" />
 
-                <div class="time-panel">1 hr</div>
+						<div class="time-panel">1 hr</div>
 
-                <b class="headername">Erik Linden</b><br />
+						<b class="headername">Erik Linden</b><br />
 
-                Orubase is the only mobile application development framework built especially for developing complex line-of-business mobile applications targeting iOS, Android, and Windows Phone platforms in the shortest possible timeframe. 
+						Orubase is the only mobile application development framework built especially for developing complex line-of-business mobile applications targeting iOS, Android, and Windows Phone platforms in the shortest possible timeframe. 
 
-                <div class="comments">
+						<div class="comments">
 
-                    <div class="c-list">Retweet</div>
+							<div class="c-list">Retweet</div>
 
-                    <div class="c-list">Reply</div>
+							<div class="c-list">Reply</div>
 
-                    <div class="c-list">Share</div>
+							<div class="c-list">Share</div>
 
-                </div>
+						</div>
 
-            </div>
+					</div>
 
-            <div class="cont-list">
+					<div class="cont-list">
 
-                <img src="../Content/Images/6.png" alt="contact" />
+						<img src="../Content/Images/6.png" alt="contact" />
 
-                <div class="time-panel">2 hr</div>
+						<div class="time-panel">2 hr</div>
 
-                <b class="headername">John Louis</b><br />
+						<b class="headername">John Louis</b><br />
 
-                All the components in the ASP.NET MVC Essential Studio have been built from the ground up with performance in mind and are extremely lightweight.
+						All the components in the ASP.NET MVC Essential Studio have been built from the ground up with performance in mind and are extremely lightweight.
 
-                 <div class="comments">
+						 <div class="comments">
 
-                     <div class="c-list">Retweet</div>
+							 <div class="c-list">Retweet</div>
 
-                     <div class="c-list">Reply</div>
+							 <div class="c-list">Reply</div>
 
-                     <div class="c-list">Share</div>
+							 <div class="c-list">Share</div>
 
-                 </div>
+						 </div>
 
-            </div>
+					</div>
 
-        </div>
+				</div>
 
-    </div>
+			</div>
 
-</body>
+		</body>
 
-</html>
+		</html>
 
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
+
 
 
 
 3. The output of Dialog with AJAX content.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/dia ajax.PNG](AJAX-Content_images/AJAX-Content_img1.png)
+   ![](AJAX-Content_images/AJAX-Content_img1.png)
 
-
-
-_Figure 17: Dialog with “AJAX Content_                                                           
+   _Figure 17: Dialog with “AJAX Content_                                                           
 

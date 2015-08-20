@@ -15,9 +15,8 @@ RangeNavigator allows you to customize the control using events. You can change 
 
 If you set EnableDeferredUpdate to true, the RangeChanged event gets fired after dragging and dropping the slider. By default the EnableDeferredUpdate is true. If EnableDeferredUpdate is false then the RangeChanged event gets fired while dragging the slider.
 
-{% highlight html %}
- [MVC]
-
+{% highlight js %}
+ [
 @(Html.EJ().RangeNavigator("rangecontainer")
 
        // ...
@@ -41,8 +40,7 @@ _Figure 24: Deferred update_
 
 This event is handled when the RangeNavigator gets loaded. A parameter sender is passed to the handler. Using sender.model, you can access the RangeNavigator properties. 
 {% highlight html %}
- [MVC]
-
+ 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
        // ...
@@ -54,7 +52,7 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
         .Render())
 {% endhighlight  %}
 {% highlight js %}
-[JS]
+
 
 <script type="text/javascript">
 
@@ -72,7 +70,6 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
 
 This event gets fired whenever the selected range changes in RangeNavigator. A parameter sender is passed to the handler. Using sender.selectedRangeSettings, you can access the start and end value of range for the selected region. 
 {% highlight html %}
-[MVC]
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -85,7 +82,6 @@ This event gets fired whenever the selected range changes in RangeNavigator. A p
         .Render())
 {% endhighlight  %}
 {% highlight js %}
-[JS]
 
 <script type="text/javascript">
 
@@ -104,7 +100,7 @@ RangeNavigator is used along with the controls like chart and grid to view the s
 
 You can easily update the data for chart by assigning the ZoomFactor and ZoomPosition of the RangeNavigator to the chart axis. 
 {% highlight html %}
- [MVC]
+ 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -117,7 +113,7 @@ You can easily update the data for chart by assigning the ZoomFactor and ZoomPos
         .Render())
 {% endhighlight  %}
 {% highlight js %}
-[JS]
+
 
 <script type="text/javascript">
 
@@ -151,7 +147,7 @@ You can easily update the data for chart by assigning the ZoomFactor and ZoomPos
 
 You can customize Thumb template by using LeftThumbTemplate and RightThumbTemplate property. You can add the required template as a “div” element with an “id” to the web page and assign the id or assign the html string to this property under NavigatorStyleSettings. 
 {% highlight js %}
-[MVC]
+
 
 <script type="text/x-jsrender" id="left" >
 
@@ -174,7 +170,7 @@ You can customize Thumb template by using LeftThumbTemplate and RightThumbTempla
 </script>
 {% endhighlight  %}
 {% highlight html %}
-[CSHTML]
+
 
 @(Html.EJ().RangeNavigator("container")
 
@@ -192,7 +188,7 @@ You can customize Thumb template by using LeftThumbTemplate and RightThumbTempla
 
 The following screenshot displays the RangeNavigator using thumb template.
 
-![D:/TRUNK LOCATION/Feature Tool/Image/aspnet/ejrangenavigator/Chart-Customization.png](Behavior-Customization_images/Behavior-Customization_img3.png)
+![](Behavior-Customization_images/Behavior-Customization_img3.png)
 
 
 

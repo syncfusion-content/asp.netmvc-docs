@@ -15,7 +15,7 @@ You can show the relationship between two tasks in Gantt control. These relation
 
               You cannot start a task until the other task also starts.
 
-![C:/Users/Rajasekar/Desktop/SS.png](Task-Relationship_images/Task-Relationship_img1.png)
+![](Task-Relationship_images/Task-Relationship_img1.png)
 
 
 
@@ -23,7 +23,7 @@ You can show the relationship between two tasks in Gantt control. These relation
 
 You cannot finish a task until the other task is started.
 
-![C:/Users/Rajasekar/Desktop/SF.png](Task-Relationship_images/Task-Relationship_img2.png)
+![](Task-Relationship_images/Task-Relationship_img2.png)
 
 
 
@@ -31,7 +31,7 @@ You cannot finish a task until the other task is started.
 
              You cannot start a task until the other task is completed.
 
-![C:/Users/Rajasekar/Desktop/FS.png](Task-Relationship_images/Task-Relationship_img3.png)
+![](Task-Relationship_images/Task-Relationship_img3.png)
 
 
 
@@ -41,7 +41,7 @@ You cannot finish a task until the other task is started.
 
     You cannot finish a task until the other task is completed.
 
-![C:/Users/Rajasekar/Desktop/FF.png](Task-Relationship_images/Task-Relationship_img4.png)
+![](Task-Relationship_images/Task-Relationship_img4.png)
 
 
 
@@ -51,7 +51,7 @@ The following code example shows you how to show the predecessor in the Gantt co
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -79,5 +79,5 @@ The following screenshot displays the output of the above code.
 
 ![](Task-Relationship_images/Task-Relationship_img5.png)
 
-
+_Figure 48: Task relationship_
 

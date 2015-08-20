@@ -110,7 +110,7 @@ To post the Feedback directly, you need additional Toolbar item. The RTE control
 
 The following code example creates the custom toolbar item in the RTE control. 
 
-{% highlight c# %}
+{% highlight js %}
 
 @Html.EJ().RTE("FeedbackEditor").Width("820px").Tools(tool => tool.CustomTool(custom =>
 
@@ -153,7 +153,7 @@ During the Feedback sending time, you can validate whether the content area is e
 You can specify the custom tool same as previous section with validation operations.
 
 
-{% highlight c# %}
+{% highlight js %}
 
 
 <div class="commentSection" style="width: 810px">

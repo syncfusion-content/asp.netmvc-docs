@@ -2,8 +2,8 @@
 layout: post
 title: Behaviour-Settings
 description: behaviour settings
-platform: aspnet
-control: Control Name undefined
+platform: ejmvc
+control: ListBox
 documentation: ug
 ---
 
@@ -13,73 +13,77 @@ The following are some miscellaneous properties that helps you to change the beh
 
 ## Target ID
 
-You can append a list with ListBox by using targetId property. Define a <ul>, < li> tag that you want to display on ListBox and then set the id of parent <ul> tag to targetId property. And its data type is string. 
+You can append a list with ListBox by using TargetId property. Define a <ul>,< li> tag that you want to display on ListBox and then set the id of parent <ul> tag to TargetId property. And its data type is string. 
 
-The following steps explains you the configuration of targetID property in ListBox.
+The following steps explains you the configuration of TargetID property in ListBox.
 
-In an ASPX page, add an element to configure ListBox.
-
-{% highlight html %}
-
-<div id="control">
-
-        <div class="ctrllabel">
-
-            Select a font style</div>
-
-        <ej:listbox id="listboxsample" TargetID="targetlist" runat="server" Width="240"></ej:listbox>
-
-        <ul id="targetlist">
-
-            <li>Algerian</li>
-
-            <li>ARIAL</li>
-
-            <li>Bimini</li>
-
-            <li>Courier</li>
-
-            <li>Cursive</li>
-
-            <li>Fantasy</li>
-
-            <li>Georgia</li>
-
-            <li>Impact</li>
-
-            <li>New york</li>
-
-            <li>Sans-Serif</li>
-
-            <li>Scripts</li>
-
-            <li>Times</li>
-
-            <li>Times New Roman</li>
-
-            <li>Verdana</li>
-
-            <li>Western</li>
-
-            <li>Zapfellipt bt</li>
-
-        </ul>
-
-    </div>
+1. Add the below code in your page to render the ListBox 
 
 
+   ~~~ html
+
+		// Add the following code in View page to configure ListBox widget
+
+		<div id="control">
+
+			<h5 class="ctrllabel">
+
+				Select a font style
+
+			</h5>
+
+			@Html.EJ().ListBox("listboxsample").TargetID("targetlist")
+
+			<ul id="targetlist">
+
+				<li>Algerian</li>
+
+				<li>ARIAL</li>
+
+				<li>Bimini</li>
+
+				<li>Courier</li>
+
+				<li>Cursive</li>
+
+				<li>Fantasy</li>
+
+				<li>Georgia</li>
+
+				<li>Impact</li>
+
+				<li>New york</li>
+
+				<li>Sans-Serif</li>
+
+				<li>Scripts</li>
+
+				<li>Times</li>
+
+				<li>Times New Roman</li>
+
+				<li>Verdana</li>
+
+				<li>Western</li>
+
+				<li>Zapfellipt bt</li>
+
+			</ul>
+
+		</div>
+
+
+   ~~~
+   {:.prettyprint }
 
 
 
-{% endhighlight %}
+
+2. Output of the above steps.
 
 
 
-Output of the above steps.
-
-
-
- ![C:/Users/Rajaveni/Desktop/docs/UG images/targetid.PNG](Behaviour-Settings_images/Behaviour-Settings_img1.png)
+![](Behaviour-Settings_images/Behaviour-Settings_img1.png)
 
 
 
@@ -89,206 +93,126 @@ ListBox widget provides you support to select an item by mentioning the index of
 
 The following steps explains you the configuration of SelectedItemIndex property in ListBox.
 
-In an ASPX page, add an element to configure ListBox.
+1. Add the below code in your page to render the ListBox
 
 
 
-{% highlight c# %}
+   ~~~ html
 
-    protected void Page_Load(object sender, EventArgs e)
+		<div id="control">
 
-    {
+			<h5 class="ctrllabel">
 
-        listboxsample.DataSource = GetData();
+				Select a skill
 
-    }
+			</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
 
-    private List<Languages> GetData()
+			=> df.Text("text")).SelectedItemIndex(2)
 
-    {
+		</div>
 
-        List<Languages> data = new List<Languages>();
 
-        data.Add(new Languages() { Name = "ASP.NET" });
+   ~~~
+   {:.prettyprint }
 
-        data.Add(new Languages() { Name = "ActionScript" });
 
-        data.Add(new Languages() { Name = "Basic" });
+2.  Output of the above steps.
 
-        data.Add(new Languages() { Name = "C++" });
 
-        data.Add(new Languages() { Name = "C#" });
-
-        data.Add(new Languages() { Name = "dBase" });
-
-        data.Add(new Languages() { Name = "Delphi" });
-
-        data.Add(new Languages() { Name = "ESPOL" });
-
-        data.Add(new Languages() { Name = "F#" });
-
-        data.Add(new Languages() { Name = "FoxPro" });
-
-        data.Add(new Languages() { Name = "Java" });
-
-        data.Add(new Languages() { Name = "J#" });
-
-        data.Add(new Languages() { Name = "Lisp" });
-
-        data.Add(new Languages() { Name = "Logo" });
-
-        data.Add(new Languages() { Name = "PHP" });
-
-        return data;
-
-    }
+![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
 
 
 
-
-
-    public class Languages
-
-    {
-
-        public string Name;
-
-    }
-
-
-
-{% endhighlight %}
-
-
-
-{% highlight html %}
-
-<div id="control">
-
-    <div class="ctrllabel">
-
-        Select your skill</div>
-
-<ej:listbox id="listboxsample" DataTextField="Name" SelectedItemIndex="2" runat="server" Width="240"></ej:listbox>
-
-</div>
-
-
-
-
-
-{% endhighlight %}
-
-
-
-Output of the above steps.
-
-
- ![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
-
-
-
-## Enable or Disable the ListBox Control
+## Enable or Disable the ListBox Widget
 
 This features enables you to set the enable or disable options for ListBox by setting Boolean type value to Enabled property. 
 
 The following steps explains you the configuration of Enabled property in ListBox.
 
-In an ASPX page, add an element to configure ListBox.
-
-
-{% highlight html %}
-
-<div id="control">
-
-    <div class="ctrllabel">
-
-        Select a skill</div>
-
-    <ej:listbox id="listboxsample" DataTextField="Name" Enabled="false" runat="server" Width="240"></ej:listbox>
-
-</div>
+1. Add the below code in your view page to render the Disabled ListBox
 
 
 
+   ~~~ html
+
+		// Add the following code in View page to configure ListBox widget
+
+		<div id="control">
+
+			<h5 class="ctrllabel">
+
+				Select a skill
+
+			</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
+
+		</div>
+		
+   ~~~
+   {:.prettyprint }
+
+   ~~~ cs
+
+		// Add the following code to add list items in the controller page
+
+				public class skillset
+
+				{
+
+					public string text { get; set; }
+
+				}
+
+				public ActionResult Index()
+
+				{
+
+					List<skillset> skill = new List<skillset>();
+
+					skill.Add(new skillset { text = "ASP.NET" });
+
+					skill.Add(new skillset { text = "ActionScript" });
+
+					skill.Add(new skillset { text = "Basic" });
+
+					skill.Add(new skillset { text = "C++" });
+
+					skill.Add(new skillset { text = "C#" });
+
+					skill.Add(new skillset { text = "dBase" });
+
+					skill.Add(new skillset { text = "Delphi" });
+
+					skill.Add(new skillset { text = "ESPOL" });
+
+					skill.Add(new skillset { text = "F#" });
+
+					skill.Add(new skillset { text = "FoxPro" });
+
+					skill.Add(new skillset { text = "Java" });
+
+					skill.Add(new skillset { text = "J#" });
+
+					skill.Add(new skillset { text = "Lisp" });
+
+					skill.Add(new skillset { text = "Logo" });
+
+					skill.Add(new skillset { text = "PHP" });
+
+					ViewBag.datasource = skill;
+
+					return View();
+
+				}
+
+   ~~~
+   {:.prettyprint }
 
 
-{% endhighlight %}
+
+2. Output of the above steps.
 
 
-
-{% highlight c# %}
-
-protected void Page_Load(object sender, EventArgs e)
-
-        {
-
-            listboxsample.DataSource = GetData();
-
-        }
-
-        private List<Languages> GetData()
-
-        {
-
-            List<Languages> data = new List<Languages>();
-
-            data.Add(new Languages() { Name = "ASP.NET" });
-
-            data.Add(new Languages() { Name = "ActionScript" });
-
-            data.Add(new Languages() { Name = "Basic" });
-
-            data.Add(new Languages() { Name = "C++" });
-
-            data.Add(new Languages() { Name = "C#" });
-
-            data.Add(new Languages() { Name = "dBase" });
-
-            data.Add(new Languages() { Name = "Delphi" });
-
-            data.Add(new Languages() { Name = "ESPOL" });
-
-            data.Add(new Languages() { Name = "F#" });
-
-            data.Add(new Languages() { Name = "FoxPro" });
-
-            data.Add(new Languages() { Name = "Java" });
-
-            data.Add(new Languages() { Name = "J#" });
-
-            data.Add(new Languages() { Name = "Lisp" });
-
-            data.Add(new Languages() { Name = "Logo" });
-
-            data.Add(new Languages() { Name = "PHP" });
-
-            return data;
-
-        }
-
-
-
-        public class Languages
-
-        {
-
-            public string Name;
-
-        }
-
-
-
-
-
-{% endhighlight %}
-
-
-
-Output of the above steps.
-
-
- ![C:/Users/Rajaveni/Desktop/docs/UG images/enabled.PNG](Behaviour-Settings_images/Behaviour-Settings_img3.png)
+![](Behaviour-Settings_images/Behaviour-Settings_img3.png)
 
 
 

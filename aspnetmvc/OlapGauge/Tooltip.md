@@ -3,7 +3,7 @@ layout: post
 title: Tooltip
 description: tooltip
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -14,8 +14,8 @@ Tooltip provides the information about the OlapGauge when you move the mouse poi
 
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 
@@ -75,7 +75,7 @@ You can customize the Tooltip by overriding the existing style attributes and re
 
 {% highlight css %}
 
-[CSS]
+
 
 <style>
 

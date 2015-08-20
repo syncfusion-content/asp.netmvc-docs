@@ -16,7 +16,6 @@ The following code example illustrates how to add DataSource at control creation
 
 {% highlight html %}
 
-[EJMVC]
 
 @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local)
 .ReportPath("~/App_Data/Product List.rdlc")
@@ -99,7 +98,7 @@ The following code example illustrates how to add DataSource in Web API.
 
 {% highlight c# %}
 
-public class ReportsController : ApiController, IReportController
+	public class ReportsController : ApiController, IReportController
 
     {
 
@@ -127,7 +126,7 @@ public class ReportsController : ApiController, IReportController
 		
     }
 	
-public class ProductList
+	public class ProductList
 
     {
 

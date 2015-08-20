@@ -7,13 +7,13 @@ control: XlsIO
 documentation: ug
 ---
 
-###  How to add chart labels to scatter points
+#  How to add chart labels to scatter points
 
 The following code example illustrates adding chart labels to the scatter points of the chart.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -64,9 +64,9 @@ workbook.Close();
 
 excelEngine.Dispose();         
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -119,5 +119,5 @@ workbook.Close()
 
 excelEngine.Dispose()
 
-
+{% endhighlight %}
 

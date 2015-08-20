@@ -21,7 +21,7 @@ ShowText property is used to show or hide the Tile caption. By default, the Show
 Refer to the following code examples.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Tile("tile").Text("Camera").TextAlignment(TextAlignment.Center).ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/UG/web/Content/tile/camera.png")
 

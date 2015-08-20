@@ -26,10 +26,8 @@ In the following example May 10, 2015 09:00 AM is set as MinDateTime and May 20,
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
 
-   ~~~ html
-   
-     [_cshtml]
-	 
+   ~~~ js
+
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Mintime and Maxtime*@
 
 		@Html.EJ().DateTimePicker("DateTime").MinDateTime("05/10/2015 09:00 AM").MaxDateTime("05/20/2015 09:00 PM").Interval(30).Width("175px")

@@ -22,4 +22,4 @@ The Essential ASP.NET MVC Scroller control has a sliding document whose position
 
 ## Control Structure
 
-![C:/Users/labuser/Desktop/a.png](Overview_images/Overview_img1.png)
+![](Overview_images/Overview_img1.png)

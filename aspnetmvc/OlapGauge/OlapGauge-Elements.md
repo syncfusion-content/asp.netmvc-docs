@@ -3,7 +3,7 @@ layout: post
 title: OlapGauge-Elements
 description: olapgauge :elements
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 

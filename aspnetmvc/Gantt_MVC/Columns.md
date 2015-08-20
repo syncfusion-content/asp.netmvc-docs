@@ -16,10 +16,7 @@ The TreeGrid column displays the information from a bounded data source and it w
 You can change the width of the column in TreeGrid to show the entire text of the column by resizing the column. The following code example shows you how to enable the Column Resize feature at Gantt initialize.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -44,13 +41,7 @@ Column template is used to customize the column’s look and feel, based on requ
 The following code example shows you how to display the icon in the TreeGrid column.
 
 
-
-
-
 {% highlight C# %}
-
-
-
 
 public class GanttCustomColumnController : Controller
 
@@ -282,7 +273,7 @@ public class GanttCustomColumnController : Controller
 	
 	{% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Gantt("Gantt")
@@ -426,16 +417,13 @@ public class GanttCustomColumnController : Controller
 {% endhighlight %}
 
 
-
-
-
 The following screenshot displays the customized column in Gantt control.
 
 
 
 ![](Columns_images/Columns_img1.png)
 
-
+_Figure 34: Customized column_
 
 
 
@@ -445,7 +433,7 @@ Gantt supports enabling and disabling the visibility of the columns dynamically 
 
 ![](Columns_images/Columns_img2.png)
 
-
+_Figure 35: Column menu with column chooser _
 
 The column menu is enabled with the ShowColumnChooser property, where the default value for this property is false.
 
@@ -456,9 +444,6 @@ The column menu provides the following options:
 * Columns 
 
 Sort Ascending and Sort Descending options can be enabled or disabled with the AllowSorting property. Single level sorting can be performed with these options. To perform multilevel sorting, AllowMultiSorting property should be enabled. You can also disable the visibility of a particular column in the column collection manually by setting the Visible property to false.
-
-
-
 
 
 {% highlight html %}
@@ -489,7 +474,7 @@ The following screenshot displays the column chooser in the Gantt control.
 
 ![](Columns_images/Columns_img3.png)
 
-
+_Figure 36: Column chooser in Gantt control_
 
 
 

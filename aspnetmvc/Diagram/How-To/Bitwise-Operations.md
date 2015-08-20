@@ -7,24 +7,20 @@ control: Diagram
 documentation: ug
 ---
 
-## Bitwise Operations
+# Bitwise Operations
 
-### Bitwise Operation
+## Bitwise Operation
 
 Bitwise Operations are used to manipulate the flagged enumerations [enum]. In this section, Bitwise Operations are illustrated by using Graph Constraints. The same is applicable while working with Node Constraints, Connector Constraints, or Port Constraints.
 
-### Add Operation
+## Add Operation
 
 You can add or enable multiple values at a time by using Bitwise ‘|’ (OR) operator.
 
 {% highlight c# %}
 
-[EJMVC]
-
-[controller]
 
 node.Constraints = NodeConstraints.Select | NodeConstraints.Rotate;
-
 
 
 {% endhighlight %}
@@ -33,18 +29,13 @@ node.Constraints = NodeConstraints.Select | NodeConstraints.Rotate;
 
 In the above example, you can do both selection and rotation.
 
-### Remove Operation
+## Remove Operation
 
 You can remove or disable values by using Bitwise ‘&~’ (XOR) operator.
 
 {% highlight c# %}
 
-[EJMVC]
-
-[controller]
-
 node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
-
 
 
 {% endhighlight %}
@@ -53,19 +44,14 @@ node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
 
 In the above example, Rotation is disabled, but other constraints are enabled.
 
-### Check Operation 
+## Check Operation 
 
 You can check any value by using Bitwise ‘&’ (AND) operator.
 
 {% highlight c# %}
 
-[EJMVC]
-
-[controller]
 
 if ((node.constraints & (NodeConstraints.Rotate)) == (NodeConstraints.Rotate));
-
-
 
 {% endhighlight %}
 

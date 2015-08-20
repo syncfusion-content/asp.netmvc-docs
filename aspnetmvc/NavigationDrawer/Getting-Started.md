@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started
 platform: ejmvc
-control: Navigation Drawer
+control: NavigationDrawer
 documentation: ug
 ---
 
@@ -26,7 +26,7 @@ You can create an MVC Project and add the necessary assemblies, styles and scrip
 To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set thetext for list itemsby using Text property. You can paste the following code in corresponding view page.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 

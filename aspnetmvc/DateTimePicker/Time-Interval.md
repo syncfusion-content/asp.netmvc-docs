@@ -13,9 +13,9 @@ You can set time interval between two adjacent time values in the time popup man
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
+     
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized interval*@
 

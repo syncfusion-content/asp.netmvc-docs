@@ -13,7 +13,7 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
 
 
-{% highlight html %}
+{% highlight js %}
 
      @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -133,7 +133,7 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
 The following screenshot displays _Ribbon control_ without resizing the window.
 
-![C:/Users/Giftline/Desktop/a.png](Resize_images/Resize_img1.png)
+![](Resize_images/Resize_img1.png)
 
 
 

@@ -26,183 +26,185 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
 2. Add necessary helper elements to render the Editor components.
 
-{% highlight html %}
+   ~~~ html
 
-<div class="editors">
+		<div class="editors">
 
-<div class="ele-icon"></div>
+		<div class="ele-icon"></div>
 
-<div class="ele-txt" style="">Electricity Bill Calculator</div>
+		<div class="ele-txt" style="">Electricity Bill Calculator</div>
 
-<br />
+		<br />
 
-<table class="editors">
+		<table class="editors">
 
-     <tbody>
+			 <tbody>
 
-         <tr>
+				 <tr>
 
-           <td>
+				   <td>
 
-              <label>Unit meters</label>
+					  <label>Unit meters</label>
 
-           </td>
+				   </td>
 
-           <td>    @* NumericTextBox creation with watermark text *@
+				   <td>    @* NumericTextBox creation with watermark text *@
 
-              @Html.EJ().NumericTextbox("numeric").WatermarkText("Units")
+					  @Html.EJ().NumericTextbox("numeric").WatermarkText("Units")
 
-           </td>
+				   </td>
 
-        </tr>
+				</tr>
 
-        <tr>
+				<tr>
 
-            <td>
+					<td>
 
-               <label>Service Tax</label>
+					   <label>Service Tax</label>
 
-            </td>
+					</td>
 
-            <td>     @* PercentageTextBox creation with watermark text *@
+					<td>     @* PercentageTextBox creation with watermark text *@
 
-                 @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax")
+						 @Html.EJ().PercentageTextbox("percent").WatermarkText("Tax")
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-        <tr>
+				<tr>
 
-             <td>
+					 <td>
 
-               <label>Fare</label>
+					   <label>Fare</label>
 
-            </td>
+					</td>
 
-            <td>    @* CurrencyTextBox creation with watermark text *@
+					<td>    @* CurrencyTextBox creation with watermark text *@
 
-                @Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit")
+						@Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit")
 
-            </td>
+					</td>
 
-        </tr>
+				</tr>
 
-        <tr>
+				<tr>
 
-            <td>
+					<td>
 
-               <label>Mobile No</label>
+					   <label>Mobile No</label>
 
-            </td>
+					</td>
 
-            <td>    @* MaskEditTextBox creation with watermark text *@
+					<td>    @* MaskEditTextBox creation with watermark text *@
 
-               @Html.EJ().MaskEdit("maskedit").WatermarkText("Phone number")
+					   @Html.EJ().MaskEdit("maskedit").WatermarkText("Phone number")
 
-            </td>
+					</td>
 
-       </tr>
+			   </tr>
 
-     </tbody></table>
+			 </tbody></table>
 
-  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
+		  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
 
-  </div>
+		  </div>
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. The following styles are added to arrange the Editors.  You can add the following location in the URL path for the background image and to apply styling [http://js.syncfusion.com/UG/Web/Content/electricity.png](http://js.syncfusion.com/UG/Web/Content/electricity.png)
 
-{% highlight html %}
+   ~~~ css
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-    .ele-icon
+			.ele-icon
 
-    {
+			{
 
-        display: inline-block;
+				display: inline-block;
 
-        background-image: url(http://js.syncfusion.com/UG/Web/Content/electricity.png);
+				background-image: url(http://js.syncfusion.com/UG/Web/Content/electricity.png);
 
-        background-repeat: no-repeat;
+				background-repeat: no-repeat;
 
-        background-size: contain;
+				background-size: contain;
 
-        height: 50px;
+				height: 50px;
 
-        width: 50px;
+				width: 50px;
 
-        margin-left:50px;
+				margin-left:50px;
 
-        margin-top:15px;
+				margin-top:15px;
 
-    }
+			}
 
-    .ele-txt
+			.ele-txt
 
-    {
+			{
 
-        display: inline-block;
+				display: inline-block;
 
-        font-size: 20px;
+				font-size: 20px;
 
-        font-weight: bolder;
+				font-weight: bolder;
 
-        height: 50px;
+				height: 50px;
 
-        position: relative;
+				position: relative;
 
-        text-align: center;
+				text-align: center;
 
-        top: -20px;
+				top: -20px;
 
-    }
+			}
 
-    .editors
+			.editors
 
-    {
+			{
 
-        max-width: 400px;
+				max-width: 400px;
 
-        border: 2px solid #DDDDDD;
+				border: 2px solid #DDDDDD;
 
-    }
+			}
 
-        .editors table
+				.editors table
 
-        {
+				{
 
-            border:0px;
+					border:0px;
 
-            padding-left:50px;
+					padding-left:50px;
 
-        }
+				}
 
-    .paybill
+			.paybill
 
-    {
+			{
 
-        margin:15px 0px 10px 208px;
+				margin:15px 0px 10px 208px;
 
-    }
+			}
 
-    .editors label
+			.editors label
 
-    {
+			{
 
-        display: block;
+				display: block;
 
-        width: 130px;
+				width: 130px;
 
-    }
+			}
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 4. Execute the code to render Editors as follows
 
@@ -350,7 +352,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
             <td>     
 
-@Html.EJ().PercentageTextbox("percent").WatermarkText("Tax").MinValue(5).MaxValue(100).Value("15")
+			@Html.EJ().PercentageTextbox("percent").WatermarkText("Tax").MinValue(5).MaxValue(100).Value("15")
 
             </td>
 
@@ -366,7 +368,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
             <td>   
 
-@Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit").MinValue(0.00).MaxValue(100000.00).Value("350.00").DecimalPlaces(2)
+			@Html.EJ().CurrencyTextbox("currency").WatermarkText("Amount per unit").MinValue(0.00).MaxValue(100000.00).Value("350.00").DecimalPlaces(2)
 
             </td>
 

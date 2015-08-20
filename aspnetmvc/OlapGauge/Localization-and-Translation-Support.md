@@ -3,7 +3,7 @@ layout: post
 title: Localization-and-Translation-Support
 description: localization and translation support
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -67,7 +67,7 @@ The following code example illustrates you on how to localize OlapGuage’s User
 
 
 {% highlight js %}
-[MVC]
+
 
 @ScriptSection{
 
@@ -99,7 +99,8 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
 
 }
 {% endhighlight  %}
-{% highlight html %}
+
+{% highlight js %}
 @Controlsection{
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").Locale("fr-FR").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -168,7 +169,6 @@ To apply control side localization, refer the following code example:
 
 {% highlight html %}
 
-[HTML]
 
 ej.olap.OlapGauge.locale["zh-CN"] = {
 
@@ -183,7 +183,7 @@ To render the localized Cube information,__set “_Locale__Identifier”___in th
 
 {% highlight c# %}
 
-[C#]
+
 
 //1036 refers to “fr-FR” culture.
 

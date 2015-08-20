@@ -21,13 +21,9 @@ The following steps explains you on how to configure the Height and Width of the
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page 
+// Add this code in your view page 
 
 @(Html.EJ().Slider("BasicSlider").Height("20").Width("500"))
 
@@ -48,12 +44,9 @@ The following steps explains you on how to configure the IncrementStep property.
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
 
+{% highlight js %}
 
-
-
-{% highlight html %}
-
-/ / Add this code in your view page 
+// Add this code in your view page 
 
 @(Html.EJ().Slider("BasicSlider").Height("20").Width("500").IncrementStep(5))
 
@@ -61,7 +54,7 @@ The following steps explains you on how to configure the IncrementStep property.
 
 Execute the above code example to render the following output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/s1.PNG](Behaviour-Settings_images/Behaviour-Settings_img2.png)
+![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
 
 
 
@@ -75,13 +68,9 @@ The following steps explains you on how to enable the ReadOnly property.
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("BasicSlider").Height("20").Width("500").ReadOnly(true))
 
@@ -89,7 +78,7 @@ The following steps explains you on how to enable the ReadOnly property.
 
 After you execute the above code example, the Slider values cannot be changed in any ways.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderread.PNG](Behaviour-Settings_images/Behaviour-Settings_img3.png)
+![](Behaviour-Settings_images/Behaviour-Settings_img3.png)
 
 
 

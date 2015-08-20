@@ -17,7 +17,7 @@ Refer the following code example.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

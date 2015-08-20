@@ -3,7 +3,7 @@ layout: post
 title: Customize-Direction
 description: customize direction
 platform: ejmvc
-control: Navigation Drawer
+control: NavigationDrawer
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ By using this property, you can set the drawer to be open from right to left dir
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).Direction(NavigationDrawerDirection.Right).ContentTemplate(@<div>
 

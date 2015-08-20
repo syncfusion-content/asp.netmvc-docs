@@ -15,7 +15,7 @@ The following code illustrates how to create a Diagram with some model propertie
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

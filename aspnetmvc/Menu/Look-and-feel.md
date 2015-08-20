@@ -36,121 +36,125 @@ Using this CssClass you can override the existing styles under the theme style s
 
 
 
-{% highlight html %}
-
-[CSHTML]
-
-// Add the following code in your CSHTML page.
-
-<div class="imgframe">
-
-        @Html.EJ().Menu("menucontrol").Items(items =>
-
-        {
-
-            items.Add().Id("Home").Text("Home").Children(child =>
-
-                {
-
-                    child.Add().Text("Foundation");
-
-                    child.Add().Text("Launch");
-
-                    child.Add().Text("About").Children(child1 =>
-
-                    {
-
-                        child1.Add().Text("Company");
-
-                        child1.Add().Text("Location");
-
-                    });
-
-                });
-
-            items.Add().Text("Services").Children(child =>
-
-                {
-
-                    child.Add().Text("Consulting");
-
-                    child.Add().Text("Outsourcing");
-
-                });
-
-            items.Add().Text("About");
-
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-                {
-
-                    child.Add().Text("Contact number");
-
-                    child.Add().Text("E-mail");
-
-                });
-
-            items.Add().Id("Careers").Text("Careers").Children(child =>
-
-                 {
+   ~~~ js
 
 
 
-                     child.Add().Text("Position").Children(child1 =>
+		// Add the following code in your CSHTML page.
 
-                             {
+		<div class="imgframe">
 
-                                 child1.Add().Text("Developer");
+				@Html.EJ().Menu("menucontrol").Items(items =>
 
-                                 child1.Add().Text("Manager");
+				{
 
-                             });
+					items.Add().Id("Home").Text("Home").Children(child =>
 
-                     child.Add().Text("Apply online");
+						{
 
-                 });
+							child.Add().Text("Foundation");
+
+							child.Add().Text("Launch");
+
+							child.Add().Text("About").Children(child1 =>
+
+							{
+
+								child1.Add().Text("Company");
+
+								child1.Add().Text("Location");
+
+							});
+
+						});
+
+					items.Add().Text("Services").Children(child =>
+
+						{
+
+							child.Add().Text("Consulting");
+
+							child.Add().Text("Outsourcing");
+
+						});
+
+					items.Add().Text("About");
+
+					items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+						{
+
+							child.Add().Text("Contact number");
+
+							child.Add().Text("E-mail");
+
+						});
+
+					items.Add().Id("Careers").Text("Careers").Children(child =>
+
+						 {
 
 
 
-        }).Width("500").CssClass("Purple-dark")
+							 child.Add().Text("Position").Children(child1 =>
 
-</div>
+									 {
+
+										 child1.Add().Text("Developer");
+
+										 child1.Add().Text("Manager");
+
+									 });
+
+							 child.Add().Text("Apply online");
+
+						 });
 
 
 
-{% endhighlight  %}
+				}).Width("500").CssClass("Purple-dark")
+
+		</div>
+
+
+
+   ~~~
+   {:.prettyprint }
 
 2. Add the following code in your style section.
-{% highlight css %}
-[CSS]
+
+
+   ~~~ css
 
 
 
-<style type="text/css" class="cssStyles">
 
-    .Purple-dark {
+		<style type="text/css" class="cssStyles">
 
-        background: pink;
+			.Purple-dark {
 
-    }
+				background: pink;
+
+			}
 
 
 
-    .Purple-dark.e-horizontal .e-list > a {
+			.Purple-dark.e-horizontal .e-list > a {
 
-            color: #4800ff;
+					color: #4800ff;
 
-     }
+			 }
 
-</style>
+		</style>
 
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 Following screenshot displays the output of the above code.
 
-![C:/Users/kaliswaran/Desktop/M-CSS.png](Look-and-feel_images/Look-and-feel_img1.png)
+![](Look-and-feel_images/Look-and-feel_img1.png)
 
 
 
-_Figure31: Look and feel of a Menu_
+_Figure: Look and feel of a Menu_
 

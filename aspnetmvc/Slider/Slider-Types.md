@@ -43,13 +43,9 @@ The following steps explains you on how to configure the SliderType property to 
 
 1. In an VIEW page, specify the helper elements to render the RangeSlider and MinRangeSlider.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("minSlider").SliderType(SlideType.MinRange).Value("60").Width("500"))
 
@@ -63,7 +59,7 @@ Execute the above code example to render the following output.
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/ss3.PNG](Slider-Types_images/Slider-Types_img1.png)
+![](Slider-Types_images/Slider-Types_img1.png)
 
 
 

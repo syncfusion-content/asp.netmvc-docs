@@ -15,7 +15,7 @@ Specifies the index of the _Ribbon_ tab to select the given index tab item in th
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -153,7 +153,7 @@ Specifies the index or indexes to disable the corresponding tabs in the _Ribbon_
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -287,7 +287,7 @@ Specifies the index or indexes to enable the corresponding tabs in the _Ribbon_ 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -427,7 +427,7 @@ This method is used to hide the given text tab in the _Ribbon_ control.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -563,7 +563,7 @@ This method is used to show the given text tab in the _Ribbon_ control.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -704,7 +704,7 @@ This method is used to remove the given index tab item from the _Ribbon_ control
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -840,7 +840,7 @@ Specifies the _width_ to the _Ribbon_ control.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
   @(Html.EJ().Ribbon("Ribbon")
 
@@ -966,7 +966,7 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -1085,7 +1085,7 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1165,7 +1165,7 @@ var content = {
 
 The following output is displayed as a result of the above code example.
 
-![C:/Users/ApoorvahR/Desktop/1.png](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)
 
 
 ## Collapse and Expand
@@ -1176,7 +1176,7 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1249,18 +1249,13 @@ The following screenshot displays the output of the above code example.
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png)
 
 
-
-
-
-
-
 ### Expand
 
 _Expand_ method is used to expand the minimized ribbon control tab contents.You can expand the_Ribbon_ tab content by using the client side method _expand()_ .
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1335,9 +1330,6 @@ The following screenshot displays the output of the above code example.
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img11.png)
 
 
-
-
-
 ## AddTab
 
 This method is used to add tab dynamically in the _Ribbon_ control. This method requires three arguments _addTab(Tabname,TabGroupcollection,index)_
@@ -1348,7 +1340,7 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
     @(Html.EJ().Ribbon("Ribbon")
 
@@ -1442,7 +1434,7 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
 
 
-{% highlight html %}
+{% highlight js %}
 
     @(Html.EJ().Ribbon("Ribbon")
 
@@ -1538,7 +1530,7 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
 The following screenshot displays the output of the above code example.
 
-![C:/Users/Giftline/Desktop/a.png](Appearance-and-Styling_images/Appearance-and-Styling_img13.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img13.png)
 
 
 

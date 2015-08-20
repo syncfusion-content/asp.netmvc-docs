@@ -16,110 +16,109 @@ Sets the root class for TreeView theme. This CssClassAPI helps you to use custom
 The following steps explain enabling the CssClass property for TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
-
-{% highlight html %}
-
-\\ To configure TreeView in the CSHTML page.
-
-    @Html.EJ().TreeView("treeview").Items(items =>
-
-         {
-
-                        items.Add().Text("Favorites").Expanded(true).Children(child =>
-
-               {
-
-                     child.Add().Text("Desktop");
-
-                     child.Add().Text("Downloads");
-
-                     child.Add().Text("Recent places");
-
-                });
-
-                    items.Add().Text("Libraries").Expanded(true).Children(child =>
-
-                {
-
-                      child.Add().Text("Documents").Children(child1 =>
-
-                      {
-
-                                child1.Add().Text("My Documents");
-
-                                child1.Add().Text("Public Documents");
-
-                      });
-
-                      child.Add().Text("Pictures").Children(child1 =>
-
-                      {
-
-                            child1.Add().Text("My Pictures");
-
-                            child1.Add().Text("Public Pictures");
-
-                       });
-
-                       child.Add().Text("Music").Children(child1 =>
-
-                        {
-
-                            child1.Add().Text("My Music");
-
-                            child1.Add().Text("Public Music");
-
-                        });
-
-                        child.Add().Text("Subversion");
+   
+   ~~~ js
 
 
+		\\ To configure TreeView in the CSHTML page.
 
-                   });
+		    @Html.EJ().TreeView("treeview").Items(items =>
 
-                   items.Add().Text("Computer").Children(child =>
+			 {
 
-                   {
+					items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                        child.Add().Text("Folder(C)");
+			       {
 
-                        child.Add().Text("Folder(D)");
+				     child.Add().Text("Desktop");
 
-                        child.Add().Text("Folder(E)");
+				     child.Add().Text("Downloads");
 
-                   });
+				     child.Add().Text("Recent places");
+
+				});
+
+				    items.Add().Text("Libraries").Expanded(true).Children(child =>
+
+				{
+
+				      child.Add().Text("Documents").Children(child1 =>
+
+				      {
+
+						child1.Add().Text("My Documents");
+
+						child1.Add().Text("Public Documents");
+
+				      });
+
+				      child.Add().Text("Pictures").Children(child1 =>
+
+				      {
+
+					    child1.Add().Text("My Pictures");
+
+					    child1.Add().Text("Public Pictures");
+
+				       });
+
+				       child.Add().Text("Music").Children(child1 =>
+
+					{
+
+					    child1.Add().Text("My Music");
+
+					    child1.Add().Text("Public Music");
+
+					});
+
+					child.Add().Text("Subversion");
 
 
 
-                }).CssClass("customCss")
+				   });
 
-{% endhighlight %}
+				   items.Add().Text("Computer").Children(child =>
 
+				   {
+
+					child.Add().Text("Folder(C)");
+
+					child.Add().Text("Folder(D)");
+
+					child.Add().Text("Folder(E)");
+
+				   });
+
+
+
+				}).CssClass("customCss")
+
+   ~~~
+   {:.prettyprint }
 
 
 2. Define CSS class for customizing the TreeView.
 
-{% highlight css %}
+   ~~~ css
 
-    .customCss .e-treeview {
+           .customCss .e-treeview {
 
-        background-color: #E0E0E0;
+			background-color: #E0E0E0;
 
-        /* Old browsers */
+			/* Old browsers */
 
-        color: white;
+			color: white;
 
-        border: 1px solid transparent;
+			border: 1px solid transparent;
 
-        border-image: initial;
+			border-image: initial;
 
-    }
-
-
-{% endhighlight %}
+		    }
 
 
-
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -143,7 +142,7 @@ The following steps explain how to use the Height property of TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight html %}
+{% highlight js %}
 
 
 \\ To configure TreeView in the CSHTML page
@@ -244,7 +243,7 @@ The following steps explain how to use the width property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight html %}
+{% highlight js %}
 
 \\ To configure TreeView in the CSHTML page
 

@@ -21,7 +21,6 @@ The following steps explain you how to enable state maintenance for AutoComplete
 
 
 {% highlight html %}
-[CSHTML]
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 

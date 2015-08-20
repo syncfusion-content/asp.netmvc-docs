@@ -23,13 +23,9 @@ The following steps explains you the configuration of “Value” and “Values�
 
 1. In an VIEW page, specify the helper elements to render the “Range Slider” and “Default Slider”.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").SliderType(SlideType.Default).Value("50").Width("500"))
 
@@ -42,7 +38,7 @@ The following steps explains you the configuration of “Value” and “Values�
 Execute the above code example to render the following output.
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderrange1.PNG](Updating-slider-value_images/Updating-slider-value_img1.png)
+![](Updating-slider-value_images/Updating-slider-value_img1.png)
 
 
 
@@ -58,13 +54,9 @@ The following steps explains you on how to configure MinValue and MaxValue prope
 
 1. In an VIEW page, specify the helper elements to render the Default Slider and Range Slider.
 
+{% highlight js %}
 
-
-
-
-{% highlight html %}
-
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80))
 
@@ -80,7 +72,7 @@ The following steps explains you on how to configure MinValue and MaxValue prope
 
 Execute the above code example to render the following output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/s2.PNG](Updating-slider-value_images/Updating-slider-value_img2.png)
+![](Updating-slider-value_images/Updating-slider-value_img2.png)
 
 
 

@@ -13,21 +13,13 @@ Grid control is capable of updating its dataSource as and when required. Grid me
 
 For instance, consider a textbox above Grid and depending on its value, you can update a new datasource to Grid dynamically.
 
-{% highlight html %}
-
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 Enter EmployeeID Field Value:
 
 <input type="text" id="colValue" />
 
 <input type="button" id="customButton" value="Change DataSource">
-
-
 
  @(Html.EJ().Grid<EJGrid.Models.Order>("Grid")
 
@@ -54,8 +46,7 @@ Enter EmployeeID Field Value:
                                          })
 
 )
-{% endhighlight  %}
-{% highlight js %}
+
 <script>
 
     $("#customButton").ejButton({
@@ -99,8 +90,9 @@ Enter EmployeeID Field Value:
 </script>
 
 {% endhighlight  %}
+
 {% highlight c# %}
-[Controller]
+
 
 namespace EJGrid.Controllers
 
@@ -142,7 +134,7 @@ namespace EJGrid.Controllers
 
 The following screenshot illustrates the output.
 
-![C:/Users/ApoorvahR/Desktop/1.png](Set-Dynamic-DataSource-to-Grid_images/Set-Dynamic-DataSource-to-Grid_img1.png)
+![](Set-Dynamic-DataSource-to-Grid_images/Set-Dynamic-DataSource-to-Grid_img1.png)
 
-
+_Figure : Dynamic DataSource in Grid_
 

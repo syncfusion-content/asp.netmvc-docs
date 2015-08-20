@@ -16,14 +16,7 @@ Scrolling is an important feature in Grid. It makes Grid more compatible with 
 In this following code example, ScrollSettings property is used to adjust the Grid width and height. 
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[cshtml]
-
-
+{% highlight js %}
 
     @(Html.EJ().Grid<object>("Grid")
 
@@ -62,31 +55,29 @@ In this following code example, ScrollSettings property is used to adjust the G
 )
 
 {% endhighlight  %}
+
 {% highlight c# %}
-
-[Controller]
-
 
 
 public partial class GridController : Controller
 
-    {
+{
 
-        //
+     //
 
-        // GET: /VirtualPaging/ 
+     // GET: /VirtualPaging/ 
 
-        public ActionResult VirtualPaging()
+     public ActionResult VirtualPaging()
 
-        {
+     {
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+          var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-            ViewBag.datasource = DataSource;
+          ViewBag.datasource = DataSource;
 
-            return View();
+         return View();
 
-        } 
+     } 
 
     }
 
@@ -98,7 +89,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Scrolling_images/Scrolling_img1.png)
 
-
+_Figure : Scrolling_
 
 ## Scroll Settings
 
@@ -112,15 +103,7 @@ The Height property can support percentage, pixel and auto values in ScrollSetti
 
 The following code example illustrates how to enable vertical scrolling in the Grid. 
 
-{% highlight html %}
-
-[MVC]
-
-
-
-[cshtml]
-
-
+{% highlight js %}
 
     @(Html.EJ().Grid<object>("Grid")
 
@@ -160,10 +143,8 @@ The following code example illustrates how to enable vertical scrolling in the G
 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-[Controller]
-
-
 
 public partial class GridController : Controller
 
@@ -195,7 +176,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Scrolling_images/Scrolling_img2.png)
 
-
+_Figure : Vertical scrolling Grid_
 
 ### To Enable Horizontal Scrolling
 
@@ -209,13 +190,6 @@ The following code example illustrates how to enable horizontal scrolling in the
 
 
 {% highlight html %}
-[MVC]
-
-
-
-[cshtml]
-
-
 
     @(Html.EJ().Grid<object>("Grid")
 
@@ -254,10 +228,8 @@ The following code example illustrates how to enable horizontal scrolling in the
 )
 
 {% endhighlight %}
+
 {% highlight c# %}
-[Controller]
-
-
 
 public partial class GridController : Controller
 
@@ -289,7 +261,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Scrolling_images/Scrolling_img3.png)
 
-
+_Figure : Horizontal scrolling Grid_
 
 ## Virtual scrolling on demand
 
@@ -305,15 +277,7 @@ Essential JavaScriptGrid supports two mode of virtualization. They are,
 
 This feature allows you to load the Grid with data while scrolling. The following code example illustrates how to set VirtualScrollMode as Normal.
 
-{% highlight html %}
-
-[MVC]
-
-
-
-[cshtml]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
@@ -348,11 +312,8 @@ This feature allows you to load the Grid with data while scrolling. The followin
 
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]
 
-
-
-public partial class GridController : Controller
+    public partial class GridController : Controller
 
     {
 
@@ -382,13 +343,14 @@ The following screenshot displays the Grid while scrolling. The request is sent 
 
 ![http://help.syncfusion.com/ug/js/ImagesExt/image229_108.png](Scrolling_images/Scrolling_img4.png)
 
+_Figure : Normal mode virtual Scrolling_
 
 
 The following screenshot displays the Grid after it is loaded with data.
 
 ![http://help.syncfusion.com/ug/js/ImagesExt/image229_109.png](Scrolling_images/Scrolling_img5.png)
 
-
+_Figure : Grid after loaded with data_
 
 ### Continuous Mode
 
@@ -396,14 +358,7 @@ You can enable the continuous mode by setting the VirtualScrollMode property a
 
 
 {% highlight html %}
-[MVC] 
-
-
-
-[cshtml]
-
-
-
+ 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
       .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -436,12 +391,11 @@ You can enable the continuous mode by setting the VirtualScrollMode property a
 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-[Controller]
 
 
-
-public partial class GridController : Controller
+   public partial class GridController : Controller
 
     {      
 
@@ -467,11 +421,11 @@ The following screenshot illustrates the request made to fetch the data after th
 
 ![http://help.syncfusion.com/ug/js/ImagesExt/image229_110.png](Scrolling_images/Scrolling_img6.png)
 
-
+_Figure : Continuous mode virtual scrolling_
 
 The following screenshot illustrates the Grid after the data is loaded.
 
 ![http://help.syncfusion.com/ug/js/ImagesExt/image229_111.png](Scrolling_images/Scrolling_img7.png)
 
-
+_Figure : Grid after loaded with data_
 

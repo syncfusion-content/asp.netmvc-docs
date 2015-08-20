@@ -18,10 +18,7 @@ Step 2:  Then, specify the field name for id and name of the resource in the Re
 Step 3: The name of the field, which contains the actual resources assigned for a particular task in the Datasource is specified using ResourceInfoMapping.
 
 
-
-
-
-{% highlight html %}
+{% highlight c# %}
 
 
 //..
@@ -69,12 +66,10 @@ ViewBag.resource = this.GetResources();
  }
 
  #endregion  
+ 
+ {% endhighlight %}
 
-
-
-
-
-
+{% highlight js %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -108,5 +103,5 @@ The following screenshot shows Gantt control with Resources.
 
 ![](Resources_images/Resources_img1.png)
 
-
+_Figure 49: Resources_
 

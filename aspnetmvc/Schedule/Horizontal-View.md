@@ -24,7 +24,7 @@ documentation: ug
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -50,7 +50,7 @@ The above example illustrates the horizontal view of Schedule control. Similarly
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -80,7 +80,7 @@ Execute the above code to render the following output.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -134,14 +134,14 @@ gr.Resources(ViewBag.Resources);
 
 )
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
 // follow the code as same as declared in Resources part
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
@@ -156,7 +156,7 @@ Execute the above code to render the following output.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -208,17 +208,14 @@ gr.Resources(ViewBag.Resources);
 
 .ResourceFields("RoomId,OwnerId"))
 
-
-
 )
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
 // follow the code as same as declared in Resource Grouping  part
 
-{% endhighlight %}
 {% endhighlight %}
 
 Execute the above code to render the following output.

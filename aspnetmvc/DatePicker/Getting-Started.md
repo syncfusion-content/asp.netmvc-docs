@@ -28,44 +28,46 @@ ASP.NET MVC DatePicker widget basically renders with built-in features such as k
 1. You can create a MVC Project and add necessary Dlls and scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
 2. Add the following code to the corresponding view page for DatePicker rendering.
 
+   ~~~ html
 
+		<table>
 
-<table>
+			<tr>
 
-    <tr>
+				<th class="tdclass">Onward Date</th>
 
-        <th class="tdclass">Onward Date</th>
+				<th class="tdclass">Return date</th>
 
-        <th class="tdclass">Return date</th>
+			</tr>
 
-    </tr>
+			<tr>
 
-    <tr>
+				<td class="tdclass">
 
-        <td class="tdclass">
+					<span class="innerdp">
 
-            <span class="innerdp">
+						@Html.EJ().DatePicker("startDate")
 
-                @Html.EJ().DatePicker("startDate")
+					</span>
 
-            </span>
+				</td>
 
-        </td>
+				<td class="tdclass">
 
-        <td class="tdclass">
+					<span class="innerdp">
 
-            <span class="innerdp">
+						@Html.EJ().DatePicker("endDate")
 
-                @Html.EJ().DatePicker("endDate")
+					</span>
 
-            </span>
+				</td>
 
-        </td>
+			</tr>
 
-    </tr>
+		</table>
 
-</table>
-
+   ~~~
+   {:.prettyprint }
 
 
 3. Apply the given styles to show the DatePicker in the Horizontal order.
@@ -104,7 +106,7 @@ By executing the above code samples, you can create two DatePicker widgets in a 
 
 In the real time ticket booking scenario, the booking is open for limited number of days. You have to, select a date from the given range. This can be achieved by using the properties “MinDate” and “MaxDate”. In this way, only those dates ranging between the “MinDate” and “MaxDate” are enabled in the DatePicker.
 
-
+{% highlight html %}
 
   <table>
 
@@ -142,7 +144,7 @@ In the real time ticket booking scenario, the booking is open for limited number
 
   </table>
 
-
+{% endhighlight %}
 
 
 
@@ -157,7 +159,7 @@ The following screenshot shows the output of the above code example.
 You can select the “onward journey date” in the first DatePicker and then the “Return journey date” in the second DatePicker. This validation process is done after the selection of “onward journey date” and the changes are reflected in the Return Date selection DatePicker. You can manipulate this process on the “Select” Event of Onward Date Selection DatePicker.
 
 
-
+{% highlight html %}
 
 
 <table>
@@ -192,7 +194,7 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 </table>
 
-
+{% endhighlight %}
 
 
 {% highlight js %}

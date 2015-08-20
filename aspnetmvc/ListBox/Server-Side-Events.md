@@ -7,7 +7,7 @@ control: Control Name undefined
 documentation: ug
 ---
 
-## Server Side Events
+# Server Side Events
 
 The following server side event is available in Listbox control.
 
@@ -42,12 +42,6 @@ In an ASPX page, add the Listbox control to configure Listbox events.
 <ej:ListBox ID="listboxsample" DataTextField="CustomerID" OnValueSelect="listboxsample_CheckChange" runat="server">
 
 </ej:ListBox>
-
-
-
-
-
-
 
 {% endhighlight %}
 

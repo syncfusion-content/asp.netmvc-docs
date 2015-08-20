@@ -23,7 +23,7 @@ The following steps explains you on how to enable RTL support in Slider.
 
 {% highlight html %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
 
@@ -36,7 +36,7 @@ The following steps explains you on how to enable RTL support in Slider.
 Execute the above code example to render the following output.
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/s3.PNG](RTL-support_images/RTL-support_img1.png)
+![](RTL-support_images/RTL-support_img1.png)
 
 
 

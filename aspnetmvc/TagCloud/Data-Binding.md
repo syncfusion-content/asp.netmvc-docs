@@ -52,8 +52,7 @@ The following steps explains you the local data binding to TagCloud widget,
 	public string Url { get; set; }            
 	public int Frequency { get; set; }        
 }
- 
- [Controller] 
+
  //Refer the Model in the controllerusing <Applicationname>.Models;    
  List<WebsiteCollection> sites = new List<WebsiteCollection>();         
  public ActionResult Index()        
@@ -79,8 +78,8 @@ The following steps explains you the local data binding to TagCloud widget,
 	ViewBag.datasource = sites;            
 	return View();        
  }
- 
- [View]
+ {% endhighlight %}
+{% highlight js %}
  
 	// Map Local datasource to corresponding fields in TagCloud control.           
 	@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
@@ -104,7 +103,7 @@ DataManager is used to manage relational data in ASP.NET MVC. It supports CRU
 
 The following script explains you the Remote data binding to TagCloud widget.
 
-{% highlight c# %}
+{% highlight js %}
 
 <%-- Configure datasource referring remote data binding section and assign it to datasource property -- %>
 

@@ -3,7 +3,7 @@ layout: post
 title: Pointers
 description: pointers
 platform: ejmvc
-control: Circular Gauge
+control: CircularGauge
 documentation: ug
 ---
 
@@ -14,8 +14,7 @@ Pointer value points out the actual value set in the Circular Gauge. You can cus
 ## Adding Pointer Collection
 
 Pointer collection is directly added to the scale object. To add pointer collection in a Gauge control refer the following code example.  
-{% highlight html %}
-[View]
+{% highlight js %}
 
 // For Circular Gauge rendering
 
@@ -41,7 +40,7 @@ PO.Value(30).Add();
 {% endhighlight %}
 Execute the above code to render the following output.
 
-![C:/Users/karthigeyan/Desktop/q.png](Pointers_images/Pointers_img1.png)
+![](Pointers_images/Pointers_img1.png)
 
 
 
@@ -55,9 +54,7 @@ Pointer value is the important element in the Circular Gauge that indicates the 
 
 
 
-{% highlight html %}
-
-[View]
+{% highlight js %}
 
 // For Circular Gauge rendering
 
@@ -128,9 +125,7 @@ _Figure21(b): Circular Gauge with customized pointer value_
 * The Pointers border is modified with the object called border as in scales. It has two border property called color and width which are used to customize the border color of the pointer and border width of the pointer. 
 * You can set the background color to improve the look of the Circular Gauge and you can customize the background color of the scale using backgroundColor.
 
-{% highlight html %}
-
-[View]
+{% highlight js %}
 
 // For Circular Gauge rendering
 
@@ -193,9 +188,7 @@ Execute the above code to render the following output.
 * Based on the value, thepointer point out the label value. You can set the pointer length and width using length and width property respectively. 
 * And you can also adjust the opacity of the pointer using the property opacity which holds the value between 0 and 1. You can add the gradient effects to the pointer using gradient object.
 
-{% highlight html %}
-
-[View]
+{% highlight js %}
 
 // For Circular Gauge rendering
 
@@ -260,9 +253,8 @@ Execute the above code to render the following output.
 * Pointer can be positioned with the help of two properties such as distanceFromScale and placement. distanceFromScale property defines the distance between the scale and pointer.  Placement property is used to locate the pointer with respect to scale either inside the scale or outside the scale or along the scale. 
 * It is an enumerable data type. Both the property is applied only if pointer type is marker. For needle type marker, it renders with default position that is unchangeable.
 
-{% highlight html %}
+{% highlight js %}
 
-[View]
 
 // For Circular Gauge rendering
 
@@ -377,11 +369,61 @@ To implement the pointer image we need to give the API called ImageUrl. It is a 
 
 In this type, needle pointer is completely replaced by image. You can implement it with the help of thr following example.
 
-{% highlight html %}
-[Razor]@(Html.EJ().CircularGauge("circulargauge1")// To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))// To set scale options.Scales(scl =>      {          // set basic appearance          scl.ShowRanges(true).ShowLabels(false).StartAngle(180)             .SweepAngle(180).Radius(130).ShowScaleBar(false)             // To set pointer option             .Pointers(pon => {                                // To set pointer type as needle                              pon.Type(PointerType.Needle)                                 // To set needle type as image                                 .NeedleType(NeedleType.Image)                                 // To set image url for pointer image                                 .ImageUrl("nib.png")                                 // To set pointer value                                 .Value(60)                                 // To set pointer dimension                                 .Length(30).Width(100).Add(); })             // To set tick options             .Ticks(tic => { tic.Height(0).Width(0).Add(); })             // To set range options             .Ranges(rng => {                      rng.DistanceFromScale(-30).StartValue(0)                        .EndValue(70).Size(40).Add();                     rng.DistanceFromScale(30).StartValue(70)                        .EndValue(100).BackgroundColor("#fc0606")                        .Border(bor => or.Color("#fc0606")).Size(40).Add();              }).Add(); }))
+{% highlight js %}
+@(Html.EJ().CircularGauge("circulargauge1")
+
+// To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))
+
+// To set scale options.Scales(scl =>      {
+
+          // set basic appearance
+          scl.ShowRanges(true).ShowLabels(false).StartAngle(180)
+		  .SweepAngle(180).Radius(130).ShowScaleBar(false)  
+
+		  // To set pointer option  
+		  .Pointers(pon => {      
+
+		  // To set pointer type as needle 
+		  pon.Type(PointerType.Needle)  
+
+		  // To set needle type as image 
+		  .NeedleType(NeedleType.Image)  
+
+		  // To set image url for pointer image  
+		  .ImageUrl("nib.png")    
+
+		  // To set pointer value 
+		  .Value(60)              
+
+		  // To set pointer dimension  
+		  .Length(30).Width(100).Add(); })  
+
+	  // To set tick options  
+	  .Ticks(tic => { tic.Height(0).Width(0).Add(); }) 
+
+	  // To set range options 
+	  .Ranges(rng => {   
+		rng.DistanceFromScale(-30).StartValue(0)  
+			.EndValue(70).Size(40).Add();       
+			
+		rng.DistanceFromScale(30).StartValue(70) 
+			.EndValue(100).BackgroundColor("#fc0606")
+			.Border(bor => or.Color("#fc0606")).Size(40).Add();  
+       }).Add();
+  })
+)
 {% endhighlight  %}
+
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller    {        //        // GET: /ToolTip/        public ActionResult Semicircular()        {            return View();        }    }
+
+public partial class CircularGaugeController : Controller
+{
+        //        // GET: /ToolTip/  
+        public ActionResult Semicircular()
+        {        
+			return View(); 
+		} 
+}
 {% endhighlight  %}
 
 
@@ -394,12 +436,57 @@ _Figure25: Semi-circular Gauge with needle pointer as image_
 ### Marker Image 
 
 In this type, the marker pointer is completely replaced by the image. You can implement it with the help of the following example.
-{% highlight html %}
+{% highlight js %}
 
-[Razor]@(Html.EJ().CircularGauge("circulargauge1")// To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))// To set scale options.Scales(scl =>      {          // set basic appearance          scl.ShowRanges(true).ShowLabels(false).StartAngle(180)             .SweepAngle(180).Radius(130).ShowScaleBar(false)             // To set pointer option             .Pointers(pon => {                                // To set pointer type as marker                              pon.Type(PointerType.Marker)                                 // To set needle type as image                                 .MarkerType(MarkerType.Image)                                 // To set image url for pointer image                                 .ImageUrl("ball.png")                                 // To set pointer value                                 .Value(60)                                 // To set pointer dimension                                 .Length(30).Width(100).Add(); })             // To set tick options             .Ticks(tic => { tic.Height(0).Width(0).Add(); })             // To set range options             .Ranges(rng => {                      rng.DistanceFromScale(-30).StartValue(0)                        .EndValue(70).Size(40).Add();                     rng.DistanceFromScale(30).StartValue(70)                        .EndValue(100).BackgroundColor("#fc0606")                        .Border(bor => or.Color("#fc0606")).Size(40).Add();              }).Add(); }))
+@(Html.EJ().CircularGauge("circulargauge1")
+// To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))
+
+// To set scale options.Scales(scl =>
+      {          
+			// set basic appearance  
+			scl.ShowRanges(true).ShowLabels(false).StartAngle(180) 
+				.SweepAngle(180).Radius(130).ShowScaleBar(false)  
+
+				// To set pointer option    
+				.Pointers(pon => {   
+						// To set pointer type as marker 
+						pon.Type(PointerType.Marker)   
+
+						// To set needle type as image  
+						.MarkerType(MarkerType.Image)   
+
+						// To set image url for pointer image   
+						.ImageUrl("ball.png")                
+
+						// To set pointer value         
+                        .Value(60)                
+
+						// To set pointer dimension     
+						.Length(30).Width(100).Add(); })   
+
+				// To set tick options     
+				.Ticks(tic => { tic.Height(0).Width(0).Add(); })   
+
+				// To set range options     
+				.Ranges(rng => {         
+					rng.DistanceFromScale(-30).StartValue(0) 
+						.EndValue(70).Size(40).Add();       
+					rng.DistanceFromScale(30).StartValue(70)   
+						.EndValue(100).BackgroundColor("#fc0606")  
+						.Border(bor => or.Color("#fc0606")).Size(40).Add();    
+						}).Add();
+	})
+)
 {% endhighlight %}
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller    {        //        // GET: /ToolTip/        public ActionResult Semicircular()        {            return View();        }    }
+public partial class CircularGaugeController : Controller
+{
+        //        // GET: /ToolTip/
+        public ActionResult Semicircular()
+        {  
+			return View();   
+		} 
+}
 {% endhighlight  %}
 
 ![](Pointers_images/Pointers_img7.png)
@@ -409,12 +496,62 @@ In this type, the marker pointer is completely replaced by the image. You can im
 ### Marker pointer with Image 
 
 In this type, marker pointer is drawn first and then the image is loaded. You can implement it with the help of following example.
-{% highlight html %}
+{% highlight js %}
 
-[Razor]@(Html.EJ().CircularGauge("circulargauge1")// To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))// To set scale options.Scales(scl =>      {          // set basic appearance          scl.ShowRanges(true).ShowLabels(false).StartAngle(180)             .SweepAngle(180).Radius(130).ShowScaleBar(false)             // To set pointer option             .Pointers(pon => {                                // To set pointer type as marker                              pon.Type(PointerType.Marker)                                 // To set needle type as rectangle                                 .MarkerType(MarkerType.Rectangle)                                 // To set image url for pointer image                                 .ImageUrl("ball.png")                                 // To set pointer value                                 .Value(50)                                 // To set pointer dimension                                 .Length(30).Width(100)                                 .Border(bor => bor.Color("Black").Width(3))                                 .Add(); })             // To set tick options             .Ticks(tic => { tic.Height(0).Width(0).Add(); })             // To set range options             .Ranges(rng => {                      rng.DistanceFromScale(-30).StartValue(0)                        .EndValue(70).Size(40).Add();                     rng.DistanceFromScale(30).StartValue(70)                        .EndValue(100).BackgroundColor("#fc0606")                        .Border(bor => bor.Color("#fc0606")).Size(40).Add();              }).Add(); }))</td></tr>
+@(Html.EJ().CircularGauge("circulargauge1")
+
+// To set frame type as half circle
+ .Frame(fr => fr.FrameType(Frame.HalfCircle))
+ // To set scale options
+ .Scales(scl =>      {
+
+ // set basic appearance 
+ scl.ShowRanges(true).ShowLabels(false).StartAngle(180)
+ .SweepAngle(180).Radius(130).ShowScaleBar(false)  
+
+ // To set pointer option   
+ .Pointers(pon => {  
+
+ // To set pointer type as marker  
+ pon.Type(PointerType.Marker)    
+
+ // To set needle type as rectangle  
+ .MarkerType(MarkerType.Rectangle)  
+
+ // To set image url for pointer image 
+ .ImageUrl("ball.png")                
+
+ // To set pointer value              
+ .Value(50)                           
+
+ // To set pointer dimension          
+ .Length(30).Width(100)               
+ .Border(bor => bor.Color("Black").Width(3))  
+ .Add(); })        
+
+ // To set tick options  
+ .Ticks(tic => { tic.Height(0).Width(0).Add(); }) 
+
+ // To set range options       
+ .Ranges(rng => {          
+ rng.DistanceFromScale(-30).StartValue(0)     
+ .EndValue(70).Size(40).Add();        
+ rng.DistanceFromScale(30).StartValue(70)
+ .EndValue(100).BackgroundColor("#fc0606") 
+ .Border(bor => bor.Color("#fc0606")).Size(40).Add();  
+ }).Add(); 
+ })
+ )
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller    {        //        // GET: /ToolTip/        public ActionResult Semicircular()        {            return View();        }    }
+public partial class CircularGaugeController : Controller
+{
+        //        // GET: /ToolTip/     
+		public ActionResult Semicircular()
+        {
+			return View();  
+		}  
+}
 
 {% endhighlight %}
 
@@ -426,9 +563,8 @@ In this type, marker pointer is drawn first and then the image is loaded. You ca
 
 Circular Gauge can have multiple pointers on it. You can use any combination and any number of pointers in a Gauge. That is, a Gauge can contain any number of marker pointer and any number of needle pointers. Refer the following code example containing two pointers.
 
-{% highlight html %}
+{% highlight js %}
 
-[View]
 
 // For Circular Gauge rendering
 
@@ -505,13 +641,52 @@ Figure 28: Circular Gauge with multiple pointers
 * Gauge Pointer value is used to display the current value of the pointer in the Circular Gauge control.
 * You can position the Circular Gauge pointer value with the gauge as center by using the API called distance. You can Disable/ Enable these pointers value by using the API showValue.
 
-{% highlight html %}
+{% highlight js %}
 
+@(Html.EJ().CircularGauge("CoreCircularGauge")
+// Setting basic properties
+.Radius(100).Value(55).BackgroundColor("transparent")
 
-[Razor]@(Html.EJ().CircularGauge("CoreCircularGauge")// Setting basic properties.Radius(100).Value(55).BackgroundColor("transparent")// Setting scale properties.Scales(SC =>{// enable rangesSC.ShowRanges(true)// Setting ticks option.Ticks(tic => { tic.Height(0).Width(0).Add(); })// Setting range properties.Ranges(ran =>{ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => bor.Color("#1B4279")).Add();ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => bor.Color("#91B8F3")).Add();})// Setting pointer option.Pointers(PO =>{PO.PointerValueText(po=>// enable showValue propertypo.ShowValue(true)// setting distance property.Distance(10).Color("#8c8c8c")).Add();}).Add();}))
+// Setting scale properties
+.Scales(SC =>{
+// enable rangesSC
+.ShowRanges(true)
+
+// Setting ticks option
+.Ticks(tic => { tic.Height(0).Width(0).Add(); })
+
+// Setting range properties
+.Ranges(ran =>
+{
+ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
+bor.Color("#1B4279")).Add();
+ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
+bor.Color("#91B8F3")).Add();
+})
+
+// Setting pointer option
+.Pointers(PO =>{PO.PointerValueText(po=>
+
+// enable showValue propertypo
+.ShowValue(true)
+
+// setting distance property
+.Distance(10)
+
+.Color("#8c8c8c"))
+.Add();})
+.Add();}))
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller{//// GET: /ToolTip/public ActionResult Semicircular(){return View();}}
+
+public partial class CircularGaugeController : Controller
+{
+//// GET: /ToolTip/
+public ActionResult Semicircular()
+{
+	return View();
+	}
+}
 
 
 {% endhighlight  %}
@@ -537,14 +712,58 @@ Appearance of the Circular Gaugepointer value text is adjusted by using four pro
 * Opacity is used to customize the brightness of the text.
 
 
-{% highlight html %}
+{% highlight js %}
 
+@(Html.EJ().CircularGauge("CoreCircularGauge")
 
+// Setting basic properties
+.Radius(100).Value(55).BackgroundColor("transparent")
 
-[Razor]@(Html.EJ().CircularGauge("CoreCircularGauge")// Setting basic properties.Radius(100).Value(55).BackgroundColor("transparent")// Setting scale properties.Scales(SC =>{// enable rangesSC.ShowRanges(true)// Setting ticks option.Ticks(tic => { tic.Height(0).Width(0).Add(); })// Setting range properties.Ranges(ran =>{ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => bor.Color("#1B4279")).Add();ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => bor.Color("#91B8F3")).Add();})// Setting pointer option.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10)// Setting opacity property.Opacity(1)// Setting color property.Color("Red")// Setting auto angle property.autoAngle(false)// Setting angle property.Angle(0)).Add();}).Add();}))
+// Setting scale properties.
+Scales(SC =>{
+
+// enable ranges
+SC.ShowRanges(true)
+
+// Setting ticks option
+.Ticks(tic => { tic.Height(0).Width(0).Add(); })
+
+// Setting range properties
+.Ranges(ran =>
+{
+ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
+bor.Color("#1B4279")).Add();
+ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
+bor.Color("#91B8F3")).Add();
+})
+
+// Setting pointer option
+.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10)
+
+// Setting opacity property
+.Opacity(1)
+
+// Setting color property
+.Color("Red")
+
+// Setting auto angle property
+.autoAngle(false)
+
+// Setting angle property.Angle(0))
+.Add();
+}).Add();
+})
+)
 {% endhighlight %}
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller    {        //        // GET: /ToolTip/        public ActionResult Semicircular()        {            return View();        }}
+public partial class CircularGaugeController : Controller 
+{
+       //        // GET: /ToolTip/ 
+       public ActionResult Semicircular()
+	   {     
+			return View(); 
+	   }
+}
 
 
 {% endhighlight  %}
@@ -562,13 +781,47 @@ Run the above code to render the output as follows.
 
 Similar to other collection, font option is also available in this pointer value text such as size, fontFamily and fontStyle.
 
-{% highlight html %}
+{% highlight js %}
 
 
-[Razor]@(Html.EJ().CircularGauge("CoreCircularGauge")// Setting basic properties.Radius(100).Value(55).BackgroundColor("transparent")// Setting scale properties.Scales(SC =>{// enable rangesSC.ShowRanges(true)// Setting ticks option.Ticks(tic => { tic.Height(0).Width(0).Add(); })// Setting range properties.Ranges(ran =>{ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => bor.Color("#1B4279")).Add();ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => bor.Color("#91B8F3")).Add();})// Setting pointer option.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10).Opacity(1).Color("Red").autoAngle(false).Angle(0)// Setting font option.Font(fo=>fo.Size("15px").FontFamily("Arial").FontStyle("Normal"))).Add();}).Add();}))
+@(Html.EJ().CircularGauge("CoreCircularGauge")
+// Setting basic properties
+.Radius(100).Value(55).BackgroundColor("transparent")
+
+// Setting scale properties
+.Scales(SC =>{
+
+// enable rangesSC
+.ShowRanges(true)
+
+// Setting ticks option
+.Ticks(tic => { 
+tic.Height(0).Width(0)
+.Add(); })
+
+// Setting range properties
+.Ranges(ran =>{
+ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
+	bor.Color("#1B4279")).Add();
+ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
+bor.Color("#91B8F3")).Add();})
+
+// Setting pointer option
+.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10).Opacity(1).Color("Red").autoAngle(false).Angle(0)
+
+// Setting font option.Font(fo=>fo.Size("15px").FontFamily("Arial").FontStyle("Normal"))).Add();}).Add();
+})
+)
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]public partial class CircularGaugeController : Controller{//// GET: /ToolTip/public ActionResult Semicircular(){return View(); }   }
+public partial class CircularGaugeController : Controller
+{
+	//// GET: /ToolTip/
+	public ActionResult Semicircular()
+	{
+		return View(); 
+	}
+}
 
 
 {% endhighlight  %}

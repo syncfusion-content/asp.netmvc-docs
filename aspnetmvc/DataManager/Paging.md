@@ -16,10 +16,8 @@ Paging is a very important query in the DataManager used to display only some re
 The paging index and the paging size parameters of the paging query determine the number of records to be retrieved from the data source of the DataManager.
 
 Refer to the following code example for the paging options.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
-
-
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -58,7 +56,7 @@ Result for the above code example is illustrated as follows.
 ## Dynamic Paging
 
 The paging operation can be dynamically performed by using the DataManager. With the help of an external button click event, the required page records can be obtained and processed accordingly. The following code example illustrates the dynamic paging.
-{% highlight html %}
+{% highlight js %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true))
 
 
@@ -132,7 +130,7 @@ Result of above code example is illustrated as follows.
 ## Custom paging
 
 In this section, you can learn how to use the customized paging. The following code example illustrates the custom paging.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -174,7 +172,7 @@ Result of above code example is illustrated as follows.
 ## Skip
 
 The skip query is used to skip some number of records.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -259,7 +257,7 @@ Result of the above code example is illustrated as follows.
 ## RequiresCount
 
 The requiresCount query is used to get the count of the total number of records in the data source of the DataManager.
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
@@ -302,7 +300,7 @@ Result of the above code example is illustrated as follows.
 ## Range
 
 The range query is used to get some particular range of records from the data source of the DataManager.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 

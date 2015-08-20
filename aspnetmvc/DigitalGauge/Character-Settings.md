@@ -3,7 +3,7 @@ layout: post
 title: Character-Settings
 description: character settings
 platform: ejmvc
-control: Digital Gauge
+control: DigitalGauge
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ The opacityof the character is adjustable with the help of opacity property. The
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @* For Digital Gauge rendering *@
 
@@ -47,7 +47,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img1.png)
 
-
+_Figure 32: Digital Gauge control with character setting_
 
 
 
@@ -61,7 +61,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 5. EightCrossEightSquareMatrix.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -106,12 +106,13 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img2.png)
 
+_Figure 33: Digital Gauge control with character type as seven segment_
 
 ## Text Positioning
 
 The text in the DigitalGauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and the y variable positions the text in the vertical axis.
 
-{% highlight html %}
+{% highlight js %}
 
 @* For Digital Gauge rendering *@
 
@@ -153,12 +154,13 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img3.png)
 
+_Figure 34: Digital Gauge control with position text based on the background image_
 
 ## Shadow Effects
 
 The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
 
-{% highlight html %}
+{% highlight js %}
 
 @* For Digital Gauge rendering*@
 
@@ -203,7 +205,7 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img4.png)
 
-
+_Figure 35: Digital Gauge control with shadow option_
 
 
 

@@ -16,10 +16,7 @@ In this section you can learn how to change the Chartdimensions. You can change 
 You can specify the width and height in pixels to change the dimension of the Chart. 
 
 ## Setting size 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -43,8 +40,8 @@ In the above code, the width is set as 800px and height as 600px that displays t
 
 You can also set the width and height of the Chart in percentage. The Chart gets its dimension with respect to its container size.
 
-Setting size in percentage[MVC]
-{% highlight html %}
+Setting size in percentage
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")

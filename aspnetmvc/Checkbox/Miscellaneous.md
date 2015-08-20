@@ -17,9 +17,9 @@ Set id for Checkbox control as follows.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
     @*set id for checkbox *@
 
@@ -39,15 +39,11 @@ Set prefix id for Checkbox control as follows.
 
 
 
-{% highlight html %}
-
-[CSHTML]
+{% highlight js %}
 
     @*set prefix id for checkbox *@
 
     @Html.EJ().CheckBox("checkbox_idPrefix").IdPrefix("JS")
-
-
 
 {% endhighlight %}
 
@@ -65,15 +61,11 @@ You can set name and value for Checkbox control as follows.
 
 
 
-{% highlight html %}
-
-[CSHTML]
+{% highlight js %}
 
     @*set name and value for checkbox *@
 
     @Html.EJ().CheckBox("checkbox").Name("Conformation").Value("received")
-
-
 
 {% endhighlight %}
 

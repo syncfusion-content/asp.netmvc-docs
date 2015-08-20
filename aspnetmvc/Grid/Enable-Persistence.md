@@ -12,12 +12,7 @@ documentation: ug
 EnablePersistence is used to maintain the current state of the Grid model. When you refresh the page, the current grid state is stored in localStorage and it renders from stored model. 
 
 
-
-
-{% highlight html %}
-[MVC]
-
-[razor] 
+{% highlight js %}
 
     @(Html.EJ().Grid<OrdersView>("StateMaintenance")
 
@@ -53,10 +48,8 @@ EnablePersistence is used to maintain the current state of the Grid model. When 
 
         )
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -98,5 +91,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Enable-Persistence_images/Enable-Persistence_img1.png)
 
-
+_Figure : EnablePersistence._
 

@@ -22,7 +22,7 @@ The ej provides several data utilization methods to achieve summary.
 ## Sum
 
 The Sum summary type provides the sum of the data. The Sum data utilization method accepts two parameters, they are JSON data and the fieldname where the sum is calculated. The following code example illustrates the Default Summary Types.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -85,7 +85,7 @@ The result of the above code example is illustrated as follows.
 The Minimum of a particular field can be calculated by using the ej.min data utilization method and this method accepts the arguments such as JSON data/array, field name and the comparer used for the comparison. When the data to the min method is a JSON array, then the whole record is returned.
 
 The minimum of particular field can be calculated as follows.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -149,7 +149,7 @@ The result of the above code example is illustrated as follows.
 The Maximum of a particular field can be calculated by using the ej.max data utilization method and this method accepts the arguments such as JSON data/array, field name and the comparer used for the comparison. When the data to the max method is a JSON array, then the whole record is returned.
 
 The maximum of particular field can be calculated as follows.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -212,7 +212,7 @@ The result for the above code example is illustrated as follows.
 ## Avg
 
 The Average summary type provides the average of the given data. The Average data utilization method accepts two parameters, they are JSON/Array data and the fieldname where the sum is calculated. Use the following code example for calculating the average of the given JSON data.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 
@@ -275,7 +275,7 @@ _Summary - Average_
 In a data, a field may contain many duplicate values; and sometimes you are required only to list the different (distinct) values. This can be achieved by using the ej.distinct method. This method accepts three parameters such as JSON/Array data, fieldname that you want to fetch as distinct and the third Boolean parameter set as true, returns the whole record when the data is a JSON array. 
 
 The following code example illustrates how to use the ej.distinct method. In the following code, the third parameter of distinct method is set as true and hence it fetches the whole record from the provided data.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
 

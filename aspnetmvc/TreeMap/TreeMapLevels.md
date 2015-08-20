@@ -24,7 +24,7 @@ You can use GroupPath property for every flat level of the TreeMap control. It
 
 You can use GroupGap property to separate the items from every flat level and to differentiate the levels mentioned in the TreeMap control.
 
-{% highlight html %}
+{% highlight js %}
 
      @(Html.EJ().TreeMap("treemap")
 
@@ -60,7 +60,7 @@ You can use GroupGap property to separate the items from every flat level and t
 
 TreeMap Hierarchical level is used to define levels for hierarchical data collection that contains tree-structured data.
 
-{% highlight html %}
+{% highlight js %}
 
  
 @(Html.EJ().TreeMap("treemap")
@@ -191,10 +191,8 @@ TreeMap Hierarchical level is used to define levels for hierarchical data collec
 
     }
 
-
-
 {% endhighlight %}
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](TreeMapLevels_images/TreeMapLevels_img2.png)
+![](TreeMapLevels_images/TreeMapLevels_img2.png)

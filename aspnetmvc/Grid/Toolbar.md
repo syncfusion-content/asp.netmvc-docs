@@ -28,13 +28,7 @@ Custom Toolbar is a key functionality, used to customize Toolbar elements. Here 
 
 
 
-{% highlight html %}
-
-[MVC]
-
-
-
-[razor]
+{% highlight js %}
 
 <script id="Refresh" type="text/x-jsrender">
 
@@ -85,9 +79,6 @@ Custom Toolbar is a key functionality, used to customize Toolbar elements. Here 
         .ClientSideEvents(eve=>eve.ActionComplete("complete"))
 
         )
-{% endhighlight  %}
-{% highlight js %}
-[javascript]
 
 <script>
 
@@ -129,5 +120,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Toolbar_images/Toolbar_img1.png)
 
-
+_Figure : Custom Toolbar_
 

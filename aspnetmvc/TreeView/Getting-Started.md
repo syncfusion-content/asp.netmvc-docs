@@ -17,7 +17,7 @@ The Essential ASP.NET MVC TreeView control represents hierarchical data in a tre
 
 
 
-![C:/Users/kaliswaran/Desktop/MVC/2.PNG](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 In the above screenshot, you can select the mailbox items and you can write the corresponding functions for the selected item. You can drag and drop the item from one group to another group using the Drag and Drop option. You can use the Splitter control to split the mail options and its corresponding functions.
@@ -28,35 +28,34 @@ The Essential ASP.NET MVC Splitter is a layout control that allows you to divide
 
 1. Create a MVC Project and add necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page for rendering the Splitter window.
+   
+   ~~~ html
 
+		@Html.EJ().Splitter("outer").Height("250").Width("601").Orientation(Orientation.Horizontal).PaneProperties(
 
-{% highlight html %}
+		    p =>
 
-@Html.EJ().Splitter("outer").Height("250").Width("601").Orientation(Orientation.Horizontal).PaneProperties(
+		    {
 
-    p =>
+			p.Add().ContentTemplate(
 
-    {
+			    @<div></div>);
 
-        p.Add().ContentTemplate(
+			p.Add().ContentTemplate(
 
-            @<div></div>);
+			    @<div></div>);        
 
-        p.Add().ContentTemplate(
+		    })
 
-            @<div></div>);        
-
-    })
-
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 3. Execute the above code example to render the following output.
 
 
 
-![C:/Users/kaliswaran/Desktop/MVC/1.PNG](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 ## Configure TreeView inside the Splitter widget 
@@ -69,49 +68,51 @@ You can style the right pane and render TreeView by adding <div> element within 
 
 Add the following style section to render the Splitter layout.
 
-
 {% highlight css %}
 
-<style>
 
-        #outer
+		<style>
 
-        {
+			#outer
 
-            font-size: 14px;
+			{
 
-            font-family:sans-serif;
+			    font-size: 14px;
 
-        }
+			    font-family:sans-serif;
 
-        .cont
+			}
 
-        {
+			.cont
 
-            padding: 40px 0 0 10px;
+			{
 
-            text-align: center;
+			    padding: 40px 0 0 10px;
 
-        }	
+			    text-align: center;
 
-        .splitdiv
+			}	
 
-        {
+			.splitdiv
 
-            height:100%;
+			{
 
-            padding-left:30px;
+			    height:100%;
 
-        }
+			    padding-left:30px;
 
-   </style>
+			}
+
+		   </style>
 
 {% endhighlight %}
+
+
 
 Add TreeView initialization inside the Splitter section.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -161,7 +162,7 @@ Execute the above code example to render the following output.
 
 
 
-![C:/Users/kaliswaran/Desktop/JS/tree2.PNG](Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img3.png)
 
 ## Configure Data Source
 
@@ -174,7 +175,7 @@ Add the following data list to bind in the controller page and define the corres
 
 
 
-public class Outlookitems
+    public class Outlookitems
 
     {
 
@@ -205,18 +206,11 @@ public class Outlookitems
     }
 
 
+		//Refer the Model in the controller
 
+		using <Applicationname>.Models;
 
-
-[Controller]
-
-//Refer the Model in the controller
-
-using <Applicationname>.Models;
-
-
-
-public ActionResult Index()
+		public ActionResult Index()
 
         {
 
@@ -287,7 +281,7 @@ Execute the above code example to render the following output.
 
 
 
-![C:/Users/kaliswaran/Desktop/JS/tree1.PNG](Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 ## Configure TreeView with Sprite Icons
@@ -462,7 +456,7 @@ Execute the above code to render the TreeView with Mail Icons.
 
 
 
-![C:/Users/kaliswaran/Desktop/JS/tree4.PNG](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
+![](Getting-Started_images/Getting-Started_img6.png)' | markdownify }}
 
 
 ## Set the Node Editing Option 
@@ -493,7 +487,7 @@ Execute the above code example to render node editing.
 
 
 
-![C:/Users/kaliswaran/Desktop/JS/tree5.PNG](Getting-Started_images/Getting-Started_img7.png)
+![](Getting-Started_images/Getting-Started_img7.png)
 
 
 ## Set the Drag and Drop Option 
@@ -588,15 +582,15 @@ Execute the above code example to render TreeView. When you select the mail fold
 
 
 
-![C:/Users/kaliswaran/Desktop/MVC/4.PNG](Getting-Started_images/Getting-Started_img8.png)
+![](Getting-Started_images/Getting-Started_img8.png)
 
 
 
-_Note: The inline edit validation is done when “InlineEditValidation” event occurs, as in the screenshot as follows. The “InlineEditValidation” event rises only when the “AllowEditing” property is set to True._
+> Note: The inline edit validation is done when “InlineEditValidation” event occurs, as in the screenshot as follows. The “InlineEditValidation” event rises only when the “AllowEditing” property is set to True.
 
 
 
-![C:/Users/kaliswaran/Desktop/JS/tree6.PNG](Getting-Started_images/Getting-Started_img10.png)
+![](Getting-Started_images/Getting-Started_img10.png)
 
 ## Add or Delete the Folders using Context Menu 
 
@@ -641,7 +635,7 @@ Initialize the Context Menu in the script section to create new folder and delet
 
 
 
-{% highlight JS %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -707,22 +701,22 @@ The following screenshot illustrates adding of new folder in the TreeView using 
 
 
 
-![C:/Users/kaliswaran/Desktop/MVC/5.PNG](Getting-Started_images/Getting-Started_img11.png)
+![](Getting-Started_images/Getting-Started_img11.png)
 
 
 
 In the following screenshot the new folder is added as the child of the “Drafts” folder.
 
-![C:/Users/kaliswaran/Desktop/MVC/6.PNG](Getting-Started_images/Getting-Started_img12.png)
+![](Getting-Started_images/Getting-Started_img12.png)
 
 
 
 The following screenshot illustrates the deleting of new folder that is created as a child of the “Drafts” folder. You can right-click New Folder1 and select the Delete Folder option in the Context Menu.
 
-[C:/Users/kaliswaran/Desktop/MVC/7.PNG](Getting-Started_images/Getting-Started_img13.png)
+![](Getting-Started_images/Getting-Started_img13.png)
 
 
 The following screenshot displays the TreeView after deleting the folder that is created.
 
-![C:/Users/kaliswaran/Desktop/MVC/4.PNG](Getting-Started_images/Getting-Started_img14.png)
+![](Getting-Started_images/Getting-Started_img14.png)
 

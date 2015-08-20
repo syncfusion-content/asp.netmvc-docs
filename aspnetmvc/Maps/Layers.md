@@ -60,9 +60,7 @@ Here “MapController.cs” is populated with datas of World Map in “MapContro
 
         {
 
-            string worldmapjson =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
-System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
+            string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
 
             JavaScriptSerializer ser = new JavaScriptSerializer();
 
@@ -95,7 +93,8 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
+
 @(Html.EJ().Map("maps")
 
             .Layers(lr =>
@@ -148,4 +147,4 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 ![](Layers_images/Layers_img1.png)
 
-
+_Map with layers_

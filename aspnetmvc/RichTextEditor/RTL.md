@@ -13,7 +13,7 @@ RTL control supports right-to-left functionality and features for languages th
 
 1. Add the following code to the script section in your CSHTML page to initialize the RTE
 
-{% highlight html %}
+{% highlight js %}
 
 	\\ Add the following code in your view page to render the RTE.
 

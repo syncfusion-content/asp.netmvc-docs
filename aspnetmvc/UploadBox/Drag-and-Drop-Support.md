@@ -29,120 +29,137 @@ The following steps explain how to enable the drag and drop in the UploadBox con
 
 
 
-{% highlight html %}
+   ~~~ html
 
-//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
+		//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
 
-<div class="frame">
+		<div class="frame">
 
-          <div class="control">                @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("UploadBox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true)
+		  <div class="control">  
+			
+				@Html.EJ().Uploadbox("uploadbox")
+				.SaveUrl("Uploadbox/Save")
+				.RemoveUrl("UploadBox/Remove")
+				.AllowDragAndDrop(true).MultipleFilesSelection(true)
 
-               </div>
+		   </div>
 
-  </div>
-
-
-{% endhighlight %}
-
-To know about file action, refer to the following link: [http://help.syncfusion.com/ug/js/default.htm#!documents/fileactions.htm](http://help.syncfusion.com/ug/js/default.htm)
-
-1. The following screenshot displays the output for the above code.
-
-![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img2.png)
+		  </div>
 
 
+   ~~~
+   {:.prettyprint }
 
-### Drag Area text
+   To know about file action, refer to the following link: [http://help.syncfusion.com/ug/js/default.htm#!documents/fileactions.htm](http://help.syncfusion.com/ug/js/default.htm)
 
-You can change the drag area text by using the DragAreaText property.  By default, the DragAreaText (string) property is Drop files or click to upload in the UploadBox control.
+2. The following screenshot displays the output for the above code.
 
-In the VIEW page, add the below script to enable the drag and drop in the UploadBox control.
-
-
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
+   ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img2.png)
 
 
 
-<div class="frame">
+   ### Drag Area text
 
-                      <div class="control">                        @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DragAreaText("Drop files here")
+   You can change the drag area text by using the DragAreaText property.  By default, the DragAreaText (string) property is Drop files or click to upload in the UploadBox control.
 
-                      </div>
-
-</div>
-
-{% endhighlight %}
+   In the VIEW page, add the below script to enable the drag and drop in the UploadBox control.
 
 
-2.  The following screenshot displays the output for the above code.
+   ~~~ html
 
-![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img3.png)
+		// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
 
+	    <div class="frame">
 
+		  <div class="control">  
+		  @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
+			  .RemoveUrl("Uploadbox/Remove")
+			  .AllowDragAndDrop(true)
+			  .MultipleFilesSelection(true)
+			  .DragAreaText("Drop files here")
 
-### Adjust Drop area size
+		  </div>
 
-The UploadBox control provides the ability to change or adjust the drop area size. The DropAreaHeight andDropAreaWidth properties in the UploadBox control allows you to set the maximum height and maximum width for the drop area. The value set to this property is string or number type.
+		 </div>
 
-The following steps explain you on how to adjust the Drop Area Size.
-
-In the VIEW page, add the below script to enable the drag and drop in UploadBox control.
-
-
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
-
-
-
-<div class="frame">
-
-                      <div class="control">
-
-                          @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DropAreaHeight("300px").DropAreaWidth("600px")
-
-                      </div>
-
-                  </div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 3. The following screenshot displays the output for the above code.
 
-![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img4.png)
+   ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img3.png)
 
 
 
-### Drop area with Browse button behavior
+   ### Adjust Drop area size
 
-You can click anywhere in the droppable area to browse and upload the files. The droppable area behaves like a browse button.
+   The UploadBox control provides the ability to change or adjust the drop area size. The DropAreaHeight andDropAreaWidth properties in the UploadBox control allows you to set the maximum height and maximum width for the drop area. The value set to this property is string or number type.
 
-Enable the AllowDragAndDrop property to achieve this feature. Next, set the ShowBrowseButton as False in UploadBox Control.
+   The following steps explain you on how to adjust the Drop Area Size.
 
-The following steps explains the droppable area containing the browse button behavior
-
-In the VIEW page, add the below script to enable drag and drop in the UploadBox control.
+   In the VIEW page, add the below script to enable the drag and drop in UploadBox control.
 
 
+   ~~~ html
 
-{% highlight html %}
+		// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
 
-//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
 
-       <div class="control">                      @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).ShowBrowseButton(false)
 
- </div>
+		<div class="frame">
 
-{% endhighlight %}
+			  <div class="control">
+
+				  @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DropAreaHeight("300px").DropAreaWidth("600px")
+
+			  </div>
+
+        </div>
+
+   ~~~
+   {:.prettyprint }
+
 
 4. The following screenshot displays the output for the above code.
 
+   ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img4.png)
 
 
-![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img5.png)
+
+   ### Drop area with Browse button behavior
+
+   You can click anywhere in the droppable area to browse and upload the files. The droppable area behaves like a browse button.
+
+   Enable the AllowDragAndDrop property to achieve this feature. Next, set the ShowBrowseButton as False in UploadBox Control.
+
+   The following steps explains the droppable area containing the browse button behavior
+
+   In the VIEW page, add the below script to enable drag and drop in the UploadBox control.
+
+
+
+   ~~~ html
+
+		//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
+
+			   <div class="control">   
+			   @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
+			   .RemoveUrl("Uploadbox/Remove")
+			   .AllowDragAndDrop(true)
+			   .MultipleFilesSelection(true)
+			   .ShowBrowseButton(false)
+
+		 </div>
+
+   ~~~
+   {:.prettyprint }
+
+5. The following screenshot displays the output for the above code.
+
+
+
+ ![](Drag-and-Drop-Support_images/Drag-and-Drop-Support_img5.png)
 
 
 

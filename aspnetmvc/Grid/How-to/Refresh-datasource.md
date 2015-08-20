@@ -12,13 +12,7 @@ documentation: ug
 Grid allows you to refresh datasource dynamically after Gridinitialization. It is useful to refresh Griddatasource.
 
 
-{% highlight html %}
-[MVC]
-
-
-
-[razor]
-
+{% highlight js %}
 
 
 @(Html.EJ().Button("refresh").Text("refresh").ClientSideEvents(d=>d.Click("refresh"))
@@ -46,9 +40,6 @@ Grid allows you to refresh datasource dynamically after Gridinitialization. It i
 
 {% endhighlight  %}
 {% highlight js %}
-[javascript]
-
-
 
 <script type="text/javascript" >
 
@@ -69,15 +60,12 @@ Grid allows you to refresh datasource dynamically after Gridinitialization. It i
         $("#Grid").ejGrid("dataSource", newData);
 
     }
-{% endhighlight  %}
-
-
 
 </script>
 
-{% highlight c# %}
+{% endhighlight  %}
 
-[Controller]
+{% highlight c# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -111,8 +99,6 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
 {% endhighlight  %}
 
 The following screenshot displays the Grid data source before refreshing.
@@ -121,11 +107,12 @@ The following screenshot displays the Grid data source before refreshing.
 
 ![](Refresh-datasource_images/Refresh-datasource_img1.png)
 
-
+_Figure : Before Refreshing_
 
 The following screenshot displays the Grid data source after refreshing.
 
 ![](Refresh-datasource_images/Refresh-datasource_img2.png)
 
+_Figure : After Refreshing_
 
 

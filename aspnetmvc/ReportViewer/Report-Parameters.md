@@ -15,8 +15,6 @@ The following code example illustrates how to add ReportParameter at control cre
 
 {% highlight html %}
 
-[EJMVC]
-
 @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportPath("InvoiceTemplate.rdl")
 
 .ReportServiceUrl("/api/ReportApi").Parameters(param =>

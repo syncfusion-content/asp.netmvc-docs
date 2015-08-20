@@ -3,7 +3,7 @@ layout: post
 title: Localization-and-Translation-support
 description: localization and translation support
 platform: ejmvc
-control: OLAP Chart
+control: OLAPChart
 documentation: ug
 ---
 
@@ -78,7 +78,6 @@ RenderingFailed</td><td>
 The following code example shows how to localize OlapChart’sUser Interface (UI) based on “French” culture.
 
 {% highlight js %}
-[MVC]
 
 @section ScriptSection{
 
@@ -142,7 +141,6 @@ To apply control side localization, refer the following code example:
 
 
 {% highlight html %}
-[HTML]
 
 ej.olap.OlapChart.locale["zh-CN"] = {
 
@@ -156,8 +154,6 @@ ej.olap.OlapChart.locale["zh-CN"] = {
 To get the localized Cube information, “_Locale__Identifier"_ has to be set in the connection string:
 
 {% highlight c# %}
-
-[C#]
 
 //1036 refers to “fr-FR” culture.
 
@@ -174,7 +170,7 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 The output for the LocalizedOlapChart is as follows:
 
-![C:/Users/labuser/Desktop/a.png](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png)
+![](Localization-and-Translation-support_images/Localization-and-Translation-support_img2.png)
 
 
 

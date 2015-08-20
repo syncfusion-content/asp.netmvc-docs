@@ -15,10 +15,7 @@ Chart types are specified on each series through the Type property. All the Char
 
 You can combine several Chart types in one Chart using the Type property on series to set different Chart types for each series.
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")   
@@ -45,8 +42,8 @@ You can combine several Chart types in one Chart using the Type property on seri
 {% endhighlight  %}
 In multiple series case, you can use CommonSeriesOptions property to specify the properties that are common for all series in Chart. 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -74,8 +71,8 @@ You can configure the appearance of the lines and the points with options Fill u
 ![](Chart-Types_images/Chart-Types_img1.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -122,9 +119,9 @@ Step Line Charts use horizontal and vertical lines to connect data points result
 
 ![](Chart-Types_images/Chart-Types_img2.png)
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -171,9 +168,9 @@ Area Chart is rendered using a collection of line segments connected to form a c
 
 ![](Chart-Types_images/Chart-Types_img3.png)
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -240,9 +237,9 @@ Range Area Charts are similar to regular area Charts except that, each area is r
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -313,8 +310,8 @@ Step Area Charts are similar to regular area Charts except that, instead of a st
 ![](Chart-Types_images/Chart-Types_img5.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -371,10 +368,7 @@ Spline Area Chart is similar to an Area Chart except the difference in the way t
 
 ![](Chart-Types_images/Chart-Types_img6.png)
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
@@ -455,10 +449,7 @@ Stacking Area Charts are similar to regular area Charts except that the Y values
 
 ![](Chart-Types_images/Chart-Types_img7.png)
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
@@ -535,10 +526,7 @@ Stacking Area Charts are similar to regular area Charts except that the Y values
 ## 100% Stacking area chart  
 
 100% Stacking area is similar to the stacking area chart. But here, the series display multiple data series as stacked areas and the cumulative portion of each stacked element is summed to 100%.  
-{% highlight html %}
-[MVC]
-
-[CSHTML]
+{% highlight js %}
 
 @(Html.EJ().Chart("container")	 
 
@@ -600,7 +588,7 @@ Stacking Area Charts are similar to regular area Charts except that the Y values
 
 The following screenshot displays the 100% Stacking area chart.
 
-![C:/Users/Giftline/Desktop/a.png](Chart-Types_images/Chart-Types_img8.png)
+![](Chart-Types_images/Chart-Types_img8.png)
 
 
 
@@ -613,8 +601,8 @@ Column Charts are among the most common Chart types that are used. It uses verti
 ![](Chart-Types_images/Chart-Types_img9.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -688,8 +676,8 @@ RangeColumn Chart is similar to the Column Chart except that each column is rend
 ![](Chart-Types_images/Chart-Types_img10.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -751,8 +739,8 @@ Stacking Column Charts are similar to regular column Charts except that the Y va
 ![](Chart-Types_images/Chart-Types_img11.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -810,10 +798,10 @@ Stacking Column Charts are similar to regular column Charts except that the Y va
 100% Stacking column is similar to the stacking column charts. But here, the combined contribution of Y values is the combined total of the vertical column with 100 percent.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
-[CSHTML]
+
+
 
 @(Html.EJ().Chart("container")	 
 
@@ -867,7 +855,7 @@ Stacking Column Charts are similar to regular column Charts except that the Y va
 {% endhighlight %}
 The following screenshot displays the 100% Stacking column chat.
 
-![C:/Users/Giftline/Desktop/a.png](Chart-Types_images/Chart-Types_img12.png)
+![](Chart-Types_images/Chart-Types_img12.png)
 
 
 
@@ -879,9 +867,9 @@ Bar Chart is the simplest and most versatile of statistical diagrams. It display
 
 ![](Chart-Types_images/Chart-Types_img13.png)
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -947,9 +935,9 @@ Stacking Bar Charts are similar to regular bar Charts except that the Y values s
 
 ![](Chart-Types_images/Chart-Types_img14.png)
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -1012,13 +1000,9 @@ Stacking Bar Charts are similar to regular bar Charts except that the Y values s
 
 ## 100% Stacking bar chart 
 
-
-
 100% Stacking bar is similar to stacking bar charts. Here, the combined contribution of Y values is the combined total of the horizontal bar with 100 percent. 
-{% highlight html %}
-[MVC]
 
-[CSHTML]
+{% highlight js %}
 
 @(Html.EJ().Chart("container")	 
 
@@ -1076,7 +1060,7 @@ Stacking Bar Charts are similar to regular bar Charts except that the Y values s
 {% endhighlight  %}
 The following screenshot displays the 100% Stackingbar chart.
 
-![C:/Users/Giftline/Desktop/a.png](Chart-Types_images/Chart-Types_img15.png)
+![](Chart-Types_images/Chart-Types_img15.png)
 
 
 
@@ -1092,7 +1076,7 @@ Spline Chart is similar to a Line Chart except that it connects the different da
 
 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -1163,10 +1147,7 @@ A Pie Chart renders y values as slices in a pie. The slices are rendered in prop
 
 ![](Chart-Types_images/Chart-Types_img17.png)
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
@@ -1222,7 +1203,7 @@ Doughnut Charts are pie Charts with a hole, whose value is specified as the doug
 
 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -1278,8 +1259,8 @@ EJ Chart allows you to create semi pie and doughnut chart using StartAngle and E
 
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1323,11 +1304,11 @@ EJ Chart allows you to create semi pie and doughnut chart using StartAngle and E
 
 
 {% endhighlight  %}
-![C:/Users/balachandar/Desktop/semi doughnut.JPG](Chart-Types_images/Chart-Types_img19.jpeg)
+![](Chart-Types_images/Chart-Types_img19.jpeg)
 
 
 
-![C:/Users/balachandar/Desktop/semi pie.JPG](Chart-Types_images/Chart-Types_img20.jpeg)
+![](Chart-Types_images/Chart-Types_img20.jpeg)
 
 
 
@@ -1340,8 +1321,8 @@ The Pyramid Chart type displays the data that when totalled renders 100%. This t
 ![](Chart-Types_images/Chart-Types_img21.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1395,8 +1376,8 @@ The Funnel chart is a single series chart representing the data as portions of 1
 ![](Chart-Types_images/Chart-Types_img22.png)
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1452,8 +1433,8 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 ![](Chart-Types_images/Chart-Types_img23.png)
 
 
-{% highlight html %}
- [MVC]
+{% highlight js %}
+ 
 
 
 
@@ -1509,8 +1490,7 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 
 
 {% endhighlight  %}
-{% highlight html %}
-[ASP] 
+{% highlight css %}
 
 <ej:Chart ID="Chart1" runat="server">
 
@@ -1563,8 +1543,8 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 In Scatter Series, each data point is represented as an ellipse, and the width and height of each ellipse is set using the Size Width and Height properties of marker. You can also change the color, stroke, and stroke thickness of the series using the Fill, Border color, and Width properties of marker respectively.
 
 The following code example is used to create a simple scatter series. 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1665,11 +1645,7 @@ DrawMode is used to specify the open and close draw mode to hiloopenclose series
 
  To create a simple HiLoOpenCloseSeries use the following code example.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1768,7 +1744,7 @@ BearFillColor is used to specify a fill color for the segment that indicates a d
 
 To create a simple Candle series use the following code example. 
 {% highlight html %}
-[MVC]
+
 
 
 
@@ -1833,13 +1809,13 @@ Represents the low values</td></tr>
 </table>
 
 
-![C:/Users/ApoorvahR/Desktop/3.png](Chart-Types_images/Chart-Types_img27.png)
+![](Chart-Types_images/Chart-Types_img27.png)
 
 
 
 To create a simple Hilo series use the following code example. 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1903,8 +1879,8 @@ A Polar Chart is a circular graph on which data is displayed in terms of values 
 To create a simple Polar series use the following code example.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -1968,8 +1944,8 @@ RadarSeries is a x, y Chart of three or more quantitative variables represented 
 
 
 To create simple RadarSeries use the following code example. 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 

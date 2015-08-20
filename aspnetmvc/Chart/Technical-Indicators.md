@@ -16,11 +16,7 @@ The following are the Technical indicators supported by Essential Chart.
 ## Accumulation Distribution Indicator
 
 Accumulation distribution indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called signal line. Essential Chart also provides options to customize the width and color of the signal line. 
-{% highlight html %}
-[MVC]
-
-[CSHTML]
-
+{% highlight js %}
 
 
  @(Html.EJ().Chart("chartcontainer")
@@ -61,11 +57,11 @@ The following screenshot displays Accumulation Distribution indicator.
 
 Average true range Indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called as signal line. You can also customize the width and color of the signal line. 
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
 
-[CSHTML]
+
+
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -107,11 +103,7 @@ The following screenshot displays the Average true range indicator.
 ## Bollinger Band Indicator
 
 Bollinger Band Indicator is one of the technical indicator supported by Essential Chart. It contains three lines namely upper band, lower band and signal line. Upper band, lower band are calculated based on the standard deviations value. Signal band is calculated based on the simple moving average. You can also customize the width and color of the upper band, lower band and signal line. The default value of period is 14.The default value of standardDeviations is 2.
-{% highlight html %}
-[MVC]
-
-[CSHTML]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -156,11 +148,8 @@ The following screenshot displays the Bollinger Band indicator.
 
 Exponential Moving Average Indicator is one of the technical indicator supported by Essential Chart. The indicator renders a line called signal line. You can also customize properties such as width, color etc., of the signal line.
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
-
-[CSHTML]
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -198,17 +187,14 @@ Exponential Moving Average Indicator is one of the technical indicator supported
 
 The following screenshot displays the Exponential Moving Average Indicator
 
-![C:/Users/ApoorvahR/Desktop/1.png](Technical-Indicators_images/Technical-Indicators_img4.png)
+![](Technical-Indicators_images/Technical-Indicators_img4.png)
 
 
 
 ## Momentum Technical Indicator
 
 Momentum is one of the technical indicator supported by Essential Chart. The indicator renders two lines namely upper band and signal line. Upper band always render at value 100 and signal band is calculated based on the momentum formula. Essential Chart also provide options to customize the width and color of the upper band and signal line. You can also change the value for period. The default value of period is 14. 
-{% highlight html %}
-[MVC]
-
-[CSHTML]
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -238,7 +224,7 @@ Momentum is one of the technical indicator supported by Essential Chart. The ind
 {% endhighlight  %}
 The following screenshot displays the momentum technical indicator.
 
-![C:/Users/ApoorvahR/Desktop/1.png](Technical-Indicators_images/Technical-Indicators_img5.png)
+![](Technical-Indicators_images/Technical-Indicators_img5.png)
 
 
 
@@ -247,10 +233,10 @@ The following screenshot displays the momentum technical indicator.
 MACD is one of the technical indicator supported by Essential Chart. It contains three lines namely Macd line, Signal line and Histogram column series that is used to differentiate macd and signal line. And also enumeration property: MacdType,Line, Histogram and Both. By default, line series contain macd and signal line. Enumeration type both contain line and histogram series. Macd and signal line is calculated based on the ShortPeriod,LongPeriod and Trigger value with indicator formula and histogram displays the difference between them. Essential Chart also provides options to customize the width and color of the macd and signal line and histogram with tooltip and animation options. The value for short, long period and trigger value can also be changed.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
-[CSHTML]
+
+
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -286,17 +272,17 @@ MACD is one of the technical indicator supported by Essential Chart. It contains
 
 The following screenshot displays the MACD technical indicator
 
-![C:/Users/ApoorvahR/Desktop/1.png](Technical-Indicators_images/Technical-Indicators_img6.png)
+![](Technical-Indicators_images/Technical-Indicators_img6.png)
 
 
 
 ## Relative Strength Index Indicator
 
 RSI is one of the technical indicator supported by Essential Chart. It contains three lines namely upper band, lower band and signal line. Upper and lower band always render at value 70 and 30 respectively and signal band is calculated based on the RSI formula. You can alsocustomize the width and color of the upper band, lower band and signal line with tooltip and animation options. 
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
-[CSHTML]
+
+
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -330,17 +316,17 @@ RSI is one of the technical indicator supported by Essential Chart. It contains 
 {% endhighlight  %}
 The following screenshot displays the RSI technical indicator
 
-![C:/Users/ApoorvahR/Desktop/1.png](Technical-Indicators_images/Technical-Indicators_img7.png)
+![](Technical-Indicators_images/Technical-Indicators_img7.png)
 
 
 
 ## Simple Moving Average Indicator
 
 Simple Moving Average Indicator is one of the technical indicators supported by Essential Chart. The indicator rendered is called as signal line. Signal line is calculated based on the simple moving average. You can also customize the Period, width and color of the signal line. The default value of period is 14.
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
-[CSHTML]
+
+
 
 
 
@@ -394,17 +380,12 @@ The following screenshot displays the Simple Moving Average Indicator.
 
 Stochastic technical indicator is one of the most common indicators used in technical analysis. The indicators render four lines namely upper line, lower line, stochastic line and signal line. Upper line always render at value 80 and lower line is render at value 20. Stochastic and Signal Lines are calculated based on stochastic formulas. You can also customize the width and color of the all lines. 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Technical-Indicators_images/Technical-Indicators_img9.png)
+![](Technical-Indicators_images/Technical-Indicators_img9.png)
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
-
-[CSHTML]
 
    @(Html.EJ().Chart("chartcontainer")
-
-
 
          // ... 
 
@@ -457,12 +438,7 @@ Stochastic technical indicator is one of the most common indicators used in tech
 ## Triangular Moving Average Indicator
 
 Triangular Moving Average Indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called as signal line. You can also customize the width and color of the signal line. 
-{% highlight html %}
-[MVC]
-
-[CSHTML]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 

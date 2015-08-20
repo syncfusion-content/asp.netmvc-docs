@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started 
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -23,7 +23,7 @@ The following screen shot shows the structure of an OLAP Gauge control.
 
 ## Syncfusion OLAP Controls – Architecture
 
-![blockdiagram](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -34,13 +34,13 @@ As shown in an above architecture, control rendering takes place at client-side 
 The primary reasons for using service in an OLAP processing are:
 
 1. DataSource Connectivity: In order to establish a connection between different cube data sources such as
-1. Offline Cube
-2. Online Cube (XML/A)
-3. Cube within SQL Server (locally or through remote), you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service, you can connect any type of cube data source without any limitation.
+	1. Offline Cube
+	2. Online Cube (XML/A)
+	3. Cube within SQL Server (locally or through remote), you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service, you can connect any type of cube data source without any limitation.
 2. Cube Schema: As the connection is moved to service side, you obviously use Microsoft ADOMD assembly, to get the entire cube schema. Only with the cube schema the following details are achieved for control rendering.
-1. Availability of cubes.
-2. A complete end-to-end details such as name, caption, unique name, parent information, child information, its properties etc. about the dimension, hierarchy, level, members are available in cube schema only. 
-3. Localized information is also be available in cube schema.  
+	1. Availability of cubes.
+	2. A complete end-to-end details such as name, caption, unique name, parent information, child information, its properties etc. about the dimension, hierarchy, level, members are available in cube schema only. 
+	3. Localized information is also be available in cube schema.  
 3. MDX Generator: You can frame the MDX query using an MDX generator in Syncfusion.Olap.Base assembly. To execute the framed MDX from the cube data source, you need to sent framed MDX via Microsoft ADOMD assembly The executed query is returned in the form of cell set (contains values) that is converted to Pivot Engine and then to JSON data to render any OLAP controls.
 4. OLAP Report: The OlapReport class in the Syncfusion.Olap.Base holds the complete information of each axes such as column, row and slicer. Using OlapReport class, you can maintain the dimension element, measure element, hierarchy name, level name as well as the member information that is included and excluded.  
 
@@ -65,13 +65,13 @@ In the following example, OLAP gauge is used to visualize the Revenue for Resell
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category, select the ASP.NET MVC4 Web Application template, and then click OK.
 
-![sshot-3](Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 
 Select Internet application template with razor view engine.
 
-![sshot-1](Getting-Started_images/Getting-Started_img5.png)
+![](Getting-Started_images/Getting-Started_img5.png)
 
 
 
@@ -81,78 +81,79 @@ Select Internet application template with razor view engine.
 
 1. In the Solution Explorer, right click the References folder and then click Add Reference.
 
-![sshot-2](Getting-Started_images/Getting-Started_img6.png)
+![](Getting-Started_images/Getting-Started_img6.png)
 
 
 
-![sshot-4](Getting-Started_images/Getting-Started_img7.png)
+![](Getting-Started_images/Getting-Started_img7.png)
 
 
 
 1. Select the following assemblies: 
-* Microsoft.AnalysisServices.AdomdClient.dll
+   * Microsoft.AnalysisServices.AdomdClient.dll
 
-Syncfusion.Core.dll 
+		* Syncfusion.Core.dll 
 
-Syncfusion.Linq.Base.dll 
+		* Syncfusion.Linq.Base.dll 
 
-Syncfusion.EJ.dll 
+		* Syncfusion.EJ.dll 
 
-Syncfusion.EJ.MVC.dll 
+		* Syncfusion.EJ.MVC.dll 
 
-Syncfusion.EJ.Olap.dll
+		* Syncfusion.EJ.Olap.dll
 
-Syncfusion.Olap.Base.dll
+		* Syncfusion.Olap.Base.dll
 
 2. Click OK.
 
 ### Adding Scripts and Styles
 
 1. Add the script files and CSS files in the head tag of the _Layout.cshtml page.
-> Note: 1. Please follow the given order while adding scripts and styles.
+  
+   > Note:
+   >
+   > 1. Please follow the given order while adding scripts and styles.
+   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-> 2. Apart from cdn files rest of them can be acquired from the following location
+   ~~~ html
 
-C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+		<head>
 
-{% highlight html %}
+		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
-[CSHTML]
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
 
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript">  </script>
 
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
 
-<head>
+		</head>
 
-<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
-
-<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript">  </script>
-
-<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
-
-</head>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Add the below code snippet in the body tag of the _Layout.cshtml page.
-{% highlight html %}
-[CSHTML]
 
-<body>
+   ~~~ html
 
-   @RenderBody()
 
-   @Html.EJ().ScriptManager()   
+		<body>
 
-</body>
-{% endhighlight  %}
+		   @RenderBody()
+
+		   @Html.EJ().ScriptManager()   
+
+		</body>
+		
+   ~~~
+   {:.prettyprint }
 
 ### Add Control in View page
 
 Add the following code in the Index.cshtml page
-{% highlight html %}
-[CSHTML]  
+{% highlight js %}
+  
 
 @using Syncfusion.JavaScript;
 
@@ -221,7 +222,7 @@ Add the following code in the Index.cshtml page
 2. Now right click the wcf folder created and select Add > New Item. In the Add New Item window, select WCF Service and name it OlapGaugeService.svc
 3. Click Add. 
 
-![sshot-14](Getting-Started_images/Getting-Started_img9.png)
+![](Getting-Started_images/Getting-Started_img9.png)
 
 
 
@@ -229,24 +230,20 @@ Add the following code in the Index.cshtml page
 
 Add the following code inside the IOlapGaugeService interface available in the IOlapGaugeService.cs file.
 {% highlight html %}
-[C#]
-
-[ServiceContract]
 
     public interface IOlapGaugeService
 
     {
 
-        [OperationContract]
-
-        Dictionary<string, object> InitializeGauge(string action,string customObject);                    }
+        Dictionary<string, object> InitializeGauge(string action,string customObject); 
+	}
 {% endhighlight  %}
 
 ### Add Namespaces
 
 Add the following necessary namespaces required to implement the service methods.
 {% highlight c# %}
-[C#]
+
 
 using System;
 
@@ -269,13 +266,14 @@ using System.Web.Script.Serialization;
 using Syncfusion.Olap.Manager;
 
 using Syncfusion.Olap.Reports;
+
 {% endhighlight %}
 
 ### Create Class in Service file
 
 Create the OlapGaugeService class to implement the service methods. Inherit the class from the IOlapGaugeService interface created automatically when any new service is added.
 {% highlight c# %}
-[C#]
+
 
 namespace MvcApplication1
 
@@ -297,8 +295,9 @@ namespace MvcApplication1
 Add the following methods to the service invoked for any server-side operations to be performed in OlapGauge.
 
 1. Initialize the OlapGauges helper class.
-{% highlight c# %}
-[C#]
+
+   ~~~ cs
+
 
         OlapGauge htmlHelper = new OlapGauge();       
 
@@ -307,16 +306,14 @@ Add the following methods to the service invoked for any server-side operations 
         JavaScriptSerializer serializer = new JavaScriptSerializer();
 
 
-
-
-
-
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Initialize the following relevant service methods need to be added.
-{% highlight c# %}
-[C#]
+
+
+   ~~~ cs
+
 
 
 
@@ -410,11 +407,14 @@ Add the following methods to the service invoked for any server-side operations 
 
         }
 
-Configure Web.Config
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
+### Configure Web.Config
+   
 1. Register the assemblies by adding the given code inside the <system.web> tag in web_._config__file at root folder_._
 {% highlight html %}
-[web.config]
+
 
 <compilation debug="true" targetFramework="4.5">
 
@@ -486,117 +486,122 @@ MVC5</td><td>
 
 
 1. Add the following Namespaces to the web.config files in both root folder and View folder.
-{% highlight html %}
-[web.config]
 
-<namespaces>
+   ~~~ html
 
-        <add namespace="System.Web.Helpers" />
+		<namespaces>
 
-        <add namespace="System.Web.Mvc" />
+			<add namespace="System.Web.Helpers" />
 
-        <add namespace="System.Web.Mvc.Ajax" />
+			<add namespace="System.Web.Mvc" />
 
-        <add namespace="System.Web.Mvc.Html" />	
+			<add namespace="System.Web.Mvc.Ajax" />
 
-        <add namespace="System.Web.Optimization" />
+			<add namespace="System.Web.Mvc.Html" />	
 
-        <add namespace="System.Web.Routing" />
+			<add namespace="System.Web.Optimization" />
 
-        <add namespace="System.Web.WebPages" />
+			<add namespace="System.Web.Routing" />
 
-        <add namespace="Syncfusion.MVC.EJ"/>
+			<add namespace="System.Web.WebPages" />
 
-        <add namespace="Syncfusion.JavaScript"/>
+			<add namespace="Syncfusion.MVC.EJ"/>
 
-        <add namespace="Syncfusion.JavaScript.DataVisualization"/>
+			<add namespace="Syncfusion.JavaScript"/>
 
-</namespaces>
+			<add namespace="Syncfusion.JavaScript.DataVisualization"/>
 
-{% endhighlight  %}
+		</namespaces>
+
+   ~~~
+   {:.prettyprint }
 
 2. Register the wcf services in web.config file at root folder by adding given code examples.
-4. You can expose services through the properties such as binding, contract and address etc. using an endpoint. In this application the service name is "MvcApplication1.OlapGaugeService" where "OlapGaugeService" is the service class name and “MvcApplication1" is the namespace name under which the service class appears.
+   iv). You can expose services through the properties such as binding, contract and address etc. using an endpoint. In this application the service name is "MvcApplication1.OlapGaugeService" where "OlapGaugeService" is the service class name and “MvcApplication1" is the namespace name under which the service class appears.
 
-The following are the properties that meet the appropriate endpoint.  
+   The following are the properties that meet the appropriate endpoint.  
 
-contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapGaugeService contract and hence it is "MvcApplication1.IOlapGaugeService".
+   contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapGaugeService contract and hence it is "MvcApplication1.IOlapGaugeService".
 
-binding: In this application you can use webHttpBinding to post and receive the requests and responses between client-end and service-end.
+   binding: In this application you can use webHttpBinding to post and receive the requests and responses between client-end and service-end.
 
-behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
+   behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
 
-{% highlight html %}
+   ~~~ html
 
-[web.config]
+		<system.serviceModel>
 
-<system.serviceModel>
+			<services>
 
-    <services>
+			  <service name="MvcApplication1.OlapGaugeService">
 
-      <service name="MvcApplication1.OlapGaugeService">
+				<endpoint address="" behaviorConfiguration="MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior"
 
-        <endpoint address="" behaviorConfiguration="MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior"
+				  binding="webHttpBinding" contract="MvcApplication1.IOlapGaugeService" />
 
-          binding="webHttpBinding" contract="MvcApplication1.IOlapGaugeService" />
+			  </service>
 
-      </service>
+			</services>
 
-    </services>
+		</system.serviceModel>
 
-</system.serviceModel>
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
+   v) The endpointBehaviors contains all the behavior for an endpoint.  You can link each endpoint to the respective behavior only using the name property. In the following code example "MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior" refers to the OlapGaugeService class under the namespace MvcApplication1 in OlapGaugeService.svc.cs file, that is the appropriate behavior for the endpoint. 
 
-5. The endpointBehaviors contains all the behavior for an endpoint.  You can link each endpoint to the respective behavior only using the name property. In the following code example "MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior" refers to the OlapGaugeService class under the namespace MvcApplication1 in OlapGaugeService.svc.cs file, that is the appropriate behavior for the endpoint. 
-{% highlight html %}
-[web.config]
+   ~~~ html
 
-<system.serviceModel>
+		<system.serviceModel>
 
-    <behaviors>
+			<behaviors>
 
-      <endpointBehaviors>
+			  <endpointBehaviors>
 
-        <behavior name="MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior">
+				<behavior name="MvcApplication1.OlapGaugeServiceAspNetAjaxBehavior">
 
-          <enableWebScript />
+				  <enableWebScript />
 
-        </behavior>
+				</behavior>
 
-      </endpointBehaviors>
+			  </endpointBehaviors>
 
-    </behaviors>
+			</behaviors>
 
-</system.serviceModel>
-{% endhighlight  %}
+		</system.serviceModel>
 
-> Note: In this example, “MvcApplication1” indicates the name of the project and “OlapGaugeService” indicates the name of the WCF service created.
+   ~~~
+   {:.prettyprint }
+
+   > Note: In this example, “MvcApplication1” indicates the name of the project and “OlapGaugeService” indicates the name of the WCF service created.
 
 3. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
-{% highlight html %}
-[web.config]
+  
+   ~~~ html
+   
+		<appSettings>
 
-<appSettings>
+			<add key="webpages:Version" value="2.0.0.0" />
 
-    <add key="webpages:Version" value="2.0.0.0" />
+			<add key="webpages:Enabled" value="false" />
 
-    <add key="webpages:Enabled" value="false" />
+			<add key="PreserveLoginUrl" value="true" />
 
-    <add key="PreserveLoginUrl" value="true" />
+			<add key="ClientValidationEnabled" value="true" />
 
-    <add key="ClientValidationEnabled" value="true" />
+			<add key="UnobtrusiveJavaScriptEnabled" value="false" />
 
-    <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+		</appSettings>
 
-</appSettings>
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 ### Configure routing file
 
 Add the following highlighted line in RouteConfig.cs file to avoid issues while picking the WCFservice methods.
+
 {% highlight c# %}
-[C#]
+
 
 public class RouteConfig
 

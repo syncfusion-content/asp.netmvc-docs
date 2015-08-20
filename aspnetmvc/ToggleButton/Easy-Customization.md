@@ -3,7 +3,7 @@ layout: post
 title: Easy-Customization
 description: easy customization
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 
@@ -18,7 +18,7 @@ Toggle button has two states like off / on state in a switch. By default you can
 The following steps explains you the details about rendering the Toggle Button with different ToggleState.
 
 
-{% highlight html %}
+{% highlight js %}
 //Add the code in CSHTML page to configure the widget and initialize the control
 
 
@@ -38,7 +38,7 @@ Execute the above code to render the following output.
 
 
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94dcff5.PNG](Easy-Customization_images/Easy-Customization_img1.png)
+![](Easy-Customization_images/Easy-Customization_img1.png)
 
 
 
@@ -109,7 +109,7 @@ The following script explains you the details about rendering the Toggle Button 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
@@ -127,7 +127,7 @@ Execute the above code to render the following output.
 
 _Figure 5: Before clicking the toggle button_
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1569f0f4.PNG](Easy-Customization_images/Easy-Customization_img3.png)
+![](Easy-Customization_images/Easy-Customization_img3.png)
 
 
 
@@ -170,10 +170,6 @@ You can also set your own width and height for toggle button using Height and Wi
 The following steps explains you the details about rendering the Toggle Button with above mentioned size options.
 
 1. In the View page, add the following button elements to configure Toggle Button widget.
-
-
-
-
 
 {% highlight html %}
 
@@ -418,11 +414,6 @@ The following steps explains you the details about rendering the Toggle Button w
 1. In the View page, add the following button elements to configure Toggle Button widget.
 
 
-
-
-
-
-
 {% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
@@ -589,134 +580,133 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
+   ~~~ html	
 
-{% highlight html %}
-
-@*Add the code in CSHTML page to configure the widget and initialize the control*@
-
-
-
-    @*set different custom CSS class for toggle button*@
+		@*Add the code in CSHTML page to configure the widget and initialize the control*@
 
 
 
-    <div class="one">
+		    @*set different custom CSS class for toggle button*@
 
-        @*apply custom CSS class for toggle buttons*@
 
-        <table>
 
-            <tr>
+		    <div class="one">
 
-                <td class="btnsht">
+			@*apply custom CSS class for toggle buttons*@
 
-                    @Html.EJ().ToggleButton("toggleButton_customCSS1").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss1")
+			<table>
 
-                </td>
+			    <tr>
 
-                <td class="btnsht">
+				<td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_customCSS2").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss2")
+				    @Html.EJ().ToggleButton("toggleButton_customCSS1").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss1")
 
-                </td>
+				</td>
 
-                <td class="btnsht">
+				<td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_customCSS3").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss3")
+				    @Html.EJ().ToggleButton("toggleButton_customCSS2").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss2")
 
-                </td>
+				</td>
 
-                <td class="btnsht">
+				<td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_customCSS4").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss4")
+				    @Html.EJ().ToggleButton("toggleButton_customCSS3").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss3")
 
-                </td>
+				</td>
 
-                <td class="btnsht">
+				<td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_customCSS5").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss5")
+				    @Html.EJ().ToggleButton("toggleButton_customCSS4").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss4")
 
-                </td>
+				</td>
 
-            </tr>
+				<td class="btnsht">
 
-        </table>
+				    @Html.EJ().ToggleButton("toggleButton_customCSS5").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss5")
 
-  </div>
+				</td>
 
-{% endhighlight %}
+			    </tr>
+
+			</table>
+
+		  </div>
+
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Configure the CSS styles to apply on buttons.
 
+   ~~~ css
 
+		<style type="text/css" class="cssStyles">
 
-{% highlight css %}
+				/* Customize the button background */
 
-<style type="text/css" class="cssStyles">
+				.e-togglebutton.customCss1 {
 
-        /* Customize the button background */
+					background-color: #121111;
 
-        .e-togglebutton.customCss1 {
+				}
 
-            background-color: #121111;
+				.e-togglebutton.customCss2 {
 
-        }
+					background-color: #94bbd5;
 
-        .e-togglebutton.customCss2 {
+				}
 
-            background-color: #94bbd5;
+				.e-togglebutton.customCss3 {
 
-        }
+					background-color: #f3533c;
 
-        .e-togglebutton.customCss3 {
+				}
 
-            background-color: #f3533c;
+				.e-togglebutton.customCss4 {
 
-        }
+					background-color: #d1eeed;
 
-        .e-togglebutton.customCss4 {
+				}
 
-            background-color: #d1eeed;
+				.e-togglebutton.customCss5 {
 
-        }
+					background-color: #deb66e;
 
-        .e-togglebutton.customCss5 {
+				}
 
-            background-color: #deb66e;
+				 /* Customize the button image & text color */
 
-        }
+				.e-togglebutton.customCss1.e-btn.e-select .e-icon, .e-togglebutton.customCss1.e-btn.e-select .e-btntxt {
 
-         /* Customize the button image & text color */
+					color: #94bbd5;
 
-        .e-togglebutton.customCss1.e-btn.e-select .e-icon, .e-togglebutton.customCss1.e-btn.e-select .e-btntxt {
+				}
 
-            color: #94bbd5;
+				.e-togglebutton.customCss2.e-btn.e-select .e-icon, .e-togglebutton.customCss2.e-btn.e-select .e-btntxt {
 
-        }
+					color: #121111;
 
-        .e-togglebutton.customCss2.e-btn.e-select .e-icon, .e-togglebutton.customCss2.e-btn.e-select .e-btntxt {
+				}
 
-            color: #121111;
+				.e-togglebutton.customCss3.e-btn.e-select .e-icon, .e-togglebutton.customCss3.e-btn.e-select .e-btntxt {
 
-        }
+					color: #cef6f7;
 
-        .e-togglebutton.customCss3.e-btn.e-select .e-icon, .e-togglebutton.customCss3.e-btn.e-select .e-btntxt {
+				}
 
-            color: #cef6f7;
+				.e-togglebutton.customCss5.e-btn.e-select .e-icon, .e-togglebutton.customCss5.e-btn.e-select .e-btntxt {
 
-        }
+					color: #534f4f;
 
-        .e-togglebutton.customCss5.e-btn.e-select .e-icon, .e-togglebutton.customCss5.e-btn.e-select .e-btntxt {
+				}
 
-            color: #534f4f;
+			</style>
 
-        }
-
-    </style>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 Execute the above code to render the following output.
 

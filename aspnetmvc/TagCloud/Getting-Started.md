@@ -27,7 +27,7 @@ Essential Studio ASP.NET MVC TagCloud widget has built-in features such as click
 1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
 2. Add the following code to the corresponding view page to render TagCloud.
 
-   ~~~ html
+   ~~~ js
 
 		@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech Sites")
 
@@ -37,7 +37,7 @@ Essential Studio ASP.NET MVC TagCloud widget has built-in features such as click
 
 3. Add the following style to show the weighted list.
 
-   ~~~ html
+   ~~~ css
 
 		<style type="text/css">
 
@@ -143,7 +143,7 @@ public ActionResult Index()
 
 You can perform the event operations like MouseOver, MouseOut and Click by adding the following code example inside View page.      
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("oncreate").MouseOver("onmouseover").MouseOut("onmouseout").Click("onclick"))
 

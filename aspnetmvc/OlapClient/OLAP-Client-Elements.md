@@ -3,7 +3,7 @@ layout: post
 title: OLAP-Client-Elements
 description: olap client :elements 
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 
@@ -222,7 +222,7 @@ The dimension, hierarchy and level elements can be dragged from the Cube Dimensi
 
 The measure elements can be dragged from Cube Dimension Browser and dropped into Axis Element Builder using drag-and-drop operation. Also user can move the measure elements from one axis to another by moving the Split Button named Measures.
 
-![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img12.png)
+![](OLAP-Client-Elements_images/OLAP-Client-Elements_img12.png)
 
 
 ### Remove Elements from an Axis Element Builder
@@ -231,7 +231,7 @@ The measure elements can be dragged from Cube Dimension Browser and dropped into
 
 In order to remove dimension, hierarchy and level element from the Axis Element Builder, click the Remove symbol available next to the Split Button while hovering over it.
 
-![Description: C:/Users/Tamilarasu .M/Pictures/document/remove.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img13.png)
+![](OLAP-Client-Elements_images/OLAP-Client-Elements_img13.png)
 
 ### Remove Measure from an Axis Element Builder
 
@@ -304,7 +304,7 @@ Unchecking the check box option is provided in such a way that on deselecting th
 * Check All – Will select all nodes in the tree view.
 * Uncheck All – Will uncheck all nodes in the tree view.
 
-![Description: C:/Users/Tamilarasu .M/Pictures/document/check all.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img24.png)
+![](OLAP-Client-Elements_images/OLAP-Client-Elements_img24.png)
 
 
 ## Toolbar

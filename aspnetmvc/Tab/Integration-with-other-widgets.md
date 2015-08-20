@@ -21,7 +21,7 @@ The following code example explains you the Rating control creation. The input e
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add the following code example to the corresponding CSHTML page to render Tab with other widgets.
 
@@ -59,21 +59,22 @@ To render the rating controls in the first Tab element refer the styles mentione
 
 1. Add the following styles to render Tab.
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-        .dishRating {
+				.dishRating {
 
-            position: absolute;
+					position: absolute;
 
-            margin: -31px 0px 0px 80px;
+					margin: -31px 0px 0px 80px;
 
-        }       
+				}       
 
-    </style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 2. The following screenshot illustrates the Tab content with rating control. 

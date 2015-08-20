@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started 
 platform: ejmvc
-control: OLAP Client
+control: OLAPClient
 documentation: ug
 ---
 
@@ -59,7 +59,7 @@ This section encompasses on how to configure the OLAP Client control in an appli
 
 In this example you can see how OLAPClient component plots the data about Customer Count over different fiscal years.
 
-![C:/Users/Narendhran Muthuvel/Desktop/screenshots/Capture.PNG](Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img3.png)
 
 You can open Visual Studio and create a new project by clicking New Project. Select the category Web and select the template ASP.NET MVC4 Web Application and then click OK.
 
@@ -132,7 +132,7 @@ Select Internet application template with razor view engine.
 
 Add the following code sample in the Index.cshtml page that is already created:
 
-{% highlight html %}
+{% highlight js %}
 
 @using Syncfusion.JavaScript;
 
@@ -169,7 +169,6 @@ Add the following code sample inside the IOlapClientService interface available 
 
 {% highlight c# %}
 
-[ServiceContract]
 
     public interface IOlapClientService
 
@@ -742,7 +741,6 @@ You can add the following methods to the service that are invoked for any server
 1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config__file at root folder.
 
    ~~~ html
-		[web.config]
 
 		<compilation debug="true" targetFramework="4.5">
 
@@ -862,8 +860,6 @@ You can add the following methods to the service that are invoked for any server
 
    ~~~ html
 
-		[web.config]
-
 		<system.serviceModel>
 
 			<services>
@@ -887,7 +883,6 @@ You can add the following methods to the service that are invoked for any server
 
    ~~~ html
 
-		[web.config]
 
 		<system.serviceModel>
 
@@ -915,8 +910,6 @@ You can add the following methods to the service that are invoked for any server
 5. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
 
    ~~~ html
-
-		[web.config]
 
 		<appSettings>
 

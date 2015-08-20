@@ -105,6 +105,6 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 The following screenshot displays the Scroller control with basic styles
 
-![C:/Users/labuser/Desktop/scroller.png](Scroller-Styles_images/Scroller-Styles_img1.png)
+![](Scroller-Styles_images/Scroller-Styles_img1.png)
 
 _Figure_ _5_: _Scroller control rendered with basic styles_

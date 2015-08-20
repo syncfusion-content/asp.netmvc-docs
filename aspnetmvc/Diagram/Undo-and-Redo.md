@@ -14,8 +14,6 @@ The Undocommand reverses the last editing action performed on Diagram. For examp
 {% highlight js %}
 
 
-
-
 //undo
 
 var diagram = $("#Diagram").ejDiagram("instance");

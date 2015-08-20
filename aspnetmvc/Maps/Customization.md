@@ -36,7 +36,7 @@ The above properties of ShapeSettings are applied only when AutoFill property va
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")            
 
@@ -78,8 +78,9 @@ The above properties of ShapeSettings are applied only when AutoFill property va
 
 
 
-![E:/Work/JS/Volume 2 2014/IMG_22042014_095149.png](Customization_images/Customization_img1.png)
+![](Customization_images/Customization_img1.png)
 
+_Map_
 
 ## Color Mapping
 
@@ -133,7 +134,7 @@ Gets or sets the start point and end point gradient colors to be applied for spe
 </table>
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("map")            
 
@@ -203,6 +204,7 @@ When the underlying value is below any of the given sorted range or above the so
 
 ![](Customization_images/Customization_img2.png)
 
+_Map with fill_
 
 * Equal Color Mapping - The Equal color mapping is used to differentiate the shape’s fill based on its underlying Value and Color. The properties of Equal color mapping is listed in the following table.
 
@@ -232,7 +234,7 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 
 
 
-{% highlight html %}
+{% highlight c# %}
   public ActionResult Map()
   {
      // ...
@@ -315,11 +317,11 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 		    get { return electors; }
             set { electors = value; }
 		}
-	} </td></tr>
+	} 
 {% endhighlight %}
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("maps") 
 
@@ -375,6 +377,7 @@ Here “MapController.cs” is populated with datas of USA Election in “MapCon
 
 ![](Customization_images/Customization_img3.png)
 
+_Map with fill color_
 
 ## ColorPalette
 
@@ -388,7 +391,7 @@ The ColorPalette property can be set with Palette1, Palette2, Palette3 and Custo
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Map("maps") 
@@ -429,6 +432,8 @@ The ColorPalette property can be set with Palette1, Palette2, Palette3 and Custo
 
 ![](Customization_images/Customization_img4.png)
 
+_Map with color palette property_
+
 ### CustomPalette
 
 The CustomPalette property is used to set an array of colors to be auto filled in shapes.
@@ -437,7 +442,7 @@ This property is enabled only when ColorPalette property value is set to “Cust
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")
 
@@ -485,6 +490,7 @@ This property is enabled only when ColorPalette property value is set to “Cust
 
 ![](Customization_images/Customization_img5.png)
 
+_Map with custom palette_
 
 ## Tooltip
 
@@ -492,7 +498,7 @@ The tooltip is displayed only when you set ShowTooltip to “True” in the shap
 
 
 
-{% highlight html %}
+{% highlight js %}
 
  @(Html.EJ().Map("container")
 
@@ -528,6 +534,7 @@ The tooltip is displayed only when you set ShowTooltip to “True” in the shap
 
 ![](Customization_images/Customization_img6.png)
 
+_Map with Tooltip_
 
 ### Tooltip Template
 
@@ -535,7 +542,7 @@ The ToolTipTemplate property is used for customizing the template for tooltip.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
  @(Html.EJ().Map("container")
 
@@ -567,9 +574,6 @@ The ToolTipTemplate property is used for customizing the template for tooltip.
 
            )   
 
-
-
-[CSHTML]
 
       <div  id="myTooltip" style="display: none;">
 
@@ -607,5 +611,6 @@ The following screenshot illustrates a map control displaying a Tooltip with tem
 
 
 
-![C:/Users/labuser/Desktop/a.png](Customization_images/Customization_img7.png)
+![](Customization_images/Customization_img7.png)
 
+_Map with tooltip template_

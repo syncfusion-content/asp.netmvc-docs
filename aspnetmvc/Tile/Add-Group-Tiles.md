@@ -53,7 +53,7 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
  Refer the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 <div class="group">
 

@@ -14,8 +14,8 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 1. The following code depicts you on how to enable the rtl property of the Menu control.
 
 
-{% highlight html %}
-[CSHTML]
+{% highlight js %}
+
 
 // The following code example depicts how to enable the rtl property of the Menu control.
 

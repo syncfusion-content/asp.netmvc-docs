@@ -23,7 +23,7 @@ The following steps explains you on how to enable Locale property for TimePicker
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with Spanish culture*@
 

@@ -18,9 +18,6 @@ The following code explain you the configuration of the AllowMultiSelection for 
 1. Add the below code snippet with ,multiple item selection option in Dropdownlist
 
 
-
-
-
 {% highlight html %}
 
 // Add a DropDownList element using the helper class in CSHTML

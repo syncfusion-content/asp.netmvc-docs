@@ -16,7 +16,7 @@ The following steps explain the State Maintenance in the ProgressBar control.
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
 
-{% highlight html %}
+{% highlight js %}
 // Add the following code example to the corresponding CSHTML page to enable the state maintenance in the ProgressBar control.
 @Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnablePersistence(true)
 {% endhighlight %}
@@ -36,7 +36,7 @@ The following steps explain the State Maintenance in the ProgressBar control.
 
 The following screenshot displays the output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/propersis.PNG](State-Maintenance_images/State-Maintenance_img1.png)
+![](State-Maintenance_images/State-Maintenance_img1.png)
 
 
 

@@ -19,7 +19,7 @@ The following steps explain the configuration of MultipleFilesSelection property
 
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
-{% highlight html %}
+{% highlight js %}
 
 // In the CSHTML page, add the UploadBox element.
 

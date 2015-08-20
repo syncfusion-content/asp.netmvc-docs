@@ -10,7 +10,7 @@ documentation: ug
 # Enabling RTL Support
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, configure Accordion with corresponding data and set EnableRTL property value as true.
 

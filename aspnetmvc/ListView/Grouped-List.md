@@ -17,9 +17,7 @@ Refer the following code example.
 
 
 
-{% highlight html %}
-
-
+{% highlight js %}
 
 @Html.EJ().ListView("firstlevelgrouplist").Width(400).EnableGroupList(true).Groups(gp =>
 
@@ -73,10 +71,6 @@ Refer the following code example.
 
     })
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -94,7 +88,7 @@ Refer the following code examples.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

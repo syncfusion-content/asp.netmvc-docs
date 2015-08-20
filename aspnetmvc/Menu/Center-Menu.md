@@ -13,86 +13,87 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
 
 1. Add the following code in your view section.
 
-{% highlight html %}
+   ~~~ js
 
-[CSHTML]  
+  
 
-// Add the following code in CSHTML section.
+		// Add the following code in CSHTML section.
 
-<div class="imgframe">
+		<div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+		@Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+				{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+					items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+						{
 
-                    child.Add().Text("Foundation");
+							child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+							child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+							child.Add().Text("About").Children(child1 =>
 
-                    {
+							{
 
-                        child1.Add().Text("Company");
+								child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+								child1.Add().Text("Location");
 
-                    });
+							});
 
-                });
+						});
 
-            items.Add().Text("Services").Children(child =>
+					items.Add().Text("Services").Children(child =>
 
-                {
+						{
 
-                    child.Add().Text("Consulting");
+							child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+							child.Add().Text("Outsourcing");
 
-                });
+						});
 
-            items.Add().Text("About");
+					items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+					items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+						{
 
-                    child.Add().Text("Contact number");
+							child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+							child.Add().Text("E-mail");
 
-                });
+						});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+					items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+						 {
 
 
 
-        }).Width("500").EnableCenterAlign(true)</div>
+							 child.Add().Text("Position").Children(child1 =>
+
+									 {
+
+										 child1.Add().Text("Developer");
+
+										 child1.Add().Text("Manager");
+
+									 });
+
+							 child.Add().Text("Apply online");
+
+						 });
 
 
-{% endhighlight  %}
+
+				}).Width("500").EnableCenterAlign(true)</div>
+
+
+   ~~~
+   {:.prettyprint }
 
 
 The following screenshot displays the output of the above code.
@@ -100,5 +101,5 @@ The following screenshot displays the output of the above code.
 ![](Center-Menu_images/Center-Menu_img1.png)
 
 
-_Figure34: Center Menu_
+_Figure: Center Menu_
 

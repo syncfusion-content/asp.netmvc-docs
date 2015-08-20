@@ -237,7 +237,7 @@ model.Connectors.Push(connector);
 
 
 
-![C:/Users/lakshmipriya/Desktop/IMG_07112014_125619.png](Connector_images/Connector_img5.png)
+![](Connector_images/Connector_img5.png)
 
 
 

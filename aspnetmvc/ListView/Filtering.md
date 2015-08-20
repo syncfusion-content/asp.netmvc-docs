@@ -13,7 +13,7 @@ Filtering is one of the key features of ListView control. The Filtering option i
 
 Refer the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().ListView("lb").Width(300).EnableFiltering(true).Items(items => {    
 

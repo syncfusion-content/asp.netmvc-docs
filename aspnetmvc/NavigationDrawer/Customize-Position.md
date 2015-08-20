@@ -3,7 +3,7 @@ layout: post
 title: Customize-Position
 description: customize position
 platform: ejmvc
-control: Navigation Drawer
+control: NavigationDrawer
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ Position property is used to specify the position whether it is in fixed or rela
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 

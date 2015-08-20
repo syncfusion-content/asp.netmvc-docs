@@ -11,12 +11,13 @@ documentation: ug
 
 The WaitingPopup controlfor MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
-## Key Features
+### Key Features
 
 * Custom text: Supports custom text inside the pop-up panel.
 * Template: Supports including HTML content instead of the default image.
 * Transparency: Supports customizing the transparency and opacity level.
 * Themes: JavaScript controls include 12 built-in themes (6 flat and 6 gradient effects) and also support the custom skin option to set user-defined themes.
+
 ## Getting Started
 
 
@@ -28,152 +29,149 @@ ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your 
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img1.png)
-
-
+![](Overview_images/Overview_img1.png)
 
 
 In the above screenshot, you can give the Username and Password. When you click the Login button, the Waiting Popup appears.  After loading, the alert box appears with a message “Signed in successfully”.
 
-Create Waiting Popup
+### Create Waiting Popup
 
 ASP.NET MVC Waiting Popup widget has a built-in feature to block all other actions until the page is loaded. You can easily create the Waiting Popup control by using simple HTML Helper element as follows
 
 1. You can create an MVC Project and add necessary assemblies, styles, and scripts with the help of [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 
-Create Login Page
+### Create Login Page
 
 In a real-time Login page scenario, when you click on the Login button, the Waiting Popup is displayed. This is achieved by using the btnClick.
 
 1. Add the following code example to the corresponding view page to create Login page with username and password.
 
+   ~~~ html
+		<div class="content-container-fluid">
 
-{% highlight html %}
+		    <div class="row">
 
+			<div class="cols-sample-area">
 
-<div class="content-container-fluid">
+			    <table id="target">
 
-    <div class="row">
+				<tr>
 
-        <div class="cols-sample-area">
+				    <td>Username</td>
 
-            <table id="target">
+				    <td><input type="text"></td>
 
-                <tr>
+				</tr>
 
-                    <td>Username</td>
+				<tr>
 
-                    <td><input type="text"></td>
+				    <td>Password</td>
 
-                </tr>
+				    <td><input type="password"></td>
 
-                <tr>
+				</tr>
 
-                    <td>Password</td>
+				<tr>
 
-                    <td><input type="password"></td>
+				    <td></td>                       
 
-                </tr>
+				 <td>                         @Html.EJ().Button("buttonnormal").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("btnload").Click("btnClick"))
 
-                <tr>
+				 </td>                    
 
-                    <td></td>                       
+		@Html.EJ().WaitingPopup("target").ShowOnInit(false)
 
-                 <td>                         @Html.EJ().Button("buttonnormal").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("btnload").Click("btnClick"))
+				</tr>
 
-                 </td>                    
-
-@Html.EJ().WaitingPopup("target").ShowOnInit(false)
-
-                </tr>
-
-            </table>
+			    </table>
 
 
 
-        </div>
+			</div>
 
-    </div>
+		    </div>
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Add the following styles in the view page to show the Waiting Popup.
 
+   ~~~ css
 
 
-{% highlight css %}
+		<style type="text/css" class="cssStyles">
 
-<style type="text/css" class="cssStyles">
+		    #target {
 
-    #target {
+			margin: 0 auto;
 
-        margin: 0 auto;
+		    }
 
-    }
+		    #target_WaitingPopup .e-image {
 
-    #target_WaitingPopup .e-image {
+			display: block;
 
-        display: block;
+			height: 70px;
 
-        height: 70px;
+		    }
 
-    }
+		    #popup {
 
-    #popup {
+			height: auto;
 
-        height: auto;
+			width: auto;
 
-        width: auto;
+			margin-top: 100px;
 
-        margin-top: 100px;
+		    }
 
-    }
+		</style>
 
-</style>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following script in the view page.
 
+   ~~~ js
 
 
-{% highlight js %}
+		<script>
 
-<script>
+			    function btnClick(e)
 
-            function btnClick(e)
+			    {
 
-            {
+				var wp = $("#target").data("ejWaitingPopup");
 
-                var wp = $("#target").data("ejWaitingPopup");
+				wp.show();
 
-                wp.show();
+				setTimeout(success, 5000);
 
-                setTimeout(success, 5000);
+			    }
 
-            }
+			    function success()
 
-            function success()
+			    {
 
-            {
+				alert("Signed in successfully");
 
-                alert("Signed in successfully");
+				var popup = $("#target").ejWaitingPopup("hide");
 
-                var popup = $("#target").ejWaitingPopup("hide");
+			    }                  
 
-            }                  
+		</script>
+		
+   ~~~
+   {:.prettyprint }
 
-</script>
-
-{% endhighlight %}
 
 4. The following screenshot displays the Userlogin.
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/wait.PNG](Overview_images/Overview_img2.png)
+   ![](Overview_images/Overview_img2.png)
 
 
 
@@ -182,14 +180,14 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-![C:/Users/Gopal Lakshmanan/Desktop/w1.PNG](Overview_images/Overview_img3.png)
+   ![](Overview_images/Overview_img3.png)
 
 
 
 
 The following screenshot displays an alert box displayed with the message “Signed in successfully” after loading.
 
-![C:/Users/Gopal Lakshmanan/Desktop/w3.PNG](Overview_images/Overview_img4.png)
+![](Overview_images/Overview_img4.png)
 
 
 

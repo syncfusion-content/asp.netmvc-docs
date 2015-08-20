@@ -7,17 +7,17 @@ control: PDF
 documentation: ug
 ---
 
-## Layers
+# Layers
 
 Layers are collection of graphics and when the viewer application is used, you can make the layers visible or invisible dynamically. The graphics belonging to such a group can reside anywhere in the document.
 
-### Creating PDF Layer in PDF document
+## Creating PDF Layer in PDF document
 
 PdfPageLayer is used to create unlimited levels of layers and sub-layers in a parent-child relationship in the PdfDocument. The layers are stored by the PdfPageLayerCollection of a particular PdfPage. This collection contains layers for that particular page only, and every page has its own PdfPageLayerCollection. In order to add a layer to a particular page, you need to add it to the PdfPageLayerCollection of that page using Add method.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -113,9 +113,9 @@ graphics.DrawArc(pen, 0, 0, 50, 50, -60, 60);
 
 document.Save("Sample.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -211,13 +211,15 @@ graphics.DrawArc(pen, 0, 0, 50, 50, -60, 60)
 
 document.Save("Sample.pdf")
 
-### Modifying PDF Layer in the Loaded PDF document
+{% endhighlight %}
+
+## Modifying PDF Layer in the Loaded PDF document
 
 You can remove the layers from an exsisting document by loading the layer from the PdfLoadedPage.
 
 PdfLoadedPage contain its own PdfPageLayerCollection. You can remove the layer by its name using Remove method.
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -239,9 +241,9 @@ coll.Remove("Layer 1");
 
 document.Save("Sample.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -265,7 +267,9 @@ coll.Remove("Layer 1")
 
 document.Save("Sample.pdf")
 
-### Toggle the visibility of the layer
+{% endhighlight %}
+
+## Toggle the visibility of the layer
 
 You can toggle the visibility of the PdfLayer when printing the PDF document using the PdfPrintState class and it has following three options.
 
@@ -275,7 +279,7 @@ You can toggle the visibility of the PdfLayer when printing the PDF document usi
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -319,9 +323,9 @@ graphics.DrawArc(pen, 0, 0, 50, 50, 360, 360);
 
 document.Save("Sample.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -365,5 +369,5 @@ graphics.DrawArc(pen, 0, 0, 50, 50, 360, 360)
 
 document.Save("Sample.pdf")
 
-
+{% endhighlight %}
 

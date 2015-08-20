@@ -145,3 +145,5 @@ The most used clipboard actions are cut, copy, and paste. These tools are used 
 FileExplorerOperations is a predefined Class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste and getImage. It minimizes the work load on server-side.
 
 ![](Toolbar-Support_images/Toolbar-Support_img1.png)
+
+_Figure 4: FileExplorer with a list of toolbar items_

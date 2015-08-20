@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started 
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 
@@ -23,16 +23,18 @@ Essential ASP.NET MVC Split Button control contains built-in features such as Cl
 2. Add the following code to the corresponding View page to render Split Button.
 
 
-{% highlight html %}
+   ~~~ js
 
-@Html.EJ().SplitButton("sbutton").Text("Save").ShowRoundedCorner(true).Size(ButtonSize.Large).TargetID("target")
+	@Html.EJ().SplitButton("sbutton").Text("Save").ShowRoundedCorner(true).Size(ButtonSize.Large).TargetID("target")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following <UL>, <LI> elements to render Split Button with popup option.
 
 
-{% highlight html %}
+   ~~~ html
+   
        <ul id="target">
 
             <li><span>Open</span></li>
@@ -43,13 +45,14 @@ Essential ASP.NET MVC Split Button control contains built-in features such as Cl
 
         </ul>      
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 Output of the above scripts,
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 

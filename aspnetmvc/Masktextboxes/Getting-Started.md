@@ -19,9 +19,9 @@ ASP.NET MVC MaskEdit control allows you to set the type and format of the input 
 
 The following screenshot illustrates the functionality of a MaskEdit. Using MaskEdit control textbox, you can enter only the assigned text format and no other formats. The input mask prevents you from entering invalid characters into the control. In this application, MobileNumber textbox has a mask value.
 
-![Description: C:/Users/labuser/Desktop/a.png](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
-
+_MaskEdit_
 
 In the above screenshot, you can type only numbers and it does not allow text format.
 
@@ -34,167 +34,171 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 
 
-{% highlight html %}
+   ~~~ html
 
-<div class="frame">
+		<div class="frame">
 
-        <div class="control">
+				<div class="control">
 
-            <table class="editors">
+					<table class="editors">
 
-                <tbody>
+						<tbody>
 
-                    <tr>
+							<tr>
 
-                        <td>
+								<td>
 
-                            <label>
+									<label>
 
-                                Kilometers</label>
+										Kilometers</label>
 
-                        </td>
+								</td>
 
-                        <td>
+								<td>
 
-                            @Html.EJ().NumericTextbox("numeric").Value("1000")
+									@Html.EJ().NumericTextbox("numeric").Value("1000")
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                    <tr>
+							<tr>
 
-                        <td>
+								<td>
 
-                            <label>
+									<label>
 
-                                Service Tax</label>
+										Service Tax</label>
 
-                        </td>
+								</td>
 
-                        <td>
+								<td>
 
-                            @Html.EJ().PercentageTextbox("percent").Value("100")
+									@Html.EJ().PercentageTextbox("percent").Value("100")
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                    <tr>
+							<tr>
 
-                        <td>
+								<td>
 
-                            <label>
+									<label>
 
-                                Fare</label>
+										Fare</label>
 
-                        </td>
+								</td>
 
-                        <td>
+								<td>
 
-                            @Html.EJ().CurrencyTextbox("currency").Value("50")
+									@Html.EJ().CurrencyTextbox("currency").Value("50")
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                    <tr>
+							<tr>
 
-                        <td>
+								<td>
 
-                            <label>
+									<label>
 
-                                Mobile No</label>
+										Mobile No</label>
 
-                        </td>
+								</td>
 
-                        <td>
+								<td>
 
- @*creating MaskEdit control*@                           @Html.EJ().MaskEdit("maskedit").MaskFormat("99-999-99999").InputMode(InputMode.Text) 
+		 @*creating MaskEdit control*@                           @Html.EJ().MaskEdit("maskedit").MaskFormat("99-999-99999").InputMode(InputMode.Text) 
 
-                        </td>
+								</td>
 
-                    </tr>
+							</tr>
 
-                </tbody>
+						</tbody>
 
-            </table>
+					</table>
 
-            <div class="paybill">
+					<div class="paybill">
 
-                @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("PayBill")
+						@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("PayBill")
 
-            </div>
+					</div>
 
-        </div>
+				</div>
 
-    </div>
+			</div>
 	
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following styles to show MaskEdit and place it in a particular position.
 
-{% highlight html %}
+   ~~~ html
 
-    <style>
+			<style>
 
-        .frame {
+				.frame {
 
-            width: 300px;
+					width: 300px;
 
-        }
-
-
-
-        .editors {
-
-            max-width: 400px;
-
-        }
+				}
 
 
 
-        .control .paybill {
+				.editors {
 
-            margin-left: 208px;
+					max-width: 400px;
 
-            margin-top: 15px;
-
-        }
+				}
 
 
 
-        .editors label {
+				.control .paybill {
 
-            display: block;
+					margin-left: 208px;
 
-            width: 130px;
+					margin-top: 15px;
 
-        }
-
-
-
-        .control {
-
-            margin-top: 10px;
-
-        }
+				}
 
 
 
-        .ctrllabel {
+				.editors label {
 
-            padding-bottom: 3px;
+					display: block;
 
-        }
+					width: 130px;
 
-    </style>
-{% endhighlight %}
+				}
+
+
+
+				.control {
+
+					margin-top: 10px;
+
+				}
+
+
+
+				.ctrllabel {
+
+					padding-bottom: 3px;
+
+				}
+
+			</style>
+
+   ~~~
+   {:.prettyprint }			
+
 Execute the above code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
+_MaskEdit_
 
 ## Set Mask value to Mobile Number textbox
 
@@ -211,124 +215,128 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 1. Create a MVC Project and add necessary assemblies and scripts to it. 
 
-Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
+   Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
 
 2. Add the following code to the corresponding view page to render MaskEdit.
 
 
-{% highlight html %}
-  <div class="frame">
+   ~~~ html
+   
+		  <div class="frame">
 
-        <div class="control">
+				<div class="control">
 
-            <table class="editors">
+					<table class="editors">
 
-                <tbody>
+						<tbody>
 
-                    <tr>
+							<tr>
 
-                        <td>
+								<td>
 
-                            <label>
+									<label>
 
-                                Product Key</label>
+										Product Key</label>
 
-                        </td>
+								</td>
 
-                        <td>
+								<td>
 
-                         @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for productkey validation*@                        </td>
+								 @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for productkey validation*@                        </td>
 
-                    </tr>
+							</tr>
 
-                </tbody>
+						</tbody>
 
-            </table>
+					</table>
 
-            <div class="productkey">
+					<div class="productkey">
 
-                @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Submit")
+						@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Submit")
 
-            </div>
+					</div>
 
-        </div>
+				</div>
 
-    </div>
+			</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Add the following styles to show the MaskEdit, and place it in a particular position.
 
-{% highlight html %}
+   ~~~ html
 
-    <style>
+			<style>
 
-        .frame {
+				.frame {
 
-            width: 300px;
+					width: 300px;
 
-        }
-
-
-
-        .editors {
-
-            max-width: 400px;
-
-        }
+				}
 
 
 
-        .control .productkey {
+				.editors {
 
-            margin-left: 208px;
+					max-width: 400px;
 
-            margin-top: 15px;
-
-        }
+				}
 
 
 
-        .editors label {
+				.control .productkey {
 
-            display: block;
+					margin-left: 208px;
 
-            width: 130px;
+					margin-top: 15px;
 
-        }
-
-
-
-        .control {
-
-            margin-top: 10px;
-
-        }
+				}
 
 
 
-        .ctrllabel {
+				.editors label {
 
-            padding-bottom: 3px;
+					display: block;
 
-        }
+					width: 130px;
 
-    </style>
+				}
 
-{% endhighlight %}
+
+
+				.control {
+
+					margin-top: 10px;
+
+				}
+
+
+
+				.ctrllabel {
+
+					padding-bottom: 3px;
+
+				}
+
+			</style>
+
+   ~~~
+   {:.prettyprint }
 
 4. Run the above code example to render the following output. 
 
-![C:/Users/ApoorvahR/Desktop/7.png](Getting-Started_images/Getting-Started_img3.png)
+![](Getting-Started_images/Getting-Started_img3.png)
 
-
+_Product Key_
 
 ## Set Mask value to Product key textbox
 
 You can set mask value for Productkey textbox by setting the desired values to the MaskEdit control.
 
+{% highlight html %}
 
 @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text)
 
-
+{% endhighlight %}
 

@@ -37,7 +37,7 @@ The _default_ _type_ is _button_.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Ribbon("defaultRibbon")
 

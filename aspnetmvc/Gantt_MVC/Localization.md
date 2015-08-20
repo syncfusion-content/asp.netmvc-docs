@@ -27,26 +27,84 @@ Empty Record</td><td>
 emptyRecord: "No records to display"</td></tr>
 <tr>
 <td>
-Column Header Texts:taskIdtaskNamestartDateendDateresourceInfodurationstatuspredecessorbaselineStartDatebaselineEndDate</td><td>
-columnHeaderTexts: {    taskId: "ID",    taskName: "Task Name",    startDate: "Start Date",    endDate: "End Date",    resourceInfo: "Resources",    duration: "Duration",    status: "Progress",    predecessor: "Predecessor",    baselineStartDate: "Baseline Start Date",    baselineEndDate: "Baseline End Date"}</td></tr>
+Column Header Texts:<br/>
+taskId<br/>
+taskName<br/>
+startDate<br/>
+endDate<br/>
+resourceInfo<br/>
+duration<br/>
+status<br/>
+predecessor<br/>
+baselineStartDate<br/>
+baselineEndDate</td><td>
+columnHeaderTexts: {  <br/>  
+taskId: "ID",<br/>
+taskName: "Task Name", <br/>
+startDate: "Start Date",<br/>
+endDate: "End Date",<br/>
+resourceInfo: "Resources",<br/>
+duration: "Duration",<br/>
+status: "Progress",<br/>
+predecessor: "Predecessor",<br/>
+ baselineStartDate: "Baseline Start Date",<br/>
+ baselineEndDate: "Baseline End Date"<br/>
+ }</td></tr>
 <tr>
 <td>
-Edit Dialog Texts:addFormTitleeditFormTitlesaveButtoncancelButton</td><td>
-editDialogTexts: {     addFormTitle: "New Task",     editFormTitle: "Edit Task",     saveButton: "Save",     cancelButton: "Cancel" },</td></tr>
+Edit Dialog Texts:<br/>
+addFormTitle<br/>
+editFormTitle<br/>
+saveButton<br/>
+cancelButton</td><td>
+editDialogTexts: {<br/>
+addFormTitle: "New Task",<br/>
+editFormTitle: "Edit Task",<br/>
+saveButton: "Save",<br/>
+cancelButton: "Cancel" },</td></tr>
 <tr>
 <td>
 Date Format</td><td>
-calendars: {     standard: {         days: {             // full name of days             names: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],             // abbreviated names of days             namesAbbr: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],         },         months: {             // full name of months             names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],             // abbreviated name of months             namesAbbr: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]         },         // set of predefined date and time patterns used by the culture.         patterns: {             d: "M/d/yyyy",             D: "dddd, MMMM dd, yyyy",             F: "dddd, MMMM dd, yyyy h:mm:ss tt",             g: "M/d/yyyy h:mm tt",             G: "M/d/yyyy h:mm:ss tt",             m: "MMMM dd",             M: "MMMM dd",             s: "yyyy'-'MM'-'ddTHH':'mm':'ss",             t: "h:mm tt",             T: "h:mm:ss tt",             u: "yyyy'-'MM'-'dd HH':'mm':'ss'Z'",             y: "MMMM, yyyy",             Y: "MMMM, yyyy"         }     } }</td></tr>
+calendars: {<br/>
+     standard: {   <br/>
+		days: {  <br/>
+			// full name of days  <br/>
+			names: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],<br/>
+
+			// abbreviated names of days <br/>
+            namesAbbr: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],<br/>         }, <br/>
+			months: {  <br/>           
+				// full name of months  <br/>
+				names: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],<br/>
+
+				// abbreviated name of months <br/>
+				namesAbbr: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]  <br/>     
+				}, <br/>
+				// set of predefined date and time patterns used by the culture.<br/>
+				patterns: {  <br/>
+					d: "M/d/yyyy", <br/>
+					D: "dddd, MMMM dd, yyyy",<br/>
+					F: "dddd, MMMM dd, yyyy h:mm:ss tt", <br/>
+					g: "M/d/yyyy h:mm tt",  <br/>
+					G: "M/d/yyyy h:mm:ss tt", <br/>
+					m: "MMMM dd",  <br/>
+					M: "MMMM dd",  <br/>
+					s: "yyyy'-'MM'-'ddTHH':'mm':'ss",<br/>
+					t: "h:mm tt",  <br/>       
+					T: "h:mm:ss tt", <br/>    
+					u: "yyyy'-'MM'-'dd HH':'mm':'ss'Z'", <br/> 
+					y: "MMMM, yyyy",  <br/>    
+					Y: "MMMM, yyyy" <br/>   
+					} 
+				}
+			}</td></tr>
 </table>
 
 
 To localize the Column Header Texts based on French culture, refer to the following code example.
 
 
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -176,10 +234,6 @@ ej.Gantt.localization["fr-FR"] = {
 
  }
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -192,5 +246,5 @@ The following screenshot shows Gantt with French culture.
 
 ![](Localization_images/Localization_img1.png)
 
-
+_Figure 58: Localization_
 

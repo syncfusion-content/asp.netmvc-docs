@@ -25,7 +25,7 @@ ImageUrl property is used to set the background image for Tile, where the image 
 
 Refer to the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Tile("tile").Text("Weather").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Wide).ImageUrl("http://js.syncfusion.com/UG/web/Content/tile/Weather_2.png ")
 
@@ -41,7 +41,7 @@ You can give images for each tile through css classes by using ImageClass proper
 
 Refer to the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Tile("tile").Text("Pictures").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageClass("pictures")
 

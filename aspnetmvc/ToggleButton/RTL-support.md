@@ -3,7 +3,7 @@ layout: post
 title: RTL-support
 description: rtl support
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 
@@ -17,9 +17,6 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 {% highlight html %}
-
-
-
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 

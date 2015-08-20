@@ -21,7 +21,7 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Map("maps") 
@@ -68,6 +68,7 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 ![](User-Interaction_images/User-Interaction_img1.png)
 
+_Map with enable selection property_
 
 ## Zooming
 
@@ -102,7 +103,7 @@ The MaxValue property is used to set the maximum zoom level of the map.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("maps") 
 
@@ -174,9 +175,9 @@ When the map is double-tapped using mouse, the zoom in operation is performed.
 
 
 
-{{ '![](User-Interaction_images/User-Interaction_img2.png)' | markdownify }}
-{:.image }
+![](User-Interaction_images/User-Interaction_img2.png)
 
+_Map with zoom_
 
 #### Using Shape Selection
 
@@ -188,7 +189,7 @@ When EnableZoomOnSelection property is set to true, then, zoom on double click i
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("maps") 
 
@@ -242,7 +243,7 @@ Zoom level of the map</td></tr>
 </table>
 
 
-{% highlight html %}
+{% highlight js %}
 
 <script type="text/javascript">
 
@@ -251,8 +252,6 @@ function buttonClick() {
  $("#map").ejMap("navigateTo", 13, 80, 5);
 
 }
-
-
 
 </script> 
 
@@ -266,7 +265,7 @@ The panning feature enables map navigation. The EnablePan property is used to en
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("maps") 
 
@@ -278,8 +277,6 @@ The panning feature enables map navigation. The EnablePan property is used to en
 
  )      
 
-
-
 {% endhighlight %}
 
 
@@ -290,10 +287,11 @@ Navigation control is built-in with Maps control. With Navigation control, Maps 
 
 ### Structure of Navigation Control
 
-![C:/Users/labuser/Desktop/a.png](User-Interaction_images/User-Interaction_img3.png)
+![](User-Interaction_images/User-Interaction_img3.png)
 
+_Structure of Navigation Control_
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Map("maps") 
@@ -357,7 +355,7 @@ You can set this option by using DockPosition property in NavigationControl.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Map("maps") 

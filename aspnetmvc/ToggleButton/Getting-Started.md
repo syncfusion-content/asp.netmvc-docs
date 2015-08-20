@@ -3,7 +3,7 @@ layout: post
 title: Getting-Started
 description: getting started
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 
@@ -17,13 +17,13 @@ The Toggle Button control displays both text and images. The text displayed on t
 
 The following screenshot illustrates a Toggle Button control. 
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML9472710.PNG](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
 _Figure 1: Toggle Button in OFF state_ 
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML94b6c62.PNG](Getting-Started_images/Getting-Started_img2.png)
+![](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -40,11 +40,12 @@ Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to cus
 1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
 2. Add the following code example to the corresponding view page to render the Toggle Button. 
 
-{% highlight html %}
+   ~~~ js
 
-@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
+		@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 3. Output of the above steps.
 

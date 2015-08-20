@@ -115,7 +115,7 @@ The following steps explain the implementation of AutoResize option in the Split
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight css %}
 
 <style type="text/css">
 
@@ -360,10 +360,7 @@ By default, there are 12 themes support available for Autocomplete control namel
 
 The CSS properties can be customized by using CssClass in the Splitter widget. The following steps explain the implementation of CssClass option in the Splitter widget.
 
-2. In the View page add the Splitter helper and customize the Splitter appearance. 
-
-
-
+In the View page add the Splitter helper and customize the Splitter appearance. 
 
 
 {% highlight html %}

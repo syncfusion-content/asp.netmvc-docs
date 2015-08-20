@@ -17,7 +17,7 @@ Refer the following code examples.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().ListView("lb").EnableCheckMark(true).Width(400).Items(items => {    
@@ -55,8 +55,6 @@ Refer the following code examples.
 
 ![](Selection_images/Selection_img1.png)
 
-
-
 _Enable Check Mark_
 
 ## PreventSelection
@@ -67,7 +65,7 @@ When selecting a specific list item, it is highlighted with an active color. Pre
 
 Refer the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().ListView("lb").Width(400).PreventSelection(true).Items(items => {    
@@ -104,7 +102,7 @@ Refer the following code examples.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().ListView("lb").PersistSelection(true).Width(400).Items(items => {    

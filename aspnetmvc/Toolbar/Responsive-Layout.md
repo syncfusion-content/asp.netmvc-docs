@@ -294,16 +294,3 @@ Execute the above code to render the following output.
 ![](Responsive-Layout_images/Responsive-Layout_img1.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -15,7 +15,7 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 1. Add the following code in your CSHTML page.
 
-{% highlight html %}
+{% highlight js %}
 
 	@*Add the following code in your view page.*@
 	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render();}
@@ -40,7 +40,7 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 1. Add the following code in your CSHTML page.
 
-{% highlight html %}
+{% highlight js %}
 
 	@*Add the following code in your view page.*@
 

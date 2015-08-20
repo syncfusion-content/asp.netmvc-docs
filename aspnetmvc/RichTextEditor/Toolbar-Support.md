@@ -43,7 +43,7 @@ Most used clipboard actions are cut, copy, and paste. These tools are used to re
 
 1. To render Rich Text Editor with the above toolbar options, include the following code in your CSHTML page.
 
-{% highlight c# %}
+{% highlight js %}
 
 \\ Add the following code in your view page
 
@@ -107,26 +107,26 @@ The following example illustrates how to insert an HTML, JavaScript, or CSS code
 		.Css("codeInsert").Action("click").Add();        })))    @*Dialog option code for adding the text*@    
 	
 		<div id="cutomSourceCode" title="Paste your content and inset to RTE">        
-		<table>            
-		<tr>                
-		<td colspan="2">                    
-			<textarea id="srcCode" style="width: 550px; height: 250px">                        
-				<div id="srcArea">	</div>                   
-			</textarea>                
-		</td>            
-		</tr>
-		
-		<tr>                
-		<td colspan="2">                    
-			<div class="e-rte-button e-fieldseparate">                        
-				<button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        
-				<button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    
-			</div>                
-		</td>            
-		</tr>       
-		</table>    
+			<table>            
+			<tr>                
+			<td colspan="2">                    
+				<textarea id="srcCode" style="width: 550px; height: 250px">                        
+					<div id="srcArea">	</div>                   
+				</textarea>                
+			</td>            
+			</tr>
+			
+			<tr>                
+			<td colspan="2">                    
+				<div class="e-rte-button e-fieldseparate">                        
+					<button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        
+					<button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    
+				</div>                
+			</td>            
+			</tr>       
+			</table>    
 		</div>
-		</div>
+	</div>
  
 {% endhighlight %}
  
@@ -163,7 +163,7 @@ In some cases, you may have to remove a particular item from existing toolbar it
 
 1. Add the following code in your CSHTML page.
 
-{% highlight html %}
+{% highlight js %}
 
 	@*Add the following code in your view page.*@@{Html.EJ().RTE("rteSample").Width("850px")
 	.ContentTemplate(@<p></p>).Render(); }

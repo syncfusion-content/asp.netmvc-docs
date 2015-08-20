@@ -64,9 +64,9 @@ In the following example, set DateTimeFormat to fulldatetime format.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
+     
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized date time format*@
 
@@ -115,10 +115,9 @@ You can also customize the format according to your needs. This is achieved by c
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
-	 
+     
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized day header format*@
 
 		@Html.EJ().DateTimePicker("DateTime").DayHeaderFormat(Header.ShowHeaderLong).Width("175px").Value("5/15/2015 09:00 AM")

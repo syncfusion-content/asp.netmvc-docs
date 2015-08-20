@@ -13,7 +13,7 @@ This section explains you briefly on how to create a Barcode in your application
 
 ## Control Structure
 
-![Description: C:/Users/labuser/Desktop/barcode.png](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/Getting-Started_img1.png)
 
 
 ## Create your first Barcode in MVC

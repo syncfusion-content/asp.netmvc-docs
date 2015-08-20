@@ -7,17 +7,17 @@ control: PDF
 documentation: ug
 ---
 
-## Bookmarks
+# Bookmarks
 
 To ease navigation in large documents, PDF files can display a document outline in the viewer, allowing you to navigate from one page to another. The document outline consists of a tree like hierarchy of bookmark items. This tree serves as a visual table of content displaying the structure of the document. Each node in the outline can be opened or closed with the mouse. When a node is open, its immediate children are displayed. Each child can be opened or closed revealing further the parts of the hierarchy. When an item is clicked, the viewer displays the destination page associated with the item.
 
-### Adding bookmarks
+## Adding bookmarks
 
 Essential PDF allows you to add bookmarks to the newly created PDF document and also to the existing PDF documents. The Add () method of PdfBookmarkBase collection class adds the bookmark to the document.
 
 
 
-[C#]
+{% highlight c# %}
 
 //Creates a new document.
 
@@ -87,9 +87,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -159,7 +159,7 @@ document.Save("Output.pdf")
 
 document.Close()
 
-
+{% endhighlight %}
 
 We can add new bookmarks to an existing document at any location such as in the front, middle, or at the end of the bookmarks tree. When loading an existing document, the Essential PDF loads all bookmarks of the document. Each loaded bookmark is represented by the PdfLoadedBookmark class, inherited from the PdfBookmark class. You can access the root collection of document bookmarks by using the Bookmark property of the PdfLoadedDocument class. This collection is represented by the PdfBookmarkBase class.
 
@@ -167,7 +167,7 @@ The following code example illustrates how to insert new bookmarks in the existi
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -191,9 +191,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -217,7 +217,9 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### Modifying bookmarks
+{% endhighlight %}
+
+## Modifying bookmarks
 
 Essential PDF allows you to modify the bookmarks in the existing PDF document. The Bookmarks can be modified in the following ways.
 
@@ -226,7 +228,7 @@ Essential PDF allows you to modify the bookmarks in the existing PDF document. T
 * Add or insert new bookmarks as a child of another bookmark.
 * Assign the destination of the added bookmarks to a loaded page or a new page of the document.
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -254,9 +256,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -284,17 +286,19 @@ document.Save("Output.pdf")
 
 document.Close()
 
+{% endhighlight %}
+
 ### Adding Actions to Bookmark
 
 Essential PDF allows you to add action to the specific bookmarks. You can perform action by clicking the bookmarks at the run time. You can add predefined actions to the bookmarks using the following classes.
 
-_Table_ _25__: Class Table_
+_Table_ _25_: Class Table_
 
 <table>
 <tr>
-<td>
-Class Name</td><td>
-Description</td></tr>
+<th>
+Class Name</th><th>
+Description</th></tr>
 <tr>
 <td>
 PdfLaunchAction</td><td>
@@ -322,7 +326,7 @@ The following code sample illustrates you on how to add action to bookmarks.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -372,9 +376,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -424,7 +428,9 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### Removing a bookmarks 
+{% endhighlight %}
+
+## Removing a bookmarks 
 
 You can also remove bookmarks from the existing PDF document by using the following methods of the PdfBookmarkBase class.
 
@@ -433,7 +439,7 @@ You can also remove bookmarks from the existing PDF document by using the follow
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -459,9 +465,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -487,5 +493,5 @@ document.Save("Output.pdf")
 
 document.Close()
 
-
+{% endhighlight %}
 

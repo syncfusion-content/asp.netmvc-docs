@@ -53,13 +53,15 @@ The following steps explain you how to set the date format as "d MM, y".
 
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
+		@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
+		@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2.  The following screenshot displays the output for the above code.
 
@@ -103,11 +105,15 @@ The following steps explain you how to get the DayHeaderFormat for DatePicker wi
 1. In the CSHTML page, add the following code to render the DatePicker widget with DayHeaderFormat.
 
 
-{% highlight html %}
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
+   ~~~ js
+   
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
 
-@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
-{% endhighlight %}
+		@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
+
+   ~~~
+   {:.prettyprint }
+
 
 
 2.  The following screenshot displays the output for the above code.
@@ -127,12 +133,15 @@ The following steps explain you how to the header format to be displayed in the 
 1. In the CSHTML page, add the following code to render the DatePicker widget with header format.
 
 
-{% highlight html %}
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
+   ~~~ js
+   
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
 
-@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
+		@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 

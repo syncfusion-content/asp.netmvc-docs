@@ -15,11 +15,7 @@ The following steps guide you in uploading the file asynchronously.
 
 1.  In the VIEW page, add the below script to configure the UploadBox element.
 
-
-
-
-
-{% highlight html %}
+{% highlight js %}
 
 // In the view page, add the UploadBox element.
 

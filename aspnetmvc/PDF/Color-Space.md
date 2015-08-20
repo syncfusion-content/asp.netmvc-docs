@@ -7,13 +7,14 @@ control: PDF
 documentation: ug
 ---
 
-## Color Space
+# Color Space
 
 When preparing your document, you may require colors in different color spaces. You can control it in the following two ways.
 
 * Document level and
 * Graphics level
-### Document Level 
+
+## Document Level 
 
 
 The PdfDocument class has ColorSpace property that is used to choose color spaces for new pages. Color spaces can be classified into three color space families.
@@ -23,7 +24,8 @@ Essential PDF now supports the following color spaces in each family.
 * Device Color Spaces
 * CIE-based Color Spaces
 * ICC-based Color Spaces
-#### Device Color Space
+
+### Device Color Space
 
 
 Device color space simply describes the range of colors that a camera can see, a printer can print, or a monitor can display. These color spaces depend upon the device in which it is displayed. In PDF document Device, color spaces are used in following types.
@@ -32,11 +34,9 @@ Device color space simply describes the range of colors that a camera can see, a
 * DeviceRGB
 * DeviceCMYK
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Color-Space_images/Color-Space_img1.png)' | markdownify }}
-{:.image }
-_Note: This property does not convert the entire document into different color spaces. It will also not have any impact on pages that have been created before the property value had changed. It just chooses the color space for pages created after the alteration._
+> Note: This property does not convert the entire document into different color spaces. It will also not have any impact on pages that have been created before the property value had changed. It just chooses the color space for pages created after the alteration.
 
-#### CIE-based Color Spaces
+### CIE-based Color Spaces
 
 CIE-based color space in the PDF document is classified as, 
 
@@ -48,7 +48,7 @@ The code sample to draw a rectangle with CalGray brush is illustrated as follows
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -92,9 +92,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -138,13 +138,13 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
-
+{% endhighlight %}
 
 The code sample to draw a rectangle with CalRGB brush is illustrated as follows.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -192,9 +192,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -244,13 +244,13 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
-
+{% endhighlight %}
 
 The code sample to draw a rectangle with Lab brush is illustrated as follows.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -298,9 +298,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -348,7 +348,9 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
-#### ICC-based Color Spaces
+{% endhighlight %}
+
+### ICC-based Color Spaces
 
 ICC based color uses ICC color profiles to create color for brush/pen to render shape or text in the PDF document. Three type of ICC based color spaces are:
 
@@ -360,7 +362,7 @@ The code sample used to draw a rectangle with Indexed ICC colorspace is illustra
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -426,9 +428,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -496,12 +498,13 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
+{% endhighlight %}
 
 The code sample used for separation color space is illustrated as follows.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -559,9 +562,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -619,6 +622,8 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
+{% endhighlight %}
+
 ### Graphics Level
 
 The PdfGraphics class has its own ColorSpace property that chooses the color space for the objects drawn next. This property alternates the document settings and enables to change the color space as many times as you wish. Save and Restore methods saves and restores the color space, along with other graphics state parameters respectively.
@@ -627,7 +632,7 @@ The code sample to use colorspace in the graphics level is illustrated as follow
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -683,9 +688,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -741,25 +746,23 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
+{% endhighlight %}
 
+> Note: You can change the color space as many times as you wish, however, you cannot alternate the color space for objects that have saved before.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Color-Space_images/Color-Space_img2.png)' | markdownify }}
-{:.image }
-_Note: You can change the color space as many times as you wish, however, you cannot alternate the color space for objects that have saved before._
-
-Barcode
+#### Barcode
 
 Bar codes provide a simple and inexpensive method of encoding text information that can be easily read by any inexpensive electronic reader. A bar code consists of series of parallel, adjacent bars, and spaces. Predefined bar and space patterns or "symbologies" are used to encode small strings of character data into a printed symbol. 
 
 The basic structure of a bar code consists of a leading and trailing quiet zone, a start pattern, one or more data characters, optionally one or two check characters, and a stop pattern. Essential PDF supports 1D / linear barcodes and 2D barcode.
 
-### Code39
+## Code39
 
 Code 39 character set includes the digits 0-9, the letters A-Z (upper case only), and the following symbols: space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%). A special start/stop character is placed at the beginning and end of each barcode. The barcode can be of any length, although more than 25 characters begins to push the bounds. Code 39 is just about the only type of barcode in common use that does not require a checksum.
 
 
 
-[C#]
+{% highlight c# %}
 
 //Creates a new PDF Document.
 
@@ -787,9 +790,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE39.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 'Creates a new PDF Document.
 
@@ -815,9 +818,11 @@ barcode.Draw(page, New PointF(25, 70))
 
 'Saves the document.
 
-doc.Save("CODE39.pdf")   
+doc.Save("CODE39.pdf") 
 
-### Code39Extended
+{% endhighlight %}  
+
+## Code39Extended
 
 Code 39 Extended is an extended version of Code 39 that supports the ASCII character set. So with Code 39 Extended, you can also code the 26 lower letters (a-z) and the special characters you have on your keyboard. 
 
@@ -825,7 +830,7 @@ The following code example illustrates you on how to draw Code39Extended barcode
 
 
 
-[C#]
+{% highlight c# %}
 
 //Creates new PDF Document.
 
@@ -853,11 +858,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE39Ext.pdf");
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Creates new PDF Document.
 
@@ -885,7 +888,9 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE39Ext.pdf")
 
-### Code11
+{% endhighlight %}
+
+## Code11
 
 Code 11 is used primarily for labeling telecommunications equipment. The character set includes digits from 0 to 9, a dash (-), and a start or stop code. Each character is encoded with three bars and two spaces. Of these five elements, there can be two wide and three narrow elements, or one wide and four narrow elements. 
 
@@ -893,7 +898,7 @@ The following code example illustrates how to draw Code 11 Barcode.
 
 
 
-[C#]
+{% highlight c# %}
 
 //Creates new PDF document.
 
@@ -925,9 +930,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE11.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 'Creates new PDF document.
 
@@ -959,15 +964,15 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE11.pdf")
 
-### Codabar
+{% endhighlight %}
+
+## Codabar
 
 CodaBar is a variable length symbology that performs encoding of the following 20 characters: 
 
 0123456789-$:/. +ABCD. CodaBar uses the characters, A, B, C, and D, only as start and stop characters. Codabar is used in libraries, blood banks, the overnight package delivery industry, and a variety of other information processing applications. The following code example illustrates how to draw Codabar barcode.
 
-
-
-[C#]
+{% highlight c# %}
 
 //Draws Codabar barcode. 
 
@@ -995,11 +1000,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODABAR.pdf");
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Draws Codabar barcode. 
 
@@ -1027,7 +1030,9 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODABAR.pdf")
 
-### Code32
+{% endhighlight %}
+
+## Code32
 
 It is mainly used for coding pharmaceuticals, cosmetics, and dietetics. Code 32 is mainly used to encode pharmaceutical products in Italy and has the following structure: 
 
@@ -1039,7 +1044,7 @@ The value to be encoded (that is passed to Barcode Professional) must be 8 digit
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1075,9 +1080,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE32.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1113,7 +1118,9 @@ Dim page As PdfPage = doc.Pages.Add()
 
 doc.Save("CODE32.pdf")     
 
-### Code93
+{% endhighlight %}
+
+## Code93
 
 Code 93 was designed to complement and improve Code 39. It can represent the full ASCII character set by using combinations of 2 characters. Code 93 is a continuous, variable-length symbology and produces denser code. 
 
@@ -1123,7 +1130,7 @@ Code 93 was designed to complement and improve Code 39. It can represent the ful
 
 
 
-[C#]
+{% highlight c# %}
 
 //Draws Code93 barcode. 
 
@@ -1151,11 +1158,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE93.pdf");
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Draws Code93 barcode. 
 
@@ -1183,9 +1188,11 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE93.pdf")        
 
-### Code93Extended
+{% endhighlight %}
 
-[C#]
+## Code93Extended
+
+{% highlight c# %}
 
 //Draws Code93 Extended barcode. 
 
@@ -1217,9 +1224,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE93Ext.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1253,27 +1260,29 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE93Ext.pdf")
 
-### Code128
+{% endhighlight %}
+
+## Code128
 
 Code 128 is a variable length, high density, alphanumeric, linear bar code symbology, capable of encoding the full 128-character ASCII character set and extended character sets. This Symbology includes a checksum digit for verification, and the barcode can also be verified character-by-character for parity of each data byte. 
 
-Code 128 Code Sets 
+### Code 128 Code Sets 
 
 * Code Set A (or Chars Set A) includes all of the standard upper case U.S. alphanumeric keyboard characters and punctuation characters together with the control characters, (i.e. characters with ASCII values from 0 to 95 inclusive), and seven special characters. 
 * Code Set B (or Chars Set B) includes all of the standard upper case alphanumeric keyboard characters and punctuation characters together with the lower case alphabetic characters (i.e. characters with ASCII values from 32 to 127 inclusive), and seven special characters. 
 * Code Set C (or Chars Set C) includes the set of 100 digit pairs from 00 to 99 inclusive, as well as three special characters. This allows numeric data to be encoded as two data digits per symbol character, at effectively twice the density of standard data. 
 
-Code 128 Special characters 
+### Code 128 Special characters 
 
 The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have particular significance to the bar code reading device.
 
-### Code128A
+## Code128A
 
 Code Set A (or Characters Set A) includes all of the standard upper case U.S. alphanumeric keyboard characters and punctuation characters together with the control characters, (i.e. characters with ASCII values from 0 to 95 inclusive), and seven special characters. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1315,9 +1324,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE128A.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 'Draws Code128A barcode. 
 
@@ -1357,15 +1366,13 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE128A.pdf")
 
+{% endhighlight %}
+
 ### Code128B
 
 Code Set B (or Characters Set B) includes all of the standard upper case alphanumeric keyboard characters and punctuation characters together with the lower case alphabetic characters (i.e. characters with ASCII values from 32 to 127 inclusive), and seven special characters. 
 
-
-
-[C#]
-
-
+{% highlight c# %}
 
 //Draws Code128B barcode. 
 
@@ -1401,9 +1408,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE128B.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 'Draws Code128B barcode. 
 
@@ -1439,13 +1446,13 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE128B.pdf")   
 
-### Code128C
+{% endhighlight %}
+
+## Code128C
 
 Code Set C (or Characters Set C) includes the set of 100 digit pairs from 00 to 99, as well as three special characters. This allows numeric data to be encoded as two data digits per symbol character at effectively twice the density of standard data. 
 
-
-
-[C#]
+{% highlight c# %}
 
 //Draws Code128C barcode. 
 
@@ -1481,11 +1488,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("CODE128C.pdf");
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Draws Code128C barcode. 
 
@@ -1521,7 +1526,9 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("CODE128C.pdf")
 
-### Data Matrix
+{% endhighlight %}
+
+## Data Matrix
 
 DataMatrix barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming square or rectangular symbol. The data encoded in the barcode can either be number or alphanumeric. The PdfDataMatrixBarcode class available in Syncfusion.Pdf.Barcode namespace sets the suitable encoding type and size for the input data. However, the size, encoding type, and dimension of individual blocks can also be set using these properties.
 
@@ -1529,14 +1536,14 @@ Use case scenario
 
 The DataMatrix bar codes are widely used in printed media as labels and letters. It can easily be read by a bar code reader and also by mobile phones. 
 
-_Table_ _29__: Property Table_
+_Table_ _29_: Property Table
 
 <table>
 <tr>
-<td>
-Property </td><td>
-Description </td><td>
-Data Type </td></tr>
+<th>
+Property </th><th>
+Description </th><th>
+Data Type </th></tr>
 <tr>
 <td>
 Encoding </td><td>
@@ -1559,12 +1566,7 @@ Gets or sets the dimension of the blocks.</td><td>
 Float </td></tr>
 </table>
 
-
-
-
-[C#]
-
-
+{% highlight c# %}
 
 //Draws Data Matrix barcode.
 
@@ -1594,9 +1596,9 @@ barcode.Draw(page, new PointF(25, 70 ));
 
 doc.Save("DataMatrix.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1628,13 +1630,15 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("DataMatrix.pdf")     
 
-### QR Barcode
+{% endhighlight %}
+
+## QR Barcode
 
 QR Barcode is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that forms a square. The data encoded in the barcode can be numeric, alphanumeric, or JIS8 characters. The PdfQRBarcode class available in Syncfusion.Pdf.Barcode namespace sets the suitable version, error correction level and size for the input data. However, the version, error correction level and size of individual blocks can also be set using these properties.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1668,9 +1672,9 @@ barcode.Draw(page, new PointF(25, 70));
 
 doc.Save("QRBarcode.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1704,7 +1708,9 @@ barcode.Draw(page, New PointF(25, 70))
 
 doc.Save("QRBarcode.pdf")  
 
-### Action
+{% endhighlight %}
+
+## Action
 
 Essential PDF supports different actions triggered by different events and user interactions. There are lots of possible actions such as playing a particular sound or movie, launching an application or URI, and so on.
 
@@ -1719,38 +1725,39 @@ Essential PDF supports the following types of actions.
 * PdfSubmitAction that submits the data that is entered into the PDF form
 * PdfResetAction that resets the fields of the PDF form
 
-1.   Following are the actions for Document Object:
+1.  Following are the actions for Document Object:
 
-* AfterOpen action to be performed after the document is opened
-* AfterPrint action to be performed after the document is printed
-* AfterSave action to be performed after the document is saved
-* BeforeClose action to be performed before the document is closed
-* BeforePrint action to be performed before the document is printed
-* BeforeSave action to be performed before the document is saved
+	* AfterOpen action to be performed after the document is opened
+	* AfterPrint action to be performed after the document is printed
+	* AfterSave action to be performed after the document is saved
+	* BeforeClose action to be performed before the document is closed
+	* BeforePrint action to be performed before the document is printed
+	* BeforeSave action to be performed before the document is saved
 
- 2.   Following are the actions for Annotation Object:
+2.  Following are the actions for Annotation Object:
 
-* GotFocus action to be performed when the annotation gets focus
-* LostFocus action to be performed when the annotation loses focus
-* MouseEnter action to be performed when the cursor enters the active area of the annotation
-* MouseLeave action to be performed when the cursor leaves the active area of the annotation
-* MouseDown action to be performed when the mouse button is pressed inside the active area of the annotation
-* MouseUp action to be performed when the mouse button is released inside the active area of the annotation
+	* GotFocus action to be performed when the annotation gets focus
+	* LostFocus action to be performed when the annotation loses focus
+	* MouseEnter action to be performed when the cursor enters the active area of the annotation
+	* MouseLeave action to be performed when the cursor leaves the active area of the annotation
+	* MouseDown action to be performed when the mouse button is pressed inside the active area of the annotation
+	* MouseUp action to be performed when the mouse button is released inside the active area of the annotation
 
-3.   Following are the actions for Form Field Object:
+3.  Following are the actions for Form Field Object:
 
-* Calculate JavaScript action to be performed to recalculate the value of the field
-* Format JavaScript action to be performed before the field is formatted to display the value
-* Validate JavaScript action to be performed when the value of the field is changed
-* KeyPressed JavaScript action to be performed when the user types, key-stroke into a text field or combo box, or modifies the selection in a scrollable list box
-### Sound Action
+	* Calculate JavaScript action to be performed to recalculate the value of the field
+	* Format JavaScript action to be performed before the field is formatted to display the value
+	* Validate JavaScript action to be performed when the value of the field is changed
+	* KeyPressed JavaScript action to be performed when the user types, key-stroke into a text field or combo box, or modifies the selection in a scrollable list box
+
+## Sound Action
 
 
 Sound action plays a specified music file in the PDF document. Volume and repeat can be specified for the sound action.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1794,9 +1801,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1838,15 +1845,13 @@ document.Actions.AfterOpen = soundAction
 
 document.Save("Output.pdf")
 
-### JavaScript Action
+{% endhighlight %}
+
+## JavaScript Action
 
 A JavaScript action allows execution of JavaScript code embedded in the PDF document.
 
-
-
-[C#]
-
-
+{% highlight c# %}
 
 //Creates a new document with PDF/A standard.
 
@@ -1888,9 +1893,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1934,13 +1939,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### URI Action 
+{% endhighlight %}
+
+## URI Action 
 
 URI action allows you displaying a hypertext link in a web browser. Next property of an action is used to specify the queue of actions.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1992,11 +1999,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Creates a new document with PDF/A standard.
 
@@ -2046,13 +2051,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### GoTo Action 
+{% endhighlight %}
+
+## GoTo Action 
 
 GoTo action displays the specified page in the current document. The location can be specified for the destination page. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -2104,9 +2111,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -2160,13 +2167,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### Launch Action 
+{% endhighlight %}
+
+## Launch Action 
 
 Launch action allows execution of an external application or file.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -2210,9 +2219,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -2256,13 +2265,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### Named Action
+{% endhighlight %}
+
+## Named Action
 
 Named action allows execution of predefined PDF actions. The following predefined PDF actions are available: go to next page, go to prev page, go to first page, and go to last page. 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -2312,9 +2323,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -2362,13 +2373,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
-### Submit Action
+{% endhighlight %}
+
+## Submit Action
 
 Submit action allows submission of data that is entered into the PDF form.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -2432,9 +2445,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -2498,13 +2511,15 @@ document.Save("Output.pdf")
 
 document.Close()
 
+{% endhighlight %}
+
 ### Reset Action 
 
 Reset action allows resetting of all form fields in the PDF document.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -2566,9 +2581,9 @@ document.Save("Output.pdf");
 
 document.Close();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -2632,5 +2647,5 @@ document.Save("Output.pdf")
 
 document.Close()
 
-
+{% endhighlight %}
 

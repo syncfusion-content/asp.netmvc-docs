@@ -13,9 +13,7 @@ Template allows you to insert custom or ASP.NET MVC controls inside the toolbar 
 
 Set the list for DropDown control inside a list element and define this element as a Toolbar item. You can use all simple controls as a ToolBar item. For example to add RadioButton and DropDownList to Toolbar, use the following code example.
 
-
-
-[CSHTML] 
+{% highlight html %}
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -55,7 +53,7 @@ Set the list for DropDown control inside a list element and define this element 
 
 })
 
-
+{% endhighlight %}
 
 The following screenshot displays a Toolbar with embedded controls.
 

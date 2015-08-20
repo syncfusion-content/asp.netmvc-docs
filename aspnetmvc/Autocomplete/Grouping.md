@@ -78,7 +78,7 @@ The following steps explain you how to configure Grouping for an AutoComplete te
 		}
 
    ~~~
-{:.prettyprint }
+   {:.prettyprint }
 
 2. In the View page, define the AutoComplete control and enable AllowGrouping property.
 

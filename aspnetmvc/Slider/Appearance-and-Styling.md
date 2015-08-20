@@ -47,7 +47,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
  </head></td><td>
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight js %}
 // Add this code in your view page
     @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)    .ShowScale(true).SmallStep(5).LargeStep(20))
     @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")    .ShowScale(true).SmallStep(5).LargeStep(20))
@@ -57,7 +57,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
 
 Execute the above code example to render the following output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/sliderlay.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
 
@@ -69,85 +69,87 @@ The following steps explains you on how to configure the Slider with custom them
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-{% highlight html %}
+   ~~~ js
 
-/ / Add this code in your view page
+		// Add this code in your view page
 
-    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
+		@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
 
-    .Width("500").CssClass("purple"))
+		.Width("500").CssClass("purple"))
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Include the “CssClass” value before each style of the Slider widget and customize the styles as follows.
 
 
-
-
-{% highlight html %}
-
-
-
-.purple.e-slider.e-widget {
-
-  background-color: burlywood;
-
-  border-color: #bbbcbb;
-
-}
-
-.purple.e-tooltip {
-
-  background: none repeat scroll 0 0 violet;
-
-  /* Old browsers */
+   ~~~ js
 
 
 
-  border-color: #1b95cf;
+		.purple.e-slider.e-widget {
 
-  color: white;
+		  background-color: burlywood;
 
-}
+		  border-color: #bbbcbb;
 
-.purple.e-slider .e-handle.e-select {
+		}
 
-  background-color: purple;
+		.purple.e-tooltip {
 
-  border-color: purple;
+		  background: none repeat scroll 0 0 violet;
 
-}
-
-.purple.e-slider .e-handle.e-hover {
-
-  background-color: purple;
-
-  border-color: purple;
-
-}
-
-.purple.e-slider .e-handle.e-focus {
-
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-
-}
-
-.purple.e-slider .e-range {
-
-  background: none repeat scroll 0 0 violet;
-
-  /* Old browsers */
+		  /* Old browsers */
 
 
 
-}
+		  border-color: #1b95cf;
 
-.purple.e-scale .e-tick {
+		  color: white;
 
-  background-image: url(images/dot.png);
+		}
 
-}
-{% endhighlight %}
+		.purple.e-slider .e-handle.e-select {
+
+		  background-color: purple;
+
+		  border-color: purple;
+
+		}
+
+		.purple.e-slider .e-handle.e-hover {
+
+		  background-color: purple;
+
+		  border-color: purple;
+
+		}
+
+		.purple.e-slider .e-handle.e-focus {
+
+		  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+
+		}
+
+		.purple.e-slider .e-range {
+
+		  background: none repeat scroll 0 0 violet;
+
+		  /* Old browsers */
+
+
+
+		}
+
+		.purple.e-scale .e-tick {
+
+		  background-image: url(images/dot.png);
+
+		}
+
+		
+   ~~~
+   {:.prettyprint }
 
 Execute the above code example to render the following output.
 
@@ -163,15 +165,15 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Default Slider.
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").ShowTooltip(false))
 
 {% endhighlight %}
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slitooltip.PNG](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 
 
@@ -185,9 +187,9 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider”.
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").ShowRoundedCorner(true))
 

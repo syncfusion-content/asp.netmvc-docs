@@ -17,13 +17,15 @@ The following steps explains how to set the ButtonText for DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized ButtonText*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized ButtonText*@
 
-@Html.EJ().DatePicker("datepicker").ButtonText("Todaydate")
+		@Html.EJ().DatePicker("datepicker").ButtonText("Todaydate")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 
@@ -39,7 +41,7 @@ The following steps explain DisplayDefaultDate in DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with out default date.
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget without default date*@
 
@@ -55,7 +57,7 @@ The following steps explain you how to disable the DatePicker widget.
 
 1. In the CSHTML page, add the following code to disable the DatePicker widget.
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to disable DatePicker widget*@
 
@@ -71,7 +73,7 @@ The following steps explain you how to enable the “EnableStrictMode” for Dat
 1. In the CSHTML page, add the following code to render the DatePicker widget with EnableStrictMode.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized EnableStrictMode*@
 
@@ -109,7 +111,6 @@ String </td></tr>
 <tr>
 <td>
 Icon </td><td>
-{{'![](Behavior-Settings_images/Behavior-Settings_img2.jpeg)'|markdownify}}
 You can set the customized css with this property. {{     '_Note: You need to set the image as background url and its styles within this class_'| markdownify }}</td><td>
 Null </td><td>
 String</td></tr>
@@ -119,55 +120,60 @@ String</td></tr>
 The following steps explain you how to specify the fieldsmapping in DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with fields mapping.
-{% highlight html %}
+   
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized fields mapping*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized fields mapping*@
 
-@Html.EJ().DatePicker("datePicker").SpecialDates(p =>
+		@Html.EJ().DatePicker("datePicker").SpecialDates(p =>
 
-       {
+			   {
 
-           p.Add().Date("9/13/2014").Tooltip("America").Icon("flag");
+				   p.Add().Date("9/13/2014").Tooltip("America").Icon("flag");
 
-       })
+			   })
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. Add the following styles to specify the fields mapping in DatePicker widget.
 
-> Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
+   > Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
 
 
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-    .flag .e-image {
+			.flag .e-image {
 
-        background: url("../Content/images/flags.png") no-repeat scroll -50px -75px rgba(0, 0, 0, 0);
+				background: url("../Content/images/flags.png") no-repeat scroll -50px -75px rgba(0, 0, 0, 0);
 
-        float: left;
+				float: left;
 
-        height: 15px;
+				height: 15px;
 
-        margin-left: 5px;
+				margin-left: 5px;
 
-        margin-top: 1px;
+				margin-top: 1px;
 
-        width: 20px;
+				width: 20px;
 
-    }
+			}
 
-    .e-datepicker.e-calendar {
+			.e-datepicker.e-calendar {
 
-        width: 370px;
+				width: 370px;
 
-    }
+			}
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 3. The following screenshot displays the output for the above code.
 
@@ -183,13 +189,15 @@ The following steps explain you how to specify the StartDay of the week in DateP
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with StartDay (Tuesday)
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to specify the start day of the week in DatePicker widget*@
+		@*Add the following code example to the corresponding CSHTML page to specify the start day of the week in DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").StartDay(2)
+		@Html.EJ().DatePicker("datePicker").StartDay(2)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 
@@ -204,13 +212,15 @@ The following steps explain you how to specify the number of months to navigate 
 1. In the CSHTML page, add the following code to render the DatePicker widget with stepMonths.
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to specify the number of months to navigate at one click in DatePicker widget*@
+		@*Add the following code example to the corresponding CSHTML page to specify the number of months to navigate at one click in DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").StepMonths(2)
+		@Html.EJ().DatePicker("datePicker").StepMonths(2)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 ## Define value
 
@@ -221,12 +231,15 @@ The following steps explain you how to specify the selected value.
 1. In the CSHTML page, add the following code to render the DatePicker widget with selected value.
 
 
-{% highlight html %}
-@*Add the following code example to the corresponding CSHTML page to specify selected value in DatePicker widget*@
+   ~~~ js
+   
+		@*Add the following code example to the corresponding CSHTML page to specify selected value in DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").Value("5/8/2014")
+		@Html.EJ().DatePicker("datePicker").Value("5/8/2014")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2.  The following screenshot displays the output for the above code.
 
@@ -243,12 +256,15 @@ The following steps explain you how to specify the WatermarkText in DatePicker w
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with watermark text.
 
-{% highlight html %}
-@*Add the following code example to the corresponding CSHTML page to specify Watermark Text in DatePicker widget*@
+   ~~~ js
+   
+		@*Add the following code example to the corresponding CSHTML page to specify Watermark Text in DatePicker widget*@
 
-@Html.EJ().DatePicker("datePicker").WatermarkText("Enter Date")
+		@Html.EJ().DatePicker("datePicker").WatermarkText("Enter Date")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. The following screenshot displays the output for the above code.
 

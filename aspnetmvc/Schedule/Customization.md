@@ -18,7 +18,7 @@ This example explains you on how to add the customized appointment window using 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @section SampleHeading{<span class="sampleName"> Schedule / Default</span>}
 
@@ -963,7 +963,7 @@ You can customize the appearance of the Schedule control by setting the specific
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -1032,7 +1032,7 @@ businessEndHour
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -1095,7 +1095,7 @@ The following code example explains how to change the current date of the Schedu
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -1146,10 +1146,7 @@ The following code example explains how to change the dateFormat of the Schedule
 
 
 
-{% highlight html %}
-
-
-
+{% highlight js %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -1188,7 +1185,7 @@ The following screenshot displays the Schedule control with the dateFormat set a
 
 
 
-![C:/Users/karthigeyan/Desktop/a.png](Customization_images/Customization_img6.png)
+![](Customization_images/Customization_img6.png)
 
 
 
@@ -1202,7 +1199,7 @@ The following code example explains how to set the minimum and maximum date of t
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -1261,7 +1258,7 @@ The following screenshot displays the Schedule control with MinDate and MaxDate 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -1347,11 +1344,10 @@ You can set the timezone to the Schedule control as follows.
  break;
  }}$.views.helpers({ format: _getImages });
  </script>}
-
-{% highlight c# %}
-           // follow the code as same as declared in Read Only part</td></tr>
-
 {% endhighlight %}
+{% highlight c# %}
+           // follow the code as same as declared in Read Only part
+
 {% endhighlight %}
 
 
@@ -1390,7 +1386,7 @@ The following code example explains how to disable the current time indicator fr
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

@@ -33,7 +33,7 @@ The following is the list of the twelve themes supported by RTE.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 	@*Add the following code in your view page.*@
 
@@ -54,7 +54,7 @@ You can override the existing styles under the theme style sheet by using this p
 
 1. Add the following code in your CSHTML page.
 
-   ~~~ html
+   ~~~ js
 
 		@*Add the following code in your view page to initialize the RTE.*@
 

@@ -23,13 +23,7 @@ Summary is a key feature of Grid that is used to aggregate a particular column. 
 
 There are some default summary types available for basic summary formula. The following code example is for Default Summary Types.
 
-
-
-{% highlight html %}
-
-[MVC]
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
@@ -74,10 +68,6 @@ There are some default summary types available for basic summary formula. The fo
 {% endhighlight %}
 {% highlight c# %}
 
-[Controller]
-
-
-
 namespace SyncfusionMvcApplication3.Controllers
 
 {
@@ -108,19 +98,14 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/Summary_img1.png)
 
-
+_Figure : Summary_
 
 ## Custom Summary by String
 
 This property helps you to create custom summary formula for summary. The following code example is for custom summary using Essential JavaScript.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
   @(Html.EJ().Grid<SyncfusionMvcApplication3.Models.OrdersView>("Summary")
 
@@ -160,12 +145,8 @@ This property helps you to create custom summary formula for summary. The follow
 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
-
-
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -229,7 +210,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img2.png)
 
-
+_Figure : Custom Summary_
 
 ## Custom Summary by Function
 
@@ -237,17 +218,7 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
 
 
-{% highlight html %}
-
-[MVC]
-
-
-
-[razor]
-
-
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<EditableOrder>("Summary")
 
@@ -316,8 +287,6 @@ Custom Summary is used to create custom summary formula for summary. The followi
     )
 
 
-
-
 {% endhighlight  %}
 {% highlight js %}
 
@@ -347,11 +316,6 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
 {% endhighlight  %}
 {% highlight c# %}
-
-
-[Controller]
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -390,28 +354,18 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
-
 {% endhighlight  %}
 
 
 ![](Summary_images/Summary_img3.png)
 
-
+_Figure : Custom Summary by Function_
 
 ## Group Summary
 
 This property helps you to enable the group summary column in Grid. The following code example is for Group summary.
 
-{% highlight html %}
-
-
-
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
@@ -471,8 +425,9 @@ This property helps you to enable the group summary column in Grid. The followin
 
 
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -508,21 +463,14 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img4.png)
 
-
+_Figure : Group Summary_
 
 ## Caption Summary
 
 This property is used to create Caption Summary column in Grid. The following code example is for Caption Summary.
 
 
-
-
 {% highlight html %}
-[MVC]
-
-[razor]
-
-
 
 @(Html.EJ().Grid<EditableOrder>("Summary")
 
@@ -582,8 +530,9 @@ This property is used to create Caption Summary column in Grid. The following co
 
           )
 {% endhighlight  %}
+
 {% highlight c# %}
-[controller]
+
 
 namespace MVCSampleBrowser.Controllers
 
@@ -619,5 +568,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img5.png)
 
-
+_Figure : Caption Summary_
 

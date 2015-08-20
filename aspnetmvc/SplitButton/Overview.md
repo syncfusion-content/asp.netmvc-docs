@@ -3,7 +3,7 @@ layout: post
 title: Overview
 description: overview
 platform: ejmvc
-control: Split Button
+control: SplitButton
 documentation: ug
 ---
 

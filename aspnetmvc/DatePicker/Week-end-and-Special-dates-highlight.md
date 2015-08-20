@@ -22,54 +22,58 @@ The following steps explain you how to get the highlighted week end and special 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized highlighted week end and special dates highlight*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized highlighted week end and special dates highlight*@
 
-@Html.EJ().DatePicker("datePicker").SpecialDates(p =>
+		@Html.EJ().DatePicker("datePicker").SpecialDates(p =>
 
-    {
+			{
 
-        p.Add().Date("9/13/2014").Tooltip("America").Icon("flag");
+				p.Add().Date("9/13/2014").Tooltip("America").Icon("flag");
 
-    }).HighlightWeekend(true)
+			}).HighlightWeekend(true)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2. Add the following styles to get the special dates highlighted.
 
-_Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed._
+   > Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
 
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-    .flag .e-image {
+			.flag .e-image {
 
-        background: url("../Content/images/flags.png") no-repeat scroll -50px -75px rgba(0, 0, 0, 0);
+				background: url("../Content/images/flags.png") no-repeat scroll -50px -75px rgba(0, 0, 0, 0);
 
-        float: left;
+				float: left;
 
-        height: 15px;
+				height: 15px;
 
-        margin-left: 5px;
+				margin-left: 5px;
 
-        margin-top: 1px;
+				margin-top: 1px;
 
-        width: 20px;
+				width: 20px;
 
-    }
+			}
 
-    .e-datepicker.e-calendar {
+			.e-datepicker.e-calendar {
 
-        width: 370px;
+				width: 370px;
 
-    }
+			}
 
-</style>
+		</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 3. The following screenshot displays the output for the above code.
 

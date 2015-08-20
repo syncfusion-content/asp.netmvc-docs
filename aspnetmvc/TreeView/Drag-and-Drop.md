@@ -18,7 +18,7 @@ The following steps explain enabling the AllowDragAndDrop property for TreeView.
 1.	In the View page, add TreeView helper as shown below 
 
 
-{% highlight html %}
+{% highlight js %}
 
 \\ To configure TreeView in the CSHTML page
 
@@ -118,7 +118,7 @@ _Figure41: Drag And Drop TreeView_
 
 We can prevent the TreeNodes from dropping as child. If we specify the value as false for the AllowDropChild property means, then we can only reorder the Tree nodes, we cannot drop the nodes as child element. Refer the below code to disable the AllowDropChild property.
 
-{% highlight html %}
+{% highlight js %}
 
     @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -203,7 +203,7 @@ You can drag the root node and drop it into the same level of node that is a sib
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
    @Html.EJ().TreeView("treeview").Items(items =>

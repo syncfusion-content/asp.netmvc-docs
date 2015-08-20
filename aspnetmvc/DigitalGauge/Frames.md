@@ -3,7 +3,7 @@ layout: post
 title: Frames
 description: frames
 platform: ejmvc
-control: Digital Gauge
+control: DigitalGauge
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ documentation: ug
 
 Frames are space that enclose the Digital Gauge. The inner width of the Frame is the distance between the canvas element and the frame. The outer width is the distance from the frame. The code example to set frame’s innerWidth and outerWidth is as follow.
 
-{% highlight html %}
+{% highlight js %}
 
 @*For Digital Gauge rendering *@
 
@@ -39,12 +39,13 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Frames_images/Frames_img1.png)
 
+_Figure 27: Digital Gauge control with frame inner and outer width_
 
 ## Setting Background Image
 
 For a better appearance, you can set the backgroundimage for the Digital Gauge using the property backgroundImageUrl. 
 
-{% highlight html %}
+{% highlight js %}
 
 @*For Digital Gauge rendering *@
 
@@ -73,3 +74,5 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 
 ![](Frames_images/Frames_img2.png)
+
+_Figure 28: Digital Gauge control with frame background image_

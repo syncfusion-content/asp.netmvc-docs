@@ -14,7 +14,7 @@ Editing is a key feature in the DataManager and it provides support to add a new
 ## Batch Edit
 
 Batch Editing is a unique feature, where requests to add, remove and change are handled altogether at a time rather than passing the request separately for each operation.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 
@@ -43,7 +43,7 @@ Batch Editing is a unique feature, where requests to add, remove and change are 
 {% endhighlight  %}
 
 ## Employee ID
-{% highlight html %}
+{% highlight js %}
 <input id="EmployeeID" class="e-ejinputtext" type="text" value="" />
 
 First Name
@@ -136,7 +136,7 @@ Result of the above code example is illustrated as follows.
 
 The insert method of the DataManager is used to add a new record to the table. The JSON data is passed as a parameter to the insert method that is inserted to the data source of the DataManager.
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Insert").ClientSideEvents(e => { e.Click("onClick"); })
@@ -193,7 +193,7 @@ Result of the above code example is illustrated as follows.
 ## Update
 
 The update method is used to update the modified changes made to a record in the data source of the DataManager.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })
@@ -251,7 +251,7 @@ Result of the above code example is illustrated as follows.
 ## Remove
 
 The remove method is used to delete a record from the data source of the DataManager.
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })

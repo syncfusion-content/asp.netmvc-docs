@@ -240,60 +240,61 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 1. Define CSS class for customizing the AutoComplete control.
 
 
-{% highlight css %}
+   ~~~ css
 
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-        /* Customize the PopUp panel */
+				/* Customize the PopUp panel */
 
-        .customCss
+				.customCss
 
-        {
+				{
 
-            border-color:Purple;
+					border-color:Purple;
 
-            background-color: #E0E0E0;
+					background-color: #E0E0E0;
 
-        }
+				}
 
-        /* Customize the AutoComplete input textbox */
+				/* Customize the AutoComplete input textbox */
 
-       .customCss .e-autocomplete
+			   .customCss .e-autocomplete
 
-       {
+			   {
 
-          background-color: #FFFFCC;
+				  background-color: #FFFFCC;
 
-          font-weight:bold;
+				  font-weight:bold;
 
-          font-family: sans-serif;
+				  font-family: sans-serif;
 
-       }
+			   }
 
-    </style>
+			</style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. In the View page, define the AutoComplete control and assign the class name to CssClass property.
 
 
-{% highlight html %}
+   ~~~ html
+
+		@*Refer to the DataSource defined in Local Databinding Step 1 *@
+
+		@Html.EJ().Autocomplete("autocomplete")
+
+			.Datasource((IEnumerable<CarsList>)ViewBag.datasource)
+
+			.AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+
+			.Width("250px").CssClass("customCss")
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
 
-@Html.EJ().Autocomplete("autocomplete")
-
-    .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
-
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
-
-    .Width("250px").CssClass("customCss")
-
-
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 

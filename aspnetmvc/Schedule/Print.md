@@ -26,10 +26,11 @@ You can print the Schedule control by using print() method. Use the following co
 var obj = $("#Schedule1").data("ejSchedule");
 // Public method to print the scheduleobj.print();});});
 </script>
+{% endhighlight %}
 {% highlight c# %}     
       // follow the code as same as declared in Read Only part</td></tr>
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
@@ -64,7 +65,7 @@ cms.Enable(true)
 // To Add menu items.MenuItems(item=>
 item.Appointment(ViewBag.app)))
 // Add the Appointment setting collection here)
-
+{% endhighlight %}
 {% highlight c# %}
 public ActionResult Print()
 {
@@ -79,7 +80,7 @@ public ActionResult Print()
 	return View();
 }
 {% endhighlight %}
-{% endhighlight %}
+
 * Right click on the appointment and select print appointment in the context menu as follows.
 
 

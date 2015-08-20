@@ -13,487 +13,439 @@ documentation: ug
 
 This section explains you on how to create the TreeGrid control in your application with hierarchical data source and enable the sorting and editing in TreeGrid control. The following screenshot illustrates a TreeGrid. 
 
-
-
 ![](Getting-Started_images/Getting-Started_img1.png)
-
-
-
 
 
 1. Create Syncfusion ASP.NET MVC Application. You can refer the [MVC Getting Started documentation ](http://help.syncfusion.com/ug/js/default.htm)to create new project and add necessary DLL’s and script files.
 
 2. Add a TreeGrid Control in index.cshtml page with an empty datasource like as follows.
 
+   ~~~ js
+
+	   @(Html.EJ().TreeGrid("TreeGridContainer")   
+
+	   .ChildMapping("Children")                     
+
+	   .TreeColumnIndex(1)       
+
+	   .Columns(co=>
+
+	   {
+
+	   co.Field("TaskId").headerText("Task Id").Width(45).Add();
+
+	   co.Field("TaskName").headerText("Task Name").Add();
+
+	   co.Field("StartDate").headerText("Start Date").Add();
+
+	   co.Field("EndDate").headerText("End Date").Add();
+
+	   co.Field("Duration").headerText("Duration").Add();
+
+	   co.Field("Progress").headerText("Progress").Add();
+
+	   })
+
+	   )
 
 
-{% highlight html %}
-
-[CSHTML]
-
-
-
-       @(Html.EJ().TreeGrid("TreeGridContainer")   
-
-       .ChildMapping("Children")                     
-
-       .TreeColumnIndex(1)       
-
-       .Columns(co=>
-
-       {
-
-           co.Field("TaskId").headerText("Task Id").Width(45).Add();
-
-           co.Field("TaskName").headerText("Task Name").Add();
-
-           co.Field("StartDate").headerText("Start Date").Add();
-
-           co.Field("EndDate").headerText("End Date").Add();
-
-           co.Field("Duration").headerText("Duration").Add();
-
-           co.Field("Progress").headerText("Progress").Add();
-
-           })
-
-       )
-
-
-
-
-
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
-
-
 3. Create data source for TreeGrid control
 
+   ~~~ cs
 
+		public ActionResult TreeGridDefault()
 
-{% highlight c# %}
+		{
 
-[CONTROLLER CS]
+			var data=this.GetDefaultDataSource();
 
+			ViewBag.datasource = data;
 
+			return View();
 
-       public ActionResult TreeGridDefault()
+		}
 
-        {
 
-            var data=this.GetDefaultDataSource();
 
-            ViewBag.datasource = data;
+		private List<BusinessObject> GetDefaultDataSource()
 
-            return View();
+		{
 
-        }
+			List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
 
 
 
-        private List<BusinessObject> GetDefaultDataSource()
+			BusinessObject Record1 = null;
 
-        {
 
-            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
 
+			Record1 = new BusinessObject()
 
+			{
 
-            BusinessObject Record1 = null;
+				TaskId = 1,
 
+				TaskName = "Planning",
 
+				StartDate = "02/03/2014",
 
-            Record1 = new BusinessObject()
+				EndDate = "02/07/2014",
 
-            {
+				Progress = 100,
 
-                TaskId = 1,
+				Duration = 5,
 
-                TaskName = "Planning",
+				Children=new List<BusinessObject>(),
 
-                StartDate = "02/03/2014",
+			};
 
-                EndDate = "02/07/2014",
 
-                Progress = 100,
 
-                Duration = 5,
+			BusinessObject Child1=new BusinessObject()
 
-                Children=new List<BusinessObject>(),
+			{
 
-            };
+				TaskId = 2, 
 
+				TaskName =  "Plan timeline", 
 
+				StartDate = "02/03/2014", 
 
-            BusinessObject Child1=new BusinessObject()
+				EndDate = "02/07/2014",  
 
-            {
+				Duration = 5, 
 
-                TaskId = 2, 
+				Progress = 100 
 
-                TaskName =  "Plan timeline", 
+			};
 
-                StartDate = "02/03/2014", 
 
-                EndDate = "02/07/2014",  
 
-                Duration = 5, 
+			BusinessObject Child2 = new BusinessObject()
 
-                Progress = 100 
+			{
 
-            };
+				TaskId = 3,
 
+				TaskName = "Plan budget",
 
+				StartDate = "02/03/2014",
 
-            BusinessObject Child2 = new BusinessObject()
+				EndDate = "02/07/2014",
 
-            {
+				Duration = 5,
 
-                TaskId = 3,
+				Progress = 100
 
-                TaskName = "Plan budget",
+			};
 
-                StartDate = "02/03/2014",
 
-                EndDate = "02/07/2014",
 
-                Duration = 5,
+		   BusinessObject Child3 = new BusinessObject()
 
-                Progress = 100
+			{
 
-            };
+				TaskId = 4,
 
+				TaskName = "Allocate resources",
 
+				StartDate = "02/03/2014",
 
-           BusinessObject Child3 = new BusinessObject()
+				EndDate = "02/07/2014",
 
-            {
+				Duration = 5,
 
-                TaskId = 4,
+				Progress = 100
 
-                TaskName = "Allocate resources",
+			};
 
-                StartDate = "02/03/2014",
 
-                EndDate = "02/07/2014",
 
-                Duration = 5,
+			BusinessObject Child4 = new BusinessObject()
 
-                Progress = 100
+			{
 
-            };
+				TaskId = 5,
 
+				TaskName = "Planning complete",
 
+				StartDate = "02/07/2014",
 
-            BusinessObject Child4 = new BusinessObject()
+				EndDate = "02/07/2014",
 
-            {
+				Duration = 0,
 
-                TaskId = 5,
+				Progress = 0
 
-                TaskName = "Planning complete",
+			};
 
-                StartDate = "02/07/2014",
 
-                EndDate = "02/07/2014",
 
-                Duration = 0,
+			Record1.Children.Add(Child1);
 
-                Progress = 0
+			Record1.Children.Add(Child2);
 
-            };
+			Record1.Children.Add(Child3);
 
+			Record1.Children.Add(Child4);
 
 
-            Record1.Children.Add(Child1);
 
-            Record1.Children.Add(Child2);
+			BusinessObject Record2 = new BusinessObject()
 
-            Record1.Children.Add(Child3);
+			{
 
-            Record1.Children.Add(Child4);
+				TaskId = 6,
 
+				TaskName = "Design",
 
+				StartDate = "02/10/2014",
 
-            BusinessObject Record2 = new BusinessObject()
+				EndDate = "02/14/2014",
 
-            {
+				Progress = 86,
 
-                TaskId = 6,
+				Duration = 3,
 
-                TaskName = "Design",
+				Children = new List<BusinessObject>(),
 
-                StartDate = "02/10/2014",
+			};
 
-                EndDate = "02/14/2014",
 
-                Progress = 86,
 
-                Duration = 3,
+			BusinessObject Child5 = new BusinessObject()
 
-                Children = new List<BusinessObject>(),
+			{
 
-            };
+				TaskId = 7,
 
+				TaskName = "Software Specification",
 
+				StartDate = "02/10/2014",
 
-            BusinessObject Child5 = new BusinessObject()
+				EndDate = "02/12/2014",
 
-            {
+				Duration = 3,
 
-                TaskId = 7,
+				Progress = 60
 
-                TaskName = "Software Specification",
+			};
 
-                StartDate = "02/10/2014",
 
-                EndDate = "02/12/2014",
 
-                Duration = 3,
+			BusinessObject Child6 = new BusinessObject()
 
-                Progress = 60
+			{
 
-            };
+				TaskId = 8,
 
+				TaskName = "Develop prototype",
 
+				StartDate = "02/10/2014",
 
-            BusinessObject Child6 = new BusinessObject()
+				EndDate = "02/12/2014",
 
-            {
+				Duration = 3,
 
-                TaskId = 8,
+				Progress = 100
 
-                TaskName = "Develop prototype",
+			};
 
-                StartDate = "02/10/2014",
 
-                EndDate = "02/12/2014",
 
-                Duration = 3,
 
-                Progress = 100
 
-            };
+			BusinessObject Child7 = new BusinessObject()
 
+			{
 
+				TaskId = 9,
 
+				TaskName = "Get approval from customer",
 
+				StartDate = "02/13/2014",
 
-            BusinessObject Child7 = new BusinessObject()
+				EndDate = "02/14/2014",
 
-            {
+				Duration = 2,
 
-                TaskId = 9,
+				Progress = 100
 
-                TaskName = "Get approval from customer",
+			};
 
-                StartDate = "02/13/2014",
 
-                EndDate = "02/14/2014",
 
-                Duration = 2,
+			BusinessObject Child8 = new BusinessObject()
 
-                Progress = 100
+			{
 
-            };
+				TaskId = 10,
 
+				TaskName = "Design complete",
 
+				StartDate = "02/14/2014",
 
-            BusinessObject Child8 = new BusinessObject()
+				EndDate = "02/14/2014",
 
-            {
+				Duration = 0,
 
-                TaskId = 10,
+				Progress = 0
 
-                TaskName = "Design complete",
+			};
 
-                StartDate = "02/14/2014",
 
-                EndDate = "02/14/2014",
 
-                Duration = 0,
+			Record2.Children.Add(Child5);
 
-                Progress = 0
+			Record2.Children.Add(Child6);
 
-            };
+			Record2.Children.Add(Child7);
 
+			Record2.Children.Add(Child8); 
 
 
-            Record2.Children.Add(Child5);
 
-            Record2.Children.Add(Child6);
+			BusinessObjectCollection.Add(Record1);
 
-            Record2.Children.Add(Child7);
+			BusinessObjectCollection.Add(Record2);
 
-            Record2.Children.Add(Child8); 
 
 
+			return BusinessObjectCollection;
 
-            BusinessObjectCollection.Add(Record1);
+		}
 
-            BusinessObjectCollection.Add(Record2);
+		public class BusinessObject
 
+		{
 
+			public int TaskId
 
-            return BusinessObjectCollection;
+			{
 
-        }
+			get;
 
+			set;
 
+			}
 
 
 
-        public class BusinessObject
+			public string TaskName
 
-        {
+			{
 
-            public int TaskId
+			get;
 
-            {
+			set;
 
-                get;
+			}
 
-                set;
 
-            }
 
+			public string StartDate
 
+			{
 
-            public string TaskName
+			get;
 
-            {
+			set;
 
-                get;
+			}
 
-                set;
 
-            }
 
+			public string EndDate
 
+			{
 
-            public string StartDate
+			get;
 
-            {
+			set;
 
-                get;
+			}
 
-                set;
 
-            }
 
+			public int Duration
 
+			{
 
-            public string EndDate
+			get;
 
-            {
+			set;
 
-                get;
+			}
 
-                set;
+			public int Progress
 
-            }
+			{
 
+			get;
 
+			set;
 
-            public int Duration
+			}
 
-            {
+			public List<BusinessObject> Children
 
-                get;
+			{
 
-                set;
+			get;
 
-            }
+			set;
 
+			}
 
+		}
 
-            public int Progress
 
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-            public List<BusinessObject> Children
-
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-        }
-
-
-
-
-
-{% endhighlight %}
-
+   ~~~
+   {:.prettyprint }
 
 
 4. Initialize the TreeGrid with data source.
 
+   ~~~ js
 
+		@(Html.EJ().TreeGrid("TreeGridContainer")                                   
 
-{% highlight html %}
+		       .ChildMapping("Children")                     
 
-[CSHTML]
+		       .TreeColumnIndex(1)
 
+		       .Columns(co=>
 
+			   {
 
-@(Html.EJ().TreeGrid("TreeGridContainer")                                   
+			       co.Field("TaskId").headerText("Task Id").Width(45).Add();
 
-       .ChildMapping("Children")                     
+			       co.Field("TaskName").headerText("Task Name").Add();
 
-       .TreeColumnIndex(1)
+			       co.Field("StartDate").headerText("Start Date").Add();
 
-       .Columns(co=>
+			       co.Field("EndDate").headerText("End Date").Add();
 
-           {
+			       co.Field("Duration").headerText("Duration").Add();
 
-               co.Field("TaskId").headerText("Task Id").Width(45).Add();
+			       co.Field("Progress").headerText("Progress").Add();
 
-               co.Field("TaskName").headerText("Task Name").Add();
+			   }
 
-               co.Field("StartDate").headerText("Start Date").Add();
+		       )
 
-               co.Field("EndDate").headerText("End Date").Add();
+		       .Datasource(ViewBag.datasource)
 
-               co.Field("Duration").headerText("Duration").Add();
+		       )
 
-               co.Field("Progress").headerText("Progress").Add();
-
-           }
-
-       )
-
-       .Datasource(ViewBag.datasource)
-
-       )
-
-
-
-
-
-{% endhighlight %}
-
-
+   ~~~
+   {:.prettyprint }
 
 A TreeGrid is created as illustrated in the following screenshot
 
@@ -511,11 +463,7 @@ The TreeGrid control contains sorting functionality to arrange the data in ascen
 
 You can enable the multicolumn sorting in TreeGrid by setting AllowMultiSorting as “True” .You can sort multiple columns in TreeGrid, by selecting the desired column header when holding the CTRL key.
 
-{% highlight html %}
-
-[CSHTML]
-
-
+{% highlight js %}
 
      @(Html.EJ().TreeGrid("TreeGridContainer")    
 
@@ -529,31 +477,17 @@ You can enable the multicolumn sorting in TreeGrid by setting AllowMultiSorting 
 
        )
 
-
-
-
-
 {% endhighlight %}
 
 
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
-
-
-
 ## Enable Editing
 
 You can enable Editing in TreeGrid using EditSettings API as illustrated in the following code example.
 
-
-
-{% highlight html %}
-
-[CSHTML]
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
 
@@ -577,10 +511,6 @@ You can enable Editing in TreeGrid using EditSettings API as illustrated in the 
 
        )
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -598,11 +528,7 @@ You can set the editor type for particular column as illustrated in the followin
 
 
 
-{% highlight html %}
-
-[CSHTML]
-
-
+{% highlight js %}
 
   @(Html.EJ().TreeGrid("TreeGridContainer")
 
@@ -635,10 +561,6 @@ You can set the editor type for particular column as illustrated in the followin
        //... 
 
         )
-
-
-
-
 
 {% endhighlight %}
 

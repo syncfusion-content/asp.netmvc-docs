@@ -19,7 +19,7 @@ You can customize the week header format and day header format in the Schedule p
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -55,6 +55,7 @@ The following screenshot shows the customized format schedule header in Gantt co
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
+_Figure 52: Schedule Header Customization_
 
 
 ## Taskbar Customization
@@ -65,7 +66,7 @@ You can customize the Taskbar based on the task information in Gantt control to 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -141,7 +142,7 @@ The following screenshot shows the customized taskbar in Gantt control.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
+_Figure 53: Customized taskbar_
 
 ## Themes
 
@@ -207,5 +208,5 @@ The following screenshot shows the Gantt control with Gradient-lime theme.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-
+_Figure 54: Gantt with Gradient lime theme_
 

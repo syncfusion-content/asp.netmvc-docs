@@ -14,38 +14,56 @@ When you press button continuously, click event is raised at each specific time 
 The following steps explains you the details about rendering the Repeat Button.
 
 1. In the CSHTML page, configure the Button widget as follows.
+ 
+   ~~~ html
 
-{% highlight html %}
+		@*Add the code in CSHTML page to configure and initialize the control*@
+		  @* Enable the button in repeat action mode and specifies time interval.*@
+		  <div class="control"> 
+		  <div class="align">  
+			@Html.EJ().Button("repeatButton").Text("click").ShowRoundedCorner(true).Size(ButtonSize.Mini).RepeatButton(true).TimeInterval("200").ClientSideEvents(e => e.Click("btnClick"))  
+		  </div>
+		  <div class="align">    
+		  <div><b>Event Trace</b></div> 
+		  <div class="eventTrace"></div>  
+		  </div> 
+		  </div>
 
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ javascript
+   
+		//Add this script section that is used to handle the click event
+		<script type="text/javascript"> 
+		function btnClick(e) { 
+		$(".eventTrace").html("click event has been triggered..</br>" + $(".eventTrace").html());
+        }   
+		</script>
+		</table>
 
-[CSHTML]@*Add the code in CSHTML page to configure and initialize the control*@  @* Enable the button in repeat action mode and specifies time interval.*@    <div class="control">        <div class="align">            @Html.EJ().Button("repeatButton").Text("click").ShowRoundedCorner(true).Size(ButtonSize.Mini).RepeatButton(true).TimeInterval("200").ClientSideEvents(e => e.Click("btnClick"))        </div>        <div class="align">            <div><b>Event Trace</b></div>            <div class="eventTrace"></div>        </div>    </div>
-{% endhighlight  %}
-{% highlight js %}
-[JavaScript]//Add this script section that is used to handle the click event    <script type="text/javascript">        function btnClick(e) {            $(".eventTrace").html("click event has been triggered..</br>" + $(".eventTrace").html());        }    </script>
-</table>
+   ~~~
+   {:.prettyprint }
 
-
-{% endhighlight  %}
 
 2. Configure the CSS styles to apply on button
 
-{% highlight css %}
+   ~~~ css
 
-[CSS]
+		<style>
 
-<style>
+				.align {
 
-        .align {
+					display: table-cell;
 
-            display: table-cell;
+					padding-left: 50px;
 
-            padding-left: 50px;
+				}
 
-        }
+		</style>
 
-    </style>
-
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
 
 Execute the above code to render the following output.
 

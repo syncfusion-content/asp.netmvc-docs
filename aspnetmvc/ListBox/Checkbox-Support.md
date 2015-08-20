@@ -33,9 +33,6 @@ In an ASPX page, add an element to configure ListBox.
 </div>
 
 
-
-
-
 {% endhighlight %}
 
 
@@ -112,7 +109,7 @@ Output of the above steps.
 
 
 
- ![C:/Users/Rajaveni/Desktop/docs/UG images/checkbox.PNG](Checkbox-Support_images/Checkbox-Support_img1.png)
+ ![](Checkbox-Support_images/Checkbox-Support_img1.png)
 
 
 
@@ -134,10 +131,6 @@ In an ASPX page, add an element to configure ListBox.
 <ej:listbox id="listboxsample" DataTextField="Name" ShowCheckbox="true" CheckAll="true" runat="server" Width="240"></ej:listbox>
 
 </div>
-
-
-
-
 
 {% endhighlight %}
 
@@ -202,12 +195,6 @@ protected void Page_Load(object sender, EventArgs e)
             public string Name;
 
         }
-
-
-
-
-
-
 
 {% endhighlight %}
 

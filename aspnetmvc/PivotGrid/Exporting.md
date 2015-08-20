@@ -16,7 +16,7 @@ The PivotGrid control can be exported to the following formats:
 * PDF
 * CSV
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1")Url(Url.Content("~/wcf/OLAPService.svc"))
 
@@ -60,21 +60,21 @@ public void Export(System.IO.Stream stream)
 
 {% endhighlight %}
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridExcelMVC.png](Exporting_images/Exporting_img1.png)
+![](Exporting_images/Exporting_img1.png)
 
 
 
 
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridWordMVC.png](Exporting_images/Exporting_img2.png)
+![](Exporting_images/Exporting_img2.png)
 
 
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridPdfMVC.png](Exporting_images/Exporting_img3.png)
+![](Exporting_images/Exporting_img3.png)
 
 
 
-![C:/Users/Narendhran Muthuvel/Desktop/Exported Screenshots/PivotGridCSVJS.png](Exporting_images/Exporting_img4.png)
+![](Exporting_images/Exporting_img4.png)
 
 
 

@@ -13,9 +13,9 @@ RTL control supports right-to-left functionality and features for languages th
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
+     
 	 
 		@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
@@ -34,7 +34,7 @@ RTL control supports right-to-left functionality and features for languages th
 	The following screenshot displays the output for the above code.
 
 
-_Figure_ _12_: _Showcase of DateTimePicker with Right to Left appearance_
+_Figure_ _12_: Showcase of DateTimePicker with Right to Left appearance
 
 
 

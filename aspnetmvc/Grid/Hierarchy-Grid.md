@@ -12,10 +12,7 @@ documentation: ug
 Hierarchy Grid feature allows you to add the Grid control inside the Grid row. When you want to view the child Grid, you can expand the Grid. Bind the data to child Grid by assign the foreign key field to querystring property.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<EmployeeView>("HierarchyGrid")
 
@@ -95,8 +92,9 @@ Hierarchy Grid feature allows you to add the Grid control inside the Grid row. W
 
     )
 {% endhighlight  %}
+
 {% highlight c# %}
-[Controller]
+
 
 
 
@@ -140,5 +138,6 @@ namespace MVCSampleBrowser.Controllers
 
 ![](Hierarchy-Grid_images/Hierarchy-Grid_img1.png)
 
+_Figure : Hierarchy Grid_
 
 

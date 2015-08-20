@@ -3,11 +3,11 @@ layout: post
 title: Image-Customization
 description: image customization
 platform: ejmvc
-control: Radial Menu
+control: RadialMenu
 documentation: ug
 ---
 
-## Image Customization
+# Image Customization
 
 You can simply customize the Radial Menu’s center and back images by using the Imageclass and Backimageclass properties. By using this imageclass property, you can customize the Radial Menu center image. 
 
@@ -17,7 +17,7 @@ You can add the page content with text-area by referring to this section.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -117,7 +117,7 @@ You can add the page content with text-area by referring to this section.
 
 Add the following common style codes for both JS and MVC samples.
 
-{% highlight html %}
+{% highlight css %}
 
     <style type="text/css" class="cssStyles">
 

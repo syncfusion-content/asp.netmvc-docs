@@ -21,15 +21,15 @@ The following steps explains you on how to disable the animation effect in Slide
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").EnableAnimation(false))
 
 {% endhighlight %}
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slianimation.PNG](Animation_images/Animation_img1.png)
+![](Animation_images/Animation_img1.png)
 
 
 
@@ -43,9 +43,9 @@ The following steps explains you on how to customize the animation speed.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-/ / Add this code in your view page
+// Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").AnimationSpeed(600))
 

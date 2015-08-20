@@ -20,12 +20,7 @@ You can populate the Grid with data obtained by using NHibernate. The UrlAdaptor
 The Grid initialization is as follows.
 
 
-{% highlight html %}
-
-
-[MVC]
-
-[razor]
+{% highlight js %}
 
 @(Html.EJ().Grid<EmployeeMap>("Grid")
 
@@ -81,8 +76,6 @@ The Grid initialization is as follows.
 
 {% endhighlight %}
 {% highlight c# %}
-
-[controller]
 
 namespace UsingNHibernate.Controllers
 

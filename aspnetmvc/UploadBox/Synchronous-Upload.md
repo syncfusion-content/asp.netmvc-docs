@@ -20,7 +20,7 @@ The following steps guide you in uploading the file synchronously.
 1. In the VIEW page, create a form with action and post method and then add the script into the form to configure the UploadBox element.
 
 
-{% highlight html %}
+{% highlight js %}
 
 // In the CSHTML page, create a form with action and post method and then add the UploadBox element.
 

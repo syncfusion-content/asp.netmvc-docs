@@ -14,9 +14,7 @@ To customize the ListView dimensions, Width and Height properties are used.
 Refer to the following code examples.
 
 
-{% highlight html %}
-
-
+{% highlight js %}
 
 @Html.EJMobile().ListView("lb").Height(600).Width(300).Items(items =>
 

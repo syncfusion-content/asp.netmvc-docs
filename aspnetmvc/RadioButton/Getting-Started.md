@@ -422,14 +422,6 @@ Add the following code example in the index page.
 
                 <br />
 
-
-
-
-
-
-
-
-
                 <center>
 
                     <table>

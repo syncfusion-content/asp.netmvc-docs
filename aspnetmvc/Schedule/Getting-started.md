@@ -126,7 +126,7 @@ The following screenshot display a Schedule control with the appointments in a n
 
 
 
-{% highlight c# %}
+{% highlight js %}
 
 
 
@@ -265,7 +265,7 @@ For example: $system drive: \Program Files\ Syncfusion\EssentialStudio\12.1.0.43
 
 
 
-{% highlight c# %}
+{% highlight js %}
 
 
 
@@ -402,7 +402,7 @@ _Figure_ _22_: Schedule with template appointments in month view
 * The default height of an appointment is always suitable for the text. In order to display an image and text in the appointment, you can change the height of the appointments in a “month” view, through css styles manually as shown in the following code example. You can set the appointment height to auto to display the images within it.
 
 
-{% highlight html %}
+{% highlight css %}
 
 <style>
 
@@ -414,7 +414,9 @@ height: auto !important;
 
 </style>
 
-{% highlight c# %}
+{% endhighlight %}
+
+{% highlight js %}
 
 
 
@@ -533,7 +535,7 @@ break;
 </script>
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 After you set the height for appointments in “month” view, the Schedule control is rendered as follows.
 
@@ -555,13 +557,7 @@ After you set the height for appointments in “month” view, the Schedule cont
 * You can quickly create an appointment by clicking on the exact schedule cell with appropriate time slot and then filling only the subject of that appointment in a quick appointment pop up. 
 
 
-
-
-
 Important: While adding new appointments to the schedule control either by using local or remote data, the new appointment data is saved automatically to the appointment collection.
-
-
-
 
 
 The following screenshot displays an appointment window pop-up that appears when you double click on the schedule cells.
@@ -574,9 +570,6 @@ The following screenshot illustrates a quick appointment pop-up window.
 
 
 ![](Getting-started_images/Getting-started_img8.png)
-
-
-
 
 
 Important: In case you need to manipulate with newly created or edited appointments, you can use the events available within the schedule control.

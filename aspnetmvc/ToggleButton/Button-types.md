@@ -3,7 +3,7 @@ layout: post
 title: Button-types
 description: button types
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 
@@ -90,7 +90,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 Execute the above code to render the following output.
 
-![C:/Users/labuser/AppData/Local/Temp/SNAGHTML1589dc08.PNG](Button-types_images/Button-types_img1.png)
+![](Button-types_images/Button-types_img1.png)
 
 
 _Figure 17: Types of Toggle button_

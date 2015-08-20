@@ -3,7 +3,7 @@ layout: post
 title: Layout
 description: layout 
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -26,8 +26,8 @@ You can customize/limit the number of gauges to be displayed in the table with t
 You can set the number of gauges to be displayed in row using rowsCount property. By default the value is 0.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
     @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).RowsCount(2).Scales(scale =>
 
@@ -93,9 +93,9 @@ You can set the number of gauges to be displayed in column using columnsCount pr
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).ColumnsCount(2).Scales(scale =>
 

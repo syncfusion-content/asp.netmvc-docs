@@ -12,10 +12,7 @@ documentation: ug
 The AllowEditOnDblClick property can be set as True to enable editing the record by double-clicking it. When it is set as False, it cannot be edited by double-clicking it. In that case, you can edit the record by using the Toolbar option only.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
+{% highlight js %}
 
   @(Html.EJ().Grid<object>("Editing")
 
@@ -70,9 +67,6 @@ The AllowEditOnDblClick property can be set as True to enable editing the record
 
 {% endhighlight  %}
 {% highlight c# %}
-[Controller]
-
-
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -106,5 +100,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Disable-double-click-edit_images/Disable-double-click-edit_img1.png)
 
-
+_Figure : Disable double-click edit_
 

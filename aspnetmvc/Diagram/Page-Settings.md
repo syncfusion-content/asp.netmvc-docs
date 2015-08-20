@@ -72,9 +72,6 @@ The following code illustrates how to customize Page Settings
 {% highlight c# %}
 
 
-
-
-
 //Sets page setting properties
 
 model.PageSettings.PageHeight = 300;
@@ -190,7 +187,6 @@ The scroll limit allows you to scroll the Diagram page along X and Y axes based 
 The following code example illustrates how to specify scroll limit. 
 
 {% highlight c# %}
-
 
 
 //Scrolllimit for Diagram by default

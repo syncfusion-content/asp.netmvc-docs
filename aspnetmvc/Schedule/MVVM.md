@@ -335,7 +335,7 @@ e-id="gotodate" -text="Go to date">
 
 <script>
 
-
+{% endhighlight %}
 {% highlight c# %}
 <!—binding the value to the scope variables in application controller-->
 
@@ -355,10 +355,6 @@ var data = [
 
 ];
 
-
-
-
-
 angular.module('syncApp', ['ejangular'])
 
 .controller('ScheduleCtrl', function ($scope) {
@@ -376,7 +372,7 @@ $("#sampleProperties").ejPropertiesPanel();
 </script>
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 

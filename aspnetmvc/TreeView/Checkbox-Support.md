@@ -15,7 +15,7 @@ The following steps explain how you can enable the ShowCheckbox property for Tre
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight html %}
+{% highlight js %}
 
 \\ To configure TreeView in the CSHTML page
 
@@ -112,7 +112,7 @@ _Figure42: TreeView with checkbox_
 
 To overcome the default functionality of TreeView, when you don’t want the parent node check state being moved to indeterminate state and when you check the corresponding child node, you can enable the property AutoCheckParentNode. You can specify the property AutoCheckParentNode in TreeView as follows.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -197,7 +197,7 @@ _Figure42: TreeView with AutoCheckParentNode enabled_
 
 By default while checking a parent node, it will affect the child nodes and vice versa. If you don’t want this functionality (checking a node affecting other node means) you cn disable this using AutoCheck property.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -283,7 +283,7 @@ _Figure42: TreeView with AutoCheck disabled_
 
 You can specify the Checked Nodes in TreeView initially by using the property CheckedNodes. Checked Nodes index collection is given to the integer array. You can specify the property CheckedNodes in TreeView control as follows.
 
-{% highlight html %}
+{% highlight js %}
 
 @{List<int> nodes = new List<int>() { 0,4 }; }
 

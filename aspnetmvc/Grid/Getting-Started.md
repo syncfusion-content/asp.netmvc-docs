@@ -17,55 +17,54 @@ The Grid can be easily configured to the DOM element, such as <div>. You can cre
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-
+_Figure : Managed sales data_
 
 
 1. Create Syncfusion ASP.NET MVC Application. Refer [common](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) document
 2. Add a Grid Control in index.cshtml page.In Columns definition, the TextAlign property allows you to align text of the columns, the Width property is used to define width of the columns and Format property allows you to format the particular columns value.
 
+   ~~~ js
+
+
+		@(Html.EJ().Grid<object>("FlatGrid")
+
+				.Columns(col =>
+
+				{
+
+					col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+
+					col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+
+					col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+
+					col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+
+					col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
 
 
-{% highlight html %}
-[cshtml]
+				})
 
-@(Html.EJ().Grid<object>("FlatGrid")
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-            col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-            col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
-
-
-
-        })
-
- )
-{% endhighlight  %}
+		 )
+		 
+   ~~~
+   {:.prettyprint }
+   
 3. You can execute the above code sample to render an empty Grid is rendered with specified column headers, where the data must be specified.
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+   ![](Getting-Started_images/Getting-Started_img2.png)
 
-
+   _Figure : Empty grid_
 
 ### Set Sales Data
 
 You can add the following code example in index page to render grid. In DataSource definition, CrossDomain property is enabled to retrieve data from another domain and Offline property allows you to load data on time from server.
 
-{% highlight html %}
-[cshtml]
+{% highlight js %}
+
 
 @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -98,19 +97,16 @@ The following screenshot displays a Grid with sales data.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+_Figure : Management of sales data_
 
-
-
-
-_Figure 3: Management of sales data_
 
 ### Enable Paging
 
 Paging feature in Grid offers complete navigation support to easily switch between the pages, using the page bar available at the bottom of the Grid control. To enable paging, use AllowPaging property of Grid as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[cshtml]
+
 
 @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -144,10 +140,6 @@ Use AllowPaging to switch between pages.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
-
-
-
 _Figure4: Sales data with paging_
 
 ### Enable Filtering
@@ -162,7 +154,7 @@ To enable filtering, use AllowFiltering property of Grid as follows.
 
 
 {% highlight html %}
-[cshtml]
+
 
 @(Html.EJ().Grid<object>("FlatGrid")  .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
 
@@ -200,11 +192,9 @@ The following screenshot illustrates how to filter sales data.
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
+_Figure : Filtered sales data_
 
 
-
-
-_Figure 5: Filtered sales data_
 
 ### Enable Grouping
 
@@ -212,9 +202,9 @@ The Grouping feature in Grid is used to consolidate Grid data into groups. Group
 
 To enable grouping, use AllowGrouping property of Grid as follows.
 
-{% highlight html %}
+{% highlight js %}
 
-[cshtml]
+
 
 @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -250,7 +240,7 @@ To enable grouping, use AllowGrouping property of Grid as follows.
 
 The following screenshot shows the analysis of sales data by grouping unit stock.
 
-
+_Figure : Grouped by ship name_
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
@@ -263,7 +253,7 @@ Enable ShowSummary property allows you to summarize the Grid data into groups. G
 The following code example shows the option to enable group summary.
 
 {% highlight html %}
-[cshtml]
+
 
 @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -328,10 +318,6 @@ The following code example shows the option to enable group summary.
 The following screenshot shows the group summary.
 
 ![](Getting-Started_images/Getting-Started_img9.png)
-
-
-
-
 
 _Figure7: Group summary_
 

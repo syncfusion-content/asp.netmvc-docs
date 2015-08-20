@@ -16,180 +16,179 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 1. You can specify the height of the Menu control using helper as follows.
 
 
-
-{% highlight html %}
-
-[CSHTML]
-
-// You can specify the height of the Menu control in the CSHTML page as follows.
-
-<div class="imgframe">
-
-    @Html.EJ().Menu("menucontrol").Items(items =>
-
-        {
-
-            items.Add().Id("Home").Text("Home").Children(child =>
-
-                {
-
-                    child.Add().Text("Foundation");
-
-                    child.Add().Text("Launch");
-
-                    child.Add().Text("About").Children(child1 =>
-
-                    {
-
-                        child1.Add().Text("Company");
-
-                        child1.Add().Text("Location");
-
-                    });
-
-                });
-
-            items.Add().Text("Services").Children(child =>
-
-                {
-
-                    child.Add().Text("Consulting");
-
-                    child.Add().Text("Outsourcing");
-
-                });
-
-            items.Add().Text("About");
-
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-                {
-
-                    child.Add().Text("Contact number");
-
-                    child.Add().Text("E-mail");
-
-                });
-
-            items.Add().Id("Careers").Text("Careers").Children(child =>
-
-                 {
+   ~~~ html
 
 
 
-                     child.Add().Text("Position").Children(child1 =>
+		// You can specify the height of the Menu control in the CSHTML page as follows.
 
-                             {
+		<div class="imgframe">
 
-                                 child1.Add().Text("Developer");
+			@Html.EJ().Menu("menucontrol").Items(items =>
 
-                                 child1.Add().Text("Manager");
+				{
 
-                             });
+					items.Add().Id("Home").Text("Home").Children(child =>
 
-                     child.Add().Text("Apply online");
+						{
 
-                 });
+							child.Add().Text("Foundation");
+
+							child.Add().Text("Launch");
+
+							child.Add().Text("About").Children(child1 =>
+
+							{
+
+								child1.Add().Text("Company");
+
+								child1.Add().Text("Location");
+
+							});
+
+						});
+
+					items.Add().Text("Services").Children(child =>
+
+						{
+
+							child.Add().Text("Consulting");
+
+							child.Add().Text("Outsourcing");
+
+						});
+
+					items.Add().Text("About");
+
+					items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+						{
+
+							child.Add().Text("Contact number");
+
+							child.Add().Text("E-mail");
+
+						});
+
+					items.Add().Id("Careers").Text("Careers").Children(child =>
+
+						 {
 
 
 
-        }).Height("50")
+							 child.Add().Text("Position").Children(child1 =>
 
-</div>
+									 {
+
+										 child1.Add().Text("Developer");
+
+										 child1.Add().Text("Manager");
+
+									 });
+
+							 child.Add().Text("Apply online");
+
+						 });
 
 
 
+				}).Height("50")
 
-{% endhighlight  %}
+		</div>
 
+
+   ~~~
+   {:.prettyprint }
 
 ## Width
 
 Specifies the width of the main menu. You can customize the width of the Menu control by using Width property.
 
 1. You can specify the width of the Menu control using helper as follows.
-{% highlight html %}
-[CSHTML]
 
-// You can specify the width of the Menu control in the CSHTML page as follows.
-
-<div class="imgframe">
-
-@Html.EJ().Menu("menucontrol").Items(items =>
-
-        {
-
-            items.Add().Id("Home").Text("Home").Children(child =>
-
-                {
-
-                    child.Add().Text("Foundation");
-
-                    child.Add().Text("Launch");
-
-                    child.Add().Text("About").Children(child1 =>
-
-                    {
-
-                        child1.Add().Text("Company");
-
-                        child1.Add().Text("Location");
-
-                    });
-
-                });
-
-            items.Add().Text("Services").Children(child =>
-
-                {
-
-                    child.Add().Text("Consulting");
-
-                    child.Add().Text("Outsourcing");
-
-                });
-
-            items.Add().Text("About");
-
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-                {
-
-                    child.Add().Text("Contact number");
-
-                    child.Add().Text("E-mail");
-
-                });
-
-            items.Add().Id("Careers").Text("Careers").Children(child =>
-
-                 {
+   ~~~ js
 
 
+		// You can specify the width of the Menu control in the CSHTML page as follows.
 
-                     child.Add().Text("Position").Children(child1 =>
+		<div class="imgframe">
 
-                             {
+		@Html.EJ().Menu("menucontrol").Items(items =>
 
-                                 child1.Add().Text("Developer");
+				{
 
-                                 child1.Add().Text("Manager");
+					items.Add().Id("Home").Text("Home").Children(child =>
 
-                             });
+						{
 
-                     child.Add().Text("Apply online");
+							child.Add().Text("Foundation");
 
-                 });
+							child.Add().Text("Launch");
+
+							child.Add().Text("About").Children(child1 =>
+
+							{
+
+								child1.Add().Text("Company");
+
+								child1.Add().Text("Location");
+
+							});
+
+						});
+
+					items.Add().Text("Services").Children(child =>
+
+						{
+
+							child.Add().Text("Consulting");
+
+							child.Add().Text("Outsourcing");
+
+						});
+
+					items.Add().Text("About");
+
+					items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+						{
+
+							child.Add().Text("Contact number");
+
+							child.Add().Text("E-mail");
+
+						});
+
+					items.Add().Id("Careers").Text("Careers").Children(child =>
+
+						 {
 
 
 
-        }).Width("700")
+							 child.Add().Text("Position").Children(child1 =>
+
+									 {
+
+										 child1.Add().Text("Developer");
+
+										 child1.Add().Text("Manager");
+
+									 });
+
+							 child.Add().Text("Apply online");
+
+						 });
 
 
 
-</div>
+				}).Width("700")
 
-{% endhighlight  %}
+
+
+		</div>
+
+   ~~~
+   {:.prettyprint }
 
 ## Open on click
 
@@ -201,7 +200,7 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 {% highlight html %}
 
-[CSHTML]
+
 
 // Add the following code in the CSHTML page. 
 
@@ -285,8 +284,6 @@ Output screenshot for the above code example is as follows.
 
 ![](Miscellaneous_images/Miscellaneous_img1.png)
 
-
-
 _Figure41: Sub menu items to open on click_
 
 ## Animation
@@ -297,9 +294,9 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 // Add the following code in the CSHTML page. 
 
@@ -398,9 +395,9 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 // You can specify the title of the Menu control in the CSHTML page as follows.
 
@@ -500,9 +497,9 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 // Add the following code in the CSHTML page.
 
@@ -602,9 +599,9 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[CSHTML]
+
 
 // Add the following code in the CSHTML page.
 

@@ -16,13 +16,15 @@ The following steps explain you how to get the Date Range of DatePicker widget.
 1. In the CSHTML page, add the following code to render the DatePicker widget with date range.
 
 
-{% highlight html %}
+   ~~~ js
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with date range*@
+		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with date range*@
 
-@Html.EJ().DatePicker("datePicker").MinDate("2014/06/03").MaxDate("2014/06/19")
+		@Html.EJ().DatePicker("datePicker").MinDate("2014/06/03").MaxDate("2014/06/19")
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 2.  The following screenshot displays the output for the above code.
 

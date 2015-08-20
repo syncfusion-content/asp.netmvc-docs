@@ -59,7 +59,7 @@ Add the following code example for MVC samples
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").CaptionTemplateId("captionTemplate").TileSize(TileSize.Wide)

@@ -19,7 +19,7 @@ The following steps explains you on how to set the default value of the TimePick
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with given time value*@
 
@@ -46,7 +46,7 @@ The following steps explain you to enable/disable property in TimePicker widget.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render disabled TimePicker widget*@
 
@@ -74,7 +74,7 @@ The following steps allows you to disable editing value in TimePicker.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -104,7 +104,7 @@ The following steps explain you to change the edges of the textbox to rounded co
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with rounded corner*@
 
@@ -132,7 +132,7 @@ You can use Height and Width property to customize TimePicker width and height.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specified height and width*@
 
@@ -156,7 +156,7 @@ You can use PopupHeight and PopupWidth property to customize TimePicker width an
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specified popup height and width*@
 
@@ -182,7 +182,7 @@ The following steps explains you to use EnablePersistence property.
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -200,7 +200,7 @@ The following steps explains you to use EnableStrictMode property.
 1. Add the following code to the corresponding view page to render the TimePicker.
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specifies min and max time*@
 
@@ -228,7 +228,7 @@ The following steps explains you to change the Time Interval of the TimePicker.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 

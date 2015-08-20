@@ -17,10 +17,6 @@ documentation: ug
 * The prioritySettings is an object collection that holds the priority related information. 
 * For example enable property enables/disables the priority value to be displayed.
 
-
-
-
-
 The following are the sub-properties used within the prioritySettings.
 
 ### enable
@@ -45,10 +41,6 @@ The following are the sub-properties used within the prioritySettings.
 * It holds the binding name for value field in the priority dataSource.
 
 The following code example illustrates on how to render priority feature in the Schedule control.
-
-
-
-
 
 {% highlight html %}
 
@@ -81,25 +73,22 @@ The following code example illustrates on how to render priority feature in the�
 .Recurrence("Recurrence")
 
 .RecurrenceRule("RecurrenceRule"))
-
-
-
 )
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
 // Follow the code declared in Read only part
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 Execute the above code to render the following output.
 
 
 
-![C:/Users/karthigeyan/Desktop/p1.png](Priority_images/Priority_img1.png)
+![](Priority_images/Priority_img1.png)
 
 
 ### template
@@ -150,7 +139,7 @@ The following code example illustrates on how to render priority feature with us
 
 .RecurrenceRule("RecurrenceRule")))
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -193,8 +182,6 @@ public string value { set; get; }
 // For appointment data follow the code declared in Read only part
 
 {% endhighlight %}
-{% endhighlight %}
-
 
 
 * And then need to define the styles to display the “priority icon/images (you can use your desired images)” with the priority options. 
@@ -204,7 +191,7 @@ public string value { set; get; }
 
 The following code example illustrates how to define the css style while using the template.
 
-{% highlight html %}
+{% highlight js %}
 
 // Her we are defining the style of the “custom priority icon”
 <style>
@@ -261,7 +248,7 @@ background-position: 2px;
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -301,7 +288,7 @@ background-position: 2px;
 
 )
 
-
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -345,28 +332,11 @@ public string value { set; get; }
 
 
 {% endhighlight %}
-{% endhighlight %}
 
 
 On excuting the above mentioned codes will render the same output as follows.
 
 
-
-
-
 ![](Priority_images/Priority_img2.png)
 
-
-
-
-
-
-
-
-
 ![](Priority_images/Priority_img3.png)
-
-
-
-
-

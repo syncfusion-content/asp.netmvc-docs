@@ -18,7 +18,7 @@ documentation: ug
 Important: Exporting feature is not applicable for JS as it is performed in Server side.
 
 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().Schedule("Schedule1")
 // Add the necessary schedule properties here)
 <script type="text/javascript">
@@ -28,6 +28,7 @@ var obj = $("#Schedule1").data("ejSchedule");
 // need to specify the Action name as parameterobj.export("ExportToICS");});});
 </script>
 
+{% endhighlight %}
 {% highlight c# %}
 public partial class ScheduleController : Controller
 {
@@ -47,7 +48,7 @@ public partial class ScheduleController : Controller
 	}
 }
 {% endhighlight %}
-{% endhighlight %}
+
 Execute the above code to render the following output.
 
 

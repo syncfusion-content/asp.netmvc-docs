@@ -18,84 +18,85 @@ The following code example is used to add the header image for the root Tab head
 1. Add the following code in your view page to render Tab with header image.
 
 
+   ~~~ html
 
-{% highlight html %}
+		// Add the following code example to the corresponding CSHTML page to render Tab with header image.
 
-// Add the following code example to the corresponding CSHTML page to render Tab with header image.
+		 <div id="dishtab" style="width:550px">
 
- <div id="dishtab" style="width:550px">
+			<ul>
 
-    <ul>
+				<li><span class="dish pizzaImg"></span><a href="#pizzatype">Pizza Type</a></li>
 
-        <li><span class="dish pizzaImg"></span><a href="#pizzatype">Pizza Type</a></li>
+				<li><span class="dish sandwichImg"></span><a href="#sandwichtype">Sandwich Type</a></li>
 
-        <li><span class="dish sandwichImg"></span><a href="#sandwichtype">Sandwich Type</a></li>
+			</ul>
 
-    </ul>
+			<div id="pizzatype" style="background-color: #F5F5F5">
 
-    <div id="pizzatype" style="background-color: #F5F5F5">
+				<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
-        <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+			</div>	
 
-    </div>	
+			<div id="sandwichtype" style="background-color: #F5F5F5">        
 
-    <div id="sandwichtype" style="background-color: #F5F5F5">        
+				<p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
-        <p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+			</div>
 
-    </div>
+			@Html.EJ().Tab("dishtab")
 
-    @Html.EJ().Tab("dishtab")
+		</div>
 
-</div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Add following CSS for header image customization.
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-        .dish {
+			.dish {
 
-            display: inline-block;
+			    display: inline-block;
 
-            vertical-align: middle;
+			    vertical-align: middle;
 
-            margin: 0px -9px 0px 9px;           
+			    margin: 0px -9px 0px 9px;           
 
-        }
+			}
 
-        .pizzaImg {
+			.pizzaImg {
 
-            background: url("http://js.syncfusion.com/UG/Web/Content/rsz_chicken-delite.png") no-repeat;
+			    background: url("http://js.syncfusion.com/UG/Web/Content/rsz_chicken-delite.png") no-repeat;
 
-            height: 25px;
+			    height: 25px;
 
-            width: 25px;
+			    width: 25px;
 
-        }
+			}
 
-        .sandwichImg, .pastaImg {
+			.sandwichImg, .pastaImg {
 
-            height: 25px;
+			    height: 25px;
 
-            width: 25px;
+			    width: 25px;
 
-        }
+			}
 
-        .sandwichImg {
+			.sandwichImg {
 
-            background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;
+			    background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;
 
-        }
+			}
 
-</style> 
+		</style> 
+   ~~~
+   {:.prettyprint }
 
-{% endhighlight %}
 
 3. The following screenshot illustrates the Tab with the customized header image. 
 
@@ -115,33 +116,34 @@ The following code example is used to render the Tab widget with Roundedcorner.
 
 
 
-{% highlight html %}
+   ~~~ html
 
-// Add the following code example to the corresponding CSHTML page to render Tab with rounded corner.
+		// Add the following code example to the corresponding CSHTML page to render Tab with rounded corner.
 
 
 
-<div style="width: 550px">
+		<div style="width: 550px">
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
-           {
+				   {
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               </div>);
+					   </div>);
 
-           }).ShowRoundedCorner(true).Render();}
+				   }).ShowRoundedCorner(true).Render();}
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 2. The following screenshot illustrates the Tab with Rounded corner.
@@ -160,35 +162,32 @@ The following code example is used to render the Tab widget with enable/disable.
 
 1. Add the following code in your view page to render Tab with enable/disable.
 
+   ~~~ html
 
+		// Add the following code example to the corresponding CSHTML page to render Tab with Enable/Disable format.
 
-{% highlight html %}
+		<div style="width: 550px">
 
-// Add the following code example to the corresponding CSHTML page to render Tab with Enable/Disable format.
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
+				   {
 
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-<div style="width: 550px">
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-           {
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+					   </div>);
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+				   }).Enabled(false).Render();}
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+		</div>
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
-
-               </div>);
-
-           }).Enabled(false).Render();}
-
-</div>
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -208,34 +207,34 @@ The following code example is used to render the Tab widget with Reload icon.
 
 1. Add the following code in your view page to render Tab with Reload icon.
 
+   ~~~ html
 
-
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render Tab with reload icon.
+		// Add the following code example to the corresponding CSHTML page to render Tab with reload icon.
 
 
 
-<div style="width: 550px">
+		<div style="width: 550px">
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
-           {
+				   {
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               </div>);
+					   </div>);
 
-           }).ShowReloadIcon(true).Render();}
+				   }).ShowReloadIcon(true).Render();}
 
-</div>
-{% endhighlight %}
+		</div>
+		
+   ~~~
+   {:.prettyprint }
 
 
 2. The following screenshot illustrates the Tab with Reload icon.
@@ -257,31 +256,32 @@ The following code example is used to render the Tab widget with customized coll
 1. Add the following code in your view page to render Tab with customized collapsible mode.
 
 
+   ~~~ html
 
-{% highlight html %}
+		// Add the following code example to the corresponding CSHTML page to render Tab with collapsible mode.
 
-// Add the following code example to the corresponding CSHTML page to render Tab with collapsible mode.
+		<div style="width: 550px">
 
-<div style="width: 550px">
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+				   {
 
-           {
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+					   </div>);
 
-               </div>);
+				   }).Collapsible(true).Render();}
 
-           }).Collapsible(true).Render();}
-
-</div>
-{% endhighlight %}
+		</div>
+		
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -305,34 +305,34 @@ The following code example is used to render the Tab widget with customized heig
 1. Add the following code in your view page to render Tab with customized height and height adjust mode.
 
 
+   ~~~ html
 
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render Tab with customized height and height adjust mode.
-
+		// Add the following code example to the corresponding CSHTML page to render Tab with customized height and height adjust mode.
 
 
-<div style="width: 550px">
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+		<div style="width: 550px">
 
-           {
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+				   {
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-              data.Add().ID("sandwichtype").Text("Sandwich Type")
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-                  .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+					  data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-               </div>);
+						  .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-           }).HeightAdjustMode(HeightAdjustMode.Fill).Height("300px").Render();}
+					   </div>);
 
-</div>
+				   }).HeightAdjustMode(HeightAdjustMode.Fill).Height("300px").Render();}
 
-{% endhighlight %}
+		</div>
+
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -354,35 +354,34 @@ The following code example is used to render the Tab widget with customized widt
 
 1. Add the following code in your view page to render Tab with customized width.
 
+   ~~~ html
 
-
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render Tab with customized width.
+		// Add the following code example to the corresponding CSHTML page to render Tab with customized width.
 
 
 
-<div>
+		<div>
 
-    @{Html.EJ().Tab("dishtab").Items(data =>
+			@{Html.EJ().Tab("dishtab").Items(data =>
 
-           {
+				   {
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+					   data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-               </div>);
+					   </div>);
 
-           }).Width("450").Render();}
+				   }).Width("450").Render();}
 
-</div>
+		</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 
 
@@ -421,55 +420,53 @@ The following code example is used to render the Tab widget with customized styl
 
 1. Add the following code in your view page to render Tab with customized style.
 
+   ~~~ html
 
-
-{% highlight html %}
-
-// Add the following code example to the corresponding CSHTML page to render Tab with customized style.
-
-
-
-<div>
-
-    @{Html.EJ().Tab("dishtab").Items(data =>
-
-           {
-
-               data.Add().ID("pizzatype").Text("Pizza Type")
-
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
-
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
-
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
-
-               </div>);
-
-           }).CssClass("custom").Render();}
-
-</div>
+		// Add the following code example to the corresponding CSHTML page to render Tab with customized style.
 
 
 
+		<div>
 
-{% endhighlight %}
+			@{Html.EJ().Tab("dishtab").Items(data =>
+
+				   {
+
+					   data.Add().ID("pizzatype").Text("Pizza Type")
+
+						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+
+					   data.Add().ID("sandwichtype").Text("Sandwich Type")
+
+						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+
+					   </div>);
+
+				   }).CssClass("custom").Render();}
+
+		</div>
+
+   ~~~
+   {:.prettyprint }
 
 
 2. Add the following styles
 
-{% highlight css %}
+   ~~~ css
 
-<style type="text/css">
+		<style type="text/css">
 
-        .custom {
+			.custom {
 
-            width:650px;
+			    width:650px;
 
-        }
+			}
 
-    </style>
+		    </style>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
+
 
 3. The following screenshot illustrates the Tab with customized style.
 

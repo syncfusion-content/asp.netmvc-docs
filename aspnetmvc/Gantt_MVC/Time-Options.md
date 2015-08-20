@@ -23,7 +23,7 @@ Use the following code example for setting different time scales of working hour
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -44,9 +44,6 @@ Use the following code example for setting different time scales of working hour
 Use the following code example for including time options in start date and end date of a task.
 
 {% highlight C# %}
-
-
-
 
 public class GanttController : Controller
 
@@ -284,11 +281,6 @@ public class GanttController : Controller
  </html>
 
 
-
-
-
-
-
 {% endhighlight %}
 
 
@@ -299,5 +291,5 @@ Execute the above code to render the following output.
 
 ![](Time-Options_images/Time-Options_img1.png)
 
-
+_Figure 33: Gantt with Time Options_
 

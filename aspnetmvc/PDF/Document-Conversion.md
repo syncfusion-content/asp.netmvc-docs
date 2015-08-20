@@ -7,11 +7,11 @@ control: PDF
 documentation: ug
 ---
 
-## Document Conversion
+# Document Conversion
 
 This section explains about conversion of different file format documents (HTML, word, tiff, RTF, XPS) into PDF document.
 
-### HTML To PDF
+## HTML To PDF
 
 The core of a web page is a file written in Hypertext Markup Language (HTML). When you convert a web page to PDF, the HTML file and all associated files such as JPEG images, cascading style sheets, text files, image maps, and forms are included in the conversion process. The resulting PDF behaves much like the original web page. For example, the images, links, and image maps function normally within the PDF.
 
@@ -19,7 +19,8 @@ Syncfusion products support conversion of the HTML and webpages into PDF documen
 
 * IE Rendering 
 * Gecko Rendering
-### IE Rendering
+
+## IE Rendering
 
 
 WebPages and HTML pages can be imported to PDF using the HtmlConverter. The HTMLConverter converts the HTML web page into a Bitmap or Metafile image using MSHTML.
@@ -46,230 +47,225 @@ HTML documents can be converted to PDF through the following methods:
 
 •FromString
 
-1. ConvertToImage
+1.  ConvertToImage
 
-The ConvertToImage method converts the URL into an image. It recognizes tables, images, lists, etc. The URL parameter can be a HTTP or HTTPS address such as "http://www.server.com/path/file.html", or a local physical path such as "c:\path\file.html".
+	The ConvertToImage method converts the URL into an image. It recognizes tables, images, lists, etc. The URL parameter can be a HTTP or HTTPS address such as "http://www.server.com/path/file.html", or a local physical path such as "c:\path\file.html".
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img1.png)' | markdownify }}
-{:.image }
-_Note: If you want to open a dynamically generated document such as .asp or aspx file, you need to invoke it through HTTP even if this file is local to your own script._
+	
+	> Note: If you want to open a dynamically generated document such as .asp or aspx file, you need to invoke it through HTTP even if this file is local to your own script.
 
 
-The overloaded ConvertToImage method enables converting an HTML page to an image with AspectRatio to maintain the ratio of the image dimension. This prevents text truncation at the corners.
+	The overloaded ConvertToImage method enables converting an HTML page to an image with AspectRatio to maintain the ratio of the image dimension. This prevents text truncation at the corners.
 
+	~~~ cs
 
+		//Creates a new PDF document.
 
-[C#]
+		PdfDocument pdfDocument = new PdfDocument();
 
+		//Adds a page to the PDF document.
 
+		PdfPage page = pdfDocument.Pages.Add();
 
-//Creates a new PDF document.
+		SizeF pageSize = page.Size;
 
-PdfDocument pdfDocument = new PdfDocument();
+		AspectRatio dimension = AspectRatio.None;
 
-//Adds a page to the PDF document.
+		//Declares the layout format for the image.
 
-PdfPage page = pdfDocument.Pages.Add();
+		PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
 
-SizeF pageSize = page.Size;
+		bitmapFormat.Break = PdfLayoutBreakType.FitPage;
 
-AspectRatio dimension = AspectRatio.None;
+		bitmapFormat.Layout = PdfLayoutType.Paginate;
 
-//Declares the layout format for the image.
+		HtmlConverter html = new HtmlConverter();
 
-PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
+		//Converts to Bitmap.
 
-bitmapFormat.Break = PdfLayoutBreakType.FitPage;
+		Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension);
 
-bitmapFormat.Layout = PdfLayoutType.Paginate;
+		PdfImage image = new PdfBitmap(img);
 
-HtmlConverter html = new HtmlConverter();
+		//Draws bitmap in PdfPage.
 
-//Converts to Bitmap.
+		if (img.Size.Width > pageSize.Width)
 
-Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension);
+		else
 
-PdfImage image = new PdfBitmap(img);
+		image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
 
-//Draws bitmap in PdfPage.
+		//Saves the document.
 
-if (img.Size.Width > pageSize.Width)
+		pdfDocument.Save("Output.pdf");
 
-else
+		pdfDocument.Close(true);
 
-image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
+    ~~~
+    {:.prettyprint }
 
-//Saves the document.
+    ~~~ vbnet
 
-pdfDocument.Save("Output.pdf");
+			'Creates a new PDF document.
 
-pdfDocument.Close(true);
+			Dim pdfDocument As New PdfDocument()
 
+			'Adds a page to the PDF document.
 
+			Dim page As PdfPage = pdfDocument.Pages.Add()
 
-[VB]
+			Dim pageSize As SizeF = page.Size
 
+			Dim dimension As AspectRatio = AspectRatio.None
 
+			'Declares layout format for the image.
 
-'Creates a new PDF document.
+			Dim bitmapFormat As New PdfLayoutFormat()
 
-Dim pdfDocument As New PdfDocument()
+			bitmapFormat.Break = PdfLayoutBreakType.FitPage
 
-'Adds a page to the PDF document.
+			bitmapFormat.Layout = PdfLayoutType.Paginate
 
-Dim page As PdfPage = pdfDocument.Pages.Add()
+			Dim html As New HtmlConverter()
 
-Dim pageSize As SizeF = page.Size
+			'Converts to Bitmap.
 
-Dim dimension As AspectRatio = AspectRatio.None
+			Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension)
 
-'Declares layout format for the image.
+			Dim image As PdfImage = New PdfBitmap(img)
 
-Dim bitmapFormat As New PdfLayoutFormat()
+			'Draws bitmap in PdfPage.
 
-bitmapFormat.Break = PdfLayoutBreakType.FitPage
+			If img.Size.Width > pageSize.Width Then
 
-bitmapFormat.Layout = PdfLayoutType.Paginate
+			image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
 
-Dim html As New HtmlConverter()
+			Else
 
-'Converts to Bitmap.
+			image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
 
-Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension)
+			End If
 
-Dim image As PdfImage = New PdfBitmap(img)
+			'Saves the document.
 
-'Draws bitmap in PdfPage.
+			pdfDocument.Save("Output.pdf")
 
-If img.Size.Width > pageSize.Width Then
+			pdfDocument.Close(True)
 
-image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
+    ~~~
+    {:.prettyprint }
 
-Else
+	
+	> Note: HTML To PDF conversion allows text selection and search within the generated document. However, in machines where IE9 is installed, document would contain Bitmap image of the converted page/file thereby restricting text selection and search. This behavior can be changed for certain webpages by changing the registry value. For more details, refer to Frequently Asked Questions section.
 
-image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
+	#### Authentication
 
-End If
+	You can use the ConvertToImage method to access the authenticated web pages by passing its user credential values as arguments. The following code example illustrates this:
 
-'Saves the document.
 
-pdfDocument.Save("Output.pdf")
 
-pdfDocument.Close(True)
+    ~~~ cs
 
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img2.png)' | markdownify }}
-{:.image }
-_Note: HTML To PDF conversion allows text selection and search within the generated document. However, in machines where IE9 is installed, document would contain Bitmap image of the converted page/file thereby restricting text selection and search. This behavior can be changed for certain webpages by changing the registry value. For more details, refer to Frequently Asked Questions section._
+			//Creates a new PDF document.
 
-Authentication
+			PdfDocument pdfDocument = new PdfDocument();
 
-You can use the ConvertToImage method to access the authenticated web pages by passing its user credential values as arguments. The following code example illustrates this:
+			//Adds a page to the PDF document.
 
+			PdfPage page = pdfDocument.Pages.Add();
 
+			SizeF pageSize = page.Size;
 
-[C#]
+			AspectRatio dimension = AspectRatio.None;
 
+			//Declares the layout format for the image.
 
+			PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
 
-//Creates a new PDF document.
+			bitmapFormat.Break = PdfLayoutBreakType.FitPage;
 
-PdfDocument pdfDocument = new PdfDocument();
+			bitmapFormat.Layout = PdfLayoutType.Paginate;
 
-//Adds a page to the PDF document.
+			HtmlConverter html = new HtmlConverter();
 
-PdfPage page = pdfDocument.Pages.Add();
+			//Converts to Bitmap.
 
-SizeF pageSize = page.Size;
+			Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension, "UserName", "Passwprd");
 
-AspectRatio dimension = AspectRatio.None;
+			PdfImage image = new PdfBitmap(img);
 
-//Declares the layout format for the image.
+			//Draws bitmap in PdfPage.
 
-PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
+			if (img.Size.Width > pageSize.Width)
 
-bitmapFormat.Break = PdfLayoutBreakType.FitPage;
+			image.Draw(page, new RectangleF(0, 0, img.Width, -1), bitmapFormat);
 
-bitmapFormat.Layout = PdfLayoutType.Paginate;
+			else
 
-HtmlConverter html = new HtmlConverter();
+			image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
 
-//Converts to Bitmap.
+			//Saves the document.
 
-Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension, "UserName", "Passwprd");
+			pdfDocument.Save("Output.pdf");
 
-PdfImage image = new PdfBitmap(img);
+			pdfDocument.Close(true);
 
-//Draws bitmap in PdfPage.
+    ~~~
+    {:.prettyprint }
 
-if (img.Size.Width > pageSize.Width)
+    ~~~ vbnet
 
-image.Draw(page, new RectangleF(0, 0, img.Width, -1), bitmapFormat);
 
-else
+			'Creates a new PDF document.
 
-image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
+			Dim pdfDocument As New PdfDocument()
 
-//Saves the document.
+			'Adds a page to the PDF document.
 
-pdfDocument.Save("Output.pdf");
+			Dim page As PdfPage = pdfDocument.Pages.Add()
 
-pdfDocument.Close(true);
+			Dim pageSize As SizeF = page.Size
 
+			Dim dimension As AspectRatio = AspectRatio.None
 
+			'Declares the layout format for the image.
 
-[VB]
+			Dim bitmapFormat As New PdfLayoutFormat()
 
+			bitmapFormat.Break = PdfLayoutBreakType.FitPage
 
+			bitmapFormat.Layout = PdfLayoutType.Paginate
 
-'Creates a new PDF document.
+			Dim html As New HtmlConverter()
 
-Dim pdfDocument As New PdfDocument()
+			'Converts to Bitmap.
 
-'Adds a page to the PDF document.
+			Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension, "UserName", "Passwprd")
 
-Dim page As PdfPage = pdfDocument.Pages.Add()
+			Dim image As PdfImage = New PdfBitmap(img)
 
-Dim pageSize As SizeF = page.Size
+			'Draws bitmap in PdfPage.
 
-Dim dimension As AspectRatio = AspectRatio.None
+			If img.Size.Width > pageSize.Width Then
 
-'Declares the layout format for the image.
+			image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
 
-Dim bitmapFormat As New PdfLayoutFormat()
+			Else
 
-bitmapFormat.Break = PdfLayoutBreakType.FitPage
+			image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
 
-bitmapFormat.Layout = PdfLayoutType.Paginate
+			End If
 
-Dim html As New HtmlConverter()
+			'Saves the document.
 
-'Converts to Bitmap.
+			pdfDocument.Save("Output.pdf")
 
-Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension, "UserName", "Passwprd")
+			pdfDocument.Close(True)
 
-Dim image As PdfImage = New PdfBitmap(img)
-
-'Draws bitmap in PdfPage.
-
-If img.Size.Width > pageSize.Width Then
-
-image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
-
-Else
-
-image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
-
-End If
-
-'Saves the document.
-
-pdfDocument.Save("Output.pdf")
-
-pdfDocument.Close(True)
-
-
+    ~~~
+    {:.prettyprint }
 
 2. FromString
 
@@ -277,7 +273,7 @@ FromString method renders HTML from the string to the image. The following code 
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -323,11 +319,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
-
-
+{% highlight vbnet %}
 
 'Creates a new PDF document.
 
@@ -371,13 +365,11 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
+{% endhighlight %}
 
+> Note: Both ConvertToImage() and FromString() methods are used to convert the HTML pages whose height is less than 32767 pixels as image, and the options like  EnableHyperlinks, EnableJavascript  and AutoDetectPageBreak has no effect.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img3.png)' | markdownify }}
-{:.image }
-_Note: Both ConvertToImage() and FromString() methods are used to convert the HTML pages whose height is less than 32767 pixels as image, and the options like  EnableHyperlinks, EnableJavascript  and AutoDetectPageBreak has no effect._
-
-HtmlConverter Options
+### HtmlConverter Options
 
 HtmlConverter provides the following options to control HtmlToPDF conversions.
 
@@ -392,15 +384,13 @@ EnableJavaScript
 You can control the JavaScript by using the EnableJavaScript property of the HtmlConverter class library. By default this property is set to False. So the JavaScript code is disabled during conversion. Set the EnableJavaScript property to True to activate the JavaScript code during conversion.
 
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img4.png)' | markdownify }}
-{:.image }
-_Note: If JavaScript code is not executed by setting the EnableJavaScript property, it means the Internet Security Settings on the server does not allow the JavaScript execution._
+> Note: If JavaScript code is not executed by setting the EnableJavaScript property, it means the Internet Security Settings on the server does not allow the JavaScript execution.
 
-Enable Hyperlink
+### Enable Hyperlink
 
 Essential PDF provides support to enabe or disable the live hyperlinks in PDF when converting web pages to PDF. The following code example illustrates this:
 
-AutoDetectPageBreak
+### AutoDetectPageBreak
 
 The HtmlConverter supports custom page breaks with standard CSS styles like page-break-before: always and page-break-after: always that can be applied to any HTML object. You can enable custom page breaks by setting the AutoDetectPageBreak property to True.
 
@@ -408,7 +398,7 @@ The following code example illustrates the use of EnableJavaScript, EnableHyperl
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -460,9 +450,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -514,13 +504,14 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
-Rendering HTML page without Splitting
+{% endhighlight %}
+
+### Rendering HTML page without Splitting
 
 To avoid images and text split across page breaks when rendering a large Meta file with images and text in a PDF document, disable the SplitTextLines and SplitImages properties of PdfMetafileLayoutFormat class. The following code illustrates this:
 
 
-
-[C#]
+{% highlight c# %}
 
 
 
@@ -572,9 +563,9 @@ pdfDocument.Save("Output.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -626,31 +617,34 @@ pdfDocument.Save("Output.pdf")
 
 pdfDocument.Close(True)
 
-#### Gecko Rendering
+{% endhighlight %}
+
+### Gecko Rendering
 
 HTML to PDF Conversion using Gecko Rendering Engine
 
 Gecko is a free and open source layout engine used in many applications developed by Mozilla Foundation and the Mozilla Corporation (notably the Firefox web browser), as well as in many other open source software projects. Essential PDF also supports converting Webpages to PDF using Mozilla’s Gecko rendering engine. 
 
-##### Use Case Scenario
+#### Use Case Scenario
 
 Starting with Internet Explorer 9, Microsoft has made a series of core-architectural changes to Internet Explorer.  One of them was to use DirectX (a.k.a, D2D) to render webpage to achieve full-hardware acceleration development to support HTML5 standard features instead of GDI based rendering. As your HTML to PDF conversion depends on IE’s GDI based rendering, during conversion your HTML Converter will not be able to generate PDF documents that contain selectable text.  Hence, if the machine has IE9 or later installed, then you should consider using the Gecko based rendering. This approach reliably generates PDF documents that are text selectable and printer friendly.
 
-##### Prerequisites
+#### Prerequisites
 
-_Table_ _30__: Prerequisites_
+_Table_ _30_: Prerequisites
 
 <table>
 <tr>
 <td>
 Dlls</td><td>
-•Syncfusion.Core.dll•Syncfusion.Compression.Base.dll•Syncfusion.Pdf.Base.dll•Syncfusion.HtmlConverter.Base.dll•Syncfusion.GeckoHtmlRenderer.dll•Syncfusion.GeckoWrapper.dll</td></tr>
+•Syncfusion.Core.dll<br/>•Syncfusion.Compression.Base.dll<br/>•Syncfusion.Pdf.Base.dll<br/>•Syncfusion.HtmlConverter.Base.dll<br/>•Syncfusion.GeckoHtmlRenderer.dll<br/>•Syncfusion.GeckoWrapper.dll</td></tr>
 <tr>
 <td>
 Software Development Kit (SDK)</td><td>
 •XulRunner-SDK 2.0</td></tr>
 </table>
-##### Installation Steps
+
+### Installation Steps
 
 To facilitate conversion, HTML Converter depends on Active-X Wrapper control that interacts with the GECKO APIs during conversion.  When installing the Essential Studio, the assembly manager registers the Syncfusion.GeckoWrapper.dll in the machine. GeckoWrapper.dll is built in debug mode .Being debug assemblies, these cannot be shipped by the xcopy method of deployment. Therefore, you are required to install:
 
@@ -668,14 +662,15 @@ The limitations with this approach are as follows:
 
 1. Formatting/styles created by using dynamic scripts are not rendered in the resultant PDF.
 2. Other features in HTML to PDF conversion such as hyperlinks are not available for conversion by using Gecko rendering engine. However, the page breaks are supported, but the page break cannot be explicitly controlled.
-##### Conversion of HTML to PDF using Gecko Rendering Engine
+
+#### Conversion of HTML to PDF using Gecko Rendering Engine
 
 
 The following code sample explains you the conversion of HTML to PDF using the Gecko Rendering Engine.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -715,9 +710,9 @@ result.Render(doc);
 
 doc.Save("HtmlToPdf.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -751,13 +746,13 @@ End Using
 
 doc.Save("HtmlToPdf.pdf")
 
-### Word to PDF
+{% endhighlight %}
+
+## Word to PDF
 
 Essential DocIO enables to export the Word document into a PDF document. By using the ConvertToPDF method of the DocToPDFConverter class, you can convert the Word document to PDF and save the PDF document.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img5.png)' | markdownify }}
-{:.image }
-_Note: You need to have Essential PDF and Essential DocIO installed in your system. This is because "Syncfusion.DocToPDFConverter.Base.dll" is conditionally shipped when both DocIO.Base and Pdf.Base is installed._
+> Note: You need to have Essential PDF and Essential DocIO installed in your system. This is because "Syncfusion.DocToPDFConverter.Base.dll" is conditionally shipped when both DocIO.Base and Pdf.Base is installed.
 
 
 This section covers the following:
@@ -778,7 +773,7 @@ The following code illustrates you on how to convert a Word document, say, "samp
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -798,9 +793,9 @@ PdfDocument pdfDoc = converter.ConvertToPDF(wordDoc);
 
 pdfDoc.Save("DoctoPDF.pdf");
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -820,7 +815,9 @@ Dim pdfDoc As PdfDocument = converter.ConvertToPDF(wordDoc)
 
 pdfDoc.Save("DoctoPDF.pdf")
 
-#### Supported Elements
+{% endhighlight %}
+
+### Supported Elements
 
 This feature provides support for the following elements.
 
@@ -835,7 +832,8 @@ This feature provides support for the following elements.
 * Text Box
 * Page Settings and Background Image
 * Document Properties
-##### Paragraph and Character Formatting 
+
+#### Paragraph and Character Formatting 
 
 
 This feature supports almost all the paragraph formatting options except Full-Justification. The supported paragraph formatting options are as follows.
@@ -848,60 +846,62 @@ This feature supports almost all the paragraph formatting options except Full-Ju
 * Line Spacing
 * Left, Right and Center Justification 
 
-Known Limitations
+#### Known Limitations
 
 * Borders around paragraphs.
 * Full Justification.
 * MultiColumn Text
-##### MultiColumn Text
+
+#### MultiColumn Text
 
 
 Word document containing multicolumn text is supported. 
 
 Known Limitations - The output can look different in case of full-justification formatting is applied onto the columns. 
 
-##### Headers and Footers
+#### Headers and Footers
 
 Page headers and footers are supported and can contain images, text, and page number fields.
 
-##### Bulleted, Numbered, and MultiLevel Lists
+#### Bulleted, Numbered, and MultiLevel Lists
 
 Bulleted, numbered, and multilevel lists are supported with proper indentation and alignments as represented in the Word document.
 
 Known Limitations - In some case, the image bullets preserved in the document may be replaced by the disc style bullet.
 
-##### Images
+#### Images
 
 The images present in the document are supported along with their corresponding positions and sizes.
 
 Known Limitations - However, the images placed inside a shape cannot be preserved in the generated PDF document.
 
-##### Tables
+#### Tables
 
 Both simple and nested tables are supported with proper preservation of text formatting and images present inside the table cell.
 
-Known Limitations
+#### Known Limitations
 
 * Tables making use of patterns and 3D borders cannot be retained in the output document.
 * Absolutely positioned tables are not supported.
-##### Breaks
+
+#### Breaks
 
 
 Columns, section, line and page breaks are fully supported.
 
-##### OLEObject
+#### OLEObject
 
 OLEObjects are partially supported, that is the image that represents a particular document that is available in the generated PDF document. But the object associated with the object cannot be converted into the generated document.
 
-##### Text Box
+#### Text Box
 
 The text value present in the text box can be rendered as text in its actual position in the generated PDF document.
 
-##### Page Settings
+#### Page Settings
 
 The actual page settings can be preserved in the generated PDF document that includes page size, orientation, page borders and its background image, if available.
 
-##### Document Properties
+#### Document Properties
 
 The document properties present in the Word document can also be preserved in the generated PDF Document.
 
@@ -918,13 +918,13 @@ The following are the list of unsupported elements that cannot be preserved in t
 * Charts
 * Table of Contents
 
-Known Limitations - Pagination 
+ Known Limitations - Pagination 
 
 Pagination
 
 Essential DocIO, when generating the PDF document, makes sensible decisions while laying out the text and its supported elements. However, pagination is not guaranteed with all the documents.
 
-### Tiff to PDF
+## Tiff to PDF
 
 TIFF image can be converted into PDF document and it can be done by accessing each frame of the multiframe TIFF image and rendering it in each page of the PDF document.
 
@@ -932,7 +932,7 @@ The code sample to illustrate the same is as follows.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -978,9 +978,9 @@ pdfDocument.Save("Sample.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1024,7 +1024,9 @@ pdfDocument.Save("Sample.pdf")
 
 pdfDocument.Close(True)
 
-### RTF to PDF
+{% endhighlight %}
+
+## RTF to PDF
 
 Essential PDF supports conversion of RTF document into PDF document. This is achieved in two ways, they are using,
 
@@ -1035,7 +1037,7 @@ The following code sample illustrates the conversion of RTF to PDF using Bitmap.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1071,9 +1073,9 @@ pdfDocument.Save("Sample.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1109,13 +1111,13 @@ pdfDocument.Save("Sample.pdf")
 
 pdfDocument.Close(True)
 
-
+{% endhighlight %}
 
 The following code sample illustrates the conversion of RTF to PDF using Metafile.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1153,9 +1155,9 @@ pdfDocument.Save("Sample.pdf");
 
 pdfDocument.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1193,7 +1195,9 @@ pdfDocument.Save("Sample.pdf")
 
 pdfDocument.Close(True)
 
-### XPS to PDF
+{% endhighlight %}
+
+## XPS to PDF
 
 An XPS (XML Paper Specification) document standardized by Ecma International can be converted to PDF.
 
@@ -1201,16 +1205,14 @@ The XPS document format consists of XML structured markup that defines the layou
 
 XPS documents can be converted to PDF using the Convert method of the XPSToPdfConverter class.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img6.png)' | markdownify }}
-{:.image }
-_Note: You need to add the Syncfusion.XPS namespace to work with the XPSToPdfConverter class._
+> Note: You need to add the Syncfusion.XPS namespace to work with the XPSToPdfConverter class.
 
 
 An XPS document can be converted into PDF using the following code sample.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1228,9 +1230,9 @@ document.Save("Sample.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1248,9 +1250,11 @@ document.Save("Sample.pdf")
 
 document.Close(True)
 
-Supported Elements
+{% endhighlight %}
 
-_Table_ _31__: List of Supported Elements_
+#### Supported Elements
+
+_Table_ _31_: List of Supported Elements
 
 <table>
 <tr>
@@ -1394,6 +1398,7 @@ No</td></tr>
 VisualBrush</td><td>
 No</td></tr>
 </table>
+
 ### Tagged PDF
 
 HTML to PDF conversion handled using MSHTML rendering library can now generate tagged PDF documents.
@@ -1406,7 +1411,7 @@ A tagged PDF can be converted from a Web page or HTML string by using the follow
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1434,9 +1439,9 @@ document.Save("Sample.pdf");
 
 document.Close(true);
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1466,13 +1471,11 @@ document.Save("Sample.pdf")
 
 document.Close(True)
 
+{% endhighlight %}
 
+> Note: The HTML to PDF conversion that creates a metafile during the evolution, would interpret the content as either text or an image. The outcome of this PDF would contain only paragraph and figure tags; hyperlinks are not supported.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img7.png)' | markdownify }}
-{:.image }
-_Note: The HTML to PDF conversion that creates a metafile during the evolution, would interpret the content as either text or an image. The outcome of this PDF would contain only paragraph and figure tags; hyperlinks are not supported._
-
-### Text Extraction
+## Text Extraction
 
 PDF file represents an ordered sequence of fixed pages. The planned appearance of everything that each page contains is completely specified down to the smallest detail. All the graphics, images, and text are specified to appear at precise spots on the page in a particular color of a given and fixed size, and so on.
 
@@ -1482,7 +1485,7 @@ The following code example illustrates this.
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1498,9 +1501,9 @@ PdfPageBase page = ldoc.Pages[0];
 
 string s = page.ExtractText();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1516,15 +1519,11 @@ Dim page As PdfPageBase = ldoc.Pages(0)
 
 Dim s As String = page.ExtractText()
 
+{% endhighlight %}
 
+> Note: The text is  extracted in the order in which it is written in the document stream and not in the order in which it is viewed in the PDF viewer.
 
-{{ '![C:/Users/ApoorvahR/Desktop/Note.png](Document-Conversion_images/Document-Conversion_img8.png)' | markdownify }}
-{:.image }
-_Note: The text is  extracted in the order in which it is written in the document stream and not in the order in which it is viewed in the PDF viewer._
-
-### Image Extraction
-
-
+## Image Extraction
 
 Essential PDF provides support to extract images from an existing PDF document. You can extract images by using the ExtractImages method in the PdfLoadedPage class.
 
@@ -1532,7 +1531,7 @@ The following code example illustrates how to extract images from a PDF document
 
 
 
-[C#]
+{% highlight c# %}
 
 
 
@@ -1548,9 +1547,9 @@ Extracts images from first page.
 
 Image[] img = page.ExtractImages();
 
+{% endhighlight %}
 
-
-[VB]
+{% highlight vbnet %}
 
 
 
@@ -1566,5 +1565,5 @@ Dim page As PdfPageBase = ldoc.Pages(0)
 
 Dim img As Image() = page.ExtractImages()
 
-
+{% endhighlight %}
 

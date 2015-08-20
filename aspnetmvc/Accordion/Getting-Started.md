@@ -38,7 +38,6 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 * Please add the below code in layout._cshtml file head section to add the necessary script and CSS files to render the Accordion control.
 
 {% highlight html %}
-[layout._cshtml]
 
 <head>
 
@@ -70,7 +69,7 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
 {% highlight html %}
 
-[CSHTML]
+
 
 @{Html.EJ().Accordion("basicAccordion").Width("400px").EnableMultipleOpen(true).Items(data =>
 
@@ -218,7 +217,7 @@ You can open multiple Accordion tabs to view all products at a time. To render t
 You can also open all the panels during initialization using the SelectedItems property of the Accordion control. The following code sample illustrates the opening of multiple tabs by passing the tab index values of tab.
 
 {% highlight html %}
-[CSHTML]
+
 
     @{
 
@@ -369,7 +368,7 @@ Accordion control by default is rendered in a regular rectangle. You can modify 
 
 
 {% highlight html %}
-[CSHTML]
+
 
 <div id="ProductsAccordion" style="width: 400px">
 
@@ -524,7 +523,7 @@ Up and Down arrow icons are available in e-arrowheadup and e- arrowheaddown clas
 You can set the Up/Down arrow icon to Accordion header, by adding e-arrowheadup and e-arrowheaddown class to SelectedHeader and Header properties respectively.
 
 {% highlight html %}
-[CSHTML]
+
 
 @{Html.EJ().Accordion("basicAccordion").EnableMultipleOpen(true).ShowRoundedCorner(true).CustomIcon(icon => icon.SelectedHeader("e-arrowheadup").Header("e-arrowheaddown")).Items(data =>
 

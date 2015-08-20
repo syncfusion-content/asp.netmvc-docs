@@ -98,7 +98,7 @@ Rectangle Tool
 
 The following code example illustrates how to draw the rectangle shape at run time. When drawing tool is defined and activated, you can click and drag the page to draw the defined node.
 
-{% highlight html %}
+{% highlight js %}
 
 
 
@@ -161,7 +161,7 @@ To draw a connector, the required connector type is assigned to the drawType pro
 
 The following code example illustrates how to draw a straight connector at runtime.
 
-{% highlight html %}
+{% highlight js %}
 
 
 

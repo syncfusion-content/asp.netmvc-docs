@@ -3,7 +3,7 @@ layout: post
 title: Series
 description: series
 platform: ejmvc
-control: OLAP Chart
+control: OLAPChart
 documentation: ug
 ---
 
@@ -17,13 +17,13 @@ A combination Chart combines two or more series types in a single Chart. But the
 
 1. Can’t combine Column and Bar series.
 2. Pie Chart can’t be used with other series types.
-{% highlight html %}
-[MVC]
-
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { comm.Type(SeriesType.Column).Tooltip(tool => { tool.Visible(true); }); }).Size(size => size.Height("460").Width("950")).ClientSideEvents(oEve => { oEve.SeriesRendering("onSeriesRenders"); })
-
-{% endhighlight  %}
 {% highlight js %}
+
+@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm 
+=> { comm.Type(SeriesType.Column).Tooltip(tool => { tool.Visible(true); }); }).Size(size => 
+size.Height("460").Width("950")).ClientSideEvents(oEve => { oEve.SeriesRendering("onSeriesRenders"); })
+
+
 <script type="text/javascript">
 
 function onSeriesRenders(args) {
@@ -40,20 +40,20 @@ this.model.series[5].marker.visible = true;
 
 
 
-![C:/Users/Tamilarasu .M/Pictures/document/Chart/Customizingchartseries.png](Series_images/Series_img1.png)
+![](Series_images/Series_img1.png)
 
 
 
 ## Series Points Customization
 
 OlapChart series is customized using fill, border width and border color. The stroke-width of the line, spline series is customized using width property of series.  The series color is customized using fill property of series. The border color and width of the column/bar is customized using border property of series. And the column/bar chart are customized using the ‘fill’ and ‘border’ property of each point.
-{% highlight html %}
-[MVC]
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).ClientSideEvents(oEve => { oEve.SeriesRendering("onSeriesRenders"); })
-
-{% endhighlight %}
 {% highlight js %}
+
+@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm =>
+ { comm.Type(SeriesType.Column); }).ClientSideEvents(oEve => { oEve.SeriesRendering("onSeriesRenders"); })
+
+
 <script type="text/javascript">
 
 function onSeriesRenders(args) {

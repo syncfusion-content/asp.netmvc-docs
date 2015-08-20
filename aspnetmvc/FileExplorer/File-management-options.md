@@ -15,6 +15,7 @@ By clicking the New Folder Icon, the highlighted model dialog opens as shown in 
 
 ![](File-management-options_images/File-management-options_img1.png)
 
+_Figure 7: FileExplorer with adding folder model dialog_
 
 ## Download option
 
@@ -22,7 +23,7 @@ The Download option is used to download the required files from the online file 
 
 ![](File-management-options_images/File-management-options_img2.png)
 
-
+_Figure 8: FileExplorer with download file option_
 
 ## Upload option
 
@@ -30,6 +31,7 @@ You can upload files to the required place using the built-in Upload box control
 
 ![](File-management-options_images/File-management-options_img3.png)
 
+_Figure 9: FileExplorer with upload option_
 
 ## Search support
 
@@ -37,9 +39,12 @@ To easily search the files in file system, you are provided with the Search bar 
 
 ![](File-management-options_images/File-management-options_img4.png)
 
+_Figure 10: FileExplorer with search option_
 
 ## Sorting support
 
 In the Details view, you can sort the files using required fields. For example, in the following screenshot the Details view files are sorted in ascending order with respect to the modified date of files and folders.
 
 ![](File-management-options_images/File-management-options_img5.png)
+
+_Figure 11: FileExplorer in details view with sorting support_

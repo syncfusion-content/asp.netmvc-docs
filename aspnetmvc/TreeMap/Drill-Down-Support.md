@@ -41,7 +41,7 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 </table>
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().TreeMap("treemap")
@@ -96,12 +96,12 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 
 
 
-![C:/Users/NitishS/Desktop/Screenshot (106).png](Drill-Down-Support_images/Drill-Down-Support_img1.png)
+![](Drill-Down-Support_images/Drill-Down-Support_img1.png)
 
 
 _Before Drill Down_
 
-![DrillDown](Drill-Down-Support_images/Drill-Down-Support_img2.png)
+![](Drill-Down-Support_images/Drill-Down-Support_img2.png)
 
 
 _After Drill Down_

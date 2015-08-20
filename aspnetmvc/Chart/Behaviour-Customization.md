@@ -17,9 +17,6 @@ You can acquire the information related to a particular data point of series by 
 
 
 {% highlight html %}
-[MVC]
-
-
 
  @(Html.EJ().Chart("chartcontainer")
 
@@ -35,8 +32,6 @@ You can acquire the information related to a particular data point of series by 
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
-
 
 
   <script type="text/javascript">
@@ -71,7 +66,7 @@ This event is handled when the Chart gets loaded; a parameter sender is passed t
 
 {% highlight html %}
 
-[MVC]
+
 
 
 
@@ -109,8 +104,6 @@ This event is handled when the Chart gets loaded; a parameter sender is passed t
 
 This event is handled before the Chart gets rendered; a parameter sender is passed to the handler. Using sender.model, you can access the Chart properties that were passed to the chart. 
 {% highlight html %}
-[MVC]
-
 
 
 @(Html.EJ().Chart("container")
@@ -125,9 +118,6 @@ This event is handled before the Chart gets rendered; a parameter sender is pass
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -144,10 +134,7 @@ This event is handled before the Chart gets rendered; a parameter sender is pass
 ### TitleRendering: function
 
 This event is handled before the Chart title gets rendered; a parameter sender is passed to the handler. Using sender.data.title, you can change the title of the Chart after the Chart is loaded.
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("container")
 
@@ -161,9 +148,6 @@ This event is handled before the Chart title gets rendered; a parameter sender i
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -183,11 +167,7 @@ This event is handled before the Chart title gets rendered; a parameter sender i
 
 This event is handled before the Chart axis gets rendered; a parameter sender is passed to the handler. Using sender.data.axes, you can change the axis related properties after the Chart is loaded.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("container")
 
@@ -201,9 +181,6 @@ This event is handled before the Chart axis gets rendered; a parameter sender is
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -225,8 +202,6 @@ This event is handled after the Chart axis range gets calculated; a parameter se
 
 
 {% highlight html %}
-[MVC]
-
 
 
   @(Html.EJ().Chart("container")
@@ -241,10 +216,6 @@ This event is handled after the Chart axis range gets calculated; a parameter se
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -262,9 +233,6 @@ This event is handled after the Chart axis range gets calculated; a parameter se
 
 This event is handled before the Chart axis title gets rendered; a parameter sender is passed to the handler. Using sender.data.Title, you can change the axis title after the Chart is loaded.
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("container")
 
@@ -278,9 +246,6 @@ This event is handled before the Chart axis title gets rendered; a parameter sen
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -300,9 +265,6 @@ This event is handled before the Chart axis title gets rendered; a parameter sen
 
 This event is handled before the Chart axis label gets rendered; a parameter sender is passed to the handler. Using sender.data.label.Text, you can change the axis labels after the Chart is loaded.
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("container")
 
@@ -315,11 +277,6 @@ This event is handled before the Chart axis label gets rendered; a parameter sen
          )
 {% endhighlight  %}
 {% highlight js %}
-
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -339,10 +296,7 @@ This event is handled before the Chart axis label gets rendered; a parameter sen
 This event is handled before the Chart series gets rendered; a parameter sender is passed to the handler. Using sender.data.series, you can get access to the series properties.
 
 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -356,10 +310,6 @@ This event is handled before the Chart series gets rendered; a parameter sender 
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -378,10 +328,7 @@ This event is handled before the Chart series gets rendered; a parameter sender 
 
 This event is handled before the marker of each series point gets rendered; a parameter sender is passed to the handler. Using sender.data you can get access style and location of the symbol.
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
   @(Html.EJ().Chart("container")
@@ -396,9 +343,6 @@ This event is handled before the marker of each series point gets rendered; a pa
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -417,11 +361,7 @@ This event is handled before the marker of each series point gets rendered; a pa
 
 This event is handled before the dataLabel of each series points gets rendered; a parameter sender is passed to the handler. Using sender.data.text you can change the dataLabel of each point in the series.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -436,9 +376,6 @@ This event is handled before the dataLabel of each series points gets rendered; 
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -456,11 +393,7 @@ This event is handled before the dataLabel of each series points gets rendered; 
 
 This event is handled after the series animation is completed; a parameter sender is passed to the handler.  
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("container")
 
@@ -474,10 +407,6 @@ This event is handled after the series animation is completed; a parameter sende
 
 {% endhighlight %}
 {% highlight js %}
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -495,10 +424,7 @@ This event is handled after the series animation is completed; a parameter sende
 ### LegendItemRendering: function
 
 This event is handled before the legend of each series points gets rendered; a parameter sender is passed to the handler. Using sender.data.legendItem.Text you can change the text of each legend text.
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -512,10 +438,6 @@ This event is handled before the legend of each series points gets rendered; a p
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -532,10 +454,7 @@ This event is handled before the legend of each series points gets rendered; a p
 ### LegendItemClick: function
 
 This event is handled when you click the legend item; a parameter sender is passed to the handler.  
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("container")
 
@@ -548,11 +467,6 @@ This event is handled when you click the legend item; a parameter sender is pass
          )
 {% endhighlight  %}
 {% highlight js %}
-
-
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -571,11 +485,7 @@ This event is handled when you click the legend item; a parameter sender is pass
 
 This event is handled when you move the mouse over the legend item; a parameter sender is passed to the handler. Using sender.data.legendItem.Text you can change the text of each legend text.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -588,10 +498,6 @@ This event is handled when you move the mouse over the legend item; a parameter 
          )
 {% endhighlight  %}
 {% highlight js %}
-
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -611,10 +517,7 @@ This event is handled when you move the mouse over the legend item; a parameter 
 This event is handled after the bounds for legend is calculated.  A parameter sender is passed to the handler.  Using sender.data.legendBound, you can access the bounds of the Chartlegend.
 
 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -628,9 +531,6 @@ This event is handled after the bounds for legend is calculated.  A parameter se
 
 {% endhighlight  %}
 {% highlight js %}
-
-[JS]
-
 
 
      <script type="text/javascript">
@@ -647,15 +547,11 @@ This event is handled after the bounds for legend is calculated.  A parameter se
 
 ### Tooltip Events:
 
-### ToolTipInitialize: function
+#### ToolTipInitialize: function
 
 This event is handled before the tooltip gets rendered.  A parameter sender is passed to the handler.  Using sender.data.currentText, you can change the tooltip text.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
   @(Html.EJ().Chart("container")
 
@@ -669,8 +565,6 @@ This event is handled before the tooltip gets rendered.  A parameter sender is p
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
-
 
 
      <script type="text/javascript">
@@ -690,10 +584,7 @@ This event is handled before the tooltip gets rendered.  A parameter sender is p
 
 This event is handled before the tooltip for axis gets rendered when crosshair is enabled.  A parameter sender is passed to the handler.  Using sender.data.currentTrackText, you can change the tooltip text.
 
-{% highlight html %}
-
-[MVC]
-
+{% highlight js %}
 
 
  @(Html.EJ().Chart("container")
@@ -709,9 +600,6 @@ This event is handled before the tooltip for axis gets rendered when crosshair i
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
-
-
 
      <script type="text/javascript">
 
@@ -729,11 +617,7 @@ This event is handled before the tooltip for axis gets rendered when crosshair i
 
 This event is handled before the tooltip for trackball get rendered when trackball is enabled.  A parameter sender is passed to the handler.  Using sender.data.currentText, you can change the tooltip text.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
  @(Html.EJ().Chart("container")
 
@@ -748,9 +632,6 @@ This event is handled before the tooltip for trackball get rendered when trackba
 
 {% endhighlight %}
 {% highlight js %}
-[JS]
-
-
 
      <script type="text/javascript">
 

@@ -17,7 +17,7 @@ Set Id for Radio Button control as follows.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 	@*set new id value as follows*@
 
@@ -38,7 +38,7 @@ Setting a new prefix id for Radio Button control is as follows.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 	@*set new idPrefix  value as follows*@
 
@@ -69,7 +69,7 @@ To identify, on the server side, which one was checked, give different values fo
 Set name and value for each radio button control as follows.
 
 
-{% highlight html %}
+{% highlight js %}
 
 	@*set name and value for each radio button as follows*@
 

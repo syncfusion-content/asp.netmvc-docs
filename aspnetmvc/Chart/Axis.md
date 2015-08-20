@@ -19,9 +19,7 @@ Charts typically have two axes that are used to measure and categorize data: a v
 * Logarithmic
 
 You can choose any of the Chart axis type using the” ValueType” property in axis. Axis calculates the range and interval automatically based on the series data points. 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("container")
@@ -49,10 +47,7 @@ You can choose any of the Chart axis type using the” ValueType” property in 
 ## Double 
 
 By default the ValueType of the axis is double and it represents the numerical data.
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -100,7 +95,7 @@ With the default auto range calculation, the range padding properties allows you
 
 ### Range Padding:
 
-### None:
+#### None:
 
 By default, the RangePadding for Numerical Axis is none.
 
@@ -112,7 +107,7 @@ The following screenshot displays a Chart’s x-axis with RangePadding set to No
 
 
 
-### Additional:
+#### Additional:
 
 If RangePadding for Numerical Axis is set to Additional, the interval of the axis is added as padding.
 
@@ -124,7 +119,7 @@ The following screenshot illustrates a Chart’s x-axis with RangePadding set to
 
 
 
-### Normal:
+#### Normal:
 
 Normal RangePadding for a Numerical Axis is used mostly for the y-axis to have padding based on the Range calculation.
 
@@ -136,7 +131,7 @@ The following screenshot illustrates a Chart’s y-axis with RangePadding set to
 
 
 
-### Round:
+#### Round:
 
 Round RangePadding for a Numerical Axis rounds the range of the Chart axis to the nearest possible value divisible by the interval.
 
@@ -161,10 +156,7 @@ The DateTime Axis has a property IntervalType that sets the DateTime interval to
 * Years
 
 The Interval property of DateTime Axis can be any double value based on the IntervalType.
-{% highlight html %}
- [MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -214,7 +206,7 @@ With the default auto range calculation, the RangePadding properties for date-ti
 
 ### Range Padding:
 
-### None:
+#### None:
 
 By default, the RangePadding for a DateTime Axis is none.
 
@@ -226,7 +218,7 @@ The following screenshot illustrates a Chart’s x-axis with RangePadding set to
 
 
 
-### Additional:
+#### Additional:
 
 If RangePadding for DateTime Axis is set to Additional, the DateTime interval of the axis is added as padding.
 
@@ -238,7 +230,7 @@ The following screenshot illustrates a Chart’s x-axis with RangePadding set to
 
 
 
-### Round:
+#### Round:
 
 Round RangePadding for a DateTime Axis rounds the range of the Chart axis to the nearest possible Date Time value.
 
@@ -253,9 +245,7 @@ The following screenshot illustrates a Chart’s x-axis with RangePadding set to
 ## Category Axis
 
 Category (x) axis displays text labels instead of numerical intervals. By default, the interval is 1 for which all the labels are displayed. To display every nth label, you can set that in Interval property. For example, to display every 2nd label, you can set Interval as 2. 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -309,10 +299,7 @@ Category (x) axis displays text labels instead of numerical intervals. By defaul
 ## Logarithmic Axis
 
 An axis displaying a logarithmic scale is very useful when your data values span orders of magnitude. Log axis is enabled using ValueType property.
-{% highlight html %}
- [MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -386,10 +373,7 @@ An Integer property used to indicate number of labels per 100 pixels. By default
 ## Multiple Axis
 
 In cases of multiple series, a Chart can have multiple x and y axes to represent each series. The axes can be arranged in stacking or side-by-side mode. By default, the axes are arranged in side-by-side mode. In order to arrange the axis in a stacking mode, you can split the Chart into number of rows or columns using RowDefinitions and ColumnDefinitions and then you can place the required axis in the desired row and column. Heights of the vertical axes are customized using the RowHeight property in RowDefinitions and the width of the horizontal axes are customized using ColumnWidth property in ColumnDefinitions.
-{% highlight html %}
- [MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -494,10 +478,7 @@ In the above code, you can remove the RowDefinition and RowIndex from axis to ar
 ### Spanning Axis:
 
 Charts having multiple series have multiple x and y axis to represent each series. By default, the axes are arranged in the corresponding row/column position. Spanning feature allows you to span the axis across multiple panes/rows. 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -636,10 +617,7 @@ Charts having multiple series have multiple x and y axis to represent each serie
 ## Axis Title
 
 You can customize the ejChart Axis title text, font styles and color using “Title” property of axis. 
-{% highlight html %}
-[MVC]
-
-
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -683,9 +661,7 @@ Essential Chart supports TrimmingAxisTitles with the properties, EnableTrim and 
 
 
 
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("container") 
@@ -708,9 +684,7 @@ Essential Chart supports TrimmingAxisTitles with the properties, EnableTrim and 
 ## Labels
 
 The axis labels are present along the axis showing the value of the data it corresponds to. You can further customize the Chart axis labels using “Font” and “LabelFormat” properties of the axis. 
-{% highlight html %}
- [MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -747,9 +721,7 @@ There are two types of LabelPlacement:
 
 * BetweenTicks
 * OnTicks
-{% highlight html %}
- [MVC]
-
+{% highlight js %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -766,7 +738,6 @@ There are two types of LabelPlacement:
 
   )
 
-
 {% endhighlight  %}
 ![](Axis_images/Axis_img19.png)
 
@@ -781,9 +752,7 @@ There are two types of LabelPlacement:
 ### Label Position
 
 Axis labels can further be customized to render inside the chart area using the property LabelPosition. By default, it is set as outside. This helps to display labels in a proper manner while multiple axes are used in the chart.
-{% highlight html %}
-[MVC]
-
+{% highlight js %}
 
 
  @(Html.EJ().Chart("chartcontainer") 
@@ -798,38 +767,6 @@ Axis labels can further be customized to render inside the chart area using the 
 
 ![](Axis_images/Axis_img21.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 _Figure46: Label inside Chart_
 
 
@@ -839,8 +776,7 @@ _Figure46: Label inside Chart_
 Chart provides support for trimming y axis labels and x axis labels by using the properties EnableTrim and MaximumLabelWidth. These are used to show the lengthy labels in a shorter form. On mouse hover, it shows the full label in the tooltip.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -871,9 +807,6 @@ It is rendered between the major tick lines of Chart axis. To display MinorTickL
 
 
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -907,8 +840,6 @@ You can customize tick lines and render them inside the chart area using the pro
 
 {% highlight html %}
 
-[MVC]
-
 @(Html.EJ().Chart("chartcontainer") 
 
        .PrimaryXAxis(pr=>pr.TickLinesPosition(TickLinesPosition.Inside))
@@ -937,9 +868,6 @@ It is rendered between the major gridlines of Chart area.To display minor grid l
 
 
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -985,7 +913,6 @@ Immediate adjacent band of every even grid bands are Odd Grid Bands. You can dis
 
 
 {% highlight html %}
-[MVC]
 
 @(Html.EJ().Chart("container")
 
@@ -1005,37 +932,7 @@ Immediate adjacent band of every even grid bands are Odd Grid Bands. You can dis
 {% endhighlight  %}
 _Figure48: Chart explaining grid band_
 
-![C:/Users/dineshkumarn/Desktop/ug line.png](Axis_images/Axis_img26.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](Axis_images/Axis_img26.png)
 
 ## Inversed Axis
 
@@ -1043,9 +940,6 @@ You can display the Chart series in to inversed position using “IsInversed” 
 
 
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1069,9 +963,6 @@ You can display the Chart series in to inversed position using “IsInversed” 
 
 By default, the x-axis is arranged horizontally at the bottom of the Chart and the y-axis is arranged vertically at the left side of the Chart. You can change the alignment of the axis by setting OpposedPosition to true, which arranges the x-axis at the top and the y-axis at the right of the Chart.  
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1104,9 +995,6 @@ Sometimes the Chart dimensions could cause the labels to intersect. You can avoi
 
 
 {% highlight html %}
-[MVC]
-
-
 
 @(Html.EJ().Chart("chartcontainer")
 

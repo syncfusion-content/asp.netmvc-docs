@@ -46,7 +46,6 @@ The following steps explains you the details about rendering the button with dif
 1. In the CSHTML page, configure the button widget as follows.
 
 {% highlight html %}
-[CSHTML]
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -156,317 +155,314 @@ The following steps explains you the details about rendering the Button with abo
 
 1. In the CSHTML page, configure the Button widget as follows.
 
-{% highlight html %}
+   ~~~ html
 
-[CSHTML]
+		@*Add the code in CSHTML page to configure and initialize the control*@
 
+		  @* Set the different content types and use the necessary build-in icons for button control as follows.*@
 
+		  <div class="control">           
 
-@*Add the code in CSHTML page to configure and initialize the control*@
-
-
-
-
-
-  @* Set the different content types and use the necessary build-in icons for button control as follows.*@
-
-  <div class="control">           
-
-                        @Html.EJ().Button("button_imageOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+								@Html.EJ().Button("button_imageOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
 
 
 
-                        @Html.EJ().Button("button_textOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextOnly)
+								@Html.EJ().Button("button_textOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextOnly)
 
 
 
-                        @Html.EJ().Button("button_imageBoth").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
+								@Html.EJ().Button("button_imageBoth").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
 
 
 
-                        @Html.EJ().Button("button_textAndImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
+								@Html.EJ().Button("button_textAndImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
 
 
 
-                        @Html.EJ().Button("button_imageTextImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
+								@Html.EJ().Button("button_imageTextImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
 
-            <br />
+					<br />
 
-            <br />
+					<br />
 
-                        @Html.EJ().Button("button_small_imageOnly").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
-
-
-
-                        @Html.EJ().Button("button_small_textOnly").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextOnly)
+								@Html.EJ().Button("button_small_imageOnly").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
 
 
 
-                        @Html.EJ().Button("button_small_imageBoth").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
+								@Html.EJ().Button("button_small_textOnly").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextOnly)
 
 
 
-                        @Html.EJ().Button("button_small_textAndImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
+								@Html.EJ().Button("button_small_imageBoth").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
 
 
 
-                        @Html.EJ().Button("button_small_imageTextImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
+								@Html.EJ().Button("button_small_textAndImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
 
 
 
-        </div>
-
-{% endhighlight %}
-
-Execute the above code to render the following output.
-
-![](Easy-Customization_images/Easy-Customization_img2.png)
+								@Html.EJ().Button("button_small_imageTextImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
 
 
 
-_Figure 6: Button with different content types_
+				</div>
 
-### Image Position
+   ~~~
+   {:.prettyprint }
 
-To provide the best look and feel for Button, position of button images is an important customizable option. With ImagePosition property you can easily customize the position of images inside button without using any complex CSS. ImagePosition property is applicable only with the TextAndImageContentType property. This property supports the following values.
+	 Execute the above code to render the following output.
 
-_Table3: List of values supported by ContentType property_
-
-<table>
-<tr>
-<td>
-ImageLeft</td><td>
-Support for aligning text in right and image in left.</td></tr>
-<tr>
-<td>
-ImageRight</td><td>
-Support for aligning text in left and image in right.</td></tr>
-<tr>
-<td>
-ImageTop</td><td>
-Support for aligning text in bottom and image in top.</td></tr>
-<tr>
-<td>
-ImageBottom</td><td>
-Support for aligning text in top and image in bottom.</td></tr>
-</table>
+	 ![](Easy-Customization_images/Easy-Customization_img2.png)
 
 
-The following steps explains you the details about rendering the Button with the above mentioned image Position options.
+
+	 _Figure 6: Button with different content types_
+
+   ### Image Position
+
+	To provide the best look and feel for Button, position of button images is an important customizable option. With ImagePosition property you can easily customize the position of images inside button without using any complex CSS. ImagePosition property is applicable only with the TextAndImageContentType property. This property supports the following values.
+
+	_Table3: List of values supported by ContentType property_
+
+	<table>
+	<tr>
+	<td>
+	ImageLeft</td><td>
+	Support for aligning text in right and image in left.</td></tr>
+	<tr>
+	<td>
+	ImageRight</td><td>
+	Support for aligning text in left and image in right.</td></tr>
+	<tr>
+	<td>
+	ImageTop</td><td>
+	Support for aligning text in bottom and image in top.</td></tr>
+	<tr>
+	<td>
+	ImageBottom</td><td>
+	Support for aligning text in top and image in bottom.</td></tr>
+	</table>
+
+
+	The following steps explains you the details about rendering the Button with the above mentioned image Position options.
 
 2. In the CSHTML page, configure the Button widget as follows.
 
 
-{% highlight html %}
-[CSHTML]
-
-@*Add the code in CSHTML page to configure and initialize the control*@
+   ~~~ javascript
 
 
-
-@* Set the different image position for button control as follows.*@
-
-    <div class="control">
+	@*Add the code in CSHTML page to configure and initialize the control*@
 
 
 
-        @Html.EJ().Button("button_normal_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+	@* Set the different image position for button control as follows.*@
+
+		<div class="control">
 
 
 
-        @Html.EJ().Button("button_mini_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+			@Html.EJ().Button("button_normal_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-        @Html.EJ().Button("button_small_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+			@Html.EJ().Button("button_mini_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-        @Html.EJ().Button("button_medium_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+			@Html.EJ().Button("button_small_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-        @Html.EJ().Button("button_large_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
-
-        <br />
-
-        <br />
-
-        @Html.EJ().Button("button_normal_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+			@Html.EJ().Button("button_medium_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-        @Html.EJ().Button("button_mini_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+			@Html.EJ().Button("button_large_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+
+			<br />
+
+			<br />
+
+			@Html.EJ().Button("button_normal_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
 
 
-        @Html.EJ().Button("button_small_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+			@Html.EJ().Button("button_mini_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
 
 
-        @Html.EJ().Button("button_medium_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+			@Html.EJ().Button("button_small_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
 
 
-        @Html.EJ().Button("button_large_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
-
-        <br />
-
-        <br />
-
-        @Html.EJ().Button("button_imageTop").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageTop).Width("60")
+			@Html.EJ().Button("button_medium_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
 
 
 
-        @Html.EJ().Button("button_imageBottom").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageBottom).Width("60")
+			@Html.EJ().Button("button_large_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+
+			<br />
+
+			<br />
+
+			@Html.EJ().Button("button_imageTop").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageTop).Width("60")
 
 
 
-    </div>
-{% endhighlight  %}
-
-
-Execute the above code to render the following output.
-
-![](Easy-Customization_images/Easy-Customization_img3.png)
+			@Html.EJ().Button("button_imageBottom").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageBottom).Width("60")
 
 
 
-_Figure 7: Button with different image positions_
+		</div>
 
-### Theme support
+   ~~~
+   {:.prettyprint }
 
-You can control the style and appearance of Button control based on CSS classes. In order to apply styles to the Button control, you can refer two files namely, ej.widgets.core.min.css and ej.theme.min.css. When you refer the ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
 
-By default, there are 12 themes support available for Button control.
+	Execute the above code to render the following output.
 
-* default-theme
-* flat-azure-dark
-* fat-lime
-* flat-lime-dark
-* flat-saffron
-* flat-saffron-dark
-* gradient-azure
-* gradient-azure-dark
-* gradient-lime
-* gradient-lime-dark
-* gradient-saffron
-* gradient-saffron-dark
+	![](Easy-Customization_images/Easy-Customization_img3.png)
 
-### Custom CSS
 
-You can customize the appearance of Button control using CSS class. Define a CSS class as per requirement and assign the class name to CssClass property.
 
-The following steps explains you the details about rendering the Button with custom CSS.
+	_Figure 7: Button with different image positions_
+
+   ### Theme support
+
+	You can control the style and appearance of Button control based on CSS classes. In order to apply styles to the Button control, you can refer two files namely, ej.widgets.core.min.css and ej.theme.min.css. When you refer the ej.widgets.all.min.css file, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
+
+	By default, there are 12 themes support available for Button control.
+
+	* default-theme
+	* flat-azure-dark
+	* fat-lime
+	* flat-lime-dark
+	* flat-saffron
+	* flat-saffron-dark
+	* gradient-azure
+	* gradient-azure-dark
+	* gradient-lime
+	* gradient-lime-dark
+	* gradient-saffron
+	* gradient-saffron-dark
+
+   ### Custom CSS
+
+	You can customize the appearance of Button control using CSS class. Define a CSS class as per requirement and assign the class name to CssClass property.
+
+	The following steps explains you the details about rendering the Button with custom CSS.
 
 3. In the CSHTML page, configure the Button widget as follows.
 
-{% highlight html %}
-
-[CSHTML]
-
-@*Add the code in CSHTML page to configure and initialize the control*@
+   ~~~ html
 
 
-
-  @* Set Custom CSS class for button control as follows.*@
-
-<div class="control">
+		@*Add the code in CSHTML page to configure and initialize the control*@
 
 
 
-        @Html.EJ().Button("button_customCss1").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss1")
+		  @* Set Custom CSS class for button control as follows.*@
+
+		<div class="control">
 
 
 
-        @Html.EJ().Button("button_customCss2").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss2")
+				@Html.EJ().Button("button_customCss1").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss1")
 
 
 
-        @Html.EJ().Button("button_customCss3").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss3")
+				@Html.EJ().Button("button_customCss2").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss2")
 
 
 
-        @Html.EJ().Button("button_customCss4").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss4")
+				@Html.EJ().Button("button_customCss3").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss3")
 
 
 
-        @Html.EJ().Button("button_customCss5").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss5")
+				@Html.EJ().Button("button_customCss4").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss4")
 
 
 
-    </div>
+				@Html.EJ().Button("button_customCss5").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss5")
 
-{% endhighlight %}
+
+
+			</div>
+
+   ~~~
+   {:.prettyprint }
 
 4. Configure the CSS styles to apply on buttons.
 
-{% highlight css %}
+   ~~~ css 
 
-[CSS]
+ 
 
-<style type="text/css" class="cssStyles">
+		<style type="text/css" class="cssStyles">
 
-        /* Customize the button background */
+				/* Customize the button background */
 
-        .e-button.customCss1 {
+				.e-button.customCss1 {
 
-            background-color: #121111;
+					background-color: #121111;
 
-        }
+				}
 
-        .e-button.customCss2 {
+				.e-button.customCss2 {
 
-            background-color: #94bbd5;
+					background-color: #94bbd5;
 
-        }
+				}
 
-        .e-button.customCss3 {
+				.e-button.customCss3 {
 
-            background-color: #f3533c;
+					background-color: #f3533c;
 
-        }
+				}
 
-        .e-button.customCss4 {
+				.e-button.customCss4 {
 
-            background-color: #d1eeed;
+					background-color: #d1eeed;
 
-        }
+				}
 
-        .e-button.customCss5 {
+				.e-button.customCss5 {
 
-            background-color: #deb66e;
+					background-color: #deb66e;
 
-        }
+				}
 
-         /* Customize the button image & text color */
+				 /* Customize the button image & text color */
 
-        .e-button.customCss1.e-btn.e-select .e-icon, .e-button.customCss1.e-btn.e-select .e-btntxt {
+				.e-button.customCss1.e-btn.e-select .e-icon, .e-button.customCss1.e-btn.e-select .e-btntxt {
 
-            color: #94bbd5;
+					color: #94bbd5;
 
-        }
+				}
 
-        .e-button.customCss2.e-btn.e-select .e-icon, .e-button.customCss2.e-btn.e-select .e-btntxt {
+				.e-button.customCss2.e-btn.e-select .e-icon, .e-button.customCss2.e-btn.e-select .e-btntxt {
 
-            color: #121111;
+					color: #121111;
 
-        }
+				}
 
-        .e-button.customCss3.e-btn.e-select .e-icon, .e-button.customCss3.e-btn.e-select .e-btntxt {
+				.e-button.customCss3.e-btn.e-select .e-icon, .e-button.customCss3.e-btn.e-select .e-btntxt {
 
-            color: #cef6f7;
+					color: #cef6f7;
 
-        }
+				}
 
-        .e-button.customCss5.e-btn.e-select .e-icon, .e-button.customCss5.e-btn.e-select .e-btntxt {
+				.e-button.customCss5.e-btn.e-select .e-icon, .e-button.customCss5.e-btn.e-select .e-btntxt {
 
-            color: #534f4f;
+					color: #534f4f;
 
-        }
+				}
 
-    </style>
-{% endhighlight %}
+			</style>
+
+   ~~~
+   {:.prettyprint }
 
 Execute the above code to render the following output.
 

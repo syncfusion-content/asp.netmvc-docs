@@ -95,7 +95,7 @@ fields.Datasource(ViewBag.datasource)
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")
 // bind the resource id fields collection of each level.ResourceFields("OwnerId")))
-
+{% endhighlight %}
 {% highlight c# %}
 namespace MVCSampleBrowser.Controllers
 {
@@ -136,9 +136,7 @@ namespace MVCSampleBrowser.Controllers
 	}
 }
 {% endhighlight %}
-{% endhighlight %}
 
-</table>
 The output of the above code looks as follows.
 
 
@@ -157,13 +155,7 @@ The following steps defines the way to start with rendering multiple resources o
 
 * Define the appointment data with required resource-related information fields as follows.
 
-
-
-
-
 {% highlight c# %}
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -412,7 +404,7 @@ namespace MVCSampleBrowser.Controllers
 		public string color { set; get; }
 	}
 }
-
+{% endhighlight %}
 {% highlight html %}
 @(Html.EJ()
 .Schedule("Schedule1")
@@ -445,7 +437,6 @@ fields.Datasource(ViewBag.datasource)
 // bind the resource id fields collection of each level.ResourceFields("OwnerId")))
 
 {% endhighlight %}
-{% endhighlight %}
 
 
 
@@ -466,31 +457,31 @@ fields.Datasource(ViewBag.datasource)
 
 
 
-![](Resources_images/Resources_img4.png)
+   ![](Resources_images/Resources_img4.png)
 
 
 
-_Figure_ _90_:  schedule with multiple appointment window.
+   _Figure_ _90_:  schedule with multiple appointment window.
 
 2. Since the allowMultiple property is set to ‘true’ for this resource object, so you can select any number of available resources in it as follows.
 
 
 
-![](Resources_images/Resources_img5.png)
+   ![](Resources_images/Resources_img5.png)
 
 
 
-_Figure_ _91_:  schedule with multiple appointment window with different type owner.
+   _Figure_ _91_:  schedule with multiple appointment window with different type owner.
 
 3. The same appointment with the subject Test Ride is created for each resource individually as follows when you click the Done button.
 
 
 
-![](Resources_images/Resources_img6.png)
+   ![](Resources_images/Resources_img6.png)
 
 
 
-_Figure_ _92_:  schedule with saved multiple appointments with different type owner
+   _Figure_ _92_:  schedule with saved multiple appointments with different type owner
 
 
 

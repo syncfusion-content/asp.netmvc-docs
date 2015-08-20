@@ -93,7 +93,7 @@ using <Application name>.Models;
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight js %}
 
 @Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text")

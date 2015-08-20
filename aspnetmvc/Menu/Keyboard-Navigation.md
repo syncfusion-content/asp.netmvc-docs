@@ -50,32 +50,90 @@ Navigates to next group.</td></tr>
 1. Add the following code for Keyboard navigation in your Menu control.
 
 
-{% highlight html %}
+   ~~~ js
 
 
-[CSHTML]// Add the following code for Keyboard navigation in our Menu control.<div class="imgframe">    @Html.EJ().Menu("keyboard").Items(items =>        {            items.Add().Id("Home").Text("Home").Children(child =>                {                    child.Add().Text("Foundation");                    child.Add().Text("Launch");                    child.Add().Text("About").Children(child1 =>                    {                        child1.Add().Text("Company");                        child1.Add().Text("Location");                    });                });            items.Add().Text("Services").Children(child =>                {                    child.Add().Text("Consulting");                    child.Add().Text("Outsourcing");                });            items.Add().Text("About");            items.Add().Id("Contact").Text("Contact Us").Children(child =>                {                    child.Add().Text("Contact number");                    child.Add().Text("E-mail");                });            items.Add().Id("Careers").Text("Careers").Children(child =>                 {                     child.Add().Text("Position").Children(child1 =>                             {                                 child1.Add().Text("Developer");                                 child1.Add().Text("Manager");                             });                     child.Add().Text("Apply online");                 });        }).Width("500")    </div>
-{% endhighlight %}
-{% highlight js %}
-[JavaScript]// Add the following code in your <script> section.<script type="text/javascript">        jQuery(function ($) {            //Control focus key            $(document).on("keydown", function (e) {                if (e.altKey && e.keyCode === 74) { // j- key code.                    $("#keyboard").focus();                }            });        });</script>
+		// Add the following code for Keyboard navigation in our Menu control.
+		<div class="imgframe"> 
+		   @Html.EJ().Menu("keyboard").Items(items => 
+		   { 
+			   items.Add().Id("Home").Text("Home").Children(child =>
+			   { 
+				   child.Add().Text("Foundation");
+				   child.Add().Text("Launch"); 
+				   child.Add().Text("About").Children(child1 =>  
+				   {
+					   child1.Add().Text("Company"); 
+					   child1.Add().Text("Location"); 
+				   }); 
+				}); 
+			   items.Add().Text("Services").Children(child =>               
+			   {
+				   child.Add().Text("Consulting");
+				   child.Add().Text("Outsourcing");
+			   });
+			   items.Add().Text("About");
+			   items.Add().Id("Contact").Text("Contact Us").Children(child =>             
+			   {  
+			   child.Add().Text("Contact number");
+			   child.Add().Text("E-mail");
+			   });   
+			   items.Add().Id("Careers").Text("Careers").Children(child => 
+			   { 
+				   child.Add().Text("Position").Children(child1 => 
+				   {  
+					   child1.Add().Text("Developer");
+					   child1.Add().Text("Manager");
+				   });                  
+				   child.Add().Text("Apply online"); 
+				});     
+		   }).Width("500") 
+		   </div>
 
-{% endhighlight  %}
+   ~~~
+   {:.prettyprint }
+
+   ~~~ js
+	
+		// Add the following code in your <script> section.
+		<script type="text/javascript"> 
+			   jQuery(function ($)
+			   {  
+				   //Control focus key 
+				   $(document).on("keydown", function (e)
+				   { 
+					   if (e.altKey && e.keyCode === 74)
+					   { 
+							// j- key code. 
+							$("#keyboard").focus(); 
+					   }
+				   });
+			   });
+		</script>
+
+   ~~~
+   {:.prettyprint }
 
 
 
 2. Add the following code in your style section.
-{% highlight css %}
-[CSS]
 
-<style type="text/css">
+   ~~~ css
 
-    #keyboard {
 
-        margin-left: 50px;
+		<style type="text/css">
 
-    }
+			#keyboard {
 
-</style>
-{% endhighlight  %}
+				margin-left: 50px;
+
+			}
+
+		</style>
+
+   ~~~
+   {:.prettyprint }
+   
 Following screenshot displays the output of the above code. 
 
 ![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
@@ -88,9 +146,7 @@ When you press alt+j, the first item of the Menu control only gets focused as di
 
 ![](Keyboard-Navigation_images/Keyboard-Navigation_img2.png)
 
-
-
-_Figure40: Keyboard Navigation_
+_Figure: Keyboard Navigation_
 
 Similarly you can access the Menu control using keyboard itself.
 

@@ -19,37 +19,36 @@ The following steps explains you the configuration of TargetID property in Dropd
 
 1. Add the below code in view page to render the dropdown list with UL LI element as dropdown target.
 
+   ~~~ js
 
-
-{% highlight html %}
-
-// Add a DropDownList element using the helper class in CSHTML
+		// Add a DropDownList element using the helper class in CSHTML
 
 
 
-@Html.EJ().DropDownList("dropdownlist").TargetID("list") 
+		@Html.EJ().DropDownList("dropdownlist").TargetID("list") 
 
-        <div id="list">
+				<div id="list">
 
-            <ul>
+					<ul>
 
-                <li>Art</li>
+						<li>Art</li>
 
-                <li>Architecture</li>
+						<li>Architecture</li>
 
-                <li>Biography</li>
+						<li>Biography</li>
 
-                <li>Comics</li>
+						<li>Comics</li>
 
-                <li>Sports</li>
+						<li>Sports</li>
 
-                <li>Science</li>
+						<li>Science</li>
 
-            </ul>
+					</ul>
 
-        </div>
+				</div>
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 ## Number of items in the list
 
@@ -101,9 +100,6 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img1.png)
 
-
-
-
 _Figure 12: Dropdown with itemsCount property_  
 
 ## Select the value by index 
@@ -114,7 +110,7 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 1. Add the below code in your page with to render the dropdown list with index 1 item as selected item.
 
-1. add the below code in your page to render the dropdown list with index 2 items is selected[CSHTML]
+2. add the below code in your page to render the dropdown list with index 2 items is selected
 
 
 {% highlight html %}
@@ -154,8 +150,6 @@ Output of the above steps
 
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
-
-
 
 _Figure 13: Dropdown with selecteditemindex property_  
 
@@ -211,7 +205,7 @@ The following steps explains you the configuration of selectedItems property in 
 1. Add the below code snippet to select multiple items in dropdown list.
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -256,8 +250,6 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img3.png)
 
-
-
 _Figure 14: Dropdown with selecteditems property_  
 
 ## Read-only
@@ -270,7 +262,7 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -312,7 +304,7 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -351,8 +343,6 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img4.png)
 
-
-
 _Figure 15: Dropdown with enable property_  
 
 ## Persistence support 
@@ -365,7 +355,7 @@ The following steps explains you the configuration of EnablePersistence property
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 // Add a DropDownList element using the helper class in CSHTML
 

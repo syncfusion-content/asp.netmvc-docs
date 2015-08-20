@@ -3,7 +3,7 @@ layout: post
 title: Miscellaneous
 description: miscellaneous
 platform: ejmvc
-control: Toggle Button
+control: ToggleButton
 documentation: ug
 ---
 
@@ -16,9 +16,6 @@ It sets the corner of Toggle Button in rounded shape. The Toggle Button, by defa
 The following steps explains you the details about rendering the Toggle Button with Rounded corner support. 
 
 1. In the View page, add the following button elements to configure Toggle Button widget.
-
-
-
 
 {% highlight html %}
 
@@ -52,10 +49,6 @@ The following steps explains you the details about rendering the Toggle Button w
 
 1. In the View page, add the following button elements to configure Toggle Button widget.
 
-
-
-
-
 {% highlight html %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
@@ -70,9 +63,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
     </div>
 	
-	{% endhighlight %}
-
-
+{% endhighlight %}
 
 Execute the above code to render the following output.
 

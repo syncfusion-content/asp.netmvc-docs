@@ -32,9 +32,7 @@ ASP.NET MVC DateTimePicker widget basically renders built-in features like Month
 
 
    ~~~ html
-   
-     [_cshtml]
-	 
+       
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget*@
 
 		@Html.EJ().DateTimePicker("Datetime").Width("175px").Value("05/15/2015 09:00 AM")
@@ -53,8 +51,6 @@ ASP.NET MVC DateTimePicker widget basically renders built-in features like Month
 In a real-time appointment booking scenario, the booking is open only for a limited number of days. You can select the date from the given range. This is achieved using the properties MinDateTime and MaxDateTime. Only the dates ranging between MinDateTime and MaxDateTime are enabled in the date picker. Using the Interval property, you can set the interval. 
 
 {% highlight html %}
-   
-     [_cshtml]
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Mintime and Maxtime*@
 

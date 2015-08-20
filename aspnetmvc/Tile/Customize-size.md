@@ -20,7 +20,7 @@ The default TileSize value is set to Small.
 
 Refer to the following code examples.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Tile("tile").Text("Pictures").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/pictures.png ")
 

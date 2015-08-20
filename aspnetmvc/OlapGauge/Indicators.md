@@ -3,7 +3,7 @@ layout: post
 title: Indicators
 description: indicators
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -16,8 +16,8 @@ KPIs are displayed with Trend and Status visualizations that supports Traffic Li
 You can hide the Indicator by changing the “showIndicator” property to “false”.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 

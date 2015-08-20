@@ -50,34 +50,35 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 1. In the View page, define the AutoComplete control.
 
 
-{% highlight html %}
+   ~~~ html 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+		@*Refer to the DataSource defined in Local Databinding Step 1 *@
 
-@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
+		@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
 
-htmlAttribute.Add("accesskey", "j");
+		htmlAttribute.Add("accesskey", "j");
 
-}
+		}
 
 
-@(Html.EJ().Autocomplete("autocomplete").HtmlAttributes(htmlAttribute)
+		@(Html.EJ().Autocomplete("autocomplete").HtmlAttributes(htmlAttribute)
 
-    .Datasource((IEnumerable<CarsList>
+			.Datasource((IEnumerable<CarsList>
 
-    )ViewBag.datasource)
+			)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+			.AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
 
-    .Width("200px"))    
+			.Width("200px"))    
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. Run the sample, press AccessKey + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
 
 
 
-![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+   ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
 
 

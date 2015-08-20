@@ -2,8 +2,8 @@
 layout: post
 title: Template-Support
 description: template support
-platform: aspnet
-control: Control Name undefined
+platform: ejmvc
+control: ListBox
 documentation: ug
 ---
 
@@ -13,150 +13,127 @@ ListBox widget provides the template support, when binding the data for the List
 
 The following steps explains you the behaviour of template support with ListBox.
 
-In an ASPX page, add an elementto configure ListBox.
+1. Add the below code in your view page to render the ListBox
 
-Note: Images for this sample are available in ‘installed location/images/Employee’ 
+   > Note: Images for this sample are available in ‘installed location/images/Employee’
 
 
-{% highlight html %}
 
-<div id="controlitem">
+   ~~~ html
+		// Add the following code in View page to configure ListBox widget
+		<div class="control">
+			<div class="ctrllabel">
+				Template support 
+			</div>  
+		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
+		.Template("<img class='eimg' src='../../Content/images/Employees/${eimg}.png' alt='employee' height='50px' width='50px'/>
+		<div class='ename'> 
+			${text} 
+		</div>
+		<div class='desig'>
+			${desig} 
+		</div>
+		<div class='cont'>
+			${country} 
+		</div>")
+	</div>
+	
+   ~~~
+   {:.prettyprint }
+   
+   ~~~ cs
+   
+		  // Add the following code to add list items in the controller page 
+		  public class EmployeeSpecialists 
+		  {           
+				public string text { get; set; }   
+				public string eimg { get; set; }   
+				public string desig { get; set; } 
+				public string country { get; set; }  
+		  } 
+		  public ActionResult Index() 
+		  {
+				List<EmployeeSpecialists> empl = new List<EmployeeSpecialists>();
+				empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" }); 
+				empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" }); 
+				empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });  
+				empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" }); 
+				ViewBag.datasource = empl;     
+				return View();
+		  }
 
-    <div>
+   ~~~
+   {:.prettyprint }
 
-        Template Support</div>
 
-    <ej:listbox id="selectExperts" runat="server" Height="240" ItemsCount="5" Template="<img class='eimg' src='/Content/images/Employee/${eimg}.png' alt='employee' height='50px' width='50px'/><div class='ename'> ${text} </div><div class='desig'> ${desig} </div><div class='cont'> ${country} </div>">
+2. Customize the template in CSS. 
 
-                        </ej:listbox>
 
-</div>
+   ~~~ html
 
+		<style>
 
+			.eimg {
 
+				margin: 0;
 
+				padding: 3px 10px 3px 3px;
 
-{% endhighlight %}
+				border: 0 none;
 
+				width: 60px;
 
+				height: 60px;
 
-{% highlight c# %}
+				float: left;
 
-protected void Page_Load(object sender, EventArgs e)
+			}
 
-        {
 
-      List<EmployeeSpecialists> empl = new List<EmployeeSpecialists>();
 
+			.ename {
 
+				font-weight: bold;
 
-      empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" });
+				padding: 6px 3px 1px 3px;
 
-      empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" });
+			}
 
-      empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });
 
-      empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" });
 
-      empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" });
+			.desig, .cont {
 
-      empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" });
+				font-size: smaller;
 
-      empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });
+				padding: 3px 3px -1px 0px;
 
-      empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" });
+			}
 
-      selectExperts.DataSource = empl;
 
-        }
 
-        public class EmployeeSpecialists
+			#selectexperts li {
 
-        {
+				width: 200px;
 
-            public string text { get; set; }
+				height: 70px;
 
-            public string eimg { get; set; }
+				padding: 5px;
 
-            public string desig { get; set; }
+			}
 
-            public string country { get; set; }
+		</style>
 
-        }
+   ~~~
+   {:.prettyprint }
 
 
 
+3. Output of the above steps.
 
 
-{% endhighlight %}
 
 
-
-Customize the template in CSS. 
-
-
-{% highlight css %}
-
-    .eimg {
-
-        margin: 0;
-
-        padding: 3px 10px 3px 3px;
-
-        border: 0 none;
-
-        width: 60px;
-
-        height: 60px;
-
-        float: left;
-
-    }
-
-
-
-    .ename {
-
-        font-weight: bold;
-
-        padding: 6px 3px 1px 3px;
-
-    }
-
-
-
-    .desig, .cont {
-
-        font-size: smaller;
-
-        padding: 3px 3px -1px 0px;
-
-    }
-
-
-
-    #<%=selectexperts.ClientID%> li {
-
-        width: 200px;
-
-        height: 70px;
-
-        padding: 5px;
-
-    }
-
-
-
-{% endhighlight %}
-
-
-
-Output of the above steps.
-
-
-
-
- ![C:/Users/Rajaveni/Desktop/docs/UG images/moditemplate.PNG](Template-Support_images/Template-Support_img1.png)
+![](Template-Support_images/Template-Support_img2.png)
 
 
 

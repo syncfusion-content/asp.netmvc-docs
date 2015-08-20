@@ -15,11 +15,6 @@ Details Template feature provides a detailed view about additional information o
 
 
 {% highlight js %}
-[MVC]
-
-[razor]
-
-
 
 <script id="tabGridContents" type="text/x-jsrender">
 
@@ -40,8 +35,7 @@ Details Template feature provides a detailed view about additional information o
     </div>
 
 </script>
-{% endhighlight  %}
-{% highlight html %}
+
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
 .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -55,7 +49,7 @@ Details Template feature provides a detailed view about additional information o
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
+
 
 
 
@@ -97,6 +91,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img1.png)
 
+_Figure : Details Template_
 
 
 
@@ -108,12 +103,7 @@ The following output is displayed as a result of the above code example.
 In this section, you can learn how to use the Hierachytree in GridView. The following code example is of HierachyGrid.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
@@ -124,9 +114,6 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 .ClientSideEvents(eve => { eve.DetailsDataBound ("detailGridData"); })
 
 )
-
-{% endhighlight  %}
-{% highlight js %}
 
 <script src="~/Scripts/jsondata.min.js"></script>
 
@@ -171,11 +158,6 @@ dataSource: data,
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
-
-
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -203,8 +185,6 @@ return View();
 
 }
 
-
-
 }
 
 }
@@ -219,19 +199,14 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img2.png)
 
-
+_Figure : Hierachy_
 
 ## Row Template
 
 RowTemplate is used to render your template in every row. It is used to place elements inside Grid rows. This feature makes it easier to customise Grid rows with HTML elements.
 
 
-{% highlight html %}
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 <script id="templateData" type="text/x-jsrender">
 
@@ -349,37 +324,32 @@ col.HeaderText("Employee Details").TextAlign(TextAlign.Left).Width(70).Add();
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
-
-
-
-
 
 namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class GridController : Controller
+	public partial class GridController : Controller
 
-{
-
-
-
-public ActionResult RowTemplate()
-
-{
-
-var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-
-ViewBag.datasource = DataSource;
-
-return View();
-
-}
+	{
 
 
 
-}
+		public ActionResult RowTemplate()
+
+		{
+
+			var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+
+			ViewBag.datasource = DataSource;
+
+			return View();
+
+		}
+
+
+
+	}
 
 }
 
@@ -393,7 +363,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img3.png)
 
-
+_Figure : Row Template_
 
 ## Customize Hover and AltRow 
 
@@ -401,13 +371,7 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 
 
-{% highlight html %}
-
-[MVC]
-
-[razor]
-
-
+{% highlight js %}
 
 @*custom style*@
 
@@ -448,9 +412,6 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 {% endhighlight  %}
 {% highlight c# %}
-[controller]
-
-
 
 namespace MVCSampleBrowser.Controllers
 
@@ -486,5 +447,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img4.png)
 
-
+_Figure : Customize hover and altrow_
 

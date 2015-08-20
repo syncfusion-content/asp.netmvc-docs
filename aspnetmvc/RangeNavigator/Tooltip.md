@@ -16,10 +16,6 @@ RangeNavigator provides Tooltip support for sliders. Sliders are used to select 
 RangeNavigator provides support for you to customize the text display in the tooltip and background using TooltipSettings property. You can change font family, font color, font style, font weight. By default “Segoe UI” font family is set to tooltip text.
 {% highlight html %}
 
- [MVC]
-
-
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
        // ...
@@ -77,7 +73,7 @@ Some of the LabelFormat for DateTime data are as follows:
 'hh:mm:ss:tt'
 
 {% highlight html %}
- [MVC]
+ 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
@@ -114,9 +110,8 @@ Tooltip get displayed for RangeNavigator always.</td></tr>
 ondemand</td><td>
 Tooltip get displayed only when we move the slider.</td></tr>
 </table>
-{% highlight html %}
 
-[MVC]
+{% highlight html %}
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 

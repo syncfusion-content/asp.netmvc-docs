@@ -19,7 +19,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

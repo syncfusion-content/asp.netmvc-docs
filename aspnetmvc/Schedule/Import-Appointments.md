@@ -59,7 +59,7 @@ dManager.adaptor = new ej.UrlAdaptor();$("#Schedule1")
 <style>
 #UploadDefault{margin-right: 45px;margin-top: 10px;float: right;}
 #UploadDefault .e-selectpart{padding: 3px 10px;}
-
+{% endhighlight %}
 {% highlight c# %}
 public partial class ScheduleController : Controller
 {
@@ -113,7 +113,6 @@ public partial class ScheduleController : Controller
 	}
 }
 
-{% endhighlight %}
 {% endhighlight %}
 
 * Execute the above code. Now, click on the browse button. 

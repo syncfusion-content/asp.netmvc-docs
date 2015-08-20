@@ -18,7 +18,7 @@ You can customize the Accordion panel height using HeightAdjustMode property. It
 The following code explains to configure the height of ther Accordion content panel.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, configure Accordion with corresponding data and define HeightAdjustMode.
 
@@ -82,7 +82,7 @@ You can customize the shape of the Accordion widget from regular rectangular sha
 The following code explains you in enabling the ShowRoundedCorner property for an Accordion control.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, configure Accordion with corresponding data and enable the ShowRoundedCorner property for it.
 
@@ -129,7 +129,7 @@ Accordion widget allows you to customize the icons using CustomIcon option that 
 The following code explains you the configuration of icon for an Accordion control.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, configure Accordion with corresponding data and set the “e-arrowheaddown” and “e-arrowheadup” classes to Header and SelectedHeader properties.  “E-arrowheaddown” and “e-arrowheadup” are available in ej.widgets.core.min.css file.
 
@@ -178,7 +178,7 @@ By default the Animation for expanding and collapsing is enabled. To remove the 
 Following code disables Animation for Accordion.
 
 {% highlight html %}
-[CSHTML]
+
 
 @{Html.EJ().Accordion("accordion").Items(data =>
 
@@ -210,7 +210,7 @@ This feature allows you to set the speed for expanding and collapsing the Accord
 
 The following code sample sets value for ExpandSpeed and CollapseSpeed properties,
 {% highlight html %}
-[CSHTML]
+
 
 // The following code example sets values for ExpandSpeed and CollapseSpeed properties.
 
@@ -293,7 +293,7 @@ Class for the div element that holds the Accordion panel’s content.</td></tr>
 The following code allows you to configure CSS class for an Accordion widget.
 
 {% highlight html %}
-[CSHTML]
+
 
 // In the View page, configure Accordion with corresponding data and set the CssClass property with corresponding CSS class name.
 
@@ -331,7 +331,6 @@ Define CSS class for customizing the Accordion.
 
 
 {% highlight html %}
-[Style]
 
 <style class="cssStyles">
 

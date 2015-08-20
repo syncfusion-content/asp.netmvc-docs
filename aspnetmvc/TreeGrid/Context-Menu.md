@@ -15,13 +15,7 @@ The ShowContextMenu property is used to enable or disable the context menu, defa
 
 The ContextMenuItems property is used to add the menu items to context menu, this property renders ‘Add’ and ‘Delete’ by default when the menu items are not provided.
 
-
-
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
@@ -51,19 +45,11 @@ The ContextMenuItems property is used to add the menu items to context menu, thi
 
  .Render())
 
-
-
-
-
 {% endhighlight %}
-
-
-
-
 
 The following screenshot displays the Context menu in TreeGrid control.
 
-![D:/IMG_28112014_150551.png](Context-Menu_images/Context-Menu_img1.png)
+![](Context-Menu_images/Context-Menu_img1.png)
 
 
 
@@ -75,13 +61,7 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 * iconPath: Image location for menu item.
 * eventHandler: Client side event for menu item click.
 
-
-
-
-
-{% highlight html %}
-
-
+{% highlight js %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
@@ -96,6 +76,7 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
  .Render())
 
 {% endhighlight  %}
+
 {% highlight js %}
 
 <script type=”text/javascript”>
@@ -134,25 +115,10 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 
 </script>
 
-
-
-
-
 {% endhighlight %}
-
-
-
-
 
 The following screenshot displays the customization of Context menu in TreeGrid control.
 
 ![](Context-Menu_images/Context-Menu_img2.png)
-
-
-
-
-
-
-
 
 

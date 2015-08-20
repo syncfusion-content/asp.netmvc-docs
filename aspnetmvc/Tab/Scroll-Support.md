@@ -20,7 +20,7 @@ You can use the following code example to render the Tab widget with scroll butt
 1. Add the following code in your view page to create a simple Tab with scroll button.
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 

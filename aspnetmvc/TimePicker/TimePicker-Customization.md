@@ -17,15 +17,14 @@ The following steps explains you to create a TimePicker widget.
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
+   ~~~ js
 
+		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-{% highlight html %}
+		@Html.EJ().TimePicker("time")
 
-@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
-
-@Html.EJ().TimePicker("time")
-
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. The following screenshot illustrates you a default TimePicker.
 ![](TimePicker-Customization_images/TimePicker-Customization_img1.png)

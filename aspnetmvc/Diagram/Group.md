@@ -77,7 +77,7 @@ The following steps illustrate how to select an object that has two groups.
 
 
 
-![](Group_images/Group_img3.png)
+   ![](Group_images/Group_img3.png)
 
 
 
@@ -85,7 +85,7 @@ The following steps illustrate how to select an object that has two groups.
 
 
 
-![](Group_images/Group_img4.png)
+   ![](Group_images/Group_img4.png)
 
 
 

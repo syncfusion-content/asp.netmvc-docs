@@ -28,9 +28,6 @@ The Markers property has a list of objects that contains the data for Annotation
 
 {% highlight c# %}
 
-[MapController.cs]
-
-
         public ActionResult Map()
 
         {
@@ -122,13 +119,7 @@ The Markers property has a list of objects that contains the data for Annotation
 
 {% endhighlight %}
 
-
-
-
-
 {% highlight html %}
-
-[CSHTML]
 
 @(Html.EJ().Map("container")           
 
@@ -171,6 +162,7 @@ The Markers property has a list of objects that contains the data for Annotation
 
 ![](Map-Elements_images/Map-Elements_img1.png)
 
+_Map with markers_
 
 ### Adding Marker objects to map
 
@@ -182,7 +174,7 @@ Without Datasource, n number of markers can be added to shape layers with Marker
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")            
 
@@ -250,6 +242,7 @@ Without Datasource, n number of markers can be added to shape layers with Marker
 
 ![](Map-Elements_images/Map-Elements_img2.png)
 
+_Map with label_
 
 ## Bubbles 
 
@@ -317,7 +310,7 @@ Note: Tooltip and Color Mappings for bubble is to be set as similar to tooltip a
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")            
 
@@ -377,6 +370,7 @@ Note: Tooltip and Color Mappings for bubble is to be set as similar to tooltip a
 
 ![](Map-Elements_images/Map-Elements_img3.png)
 
+_Map with bubbles_
 
 ## Legend
 
@@ -427,7 +421,7 @@ The Layer shape type legends can be generated for each color mappings in shape s
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")
 
@@ -472,6 +466,8 @@ The Layer shape type legends can be generated for each color mappings in shape s
 
 ![](Map-Elements_images/Map-Elements_img4.png)
 
+_Map with legend_
+
 ### Interactive Legend
 
 The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. You can enable this option by setting Mode property in LegendSettings value as “Interactive” and default value of Mode property is “Default” to enable the normal legend.
@@ -488,7 +484,7 @@ You can provide the left and right labels to interactive legend by using LeftLab
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @(Html.EJ().Map("container")
 
@@ -542,6 +538,7 @@ Models.LegendMode.Interactive)
 
 ![](Map-Elements_images/Map-Elements_img5.png)
 
+_Map with interactive legend_
 
 ### Bubble Legend
 
@@ -549,7 +546,7 @@ A bubble legend feature is used to provide the key (legend) for another map elem
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @(Html.EJ().Map("container")
@@ -622,6 +619,6 @@ Models.LegendType.Bubbles)
 
 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Map-Elements_images/Map-Elements_img6.png)
+![](Map-Elements_images/Map-Elements_img6.png)
 
-
+_Bubble Legend_

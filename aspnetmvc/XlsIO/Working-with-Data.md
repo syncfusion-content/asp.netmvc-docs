@@ -7,21 +7,19 @@ control: XlsIO
 documentation: ug
 ---
 
-## Working with Data
+# Working with Data
 
 XlsIO has some helper methods that enable working with the ADO.NET data sources very easily. The following sections illustrate working with Data by using XlsIO.
 
-### Importing Data to Worksheets 
+## Importing Data to Worksheets 
 
 It only takes one line of code to import an ADO.NET data table into a worksheet. There are similar methods for working with other data sources like Array, Business Objects, Data Column, Data Table, and Data View. A data table from another source can be imported inside a worksheet by using the ImportDataTable method.It has an option to select the record range (start row, end row, start col, and end col). It also allows preserving the data type in the data source.
 
-#### Import Data from Array
+### Import Data from Array
 
 XlsIO imports array of data into a worksheet. The following code examples illustrates how to achieve this.
 
-
-
-[C#]
+{% highlight C# %}
 
 
 
@@ -74,10 +72,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -132,46 +130,36 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+{% endhighlight %}
 
 
+### Import Data from Business Objects
 
-#### Import Data from Business Objects
-
-Business object usually holds a set of instance variables or properties also known as attributes. EssentialXlsIO allows you to import data directly from Business Objects. 
+Business object usually holds a set of instance variables or properties also known as attributes. Essential XlsIO allows you to import data directly from Business Objects. 
 
 Business Object
 
 The class Customer is a business object that is imported into a worksheet. The following code example illustrates how Customer data is imported into a worksheet.
 
-
-
-[C#]
-
-
+{% highlight C# %}
 
 // Imports the data to worksheet.
 IList<Customer> customers = GetCustomerAsObjects();
 sheet.ImportData(customers, 2, 1, false);
 
+{% endhighlight %}
 
-
-[VB.NET]
-
-
+{% highlight vbnet %}
 
 ' Imports the Data to Sheet.
 Dim customers As IList(of Customer) = GetCustomerAsObjects()
 Worksheet.ImportData(customers, 2, 1, False)
-
+{% endhighlight %}
 
 
 GetCustomerAsObjects Method:
 
-
-
-[C#]
-
-
+{% highlight C# %}
 
 // Initializes the DataSet.
 DataSet customersDataSet = new DataSet();
@@ -200,9 +188,9 @@ foreach (DataRow row in rows)
 }
 return tmpCustomers;
 
+{% endhighlight %}
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -230,13 +218,13 @@ For Each row As DataRow in rows
 Next
 Return tmpCustomers
 
-
+{% endhighlight %}
 
 Customer Class:
 
 
 
-[C#]
+{% highlight C# %}
 
 
 
@@ -319,10 +307,10 @@ class Customer
         }
         #endregion
     }
+{% endhighlight %}
 
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -391,16 +379,14 @@ Class Customer
          End Sub      
         #End Region
 End Class    
+{% endhighlight %}
 
 
-
-#### Import Data from Data Column
+### Import Data from Data Column
 
 XlsIO imports DataColumn to a worksheet. The following code example illustrates how to achieve this.
 
-
-
-[C#]
+{% highlight C# %}
 
 
 
@@ -456,9 +442,9 @@ workbook.Close();
 
 excelEngine.Dispose();
 
+{% endhighlight %}
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -514,15 +500,13 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-#### Import Data from Data Table
+### Import Data from Data Table
 
 XlsIO imports DataTable in to a worksheet. The following code examples illustrates on how to achieve this.
 
-
-
-[C#]
+{% highlight C# %}
 
 
 
@@ -577,10 +561,10 @@ workbook.SaveAs(fileName);
 workbook.Close();
 
 excelEngine.Dispose();
+{% endhighlight %}
 
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -636,13 +620,14 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
 
 ##### Improving performance and memory while importing data
 
-Import DataTable has few overloads that is used for some of the customized options. Here, an overload with ImportonSave__argument allows you to import data with less memory consumption along with improved performance by serializing the data directly on save method. This options is preferred for larger data that need to be import in short time.
+Import DataTable has few overloads that is used for some of the customized options. Here, an overload with ImportonSave argument allows you to import data with less memory consumption along with improved performance by serializing the data directly on save method. This options is preferred for larger data that need to be import in short time.
 
-[C#]
+{% highlight c# %}
 
 
 DataTable table = Worksheet.ExportDataTable(1, 1, Worksheet.UsedRange.LastRow, Worksheet.UsedRange.LastColumn, ExcelExportDataTableOptions.DetectColumnTypes);
@@ -662,10 +647,10 @@ workbook.Version = ExcelVersion.Excel2013;
 workbook.SaveAs("Output.xlsx");
 
 
+{% endhighlight %}
 
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -685,14 +670,15 @@ workbook.Version = ExcelVersion.Excel2013
 
 workbook.SaveAs("Output.xlsx")
 
+{% endhighlight %}
 
 
-
-###### Advantages
+#### Advantages
 
 * Improved performance
 * Less memory consumption
-###### Limitations
+
+#### Limitations
 
 * Cannot modify data dynamically
 * Styles cannot be applied
@@ -705,9 +691,7 @@ workbook.SaveAs("Output.xlsx")
 
 XlsIO imports DataView in to a worksheet. The following code examples illustrates how to achieve this.
 
-
-
-[C#]
+{% highlight C# %}
 
 
 
@@ -765,9 +749,9 @@ workbook.Close();
 
 excelEngine.Dispose();
 
+{% endhighlight %}
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -825,21 +809,21 @@ workbook.Close()
 
 excelEngine.Dispose()
 
+{% endhighlight %}
 
-
-### Exporting from Worksheet to Data Table 
+## Exporting from Worksheet to Data Table 
 
 It is easy to export the sheet data to a data table by using the ExportDataTable method of IWorksheet. This method allows selection of various data table options such as include column names, export formula calculated values, styles, and types through the ExcelExportDataTableOptions enumeration. It has the following values.
 
 
 
-_Table_ _22__: ExcelExportDataTableOptions enumeration values_
+_ExcelExportDataTableOptions enumeration values_
 
 <table>
 <tr>
-<td>
-Members </td><td>
-Description</td></tr>
+<th>
+Members </th><th>
+Description</th></tr>
 <tr>
 <td>
 None</td><td>
@@ -865,9 +849,7 @@ When DetectColumnTypes is set and this flag is set too, it means that  the defau
 
 The following code example illustrates how to import data to grid from worksheet by using DataTable.
 
-
-
-[C#]
+{% highlight C# %}
 
 
 
@@ -919,9 +901,9 @@ workbook.Close();
 
 excelEngine.Dispose();
 
+{% endhighlight %}
 
-
-[VB.NET]
+{% highlight vbnet %}
 
 
 
@@ -972,18 +954,16 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
-
-
-
+{% endhighlight %}
 The following images illustrates the import from excel to grid and export from grid to excel by using DataTable.
 
-{{ '![](Working-with-Data_images/Working-with-Data_img1.png)' | markdownify }}
-{:.image }
+![](Working-with-Data_images/Working-with-Data_img1.png)
 
 
-__
 
-{{ '![](Working-with-Data_images/Working-with-Data_img2.png)' | markdownify }}
-{:.image }
+
+![](Working-with-Data_images/Working-with-Data_img2.png)
+
+
 
 

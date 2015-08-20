@@ -3,7 +3,7 @@ layout: post
 title: Pointers
 description: pointers
 platform: ejmvc
-control: OLAP Gauge
+control: OLAPGauge
 documentation: ug
 ---
 
@@ -23,11 +23,7 @@ Two different types of pointer available in OlapGuage are:
 
 You can set the pointer to Needle type by setting “pointerType”property to “Needle” and the pointer to Marker type by setting the “pointerType” properties to “Marker”.
 
-{% highlight html %}
-
-[MVC]
-
-
+{% highlight js %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 
@@ -39,9 +35,9 @@ You can set the pointer to Needle type by setting “pointerType”property to �
 
         {
 
-pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(120).Width(7).Add();
+		pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(120).Width(7).Add();
 
-pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
+		pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
 
         }).
 
@@ -94,8 +90,8 @@ pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement
 You can customize the Pointer length and width using the “pointerLength” and “pointerWidth” property.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 
 
@@ -162,8 +158,8 @@ You can customize the Pointer length and width using the “pointerLength” and
 You can customize the Pointer background color using “backgroundcolor”property.
 
 
-{% highlight html %}
-[MVC]
+{% highlight js %}
+
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 
@@ -233,9 +229,9 @@ You can customize Pointershapes using the “needlestyle” property.
 
 
 
-{% highlight html %}
+{% highlight js %}
 
-[MVC]
+
 
 
 
@@ -295,7 +291,7 @@ You can customize Pointershapes using the “needlestyle” property.
 
 
 
-![I:/OlapGuage/Gauge/pointerstyle.png](Pointers_images/Pointers_img4.png)
+![](Pointers_images/Pointers_img4.png)
 
 
 

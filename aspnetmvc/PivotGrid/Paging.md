@@ -36,7 +36,7 @@ The page size for categorical and series axes are set in the OlapReport. Pager i
 
 The large PivotGrid data content is viewed page-by-page using VirtualScrolling. The page size for categorical and series axes are set in OlapReport. By enabling VirtualScrolling, the number of rows and columns for the PivotGrid are set as entered in the OlapReport. By scrolling the horizontal and vertical scrollbars, the categorical and series page numbers are obtained and PivotGrid contents are refreshed accordingly.
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc").EnableVirtualScrolling(true) 
 
@@ -48,7 +48,7 @@ The large PivotGrid data content is viewed page-by-page using VirtualScrolling. 
 
 _PivotGrid with Virtual Scroller_
 
-![Description: C:/Users/Narendhran Muthuvel/Pictures/sshot-1.png](Paging_images/Paging_img3.png)
+![](Paging_images/Paging_img3.png)
 
 
 

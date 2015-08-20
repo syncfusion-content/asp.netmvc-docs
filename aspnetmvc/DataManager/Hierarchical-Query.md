@@ -16,7 +16,7 @@ The DataManager contains support to manage the hierarchicalquery. The hierarchic
 The foreignkey method of ej.Query can be used to refer to another table fields. The foreignkey method accepts one parameter, the foreign key value. 
 
 The following code example illustrates the hierarchical query and foreignkey method. 
-{% highlight html %}
+{% highlight js %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc"))
 
 

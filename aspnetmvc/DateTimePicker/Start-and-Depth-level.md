@@ -49,9 +49,9 @@ In the following example DateTimePicker popup Start level view is set to “cent
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
+     
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Start level*@
 
@@ -76,9 +76,9 @@ The following code snippet is set to DepthLevel in DateTimePicker.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ html
+   ~~~ js
    
-     [_cshtml]
+     
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Depth level*@
 

@@ -17,12 +17,11 @@ The following steps explain you on how to set the Value for the ProgressBar widg
 
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
-
-
-{% highlight html %}
+{% highlight js %}
 // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized value.
 @Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Value(60).Height("20").Width("500")
 {% endhighlight %}
+
 {% highlight javascript %}
 <script>
             var progress;
@@ -34,21 +33,9 @@ The following steps explain you on how to set the Value for the ProgressBar widg
 
 {% endhighlight %}
 
-
-
-
-
 The following screenshot displays the output for the above code.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetvalue.PNG](Define-value_images/Define-value_img1.png)
-
-
-
-
-
-
-
-
+![](Define-value_images/Define-value_img1.png)
 
 ## Percentage
 
@@ -60,7 +47,9 @@ The following steps explain you on how to set the value in Percentage for the Pr
 
 
 
-{% highlight html %}// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized percentage.@Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Percentage(60).Height("20").Width("500")</td></tr>
+{% highlight html %}
+// Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized percentage.
+@Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Percentage(60).Height("20").Width("500")
 {% endhighlight %}
 {% highlight javascript %}
 <script>
@@ -77,7 +66,7 @@ The following steps explain you on how to set the value in Percentage for the Pr
 
 The following screenshot displays the output.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/prosetperc.PNG](Define-value_images/Define-value_img2.png)
+![](Define-value_images/Define-value_img2.png)
 
 
 

@@ -50,7 +50,7 @@ The following steps explains you on how to enable keyboard support in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Range Slider.
 
-{% highlight html %}
+{% highlight js %}
 
 // Add this code in your view page
 
@@ -88,7 +88,7 @@ Run the sample and press, Alt + j keys to set focus in the Slider handle and you
 
 When clicked the Alt + J key, the slider was focused.
 
-![C:/Users/Gopal Lakshmanan/Desktop/dialog concept and features/slikey.PNG](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
 
 

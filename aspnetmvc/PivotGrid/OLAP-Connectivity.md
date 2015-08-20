@@ -23,18 +23,19 @@ string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\sync
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
-
+{% endhighlight %}
 
 ### Binding PivotGrid to the SQL Server (Local)
 
 The following code example illustrates how to connect to a Cube available in local SQL Server.
 
+{% highlight c# %}
 
 string connectionString = "Data source=localhost; Initial Catalog=Adventure Works DW;";
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
-
+{% endhighlight %}
 
 
 
@@ -61,7 +62,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 The following code example illustrates how to connect to the Mondrian Server:
 
-
+{% highlight c# %}
 
 string connectionString = @"Data Source = http://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;";
 
@@ -69,13 +70,13 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.Mondrian; 
 
-
+{% endhighlight %}
 
 #### Connecting to Active Pivot Server
 
 The following code example illustrates how to connect to Active Pivot Server:
 
-
+{% highlight c# %}
 
 string connectionString= @"Data Source=http://localhost:8081/var_s/xmla;  Initial Catalog=VaRCubes; User ID=; Password=; Transport Compression=None;";
 

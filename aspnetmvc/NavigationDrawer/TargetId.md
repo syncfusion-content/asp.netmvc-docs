@@ -3,7 +3,7 @@ layout: post
 title: TargetId
 description: targetid
 platform: ejmvc
-control: Navigation Drawer
+control: NavigationDrawer
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ This property is used to define the target Id for Navigation Drawer. The drawer 
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @{
 

@@ -32,7 +32,7 @@ The Normal layout is the default Layout of the PivotGrid where the summary cel
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url("../wcf/PivotGridService.svc") 
 
@@ -48,7 +48,7 @@ In the Excel-like layout, the summary cells are positioned at the bottom of th
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url("../wcf/PivotGridService.svc")
@@ -65,7 +65,7 @@ In the NormalTopSummary Layout, the summary cells are positioned at the top of
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NormalTopSum
 
@@ -81,7 +81,7 @@ In No Summaries Layout, the summary cells are hidden and the child members appe
 
 
 
-{% highlight html %}
+{% highlight js %}
 
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url("../wcf/PivotGridService.svc")

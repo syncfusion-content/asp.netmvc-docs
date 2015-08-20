@@ -17,31 +17,32 @@ The following steps explain the configuration of SaveUrl property in the UploadB
 
 1. In the VIEW page, add the below scriptto configure the UploadBox element.
 
+   ~~~ js
 
+		// In the CSHTML page, add the UploadBox element.
+		@Html.EJ().Uploadbox("uploadbox")
+		.SaveUrl("Uploadbox/Save")
+		.RemoveUrl("Uploadbox/Remove")
+		
+   ~~~
+   {:.prettyprint }
 
+   ~~~ cs
+		// Configure the ActionResult to save the file in App_Data location. In the following code example, the uploaded files is saved in App_Data folder.
+		public ActionResult Save(IEnumerable<HttpPostedFileBase> uploadbox)
+		{
+			foreach (var file in uploadbox)
+			{           
+				var fileName = Path.GetFileName(file.FileName);
+				var destinationPath = Path.Combine(Server.MapPath("~/App_Data"), fileName);
+				file.SaveAs(destinationPath); 
+			}       
+		return Content("");
+	}
 
-{% highlight html %}
+   ~~~
+   {:.prettyprint }
 
-// In the CSHTML page, add the UploadBox element.
-@Html.EJ().Uploadbox("uploadbox")
-.SaveUrl("Uploadbox/Save")
-.RemoveUrl("Uploadbox/Remove")
-
-{% highlight html %}
-// Configure the ActionResult to save the file in App_Data location. In the following code example, the uploaded files is saved in App_Data folder.
-	public ActionResult Save(IEnumerable<HttpPostedFileBase> uploadbox)
-    {
-		foreach (var file in uploadbox)
-		{           
-			var fileName = Path.GetFileName(file.FileName);
-			var destinationPath = Path.Combine(Server.MapPath("~/App_Data"), fileName);
-			file.SaveAs(destinationPath); 
-        }       
-	return Content("");
-}
-
-{% endhighlight %}
-{% endhighlight %}
 
 
 
@@ -60,11 +61,12 @@ To remove the uploaded file in MVC, create ActionResult and trigger the same in 
 The following steps explain the configuration of RemoveUrl property in UploadBox. 
 
 
-{% highlight html %}
+{% highlight js %}
 // In the CSHTML page, add the UploadBox element.
 @Html.EJ().Uploadbox("uploadbox")
 .SaveUrl("Uploadbox/Save")
 .RemoveUrl("Uploadbox/Remove")
+{% endhighlight %}
 
 {% highlight c# %} 
 // Configure the action to remove the file in target location. From that location, the file is searched and removed from the App_Data folder. 
@@ -83,7 +85,7 @@ The following steps explain the configuration of RemoveUrl property in UploadBox
     }
 
 {% endhighlight %}
-{% endhighlight %}
+
 
 The following screenshot displays the output. 
 
@@ -98,13 +100,14 @@ The following steps explain the configuration of AutoUpload property in UploadBo
 
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
-{% highlight html %}
+   ~~~ js
 
-// In the CSHTML page, add the UploadBox element.
+		// In the CSHTML page, add the UploadBox element.
 
-@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AutoUpload(true)
+		@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AutoUpload(true)
 
-{% endhighlight %}
+   ~~~
+   {:.prettyprint }
 
 2. For MVC, configure SaveActionResult and RemoveActionResult files as mentioned in Save file action and Remove file action respectively.
 

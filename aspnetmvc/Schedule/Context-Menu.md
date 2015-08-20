@@ -40,7 +40,20 @@ menuItems
 
 {% highlight html %}
 @(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1  ))
-// Custom context menu items.ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell).Appointment(ViewBag.app))).AppointmentSettings(fields => fields.Datasource(ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")))
+// Custom context menu items.
+ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>
+item.Cells(ViewBag.cell).Appointment(ViewBag.app))).AppointmentSettings(fields => 
+fields.Datasource(ViewBag.datasource)
+	.Id("Id")
+	.Subject("Subject")
+	.StartTime("StartTime")
+	.EndTime("EndTime")
+	.AllDay("AllDay")
+	.Recurrence("Recurrence")
+	.RecurrenceRule("RecurrenceRule"))
+ )
+
+{% endhighlight %}
 
 {% highlight c# %}
 namespace MVCSampleBrowser.Controllers
@@ -75,7 +88,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight %}
-{% endhighlight %}
+
 Execute the above code to render the following output.
 
 
@@ -101,7 +114,8 @@ You can refer the following code example to render the categorize options in the
 
 @(Html.EJ().Schedule("Schedule1")
 
-.CategorizeSettings(Fields=>Fields.Datasource((IEnumerable)ViewBag.categorize).Enable(true).AllowMultiple(true).Id("id").Text("text").Color("color").FontColor("fontColor"))
+.CategorizeSettings(Fields=>Fields.Datasource((IEnumerable)ViewBag.categorize)
+	.Enable(true).AllowMultiple(true).Id("id").Text("text").Color("color").FontColor("fontColor"))
 
 .ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(            ViewBag.app)))
 
@@ -126,12 +140,9 @@ You can refer the following code example to render the categorize options in the
 .Categorize("Categorize"))
 
 )
+{% endhighlight %}
 
-
-
-
-
-[controller]
+{% highlight c# %}
 
 public partial class ScheduleController : Controller
 
@@ -191,7 +202,7 @@ public string color { set; get; }
 
 * Execute the above code to render the following output with categorized appointments. Also when you right click “Appointment”, the context menu with categorize option is displayed as follows.
 
-![C:/Users/hariprasanths/Desktop/imagess/123/Capture2.PNG](Context-Menu_images/Context-Menu_img2.png)
+![](Context-Menu_images/Context-Menu_img2.png)
 
 
 
@@ -214,8 +225,17 @@ Schedule / Context Menu</span>}@section ControlsSection{
 .Height("525px")
 .CurrentDate(new DateTime(2014,4,1  ))
 // Custom context menu items.
-ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell)).AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource).Id("Id").Subject("Subject").StartTime("StartTime").EndTime("EndTime").AllDay("AllDay").Recurrence("Recurrence").RecurrenceRule("RecurrenceRule")))}
-
+ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell))
+.AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
+	.Id("Id").Subject("Subject")
+	.StartTime("StartTime")
+	.EndTime("EndTime")
+	.AllDay("AllDay")
+	.Recurrence("Recurrence")
+	.RecurrenceRule("RecurrenceRule"))
+	)
+}
+{% endhighlight %}
 {% highlight c# %}
 namespace MVCSampleBrowser.Controllers
 {
@@ -251,8 +271,7 @@ namespace MVCSampleBrowser.Controllers
 	  }
   }
 }
-</table>
-{% endhighlight %}
+
 {% endhighlight %}
 
 Execute the above code to render the following output when you right-click on the cells.
