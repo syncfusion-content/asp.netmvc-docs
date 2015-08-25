@@ -16,7 +16,7 @@ You can validate the Captcha characters by default when you click the submit but
 Next, define the target button that performs validation. You can achieve this by using TargetButton property. The button id that performs the click action should be assigned in TargetButton. 
 
 
-> Note: To validate the Captcha by default, include RequestMapper. It enables to get or set name for the post action function. The post action function is used to process the captcha values internally such as get values from client side for regeneration of captcha image and validation of the captcha.
+N> To validate the Captcha by default, include RequestMapper. It enables to get or set name for the post action function. The post action function is used to process the captcha values internally such as get values from client side for regeneration of captcha image and validation of the captcha.
 
 
 

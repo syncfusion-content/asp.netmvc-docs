@@ -139,7 +139,7 @@ The following steps explain you how to specify the fieldsmapping in DatePicker w
 
 2. Add the following styles to specify the fields mapping in DatePicker widget.
 
-   > Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
+   N> Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
 
 
 

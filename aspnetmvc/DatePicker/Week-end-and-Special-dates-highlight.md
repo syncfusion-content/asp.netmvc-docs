@@ -40,7 +40,7 @@ The following steps explain you how to get the highlighted week end and special 
 
 2. Add the following styles to get the special dates highlighted.
 
-   > Note: Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
+   N> Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
 
 
    ~~~ css

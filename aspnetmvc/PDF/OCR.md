@@ -284,7 +284,7 @@ lDoc.Close(True)
 
 {% endhighlight %}
 
-> Note: The Tesseract binaries, namely SyncfusionTessaract.dll, liblept168.dll, and language pack (tessdata), will be available in the following location.
+N> The Tesseract binaries, namely SyncfusionTessaract.dll, liblept168.dll, and language pack (tessdata), will be available in the following location.
 
 <<Installation Location>>\Syncfusion\Essential Studio\<<Version Number>>\OCRProcessor
 

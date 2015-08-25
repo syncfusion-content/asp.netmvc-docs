@@ -182,7 +182,7 @@ The scroll limit allows you to scroll the Diagram page along X and Y axes based 
  
 
 
-> Note: Refer to the scrollable area for more details.
+N> Refer to the scrollable area for more details.
 
 The following code example illustrates how to specify scroll limit. 
 

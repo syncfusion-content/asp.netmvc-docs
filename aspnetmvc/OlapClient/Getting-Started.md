@@ -89,7 +89,7 @@ Select Internet application template with razor view engine.
 
 1. Add the script files and CSS files in the head tag of the _Layout.cshtml page.
 
-	> Note: 
+	N> 
 	> 1. Use the following code sample while adding scripts and styles.
 	> 2. Apart from cdn files rest of them can be acquired from the following location
     > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
@@ -779,7 +779,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
 
-	> Note: x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system.
+	N> x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system.
 
 	The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned follows.  For example, 12.1 version is illustrated.
 
@@ -905,7 +905,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
 
-   > Note: In this example, “MvcApplication1” indicates the name of the project and “OlapClientService” indicates the name of the WCF service created.
+   N> In this example, “MvcApplication1” indicates the name of the project and “OlapClientService” indicates the name of the WCF service created.
 
 5. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
 

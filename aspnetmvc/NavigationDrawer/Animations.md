@@ -16,7 +16,7 @@ You can set the transition type of the Navigation Drawer by using type property.
 
 
 
-> Note: Transition slide type works only with fixed position.
+N> Transition slide type works only with fixed position.
 
 The default value is Overlay.
 

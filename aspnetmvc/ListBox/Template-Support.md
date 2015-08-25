@@ -15,7 +15,7 @@ The following steps explains you the behaviour of template support with ListBox.
 
 1. Add the below code in your view page to render the ListBox
 
-   > Note: Images for this sample are available in ‘installed location/images/Employee’
+   N> Images for this sample are available in ‘installed location/images/Employee’
 
 
 

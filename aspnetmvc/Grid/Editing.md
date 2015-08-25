@@ -221,7 +221,7 @@ _Figure : Cell Edit Type_
 
 By default, the datasource for Dropdown Edit Column is set by Grid Control from its datasource. You can also bind external datasource to the Dropdown control of corresponding column in edit mode by using “DataSource” Grid Column property.
 
-> Note: The external datasource must be given in a structure that it should contain properties “text” and_  _“value” which holds the data
+N> The external datasource must be given in a structure that it should contain properties “text” and_  _“value” which holds the data
 
 {% highlight js %}
 

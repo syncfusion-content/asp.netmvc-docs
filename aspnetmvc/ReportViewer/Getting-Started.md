@@ -66,7 +66,7 @@ The following screenshot displays how to select Internet application template wi
 	* Syncfusion.Gauge.Wpf
 	* Syncfusion.SfMaps.Wpf 
 
-    > Note: Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package.
+    N> Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package.
 
 3. Click OK
 
@@ -74,7 +74,7 @@ The following screenshot displays how to select Internet application template wi
 
 Add the script files and CSS files in the &lt;title&gt; tag of the _Layout.cshtml page.
 
-> Note: Use the following code example while adding scripts and styles.
+N> Use the following code example while adding scripts and styles.
 
 {% highlight html %}
    
@@ -118,7 +118,7 @@ Add the following code example in the Index.cshtml page that is already create
 
 {% endhighlight %}
 
-> Note: Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version.
+N> Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version.
 
 
 ### Add WebAPI controller for ReportViewer

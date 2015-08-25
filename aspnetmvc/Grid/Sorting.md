@@ -59,7 +59,7 @@ The following output is displayed as a result of the above code example.
 
 _Figure : Sorting_
 
-> Note: Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid.
+N> Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid.
 
 ## External Sorting
 
@@ -179,7 +179,7 @@ The following output is displayed as a result of the above code example.
 
 _Figure : Multi sorting in touch device_
 
-> Note : To enable Multi Sorting, use AllowMultiSorting() property of Grid
+N> To enable Multi Sorting, use AllowMultiSorting() property of Grid
 
 ## Multi sorting key configs
 

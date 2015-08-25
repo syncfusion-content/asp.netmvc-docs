@@ -13,7 +13,7 @@ documentation: ug
 
 Files are filtered before they are uploaded. You can select the files to be filtered by using browse button. The ExtensionsAllow property allows upload of the selected extensions only. You can give multiple extensions by using comma (,).  The data type is string.
 
-> Note: Prepend dot (.) symbol with extension like “.pdf”.
+N> Prepend dot (.) symbol with extension like “.pdf”.
 
 
 
@@ -35,7 +35,7 @@ The following steps explain the configuration of ExtensionsAllow property in Upl
 
 Files are filtered before they are uploaded. You can select the files to be filtered by using browse button. The ExtensionsDeny property denies upload of the selected extensions. You can give multiple extensions by using comma (,).  The data type is string.
 
-> Note: Prepend dot (.) symbol with extension like “.pdf”.
+N> Prepend dot (.) symbol with extension like “.pdf”.
 
 
 The following steps explain the configuration of ExtensionsDeny property in UploadBox

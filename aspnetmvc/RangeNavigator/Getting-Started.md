@@ -173,7 +173,7 @@ This section encompasses the details on how to configure the RangeNavigator and 
 
 
 
-> Note: Add the following namespaces in web.config file within the Views folder.
+N> Add the following namespaces in web.config file within the Views folder.
 
 {% highlight html %}
 

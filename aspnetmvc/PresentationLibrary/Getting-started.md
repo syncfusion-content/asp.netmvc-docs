@@ -619,7 +619,7 @@ The chart type can beis specified with the help of ChartType property of IOffice
 
 
 
-> Note: 3D charts are not supported in image & PDF conversion.
+N> 3D charts are not supported in image & PDF conversion.
 
 
 

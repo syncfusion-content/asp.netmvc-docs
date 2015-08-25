@@ -158,7 +158,7 @@ ej.olap.OlapGauge.locale["fr-FR"] = {
 {% endhighlight %}
 
 
-> Note: In order to render the localized OLAP Gauge, You are required to reset the content available in both
+N> In order to render the localized OLAP Gauge, You are required to reset the content available in both
 
 1. _OLAP Gauge Control_
 2. _OLAP Cube_

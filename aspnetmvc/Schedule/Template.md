@@ -49,7 +49,7 @@ RecurrenceRule("RecurrenceRule"))
 // the following function selects the images to be displayed on the appointments based on the day of the appointment’s startTime.
 {% endhighlight %}
 
-> Note: The following used images should be present in a separate images folder, so that it will be referred properly.
+N> The following used images should be present in a separate images folder, so that it will be referred properly.
 {% highlight js %}
 function _getImages(date)
  {switch (new Date(date).getDay())

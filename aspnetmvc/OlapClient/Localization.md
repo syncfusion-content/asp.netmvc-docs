@@ -350,7 +350,7 @@ The following code example shows how to localize OLAP Client’s User Interface 
 
 {% endhighlight %} 
 
-> Note: In order to render the localized OLAP Client, we need to reset the content available in both OLAP Client Control and OLAP Cube
+N> In order to render the localized OLAP Client, we need to reset the content available in both OLAP Client Control and OLAP Cube
 
 ## Localizing Control Information
 

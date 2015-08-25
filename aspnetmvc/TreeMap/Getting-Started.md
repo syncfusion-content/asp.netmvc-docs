@@ -90,7 +90,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 
 
- > Note: Population data is referred from [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population)
+ N> Population data is referred from [List of continents by population](http://en.wikipedia.org/wiki/List_of_continents_by_population)
  
 ## Initialize TreeMap
 

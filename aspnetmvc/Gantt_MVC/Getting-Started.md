@@ -375,7 +375,7 @@ Gantt control contains the toolbar options to edit, search, expand and collapse 
 
 _Figure 16: Toolbar in Gantt chart_
 
-> Note: add, edit, delete options are enabled when enabling the allowEditing, allowAdding, allowDelete in the edit Options.
+N> add, edit, delete options are enabled when enabling the allowEditing, allowAdding, allowDelete in the edit Options.
 
 ## Enable sorting 
 
@@ -474,7 +474,7 @@ _Figure 17: Gantt control with Enable Editing options_
 
 
 
-> Note: Both cellEditing and normal editing operations are performed through double click action.
+N> Both cellEditing and normal editing operations are performed through double click action.
 
 ## Enable Context Menu
 

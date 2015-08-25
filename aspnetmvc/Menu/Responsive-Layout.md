@@ -13,7 +13,7 @@ Responsive Layout is aimed at crafting sites to provide an optimal viewing exper
 
 [http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
 
-> Note: Refer to the ej.responsive.css file after the ej.widgets.all.min.css file
+N> Refer to the ej.responsive.css file after the ej.widgets.all.min.css file
 
 Add the above css link in the code sample.         
 

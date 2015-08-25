@@ -96,7 +96,7 @@ The following steps explains how to reder the TreeView using Template.
 
 3. In the View page, define the template structure in which the TreeView has to be rendered. 
    
-   > Note: We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder.
+   N> We need to include jsrender.js script file to use the following template. Also the images mentioned are available in the samples installed  location, in the Content/Images folder.
 
    ~~~ js
 

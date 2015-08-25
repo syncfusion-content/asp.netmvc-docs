@@ -125,7 +125,7 @@ _Figure : OData binding_
 
 
 
-> Note: For information about DataManager with Grid check DataAdaptors concept.
+N> For information about DataManager with Grid check DataAdaptors concept.
 
 ### Load at once
 

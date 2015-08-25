@@ -1168,7 +1168,7 @@ By default, documents are signed with standard signature types. Certificated p
 
 
 
-> Note: This implementation of certification will only work with Acrobat 7 and higher versions.
+N> This implementation of certification will only work with Acrobat 7 and higher versions.
 
 
 

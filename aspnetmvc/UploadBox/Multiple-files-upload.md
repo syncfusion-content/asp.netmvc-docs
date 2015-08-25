@@ -11,7 +11,7 @@ documentation: ug
 
 The UploadBox widget provides support to upload multiple files spontaneously. The MultipleFilesSelection property enables you to select multiple files while browsing.  To achieve this, set the MultipleFilesSelection property to ‘true’. The data type is Boolean.
 
-> Note: The Multiple file selection supports all the latest versions of browser except Internet Explorer 9 and its previous versions.
+N> The Multiple file selection supports all the latest versions of browser except Internet Explorer 9 and its previous versions.
 
 
 

@@ -12,7 +12,7 @@ documentation: ug
 Using Cascade option, you can create a behaviour of cascade between dropdown list controls. For this, you need to create database with single field as common between two dropdown data fields and then mention that column id in field. With this, you need to set second dropdown id in CascadeTo property in first one. 
 
 
-> Note: In case the second dropdown is to disabled, until the first one is selected, you need to set enable property as false in second dropdown, which enables automatically once the value is selected in first one.
+N> In case the second dropdown is to disabled, until the first one is selected, you need to set enable property as false in second dropdown, which enables automatically once the value is selected in first one.
 
 
 The following steps explains you the behaviour of cascade dropdown. 
@@ -93,7 +93,7 @@ _Figure 25: Dropdown with cascade property_
 Using multi cascade option, you can create a behavior of cascade between dropdown list controls. To achieve this, map the common field from table to “Fields” property of all the dropdown lists. Also, specify the ID of cascading DropDownList in “CascadeTo” property of parent DropDownList. 
 
 
-> Note: In case, when you want to show the cascading dropdowns in disabled state initially, then set the value of enable property as “false” in each cascading dropdowns. It is then enabled automatically once a value is selected in parent (first) dropdown list.
+N> In case, when you want to show the cascading dropdowns in disabled state initially, then set the value of enable property as “false” in each cascading dropdowns. It is then enabled automatically once a value is selected in parent (first) dropdown list.
 
 
 The following steps explains you the behavior of multiple cascade dropdown.

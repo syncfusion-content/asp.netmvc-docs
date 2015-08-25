@@ -74,7 +74,7 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
    ~~~
    {:.prettyprint }
 
-> Note: Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36 
+N> Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36 
 
 
 

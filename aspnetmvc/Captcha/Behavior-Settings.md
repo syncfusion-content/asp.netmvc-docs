@@ -13,7 +13,7 @@ documentation: ug
 
 Captcha control supports regeneration of captcha image without full page refresh. You can achieve this by clicking refresh button. By default Captcha renders without refresh button. You can add the refresh button by setting EnableRefreshImage property to true. 
 
-> Note:  To refresh the Captcha image, include “RequestMapper”. It enables you to get or set name for the post action function.
+N>  To refresh the Captcha image, include “RequestMapper”. It enables you to get or set name for the post action function.
 
 
 

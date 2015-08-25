@@ -16,7 +16,7 @@ The following steps explains you the behaviour of template support with Dropdown
 1. Add the below code to render the view page to configure Dropdownlist widget
 
 
-   > Note: Images for this sample are available in ‘installed location /themes/images’ 
+   N> Images for this sample are available in ‘installed location /themes/images’ 
 
    ~~~ html
 

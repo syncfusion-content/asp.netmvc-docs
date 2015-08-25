@@ -952,5 +952,5 @@ connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
 
 
 
-> Note: Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm) 
+N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm) 
 

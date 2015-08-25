@@ -227,7 +227,7 @@ The following steps explains you the configuration of Rounded corner of the Drop
    You can add the icons or images with list items in dropdown popup by using sprite CSS class. The following steps explains you the configuration about the icons support with Dropdownlist
 
 
-   > Note: Images for this sample are available in ‘installed location /themes/images’ and you need to define images in mentioned CSS. Henceforth the images display.
+   N> Images for this sample are available in ‘installed location /themes/images’ and you need to define images in mentioned CSS. Henceforth the images display.
 
 
    1111.Add the below code 1. add tgh

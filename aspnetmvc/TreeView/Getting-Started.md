@@ -290,7 +290,7 @@ To design the TreeView tolook like Mail options application, you can create the 
 
 _[Installed Drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\XX.X.X.XX\MVC \Samples\web\Images\mail\ mailicons.png_
 
-> Note: XX.X.X.XX represents the Essential Studio version number that you are using currently.
+N> XX.X.X.XX represents the Essential Studio version number that you are using currently.
 
 Copy the “mailicons.png” from the above location and paste it in your MVC application.
 
@@ -586,7 +586,7 @@ Execute the above code example to render TreeView. When you select the mail fold
 
 
 
-> Note: The inline edit validation is done when “InlineEditValidation” event occurs, as in the screenshot as follows. The “InlineEditValidation” event rises only when the “AllowEditing” property is set to True.
+N> The inline edit validation is done when “InlineEditValidation” event occurs, as in the screenshot as follows. The “InlineEditValidation” event rises only when the “AllowEditing” property is set to True.
 
 
 
