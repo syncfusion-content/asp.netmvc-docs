@@ -83,7 +83,7 @@ This event is handled when the Chart gets loaded; a parameter sender is passed t
 
 {% endhighlight  %}
 {% highlight js %}
-[JS]
+
 
 
 

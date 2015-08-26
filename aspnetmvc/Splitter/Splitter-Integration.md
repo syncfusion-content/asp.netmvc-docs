@@ -73,7 +73,7 @@ Grouping and the display of hierarchical data.
 </p>
 </div>
 </div>).PaneSize("200");
-}).Height("400").Width("100%").Render();}[css]<style type="text/css">
+}).Height("400").Width("100%").Render();}<style type="text/css">
 #outterSplitter {
 margin: 0 auto;
 }    .cont #treeView_Container {

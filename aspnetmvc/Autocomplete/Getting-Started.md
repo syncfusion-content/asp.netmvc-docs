@@ -147,7 +147,7 @@ To enable the DropDown button, you can set ShowPopupButton property to â€˜trueâ€
 
 
 {% highlight html %}
-[CSS]
+
 <style>.e-icon.e-search:before 
  {                
     content:"\e63b";  

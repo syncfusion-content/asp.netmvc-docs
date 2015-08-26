@@ -882,7 +882,7 @@ doc.Save("BuiltinStyle.doc");
 
 
 
-[VB.NET]
+
 
 
 
