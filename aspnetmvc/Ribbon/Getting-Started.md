@@ -21,7 +21,7 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 
 ###  Create Ribbon Control                     
 
-1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) document.
+1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://docs.syncfusion.com/aspnetmvc/ribbon/getting-started) document.
 2. Add a _Ribbon_ control in the index.cshtml page.The _Width_ property allows you to define the width of the _Ribbon_. In _ApplicationTab_ definition, the _ItemID_ property allows you to specify the ID of the ul list to create the application menu. In tabs definition, the _TabGroups_ property allows you to create one or more groups in the tab. In _ContextualTabs_ definition, the _BackgroundColor_ property allows you to define the background color of the contextual tab and _BorderColor_ property allows you to define the border color of the contextual tab.
 
 

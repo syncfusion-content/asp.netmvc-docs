@@ -36,7 +36,7 @@ Figure 1: Progress Bar
 ASP.NET MVC Progress Bar control indicates the current progress of an operation like uploading a document through a simple interface. You can easily create the Progress bar control using simple HTML helpers as follows.
 
 1. Create an MVC Project and add necessary assemblies, scripts and styles to it. 
-   Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+   Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/progressbar/getting-started)
 
 
 

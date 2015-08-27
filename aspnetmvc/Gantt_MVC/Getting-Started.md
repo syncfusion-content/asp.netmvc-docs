@@ -58,7 +58,7 @@ In this tutorial, you will learn how to create a simple Gantt chart, add tasks a
 
 _Figure 14: Simple Gantt chart_
 
-1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) documentation to create new project and add necessary DLL’s and script files.
+1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/gantt_mvc/getting-started) documentation to create new project and add necessary DLL’s and script files.
 
 2. Next, create a simple <div> tag in index.cshtml file to render Gantt control.
 

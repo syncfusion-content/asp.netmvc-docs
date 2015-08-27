@@ -13,7 +13,7 @@ You can provide more customization to the Tab with Rating control as content in 
 
 The Essential ASP.NET MVC Rating control provide you an intuitive rating experience that allows you to select the number of stars that represents the rating. For more information about the rating, you can refer the following link:
 
-[http://help.syncfusion.com/ug/js/default.htm#!Documents/gettingstarted25.htm](http://help.syncfusion.com/ug/js/default.htm)
+<http://docs.syncfusion.com/aspnetmvc/tab/integration-with-other-widgets>
 
 The following code example explains you the Rating control creation. The input element is used to create the rating control. Render the input element as rating control using the input element id. 
 

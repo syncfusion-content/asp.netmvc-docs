@@ -24,7 +24,7 @@ In the above screenshot, you can see the weighted list and a click on any item d
 
 Essential Studio ASP.NET MVC TagCloud widget has built-in features such as clicking on one of the sites in the TagCloud brings all relevant results only from the selected source. You can easily create the TagCloud widget element as follows.
 
-1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/tagcloud/getting-started)
 2. Add the following code to the corresponding view page to render TagCloud.
 
    ~~~ js

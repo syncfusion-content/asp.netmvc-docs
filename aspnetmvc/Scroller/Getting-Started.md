@@ -19,7 +19,7 @@ ASP.NET MVCScroller control allows you to slide document whose position correspo
 
 Essential Studio ASP.NET MVC Scoller control has a built-in feature to customize the resizing and changing the Scrollbar theme.
 
-1. Create an MVC Project and add required assemblies, scripts, and styles to it. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. Create an MVC Project and add required assemblies, scripts, and styles to it. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/scroller/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the Scroller. 
 
    ~~~ html

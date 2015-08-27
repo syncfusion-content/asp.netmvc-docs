@@ -27,7 +27,7 @@ ASP.NET MVC Slider controlallows you to switch between different ranges of input
 
 1. Create an MVC Project and add necessary assembly, scripts, and styles to it.
 
-   Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+   Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/slider/getting-started)
 
 2. Add the following code example for Slider to the corresponding view page.
 

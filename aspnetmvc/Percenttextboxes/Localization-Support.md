@@ -13,7 +13,7 @@ Localization is language support based on the culture in PercentageTextBox. Y
 
 PercentageTextBox widget provides multi-language support using globalization. You can customize the PercentageTextBoxwith your own language style by using this feature. You can change the localization by using the locale property. The default value for Locale property is en-US .
 
-In order to enable [localization](http://help.syncfusion.com/ug/js/default.htm) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support and the “globalize.js” is a simple JavaScript library that allows you to format the value based on the specified culture.
+In order to enable [localization](http://docs.syncfusion.com/aspnetmvc/percenttextboxes/localization-support) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support and the “globalize.js” is a simple JavaScript library that allows you to format the value based on the specified culture.
 
 You can refer the following online link reference for globalize.js
 

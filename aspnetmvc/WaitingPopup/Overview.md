@@ -38,7 +38,7 @@ In the above screenshot, you can give the Username and Password. When you click 
 
 ASP.NET MVC Waiting Popup widget has a built-in feature to block all other actions until the page is loaded. You can easily create the Waiting Popup control by using simple HTML Helper element as follows
 
-1. You can create an MVC Project and add necessary assemblies, styles, and scripts with the help of [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary assemblies, styles, and scripts with the help of [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/waitingpopup/overview) Documentation.
 
 ### Create Login Page
 

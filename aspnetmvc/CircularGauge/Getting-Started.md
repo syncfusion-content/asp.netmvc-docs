@@ -25,7 +25,7 @@ documentation: ug
 
 ASP.NET MVC Circular Gauge widget basically renders with animation and flexible APIs. You can easily create the Circular Gauge widget by using the following steps.
 
-1. First create an MVC Project and add necessary Dlls and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
+1. First create an MVC Project and add necessary Dlls and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/circulargauge/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render CircularGauge.
 
    ~~~ javascript

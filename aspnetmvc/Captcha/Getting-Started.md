@@ -21,7 +21,7 @@ This section enables you to configure the Captcha control in your ASP.NET MVC 
 
 The Captcha is one of the way to prevent dictionary attacks, it basically comes with the random text. The following steps are used to create Captcha control.  
 
-1. You can create an MVC Project and add necessary Dll and script with the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/captcha/getting-started) Documentation.
 2. Add the following code to the corresponding view page for Captcha rendering.
 
 

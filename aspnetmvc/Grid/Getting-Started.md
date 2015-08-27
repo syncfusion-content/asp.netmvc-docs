@@ -20,7 +20,7 @@ The Grid can be easily configured to the DOM element, such as <div>. You can cre
 _Figure : Managed sales data_
 
 
-1. Create Syncfusion ASP.NET MVC Application. Refer [common](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) document
+1. Create Syncfusion ASP.NET MVC Application. Refer [common](http://docs.syncfusion.com/aspnetmvc/grid/getting-started) document
 2. Add a Grid Control in index.cshtml page.In Columns definition, the TextAlign property allows you to align text of the columns, the Width property is used to define width of the columns and Format property allows you to format the particular columns value.
 
    ~~~ js

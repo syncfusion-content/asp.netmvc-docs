@@ -29,7 +29,7 @@ In the above screenshot, you can type only numbers and it does not allow text fo
 
 ASP.NET MVC MaskEdit control renders built-in features like text masking, number masking and flexible APIs. You can easily create the MaskEdit control using simple HTML helper class as follows:
 
-1. Create an MVC Project and add necessary assemblies, styles and scripts to it. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
+1. Create an MVC Project and add necessary assemblies, styles and scripts to it. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/masktextboxes/getting-started).
 2. Add the following code to the corresponding view page to render MaskEdit.
 
 
@@ -215,7 +215,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 1. Create a MVC Project and add necessary assemblies and scripts to it. 
 
-   Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
+   Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/masktextboxes/getting-started).
 
 2. Add the following code to the corresponding view page to render MaskEdit.
 

@@ -21,7 +21,7 @@ _Simple Map_
 
 ### Create a simple MVC Application 
 
-To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/maps/getting-started) Documentation.
 
 #### Preparing Shape Data
 

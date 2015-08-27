@@ -27,7 +27,7 @@ The Menu items in the above screenshot allow you to navigate through multiple me
 
 Essential ASP.NET MVC Menu widget basically renders with built-in features like keyboard navigation, show and hides Menu items with animations and flexible API’s. Refer the following guidelines to render Menu control with Local data source value.
 
-1. You can create a MVC Project and add the necessary Dll’s and scripts using the [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create a MVC Project and add the necessary Dll’s and scripts using the [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/menu/getting-started) Documentation.
 2. Add the below code in yoyr view page to add the nessary css and script files
 
    ~~~ html

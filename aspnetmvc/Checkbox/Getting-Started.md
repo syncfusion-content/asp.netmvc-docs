@@ -31,7 +31,7 @@ In the above screenshot, you can select hobbies, interest list and social networ
 
 ASP.NET MVC Checkbox widget has built-in features like multiple selections. You can easily create the Checkbox widget using simple HTML helper “@Html.EJ().CheckBox()” as follows.
 
-1. You can create an MVC Project and add necessary assemblies, styles and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary assemblies, styles and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/checkbox/getting-started) Documentation.
 2. Add the following code to the corresponding view page to render Checkbox.
 
 

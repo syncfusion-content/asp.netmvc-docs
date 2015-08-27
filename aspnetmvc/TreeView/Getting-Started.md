@@ -26,7 +26,7 @@ In the above screenshot, you can select the mailbox items and you can write the 
 
 The Essential ASP.NET MVC Splitter is a layout control that allows you to divide a web page into distinct areas by using resizable panes. Many Splitter panes are created and placed inside the Splitter control and the split bars are inserted automatically between the adjacent panes. For more information about the Splitter you can refer the Splitter-Getting Started documentation.
 
-1. Create a MVC Project and add necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. Create a MVC Project and add necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/treeview/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for rendering the Splitter window.
    
    ~~~ html

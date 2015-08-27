@@ -22,7 +22,7 @@ Two-way binding supports both the processes. It applies the observable values to
 
 For more information about Knockout binding, you can refer to the online documentation in the following link location,
 
-[http://help.syncfusion.com/ug/js/documents/knockoutjs.htm](http://help.syncfusion.com/ug/js/documents/knockoutjs.htm)
+<http://docs.syncfusion.com/aspnetmvc/colorpicker/knockout-binding>
 
 1. The following example depicts how you can bind data to the ColorPicker widget through knockout support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
 

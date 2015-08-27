@@ -31,7 +31,7 @@ In the following sections you can learn, How to:
 
 Use the following steps to create the ColorPicker control.
 
-1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/colorpicker/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for rendering the ColorPicker window.
 
    ~~~ js
@@ -53,7 +53,7 @@ To add the priority value to the ListBox, the text value is obtained from the in
 
 You can refer to the following link for more information on creation on ListBox
 
-[http://help.syncfusion.com](http://help.syncfusion.com)
+<http://docs.syncfusion.com>
 
 
 

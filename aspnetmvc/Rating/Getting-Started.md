@@ -30,7 +30,7 @@ In the above screenshot, you can rate the movie by selecting a corresponding mov
 The Essential Studio ASP.NET MVCRating widget renders with built-in features like Precision, Orientation and flexible APIs. You can easily create the Rating widget by using HTML helper class as follows.
 
 You can create an MVC Project and add the necessary assemblies, styles and scripts to it.
-Refer to [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm).
+Refer to [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/rating/getting-started).
 
 Add the following code example to the corresponding view page to render Rating inside the Tab control.	
 

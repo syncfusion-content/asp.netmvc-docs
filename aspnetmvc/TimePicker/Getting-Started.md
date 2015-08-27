@@ -27,7 +27,7 @@ The above screenshot illustrates the functionality of a TimePicker, with a time 
 
 Essential MVC TimePicker widget has built-in features such as keyboard navigation, other time navigation with animations, and flexible APIs. You can easily create the TimePicker widget using simple TimePicker element as follows.
 
-1. You can create an MVC Project and add necessary assemblies and scripts to it. Refer [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary assemblies and scripts to it. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/timepicker/getting-started) Documentation.
 2. Add the following code to the corresponding view page to render the TimePicker.
 
    ~~~ html

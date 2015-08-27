@@ -31,7 +31,7 @@ Using the following steps, you can create a Toolbar control. The basic rendering
 
 
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/toolbar/getting-started) Documentation.
 
 
 

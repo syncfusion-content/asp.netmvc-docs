@@ -36,7 +36,7 @@ To create a DropDownList, the steps are as follows:
 
 ASP.NET MVCDropDownList widget basically renders with built-in features.
 
-1. You can create an MVC Project and add necessary DLL with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary DLL with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/dropdownlist/getting-started) Documentation.
 
 
 

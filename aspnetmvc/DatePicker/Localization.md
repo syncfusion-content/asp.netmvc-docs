@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is language support based on the culture in DatePicker. You can achieve the Localization using “Locale” property in DatePicker.
 
-In order to enable [localization](http://help.syncfusion.com/ug/js/default.htm) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support for ASP.NET MVC controls and the “globalize.js” is a simple JavaScript library that allows you to format and dates based on the specified culture.
+In order to enable [localization](http://docs.syncfusion.com/aspnetmvc/datepicker/localization) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support for ASP.NET MVC controls and the “globalize.js” is a simple JavaScript library that allows you to format and dates based on the specified culture.
 
 You can refer the following online link reference for globalize.js
 

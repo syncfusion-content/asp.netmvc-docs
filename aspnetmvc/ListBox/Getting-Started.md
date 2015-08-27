@@ -33,7 +33,7 @@ EssentialASP.NET MVCListBox control renders with built-in features.
 
 The following steps are used to create ListBox control.  
 
-1. You can create an MVC Project and add necessary Dll with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary Dll with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/listbox/getting-started) Documentation.
 2. Please add the below code in your layout._cshtml page to add necessary script and css files to render the ListBox control.
 
    ~~~ html

@@ -25,7 +25,7 @@ In the above screenshot, you can upload a resume. It allows .png and .docx file 
 
 ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, Delete files, check the status of the file, whether it shows complete or failed, and retry uploading the files.  You can easily create the UploadBox widget by using the following steps.
 
-1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/uploadbox/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the UploadBox.
    
    ~~~ js

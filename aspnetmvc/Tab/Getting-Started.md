@@ -29,7 +29,7 @@ The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven i
 
 The following steps are used to create Tab control.  
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/tab/getting-started) Documentation.
 2. Add the mentioned code to the corresponding view page for Tab rendering.
 
 

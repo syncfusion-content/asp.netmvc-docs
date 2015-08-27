@@ -650,7 +650,7 @@ Connector is connected to the bounds of the node and at a specific point on the 
 
 
 
-//for node creation refer to the link [Node creation](http://help.syncfusion.com/ug/js/documents/createyourfirstdiagr.htm)
+//for node creation refer to the link [Node creation](http://docs.syncfusion.com/aspnetmvc/diagram/connector)
 
 //Creates a connection between headNode/tailNode using connector
 
@@ -678,7 +678,7 @@ The point of connection is changed optimally at runtime while performing operati
 
 Port establishes the connection with nodes at a specific point.
 
-For creating specific port connection, refer to the link [Port to Port Connection.](http://help.syncfusion.com/ug/js/default.htm)
+For creating specific port connection, refer to the link [Port to Port Connection.](http://docs.syncfusion.com/aspnet/diagram/port)
 
 ## Appearance
 
@@ -952,5 +952,5 @@ connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
 
 
 
-N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://help.syncfusion.com/ug/js/documents/bitwiseoperations.htm) 
+N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://docs.syncfusion.com/aspnet/diagram/constraints) 
 

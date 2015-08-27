@@ -21,7 +21,7 @@ In this section, you can learn how to create a simple Radial Menu in the MVC app
 
 The following steps guide you to add a Radial Menu control.
 
-You can create an MVC Project and add the necessary assemblies, styles, and scripts to it. Refer to the [MVC-Getting Started.](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm)
+You can create an MVC Project and add the necessary assemblies, styles, and scripts to it. Refer to the [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/radialmenu/getting-started)
 
 Add the following code example to the corresponding view page to render the Radial Menu.
 

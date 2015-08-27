@@ -34,7 +34,7 @@ In the above screenshot , the Accordion contains a template for its Header and i
 
 ASP.NET MVC Accordion basically renders using a div element. The following step describes the creation of Accordion control.
 
-* You can create a MVC Project and add necessary Dll’s with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/Documents/gettingstartedwithmv.htm) Documentation.
+* You can create a MVC Project and add necessary Dll’s with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/accordion/getting-started) Documentation.
 * Please add the below code in layout._cshtml file head section to add the necessary script and CSS files to render the Accordion control.
 
 {% highlight html %}
