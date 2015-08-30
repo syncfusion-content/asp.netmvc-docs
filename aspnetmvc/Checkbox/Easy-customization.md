@@ -243,7 +243,7 @@ Execute the above code to render the following output.
 
 
 ![](Easy-customization_images/Easy-customization_img5.png)
-{:.image }
+
 
 
 _Checkbox with text content_

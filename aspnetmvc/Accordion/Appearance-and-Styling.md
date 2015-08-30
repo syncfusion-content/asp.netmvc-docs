@@ -166,7 +166,7 @@ The following code explains you the configuration of icon for an Accordion contr
 Output for Accordion widget with customized icons is as follows.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
-{:.image }
+
 
 
 ## Animation Options

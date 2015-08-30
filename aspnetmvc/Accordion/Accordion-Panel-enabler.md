@@ -53,7 +53,7 @@ The following code explains you on how to enable or disable the Accordion widget
 Output for disabled Accordion control is as follows.
 
  ![](Accordion-Panel-enabler_images/Accordion-Panel-enabler_img1.png)
-{:.image }
+
 
 
 ## Enable panel items
