@@ -669,7 +669,7 @@ _Figure 8: DropDown Appearance for cascading after selection of group and countr
 
 ## Set the Vote process in the DropDownList Widget
 
-The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: [http://help.syncfusion.com/ug/js/default.htm#!Documents/gettingstarted4.htm](http://help.syncfusion.com/ug/js/default.htm)
+The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: <http://docs.syncfusion.com/js/>
 
 The following code sample explains how to set the Vote process in the DropDownList widget.
 

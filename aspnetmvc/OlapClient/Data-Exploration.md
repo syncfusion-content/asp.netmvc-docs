@@ -47,7 +47,7 @@ The options in Filtering tab are as follows:
 
   The following screenshot displays the Filtering Dialog box.
 
-  ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_31.png](Data-Exploration_images/Data-Exploration_img2.png)
+  ![](Data-Exploration_images/Data-Exploration_img2.png)
 
   The following screenshot displays data before Filtering.
 
@@ -79,7 +79,7 @@ The options in the Sorting tab are as follows: 
 
   The following screenshot displays the Sorting and Filtering dialog box.
   
-  ![Description: http://help.syncfusion.com/ug/js/ImagesExt/image19_28.png](Data-Exploration_images/Data-Exploration_img5.png)
+  ![](Data-Exploration_images/Data-Exploration_img5.png)
 
   The following screenshot displays the data before sorting.
   

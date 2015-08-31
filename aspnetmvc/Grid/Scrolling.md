@@ -341,14 +341,14 @@ This feature allows you to load the Grid with data while scrolling. The followin
 {% endhighlight  %}
 The following screenshot displays the Grid while scrolling. The request is sent to the server to fetch data.
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image229_108.png](Scrolling_images/Scrolling_img4.png)
+![](Scrolling_images/Scrolling_img4.png)
 
 _Figure : Normal mode virtual Scrolling_
 
 
 The following screenshot displays the Grid after it is loaded with data.
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image229_109.png](Scrolling_images/Scrolling_img5.png)
+![](Scrolling_images/Scrolling_img5.png)
 
 _Figure : Grid after loaded with data_
 
@@ -419,13 +419,13 @@ You can enable the continuous mode by setting the VirtualScrollMode property a
 
 The following screenshot illustrates the request made to fetch the data after the Grid scrollbar touches the end.
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image229_110.png](Scrolling_images/Scrolling_img6.png)
+![](Scrolling_images/Scrolling_img6.png)
 
 _Figure : Continuous mode virtual scrolling_
 
 The following screenshot illustrates the Grid after the data is loaded.
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image229_111.png](Scrolling_images/Scrolling_img7.png)
+![](Scrolling_images/Scrolling_img7.png)
 
 _Figure : Grid after loaded with data_
 

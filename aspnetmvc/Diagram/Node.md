@@ -644,7 +644,7 @@ node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_17.jpg](Node_images/Node_img14.jpeg)
+![](Node_images/Node_img14.jpeg)
 
 
 
@@ -665,7 +665,7 @@ node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
 
 {% endhighlight %}
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_18.jpg](Node_images/Node_img15.jpeg)
+![](Node_images/Node_img15.jpeg)
 
 
 

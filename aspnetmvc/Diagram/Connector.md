@@ -13,7 +13,7 @@ Connectors are objects used to create a link between two nodes. A connector is a
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_20.jpg](Connector_images/Connector_img1.jpeg)
+![](Connector_images/Connector_img1.jpeg)
 
 
 
@@ -666,7 +666,7 @@ connector.TargetNode = "tailNode"; //Sets name of targetNode
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_22.jpg](Connector_images/Connector_img17.jpeg)
+![](Connector_images/Connector_img17.jpeg)
 
 
 
@@ -861,7 +861,7 @@ connector.SourceDecorator.FillColor = "yellow";
 
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image59_23.jpg](Connector_images/Connector_img18.jpeg)
+![](Connector_images/Connector_img18.jpeg)
 
 
 

@@ -100,7 +100,7 @@ The ASP.NET MVCRating control provides an intuitive rating experience that allow
 
 For more information about rating, refer to the following link: 
 
-[http://help.syncfusion.com/aspnetmvc/](http://help.syncfusion.com/aspnetmvc/)
+<http://docs.syncfusion.com/aspnetmvc>
 
 {% highlight js %}
 

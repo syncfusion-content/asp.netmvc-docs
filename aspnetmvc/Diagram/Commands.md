@@ -560,7 +560,7 @@ diagram.nudge("up" , 5);
 
 The corresponding arrow keys are used to move the selected elements up, down, left, or right by 1 pixel.
 
-![http://help.syncfusion.com/ug/wpf/diagram/ImagesExt/image69_163.png](Commands_images/Commands_img11.png)
+![](Commands_images/Commands_img11.png)
 
 
 

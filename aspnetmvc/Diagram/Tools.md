@@ -201,7 +201,7 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 {% endhighlight %}
 
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image682_23.jpg](Tools_images/Tools_img2.jpeg)
+![](Tools_images/Tools_img2.jpeg)
 
 
 

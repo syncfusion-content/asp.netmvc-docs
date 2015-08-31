@@ -45,7 +45,7 @@ hypLink.EnableColumnHeaderHyperlink(true).EnableRowHeaderHyperlink(true).EnableV
 
  The output of the above code creates a PivotGrid with the Hyperlink option as shown in the following screenshot:
 
-![http://help.syncfusion.com/ug/js/ImagesExt/image49_165.png](Hyperlink_images/Hyperlink_img1.png)
+![](Hyperlink_images/Hyperlink_img1.png)
 
 
 

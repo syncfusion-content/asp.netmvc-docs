@@ -40,7 +40,7 @@ A ligature is a combination of characters that is written as a glyph, as though 
 
 
 
-![http://help.syncfusion.com/ug/windows%20forms/docio/ImagesExt/image9_92.png](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img2.png)
+![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img2.png)
 
 
 

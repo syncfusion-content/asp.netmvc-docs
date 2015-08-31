@@ -117,7 +117,8 @@ doc.Close()
 
 {% endhighlight %}
 
-N> For more information on mail merge using DocIO, you can refer to online documentation link:[http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/46mailmerge.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on mail merge using DocIO, you can refer to online documentation link:
+< http://docs.syncfusion.com/windowsforms/docio >
 
 ## Find and Replace
 
@@ -219,11 +220,15 @@ doc.Save("Find And Replace.doc")
 
 {% endhighlight %}
 
-N> For more information on performing the find and replace operation using DocIO, you can refer to online documentation link: [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/45findandreplace.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on performing the find and replace operation using DocIO, you can refer to online 
+documentation link: 
+<http://docs.syncfusion.com/windowsforms/docio >
 
 ## Bookmarks
 
-Bookmarks identify the location of text in a Word document that you can use for future reference. For example, you might use a bookmark to identify text that you want to revise later. Instead of scrolling through the document to locate the text, you can identify the text location by using the Bookmark dialog box.
+Bookmarks identify the location of text in a Word document that you can use for future reference. For example, you 
+might use a bookmark to identify text that you want to revise later. Instead of scrolling through the document to 
+locate the text, you can identify the text location by using the Bookmark dialog box.
 
 ### Using MS Office Interop
 
@@ -333,7 +338,7 @@ doc.Close()
 {% endhighlight %}
 
 
-N> For more information on working with bookmarks using DocIO, you can refer to the online documentation link: [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/4413bookmark.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on working with bookmarks using DocIO, you can refer to the online documentation link: < http://docs.syncfusion.com/windowsforms/docio >
 
 ## Page Numbers
 
@@ -583,7 +588,7 @@ doc.Close()
 {% endhighlight %}
 
 
-N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/4222watermark.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on adding watermarks to a Word document using DocIO, refer to the online documentation link: < http://docs.syncfusion.com/windowsforms/docio >
 
 ## Header or Footer
 
@@ -717,7 +722,8 @@ doc.Close()
 
 {% endhighlight %}
 
-N> For more information on inserting Headers and Footers to a Word document using DocIO, you can refer to the online documentation link:_ [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/432headersandfooters.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on inserting Headers and Footers to a Word document using DocIO, you can refer to the online documentation
+link:_ <http://docs.syncfusion.com/windowsforms/docio/working-with-sections#working-with-headers-and-footers>
 
 ## Character Formatting
 
@@ -900,7 +906,7 @@ doc.Save("TableDocIO.doc")
 {% endhighlight %}
 
 
-N> For more information on creating tables using DocIO, refer to online documentation link: [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/433table.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+N> For more information on creating tables using DocIO, refer to online documentation link: <http://docs.syncfusion.com/windowsforms/docio > 
 
 ## Comments
 
@@ -1065,8 +1071,8 @@ doc.Save("CommentsRemovedDocIO.doc", FormatType.Doc)
 
 {% endhighlight %}
 
-N> For more information on working with the comments using DocIO, you can refer to the online documentation link: [http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/44143comment.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
-
+N> For more information on working with the comments using DocIO, you can refer to the online documentation link:
+ <http://docs.syncfusion.com/windowsforms/docio/working-with-paragraphs#comments>
 ## Document Protection
 
 You can protect your Word documents with or without a password, from anyone accidentally or deliberately modifying the Word documents. You can specify the protection type for preserving the Word documents.
@@ -1170,7 +1176,7 @@ Doc.Save("FileProtectionDocIO.doc")
 
 Refer to the online documentation link for more details about ways to protect the Word documents using DocIO:
 
-[http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/47security.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
+<http://docs.syncfusion.com/windowsforms/docio>
 
 ## Table of Contents
 
@@ -1274,8 +1280,7 @@ doc.Save("TOCUpdatedDocIO.doc", FormatType.Doc)
 
 Refer to the online documentation link for more information about adding the table of contents to the Word document using DocIO:
 
-[http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm#!documents/4418tableofcontents.htm](http://help.syncfusion.com/Ug_101/Reporting/DocIO/Windows%20Forms/default.htm)
-
+<http://docs.syncfusion.com/windowsforms/docio/working-with-table-of-contents>
 
 
 
