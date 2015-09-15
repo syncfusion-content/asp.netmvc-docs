@@ -100,12 +100,14 @@ The following screen shot illustrates how to reference Syncfusion.Olap.Base.
 ## Select the following assemblies: 
 
 * Microsoft.AnalysisServices.AdomdClient.dll,
-* Syncfusion.Core.dll
 * Syncfusion.Linq.Base.dll
 * Syncfusion.EJ.dll
 * Syncfusion.EJ.MVC.dll 
 * Syncfusion.EJ.Olap.dll 
 * Syncfusion.Olap.Base.dll
+* Syncfusion.Pdf.Base.dll
+* Syncfusion.XlsIO.Base.dll
+* Syncfusion.DocIO.dll
 
 Click OK.
 
@@ -123,15 +125,11 @@ Click OK.
 
 		<head>
 
-		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
+		<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
-
 		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-
 		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+		<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 
 		</head>
 
@@ -145,13 +143,9 @@ Click OK.
    ~~~ html
 
 		<body>
-
 		   @RenderBody()
-
 		   @Html.EJ().ScriptManager()   
-
 		</body>
-
 
    ~~~
    {:.prettyprint }
@@ -163,22 +157,20 @@ Add the following code example in the Index.cshtml page that is already created.
 {% highlight html %}
 
 @using Syncfusion.JavaScript;
-
 @using Syncfusion.JavaScript.Olap;
-
 @using Syncfusion.JavaScript.DataVisualization;
 
 <div>
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")) </div> 
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")) </div> 
 {% endhighlight %}
 
 ## Add WCF service for OLAP Chart
 
 ### Creating WCF Services
 
-1. Right click the project and select Add>New Folder.  Name the folder as _wcf_.
-2. Now right-click the _wcf_ folder created and select Add > New Item.  In the Add New Item window, select WCF Service and name it OlapChartService.svc
+1. Right click the project and select Add>New Folder.  Name the folder as wcf. Let "wcf" folder name be in lower case.
+2. Now right-click the wcf folder created and select Add > New Item.  In the Add New Item window, select WCF Service and name it OlapChartService.svc
 3. Click Add. 
 
 ![](Getting-Started_images/Getting-Started_img9.png)
@@ -190,17 +182,19 @@ Add the following code example in the Index.cshtml page that is already created.
 Add the following code sample inside the IOlapChartService interface available in the IOlapChartService.cs file.
 {% highlight c# %}
 
-    public interface IOlapChartService
+{% highlight c# %}
 
-    {
-
-        [OperationContract]
-
-        Dictionary<string, object> InitializeChart(string action, string customObject);                [OperationContract]
-
-        Dictionary<string, object> DrillChart(string action, string drilledSeries, string olapReport, string customObject);
-
-    }
+public interface IOlapChartService
+{
+    [OperationContract] 
+    Dictionary<string, object> InitializeChart(string action, string customObject);
+                        
+    [OperationContract] 
+    Dictionary<string, object> DrillChart(string action, string drilledSeries, string olapReport, string customObject);
+        
+    [OperationContract]
+    void Export(System.IO.Stream stream);
+}
 {% endhighlight %}
 
 ### Add Namespaces
@@ -209,27 +203,16 @@ Add the following necessary namespaces to implement the service methods.
 {% highlight c# %}
 
 using System;
-
 using System.Collections.Generic;
-
 using System.Linq;
-
 using System.Runtime.Serialization;
-
 using System.ServiceModel;
-
 using System.Text;
-
 using System.ServiceModel.Activation;
-
 using Syncfusion.Olap.Manager;
-
 using Syncfusion.Olap.Reports;
-
 using Syncfusion.JavaScript.Olap;
-
 using System.Web.Script.Serialization;
-
 {% endhighlight  %}
 
 ### Create Class in Service file
@@ -237,19 +220,15 @@ using System.Web.Script.Serialization;
 Create the OlapChartService class to implement the service methods. Inherit the class from the IOlapChartService interface that is created automatically when any new service is added.
 {% highlight c# %}
 
-namespace MvcApplication1
-
+namespace MvcApplication1.wcf
 {
-
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-
     public class OlapChartService : IOlapChartService
-
     {
 
     }
-
 }
+
 {% endhighlight %}
 
 ### Implement Service Methods
@@ -259,14 +238,11 @@ Add the following methods to the service that is invoked for any server-side ope
 1. Initialize the OlapCharts helper class and OlapDataManager with appropriate connection string.
 
    ~~~ cs
-
-		JavaScriptSerializer serializer = new JavaScriptSerializer();
-
-		OlapChart htmlHelper = new OlapChart();        
-
-		static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
-
-		OlapDataManager DataManager = new OlapDataManager(connectionString);
+   
+    JavaScriptSerializer serializer = new JavaScriptSerializer();
+    OlapChart htmlHelper = new OlapChart();        
+    static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
 
    ~~~
    {:.prettyprint }
@@ -276,130 +252,80 @@ Add the following methods to the service that is invoked for any server-side ope
 
    ~~~ cs
 
-
-
-		//This method provides the required information from the server side for initializing the OlapChart.
-
-         public Dictionary<string, object> InitializeChart(string action, string customObject)
-
-        {
-
-            OlapDataManager DataManager = null;
-
-            dynamic customData =     serializer.Deserialize<dynamic>(customObject.ToString());
-
-                DataManager = new OlapDataManager(connectionString); 
-
-            DataManager.SetCurrentReport(CreateOlapReport());
-
-            return htmlHelper.GetJsonData(action, DataManager);
-
-        }
-
-
-
-		//This method provides the required information from the server side while drill up/down operation is performed in OlapChart.
-
-        public Dictionary<string, object> DrillChart(string action, string drilledSeries, string olapReport)
-
-        {
-
-            DataManager.SetCurrentReport(Utils.DeserializeOlapReport(olapReport)); 
-
-			dynamic customData = serializer.Deserialize<dynamic>(customObject.ToString());            
-
-            return htmlHelper.GetJsonData(action, DataManager, drilledSeries);
-
-        }
-
-
-
-		//This method carries the information about the default report which would be rendered within OlapChart initially. 
-
-        private OlapReport CreateOlapReport()
-
-        {
-
-            OlapReport olapReport = new OlapReport();
-
-            olapReport.Name = "Default Report";
-
-            olapReport.CurrentCubeName = "Adventure Works";
-
-
-
-            DimensionElement dimensionElementColumn = new DimensionElement();
-
-            dimensionElementColumn.Name = "Customer";
-
-            dimensionElementColumn.AddLevel("Customer Geography", "Country");
-
-
-
-            MeasureElements measureElementColumn = new MeasureElements();
-
-            measureElementColumn.Elements.Add(new MeasureElement { Name = "Customer Count" });
-
-
-
-            DimensionElement dimensionElementRow = new DimensionElement();
-
-            dimensionElementRow.Name = "Date";
-
-            dimensionElementRow.AddLevel("Fiscal", "Fiscal Year");
-
-
-
-            olapReport.SeriesElements.Add(dimensionElementRow);
-
-            olapReport.CategoricalElements.Add(dimensionElementColumn);
-
-            olapReport.CategoricalElements.Add(measureElementColumn);
-
-            return olapReport;
-
-        }
-
-
+    //This method provides the required information from the server side for initializing the OlapChart.
+    public Dictionary<string, object> InitializeChart(string action, string customObject)
+    {
+        OlapDataManager DataManager = null;
+        dynamic customData = serializer.Deserialize<dynamic>(customObject.ToString());
+        DataManager = new OlapDataManager(connectionString); 
+        DataManager.SetCurrentReport(CreateOlapReport());
+        return htmlHelper.GetJsonData(action, DataManager);
+    }
+    
+    //This method provides the required information from the server side while drill up/down operation is performed in OlapChart.
+    public Dictionary<string, object> DrillChart(string action, string drilledSeries, string olapReport, string customObject)
+    {
+        DataManager.SetCurrentReport(Utils.DeserializeOlapReport(olapReport)); 
+        dynamic customData = serializer.Deserialize<dynamic>(customObject.ToString());            
+        return htmlHelper.GetJsonData(action, DataManager, drilledSeries);
+    }
+    //This method export OlapChart to Excel, Word and PDF.
+    public void Export(System.IO.Stream stream)
+    {
+        System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
+        string args = System.Web.HttpContext.Current.Server.UrlDecode(sReader.ReadToEnd());
+        OlapDataManager DataManager = new OlapDataManager(connectionString);
+        string fileName = "Sample";
+        htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+    }
+    
+    //This method carries the information about the default report which would be rendered within OlapChart initially. 
+    private OlapReport CreateOlapReport()
+    {
+        OlapReport olapReport = new OlapReport();
+        olapReport.Name = "Default Report";
+        olapReport.CurrentCubeName = "Adventure Works";
+        DimensionElement dimensionElementColumn = new DimensionElement();
+        dimensionElementColumn.Name = "Customer";
+        dimensionElementColumn.AddLevel("Customer Geography", "Country");
+        MeasureElements measureElementColumn = new MeasureElements();
+        measureElementColumn.Elements.Add(new MeasureElement { Name = "Customer Count" });
+        DimensionElement dimensionElementRow = new DimensionElement();
+        dimensionElementRow.Name = "Date";
+        dimensionElementRow.AddLevel("Fiscal", "Fiscal Year");
+        olapReport.SeriesElements.Add(dimensionElementRow);
+        olapReport.CategoricalElements.Add(dimensionElementColumn);
+        olapReport.CategoricalElements.Add(measureElementColumn);
+        return olapReport;
+    }  
+			
    ~~~
    {:.prettyprint }
 
 
 ### Configure Web.Config
 
-1. Register the assemblies by adding the following code example inside the <system.web> tag in _web.config_ file at the root folder.
+1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at the root folder.
 
    ~~~ html
 
-		<compilation debug="true" targetFramework="4.5">
-
-			  <assemblies>
-
-				<add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-
-				<add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-
-				<add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-
-				<add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-
-				<add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-
-				<add assembly="Syncfusion.Core, Version= X.X.X.X, Culture=neutral, PublicKeyToken=632609B4D040F6B4" />
-
-				<add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-
-				<add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-
-				<add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-
-				<add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-
-				<add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-
-			  </assemblies>
-
-			</compilation>
+	<compilation debug="true" targetFramework="4.5">
+	   <assemblies>
+		  <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		  <add assembly="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		  <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		  <add assembly="System.Web.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		  <add assembly="System.Web.WebPages, Version= X.X.X.X, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		  <add assembly="Syncfusion.EJ, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+		  <add assembly="Syncfusion.EJ.Olap, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+		  <add assembly="Syncfusion.EJ.Mvc, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+		  <add assembly="Syncfusion.Linq.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+		  <add assembly="Syncfusion.Olap.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+          <add assembly="Syncfusion.Pdf.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+          <add assembly="Syncfusion.XlsIO.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+          <add assembly="Syncfusion.DocIO.Base, Version= X.X.X.X, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+		</assemblies>
+	</compilation>
 
 
    ~~~
@@ -448,84 +374,57 @@ Add the following methods to the service that is invoked for any server-side ope
 
    ~~~ html
 
-		<namespaces>
-
-				<add namespace="System.Web.Helpers" />
-
-				<add namespace="System.Web.Mvc" />
-
-				<add namespace="System.Web.Mvc.Ajax" />
-
-				<add namespace="System.Web.Mvc.Html" />
-
-				<add namespace="System.Web.Optimization" />
-
-				<add namespace="System.Web.Routing" />
-
-				<add namespace="System.Web.WebPages" />
-
-				<add namespace="Syncfusion.MVC.EJ"/>
-
-				<add namespace="Syncfusion.JavaScript"/>
-
-				<add namespace="Syncfusion.JavaScript.DataVisualization"/>
-
-		</namespaces>
+	<namespaces>
+	   <add namespace="System.Web.Helpers" />
+	   <add namespace="System.Web.Mvc" />
+	   <add namespace="System.Web.Mvc.Ajax" />
+	   <add namespace="System.Web.Mvc.Html" />
+	   <add namespace="System.Web.Optimization" />
+	   <add namespace="System.Web.Routing" />
+	   <add namespace="System.Web.WebPages" />
+	   <add namespace="Syncfusion.MVC.EJ"/>
+       <add namespace="Syncfusion.JavaScript"/>
+	   <add namespace="Syncfusion.JavaScript.DataVisualization"/>
+	</namespaces>
 
    ~~~
    {:.prettyprint }
 
-3. Register the WCFservices endpoint in web.config file in root folder by adding the following code examples.
-4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.  In your application the service name is "MvcApplication1.OlapChartService" where "OlapChartService" is the service class name and “MvcApplication1" is the namespace name where the service class appears.
+3. Register the wcf services endpoint in web.config file in root folder by adding the following code examples.
+4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.  In your application the service name is "MvcApplication1.wcf.OlapChartService" where "OlapChartService" is the service class name and “MvcApplication1.wcf" is the namespace name where the service class appears.
 
    The following are the properties that meet the appropriate endpoint.  
 
-   * contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapChartService contract and hence it is "MvcApplication1.IOlapChartService".
+   * contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapChartService contract and hence it is "MvcApplication1.wcf.IOlapChartService".
    * binding: In your application, you can use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
    * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
 
    ~~~ html
 
 		<system.serviceModel>
-
 			<services>
-
-			  <service name="MvcApplication1.OlapChartService">
-
-				<endpoint address="" behaviorConfiguration="MvcApplication1.OlapChartServiceAspNetAjaxBehavior"
-
-				  binding="webHttpBinding" contract="MvcApplication1.IOlapChartService" />
-
+			  <service name="MvcApplication1.wcf.OlapChartService">
+				<endpoint address="" behaviorConfiguration="MvcApplication1.wcf.OlapChartServiceAspNetAjaxBehavior"
+				  binding="webHttpBinding" contract="MvcApplication1.wcf.IOlapChartService" />
 			  </service>
-
 			</services>
-
 		</system.serviceModel>
 
    ~~~
    {:.prettyprint }
 
-5. The endpointBehaviors contain all the behaviors for an endpoint. You can link each endpoint to the respective behavior only using this name property. In the following code example "MvcApplication1.OlapChartServiceAspNetAjaxBehavior" refers to the OlapChartService class under the namespace MvcApplication1 in OlapChartService.svc.cs file that is the appropriate behavior for the endpoint. 
+5. The endpointBehaviors contain all the behaviors for an endpoint. You can link each endpoint to the respective behavior only using this name property. In the following code example "MvcApplication1.wcf.OlapChartServiceAspNetAjaxBehavior" refers to the OlapChartService class under the namespace MvcApplication1.wcf in OlapChartService.svc.cs file which is the appropriate behavior for the endpoint. 
 
    ~~~ html
 
-
 		<system.serviceModel>
-
 			<behaviors>
-
 			  <endpointBehaviors>
-
-				<behavior name="MvcApplication1.OlapChartServiceAspNetAjaxBehavior">
-
+				<behavior name="MvcApplication1.wcf.OlapChartServiceAspNetAjaxBehavior">
 				  <enableWebScript />
-
 				</behavior>
-
 			  </endpointBehaviors>
-
 			</behaviors>    
-
 		</system.serviceModel>
 
    ~~~
@@ -533,7 +432,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
 
 
-   N> In this example, “MvcApplication1” indicates the name of the project and “OlapChartService” indicates the name of the WCF service created.
+   N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “OlapChartService” indicates the class name in the WCF Service.
 
 
 
@@ -541,19 +440,12 @@ Add the following methods to the service that is invoked for any server-side ope
 
    ~~~ html
 
-
 		<appSettings>
-
 			<add key="webpages:Version" value="2.0.0.0" />
-
 			<add key="webpages:Enabled" value="false" />
-
 			<add key="PreserveLoginUrl" value="true" />
-
 			<add key="ClientValidationEnabled" value="true" />
-
 			<add key="UnobtrusiveJavaScriptEnabled" value="false" />
-
 		</appSettings>
 		
    ~~~
@@ -566,36 +458,21 @@ Add the following highlighted line in RouteConfig.cs file to avoid issues when p
 
 
 public class RouteConfig
-
+{
+    public static void RegisterRoutes(RouteCollection routes)
     {
-
-        public static void RegisterRoutes(RouteCollection routes)
-
-        {
-
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            //NOTE: In the below highlighted lines _wcf_ is just the folder name inside which service files(*.svc) are present.
-
-            routes.IgnoreRoute("wcf/{resource}.svc/{*pathInfo}"); 
-
-            routes.IgnoreRoute("wcf/{resource}.svc");
-
-            routes.MapRoute(
-
-                name: "Default",
-
-                url: "{controller}/{action}/{id}",
-
-                defaults: new { controller = "Introduction", action = "Index", id = UrlParameter.Optional },
-
-                 namespaces: new[] { "MVCSampleBrowser.Controllers" }
-
-            );
-
-        }
-
+        routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+        //NOTE: In the below highlighted lines _wcf_ is just the folder name inside which service files(*.svc) are present.
+        routes.IgnoreRoute("wcf/{resource}.svc/{*pathInfo}"); 
+        routes.IgnoreRoute("wcf/{resource}.svc");
+        routes.MapRoute(
+            name: "Default",
+            url: "{controller}/{action}/{id}",
+            defaults: new { controller = "Introduction", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "MvcApplication1.wcf.Controllers" }
+        );
     }
+}
 
 {% endhighlight %}
 
