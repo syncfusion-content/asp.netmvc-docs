@@ -91,8 +91,8 @@ Select Internet application template with razor view engine.
 1. Add the script files and CSS files in the head tag of the _Layout.cshtml page.
 
 	N> 
-	> 1. Use the following code sample while adding scripts and styles.
-	> 2. Apart from cdn files rest of them can be acquired from the following location
+	> 1. Use the following code example while adding scripts and styles.
+	> 2. Apart from the cdn files, the rest of them can be acquired from the following location
     > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ html
