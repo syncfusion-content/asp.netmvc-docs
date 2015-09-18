@@ -245,7 +245,7 @@ You can add the following methods to the service that are invoked for any server
 
    ~~~ cs
 
-    //This method provides the required information from the server side when initializing the PivotGrid. 
+    //This method provides the required information from server-side when initializing the PivotGrid. 
     public Dictionary<string, object> InitializeGrid(string action, string gridLayout, bool enablePivotFieldList, object customObject)
     {
         OlapDataManager DataManager = null;
@@ -747,7 +747,7 @@ You can add the following methods to the service that are invoked for any server
 	   return dict;
 	}
 
-	//This method provides the required information from the server side when node state is modified in PivotTable Field List.
+	//This method provides the required information from server-side when node state is modified in PivotTable Field List.
 	public Dictionary<string, object> NodeStateModified(string action, string headerTag, string dropAxis, string sortedHeaders, string filterParams, string currentReport)
 	{
 	   htmlHelper.PopulateData(currentReport);
@@ -755,7 +755,7 @@ You can add the following methods to the service that are invoked for any server
 	   return dict;
 	}
 
-	//This method provides the required information from the server side when tree node is dropped in PivotTable Field List.
+	//This method provides the required information from server-side when tree node is dropped in PivotTable Field List.
 	public Dictionary<string, object> NodeDropped(string action, string dropAxis, string headerTag, string sortedHeaders, string filterParams, string currentReport)
 	{
 	   htmlHelper.PopulateData(currentReport);
@@ -763,7 +763,7 @@ You can add the following methods to the service that are invoked for any server
 	   return dict;
 	} 
 
-	//This method provides the required information from the server side when filtering values in PivotTable Field List.
+	//This method provides the required information from server-side when filtering values in PivotTable Field List.
 	public Dictionary<string, object> Filtering(string action, string filterParams, string sortedHeaders, string currentReport)
 	{
 	   htmlHelper.PopulateData(currentReport);
@@ -771,14 +771,14 @@ You can add the following methods to the service that are invoked for any server
 	   return dict;
 	}
 
-	//This method provides the required information from the server side when opening the editor in PivotTable Field List.
+	//This method provides the required information from server-side when opening the editor in PivotTable Field List.
 	public Dictionary<string, object> FetchMembers(string action, string headerTag, string sortedHeaders, string currentReport)
 	{
 	   htmlHelper.PopulateData(currentReport);
 	   dict = htmlHelper.GetJsonData(action, ProductSales.GetSalesData(), headerTag, sortedHeaders);
 	   return dict;
 	}
-    //This method provides the required information from the server side when sorting values in PivotTable Field List.
+    //This method provides the required information from server-side when sorting values in PivotTable Field List.
     public Dictionary<string, object> Sorting(string action, string sortedHeaders, string currentReport)
     {
         htmlHelper.PopulateData(currentReport);
@@ -1018,7 +1018,7 @@ You can add the following methods to the service that are invoked for any server
 
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “PivotGridService” indicates the class name in the WCF Service.
 
-6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
+6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
 
    ~~~ cs
    
