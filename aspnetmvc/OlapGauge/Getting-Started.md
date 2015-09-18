@@ -427,7 +427,7 @@ MVC5</td><td>
 
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “OlapGaugeService” indicates the class name in the WCF Service.
 
-3. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
+3. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
   
    ~~~ html
    
