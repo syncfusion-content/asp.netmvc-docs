@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create an OLAP Chart in your application with ASP.NET MVC.
+This section briefly explains how you can create an OLAP Chart in your application with ASP.NET MVC.
 
 ## Create your first OLAP Chart in MVC
 
 ## Control structure
 
-The following screen shot shows the OLAP Chart for Asp.Net MVC.
+The following screenshot displays OLAP Chart for Asp.Net MVC.
 
 
 
@@ -30,7 +30,7 @@ The following screen shot shows the OLAP Chart for Asp.Net MVC.
 
 
 
-The architecture gives a clear idea about how the control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
+The architecture gives a clear idea on how the control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
 
 ## Service for OLAP Controls
 
@@ -169,7 +169,7 @@ Add the following code example in the Index.cshtml page that is already created.
 
 ### Creating WCF Services
 
-1. Right click the project and select Add>New Folder.  Name the folder as wcf. Let "wcf" folder name be in lower case.
+1. Right-click the project and select Add>New Folder.  Name the folder as wcf. Let the folder name "wcf" be in lower case.
 2. Now right-click the wcf folder created and select Add > New Item.  In the Add New Item window, select WCF Service and name it OlapChartService.svc
 3. Click Add. 
 
@@ -179,7 +179,7 @@ Add the following code example in the Index.cshtml page that is already created.
 
 ### Add service methods inside Interface
 
-Add the following code sample inside the IOlapChartService interface available in the IOlapChartService.cs file.
+Add the following code example inside the IOlapChartService interface available in the IOlapChartService.cs file.
 {% highlight c# %}
 
 {% highlight c# %}
@@ -199,7 +199,7 @@ public interface IOlapChartService
 
 ### Add Namespaces
 
-Add the following necessary namespaces to implement the service methods.
+Add the following namespaces required to implement the service methods.
 {% highlight c# %}
 
 using System;
@@ -252,7 +252,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
    ~~~ cs
 
-    //This method provides the required information from the server side for initializing the OlapChart.
+    //This method provides the required information from server-side for initializing the OlapChart.
     public Dictionary<string, object> InitializeChart(string action, string customObject)
     {
         OlapDataManager DataManager = null;
@@ -262,14 +262,14 @@ Add the following methods to the service that is invoked for any server-side ope
         return htmlHelper.GetJsonData(action, DataManager);
     }
     
-    //This method provides the required information from the server side while drill up/down operation is performed in OlapChart.
+    //This method provides the required information from server-side while drill up or down operation is performed in OlapChart.
     public Dictionary<string, object> DrillChart(string action, string drilledSeries, string olapReport, string customObject)
     {
         DataManager.SetCurrentReport(Utils.DeserializeOlapReport(olapReport)); 
         dynamic customData = serializer.Deserialize<dynamic>(customObject.ToString());            
         return htmlHelper.GetJsonData(action, DataManager, drilledSeries);
     }
-    //This method export OlapChart to Excel, Word and PDF.
+    //This method exports OlapChart to Excel, Word and PDF.
     public void Export(System.IO.Stream stream)
     {
         System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
@@ -279,7 +279,7 @@ Add the following methods to the service that is invoked for any server-side ope
         htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
     }
     
-    //This method carries the information about the default report which would be rendered within OlapChart initially. 
+    //This method carries the information about the default report that would be rendered within OlapChart initially. 
     private OlapReport CreateOlapReport()
     {
         OlapReport olapReport = new OlapReport();
