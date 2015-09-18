@@ -40,7 +40,7 @@ DataSource Connectivity: You  can establish a connection between different cube 
 
 1. Offline Cube
 2. Online Cube (XML/A)
-3. Cube within SQL Server (locally or through remote), you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service you can connect any type of cube data source without any limitation.
+3. Cube within SQL Server, locally or through remote, you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service you can connect any type of cube data source without any limitation.
 
 Cube Schema: As the connection is moved to service side, you obviously use Microsoft__ADOMD__assembly, to get the entire cube schema. Only with the cube schema the following details are achieved for control rendering.
 
@@ -54,7 +54,7 @@ OLAP Report: The OlapReport class in the Syncfusion.Olap.Base assembly holds the
 
 As the OlapControl is the key for each and every operation, initially you need to serialize the OlapReport and send to client-side in a form of string.
 
-When you perform any operation such as drill up/down, filtering, sorting etc., you need to send OlapReport from the client-side to the service in a de-serialized and updated format.Further operations are carried with updated OlapReports only and you can send the updated OlapReport back to client-side with JSON data in a serialized format again. 
+When you perform any operation such as drill up or down, filtering, sorting etc., you need to send OlapReport from the client-side to the service in a de-serialized and updated format.Further operations are carried with updated OlapReports only and you can send the updated OlapReport back to client-side with JSON data in a serialized format again. 
 
 This process has the OlapReport always updated. You cannot operate serialized OlapReport in client-side and hence it is carried to service having its class in Syncfusion.Olap.Base assembly to perform the update operation_._
 
@@ -70,12 +70,12 @@ In the following example, the OLAP Chart component displays the customer count o
 
 Open Visual Studio and create a new project using by clicking New Project. Select the category Web and select the ASP.NET MVC4 Web Application template, and then click OK.
 
-The following screen shot displays the Project Creation Wizard.
+The following screenshot displays the Project Creation Wizard.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
 
-The following screen shot displays how to select Internet application template with razor view engine.
+The following screenshot displays how to select Internet application template with razor view engine.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
@@ -85,13 +85,13 @@ The following screen shot displays how to select Internet application template w
 
 ### Add References
 
-In the Solution Explorer, right click the References folder, then click Add Reference.
+In the Solution Explorer, right-click the References folder, then click Add Reference.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
 
 
-The following screen shot illustrates how to reference Syncfusion.Olap.Base.
+The following screenshot illustrates how to reference Syncfusion.Olap.Base.
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
@@ -117,8 +117,8 @@ Click OK.
 
    N> 
    >
-   >1. Please follow the following order while adding scripts and styles.
-   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > 1. Follow the following order while adding scripts and styles.
+   > 2. Apart from the cdn files rest of them can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ html
@@ -395,7 +395,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
    The following are the properties that meet the appropriate endpoint.  
 
-   * contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapChartService contract and hence it is "MvcApplication1.wcf.IOlapChartService".
+   * contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapChartService contract and it is "MvcApplication1.wcf.IOlapChartService".
    * binding: In your application, you can use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
    * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
 
