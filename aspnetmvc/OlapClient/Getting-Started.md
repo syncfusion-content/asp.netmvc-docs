@@ -556,7 +556,7 @@ You can add the following methods to the service that are invoked for any server
 	3.0</td></tr>
 	</table>
 
-2. Add the following namespaces to the web.config files at both root folder and View folder.
+2. Add the following namespaces to the web.config files at both the root folder and the View folder.
 
    ~~~ html
 
