@@ -30,7 +30,7 @@ The following screenshot displays OLAP Chart for Asp.Net MVC.
 
 
 
-The architecture gives a clear idea on how the control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
+The architecture gives you a clear idea on how the control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
 
 ## Service for OLAP Controls
 
@@ -117,7 +117,7 @@ Click OK.
 
    N> 
    >
-   > 1. Follow the following order while adding scripts and styles.
+   > 1. Follow the given order while adding scripts and styles.
    > 2. Apart from the cdn files rest of them can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
