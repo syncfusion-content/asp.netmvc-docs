@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started 
 
-This section explains briefly about how to create an OLAP Gauge in your application with ASP.NET MVC.
+This section briefly explains how you can create an OLAP Gauge in your application with ASP.NET MVC.
 
 ## Create your first OLAP Gauge in MVC
 
 ## Control structure
 
-The following screen shot shows the structure of an OLAP Gauge control.
+The following screenshot shows the structure of an OLAP Gauge control.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -27,7 +27,7 @@ The following screen shot shows the structure of an OLAP Gauge control.
 
 
 
-As shown in an above architecture, control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
+As shown in the above architecture, control rendering takes place at client-side and all other analytical operations on each action takes place at server-side.
 
 ## Service for OLAP Controls
 
@@ -36,7 +36,7 @@ The primary reasons for using service in an OLAP processing are:
 1. DataSource Connectivity: In order to establish a connection between different cube data sources such as
 	1. Offline Cube
 	2. Online Cube (XML/A)
-	3. Cube within SQL Server (locally or through remote), you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service, you can connect any type of cube data source without any limitation.
+	3. Cube within SQL Server, locally or through remote, you can move the connectivity related coding to service-side as it is impossible at client-side other than Online Cube (XML/A) option. Using service, you can connect any type of cube data source without any limitation.
 2. Cube Schema: As the connection is moved to service side, you obviously use Microsoft ADOMD assembly, to get the entire cube schema. Only with the cube schema the following details are achieved for control rendering.
 	1. Availability of cubes.
 	2. A complete end-to-end details such as name, caption, unique name, parent information, child information, its properties etc. about the dimension, hierarchy, level, members are available in cube schema only. 
@@ -46,15 +46,15 @@ The primary reasons for using service in an OLAP processing are:
 
 As the OlapControl is the key for each and every operation, initially you need to serialize the OlapReport and send to client-side in a form of string.
 
-When you perform any operation such as drill up/down, filtering, sorting etc., you need to send OlapReport from the client-side to the service in a de-serialized and updated format.
+When you perform any operation, such as drill up or down, filtering, sorting etc., you need to send OlapReport from the client-side to the service in a de-serialized and updated format.
 
 Further operations are carried with updated OlapReports only and you can send the updated OlapReport back to client-side with JSON data in a serialized format again. 
 
-This process has the OlapReport always updated. You cannot operate serialized OlapReport in client-side and hence it is carried to service having its class in Syncfusion.Olap.Base assembly to perform the update operation_._
+This process has the OlapReport always updated. You cannot operate serialized OlapReport in client-side and it is carried to service having its class in Syncfusion.Olap.Base assembly to perform the update operation_._
 
 ## Create an application
 
-This section encompasses on how to configure the OLAP Gauge control in applications. You can also learn how to pass the required data to OLAP Gauge and to customize its various options according to your requirements. 
+This section explains how you can configure the OLAP Gauge control in applications. You can also learn how to pass the required data to OLAP Gauge and to customize its various options according to your requirements. 
 
 In the following example, OLAP gauge is used to visualize the Revenue for Reseller over a Fiscal Year 2004 on the product category - Accessories.
 
@@ -79,7 +79,7 @@ Select Internet application template with razor view engine.
 
 ### Add References
 
-1. In the Solution Explorer, right click the References folder and then click Add Reference.
+1. In the Solution Explorer, right-click the References folder and then click Add Reference.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
@@ -106,8 +106,8 @@ Select Internet application template with razor view engine.
   
    N>
    >
-   > 1. Please follow the given order while adding scripts and styles.
-   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > 1. Follow the given order while adding scripts and styles.
+   > 2. Apart from the cdn files, the rest of it can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ html
@@ -124,7 +124,7 @@ Select Internet application template with razor view engine.
    ~~~
    {:.prettyprint }
 
-2. Add the below code snippet in the body tag of the _Layout.cshtml page.
+2. Add the following code example in the body tag of the _Layout.cshtml page.
 
    ~~~ html
 
@@ -173,8 +173,8 @@ Add the following code in the Index.cshtml page
 
 ### Create WCF Services
 
-1. Right-click on the project and select Add > New Folder.  Name the folder as wcf. Let "wcf" folder name be in lower case.
-2. Now right click the wcf folder created and select Add > New Item. In the Add New Item window, select WCF Service and name it OlapGaugeService.svc
+1. Right-click on the project and select Add > New Folder.  Name the folder as wcf. Let the folder name "wcf" be in lower case.
+2. Now right-click the wcf folder created and select Add > New Item. In the Add New Item window, select WCF Service and name it OlapGaugeService.svc
 3. Click Add. 
 
 ![](Getting-Started_images/Getting-Started_img9.png)
@@ -196,7 +196,7 @@ public interface IOlapGaugeService
 
 ### Add Namespaces
 
-Add the following necessary namespaces required to implement the service methods.
+Add the following namespaces required to implement the service methods.
 
 {% highlight c# %}
 
@@ -325,7 +325,7 @@ Add the following methods to the service invoked for any server-side operations 
 
 {% endhighlight  %}
 
-N> x.x.x.x in the above code snippet refers to the current version of the Essential Studio running in your system.
+N> x.x.x.x in the above code example refers to the current version of the Essential Studio running in your system.
 
 The version of Syncfusion dlls according to the .NET framework and MVC version are as follows.  For example, 12.1 version is illustrated here.
 
@@ -388,7 +388,7 @@ MVC5</td><td>
 
    The following are the properties that meet the appropriate endpoint.  
 
-   contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapGaugeService contract and hence it is "MvcApplication1.wcf.IOlapGaugeService".
+   contract: This property indicates the contract that the endpoint is exposing. Here you are referring IOlapGaugeService contract and it is "MvcApplication1.wcf.IOlapGaugeService".
 
    binding: In this application you can use webHttpBinding to post and receive the requests and responses between client-end and service-end.
 
