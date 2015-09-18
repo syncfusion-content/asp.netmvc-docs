@@ -261,7 +261,7 @@ Add the following methods to the service invoked for any server-side operations 
         return htmlHelper.GetJsonData(action, DataManager);
      }                
 
-     //This method carries the information about the default report which would be rendered within OlapGauge initially. 
+     //This method carries the information about the default report to be rendered within OlapGauge initially. 
      private OlapReport CreateOlapReport()
      {
         OlapReport report = new OlapReport();
