@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a PivotGrid in your application with ASP.NET MVC.
+This section briefly explains how you can create a PivotGrid in your application with ASP.NET MVC.
 
 ## Create your first PivotGrid in MVC
 
@@ -25,7 +25,7 @@ The following screenshot displays the PivotGrid Control.
 
 ### Create an application
 
-This section encompasses on how to configure the PivotGrid component in an application.
+This section describes how you can configure the PivotGrid component in an application.
 
 You can also pass the required data to PivotGrid and customize it according to your requirements.
 
@@ -37,7 +37,7 @@ In this example you can see how PivotGrid component tabulates the Internet Sales
 
 You can open Visual Studio and create a new project by clicking New Project. You can select the Web category. Select the ASP.NET MVC4 Web Application template and then click OK.  
 
-The following screenshot displays project creation wizard
+The following screenshot displays Project Creation Wizard.
 
 
 
@@ -45,7 +45,7 @@ The following screenshot displays project creation wizard
 
 
 
-Then select Internet application template with Razor view engine and click OK
+Then, select Internet application template with Razor view engine and click OK.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
@@ -55,7 +55,7 @@ Then select Internet application template with Razor view engine and click OK
 
 ### Add References
 
-1. In the Solution Explorer, right click the References folder and then click Add Reference.
+1. In the Solution Explorer, right-click the References folder and then click Add Reference.
 
    ![](Getting-Started_images/Getting-Started_img5.png)
 
@@ -76,8 +76,8 @@ Then select Internet application template with Razor view engine and click OK
 
    N>
    >
-   > 1. Use the following code sample while adding scripts and styles
-   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > 1. Use the following code example while adding scripts and styles
+   > 2. Apart from the cdn files, the rest of them can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ html
@@ -95,7 +95,7 @@ Then select Internet application template with Razor view engine and click OK
    {:.prettyprint }
 
 		
-2. Add the below code snippet in the body tag of the _Layout.cshtml page.
+2. Add the following code example in the body tag of the _Layout.cshtml page.
 
    ~~~ html
    
@@ -109,7 +109,7 @@ Then select Internet application template with Razor view engine and click OK
 
 ### Add Control in View page
 
-Add the following code sample in the Index.cshtml page that is already created:
+Add the following code example in the Index.cshtml page that is already created:
   
 {% highlight html %}
 
@@ -125,13 +125,13 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 #### Create WCF Services
 
-1. Right-click the project and select Add > New Folder.  Name the folder as wcf. Let "wcf" folder name be in lower case.
+1. Right-click the project and select Add > New Folder.  Name the folder as wcf. Let the folder name "wcf" be in lower case.
 
    ![](Getting-Started_images/Getting-Started_img7.png)
 
 
 
-2. Now right click the wcf folder created and select Add > New Item.  
+2. Now right-click the wcf folder created and select Add > New Item.  
 
    ![](Getting-Started_images/Getting-Started_img8.png)
 
@@ -148,7 +148,7 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 ### Add service methods inside Interface
 
-Add the following code sample inside the IPivotGridService interface available in an IPivotGridService.cs file.
+Add the following code example inside the IPivotGridService interface available in an IPivotGridService.cs file.
 
 {% highlight C# %}
 
@@ -190,7 +190,7 @@ public interface IPivotGridService
 	
 ### Add Namespaces
 
-Add the following necessary namespaces required to implement the service methods.
+Add the following namespaces required to implement the service methods.
 
 {% highlight C# %}
 
@@ -255,7 +255,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, gridLayout, enablePivotFieldList);
     }
 
-	//This method provides the required information from the server side when drill up/down operation is performed in PivotGrid.
+	//This method provides the required information from server-side when drill up or down operation is performed in PivotGrid.
     public Dictionary<string, object> DrillGrid(string action, string cellPosition, string currentReport, string headerInfo, string layout, object customObject)
     {
         dynamic customData = serializer.Deserialize<dynamic>(customObject.ToString());
@@ -265,7 +265,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, connectionString, DataManager, cellPosition, headerInfo, layout);
     }
 
-	//This method provides the required information from the server side when tree node is dropped in PivotTable Field List.
+	//This method provides the required information from server-side when tree node is dropped in PivotTable Field List.
     public Dictionary<string, object> NodeDropped(string action, string dropType, string nodeInfo, string filterParams, string currentReport)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -273,7 +273,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, dropType, nodeInfo, filterParams, true);
     }
 
-	//This method provides the required information from the server side when filtering values in PivotTable Field List.
+	//This method provides the required information from server-side when filtering values in PivotTable Field List.
     public Dictionary<string, object> Filtering(string action, string filterParams, string currentReport)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -281,7 +281,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, null, filterParams);
     }
 
-	//This method provides the required information from the server side when opening the editor in PivotTable Field List.
+	//This method provides the required information from server-side when opening the editor in PivotTable Field List.
     public Dictionary<string, object> FetchMembers(string action, string headerTag, string currentReport)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -289,7 +289,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, null, headerTag);
     }
 
-	//This method provides the required information from the server side when paging is done in PivotGrid.
+	//This method provides the required information from server-side when paging is done in PivotGrid.
     public Dictionary<string, object> Paging(string action, string pagingInfo, string currentReport, string gridLayout, object customObject)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -297,7 +297,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, gridLayout);
     }
 
-	//This method provides the required information from the server side when removing the split button from PivotTable Field List.
+	//This method provides the required information from server-side when removing the split button from PivotTable Field List.
     public Dictionary<string, object> RemoveButton(string action, string headerInfo, string currentReport)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -305,7 +305,7 @@ You can add the following methods to the service that are invoked for any server
         return htmlHelper.GetJsonData(action, DataManager, null, headerInfo);
     }
 
-	//This method provides the required information from the server side when expanding member in member editor.
+	//This method provides the required information from server-side when expanding member in member editor.
     public Dictionary<string, object> MemberExpanded(string action, bool     checkedStatus, string parentNode, string tag, string cubeName, string currentReport)
     {
         OlapDataManager DataManager = new OlapDataManager(connectionString);
@@ -323,7 +323,7 @@ You can add the following methods to the service that are invoked for any server
         htmlHelper.ExportPivotGrid(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
     }
 
-	//This method carries the information about the default report which when be rendered within PivotGrid initially. 
+	//This method carries the information about the default report that is rendered within PivotGrid initially. 
     private OlapReport CreateOlapReport()
     {
         OlapReport olapReport = new OlapReport();
@@ -351,7 +351,7 @@ You can add the following methods to the service that are invoked for any server
 
 ### Configure Web.Config
 
-1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config file at root folder.
+1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at root folder.
    
    ~~~ html
 
@@ -377,7 +377,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
    
-   N> xx.x.x.xx in the above code sample refers to the current version of the Essential Studio running in your system.
+   N> xx.x.x.xx in the above code example refers to the current version of the Essential Studio running in your system.
 
    The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned as follows.  For example, 12.1 version is illustrated.
 
@@ -412,7 +412,7 @@ You can add the following methods to the service that are invoked for any server
    3.0</td></tr>
    </table>
 
-2. Add the following Namespaces file using the following code sample to the web.config files at both the root folder and View folder.
+2. Add the following namespaces file using the following code example to the web.config files at both the root folder and View folder.
 
    ~~~ cs
 	<namespaces>
@@ -432,8 +432,8 @@ You can add the following methods to the service that are invoked for any server
    {:.prettyprint }
    
 3. Register the wcf services in web.config file at root folder by adding the following codes.
-4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
-	1. contract: This property indicates the contract of the endpoint is exposing. Here you are referring IPivotGridService contract and hence it is MvcApplication1.wcf.IPivotGridService.
+4. You can expose services through the properties such as binding, contract and address etc., using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
+	1. contract: This property indicates the contract of the endpoint is exposed. Here you are referring IPivotGridService contract and it is MvcApplication1.wcf.IPivotGridService.
 	2. binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
 	3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
 
@@ -452,7 +452,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
    
-5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code sample MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior would point the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
+5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code example MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior points the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
 
    ~~~ html
    
@@ -473,7 +473,7 @@ You can add the following methods to the service that are invoked for any server
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “PivotGridService” indicates the class name in the WCF Service.
 
 
-6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown below.
+6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
 
    ~~~ cs
    
