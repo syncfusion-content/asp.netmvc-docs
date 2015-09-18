@@ -535,7 +535,7 @@ This section encompasses on how to configure the PivotGrid component in an appli
 
 You can also pass the required data to PivotGrid and customize it according to your requirements.
 
-This example illustrates how the PivotGrid component tabulates the sales/revenue amount over a period of fiscal years across different geographic locations.
+This example illustrates how the PivotGrid component tabulates the sales or revenue amount over a period of fiscal years across different geographic locations.
 
 ![](Getting-Started_images/Getting-Started_img20.png)
  
@@ -556,7 +556,7 @@ Then select Internet application template with Razor view engine and click OK
 
 ### Add References
 
-1. In the Solution Explorer, right click the References folder and then click Add Reference.
+1. In the Solution Explorer, right-click the References folder and then click Add Reference.
 
    ![](Getting-Started_images/Getting-Started_img5.png)
 
@@ -576,7 +576,7 @@ Then select Internet application template with Razor view engine and click OK
    N>
    >
    > 1. Use the following code sample while adding scripts and styles
-   > 2. Apart from cdn files rest of them can be acquired from the following location
+   > 2. Apart from cdn files, the rest of them can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ html
@@ -595,7 +595,7 @@ Then select Internet application template with Razor view engine and click OK
    {:.prettyprint }
 
 		
-2. Add the below code snippet in the body tag of the _Layout.cshtml page.
+2. Add the following code example in the body tag of the _Layout.cshtml page.
 
    ~~~ html
    
@@ -609,7 +609,7 @@ Then select Internet application template with Razor view engine and click OK
 
 ### Add Control in View page
 
-Add the following code sample in the Index.cshtml page that is already created:
+Add the following code example in the Index.cshtml page that is already created:
   
 {% highlight html %}
 
@@ -625,13 +625,13 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 #### Create WCF Services
 
-1. Right-click the project and select Add > New Folder.  Name the folder as wcf. Let "wcf" folder name be in lower case.
+1. Right-click the project and select Add > New Folder.  Name the folder as wcf. Let the folder name "wcf" be in lower case.
 
    ![](Getting-Started_images/Getting-Started_img7.png)
 
 
 
-2. Now right click the wcf folder created and select Add > New Item.  
+2. Now right-click the wcf folder created and select Add > New Item.  
 
    ![](Getting-Started_images/Getting-Started_img8.png)
 
@@ -648,7 +648,7 @@ Add the following code sample in the Index.cshtml page that is already created:
 
 ### Add service methods inside Interface
 
-Add the following code sample inside the IPivotGridService interface available in an IPivotGridService.cs file.
+Add the following code example inside the IPivotGridService interface available in an IPivotGridService.cs file.
 
 {% highlight C# %}
 
@@ -898,7 +898,7 @@ You can add the following methods to the service that are invoked for any server
 
 ### Configure Web.Config
 
-1. Register the assemblies by adding the following code sample inside the <system.web> tag in web.config file at root folder.
+1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at root folder.
    
    ~~~ html
 
@@ -921,7 +921,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
    
-   N> xx.x.x.xx in the above code sample refers to the current version of the Essential Studio running in your system.
+   N> xx.x.x.xx in the above code example refers to the current version of the Essential Studio running in your system.
 
    The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned as follows.  For example, 12.1 version is illustrated.
 
@@ -977,8 +977,8 @@ You can add the following methods to the service that are invoked for any server
    {:.prettyprint }
    
 3. Register the WCF services in web.config file at root folder by adding the following codes.
-4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
-	1. contract: This property indicates the contract of the endpoint is exposing. Here you are referring IPivotGridService contract and hence it is MvcApplication1.wcf.IPivotGridService.
+4. You can expose services through the properties such as binding, contract and address etc., using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
+	1. contract: This property indicates the contract of the endpoint is exposing. Here you are referring IPivotGridService contract and it is MvcApplication1.wcf.IPivotGridService.
 	2. binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
 	3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
 
@@ -998,7 +998,7 @@ You can add the following methods to the service that are invoked for any server
    ~~~
    {:.prettyprint }
    
-5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code sample MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior would point the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
+5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code example MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior would point the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
 
    ~~~ html
    
