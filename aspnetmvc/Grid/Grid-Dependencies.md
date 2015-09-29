@@ -9,7 +9,7 @@ documentation: ug
 
 # Grid Dependencies
 
-ej.web.all.js is a bundle of all EssentialJavaScript controls. If you use ej.web.all.js in your application, you can leave this section or else you can try to render grid in your application using ej.grid.min.js file. You can refer the following frameworks and controls in your project.
+ej.web.all.js is a bundle of all EssentialJavaScript controls. When you use ej.web.all.js in your application, you can leave this section or else you can try to render the grid in your application by using ej.grid.min.js file. You can refer to the following frameworks and controls in your project.
 
 _Table1: Grid Dependency_ 
 
@@ -29,27 +29,27 @@ Used to handle datamanger operation and should be used while binding data to JS 
 <tr>
 <td>
 ej.grid.min.js</td><td>
-Should be referred when using grid control.</td></tr>
+Should be referred when the grid control is used.</td></tr>
 <tr>
 <td>
 ej.pager.min.js</td><td>
-Should be referred when using paging in grid.  </td></tr>
+Should be referred when the paging is used in the grid.  </td></tr>
 <tr>
 <td>
 ej.scroller.min.js</td><td>
-Should be referred when using scrolling in grid.  </td></tr>
+Should be referred when the scrolling is used in the grid.  </td></tr>
 <tr>
 <td>
 ej.waitingpopup.min.js</td><td>
-Should be referred when using the remote databinding in grid. The waiting popup will show while requesting the server for data.</td></tr>
+Should be referred when the remote databinding is used in the grid. The waiting popup is shown while requesting the server for data.</td></tr>
 <tr>
 <td>
 ej.gridresize.min.js</td><td>
-Need to refer when using the resizing feature in grid.</td></tr>
+Need to refer when the resizing feature is used in the grid.</td></tr>
 <tr>
 <td>
 ej.dropdownlist.min.js</td><td rowspan = "8">
-  These files are used while enable Editing and Filtering feature in grid.</td></tr>
+  These files are used while enabling the Editing and Filtering features in the grid.</td></tr>
 <tr>
 <td>
 ej.dialog.min.js</td></tr>
@@ -73,6 +73,6 @@ ej.checkbox.min.js</td></tr>
 ej.editor.min.js</td></tr>
 </table>
 
-N>_ ej.unobtrusive.min.js should be referred when the [`UnobtrusiveJavaScriptEnabled`](/js/unobtrusive-support "UnobtrusiveJavaScriptEnabled")  is set as true in web.config file.
+N>_ ej.unobtrusive.min.js should be referred when the [`UnobtrusiveJavaScriptEnabled`](/js/unobtrusive-support "UnobtrusiveJavaScriptEnabled")  is set to true in web.config file.
 
 
