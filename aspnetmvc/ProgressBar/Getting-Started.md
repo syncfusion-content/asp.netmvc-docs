@@ -17,13 +17,6 @@ ASP.NET MVCProgress Bar control provides support to display a Progress Bar that 
 
 The following screenshot illustrates the functionality of a Progress Bar and displays the final result of the Password Strength Validation for your password using Progress Bar.
 
-![](Getting-Started_images/Getting-Started_img1.png)
-
-![](Getting-Started_images/Getting-Started_img2.png)
-
-![](Getting-Started_images/Getting-Started_img3.png)
-
-
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 

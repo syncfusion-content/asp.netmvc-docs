@@ -13,7 +13,7 @@ With the keyboard navigation enabled in the CurrencyTextBox control, it is possi
 
 The various keyboard shortcuts available within the CurrencyTextBox control are discussed in the following table. 
 
-## _Keyboard Shortcuts_
+## Keyboard Shortcuts
 
 <table>
 <tr>
