@@ -9,11 +9,11 @@ documentation: ug
 
 # Exporting
 
-Exporting feature provides support to export Grid data into excel, word and pdf files. The tool bar has ExcelExport, WordExport, PdfExport icons that are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the export() public method of Grid object to make export. You can also invoke export() method manually to make export.
+Exporting feature provides support to export Grid data into excel, word and pdf files. The tool bar has ExcelExport, WordExport, PdfExport icons that are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the export() public method of Grid object to export. You can also invoke export() method manually to export.
 
 ## MVC
 
-In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter. You need to serialize it into Grid Property. Using Export() server method you can export the Grid into excel, pdf and word documents.
+In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter. You need to serialize it into the Grid Property. By using the Export() server method, you can export the Grid into excel, pdf and word documents.
 {% highlight js %}
 
   @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -152,13 +152,13 @@ public partial class GridController : Controller
 
 {% endhighlight  %}
 
-On Exporting the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for Pdf Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the routing path is ~/Home/ExportToExcel.
+Exporting the default routing path to server-side contains the action names as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for Pdf Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the routing path is ~/Home/ExportToExcel.
 
 
 
 ### Export Mapper in MVC
 
-Mappers Grid property is used to modify the default routing path during exporting. By using Mappers, you can use any action name in Controller for exporting and the action can be in any controller (Need not to be in Grid View Page Controller).
+Mappers Grid property is used to modify the default routing path during exporting. By using Mappers, you can use any action name in Controller for exporting and the action can be in any controller (Need not be in the Grid View Page Controller).
 
 {% highlight js %}
 
@@ -308,7 +308,7 @@ public ActionResult ExportingGrid()
 
 #### Customizing Themes
 
-Themes are used to enhance the UI appearance of the grid in the exported document. We have both string and enum support for specifying the themes. We can also export the grid without applying any styles. The various inbuilt theme options provided to be applied on the exported theme are
+Themes are used to enhance the UI appearance of the grid in the exported document. There are two string and enum supports for specifying the themes. You can also export the grid without applying any styles. The various inbuilt theme options provided to be applied on the exported theme are
 
 <table>
 <tr><td><b>Enum</b></td><td><b>Equivalent string input</b></td></tr>
@@ -444,7 +444,7 @@ Themes are used to enhance the UI appearance of the grid in the exported documen
 
 {% endhighlight %}
 
-If the theme is set as none and the autoFormat is not set to the grid, then no theme will be applied to the exported grid. The grid will be exported without any themes be applied as in the below screenshots:
+When the theme is set as none and the autoFormat is not set to the grid, then no theme is applied to the exported grid. The grid is exported without any theme as in the following screenshots:
 
 ![](Exporting_images/Customizing-Themes_img1.png)
 
@@ -454,11 +454,11 @@ Fig 1: Excel file – Without themes
 
 
 
-The **AutoFormat** Class can be used to customize the styles or theme applied to the exported grid. With the autoFormat class, the user may provide required color to the grid content, altrow background or border color.
+The **AutoFormat** Class can be used to customize the styles or themes applied to the exported grid. With the autoFormat class, you can provide required color to the grid content, altrow background or border color.
 
-The customized theme will be applied to the grid only when the selected theme is either “none” or ExportTheme.None.
+The customized theme is applied to the grid, only when the selected theme is either “none” or ExportTheme.None.
 
-The various properties available under the autoFormat class are listed in the below table.
+The various properties available under the autoFormat class are listed in the following table.
 
 <table>
 <tr>
