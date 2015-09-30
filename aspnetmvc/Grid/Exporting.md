@@ -308,39 +308,101 @@ public ActionResult ExportingGrid()
 
 #### Customizing Themes
 
-Themes are used to enhance the UI appearance of the grid in the exported document. Earlier to our Volume 1, 2015 Service Pack 1 release, we had support to only specify the theme as string in the **Export()** server method and also we didn’t have the support to export the grid without applying any styles(themes).
+Themes are used to enhance the UI appearance of the grid in the exported document. We have both string and enum support for specifying the themes. We can also export the grid without applying any styles. The various inbuilt theme options provided to be applied on the exported theme are
 
-But now, we have included the enum support for specifying the themes and also we can export the grid without applying any styles. The various inbuilt theme options provided to be applied on the exported theme are
+<table>
+<tr><td><b>Enum</b></td><td><b>Equivalent string input</b></td></tr>
 
+<tr><td>ExportTheme.FlatAzure</td><td>default-theme</td></tr>
 
+<tr><td>ExportTheme.FlatSaffron</td><td>flat-saffron</td></tr>
 
-1. ExportTheme.FlatAzure or “default-theme”
+<tr><td>ExportTheme.FlatLime</td><td>flat-lime</td></tr>
 
-2. ExportTheme.FlatSaffron or “flat-saffron”
+<tr><td>ExportTheme.FlatDarkAzure</td><td>flat-azure-dark</td></tr>
 
-3. ExportTheme.FlatLime or “flat-lime”
+<tr><td>ExportTheme.FlatDarkSaffron</td><td>flat-saffron-dark</td></tr>
 
-4. ExportTheme.FlatDarkAzure or “flat-azure-dark”
+<tr><td>ExportTheme.FlatDarkLime</td><td>flat-lime-dark</td></tr>
 
-5. ExportTheme.FlatDarkSaffron or “flat-saffron-dark”
+<tr><td>ExportTheme.GradientAzure</td><td>gradient-azure</td></tr>
 
-6. ExportTheme.FlatDarkLime or “flat-lime-dark”
+<tr><td>ExportTheme.GradientSaffron</td><td>gradient-saffron</td></tr>
 
-7. ExportTheme.GradientAzure or “gradient-azure”
+<tr><td>ExportTheme.GradientLime</td><td>gradient-lime</td></tr>
 
-8. ExportTheme.GradientSaffron or “gradient-saffron”
+<tr><td>ExportTheme.GradientDarkAzure</td><td>gradient-azure-dark</td></tr>
 
-9. ExportTheme.GradientLime or “gradient-lime”
+<tr><td>ExportTheme.GradientDarkSaffron</td><td>gradient-saffron-dark</td></tr>
 
-10. ExportTheme.GradientDarkAzure or “gradient-azure-dark”
+<tr><td>ExportTheme.GradientDarkLime</td><td>gradient-lime-dark</td></tr>
 
-11. ExportTheme.GradientDarkSaffron or “gradient-saffron-dark”
+<tr><td>ExportTheme.BootstrapTheme</td><td>bootstrap-theme</td></tr>
 
-12. ExportTheme.GradientDarkLime or gradient-lime-dark”
+<tr><td>ExportTheme.None</td><td>none</td></tr>
 
-13. ExportTheme.BootstrapTheme or “bootstrap-theme”
+{% highlight c# %}
 
-14. ExportTheme.None or “none”
+    public partial class GridController : Controller
+
+    {
+        public void ExportToExcel(string GridModel)
+
+        {
+
+            ExcelExport exp = new ExcelExport();
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            GridProperties obj = Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+
+            exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "none");
+
+        }
+
+        public void ExportToWord(string GridModel)
+
+        {
+
+            WordExport exp = new WordExport();
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            GridProperties obj = Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+
+            exp.Export(obj, DataSource, "Export.docx", false, false, ExportTheme.FlatSaffron);
+
+        }
+
+        public void ExportToPdf(string GridModel)
+
+        {
+
+            PdfExport exp = new PdfExport();
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            GridProperties obj = Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+
+            exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
+
+        }
+        
+        public ActionResult ExportingGrid()
+
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+        
+      }
+
+{% endhighlight %}
 
 {% highlight razor %}
 
@@ -382,106 +444,6 @@ But now, we have included the enum support for specifying the themes and also we
 
 {% endhighlight %}
 
-{% highlight c# %}
-
-public partial class GridController : Controller
-
-    {
-
-
-
-public ActionResult ExportingGrid()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-        public void ExportToExcel(string GridModel)
-
-        {
-
-            ExcelExport exp = new ExcelExport();
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            GridProperties obj = ConvertGridObject(GridModel);
-
-            exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "none");
-
-        }
-
-        public void ExportToWord(string GridModel)
-
-        {
-
-            WordExport exp = new WordExport();
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            GridProperties obj = ConvertGridObject(GridModel);
-
-            exp.Export(obj, DataSource, "Export.docx", false, false, ExportTheme.FlatSaffron);
-
-        }
-
-        public void ExportToPdf(string GridModel)
-
-        {
-
-            PdfExport exp = new PdfExport();
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            GridProperties obj = ConvertGridObject(GridModel);
-
-            exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
-
-        }
-
-        private GridProperties ConvertGridObject(string gridProperty)
-
-        {
-
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-
-            IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
-
-            GridProperties gridProp = new GridProperties();
-
-            foreach (KeyValuePair<string, object> ds in div)
-
-            {
-
-                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
-
-                if (property != null)
-
-                {
-
-                    Type type = property.PropertyType;
-
-                    string serialize = serializer.Serialize(ds.Value);
-
-                    object value = serializer.Deserialize(serialize, type);
-
-                    property.SetValue(gridProp, value, null);
-
-                }
-
-            }
-
-            return gridProp;
-
-        }    }
-
-{% endhighlight %}
-
 If the theme is set as none and the autoFormat is not set to the grid, then no theme will be applied to the exported grid. The grid will be exported without any themes be applied as in the below screenshots:
 
 ![](Exporting_images/Customizing-Themes_img1.png)
@@ -492,7 +454,7 @@ Fig 1: Excel file – Without themes
 
 
 
-The **AutoFormat** Class can be used to customize the styles or theme applied to the exported grid. With the autoFormat class, the user may provide required color to the grid content, altrow background or as the border color.
+The **AutoFormat** Class can be used to customize the styles or theme applied to the exported grid. With the autoFormat class, the user may provide required color to the grid content, altrow background or border color.
 
 The customized theme will be applied to the grid only when the selected theme is either “none” or ExportTheme.None.
 
@@ -556,65 +518,11 @@ System.Drawing.Color</td><td>
 The background color of the alternative row of the grid content</td></tr>
 </table>
 
-{% highlight razor %}
-
-    @(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-                .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
-
-                {
-
-                    items.AddTool(ToolBarItems.ExcelExport);
-
-                    items.AddTool(ToolBarItems.WordExport);
-
-                    items.AddTool(ToolBarItems.PdfExport);
-
-                }))
-
-        .AllowPaging()
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
-
-            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Add();
-
-        })) 
-
-{% endhighlight %}
-
 {% highlight c# %}
 
     public partial class GridController : Controller
 
     {
-
-
-
-    public ActionResult ExportingGrid()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
 
         public void ExportToExcel(string GridModel)
 
@@ -662,35 +570,9 @@ The background color of the alternative row of the grid content</td></tr>
 
         {
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            GridProperties gridProp = Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),gridProperty);
 
-            IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
-
-            GridProperties gridProp = new GridProperties();
-
-            foreach (KeyValuePair<string, object> ds in div)
-
-            {
-
-                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
-
-                if (property != null)
-
-                {
-
-                    Type type = property.PropertyType;
-
-                    string serialize = serializer.Serialize(ds.Value);
-
-                    object value = serializer.Deserialize(serialize, type);
-
-                    property.SetValue(gridProp, value, null);
-
-                }
-
-            }
-
-              AutoFormat auto = new AutoFormat();
+            AutoFormat auto = new AutoFormat();
 
             auto.FontFamily = "Arial";
 
@@ -716,7 +598,61 @@ The background color of the alternative row of the grid content</td></tr>
 
             return gridProp;
 
-        }    }
+        }
+        
+        public ActionResult ExportingGrid()
+
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+        
+      }
+
+{% endhighlight %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+                .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+
+                {
+
+                    items.AddTool(ToolBarItems.ExcelExport);
+
+                    items.AddTool(ToolBarItems.WordExport);
+
+                    items.AddTool(ToolBarItems.PdfExport);
+
+                }))
+
+        .AllowPaging()
+
+        .Columns(col =>
+
+        {
+
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+
+            col.Field("ShipCity").HeaderText("Ship City").Add();
+
+        })) 
 
 {% endhighlight %}
 
