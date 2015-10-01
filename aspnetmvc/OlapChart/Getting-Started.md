@@ -182,7 +182,7 @@ Add the following code example in the Index.cshtml page that is already created.
 Add the following code example inside the IOlapChartService interface available in the IOlapChartService.cs file.
 {% highlight c# %}
 
-{% highlight c# %}
+
 
 public interface IOlapChartService
 {

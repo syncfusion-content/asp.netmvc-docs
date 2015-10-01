@@ -17,7 +17,7 @@ The following steps explain you how to specify the height of the DatePicker inpu
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight js %}
+{% highlight html %}
 
 		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized height*@
 
@@ -33,7 +33,7 @@ It specifies the width of the DatePicker input text. The “Width” property al
 The following steps explain you how to specify the width of the DatePicker input text.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
-{% highlight js %}
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized width*@
 
@@ -99,7 +99,8 @@ The following steps explain you how to set the DatePicker value as readonly.
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-{% highlight js %}
+{% highlight html %}
+
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized Readonly*@
 
 @Html.EJ().DatePicker("datepicker").ReadOnly(true)
@@ -113,7 +114,7 @@ The following steps explain you how to hide footer in the DatePicker widget.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-{% highlight js %}
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to hide footer in DatePicker widget*@
 

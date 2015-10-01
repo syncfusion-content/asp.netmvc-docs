@@ -51,19 +51,16 @@ The following steps explain you how to set the date format as "d MM, y".
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with DateFormat.
 
-
-
-   ~~~ js
+{% highlight html %}
 
 		@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
 
 		@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
 
-   ~~~
-   {:.prettyprint }
+{% endhighlight %}
 
 
-2.  The following screenshot displays the output for the above code.
+2.The following screenshot displays the output for the above code.
 
 
 
@@ -105,18 +102,15 @@ The following steps explain you how to get the DayHeaderFormat for DatePicker wi
 1. In the CSHTML page, add the following code to render the DatePicker widget with DayHeaderFormat.
 
 
-   ~~~ js
+{% highlight html %}
    
 		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
 
 		@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
 
-   ~~~
-   {:.prettyprint }
+{% endhighlight %}
 
-
-
-2.  The following screenshot displays the output for the above code.
+2.The following screenshot displays the output for the above code.
 
 
 
@@ -133,17 +127,15 @@ The following steps explain you how to the header format to be displayed in the 
 1. In the CSHTML page, add the following code to render the DatePicker widget with header format.
 
 
-   ~~~ js
+{% highlight html %}
    
 		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
 
 		@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
 
-   ~~~
-   {:.prettyprint }
+{% endhighlight %}
 
-
-2. The following screenshot displays the output for the above code.
+2.The following screenshot displays the output for the above code.
 
 
 

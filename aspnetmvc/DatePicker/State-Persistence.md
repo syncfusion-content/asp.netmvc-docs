@@ -17,7 +17,7 @@ The following steps explain you how to enable the state maintenance for DatePick
 
 
 
-{% highlight js %}
+{% highlight html %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with state maintenance*@
 
