@@ -13,7 +13,7 @@ Toggle Axis support swaps dimensions, measures and named sets, between column an
 
 ![](Toggle-Axis_images/Toggle-Axis_images1.png)
 
-_Before toggl axis_
+_Before toggle axis_
 
 ![](Toggle-Axis_images/Toggle-Axis_images2.png)
 
