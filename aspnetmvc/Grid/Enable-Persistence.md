@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enable-Persistence
+title: Enable Persistence | Grid | ASP.NET MVC | Syncfusion
 description: enable persistence
 platform: ejmvc
 control: Grid
@@ -12,44 +12,46 @@ documentation: ug
 EnablePersistence is used to maintain the current state of the Grid model. When you refresh the page, the current grid state is stored in localStorage and it renders from stored model. 
 
 
-{% highlight js %}
+{% tabs %}
 
-    @(Html.EJ().Grid<OrdersView>("StateMaintenance")
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource1)
+@(Html.EJ().Grid<OrdersView>("StateMaintenance")
 
-        .AllowSorting()
+.Datasource((IEnumerable<object>)ViewBag.datasource1)
 
-        .AllowGrouping()
+.AllowSorting()
 
-        .EnableAltRow(true)
+.AllowGrouping()
 
-        .AllowPaging()
+.EnableAltRow(true)
+
+.AllowPaging()
 
 .EnablePersistence(true)
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(65).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(65).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+	col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Format("{0:C}").Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Format("{0:C}").Add();
 
-            col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
+	col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        })
+})
 
-        )
+)
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -84,12 +86,13 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 
 The following output is displayed as a result of the above code example.
 
 ![](Enable-Persistence_images/Enable-Persistence_img1.png)
 
-_Figure : EnablePersistence._
+EnablePersistence
+{:.caption}
 

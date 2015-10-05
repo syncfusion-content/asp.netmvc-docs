@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validating-Schedule-Dates
+title: Validating Schedule Dates | Gantt | ASP.NET MVC | Syncfusion
 description: validating schedule dates
 platform: ejmvc
 control: Gantt
@@ -15,33 +15,28 @@ PrevTimeSpan and NextTimeSpan toolbar items are used to create new time span bas
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
 
-        // ...
+	// ...
 
-        .ScheduleStartDate(“02/01/2014”)
+	.ScheduleStartDate(“02/01/2014”)
 
-        .ScheduleEndDate(“03/14/2016”)
+	.ScheduleEndDate(“03/14/2016”)
 
-        .ToolBarSettings(tbs=>tbs.showToolBar(true)
+	.ToolBarSettings(tbs=>tbs.showToolBar(true)
 
-        .ToobarItems(new List<GanttToolbarItems>()
+	.ToobarItems(new List<GanttToolbarItems>()
 
-        { GanttToolbarItems.PrevTimeSpan,
+	{ GanttToolbarItems.PrevTimeSpan,
 
-          GanttToolbarItems.NextTimeSpan,
+	  GanttToolbarItems.NextTimeSpan,
 
-        }))
+	}))
 
-// ...
 
  .Render())
-
-
 
 {% endhighlight %}
 
@@ -52,5 +47,5 @@ The following screenshot illustrates the output of the above code.
 
 ![](Validating-Schedule-Dates_images/Validating-Schedule-Dates_img1.png)
 
-_Figure 57: Validating schedule dates_
-
+Validating schedule dates
+{:.caption}

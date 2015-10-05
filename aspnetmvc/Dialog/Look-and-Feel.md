@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Look-and-Feel
+title: Look and Feel | Dialog | ASP.NET MVC | Syncfusion
 description: look and feel
 platform: ejmvc
 control: Dialog
@@ -18,19 +18,19 @@ The CSS properties can be customized by using CSS Class in the Dialog control. T
 
 1. In the VIEW page set a helper element with the dialog content for rendering the Dialog control. 
 
-   ~~~ js
+   ~~~ cshtml
 
-		// In the CSHTML page add the Dialog widget using helpers and assign the CssClass value from the custom class name.
+	// In the CSHTML page add the Dialog widget using helpers and assign the CssClass value from the custom class name.
 
 
-		@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
+	@{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentTemplate(@<div>
 
-		The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
+	The Syncfusion Dialog control is rendered.</div>).Width(300).Height("200").
 
-		CssClass("customCss").Render();}
+	CssClass("customCss").Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Customize the CSS class by setting CSS Properties. 
 
@@ -39,40 +39,40 @@ The CSS properties can be customized by using CSS Class in the Dialog control. T
    ~~~ css
 
 
-			<style>
+	<style>
 
-				.customCss {            
+		.customCss {            
 
-					border-color: #661e19 !important;
+			border-color: #661e19 !important;
 
-				}
-
-
-
-				/*Customize the dialog header*/
-
-				.customCss .e-header {
-
-					background-color: #2c683b;
-
-				}
+		}
 
 
 
-				/*Customize the dialog content*/
+		/*Customize the dialog header*/
 
-				.customCss .e-dialog, .customCss .e-dialog-scroller {
+		.customCss .e-header {
 
-				  color: #b21010;
+			background-color: #2c683b;
 
-				  background-color: #f6e492;        
+		}
 
-				 }
 
-			</style>
+
+		/*Customize the dialog content*/
+
+		.customCss .e-dialog, .customCss .e-dialog-scroller {
+
+		  color: #b21010;
+
+		  background-color: #f6e492;        
+
+		 }
+
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -81,5 +81,5 @@ The CSS properties can be customized by using CSS Class in the Dialog control. T
 
    ![](Look-and-Feel_images/Look-and-Feel_img1.png)
 
-   _Figure33: Dialog with “CssClass"_
-
+    Dialog with “CssClass"
+    {:.caption}

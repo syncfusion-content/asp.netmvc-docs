@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | OLAPClient | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: OLAPClient
@@ -15,10 +15,10 @@ The content in the OLAP Client control can be exported to Excel, Word and PDF do
 
 Exporting feature provides you a mode option that allows you to export either OlapChart or PivotGrid or both. The following code example explains the same. 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/wcf/OlapClientService.svc"))
-	.ClientExportMode(ClientExportMode.ChartAndGrid)
+@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/wcf/OlapClientService.svc"))
+.ClientExportMode(ClientExportMode.ChartAndGrid)
 
 {% endhighlight %}
 
@@ -30,7 +30,7 @@ The ClientExportMode propertytakes any one of the following value:
 
 The following code example of the service method needs to be added in-order to perform exporting in the OlapClient.
 
-{% highlight c# %}
+{% highlight C# %}
 
 public void Export(Stream stream)
 

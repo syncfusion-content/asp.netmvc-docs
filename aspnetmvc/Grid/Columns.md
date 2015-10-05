@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns
+title: Columns | Grid | ASP.NET MVC | Syncfusion
 description: columns
 platform: ejmvc
 control: Grid
@@ -16,8 +16,10 @@ Colums are a key feature in Grid to define schema in a control based on datasour
 Formatting is used to convert data values to human readable formats using specific culture settings. In Grid, you have an option to format a particular column through the Format property. For more details about globalize.js, refer to the link ([https://github.com/jquery/globalize](https://github.com/jquery/globalize)). The following code example shows you how to use formatting in Grid.
 
 
+{% tabs %}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Grid<object>("format")
@@ -45,7 +47,7 @@ Formatting is used to convert data values to human readable formats using specif
 )
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -93,7 +95,7 @@ public class GridController : Controller
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 
 The following is the result of column formatting.
 
@@ -101,14 +103,17 @@ The following is the result of column formatting.
 
 ![](Columns_images/Columns_img1.png)
 
-_Figure : Column formatting_
+Column formatting
+{:.caption}
 
 ## Template
 
 A Template is used to render a specific template to a particular column using Template and TemplateID property. These columns are not bound to Grid.
 
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 <script type="text/x-jsrender" id="columnTemplate">  <!--jsrender script-->
@@ -144,7 +149,7 @@ A Template is used to render a specific template to a particular column using Te
         )  
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -177,7 +182,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -185,14 +190,17 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/Columns_img2.png)
 
-_Figure : Column Template_
+Column Template
+{:.caption}
 
 ## Custom Attribute
 
 CustomAttributes are a powerful feature of Columns. This is used to modify the styles and appearance of a particular column.
 
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 <style>
@@ -203,9 +211,9 @@ CustomAttributes are a powerful feature of Columns. This is used to modify the s
 
         }	
 
-    </style>
+</style>
 
-  @(Html.EJ().Grid<OrdersView>("FlatGrid")
+ @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
 
@@ -230,11 +238,10 @@ CustomAttributes are a powerful feature of Columns. This is used to modify the s
             col.Field("ShipCountry").HeaderText("Ship City").Width(110).Add();
 
         })
-
-        )
+)
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -270,21 +277,24 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 
 ![](Columns_images/Columns_img3.png)
 
-_Figure : Column Customization_
+Column Customization
+{:.caption}
 
 ## Read only
 
 AllowEditing enables you to edit a column, but it prevents the fields from showing it as editable. If you want to make a column as read-only then set AllowEditing as False for that column. The following code example shows Essential JavaScript Grid column as read-only.
 
 
+{% tabs %}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -314,9 +324,8 @@ AllowEditing enables you to edit a column, but it prevents the fields from showi
         )
 
 {% endhighlight  %}
-{% highlight c# %}
 
-
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -348,10 +357,8 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
 {% endhighlight  %}
-
+{% endtabs %}  
 
 
 The following output is displayed as a result of the above code example.
@@ -360,13 +367,17 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/Columns_img4.png)
 
-_Figure : Read-only_
+Read-only
+{:.caption}
 
 ## Controlling Grid actions
 
 In Grid, you can control Grid actions through AllowSorting, AllowGrouping, AllowFiltering. The following code example shows you how to disable a particular column. The following example has controlled grouping action in CustomerID column, filtering in EmployeeID column and sorting in Freight column.
 
-{% highlight html %}
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -404,7 +415,7 @@ In Grid, you can control Grid actions through AllowSorting, AllowGrouping, Allow
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -439,21 +450,24 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Columns_images/Columns_img5.png)
 
-_Figure : Control Grid actions_
+Control Grid actions
+{:.caption}
 
 ## Auto-generate column
 
 The columns are automatically generated from the datasource and you do not need specific column declarations. The following code example shows auto-generate column behavior with Grid.
 
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -467,7 +481,7 @@ The columns are automatically generated from the datasource and you do not need 
 
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -500,7 +514,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -508,46 +522,50 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/Columns_img6.png)
 
-_Figure : Auto-generate columns_
+Auto-generate columns
+{:.caption}
 
 ## Foreign key columns
 
 Foreign key is a field in relational table. It matches the specific key columns of another table. 
 
 To enable the Foreing key field , use ForeignKeyField and ForeignKeyValue propertyof Grid as follows:
-{% highlight html %}
 
+
+{% tabs %}
+
+{% highlight  CSHTML %}
 
  @(Html.EJ().Grid<OrdersView>("ForeignKey")
 
-        .Datasource((IEnumerable<object>)ViewBag.dataSource1)
+	.Datasource((IEnumerable<object>)ViewBag.dataSource1)
 
-        .AllowPaging()
+	.AllowPaging()
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey (true).TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey (true).TextAlign(TextAlign.Right).Width(80).Add();
 
-            col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID")
+		col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID")
 
-               .ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.dataSource2)
+		   .ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.dataSource2)
 
-               .TextAlign(TextAlign.Left).Width(75).Add();
+		   .TextAlign(TextAlign.Left).Width(75).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
 
 
 
-        })
+	})
 
-        )
+)
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -584,7 +602,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %}  
 
 
 The following output is displayed as a result of the above code example.
@@ -593,44 +611,46 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/Columns_img7.png)
 
-_Figure : Foreign key columns_
+Foreign key columns
+{:.caption}
 
 ## Cell Merging
 
 Cell merging feature enables to merge cells based on your requirement. To enable cell merging , use AllowCellMerging property of Grid as follows.
 
-{% highlight html %}
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 @(Html.EJ().Grid<MVCCellMerging.Models.Order>("FlatGrid")
 
-        	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        	.AllowScrolling()       
+	.AllowScrolling()       
 
-        	.AllowPaging() 
+	.AllowPaging() 
 
-.AllowCellMerging ()       
+	.AllowCellMerging ()       
 
-        	.Columns(col =>
+	.Columns(col =>
 
-        	{
+	{
 
-            	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-            	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
 
-col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
 
-col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
+		col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
 
-            	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
 
-        	})
+	})
 
 .ClientSideEvents(eve => { eve.MergeCellInfo("cellmerge"); }))
-{% endhighlight  %}
 
-{% highlight js %}
 <script type="text/javascript>
 
 function cellmerge(args) {
@@ -657,7 +677,7 @@ function cellmerge(args) {
 
 </script>
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -686,7 +706,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 
 Execute the above code to render the following output.
@@ -695,7 +715,8 @@ Execute the above code to render the following output.
 
 ![](Columns_images/Columns_img8.png)
 
-_Figure25: Cell Merging_
+Cell Merging
+{:.caption}
 
 ## AutoWrap Column Cells
 
@@ -704,37 +725,39 @@ AllowTextWrap feature allows you to wrap cell content to next line when the cont
 
 
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<MVCAutowrap.Models.Order>("FlatGrid")
 
-        	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        	.AllowScrolling()       
+	.AllowScrolling()       
 
-        	.AllowPaging() 
+	.AllowPaging() 
 
-.AllowTextWrap()       
+	.AllowTextWrap()       
 
-        	.Columns(col =>
+	.Columns(col =>
 
-        	{
+	{
 
-            	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-            	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
 
-col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
 
-col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
+		col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
 
-            	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
 
-        	}))
+	}))
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -760,51 +783,53 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 Execute the above code to render the following output.
 
 ![](Columns_images/Columns_img9.png)
 
-_Figure : Grid with Column chooser_
+Grid with Column chooser
+{:.caption}
 
 ## Column Chooser
 
 Column Chooser is used to view or hide particular column. To enable column chooser, use ShowColumnChooser property of Grid as follows.
 
-{% highlight js %}
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("ColumnChooser")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.ShowColumnChooser()
+	.ShowColumnChooser()
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Visible(false).Add();
+		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Visible(false).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
+		col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();                  
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();                  
 
-            col.Field("Freight").TextAlign(TextAlign.Right). Add();
+		col.Field("Freight").TextAlign(TextAlign.Right). Add();
 
-            col.Field("ShipName").Add();
+		col.Field("ShipName").Add();
 
-            col.Field("ShipCountry").Add();
+		col.Field("ShipCountry").Add();
 
-        }))
+	}))
 
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -836,14 +861,14 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 
 Execute the above code to render the following output.
 
 ![](Columns_images/Columns_img10.png)
 
-_Figure27: Grid with Column chooser_
-
+Grid with Column chooser
+{:.caption}
 
 
 ## DisableHtmlEncode
@@ -852,7 +877,10 @@ DisableHtmlEncode property helps you show the encoded HTML view of Grid content 
 
 The following code example shows you how to set disableHtmlEncode:
 
-{% highlight js %}
+
+{% tabs %}
+
+{% highlight CSHTML %}
 
   @(Html.EJ().Grid<object>("Grid")
 
@@ -878,7 +906,7 @@ The following code example shows you how to set disableHtmlEncode:
 
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -902,86 +930,88 @@ namespace SyncfusionMvcApplication3.Controllers
 
 }
 
-
-
 {% endhighlight  %}
-
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 ![](Columns_images/Columns_img11.png)
 
-_Figure : DisableHTMLEncode_
+DisableHTMLEncode
+{:.caption}
 
 ## Stacked Header
 
 The Stacked Header feature allows additional header rows that span across the grid columns. Columns can be grouped under such headers. You can effectively group extensive data with the help of multilevel Stacked Headers as well. Enable the Stacked Header by setting the ShowStackedHeader property to true and set the stacked header row by using the StakedHeaderRows property. The Stacked Header feature also supports all other grid features including Grouping, Sorting, Filtering, Reordering, etc. 
 
-{% highlight html %}
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 
 @(Html.EJ().Grid<OrdersView>(“StackedHeaderGrid”)
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.ShowStackedHeader()
+	.ShowStackedHeader()
 
-.StackedHeaderRows(row =>
+	.StackedHeaderRows(row =>
 
-        {
+	{
 
-            row.StackedHeaderColumns(column =>
+		row.StackedHeaderColumns(column =>
 
-            {
+		{
 
-                column.StackedHeaderText(“OrderDetails”).Column(col =>
+			column.StackedHeaderText(“OrderDetails”).Column(col =>
 
-                {
+			{
 
-                    col.Add(“OrderID”);
+				col.Add(“OrderID”);
 
-                    col.Add(“OrderDate”);
+				col.Add(“OrderDate”);
 
-                    col.Add(“Freight”);
+				col.Add(“Freight”);
 
-                }).Add();
+			}).Add();
 
-                column.StackedHeaderText(“Ship Details”).Column(col =>
+			column.StackedHeaderText(“Ship Details”).Column(col =>
 
-                {
+			{
 
-                    col.Add(“ShipName”);
+				col.Add(“ShipName”);
 
-                    col.Add(“ShipCity”);
+				col.Add(“ShipCity”);
 
-                    col.Add(“ShipCountry”);
+				col.Add(“ShipCountry”);
 
-                }).Add();
+			}).Add();
 
-            }).Add();
+		}).Add();
 
-        })
+	})
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field(“OrderID”).HeaderText(“Order ID”).TextAlign(TextAlign.Right). Add();
+		col.Field(“OrderID”).HeaderText(“Order ID”).TextAlign(TextAlign.Right). Add();
 
-            col.Field(“OrderDate”).HeaderText(“Order Date”).Add();
+		col.Field(“OrderDate”).HeaderText(“Order Date”).Add();
 
-            col.Field(“Freight”).HeaderText(“Freight”).TextAlign(TextAlign.Right). Add();
+		col.Field(“Freight”).HeaderText(“Freight”).TextAlign(TextAlign.Right). Add();
 
-            col.Field(“ShipName”).HeaderText(“Ship Name”).TextAlign(TextAlign.Right).Add();
+		col.Field(“ShipName”).HeaderText(“Ship Name”).TextAlign(TextAlign.Right).Add();
 
-            col.Field(“ShipCity”).HeaderText(“Ship City”).Add();
+		col.Field(“ShipCity”).HeaderText(“Ship City”).Add();
 
-            col.Field(“ShipCountry”).HeaderText(“Ship Country”).Add();
+		col.Field(“ShipCountry”).HeaderText(“Ship Country”).Add();
 
-        }))
+	}))
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -1013,13 +1043,15 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ![](Columns_images/Columns_img12.png)
 
-_Figure : Stacked Header_
+Stacked Header
+{:.caption}
 
 ![](Columns_images/Columns_img13.png)
 
-_Figure : Stacked Header with Grouping_
+Stacked Header with Grouping
+{:.caption}
 

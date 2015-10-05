@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behaviour-Settings
+title: Behaviour Settings | DropDownList | ASP.NET MVC | Syncfusion
 description: behaviour settings
 platform: ejmvc
 control: DropDownList
@@ -19,37 +19,36 @@ The following steps explains you the configuration of TargetID property in Dropd
 
 1. Add the below code in view page to render the dropdown list with UL LI element as dropdown target.
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add a DropDownList element using the helper class in CSHTML
+	// Add a DropDownList element using the helper class in CSHTML
 
 
 
-		@Html.EJ().DropDownList("dropdownlist").TargetID("list") 
+	@Html.EJ().DropDownList("dropdownlist").TargetID("list") 
 
-				<div id="list">
+	<div id="list">
 
-					<ul>
+		<ul>
 
-						<li>Art</li>
+			<li>Art</li>
 
-						<li>Architecture</li>
+			<li>Architecture</li>
 
-						<li>Biography</li>
+			<li>Biography</li>
 
-						<li>Comics</li>
+			<li>Comics</li>
 
-						<li>Sports</li>
+			<li>Sports</li>
 
-						<li>Science</li>
+			<li>Science</li>
 
-					</ul>
+		</ul>
 
-				</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
-
+   
 ## Number of items in the list
 
 Dropdown widget provides you support to customize the items visible on popup visible. The ItemsCount property defines the number of items that is displayed on Dropdown List. Its data type is number.
@@ -58,7 +57,7 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
 1. Add the below code in view page to render the dropdown list with 3 items in popup panel.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -68,29 +67,27 @@ The following steps explains you the configuration of ItemsCount property in Dro
 
 
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
-
-
-
-        </div>
+	</ul>
 
 
+
+</div>
 
 {% endhighlight %}
 
@@ -100,7 +97,8 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img1.png)
 
-_Figure 12: Dropdown with itemsCount property_  
+Dropdown with itemsCount property
+{:.caption}  
 
 ## Select the value by index 
 
@@ -113,35 +111,31 @@ The following steps explains you the configuration of SelectedItemIndex property
 2. add the below code in your page to render the dropdown list with index 2 items is selected
 
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 // Add a DropDownList element using the helper class in CSHTML
-
-
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").SelectedItemIndex(1)
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
+	</ul>
 
-
-
-        </div>
-
+</div>
 
 {% endhighlight %}
 
@@ -151,7 +145,8 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
 
-_Figure 13: Dropdown with selecteditemindex property_  
+Dropdown with selecteditemindex property 
+{:.caption}
 
 ## Show Popup on load
 
@@ -164,35 +159,31 @@ The following steps explains you the configuration of ShowPopupOnLoad property i
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
-
-
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowPopupOnLoad(true)
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
+	</ul>
 
-
-
-        </div>
+</div>
 
 {% endhighlight %}
 
@@ -205,12 +196,8 @@ The following steps explains you the configuration of selectedItems property in 
 1. Add the below code snippet to select multiple items in dropdown list.
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 // Add a DropDownList element using the helper class in CSHTML
-
-
-
 @{List<int> indexList = new List<int>();
 
   indexList.Add(0);
@@ -220,8 +207,6 @@ The following steps explains you the configuration of selectedItems property in 
 }
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowCheckbox(true).SelectedItems(indexList)
-
-
 
 <div id="list">
 
@@ -250,7 +235,8 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img3.png)
 
-_Figure 14: Dropdown with selecteditems property_  
+Dropdown with selecteditems property
+{:.caption}
 
 ## Read-only
 
@@ -262,35 +248,29 @@ The following steps explains you the configuration of ReadOnly property in Dropd
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 // Add a DropDownList element using the helper class in CSHTML
-
-
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").ReadOnly(true)
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
-
-
-
-        </div>
+	</ul>
+</div>
 
 {% endhighlight %}
 
@@ -304,37 +284,32 @@ The following steps explains you the configuration of Enabled property in Dropdo
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 // Add a DropDownList element using the helper class in CSHTML
 
 
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").Enabled(false)
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
-
-
-
-        </div>
-
-
+	</ul>
+	
+</div>
 
 {% endhighlight %}
 
@@ -343,7 +318,8 @@ Output of the above steps
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img4.png)
 
-_Figure 15: Dropdown with enable property_  
+Dropdown with enable property
+{:.caption}
 
 ## Persistence support 
 
@@ -355,35 +331,30 @@ The following steps explains you the configuration of EnablePersistence property
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 // Add a DropDownList element using the helper class in CSHTML
-
-
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").EnablePersistence(true)
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
-
-
-
-        </div>
+	</ul>
+	
+</div>
 
 {% endhighlight %}
 

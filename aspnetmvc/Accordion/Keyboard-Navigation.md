@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Navigation
+title: Keyboard Navigation | Accordion  | ASP.NET MVC | Syncfusion
 description: keyboard navigation	
 platform: ejmvc
 control: Accordion 
@@ -50,7 +50,7 @@ Moves to the last accordion panel</td></tr>
 
 The following code explains you on how to enable keyboard interaction for an Accordion widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 // In the View page, configure Accordion with corresponding data and configure Keyboard navigation for Accordion by setting AllowKeyboardNavigation property to true.
 <div style="width: 400px; float:left;">
 @{Html.EJ().Accordion("accordion").Items(data => 

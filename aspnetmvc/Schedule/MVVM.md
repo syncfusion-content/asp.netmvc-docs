@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MVVM
+title: MVVM | Schedule | ASP.NET MVC | Syncfusion
 description: mvvm
 platform: ejmvc
 control: Schedule
@@ -9,20 +9,20 @@ documentation: ug
 
 # MVVM
 
-## Angular JS
+### Angular JS
 
 * Schedule contains angular support. You can add object as well as array object in the Schedule.
 * The two way binding support is given to the currentView, currentDate and datasource properties. 
 * ej-Schedule is the control tag in which ej is tag prefix and Schedule is the control name.
 
-## Rendering the Schedule
+### Rendering the Schedule
 
 You can render the Schedule by using the following code example. Object in the array collection such as appointmentSetting, contextMenuSettings, etc. are extended with hyphen in the same tag.
 
 Example: e-contextMenuSettings-enable.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 <!--To Render the Schedule-->
 
 <div ng-app="syncApp">
@@ -65,24 +65,20 @@ e-currentdate="setDate" e-contextMenuSettings-enable="true">
 
 
 
-## Adding Context menu settings
+### Adding Context menu settings
 
 * Context menu is an object type that has inner array object. 
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!--To Render the Schedule-->
-
-
 
 <ej-Schedule style="float: left" id="Schedule1">
 
 
-
 <!--Adding content menu item for appointment -->
-
 
 
 <e-contextMenuSettings-menuItems-appointment>
@@ -97,11 +93,7 @@ e-currentdate="setDate" e-contextMenuSettings-enable="true">
 
 </e-contextMenuSettings-menuItems-appointment>
 
-
-
 <!--Adding content menu item for cells -->
-
-
 
 <e-contextMenuSettings-menuItems-cells>
 
@@ -111,33 +103,27 @@ e-id="new" e-text="Create New Appointment">
 
 </e-contextMenuSettings-menuItems-cell>
 
-
-
 <e-contextMenuSettings-menuItems-cell
 
 e-id="recurrence" e-text="Create recurrence Appointment">
 
 </e-contextMenuSettings-menuItems-cell>
 
-
-
 </e-contextMenuSettings-menuItems-cells>
-
-
 
 </ej-Schedule>
 
 {% endhighlight %}
 
-## Adding Categorize option
+### Adding Categorize option
 
 * Categorizeoption is an array object. 
 * contextMenuSettings contains an object called menuItem.
 * Menu item has two types of array objects for cells and appointment respectively.
 
-{% highlight html %}
-<!--To Render the Schedule-->
+{% highlight CSHTML %}
 
+<!--To Render the Schedule-->
 
 
 <ej-Schedule style="float: left" id="Schedule1" e-categorizesetting-enable="true"
@@ -148,36 +134,25 @@ e-categorizesetting-color="color"
 
 e-categorizesetting-fontcolor="fontcolor" e-categorizesetting-id="id">
 
-
-
 <!--Adding content menu item for appointment -->
 
 <e-contextMenuSettings-menuItems-appointment>
 
 </e-contextMenuSettings-menuItems-appointment>
 
-
-
 <!--Adding content menu item for cells -->
-
-
 
 <e-contextMenuSettings-menuItems-cells>
 
 </e-contextMenuSettings-menuItems-cells>
 
-
-
 <e-categorizesetting-datasource>
-
-
 
 <e-categorizesetting-datasource text="Blue category"
 
 color="Blue" fontcolor="Red" id="1">
 
 </e-categorizesetting-datasource>
-
 
 
 <e-categorizesetting-datasource text="yellow category"
@@ -187,14 +162,11 @@ color="yellow" fontcolor="Red" id="2">
 </e-categorizesetting-datasource>
 
 
-
 <e-categorizesetting-datasource text="red category" color="red"
 
 fontcolor="Red" id="3">
 
 </e-categorizesetting-datasource>
-
-
 
 <e-categorizesetting-datasource text="orange category" color="orange"
 
@@ -203,9 +175,7 @@ fontcolor="Red" id="4">
 </e-categorizesetting-datasource>
 
 
-
 </e-categorizesetting-datasource>
-
 
 
 </ej-Schedule>
@@ -220,13 +190,15 @@ Execute the above codes to render the Resultant schedule as follows.
 
 
 
-## Two Way Binding 
+### Two Way Binding 
 
 * Schedule control supports two way binding for the property currentView , currentDate and datasource as mentioned earlier. 
 * The following code example explains how to achieve the two way binding to the Schedule control.
 * [Click here](http://mvc.syncfusion.com/demos/web/schedule/angularsupport) to see how Angular JS works with schedule.
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 <div ng-app="syncApp">
 
 <div ng-controller="ScheduleCtrl">
@@ -336,7 +308,7 @@ e-id="gotodate" -text="Go to date">
 <script>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 <!—binding the value to the scope variables in application controller-->
 
 var data = [
@@ -373,6 +345,7 @@ $("#sampleProperties").ejPropertiesPanel();
 
 {% endhighlight %}
 
+{% endtabs %} 
 
 Execute the above code to render the following output.
 
@@ -380,7 +353,7 @@ Execute the above code to render the following output.
 
 
 
-## Knockout binding
+### Knockout binding
 
 * Knockoutsupport allows you to bind the html elements against the available data models.Two types of knockoutbinding are supported,
 1. one-way binding
@@ -397,8 +370,7 @@ Execute the above code to render the following output.
 
 
 
-{% highlight html %}
-
+{% highlight CSHTML %}
 
 
 @section SampleHeading{<span class="sampleName"> Schedule / KO Support</span>}

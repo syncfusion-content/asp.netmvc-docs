@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview
+title: Overview | Gantt | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Gantt

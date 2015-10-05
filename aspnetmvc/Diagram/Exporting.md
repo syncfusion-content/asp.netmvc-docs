@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | Diagram | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: Diagram
@@ -22,15 +22,11 @@ The following code illustrates how to export the diagram as image
 
 {% highlight js %}
 
-
-
 var diagram = $("#DiagramContent").ejDiagram("instance");
 
 //Exports the Diagram as an image of JPEG format
 
 diagram.exportDiagram();
-
-
 
 {% endhighlight %}
 
@@ -42,12 +38,7 @@ The following code example illustrates how to export and download the positive r
 
 {% highlight js %}
 
-
-
 var diagram = $("#DiagramContent").ejDiagram("instance");
-
-
-
 var options = {
 
            //Name of the exported file
@@ -76,13 +67,9 @@ var options = {
 
            };
 
-
-
 //Exports the positivie region of diagram as an image of JPEG format.
 
 diagram.exportDiagram(options);
-
-
 
 {% endhighlight %}
 
@@ -150,5 +137,5 @@ It includes jpg, png, bmp, and svg.
 
 ![](Exporting_images/Exporting_img1.png)
 
-
-
+Exported diagram
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template
+title: Template | Schedule | ASP.NET MVC | Syncfusion
 description: template
 platform: ejmvc
 control: Schedule
@@ -13,12 +13,15 @@ documentation: ug
 
 * The appointments are provided with rich template support, so that the customizations are done easily. You can add the appointment template to the Schedule control as follows.
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 <style>
-.e-monthappointment {
-height: auto !important;
-}
+	.e-monthappointment 
+	{
+	height: auto !important;
+	}
 </style>
+
 @(Html.EJ().Schedule("Schedule1")
 .Width("100%")
 .Height("525px")
@@ -37,20 +40,22 @@ RecurrenceRule("RecurrenceRule"))
 
 // appointment template definition
 <script id="MyTemplate" type="text/x-jsrender">
-<div style="height: 100%">
-<div style="float: left; width: 50px;">
-{{:~format(StartTime)}}
-</div><div><div>
-{{:Subject}}
-<div></div>
-</div></script>
+	<div style="height: 100%">
+		<div style="float: left; width: 50px;">
+		{{:~format(StartTime)}}
+		</div>
+	<div><div>
+	{{:Subject}}
+	<div></div>
+	</div>
+</script>
 <script>
-
 // the following function selects the images to be displayed on the appointments based on the day of the appointment’s startTime.
-{% endhighlight %}
+
 
 N> The following used images should be present in a separate images folder, so that it will be referred properly.
-{% highlight js %}
+
+
 function _getImages(date)
  {switch (new Date(date).getDay())
  {
@@ -76,17 +81,21 @@ function _getImages(date)
  $.views.helpers({ format: _getImages });
  </script>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers{public partial class ScheduleController : Controller
 {
 	//// GET: /Templates/
-	public ActionResult Templates(){List<person> persons = new List<person>();
-	// var DataSource = new ScheduleDataDataContext().TimeModes.ToList();
-	persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU" });
-	persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 2, 6, 0, 20), EndTime = new DateTime(2014, 4, 2, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-	persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-	persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 4, 4, 0, 20), EndTime = new DateTime(2014, 4, 4, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU" });
-	ViewBag.dataSource = persons;return View();}}}</td></tr>
+	public ActionResult Templates()
+	{
+		List<person> persons = new List<person>();
+		// var DataSource = new ScheduleDataDataContext().TimeModes.ToList();
+		persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU" });
+		persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 2, 6, 0, 20), EndTime = new DateTime(2014, 4, 2, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
+		persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
+		persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 4, 4, 0, 20), EndTime = new DateTime(2014, 4, 4, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU" });
+		ViewBag.dataSource = persons;return View();
+	}
+}
 {% endhighlight %}
 
 
@@ -95,17 +104,16 @@ namespace MVCSampleBrowser.Controllers{public partial class ScheduleController :
 
 ![](Template_images/Template_img1.png)
 
-
-
- _Figure82: schedule with template.
-
+schedule with template.
+{:.caption}
 
 
 ### ResorceHeader Template
 
 * The resources are provided with rich template support, so that the customizations are done easily. You can add the resource header template to the Schedule control as follows.
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -140,7 +148,7 @@ flds.Datasource(ViewBag.Owners).Text("text").Id("id").Color("color")).Add();})
 <img style="width: 40px; height: 40px" src=".../images/schedule/{{:id}}.png" alt="{{:id}}" />
   </script>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
 	public partial class ScheduleController : Controller
@@ -182,7 +190,7 @@ namespace MVCSampleBrowser.Controllers
 	}
 }
 {% endhighlight %}
-
+{% endtabs %} 
 
 Important: The above used images should be present in a separate images folder, so that it will be referred properly.The images name should be saved with id as same as given in the resourceSettings inorder to set unqiue images to all resources.
 

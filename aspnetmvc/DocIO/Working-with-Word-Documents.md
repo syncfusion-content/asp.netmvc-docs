@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Word-Documents
+title: Working with Word Documents | DocIO | ASP.NET MVC | Syncfusion
 description: working with word documents
 platform: ejmvc
 control: DocIO
@@ -13,9 +13,9 @@ You can open, modify, and create Microsoft Word documents by using the WordDocum
 
 
 
-Public Properties
+#### Public Properties
 
-_Table_ _7_: Public Properties
+
 
 <table>
 <tr>
@@ -169,9 +169,9 @@ Gets information on actual format type of the document.</td></tr>
 </table>
 
 
-Public Constructors
+#### Public Constructors
 
-_Table_ _8_: Public Constructors_
+_Public Constructors_
 
 <table>
 <tr>
@@ -209,9 +209,8 @@ Initializes a new instance of the WordDocument class from existing Word document
 </table>
 
 
-Public Methods
+#### Public Methods
 
-_Table_ _9_: Public Methods_
 
 <table>
 <tr>
@@ -342,7 +341,9 @@ N> When source and destination documents have styles with the same names, then G
 
 The following code example illustrates how to merge two documents by using the Clone method.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Creates the first document.
 IWordDocument doc = new WordDocument();
@@ -384,7 +385,7 @@ doc.Save("Sample.docx", FormatType.Word2013);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates the first document.
 Dim doc As IWordDocument = New WordDocument()
@@ -421,6 +422,7 @@ doc.Sections.Add(section2.Clone())
 'Saves the document to disk.
 doc.Save("Sample.docx", FormatType.Word2013);
 {% endhighlight %}
+{% endtabs %} 
 
 ## Merging a Word document
 
@@ -442,7 +444,9 @@ Use the ImportContent(WordDocument doc, ImportOptions importOptions) method to i
 
 The following code example illustrates how to import contents from one document to another with various import options.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Opens the destination Word document.
 WordDocument destination = new WordDocument("Destination.doc");
@@ -455,8 +459,10 @@ destination.ImportContent(source, ImportOptions.KeepSourceFormatting);
 
 //Saves the document.
 destination.Save("Sample.doc", FormatType.Doc);
+
 {% endhighlight %}
-{% highlight vbnet %}
+
+{% highlight VB %}
 'Opens the destination Word document.
 Dim destination As New WordDocument("Destination.doc")
 
@@ -467,9 +473,9 @@ Dim source As New WordDocument("Source.doc")
 destination.ImportContent(source, ImportOptions.KeepSourceFormatting)
 
 'Saves the document.destination.
-Save("Sample.doc", FormatType.Doc)</td></tr>
+Save("Sample.doc", FormatType.Doc)
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Protecting a Word Document
 
@@ -481,14 +487,18 @@ You can use the EncryptDocument method to protect a Word document with a passwor
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img2.png)
 
-
+Protect Document Dialog Box in Microsoft Word
+{:.caption}
 
 
 Decryption is the process of removing the restriction to view or access the contents of the password protected document by all the users. 
 
 The following code example illustrates how to encrypt and decrypt a Word document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
+
 //Encrypts the Word document with a password.
 document.EncryptDocument(password);
 
@@ -497,7 +507,7 @@ WordDocument document = new WordDocument(filename, password);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Encrypts the Word document with a password.
 document.EncryptDocument(password)
@@ -506,6 +516,7 @@ document.EncryptDocument(password)
 Dim document As New WordDocument(filename, password)
 
 {% endhighlight %}
+{% endtabs %} 
 
 N> Essential DocIO does not support encryption and decryption techniques of Microsoft Word 2013 format documents in Silverlight platform_.
 
@@ -517,8 +528,8 @@ Essential DocIO provides support to restrict a Word document from editing. All t
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img4.png)
 
-
-
+Restrict Editing Dialog Box in Microsoft Word
+{:.caption}
 
 
 DocIO supports such protection while reading and writing Word documents for both .doc and .docx formats, and this can be provided through the following APIs.
@@ -532,8 +543,10 @@ DocIO supports such protection while reading and writing Word documents for both
 You can restrict a Word document from editing either by providing a password or without password by using Essential DocIO. You can easily modify document protection type by using the WordDocument.ProtectionType property.
 
 The following code example illustrates how to set the protection type for a document.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
+
 //Loads a Word document.
 IWordDocument doc = new WordDocument("sample.doc");
 
@@ -545,7 +558,7 @@ doc.Save( "Protection.doc" );
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Loads a Word document.
 Dim doc As IWordDocument = New WordDocument("sample.doc")
@@ -556,7 +569,7 @@ doc.Protect(ProtectionType.AllowOnlyComments,"password")
 'Saves the Word document.doc.Save("Protection.doc")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Working with Document Properties
 
@@ -566,9 +579,8 @@ To view or edit the document properties, go to File menu and click Properties in
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img5.png)
 
-
-
-
+Document Properties Dialog Box
+{:.caption}
 
 The Document Properties dialog box contains the following tabs.
 
@@ -597,7 +609,7 @@ BuiltinDocumentProperties
 
 #### Public Properties
 
-_Table_ _10_: Public Properties
+
 
 <table>
 <tr>
@@ -645,7 +657,7 @@ Gets the slide count.</td></tr>
 
 #### Public Methods
 
-_Table_ _11_: Public Methods
+
 
 <table>
 <tr>
@@ -661,7 +673,9 @@ Clone</td><td>
 
 The following code example illustrates how to get, set, and modify Document Properties.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Initializes Word document object.
 WordDocument doc = new WordDocument();
@@ -680,7 +694,7 @@ doc.BuiltinDocumentProperties.Comments = "Document comments";
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Initializes Word document object.
 Dim doc As New WordDocument()
@@ -698,7 +712,7 @@ doc.BuiltinDocumentProperties.Author = "Author's name"
 doc.BuiltinDocumentProperties.Comments = "Document comments"
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Custom Document Properties
 
@@ -707,11 +721,12 @@ CustomDocumentProperties class enables you to create and save your own custom pr
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img6.png)
 
 
-
+Custom Tab in Document Properties Dialog Box
+{:.caption}
 
 #### Public Properties
 
-_Table_ _12_: Public Properties
+
 
 <table>
 <tr>
@@ -727,7 +742,7 @@ Gets number of custom document properties in a document.</td></tr>
 
 #### Public Methods
 
-_Table_ _13_: Public Methods
+_Public Methods_
 
 <table>
 <tr>
@@ -757,7 +772,7 @@ This class represents each custom document property.
 
 #### Public Methods
 
-_Table_ _14_: Public Methods
+
 
 <table>
 <tr>
@@ -797,7 +812,9 @@ Converts value to string.</td></tr>
 
 The following code example illustrates how to get or set the existing custom document properties, and also add new custom document properties.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 WordDocument doc = new WordDocument();
 doc.Open( "DocumentProperties.doc" );
 
@@ -812,7 +829,7 @@ DateTime completedDate = DateTime.Now;doc.CustomDocumentProperties.Add( "Date co
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 Dim doc As New WordDocument()doc.Open("DocumentProperties.doc")
 
 ‘Gets custom property value.
@@ -825,7 +842,7 @@ doc.CustomDocumentProperties("Check by").Value = "user name"
 Dim completedDate As DateTime = DateTime.Nowdoc.CustomDocumentProperties.Add("Date completed", completedDate)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Working with Styles
 
@@ -833,7 +850,10 @@ Essential DocIO provides support to create a new style, and then apply the newly
 
 The following code example illustrates how to create a new style and apply it to a Word document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
+
 //Creates Paragraph styles.
 WParagraphStyle style = document.AddParagraphStyle("Heading 1") as WParagraphStyle;
 
@@ -854,7 +874,7 @@ style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 'Creates Paragraph styles.
 Dim style As WParagraphStyle = document.AddParagraphStyle("Heading 1") As WParagraphStyle
 
@@ -874,7 +894,7 @@ style.ParagraphFormat.KeepFollow = True
 style.ParagraphFormat.OutlineLevel = OutlineLevel.Level1
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Setting the Background for a Document
 
@@ -889,7 +909,8 @@ To set the background effects in a Microsoft Word document, open the Design menu
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img7.png)
 
-
+Background colors in the Word Document
+{:.caption}
 
 ### Document Color
 
@@ -911,7 +932,7 @@ By using the WordDocument.Background property, you can access the document backg
 
 #### Public Properties
 
-_Table_ _15_: Public Properties
+
 
 <table>
 <tr>
@@ -941,7 +962,9 @@ N> For more details on BackgroundGradient class, refer to the_ BackgroundGradien
 
 The following code example illustrates how to use the Background class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 //Opens the Template document.IWordDocument doc1 = new WordDocument();
 doc1.Open("Background.doc");
 
@@ -981,7 +1004,8 @@ doc2.Save("BackgroundNew.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
+
 'Opens the Template document.
 Dim doc As IWordDocument = New WordDocument()
 doc1.Open("Background.doc")
@@ -1017,7 +1041,7 @@ Select Case doc1.Background.Type
 	doc1.Save("Background.doc")
 	doc2.Save("BackgroundNew.doc")
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Background Gradient
 
@@ -1027,7 +1051,8 @@ The following screenshot shows the Fill Effects dialog box that appears.
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img10.png)
 
-
+Fill Effects Dialog Box
+{:.caption}
 
 By using DocIO, you can access background gradient options through the WordDocument.Background.Gradient property.
 
@@ -1037,7 +1062,7 @@ Color1 and Color2 properties of Background Gradient define the gradient colors. 
 
 #### Public Properties
 
-_Table_ _16_: Public Properties
+
 
 <table>
 <tr>
@@ -1063,9 +1088,9 @@ Gets or sets the shading variants. </td></tr>
 </table>
 
 
-Public Methods
+#### Public Methods
 
-_Table_ _17_: Public Methods
+
 
 <table>
 <tr>
@@ -1081,7 +1106,10 @@ Clones current Gradient object.</td></tr>
 
 The following code example illustrates how to use the Background Gradient class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
+
 //Instantiates Word document object.
 IWordDocument doc = new WordDocument();
 
@@ -1091,8 +1119,10 @@ doc.Background.Gradient.Color1 = Color.White;
 doc.Background.Gradient.Color2 = Color.Black;
 doc.Background.Gradient.ShadingStyle = GradientShadingStyle.FromCenter;
 doc.Background.Gradient.ShadingVariant = GradientShadingVariant.ShadingDown;
+
 {% endhighlight %}
-{% highlight vbnet %}
+
+{% highlight VB %}
 'Instantiates Word document object.
 Dim doc As IWordDocument = New WordDocument()
 
@@ -1103,7 +1133,7 @@ doc.Background.Gradient.Color2 = Color.Black
 doc.Background.Gradient.ShadingStyle = GradientShadingStyle.FromCenter
 doc.Background.Gradient.ShadingVariant = GradientShadingVariant.ShadingDown
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Working with Watermarks
 
@@ -1157,6 +1187,9 @@ TextWatermark class represents text watermarks in a Word document. The following
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img11.png)
 
+Selecting Text Watermark in Printed Watermark Dialog Box
+{:.caption}
+
 * Text: This property specifies the text for the Text Watermark. 
 * FontName: This property specifies the name of the text font. Default font name is Times New Roman.
 * Size: Thisproperty specifies the font size. Default font size is 36. 
@@ -1180,9 +1213,8 @@ Watermark
 
 
 
-Public Constructors
+#### Public Constructors
 
-_Table_ _18_: Public Constructors
 
 <table>
 <tr>
@@ -1206,7 +1238,7 @@ Initializes a new instance of the TextWatermark class with watermark text, text 
 
 #### Public Properties
 
-_Table_ _19_: Public Properties
+
 
 <table>
 <tr>
@@ -1246,7 +1278,10 @@ Gets or sets the text for the watermark.</td></tr>
 
 The following code example illustrates how to use the TextWatermark class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
+
 //Creates a new Word document.
 IWordDocument doc = new WordDocument();
 
@@ -1274,7 +1309,7 @@ textWatermark.Text = "TextWatermark";
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As IWordDocument = New WordDocument()
@@ -1303,13 +1338,16 @@ textWatermark.Text = "TextWatermark"
 
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Picture watermark
 
 PictureWatermark class represents picture watermarks in a Word document.
 
 ![](Working-with-Word-Documents_images/Working-with-Word-Documents_img12.png)
+
+Selecting Picture Watermark in Printed Watermark Dialog Box
+{:.caption}
 
 Class Hierarchy
 
@@ -1325,9 +1363,9 @@ Watermark
 
 
 
-Public Constructors
+#### Public Constructors
 
-_Table_ _20_: Public Constructors
+
 
 <table>
 <tr>
@@ -1347,7 +1385,7 @@ Initializes a new instance of the PictureWatermark class with System.Drawing.Ima
 
 #### Public Properties
 
-_Table_ _21_: Public Properties
+
 
 <table>
 <tr>
@@ -1375,7 +1413,9 @@ Gets or sets a value indicating whether washout effect needs to be applied for P
 
 The following code example illustrates how to use the PictureWatermark class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Initializes a new Word document.
 IWordDocument doc = new WordDocument();
@@ -1395,7 +1435,7 @@ picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Initializes a new Word document.
 Dim doc As IWordDocument = New WordDocument()doc.EnsureMinimal()
@@ -1411,15 +1451,17 @@ doc.Watermark = picWatermark
 ‘Adds the picture to the picture watermark.
 picWatermark.Picture = Image.FromFile(ImagesPath and "Water lilies.jpg")
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Iterating Document Elements
 
 This section shows how to iterate document elements from the WordDocument instance.
 
 The following code example illustrates how to iterate all the paragraphs in the document and set horizontal alignment to Right.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
+
 //Opens the Word document
 .WordDocument wordDoc = new WordDocument(“Sample.docx”);
 
@@ -1432,7 +1474,7 @@ foreach (WSection section in wordDoc.Sections)
 	}
 }
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB %}
  'Opens the Word document.
  Dim wordDoc As New WordDocument("Sample.docx")
  
@@ -1444,10 +1486,12 @@ foreach (WSection section in wordDoc.Sections)
 Next
 {% endhighlight %}
 
+{% endtabs %} 
 
 The following code example illustrates the usage of the UpdateParagraphAlignment method.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 //Updates Paragraph Horizontal alignment.
 private void UpdateParagraphAlignment(TextBodyItem textBodyItem)
 {
@@ -1472,7 +1516,7 @@ private void UpdateParagraphAlignment(TextBodyItem textBodyItem)
 }
 
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB %}
 ‘Updates Paragraph Horizontal alignment.
 Private Sub UpdateParagraphAlignment(textBodyItem As TextBodyItem)
     If TypeOf textBodyItem Is WParagraph Then 
@@ -1490,7 +1534,7 @@ Private Sub UpdateParagraphAlignment(textBodyItem As TextBodyItem)
 	End If
 End Sub
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Setting View Options
 
@@ -1515,35 +1559,37 @@ This property is used to set the document default layout option when opening a d
 
 
 The following code example illustrates how to set the DocumentViewType property.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
  //Sets the Document View Type for the Word document as WebLayout.
  wordDoc.ViewSetup.DocumentViewType = DocumentViewType.WebLayout;
 
  {% endhighlight %}
- {% highlight vbnet %}
+ {% highlight VB %}
  ‘Sets the Document View Type for the Word document as WebLayout.
  wordDoc.ViewSetup.DocumentViewType = DocumentViewType.WebLayout
 
  {% endhighlight %}
-
+{% endtabs %} 
 
 ### ZoomPercent
 
 This property is used to set the document default zoom percent when opening the generated document in Microsoft Word.
 
 The following code example illustrates how to use the ZoomPercent property.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 //Sets the zoom percent of viewsetup.
 wordDoc.ViewSetup.ZoomPercent = 70;
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB %}
 ‘Sets the zoom percent of viewsetup.
 wordDoc.ViewSetup.ZoomPercent = 70
 {% endhighlight %}
-
+{% endtabs %} 
 
 #### ZoomType
 
@@ -1557,15 +1603,17 @@ This property is used to set the document default Zoom type when opening a docum
 
 
 The following code example illustrates how to set the DocumentViewType property.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 //Sets the zoomtype of viewsetup as Page width.
 wordDoc.ViewSetup.ZoomType = ZoomType.PageWidth;
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB %}
  ‘Sets the zoomtype of viewsetup as Page width.
  wordDoc.ViewSetup.ZoomType = ZoomType.PageWidth
 {% endhighlight %}
+{% endtabs %} 
 
 ### Accepting or Rejecting Track Changes
 
@@ -1585,7 +1633,9 @@ WordDocument.HasChanges specifies whether the document has any revision (change)
 
 By using the WordDocument.TrackChanges property, you can enable revision tracking of a document opened in Microsoft Word. Note that this setting neither affects the changes made to the document by using DocIO nor tracked as revisions.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
  //Opens a Word document.
  WordDocument doc = new WordDocument(@"Essential DocIO.doc", FormatType.Doc);
  foreach (WSection section in doc.Sections)
@@ -1606,14 +1656,21 @@ By using the WordDocument.TrackChanges property, you can enable revision trackin
 doc.AcceptChanges();
 doc.Save("sample.doc");
 {% endhighlight %}
- {% highlight vbnet %}
+ {% highlight VB %}
 ‘Opens a Word document.Dim doc As WordDocument = New WordDocument("Essential DocIO.doc", FormatType.Doc)
 For Each section As WSection In doc.Sections 
    For i As Integer = 0 To section.Paragraphs.Count - 1 
 	   para = section.Paragraphs(i)  
 	   'Checks each paragraph item’s revision.   
 	   For Each item As ParagraphItem In para.Items 
-		Console.WriteLine((item.EntityType.ToString() and " Inserted: ") + item.IsInsertRevision.ToString())              Console.WriteLine((item.EntityType.ToString() and "Deleted:") + item.IsDeleteRevision.ToString())         Next    NextNext'Accepts tracking changes of the document.doc.AcceptChanges()doc.Save("sample.doc")</td></tr>
+		Console.WriteLine((item.EntityType.ToString() and " Inserted: ") + item.IsInsertRevision.ToString())              
+		Console.WriteLine((item.EntityType.ToString() and "Deleted:") + item.IsDeleteRevision.ToString())        
+		Next    
+			NextNext
+			
+				'Accepts tracking changes of the document.
+				doc.AcceptChanges()
+				doc.Save("sample.doc")
 {% endhighlight %}
 
-
+{% endtabs %} 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sorting
+title: Sorting | Grid | ASP.NET MVC | Syncfusion
 description: sorting
 platform: ejmvc
 control: Grid
@@ -13,17 +13,17 @@ documentation: ug
 
 Sorting is a basic technique in Grid. It helps you view Grid records in ascending or descending, based on a particular column. If you want to enable sorting in Grid then use AllowSorting property at Grid initialize. By default, sorting operation can be performed by user interaction (UI) on Grid header.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().Grid<object>("Grid")
+@(Html.EJ().Grid<object>("Grid")
 
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
+  .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.AllowSorting()
+	.AllowSorting()
 
-      .AllowPaging()
+  .AllowPaging()
 
-    )
+)
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -57,7 +57,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Sorting_images/Sorting_img1.png)
 
-_Figure : Sorting_
+Sorting
+{:.caption}
 
 N> Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid.
 
@@ -65,45 +66,48 @@ N> Grid also has support to sort more than one column. This behavior is called a
 
 In Grid, you have an API to sort a column dynamically. The following code example shows you how to sort a column through API. 
 
-{% highlight html %}
 
-        <select id="columns">
+{% tabs %}
+  
+{% highlight CSHTML %}
 
-            <option value="OrderID">Order ID</option>
+<select id="columns">
 
-            <option value="CustomerID">Customer ID</option>
+	<option value="OrderID">Order ID</option>
 
-            <option value="EmployeeID">Employee ID</option>
+	<option value="CustomerID">Customer ID</option>
 
-            <option value="ShipCity">Ship City</option>
+	<option value="EmployeeID">Employee ID</option>
 
-        </select>
+	<option value="ShipCity">Ship City</option>
 
-        <br/>
+</select>
 
-        <select id="direction">
+<br/>
 
-            <option>Ascending</option>
+<select id="direction">
 
-            <option>Descending</option>
+	<option>Ascending</option>
 
-        </select>     
+	<option>Descending</option>
 
-        <br/>
+</select>     
 
-        <input type="button" value="sort" id="sort"/>
+<br/>
 
-        <br/>
+<input type="button" value="sort" id="sort"/>
 
-      @(Html.EJ().Grid<object>("Grid")
+<br/>
 
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<object>("Grid")
 
-      .AllowSorting()
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-      .AllowPaging()
+.AllowSorting()
 
-      )
+.AllowPaging()
+
+)
 
 {% endhighlight  %}
 
@@ -130,7 +134,7 @@ In Grid, you have an API to sort a column dynamically. The following code exampl
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace SyncfusionMvcApplication3.Controllers
@@ -157,7 +161,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight %}
-
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -165,7 +169,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Sorting_images/Sorting_img3.png)
 
-_Figure : External Sorting_
+External Sorting
+{:.caption}
 
 ## Multi sorting in Touch device
 
@@ -177,7 +182,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Sorting_images/Sorting_img4.png)
 
-_Figure : Multi sorting in touch device_
+Multi sorting in touch device
+{:.caption}
 
 N> To enable Multi Sorting, use AllowMultiSorting() property of Grid
 
@@ -192,7 +198,9 @@ If you want to clear sorting for a column then you need to use shift plus mouse 
 In Grid, you have an API to clear sorted columns. Through this API, you can clear sorting at any stage.
 
 
-{% highlight html %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
  <input type="button" id="clearsorting" name="sorting" value="clear sorting" />
 
@@ -254,7 +262,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -262,25 +270,28 @@ The following output is displayed as a result of the above code example.
 
 ![](Sorting_images/Sorting_img5.png)
 
-_Figure : Before sorting clearance_
-
+Before sorting clearance
+{:.caption}
 
 ![](Sorting_images/Sorting_img6.png)
 
-_Figure : After sorting clearance_
-
+After sorting clearance
+{:.caption}
 
 ## Merge Sort
 
 In the normal way of sorting, first preference is given to capital letters and then small letters. When you do not want discrimination between small and capital letters, you can set “enableLocalizedSort” API as true to sort both small and capital letters.
 
-{% highlight html %}
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
   @(Html.EJ().Grid<object>("Grid")
 
       .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.AllowSorting()
+	  .AllowSorting()
 
       .SortSettings(sort => sort.SortedColumns(col => col.Field("CustomerID").Direction(SortOrder.Ascending).Add()))
 
@@ -316,7 +327,7 @@ ej.support.enableLocalizedSort = true
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace SyncfusionMvcApplication3.Controllers
@@ -340,14 +351,14 @@ namespace SyncfusionMvcApplication3.Controllers
     }   
 
 }
-
 {% endhighlight  %}
 
+{% endtabs %} 
  The following output is displayed as a result of the above code example.
 
 
 
 ![](Sorting_images/Sorting_img7.png)
 
-_Figure : Grid with MergeSort_
-
+Grid with MergeSort
+{:.caption}

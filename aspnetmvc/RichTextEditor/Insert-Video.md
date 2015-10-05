@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert-Video
+title: Insert Video | RichTextEditor | ASP.NET MVC | Syncfusion
 description: insert video 
 platform: ejmvc
 control: RichTextEditor

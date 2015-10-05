@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gauge-Position
+title: Gauge Position | CircularGauge | ASP.NET MVC | Syncfusion
 description: gauge position
 platform: ejmvc
 control: CircularGauge
@@ -26,8 +26,9 @@ Semi-circular Gauge can be positioned within the canvas element which provides b
 9. Bottomright
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().CircularGauge("SemiCircularGauge").BackgroundColor("transparent")
 
@@ -72,9 +73,11 @@ public partial class CircularGaugeController : Controller
 }
 
 {% endhighlight %}
+{% endtabs %}  
 Execute the above code to render the following output.
 
 ![](Gauge-Position_images/Gauge-Position_img1.png)
 
-
+Semi-circular Gauge with Default topleft position
+{:.caption}
 

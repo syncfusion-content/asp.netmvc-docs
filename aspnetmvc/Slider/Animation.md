@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animation
+title: Animation | Slider | ASP.NET MVC | Syncfusion
 description: animation
 platform: ejmvc
 control: Slider
@@ -21,7 +21,7 @@ The following steps explains you on how to disable the animation effect in Slide
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -43,7 +43,7 @@ The following steps explains you on how to customize the animation speed.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

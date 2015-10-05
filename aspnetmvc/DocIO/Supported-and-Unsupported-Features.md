@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Supported-and-Unsupported-Features
+title: Supported and Unsupported Features | DocIO | ASP.NET MVC | Syncfusion
 description: supported and unsupported features
 platform: ejmvc
 control: DocIO
@@ -13,11 +13,11 @@ This section describes the platform wise support and unsupported elements in Doc
 
 
 
-Supported Elements in Silverlight
+## Supported Elements in Silverlight
 
 The list of various supported and non-supported elements of Essential DocIO in Silverlight platform is given in the following table.
 
-_Table_ _138_: Supported Elements in Silverlight Platform_
+_Supported Elements in Silverlight Platform_
 
 <table>
 <tr>
@@ -298,7 +298,7 @@ Supported Elements in Windows, ASP.NET, WPF and ASP.NET MVC
 
 The list of various supported and non-supported elements of Essential DocIO in Windows, ASP.NET, WPF, and ASP.NET MVC platforms is given in the following table.
 
-_Table_ _139_: Supported Elements in Windows, ASP.NET, WPF, and ASP.NET MVC_
+139_: Supported Elements in Windows, ASP.NET, WPF, and ASP.NET MVC_
 
 <table>
 <tr>
@@ -579,7 +579,7 @@ Supported Elements in Windows Store Platform
 
 The list of various supported and non-supported elements of Essential DocIO in Windows store platform is given in the following table.
 
-_Table_ _140_: Supported Elements in Windows Store Platform_
+140_: Supported Elements in Windows Store Platform_
 
 <table>
 <tr>

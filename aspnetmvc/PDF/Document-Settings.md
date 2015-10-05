@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Document-Settings
+title: Document Settings | PDF | ASP.NET MVC | Syncfusion
 description: document settings
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -24,9 +24,9 @@ The following are the list of attributes available under PdfDocumentInformation 
 
  The following code example illustrates how to read the document information.
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 PdfLoadedDocument document = new PdfLoadedDocument("input.pdf");
 
@@ -46,9 +46,7 @@ Console.WriteLine(document.DocumentInformation.Producer);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Dim document As New PdfLoadedDocument("input.pdf")
 
@@ -67,14 +65,14 @@ Console.WriteLine(document.DocumentInformation.Creator)
 Console.WriteLine(document.DocumentInformation.Producer)
 
 {% endhighlight %}
+{% endtabs %} 
 
 N> You can write the document information with the newly created document.
 
 The following code example illustrates how to write the document information.
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -120,9 +118,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -167,6 +163,7 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 The Document settings help in storing information about the document. It can also control the way they are displayed when they are open in the viewer.
 
@@ -178,7 +175,7 @@ N> You cannot overwrite the existing metadata information.
 
 A PDF file can control the way the document is presented on the screen when it is opened in the viewer. Essential PDF allows you to set these preferences using the PdfViewerPreferences class. You can perform the following customizations of the viewer when the document is open.
 
-_Table_ _3_: List of customizations
+_List of customizations_
 
 <table>
 <tr>
@@ -219,11 +216,10 @@ The page mode specifies how the document should be displayed when opened.{{ '* U
 An option to be selected when a print dialog is displayed for this document{{ '* AppDefault' | markdownify }} – Indicates the conforming reader’s default print scaling{{ '* None' | markdownify }} – Indicates no page scaling.</td></tr>
 </table>
 
+{% tabs %}
 
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -275,9 +271,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -328,7 +322,7 @@ document.Save("Sample.pdf")
 document.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %} 
 ![](Document-Settings_images/Document-Settings_img4.png)
 
 

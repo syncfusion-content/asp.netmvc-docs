@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paging
+title: Paging | Grid | ASP.NET MVC | Syncfusion
 description: paging
 platform: ejmvc
 control: Grid
@@ -22,23 +22,21 @@ When the AllowPaging property is set as True, the properties in the pagesettings
 The following code example is for the Grid with default options.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
 .AllowPaging()        
 
-        )
-
-
+)
 
 {% endhighlight  %}
-{% highlight c# %}
-
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -65,64 +63,60 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
-
-
-
 {% endhighlight  %}
+{% endtabs %}  
+
 The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img1.png)
 
-_Figure : Paging_
+Paging
+{:.caption}
 
 ## External Paging
 
 In this section, you can see how to use external paging. The following code example is for external paging.
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Paging")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .AllowPaging()
+.AllowPaging()
 
-       )
+)
 
+<div class="row">
 
+<div class="col-md-1"></div>
 
-    <div class="row">
+<div class="col-md-1">
 
-        <div class="col-md-1"></div>
+	goto
 
-        <div class="col-md-1">
+</div>
 
-            goto
+<div class="col-md-2">
 
-        </div>
+	@(Html.EJ().NumericTextbox("goto")
 
-        <div class="col-md-2">
+	.Value("1")
 
-            @(Html.EJ().NumericTextbox("goto")
+	.MinValue(1)
 
-            .Value("1")
+	.MaxValue(10)
 
-            .MinValue(1)
+	.ClientSideEvents(eve => { eve.Change("pageChange"); })
 
-            .MaxValue(10)
+	)
 
-            .ClientSideEvents(eve => { eve.Change("pageChange"); })
+</div>
 
-            )
+</div>
 
-        </div>
-
-        </div>
-{% endhighlight  %}
-
-{% highlight js %}
 <script type="text/javascript">
 
     function pageChange(args) {
@@ -138,7 +132,7 @@ In this section, you can see how to use external paging. The following code exam
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -166,7 +160,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -174,43 +168,42 @@ The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img2.png)
 
-_Figure : External Paging_
+External Paging
+{:.caption}
 
 ## Pager Templates
 
 Pager Templates feature provide support to render a specific custom template to a Grid pager using EnableTemplates and Template properties of PageSettings. ShowDefaults property is used to show/hide default pager for Grid.
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Paging")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .PageSettings(page=>page.EnableTemplates().Template("#template"))
+.PageSettings(page=>page.EnableTemplates().Template("#template"))
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID"). TextAlign(TextAlign.Right). Add();
+	col.Field("OrderID").HeaderText("Order ID"). TextAlign(TextAlign.Right). Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID"). Add();
+	col.Field("CustomerID").HeaderText("Customer ID"). Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right). Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right). Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Add();
+	col.Field("ShipCity").HeaderText("Ship City").Add();
 
-            col.Field("ShipCountry").HeaderText("Ship Country").Add();
+	col.Field("ShipCountry").HeaderText("Ship Country").Add();
 
-        })
+})
 
-    ) 
-
-{% endhighlight  %}
-
-{% highlight js %}
+) 
 
  <script type="text/x-jsrender" id="template">
 
@@ -224,46 +217,34 @@ Pager Templates feature provide support to render a specific custom template to 
 
    </script>   
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
  
-
-
-
 public partial class GridController : Controller
 
-    {
+{
+	// GET: /PrintGrid/
 
-        //
+	public ActionResult PrintGrid()
 
-        // GET: /PrintGrid/
+	{
 
+		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
+		ViewBag.datasource = DataSource;
 
-        public ActionResult PrintGrid()
+		return View();
 
-        {
+	}
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-
-
-    }
-
-
-
-
+}
 
 {% endhighlight  %}
+{% endtabs %} 
 
 ![](Paging_images/Paging_img3.png)
 
-_Figure : Pager Template_
+Pager Template
+{:.caption}
 
 ## Methods
 
@@ -274,8 +255,9 @@ The following are the public methods of pager.
 
 In this section, you can see how to use paging methods in Grid control. The following code example is for paging methods. 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
  @(Html.EJ().Grid<OrdersView>("Paging")
 
@@ -385,7 +367,7 @@ In this section, you can see how to use paging methods in Grid control. The foll
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
   
 
 namespace MVCSampleBrowser.Controllers
@@ -415,15 +397,15 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Paging_images/Paging_img4.png)
 
-_Figure : Paging Methods_
-
+Paging Methods
+{:.caption}
 
 ## Localization for paging
 
@@ -431,7 +413,7 @@ Localization is the process of customizing the user interface (UI) as locale-spe
 
 The following UIs are provided to localize based on culture. The default English localization UIs are as follows.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 pagerInfo: "{0} of {1} pages ({2} items)",
 
@@ -453,154 +435,154 @@ In this section, you can see how to use Globilzation in Grid pager. The followin
 
 
 
-{% highlight js %}
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
   
 @(Html.EJ().Grid<OrdersView>("Localization")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .AllowPaging()
+.AllowPaging()
 
-        .PageSettings(page => page.PageSize(5))
+.PageSettings(page => page.PageSize(5))
 
-        .Locale("de-DE")
+.Locale("de-DE")
 
-        )
+)
 
 
 
-    <div id="ddl">
+<div id="ddl">
 
-        <ul>
+	<ul>
 
-            <li>English</li>
+		<li>English</li>
 
-            <li>German</li>
+		<li>German</li>
 
-            <li>Spanish</li>
+		<li>Spanish</li>
 
-        </ul>
+	</ul>
 
-    </div>
+</div>
 
-    <div class="row">
+<div class="row">
 
-        <div class="col-md-3">
+	<div class="col-md-3">
 
-            Selection Type
+		Selection Type
 
-        </div>
+	</div>
 
-        <div class="col-md-3">
+	<div class="col-md-3">
 
-            @(Html.EJ().DropDownList("language")
+		@(Html.EJ().DropDownList("language")
 
-                .TargetID("ddl")
+			.TargetID("ddl")
 
-                .SelectedItemIndex(1)
+			.SelectedItemIndex(1)
 
-                .ClientSideEvents(eve => eve.Change("onChange"))
+			.ClientSideEvents(eve => eve.Change("onChange"))
 
-                .Width("120px")
+			.Width("120px")
 
-                )
+			)
 
-        </div>
+	</div>
 
-    </div>
+</div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(function () {
+	$(function () 
+	{
 
-            $("#sampleProperties").ejPropertiesPanel();
+		$("#sampleProperties").ejPropertiesPanel();
 
-        });
+	});
 
-        function onChange(args) {
+	function onChange(args) 
+	{
 
-            if (args.itemId == 0)
+		if (args.itemId == 0)
 
-                $("#Localization").ejGrid("model.locale", "en-US");
+			$("#Localization").ejGrid("model.locale", "en-US");
 
-            else if (args.itemId == 1)
+		else if (args.itemId == 1)
 
-                $("#Localization").ejGrid("model.locale", "de-DE");
+			$("#Localization").ejGrid("model.locale", "de-DE");
 
-            else
+		else
 
-                $("#Localization").ejGrid("model.locale", "es-ES");
+			$("#Localization").ejGrid("model.locale", "es-ES");
 
-        }
+	}
 
-        ej.Grid.locale["es-ES"] = {
+	ej.Grid.locale["es-ES"] = {
 
 
 
-        };
+	};
 
-ej.Pager.locale["es-ES"] = {
+	ej.Pager.locale["es-ES"] = {
 
-            pagerInfo: "{0} de {1} páginas ({2} artículos)",
+	pagerInfo: "{0} de {1} páginas ({2} artículos)",
 
-            firstPageTooltip: "Ir a la primera página",
+	firstPageTooltip: "Ir a la primera página",
 
-            lastPageTooltip: "Ir a la última páginas",
+	lastPageTooltip: "Ir a la última páginas",
 
-            nextPageTooltip: "Ir a la página siguiente",
+	nextPageTooltip: "Ir a la página siguiente",
 
-            previousPageTooltip: "Ir a la página anterior",
+	previousPageTooltip: "Ir a la página anterior",
 
-            nextPagerTooltip: "Ir a la siguiente pager",
+	nextPagerTooltip: "Ir a la siguiente pager",
 
-            previousPagerTooltip: "Ir al localizador anterior"
+	previousPagerTooltip: "Ir al localizador anterior"
 
-        };
+	};
 
-        ej.Grid.locale["de-DE"] = {
+	ej.Grid.locale["de-DE"] = {
 
 
 
-        };
+	};
 
-        ej.Pager.locale["de-DE"] = {
+	ej.Pager.locale["de-DE"] = {
 
-            pagerInfo: "{0} von {1} Seiten ({2} Beiträge)",
+		pagerInfo: "{0} von {1} Seiten ({2} Beiträge)",
 
-            firstPageTooltip: "Zur ersten Seite",
+		firstPageTooltip: "Zur ersten Seite",
 
-            lastPageTooltip: "gehen Zur letZten Seite",
+		lastPageTooltip: "gehen Zur letZten Seite",
 
-            nextPageTooltip: "Zur nächsten Seite",
+		nextPageTooltip: "Zur nächsten Seite",
 
-            previousPageTooltip: "Zuruck Zur letZten Seite",
+		previousPageTooltip: "Zuruck Zur letZten Seite",
 
-            nextPagerTooltip: "genhen Sie Zum nächsten pager ",
+		nextPagerTooltip: "genhen Sie Zum nächsten pager ",
 
-            previousPagerTooltip: "Zur vorherigen pager"
+		previousPagerTooltip: "Zur vorherigen pager"
 
-        };
+	};
 
-    </script>
+</script>
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
 {
-
     public partial class GridController : Controller
 
     {
 
-        //
-
         // GET: /PagingAPI/
-
-
 
         public ActionResult PagingAPI()
 
@@ -620,7 +602,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -628,5 +610,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img5.png)
 
-_Figure : Pager Localization_
-
+Pager Localization
+{:.caption}

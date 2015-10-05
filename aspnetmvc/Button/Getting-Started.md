@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Button  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Button
@@ -17,7 +17,9 @@ Essential ASP.NET MVC Button provides support to display a Button control within
 
 The following screenshot illustrates the functionality of Button in Multimedia player control.
 
-Figure 1: Multimedia Player
+![](Getting-Started_images/Getting-Started_img1.png)
+Multimedia Player
+{:.caption}
 
 ## Create Button Control in MVC
 
@@ -65,20 +67,20 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 1. Add the Action Result for Audio control in HomeController.cs file.
 
-   ~~~ cs
+   ~~~ csharp
 
-		public ActionResult MyAudio()
+	public ActionResult MyAudio()
 
-		{
+	{
 
-			var file = Server.MapPath("../song.mp3");
+		var file = Server.MapPath("../song.mp3");
 
-			return File(file, "audio/mp3");
+		return File(file, "audio/mp3");
 
-		}
+	}
 
    ~~~
-   {:.prettyprint }
+  
 
 2. Add the following code example to your view page to display Audio control and render the Button.
 
@@ -129,7 +131,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 		</div>
 
    ~~~
-   {:.prettyprint }
+  
 
 3. Add the following event function to script section in your view page to use Button control feature as the Multimedia player control.
 
@@ -137,64 +139,64 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
    ~~~ js
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
-				   //getting audio control access and stored in variable v
+	//getting audio control access and stored in variable v
 
-				   var v = document.getElementsByTagName("audio")[0];
+	var v = document.getElementsByTagName("audio")[0];
 
-					//trigger the audio control using variable v
+	//trigger the audio control using variable v
 
-				   function play(e) {
+	function play(e) {
 
-						if (e.isChecked) {
+		if (e.isChecked) {
 
-							v.play();
+			v.play();
 
-						}
+		}
 
-						else {
+		else {
 
-							v.pause();
+			v.pause();
 
-						}
+		}
 
-					}
+	}
 
 
 
-					function start() {
+	function start() {
 
-						v.play();
+		v.play();
 
-					}
+	}
 
-					function stop() {
+	function stop() {
 
-						v.pause();
+		v.pause();
 
-					}
+	}
 
-					function mute()
+	function mute()
 
-					{                       
+	{                       
 
-						v.volume = 0;
+		v.volume = 0;
 
-					 }
+	 }
 
-					function unmute()
+	function unmute()
 
-					{
+	{
 
-					   v.volume = 1;
+	   v.volume = 1;
 
-					}
+	}
 
-		</script>
+	</script>
 
    ~~~
-   {:.prettyprint }
+  
    
 4. The following screenshot displays Multimedia player control.
 
@@ -202,6 +204,8 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+Multimedia Player Control
+{:.caption}
 
 ### Create Office Ribbon
 
@@ -210,37 +214,21 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
 {% highlight html %}
 <table>
-
    <tr>
-
      <td>                 
-
                     @Html.EJ().ToggleButton("Bold").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("<b>B</b>").ActiveText("B").ClientSideEvents(e => e.Click("bold"))
-
-
-
       </td>
-
        <td>
 
                     @Html.EJ().ToggleButton("italic").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("I").ActiveText("<li>I</li>").ClientSideEvents(e => e.Click("italic"))
-
-
-
        </td>
 
         <td>
-
                     @Html.EJ().ToggleButton("underline").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("U").ActiveText("<u>U</u>").ClientSideEvents(e => e.Click("underline"))
 
         </td>
 
-
-
       </tr>
-
-
-
  </table>
 
 {% endhighlight  %}
@@ -256,7 +244,7 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 		</div>
 
    ~~~
-   {:.prettyprint }
+  
 
 
 
@@ -323,7 +311,7 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 				</script>
 
    ~~~
-   {:.prettyprint }
+  
 
 
 
@@ -333,11 +321,11 @@ In this section, you can learn how to create a MS Office Ribbon used to change t
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
+Office Ribbon before  applying the styles
+{:.caption}
 
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
-
+Office Ribbon after applying the styles
+{:.caption}

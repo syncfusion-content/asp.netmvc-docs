@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation
+title: Orientation | Slider | ASP.NET MVC | Syncfusion
 description: orientation
 platform: ejmvc
 control: Slider
@@ -37,7 +37,7 @@ The following steps explains you on how to configure the Orientation property.
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -51,7 +51,5 @@ Execute the above code example to render the following output.
 
 ![](Orientation_images/Orientation_img1.png)
 
-
-
-_Slider in vertical Orientation_
-
+Slider in vertical Orientation
+{:.caption}

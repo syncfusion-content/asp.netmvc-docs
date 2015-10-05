@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restricting-uploading-files-based-on-its-extension
+title: Restricting uploading files based on its extension | UploadBox | ASP.NET MVC | Syncfusion
 description: restricting uploading files based on its extension
 platform: ejmvc
 control: UploadBox
@@ -23,7 +23,7 @@ The following steps explain the configuration of ExtensionsAllow property in Upl
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add UploadBox element.
 
@@ -43,7 +43,7 @@ The following steps explain the configuration of ExtensionsDeny property in Uplo
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add UploadBox ox element.
 

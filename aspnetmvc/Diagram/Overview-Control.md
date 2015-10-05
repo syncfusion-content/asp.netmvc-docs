@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview-Control
+title: Overview Control | Diagram | ASP.NET MVC | Syncfusion
 description: overview control
 platform: ejmvc
 control: Diagram
@@ -17,7 +17,9 @@ Overview control solves these problems by showing you a preview, an overall view
 
 The following code illustrates how to create Overview control.
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 //Initializes overview
@@ -35,7 +37,8 @@ The following code illustrates how to create Overview control.
  @Html.EJ().Diagram("Diagram1", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
  </div>
-
+{% endhighlight %}
+ {% highlight C#%}
 OverviewProperties overview = new OverviewProperties();
 
 overview.Height = "300px";
@@ -49,9 +52,10 @@ ViewData["overview"] = overview;
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ![](Overview-Control_images/Overview-Control_img1.png)
 
-
+Overview
+{:.caption}
 

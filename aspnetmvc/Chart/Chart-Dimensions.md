@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart-Dimensions
+title: Chart Dimensions | Chart | ASP.NET MVC | Syncfusion
 description: chart dimensions
 platform: ejmvc
 control: Chart
@@ -34,7 +34,8 @@ In the above code, the width is set as 800px and height as 600px that displays t
 
 ![](Chart-Dimensions_images/Chart-Dimensions_img1.png)
 
-
+Chart with the dimension 800*600
+{:.caption}
 
 ## Setting dimension in percentage values:
 
@@ -54,5 +55,5 @@ Setting size in percentage
 
 ![](Chart-Dimensions_images/Chart-Dimensions_img2.png)
 
-
-
+Chart with dimension
+{:.caption}

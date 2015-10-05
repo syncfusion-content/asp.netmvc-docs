@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State-Persistence
+title: State Persistence | AutoComplete  | ASP.NET MVC | Syncfusion
 description: state persistence
 platform: ejmvc
 control: AutoComplete
@@ -20,7 +20,7 @@ The following steps explain you how to enable state maintenance for AutoComplete
 1. In the View page, define the AutoComplete control and configure state persistence by using EnablePersistence property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -47,6 +47,6 @@ The following image is the output for AutoComplete when EnablePersistence is set
 </table>
 
 
-
-_AutoComplete with State maintenance_
+AutoComplete with State maintenance
+{:.caption}
 

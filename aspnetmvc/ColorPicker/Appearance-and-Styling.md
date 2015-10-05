@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | ColorPicker  | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: ColorPicker
@@ -15,7 +15,7 @@ The ColorPicker allows you to define the model type to be displayed in control a
 
 The ModelType property is Enum type and its default value is default.
 
-_Table3: List of modelType_
+_List of modelType_
 
 <table>
 <tr>
@@ -45,9 +45,7 @@ In the following code example, the ColorPicker popup model type is set as Palett
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -59,13 +57,14 @@ The following screenshot displays the output of the above code example.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
+ColorPicker rendered with Palette Model
+{:.caption}
 
 ## Palette
 
 The ColorPicker allow you to define the palette type to be displayed in control at initial time by using the Palette property. The Palette property is Enum type and its default value is BasicPalette.
 
-_Table4: List of palette_
+_List of palette_
 
 <table>
 <tr>
@@ -97,7 +96,7 @@ The ColorPicker control allows you to define the preset model to be rendered ini
 
 The PresetType property is Enum type and its default value is “Basic”.
 
-_Table5: Property Table_
+_Property Table_
 
 <table>
 <tr>
@@ -159,9 +158,7 @@ PresetType(PresetsType.CandyCrush)</td></tr>
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -173,7 +170,8 @@ The following screenshot displays the output of the above code example.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
+ColorPicker with Presets
+{:.caption}
 
 ## CustomPalette
 
@@ -183,25 +181,21 @@ The CustomPalette property is a dependent property of Palette and ModelType prop
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
 @{List<String> colors = new List<string>() { "ffffff", "ffccff", "ff99ff", "ff66ff", "ff33ff", "ff00ff", "ccffff", "ccccff","cc99ff", "cc66ff", "cc33ff", "cc00ff", "99ffff", "99ccff", "9999ff", "9966ff","9933ff", "9900ff", "ffffcc", "ffcccc" };}
 
-
-
- @Html.EJ().ColorPicker("colorPicker").Value("#278787").ModelType(ModelType.Palette).Palette(PaletteType.CustomPalette).Custom(colors)
-
+@Html.EJ().ColorPicker("colorPicker").Value("#278787").ModelType(ModelType.Palette).Palette(PaletteType.CustomPalette).Custom(colors)
 
 {% endhighlight %}
 The following screenshot displays the output of the above code example.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-
+ColorPicker with Customized Colors
+{:.caption}
 
 ## DisplayInline
 
@@ -214,19 +208,19 @@ The following steps explain you how to get the ColorPicker popup in DisplayInlin
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").DisplayInline(true).TagName("div")
-
 
 {% endhighlight %}
 The following screenshot displays the output of the above code example.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
+ColorPicker in Display Inline
+{:.caption}
 
 
 ## Theme Support
@@ -257,8 +251,6 @@ The core style sheet applies styles related to positioning and size, but are not
 1. In the CSHTML page, configure the ColorPicker widget with built in theme support.
 
 {% highlight html %}
-
-
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -300,7 +292,8 @@ The following screenshot displays the output of the above code example.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
-
+ColorPicker with Theme Support
+{:.caption}
 
 ## CustomCss
 
@@ -310,7 +303,7 @@ Using this property you can override the existing styles under the theme style s
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
    
-   ~~~ js
+   ~~~ cshtml
 
 
 		@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
@@ -326,19 +319,21 @@ Using this property you can override the existing styles under the theme style s
 
 <style>
 
-     .Light-Blue.e-colorwidget.e-widget, .Light-Blue.e-colorpicker.e-popup,.Light-Blue.e-colorwidget .e-in-wrap.e-box .e-select, .Light-Blue.e-colorwidget .e-in-wrap.e-box, .Light-Blue.e-colorwidget .e-down-arrow {           
+     .Light-Blue.e-colorwidget.e-widget, .Light-Blue.e-colorpicker.e-popup,.Light-Blue.e-colorwidget .e-in-wrap.e-box .e-select, .Light-Blue.e-colorwidget .e-in-wrap.e-box, .Light-Blue.e-colorwidget .e-down-arrow
+	 {           
 
-     background: none repeat scroll 0 0 lightblue;
+		background: none repeat scroll 0 0 lightblue;
 
-      }
+     }
 
 
 
-.Light-Blue.e-colorpicker .e-footer .e-cancelButton.e-btn, .Light-Blue.e-colorpicker .e-footer .e-applyButton.e-btn {
+     .Light-Blue.e-colorpicker .e-footer .e-cancelButton.e-btn, .Light-Blue.e-colorpicker .e-footer .e-applyButton.e-btn 
+	 {
 
-            background: none repeat scroll 0 0 white;
+		background: none repeat scroll 0 0 white;
 
-}
+     }
 
 </style>
 
@@ -348,5 +343,5 @@ The following screenshot displays the output of above steps.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
-
-
+ColorPicker with Custom Theme
+{:.caption}

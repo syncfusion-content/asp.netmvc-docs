@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | Grid | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: Grid
@@ -13,7 +13,9 @@ documentation: ug
 
 The DataSource property is used to bind the List collection to grid.It is used to bind records in client-side using List collection that is mostly helpful in Single Page Application (SPA).
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 @( Html.EJ().Grid<Person>("FlatGrid")
@@ -36,7 +38,7 @@ The DataSource property is used to bind the List collection to grid.It is used t
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -72,14 +74,15 @@ List<Person> Persons = new List<Person>();
 
 {% endhighlight  %}
 
-
+{% endtabs %}  
 Result of the above code example.
 
 
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-_Figure : Binding Grid to Local data_
+Binding Grid to Local data
+{:.caption}
 
 ## Remote data
 
@@ -87,27 +90,27 @@ _Figure : Binding Grid to Local data_
 
 oData is standardized protocol for creating and consuming data. You can retrieve data from oDataservice using DataManager. The following code is a simple example of remote data binding using oDataservice.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @( Html.EJ().Grid<object>("Grid")
 
-        .Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Products")
+	.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Products")
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
+		col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("ProductName").HeaderText("Product Name").Add();
+		col.Field("ProductName").HeaderText("Product Name").Add();
 
-            col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
+		col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
+		col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
 
 
 
-        })
+	})
 
  )
 
@@ -121,8 +124,8 @@ The following output is the result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-_Figure : OData binding_
-
+OData binding
+{:.caption}
 
 
 N> For information about DataManager with Grid check DataAdaptors concept.
@@ -131,29 +134,29 @@ N> For information about DataManager with Grid check DataAdaptors concept.
 
 Through this load at once technique, you can load all remote data from the server to the Grid and process records in client-side. To enable load at once technique, use the Offline property set as true. The following code example shows load at once with Grid.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @( Html.EJ().Grid<object>("Grid")
 
-      .Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products").Offline(true))
+  .Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products").Offline(true))
 
-        .AllowPaging(true)
+	.AllowPaging(true)
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
+		col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("ProductName").HeaderText("Product Name").Add();
+		col.Field("ProductName").HeaderText("Product Name").Add();
 
-            col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
+		col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
+		col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
 
 
 
-        })
+	})
 
  )
 
@@ -167,7 +170,8 @@ The following output is the result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img4.png)
 
-_Figure : Load at once_
+Load at once
+{:.caption}
 
 ### Load on demand
 
@@ -175,29 +179,29 @@ Load on demand is a powerful technique that is used to reduce bandwidth size of 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<object>("Grid")
 
-        .Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
+	.Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
 
-        .AllowPaging(true)
+	.AllowPaging(true)
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
+		col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("ProductName").HeaderText("Product Name").Add();
+		col.Field("ProductName").HeaderText("Product Name").Add();
 
-            col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
+		col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
+		col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
 
 
 
-        })
+	})
 
  )
 
@@ -213,7 +217,8 @@ The following screenshot is the result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img5.png)
 
-_Figure : Load on demand_
+Load on demand
+{:.caption}
 
 If you have developer tools, you can capture network transfer to check Grid consumed data. The following screenshot shows demanded data being loaded in Grid.
 
@@ -221,7 +226,8 @@ If you have developer tools, you can capture network transfer to check Grid cons
 
 ![](Data-Binding_images/Data-Binding_img6.png)
 
-_Figure : Demanded data_
+Demanded data
+{:.caption}
 
 ### Cross domain
 
@@ -229,27 +235,27 @@ Grid can use cross domain data service with the help of DataManager. You must co
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<object>("Grid")
 
-        .Datasource(d =>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").Offline(true).CrossDomain(true))
+	.Datasource(d =>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").Offline(true).CrossDomain(true))
 
-        .AllowPaging(true)
+	.AllowPaging(true)
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
+		col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Add();
+		col.Field("ShipCity").HeaderText("Ship City").Add();
 
-        })
+	})
 
  )
 
@@ -270,29 +276,29 @@ The following screenshot is the result of the above code example.
 In this section, you can learn how to customize or add an extra parameter for HTTP request. You can add parameter to oDataserviceURL using the Query property in Grid. DataManager uses this Query internally in Grid.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<object>("Grid")
 
-        .Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
+	.Datasource(d =>d.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
 
-        .AllowPaging(true)
+	.AllowPaging(true)
 
-        .Query("new ej.Query().addParams('$filter','ProductID gt 50')")
+	.Query("new ej.Query().addParams('$filter','ProductID gt 50')")
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
+		col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("ProductName").HeaderText("Product Name").Add();
+		col.Field("ProductName").HeaderText("Product Name").Add();
 
-            col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
+		col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
+		col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
 
-        })
+	})
 
  )
 
@@ -313,34 +319,37 @@ The following screenshot is the result of the above code example.
 Grid supports various DataTypes are string, number, datetime and Boolean. By default, Grid reads DataTypes from Grid data source. Using these data types, Grid uses it at to edit, add, save, filter and other such operations. You can also customize these DataTypes through column property Type. It can override default data type reading.
 
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
- @(Html.EJ().Grid<object>("Grid")
+@(Html.EJ().Grid<object>("Grid")
 
-    .Datasource((DataTable)ViewBag.dataTable)
+.Datasource((DataTable)ViewBag.dataTable)
 
-    .AllowPaging()
+.AllowPaging()
 
-    .PageSettings(page => page.PageCount(4).PageSize(12))
+.PageSettings(page => page.PageCount(4).PageSize(12))
 
-    .Columns(col =>
+.Columns(col =>
 
-                {
+	{
 
-                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
 
-                    col.Field("CustomerID").HeaderText("Customer ID").Type("string").Width(80).Add();
+		col.Field("CustomerID").HeaderText("Customer ID").Type("string").Width(80).Add();
 
-                    col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-                    col.Field("ShipName").HeaderText("Ship Name").Type("string").Width(80).Add();
+		col.Field("ShipName").HeaderText("Ship Name").Type("string").Width(80).Add();
 
-                })
+	})
 
-    )
+)
 
 {% endhighlight  %}
-{% highlight c# %}
+
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -375,12 +384,13 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
+{% endtabs %} 
 
 ## HTML binding
 
 Grid provides support to form Grid from HTML table. It is flexible to convert from table to Grid with the help of the DataManager.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <script id="table1" type="text/template" >
 
@@ -540,5 +550,5 @@ The following screenshot is the result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img9.png)
 
-_Figure : HTML binding_
-
+HTML binding
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enable-or-Disable-the-UploadBox
+title: Enable or Disable the UploadBox | UploadBox | ASP.NET MVC | Syncfusion
 description: enable or disable the uploadbox 
 platform: ejmvc
 control: UploadBox
@@ -15,14 +15,14 @@ The following steps explain the configuration of Enabled property in UploadBox.
 
 1. In the VIEW page, add below script to configure the UploadBox element.
 
-   ~~~ js
+   ~~~ cshtml
    
      // In the CSHTML page, add the UploadBox element.
 
 	 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").Enabled(false)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot displays the output. 
 

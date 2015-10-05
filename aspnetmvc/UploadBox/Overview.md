@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Overview | UploadBox | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: UploadBox
 documentation: ug
 ---
 
-# Overview
+# UploadBox
 
 The UploadBox control supports uploading files into the designated server, regardless of the file format and size. The UploadBox control helps you with the selection of files to upload to the server. The UploadBox control has theme support.
 

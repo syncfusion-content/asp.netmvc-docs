@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple-files-upload
+title: Multiple files upload | UploadBox | ASP.NET MVC | Syncfusion
 description: multiple files upload
 platform: ejmvc
 control: UploadBox
@@ -19,7 +19,7 @@ The following steps explain the configuration of MultipleFilesSelection property
 
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add the UploadBox element.
 

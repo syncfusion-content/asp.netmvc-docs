@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User-Interaction
+title: User Interaction | Maps | ASP.NET MVC | Syncfusion
 description: user interaction
 platform: ejmvc
 control: Maps
@@ -21,46 +21,44 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("maps") 
 
-            .Layers(lr =>
+.Layers(lr =>
 
-            {
+{
 
-                Lr
+	Lr
 
-                .ShapeData(mapData)
+	.ShapeData(mapData)
 
-                .ShapeSettings(sp =>
+	.ShapeSettings(sp =>
 
-                {
+	{
 
-                    sp.StrokeThickness(0.5)
+		sp.StrokeThickness(0.5)
 
-                        .Fill("#9CBF4E")
+			.Fill("#9CBF4E")
 
-                        .Stroke("white")
+			.Stroke("white")
 
-                        .SelectionColor("#BC5353")
+			.SelectionColor("#BC5353")
 
-                        .SelectionStrokeWidth(2)
+			.SelectionStrokeWidth(2)
 
-                        .SelectionStroke("white");
+			.SelectionStroke("white");
 
-                })
+	})
 
-                .EnableSelection(true)
+	.EnableSelection(true)
 
-                .Add();
+	.Add();
 
-            })
+})
 
-   )        
-
-
+)        
 
 {% endhighlight %}
 
@@ -68,7 +66,8 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 ![](User-Interaction_images/User-Interaction_img1.png)
 
-_Map with enable selection property_
+Map with enable selection property
+{:.caption}
 
 ## Zooming
 
@@ -103,39 +102,35 @@ The MaxValue property is used to set the maximum zoom level of the map.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            .Layers(lr =>
+	.Layers(lr =>
 
-            {
+	{
 
-                lr.ShapeData(mapData)                  
+		lr.ShapeData(mapData)                  
 
-                 .Add();
+		 .Add();
 
-            })
+	})
 
-            .ZoomSettings(zm=>
+	.ZoomSettings(zm=>
 
-            {
+	{
 
-                zm.EnableZoom(true)
+		zm.EnableZoom(true)
 
-                  .MinValue(1)
+		  .MinValue(1)
 
-                  .MaxValue(20)
+		  .MaxValue(20)
 
-                  .Level(1);
+		  .Level(1);
 
-            })               
+	})               
 
-
-
-    )      
-
-
+)      
 
 {% endhighlight %}
 
@@ -155,7 +150,7 @@ You can zoom the Maps using zoom method. The zoom method contains parameter zoom
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
    $("#map").ejMap("zoom", 2);
 
@@ -177,7 +172,8 @@ When the map is double-tapped using mouse, the zoom in operation is performed.
 
 ![](User-Interaction_images/User-Interaction_img2.png)
 
-_Map with zoom_
+Map with zoom
+{:.caption}
 
 #### Using Shape Selection
 
@@ -189,23 +185,19 @@ When EnableZoomOnSelection property is set to true, then, zoom on double click i
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            // ...
-
 .ZoomSettings(zm=>
 
-            {
+{
 
-                zm.EnableZoomOnSelection(true);
+	zm.EnableZoomOnSelection(true);
 
-            })                          // ...
+})                       
 
  )      
-
-
 
 {% endhighlight %}
 
@@ -247,15 +239,14 @@ Zoom level of the map</td></tr>
 
 <script type="text/javascript">
 
-function buttonClick() {
+	function buttonClick()
+	{
 
- $("#map").ejMap("navigateTo", 13, 80, 5);
+	 $("#map").ejMap("navigateTo", 13, 80, 5);
 
-}
+	}
 
 </script> 
-
-
 
 {% endhighlight %}
 
@@ -265,15 +256,12 @@ The panning feature enables map navigation. The EnablePan property is used to en
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            // ...
 
-            .EnablePan(true)
-
-                       // ...
+.EnablePan(true)
 
  )      
 
@@ -289,28 +277,23 @@ Navigation control is built-in with Maps control. With Navigation control, Maps 
 
 ![](User-Interaction_images/User-Interaction_img3.png)
 
-_Structure of Navigation Control_
+Structure of Navigation Control
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("maps") 
 
-            // ...
+.NavigationControl(nc =>
 
-            .NavigationControl(nc =>
+{
 
-               {
+   nc.EnableNavigation(true);
 
-                   nc.EnableNavigation(true);
-
-               })
-
-                       // ...
-
+})
+            
  )      
-
-
 
 {% endhighlight %}
 
@@ -355,35 +338,29 @@ You can set this option by using DockPosition property in NavigationControl.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("maps") 
 
-            // ...
+      
+.NavigationControl(nc =>
 
-            .NavigationControl(nc =>
+{
 
-               {
+	nc.EnableNavigation(true)
 
-                 nc.EnableNavigation(true)
+	.Orientation(Orientation.Vertical)
 
-                   .Orientation(Orientation.Vertical)
+	.AbsolutePosition(new ShapePoint(5, 12))
 
-                   .AbsolutePosition(new ShapePoint(5, 12))
+	.DockPosition(Syncfusion.JavaScript.
 
-                   .DockPosition(Syncfusion.JavaScript.
+	DataVisualization.Models.DockPosition.None);
 
-                      DataVisualization.Models.DockPosition.None);
+})
 
-               })
-
-                       // ...
-
- )      
-
-
-
+)      
 {% endhighlight %}
 
 

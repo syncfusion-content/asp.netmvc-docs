@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-binding
+title: Data binding | ListBox | ASP.NET MVC | Syncfusion
 description: data-binding 
 platform: ejmvc
 control: ListBox
@@ -15,7 +15,7 @@ The ListBox is populated with the node information taken from a data source. The
 
 The following sub-properties provides you a way to bind either the local or remote data to the ListBox control.
 
-_Table 1: Property Table for ASP.NET MVC ListBox_
+_Property Table for ASP.NET MVC ListBox_
 
 <table>
 <tr>
@@ -90,51 +90,51 @@ The following code explains you the details of data binding with ListBox.
 
 1. Add the below code in your page to render the ListBox with local data.
 
-   ~~~ html
+   ~~~ cshtml
    
-		// Add the following code in View page to configure ListBox widget
-		<div id="control">
-			<h5 class="ctrllabel">
-				Select a skill 
-			</h5> 
-			@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df=>
-			df.Text("text"))
-		</div>
+	// Add the following code in View page to configure ListBox widget
+	<div id="control">
+		<h5 class="ctrllabel">
+			Select a skill 
+		</h5> 
+		@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df=>
+		df.Text("text"))
+	</div>
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
    
-	   // Add the following code to add list items in the controller page
-	   public class skillset 
-	   {   
-			public string text { get; set; } 
-		}  
-		public ActionResult Index()  
-		{  
-			List<skillset> skill = new List<skillset>(); 
-			skill.Add(new skillset { text = "ASP.NET" });
-			skill.Add(new skillset { text = "ActionScript" });
-			skill.Add(new skillset { text = "Basic" });  
-			skill.Add(new skillset { text = "C++" });  
-			skill.Add(new skillset { text = "C#" });  
-			skill.Add(new skillset { text = "dBase" });
-			skill.Add(new skillset { text = "Delphi" }); 
-			skill.Add(new skillset { text = "ESPOL" }); 
-			skill.Add(new skillset { text = "F#" });   
-			skill.Add(new skillset { text = "FoxPro" }); 
-			skill.Add(new skillset { text = "Java" });  
-			skill.Add(new skillset { text = "J#" });   
-			skill.Add(new skillset { text = "Lisp" }); 
-			skill.Add(new skillset { text = "Logo" }); 
-			skill.Add(new skillset { text = "PHP" });   
-			ViewBag.datasource = skill;    
-			return View();
-		}
+   ~~~ csharp
+   
+	// Add the following code to add list items in the controller page
+	public class skillset 
+	{   
+		public string text { get; set; } 
+	}  
+	public ActionResult Index()  
+	{  
+		List<skillset> skill = new List<skillset>(); 
+		skill.Add(new skillset { text = "ASP.NET" });
+		skill.Add(new skillset { text = "ActionScript" });
+		skill.Add(new skillset { text = "Basic" });  
+		skill.Add(new skillset { text = "C++" });  
+		skill.Add(new skillset { text = "C#" });  
+		skill.Add(new skillset { text = "dBase" });
+		skill.Add(new skillset { text = "Delphi" }); 
+		skill.Add(new skillset { text = "ESPOL" }); 
+		skill.Add(new skillset { text = "F#" });   
+		skill.Add(new skillset { text = "FoxPro" }); 
+		skill.Add(new skillset { text = "Java" });  
+		skill.Add(new skillset { text = "J#" });   
+		skill.Add(new skillset { text = "Lisp" }); 
+		skill.Add(new skillset { text = "Logo" }); 
+		skill.Add(new skillset { text = "PHP" });   
+		ViewBag.datasource = skill;    
+		return View();
+	}
 
    ~~~
-   {:.prettyprint }
+   
 		
 2. Output of the above steps
 
@@ -154,25 +154,25 @@ The following steps explains you the details of data binding from remote.
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add the following code in View page to configure ListBox widget
+	// Add the following code in View page to configure ListBox widget
 
-		<div class="control">
+	<div class="control">
 
-			<div class="ctrllabel">
+		<div class="ctrllabel">
 
-				Select a customer
-
-			</div>
-
-			@Html.EJ().ListBox("listboxsample").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(10)").ListBoxFields(f => f.Text("CustomerID"))
+			Select a customer
 
 		</div>
 
+		@Html.EJ().ListBox("listboxsample").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(10)").ListBoxFields(f => f.Text("CustomerID"))
+
+	</div>
+
 
    ~~~
-   {:.prettyprint }
+   
 
 
 

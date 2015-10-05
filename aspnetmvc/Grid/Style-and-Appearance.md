@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style-and-Appearance
+title: Style and Appearance | Grid | ASP.NET MVC | Syncfusion
 description: style and appearance
 platform: ejmvc
 control: Grid

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bullet-Graph-Elements
+title: Bullet Graph Elements | BulletGraph	 | ASP.NET MVC | Syncfusion
 description: bullet graph elements
 platform: ejmvc
 control: BulletGraph	
@@ -13,6 +13,8 @@ Bullet Graph is composed of elements such as title, quantitative scale, qualitat
 
 ![](Bullet-Graph-Elements_images/Bullet-Graph-Elements_img1.png)
 
+Elements of the Bullet Graph
+{:.caption}
 
 
 

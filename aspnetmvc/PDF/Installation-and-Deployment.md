@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Installation-and-Deployment
+title: Installation and Deployment | PDF | ASP.NET MVC | Syncfusion
 description: installation and deployment
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -21,9 +21,9 @@ The prerequisites details are listed as follows:
 
 <table>
 <tr>
-<td>
-.NET Framework versions</td><td>
-<br/>* .NET 4.5.1<br/>* .NET 4.5<br/>* .NET 4.0<br/>* .NET 3.5 SP1<br/>* .NET 2.0</td></tr>
+<th>
+.NET Framework versions</th><td>
+<ul><li> .NET 4.5.1 </li><li>.NET 4.5</li><li> .NET 4.0</li><li> .NET 3.5 SP1</li><li> .NET 2.0</li></ul></td></tr>
 </table>
 
 ### Compatibility
@@ -36,7 +36,7 @@ The prerequisites details are listed as follows:
 <tr>
 <td>
 Operating Systems</td><td>
-<br/>* Windows 8.1 (32 bit and 64 bit)<br/>* Windows 8 (32 bit and 64 bit)<br/>* Windows Server 2008 (32 bit and 64 bit)<br/>* Windows 7 (32 bit and 64 bit)<br/>* Windows Vista (32 bit and 64 bit)<br/>* Windows XP* Windows 2003</td></tr>
+<ul><li> Windows 8.1 (32 bit and 64 bit)</li><li>Windows 8 (32 bit and 64 bit)</li><li> Windows Server 2008 (32 bit and 64 bit)</li><li>Windows 7 (32 bit and 64 bit)</li><li> Windows Vista (32 bit and 64 bit)</li><li>Windows XP</li><li>Windows 2003</li></ul></td></tr>
 </table>
 
 ## Deploy Essential PDF

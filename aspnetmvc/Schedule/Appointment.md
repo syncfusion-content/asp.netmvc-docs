@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appointment
+title: Appointment | Schedule | ASP.NET MVC | Syncfusion
 description: appointment 
 platform: ejmvc
 control: Schedule
@@ -18,227 +18,228 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
 1. First create the Schedule control sample (MVC) with the necessary database (.sdf/.mdf) tables. Refer to the [getting started](http://docs.syncfusion.com/aspnetmvc/schedule/appointment) to create the sample.
 2. Add the following code in the view page to call the action method (GetData) from the view page to bind the data to Schedule control.
 
-   ~~~ js
+   ~~~ cshtml
 
-		$(function () {
-
-
-
-		var localServ = "/Home/GetData";
-
-		var dManager = ej.DataManager({
-
-		url: localServ,
-
-		crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
-
-		});
-
-		dManager.adaptor = new ej.UrlAdaptor();
-
-		var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
+	$(function () 
+	{
 
 
 
+	var localServ = "/Home/GetData";
 
+	var dManager = ej.DataManager({
 
-		$("#Schedule1").ejSchedule({
+	url: localServ,
 
-		enableAppointmentNavigation: false,
+	crudUrl: "/Home/CRUD"    // Here you have to pass the post action name for the crud operation
 
-		currentDate: new Date(2014, 4, 2),
+	});
 
-		appointmentSettings: {
+	dManager.adaptor = new ej.UrlAdaptor();
 
-		dataSource: dManager,
-
-		tableName: "DefaultSchedules",
-
-		query: query,
-
-		id: "Id",
-
-		subject: "Subject",
-
-		location: "Location",
-
-		description: "Description",
-
-		startTime: "StartTime",
-
-		endTime: "EndTime",
-
-		allDay: "AllDay",
-
-		recurrence: "Recurrence",
-
-		recurrenceRule: "RecurrenceRule"
-
-		}
-
-		});
+	var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
 
 
 
-		});
+	$("#Schedule1").ejSchedule({
+
+	enableAppointmentNavigation: false,
+
+	currentDate: new Date(2014, 4, 2),
+
+	appointmentSettings: {
+
+	dataSource: dManager,
+
+	tableName: "DefaultSchedules",
+
+	query: query,
+
+	id: "Id",
+
+	subject: "Subject",
+
+	location: "Location",
+
+	description: "Description",
+
+	startTime: "StartTime",
+
+	endTime: "EndTime",
+
+	allDay: "AllDay",
+
+	recurrence: "Recurrence",
+
+	recurrenceRule: "RecurrenceRule"
+
+	}
+
+	});
 
 
-		@(Html.EJ().Schedule("Schedule1")
 
-		.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
+	});
 
-		.Id("Id")
 
-		.Subject("Subject")
+	@(Html.EJ().Schedule("Schedule1")
 
-		.Description("Description")
+	.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
 
-		.StartTime("StartTime")
+	.Id("Id")
 
-		.EndTime("EndTime")
+	.Subject("Subject")
 
-		.AllDay("AllDay")
+	.Description("Description")
 
-		.Recurrence("Recurrence")
+	.StartTime("StartTime")
 
-		.RecurrenceRule("RecurrenceRule"))
+	.EndTime("EndTime")
 
-		)
+	.AllDay("AllDay")
+
+	.Recurrence("Recurrence")
+
+	.RecurrenceRule("RecurrenceRule"))
+
+	)
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Define the “JsonResult” action method (Ex: GetData) in the controller page with the following code example to read the appointments details from the data base.
 
 
 
-   ~~~ cs
+   ~~~ csharp
 
 
 
-		public JsonResult GetData()
+	public JsonResult GetData()
 
-		{
+	{
 
-		IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
+	IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
 
-		return Json(data, JsonRequestBehavior.AllowGet);
+	return Json(data, JsonRequestBehavior.AllowGet);
 
-		}
+	}
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. Then, call the action method (CRUD) defined in the controller page from the view page as mentioned in the following code example.
 
 
-   ~~~ js
+   ~~~ cshtml
 
 
 
-		$(function () {
+	$(function () 
+	{
 
 
 
-		var localServ = "/Home/GetData";
+	var localServ = "/Home/GetData";
 
-		var dManager = ej.DataManager({
+	var dManager = ej.DataManager({
 
-		url: localServ,
+	url: localServ,
 
-		crudUrl: "/Home/CRUD"                // Here you have to pass the post action name for the crud operation
+	crudUrl: "/Home/CRUD"    // Here you have to pass the post action name for the crud operation
 
-		});
+	});
 
-		dManager.adaptor = new ej.UrlAdaptor();
+	dManager.adaptor = new ej.UrlAdaptor();
 
-		var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
-
-
+	var query = ej.Query().from("DefaultSchedules");//.select("id,Subject,Location,StartTime,EndTime,Description,Categorize,AllDay");
 
 
 
-		$("#Schedule1").ejSchedule({
-
-		enableAppointmentNavigation: false,
-
-		currentDate: new Date(2014, 4, 2),
-
-		appointmentSettings: {
-
-		dataSource: dManager,
-
-		tableName: "DefaultSchedules",
-
-		query: query,
-
-		id: "Id",
-
-		subject: "Subject",
-
-		location: "Location",
-
-		description: "Description",
-
-		startTime: "StartTime",
-
-		endTime: "EndTime",
-
-		allDay: "AllDay",
-
-		recurrence: "Recurrence",
-
-		recurrenceRule: "RecurrenceRule"
-
-		}
-
-		});
-
-		});
 
 
-		@(Html.EJ().Schedule("Schedule1")
+	$("#Schedule1").ejSchedule({
 
-		.Width("100%")
+	enableAppointmentNavigation: false,
 
-		.Height("525px")
+	currentDate: new Date(2014, 4, 2),
 
-		.ScheduleClientSideEvents(eve=>eve.Create("onCreate"))
+	appointmentSettings: {
 
-		.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
+	dataSource: dManager,
 
-		.Id("Id")
+	tableName: "DefaultSchedules",
 
-		.Subject("Subject")
+	query: query,
 
-		.Description("Description")
+	id: "Id",
 
-		.StartTime("StartTime")
+	subject: "Subject",
 
-		.EndTime("EndTime")
+	location: "Location",
 
-		.AllDay("AllDay")
+	description: "Description",
 
-		.Recurrence("Recurrence")
+	startTime: "StartTime",
 
-		.RecurrenceRule("RecurrenceRule"))
+	endTime: "EndTime",
 
-		)
+	allDay: "AllDay",
 
-		<script>
+	recurrence: "Recurrence",
 
-		function onCreate(args) {
+	recurrenceRule: "RecurrenceRule"
+
+	}
+
+	});
+
+	});
+
+
+	@(Html.EJ().Schedule("Schedule1")
+
+	.Width("100%")
+
+	.Height("525px")
+
+	.ScheduleClientSideEvents(eve=>eve.Create("onCreate"))
+
+	.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
+
+	.Id("Id")
+
+	.Subject("Subject")
+
+	.Description("Description")
+
+	.StartTime("StartTime")
+
+	.EndTime("EndTime")
+
+	.AllDay("AllDay")
+
+	.Recurrence("Recurrence")
+
+	.RecurrenceRule("RecurrenceRule"))
+
+	)
+
+	<script>
+
+		function onCreate(args) 
+		{
 
 		this._dataManager.dataSource.crudUrl = "/Home/CRUD";
 
 		}
 
-		</script>
+	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -246,115 +247,115 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
 
 
 
-   ~~~ cs
+   ~~~ csharp
 
 
-		public JsonResult CRUD(EditParams Param)
+	public JsonResult CRUD(EditParams Param)
+
+	{
+
+		if (Param.Action == "insert" || (Param.Action == "batch" && Param.Added != null))          // this block of code will execute while inserting the appointments
 
 		{
 
-			if (Param.Action == "insert" || (Param.Action == "batch" && Param.Added != null))          // this block of code will execute while inserting the appointments
+			var value = Param.Action == "insert" ? Param.Value : Param.Added[0];
+
+			int intMax = db.DefaultSchedules.ToList().Count > 0 ? db.DefaultSchedules.ToList().Max(p => p.Id) : 1;
+
+			DateTime startTime = Convert.ToDateTime(value.StartTime);
+
+			DateTime endTime = Convert.ToDateTime(value.EndTime);
+
+			DefaultSchedule appoint = new DefaultSchedule()
 
 			{
 
-				var value = Param.Action == "insert" ? Param.Value : Param.Added[0];
+				Id = intMax + 1,
 
-				int intMax = db.DefaultSchedules.ToList().Count > 0 ? db.DefaultSchedules.ToList().Max(p => p.Id) : 1;
+				StartTime = startTime.ToUniversalTime(),
+
+				EndTime = endTime.ToUniversalTime(),
+
+				Subject = value.Subject,
+
+				Description = value.Description,
+
+				AllDay=value.AllDay,
+
+				Recurrence = value.Recurrence,
+
+				RecurrenceRule = value.RecurrenceRule
+
+			};
+
+			db.DefaultSchedules.InsertOnSubmit(appoint);
+
+			db.SubmitChanges();
+
+		}
+
+		else if (Param.Action == "remove")                                        // this block of code will execute while removing the appointment
+
+		{
+
+			DefaultSchedule app = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(Param.Key)).FirstOrDefault();
+
+
+
+			if (app != null) db.DefaultSchedules.DeleteOnSubmit(app);
+
+			db.SubmitChanges();
+
+		}
+
+		else if ((Param.Action == "batch" && Param.Changed != null) || Param.Action == "update")   // this block of code will execute while updating the appointment
+
+		{
+
+			var value = Param.Action == "update" ? Param.Value : Param.Changed[0];
+
+			var filterData = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(value.Id));
+
+
+
+			if (filterData.Count() > 0)
+
+			{
 
 				DateTime startTime = Convert.ToDateTime(value.StartTime);
 
 				DateTime endTime = Convert.ToDateTime(value.EndTime);
 
-				DefaultSchedule appoint = new DefaultSchedule()
+				DefaultSchedule appoint = db.DefaultSchedules.Single(A => A.Id == Convert.ToInt32(value.Id));
 
-				{
+				appoint.StartTime = startTime.ToUniversalTime();
 
-					Id = intMax + 1,
+				appoint.EndTime = endTime.ToUniversalTime();
 
-					StartTime = startTime.ToUniversalTime(),
+				appoint.Subject = value.Subject;
 
-					EndTime = endTime.ToUniversalTime(),
+				appoint.Description = value.Description;
 
-					Subject = value.Subject,
+				appoint.AllDay = value.AllDay;
 
-					Description = value.Description,
+				appoint.Recurrence = Convert.ToByte(value.Recurrence);
 
-					AllDay=value.AllDay,
-
-					Recurrence = value.Recurrence,
-
-					RecurrenceRule = value.RecurrenceRule
-
-				};
-
-				db.DefaultSchedules.InsertOnSubmit(appoint);
-
-				db.SubmitChanges();
+				appoint.RecurrenceRule = value.RecurrenceRule;
 
 			}
 
-			else if (Param.Action == "remove")                                        // this block of code will execute while removing the appointment
-
-			{
-
-				DefaultSchedule app = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(Param.Key)).FirstOrDefault();
-
-
-
-				if (app != null) db.DefaultSchedules.DeleteOnSubmit(app);
-
-				db.SubmitChanges();
-
-			}
-
-			else if ((Param.Action == "batch" && Param.Changed != null) || Param.Action == "update")   // this block of code will execute while updating the appointment
-
-			{
-
-				var value = Param.Action == "update" ? Param.Value : Param.Changed[0];
-
-				var filterData = db.DefaultSchedules.Where(c => c.Id == Convert.ToInt32(value.Id));
-
-
-
-				if (filterData.Count() > 0)
-
-				{
-
-					DateTime startTime = Convert.ToDateTime(value.StartTime);
-
-					DateTime endTime = Convert.ToDateTime(value.EndTime);
-
-					DefaultSchedule appoint = db.DefaultSchedules.Single(A => A.Id == Convert.ToInt32(value.Id));
-
-					appoint.StartTime = startTime.ToUniversalTime();
-
-					appoint.EndTime = endTime.ToUniversalTime();
-
-					appoint.Subject = value.Subject;
-
-					appoint.Description = value.Description;
-
-					appoint.AllDay = value.AllDay;
-
-					appoint.Recurrence = Convert.ToByte(value.Recurrence);
-
-					appoint.RecurrenceRule = value.RecurrenceRule;
-
-				}
-
-				db.SubmitChanges();
-
-			}
-
-			IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
-
-			return Json(data, JsonRequestBehavior.AllowGet);
+			db.SubmitChanges();
 
 		}
 
+		IEnumerable data = new ScheduleDataDataContext().DefaultSchedules.Take(500);
+
+		return Json(data, JsonRequestBehavior.AllowGet);
+
+	}
+
    ~~~
-   {:.prettyprint }
+   
 
 6. Create the model (Ex. EditParams.cs) and define the class as illustrated in the following code example to take effect of the above “CRUD” action method. This class enables you to receive the value in the controller page while performing the CRUD operation. 
    * Key - this holds the “appointment id” value when you delete the appointment.
@@ -364,26 +365,26 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
    * Value - this holds the details of the appointment while adding the appointment through “quickappwindow”.
 
 
-   ~~~ cs
+   ~~~ csharp
 
-		public class EditParams
+	public class EditParams
 
-		{
+	{
 
-			public string Key { get; set; }
+		public string Key { get; set; }
 
-			public string Action { get; set; }
+		public string Action { get; set; }
 
-			public List<DefaultSchedule> Added { get; set; }
+		public List<DefaultSchedule> Added { get; set; }
 
-			public List<DefaultSchedule> Changed { get; set; }
+		public List<DefaultSchedule> Changed { get; set; }
 
-			public DefaultSchedule Value { get; set; }
+		public DefaultSchedule Value { get; set; }
 
-		}
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 7. Run the sample and perform the CRUD operation. You can notice that the changes are reflected in the "Data base Table" also.
@@ -396,7 +397,7 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
 
 
 
-### Read Only
+## Read Only
 
 * The interaction with appointments of the Schedule can be enabled/disabled through the ReadOnly property. When the ReadOnly property is set to true, we can’t be able to do any actions with the appointments, but simply we can navigate between the schedule dates, views and can also able to see the appointments detail in the quick window. 
 * To enable the appointments interaction, we need to set the ReadOnly property to true. By default, the ReadOnly property is set as false.
@@ -404,8 +405,9 @@ You can perform the add/edit/delete operations on data binding using URL. Use th
 The following code example explains how to enable ReadOnly property in the Schedule control.  
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -441,7 +443,7 @@ The following code example explains how to enable ReadOnly property in the Sched
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -449,72 +451,68 @@ namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class ScheduleController : Controller
+	public partial class ScheduleController : Controller
 
-{
+	{
 
-//
+	// GET: /LocalDataBinding/
 
-// GET: /LocalDataBinding/
+		public ActionResult LocalDataBinding()
 
+		{
 
+			List<person> persons = new List<person>();
 
-public ActionResult LocalDataBinding()
+			// three different data collection
 
-{
+			persons.Add(new person(){Id=100,Subject="product meeting",StartTime=new DateTime(2014,4,1,1,0,20),EndTime=new DateTime(2014,4,1,2,0,20),AllDay=true,Recurrence=false,RecurrenceRule="FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU"});
 
-List<person> persons = new List<person>();
+			persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 4, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
 
-// three different data collection
+			persons.Add(new person() { Id = 102, subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
 
-persons.Add(new person(){Id=100,Subject="product meeting",StartTime=new DateTime(2014,4,1,1,0,20),EndTime=new DateTime(2014,4,1,2,0,20),AllDay=true,Recurrence=false,RecurrenceRule="FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU"});
+			ViewBag.dataSource = persons;
 
-persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 4, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
+			return View();
 
-persons.Add(new person() { Id = 102, subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
+		}
 
-ViewBag.dataSource = persons;
+		Public class person
 
-return View();
+		{
 
-}
+			Public int Id;
 
-Public class person
+			Public string Subject;
 
-{
+			Public DateTime StartTime;
 
-Public int Id;
+			Public DateTime EndTime;
 
-Public string Subject;
+			Public bool AllDay;
 
-Public DateTime StartTime;
+			Public bool Recurrence;
 
-Public DateTime EndTime;
+			Public string RecurrenceRule;
 
-Public bool AllDay;
+		}
 
-Public bool Recurrence;
-
-Public string RecurrenceRule;
-
-}
-
-}
+	}
 
 }
 
 {% endhighlight %}
+{% endtabs %} 
 
 The following screenshot displays the Schedule control with ReadOnly property set to true,
 
 ![](Appointment_images/Appointment_img2.png)
+{:.caption}
+
+Schedule with Read Only property
 
 
-
-_Figure 1: Schedule with Read Only property_
-
-
-### Appointment Creation
+## Appointment Creation
 
 * Appointments play a vital role within the Schedule control with which you can interact. You can manipulate (add/edit/delete) the required appointments that reveals one of the main purposes of the Schedule control. 
 * The appointments can be of normal type or recurrence type that avails with additional template customization options. The all-Day appointment available within the Schedule control that indicates the full day appointment or an appointment with duration greater than 24 hours.
@@ -575,7 +573,7 @@ The following screenshot displays the Contextmenu with a “New Appointment” o
 ![](Appointment_images/Appointment_img7.png)
 
 
-### Appointment Editing
+## Appointment Editing
 
 Using Normal Appointment window
 
@@ -619,9 +617,8 @@ The following screenshot displays the Schedule control with the quick appointmen
 
 ![](Appointment_images/Appointment_img12.png)
 
-
-
-_Figure_ _65_ : schedule with open the editing appointment window
+schedule with open the editing appointment window
+{:.caption}
 
 #### Using Context menu
 
@@ -629,9 +626,8 @@ _Figure_ _65_ : schedule with open the editing appointment window
 
 ![](Appointment_images/Appointment_img13.png)
 
-
-
-_Figure_ _66_ :  schedule with open appointment using context menu.
+schedule with open appointment using context menu.
+{:.caption}
 
 * The following screenshot displays the Edit Appointment window that opens when you click OpenAppointment option.
 
@@ -639,15 +635,14 @@ _Figure_ _66_ :  schedule with open appointment using context menu.
 
 ![](Appointment_images/Appointment_img14.png)
 
-
-
-_Figure_ _67_: schedule with display the edit appointment window.
+schedule with display the edit appointment window.
+{:.caption}
 
 * Click Done button to save the updated values.
 
 
 
-### Appointment Deletion
+## Appointment Deletion
 
 #### Using quick appointment window
 
@@ -657,9 +652,8 @@ _Figure_ _67_: schedule with display the edit appointment window.
 
 ![](Appointment_images/Appointment_img15.png)
 
-
-
-_Figure_ _69_: schedule with Appointment deletion.
+schedule with Appointment deletion.
+{:.caption}
 
 * When you click the delete icon, the appointment is deleted as displayed in the following screenshot.
 
@@ -667,9 +661,8 @@ _Figure_ _69_: schedule with Appointment deletion.
 
 ![](Appointment_images/Appointment_img16.png)
 
-
-
-_Figure_ _70_: schedule with after the appointment deletion.
+schedule with after the appointment deletion.
+{:.caption}
 
 #### Using Context menu
 
@@ -679,13 +672,11 @@ _Figure_ _70_: schedule with after the appointment deletion.
 
 ![](Appointment_images/Appointment_img17.png)
 
+schedule with appointment deletion using context menu.
+{:.caption}
 
 
-_Figure_ _71_: schedule with appointment deletion using context menu.
-
-
-
-### All-day Appointments
+## All-day Appointments
 
 * The All-day appointments is created and edited like normal appointments described in the above steps. You can achieve this by selecting the “All-day” checkbox in the appointment window. 
 * The All-day appointments denotes that it is scheduled for the entire day and normally rendered in the allday row that is present above all the workcells.Check the “All-day” checkbox in the appointment window as follows.
@@ -704,7 +695,7 @@ _Figure_ _71_: schedule with appointment deletion using context menu.
 
 
 
-### Appointment Resizing
+## Appointment Resizing
 
 * The enableAppointmentResize option allows you to resize the appointment in order to change its start or end time faster. To start resizing the appointment, hover the mouse on it, so that the resizing handles are displayed on either sides of the appointment. 
 * Click on any one of the handles and start dragging it towards top/bottom direction. 
@@ -713,8 +704,9 @@ _Figure_ _71_: schedule with appointment deletion using context menu.
 The following code explains how the appointment resizing option is enabled for the Schedule control.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -732,7 +724,7 @@ fields.Datasource(ViewBag.datasource)
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
 	public partial class ScheduleController : Controller
@@ -762,7 +754,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 
 * In the following screenshot of the Schedule control, the appointment with the Subject Daily Planet is hovered for resizing.And you can see the resizing handle at both the ends of the appointment.
@@ -771,9 +763,8 @@ namespace MVCSampleBrowser.Controllers
 
 ![](Appointment_images/Appointment_img20.png)
 
-
-
-_Figure_ _75_: schedule with appointment resize.
+schedule with appointment resize.
+{:.caption}
 
 * Once the resizing is stopped, the resized appointment with its new start time is displayed as follows.
 
@@ -781,13 +772,11 @@ _Figure_ _75_: schedule with appointment resize.
 
 ![](Appointment_images/Appointment_img21.png)
 
+schedule with after the appointment resized.
+{:.caption}
 
 
-_Figure_ _76_: schedule with after the appointment resized.
-
-
-
-### Appointment Search
+## Appointment Search
 
 * Schedule control is available with appointment search option. Appointment search can be done in two ways. 
 1. Using Search string
@@ -804,8 +793,10 @@ _Figure_ _76_: schedule with after the appointment resized.
 
 Use the following code example to search the appointment on the schedule datasource,
 
+{% tabs %}
+  
 
-{% highlight html %}
+{% highlight CSHTML %}
 <input id="txtSearch" type="text" />
 <input id="btnSearch" class="searchApp" type="button" value="Search" />
 <div>
@@ -837,19 +828,19 @@ $(function (){
 
 {% endhighlight %}
 
-{% highlight c# %}
-// follow the code as same as declared in Read Only part</td></tr>
+{% highlight C# %}
+// follow the code as same as declared in Read Only part
 
 {% endhighlight %}
-
+{% endtabs %}
 
 Execute the above code to render the following output.
 
 ![](Appointment_images/Appointment_img22.png)
 
 
-
-_Figure_ _125_: Schedule with appointment search
+Schedule with appointment search
+{:.caption}
 
 
 
@@ -860,45 +851,50 @@ _Figure_ _125_: Schedule with appointment search
 ![](Appointment_images/Appointment_img23.png)
 
 
+Grid with appointment search result
+{:.caption}
 
-_Figure_ _126_: Grid with appointment search result
 
 ### Using Filters
 
 * In Appointment search you can filter the data instead of typing in the search box. You can pass the filter object with four properties such as field, operator, value and predicate. With that you can shortlist the appointments.
 * The attribute value is used to search the string in the appointments. The attribute field is used to search the given string in certain fields.
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
 <input id="btnSearch" class="searchApp" type="button" value="Search" />
 <div>
-@(Html.EJ().Schedule("Schedule1")
-// Add the necessary schedule properties here)
+	@(Html.EJ().Schedule("Schedule1")
+	// Add the necessary schedule properties here)
 </div>
-<div id="grid1">
-</div>
+<div id="grid1"></div>
 <script type="text/javascript">
-$(function () {
-// Method to bind the button click event
-$('.searchApp').bind("click", function () {
-// Add the filter data as like in the below format
-var filter=[{field: "Subject",operator: "contains",value: "gold",predicate: "or"},
-			{field: "Recurrence",operator: "contains",value: "false",predicate: "or"}];
-var schObj = $("#Schedule1").data("ejSchedule");
-// Method to get the Filtered appointment
-var result = schObj.filterAppointments(filter);showResult(result);});});
-function showResult(list)
- {
-	if (!ej.isNullOrUndefined(list) && list.length != 0)
-		{$("#Schedule1").hide();
-		$("#grid1").show();
-		$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");
-		$("#grid1").ejGrid({dataSource: list,allowPaging: true,});
-		}
- }
- </script>
+	$(function () 
+	{
+	// Method to bind the button click event
+	$('.searchApp').bind("click", function () 
+	{
+	// Add the filter data as like in the below format
+	var filter=[{field: "Subject",operator: "contains",value: "gold",predicate: "or"},
+				{field: "Recurrence",operator: "contains",value: "false",predicate: "or"}];
+	var schObj = $("#Schedule1").data("ejSchedule");
+	// Method to get the Filtered appointment
+	var result = schObj.filterAppointments(filter);showResult(result);});});
+	function showResult(list)
+	 {
+		if (!ej.isNullOrUndefined(list) && list.length != 0)
+			{$("#Schedule1").hide();
+			$("#grid1").show();
+			$("#grid1").data("ejGrid") && $("#grid1").ejGrid("destroy");
+			$("#grid1").ejGrid({dataSource: list,allowPaging: true,});
+			}
+	 }
+</script>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 public ActionResult Print()
 {
 	var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();
@@ -908,14 +904,13 @@ public ActionResult Print()
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 Execute the above code to render the following output.
 
 ![](Appointment_images/Appointment_img24.png)
 
-
-
-_Figure_ _127_: Schedule with search appointment filters
+Schedule with search appointment filters
+{:.caption}
 
 * Click the search button to enable the filter option.
 
@@ -923,13 +918,12 @@ _Figure_ _127_: Schedule with search appointment filters
 
 ![](Appointment_images/Appointment_img25.png)
 
+Grid with appointment search result
+{:.caption}
 
 
-_Figure_ _128_: Grid with appointment search result
 
-
-
-### Drag and Drop
+## Drag and Drop
 
 
 
@@ -937,8 +931,9 @@ _Figure_ _128_: Grid with appointment search result
 * When you drag and drop the appointment to the new location, the starttime and endtime of the appointment gets changed automatically.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -957,7 +952,7 @@ fields.Datasource(ViewBag.datasource)
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
 	public partial class ScheduleController : Controller
@@ -988,7 +983,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight %}
-
+{% endtabs %}
 * In the following screenshot, the Schedule control is displayed with the appointments in an order before the drag and drop action takes place.
 
 
@@ -996,8 +991,8 @@ namespace MVCSampleBrowser.Controllers
 ![](Appointment_images/Appointment_img26.png)
 
 
-
-_Figure_ _72_: schedule with appointment drag and drop.
+schedule with appointment drag and drop.
+{:.caption}
 
 * When the appointment with the Subject “Daily Planet” is being dragged from its original location, it looks as the one following screenshot with the shadow of the appointment casting behind it.
 
@@ -1006,8 +1001,8 @@ _Figure_ _72_: schedule with appointment drag and drop.
 ![](Appointment_images/Appointment_img27.png)
 
 
-
-_Figure_ _73_: schedule with appointment while dragging in the cell.
+schedule with appointment while dragging in the cell.
+{:.caption}
 
 * The following screenshot displays the appointment with the subject “Daily Planet” in the timeline 1.00 AM – 2.00 AM (02 May, 2014) is dropped to the new location to the date 29th April, 2014 in the timeline between 3.00 AM – 4.00 AM.
 
@@ -1016,12 +1011,11 @@ _Figure_ _73_: schedule with appointment while dragging in the cell.
 ![](Appointment_images/Appointment_img28.png)
 
 
+schedule with appointment dropped in the cell.
+{:.caption}
 
-_Figure_ _74_:  schedule with appointment dropped in the cell.
 
-
-
-### Recurrence Options
+## Recurrence Options
 
 * There are scenarios where you require the same appointments to be repeatedly created for multiple days on the basis of daily, weekly, monthly or yearly. 
 * This can be achieved with the help of in-built recurrence options available within the Schedule control that enforces the quicker creation of repeated appointments on the required days. 
@@ -1041,9 +1035,8 @@ _Figure_ _74_:  schedule with appointment dropped in the cell.
 
 ![](Appointment_images/Appointment_img29.png)
 
-
-
-_Figure_ _77_: schedule with new recurrence appointment.
+schedule with new recurrence appointment.
+{:.caption}
 
 * On clicking the New Recurring Appointment option opens the recurrence appointment window as displayed in the following screenshot.
 
@@ -1051,9 +1044,8 @@ _Figure_ _77_: schedule with new recurrence appointment.
 
 ![](Appointment_images/Appointment_img30.png)
 
-
-
-_Figure_ _78_: schedule with creating the new recurrence.
+schedule with creating the new recurrence.
+{:.caption}
 
 * Once the required options are selected in the recurrence window click the Done button.It navigates you to its parent window with the appointment details. Fill-in those required details and click Done to save it.
 
@@ -1061,17 +1053,15 @@ _Figure_ _78_: schedule with creating the new recurrence.
 
 ![](Appointment_images/Appointment_img31.png)
 
-
-
-_Figure_ _79_: schedule with after created the new recurrence.
+schedule with after created the new recurrence.
+{:.caption}
 
 * The recurrence appointment after getting saved to the Schedule is displayed as follows.
 
 ![](Appointment_images/Appointment_img32.png)
 
-
-
-_Figure_ _80_: schedule with after created the new recurrence appointment in week view.
+schedule with after created the new recurrence appointment in week view.
+{:.caption}
 
 * Since, you have chosen the option to end the recurrence after 10 occurrences on daily basis, the appointments repeat for continuous 10 days and then end. 
 * This is viewed clearly by navigating to the month view, where the appointment with subject Automated testing saved for 10 days from 12 Aug 2014 to 21 Aug 2014.
@@ -1080,7 +1070,5 @@ _Figure_ _80_: schedule with after created the new recurrence appointment in wee
 
 ![](Appointment_images/Appointment_img33.png)
 
-
-
-_Figure_ _81_:  schedule with created recurrence appointment in month view.
-
+schedule with created recurrence appointment in month view.
+{:.caption}

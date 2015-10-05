@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: OLAPClient | OLAPClient | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: OLAPClient
 documentation: ug
 ---
 
-# Overview
+# OLAPClient
 
 The OLAP Client control for ASP.NET MVC provides support to browse multidimensional data that is organized in the form of dimensions, measures, named sets, and KPIs (key performance indicators) in a cubic format. You can visualize the results in graphical and tabular formats (charts and grids). The OLAP Client control is also used to create and edit a report on-the-fly that is stored for later use.
 

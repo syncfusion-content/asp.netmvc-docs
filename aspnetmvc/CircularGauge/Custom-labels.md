@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom-labels
+title: Custom labels | CircularGauge | ASP.NET MVC | Syncfusion
 description: custom labels
 platform: ejmvc
 control: CircularGauge
@@ -17,7 +17,7 @@ Custom labels collection is directly added to the scale object. Refer the follow
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 //For circular gauge rendering
 
@@ -57,7 +57,7 @@ cl.TextAngle(10)
 * Font option is also available on  Customlabels. The basic three properties of fonts such as size, family and style can be achieved by size, fontStyle and fontFamily attributes. 
 
 
-{% highlight js%}
+{% highlight CSHTML %}
 
 
 // For Circular Gauge rendering
@@ -118,13 +118,16 @@ Execute the above code to render the following output.
 
 ![](Custom-labels_images/Custom-labels_img1.png)
 
+Circular Gauge with customized custom label
+{:.caption}
+
 ## Multiple Custom Labels
 
 You can set multiple custom labels in a single Circular Gauge by adding an array of custom label objects. Refer the following code example for multiple custom label functionality.
 
 
 
-{% highlight js%}
+{% highlight CSHTML %}
 
 // For Circular Gauge rendering
 
@@ -186,8 +189,8 @@ Execute the above code to render the following output.
 
 ![](Custom-labels_images/Custom-labels_img2.png)
 
-
-
+Circular Gauge with multiple custom labels
+{:.caption}
 
 
 ## Outer Custom Label
@@ -199,7 +202,7 @@ Execute the above code to render the following output.
 4. Bottom
 * When a custom label is to be displayed as an Outer Custom Label, set the API customLabelType as Outer. Refer to the following code example to get the Outer Custom Label.
 
-{% highlight js%}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().CircularGauge("circularGaugeTooltip")
@@ -240,7 +243,5 @@ Execute the above code to render the following output.
 
 ![](Custom-labels_images/Custom-labels_img3.png)
 
-
-
-Figure 49: Circular gauge with outer custom label.
-
+Circular gauge with outer custom label.
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | AutoComplete | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
 control: AutoComplete
@@ -21,7 +21,7 @@ The following steps explain the configuration of the filtering conditions for an
 
 1. In the View page, define the AutoComplete control and add the filter type as contains.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -44,9 +44,8 @@ The following image is the output for AutoComplete control that filters list ite
 
 ![](Behavior-Settings_images/Behavior-Settings_img1.png)
 
-
-
-_AutoComplete using "contains" filterType_
+AutoComplete using "contains" filterType
+{:.caption}
 
 ## AutoFill
 
@@ -60,7 +59,7 @@ The following steps explain how to enable the AutoFill property for an AutoCompl
 
 1. In the View page, add the Autocomplete helper and enable the EnableAutoFill property
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -86,9 +85,8 @@ The following image is the output for AutoComplete when EnableAutoFill is set to
 
 ![](Behavior-Settings_images/Behavior-Settings_img2.png)
 
-
-
-_AutoComplete with AutoFill_
+AutoComplete with AutoFill
+{:.caption}
 
 ## Sorting Items
 
@@ -103,7 +101,7 @@ The following steps explain how to enable the sorting property for an AutoComple
 1. In the View page, define the AutoComplete control and enable AllowSorting.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -130,9 +128,8 @@ The following image is the output for AutoComplete when “SortOrder” is confi
 
 ![](Behavior-Settings_images/Behavior-Settings_img3.png)
 
-
-
-_AutoComplete PopUp sorted in descending order_
+AutoComplete PopUp sorted in descending order
+{:.caption}
 
 ## Distinct List items
 
@@ -147,7 +144,7 @@ The following steps explain you how to enable this property.
 1. In the View page, define the AutoComplete control and configure the EnableDistinct property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -201,9 +198,8 @@ The following images are the outputs for AutoComplete when EnableDistinct is set
 
 ![](Behavior-Settings_images/Behavior-Settings_img4.png)
 
-
-
-_AutoComplete PopUp items with Distinct property disabled and enabled_
+AutoComplete PopUp items with Distinct property disabled and enabled
+{:.caption}
 
 ## Show Popup button
 
@@ -217,7 +213,7 @@ The following steps explains you how to configure the Popupbutton for an AutoCom
 
 1. In the View page, define the AutoComplete control and enable ShowPopupButton property.
 
-{% highlight html %}	
+{% highlight CSHTML %}	
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -240,9 +236,8 @@ The following image is the output for AutoComplete when ShowPopupButton is enabl
 
 ![](Behavior-Settings_images/Behavior-Settings_img5.png)
 
-
-
-_AutoComplete with popup icon_
+AutoComplete with popup icon
+{:.caption}
 
 ## Restrict editing
 
@@ -257,7 +252,7 @@ The following steps help you to disable editing in an AutoComplete textbox.
 1. In the View page, define the AutoComplete control and configure Readonly property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -283,9 +278,8 @@ The following image is the output for the AutoComplete textbox configured to res
 
 ![](Behavior-Settings_images/Behavior-Settings_img6.png)
 
-
-
-_AutoComplete with readOnly property_
+AutoComplete with readOnly property
+{:.caption}
 
 ## Empty Result settings
 
@@ -300,7 +294,7 @@ The following steps allow you to set text for emptyresults of an AutoComplete te
 1. In the View page, define the AutoComplete control and set the desired text message to be shown in EmptyResultText.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -324,7 +318,6 @@ The following image is the output of the AutoComplete textbox when the list does
 
 ![](Behavior-Settings_images/Behavior-Settings_img7.png)
 
-
-
-_AutoComplete with customized emptyResultText_
+AutoComplete with customized emptyResultText
+{:.caption}
 

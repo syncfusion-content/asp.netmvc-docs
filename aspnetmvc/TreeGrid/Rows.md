@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rows
+title: Rows | TreeGrid | ASP.NET MVC | Syncfusion
 description: rows
 platform: ejmvc
 control: TreeGrid
@@ -20,41 +20,35 @@ RowTemplateID is used to customize all the rows in TreeGrid. For this property, 
 AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this property, ID of the alternative row template is to be provided.
 
 
-
-{% highlight css %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 <style>
 
+	.e-treegrid .e-selectionbackground 
+	{
 
+		background-color: #A9BCF5;
 
-.e-treegrid .e-selectionbackground {
+	}
 
-  background-color: #A9BCF5;
+	.border 
+	{
 
- }
+		border-color: #BDBDBD;
 
+		border-width: 1px;
 
+		border-style: solid;
 
-.border {
-
- border-color: #BDBDBD;
-
- border-width: 1px;
-
- border-style: solid;
-
- }
+	}
 
 </style>
 
 
-{% endhighlight  %}
-
-{% highlight js %}
 
 <script id="rowTemplateScript" type="text/x-jsrender">
-
-
 
   <tr style="background-color:#E6E6E6">
 
@@ -66,21 +60,17 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
      </td>
 
-
-
      <td class="border" style='height:30px;'>
 
         <div style="font-size:16px;">
 
-{{:#data['Name']}}
+		{{:#data['Name']}}
 
            <p style="font-size:9px;">{{:#data['Designation']}}</p>
 
         </div>
 
       </td>
-
-
 
       <td class="border">
 
@@ -92,7 +82,7 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
           <div style="display:inline-block;padding-left:10px;">
 
-{{:#data['Address']}}
+			{{:#data['Address']}}
 
              <p>{{:#data['Country']}}</p>
 
@@ -104,23 +94,15 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
        </td>
 
-
-
        <td class="border" style='height:30px;'>
 
           <div>{{:#data['DOB']}}</div>
 
        </td>
 
-
-
  </tr>
 
-
-
 </script>
-
-
 
 <script id="altRowTemplateScript" type="text/x-jsrender">
 
@@ -142,7 +124,7 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
       <div style="font-size:16px;">
 
-{{:#data['Name']}}
+		{{:#data['Name']}}
 
         <p style="font-size:10px;">{{:#data['Designation']}}</p>
 
@@ -162,7 +144,7 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
       <div style="display:inline-block;padding-left:10px;">
 
-{{:#data['Address']}}
+		{{:#data['Address']}}
 
          <p>{{:#data['Country']}}</p>
 
@@ -174,22 +156,16 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
      </td>
 
-
-
      <td class="border" style='height:30px;'>
 
         <div>{{:#data['DOB']}}</div>
 
      </td>
 
-
-
  </tr>
 
 </script>
-{% endhighlight %}
 
-{% highlight js %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
 
@@ -224,7 +200,7 @@ AltRowTemplateID is used to customize the alternative rows in TreeGrid. For this
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public ActionResult TreeGridRowTemplate()
 
@@ -297,13 +273,6 @@ private List<RowData> getRowData()
    };
 
 
-
-           // ...
-
-
-
-           // ...
-
  Record1.Children.Add(parent);
 
  parent.Children.Add(Child1);
@@ -315,8 +284,6 @@ private List<RowData> getRowData()
  return DataCollection;
 
 }
-
-
 
 public class RowData
 
@@ -343,7 +310,7 @@ public class RowData
 }
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 The output of TreeGrid with Row Template is as follows.
 
@@ -359,39 +326,31 @@ The ShowTooltip property is used to enable or disable the tooltip. By default, t
 
 The following code explains about enabling the row drag and drop with the default tooltip in the TreeGrid.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().TreeGrid("TreeGridContainer")       
+@(Html.EJ().TreeGrid("TreeGridContainer")       
 
-           //...
+.Columns(co =>
 
-          .Columns(co =>
+{
 
-           {
+   co.Field("TaskId").headerText("Task Id"). Add();
 
-               co.Field("TaskId").headerText("Task Id"). Add();
+   co.Field("TaskName").headerText("Task Name").Add();
 
-               co.Field("TaskName").headerText("Task Name").Add();
+})
 
+.AllowDragAndDrop(true)	
 
+.DragTooltip(tooltip => 
 
-           //...
+{ 
 
-           })
+   tooltip.ShowTooltip(true);
 
-         .AllowDragAndDrop(true)	
+}) 
 
-         .DragTooltip(tooltip => 
-
-          { 
-
-               tooltip.ShowTooltip(true);
-
-          }) 
-
-         //...
-
-        .Render())
+.Render())
 
 {% endhighlight %}
 
@@ -409,25 +368,22 @@ The TooltipItems property is used to customize the tooltip items. By using this 
 
 The following code shows how to render row drag tooltip with the desired field items
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")       
 
-     //...
+.DragTooltip(tt => 
 
-      .DragTooltip(tt => 
+{ 
 
-      { 
+  tt.ShowTooltip(true);
 
-          tt.ShowTooltip(true);
+  tt.TooltipItems(new List<string>(){"TaskId","TaskName","StartDate", "EndDate"});
 
-          tt.TooltipItems(new List<string>(){"TaskId","TaskName","StartDate", "EndDate"});
+}) 
 
-      }) 
 
-      //...
-
-     .Render())
+.Render())
 
 {% endhighlight %}
 
@@ -437,45 +393,44 @@ The TooltipTemplate property renders the template tooltip for row drag and drop 
 
 The following code shows how to render row drag tooltip with tooltip template.	
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-    <script id="customTooltip" type="text/x-jsrender">
+<script id="customTooltip" type="text/x-jsrender">
 
-        <tr>
+	<tr>
 
-            <td class="border" style='height:30px;'>
+		<td class="border" style='height:30px;'>
 
-                <div>{{:#data['TaskId']}}</div>
+			<div>{{:#data['TaskId']}}</div>
 
-            </td>
+		</td>
 
-            <td class="border" style='height:30px;'>
+		<td class="border" style='height:30px;'>
 
-                <div>{{:#data['TaskName']}}</div>
+			<div>{{:#data['TaskName']}}</div>
 
-            </td>        
+		</td>        
 
-        </tr>
+	</tr>
 
-    </script>
+</script>
 
-     @(Html.EJ().TreeGrid("TreeGridContainer")       
+ @(Html.EJ().TreeGrid("TreeGridContainer")       
 
-       //...
+   //...
 
-       .DragTooltip(tt => 
+   .DragTooltip(tt => 
 
-       { 
+   { 
 
-          tt.ShowTooltip(true);
+	  tt.ShowTooltip(true);
 
-          tt.TooltipTemplate("#customtooltip");
+	  tt.TooltipTemplate("#customtooltip");
 
-        }) 
+	}) 
 
-       //...
 
-      .Render())
+  .Render())
 
 {% endhighlight %}
 

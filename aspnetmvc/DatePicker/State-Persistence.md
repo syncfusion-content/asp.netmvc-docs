@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State-Persistence
+title: State Persistence | DatePicker  | DatePicker | Syncfusion
 description: state persistence 
 platform: ejmvc
 control: DatePicker
@@ -17,7 +17,7 @@ The following steps explain you how to enable the state maintenance for DatePick
 
 
 
-{% highlight html %}
+{% highlight cshtml %}
 
 @*Add the following code example to the corresponding CSHTML page to render DatePicker widget with state maintenance*@
 

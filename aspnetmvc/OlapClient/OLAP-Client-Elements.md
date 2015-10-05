@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OLAP-Client-Elements
+title: OLAP Client Elements | OLAPClient | ASP.NET MVC | Syncfusion
 description: olap client :elements 
 platform: ejmvc
 control: OLAPClient
@@ -17,7 +17,7 @@ Cube Selector allows you to browse and select a cube from the entire collection,
 
 Cube can be changed by selecting a cube name from the list of names available within the Cube Selector drop-down list. When a cube is changed, the following elements refresh according to the new cube.
 
-_Table: Components Table_
+_Components Table_
 
 <table>
 <tr>
@@ -57,7 +57,7 @@ A grid is a tabular representation of data, arranged in the form of rows and col
 
 Cube Dimension Browser is a tree-view-like structure that organizes the dimensions, hierarchies, measures etc… from the selected cube into independent, logical groups.
 
-_Table: List of nodes_
+_List of nodes_
 
 <table>
 <tr>
@@ -110,7 +110,7 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 
 Attribute hierarchy and User-defined hierarchy are normally differentiated by their tree node image.
 
-_Table: Differentiating Attribute hierarchy and User-defined hierarchy_
+_Differentiating Attribute hierarchy and User-defined hierarchy_
 
 <table>
 <tr>
@@ -130,7 +130,7 @@ User Defined Hierarchy and its levels are mentioned with a similar image. It con
 
 ### Symbolic Representation of the Nodes inside Cube Dimension Browser
 
-_Table: Symbolic Representation of the Nodes inside Cube Dimension Browser_
+_Symbolic Representation of the Nodes inside Cube Dimension Browser_
 
 <table>
 <tr>
@@ -216,7 +216,7 @@ The slicer axis is used as a filter to narrow the focus of the multidimensional
 
 The dimension, hierarchy and level elements can be dragged from the Cube Dimension Browser and dropped into the Axis Element Builder using the drag-and-drop operation. Also you can move the dimension, hierarchy and level elements from one axis to another by moving the appropriate Split Button.
 
-![Description: C:/Users/Tamilarasu .M/Pictures/document/adding measure.png](OLAP-Client-Elements_images/OLAP-Client-Elements_img11.png)
+![](OLAP-Client-Elements_images/OLAP-Client-Elements_img11.png)
 
 #### Add Measure to an Axis Element Builder
 
@@ -311,7 +311,7 @@ Unchecking the check box option is provided in such a way that on deselecting th
 
 ![](OLAP-Client-Elements_images/OLAP-Client-Elements_img25.png)
 
-_Table: Options Table_
+_Options Table_
 
 <table>
 <tr>

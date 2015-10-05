@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Indicators
+title: Indicators | OLAPGauge | ASP.NET MVC | Syncfusion
 description: indicators
 platform: ejmvc
 control: OLAPGauge
@@ -16,7 +16,7 @@ KPIs are displayed with Trend and Status visualizations that supports Traffic Li
 You can hide the Indicator by changing the “showIndicator” property to “false”.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>

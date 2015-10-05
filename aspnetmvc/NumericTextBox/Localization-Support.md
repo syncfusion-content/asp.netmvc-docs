@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization-Support
+title: Localization Support | NumericTextBox | ASP.NET MVC | Syncfusion
 description: localization support
 platform: ejmvc
 control: NumericTextBox
@@ -35,7 +35,7 @@ The following example describes the way to use localization in NumericTextBox.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("12345").Locale("de-DE")
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Width
+title: Width | RadialMenu | ASP.NET MVC | Syncfusion
 description: width
 platform: ejmvc
 control: RadialMenu
@@ -15,9 +15,7 @@ You can add the page content with text-area by referring to this section.
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().RadialMenu("defaultradialmenu").Width(250).Items(items =>
 
@@ -46,8 +44,6 @@ You can add the page content with text-area by referring to this section.
     });
 
 </script>
-
-
 
 {% endhighlight %}
 

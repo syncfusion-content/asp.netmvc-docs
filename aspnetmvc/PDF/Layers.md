@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Layers
+title: Layers | PDF | ASP.NET MVC | Syncfusion
 description: layers
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -16,10 +16,9 @@ Layers are collection of graphics and when the viewer application is used, you c
 PdfPageLayer is used to create unlimited levels of layers and sub-layers in a parent-child relationship in the PdfDocument. The layers are stored by the PdfPageLayerCollection of a particular PdfPage. This collection contains layers for that particular page only, and every page has its own PdfPageLayerCollection. In order to add a layer to a particular page, you need to add it to the PdfPageLayerCollection of that page using Add method.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates PDF document.
 
@@ -115,9 +114,7 @@ document.Save("Sample.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates PDF document.
 
@@ -212,6 +209,7 @@ graphics.DrawArc(pen, 0, 0, 50, 50, -60, 60)
 document.Save("Sample.pdf")
 
 {% endhighlight %}
+{% endtabs %}  
 
 ## Modifying PDF Layer in the Loaded PDF document
 
@@ -219,9 +217,10 @@ You can remove the layers from an exsisting document by loading the layer from t
 
 PdfLoadedPage contain its own PdfPageLayerCollection. You can remove the layer by its name using Remove method.
 
-{% highlight c# %}
 
+{% tabs %}
 
+{% highlight C# %}
 
 //Loads the document.
 
@@ -243,9 +242,7 @@ document.Save("Sample.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Load the document
 
@@ -268,6 +265,7 @@ coll.Remove("Layer 1")
 document.Save("Sample.pdf")
 
 {% endhighlight %}
+{% endtabs %}  
 
 ## Toggle the visibility of the layer
 
@@ -279,9 +277,9 @@ You can toggle the visibility of the PdfLayer when printing the PDF document usi
 
 
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 PdfDocument document = new PdfDocument();
 
@@ -325,9 +323,7 @@ document.Save("Sample.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Dim document As New PdfDocument()
 
@@ -370,4 +366,4 @@ graphics.DrawArc(pen, 0, 0, 50, 50, 360, 360)
 document.Save("Sample.pdf")
 
 {% endhighlight %}
-
+{% endtabs %}  

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3D
+title: 3D | OLAPChart | ASP.NET MVC | Syncfusion
 description: 3d
 platform: ejmvc
 control: OLAPChart
@@ -13,9 +13,9 @@ The OlapChart control provides three dimensional view for Bar, Column, StackingB
 
 The following code example explains on how to enable 3D in the OlapChart control.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-      @Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("320px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("320px").Width("100%")).Enable3D(true)
        
 {% endhighlight  %}
 

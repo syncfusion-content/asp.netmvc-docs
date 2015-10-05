@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How-to-set-OpenType-Features
+title: How to set OpenType Features | DocIo | ASP.NET MVC | Syncfusion
 description: how to set opentype features?
-platform: universal-classic
-control: Control Name undefined
+platform: DocIo
+control: ejmvc
 documentation: ug
 ---
 
@@ -23,10 +23,8 @@ The OpenType Features include:
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img1.png)
 
-
-
-_Figure_ _57_: OpenType Features
-
+OpenType Features
+{:.caption}
 
 
 ### Ligatures
@@ -42,9 +40,8 @@ A ligature is a combination of characters that is written as a glyph, as though 
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img2.png)
 
-
-
-_Figure_ _58_: Ligatures
+Ligatures
+{:.caption}
 
 Contextual Alternates
 
@@ -54,9 +51,8 @@ Contextual alternates provide fine-tuning of letters or combinations of letters 
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img3.png)
 
-
-
-_Figure_ _59_: Contextual Alternates
+Contextual Alternates
+{:.caption}
 
 ### Number Spacing
 
@@ -80,13 +76,13 @@ For example, the OpenType font “Gabriola” supports seven stylistic sets, tho
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img4.png)
 
-
-
-_Figure_ _60_: Stylistic Sets_
+Stylistic Sets
+{:.caption}
 
 The following code example illustrate how to set OpenType Features.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 //Sets the contextual alternates.text = paragraph.AppendText("Text to check contextual alternates.");
 text.CharacterFormat.FontName = "Segoe Script";text.CharacterFormat.UseContextualAlternates = true;
 
@@ -110,7 +106,7 @@ text = paragraph.AppendText("The quick red fox.");
 text.CharacterFormat.FontName = "Gabriola";
 text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet06;
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB%}
 ‘Sets the contextual alternates.
 text = paragraph.AppendText("Text to check contextual alternates.")
 text.CharacterFormat.FontName = "Segoe Script"
@@ -136,5 +132,5 @@ text = paragraph.AppendText("The quick red fox.")
 text.CharacterFormat.FontName = "Gabriola"
 text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet06
 {% endhighlight %}
-
+{% endtabs %} 
 

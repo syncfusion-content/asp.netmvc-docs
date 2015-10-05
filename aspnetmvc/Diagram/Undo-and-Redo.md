@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Undo-and-Redo
+title: Undo and Redo | Diagram | ASP.NET MVC | Syncfusion
 description: undo and redo
 platform: ejmvc
 control: Diagram
@@ -13,20 +13,15 @@ The Undocommand reverses the last editing action performed on Diagram. For examp
 
 {% highlight js %}
 
-
 //undo
 
 var diagram = $("#Diagram").ejDiagram("instance");
 
 diagram.undo();
 
-
-
 //redo
 
 diagram.redo();
-
-
 
 {% endhighlight %}
 

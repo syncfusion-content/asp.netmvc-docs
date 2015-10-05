@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Knockout-Binding
+title: Knockout Binding | Diagram | ASP.NET MVC | Syncfusion
 description: knockout binding
 platform: ejmvc
 control: Diagram
@@ -17,10 +17,7 @@ The following code example illustrates how to bind data to the Diagram through K
 
 
 
-{% highlight html %}
-
-
- 
+{% highlight CSHTML %}
 
 //References to be added for knockout support. 
 
@@ -96,5 +93,5 @@ $(function () {
 
 ![](Knockout-Binding_images/Knockout-Binding_img1.png)
 
-
-
+Page Background through knockout
+{:.caption}

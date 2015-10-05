@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Item-Customization
+title: Item Customization | RadialMenu | ASP.NET MVC | Syncfusion
 description: item customization
 platform: ejmvc
 control: RadialMenu
@@ -14,10 +14,7 @@ You can customize the Radial Menu items by using the ImageURL and Text propertie
 You can add the page content with text-area by referring to this section.
 
 
-
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().RadialMenu("defaultradialmenu").Width(250).Items(items =>
 
@@ -46,8 +43,6 @@ You can add the page content with text-area by referring to this section.
     });
 
 </script>
-
-
 
 {% endhighlight %}
 

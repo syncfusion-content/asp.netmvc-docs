@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling |Chart  | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Chart
@@ -14,33 +14,32 @@ Essential Chart is enriched with lots of customization options to develop high q
 ## Tooltip Template
 
 You can customize a tooltip with required template by adding a “div” element with an “id” to the web page and assigning the “id” to the property “Template” under “Tooltip” as illustrated in the following code example.
-{% highlight html %}
+
+ 
+{% highlight CSHTML %}
 <div id="Tooltip" style="display: none;">
 
-<div id="icon">
+	<div id="icon">
 
-       <div id="grain"></div>
+		   <div id="grain"></div>
+
+	</div>
+
+	<div id="value">
+
+		<div>
+
+		<div id="efpercentage">#point.x#</div>
+
+			<div id="ef">#point.y#</div>
+
+		 </div>
+
+	</div>
 
 </div>
 
-        <div id="value">
 
-            <div>
-
-            <div id="efpercentage">#point.x#</div>
-
-                <div id="ef">#point.y#</div>
-
-             </div>
-
-        </div>
-
-
-
-    </div>
-
-{% endhighlight  %}
-{% highlight css %}
 
 <style class="cssStyles">
 
@@ -118,8 +117,7 @@ font-weight: bold;
 
     </style>
 
-{% endhighlight  %}
-{% highlight js %}
+
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -168,13 +166,14 @@ sr.Points(pt =>
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
+Chart with Customized ToolTip
+{:.caption}
 
 ## Label Template
 
 You customize a data label with required template by adding a “div” element with an “id” to the web page and assigning the “id” to the property “Template” under “DataLabel” as illustrated in the following code example.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div id="template">
 
@@ -192,8 +191,7 @@ You customize a data label with required template by adding a “div” element 
 
     </div>
 
-{% endhighlight  %}
-{% highlight css %}
+
 
     <style>
 
@@ -249,8 +247,7 @@ You customize a data label with required template by adding a “div” element 
 
     </style>
 
-{% endhighlight  %}
-{% highlight js %}
+
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -290,9 +287,11 @@ You customize a data label with required template by adding a “div” element 
 
 
 {% endhighlight  %}
+
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
+Chart with Customized Label
+{:.caption}
 
 ## Label Formatting
 
@@ -345,8 +344,8 @@ For datetime axis, all globalized date time formats are supported. By default, b
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-
-
+Chart with Customized Axis Labels
+{:.caption}
 
 
 ## Title and Subtitle
@@ -366,7 +365,8 @@ The following screenshot shows the Title and Subtitle in Chart control.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
-
+Title and subtitle
+{:.caption}
 
 ## Chart Background and Foreground
 
@@ -393,7 +393,8 @@ Using the Background property you can customize the background color of the Char
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
-
+Chart with customized background
+{:.caption}
 
 ### To Chart Area:
 
@@ -401,7 +402,6 @@ Using Background property in ChartArea you can customize the background color of
 
 ### Code: 
 {% highlight js %}
-
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -412,11 +412,12 @@ Using Background property in ChartArea you can customize the background color of
 // ...
 
     )
-
-
 {% endhighlight  %}
+
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
+Chart with Customized Chart area
+{:.caption}
 
 
 ### BackGround Image:
@@ -440,7 +441,8 @@ Essential Chart allows you to add background image for your Chart using BackGrou
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
-
+Chart with background image
+{:.caption}
 
 ## Theme
 
@@ -484,13 +486,14 @@ Following predefined themes are available in Essential Chart.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
-
+Chart with Theme
+{:.caption}
 
 ## Custom Color palette 
 
 Apart from the themes, to define custom set of color you can use “Palette” property. Palette customizes the color of series in the Chart. 
-{% highlight js %}
 
+{% highlight js %}
 
 @(Html.EJ().Chart("chart").Palette(
 
@@ -516,5 +519,5 @@ Apart from the themes, to define custom set of color you can use “Palette” p
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)
 
-
-
+Chart with Palette property
+{:.caption}

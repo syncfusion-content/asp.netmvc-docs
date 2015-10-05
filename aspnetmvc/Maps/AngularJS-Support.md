@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AngularJS-Support
+title: AngularJS Support | Maps | ASP.NET MVC | Syncfusion
 description: angularjs support
 platform: ejmvc
 control: Maps
@@ -15,66 +15,61 @@ Apply the plugin and property assigning the Map element through the directive 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 //References to be added for angular support.
 
+<script src="@Url.Content("~/Scripts/angular.min.js")"></script>
 
+<script src="@Url.Content("~/Scripts/ej/ej.widget.angular.min.js")"></script>    
 
-   <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
-
-   <script src="@Url.Content("~/Scripts/ej/ej.widget.angular.min.js")"></script>    
-
-   <script src="@Url.Content("~/Scripts/MapsData/USA.js")"></script>
+<script src="@Url.Content("~/Scripts/MapsData/USA.js")"></script>
 
 //Initializes Map
 
-   <div ng-app="SyncApp">
+<div ng-app="SyncApp">
 
-       <div ng-controller="MapController">           
+   <div ng-controller="MapController">           
 
-           <div id="map" style="height: inherit; min-height: 356px;" ej-map e-zoomsettings- enablezoom="nenablezoom">
+	   <div id="map" style="height: inherit; min-height: 356px;" ej-map e-zoomsettings- enablezoom="nenablezoom">
 
-               <div e-layers>
+		   <div e-layers>
 
-                   <div e-layer e-shapedata="nshapedata" e-shapesettings-fill="nfill" e-shapesettings-strokethickness="nstrokeThickness" e-shapesettings-stroke="nstroke">
+			   <div e-layer e-shapedata="nshapedata" e-shapesettings-fill="nfill" e-shapesettings-strokethickness="nstrokeThickness" e-shapesettings-stroke="nstroke">
 
-                   </div>
+			   </div>
 
-               </div>
+		   </div>
 
-           </div>       
+	   </div>       
 
-           <div>
+	   <div>
 
-                Shape Color:  <input type="text" id="Text11" ng-model="nfill" style="width: 110px">
+			Shape Color:  <input type="text" id="Text11" ng-model="nfill" style="width: 110px">
 
-           </div> 
-
-
-
-       </div>
-
+	   </div> 
+	   
    </div>
+
+</div>
 
 angular.module('SyncApp', ['ejangular'])
 
-       .controller('MapController', function ($scope) {          
+.controller('MapController', function ($scope) 
+{          
 
-           $scope.nenablezoom = true,          
+   $scope.nenablezoom = true,          
 
-           $scope.nshapedata = usMap;
+   $scope.nshapedata = usMap;
 
-           $scope.nfill = "#9CBF4E";
+   $scope.nfill = "#9CBF4E";
 
-           $scope.nstrokethickness = "0.5";
+   $scope.nstrokethickness = "0.5";
 
-           $scope.nstroke = "white";      
+   $scope.nstroke = "white";      
 
-       });
-
-
+});
 
 {% endhighlight %}
 
@@ -82,8 +77,8 @@ angular.module('SyncApp', ['ejangular'])
 
 ![](AngularJS-Support_images/AngularJS-Support_img1.png)
 
-_Angular Support Map_
-
+Angular Support Map
+{:.caption}
 
 
 

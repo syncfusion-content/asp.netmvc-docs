@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EnableDisable-the-Slider
+title: EnableDisable the Slider | Slider | ASP.NET MVC | Syncfusion
 description: enable-disable the slider
 platform: ejmvc
 control: Slider
@@ -19,7 +19,7 @@ The following steps explains you on how to disable the Slider.
 
 1. In an VIEW page, specify the helper elements to render the Default Slider.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

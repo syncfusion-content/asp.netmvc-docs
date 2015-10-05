@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | TimePicker | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: TimePicker
@@ -13,7 +13,7 @@ You can use Keyboard shortcut keys as an alternative to the mouse on using TimeP
 
 The various keyboard shortcuts available within the TimePicker widget are discussed in the following table.
 
-_Table 1: List of keyboard shortcuts_
+_List of keyboard shortcuts_
 
 <table>
 <tr>
@@ -45,7 +45,7 @@ Decrements the value</td></tr>
 
 ## When popup is open
 
-_Table 2: List of keyboard shortcuts_
+_List of keyboard shortcuts_
 
 <table>
 <tr>
@@ -78,20 +78,20 @@ The following steps explains you on how to enable keyboard interaction for the T
 1. Add the following code to the corresponding view page to render the TimePicker.
 
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-		@{IDictionary<string, object> parameters = new Dictionary<string, object>();
+	@{IDictionary<string, object> parameters = new Dictionary<string, object>();
 
-			parameters.Add("accesskey", "j");
+		parameters.Add("accesskey", "j");
 
-		}
+	}
 
-		@Html.EJ().TimePicker("time").HtmlAttributes(parameters)
+	@Html.EJ().TimePicker("time").HtmlAttributes(parameters)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Run the code sample, press [Access key](http://en.wikipedia.org/wiki/Access_key) + J to focus in the TimePicker widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
 
@@ -99,9 +99,8 @@ The following steps explains you on how to enable keyboard interaction for the T
 
 ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
-_Figure 19: TimePicker focused with keyboard shortcut_
+TimePicker focused with keyboard shortcut
+{:.caption}
 
 
 

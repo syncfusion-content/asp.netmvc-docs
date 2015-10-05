@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bullet-Graph-Dimensions
+title: Bullet Graph Dimensions | BulletGraph	 | ASP.NET MVC | Syncfusion
 description: bullet graph dimensions
 platform: ejmvc
 control: BulletGraph	
@@ -24,6 +24,8 @@ In the above code example, width is set as 500 pixel and height is set as 100 pi
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img1.png)
 
+Bullet Graph
+{:.caption}
 
 
 ## Value for performance bar
@@ -39,6 +41,8 @@ The following screenshot displays Bullet Graph with a performance measure value 
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img2.png)
 
+Bullet Graph with performance measure
+{:.caption}
 
 
 ## Comparative measure value
@@ -57,6 +61,8 @@ The following screenshot displays Bullet Graph with comparative measure value of
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img3.png)
 
+Bullet Graph with comparative symbol
+{:.caption}
 
 
 
@@ -76,8 +82,9 @@ The following screenshot displays Bullet Graph with flatdark theme
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img4.png)
 
-
-_Figure_ _12_: Bullet Graph with theme_
+Bullet Graph with theme
+{:.caption}
+ 
 
 ## Orientation
 
@@ -109,6 +116,9 @@ The following screenshot displays Bullet Graph in a backward direction.
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img5.png)
 
+Bullet Graph in backward flow
+{:.caption}
+
 
 ## Qualitative range size
 
@@ -122,6 +132,9 @@ Size of the Qualitativerange is customized using QualitativeRangeSize property. 
 The following screenshot displays Bullet Graph with Qualitative range of size 50
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img6.png)
+
+Bullet Graph with customized qualitative range height
+{:.caption}
 
 
 
@@ -137,6 +150,9 @@ Length of the Quantitativescale is customized using QuantitativeScaleLength prop
 The following screenshot displays Bullet Graph with Quantitative scale length of 500
 
 ![](Bullet-Graph-Dimensions_images/Bullet-Graph-Dimensions_img7.png)
+
+Bullet Graph with quantitative scale of length 500 pixels
+{:.caption}
 
 
 

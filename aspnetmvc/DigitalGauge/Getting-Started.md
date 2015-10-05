@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | DigitalGauge | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: DigitalGauge
@@ -16,7 +16,8 @@ documentation: ug
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Figure 9: Digital Thermometer_
+Digital Thermometer
+{:.caption}
 
 ## Create a Digital Gauge
 
@@ -25,21 +26,24 @@ ASP.NET MVC Digital Gauge widget basically renders with flexible APIs. You can e
 1. First create an MVC Project and add necessary Dlls and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/digitalgauge/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render Digital Gauge.
 
-   ~~~ html
+   ~~~ cshtml
    
-		@(Html.EJ().DigitalGauge("digitalGauge"))
+	@(Html.EJ().DigitalGauge("digitalGauge"))
 		
    ~~~
    {:.prettyprint }
 
 3. Add the following code example in the controller page.
 
-   ~~~ cs   
+   ~~~ csharp   
    
-		public ActionResult Default()		
-        {
-            return View();
-        }		
+	public ActionResult Default()		
+        
+	{
+            
+		return View();
+    
+	}		
 
    ~~~
    {:.prettyprint }
@@ -50,13 +54,14 @@ Run the above code example and you will get a default Digital Gauge as follows.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-_Figure 10: Digital Gauge_
+Digital Gauge
+{:.caption}
 
 ## Set Height and Width values
 
 Basic attributes of each canvas elements are height and width. You can set the height and width of the gauge.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("digitalGauge")
 
@@ -72,7 +77,8 @@ Run the above code example and you will see a default gauge with the specified h
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure 11: Digital Gauge with Height and Width_
+Digital Gauge with Height and Width
+{:.caption}
 
 ## Set Items Property
 
@@ -88,7 +94,7 @@ Items have different properties to customize the Digital Gauge.
 	4. SixteenSegment 
 	5. EightCrossEightSquareMatrix.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("digitalGauge")
 
@@ -113,7 +119,8 @@ Run the above code example and you will see the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-_Figure 12: Digital Gauge Segment Properties_
+Digital Gauge Segment Properties
+{:.caption}
 
 
 ## Add Background Image
@@ -123,7 +130,7 @@ _Figure 12: Digital Gauge Segment Properties_
 * Add the required properties to show the background image such as position, margin, display, etc.,
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <div id="frameDiv">
 
@@ -175,13 +182,14 @@ Run the above code example and you will see the following output.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-_Figure 13: Digital Gauge Background Image_
+Digital Gauge Background Image
+{:.caption}
 
 ## Add Location
 
 The Location property is used to position the digital letters inside the canvas element.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1").Height(145).Width(260).Items(item=>
 
@@ -202,21 +210,22 @@ Run the above code example and you will see the following output.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-_Figure 14: Digital Gauge with Segment Location_
+Digital Gauge with Segment Location
+{:.caption}
 
 ## Add Items Collection 
 
 You can further add the Items Collection to display the temperature value like Digital Thermometer.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("digitalGauge").Height(145).Width(260).Items(item=>
 
 {
 
-item.SegmentSettings(seg=>seg.Length(20).Width(2))            .Value("102").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);}).Position(loc=>loc.X(15).Y(40)).Add();
-
-
+item.SegmentSettings(seg=>seg.Length(20).Width(2))            
+.Value("102").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Position(loc=>loc.X(15).Y(40)).Add();
 
 item.SegmentSettings(seg=>seg.Length(5).Width(2))
 .Value("0").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
@@ -230,20 +239,15 @@ item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))
 .Value("38").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(70).Y(90)).Add();
 
-
-
 item.SegmentSettings(seg=>seg.Length(3).Width(1).Color("#F5b43f"))
 .Value("0").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(90).Y(80)).Add();
-
-
 
 item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))
 .Value("c").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(120).Y(90)).Add();
 
 }))
-
 
 {% endhighlight %}
 
@@ -252,4 +256,5 @@ Run the above code example and you will see the following output.
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-_Figure 15: Digital Gauge with Item Collection_
+Digital Gauge with Item Collection
+{:.caption}

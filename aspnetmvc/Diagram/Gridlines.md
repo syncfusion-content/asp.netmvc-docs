@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gridlines
+title: Gridlines | Diagram | ASP.NET MVC | Syncfusion
 description: gridlines
 platform: ejmvc
 control: Diagram
@@ -13,7 +13,8 @@ Gridlines are horizontal and vertical lines behind the Diagram elements. They pr
 
 ![](Gridlines_images/Gridlines_img1.png)
 
-
+Gridlines
+{:.caption}
 
 ## SnapConstraints
 
@@ -65,11 +66,6 @@ The following code illustrates how to show or hide gridlines by using constraint
 
 {% highlight c# %}
 
-
-
-
-
-
 //Shows horizontal gridlines
 
 model.SnapSettings.SnapConstraints = SnapConstraints.ShowHorizontalLines;
@@ -87,7 +83,6 @@ model.SnapSettings.SnapConstraints = SnapConstraints.ShowLines;
 model.SnapSettings.SnapConstraints = SnapConstraints.None;
 
 
-
 {% endhighlight %}
 
 ## Appearance
@@ -100,17 +95,17 @@ _Appearance_
 <tr>
 <th>
 Properties</th><th>
-Data Type</td><th>
+Data Type</th><th>
 Description</th></tr>
 <tr>
 <td>
 LineInterval</td><td>
-List<decimal></td><td>
+List&lt;decimal&gt;</td><td>
 Gets or sets the line interval of gridlines</td></tr>
 <tr>
 <td>
 SnapInterval</td><td>
-List<decimal></td><td>
+List&lt;decimal&gt;</td><td>
 Gets or sets the snap interval of gridlines</td></tr>
 <tr>
 <td>
@@ -128,9 +123,6 @@ Gets or sets the line color of the gridlines</td></tr>
 The following code illustrates how to customize the Gridlineappearance.
 
 {% highlight c# %}
-
-
-
 
 // Sets various appearance properties to gridlines
 
@@ -165,7 +157,6 @@ model.SnapSettings.HorizontalGridlines.Strokes.Stroke = "blue";
 model.SnapSettings.HorizontalGridlines.Strokes.LineDashArray = "2 2";
 
 
-
 {% endhighlight %}
 
 
@@ -173,3 +164,5 @@ model.SnapSettings.HorizontalGridlines.Strokes.LineDashArray = "2 2";
 
 ![](Gridlines_images/Gridlines_img2.png) 
 
+Customized Gridlines
+{:.caption}

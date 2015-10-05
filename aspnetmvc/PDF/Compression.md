@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Compression
+title: Compression | PDF | ASP.NET MVC | Syncfusion
 description: compression
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -55,7 +55,7 @@ PDF elements are standardized under ISO for several constituencies. This section
 * PDF/A-This topic demonstrates PDF/A-1b standard that is used for archiving in environments like corporate, government, and library.
 * PDF/X-This topic discusses the PDF/X-1a standard that is mainly available for standardizing printing and graphics.
 
-### PDF/A-1b
+## PDF/A-1b
 
 
 The PDF/A formats specified in the ISO 19005 standards strive to provide a mechanism for representing electronic documents. These documents are represented in a manner that preserves their visual appearance over time, independent of the tools and systems used for creating, storing, or rendering the files. A key element to this reproducibility is the requirement for PDF/A documents to be 100 percent self-contained.
@@ -85,9 +85,9 @@ The following code example illustrates you on how to create PDF/A-1b compliant o
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new document with PDF/A standard.
 
@@ -123,9 +123,7 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new document with PDF/A standard.
 
@@ -160,8 +158,9 @@ document.Save("Output.pdf")
 document.Close()
 
 {% endhighlight %}
+{% endtabs %} 
 
-### PDF/X-1a
+## PDF/X-1a
 
 PDF/X is a subset of the Adobe Portable Document Format (PDF) specification that exhibits best practices in graphic arts file exchange. PDF/X-1a restricts the content in the PDF document that does not directly serve the purpose of high-quality print production output, such as annotations, Java Actions, and embedded multimedia.
 
@@ -174,9 +173,9 @@ The following code example illustrates how to create PDF/A-1b compliant output:
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new document with PDF/A standard.
 
@@ -212,9 +211,7 @@ document.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new document with PDF/A standard.
 
@@ -250,3 +247,4 @@ document.Close()
 
 {% endhighlight %}
 
+{% endtabs %} 

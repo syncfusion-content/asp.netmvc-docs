@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Navigation
+title: Keyboard Navigation | Menu | ASP.NET MVC | Syncfusion
 description: keyboard navigation
 platform: ejmvc
 control: Menu
@@ -13,7 +13,7 @@ The Menu control also provides support for keyboard navigation. In the Menu cont
 
 The various keyboard shortcuts available within the Menu control are discussed in the following table, 
 
-_Table2: List of keyboard shortcut keys_
+_List of keyboard shortcut keys_
 
 <table>
 <tr>
@@ -50,69 +50,65 @@ Navigates to next group.</td></tr>
 1. Add the following code for Keyboard navigation in your Menu control.
 
 
-   ~~~ js
-
-
-		// Add the following code for Keyboard navigation in our Menu control.
-		<div class="imgframe"> 
-		   @Html.EJ().Menu("keyboard").Items(items => 
+   ~~~ cshtml
+   
+	// Add the following code for Keyboard navigation in our Menu control.
+	<div class="imgframe"> 
+	   @Html.EJ().Menu("keyboard").Items(items => 
+	   { 
+		   items.Add().Id("Home").Text("Home").Children(child =>
 		   { 
-			   items.Add().Id("Home").Text("Home").Children(child =>
-			   { 
-				   child.Add().Text("Foundation");
-				   child.Add().Text("Launch"); 
-				   child.Add().Text("About").Children(child1 =>  
-				   {
-					   child1.Add().Text("Company"); 
-					   child1.Add().Text("Location"); 
-				   }); 
-				}); 
-			   items.Add().Text("Services").Children(child =>               
+			   child.Add().Text("Foundation");
+			   child.Add().Text("Launch"); 
+			   child.Add().Text("About").Children(child1 =>  
 			   {
-				   child.Add().Text("Consulting");
-				   child.Add().Text("Outsourcing");
-			   });
-			   items.Add().Text("About");
-			   items.Add().Id("Contact").Text("Contact Us").Children(child =>             
+				   child1.Add().Text("Company"); 
+				   child1.Add().Text("Location"); 
+			   }); 
+			}); 
+		   items.Add().Text("Services").Children(child =>               
+		   {
+			   child.Add().Text("Consulting");
+			   child.Add().Text("Outsourcing");
+		   });
+		   items.Add().Text("About");
+		   items.Add().Id("Contact").Text("Contact Us").Children(child =>             
+		   {  
+		   child.Add().Text("Contact number");
+		   child.Add().Text("E-mail");
+		   });   
+		   items.Add().Id("Careers").Text("Careers").Children(child => 
+		   { 
+			   child.Add().Text("Position").Children(child1 => 
 			   {  
-			   child.Add().Text("Contact number");
-			   child.Add().Text("E-mail");
-			   });   
-			   items.Add().Id("Careers").Text("Careers").Children(child => 
+				   child1.Add().Text("Developer");
+				   child1.Add().Text("Manager");
+			   });                  
+			   child.Add().Text("Apply online"); 
+			});     
+	   }).Width("500") 
+	   </div>
+
+
+
+	// Add the following code in your <script> section.
+	<script type="text/javascript"> 
+		   jQuery(function ($)
+		   {  
+			   //Control focus key 
+			   $(document).on("keydown", function (e)
 			   { 
-				   child.Add().Text("Position").Children(child1 => 
-				   {  
-					   child1.Add().Text("Developer");
-					   child1.Add().Text("Manager");
-				   });                  
-				   child.Add().Text("Apply online"); 
-				});     
-		   }).Width("500") 
-		   </div>
-
-   ~~~
-   {:.prettyprint }
-
-   ~~~ js
-	
-		// Add the following code in your <script> section.
-		<script type="text/javascript"> 
-			   jQuery(function ($)
-			   {  
-				   //Control focus key 
-				   $(document).on("keydown", function (e)
+				   if (e.altKey && e.keyCode === 74)
 				   { 
-					   if (e.altKey && e.keyCode === 74)
-					   { 
-							// j- key code. 
-							$("#keyboard").focus(); 
-					   }
-				   });
+						// j- key code. 
+						$("#keyboard").focus(); 
+				   }
 			   });
-		</script>
+		   });
+	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -121,32 +117,33 @@ Navigates to next group.</td></tr>
    ~~~ css
 
 
-		<style type="text/css">
+	<style type="text/css">
 
-			#keyboard {
+		#keyboard 
+		{
 
-				margin-left: 50px;
+			margin-left: 50px;
 
-			}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
    
 Following screenshot displays the output of the above code. 
 
 ![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
 
-
-
-_Figure39: Accessibility_
+Accessibility
+{:.caption}
 
 When you press alt+j, the first item of the Menu control only gets focused as displayed in the following screenshot.
 
 ![](Keyboard-Navigation_images/Keyboard-Navigation_img2.png)
 
-_Figure: Keyboard Navigation_
+Keyboard Navigation
+{:.caption}
 
 Similarly you can access the Menu control using keyboard itself.
 

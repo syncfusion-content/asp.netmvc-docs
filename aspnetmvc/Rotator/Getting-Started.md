@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Rotator | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Rotator
@@ -19,7 +19,8 @@ The following screenshot illustrates a Rotator widget.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Figure_ _3_: _Rotator_
+Rotator
+{:.caption}
 
 ## Create a Rotator
 
@@ -31,52 +32,52 @@ Essential Studio ASP.NET MVCRotator widget has built-in features such as unobtru
    
 2. Add the following code example to the corresponding view page to render Rotator. Move the images under the folder ~/Images/rotator.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div class="frame">
+	<div class="frame">
 
-			@{Html.EJ().Rotator("content").Items(item =>
+		@{Html.EJ().Rotator("content").Items(item =>
 
-			{
-	
-				item.Add().ContentTemplate(@<div>
+		{
 
-				<img class="image" src="@Url.Content("~/Images/rotator/Untitled.png")" />
+			item.Add().ContentTemplate(@<div>
 
-				</div>);
+			<img class="image" src="@Url.Content("~/Images/rotator/Untitled.png")" />
 
-				item.Add().ContentTemplate(@<div>
+			</div>);
 
-				<a href="~/Views/Home/Index.cshtml"></a>
+			item.Add().ContentTemplate(@<div>
 
-				<img class="image" src="@Url.Content("~/Images/rotator/Untitled1.png")" /> 
+			<a href="~/Views/Home/Index.cshtml"></a>
 
-				</div>);
+			<img class="image" src="@Url.Content("~/Images/rotator/Untitled1.png")" /> 
 
-				item.Add().ContentTemplate(@<div>
+			</div>);
 
-				<img class="image" src="@Url.Content("~/Images/rotator/Untitled2.png")" />
+			item.Add().ContentTemplate(@<div>
 
-				</div>);
+			<img class="image" src="@Url.Content("~/Images/rotator/Untitled2.png")" />
 
-				item.Add().ContentTemplate(@<div>
+			</div>);
 
-				<img class="image" src="@Url.Content("~/Images/rotator/Untitled3.png")" />
+			item.Add().ContentTemplate(@<div>
 
-				</div>);
+			<img class="image" src="@Url.Content("~/Images/rotator/Untitled3.png")" />
 
-				item.Add().ContentTemplate(@<div>
+			</div>);
 
-				<img class="image" src="@Url.Content("~/Images/rotator/Untitled4.png")" />
+			item.Add().ContentTemplate(@<div>
 
-				</div>);
+			<img class="image" src="@Url.Content("~/Images/rotator/Untitled4.png")" />
 
-			}) .SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true).Render();}
+			</div>);
 
-		</div>
+		}) .SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true).Render();}
+
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. The following banner is displayed as output.
 

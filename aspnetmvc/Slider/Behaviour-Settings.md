@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behaviour-Settings
+title: Behaviour Settings | Slider | ASP.NET MVC | Syncfusion
 description: behaviour settings
 platform: ejmvc
 control: Slider
@@ -21,7 +21,7 @@ The following steps explains you on how to configure the Height and Width of the
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page 
 
@@ -44,7 +44,7 @@ The following steps explains you on how to configure the IncrementStep property.
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page 
 
@@ -68,7 +68,7 @@ The following steps explains you on how to enable the ReadOnly property.
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

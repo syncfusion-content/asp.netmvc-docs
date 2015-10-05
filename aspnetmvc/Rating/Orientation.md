@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation
+title: Orientation | Rating | ASP.NET MVC | Syncfusion
 description: orientation
 platform: ejmvc
 control: Rating
@@ -17,11 +17,9 @@ Add the following code in your view page to render the Rating with customizedOri
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized orientation.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 

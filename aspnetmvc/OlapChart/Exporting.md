@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | OLAPChart | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: OLAPChart
@@ -21,15 +21,14 @@ The OLAP Chart control can be exported to the following formats:
 * JPG
 * BMP
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc"))
 
 @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("ExportBtnClick"); }).Text("Export")
-{% endhighlight  %}
 
-{% highlight js %}
-function ExportBtnClick(args) {
+function ExportBtnClick(args) 
+{
 
     var chartObj = $('#OlapChart1').data("ejOlapChart");
 
@@ -52,7 +51,7 @@ The Export type that is to be mentioned in the parameter takes any one of the fo
 * BMP
 
 The following code example of the service method needs to be added in-order to perform exporting in the OlapChart.
-{% highlight c# %}
+{% highlight C# %}
 public void Export(System.IO.Stream stream)
 
 {
@@ -81,8 +80,8 @@ public void Export(System.IO.Stream stream)
 
 ![](Exporting_images/Exporting_img2.png)
 
-_Exported OlapChart in Word_
-
+Exported OlapChart in Word
+{:.caption}
 
 
 ![](Exporting_images/Exporting_img3.png)

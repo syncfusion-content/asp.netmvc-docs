@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Schedule-Modes
+title: Schedule Modes | Gantt | ASP.NET MVC | Syncfusion
 description: schedule modes
 platform: ejmvc
 control: Gantt
@@ -27,21 +27,17 @@ The following code example illustrates you on how to change the schedule mode.
 In the Week schedule mode, the upper part of the schedule header displays the weeks whereas the bottom half of the header displays the days. Refer the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
 @(Html.EJ().Gantt("Gantt")
-
-           //...                             
 
   .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Week)
 
   .WeekHeaderFormat("MMM dd , yyyy ")
 
   .DayHeaderFormat("ddd "))
-
-
 
 )
 
@@ -55,14 +51,15 @@ The following screenshot illustrates the Week Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img1.png)
 
-_Figure 41 : Week Schedule in Gantt control_
+Week Schedule in Gantt control
+{:.caption}
 
 ### Month Schedule Mode
 
 In the Week schedule mode, the upper part of the schedule header displays the Months whereas the bottom header of the schedule displays its corresponding Weeks. Refer the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -76,12 +73,7 @@ In the Week schedule mode, the upper part of the schedule header displays the Mo
 
 .WeekHeaderFormat("M/dd"))
 
-
-
 )
-
-
-
 {% endhighlight %}
 
 
@@ -92,7 +84,8 @@ The following screenshot illustrates the Month Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img2.png)
 
-_Figure 42: Month Schedule in Gantt control_
+Month Schedule in Gantt control
+{:.caption}
 
 ### Year Schedule Mode
 
@@ -100,13 +93,9 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-           //...
 
 .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Year)
 
@@ -114,12 +103,7 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 
 .MonthHeaderFormat("MMM"))
 
-
-
 )
-
-
-
 {% endhighlight %}
 
 
@@ -130,7 +114,8 @@ The following screen shot shows the Year Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img3.png)
 
-_Figure 43: Year Schedule in Gantt control_
+Year Schedule in Gantt control
+{:.caption}
 
 ### Day Schedule Mode
 
@@ -138,9 +123,7 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 
 
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -152,11 +135,7 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 
  .HourHeaderFormat("HH"))
 
-
-
 )
-
-
 
 {% endhighlight %}
 
@@ -168,7 +147,8 @@ The following screenshot illustrates the Day Schedule in Gantt control.
 
 ![](Schedule-Modes_images/Schedule-Modes_img4.png)
 
-_Figure 44: Day Schedule in Gantt control_
+Day Schedule in Gantt control
+{:.caption}
 
 ### Hour Schedule Mode
 
@@ -190,51 +170,22 @@ ScheduleEndDate, whereas the other enumeration values splits up accordingly.
 
 The Hour Schedule Mode supports both the Minute and Hour duration units.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("ganttContainer")
 
+	   .DateFormat("M/d/yyyy hh:mm:ss tt")
 
+	   .DurationUnit(GanttDurationUnit.Minute)
 
-                                                          // ...
-
-
-
-                                       .DateFormat("M/d/yyyy hh:mm:ss tt")
-
-
-
-                                       .DurationUnit(GanttDurationUnit.Minute)
-
-
-
-                                      .ScheduleHeaderSettings(sh =>{
-
-
-
-                                                     sh.ScheduleHeaderType(GanttscheduleHeaderType.Hour);
-
-
-
-                                                     sh.MinutesPerInterval(GanttminutesPerInterval.FiveMinutes);   
-
-
-
-                                             })
-
-
-
-                                                           // ...
-
-
-
-                                           )
-
-
-
-
+	  .ScheduleHeaderSettings(sh =>
+	  {
+		 
+		 sh.ScheduleHeaderType(GanttscheduleHeaderType.Hour);
+		 sh.MinutesPerInterval(GanttminutesPerInterval.FiveMinutes);   
+	   
+	  })
+)		   
 
 {% endhighlight %}
 
@@ -244,5 +195,5 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 
 ![](Schedule-Modes_images/Schedule-Modes_img5.png)
 
-_Figure 45: Hour-Minute schedule mode in Gantt control_
-
+Hour-Minute schedule mode in Gantt control
+{:.caption}

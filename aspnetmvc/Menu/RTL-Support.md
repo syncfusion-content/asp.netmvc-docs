@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Menu | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Menu
@@ -14,7 +14,7 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 1. The following code depicts you on how to enable the rtl property of the Menu control.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 // The following code example depicts how to enable the rtl property of the Menu control.
@@ -103,7 +103,5 @@ Following screenshot displays the output for the above code.
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
-
-
-_Figure35: RTL Support_
-
+RTL Support
+{:.caption}

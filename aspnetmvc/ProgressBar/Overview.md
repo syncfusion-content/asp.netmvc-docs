@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Progress Bar | Progress Bar | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Progress Bar
 documentation: ug
 ---
 
-# Overview
+# Progress Bar
 
 Essential ProgressBar control is a [graphical control element](http://en.wikipedia.org/wiki/Graphical_control_element) used to visualize the changing status of an extended operation. It is available in ASP.NET MVC product. ProgressBar provides an interactive way to display the progression of the task. You can configure the item size, orientation and the display text on the ProgressBar control.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context-Menu
+title: Context Menu | TreeGrid | ASP.NET MVC | Syncfusion
 description: context menu
 platform: ejmvc
 control: TreeGrid
@@ -15,33 +15,31 @@ The ShowContextMenu property is used to enable or disable the context menu, defa
 
 The ContextMenuItems property is used to add the menu items to context menu, this property renders ‘Add’ and ‘Delete’ by default when the menu items are not provided.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
-        // ...
+	.EditSettings(edit=>
 
-        .EditSettings(edit=>
+	 { edit.AllowEditing(true)
 
-         { edit.AllowEditing(true)
+	   edit.EditMode(TreeGridEditMode.rowEditing)
 
-           edit.EditMode(TreeGridEditMode.rowEditing)
+	 })
 
-         })
+	.ContextMenuSettings(cms=>cms.showContextMenu(true)
 
-        .ContextMenuSettings(cms=>cms.showContextMenu(true)
+	.ContextMenuItems(new List<TreeGridContextMenuItems>()
 
-        .ContextMenuItems(new List<TreeGridContextMenuItems>()
+	{ TreeGridContextMenuItems.Add,
 
-        { TreeGridContextMenuItems.Add,
+	  TreeGridContextMenuItems.Edit,
 
-          TreeGridContextMenuItems.Edit,
+	  TreeGridContextMenuItems.Delete
 
-          TreeGridContextMenuItems.Delete
+	}))
 
-        }))
 
-// ...
 
  .Render())
 
@@ -61,29 +59,21 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 * iconPath: Image location for menu item.
 * eventHandler: Client side event for menu item click.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("treegrid1")
-
-        // ...
 
         .ContextMenuSettings(cms=>cms.showContextMenu(true))
 
         .ContextMenuOpen(customMenu)
 
-// ...
-
  .Render())
-
-{% endhighlight  %}
-
-{% highlight js %}
 
 <script type=”text/javascript”>
 
   function customMenu( args )
 
-{
+`{
 
    args.contextMenuItems.push(
 
@@ -99,17 +89,11 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 
    );
 
-}
+`}
 
   function customMenuClick( args )
 
   {
-
-                // ...     
-
-
-
-             // ...     
 
   }
 

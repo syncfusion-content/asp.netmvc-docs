@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-settings
+title: Behavior settings | Toolbar | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
 control: Toolbar
@@ -17,7 +17,7 @@ Enabled property is Boolean type, which allow us to enable or disable the Toolba
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add this code in your CSHTML page and refer local data section for data source
 
@@ -33,9 +33,8 @@ The following screenshot illustrates a Toolbar with Disable mode.
 
 ![](Behavior-settings_images/Behavior-settings_img1.png)
 
-
-
-_Figure 8: ToolBar control in Enabled (false)_
+ToolBar control in Enabled (false)
+{:.caption}
 
 
 
@@ -45,7 +44,7 @@ The Hide property is Boolean type, which allow us to show or hide the Toolbar. D
 
 
 
- {% highlight html %}
+ {% highlight CSHTML %}
 
 // Add this code in your CSHTML page and refer local data section for data source
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ticks
+title: Ticks | OLAPGauge | ASP.NET MVC | Syncfusion
 description: ticks
 platform: ejmvc
 control: OLAPGauge
@@ -17,9 +17,7 @@ Ticks indicate values that are present in the scale area. The different types of
 You can further customize Ticks by setting color, width and height.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -87,7 +85,7 @@ You can further customize Ticks by setting color, width and height.
 You can change the distance from the scale and the Ticks using “distanceFromScale” property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -156,7 +154,7 @@ You can change the distance from the scale and the Ticks using “distanceFromSc
 
 You can set the height and width of the Ticks using the “tickWidth” and “tickHeight” property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -224,7 +222,7 @@ You can set the height and width of the Ticks using the “tickWidth” and “t
 You can hide the Ticks that indicate the range values using “showTicks” property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
  
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>

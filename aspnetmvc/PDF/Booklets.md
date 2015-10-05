@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Booklets
+title: Booklets | PDF | ASP.NET MVC | Syncfusion
 description: booklets
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
-## Booklets
+# Booklets
 
 Booklets are documents with multiple pages arranged on sheets of paper. When folded, the paper represents the correct page order. Essential PDF provides support for creating booklets that produces the resulting PDF document that can be printed and stapled in the center to form a booklet. 
 
@@ -28,16 +28,16 @@ For example, assume that you have a 13-page document. Creating a booklet of the 
 
 
 
-Pages Printed and Folded into New Booklet
+### Pages Printed and Folded into New Booklet
 
 PdfBookletCreator class is used for creating Booklets. The following code example illustrates how to create the 
 Booklet.
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+  
+{% highlight C# %}
 
 //Loads a PDF document.
 
@@ -53,9 +53,7 @@ doc.Save("Sample.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads a PDF document.
 
@@ -70,11 +68,11 @@ Dim doc As PdfDocument = PdfBookletCreator.CreateBooklet(ldoc, New SizeF(500, 50
 doc.Save("Sample.pdf")
 
 {% endhighlight %}
-
+{% endtabs %}
 The following code example illustrates the overloads of the CreateBooklet method.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 CreateBooklet(PdfLoadedDocument, SizeF);
 
@@ -88,15 +86,16 @@ CreateBooklet(String, String, SizeF, Boolean);
 
 {% endhighlight %}
 
+
 You can also apply margins to the booklets at the time of creating the booklet by using one of the preceding overloads.
 
  The following code example illustrates how to create a booklet with the following overload: CreateBooklet (PdfLoadedDocument, SizeF, Boolean, PdfMargins).
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads a PDF document.
 
@@ -118,9 +117,7 @@ doc.Save("Sample.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads a PDF document.
 
@@ -142,3 +139,4 @@ doc.Save("Sample.pdf")
 
 {% endhighlight %}
 
+{% endtabs %} 

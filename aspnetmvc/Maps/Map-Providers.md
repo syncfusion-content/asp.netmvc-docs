@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Map-Providers
+title: Map Providers | Maps | ASP.NET MVC | Syncfusion
 description: map providers
 platform: ejmvc
 control: Maps
@@ -21,25 +21,21 @@ You can enable this feature by setting the LayerType property value as "OSM".
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("map")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {
+{
 
-                        lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.OSM)
+	lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.OSM)
 
-                 	.UrlTemplate("http://a.tile.openstreetmap.org/level/tileX/tileY.png”);
+	.UrlTemplate("http://a.tile.openstreetmap.org/level/tileX/tileY.png”);
 
-                    })           
+})           
 
-
-
-         ) 
-
-
+) 
 
 {% endhighlight %}
 
@@ -50,7 +46,8 @@ The UrlTemplate property determines the format of tile map. You can specify the 
 
 ![](Map-Providers_images/Map-Providers_img1.png)
 
-_Open street Map_
+Open street Map
+{:.caption}
 
 ## Bing Map
 
@@ -62,24 +59,21 @@ You can enable this feature by defining the LayerType as “Bing”.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("map")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {
+{
 
-                        lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.Bing)
+	lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.Bing)
 
-                 .Key("// ...bingMapKey”).Add();
+	.Key("// ...bingMapKey”).Add();
 
-                    })           
+})           
 
-         ) 
-
-
-
+) 
 {% endhighlight %}
 
 ### Key
@@ -90,6 +84,6 @@ The bing Map Key is provided as input to this key property. The Bing Map key can
 
 ![](Map-Providers_images/Map-Providers_img2.png)
 
-_Bing map_
-
+Bing map
+{:.caption}
 

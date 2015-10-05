@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OlapGauge-Elements
+title: OlapGauge Elements | OLAPGauge | ASP.NET MVC | Syncfusion
 description: olapgauge :elements
 platform: ejmvc
 control: OLAPGauge

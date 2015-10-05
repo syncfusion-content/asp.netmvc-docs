@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Helper-Functions
+title: Helper Functions | DataManager | ASP.NET MVC | Syncfusion
 description: helper functions
 platform: ejmvc
 control: DataManager
@@ -9,19 +9,19 @@ documentation: ug
 
 # Helper Functions
 
-## ej.parseJSON
+### ej.parseJSON
 
 This method is used to parse the string to JSON. 
 
-## ej.parseTable
+### ej.parseTable
 
 This method is used to parse the HTML element into the JSON Array and is used commonly in element binding by using the DataManager.
 
-## ej.getGuid
+### ej.getGuid
 
 This method returns the globally unique identifier and it generates unique identifier with the prefix provided as parameter.
 
-## ej.merge
+### ej.merge
 
 The ej.merge is used to merge two arrays and the result is merged in the first array. 
 
@@ -34,7 +34,7 @@ The ej.support property contains a collection of properties representing differe
 3. stableSort – enables stable sort operation.
 4. outerHTML – represents the outerHTML support.
 
-## ej.swap
+### ej.swap
 
 This method is used to swap the position of element in an array. It accepts three arguments such as input array and two swap positions.
 

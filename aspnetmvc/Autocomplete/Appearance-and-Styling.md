@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | AutoComplete  | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: AutoComplete
@@ -22,7 +22,7 @@ The following steps explain the dimensional properties of an AutoComplete textbo
 1. In the View page, define the AutoComplete control and set values for Height and Width property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -49,9 +49,8 @@ The following image is the output for AutoComplete textbox with customized dimen
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
-
-_AutoComplete with Customized dimensions_
+AutoComplete with Customized dimensions
+{:.caption}
 
 ## Rounded corner
 
@@ -66,7 +65,7 @@ The following steps explain enabling the ShowRoundedCorner property for an AutoC
 1. In the View page, define the AutoComplete control and enable the ShowRoundedCorner property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -90,9 +89,8 @@ The following image is the output for AutoComplete when ShowRoundedCorner is set
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
-
-_AutoComplete with Rounded corners_
+AutoComplete with Rounded corners
+{:.caption}
 
 ## Watermark text
 
@@ -106,7 +104,7 @@ The following steps explain you how to configure WatermarkText property for an A
 
 1. In the View page, define the AutoComplete control and enable the WatermarkText property.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -127,9 +125,8 @@ The following image is the output for AutoComplete when WatermarkText is defined
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-
-
-_AutoComplete loaded with watermark text_
+AutoComplete loaded with watermark text
+{:.caption}
 
 ## Adjusting Suggestion list size
 
@@ -144,9 +141,7 @@ The following steps help you set height and width of the popup panel of an AutoC
 1. In the View page, define the AutoComplete control and configure the Popup panel height and width properties.
 
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -161,18 +156,14 @@ The following steps help you set height and width of the popup panel of an AutoC
 
 {% endhighlight %}
 
-
-
-
 The following image is the output for AutoComplete, after configuring the height and width of the popup panel.
 
 
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
-
-
-_AutoComplete PopUp panel with configured dimensions_
+AutoComplete PopUp panel with configured dimensions
+{:.caption}
 
 ## PopUp Time Delay
 
@@ -188,7 +179,7 @@ The following steps are used to set the time delay to load the popup panel of an
 
 2. Configure the delay time for popup panel in AutoComplete control as follows.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -210,7 +201,7 @@ This takes 1000ms to display the popup panel list items.
 
 ## Theme
 
-AutoComplete control’s style and appearance are controlled based on CSS classes. In order to apply styles to the AutoComplete control, you can refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. When the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
+AutoComplete control’s style and appearance are controlled based on CSS classes. In order to apply styles to the AutoComplete control, you can refer 2 files namely, ej.widgets.core.min.s and ej.theme.min.s. When the file ej.widgets.all.min.s is referred, then it is not necessary to include the files ej.widgets.core.min.s and ej.theme.min.s in your project, as ej.widgets.all.min.s is the combination of these two. 
 
 By default, there are 12 theme supports available for AutoComplete control namely:
 
@@ -240,10 +231,10 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 1. Define CSS class for customizing the AutoComplete control.
 
 
-   ~~~ css
+   ~~~ s
 
 
-		<style type="text/css" class="cssStyles">
+		<style type="text/s" class="sStyles">
 
 				/* Customize the PopUp panel */
 
@@ -274,12 +265,12 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 			</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 2. In the View page, define the AutoComplete control and assign the class name to CssClass property.
 
 
-   ~~~ html
+   ~~~ cshtml
 
 		@*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -294,7 +285,7 @@ The following steps allow you to configure CSSclass for an AutoComplete textbox.
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -303,7 +294,5 @@ The following image is of an AutoComplete textbox configured based on CSS class.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
-
-
-_AutoComplete widget configured with CSS class_
-
+AutoComplete widget configured with CSS class
+{:.caption}

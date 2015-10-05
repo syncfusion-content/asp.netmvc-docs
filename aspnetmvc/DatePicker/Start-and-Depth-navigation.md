@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Start-and-Depth-navigation
+title: Start and Depth navigation | DatePicker | ASP.NET MVC | Syncfusion
 description: start and depth navigation
 platform: ejmvc
 control: DatePicker
@@ -13,7 +13,7 @@ documentation: ug
 
 It specifies the Start Level view in DatePicker calendar. By default “StartLevel” property is set to “Period.Month”. The “StartLevel” property receives “enum” value. The “Period” class contains four types of levels. Refer the following table to know the different types of start level.
 
-Table 3: Start level
+_Start level_ 
 
 <table>
 <tr>
@@ -44,11 +44,11 @@ The following steps explain you how to specify the Start Level view in DatePicke
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized start level view*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized start level view*@
 
-		@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century)
+	@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century)
 
    ~~~
    {:.prettyprint }
@@ -58,13 +58,16 @@ The following steps explain you how to specify the Start Level view in DatePicke
 
 ![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img1.png)
 
+Start level view in DatePicker
+{:.caption}
+
 ## Depth Level
 
 It specifies the drill down level of DatePicker. You can restrict the drill down Depth Level using “DepthLevel” property. 
 
 It accepts the following values. 
 
-_Table4: Depth level_
+_Depth level_
 
 <table>
 <tr>
@@ -94,19 +97,20 @@ The following steps explain you how to get the DepthLevel.
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to restrict the drill down depth level DatePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to restrict the drill down depth level DatePicker widget*@
 
-		@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century).DepthLevel(Period.Year)
+	@Html.EJ().DatePicker("datePicker").StartLevel(Period.Century).DepthLevel(Period.Year)
 
 
    ~~~
-   {:.prettyprint }
+
 
 
 2. The following screenshot displays the output for the above code.
 
 ![](Start-and-Depth-navigation_images/Start-and-Depth-navigation_img2.png)
 
+Depth Level in DatePicker
 

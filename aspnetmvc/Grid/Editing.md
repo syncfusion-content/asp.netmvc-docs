@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing
+title: Editing | Grid | ASP.NET MVC | Syncfusion
 description: editing
 platform: ejmvc
 control: Grid
@@ -22,13 +22,15 @@ Essential Studio JavaScript Grid provides toolbar support and it can be customiz
 * Cancel
 
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
   @(Html.EJ().Grid<object>("Editing")
 
         .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+		.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
 
         .ToolbarSettings(toolbar =>
 
@@ -75,7 +77,7 @@ Essential Studio JavaScript Grid provides toolbar support and it can be customiz
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -102,6 +104,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -109,7 +112,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img1.png)
 
-_Figure : Toolbar with Edit Option_
+Toolbar with Edit Option
+{:.caption}
 
 ## Cell edit type
 
@@ -126,59 +130,61 @@ The edit type of every column can be customized using the EditType property.
 
 
 
-{% highlight js %}
+{% tabs %}
 
-  @(Html.EJ().Grid<object>("Editing")
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<object>("Editing")
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .ToolbarSettings (toolbar =>
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
 
-            {
+.ToolbarSettings (toolbar =>
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+	{
 
-                {
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                    items.AddTool(ToolBarItems.Add);
+		{
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Update);
 
-                });
+			items.AddTool(ToolBarItems.Cancel);
 
-            })
+		});
 
-        .AllowPaging(true)
+	})
 
-        .Columns(col =>
+.AllowPaging(true)
 
-        {
+.Columns(col =>
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+{
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-        })
+	col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
 
-        )
+})
+
+)
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -203,10 +209,8 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 
 
-
-
 {% endhighlight  %}
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -214,8 +218,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img2.png)
 
-_Figure : Cell Edit Type_
-
+Cell Edit Type
+{:.caption}
 
 ### External DataSource for DropDown EditType Column
 
@@ -223,12 +227,15 @@ By default, the datasource for Dropdown Edit Column is set by Grid Control from 
 
 N> The external datasource must be given in a structure that it should contain properties “text” and_  _“value” which holds the data
 
-{% highlight js %}
 
-  @(Html.EJ().Grid<OrdersView>("FlatGrid")
+{% tabs %}
 
-        .Datasource((IEnumerable<object>)ViewBag.dataSource)
-           .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<OrdersView>("FlatGrid")
+
+.Datasource((IEnumerable<object>)ViewBag.dataSource)
+   .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
          .ToolbarSettings(toolbar =>
             {
                 toolbar.ShowToolbar().ToolbarItems(items =>
@@ -240,28 +247,28 @@ N> The external datasource must be given in a structure that it should contain p
                     items.AddTool(ToolBarItems.Cancel);
                 });
             })
-        .AllowPaging()
+.AllowPaging()
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
+	col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-    col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-            col.Field("ShipCountry").HeaderText("Ship Country").EditType(EditingType.Dropdown).DataSource((IEnumerable<object>)ViewBag.dataSource2).Add();
+	col.Field("ShipCountry").HeaderText("Ship Country").EditType(EditingType.Dropdown).DataSource((IEnumerable<object>)ViewBag.dataSource2).Add();
 
-        })) 
+})) 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 public partial class GridController : Controller
 
@@ -296,10 +303,12 @@ public partial class GridController : Controller
 
 
 {% endhighlight  %}
+{% endtabs %}  
 
 ![](Editing_images/Editing_img4.png)
 
-_Figure : Dropdown External DataSource_
+Dropdown External DataSource
+{:.caption}
 
 ## Edit Template
 
@@ -311,88 +320,92 @@ EditTemplate feature is used to create a custom editor to edit column values. Ed
 
 The following code example is for Edit Template.
 
-{% highlight js %}
 
-    @(Html.EJ().Grid<OrdersView>("Edittemplate")
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<OrdersView>("Edittemplate")
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .ToolbarSettings(toolbar =>
+	.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
 
-        {
+	.ToolbarSettings(toolbar =>
 
-            toolbar.ShowToolbar().ToolbarItems(items =>
+	{
 
-            {
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                items.AddTool(ToolBarItems.Add);
+		{
 
-                items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Add);
 
-                items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Edit);
 
-                items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Delete);
 
-                items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Update);
 
-            });
+			items.AddTool(ToolBarItems.Cancel);
 
-        })
+		});
 
-        .AllowPaging()
+	})
 
-        .Columns(col =>
+	.AllowPaging()
 
-        {
+	.Columns(col =>
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
+	{
 
-            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").EditTemplate(a => { a.Create("create").Read("read").Write("write"); }).TextAlign(TextAlign.Right).Width(90).Add();
+		col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").EditTemplate(a => { a.Create("create").Read("read").Write("write"); }).TextAlign(TextAlign.Right).Width(90).Add();
 
-            col.Field("ShipName").HeaderText("ShipName").Width(90).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
 
-               col.Field("ShipCountry").HeaderText("ShipCountry").Width(90).EditType(EditingType.Dropdown).Add();
+		col.Field("ShipName").HeaderText("ShipName").Width(90).Add();
 
-        })
+		   col.Field("ShipCountry").HeaderText("ShipCountry").Width(90).EditType(EditingType.Dropdown).Add();
 
-    )
+	})
+
+)
+
+<script type="text/javascript">
+
+	function create() 
+	{
+
+		return $("<input>");
+
+	}
+
+
+
+	function write(args) 
+	{
+
+		args.element.ejMaskEdit({ width: "100%", maskFormat: "9", value: args.rowdata !== undefined ? args.rowdata["EmployeeID"] : "" });
+
+	}
+
+
+
+	function read(args) 
+	{
+
+		return args.ejMaskEdit("get_StrippedValue");
+
+	}
+
+</script>
 {% endhighlight  %}
 
-{% highlight js %}
-    <script type="text/javascript">
-
-        function create() {
-
-            return $("<input>");
-
-        }
-
-
-
-        function write(args) {
-
-            args.element.ejMaskEdit({ width: "100%", maskFormat: "9", value: args.rowdata !== undefined ? args.rowdata["EmployeeID"] : "" });
-
-        }
-
-
-
-        function read(args) {
-
-            return args.ejMaskEdit("get_StrippedValue");
-
-        }
-
-    </script>
-{% endhighlight  %}
-
-{% highlight c# %}
+{% highlight C# %}
  
 
 namespace MVCSampleBrowser.Controllers
@@ -426,13 +439,13 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 
 ![](Editing_images/Editing_img5.png)
 
-_Figure : Edit Template_
-
+Edit Template
+{:.caption}
 
 
 ## Edit Mode
@@ -455,62 +468,64 @@ This feature allows you to edit various fields of a single record, simultaneousl
 
 
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
-  @(Html.EJ().Grid<object>("Editing")
+@(Html.EJ().Grid<object>("Editing")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+	.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
-.EditMode(EditMode.Normal); })
+	.EditMode(EditMode.Normal); })
 
-        .ToolbarSettings(toolbar =>
+	.ToolbarSettings(toolbar =>
 
-            {
+		{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+			toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+			{
 
-                    items.AddTool(ToolBarItems.Add);
+				items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+				items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+				items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+				items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+				items.AddTool(ToolBarItems.Cancel);
 
-                });
+			});
 
-            })
+		})
 
-        .AllowPaging(true)
+	.AllowPaging(true)
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+		col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+		col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+		col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
 
-        })
+	})
 
-        )
+	)
 
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -536,7 +551,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -544,69 +559,71 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img6.png)
 
-_Figure : Normal Editing_
-
+Normal Editing
+{:.caption}
 
 ### Dialog Editing
 
 The Dialog Edit feature allows you to edit data, using a dialog box that has fields associated with the data record being edited. You can only edit the data stored in the fields that you have rendered to be visible. The following code example shows you how to set EditMode as Dialog.
 
 
-{% highlight js %}
+{% tabs %}
 
-  @(Html.EJ().Grid<object>("Editing")
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<object>("Editing")
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.Datasource((IEnumerable<object>)ViewBag.datasource)
+
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .EditMode(EditMode.Dialog); })
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-            {
+	{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+		{
 
-                    items.AddTool(ToolBarItems.Add);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Cancel);
 
-                });
+		});
 
-            })
+	})
 
-        .AllowPaging(true)
+.AllowPaging(true)
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+	col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
 
-        })
+})
 
-        )
+)
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -631,79 +648,82 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 
 {% endhighlight  %}
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img7.png)
-_Figure : Dialog Editing_ 
+
+Dialog Editing
+{:.caption}
 
 
 ### Inline Form Editing
 
 This feature allows you to edit various fields of a single record, simultaneously. It is called inline because it is shown in between two rows, called as rows of control. After you have edited a row, the inline form is displayed. The following code example shows you how to set EditMode as InlineForm.
 
-{% highlight js %}
+
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
+@(Html.EJ().Grid<object>("Editing")
 
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-
-  @(Html.EJ().Grid<object>("Editing")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .EditMode(EditMode.InlineForm); })
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-            {
+	{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+		{
 
-                    items.AddTool(ToolBarItems.Add);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Cancel);
 
-                });
+		});
 
-            })
+	})
 
-        .AllowPaging(true)
+.AllowPaging(true)
 
-        .PageSettings(page => { page.PageSize(8); })
+.PageSettings(page => { page.PageSize(8); })
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+	col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
 
-        })
+})
 
-        )
+)
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -728,15 +748,15 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 
 {% endhighlight  %}
-
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img8.png)
 
-_Figure : Inline Form Editing_
-
+Inline Form Editing
+{:.caption}
 
 ### External Form Editing
 
@@ -747,65 +767,67 @@ This is different from the Dialog Editing mode in that it allows you to see the 
 You can position the edit form either in the top-right corner or the bottom-left corner (by default) of the Grid. The following code example shows you how to set EditMode as ExternalForm.
 
 
+{% tabs %}
+ 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().Grid<object>("Editing")
+@(Html.EJ().Grid<object>("Editing")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .EditMode(EditMode.InlineForm)
 
-                                  .FormPosition(FormPosition.BottomLeft); })
+.FormPosition(FormPosition.BottomLeft); })
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-            {
+	{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+		{
 
-                    items.AddTool(ToolBarItems.Add);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Cancel);
 
-                });
+		});
 
-            })
+	})
 
-        .AllowPaging(true)
+.AllowPaging(true)
 
-        .PageSettings(page => { page.PageSize(8); })
+.PageSettings(page => { page.PageSize(8); })
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-            col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+	col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
 
-        })
+})
 
-        )
+)
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -836,14 +858,15 @@ namespace SyncfusionMvcApplication3.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img9.png)
 
-_Figure : External Form Editing_
+External Form Editing
+{:.caption}
 
 ### Template Form Editing
 
@@ -865,68 +888,69 @@ In Inline Template, you can specify the template inside the script tag and selec
 
 <script id="template" type="text/template">
 
-        <table cellspacing="10">
+	<table cellspacing="10">
 
-            <tr>
+		<tr>
 
-                <td style="text-align: right;">Order ID
+			<td style="text-align: right;">Order ID
 
-                </td>
+			</td>
 
-                <td style="text-align: left">
+			<td style="text-align: left">
 
-                    <input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" />
+				<input id="OrderID" name="OrderID" value="{{: OrderID}}" disabled="disabled" />
 
-                </td>
+			</td>
 
-                <td style="text-align: right;">Customer ID
+			<td style="text-align: right;">Customer ID
 
-                </td>
+			</td>
 
-                <td style="text-align: left">
+			<td style="text-align: left">
 
-                    <input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" />
+				<input id="CustomerID" name="CustomerID" value="{{: CustomerID}}" />
 
-                </td>
+			</td>
 
-            </tr>
+		</tr>
 
-            <tr>
+		<tr>
 
-                <td style="text-align: right;">Employee ID
+			<td style="text-align: right;">Employee ID
 
-                </td>
+			</td>
 
-                <td style="text-align: left">
+			<td style="text-align: left">
 
-                    <input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" />
+				<input type="text" id="EmployeeID" name="EmployeeID" value="{{:EmployeeID}}" />
 
-                </td>
+			</td>
 
-                <td style="text-align: right;">Ship City
+			<td style="text-align: right;">Ship City
 
-                </td>
+			</td>
 
-                <td style="text-align: left">
+			<td style="text-align: left">
 
-                    <input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
+				<input id="ShipCity" name="ShipCity" value="{{: ShipCity}}" class="e-field e-ejinputtext valid" style="width: 116px; height: 28px" />
 
-                </td>
+			</td>
 
+		</tr>
 
+	</table>
 
-            </tr>
-
-        </table>
-
-    </script>
+</script>
 
 
 {% endhighlight  %}
 
 
 To enable Inline Template edit, set EditMode as InlineTemplateForm and InlineFormTemplateID property of Grid as follows. 
-{% highlight js %}
+
+{% tabs %}
+  
+{% highlight CSHTML %}
 
 
   @(Html.EJ().Grid<object>("Editing")
@@ -935,9 +959,9 @@ To enable Inline Template edit, set EditMode as InlineTemplateForm and InlineFor
 
         .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
-.EditMode(EditMode.InlineTemplateForm)
+		.EditMode(EditMode.InlineTemplateForm)
 
-                                      .InlineFormTemplateID("#template");})
+        .InlineFormTemplateID("#template");})
 
         .ToolbarSettings(toolbar =>
 
@@ -982,7 +1006,7 @@ To enable Inline Template edit, set EditMode as InlineTemplateForm and InlineFor
         )
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1009,14 +1033,15 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img10.png)
 
-_Figure : Inline Template Form Editing_
+Inline Template Form Editing
+{:.caption}
 
 In the above screenshot you can see that the elements are not rendered based on the type of the column. For example, in Freight column, the textbox is rendered instead of NumericTextBox.
 
@@ -1026,17 +1051,19 @@ Through the ActionCompleteGrid event, you can achieve this.
 
 
 
+{% tabs %}
 
-{% highlight html %}
+
+{% highlight CSHTML %}
 
 
-  @(Html.EJ().Grid<object>("Editing")
+@(Html.EJ().Grid<object>("Editing")
 
-        //. . . .
 
-        .ClientSideEvents(eve => { eve.ActionComplete("complete"); })
 
-        )
+.ClientSideEvents(eve => { eve.ActionComplete("complete"); })
+
+)
 
 {% endhighlight %}
 {% highlight js %}
@@ -1056,7 +1083,7 @@ Through the ActionCompleteGrid event, you can achieve this.
 </script>
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1082,13 +1109,15 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 Now, the elements defined in the templates, are changed to JavaScript controls. You can see the entire code example for Template editing as follows.
 
 
 
-{% highlight js %}
+{% tabs %}
+  
+{% highlight CSHTML %}
 
 <script id="template" type="text/template">
 
@@ -1150,7 +1179,7 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
 {% endhighlight  %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -1160,9 +1189,9 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
         .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
-.EditMode(EditMode.InlineTemplateForm)
+		.EditMode(EditMode.InlineTemplateForm)
 
-                                      .InlineFormTemplateID("#template");})
+        .InlineFormTemplateID("#template");})
 
         .ToolbarSettings(toolbar =>
 
@@ -1227,7 +1256,7 @@ Now, the elements defined in the templates, are changed to JavaScript controls. 
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1255,7 +1284,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -1263,30 +1292,29 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img11.png)
 
-_Figure : Inline Template Form Editing with actionComplete events_
-
+Inline Template Form Editing with actionComplete events
+{:.caption}
 
 #### External Template Form Editing
 
 The above mentioned procedure applies to ExternalTemplate editing feature also. Use the given code example instead of setting InlineTemplateForm as EditMode.
 
 
-{% highlight html %}
+{% highlight CSHTML%}
 
 
 
+@(Html.EJ().Grid<object>("Editing")
 
-  @(Html.EJ().Grid<object>("Editing")
-
-             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => 
+{ 
+edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .EditMode(EditMode.ExternalFormTemplate)
 
-                                  .ExternalFormTemplateID("#template");})
+.ExternalFormTemplateID("#template");})
 
-             )
-
-
+)
 
 {% endhighlight  %}
 
@@ -1296,7 +1324,8 @@ The following screenshot shows External Template Form Editing.
 
 ![](Editing_images/Editing_img12.png)
 
-_Figure : External Template Form Editing_
+External Template Form Editing
+{:.caption}
 
 #### Dialog Template Editing
 
@@ -1305,17 +1334,17 @@ The above mentioned procedure applies to DialogTemplate editing feature also. Us
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().Grid<object>("Editing")
+@(Html.EJ().Grid<object>("Editing")
 
-             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
-                                  .EditMode(EditMode.DialogTemplate)
+.EditMode(EditMode.DialogTemplate)
 
-                                  .DialogEditorTemplateID("#template");})
+.DialogEditorTemplateID("#template");})
 
-             )
+)
 
 
 
@@ -1327,7 +1356,8 @@ The following screenshot shows Dialog Template Form Editing.
 
 ![](Editing_images/Editing_img13.png)
 
-_Figure : Dialog Template Form Editing_
+Dialog Template Form Editing
+{:.caption}
 
 ### Batch Editing
 
@@ -1336,61 +1366,62 @@ This feature allows you to edit various fields of the Grid, simultaneously, with
 Edited data is marked on the Grid, so that you know which fields or cells have been edited.
 These markers are not shown after the updated data is rendered. The following code example shows you how to enable Excel-like editing, also called Batchediting, in Grid.
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().Grid<object>("Editing")
+@(Html.EJ().Grid<object>("Editing")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .EditMode(EditMode.Batch); })
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-            {
+	{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+		{
 
-                    items.AddTool(ToolBarItems.Add);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Cancel);
 
-                });
+		});
 
-            })
+	})
 
-        .AllowPaging(true)
+.AllowPaging(true)
 
-        .PageSettings(page => { page.PageSize(8); })
+.PageSettings(page => { page.PageSize(8); })
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-        })
+})
 
-        )
+)
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1417,14 +1448,15 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img14.png)
 
-_Figure : Batch Editing_
+Batch Editing
+{:.caption}
 
 When the Save or Cancel button is clicked, or performing an action before you save the edited records, the Confirmation message is displayed. 
 
@@ -1434,8 +1466,8 @@ The following screenshot shows the Confirmation Dialog box.
 
 ![](Editing_images/Editing_img15.png)
 
-_Figure : Batch Editing with Confimation Dialog box_
-
+Batch Editing with Confimation Dialog box
+{:.caption}
 
 
 ## Validation
@@ -1447,12 +1479,12 @@ For validation you can refer the following two jquery validation script files.
 1. jquery.validate.min.js
 2. jquery.validate.unobtrusive.min.js
 
-### jQuery Validation Methods
+#### jQuery Validation Methods
 
 
 The following are jquery validation methods.
 
-_Table4: List of jquery validation methods_
+_List of jquery validation methods_
 
 <table>
 <tr>
@@ -1528,62 +1560,63 @@ equalTo</td><td>
 
 The following code example shows you how to include the jquery validation support for Grid while editing the records.
 
+{% tabs %}
+ 
+{% highlight CSHTML%}
 
-{% highlight html %}
+@(Html.EJ().Grid<object>("Editing")
 
-  @(Html.EJ().Grid<object>("Editing")
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
+.ToolbarSettings(toolbar =>
 
-        .ToolbarSettings(toolbar =>
+	{
 
-            {
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+		{
 
-                {
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Add);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Cancel);
 
-                    items.AddTool(ToolBarItems.Cancel);
+		});
 
-                });
+	})
 
-            })
+.AllowPaging(true)
 
-        .AllowPaging(true)
+.PageSettings(page => { page.PageSize(8); })
 
-        .PageSettings(page => { page.PageSize(8); })
+.Columns(col =>
 
-        .Columns(col =>
+{
 
-        {
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).ValidationRules(v => v.AddRule("required", true)).Add();
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).ValidationRules(v => v.AddRule("required", true)).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Format("{0:C}").ValidationRules(v => v.AddRule("range", "[0,1000]")).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Format("{0:C}").ValidationRules(v => v.AddRule("range", "[0,1000]")).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+})
 
-        })
-
-        )
+)
 
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1609,7 +1642,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -1617,66 +1650,69 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img16.png)
 
-_Figure : JQuery Validation Methods_
+JQuery Validation Methods
+{:.caption}
 
 ### Custom Validation
 
 In addition to jquery validation methods, you can also add your own custom validation methods for a specific column. The following code example shows you how to specify the custom validation for a specific column.
 
-{% highlight html %}
+{% tabs %}
 
-  @(Html.EJ().Grid<object>("Editing")
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<object>("Editing")
 
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .ToolbarSettings(toolbar =>
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
 
-            {
+.ToolbarSettings(toolbar =>
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+	{
 
-                {
+		toolbar.ShowToolbar().ToolbarItems(items =>
 
-                    items.AddTool(ToolBarItems.Add);
+		{
 
-                    items.AddTool(ToolBarItems.Edit);
+			items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Delete);
+			items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Update);
+			items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Cancel);
+			items.AddTool(ToolBarItems.Update);
 
-                });
+			items.AddTool(ToolBarItems.Cancel);
 
-            })
+		});
 
-        .AllowPaging(true)
+	})
 
-        .PageSettings(page => { page.PageSize(8); })
+.AllowPaging(true)
 
-        .Columns(col =>
+.PageSettings(page => { page.PageSize(8); })
 
-        {
+.Columns(col =>
+
+{
 
 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).ValidationRules(v => v.AddRule("required", true)).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).ValidationRules(v => v.AddRule("customRegex", 5)).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).ValidationRules(v => v.AddRule("customRegex", 5)).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Format("{0:C}").Format("{0:C}").ValidationRules(v => v.AddRule("customCompare", "[1, 9]")).Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Format("{0:C}").Format("{0:C}").ValidationRules(v => v.AddRule("customCompare", "[1, 9]")).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-        })
+})
 
-        )
+)
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -1732,7 +1768,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -1740,7 +1776,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img17.png)
 
-_Figure : Custom Validation Methods_
+Custom Validation Methods
+{:.caption}
 
 ## CRUD Operation With Server-Side
 
@@ -1751,7 +1788,7 @@ The Server-Side CRUD operation can be performed by using the following adaptor m
 
 The Server-Side function is declared with the following parameters for each editing functionality.
 
-_Table5: Parameters Table_
+_Parameters Table_
 
 <table>
 <tr>
@@ -1786,78 +1823,79 @@ You can use the UrlAdaptor of DataManger when binding datasource from remote dat
 Also when you use UrlAdaptor, you need to return the data as JSON and the JSON object must contain field name as “result” with its value as dataSource and one more field name as “count” with its value as dataSource total records count.
 
 
-
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 @(Html.EJ().Grid<EJGrid.Models.Order>("Editing")
-        .Datasource(ds => ds.URL("Home/DataSource").UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(Adaptor.UrlAdaptor))
-        .AllowSorting()
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
-		.ToolbarSettings(toolbar =>
-		{    
-			toolbar.ShowToolbar().ToolbarItems(items =>
-			{
-				items.AddTool(ToolBarItems.Add);
-				items.AddTool(ToolBarItems.Edit);
-				items.AddTool(ToolBarItems.Delete);
-				items.AddTool(ToolBarItems.Update);
-				items.AddTool(ToolBarItems.Cancel);
-            });
-		})
-			.AllowPaging()
-			.Columns(col =>
-			{        
-				col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
-				col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true)).Add();
-				col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").Add(); 
-				col.Field("ShipCity").HeaderText("ShipCity").Width(150).Add();
-     		}))
+.Datasource(ds => ds.URL("Home/DataSource").UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(Adaptor.UrlAdaptor))
+.AllowSorting()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+.ToolbarSettings(toolbar =>
+{    
+toolbar.ShowToolbar().ToolbarItems(items =>
+{
+	items.AddTool(ToolBarItems.Add);
+	items.AddTool(ToolBarItems.Edit);
+	items.AddTool(ToolBarItems.Delete);
+	items.AddTool(ToolBarItems.Update);
+	items.AddTool(ToolBarItems.Cancel);
+});
+})
+.AllowPaging()
+.Columns(col =>
+{        
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true)).Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").Add(); 
+	col.Field("ShipCity").HeaderText("ShipCity").Width(150).Add();
+}))
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
- namespace EJGrid.Controllers
- {
-	public class HomeController : Controller
-    {
-		public ActionResult Index()
-        {
-			return View();
-		} 
-		public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
-        {
-			var DataSource = OrderRepository.GetAllRecords(); 
-			DataResult result = new DataResult();     
-			result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
-            result.count = DataSource.Count();      
-			return Json(result, JsonRequestBehavior.AllowGet); 
-		} 
-		public class DataResult
-        {
-			public IEnumerable<EditableOrder> result { get; set; } 
-			public int count { get; set; } 
-		}  
-		public ActionResult Update(EditableOrder value)
-        {      
-			OrderRepository.Update(value); 
-			var data = OrderRepository.GetAllRecords(); 
-			return Json(data, JsonRequestBehavior.AllowGet);
-		}     
-		public ActionResult Insert(EditableOrder value) 
-		{  
-			OrderRepository.Add(value);  
-			var data = OrderRepository.GetAllRecords(); 
-			return Json(data, JsonRequestBehavior.AllowGet);
-		}  
-		public ActionResult Delete(int key)
-        {          
-			OrderRepository.Delete(key); 
-			var data = OrderRepository.GetAllRecords(); 
-			return Json(data, JsonRequestBehavior.AllowGet);
-		}   
-	}
+namespace EJGrid.Controllers
+{
+public class HomeController : Controller
+{
+	public ActionResult Index()
+	{
+		return View();
+	} 
+	public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+	{
+		var DataSource = OrderRepository.GetAllRecords(); 
+		DataResult result = new DataResult();     
+		result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
+		result.count = DataSource.Count();      
+		return Json(result, JsonRequestBehavior.AllowGet); 
+	} 
+	public class DataResult
+	{
+		public IEnumerable<EditableOrder> result { get; set; } 
+		public int count { get; set; } 
+	}  
+	public ActionResult Update(EditableOrder value)
+	{      
+		OrderRepository.Update(value); 
+		var data = OrderRepository.GetAllRecords(); 
+		return Json(data, JsonRequestBehavior.AllowGet);
+	}     
+	public ActionResult Insert(EditableOrder value) 
+	{  
+		OrderRepository.Add(value);  
+		var data = OrderRepository.GetAllRecords(); 
+		return Json(data, JsonRequestBehavior.AllowGet);
+	}  
+	public ActionResult Delete(int key)
+	{          
+		OrderRepository.Delete(key); 
+		var data = OrderRepository.GetAllRecords(); 
+		return Json(data, JsonRequestBehavior.AllowGet);
+	}   
+}
 }
 {% endhighlight  %}
 
-
+{% endtabs %} 
 ### remoteSave Adaptor
 
 The RemoteSaveAdaptor of DataManager can be used when you bind local data to Grid datasource. CRUD operations in Grid local data can be mapped to server-side controller using CRUDURL’s “InsertUrl”, “UpdateUrl” and “RemoveUrl”.
@@ -1867,63 +1905,64 @@ When you use RemoteSaveAdaptor, server-side post back occurs only for CRUD actio
 
 
 
+{% tabs %}
 
-{% highlight js %}
- @(Html.EJ().Grid<EJGrid.Models.Order>("Editing")
- .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.dataSource).UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(AdaptorType.RemoteSaveAdaptor))
- .AllowSorting()
- .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
- .ToolbarSettings(toolbar =>
- { 
-	toolbar.ShowToolbar().ToolbarItems(items =>
-	{     
-		items.AddTool(ToolBarItems.Add); 
-		items.AddTool(ToolBarItems.Edit); 
-		items.AddTool(ToolBarItems.Delete);  
-		items.AddTool(ToolBarItems.Update);   
-		items.AddTool(ToolBarItems.Cancel); 
-	}); 
+{% highlight CSHTML %}
+@(Html.EJ().Grid<EJGrid.Models.Order>("Editing")
+.Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.dataSource).UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(AdaptorType.RemoteSaveAdaptor))
+.AllowSorting()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+.ToolbarSettings(toolbar =>
+{ 
+toolbar.ShowToolbar().ToolbarItems(items =>
+{     
+	items.AddTool(ToolBarItems.Add); 
+	items.AddTool(ToolBarItems.Edit); 
+	items.AddTool(ToolBarItems.Delete);  
+	items.AddTool(ToolBarItems.Update);   
+	items.AddTool(ToolBarItems.Cancel); 
+}); 
 }) 
 .AllowPaging()
 .Columns(col => 
 {      
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true)).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").Add(); 
-	col.Field("ShipCity").HeaderText("ShipCity").Width(150).Add();
+col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).Add();
+col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).ValidationRules(v => v.AddRule("required", true)).Add();            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).EditType(EditingType.Numeric).Format("{0:C}").Add(); 
+col.Field("ShipCity").HeaderText("ShipCity").Width(150).Add();
 }))
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
  During post back, dataSource for Grid needs to be returned as JSON.
- namespace EJGrid.Controllers
- {
-	public class HomeController : Controller
+namespace EJGrid.Controllers
+{
+public class HomeController : Controller
+{
+	public ActionResult Index()
 	{
-		public ActionResult Index()
-        {
-			ViewBag.dataSource = OrderRepository.GetAllRecords(); 
-			return View(); 
-		}   
-		public ActionResult Update(EditableOrder value) 
-		{   
-			OrderRepository.Update(value); 
-			var data = OrderRepository.GetAllRecords();return Json(data, JsonRequestBehavior.AllowGet); 
-		}     
-		public ActionResult Insert(EditableOrder value) 
-		{
-			OrderRepository.Add(value);
-            var data = OrderRepository.GetAllRecords();return Json(data, JsonRequestBehavior.AllowGet);
-		}
-        public ActionResult Delete(int key)
-        {         
-			OrderRepository.Delete(key); 
-			var data = OrderRepository.GetAllRecords(); 
-			return Json(data, JsonRequestBehavior.AllowGet);
-		} 
+		ViewBag.dataSource = OrderRepository.GetAllRecords(); 
+		return View(); 
+	}   
+	public ActionResult Update(EditableOrder value) 
+	{   
+		OrderRepository.Update(value); 
+		var data = OrderRepository.GetAllRecords();return Json(data, JsonRequestBehavior.AllowGet); 
+	}     
+	public ActionResult Insert(EditableOrder value) 
+	{
+		OrderRepository.Add(value);
+		var data = OrderRepository.GetAllRecords();return Json(data, JsonRequestBehavior.AllowGet);
 	}
+	public ActionResult Delete(int key)
+	{         
+		OrderRepository.Delete(key); 
+		var data = OrderRepository.GetAllRecords(); 
+		return Json(data, JsonRequestBehavior.AllowGet);
+	} 
+}
 }
 {% endhighlight  %}
 
-
+{% endtabs %}  
 
 
 The output for the Server Binding of records is as follows:
@@ -1932,20 +1971,19 @@ The output for the Server Binding of records is as follows:
 
 ![](Editing_images/Editing_img18.png)
 
-
-
-_Figure63: Edit_
-
+Edit
+{:.caption}
 
 
 ![](Editing_images/Editing_img19.png)
 
-_Figure : Server Bind_
+Server Bind
+{:.caption}
 
 ![](Editing_images/Editing_img20.png)
 
-_Figure : Console Post_
-
+Console Post
+{:.caption}
 
 
 ## Editing Remote Data
@@ -1960,7 +1998,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
    ![](Editing_images/Editing_img21.png)
 
-   _Figure : WCF Dataservice_
+   WCF Dataservice
+   {:.caption}
    
 2. Select ASP.NETEmpty Web Application and click OK.
 3. Create empty folders named App_Data and Models in the root of the application.
@@ -1973,7 +2012,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
    ![](Editing_images/Editing_img22.png)
 
-   _Figure : Creating a New Entity Data Model_
+   Creating a New Entity Data Model
+   {:.caption}
 
 
 8. Select the ADO.NET Entity Data Model template, give the Entity Data Model the name Northwind.edmx, and click the Add button. Click Add to launch the Data Model Wizard. 
@@ -1983,7 +2023,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
    ![](Editing_images/Editing_img23.png)
 
-   _Figure : Entity Data Model Wizard_ 
+   Entity Data Model Wizard
+   {:.caption}
 
 10. In the Choose Your Data Connection step, select the NORTHWND.MDF database connection, enter the entities connection settings name NORTHWNDEntities and click Next.
 
@@ -1991,7 +2032,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
     ![](Editing_images/Editing_img24.png)
 
-    _Figure : Entity Data Model Wizard_
+    Entity Data Model Wizard
+	{:.caption}
 
 11. In the Choose Your Database Objects step, select all the database tables and click Finish.
 
@@ -1999,7 +2041,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
     ![](Editing_images/Editing_img25.png)
     
-	_Figure : Entity Data Model Wizard_
+	Entity Data Model Wizard
+	{:.caption}
 
 
     When you are finished, you can see the following image.
@@ -2008,7 +2051,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
     ![](Editing_images/Editing_img26.png)
   
-    _Figure : GridDemo_
+    GridDemo
+	{:.caption}
 
 
 12. Right-click the Models folder in the Solution Explorer window and select the Menu option Add New Item.
@@ -2018,7 +2062,8 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
     ![](Editing_images/Editing_img27.png)
 
-    _Figure :Add New Item- GridDemo_
+    Add New Item- GridDemo
+	{:.caption}
 
 14. The WCF Data Service file is created. Open the Nothwnd.svs.cs file and set the NORTHWNDEntities as a class for the DataService.
 
@@ -2034,101 +2079,97 @@ The Grid control for JavaScript allows you to bind and edit data from the local 
 
 15. Add the highlighted line in the Nothwnd.svs.cs.
 
-	~~~ cs
+	~~~ csharp
 
-		public static void InitializeService(DataServiceConfiguration config)
+	public static void InitializeService(DataServiceConfiguration config)
 
-				{
+	{
 
-					// TODO: Set rules to indicate which entity sets and service operations are visible, updatable, etc.
+		// TODO: Set rules to indicate which entity sets and service operations are visible, updatable, etc.
 
-					// Examples:
+		// Examples:
 
-					// config.SetEntitySetAccessRule("MyEntityset", EntitySetRights.AllRead);
+		// config.SetEntitySetAccessRule("MyEntityset", EntitySetRights.AllRead);
 
-					// config.SetServiceOperationAccessRule("MyServiceOperation", ServiceOperationRights.All);
+		// config.SetServiceOperationAccessRule("MyServiceOperation", ServiceOperationRights.All);
 
-					config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
+		config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
 
-					config.SetEntitySetAccessRule("*", EntitySetRights.All);
+		config.SetEntitySetAccessRule("*", EntitySetRights.All);
 
-				}
+	}
 
     ~~~
-    {:.prettyprint }
+    
 16. Refer to the following code sample to get the data from the local server.
 
     ~~~ js
 	
-		var dataManger = ej.DataManager({
+	var dataManger = ej.DataManager
+	({
 
-						url: "/model/Northwnd.svc/Orders"
+					url: "/model/Northwnd.svc/Orders"
 
-		});
+	});
 
     ~~~
-    {:.prettyprint }
+    
 
 17. Add the following codes into the HTML page.
 
 
-    ~~~ html
+    ~~~ cshtml
 
+	@(Html.EJ().Grid<object>("Editing")
 
+	.Datasource(ds => { ds.URL("/model/Northwnd.svc/Orders"); })
 
+	.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
 
-		@(Html.EJ().Grid<object>("Editing")
+	.ToolbarSettings(toolbar =>
 
-			.Datasource(ds => { ds.URL("/model/Northwnd.svc/Orders"); })
+		{
 
-			.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing();})
-
-			.ToolbarSettings(toolbar =>
-
-				{
-
-					toolbar.ShowToolbar().ToolbarItems(items =>
-
-					{
-
-						items.AddTool(ToolBarItems.Add);
-
-						items.AddTool(ToolBarItems.Edit);
-
-						items.AddTool(ToolBarItems.Delete);
-
-						items.AddTool(ToolBarItems.Update);
-
-						items.AddTool(ToolBarItems.Cancel);
-
-					});
-
-				})
-
-			.AllowPaging(true)        
-
-			.Columns(col =>
+			toolbar.ShowToolbar().ToolbarItems(items =>
 
 			{
 
-				col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+				items.AddTool(ToolBarItems.Add);
 
-				col.Field("CustomerID").HeaderText("Customer ID").Add();
+				items.AddTool(ToolBarItems.Edit);
 
-				col.Field("ShipCity").HeaderText("Ship City").Add();
+				items.AddTool(ToolBarItems.Delete);
 
-					col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}").Add();
+				items.AddTool(ToolBarItems.Update);
 
-			   col.Field("ShipCountry").HeaderText("Ship Country").Add();
+				items.AddTool(ToolBarItems.Cancel);
 
-			})
+			});
 
-			)
+		})
 
+	.AllowPaging(true)        
 
+	.Columns(col =>
+
+	{
+
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+
+		col.Field("CustomerID").HeaderText("Customer ID").Add();
+
+		col.Field("ShipCity").HeaderText("Ship City").Add();
+
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}").Add();
+
+	   col.Field("ShipCountry").HeaderText("Ship Country").Add();
+
+	})
+
+	)
 
     ~~~
-    {:.prettyprint }
+    
 
 
 
@@ -2138,7 +2179,8 @@ The output for the above Grid creation with editing options code example is as f
 
 ![](Editing_images/Editing_img28.png)
 
-_Figure : Editing Remote Data_
+Editing Remote Data
+{:.caption}
 
 ## Adding New Row Position
 
@@ -2151,32 +2193,34 @@ Grid supports two types of rowposition. They are
 
 The following code example illustrates you how to set RowPosition.
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Grid<RowPosition.Models.Order>("FlatGrid")
 
-        	.Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-            .EditSettings(edit => { edit.RowPosition(Rowposition.Bottom) AllowAdding().AllowDeleting().AllowEditing(); })
+.EditSettings(edit => { edit.RowPosition(Rowposition.Bottom) AllowAdding().AllowDeleting().AllowEditing(); })
 
-        	.AllowPaging()        
+.AllowPaging()        
 
-        	.Columns(col =>
+.Columns(col =>
 
-        	{
+{
 
-            	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-            	col.Field("CustomerID").HeaderText("Customer ID").Add();
+	col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            	col.Field("EmployeeID").HeaderText("Employee ID"). TextAlign(TextAlign.Right).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID"). TextAlign(TextAlign.Right).Add();
 
-            	col.Field("ShipCity").HeaderText("Ship City") .EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City") .EditType(EditingType.Dropdown).Add();
 
-        	}))
+}))
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -2206,14 +2250,15 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Editing_images/Editing_img29.png)
 
-_Figure74: Adding new row position_
+Adding new row position
+{:.caption}
 
 ## Render grid with add new row
 
@@ -2221,65 +2266,61 @@ In Grid, there is an option toshow the newly add row at the bottom or top of the
 
 This property helps you to add a new row dynamically and save the record either top or bottom of the Grid.
 
-{% highlight html %}
-
-
-
-
-
-
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<object>("FlatGrid")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
 .AllowPaging()    /*Paging Enabled*/
 
-                  .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().RowPosition(RowPosition.Bottom).ShowAddNewRow(); })
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().RowPosition(RowPosition.Bottom).ShowAddNewRow(); })
 
-              .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-                {
+{
 
-                 toolbar.ShowToolbar().ToolbarItems(items =>
+ toolbar.ShowToolbar().ToolbarItems(items =>
 
-                 {
+ {
 
-                  items.AddTool(ToolBarItems.Add);
+  items.AddTool(ToolBarItems.Add);
 
-                  items.AddTool(ToolBarItems.Edit);
+  items.AddTool(ToolBarItems.Edit);
 
-                  items.AddTool(ToolBarItems.Delete);
+  items.AddTool(ToolBarItems.Delete);
 
-                  items.AddTool(ToolBarItems.Update);
+  items.AddTool(ToolBarItems.Update);
 
-                  items.AddTool(ToolBarItems.Cancel);
+  items.AddTool(ToolBarItems.Cancel);
 
-                });
+});
 
-              })
+})
 
 .Columns(col =>
 
-        {
+{
 
-         col.Field("OrderID").HeaderText("OrderID").IsPrimaryKey(true).Add();
+col.Field("OrderID").HeaderText("OrderID").IsPrimaryKey(true).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
+col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").Add();
+col.Field("EmployeeID").HeaderText("Employee ID").Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Add();
+col.Field("ShipCity").HeaderText("Ship City").Add();
 
-            col.Field("ShipName").HeaderText("Ship Name").Add(); 
+col.Field("ShipName").HeaderText("Ship Name").Add(); 
 
 
 
-        }))
+}))
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MvcApplication2.Controllers
 
@@ -2309,11 +2350,11 @@ namespace MvcApplication2.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 
 The following screenshot is the output of the above code example.
 
 ![](Editing_images/Editing_img30.png)
 
-_Figure : Grid with new row_
-
+Grid with new row
+{:.caption}

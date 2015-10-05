@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | OLAPClient | ASP.NET MVC | Syncfusion
 description: localization 
 platform: ejmvc
 control: OLAPClient
@@ -13,7 +13,7 @@ Localization is theprocess of customizing the UI (User Interface) as locale-spec
 
 The following table lists the default English localization User Interface based on French culture.
 
-_Table: List of default English localization User Interface based on French culture_
+_List of default English localization User Interface based on French culture_
 
 <table>
 <tr>
@@ -214,21 +214,16 @@ And</td><td>
 The following code example shows how to localize OLAP Client’s User Interface (UI) based on French culture.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc").Locale("fr-FR")
-
-{% endhighlight %}
-
-
-{% highlight html %}
+@Html.EJ().Olap().OlapClient("OlapClient1")
+.Url("../wcf/OlapClientService.svc").Locale("fr-FR")
 
 <script type="text/javascript">
 
-    {
+{
 
-       ej.olap.OlapClient.locale["fr-FR"] = {
+		ej.olap.OlapClient.locale["fr-FR"] = {
 
             Column: "Colonne",
 
@@ -328,7 +323,7 @@ The following code example shows how to localize OLAP Client’s User Interface 
 
             }
 
-       ej.olap.OlapChart.locale["fr-FR"] = {
+      	 	ej.olap.OlapChart.locale["fr-FR"] = {
 
             Row: "Rangée",
 
@@ -357,9 +352,10 @@ N> In order to render the localized OLAP Client, we need to reset the content av
 To apply control side localization, use the following code example.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-ej.olap.OlapClient.locale["zh-CN"] = {
+ej.olap.OlapClient.locale["zh-CN"] = 
+{
 
 //Corresponding keyword values needs to be set here.
 
@@ -372,7 +368,7 @@ ej.olap.OlapClient.locale["zh-CN"] = {
 To get the localized Cube information, set LocaleIdentifier__in the connection string.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 //1036 refers to“fr-FR” culture.
 

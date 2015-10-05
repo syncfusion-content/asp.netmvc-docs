@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip
+title: Tooltip | OLAPGauge | ASP.NET MVC | Syncfusion
 description: tooltip
 platform: ejmvc
 control: OLAPGauge
@@ -14,7 +14,7 @@ Tooltip provides the information about the OlapGauge when you move the mouse poi
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -79,25 +79,26 @@ You can customize the Tooltip by overriding the existing style attributes and re
 
 <style>
 
-.e-olapgauge-tooltip {
+	.e-olapgauge-tooltip 
+	{
 
-  background-color: aqua !important;
+	  background-color: aqua !important;
 
-  border: 2px solid red !important;
+	  border: 2px solid red !important;
 
-  color: black !important;
+	  color: black !important;
 
-  border-radius: 18px!important;
+	  border-radius: 18px!important;
 
-  margin-top: 20px;
+	  margin-top: 20px;
 
-  text-align: left;
+	  text-align: left;
 
-  font: 12px Segoe UI;
+	  font: 12px Segoe UI;
 
-  line-height: 20px;
+	  line-height: 20px;
 
-}
+	}
 
 </style>
 

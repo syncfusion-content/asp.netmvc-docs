@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Slider | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
 control: Slider
@@ -31,72 +31,72 @@ ASP.NET MVC Slider controlallows you to switch between different ranges of input
 
 2. Add the following code example for Slider to the corresponding view page.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div class="frame">
+	<div class="frame">
 
-			<div class="inner">
+		<div class="inner">
 
-		<div class="ctrllabel">
+	<div class="ctrllabel">
 
-				Select a Mobile
+			Select a Mobile
 
-			</div>    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
+		</div>    @Html.EJ().DropDownList("selectMobile").TargetID("mobileList").Width("150px")
 
-			<div id="mobileList">
+		<div id="mobileList">
 
-				<ul>
+			<ul>
 
-					<li>Nokia Lumia</li>
+				<li>Nokia Lumia</li>
 
-					<li>Nokia Asha</li>
+				<li>Nokia Asha</li>
 
-					<li>Xolo</li>
+				<li>Xolo</li>
 
-					<li>Samsung Galaxy</li>
+				<li>Samsung Galaxy</li>
 
-					<li>Moto G</li>
+				<li>Moto G</li>
 
-				</ul> 
-
-			</div>
-
-				<span class="columnleft">
-
-				<span>Mobile Rate</span>
-
-			</span>
-
-			<span class="columnright">
-
-				<span>Rs </span><span class="value"></span>
-
-		</span>    
-
-		@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
-
-		<span class="Columnleft">
-
-					<span>Mobile Count</span>
-
-				</span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
-
-				You are choosing:
-
-				<span id="EventLog"></span>
-
-			   </div>
+			</ul> 
 
 		</div>
 
+			<span class="columnleft">
+
+			<span>Mobile Rate</span>
+
+		</span>
+
+		<span class="columnright">
+
+			<span>Rs </span><span class="value"></span>
+
+	</span>    
+
+	@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+
+	<span class="Columnleft">
+
+				<span>Mobile Count</span>
+
+			</span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+
+			You are choosing:
+
+			<span id="EventLog"></span>
+
+		   </div>
+
+	</div>
+
    ~~~
-   {:.prettyprint }
+   
 
 3. Add the following styles for Sliders.
 
 
    ~~~ css
-		<style>
+	<style>
 
 		.frame
 
@@ -144,55 +144,55 @@ ASP.NET MVC Slider controlallows you to switch between different ranges of input
 
 		.mobileList
 
-			{
+		{
 
-				display:block;
+			display:block;
 
-			}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 4. Add the following script to the Slider.
 
    ~~~ js
 
-		<script>
+	<script>
 
-				var mobileObj, rateObj, countObj;
+			var mobileObj, rateObj, countObj;
 
-				function onchange(args) {
+			function onchange(args) {
 
-					$('#' + args.id).parent().prev().find('.value').html(args.value)
+				$('#' + args.id).parent().prev().find('.value').html(args.value)
 
-					show();
+				show();
+
+			}
+
+			function show() {
+
+				selectObj = $('#selectMobile').data('ejDropDownList');
+
+				rateObj = $('#rateSlider').data('ejSlider');
+
+				countObj = $('#countSlider').data('ejSlider');
+
+				var x = selectObj.getValue();
+
+				var y = rateObj.getValue();
+
+				var z = countObj.getValue();
+
+				$('#EventLog').html("\n" + x + "\n" + "at Rs: " + y + "\n" + "and count is " + z);
 
 				}
 
-				function show() {
-
-					selectObj = $('#selectMobile').data('ejDropDownList');
-
-					rateObj = $('#rateSlider').data('ejSlider');
-
-					countObj = $('#countSlider').data('ejSlider');
-
-					var x = selectObj.getValue();
-
-					var y = rateObj.getValue();
-
-					var z = countObj.getValue();
-
-					$('#EventLog').html("\n" + x + "\n" + "at Rs: " + y + "\n" + "and count is " + z);
-
-					}
-
-		</script>
+	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 5. The following screenshot displays the final output in Slider creation.
 
@@ -200,7 +200,7 @@ ASP.NET MVC Slider controlallows you to switch between different ranges of input
 
 
 
-## EMI Calculator
+### EMI Calculator
 
 This section explains how to use the Slider control for EMI Calculation. The final result of EMI amount is calculated automatically based on the loan amount, interest rate and tenure amount based on the amount you choose using Slider.
 
@@ -209,73 +209,73 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div class="frame">
+	<div class="frame">
 
-			<div class="inner">
+		<div class="inner">
 
-				<div id="loanheading">
+			<div id="loanheading">
 
-					Details of Loan
+				Details of Loan
 
-				</div>
+			</div>
 
-				<span class="columnleft">
+			<span class="columnleft">
 
-					<span>Loan Amount</span>
+				<span>Loan Amount</span>
 
-				</span>
+			</span>
 
-				<span class="columnright">
+			<span class="columnright">
 
-					<span>Rs </span><span class="value">25000</span>
+				<span>Rs </span><span class="value">25000</span>
 
-				</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+			</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-				<span class="columnleft">
+			<span class="columnleft">
 
-					<span>Interest Rate</span>
+				<span>Interest Rate</span>
 
-				</span>
+			</span>
 
-				<span class="columnright">
+			<span class="columnright">
 
-					<span class="value"></span><span>% pa</span>
+				<span class="value"></span><span>% pa</span>
 
-				</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+			</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
 
-				<span class="columnleft">
+			<span class="columnleft">
 
-					<span>Tenure</span>
+				<span>Tenure</span>
 
-				</span>
+			</span>
 
-				<span class="columnright">
+			<span class="columnright">
 
-					<span class="value"></span><span>Years</span>
+				<span class="value"></span><span>Years</span>
 
-				</span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
+			</span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
 
-					Your Monthly EMI Amount is
+				Your Monthly EMI Amount is
 
-					<span id="EventLog"></span>
-
-				</div>
+				<span id="EventLog"></span>
 
 			</div>
 
 		</div>
 
+	</div>
+
    ~~~
-   {:.prettyprint }
+   
 
 3. Include the following styles for Slider.
 
 
-   ~~~ html
+   ~~~ css
    
-		<style>
+	<style>
 
 		.frame
 
@@ -327,67 +327,69 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		</style>
+	</style>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. Include the following script to calculate the EMI amount.
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
-				var loanObj, interestObj, tenureObj;
+		var loanObj, interestObj, tenureObj;
 
-				function onchange(args) {
+		function onchange(args) 
+		{
 
-					$('#' + args.id).parent().prev().find('.value').html(args.value)
+			$('#' + args.id).parent().prev().find('.value').html(args.value)
 
-					calculate();
+			calculate();
 
-				}
+		}
 
-				function calculate() {
+		function calculate() 
+		{
 
-					loanObj = $('#loanSlider').data('ejSlider');
+			loanObj = $('#loanSlider').data('ejSlider');
 
-					interestObj = $('#interestSlider').data('ejSlider');
+			interestObj = $('#interestSlider').data('ejSlider');
 
-					tenureObj = $('#tenureSlider').data('ejSlider');
+			tenureObj = $('#tenureSlider').data('ejSlider');
 
-					var loan = loanObj.getValue(), interest = interestObj.getValue(), tenure = tenureObj.getValue();
+			var loan = loanObj.getValue(), interest = interestObj.getValue(), tenure = tenureObj.getValue();
 
-					var P = loan;
+			var P = loan;
 
-					var y = interest / 1200;
+			var y = interest / 1200;
 
-					var tenureamt = tenure * 12;
+			var tenureamt = tenure * 12;
 
-					//actual processing
+			//actual processing
 
-					var top = y * (Math.pow((1 + y), tenureamt));
+			var top = y * (Math.pow((1 + y), tenureamt));
 
-					var bottom = (Math.pow((1 + y), tenureamt)) - 1;
+			var bottom = (Math.pow((1 + y), tenureamt)) - 1;
 
-					var ans = top / bottom;
+			var ans = top / bottom;
 
-					var final = P * ans;
+			var final = P * ans;
 
-					var z = Math.round(final);
+			var z = Math.round(final);
 
-					$('#EventLog').html("Rs: " + z);
+			$('#EventLog').html("Rs: " + z);
 
-				}
+		}
 
-			</script>
+	</script>
 		
    ~~~
-   {:.prettyprint }
+   
 
 The following screenshot displays the calculated EMI amount using Slider.
 

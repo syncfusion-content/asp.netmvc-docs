@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Row
+title: Row | Grid | ASP.NET MVC | Syncfusion
 description: row
 platform: ejmvc
 control: Grid
@@ -14,7 +14,9 @@ documentation: ug
 Details Template feature provides a detailed view about additional information of each row. If you want to view the detailed information, you can expand a row. To enable Details Template, used DetailsTemplate property of Grid as follows:
 
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 <script id="tabGridContents" type="text/x-jsrender">
 
@@ -48,7 +50,7 @@ Details Template feature provides a detailed view about additional information o
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -82,7 +84,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 
 
 The following output is displayed as a result of the above code example.
@@ -91,8 +93,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img1.png)
 
-_Figure : Details Template_
-
+Details Template
+{:.caption}
 
 
 
@@ -103,7 +105,9 @@ _Figure : Details Template_
 In this section, you can learn how to use the Hierachytree in GridView. The following code example is of HierachyGrid.
 
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight  CSHTML %}
 
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
@@ -119,45 +123,41 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 
 <script id="tabGridContents" type="text/x-jsrender">
 
-<div class="tabcontrol" id="Test">
+	<div class="tabcontrol" id="Test">
 
-<div id="detailGrid">
+	<div id="detailGrid">
 
-</div>
+	</div>
 
-<label id="employeeDet" style="display: none">{{:EmployeeID}}</label>
+		<label id="employeeDet" style="display: none">{{:EmployeeID}}</label>
 
-</div>
+	</div>
 
 </script>
 
 <script type="text/javascript">
 
-function detailGridData(e) {
+	function detailGridData(e) {
 
-var filteredData = e.detailsElement.find("#employeeDet").text();
+	var filteredData = e.detailsElement.find("#employeeDet").text();
 
-// the datasource "window.ordersView" is referred from jsondata.min.js
+	// the datasource "window.ordersView" is referred from jsondata.min.js
 
-var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true));
+	var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true));
 
-e.detailsElement.find("#detailGrid").ejGrid({
+	e.detailsElement.find("#detailGrid").ejGrid({
 
-dataSource: data,
+	dataSource: data,
 
+	});
 
-
-});
-
-
-
-}
+	}
 
 </script>
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -192,6 +192,7 @@ return View();
 
 
 {% endhighlight  %}
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -199,14 +200,17 @@ The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img2.png)
 
-_Figure : Hierachy_
+Hierachy
+{:.caption}
 
 ## Row Template
 
 RowTemplate is used to render your template in every row. It is used to place elements inside Grid rows. This feature makes it easier to customise Grid rows with HTML elements.
 
 
-{% highlight js %}
+{% tabs %}
+  
+{% highlight  CSHTML %}
 
 <script id="templateData" type="text/x-jsrender">
 
@@ -323,7 +327,7 @@ col.HeaderText("Employee Details").TextAlign(TextAlign.Left).Width(70).Add();
 )
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -356,14 +360,15 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Row_images/Row_img3.png)
 
-_Figure : Row Template_
+Row Template
+{:.caption}
 
 ## Customize Hover and AltRow 
 
@@ -371,7 +376,9 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight  CSHTML %}
 
 @*custom style*@
 
@@ -411,7 +418,7 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -440,12 +447,12 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Row_images/Row_img4.png)
 
-_Figure : Customize hover and altrow_
-
+Customize hover and altrow
+{:.caption}

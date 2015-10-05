@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Menu | Menu | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Menu
 documentation: ug
 ---
 
-# Overview
+# Menu
 
 The Menu control supports displaying a Menu created from list items. The Menu is based on a hierarchy of Parent and Child elements where the Child items are rendered as sub-menu items.
 

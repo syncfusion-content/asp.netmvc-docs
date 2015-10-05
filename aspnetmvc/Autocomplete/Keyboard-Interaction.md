@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | AutoComplete | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: AutoComplete
@@ -50,7 +50,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 1. In the View page, define the AutoComplete control.
 
 
-   ~~~ html 
+   ~~~ cshtml 
 
 		@*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -72,7 +72,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 			.Width("200px"))    
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Run the sample, press AccessKey + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
 
@@ -80,7 +80,6 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 
    ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
-_AutoComplete focused with keyboard shortcut_
+	AutoComplete focused with keyboard shortcut
+	{:.caption}
 

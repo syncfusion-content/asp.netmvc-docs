@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TreeMap-Elements
+title: TreeMap Elements | TreeMap | ASP.NET MVC | Syncfusion
 description: treemap elements
 platform: ejmvc
 control: TreeMap
@@ -29,62 +29,55 @@ You can decide the size of the legend icons by setting IconWidth and IconHeight 
 
 You can customize the labels of the legenditem using LegendLabel property of RangeColorMapping. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
+@(Html.EJ().TreeMap("treemap")
 
+.DataSource(datasource)
 
-         @(Html.EJ().TreeMap("treemap")
+.ColorValuePath("Growth")
 
-                .DataSource(datasource)
+.WeightValuePath("Population")
 
-                .ColorValuePath("Growth")
+.ShowLegend(true)
 
-                .WeightValuePath("Population")
+.Levels(lv =>
 
-                .ShowLegend(true)
+	{                          
 
+		lv.GroupPath("Continent")
 
+		  .GroupGap(5)
 
-                .Levels(lv =>
+		  .Add();
 
-                    {                          
+	})   
 
-                        lv.GroupPath("Continent")
+.TreeMapRangeColorMappings(cm => 
 
-                          .GroupGap(5)
+	{
 
-                          .Add();
+	cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
 
-                    })   
+	cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
 
-                .TreeMapRangeColorMappings(cm => 
+	cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
 
-                    {
+	cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
 
-                    cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+	})
 
-                    cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+.TreeMapLegend(tl =>
 
-                    cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+	{
 
-                    cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+			tl. IconWidth(20)
 
-                    })
+			  . IconHeight(20);
 
-                .TreeMapLegend(tl =>
+	})
 
-                    {
-
-                            tl. IconWidth(20)
-
-                              . IconHeight(20);
-
-                    })
-
-               .Render())
-
-
-
+.Render())
 
 
 {% endhighlight %}
@@ -99,69 +92,69 @@ You can customize the labels of the legenditem using LegendLabel property of Ran
 
 You can set headers for each level by setting the ShowHeader propery of the each TreeMap levels. The HeaderHeight property helps to set the height of the header and Group path value determines the header value. You can customize the default header appearance by setting the HeaderTemplate of the TreeMap levels.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-           @(Html.EJ().TreeMap("treemap")
+@(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+	.DataSource(datasource)
 
-                .ColorValuePath("Growth")
+	.ColorValuePath("Growth")
 
-                .WeightValuePath("Population")
+	.WeightValuePath("Population")
 
-                .ShowLegend(true)
+	.ShowLegend(true)
 
-                .TreeMapLegend(tl =>
+	.TreeMapLegend(tl =>
 
-                    {
+		{
 
-                            tl.IconWidth(17)
+				tl.IconWidth(17)
 
-                            .IconHeight(17);
+				.IconHeight(17);
 
-                    })
+		})
 
-                .TreeMapRangeColorMappings(cm => 
+	.TreeMapRangeColorMappings(cm => 
 
-                    {
+		{
 
-                    cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+		cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
 
-                    cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+		cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
 
-                    cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+		cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
 
-                    cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+		cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
 
-                    })
+		})
 
-                .Levels(lv =>
+	.Levels(lv =>
 
-                    {
+		{
 
-                        lv.GroupPath("Continent")
+			lv.GroupPath("Continent")
 
-                            .GroupGap(5)
+				.GroupGap(5)
 
-.HeaderHeight(30)                           
+	.HeaderHeight(30)                           
 
-                            .HeaderTemplate("headertemplate").Add();                            
+				.HeaderTemplate("headertemplate").Add();                            
 
-                    })   
+		})   
 
-               .Render())
+   .Render())
 
-      </div>  
+</div>  
 
-      <script  id="headertemplate" type="application/jsrender">
+	<script  id="headertemplate" type="application/jsrender">
 
-<div style="background-color: white; margin:5px">
+	<div style="background-color: white; margin:5px">
 
-            <label style="color:black;font-size:medium;" >{{:header}}</label><br />            
+	<label style="color:black;font-size:medium;" >{{:header}}</label><br />            
 
-      </div>                        
+</div>                        
 
-    </script>              
+</script>              
 
 
 
@@ -176,97 +169,87 @@ You can set headers for each level by setting the ShowHeader propery of the each
 
 You can also set labels for the leaf nodes by setting the ShowLabels property as true. Group path value is displayed as a label for leaf nodes. You can customize the default label appearance by setting the LabelTemplate of the TreeMap levels.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
+@(Html.EJ().TreeMap("treemap")
 
+	.DataSource(datasource)
 
-        @(Html.EJ().TreeMap("treemap")
+	.ColorValuePath("Growth")
 
-                .DataSource(datasource)
+	.WeightValuePath("Population")
 
-                .ColorValuePath("Growth")
+	.ShowLegend(true)
 
-                .WeightValuePath("Population")
+	.TreeMapLegend(tl =>
 
-                .ShowLegend(true)
+		{
 
-                .TreeMapLegend(tl =>
+			tl. IconWidth(17)
 
-                    {
+			  . IconHeight(17);
 
-                        tl. IconWidth(17)
+		})
 
-                          . IconHeight(17);
+	.Levels(lv =>
 
-                    })
+		{
 
+			lv.GroupPath("Continent")
 
+			  .GroupGap(5)
 
-                .Levels(lv =>
+			  .HeaderHeight(30)                           
 
-                    {
+			  .HeaderTemplate("headertemplate").Add();                            
 
-                        lv.GroupPath("Continent")
+		})   
 
-                          .GroupGap(5)
+	 .TreeMapRangeColorMappings(cm => 
 
-                          .HeaderHeight(30)                           
+		{
 
-                          .HeaderTemplate("headertemplate").Add();                            
+		cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
 
-                    })   
+		cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
 
+		cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
 
+		cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
 
-                 .TreeMapRangeColorMappings(cm => 
+		})
 
-                    {
+	  .LeafItemsSetting(li =>
 
-                    cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+		{
 
-                    cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+			 li.LabelPath("Region")
 
-                    cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+			   .ShowLabels(true)
 
-                    cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+				.LabelTemplate("labeltemplate");
 
-                    })
+		})
 
-                  .LeafItemsSetting(li =>
+	 .Render())
 
-                    {
+<script  id="headertemplate" type="application/jsrender">
 
-                         li.LabelPath("Region")
+	<div style="background-color: white; margin:5px">
 
-                           .ShowLabels(true)
+	<label style="color:black;font-size:medium;" >{{:header}}</label><br />            
 
-                            .LabelTemplate("labeltemplate");
+	</div>                        
 
-                    })
+</script>      
 
+<script  id="labeltemplate" type="application/jsrender">
 
+	<div style="background-color: transparent;">
 
+		<label style="color:white;font-size:small;margin:5px;" >{{:label}}</label><br/>            
 
-
-                 .Render())
-
-      <script  id="headertemplate" type="application/jsrender">
-
-<div style="background-color: white; margin:5px">
-
-            <label style="color:black;font-size:medium;" >{{:header}}</label><br />            
-
-      </div>                        
-
-    </script>      
-
-     <script  id="labeltemplate" type="application/jsrender">
-
-<div style="background-color: transparent;">
-
-            <label style="color:white;font-size:small;margin:5px;" >{{:label}}</label><br/>            
-
-        </div>                        
+	</div>                        
 
 </script> 
 

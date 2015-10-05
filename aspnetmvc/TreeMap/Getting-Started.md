@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | TreeMap | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: TreeMap
@@ -28,63 +28,61 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 ~/Controller/TreeMapController.cs
 
-{% highlight c# %}
+{% highlight C# %}
 
-    public class TreeMapPopulationData
+public class TreeMapPopulationData
 
-    {
+{
 
-        public string Continent { get; set; }
+	public string Continent { get; set; }
 
-        public string Region { get; set; }
+	public string Region { get; set; }
 
-        public int Growth { get; set; }
+	public int Growth { get; set; }
 
-        public long Population { get; set; }
-
-
-
-        public static List<TreeMapPopulationData> GetData()
-
-        {
-
-            List<TreeMapPopulationData> population = new List<TreeMapPopulationData>();
-
-            population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Southern Asia", Growth = 1.32, Population = 1749046000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Eastern Asia", Growth = 0.57, Population = 1620807000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "South-Eastern Asia", Growth = 1.20, Population = 618793000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Western Asi", Growth = 1.98, Population = 245707000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Central Asia", Growth = 1.43, Population = 64370000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Europe", Region = "Europe", Growth = 0.10, Population = 742452000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "America", Region = "South America", Growth = 1.06, Population = 406740000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "America", Region = "Northern America", Growth = 0.85, Population = 355361000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "America", Region = "Central America", Growth = 1.40, Population = 167387000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Eastern Africa", Growth = 2.89, Population = 373202000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Western Africa", Growth = 2.78, Population = 331255000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Northern Africa", Growth = 1.70, Population = 210002000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Middle Africa", Growth = 2.79, Population = 135750000});
-
-            population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Southern Africa", Growth = 0.91, Population = 60425000});
-
-            return population;
-
-        }
-
-    }
+	public long Population { get; set; }
 
 
+
+	public static List<TreeMapPopulationData> GetData()
+
+	{
+
+		List<TreeMapPopulationData> population = new List<TreeMapPopulationData>();
+
+		population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Southern Asia", Growth = 1.32, Population = 1749046000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Eastern Asia", Growth = 0.57, Population = 1620807000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "South-Eastern Asia", Growth = 1.20, Population = 618793000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Western Asi", Growth = 1.98, Population = 245707000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Central Asia", Growth = 1.43, Population = 64370000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Europe", Region = "Europe", Growth = 0.10, Population = 742452000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "America", Region = "South America", Growth = 1.06, Population = 406740000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "America", Region = "Northern America", Growth = 0.85, Population = 355361000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "America", Region = "Central America", Growth = 1.40, Population = 167387000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Eastern Africa", Growth = 2.89, Population = 373202000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Western Africa", Growth = 2.78, Population = 331255000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Northern Africa", Growth = 1.70, Population = 210002000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Middle Africa", Growth = 2.79, Population = 135750000});
+
+		population.Add(new TreeMapPopulationData() { Continent = "Africa", Region = "Southern Africa", Growth = 0.91, Population = 60425000});
+
+		return population;
+
+	}
+
+}
 
 {% endhighlight %}
 
@@ -96,59 +94,52 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 1. Create a <div> tag with a specific id and set the height and width to determine the TreeMap size to be rendered in “TreeMap.cshtml” file
    
-   ~~~ html
+   ~~~ cshtml
 
-		  <div style="width:700px; height:400px;"> 
+	<div style="width:700px; height:400px;"> 
 
-		  </div>            
+	</div>            
 
 
    ~~~
-   {:.prettyprint }
-
+  
 
 2. Add the following code in “TreeMap.cshtml” file to create the TreeMap control in a View page.
 
-   ~~~ html
+   ~~~ cshtml
+   
+	<div style="width:700px; height:400px;"> 
 
-
-		  <div style="width:700px; height:400px;"> 
-
-			  @(Html.EJ().TreeMap("treemap")                
-
-
-
-			   .Render())
-
-		  </div>            
+	  @(Html.EJ().TreeMap("treemap")                
 
 
 
+	   .Render())
+
+	</div>          
 
 
    ~~~
-   {:.prettyprint }
-
+ 
 
 3. Add the TreeMap() action in “TreeMapController.cs” as illustrated in the following code sample.
 
-   ~~~ cs
+   ~~~ csharp
 
+	public ActionResult TreeMap()
 
-		public ActionResult TreeMap()
+	{
 
-		{
+		ViewData["datasource"] = TreeMapPopulationData.GetData();
 
-			ViewData["datasource"] = TreeMapPopulationData.GetData();
+		return View();
 
-			return View();
-
-		}
+	}
 
 
 
    ~~~
-   {:.prettyprint }
+  
 
 
 
@@ -162,42 +153,42 @@ You can calculate the size of the object using WeightValuePath of TreeMap.
 
 1. Populate the TreeMap by using the above properties.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@{
+	@{
 
-		    var datasource = ViewData["datasource"];    
+		var datasource = ViewData["datasource"];    
 
-		}
+	}
 
-		<html xmlns="http://www.w3.org/1999/xhtml">
+	<html xmlns="http://www.w3.org/1999/xhtml">
 
-		<head> // ...
+	<head> // ...
 
-		</head>
+	</head>
 
-		<body>
+	<body>
 
-		<div style="height:400px;width:700px;">
+	<div style="height:400px;width:700px;">
 
-		@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-				.DataSource(datasource)
+			.DataSource(datasource)
 
-				.WeightValuePath("Population")
+			.WeightValuePath("Population")
 
-			       .Render())
+			   .Render())
 
-		</div>
+	</div>
 
-		// ...
+	// ...
 
-		</body>
+	</body>
 
-		</html>
+	</html>
 
    ~~~
-   {:.prettyprint }
+  
 
 
 
@@ -205,55 +196,54 @@ You can calculate the size of the object using WeightValuePath of TreeMap.
 
 2. Final TreeMap.cshtml file is illustrated in the following code sample.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@{
+	@{
 
-		    var datasource = ViewData["datasource"];    
+		var datasource = ViewData["datasource"];    
 
-		}
-
-
-
-		<html xmlns="http://www.w3.org/1999/xhtml">
-
-		<head> 
-
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/
-
-		ej.widgets.all.min.js"></script>
-
-		<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js" type="text/javascript"></script>
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" type="text/javascript"></script><body>
-
-		<div style="height:400px;width:700px;">
-
-		@(Html.EJ().TreeMap("treemap")
-
-				.DataSource(datasource)
-
-				.WeightValuePath("Population") 
-
-			       .Render())
-
-		    </div>   
+	}
 
 
 
-		    @(Html.EJ().ScriptManager())
+	<html xmlns="http://www.w3.org/1999/xhtml">
 
-		</body>
+	<head> 
 
-		</html>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
+	<script src="http://cdn.syncfusion.com/13.1.0.21/js/
+
+	ej.widgets.all.min.js"></script>
+
+	<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
+
+	<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js" type="text/javascript"></script>
+
+	<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" type="text/javascript"></script><body>
+
+	<div style="height:400px;width:700px;">
+
+	@(Html.EJ().TreeMap("treemap")
+
+			.DataSource(datasource)
+
+			.WeightValuePath("Population") 
+
+			   .Render())
+
+		</div>   
+
+
+
+		@(Html.EJ().ScriptManager())
+
+	</body>
+
+	</html>
 
    ~~~
-   {:.prettyprint }
+  
 
 
 
@@ -276,27 +266,25 @@ You can use GroupGap property to separate the items from every flat level and t
 
 The following code sample explains how to group TreeMap Items using ‘Levels’
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+.DataSource(datasource)
 
-                .WeightValuePath("Population")
+.WeightValuePath("Population")
 
-                .Levels(lv =>
+.Levels(lv =>
 
-                    {
+	{
 
-                        lv.GroupPath("Continent")
+		lv.GroupPath("Continent")
 
-                            .GroupGap(5).Add();                            
+			.GroupGap(5).Add();                            
 
-                    })   
+	})   
 
-               .Render())
-
-
+.Render())
 
 {% endhighlight %}
 
@@ -316,41 +304,41 @@ The ColorValuePath of TreeMap is a path to a field on the source object. You can
 
 The following code sample explains how to customize TreeMap Appearance by Range.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+.DataSource(datasource)
 
-                .WeightValuePath("Population")                             
+.WeightValuePath("Population")                             
 
-                .Levels(lv =>
+.Levels(lv =>
 
-                    {
+{
 
-                        lv.GroupPath("Continent")
+	lv.GroupPath("Continent")
 
-                            .GroupGap(5).Add();                            
+		.GroupGap(5).Add();                            
 
-                    })   
+})   
 
-                .ColorValuePath("Growth")
+.ColorValuePath("Growth")
 
-                .TreeMapRangeColorMappings(cm => 
+.TreeMapRangeColorMappings(cm => 
 
-                    {
+{
 
-                      cm.To(1).From(0).Color("#DC562D").Add();
+  cm.To(1).From(0).Color("#DC562D").Add();
 
-                      cm.To(1.5).From(1).Color("#FED124").Add();
+  cm.To(1.5).From(1).Color("#FED124").Add();
 
-                      cm.To(2).From(1.5).Color("#487FC1").Add();
+  cm.To(2).From(1.5).Color("#487FC1").Add();
 
-                      cm.To(3).From(2).Color("#0E9F49").Add();
+  cm.To(3).From(2).Color("#0E9F49").Add();
 
-                    })
+})
 
-               .Render())   
+.Render())   
 
 
 
@@ -372,53 +360,51 @@ You can customize the Leaf level TreeMap items using LeafItemSettings. The Label
 
 The following code sample displays how the tooltip is enabled.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-      @(Html.EJ().TreeMap("treemap")
+@(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+.DataSource(datasource)
 
-                  .WeightValuePath("Population")                             
+.WeightValuePath("Population")                             
 
-                  .Levels(lv =>
+.Levels(lv =>
 
-                    {
+{
 
-                        lv.GroupPath("Continent")
+	lv.GroupPath("Continent")
 
-                            .GroupGap(5).Add();                            
+		.GroupGap(5).Add();                            
 
-                    })   
+})   
 
-                  .ColorValuePath("Growth")
+.ColorValuePath("Growth")
 
 .TreeMapRangeColorMappings(cm => 
 
-                    {
+{
 
-                      cm.To(1).From(0).Color("#DC562D").Add();
+  cm.To(1).From(0).Color("#DC562D").Add();
 
-                      cm.To(1.5).From(1).Color("#FED124").Add();
+  cm.To(1.5).From(1).Color("#FED124").Add();
 
-                      cm.To(2).From(1.5).Color("#487FC1").Add();
+  cm.To(2).From(1.5).Color("#487FC1").Add();
 
-                      cm.To(3).From(2).Color("#0E9F49").Add();
+  cm.To(3).From(2).Color("#0E9F49").Add();
 
-                    })
+})
 
 .ShowTooltip(true)
 
-                 .LeafItemsSettings(lls =>
+.LeafItemsSettings(lls =>
 
-                   {
+{
 
-                       lls.LabelPath("Region");
+   lls.LabelPath("Region");
 
-                   })
+})
 
-               .Render())
-
-
+.Render())
 
 {% endhighlight %}
 
@@ -440,53 +426,53 @@ You can customize the labels of the legend item using LegendLabel property of Ra
 
 The following code sample displays how to add labels for legend in a TreeMap.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-      @(Html.EJ().TreeMap("treemap")
+@(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+.DataSource(datasource)
 
-                .WeightValuePath("Population") 
+.WeightValuePath("Population") 
 
-                .Levels(lv =>
+.Levels(lv =>
 
-                    {
+{
 
-                        lv.GroupPath("Continent")
+	lv.GroupPath("Continent")
 
-                            .GroupGap(5).Add();                            
+		.GroupGap(5).Add();                            
 
-                    })   
+})   
 
-                  .ColorValuePath("Growth")
+.ColorValuePath("Growth")
 
 .TreeMapRangeColorMappings(cm => 
 
-                    {
+{
 
-                      cm.To(1).From(0).Color("#DC562D").Legendlabel("0 - 1 % Growth").Add();
+  cm.To(1).From(0).Color("#DC562D").Legendlabel("0 - 1 % Growth").Add();
 
-                      cm.To(1.5).From(1).Color("#FED124").Legendlabel("1 - 1.5 % Growth").Add();
+  cm.To(1.5).From(1).Color("#FED124").Legendlabel("1 - 1.5 % Growth").Add();
 
-                      cm.To(2).From(1.5).Color("#487FC1").Legendlabel("1.5 - 2 % Growth").Add();
+  cm.To(2).From(1.5).Color("#487FC1").Legendlabel("1.5 - 2 % Growth").Add();
 
-                      cm.To(3).From(2).Color("#0E9F49").Legendlabel("2 - 3 % Growth").Add();                   
+  cm.To(3).From(2).Color("#0E9F49").Legendlabel("2 - 3 % Growth").Add();                   
 
-                   })
+})
 
-                .ShowTooltip(true)
+.ShowTooltip(true)
 
-                 .LeafItemsSettings(lls =>
+.LeafItemsSettings(lls =>
 
-                   {
+{
 
-                       lls.LabelPath("Region");
+   lls.LabelPath("Region");
 
-                   })
+})
 
-                .ShowLegend(true)
+.ShowLegend(true)
 
-               .Render())
+.Render())
 
 
 

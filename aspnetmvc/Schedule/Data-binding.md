@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-binding
+title: Data binding | Schedule | ASP.NET MVC | Syncfusion
 description: data-binding
 platform: ejmvc
 control: Schedule
@@ -81,7 +81,7 @@ The following code example explains on how to include the Daylight saving time o
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
     @(Html.EJ().Schedule("Schedule1")
 
@@ -126,7 +126,7 @@ The following code example explains on how to include the Daylight saving time o
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -160,7 +160,7 @@ The following code example explains on how to include the Daylight saving time o
 
 )
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 // Follow the code declared in Read only part
 
@@ -184,7 +184,7 @@ On executing the above specified code the Location field will be added in the cr
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -200,7 +200,7 @@ fields.Datasource(ViewBag.datasource)
 .Recurrence("Recurrence")
 .RecurrenceRule("RecurrenceRule")))
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
    public partial class ScheduleController : Controller
@@ -247,7 +247,7 @@ _Figure_ _50_: schedule with Local Data Binding
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -313,7 +313,7 @@ _Figure 3: Schedule Demanded data_
 The following code example shows you how load on demand works with Schedule.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -334,7 +334,7 @@ The following code example shows you how load on demand works with Schedule.
 .RecurrenceRule("RecurrenceRule"))
 )
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 public partial class ScheduleController : Controller
 {
   public ActionResult LoadOnDemand()
@@ -361,7 +361,7 @@ public partial class ScheduleController : Controller
 
 * Add the file “AppointmentRepository.cs” in the Models folder of your project that contains the code example for filtering appointments – it filters the appointment data to be retrieved from the database and returned to Schedule.
 
-{% highlight c# %}
+{% highlight C# %}
 
 public static class AppointmentRepository
 
@@ -539,7 +539,7 @@ The following steps illustrate you how to meet the requirement bind the MySQL da
 
 Step 1: Establish a connection with the created database in the MySQL and Schedule control through the controller. In the controller page, create a class, establish & open MySQL connection as follows.
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -573,7 +573,7 @@ public string RecurrenceRule { get; set;
 
 Step 2: Once the class is created, you can add the following method to convert the database objects into List type as follows.
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -647,7 +647,7 @@ return list;
 {% endhighlight %}
 Step 3: Now the JSON records that are enumerated can be returned to the view page, through the following action.
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -725,7 +725,7 @@ resourceFields:"Owner"
 
 
 {% endhighlight %}
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 

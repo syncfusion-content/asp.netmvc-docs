@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Splitter-Orientation
+title: Splitter Orientation | Splitter | ASP.NET MVC | Syncfusion
 description: splitter orientation
 platform: ejmvc
 control: Splitter
@@ -18,49 +18,48 @@ The Splitter supports both vertical and horizontal orientation of the pane. You 
 1. In the View page, add the Splitter helper and configure the ‘Orientation’ property as shown below.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
+@{Html.EJ().Splitter("Splitter").Height("360").Width("500").Orientation(Orientation.Vertical).PaneProperties(
 
-        @{Html.EJ().Splitter("Splitter").Height("360").Width("500").Orientation(Orientation.Vertical).PaneProperties(
+p =>
 
-    p =>
+{
 
-    {
+	p.Add().ContentTemplate(
 
-        p.Add().ContentTemplate(
+		@<div>
 
-            @<div>
+			 <div style="padding: 0px 15px;">
 
-                 <div style="padding: 0px 15px;">
+				 <h3 class="h3">Tools </h3>
 
-                     <h3 class="h3">Tools </h3>
+				 Essential Tools is an collection of user interface components used to create interactive
 
-                     Essential Tools is an collection of user interface components used to create interactive
+				 ASP.NET MVC applications.
 
-                     ASP.NET MVC applications.
+			 </div>
 
-                 </div>
+		</div>);
 
-            </div>);
+			p.Add().ContentTemplate(
 
-        p.Add().ContentTemplate(
+		@<div>
 
-            @<div>
+			 <div style="padding: 0px 15px;">
 
-                 <div style="padding: 0px 15px;">
+				 <h3 class="h3">Grid </h3>
 
-                     <h3 class="h3">Grid </h3>
+				 Essential Mvc Grid offers full featured a Grid control with extensive support for
 
-                     Essential Mvc Grid offers full featured a Grid control with extensive support for
+				 Grouping and the display of hierarchical data.
 
-                     Grouping and the display of hierarchical data.
+			 </div>
 
-                 </div>
+		</div>);
 
-            </div>);
-
-    }).Render();}
+}).Render();}
 
 {% endhighlight %}
 

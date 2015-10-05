@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quantitative-Scale
+title: Quantitative Scale | BulletGraph	 | ASP.NET MVC | Syncfusion
 description: quantitative scale
 platform: ejmvc
 control: BulletGraph	
@@ -33,7 +33,8 @@ The following screenshot displays a Bullet Graph with start range 0, end range 1
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img1.png)
 
-
+Bullet Graph quantitative scale with customized range
+{:.caption}
 
 ## Quantitative scale location
 
@@ -56,7 +57,8 @@ The following screenshot displays Bullet Graph with Quantitative scale at 20 pix
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img2.png)
 
-
+Bullet Graph quantitative scale in a specified location
+{:.caption}
 
 ## Major ticks
 
@@ -83,7 +85,8 @@ The following screenshot displays Major ticks in gray color with a width of 3 pi
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img3.png)
 
-
+Bullet Graph quantitative scale with customized major ticks
+{:.caption}
 
 ## Minor ticks
 
@@ -106,7 +109,8 @@ The following screenshot displays Bullet Graph with customized Minor ticks in qu
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img4.png)
 
-
+Bullet Graph quantitative scale with customized minor ticks
+{:.caption}
 
 ## Tick position
 
@@ -127,7 +131,8 @@ The following screenshot displays Bullet Graph with ticks positioned above quant
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img5.png)
 
-
+Bullet Graph quantitative scale with ticks positioned above
+{:.caption}
 
 ## Tick Placement
 
@@ -164,7 +169,8 @@ The following screenshot displays Bullet Graph ticks inside Quantitative Scale
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img6.png)
 
-
+Bullet Graph with ticks inside quantitative scale
+{:.caption}
 
 ## Quantitative scale labels
 
@@ -212,11 +218,8 @@ The following screenshot displays Bullet Graph labels in blue color
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img7.png)
 
-
-
-
-
-_Figure_ _32_: Bullet Graph quantitative scale with customized labels
+Bullet Graph quantitative scale with customized labels
+{:.caption}
 
 ## Label Placement
 
@@ -251,7 +254,8 @@ The following screenshot displays Bullet Graph labels inside Quantitative Scale
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img8.png)
 
-
+Bullet Graph with labels inside quantitative scale
+{:.caption}
 
 ## Performance measure bar
 
@@ -272,7 +276,8 @@ The following screenshot displays Bullet Graph with customized Performance measu
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img9.png)
 
-
+Bullet Graph quantitative scale with customized performance measure bar
+{:.caption}
 
 ## Comparative measure symbol
 
@@ -295,7 +300,8 @@ The following screenshot displays Bullet Graph with customized Comparative measu
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img10.png)
 
-
+Bullet Graph with customized comparative symbol
+{:.caption}
 
 ## Multiple performance measures comparison
 
@@ -330,5 +336,5 @@ The following screenshot displays Bullet Graph that compares 3 related performan
 
 ![](Quantitative-Scale_images/Quantitative-Scale_img11.png)
 
-
-
+Bullet Graph with multiple performance measures
+{:.caption}

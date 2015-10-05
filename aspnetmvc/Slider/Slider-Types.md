@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Slider-Types
+title: Slider Types | Slider | ASP.NET MVC | Syncfusion
 description: slider types
 platform: ejmvc
 control: Slider
@@ -43,7 +43,7 @@ The following steps explains you on how to configure the SliderType property to 
 
 1. In an VIEW page, specify the helper elements to render the RangeSlider and MinRangeSlider.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -61,7 +61,5 @@ Execute the above code example to render the following output.
 
 ![](Slider-Types_images/Slider-Types_img1.png)
 
-
-
-_Shows different Slider types (Range and Min-Range sliders)_
-
+Shows different Slider types (Range and Min-Range sliders)
+{:.caption}

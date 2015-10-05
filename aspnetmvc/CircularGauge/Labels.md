@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels
+title: Labels | CircularGauge | ASP.NET MVC | Syncfusion
 description:  labels
 platform: ejmvc
 control: CircularGauge
@@ -16,7 +16,7 @@ Labels are units that are used to display the values in the scales. You can cust
 Label collection is directly added to the scale object. Refer the following code example to add label collection in a Gauge.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 //For circular gauge rendering
 
@@ -38,9 +38,13 @@ lb.Angle(30).Add();
 
 }))
 {% endhighlight  %}
+
 Execute the above code to render the following output.
 
 ![](Labels_images/Labels_img1.png)
+
+Circular Gauge with  label collection
+{:.caption}
 
 ## Label Customization
 
@@ -50,7 +54,7 @@ Execute the above code to render the following output.
 * You can adjust the labels based on the tick’s direction by setting autoAngle as true. includeFirstValue is an special property especially used in some special scenarios such as in clock, where the value 0 needs to be replaced with that of 12. By enabling this property the first value of the label is not rendered.
 * Font option is also available on the labels. The basic three properties of fonts such as size, family and style can be achieved by size, fontStyle and fontFamily. Labels are two types such as major and minor.Major types labels are for major interval values and minor types labels are for minor interval values.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // For Circular Gauge rendering
 
@@ -120,7 +124,8 @@ Execute the above code to render the following output.
 
 ![](Labels_images/Labels_img2.png)
 
-
+Circular Gauge with customized label
+{:.caption}
 
 ### Unit text and Position
 
@@ -128,7 +133,7 @@ Execute the above code to render the following output.
 * Labels can be positioned with the help of two properties such as distanceFromScale and placement. distanceFromScale property defines the distance between the scale and labels.  Placement property is used to locate the labels with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 // For Circular Gauge rendering
@@ -187,12 +192,14 @@ Execute the above code to render the following output.
 
 ![](Labels_images/Labels_img3.png)
 
+Circular Gauge with unit text
+{:.caption}
 
 ## Multiple Labels
 
 You can achieve multiple labels such as minor and major in a Gauge sample scale. Refer the following code example for multiple labels variation.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // For Circular Gauge rendering
 
@@ -256,7 +263,7 @@ Execute the above code to render the following output.
 
 ![](Labels_images/Labels_img4.png)
 
-
-
+Circular Gauge with multiple labels
+{:.caption}
 
 

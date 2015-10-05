@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigation
+title: Navigation | Schedule | ASP.NET MVC | Syncfusion
 description: navigation
 platform: ejmvc
 control: Schedule
@@ -18,7 +18,7 @@ The following code example explains how to set the value for enableAppointmentNa
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -54,9 +54,8 @@ The following code example explains how to set the value for enableAppointmentNa
 
 ![](Navigation_images/Navigation_img1.png)
 
-
-
-_Figure_ _101_:  schedule with Appointment Navigation.
+schedule with Appointment Navigation.
+{:.caption}
 
 ## Calendar Navigation
 
@@ -69,10 +68,8 @@ The following screenshot displays the calendar that pops down on clicking the da
 
 ![](Navigation_images/Navigation_img2.png)
 
-
-
- _Figure_ _102_:  schedule with Calendar Navigation.
-
+schedule with Calendar Navigation.
+{:.caption}
 
 
 ## Keyboard navigation
@@ -84,7 +81,7 @@ The various keyboard shortcuts available within the Schedule control are as foll
 
 
 
-_Table_ _1_: List of keys and its usage
+_List of keys and its usage_
 
 <table>
 <tr>
@@ -169,9 +166,9 @@ Once the required cells are selected, then a new appointment can be created for 
 
 
 
+{% tabs %}
 
-
-{% highlight html %}
+{% highlight CSHTML %}
 <style>
 .e-monthappointment {height: auto !important;}</style>
 @(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1)).CurrentView(CurrentView.Month).AllowKeyboardNavigation(true).AppointmentSettings(
@@ -193,9 +190,10 @@ case 6:return "<img src='../images/schedule/beach.png'/>"break;
 </script>
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 // follow the code as same as declared in Read Only part
 {% endhighlight %}
+{% endtabs %}  
 
 
 * Since the keyboard navigation functionality is enabled by default, the Schedule control below indicates the multiple cell selection through the shift + right arrow key combination as follows.
@@ -204,7 +202,5 @@ case 6:return "<img src='../images/schedule/beach.png'/>"break;
 
 ![](Navigation_images/Navigation_img3.png)
 
-
-
-   _Figure103:  schedule with keyboard Navigation.
-
+schedule with keyboard Navigation.
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | Tile | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: Tile
@@ -15,51 +15,56 @@ Refer to the following code examples.
 
 Add the following code example for MVC samples 
 
-{% highlight css %}
+{% tabs %}
+ 
+{% highlight CSS %}
 
-    <style>
+<style>
 
-        #appimage {
+	#appimage 
+	{
 
-            background-image: url("http://js.syncfusion.com/UG/mobile/content/google.png");
+		background-image: url("http://js.syncfusion.com/UG/mobile/content/google.png");
 
-            background-position: center center;
+		background-position: center center;
 
-            background-repeat: no-repeat;
+		background-repeat: no-repeat;
 
-            background-size: 50% auto;
+		background-size: 50% auto;
 
-            display: table-cell;
+		display: table-cell;
 
-            width: 45%;
+		width: 45%;
 
-        }
+	}
 
-        .tileMargin {
+	.tileMargin 
+	{
 
-            display: table-cell;
+		display: table-cell;
 
-            padding-top: 25px;
+		padding-top: 25px;
 
-        }
+	}
 
-        .e-tile-template {
+	.e-tile-template 
+	{
 
-            display: table;
+		display: table;
 
-            height: 100%;
+		height: 100%;
 
-            width: 100%;
+		width: 100%;
 
-        }
+	}
 
-    </style>
+</style>
 
-	{% endhighlight %}
+{% endhighlight %}
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").CaptionTemplateId("captionTemplate").TileSize(TileSize.Wide)
@@ -86,7 +91,7 @@ Add the following code example for MVC samples
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ![](Template-Support_images/Template-Support_img1.png)
 

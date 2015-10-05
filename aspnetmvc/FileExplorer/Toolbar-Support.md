@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar-Support
+title: Toolbar Support | FileExplorer | ASP.NET MVC | Syncfusion
 description: toolbar support
 platform: ejmvc
 control: FileExplorer
@@ -36,114 +36,115 @@ The most used clipboard actions are cut, copy, and paste. These tools are used 
 
 1. To render FileExplorer in MVC with the above toolbar options, include the following code in your View page.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
-   
+	@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
+
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following code block to the corresponding controller page, the FileActionDefault method is triggered, when you have made ajax request on client-side. This FileActionDefault method finds out the specific operation using the ActionType property and then call FileExplorerOperations methods according to that.
 
-   ~~~ cs
+   ~~~ csharp
 
-			using System;
+	using System;
 
-			using System.Collections.Generic;
+	using System.Collections.Generic;
 
-			using System.Linq;
+	using System.Linq;
 
-			using System.Web;
+	using System.Web;
 
-			using System.Web.Mvc;
+	using System.Web.Mvc;
 
-			using Syncfusion.JavaScript;
+	using Syncfusion.JavaScript;
 
-			using MVCSampleBrowser.Models;
+	using MVCSampleBrowser.Models;
 
-			namespace MVCSampleBrowser.Controllers
+	namespace MVCSampleBrowser.Controllers
+
+	{
+
+		public partial class FileExplorerController : Controller
+
+		{                
+
+			public ActionResult Default()
 
 			{
 
-				public partial class FileExplorerController : Controller
-
-				{                
-
-					public ActionResult Default()
-
-					{
-
-						return View();
-
-					}
-
-
-
-				public ActionResult FileActionDefault(FileExplorerParams args)
-
-				{
-
-					switch (args.ActionType)
-
-					{
-
-					case "Read":
-
-						return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
-
-					case "CreateFolder":
-
-						return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
-
-					case "Paste":
-
-						FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
-
-						break;
-
-					case "Delete":
-
-						FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
-
-						break;
-
-					case "Rename":
-
-						FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
-
-						break;
-
-					case "GetDetails":
-
-						return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
-
-					case "Download":
-
-						FileExplorerOperations.Download(args.Path);
-
-						break;                
-
-					case "Upload":
-
-						FileExplorerOperations.Upload(args.FileUpload, args.Path);
-
-						break;
-
-					}
-
-					return Json("");
-
-				}
-
-				}
+				return View();
 
 			}
+
+
+
+		public ActionResult FileActionDefault(FileExplorerParams args)
+
+		{
+
+			switch (args.ActionType)
+
+			{
+
+			case "Read":
+
+				return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
+
+			case "CreateFolder":
+
+				return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
+
+			case "Paste":
+
+				FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
+
+				break;
+
+			case "Delete":
+
+				FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+
+				break;
+
+			case "Rename":
+
+				FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+
+				break;
+
+			case "GetDetails":
+
+				return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
+
+			case "Download":
+
+				FileExplorerOperations.Download(args.Path);
+
+				break;                
+
+			case "Upload":
+
+				FileExplorerOperations.Upload(args.FileUpload, args.Path);
+
+				break;
+
+			}
+
+			return Json("");
+
+		}
+
+		}
+
+	}
 		
    ~~~
-   {:.prettyprint }
+   
 
 FileExplorerOperations is a predefined Class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste and getImage. It minimizes the work load on server-side.
 
 ![](Toolbar-Support_images/Toolbar-Support_img1.png)
 
-_Figure 4: FileExplorer with a list of toolbar items_
+FileExplorer with a list of toolbar items
+{:.caption}

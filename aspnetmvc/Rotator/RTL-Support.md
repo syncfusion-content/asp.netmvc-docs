@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Rotator | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Rotator
@@ -11,7 +11,7 @@ documentation: ug
 
 EnableRTL feature supports to change the left-to-right alignment of the Rotator to right-to-left (RTL). (I.e.) Sets the Rotator to do its actions from right to left. The EnableRTL property sets the Rotator from right to left. The value set to this property is Boolean type.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 

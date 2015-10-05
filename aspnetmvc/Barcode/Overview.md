@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
-description: overview
+title: Barcode | Barcode  | ASP.NET MVC | Syncfusion
+description: Barcode
 platform: ejmvc
 control: Barcode
 documentation: ug
 ---
 
-# Overview
+# Barcode
 
 The Barcode control enables rendering of one dimension and two dimension Barcodes in web page. Barcode provides you a simple and inexpensive method of encoding text information that can be easily read by inexpensive electronic readers.
 

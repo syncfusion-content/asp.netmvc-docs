@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: OLAPChart | OLAPChart | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: OLAPChart
 documentation: ug
 ---
 
-# Overview
+# OLAPChart
 
 The OLAP Chart control for ASP.NET MVC is a lightweight control that reads OLAP information and visualizes it in graphical format with the ability to drill up and down.
 

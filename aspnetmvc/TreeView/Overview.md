@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: TreeView | TreeView | ASP.NET MVC | Syncfusion
 description: overview 
 platform: ejmvc
 control: TreeView
 documentation: ug
 ---
 
-# Overview 
+# TreeView
 
 The Essential ASP.NET MVC TreeView control represents hierarchical data in a tree-like structure. It allows editing, dragging items to other tree views, adding check boxes, and more. TreeView can be generated from UL LI elements, List of Objects or using OData service.
 

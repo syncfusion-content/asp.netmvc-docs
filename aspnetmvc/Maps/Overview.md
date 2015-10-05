@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Maps | Maps | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Maps
 documentation: ug
 ---
 
-# Overview
+# Maps
 
 A Map is a graphical representation of geographical data. It is used to represent the statistical data of a particular geographical area on Earth. Using pan and zoom, the maps can be navigated. Maps supports enhanced data visualization with bubbles and labels using data bound to the map.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range
+title: Range | TimePicker | ASP.NET MVC | Syncfusion
 description: range
 platform: ejmvc
 control: TimePicker
@@ -32,7 +32,6 @@ Execute the above code to render the following output.
 
 ![](Range_images/Range_img1.png)
 
-
-
-_Figure 16: Range for TimePicker widget_
+Range for TimePicker widget
+{:.caption}
 

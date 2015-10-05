@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-interaction
+title: Keyboard interaction | Rotator | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: Rotator
@@ -50,54 +50,55 @@ Selected the thumbnail item</td></tr>
 
 You can refer the following code example for keyboard navigation.
 
-{% highlight html %}
-    // Add this code in your CSHTML page and refer local data section for binding Rotator items.
-	<ul id="slide" style="display: none">    
-		<li> <img src="@Url.Content("~/Images/rotator/green.jpg")" title="Green" /> </li>    
-		<li> <img src="@Url.Content("~/Images/rotator/snow.jpg")" title="Snow" /> </li>    
-		<li> <img src="@Url.Content("~/Images/rotator/wheat.jpg")" title="Wheat" /> </li>    
-		<li> <img src="@Url.Content("~/Images/rotator/tablet.jpg")" title="Tablet" /> </li>    
-		<li>        <img src="@Url.Content("~/Images/rotator/sea.jpg")" title="Sea" /></li>    
-		<li>        <img src="@Url.Content("~/Images/rotator/bread.jpg")" title="Bread" /></li>
-	</ul>
-	
-	@Html.EJ().Rotator("slidercontent").Items(itemElement =>  { 
-	
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" /> </div>);                           
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>  </div>);                           
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" />  </div>);                           
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" /> </div>);                           
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" /> </div>);                           
-	itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" /> </div>);})
-	
-	.SlideWidth("600px").SlideHeight("350px")
-	.ShowThumbnail(true).ThumbnailSourceID("slide")
-	.AllowKeyboardNavigation(true).ShowPlayButton(true)  
-	
-{% endhighlight %}
-	
-{% highlight js %}
+{% highlight CSHTML %}
+// Add this code in your CSHTML page and refer local data section for binding Rotator items.
+<ul id="slide" style="display: none">    
+	<li> <img src="@Url.Content("~/Images/rotator/green.jpg")" title="Green" /> </li>    
+	<li> <img src="@Url.Content("~/Images/rotator/snow.jpg")" title="Snow" /> </li>    
+	<li> <img src="@Url.Content("~/Images/rotator/wheat.jpg")" title="Wheat" /> </li>    
+	<li> <img src="@Url.Content("~/Images/rotator/tablet.jpg")" title="Tablet" /> </li>    
+	<li>        <img src="@Url.Content("~/Images/rotator/sea.jpg")" title="Sea" /></li>    
+	<li>        <img src="@Url.Content("~/Images/rotator/bread.jpg")" title="Bread" /></li>
+</ul>
+
+@Html.EJ().Rotator("slidercontent").Items(itemElement =>  { 
+
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" /> </div>);                           
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>  </div>);                           
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" />  </div>);                           
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" /> </div>);                           
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" /> </div>);                           
+itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" /> </div>);})
+
+.SlideWidth("600px").SlideHeight("350px")
+.ShowThumbnail(true).ThumbnailSourceID("slide")
+.AllowKeyboardNavigation(true).ShowPlayButton(true)  
+
+
 
 <script type="text/JavaScript"> 
    
-$(function () {   
-     
+	$(function () 
+	{   
+	 
 	//Control focus key      
-	
-	$(document).on("keydown", function (e) {   
-	
-	if (e.altKey && e.keyCode === 74) 
-	
-	{ 
-	
-		// j- key code.         
-		
-		$("#slidercontent")[0].focus();    
-        
+
+	$(document).on("keydown", function (e) 
+	{   
+
+		if (e.altKey && e.keyCode === 74) 
+
+		{ 
+
+			// j- key code.         
+			
+			$("#slidercontent")[0].focus();    
+			
 		}        
 		
-	});    });
-	
+	});    
+	});
+
 </script>
 
 {% endhighlight %}

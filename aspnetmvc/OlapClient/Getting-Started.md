@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | OLAPClient | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
 control: OLAPClient
@@ -77,7 +77,7 @@ Select Internet application template with razor view engine.
 
 	![](Getting-Started_images/Getting-Started_img6.png)
 
-	![C:/Users/Narendhran Muthuvel/Desktop/screenshots/sshot-4.png](Getting-Started_images/Getting-Started_img7.png)
+	![](Getting-Started_images/Getting-Started_img7.png)
 
 2. Select the following assemblies:  
 
@@ -95,38 +95,38 @@ Select Internet application template with razor view engine.
 	> 2. Apart from the cdn files, the rest of them can be acquired from the following location
     > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
+	<head>
 
-			<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
-			<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
+		<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
+		<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 
-		</head>
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following code example in the body tag of the _Layout.cshtml page.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<body>
-			@RenderBody()
-			@Html.EJ().ScriptManager()   
-		</body>
+	<body>
+		@RenderBody()
+		@Html.EJ().ScriptManager()   
+	</body>
 
    ~~~
-   {:.prettyprint }
+   
 
 ### Add Control in View page
 
 Add the following code example in the Index.cshtml page that is already created:
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript;
 @using Syncfusion.JavaScript.Olap;
@@ -158,7 +158,7 @@ Add the following code example in the Index.cshtml page that is already created:
 Add the following code example inside the IOlapClientService interface available in an IOlapClientService.cs file.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 public interface IOlapClientService
 {
@@ -224,7 +224,7 @@ public interface IOlapClientService
 
 Add the following namespaces required to implement the service methods.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using System;
 using System.Collections.Generic;
@@ -254,7 +254,7 @@ using Syncfusion.JavaScript.Olap;
 
 You can create the OlapClientService class to implement the service methods. You can inherit the class from the IOlapClientService interface that is created automatically while adding any new service.
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MvcApplication1.wcf
 {
@@ -275,7 +275,7 @@ You can add the following methods to the service that are invoked for any server
 
 1. Initialize the OLAP Client and OLAP Chart helper class.
 
-   ~~~ cs
+   ~~~ csharp
 
     OlapClient olapClientHelper = new OlapClient();
     OlapChart htmlHelper = new OlapChart();
@@ -285,11 +285,11 @@ You can add the following methods to the service that are invoked for any server
 
 
    ~~~
-   {:.prettyprint }  
+     
 
 2. Add the following relevant service methods.
 
-   ~~~ cs
+   ~~~ csharp
     
     //This method provides the required information from server-side for initializing the OlapClient.
     public Dictionary<string, object> InitializeClient(string action, string customObject, string clientParams)
@@ -489,13 +489,13 @@ You can add the following methods to the service that are invoked for any server
     }
 
    ~~~
-   {:.prettyprint }
+   
 
 ### Configuring Web.Config
 
 1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config__file at root folder.
 
-   ~~~ html
+   ~~~ cshtml
 
 	<compilation debug="true" targetFramework="4.5">
 	   <assemblies>
@@ -517,13 +517,13 @@ You can add the following methods to the service that are invoked for any server
        </compilation>
 	   
    ~~~
-   {:.prettyprint }
+   
 
 	N> x.x.x.x in the above code example refers to the current version of the Essential Studio running in your system.
 
 	The version of Syncfusion dlls according to the .NET framework and MVC version are mentioned follows.  For example, 12.1 version is illustrated.
 
-	_Table: List of MVC Version_
+	_List of MVC Version_
 
 	<table>
 	<tr>
@@ -558,24 +558,24 @@ You can add the following methods to the service that are invoked for any server
 
 2. Add the following namespaces to the web.config files at both the root folder and the View folder.
 
-   ~~~ html
+   ~~~ cshtml
 
-	[web.config]
-		<namespaces>
-			<add namespace="System.Web.Helpers" />
-			<add namespace="System.Web.Mvc" />
-			<add namespace="System.Web.Mvc.Ajax" />
-			<add namespace="System.Web.Mvc.Html" />
-			<add namespace="System.Web.Optimization" />
-			<add namespace="System.Web.Routing" />
-			<add namespace="System.Web.WebPages" />
-			<add namespace="Syncfusion.MVC.EJ"/>
-			<add namespace="Syncfusion.JavaScript"/>
-			<add namespace="Syncfusion.JavaScript.DataVisualization"/>
-		</namespaces>
+
+	<namespaces>
+		<add namespace="System.Web.Helpers" />
+		<add namespace="System.Web.Mvc" />
+		<add namespace="System.Web.Mvc.Ajax" />
+		<add namespace="System.Web.Mvc.Html" />
+		<add namespace="System.Web.Optimization" />
+		<add namespace="System.Web.Routing" />
+		<add namespace="System.Web.WebPages" />
+		<add namespace="Syncfusion.MVC.EJ"/>
+		<add namespace="Syncfusion.JavaScript"/>
+		<add namespace="Syncfusion.JavaScript.DataVisualization"/>
+	</namespaces>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Register the wcf services endpoint in web.config file at root folder by adding following codes.
    1. You can expose services through the properties such as binding, contract and address etc., using an endpoint.In your appliacation the service name is "MvcApplication1.wcf.OlapGClientService" where "OlapClientService" is the service class name and “MvcApplication1.wcf" is the namespace name where service class appears.
@@ -586,59 +586,59 @@ You can add the following methods to the service that are invoked for any server
        * binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
        * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows:
 
-   ~~~ html
+   ~~~ cshtml
 
-		<system.serviceModel>
-			<services>
-				<service name="MvcApplication1.wcf.OlapClientService">
-				<endpoint address="" behaviorConfiguration="MvcApplication1.wcf.OlapClientServiceAspNetAjaxBehavior"
-				binding="webHttpBinding" contract="MvcApplication1.wcf.IOlapClientService" />
-				</service>
-			</services>
-		</system.serviceModel>
+	<system.serviceModel>
+		<services>
+			<service name="MvcApplication1.wcf.OlapClientService">
+			<endpoint address="" behaviorConfiguration="MvcApplication1.wcf.OlapClientServiceAspNetAjaxBehavior"
+			binding="webHttpBinding" contract="MvcApplication1.wcf.IOlapClientService" />
+			</service>
+		</services>
+	</system.serviceModel>
 
    ~~~
-   {:.prettyprint }
+   
 
 4. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to  the respective behavior only using this name property. In the following code example "MvcApplication1.wcf.OlapClientServiceAspNetAjaxBehavior" points the OlapClientService class under the namespace MvcApplication1.wcf in OlapClientService.svc.cs file which is the appropriate behavior for the endpoint. 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<system.serviceModel>
-			<behaviors>
-				<endpointBehaviors>
-					<behavior name="MvcApplication1.wcf.OlapClientServiceAspNetAjaxBehavior">
-						<enableWebScript />
-					</behavior>
-				</endpointBehaviors>
-			</behaviors>    
-		</system.serviceModel>
+	<system.serviceModel>
+		<behaviors>
+			<endpointBehaviors>
+				<behavior name="MvcApplication1.wcf.OlapClientServiceAspNetAjaxBehavior">
+					<enableWebScript />
+				</behavior>
+			</endpointBehaviors>
+		</behaviors>    
+	</system.serviceModel>
 
    ~~~
-   {:.prettyprint }
+   
 
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “OlapClientService” indicates the class name in the WCF Service.
 
 5. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<appSettings>
-			<add key="webpages:Version" value="2.0.0.0" />
-			<add key="webpages:Enabled" value="false" />
-			<add key="PreserveLoginUrl" value="true" />
-			<add key="ClientValidationEnabled" value="true" />
-			<add key="UnobtrusiveJavaScriptEnabled" value="false" />
-		</appSettings>
+	<appSettings>
+		<add key="webpages:Version" value="2.0.0.0" />
+		<add key="webpages:Enabled" value="false" />
+		<add key="PreserveLoginUrl" value="true" />
+		<add key="ClientValidationEnabled" value="true" />
+		<add key="UnobtrusiveJavaScriptEnabled" value="false" />
+	</appSettings>
 
    ~~~
-   {:.prettyprint }
+   
 
 ### Configuring routing file
 
 You can add the following highlighted line in RouteConfig.cs file inorder to avoid issues while picking the WCF service methods.
 
-{% highlight c# %}
+{% highlight C# %}
 
 public class RouteConfig
 {

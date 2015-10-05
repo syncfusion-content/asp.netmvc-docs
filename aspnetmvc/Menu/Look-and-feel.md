@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Look-and-feel
+title: Look and feel | Menu | ASP.NET MVC | Syncfusion
 description: look and feel
 platform: ejmvc
 control: Menu
@@ -34,127 +34,118 @@ Using this CssClass you can override the existing styles under the theme style s
 
 1. Add the following code in your View page.
 
+   ~~~ cshtml
 
+	// Add the following code in your CSHTML page.
 
-   ~~~ js
+	<div class="imgframe">
 
+			@Html.EJ().Menu("menucontrol").Items(items =>
 
+			{
 
-		// Add the following code in your CSHTML page.
+				items.Add().Id("Home").Text("Home").Children(child =>
 
-		<div class="imgframe">
+					{
 
-				@Html.EJ().Menu("menucontrol").Items(items =>
+						child.Add().Text("Foundation");
 
-				{
+						child.Add().Text("Launch");
 
-					items.Add().Id("Home").Text("Home").Children(child =>
-
-						{
-
-							child.Add().Text("Foundation");
-
-							child.Add().Text("Launch");
-
-							child.Add().Text("About").Children(child1 =>
-
-							{
-
-								child1.Add().Text("Company");
-
-								child1.Add().Text("Location");
-
-							});
-
-						});
-
-					items.Add().Text("Services").Children(child =>
+						child.Add().Text("About").Children(child1 =>
 
 						{
 
-							child.Add().Text("Consulting");
+							child1.Add().Text("Company");
 
-							child.Add().Text("Outsourcing");
-
-						});
-
-					items.Add().Text("About");
-
-					items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-						{
-
-							child.Add().Text("Contact number");
-
-							child.Add().Text("E-mail");
+							child1.Add().Text("Location");
 
 						});
 
-					items.Add().Id("Careers").Text("Careers").Children(child =>
+					});
 
-						 {
+				items.Add().Text("Services").Children(child =>
+
+					{
+
+						child.Add().Text("Consulting");
+
+						child.Add().Text("Outsourcing");
+
+					});
+
+				items.Add().Text("About");
+
+				items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+					{
+
+						child.Add().Text("Contact number");
+
+						child.Add().Text("E-mail");
+
+					});
+
+				items.Add().Id("Careers").Text("Careers").Children(child =>
+
+					 {
 
 
 
-							 child.Add().Text("Position").Children(child1 =>
+						 child.Add().Text("Position").Children(child1 =>
 
-									 {
+								 {
 
-										 child1.Add().Text("Developer");
+									 child1.Add().Text("Developer");
 
-										 child1.Add().Text("Manager");
+									 child1.Add().Text("Manager");
 
-									 });
+								 });
 
-							 child.Add().Text("Apply online");
+						 child.Add().Text("Apply online");
 
-						 });
+					 });
 
 
 
-				}).Width("500").CssClass("Purple-dark")
+			}).Width("500").CssClass("Purple-dark")
 
-		</div>
+	</div>
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following code in your style section.
 
 
    ~~~ css
 
+	<style type="text/css" class="cssStyles">
+
+		.Purple-dark {
+
+			background: pink;
+
+		}
 
 
 
-		<style type="text/css" class="cssStyles">
+		.Purple-dark.e-horizontal .e-list > a {
 
-			.Purple-dark {
+				color: #4800ff;
 
-				background: pink;
+		 }
 
-			}
-
-
-
-			.Purple-dark.e-horizontal .e-list > a {
-
-					color: #4800ff;
-
-			 }
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 Following screenshot displays the output of the above code.
 
 ![](Look-and-feel_images/Look-and-feel_img1.png)
 
-
-
-_Figure: Look and feel of a Menu_
-
+Look and feel of a Menu
+{:.caption}

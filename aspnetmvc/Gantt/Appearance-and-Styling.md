@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Gantt | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Gantt
@@ -17,11 +17,7 @@ You can customize the week header format and day header format in the Schedule p
 
 
 
-
-
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
 
@@ -29,19 +25,17 @@ You can customize the week header format and day header format in the Schedule p
 
 .ScheduleHeaderSettings(options => 
 
-                      {
+  {
 
-                          options.WeekHeaderFormat("MMM yyyy"); 
+	  options.WeekHeaderFormat("MMM yyyy"); 
 
-                          options.DayHeaderFormat("d"); 
+	  options.DayHeaderFormat("d"); 
 
-                       options.ScheduleWeekendBackground("#F2F2F2");
+   options.ScheduleWeekendBackground("#F2F2F2");
 
-                      })
+  })
 
-                      .Datasource(ViewBag.datasource))
-
-
+.Datasource(ViewBag.datasource))
 
 {% endhighlight %}
 
@@ -55,79 +49,79 @@ The following screenshot shows the customized format schedule header in Gantt co
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-_Figure 52: Schedule Header Customization_
-
+Schedule Header Customization
+{:.caption}
 
 ## Taskbar Customization
 
 You can customize the Taskbar based on the task information in Gantt control to highlight the task. The following code example shows how to customize the Taskbar in Gantt control.
 
 
-
-
-
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
 
-         //...
 
-         .ClientSideEvents(eve =>
+.ClientSideEvents(eve =>
 
-         {
+{
 
-             eve.QueryTaskbarInfo("queryTaskbarInfo");
+	eve.QueryTaskbarInfo("queryTaskbarInfo");
 
-         })
+})
 
-         .Datasource(ViewBag.datasource)
+	.Datasource(ViewBag.datasource)
 
-         )
-
+)
 
 
-@section ScriptSection{
+
+@section ScriptSection
+{
 
    <script type="text/javascript">
 
-       function queryTaskbarInfo(args) {
+       function queryTaskbarInfo(args) 
+	   {
 
-           if (args.data.level === 0) {
+           if (args.data.level === 0) 
+		   {
 
                args.parentTaskbarBackground = "pink";
 
                args.parentProgressbarBackground = "cyan";
 
-           } else {
+           } 
+		   else 
+		   {
 
-               if (args.data.status == "60") {
+               if (args.data.status == "60") 
+			   {
 
                    args.progressbarBackground = "red";
 
-               } else if (args.data.status == "70") {
+               } 
+			   else if (args.data.status == "70") 
+			   {
 
                    args.progressbarBackground = "yellow";
 
-               } else if (args.data.status == "80") {
+               } 
+			   else if (args.data.status == "80") 
+			   {
 
                    args.progressbarBackground = "green";
 
                }
 
-       }
+			}
 
-}
-
-     </script>
+		}
+	</script>
 
 }
 
 @(Html.EJ().ScriptManager())
-
-
-
 
 
 {% endhighlight %}
@@ -142,7 +136,8 @@ The following screenshot shows the customized taskbar in Gantt control.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-_Figure 53: Customized taskbar_
+Customized taskbar
+{:.caption}
 
 ## Themes
 
@@ -176,11 +171,9 @@ You can apply the theme (Gradient lime) to the Gantt control by using the style 
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!DOCTYPE html>
-
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -194,11 +187,7 @@ You can apply the theme (Gradient lime) to the Gantt control by using the style 
 
 //…
 
-
-
 </html>
-
-
 
 {% endhighlight %}
 
@@ -208,5 +197,5 @@ The following screenshot shows the Gantt control with Gradient-lime theme.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-_Figure 54: Gantt with Gradient lime theme_
-
+Gantt with Gradient lime theme
+{:.caption}

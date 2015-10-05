@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Schedule | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Schedule
@@ -23,7 +23,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("AdaptiveSchedule")
 
@@ -55,7 +55,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 // follow the code as same as declared in Read Only part
 
@@ -86,7 +86,7 @@ For Adaptive Schedule, you can refer to the following css file in the applicatio
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -140,8 +140,7 @@ _Figure 2: Schedule with disabled all day row_
 The following code eample explains how to change the height of the Schedule control.  
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -176,9 +175,8 @@ The following screenshot displays the Schedule control with the height set to �
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
-
-
-   _Figure_ _111_:  Adjusting schedule size height.
+Adjusting schedule size height.
+{:.caption}
 
 
 
@@ -191,7 +189,7 @@ The following code example explains how to change the width of the Schedule cont
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -228,7 +226,8 @@ The following screenshot displays the Schedule control with the width set to “
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
-_Figure112:  Adjusting schedule size width_
+Adjusting schedule size width
+{:.caption}
 
 ### Adjust Cell Size
 
@@ -247,7 +246,7 @@ The following code example explains how to change the cell height and width of t
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Setting the cell height and width of the schedule
 
@@ -338,39 +337,38 @@ The following code example explains on how to use the showHeaderBar property.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
 
-        .Width("100%")
+.Width("100%")
 
-        .Height("525px")
+.Height("525px")
 
-        .CurrentDate(new DateTime(2014,5,12))
+.CurrentDate(new DateTime(2014,5,12))
 
-        //Diables the showHeaderBar property to the schedule 
+//Diables the showHeaderBar property to the schedule 
 
 .ShowHeaderBar(false)
 
-        .AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
+.AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
 
-            .Id("Id")
+.Id("Id")
 
-            .Subject("Subject")
+.Subject("Subject")
 
-            .StartTime("StartTime")
+.StartTime("StartTime")
 
-            .EndTime("EndTime")
+.EndTime("EndTime")
 
-            .AllDay("AllDay")
+.AllDay("AllDay")
 
-            .Recurrence("Recurrence")
+.Recurrence("Recurrence")
 
-            .RecurrenceRule("RecurrenceRule"))
+.RecurrenceRule("RecurrenceRule"))
 
-        )
-
+)
 
 {% endhighlight %}
 
@@ -380,9 +378,9 @@ The following screenshot displays the Schedule control with the hidden header 
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
+Schedule with header bar hidden
+{:.caption}
 
-
-_Schedule with header bar hidden_
 
 
 

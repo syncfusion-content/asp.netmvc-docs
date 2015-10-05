@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web-accessibility
+title: Web accessibility | Grid | ASP.NET MVC | Syncfusion
 description: web accessibility
 platform: ejmvc
 control: Grid

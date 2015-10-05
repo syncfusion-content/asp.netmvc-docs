@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | TreeView | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: TreeView
@@ -29,26 +29,26 @@ The Essential ASP.NET MVC Splitter is a layout control that allows you to divide
 1. Create a MVC Project and add necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/treeview/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for rendering the Splitter window.
    
-   ~~~ html
+   ~~~ cshtml
 
-		@Html.EJ().Splitter("outer").Height("250").Width("601").Orientation(Orientation.Horizontal).PaneProperties(
+	@Html.EJ().Splitter("outer").Height("250").Width("601").Orientation(Orientation.Horizontal).PaneProperties(
 
-		    p =>
+		p =>
 
-		    {
+		{
 
-			p.Add().ContentTemplate(
+		p.Add().ContentTemplate(
 
-			    @<div></div>);
+			@<div></div>);
 
-			p.Add().ContentTemplate(
+		p.Add().ContentTemplate(
 
-			    @<div></div>);        
+			@<div></div>);        
 
-		    })
+		})
 
    ~~~
-   {:.prettyprint }
+   
 
 
 3. Execute the above code example to render the following output.
@@ -68,42 +68,41 @@ You can style the right pane and render TreeView by adding <div> element within 
 
 Add the following style section to render the Splitter layout.
 
-{% highlight css %}
+{% highlight CSS %}
 
+<style>
 
-		<style>
+#outer
 
-			#outer
+{
 
-			{
+	font-size: 14px;
 
-			    font-size: 14px;
+	font-family:sans-serif;
 
-			    font-family:sans-serif;
+}
 
-			}
+.cont
 
-			.cont
+{
 
-			{
+	padding: 40px 0 0 10px;
 
-			    padding: 40px 0 0 10px;
+	text-align: center;
 
-			    text-align: center;
+}	
 
-			}	
+.splitdiv
 
-			.splitdiv
+{
 
-			{
+	height:100%;
 
-			    height:100%;
+	padding-left:30px;
 
-			    padding-left:30px;
+}
 
-			}
-
-		   </style>
+</style>
 
 {% endhighlight %}
 
@@ -112,47 +111,45 @@ Add the following style section to render the Splitter layout.
 Add TreeView initialization inside the Splitter section.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().Splitter("outer").Height("250").Width("601").Orientation(Orientation.Horizontal).PaneProperties(
 
-        p =>
+p =>
 
-        {
+{
 
-            p.Add().ContentTemplate(
+p.Add().ContentTemplate(
 
-                @<div class="splitdiv">
+	@<div class="splitdiv">
 
-                  <div>
+	  <div>
 
 @Html.EJ().TreeView("treeView")
 
-                  </div> 
+	  </div> 
 
-               </div>);
+   </div>);
 
 
 
-            p.Add().ContentTemplate(
+p.Add().ContentTemplate(
 
-                @<div>
+	@<div>
 
-                        <div class="cont">
+			<div class="cont">
 
-                            <!-- Div elements for displaying the messages-->
+				<!-- Div elements for displaying the messages-->
 
-                            <div class="mailHead">My Mail Box</div>
+				<div class="mailHead">My Mail Box</div>
 
-                            <div class="mailCont"> </div>
+				<div class="mailCont"> </div>
 
-                        </div>
+			</div>
 
-                    </div>);        
+		</div>);        
 
-             })
+ })
 
 {% endhighlight %}
 
@@ -171,80 +168,78 @@ Create the Data Source as List of Objects for TreeView and initialize as follows
 Add the following data list to bind in the controller page and define the corresponding data.
 
 
-{% highlight c# %}
+{% highlight C# %}
+
+public class Outlookitems
+
+{
+
+//Treeview data source should have Id, ParentId and Text as mandatory
+
+public int Id { get; set; }
+
+// ParentId takes the value of the parent nodes Id
+
+public int Pid { get; set; }
+
+//Text to be displayed in the treeview node
+
+public string Name { get; set; }
+
+//Set to true if node has children
+
+public bool HasChild { get; set; }
+
+//Set to true if node to be expanded initially
+
+public bool Expanded { get; set; }
+
+//Image icon for nodes taken from the sprite css classes
+
+public string SpriteCss { get; set; }
+
+}
 
 
+//Refer the Model in the controller
 
-    public class Outlookitems
+using <Applicationname>.Models;
 
-    {
+public ActionResult Index()
 
-       //Treeview data source should have Id, ParentId and Text as mandatory
+{
 
-        public int Id { get; set; }
+	List<Outlookitems> items=new List<Outlookitems>();
 
-       // ParentId takes the value of the parent nodes Id
+	//List items for Mailbox treeview
 
-        public int Pid { get; set; }
+	items.Add(new Outlookitems { Id = 1, Name = "MailBox", HasChild = true, SpriteCss = "mailicon sprite-root", Expanded = true });
 
-       //Text to be displayed in the treeview node
+	items.Add(new Outlookitems { Id = 2, Pid = 1, Name = "Calendar", SpriteCss = "mailicon sprite-calendar" });
 
-        public string Name { get; set; }
+	items.Add(new Outlookitems { Id = 3, Pid = 1, Name = "Contacts", SpriteCss = "mailicon sprite-contacts" });
 
-       //Set to true if node has children
+	items.Add(new Outlookitems { Id = 4, Pid = 1, Name = "DeletedItems", SpriteCss = "mailicon sprite-deleted" });
 
-        public bool HasChild { get; set; }
+	items.Add(new Outlookitems { Id = 5, Pid = 1, Name = "Drafts", SpriteCss = "mailicon sprite-drafts" });
 
-      //Set to true if node to be expanded initially
+	items.Add(new Outlookitems { Id = 6, Pid = 1, Name = "Inbox", SpriteCss = "mailicon sprite-inbox" });
 
-        public bool Expanded { get; set; }
+	items.Add(new Outlookitems { Id = 7, Pid = 6, Name = "Incidents ", SpriteCss = "mailicon sprite-folder" });
 
-      //Image icon for nodes taken from the sprite css classes
+	items.Add(new Outlookitems { Id = 8, Pid = 6, Name = "Forums ", SpriteCss = "mailicon sprite-folder" });
 
-        public string SpriteCss { get; set; }
+	items.Add(new Outlookitems { Id = 9, Pid = 6, Name = "Issue Reports ", SpriteCss = "mailicon sprite-folder" });
 
-    }
+	items.Add(new Outlookitems { Id = 10, Pid = 1, Name = "Junk E-mail ", SpriteCss = "mailicon sprite-junk" });
 
+	items.Add(new Outlookitems { Id = 11, Pid = 1, Name = "Sent Items ", SpriteCss = "mailicon sprite-sentitems" });
 
-		//Refer the Model in the controller
+	ViewData["Items"] = items;
 
-		using <Applicationname>.Models;
+	return View();
 
-		public ActionResult Index()
-
-        {
-
-            List<Outlookitems> items=new List<Outlookitems>();
-
-            //List items for Mailbox treeview
-
-            items.Add(new Outlookitems { Id = 1, Name = "MailBox", HasChild = true, SpriteCss = "mailicon sprite-root", Expanded = true });
-
-            items.Add(new Outlookitems { Id = 2, Pid = 1, Name = "Calendar", SpriteCss = "mailicon sprite-calendar" });
-
-            items.Add(new Outlookitems { Id = 3, Pid = 1, Name = "Contacts", SpriteCss = "mailicon sprite-contacts" });
-
-            items.Add(new Outlookitems { Id = 4, Pid = 1, Name = "DeletedItems", SpriteCss = "mailicon sprite-deleted" });
-
-            items.Add(new Outlookitems { Id = 5, Pid = 1, Name = "Drafts", SpriteCss = "mailicon sprite-drafts" });
-
-            items.Add(new Outlookitems { Id = 6, Pid = 1, Name = "Inbox", SpriteCss = "mailicon sprite-inbox" });
-
-            items.Add(new Outlookitems { Id = 7, Pid = 6, Name = "Incidents ", SpriteCss = "mailicon sprite-folder" });
-
-            items.Add(new Outlookitems { Id = 8, Pid = 6, Name = "Forums ", SpriteCss = "mailicon sprite-folder" });
-
-            items.Add(new Outlookitems { Id = 9, Pid = 6, Name = "Issue Reports ", SpriteCss = "mailicon sprite-folder" });
-
-            items.Add(new Outlookitems { Id = 10, Pid = 1, Name = "Junk E-mail ", SpriteCss = "mailicon sprite-junk" });
-
-            items.Add(new Outlookitems { Id = 11, Pid = 1, Name = "Sent Items ", SpriteCss = "mailicon sprite-sentitems" });
-
-            ViewData["Items"] = items;
-
-            return View();
-
-        }
+}
 
 
 {% endhighlight %}
@@ -253,17 +248,13 @@ Add the following data list to bind in the controller page and define the corres
 Add the following code example in the Splitter section to render the TreeView in the right side pane.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @* Refer the model in view page*@
 
 @model IEnumerable< _Applicationname_.Models.Outlookitems>
 
-
-
 @*TreeView code inside splitter section*@
-
-
 
 @<div class="splitdiv">
 
@@ -299,140 +290,137 @@ You can show the Sprite image icons in TreeView loaded inside the <styles> tag, 
 
 
 
-{% highlight css %}
+{% highlight CSS %}
 
 
  <style>
 
 .mailicon
 
-        {
+	{
 
-            background-image: url("../Images/mailicons.png");
+		background-image: url("../Images/mailicons.png");
 
-            display: inline-block;
+		display: inline-block;
 
-            overflow: hidden;
+		overflow: hidden;
 
-            background-repeat: no-repeat;
+		background-repeat: no-repeat;
 
-            text-align: center;
+		text-align: center;
 
-            vertical-align: middle;
+		vertical-align: middle;
 
-            width: 20px;
+		width: 20px;
 
-            height: 18px;
+		height: 18px;
 
-        }
+	}
 
-        .sprite-calendar
+	.sprite-calendar
 
-        {
+	{
 
-            background-position: -25px -255px;
+		background-position: -25px -255px;
 
-        }
+	}
 
-        .sprite-contacts
+	.sprite-contacts
 
-        {
+	{
 
-            background-position: -26px -429px;
+		background-position: -26px -429px;
 
-        }
+	}
 
-        .sprite-deleted
+	.sprite-deleted
 
-        {
+	{
 
-            background-position: -24px -152px;
+		background-position: -24px -152px;
 
-        }
+	}
 
-        .sprite-drafts
+	.sprite-drafts
 
-        {
+	{
 
-            background-position:-24px -83px;
+		background-position:-24px -83px;
 
-        }
+	}
 
-        .sprite-folder
+	.sprite-folder
 
-        {
+	{
 
-            background-position: -24px -464px;
+		background-position: -24px -464px;
 
-        }
+	}
 
-        .sprite-folders
+	.sprite-folders
 
-        {
+	{
 
-            background-position: -24px -222px;
+		background-position: -24px -222px;
 
-        }
+	}
 
 
 
-        .sprite-inbox
+	.sprite-inbox
 
-        {
+	{
 
-            background-position: -25px -13px;
+		background-position: -25px -13px;
 
-        }
+	}
 
-        .sprite-junk
+	.sprite-junk
 
-        {
+	{
 
-            background-position: -23px -187px;
+		background-position: -23px -187px;
 
-        }
+	}
 
-        .sprite-notes
+	.sprite-notes
 
-        {
+	{
 
-            background-position: -26px -394px;
+		background-position: -26px -394px;
 
-        }
+	}
 
-        .sprite-outbox
+	.sprite-outbox
 
-        {
+	{
 
-            background-position: 0 -414px;
+		background-position: 0 -414px;
 
-            width: 16px;
+		width: 16px;
 
-            height: 16px;
+		height: 16px;
 
-        }
+	}
 
-        .sprite-root
+	.sprite-root
 
-        {
+	{
 
-            background-position: -25px -49px;
+		background-position: -25px -49px;
 
-        }
+	}
 
-        .sprite-sentitems
+	.sprite-sentitems
 
-        {
+	{
 
-            background-position: -26px -118px;
+		background-position: -26px -118px;
 
-        }
+	}
 
 </style> 
 
-{% endhighlight %}
-
-{% highlight html %}
 
 @*TreeView code inside splitter section*@
 
@@ -440,13 +428,13 @@ You can show the Sprite image icons in TreeView loaded inside the <styles> tag, 
 
 @<div class="splitdiv">
 
-       <div>
+<div>
 
-           @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource((IEnumerable<loadondemand>).ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded").SpriteCssClass("spriteCss"))
+   @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource((IEnumerable<loadondemand>).ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded").SpriteCssClass("spriteCss"))
 
-             </div> 
+	 </div> 
 
-        </div>); 
+</div>); 
 
 {% endhighlight %}
 
@@ -463,11 +451,9 @@ Execute the above code to render the TreeView with Mail Icons.
 
 To rename the mail folders, set allowEdit property to True. You can also use F2 key or double-click the node to rename the node.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*TreeView code inside splitter section*@
-
-
 
     @<div class="splitdiv">
 
@@ -496,23 +482,19 @@ In this application you can Drag and Drop the folders anywhere inside the mailbo
 
 Execute the following code example to Drag and Drop the nodes anywhere within the TreeView.
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @*TreeView code inside splitter section*@
 
+@<div class="splitdiv">
 
+   <div>
 
-    @<div class="splitdiv">
+		 @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource((IEnumerable<loadondemand>).ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded").SpriteCssClass("spriteCss")).AllowEditing(true).AllowDragAndDrop(true)
 
-       <div>
+   </div> 
 
-             @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource((IEnumerable<loadondemand>).ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded").SpriteCssClass("spriteCss")).AllowEditing(true).AllowDragAndDrop(true)
-
-       </div> 
-
-    </div>);
+</div>);
 
 {% endhighlight %}
 
@@ -520,11 +502,9 @@ Execute the following code example to Drag and Drop the nodes anywhere within th
 
 When you click on the Mailbox folder item, the corresponding navigation action is performed in the Select event and this is achieved by declaring the Select event with the corresponding call back function.  You can rename the folder names and it is not renamed as empty. This validation process is done manually in the InlineEditValidation event.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*TreeView code inside splitter section*@
-
-
 
 @<div class="splitdiv">
 
@@ -540,11 +520,10 @@ When you click on the Mailbox folder item, the corresponding navigation action i
 
   </div>);
 
-
-
 <script type="text/javascript">
 
-    function validateFolder(args) {
+    function validateFolder(args) 
+	{
 
             //write your code here for other folder creation process.
 
@@ -562,13 +541,14 @@ When you click on the Mailbox folder item, the corresponding navigation action i
 
 
 
-    function treeclicked(args) {
+    function treeclicked(args) 
+	{
 
         //write your code here for other process on selecting tree nodes.
 
-      $(".mailHead").html(args.value);
+		$(".mailHead").html(args.value);
 
- $(".mailCont").html("The Contents of <b>" + args.value + "</b> will be displayed here");
+		$(".mailCont").html("The Contents of <b>" + args.value + "</b> will be displayed here");
 
       }
 
@@ -599,11 +579,9 @@ You can add or remove the nodes dynamically during runtime. It is achieved by ad
 Initialize the ContextMenu in the Splitter section as follows.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*TreeView code inside splitter section*@
-
-
 
        @<div class="splitdiv">
 
@@ -643,57 +621,61 @@ var nodeIndex = 1, treeviewObj, selectedNode;
 
 
 
-      //Refer code for Tree click event and node editing validation 
+//Refer code for Tree click event and node editing validation 
 
-        function beforeOpen(args) {
+function beforeOpen(args) 
+{
 
-//creating the treeview object before the context menu opens with the selected node
-
-
-
-            treeviewObj = $("#treeView").data("ejTreeView");// Creating the treeview object
-
-            if (!$(args.target).hasClass("e-text"))
-
-                args.cancel = true; //write your code here for other process.
-
-            else {
-
-                selectedNode = args.target;
-
-                treeviewObj.selectNode(selectedNode); //selectNode method for treeview.
-
-            }
-
-        }
+	//creating the treeview object before the context menu opens with the selected node
 
 
 
-        function menuclick(args) {
+	treeviewObj = $("#treeView").data("ejTreeView");// Creating the treeview object
 
-            treeviewObj = $("#treeView").data("ejTreeView");// Creating the treeview object
+	if (!$(args.target).hasClass("e-text"))
 
-            if (args.events.text == "New Folder") {
+		args.cancel = true; //write your code here for other process.
 
-                //creating the new node in the treeview using addNode method
+	else {
 
-                treeviewObj.addNode("New Folder" + nodeIndex, selectedNode);
+		selectedNode = args.target;
 
-                nodeIndex++;
+		treeviewObj.selectNode(selectedNode); //selectNode method for treeview.
 
-            }
+	}
 
-            else if (args.events.text == "Delete Folder") {
+}
 
-                //Deleting the existing node in the treeview
 
-                treeviewObj.removeNode(selectedNode);
 
-            }
+function menuclick(args) 
+{
 
-        }
+	treeviewObj = $("#treeView").data("ejTreeView");// Creating the treeview object
 
-    </script>
+	if (args.events.text == "New Folder") 
+	{
+
+		//creating the new node in the treeview using addNode method
+
+		treeviewObj.addNode("New Folder" + nodeIndex, selectedNode);
+
+		nodeIndex++;
+
+	}
+
+	else if (args.events.text == "Delete Folder") 
+	{
+
+		//Deleting the existing node in the treeview
+
+		treeviewObj.removeNode(selectedNode);
+
+	}
+
+}
+
+</script>
 
 {% endhighlight %}
 

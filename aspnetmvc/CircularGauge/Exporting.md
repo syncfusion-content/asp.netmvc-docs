@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | CircularGauge | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: CircularGauge
@@ -48,7 +48,7 @@ Execute the above code to render the following output.
 
 ![](Exporting_images/Exporting_img1.png)
 
-
-
+Circular Gauge control Export Functionality
+{:.caption}
 
 

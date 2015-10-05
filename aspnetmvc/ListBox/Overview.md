@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: ListBox | ListBox | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: ListBox
 documentation: ug
 ---
 
-# Overview
+# ListBox
 
 The ListBox control provides a list of options and allows you to choose an item from the list. It includes several other HTML elements such as images, textboxes, check box, and radio buttons and so on. It also supports data binding, template options and multi-select options.
 

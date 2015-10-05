@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controls-Support
+title: Controls Support | Ribbon | ASP.NET MVC | Syncfusion
 description: controls support
 platform: ejmvc
 control: Ribbon
@@ -36,8 +36,9 @@ In _Ribbon_ control, Button,SplitButton,DropDownList Toggle button, Gallery and 
 The _default_ _type_ is _button_.
 
 
-
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
@@ -47,7 +48,7 @@ The _default_ _type_ is _button_.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -189,31 +190,31 @@ ActivePrefixIcon = "e-ribbon e-bold"
 
 })
 
-.ClientSideEvents(evt=>evt.ClientSideOnCreate("createControl"))
+.ClientSideEvents(evt => evt.Create("createControl"))
 
 )
 
 
 
-<ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+	<ul>
 
-<li><a>New</a></li>
+		<li><a>New</a></li>
 
-<li><a>Open</a></li>
+		<li><a>Open</a></li>
 
-<li><a>Save</a></li>
+		<li><a>Save</a></li>
 
-<li><a>Save as</a></li>
+		<li><a>Save as</a></li>
 
-<li><a>Print</a></li>
+		<li><a>Print</a></li>
 
-</ul>
+	</ul>
 
-</li>
+	</li>
 
 </ul>
 
@@ -221,7 +222,18 @@ ActivePrefixIcon = "e-ribbon e-bold"
 
 <ul id="pasteSplit">
 
-<li><a>Paste</a></li>
+	<li><a>Paste</a></li>
+
+</ul>
+
+<input id="fontcolor"/>
+
+
+
+
+<ul id="pasteSplit">
+
+	<li><a>Paste</a></li>
 
 </ul>
 
@@ -231,13 +243,14 @@ ActivePrefixIcon = "e-ribbon e-bold"
 
 <script>
 
-function createControl(args) {
+	function createControl(args) 
+	{
 
-var ribbon = $("#defaultRibbon").data("ejRibbon");
+	var ribbon = $("#defaultRibbon").data("ejRibbon");
 
-$("#fontcolor").ejColorPicker({ value: "#FFFF00", modelType: "palette", cssClass: "e-ribbon", toolIcon: "e-icon e-fontcoloricon" });
+	$("#fontcolor").ejColorPicker({ value: "#FFFF00", modelType: "palette", cssClass: "e-ribbon", toolIcon: "e-icon e-fontcoloricon" });
 
-}
+	}
 
 </script>
 
@@ -245,57 +258,61 @@ $("#fontcolor").ejColorPicker({ value: "#FFFF00", modelType: "palette", cssClass
 
 <style>
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+	content: "\e645";
 
-font-size: 36px;
+	font-size: 36px;
 
-position: relative;
+	position: relative;
 
-left: -9px;
+	left: -9px;
 
-top: -4px;
+	top: -4px;
 
-}
-
-
-
-.e-ribbon .e-undo:before {
-
-content: "\e736";
-
-font-size: 28px;
-
-position: relative;
-
-left: -7px;
-
-top: -4px;
-
-}
+	}
 
 
 
-.e-ribbon .bold:before {
+	.e-ribbon .e-undo:before 
+	{
 
-content: "\e636";
+	content: "\e736";
 
-}
+	font-size: 28px;
+
+	position: relative;
+
+	left: -7px;
+
+	top: -4px;
+
+	}
 
 
 
-.e-ribbon .e-fontcoloricon:before {
+	.e-ribbon .bold:before 
+	{
 
-content: "\e632";
+	content: "\e636";
 
-font-size: 15px;
+	}
 
-position: relative;
 
-right: 10px;
 
-}
+	.e-ribbon .e-fontcoloricon:before 
+	{
+
+	content: "\e632";
+
+	font-size: 15px;
+
+	position: relative;
+
+	right: 10px;
+
+	}
 
 
 
@@ -303,45 +320,41 @@ right: 10px;
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class RibbonController : Controller
+	public partial class RibbonController : Controller
 
-{
+	{
 
-//
+		// GET: /Sample/
 
-// GET: /Sample/
+		List<FontFamily> fontFamilySample = new List<FontFamily>();
 
-List<FontFamily> fontFamilySample = new List<FontFamily>();
+		public ActionResult Sample()
 
-public ActionResult Sample()
+		{
 
-{
+			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
 
-fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
+			fontFamilySample.Add(new FontFamily { text = "Arial" });
 
-fontFamilySample.Add(new FontFamily { text = "Arial" });
+			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
 
-fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
+			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
 
-fontFamilySample.Add(new FontFamily { text = "Tahoma" });
+			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
 
-fontFamilySample.Add(new FontFamily { text = "Helvetica" });
+			ViewBag.datasource = fontFamilySample;
 
-ViewBag.datasource = fontFamilySample;
+			return View();
 
-return View();
+		}
 
-}
-
-
-
-}
+	}
 
 }
 
@@ -349,7 +362,7 @@ return View();
 
 {% endhighlight %}
 
-
+{% endtabs %}
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Dialog | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Dialog
@@ -27,7 +27,8 @@ Here, flat-saffron theme is used. Similarly you can change the themes.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Figure 1:Sign Up Form Appearance_
+Sign Up Form Appearance
+{:.caption}
 
 ### Create a Dialog
 
@@ -41,12 +42,12 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
 2. You can add the following code example to the corresponding view page to render Dialog.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().Dialog("loginForm").Title("Sign Up")
+    @Html.EJ().Dialog("loginForm").Title("Sign Up")
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -54,7 +55,8 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
    ![](Getting-Started_images/Getting-Started_img2.png)
    
-   _Figure 2: Dialog Control Appearance without Dialog content_
+   Dialog Control Appearance without Dialog content
+   {:.caption}
 
 By default, the Dialog control shows the header element. You can use the title text from Dialog element.
 
@@ -68,7 +70,7 @@ The following code example illustrates how to set the content in Dialog control.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -181,9 +183,7 @@ The following code example illustrates how to set the content in Dialog control.
 
       You can use the following styles to customize the styles of sign up form. You can use Bootstrap for aligning the login page header in center and styling the sign up button. You can also include bootstrap.min.css file from CDN location. 
 
-{% highlight css %}
-
-
+{% highlight CSS %}
 
 <style type="text/css" >
 
@@ -297,7 +297,7 @@ The following code example illustrates how to set the content in Dialog control.
 
     }    
 
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -307,7 +307,8 @@ Execute the above code example to render following output.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure 3: Dialog Control Appearance with Sign up form elements_
+Dialog Control Appearance with Sign up form elements
+{:.caption}
 
 The above screenshot displays the Dialog control with header and resizable option. These options are enabled in Dialog control by default
 
@@ -338,7 +339,8 @@ Execute this code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-_Figure 4: Dialog Control with Sign up form elements_
+Dialog Control with Sign up form elements
+{:.caption}
 
 You can also add additional functionalities to Dialog control such as Ajax content, list of header icon actions such as close, minimize, maximize actions and model Dialog.
 
@@ -352,7 +354,7 @@ Initialize the Dialog control with the following code example.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -383,107 +385,109 @@ You can add the following code example in <script> tag to add validation to form
 {% highlight js %}
 
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-    //onSignUp function trigger when click on Sign up Button.
-
-
-
-    function onSignUp() {
-
-        var obj = $("#loginForm").data("ejDialog");
-
-        obj.close();
-
-    }
+	//onSignUp function trigger when click on Sign up Button.
 
 
 
-    // onValidation function trigger before close the dialog.
+	function onSignUp() 
+	{
+
+		var obj = $("#loginForm").data("ejDialog");
+
+		obj.close();
+
+	}
 
 
 
-    function onValidation(args) {
-
-        var error = [], re, regEmail;
-
-        //Regular expression for validating string type value
-
-        re = /^[A-Za-z]+$/;
-
-        //Regular expression for validating email address value
-
-        regEmail = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        //Validating FirstName and Lastname field
-
-        $('#loginForm input.name[type=text]').each(function (n, element) {
-
-            if (($(element).val() == ''))
-
-                error.push('Please enter your ' + element.name);
-
-            else if (!re.test($(element).val()))
-
-                error.push(element.name + ' must have a string value');
-
-        });
+	// onValidation function trigger before close the dialog.
 
 
 
-        //Validating email and re-enter email field
+	function onValidation(args) 
+	{
 
-        $('#loginForm input.email[type=text]').each(function (n, element) {
+		var error = [], re, regEmail;
 
-            if (($(element).val() == ''))
+		//Regular expression for validating string type value
 
-                error.push('Please enter your ' + element.name + ' address');
+		re = /^[A-Za-z]+$/;
 
-            else if (!regEmail.test($(element).val()))
+		//Regular expression for validating email address value
 
-                error.push('Please enter a valid email address');
+		regEmail = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        });
+		//Validating FirstName and Lastname field
 
-        !($("#loginForm input#email").val() === $("#loginForm input#reptemail").val()) ? error.push("Email address not matched") : "";
+		$('#loginForm input.name[type=text]').each(function (n, element) {
 
+			if (($(element).val() == ''))
 
+				error.push('Please enter your ' + element.name);
 
-        //Validate password field
+			else if (!re.test($(element).val()))
 
-        if ($("#loginForm  input#password").val() == '')
+				error.push(element.name + ' must have a string value');
 
-            error.push('Please provide a password');
-
-        else if (($('#loginForm input#password').val().length < 5) || ($('# loginForm  input#password').val().length > 8))
-
-            error.push('Your password must be at least 5 and at most 8 characters long');
-
-
-
-        //Create error message and append in dialog 
-
-        ulTag = $(document.createElement('ul'));
-
-        for (var i = 0; i < error.length; i++) {
-
-            liTag = $(document.createElement('li'));
-
-            liTag.append("<span>-" + error[i] + "</span>");
-
-            ulTag.append(liTag);
-
-        }
+		});
 
 
 
-        //Check Whether valiadation Success or Not
+		//Validating email and re-enter email field
 
-        (error.length != 0) ? ($(".errormsg").html(ulTag), args.cancel = true) // set args.cancel = true prevent dialog close
+		$('#loginForm input.email[type=text]').each(function (n, element) {
 
-        : alert("Sign Up Successfully Completed");
+			if (($(element).val() == ''))
 
-    }
+				error.push('Please enter your ' + element.name + ' address');
+
+			else if (!regEmail.test($(element).val()))
+
+				error.push('Please enter a valid email address');
+
+		});
+
+		!($("#loginForm input#email").val() === $("#loginForm input#reptemail").val()) ? error.push("Email address not matched") : "";
+
+
+
+		//Validate password field
+
+		if ($("#loginForm  input#password").val() == '')
+
+			error.push('Please provide a password');
+
+		else if (($('#loginForm input#password').val().length < 5) || ($('# loginForm  input#password').val().length > 8))
+
+			error.push('Your password must be at least 5 and at most 8 characters long');
+
+
+
+		//Create error message and append in dialog 
+
+		ulTag = $(document.createElement('ul'));
+
+		for (var i = 0; i < error.length; i++) {
+
+			liTag = $(document.createElement('li'));
+
+			liTag.append("<span>-" + error[i] + "</span>");
+
+			ulTag.append(liTag);
+
+		}
+
+
+
+		//Check Whether valiadation Success or Not
+
+		(error.length != 0) ? ($(".errormsg").html(ulTag), args.cancel = true) // set args.cancel = true prevent dialog close
+
+		: alert("Sign Up Successfully Completed");
+
+	}
 
 
 
@@ -498,13 +502,15 @@ You can add the following styles to customize the styles of error message.
 
 <!—add this with above styles -->
 
-       .errormsg li {
+       .errormsg li 
+	   {
 
             list-style: none outside none;
 
         }
 
-        .errormsg span {
+        .errormsg span
+		{
 
             color: #FF0000;
 
@@ -529,7 +535,7 @@ You can add the following styles to customize the styles of error message.
 		</Syncfusion:CalendarEdit> 
 
    ~~~
-   {:.prettyprint }
+   
 	
 2. Name the control by using the Name attribute.
 
@@ -539,7 +545,7 @@ You can add the following styles to customize the styles of error message.
 		</Syncfusion:CalendarEdit> 
 
    ~~~
-   {:.prettyprint }
+   
 
  
 To check the validation process if we click the submit button without specifying any values.
@@ -552,7 +558,8 @@ Execute the code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-_Figure 5: Sign up form with validation_
+Sign up form with validation
+{:.caption}
 
 The above screenshot displays an error message when an invalid input is given to form elements. The dialog is closed when the value is in a valid format Otherwise dialog will not close.	 
 

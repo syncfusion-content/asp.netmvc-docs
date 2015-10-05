@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Splitter | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Splitter
@@ -17,9 +17,9 @@ The following steps explain enabling the right-to-left property for Splitter wid
 
 In the View page add the Splitter helper to enable the RTL functionality. 
 
+{% tabs %}
 
-
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -63,90 +63,97 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 {
 
-    @Html.EJ().Splitter("innerSplitter").Width("600").PaneProperties(p1 =>
+@Html.EJ().Splitter("innerSplitter").Width("600").PaneProperties(p1 =>
 
-                {
+{
 
-                    p1.Add().ContentTemplate(@<div>
+	p1.Add().ContentTemplate
+	(@<div>
 
-                        <div class="content">
+		<div class="content">
 
-                            <h3 class="h3">
+		<h3 class="h3">
 
-                                Tools
+		Tools
 
-                            </h3>
+		</h3>
 
-                            Essential Tools is an collection of user interface components used to create interactive
+		Essential Tools is an collection of user interface components used to create interactive
 
-                            ASP.NET MVC applications.
+		ASP.NET MVC applications.
 
-                        </div>
+		</div>
 
-                    </div>).PaneSize("200");
+	</div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@<div>
+	p1.Add().ContentTemplate
+	(@<div>
 
-            <div class="content">
+		<div class="content">
 
-                <h3 class="h3">
+		<h3 class="h3">
 
-                    Chart
+		Chart
 
-                </h3>
+		</h3>
 
-                Essential Chart is a business-oriented charting component.
+		Essential Chart is a business-oriented charting component.
 
-            </div>
+		</div>
 
-        </div>).PaneSize("200");
+	</div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@<div>
+	p1.Add().ContentTemplate
+	(@<div>
 
-            <div class="content">
+		<div class="content">
 
-                <h3 class="h3">
+		<h3 class="h3">
 
-                    Grid
+		Grid
 
-                </h3>
+		</h3>
 
-                Essential Mvc Grid offers full featured a Grid control with extensive support for
+		Essential Mvc Grid offers full featured a Grid control with extensive support for
 
-                Grouping and the display of hierarchical data.
+		Grouping and the display of hierarchical data.
 
-            </div>
+		</div>
 
-        </div>).PaneSize("200");
+	</div>).PaneSize("200");
 
-                })
+})
 
 }
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight CSS %}
 
 <style type="text/css">
 
-    #outterSplitter {
+    #outterSplitter 
+	{
 
         margin: 0 auto;
 
     }
 
-    .h3 {
+    .h3 
+	{
 
         font-size: 14px;
 
     }
 
-    #innerSplitter {
+    #innerSplitter 
+	{
 
         border: 0 none;
 
     }
 
-    .content {
+    .content 
+	{
 
         padding: 15px;
 
@@ -157,6 +164,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 {% endhighlight %}
 
+{% endtabs %} 
 
 
 

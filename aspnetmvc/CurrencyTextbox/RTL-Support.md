@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | CurrencyTextBox  | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: CurrencyTextBox
@@ -15,7 +15,7 @@ CurrencyTextBox provides RTL (Right-To-Left) support. The alignment of CurrencyT
 
 In the View page add CurrencyTextBox helper, and configure the EnableRTL property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33").EnableRTL(true)
 
@@ -29,6 +29,5 @@ Output of CurrencyTextBox when EnableRTL is “True” is as follows.
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
-
-_CurrencyTextBox with enableRTL_
-
+CurrencyTextBox with enableRTL
+{:.caption}

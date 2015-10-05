@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enabling-Validation
+title: Enabling Validation | Captcha | ASP.NET MVC | Syncfusion
 description: enabling validation
 platform: ejmvc
 control: Captcha
@@ -24,14 +24,15 @@ The following code example is used to render the Captcha with Auto-Validation su
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with Auto-Validation support.
 
-   ~~~ javascript
+   ~~~ cshtml
    
 		@(Html.EJ().Captcha("captcha").EnableAutoValidation(true).RequestMapper("Refresh").CustomErrorMessage("Invalid captcha code entered. Please try again.").TargetButton ("submit"))<br /><br /><br />    @Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit").Type(ButtonType.Submit)
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
+   
+   ~~~ csharp
+   
 		// Add the following code in controller page for Captcha with Auto-Validation support
 		public ActionResult Refresh(CaptchaParams parameters)
 		{
@@ -39,7 +40,7 @@ The following code example is used to render the Captcha with Auto-Validation su
 		}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -48,7 +49,8 @@ The following code example is used to render the Captcha with Auto-Validation su
 
 ![](Enabling-Validation_images/Enabling-Validation_img2.png)
 
-
+Captcha with auto validation support
+{:.caption}
 
 ## Validation by Method
 
@@ -58,37 +60,38 @@ The following code example is used to render the Captcha with manual validation.
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with manual validation support.
 
-   ~~~ javascript
+   ~~~ cshtml
 		
-		@using (Html.BeginForm("Default", "Captcha", FormMethod.Post)){
-		@Html.EJ().Captcha("captcha").TargetButton("submit")<br />  
-		@Html.TextBox("validateText") 
-		@Html.ValidationMessage("myCaptcha")<br /><br />
-		@(Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit")
-		.Type(ButtonType.Submit))}
+	 @using (Html.BeginForm("Default", "Captcha", FormMethod.Post)){
+	 @Html.EJ().Captcha("captcha").TargetButton("submit")<br />  
+	 @Html.TextBox("validateText") 
+	 @Html.ValidationMessage("myCaptcha")<br /><br />
+	 @(Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit")
+	 .Type(ButtonType.Submit))}
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
    
-		// Add the following code in Controller page for Captcha with manual validation support[HttpPost]
-        public ActionResult Default(FormCollection Values) 
-		{        
-			if (!CaptchaService.IsValid(Values["captcha"], Values["validateText "], true))
-			ModelState.AddModelError("mycaptcha", "Invalid characters. Try again!"); 
-			return View();  
-		}
+   ~~~ csharp
+   
+	 // Add the following code in Controller page for Captcha with manual validation support[HttpPost]
+	 public ActionResult Default(FormCollection Values) 
+	 {        
+		if (!CaptchaService.IsValid(Values["captcha"], Values["validateText "], true))
+		ModelState.AddModelError("mycaptcha", "Invalid characters. Try again!"); 
+		return View();  
+	 }
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The following screenshot illustrates the Captcha with manual validation support. 
 
 ![](Enabling-Validation_images/Enabling-Validation_img3.png)
 
-
+Captcha validation by method
+{:.caption}
 
 ## Case Sensitive Validation 
 
@@ -98,14 +101,14 @@ The following code example is used to render the Captcha with Case sensitive val
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with Case sensitive validation support.
 
-   ~~~ javascript
+   ~~~ cshtml
    
 		@(Html.EJ().Captcha("captcha").EnableAutoValidation(true).RequestMapper("Refresh").CustomErrorMessage("Invalid captcha code entered. Please try again.").TargetButton("submit ").EnableCaseSensitivity(true))<br /><br /><br />@Html.EJ().Button("submit").Size(ButtonSize.Large).Text("Submit").Type(ButtonType.Submit)
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
+   
+   ~~~ csharp
    
 		// Add the following code in controller page for Captcha with case sensitive validation support
 		public ActionResult Refresh(CaptchaParams parameters)
@@ -114,12 +117,12 @@ The following code example is used to render the Captcha with Case sensitive val
 		}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The following screenshot illustrates the Captcha with Case sensitive validation support. 
 
 ![](Enabling-Validation_images/Enabling-Validation_img4.png)
 
-
-
+Captcha with Case sensitive validation support
+{:.caption}

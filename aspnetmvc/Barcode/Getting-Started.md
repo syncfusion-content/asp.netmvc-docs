@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Barcode  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Barcode
@@ -15,6 +15,8 @@ This section explains you briefly on how to create a Barcode in your application
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+Control structure
+{:.caption}
 
 ## Create your first Barcode in MVC
 
@@ -26,6 +28,8 @@ The following guideline explains you on how to create a QR Barcode for a real ti
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+QR Barcode for the URL “HTTP://WWW.SYNCFUSION.COM”
+{:.caption}
 
 
 By default, ASP.NET MVC Barcode renders gray scale colors with predefined Quiet zone. Quiet zone is the blank margin on the side(s) that denotes the reader with the start and stop of the Barcode. It also provides flexible API’s to customize the appearance of the Barcode. 
@@ -56,7 +60,7 @@ Web.config file is configured according to the referenced assemblies. The steps 
 
 
 
-{% highlight xml %}
+{% highlight web.config %}
 
 <system.web>
 
@@ -95,7 +99,7 @@ N> X.X.X.X in the above code corresponds to the correct version number of the Es
 
 
 
-{% highlight xml %}
+{% highlight web.config %}
 
 <system.web>
 
@@ -122,7 +126,7 @@ N> X.X.X.X in the above code corresponds to the correct version number of the Es
 
 
 * Open the Index.cshtml file under Views->Home folder. Add the following code in the cshtml file for Barcode rendering.
-{% highlight html %}
+{% highlight cshtml %}
 
 
 <div>
@@ -151,4 +155,5 @@ N> X.X.X.X in the above code corresponds to the correct version number of the Es
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
+QR Barcode generated in ASP.NET
+{:.caption}

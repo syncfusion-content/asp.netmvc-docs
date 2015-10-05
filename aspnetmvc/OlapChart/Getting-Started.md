@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | OLAPChart | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: OLAPChart
@@ -121,40 +121,41 @@ Click OK.
    > 2. Apart from the cdn files rest of them can be acquired from the following location
    > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
+	<head>
 
-		<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
-		<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
+	<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
+	<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 
-		</head>
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
 2. Add the following code example in the body tag of the _Layout.cshtml page.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<body>
-		   @RenderBody()
-		   @Html.EJ().ScriptManager()   
-		</body>
+	<body>
+	   @RenderBody()
+	   @Html.EJ().ScriptManager()   
+	</body>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 ### Add Control in View page
 
 Add the following code example in the Index.cshtml page that is already created.
-{% highlight html %}
+
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript;
 @using Syncfusion.JavaScript.Olap;
@@ -180,9 +181,9 @@ Add the following code example in the Index.cshtml page that is already created.
 ### Add service methods inside Interface
 
 Add the following code example inside the IOlapChartService interface available in the IOlapChartService.cs file.
-{% highlight c# %}
 
 
+{% highlight C# %}
 
 public interface IOlapChartService
 {
@@ -200,7 +201,7 @@ public interface IOlapChartService
 ### Add Namespaces
 
 Add the following namespaces required to implement the service methods.
-{% highlight c# %}
+{% highlight C# %}
 
 using System;
 using System.Collections.Generic;
@@ -213,12 +214,14 @@ using Syncfusion.Olap.Manager;
 using Syncfusion.Olap.Reports;
 using Syncfusion.JavaScript.Olap;
 using System.Web.Script.Serialization;
+
 {% endhighlight  %}
 
 ### Create Class in Service file
 
 Create the OlapChartService class to implement the service methods. Inherit the class from the IOlapChartService interface that is created automatically when any new service is added.
-{% highlight c# %}
+
+{% highlight C# %}
 
 namespace MvcApplication1.wcf
 {
@@ -237,7 +240,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
 1. Initialize the OlapCharts helper class and OlapDataManager with appropriate connection string.
 
-   ~~~ cs
+   ~~~ csharp
    
     JavaScriptSerializer serializer = new JavaScriptSerializer();
     OlapChart htmlHelper = new OlapChart();        
@@ -245,12 +248,12 @@ Add the following methods to the service that is invoked for any server-side ope
     OlapDataManager DataManager = new OlapDataManager(connectionString);
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Initialize the following service methods.
 
-   ~~~ cs
+   ~~~ csharp
 
     //This method provides the required information from server-side for initializing the OlapChart.
     public Dictionary<string, object> InitializeChart(string action, string customObject)
@@ -300,14 +303,14 @@ Add the following methods to the service that is invoked for any server-side ope
     }  
 			
    ~~~
-   {:.prettyprint }
+   
 
 
 ### Configure Web.Config
 
 1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at the root folder.
 
-   ~~~ html
+   ~~~ cshtml
 
 	<compilation debug="true" targetFramework="4.5">
 	   <assemblies>
@@ -329,7 +332,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
    N> x.x.x.x in the above code example refers to the current version of the Essential Studio running in your system.
@@ -372,7 +375,7 @@ Add the following methods to the service that is invoked for any server-side ope
 
 2. Add the following namespaces to the web.config files in root folder and View folder.
 
-   ~~~ html
+   ~~~ cshtml
 
 	<namespaces>
 	   <add namespace="System.Web.Helpers" />
@@ -388,7 +391,7 @@ Add the following methods to the service that is invoked for any server-side ope
 	</namespaces>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Register the wcf services endpoint in web.config file in root folder by adding the following code examples.
 4. You can expose services through the properties such as binding, contract and address etc. using an endpoint.  In your application the service name is "MvcApplication1.wcf.OlapChartService" where "OlapChartService" is the service class name and “MvcApplication1.wcf" is the namespace name where the service class appears.
@@ -399,7 +402,7 @@ Add the following methods to the service that is invoked for any server-side ope
    * binding: In your application, you can use webHttpBinding to post and receive the requests and responses between the client-end and the service-end.
    * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows.
 
-   ~~~ html
+   ~~~ cshtml
 
 		<system.serviceModel>
 			<services>
@@ -411,11 +414,11 @@ Add the following methods to the service that is invoked for any server-side ope
 		</system.serviceModel>
 
    ~~~
-   {:.prettyprint }
+   
 
 5. The endpointBehaviors contain all the behaviors for an endpoint. You can link each endpoint to the respective behavior only using this name property. In the following code example "MvcApplication1.wcf.OlapChartServiceAspNetAjaxBehavior" refers to the OlapChartService class under the namespace MvcApplication1.wcf in OlapChartService.svc.cs file which is the appropriate behavior for the endpoint. 
 
-   ~~~ html
+   ~~~ cshtml
 
 		<system.serviceModel>
 			<behaviors>
@@ -428,7 +431,7 @@ Add the following methods to the service that is invoked for any server-side ope
 		</system.serviceModel>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -438,25 +441,23 @@ Add the following methods to the service that is invoked for any server-side ope
 
 6. Set the UnobtrusiveJavaScriptEnabled value as false under appSettings tag as illustrated in the following code example.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<appSettings>
-			<add key="webpages:Version" value="2.0.0.0" />
-			<add key="webpages:Enabled" value="false" />
-			<add key="PreserveLoginUrl" value="true" />
-			<add key="ClientValidationEnabled" value="true" />
-			<add key="UnobtrusiveJavaScriptEnabled" value="false" />
-		</appSettings>
+	<appSettings>
+		<add key="webpages:Version" value="2.0.0.0" />
+		<add key="webpages:Enabled" value="false" />
+		<add key="PreserveLoginUrl" value="true" />
+		<add key="ClientValidationEnabled" value="true" />
+		<add key="UnobtrusiveJavaScriptEnabled" value="false" />
+	</appSettings>
 		
    ~~~
-   {:.prettyprint }
+   
 
 ### Configuring routing file
 
 Add the following highlighted line in RouteConfig.cs file to avoid issues when picking the WCFservice methods.
-{% highlight c# %}
-
-
+{% highlight C# %}
 public class RouteConfig
 {
     public static void RegisterRoutes(RouteCollection routes)

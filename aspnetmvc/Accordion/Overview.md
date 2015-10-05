@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title:  Accordion | Accordion  | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Accordion 
 documentation: ug
 ---
 
-# Overview
+# Accordion
 
 The Accordion control is an interface where lists of items can be collapsed or expanded. It has several collapsible panels where only one/more can be expanded at a time that is useful for dashboards where space is limited. Each Accordion control has a template for its header and its content.
 

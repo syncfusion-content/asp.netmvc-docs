@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure-Values
+title: Configure Values | ColorPicker | ASP.NET MVC | Syncfusion
 description: configure values
 platform: ejmvc
 control: ColorPicker
@@ -17,9 +17,7 @@ The OpacityValue property is Number type and its default value is 100.
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -31,7 +29,8 @@ The following screenshot displays the output of the above code example.
 
 ![](Configure-Values_images/Configure-Values_img1.png)
 
-
+ColorPicker with Opacity Value
+{:.caption}
 
 ## Button and TooltipText
 
@@ -41,7 +40,7 @@ The ColorPicker control allows you to define the text to be displayed in button 
 
 To configure the ButtonText property for the button elements, use the corresponding default values listed in the following table.
 
-_Table1: List of Button elements_
+_List of Button elements_
 
 <table>
 <tr>
@@ -64,7 +63,7 @@ The ColorPicker control consists of more number of sub controls and elements. To
 
 To configure the TooltipText, usethe following listed elements and its corresponding default value.
 
-_Table2: List of Tooltip elements_
+_List of Tooltip elements_
 
 <table>
 <tr>
@@ -142,9 +141,7 @@ When it is necessary to set the button text and TooltipText values in Spanish cu
 
 1. In the CSHTML page, configure the ColorPicker widget as follows.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
 
@@ -158,5 +155,5 @@ The following screenshot displays the output of the above code example.
 
 ![](Configure-Values_images/Configure-Values_img2.png)
 
-
-
+ColorPicker with Culture Support
+{:.caption}

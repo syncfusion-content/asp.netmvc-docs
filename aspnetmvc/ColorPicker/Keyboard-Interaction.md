@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | ColorPicker | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: ColorPicker
@@ -11,7 +11,7 @@ documentation: ug
 
 You can use keyboard shortcut keys as an alternative to the mouse while using the ColorPicker widget. The ColorPicker widget allows you to perform all kinds of actions using keyboard shortcuts.
 
-_Table6: Keyboard shortcut keys_
+_Keyboard shortcut keys_
 
 <table>
 <tr>
@@ -69,8 +69,9 @@ Upwards to value 100</td></tr>
 The following steps explain how you can enable keyboard interaction for ColorPicker textbox.
 
 1. In the CSHTML page, configure the ColorPicker widget and enable keyboard interaction by the accesskey property.
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*In the CSHTML page, add the Html helpers to render ColorPicker widget and enable keyboard interaction by the accesskey property*@
 @Html.EJ().ColorPicker("colorPicker").Value("#278787")
@@ -87,6 +88,7 @@ The following steps explain how you can enable keyboard interaction for ColorPic
 </script>
 
 {% endhighlight  %}
+{% endtabs %}  
 
 The following screenshot displays the output of the above code example.
 
@@ -94,5 +96,5 @@ The following screenshot displays the output of the above code example.
 
 ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
+ColorPicker with Keyboard Navigation
+{:.caption}

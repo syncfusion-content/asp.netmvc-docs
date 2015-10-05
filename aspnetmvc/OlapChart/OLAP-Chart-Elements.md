@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OLAP-Chart-Elements
+title: OLAP Chart Elements | OLAPChart | ASP.NET MVC | Syncfusion
 description: olap chart :elements
 platform: ejmvc
 control: OLAPChart

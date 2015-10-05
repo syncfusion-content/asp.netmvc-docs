@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tile-dependencies
+title: Tile dependencies | Tile | ASP.NET MVC | Syncfusion
 description: tile dependencies
 platform: ejmvc
 control: Tile

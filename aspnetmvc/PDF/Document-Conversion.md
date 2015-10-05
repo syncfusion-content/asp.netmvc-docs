@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Document-Conversion
+title: Document Conversion | PDF | ASP.NET MVC | Syncfusion
 description: document conversion
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -57,103 +57,103 @@ HTML documents can be converted to PDF through the following methods:
 
 	The overloaded ConvertToImage method enables converting an HTML page to an image with AspectRatio to maintain the ratio of the image dimension. This prevents text truncation at the corners.
 
-	~~~ cs
+	~~~ csharp
 
-		//Creates a new PDF document.
+	//Creates a new PDF document.
 
-		PdfDocument pdfDocument = new PdfDocument();
+	PdfDocument pdfDocument = new PdfDocument();
 
-		//Adds a page to the PDF document.
+	//Adds a page to the PDF document.
 
-		PdfPage page = pdfDocument.Pages.Add();
+	PdfPage page = pdfDocument.Pages.Add();
 
-		SizeF pageSize = page.Size;
+	SizeF pageSize = page.Size;
 
-		AspectRatio dimension = AspectRatio.None;
+	AspectRatio dimension = AspectRatio.None;
 
-		//Declares the layout format for the image.
+	//Declares the layout format for the image.
 
-		PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
+	PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
 
-		bitmapFormat.Break = PdfLayoutBreakType.FitPage;
+	bitmapFormat.Break = PdfLayoutBreakType.FitPage;
 
-		bitmapFormat.Layout = PdfLayoutType.Paginate;
+	bitmapFormat.Layout = PdfLayoutType.Paginate;
 
-		HtmlConverter html = new HtmlConverter();
+	HtmlConverter html = new HtmlConverter();
 
-		//Converts to Bitmap.
+	//Converts to Bitmap.
 
-		Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension);
+	Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension);
 
-		PdfImage image = new PdfBitmap(img);
+	PdfImage image = new PdfBitmap(img);
 
-		//Draws bitmap in PdfPage.
+	//Draws bitmap in PdfPage.
 
-		if (img.Size.Width > pageSize.Width)
+	if (img.Size.Width > pageSize.Width)
 
-		else
+	else
 
-		image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
+	image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
 
-		//Saves the document.
+	//Saves the document.
 
-		pdfDocument.Save("Output.pdf");
+	pdfDocument.Save("Output.pdf");
 
-		pdfDocument.Close(true);
+	pdfDocument.Close(true);
 
     ~~~
-    {:.prettyprint }
+    
 
     ~~~ vbnet
 
-			'Creates a new PDF document.
+	'Creates a new PDF document.
 
-			Dim pdfDocument As New PdfDocument()
+	Dim pdfDocument As New PdfDocument()
 
-			'Adds a page to the PDF document.
+	'Adds a page to the PDF document.
 
-			Dim page As PdfPage = pdfDocument.Pages.Add()
+	Dim page As PdfPage = pdfDocument.Pages.Add()
 
-			Dim pageSize As SizeF = page.Size
+	Dim pageSize As SizeF = page.Size
 
-			Dim dimension As AspectRatio = AspectRatio.None
+	Dim dimension As AspectRatio = AspectRatio.None
 
-			'Declares layout format for the image.
+	'Declares layout format for the image.
 
-			Dim bitmapFormat As New PdfLayoutFormat()
+	Dim bitmapFormat As New PdfLayoutFormat()
 
-			bitmapFormat.Break = PdfLayoutBreakType.FitPage
+	bitmapFormat.Break = PdfLayoutBreakType.FitPage
 
-			bitmapFormat.Layout = PdfLayoutType.Paginate
+	bitmapFormat.Layout = PdfLayoutType.Paginate
 
-			Dim html As New HtmlConverter()
+	Dim html As New HtmlConverter()
 
-			'Converts to Bitmap.
+	'Converts to Bitmap.
 
-			Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension)
+	Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension)
 
-			Dim image As PdfImage = New PdfBitmap(img)
+	Dim image As PdfImage = New PdfBitmap(img)
 
-			'Draws bitmap in PdfPage.
+	'Draws bitmap in PdfPage.
 
-			If img.Size.Width > pageSize.Width Then
+	If img.Size.Width > pageSize.Width Then
 
-			image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
+	image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
 
-			Else
+	Else
 
-			image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
+	image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
 
-			End If
+	End If
 
-			'Saves the document.
+	'Saves the document.
 
-			pdfDocument.Save("Output.pdf")
+	pdfDocument.Save("Output.pdf")
 
-			pdfDocument.Close(True)
+	pdfDocument.Close(True)
 
     ~~~
-    {:.prettyprint }
+    
 
 	
 	N> HTML To PDF conversion allows text selection and search within the generated document. However, in machines where IE9 is installed, document would contain Bitmap image of the converted page/file thereby restricting text selection and search. This behavior can be changed for certain webpages by changing the registry value. For more details, refer to Frequently Asked Questions section.
@@ -164,108 +164,108 @@ HTML documents can be converted to PDF through the following methods:
 
 
 
-    ~~~ cs
+    ~~~ csharp
 
 
 
-			//Creates a new PDF document.
+	//Creates a new PDF document.
 
-			PdfDocument pdfDocument = new PdfDocument();
+	PdfDocument pdfDocument = new PdfDocument();
 
-			//Adds a page to the PDF document.
+	//Adds a page to the PDF document.
 
-			PdfPage page = pdfDocument.Pages.Add();
+	PdfPage page = pdfDocument.Pages.Add();
 
-			SizeF pageSize = page.Size;
+	SizeF pageSize = page.Size;
 
-			AspectRatio dimension = AspectRatio.None;
+	AspectRatio dimension = AspectRatio.None;
 
-			//Declares the layout format for the image.
+	//Declares the layout format for the image.
 
-			PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
+	PdfLayoutFormat bitmapFormat = new PdfLayoutFormat();
 
-			bitmapFormat.Break = PdfLayoutBreakType.FitPage;
+	bitmapFormat.Break = PdfLayoutBreakType.FitPage;
 
-			bitmapFormat.Layout = PdfLayoutType.Paginate;
+	bitmapFormat.Layout = PdfLayoutType.Paginate;
 
-			HtmlConverter html = new HtmlConverter();
+	HtmlConverter html = new HtmlConverter();
 
-			//Converts to Bitmap.
+	//Converts to Bitmap.
 
-			Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension, "UserName", "Passwprd");
+	Image img = html.ConvertToImage("www.google.com", ImageType.Bitmap, (int)pageSize.Width, (int)pageSize.Height, dimension, "UserName", "Passwprd");
 
-			PdfImage image = new PdfBitmap(img);
+	PdfImage image = new PdfBitmap(img);
 
-			//Draws bitmap in PdfPage.
+	//Draws bitmap in PdfPage.
 
-			if (img.Size.Width > pageSize.Width)
+	if (img.Size.Width > pageSize.Width)
 
-			image.Draw(page, new RectangleF(0, 0, img.Width, -1), bitmapFormat);
+	image.Draw(page, new RectangleF(0, 0, img.Width, -1), bitmapFormat);
 
-			else
+	else
 
-			image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
+	image.Draw(page, new RectangleF(0, 0, pageSize.Width, -1), bitmapFormat);
 
-			//Saves the document.
+	//Saves the document.
 
-			pdfDocument.Save("Output.pdf");
+	pdfDocument.Save("Output.pdf");
 
-			pdfDocument.Close(true);
+	pdfDocument.Close(true);
 
     ~~~
-    {:.prettyprint }
+    
 
     ~~~ vbnet
 
 
-			'Creates a new PDF document.
+	'Creates a new PDF document.
 
-			Dim pdfDocument As New PdfDocument()
+	Dim pdfDocument As New PdfDocument()
 
-			'Adds a page to the PDF document.
+	'Adds a page to the PDF document.
 
-			Dim page As PdfPage = pdfDocument.Pages.Add()
+	Dim page As PdfPage = pdfDocument.Pages.Add()
 
-			Dim pageSize As SizeF = page.Size
+	Dim pageSize As SizeF = page.Size
 
-			Dim dimension As AspectRatio = AspectRatio.None
+	Dim dimension As AspectRatio = AspectRatio.None
 
-			'Declares the layout format for the image.
+	'Declares the layout format for the image.
 
-			Dim bitmapFormat As New PdfLayoutFormat()
+	Dim bitmapFormat As New PdfLayoutFormat()
 
-			bitmapFormat.Break = PdfLayoutBreakType.FitPage
+	bitmapFormat.Break = PdfLayoutBreakType.FitPage
 
-			bitmapFormat.Layout = PdfLayoutType.Paginate
+	bitmapFormat.Layout = PdfLayoutType.Paginate
 
-			Dim html As New HtmlConverter()
+	Dim html As New HtmlConverter()
 
-			'Converts to Bitmap.
+	'Converts to Bitmap.
 
-			Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension, "UserName", "Passwprd")
+	Dim img As Image = html.ConvertToImage("www.google.com", ImageType.Bitmap, CInt(pageSize.Width), CInt(pageSize.Height), dimension, "UserName", "Passwprd")
 
-			Dim image As PdfImage = New PdfBitmap(img)
+	Dim image As PdfImage = New PdfBitmap(img)
 
-			'Draws bitmap in PdfPage.
+	'Draws bitmap in PdfPage.
 
-			If img.Size.Width > pageSize.Width Then
+	If img.Size.Width > pageSize.Width Then
 
-			image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
+	image.Draw(page, New RectangleF(0, 0, img.Width, -1), bitmapFormat)
 
-			Else
+	Else
 
-			image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
+	image.Draw(page, New RectangleF(0, 0, pageSize.Width, -1), bitmapFormat)
 
-			End If
+	End If
 
-			'Saves the document.
+	'Saves the document.
 
-			pdfDocument.Save("Output.pdf")
+	pdfDocument.Save("Output.pdf")
 
-			pdfDocument.Close(True)
+	pdfDocument.Close(True)
 
     ~~~
-    {:.prettyprint }
+    
 
 2. FromString
 
@@ -273,7 +273,9 @@ FromString method renders HTML from the string to the image. The following code 
 
 
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 
 
@@ -321,7 +323,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -366,6 +368,7 @@ pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %}  
 
 N> Both ConvertToImage() and FromString() methods are used to convert the HTML pages whose height is less than 32767 pixels as image, and the options like  EnableHyperlinks, EnableJavascript  and AutoDetectPageBreak has no effect.
 
@@ -398,9 +401,9 @@ The following code example illustrates the use of EnableJavaScript, EnableHyperl
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -452,9 +455,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -505,15 +506,16 @@ pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Rendering HTML page without Splitting
 
 To avoid images and text split across page breaks when rendering a large Meta file with images and text in a PDF document, disable the SplitTextLines and SplitImages properties of PdfMetafileLayoutFormat class. The following code illustrates this:
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -565,7 +567,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -618,6 +620,7 @@ pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Gecko Rendering
 
@@ -631,7 +634,7 @@ Starting with Internet Explorer 9, Microsoft has made a series of core-architect
 
 #### Prerequisites
 
-_Table_ _30_: Prerequisites
+
 
 <table>
 <tr>
@@ -670,9 +673,9 @@ The following code sample explains you the conversion of HTML to PDF using the G
 
 
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 //Creates PDF Generator.
 
@@ -688,21 +691,21 @@ using (GeckoHtmlRendererControl renderer = new GeckoHtmlRendererControl())
 
 {
 
-using (HtmlConverter converter = new HtmlConverter(renderer))
+	using (HtmlConverter converter = new HtmlConverter(renderer))
 
-{
+	{
 
- using (HtmlToPdfResult result = converter.Convert("www.google.com", ImageType.Metafile, (int)page.Size.Width, (int)page.Size.Height, AspectRatio.KeepWidth))
+		 using (HtmlToPdfResult result = converter.Convert("www.google.com", ImageType.Metafile, (int)page.Size.Width, (int)page.Size.Height, AspectRatio.KeepWidth))
 
-{
+		{
 
-//Renders HTML in PDF.
+			//Renders HTML in PDF.
 
-result.Render(doc);
+			result.Render(doc);
 
-}
+		}
 
-}
+	}
 
 }
 
@@ -712,9 +715,7 @@ doc.Save("HtmlToPdf.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates PDF Generator.
 
@@ -728,17 +729,17 @@ Dim page As PdfPage = doc.Pages.Add()
 
 Using renderer As New GeckoHtmlRendererControl()
 
-Using converter As New HtmlConverter(renderer)
+	Using converter As New HtmlConverter(renderer)
 
-Using result As HtmlToPdfResult = converter.Convert("www.google.com", ImageType.Metafile, CInt(page.Size.Width), CInt(page.Size.Height), AspectRatio.KeepWidth)
+		Using result As HtmlToPdfResult = converter.Convert("www.google.com", ImageType.Metafile, CInt(page.Size.Width), CInt(page.Size.Height), AspectRatio.KeepWidth)
 
-'Renders HTML in PDF.
+			'Renders HTML in PDF.
 
-result.Render(doc)
+			result.Render(doc)
 
-End Using
+		End Using
 
-End Using
+	End Using
 
 End Using
 
@@ -747,6 +748,7 @@ End Using
 doc.Save("HtmlToPdf.pdf")
 
 {% endhighlight %}
+{% endtabs %}  
 
 ## Word to PDF
 
@@ -773,9 +775,9 @@ The following code illustrates you on how to convert a Word document, say, "samp
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads the Word document.
 
@@ -795,9 +797,7 @@ pdfDoc.Save("DoctoPDF.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads the Word document.
 
@@ -816,6 +816,7 @@ Dim pdfDoc As PdfDocument = converter.ConvertToPDF(wordDoc)
 pdfDoc.Save("DoctoPDF.pdf")
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Supported Elements
 
@@ -932,9 +933,9 @@ The code sample to illustrate the same is as follows.
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+  
+{% highlight C# %}
 
 //Creates a PDF document.
 
@@ -962,15 +963,15 @@ for (int i = 0; i < frameCount; i++)
 
 {
 
-page = section.Pages.Add();
+	page = section.Pages.Add();
 
-section.PageSettings.Margins.All = 0;
+	section.PageSettings.Margins.All = 0;
 
-g = page.Graphics;
+	g = page.Graphics;
 
-tiffImage.ActiveFrame = i;
+	tiffImage.ActiveFrame = i;
 
-g.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
+	g.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height);
 
 }
 
@@ -980,9 +981,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a PDF document.
 
@@ -1008,15 +1007,15 @@ Dim frameCount As Integer = tiffImage.FrameCount
 
 For i As Integer = 0 To frameCount - 1
 
-page = section.Pages.Add()
+	page = section.Pages.Add()
 
-section.PageSettings.Margins.All = 0
+	section.PageSettings.Margins.All = 0
 
-g = page.Graphics
+	g = page.Graphics
 
-tiffImage.ActiveFrame = i
+	tiffImage.ActiveFrame = i
 
-g.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height)
+	g.DrawImage(tiffImage, 0, 0, page.GetClientSize().Width, page.GetClientSize().Height)
 
 Next
 
@@ -1025,6 +1024,7 @@ pdfDocument.Save("Sample.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %}
 
 ## RTF to PDF
 
@@ -1037,9 +1037,9 @@ The following code sample illustrates the conversion of RTF to PDF using Bitmap.
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+  
+{% highlight C# %}
 
 //Creates a PDF document.
 
@@ -1075,9 +1075,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a PDF document.
 
@@ -1112,14 +1110,15 @@ pdfDocument.Save("Sample.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %}
 
 The following code sample illustrates the conversion of RTF to PDF using Metafile.
 
 
+{% tabs %}
+  
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a PDF document.
 
@@ -1157,9 +1156,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a PDF document.
 
@@ -1196,6 +1193,7 @@ pdfDocument.Save("Sample.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
+{% endtabs %}
 
 ## XPS to PDF
 
@@ -1212,9 +1210,9 @@ An XPS document can be converted into PDF using the following code sample.
 
 
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 //Creates converter class.
 
@@ -1232,9 +1230,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates converter class.
 
@@ -1251,10 +1247,11 @@ document.Save("Sample.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %}  
 
 #### Supported Elements
 
-_Table_ _31_: List of Supported Elements
+
 
 <table>
 <tr>
@@ -1411,9 +1408,9 @@ A tagged PDF can be converted from a Web page or HTML string by using the follow
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+  
+{% highlight C# %}
 
 //Creates a new PdfDocument.
 
@@ -1425,11 +1422,11 @@ PdfLayoutResult result = null;
 
 {
 
-//Turns on or off various options.
+	//Turns on or off various options.
 
-html.EnableJavaScript = true;
+	html.EnableJavaScript = true;
 
-//Converts to Tagged PDF.
+	//Converts to Tagged PDF.
 
 }
 
@@ -1441,9 +1438,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PdfDocument.
 
@@ -1455,13 +1450,13 @@ Dim result As PdfLayoutResult = Nothing
 
 Using html As New HtmlConverter()
 
-'Turns on or off various options.
+	'Turns on or off various options.
 
-html.EnableJavaScript = True
+	html.EnableJavaScript = True
 
-html.EnableActiveXContents = True
+	html.EnableActiveXContents = True
 
-'Converts to Tagged PDF.
+	'Converts to Tagged PDF.
 
 End Using
 
@@ -1472,6 +1467,7 @@ document.Save("Sample.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %}
 
 N> The HTML to PDF conversion that creates a metafile during the evolution, would interpret the content as either text or an image. The outcome of this PDF would contain only paragraph and figure tags; hyperlinks are not supported.
 
@@ -1485,9 +1481,9 @@ The following code example illustrates this.
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads an existing PDF.
 
@@ -1503,9 +1499,7 @@ string s = page.ExtractText();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads an existing PDF.
 
@@ -1520,6 +1514,7 @@ Dim page As PdfPageBase = ldoc.Pages(0)
 Dim s As String = page.ExtractText()
 
 {% endhighlight %}
+{% endtabs %} 
 
 N> The text is  extracted in the order in which it is written in the document stream and not in the order in which it is viewed in the PDF viewer.
 
@@ -1531,9 +1526,9 @@ The following code example illustrates how to extract images from a PDF document
 
 
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 //Loads an existing PDF.
 
@@ -1549,9 +1544,7 @@ Image[] img = page.ExtractImages();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads an existing PDF.
 
@@ -1566,4 +1559,4 @@ Dim page As PdfPageBase = ldoc.Pages(0)
 Dim img As Image() = page.ExtractImages()
 
 {% endhighlight %}
-
+{% endtabs %}  

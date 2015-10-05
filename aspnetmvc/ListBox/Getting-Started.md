@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | ListBox | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: ListBox
@@ -21,9 +21,8 @@ The following screenshot demonstrates the functionality of ListBox with Multi-Se
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-
-_Figure 1: Skype Group creation tool Simulator using ListBox_
+Skype Group creation tool Simulator using ListBox
+{:.caption}
 
 In the above screenshot, you can select a list item from the first ListBox widget. After you select the item, you can move the selected item to the second ListBox widget. 
 
@@ -36,34 +35,34 @@ The following steps are used to create ListBox control.
 1. You can create an MVC Project and add necessary Dll with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/listbox/getting-started) Documentation.
 2. Please add the below code in your layout._cshtml page to add necessary script and css files to render the ListBox control.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
+	<head>
 
-		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-
-
-			<!--Scripts-->
-
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+	<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+		<!--Scripts-->
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-		</head>
+
+
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+	</head>
 		
    ~~~
-   {:.prettyprint }
+   
 
      Create a CSHTML file in View page and add the following code sample to it. 
 
@@ -71,129 +70,137 @@ The following steps are used to create ListBox control.
 
 
 
-   ~~~ html   
+   ~~~ cshtml  
 
-		<div id="sample">
+	<div id="sample">
 
-			<h5>
+		<h5>
 
-				<b>Add people</b></h5>
+			<b>Add people</b></h5>
 
-			<p>
+		<p>
 
-				Choose a contact and click move button to add in group
+			Choose a contact and click move button to add in group
 
-			</p>
+		</p>
 
-			<br />
+		<br />
 
-			<div id="control">
+		<div id="control">
 
-				<div id="container1">
+			<div id="container1">
 
-					<p>
+				<p>
 
-						Contacts List</p>
+					Contacts List</p>
 
-					@Html.EJ().ListBox("list1")
+				@Html.EJ().ListBox("list1")
 
-				</div>
+			</div>
 
-				<div id="container2">
+			<div id="container2">
 
-					<p>
+				<p>
 
-						People in this group</p>
+					People in this group</p>
 
-					@Html.EJ().ListBox("list2")
-
-				</div>
+				@Html.EJ().ListBox("list2")
 
 			</div>
 
 		</div>
 
+	</div>
+
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. Add the following style section for the ListBox controls alignment. 
 
    ~~~ css
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-			#control {
+		#control 
+		{
 
-				height: 350px;
+			height: 350px;
 
-				width: 500px;
+			width: 500px;
 
-				padding: 25px;
+			padding: 25px;
 
-				background-color: #f7f7f7;
+			background-color: #f7f7f7;
 
-				display: flex;
+			display: flex;
 
-			}
+		}
 
-			#sample {
+		#sample 
+		{
 
-				height: 472px;
+			height: 472px;
 
-				width: 600px;
+			width: 600px;
 
-			}
+		}
 
-			#list2_container {
+		#list2_container 
+		{
 
-				float: right;
+			float: right;
 
-			}
+		}
 
-			#list1_container {
+		#list1_container 
+		{
 
-				float: left;
+			float: left;
 
-			}
+		}
 
-			.middlebuttons {
+		.middlebuttons 
+		{
 
-				padding: 91px 25px 25px 25px;
+			padding: 91px 25px 25px 25px;
 
-			}
+		}
 
-			#container1, #container2 {
+		#container1, #container2 
+		{
 
-				width: 200px;
+			width: 200px;
 
-			}
+		}
 
-			img {
+		img 
+		{
 
-				padding-right: 10px;
+			padding-right: 10px;
 
-				padding-top: 3px;
+			padding-top: 3px;
 
-				width: 18px;
+			width: 18px;
 
-				height: 15px;
+			height: 15px;
 
-			}
+		}
 
-			#form1 {
+		#form1 
+		{
 
-				padding: 25px;
+			padding: 25px;
 
-			}
+		}
 
 
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 5. Run this code to render an empty ListBox control.
 
@@ -201,9 +208,8 @@ The following steps are used to create ListBox control.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
-_Figure 2: Render ListBox with <ul></ul> element_
+Render ListBox with <ul></ul> element
+{:.caption}
 
 ### Configure ListBox with Items
 
@@ -373,9 +379,8 @@ Run the above code to render ListBox with list items rendered inside ListBox. Li
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
-
-_Figure 3: ListBox with Contact list items_
+ListBox with Contact list items
+{:.caption}
 
 ### Enable Drag and Drop 
 
@@ -383,7 +388,7 @@ You can drag an item from a ListBox and drop it in droppable element.To drag and
 
 Please refer the below code snippet:
 
-{% highlight js %}
+{% highlight CSHTML %}
   
 @Html.EJ().ListBox("list1").TargetID("select").AllowDragAndDrop(true)
 
@@ -397,9 +402,8 @@ Run the above code example to render the following ListBox with Drag and drop fe
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
-
-_Figure 4: ListBox with Drag and Drop list items_
+ListBox with Drag and Drop list items
+{:.caption}
 
 Enable Multiple Selection 
 
@@ -407,7 +411,7 @@ You can select multiple list items simultaneously in ListBox control, and move t
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
    
 
 @Html.EJ().ListBox("list1").TargetID("select").AllowMultiSelection(true)
@@ -422,9 +426,8 @@ Run the above code example to render the following ListBox with Multiple selecti
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-
-
-_Figure 5_: ListBox  with Multiple Selection of list items
+ListBox  with Multiple Selection of list items
+{:.caption}
 
 ### Add items to a Second ListBox
 
@@ -438,29 +441,32 @@ The following code sample explains how to add an item to a second ListBox.
 
 <script type="text/javascript">
 
-function add(e) {
+	function add(e) 
+	{
 
-        var firstListBox = $('#list1').data("ejListBox");
+		var firstListBox = $('#list1').data("ejListBox");
 
-        var selecteditems = firstListBox.getSelectedItems();
+		var selecteditems = firstListBox.getSelectedItems();
 
-        var len = selecteditems.length;
+		var len = selecteditems.length;
 
-        for (i = 0; i < len; i++) {
+		for (i = 0; i < len; i++) 
+		{
 
-            var value = $(selecteditems[i]).html();
+			var value = $(selecteditems[i]).html();
 
-            selecteditems[i].remove();
+			selecteditems[i].remove();
 
-            var target = $('#list2').data("ejListBox");
+			var target = $('#list2').data("ejListBox");
 
-            target.addItem(value);
+			target.addItem(value);
 
-        }
+		}
 
-    }
+	}
 
-    function remove(e) {
+    function remove(e) 
+	{
 
         var firstListBox = $('#list2').data("ejListBox");
 
@@ -468,7 +474,8 @@ function add(e) {
 
         var len = selecteditem.length;
 
-        for (i = 0; i < len; i++) {
+        for (i = 0; i < len; i++) 
+		{
 
             var value = $(selecteditem[i]).html();
 
@@ -492,7 +499,5 @@ Run this code and you can see the output. Selected items from the first ListBox 
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-
-
-_Figure 6: ListBox Selection moved to Second ListBox_
-
+ListBox Selection moved to Second ListBox
+{:.caption}

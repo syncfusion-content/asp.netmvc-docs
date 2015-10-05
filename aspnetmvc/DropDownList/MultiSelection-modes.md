@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MultiSelection-modes
+title: MultiSelection modes | DropDownList | ASP.NET MVC | Syncfusion
 description: multiselection modes
 platform: ejmvc
 control: DropDownList
@@ -18,11 +18,9 @@ The following code explain you the configuration of the AllowMultiSelection for 
 1. Add the below code snippet with ,multiple item selection option in Dropdownlist
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
-
-
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").AllowMultiSelection(true).ShowCheckbox(true).Width("200px")
 
@@ -53,7 +51,6 @@ Output for Dropdown control that provides multiple selection is as follows.
 
 ![](MultiSelection-modes_images/MultiSelection-modes_img1.png)
 
-
-
-_Figure 18: Dropdown with_ AllowMultiSelection _property_ 
+Dropdown with_ AllowMultiSelection property
+{:.caption} 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Footer
+title: Footer | RichTextEditor | ASP.NET MVC | Syncfusion
 description: footer
 platform: ejmvc
 control: RichTextEditor
@@ -22,7 +22,7 @@ Refer to the following code example to enable the footer in RTE.
 
 {% highlight html %}
 
-     @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).ShowFooter(true).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).ShowFooter(true).Render(); }
 
 {% endhighlight %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing
+title: Editing | Gantt | ASP.NET MVC | Syncfusion
 description: editing
 platform: ejmvc
 control: Gantt
@@ -22,7 +22,7 @@ Update the task details through grid cell editing by setting EditMode as CellEdi
 
 The following code example shows you how to enable CellEditing in Gantt control.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -56,7 +56,8 @@ The output of Gantt with CellEditing is as follows.
 
 ![](Editing_images/Editing_img1.png)
 
-_Figure 37: Gantt with cellEdit_
+Gantt with cellEdit
+{:.caption}
 
 ## Normal Editing
 
@@ -65,8 +66,7 @@ Update the task details through edit dialog by setting EditMode as Normal.
 The following code example shows you how to enable normal editing in Gantt control.
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Gantt("Gantt")
@@ -85,8 +85,6 @@ The following code example shows you how to enable normal editing in Gantt contr
 
 )
 
-
-
 {% endhighlight %}
 
 
@@ -98,8 +96,9 @@ The following screenshot shows the output of normal editing.
 
 
 ![](Editing_images/Editing_img2.png)
-_Figure 38: Normal Editing_
 
+Normal Editing
+{:.caption}
 
 
 ## Taskbar Editing
@@ -110,7 +109,7 @@ Update the task details by interactions such as resizing and dragging the taskba
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -136,7 +135,7 @@ Update the predecessor details of a task using mouse interactions. The following
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -164,7 +163,6 @@ The following screen shot shows the predecessor editing in Gantt control.
 
 ![](Editing_images/Editing_img3.png)
 
-
-
-_Figure 39 : Predecessor Editing_
+Predecessor Editing
+{:.caption}
 

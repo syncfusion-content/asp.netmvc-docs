@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Scroll-Support
+title: Scroll Support | Tab  | ASP.NET MVC | Syncfusion
 description: scroll support
 platform: ejmvc
-control: Tab Control
+control: Tab 
 documentation: ug
 ---
 
@@ -20,7 +20,7 @@ You can use the following code example to render the Tab widget with scroll butt
 1. Add the following code in your view page to create a simple Tab with scroll button.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -28,37 +28,37 @@ You can use the following code example to render the Tab widget with scroll butt
 
 <div style="width: 550px">
 
-            @{Html.EJ().Tab("dishtab").Items(data =>
+	@{Html.EJ().Tab("dishtab").Items(data =>
 
-           {
+   {
 
-               data.Add().ID("pizzatype").Text("Pizza Type")
+	   data.Add().ID("pizzatype").Text("Pizza Type")
 
-                   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("pastatype").Text("Pasta Type")
+	   data.Add().ID("pastatype").Text("Pasta Type")
 
-                   .ContentTemplate(@<div>Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("burgertype").Text("Burger Type")
+	   data.Add().ID("burgertype").Text("Burger Type")
 
-                   .ContentTemplate(@<div>Burger cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Burger cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("sandwichtype").Text("Sandwich Type")
+	   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-                   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("spaghettitype").Text("Spaghetti Type")
+	   data.Add().ID("spaghettitype").Text("Spaghetti Type")
 
-                   .ContentTemplate(@<div>Spaghetti cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Spaghetti cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-               data.Add().ID("ramentype").Text("Ramen Type")
+	   data.Add().ID("ramentype").Text("Ramen Type")
 
-                   .ContentTemplate(@<div>Ramen cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   .ContentTemplate(@<div>Ramen cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-           }).EnableTabScroll(true).Render();}
+   }).EnableTabScroll(true).Render();}
 
-        </div>
+</div>
 
 
 {% endhighlight %}
@@ -68,9 +68,8 @@ The following screenshot illustrates you the Tab control with scroll button.
 
 ![](Scroll-Support_images/Scroll-Support_img1.png)
 
-
-
-_Figure 24: Tab control with scroll support_
+Tab control with scroll support
+{:.caption}
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User-Interactions
+title: User Interactions | Chart | ASP.NET MVC | Syncfusion
 description: user interactions
 platform: ejmvc
 control: Chart
@@ -18,10 +18,7 @@ Essential Chart provides you an option Tooltip to display a pop up with the poin
 ### Tooltip visibility: 
 
 By default the visibility of tooltip is set to false, but you can change the visibility. When format or template is not specified for tooltip, then it displays the x and y values of the point. 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -37,9 +34,11 @@ By default the visibility of tooltip is set to false, but you can change the vis
 
 
 {% endhighlight  %}
+
 ![](User-Interactions_images/User-Interactions_img1.png)
 
-
+Chart with Tooltip
+{:.caption}
 
 ### Tooltip format: 
 
@@ -53,10 +52,7 @@ For multiple y values, in financial series, you can form a format as follows.
 
 format: " #point.x# #series.name# #point.high# #point.low# #point.open# #point.close# %"
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -73,19 +69,18 @@ format: " #point.x# #series.name# #point.high# #point.low# #point.open# #point.c
 
 
 {% endhighlight  %}
+
 ![](User-Interactions_images/User-Interactions_img2.png)
 
-
+Chart with formatted ToolTip
+{:.caption}
 
 ### Customize the tooltip border: 
 
 Essential Chart provides you options to customize the border of the tooltip. You can change the width and color of the border. By default the border width is set to 1.
 
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")               
 
@@ -105,16 +100,14 @@ Essential Chart provides you options to customize the border of the tooltip. You
 
 ![](User-Interactions_images/User-Interactions_img3.png)
 
-
+Chart with Customized ToolTip border
+{:.caption}
 
 ### Changing the tooltip fill color: 
 
 You can modify the fill color of tooltip. By default the tooltip renders with the appropriate series color as background color.
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -129,21 +122,18 @@ You can modify the fill color of tooltip. By default the tooltip renders with th
 
    )
 
-
 {% endhighlight  %}
+
 ![](User-Interactions_images/User-Interactions_img4.png)
 
-
+Chart with Customized ToolTip Fill color
+{:.caption}
 
 ### Customize the tooltip font: 
 
 Essential Chart provides you support to customize the text display in the tooltip. You can change font family, font color, font style, font weight. By default “Segoe UI” font family is set to tooltip text.
 
-{% highlight html %}
-
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -163,14 +153,14 @@ Essential Chart provides you support to customize the text display in the toolti
 
 ![](User-Interactions_images/User-Interactions_img5.png)
 
-
+Chart with Customized ToolTip Font
+{:.caption}
 
 ### Tooltip Animation
 
 Essential Chart provides you animation support for tooltip template. You can enable this by setting “EnableAnimation” to true. The “Duration” property in tooltip specificies the time taken to animate the tooltip, by default the duration is set to “500ms”.
-{% highlight html %}
 
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")                   
@@ -184,16 +174,14 @@ Essential Chart provides you animation support for tooltip template. You can ena
 // ...
 
      )
+	 
 {% endhighlight  %}
 
 ### Understanding the RX and RY in tooltip:
 
 Essential Chart has RX and RY property in tooltip to customize the corners radius of the tooltip.
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -212,7 +200,8 @@ Essential Chart has RX and RY property in tooltip to customize the corners radiu
 
 ![](User-Interactions_images/User-Interactions_img6.png)
 
-
+Chart with Animated ToolTip
+{:.caption}
 
 ## Zooming and Panning
 
@@ -221,10 +210,7 @@ Essential Chart provides you an option to zoom the Chart. Using this option you 
 ### Enable zooming: 
 
 By default zooming is not enabled. You can enable it using the “Enable” option in “Zooming” property.
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -244,7 +230,8 @@ By default zooming is not enabled. You can enable it using the “Enable” opti
 
 ![](User-Interactions_images/User-Interactions_img7.png)
 
-
+Chart before zooming
+{:.caption}
 
 ### Selection for zooming:
 
@@ -252,7 +239,8 @@ By default zooming is not enabled. You can enable it using the “Enable” opti
 
 ![](User-Interactions_images/User-Interactions_img8.png)
 
-
+Chart with selected area for zooming
+{:.caption}
 
 ### After zooming:
 
@@ -260,7 +248,8 @@ By default zooming is not enabled. You can enable it using the “Enable” opti
 
 ![](User-Interactions_images/User-Interactions_img9.png)
 
-
+Chart after zooming
+{:.caption}
 
 ### Programmatic Zooming
 
@@ -270,11 +259,7 @@ Programmatically the Chart can be zoomed using ZoomPosition and ZoomFactor prope
 
 Essential Chart provides you support to zoom the Chart by scrolling the mouse wheel. By default it is not enabled, you can enable it with the EnableMouseWheel property in zooming.
 
-{% highlight html %}
-
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -291,11 +276,7 @@ Essential Chart provides you support to zoom the Chart by scrolling the mouse wh
 
 Essential Chart supports three types of zooming. You can zoom only the x axis or can zoom only the y axis or can zoom both x and y axis respectively. This is achieved using Type property in zooming.
 
-{% highlight html %}
-
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -311,7 +292,8 @@ Essential Chart supports three types of zooming. You can zoom only the x axis or
 
 ![](User-Interactions_images/User-Interactions_img10.png)
 
-
+Chart with Programmatic zooming
+{:.caption}
 
 ## Crosshair and Trackball
 
@@ -324,10 +306,8 @@ In order to view the value at mouse position or touch contact point, you can use
 To display the label containing the relevant data point value information, enable the CrosshairLabel.Visible property in the corresponding axis of the Chart. For example, to display the x-axis label you can set the Visible property in CrosshairLabel of the PrimaryAxis to true. You can customize labels and tooltip rect using Font, Fill and Border properties in CrosshairLabel.
 
 The following code example illustrates you on how to enable the Crosshair. 
-{% highlight html %}
 
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -349,15 +329,13 @@ The following code example illustrates you on how to enable the Crosshair.
 
 ![](User-Interactions_images/User-Interactions_img11.png)
 
-
+Chart with Crosshairs enabled
+{:.caption}
 
 ### Trackball:
 
 In order to track a data point closer to the mouse position or touch contact point, you can use Trackball. You can customize the track ball appearance using the Marker and Line property in the crosshair. To display a label containing the relevant data point value information, you can enable the CrosshairLabel.Visible property in the corresponding axis of the Chart. For example, to display the x-axis label, set the Visible property of CrosshairLabel inthe PrimaryAxis to true. 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -377,16 +355,14 @@ In order to track a data point closer to the mouse position or touch contact poi
 
 ![](User-Interactions_images/User-Interactions_img12.png)
 
-
+Chart with Trackball
+{:.caption}
 
 ## Drill Down
 
 Drill Down allows you to view the data’s in depth, for example yearly data to quarterly, quarterly to monthly or from categorical data to individual item. The drill down support is achieved using the client-side PointRegionClick event. On clicking points in Chart series, PointRegionClick event gets triggered, using this event you can refresh your Chart by assigning new data to the Chart series through set model. In the following example a pie Chart with two points are used, when you click on the pie slice, PointRegionClick event gets triggered. Using this event and set model option, the Chart is refreshed with new data based on the point index.
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -417,11 +393,6 @@ Drill Down allows you to view the data’s in depth, for example yearly data to 
 
   ) 
 
-{% endhighlight  %}
-{% highlight js %}
-
-
-
 
 
 <script type="text/javascript">
@@ -435,10 +406,6 @@ function onclick(sender) {
          $("#container").ejChart("option", {"drilldown": pieSeries(pointIndex) });
 
  }
-
-
-
-
 
    function pieSeries(index) {
 
@@ -522,7 +489,8 @@ function onclick(sender) {
 
 ![](User-Interactions_images/User-Interactions_img13.png)
 
-
+Pie Chart with 2 parts
+{:.caption}
 
 Details about the first segment/slice in pie Chart:
 
@@ -530,5 +498,5 @@ Details about the first segment/slice in pie Chart:
 
 ![](User-Interactions_images/User-Interactions_img14.png)
 
-
-
+Details about the first segment or slice in Pie Chart
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Captcha  | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Captcha
@@ -18,12 +18,12 @@ The following code example is used to render the Captcha with customized Hatch s
 1. Add the following code example to the corresponding CSHTML page to render Captcha with customized Hatch style.
 
 
-   ~~~ javascript
+   ~~~ cshtml
 
-		@Html.EJ().Captcha("captcha").HatchStyle(HatchStyle.Cross)
+   @Html.EJ().Captcha("captcha").HatchStyle(HatchStyle.Cross)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with some of customized Hatch styles. 
 <table>
@@ -54,7 +54,8 @@ HatchStyle(HatchStyle.HorizontalBrick)</td><td>
 </td></tr>
 </table>
 
-_Figure_ _6_: Captcha with customized Hatch style
+Captcha with customized Hatch style
+{:.caption}
 
 ## Pattern
 
@@ -65,19 +66,20 @@ The following code example is used to render the Captcha with hard visibility mo
 1. Add the following code example to the corresponding CSHTML page to render Captcha with visibility mode.
 
 
-   ~~~ javascript
+   ~~~ cshtml
 
 
 		@Html.EJ().Captcha("captcha").EnablePattern(false)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with disabled pattern. 
 
-![C:/Users/ApoorvahR/Desktop/3.png](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
-
+Captcha without pattern
+{:.caption}
 
 ## Background and Font color 
 
@@ -87,17 +89,19 @@ The following code example is used to render the Captcha with customized appeara
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with customized appearance.
 
-   ~~~ javascript
+   ~~~ cshtml
 
 		@Html.EJ().Captcha("captcha").PatternForeColor(System.Drawing.Color.LightGray).PatternBackColor(System.Drawing.Color.Snow).ForeColor(System.Drawing.Color.LightSeaGreen) 
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with customized appearance. 
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
+Captcha with customized appearance
+{:.caption}
 
 ## Adjusting Captcha Size
 
@@ -110,18 +114,20 @@ The following code example is used to render the Captcha with customized Height 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with customized Height and Width.
 
 
-   ~~~ javascript
+   ~~~ cshtml
 
 
 		@Html.EJ().Captcha("captcha").Height(50).Width(150)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with customized Height and Width. 
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
+Captcha with customized Height and Width
+{:.caption}
 
 ## Theme
 
@@ -146,9 +152,12 @@ By default, there are 12 themes support available for Captcha control.
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img9.png)
 
+Captcha with gradient-azure theme
+{:.caption}
 
 ### Appearance for flat-lime,
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img10.png)
 
-
+Captcha with flat-lime theme
+{:.caption}

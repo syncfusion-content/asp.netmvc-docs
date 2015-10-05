@@ -1,17 +1,18 @@
 ---
 layout: post
-title: How-to-open-a-document-from-stream-using-DocIO
+title: How to open a document from stream using DocIO | DocIO | ASP.NET MVC | Syncfusion
 description: how to open a document from stream using docio?
-platform: universal-classic
-control: Control Name undefined
+platform: ejmvc
+control: DocIO
 documentation: ug
 ---
 
 ### How to open a document from stream using DocIO?
 
 DocIO provides support for opening documents from stream. It gets the document by using .NET classes, and then passes the stream to DocIO as follows.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 HttpWebRequest request =(HttpWebRequest)WebRequest.Create("http://www.nfpa.org/assets/files//PDF/Forms/EvacuationGuide.doc");
 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 Stream stream = response.GetResponseStream();
@@ -68,7 +69,7 @@ doc.Save("Sample.doc", FormatType.Doc, Response, HttpContentDisposition.InBrow
 	return ret;
 }
 {% endhighlight %}
-{% highlight vbnet %}
+{% highlight VB%}
 Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) 
 HandlesButton1.Click 
    Dim request As HttpWebRequest =CType(WebRequest.Create("http://www.nfpa.org/assets/files//PDF/Forms/EvacuationGuide.doc"), HttpWebRequest)
@@ -123,4 +124,4 @@ Public Shared Method ReadFully(ByVal stream As Stream, ByVal initialLeng
 	    Return retEnd Method
 {% endhighlight %}
 
-
+{% endtabs %} 

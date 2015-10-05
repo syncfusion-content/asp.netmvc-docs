@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Animations
+title: Animations | NavigationDrawer | ASP.NET MVC | Syncfusion
 description: animations
 platform: ejmvc
 control: NavigationDrawer
@@ -22,43 +22,44 @@ The default value is Overlay.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @{
 
-    @Html.EJ().Button("drawerTarget").Text("Open Drawer")
+@Html.EJ().Button("drawerTarget").Text("Open Drawer")
 
-    @Html.EJ().NavigationDrawer("navpane").Type(NavigationDrawerType.Slide).TargetId("drawerTarget").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Type(NavigationDrawerType.Slide).TargetId("drawerTarget").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 
-        @Html.EJ().ListView("list").Width(300).Items(items =>
+@Html.EJ().ListView("list").Width(300).Items(items =>
 
-         {
+ {
 
-             items.Add().Text("Home");
+	 items.Add().Text("Home");
 
-             items.Add().Text("Profile");
+	 items.Add().Text("Profile");
 
-             items.Add().Text("Photos");
+	 items.Add().Text("Photos");
 
-             items.Add().Text("Location");
+	 items.Add().Text("Location");
 
-         })
+ })
 
-    </div>)
+</div>)
 
 }
 
 <style>
 
-    #drawerTarget {
+	#drawerTarget 
+	{
 
-        top: 200px;
+		top: 200px;
 
-        left: 600px;
+		left: 600px;
 
-        position: absolute;
+		position: absolute;
 
-    }
+	}
 
 </style>
 

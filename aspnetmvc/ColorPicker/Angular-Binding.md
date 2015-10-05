@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular-Binding
+title: Angular Binding | ColorPicker | ASP.NET MVC | Syncfusion
 description: angular binding
 platform: ejmvc
 control: ColorPicker
@@ -26,7 +26,7 @@ To know more about the Angular binding, you can refer to the online documentatio
 
 1. The following code example depicts the way to bind data to the ColorPicker widget through angular support.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -126,5 +126,6 @@ The following screenshot displays the output of the above code example.
 
 ![](Angular-Binding_images/Angular-Binding_img1.png)
 
-
+ColorPicker with Angular Support
+{:.caption}
 

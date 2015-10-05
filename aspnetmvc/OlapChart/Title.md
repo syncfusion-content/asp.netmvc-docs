@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Title
+title: Title | OLAPChart | ASP.NET MVC | Syncfusion
 description: title
 platform: ejmvc
 control: OLAPChart
@@ -15,7 +15,7 @@ Title is the area on top of the Chart control that displays the text explaining 
 
 Title property allows you to set the default title for a Chart as follows. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => 
 title.Text("OLAP Chart in Essential Studio"))
@@ -32,7 +32,7 @@ title.Text("OLAP Chart in Essential Studio"))
 
 You can customize the title text font using title.font property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => title.Text("OlapChart in Essential Studio")).ClientSideEvents(oEve => { oEve.Load("load"); })
 

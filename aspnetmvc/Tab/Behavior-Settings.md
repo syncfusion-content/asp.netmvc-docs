@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | Tab  | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
-control: Tab Control
+control: Tab 
 documentation: ug
 ---
 
@@ -17,34 +17,32 @@ The following code example is used to render the Tab widget with CloseButton.
 
 1. Add the following code in your view page for simple Tab creation with CloseButton.
 
-   ~~~ html
+   ~~~ cshtml
    
-		// Add the following code example to the corresponding CSHTML page to render Tab with close button.
+	// Add the following code example to the corresponding CSHTML page to render Tab with close button.
 
+	<div style="width: 550px">
 
+		@{Html.EJ().Tab("dishtab").Items(data =>
 
-		<div style="width: 550px">
+			   {
 
-			@{Html.EJ().Tab("dishtab").Items(data =>
+				   data.Add().ID("pizzatype").Text("Pizza Type")
 
-				   {
+					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-					   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-					   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   </div>);
 
-						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+			   }).ShowCloseButton(true).Render();}
 
-					   </div>);
-
-				   }).ShowCloseButton(true).Render();}
-
-		</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -61,32 +59,32 @@ The following code example is used to render the sub Tab widget in the vertical 
 
 1. Add the following code in your view page for Tab orientation.
 
-   ~~~ html
+   ~~~ cshtml
+   
+	// Add the following code example to the corresponding CSHTML page to render Tab with customized orientation.
 
-		// Add the following code example to the corresponding CSHTML page to render Tab with customized orientation.
+	<div style="width: 550px">
 
-		<div style="width: 550px">
+	@{Html.EJ().Tab("dishtab").Items(data =>
 
-			@{Html.EJ().Tab("dishtab").Items(data =>
+	   {
 
-				   {
+		   data.Add().ID("pizzatype").Text("Pizza Type")
 
-					   data.Add().ID("pizzatype").Text("Pizza Type")
+			   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+		   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-					   data.Add().ID("sandwichtype").Text("Sandwich Type")
+			   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-						   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+		   </div>);
 
-					   </div>);
+	   }).HeaderPosition(HeaderPosition.Left).Height("220").Render();}
 
-				   }).HeaderPosition(HeaderPosition.Left).Height("220").Render();}
-
-		</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -104,32 +102,32 @@ The following code example is used to render the Tab widget with state maintenan
 
 1. Add the following code in your view page for Tabstatemaintenance.
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add the following code example to the corresponding CSHTML page to render Tab with state maintenance.
+	// Add the following code example to the corresponding CSHTML page to render Tab with state maintenance.
 
-		<div style="width: 550px">
+	<div style="width: 550px">
 
-			@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dishtab").Items(data =>
 
-				   {
+			   {
 
-					   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("pizzatype").Text("Pizza Type")
 
-						   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-					   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
-							.ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+						.ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
-					   </div>);
+				   </div>);
 
-				   }).EnablePersistence(true).Render();}
+			   }).EnablePersistence(true).Render();}
 
-		</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -137,9 +135,9 @@ The following code example is used to render the Tab widget with state maintenan
 
 ![](Behavior-Settings_images/Behavior-Settings_img3.png)
 
+State before page refresh
 
-
-_Figure10: State before page refresh_
+{:.caption}
 
 
 

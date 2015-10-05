@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Ribbon | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Ribbon
@@ -15,7 +15,7 @@ Specifies the index of the _Ribbon_ tab to select the given index tab item in th
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -25,7 +25,7 @@ Specifies the index of the _Ribbon_ tab to select the given index tab item in th
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -81,19 +81,19 @@ PrefixIcon = "e-ribbon e-ribbonpaste"
 
 
 
-<ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+		<ul>
 
-<li><a>New</a></li>
+			<li><a>New</a></li>
 
-</ul>
+		</ul>
 
-</li>
+	</li>
 
-</ul>
+	</ul>
 
 <div id="content">Home control</div>
 
@@ -101,15 +101,16 @@ PrefixIcon = "e-ribbon e-ribbonpaste"
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+	ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.option({ selectedItemIndex: 2 });
+	ribbonObj.option({ selectedItemIndex: 2 });
 
-});
+	});
 
 </script>
 
@@ -119,19 +120,20 @@ ribbonObj.option({ selectedItemIndex: 2 });
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+	content: "\e645";
 
-font-size: 36px;
+	font-size: 36px;
 
-position: relative;
+	position: relative;
 
-left: -9px;
+	left: -9px;
 
-top: -4px;
+	top: -4px;
 
-}
+	}
 
 </style>
 
@@ -153,7 +155,7 @@ Specifies the index or indexes to disable the corresponding tabs in the _Ribbon_
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -163,7 +165,7 @@ Specifies the index or indexes to disable the corresponding tabs in the _Ribbon_
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -219,19 +221,19 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
-<ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+		<ul>
 
-<li><a>New</a></li>
+			<li><a>New</a></li>
 
-</ul>
+		</ul>
 
-</li>
+	</li>
 
-</ul>
+	</ul>
 
 <div id="content">Home control</div>
 
@@ -239,15 +241,16 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+	ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.option({ disabledItemIndex: [1, 2] });
+	ribbonObj.option({ disabledItemIndex: [1, 2] });
 
-});
+	});
 
 </script>
 
@@ -255,24 +258,23 @@ ribbonObj.option({ disabledItemIndex: [1, 2] });
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	
+	{
 
-content: "\e645";
+		content: "\e645";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -9px;
+		left: -9px;
 
-top: -4px;
+		top: -4px;
 
-}
+	}
 
 </style>
-
-
-
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example
@@ -287,7 +289,7 @@ Specifies the index or indexes to enable the corresponding tabs in the _Ribbon_ 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -297,7 +299,7 @@ Specifies the index or indexes to enable the corresponding tabs in the _Ribbon_ 
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -353,19 +355,19 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
-<ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+		<ul>
 
-<li><a>New</a></li>
+			<li><a>New</a></li>
 
-</ul>
+			</ul>
 
-</li>
+		</li>
 
-</ul>
+	</ul>
 
 <div id="content">Home control</div>
 
@@ -373,17 +375,18 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+	ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.option({ disabledItemIndex: [1, 2] });
+	ribbonObj.option({ disabledItemIndex: [1, 2] });
 
-ribbonObj.option({ enabledItemIndex: [1] });
+	ribbonObj.option({ enabledItemIndex: [1] });
 
-});
+	});
 
 </script>
 
@@ -391,19 +394,20 @@ ribbonObj.option({ enabledItemIndex: [1] });
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+		content: "\e645";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -9px;
+		left: -9px;
 
-top: -4px;
+		top: -4px;
 
-}
+	}
 
 </style>
 
@@ -427,7 +431,7 @@ This method is used to hide the given text tab in the _Ribbon_ control.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -437,7 +441,7 @@ This method is used to hide the given text tab in the _Ribbon_ control.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -492,18 +496,18 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
+    
+<ul id="ribbonmenu">
 
-<ul id="menu">
+	<li><a>FILE</a>
 
-<li><a>FILE</a>
+		<ul>
 
-<ul>
+			<li><a>New</a></li>
 
-<li><a>New</a></li>
+		</ul>
 
-</ul>
-
-</li>
+	</li>
 
 </ul>
 
@@ -513,15 +517,16 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+		ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.hideTab("HOME");
+		ribbonObj.hideTab("HOME");
 
-});
+	});
 
 </script>
 
@@ -529,19 +534,20 @@ ribbonObj.hideTab("HOME");
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+	content: "\e645";
 
-font-size: 36px;
+	font-size: 36px;
 
-position: relative;
+	position: relative;
 
-left: -9px;
+	left: -9px;
 
-top: -4px;
+	top: -4px;
 
-}
+	}
 
 </style>
 
@@ -563,7 +569,7 @@ This method is used to show the given text tab in the _Ribbon_ control.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -574,7 +580,7 @@ This method is used to show the given text tab in the _Ribbon_ control.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -629,20 +635,20 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
+    
+<ul id="ribbonmenu">
 
-<ul id="menu">
+	<li><a>FILE</a>
 
-<li><a>FILE</a>
+		<ul>
 
-<ul>
+			<li><a>New</a></li>
 
-<li><a>New</a></li>
+		</ul>
 
-</ul>
+		</li>
 
-</li>
-
-</ul>
+	</ul>
 
 <div id="content">Home control</div>
 
@@ -650,17 +656,18 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+		ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.hideTab("HOME");
+		ribbonObj.hideTab("HOME");
 
-ribbonObj.showTab("HOME");
+		ribbonObj.showTab("HOME");
 
-});
+	});
 
 </script>
 
@@ -668,23 +675,22 @@ ribbonObj.showTab("HOME");
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+		content: "\e645";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -9px;
+		left: -9px;
 
-top: -4px;
+		top: -4px;
 
-}
+	}
 
 </style>
-
-
 
 {% endhighlight %}
 
@@ -704,7 +710,7 @@ This method is used to remove the given index tab item from the _Ribbon_ control
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -714,7 +720,7 @@ This method is used to remove the given index tab item from the _Ribbon_ control
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -770,19 +776,19 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
-<ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+		<ul>
 
-<li><a>New</a></li>
+			<li><a>New</a></li>
 
-</ul>
+		</ul>
 
-</li>
+	</li>
 
-</ul>
+	</ul>
 
 <div id="content">Home control</div>
 
@@ -790,15 +796,16 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+		ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.removeTab(2);
+		ribbonObj.removeTab(2);
 
-});
+	});
 
 </script>
 
@@ -806,19 +813,20 @@ ribbonObj.removeTab(2);
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+		content: "\e645";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -9px;
+		left: -9px;
 
-top: -4px;
+		top: -4px;
 
-}
+	}
 
 </style>
 
@@ -840,9 +848,9 @@ Specifies the _width_ to the _Ribbon_ control.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-  @(Html.EJ().Ribbon("Ribbon")
+@(Html.EJ().Ribbon("Ribbon")
 
      .Width("800px")
 
@@ -850,7 +858,7 @@ Specifies the _width_ to the _Ribbon_ control.
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
                {
 
@@ -906,17 +914,17 @@ Specifies the _width_ to the _Ribbon_ control.
 
 
 
-                <ul id="menu">
+<ul id="ribbonmenu">
 
-<li><a>FILE</a>
+	<li><a>FILE</a>
 
-<ul>
+		<ul>
 
-<li><a>New</a></li>
+			<li><a>New</a></li>
 
-</ul>
+		</ul>
 
-</li>
+	</li>
 
 </ul>
 
@@ -926,22 +934,22 @@ Specifies the _width_ to the _Ribbon_ control.
 
 <style type="text/css">
 
-.e-ribbon .e-ribbonpaste:before {
+	.e-ribbon .e-ribbonpaste:before 
+	{
 
-content: "\e645";
+		content: "\e645";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -9px;
+		left: -9px;
 
-top: -4px;
+		top: -4px;
 
-}
+	}
 
 </style>
-
 
 
 {% endhighlight %}
@@ -966,7 +974,7 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -977,7 +985,7 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu"));
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1009,54 +1017,58 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
     })
 
-    )            <ul id="menu">
+    )           
 
-                <li><a>FILE</a></li>
+<ul id="ribbonmenu">
 
-            </ul>
+	<li><a>FILE</a></li>
+
+</ul>
 
 <script>
 
-var ribbonGrp = {
+	var ribbonGrp = 
+	{
 
-        text: "New", alignType: ej.Ribbon.alignType.rows, content: [{
+			text: "New", alignType: ej.Ribbon.alignType.rows, content: 
+			[{
 
-            groups: [{
+				groups: 
+				[{
 
-                id: "new",
+					id: "new",
 
-                text: "New"
+					text: "New"
 
-            }],
+				}],
 
-            defaults: {
+				defaults: 
+				{
 
-                type: ej.Ribbon.type.button,
+					type: ej.Ribbon.type.button,
 
-                width: 60,
+					width: 60,
 
-                height: 70
+					height: 70
 
-            }
+				}
 
-        }]
+			}]
 
-    };
+	};
 
-$(function(){
+	$(function()
+	{
 
-         var ribbonObj = $("#Ribbon").data("ejRibbon");
+			 var ribbonObj = $("#Ribbon").data("ejRibbon");
 
-            // Add new ribbon group with given list
+				// Add new ribbon group with given list
 
-            ribbonObj.addTabGroup(1, ribbonGrp, 0);
+				ribbonObj.addTabGroup(1, ribbonGrp, 0);
 
-        })
+	})
 
-    </script>
-
-
-
+</script>
 
 
 {% endhighlight %}
@@ -1085,7 +1097,7 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1095,7 +1107,7 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1127,37 +1139,38 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
     })
 
-    )            <ul id="menu">
+    )            
+	
+	
+<ul id="ribbonmenu">
 
-                <li><a>FILE</a></li>
+	<li><a>FILE</a></li>
 
-            </ul>
+</ul>
 
 <script>
 
-var content = {
+	var content = 
+	{
 
-        id: "new",
+			id: "new",
 
-        text: "new",
+			text: "new",
 
-    };
+	};
 
-    $(function(){
+	$(function()
+	{
 
-     var ribbonObj = $("#Ribbon").data("ejRibbon");
+	 var ribbonObj = $("#Ribbon").data("ejRibbon");
 
-     // Add new ribbon group with given list
+	 // Add new ribbon group with given list
 
-     ribbonObj.addTabGroupContent(1,0,0,content,2);
+	 ribbonObj.addTabGroupContent(1,0,0,content,2);
 
-        })
+	 })
 
 </script>
-
-
-
-
 
 {% endhighlight %}
 
@@ -1176,7 +1189,7 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1186,7 +1199,7 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1218,27 +1231,29 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
     )
 
-            <ul id="menu">
+<ul id="ribbonmenu">
 
-                <li><a>FILE</a></li>
+	<li><a>FILE</a></li>
 
-            </ul>
+</ul>
 
 <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+	ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.collapse();
+	ribbonObj.collapse();
 
-});
+	});
 
 </script>
+
 
 {% endhighlight %}
 
@@ -1255,7 +1270,7 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -1265,7 +1280,7 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1297,28 +1312,28 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
     )
 
-            <ul id="menu">
+<ul id="ribbonmenu">
 
-                <li><a>FILE</a></li>
+	<li><a>FILE</a></li>
 
-            </ul>
+</ul>
 
 <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
-var ribbonObj;
+	var ribbonObj;
 
-$(function () {
+	$(function () 
+	{
 
-ribbonObj = $("#Ribbon").data("ejRibbon");
+	ribbonObj = $("#Ribbon").data("ejRibbon");
 
-ribbonObj.expand();
+	ribbonObj.expand();
 
-});
+	});
 
 </script>
-
 
 
 {% endhighlight %}
@@ -1340,9 +1355,9 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-    @(Html.EJ().Ribbon("Ribbon")
+ @(Html.EJ().Ribbon("Ribbon")
 
      .Width("800")
 
@@ -1350,7 +1365,7 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1382,11 +1397,11 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
     )
 
-            <ul id="menu">
+<ul id="ribbonmenu">
 
-                <li><a>FILE</a></li>
+	<li><a>FILE</a></li>
 
-            </ul>
+</ul>
 
 <div id="paste" style="height:40px;width:43px;">Paste</div>
 
@@ -1394,27 +1409,25 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
 <script>
 
-        var ribbonObj;
+	var ribbonObj;
 
-var tabGroup = [{
+	var tabGroup = 
+	[{
 
-            text: "New", type: "custom", contentID: "newtab"
+				text: "New", type: "custom", contentID: "newtab"
 
-        }];        
+	}];        
 
-$(function () {
+	$(function () 
+	{
 
-            ribbonObj = $("#Ribbon").data("ejRibbon");
+				ribbonObj = $("#Ribbon").data("ejRibbon");
 
-            ribbonObj.addTab("AddTab", tabGroup, 2);
+				ribbonObj.addTab("AddTab", tabGroup, 2);
 
-        });
+	});
 
-    </script>
-
-
-
-
+</script>
 
 {% endhighlight %}
 
@@ -1434,9 +1447,9 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-    @(Html.EJ().Ribbon("Ribbon")
+ @(Html.EJ().Ribbon("Ribbon")
 
      .Width("800")
 
@@ -1444,7 +1457,7 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1476,51 +1489,56 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
     )
 
-            <ul id="menu">
+            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
             </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+    <div id="paste" style="height:40px;width:43px;">Paste</div>
 
-<div id="design">ContextualTab</div>
+    <div id="design">ContextualTab</div>
 
 <script>
 
-    var ribbonObj;
+var ribbonObj;
 
-        var contextualTab = {
+	var contextualTab = 
+	{
 
-            backgroundColor: "#FCFBEB", borderColor: "#F2CC1C",
+		backgroundColor: "#FCFBEB", borderColor: "#F2CC1C",
 
-            tabs: [
+		tabs: 
+		[
 
-            {
+		{
 
-                id: "Design", text: "DESIGN", groups: [{
+			id: "Design", text: "DESIGN", groups: 
+			[
+				{
 
-                    text: "Table Style", type: "custom", contentID: "design"
+					text: "Table Style", type: "custom", contentID: "design"
 
-                }
+				}
 
-                ]
+			]
 
-            }]
+		}]
 
-        }
+	}
 
-        $(function () {
-
-
-
-            ribbonObj = $("#Ribbon").data("ejRibbon");
-
-            ribbonObj.addContextualTabs(contextualTab, 2);
-
+	$(function () 
+	{
 
 
-        });    
+
+		ribbonObj = $("#Ribbon").data("ejRibbon");
+
+		ribbonObj.addContextualTabs(contextualTab, 2);
+
+
+
+	});    
 
 </script>
 

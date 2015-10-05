@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selector
+title: Selector | Diagram | ASP.NET MVC | Syncfusion
 description: selector
 platform: ejmvc
 control: Diagram
@@ -69,9 +69,6 @@ The following code example is used to update the size and position of the select
 
 {% highlight js %}
 
-
-
-
 var diagram = $("#diagram").ejDiagram("instance");
 
 //Updates the size and position of selected elements
@@ -108,23 +105,21 @@ for(var i=0; i< diagram.model.selectedItems.children.length; i++)
 
 {% highlight js %}
 
-     var userHandle= [];
+var userHandle= [];
 
-     function createUserHandles() {
+function createUserHandles() 
 
-       //Creates a new instance of user handle.
+{
 
-       var cloneHandle = ej.datavisualization.Diagram.UserHandle();
+	//Creates a new instance of user handle.
 
-       userhandle.push(cloneHandle);
+	var cloneHandle = ej.datavisualization.Diagram.UserHandle();
 
-     }
+	userhandle.push(cloneHandle);
 
+}
 
-
-     $("#diagram").ejDiagram({ selectedItems: { userHandles: userHandle } });
-
-
+$("#diagram").ejDiagram({ selectedItems: { userHandles: userHandle } });
 
 {% endhighlight %}
 

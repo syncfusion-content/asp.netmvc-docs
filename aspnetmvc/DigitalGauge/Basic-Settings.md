@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic-Settings
+title: Basic Settings | DigitalGauge | ASP.NET MVC | Syncfusion
 description: basic settings
 platform: ejmvc
 control: DigitalGauge
@@ -13,7 +13,7 @@ documentation: ug
 
 The basic customization for any control is to set the dimension. Here dimension refers to two major attributes such as height and width. The height and width assigned in the control will render the canvas element in the given size. The code example to set height and width is as follow. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -37,7 +37,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Basic-Settings_images/Basic-Settings_img1.png)
 
-_Figure 23: Digital Gauge control with height and width values_
+Digital Gauge control with height and width values
+{:.caption}
 
 
 
@@ -48,7 +49,7 @@ _Figure 23: Digital Gauge control with height and width values_
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -66,7 +67,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Basic-Settings_images/Basic-Settings_img2.png)
 
-_Figure 24: Digital Gauge control with Responsible layout_
+Digital Gauge control with Responsible layout
+{:.caption}
 
 
 
@@ -77,7 +79,7 @@ Themes give the good appearance to the control. There are two types of Themes av
 * flatlight
 * flatdark
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -98,7 +100,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Basic-Settings_images/Basic-Settings_img3.png)
 
-_Figure 25: Digital Gauge control with flatdark theme_
+Digital Gauge control with flatdark theme
+{:.caption}
 
 
 ## Setting Text for Digital Gauge
@@ -107,7 +110,7 @@ Digital Gauge is mainly used to display the text in the digital format. We can d
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering  *@
 
@@ -125,7 +128,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Basic-Settings_images/Basic-Settings_img4.png)
 
-_Figure 26: Digital Gauge control with text as "GO SLOW"_
+Digital Gauge control with text as "GO SLOW"
+{:.caption}
 
 
 

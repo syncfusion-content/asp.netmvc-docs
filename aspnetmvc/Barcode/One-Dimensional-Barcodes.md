@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One-Dimensional-Barcodes
+title: One Dimensional Barcodes | Barcode  | ASP.NET MVC | Syncfusion
 description: one dimensional barcodes
 platform: ejmvc
 control: Barcode

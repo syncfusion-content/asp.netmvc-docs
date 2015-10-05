@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Page-Settings
+title: Page Settings | Diagram | ASP.NET MVC | Syncfusion
 description: page settings
 platform: ejmvc
 control: Diagram
@@ -100,7 +100,8 @@ model.PageSettings.PageOrientation = PageOrientation.Portrait;
 
 ![](Page-Settings_images/Page-Settings_img1.png)
 
-
+Page Appearance-PageSettings based
+{:.caption}
 
 ## MultiplePage and PageBreaks
 
@@ -108,7 +109,8 @@ When MultiplePage is enabled, the size of the page dynamically increases or decr
 
 ![](Page-Settings_images/Page-Settings_img2.png)
 
-
+Multiple Page and Page Breaks
+{:.caption}
 
 ## AutoScroll
 
@@ -157,18 +159,15 @@ The following code example illustrates how to set autoscroll border.
 {% highlight c# %}
 
 
+// Specifies autoscroll border
 
-    // Specifies autoscroll border
+model.PageSettings.AutoScrollBorder.Left = 150;
 
-    model.PageSettings.AutoScrollBorder.Left = 150;
+model.PageSettings.AutoScrollBorder.Right = 15;
 
-    model.PageSettings.AutoScrollBorder.Right = 15;
+model.PageSettings.AutoScrollBorder.Top = 15;
 
-    model.PageSettings.AutoScrollBorder.Top = 15;
-
-    model.PageSettings.AutoScrollBorder.Bottom = 15;
-
-
+model.PageSettings.AutoScrollBorder.Bottom = 15;
 
 {% endhighlight %}
 
@@ -188,12 +187,9 @@ The following code example illustrates how to specify scroll limit.
 
 {% highlight c# %}
 
-
 //Scrolllimit for Diagram by default
 
 model.PageSettings.ScrollLimit = ScrollLimit.Inifinity;
-
-
 
 {% endhighlight %}
 
@@ -206,21 +202,19 @@ The following code example illustrates how to customize scrollable area of Diagr
 {% highlight c# %}
 
 
-
 //Scrolllimit for diagram as limited
 
 model.PageSettings.ScrollLimit= ScrollLimit.Limited;
 
-  //Sets limit of the scrollable area
+//Sets limit of the scrollable area
 
-  model.PageSettings.ScrollableArea.X = 0;
+model.PageSettings.ScrollableArea.X = 0;
 
-  model.PageSettings.ScrollableArea.Y = 0;
+model.PageSettings.ScrollableArea.Y = 0;
 
-  model.PageSettings.ScrollableArea.Width = 5000;
+model.PageSettings.ScrollableArea.Width = 5000;
 
-  model.PageSettings.ScrollableArea.Height = 5000;
-
+model.PageSettings.ScrollableArea.Height = 5000;
 
 
 {% endhighlight %}
@@ -229,5 +223,5 @@ model.PageSettings.ScrollLimit= ScrollLimit.Limited;
 
 ![](Page-Settings_images/Page-Settings_img4.png)
 
-
-
+AutoScroll Border
+{:.caption}

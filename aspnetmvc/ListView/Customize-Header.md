@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize-Header
+title: Customize Header | ListView | ASP.NET MVC | Syncfusion
 description: customize header
 platform: ejmvc
 control: ListView
@@ -17,31 +17,32 @@ Refer the following code example.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
-@Html.EJ().ListView("lb").Width(400).ShowHeader(true).ShowHeaderBackButton(true).HeaderBackButtonText("Menu").Items(items => {    
+@Html.EJ().ListView("lb").Width(400).ShowHeader(true).ShowHeaderBackButton(true).HeaderBackButtonText("Menu").Items(items => 
+{    
 
-    items.Add().Text("ArtWork");	
+	items.Add().Text("ArtWork");	
 
-    items.Add().Text("Abstract");
+	items.Add().Text("Abstract");
 
-    items.Add().Text("2 Acrylic Mediums");
+	items.Add().Text("2 Acrylic Mediums");
 
-    items.Add().Text("Creative Acrylic");
+	items.Add().Text("Creative Acrylic");
 
-    items.Add().Text("Modern Painting");
+	items.Add().Text("Modern Painting");
 
-    items.Add().Text("Canvas Art");
+	items.Add().Text("Canvas Art");
 
-    items.Add().Text("Black white");
+	items.Add().Text("Black white");
 
-    items.Add().Text("Children");
+	items.Add().Text("Children");
 
-    items.Add().Text("Preschool Crafts");
+	items.Add().Text("Preschool Crafts");
 
-    items.Add().Text("School-age Crafts");
+	items.Add().Text("School-age Crafts");
 
 })
 
@@ -54,7 +55,5 @@ Refer the following code example.
 
 ![](Customize-Header_images/Customize-Header_img1.png)
 
-
-
-_Customize Header_
-
+Customize Header
+{:.caption}

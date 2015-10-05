@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection
+title: Selection | ListView | ASP.NET MVC | Syncfusion
 description: selection
 platform: ejmvc
 control: ListView
@@ -17,30 +17,31 @@ Refer the following code examples.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-@Html.EJ().ListView("lb").EnableCheckMark(true).Width(400).Items(items => {    
+@Html.EJ().ListView("lb").EnableCheckMark(true).Width(400).Items(items => 
+{    
 
-    items.Add().Text("ArtWork");
+	items.Add().Text("ArtWork");
 
-    items.Add().Text("Abstract");
+	items.Add().Text("Abstract");
 
-    items.Add().Text("2 Acrylic Mediums");
+	items.Add().Text("2 Acrylic Mediums");
 
-    items.Add().Text("Creative Acrylic");
+	items.Add().Text("Creative Acrylic");
 
-    items.Add().Text("Modern Painting");
+	items.Add().Text("Modern Painting");
 
-    items.Add().Text("Canvas Art");
+	items.Add().Text("Canvas Art");
 
-    items.Add().Text("Black white");
+	items.Add().Text("Black white");
 
-    items.Add().Text("Children");
+	items.Add().Text("Children");
 
-    items.Add().Text("Preschool Crafts");
+	items.Add().Text("Preschool Crafts");
 
-    items.Add().Text("School-age Crafts");
+	items.Add().Text("School-age Crafts");
 
 })
 
@@ -55,7 +56,8 @@ Refer the following code examples.
 
 ![](Selection_images/Selection_img1.png)
 
-_Enable Check Mark_
+Enable Check Mark
+{:.caption}
 
 ## PreventSelection
 
@@ -65,10 +67,11 @@ N> When the click or select action is completed, the highlight is undone automat
 
 Refer the following code examples.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-@Html.EJ().ListView("lb").Width(400).PreventSelection(true).Items(items => {    
+@Html.EJ().ListView("lb").Width(400).PreventSelection(true).Items(items => 
+{    
 
     items.Add().Text("ArtWork");
 
@@ -102,10 +105,11 @@ Refer the following code examples.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-@Html.EJ().ListView("lb").PersistSelection(true).Width(400).Items(items => {    
+@Html.EJ().ListView("lb").PersistSelection(true).Width(400).Items(items => 
+{    
 
     items.Add().Text("ArtWork");
 
@@ -141,7 +145,5 @@ Refer the following code examples.
 
 ![](Selection_images/Selection_img2.png)
 
-
-
-_Persist Selection_
-
+Persist Selection
+{:.caption}

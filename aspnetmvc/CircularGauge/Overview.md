@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: CircularGauge | CircularGauge  | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: CircularGauge
 documentation: ug
 ---
 
-# Overview
+# CircularGauge
 
 The CircularGauge control visualizes the numerical values of scales in a circular manner.  It is also a feature-rich control that provides extensive appearance customization options with support for the animation of a pointer element. The CircularGauge control comprises the following basic elements:
 
@@ -20,7 +20,8 @@ The CircularGauge control visualizes the numerical values of scales in a circula
 
 ![](Overview_images/Overview_img1.png)
 
-
+Circular Gauge Control Structure
+{:.caption}
 
 The gauge display can also be customized either as a full circle or a half circle based on individual requirements. Among other helpful features, the CircularGauge control also includes advanced user interactivity.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DocIO-Document-Object-Model
+title: DocIO Document Object Model | DocIO | ASP.NET MVC | Syncfusion
 description: docio document object model
 platform: ejmvc
 control: DocIO
@@ -17,9 +17,8 @@ The following illustration shows the Class Diagram for Essential DocIO.
 
 ![](DocIO-Document-Object-Model_images/DocIO-Document-Object-Model_img1.png)
 
-
-_Figure_ _11_: Class Diagram for Essential DocIO
-
+Class Diagram for Essential DocIO
+{:.caption}
 
 
 * WordDocument: This class contains the collection of sections, bookmarks, styles, footnote and endnote.

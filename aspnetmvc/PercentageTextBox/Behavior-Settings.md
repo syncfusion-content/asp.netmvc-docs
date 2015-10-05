@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | PercentageTextBox | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
 control: PercentageTextBox
@@ -19,7 +19,7 @@ In the View page add PercentageTextBox helper, and configure the DecimalPlaces p
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -49,7 +49,7 @@ In the View page add PercentageTextBox helper, and configure the EnablePersisten
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -77,7 +77,7 @@ In the View page add PercentageTextBox helper, and configure the EnableStrictMod
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").MinValue(-5).MaxValue(3).EnableStrictMode(true).Value(10)
 
@@ -101,7 +101,7 @@ In the View page add PercentageTextBox helper, and configure the Enabled propert
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").Value("2").Enabled(false)
 
@@ -129,7 +129,7 @@ PercentageTextBox size can be modified by using the Height and Width properties.
 
 In the View page add PercentageTextBox helper, and configure the Height and Width property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").Value("2").Width("100").Height("50")
 
@@ -153,7 +153,7 @@ The IncrementStep property is used to increase or decrease the amount of value i
 
 In the View page add PercentageTextBox helper, and configure the IncrementStep property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").IncrementStep(3).Value("1")
 
@@ -181,7 +181,7 @@ When you have placed the PercentageTextBox in a form, the Name property is used 
 In the View page add PercentageTextBox helper, and configure the Name property.  
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").Name("Percentage")
 
@@ -197,7 +197,7 @@ In the View page add PercentageTextBox helper, and configure the Value property.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").Value("21")
 
@@ -225,7 +225,7 @@ In the View page add PercentageTextBox helper, and configure the MinValue and Ma
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percent").Value("3").MinValue(-2).MaxValue(3)
 
@@ -252,7 +252,7 @@ PercentageTextBox supports read only option. When you enable the ReadOnly proper
 In the View page add PercentageTextBox helper, and configure the ReadOnly property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ReadOnly(true)
 
@@ -297,7 +297,7 @@ In the View page add PercentageTextBox helper, and configure the CssClass proper
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").CssClass("customCss")
 
@@ -307,31 +307,32 @@ Customize the CSS properties in custom CSS class.
 
 {% highlight css %}
 
+<style>
 
+	.customCss .e-box 
+	{
 
-    <style>
+		border-color: #9d241b;
 
-        .customCss .e-box {
+	}
 
-            border-color: #9d241b;
+	.customCss .e-input 
+	{
 
-        }
+		background-color: #f6db8d;            
 
-        .customCss .e-input {
+	}
 
-            background-color: #f6db8d;            
+	.customCss .e-select 
+	{
 
-        }
+		background-color: #ecf6ac;
 
-        .customCss .e-select {
+		border-color: #3c36e7;
 
-            background-color: #ecf6ac;
+	}
 
-            border-color: #3c36e7;
-
-        }
-
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -353,7 +354,7 @@ In the View page add PercentageTextBox helper, and configure the ShowRoundedCorn
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ShowRoundedCorner(true)
 
@@ -377,7 +378,7 @@ In the View page add PercentageTextBox helper, and configure the ShowSpinButton 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("2").ShowSpinButton(false)
 
@@ -401,7 +402,7 @@ In the View page add PercentageTextBox helper, and configure the ShowSpinButton 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").WatermarkText("Percentage")
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | Diagram | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: Diagram
@@ -65,9 +65,9 @@ To bind the Local Data to the Diagram control, map the user-defined JSON data na
 
 The following code example illustrates how to bind local data to the Diagram.
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight CSHTML %}
 
 // Node template.
 
@@ -84,9 +84,9 @@ $(window).load(function () {
            $("#Diagram").ejDiagram({ nodeTemplate: nodeTemplate });
 
         });
+{% endhighlight %}
 
-
-
+{% highlight C# %}
 
 DiagramProperties model = new DiagramProperties();
 
@@ -144,11 +144,12 @@ public Array GetData(){
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
+Local Data binding
+{:.caption}
 
 ## Remote Data
 
@@ -159,9 +160,6 @@ You can bind the Diagram to Remote Data by using DataManager and the query in fi
 The following code illustrates how to bind remote data to the Diagram.
 
 {% highlight html %}
-
-
-
 
 
 <div id="main">
@@ -180,14 +178,14 @@ The following code illustrates how to bind remote data to the Diagram.
  </div>    
 
 
-
 {% endhighlight %}
 
 
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-
+Remote data binding
+{:.caption}
 
 ## Root
 
@@ -197,7 +195,6 @@ The following code example illustrates how to specify the root object for the Di
 
 {% highlight c# %}
 
- 
 
 //Configures data source for Diagram
 
@@ -209,15 +206,14 @@ model.DataSourceSettings.Id = "Id";
 
  model.DataSourceSettings.Root = "Manager";
 
-
-
 {% endhighlight %}
 
 
 
 ![](Data-Binding_images/Data-Binding_img3.png)
 
-
+DataSource with Root
+{:.caption}
 
 ## HTML Binding
 
@@ -226,8 +222,6 @@ The Diagram provides support to form diagram from the HTML table. It is easy to 
 The following code example illustrates how to convert HTML table to diagram.
 
 {% highlight js %}
-
-
 
 <script id="htmlbinding" type="text/template" >
 
@@ -399,5 +393,5 @@ The following code example illustrates how to convert HTML table to diagram.
 
 ![](Data-Binding_images/Data-Binding_img4.png)
 
-
-
+HTML Data Binding
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping
+title: Grouping | AutoComplete | ASP.NET MVC | Syncfusion
 description: grouping
 platform: ejmvc
 control: AutoComplete
@@ -20,7 +20,8 @@ The following steps explain you how to configure Grouping for an AutoComplete te
 1. In the Controller page, define the data list with Key, Text, and Category field for grouping.
 
 
-   ~~~cs
+   ~~~ csharp
+   
 		public class CarsList
 
 		{
@@ -78,7 +79,7 @@ The following steps explain you how to configure Grouping for an AutoComplete te
 		}
 
    ~~~
-   {:.prettyprint }
+   
 
 2. In the View page, define the AutoComplete control and enable AllowGrouping property.
 
@@ -92,7 +93,7 @@ The following steps explain you how to configure Grouping for an AutoComplete te
      .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category")).AllowGrouping(true)
 
    ~~~
-  {:.prettyprint }
+  
 
 
 
@@ -101,7 +102,6 @@ The following image is the output for AutoComplete control that provides Groupin
 
 ![](Grouping_images/Grouping_img1.png)
 
-
-
-_AutoComplete popup panel with grouping_
+AutoComplete popup panel with grouping
+{:.caption}
 

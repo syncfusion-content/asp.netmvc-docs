@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns
+title: Columns | TreeGrid | ASP.NET MVC | Syncfusion
 description: columns
 platform: ejmvc
 control: TreeGrid
@@ -16,14 +16,12 @@ The TreeGrid column displays the information from a bounded data source and it
 You can change the width of the column in TreeGrid to show the entire text of the column by resizing the column. The following code example shows you how to enable the Column Resize feature at Gantt initialize.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
- @(Html.EJ().TreeGrid("TreeGridContainer")    
+@(Html.EJ().TreeGrid("TreeGridContainer")                              
 
-       //...                               
-
-       .AllowColumnResize(true)
+.AllowColumnResize(true)
 
 }
 
@@ -38,369 +36,337 @@ Column Template is used to customize the column’s look and feel based on requi
 The following code example shows you how to display the icon in the TreeGrid column.
 
 
-
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 public partial class TreeGridController : Controller
 
 {
 
-        //
+	// GET: /TreeGridColumnTemplate/
 
-        // GET: /TreeGridColumnTemplate/
+	public ActionResult TreeGridColumnTemplate()
 
+	{
 
+		var data=this.GetColumnTemplateDataSource();
 
-        public ActionResult TreeGridColumnTemplate()
+		ViewBag.datasource = data;
 
-        {
+		return View();
 
-            var data=this.GetColumnTemplateDataSource();
+	}
 
-            ViewBag.datasource = data;
+	private List<ColumnTemplate> GetColumnTemplateDataSource()
 
-            return View();
+	{
 
-        }
+		List<ColumnTemplate> TreeGridCollection = new List<ColumnTemplate>();
 
 
 
+		ColumnTemplate ParentRecord = null;
 
 
-        private List<ColumnTemplate> GetColumnTemplateDataSource()
 
-        {
+		ParentRecord = new ColumnTemplate()
 
-            List<ColumnTemplate> TreeGridCollection = new List<ColumnTemplate>();
+		{
 
+			Name = "JS",
 
+			DateModified = "06/26/2014",
 
-            ColumnTemplate ParentRecord = null;
+			Type = "File Folder",
 
+			DateCreated = "06/16/2014",
 
+			Children = new List<ColumnTemplate>()
 
-            ParentRecord = new ColumnTemplate()
+		};
 
-            {
+		ColumnTemplate ParentRecord1 = new ColumnTemplate()
 
-                Name = "JS",
+		{
 
-                DateModified = "06/26/2014",
+			Name = "sample",
 
-                Type = "File Folder",
+			DateModified = "06/26/2014",
 
-                DateCreated = "06/16/2014",
+			Type = "File Folder",
 
-                Children = new List<ColumnTemplate>()
+			DateCreated = "06/16/2014",
 
-            };
+			Children = new List<ColumnTemplate>()
 
+		};
 
+		ColumnTemplate ParentRecord2 = new ColumnTemplate()
 
-            ColumnTemplate ParentRecord1 = new ColumnTemplate()
+		{
 
-            {
+			Name = "web",
 
-                Name = "sample",
+			DateModified = "06/26/2014",
 
-                DateModified = "06/26/2014",
+			Type = "File Folder",
 
-                Type = "File Folder",
+			DateCreated = "06/16/2014",
 
-                DateCreated = "06/16/2014",
+			Children = new List<ColumnTemplate>()
 
-                Children = new List<ColumnTemplate>()
+		};
 
-            };
+		ColumnTemplate ParentRecord3 = new ColumnTemplate()
 
+		{
 
+			Name = "treegrid",
 
-            ColumnTemplate ParentRecord2 = new ColumnTemplate()
+			DateModified = "06/26/2014",
 
-            {
+			Type = "File Folder",
 
-                Name = "web",
+			DateCreated = "06/16/2014",
 
-                DateModified = "06/26/2014",
+			Children = new List<ColumnTemplate>()
 
-                Type = "File Folder",
+		};
 
-                DateCreated = "06/16/2014",
+		ColumnTemplate ChildRecord1 = new ColumnTemplate()
 
-                Children = new List<ColumnTemplate>()
+		{
 
-            };
+			Name = "treegrid.html",
 
+			DateModified = "06/26/2014",
 
+			Type = "HTML document",
 
-            ColumnTemplate ParentRecord3 = new ColumnTemplate()
+			DateCreated = "06/16/2014",
 
-            {
+		};
 
-                Name = "treegrid",
+		ColumnTemplate ChildRecord2 = new ColumnTemplate()
 
-                DateModified = "06/26/2014",
+		{
 
-                Type = "File Folder",
+			Name = "editing.html",
 
-                DateCreated = "06/16/2014",
+			DateModified = "06/26/2014",
 
-                Children = new List<ColumnTemplate>()
+			Type = "HTML document",
 
-            };
+			DateCreated = "06/16/2014",
 
-            ColumnTemplate ChildRecord1 = new ColumnTemplate()
+		};
 
-            {
+		ColumnTemplate ChildRecord3 = new ColumnTemplate()
 
-                Name = "treegrid.html",
+		{
 
-                DateModified = "06/26/2014",
+			Name = "sorting.html",
 
-                Type = "HTML document",
+			DateModified = "06/26/2014",
 
-                DateCreated = "06/16/2014",
+			Type = "HTML document",
 
-            };
+			DateCreated = "06/16/2014",
 
-            ColumnTemplate ChildRecord2 = new ColumnTemplate()
+		};
 
-            {
+		ParentRecord3.Children.Add(ChildRecord1);
 
-                Name = "editing.html",
+		ParentRecord3.Children.Add(ChildRecord2);
 
-                DateModified = "06/26/2014",
+		ParentRecord3.Children.Add(ChildRecord3);
 
-                Type = "HTML document",
+		ParentRecord2.Children.Add(ParentRecord3);
 
-                DateCreated = "06/16/2014",
+		ParentRecord1.Children.Add(ParentRecord2);
 
-            };
+		ParentRecord.Children.Add(ParentRecord1);
 
-            ColumnTemplate ChildRecord3 = new ColumnTemplate()
+		TreeGridCollection.Add(ParentRecord);
 
-            {
+		return TreeGridCollection;
 
-                Name = "sorting.html",
+	}
 
-                DateModified = "06/26/2014",
+	public class ColumnTemplate
 
-                Type = "HTML document",
+	{
 
-                DateCreated = "06/16/2014",
+		public string Name
 
-            };
+		{
 
+			get;
 
+			set;
 
-            ParentRecord3.Children.Add(ChildRecord1);
+		}
 
-            ParentRecord3.Children.Add(ChildRecord2);
+		public string DateModified
 
-            ParentRecord3.Children.Add(ChildRecord3);
+		{
 
+			get;
 
+			set;
 
-            ParentRecord2.Children.Add(ParentRecord3);
+		}
 
-            ParentRecord1.Children.Add(ParentRecord2);
+		public string Type
 
-            ParentRecord.Children.Add(ParentRecord1);
+		{
 
+			get;
 
+			set;
 
-            TreeGridCollection.Add(ParentRecord);
+		}
 
-            return TreeGridCollection;
+		public string DateCreated
 
-        }
+		{
 
+			get;
 
+			set;
 
+		}
 
+		public List<ColumnTemplate> Children
 
-        public class ColumnTemplate
+		{
 
-        {
+			get;
 
-            public string Name
+			set;
 
-            {
+		}
 
-                get;
 
-                set;
 
-            }
-
-
-
-            public string DateModified
-
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-            public string Type
-
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-            public string DateCreated
-
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-            public List<ColumnTemplate> Children
-
-            {
-
-                get;
-
-                set;
-
-            }
-
-
-
-        }
+	}
 }
 {% endhighlight  %}
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-      <script type="text/x-jsrender" id="customColumnTemplate">     
+<script type="text/x-jsrender" id="customColumnTemplate">     
 
-     <div  style='height:20px;' unselectable='on'>{{if hasChildRecords}}<div class='intend' style='height:1px; float:left; width:{{:level*20}}px; display:inline-block;'></div>
+<div  style='height:20px;' unselectable='on'>{{if hasChildRecords}}<div class='intend' style='height:1px; float:left; width:{{:level*20}}px; display:inline-block;'></div>
 
-       {{else !hasChildRecords}}
+	{{else !hasChildRecords}}
 
-       <div class='intend' style='height:1px; float:left; width:{{:(level)*20}}px; display:inline-block;'></div>
+	<div class='intend' style='height:1px; float:left; width:{{:(level)*20}}px; display:inline-block;'></div>
 
-       {{/if}}                         
+	{{/if}}                         
 
-       <div class='{{if expanded}}e-treegridexpand {{else hasChildRecords}}e-treegridcollapse {{/if}} {{if level===4}}e-doc{{/if}}' style='height:20px;width:30px;margin:auto;float:left;margin-left:10px;
+	<div class='{{if expanded}}e-treegridexpand {{else hasChildRecords}}e-treegridcollapse {{/if}} {{if level===4}}e-doc{{/if}}' style='height:20px;width:30px;margin:auto;float:left;margin-left:10px;
 
-       style='float: left;display:inline-block; unselectable='on'></div>
+	style='float: left;display:inline-block; unselectable='on'></div>
 
-       <div class='e-cell' style='display:inline-block;width:100%' unselectable='on'>{{:#data['Name']}}</div>
+	<div class='e-cell' style='display:inline-block;width:100%' unselectable='on'>{{:#data['Name']}}</div>
 
-     </div>
+</div>
 
-    </script>   
+</script>   
 
+<style>
 
-{% endhighlight  %}
+	.e-treegrid .e-treegridexpand 
+	{
 
-{% highlight css %}
-   <style>
+		background-image: url(../../images/treegrid/folder-open.png);
 
-        .e-treegrid .e-treegridexpand {
+		background-repeat: no-repeat;
 
-            background-image: url(../../images/treegrid/folder-open.png);
+		width: 14px;
 
-            background-repeat: no-repeat;
+		height: 14px;
 
-            width: 14px;
+	}
 
-            height: 14px;
+	.e-treegrid .e-treegridcollapse 
+	{
 
-        }
+		background-image: url(../../images/treegrid/Folder.png);
 
-        .e-treegrid .e-treegridcollapse {
+		background-repeat: no-repeat;
 
-            background-image: url(../../images/treegrid/Folder.png);
+		width: 14px;
 
-            background-repeat: no-repeat;
+		height: 14px;
 
-            width: 14px;
+	}
 
-            height: 14px;
+	.e-treegrid .e-doc 
+	{
 
-        }
+		background-image: url(../../images/treegrid/Document.png);
 
-        .e-treegrid .e-doc {
+		background-repeat: no-repeat;
 
-            background-image: url(../../images/treegrid/Document.png);
+		width: 14px;
 
-            background-repeat: no-repeat;
+		height: 14px;
 
-            width: 14px;
-
-            height: 14px;
-
-        }
-
-
-
-        .e-treegrid .e-treegridexpand:before {
-
-            content: none;
-
-        }
+	}
 
 
 
-        .e-treegrid .e-treegridcollapse:before {
+	.e-treegrid .e-treegridexpand:before 
+	{
 
-            content: none;
+		content: none;
 
-        }
+	}
 
-    </style> 
 
-{% endhighlight  %}
 
-{% highlight js %}
+	.e-treegrid .e-treegridcollapse:before 
+	{
 
-       @(Html.EJ().TreeGrid("TreeGridContainer")      
+		content: none;
 
-       .Columns(co=>
+	}
 
-           {
+</style> 
 
-               co.Field("Name").headerText("Name").IsTemplateColumn(true).TemplateID("customColumnTemplate").Add();
 
-               co.Field("Type").headerText("Type").Add();
 
-               co.Field("DateCreated").headerText("Date Created").Add();
+@(Html.EJ().TreeGrid("TreeGridContainer")      
 
-               co.Field("DateModified").headerText("Date Modified").Add();
+.Columns(co=>
 
-           }
+   {
 
-       )
+	   co.Field("Name").headerText("Name").IsTemplateColumn(true).TemplateID("customColumnTemplate").Add();
 
-       .ChildMapping("Children")
+	   co.Field("Type").headerText("Type").Add();
 
-       .Datasource(ViewBag.datasource)
+	   co.Field("DateCreated").headerText("Date Created").Add();
 
-       )
+	   co.Field("DateModified").headerText("Date Modified").Add();
 
-    }   
+   }
+
+)
+
+.ChildMapping("Children")
+
+.Datasource(ViewBag.datasource)
+
+)
+
+}   
 
 {% endhighlight %}
-
+{% endtabs %}  
 The following screenshot displays the customized column in TreeGrid control.
 
 ![](Columns_images/Columns_img1.png)
@@ -428,37 +394,33 @@ Filtering type can be defined by FilterEditType property in each column object.
 * Datetimepicker
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("treegrid1")
 
-        // ...
+	.AllowFiltering(true)
 
-        .AllowFiltering(true)
+   .Columns(co =>
 
-       .Columns(co =>
+	   {
 
-           {
+		   co.Field("TaskId").headerText("Task Id").EditType(TreeGridEditingType.Numeric).AllowFiltering(false).Width(45).Add();
 
-               co.Field("TaskId").headerText("Task Id").EditType(TreeGridEditingType.Numeric).AllowFiltering(false).Width(45).Add();
+		   co.Field("TaskName").headerText("Task Name").EditType(TreeGridEditingType.String).FilterEditType(TreeGridFilterEditType.String).Add();
 
-               co.Field("TaskName").headerText("Task Name").EditType(TreeGridEditingType.String).FilterEditType(TreeGridFilterEditType.String).Add();
+		   co.Field("StartDate").headerText("Start Date").EditType(TreeGridEditingType.Datepicker).FilterEditType(TreeGridFilterEditType.Datepicker).Add();
 
-               co.Field("StartDate").headerText("Start Date").EditType(TreeGridEditingType.Datepicker).FilterEditType(TreeGridFilterEditType.Datepicker).Add();
+		   co.Field("EndDate").headerText("End Date").EditType(TreeGridEditingType.Datepicker).FilterEditType(TreeGridFilterEditType.Datepicker).Add();
 
-               co.Field("EndDate").headerText("End Date").EditType(TreeGridEditingType.Datepicker).FilterEditType(TreeGridFilterEditType.Datepicker).Add();
+		   co.Field("Duration").headerText("Duration").EditType(TreeGridEditingType.Numeric).FilterEditType(TreeGridFilterEditType.Numeric).Add();
 
-               co.Field("Duration").headerText("Duration").EditType(TreeGridEditingType.Numeric).FilterEditType(TreeGridFilterEditType.Numeric).Add();
+		   co.Field("Progress").headerText("Progress").EditType(TreeGridEditingType.Numeric).FilterEditType(TreeGridFilterEditType.Numeric).Add();
 
-               co.Field("Progress").headerText("Progress").EditType(TreeGridEditingType.Numeric).FilterEditType(TreeGridFilterEditType.Numeric).Add();
+	   }
 
-           }
+   )
 
-       )	 // ...
-
- .Render())
-
-
+.Render())
 
 {% endhighlight %}
 
@@ -467,7 +429,6 @@ Filtering type can be defined by FilterEditType property in each column object.
 The following screenshot displays the column filtering in TreeGrid control.
 
 ![](Columns_images/Columns_img2.png)
-
 
 
 ## Column Chooser
@@ -490,11 +451,9 @@ The Sort Ascending and Sort Descending options are enabled or disabled by using 
 
 You can also disable the visibility of the particular column in column collection manually by setting the Visible property to false.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("treegrid1")
-
- // ...
 
     .ShowColumnChooser(true)
 
@@ -505,18 +464,11 @@ You can also disable the visibility of the particular column in column collectio
     .Columns(co=>
 
      {
-
-       // ...
-
-          co.Field("duration").HeaderText("Duration").Visible(false)
-
-       // ...
+         co.Field("duration").HeaderText("Duration").Visible(false)
 
      }
 
     )
-
- // ...
 
 )
 

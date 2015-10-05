@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Key-Features
+title: Key Features | FileExplorer | ASP.NET MVC | Syncfusion
 description: key features
 platform: ejmvc
 control: FileExplorer

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scales
+title: Scales | OLAPGauge | ASP.NET MVC | Syncfusion
 description: scales
 platform: ejmvc
 control: OLAPGauge
@@ -17,7 +17,7 @@ Radius of the Scale Bar is changed with the help of scaleRadius property and in 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 

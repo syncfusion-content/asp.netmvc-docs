@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | BulletGraph | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: BulletGraph	
@@ -14,63 +14,65 @@ Bullet Graph supports binding JSON data from a remote server or data created in 
 ## Local Data
 
 Data available in client-side (local data) can be bound with Bullet Graph using Fields property. This property provides option to specify data source, fields representing progress measure bar value, comparative measure value and category value. 
-{% highlight c# %}
 
-    public class BulletData
+{% highlight C# %}
 
-    {
+public class BulletData
 
-        public double BulletValue
+{
 
-        { get; set; }
+	public double BulletValue
 
-        public double ComparisonValue
+	{ get; set; }
 
-        { get; set; }
+	public double ComparisonValue
 
-        public string Category
+	{ get; set; }
 
-        { get; set; }
+	public string Category
 
-    }
+	{ get; set; }
+
+}
 
 
+List<BulletData> data = new List<BulletData>();
 
-            List<BulletData> data = new List<BulletData>();
+data.Add(new BulletData() { BulletValue=9.5, ComparisonValue=7.5, Category="2001"  });
 
-            data.Add(new BulletData() { BulletValue=9.5, ComparisonValue=7.5, Category="2001"  });
+data.Add(new BulletData() { BulletValue = 9.5, ComparisonValue = 5, Category = "2002" });
 
-            data.Add(new BulletData() { BulletValue = 9.5, ComparisonValue = 5, Category = "2002" });
-
-            ViewBag.DataSource = data;
+ViewBag.DataSource = data;
 			
 {% endhighlight %}
 
-{% highlight javascript %}
+{% highlight CSHTML %}
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60).QuantitativeScaleSettings( qs=>
 
-                                            qs.Location( loc=> loc.x(50).y(20))
+	qs.Location( loc=> loc.x(50).y(20))
 
-                                            .Interval(1))
+	.Interval(1))
 
-                                      .Height(120)
+	.Height(120)
 
-                                      .Fields(field=>field.Category("Category").ComparativeMeasure("ComparisonValue")
+	.Fields(field=>field.Category("Category").ComparativeMeasure("ComparisonValue")
 
-                                         .FeatureMeasure("BulletValue").Datasource(ViewBag.DataSource))
+	.FeatureMeasure("BulletValue").Datasource(ViewBag.DataSource))
 
 
 
-                                      )
+	)
 
 
 {% endhighlight %}
+
 The following screenshot displays Bullet Graph with local data generated using Javascript
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
+Bullet Graph bounded to JSON data
+{:.caption}
 
 ## Remote Data
 
@@ -78,77 +80,77 @@ Bullet Graph provides option to bind data from a remote server using ejDataManag
 
 {% highlight javascript %}
 
-    @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60)
+@(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60)
 
-                                      .QuantitativeScaleSettings(qs=>
+	.QuantitativeScaleSettings(qs=>
 
-                                          qs.Location(loc=>loc.x(50).y(20))
+	qs.Location(loc=>loc.x(50).y(20))
 
-                                          .Minimum(5)
+	.Minimum(5)
 
-                                          .Maximum(45)
+	.Maximum(45)
 
-                                          .Interval(10))
+	.Interval(10))
 
-                                      .QualitativeRanges( qr=>
+	.QualitativeRanges( qr=>
 
-                                          {
+	{
 
-                                              qr.RangeEnd(25).Add();
+	qr.RangeEnd(25).Add();
 
-                                              qr.RangeEnd(37).Add();
+	qr.RangeEnd(37).Add();
 
-                                              qr.RangeEnd(45).Add();
+	qr.RangeEnd(45).Add();
 
-                                          })
+	})
 
-                                       .Fields(fields=>
+	.Fields(fields=>
 
-                                              fields.Category("ProductID")
+	fields.Category("ProductID")
 
-                                              .ComparativeMeasure("Quantity")
+	.ComparativeMeasure("Quantity")
 
-                                              .FeatureMeasure("UnitPrice"))
+	.FeatureMeasure("UnitPrice"))
 
-    )
-
-
-
-    <script type="text/javascript">
-
-        //Creating data manager instance
-
-        var dataManger = new ej.DataManager({
-
-            url: "http://mvc.syncfusion.com/Services/Northwnd.svc/"
-
-        });
+	)
 
 
 
-        // Query creation
+<script type="text/javascript">
 
-        var query = ej.Query().from("Order_Details").take(3).where("UnitPrice", ej.FilterOperators.greaterThan, 18, false)
+	//Creating data manager instance
 
-            .where("UnitPrice", ej.FilterOperators.lessThanOrEqual, 40, false)
+	var dataManger = new ej.DataManager({
 
-            .where("Quantity", ej.FilterOperators.greaterThan, 5, false)
+		url: "http://mvc.syncfusion.com/Services/Northwnd.svc/"
 
-            .where("Quantity", ej.FilterOperators.lessThanOrEqual, 45, false);
+	});
 
-        dataManger.executeQuery(query).done(function (e) {
 
-            $("#Bullets").ejBulletGraph("option", "fields", {
 
-                dataSource: dataManger,
+	// Query creation
 
-                query: query,
+	var query = ej.Query().from("Order_Details").take(3).where("UnitPrice", ej.FilterOperators.greaterThan, 18, false)
 
-            });
+		.where("UnitPrice", ej.FilterOperators.lessThanOrEqual, 40, false)
 
-        });
+		.where("Quantity", ej.FilterOperators.greaterThan, 5, false)
 
-        </script>
+		.where("Quantity", ej.FilterOperators.lessThanOrEqual, 45, false);
+
+	dataManger.executeQuery(query).done(function (e) {
+
+		$("#Bullets").ejBulletGraph("option", "fields", {
+
+			dataSource: dataManger,
+
+			query: query,
+
+		});
+
+	});
+
+</script>
 
 {% endhighlight %}
 
@@ -156,5 +158,5 @@ The following screenshot displays a Bullet Graph bounded with data from a remote
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-
-
+Bullet Graph bounded to data from server
+{:.caption}

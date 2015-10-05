@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ajax-settings
+title: Ajax settings | Accordion  | ASP.NET MVC | Syncfusion
 description: ajax settings
 platform: ejmvc
 control: Accordion 
@@ -15,12 +15,9 @@ Accordion widgets allow you to load content for the Accordion panel using Ajax. 
 
 The following code explains about loading accordion content using AjaxUrl property.
 
-{% highlight html %}
-
+{% highlight CSHTML %}
 
 // In the View page, render Accordion with corresponding data and set AjaxUrl property for the corresponding headers.
-
-
 
 <div style="width: 800px; float:left;">
 

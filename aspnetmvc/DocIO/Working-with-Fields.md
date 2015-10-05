@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Fields
+title: Working with Fields | DocIO | ASP.NET MVC | Syncfusion
 description: working with fields
 platform: ejmvc
 control: DocIO
@@ -13,7 +13,8 @@ Fields are special elements of a Word document. To insert a field, click Insert 
 
 ![](Working-with-Fields_images/Working-with-Fields_img1.png)
 
-
+Field Dialog Box in Microsoft Word
+{:.caption}
 
 Fields are widely used for Mail Merge. In a Word document, almost every field consists of the field start, marker text that specifies the type of the field. Fields are preserved with field separator marker, field value, and field end marker.
 
@@ -23,8 +24,8 @@ WField class represents a field in a Word document. There are many types of fiel
 
 ![](Working-with-Fields_images/Working-with-Fields_img2.png)
 
-
-
+WField Class Hierarchy
+{:.caption}
 
 
 Gets or specifies the type of a field by using the FieldType property. WField class also has the TextFormat property that specifies the text format for the field. There are four different types of text formats for fields.
@@ -55,9 +56,8 @@ WField
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _75_: _Public Constructors_
 
 <table>
 <tr>
@@ -71,9 +71,8 @@ Initializes a new instance of the WField class. </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _76_: _Public Properties_
 
 <table>
 <tr>
@@ -102,8 +101,9 @@ TextFormat</td><td>
 Gets or sets the regular text format information.  </td></tr>
 </table>
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 IWSection section = doc.AddSection();
 IWParagraph paragraph = section.AddParagraph();
@@ -112,25 +112,27 @@ section.PageSetup.DifferentFirstPage = true;
 section.PageSetup.DifferentOddAndEvenPages = true;paragraph = new WParagraph(doc);
 paragraph.AppendText("[ FIRST PAGE Header ]");
 section.HeadersFooters.FirstPageHeader.Paragraphs.Add(paragraph);paragraph = new WParagraph(doc);
+
 //Appends field.paragraph.AppendField("Field's Name", FieldType.FieldMergeField);section.HeadersFooters.FirstPageHeader.Paragraphs.Add(paragraph);
 paragraph = new WParagraph(doc);paragraph.AppendText("[ FIRST PAGE Footer ]\r");
 section.HeadersFooters.FirstPageFooter.Paragraphs.Add(paragraph);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim section As IWSection = doc.AddSection()
 Dim paragraph As IWParagraph = section.AddParagraph()paragraph.AppendText("Testing writing Merge Fields into Header")
 section.PageSetup.DifferentFirstPage = Truesection.PageSetup.DifferentOddAndEvenPages = Trueparagraph = New WParagraph(doc)
 paragraph.AppendText("[ FIRST PAGE Header ]")
 section.HeadersFooters.FirstPageHeader.Paragraphs.Add(paragraph)paragraph = New WParagraph(doc)
+
 'Appends field.paragraph.AppendField("Field's Name", FieldType.FieldMergeField)
 section.HeadersFooters.FirstPageHeader.Paragraphs.Add(paragraph)paragraph = New WParagraph(doc)paragraph.AppendText("[ FIRST PAGE Footer ]" and Constants.VB.NETCr)
 section.HeadersFooters.FirstPageFooter.Paragraphs.Add(paragraph)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Merge Field
 
@@ -160,9 +162,8 @@ WMergeField
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _77_: _Public Constructors_
 
 <table>
 <tr>
@@ -176,9 +177,9 @@ Initializes a new instance of the WMergeField class. </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _78_: _Public Properties_
+
 
 <table>
 <tr>
@@ -217,7 +218,9 @@ Gets or sets the text before merge field.  </td></tr>
 
 The following code example illustrates how to add a merge field to the header and footer of a document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWSection section = doc.AddSection();
 IWParagraph paragraph = section.AddParagraph();
@@ -235,7 +238,7 @@ section.HeadersFooters.FirstPageFooter.Paragraphs.Add(paragraph);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim section As IWSection = doc.AddSection()
 Dim paragraph As IWParagraph = section.AddParagraph()
@@ -249,7 +252,7 @@ paragraph.AppendText("[ FIRST PAGE Footer ]" and Constants.VB.NETCr)
 section.HeadersFooters.FirstPageFooter.Paragraphs.Add(paragraph)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Embed Field
 
@@ -273,9 +276,9 @@ WEmbedField
 
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _79_: _Public Properties_
+
 
 <table>
 <tr>
@@ -301,9 +304,9 @@ You can use the NumberFormat property to set the numbering format for the fields
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _80_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -317,9 +320,8 @@ Initializes a new instance of the WSeqField class.</td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _81_: _Public Properties_
 
 <table>
 <tr>
@@ -344,8 +346,9 @@ NumberFormat</td><td>
 Gets or sets the type of caption numbering. It includes the following options.* Number* Roman* Alphabetic</td></tr>
 </table>
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 WSeqField field = ( WSeqField )paragraph.AppendField("Sequence Field", FieldType.FieldSequence );
 field.CaptionName = "Sequence Field";
@@ -353,14 +356,14 @@ field.NumberFormat = CaptionNumberingFormat.Alphabetic;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim field As WSeqField = CType(paragraph.AppendField("Sequence Field", FieldType.FieldSequence), WSeqField)
 field.CaptionName = "Sequence Field"
 field.NumberFormat = CaptionNumberingFormat.Alphabetic
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Document Variable
 
@@ -378,8 +381,12 @@ You can refer these fields in other parts of the document easily. For example, y
 
 ![](Working-with-Fields_images/Working-with-Fields_img4.png)
 
+Document Variable Field
+{:.caption}
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 WordDocument doc = new WordDocument();
 doc.Open("Sample.doc");
@@ -393,7 +400,7 @@ doc.Save("SampleModified.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As WordDocument = New WordDocument()
 doc.Open("Sample.doc")
@@ -406,7 +413,7 @@ Console.WriteLine("Varaible Value:" + document1.Variables.GetValueByIndex(0))
 doc.Save("SampleModified.doc")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Updating Fields
 
@@ -566,7 +573,9 @@ The following are the known limitations:
 
 The following code example illustrates how to update the fields present in a document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 
 
@@ -585,7 +594,7 @@ document.Save("Sample.doc", FormatType.Doc);
 {% endhighlight %}
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Opens a Word document.
 
@@ -600,7 +609,7 @@ document.UpdateDocumentFields()
 document.Save("Sample.doc", FormatType.Doc)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Cross Reference
 
@@ -614,7 +623,8 @@ To add a Cross-Reference field in Microsoft Word, click the Insert menu and then
 
 ![](Working-with-Fields_images/Working-with-Fields_img6.png)
 
-
+Cross-reference field diaglogue box in MSWord
+{:.caption}
 
 You can use the following reference options to insert bookmark cross-reference field:
 
@@ -629,41 +639,71 @@ You can use the following reference options to insert bookmark cross-reference f
 
 The following code example illustrates how to append cross reference in the document.
 
-{% highlight c# %}
+{% tabs %}
 
-//Creates a new Word document instanceWordDocument doc = new WordDocument();
-//Add a new Section in the Word documentIWSection section = doc.AddSection();
-//Add new Paragraph in the Word documentIWParagraph paragraph = section.AddParagraph();
-//Add Text, Bookmark Start and End in the Paragraphparagraph.AppendText("Bookmark starts here ")
-;paragraph.AppendBookmarkStart("Test");
+{% highlight C# %}
+
+//Creates a new Word document instance
+WordDocument doc = new WordDocument();
+
+//Add a new Section in the Word document
+IWSection section = doc.AddSection();
+
+//Add new Paragraph in the Word document
+IWParagraph paragraph = section.AddParagraph();
+
+//Add Text, Bookmark Start and End in the Paragraph
+paragraph.AppendText("Bookmark starts here ");
+paragraph.AppendBookmarkStart("Test");
 paragraph.AppendText("Bookmark Text");
 paragraph.AppendBookmarkEnd("Test");
 paragraph.AppendText("Bookmark ends here ");
 section.AddParagraph();paragraph = section.AddParagraph()as WParagraph;
+
 //Get the collections of Bookmark starts in the word documentList<Entity> items = doc.GetCrossReferenceItems(ReferenceType.Bookmark);
 paragraph.AppendText("Bookmark Cross Reference starts here ");
-//Append The Cross Reference for Bookmark “Test” with ContentText as ReferenceKindparagraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
-//Update Document Fieldsdoc.UpdateDocumentFields();//Saves a documentdoc.Save("BookmarkCrossReference.docx");
+
+//Append The Cross Reference for Bookmark “Test” with ContentText as ReferenceKind
+paragraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
+
+//Update Document Fields
+doc.UpdateDocumentFields();
+
+//Saves a documentdoc.Save("BookmarkCrossReference.docx");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
-'Creates a new Word document instanceDim doc As New WordDocument()
-' Add a new Section in the Word documentDim section As IWSection = doc.AddSection()
-' Add new Paragraph in the Word documentDim paragraph As IWParagraph = section.AddParagraph()
-'Add Text, Bookmark Start and End in the Paragraphparagraph.AppendText("Bookmark starts here ");
+'Creates a new Word document instance
+Dim doc As New WordDocument()
+
+' Add a new Section in the Word document
+Dim section As IWSection = doc.AddSection()
+
+' Add new Paragraph in the Word document
+Dim paragraph As IWParagraph = section.AddParagraph()
+
+'Add Text, Bookmark Start and End in the Paragraph
+paragraph.AppendText("Bookmark starts here ");
 paragraph.AppendBookmarkStart("Test")
 paragraph.AppendText("Bookmark Text")
 paragraph.AppendBookmarkEnd("Test")
 paragraph.AppendText("Bookmark ends here ")
 section.AddParagraph();paragraph = section.AddParagraph()as WParagraph
-'Get the collections of Bookmark starts in the word documentDim items As List<Entity> = document.GetCrossReferenceItems(ReferenceType.Bookmark);
+
+'Get the collections of Bookmark starts in the word document
+Dim items As List<Entity> = document.GetCrossReferenceItems(ReferenceType.Bookmark);
 paragraph.AppendText("Bookmark Cross Reference starts here ")
-'Append The Cross Reference for Bookmark “Test” with ContentText as ReferenceKindparagraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
-'Update Document Fieldsdoc.UpdateDocumentFields()
-'Saves a documentdoc.Save("BookmarkCrossReference.docx")
+
+'Append The Cross Reference for Bookmark “Test” with ContentText as ReferenceKind
+paragraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
+'Update Document Fields
+doc.UpdateDocumentFields()
+
+'Saves a document
+doc.Save("BookmarkCrossReference.docx")
 
 {% endhighlight %}
 
-
+{% endtabs %} 

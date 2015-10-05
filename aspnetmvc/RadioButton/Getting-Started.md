@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | RadioButton | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: RadioButton
@@ -18,7 +18,7 @@ ASP.NET MVC RadioButton provides support to display the RadioButton within your 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
 
-## Create your QuizApp
+### Create your QuizApp
 
 Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select a single option from the QuizApp. You can create the RadioButton widget using the following steps.
 
@@ -28,193 +28,191 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div class="frame">
 
-        <div>
+	<div>
 
-            <div >
+		<div >
 
-                <br />
+			<br />
 
-               1. What is the Expansion for MVC<br />
+		   1. What is the Expansion for MVC<br />
 
 
 
-                <table>
+			<table>
 
-                    <tr>
+				<tr>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio1").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)<!--Creates a small Radio Button-->
+						@Html.EJ().RadioButton("Radio1").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)<!--Creates a small Radio Button-->
 
-                            <label for="Radio1" class="clslab">
+						<label for="Radio1" class="clslab">
 
-                                Model View Controller
+							Model View Controller
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td  >
+					<td  >
 
-                            @Html.EJ().RadioButton("Radio2").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio2").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)
 
-                            <label for="Radio2" class="clslab">
+						<label for="Radio2" class="clslab">
 
-                                Model Virtual Container
+							Model Virtual Container
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio3").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio3").Name("rad1").Size(RadioButtonSize.Small).Checked(false).Enabled(true)
 
-                            <label for="Radio3" class="clslab">
+						<label for="Radio3" class="clslab">
 
-                                Model Visual Controller
+							Model Visual Controller
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                    </tr>
+				</tr>
 
-                </table>
+			</table>
 
-                <br />
+			<br />
 
-                <br />
+			<br />
 
-               2.What is the Expansion for USB<br />
+		   2.What is the Expansion for USB<br />
 
 
 
-                <table>
+			<table>
 
-                    <tr>
+				<tr>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio4").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)<!--Creates a Medium size Radio Button-->
+						@Html.EJ().RadioButton("Radio4").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)<!--Creates a Medium size Radio Button-->
 
-                            <label for="Radio4" class="clslab">
+						<label for="Radio4" class="clslab">
 
-                                Universal Serial Bus
+							Universal Serial Bus
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio5").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio5").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
 
-                            <label for="Radio5" class="clslab">
+						<label for="Radio5" class="clslab">
 
-                                Universal Serial Buffer
+							Universal Serial Buffer
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td>
+					<td>
 
-                            @Html.EJ().RadioButton("Radio6").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio6").Name("rad2").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
 
-                            <label for="Radio6" class="clslab">
+						<label for="Radio6" class="clslab">
 
-                                Universal Serialized Buffer
+							Universal Serialized Buffer
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                    </tr>
+				</tr>
 
-                </table>
+			</table>
 
-                <br/>
+			<br/>
 
-                <br />
+			<br />
 
-                3.What is the Expansion for JS<br />
+			3.What is the Expansion for JS<br />
 
 
 
-                <table>
+			<table>
 
-                    <tr>
+				<tr>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio7").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio7").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
 
-                            <label for="Radio7" class="clslab">
+						<label for="Radio7" class="clslab">
 
-                                Jquery Script
+							Jquery Script
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td >
+					<td >
 
-                            @Html.EJ().RadioButton("Radio8").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio8").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
 
-                            <label for="Radio8" class="clslab">
+						<label for="Radio8" class="clslab">
 
-                                Java Script
+							Java Script
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                        <td>
+					<td>
 
 
 
-                            @Html.EJ().RadioButton("Radio9").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
+						@Html.EJ().RadioButton("Radio9").Name("rad3").Size(RadioButtonSize.Medium).Checked(false).Enabled(true)
 
-                            <label for="Radio9" class="clslab">
+						<label for="Radio9" class="clslab">
 
-                                Json Script
+							Json Script
 
-                            </label>
+						</label>
 
-                        </td>
+					</td>
 
-                    </tr>
+				</tr>
 
 
 
-                </table>
+			</table>
 
-                <center>
+			<center>
 
-                    <table>
+				<table>
 
-                        @Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Large).Text("Submit").ClientSideEvents(s => s.Click("button"))
+					@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Large).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-                </center> 
+			</center> 
 
-                      </table> 
+				  </table> 
 
 
 
-                <br />
+			<br />
 
-            </div>
+		</div>
 
-        </div>
+	</div>
 
-    </div>
-
-
+</div>
 
 {% endhighlight %}
 
@@ -225,8 +223,6 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 {% highlight js %}
 
 <script type="text/javascript">
-
-
 
     function button()
 
@@ -248,9 +244,7 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 
     }
 
-    </script>
-
-
+</script>
 
 {% endhighlight %}
 
@@ -262,13 +256,14 @@ Add the following code example in the index page.
 
 <style>
 
-        .frame {
+	.frame 
+	{
 
-            width: 80%;
+		width: 80%;
 
-        }
+	}
 
-    </style>
+</style>
 
 
 
@@ -282,13 +277,13 @@ Add the following code example in the index page.
 
 
 
-## Create RegistrationApp
+### Create RegistrationApp
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div class="frame">
 
@@ -450,35 +445,31 @@ Add the following code example in the index page.
 
 
 
-{% highlight js %}
+{% highlight js%}
 
+<script type="text/javascript">
 
+	function button() 
+	{
 
- <script type="text/javascript">
+		var checkeditem = [];
 
+		var result = "";
 
+		$(".e-radiobtn:checked").each(function (index, Element) 
+		{
 
-        function button() {
+			quest = index + 1;
 
-            var checkeditem = [];
+			checkeditem.push("Question" + quest + ":" + $(this).parent().siblings().html().trim()+" ");             
 
-            var result = "";
+		});
 
-            $(".e-radiobtn:checked").each(function (index, Element) {
+		alert(checkeditem);
 
-                quest = index + 1;
+	}
 
-                checkeditem.push("Question" + quest + ":" + $(this).parent().siblings().html().trim()+" ");             
-
-            });
-
-            alert(checkeditem);
-
-        }
-
-    </script>
-
-
+</script>
 
 {% endhighlight %}
 
@@ -490,15 +481,14 @@ Add the following code example in the index page.
 
 <style>
 
-        .frame {
+	.frame 
+	{
 
-            width: 80%;
+		width: 80%;
 
-        }
+	}
 
-    </style>
-
-
+</style>
 
 {% endhighlight %}
 

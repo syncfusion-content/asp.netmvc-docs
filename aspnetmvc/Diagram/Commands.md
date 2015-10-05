@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Commands
+title: Commands | Diagram | ASP.NET MVC | Syncfusion
 description: commands
 platform: ejmvc
 control: Diagram
@@ -47,25 +47,17 @@ The node is aligned vertically to left, right, and center by using alignment com
 
 {% highlight js %}
 
-
-
-
 //Aligns left
 
 diagram.align("left");
-
-
 
 //Aligns right
 
 diagram.align("right");
 
-
-
 //Aligns center
 
 diagram.align("center");
-
 
 
 {% endhighlight %}
@@ -74,16 +66,14 @@ diagram.align("center");
 
 ![](Commands_images/Commands_img1.png)
 
-
+Vertical Alignment
+{:.caption}
 
 ##Horizontal Alignment commands
 
 The node is aligned horizontally to top, bottom, and middle by using alignment commands. The following code illustrates how to execute the horizontal alignment command.
 
 {% highlight js %}
-
-
-
 
 //Aligns top
 
@@ -98,13 +88,13 @@ diagram.align("bottom");
 diagram.align("middle");
 
 
-
 {% endhighlight %}
 
 
 ![](Commands_images/Commands_img2.png)
 
-
+Horizontal alignment
+{:.caption}
 
 ## Spacing Command
 
@@ -150,7 +140,8 @@ diagram.spaceAcross();
 
 ![](Commands_images/Commands_img3.png)
 
-
+Space Across
+{:.caption}
 
 ##spaceDown Command
 
@@ -161,11 +152,9 @@ The following code illustrate how to run spaceDowncommand.
 {% highlight js %}
 
 
-
 //space down
 
 diagram.spaceDown();
-
 
 
 {% endhighlight %}
@@ -174,7 +163,8 @@ diagram.spaceDown();
 
 ![](Commands_images/Commands_img4.png)
 
-
+Space Down
+{:.caption}
 
 ## Sizing Command
 
@@ -209,13 +199,9 @@ The following code illustrate how to run the Sizing commands.
 {% highlight js %}
 
 
-
-
-
 //same size
 
 diagram.sameSize();
-
 
 
 //same height
@@ -223,11 +209,9 @@ diagram.sameSize();
 diagram.sameHeight();
 
 
-
 //same width
 
 diagram.sameWidth();
-
 
 
 {% endhighlight %}
@@ -236,7 +220,8 @@ diagram.sameWidth();
 
 ![](Commands_images/Commands_img5.png)
 
-
+Sizing Commands
+{:.caption}
 
 ## Clipboard commands 
 
@@ -253,16 +238,11 @@ Cuts the selected elements from the Diagram to the Diagram’s clipboard.
 The following code illustrates how to run Cutcommand.
 
 
-
 {% highlight js %}
-
-
 
 //Cuts the selected nodes/connectors
 
 diagram.cut();
-
-
 
 {% endhighlight %}
 
@@ -273,16 +253,12 @@ Copies the selected elements from the Diagram to the Diagram’s clipboard.
 The following code illustrates how to run the Copycommand.
 
 
-
 {% highlight js %}
-
 
 
 //Copies the nodes/connectors
 
 diagram.copy();
-
-
 
 {% endhighlight %}
 
@@ -293,15 +269,12 @@ Pastes the Diagram’s clipboard data (nodes/connectors) into the Diagram.
 The following code illustrates how to run Paste command.
 
 
-
 {% highlight js %}
-
 
 
 //Pastes the cut/copied nodes/connectors on diagram
 
 diagram.paste();
-
 
 
 {% endhighlight %}
@@ -310,7 +283,8 @@ diagram.paste();
 
 ![](Commands_images/Commands_img6.png)
 
-
+Paste
+{:.caption}
 
 ## Grouping Commands
 
@@ -321,15 +295,11 @@ Grouping commands are used to group/ungroup the selected elements on Diagram.
 The following code illustrates how to Group the selected elements on Diagram
 
 
-
 {% highlight js %}
-
-
 
 //Groups the selected nodes/connectors
 
 diagram.group();
-
 
 
 {% endhighlight %}
@@ -340,13 +310,9 @@ The following code illustrates how to Ungroup the selected group on diagram.
 
 {% highlight js %}
 
-
-
 //Ungroups the selected group 
 
 diagram.ungroup();
-
-
 
 {% endhighlight %}
 
@@ -370,12 +336,9 @@ The following code illustrates how to execute the BringToFront command.
 
 {% highlight js %}
 
-
-
 //Brings to front
 
 diagram.bringToFront();
-
 
 
 {% endhighlight %}
@@ -384,7 +347,8 @@ diagram.bringToFront();
 
 ![](Commands_images/Commands_img7.png)
 
-
+Bring To Front
+{:.caption}
 
 ## sendToBackCommands
 
@@ -397,11 +361,9 @@ The following code illustrates how to run sendToBack command.
 {% highlight js %}
 
 
-
 //Sends back
 
 diagram.sendToBack();
-
 
 
 {% endhighlight %}
@@ -410,7 +372,8 @@ diagram.sendToBack();
 
 ![](Commands_images/Commands_img8.png)
 
-
+Send To Back
+{:.caption}
 
 ## moveForward Commands
 
@@ -423,13 +386,9 @@ The following code illustrates how to run the moveForward Command.
 {% highlight js %}
 
 
-
-
 //Moves forward
 
 diagram.moveForward();
-
-
 
 {% endhighlight %}
 
@@ -437,7 +396,8 @@ diagram.moveForward();
 
 ![](Commands_images/Commands_img9.png)
 
-
+Move Forward
+{:.caption}
 
 ## sendBackwardCommands
 
@@ -447,13 +407,9 @@ The following code illustrates how to run sendBackward command.
 
 {% highlight js %}
 
-
-
 //Sends backward
 
 diagram.sendBackward();
-
-
 
 {% endhighlight %}
 
@@ -461,7 +417,8 @@ diagram.sendBackward();
 
 ![](Commands_images/Commands_img10.png)
 
-
+Send Backward
+{:.caption}
 
 ## Zoom Commands
 
@@ -472,7 +429,6 @@ The following code illustrates how to zoom-in the Diagram.
 
 
 {% highlight js %}
-
 
 
 //ZoomIn
@@ -488,7 +444,6 @@ function ZoomIn()
  diagram.zoomTo(zoom);    
 
 }     
-
 
 
 {% endhighlight %}
@@ -562,7 +517,8 @@ The corresponding arrow keys are used to move the selected elements up, down, le
 
 ![](Commands_images/Commands_img11.png)
 
-
+Keyboard-Arrow Keys
+{:.caption}
 
 Nudge commands are particularly useful for accurate placement of Diagram elements on the Diagram as it allows you to move by 1 pixel each time.
 
@@ -653,5 +609,5 @@ Specifies the region based on page settings.</td></tr>
 
 
 ## Undo/Redo
-Refer to the Link for Undo/Redo Commands.
+Refer to the Link for [Undo/Redo Commands](/aspnetmvc/Diagram/Undo-and-Redo).
 

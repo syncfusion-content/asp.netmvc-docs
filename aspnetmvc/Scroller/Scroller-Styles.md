@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scroller-Styles
+title: Scroller Styles | Scroller | ASP.NET MVC | Syncfusion
 description: scroller styles
 platform: ejmvc
 control: Scroller
@@ -11,33 +11,33 @@ documentation: ug
 
 The Essential ASP.NET MVCScroller control allows you to customize the look and function of scrollbars. You can vary it significantly by setting the scrollbar button size, scrollbar position, height and width of the Scroller control. This section describes you the custom styles to be used when creating Scroller.
 
-## Button Size
+### Button Size
 
 In Scroller control, it allows you to customize the scroll arrows width and height. In horizontal scroller the ButtonSize customizes the top and down arrow and in vertical scroller the ButtonSize customizes the left and right arrow.
 
-## Scroller Size
+### Scroller Size
 
 The ScrollerSize property is used to customize the scrollbar width and height. It is applicable for both horizontal and vertical scroller.
 
-## Scroll Top
+### Scroll Top
 
 The ScrollerTop property is used to move the Scroller content and scrollbars in top position with the specified value. It is used for only vertical scroller.
 
-## Scroll Left
+### Scroll Left
 
 The ScrollerLeft property is used to move the Scroller content and scrollbars in left position with the specified value. It is used for only horizontal scroller.
 
-## Height
+### Height
 
 The Height property is used to set the height for Scroller outer wrapper.
 
-## Width
+### Width
 
 The width property is used to set the Width for Scroller outer wrapper.
 
 In the View page, add the Scroller helper to configure Scroller widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
@@ -78,33 +78,35 @@ In the View page, add the Scroller helper to configure Scroller widget.
 1. Configure the styles 
 
 
-   ~~~ html
+   ~~~ css
 
-		<style type="text/css">
-	
-			#innercontent {
+	<style type="text/css">
 
-			width: 400px;
+		#innercontent 
+		{
 
-			padding: 15px;
-	
-			}
+		width: 400px;
+
+		padding: 15px;
+
+		}
 
 
 
-			#scrollcontent {
+		#scrollcontent {
 
-			border: 1px solid grey;
+		border: 1px solid grey;
 
-			}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 The following screenshot displays the Scroller control with basic styles
 
 ![](Scroller-Styles_images/Scroller-Styles_img1.png)
 
-_Figure_ _5_: _Scroller control rendered with basic styles_
+Scroller control rendered with basic styles
+{:.caption}

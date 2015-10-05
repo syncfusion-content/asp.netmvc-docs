@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Stamp-and-Overlay
+title: Stamp and Overlay | PDF | ASP.NET MVC | Syncfusion
 description: stamp and overlay
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -25,9 +25,9 @@ Essential PDF provides you support to stamp over newly created document as well 
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads the document.
 
@@ -53,7 +53,7 @@ lDoc.Save("Stamp.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -80,12 +80,14 @@ g.DrawString("Imported using Essential PDF", Font, PdfPens.Red, PdfBrushes.Red, 
 lDoc.Save("Stamp.pdf")
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Adding Image Stamp in the PDF document
 
-{% highlight c# %}
 
-
+{% tabs %}
+  
+{% highlight C# %}
 
 //Loads the document.
 
@@ -111,9 +113,7 @@ lDoc.Save("Stamp.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads the document.
 
@@ -138,16 +138,17 @@ g.DrawImage(image, New PointF(0, 0), lPage.Graphics.ClientSize)
 lDoc.Save("Stamp.pdf")
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Overlay Documents
 
 Overlay documents support for importing pages from existing PDF documents as templates. This feature can be used to overlap two PDF pages one above the other.
 
 
+{% tabs %}
 
-{% highlight c# %}
 
-
+{% highlight C# %}
 
 //Creates a new document.
 
@@ -179,9 +180,7 @@ doc.Save("NewPDF.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new document.
 
@@ -212,12 +211,15 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize())
 doc.Save("NewPDF.pdf")
 
 {% endhighlight %}
+{% endtabs %}  
 
 ## Transform PDF
 
 PDF pages can be converted to PdfTemplate object if you want to create a booklet or just place a few pages onto a single page like an image. You can create the template using the following code.
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new document.
 
@@ -249,9 +251,7 @@ doc.Save("NewPDF.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new document.
 
@@ -282,7 +282,7 @@ g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize())
 doc.Save("NewPDF.pdf")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 N> This template can be scaled, rotated, placed at different coordinates, and so on._
 

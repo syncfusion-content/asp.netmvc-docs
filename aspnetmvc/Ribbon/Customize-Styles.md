@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize-Styles
+title: Customize Styles | Ribbon | ASP.NET MVC | Syncfusion
 description: customize styles    
 platform: ejmvc
 control: Ribbon
 documentation: ug
 ---
 
-## Customize Styles    
+# Customize Styles    
 
 In some scenarios, you may want to change colour or design of the _Ribbon_ control’s appearance. In that situation, you can override default styles of _Ribbon_ control by using its class names. The following are specific class names you can use to modify styles and appearance in _Ribbon_.
 

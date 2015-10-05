@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gallery
+title: Gallery | Ribbon | ASP.NET MVC | Syncfusion
 description: gallery
 platform: ejmvc
 control: Ribbon
@@ -9,7 +9,7 @@ documentation: ug
 
 # Gallery
 
-The Ribbon control has _Gallery_ support. By using the _Gallery_in Ribbon, items are displayed with good look and feel and it also enables to classify the items as groups for easy navigation.Gallery can be included in the tabgroups.
+The Ribbon control has _Gallery_ support. By using the _Gallery_ in Ribbon, items are displayed with good look and feel and it also enables to classify the items as groups for easy navigation.Gallery can be included in the tabgroups.
 
 To use the _Gallery feature_, include the following properties under tabgroups.
 
@@ -24,113 +24,114 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("defaultRibbon")
 
-     .Width("800")
+.Width("800")
 
-     .ApplicationTab(apptab =>
+.ApplicationTab(apptab =>
 
-    {
+{
 
-        apptab.Type("ApplicationMenu").ItemID("ribbonmenu");
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
-    })
+})
 
-    .RibbonTabs(tab =>
+.RibbonTabs(tab =>
 
-    {
+{
 
-        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+tab.Id("home").Text("HOME").TabGroups(tabgrp =>
 
-        {
+{
 
-            tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Columns).Content(cnt =>
+tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Columns).Content(cnt =>
 
-            {
+{
 
-                cnt.ContentGroups(cntgrp =>
+cnt.ContentGroups(cntgrp =>
 
-                {
+{
 
-                    cntgrp.Id("paste").Type(RibbonButtonType.Custom).ContentID("paste").Add();
+	cntgrp.Id("paste").Type(RibbonButtonType.Custom).ContentID("paste").Add();
 
-                }).Add();
+}).Add();
 
-            }).Add();
-
-
-
-            tabgrp.Text("Gallery").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-            {
-
-                cnt.ContentGroups(cntgrp =>
-
-                {
-
-                    cntgrp.Id("Galleryribbon").Type(RibbonButtonType.Gallery).ItemWidth(68).ItemHeight(54).Columns(2).ExpandedColumns(3)
-
-					.GalleryItems(gi =>
-
-                    {
-
-                        gi.Text("Content1").ToolTip("Content1").Add();
-
-                        gi.Text("Content2").ToolTip("Content2").Add();
-
-                        gi.Text("Content3").ToolTip("Content3").Add();
-
-                        gi.Text("Content4").ToolTip("Content4").Add();
-
-                        gi.Text("Content5").ToolTip("Content5").Add();
+}).Add();
 
 
 
-                    }).CustomGalleryItems(gleit =>
+tabgrp.Text("Gallery").AlignType(RibbonAlignType.Rows).Content(cnt =>
 
-                    {
+{
 
-                        gleit.Text("Save Selection as new quick style").ToolTip("Save").CustomItemType(CustomItemType.Button).Add();
+cnt.ContentGroups(cntgrp =>
 
-                                                       gleit.CustomItemType(CustomItemType.Menu).MenuId("custommenu").Add();
+{
 
-                    }).Add();
-
-                }).Add();
-
-            }).Add();
-
-        }).Add();
+	cntgrp.Id("Galleryribbon").Type(RibbonButtonType.Gallery).ItemWidth("68").ItemHeight("54").Columns(2).ExpandedColumns(3)
 
 
+	.GalleryItems(gi =>
 
-    })
+	{
 
-        )
+		gi.Text("Content1").ToolTip("Content1").Add();
 
-    <ul id="ribbonmenu">
+		gi.Text("Content2").ToolTip("Content2").Add();
 
-        <li><a>FILE</a> </li>
+		gi.Text("Content3").ToolTip("Content3").Add();
 
-    </ul>
+		gi.Text("Content4").ToolTip("Content4").Add();
 
-    <div id="paste" style="height: 40px; width: 43px;">Paste</div>
+		gi.Text("Content5").ToolTip("Content5").Add();
 
-    <ul id="custommenu">
 
-        <li><a>New Quick Step</a>
 
-            <ul>
+	}).CustomGalleryItems(gleit =>
 
-                <li><a>Move to new folder</a></li>
+	{
 
-            </ul>
+		gleit.Text("Save Selection as new quick style").ToolTip("Save").CustomItemType(CustomItemType.Button).Add();
 
-        </li>
+		gleit.CustomItemType(CustomItemType.Menu).MenuId("custommenu").Add();
 
-    </ul>
+	}).Add();
+
+}).Add();
+
+}).Add();
+
+}).Add();
+
+
+
+})
+
+)
+
+<ul id="ribbonmenu">
+
+	<li><a>FILE</a> </li>
+
+</ul>
+
+<div id="paste" style="height: 40px; width: 43px;">Paste</div>
+
+<ul id="custommenu">
+
+	<li><a>New Quick Step</a>
+
+		<ul>
+
+			<li><a>Move to new folder</a></li>
+
+		</ul>
+
+	</li>
+
+</ul>
 
 
 

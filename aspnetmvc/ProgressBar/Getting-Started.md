@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Progress Bar | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Progress Bar
@@ -11,18 +11,18 @@ documentation: ug
 
 This section briefly describes how to create a Progress Bar control using ASP.NET MVC and learn its features.
 
-## 1.2.1 create your first Progress Bar in MVC
+## Create your first Progress Bar in MVC
 
 ASP.NET MVCProgress Bar control provides support to display a Progress Bar that allows you to change the process of the ProgressBar animations and flexible APIs. Using the following guidelines, you can create the ProgressBar to validate the Password strength.
 
 The following screenshot illustrates the functionality of a Progress Bar and displays the final result of the Password Strength Validation for your password using Progress Bar.
 
 
+
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
-
-Figure 1: Progress Bar
+Progress Bar
+{:.caption}
 
 ## Create a Textbox and Progress Bar
 
@@ -35,58 +35,60 @@ ASP.NET MVC Progress Bar control indicates the current progress of an operation 
 
 2. Add the following code to the corresponding view page to render Progress Bar.
 
-   ~~~ html
+   ~~~ cshtml
    
-		<div class="start" >
+	<div class="start" >
 
-				 <label for="start">Password</label>
+			 <label for="start">Password</label>
 
-					   <input type="password" id="password"/>
+				   <input type="password" id="password"/>
 
-		  @Html.EJ().ProgressBar("progressBar").Value(20).Height("20px").Width("180px") 
+	  @Html.EJ().ProgressBar("progressBar").Value(20).Height("20px").Width("180px") 
 
-		 </div>
+	 </div>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Add the following styles to show the Progress Bar and Textbox.
 
 
    ~~~ css
    
-		 <style>
+	<style>
 
-		 .start {
+	.start 
+	{
 
-					margin-left: 105px;
+		margin-left: 105px;
 
-					color: green;
+		color: green;
 
-					font-size: 18px;
+		font-size: 18px;
 
-				}
+	}
 
-		.control {
+	.control 
 
-					margin-bottom: 5px;
+	{
 
-					 margin-left: 230px;
+		margin-bottom: 5px;
 
-				}
+		 margin-left: 230px;
 
-		 #progressBar
+	}
+	#progressBar
 
-		   {
+	{
 
-			margin-top: 10px;
+	margin-top: 10px;
 
-		   }
+	}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 4. Execute the above code to render the following output. 
 
@@ -102,83 +104,87 @@ In this scenario, the advancement of the Progress Bar is changed according to th
 
 {% highlight js %}
 
-		   <script> 
+<script> 
 
-				var progresObj, k = 10, i = 0;
+	var progresObj, k = 10, i = 0;
 
-				$(document).keydown(function() {
+	$(document).keydown(function() {
 
-					i = $("#password").val().length;
+		i = $("#password").val().length;
 
-					if (i < 4) {
+		if (i < 4) 
+		{
 
-						progress2();
+			progress2();
 
-						$('.e-progress').css({ background: 'red' });
+			$('.e-progress').css({ background: 'red' });
 
-					} else if (i > 4 && i < 7) {
+		}
+		else if (i > 4 && i < 7) 
+		{
 
-						progress1();
+			progress1();
 
-						$('.e-progress').css({ background: 'yellow' });
+			$('.e-progress').css({ background: 'yellow' });
 
-					} else if (i > 7) {
+		} 
+		else if (i > 7) 
+		{
 
-						var pwd = $("#password").val();
+			var pwd = $("#password").val();
 
+			if (/^[a-zA-Z0-9- ]*$/.test(pwd) == false) 
+			{
 
+				progress();
 
-						if (/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+				$('.e-progress').css({ background: 'green' });
 
-							progress();
+			}
 
-							$('.e-progress').css({ background: 'green' });
+		}
 
-						}
+	});
 
-					}
+	$(function () 
+	{
 
-				});
+		progresObj = $("#progressBar").data("ejProgressBar");       
 
+	});
 
+	function progress() 
+	{
 
+		progresObj.option("text", " verystrong");
 
+		progresObj.option("percentage", k + 90);
 
-				$(function () {
+	}
 
-					progresObj = $("#progressBar").data("ejProgressBar");       
+	function progress1() 
+	{
 
-				});
+		progresObj.option("text", "strong");
 
-				function progress() {
+		progresObj.option("percentage", k + 50);
 
-					progresObj.option("text", " verystrong");
+	}
 
-					progresObj.option("percentage", k + 90);
+	function progress2() 
+	{
 
-				}
+		progresObj.option("percentage", k + 10);
 
-				function progress1() {
-
-					progresObj.option("text", "strong");
-
-					progresObj.option("percentage", k + 50);
-
-				}
-
-				function progress2() {
-
-					progresObj.option("percentage", k + 10);
-
-					progresObj.option("text", "weak");  
-
-
-
-				}
-
+		progresObj.option("text", "weak");  
 
 
-			</script>
+
+	}
+
+
+
+</script>
 
 {% endhighlight %}
 

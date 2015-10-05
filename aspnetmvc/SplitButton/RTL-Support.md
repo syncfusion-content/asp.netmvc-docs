@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | SplitButton | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: SplitButton
@@ -15,33 +15,29 @@ The following steps explains you the details about rendering the button with Rig
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Add the code in the CSHTML page to configure and initialize the control*@
 
+@*Enable the alignment format for split button control as follows.*@
 
+<div class="spltspan">
 
-    @*Enable the alignment format for split button control as follows.*@
+	@Html.EJ().SplitButton("spltbutton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
 
+	<ul id="Ul11">
 
+		<li><span>User</span></li>
 
-	<div class="spltspan">
+		<li><span>Guest</span></li>
 
-        @Html.EJ().SplitButton("spltbutton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
+		<li><span>Admin</span></li>
 
-        <ul id="Ul11">
-
-            <li><span>User</span></li>
-
-            <li><span>Guest</span></li>
-
-            <li><span>Admin</span></li>
-
-        </ul>
+	</ul>
 
 
 
-    </div>
+</div>
 
 
 {% endhighlight %}

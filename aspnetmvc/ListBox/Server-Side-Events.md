@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Server-Side-Events
+title: Server Side Events | ControlNameundefined | ASP.NET MVC | Syncfusion
 description: server side events
 platform: aspnet
 control: Control Name undefined
@@ -51,7 +51,7 @@ The following code example define listboxsample _ValueSelect server side event i
 
 {% highlight c# %}
 
-    // Add the code in cs page
+    // Add the code in csharp page
 
 
 
