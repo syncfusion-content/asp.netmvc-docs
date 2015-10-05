@@ -340,6 +340,7 @@ Themes are used to enhance the UI appearance of the grid in the exported documen
 <tr><td>ExportTheme.BootstrapTheme</td><td>bootstrap-theme</td></tr>
 
 <tr><td>ExportTheme.None</td><td>none</td></tr>
+</table>
 
 {% highlight c# %}
 
