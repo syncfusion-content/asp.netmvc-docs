@@ -70,6 +70,66 @@ You can select the shape by tapping on the shape. The Single selection is enable
 
 _Map with enable selection property_
 
+## MultiSelection
+
+This feature enables you to select multiple map shapes on mouse taps accompanied by "**Control**" key press. For this feature to get enabled, we have to set the property `selectionMode` as "**multiple**" along with `enableSelection` property.
+
+{% highlight js %}
+
+@(Html.EJ().Map("maps") 
+
+            .Layers(lr =>
+
+            {
+
+                Lr
+                .ShapeData(mapData)
+                // ...
+                .EnableSelection(true)
+                .SelectionMode(Multiple)
+                // ...
+                .Add();
+
+            })
+
+   )       
+
+{% endhighlight %}
+
+![](User-Interaction_images/User-Interaction_img5.png)
+
+_Map with selectionMode property_
+
+
+## Dragging On Selection
+
+This feature enables you to select the shapes by dragging over the shapes. While dragging over the shapes, a rectangle is generated and the shapes which come within the rectangle is selected.
+You can enable this feature by setting the property `draggingOnSelection` in the `layers` to **True**.
+
+{% highlight js %}
+
+        @(Html.EJ().Map("maps") 
+
+            .Layers(lr =>
+
+            {
+
+                Lr
+                // ...
+                .DraggingOnSelection(true)
+                // ...
+                .Add();
+
+            })
+   )      
+
+
+{% endhighlight %}
+
+![](User-Interaction_images/User-Interaction_img4.png)
+
+_Map with draggingOnSelection property_
+
 ## Zooming
 
 The zooming feature enables you to zoom in and out of the map to show in-depth information. It is controlled by the level property of the map. When the zoom level of the Map control is increased, the map is zoomed in. When the zoom level is decreased, then the map is zoomed out.
