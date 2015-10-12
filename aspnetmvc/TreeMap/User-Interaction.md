@@ -55,7 +55,7 @@ To enable the selection of leaf nodes, the `HighlightGroupOnSelection` property 
         
 {% endhighlight %}
         
-![](User-Interaction_images/User-Interaction_img2.png)
+![](User-Interaction_images/User-Interaction_img3.png)
 
 ## MultiSelection
 
@@ -75,7 +75,7 @@ To select multiple items simulataneously, the mouse tap should be done along wit
         
 {% endhighlight %}
 
-![](User-Interaction_images/User-Interaction_img3.png)
+![](User-Interaction_images/User-Interaction_img2.png)
 
 #### Group Selection (Multiple)
 
