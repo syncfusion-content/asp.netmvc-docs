@@ -19,13 +19,13 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
      .Width("70%")
 
-.AllowResizing(true)
+    .AllowResizing(true)
 
      .ApplicationTab(apptab =>
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("ribbonmenu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 

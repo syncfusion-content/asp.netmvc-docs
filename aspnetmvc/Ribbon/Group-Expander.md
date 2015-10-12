@@ -9,7 +9,7 @@ documentation: ug
 
 # Group Expander
 
-The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _ClientSideOnGroupExpand_.
+The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the Ribbon tab. The event used for _group expander_ is _GroupExpand_.
 
 {% highlight js %}
 
@@ -21,7 +21,7 @@ The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ val
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -145,21 +145,21 @@ PrefixIcon = "e-ribbon e-ribbonunderline"
 
 
 
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-<li><a>Open</a></li>
-
-</ul>
-
-</li>
-
-</ul>
+	<ul id="ribbonmenu">
+	
+	<li><a>FILE</a>
+	
+	<ul>
+	
+	<li><a>New</a></li>
+	
+	<li><a>Open</a></li>
+	
+	</ul>
+	
+	</li>
+	
+	</ul>
 
 
 
