@@ -23,7 +23,7 @@ You can add _Contextual Tabs_ and _Tab Set_ in the _Ribbon_ control. In _Context
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
                {
 
@@ -91,7 +91,7 @@ You can add _Contextual Tabs_ and _Tab Set_ in the _Ribbon_ control. In _Context
 
 
 
-    <ul id="menu">
+    <ul id="ribbonmenu">
 
         <li><a>FILE</a>
 

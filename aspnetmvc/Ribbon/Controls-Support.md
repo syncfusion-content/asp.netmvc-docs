@@ -47,7 +47,7 @@ The _default_ _type_ is _button_.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -189,43 +189,43 @@ ActivePrefixIcon = "e-ribbon e-bold"
 
 })
 
-.ClientSideEvents(evt=>evt.ClientSideOnCreate("createControl"))
+.ClientSideEvents(evt => evt.Create("createControl"))
 
 )
 
 
 
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-<li><a>Open</a></li>
-
-<li><a>Save</a></li>
-
-<li><a>Save as</a></li>
-
-<li><a>Print</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-
-
-<ul id="pasteSplit">
-
-<li><a>Paste</a></li>
-
-</ul>
-
-<input id="fontcolor"/>
+	<ul id="ribbonmenu">
+	
+	<li><a>FILE</a>
+	
+	<ul>
+	
+	<li><a>New</a></li>
+	
+	<li><a>Open</a></li>
+	
+	<li><a>Save</a></li>
+	
+	<li><a>Save as</a></li>
+	
+	<li><a>Print</a></li>
+	
+	</ul>
+	
+	</li>
+	
+	</ul>
+	
+	
+	
+	<ul id="pasteSplit">
+	
+	<li><a>Paste</a></li>
+	
+	</ul>
+	
+	<input id="fontcolor"/>
 
 
 

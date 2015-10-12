@@ -23,7 +23,7 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("ribbonmenu"));
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -75,19 +75,19 @@ The _Ribbon_ control has _Custom Tooltip_ support that is displayed when you mov
 
     )
 
-<ul id="ribbonmenu">
-
-    <li><a>FILE</a>
-
-        <ul>
-
-            <li><a>New</a></li>
-
-            </ul>
-
-    </li>
-
-</ul>
+    <ul id="ribbonmenu">
+    
+        <li><a>FILE</a>
+    
+            <ul>
+    
+                <li><a>New</a></li>
+    
+                </ul>
+    
+        </li>
+    
+    </ul>
 
 
 

@@ -25,7 +25,7 @@ Specifies the index of the _Ribbon_ tab to select the given index tab item in th
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -81,21 +81,21 @@ PrefixIcon = "e-ribbon e-ribbonpaste"
 
 
 
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -163,7 +163,7 @@ Specifies the index or indexes to disable the corresponding tabs in the _Ribbon_
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -218,22 +218,22 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -272,7 +272,6 @@ top: -4px;
 </style>
 
 
-
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example
@@ -297,7 +296,7 @@ Specifies the index or indexes to enable the corresponding tabs in the _Ribbon_ 
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -353,21 +352,21 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -437,7 +436,7 @@ This method is used to hide the given text tab in the _Ribbon_ control.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -492,22 +491,22 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -574,7 +573,7 @@ This method is used to show the given text tab in the _Ribbon_ control.
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -629,22 +628,22 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -714,7 +713,7 @@ This method is used to remove the given index tab item from the _Ribbon_ control
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -770,21 +769,21 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
-<ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -850,7 +849,7 @@ Specifies the _width_ to the _Ribbon_ control.
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
                {
 
@@ -906,21 +905,21 @@ Specifies the _width_ to the _Ribbon_ control.
 
 
 
-                <ul id="menu">
-
-<li><a>FILE</a>
-
-<ul>
-
-<li><a>New</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-<div id="content">Home control</div>
+                    <ul id="ribbonmenu">
+    
+    <li><a>FILE</a>
+    
+    <ul>
+    
+    <li><a>New</a></li>
+    
+    </ul>
+    
+    </li>
+    
+    </ul>
+    
+    <div id="content">Home control</div>
 
 
 
@@ -977,7 +976,7 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu"));
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1009,7 +1008,7 @@ _Group Index_: Index of ribbon group, where the group is to be added. It is opti
 
     })
 
-    )            <ul id="menu">
+    )            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
@@ -1095,7 +1094,7 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1127,7 +1126,7 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
     })
 
-    )            <ul id="menu">
+    )            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
@@ -1186,7 +1185,7 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1218,13 +1217,13 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
     )
 
-            <ul id="menu">
+            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
             </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
@@ -1265,7 +1264,7 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1297,13 +1296,13 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
     )
 
-            <ul id="menu">
+            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
             </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
@@ -1350,7 +1349,7 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1382,15 +1381,15 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
     )
 
-            <ul id="menu">
+            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
             </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
-<div id="newtab" style="height:35px;width:43px;">AddTab</div>
+     <div id="newtab" style="height:35px;width:43px;">AddTab</div>
 
 <script>
 
@@ -1444,7 +1443,7 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
     {
 
-        apptab.Type("ApplicationMenu").ItemID("menu");
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
     })
 
@@ -1476,15 +1475,15 @@ This method is used to add contextual tabs dynamically.This method has two argum
 
     )
 
-            <ul id="menu">
+            <ul id="ribbonmenu">
 
                 <li><a>FILE</a></li>
 
             </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+    <div id="paste" style="height:40px;width:43px;">Paste</div>
 
-<div id="design">ContextualTab</div>
+    <div id="design">ContextualTab</div>
 
 <script>
 
