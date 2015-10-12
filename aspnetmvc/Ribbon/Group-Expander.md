@@ -9,7 +9,7 @@ documentation: ug
 
 # Group Expander
 
-The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _GroupExpand_.
+The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the Ribbon tab. The event used for _group expander_ is _GroupExpand_.
 
 {% highlight js %}
 
