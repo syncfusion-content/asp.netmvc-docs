@@ -19,7 +19,7 @@ By using this, you can view the equivalent XHTML code of the content in the edit
 
 To know more details about the Angular binding, refer to the following link location,
 
-<http://docs.syncfusion.com/aspnetmvc/richtexteditor/integration>
+<http://help.syncfusion.com/aspnetmvc/richtexteditor/integration>
 
 You can bind data to the RTE control through angular support.
 

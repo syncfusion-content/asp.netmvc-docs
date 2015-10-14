@@ -21,7 +21,7 @@ For example, you can render the desired icon in the button by using the followin
 
 Refer to the following link to know what are the values passed in the “ContentType” property
 
-<http://docs.syncfusion.com/aspnetmvc/button/icons>
+<http://help.syncfusion.com/aspnetmvc/button/icons>
 
 Also in the button sample, you can use the icon class names as follows,
 

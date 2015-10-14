@@ -36,7 +36,7 @@ ASP.NET MVCDialog is an interface for hosting a page inside a window. Dialog con
 
 1. Create a MVC Project and add necessary Dll’s and Scripts. Refer below link
 
-   <http://docs.syncfusion.com/aspnetmvc/dialog/getting-started>
+   <http://help.syncfusion.com/aspnetmvc/dialog/getting-started>
 
 
 

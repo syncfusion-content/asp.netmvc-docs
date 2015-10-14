@@ -23,7 +23,7 @@ ASP.NET MVC RadioButton provides support to display the RadioButton within your 
 Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select a single option from the QuizApp. You can create the RadioButton widget using the following steps.
 
 1. Create an MVC Project and add necessary assemblies and scripts to it.
-2. Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/radiobutton/getting-started)
+2. Refer [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/radiobutton/getting-started)
 3. Add the following code example to the corresponding view page to render RadioButton.
 
 

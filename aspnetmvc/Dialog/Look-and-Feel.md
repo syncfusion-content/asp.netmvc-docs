@@ -10,7 +10,7 @@ documentation: ug
 # Look and Feel
 
 You can customize the appearance of Dialog widget using various themes that are available in Essential JavaScript. Applying themes customizes the entire control and its appearances. Refer the following link.
-<http://docs.syncfusion.com/aspnetmvc/dialog/look-and-feel>
+<http://help.syncfusion.com/aspnetmvc/dialog/look-and-feel>
 
 ## CSS Class
 

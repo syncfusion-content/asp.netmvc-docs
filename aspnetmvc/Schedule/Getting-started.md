@@ -32,7 +32,7 @@ Schedule control with a person’s daily important activities
 
 ASP.NET MVC Schedule widget basically renders with flexible API’s. You can easily create the Schedule widget by using simple code snippet as follows.
 
-1. First create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/schedule/getting-started) Documentation.
+1. First create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/schedule/getting-started) Documentation.
 
 
 

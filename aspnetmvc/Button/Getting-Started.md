@@ -25,7 +25,7 @@ Multimedia Player
 
 Essential ASP.NET MVC Button control contains built-in features like Click and different display option. You can easily create the Button control by using HTML helper as follows.
 
-1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/button/getting-started)
+1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/button/getting-started)
 2. Add the following code example to the corresponding view page to render Button.
 
 {% highlight html %}

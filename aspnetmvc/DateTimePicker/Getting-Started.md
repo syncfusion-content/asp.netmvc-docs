@@ -29,7 +29,7 @@ In the above screenshot, you can select a date and time, within a week ranging f
 ASP.NET MVC DateTimePicker widget basically renders built-in features like Month and Time Navigation, with animations and flexible APIs. You can easily create the DateTimePicker widget using simple DateTimePicker element as follows.
 
 1. Create a MVC Project and add necessary assemblies and scripts.
-2. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/datetimepicker/getting-started).
+2. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/datetimepicker/getting-started).
 3. Add the following code to the corresponding view page to render DateTimePicker.
 
 

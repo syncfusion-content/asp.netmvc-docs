@@ -36,7 +36,7 @@ By default, ASP.NET MVC Barcode renders gray scale colors with predefined Quiet 
 
 ### Refer Assemblies
 
-You can create a MVC Project, add necessary assemblies and Scripts. Refer [MVC-Getting Started Documentation.](http://docs.syncfusion.com/aspnetmvc/barcode/getting-started)
+You can create a MVC Project, add necessary assemblies and Scripts. Refer [MVC-Getting Started Documentation.](http://help.syncfusion.com/aspnetmvc/barcode/getting-started)
 
 Add the following assemblies in your MVC application for using Barcode control:
 

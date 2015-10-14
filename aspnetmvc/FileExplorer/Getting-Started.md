@@ -33,7 +33,7 @@ In the above screenshot, you can access and manage the remote file system. While
 
 ASP.NET MVC FileExplorer widget renders built-in features like accessing online file system through web and managing files like creating a folder, upload files, delete, rename, move or copy and search files.  You can easily create the FileExplorer widget by using the following steps.
 
-1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/fileexplorer/getting-started) Documentation.
+1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/fileexplorer/getting-started) Documentation.
 2. Add the following code example to the corresponding View page to render the FileExplorer.
 
    ~~~ cshtml

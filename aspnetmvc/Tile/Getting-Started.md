@@ -23,7 +23,7 @@ The Essential Studio for ASP.NET MVC Web Tiles are simple, opaque rectangles or 
 
 The following steps guide you to add group of Tiles for creating a home page that displays all the available applications.
 
-1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/tile/getting-started)
+1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/tile/getting-started)
 2. To add a Tile control, call Tile helper. You can specify the tile name, size and image url as follows.
 3. Add the following code example to the corresponding view page.
 

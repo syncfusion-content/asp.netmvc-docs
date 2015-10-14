@@ -143,7 +143,7 @@ Local Data Binding
 
 ## FieldSettings
 
-The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://docs.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
+The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://help.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
 
 _FieldSettings_
 

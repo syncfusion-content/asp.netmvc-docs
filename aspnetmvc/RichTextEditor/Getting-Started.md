@@ -25,7 +25,7 @@ In the above screenshot , the RTE consists of content editable area with Feedbac
 
 ASP.NET MVC RTE widget basically renders by using the simple text area element. 
 
-1. You can create a MVC Project and add the necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/richtexteditor/getting-started) Documentation.
+1. You can create a MVC Project and add the necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/richtexteditor/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the RichTextEditor.
 
    ~~~ cshtml

@@ -36,7 +36,7 @@ To create a DropDownList, the steps are as follows:
 
 ASP.NET MVCDropDownList widget basically renders with built-in features.
 
-1. You can create an MVC Project and add necessary DLL with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/dropdownlist/getting-started) Documentation.
+1. You can create an MVC Project and add necessary DLL with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/dropdownlist/getting-started) Documentation.
 
 
 
@@ -673,7 +673,7 @@ DropDown Appearance for cascading after selection of group and country
 {:.caption}
 ## Set the Vote process in the DropDownList Widget
 
-The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: <http://docs.syncfusion.com/js/>
+The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: <http://help.syncfusion.com/js/>
 
 The following code sample explains how to set the Vote process in the DropDownList widget.
 

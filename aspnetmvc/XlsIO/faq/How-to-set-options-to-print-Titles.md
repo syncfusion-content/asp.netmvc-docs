@@ -135,4 +135,4 @@ excelEngine.Dispose()
 
 {% endtabs %}
 
-For information on Print settings, refer to the section [Print Settings](http://docs.syncfusion.com/windowsforms).
+For information on Print settings, refer to the section [Print Settings](http://help.syncfusion.com/windowsforms).

@@ -21,7 +21,7 @@ In this section, you can learn how to create a simple navigation drawer.
 
 The following steps guide you in adding a Navigation Drawer control for a web application that displays a list of items such as home, profile, photos and location where you can navigate to desired page by clicking on the option available in the drawer. 
 
-You can create an MVC Project and add the necessary assemblies, styles and scripts to it.  Refer to the [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/navigationdrawer/getting-started)
+You can create an MVC Project and add the necessary assemblies, styles and scripts to it.  Refer to the [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/navigationdrawer/getting-started)
 
 To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set thetext for list itemsby using Text property. You can paste the following code in corresponding view page.
 

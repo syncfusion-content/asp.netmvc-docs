@@ -28,7 +28,7 @@ Essential Studio ASP.NET MVCRotator widget has built-in features such as unobtru
 
 1. Create a MVC Project and add necessary assemblies, styles, and scripts to it.
 
-   Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/rotator/getting-started).
+   Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/rotator/getting-started).
    
 2. Add the following code example to the corresponding view page to render Rotator. Move the images under the folder ~/Images/rotator.
 
