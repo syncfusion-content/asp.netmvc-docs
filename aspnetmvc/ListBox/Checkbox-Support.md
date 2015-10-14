@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Checkbox-Support
+title: Checkbox Support | ControlNameundefined | ASP.NET MVC | Syncfusion
 description: checkbox support
 platform: aspnet
 control: Control Name undefined

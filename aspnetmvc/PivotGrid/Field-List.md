@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Field-List
+title: Field List | PivotGrid | ASP.NET MVC | Syncfusion
 description: field list
 platform: ejmvc
 control: PivotGrid
@@ -14,7 +14,7 @@ N> This feature is applicable only for OLAP datasource.
 Field List (also known as Pivot Schema Designer) is powerful tool that allows you to create and manage PivotTable (PivotGrid) with multi-dimensional/relational data. Using this PivotGrid you can visualize large amount of data in cross-tabular format and the Field List also allows you to filter members and also to customize the report dynamically on the fly using drag-and-drop operation.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/ PivotGridService.svc")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 

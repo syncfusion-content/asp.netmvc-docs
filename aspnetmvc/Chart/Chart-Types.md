@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart-Types
+title: Chart Types | Chart | ASP.NET MVC | Syncfusion
 description: chart types
 platform: ejmvc
 control: Chart
@@ -15,7 +15,7 @@ Chart types are specified on each series through the Type property. All the Char
 
 You can combine several Chart types in one Chart using the Type property on series to set different Chart types for each series.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")   
@@ -42,7 +42,7 @@ You can combine several Chart types in one Chart using the Type property on seri
 {% endhighlight  %}
 In multiple series case, you can use CommonSeriesOptions property to specify the properties that are common for all series in Chart. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -70,8 +70,10 @@ You can configure the appearance of the lines and the points with options Fill u
 
 ![](Chart-Types_images/Chart-Types_img1.png)
 
+Line Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -119,43 +121,40 @@ Step Line Charts use horizontal and vertical lines to connect data points result
 
 ![](Chart-Types_images/Chart-Types_img2.png)
 
-{% highlight js %}
+Step Line Chart
+{:.caption}
 
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer") 
 
 
 
-  .Series(ser=>
+.Series(ser=>
 
-            {         
+{         
 
-              ser.Name("India").Type(SeriesType.StepLine).Points(po =>
+	ser.Name("India").Type(SeriesType.StepLine).Points(po =>
 
-                    {
+		{
 
-                        po.X(2006).Y(430).Add();
+			po.X(2006).Y(430).Add();
 
-                        po.X(2007).Y(416).Add();
+			po.X(2007).Y(416).Add();
 
-                        po.X(2008).Y(404).Add();
+			po.X(2008).Y(404).Add();
 
-                        po.X(2009).Y(390).Add();
+			po.X(2009).Y(390).Add();
 
-                        po.X(2010).Y(376).Add();
+			po.X(2010).Y(376).Add();
 
-                        po.X(2011).Y(362).Add();
+			po.X(2011).Y(362).Add();
 
-                        po.X(2012).Y(351).Add();                    
+			po.X(2012).Y(351).Add();                    
 
-                     }).Add();                
+		 }).Add();                
 
-            })
-
-              //.......
+})
 
 )
 {% endhighlight  %}
@@ -168,61 +167,58 @@ Area Chart is rendered using a collection of line segments connected to form a c
 
 ![](Chart-Types_images/Chart-Types_img3.png)
 
-{% highlight js %}
+Area Chart
+{:.caption}
 
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer") 
 
 
 
-  .Series(ser=>
+.Series(ser=>
 
-            {                        
+{                        
 
-             ser.Name("Product B").Type(SeriesType.Area).Points(po =>
+	ser.Name("Product B").Type(SeriesType.Area).Points(po =>
 
-                    {
+		{
 
-                        po.X(1900).Y(2.6).Add();
+			po.X(1900).Y(2.6).Add();
 
-                        po.X(1920).Y(2.8).Add();
+			po.X(1920).Y(2.8).Add();
 
-                        po.X(1940).Y(2.6).Add();
+			po.X(1940).Y(2.6).Add();
 
-                        po.X(1960).Y(3).Add();
+			po.X(1960).Y(3).Add();
 
-                        po.X(1980).Y(3.6).Add();
+			po.X(1980).Y(3.6).Add();
 
-                        po.X(2000).Y(3).Add();
+			po.X(2000).Y(3).Add();
 
-                    }).Add();
+		}).Add();
 
 
 
-            ser.Name("ProductC").Type(SeriesType.Area).Points(po =>
+	ser.Name("ProductC").Type(SeriesType.Area).Points(po =>
 
-                {
+	{
 
-                    po.X(1900).Y(2.8).Add();
+		po.X(1900).Y(2.8).Add();
 
-                    po.X(1920).Y(2.5).Add();
+		po.X(1920).Y(2.5).Add();
 
-                    po.X(1940).Y(2.8).Add();
+		po.X(1940).Y(2.8).Add();
 
-                    po.X(1960).Y(3.2).Add();
+		po.X(1960).Y(3.2).Add();
 
-                    po.X(1980).Y(2.9).Add();
+		po.X(1980).Y(2.9).Add();
 
-                    po.X(2000).Y(2).Add();
+		po.X(2000).Y(2).Add();
 
-                }).Add();                
+	}).Add();                
 
-            })
-
-              //.......
+})
 
 )
 {% endhighlight  %}
@@ -235,12 +231,11 @@ Range Area Charts are similar to regular area Charts except that, each area is r
 
 ![](Chart-Types_images/Chart-Types_img4.png)
 
+Range Area Chart
+{:.caption}
 
 
-{% highlight js %}
-
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
@@ -309,8 +304,10 @@ Step Area Charts are similar to regular area Charts except that, instead of a st
 
 ![](Chart-Types_images/Chart-Types_img5.png)
 
+Step Area Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -368,76 +365,76 @@ Spline Area Chart is similar to an Area Chart except the difference in the way t
 
 ![](Chart-Types_images/Chart-Types_img6.png)
 
-{% highlight js %}
+Spline Area Chart
+{:.caption}
 
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer") 
 
+.Series(ser=>
 
+{                                        
 
-  .Series(ser=>
+ser.Name("US").Type(SeriesType.SplineArea).Points(po =>
 
-            {                                        
+	{
 
-              ser.Name("US").Type(SeriesType.SplineArea).Points(po =>
+		po.X(2002).Y(2.2).Add();
 
-                    {
+		po.X(2003).Y(3.4).Add();
 
-                        po.X(2002).Y(2.2).Add();
+		po.X(2004).Y(2.8).Add();
 
-                        po.X(2003).Y(3.4).Add();
+		po.X(2005).Y(1.6).Add();
 
-                        po.X(2004).Y(2.8).Add();
+		po.X(2006).Y(2.3).Add();
 
-                        po.X(2005).Y(1.6).Add();
+		po.X(2007).Y(2.5).Add();
 
-                        po.X(2006).Y(2.3).Add();
+		po.X(2008).Y(2.9).Add();
 
-                        po.X(2007).Y(2.5).Add();
+		po.X(2009).Y(3.8).Add();
 
-                        po.X(2008).Y(2.9).Add();
+		po.X(2010).Y(1.4).Add();
 
-                        po.X(2009).Y(3.8).Add();
+		po.X(2011).Y(3.1).Add();
 
-                        po.X(2010).Y(1.4).Add();
-
-                        po.X(2011).Y(3.1).Add();
-
-                    }).Add();
+	}).Add();
 
 
 
-             ser.Name("Germany").Type(SeriesType.SplineArea).Points(po =>
+ser.Name("Germany").Type(SeriesType.SplineArea).Points(po =>
 
-                {
+{
 
-                    po.X(2002).Y(0.8).Add();
+	po.X(2002).Y(0.8).Add();
 
-                    po.X(2003).Y(1.3).Add();
+	po.X(2003).Y(1.3).Add();
 
-                    po.X(2004).Y(1.1).Add();
+	po.X(2004).Y(1.1).Add();
 
-                    po.X(2005).Y(1.6).Add();
+	po.X(2005).Y(1.6).Add();
 
-                    po.X(2006).Y(2).Add();
+	po.X(2006).Y(2).Add();
 
-                    po.X(2007).Y(1.7).Add();
+	po.X(2007).Y(1.7).Add();
 
-                    po.X(2008).Y(2.3).Add();
+	po.X(2008).Y(2.3).Add();
 
-                    po.X(2009).Y(2.7).Add();
+	po.X(2009).Y(2.7).Add();
 
-                    po.X(2010).Y(1.1).Add();
+	po.X(2010).Y(1.1).Add();
 
-                    po.X(2011).Y(2.3).Add();
+	po.X(2011).Y(2.3).Add();
 
-                }).Add();                 
+}).Add();                 
 
-          })   
+})   
 
-        //.......
+//.......
 
-   )
+)
 
 {% endhighlight  %}
 
@@ -449,84 +446,87 @@ Stacking Area Charts are similar to regular area Charts except that the Y values
 
 ![](Chart-Types_images/Chart-Types_img7.png)
 
-{% highlight js %}
+StackingArea Chart
+{:.caption}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
 
 
 
-  .Series(ser=>
+.Series(ser=>
 
-            {                                                      
+{                                                      
 
-              ser.Name("US").Type(SeriesType.StackingArea).Points(po =>
+  ser.Name("US").Type(SeriesType.StackingArea).Points(po =>
 
-                    {
+		{
 
-                        po.X(2002).Y(6).Add();
+			po.X(2002).Y(6).Add();
 
-                        po.X(2003).Y(7.5).Add();
+			po.X(2003).Y(7.5).Add();
 
-                        po.X(2004).Y(6).Add();
+			po.X(2004).Y(6).Add();
 
-                        po.X(2005).Y(6.5).Add();
+			po.X(2005).Y(6.5).Add();
 
-                        po.X(2006).Y(7.4).Add();
+			po.X(2006).Y(7.4).Add();
 
-                        po.X(2007).Y(7.9).Add();
+			po.X(2007).Y(7.9).Add();
 
-                        po.X(2008).Y(7.5).Add();
+			po.X(2008).Y(7.5).Add();
 
-                        po.X(2009).Y(8.5).Add();
+			po.X(2009).Y(8.5).Add();
 
-                        po.X(2010).Y(4.8).Add();
+			po.X(2010).Y(4.8).Add();
 
-                        po.X(2011).Y(9.3).Add();
+			po.X(2011).Y(9.3).Add();
 
-                    }).Add();
-
-
-
-             ser.Name("Indonesia").Type(SeriesType.StackingArea).Points(po =>
-
-                {
-
-                    po.X(2002).Y(3.5).Add();
-
-                    po.X(2003).Y(4.9).Add();
-
-                    po.X(2004).Y(3.7).Add();
-
-                    po.X(2005).Y(7.5).Add();
-
-                    po.X(2006).Y(4.8).Add();
-
-                    po.X(2007).Y(2.6).Add();
-
-                    po.X(2008).Y(4.7).Add();
-
-                    po.X(2009).Y(3.7).Add();
-
-                    po.X(2010).Y(3.5).Add();
-
-                    po.X(2011).Y(3.6).Add();
-
-                }).Add();    
+		}).Add();
 
 
 
-          })   
+ ser.Name("Indonesia").Type(SeriesType.StackingArea).Points(po =>
 
-        //.......
+	{
 
-   )
+		po.X(2002).Y(3.5).Add();
+
+		po.X(2003).Y(4.9).Add();
+
+		po.X(2004).Y(3.7).Add();
+
+		po.X(2005).Y(7.5).Add();
+
+		po.X(2006).Y(4.8).Add();
+
+		po.X(2007).Y(2.6).Add();
+
+		po.X(2008).Y(4.7).Add();
+
+		po.X(2009).Y(3.7).Add();
+
+		po.X(2010).Y(3.5).Add();
+
+		po.X(2011).Y(3.6).Add();
+
+	}).Add();    
+
+
+
+})   
+
+//.......
+
+)
 {% endhighlight  %}
 
 ## 100% Stacking area chart  
 
 100% Stacking area is similar to the stacking area chart. But here, the series display multiple data series as stacked areas and the cumulative portion of each stacked element is summed to 100%.  
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("container")	 
 
@@ -590,7 +590,8 @@ The following screenshot displays the 100% Stacking area chart.
 
 ![](Chart-Types_images/Chart-Types_img8.png)
 
-
+100% Stacking area chart.
+{:.caption}
 
 ## Column Chart
 
@@ -600,10 +601,10 @@ Column Charts are among the most common Chart types that are used. It uses verti
 
 ![](Chart-Types_images/Chart-Types_img9.png)
 
+Column Chart
+{:.caption}
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 
  @(Html.EJ().Chart("chartcontainer") 
@@ -675,8 +676,10 @@ RangeColumn Chart is similar to the Column Chart except that each column is rend
 
 ![](Chart-Types_images/Chart-Types_img10.png)
 
+RangeColumn Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -738,8 +741,10 @@ Stacking Column Charts are similar to regular column Charts except that the Y va
 
 ![](Chart-Types_images/Chart-Types_img11.png)
 
+StackingColumn Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -798,7 +803,7 @@ Stacking Column Charts are similar to regular column Charts except that the Y va
 100% Stacking column is similar to the stacking column charts. But here, the combined contribution of Y values is the combined total of the vertical column with 100 percent.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -857,7 +862,8 @@ The following screenshot displays the 100% Stacking column chat.
 
 ![](Chart-Types_images/Chart-Types_img12.png)
 
-
+100% Stacking column chart
+{:.caption}
 
 ## Bar Chart
 
@@ -867,11 +873,10 @@ Bar Chart is the simplest and most versatile of statistical diagrams. It display
 
 ![](Chart-Types_images/Chart-Types_img13.png)
 
-{% highlight js %}
+Bar Chart
+{:.caption}
 
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer") 
 
@@ -935,7 +940,10 @@ Stacking Bar Charts are similar to regular bar Charts except that the Y values s
 
 ![](Chart-Types_images/Chart-Types_img14.png)
 
-{% highlight js %}
+Stackingbar Chart
+{:.caption}
+
+{% highlight CSHTML %}
 
 
 
@@ -1002,7 +1010,7 @@ Stacking Bar Charts are similar to regular bar Charts except that the Y values s
 
 100% Stacking bar is similar to stacking bar charts. Here, the combined contribution of Y values is the combined total of the horizontal bar with 100 percent. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("container")	 
 
@@ -1062,7 +1070,8 @@ The following screenshot displays the 100% Stackingbar chart.
 
 ![](Chart-Types_images/Chart-Types_img15.png)
 
-
+100% Stacking bar chart 
+{:.caption}
 
 ## Spline Chart
 
@@ -1072,8 +1081,8 @@ Spline Chart is similar to a Line Chart except that it connects the different da
 
 ![](Chart-Types_images/Chart-Types_img16.png)
 
-
-
+Spline Chart
+{:.caption}
 
 {% highlight html %}
 
@@ -1147,7 +1156,10 @@ A Pie Chart renders y values as slices in a pie. The slices are rendered in prop
 
 ![](Chart-Types_images/Chart-Types_img17.png)
 
-{% highlight js %}
+Pie Chart
+{:.caption}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer") 
@@ -1201,6 +1213,8 @@ Doughnut Charts are pie Charts with a hole, whose value is specified as the doug
 
 ![](Chart-Types_images/Chart-Types_img18.png)
 
+Doughnut Chart
+{:.caption}
 
 {% highlight html %}
 
@@ -1259,7 +1273,7 @@ EJ Chart allows you to create semi pie and doughnut chart using StartAngle and E
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1304,12 +1318,16 @@ EJ Chart allows you to create semi pie and doughnut chart using StartAngle and E
 
 
 {% endhighlight  %}
+
 ![](Chart-Types_images/Chart-Types_img19.jpeg)
 
-
+Semi Doughnut Chart
+{:.caption}
 
 ![](Chart-Types_images/Chart-Types_img20.jpeg)
 
+Semi Pie Chart
+{:.caption}
 
 
 ## Pyramid Chart
@@ -1320,8 +1338,10 @@ The Pyramid Chart type displays the data that when totalled renders 100%. This t
 
 ![](Chart-Types_images/Chart-Types_img21.png)
 
+Pyramid Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1375,8 +1395,10 @@ The Funnel chart is a single series chart representing the data as portions of 1
 
 ![](Chart-Types_images/Chart-Types_img22.png)
 
+Funnel Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1432,8 +1454,10 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 
 ![](Chart-Types_images/Chart-Types_img23.png)
 
+Bubble Chart
+{:.caption}
 
-{% highlight js %}
+{% highlight CSHTML %}
  
 
 
@@ -1490,6 +1514,7 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 
 
 {% endhighlight  %}
+
 {% highlight css %}
 
 <ej:Chart ID="Chart1" runat="server">
@@ -1543,10 +1568,8 @@ Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data 
 In Scatter Series, each data point is represented as an ellipse, and the width and height of each ellipse is set using the Size Width and Height properties of marker. You can also change the color, stroke, and stroke thickness of the series using the Fill, Border color, and Width properties of marker respectively.
 
 The following code example is used to create a simple scatter series. 
-{% highlight js %}
 
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1585,7 +1608,8 @@ The following code example is used to create a simple scatter series.
 
 ![](Chart-Types_images/Chart-Types_img24.png)
 
-
+Scatter
+{:.caption}
 
 ## HiLoOpenCloseSeries 
 
@@ -1593,7 +1617,7 @@ A HiLoOpenCloseSeries displays each data point as a group of two horizontal li
 
 The following properties are useful in mapping the value of each data point in a HiLoOpenCloseSeries: 
 
-_Table2: Property Table_
+_Property Table_
 
 <table>
 <tr>
@@ -1625,7 +1649,8 @@ Represents the close values</td></tr>
 
 ![](Chart-Types_images/Chart-Types_img25.png)
 
-
+HiLoOpenCloseSeries
+{:.caption}
 
 ### BullFillColor
 
@@ -1645,7 +1670,7 @@ DrawMode is used to specify the open and close draw mode to hiloopenclose series
 
  To create a simple HiLoOpenCloseSeries use the following code example.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1700,7 +1725,7 @@ A CandleSeries displays each data point with a combination of a vertical column 
 
 The following properties are useful in mapping the value of each data point in a Candle.
 
-_Table3: Property Table_
+_Property Table_
 
 <table>
 <tr>
@@ -1732,7 +1757,8 @@ Represents the close values</td></tr>
 
 ![](Chart-Types_images/Chart-Types_img26.png)
 
-
+Candle
+{:.caption}
 
 ### BullFillColor
 
@@ -1787,7 +1813,7 @@ Ina HiLoSeries, each segment is represented by a line. The height of the line de
 
 The following properties are useful in mapping the value of each data point in a Hilo.
 
-_Table4: Property Table_
+_Property Table_
 
 <table>
 <tr>
@@ -1811,13 +1837,11 @@ Represents the low values</td></tr>
 
 ![](Chart-Types_images/Chart-Types_img27.png)
 
-
+HiLoSeries
+{:.caption}
 
 To create a simple Hilo series use the following code example. 
-{% highlight js %}
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -1860,26 +1884,28 @@ A Polar Chart is a circular graph on which data is displayed in terms of values 
 
 ![](Chart-Types_images/Chart-Types_img28.png)
 
-
+Line Polar Chart
+{:.caption}
 
 ### Area Type
 
 ![](Chart-Types_images/Chart-Types_img29.png)
 
-
+Area Polar Chart
+{:.caption}
 
 ### Column Type
 
 ![](Chart-Types_images/Chart-Types_img30.png)
 
-
-
+Column Polar Chart
+{:.caption}
 
 
 To create a simple Polar series use the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1929,22 +1955,25 @@ RadarSeries is a x, y Chart of three or more quantitative variables represented 
 
 ![](Chart-Types_images/Chart-Types_img31.png)
 
-
+Area RadarSeries
+{:.caption}
 
 ### Line type
 
 ![](Chart-Types_images/Chart-Types_img32.png)
 
-
+Line RadarSeries
+{:.caption}
 
 ### Column type
 
 ![](Chart-Types_images/Chart-Types_img33.png)
 
-
+Column RadarSeries
+{:.caption}
 
 To create simple RadarSeries use the following code example. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 

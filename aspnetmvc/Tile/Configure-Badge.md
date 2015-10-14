@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure-Badge
+title: Configure Badge | Tile | ASP.NET MVC | Syncfusion
 description: configure badge
 platform: ejmvc
 control: Tile
@@ -18,7 +18,7 @@ The Value property is used to set the badge value to a Tile. By default, the Val
 Refer to the following code examples.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Tile("tile").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/messages.png").Text("Messages").Badge(badge => { badge.Enabled(true).MaxValue(80).MinValue(10).Value(88); }).ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium)
 

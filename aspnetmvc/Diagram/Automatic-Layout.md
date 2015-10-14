@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatic-Layout
+title: Automatic Layout | Diagram | ASP.NET MVC | Syncfusion
 description: automatic layout
 platform: ejmvc
 control: Diagram
@@ -21,7 +21,7 @@ The Hierarchical Tree Layout arranges nodes in a tree-like structure, where the 
 
 The following code illustrates how to arrange the nodes in a hierarchical structure.
 
-{% highlight c# %}
+{% highlight JSON %}
 
 
 
@@ -100,7 +100,8 @@ The following example illustrates the horizontal and vertical spacing of Hierarc
 
 ![](Automatic-Layout_images/Automatic-Layout_img1.png)
 
-
+Hierarchical Layout
+{:.caption}
 
 ## Orientation
 
@@ -115,7 +116,8 @@ The following image displays Bottom to Top orientation of layout.
 
 ![](Automatic-Layout_images/Automatic-Layout_img2.png)
 
-
+BottomToTop
+{:.caption}
 
 ## Organizational Chart
 
@@ -125,7 +127,9 @@ How to create a basic organizational chart
 
 The following code example illustrates how to create an organizational chart.
 
-{% highlight html %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 //Data source
@@ -238,12 +242,13 @@ model.DataSourceSettings.Parent = "Supervisor";
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 
 ![](Automatic-Layout_images/Automatic-Layout_img3.png)
 
-
+Organizational chart
+{:.caption}
 
 ## Customizing the organizational chart
 
@@ -263,7 +268,9 @@ The GetLayoutInfo method is called to configure every subtree of the organizatio
 
 The following code example illustrates how to define the method getLayoutInfo.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 
 
@@ -279,9 +286,9 @@ function getLayoutInfo(diagram, node, options) {
 
 }
 
+{% endhighlight %}
 
-
-
+{% highlight C# %}
 
 
 DiagramProperties model = new DiagramProperties();
@@ -298,7 +305,7 @@ model.Layout.GetLayoutInfo = "getLayoutInfo";
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The following table illustrates the properties that options argument takes.
 
@@ -447,7 +454,8 @@ function getLayoutInfo(diagram, node, options) {
 
 ![](Automatic-Layout_images/Automatic-Layout_img10.png)
 
-
+Horizontal left arranged leaf level trees
+{:.caption}
 
 ## Assistant Support
 
@@ -492,4 +500,5 @@ function getLayoutInfo(diagram, node, options) {
 ![](Automatic-Layout_images/Automatic-Layout_img11.png)
 
 
-
+Vertical left arrangement with assistant
+{:.caption}

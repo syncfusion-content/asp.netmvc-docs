@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | PDF | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -38,12 +38,9 @@ Creating a Console Application
 
 The first thing to do in your code is to create the document that is an instance of PdfDocument class.
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 PdfDocument document = new PdfDocument();
-
-
 
 {% endhighlight %}
 
@@ -52,11 +49,9 @@ Create the first page of the document
 Once the document is created, add atleast one page in the document. You can achieve this using the Add method of PdfPage object. A page in the document is an instance of PdfPage class.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 PdfPage page = document.Pages.Add();
-
-
 
 {% endhighlight %}
 
@@ -64,30 +59,27 @@ PdfPage page = document.Pages.Add();
 
 After creating the page, you need to fill it with content. The content of a page is created using the PDF graphics property of the page object. Using the Graphics property of the page, you can draw contents to the page. In this sample, you can write a simple text on the page.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 PdfGraphics graphics = page.Graphics;
 
 graphics.DrawString("Hello world!", new PdfStandardFont(PdfFontFamily.Helvetica, 12), new PdfSolidBrush(Color.Black), new PointF(20, 20));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 Dim graphics As PdfGraphics = page.Graphics
 
 graphics.DrawString("Hello world!", New PdfStandardFont(PdfFontFamily.Helvetica, 12), New PdfSolidBrush(Color.Black), New PointF(20, 20))
 
-
-
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 When drawing text, a font and brush is required. The brush is used to fill the text outline.
@@ -96,28 +88,29 @@ When drawing text, a font and brush is required. The brush is used to fill the t
 
 Once the content is added, you can save the document. You can save the document to a stream or file on disk.
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 document.Save("Sample.pdf");
-
-
 
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 document.Save("Sample.pdf")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 The following code sample illustrates you on how to create a hello world document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -147,14 +140,11 @@ graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
 
 document.Save("Sample.pdf");
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -184,9 +174,8 @@ graphics.DrawString("Hello world!", font, brush,new PointF(20,20))
 
 document.Save("Sample.pdf")
 
-
-
 {% endhighlight %}
+{% endtabs %} 
 
 ## Asynchronous Support
 
@@ -295,9 +284,9 @@ N> This property marks the file by the specified version only. It does not contr
 The following code example illustrates how to change the PDF version to 1.6
 
 
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -335,13 +324,11 @@ document.Save("Output.pdf");
 
 document.Close();
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -379,17 +366,16 @@ document.Save("Output.pdf")
 
 document.Close()
 
-
-
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 It is possible to change PDF version for the existing PDF document using the following code sample.
 
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -409,14 +395,11 @@ document.Save("Output.pdf");
 
 document.Close();
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -438,13 +421,13 @@ document.Close()
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ## PDF Features
 
 Supported and non-supported elements of Essential PDF for Windows, ASP.NET, WPF, ASP.NET MVC, Silverlight, and Windows Store apps are listed in the following table.
 
-_Table_ _2_: List of supported and non-supported elements of Essential PDF
+_List of supported and non-supported elements of Essential PDF_
 
 <table>
 <tr>
@@ -964,8 +947,9 @@ Before you move into creation of the invoice document, you need to remember the 
 
 As an initial step, you need to add a new page and page settings to the document. 
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Initializes a document.
 
@@ -983,14 +967,11 @@ document.PageSettings.Margins.All = 50;
 
 PdfPage page = document.Pages.Add();
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Initializes a document.
 
@@ -1008,11 +989,9 @@ document.PageSettings.Margins.All = 50
 
 Dim page As PdfPage = document.Pages.Add()
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The above code creates a landscape PDF and sets the four margins of the pages as 50 points. The following image illustrates you how the document looks after adding the page settings.
 
@@ -1026,11 +1005,9 @@ The above code creates a landscape PDF and sets the four margins of the pages as
 
 As you can see in the Simple Invoice image, a logo is added at the top-right corner of the document. To add the logo at a very top position of the page, the following code sample allows you to load an image using the Essential Pdf API and draw it on the PDF page. 
 
+{% tabs %}
 
-
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates graphics instance of the page.
 
@@ -1050,9 +1027,7 @@ page.Graphics.DrawImage(img, new RectangleF(g.ClientSize.Width - img.Width, 0, i
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates graphics instance of the page.
 
@@ -1072,6 +1047,7 @@ page.Graphics.DrawImage(img, New RectangleF(g.ClientSize.Width - img.Width, 0, i
 
 {% endhighlight %}
 
+{% endtabs %} 
 In the above code, the X- coordinate of the image is chosen from the right corner of the page by calculating the difference of the page width and the image width. The following screenshot illustrates how the document appears after adding the logo.
 
 
@@ -1084,10 +1060,10 @@ In the above code, the X- coordinate of the image is chosen from the right corne
 
 As you can see in the invoice image, the address of the sender is added to the left corner of the invoice. The following code sample explains you on how to add an address to the page.
 
+{% tabs %}
 
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Creates a text element and assigns the text to be added.
 
@@ -1111,14 +1087,11 @@ element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 
 PdfLayoutResult result = element.Draw(page, new RectangleF(0, 0, page.Graphics.ClientSize.Width / 2, 200));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Creates a text element and assigns the text to be added.
 
@@ -1136,10 +1109,9 @@ element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93))
 
 Dim result As PdfLayoutResult = element.Draw(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width / 2, 200))
 
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 Specify the essential properties of the text such as font, brush, etc., and draw the text to the left most corner (0,0 – coordinate) of the page. Note that the PdfTextElement returns the layout result of the text element that helps you to add the next element without overlapping. The following screenshot displays the document after adding the sender’s address.
 
@@ -1154,22 +1126,20 @@ Specify the essential properties of the text such as font, brush, etc., and draw
 
 Now, move on to the body of the invoice. The body contains the invoice number, date, and buyer’s address. The invoice number and date are placed on a solid rectanglular box to provide a good appearance. You can use the following code to draw a filled rectangle by mentioning the RGB value of the brush. Note that you used the layout result of the previously added object (address) and added a distance of 40 points from there.   
 
+{% tabs %}
 
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Adds a rectangle that contains the invoice number and date.
 
 g.DrawRectangle(new PdfSolidBrush(new PdfColor(126, 151, 173)), new RectangleF(0, result.Bounds.Bottom + 40, g.ClientSize.Width, 30));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 'Adds a rectangle that contains the invoice number and date.
@@ -1178,15 +1148,15 @@ g.DrawRectangle(New PdfSolidBrush(New PdfColor(126, 151, 173)), New RectangleF(0
 
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 Create a font for the subheadings. Specify the font size, style, and color of the brush. Create a new PdfTextElement object and add the invoice number from the database. Finally, you can add the text element to the page using the layout result as mentioned in the following code sample.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Creates a font and style for the subheadings.
 
@@ -1204,14 +1174,11 @@ element.Brush = PdfBrushes.White;
 
 result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 48));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Creates a font and style for the subheadings.
 
@@ -1229,18 +1196,16 @@ element.Brush = PdfBrushes.White
 
 result = element.Draw(page, New PointF(10, result.Bounds.Bottom + 48))
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 Similarly, you can create a text element for the current date and do not forget to reuse the font that is created for the subheading.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Gets the current date.
 
@@ -1254,13 +1219,11 @@ SizeF textSize = subHeadingFont.MeasureString(currentDate);
 
 g.DrawString(currentDate, subHeadingFont, element.Brush, new PointF(g.ClientSize.Width - textSize.Width - 10, result.Bounds.Y));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 'Gets the current date.
@@ -1275,11 +1238,9 @@ Dim textSize As SizeF = subHeadingFont.MeasureString(currentDate)
 
 g.DrawString(currentDate, subHeadingFont, element.Brush, New PointF(g.ClientSize.Width - textSize.Width - 10, result.Bounds.Y))
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The invoice document appears like the following screenshot with the added invoice number and date.
 
@@ -1292,9 +1253,9 @@ The invoice document appears like the following screenshot with the added invoic
 #### Add the buyer’s address
 
 For adding the buyer’s address, follow the steps that you did for the sender’s address. Here, you can use some different fonts and brushes to improve the appearance. Refer the following code sample.
-
-{% highlight c# %}
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a text element for the address. 
 
@@ -1308,13 +1269,11 @@ element.Brush = new PdfSolidBrush(new PdfColor(126, 155, 203));
 
 result = element.Draw(page, new PointF(10, result.Bounds.Bottom + 25));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a text element for the address. 
 
@@ -1328,43 +1287,38 @@ element.Brush = New PdfSolidBrush(New PdfColor(126, 155, 203))
 
 result = element.Draw(page, New PointF(10, result.Bounds.Bottom + 25))
 
-
-
 {% endhighlight %}
-
+{% endtabs %}
 
 
 Adding shapes to the PDF document follows similar APIs as that of Windows GDI plus APIs. Here, to provide a pleasant appearance you can add a line following the heading. To achieve this refer the following code.
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Draws a line from the left corner to the right corner of the page.
 
 g.DrawLine(new PdfPen(new PdfColor(126, 151, 173), 0.70f), new PointF(0, result.Bounds.Bottom + 3), new PointF(g.ClientSize.Width, result.Bounds.Bottom + 3));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Draws a line from the left corner to the right corner of the page.
 
 g.DrawLine(New PdfPen(New PdfColor(126, 151, 173), 0.7F), New PointF(0, result.Bounds.Bottom + 3), New PointF(g.ClientSize.Width, result.Bounds.Bottom + 3))
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 A line is added using a pen color that stretches from left corner to the right corner at a Y-cordinate of 3 points following the previous object. Add the address lines as did before.
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Adds the name of the buyer.
 
@@ -1382,12 +1336,9 @@ element.Brush = new PdfSolidBrush(new PdfColor(89, 89, 93));
 
 result = element.Draw(page, new RectangleF(10, result.Bounds.Bottom + 3, g.ClientSize.Width / 2, 100));
 
-
-
 {% endhighlight %}
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Adds the name of the buyer.
 
@@ -1405,10 +1356,8 @@ element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93))
 
 result = element.Draw(page, New RectangleF(10, result.Bounds.Bottom + 3, g.ClientSize.Width / 2, 100))
 
-
-
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 The following screenshot displays a PDF document with content.
@@ -1430,8 +1379,9 @@ In this document, you require only a low level customization and it can be achie
 
 A PdfGrid can accept data source in the form of Datatable, DataSet, or an IEnumerable collection. Also, the contents/value of the cells can be added directly. In this example, a DataTable object is used as a data source.   
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Creates a PdfGrid object.
 
@@ -1441,13 +1391,9 @@ PdfGrid grid = new PdfGrid();
 
 grid.DataSource = dataSource;
 
-
-
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a PdfGrid object.
 
@@ -1457,20 +1403,18 @@ Dim grid As New PdfGrid()
 
 grid.DataSource = dataSource
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The above code explains you on how to create a PdfGrid object and to assign a data source to it.
 
 #### Create row styles 
 
 As you can see in the invoice image, the table has a different header style than that of the other rows. Using the PdfGridCellStyle class, the properties and appearance of an individual cell/row such as font, border, background image, background color, etc. can be modified. You can achieve this using the following code sample.
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Gets the header of the PdfGrid.
 
@@ -1500,14 +1444,10 @@ headerStyle.Font = new PdfStandardFont(PdfFontFamily.TimesRoman, 14f, PdfFontSty
 
 header.ApplyStyle(headerStyle);
 
-
-
 {% endhighlight %}
 
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Gets the header of the PdfGrid.
 
@@ -1537,17 +1477,15 @@ headerStyle.Font = New PdfStandardFont(PdfFontFamily.TimesRoman, 14.0F, PdfFontS
 
 header.ApplyStyle(headerStyle)
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 From the above code, a cell style with a background color is created for the header row and applied using the ApplyStyle() style method. Moving on to the string format, the first column of the table is always left aligned and the other columns are right aligned. Using the PdfStringFormat class, you can modify the alignment (horizontal and vertical), character spacing, word spacing, and few other properties of the text. The following code iterates through the header cells and sets the string format for them.  
+{% tabs %}
 
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Assigns string format to individual cells of the header.
 
@@ -1573,7 +1511,7 @@ header.Cells[i].StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVe
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Assigns string format to individual cells of the header.
 
@@ -1599,14 +1537,14 @@ Next
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 For other rows, you can assign the cell style and string format for them just as for the header row. As seen in the image, the rows and cells are borderless. Hence, you can set the border brush as white to achieve the borderless appearance.  Remember that, internally you draw one cell at a time and the border brush/style of the next cell can override the previously drawn cell. The folowing code explains how to achieve the appearance for the other rows.
 
+{% tabs %}
 
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Creates a cell style.
 
@@ -1630,53 +1568,51 @@ cellStyle.TextBrush = new PdfSolidBrush(new PdfColor(131, 130, 136));
 
 //Assigns cell style and string format to individual cells of the table rows.
 
-foreach (PdfGridRow row in grid.Rows)
+foreach(PdfGridRow row in grid.Rows)
 
 {
 
-//Sets the cell style for the rows.
+	//Sets the cell style for the rows.
 
-row.ApplyStyle(cellStyle);
+	row.ApplyStyle(cellStyle);
 
- for (int i = 0; i < row.Cells.Count; i++)
+	for (int i = 0; i < row.Cells.Count; i++)
 
-{
+	{
 
-PdfGridCell cell = row.Cells[i];
+		PdfGridCell cell = row.Cells[i];
 
-if (i == 0)
+		if (i == 0)
 
-//Texts in the first column is left aligned.
+		//Texts in the first column is left aligned.
 
-cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
+		cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle);
 
-else
+		else
 
-//Text in the other columns is right aligned.
+		//Text in the other columns is right aligned.
 
-cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
+		cell.StringFormat = new PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle);
 
-if (i > 1)
+		if (i > 1)
 
-float val = float.MinValue;
+		    float val = float.MinValue;
 
-float.TryParse(cell.Value.ToString(), out val);
+		float.TryParse(cell.Value.ToString(), out val);
 
-//Assigns the value with a currency format.
+		//Assigns the value with a currency format.
 
-}
-
-}
+	}
 
 }
 
-
+}
 
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a cell style.
 
@@ -1701,54 +1637,55 @@ cellStyle.TextBrush = New PdfSolidBrush(New PdfColor(131, 130, 136))
 'Assigns cell style and string format to individual cells of the table rows.
 
 For Each row As PdfGridRow In grid.Rows
-
+	
 'Sets the cell style for the rows.
-
-row.ApplyStyle(cellStyle)
-
-For i As Integer = 0 To row.Cells.Count - 1
-
-Dim cell As PdfGridCell = row.Cells(i)
-
-If i = 0 Then
-
-'Text in the first column is left aligned.
-
-cell.StringFormat = New PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle)
-
-Else
-
-'Text in the other columns is right aligned.
-
-cell.StringFormat = New PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle)
-
-End If
-
-If i > 1 Then
-
-Dim val As Single = Single.MinValue
-
-Single.TryParse(cell.Value.ToString(), val)
-
-'Assigns the value with a currency format.
-
-cell.Value = val.ToString("C")
-
-End If
-
+	
+	row.ApplyStyle(cellStyle)
+	
+	For i As Integer = 0 To row.Cells.Count - 1
+		
+		Dim cell As PdfGridCell = row.Cells(i)
+		
+		If i = 0 Then
+			
+           'Text in the first column is left aligned.
+			
+			cell.StringFormat = New PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle)
+			
+		Else
+			
+            'Text in the other columns is right aligned.
+			
+			cell.StringFormat = New PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle)
+			
+		End If
+		
+		If i > 1 Then
+			
+			Dim val As Single = Single.MinValue
+			
+			Single.TryParse(cell.Value.ToString(), val)
+			
+            'Assigns the value with a currency format.
+			
+			cell.Value = val.ToString("C")
+			
+		End If
+		
+	Next
+	
 Next
-
-Next
-
-
 
 {% endhighlight %}
+{% endtabs %} 
 
 #### Create a layout format
 
 Layout format plays an important role in drawing or adding very large contents to the PDF document. You may/may not need the table or contents to flow across pages. Also, you need to specify a location where the contents should start to paginate. In such cases, the layout format plays an important role. In PdfGrid, this is achieved using the PdfGridLayoutFormat class. The PdfGridLayoutFormat class helps to specify the layout type (paginate or fit page) and the paginate bounds. For example, to allow the grid to paginate across pages, to create a multipage invoice in case the content of the table is large.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Creates a grid layout format.
 
@@ -1758,13 +1695,11 @@ PdfGridLayoutFormat layoutFormat = new PdfGridLayoutFormat();
 
 layoutFormat.Layout = PdfLayoutType.Paginate;
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a grid layout format.
 
@@ -1774,39 +1709,34 @@ Dim layoutFormat As New PdfGridLayoutFormat()
 
 layoutFormat.Layout = PdfLayoutType.Paginate
 
-
-
 {% endhighlight %}
+{% endtabs %} 
 
 #### Draw the grid to the PDF page
 
 The Draw() method of the PdfGrid helps to draw the grid to the PDF page. The draw method takes several overloads. However, in this case, you can pass the rectangle and the layout format as parameters. You can also get the layout result of the grid to facilitate drawing the other contents following the grid.
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Draws the PdfGrid to the page by passing the rectangle and layout format parameters.
 
 PdfGridLayoutResult gridResult = grid.Draw(page, new RectangleF(new PointF(0, result.Bounds.Bottom + 40), new SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat);
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Draws the PdfGrid to the page by passing the rectangle and layout format parameters.
 
 Dim gridResult As PdfGridLayoutResult = grid.Draw(page, New RectangleF(New PointF(0, result.Bounds.Bottom + 40), New SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat)
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The invoice document appears like the following image after drawing the table to the page.
 
@@ -1818,8 +1748,9 @@ The invoice document appears like the following image after drawing the table to
 
 Now, with the layout result of the grid, you can add some notes such as total due and other lines following the grid. In this example, as displayed in the image, add those text-lines following the fourth and fifth column of the grid. The following code explains the same.
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Calculates the position of the fourth column by adding their widths.
 
@@ -1849,14 +1780,11 @@ pos += grid.Columns[4].Width;
 
 gridResult.Page.Graphics.DrawString(totalDue.ToString("C"), font, new PdfSolidBrush(new PdfColor(131, 130, 136)), new RectangleF(new PointF(pos, gridResult.Bounds.Bottom + 20), new SizeF(grid.Columns[4].Width - pos, 20)), new PdfStringFormat(PdfTextAlignment.Right));
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 'Calculates the position of the fourth column by adding their widths.
 
@@ -1888,10 +1816,8 @@ pos += grid.Columns(4).Width
 
 gridResult.Page.Graphics.DrawString(totalDue.ToString("C"), font, New PdfSolidBrush(New PdfColor(131, 130, 136)), New RectangleF(New PointF(pos, gridResult.Bounds.Bottom + 20), New SizeF(grid.Columns(4).Width - pos, 20)), New PdfStringFormat(PdfTextAlignment.Right))
 
-
-
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 Now the document appears as the following screenshot.
@@ -1907,9 +1833,9 @@ The final step is adding footer to the invoice. In this example, create a dynami
 Essential PDF also supports dynamic fields through the PdfCompositeField class, where the PdfPageNumberField and PdfPageCountField can be added. As already mentioned, these fields are dynamic fields and the Essential PDF generates the value dynamically based on the document changes and you cannot access it. The PdfPageNumberField and PdfPageCountField calculate the current page number and the total page count respectively. The following code explains how the dynamic fields are added to the invoice document.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Footer.
 
@@ -1941,13 +1867,11 @@ compositeField.Draw(footer.Graphics, new PointF(page.GetClientSize().Width / 2, 
 
 document.Template.Bottom = footer;
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Footer.
 
@@ -1979,38 +1903,33 @@ compositeField.Draw(footer.Graphics, New PointF(page.GetClientSize().Width / 2, 
 
 document.Template.Bottom = footer
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 Finally, you can save the document to the disk or stream using the Save() method of the PdfDocument class.
 
-{% highlight c# %}
+{% tabs %}
 
+{% highlight C# %}
 
 //Saves the document to the disk specifying the path.
 
 document.Save("Invoice.pdf");
 
-
-
 {% endhighlight %}
 
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Saves the document to the disk specifying the path.
 
 document.Save("Invoice.pdf")
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The following screenshot illustrates the completed document that is ready to be distributed.
 

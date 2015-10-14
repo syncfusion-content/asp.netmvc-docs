@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ImageElement
+title: ImageElement | PDF | ASP.NET MVC | Syncfusion
 description: imageelement
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -40,10 +40,9 @@ PdfBitmap class provides functionality of raster images described above. Masks 
 DrawImage method of the PdfGraphics class draws a given image at a specified location and contains parameters that provide control over the image alignment and scaling.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -75,9 +74,7 @@ doc.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -108,16 +105,16 @@ doc.Save("Output.pdf")
 doc.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Working with TIFF
 
 Essential PDF provides you the ability to convert single page or multipage TIFF file into PDF document. When you render a MultiFrame image (Gif, Tif), only the active frame of the image is rendered. The following code illustrates how to draw multipage tiff files using Essential PDF API.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 // Creates a new instance of PdfDocument class.
 
@@ -135,19 +132,19 @@ for (int i = 0; i < frameCount; i++)
 
 {
 
-//Adds pages to the document.
+	//Adds pages to the document.
 
-PdfPage page = doc.Pages.Add();
+	PdfPage page = doc.Pages.Add();
 
-//Creates PDF graphics for the page.
+	//Creates PDF graphics for the page.
 
-PdfGraphics g = page.Graphics;
+	PdfGraphics g = page.Graphics;
 
-image.ActiveFrame = i;
+	image.ActiveFrame = i;
 
-//Draws the image.
+	//Draws the image.
 
-g.DrawImage(image, 0, 0);
+	g.DrawImage(image, 0, 0);
 
 }
 
@@ -162,9 +159,7 @@ doc.Close();
 {% endhighlight %}
 
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Create a new instance of PdfDocument class.
 
@@ -180,19 +175,19 @@ Dim frameCount As Integer = image.FrameCount
 
 For i As Integer = 0 To frameCount - 1
 
-'Adds pages to the document.
+	'Adds pages to the document.
 
-Dim page As PdfPage = doc.Pages.Add()
+	Dim page As PdfPage = doc.Pages.Add()
 
-'Creates PDF graphics for the page.
+	'Creates PDF graphics for the page.
 
-Dim g As PdfGraphics = page.Graphics
+	Dim g As PdfGraphics = page.Graphics
 
-image.ActiveFrame = i
+	image.ActiveFrame = i
 
-'Draws the image.
+	'Draws the image.
 
-g.DrawImage(image, 0, 0)
+	g.DrawImage(image, 0, 0)
 
 Next
 
@@ -205,6 +200,7 @@ doc.Save("Output.pdf")
 doc.Close()
 
 {% endhighlight %}
+{% endtabs %} 
 
 #### Working with Metafile
 
@@ -212,7 +208,6 @@ EMF ONLY, EMF PLUS and EMF PLUS DUAL formats are supported by Essential PDF thro
 
 The following are the public properties of the PdfMetafileLayoutFormat class.
 
-_Table_ _8_: List of public properties of PdfMetafileLayoutFormat class
 
 <table>
 <tr>
@@ -247,10 +242,9 @@ Gets a value that indicates whether PaginateBounds should be used or not.</td></
 
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new instance of PdfDocument class.
 
@@ -292,9 +286,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new instance of PdfDocument class.
 
@@ -331,6 +323,7 @@ doc.Save("Output.pdf")
 doc.Close()
 
 {% endhighlight %}
+{% endtabs %} 
 
 #### Working with Image Masking
 
@@ -339,10 +332,9 @@ Using an image as a mask, a mask image is simply an image where some of the pixe
 A soft mask specifies the transparency level for each pixel of the image. You can create these masks from a grayscale image. The level of gray indicates the level of transparency.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new instance of PdfDocument class.
 
@@ -376,9 +368,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new instance of PdfDocument class.
 
@@ -411,16 +401,16 @@ doc.Save("Output.pdf")
 doc.Close()
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Replacing images
 
 Essential PDF allows you to replace images in an existing document. The ReplaceImage method of the page collection allows you to replace an image. Once the image is replaced, you can save the Updated PDF document.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Loads the PDF document.
 
@@ -444,9 +434,7 @@ doc.Close();
 
 {% endhighlight %}
 
- {% highlight vbnet %}
-
-
+ {% highlight VB %}
 
 'Loads the PDF document.
 
@@ -469,6 +457,7 @@ doc.Save("Output.pdf")
 doc.Close()
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## HTML to Image
 
@@ -477,10 +466,9 @@ Essential PDF allows you to convert HTML file to Image using ConvertToImage. The
 The overloaded ConvertToImage method enables an HTML page to convert into an image with AspectRatio, to maintain the ratio of the image dimension and also enables it to convert an HTML page to a vector image (metafile) or raster image (bitmap) with ImageType.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates HTML converter instance.
 
@@ -498,9 +486,7 @@ html.Dispose();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates HTML converter instance.
 
@@ -517,16 +503,15 @@ image.Save("webImage.jpeg")
 html.Dispose()
 
 {% endhighlight %}
-
+{% endtabs %} 
 ## PDF to Image
 
 Essential PDF allows export of PDF pages as images. PDF viewer instance needs to be created and the PDF document loaded in order to export the images. Specific pages of the PDF document can also be exported.
 
 
+{% tabs %}
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF viewer instance.
 
@@ -554,9 +539,7 @@ view.Dispose();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF viewer instance.
 
@@ -583,4 +566,4 @@ Next
 view.Unload()
 
 {% endhighlight %}
-
+{% endtabs %} 

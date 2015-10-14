@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to ignore the green error marker in worksheets 
+title: How to ignore the green error marker in worksheets | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to ignore the green error marker in worksheets
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,7 +11,8 @@ documentation: ug
 
 You can ignore the error marker that appears in cells when there exists data that are of different formats. This can be done by using the ExcelIgnoreError enumerator that provides various options to ignore the error marker.
 
- 
+{% tabs %}
+
  
 {% highlight C# %}
 
@@ -63,9 +64,9 @@ workbook.SaveAs(fileName)
 ' Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
- 
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ![](FAQ_images/FAQ_img7.png)

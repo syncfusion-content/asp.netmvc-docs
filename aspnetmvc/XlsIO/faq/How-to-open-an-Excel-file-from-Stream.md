@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to open an Excel file from Stream 
+title: How to open an Excel file from Stream | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to open an Excel file from Stream?
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,10 +11,9 @@ documentation: ug
 
 XlsIO provides support for opening a template spreadsheet that is stored as a stream. The following code example illustrates this.
 
- 
+{% tabs %} 
  
 {% highlight C# %}
-
   
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -36,6 +35,7 @@ workbook.SaveAs(fileName);
 // Closes the workbook.
 workbook.Close();
 excelEngine.Dispose();  
+
 {% endhighlight %}    
 
 
@@ -74,6 +74,8 @@ workbook.SaveAs(fileName)
 workbook.Close()
 
 excelEngine.Dispose()
+
 {% endhighlight %}
 
+{% endtabs %}
 

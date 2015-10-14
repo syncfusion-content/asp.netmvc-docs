@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State-Maintenance
+title: State Maintenance | Progress Bar | ASP.NET MVC | Syncfusion
 description: state maintenance
 platform: ejmvc
 control: Progress Bar
@@ -16,17 +16,17 @@ The following steps explain the State Maintenance in the ProgressBar control.
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
 
-{% highlight js %}
+{% highlight CSHTML  %}
+
 // Add the following code example to the corresponding CSHTML page to enable the state maintenance in the ProgressBar control.
 @Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnablePersistence(true)
-{% endhighlight %}
 
-{% highlight javascript %}
 <script>
 	var progress;
-	$(document).ready(function () {
-	progress = $("#progressbar").data("ejProgressBar");
-	progress.setModel({ text: progress.getValue() + " %"});
+	$(document).ready(function () 
+	{
+		progress = $("#progressbar").data("ejProgressBar");
+		progress.setModel({ text: progress.getValue() + " %"});
 	});
 </script>      
 {% endhighlight %}

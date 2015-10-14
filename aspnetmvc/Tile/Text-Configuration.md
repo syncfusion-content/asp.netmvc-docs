@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text-Configuration
+title: Text Configuration | Tile | ASP.NET MVC | Syncfusion
 description: text configuration
 platform: ejmvc
 control: Tile
@@ -21,7 +21,7 @@ ShowText property is used to show or hide the Tile caption. By default, the Show
 Refer to the following code examples.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Tile("tile").Text("Camera").TextAlignment(TextAlignment.Center).ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/UG/web/Content/tile/camera.png")
 

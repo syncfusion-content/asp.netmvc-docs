@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right-to-Left
+title: Right to Left | DateTimePicker | ASP.NET MVC | Syncfusion
 description: right-to-left
 platform: ejmvc
 control: DateTimePicker
@@ -13,28 +13,24 @@ RTL control supports right-to-left functionality and features for languages th
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
    
-     
-	 
-		@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
+        @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
-		@Html.EJ().DateTimePicker("DateTime").EnableRTL(true).Width("175px")
+        @Html.EJ().DateTimePicker("DateTime").EnableRTL(true).Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
   
 
 
 
-2. 
-    
-	![](Right-to-Left_images/Right-to-Left_img1.png)
+2. The following screenshot displays the output for the above code.
 
-	The following screenshot displays the output for the above code.
+   ![](Right-to-Left_images/Right-to-Left_img1.png)
 
-
-_Figure_ _12_: Showcase of DateTimePicker with Right to Left appearance
+   Showcase of DateTimePicker with Right to Left appearance
+   {:.caption}
 
 
 

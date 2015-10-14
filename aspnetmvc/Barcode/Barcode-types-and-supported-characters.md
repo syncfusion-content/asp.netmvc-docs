@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Barcode-types-and-supported-characters
+title: Barcode types and supported characters | Barcode | ASP.NET MVC | Syncfusion
 description: barcode types and supported characters
 platform: ejmvc
 control: Barcode
@@ -11,7 +11,7 @@ documentation: ug
 
 The following table contains the supported types and associated valid characters.
 
-_Table_ _1_: Table of Barcode types and supported character_
+_Table of Barcode types and supported character_
 
 <table>
 <tr>

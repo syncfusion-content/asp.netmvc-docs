@@ -17,7 +17,7 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <head>
 
@@ -37,7 +37,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 
 
-.e-pivotgrid table {
+.e-pivotgrid table 
+{
 
   font: 12px Segoe UI !important;
 
@@ -53,7 +54,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 
 
-.e-pivotgrid .tooltipText {
+.e-pivotgrid .tooltipText 
+{
 
   margin: 5px 0 10px 0;
 
@@ -69,7 +71,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .tooltip {
+.e-pivotgrid .tooltip 
+{
 
   position: absolute;
 
@@ -99,7 +102,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid th,
 
-.e-pivotgrid td {
+.e-pivotgrid td 
+{
 
   padding: 0 2px 0 3px;
 
@@ -115,7 +119,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .value {
+.e-pivotgrid .value 
+{
 
   background-color: White;
 
@@ -125,7 +130,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .summary {
+.e-pivotgrid .summary 
+{
 
   background-color: #ccedff;
 
@@ -141,7 +147,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .colheader,
 
-.e-pivotgrid .rowheader {
+.e-pivotgrid .rowheader 
+{
 
   font-weight: bold;
 
@@ -161,7 +168,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .colheader:hover,
 
-.e-pivotgrid .rowheader:hover {
+.e-pivotgrid .rowheader:hover 
+{
 
   font-weight: bold;
 
@@ -185,7 +193,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .e-rtl .rowheader,
 
-.e-pivotgrid .e-rtl .rowheader:hover {
+.e-pivotgrid .e-rtl .rowheader:hover 
+{
 
   padding: 6px 0px 6px 24px;
 
@@ -193,7 +202,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .expand,
 
-.e-pivotgrid .collapse {
+.e-pivotgrid .collapse 
+{
 
   width: 23px;
 
@@ -205,7 +215,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .expand:before {
+.e-pivotgrid .expand:before 
+{
 
   content: "\e6a3";
 
@@ -221,7 +232,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .e-rtl .expand:before {
+.e-pivotgrid .e-rtl .expand:before 
+{
 
   content: "\e699";
 
@@ -231,13 +243,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .e-rtl .collapse:before {
+.e-pivotgrid .e-rtl .collapse:before 
+{
 
   margin-left: 0px;
 
 }
 
-.e-pivotgrid .collapse:before {
+.e-pivotgrid .collapse:before 
+{
 
   content: "\e6a0";
 
@@ -253,7 +267,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpiiconvalue {
+.e-pivotgrid .kpiiconvalue 
+{
 
   height: 20px;
 
@@ -263,19 +278,22 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpiuparrow {
+.e-pivotgrid .kpiuparrow 
+{
 
   background-image: url("../common-images/olapkpi/up-arrow.png");
 
 }
 
-.e-pivotgrid .kpirightarrow {
+.e-pivotgrid .kpirightarrow 
+{
 
   background-image: url("../common-images/olapkpi/right-arrow.png");
 
 }
 
-.e-pivotgrid .kpidownarrow {
+.e-pivotgrid .kpidownarrow 
+{
 
   background-image: url("../common-images/olapkpi/down-arrow.png");
 
@@ -283,7 +301,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpidiamond {
+.e-pivotgrid .kpidiamond 
+{
 
   background-image: url("../common-images/olapkpi/diamond.png");
 
@@ -291,7 +310,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpitriangle {
+.e-pivotgrid .kpitriangle 
+{
 
   background-image: url("../common-images/olapkpi/triangle.png");
 
@@ -299,7 +319,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpicircle {
+.e-pivotgrid .kpicircle 
+{
 
   background-image: url("../common-images/olapkpi/circle.png");
 
@@ -307,7 +328,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpiredroad {
+.e-pivotgrid .kpiredroad 
+{
 
   background-image: url("../common-images/olapkpi/red.png");
 
@@ -315,7 +337,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpigreenroad {
+.e-pivotgrid .kpigreenroad 
+{
 
   background-image: url("../common-images/olapkpi/green.png");
 
@@ -323,7 +346,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .kpiallcolor {
+.e-pivotgrid .kpiallcolor 
+{
 
   background-image: url("../common-images/olapkpi/three-color.png");
 
@@ -331,7 +355,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .hyperlinkValueCell {
+.e-pivotgrid .hyperlinkValueCell 
+{
 
   color: #0026ff;
 
@@ -341,7 +366,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .hyperlinkHeaderCell {
+.e-pivotgrid .hyperlinkHeaderCell 
+{
 
   text-decoration: underline;
 
@@ -349,7 +375,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .vScrollPanel {
+.e-pivotgrid .vScrollPanel
+{
 
   background-color: #efefef;
 
@@ -361,7 +388,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .hScrollPanel {
+.e-pivotgrid .hScrollPanel 
+{
 
   background-color: #efefef;
 
@@ -371,7 +399,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .vScrollThumb {
+.e-pivotgrid .vScrollThumb 
+{
 
   width: 6px;
 
@@ -385,7 +414,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotgrid .hScrollThumb {
+.e-pivotgrid .hScrollThumb 
+{
 
   height: 6px;
 
@@ -401,7 +431,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .categPageIndicator,
 
-.e-pivotgrid .seriesPageIndicator {
+.e-pivotgrid .seriesPageIndicator 
+{
 
   width: auto;
 
@@ -419,25 +450,29 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotgrid .vScrollThumb:hover,
 
-.e-pivotgrid .hScrollThumb:hover {
+.e-pivotgrid .hScrollThumb:hover 
+{
 
   background-color: #909090;
 
 }
 
-.e-pivotgrid .inActive {
+.e-pivotgrid .inActive 
+{
 
   display: none;
 
 }
 
-.e-pivotgrid .dragging {
+.e-pivotgrid .dragging 
+{
 
   background-color: #5e5e5e !important;
 
 }
 
-.progressContainer {
+.progressContainer 
+{
 
   width: 360px;
 
@@ -455,7 +490,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.progressBar {
+.progressBar 
+{
 
   width: 300px;
 
@@ -469,7 +505,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.progressText {
+.progressText 
+{
 
   width: 350px;
 
@@ -487,7 +524,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 /*-------------For Pivot Schema Designer control definition--------------*/
 
-.e-pivotschemadesigner {
+.e-pivotschemadesigner 
+{
 
   background: none repeat scroll 0 0 White;
 
@@ -499,7 +537,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.bg-div {
+.bg-div 
+{
 
   background: none repeat scroll 0 0 White;
 
@@ -507,7 +546,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .fieldTable {
+.e-pivotschemadesigner .fieldTable 
+{
 
   background-color: White;
 
@@ -521,7 +561,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .schemaFieldList {
+.e-pivotschemadesigner .schemaFieldList 
+{
 
   display: inline-block;
 
@@ -535,7 +576,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .elementSeparator {
+.e-pivotschemadesigner .elementSeparator 
+{
 
   border: solid #bbbcbb;
 
@@ -547,7 +589,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .schemaFieldTree {
+.e-pivotschemadesigner .schemaFieldTree 
+{
 
   overflow: hidden;
 
@@ -555,13 +598,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .editorTreeView {
+.e-pivotschemadesigner .editorTreeView 
+{
 
   margin-top: 7px;
 
 }
 
-.e-pivotschemadesigner .schemaHeaders {
+.e-pivotschemadesigner .schemaHeaders 
+{
 
   overflow: hidden;
 
@@ -573,7 +618,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .schemaRow,
 
-.e-pivotschemadesigner .schemaValue {
+.e-pivotschemadesigner .schemaValue 
+{
 
   background-color: #f9f9f9;
 
@@ -595,13 +641,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .schemaColumn,
 
-.e-pivotschemadesigner .schemaValue {
+.e-pivotschemadesigner .schemaValue 
+{
 
   margin-right: 10px;
 
 }
 
-.e-pivotschemadesigner .listSubhead {
+.e-pivotschemadesigner .listSubhead 
+{
 
   margin: 15px 0 0;
 
@@ -609,7 +657,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .pivotHeader,
 
-.e-pivotschemadesigner .rPivotHeader {
+.e-pivotschemadesigner .rPivotHeader 
+{
 
   color: white;
 
@@ -621,7 +670,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .listHeader {
+.e-pivotschemadesigner .listHeader 
+{
 
   color: white;
 
@@ -635,7 +685,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .folderCDB:before {
+.e-pivotschemadesigner .folderCDB:before 
+{
 
   content: "\e6e1";
 
@@ -647,7 +698,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .namedSetCDB:before {
+.e-pivotschemadesigner .namedSetCDB:before
+{
 
   content: "\e6de";
 
@@ -655,7 +707,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .measureGroupCDB:before {
+.e-pivotschemadesigner .measureGroupCDB:before 
+{
 
   content: "\e615";
 
@@ -665,7 +718,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .dimensionCDB:before {
+.e-pivotschemadesigner .dimensionCDB:before
+{
 
   content: "\e704";
 
@@ -675,7 +729,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .centerDiv {
+.e-pivotschemadesigner .centerDiv 
+{
 
   background-color: #bbbcbb;
 
@@ -689,13 +744,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .centerDiv:hover {
+.e-pivotschemadesigner .centerDiv:hover 
+{
 
   cursor: default;
 
 }
 
-.e-pivotschemadesigner .centerHead {
+.e-pivotschemadesigner .centerHead 
+{
 
   margin: 10px;
 
@@ -707,7 +764,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .pivotHeader,
 
-.e-pivotschemadesigner .rPivotHeader {
+.e-pivotschemadesigner .rPivotHeader
+{
 
   border: 1px solid #bbbcbb;
 
@@ -727,19 +785,22 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .schemaColumn,
 
-.e-pivotschemadesigner .schemaValue {
+.e-pivotschemadesigner .schemaValue 
+{
 
   margin-left: 1%;
 
 }
 
-.e-pivotschemadesigner .headerText {
+.e-pivotschemadesigner .headerText 
+{
 
   padding-left: 5px;
 
 }
 
-.e-pivotschemadesigner .subheadText {
+.e-pivotschemadesigner .subheadText
+{
 
   padding-left: 10px;
 
@@ -751,7 +812,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .pivotLabel:hover {
+.e-pivotschemadesigner .pivotLabel:hover 
+{
 
   background: none repeat scroll 0 0 #5eabde;
 
@@ -761,13 +823,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .pivotButton {
+.e-pivotschemadesigner .pivotButton 
+{
 
   display: block;
 
 }
 
-.e-pivotschemadesigner .pivotButton > .pvtBtn {
+.e-pivotschemadesigner .pivotButton > .pvtBtn
+{
 
   cursor: move;
 
@@ -785,13 +849,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .pvtDrop:before,
 
-.e-pivotschemadesigner .treeDrop:before {
+.e-pivotschemadesigner .treeDrop:before 
+{
 
   content: "\e666";
 
 }
 
-.e-pivotschemadesigner .treeDrop {
+.e-pivotschemadesigner .treeDrop 
+{
 
   color: #5c5c5c;
 
@@ -803,7 +869,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .dropIndicator {
+.e-pivotschemadesigner .dropIndicator 
+{
 
   background: none repeat scroll 0 0 transparent;
 
@@ -813,13 +880,15 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .dropIndicatorHover {
+.e-pivotschemadesigner .dropIndicatorHover 
+{
 
   background: none repeat scroll 0 0 #99b4d1;
 
 }
 
-.e-pivotschemadesigner .removePivotBtn:before {
+.e-pivotschemadesigner .removePivotBtn:before 
+{
 
   background-repeat: no-repeat;
 
@@ -847,7 +916,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .removePivotBtn:hover {
+.e-pivotschemadesigner .removePivotBtn:hover 
+{
 
   cursor: pointer;
 
@@ -855,19 +925,22 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .ascending:before {
+.e-pivotschemadesigner .ascending:before 
+{
 
   content: "\e672";
 
 }
 
-.e-pivotschemadesigner .descending:before {
+.e-pivotschemadesigner .descending:before 
+{
 
   content: "\e673";
 
 }
 
-.e-pivotschemadesigner .filter:before {
+.e-pivotschemadesigner .filter:before 
+{
 
   content: "\e669";
 
@@ -879,7 +952,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .treeDrop:before {
+.e-pivotschemadesigner .treeDrop:before 
+{
 
   float: right;
 
@@ -887,7 +961,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .treeDrop {
+.e-pivotschemadesigner .treeDrop 
+{
 
   color: white;
 
@@ -895,19 +970,22 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .filterBtn {
+.e-pivotschemadesigner .filterBtn 
+{
 
   height: 24px;
 
 }
 
-.e-pivotschemadesigner .filterIndicator {
+.e-pivotschemadesigner .filterIndicator 
+{
 
   background: none repeat scroll 0 0 #2382c3;
 
 }
 
-.e-pivotschemadesigner .memberEditorDiv {
+.e-pivotschemadesigner .memberEditorDiv 
+{
 
   height: 256px;
 
@@ -919,7 +997,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .dialogOKBtn,
 
-.e-pivotschemadesigner .dialogCancelBtn {
+.e-pivotschemadesigner .dialogCancelBtn 
+{
 
   width: 69px;
 
@@ -927,25 +1006,29 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .dialogOKBtn {
+.e-pivotschemadesigner .dialogOKBtn 
+{
 
   margin-left: 83px;
 
 }
 
-.e-pivotschemadesigner .e-chkbox-wrap {
+.e-pivotschemadesigner .e-chkbox-wrap 
+{
 
   margin-left: 7px;
 
 }
 
-.e-pivotschemadesigner .e-tbtn-wrap {
+.e-pivotschemadesigner .e-tbtn-wrap 
+{
 
   display: inline-block;
 
 }
 
-.e-pivotschemadesigner .e-togglebutton .e-icon {
+.e-pivotschemadesigner .e-togglebutton .e-icon 
+{
 
   height: 14px;
 
@@ -953,7 +1036,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .e-treeview .e-text {
+.e-pivotschemadesigner .e-treeview .e-text 
+{
 
   min-height: 20px;
 
@@ -969,7 +1053,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .schemaFieldTree.e-treeview .e-text {
+.e-pivotschemadesigner .schemaFieldTree.e-treeview .e-text 
+{
 
   width: 97%;
 
@@ -977,7 +1062,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 .e-pivotschemadesigner .schemaFieldTree ul,
 
-.e-pivotschemadesigner .schemaFieldTree li {
+.e-pivotschemadesigner .schemaFieldTree li 
+{
 
   width: 96%;
 
@@ -985,7 +1071,8 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
-.e-pivotschemadesigner .e-btn .e-btntxt {
+.e-pivotschemadesigner .e-btn .e-btntxt 
+{
 
   padding: 0 6px 6px;
 

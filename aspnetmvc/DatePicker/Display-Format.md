@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display-Format
+title: Display Format | DatePicker | ASP.NET MVC | Syncfusion
 description: display format
 platform: ejmvc
 control: DatePicker
@@ -15,7 +15,7 @@ DateFormat defines a format or structure of the displayed date in the textbox. Y
 
 The standard formats are listed as follows,
 
-_Table2: Date format_
+_Date format_
 
 <table>
 <tr>
@@ -51,21 +51,24 @@ The following steps explain you how to set the date format as "d MM, y".
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with DateFormat.
 
-{% highlight html %}
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
 
-		@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
+	@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
 
-{% endhighlight %}
+   ~~~
+   
 
 
-2.The following screenshot displays the output for the above code.
+2.  The following screenshot displays the output for the above code.
 
 
 
 ![](Display-Format_images/Display-Format_img1.png)
 
+DateFormat in DatePicker 
+{:.caption}
 
 ## Day header format
 
@@ -102,19 +105,25 @@ The following steps explain you how to get the DayHeaderFormat for DatePicker wi
 1. In the CSHTML page, add the following code to render the DatePicker widget with DayHeaderFormat.
 
 
-{% highlight html %}
+   ~~~ cshtml
    
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
 
-		@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
+	@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
 
-{% endhighlight %}
+   ~~~
+  
 
-2.The following screenshot displays the output for the above code.
+
+
+2.  The following screenshot displays the output for the above code.
 
 
 
 ![](Display-Format_images/Display-Format_img2.png)
+
+Header Format in DatePicker
+{:.caption}
 
 ## Header format
 
@@ -127,16 +136,21 @@ The following steps explain you how to the header format to be displayed in the 
 1. In the CSHTML page, add the following code to render the DatePicker widget with header format.
 
 
-{% highlight html %}
+   ~~~ cshtml
    
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
 
-		@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
+	@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
 
-{% endhighlight %}
+   ~~~
+  
 
-2.The following screenshot displays the output for the above code.
+
+2. The following screenshot displays the output for the above code.
 
 
 
 ![](Display-Format_images/Display-Format_img3.png)
+
+Header Format in DatePicker
+{:.caption}

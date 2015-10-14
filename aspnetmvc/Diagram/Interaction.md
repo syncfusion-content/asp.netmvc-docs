@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction
+title: Interaction | Diagram | ASP.NET MVC | Syncfusion
 description: interaction
 platform: ejmvc
 control: Diagram
@@ -58,7 +58,6 @@ The following code illustrates how to activate and deactivate the desired tool.
 {% highlight js %}
 
 
-
 //Activates pan tool
 
 var diagram = $("#Diagram").ejDiagram("instance");
@@ -66,12 +65,9 @@ var diagram = $("#Diagram").ejDiagram("instance");
 diagram.activateTool("panTool");
 
 
-
 //Deactivates current tool
 
 diagram.deactivateTool();
-
-
 
 {% endhighlight %}
 
@@ -100,15 +96,11 @@ The following code illustrates how to add node/connector to selection.
 
 {% highlight js %}
 
-
-
 var node = diagram.model.nodes[0];
 
 //Adds node to selection
 
 diagram.addSelection(node);
-
-
 
 {% endhighlight %}
 
@@ -116,7 +108,8 @@ diagram.addSelection(node);
 
 ![](Interaction_images/Interaction_img1.png)
 
-
+Single selection
+{:.caption}
 
 ### Multiple Selections
 
@@ -130,7 +123,8 @@ Rubber band selection is done by clicking and dragging mouse pointer on the Diag
 
 ![](Interaction_images/Interaction_img2.png)
 
-
+Multiple Selections
+{:.caption}
 
 ## User Handle
 
@@ -264,7 +258,6 @@ this.selectedObject = this.diagram.selectionList[0];
 };
 
 
-
 //mouse move for delete tool
 
 DeleteTool.prototype.mousemove = function (evt) { 
@@ -272,7 +265,6 @@ DeleteTool.prototype.mousemove = function (evt) {
 base.prototype.mousemove.call(this, evt);
 
 };
-
 
 //mouse up for delete tool
 
@@ -296,8 +288,6 @@ return DeleteTool;
 
 })
 
-
-
 {% endhighlight %}
 
 ### Adding delete handle in Diagram
@@ -306,21 +296,17 @@ The following code illustrates how to add Delete handle in Diagram.
 
 {% highlight js %}
 
-
-
 //Adds user handles to diagram
 
 $(“#Diagram”).ejDiagram({ userHandles: userHandles });
 
-
-
 {% endhighlight %}
-
 
 
 ![](Interaction_images/Interaction_img3.png)
 
-
+Delete-User Handle
+{:.caption}
 
 ## Zoom 
 
@@ -342,7 +328,6 @@ Diagram allows you to set the ZoomFactor where you can zoom in or out. This fact
 {% highlight c# %}
 
 diagram.Model.ZoomFactor = 0.2; 
-
 
 
 {% endhighlight %}
@@ -487,7 +472,6 @@ Snapping to gridlines is enabled or disabled by changing the value of snap Setti
 {% highlight c# %}
 
 
-
 //Enables snap to horizontal gridlines constraint
 
 model.SnapSettings.SnapConstraints = SnapConstraints.SnapToHorizontalLines;
@@ -501,7 +485,6 @@ model.SnapSettings.SnapConstraints = SnapConstraints.SnapToVerticalLines;
 model.SnapSettings.SnapConstraints = SnapConstraints.SnapToLines;
 
 
-
 {% endhighlight %}
 
 ### SnapInterval
@@ -511,10 +494,7 @@ You can customize the position where a Diagram object snaps by changing the valu
 SnapInterval is a double collection that determines the space between patterns of gridlines.
 
 
-
 {% highlight c# %}
-
-
 
 
 //Sets snap interval
@@ -524,7 +504,6 @@ List<decimal> interval = new List<decimal>();
 interval.Add(20);
 
 model.SnapSettings.HorizontalGridlines.SnapInterval = interval;
-
 
 
 {% endhighlight %}
@@ -537,9 +516,10 @@ The snap-to-object feature provides visual cues to assist with aligning and spac
 
 ![](Interaction_images/Interaction_img4.png)
 
+Snap to Object
+{:.caption}
 
-
-Enabling and Disabling snapping to objects
+#### Enabling and Disabling snapping to objects
 
 SnapSettings.EnableSnapToObject determines whether nodes are snapped to object or not.
 

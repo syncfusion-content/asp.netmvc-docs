@@ -1,17 +1,20 @@
 ---
 layout: post
-title: How to open an Excel 2007 Macro Enabled Template 
+title: How to open an Excel 2007 Macro Enabled Template | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to open an Excel 2007 Macro Enabled Template
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
 # How to open an Excel 2007 Macro Enabled Template
 
 XlsIO now provides support to open and save an Excel 2013 Macro Enabled Template to XLSM (Excel 2013 Macro Enabled Document) format. The following code example illustrates this.
- 
+
+
+{% tabs %}
 {% highlight C# %}
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -45,6 +48,7 @@ workbook.SaveAs("Sample.xlsm", ExcelSaveType.SaveAsTemplate)
 
  
 {% endhighlight %}
+{% endtabs %}
 
 
 N> You need to change the Excel Version, if you want to save to another version.

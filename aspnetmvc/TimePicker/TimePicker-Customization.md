@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TimePicker-Customization
+title: TimePicker Customization | TimePicker | ASP.NET MVC | Syncfusion
 description: timepicker customization
 platform: ejmvc
 control: TimePicker
@@ -17,19 +17,17 @@ The following steps explains you to create a TimePicker widget.
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
-{% highlight html %}
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-		@Html.EJ().TimePicker("time")
+	@Html.EJ().TimePicker("time")
 
-{% endhighlight %}
+   ~~~
+   
 
-2.The following screenshot illustrates you a default TimePicker.
+2. The following screenshot illustrates you a default TimePicker.
+![](TimePicker-Customization_images/TimePicker-Customization_img1.png)
 
-
-   ![](TimePicker-Customization_images/TimePicker-Customization_img1.png)
-
-
-   _Figure 8: TimePicker Control_
-
+TimePicker Control
+{:.caption}

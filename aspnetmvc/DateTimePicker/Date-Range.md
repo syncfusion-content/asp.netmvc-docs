@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date-Range
+title: Date Range | DateTimePicker | ASP.NET MVC | Syncfusion
 description: date range
 platform: ejmvc
 control: DateTimePicker
 documentation: ug
 ---
 
-## Date Range
+# Date Range
 
 Date Range between two dates is achieved by MinDateTime, MaxDateTime property of DateTimePicker.
 
@@ -26,16 +26,19 @@ In the following example May 10, 2015 09:00 AM is set as MinDateTime and May 20,
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
 
-   ~~~ js
+   ~~~ cshtml
 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Mintime and Maxtime*@
+	@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Mintime and Maxtime*@
 
-		@Html.EJ().DateTimePicker("DateTime").MinDateTime("05/10/2015 09:00 AM").MaxDateTime("05/20/2015 09:00 PM").Interval(30).Width("175px")
+	@Html.EJ().DateTimePicker("DateTime").MinDateTime("05/10/2015 09:00 AM").MaxDateTime("05/20/2015 09:00 PM").Interval(30).Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The following screenshot displays the output for the above code.
 
 	![](Date-Range_images/Date-Range_img1.png)
+    
+	Showcase of min and max dates in DateTimePicker
+	{:.caption}

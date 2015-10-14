@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization-Support
+title: Localization Support | PercentageTextBox | ASP.NET MVC | Syncfusion
 description: localization support
 platform: ejmvc
 control: PercentageTextBox
@@ -35,7 +35,7 @@ The following example describes the way to use localization in PercentageTextBox
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("21234").Locale("de-DE")
 

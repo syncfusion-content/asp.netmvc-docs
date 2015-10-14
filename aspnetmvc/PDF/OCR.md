@@ -1,9 +1,9 @@
 ---
 layout: post
-title: OCR
+title: OCR | PDF | ASP.NET MVC | Syncfusion
 description: ocr
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -21,7 +21,7 @@ Use Case Scenarios
 
 #### Properties
 
-_Table_ _32_: Property Table
+
 
 <table>
 <tr>
@@ -65,9 +65,9 @@ Gets or sets the black-list values. Blacklist of characters not to recognize.</t
 WhiteList</td><td>
 Gets or sets the white-list values. Whitelist of characters to recognize.</td></tr>
 </table>
-Methods
 
-_Table_ _33_: Method Table
+#### Methods
+
 
 <table>
 <tr>
@@ -121,10 +121,10 @@ To perform OCR on PDF using OCR processor, first you need to create an OCRProces
 The following code example illustrates how to perform OCR for a complete PDF document.
 
 
+{% tabs %}
 
-{% highlight c# %}
 
-
+{% highlight C# %}
 
 //Initializes the OCR processor by providing tesseract binaries(SyncfusionTesseract.dll and liblept168.dll)
 
@@ -134,58 +134,57 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 
 {
 
-//Loads a PDF document.
+	//Loads a PDF document.
 
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+	PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
 
-//Sets OCR language to process.
+	//Sets OCR language to process.
 
-processor.Settings.Language = Languages.English;
+	processor.Settings.Language = Languages.English;
 
-//Processes OCR by providing PDF document, data dictionary and language.
+	//Processes OCR by providing PDF document, data dictionary and language.
 
-processor.PerformOCR(lDoc, @"Tessdata\");
+	processor.PerformOCR(lDoc, @"Tessdata\");
 
-//Saves the OCR processed PDF document in a disk.
+	//Saves the OCR processed PDF document in a disk.
 
-lDoc.Save("Sample.pdf");
+	lDoc.Save("Sample.pdf");
 
-lDoc.Close(true);
+	lDoc.Close(true);
 
 }
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
-
-
-'Initializes OCR processor by providing tesseract binaries          (SyncfusionTesseract.dll and liblept168.dll) to the OCR processor overload.
+'Initializes OCR processor by providing tesseract binaries   (SyncfusionTesseract.dll and liblept168.dll) to the OCR processor overload.
 
 Using processor As New OCRProcessor("TesseractBinaries\")
 
-'Loads a PDF document.
+	'Loads a PDF document.
 
-Dim lDoc As New PdfLoadedDocument("Input.pdf")
+	Dim lDoc As New PdfLoadedDocument("Input.pdf")
 
-'Sets OCR language to process.
+	'Sets OCR language to process.
 
-processor.Settings.Language = Languages.English
+	processor.Settings.Language = Languages.English
 
-'Processes OCR by providing PDF document, data dictionary and language.
+	'Processes OCR by providing PDF document, data dictionary and language.
 
-processor.PerformOCR(lDoc, "Tessdata\")
+	processor.PerformOCR(lDoc, "Tessdata\")
 
-'Saves the OCR processed PDF document in a disk.
+	'Saves the OCR processed PDF document in a disk.
 
-lDoc.Save("Sample.pdf")
+	lDoc.Save("Sample.pdf")
 
-lDoc.Close(True)
+	lDoc.Close(True)
 
 End Using
 
 {% endhighlight %}
-
+{% endtabs %} 
+ 
 ## Perform OCR for a Specific Region of PDF Document
 
 Essential PDF OCR processor allows you to process the part of the PDF document.
@@ -194,7 +193,9 @@ The following code example explains you how to perform OCR for a specific region
 
 
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Initializes OCR processor by providing tesseract binaries (SyncfusionTesseract.dll and liblept168.dll)to the OCR processor overload.
 
@@ -202,45 +203,45 @@ using (OCRProcessor processor = new OCRProcessor(@"TesseractBinaries\"))
 
 {
 
-//Loads a PDF document
+	//Loads a PDF document
 
-PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
+	PdfLoadedDocument lDoc = new PdfLoadedDocument("Input.pdf");
 
-//Sets OCR language to process.
+	//Sets OCR language to process.
 
-processor.Settings.Language = Languages.English;
+	processor.Settings.Language = Languages.English;
 
-RectangleF rect = new RectangleF(0, 100, 950, 150);
+	RectangleF rect = new RectangleF(0, 100, 950, 150);
 
-//Assigns rectangles to the page
+	//Assigns rectangles to the page
 
-PageRegion region = new PageRegion();
+	PageRegion region = new PageRegion();
 
-List<PageRegion> pageRegions = new List<PageRegion>();
+	List<PageRegion> pageRegions = new List<PageRegion>();
 
-region.PageIndex = 1;
+	region.PageIndex = 1;
 
-region.PageRegions = new RectangleF[] { rect };
+	region.PageRegions = new RectangleF[] { rect };
 
-pageRegions.Add(region);
+	pageRegions.Add(region);
 
-processor.Settings.Regions = pageRegions;
+	processor.Settings.Regions = pageRegions;
 
-//Processes OCR by providing the PDF document, data dictionary and language
+	//Processes OCR by providing the PDF document, data dictionary and language
 
-processor.PerformOCR(lDoc, @"Tessdata\");
+	processor.PerformOCR(lDoc, @"Tessdata\");
 
-//Saves the OCR processed PDF document in a disk.
+	//Saves the OCR processed PDF document in a disk.
 
-lDoc.Save("Sample.pdf");
+	lDoc.Save("Sample.pdf");
 
-lDoc.Close(true);
+	lDoc.Close(true);
 
 }
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -283,8 +284,8 @@ lDoc.Save("Sample.pdf")
 lDoc.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %} 
 N> The Tesseract binaries, namely SyncfusionTessaract.dll, liblept168.dll, and language pack (tessdata), will be available in the following location.
 
-<<Installation Location>>\Syncfusion\Essential Studio\<<Version Number>>\OCRProcessor
+&lt;&lt;Installation Location&gt;&gt;\Syncfusion\Essential Studio\&lt;&ltVersion Number&gt;&gt;\OCRProcessor
 

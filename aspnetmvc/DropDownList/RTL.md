@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL
+title: RTL | DropDownList | ASP.NET MVC | Syncfusion
 description: rtl
 platform: ejmvc
 control: DropDownList
@@ -19,7 +19,7 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -27,60 +27,54 @@ The following steps explains you the configuration of EnableRTL properties in Dr
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").EnableRTL(true) 
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
+	</ul>
 
-
-
-        </div>
-
-
+</div>
 
 
 // Add Dropdown list widget in ASPX page
 
-
-
 <div class="control">
 
-      <ej:DropDownList ID="dropdownlist" TargetID="list" Width="200px" EnableRTL="true"  runat="server">
+  <ej:DropDownList ID="dropdownlist" TargetID="list" Width="200px" EnableRTL="true"  runat="server">
 
-      </ej:DropDownList>
+  </ej:DropDownList>
 
-     <div id="list">
+ <div id="list">
 
-            <ul>
+		<ul>
 
-                <li>Art</li>
+			<li>Art</li>
 
-                <li>Architecture</li>
+			<li>Architecture</li>
 
-                <li>Biography</li>
+			<li>Biography</li>
 
-                <li>Comics</li>
+			<li>Comics</li>
 
-                <li>Sports</li>
+			<li>Sports</li>
 
-                <li>Science</li>
+			<li>Science</li>
 
-             </ul>
+		 </ul>
 
-     </div>
+ </div>
 
 </div>    
 
@@ -91,7 +85,5 @@ Output of the above steps
 
 ![](RTL_images/RTL_img1.png)
 
-
-
-_Figure 30: Dropdown with EnableRTL property_  
-
+Dropdown with EnableRTL property 
+{:.caption}

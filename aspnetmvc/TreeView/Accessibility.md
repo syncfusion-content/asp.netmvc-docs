@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility
+title: Accessibility | TreeView | ASP.NET MVC | Syncfusion
 description: accessibility
 platform: ejmvc
 control: TreeView
@@ -15,7 +15,7 @@ This feature is mainly useful for all the keyboard users to access the TreeView 
 
 The following table showcases the various keyboard shortcuts available in the TreeView control. 
 
-_Table3: Keyboard Shortcuts_
+_Keyboard Shortcuts_
 
 <table>
 <tr>
@@ -85,7 +85,7 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-   ~~~ js
+   ~~~ cshtml
 
 		\\ To configure TreeView in the CSHTML page@Html.EJ().TreeView("treeview").Items(items =>
 		{items.Add().Text("Favorites").Expanded(true).Children(child =>  
@@ -121,11 +121,6 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 			});   
 		}).ShowCheckbox(true).AllowEditing(true).AllowKeyboardNavigation(true)
 
-   ~~~
-   {:.prettyprint }
-		
-   ~~~ js
-		
 		<script type="text/javascript">
 		
 		//Control focus key
@@ -138,31 +133,30 @@ The following steps explain how to enable the AllowKeyboardNavigation property f
 		</script>
 		
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Define CSS class for customizing the TreeView.
 
    ~~~ css
 
-		<style>
+	<style>
 
-		    .Treeview {
+		.Treeview 
+		{
 
-			display: inline-block;
+		display: inline-block;
 
-			float: left;
+		float: left;
 
-			width: 153px;
+		width: 153px;
 
-		    }
+		}
 
-
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -172,5 +166,6 @@ The output for TreeView when AllowKeyboardNavigation is set to “True”.
 
 ![](Accessibility_images/Accessibility_img1.png)
 
-_Figure58: TreeView with allowKeyboardNavigation_
+TreeView with allowKeyboardNavigation
+{:.caption}
 

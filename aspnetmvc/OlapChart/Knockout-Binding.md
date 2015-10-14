@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Knockout-Binding
+title: Knockout Binding | OLAPChart | ASP.NET MVC | Syncfusion
 description: knockout binding
 platform: ejmvc
 control: OLAPChart

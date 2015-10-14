@@ -1,16 +1,17 @@
 ---
 layout: post
-title: How to zip all the files in subfolders by using the Syncfusion.Compression.Zip namespace 
+title: How to zip all the files in subfolders by using the Syncfusion.Compression.Zip namespace | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to zip all the files in subfolders by using the Syncfusion.Compression.Zip namespace
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
 # How to zip all the files in subfolders by using the Syncfusion.Compression.Zip namespace
 
 The following code example illustrates how to zip all files in subfolders in XlsIO by using the Syncfusion.Compression.Zip namespace.
- 
+
+{% tabs %} 
 {% highlight C# %}
 
 private void SubFoldersFiles(string path)
@@ -170,4 +171,5 @@ private void button3_Click(object sender, EventArgs e)
 
 {% endhighlight %}
 
+{% endtabs %}
 ![](FAQ_images/FAQ_img2.png)

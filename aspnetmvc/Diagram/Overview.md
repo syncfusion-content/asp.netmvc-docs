@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
-description: overview
+title: Diagram | Diagram  | ASP.NET MVC | Syncfusion
+description: Diagram
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Overview
+# Diagram
 
 EssentialDiagramASP.NET MVC creates rich Visio-like applications. Its framework comprises of many Elements that helps you to create an application easily. The rich feature set of the Diagram control includes Snapping, Guidelines, Gridlines, Serialization and Zooming.
 
@@ -15,6 +15,8 @@ EssentialDiagramASP.NET MVC creates rich Visio-like applications. Its framework 
 
 ![](Overview_images/Overview_img1.png)
 
+Diagram
+{:.caption}
 
 
 The list of features of the Diagram control in ASP.NET MVC are as follows.

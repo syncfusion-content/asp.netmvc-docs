@@ -1,9 +1,9 @@
----
+﻿---
 layout: post
-title: How to Create Template Markers by using XlsIO 
+title: How to Create Template Markers by using XlsIO | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to Create Template Markers by using XlsIO
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -28,21 +28,21 @@ Essential XlsIO allows data binding from following data sources.
 
 1. DataSource
 
-This includes data tables, datasets, data readers, and data views. A data source can be used to bind large number records to the template document. This will add the rows for each record and fields to be bound are identified through the field name in the template.
+   This includes data tables, datasets, data readers, and data views. A data source can be used to bind large number records to the template document. This will add the rows for each record and fields to be bound are identified through the field name in the template.
 
-Syntax: %DataSource.FieldName
+   Syntax: %DataSource.FieldName
 
 2. Variable Name
 
-This option allows you to bind a single data stored in a variable to the marker in the template.
+   This option allows you to bind a single data stored in a variable to the marker in the template.
 
-Syntax: %VariableName
+   Syntax: %VariableName
 
 3. Variable Array
 
-This option allows you to bind array of data stored in an array to the marker in the template.
+   This option allows you to bind array of data stored in an array to the marker in the template.
 
-Syntax: %VariableArray
+   Syntax: %VariableArray
 
 4. Formulas
 
@@ -68,6 +68,8 @@ The following arguments can be used with the marker to control the formatting wh
 * Copyrange: [top-left cell reference in R1C1]: [bottom-right cell reference in R1C1]-Copies the specified cells after each cell import.
 
 The following code sample illustrates processing and binding the marker with data.
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -133,6 +135,8 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
+{% endtabs %}
 
 Here, CreateTemplateMarkerProcessor returns ITemplateMarkersProcessor interface that creates and manipulates the marker data. ApplyMarkers method of ITemplateMarkersProcessor is the special method that processes the markers in the template.
 

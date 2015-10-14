@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | PercentageTextBox | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: PercentageTextBox
@@ -13,7 +13,6 @@ With the keyboard navigation enabled in the PercentageTextBox control, it is pos
 
 The various keyboard shortcuts available within the PercentageTextBox control are discussed in the following table. 
 
-_Keyboard Shortcuts_
 
 <table>
 <tr>
@@ -46,7 +45,7 @@ In the View page add PercentageTextBox helper. Set the accesskey property to the
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @{IDictionary<string, object> percentAttribute = new Dictionary<string, object>();
 

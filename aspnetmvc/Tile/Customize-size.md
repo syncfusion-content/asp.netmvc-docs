@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize-size
+title: Customize size | Tile | ASP.NET MVC | Syncfusion
 description: customize size
 platform: ejmvc
 control: Tile
@@ -20,7 +20,7 @@ The default TileSize value is set to Small.
 
 Refer to the following code examples.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Tile("tile").Text("Pictures").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/pictures.png ")
 

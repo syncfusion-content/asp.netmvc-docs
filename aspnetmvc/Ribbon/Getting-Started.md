@@ -1,6 +1,6 @@
----
+﻿---
 layout: post
-title: Getting-Started
+title: Getting Started | Ribbon | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Ribbon
@@ -13,7 +13,8 @@ This section explains briefly how to create a _Ribbon_ in your application with
 
 ## Create your Ribbon in MVC
 
-The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_ control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option and the control separator.
+The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_ control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
+
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -22,101 +23,105 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 ###  Create Ribbon Control                     
 
 1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://docs.syncfusion.com/aspnetmvc/ribbon/getting-started) document.
-2. Add a _Ribbon_ control in the index.cshtml page. The _Width_ property allows you to define the width of the _Ribbon_. In _ApplicationTab_ definition, the _MenuItemID_ property allows you to specify the ID of the ul list to create the application menu. In tabs definition, the _TabGroups_ property allows you to create one or more groups in the tab. In _ContextualTabs_ definition, the _BackgroundColor_ property allows you to define the background color of the contextual tab and _BorderColor_ property allows you to define the border color of the contextual tab.
+
+2. Add a _Ribbon_ control in the index.cshtml page.The _Width_ property allows you to define the width of the _Ribbon_. In _ApplicationTab_ definition, the _MenuItemID_ property allows you to specify the ID of the ul list to create the application menu. In tabs definition, the _TabGroups_ property allows you to create one or more groups in the tab. In _ContextualTabs_ definition, the _BackgroundColor_ property allows you to define the background color of the contextual tab and _BorderColor_ property allows you to define the border color of the contextual tab.
 
 
 
-   ~~~ html
+
+   ~~~ cshtml
 
 
-		@(Html.EJ().Ribbon("Ribbon")
+	@(Html.EJ().Ribbon("Ribbon")
 
-		.Width("500px")
+	.Width("500px")
 
-		.ApplicationTab(apptab =>
+	.ApplicationTab(apptab =>
 
-		{
+	{
 
-		apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
-		{
-
-		OpenOnClick = false
-
-		});
-
-		})
-
-		.RibbonTabs(tab =>
-
-		{
-
-		tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-
-		{
-
-		tabgrp.Text("New").Type("custom").ContentID("ribbonContent").Add();
-
-		}).Add();
-
-		tab.Id("calculator").Text("CALCULATOR").TabGroups(tabgrp =>
-
-		{
-
-		tabgrp.Text("Numbers").Type("custom").ContentID("inserttab").Add();
-
-		}).Add();
-
-		})
-
-		.ContextualTabs(ctabs => {
-
-		ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
-
-		{
-
-		ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
-
-		{
-
-		ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
-
-		}).Add();
-
-		});
-
-		})
-
-		)
+	 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 
 
-		<ul id="ribbonmenu">
+	{
 
-		<li><a>FILE</a>
+	OpenOnClick = false
 
-		<ul>
+	});
 
-		<li><a>New</a></li>
+	})
 
-		<li><a>Open</a></li>
+	.RibbonTabs(tab =>
 
-		</ul>
+	{
 
-		</li>
+	tab.Id("home").Text("HOME").TabGroups(tabgrp =>
 
-		</ul>
+	{
 
-		<div id="ribbonContent">Ribbon control</div>
+	tabgrp.Text("New").Type("custom").ContentID("ribbonContent").Add();
 
-		<div id="inserttab">Insert Tab</div>
+	}).Add();
 
-		<div id="designtab">Design Tab</div>
+	tab.Id("calculator").Text("CALCULATOR").TabGroups(tabgrp =>
+
+	{
+
+	tabgrp.Text("Numbers").Type("custom").ContentID("inserttab").Add();
+
+	}).Add();
+
+	})
+
+	.ContextualTabs(ctabs => {
+
+	ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
+
+	{
+
+	ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
+
+	{
+
+	ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
+
+	}).Add();
+
+	});
+
+	})
+
+	)
+
+
+	<ul id="ribbonmenu">
+
+	<li><a>FILE</a>
+
+	<ul>
+
+	<li><a>New</a></li>
+
+	<li><a>Open</a></li>
+
+	</ul>
+
+	</li>
+
+	</ul>
+
+	<div id="ribbonContent">Ribbon control</div>
+
+	<div id="inserttab">Insert Tab</div>
+
+	<div id="designtab">Design Tab</div>
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -131,8 +136,9 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 Add controls to each _Ribbon_ tab by using the property _Content_. You can also add _custom_ controls by using the property _ContentID_. The property _AlignType_ is used to align the groups in row or column order. The_Ribbon_ control has _Button_, _Split button, DropdownList, Toggle button, Gallery, and Custom_ controls support.The default _AlignType_ is RibbonAlignType.Rows.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -258,122 +264,125 @@ tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
 )
 
 
+<ul id="menu">
 
-	<ul id="menu">
-	
 	<li><a>FILE</a>
-	
-	<ul>
-	
-	<li><a>New</a></li>
-	
-	<li><a>Open</a></li>
-	
-	</ul>
-	
+
+		<ul>
+
+			<li><a>New</a></li>
+
+			<li><a>Open</a></li>
+
+		</ul>
+
 	</li>
-	
-	</ul>
-	
-	<div id="Contents"><button id="custom">Custom Control</button></div>
+
+</ul>
+
+<div id="Contents"><button id="custom">Custom Control</button></div>
+
 
 
 
 <style type="text/css">
 
-.e-ribbon .e-new:before {
+	.e-ribbon .e-new:before 
+	{
 
-content: "\e646";
+		content: "\e646";
 
-font-size: 36px;
+		font-size: 36px;
 
-position: relative;
+		position: relative;
 
-left: -12px;
+		left: -12px;
 
-top: -4px;
+		top: -4px;
 
-}
-
-
-
-.e-ribbon .e-ribbonitalic:before {
-
-content: "\e635";
-
-}
+	}
 
 
 
-.e-ribbon .bold:before {
+	.e-ribbon .e-ribbonitalic:before 
+	{
 
-content: "\e636";
+		content: "\e635";
 
-}
+	}
+
+
+
+	.e-ribbon .bold:before 
+	{
+
+		content: "\e636";
+
+	}
 
 </style>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class RibbonController : Controller
+	public partial class RibbonController : Controller
 
-{
+	{
 
-//
+		//
 
-// GET: /Sample/
+		// GET: /Sample/
 
-List<FontFamily> fontFamilySample = new List<FontFamily>();
+		List<FontFamily> fontFamilySample = new List<FontFamily>();
 
-List<FontPoint> fontPointSample = new List<FontPoint>();
+		List<FontPoint> fontPointSample = new List<FontPoint>();
 
-public ActionResult Sample()
+		public ActionResult Sample()
 
-{
+		{
 
-fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
+			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
 
-fontFamilySample.Add(new FontFamily { text = "Arial" });
+			fontFamilySample.Add(new FontFamily { text = "Arial" });
 
-fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
+			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
 
-fontFamilySample.Add(new FontFamily { text = "Tahoma" });
+			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
 
-fontFamilySample.Add(new FontFamily { text = "Helvetica" });
+			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
 
-ViewBag.datasource = fontFamilySample;
+			ViewBag.datasource = fontFamilySample;
 
-fontPointSample.Add(new FontPoint { text = "1pt" });
+			fontPointSample.Add(new FontPoint { text = "1pt" });
 
-fontPointSample.Add(new FontPoint { text = "2pt" });
+			fontPointSample.Add(new FontPoint { text = "2pt" });
 
-fontPointSample.Add(new FontPoint { text = "3pt" });
+			fontPointSample.Add(new FontPoint { text = "3pt" });
 
-fontPointSample.Add(new FontPoint { text = "4pt" });
+			fontPointSample.Add(new FontPoint { text = "4pt" });
 
-fontPointSample.Add(new FontPoint { text = "5pt" });
+			fontPointSample.Add(new FontPoint { text = "5pt" });
 
-ViewBag.datasource1 = fontPointSample;
+			ViewBag.datasource1 = fontPointSample;
 
-return View();
+			return View();
 
-}
+		}
 
 
 
-}
+	}
 
 }
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The following screenshot illustrates Ribbon with controls.
 
@@ -401,9 +410,10 @@ The following screenshot illustrates _Ribbon_ in the collapsed state,
 
 _Control Separator_ support has been provided in the _Ribbon_ control. Set _EnableSeparator_ value to _true_ to enable the separator after a control. _Control Separator_ supports only row type group.
 
+{% tabs %}
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Ribbon("Ribbon")
@@ -537,64 +547,68 @@ PrefixIcon = "e-ribbon e-ribbonunderline"
 )
 
 
+<ul id="menu">
 
-	<ul id="menu">
-	
 	<li><a>FILE</a>
-	
-	<ul>
-	
-	<li><a>New</a></li>
-	
-	<li><a>Open</a></li>
-	
-	</ul>
-	
+
+		<ul>
+
+			<li><a>New</a></li>
+
+			<li><a>Open</a></li>
+
+		</ul>
+
 	</li>
-	
-	</ul>
+
+</ul>
+
 
 
 
 <style type="text/css">
 
-.e-ribbon .e-new:before {
+	.e-ribbon .e-new:before 
+	{
 
-content: "\e646";
+	content: "\e646";
 
-font-size: 36px;
+	font-size: 36px;
 
-position: relative;
+	position: relative;
 
-left: -12px;
+	left: -12px;
 
-top: -4px;
+	top: -4px;
 
-}
-
-
-
-.e-ribbon .e-ribbonitalic:before {
-
-content: "\e635";
-
-}
+	}
 
 
 
-.e-ribbon .bold:before {
+	.e-ribbon .e-ribbonitalic:before 
+	{
 
-content: "\e636";
+	content: "\e635";
 
-}
+	}
 
 
 
-.e-ribbon .e-ribbonunderline:before {
+	.e-ribbon .bold:before 
+	{
 
-content: "\e634";
+	content: "\e636";
 
-}
+	}
+
+
+
+	.e-ribbon .e-ribbonunderline:before 
+	{
+
+	content: "\e634";
+
+	}
 
 </style>
 
@@ -605,58 +619,58 @@ namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class RibbonController : Controller
+	public partial class RibbonController : Controller
 
-{
+	{
 
-//
+		//
 
-// GET: /Sample/
+		// GET: /Sample/
 
-List<FontFamily> fontFamilySample = new List<FontFamily>();
+		List<FontFamily> fontFamilySample = new List<FontFamily>();
 
-List<FontPoint> fontPointSample = new List<FontPoint>();
+		List<FontPoint> fontPointSample = new List<FontPoint>();
 
-public ActionResult Sample()
+		public ActionResult Sample()
 
-{
+		{
 
-fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
+			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
 
-fontFamilySample.Add(new FontFamily { text = "Arial" });
+			fontFamilySample.Add(new FontFamily { text = "Arial" });
 
-fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
+			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
 
-fontFamilySample.Add(new FontFamily { text = "Tahoma" });
+			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
 
-fontFamilySample.Add(new FontFamily { text = "Helvetica" });
+			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
 
-ViewBag.datasource = fontFamilySample;
+			ViewBag.datasource = fontFamilySample;
 
-fontPointSample.Add(new FontPoint { text = "1pt" });
+			fontPointSample.Add(new FontPoint { text = "1pt" });
 
-fontPointSample.Add(new FontPoint { text = "2pt" });
+			fontPointSample.Add(new FontPoint { text = "2pt" });
 
-fontPointSample.Add(new FontPoint { text = "3pt" });
+			fontPointSample.Add(new FontPoint { text = "3pt" });
 
-fontPointSample.Add(new FontPoint { text = "4pt" });
+			fontPointSample.Add(new FontPoint { text = "4pt" });
 
-fontPointSample.Add(new FontPoint { text = "5pt" });
+			fontPointSample.Add(new FontPoint { text = "5pt" });
 
-ViewBag.datasource1 = fontPointSample;
+			ViewBag.datasource1 = fontPointSample;
 
-return View();
+			return View();
 
-}
+		}
 
-}
+	}
 
 }
 
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 The following screenshot illustrates the control separator after the Italic Button control.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | OLAPGauge | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: OLAPGauge
@@ -17,7 +17,7 @@ OLAP Gauge control enables you to retrieve multidimensional data either from SS
 
 The following code illustrates how to connect to an offline cube:
 
-{% highlight c# %}
+{% highlight C# %}
 
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
@@ -32,7 +32,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 The following code illustrates how to connect to a Cube available in local SQL Server:
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
@@ -52,7 +52,7 @@ XML/A provides the most efficient way to access an OLAP database over the Inter
 
 The following code illustrates how to connect to the SSAS server available online:
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -65,7 +65,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 The following code illustrates how to connect to the Mondrian Server:
 
-{% highlight c#  %}
+{% highlight C# %}
 
 // Connecting to Mondrian Server
 
@@ -81,7 +81,7 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers
 The following code illustrates how to connect to Active Pivot Server:
 
 
-{% highlight c#  %}
+{% highlight C# %}
 
 
 // Connecting to Active Pivot Server

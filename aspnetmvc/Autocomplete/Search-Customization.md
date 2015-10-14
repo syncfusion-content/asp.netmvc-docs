@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Search-Customization
+title: Search Customization | AutoComplete | ASP.NET MVC | Syncfusion
 description: search customization
 platform: ejmvc
 control: AutoComplete
@@ -22,7 +22,7 @@ The following steps explain how you can enable the HighlightSearch property for 
 1. In the View page, define the AutoComplete control and enable the HighlightSearch property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -47,9 +47,8 @@ The following image is the output for AutoComplete when HighlightSearch is set t
 
 ![](Search-Customization_images/Search-Customization_img1.png)
 
-
-
-_AutoComplete with highlightSearch enabled_
+AutoComplete with highlightSearch enabled
+{:.caption}
 
 ## Case-sensitive Search
 
@@ -64,7 +63,7 @@ The following steps explain you how to enable the CaseSensitiveSearch property f
 1. In the View page, define the AutoComplete control and enable the CaseSensitiveSearch property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 
@@ -86,7 +85,6 @@ The following image is the output for AutoComplete when CaseSensitiveSearch is s
 
 ![](Search-Customization_images/Search-Customization_img2.png)
 
-
-
-_AutoComplete textbox with caseSensitiveSearch_
+AutoComplete textbox with caseSensitiveSearch
+{:.caption}
 

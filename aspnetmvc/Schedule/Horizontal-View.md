@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Horizontal-View
+title: Horizontal View | Schedule | ASP.NET MVC | Syncfusion
 description: horizontal view
 platform: ejmvc
 control: Schedule
@@ -24,8 +24,7 @@ documentation: ug
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 @*Set Orientation as Horizontal mode *@
@@ -50,9 +49,7 @@ The above example illustrates the horizontal view of Schedule control. Similarly
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @*Set Orientation as Vertical mode*@
 
@@ -79,8 +76,8 @@ Execute the above code to render the following output.
 * Horizontal view contains another property as resourceHeaderTemplateId. It allows you to render the resource header of the Schedule. When the orientation is in horizontal mode, resourceHeaderTemplateId can be applied.
 
 
-
-{% highlight js %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -136,12 +133,13 @@ gr.Resources(ViewBag.Resources);
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 // follow the code as same as declared in Resources part
 
 {% endhighlight %}
 
+{% endtabs %}
 
 Execute the above code to render the following output.
 
@@ -155,9 +153,9 @@ Execute the above code to render the following output.
 * It is possible to change the orientation in horizontal resource grouping. Horizontal view has another one property as resourceHeaderTemplateId. It allows to render the resource header of the schedule. When the orientation is in horizontal mode, resourceHeaderTemplateId can be applied.
 
 
+{% tabs %}
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -212,11 +210,12 @@ gr.Resources(ViewBag.Resources);
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 // follow the code as same as declared in Resource Grouping  part
 
 {% endhighlight %}
+{% endtabs %}
 
 Execute the above code to render the following output.
 

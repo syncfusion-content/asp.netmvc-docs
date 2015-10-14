@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: TreeGrid | TreeGrid | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Overview
+# TreeGrid
 
 The TreeGrid is an efficient control designed for representing the hierarchical data in a tabular format, combining the visual representation of Grid and TreeView controls; it represents the data from datasource such as array of JSON objects, ej.DataManager or self-referential datasource.
 

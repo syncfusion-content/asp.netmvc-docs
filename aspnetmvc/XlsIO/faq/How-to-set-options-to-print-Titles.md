@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to set options to print Titles 
+title: How to set options to print Titles | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to set options to print Titles
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -13,7 +13,11 @@ documentation: ug
 
 The following code example illustrates printing the Title Rows.
 
+
+{% tabs %}
 {% highlight C# %}
+
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -35,12 +39,19 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
+
 excelEngine.Dispose();     
-  {% endhighlight %}    
+
+
+excelEngine.Dispose(); 
+    
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
- 'Step 1: Instantiates the spreadsheet creation engine.
+
+'Step 1: Instantiates the spreadsheet creation engine.
+
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -60,13 +71,17 @@ workbook.SaveAs(fileName)
 ' Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
 {% endhighlight %}
+{% endtabs %}
+
 
 ## Printing the Title Columns
 
 The following code example illustrates printing the Title Columns.
+{% tabs %}
+{% highlight C# %}
 
- {% highlight C# %}
  
  //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -117,5 +132,7 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
+{% endtabs %}
 
 For information on Print settings, refer to the section [Print Settings](http://docs.syncfusion.com/windowsforms).

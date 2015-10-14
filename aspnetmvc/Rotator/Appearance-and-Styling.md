@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Rotator | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Rotator
@@ -15,7 +15,7 @@ documentation: ug
 
 This property sets the Width of a Rotator Item. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
@@ -27,7 +27,7 @@ This property sets the Width of a Rotator Item. The value set to this property i
 
 This property sets the Height of a Rotator Item. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))

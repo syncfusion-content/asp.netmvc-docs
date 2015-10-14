@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Views
+title: Views | Schedule | ASP.NET MVC | Syncfusion
 description: views
 platform: ejmvc
 control: Schedule
@@ -21,8 +21,9 @@ documentation: ug
 
 The following code example describes how to customize the display of view options of the Schedule control.
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @{List<string> view = new List<string>() { "Week", "WorkWeek" };}
 
@@ -53,21 +54,21 @@ The following code example describes how to customize the display of view option
 .RecurrenceRule("RecurrenceRule"))
 
 )
-
+{% endhighlight %}
+{% highlight C# %}
 
 // follow the code as same as declared in Read Only part
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 * The following screenshot displays the output of the above code with the view customizations by displaying only two views namely Week and Workweek in the toolbar.
 
 ![](Views_images/Views_img1.png)
 
-
-
-_Figure84: schedule with view customization._
+schedule with view customization.
+{:.caption}
 
 ## Current View
 
@@ -84,9 +85,7 @@ The following code example explains how to change the current view of the Schedu
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -122,9 +121,8 @@ The following code example explains how to change the current view of the Schedu
 
 ![](Views_images/Views_img2.png)
 
-
-
-   _Figure85:  schedule with current view.
+schedule with current view.
+{:.caption}
 
 ## Custom Date Rendering
 
@@ -133,9 +131,7 @@ The following code example explains how to change the current view of the Schedu
 
 
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @* Add the customView option to the default available view items as follows*@
 
@@ -155,19 +151,13 @@ List<string> views = new List<string>()
 
 .Views(views) // Renders the above listed view items.
 
-
-
 //Sets the currentView as customView.
 
 .CurrentView(CurrentView.CustomView)
 
-
-
 //Renders the user-specified date ranges.
 
 .RenderDates(dt => dt.Start(“7/11/2014”).End(“10/12/2014”))
-
-
 
 .AppointmentSettings(fields =>
 

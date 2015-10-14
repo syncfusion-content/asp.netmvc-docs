@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MultiSelection-modes
+title: MultiSelection modes | AutoComplete | ASP.NET MVC | Syncfusion
 description: multiselection modes
 platform: ejmvc
 control: AutoComplete
@@ -24,7 +24,7 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 1. In the View page, define the AutoComplete control and configure multiple selection mode.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
 

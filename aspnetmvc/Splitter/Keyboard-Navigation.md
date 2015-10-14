@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Navigation
+title: Keyboard Navigation | Splitter | ASP.NET MVC | Syncfusion
 description: keyboard navigation
 platform: ejmvc
 control: Splitter
@@ -13,7 +13,7 @@ With the keyboard navigation enabled in the Splitter control, it is possible to 
 
 The various keyboard shortcuts available within the Splitter control are discussed in the following table.
 
-_Table1: Keyboard Shortcuts_
+_Keyboard Shortcuts_
 
 <table>
 <tr>
@@ -69,7 +69,8 @@ The following steps explain to enable keyboard interaction for Splitter widget.
 1. In the View page add Splitter helper to render the control. 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 @{Html.EJ().Splitter("Splitter").Height("200").Width("500").PaneProperties(
     p =>    {        p.Add().ContentTemplate(
 	@<div> 
@@ -88,10 +89,8 @@ The following steps explain to enable keyboard interaction for Splitter widget.
 	</div>
 	</div>);
     }).Render();}
-{% endhighlight %}
 
-{% highlight javascript %}
-    <script type="text/javascript">
+<script type="text/javascript">
 	//Control focus key
 	$(document).on("keydown", function (e) {
 	if (e.altKey && e.keyCode === 74) { // j- key code.

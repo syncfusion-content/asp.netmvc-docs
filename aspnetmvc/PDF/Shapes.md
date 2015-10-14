@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Shapes
+title: Shapes | PDF | ASP.NET MVC | Syncfusion
 description: shapes
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -40,8 +40,10 @@ The following code example illustrates how to draw shapes.
 
 
 
+{% tabs %}
 
-{% highlight c# %}
+
+{% highlight C# %}
 
 //Creates a document.
 
@@ -79,9 +81,7 @@ doc.Save("Shapes.pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a document.
 
@@ -118,14 +118,14 @@ page.Graphics.DrawPolygon(pen, PdfBrushes.Green, points)
 doc.Save("Shapes.pdf")
 
 {% endhighlight %}
-
+{% endtabs %}  
 You can paginate the element as follows.
 
 
+{% tabs %}
 
-{% highlight c# %}
 
-
+{% highlight C# %}
 
 //Creates a document.
 
@@ -165,9 +165,7 @@ doc.Save("Shapes.pdf");
 
 
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a Document.
 
@@ -204,4 +202,4 @@ ellipse.Draw(page, 20, 20, format)
 doc.Save("Shapes.pdf")
 
 {% endhighlight %}
-
+{% endtabs %}  

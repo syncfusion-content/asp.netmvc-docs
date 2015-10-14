@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | Slider | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: Slider
@@ -50,37 +50,34 @@ The following steps explains you on how to enable keyboard support in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Range Slider.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
- @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
+@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
 
-    .Width("500").EnableRTL(true))
-
-{% endhighlight %}
-
-{% highlight javascript %}  
-
+.Width("500").EnableRTL(true))
 
 
 // In JavaScript, Focus the Slider control in document key down function
 
+<script>
 
+	$(document).on("keydown", function (e) 
+	{
 
-  <script>
+			if (e.altKey && e.keyCode === 74) 
+			{ 
+			
+				// j- key code.
 
-        $(document).on("keydown", function (e) {
+				$("#rangeSlider a")[0].focus();
 
-                if (e.altKey && e.keyCode === 74) { // j- key code.
+			}
 
-                    $("#rangeSlider a")[0].focus();
+	});
 
-                }
-
-            });
-
-    </script>
+</script>
 
 
 {% endhighlight %}
@@ -90,9 +87,8 @@ When clicked the Alt + J key, the slider was focused.
 
 ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
-_Slider with Keyboard Interaction._
+Slider with Keyboard Interaction.
+{:.caption}
 
 
 

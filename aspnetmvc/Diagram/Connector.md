@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connector
+title: Connector | Diagram | ASP.NET MVC | Syncfusion
 description: connector
 platform: ejmvc
 control: Diagram
@@ -15,9 +15,8 @@ Connectors are objects used to create a link between two nodes. A connector is a
 
 ![](Connector_images/Connector_img1.jpeg)
 
-
-
-_Connector_
+Connector
+{:.caption}
 
 ## Create Connector
 
@@ -30,10 +29,6 @@ The following code illustrates how to create a Connector and add it to Diagram.
 
 
 {% highlight c# %}
-
-
-
-
 
 //Creates a connector
 
@@ -50,16 +45,14 @@ connector.LineWidth=2;
 model.Connectors.Push(connector);
 
 
-
 {% endhighlight %}
 
 
 
 ![](Connector_images/Connector_img2.png)
 
-
-
-_Connector_
+Connector
+{:.caption}
 
 ## Segments
 
@@ -78,9 +71,6 @@ The following code example illustrates how to add a Connector with an Orthogonal
 
 
 {% highlight c# %}
-
-
- 
 
 //Creates a connector with orthogonal line segment
 
@@ -116,17 +106,16 @@ model.Connectors.Push(connector);
 
 
 
-{{ '![](Connector_images/Connector_img3.png)' | markdownify }}
+![](Connector_images/Connector_img3.png)
 
-
-
-_Orthogonal Segment_
+Orthogonal Segment
+{:.caption}
 
 The following code illustrates how to customize Orthogonal Segment.
 
 
 
-{% highlight c# %}
+{% highlight C# %}
  
 
 
@@ -176,9 +165,8 @@ model.Connectors.Push(connector);
 
 ![](Connector_images/Connector_img4.png)
 
-
-
-_Orthogonal Segment_
+Orthogonal Segment
+{:.caption}
 
 ### Straight Segment
 
@@ -186,12 +174,7 @@ The straight segments can be added by specifying points as to where the line has
 
 The following code example illustrates how to add straight segment through code.
 
-{% highlight c# %}
-
-
-
-
-
+{% highlight C# %}
 
 //Creates a connector with control points
 
@@ -239,15 +222,13 @@ model.Connectors.Push(connector);
 
 ![](Connector_images/Connector_img5.png)
 
-
-
-_Polyline_
+Polyline
+{:.caption}
 
 ![](Connector_images/Connector_img6.png)
 
-
-
-_Single Line_
+Single Line
+{:.caption}
 
 The control points can be added or deleted at runtime with shortcut key combination ctrl + shift +click on the control point.
 
@@ -262,12 +243,7 @@ The following code example illustrates how to add Bezier segments.
 
 
 
-{% highlight c# %}
-
-
-
-
-
+{% highlight C# %}
 
 //Creates a connector with bezier line segment
 
@@ -290,12 +266,9 @@ segment1.Point1 = new DiagramPoint(40,80);
 segment1.Point2 = new DiagramPoint(40,72);
 
 
-
 //Addssegments 
 
 connector.Segments.Add(segment1);
-
-
 
 connector.SourcePoint = new DiagramPoint(350,200);
 
@@ -304,25 +277,21 @@ connector.TargetPoint = new DiagramPoint(200, 50);
 model.Connectors.Push(connector);
 
 
-
 {% endhighlight %}
 
 
 
 ![](Connector_images/Connector_img7.png)
 
-
-
-_Bezier Segments_
+Bezier Segments
+{:.caption}
 
 The following code example illustrates how to add vector point to Bezier segments.
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
-
- 
 
 //Creates a connector with bezier line segment
 
@@ -362,9 +331,8 @@ model.Connectors.Push(connector);
 
 ![](Connector_images/Connector_img8.png)
 
-
-
-_Bezier segment with vectors_
+Bezier segment with vectors
+{:.caption}
 
 ## Editing Segments
 
@@ -374,9 +342,8 @@ The segments can be edited during runtime by dragging control thumbs. Segments c
 
 ![](Connector_images/Connector_img9.png)
 
-
-
-_Segment Editing_ 
+Segment Editing
+{:.caption}
 
 ## Connector Padding
 
@@ -389,10 +356,7 @@ Padding distance between source or target end with its connected end (Node, Grou
 The following code example illustrates how to adjust the distance by using padding property.
 
 
-
 {% highlight c# %}
-
-
 
 
 Connector connector = new Connector();
@@ -401,15 +365,14 @@ connector.SourcePadding = 15;
 
 connector.TargetPadding = 20;
 
-
-
 {% endhighlight %}
 
 
 
 ![](Connector_images/Connector_img10.png)
 
-
+Endpoint’s adjustment specific to connector’s ends
+{:.caption}
 
 ### Endpoint adjustment specific to nodes
 
@@ -418,9 +381,6 @@ ConnectorPadding property of a node is used to specify the amount of space neede
 The following code examples illustrate how to pad edges connected to a node.
 
 {% highlight c# %}
-
-
-
 
 Node node = new Node();
 
@@ -434,7 +394,8 @@ node.ConnectorPadding = 20;
 
 ![](Connector_images/Connector_img11.png)
 
-
+Endpoint’s adjustment specific to nodes
+{:.caption}
 
 ### Endpoint adjustment specific to ports
 
@@ -444,16 +405,11 @@ The following code examples illustrate how to pad edges connected to a port.
 
 {% highlight c# %}
 
-
-
-
 //Sets Padding for a port.
 
 Port port = new Port();
 
 port.ConnectorPadding = 20;
-
-
 
 {% endhighlight %}
 
@@ -461,7 +417,8 @@ port.ConnectorPadding = 20;
 
 ![](Connector_images/Connector_img12.png)
 
-
+Endpoint adjustment specific to ports
+{:.caption}
 
 ## Line Bridging
 
@@ -474,11 +431,7 @@ Line bridging is disabled, by default. You can enable it by adding ConnectorCons
 The following code illustrates how to enable line bridging.
 
 
-
 {% highlight c# %}
-
-
-
 
 //Enables Line Bridging for a single connector
 
@@ -490,17 +443,14 @@ connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Brid
 
 DiagramContent.Constraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 
-
-
 {% endhighlight %}
 
 
 
 ![](Connector_images/Connector_img13.png)
 
-
-
-_Line Bridging_
+Line Bridging
+{:.caption}
 
 When the connector constraint is set as ConnectorConstraints.InheritBridging, bridging is based on DiagramConstraints.
 
@@ -535,16 +485,11 @@ Example 1: Bridge for Horizontal Connector with BridgeDirection as Top.
 {% highlight c# %}
 
 
-
-
-
 DiagramProperties model = new DiagramProperties();
 
 //Sets the Bridge Direction
 
 model.BridgeDirection = BridgeDirection.Top;
-
-
 
 {% endhighlight %}
 
@@ -552,9 +497,8 @@ model.BridgeDirection = BridgeDirection.Top;
 
 ![](Connector_images/Connector_img14.png)
 
-
-
-_BridgeDirection.Top_
+BridgeDirection.Top
+{:.caption}
 
 
 
@@ -562,10 +506,6 @@ Example 2: Bridge for Vertical Connector with BridgeDirection as Left.
 
 
 {% highlight c# %}
-
-
-
-
 
 
 DiagramProperties model = new DiagramProperties();
@@ -582,10 +522,8 @@ model.BridgeDirection = BridgeDirection.Left;
 
 ![](Connector_images/Connector_img15.png)
 
-
-
-_BridgeDirection.Left_
-
+BridgeDirection.Left
+{:.caption}
 
 
 The following API method is used to change the BridgeDirection at runtime.
@@ -600,8 +538,6 @@ var diagram = $("#diagram").ejDiagram("instance");
 
 diagram.update({ bridgeDirection: ej.datavisualization.Diagram.BridgeDirection.Top });
 
-
-
 {% endhighlight %}
 
 ## Corner Radius
@@ -614,9 +550,6 @@ The following code example illustrates how to set corner radius for connectors.
 
 {% highlight c# %}
 
-
-
-
 //For node creation refer the link Node Creation
 
 //For Creating connection refer to the link Connecting nodes
@@ -627,17 +560,14 @@ Connector connector = new Connector();
 
 Connector.CornerRadius=20;
 
-
-
 {% endhighlight %}
 
 
 
 ![](Connector_images/Connector_img16.png)
 
-
-
-_Corner Radius_
+Corner Radius
+{:.caption}
 
 ## Connecting Nodes
 
@@ -668,9 +598,8 @@ connector.TargetNode = "tailNode"; //Sets name of targetNode
 
 ![](Connector_images/Connector_img17.jpeg)
 
-
-
-_Node to Node Connection_
+Node to Node Connection
+{:.caption}
 
 The point of connection is changed optimally at runtime while performing operations such as Rotating and Dragging on Source/Target Node of Connector. In case of static or specific point connection at runtime, the Port assists to maintain specific point connection between Nodes.
 
@@ -718,8 +647,6 @@ Gets or sets the opacity of the connector</td></tr>
 {% highlight c# %}
 
 
-
-
  //Sets various appearance properties to connector
 
 Connector connector = new Connector();
@@ -737,7 +664,6 @@ connector.Segment = new Segment(Segments.Orthogonal);
 connector.SourcePoint = new DiagramPoint(10, 10);
 
 connector.TargetPoint = new DiagramPoint(70, 40);
-
 
 
 {% endhighlight %}
@@ -863,9 +789,8 @@ connector.SourceDecorator.FillColor = "yellow";
 
 ![](Connector_images/Connector_img18.jpeg)
 
-
-
-_Decorator Shape_
+Decorator Shape
+{:.caption}
 
 ## Constraints
 
@@ -937,14 +862,9 @@ The following code illustrates how to disable select constraints of connector. D
 
 {% highlight c# %}
 
-
-
-
- //Disables select constraint
+//Disables select constraint
 
 connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
-
-
 
 {% endhighlight %}
 
@@ -952,5 +872,5 @@ connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
 
 
 
-N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](http://docs.syncfusion.com/aspnet/diagram/constraints) 
+N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see [Bitwise Operations](http://docs.syncfusion.com/aspnet/diagram/constraints) 
 

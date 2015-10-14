@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File-and-Image-Browser
+title: File and Image Browser | RichTextEditor | ASP.NET MVC | Syncfusion
 description: file and image browser
 platform: ejmvc
 control: RichTextEditor
@@ -24,83 +24,83 @@ To retrieve or upload the images in the image browser, it requires a server side
 
 Add the following code to initialize the RTE control in the page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	//the FileActionDefault is method to perform the all file related operations. 
+//the FileActionDefault is method to perform the all file related operations. 
 
-	@{ List<String> images = new List<string>() { "images" };
+@{ List<String> images = new List<string>() { "images" };
 
-	List<String> image = new List<string>() { "image" };}
+List<String> image = new List<string>() { "image" };}
 
-    @{Html.EJ().RTE("rteSample").Width("850px").ToolsList(images).ShowFooter(true).Tools(tool => tool.Images(image)).ImageBrowser(img => img.FilePath("~/FileExplorerContent/").ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg").AjaxAction(@Url.Content("FileActionDefault"))).Render();}
+@{Html.EJ().RTE("rteSample").Width("850px").ToolsList(images).ShowFooter(true).Tools(tool => tool.Images(image)).ImageBrowser(img => img.FilePath("~/FileExplorerContent/").ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg").AjaxAction(@Url.Content("FileActionDefault"))).Render();}
 
 {% endhighlight %}
 
 Add the following code example to the corresponding controller page. FileActionDefault method is triggered, when the Ajax request is made on the client side. This FileActionDefault method finds out the specific operation by using ActionType property and calls the FileExplorerOperations methods according to that.
 
-{% highlight c# %}
+{% highlight C# %}
 
-	//Add the following method in the controller page 
+//Add the following method in the controller page 
 
-	public ActionResult FileActionDefault(FileExplorerParams args)
+public ActionResult FileActionDefault(FileExplorerParams args)
 
-        {
+{
 
-            switch (args.ActionType)
+	switch (args.ActionType)
 
-            {
+	{
 
-                case "Read":
+		case "Read":
 
-                    return Json(FileExplorerOperations.Read(args.Path,                        args.ExtensionsAllow));
+			return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
 
-                case "CreateFolder":
+		case "CreateFolder":
 
-                    return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
+			return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
 
-                case "Paste":
+		case "Paste":
 
-                    FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
+			FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
 
-                    break;
+			break;
 
-                case "Delete":
+		case "Delete":
 
-                    FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+			FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
 
-                    break;
+			break;
 
-                case "Rename":
+		case "Rename":
 
-                    FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+			FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
 
-                    break;
+			break;
 
-                case "GetDetails":
+		case "GetDetails":
 
-                    return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
+			return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
 
-                case "Download":
+		case "Download":
 
-                    FileExplorerOperations.Download(args.Path);
+			FileExplorerOperations.Download(args.Path);
 
-                    break;
+			break;
 
-                case "GetImage":
+		case "GetImage":
 
-                    return File(FileExplorerOperations.GetImage(args.Path), "*");
+			return File(FileExplorerOperations.GetImage(args.Path), "*");
 
-                case "Upload":
+		case "Upload":
 
-                    FileExplorerOperations.Upload(args.FileUpload, args.Path);
+			FileExplorerOperations.Upload(args.FileUpload, args.Path);
 
-                    break;
+			break;
 
-            }
+	}
 
-            return Json("");
+	return Json("");
 
-        }
+}
 		
 {% endhighlight %}
 
@@ -130,7 +130,7 @@ The RTE control provides the supports file browsing that is same as image browsi
 
 Add the following code to initialize the RTE control in the page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 	//the FileActionDefault is method to perform the all file related operations. 
 	
@@ -149,68 +149,68 @@ Add the following code to initialize the RTE control in the page.
 
 Add the following code example to the corresponding controller page. FileActionDefault method is triggered, when ajax request is made on client side. This FileActionDefault method finds out the specific operation by using ActionType property and calls the FileExplorerOperations methods according to that.
 
-{% highlight c# %}
+{% highlight C# %}
 
-	//Add the following method in the controller page 
-	public ActionResult FileActionDefault(FileExplorerParams args)
+//Add the following method in the controller page 
+public ActionResult FileActionDefault(FileExplorerParams args)
 
-        {
+{
 
-            switch (args.ActionType)
+	switch (args.ActionType)
 
-            {
+	{
 
-                case "Read":
+		case "Read":
 
-                    return Json(FileExplorerOperations.Read(args.Path,                        args.ExtensionsAllow));
+			return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
 
-                case "CreateFolder":
+		case "CreateFolder":
 
-                    return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
+			return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
 
-                case "Paste":
+		case "Paste":
 
-                    FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
+			FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
 
-                    break;
+			break;
 
-                case "Delete":
+		case "Delete":
 
-                    FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+			FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
 
-                    break;
+			break;
 
-                case "Rename":
+		case "Rename":
 
-                    FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+			FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
 
-                    break;
+			break;
 
-                case "GetDetails":
+		case "GetDetails":
 
-                    return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
+			return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
 
-                case "Download":
+		case "Download":
 
-                    FileExplorerOperations.Download(args.Path);
+			FileExplorerOperations.Download(args.Path);
 
-                    break;
+			break;
 
-                case "GetImage":
+		case "GetImage":
 
-                    return File(FileExplorerOperations.GetImage(args.Path), "*");
+			return File(FileExplorerOperations.GetImage(args.Path), "*");
 
-                case "Upload":
+		case "Upload":
 
-                    FileExplorerOperations.Upload(args.FileUpload, args.Path);
+			FileExplorerOperations.Upload(args.FileUpload, args.Path);
 
-                    break;
+			break;
 
-            }
+	}
 
-            return Json("");
+	return Json("");
 
-        }
+}
 
 {% endhighlight %}
 

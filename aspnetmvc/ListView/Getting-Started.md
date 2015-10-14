@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | ListView | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: ListView
@@ -18,7 +18,8 @@ The Essential StudioListView widget builds an interactive list view interface.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_List view Control_
+List view Control
+{:.caption}
 
 The following steps guide you to add a ListView control in a MVC application.
 
@@ -26,7 +27,8 @@ The following steps guide you to add a ListView control in a MVC application.
 
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/listview/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for ListView rendering.
-{% highlight html %}
+
+{% highlight CSHTML %}
 
 @Html.EJ().ListView("Listview")
 
@@ -63,7 +65,7 @@ Run the above code to render the following output.
 
 You can add a header for ListView using ShowHeader property. Refer to the following code example.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!—Add Listview control with header -->
 

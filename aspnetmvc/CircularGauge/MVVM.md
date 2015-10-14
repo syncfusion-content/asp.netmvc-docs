@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MVVM
+title: MVVM | CircularGauge | ASP.NET MVC | Syncfusion
 description: mvvm
 platform: ejmvc
 control: CircularGauge
@@ -15,9 +15,10 @@ Circular Gauge contains angular support. You can add object as well as array obj
 
 ## Rendering the Circular Gauge
 
-{% highlight html %}
+
 ej-CircularGauge is the control tag in which ej is tag prefix and CircularGauge is the control name.The following code example helps you to render Circular Gauge.
 
+{% highlight html %}
 <div ng-app="syncApp">
 
 <div ng-controller="CircularGauge">
@@ -36,6 +37,7 @@ e-enableAnimation="false">
 
 </div>
 {% endhighlight  %}
+
 {% highlight js %}
 <script type="text/javascript">
 
@@ -56,7 +58,6 @@ $scope.nminimum = 0;
 $scope.nmaximum = 120;
 
 
-
 });
 
 </script>
@@ -69,7 +70,8 @@ Execute the above code to render the output as follows.
 
 ![](MVVM_images/MVVM_img1.png)
 
-
+Default Circular gauge in Angular JS
+{:.caption}
 
 
 
@@ -78,6 +80,7 @@ Execute the above code to render the output as follows.
 Scale is an array object and you can use the inner tag for it. Object in the array collection (i.e. border) is extended with hyphen in the same tag.
 
 Example: e-border-width and e-border-color. 
+
 {% highlight html %}
 <!--To Render the Circular gauge-->
 
@@ -109,8 +112,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img2.png)
 
-
-
+Circular gauge with scale customization in Angular JS
+{:.caption}
 
 
 ## Adding Pointer Collection
@@ -155,8 +158,8 @@ Execute the above code to render the output as follows.
 
 ![](MVVM_images/MVVM_img3.png)
 
-
-
+Circular gauge with pointer customization in Angular JS
+{:.caption}
 
 
 ## Adding Label Collection
@@ -199,7 +202,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img4.png)
 
-
+Circular gauge with label customization in Angular JS
+{:.caption}
 
 
 
@@ -255,8 +259,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img5.png)
 
-
-
+Circular gauge with ticks customization in Angular JS
+{:.caption}
 
 
 ## Adding Range Collection
@@ -325,8 +329,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img6.png)
 
-
-
+Circular gauge Rendered in Angular JS
+{:.caption}
 
 
 
@@ -335,6 +339,7 @@ Execute the above code to render the following output.
 
 Circular Gauge support the two way binding for the property value, minimum and maximum as mentioned earlier. The following code example explains how to achieve the two way binding in Circular Gauge.
 {% highlight html %}
+
 <div ng-app="syncApp">
 
 <div ng-controller="CircularGauge">
@@ -436,8 +441,7 @@ e-border-color="#f5b43f">
 </div>
 
 </div>
-{% endhighlight  %}
-{% highlight js %}
+
 <script type="text/javascript">
 
 
@@ -468,9 +472,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img7.png)
 
-
-
-Figure 62: Circular gauge with two way binding in Angular JS
+Circular gauge with two way binding in Angular JS
+{:.caption}
 
 ## Knockout JS
 
@@ -484,7 +487,7 @@ Figure 62: Circular gauge with two way binding in Angular JS
 3. minimum
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 <div id="CircularGauge1"
@@ -534,7 +537,7 @@ Execute the above code to render the following output. The following screenshot 
 
 ![](MVVM_images/MVVM_img8.png)
 
-
-
+Circular Gauge with Knockout binding
+{:.caption}
 
 

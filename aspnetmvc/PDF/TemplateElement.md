@@ -1,9 +1,9 @@
 ---
 layout: post
-title: TemplateElement
+title: TemplateElement | PDF | ASP.NET MVC | Syncfusion
 description: templateelement
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -70,10 +70,10 @@ Each page can contain page templates from the document and from the parent secti
 The code sample to use PdfTemplate to render it into the PDF document is illustrated as follows.
 
 
+{% tabs %}
+ 
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -111,9 +111,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -150,4 +148,4 @@ pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %} 

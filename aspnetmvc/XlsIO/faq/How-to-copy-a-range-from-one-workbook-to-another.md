@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to copy a range from one workbook to another 
+title: How to copy a range from one workbook to another | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to copy a range from one workbook to another
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,9 +11,11 @@ documentation: ug
 
 The Range and CopyTo methods include overloads for copying the Source Worksheet range to the Destination Worksheet range. The following code example illustrates how to copy a range from one workbook to another workbook.
 
- 
+
+{% tabs %} 
  
 {% highlight C# %}
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -48,9 +50,7 @@ excelEngine.Dispose();
 
 
 {% highlight vbnet %}
- 
- 
- 
+  
 'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -80,4 +80,7 @@ destinationWorkbook.SaveAs(fileName)
 ' Closes the workbook.
 destinationWorkbook.Close()
 excelEngine.Dispose()
+
 {% endhighlight %}
+{% endtabs %}
+

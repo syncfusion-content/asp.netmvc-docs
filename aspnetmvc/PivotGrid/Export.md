@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export
+title: Export | PivotGrid | ASP.NET MVC | Syncfusion
 description: export
 platform: ejmvc
 control: PivotGrid
@@ -17,24 +17,26 @@ The following code example illustrates how to save the document to Excel via ser
 
 For PivotGrid
 
+{% tabs %}
+ 
 {% highlight C# %} 
 
 public void ExportOptions(Stream stream)
 
 {
 
-PivotGrid pivotGridHelper = new PivotGrid();
+	PivotGrid pivotGridHelper = new PivotGrid();
 
-OlapDataManager DataManager=new OlapDataManager(connectionString);
+	OlapDataManager DataManager=new OlapDataManager(connectionString);
 
-pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(), "Sample.xls",HttpContext.Current.Response);
+	pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(), "Sample.xls",HttpContext.Current.Response);
 
 }
 
 {% endhighlight %}
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @section ScriptSection{
@@ -53,9 +55,7 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 
 }
 
-{% endhighlight %}
 
-{% highlight html %}
 
 @section ControlsSection{
 
@@ -66,8 +66,8 @@ pivotGridHelper.ExportToExcel(DataManager, newStreamReader(stream).ReadToEnd(),
 }
 
 {% endhighlight %}
-
-![Description: excelexport2](Export_images/Export_img1.png)
+{% endtabs %} 
+![](Export_images/Export_img1.png)
 
 
 

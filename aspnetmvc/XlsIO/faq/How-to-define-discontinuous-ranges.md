@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to define discontinuous ranges 
+title: How to define discontinuous ranges | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to define discontinuous ranges
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,9 +11,10 @@ documentation: ug
 
 You can set a discontinuous range by adding different ranges to the Range collection. The following code example illustrates this.
 
- 
+{% tabs %}
  
 {% highlight C# %}
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -40,11 +41,15 @@ workbook.SaveAs(fileName);
 // Closes the workbook.
 workbook.Close();
 excelEngine.Dispose();  
-  {% endhighlight %}    
+
+
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
- 'Step 1: Instantiates the spreadsheet creation engine.
+
+'Step 1: Instantiates the spreadsheet creation engine.
+>>>>>>> development
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -69,6 +74,9 @@ workbook.SaveAs(fileName)
  
 //Closes the workbook.
 workbook.Close()
-excelEngine.Dispose()   
+
+excelEngine.Dispose() 
+  
 {% endhighlight %}
+{% endtabs %}
 

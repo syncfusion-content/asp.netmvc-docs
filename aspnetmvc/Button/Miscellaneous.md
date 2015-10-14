@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | Button | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: Button
@@ -18,31 +18,32 @@ The following steps explains you the details about rendering the button with spe
 1. In the CSHTML page, configure the Button widget as follows.
 
 
-   ~~~ html
+   ~~~ cshtml
 
 
-		@*Add the code in CSHTML page to configure and initialize the control*@
+	@*Add the code in CSHTML page to configure and initialize the control*@
 
 
 
-				@* Set the text for button control as follows.*@
+	@* Set the text for button control as follows.*@
 
-					<div class="control">
+	<div class="control">
 
-						@Html.EJ().Button("button_text").Text("Enter").Size(ButtonSize.Mini)
+		@Html.EJ().Button("button_text").Text("Enter").Size(ButtonSize.Mini)
 
-					</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+  
    
 	In the above code, the content of button “button” is replaced by the text value “Enter” that is given using text property.
 
 	Execute the above code to render the following output.
 
 	![](Miscellaneous_images/Miscellaneous_img1.png)
-
-	_Figure13: Button with new text_
+    
+	Button with new text
+	{:.caption}
 
    ## Show Rounded Corner
 
@@ -52,30 +53,25 @@ The following steps explains you the details about rendering the button with spe
 
 2. In the CSHTML page, configure the Button widget as follows.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@*Add the code in CSHTML page to configure and initialize the control*@
+	@*Add the code in CSHTML page to configure and initialize the control*@
 
+	@* Enable the rounded corner for button control as follows.*@
 
+	<div class="control">
 
-		  @* Enable the rounded corner for button control as follows.*@
+		@Html.EJ().Button("button_roundedCorner").Text("button").Size(ButtonSize.Mini).ShowRoundedCorner(true)
 
-			<div class="control">
-
-				@Html.EJ().Button("button_roundedCorner").Text("button").Size(ButtonSize.Mini).ShowRoundedCorner(true)
-
-			</div>
-
-
+	</div>
    ~~~
-   {:.prettyprint }
+  
 
 Execute the above code to render the following output.
 
 ![](Miscellaneous_images/Miscellaneous_img2.png)
 
-
-_Figure14: Button with rounded corner_
-
+Button with rounded corner
+{:.caption}
 
 

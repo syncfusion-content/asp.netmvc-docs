@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | ColorPicker  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: ColorPicker
@@ -19,7 +19,8 @@ In this example, you can learn how to customize ColorPicker control in a categor
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
+ColorPicker Control
+{:.caption}
 
 In the following sections you can learn, How to:
 
@@ -27,19 +28,19 @@ In the following sections you can learn, How to:
 * Initialize the other widgets
 * Add Value to ListBox Control
 
-## Create ColorPicker Control
+### Create ColorPicker Control
 
 Use the following steps to create the ColorPicker control.
 
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/colorpicker/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for rendering the ColorPicker window.
 
-   ~~~ js
+   ~~~ cshtml
 
 		@Html.EJ().ColorPicker("CategoryColor").Value("#278787")
 
    ~~~
-   {:.prettyprint }
+ 
 
 3. Run this code to render the resultant output of the above steps.
 
@@ -47,7 +48,7 @@ Use the following steps to create the ColorPicker control.
 
 
 
-## Initialize the other widgets
+### Initialize the other widgets
 
 To add the priority value to the ListBox, the text value is obtained from the input element and color for each priority is received by ColorPicker control. To add each new priority value to ListBox control, click the Add button.
 
@@ -144,7 +145,7 @@ You can refer to the following link for more information on creation on ListBox
 			</div>
 
    ~~~
-   {:.prettyprint }
+ 
 
 2. Add the following style section to align form fields. 
 
@@ -255,7 +256,7 @@ You can refer to the following link for more information on creation on ListBox
 		</style>
 
    ~~~
-   {:.prettyprint }
+ 
 
 3. Initialize the element in <script> tag.
 
@@ -280,7 +281,7 @@ You can refer to the following link for more information on creation on ListBox
 		</script>
 
    ~~~
-   {:.prettyprint }
+ 
 
 4. Run the above code to render the following output.
 
@@ -288,9 +289,10 @@ You can refer to the following link for more information on creation on ListBox
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+Color Picker control
+{:.caption}
 
-
-## Add value to ListBox Control 
+### Add value to ListBox Control 
 
 You can add the value to ListBox with selected color by performing the button click event. The following script section define the click event for the button element.
 
@@ -323,7 +325,7 @@ You can add the value to ListBox with selected color by performing the button cl
 		</script>
 
    ~~~
-   {:.prettyprint }
+ 
 
 
 2. The following screenshot illustrates the resultant output after you click Add button.
@@ -332,5 +334,5 @@ You can add the value to ListBox with selected color by performing the button cl
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
-
+Value from Color Picker control
+{:.caption}

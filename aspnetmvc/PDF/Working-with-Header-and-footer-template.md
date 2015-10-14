@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Working-with-Header-and-footer-template
+title: Working with Header and footer template | PDF | ASP.NET MVC | Syncfusion
 description: working with header and footer template
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -23,11 +23,10 @@ You can dock the header or footer to any position.
 
 The following code example illustrates you on how to create a Header and Footer.
 
+{% tabs %}
+ 
 
-
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //Creates a new PDF document.
 
@@ -95,9 +94,7 @@ pdfDocument.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new PDF document.
 
@@ -164,4 +161,4 @@ pdfDocument.Save("Output.pdf")
 pdfDocument.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %}

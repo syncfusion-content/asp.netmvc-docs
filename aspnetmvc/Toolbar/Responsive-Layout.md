@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsive-Layout
+title: Responsive Layout | Toolbar | ASP.NET MVC | Syncfusion
 description: responsive layout
 platform: ejmvc
 control: Toolbar
@@ -18,7 +18,10 @@ Add the above css link in the code sample.        
 1. Add the following code example in your HTML page.
 
 
-{% highlight html %}
+{% tabs %}
+
+
+{% highlight CSHTML %}
 
 <div class="control">
 
@@ -119,175 +122,193 @@ Add the above css link in the code sample.        
 
 <style type="text/css" class="cssStyles">
 
-    .e-tooltxt .PdfDocument.e-icon {
+	.e-tooltxt .PdfDocument.e-icon 
+	{
 
-        background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon.png');
+		background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon.png');
 
-        background-repeat: no-repeat;
+		background-repeat: no-repeat;
 
-        display: block;
+		display: block;
 
-        height: 30px;
+		height: 30px;
 
-        width: 30px;
+		width: 30px;
 
-    }
+	}
 
 
 
-        .e-tooltxt .PdfDocument.e-icon:hover {
+	.e-tooltxt .PdfDocument.e-icon:hover 
+	{
 
-            background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon-white.png');
+		background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon-white.png');
 
-        }
+	}
 
 
 
-    .PdfDocument.e-icon.convertToOthers {
+	.PdfDocument.e-icon.convertToOthers 
+	{
 
-        background-position: -349px 0px;
+		background-position: -349px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.convertToPdf {
+	.PdfDocument.e-icon.convertToPdf 
+	{
 
-        background-position: -527px 0px;
+		background-position: -527px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.signature {
+	.PdfDocument.e-icon.signature 
+	{
 
-        background-position: 2px 0px;
+		background-position: 2px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.save {
+	.PdfDocument.e-icon.save 
+	{
 
-        background-position: -87px 0px;
+		background-position: -87px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.msg {
+	.PdfDocument.e-icon.msg 
+	{
 
-        background-position: -483px 0px;
+		background-position: -483px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.previous {
+	.PdfDocument.e-icon.previous 
+	{
 
-        background-position: -395px 0px;
+		background-position: -395px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.next {
+	.PdfDocument.e-icon.next 
+	{
 
-        background-position: -439px 0px;
+		background-position: -439px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.zoomIn {
+	.PdfDocument.e-icon.zoomIn 
+	{
 
-        background-position: -175px 0px;
+		background-position: -175px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.zoomOut {
+	.PdfDocument.e-icon.zoomOut 
+	{
 
-        background-position: -219px 0px;
+		background-position: -219px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.fitOne {
+	.PdfDocument.e-icon.fitOne 
+	{
 
-        background-position: -264px 0px;
+		background-position: -264px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.sticky {
+	.PdfDocument.e-icon.sticky 
+	{
 
-        background-position: -131px -1px;
+		background-position: -131px -1px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.readMode {
+	.PdfDocument.e-icon.readMode 
+	{
 
-        background-position: -308px 0px;
+		background-position: -308px 0px;
 
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.print {
+	.PdfDocument.e-icon.print 
+	{
 
-        background-position: -43px 0px;
+		background-position: -43px 0px;
 
-    }
+	}
 
 
 
-    #ZoomValue .PdfDocument {
+	#ZoomValue .PdfDocument 
+	{
 
-        width: 90px;
+		width: 90px;
 
-    }
+	}
 
 
 
-    #page .PdfDocument input {
+	#page .PdfDocument input 
+	{
 
-        text-align: center;
+		text-align: center;
 
-        width: 20px;
+		width: 20px;
 
-        height: 21px;
+		height: 21px;
 
-    }
+	}
 
 
 
-    #count span {
+	#count span 
+	{
 
-        width: 30px;
+		width: 30px;
 
-        height: 30px;
+		height: 30px;
 
-        position: relative;
+		position: relative;
 
-        top: 2px;
+		top: 2px;
 
-        text-align: center;
+		text-align: center;
 
-        vertical-align: middle;
+		vertical-align: middle;
 
-    }
+	}
 
 </style>
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 Execute the above code to render the following output.
 

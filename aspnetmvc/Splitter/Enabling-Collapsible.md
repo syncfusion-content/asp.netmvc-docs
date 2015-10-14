@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enabling-Collapsible
+title: Enabling Collapsible | Splitter | ASP.NET MVC | Syncfusion
 description: enabling collapsible
 platform: ejmvc
 control: Splitter
@@ -21,47 +21,47 @@ The following steps explain the implementation of the Collapsible option in Spli
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-      @Html.EJ().Splitter("Splitter").Height("280").Width("600").Orientation(Orientation.Horizontal).PaneProperties(
+@Html.EJ().Splitter("Splitter").Height("280").Width("600").Orientation(Orientation.Horizontal).PaneProperties(
 
-    p =>
+p =>
 
-    {
+{
 
-        p.Add().ContentTemplate(
+p.Add().ContentTemplate(
 
-            @<div>
+	@<div>
 
-                <div style="padding: 0px 15px;">
+		<div style="padding: 0px 15px;">
 
-                    <h3 class="h3">Tools </h3>
+			<h3 class="h3">Tools </h3>
 
-                    Essential Tools is an collection of user interface components used to create interactive
+			Essential Tools is an collection of user interface components used to create interactive
 
-                    ASP.NET MVC applications.
+			ASP.NET MVC applications.
 
-                </div>
+		</div>
 
-            </div>).Collapsible(false);
+	</div>).Collapsible(false);
 
-        p.Add().ContentTemplate(
+p.Add().ContentTemplate(
 
-            @<div>
+	@<div>
 
-                <div style="padding: 0px 15px;">
+		<div style="padding: 0px 15px;">
 
-                    <h3 class="h3">Grid </h3>
+			<h3 class="h3">Grid </h3>
 
-                    Essential Mvc Grid offers full featured a Grid control with extensive support for
+			Essential Mvc Grid offers full featured a Grid control with extensive support for
 
-                    Grouping and the display of hierarchical data.
+			Grouping and the display of hierarchical data.
 
-                </div>
+		</div>
 
-            </div>);
+	</div>);
 
-    })
+})
 
 
 {% endhighlight %}
@@ -69,7 +69,6 @@ The following steps explain the implementation of the Collapsible option in Spli
 
 The output for Splitter when collapsible is set to “True” is as follows.
 
-1. 
 
 ![](Enabling-Collapsible_images/Enabling-Collapsible_img1.png)
 

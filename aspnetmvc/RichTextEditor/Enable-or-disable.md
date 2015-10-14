@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enable-or-disable
+title: Enable or disable | RichTextEditor | ASP.NET MVC | Syncfusion
 description: enable or disable
 platform: ejmvc
 control: RichTextEditor
@@ -15,19 +15,16 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 1. Add the following code in your CSHTML page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*Add the following code in your view page.*@
-	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render();}
+@*Add the following code in your view page.*@
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render();}
 
-{% endhighlight %}
 
-{% highlight js %}
+\\ Add the following code in your script section to render RTE with disabled image
 
-	\\ Add the following code in your script section to render RTE with disabled image
-	
-	iconvar rteobj = $("#rteSample").data("ejRTE");
-	rteobj.disableToolbarItem("rteSampleimage");
+iconvar rteobj = $("#rteSample").data("ejRTE");
+rteobj.disableToolbarItem("rteSampleimage");
 
 {% endhighlight %}
 
@@ -40,11 +37,11 @@ You can also enable or disable the entire RTE control by using “enabled” pro
 
 1. Add the following code in your CSHTML page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*Add the following code in your view page.*@
+@*Add the following code in your view page.*@
 
-    @{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Enabled(false).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Enabled(false).Render(); }
 
 {% endhighlight %}
 

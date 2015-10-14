@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | TagCloud | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: TagCloud
@@ -18,7 +18,7 @@ The TagCloud content are set to different font sizes from minimum to maximum bas
 The following steps explains you on how to configure font sizes for a TagCloud.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").MinFontSize("20px").MaxFontSize("50px")
 
@@ -39,7 +39,7 @@ You can set the TagCloud content display format using Format property. The Forma
 The following steps explains you to configure format for a TagCloud.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
@@ -84,50 +84,51 @@ The following steps allows you to configure CssClass for TagCloud.
 
 1. In the View page, add thebelow script to configure TagCloud widget.
 
-   ~~~ js
+   ~~~ cshtml
    
-		<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
+	<%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
-		@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
-		.TagCloudFields(tag => tag.Text("Text").Url("Url")
-		.Frequency("Frequency")).Title("Tech sites")
-		.CssClass("CustomCss")
+	@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
+	.TagCloudFields(tag => tag.Text("Text").Url("Url")
+	.Frequency("Frequency")).Title("Tech sites")
+	.CssClass("CustomCss")
 		
    ~~~
-   {:.prettyprint }
+   
 
 2. Define CSS class for customizing the TagCloud widget.
 
-   ~~~ html
+   ~~~ css
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-			/* Customize the TagCloud div element */
+		/* Customize the TagCloud div element */
 
-			.CustomCss
+		.CustomCss
 
-			{
+		{
 
-				background-color: #DDC;
+			background-color: #DDC;
 
-				width: 400px;
+			width: 400px;
 
-			}
-	
-			/* Customize the TagCloud header element */        
+		}
 
-			.CustomCss .e-header.e-title {
+		/* Customize the TagCloud header element */        
 
-				text-align: center;
+		.CustomCss .e-header.e-title 
+		{
 
-				font-weight: bold;
+			text-align: center;
 
-			}
+			font-weight: bold;
 
-		</style>
+		}
+
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 The following screenshot illustrates the TagCloud with customized CSS class,
 

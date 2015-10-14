@@ -1,15 +1,17 @@
 ---
 layout: post
-title: How to add chart labels to scatter points 
+title: How to add chart labels to scatter points | XlsIO | ASP.NET MVC | Syncfusion
 description:  how to add chart labels to scatter points
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
 #  How to add chart labels to scatter points
 
 The following code example illustrates adding chart labels to the scatter points of the chart.
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -82,4 +84,4 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
-
+{% endtabs %}

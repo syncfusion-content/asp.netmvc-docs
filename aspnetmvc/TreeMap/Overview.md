@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: TreeMap | TreeMap | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: TreeMap
 documentation: ug
 ---
 
-# Overview
+# TreeMap
 
 Essential TreeMap for JavaScript is ideal for visualizing large amounts of data. TreeMap holds a set of nested nodes to display hierarchical data. Each nested node may contain sub-nodes containing area proportional to a specified data value bounded. Color and annotation can be used to provide extra information about the leaf nodes. EssentialTreeMap is a perfect solution for developers looking to add advanced, feature rich Treemap to their applications.
 

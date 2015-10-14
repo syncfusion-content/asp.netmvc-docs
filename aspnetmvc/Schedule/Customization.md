@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization
+title: Customization | Schedule | ASP.NET MVC | Syncfusion
 description: customization
 platform: ejmvc
 control: Schedule
@@ -18,7 +18,7 @@ This example explains you on how to add the customized appointment window using 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @section SampleHeading{<span class="sampleName"> Schedule / Default</span>}
 
@@ -54,21 +54,23 @@ This example explains you on how to add the customized appointment window using 
 
 <style>
 
-.customcheck {
+	.customcheck 
+	{
 
-float: left;
+	float: left;
 
-margin-right: 10px;
+	margin-right: 10px;
 
-}
+	}
 
 
 
-.error {
+	.error 
+	{
 
-background-color: #FF8A8A;
+	background-color: #FF8A8A;
 
-}
+	}
 
 </style>
 
@@ -474,7 +476,7 @@ Execute the above code and then double-click on the required Schedule cells. The
 
 
 
-### Editing Customized Appointment window
+## Editing Customized Appointment window
 
 * To edit the appointments in customized appointment window, you can use appointmentWindowOpen event to avoid displaying the default appointment window when you double-click the appointments. 
 * The customized window is designed with the dialog control separately and it is display when you double-click appointments. 
@@ -483,7 +485,7 @@ The following code example is added to the previous code example of appointment 
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -937,9 +939,8 @@ $("#customWindow").ejDialog("close");
 
 ![](Customization_images/Customization_img2.png)
 
-
-
-_Figure_ _68_: schedule with appointment using customized appointment window.
+schedule with appointment using customized appointment window.
+{:.caption}
 
 * You can change the details in the above window and then click Submit button to save the updated values.
 
@@ -963,7 +964,7 @@ You can customize the appearance of the Schedule control by setting the specific
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1007,16 +1008,15 @@ Execute the above code to render the output as follows with the Schedule control
 
 ![](Customization_images/Customization_img3.png)
 
+schedule with hour customization.
+{:.caption}
 
-
-_Figure_ _107_:  schedule with hour customization.
-
-## Business hours
+### Business hours
 
 * There is an option highlightBusinessHours in the Schedule control to enable/disable the action of highlighting the business hours. 
 * It is controlled with two additional options businessStartHour and businessEndHour to specify the time range to be defined as the business hours. By default, the business hours are highlighted in the Schedule control.
 
-### businessStartHour
+### BusinessStartHour
 
 * It allows you to specify the start time to indicate the business start hour.
 
@@ -1032,8 +1032,7 @@ businessEndHour
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -1078,10 +1077,8 @@ Execute the above code to render the following output that explains the highligh
 
 ![](Customization_images/Customization_img4.png)
 
-
-
-   _Figure_ _108_:  schedule with Business hours
-
+schedule with Business hours
+{:.caption}
 
 
 ## Date/Time Customization
@@ -1095,9 +1092,7 @@ The following code example explains how to change the current date of the Schedu
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -1133,11 +1128,10 @@ Execute the above code and the following screenshot displays the Schedule contro
 
 ![](Customization_images/Customization_img5.png)
 
+schedule with current time
+{:.caption}
 
-
-  _Figure_ _118_:  schedule with current time
-
-Date Format
+### Date Format
 
 * The Schedule control uses different types of date formats to denote the dates used in it. You can specify your required format for the dates by using the dateFormat property. 
 * When the date format is explicitly defined with particular value such as “dd-MM-yyyy”, then the datepicker control that is used within the Schedule control make use of this specific format.
@@ -1146,7 +1140,7 @@ The following code example explains how to change the dateFormat of the Schedule
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -1189,7 +1183,7 @@ The following screenshot displays the Schedule control with the dateFormat set a
 
 
 
-## Minimum and Maximum Dates
+### Minimum and Maximum Dates
 
 * This feature allows you to specify the minimum and maximum dates for the Schedule control. It can be defined with the minDate and maxDate properties. 
 * Specifying minimum and maximum dates is especially useful when scheduling appointments for a project with fixed start and end dates.
@@ -1199,11 +1193,7 @@ The following code example explains how to set the minimum and maximum date of t
 
 
 
-{% highlight js %}
-
-
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -1247,7 +1237,7 @@ The following screenshot displays the Schedule control with MinDate and MaxDate 
 
 
 
-## Timemode
+### Timemode
 
 * You can set two types of time mode, either 12 or 24 hour format for the Schedule control.  It accepts the following enum values,
 1. ej.Schedule.TimeMode.Hour12
@@ -1258,7 +1248,7 @@ The following screenshot displays the Schedule control with MinDate and MaxDate 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1279,11 +1269,10 @@ The following screenshot displays the Schedule control when time mode is set to 
 
 ![](Customization_images/Customization_img8.png)
 
+schedule time customization.
+{:.caption}
 
-
-   _Figure_ _114_:  schedule time customization.
-
-## TimeZone
+### TimeZone
 
 * Appointments within the Schedule control is displayed based on the provided timezone . 
 * If no specific timezones are set for the Schedule control, then it takes the local system timezone into consideration.
@@ -1294,8 +1283,9 @@ The following screenshot displays the Schedule control when time mode is set to 
 You can set the timezone to the Schedule control as follows.
 
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 <style>
 .e-monthappointment {height: auto !important;}
 </style>@(Html.EJ()
@@ -1345,11 +1335,11 @@ You can set the timezone to the Schedule control as follows.
  }}$.views.helpers({ format: _getImages });
  </script>}
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
            // follow the code as same as declared in Read Only part
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 
 * Add new appointments to the Schedule control. The appointments are rendered based on the time difference that tends to the timezone set to it.
@@ -1357,9 +1347,8 @@ You can set the timezone to the Schedule control as follows.
 
 ![](Customization_images/Customization_img9.png)
 
-
-
-  _Figure_ _115_:  schedule with timezone.
+schedule with timezone.
+{:.caption}
 
 * In the above output, an appointment is initially created in the time-range 7.00am - 8.30am, it is saved in the timeslot between 9.00am – 10.30 am due to the time zone set to “UTC +2:00” in the Schedule control.
 
@@ -1367,7 +1356,7 @@ You can set the timezone to the Schedule control as follows.
 
 
 
-## Current Time indicator
+### Current Time indicator
 
 * The current time indicator denotes the current system time and it is marked on the Schedule control with a horizontal line drawn across the current date. 
 * The showCurrentTimeIndicator property allows you to show/hide the time indicator on the Schedule control.
@@ -1378,15 +1367,14 @@ The following screenshot displays the Schedule control with the current time ind
 
 ![](Customization_images/Customization_img10.png)
 
-
-
- _Figure_ _116_:  schedule time customization
+schedule time customization
+{:.caption}
 
 The following code example explains how to disable the current time indicator from the Schedule control. 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -1425,8 +1413,34 @@ The following code example explains how to disable the current time indicator fr
 ![](Customization_images/Customization_img11.png)
 
 
+schedule with show current time indicator.
+{:.caption}
 
-_Figure_ _117_:  schedule with show current time indicator.
 
+## Show / Hide TimeScale
 
+The TimeScale depicting the time duration (either in 12 or 24 hour format) is usually displayed at the left side of the schedule control. It can be shown or hidden from the Schedule control by using the showTimeScale property that is supported in both the Schedule orientations (Vertical and Horizontal). It is set to true, by default. The following code example explains on how to use the showTimeScale property.
 
+ 
+{% highlight CSHTML %}
+
+@(Html.EJ().Schedule("Schedule1")
+.Width("100%")
+.Height("525px")
+// Disable TimeScale property to the schedule
+. ShowTimeScale(false)
+.CurrentDate(new DateTime(2014,5,12))
+.AppointmentSettings(fields=>fields.Datasource(ViewBag.
+datasource)
+.Id("Id")
+.Subject("Subject")
+.StartTime("StartTime")
+.EndTime("EndTime")
+.AllDay("AllDay")
+.Recurrence("Recurrence")
+.RecurrenceRule("RecurrenceRule"))
+)
+ 
+{% endhighlight %}
+
+![](Customization_images/Customization_img12.png)

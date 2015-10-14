@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Persistence-Support
+title: Persistence Support | Slider | ASP.NET MVC | Syncfusion
 description: persistence support
 platform: ejmvc
 control: Slider
@@ -15,7 +15,7 @@ The following steps explains you on how to enable the EnablePersistence property
 
 1. In an VIEW page, add a helper element to render it as a Slider widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

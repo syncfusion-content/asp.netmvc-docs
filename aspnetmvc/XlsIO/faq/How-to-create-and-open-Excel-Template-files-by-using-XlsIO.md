@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to create and open Excel Template files by using XlsIO 
+title: How to create and open Excel Template files by using XlsIO | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to create and open Excel Template files by using XlsIO
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,8 +11,11 @@ documentation: ug
 
 You can create either XLT or XLTX Excel Template files by saving a file with the ExcelSaveType property of the SaveAs method. The ExcelSaveType property must be set to SaveAsTemplate to create a template file of the existing file. The following code example illustrates this.
 
- 
+
+{% tabs %}
 {% highlight C# %}
+
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -35,6 +38,7 @@ workbook.SaveAs("Sample.xltx", ExcelSaveType.SaveAsTemplate);
 
 
 {% highlight vbnet %}
+
  'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -53,11 +57,13 @@ workbook.SaveAs("Sample.xlt", ExcelSaveType.SaveAsTemplate)
 'Saves as XLTX.
 workbook.Version = ExcelVersion.Excel2007
 workbook.SaveAs("Sample.xltx", ExcelSaveType.SaveAsTemplate)
-{% endhighlight %}
 
+{% endhighlight %}
+{% endtabs %}
 ## Opening Excel Template Files
 
 An Excel Template file is opened in the same way a document is opened. The following code example illustrates how to open a template file.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -105,4 +111,8 @@ workbook.SaveAs(fileName)
 workbook.Close()
 excelEngine.Dispose()
 
-{% endhighlight %}        
+{% endhighlight %}   
+
+{% endtabs %}
+     
+

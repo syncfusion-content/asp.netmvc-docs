@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Frame-Type
+title: Frame Type | OLAPGauge | ASP.NET MVC | Syncfusion
 description: frame type 
 platform: ejmvc
 control: OLAPGauge
@@ -20,9 +20,7 @@ OLAP Gauge supports built-in frame types to provide effective rim styles. The 
 By default, frame type is Full Circle. You can also set frame type with frameType property to fullCircle.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Frame(frame=>frame.FrameType(Frame.FullCircle)).Scales(scale =>
@@ -91,9 +89,7 @@ By default, frame type is Full Circle. You can also set frame type with frameTyp
 
 You can set frame type as halfCircle with the help of frameType property to visualize the gauge control in half circle.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Frame(frame=>frame.FrameType(Frame.HalfCircle)).Scales(scale =>
 

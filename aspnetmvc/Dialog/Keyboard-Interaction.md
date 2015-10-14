@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | Dialog | ASP.NET MVC | Syncfusion
 description: keyboard interaction	
 platform: ejmvc
 control: Dialog
@@ -11,7 +11,7 @@ documentation: ug
 
 The Dialog provides you to interact with the keyboard actions instead of mouse actions. All the Dialog actions can be achieved by using Keyboard shortcuts.
 
-_Table3: Key shortcuts for Dialog_
+_Key shortcuts for Dialog_
 
 <table>
 <tr>
@@ -50,14 +50,14 @@ The following steps explains you to enable keyboard interaction for Dialog contr
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
-   ~~~ html
+   ~~~ cshtml
    
 		// In the CSHTML page add the Dialog widget using helpers.
 		@{Html.EJ().Dialog("keyboardDialog").Title("WinRT")
 		.ContentTemplate(@<div>Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span> It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps. </div>).Width(550).Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
    ~~~ js
     
@@ -73,7 +73,7 @@ The following steps explains you to enable keyboard interaction for Dialog contr
 	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -81,8 +81,8 @@ The following steps explains you to enable keyboard interaction for Dialog contr
 
    ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-   _Figure 32: Dialog with keyboard interaction._
-
+    Dialog with keyboard interaction.
+    {:.caption}
 
 
 

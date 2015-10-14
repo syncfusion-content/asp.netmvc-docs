@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | NavigationDrawer | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: NavigationDrawer
@@ -26,23 +26,23 @@ You can create an MVC Project and add the necessary assemblies, styles and scrip
 To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set thetext for list itemsby using Text property. You can paste the following code in corresponding view page.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 
-    @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
+@Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
-         {
+	 {
 
-             items.Add().Text("Home");
+		 items.Add().Text("Home");
 
-             items.Add().Text("Profile");
+		 items.Add().Text("Profile");
 
-             items.Add().Text("Photos");
+		 items.Add().Text("Photos");
 
-             items.Add().Text("Location");
+		 items.Add().Text("Location");
 
-         });
+	 });
 
 </div>)
 
@@ -53,7 +53,7 @@ To add a Navigation Drawer control, call NavigationDrawer helper. You can displa
 
 Create the target element as follows to display the drawer by clicking target icon.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div class="navi">
 
@@ -67,63 +67,63 @@ Create the target element as follows to display the drawer by clicking target ic
 
 To set the target icon image from sprite and to position the target icon properly use the following code example.
 
-{% highlight html %}
+{% highlight css %}
 
 <style>
 
-        [class*="icon-"]
+	[class*="icon-"]
 
-        {
+	{
 
-            background-image: url("http://js.syncfusion.com/ug/web/content/drawer/sprite.png");
+		background-image: url("http://js.syncfusion.com/ug/web/content/drawer/sprite.png");
 
-        }
+	}
 
-     .icon-target 
+ .icon-target 
 
-        {
+	{
 
-             background-position: 0 -338px;
+		 background-position: 0 -338px;
 
-             font-size: 34px;
+		 font-size: 34px;
 
-             height: 48px;
+		 height: 48px;
 
-             position: absolute;
+		 position: absolute;
 
-             text-indent: 50px;
+		 text-indent: 50px;
 
-             top: -3px;
+		 top: -3px;
 
-             width: 48px;
+		 width: 48px;
 
-             z-index: 3;
+		 z-index: 3;
 
-         }
+	 }
 
-     .navi 
+ .navi 
 
-        {
+	{
 
-            background: none repeat scroll 0 0 #C4C4B4;
+		background: none repeat scroll 0 0 #C4C4B4;
 
-            color: #fff;
+		color: #fff;
 
-            height: 45px;
+		height: 45px;
 
-            padding-left: 5px;
+		padding-left: 5px;
 
-            width: 100%;
+		width: 100%;
 
-        }
+	}
 
-       body
+   body
 
-         {
+	 {
 
-            background: none repeat scroll 0 0 #ece9d8;
+		background: none repeat scroll 0 0 #ece9d8;
 
-         }
+	 }
 
 </style>
 
@@ -135,27 +135,25 @@ To set the target icon image from sprite and to position the target icon properl
 
 Set the TargetId property as follows.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
-    @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
+@Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
-         {
+	 {
 
-             items.Add().Text("Home");
+		 items.Add().Text("Home");
 
-             items.Add().Text("Profile");
+		 items.Add().Text("Profile");
 
-             items.Add().Text("Photos");
+		 items.Add().Text("Photos");
 
-             items.Add().Text("Location");
+		 items.Add().Text("Location");
 
-         });
+	 });
 
 </div>)
-
-
 
 {% endhighlight %}
 
@@ -174,23 +172,23 @@ You can display the drawer either by clicking on the target icon or by swiping f
 
 You can set the images for Navigation Drawer by using the ImageClass property as follows.    
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
-    @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
+@Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
-         {
+ {
 
-             items.Add().Text("Home").ImageClass("icon-home");
+	 items.Add().Text("Home").ImageClass("icon-home");
 
-             items.Add().Text("Profile").ImageClass("icon-profile");
+	 items.Add().Text("Profile").ImageClass("icon-profile");
 
-             items.Add().Text("Photos").ImageClass("icon-photos");
+	 items.Add().Text("Photos").ImageClass("icon-photos");
 
-             items.Add().Text("Location").ImageClass("icon-location");
+	 items.Add().Text("Location").ImageClass("icon-location");
 
-         });
+ });
 
 </div>)
 
@@ -202,51 +200,51 @@ You can set the images for Navigation Drawer by using the ImageClass property as
 
 You can define the image classes specified for the list items as follows.
 
-{% highlight html %}
+{% highlight css %}
 
 <style>
 
-        #navpane [class*="icon-"]
+	#navpane [class*="icon-"]
 
-        {
+	{
 
-            width: 35px;
+		width: 35px;
 
-            height: 35px;
+		height: 35px;
 
-        }
+	}
 
-        .icon-home
+	.icon-home
 
-        {
+	{
 
-            background-position: 0 0;
+		background-position: 0 0;
 
-        }
+	}
 
-        .icon-profile
+	.icon-profile
 
-        {
+	{
 
-            background-position: 0 -253px;
+		background-position: 0 -253px;
 
-        }
+	}
 
-        .icon-photo
+	.icon-photo
 
-        {
+	{
 
-            background-position: 0 -168px;
+		background-position: 0 -168px;
 
-        }
+	}
 
-        .icon-locations
+	.icon-locations
 
-        {
+	{
 
-            background-position: 0 -85px;
+		background-position: 0 -85px;
 
-        }    
+	}    
 </style>
 
 
@@ -257,7 +255,7 @@ You can define the image classes specified for the list items as follows.
 
 Run the application to render the following output. 
 
-![C:/Users/ApoorvahR/Desktop/1.png](Getting-Started_images/Getting-Started_img4.png)
+![](Getting-Started_images/Getting-Started_img4.png)
 
 
 
@@ -265,7 +263,7 @@ Create corresponding content elements for each options in the navigation list as
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!-- Home Page Content-->
 
@@ -301,10 +299,6 @@ Create corresponding content elements for each options in the navigation list as
 
 </div>
 
-
-
-
-
 {% endhighlight %}
 
 
@@ -313,27 +307,25 @@ You can load the desired content for the navigation items by updating the conten
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
-    @Html.EJ().ListView("list").ShowHeader(false).ClientSideEvents(click => click.MouseDown("slideMenuClick")).PersistSelection(true).Width(300).Items(items =>
+@Html.EJ().ListView("list").ShowHeader(false).ClientSideEvents(click => click.MouseDown("slideMenuClick")).PersistSelection(true).Width(300).Items(items =>
 
-         {
+ {
 
-             items.Add().Text("Home").ImageClass("icon-home");
+	 items.Add().Text("Home").ImageClass("icon-home");
 
-             items.Add().Text("Profile").ImageClass("icon-profile");
+	 items.Add().Text("Profile").ImageClass("icon-profile");
 
-             items.Add().Text("Photos").ImageClass("icon-photos");
+	 items.Add().Text("Photos").ImageClass("icon-photos");
 
-             items.Add().Text("Location").ImageClass("icon-location");
+	 items.Add().Text("Location").ImageClass("icon-location");
 
-         });
+ });
 
 </div>)
-
-
 
 {% endhighlight %}
 
@@ -343,23 +335,22 @@ In the mouse down handler, you can hide the other content and display the respec
 
 
 
-{% highlight html %}
+{% highlight js%}
 
 <script type="text/javascript">
 
-function slideMenuClick(e) {
+	function slideMenuClick(e) 
+	{
 
-        $('#Home, #Profile, #Photos, #Location').hide(); //Hiding all other contents
+			$('#Home, #Profile, #Photos, #Location').hide(); //Hiding all other contents
 
-        $('#' + e.text).show(); //Displaying the content based on the text of item selected
+			$('#' + e.text).show(); //Displaying the content based on the text of item selected
 
-        $("#navpane").ejNavigationDrawer("close");
+			$("#navpane").ejNavigationDrawer("close");
 
-    }
+	}
 
-    </script>
-
-
+</script>
 
 {% endhighlight %}
 

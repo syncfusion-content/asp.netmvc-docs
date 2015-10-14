@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | FileExplorer | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: FileExplorer
@@ -19,12 +19,13 @@ The following screenshot demonstrates the functionality of FileExplorer with D
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Figure 1: FileExplorer Control with Grid view_
-
+FileExplorer Control with Grid view
+{:.caption}
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-_Figure 2: FileExplorer Control with Thumbnail view_
+FileExplorer Control with Thumbnail view
+{:.caption}
 
 In the above screenshot, you can access and manage the remote file system. While you perform the operation on files like delete or rename, this is handled in the controller part.
 
@@ -35,117 +36,117 @@ ASP.NET MVC FileExplorer widget renders built-in features like accessing online
 1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/fileexplorer/getting-started) Documentation.
 2. Add the following code example to the corresponding View page to render the FileExplorer.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
+	@Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").AjaxAction(@Url.Content("FileActionDefault"))
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Add the following code example to the corresponding controller page, FileActionDefault method is triggered, when you have made Ajax request on client-side. This FileActionDefault method finds out the specific operations using the ActionType property and calls the FileExplorerOperations methods according to that.
 
-   ~~~ cs
+   ~~~ csharp
 
-		using System;
+	using System;
 
-		using System.Collections.Generic;
+	using System.Collections.Generic;
 
-		using System.Linq;
+	using System.Linq;
 
-		using System.Web;
+	using System.Web;
 
-		using System.Web.Mvc;
+	using System.Web.Mvc;
 
-		using Syncfusion.JavaScript;
+	using Syncfusion.JavaScript;
 
-		using MVCSampleBrowser.Models;
+	using MVCSampleBrowser.Models;
 
-		namespace MVCSampleBrowser.Controllers
+	namespace MVCSampleBrowser.Controllers
 
-		{
+	{
 
-			public partial class FileExplorerController : Controller
+		public partial class FileExplorerController : Controller
 
-			{                
+		{                
 
-				public ActionResult Default()
-
-				{
-
-					return View();
-
-				}
-
-
-			public ActionResult FileActionDefault(FileExplorerParams args)
+			public ActionResult Default()
 
 			{
 
-				switch (args.ActionType)
+				return View();
 
-				{	
+			}
 
-					case "Read":
 
-						return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
+		public ActionResult FileActionDefault(FileExplorerParams args)
 
-					case "CreateFolder":
+		{
 
-						return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
+			switch (args.ActionType)
 
-					case "Paste":
+			{	
 
-						FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
+				case "Read":
 
-						break;
+					return Json(FileExplorerOperations.Read(args.Path,args.ExtensionsAllow));
 
-					case "Delete":
+				case "CreateFolder":
 
-						FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
+					return Json(FileExplorerOperations.CreateFolder(args.Path, args.Name));
 
-                        break;
+				case "Paste":
 
-					case "Rename":
+					FileExplorerOperations.Paste(args.LocationFrom, args.LocationTo, args.Name, args.Type, args.Action);
 
-						FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
+					break;
 
-						break;
+				case "Delete":
 
-					case "GetDetails":
+					FileExplorerOperations.Delete(args.Name.Split(','), args.Path);
 
-						return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
+					break;
 
-					case "Download":
+				case "Rename":
 
-						FileExplorerOperations.Download(args.Path);
+					FileExplorerOperations.Rename(args.Path, args.PreviousName, args.NewName, args.Type);
 
-						break;
+					break;
 
-					case "Upload":
+				case "GetDetails":
 
-						FileExplorerOperations.Upload(args.FileUpload, args.Path);
+					return Json(FileExplorerOperations.GetDetails(args.Path, args.Name, args.Type));
 
-						break;
+				case "Download":
 
-				}
+					FileExplorerOperations.Download(args.Path);
 
-              return Json("");
+					break;
 
-				}
+				case "Upload":
+
+					FileExplorerOperations.Upload(args.FileUpload, args.Path);
+
+					break;
+
+			}
+
+		  return Json("");
 
 			}
 
 		}
+
+	}
    
    ~~~
-   {:.prettyprint }
+   
 
 
 FileExplorerOperations is a predefined Class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side. 
 
 By default, we send following parameters in data field of corresponding Ajax request. This helps to handle server side operation. Some Server side action method will only return the response data. This response data and request parameter are explained in following table. 
 
-_Table1: FileExplorerOperations_
+_FileExplorerOperations_
 
 <table>
 <tr>
@@ -209,5 +210,5 @@ The following screenshot displays a FileExplorer control.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure 3: FileExplorer Control with Grid view_
-
+FileExplorer Control with Grid view
+{:.caption}

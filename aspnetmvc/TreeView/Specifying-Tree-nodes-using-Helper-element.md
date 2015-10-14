@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Specifying-Tree-nodes-using-Helper-element
+title: Specifying Tree nodes using Helper element | TreeView | ASP.NET MVC | Syncfusion
 description: specifying tree nodes using helper element
 platform: ejmvc
 control: TreeView
@@ -17,105 +17,97 @@ The following steps explain configuring the template option for TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string, object> to specify the HTML attributes. Please check the below code.
 
-   ~~~ js
+   ~~~ cshtml
 
-		\\ To configure TreeView in the CSHTML page
-		@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
-		htmlAttribute.Add("class", "cont-del");  }@Html.EJ().TreeView("treeview").Items(items => {              
-			items.Add().Text("Favorites").Expanded(true).Children(child => { 
-				child.Add().Text("Desktop").HtmlAttributes(htmlAttribute);  
-				child.Add().Text("Downloads").HtmlAttributes(htmlAttribute); 
-				child.Add().Text("Recent places").HtmlAttributes(htmlAttribute);
-			});           
-			items.Add().Text("Libraries").Expanded(true).Children(child => {  
-				child.Add().Text("Documents").Children(child1 => { 
-					child1.Add().Text("My Documents").HtmlAttributes(htmlAttribute);     
-					child1.Add().Text("Public Documents").HtmlAttributes(htmlAttribute);  
-				});  
-				child.Add().Text("Pictures").Children(child1 => {    
-				child1.Add().Text("My Pictures").HtmlAttributes(htmlAttribute);  
-				child1.Add().Text("Public Pictures").HtmlAttributes(htmlAttribute); 
-				});     
-				child.Add().Text("Music").Children(child1 => {
-				child1.Add().Text("My Music").HtmlAttributes(htmlAttribute);  
-				child1.Add().Text("Public Music").HtmlAttributes(htmlAttribute);
-				}); 
-				child.Add().Text("Subversion"); 
-				});          
-				items.Add().Text("Computer").Children(child => { 
-				child.Add().Text("Folder(C)").HtmlAttributes(htmlAttribute); 
-				child.Add().Text("Folder(D)").HtmlAttributes(htmlAttribute);
-				child.Add().Text("Folder(E)").HtmlAttributes(htmlAttribute);
-				});       
-				})
+	\\ To configure TreeView in the CSHTML page
+	@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
+	htmlAttribute.Add("class", "cont-del");  }@Html.EJ().TreeView("treeview").Items(items => {              
+		items.Add().Text("Favorites").Expanded(true).Children(child => { 
+			child.Add().Text("Desktop").HtmlAttributes(htmlAttribute);  
+			child.Add().Text("Downloads").HtmlAttributes(htmlAttribute); 
+			child.Add().Text("Recent places").HtmlAttributes(htmlAttribute);
+		});           
+		items.Add().Text("Libraries").Expanded(true).Children(child => {  
+			child.Add().Text("Documents").Children(child1 => { 
+				child1.Add().Text("My Documents").HtmlAttributes(htmlAttribute);     
+				child1.Add().Text("Public Documents").HtmlAttributes(htmlAttribute);  
+			});  
+			child.Add().Text("Pictures").Children(child1 => {    
+			child1.Add().Text("My Pictures").HtmlAttributes(htmlAttribute);  
+			child1.Add().Text("Public Pictures").HtmlAttributes(htmlAttribute); 
+			});     
+			child.Add().Text("Music").Children(child1 => {
+			child1.Add().Text("My Music").HtmlAttributes(htmlAttribute);  
+			child1.Add().Text("Public Music").HtmlAttributes(htmlAttribute);
+			}); 
+			child.Add().Text("Subversion"); 
+			});          
+			items.Add().Text("Computer").Children(child => { 
+			child.Add().Text("Folder(C)").HtmlAttributes(htmlAttribute); 
+			child.Add().Text("Folder(D)").HtmlAttributes(htmlAttribute);
+			child.Add().Text("Folder(E)").HtmlAttributes(htmlAttribute);
+			});       
+			})
 
+	<script>  
+		$(function () { 
+			$("#treeview").ejTreeView(); 
+			var treeObj = $("#treeview").data("ejTreeView");
+			$("#treeview").find(".cont-del").bind("click", function (e) { 
+				treeObj.removeNode($(e.target));
+			});  
+		});
+	</script>
    ~~~
-   {:.prettyprint }
-				
-   ~~~ js
    
-		<script>  
-			$(function () { 
-				$("#treeview").ejTreeView(); 
-				var treeObj = $("#treeview").data("ejTreeView");
-				$("#treeview").find(".cont-del").bind("click", function (e) { 
-					treeObj.removeNode($(e.target));
-				});  
-			});
-		</script>
-   ~~~
-   {:.prettyprint }
 
 
 2. Adding the style for TreeView control as follows.
 
    ~~~ css
+   
+	<style class="cssStyles">
 
+		.cont-details 
+		{
 
+		margin-top: 10px;
 
-		<style class="cssStyles">
+		margin-left: 10px;
 
-			.cont-details {
+		font-size: 13px;
 
-			    margin-top: 10px;
+		font-family: Georgia;
 
-			    margin-left: 10px;
+		color: black;
 
-			    font-size: 13px;
+		width: 100px;
 
-			    font-family: Georgia;
+		text-align: left;
 
-			    color: black;
+		}
 
-			    width: 100px;
+		.cont-del 
+		{
 
-			    text-align: left;
+		background: url("../images/treeview/remove-icon.png") no-repeat 50% 50%;
 
-			}
+		width: 12px;
 
+		cursor: pointer;
 
+		}
 
-			.cont-del {
+		.e-treeview .e-text
+		{
 
-			    background: url("../images/treeview/remove-icon.png") no-repeat 50% 50%;
+		margin-left:6px;
 
-			    width: 12px;
+		}
 
-			    cursor: pointer;
-
-			}
-
-			    .e-treeview .e-text{
-
-				margin-left:6px;
-
-			    }
-
-		    </style>
-
-
+	</style>
    ~~~
-   {:.prettyprint }
+   
 
 
 The TreeView control template displays the following output.

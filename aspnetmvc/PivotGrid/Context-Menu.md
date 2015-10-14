@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context-Menu
+title: Context Menu | PivotGrid | ASP.NET MVC | Syncfusion
 description: context menu
 platform: ejmvc
 control: PivotGrid
@@ -14,20 +14,21 @@ Cell Context support in PivotGrid allows you to choose the right-click event to
 The following code example illustrates how to create the PivotGrid control with the enabled CellContext. Here, the CellContext event displays a pop-up menu as follows.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-  @section StyleSection{ 
-   <style>
-   #PivotGrid1 
-   {  
+@section StyleSection
+{ 
+<style>
+	#PivotGrid1 
+	{  
 	   width:100%;  
 	   height:350px;
 	   overflow:auto; 
-   }	    
-   .menuItem 
-   {
+	}	    
+	.menuItem 
+	{
 		padding:5px 50px 5px 20px; 
-   }
+	}
 	.contextMenuPopup
 	{ 
 		position: absolute;
@@ -35,7 +36,7 @@ The following code example illustrates how to create the PivotGrid control with 
 		border: #BBBCBB solid 1px; 
 		padding: 1px;        
 		color:#565656;  
-    }       
+	}       
 	.activeMenuItemBlue
 	{ 
 		background-color:#66C1DC; 
@@ -51,9 +52,11 @@ The following code example illustrates how to create the PivotGrid control with 
 		background-color:#F9920B; 
 		color:white;    
 	}   
-	</style>}@section ScriptSection
-	{   
-		<script type="text/javascript"> 
+</style>
+}
+@section ScriptSection
+{   
+	<script type="text/javascript"> 
 		$(function ()
 		{   
 			$(document).bind("click", function ()
@@ -64,16 +67,16 @@ The following code example illustrates how to create the PivotGrid control with 
 		cell_RightClick = function (evt) 
 		{     
 			$(".contextMenuPopup").remove();
-            var contextMenu = $('<div class="contextMenuPopup"></div>');
-            $(contextMenu[0]).html('<div class="menuItem">Cell Type</div><div class="menuItem">Position</div><div class="menuItem">Value</div>'); 
+			var contextMenu = $('<div class="contextMenuPopup"></div>');
+			$(contextMenu[0]).html('<div class="menuItem">Cell Type</div><div class="menuItem">Position</div><div class="menuItem">Value</div>'); 
 			$(contextMenu[0]).css("left", evt.args.clientX + 10).css("top", evt.args.clientY + 10);
-            $("#PivotGrid1").append(contextMenu[0]);      
+			$("#PivotGrid1").append(contextMenu[0]);      
 			$(".menuItem").bind("mouseenter", function (e)
 			{         
 				var bgColor = ($(".summary").css("background-color") != "transparent" && $(".summary").css("background-color") != "rgb(31, 31, 31)") ? $(".summary").css("background-color") : $(".summary").css("color");
-                if (bgColor == "rgb(204, 237, 255)" || bgColor == "rgb(94, 171, 222)" || bgColor == "rgb(104, 195, 222)") 
+				if (bgColor == "rgb(204, 237, 255)" || bgColor == "rgb(94, 171, 222)" || bgColor == "rgb(104, 195, 222)") 
 				$(this).addClass("activeMenuItemBlue")
-                else if (bgColor == "rgb(247, 252, 182)" || bgColor == "rgb(145, 170, 41)" || bgColor == "rgb(169, 199, 78)")
+				else if (bgColor == "rgb(247, 252, 182)" || bgColor == "rgb(145, 170, 41)" || bgColor == "rgb(169, 199, 78)")
 				$(this).addClass("activeMenuItemGreen")    
 				else if (bgColor == "rgb(255, 238, 169)" || bgColor == "rgb(250, 161, 19)" || bgColor == "rgb(255, 187, 96)")
 				$(this).addClass("activeMenuItemOrange")   
@@ -87,14 +90,14 @@ The following code example illustrates how to create the PivotGrid control with 
 				alert("Click event occurs");  
 			}); 
 		}
-	    </script>
-	}
-	@section ControlsSection
-	{
-		@Html.EJ().Pivot().PivotGrid("PivotGrid1")
-		.Url("../wcf/CellContextService.svc").EnableCellContext(true)
-		.ClientSideEvents(events=>events.CellContext("cell_RightClick "))
-	}
+	</script>
+}
+@section ControlsSection
+{
+	@Html.EJ().Pivot().PivotGrid("PivotGrid1")
+	.Url("../wcf/CellContextService.svc").EnableCellContext(true)
+	.ClientSideEvents(events=>events.CellContext("cell_RightClick "))
+}
 
 
 {% endhighlight %}

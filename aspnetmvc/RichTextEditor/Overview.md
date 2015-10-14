@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: RichTextEditor | RichTextEditor | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: RichTextEditor
 documentation: ug
 ---
 
-# Overview
+# RichTextEditor
 
 RichTextEditor (RTE) control enables you to visually edit HTML content. It enables you to edit the contents with insert table and images, and can get the HTML content for the displayed content. A RichTextEditor control provides a toolbar that helps to apply rich text formats to the text entered in the text area.  
 

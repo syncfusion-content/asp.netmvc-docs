@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar
+title: Toolbar | TreeGrid | ASP.NET MVC | Syncfusion
 description: toolbar
 platform: ejmvc
 control: TreeGrid
@@ -22,63 +22,53 @@ You can enable toolbar for TreeGrid, using the following code example.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
 
-
-
-                    //...
-
 .EditSettings(edit =>
 
-               {
+{
 
-                  //...
+	edit.RowPosition(TreeGridRowPosition.AboveSelectedRow);
 
-           edit.RowPosition(TreeGridRowPosition.AboveSelectedRow);
-
-
-
-              })
+})
 
 .ToolbarSettings(tool =>
 
-              {
+  {
 
-          tool.ShowToolbar(true);
+tool.ShowToolbar(true);
 
-          tool.ToolbarItems(new List<TreeGridToolBarItems>()
+tool.ToolbarItems(new List<TreeGridToolBarItems>()
 
-                {
+	{
 
-                TreeGridToolBarItems.Add,
+	TreeGridToolBarItems.Add,
 
-                TreeGridToolBarItems.Edit,
+	TreeGridToolBarItems.Edit,
 
-                TreeGridToolBarItems.Delete,
+	TreeGridToolBarItems.Delete,
 
-                TreeGridToolBarItems.Update,                
+	TreeGridToolBarItems.Update,                
 
-                TreeGridToolBarItems.Cancel,
+	TreeGridToolBarItems.Cancel,
 
-                TreeGridToolBarItems.ExpandAll,
+	TreeGridToolBarItems.ExpandAll,
 
-                TreeGridToolBarItems.CollapseAll,
-
-
-
-                });
+	TreeGridToolBarItems.CollapseAll,
 
 
 
-              })
+	});
+
+
+
+  })
 
 .Datasource(ViewBag.datasource)
 
-        )
-
-
+)
 
 {% endhighlight %}
 

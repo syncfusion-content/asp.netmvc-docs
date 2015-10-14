@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Map-Elements
+title: Map Elements | Maps | ASP.NET MVC | Syncfusion
 description: map elements
 platform: ejmvc
 control: Maps
@@ -26,119 +26,115 @@ The Markers property has a list of objects that contains the data for Annotation
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
-        public ActionResult Map()
+	public ActionResult Map()
 
-        {
+	{
 
-            // ...
+		// ...
 
-            ViewData["Annotationdatasource"] = GetMarkers();
+		ViewData["Annotationdatasource"] = GetMarkers();
 
-            return View();
+		return View();
 
-        }
-
-
-
-         // ...
+	}
 
 
 
-       public List<MarkerData> GetMarkers()
-
-        {
-
-            List<MarkerData> markerData = new List<MarkerData>
-
-            {
+	 // ...
 
 
 
-            new MarkerData {City = "California", Latitude = 37.0000, Longitude = -120.0000 },
+   public List<MarkerData> GetMarkers()
 
-            new MarkerData {City = "New York", Latitude = 40.7127, Longitude = -74.0059 },
+	{
 
-            new MarkerData {City = "Iowa", Latitude = 42, Longitude = -93}
+		List<MarkerData> markerData = new List<MarkerData>
 
-            };
-
-            return electionResults;
-
-        }
+		{
 
 
 
-    public class MarkerData
+		new MarkerData {City = "California", Latitude = 37.0000, Longitude = -120.0000 },
 
-    {
+		new MarkerData {City = "New York", Latitude = 40.7127, Longitude = -74.0059 },
 
-        private double latitude;
+		new MarkerData {City = "Iowa", Latitude = 42, Longitude = -93}
 
-        public double Latitude
+		};
 
-        {
+		return electionResults;
 
-            get { return latitude; }
-
-            set { latitude = value; }
-
-        }
+	}
 
 
 
-        public double longitude;
+public class MarkerData
 
-        public double Longitude
+{
 
-        {
+	private double latitude;
 
-            get { return longitude; }
+	public double Latitude
 
-            set { longitude = value; }
+	{
 
-        }
+		get { return latitude; }
+
+		set { latitude = value; }
+
+	}
 
 
 
-        private string city;
+	public double longitude;
 
-        public string City
+	public double Longitude
 
-        {
+	{
 
-            get { return city; }
+		get { return longitude; }
 
-            set { city = value; }
+		set { longitude = value; }
 
-        }
+	}
 
-    } 
+
+
+	private string city;
+
+	public string City
+
+	{
+
+		get { return city; }
+
+		set { city = value; }
+
+	}
+
+} 
 
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")           
 
-           .Layers(lr =>
+.Layers(lr =>
 
-                    {
+{
 
-                                                // ...                          
+						  
+	.Markers(markers)                        
 
-                        .Markers(markers)                        
+	.MarkerTemplate("template")                        
 
-                        .MarkerTemplate("template")                        
+})
 
-                    })
-
-           ) 
-
-
-
+) 
 
 <div  id="template" style="display: none;">
 
@@ -146,11 +142,11 @@ The Markers property has a list of objects that contains the data for Annotation
 
         <svg height="100" width="100">
 
-<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1"
+		<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1"
 
-           fill="red" />
+				   fill="red" />
 
-</svg>
+		</svg>
 
     </div>
 
@@ -162,7 +158,8 @@ The Markers property has a list of objects that contains the data for Annotation
 
 ![](Map-Elements_images/Map-Elements_img1.png)
 
-_Map with markers_
+Map with markers
+{:.caption}
 
 ### Adding Marker objects to map
 
@@ -174,65 +171,65 @@ Without Datasource, n number of markers can be added to shape layers with Marker
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")            
 
-            .Layers(lr =>
+.Layers(lr =>
 
-            {
+{
 
-                lr.EnableMouseHover(true)
+lr.EnableMouseHover(true)
 
-                    .ShapeData(mapData)
+.ShapeData(mapData)
 
-                    .ShapeSettings(ss =>
+.ShapeSettings(ss =>
 
-                    {
+{
 
-                          ss.Fill("#9CBF4E")
+	  ss.Fill("#9CBF4E")
 
-                            .StrokeThickness(0.5)
+		.StrokeThickness(0.5)
 
-                            .Stroke("White")
+		.Stroke("White")
 
-                            .HighlightStroke("White")
+		.HighlightStroke("White")
 
-                            .HighlightColor("#BC5353")
+		.HighlightColor("#BC5353")
 
-                            .HighlightBorderWidth(1);
+		.HighlightBorderWidth(1);
 
-                    })
+})
 
-                    .Markers(an =>
+.Markers(an =>
 
-                    {
+{
 
-                        an.Label("California")
+	an.Label("California")
 
-                            .Latitude(37)
+		.Latitude(37)
 
-                            .Longitude(-120).Add();
+		.Longitude(-120).Add();
 
-                        an.Label("New York")
+	an.Label("New York")
 
-                            .Latitude(40.7127)
+		.Latitude(40.7127)
 
-                            .Longitude(-74.0059).Add();
+		.Longitude(-74.0059).Add();
 
-                        an.Label("Iowa")
+	an.Label("Iowa")
 
-                            .Latitude(42)
+		.Latitude(42)
 
-                            .Longitude(-93).Add();
+		.Longitude(-93).Add();
 
-                    })
+})
 
-                   .Add();
+.Add();
 
-            })
+})
 
-      ) 
+) 
 
 
 
@@ -242,7 +239,8 @@ Without Datasource, n number of markers can be added to shape layers with Marker
 
 ![](Map-Elements_images/Map-Elements_img2.png)
 
-_Map with label_
+Map with label
+{:.caption}
 
 ## Bubbles 
 
@@ -310,67 +308,65 @@ Note: Tooltip and Color Mappings for bubble is to be set as similar to tooltip a
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")            
 
-            .Layers(lr =>
+.Layers(lr =>
 
-            {
+{
 
-                lr.EnableMouseHover(true)
+lr.EnableMouseHover(true)
 
-                    .ShapeData(mapData)
+.ShapeData(mapData)
 
-                    .DataSource(population_data)
+.DataSource(population_data)
 
-                    .ShapeSettings(ss =>
+.ShapeSettings(ss =>
 
-                    {
+{
 
-                        ss.Fill("#9CBF4E")
-
-
-
-                            .StrokeThickness(0.5)
-
-                            .Stroke("White");
+	ss.Fill("#9CBF4E")
 
 
 
-                    })
+		.StrokeThickness(0.5)
 
-                    .BubbleSettings(bs =>
-
-                    {
-
-                        bs.ValuePath("Population ")
-
-                            .ShowBubble(true)
-
-                            .MinValue(20)
-
-                            .MaxValue(40)
-
-                            .Color("#C99639");
-
-                    })
-
-                    .Add();
-
-            })
-
-            )
+		.Stroke("White");
 
 
 
+})
+
+.BubbleSettings(bs =>
+
+{
+
+	bs.ValuePath("Population ")
+
+		.ShowBubble(true)
+
+		.MinValue(20)
+
+		.MaxValue(40)
+
+		.Color("#C99639");
+
+})
+
+.Add();
+
+})
+
+)
 {% endhighlight %}
 
 
 
 ![](Map-Elements_images/Map-Elements_img3.png)
 
-_Map with bubbles_
+Map with bubbles
+{:.caption}
 
 ## Legend
 
@@ -421,41 +417,38 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")
 
-           .Layers(lr =>
+.Layers(lr =>
 
-                    {
-
-                        // ...
-
-                        lr.LegendSettings(ml =>
-
-                        {
-
-                            ml 
-
-                            .ShowLegend(true)
-
-                            .Height(20)
-
-                            .Width(60)
-
-                            .PositionX(80)
-
-                           .PositionY(90);
+{
 
 
 
-                         })
+lr.LegendSettings(ml =>
 
-                         // ...
+{
 
-                    })
+	ml 
 
-           )
+	.ShowLegend(true)
+
+	.Height(20)
+
+	.Width(60)
+
+	.PositionX(80)
+
+   .PositionY(90);
+
+
+ })
+
+})
+
+)
 
 
 
@@ -466,7 +459,8 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 
 ![](Map-Elements_images/Map-Elements_img4.png)
 
-_Map with legend_
+Map with legend
+{:.caption}
 
 ### Interactive Legend
 
@@ -484,53 +478,45 @@ N> Here, Range Color Mapping code snippet for shapeSettings with color mappings 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")
 
-           .Layers(lr =>
+.Layers(lr =>
 
-                    {
+	{
+                                      
 
-                        // ...                                           
+	.LegendSettings(ml =>
 
-                     .LegendSettings(ml =>
+	{
 
-                      {
+		ml
 
-                          ml
+		.ShowLegend(true)
 
-                           .ShowLegend(true)
+		.Height(15)
 
-                           .Height(15)
+		.Width(150) 
 
-                           .Width(150) 
+		 .Position(Syncfusion.JavaScript.DataVisualization.
 
-                             .Position(Syncfusion.JavaScript.DataVisualization.
+		Models.DockPosition.Topleft)
 
-Models.DockPosition.Topleft)
+		.Mode(Syncfusion.JavaScript.DataVisualization.
 
-                           .Mode(Syncfusion.JavaScript.DataVisualization.
+		Models.LegendMode.Interactive)
 
-Models.LegendMode.Interactive)
+		.Title("Population")
 
-                           .Title("Population")
+		.LeftLabel("0.5 M")
 
-                           .LeftLabel("0.5 M")
+		.RightLabel("40 M");
 
-                           .RightLabel("40 M");
+	})                        
+})
 
-                       })                        
-
-
-
-                       // ...
-
-                    })
-
-           )
-
-
+)
 
 {% endhighlight %}
 
@@ -538,7 +524,8 @@ Models.LegendMode.Interactive)
 
 ![](Map-Elements_images/Map-Elements_img5.png)
 
-_Map with interactive legend_
+Map with interactive legend
+{:.caption}
 
 ### Bubble Legend
 
@@ -546,74 +533,68 @@ A bubble legend feature is used to provide the key (legend) for another map elem
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("container")
 
-           .Layers(lr =>
+.Layers(lr =>
 
-                    {
+	{
+											  
+	.LegendSettings(ml =>
 
-                        // ...                                           
+	{
 
-                     .LegendSettings(ml =>
+		ml
 
-                      {
+		.ShowLegend(true)
 
-                          ml
+		.Height(15)
 
-                           .ShowLegend(true)
+		.Width(150) 
 
-                           .Height(15)
+		.Type(Syncfusion.JavaScript.DataVisualization.
 
-                           .Width(150) 
+		Models.LegendType.Bubbles)
 
-                           .Type(Syncfusion.JavaScript.DataVisualization.
+		.Title("Population");
 
-Models.LegendType.Bubbles)
+	})                        
 
-                           .Title("Population");
+	.BubbleSettings( b1 =>
 
-                       })                        
+	{
 
-                       .BubbleSettings( b1 =>
+		b1
 
-                        {
+		.ShowBubble(true)
 
-                            b1
+		.ValuePath(population)
 
-                             .ShowBubble(true)
+		.MinValue(20),
 
-                             .ValuePath(population)
+		.MaxValue(40)
 
-                             .MinValue(20),
+		.RangeColorMappings(cm =>
 
-                             .MaxValue(40)
+		{
 
-                             .RangeColorMappings(cm =>
+																													   cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Range(10688).Add();
 
-                                    {
+			cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Range(19390).Add();
 
-                                                                                                                                                   cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Range(10688).Add();
+			cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Range(18718).Add();
 
-                                        cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Range(19390).Add();
+			cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Range(30716).Add();
 
-                                        cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Range(18718).Add();
+		});                               
 
-                                        cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Range(30716).Add();
+	})
 
-                                    });                               
+	})
 
-                        })
-
-                       // ...
-
-                    })
-
-           ) 
-
-
+) 
 
 {% endhighlight %}
 
@@ -621,4 +602,5 @@ Models.LegendType.Bubbles)
 
 ![](Map-Elements_images/Map-Elements_img6.png)
 
-_Bubble Legend_
+Bubble Legend
+{:.caption}

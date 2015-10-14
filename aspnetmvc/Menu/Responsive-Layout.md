@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsive-Layout
+title: Responsive Layout | Menu | ASP.NET MVC | Syncfusion
 description: responsive layout
 platform: ejmvc
 control: Menu
@@ -19,7 +19,7 @@ Add the above css link in the code sample.
 
 1. Add the following code in your View page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
    
 
@@ -107,7 +107,5 @@ The following screenshot displays the output for the above code.
 
 ![](Responsive-Layout_images/Responsive-Layout_img2.png)
 
-
-
-_Figure38: Menu with responsive layout_
-
+Menu with responsive layout
+{:.caption}

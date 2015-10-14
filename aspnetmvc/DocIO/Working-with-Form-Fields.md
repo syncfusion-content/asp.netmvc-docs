@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Form-Fields
+title: Working with Form Fields | DocIO | ASP.NET MVC | Syncfusion
 description: working with form fields
 platform: ejmvc
 control: DocIO
@@ -40,9 +40,9 @@ WFormField
 
 
 
-### Public Properties
+##### Public Properties
 
-_Table_ _82_: _Public Properties_
+
 
 <table>
 <tr>
@@ -110,8 +110,8 @@ WCheckBox class represents a check box form field in a Word document. To add a c
 
 ![](Working-with-Form-Fields_images/Working-with-Form-Fields_img1.png)
 
-
-
+CheckBox Properties in Microsoft Word
+{:.caption}
 
 
 CheckBoxSize property specifies the size of the check box. You can set the size of the check box automatically, by setting the SizeType property to Auto. You can also set custom size for the check box by setting the SizeType property to Exactly.
@@ -140,9 +140,9 @@ WCheckBox
 
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _83_: _Public Methods_
+
 
 <table>
 <tr>
@@ -156,9 +156,7 @@ Initializes a new instance of the WCheckBox class. </td></tr>
 </table>
 
 
-### Public Properties
-
-_Table_ _84_: _Public Properties_
+#### Public Properties
 
 <table>
 <tr>
@@ -190,7 +188,9 @@ Gets or sets the check box size type informations.  </td></tr>
 
 The following code example illustrates the usage of the WCheckBox class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 doc.EnsureMinimal();IWParagraph par = doc.LastParagraph;
@@ -207,7 +207,7 @@ doc.Save("TestDoc.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 doc.EnsureMinimal()
@@ -223,6 +223,7 @@ checkBox1.Checked = True
 doc.Save("TestDoc.doc")
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### DropDown
 
@@ -230,8 +231,8 @@ WDropDownFormField class represents a drop-down form field in a Word document. T
 
 ![](Working-with-Form-Fields_images/Working-with-Form-Fields_img2.png)
 
-
-
+DropDown Form Field Properties
+{:.caption}
 
 
 By using the DropDownSelectedIndex property, you can specify the index of a record to be displayed in the drop-down form field. The record is chosen among the collection of the drop-down records. This collection is accessible through the DropDownItems property.
@@ -258,9 +259,9 @@ WDropDownFormField
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _85_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -274,9 +275,8 @@ Initializes a new instance of the WDropDownFormField class. </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _86_: _Public Properties_
 
 <table>
 <tr>
@@ -293,7 +293,9 @@ DropDownSelectedIndex</td><td>
 Gets or sets the selected drop-down index.</td></tr>
 </table>
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 doc.EnsureMinimal();
@@ -310,7 +312,7 @@ doc.Save("TestDoc.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 doc.EnsureMinimal()
@@ -322,6 +324,7 @@ dropDown.Help = "Help2"dropDown.StatusBarHelp = "Help1"
 doc.Save("TestDoc.doc")
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Text
 
@@ -329,14 +332,14 @@ WTextFormField class represents a text form field in a Word document. To add a t
 
 ![](Working-with-Form-Fields_images/Working-with-Form-Fields_img3.png)
 
-
-
+Text Form Field Properties
+{:.caption}
 
 
 To set the format of the DocIO text directly from the field, you can use the StringFormat property. To get or set the default text for the text form field, you can use the DefaultText property.
 
 
-Note: Text form field displays the default text only when the text of the form field has no value, that is, when the Text property has no value.
+N> Text form field displays the default text only when the text of the form field has no value, that is, when the Text property has no value.
 
 
 
@@ -366,9 +369,9 @@ WTextFormField
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _87_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -382,9 +385,7 @@ Initializes a new instance of the WTextFormField class. </td></tr>
 </table>
 
 
-### Public Properties
-
-_Table_ _88_: _Public Properties_
+#### Public Properties
 
 <table>
 <tr>
@@ -418,14 +419,17 @@ Gets or sets the text for text form field.</td></tr>
 </table>
 The following code examples illustrate the usage of different variants of a text form field.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 Example 1
 
 IWordDocument doc = new WordDocument(true);
 IWParagraph par = doc.LastParagraph;
-//Appends text form fields to a paragraph.WTextFormField textFormField = par.AppendTextFormField("Hello");
+
+//Appends text form fields to a paragraph.
+WTextFormField textFormField = par.AppendTextFormField("Hello");
 textFormField.TextFormat = TextFormat.Uppercase;
 textFormField.Enabled = false;textFormField.Help = "Help2";
 textFormField.StatusBarHelp = "Help1";
@@ -436,45 +440,54 @@ Example 2
 
 //In this sample, we modify all text form fields in a document.
 
-foreach (WSection sec in doc.Sections){    foreach (WTextBody body in sec.ChildEntities)    
-{         
- //Every WTextBody object has a collection of form fields.     
- foreach (WFormField ffield in body.FormFields)     
- {          
- switch (ffield.FormFieldType)     
- {           
- case FormFieldType.TextInput:   
- WTextFormField textField = (WTextFormField)ffield;       
- textField.Type = TextFormFieldType.DateText;   
- //Setting of default text of form field.     
- textField.DefaultText = "01/01/2007";       
- textField.StringFormat = "MM/dd/yyyy ";        
- //Setting character format of field (not text of form                 field).      
- //This formatting you can see, when you press Alt+F9 on    
- //document, which has form field.          
- textField.CharacterFormat.FontName = "Comic Sans MS";  
- textField.CharacterFormat.Shadow = true;           
- textField.CharacterFormat.FontSize = 20f;        
- //Setting text of text form field and its character format.   
- //If textField.Text value is not equal to string.Empty    
- //form field's text will be textField.Text, in other       
- //case textField.DefaultText.              
- textField.Text = string.Empty;       
- textField.TextRange.CharacterFormat.FontName = "Comic Sans                 MS";   
- textField.TextRange.CharacterFormat.Shadow = true;            
- textField.TextRange.CharacterFormat.FontSize = 20f;            
- textField.TextRange.CharacterFormat.TextColor = Color.Blue;   
- break;    
- default:      
- break;        
- }      
- }  
- }
- }
+foreach (WSection sec in doc.Sections)
+{   
+  foreach (WTextBody body in sec.ChildEntities)    
+
+  {         
+	 //Every WTextBody object has a collection of form fields.     
+	 foreach (WFormField ffield in body.FormFields)     
+	 {          
+		 switch (ffield.FormFieldType)     
+		 {           
+			 case FormFieldType.TextInput:   
+			 WTextFormField textField = (WTextFormField)ffield;       
+			 textField.Type = TextFormFieldType.DateText;   
+			 
+			 //Setting of default text of form field.     
+			 textField.DefaultText = "01/01/2007";       
+			 textField.StringFormat = "MM/dd/yyyy ";        
+			 
+			 //Setting character format of field (not text of form  field).      
+			 
+			 //This formatting you can see, when you press Alt+F9 on    
+			 //document, which has form field.          
+			 textField.CharacterFormat.FontName = "Comic Sans MS";  
+			 textField.CharacterFormat.Shadow = true;           
+			 textField.CharacterFormat.FontSize = 20f;        
+			
+			//Setting text of text form field and its character format.   
+			 //If textField.Text value is not equal to string.Empty    
+			 
+			 //form field's text will be textField.Text, in other       
+			 //case textField.DefaultText.  
+			 
+			 textField.Text = string.Empty;       
+			 textField.TextRange.CharacterFormat.FontName = "Comic Sans  MS";   
+			 textField.TextRange.CharacterFormat.Shadow = true;            
+			 textField.TextRange.CharacterFormat.FontSize = 20f;            
+			 textField.TextRange.CharacterFormat.TextColor = Color.Blue;   
+			 break;    
+			 default:      
+			 break;        
+		 }      
+	  }  
+  }
+}
  
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Example 1
 
@@ -482,60 +495,73 @@ Dim doc As IWordDocument = New WordDocument(True)
 Dim par As IWParagraph = doc.LastParagraph
 ‘Appends text form fields to a paragraph.
 Dim textFormField As WTextFormField = par.AppendTextFormField("Hello")
-textFormField.TextFormat = TextFormat.UppercasetextFormField.Enabled = FalsetextFormField.Help = "Help2"
+textFormField.TextFormat = TextFormat.Uppercase
+textFormField.Enabled = FalsetextFormField.Help = "Help2"
 textFormField.StatusBarHelp = "Help1"
 textFormField.MacroOnStart = "Test1"
 textFormField.CalculateOnExit = True
 
 Example 2
 
-'In this sample, we modify all text form fields in a document.For Each sec As WSection In doc.Sections 
-   For Each body As WTextBody In sec.ChildEntities     
-   'Every WTextBody object has a collection of form fields.  
-   For Each ffield As WFormField In body.FormFields   
-   Select Case ffield.FormFieldType         
-   Case FormFieldType.TextInput            
-   Dim textField As WTextFormField = CType(ffield,                     WTextFormField)
-   textField.Type = TextFormFieldType.DateText                
-   'Setting of default text of form field.        
-   textField.DefaultText = "01/01/2007"    
-   textField.StringFormat = "MM/dd/yyyy "   
-   'Setting characterformat of field(not text of formfield).  
-   'This formatting you can see, when you press Alt+F9 on   
-   'document, which has form field.       
-   textField.CharacterFormat.FontName = "Comic Sans MS"     
-   textField.CharacterFormat.Shadow = True    
-   textField.CharacterFormat.FontSize = 20.0F     
-   'Setting text of text form field and its character                     format.       
-   'If textField.Text value is not equal to string.Empty            
-   'form field's text will be textField.Text, in other             
-   'case textField.DefaultText.               
-   textField.Text = String.Empty               
-   textField.CharacterFormat.FontName = "Comic Sans MS"     
-   textField.CharacterFormat.Shadow = True             
-   textField.CharacterFormat.FontSize = 20.0F           
-   textField.CharacterFormat.TextColor = Color.Blue    
-   Case Else         
-   End Select       
-   Next ffield   
-   Next body 
-   Next sec
-   
-{% endhighlight %}
+'In this sample, we modify all text form fields in a document.
+For Each sec As WSection In doc.Sections 
+	For Each body As WTextBody In sec.ChildEntities     
 
+	'Every WTextBody object has a collection of form fields.  
+		For Each ffield As WFormField In body.FormFields   
+			Select Case ffield.FormFieldType         
+			Case FormFieldType.TextInput            
+				Dim textField As WTextFormField = CType(ffield, WTextFormField)
+				textField.Type = TextFormFieldType.DateText                
+
+				'Setting of default text of form field.        
+				textField.DefaultText = "01/01/2007"    
+				textField.StringFormat = "MM/dd/yyyy "   
+
+				'Setting characterformat of field(not text of formfield).  
+
+				'This formatting you can see, when you press Alt+F9 on   
+
+				'document, which has form field.       
+				textField.CharacterFormat.FontName = "Comic Sans MS"     
+				textField.CharacterFormat.Shadow = True    
+				textField.CharacterFormat.FontSize = 20.0F     
+
+				'Setting text of text form field and its character format.       
+
+				'If textField.Text value is not equal to string.Empty            
+
+				'form field's text will be textField.Text, in other             
+
+				'case textField.DefaultText.               
+				textField.Text = String.Empty               
+				textField.CharacterFormat.FontName = "Comic Sans MS"     
+				textField.CharacterFormat.Shadow = True             
+				textField.CharacterFormat.FontSize = 20.0F           
+				textField.CharacterFormat.TextColor = Color.Blue    
+			Case Else         
+			End Select       
+		Next ffield   
+	Next body 
+Next sec
+			
+
+{% endhighlight %}
+{% endtabs %} 
 DocIO also provides option to add or remove form field shading. You can turn on the gray shading on form fields by using the following code example.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 document.Properties.FormFieldShading = false;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 document.Properties.FormFieldShading = False
 
 {% endhighlight %}
 
-
+{% endtabs %} 

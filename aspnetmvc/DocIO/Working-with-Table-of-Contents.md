@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Table-of-Contents
+title: Working with Table of Contents | DocIO | ASP.NET MVC | Syncfusion
 description: working with table of contents
 platform: ejmvc
 control: DocIO
@@ -34,9 +34,9 @@ TableOfContent
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _89_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -54,9 +54,9 @@ Initializes a new instance of the TableOfContent class.  </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _90_: _Public Properties_
+
 
 <table>
 <tr>
@@ -115,9 +115,9 @@ N> DocIO cannot create Outline levels. However, by turning on the UseOutlineLeve
 
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _91_: _Public Methods_
+
 
 <table>
 <tr>
@@ -136,38 +136,45 @@ Specifies the style for TOC level.</td></tr>
 
 The following code example illustrates how to insert TOC based on custom styles.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 WordDocument doc = new WordDocument();
 doc.EnsureMinimal();
 WParagraph para = doc.LastParagraph;TableOfContent toc = para.AppendTOC(1, 1);
 toc.UseHeadingStyles = false;
+
 //Sets the TOC level style based on which the TOC should be created.
 toc. SetTOCLevelStyle(1, "MyStyle1");
 WSection section = doc.LastSection;
 WParagraph newPara = section.AddParagraph() as WParagraph;
 WTextRange text = newPara.AppendText("My Style1") as WTextRange;
 newPara.ApplyStyle("MyStyle1");
+
 //Updates the table of contents.doc.UpdateTableOfContents();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As New WordDocument()
 doc.EnsureMinimal()
 Dim para As WParagraph = doc.LastParagraph
 Dim toc As TableOfContent = para.AppendTOC(1, 1)
 toc.UseHeadingStyles = False
+
 'Sets the TOC level style based on which the TOC should be created.
 toc.SetTOCLevelStyle(1, "MyStyle1")
 Dim section As WSection = doc.LastSection
 Dim newPara As WParagraph = TryCast(section.AddParagraph(), WParagraph)
 Dim text As WTextRange = TryCast(newPara.AppendText("My Style1"), WTextRange)newPara.ApplyStyle("MyStyle1")
-'Updates the table of contents.doc.UpdateTableOfContents()
+
+'Updates the table of contents.
+doc.UpdateTableOfContents()
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Updating Table of contents
 
@@ -190,18 +197,20 @@ The following are the known limitations:
 
 The following code example illustrates how to update TOC.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 WordDocument doc = new WordDocument(“Sample.docx”);
 //Updates the table of contents.doc.UpdateTableOfContents();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As New WordDocument(“Sample.docx”)
 'Updates the table of contents.doc.UpdateTableOfContents()
 
 {% endhighlight %}
-
+{% endtabs %} 
 

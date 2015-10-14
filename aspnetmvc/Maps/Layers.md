@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layers
+title: Layers | Maps | ASP.NET MVC | Syncfusion
 description: layers
 platform: ejmvc
 control: Maps
@@ -39,42 +39,32 @@ Here “MapController.cs” is populated with datas of World Map in “MapContro
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 
-        public ActionResult Map()
+public ActionResult Map()
 
-        {
+{
 
-           // ...
+	ViewData["world_map"] = GetWorldMap();
 
-            ViewData["world_map"] = GetWorldMap();
-
-           // ...
-
-        }
-
-        // ...
-
-       public object GetWorldMap ()
-
-        {
-
-            string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
-
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-
-            ser.MaxJsonLength = int.MaxValue;
-
-            return new MapData(worldmapjson);
-
-        }
-
-            // ...
+}
 
 
 
+public object GetWorldMap ()
 
+{
+
+	string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
+
+	JavaScriptSerializer ser = new JavaScriptSerializer();
+
+	ser.MaxJsonLength = int.MaxValue;
+
+	return new MapData(worldmapjson);
+
+}
 
 {% endhighlight %}
 
@@ -82,7 +72,8 @@ Here “MapController.cs” is populated with datas of World Map in “MapContro
 
 Refer both USA data and world map data as illustrated in the following “Map.cshtml”.
 
-{% highlight c# %}
+{% highlight CSHTML %}
+
 @{       
 
         var mapData = ViewData["mapdata"];
@@ -91,60 +82,58 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
  } 
 
-{% endhighlight %}
-
-{% highlight js %}
 
 @(Html.EJ().Map("maps")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                    {
+{
 
-                      lr.ShapeData(world_map)
+	lr.ShapeData(world_map)
 
-                    .ShapeSettings(ss =>
+	.ShapeSettings(ss =>
 
-                    {
+	{
 
-                          ss.Fill("#9CBF4E")
+		ss.Fill("#9CBF4E")
 
-                            .StrokeThickness(0.5)
+		.StrokeThickness(0.5)
 
-                            .Stroke("White");                            
+		.Stroke("White");                            
 
-                    })
+	})
 
-                     .SubLayer(ssl =>
+	.SubLayer(ssl =>
 
-                          {     
+	{     
 
-                           ssl.ShapeData(mapData)
+		ssl.ShapeData(mapData)
 
-                         .ShapeSettings(ss =>
+		.ShapeSettings(ss =>
 
-                         {
+		{
 
-                            ss.Fill("orange")
+		ss.Fill("orange")
 
-                            .StrokeThickness(1)
+		.StrokeThickness(1)
 
-                            .Stroke("White");                            
+		.Stroke("White");                            
 
-                    })
+	})
 
-                    .Add();                     
+	.Add();                     
 
-                    })
+	})
 
-                  .Add();
+	.Add();
 
-              })           
+	})           
 
-   )            
+)            
 
 {% endhighlight %}
 
 ![](Layers_images/Layers_img1.png)
 
-_Map with layers_
+Map with layers
+{:.caption}

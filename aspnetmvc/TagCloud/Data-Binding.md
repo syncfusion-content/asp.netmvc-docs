@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | TagCloud | ASP.NET MVC | Syncfusion
 description: data-binding
 platform: ejmvc
 control: TagCloud
@@ -40,8 +40,10 @@ Local databinding allows you to map JSON data to TagCloud, that the correspondin
 ### Defining the Local data for TagCloud
 
 The following steps explains you the local data binding to TagCloud widget,
+{% tabs %}
 
-{% highlight c# %}
+
+{% highlight C# %}
 
 // Add the following data list to be bind in the controller page and define the corresponding data.
 // Define local data source elements with  fields                
@@ -79,13 +81,14 @@ The following steps explains you the local data binding to TagCloud widget,
 	return View();        
  }
  {% endhighlight %}
-{% highlight js %}
- 
-	// Map Local datasource to corresponding fields in TagCloud control.           
-	@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
-	.TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency"))
-	
+{% highlight CSHTML %}
+
+// Map Local datasource to corresponding fields in TagCloud control.           
+@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource)
+.TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency"))
+
 {% endhighlight %}
+{% endtabs %}  
 
 The following screenshot displays the TagCloud control with local data binding.
 
@@ -103,7 +106,7 @@ DataManager is used to manage relational data in ASP.NET MVC. It supports CRU
 
 The following script explains you the Remote data binding to TagCloud widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <%-- Configure datasource referring remote data binding section and assign it to datasource property -- %>
 

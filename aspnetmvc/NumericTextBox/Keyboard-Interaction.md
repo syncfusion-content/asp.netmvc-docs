@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | NumericTextBox | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: NumericTextBox
@@ -46,7 +46,7 @@ In the View page add NumericTextBox helper. Set the accesskey property to the Nu
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @{IDictionary<string, object> numericAttribute = new Dictionary<string, object>();
 

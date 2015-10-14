@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Asynchronous-Upload
+title: Asynchronous Upload | UploadBox | ASP.NET MVC | Syncfusion
 description: asynchronous upload
 platform: ejmvc
 control: UploadBox
@@ -15,7 +15,7 @@ The following steps guide you in uploading the file asynchronously.
 
 1.  In the VIEW page, add the below script to configure the UploadBox element.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the view page, add the UploadBox element.
 

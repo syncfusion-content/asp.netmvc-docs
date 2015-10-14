@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell-Selection
+title: Cell Selection | PivotGrid | ASP.NET MVC | Syncfusion
 description: cell selection
 platform: ejmvc
 control: PivotGrid
@@ -13,7 +13,7 @@ The PivotGrid control provides support to select specific ranges of value cells 
 
 The following code example explains on how to enable cell selection in the PivotGrid control.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc")).EnableCellSelection(true).ClientSideEvents(events => events.CellSelection("valueCellClick")).IsResponsive(true)
 

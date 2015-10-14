@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Series
+title: Series | Chart | ASP.NET MVC | Syncfusion
 description: series
 platform: ejmvc
 control: Chart
@@ -14,64 +14,63 @@ The Series property provides access to a collection of all series that are defin
 ## Multiple Series
 
 You can plot multipleseries on the same Chart. Series are defined by adding them to the "Series" collection and rendering order of each series can be controlled using the ZOrder properties of the series. Series with 0 as ZOrder renders first. 
-{% highlight js %}
+
+{% highlight CSHTML %}
+
+
+@ (Html.EJ().Chart("chartcontainer")
 
 
 
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-   .Series(ser=>
-
-    {	                         
-
-      ser.Name("Gold").Type(SeriesType.Column).Points(po =>
+	.Series(ser = >
 
 {
 
-po.X("USA").Y(50).Add();
+	ser.Name("Gold").Type(SeriesType.Column).Points(po = >
 
-po.X("China").Y(40).Add();
+	{
 
-po.X("Japan").Y(70).Add();
+		po.X("USA").Y(50).Add();
 
-po.X("Australia").Y(60).Add();
+		po.X("China").Y(40).Add();
 
-po.X("France").Y(50).Add();
+		po.X("Japan").Y(70).Add();
 
-po.X("Germany").Y(40).Add();
+		po.X("Australia").Y(60).Add();
 
-po.X("Italy").Y(40).Add();
+		po.X("France").Y(50).Add();
 
-po.X("Sweden").Y(30).Add();
+		po.X("Germany").Y(40).Add();
 
-	 }).Add(); 
+		po.X("Italy").Y(40).Add();
+
+		po.X("Sweden").Y(30).Add();
+
+	}).Add();
 
 
 
-       ser.Name("Silver").Type(SeriesType.Column).Points(po=>
+	ser.Name("Silver").Type(SeriesType.Column).Points(po = >
 
-{
+	{
 
-po.X("USA").Y(70).Add();
+		po.X("USA").Y(70).Add();
 
-po.X("China").Y(60).Add();
+		po.X("China").Y(60).Add();
 
-po.X("Japan").Y(40).Add();
+		po.X("Japan").Y(40).Add();
 
-po.X("Australia").Y(36).Add();
+		po.X("Australia").Y(36).Add();
 
-po.X("France").Y(25).Add();
+		po.X("France").Y(25).Add();
 
-po.X("Germany").Y(30).Add();
+		po.X("Germany").Y(30).Add();
 
-po.X("Italy").Y(35).Add();
+		po.X("Italy").Y(35).Add();
 
-	      po.X("Sweden").Y(25).Add();                                                                                                                                                         
+		po.X("Sweden").Y(25).Add();
 
-}).Add();
+	}).Add();
 
 })
 
@@ -79,86 +78,90 @@ po.X("Italy").Y(35).Add();
 
 // ...
 
-   )
+)
 
 
 {% endhighlight  %}
+
 ![](Series_images/Series_img1.png)
 
-
+Chart with Multiple Series
+{:.caption}
 
 ### CommonSeriesOptions
 
 You can specify the properties common to all series of the Chart in CommonSeriesOptions. 
-{% highlight js %}
 
-@(Html.EJ().Chart("chartcontainer")
+{% highlight CSHTML %}
 
-  .CommonSeriesOptions(cr=>cr.Type(SeriesType.Column))
+@ (Html.EJ().Chart("chartcontainer")
 
-  .Series(ser=>
+	.CommonSeriesOptions(cr = > cr.Type(SeriesType.Column))
 
-   {
-
-     ser.Name("Gold").Points(po =>
+	.Series(ser = >
 
 {
 
-po.X("USA").Y(50).Add();
+	ser.Name("Gold").Points(po = >
 
-po.X("China").Y(40).Add();
+	{
 
-po.X("Japan").Y(70).Add();
+		po.X("USA").Y(50).Add();
 
-po.X("Australia").Y(60).Add();
+		po.X("China").Y(40).Add();
 
-po.X("France").Y(50).Add();
+		po.X("Japan").Y(70).Add();
 
-po.X("Germany").Y(40).Add();
+		po.X("Australia").Y(60).Add();
 
-po.X("Italy").Y(40).Add();
+		po.X("France").Y(50).Add();
 
-po.X("Sweden").Y(30).Add();
+		po.X("Germany").Y(40).Add();
 
-	   }).Add(); 
+		po.X("Italy").Y(40).Add();
+
+		po.X("Sweden").Y(30).Add();
+
+	}).Add();
 
 
 
-ser.Name("Silver").Points(po=>
+	ser.Name("Silver").Points(po = >
 
-{
+	{
 
-po.X("USA").Y(70).Add();
+		po.X("USA").Y(70).Add();
 
-po.X("China").Y(60).Add();
+		po.X("China").Y(60).Add();
 
-po.X("Japan").Y(40).Add();
+		po.X("Japan").Y(40).Add();
 
-po.X("Australia").Y(36).Add();
+		po.X("Australia").Y(36).Add();
 
-po.X("France").Y(25).Add();
+		po.X("France").Y(25).Add();
 
-po.X("Germany").Y(30).Add();
+		po.X("Germany").Y(30).Add();
 
-po.X("Italy").Y(35).Add();
+		po.X("Italy").Y(35).Add();
 
-	     po.X("Sweden").Y(25).Add();                                                                                                                                                         
+		po.X("Sweden").Y(25).Add();
 
-}).Add();
+	}).Add();
 
 })
 
 
 
-     // ...
+// ...
 
- )
+)
 
 {% endhighlight  %}
 
 ![](Series_images/Series_img2.png)
 
-
+Chart with CommonSeriesOptions
+{:.caption}
 
 ## Combination Series
 
@@ -167,96 +170,96 @@ A combination Chart combines two or more Charts types in single Charts. For exam
 1. You cannot combine Column and Bar series
 
 2. Pie, Doughnut Series cannot be used with other series types.
-{% highlight js %}
 
-@(Html.EJ().Chart("chartcontainer")
+{% highlight CSHTML %}
 
-
-
-.PrimaryYAxis(yaxis=>yaxis.Title(tit=>tit.Text("Unit Sold")))
+@ (Html.EJ().Chart("chartcontainer")
 
 
 
-.Axes(ax =>
-
-   {
-
-      ax.MajorGridLines(mr=>mr.Visible(false)).Orientation(Orientation.Vertical)
-
-        .OpposedPosition(true).AxisLine(al=>al.Visible(false))
-
-        .RangePadding(ChartRangePadding.Normal). Name("yAxis")
-
-        .LabelFormat("${value}").Title(tl=>tl.Text("Total Transactions")).Add();
-
-   })
+	.PrimaryYAxis(yaxis = > yaxis.Title(tit = > tit.Text("Unit Sold")))
 
 
 
- .Series(ser=>
+	.Axes(ax = >
 
-    {
+{
 
-      ser.Name("Unit Sold").Type(SeriesType.Column).Fill("#69D2E7").Points(po =>
+	ax.MajorGridLines(mr = > mr.Visible(false)).Orientation(Orientation.Vertical)
 
-        {
+		.OpposedPosition(true).AxisLine(al = > al.Visible(false))
 
-          po.X("Jan").Y(45).Add();
+		.RangePadding(ChartRangePadding.Normal).Name("yAxis")
 
-          po.X("Feb").Y(100).Add();
+		.LabelFormat("${value}").Title(tl = > tl.Text("Total Transactions")).Add();
 
-          po.X("Mar").Y(25).Add();
-
-          po.X("Apr").Y(100).Add();
-
-          po.X("May").Y(85).Add();
-
-          po.X("June").Y(140).Add();
-
-         }).Add();
+})
 
 
 
-       ser.Name("Total Transactions").Type(SeriesType.Line).EnableAnimation(true)
+	.Series(ser = >
 
-         .YAxisName("yAxis").Width(4).Points(po =>
+{
 
-          {
+	ser.Name("Unit Sold").Type(SeriesType.Column).Fill("#69D2E7").Points(po = >
 
-            po.X("Jan").Y(1000).Add();
+	{
 
-            po.X("Feb").Y(3000).Add();
+		po.X("Jan").Y(45).Add();
 
-            po.X("Mar").Y(1000).Add();
+		po.X("Feb").Y(100).Add();
 
-            po.X("Apr").Y(7000).Add();
+		po.X("Mar").Y(25).Add();
 
-            po.X("May").Y(5000).Add();
+		po.X("Apr").Y(100).Add();
 
-            po.X("June").Y(7000).Add();
+		po.X("May").Y(85).Add();
 
-           }).Add();
+		po.X("June").Y(140).Add();
 
-      })
+	}).Add();
 
 
 
-     // ...
+	ser.Name("Total Transactions").Type(SeriesType.Line).EnableAnimation(true)
 
-  )
+		.YAxisName("yAxis").Width(4).Points(po = >
+
+	{
+
+		po.X("Jan").Y(1000).Add();
+
+		po.X("Feb").Y(3000).Add();
+
+		po.X("Mar").Y(1000).Add();
+
+		po.X("Apr").Y(7000).Add();
+
+		po.X("May").Y(5000).Add();
+
+		po.X("June").Y(7000).Add();
+
+	}).Add();
+
+})
+
+
+
+// ...
+
+)
 
 {% endhighlight  %}
 
 ![](Series_images/Series_img3.png)
 
-
+Combination Chart
+{:.caption}
 
 ## Customize Series
 
 You can customize the Chart series using fill, border width and border color. You can customize the series color using ‘Fill’ property of series, the stroke-width of the line, spline series using ‘Width’ property of series, the border color and width of the column/bar using ‘Border’ property of series and rect in the column/bar Chart using the ‘Fill’ and ‘Border’ property of each point.
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -303,7 +306,8 @@ You can customize the Chart series using fill, border width and border color. Yo
 
 ![](Series_images/Series_img4.png)
 
-
+Customized Chart
+{:.caption}
 
 ## Data Labels
 
@@ -372,12 +376,13 @@ Data labels refer to the y values of data points that appear on each point. You 
 
 ![](Series_images/Series_img5.png)
 
-
+Chart with Data Labels
+{:.caption}
 
 ### ConnectorLine:
 
 ConnectorLine in data Label is used to customize the line that connects the outside labels of the pie series in terms of color, height, width and type of line. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -423,7 +428,8 @@ ConnectorLine in data Label is used to customize the line that connects the outs
 
 ![](Series_images/Series_img6.png)
 
-
+Chart with ConnectorLine
+{:.caption}
 
 ### Data labels Rotation
 
@@ -433,9 +439,10 @@ _Data labels_ refer to the y values of data points, which appear on each point. 
 
 ![](Series_images/Series_img7.png)
 
+Rotated Data Labels
+{:.caption}
 
-
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range-Types
+title: Range Types | RangeNavigator | ASP.NET MVC | Syncfusion
 description: range types
 platform: ejmvc
 control: RangeNavigator
@@ -17,18 +17,13 @@ RangeNavigator control is designed to visualize large number of data and navigat
 ## Numeric Type
 
 RangeNavigator is also used with numeric data and the ValueType for this data is “numeric” 
-{% highlight html %}
+{% highlight CSHTML %}
  
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.ValueType("numeric")
 
-          .ValueType("numeric")
-
-       //...
-
-         .Render())
+.Render())
 
 {% endhighlight  %}
 
@@ -43,18 +38,13 @@ The following screenshot displays the RangeNavigator with numeric data.
 ## DateTime
 
 By default the ValueType of the RangeNavigator is “datetime” and represents the DateTime values. 
-{% highlight html %}
+{% highlight CSHTML %}
  
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.ValueType("datetime")
 
-          .ValueType("datetime")
-
-       //...
-
-         .Render())
+.Render())
 
 {% endhighlight  %}
 
@@ -75,25 +65,20 @@ The DateTime range type contains an IntervalType property that sets the DateTime
 
 By default IntervalType for higher level labels are Years and for lower level labels its Quarters.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.LabelSettings(ls=>ls
 
-          .LabelSettings(ls=>ls
+.HigherLevel(hl=>hl.IntervalType(NavigatorIntervalType.Years))            
 
-                  .HigherLevel(hl=>hl.IntervalType(NavigatorIntervalType.Years))            
+.LowerLevel(li=>li.IntervalType(NavigatorIntervalType.Quarters))  
 
-                  .LowerLevel(li=>li.IntervalType(NavigatorIntervalType.Quarters))  
+)       
 
-                   )       
-
-       //...
-
-         .Render())
-
+.Render())
 
 {% endhighlight  %}
 

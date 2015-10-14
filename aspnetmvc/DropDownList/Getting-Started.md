@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | DropDownList | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
 control: DropDownList
@@ -19,8 +19,8 @@ The following screen shot illustrates the functionality of DropDownList control 
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-_Figure1: DropDownList Appearance_
+DropDownList Appearance
+{:.caption}
 
 In the above screenshot, you can select a group from the first DropDownList widget. After you select the group, the corresponding countries for that group are listed in the second DropDownList widget.Now, you can select a country and click the Vote option.  
 
@@ -42,94 +42,94 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 2. Please add the below code in layout._cshtml file head section to add the necessary script and CSS files to render the DropDownList.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
+	<head>
 
-		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-
-
-			<!--Scripts-->
-
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+	<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+		<!--Scripts-->
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-		</head>
+
+
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
    Create a CSHTML file in View page and add the following code sample to it. 
 
 3. Add the below code to render the DropDownList widgets.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div class="content">
+	<div class="content">
 
-			<div class="control">
+		<div class="control">
 
-				<div class="ball-icon"></div>
+			<div class="ball-icon"></div>
 
-				<div class="ball-txt" style="">WORLD CUP FOOTBALL</div>
+			<div class="ball-txt" style="">WORLD CUP FOOTBALL</div>
 
-				<br />
+			<br />
 
-				<table>
+			<table>
 
-					<tr>
+				<tr>
 
-						<td class="tdcls"><span class="txt">
+					<td class="tdcls"><span class="txt">
 
-							<label>Select Group</label></span></td>
+						<label>Select Group</label></span></td>
 
-						<td class="tdcls"><span class="txt">
+					<td class="tdcls"><span class="txt">
 
-							<label>Select Country</label></span></td>
+						<label>Select Country</label></span></td>
 
-					</tr>
+				</tr>
 
-					<tr>
+				<tr>
 
-						<td class="tdcls">
+					<td class="tdcls">
 
-						@Html.EJ().DropDownList("GroupsList").WatermarkText("group")
+					@Html.EJ().DropDownList("GroupsList").WatermarkText("group")
 
-						<td class="tdcls">
+					<td class="tdcls">
 
-						@Html.EJ().DropDownList("CountryList").WatermarkText("country")
+					@Html.EJ().DropDownList("CountryList").WatermarkText("country")
 
-					</tr>
+				</tr>
 
-				</table>
+			</table>
 
 
 
-				<div class="votebox">
+			<div class="votebox">
 
-					@Html.EJ().Button("voter").Text("Vote").CssClass("e-btn")
-
-				</div>
+				@Html.EJ().Button("voter").Text("Vote").CssClass("e-btn")
 
 			</div>
 
 		</div>
 
+	</div>
+
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. Add the following style section for the DropDownList widgets alignment. Add the following location in the URL path for the background image. [http://js.syncfusion.com/UG/Web/Content/football.png](http://js.syncfusion.com/UG/Web/Content/football.png)
@@ -138,101 +138,101 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
    ~~~ css
 
-		<style type="text/css">
+	<style type="text/css">
 
-			.content {
+		.content {
 
-				height: 250px;
+			height: 250px;
 
-				width: 400px;
+			width: 400px;
 
-				border:1px groove;
+			border:1px groove;
 
-			}
-
-
-
-			.control {
-
-				margin-left: 20px;
-
-				margin-top: 10px;
-
-			}
+		}
 
 
 
-			.ball-icon {
+		.control {
 
-				display: inline-block;
+			margin-left: 20px;
 
-				background-image: url("http://js.syncfusion.com/UG/Web/Content/football.png");
+			margin-top: 10px;
 
-				background-repeat: no-repeat;
-
-				background-size: contain;
-
-				height: 50px;
-
-				width: 50px;
-
-			}
+		}
 
 
 
-			.ball-txt {
+		.ball-icon {
 
-				display: inline-block;
+			display: inline-block;
 
-				font-size: 20px;
+			background-image: url("http://js.syncfusion.com/UG/Web/Content/football.png");
 
-				font-weight: bolder;
+			background-repeat: no-repeat;
 
-				height: 50px;
+			background-size: contain;
 
-				position: relative;
+			height: 50px;
 
-				text-align: center;
+			width: 50px;
 
-				top: -20px;
-
-			}
+		}
 
 
 
+		.ball-txt {
+
+			display: inline-block;
+
+			font-size: 20px;
+
+			font-weight: bolder;
+
+			height: 50px;
+
+			position: relative;
+
+			text-align: center;
+
+			top: -20px;
+
+		}
 
 
-			.votebox {
-
-				margin-left: 150px;
-
-				margin-top: 50px;
-
-			}
 
 
 
-			.txt {
+		.votebox {
 
-				display: block;
+			margin-left: 150px;
 
-				margin-bottom: 12px;
+			margin-top: 50px;
 
-			}
+		}
 
 
 
-			.tdcls {
+		.txt {
 
-				width: 200px;
+			display: block;
 
-			}
+			margin-bottom: 12px;
 
-		</style>
+		}
+
+
+
+		.tdcls {
+
+			width: 200px;
+
+		}
+
+	</style>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 5. Execute the above code example to render the following output.
@@ -240,9 +240,10 @@ ASP.NET MVCDropDownList widget basically renders with built-in features.
 
 
    ![](Getting-Started_images/Getting-Started_img2.png)
-
-   _Figure 2: DropDown Appearance without DropDown content_
-
+   
+   DropDown Appearance without DropDown content
+   {:.caption}
+   
 ## Configure Data Source 
 
 Configure the DropDownList widgets using online services. Here, two different online data services, group data service for the group selection DropDownList and countries data service for the country selection DropDownList are created for the two DropDownList Widgets. Both the data services are referred from the following service location.
@@ -255,7 +256,7 @@ The following code example explains you on how to configure the Data Source.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <tr>
 
@@ -279,8 +280,8 @@ Execute the above code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure 3: DropDown Appearance with Datasource content_
-
+DropDown Appearance with Datasource content
+{:.caption}
 
 
 ### Configure DropDownList with Sprite Icons
@@ -297,299 +298,299 @@ To load the Sprite image icons for the countries in a DropDownList, add the foll
 
 {% highlight css %}
 
-        #CountryList_popup_wrapper .e-align
+#CountryList_popup_wrapper .e-align
 
-        {
+{
 
-            display: inline-block;
+display: inline-block;
 
-            float: none;
+float: none;
 
-            margin-left: 5px;
+margin-left: 5px;
 
-            margin-right: 10px;
+margin-right: 10px;
 
-            vertical-align: middle;
+vertical-align: middle;
 
-        }
+}
 
-        /*Sprite CSS for the Flags used in DDL widget */
+/*Sprite CSS for the Flags used in DDL widget */
 
-        .flag
+.flag
 
-        {
+{
 
-            display: block;
+display: block;
 
-            background-image: url(http://js.syncfusion.com/UG/Web/Content/countryFootbal.png); 
+background-image: url(http://js.syncfusion.com/UG/Web/Content/countryFootbal.png); 
 
-            height: 46px;
+height: 46px;
 
-            width: 70px;
+width: 70px;
 
-            background-position: center center;
+background-position: center center;
 
-            background-repeat: no-repeat;
+background-repeat: no-repeat;
 
-        }
+}
 
-            .flag.algeria
+.flag.algeria
 
-            {
+{
 
-                background-position: 0 0;
+	background-position: 0 0;
 
-            }
+}
 
 
 
-            .flag.argentina
+.flag.argentina
 
-            {
+{
 
-                background-position: 0 -96px;
+	background-position: 0 -96px;
 
-            }
+}
 
-            .flag.australia
+.flag.australia
 
-            {
+{
 
-                background-position: 0 -192px;
+	background-position: 0 -192px;
 
-            }
+}
 
-            .flag.belgium
+.flag.belgium
 
-            {
+{
 
-                background-position: 0 -288px;
+	background-position: 0 -288px;
 
-            }
+}
 
-            .flag.bosnia
+.flag.bosnia
 
-            {
+{
 
-                background-position: 0 -384px;
+	background-position: 0 -384px;
 
-            }
+}
 
-            .flag.brazil
+.flag.brazil
 
-            {
+{
 
-                background-position: 0 -480px;
+	background-position: 0 -480px;
 
-            }
+}
 
-            .flag.cameroon
+.flag.cameroon
 
-            {
+{
 
-                background-position: 0 -576px;
+	background-position: 0 -576px;
 
-            }
+}
 
-            .flag.chile
+.flag.chile
 
-            {
+{
 
-                background-position: 0 -672px;
+	background-position: 0 -672px;
 
-            }
+}
 
-            .flag.colombia
+.flag.colombia
 
-            {
+{
 
-                background-position: 0 -768px;
+	background-position: 0 -768px;
 
-            }
+}
 
-            .flag.costarica
+.flag.costarica
 
-            {
+{
 
-                background-position: 0 -864px;
+	background-position: 0 -864px;
 
-            }
+}
 
-            .flag.croatia
+.flag.croatia
 
-            {
+{
 
-                background-position: 0 -960px;
+	background-position: 0 -960px;
 
-            }
+}
 
-            .flag.ecuador
+.flag.ecuador
 
-            {
+{
 
-                background-position: 0 -1056px;
+	background-position: 0 -1056px;
 
-            }
+}
 
-            .flag.england
+.flag.england
 
-            {
+{
 
-                background-position: 0 -1152px;
+	background-position: 0 -1152px;
 
-            }
+}
 
-            .flag.france
+.flag.france
 
-            {
+{
 
-                background-position: 0 -1248px;
+	background-position: 0 -1248px;
 
-            }
+}
 
-            .flag.germany
+.flag.germany
 
-            {
+{
 
-                background-position: 0 -1344px;
+	background-position: 0 -1344px;
 
-            }
+}
 
-            .flag.ghana
+.flag.ghana
 
-            {
+{
 
-                background-position: 0 -1440px;
+	background-position: 0 -1440px;
 
-            }
+}
 
-            .flag.greece
+.flag.greece
 
-            {
+{
 
-                background-position: 0 -1536px;
+	background-position: 0 -1536px;
 
-            }
+}
 
-            .flag.honduras
+.flag.honduras
 
-            {
+{
 
-                background-position: 0 -1632px;
+	background-position: 0 -1632px;
 
-            }
+}
 
-            .flag.iran
+.flag.iran
 
-            {
+{
 
-                background-position: 0 -1728px;
+	background-position: 0 -1728px;
 
-            }
+}
 
-            .flag.italy
+.flag.italy
 
-            {
+{
 
-                background-position: 0 -1824px;
+	background-position: 0 -1824px;
 
-            }
+}
 
-            .flag.ivoriecote
+.flag.ivoriecote
 
-            {
+{
 
-                background-position: 0 -1920px;
+	background-position: 0 -1920px;
 
-            }
+}
 
-            .flag.japan
+.flag.japan
 
-            {
+{
 
-                background-position: -120px 0;
+	background-position: -120px 0;
 
-            }
+}
 
-            .flag.korea
+.flag.korea
 
-            {
+{
 
-                background-position: -120px -96px;
+	background-position: -120px -96px;
 
-            }
+}
 
-            .flag.mexico
+.flag.mexico
 
-            {
+{
 
-                background-position: -120px -192px;
+	background-position: -120px -192px;
 
-            }
+}
 
-            .flag.netherlands
+.flag.netherlands
 
-            {
+{
 
-                background-position: -120px -288px;
+	background-position: -120px -288px;
 
-            }
+}
 
-            .flag.nigeria
+.flag.nigeria
 
-            {
+{
 
-                background-position: -120px -384px;
+	background-position: -120px -384px;
 
-            }
+}
 
-            .flag.portugal
+.flag.portugal
 
-            {
+{
 
-                background-position: -120px -480px;
+	background-position: -120px -480px;
 
-            }
+}
 
-            .flag.russia
+.flag.russia
 
-            {
+{
 
-                background-position: -120px -576px;
+	background-position: -120px -576px;
 
-            }
+}
 
-            .flag.spain
+.flag.spain
 
-            {
+{
 
-                background-position: -120px -672px;
+	background-position: -120px -672px;
 
-            }
+}
 
-            .flag.swiss
+.flag.swiss
 
-            {
+{
 
-                background-position: -120px -768px;
+	background-position: -120px -768px;
 
-            }
+}
 
-            .flag.uruguay
+.flag.uruguay
 
-            {
+{
 
-                background-position: -120px -864px;
+	background-position: -120px -864px;
 
-            }
+}
 
-            .flag.usa
+.flag.usa
 
-            {
+{
 
-                background-position: -120px -960px;
+	background-position: -120px -960px;
 
-            }
+}
 
 {% endhighlight %}
 
@@ -599,13 +600,14 @@ Execute the above code sample to render the following DropDownList with DataSour
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-_Figure 4: DropDown Appearance with Datasource content for group_
-
+DropDown Appearance with Datasource content for group
+{:.caption}
 
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-_Figure 5: DropDown Appearance for Datasource contents with country flag_
+DropDown Appearance for Datasource contents with country flag
+{:.caption}
 
 ## Set the Cascading Option 
 
@@ -617,7 +619,7 @@ The following code example explains you on how to set the Cascading Option.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!--use the following codes with above Html -->
 
@@ -645,7 +647,8 @@ Execute the above code example to render the DropDownList with Cascading Option.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-_Figure 6: DropDown Appearance for cascading_
+DropDown Appearance for cascading
+{:.caption}
 
 Initially, you can select the group from the popup of the first DropDownList. After you select the option,   selected value is loaded.
 
@@ -653,20 +656,21 @@ Initially, you can select the group from the popup of the first DropDownList. Af
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-_Figure 7: Cascading DropDown Apperance for Select group_
+Cascading DropDown Apperance for Select group
+{:.caption}
 
 Based on the group selection in the first DropDownList, the DataSource in the second DropDownList is loaded, and the corresponding countries are shown when clicking the drop-down button as illustrated in the following screen shot.
 
 
 
-_Figure17: Cascading DropDown Apperance for Select country_
+Cascading DropDown Apperance for Select country
 
 From the DropDownList called Country, you can select the desired country.
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
-_Figure 8: DropDown Appearance for cascading after selection of group and country_
-
+DropDown Appearance for cascading after selection of group and country
+{:.caption}
 ## Set the Vote process in the DropDownList Widget
 
 The voting process starts when you click the Vote button. The button is customized to support the voting process. For more information about the button refer the following link: <http://docs.syncfusion.com/js/>
@@ -675,7 +679,7 @@ The following code sample explains how to set the Vote process in the DropDownLi
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!--use the following codes with Html -->
 
@@ -714,5 +718,5 @@ Execute the above code sample to display the DropDownList widgets. Select the va
 
 ![](Getting-Started_images/Getting-Started_img9.png)
 
-_Figure 9: DropDown Apperance for Vote process_
-
+DropDown Apperance for Vote process_
+{:.caption}

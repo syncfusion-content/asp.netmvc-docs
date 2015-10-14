@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration-from-Microsoft-Office-Automation-to-Essential-DocIO
+title: Migration from Microsoft Office Automation to Essential DocIO | DocIO | ASP.NET MVC | Syncfusion
 description: migration from microsoft office automation to essential docio
 platform: ejmvc
 control: DocIO
@@ -18,7 +18,7 @@ The Mail Merge feature can be used to generate reports and letters in MS Word. T
 Office Automation performs the Mail Merge by executing a SQL query on the Word document. The output of the Mail Merge can be sent to a new Word document. Alternatively, it can be sent to a printer, a fax machine, or forwarded to an e-mail address.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.instance nullobject = Missing.Value;
@@ -42,7 +42,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports Word = Microsoft.Office.Interop.Word
 'Initializes objects.Dim nullobject As Object = Missing.ValueDim dataBase As String = "Northwind.mdb"
@@ -75,7 +75,7 @@ DocIO performs Mail Merge using the following methods:
 The following code example performs Mail Merge using the Execute method.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 string dataBase = "Northwind.mdb";
 //Opens existing template.
@@ -96,7 +96,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim dataBase As String = "Northwind.mdb"
 ‘Opens the Word document.Dim doc As WordDocument = New WordDocument("EmployeesReportDemo.doc")
@@ -128,7 +128,7 @@ This section illustrates how to perform a simple Find and replace operation in a
 The following code example shows you how to search for a word in a Word document, replace it with another word and save the document under a new name.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.instance nullobject = Missing.Value;instance filepath = "FindAndReplaceTemplate.doc";
@@ -159,7 +159,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject); 
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -191,7 +191,7 @@ wordApp.Quit(nullobject, nullobject, nullobject)
 
 The following code example shows you how to perform a simple “Find and Replace” operation using DocIO.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens the Word document.
 WordDocument doc = new WordDocument("FindAndReplaceTemplate.doc",FormatType.Doc);
@@ -206,7 +206,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("FindAndReplaceTemplate.doc")
@@ -233,7 +233,7 @@ The following code example shows how to insert a bookmark for a range of text us
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -262,7 +262,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -294,7 +294,7 @@ wordApp.Quit()
 
 The following code example shows how to insert the bookmark using DocIO. Here, the AppendBookmarkStart() and AppendBookmarkEnd() methods are used to add the bookmark.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -314,7 +314,7 @@ doc.Save("Bookmarks.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As WordDocument = New WordDocument()
@@ -343,7 +343,7 @@ Page numbers are inserted to a Word document in the header or footer section.
 
 In the following code example, the page numbers are inserted to the footer of the Word document by adding a page number field.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -372,7 +372,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.Dim nullobject As Object = Missing.Value
@@ -403,7 +403,7 @@ wordApp.Quit()
 
 DocIO provides support for adding page numbers to a Word document. The page number field can be added to the header or footer of the Word document. In the following code example, the page numbers are inserted to the footer of the Word document.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens the Word document.
 WordDocument doc = new WordDocument("PageNumbers.docx", FormatType.Docx);
@@ -423,7 +423,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("PageNumbers.docx", FormatType.Docx)
@@ -449,7 +449,7 @@ Watermark can be a text or an image, used to mark the document as private or con
 
 The following code example illustrates how to insert a text watermark as a shape using OfficeAutomation.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -476,7 +476,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -507,7 +507,7 @@ wordApp.Quit()
 
 DocIO enables you to add a text watermark and a picture watermark to a Word document. The following code example shows how to insert the picture watermark to the Word document.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -524,7 +524,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As WordDocument = New WordDocument()
@@ -543,7 +543,7 @@ doc.Close()
 
 The following code example shows how to insert the text watermark to the Word document.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -563,7 +563,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As WordDocument = New WordDocument()
@@ -593,7 +593,7 @@ Headers and footers are displayed at the top and bottom of the document pages re
 
 The following code example illustrates how to add headers and footers to a Word document. In this example, page numbers are inserted to the header and a text is inserted to the footer.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -627,7 +627,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -669,7 +669,7 @@ You can set the header and footer by using the HeadersFooters property in the 
 * EvenHeader
 * EvenFooter
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens a Word document.
 WordDocument doc = new WordDocument("original.doc");
@@ -693,7 +693,7 @@ doc.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("original.doc")
@@ -727,7 +727,7 @@ Character formatting defines the appearance of the text in a Word document. This
 
 Character formatting can be applied to a Word document using Office Automation. You need to set the range of text for formatting. The following code example illustrates how to apply the character formatting to the Word document using the Range properties.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -755,7 +755,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -786,7 +786,7 @@ wordApp.Quit()
 
 The following code example illustrates how to apply the character formatting to the Word document using DocIO.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -799,7 +799,7 @@ doc.Save("CharacterFormattingDocIO.doc",FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As WordDocument = New WordDocument()
@@ -823,7 +823,7 @@ Tables are used to organize information and to display the information in rows a
 The following code example illustrates how to insert a table to a Word document, where the table contains three rows and two columns.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -845,7 +845,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -873,7 +873,7 @@ wordApp.Quit()
 
 The following code example shows how to insert an empty table to a Word document. The ResetCells() method is used to specify the number of rows and columns in a table.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 IWordDocument doc = new WordDocument();
@@ -886,7 +886,7 @@ doc.Save("TableDocIO.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As IWordDocument = New WordDocument()
@@ -910,7 +910,7 @@ Comments are used to include additional information to a paragraph or text in a 
 
 The following code example illustrates how to add comments to a Word document. You need to define the range of text where the comment is to be added.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -936,7 +936,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 'Initializes objects.
@@ -964,7 +964,7 @@ wordApp.Quit()
 
 You can insert comments to a paragraph or text in a Word document using DocIO. The following code example shows how to insert comments to a Word document.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a new Word document.
 WordDocument doc = new WordDocument();
@@ -979,7 +979,7 @@ doc.Save("CommentDocIO.doc", FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Creates a new Word document.
 Dim doc As WordDocument = New WordDocument()
@@ -997,7 +997,7 @@ doc.Save("CommentDocIO.doc", FormatType.Doc)
 Comments are removed from the Word document after they have served their purpose. The following code example shows how to remove all the comments in a Word document using Office Automation.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.
@@ -1018,7 +1018,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.Dim nullobject As Object = System.Reflection.Missing.Value
@@ -1040,7 +1040,7 @@ wordApp.Quit()
 The CommentsCollection property holds all the comments present in the Word document. The Clear() method can be called to remove all the comments. The following code example illustrates how to remove the comments from a Word document using DocIO.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens the Word document.WordDocument doc = new WordDocument("Comments.doc");
 //Gets all the comments in the document
@@ -1052,7 +1052,7 @@ doc.Save("CommentsRemovedDocIO.doc", FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("Comments.doc")
@@ -1082,7 +1082,7 @@ WdProtectionType property is used to specify the type of protection for the Wo
 * wdNoProtection: Does not protect  the document.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.instance nullobject = System.Reflection.Missing.Value;
@@ -1107,7 +1107,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -1146,7 +1146,7 @@ DocIO uses ProtectionType property to specify the protection type of the Word 
 * NoProtection: Does not protect the document.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens the Word document.
 WordDocument doc = new WordDocument("Document.doc");
@@ -1157,7 +1157,7 @@ doc.Save("FileProtectionDocIO.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("Document.doc")
@@ -1181,7 +1181,7 @@ Table of contents can be generated by applying the heading styles to text in a W
 The following code example shows how to insert and update table of contents in a Word document.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 using word = Microsoft.Office.Interop.Word;
 //Initializes objects.instance nullobject = System.Reflection.Missing.Value;
@@ -1209,7 +1209,7 @@ wordApp.Quit(ref nullobject, ref nullobject, ref nullobject);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Imports word = Microsoft.Office.Interop.Word
 ‘Initializes objects.
@@ -1242,7 +1242,7 @@ wordApp.Quit()
 The following code example illustrates how to insert and update the table of contents in a Word document using DocIO.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Opens the Word document.WordDocument doc = new WordDocument("TOCDocument.doc", FormatType.Doc);
 IWSection sec = doc.Sections[0];
@@ -1257,7 +1257,7 @@ doc.Save("TOCUpdatedDocIO.doc", FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 ‘Opens the Word document.
 Dim doc As WordDocument = New WordDocument("TOCDocument.doc", FormatType.Doc)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert-Image
+title: Insert Image | RichTextEditor | ASP.NET MVC | Syncfusion
 description: insert image
 platform: ejmvc
 control: RichTextEditor

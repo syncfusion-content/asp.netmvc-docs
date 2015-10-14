@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Chart  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Chart
@@ -21,7 +21,8 @@ This section encompasses how to configure the MVC Charts for your business needs
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
+Chart
+{:.caption}
 
 ### Configure Chart
 
@@ -30,29 +31,27 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
 1. Create an MVC Project and add necessary Dll’s and Scripts by referring [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/chart/getting-started) Documentation.
 2. You can create a simple div tag.
 
-{% highlight html %}
-<div>
+   ~~~ xml
+   
+		<div>
 
-</div>
-{% endhighlight  %}
-
+		</div>
+		
+   ~~~
+  
 
 3. You can add the following code in the index.cshtml file to create the Chart control in the View page. 
 
-{% highlight html %}
-    <div> 
+   ~~~ xml
+   
+	 <div> 
+	 
+		@(Html.EJ().Chart("chartcontainer") ) 
 
+     </div> 
 
-
-           @(Html.EJ().Chart("chartcontainer")
-
-
-
-           ) 
-
-    </div> 
-
-{% endhighlight  %}
+   ~~~
+   
 
 The above code example renders a Chart with the default Columnseries type and some random values assigned to the column series. 
 
@@ -62,6 +61,8 @@ The following screenshot displays the Chart.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+Chart
+{:.caption}
 
 
 ### Add a Chart series
@@ -72,56 +73,48 @@ By default, line series is used. To create a series, you need to add the followi
 2. Then, you need to specify the type of series you want to render using “type” property.
 3. You can add x and y points to the series as in the following code example.
 
-{% highlight html %}
-  @(Html.EJ().Chart("chartcontainer")
+{% highlight CSHTML %}
+@(Html.EJ().Chart("chartcontainer")
+.Series(sr =>
+{
+	sr.Points(pt =>
+		{
+			pt.X("Jan").Y(3.03).Add();
 
-     .Series(sr =>
+			pt.X("Feb").Y(2.48).Add();
 
-            {
+			pt.X("Mar").Y(3.23).Add();
 
-                sr.Points(pt =>
+			pt.X("Apr").Y(3.15).Add();
 
-                    {
+			pt.X("May").Y(4.13).Add();
 
-                        pt.X("Jan").Y(3.03).Add();
+			pt.X("Jun").Y(3.23).Add();
 
-                        pt.X("Feb").Y(2.48).Add();
+			pt.X("Jul").Y(4.13).Add();
 
-                        pt.X("Mar").Y(3.23).Add();
+			pt.X("Aug").Y(4.88).Add();
 
-                        pt.X("Apr").Y(3.15).Add();
+			pt.X("Sep").Y(3.82).Add();
 
-                        pt.X("May").Y(4.13).Add();
+			pt.X("Oct").Y(3.07).Add();
 
-                        pt.X("Jun").Y(3.23).Add();
+			pt.X("Nov").Y(2.83).Add();
 
-                        pt.X("Jul").Y(4.13).Add();
+			pt.X("Dec").Y(2.8).Add();
 
-                        pt.X("Aug").Y(4.88).Add();
-
-                        pt.X("Sep").Y(3.82).Add();
-
-                        pt.X("Oct").Y(3.07).Add();
-
-                        pt.X("Nov").Y(2.83).Add();
-
-                        pt.X("Dec").Y(2.8).Add();
-
-                    }).Name("Precipitation").Type(SeriesType.Column).Add();
-
-            })
-
-
-
-        )
-
+		}).Name("Precipitation").Type(SeriesType.Column).Add();
+})
+)
 {% endhighlight  %}
+
 The following screenshot displays a Chart series:
 
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+Chart series
+{:.caption}
 
 ### Add JSON data to the Chart
 
@@ -129,150 +122,152 @@ You can add JSON data to the Chart using the datasource property in Chart series
 
 In Controllers/HomeController.cs.
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 public ArrayList GetData()
 
-        {
+{
 
-            ArrayList dataTable = new ArrayList();
+		ArrayList dataTable = new ArrayList();
 
 
 
-            dataTable.Add(new ChartData("Jan", 42, 27, 3.03));
+		dataTable.Add(new ChartData("Jan", 42, 27, 3.03));
 
-            dataTable.Add(new ChartData("Feb", 44, 28, 2.48));
+		dataTable.Add(new ChartData("Feb", 44, 28, 2.48));
 
-            dataTable.Add(new ChartData("Mar", 53, 35, 3.23));
+		dataTable.Add(new ChartData("Mar", 53, 35, 3.23));
 
-            dataTable.Add(new ChartData("Apr", 64, 44, 3.15));
+		dataTable.Add(new ChartData("Apr", 64, 44, 3.15));
 
-            dataTable.Add(new ChartData("May", 75, 54, 4.13));
+		dataTable.Add(new ChartData("May", 75, 54, 4.13));
 
-            dataTable.Add(new ChartData("Jun", 83, 63, 3.23));
+		dataTable.Add(new ChartData("Jun", 83, 63, 3.23));
 
-            dataTable.Add(new ChartData("Jul", 87, 68, 4.13));
+		dataTable.Add(new ChartData("Jul", 87, 68, 4.13));
 
-            dataTable.Add(new ChartData("Aug", 84, 66, 4.88));
+		dataTable.Add(new ChartData("Aug", 84, 66, 4.88));
 
-            dataTable.Add(new ChartData("Sep", 78, 59, 3.82));
+		dataTable.Add(new ChartData("Sep", 78, 59, 3.82));
 
-            dataTable.Add(new ChartData("Oct", 67, 48, 3.07));
+		dataTable.Add(new ChartData("Oct", 67, 48, 3.07));
 
-            dataTable.Add(new ChartData("Nov", 55, 38, 2.83));
+		dataTable.Add(new ChartData("Nov", 55, 38, 2.83));
 
-            dataTable.Add(new ChartData("Dec", 45, 29, 2.8));
+		dataTable.Add(new ChartData("Dec", 45, 29, 2.8));
 
-            return dataTable;
+		return dataTable;
 
-        }
+}
 
 
 
-    private class ChartData
+private class ChartData
 
-        {
+{
 
-            private String xmonth;
+		private String xmonth;
 
 
 
-            public String Xmonth
+		public String Xmonth
 
-            {
+		{
 
-                get { return xmonth; }
+			get { return xmonth; }
 
-                set { xmonth = value; }
+			set { xmonth = value; }
 
-            }
+		}
 
 
 
-            private double precipitation;
+		private double precipitation;
 
 
 
-            public double Precipitation
+		public double Precipitation
 
-            {
+		{
 
-                get { return precipitation; }
+			get { return precipitation; }
 
-                set { precipitation = value; }
+			set { precipitation = value; }
 
-            }
+		}
 
 
 
-            private double high;
+		private double high;
 
 
 
-            public double High
+		public double High
 
-            {
+		{
 
-                get { return high; }
+			get { return high; }
 
-                set { high = value; }
+			set { high = value; }
 
-            }
+		}
 
 
 
-            private double low;
+		private double low;
 
 
 
-            public double Low
+		public double Low
 
-            {
+		{
 
-                get { return low; }
+			get { return low; }
 
-                set { low = value; }
+			set { low = value; }
 
-            }
+		}
 
 
 
-            public ChartData(String xdate, double high, double low, double precipitation)
+		public ChartData(String xdate, double high, double low, double precipitation)
 
-            {
+		{
 
-                this.Xmonth = xdate;
+			this.Xmonth = xdate;
 
-                this.Precipitation = precipitation;
+			this.Precipitation = precipitation;
 
-                this.High = high;
+			this.High = high;
 
-                this.Low = low;
+			this.Low = low;
 
-            }
+		}
 
-        }
+}
 
 
 
-        public ActionResult Index()
+public ActionResult Index()
 
-        {
+{
 
-            var DataSource = GetData();
+		var DataSource = GetData();
 
-            ViewBag.datasource = DataSource;
+		ViewBag.datasource = DataSource;
 
-            return View();
+		return View();
 
-        }
+}
 
 {% endhighlight  %}
 
 In Index.cshtml
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -329,13 +324,15 @@ In Index.cshtml
 
 {% endhighlight  %}
 
+{% endtabs %} 
 The following screenshot displays the Chart when JSON data is added.
 
 
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
+Chart with JSON data
+{:.caption}
 
 ### Add Chart Axis of your choice
 
@@ -354,7 +351,7 @@ In order to add additional Axes to the Chart other than PrimaryXAxis and Primary
 
 The following code example illustrates how to add Chart axis.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -392,7 +389,7 @@ To assign the axis to the respective series you can set YAxisName property of th
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -455,7 +452,8 @@ The following screenshot displays a Chart with desired output.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-
+Chart with axes
+{:.caption}
 
 ### Add Data Labels
 
@@ -505,9 +503,10 @@ The following screenshot displays the Chart when data Labels are enabled.
 
 
 
-![C:/Users/labuser/Desktop/label.png](Getting-Started_images/Getting-Started_img6.png)
+![](Getting-Started_images/Getting-Started_img6.png)
 
-
+Chart with Labels
+{:.caption}
 
 ### Enable Tooltip
 
@@ -541,7 +540,7 @@ The following screen shot displays the Chart when tooltip is enabled.
 
 
 
-![C:/Users/labuser/Desktop/tool.png](Getting-Started_images/Getting-Started_img7.png)
+![](Getting-Started_images/Getting-Started_img7.png)
 
-
-
+Chart with ToolTip
+{:.caption}

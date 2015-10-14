@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Presentation | Presentation | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Presentation
 documentation: ug
 ---
 
-# Overview
+# Presentation
 
 Essential Presentation is a native .NET class library that is used by developers to easily create, read, write and convert Microsoft PowerPoint files by using C#, VB.NET and managed C++ code from any of the following .NET platforms – Windows Forms, WPF, ASP.NET and ASP.NET MVC. It is a non-UI component that provides a full-fledged document instance which that is easy to access & manipulate the contents without any dependency of Microsoft Office COM libraries & Microsoft Office. It supports only *.PPTX format documentst only; also it provides support to render the PowerPoint files (*.pptx) as an image and PDF files.
 
@@ -23,18 +23,18 @@ Important features of Essential Presentation are as follows.
 * Support to export the Presentation as PDF file.
 
 
-Note: The current version of Essential Presentation is in preview. It does not support some features in MS PowerPoint such as Word Art, Smart Art, Notes slide, editing Master slides, Animations, Transitions, Comment, Header & Footer, Ole Object, creation & editing of Handsouts, equations, built-in themes & its variants.
+N> The current version of Essential Presentation is in preview. It does not support some features in MS PowerPoint such as Word Art, Smart Art, Notes slide, editing Master slides, Animations, Transitions, Comment, Header & Footer, Ole Object, creation & editing of Handsouts, equations, built-in themes & its variants.
 
 ## System Requirement
 
 <table>
 <tr>
-<th>
-Supported .NET Frameworks versions</th><td>
+<td>
+Supported .NET Frameworks versions</td><td>
 <ul> <li>.NET 2.0</li><li>.NET 3.5 </li><li> .NET 4.0 </li> <li>.NET 4.5 </li><li>.NET 4.5.1</li></ul></td></tr>
 <tr>
-<th>
-<br>Compatible MS PowerPoint versions</th><td>
+<td>
+<br>Compatible MS PowerPoint versions</td><td>
 <li> MS PowerPoint 2007</li><li> MS PowerPoint 2010</li><li> MS PowerPoint 2013</li></td></tr>
 </table>
 

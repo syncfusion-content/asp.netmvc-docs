@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Client-Side-APIs
+title: Client Side APIs | Dialog | ASP.NET MVC | Syncfusion
 description: client-side-api’s
 platform: ejmvc
 control: Dialog
@@ -11,7 +11,7 @@ documentation: ug
 
 The Dialog Widget provides some Client side Methods to process the control from script side.
 
-_Table1: Client side API for Dialog Table_
+_Client side API for Dialog Table_
 
 <table>
 <tr>
@@ -44,7 +44,7 @@ To open or close the Dialog widget by using client side API:
 
    Render input button controls for performing open and close actions.
 
-   ~~~ html
+   ~~~ cshtml
 
 
 		@{Html.EJ().Dialog("dialogAPI").Title("Syncfusion Dialog").ContentTemplate(@<div>
@@ -70,7 +70,7 @@ To open or close the Dialog widget by using client side API:
 			<input type="button" id="btnDialogClose" class="e-btn" value="Dialog Close" />
 
    ~~~
-   {:.prettyprint }
+   
 
 
    ~~~ js
@@ -117,7 +117,7 @@ To open or close the Dialog widget by using client side API:
 		</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -125,7 +125,8 @@ To open or close the Dialog widget by using client side API:
 
    ![](Client-Side-APIs_images/Client-Side-APIs_img1.png)
 
-   _Figure21: Dialog is opened_
+   Dialog is opened
+   {:.caption}
 
 2. The output of Dialog close is as follows.     
 
@@ -133,7 +134,8 @@ To open or close the Dialog widget by using client side API:
 
    ![](Client-Side-APIs_images/Client-Side-APIs_img2.png)
 
-   _Figure22: Dialog is closed_                                                                     
+   Dialog is closed
+   {:.caption}   
 
 ## IsOpened
 
@@ -145,7 +147,7 @@ To check the Dialog widget state by using client side API:
 
    Render input button controls for performing open and close actions.
 
-   ~~~ html
+   ~~~ cshtml
 
 
 		// In the CSHTML page add the Dialog widget using helpers and set IsOpened to ‘true’. 
@@ -225,7 +227,7 @@ To check the Dialog widget state by using client side API:
 		</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
    At initially set the width and height to the dialog then create object for that dialog component, using this object to accessing the methods whether the dialog is open or not.
@@ -306,24 +308,23 @@ To check the Dialog widget state by using client side API:
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The output of Dialog Open is as follows.    
 
    ![](Client-Side-APIs_images/Client-Side-APIs_img3.png)
 
-
-   _Figure23: Dialog is in open state_            
-
+	Dialog is in open state           
+    {:.caption}
 
 
 3. The output of Dialog Close is as follows.
 
    ![](Client-Side-APIs_images/Client-Side-APIs_img4.png)
 
-   _Figure24: Dialog is in Closed state_
-
+	Dialog is in Closed state
+    {:.caption}
 
 
 

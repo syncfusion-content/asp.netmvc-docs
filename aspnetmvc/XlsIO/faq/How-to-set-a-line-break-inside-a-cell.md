@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to set a line break inside a cell 
+title: How to set a line break inside a cell | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to set a line break inside a cell
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,10 +11,11 @@ documentation: ug
 
 In order to set a line break inside a cell, you have to enable Text Wrapping for the cell and then break the text. The following code example illustrates this.
 
+{% tabs %}
  
 {% highlight C# %}
 
- 
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -37,12 +38,15 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
-excelEngine.Dispose();         
- {% endhighlight %}    
+
+excelEngine.Dispose(); 
+        
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
- 'Step 1: Instantiates the spreadsheet creation engine.
+
+'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -63,5 +67,9 @@ workbook.SaveAs(fileName)
 'Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
+
 {% endhighlight %}
+
+{% endtabs %}
 

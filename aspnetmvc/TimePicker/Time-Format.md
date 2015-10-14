@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time-Format
+title: Time Format | TimePicker | ASP.NET MVC | Syncfusion
 description: time format
 platform: ejmvc
 control: TimePicker
@@ -19,7 +19,7 @@ The following steps explains you to change the time format for the TimePicker.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with time format*@
 
@@ -32,7 +32,5 @@ Execute the above code to render the following output.
 
 ![](Time-Format_images/Time-Format_img1.png)
 
-
-
-_Figure 17: TimePicker with TimeFormat._
-
+TimePicker with TimeFormat.
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | DropDownList | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: DropDownList
@@ -18,39 +18,39 @@ The following steps explains you the behaviour of template support with Dropdown
 
    N> Images for this sample are available in ‘installed location /themes/images’ 
 
-   ~~~ html
+   ~~~ cshtml
 
-		  // Add a DropDownList element using the helper class in CSHTML
-		  <div class="control">
-		  <div class="ctrllabel">Select an expert</div>
-		  @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<EmpData>)ViewData["emp"]).Width("200px").Template("<img class='eimg' src='../images/Employee/${eimg}.png' alt='employee' height='50px' width='50px'/>" +"<div class="customalign"><div class='ename'> ${Text} </div><div class='desig'> ${Designation} </div><div class='cont'> ${Country} </div></div>")</div></td></tr>
+	  // Add a DropDownList element using the helper class in CSHTML
+	  <div class="control">
+	  <div class="ctrllabel">Select an expert</div>
+	  @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable<EmpData>)ViewData["emp"]).Width("200px").Template("<img class='eimg' src='../images/Employee/${eimg}.png' alt='employee' height='50px' width='50px'/>" +"<div class="customalign"><div class='ename'> ${Text} </div><div class='desig'> ${Designation} </div><div class='cont'> ${Country} </div></div>")</div></td></tr>
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
    
-		  // Initialize the control in controller
-		  public ActionResult Property()
-		  {
-			  List<EmpData> emp = new List<EmpData>();
-			  emp.Add(new EmpData() { Text = "Erik Linden", Img = "3", Designation = "Representative", Country = "England" });
-			  emp.Add(new EmpData() { Text = "John Linden", Img = "6", Designation = "Representative", Country = "Norway" });
-			  emp.Add(new EmpData() { Text = "Louis", Img = "7", Designation = "Representative", Country = "Australia" });
-			  emp.Add(new EmpData() { Text = "Lawrence", Img = "8", Designation = "Representative", Country = "India" });
-			  ViewData["emp"] = emp;   return View();
-		 }
-		 public class EmpData
-		 { 
-			 public string Text { get; set; } 
-			 public string Img { get; set;}
-			 public string Designation { get; set; }
-			 public string Country { get; set; }
-		 }
+   ~~~ csharp
+   
+	// Initialize the control in controller
+	public ActionResult Property()
+	{
+	  List<EmpData> emp = new List<EmpData>();
+	  emp.Add(new EmpData() { Text = "Erik Linden", Img = "3", Designation = "Representative", Country = "England" });
+	  emp.Add(new EmpData() { Text = "John Linden", Img = "6", Designation = "Representative", Country = "Norway" });
+	  emp.Add(new EmpData() { Text = "Louis", Img = "7", Designation = "Representative", Country = "Australia" });
+	  emp.Add(new EmpData() { Text = "Lawrence", Img = "8", Designation = "Representative", Country = "India" });
+	  ViewData["emp"] = emp;   return View();
+	}
+	public class EmpData
+	{ 
+	 public string Text { get; set; } 
+	 public string Img { get; set;}
+	 public string Designation { get; set; }
+	 public string Country { get; set; }
+	}
 
 		 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -59,20 +59,20 @@ The following steps explains you the behaviour of template support with Dropdown
 
    ~~~ css
 
-		  <style type="text/css">
+	  <style type="text/css">
 
-				.customalign {
+			.customalign {
 
-					display: inline;
+				display: inline;
 
-					float: right;
+				float: right;
 
-				}
+			}
 
-			</style>
+		</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Output of the above steps.
 
@@ -80,6 +80,6 @@ The following steps explains you the behaviour of template support with Dropdown
 ![](Template-Support_images/Template-Support_img2.png)
 
 
-
-_Figure 29: Dropdown with template support_  
+Dropdown with template support
+{:.caption} 
 

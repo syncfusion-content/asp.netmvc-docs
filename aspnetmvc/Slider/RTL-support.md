@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-support
+title: RTL support | Slider | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Slider
@@ -21,13 +21,13 @@ The following steps explains you on how to enable RTL support in Slider.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
-   @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
+@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
 
-    .Width("500").EnableRTL(true))
+.Width("500").EnableRTL(true))
 
 
 {% endhighlight %}

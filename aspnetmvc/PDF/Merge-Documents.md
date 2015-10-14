@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Merge-Documents
+title: Merge Documents | PDF | ASP.NET MVC | Syncfusion
 description: merge documents
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -28,9 +28,9 @@ In this method, path of the source PDF files is provided in a string array. They
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a string array of source files, which are to be merged.
 
@@ -48,7 +48,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -67,16 +67,17 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Merging Multiple Documents from Stream
 
 It is also possible to merge multiple PDF documents from stream using the static merge method of PdfDocument class. The following code example illustrates this. 
 
 
+{% tabs %}
 
-{% highlight c# %}
 
-
+{% highlight C# %}
 
 FileStream stream1 = new FileStream("Input.pdf", FileMode.Open);
 
@@ -106,9 +107,7 @@ stream2.Dispose();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Dim stream1 As New FileStream("Input.pdf", FileMode.Open)
 
@@ -137,6 +136,7 @@ stream1.Dispose()
 stream2.Dispose()
 
 {% endhighlight %}
+{% endtabs %}  
 
 ## Merging Two Files using Append method
 
@@ -144,9 +144,9 @@ Two files can also be merged by appending one file after another using append me
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads documents.
 
@@ -168,9 +168,7 @@ document2.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads documents.
 
@@ -191,6 +189,7 @@ document1.Close(True)
 document2.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Merging pages of different Documents
 
@@ -198,9 +197,9 @@ Another way of merging is to import all the pages from one document to another u
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads documents.
 
@@ -222,9 +221,7 @@ document2.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads documents.
 
@@ -245,6 +242,7 @@ document1.Close(True)
 document2.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Best practices
 
@@ -253,9 +251,10 @@ Merging multiple large PDF documents can lead to high memory usage. To optimize 
 N> The PDF document (parent document) contents are still in run time memory. It releases the memory once the PDF document instance is disposed.
 
 
+{% tabs %}
+  
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 //Inputs PDF documents.
 
@@ -277,19 +276,19 @@ foreach (string inputDocument in inputDocuments)
 
 {
 
-//Loads PDF document in order to merge.
+	//Loads PDF document in order to merge.
 
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputDocument);
+	PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputDocument);
 
-loadedDocument.EnableMemoryOptimization = true;
+	loadedDocument.EnableMemoryOptimization = true;
 
-//Merges loaded document contents to the parent PDF document.
+	//Merges loaded document contents to the parent PDF document.
 
-document.ImportPageRange(loadedDocument, 0, loadedDocument.Pages.Count - 1);
+	document.ImportPageRange(loadedDocument, 0, loadedDocument.Pages.Count - 1);
 
-//Closes the document.
+	//Closes the document.
 
-loadedDocument.Close(true);
+	loadedDocument.Close(true);
 
 }
 
@@ -301,9 +300,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Inputs PDF documents.
 
@@ -321,19 +318,19 @@ document.EnableMemoryOptimization = True
 
 For Each inputDocument As String In inputDocuments
 
-'Loads PDF document in order to merge.
+	'Loads PDF document in order to merge.
 
-Dim loadedDocument As New PdfLoadedDocument(inputDocument)
+	Dim loadedDocument As New PdfLoadedDocument(inputDocument)
 
-loadedDocument.EnableMemoryOptimization = True
+	loadedDocument.EnableMemoryOptimization = True
 
-'Merges loaded document contents to parent PDF document.
+	'Merges loaded document contents to parent PDF document.
 
-document.ImportPageRange(loadedDocument, 0, loadedDocument.Pages.Count - 1)
+	document.ImportPageRange(loadedDocument, 0, loadedDocument.Pages.Count - 1)
 
-'Closes the document.
+	'Closes the document.
 
-loadedDocument.Close(True)
+	loadedDocument.Close(True)
 
 Next
 
@@ -344,4 +341,4 @@ document.Save("Output.pdf")
 document.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %}

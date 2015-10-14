@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | TreeView | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: TreeView
@@ -14,80 +14,74 @@ documentation: ug
 You can enable or disable the TreeView control by using the property Enabled. You can enable the TreeView control by setting the property enabled to “True” and you can specify the property Enabled in the script as follows.
 
 
-{% highlight js %}
+{% highlight CSHTML%}
 
+@Html.EJ().TreeView("treeview").Items(items =>
 
-  @Html.EJ().TreeView("treeview").Items(items =>
+{
+	items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-    {
+			   {
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+				   child.Add().Text("Desktop");
 
-                   {
+				   child.Add().Text("Downloads");
 
-                       child.Add().Text("Desktop");
+				   child.Add().Text("Recent places");
 
-                       child.Add().Text("Downloads");
+			   });
 
-                       child.Add().Text("Recent places");
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-                   });
+	{
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+		child.Add().Text("Documents").Children(child1 =>
 
-        {
+			{
 
-            child.Add().Text("Documents").Children(child1 =>
+				child1.Add().Text("My Documents");
 
-                {
+				child1.Add().Text("Public Documents");
 
-                    child1.Add().Text("My Documents");
+			});
 
-                    child1.Add().Text("Public Documents");
+		child.Add().Text("Pictures").Children(child1 =>
 
-                });
+		{
 
-            child.Add().Text("Pictures").Children(child1 =>
+			child1.Add().Text("My Pictures");
 
-            {
+			child1.Add().Text("Public Pictures");
 
-                child1.Add().Text("My Pictures");
+		});
 
-                child1.Add().Text("Public Pictures");
+		child.Add().Text("Music").Children(child1 =>
 
-            });
+		{
 
-            child.Add().Text("Music").Children(child1 =>
+			child1.Add().Text("My Music");
 
-            {
+			child1.Add().Text("Public Music");
 
-                child1.Add().Text("My Music");
+		});
 
-                child1.Add().Text("Public Music");
+		child.Add().Text("Subversion");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
+	items.Add().Text("Computer").Children(child =>
 
+	{
 
+		child.Add().Text("Folder(C)");
 
-        });
+		child.Add().Text("Folder(D)");
 
-        items.Add().Text("Computer").Children(child =>
+		child.Add().Text("Folder(E)");
 
-        {
+	});
 
-            child.Add().Text("Folder(C)");
-
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
-
-
-
-    }).ShowCheckbox(true).Enabled(true)
+}).ShowCheckbox(true).Enabled(true)
 
 {% endhighlight %}
 
@@ -96,82 +90,77 @@ You can enable or disable the TreeView control by using the property Enabled. Yo
 You can specify the expandednode level in TreeView by using the property ExpandedNodes. Expandednodes index collection is given to integer array. Add the following code in your script section.
 
 
-{% highlight js %}
+{% highlight CSHTML%}
 
 @{List<int> nodes = new List<int>() { 0,4 }; }
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
+	child.Add().Text("Subversion");
 
+});
 
+items.Add().Text("Computer").Children(child =>
 
-        });
+{
 
-        items.Add().Text("Computer").Children(child =>
+	child.Add().Text("Folder(C)");
 
-        {
+	child.Add().Text("Folder(D)");
 
-            child.Add().Text("Folder(C)");
+	child.Add().Text("Folder(E)");
 
-            child.Add().Text("Folder(D)");
+});
 
-            child.Add().Text("Folder(E)");
-
-        });
-
-
-
-    }).ExpandedNodes(nodes)
-
+}).ExpandedNodes(nodes)
 
 {% endhighlight %}
 
@@ -180,80 +169,80 @@ You can specify the expandednode level in TreeView by using the property Expande
 
 Node can be expanded for specified events. You can specify the property ExpandOn in TreeView control in the script as follows.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
-
-
-
-        });
-
-        items.Add().Text("Computer").Children(child =>
-
-        {
-
-            child.Add().Text("Folder(C)");
-
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
+	child.Add().Text("Subversion");
 
 
 
-    }).ExpandOn("dblclick")
+});
+
+items.Add().Text("Computer").Children(child =>
+
+{
+
+	child.Add().Text("Folder(C)");
+
+	child.Add().Text("Folder(D)");
+
+	child.Add().Text("Folder(E)");
+
+});
+
+
+
+}).ExpandOn("dblclick")
 
 {% endhighlight %}
 

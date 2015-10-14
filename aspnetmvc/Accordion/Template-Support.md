@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | Accordion  | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: Accordion 
@@ -13,10 +13,7 @@ The Content template option provided in MVC is used to specify the HTML elements
 
 The following code example explains how to use content template option in the Accordion control.
 
-{% highlight html %}
-
-
-
+{% highlight CSHTML %}
 
 <div style="width:500px;">
 

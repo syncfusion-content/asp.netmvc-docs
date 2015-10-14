@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Theme
+title: Theme | Ribbon | ASP.NET MVC | Syncfusion
 description: theme
 platform: ejmvc
 control: Ribbon

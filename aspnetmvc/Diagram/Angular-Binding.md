@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular-Binding
+title: Angular Binding | Diagram | ASP.NET MVC | Syncfusion
 description: angular binding
 platform: ejmvc
 control: Diagram
@@ -93,5 +93,5 @@ angular.module('syncApp', ['ejangular'])
 
 ![](Angular-Binding_images/Angular-Binding_img1.png)
 
-
-
+Angular Binding
+{:.caption}

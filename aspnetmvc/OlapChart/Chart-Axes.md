@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart-Axes
+title: Chart Axes | OLAPChart | ASP.NET MVC | Syncfusion
 description: chart axes 
 platform: ejmvc
 control: OLAPChart
@@ -11,7 +11,7 @@ documentation: ug
 
 OlapChart typically have two axes that are used to measure and categorize data: a vertical (y) axis and a horizontal (x) axis. By default horizontal (x) axis and vertical (y) axis is added to the Chart with axis labels, gridlines, and tick lines. You can also customize this axis explicitly by adding axis title or removing gridlines, tick lines that are added to the axis by default.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(primaryXAxis =>
 primaryXAxis.MajorTickLines(MajorTickLines => MajorTickLines.Visible(false))).PrimaryYAxis(primaryYAxis => 
@@ -27,7 +27,7 @@ primaryYAxis.MajorTickLines(MajorTickLines => MajorTickLines.Visible(false)))
 Primary axis title font appearance is further customized with the help of the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm =>
 comm.Type(SeriesType.Column)).PrimaryXAxis(primaryXAxis =>primaryXAxis.Title(title=>title.Text("Primary X title customization")
@@ -47,7 +47,7 @@ comm.Type(SeriesType.Column)).PrimaryXAxis(primaryXAxis =>primaryXAxis.Title(tit
 
 Axis line is drawn in Chart to represent the end of the axis in ChartArea. It is customized with the help of following code example.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(primaryXAxis => 
 primaryXAxis.AxisLine(AxisLine => AxisLine.Visible(true)).AxisLine(AxisLine => 
@@ -64,7 +64,7 @@ AxisLine.Offset(1)).AxisLine(AxisLine =>AxisLine.Width(3.5)))
 ## Position Opposed
 
 Position of the primary X and Y axis is set to the top with the help opposedPosition property.
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(PrimaryXAxis=>
 PrimaryXAxis.OpposedPosition(true)).PrimaryYAxis(PrimaryXAxis=>PrimaryXAxis.OpposedPosition(true))
@@ -84,7 +84,7 @@ Color – sets the color for the border.
 
 Width – sets the width for the border.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => 
 title.Text("OLAP Chart in Essential Studio")).ChartArea(chartArea=>chartArea.Border(border=>border.Color("red"))

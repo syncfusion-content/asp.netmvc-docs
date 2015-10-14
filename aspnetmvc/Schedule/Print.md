@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print
+title: Print | Schedule | ASP.NET MVC | Syncfusion
 description: print
 platform: ejmvc
 control: Schedule
@@ -15,8 +15,11 @@ Schedule control is provided with the Print feature. You can print the entire Sc
 
 You can print the Schedule control by using print() method. Use the following code example to print the Schedule control.
 
+{% tabs %}
+ 
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 <div>
 <input class="print" type="button" value="Print" />
 @(Html.EJ().Schedule("Schedule1")
@@ -27,18 +30,18 @@ var obj = $("#Schedule1").data("ejSchedule");
 // Public method to print the scheduleobj.print();});});
 </script>
 {% endhighlight %}
-{% highlight c# %}     
+{% highlight C# %}     
       // follow the code as same as declared in Read Only part</td></tr>
 {% endhighlight %}
-
+{% endtabs %} 
 
 Execute the above code to render the following output.
 
 ![](Print_images/Print_img1.png)
 
 
-
-_Figure121: Schedule with print button
+Schedule with print button
+{:.caption}
 
 Click the print button to render the following output.
 
@@ -46,17 +49,18 @@ Click the print button to render the following output.
 
 ![](Print_images/Print_img2.png)
 
-
-
-_Figure122: Schedule with Print window
+Schedule with Print window
+{:.caption}
 
 ## Appointment Print
 
 * In Schedule control, you can print the appointment alone by using context menu. Add print as menu item in the context menu settings as in the following code example.
 
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 @(Html.EJ()
 .Schedule("Schedule1")
 // To Add the Context menu settings
@@ -66,7 +70,8 @@ cms.Enable(true)
 item.Appointment(ViewBag.app)))
 // Add the Appointment setting collection here)
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
+
 public ActionResult Print()
 {
 	// create list for menu item collection
@@ -80,6 +85,7 @@ public ActionResult Print()
 	return View();
 }
 {% endhighlight %}
+{% endtabs %} 
 
 * Right click on the appointment and select print appointment in the context menu as follows.
 
@@ -87,9 +93,8 @@ public ActionResult Print()
 
 ![](Print_images/Print_img3.png)
 
-
-
-_Figure123: Schedule with Print option in Context Menu_
+Schedule with Print option in Context Menu_
+{:.caption}
 
 * Now, the widow is promoted to new document with appointment details and print window opens.
 
@@ -97,7 +102,5 @@ _Figure123: Schedule with Print option in Context Menu_
 
 ![](Print_images/Print_img4.png)
 
-
-
-_Figure124: Schedule with Appointment Print
-
+Schedule with Appointment Print
+{:.caption}

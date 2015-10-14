@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Button-types
+title: Button types | ToggleButton | ASP.NET MVC | Syncfusion
 description: button types
 platform: ejmvc
 control: ToggleButton
@@ -11,7 +11,7 @@ documentation: ug
 
 Toggle Button is used as normal clickable button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the Toggle Button in the following three types by using the Type property.
 
-_Table 5: Toggle Button Types_
+_Toggle Button Types_
 
 <table>
 <tr>
@@ -36,53 +36,51 @@ The following steps explains you the details about rendering the Toggle Button w
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
+<div class="one">
 
+	@*set toggle button type using type property*@
 
-    <div class="one">
+	<table>
 
-        @*set toggle button type using type property*@
+		<tr>
 
-        <table>
+			<td class="btnsht">
 
-            <tr>
+				@Html.EJ().ToggleButton("toggleButton_button").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("button").ActiveText("Next").Type(ButtonType.Button)
 
-                <td class="btnsht">
+			</td>
 
-                    @Html.EJ().ToggleButton("toggleButton_button").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("button").ActiveText("Next").Type(ButtonType.Button)
+			</tr>
 
-                </td>
+		<tr>
 
-                </tr>
+			<td class="btnsht">
 
-            <tr>
+				@Html.EJ().ToggleButton("toggleButton_submit").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("submit").ActiveText("Next").Type(ButtonType.Submit)
 
-                <td class="btnsht">
+			</td>
 
-                    @Html.EJ().ToggleButton("toggleButton_submit").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("submit").ActiveText("Next").Type(ButtonType.Submit)
+			</tr>
 
-                </td>
+		<tr>
 
-                </tr>
+			<td class="btnsht">
 
-            <tr>
+				@Html.EJ().ToggleButton("toggleButton_reset").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("reset").ActiveText("Next").Type(ButtonType.Reset)
 
-                <td class="btnsht">
-
-                    @Html.EJ().ToggleButton("toggleButton_reset").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextOnly).DefaultText("reset").ActiveText("Next").Type(ButtonType.Reset)
-
-                </td>
+			</td>
 
 
 
-            </tr>
+		</tr>
 
-        </table>
+	</table>
 
-    </div>
+</div>
 
 
 {% endhighlight %}
@@ -92,8 +90,8 @@ Execute the above code to render the following output.
 
 ![](Button-types_images/Button-types_img1.png)
 
-
-_Figure 17: Types of Toggle button_
+Types of Toggle button
+{:.caption}
 
 
 

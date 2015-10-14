@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing
+title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
 description: editing
 platform: ejmvc
 control: TreeGrid
@@ -17,11 +17,9 @@ Update the task details through grid Cell Editing by setting EditMode as Cell
 
 The following code example shows you how to enable CellEditing in TreeGrid control.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
-//...
 
 .EditSettings(edit =>
 

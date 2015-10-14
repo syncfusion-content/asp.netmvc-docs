@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predefined-Shapes
+title: Predefined Shapes | Diagram | ASP.NET MVC | Syncfusion
 description: predefined shapes
 platform: ejmvc
 control: Diagram
@@ -25,16 +25,11 @@ The following code example illustrates how to create a basic shape.
 
 {% highlight c# %}
 
-
-
-
 //Creates a basic shape
 
 BasicShape node = new BasicShape();
 
 node.Shape = BasicShapes.Plus;
-
-
 
 {% endhighlight %}
 
@@ -44,7 +39,8 @@ node.Shape = BasicShapes.Plus;
 
 ![](Predefined-Shapes_images/Predefined-Shapes_img1.png)
 
-
+Basic Shapes
+{:.caption}
 
 ### Flow Shape
 
@@ -55,7 +51,6 @@ The following code example illustrates how to create a flow shape.
 {% highlight c# %}
 
 
-
 //Creates a flow shape
 
 FlowShape node = new FlowShape();
@@ -63,16 +58,15 @@ FlowShape node = new FlowShape();
 node.Shape = FlowShapes.Document;
 
 
-
 {% endhighlight %}
-
 
 
 The list of flow shapes are as follows.
 
 ![](Predefined-Shapes_images/Predefined-Shapes_img2.png)
 
-
+Flow Shapes
+{:.caption}
 
 ### BPMN Shape
 
@@ -91,7 +85,8 @@ The shapes are listed as follows.
 
 ![](Predefined-Shapes_images/Predefined-Shapes_img3.png)
 
-
+BPMN Shapes
+{:.caption}
 
 The BPMN shapes and its types are explained as follows.
 
@@ -103,8 +98,6 @@ The following code example illustrates how to create an event in BPMN shape.
 
 {% highlight c# %}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-
-
 //Creates an event shape in BPMN 
 
 BPMNNode node = new BPMNNode();
@@ -268,15 +261,11 @@ The following code example illustrates how to create a gateway in BPMN shape.
 
 {% highlight c# %}
 
-
-
 //Creates a gateway shape in BPMN 
 
  BPMNNode node = new BPMNNode();
 
  node.Shapes = BPMNShapes.Gateway;
-
-
 
 {% endhighlight %}
 
@@ -366,8 +355,6 @@ The following code example illustrates how to create activity in BPMN shape.
 
 {% highlight c# %}
 
-
-
 //Creates an activity shape in BPMN
 
  BPMNNode node = new BPMNNode();
@@ -375,8 +362,6 @@ The following code example illustrates how to create activity in BPMN shape.
  node.Shapes = BPMNShapes.Activity;
 
  node.Activity = BPMNActivity.Task;
-
-
 
 {% endhighlight %}
 
@@ -390,7 +375,8 @@ The different activities in the BPMN shape are listed as follows.
 
    ![](Predefined-Shapes_images/Predefined-Shapes_img23.png)
 
-
+   Loop
+   {:.caption}
 
 2. Tasks
 
@@ -398,35 +384,40 @@ The different activities in the BPMN shape are listed as follows.
 
    ![](Predefined-Shapes_images/Predefined-Shapes_img24.png)
 
-
+    Tasks
+   {:.caption}
 
 3. Compensation
 
    Compensation is triggered when operation partially fails.
 
    ![](Predefined-Shapes_images/Predefined-Shapes_img25.png)
-
-
+   
+   Compensation
+   {:.caption}
 
 4. Call
 
    ![](Predefined-Shapes_images/Predefined-Shapes_img26.png)
-
-
+   
+   Call
+   {:.caption}
 
 5. Ad-Hoc
 
    ![](Predefined-Shapes_images/Predefined-Shapes_img27.png)
 
-
+    Ad-Hoc
+   {:.caption}
 
 6. Boundary
 
    Boundary represents the type of task that is processed.
  
    ![](Predefined-Shapes_images/Predefined-Shapes_img28.png)
-
-
+   
+   Boundary
+   {:.caption}
 
 ## Data
 
@@ -440,8 +431,6 @@ The following code example illustrates how to create connecting objects in BPMN 
 
 {% highlight c# %}
 
-
-
 //Creates a DataObject shape in BPMN
 
 BPMNNode node = new BPMNNode();
@@ -454,13 +443,11 @@ BPMNNode node = new BPMNNode();
 
 node.Shapes = BPMNShapes.DataSource;
 
-
-
 {% endhighlight %}
 
 
 
 ![](Predefined-Shapes_images/Predefined-Shapes_img29.png)
 
-
-
+Data
+{:.caption}

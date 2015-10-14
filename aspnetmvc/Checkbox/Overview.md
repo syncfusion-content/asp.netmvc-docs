@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Checkbox | Checkbox  | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Checkbox
 documentation: ug
 ---
 
-# Overview
+# Checkbox
 
 The Essential ASP.NET MVC Checkbox control allows you to check an option to perform an action. This control allows you to select true, false or an intermediate option. These checkboxes are supported with themes. The html check box control is rendered as Essential ASP.NET MVC Checkbox control.
 

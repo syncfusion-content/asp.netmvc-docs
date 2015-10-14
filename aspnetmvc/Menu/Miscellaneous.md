@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | Menu | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: Menu
@@ -16,89 +16,89 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 1. You can specify the height of the Menu control using helper as follows.
 
 
-   ~~~ html
+   ~~~ cshtml
 
 
 
-		// You can specify the height of the Menu control in the CSHTML page as follows.
+	// You can specify the height of the Menu control in the CSHTML page as follows.
 
-		<div class="imgframe">
+	<div class="imgframe">
 
-			@Html.EJ().Menu("menucontrol").Items(items =>
+		@Html.EJ().Menu("menucontrol").Items(items =>
 
-				{
+			{
 
-					items.Add().Id("Home").Text("Home").Children(child =>
+				items.Add().Id("Home").Text("Home").Children(child =>
 
-						{
+					{
 
-							child.Add().Text("Foundation");
+						child.Add().Text("Foundation");
 
-							child.Add().Text("Launch");
+						child.Add().Text("Launch");
 
-							child.Add().Text("About").Children(child1 =>
-
-							{
-
-								child1.Add().Text("Company");
-
-								child1.Add().Text("Location");
-
-							});
-
-						});
-
-					items.Add().Text("Services").Children(child =>
+						child.Add().Text("About").Children(child1 =>
 
 						{
 
-							child.Add().Text("Consulting");
+							child1.Add().Text("Company");
 
-							child.Add().Text("Outsourcing");
-
-						});
-
-					items.Add().Text("About");
-
-					items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-						{
-
-							child.Add().Text("Contact number");
-
-							child.Add().Text("E-mail");
+							child1.Add().Text("Location");
 
 						});
 
-					items.Add().Id("Careers").Text("Careers").Children(child =>
+					});
 
-						 {
+				items.Add().Text("Services").Children(child =>
+
+					{
+
+						child.Add().Text("Consulting");
+
+						child.Add().Text("Outsourcing");
+
+					});
+
+				items.Add().Text("About");
+
+				items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+					{
+
+						child.Add().Text("Contact number");
+
+						child.Add().Text("E-mail");
+
+					});
+
+				items.Add().Id("Careers").Text("Careers").Children(child =>
+
+					 {
 
 
 
-							 child.Add().Text("Position").Children(child1 =>
+						 child.Add().Text("Position").Children(child1 =>
 
-									 {
+								 {
 
-										 child1.Add().Text("Developer");
+									 child1.Add().Text("Developer");
 
-										 child1.Add().Text("Manager");
+									 child1.Add().Text("Manager");
 
-									 });
+								 });
 
-							 child.Add().Text("Apply online");
+						 child.Add().Text("Apply online");
 
-						 });
+					 });
 
 
 
-				}).Height("50")
+			}).Height("50")
 
-		</div>
+	</div>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 ## Width
 
@@ -106,89 +106,88 @@ Specifies the width of the main menu. You can customize the width of the Menu co
 
 1. You can specify the width of the Menu control using helper as follows.
 
-   ~~~ js
+   ~~~ cshtml
 
+	// You can specify the width of the Menu control in the CSHTML page as follows.
 
-		// You can specify the width of the Menu control in the CSHTML page as follows.
+	<div class="imgframe">
 
-		<div class="imgframe">
+	@Html.EJ().Menu("menucontrol").Items(items =>
 
-		@Html.EJ().Menu("menucontrol").Items(items =>
+			{
 
-				{
+				items.Add().Id("Home").Text("Home").Children(child =>
 
-					items.Add().Id("Home").Text("Home").Children(child =>
+					{
 
-						{
+						child.Add().Text("Foundation");
 
-							child.Add().Text("Foundation");
+						child.Add().Text("Launch");
 
-							child.Add().Text("Launch");
-
-							child.Add().Text("About").Children(child1 =>
-
-							{
-
-								child1.Add().Text("Company");
-
-								child1.Add().Text("Location");
-
-							});
-
-						});
-
-					items.Add().Text("Services").Children(child =>
+						child.Add().Text("About").Children(child1 =>
 
 						{
 
-							child.Add().Text("Consulting");
+							child1.Add().Text("Company");
 
-							child.Add().Text("Outsourcing");
-
-						});
-
-					items.Add().Text("About");
-
-					items.Add().Id("Contact").Text("Contact Us").Children(child =>
-
-						{
-
-							child.Add().Text("Contact number");
-
-							child.Add().Text("E-mail");
+							child1.Add().Text("Location");
 
 						});
 
-					items.Add().Id("Careers").Text("Careers").Children(child =>
+					});
 
-						 {
+				items.Add().Text("Services").Children(child =>
+
+					{
+
+						child.Add().Text("Consulting");
+
+						child.Add().Text("Outsourcing");
+
+					});
+
+				items.Add().Text("About");
+
+				items.Add().Id("Contact").Text("Contact Us").Children(child =>
+
+					{
+
+						child.Add().Text("Contact number");
+
+						child.Add().Text("E-mail");
+
+					});
+
+				items.Add().Id("Careers").Text("Careers").Children(child =>
+
+					 {
 
 
 
-							 child.Add().Text("Position").Children(child1 =>
+						 child.Add().Text("Position").Children(child1 =>
 
-									 {
+								 {
 
-										 child1.Add().Text("Developer");
+									 child1.Add().Text("Developer");
 
-										 child1.Add().Text("Manager");
+									 child1.Add().Text("Manager");
 
-									 });
+								 });
 
-							 child.Add().Text("Apply online");
+						 child.Add().Text("Apply online");
 
-						 });
-
-
-
-				}).Width("700")
+					 });
 
 
 
-		</div>
+			}).Width("700")
+
+
+
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 ## Open on click
 
@@ -198,7 +197,7 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -284,7 +283,8 @@ Output screenshot for the above code example is as follows.
 
 ![](Miscellaneous_images/Miscellaneous_img1.png)
 
-_Figure41: Sub menu items to open on click_
+Sub menu items to open on click
+{:.caption}
 
 ## Animation
 
@@ -294,83 +294,82 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 // Add the following code in the CSHTML page. 
 
 <div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+	{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+		items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Foundation");
+				child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+				child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+				child.Add().Text("About").Children(child1 =>
 
-                    {
+				{
 
-                        child1.Add().Text("Company");
+					child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+					child1.Add().Text("Location");
 
-                    });
+				});
 
-                });
+			});
 
-            items.Add().Text("Services").Children(child =>
+		items.Add().Text("Services").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Consulting");
+				child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+				child.Add().Text("Outsourcing");
 
-                });
+			});
 
-            items.Add().Text("About");
+		items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+		items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Contact number");
+				child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+				child.Add().Text("E-mail");
 
-                });
+			});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+		items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+			 {
 
 
 
-        }).Width("500").AnimationType(AnimationType.Default)
+				 child.Add().Text("Position").Children(child1 =>
+
+						 {
+
+							 child1.Add().Text("Developer");
+
+							 child1.Add().Text("Manager");
+
+						 });
+
+				 child.Add().Text("Apply online");
+
+			 });
+
+
+
+	}).Width("500").AnimationType(AnimationType.Default)
 
 </div>
 
@@ -383,9 +382,8 @@ Output screenshot for the above code sample is as follows.
 
 ![](Miscellaneous_images/Miscellaneous_img2.png)
 
-
-
-_Figure42: Animation_
+Animation
+{:.caption}
 
 ## Title text
 
@@ -395,85 +393,84 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
 // You can specify the title of the Menu control in the CSHTML page as follows.
 
 <div class="imgframe">
 
-    @Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+	{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+		items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Foundation");
+				child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+				child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+				child.Add().Text("About").Children(child1 =>
 
-                    {
+				{
 
-                        child1.Add().Text("Company");
+					child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+					child1.Add().Text("Location");
 
-                    });
+				});
 
-                });
+			});
 
-            items.Add().Text("Services").Children(child =>
+		items.Add().Text("Services").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Consulting");
+				child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+				child.Add().Text("Outsourcing");
 
-                });
+			});
 
-            items.Add().Text("About");
+		items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+		items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Contact number");
+				child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+				child.Add().Text("E-mail");
 
-                });
+			});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+		items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+			 {
 
 
 
-        }).Width("500").TitleText("Title of the Menu")
+				 child.Add().Text("Position").Children(child1 =>
 
-    </div>
+						 {
+
+							 child1.Add().Text("Developer");
+
+							 child1.Add().Text("Manager");
+
+						 });
+
+				 child.Add().Text("Apply online");
+
+			 });
+
+
+
+	}).Width("500").TitleText("Title of the Menu")
+
+</div>
 
 
 
@@ -485,9 +482,8 @@ The following screenshot displays the output of the above code.
 
 ![](Miscellaneous_images/Miscellaneous_img3.png)
 
-
-
-_Figure43: Title text for Responsive Layout_
+Title text for Responsive Layout
+{:.caption}
 
 ## Show root level arrows
 
@@ -497,7 +493,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -507,75 +503,75 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
   @Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+	{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+		items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Foundation");
+				child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+				child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+				child.Add().Text("About").Children(child1 =>
 
-                    {
+				{
 
-                        child1.Add().Text("Company");
+					child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+					child1.Add().Text("Location");
 
-                    });
+				});
 
-                });
+			});
 
-            items.Add().Text("Services").Children(child =>
+		items.Add().Text("Services").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Consulting");
+				child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+				child.Add().Text("Outsourcing");
 
-                });
+			});
 
-            items.Add().Text("About");
+		items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+		items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Contact number");
+				child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+				child.Add().Text("E-mail");
 
-                });
+			});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+		items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+			 {
 
 
 
-        }).Width("500").ShowRooltLevelArrows(false)
+				 child.Add().Text("Position").Children(child1 =>
 
-    </div>
+						 {
+
+							 child1.Add().Text("Developer");
+
+							 child1.Add().Text("Manager");
+
+						 });
+
+				 child.Add().Text("Apply online");
+
+			 });
+
+
+
+	}).Width("500").ShowRooltLevelArrows(false)
+
+</div>
 
 
 
@@ -588,8 +584,8 @@ The following screenshot displays the output of the above code.
 ![](Miscellaneous_images/Miscellaneous_img4.png)
 
 
-
-_Figure44: Show root level arrows_
+Show root level arrows
+{:.caption}
 
 ## Show sub level arrows
 
@@ -599,7 +595,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -609,75 +605,75 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+	{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+		items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Foundation");
+				child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+				child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+				child.Add().Text("About").Children(child1 =>
 
-                    {
+				{
 
-                        child1.Add().Text("Company");
+					child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+					child1.Add().Text("Location");
 
-                    });
+				});
 
-                });
+			});
 
-            items.Add().Text("Services").Children(child =>
+		items.Add().Text("Services").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Consulting");
+				child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+				child.Add().Text("Outsourcing");
 
-                });
+			});
 
-            items.Add().Text("About");
+		items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+		items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+			{
 
-                    child.Add().Text("Contact number");
+				child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+				child.Add().Text("E-mail");
 
-                });
+			});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+		items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+			 {
 
 
 
-        }).Width("500").ShowSubLevelArrows(false)
+				 child.Add().Text("Position").Children(child1 =>
 
-    </div>
+						 {
+
+							 child1.Add().Text("Developer");
+
+							 child1.Add().Text("Manager");
+
+						 });
+
+				 child.Add().Text("Apply online");
+
+			 });
+
+
+
+	}).Width("500").ShowSubLevelArrows(false)
+
+</div>
 
 
 {% endhighlight %}
@@ -689,9 +685,8 @@ The following screenshot displays the output of the above code.
 
 ![](Miscellaneous_images/Miscellaneous_img5.png)
 
-
-
-_Figure45: Show sub level arrows_
+Show sub level arrows
+{:.caption}
 
 
 

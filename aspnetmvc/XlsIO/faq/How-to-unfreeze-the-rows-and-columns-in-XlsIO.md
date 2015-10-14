@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to unfreeze the rows and columns in XlsIO 
+title: How to unfreeze the rows and columns in XlsIO | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to unfreeze the rows and columns in XlsIO
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,7 +11,8 @@ documentation: ug
 
 You can unfreeze rows and columns in XlsIO by using the RemovePanes method. The following code example illustrates this.
 
- 
+
+{% tabs %} 
  
 {% highlight C# %}
 
@@ -37,8 +38,9 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
-excelEngine.Dispose();   
-  {% endhighlight %}    
+excelEngine.Dispose();
+   
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
@@ -64,4 +66,6 @@ workbook.SaveAs(fileName)
 workbook.Close()
 excelEngine.Dispose()
 {% endhighlight %}
+
+{% endtabs %}
 

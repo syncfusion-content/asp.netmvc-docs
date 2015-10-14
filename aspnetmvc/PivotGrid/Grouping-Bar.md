@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping-Bar
+title: Grouping Bar | PivotGrid | ASP.NET MVC | Syncfusion
 description: grouping bar
 platform: ejmvc
 control: PivotGrid
@@ -15,7 +15,7 @@ The PivotGrid control supports Grouping bar that allows you to filter, sort, and
 
 The following code example explains on how to enable the Grouping bar within the PivotGrid control.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/RelationalService.svc")).EnableGroupingBar(true).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Portfolio
+title: Portfolio | PDF | ASP.NET MVC | Syncfusion
 description: portfolio
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -15,9 +15,9 @@ PdfPortfolioInformation class is used to create the PDF portfolio. PdfPortfolioV
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new instance of PdfDocument class.
 
@@ -73,9 +73,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new instance of PdfDocument class.
 
@@ -130,8 +128,9 @@ document.Save("Sample.pdf")
 document.Close(True)
 
 {% endhighlight %}
+{% endtabs %} 
 
-### Schema Field
+## Schema Field
 
 Schema field is used to specify the file property such as Name, Description, and Size. You can create the custom shema using the PdfPortfolioSchema class and add the custom field into the schema using PdfPortfolioSchemaField class. Once the custom field is created, you must provide the attributes to the fields by using the PdfPortfolioAttributes class.
 
@@ -139,9 +138,9 @@ Please refer the following code sample.
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Creates a new instance of PdfDocument class.
 
@@ -255,9 +254,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Creates a new instance of PdfDocument class.
 
@@ -370,4 +367,4 @@ document.Save("Sample.pdf")
 document.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %} 

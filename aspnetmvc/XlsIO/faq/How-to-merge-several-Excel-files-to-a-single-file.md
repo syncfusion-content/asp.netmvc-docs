@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to merge several Excel files to a single file 
+title: How to merge several Excel files to a single file | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to merge several Excel files to a single file
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,7 +11,9 @@ documentation: ug
 
 XlsIO provides support to merge several Excel files to a single file. The following code example illustrates how to do this.
 
- 
+
+{% tabs %} 
+
 {% highlight C# %}
 
  //Step 1: Instantiates the spreadsheet creation engine.
@@ -87,4 +89,5 @@ excelEngine.Dispose()
 
 {% endhighlight %}
 
+{% endtabs %}
 

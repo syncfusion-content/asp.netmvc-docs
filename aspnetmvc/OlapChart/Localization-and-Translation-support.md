@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization-and-Translation-support
+title: Localization and Translation support | OLAPChart | ASP.NET MVC | Syncfusion
 description: localization and translation support
 platform: ejmvc
 control: OLAPChart
@@ -13,7 +13,7 @@ Localization is the process of customizing the user interface (UI) as locale-spe
 
 The following table lists the default English localizationUserInterface based on “French” culture.
 
-_Table: List of default English localization User Interface based on “French” culture_
+_List of default English localization User Interface based on “French” culture_
 
 <table>
 <tr>
@@ -77,9 +77,10 @@ RenderingFailed</td><td>
 
 The following code example shows how to localize OlapChart’sUser Interface (UI) based on “French” culture.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-@section ScriptSection{
+@section ScriptSection
+{
 
     <script type="text/javascript">
 
@@ -118,10 +119,9 @@ The following code example shows how to localize OlapChart’sUser Interface (UI
 }
 
 
-{% endhighlight %}
 
-{% highlight html %}
-@section ControlsSection{
+@section ControlsSection
+{
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Locale("fr-FR")
 
@@ -140,9 +140,10 @@ N> In order to render the localized OLAP Chart, you are required to reset the co
 To apply control side localization, refer the following code example:
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-ej.olap.OlapChart.locale["zh-CN"] = {
+ej.olap.OlapChart.locale["zh-CN"] = 
+{
 
 //Corresponding keyword values needs to be set here.
 
@@ -153,7 +154,7 @@ ej.olap.OlapChart.locale["zh-CN"] = {
 
 To get the localized Cube information, “_Locale__Identifier"_ has to be set in the connection string:
 
-{% highlight c# %}
+{% highlight C# %}
 
 //1036 refers to “fr-FR” culture.
 

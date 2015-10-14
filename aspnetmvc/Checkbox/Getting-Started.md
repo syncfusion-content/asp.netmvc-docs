@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Checkbox  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Checkbox
@@ -19,15 +19,12 @@ Essential ASP.NET MVC Checkbox provides support to multiple selections within yo
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-
-
-
-_Checkboxes Control_
+Checkboxes Control
+{:.caption}
 
 In the above screenshot, you can select hobbies, interest list and social networks receiving app using Checkbox. The Checkbox performs the action to render the checked values when button clicked.
 
-## Create a Checkbox
+### Create a Checkbox
 
 ASP.NET MVC Checkbox widget has built-in features like multiple selections. You can easily create the Checkbox widget using simple HTML helper “@Html.EJ().CheckBox()” as follows.
 
@@ -40,101 +37,101 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 
 
-		   <div class="frame">
+	   <div class="frame">
 
-				<div class="control">
+			<div class="control">
 
-					<div class="chkalign">
+				<div class="chkalign">
 
-						<h4>Hobbies</h4>
+					<h4>Hobbies</h4>
 
-						<table>
+					<table>
 
-							<tr>
+						<tr>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("check1").Value("Music")
+								@Html.EJ().CheckBox("check1").Value("Music")
 
-									<label for="check1" class="clslab">
+								<label for="check1" class="clslab">
 
-										Music
+									Music
 
-									</label>
+								</label>
 
-								</td>
+							</td>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("Checkbox3").Value("Sports")
+								@Html.EJ().CheckBox("Checkbox3").Value("Sports")
 
-									<label for="Checkbox3" class="clslab">
+								<label for="Checkbox3" class="clslab">
 
-										Sports
+									Sports
 
-									</label>
+								</label>
 
-								</td>
+							</td>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("Checkbox4").Value("Bike Riding")
+								@Html.EJ().CheckBox("Checkbox4").Value("Bike Riding")
 
-									<label for="Checkbox4" class="clslab">
+								<label for="Checkbox4" class="clslab">
 
-										Bike Riding
+									Bike Riding
 
-									</label>
+								</label>
 
-								</td>
+							</td>
 
-							</tr>
+						</tr>
 
-						</table>
+					</table>
 
-						<h4>Interest List</h4>
+					<h4>Interest List</h4>
 
-						<table>
+					<table>
 
-							<tr>
+						<tr>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("Checkbox1").Value("Playing Games").Size(Size.Medium)
+								@Html.EJ().CheckBox("Checkbox1").Value("Playing Games").Size(Size.Medium)
 
-									<label for="Checkbox1" class="clslab">Playing Games</label>
+								<label for="Checkbox1" class="clslab">Playing Games</label>
 
-								</td>
+							</td>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("Checkbox5").Value("Hearing Songs").Size(Size.Medium)
+								@Html.EJ().CheckBox("Checkbox5").Value("Hearing Songs").Size(Size.Medium)
 
-									<label for="Checkbox5" class="clslab">Hearing Songs</label>
+								<label for="Checkbox5" class="clslab">Hearing Songs</label>
 
-								</td>
+							</td>
 
-								<td class="chkrad">
+							<td class="chkrad">
 
-									@Html.EJ().CheckBox("Checkbox6").Value("Reading Books").Size(Size.Medium)
+								@Html.EJ().CheckBox("Checkbox6").Value("Reading Books").Size(Size.Medium)
 
-									<label for="Checkbox6" class="clslab">Reading Books</label>
+								<label for="Checkbox6" class="clslab">Reading Books</label>
 
-								</td>
+							</td>
 
-							</tr>
+						</tr>
 
-						</table>
-
-					</div>
+					</table>
 
 				</div>
 
 			</div>
 
+		</div>
+
 
    ~~~
-   {:.prettyprint }
+
 
 
 
@@ -164,7 +161,7 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 
    ~~~
-   {:.prettyprint }
+
 
 
 
@@ -174,9 +171,10 @@ ASP.NET MVC Checkbox widget has built-in features like multiple selections. You 
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+Checkbox Creation
+{:.caption}
 
-
-## Create a Tri-State Checkbox
+### Create a Tri-State Checkbox
 
 ASP.NET MVC Tri-State Checkbox widget renders by setting EnableTriState property to True. You can add the following code to create Tri-state Checkbox in the <div> element of the corresponding view page.
 
@@ -226,23 +224,21 @@ Run the above code to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+Tri-state Checkbox Creation
+{:.caption}
 
-
-## Receive Hobbies and Interest
+### Receive Hobbies and Interest
 
 You can receive the Hobbies and Interest values using Checkbox. You can create a button in your corresponding view page <div> element using @Html.EJ().Button() and add the script section to the view page. The following steps illustrate how to create and set action to the button.
 
  Add the following code for Button creation.
 
 
+{% tabs %}
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().Button("buttonnormal").Text("Submit").Size(ButtonSize.Normal)
-
-
 
 {% endhighlight %}
 
@@ -289,9 +285,9 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 </script>
 
 
-
 {% endhighlight %}
 
+{% endtabs %}  
 
 
 Execute the above code example to render the following output.
@@ -300,9 +296,10 @@ Execute the above code example to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
+Receive hobbies and interest
+{:.caption}
 
-
-## Receive Media Player
+### Receive Media Player
 
 You can get the Media Player file type application like video, audio and picture using Checkbox. You can refer the following steps to render Media Player file types.
 
@@ -388,7 +385,7 @@ You can get the Media Player file type application like video, audio and picture
 
 
    ~~~
-   {:.prettyprint }
+
 
 
 
@@ -398,5 +395,5 @@ Execute the above code to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-
-
+Receive Media player
+{:.caption}

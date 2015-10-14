@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to copy and paste the values of the cells that contain only formulas 
+title: How to copy and paste the values of the cells that contain only formulas | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to copy and paste the values of the cells that contain only formulas
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,10 +11,10 @@ documentation: ug
 
 You can copy and paste the values of the cells that contain only formulas by setting ExcelCopyRangeOptions of the CopyTo method to None. The following code example illustrates this.
 
- 
+
+{% tabs %} 
 
 {% highlight C# %}
-
 
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -88,3 +88,5 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+{% endtabs %}
+

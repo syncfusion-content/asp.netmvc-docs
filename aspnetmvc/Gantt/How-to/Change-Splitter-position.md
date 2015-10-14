@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change-Splitter-position
+title: Change Splitter position | Gantt | ASP.NET MVC | Syncfusion
 description: change splitter position
 platform: ejmvc
 control: Gantt
@@ -20,20 +20,12 @@ It is possible to change the position of the Splitter while loading the Gantt by
 The following code example explains how to define the SplitterPosition property in the Gantt.
 
 
-
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
 
-     // ...
-
-
-
+    
     .SplitterPosition("50%")
-
-
 
     //also you can define with pixel value as 
 
@@ -41,28 +33,25 @@ The following code example explains how to define the SplitterPosition property 
 
 )
 
-
-
-
-
 {% endhighlight %}
 
 
 
 
 
-![C:/Users/labuser/Desktop/splitter30.png](Change-Splitter-position_images/Change-Splitter-position_img2.png)
+![](Change-Splitter-position_images/Change-Splitter-position_img2.png)
 
-_Figure 59: Gantt with 30 % splitter position_
+Gantt with 30 % splitter position
+{:.caption}
 
+![](Change-Splitter-position_images/Change-Splitter-position_img3.png)
 
-![C:/Users/labuser/Desktop/Splitter50.png](Change-Splitter-position_images/Change-Splitter-position_img3.png)
+Gantt with 50% splitter position
+{:.caption}
 
-_Figure 60: Gantt with 50% splitter position_
+![](Change-Splitter-position_images/Change-Splitter-position_img4.png)
 
-![C:/Users/labuser/Desktop/Splitter600px.png](Change-Splitter-position_images/Change-Splitter-position_img4.png)
-
-_Figure 61: Gantt with 600px splitter position_
-
+Gantt with 600px splitter position
+{:.caption}
 
 

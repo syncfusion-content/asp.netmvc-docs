@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL
+title: RTL | TreeView | ASP.NET MVC | Syncfusion
 description: rtl
 platform: ejmvc
 control: TreeView
@@ -16,79 +16,77 @@ The following steps explain enabling the EnableRTL property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 \\ To configure TreeView in the CSHTML page
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
+	child.Add().Text("Subversion");
 
 
 
-        });
+});
 
-        items.Add().Text("Computer").Children(child =>
+items.Add().Text("Computer").Children(child =>
 
-        {
+{
 
-            child.Add().Text("Folder(C)");
+	child.Add().Text("Folder(C)");
 
-            child.Add().Text("Folder(D)");
+	child.Add().Text("Folder(D)");
 
-            child.Add().Text("Folder(E)");
+	child.Add().Text("Folder(E)");
 
-        });
+});
 
 }).EnableRTL(true)
 
@@ -102,6 +100,6 @@ The output for TreeView when EnableRTL is set to “True” is as follows.
 
 ![](RTL_images/RTL_img1.png)
 
-
-_Figure 54: TreeView with EnableRTL_
+TreeView with EnableRTL
+{:.caption}
 

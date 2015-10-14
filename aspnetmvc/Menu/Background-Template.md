@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Background-Template
+title: Background Template | Menu | ASP.NET MVC | Syncfusion
 description: background template
 platform: ejmvc
 control: Menu
@@ -15,195 +15,195 @@ Initialize the Template Menu as illustrated in the following code example.
 
 1. Add the following code in your View page.
 
-   ~~~ js
+   ~~~ cshtml
 
 
-		// Add the following code in your CSHTML page.
+	// Add the following code in your CSHTML page.
 
-		@Html.EJ().Menu("template").Items(items =>
+	@Html.EJ().Menu("template").Items(items =>
 
-			{
+	{
 
-				items.Add().Text("Books").Children(child =>
+		items.Add().Text("Books").Children(child =>
 
-				{
+		{
 
-					child.Add().ContentTemplate(@<div class="temp temp1">
+			child.Add().ContentTemplate(@<div class="temp temp1">
 
-							<span>BOOKS</span>
+					<span>BOOKS</span>
 
-							<ul>
+					<ul>
 
-								<li><a>New Releases</a></li>
+						<li><a>New Releases</a></li>
 
-								<li><a>Bestsellers</a></li>
+						<li><a>Bestsellers</a></li>
 
-								<li><a>Upcoming</a></li>
+						<li><a>Upcoming</a></li>
 
-								<li><a>Box Sets</a></li>
+						<li><a>Box Sets</a></li>
 
-							</ul>
+					</ul>
 
-							<ul>
+					<ul>
 
-								<li><a>HTML Basics</a></li>
+						<li><a>HTML Basics</a></li>
 
-								<li><a>JavaScript</a></li>
+						<li><a>JavaScript</a></li>
 
-								<li><a>JQuery</a></li>
+						<li><a>JQuery</a></li>
 
-								<li><a>PHP Basics</a></li>
+						<li><a>PHP Basics</a></li>
 
-							</ul>
+					</ul>
 
-						</div>);
+				</div>);
 
-				});
+		});
 
-				items.Add().Text("Cameras").Children(child =>
+		items.Add().Text("Cameras").Children(child =>
 
-				{
+		{
 
-					child.Add().ContentTemplate(@<div class="temp temp2">
+			child.Add().ContentTemplate(@<div class="temp temp2">
 
-							<span>CAMERAS</span>
+					<span>CAMERAS</span>
 
-							<ul>
+					<ul>
 
-								<li><a>Point & Shoots</a></li>
+						<li><a>Point & Shoots</a></li>
 
-								<li><a>Digital SLR</a></li>
+						<li><a>Digital SLR</a></li>
 
-								<li><a>Camcorders</a></li>
+						<li><a>Camcorders</a></li>
 
-								<li><a>Bestsellers</a></li>
+						<li><a>Bestsellers</a></li>
 
-							</ul>
+					</ul>
 
-							<ul>
+					<ul>
 
-								<li><a>Still Camera</a></li>
+						<li><a>Still Camera</a></li>
 
-								<li><a>Digital Camera</a></li>
+						<li><a>Digital Camera</a></li>
 
-								<li><a>Video Camera</a></li>
+						<li><a>Video Camera</a></li>
 
-								<li><a>Virtual Camera</a></li>
+						<li><a>Virtual Camera</a></li>
 
-							</ul>
+					</ul>
 
-						</div>);
+				</div>);
 
-				});
+		});
 
-				items.Add().Text("Movies").Children(child =>
+		items.Add().Text("Movies").Children(child =>
 
-				{
+		{
 
-					child.Add().ContentTemplate(@<div class="temp temp3">
+			child.Add().ContentTemplate(@<div class="temp temp3">
 
-							<span>MOVIES</span>
+					<span>MOVIES</span>
 
-							<ul>
+					<ul>
 
-								<li><a>Genobili Actions</a></li>
+						<li><a>Genobili Actions</a></li>
 
-								<li><a>Jackie Rocks</a></li>
+						<li><a>Jackie Rocks</a></li>
 
-								<li><a>Men In Blue</a></li>
+						<li><a>Men In Blue</a></li>
 
-								<li><a>Human vs Alien</a></li>
+						<li><a>Human vs Alien</a></li>
 
-							</ul>
+					</ul>
 
-							<ul>
+					<ul>
 
-								<li><a>Million Dreams</a></li>
+						<li><a>Million Dreams</a></li>
 
-								<li><a>Kung-fu</a></li>
+						<li><a>Kung-fu</a></li>
 
-							</ul>
+					</ul>
 
-						</div>);
+				</div>);
 
-				});
+		});
 
-				items.Add().Text("Musics").Children(child =>
+		items.Add().Text("Musics").Children(child =>
 
-				{
+		{
 
-					child.Add().ContentTemplate(@<div class="temp temp4">
+			child.Add().ContentTemplate(@<div class="temp temp4">
 
-							<span>MUSICS</span>
+					<span>MUSICS</span>
 
-							<ul>
+					<ul>
 
-								<li><a>New Releases</a></li>
+						<li><a>New Releases</a></li>
 
-								<li><a>Bestsellers</a></li>
+						<li><a>Bestsellers</a></li>
 
-								<li><a>Devotional</a></li>
+						<li><a>Devotional</a></li>
 
-								<li><a>Sufi & Ghazal</a></li>
+						<li><a>Sufi & Ghazal</a></li>
 
-							</ul>
+					</ul>
 
-							<ul>
+					<ul>
 
-								<li><a>Pop songs</a></li>
+						<li><a>Pop songs</a></li>
 
-								<li><a>Rock Music</a></li>
+						<li><a>Rock Music</a></li>
 
-							</ul>
+					</ul>
 
-						</div>);
+				</div>);
 
-				});
+		});
 
-				items.Add().Text("Gaming").Children(child =>
+		items.Add().Text("Gaming").Children(child =>
 
-				{
+		{
 
-					child.Add().ContentTemplate(@<div class="temp temp5">
+			child.Add().ContentTemplate(@<div class="temp temp5">
 
-							<span>GAMING</span>
+					<span>GAMING</span>
 
-							<ul>
+					<ul>
 
-								<li><a>Upcoming</a></li>
+						<li><a>Upcoming</a></li>
 
-								<li><a>PC</a></li>
+						<li><a>PC</a></li>
 
-								<li><a>PS Vista</a></li>
+						<li><a>PS Vista</a></li>
 
-								<li><a>PS3</a></li>
+						<li><a>PS3</a></li>
 
-								<li><a>XBox</a></li>
+						<li><a>XBox</a></li>
 
-								<li><a>Consoles</a></li>
+						<li><a>Consoles</a></li>
 
-							</ul>
+					</ul>
 
-							<ul>
+					<ul>
 
-								<li><a>FIFA 2999</a></li>
+						<li><a>FIFA 2999</a></li>
 
-								<li><a>NBA Actions</a></li>
+						<li><a>NBA Actions</a></li>
 
-								<li><a>Crick Champions</a></li>
+						<li><a>Crick Champions</a></li>
 
-								<li><a>Carom legend</a></li>
+						<li><a>Carom legend</a></li>
 
-							</ul>
+					</ul>
 
-						</div>);
+				</div>);
 
-				});
+		});
 
-			})
+	})
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -212,147 +212,153 @@ Initialize the Template Menu as illustrated in the following code example.
 
    ~~~ css
 
+	<style type="text/css">
 
+		.temp 
+		{
 
+		height: 237px;
 
-		<style type="text/css">
+		width: 375px;
 
-			.temp {
+		font-family: segoe UI;
 
-				height: 237px;
+		cursor: default;
 
-				width: 375px;
+		background-size: 100% 100%;
 
-				font-family: segoe UI;
+		}
 
-				cursor: default;
 
-				background-size: 100% 100%;
 
-			}
+		.temp span 
+		{
 
+			color: red;
 
+			float: left;
 
-				.temp span {
+			font-size: 20px;
 
-					color: red;
+			left: 20px;
 
-					float: left;
+			position: relative;
 
-					font-size: 20px;
+			top: 25px;
 
-					left: 20px;
+			width: 100px;
 
-					position: relative;
+		}
 
-					top: 25px;
 
-					width: 100px;
 
-				}
+		.temp ul 
+		{
 
+			float: left;
 
+			font-size: 14px;
 
-				.temp ul {
+			left: -79px;
 
-					float: left;
+			list-style-type: none;
 
-					font-size: 14px;
+			margin: 0;
 
-					left: -79px;
+			padding: 0;
 
-					list-style-type: none;
+			position: relative;
 
-					margin: 0;
+			top: 50px;
 
-					padding: 0;
+			width: 128px;
 
-					position: relative;
+		}
 
-					top: 50px;
 
-					width: 128px;
 
-				}
+		.temp ul li 
+		{
 
+			font-size: 13px;
 
+		}
 
-					.temp ul li {
 
-						font-size: 13px;
 
-					}
+		.temp ul li a 
+		{
 
+			text-decoration: underline;
 
+			cursor: pointer;
 
-						.temp ul li a {
+			color: #000;
 
-							text-decoration: underline;
+		}
 
-							cursor: pointer;
 
-							color: #000;
 
-						}
+		.temp1 
+		{
 
+			background-image: url("1.jpg");
 
+		}
 
-			.temp1 {
 
-				background-image: url("1.jpg");
 
-			}
+		.temp2
+		{
 
+			background-image: url("2.jpg");
 
+		}
 
-			.temp2 {
 
-				background-image: url("2.jpg");
 
-			}
+		.temp3 
+		{
 
+			background-image: url("3.jpg");
 
+		}
 
-			.temp3 {
 
-				background-image: url("3.jpg");
 
-			}
+		.temp4 
+		{
 
+			background-image: url("4.jpg");
 
+		}
 
-			.temp4 {
 
-				background-image: url("4.jpg");
 
-			}
+		.e-menu.e-horizontal li > ul, .e-menu.e-horizontal li > ul > li:hover 
+		{
 
+			background-color: #fff;
 
+		}
 
-			.e-menu.e-horizontal li > ul, .e-menu.e-horizontal li > ul > li:hover {
 
-				background-color: #fff;
 
-			}
+		.e-menu.e-horizontal > li > ul:after 
+		{
 
+			border-color: transparent transparent #fff;
 
+		}
 
-			.e-menu.e-horizontal > li > ul:after {
-
-				border-color: transparent transparent #fff;
-
-			}
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 Execute the above code to render the following output.    
                    
 ![](Background-Template_images/Background-Template_img1.png)
 
-
-
-_Figure32: Template_
-
+Template
+{:.caption}

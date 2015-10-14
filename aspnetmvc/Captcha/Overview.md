@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Captcha | Captcha  | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Captcha
 documentation: ug
 ---
 
-# Overview
+# Captcha
 
 Captcha is a popular technique that is used to prevent computer programs from sending automated requests and is used for meta-searching search engines, performing dictionary attacks in login pages, or sending spam using mail servers. Captcha is validated at the time of form submission.
 

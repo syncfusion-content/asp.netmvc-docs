@@ -1,18 +1,19 @@
 ---
 layout: post
-title: Refresh-datasource
+title: Refresh datasource | Grid | ASP.NET MVC | Syncfusion
 description: refresh datasource
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-## Refresh datasource
+# Refresh datasource
 
 Grid allows you to refresh datasource dynamically after Gridinitialization. It is useful to refresh Griddatasource.
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Button("refresh").Text("refresh").ClientSideEvents(d=>d.Click("refresh"))
@@ -21,25 +22,23 @@ Grid allows you to refresh datasource dynamically after Gridinitialization. It i
 
 @(Html.EJ().Grid<Person>("Grid")
 
-   .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-   .Columns(c =>
+.Columns(c =>
 
-   {
+{
 
-      c.Field("FirstName").HeaderText("First Name").Add();
+	c.Field("FirstName").HeaderText("First Name").Add();
 
-      c.Field("LastName").HeaderText("Last Name").Add();
+	c.Field("LastName").HeaderText("Last Name").Add();
 
-      c.Field("Email").HeaderText("Email").Add();
+	c.Field("Email").HeaderText("Email").Add();
 
-   })
+})
 
-   )
+)
 
 
-{% endhighlight  %}
-{% highlight js %}
 
 <script type="text/javascript" >
 
@@ -53,8 +52,6 @@ Grid allows you to refresh datasource dynamically after Gridinitialization. It i
 
     ];
 
-
-
     function refresh() {
 
         $("#Grid").ejGrid("dataSource", newData);
@@ -65,7 +62,7 @@ Grid allows you to refresh datasource dynamically after Gridinitialization. It i
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -100,19 +97,20 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
-
+{% endtabs %} 
 The following screenshot displays the Grid data source before refreshing.
 
 
 
 ![](Refresh-datasource_images/Refresh-datasource_img1.png)
 
-_Figure : Before Refreshing_
+Before Refreshing
+{:.caption}
 
 The following screenshot displays the Grid data source after refreshing.
 
 ![](Refresh-datasource_images/Refresh-datasource_img2.png)
 
-_Figure : After Refreshing_
-
+After Refreshing
+{:.caption}
 

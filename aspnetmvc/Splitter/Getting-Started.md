@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Splitter | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Splitter
@@ -23,102 +23,102 @@ The following screenshot illustrates a Splitter control.
 
 
 
-## Create a Splitter
+### Create a Splitter
 
 Essential Studio ASP.NET MVC Splitter control has a built-in feature to split the display into horizontal and vertical order.
 
 1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/splitter/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the Splitter. You can download the desired mobile and name it as galaxy.jpg. ‘ContentTemplate’ property is used to specify the HTML tags within the helper elements. Here we have used the contentTemplate property to specify the contents of the splitter control.
 
-   ~~~ html
+   ~~~ cshtml
 
 
-		@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
+	@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
 
-		    {
+		{
 
-			p.Add().ContentTemplate(
+		p.Add().ContentTemplate(
 
-			    @<div class="cont">
+			@<div class="cont">
 
-				<h3 class="h3">
+			<h3 class="h3">
 
-				    ASP.NET MVC
+				ASP.NET MVC
+
+			</h3>
+
+
+
+		@*Add Tree Element here*@
+
+
+
+			</div>).PaneSize("200");
+
+		p.Add().ContentTemplate(
+
+			@<div class="cont">
+
+			<div class="_content">
+
+				Select any product from the tree to show the description.
+
+			</div>
+
+			<div class="tools des">
+
+				<h3>
+
+				Tools
 
 				</h3>
 
+				<p>
 
+				Essential Tools is an collection of user interface components used to create interactive
 
-		    @*Add Tree Element here*@
+				ASP.NET MVC applications.
 
+				</p>
 
+			</div>
 
-			    </div>).PaneSize("200");
+			<div class="chart des">
 
-			p.Add().ContentTemplate(
+				<h3>
 
-			    @<div class="cont">
+				Chart
 
-				<div class="_content">
+				</h3>
 
-				    Select any product from the tree to show the description.
+				<p> Essential Chart is a business-oriented charting component.</p>
 
-				</div>
+			</div>
 
-				<div class="tools des">
+			<div class="grid des">
 
-				    <h3>
+				<h3>
 
-					Tools
+				Grid
 
-				    </h3>
+				</h3>
 
-				    <p>
+				<p>
 
-					Essential Tools is an collection of user interface components used to create interactive
+				Essential MVC Grid offers full featured a Grid control with extensive support for
 
-					ASP.NET MVC applications.
+				Grouping and the display of hierarchical data.
 
-				    </p>
+				</p>
 
-				</div>
+			</div>
 
-				<div class="chart des">
+			</div>).PaneSize("200");
 
-				    <h3>
-
-					Chart
-
-				    </h3>
-
-				    <p> Essential Chart is a business-oriented charting component.</p>
-
-				</div>
-
-				<div class="grid des">
-
-				    <h3>
-
-					Grid
-
-				    </h3>
-
-				    <p>
-
-					Essential MVC Grid offers full featured a Grid control with extensive support for
-
-					Grouping and the display of hierarchical data.
-
-				    </p>
-
-				</div>
-
-			    </div>).PaneSize("200");
-
-		    }).Height("400").Width("100%").Render();}
+		}).Height("400").Width("100%").Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -126,41 +126,45 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
    ~~~ css
 
-			<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-		    #outterSplitter {
+		#outterSplitter 
+		{
 
-			margin: 0 auto;
+		margin: 0 auto;
 
-		    }
+		}
 
-		    .cont #treeView_Container {
+		.cont #treeView_Container 
+		{
 
-			margin-bottom: 0;
+		margin-bottom: 0;
 
-			border: none;
+		border: none;
 
-		    }
+		}
 
-		    .h3, ._content, p {
+		.h3, ._content, p 
+		{
 
-			font-size: 14px;
+		font-size: 14px;
 
-			margin-top: 10px;
+		margin-top: 10px;
 
-			text-indent: 10px;
+		text-indent: 10px;
 
-		    }
+		}
 
-		    .des {
+		.des 
+		{
 
-			display: none;
+		display: none;
 
-		    }
+		}
 
-		</style>
+	</style>
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -171,50 +175,50 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 Add the following code example in the corresponding view page. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string, object> to specify the HTML attributes. Please check the below code.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
 
-  htmlAttribute.Add("class", "_child");
+htmlAttribute.Add("class", "_child");
 
 }
 
 
 
-                @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-                {
+{
 
-                    items.Add().Text("Layout").Expanded(true).Children(child =>
+items.Add().Text("Layout").Expanded(true).Children(child =>
 
-                    {
+{
 
-                        child.Add().Id("tools").Text("Tools").HtmlAttributes(htmlAttribute);
+	child.Add().Id("tools").Text("Tools").HtmlAttributes(htmlAttribute);
 
-                    });
+});
 
-                    items.Add().Text("Data Visualization").Expanded(true).Children(child =>
+items.Add().Text("Data Visualization").Expanded(true).Children(child =>
 
-                   {
+{
 
-                       child.Add().Id("chart").Text("Chart").HtmlAttributes(htmlAttribute);
-
-
-
-                   });
-
-                    items.Add().Text("Data").Expanded(true).Children(child =>
-
-                    {
-
-                        child.Add().Id("grid").Text("Grid").HtmlAttributes(htmlAttribute);
-
-                    });
+   child.Add().Id("chart").Text("Chart").HtmlAttributes(htmlAttribute);
 
 
 
-                }).ClientSideEvents(e => e.NodeSelect("treeClicked"))
+});
+
+items.Add().Text("Data").Expanded(true).Children(child =>
+
+{
+
+	child.Add().Id("grid").Text("Grid").HtmlAttributes(htmlAttribute);
+
+});
+
+
+
+}).ClientSideEvents(e => e.NodeSelect("treeClicked"))
 
 {% endhighlight %}
 
@@ -228,17 +232,20 @@ Add the following code example in the view page to set action in Splitter contro
 
 
 
-    function treeClicked(sender, args) {
+function treeClicked(sender, args) 
+{
 
-        if (sender.currentElement.hasClass('_child')) {//nodeSelect event handle
+	if (sender.currentElement.hasClass('_child')) 
+	{	
+		//nodeSelect event handle
 
-            var content = $('.' + sender.currentElement[0].id).html();
+		var content = $('.' + sender.currentElement[0].id).html();
 
-            $('._content').html(content);
+		$('._content').html(content);
 
-        }
+	}
 
-    }
+}
 
 </script>
 

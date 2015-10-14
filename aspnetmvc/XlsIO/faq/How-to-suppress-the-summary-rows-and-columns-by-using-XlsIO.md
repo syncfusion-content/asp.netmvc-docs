@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to suppress the summary rows and columns by using XlsIO 
+title: How to suppress the summary rows and columns by using XlsIO | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to suppress the summary rows and columns by using XlsIO
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,8 +11,9 @@ documentation: ug
 
 You can suppress the summary rows and columns by using the IsSummaryRowBelow and IsSummaryColumnRight properties. The following code example illustrates this.
 
- 
- 
+
+{% tabs %}
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.
@@ -39,10 +40,12 @@ workbook.SaveAs(fileName);
 //Closes the workbook.
 workbook.Close();
 excelEngine.Dispose();   
+
 {% endhighlight %}    
 
 
 {% highlight vbnet %}
+
  'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -68,3 +71,4 @@ excelEngine.Dispose()
 
 {% endhighlight %}
 
+{% endtabs %}

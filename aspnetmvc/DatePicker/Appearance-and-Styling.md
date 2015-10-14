@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | DatePicker | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: DatePicker
@@ -36,32 +36,32 @@ The following code example is used to render the DatePicker widget with customiz
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*The following code example depicts the way to bind data to the DatePicker widget with customized stylet*@
+	@*The following code example depicts the way to bind data to the DatePicker widget with customized stylet*@
 
-		@Html.EJ().DatePicker("datepicker").CssClass("custom")
+	@Html.EJ().DatePicker("datepicker").CssClass("custom")
 
    ~~~
-   {:.prettyprint }
+  
 
 
 2. Add the following styles to render DatePicker with customized style.
 
    ~~~ css
 
-		<style type="text/css">
+	<style type="text/css">
 
-			.custom .e-header {
+		.custom .e-header {
 
-			  background-color:blue;
+		  background-color:blue;
 
-			}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+
 
 
 3. The following screenshot displays the output for the above code.
@@ -70,13 +70,16 @@ The following code example is used to render the DatePicker widget with customiz
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
+Custom Css in DatePicker
+{:.caption}
+
 ### Keyboard Navigation
 
 With the Keyboard Navigationenabled in the DatePicker widget, it is possible to widget the actions of the DatePicker with the provided shortcut keys. Almost all the DatePicker actions that are done through mouse are controlled with shortcut keys. For enabling the keyboard navigation, we need to set the access key to DatePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictinary object. The IDictionary represents a generic collection of key/value pairs.
 
 The various keyboard shortcuts available within the DatePicker widget are discussed in the following table.
 
-_Table5: Keyboard navigation_
+_Keyboard navigation_
 
 <table>
 <tr>
@@ -138,17 +141,17 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 1. In the CSHTML page, add the following code to render the DatePicker widget and enable keyboard interaction with accesskey “j”.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget and enable keyboard interaction by setting the accesskey property.*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget and enable keyboard interaction by setting the accesskey property.*@
 
-		@{IDictionary<string, object> parameters = new Dictionary<string, object>();
+	@{IDictionary<string, object> parameters = new Dictionary<string, object>();
 
-			parameters.Add("accesskey", "j");
+		parameters.Add("accesskey", "j");
 
-		}
+	}
 
-		@Html.EJ().DatePicker("datepicker").HtmlAttributes(parameters)
+	@Html.EJ().DatePicker("datepicker").HtmlAttributes(parameters)
 
    ~~~
    {:.prettyprint }
@@ -159,3 +162,5 @@ The following steps explain you to enable keyboard interaction for DatePicker wi
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
+DatePicker focused with Keyboard shortcut
+{:.caption}

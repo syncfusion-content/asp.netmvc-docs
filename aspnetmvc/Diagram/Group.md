@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Group
+title: Group | Diagram | ASP.NET MVC | Syncfusion
 description: group
 platform: ejmvc
 control: Diagram
@@ -18,8 +18,6 @@ You can create Group like node and add it to the Diagram model by using diagram 
 The following code illustrates how a group node is created and added in the nodes array.
 
 {% highlight c# %}
-
-
 
 
 //Creates a group node
@@ -58,7 +56,8 @@ model.Nodes.Add(group);
 
 ![](Group_images/Group_img1.png)
 
-
+Group
+{:.caption}
 
 ## Select a Group
 
@@ -70,6 +69,8 @@ The following steps illustrate how to select an object that has two groups.
 
 ![](Group_images/Group_img2.png)
 
+Selecting a Group
+{:.caption}
 
 
 1. Click Node1 to select the outer group.
@@ -78,7 +79,8 @@ The following steps illustrate how to select an object that has two groups.
 
 
    ![](Group_images/Group_img3.png)
-
+   Selecting an inner Group
+   {:.caption}
 
 
 3. Click again to select the child node after all groups have been traversed.
@@ -86,8 +88,8 @@ The following steps illustrate how to select an object that has two groups.
 
 
    ![](Group_images/Group_img4.png)
-
-
+   Selecting a Child of Group
+   {:.caption}
 
 ## Edit a Group
 

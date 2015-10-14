@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Icons
+title: Icons | Button | ASP.NET MVC | Syncfusion
 description: icons
 platform: ejmvc
 control: Button
@@ -25,7 +25,7 @@ Refer to the following link to know what are the values passed in the “Content
 
 Also in the button sample, you can use the icon class names as follows,
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Button("button").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
@@ -52,7 +52,7 @@ Execute the above code to render the following output.
 
 The complete list of icons is listed in the following table.
 
-_Table1: List of icons_
+_List of icons_
 
 <table>
 <tr>

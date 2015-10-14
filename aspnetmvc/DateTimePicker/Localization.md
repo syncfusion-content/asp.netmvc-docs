@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | DateTimePicker | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: DateTimePicker
@@ -31,7 +31,7 @@ You can also customize the culture to your own, using the following steps.
 
    The following code snippet is used to know Spanish calendar locale information.
 
-   ~~~ js
+   ~~~ cshtml
         
 		calendars: {
 
@@ -89,24 +89,25 @@ You can also customize the culture to your own, using the following steps.
      
 
    ~~~
-   {:.prettyprint }
+   
    
    The following code example can be used to get Spanish culture in DateTimePicker.
 
 3. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
 	 
 	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized localization*@
 
 		@Html.EJ().DateTimePicker("DateTime").Locale("es-ES").Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
    
 4. The following screenshot displays the output for the above code.
 
 	![](Localization_images/Localization_img1.png)
 
-
+    Showcase for DateTimePicker with Spanish culture
+    {:.caption}
 

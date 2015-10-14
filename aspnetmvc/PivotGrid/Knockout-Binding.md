@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Knockout-Binding
+title: Knockout Binding | PivotGrid | ASP.NET MVC | Syncfusion
 description: knockout binding
 platform: ejmvc
 control: PivotGrid

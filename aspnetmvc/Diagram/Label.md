@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Label
+title: Label | Diagram | ASP.NET MVC | Syncfusion
 description: label
 platform: ejmvc
 control: Diagram
@@ -43,7 +43,8 @@ connector.Labels.Add(label);
 
 ![](Label_images/Label_img1.png)
 
-
+Label
+{:.caption}
 
 ## Displacement
 
@@ -75,15 +76,13 @@ connector.Constraints = ConnectorConstraints.Default| ConnectorConstraints.DragL
 
 ![](Label_images/Label_img2.png)
 
-
-
+Label Dragging
+{:.caption}
 
 
 The following code illustrates how to displace labels through API.
 
 {% highlight c# %}
-
-
 
 Node node = new Node()
 
@@ -119,7 +118,8 @@ Node node = new Node()
 
 ![](Label_images/Label_img3.png)
 
-
+Label Displacement through margin
+{:.caption}
 
 ## Label Rotation
 
@@ -129,21 +129,13 @@ Diagram provides support to rotate labels. You can rotate labels to specified an
 
 {% highlight c# %}
 
-
-
-
-
 Label label = new Label();
 
 label.Text = "Label";
 
-
-
 //Label Rotate Angle.
 
 label.RotateAngle = 45;
-
-
 
 {% endhighlight %}
 
@@ -151,8 +143,8 @@ label.RotateAngle = 45;
 
 ![](Label_images/Label_img4.png)
 
-
-
+Rotated Label
+{:.caption}
 
 
 N> No built-in support is added to rotate labels interactively.
@@ -162,10 +154,6 @@ N> No built-in support is added to rotate labels interactively.
 You cancustomizethe Labelappearance and position by using its properties.
 
 {% highlight c# %}
-
-
-
-
 
 
 // Sets various appearance properties to label 
@@ -202,7 +190,8 @@ label.TextDecoration = TextDecorations.LineThrough;
 
 ![](Label_images/Label_img6.png)
 
-
+Customized Label
+{:.caption}
 
 ## Label Editing
 
@@ -212,18 +201,11 @@ Labelcan be edited at runtime, programmatically or interactively. By default, la
 
 {% highlight c# %}
 
-
-
-
-
-
 //Labels edit mode
 
 Label label = new Label();
 
 label.Mode = LabelEditMode.Edit;
-
-
 
 //Labels view mode
 
@@ -232,14 +214,14 @@ Label label = new Label();
 label.Mode = LabelEditMode.View;
 
 
-
 {% endhighlight %}
 
 
 
 ![](Label_images/Label_img7.png)
 
-
+Label Mode
+{:.caption}
 
 ## Read-only Label
 
@@ -247,16 +229,11 @@ To prevent label editing, set Label’s ReadOnly property as True. After setting
 
 {% highlight c# %}
 
-
-
-
 //Labels readOnly mode
 
 Label label = new Label();
 
 label.ReadOnly = true;
-
-
 
 {% endhighlight %}
 
@@ -303,7 +280,6 @@ Gets or sets the position for the label.</td></tr>
 {% highlight c# %}
 
 
-
 //Aligns label and its text
 
 Label label = new Label();
@@ -317,7 +293,6 @@ label.HorizontalAlignment = HorizontalAlignment.Center;
 label.Offset = new DiagramPoint(0.5f,0.5f);
 
 label.Align = TextAlign.Left;
-
 
 
 {% endhighlight %}
@@ -362,13 +337,14 @@ Bottom</td><td>
 
 ![](Label_images/Label_img11.png)
 
-
-
+Left align
+{:.caption}
 
 
 ![](Label_images/Label_img12.png)
 
-
+Label Alignment
+{:.caption}
 
 ## Text Wrapping
 
@@ -378,13 +354,9 @@ The following code illustrates how to wrap text.
 
 {% highlight c# %}
 
-
-
 Label label = new Label();
 
 label.Wrapping = WrapText.Wrap;
-
-
 
 {% endhighlight %}
 
@@ -392,9 +364,8 @@ label.Wrapping = WrapText.Wrap;
 
 ![](Label_images/Label_img13.png)
 
-
-
-_Text Wrapping_
+Text Wrapping
+{:.caption}
 
 <table>
 <tr>
@@ -434,13 +405,9 @@ The following code example illustrates how to set the label width.
 
 {% highlight c# %}
 
-
-
 Label label = new Label();
 
 label.Width = 50;
-
-
 
 {% endhighlight %}
 
@@ -496,5 +463,5 @@ node.Labels.Add(label);
 
 ![](Label_images/Label_img17.png)
 
-
-
+Multiple Label and Alignment
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple-Items
+title: Multiple Items | DigitalGauge | ASP.NET MVC | Syncfusion
 description: multiple items 
 platform: ejmvc
 control: DigitalGauge
@@ -12,7 +12,7 @@ documentation: ug
 The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -52,4 +52,5 @@ Execute the above code example to render the DigitalGauge as follows.
 
 ![](Multiple-Items_images/Multiple-Items_img1.png)
 
-_Figure 36: Digital Gauge control with multiple items_
+Digital Gauge control with multiple items
+{:.caption}

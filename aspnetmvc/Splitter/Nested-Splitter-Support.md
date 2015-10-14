@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nested-Splitter-Support
+title: Nested Splitter Support | Splitter | ASP.NET MVC | Syncfusion
 description: nested splitter support
 platform: ejmvc
 control: Splitter
@@ -17,42 +17,41 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 1. In the View page, add the Splitter helper and configure the outer and inner splitters. As you can see we have specified a heper function to render the inner splitter. A helper is a reusable snippet of Razor sytnax exposed as a method, and is intended for rendering HTML to the browse. To use helper within another helper we have specified as a separate function as shown below.
 
+{% tabs %}
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @{Html.EJ().Splitter("outterSplitter").Height("300").Width("600").Orientation(Orientation.Vertical).PaneProperties(
 
-    p =>
+p =>
 
-    {
+{
 
-        p.Add().ContentTemplate(
+	p.Add().ContentTemplate(
 
-            @<div>
+		@<div>
 
-                <div class="content" style="padding: 0px 15px;">
+			<div class="content" style="padding: 0px 15px;">
 
-                    <h3 class="h3">
+				<h3 class="h3">
 
-                        ASP.NET MVC
+					ASP.NET MVC
 
-                    </h3>
+				</h3>
 
-                </div>
+			</div>
 
-            </div>).PaneSize("60");
+		</div>).PaneSize("60");
 
-        p.Add().ContentTemplate(
+	p.Add().ContentTemplate(
 
-            @<div style="height: 100%; width: 100%">
+		@<div style="height: 100%; width: 100%">
 
-                @innerSplitter()
+			@innerSplitter()
 
-            </div>);
+		</div>);
 
-    }).Render();}
+}).Render();}
 
 
 
@@ -60,103 +59,107 @@ The following steps explain the implementation of the “nestedsplitter”option
 
 {
 
-    @Html.EJ().Splitter("innerSplitter").Width("600").PaneProperties(p1 =>
+@Html.EJ().Splitter("innerSplitter").Width("600").PaneProperties(p1 =>
 
-                {
+			{
 
-                    p1.Add().ContentTemplate(@<div>
+				p1.Add().ContentTemplate(@<div>
 
-                        <div class="content">
+					<div class="content">
 
-                            <h3 class="h3">
+						<h3 class="h3">
 
-                                Tools
+							Tools
 
-                            </h3>
+						</h3>
 
-                           Essential Tools is an collection of user interface components used to create interactive
+					   Essential Tools is an collection of user interface components used to create interactive
 
-                            ASP.NET MVC applications.
+						ASP.NET MVC applications.
 
-                        </div>
+					</div>
 
-                    </div>).PaneSize("200");
+				</div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@<div>
+				p1.Add().ContentTemplate(@<div>
 
-            <div class="content">
+		<div class="content">
 
-                <h3 class="h3">
+			<h3 class="h3">
 
-                    Chart
+				Chart
 
-                </h3>
+			</h3>
 
-                Essential Chart is a business-oriented charting component.
+			Essential Chart is a business-oriented charting component.
 
-            </div>
+		</div>
 
-        </div>).PaneSize("200");
+	</div>).PaneSize("200");
 
-                    p1.Add().ContentTemplate(@<div>
+				p1.Add().ContentTemplate(@<div>
 
-            <div class="content">
+		<div class="content">
 
-                <h3 class="h3">
+			<h3 class="h3">
 
-                    Grid
+				Grid
 
-                </h3>
+			</h3>
 
-                Essential Mvc Grid offers full featured a Grid control with extensive support for
+			Essential Mvc Grid offers full featured a Grid control with extensive support for
 
-                Grouping and the display of hierarchical data.
+			Grouping and the display of hierarchical data.
 
-            </div>
+		</div>
 
-        </div>).PaneSize("200");
+	</div>).PaneSize("200");
 
-                })
+			})
 
 }
 
 {% endhighlight %}
 
-{% highlight css %}
+{% highlight CSS %}
 
 
+<style type="text/css" >
 
-    <style type="text/css" >
+	#outterSplitter 
+	{
 
-        #outterSplitter {
+		margin: 0 auto;
 
-            margin: 0 auto;
+	}
 
-        }
+	.h3 
+	{
 
-        .h3 {
+		font-size: 14px;
 
-            font-size: 14px;
+	}
 
-        }
+	#innerSplitter 
+	{
 
-        #innerSplitter {
+		border: 0 none;
 
-            border: 0 none;
+	}
 
-        }
+	.content 
+	{
 
-        .content {
+		padding: 15px;
 
-            padding: 15px;
+	}
 
-        }
-
-    </style>
+</style>
 
 
 
 {% endhighlight %}
+{% endtabs %} 
 
 The output for nested Splitter.
 

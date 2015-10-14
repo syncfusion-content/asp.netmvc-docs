@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-support
+title: RTL support | ToggleButton | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: ToggleButton
@@ -16,19 +16,17 @@ The following steps explains you the details about rendering the Toggle Button w
 1. In the View page, add the following button elements to configure Toggle Button widget.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
+<div class="one">
 
+	@*enable right to left alignment*@
 
-    <div class="one">
+	@Html.EJ().ToggleButton("toggleButton_rtl").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").EnableRTL(true)       
 
-    @*enable right to left alignment*@
-
-                 @Html.EJ().ToggleButton("toggleButton_rtl").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").EnableRTL(true)       
-
-    </div>
+</div>
 
 {% endhighlight %}
 
@@ -40,6 +38,5 @@ Output of above steps
 
 ![](RTL-support_images/RTL-support_img1.png)
 
-
-_Figure 18: Toggle button with RTL support_
-
+Toggle button with RTL support
+{:.caption}

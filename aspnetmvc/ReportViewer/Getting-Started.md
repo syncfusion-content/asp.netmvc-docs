@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | ReportViewer | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: ReportViewer
@@ -76,17 +76,17 @@ Add the script files and CSS files in the &lt;title&gt; tag of the _Layout.cs
 
 N> Use the following code example while adding scripts and styles.
 
-{% highlight html %}
-   
-		<link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" />
+{% highlight CSHTML %}
 
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"> </script>
+<link href="http://cdn.syncfusion.com/js/web/flat-azure/ej.web.all-latest.min.css" rel="stylesheet" />
 
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"> </script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"> </script>
 
-		<script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"> </script>
 
-		<script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"></script>
+<script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js" type="text/javascript"></script>
+
+<script src=" http://cdn.syncfusion.com/js/web/ej.unobtrusive-latest.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 
@@ -94,7 +94,7 @@ N> Use the following code example while adding scripts and styles.
 
 Add the following code example in the Index.cshtml page that is already created. Set the desired ReportPath and ReportServiceUrl to ReportViewer.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @using Syncfusion.MVC.EJ
 
@@ -132,7 +132,7 @@ The MVC ReportViewer uses WebApi services to process the report file and process
 
 The ApiController inherits the IReportController and you can add the following code example to its methods definition in order to process the report file. The interface IReportController contains the required actions and helper methods declaration to process the report. The ReportHelper class contains helper methods that helps to process Post/Get request from control and return the response to control.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using Syncfusion.EJ.ReportViewer;
 
@@ -209,7 +209,7 @@ namespace ReportViewerDemo.Api
 
 You can route the WebAPI in Application_Start event into Global.asax file as follows.
 
-{% highlight c# %}
+{% highlight C# %}
 
 using System;
 
@@ -264,51 +264,51 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
 
 1. Set the ReportPath from SSRS and SSRS ReportServerUrl in the ReportViewer properties.
 
-   ~~~ cs
+   ~~~ cshtml
 	
-		@using Syncfusion.MVC.EJ
+	@using Syncfusion.MVC.EJ
 
-		@using Syncfusion.JavaScript.Models
+	@using Syncfusion.JavaScript.Models
 
-		@using Syncfusion.JavaScript
+	@using Syncfusion.JavaScript
 
-		@using Syncfusion.JavaScript.ReportViewer
+	@using Syncfusion.JavaScript.ReportViewer
 
-		@{
+	@{
 
-			ViewBag.Title = "Index";
+		ViewBag.Title = "Index";
 
-		}
+	}
 
-		<h2>Index</h2>
+	<h2>Index</h2>
 
-		<div>    
-	
-			@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
+	<div>    
 
-		</div> 
+		@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportServiceUrl("/api/SSRSReport").ReportServerUrl("http://76.74.153.81/ReportServer").ReportPath("/SSRSSamples2/Territory Sales"))  
+
+	</div> 
 	
    ~~~
-   {:.prettyprint }     
+       
 
 2. Add the credential information in ReportApiController’sOnInitReportOptions method that is inherited in IReportController.
 
-   ~~~ cs
+   ~~~ csharp
 
-		public void OnInitReportOptions(ReportViewerOptions reportOption)
+	public void OnInitReportOptions(ReportViewerOptions reportOption)
 
-        {
+	{
 
-			//Add SSRS Server and database credentials here
+		//Add SSRS Server and database credentials here
 
-            reportOption.ReportModel.ReportServerCredential = new System.Net.NetworkCredential("ssrs", "RDLReport1");
+		reportOption.ReportModel.ReportServerCredential = new System.Net.NetworkCredential("ssrs", "RDLReport1");
 
-            reportOption.ReportModel.DataSourceCredentials.Add(new DataSourceCredentials("AdventureWorks", "ssrs1", "RDLReport1"));
+		reportOption.ReportModel.DataSourceCredentials.Add(new DataSourceCredentials("AdventureWorks", "ssrs1", "RDLReport1"));
 
-        }
+	}
 
    ~~~
-   {:.prettyprint }
+  
 
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
@@ -320,90 +320,90 @@ The ReportViewer has data binding support to visualize the RDLC reports. The fol
 
 1. Assign the RDLC report path to ReportViewer’sReportPath property and set the data sources to the ReportViewer’sDataSources property.
 
-   ~~~ html
+   ~~~ cshtml
   
-		@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("~/App_Data/Product List.rdlc")
+	@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("~/App_Data/Product List.rdlc")
 
-		.ReportServiceUrl("/api/ReportApi").DataSources(ds => ds.Name("list").Value(ViewData["reportDsource"]).Add()))
+	.ReportServiceUrl("/api/ReportApi").DataSources(ds => ds.Name("list").Value(ViewData["reportDsource"]).Add()))
   
    ~~~
-   {:.prettyprint }
+  
 
 
 2. The following code example illustrates the creation of business object data source.
 
-   ~~~ cs
+   ~~~ csharp
 
-		namespace ReportViewerDemo.Controllers
+	namespace ReportViewerDemo.Controllers
+
+	{
+
+		public partial class ReportViewerController : Controller
 
 		{
 
-			public partial class ReportViewerController : Controller
+			public ActionResult ProductList()
 
 			{
 
-				public ActionResult ProductList()
+				ProductList prodlist = new ProductList();
 
-				{
+				ViewData["reportDsource"] = prodlist.GetData();
 
-					ProductList prodlist = new ProductList();
-
-					ViewData["reportDsource"] = prodlist.GetData();
-
-					return View();
-
-				}
-
-			}
-
-
-
-			public class ProductList
-
-			{
-
-				public string ProductName { get; set; }
-
-				public string OrderId { get; set; }
-
-				public double Price { get; set; }
-
-				public string Category { get; set; }
-
-				public string Ingredients { get; set; }
-
-				public string ProductImage { get; set; }
-
-				public IList GetData()
-
-				{
-
-					List<ProductList> datas = new List<ProductList>();
-
-					ProductList data = null;
-
-					data = new ProductList() {ProductName = "Baked Chicken and Cheese",OrderId = "323B60",Price = 55,Category = "Non-Veg",Ingredients = "grilled chicken, corn and olives.",ProductImage = "" };
-
-					datas.Add(data);
-
-					data = new ProductList() {ProductName = "Chicken Delite",OrderId = "323B61",Price = 100,Category = "Non-Veg",Ingredients = "cheese, chicken chunks, onions & pineapple chunks.",ProductImage = ""};
-
-					datas.Add(data);
-
-					data = new ProductList() {ProductName = "Chicken Tikka",OrderId = "323B62",Price = 64,Category = "Non-Veg",Ingredients = "onions, grilled chicken, chicken salami & tomatoes.",ProductImage = ""};
-
-					datas.Add(data);
-
-					return datas;
-
-				}
+				return View();
 
 			}
 
 		}
 
+
+
+		public class ProductList
+
+		{
+
+			public string ProductName { get; set; }
+
+			public string OrderId { get; set; }
+
+			public double Price { get; set; }
+
+			public string Category { get; set; }
+
+			public string Ingredients { get; set; }
+
+			public string ProductImage { get; set; }
+
+			public IList GetData()
+
+			{
+
+				List<ProductList> datas = new List<ProductList>();
+
+				ProductList data = null;
+
+				data = new ProductList() {ProductName = "Baked Chicken and Cheese",OrderId = "323B60",Price = 55,Category = "Non-Veg",Ingredients = "grilled chicken, corn and olives.",ProductImage = "" };
+
+				datas.Add(data);
+
+				data = new ProductList() {ProductName = "Chicken Delite",OrderId = "323B61",Price = 100,Category = "Non-Veg",Ingredients = "cheese, chicken chunks, onions & pineapple chunks.",ProductImage = ""};
+
+				datas.Add(data);
+
+				data = new ProductList() {ProductName = "Chicken Tikka",OrderId = "323B62",Price = 64,Category = "Non-Veg",Ingredients = "onions, grilled chicken, chicken salami & tomatoes.",ProductImage = ""};
+
+				datas.Add(data);
+
+				return datas;
+
+			}
+
+		}
+
+	}
+
    ~~~
-   {:.prettyprint }
+  
 
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to protect certain cells in a spreadsheet 
+title: How to protect certain cells in a spreadsheet | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to protect certain cells in a spreadsheet
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,9 +11,10 @@ documentation: ug
 
 All the cells in an Excel spreadsheet have a Locked property that determines if the cell is editable when the worksheet is protected. All the cells are set to Locked, by default. So, when a worksheet is protected, all the cells in the worksheet get protected, by default. However, there is often a need to protect only certain cells in a worksheet. In this scenario, you need to protect a worksheet and set the IsLocked property to false for the cells that need to be made editable.
 
- 
+{% tabs %} 
  
 {% highlight C# %}
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -40,11 +41,15 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
-excelEngine.Dispose();         
-  {% endhighlight %}    
+
+excelEngine.Dispose(); 
+        
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
+
+
  'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -70,7 +75,10 @@ workbook.SaveAs(fileName)
 ' Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
+
 {% endhighlight %}
+{% endtabs %}
 
 
 N> Locking/Unlocking cells in an unprotected worksheet has no effect.

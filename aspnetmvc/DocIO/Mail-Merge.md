@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mail-Merge
+title: Mail Merge | DocIO | ASP.NET MVC | Syncfusion
 description: mail merge
 platform: ejmvc
 control: DocIO
@@ -41,9 +41,9 @@ Mail Merge operations are performed by the Execute or ExecuteGroup method. There
 * void Execute(OleDbDataReader dataReader): Works similarly with IDataRader parameter.
 * void Execute(IEnumerable dataSource): Performs replacement of merge fields, in which field names match the enumerable instance names in DataSource.
 
-### Public Methods
+#### Public Methods
 
-_Table_ _92_: _Public Methods_
+
 
 <table>
 <tr>
@@ -72,6 +72,8 @@ Executes nested mail merge for a group(Region or tables).</td></tr>
 
 The following code example illustrates how to create a new Word document to perform a simple mail merge.
 
+{% tabs %}
+ 
 {% highlight C# %}
 
 //Opens a Word document.
@@ -116,7 +118,7 @@ wordDoc.Save(“Sample.docx”);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Opens a Word document.
 
@@ -159,6 +161,7 @@ wordDoc.MailMerge.Execute(fieldNames, fieldValues)
 wordDoc.Save("Sample.docx")
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Mail Merge for a Group
 
@@ -180,6 +183,8 @@ You have to insert three MergeFields in the document with the following field na
 * void ExecuteGroup(IDataReader dataReader): Works similarly with DataTable parameter.
 
 The following code example illustrates how to perform mail merge for a group.
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -225,7 +230,7 @@ document.Save("Sample.doc", FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -268,13 +273,15 @@ document.MailMerge.ExecuteGroup(table)
 document.Save("Sample.doc", FormatType.Doc)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Nested Mail Merge 
 
 By using the WordDocument.MailMerge.ExecuteNestedGroup method, you can perform nested mail merge. Each item of "command" Arraylist must contain one or more DictionaryEntry objects. Each DictionaryEntry instance must contain the Table Name (DataTable name) and String Command with command, which must be applied to the table. You can use the following expression for getting the current value of specified column in a table: %TableName.ColumnName%.
 
 The following code example illustrates how a nested mail merge for a region or table is implemented by using DocIO. 
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -316,7 +323,7 @@ doc.MailMerge.ExecuteNestedGroup(conn, commands);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -353,6 +360,7 @@ commands.Add(entry)
 doc.MailMerge.ExecuteNestedGroup(conn, commands)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Merge outer group fields placed within inner nested group
 
@@ -431,13 +439,11 @@ In the above example, the customers property in EmployeeDetails has customers re
 
 
 
-> * Nested mail merge for a region works when the group start and end is BeginGroup and EndGroup respectively.
-> * Nested mail merge for a table works when the group start and end is TableStart and TableEnd respectively.
-> * The commands list to retrieve the DataTable from the data source must be in the same order of Group which is preserved in the input WordDocument.
+N> * Nested mail merge for a region works when the group start and end is BeginGroup and EndGroup respectively. * Nested mail merge for a table works when the group start and end is TableStart and TableEnd respectively.* The commands list to retrieve the DataTable from the data source must be in the same order of Group which is preserved in the input WordDocument.
 
-### Public Methods
+#### Public Methods
 
-_Table_ _93_: _Public Methods_
+
 
 <table>
 <tr>
@@ -464,6 +470,7 @@ Runs nested mail merge within a Group for the specified data from the MailMergeD
 
 The following code example illustrates how to implement a nested mail merge for a region or table by using a Data Set. 
 
+{% tabs %}
 
 {% highlight C# %}
 
@@ -473,61 +480,59 @@ public void  CreateDocument()
 
 {
 
-WordDocument doc = new WordDocument();
+	WordDocument doc = new WordDocument();
 
-doc.Open( dataPath + "NestedMailMerge1.doc" );
+	doc.Open( dataPath + "NestedMailMerge1.doc" );
 
 
 
-//Gets Data from the Database.
+	//Gets Data from the Database.
 
-DataTable table1 = GetNestedDataTable( "select * from Table1" );
+	DataTable table1 = GetNestedDataTable( "select * from Table1" );
 
-table1.TableName = "Table1";
+	table1.TableName = "Table1";
 
-DataTable table2 = GetNestedDataTable( "select * from Table2" );
+	DataTable table2 = GetNestedDataTable( "select * from Table2" );
 
-table2.TableName = "Table2";
+	table2.TableName = "Table2";
 
-DataTable table3 = GetNestedDataTable( "select * from Table3" );
+	DataTable table3 = GetNestedDataTable( "select * from Table3" );
 
-table3.TableName = "Table3";
+	table3.TableName = "Table3";
 
-DataSet dataSet = new DataSet( "Test dataset" );
+	DataSet dataSet = new DataSet( "Test dataset" );
 
-dataSet.Tables.Add( table1 );
+	dataSet.Tables.Add( table1 );
 
-dataSet.Tables.Add( table2 );
+	dataSet.Tables.Add( table2 );
 
-dataSet.Tables.Add( table3 );
+	dataSet.Tables.Add( table3 );
 
-//Arraylist contains the list of commands.
+	//Arraylist contains the list of commands.
 
-ArrayList commands = new ArrayList();
+	ArrayList commands = new ArrayList();
 
-DictionaryEntry entry = new DictionaryEntry( "Table1", string.Empty );
+	DictionaryEntry entry = new DictionaryEntry( "Table1", string.Empty );
 
-commands.Add( entry );
+	commands.Add( entry );
 
-entry = new DictionaryEntry("table2", "sellerid = %table1.sellerid%");
+	entry = new DictionaryEntry("table2", "sellerid = %table1.sellerid%");
 
-commands.Add( entry );
+	commands.Add( entry );
 
-	entry = new DictionaryEntry("Table3", "CustomerID = 
+    entry = new DictionaryEntry("Table3", "CustomerID = %Table2.CustomerID%");
 
-      %Table2.CustomerID%");
+	commands.Add( entry );
 
-commands.Add( entry );
+	doc.MailMerge.RemoveEmptyParagraphs = true;
 
-doc.MailMerge.RemoveEmptyParagraphs = true;
+	//Executes NestedGroup by passing the DataSet.
 
-//Executes NestedGroup by passing the DataSet.
+	doc.MailMerge.ExecuteNestedGroup(dataSet, commands );
 
-doc.MailMerge.ExecuteNestedGroup(dataSet, commands );
+	doc.Save( "NestedMailMerge.doc" );
 
-doc.Save( "NestedMailMerge.doc" );
-
-System.Diagnostics.Process.Start( "NestedMailMerge.doc" );
+	System.Diagnostics.Process.Start( "NestedMailMerge.doc" );
 
 }
 
@@ -547,11 +552,11 @@ private DataTable GetNestedDataTable( string sqlQuery )
 
 {
 
-OleDbConnection conn = null;
+	OleDbConnection conn = null;
 
-try
+	try
 
-{
+	{
 
 	        string connString = "Provider=Microsoft.Jet.OLEDB.4.0;Data 
 
@@ -561,33 +566,33 @@ try
 
 
 
-//Gets data from the database.
+			//Gets data from the database.
 
-conn = new OleDbConnection( connString );
+			conn = new OleDbConnection( connString );
 
-conn.Open();
+			conn.Open();
 
-OleDbCommand cmd = new OleDbCommand( sqlQuery, conn );
+			OleDbCommand cmd = new OleDbCommand( sqlQuery, conn );
 
-OleDbDataAdapter da = new OleDbDataAdapter( cmd );
+			OleDbDataAdapter da = new OleDbDataAdapter( cmd );
 
-DataTable table = new DataTable();
+			DataTable table = new DataTable();
 
-da.Fill( table );
+			da.Fill( table );
 
-return table;
+			return table;
 
-}
+	}
 
-finally
+	finally
 
-{
+	{
 
-if( conn != null )
+	if( conn != null )
 
-conn.Close();
+	conn.Close();
 
-}
+	}
 
 }
 
@@ -595,66 +600,64 @@ conn.Close();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Public Sub CreateDocument()
-
-Dim doc As WordDocument = New WordDocument()
-
-doc.Open(dataPath + "NestedMailMerge1.doc")
-
+	
+	Dim doc As WordDocument = New WordDocument()
+	
+	doc.Open(dataPath + "NestedMailMerge1.doc")
+	
 'Gets Data from the Database.
-
-Dim table1 As DataTable = GetNestedDataTable("select * from Table1")
-
-table1.TableName = "Table1"
-
-Dim table2 As DataTable = GetNestedDataTable("select * from Table2")
-
-table2.TableName = "Table2"
-
-Dim table3 As DataTable = GetNestedDataTable("select * from Table3")
-
-table3.TableName = "Table3"
-
-
-
-Dim dataSet As DataSet = New DataSet("Test dataset")
-
-dataSet.Tables.Add(table1)
-
-dataSet.Tables.Add(table2)
-
-dataSet.Tables.Add(table3)
-
-‘Arraylist contains the list of commands.
-
-Dim commands As ArrayList = New ArrayList()
-
-Dim enTry As DictionaryEntry = New DictionaryEntry("Table1", String.Empty)
-
-commands.Add(enTry)
-
-enTry = New dictionaryenTry("table2", "sellerid = Decimal.Remainder( , table1.sellerid)%")
-
-commands.Add(enTry)
-
-enTry = New DictionaryEnTry("Table3", "CustomerID = Decimal.Remainder( , Table2.CustomerID)%")
-
-commands.Add(enTry)
-
-doc.MailMerge.RemoveEmptyParagraphs = True
-
+	
+	Dim table1 As DataTable = GetNestedDataTable("select * from Table1")
+	
+	table1.TableName = "Table1"
+	
+	Dim table2 As DataTable = GetNestedDataTable("select * from Table2")
+	
+	table2.TableName = "Table2"
+	
+	Dim table3 As DataTable = GetNestedDataTable("select * from Table3")
+	
+	table3.TableName = "Table3"
+	
+	
+	
+	Dim dataSet As DataSet = New DataSet("Test dataset")
+	
+	dataSet.Tables.Add(table1)
+	
+	dataSet.Tables.Add(table2)
+	
+	dataSet.Tables.Add(table3)
+	
+	‘Arraylist contains the list of commands.
+	
+	Dim commands As ArrayList = New ArrayList()
+	
+	Dim enTry As DictionaryEntry = New DictionaryEntry("Table1", String.Empty)
+	
+	commands.Add(enTry)
+	
+	enTry = New dictionaryenTry("table2", "sellerid = Decimal.Remainder( , table1.sellerid)%")
+	
+	commands.Add(enTry)
+	
+	enTry = New DictionaryEnTry("Table3", "CustomerID = Decimal.Remainder( , Table2.CustomerID)%")
+	
+	commands.Add(enTry)
+	
+	doc.MailMerge.RemoveEmptyParagraphs = True
+	
 'Executes NestedGroup by passing the DataSet.
-
-doc.MailMerge.ExecuteNestedGroup(dataSet, commands)
-
-doc.Save("NestedMailMerge.doc")
-
-System.Diagnostics.Process.Start("NestedMailMerge.doc")
-
+	
+	doc.MailMerge.ExecuteNestedGroup(dataSet, commands)
+	
+	doc.Save("NestedMailMerge.doc")
+	
+	System.Diagnostics.Process.Start("NestedMailMerge.doc")
+	
 End Sub
 
 '/ <summary>
@@ -668,57 +671,57 @@ End Sub
 '/ <returns></returns>
 
 Private Function GetNestedDataTable(ByVal sqlQuery As String) As DataTable
-
-Dim conn As OleDbConnection = Nothing
-
-Try
-
-Dim connString As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.IO.Path.Combine(dataPath, "NestedMailMerge1.mdb")
-
+	
+	Dim conn As OleDbConnection = Nothing
+	
+	Try
+	
+	Dim connString As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.IO.Path.Combine(dataPath, "NestedMailMerge1.mdb")
+	
 'Gets data from the database.
-
-conn = New OleDbConnection(connString)
-
-conn.Open()
-
-Dim cmd As OleDbCommand = New OleDbCommand(sqlQuery, conn)
-
-Dim da As OleDbDataAdapter = New OleDbDataAdapter(cmd)
-
-Dim table As DataTable = New DataTable()
-
-da.Fill(table)
-
-Return table
-
-Finally
-
-If Not conn Is Nothing Then
-
-conn.Close()
-
-End If
-
-End Try
-
+	
+	conn = New OleDbConnection(connString)
+	
+	conn.Open()
+	
+	Dim cmd As OleDbCommand = New OleDbCommand(sqlQuery, conn)
+	
+	Dim da As OleDbDataAdapter = New OleDbDataAdapter(cmd)
+	
+	Dim table As DataTable = New DataTable()
+	
+	da.Fill(table)
+	
+	Return table
+	
+	Finally
+	
+	If Not conn Is Nothing Then
+		
+		conn.Close()
+		
+	End If
+	
+	End Try
+	
 End Function
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 ## Mail Merge with Business Objects
 
 The following code example illustrates how to perform mail merge with business objects.
 
+{% tabs %}
+
 {% highlight C# %}
-
-
 
 XDocument customerXml;
 
 XElement element;
 
-List<Customer> Customers = new List<Customer>();
+List < Customer > Customers = new List < Customer > ();
 
 Customer customerDetails;
 
@@ -728,139 +731,139 @@ private void InitializeCustomer()
 
 {
 
-Customers.Clear();
+	Customers.Clear();
 
-Uri uri = new Uri("Resources/Templates/Customers.xml", UriKind.Relative);
+	Uri uri = new Uri("Resources/Templates/Customers.xml", UriKind.Relative);
 
-Stream stream = ResourceManager.Load(uri);
+	Stream stream = ResourceManager.Load(uri);
 
-customerXml = XDocument.Load(stream);
+	customerXml = XDocument.Load(stream);
 
-element = customerXml.Descendants("Customers").First();
+	element = customerXml.Descendants("Customers").First();
 
-var pc = from p in customerXml.Descendants("Customer")
+	var pc = from p in customerXml.Descendants("Customer")
 
-select p;
+	select p;
 
-string CustomerID = string.Empty;
+	string CustomerID = string.Empty;
 
-string CompanyName = string.Empty;
+	string CompanyName = string.Empty;
 
-string ContactName = string.Empty;
+	string ContactName = string.Empty;
 
-string ContactTitle = string.Empty;
+	string ContactTitle = string.Empty;
 
-string Address = string.Empty;
+	string Address = string.Empty;
 
-string City = string.Empty;
+	string City = string.Empty;
 
-string PostalCode = string.Empty;
+	string PostalCode = string.Empty;
 
-string Country = string.Empty;
+	string Country = string.Empty;
 
-string Phone = string.Empty;
+	string Phone = string.Empty;
 
-string Fax = string.Empty;
+	string Fax = string.Empty;
 
-string Region = string.Empty;
+	string Region = string.Empty;
 
-foreach (var dt in pc)
+	foreach(var dt in pc)
 
-{
+	{
 
-foreach (XElement el in dt.Descendants())
+		foreach(XElement el in dt.Descendants())
 
-{
+		{
 
-string value = dt.Element(el.Name).Value;
+			string value = dt.Element(el.Name).Value;
 
-string elementName = el.Name.ToString();
+			string elementName = el.Name.ToString();
 
-switch (elementName)
+			switch (elementName)
 
-{
+			{
 
-case "CustomerID":
+				case "CustomerID":
 
-CustomerID = value;
+					CustomerID = value;
 
-break;
+					break;
 
-case "CompanyName":
+				case "CompanyName":
 
-CompanyName = value;
+					CompanyName = value;
 
-break;
+					break;
 
-case "ContactName":
+				case "ContactName":
 
-ContactName = value;
+					ContactName = value;
 
-break;
+					break;
 
-case "ContactTitle":
+				case "ContactTitle":
 
-ContactTitle = value;
+					ContactTitle = value;
 
-break;
+					break;
 
-case "Address":
+				case "Address":
 
-Address = value;
+					Address = value;
 
-break;
+					break;
 
-case "City":
+				case "City":
 
-City = value;
+					City = value;
 
-break;
+					break;
 
-case "PostalCode":
+				case "PostalCode":
 
-PostalCode = value;
+					PostalCode = value;
 
-break;
+					break;
 
-case "Country":
+				case "Country":
 
-Country = value;
+					Country = value;
 
-break;
+					break;
 
-case "Phone":
+				case "Phone":
 
-Phone = value;
+					Phone = value;
 
-break;
+					break;
 
-case "Fax":
+				case "Fax":
 
-Fax = value;
+					Fax = value;
 
-break;
+					break;
 
-}
+			}
 
-}
+		}
 
-customerDetails = new Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City, PostalCode, Country, Phone, Fax);
+		customerDetails = new Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City, PostalCode, Country, Phone, Fax);
 
-Customers.Add(customerDetails);
+		Customers.Add(customerDetails);
 
-}
+	}
 
-comboBox1.Items.Clear();
+	comboBox1.Items.Clear();
 
-foreach (Customer customer in Customers)
+	foreach(Customer customer in Customers)
 
-{
+	{
 
-comboBox1.Items.Add(customer.CustomerID);
+		comboBox1.Items.Add(customer.CustomerID);
 
-}
+	}
 
-comboBox1.SelectedIndex = 1;
+	comboBox1.SelectedIndex = 1;
 
 }
 
@@ -868,325 +871,323 @@ private void buttonSample_Click(object sender, RoutedEventArgs e)
 
 {
 
-WordDocument document;
+	WordDocument document;
 
-if (rdButtonWord97To2003.IsChecked == true)
+	if (rdButtonWord97To2003.IsChecked == true)
+
+	{
+
+		Uri uri = new Uri("Resources/Templates/Letter Formatting.doc", UriKind.Relative);
+
+		Stream stream = ResourceManager.Load(uri);
+
+		document = new WordDocument(stream, FormatType.Doc);
+
+		stream.Close();
+
+	} else
+
+	{
+
+		Uri uri = new Uri("Resources/Templates/Letter Formatting.docx", UriKind.Relative);
+
+		Stream stream = ResourceManager.Load(uri);
+
+		document = new WordDocument(stream, FormatType.Docx);
+
+		stream.Close();
+
+	}
+
+	foreach(Customer customer in Customers)
+
+	{
+
+		if (customer.CustomerID == comboBox1.SelectedItem.ToString())
+
+		customerDetails = new Customer(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.PostalCode, customer.Country, customer.Phone, customer.Fax); //comboBox1.Items.Add(customer.CustomerID);
+
+	}
+
+	List < Customer > Customer = new List < Customer > ();
+
+	Customer.Add(customerDetails);
+
+	document.MailMerge.Execute(Customer);
+
+
+
+	//Adds Text Watermark.
+
+	document.Watermark = new TextWatermark();
+
+	(document.Watermark as TextWatermark).Text = "Demo";
+
+	(document.Watermark as TextWatermark).Size = 144;
+
+
+
+	//Saves as .doc Word97-2003 format.
+
+	if (rdButtonWord97To2003.IsChecked == true)
+
+	document.SaveAsDoc();
+
+	//Saves as .docx Word2007 format.
+
+	else if (rdButtonWord2007.IsChecked == true)
+
+	document.SaveAsDocx(rdButtonWord2007.Name);
+
+	//Saves as .docx Word2010 format.
+
+	else if (rdButtonWord2010.IsChecked == true)
+
+	document.SaveAsDocx(rdButtonWord2010.Name);
+
+	//Saves as .docx Word2013 format.
+
+	else if (rdButtonWord2013.IsChecked == true)
+
+	document.SaveAsDocx(rdButtonWord2013.Name);
+
+}
+
+}
+
+public class Customers: IEnumerable
 
 {
 
-Uri uri = new Uri("Resources/Templates/Letter Formatting.doc", UriKind.Relative);
+	//When the foreach loop begins, this method is invoked 
 
-Stream stream = ResourceManager.Load(uri);
+	//so that the loop gets an enumerator to query.
 
-document = new WordDocument(stream, FormatType.Doc);
+	public IEnumerator GetEnumerator()
 
-stream.Close();
+	{
+
+		return new CustomerEnumerator();
+
+	}
 
 }
 
-else
+public class CustomerEnumerator: IEnumerator
 
 {
 
-Uri uri = new Uri("Resources/Templates/Letter Formatting.docx", UriKind.Relative);
+	private XmlReader reader;
 
-Stream stream = ResourceManager.Load(uri);
+	private bool prevTagWasElement = false;
 
-document = new WordDocument(stream, FormatType.Docx);
+	private string ElementName = string.Empty;
 
-stream.Close();
+	public void Reset()
 
-}
+	{
 
-foreach (Customer customer in Customers)
+		if (this.reader != null)
 
-{
+		this.reader.Close();
 
-if (customer.CustomerID == comboBox1.SelectedItem.ToString())
+		Uri uri = new Uri("Resources/Templates/Customers.xml", UriKind.Relative);
 
-customerDetails = new Customer(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.PostalCode, customer.Country, customer.Phone, customer.Fax);//comboBox1.Items.Add(customer.CustomerID);
+		Stream stream = ResourceManager.Load(uri);
 
-}
+		this.reader = XmlReader.Create(stream, new XmlReaderSettings());
 
-List<Customer> Customer = new List<Customer>();
+		//stream.Close();
 
-Customer.Add(customerDetails);
+	}
 
-document.MailMerge.Execute(Customer);
 
 
+	public bool MoveNext()
 
-//Adds Text Watermark.
+	{
 
-document.Watermark = new TextWatermark();
+		//Call Reset the first time MoveNext is called 
 
-(document.Watermark as TextWatermark).Text = "Demo";
+		//instead of in the constructor 
 
-(document.Watermark as TextWatermark).Size = 144;
+		//so that we keep the stream open only as long as needed.
 
+		if (this.reader == null)
 
+		this.Reset();
 
-//Saves as .doc Word97-2003 format.
 
-if (rdButtonWord97To2003.IsChecked == true)
 
-document.SaveAsDoc();
+		if (this.FindNextTextElement())
 
-//Saves as .docx Word2007 format.
+		return true;
 
-else if (rdButtonWord2007.IsChecked == true)
 
-document.SaveAsDocx(rdButtonWord2007.Name);
 
-//Saves as .docx Word2010 format.
+		//If there are no more text elements in the XML file then
 
-else if (rdButtonWord2010.IsChecked == true)
+		//we have read in all of the data 
 
-document.SaveAsDocx(rdButtonWord2010.Name);
+		//and the foreach loop should end.
 
-//Saves as .docx Word2013 format.
+		this.reader.Close();
 
-else if (rdButtonWord2013.IsChecked == true)
+		return false;
 
-document.SaveAsDocx(rdButtonWord2013.Name);
+	}
 
-}
 
-}
 
-public class Customers : IEnumerable
+	public object Current
 
-{
+	{
 
-//When the foreach loop begins, this method is invoked 
+		get
 
-//so that the loop gets an enumerator to query.
+		{
 
-public IEnumerator GetEnumerator()
+			//No need to call FindNextTextElement here
 
-{
+			//because it was called for us by MoveNext().
 
-return new CustomerEnumerator();
+			string CustomerID = string.Empty;
 
-}
+			string CompanyName = string.Empty;
 
-}
+			string ContactName = string.Empty;
 
-public class CustomerEnumerator : IEnumerator
+			string ContactTitle = string.Empty;
 
-{
+			string Address = string.Empty;
 
-private XmlReader reader;
+			string City = string.Empty;
 
-private bool prevTagWasElement = false;
+			string PostalCode = string.Empty;
 
-private string ElementName = string.Empty;
+			string Country = string.Empty;
 
-public void Reset()
+			string Phone = string.Empty;
 
-{
+			string Fax = string.Empty;
 
-if (this.reader != null)
+			ElementName = "CustomerID";
 
-this.reader.Close();
+			do
 
-Uri uri = new Uri("Resources/Templates/Customers.xml", UriKind.Relative);
+			{
 
-Stream stream = ResourceManager.Load(uri);
+				switch (ElementName)
 
-this.reader = XmlReader.Create(stream, new XmlReaderSettings());
+				{
 
-//stream.Close();
+					case "CustomerID":
 
-}
+						CustomerID = this.reader.Value;
 
+						break;
 
+					case "CompanyName":
 
-public bool MoveNext()
+						CompanyName = this.reader.Value;
 
-{
+						break;
 
-//Call Reset the first time MoveNext is called 
+					case "ContactName":
 
-//instead of in the constructor 
+						ContactName = this.reader.Value;
 
-//so that we keep the stream open only as long as needed.
+						break;
 
-if (this.reader == null)
+					case "ContactTitle":
 
-this.Reset();
+						ContactTitle = this.reader.Value;
 
+						break;
 
+					case "Address":
 
-if (this.FindNextTextElement())
+						Address = this.reader.Value;
 
-return true;
+						break;
 
+					case "City":
 
+						City = this.reader.Value;
 
-//If there are no more text elements in the XML file then
+						break;
 
-//we have read in all of the data 
+					case "PostalCode":
 
-//and the foreach loop should end.
+						PostalCode = this.reader.Value;
 
-this.reader.Close();
+						break;
 
-return false;
+					case "Country":
 
-}
+						Country = this.reader.Value;
 
+						break;
 
+					case "Phone":
 
-public object Current
+						Phone = this.reader.Value;
 
-{
+						break;
 
-get
+					case "Fax":
 
-{
+						Fax = this.reader.Value;
 
-//No need to call FindNextTextElement here
+						break;
 
-//because it was called for us by MoveNext().
+				}
 
-string CustomerID = string.Empty;
+			}
 
-string CompanyName = string.Empty;
+			while (this.FindNextTextElement());
 
-string ContactName = string.Empty;
+			return new Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City, PostalCode, Country, Phone, Fax);
 
-string ContactTitle = string.Empty;
+		}
 
-string Address = string.Empty;
+	}
 
-string City = string.Empty;
+	private bool FindNextTextElement()
 
-string PostalCode = string.Empty;
+	{
 
-string Country = string.Empty;
+		bool readOn = this.reader.Read();
 
-string Phone = string.Empty;
+		prevTagWasElement = false;
 
-string Fax = string.Empty;
+		ElementName = string.Empty;
 
-ElementName = "CustomerID";
+		while (readOn && this.reader.NodeType != XmlNodeType.Text)
 
-do
+		{
 
-{
+			//If the current element is empty, stop reading and return false.
 
-switch (ElementName)
+			if (prevTagWasElement && this.reader.NodeType == XmlNodeType.EndElement)
 
-{
+			readOn = false;
 
-case "CustomerID":
+			prevTagWasElement = this.reader.NodeType == XmlNodeType.Element;
 
-CustomerID = this.reader.Value;
+			ElementName = (this.reader.NodeType == XmlNodeType.Element) ? this.reader.LocalName : string.Empty;
 
-break;
+			readOn = readOn && this.reader.Read();
 
-case "CompanyName":
+			if (this.reader.LocalName == "Customer" && this.reader.NodeType == XmlNodeType.EndElement)
 
-CompanyName = this.reader.Value;
+			return false;
 
-break;
+		}
 
-case "ContactName":
+		return readOn;
 
-ContactName = this.reader.Value;
-
-break;
-
-case "ContactTitle":
-
-ContactTitle = this.reader.Value;
-
-break;
-
-case "Address":
-
-Address = this.reader.Value;
-
-break;
-
-case "City":
-
-City = this.reader.Value;
-
-break;
-
-case "PostalCode":
-
-PostalCode = this.reader.Value;
-
-break;
-
-case "Country":
-
-Country = this.reader.Value;
-
-break;
-
-case "Phone":
-
-Phone = this.reader.Value;
-
-break;
-
-case "Fax":
-
-Fax = this.reader.Value;
-
-break;
-
-}
-
-}
-
-while (this.FindNextTextElement());
-
-return new Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City, PostalCode, Country, Phone, Fax);
-
-}
-
-}
-
-private bool FindNextTextElement()
-
-{
-
-bool readOn = this.reader.Read();
-
-prevTagWasElement = false;
-
-ElementName = string.Empty;
-
-while (readOn && this.reader.NodeType != XmlNodeType.Text)
-
-{
-
-//If the current element is empty, stop reading and return false.
-
-if (prevTagWasElement && this.reader.NodeType == XmlNodeType.EndElement)
-
-readOn = false;
-
-prevTagWasElement = this.reader.NodeType == XmlNodeType.Element;
-
-ElementName = (this.reader.NodeType == XmlNodeType.Element) ? this.reader.LocalName : string.Empty;
-
-readOn = readOn && this.reader.Read();
-
-if (this.reader.LocalName == "Customer" && this.reader.NodeType == XmlNodeType.EndElement)
-
-return false;
-
-}
-
-return readOn;
-
-}
+	}
 
 }
 
@@ -1196,177 +1197,216 @@ public class Customer
 
 
 
-#region fields
+	#region fields
 
-private string m_customerID;
+	private string m_customerID;
 
-private string m_companyName;
+	private string m_companyName;
 
-private string m_contactName;
+	private string m_contactName;
 
-private string m_contactTitle;
+	private string m_contactTitle;
 
-private string m_address;
+	private string m_address;
 
-private string m_city;
+	private string m_city;
 
-private string m_postalCode;
+	private string m_postalCode;
 
-private string m_country;
+	private string m_country;
 
-private string m_phone;
+	private string m_phone;
 
-private string m_fax;
+	private string m_fax;
 
-#endregion fields
+	#endregion fields
 
 
 
-#region Properties
+	#region Properties
 
-public string CustomerID
+	public string CustomerID
 
-{
+	{
 
-get { return m_customerID; }
+		get {
+			return m_customerID;
+		}
 
-set { m_customerID = value; }
+		set {
+			m_customerID = value;
+		}
+
+	}
+
+	public string CompanyName
+
+	{
+
+		get {
+			return m_companyName;
+		}
+
+		set {
+			m_companyName = value;
+		}
+
+	}
+
+	public string ContactName
+
+	{
+
+		get {
+			return m_contactName;
+		}
+
+		set {
+			m_contactName = value;
+		}
+
+	}
+
+	public string ContactTitle
+
+	{
+
+		get {
+			return m_contactTitle;
+		}
+
+		set {
+			m_contactTitle = value;
+		}
+
+	}
+
+	public string Address
+
+	{
+
+		get {
+			return m_address;
+		}
+
+		set {
+			m_address = value;
+		}
+
+	}
+
+	public string City
+
+	{
+
+		get {
+			return m_city;
+		}
+
+		set {
+			m_city = value;
+		}
+
+	}
+
+	public string PostalCode
+
+	{
+
+		get {
+			return m_postalCode;
+		}
+
+		set {
+			m_postalCode = value;
+		}
+
+	}
+
+	public string Country
+
+	{
+
+		get {
+			return m_country;
+		}
+
+		set {
+			m_country = value;
+		}
+
+	}
+
+	public string Phone
+
+	{
+
+		get {
+			return m_phone;
+		}
+
+		set {
+			m_phone = value;
+		}
+
+	}
+
+	public string Fax
+
+	{
+
+		get {
+			return m_fax;
+		}
+
+		set {
+			m_fax = value;
+		}
+
+	}
+
+	#endregion Properties
+
+
+
+	#region Constructors
+
+	public Customer(string CustomerID, string CompanyName, string ContactName,
+
+	string ContactTitle, string Address, string City,
+
+	string PostalCode, string Country, string Phone, string Fax)
+
+	{
+
+		this.CustomerID = CustomerID;
+
+		this.CompanyName = CompanyName;
+
+		this.ContactName = ContactName;
+
+		this.ContactTitle = ContactTitle;
+
+		this.Address = Address;
+
+		this.City = City;
+
+		this.PostalCode = PostalCode;
+
+		this.Country = Country;
+
+		this.Phone = Phone;
+
+		this.Fax = Fax;
+
+	}
 
 }
 
-public string CompanyName
-
-{
-
-get { return m_companyName; }
-
-set { m_companyName = value; }
-
-}
-
-public string ContactName
-
-{
-
-get { return m_contactName; }
-
-set { m_contactName = value; }
-
-}
-
-public string ContactTitle
-
-{
-
-get { return m_contactTitle; }
-
-set { m_contactTitle = value; }
-
-}
-
-public string Address
-
-{
-
-get { return m_address; }
-
-set { m_address = value; }
-
-}
-
-public string City
-
-{
-
-get { return m_city; }
-
-set { m_city = value; }
-
-}
-
-public string PostalCode
-
-{
-
-get { return m_postalCode; }
-
-set { m_postalCode = value; }
-
-}
-
-public string Country
-
-{
-
-get { return m_country; }
-
-set { m_country = value; }
-
-}
-
-public string Phone
-
-{
-
-get { return m_phone; }
-
-set { m_phone = value; }
-
-}
-
-public string Fax
-
-{
-
-get { return m_fax; }
-
-set { m_fax = value; }
-
-}
-
-#endregion Properties
-
-
-
-#region Constructors
-
-public Customer(string CustomerID, string CompanyName, string ContactName,
-
-string ContactTitle, string Address, string City,
-
-string PostalCode, string Country, string Phone, string Fax)
-
-{
-
-this.CustomerID = CustomerID;
-
-this.CompanyName = CompanyName;
-
-this.ContactName = ContactName;
-
-this.ContactTitle = ContactTitle;
-
-this.Address = Address;
-
-this.City = City;
-
-this.PostalCode = PostalCode;
-
-this.Country = Country;
-
-this.Phone = Phone;
-
-this.Fax = Fax;
-
-}
-
-}
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Private customerXml As XDocument
 
@@ -1379,215 +1419,215 @@ Private customerDetails As Customer
 
 
 Private Sub InitializeCustomer()
-
-Customers.Clear()
-
-Dim uri As New Uri("Resources/Templates/Customers.xml", UriKind.Relative)
-
-Dim stream As Stream = ResourceManager.Load(uri)
-
-customerXml = XDocument.Load(stream)
-
-element = customerXml.Descendants("Customers").First()
-
-Dim pc = From p In customerXml.Descendants("Customer")
-
-Dim CustomerID As String = String.Empty
-
-Dim CompanyName As String = String.Empty
-
-Dim ContactName As String = String.Empty
-
-Dim ContactTitle As String = String.Empty
-
-Dim Address As String = String.Empty
-
-Dim City As String = String.Empty
-
-Dim PostalCode As String = String.Empty
-
-Dim Country As String = String.Empty
-
-Dim Phone As String = String.Empty
-
-Dim Fax As String = String.Empty
-
-Dim Region As String = String.Empty
-
-For Each dt As var In pc
-
-For Each el As XElement In dt.Descendants()
-
-Dim value As String = dt.Element(el.Name).Value
-
-Dim elementName As String = el.Name.ToString()
-
-Select Case elementName
-
-Case "CustomerID"
-
-CustomerID = value
-
-Exit Select
-
-Case "CompanyName"
-
-CompanyName = value
-
-Exit Select
-
-Case "ContactName"
-
-ContactName = value
-
-Exit Select
-
-Case "ContactTitle"
-
-ContactTitle = value
-
-Exit Select
-
-Case "Address"
-
-Address = value
-
-Exit Select
-
-Case "City"
-
-City = value
-
-Exit Select
-
-Case "PostalCode"
-
-PostalCode = value
-
-Exit Select
-
-Case "Country"
-
-Country = value
-
-Exit Select
-
-Case "Phone"
-
-Phone = value
-
-Exit Select
-
-Case "Fax"
-
-Fax = value
-
-Exit Select
-
-End Select
-
-Next
-
-customerDetails = New Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City,PostalCode, Country, Phone, Fax)
-
-Customers.Add(customerDetails)
-
-Next
-
-comboBox1.Items.Clear()
-
-For Each customer As Customer In Customers
-
-comboBox1.Items.Add(customer.CustomerID)
-
-Next
-
-comboBox1.SelectedIndex = 1
-
+	
+	Customers.Clear()
+	
+	Dim uri As New Uri("Resources/Templates/Customers.xml", UriKind.Relative)
+	
+	Dim stream As Stream = ResourceManager.Load(uri)
+	
+	customerXml = XDocument.Load(stream)
+	
+	element = customerXml.Descendants("Customers").First()
+	
+	Dim pc = From p In customerXml.Descendants("Customer")
+	
+	Dim CustomerID As String = String.Empty
+	
+	Dim CompanyName As String = String.Empty
+	
+	Dim ContactName As String = String.Empty
+	
+	Dim ContactTitle As String = String.Empty
+	
+	Dim Address As String = String.Empty
+	
+	Dim City As String = String.Empty
+	
+	Dim PostalCode As String = String.Empty
+	
+	Dim Country As String = String.Empty
+	
+	Dim Phone As String = String.Empty
+	
+	Dim Fax As String = String.Empty
+	
+	Dim Region As String = String.Empty
+	
+	For Each dt As var In pc
+		
+		For Each el As XElement In dt.Descendants()
+			
+			Dim value As String = dt.Element(el.Name).Value
+			
+			Dim elementName As String = el.Name.ToString()
+			
+			Select Case elementName
+				
+			Case "CustomerID"
+				
+				CustomerID = value
+				
+				Exit Select
+				
+			Case "CompanyName"
+				
+				CompanyName = value
+				
+				Exit Select
+				
+			Case "ContactName"
+				
+				ContactName = value
+				
+				Exit Select
+				
+			Case "ContactTitle"
+				
+				ContactTitle = value
+				
+				Exit Select
+				
+			Case "Address"
+				
+				Address = value
+				
+				Exit Select
+				
+			Case "City"
+				
+				City = value
+				
+				Exit Select
+				
+			Case "PostalCode"
+				
+				PostalCode = value
+				
+				Exit Select
+				
+			Case "Country"
+				
+				Country = value
+				
+				Exit Select
+				
+			Case "Phone"
+				
+				Phone = value
+				
+				Exit Select
+				
+			Case "Fax"
+				
+				Fax = value
+				
+				Exit Select
+				
+			End Select
+			
+		Next
+		
+		customerDetails = New Customer(CustomerID, CompanyName, ContactName, ContactTitle, Address, City,PostalCode, Country, Phone, Fax)
+		
+		Customers.Add(customerDetails)
+		
+	Next
+	
+	comboBox1.Items.Clear()
+	
+	For Each customer As Customer In Customers
+		
+		comboBox1.Items.Add(customer.CustomerID)
+		
+	Next
+	
+	comboBox1.SelectedIndex = 1
+	
 End Sub
 
 
 
 Private Sub buttonSample_Click(sender As Object, e As RoutedEventArgs)
-
-Dim document As WordDocument
-
-If rdButtonWord97To2003.IsChecked = True Then
-
-Dim uri As New Uri("Resources/Templates/Letter Formatting.doc", UriKind.Relative)
-
-Dim stream As Stream = ResourceManager.Load(uri)
-
-document = New WordDocument(stream, FormatType.Doc)
-
-stream.Close()
-
-Else
-
-Dim uri As New Uri("Resources/Templates/Letter Formatting.docx", UriKind.Relative)
-
-Dim stream As Stream = ResourceManager.Load(uri)
-
-document = New WordDocument(stream, FormatType.Docx)
-
-stream.Close()
-
-End If
-
-For Each customer_1 As Customer In Customers
-
-If customer_1.CustomerID = comboBox1.SelectedItem.ToString() Then
-
-customerDetails = New Customer(customer_1.CustomerID, customer_1.CompanyName, customer_1.ContactName, customer_1.ContactTitle, customer_1.Address, customer_1.City,   customer_1.PostalCode, customer_1.Country, customer_1.Phone, customer_1.Fax)
-
+	
+	Dim document As WordDocument
+	
+	If rdButtonWord97To2003.IsChecked = True Then
+		
+		Dim uri As New Uri("Resources/Templates/Letter Formatting.doc", UriKind.Relative)
+		
+		Dim stream As Stream = ResourceManager.Load(uri)
+		
+		document = New WordDocument(stream, FormatType.Doc)
+		
+		stream.Close()
+		
+	Else
+		
+		Dim uri As New Uri("Resources/Templates/Letter Formatting.docx", UriKind.Relative)
+		
+		Dim stream As Stream = ResourceManager.Load(uri)
+		
+		document = New WordDocument(stream, FormatType.Docx)
+		
+		stream.Close()
+		
+	End If
+	
+	For Each customer_1 As Customer In Customers
+		
+		If customer_1.CustomerID = comboBox1.SelectedItem.ToString() Then
+			
+			customerDetails = New Customer(customer_1.CustomerID, customer_1.CompanyName, customer_1.ContactName, customer_1.ContactTitle, customer_1.Address, customer_1.City,   customer_1.PostalCode, customer_1.Country, customer_1.Phone, customer_1.Fax)
+			
 'comboBox1.Items.Add(customer.CustomerID);
-
-End If
-
-Next
-
-Dim Customer_2 As New List(Of Customer)()
-
-Customer_2.Add(customerDetails)
-
-document.MailMerge.Execute(Customer_2)
-
-
-
+			
+		End If
+		
+	Next
+	
+	Dim Customer_2 As New List(Of Customer)()
+	
+	Customer_2.Add(customerDetails)
+	
+	document.MailMerge.Execute(Customer_2)
+	
+	
+	
 'Adds Text Watermark.
-
-document.Watermark = New TextWatermark()
-
-TryCast(document.Watermark, TextWatermark).Text = "Demo"
-
-TryCast(document.Watermark, TextWatermark).Size = 144
-
+	
+	document.Watermark = New TextWatermark()
+	
+	TryCast(document.Watermark, TextWatermark).Text = "Demo"
+	
+	TryCast(document.Watermark, TextWatermark).Size = 144
+	
 'Saves as .doc Word97-2003 format.
-
-If rdButtonWord97To2003.IsChecked = True Then
-
-document.SaveAsDoc()
-
+	
+	If rdButtonWord97To2003.IsChecked = True Then
+		
+		document.SaveAsDoc()
+		
 'Saves as .docx Word2007 format.
-
-ElseIf rdButtonWord2007.IsChecked = True Then
-
-document.SaveAsDocx(rdButtonWord2007.Name)
-
+		
+	ElseIf rdButtonWord2007.IsChecked = True Then
+		
+		document.SaveAsDocx(rdButtonWord2007.Name)
+		
 'Saves as .docx Word2010 format.
-
-ElseIf rdButtonWord2010.IsChecked = True Then
-
-document.SaveAsDocx(rdButtonWord2010.Name)
-
+		
+	ElseIf rdButtonWord2010.IsChecked = True Then
+		
+		document.SaveAsDocx(rdButtonWord2010.Name)
+		
 'Saves as .docx Word2013 format.
-
-ElseIf rdButtonWord2013.IsChecked = True Then
-
-document.SaveAsDocx(rdButtonWord2013.Name)
-
-End If
-
+		
+	ElseIf rdButtonWord2013.IsChecked = True Then
+		
+		document.SaveAsDocx(rdButtonWord2013.Name)
+		
+	End If
+	
 End Sub
 
 
@@ -1601,9 +1641,9 @@ Implements IEnumerable
 'so that the loop gets an enumerator to query.
 
 Public Function GetEnumerator() As IEnumerator
-
-Return New CustomerEnumerator()
-
+	
+	Return New CustomerEnumerator()
+	
 End Function
 
 End Class
@@ -1623,9 +1663,9 @@ Private ElementName As String = String.Empty
 Public Sub Reset()
 
 If Me.reader IsNot Nothing Then
-
-Me.reader.Close()
-
+	
+	Me.reader.Close()
+	
 End If
 
 Dim uri As New Uri("Resources/Templates/Customers.xml", UriKind.Relative)
@@ -1649,17 +1689,17 @@ Public Function MoveNext() As Boolean
 'so that we keep the stream open only as long as needed.
 
 If Me.reader Is Nothing Then
-
-Me.Reset()
-
+	
+	Me.Reset()
+	
 End If
 
 
 
 If Me.FindNextTextElement() Then
-
-Return True
-
+	
+	Return True
+	
 End If
 
 
@@ -1711,67 +1751,67 @@ ElementName = "CustomerID"
 Do
 
 Select Case ElementName
-
+	
 Case "CustomerID"
-
-CustomerID = Me.reader.Value
-
-Exit Select
-
+	
+	CustomerID = Me.reader.Value
+	
+	Exit Select
+	
 Case "CompanyName"
-
-CompanyName = Me.reader.Value
-
-Exit Select
-
+	
+	CompanyName = Me.reader.Value
+	
+	Exit Select
+	
 Case "ContactName"
-
-ContactName = Me.reader.Value
-
-Exit Select
-
+	
+	ContactName = Me.reader.Value
+	
+	Exit Select
+	
 Case "ContactTitle"
-
-ContactTitle = Me.reader.Value
-
-Exit Select
-
+	
+	ContactTitle = Me.reader.Value
+	
+	Exit Select
+	
 Case "Address"
-
-Address = Me.reader.Value
-
-Exit Select
-
+	
+	Address = Me.reader.Value
+	
+	Exit Select
+	
 Case "City"
-
-City = Me.reader.Value
-
-Exit Select
-
+	
+	City = Me.reader.Value
+	
+	Exit Select
+	
 Case "PostalCode"
-
-PostalCode = Me.reader.Value
-
-Exit Select
-
+	
+	PostalCode = Me.reader.Value
+	
+	Exit Select
+	
 Case "Country"
-
-Country = Me.reader.Value
-
-Exit Select
-
+	
+	Country = Me.reader.Value
+	
+	Exit Select
+	
 Case "Phone"
-
-Phone = Me.reader.Value
-
-Exit Select
-
+	
+	Phone = Me.reader.Value
+	
+	Exit Select
+	
 Case "Fax"
-
-Fax = Me.reader.Value
-
-Exit Select
-
+	
+	Fax = Me.reader.Value
+	
+	Exit Select
+	
 End Select
 
 Loop While Me.FindNextTextElement()
@@ -1797,9 +1837,9 @@ While readOn AndAlso Me.reader.NodeType <> XmlNodeType.Text
 'If the current element is empty, stop reading and return false.
 
 If prevTagWasElement AndAlso Me.reader.NodeType = XmlNodeType.EndElement Then
-
-readOn = False
-
+	
+	readOn = False
+	
 End If
 
 prevTagWasElement = Me.reader.NodeType = XmlNodeType.Element
@@ -1809,9 +1849,9 @@ ElementName = If((Me.reader.NodeType = XmlNodeType.Element), Me.reader.LocalName
 readOn = readOn AndAlso Me.reader.Read()
 
 If Me.reader.LocalName = "Customer" AndAlso Me.reader.NodeType = XmlNodeType.EndElement Then
-
-Return False
-
+	
+	Return False
+	
 End If
 
 End While
@@ -2051,8 +2091,11 @@ End Sub
 
 End Class
 
-{% endhighlight %}
 
+
+
+{% endhighlight %}
+{% endtabs %} 
 
 ### Event Support for Mail Merge
 
@@ -2064,33 +2107,32 @@ The MergeField event occurs during mail merge when a simple mail merge field is 
 
 {% highlight C# %}
 
-
-
 public void MailMerge()
 
 {
 
-//Loads the template.
+	//Loads the template.
 
-WordDocument document = new WordDocument( @"Template.doc" );
-
-
-
-//Uses Merge events to do conditional formatting during runtime.
-
-document.MailMerge.MergeField += new MergeFieldEventHandler(AlternateRows_MergeField);
+	WordDocument document = new WordDocument(@
+	"Template.doc");
 
 
 
-//Executes Mail Merge with groups.
+	//Uses Merge events to do conditional formatting during runtime.
 
-document.MailMerge.Execute (GetDataTable());
+	document.MailMerge.MergeField += new MergeFieldEventHandler(AlternateRows_MergeField);
 
 
 
-//Saves a document.
+	//Executes Mail Merge with groups.
 
-document.Save("sample.doc");
+	document.MailMerge.Execute(GetDataTable());
+
+
+
+	//Saves a document.
+
+	document.Save("sample.doc");
 
 }
 
@@ -2114,15 +2156,15 @@ private void AlternateRows_MergeField(object sender, MergeFieldEventArgs args)
 
 {
 
-//Conditionally formats data during Merge.
+	//Conditionally formats data during Merge.
 
-if( args.RowIndex % 2 == 0 )
+	if (args.RowIndex % 2 == 0)
 
-{
+	{
 
-args.CharacterFormat.TextColor = Color.FromArgb( 255 , 102 ,0 );
+		args.CharacterFormat.TextColor = Color.FromArgb(255, 102, 0);
 
-}
+	}
 
 }
 
@@ -2138,52 +2180,51 @@ private static DataTable GetDataTable()
 
 {
 
-DataTable dataTable = new DataTable("Employee");
+	DataTable dataTable = new DataTable("Employee");
 
-dataTable.Columns.Add("EmpName");
+	dataTable.Columns.Add("EmpName");
 
-dataTable.Columns.Add("EmpNumber");
+	dataTable.Columns.Add("EmpNumber");
 
-for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 20; i++)
 
-{
+	{
 
-DataRow datarow = dataTable.NewRow();
+		DataRow datarow = dataTable.NewRow();
 
-dataTable.Rows.Add(datarow);
+		dataTable.Rows.Add(datarow);
 
-datarow[0] = "Emp" + i.ToString();
+		datarow[0] = "Emp" + i.ToString();
 
-datarow[1] = "Emp" + i.ToString();
+		datarow[1] = "Emp" + i.ToString();
+
+	}
+
+	return dataTable;
 
 }
 
-return dataTable;
-
-}
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 Public Sub MailMerge()
-
+	
 'Loads the template.
-
-Dim document As WordDocument = New WordDocument("Template.doc")
-
+	
+	Dim document As WordDocument = New WordDocument("Template.doc")
+	
 'Uses Merge events to do conditional formatting during runtime.
-
-document.MailMerge.MergeField, AddressOf AlternateRows_MergeField
-
-document.MailMerge.Execute (GetDataTable());
-
+	
+	document.MailMerge.MergeField, AddressOf AlternateRows_MergeField
+	
+	document.MailMerge.Execute (GetDataTable());
+	
 'Saves a document.
-
-document.Save("sample.doc")
-
+	
+	document.Save("sample.doc")
+	
 End Sub
 
 '<summary>
@@ -2197,15 +2238,15 @@ End Sub
 '</summary>     
 
 Private Sub AlternateRows_MergeField(ByVal sender As Object, ByVal args As MergeFieldEventArgs)
-
+	
 'Conditionally format data during Merge.
-
-If args.RowIndex Mod 2 = 0 Then
-
-args.CharacterFormat.TextColor = Color.FromArgb(255, 102, 0)
-
-End If
-
+	
+	If args.RowIndex Mod 2 = 0 Then
+		
+		args.CharacterFormat.TextColor = Color.FromArgb(255, 102, 0)
+		
+	End If
+	
 End Sub
 
 '<summary>
@@ -2223,20 +2264,23 @@ dataTable.Columns.Add("EmpName")
 dataTable.Columns.Add("EmpNumber")
 
 For i As Integer = 0 To 19
-
-Dim datarow As DataRow = dataTable.NewRow()
-
-dataTable.Rows.Add(datarow)
-
-datarow(0) = "Emp" and i.ToString()
-
-datarow(1) = "Emp" and i.ToString()
-
-Next i
-
-Return dataTable
-
+	
+	Dim datarow As DataRow = dataTable.NewRow()
+	
+	dataTable.Rows.Add(datarow)
+	
+	datarow(0) = "Emp" and i.ToString()
+	
+	datarow(1) = "Emp" and i.ToString()
+	
+	Next i
+	
+	Return dataTable
+	
 End Function
+
+
+
 
 {% endhighlight %}
 
@@ -2248,6 +2292,8 @@ The MailMerge.MergeImageField occurs during mail merge when an image mail merge 
 
 You can use the MergeImageFieldEventHandler delegate representing the method to handle the MergeImageField event. The event handler receives an argument of type MergeImageFieldEventArgs.
 
+{% tabs %}
+
 {% highlight C# %}
 
 
@@ -2256,27 +2302,27 @@ public void MailMerge()
 
 {
 
-//Loads the template.
+	//Loads the template.
 
-WordDocument document = new WordDocument( @"Template.doc" );
-
-
-
-//Uses Merge events handler for image fields.
-
-document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_ProductImage);
+	WordDocument document = new WordDocument( @"Template.doc" );
 
 
 
-//Executes Mail Merge with groups.
+	//Uses Merge events handler for image fields.
 
-document.MailMerge.Execute (GetDataTable());
+	document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_ProductImage);
 
 
 
-//Saves the document.
+	//Executes Mail Merge with groups.
 
-document.Save("sample.doc");
+	document.MailMerge.Execute (GetDataTable());
+
+
+
+	//Saves the document.
+
+	document.Save("sample.doc");
 
 }
 
@@ -2292,17 +2338,17 @@ private void MergeField_ProductImage(object sender, MergeImageFieldEventArgs arg
 
 {	           
 
-//Gets the image from disk during Merge.
+	//Gets the image from disk during Merge.
 
-if (args.FieldName == "ProductImage")
+	if (args.FieldName == "ProductImage")
 
-{
+	{
 
-string ProductFileName = args.FieldValue.ToString();
+		string ProductFileName = args.FieldValue.ToString();
 
-args.Image = Image.FromFile (ProductFileName ) );
+		args.Image = Image.FromFile (ProductFileName ) );
 
-}
+	}
 
 }
 
@@ -2316,50 +2362,49 @@ private static DataTable GetDataTable()
 
 {
 
-DataTable dataTable = new DataTable("Employee");
+	DataTable dataTable = new DataTable("Employee");
 
-dataTable.Columns.Add("EmpName");
+	dataTable.Columns.Add("EmpName");
 
-dataTable.Columns.Add("EmpNumber");
+	dataTable.Columns.Add("EmpNumber");
 
-for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 20; i++)
 
-{
+	{
 
-DataRow datarow = dataTable.NewRow();
+		DataRow datarow = dataTable.NewRow();
 
-dataTable.Rows.Add(datarow);
+		dataTable.Rows.Add(datarow);
 
-datarow[0] = "Emp" + i.ToString();
+		datarow[0] = "Emp" + i.ToString();
 
-datarow[1] = "Emp" + i.ToString();
+		datarow[1] = "Emp" + i.ToString();
 
-}
+	}
 
-return dataTable;
+	return dataTable;
 
 }
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
+{% highlight VB %}
 
 
 Public Sub MailMerge()
-
+	
 'Loads the template.
-
-Dim document As WordDocument = New WordDocument("Template.doc")
-
+	
+	Dim document As WordDocument = New WordDocument("Template.doc")
+	
 'Executes Mail Merge with groups.
-
+	
 'Uses Merge events handler for image fields. document.MailMerge.MergeImageField, AddressOf MergeField_ProductImage document.MailMerge.Execute (GetDataTable());
-
+	
 'Saves a document.
-
-document.Save("sample.doc")
-
+	
+	document.Save("sample.doc")
+	
 End Sub
 
 '<summary>
@@ -2371,17 +2416,17 @@ End Sub
 '</summary>
 
 Private Sub MergeField_ProductImage(ByVal sender As Object, ByVal args As MergeImageFieldEventArgs)
-
+	
 'Gets the image from disk during Merge.
-
-If args.FieldName = "ProductImage" Then
-
-Dim ProductFileName As String = args.FieldValue.ToString()
-
-args.Image = Image.FromFile (ProductFileName))
-
-End If
-
+	
+	If args.FieldName = "ProductImage" Then
+		
+		Dim ProductFileName As String = args.FieldValue.ToString()
+		
+		args.Image = Image.FromFile (ProductFileName))
+		
+	End If
+	
 End Sub
 
 '<summary>
@@ -2399,23 +2444,24 @@ dataTable.Columns.Add("EmpName")
 dataTable.Columns.Add("EmpNumber")
 
 For i As Integer = 0 To 19
-
-Dim datarow As DataRow = dataTable.NewRow()
-
-dataTable.Rows.Add(datarow)
-
-datarow(0) = "Emp" and i.ToString()
-
-datarow(1) = "Emp" and i.ToString()
-
-Next i
-
-Return dataTable
-
+	
+	Dim datarow As DataRow = dataTable.NewRow()
+	
+	dataTable.Rows.Add(datarow)
+	
+	datarow(0) = "Emp" and i.ToString()
+	
+	datarow(1) = "Emp" and i.ToString()
+	
+	Next i
+	
+	Return dataTable
+	
 End Function
 
-{% endhighlight %}
 
+{% endhighlight %}
+{% endtabs %} 
 
 ## Additional Mail Merge Features
 
@@ -2426,6 +2472,7 @@ End Function
 The MailMerge class allows automatic mapping between the names of fields in the data source and names of mail merge fields in a document. To achieve this, you can use the MappedDataFields property that returns a MappedDataFields instance. MappedDataFields is a collection of string keys into string values. The keys are the names of mail merge fields in a document, and the values are the names of fields in your data source.
 
 The following code example illustrates how to add mapping when a merge field in a document and a data field in a data source have different names.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2435,14 +2482,14 @@ doc.MailMerge.MappedDataFields.Add("FieldName_InDocument", "FieldName_InDataSour
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight VB %}
 
 
 
 doc.MailMerge.MappedDataFields.Add("FieldName_InDocument", "FieldName_InDataSource")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Obtaining Merge Field Names
 
@@ -2450,6 +2497,7 @@ doc.MailMerge.MappedDataFields.Add("FieldName_InDocument", "FieldName_InDataSour
 You can get the collection of the merge field names available in the document by using the GetFieldNames method. This returns an array of string that contains the names. 
 
 The following code example illustrates how to get the names of all the merge fields in a document.
+{% tabs %}
 
 {% highlight C# %} 
 
@@ -2459,34 +2507,36 @@ string[] fieldNames = doc.MailMerge.GetMergeFieldNames();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
 Dim fieldNames As String() = doc.MailMerge.GetMergeFieldNames()
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Obtaining Merge Field Group Names
 
 
 You can get the collection of the Merge Field Group names available in a document by using the GetMergeGroupNames method. This returns an array of string that contains the names. 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
  string[] groupNames =  doc.MailMerge.GetMergeGroupNames() 
 {% endhighlight %} 
 
-{% highlight vbnet %}
+{% highlight VB %}
 Dim filednames As String() = doc.MailMerge. GetMergeGroupNames()
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ## Obtaining Merge Fields for a Specific Group
 
 
 You can get the collection of the Merge Fields for a specific group in a document by using the GetMergeFieldNames(String groupName) method. This returns an array of string that contains the field names.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2495,17 +2545,18 @@ string[] filednames = doc.MailMerge.GetMergeFieldNames(groupName);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
 Dim filednames As String() = doc.MailMerge.GetMergeFieldNames(groupName)
 
 {% endhighlight %}
-
+{% endtabs %} 
 ## Removing Empty Paragraphs
 
 To remove paragraphs that contain empty mail merge fields from the document, set the doc.MailMerge.RemoveEmptyParagraphs to _true_. The following code example illustrates how to remove paragraphs that contain empty mail merge fields.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2515,6 +2566,9 @@ doc.MailMerge.RemoveEmptyParagraphs = true;
 
 
 
+{% endhighlight %}
+
+{% highlight VB %}
 
 
 
@@ -2522,10 +2576,11 @@ doc.MailMerge.RemoveEmptyParagraphs = true;
 doc.MailMerge.RemoveEmptyParagraphs = True
 
 {% endhighlight %}
-
+{% endtabs %} 
 ## Removing Empty Groups
 
 To remove empty groups from a document during mail merge, set the RemoveEmptyGroup to _true_. The default value of RemoveEmptyGroup is set to _false_. The following code example illustrates how to remove empty groups from a document.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2535,20 +2590,21 @@ document.MailMerge.RemoveEmptyGroup = true;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
 document.MailMerge.RemoveEmptyGroup = True
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Clear Fields
 
 
 To remove empty mail merge fields from a document, set the MailMerge.ClearField property to _true_.
 
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2565,7 +2621,7 @@ doc.MailMerge.Execute(fieldname, fieldvalues);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 
 
@@ -2580,7 +2636,7 @@ doc.MailMerge.ClearFields = False
 doc.MailMerge.Execute(fieldname, fieldvalues)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Mail Merge with ExpandoObjects
 
@@ -2589,26 +2645,34 @@ doc.MailMerge.Execute(fieldname, fieldvalues)
 
 The following code example explains how to use ExpandoObject with Mail Merge.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 WordDocument document = new WordDocument("Template.docx");
+
 //Creating DataSet from the DataTables' 
 (Customer and Order)MailMergeDataSet dataSet = new MailMergeDataSet();
+
 //Create mail merge data table in order to perform mail merging
 MailMergeDataTable dataTable = new MailMergeDataTable("Customers", GetCustomers());
 dataSet.Add(dataTable);
 dataTable = new MailMergeDataTable("Orders", GetOrders());dataSet.Add(dataTable);
 List<DictionaryEntry> commands = new List<DictionaryEntry>();
-// DictionaryEntry contain "Source table" (KEY) and "Command" 
-VALUE)DictionaryEntry entry = new DictionaryEntry("Customers", string.Empty);commands.Add(entry);
-// To retrive customer detailsentry = new DictionaryEntry("Orders", "CustomerID = %Customer.CustomerID%");
+
+// DictionaryEntry contain "Source table" (KEY) and "Command" VALUE)
+DictionaryEntry entry = new DictionaryEntry("Customers", string.Empty);commands.Add(entry);
+
+// To retrive customer details
+entry = new DictionaryEntry("Orders", "CustomerID = %Customer.CustomerID%");
 commands.Add(entry);//Performing the mail merge operation with the dynamic collectiondocument.MailMerge.ExecuteNestedGroup(dataSet, commands);
-//Saving the documentdocument.Save("Sample.docx", FormatType.Docx);
+
+//Saving the documentdocument.
+Save("Sample.docx", FormatType.Docx);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim document As New WordDocument("Template.docx")
 'Creating DataSet from the DataTables' 
@@ -2623,10 +2687,11 @@ Dim entry As New DictionaryEntry("Customers", String.Empty)commands.Add(entry)
 'Saving the documentdocument.Save("Sample.docx", FormatType.Docx)
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 The following code example illustrate how to create the ExpandoObjects for the Customers table that is used in the above code examples and similarly you can create the ExpandoObjects for Orders table.
 
+{% tabs %}
 
 {% highlight C# %}
 
@@ -2675,7 +2740,7 @@ private dynamic GetDynamicCustomer(Customer customer)
 {% endhighlight %}
 
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Gets the List of ExpandoObjects of the Customers
 
@@ -2719,5 +2784,5 @@ End Function
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 

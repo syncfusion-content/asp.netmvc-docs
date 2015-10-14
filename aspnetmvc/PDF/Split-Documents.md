@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Split-Documents
+title: Split Documents | PDF | ASP.NET MVC | Syncfusion
 description: split documents
 platform: ejmvc
-control: PDF
+control: pdf
 documentation: ug
 ---
 
@@ -15,9 +15,9 @@ The pattern should be in .NET format (for example: "myfile {0:000}.pdf") or just
 
 
 
-{% highlight c# %}
+{% tabs %}
 
-
+{% highlight C# %}
 
 //Loads document.
 
@@ -33,9 +33,7 @@ loadedDocument.Split(destFilePattern);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads document.
 
@@ -50,7 +48,7 @@ Const destFilePattern As String = "Output" + "split{0:00}.pdf"
 loadedDocument.Split(destFilePattern)
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 N> Splitting algorithm uses Import Page methods, so the result would be similar to it.
 
@@ -59,9 +57,9 @@ Essential PDF also allows you to split pages as per your wish. The following cod
 
 
 
-{% highlight c# %}
-
-
+{% tabs %}
+ 
+{% highlight C# %}
 
 //Loads an existing document, which needs to be split.
 
@@ -103,9 +101,7 @@ document2.Close(true);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
-
-
+{% highlight VB %}
 
 'Loads an existing document, which needs to be split.
 
@@ -146,4 +142,4 @@ document1.Close(True)
 document2.Close(True)
 
 {% endhighlight %}
-
+{% endtabs %} 

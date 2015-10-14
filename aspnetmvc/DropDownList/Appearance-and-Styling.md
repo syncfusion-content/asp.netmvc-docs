@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | DropDownList | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: DropDownList
@@ -26,37 +26,37 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 1. Add the below code snippet to render the drop down list with customized popup height and width.
 
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add a DropDownList element using the helper class in CSHTML
+	// Add a DropDownList element using the helper class in CSHTML
 
 
 
-		@Html.EJ().DropDownList("dropdownlist").TargetID("list").PopupWidth("250px").PopupHeight("100px")
+	@Html.EJ().DropDownList("dropdownlist").TargetID("list").PopupWidth("250px").PopupHeight("100px")
 
-				<div id="list">
+			<div id="list">
 
-					<ul>
+				<ul>
 
-						<li>Art</li>
+					<li>Art</li>
 
-						<li>Architecture</li>
+					<li>Architecture</li>
 
-						<li>Biography</li>
+					<li>Biography</li>
 
-						<li>Comics</li>
+					<li>Comics</li>
 
-						<li>Sports</li>
+					<li>Sports</li>
 
-						<li>Science</li>
+					<li>Science</li>
 
-					</ul>
+				</ul>
 
-				</div>
+			</div>
 
 
    ~~~
-   {:.prettyprint }
+   
    
 2. Output of the above steps
 
@@ -64,8 +64,9 @@ The following steps explains you the configuration of PopupHeight & PopupWidth p
 
    ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-   _Figure 19: Dropdown with popup customization property_  
-
+   Dropdown with popup customization property_ 
+   {:.caption}
+   
 ## Adjusting Dropdown size
 
 ### Width
@@ -82,37 +83,37 @@ The following steps explains you the configuration of Height & Width properties 
 
 1. Add the below code snippet to render the dropdown list with customized height and width.
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add a DropDownList element using the helper class in CSHTML
+	// Add a DropDownList element using the helper class in CSHTML
 
 
 
-		@Html.EJ().DropDownList("dropdownlist").TargetID("list").Height("50px").Width("250px")
+	@Html.EJ().DropDownList("dropdownlist").TargetID("list").Height("50px").Width("250px")
 
-				<div id="list">
+			<div id="list">
 
-					<ul>
+				<ul>
 
-						<li>Art</li>
+					<li>Art</li>
 
-						<li>Architecture</li>
+					<li>Architecture</li>
 
-						<li>Biography</li>
+					<li>Biography</li>
 
-						<li>Comics</li>
+					<li>Comics</li>
 
-						<li>Sports</li>
+					<li>Sports</li>
 
-						<li>Science</li>
+					<li>Science</li>
 
-					</ul>
+				</ul>
 
-				</div>
+			</div>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 Output of the above steps
 
@@ -120,7 +121,8 @@ Output of the above steps
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
-_Figure 20: Dropdown with dropdown textbox customization property_  
+Dropdown with dropdown textbox customization property
+{:.caption}  
 
 ### Water Mark 
 
@@ -133,7 +135,7 @@ The following steps explains the configuration of WaterMarkText properties in Dr
 1. Add the below code snippet with water mark text
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -141,25 +143,25 @@ The following steps explains the configuration of WaterMarkText properties in Dr
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").WatermarkText("Select")
 
-        <div id="list">
+<div id="list">
 
-            <ul>
+	<ul>
 
-                <li>Art</li>
+		<li>Art</li>
 
-                <li>Architecture</li>
+		<li>Architecture</li>
 
-                <li>Biography</li>
+		<li>Biography</li>
 
-                <li>Comics</li>
+		<li>Comics</li>
 
-                <li>Sports</li>
+		<li>Sports</li>
 
-                <li>Science</li>
+		<li>Science</li>
 
-            </ul>
+	</ul>
 
-        </div>
+</div>
 
 
 {% endhighlight %}
@@ -170,7 +172,8 @@ Output of the above steps
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-_Figure 21: Dropdown with WaterMark property_  
+Dropdown with WaterMark property
+{:.caption}  
 
 ## Enabling Rounded corner
 
@@ -182,36 +185,36 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
 
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add a DropDownList element using the helper class in CSHTML
+	// Add a DropDownList element using the helper class in CSHTML
 
 
 
-		@Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowRoundedCorner(true)        
+	@Html.EJ().DropDownList("dropdownlist").TargetID("list").ShowRoundedCorner(true)        
 
-				<div id="list">
+			<div id="list">
 
-					<ul>
+				<ul>
 
-						<li>Art</li>
+					<li>Art</li>
 
-						<li>Architecture</li>
+					<li>Architecture</li>
 
-						<li>Biography</li>
+					<li>Biography</li>
 
-						<li>Comics</li>
+					<li>Comics</li>
 
-						<li>Sports</li>
+					<li>Sports</li>
 
-						<li>Science</li>
+					<li>Science</li>
 
-					</ul>
+				</ul>
 
-				</div>
+			</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Output of the above steps
@@ -220,7 +223,8 @@ The following steps explains you the configuration of Rounded corner of the Drop
    ![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
 
-   _Figure 22: Dropdown with Rounded corner property_  
+   Dropdown with Rounded corner property
+   {:.caption}   
 
    ## Icons Support 
 
@@ -232,74 +236,74 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
    1111.Add the below code 1. add tgh
 
-   ~~~ js 
+   ~~~ cshtml 
 
-		// Add a DropDownList element using the helper class in CSHTML
-
-
-
-		@Html.EJ().DropDownList("dropdownlist").TargetID("mailtoolslist").Width("200px")
-
-				<div id="mailtoolslist">
-
-					<ul>
-
-						<li>
-
-							<div class="mailtools categorize"></div>
-
-							Categorize and Move
-
-						</li>
-
-						<li>
-
-							<div class="mailtools done"></div>
-
-							Done
-
-						</li>
+	// Add a DropDownList element using the helper class in CSHTML
 
 
 
-						<li>
+	@Html.EJ().DropDownList("dropdownlist").TargetID("mailtoolslist").Width("200px")
 
-							<div class="mailtools movetofolder"></div>
+			<div id="mailtoolslist">
 
-							Move to Folder
+				<ul>
 
-						</li>
+					<li>
 
-						<li>
+						<div class="mailtools categorize"></div>
 
-							<div class="mailtools newmail"></div>
+						Categorize and Move
 
-							New E-mail
+					</li>
 
-						</li>
+					<li>
 
-						<li>
+						<div class="mailtools done"></div>
 
-							<div class="mailtools meeting"></div>
+						Done
 
-							New Meeting
+					</li>
 
-						</li>
 
-						<li>
 
-							<div class="mailtools reply"></div>
+					<li>
 
-							Reply & Delete
+						<div class="mailtools movetofolder"></div>
 
-						</li>
+						Move to Folder
 
-					</ul>
+					</li>
 
-				</div>
+					<li>
+
+						<div class="mailtools newmail"></div>
+
+						New E-mail
+
+					</li>
+
+					<li>
+
+						<div class="mailtools meeting"></div>
+
+						New Meeting
+
+					</li>
+
+					<li>
+
+						<div class="mailtools reply"></div>
+
+						Reply & Delete
+
+					</li>
+
+				</ul>
+
+			</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -309,110 +313,110 @@ The following steps explains you the configuration of Rounded corner of the Drop
 
 
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-				/*controls*/
+			/*controls*/
 
-				.mailtools {
+			.mailtools {
 
-					display: block;
+				display: block;
 
-					background-image: url(' http://js.syncfusion.com/demos/web/images/dropdownlist/iconsapps.png');
+				background-image: url(' http://js.syncfusion.com/demos/web/images/dropdownlist/iconsapps.png');
 
-					height: 25px;
+				height: 25px;
 
-					width: 25px;
+				width: 25px;
 
-					background-position: center center;
+				background-position: center center;
 
-					background-repeat: no-repeat;
+				background-repeat: no-repeat;
 
-				}
-
-
-
-					.mailtools.done {
-
-						background-position: 0 0;
-
-					}
+			}
 
 
 
-					.mailtools.movetofolder {
+				.mailtools.done {
 
-						background-position: 0 -22px;
-
-					}
-
-
-
-					.mailtools.categorize {
-
-						background-position: 0 -46px;
-
-					}
-
-
-
-					.mailtools.flag {
-
-						background-position: 0 -70px;
-
-					}
-
-
-
-					.mailtools.forward {
-
-						background-position: 0 -94px;
-
-					}
-
-
-
-					.mailtools.newmail {
-
-						background-position: 0 -116px;
-
-					}
-
-
-
-					.mailtools.reply {
-
-						background-position: 0 -140px;
-
-					}
-
-
-
-					.mailtools.meeting {
-
-						background-position: 0 -164px;
-
-					}
-
-
-
-				.control {
-
-					margin-left: 20px;
+					background-position: 0 0;
 
 				}
 
 
 
-				.ctrllabel {
+				.mailtools.movetofolder {
 
-					padding-bottom: 3px;
+					background-position: 0 -22px;
 
 				}
 
-		   </style>
+
+
+				.mailtools.categorize {
+
+					background-position: 0 -46px;
+
+				}
+
+
+
+				.mailtools.flag {
+
+					background-position: 0 -70px;
+
+				}
+
+
+
+				.mailtools.forward {
+
+					background-position: 0 -94px;
+
+				}
+
+
+
+				.mailtools.newmail {
+
+					background-position: 0 -116px;
+
+				}
+
+
+
+				.mailtools.reply {
+
+					background-position: 0 -140px;
+
+				}
+
+
+
+				.mailtools.meeting {
+
+					background-position: 0 -164px;
+
+				}
+
+
+
+			.control {
+
+				margin-left: 20px;
+
+			}
+
+
+
+			.ctrllabel {
+
+				padding-bottom: 3px;
+
+			}
+
+	   </style>
 
    ~~~
-   {:.prettyprint }
+   
 
 Output of the above steps
 
@@ -420,7 +424,8 @@ Output of the above steps
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
-_Figure 23: Dropdown with Icons property_  
+Dropdown with Icons property  
+{:.caption}
 
 ## Animation with Dropdown list 
 
@@ -434,9 +439,7 @@ The following steps explains you the configuration of EnableAnimation properties
 
 
 
-
-
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -444,27 +447,25 @@ The following steps explains you the configuration of EnableAnimation properties
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").EnableAnimation(true)
 
+<div id="list">
 
+	<ul>
 
-        <div id="list">
+		<li>Art</li>
 
-            <ul>
+		<li>Architecture</li>
 
-                <li>Art</li>
+		<li>Biography</li>
 
-                <li>Architecture</li>
+		<li>Comics</li>
 
-                <li>Biography</li>
+		<li>Sports</li>
 
-                <li>Comics</li>
+		<li>Science</li>
 
-                <li>Sports</li>
+	</ul>
 
-                <li>Science</li>
-
-            </ul>
-
-        </div>
+</div>
 
 {% endhighlight %}
 
@@ -498,37 +499,35 @@ The following steps explains you the configuration of CssClass properties in Dro
 
 1. Add the below code in your page to render the dropdown list.
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add a DropDownList element using the helper class in CSHTML
-
-
-
-		@Html.EJ().DropDownList("dropdownlist").TargetID("list").CssClass("customclass")
-
-				<div id="list">
-
-					<ul>
-
-						<li>Art</li>
-
-						<li>Architecture</li>
-
-						<li>Biography</li>
-
-						<li>Comics</li>
-
-						<li>Sports</li>
-
-						<li>Science</li>
-
-					</ul>
-
-				</div>
+	// Add a DropDownList element using the helper class in CSHTML
 
 
+
+	@Html.EJ().DropDownList("dropdownlist").TargetID("list").CssClass("customclass")
+
+			<div id="list">
+
+				<ul>
+
+					<li>Art</li>
+
+					<li>Architecture</li>
+
+					<li>Biography</li>
+
+					<li>Comics</li>
+
+					<li>Sports</li>
+
+					<li>Science</li>
+
+				</ul>
+
+			</div>
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Configure the CSS styles to apply on Dropdownlist
@@ -536,27 +535,28 @@ The following steps explains you the configuration of CssClass properties in Dro
 
    ~~~ css 
 
-		  <style type="text/css">
+	  <style type="text/css">
 
-				.customclass {
+			.customclass {
 
-					background-color: #FFFFCC;
+				background-color: #FFFFCC;
 
-					font-weight: bold;
+				font-weight: bold;
 
-					font-family: sans-serif;
+				font-family: sans-serif;
 
-				}
+			}
 
-		 </style>
+	 </style>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Output of the above steps
 
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)
 
-_Figure 24: Dropdown with cssClass property_  
+Dropdown with cssClass property
+{:.caption} 
 

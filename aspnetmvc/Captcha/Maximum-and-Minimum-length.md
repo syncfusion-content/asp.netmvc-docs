@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Maximum-and-Minimum-length
+title: Maximum and Minimum length | Captcha | ASP.NET MVC | Syncfusion
 description: maximum and minimum length
 platform: ejmvc
 control: Captcha
@@ -16,17 +16,17 @@ The following code example is used to render the Captcha with Minimum and Maximu
 1. Add the following code example to the corresponding CSHTML page to render Captcha with Minimum and Maximum length support.
 
 
-   ~~~ javascript
+   ~~~ cshtml
 
 
-		@Html.EJ().Captcha("captcha").MaximumLength(6).MinimumLength(5)
+	 @Html.EJ().Captcha("captcha").MaximumLength(6).MinimumLength(5)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with Minimum and Maximum length support. 
 
 ![](Maximum-and-Minimum-length_images/Maximum-and-Minimum-length_img1.png)
 
-
-
+Captcha with Minimum and Maximum length
+{:.caption}

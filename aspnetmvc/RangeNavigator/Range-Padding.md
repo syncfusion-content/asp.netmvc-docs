@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range-Padding
+title: Range Padding | RangeNavigator | ASP.NET MVC | Syncfusion
 description: range padding
 platform: ejmvc
 control: RangeNavigator
@@ -14,21 +14,18 @@ Range Padding adds padding for range in RangeNavigator. It allows you to space t
 ## Numeric
 
 The RangePadding property allows you to customize the automatic range calculation using the default auto range calculation for RangeNavigator. 
-{% highlight html %}
+{% highlight CSHTML %}
  
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.RangePadding("none")   
 
-           .RangePadding("none")   
+.ValueType("numeric")
 
-           .ValueType("numeric")
-
-       //...
-
-         .Render())
+.Render())
+		 
 {% endhighlight  %}
+
 ## None:
 
 By default, the RangePadding for numerical range is none. The range is calculated from the minimum value to the maximum value of data in the RangeNavigator.
@@ -76,18 +73,17 @@ The following screenshot illustrates a RangeNavigator with RangePadding set to R
 ## DateTime
 
 Using the default range calculation for RangeNavigator, the RangePadding property allows you to customize the range. 
-{% highlight html %}
+
+{% highlight CSHTML %}
  
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+   
+.RangePadding("none")   
 
-           .RangePadding("none")   
+.Render())
 
-       //...
-
-        .Render())
 {% endhighlight  %}
 
 ## None:
@@ -115,20 +111,14 @@ The following screenshot illustrates a RangeNavigator with RangePadding set to R
 RangeNavigator calculates the range automatically based on the values of series data points. However you can explicitly specify the range using the Start, End properties in RangeSettings that is not possible when data is provided.
 
 The following code example renders a RangeNavigator with a range from 2010 January 1st to 2013 January 1st. 
-{% highlight html %}
+
+{% highlight CSHTML %}
  
-
-
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+. RangeSettings(rn=>rn.Start("2010/1/1").End("2012/13/1"))
 
-         . RangeSettings(rn=>rn.Start("2010/1/1").End("2012/13/1"))
-
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight %}
 ![](Range-Padding_images/Range-Padding_img7.png)

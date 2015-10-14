@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File-management-options
+title: File management options | FileExplorer | ASP.NET MVC | Syncfusion
 description: file management options
 platform: ejmvc
 control: FileExplorer
@@ -15,7 +15,8 @@ By clicking the New Folder Icon, the highlighted model dialog opens as shown in 
 
 ![](File-management-options_images/File-management-options_img1.png)
 
-_Figure 7: FileExplorer with adding folder model dialog_
+FileExplorer with adding folder model dialog
+{:.caption}
 
 ## Download option
 
@@ -23,7 +24,8 @@ The Download option is used to download the required files from the online file 
 
 ![](File-management-options_images/File-management-options_img2.png)
 
-_Figure 8: FileExplorer with download file option_
+FileExplorer with download file option
+{:.caption}
 
 ## Upload option
 
@@ -31,7 +33,8 @@ You can upload files to the required place using the built-in Upload box control
 
 ![](File-management-options_images/File-management-options_img3.png)
 
-_Figure 9: FileExplorer with upload option_
+FileExplorer with upload option
+{:.caption}
 
 ## Search support
 
@@ -39,7 +42,8 @@ To easily search the files in file system, you are provided with the Search bar 
 
 ![](File-management-options_images/File-management-options_img4.png)
 
-_Figure 10: FileExplorer with search option_
+FileExplorer with search option
+{:.caption}
 
 ## Sorting support
 
@@ -47,4 +51,5 @@ In the Details view, you can sort the files using required fields. For example, 
 
 ![](File-management-options_images/File-management-options_img5.png)
 
-_Figure 11: FileExplorer in details view with sorting support_
+FileExplorer in details view with sorting support
+{:.caption}

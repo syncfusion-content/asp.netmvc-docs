@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Accordion  | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Accordion 

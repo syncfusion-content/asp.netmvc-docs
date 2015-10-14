@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip
+title: Tooltip | CircularGauge | ASP.NET MVC | Syncfusion
 description: tooltip
 platform: ejmvc
 control: CircularGauge
@@ -19,7 +19,7 @@ documentation: ug
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ().CircularGauge(“circularGaugeTooltip”)
 
 //Defines the tooltip object.
@@ -62,15 +62,15 @@ Execute the above code to render the following output.
 
 ![](Tooltip_images/Tooltip_img1.png)
 
-
-
+Gauge with Default ToolTip
+{:.caption}
 
 ## Tooltip Template
 
 In Tooltip option, you can customize the Tooltip window by adding the tooltip template on that page with the help of API TemplateID. Refer to the following code example to know more about Tooltip template.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().CircularGauge(“circularGaugeTooltip”)
 //Defines the tooltip object.
@@ -115,7 +115,7 @@ Execute the above code to render the following output.
 
 ![](Tooltip_images/Tooltip_img2.png)
 
-
-
+Circular gauge with tooltip template
+{:.caption}
 
 

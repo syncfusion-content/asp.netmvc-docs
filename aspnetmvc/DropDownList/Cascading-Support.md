@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cascading-Support
+title: Cascading Support | DropDownList | ASP.NET MVC | Syncfusion
 description: cascading support 
 platform: ejmvc
 control: DropDownList
@@ -21,60 +21,60 @@ The following steps explains you the behaviour of cascade dropdown.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
  
- // Add a DropDownList element using the helper class in CSHTML
- <div class="control" style="float: left;">
- <span class="txt">Select Group</span>
- @Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) 
+// Add a DropDownList element using the helper class in CSHTML
+<div class="control" style="float: left;">
+	<span class="txt">Select Group</span>
+	@Html.EJ().DropDownList("dropdownlist").Datasource((IEnumerable< Groups >) 
 	ViewData["groups"]).DropDownListFields(f=>f.Value("parentId")).CascadeTo("dropdownlist1")
- </div>
- <div class="control" style="float: left;">
- <span class="txt">Select Country</span>
- @Html.EJ().DropDownList("dropdownlist1").Datasource((IEnumerable<Countries>)ViewData["countries"]).Enabled(false)
- 
+</div>
+<div class="control" style="float: left;">
+<span class="txt">Select Country</span>
+@Html.EJ().DropDownList("dropdownlist1").Datasource((IEnumerable<Countries>)ViewData["countries"]).Enabled(false)
+
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
  
- // Initialize the control in controller
- public ActionResult Property()
- {                
-    List<Groups> dataOne = new List<Groups>();
-    dataOne.Add(new Groups() { Id = "a", Text = "Group A" });
-    dataOne.Add(new Groups() { Id = "b", Text = "Group B" });
-    dataOne.Add(new Groups() { Id = "c", Text = "Group C" });
-    dataOne.Add(new Groups() { Id = "d", Text = "Group D" });
-    ViewData["groups"] = dataOne;    
+// Initialize the control in controller
+public ActionResult Property()
+{                
+	List<Groups> dataOne = new List<Groups>();
+	dataOne.Add(new Groups() { Id = "a", Text = "Group A" });
+	dataOne.Add(new Groups() { Id = "b", Text = "Group B" });
+	dataOne.Add(new Groups() { Id = "c", Text = "Group C" });
+	dataOne.Add(new Groups() { Id = "d", Text = "Group D" });
+	ViewData["groups"] = dataOne;    
 	List<Countries> dataTwo = new List<Countries>();
-    dataTwo.Add(new Countries() { Value = 12, Id = "a", Text = "Armenia" });
-    dataTwo.Add(new Countries() { Value = 13, Id = "a", Text = "Bangladesh" });
-    dataTwo.Add(new Countries() { Value = 14, Id = "a", Text = "Cuba" });
-    dataTwo.Add(new Countries() { Value = 15, Id = "b", Text = "Denmark" });
-    dataTwo.Add(new Countries() { Value = 16, Id = "b", Text = "Egypt" });
-    dataTwo.Add(new Countries() { Value = 17, Id = "c", Text = "Finland" });
-    dataTwo.Add(new Countries() { Value = 18, Id = "c", Text = "India" });
-    dataTwo.Add(new Countries() { Value = 19, Id = "c", Text = "Malaysia" });
-    dataTwo.Add(new Countries() { Value = 20, Id = "d", Text = "New Zealand" });
-    dataTwo.Add(new Countries() { Value = 21, Id = "d", Text = "Norway" });
-    dataTwo.Add(new Countries() { Value = 22, Id = "d", Text = "Poland" });
-    dataTwo.Add(new Countries() { Value = 23, Id = "d", Text = "Romania" });
-    dataTwo.Add(new Countries() { Value = 24, Id = "d", Text = "Singapore" });
-    dataTwo.Add(new Countries() { Value = 25, Id = "d", Text = "Thailand" });
-    dataTwo.Add(new Countries() { Value = 26, Id = "d", Text = "Ukraine" });
-    ViewData["countries"] = dataTwo;
- } 
- public class Groups
- {
-    public string Id;
-	public string Text;
- }
- public class Countries
- {        
-    public int Value;
+	dataTwo.Add(new Countries() { Value = 12, Id = "a", Text = "Armenia" });
+	dataTwo.Add(new Countries() { Value = 13, Id = "a", Text = "Bangladesh" });
+	dataTwo.Add(new Countries() { Value = 14, Id = "a", Text = "Cuba" });
+	dataTwo.Add(new Countries() { Value = 15, Id = "b", Text = "Denmark" });
+	dataTwo.Add(new Countries() { Value = 16, Id = "b", Text = "Egypt" });
+	dataTwo.Add(new Countries() { Value = 17, Id = "c", Text = "Finland" });
+	dataTwo.Add(new Countries() { Value = 18, Id = "c", Text = "India" });
+	dataTwo.Add(new Countries() { Value = 19, Id = "c", Text = "Malaysia" });
+	dataTwo.Add(new Countries() { Value = 20, Id = "d", Text = "New Zealand" });
+	dataTwo.Add(new Countries() { Value = 21, Id = "d", Text = "Norway" });
+	dataTwo.Add(new Countries() { Value = 22, Id = "d", Text = "Poland" });
+	dataTwo.Add(new Countries() { Value = 23, Id = "d", Text = "Romania" });
+	dataTwo.Add(new Countries() { Value = 24, Id = "d", Text = "Singapore" });
+	dataTwo.Add(new Countries() { Value = 25, Id = "d", Text = "Thailand" });
+	dataTwo.Add(new Countries() { Value = 26, Id = "d", Text = "Ukraine" });
+	ViewData["countries"] = dataTwo;
+} 
+public class Groups
+{
 	public string Id;
 	public string Text;
- } } 
+}
+public class Countries
+{        
+	public int Value;
+	public string Id;
+	public string Text;
+} 
  {% endhighlight %}
 
 
@@ -86,7 +86,8 @@ Output of the above steps
 
 ![](Cascading-Support_images/Cascading-Support_img2.png)
 
-_Figure 25: Dropdown with cascade property_  
+Dropdown with cascade property 
+{:.caption}
 
 ### Multiple Cascading support
 
@@ -102,7 +103,9 @@ The following steps explains you the behavior of multiple cascade dropdown.
 
 
 
-{% highlight html %}
+{% tabs %}
+  
+{% highlight CSHTML %}
 
 <div class="control" style="float: left; padding:10px;">
 
@@ -129,7 +132,7 @@ The following steps explains you the behavior of multiple cascade dropdown.
 </div>
 {% endhighlight %}
 
-{% highlight c# %}       
+{% highlight C# %}       
 
 public ActionResult Index()
 
@@ -254,7 +257,7 @@ public class Countries
 
 {% endhighlight %}
 
-
+{% endtabs %}
 
 
 The following screenshot displays the output of the above code example.

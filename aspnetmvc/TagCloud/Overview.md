@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: TagCloud | TagCloud | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: TagCloud
 documentation: ug
 ---
 
-# Overview
+# TagCloud
 
 The ASP.NET MVC TagCloud control allows the user to display a list of links or tags with a structured cloud format where the importance of the tags can differentiate with varied font sizes, colors, and styles.
 

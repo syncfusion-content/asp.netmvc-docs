@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rating-Customization
+title: Rating Customization | Rating | ASP.NET MVC | Syncfusion
 description: rating customization
 platform: ejmvc
 control: Rating
@@ -19,11 +19,9 @@ Add the following code in your view page to render the Rating with the customize
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized value.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -69,11 +67,9 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized minimum value.
-
-
 
 <div id="container" style="width: 300px; padding: 2px">
 
@@ -105,11 +101,8 @@ The following screenshot Rating value starts with 4 since MinValuevalue is set a
 
 ![](Rating-Customization_images/Rating-Customization_img2.png)
 
-
-
-
-
-_Rating with minimum value as 4_
+Rating with minimum value as 4
+{:.caption}
 
 ## Max Value
 
@@ -121,11 +114,9 @@ Add the following code in your view pageto render the Rating with maximumvalue.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized maximum value.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -170,11 +161,9 @@ Add the following code in your view page to render the Rating with Precision.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with Precison.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -246,31 +235,29 @@ Add the followingcode in your view page to render the Rating with customized inc
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized increment.
 
+<div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
+	<table>
 
-    <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
+		<tr>
 
-    <table>
+			<td valign="top">Rating:
 
-        <tr>
+			</td>
 
-            <td valign="top">Rating:
+			<td>
 
-            </td>
+				@Html.EJ().Rating("Rating").IncrementStep(2).MaxValue(10)
 
-            <td>
+			</td>
 
-                @Html.EJ().Rating("Rating").IncrementStep(2).MaxValue(10)
+		</tr>      
 
-            </td>
-
-        </tr>      
-
-    </table>
+	</table>
 
 </div>
 
@@ -296,11 +283,9 @@ Add the following code in your view page to render the Rating with AllowReset.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with allowReset.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -358,11 +343,9 @@ Add the following code in your view page to render Rating with readOnly.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with readOnly.
-
-
 
 <div id="container" style="width: 300px; padding: 2px">
 
@@ -381,7 +364,6 @@ Add the following code in your view page to render Rating with readOnly.
             </td>
 
         </tr>  
-
 
 
     </table>
@@ -408,11 +390,9 @@ Add the following code in your view page to render the Rating with enable or dis
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with Enable/Disable support.
-
-.
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 

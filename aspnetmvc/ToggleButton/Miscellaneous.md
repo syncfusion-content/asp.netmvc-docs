@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | ToggleButton | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: ToggleButton
@@ -17,19 +17,16 @@ The following steps explains you the details about rendering the Toggle Button w
 
 1. In the View page, add the following button elements to configure Toggle Button widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
+<div class="one">
 
+	@*set rounded corner for toggle button*@       
+	@Html.EJ().ToggleButton("toggleButton_roundedCorner").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")       
 
-    <div class="one">
-
-        @*set rounded corner for toggle button*@       
-
-                 @Html.EJ().ToggleButton("toggleButton_roundedCorner").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")       
-
-    </div>
+</div>
 
 {%  endhighlight %}
 
@@ -37,9 +34,8 @@ Execute the above code to render the following output.
 
 ![](Miscellaneous_images/Miscellaneous_img1.png)
 
-
-
-_Figure 19: Toggle button with Rounder corner_
+Toggle button with Rounder corner
+{:.caption}
 
 ## PreventToggle
 
@@ -49,19 +45,17 @@ The following steps explains you the details about rendering the Toggle Button w
 
 1. In the View page, add the following button elements to configure Toggle Button widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Add the code in CSHTML page to configure the widget and initialize the control*@
 
+<div class="one">
 
+	@* set prevent toggle property for preventing states*@       
 
-    <div class="one">
+	 @Html.EJ().ToggleButton("toggleButton_preventToggle").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").PreventToggle(true)       
 
-        @* set prevent toggle property for preventing states*@       
-
-                 @Html.EJ().ToggleButton("toggleButton_preventToggle").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").PreventToggle(true)       
-
-    </div>
+</div>
 	
 {% endhighlight %}
 
@@ -71,9 +65,8 @@ Execute the above code to render the following output.
 
 ![](Miscellaneous_images/Miscellaneous_img2.png)
 
-
-
-_Figure 20: Toggle button with prevent Toggle_
+Toggle button with prevent Toggle
+{:.caption}
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | OLAPClient | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: OLAPClient
@@ -18,7 +18,7 @@ OLAP Client control enables you to retrieve multidimensional data either from S
 The following code example illustrates how to connect to an offline cube.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 string connectionString = @"DataSource= C:\Users\<UserName>\appdata\local\syncfusion\essentialstudio\x.x.x.x\Common\Data\OfflineCube\Adventure_Works_Ext.cub; Provider = MSOLAP;";
 
@@ -30,7 +30,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 The following code example illustrates how to connect to a local cube in SQL Server.
 
-{% highlight c# %}
+{% highlight C# %}
 
 string connectionString = "Data source=localhost; Initial Catalog=Adventure Works DW;";
 
@@ -50,7 +50,7 @@ XML/A provides the most efficient way to access an OLAP database over the Inter
 
 The following code example illustrates how to connect to the SSAS server available online.
 
-{% highlight c# %}
+{% highlight C# %}
 
 static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
 

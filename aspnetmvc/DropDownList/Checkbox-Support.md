@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Checkbox-Support
+title: Checkbox Support | DropDownList | ASP.NET MVC | Syncfusion
 description: checkbox support
 platform: ejmvc
 control: DropDownList
@@ -29,7 +29,7 @@ The following steps explains you the configuration of checkbox options in Dropdo
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -67,7 +67,6 @@ Output of the above steps
 
 ![](Checkbox-Support_images/Checkbox-Support_img1.png)
 
-
-
-_Figure 17: Dropdown with checkbox property_  
+Dropdown with checkbox property
+{:.caption}  
 

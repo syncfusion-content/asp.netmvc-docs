@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | Rotator | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: Rotator
@@ -39,7 +39,9 @@ This property receives query to retrieve data from the table (query is same as S
 
 Rotator provides the data binding support for the Rotatoritem. So you can bind the data from JSONData. For this behavior, you need to map the corresponding filed with their column names. The data can be bound as a list and it is assigned to Datasource property. You can refer the following code example to bind local data.
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 // Add the following data list to be bind in the controller page and define the corresponding data.
 
@@ -47,17 +49,14 @@ Rotator provides the data binding support for the Rotatoritem. So you can bind t
 
 public class Localdata
 
-        {
+{
 
-            public string Text { get; set; }
+	public string Text { get; set; }
 
-            public string Url { get; set; }
+	public string Url { get; set; }
 
-        }
+}
 
-{% endhighlight %}
-
-{% highlight c# %} 
 
 //Refer the Model in the controller 
 
@@ -93,7 +92,7 @@ using <Application name>.Models;
 
 {% endhighlight %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text")
@@ -102,7 +101,8 @@ using <Application name>.Models;
 .ShowPlayButton(true)
 
 {% endhighlight %}
-
+{% endtabs %} 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-_Figure_ _7_: _Rotator control with local data binding_
+Rotator control with local data binding
+{:.caption}

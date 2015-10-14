@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-support
+title: RTL support | AutoComplete | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: AutoComplete
@@ -20,7 +20,7 @@ The following steps explain how you can enable the right-to-left property for an
 1. In the View page, define the AutoComplete control and enable the RTL property.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Refer to the DataSource defined in Local Databinding Step 1 *@
@@ -43,7 +43,6 @@ The following image is the output for AutoComplete when EnableRTL is set to “T
 
 ![](RTL-support_images/RTL-support_img1.png)
 
-
-
-_AutoComplete template with RTL support_
+AutoComplete template with RTL support
+{:.caption}
 

@@ -1,9 +1,9 @@
----
+﻿---
 layout: post
-title: How to set OpenType Features 
+title: How to set OpenType Features | DocIo | ASP.NET MVC | Syncfusion
 description: how to set opentype features?
-platform: ejmvc
-control: DocIO
+platform: DocIo
+control: ejmvc
 documentation: ug
 ---
 
@@ -23,9 +23,8 @@ The OpenTypeFeatures provide special effects for text in order to make them more
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img1.png)
 
-
-
-
+OpenType Features
+{:.caption}
 
 ## Ligatures
 
@@ -37,9 +36,10 @@ A ligature is a combination of characters that is written as a glyph, as though 
 * All: All ligature combinations that are available for a font are applied to the text.
 
 
+![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img2.png)
 
-![http://help.syncfusion.com/ug/windows%20forms/docio/ImagesExt/image9_92.png](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img2.png)
-
+Ligatures
+{:.caption}
 
 
 ## Contextual Alternates
@@ -50,9 +50,11 @@ Contextual alternates provide fine-tuning of letters or combinations of letters 
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img3.png)
 
+Contextual Alternates
+{:.caption}
 
+### Number Spacing
 
-## Number Spacing
 
 * Default - The default number spacing is specified by the font designer of each font.
 * Proportional - Numbers are spaced more like letters with varying widths. For example, an 8 is wider than a 1. This spacing is easier to read in text.
@@ -74,15 +76,17 @@ For example, the OpenType font “Gabriola” supports seven stylistic sets, tho
 
 ![](How-to-set-OpenType-Features_images/How-to-set-OpenType-Features_img4.png)
 
+Stylistic Sets
+{:.caption}
 
 
 The following code example illustrate how to set OpenType Features.
+{% tabs %}
 
-{% highlight c# %}
-//Sets the contextual alternates.
-text = paragraph.AppendText("Text to check contextual alternates.");
-text.CharacterFormat.FontName = "Segoe Script";
-text.CharacterFormat.UseContextualAlternates = true;
+{% highlight C# %}
+//Sets the contextual alternates.text = paragraph.AppendText("Text to check contextual alternates.");
+text.CharacterFormat.FontName = "Segoe Script";text.CharacterFormat.UseContextualAlternates = true;
+
 //Sets the historical discretional ligatures.
 text = paragraph.AppendText("Check your fast facts on Fiji Islands");
 text.CharacterFormat.FontName = "Calibri";
@@ -99,10 +103,14 @@ text.CharacterFormat.NumberSpacing = NumberSpacingType.Tabular;
 text = paragraph.AppendText("The quick red fox.");
 text.CharacterFormat.FontName = "Gabriola";
 text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet06;
-{% endhighlight  %}
-{% highlight vbnet %}
-‘Sets the contextual alternates.text = paragraph.AppendText("Text to check contextual alternates.")
-text.CharacterFormat.FontName = "Segoe Script"text.CharacterFormat.UseContextualAlternates = True
+
+{% endhighlight %}
+{% highlight VB%}
+‘Sets the contextual alternates.
+text = paragraph.AppendText("Text to check contextual alternates.")
+text.CharacterFormat.FontName = "Segoe Script"
+text.CharacterFormat.UseContextualAlternates = True
+
 ‘Sets the historical discretional ligatures.
 text = paragraph.AppendText("Check your fast facts on Fiji Islands")
 text.CharacterFormat.FontName = "Calibri"text.CharacterFormat.Ligatures = LigatureType.HistoricalDiscretional
@@ -116,6 +124,8 @@ text.CharacterFormat.FontName = "Calibri"text.CharacterFormat.NumberSpacing = N
 text = paragraph.AppendText("The quick red fox.")
 text.CharacterFormat.FontName = "Gabriola"
 text.CharacterFormat.StylisticSet = StylisticSetType.StylisticSet06
-{% endhighlight  %}
+
+{% endhighlight %}
+{% endtabs %} 
 
 

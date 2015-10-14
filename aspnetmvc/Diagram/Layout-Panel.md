@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout-Panel
+title: Layout Panel | Diagram | ASP.NET MVC | Syncfusion
 description: layout panel
 platform: ejmvc
 control: Diagram
@@ -181,7 +181,8 @@ private Node CreateNode(string name, int marginTop, int marginLeft, string color
 
 ![](Layout-Panel_images/Layout-Panel_img1.png)
 
-
+Canvas Panel
+{:.caption}
 
 ## Stack panel
 
@@ -273,5 +274,5 @@ private Node CreateNode(string name, string color, HorizontalAlignment alignment
 
 ![](Layout-Panel_images/Layout-Panel_img2.png)
 
-
-
+Stack Panel containing three nodes
+{:.caption}

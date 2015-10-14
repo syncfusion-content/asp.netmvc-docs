@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Symbol-Palette
+title: Symbol Palette | Diagram | ASP.NET MVC | Syncfusion
 description: symbol palette
 platform: ejmvc
 control: Diagram
@@ -13,7 +13,8 @@ The SymbolPalette displays a collection of palettes. The Palette shows nodes and
 
 ![](Symbol-Palette_images/Symbol-Palette_img1.jpeg)
 
-
+SymbolPalette
+{:.caption}
 
 ## Create and Add Symbols in the Palette
 
@@ -71,7 +72,8 @@ The Diagram provides support for adding nodes and connectors through the Symbol 
 
 ![](Symbol-Palette_images/Symbol-Palette_img2.png)
 
-
+Adding Nodes and Connectors through Symbol Palette
+{:.caption}
 
 ## Appearance
 
@@ -143,9 +145,6 @@ The following code illustrates how to customize the Appearance ofthe Palette.
 {% highlight c# %}
 
 
-
-
-
  public void Palette(SymbolPaletteProperties symbolpalettes)
 
   {
@@ -169,7 +168,6 @@ The following code illustrates how to customize the Appearance ofthe Palette.
     symbolpalettes.ShowPaletteItemText = true; 
 
     symbolpalettes.AllowDrag = true;  }
-
 
 
 {% endhighlight %}
@@ -212,8 +210,6 @@ The following code example illustrates how to customize Preview Content.
 
 {% highlight c# %}
 
-
-
 //Sets properties to symbol palette preview
 
 symbolpalette.Model.PreviewHeight=100
@@ -221,8 +217,6 @@ symbolpalette.Model.PreviewHeight=100
 symbolpalette.Model.PreviewWidth=100
 
 symbolpalette.Model.PreviewOffset= new DiagramPoint(102,102)
-
-
 
 {% endhighlight %}
 

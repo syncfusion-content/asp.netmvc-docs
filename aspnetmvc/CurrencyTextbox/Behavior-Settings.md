@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | CurrencyTextBox | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
 control: CurrencyTextBox
@@ -18,18 +18,19 @@ DecimalPlaces property specifies number of values allowed after the decimal poin
 1. In the View page add CurrencyTextBox helper, and configure the DecimalPlaces property as follows.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 		@Html.EJ().CurrencyTextbox("currency").DecimalPlaces(4).Value("555")
 
 {% endhighlight %}
 
-	The output is as follows.
+The output is as follows.
 
-	![](Behavior-Settings_images/Behavior-Settings_img1.png)
+![](Behavior-Settings_images/Behavior-Settings_img1.png)
 
-
+CurrencyTextBox with decimalPlaces
+{:.caption}
 
 ## Persistence Support
 
@@ -40,7 +41,7 @@ DecimalPlaces property specifies number of values allowed after the decimal poin
 In the View page add CurrencyTextBox helper, and configure the EnablePersistence property as follows.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 		@Html.EJ().CurrencyTextbox("currency").Value("33").EnablePersistence(true)
 
@@ -48,12 +49,15 @@ In the View page add CurrencyTextBox helper, and configure the EnablePersistence
 
    Output of CurrencyTextBox with EnablePersistence is as follows. 
 
-![](Behavior-Settings_images/Behavior-Settings_img2.png)' 
+![](Behavior-Settings_images/Behavior-Settings_img2.png)
 
+CurrencyTextBox at initial load
+{:.caption}
 
+![](Behavior-Settings_images/Behavior-Settings_img3.png)
 
-![](Behavior-Settings_images/Behavior-Settings_img3.png)'
-
+CurrencyTextBox after changing the value and after page refresh 
+{:.caption}
 
 ## Strict Mode Support
 
@@ -63,7 +67,7 @@ CurrencyTextBox allows you to use the strict mode option by setting the EnableSt
 
 In the View page add CurrencyTextBox helper, and configure the EnableStrictMode property. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").MinValue(-1).MaxValue(8).Value(10).EnableStrictMode(true)
 
 {% endhighlight %}
@@ -72,7 +76,8 @@ Output when EnableStrictMode is “True” is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img4.png)
 
-
+Currency with EnableStrictMode
+{:.caption}
 
 ## Enabled or Disabled
 
@@ -82,7 +87,7 @@ CurrencyTextBox has an option to enable or disable its element. You can set the 
 
 In the View page add CurrencyTextBox helper, and configure the Enabled property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("3").Enabled(false)
 {% endhighlight %}
@@ -91,11 +96,13 @@ Output when Enabled is “True” and when Enabled is “False”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img5.png)
 
-
+CurrencyTextBox with enabled as False
+{:.caption}
 
 ![](Behavior-Settings_images/Behavior-Settings_img6.png)
 
-
+CurrencyTextBox with enabled as True
+{:.caption}
 
 ## Adjusting Textbox Size
 
@@ -106,14 +113,15 @@ CurrencyTextBox size can be modified by using the Height and Width properties.
 In the View page add CurrencyTextBox helper, and configure the Height and Width property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").Width("100").Height("50").Value("1")
 {% endhighlight  %}
  Output of CurrencyTextBox after setting “Height” and “Width” is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img7.png)
 
-
+CurrencyTextBox with height and width 
+{:.caption}                         
 
 ## Increment Step
 
@@ -123,7 +131,7 @@ The IncrementStep property is used to increase or decrease the amount of value i
 
 In the View page add CurrencyTextBox helper, and configure the IncrementStep property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").IncrementStep(4).Value("1")
 
 {% endhighlight %}
@@ -132,11 +140,13 @@ Output of Currency textbox with IncrementStep is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img8.png)
 
-
+CurrencyTextBox at initial load
+{:.caption}
 
 ![](Behavior-Settings_images/Behavior-Settings_img9.png)
 
-
+CurrencyTextBox after increasing two step
+{:.caption}
 
 ## Define Name
 
@@ -146,7 +156,7 @@ When you have placed the CurrencyTextBox in a form, the Name property is used to
 
 In the View page add CurrencyTextBox helper, and configure the Name property.   
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").Name("Currency")
 {% endhighlight %}
 
@@ -160,7 +170,7 @@ The value of CurrencyTextBox can be assigned by using the Value property. The de
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33")
 
@@ -170,7 +180,8 @@ Output of CurrencyTextBox with the value property is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img10.png)
 
-
+CurrencyTextBox with value
+{:.caption}
 
 ## Define MaxValue and MinValue
 
@@ -187,7 +198,7 @@ The minimum limit value can be assigned to the CurrencyTextBox by using the MinV
 In the View page add CurrencyTextBox helper, and configure the MinValue and MaxValue property.  .  
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("4").MinValue(-3).MaxValue(4)
 
@@ -197,13 +208,14 @@ Output of CurrencyTextBox with MaxValue and MinValue is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img11.png)
 
-
-
+CurrencyTextBox with maxValue
+{:.caption}
 
 
 ![](Behavior-Settings_images/Behavior-Settings_img12.png)
 
-
+CurrencyTextBox with minValue
+{:.caption}
 
 ## Read Only Support
 
@@ -223,7 +235,8 @@ In the View page add CurrencyTextBox helper, and configure the ReadOnly property
 
 ![](Behavior-Settings_images/Behavior-Settings_img13.png)
 
-
+CurrencyTextBox with readOnly
+{:.caption}
 
 ## Appearance
 
@@ -254,7 +267,7 @@ The CSS can be customized by using the CssClass in the CurrencyTextBox. You can 
 
 In the View page add CurrencyTextBox helper, and configure the CssClass property. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("3").CssClass("customCss")
 
@@ -264,31 +277,30 @@ In the View page add CurrencyTextBox helper, and configure the CssClass property
 
 {% highlight css %}
 
+<style>
 
+	.customCss .e-box {
 
-    <style>
+		border-color: #9d241b;
 
-        .customCss .e-box {
+	}
 
-            border-color: #9d241b;
+	.customCss .e-input {
 
-        }
+		background-color: #f6db8d;            
 
-        .customCss .e-input {
+	}
 
-            background-color: #f6db8d;            
+	.customCss .e-select {
 
-        }
+		background-color: #ecf6ac;
 
-        .customCss .e-select {
+		border-color: #3c36e7;
 
-            background-color: #ecf6ac;
+	}
 
-            border-color: #3c36e7;
+</style>
 
-        }
-
-    </style>
 {% endhighlight %}
 
 
@@ -296,7 +308,8 @@ Output of CurrencyTextBox after applying CssClass is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img14.png)
 
-
+CurrencyTextBox with cssClass
+{:.caption}
 
 ## Rounded Corner Support
 
@@ -307,13 +320,15 @@ CurrencyTextBox provides you with rounded corner support whose appearance is dif
 In the View page add CurrencyTextBox helper, and configure the ShowRoundedCorner property. 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").Value("3").ShowRoundedCorner(true)
 {% endhighlight %}
 Output of CurrencyTextBox when ShowRoundedCorner is “True”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img15.png)
 
+CurrencyTextBox with ShowRoundedCorner
+{:.caption}
 
 ## Spin Button Support
 
@@ -324,7 +339,7 @@ CurrencyTextBox provides you the option as to whether to display the split butto
 In the View page add CurrencyTextBox helper, and configure the ShowSpinButton property. 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").Value("3").ShowSpinButton(false)
 {% endhighlight %}
 
@@ -332,7 +347,8 @@ Output of CurrencyTextBox when ShowSpinButton is “False”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img16.png)
 
-
+CurrencyTextBox with ShowSpinButton is False
+{:.caption}
 
 ## Water Mark Text Support
 
@@ -343,7 +359,7 @@ The CurrencyTextBox provide water mark text support. You can display the initial
 In the View page add CurrencyTextBox helper, and configure the ShowSpinButton property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").WatermarkText("Currency")
 {% endhighlight %}
 
@@ -351,5 +367,5 @@ Output of CurrencyTextBox after applying WaterMarkText is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img17.png)
 
-
-
+CurrencyTextBox with watermark text
+{:.caption}

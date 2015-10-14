@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Toolbar | Toolbar | ASP.NET MVC | Syncfusion
 description: overview  	 	
 platform: ejmvc
 control: Toolbar
 documentation: ug
 ---
 
-# Overview  	 	
+# Toolbar 	 	
 
 The Toolbar control for ASP.NET MVC supports displaying a list of tools within a web page. This control is capable of customizing toolbar items with any functionality by using enriched client-side methods. This control is composed of collection of unordered lists containing text and images contained into a div.
 

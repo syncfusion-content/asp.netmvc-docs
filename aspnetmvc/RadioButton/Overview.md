@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: RadioButton | RadioButton | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: RadioButton
 documentation: ug
 ---
 
-# Overview
+# RadioButton
 
 The Essential ASP.NET MVCRadioButton control allows you to choose an option to perform an action. This control allows you to select true/false. These RadioButtons are supported with themes. 
 

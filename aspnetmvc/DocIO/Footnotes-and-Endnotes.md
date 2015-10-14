@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Footnotes-and-Endnotes
+title: Footnotes and Endnotes | DocIO | ASP.NET MVC | Syncfusion
 description: footnotes and endnotes
 platform: ejmvc
 control: DocIO
@@ -27,9 +27,8 @@ Following are the steps to add a footnote or endnote to a Word document in Micro
 
 ![](Footnotes-and-Endnotes_images/Footnotes-and-Endnotes_img1.png)
 
-
-_Figure_ _49_: Footnote and Endnote dialog box
-
+Footnote and Endnote dialog box
+{:.caption}
 
 
 DocIO has the ability to preserve Word Footnotes and Endnotes, but their creation and modification with DocIO API is limited.
@@ -51,9 +50,9 @@ Class Hierarchy
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _105_: Public Constructors_
+
 
 <table>
 <tr>
@@ -67,9 +66,9 @@ Initializes a new instance of the WFootnote class  </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _106_: Public Properties
+
 
 <table>
 <tr>
@@ -108,8 +107,9 @@ Specifies custom (string) marker for footnote. If footnote is autonumbered, this
 
 
 The following code example illustrates how to create a Footnote and an Endnote by using Essential DocIO.
+{% tabs %}
 
-{% highlight html %}
+{% highlight C# %}
 
 
 
@@ -171,7 +171,7 @@ document.Save("Sample.doc", Syncfusion.DocIO.FormatType.Doc);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Creates a new document.
 
@@ -228,14 +228,15 @@ paragraph.AppendText("Essential DocIO is a .NET library that has a simple yet an
 document.Save("Sample.doc", Syncfusion.DocIO.FormatType.Doc)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ### Footnote and Endnote Separators
 
 A Footnote or Endnote separator is a line preserved between the body and the endnotes or footnotes in a Microsoft Word document. A footnote or endnote continuation separator is a line running across the top section indicating that the footnotes or endnotes are carried over from the preceding page if they run over to the second page. A footnote or endnote continuation notice is a special character or word preserved at the bottom of the footer area to indicate that the footnotes or endnotes continue to the next page.
 
-Public Constructors
+#### Public Constructors
 
-_Table_ _107_: Public Constructors
+ 
 
 <table>
 <tr>
@@ -253,9 +254,9 @@ Initializes a new instance of the Endnote class.</td></tr>
 </table>
 
 
-### Public Properties 
+#### Public Properties 
 
-_Table_ _108_: Public Properties
+
 
 <table>
 <tr>

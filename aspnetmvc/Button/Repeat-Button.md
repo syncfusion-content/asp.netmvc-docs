@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Repeat-Button
+title: Repeat Button | Button | ASP.NET MVC | Syncfusion
 description: repeat button
 platform: ejmvc
 control: Button
@@ -15,22 +15,22 @@ The following steps explains you the details about rendering the Repeat Button.
 
 1. In the CSHTML page, configure the Button widget as follows.
  
-   ~~~ html
+   ~~~ cshtml
 
-		@*Add the code in CSHTML page to configure and initialize the control*@
-		  @* Enable the button in repeat action mode and specifies time interval.*@
-		  <div class="control"> 
-		  <div class="align">  
-			@Html.EJ().Button("repeatButton").Text("click").ShowRoundedCorner(true).Size(ButtonSize.Mini).RepeatButton(true).TimeInterval("200").ClientSideEvents(e => e.Click("btnClick"))  
-		  </div>
-		  <div class="align">    
-		  <div><b>Event Trace</b></div> 
-		  <div class="eventTrace"></div>  
-		  </div> 
-		  </div>
+	@*Add the code in CSHTML page to configure and initialize the control*@
+	@* Enable the button in repeat action mode and specifies time interval.*@
+	<div class="control"> 
+	<div class="align">  
+	@Html.EJ().Button("repeatButton").Text("click").ShowRoundedCorner(true).Size(ButtonSize.Mini).RepeatButton(true).TimeInterval("200").ClientSideEvents(e => e.Click("btnClick"))  
+	</div>
+	<div class="align">    
+	<div><b>Event Trace</b></div> 
+	<div class="eventTrace"></div>  
+	</div> 
+	</div>
 
    ~~~
-   {:.prettyprint }
+  
    
    ~~~ javascript
    
@@ -43,33 +43,31 @@ The following steps explains you the details about rendering the Repeat Button.
 		</table>
 
    ~~~
-   {:.prettyprint }
+  
 
 
 2. Configure the CSS styles to apply on button
 
    ~~~ css
 
-		<style>
+	<style>
 
-				.align {
+		.align {
 
-					display: table-cell;
+			display: table-cell;
 
-					padding-left: 50px;
+			padding-left: 50px;
 
-				}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+  
 
 Execute the above code to render the following output.
 
 ![](Repeat-Button_images/Repeat-Button_img1.png)
 
-
-
-_Figure 10: Output for repeat button_
-
+Output for repeat button
+{:.caption}

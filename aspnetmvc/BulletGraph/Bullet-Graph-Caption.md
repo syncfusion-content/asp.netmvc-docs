@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bullet-Graph-Caption
+title: Bullet Graph Caption | BulletGraph | ASP.NET MVC | Syncfusion
 description: bullet graph caption
 platform: ejmvc
 control: BulletGraph	
@@ -20,35 +20,38 @@ Title is set to Bullet Graph using Text property in CaptionSettings. Caption set
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
-                                            qs.Location( loc=> loc.x(110).y(200))
+		qs.Location( loc=> loc.x(110).y(200))
 
-                                            .Minimum(0)
+		.Minimum(0)
 
-                                            .Maximum(5)
+		.Maximum(5)
 
-                                            .Interval(1)
+		.Interval(1)
 
-                                            .FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+		.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
 
-                                      .Height(700)
+	    .Height(700)
 
-                                      .Width(600)
+	    .Width(600)
 
-                                      .CaptionSettings(cs=>
+	    .CaptionSettings(cs=>
 
-                                          cs.Text("Revenue YTD")
+	    cs.Text("Revenue YTD")
 
-                                          .Location(loc=>loc.y(220))
+	    .Location(loc=>loc.y(220))
 
-                                          .Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
+	    .Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
 
-                                      )
+  )
 
 {% endhighlight %}
 
 The following screenshot displays a Bullet Graph with customized caption using the above code
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img1.png)
+
+Bullet Graph with title
+{:.caption}
 
 
 ## Subtitle
@@ -60,37 +63,37 @@ Subtitle is added to Bullet Braph using Text property of Subtitle in CaptionSett
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
-                                            qs.Location( loc=> loc.x(110).y(200))
+	qs.Location( loc=> loc.x(110).y(200))
 
-                                            .Minimum(0)
+	.Minimum(0)
 
-                                            .Maximum(5)
+	.Maximum(5)
 
-                                            .Interval(1)
+	.Interval(1)
 
-                                            .FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+	.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
 
-                                      .Height(700)
+	.Height(700)
 
-                                      .Width(600)
+	.Width(600)
 
-                                      .CaptionSettings(cs=>
+	.CaptionSettings(cs=>
 
-                                          cs.SubTitle(subtitle=>
+	cs.SubTitle(subtitle=>
 
-                                              subtitle.Text("Subtitle")
+	subtitle.Text("Subtitle")
 
-                                              .Location(loc=>loc.x(20).y(225))
+	.Location(loc=>loc.x(20).y(225))
 
-                                              .Font(font=>font.FontStyle("italic").FontSize("16px")))
+	.Font(font=>font.FontStyle("italic").FontSize("16px")))
 
-                                          .Text("Revenue YTD")
+	.Text("Revenue YTD")
 
-                                          .Location(loc=>loc.y(210))
+	.Location(loc=>loc.y(210))
 
-                                          .Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
-
-                                      )
+	.Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
+     
+	)
 
 
 {% endhighlight %}
@@ -98,6 +101,8 @@ The following screenshot displays Bullet Graph with a subtitle
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img2.png)
 
+Bullet Graph with subtitle
+{:.caption}
 
 ## Indicator
 
@@ -108,66 +113,68 @@ Indicator displays a symbol along with text which is different from caption and 
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
-                                            qs.Location( loc=> loc.x(110).y(200))
+	qs.Location( loc=> loc.x(110).y(200))
 
-                                            .Minimum(0)
+	.Minimum(0)
 
-                                            .Maximum(5)
+	.Maximum(5)
 
-                                            .Interval(1)
+	.Interval(1)
 
-                                            .LabelSettings(ls=>ls.LabelPrefix("$").LabelSuffix("K"))
+	.LabelSettings(ls=>ls.LabelPrefix("$").LabelSuffix("K"))
 
-                                            .FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+	.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
 
-                                      .Height(700)
+	.Height(700)
 
-                                      .Width(600)
+	.Width(600)
 
-                                      .CaptionSettings(cs=>
+	.CaptionSettings(cs=>
 
-                                          cs.Indicator(indicator=>
+	cs.Indicator(indicator=>
 
-                                              indicator.Visible(true)
+	indicator.Visible(true)
 
-                                              .Text("+ $0.5 K")
+	.Text("+ $0.5 K")
 
-                                              .Location(loc=>loc.x(15).y(240))
+	.Location(loc=>loc.x(15).y(240))
 
-                                              .Symbol(symbol=>
+	.Symbol(symbol=>
 
-                                                  symbol.Shape(SymbolShape.Triangle)
+	  symbol.Shape(SymbolShape.Triangle)
 
-                                                  .Color("green")
+	  .Color("green")
 
-                                                  .Border(border=>border.Width(1).Color("green")
+	  .Border(border=>border.Width(1).Color("green")
 
-                                                  )))
+	  )))
 
 
 
-                                          .SubTitle(subtitle=>
+	.SubTitle(subtitle=>
 
-                                              subtitle.Text("Subtitle")
+	subtitle.Text("Subtitle")
 
-                                              .Location(loc=>loc.x(20).y(225))
+	.Location(loc=>loc.x(20).y(225))
 
-                                              .Font(font=>font.FontStyle("italic").FontSize("16px")))
+	.Font(font=>font.FontStyle("italic").FontSize("16px")))
 
-                                          .Text("Revenue YTD")
+	.Text("Revenue YTD")
 
-                                          .Location(loc=>loc.y(210))
+	.Location(loc=>loc.y(210))
 
-                                          .Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
+	.Font(font=>font.FontStyle("bold").FontColor(System.Drawing.Color.Gray).FontSize("14px")))
 
-                                      )
-
+	)
 
 {% endhighlight %}
+
 The following screenshot displays a bullet graph with indicator.
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img3.png)
 
+Bullet Graph with indicator
+{:.caption}
 
 ## Trim
 
@@ -186,6 +193,8 @@ The following screenshot displays the BulletGraph with Trim.
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img4.png)
 
+Bulletgrpah with trim
+{:.caption}
 
 ## Text Placement
 
@@ -200,15 +209,15 @@ The property TextPosition, is used to position the text at the top, bottom, left
 
     .CaptionSettings(title=>title.Text("Bullet Graph Title")
 
-                            .TextPosition(BulletTextPosition.Top)
+	.TextPosition(BulletTextPosition.Top)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("20px")
+	font.FontSize("20px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            ))
+	))
 
     .QuantitativeScaleSettings(scale=>scale.Location(loc=>loc.x(120).y(40)))
 
@@ -220,6 +229,9 @@ The following screenshot displays the Bullet Graph with the title positioned abo
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img5.png)
 
+Bullet Graph with title automatically positioned above the scale
+{:.caption}
+
 
 ### Text Alignment
 
@@ -230,31 +242,31 @@ Alignment of text at different positions with respect to scale can be customized
 
     .CaptionSettings(title=>title.Text("Revenue")
 
-                            .TextPosition(BulletTextPosition.Left)
+	.TextPosition(BulletTextPosition.Left)
 
-                            .TextAnchor(BulletTextAnchor.Middle)
+	.TextAnchor(BulletTextAnchor.Middle)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("16px")
+	font.FontSize("16px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            )
+	)
 
-                     .SubTitle(subtitle=>subtitle.Text("$ in thousands")
+	.SubTitle(subtitle=>subtitle.Text("$ in thousands")
 
-                            .TextPosition(BulletTextPosition.Left)
+	.TextPosition(BulletTextPosition.Left)
 
-                            .TextAlignment(BulletTextAlignment.Center)
+	.TextAlignment(BulletTextAlignment.Center)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("12px")
+	font.FontSize("12px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            )))
+	)))
 
     .QuantitativeScaleSettings(scale=>scale.Location(loc=>loc.x(120).y(40)))
 
@@ -266,6 +278,8 @@ The following screenshot displays the Bullet Graph with the title and subtitle a
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img6.png)
 
+Bullet graph with the title aligned at near and sub title aligned at center positions
+{:.caption}
 
 ### Text Anchor
 
@@ -275,33 +289,33 @@ Text elements aligned at the same position are anchored by using the TextAnchor 
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 
-    .CaptionSettings(title=>title.Text("Revenue")
+	.CaptionSettings(title=>title.Text("Revenue")
 
-                            .TextPosition(BulletTextPosition.Left)
+	.TextPosition(BulletTextPosition.Left)
 
-                            .TextAnchor(BulletTextAnchor.Middle)
+	.TextAnchor(BulletTextAnchor.Middle)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("16px")
+	font.FontSize("16px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            )
+	)
 
-                     .SubTitle(subtitle=>subtitle.Text("$ in thousands")
+	.SubTitle(subtitle=>subtitle.Text("$ in thousands")
 
-                            .TextPosition(BulletTextPosition.Left)
+	.TextPosition(BulletTextPosition.Left)
 
-                            .TextAlignment(BulletTextAlignment.Center)
+	.TextAlignment(BulletTextAlignment.Center)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("12px")
+	font.FontSize("12px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            )))
+	)))
 
     .QuantitativeScaleSettings(scale=>scale.Location(loc=>loc.x(120).y(40)))
 
@@ -311,6 +325,8 @@ Text elements aligned at the same position are anchored by using the TextAnchor 
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img7.png)
 
+Bullet Graph with title text anchored at the center with respect to subtitle text
+{:.caption}
 
 ### Padding
 
@@ -319,28 +335,29 @@ The space required between text and quantitative scale is customized by using th
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 
-    .CaptionSettings(title=>title.Text("Profit in %")
+	.CaptionSettings(title=>title.Text("Profit in %")
 
-                            .TextPosition(BulletTextPosition.Left)
+	.TextPosition(BulletTextPosition.Left)
 
-                            .TextAlignment(BulletTextAlignment.Center)
+	.TextAlignment(BulletTextAlignment.Center)
 
-                            .Padding(10)
+	.Padding(10)
 
-                            .Font(font=>
+	.Font(font=>
 
-                                font.FontSize("16px")
+	font.FontSize("16px")
 
-                                .FontWeight("bold")
+	.FontWeight("bold")
 
-                            ))
+	))
 
-    .QuantitativeScaleSettings(scale=>scale.Location(loc=>loc.x(120).y(40)))
+	.QuantitativeScaleSettings(scale=>scale.Location(loc=>loc.x(120).y(40)))
 
-)
+	)
 
 {% endhighlight %}
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img8.png)
 
-
+Bullet graph with 10 pixel padding between the title text and quantitative scale
+{:.caption}

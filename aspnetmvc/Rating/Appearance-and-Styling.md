@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Rating | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: Rating
@@ -19,7 +19,7 @@ The following code example is used to render the Rating control without tooltip.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating without Tooltip
 
@@ -71,11 +71,9 @@ Add the following code in your view page to render the Rating with customized Sh
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized ShapeWidth and ShapeHeight.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -106,72 +104,67 @@ Add the following code in your view page to render the Rating with customized Sh
 Add the following styles.
 
 
-
 {% highlight css %}
 
 <style type="text/css">
 
-        .e-rating
+	.e-rating
 
-{
+	{
 
-    margin-top: -7px;
+		margin-top: -7px;
 
-}
+	}
 
+	.e-rating.e-horizontal .e-shape-list, .e-rating.e-vertical .e-shape-list,
 
+	.e-rating.e-horizontal .e-shape, .e-rating.e-vertical .e-shape, .e-rating.e-horizontal .e-ul,.e-rating.e-vertical .e-ul,.e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset 
 
-.e-rating.e-horizontal .e-shape-list, .e-rating.e-vertical .e-shape-list,
+	{
 
-.e-rating.e-horizontal .e-shape, .e-rating.e-vertical .e-shape, .e-rating.e-horizontal .e-ul,.e-rating.e-vertical .e-ul,.e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset 
+	height:28px;width:28px;
 
-{
+	background:url(images/crystal-stars.png) no-repeat;
 
-height:28px;width:28px;
+	}
 
-background:url(images/crystal-stars.png) no-repeat;
+	.e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset 
+	{
 
-}
+	background-position: 0 42px;
 
-   .e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset {
+	margin-left: 2px;
 
-background-position: 0 42px;
+	}
 
-margin-left: 2px;
+	.e-rating.e-horizontal .e-shape-list
 
-}
+	{
 
-   .e-rating.e-horizontal .e-shape-list
+		background-position: 0 -56px;
 
-{
+	}
 
-    background-position: 0 -56px;
+	.e-rating .e-shape.inactive
+	 {
 
-}
+	background-position: 0 -56px;
 
+	}
 
+	.e-rating .e-shape.active 
+	{
 
-       .e-rating .e-shape.inactive {
+		background-position: 0 -112px;
 
-        background-position: 0 -56px;
+	}
 
-    }
+	.e-rating .e-shape.selected 
+	{
 
+		background-position: 0 -84px;
 
-
-    .e-rating .e-shape.active {
-
-        background-position: 0 -112px;
-
-    }
-
-
-
-    .e-rating .e-shape.selected {
-
-        background-position: 0 -84px;
-
-    }
+	}
 
 </style>
 
@@ -181,9 +174,7 @@ margin-left: 2px;
 The following screenshot illustrates Rating with customized ShapeWidth and ShapeHeight.
 
 
-
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
-
 
 
 ### Theme
@@ -214,12 +205,9 @@ The following code example is used to render the Rating control with customizeds
 Add the following HTML to render the Rating with customized style. In this, hovering behaviors, tooltip position and display have been customized by using custom css class.
 
 
-
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add the following code example to the corresponding CSHTML page to render Rating with customized styles.
-
-
 
 <div id="container" style="border: 1px solid black; width: 300px; padding: 2px">
 
@@ -250,12 +238,12 @@ Add the following HTML to render the Rating with customized style. In this, hove
 Add the following styles.
 
 
-
 {% highlight css %}
 
 <style type="text/css">
 
-    .customCss {
+    .customCss 
+	{
 
         margin-top: -7px;
 
@@ -263,71 +251,79 @@ Add the following styles.
 
 
 
-        .customCss.e-horizontal .e-shape-list, .e-rating.e-vertical .e-shape-list,
+	.customCss.e-horizontal .e-shape-list, .e-rating.e-vertical .e-shape-list,
 
-        .customCss.e-horizontal .e-shape, .e-rating.e-vertical .e-shape, .e-rating.e-horizontal .e-ul, .customCss.e-vertical .e-ul, .e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset {
+	.customCss.e-horizontal .e-shape, .e-rating.e-vertical .e-shape, .e-rating.e-horizontal .e-ul, .customCss.e-vertical .e-ul, .e-rating.e-horizontal .e-reset, .e-rating.e-vertical .e-reset 
+	{
 
-            height: 28px;
+		height: 28px;
 
-            width: 28px;
+		width: 28px;
 
-            background: url(../../Content/ej/default-theme/images/crystal-stars.png) no-repeat repeat;
+		background: url(../../Content/ej/default-theme/images/crystal-stars.png) no-repeat repeat;
 
-        }
-
-
-
-        .customCss.e-horizontal .e-reset, .customCss.e-vertical .e-reset {
-
-            background-position: -2px 113px;
-
-            margin-left: 2px;
-
-        }
+	}
 
 
 
-        .customCss.e-horizontal .e-shape-list {
+	.customCss.e-horizontal .e-reset, .customCss.e-vertical .e-reset 
+	{
 
-            background-position: 0 -56px;
+		background-position: -2px 113px;
 
-        }
+		margin-left: 2px;
 
-
-
-        .customCss.e-horizontal .e-reset:hover {
-
-            background-position: 0 42px;
-
-        }
+	}
 
 
 
-        .customCss .e-shape.inactive {
+	.customCss.e-horizontal .e-shape-list 
+	{
 
-            background-position: 0 -84px;
+		background-position: 0 -56px;
 
-        }
-
-
-
-        .customCss .e-shape.active {
-
-            background-position: 0 -112px;
-
-        }
+	}
 
 
 
-        .customCss .e-shape.selected {
+	.customCss.e-horizontal .e-reset:hover 
+	{
 
-            background-position: 0 -84px;
+		background-position: 0 42px;
 
-        }
+	}
 
 
 
-    .customCss.e-tooltip {
+	.customCss .e-shape.inactive 
+	{
+
+		background-position: 0 -84px;
+
+	}
+
+
+
+	.customCss .e-shape.active 
+	{
+
+		background-position: 0 -112px;
+
+	}
+
+
+
+	.customCss .e-shape.selected 
+	{
+
+		background-position: 0 -84px;
+
+	}
+
+
+
+    .customCss.e-tooltip 
+	{
 
         background-color: white;
 

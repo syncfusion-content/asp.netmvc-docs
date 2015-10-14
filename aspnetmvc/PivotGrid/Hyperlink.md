@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperlink
+title: Hyperlink | PivotGrid | ASP.NET MVC | Syncfusion
 description: hyperlink
 platform: ejmvc
 control: PivotGrid
@@ -14,7 +14,7 @@ The PivotGrid control supports Hyperlink option to link data for any individual
 The following code example demonstrates how to create the PivotGrid control using Hyperlink support.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @section ScriptSection{
 
@@ -29,15 +29,17 @@ The following code example demonstrates how to create the PivotGrid control usin
 </script>
 
 }
-{% endhighlight  %}
-{% highlight js %}
-@section ControlsSection{
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc").ClientSideEvents(events=>
-events.ValueCellHyperlinkClick("CellClickEvent").RowHeaderHyperlinkClick("CellClickEvent")
-.ColumnHeaderHyperlinkClick("CellClickEvent").SummaryCellHyperlinkClick("CellClickEvent")).HyperlinkSettings(hypLink => 
-hypLink.EnableColumnHeaderHyperlink(true).EnableRowHeaderHyperlink(true).EnableValueCellHyperlink(true)
-.EnableSummaryCellHyperlink(true))
+
+@section ControlsSection
+
+{
+
+	@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc").ClientSideEvents(events=>
+	events.ValueCellHyperlinkClick("CellClickEvent").RowHeaderHyperlinkClick("CellClickEvent")
+	.ColumnHeaderHyperlinkClick("CellClickEvent").SummaryCellHyperlinkClick("CellClickEvent")).HyperlinkSettings(hypLink => 
+	hypLink.EnableColumnHeaderHyperlink(true).EnableRowHeaderHyperlink(true).EnableValueCellHyperlink(true)
+	.EnableSummaryCellHyperlink(true))
 
 } 
 

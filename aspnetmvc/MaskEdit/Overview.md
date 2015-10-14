@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: MaskEdit | MaskEdit | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: MaskEdit
 documentation: ug
 ---
 
-# Overview
+# MaskEdit
 
 The MaskEdit control provides an easy and reliable way of collecting user input and displaying standard data in a specific format. Some common uses of the MaskEdit control are IP address editors, phone number editors, and Social Security number editors.
 

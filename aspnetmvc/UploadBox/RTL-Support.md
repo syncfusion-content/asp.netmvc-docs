@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | UploadBox | ASP.NET MVC | Syncfusion
 description: rtl support 
 platform: ejmvc
 control: UploadBox
@@ -15,7 +15,7 @@ The following steps explain the configuration of EnableRTL property in UploadBox
 
 In the VIEW page, add the below script to configure the UploadBox element.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add the UploadBox element.
 

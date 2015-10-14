@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Look-and-Feel
+title: Look and Feel | RichTextEditor | ASP.NET MVC | Syncfusion
 description: look and feel
 platform: ejmvc
 control: RichTextEditor
@@ -33,11 +33,11 @@ The following is the list of the twelve themes supported by RTE.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*Add the following code in your view page.*@
+@*Add the following code in your view page.*@
 
-	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).Render(); }
 
 {% endhighlight %}
 
@@ -54,14 +54,14 @@ You can override the existing styles under the theme style sheet by using this p
 
 1. Add the following code in your CSHTML page.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code in your view page to initialize the RTE.*@
+	@*Add the following code in your view page to initialize the RTE.*@
 
-		@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).CssClass("light-Pink").Render(); }
+	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).CssClass("light-Pink").Render(); }
 
    ~~~
-   {:.prettyprint }
+   
    
 	In the following style sheet, the active theme style sheet file has been overridden by using the root class “light-Pink”.
 
@@ -69,32 +69,36 @@ You can override the existing styles under the theme style sheet by using this p
 
    ~~~ css
 
-		.light-Pink .e-toolbar {
+	.light-Pink .e-toolbar 
+	{
 
-			color: black;
+		color: black;
 
-			}
+	}
 
-		.light-Pink .e-toolbarspan {
+	.light-Pink .e-toolbarspan 
+	{
 
-			background-color: #E9A1CE;
+		background-color: #E9A1CE;
 
-			}
+	}
 
-		.light-Pink .e-toolbar .e-active {
+	.light-Pink .e-toolbar .e-active 
+	{
 
-			background-color: #4C0F2E;
+		background-color: #4C0F2E;
 
-			}
+	}
 
-		.light-Pink .editarea {
+	.light-Pink .editarea 
+	{
 
-			background-color: pink;
+		background-color: pink;
 
-			}
+	}
 
    ~~~
-   {:.prettyprint } 
+    
 
 	The following screenshot displays the output.
 

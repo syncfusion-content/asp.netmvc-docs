@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: DocIO | DocIO | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: DocIO
 documentation: ug
 ---
 
-# Overview
+# DocIO
 
 This section covers information on Essential DocIO and its key features, prerequisites to use the control, its compatibility with various OS and browsers, and finally the documentation details complimentary with the product.
 
@@ -60,7 +60,7 @@ The product comes with numerous samples as well as an extensive documentation to
 
 The following conventions helps you quickly to identify the important sections of information while using the content.
 
-_Table_ _1_: Document Conventions_
+_Document Conventions_
 
 <table>
 <tr>
@@ -71,7 +71,6 @@ Description</td></tr>
 <tr>
 <td>
 Note</td><td>
-{{'![](Overview_images/Overview_img1.jpeg)' | markdownify }}
 
 {{'_Note:_' | markdownify }}</td><td>
 {{'_Represents important information_' | markdownify }}</td></tr>

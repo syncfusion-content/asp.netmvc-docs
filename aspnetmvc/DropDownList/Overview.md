@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: DropDownList | DropDownList | ASP.NET MVC | Syncfusion
 description: overview 
 platform: ejmvc
 control: DropDownList
 documentation: ug
 ---
 
-# Overview 
+# DropDownList 
 
 The DropDownList control provides a list of options for users to choose from. It is capable of including other HTML elements such as images, text boxes, check boxes, and radio buttons and so on. It also supports data binding, template options, and multi-select options.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Paragraphs
+title: Working with Paragraphs | DocIO | ASP.NET MVC | Syncfusion
 description: working with paragraphs
 platform: ejmvc
 control: DocIO
@@ -27,8 +27,8 @@ BreakCharacterFormat property is used to set character formatting for the Break 
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img1.png)
 
-
-
+Formatted Break Symbol
+{:.caption}
 
 
 ## Adding Paragraph Items
@@ -47,9 +47,9 @@ WParagraph
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _40_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -63,9 +63,9 @@ Initializes a new instance of the WParagraph class. </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _41_: _Public Properties_
+
 
 <table>
 <tr>
@@ -119,9 +119,9 @@ Gets or sets text for a paragraph.</td></tr>
 </table>
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _42_: _Public Methods_
+
 
 <table>
 <tr>
@@ -223,7 +223,9 @@ Append a Cross-Reference field of specified reference type (currently it support
 </table>
 The following code example illustrates how to add various formats to paragraphs.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Adds a paragraph and applies formatting.
 paragraph = section.AddParagraph();
@@ -240,7 +242,7 @@ paragraph.ParagraphFormat.FirstLineIndent = 45;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Adds a paragraph and applies formatting.
 paragraph = section.AddParagraph()
@@ -254,7 +256,7 @@ paragraph.ParagraphFormat.BeforeSpacing = 18paragraph.ParagraphFormat.AfterSpaci
 paragraph.ParagraphFormat.FirstLineIndent = 45
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ## Working with Text
 
@@ -275,9 +277,9 @@ WextRange
 
 
 
-### PublicConstructors
+#### PublicConstructors
 
-_Table_ _43_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -291,9 +293,9 @@ Initializes a new instance of the WTextRange class.</td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _44_: _Public Properties_
+
 
 <table>
 <tr>
@@ -316,9 +318,12 @@ Gets or sets the text for text range.</td></tr>
 
 The following code example illustrates how to use the WTextRange class.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
+
 //Writes different font name or font size.
 string[] fontNames = new string[] { "Times New Roman", "Verdana", "Symbol", };
 IWSection section = doc.AddSection();
@@ -327,41 +332,42 @@ for (int j = 0, len = fontNames.Length; j < len; j++)
 {   
  paragraph = section.AddParagraph(); 
  string fontName = fontNames[j];
- for (int i = 9; i < 40; i++)  
- {       
- textRange = paragraph.AppendText(fontName + " " + i.ToString() + " ");  
- textRange.CharacterFormat.FontSize = i;  
- textRange.CharacterFormat.FontName = fontName;    
- if (i > 15)   
- {          
- i += 5;    
- }   
- }   
- IWTextRange txtRange2 = paragraph.AppendText(fontName + "34,5 ");
- txtRange2.CharacterFormat.FontSize = (float)34.5;  
- txtRange2.CharacterFormat.FontName = fontName;}
- //Writes bold or italic or underline or strike text.
- paragraph = section.AddParagraph();
- textRange = paragraph.AppendText("Bold Text_Bold Text   ");
- textRange.CharacterFormat.Bold = true;
- textRange = paragraph.AppendText("Italic Text_Italic Text   ");
- textRange.CharacterFormat.Italic = true;
- textRange = paragraph.AppendText("Underline Text_Underline Text   ");
- textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash;
- textRange = paragraph.AppendText("Strike Text_Strike Text   ");
- textRange.CharacterFormat.Strikeout = true;
- textRange = paragraph.AppendText("Shadow Text_Shadow Text   ");
- textRange.CharacterFormat.Shadow = true;paragraph = section.AddParagraph();
- paragraph = section.AddParagraph();
- textRange = paragraph.AppendText("Merged Font Style Text_Merged Font Style Text");
- textRange.CharacterFormat.Bold = true;
- textRange.CharacterFormat.Italic = true;
- textRange.CharacterFormat.Strikeout = true;
- textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash;
+	 for (int i = 9; i < 40; i++)  
+	 {       
+		 textRange = paragraph.AppendText(fontName + " " + i.ToString() + " ");  
+		 textRange.CharacterFormat.FontSize = i;  
+		 textRange.CharacterFormat.FontName = fontName;    
+		 if (i > 15)   
+		 {          
+			i += 5;    
+		 }   
+	 }   
+IWTextRange txtRange2 = paragraph.AppendText(fontName + "34,5 ");
+txtRange2.CharacterFormat.FontSize = (float)34.5;  
+txtRange2.CharacterFormat.FontName = fontName;}
+
+//Writes bold or italic or underline or strike text.
+paragraph = section.AddParagraph();
+textRange = paragraph.AppendText("Bold Text_Bold Text   ");
+textRange.CharacterFormat.Bold = true;
+textRange = paragraph.AppendText("Italic Text_Italic Text   ");
+textRange.CharacterFormat.Italic = true;
+textRange = paragraph.AppendText("Underline Text_Underline Text   ");
+textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash;
+textRange = paragraph.AppendText("Strike Text_Strike Text   ");
+textRange.CharacterFormat.Strikeout = true;
+textRange = paragraph.AppendText("Shadow Text_Shadow Text   ");
+textRange.CharacterFormat.Shadow = true;paragraph = section.AddParagraph();
+paragraph = section.AddParagraph();
+textRange = paragraph.AppendText("Merged Font Style Text_Merged Font Style Text");
+textRange.CharacterFormat.Bold = true;
+textRange.CharacterFormat.Italic = true;
+textRange.CharacterFormat.Strikeout = true;
+textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 ‘Writes different font name or font size.
@@ -371,40 +377,41 @@ Dim paragraph As IWParagraphDim textRange As IWTextRangeDim j As Integer = 0len 
  While j < Len()    
  paragraph = section.AddParagraph()    
  Dim fontName As String = fontNames(j)  
- For i As Integer = 9 To 39       
- textRange = paragraph.AppendText(fontName and " " and i.ToString() and " ")    
- textRange.CharacterFormat.FontSize = i       
- textRange.CharacterFormat.FontName = fontName   
- If i > 15 Then        
- i += 5      
- End If 
- Next i     
- Dim txtRange2 As IWTextRange = paragraph.AppendText(fontName and "34,5 ")  
- txtRange2.CharacterFormat.FontSize = CSng(34.5)   
- txtRange2.CharacterFormat.FontName = fontName     
- j += 1Loop 
- 'Writes bold or italic or underline or strike text.
- paragraph = section.AddParagraph()
- textRange = paragraph.AppendText("Bold Text_Bold Text   ")
- textRange.CharacterFormat.Bold = True
- textRange = paragraph.AppendText("Italic Text_Italic Text   ")
- textRange.CharacterFormat.Italic = True
- textRange = paragraph.AppendText("Underline Text_Underline Text   ")
- textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash
- textRange = paragraph.AppendText("Strike Text_Strike Text   ")
- textRange.CharacterFormat.Strikeout = True
- textRange = paragraph.AppendText("Shadow Text_Shadow Text   ")
- textRange.CharacterFormat.Shadow = True
- paragraph = section.AddParagraph()
- paragraph = section.AddParagraph()
- textRange = paragraph.AppendText("Merged Font Style Text_Merged Font Style Text")
- textRange.CharacterFormat.Bold = True
- textRange.CharacterFormat.Italic = True
- textRange.CharacterFormat.Strikeout = True
- textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash
+	 For i As Integer = 9 To 39       
+		 textRange = paragraph.AppendText(fontName and " " and i.ToString() and " ")    
+		 textRange.CharacterFormat.FontSize = i       
+		 textRange.CharacterFormat.FontName = fontName   
+	 If i > 15 Then        
+			i += 5      
+	 End If 
+	Next i     
+Dim txtRange2 As IWTextRange = paragraph.AppendText(fontName and "34,5 ")  
+txtRange2.CharacterFormat.FontSize = CSng(34.5)   
+txtRange2.CharacterFormat.FontName = fontName     
+j += 1Loop 
+'Writes bold or italic or underline or strike text.
+paragraph = section.AddParagraph()
+textRange = paragraph.AppendText("Bold Text_Bold Text   ")
+textRange.CharacterFormat.Bold = True
+textRange = paragraph.AppendText("Italic Text_Italic Text   ")
+textRange.CharacterFormat.Italic = True
+textRange = paragraph.AppendText("Underline Text_Underline Text   ")
+textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash
+textRange = paragraph.AppendText("Strike Text_Strike Text   ")
+textRange.CharacterFormat.Strikeout = True
+textRange = paragraph.AppendText("Shadow Text_Shadow Text   ")
+textRange.CharacterFormat.Shadow = True
+paragraph = section.AddParagraph()
+paragraph = section.AddParagraph()
+textRange = paragraph.AppendText("Merged Font Style Text_Merged Font Style Text")
+textRange.CharacterFormat.Bold = True
+textRange.CharacterFormat.Italic = True
+textRange.CharacterFormat.Strikeout = True
+textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash
 
 {% endhighlight %}
 
+{% endtabs %} 
 
 ## Working with Images
 
@@ -477,9 +484,8 @@ WPicture
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _45_: _Public Constructors_
 
 <table>
 <tr>
@@ -493,9 +499,9 @@ Gets the type of the entity. </td></tr>
 </table>
 
 
-## Public Properties
+#### Public Properties
 
-_Table_ _46_: _Public Properties_
+
 
 <table>
 <tr>
@@ -585,9 +591,9 @@ Gets or sets the value indicating whether the picture should be visible or hidde
 </table>
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _47_: _Public Methods_
+
 
 <table>
 <tr>
@@ -609,14 +615,15 @@ The following screenshot illustrates the various layout formats available in Mic
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img3.png)
 
-
-
+Layout Formats in Microsoft Word
+{:.caption}
 
 
 The following code example illustrates how to add picture to the paragraph and specifies size to the picture by using WPicture class.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 IWSection section = doc.AddSection();
@@ -633,7 +640,7 @@ section.HeadersFooters.OddHeader.Paragraphs.Add(paragraph);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 Dim section As IWSection = doc.AddSection()
@@ -648,6 +655,7 @@ picture.HeightScale = 50.0Fpicture.WidthScale = 50.0F
 section.HeadersFooters.OddHeader.Paragraphs.Add(paragraph)
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## Working with Lists
 
@@ -665,7 +673,7 @@ You can specify the list style to a paragraph by using the ListFormat property o
 
 
 
-### Class Hierarchy
+#### Class Hierarchy
 
 FormatBase
 
@@ -675,9 +683,9 @@ WListFormat
 
 
 
-### Public Constructor
+#### Public Constructor
 
-_Table_ _48_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -691,9 +699,9 @@ Initializes new instance of WListFormat class.</td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _49_: _Public Properties_
+
 
 <table>
 <tr>
@@ -727,9 +735,9 @@ Gets or sets whether numbering of the list must restart from previous list. </td
 </table>
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _50_: _Public Methods_
+
 
 <table>
 <tr>
@@ -769,7 +777,9 @@ Removes the list from current paragraph.  </td></tr>
 
 The following code example illustrates how to use the WListFormat and list styles in DocIO.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 //Writes default numbered list.    
 IWParagraph paragraph = section.AddParagraph();
@@ -781,49 +791,52 @@ paragraph.ListFormat.ContinueListNumbering();
 paragraph.ListFormat.IncreaseIndentLevel();
 paragraph = section.AddParagraph();
 paragraph.AppendText( "Level 0" );
- paragraph.ListFormat.ContinueListNumbering();
- paragraph.ListFormat.DecreaseIndentLevel();
- section.AddParagraph();section.AddParagraph();
- //Writes default bulleted list. 
- paragraph = section.AddParagraph();
- paragraph.AppendText( "First bulleted ( level 0 )" ); 
- paragraph.ListFormat.ApplyDefBulletStyle();
- paragraph = section.AddParagraph();
- paragraph.AppendText( "Level 1" );
- paragraph.ListFormat.ContinueListNumbering();
- paragraph.ListFormat.IncreaseIndentLevel();
- paragraph = section.AddParagraph();
- paragraph.AppendText( "Level 0" );
- paragraph.ListFormat.ContinueListNumbering();
- paragraph.ListFormat.DecreaseIndentLevel();
- section.AddParagraph();section.AddParagraph();
- //Writes mixed bulleted and numbered list. ListStyle myStyle = doc.AddListStyle( ListType.Numbered, "UserStyle");
- WListLevel listLevel1 = myStyle.Levels[ 0 ];
- listLevel1.FollowCharacter = FollowCharacterType.Tab;
- listLevel1.TextPosition = 80f;
- listLevel1.NumberAlignment = ListNumberAlignment.Right;
- listLevel1.TabSpaceAfter = 40f;listLevel1.StartAt = 3;
- listLevel1.NumberPrefix = "(((";listLevel1.NumberSufix = "***.";
- paragraph = section.AddParagraph();
- paragraph.AppendText( "First numbered" );
- paragraph.ListFormat.ApplyStyle( "UserStyle" );
- paragraph = section.AddParagraph();
- ListStyle bulletStyle = doc.AddListStyle( ListType.Bulleted, "UserStyle1");
- WListLevel level = bulletStyle.Levels[ 0 ];level.NumberPosition = 30f;
- level.TabSpaceAfter = 15f;level.FollowCharacter = FollowCharacterType.Tab;
- paragraph.AppendText( "First bullet" ); 
- paragraph.ListFormat.ApplyStyle( "UserStyle1" );
- paragraph = section.AddParagraph();
- paragraph.AppendText( "Bulleted level 1" ); 
- paragraph.ListFormat.ContinueListNumbering();
- paragraph = section.AddParagraph();
- paragraph.AppendText( "Numbered level 0 again" );
- paragraph.ListFormat.ApplyStyle( "UserStyle" );
- section.AddParagraph();section.AddParagraph();
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.DecreaseIndentLevel();
+section.AddParagraph();section.AddParagraph();
+
+//Writes default bulleted list. 
+paragraph = section.AddParagraph();
+paragraph.AppendText( "First bulleted ( level 0 )" ); 
+paragraph.ListFormat.ApplyDefBulletStyle();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 1" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.IncreaseIndentLevel();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 0" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.DecreaseIndentLevel();
+section.AddParagraph();section.AddParagraph();
+
+//Writes mixed bulleted and numbered list. 
+ListStyle myStyle = doc.AddListStyle( ListType.Numbered, "UserStyle");
+WListLevel listLevel1 = myStyle.Levels[ 0 ];
+listLevel1.FollowCharacter = FollowCharacterType.Tab;
+listLevel1.TextPosition = 80f;
+listLevel1.NumberAlignment = ListNumberAlignment.Right;
+listLevel1.TabSpaceAfter = 40f;listLevel1.StartAt = 3;
+listLevel1.NumberPrefix = "(((";listLevel1.NumberSufix = "***.";
+paragraph = section.AddParagraph();
+paragraph.AppendText( "First numbered" );
+paragraph.ListFormat.ApplyStyle( "UserStyle" );
+paragraph = section.AddParagraph();
+ListStyle bulletStyle = doc.AddListStyle( ListType.Bulleted, "UserStyle1");
+WListLevel level = bulletStyle.Levels[ 0 ];level.NumberPosition = 30f;
+level.TabSpaceAfter = 15f;level.FollowCharacter = FollowCharacterType.Tab;
+paragraph.AppendText( "First bullet" ); 
+paragraph.ListFormat.ApplyStyle( "UserStyle1" );
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Bulleted level 1" ); 
+paragraph.ListFormat.ContinueListNumbering();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Numbered level 0 again" );
+paragraph.ListFormat.ApplyStyle( "UserStyle" );
+section.AddParagraph();section.AddParagraph();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 'Writes default numbered list.
 Dim paragraph As IWParagraph = Section.AddParagraph()
@@ -838,6 +851,7 @@ paragraph.AppendText("Level 0")
 paragraph.ListFormat.ContinueListNumbering()
 paragraph.ListFormat.DecreaseIndentLevel()
 Section.AddParagraph()Section.AddParagraph()
+
 'Writes default bulleted list.  
 paragraph = Section.AddParagraph()
 paragraph.AppendText("First bulleted ( level 0 )")
@@ -851,6 +865,7 @@ paragraph.AppendText("Level 0")
 paragraph.ListFormat.ContinueListNumbering()
 paragraph.ListFormat.DecreaseIndentLevel()
 Section.AddParagraph()Section.AddParagraph()
+
 'Writes mixed bulleted and numbered list.
 Dim myStyle As ListStyle = doc.AddListStyle(ListType.Numbered, "UserStyle")
 Dim listLevel1 As WListLevel = myStyle.Levels(0)
@@ -873,6 +888,7 @@ Paragraph()Section.AddParagraph()
 
 {% endhighlight %}
 
+{% endtabs %} 
 
 ## Hyperlinks
 
@@ -880,17 +896,17 @@ A Hyperlink is a colored and underlined text or a graphic that when clicked, dir
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img4.png)
 
-
-
+Insert Hyperlink Dialog Box in Microsoft Word
+{:.caption}
 
 
 Essential DocIO provides support to insert, edit, and replace hyperlinks as fields by using the Hyperlink class. HyperlinkType enumerator specifies the type of the link in use.
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _51_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -904,9 +920,9 @@ Initializes a new instance of the Hyperlink class.</td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _52_: _Public Properties_
+
 
 <table>
 <tr>
@@ -938,56 +954,64 @@ Gets or sets the text for the hyperlink.</td></tr>
 
 The following code example illustrates how to find and replace the web hyperlinks.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 WordDocument doc = new WordDocument();
 doc.Open("WebLink_1.doc");
 Hyperlink hlink = null;
 foreach (ParagraphItem item in doc.LastParagraph.Items)  
 {
-if (item is WField && (item as WField).FieldType == FieldType.FieldHyperlink)                
-{                    
-hlink = new Hyperlink(item as WField);                    
-if (hlink.Type == HyperlinkType.EMailLink)                    
-{                        
-hlink.Type = HyperlinkType.WebLink;                        
-hlink.TextToDisplay = "Football";                        
-hlink.Uri = "\"http://www.football.ua/\"";                    
-}                
-}            
+	if (item is WField && (item as WField).FieldType == FieldType.FieldHyperlink)                
+		{                    
+			hlink = new Hyperlink(item as WField);                    
+			if (hlink.Type == HyperlinkType.EMailLink)                    
+			{                        
+				hlink.Type = HyperlinkType.WebLink;                        
+				hlink.TextToDisplay = "Football";                        
+				hlink.Uri = "\"http://www.football.ua/\"";                    
+			}                
+		}            
 }
 doc.Save("WebLink_modified.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As New WordDocument()
 doc.Open("WebLink_1.doc")
 Dim hlink As Hyperlink = Nothing
 For Each item As ParagraphItem In doc.LastParagraph.Items  
-If TypeOf item Is WField AndAlso TryCast(item, WField).FieldType = FieldType.FieldHyperlink 
-Then         
-hlink = New Hyperlink(TryCast(item, WField))         
-If hlink.Type = HyperlinkType.EMailLink Then              
-hlink.Type = HyperlinkType.WebLink              
-hlink.TextToDisplay = "Football"              
-hlink.Uri = """http://www.football.ua/"""         
-End If    
-End IfNextdoc.Save("WebLink_modified.doc")
+		If TypeOf item Is WField AndAlso TryCast(item, WField).FieldType = FieldType.FieldHyperlink 
+			Then         
+				hlink = New Hyperlink(TryCast(item, WField))         
+				If hlink.Type = HyperlinkType.EMailLink 
+				Then              
+					hlink.Type = HyperlinkType.WebLink              
+					hlink.TextToDisplay = "Football"              
+					hlink.Uri = """http://www.football.ua/"""         
+				End If    
+			End If
+		Next
+doc.Save("WebLink_modified.doc")
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 ### Hyperlink for Images
 
 The following code example illustrates how to set Hyperlinks for images.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWParagraph para = doc.Sections[0].AddParagraph();
 WPicture mImage = new WPicture(doc);
 mImage.LoadImage(Image.FromFile(@"..\..\Nature.jpg"));
+
 //Scales image.mImage.HeightScale = 50f;
 mImage.WidthScale = 50f;
 IWField field = para.AppendField("Hyperlink", FieldType.FieldHyperlink);
@@ -998,7 +1022,7 @@ hlink.PictureToDisplay = mImage;
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim para As IWParagraph = doc.Sections(0).AddParagraph()
 Dim mImage As New WPicture(doc)mImage.LoadImage(Image.FromFile("..\..\Nature.jpg"))
@@ -1010,6 +1034,7 @@ hlink.Type = HyperlinkType.WebLinkhlink.Uri = "http://www.syncfusion.com"hlink.P
 
 {% endhighlight %}
 
+{% endtabs %} 
 
 ## Text Boxes
 
@@ -1027,9 +1052,9 @@ WTextBox
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _53_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -1043,9 +1068,9 @@ Initializes a new instance of the WTextBox class.  </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _54_: _Public Properties_
+
 
 <table>
 <tr>
@@ -1075,7 +1100,9 @@ Gets or sets the formatting of the text box using WTextBoxFormat instance.  </t
 </table>
 The following code example illustrates how to use the WTextBox and TextBoxFormat classes.
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 IWSection section = doc.AddSection();
@@ -1083,8 +1110,11 @@ IWParagraph paragraph = section.AddParagraph();
 section.PageSetup.DifferentFirstPage = true;
 section.PageSetup.DifferentOddAndEvenPages = true;
 
-//Main doc text boxes.paragraph.AppendText("Testing textboxes");
-//1st text box.IWTextBox mainTextbox = paragraph.AppendTextBox(150, 110);
+//Main doc text boxes.
+paragraph.AppendText("Testing textboxes");
+
+//1st text box.
+IWTextBox mainTextbox = paragraph.AppendTextBox(150, 110);
 
 mainTextbox.TextBoxBody.AddParagraph().AppendText("Textbox text 1");
 mainTextbox.TextBoxFormat.FillColor = System.Drawing.Color.Blue;
@@ -1130,7 +1160,7 @@ doc.Save("TextBoxes.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 Dim section As IWSection = doc.AddSection()
@@ -1139,6 +1169,7 @@ section.PageSetup.DifferentFirstPage = True
 section.PageSetup.DifferentOddAndEvenPages = True
 
 'Main doc text boxes.paragraph.AppendText("Testing textboxes")
+
 '1st text box.Dim mainTextbox As IWTextBox = paragraph.AppendTextBox(150, 110)
 mainTextbox.TextBoxBody.AddParagraph().AppendText("Textbox text 1")
 mainTextbox.TextBoxFormat.FillColor = System.Drawing.Color.Blue
@@ -1156,6 +1187,7 @@ mainTextbox1.TextBoxFormat.TextWrappingStyle = TextWrappingStyle.Through
 mainTextbox1.TextBoxFormat.TextWrappingType = TextWrappingType.Both
 mainTextbox1.TextBoxFormat.HorizontalAlignment = ShapeHorizontalAlignment.Center
 mainTextbox1.TextBoxFormat.VerticalAlignment = ShapeVerticalAlignment.Bottom
+
 'Header or footer text boxes.paragraph = New WParagraph(doc)
 paragraph.AppendText("Hello textboxes")
 Dim textbox As IWTextBox = paragraph.AppendTextBox(20, 50)
@@ -1180,7 +1212,7 @@ textbox2.TextBoxFormat.VerticalAlignment = ShapeVerticalAlignment.Bottomsection.
 doc.Save("TextBoxes.doc")
 
 {% endhighlight %}
-
+{% endtabs %}
 
 ## Comments
 
@@ -1207,9 +1239,9 @@ WComment
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _55_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -1223,9 +1255,8 @@ Initializes a new instance of the WComment class.  </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _56_: _Public Properties_
 
 <table>
 <tr>
@@ -1249,9 +1280,8 @@ Gets the comment text body.  </td></tr>
 
 WCommentFormat has the following public properties and methods.
 
-### Public Methods
+#### Public Methods
 
-_Table_ _57_: _Public Methods_
 
 <table>
 <tr>
@@ -1277,9 +1307,9 @@ Replace the commented document content.</td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _58_: _Public Properties_
+
 
 <table>
 <tr>
@@ -1300,40 +1330,41 @@ Gets or sets the user initials. </td></tr>
 The following code example illustrates how to search for a comment in the last section of a document, and change the text and format of the comment.
 
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 WSection section = sourceDoc.LastSection;
 foreach (IWParagraph para in section.Paragraphs)
 {    
-foreach (ParagraphItem item in para.Items)    
-{        
-if (item is WComment)        
-{            
-WComment comment = item as WComment;            
-comment.TextBody.LastParagraph.Text = "NewText";            
-comment.Format.User = "TestUser";        
-}    
-}
+	foreach (ParagraphItem item in para.Items)    
+	{        
+	if (item is WComment)        
+		{            
+		WComment comment = item as WComment;            
+		comment.TextBody.LastParagraph.Text = "NewText";            
+		comment.Format.User = "TestUser";        
+		}    
+	}
 }
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim section As WSection = sourceDoc.LastSection
 For Each para As IWParagraph In section.Paragraphs    
-For Each item As ParagraphItem In para.Items        
-If TypeOf item Is WComment Then            
-Dim comment As WComment = CType(IIf(TypeOf item Is WComment, item, Nothing), WComment)            
-comment.TextBody.LastParagraph.Text = "NewText"            
-comment.Format.User = "TestUser"        
-End If    
-Next item
+	For Each item As ParagraphItem In para.Items        
+	If TypeOf item Is WComment Then            
+		Dim comment As WComment = CType(IIf(TypeOf item Is WComment, item, Nothing), WComment)            
+		comment.TextBody.LastParagraph.Text = "NewText"            
+		comment.Format.User = "TestUser"        
+	End If    
+	Next item
 Next para
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 
 ### Comments Collection
@@ -1341,9 +1372,9 @@ Next para
 You can access comments while browsing through the collection of paragraph items or through the collection of comments by using the WordDocument.GetComments method.
 
 
-### Public Methods
+#### Public Methods
 
-_Table_ _59_: _Public Methods_
+
 
 <table>
 <tr>
@@ -1362,7 +1393,9 @@ Remove comments at the specified index from the document.</td></tr>
 
 The following code example illustrates how to get all the comments from the document and remove them.
 
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 WordDocument doc = new WordDocument("sample.doc");
 commentsCollection comments = doc.GetComments();
@@ -1373,7 +1406,7 @@ comments.Clear();
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As New WordDocument("sample.doc")
 Dim comments As CommentsCollection = doc.GetComments()
@@ -1384,6 +1417,7 @@ comments.Clear()
 
 {% endhighlight %}
 
+{% endtabs %}
 
 ## Symbols
 
@@ -1391,8 +1425,8 @@ WSymbol class represents a symbol in the Word document. To insert a symbol, clic
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img5.png)
 
-
-
+Symbol Dialog Box
+{:.caption}
 
 You can use the AppendSymbol method of WParagraph to insert a symbol by using DocIO.
 
@@ -1410,9 +1444,9 @@ WSymbol
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _60_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -1428,7 +1462,6 @@ Initializes a new instance of the WSymbol class.  </td></tr>
 
 ### Public Properties
 
-_Table_ _61_: _Public Properties_
 
 <table>
 <tr>
@@ -1456,7 +1489,7 @@ Gets or sets symbol font name.  </td></tr>
 The following code example illustrates how to use the WSymbol class.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 IWSection section = doc.AddSection();
@@ -1468,7 +1501,7 @@ doc.Save("Symbol.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 Dim section As IWSection = doc.AddSection()
@@ -1486,8 +1519,8 @@ Break class represents a break in the Word document. To insert a break, open the
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img6.png)
 
-
-
+Break Dialog Box
+{:.caption}
 
 
 You can use the AppendBreak method of WParagraph to insert a break by using DocIO. BreakType property specifies the type of the break. The following are the types of breaks supported by the Break class.
@@ -1512,9 +1545,9 @@ Break
 
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _62_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -1532,9 +1565,9 @@ Initializes a new instance of the Break class with Break Type.  </td></tr>
 </table>
 
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _63_: _Public Constructors_
+
 
 <table>
 <tr>
@@ -1553,7 +1586,9 @@ Gets the type of the entity.</td></tr>
 
 The following code example illustrates how to add a break to a paragraph.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 IWordDocument doc = new WordDocument();
 IWSection section = doc.AddSection();
@@ -1569,7 +1604,7 @@ doc.Save("Breaks.doc");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim doc As IWordDocument = New WordDocument()
 Dim section As IWSection = doc.AddSection()
@@ -1584,6 +1619,7 @@ pageBreakPara.AppendText("After page break")
 doc.Save("Breaks.doc")
 
 {% endhighlight %}
+{% endtabs %} 
 
 ## OLE Objects
 
@@ -1613,8 +1649,8 @@ When you copy information as an embedded instance, the destination file requires
 
 ![](Working-with-Paragraphs_images/Working-with-Paragraphs_img9.png)
 
-
-
+Setting the OLE Object Type in the Object Dialog Box in Microsoft Word
+{:.caption}
 
 
 ### Inserting Objects
@@ -1630,7 +1666,9 @@ Essential DocIO provides various overloads for the AppendOleObject method to ena
 
 The following code examples illustrate how to insert an OleObject to a paragraph.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 paragraph.AppendOleObject(buffer, pic, OleObjectType.AdobeAcrobatDocument);
 paragraph.AppendOleObject(buffer, pic, "pdf");
@@ -1639,7 +1677,7 @@ paragraph.AppendOleObject(stream, pic, "pdf");
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 paragraph.AppendOleObject(Buffer, pic, OleObjectType.AdobeAcrobatDocument)
 paragraph.AppendOleObject(Buffer, pic, "pdf")
@@ -1647,6 +1685,7 @@ paragraph.AppendOleObject(stream, pic, OleObjectType.Excel_97_2003_Worksheet)
 paragraph.AppendOleObject(stream, pic, "pdf")
 
 {% endhighlight %}
+{% endtabs %} 
 
 Essential DocIO also allows you to insert objects from disk through file path by using the following overload:
 
@@ -1668,9 +1707,8 @@ N> Initially DocIO generated documents display the icon (given image) in place o
 
 Following are the API details of this feature:
 
-### Public Constructors
+#### Public Constructors
 
-_Table_ _64_: _Public Constructors_
 
 <table>
 <tr>
@@ -1684,9 +1722,9 @@ Gets the type of the entity. </td></tr>
 </table>
 
 
-### Public Properties
+#### Public Properties
 
-_Table_ _65_: _Public Properties_
+
 
 <table>
 <tr>
@@ -1738,7 +1776,9 @@ Gets or sets the value indicating whether the OLE object is displayed as an icon
 
 The following code example illustrates how to insert an OLE instance in disk to a Word document.
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 WordDocument document = new WordDocument();
 document.EnsureMinimal();
@@ -1751,7 +1791,7 @@ document.LastParagraph.AppendOleObject(@"Startup.wav", pic, OleObjectType.Packag
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim document As WordDocument = New WordDocument()
 document.EnsureMinimal()
@@ -1762,10 +1802,11 @@ pic.Width = 100.0Fpic.Height = 100.0F
 'Adds new OLE Object.document.LastParagraph.AppendOleObject(@"startup.wav", pic, OleObjectType.Package)
 
 {% endhighlight %}
-
+{% endtabs %} 
 The following code example illustrates how to extract an OLE instance from an existing document and insert it into a new document.
-
-{% highlight c# %}
+{% tabs %}
+ 
+{% highlight C# %}
 
 WordDocument oleSource = new WordDocument("OleTemplate.doc");
 WordDocument dest = new WordDocument();
@@ -1778,7 +1819,7 @@ dest.LastParagraph.AppendOleObject(oleObject.Container, pic, OleLinkType.Embed);
 
 {% endhighlight %}
 
-{% highlight vbnet %}
+{% highlight VB %}
 
 Dim oleSource As WordDocument = New WordDocument("OleTemplate.doc")
 Dim dest As WordDocument = New WordDocument()
@@ -1790,5 +1831,5 @@ Dim pic As WPicture = TryCast(oleObject.OlePicture.Clone(), WPicture)
 dest.LastParagraph.AppendOleObject(oleObject.Container, pic, OleLinkType.Embed)
 
 {% endhighlight %}
-
+{% endtabs %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing-the-appearance
+title: Customizing the appearance | Barcode | ASP.NET MVC | Syncfusion
 description: customizing the appearance
 platform: ejmvc
 control: Barcode
@@ -16,7 +16,7 @@ N> This color customization is possible only for one dimensional barcodes and it
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
@@ -66,36 +66,36 @@ Execute the above code to render the following output.
 
 ![](Customizing-the-appearance_images/Customizing-the-appearance_img2.png)
 
-
-_Figure4: Customized Barcode_
+Customized Barcode
+{:.caption}
 
 The height of the barcode can be changed using the BarHeight property. The equivalent property to change the block size for two dimensional barcode is XDimension.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
-<div
+	<div
 
-@Html.EJ().Barcode("barcode")
+	@Html.EJ().Barcode("barcode")
 
-          .Text("B5330E8278BC4C797C49DD3ED5AD9715")
+			  .Text("B5330E8278BC4C797C49DD3ED5AD9715")
 
-          .SymbologyType(BarcodeSymbolType.Code39)
+			  .SymbologyType(BarcodeSymbolType.Code39)
 
-          .DisplayText(false)
+			  .DisplayText(false)
 
-          .BarcodeToTextGapHeight(10)
+			  .BarcodeToTextGapHeight(10)
 
-          .BarHeight(45)
+			  .BarHeight(45)
 
-          .DarkBarColor("#990099")
+			  .DarkBarColor("#990099")
 
-          .Render()
+			  .Render()
 
-</div>
+	</div>
 
 </div>
 
@@ -110,8 +110,7 @@ Execute the above code to render the following output.
 
 ![](Customizing-the-appearance_images/Customizing-the-appearance_img3.png)
 
-
-_Figure5: Barcode with customized height_
-
+Barcode with customized height
+{:.caption}
 
 

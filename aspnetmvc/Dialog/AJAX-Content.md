@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AJAX-Content
+title: AJAX Content | Dialog | ASP.NET MVC | Syncfusion
 description: ajax content
 platform: ejmvc
 control: Dialog
@@ -17,14 +17,14 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 1. In the VIEW page set a helper element for rendering the Dialog control. 
 
-   ~~~ js
+   ~~~ cshtml
 
    // In the CHTML page add the Dialog widget and set the ContentUrl from the file reference and set ContentType as ajax.
 
    @{Html.EJ().Dialog("dialog").Title("Syncfusion Dialog").ContentUrl("../Content/Dialog/twitter.html").ContentType("ajax").Width(300).Height("200").Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -45,7 +45,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 			<style>
 
-				.twitter-logo {
+				.twitter-logo
+				{
 
 					background-color: #FFFFFF;
 
@@ -53,7 +54,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.cont-list img {
+				.cont-list img 
+				{
 
 					float: left;
 
@@ -67,7 +69,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.comments-list {
+				.comments-list 
+				{
 
 					/* background-color: #EFEFEF; */
 
@@ -77,7 +80,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.comments {
+				.comments 
+				{
 
 					padding: 10px;
 
@@ -89,7 +93,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.cont-list {
+				.cont-list 
+				{
 
 					border-bottom: 1px solid #BBBCBB;
 
@@ -101,7 +106,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-					.cont-list:last-child {
+					.cont-list:last-child 
+					{
 
 						border-bottom: none;
 
@@ -111,7 +117,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.time-panel {
+				.time-panel 
+				{
 
 					float: right;
 
@@ -123,7 +130,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.headername {
+				.headername 
+				{
 
 					font-size: 16px;
 
@@ -135,7 +143,8 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
 
 
-				.c-list {
+				.c-list 
+				{
 
 					float: right;
 
@@ -214,7 +223,7 @@ The following steps explains you the implementation of AJAX content in the Dialo
 		</html>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -223,5 +232,5 @@ The following steps explains you the implementation of AJAX content in the Dialo
 
    ![](AJAX-Content_images/AJAX-Content_img1.png)
 
-   _Figure 17: Dialog with “AJAX Content_                                                           
-
+    Dialog with “AJAX Content
+   {:.caption}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: PercentageTextBox | PercentageTextBox | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: PercentageTextBox
 documentation: ug
 ---
 
-# Overview
+# PercentageTextBox
 
 Essential ASP.NET MVC PercentageTextBox is used to display only percentage values. It has Spin buttons to increase or decrease the values in the Text Box. 
 

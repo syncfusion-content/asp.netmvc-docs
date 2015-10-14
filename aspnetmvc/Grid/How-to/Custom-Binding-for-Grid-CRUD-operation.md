@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Custom-Binding-for-Grid-CRUD-operation
+title: Custom Binding for Grid CRUD operation | Grid | ASP.NET MVC | Syncfusion
 description: custom binding for grid crud operation
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-### Custom Binding for Grid CRUD operation
+# Custom Binding for Grid CRUD operation
 
 In Grid control DataManager is used for data processing. The adaptors of dataManager are customizable that can be extended for custom Binding with server-side for Grid CRUD operation.
 
 For instance bind the data to Grid by using “remoteSaveAdaptor” and extend it to modify its update method to bind edited record values of Grid as “FormCollection” in server-side.
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EJGrid.Models.Order>("Grid")
 
@@ -119,7 +120,7 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace EJGrid.Controllers
 
@@ -202,6 +203,7 @@ namespace EJGrid.Controllers
 }
 
 {% endhighlight %}
+{% endtabs %}  
 
 The output is as follows.
 {% include image.html url="/aspnetmvc/Grid/How-to/Custom-Binding-for-Grid-CRUD-operation_images/Custom-Binding-for-Grid-CRUD-operation_img1.png"%}

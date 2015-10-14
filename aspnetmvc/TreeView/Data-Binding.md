@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | TreeView | ASP.NET MVC | Syncfusion
 description: data binding 
 platform: ejmvc
 control: TreeView
@@ -19,7 +19,7 @@ The Field property in TreeView includes the data source fields and it can be set
 
 
 
-_Table2: MVC field properties_
+_MVC field properties_
 
 <table>
 <tr>
@@ -141,115 +141,115 @@ The following steps explain how you can bind local data to TreeView.
 
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below.
    
-   ~~~ cs
+   ~~~ csharp
 
-		// Add the following data list to be bind in the controller page and define the corresponding data.
+	// Add the following data list to be bind in the controller page and define the corresponding data.
 
-		// Define local data source elements with  fields            
+	// Define local data source elements with  fields            
 
 
 
-		public class treeviewData
+	public class treeviewData
 
-		    {
+	{
 
-		       //TreeView data source should have Id, ParentId and Text as mandatory
+	   //TreeView data source should have Id, ParentId and Text as mandatory
 
-				public int Id { get; set; }
+		public int Id { get; set; }
 
-		       // ParentId takes the value of the parent nodes Id
+	   // ParentId takes the value of the parent nodes Id
 
-				public int Pid { get; set; }
+		public int Pid { get; set; }
 
-		       //Text to be displayed in the TreeView node
+	   //Text to be displayed in the TreeView node
 
-				public string Name { get; set; }
+		public string Name { get; set; }
 
-		       //Set to true if node has children
+	   //Set to true if node has children
 
-				public bool HasChild { get; set; }      
+		public bool HasChild { get; set; }      
 
-		    }
+	}
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. In the controller page, create a List of specified class type.
 
-   ~~~ cs   
+   ~~~ csharp  
 
 
-		//Refer the Model in the controller
+	//Refer the Model in the controller
 
-		using <Applicationname>.Models;
+	using <Applicationname>.Models;
 
 
 
-		public ActionResult Index()
+	public ActionResult Index()
 
-		    {
+	{
 
-			   List<treeviewData> localData = new List<treeviewData>();
+	   List<treeviewData> localData = new List<treeviewData>();
 
-			    localData.Add(new treeviewData{ id= 1, name= "Favorites", hasChild= true });
+		localData.Add(new treeviewData{ id= 1, name= "Favorites", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 2, pid= 1, name= "Desktop" });
+		localData.Add(new treeviewData{ id= 2, pid= 1, name= "Desktop" });
 
-			    localData.Add(new treeviewData{ id= 3, pid= 1, name= "Downloads" });
+		localData.Add(new treeviewData{ id= 3, pid= 1, name= "Downloads" });
 
-			    localData.Add(new treeviewData{ id = 4, pid = 1, name = "Recent places" });
+		localData.Add(new treeviewData{ id = 4, pid = 1, name = "Recent places" });
 
-			    localData.Add(new treeviewData{ id= 5, name= "libraries", hasChild= true });
+		localData.Add(new treeviewData{ id= 5, name= "libraries", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 6, pid= 5, name= "Documents", hasChild= true });
+		localData.Add(new treeviewData{ id= 6, pid= 5, name= "Documents", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 7, pid= 6, name= "My Documents" });
+		localData.Add(new treeviewData{ id= 7, pid= 6, name= "My Documents" });
 
-			    localData.Add(new treeviewData{ id= 8, pid= 6, name= "Public Documents" });
+		localData.Add(new treeviewData{ id= 8, pid= 6, name= "Public Documents" });
 
-			    localData.Add(new treeviewData{ id= 9, pid= 5, name= "Pictures", hasChild= true });
+		localData.Add(new treeviewData{ id= 9, pid= 5, name= "Pictures", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 10, pid= 9, name= "My Pictures" });
+		localData.Add(new treeviewData{ id= 10, pid= 9, name= "My Pictures" });
 
-			    localData.Add(new treeviewData{ id= 11, pid= 9, name= "Public Pictures" });
+		localData.Add(new treeviewData{ id= 11, pid= 9, name= "Public Pictures" });
 
-			    localData.Add(new treeviewData{ id= 12, pid= 5, name= "Music", hasChild= true });
+		localData.Add(new treeviewData{ id= 12, pid= 5, name= "Music", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 13, pid= 9, name= "My Music" });
+		localData.Add(new treeviewData{ id= 13, pid= 9, name= "My Music" });
 
-			    localData.Add(new treeviewData{ id= 14, pid= 9, name= "Public Music" });
+		localData.Add(new treeviewData{ id= 14, pid= 9, name= "Public Music" });
 
-			    localData.Add(new treeviewData{ id= 15, pid= 5, name= "Subversion" });
+		localData.Add(new treeviewData{ id= 15, pid= 5, name= "Subversion" });
 
-			    localData.Add(new treeviewData{ id= 16, name= "Computer", hasChild= true });
+		localData.Add(new treeviewData{ id= 16, name= "Computer", hasChild= true });
 
-			    localData.Add(new treeviewData{ id= 17, pid= 16, name= "Folder(C)" });
+		localData.Add(new treeviewData{ id= 17, pid= 16, name= "Folder(C)" });
 
-			    localData.Add(new treeviewData{ id= 18, pid= 16, name= "Folder(D)" });
+		localData.Add(new treeviewData{ id= 18, pid= 16, name= "Folder(D)" });
 
-			    localData.Add(new treeviewData{ id= 19, pid= 16, name= "Folder(F)" });
+		localData.Add(new treeviewData{ id= 19, pid= 16, name= "Folder(F)" });
 
-			    ViewBag.datasource = localData;
+		ViewBag.datasource = localData;
 
-			    return View();
+		return View();
 
-		    }
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
 3. In the View page, add TreeView helper and map the properties defined in <list> to the corresponding fields in datasource.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<treeviewData>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild"))
+	@Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<treeviewData>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild"))
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -259,8 +259,8 @@ The output for TreeView control with Local Data binding is as follows.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
-_Figure43: TreeView with local data-binding_
+TreeView with local data-binding
+{:.caption}
 
 ## Remote Data
 
@@ -284,14 +284,14 @@ The following steps explain how you can bind remote data to TreeView control.
 
 3. Assign dataSource and query property values to bind the remote data. Map the corresponding fields in TreeView control as follows.
 
-   ~~~ js
+   ~~~ cshtml
 
 
-		      @Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource(s1 => s1.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query(" ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)").Id("CategoryID").Text("CategoryName").Child(s2 => s2.Datasource(s3 => s3.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).TableName("Products").Id("ProductID").ParentId("CategoryID").Text("ProductName"))) 
+	@Html.EJ().TreeView("treeView").TreeViewFields(s => s.Datasource(s1 => s1.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query(" ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)").Id("CategoryID").Text("CategoryName").Child(s2 => s2.Datasource(s3 => s3.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).TableName("Products").Id("ProductID").ParentId("CategoryID").Text("ProductName"))) 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 

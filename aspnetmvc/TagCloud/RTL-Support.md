@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | TagCloud | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: TagCloud
@@ -16,7 +16,7 @@ The EnableRTL feature supports you to change the left-to-right alignment of the 
 The following steps explains you the EnableRTL property in TagCloud.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 

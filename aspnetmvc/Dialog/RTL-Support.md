@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Dialog | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Dialog
@@ -17,20 +17,20 @@ The following steps explain enabling the right-to-left property for Dialog contr
 
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
-   ~~~ js
+   ~~~ cshtml
    
-		// In the CSHTML page add the Dialog widget using helpers and set EnableRTL to ‘true’. 
+	// In the CSHTML page add the Dialog widget using helpers and set EnableRTL to ‘true’. 
 
 
 
-		@{Html.EJ().Dialog("rtldialog").Title("WinRT").ContentTemplate(@<div>
+	@{Html.EJ().Dialog("rtldialog").Title("WinRT").ContentTemplate(@<div>
 
-		Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span>
+	Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span>
 
-		It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps.</div>).Width(550).EnableRTL(true).Render();}
+	It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps.</div>).Width(550).EnableRTL(true).Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -40,5 +40,5 @@ The following steps explain enabling the right-to-left property for Dialog contr
 
    ![](RTL-Support_images/RTL-Support_img1.png)
 
-   _Figure 31: Dialog with “EnableRTL"_
-
+	Dialog with “EnableRTL"
+    {:.caption}

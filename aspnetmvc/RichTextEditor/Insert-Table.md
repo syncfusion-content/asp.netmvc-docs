@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert-Table
+title: Insert Table | RichTextEditor | ASP.NET MVC | Syncfusion
 description: insert table
 platform: ejmvc
 control: RichTextEditor

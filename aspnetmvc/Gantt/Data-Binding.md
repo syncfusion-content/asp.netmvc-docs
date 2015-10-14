@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | Gantt | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: Gantt
@@ -20,216 +20,218 @@ Hierarchy Data-source Binding
 The following code example shows how to bind the hierarchical local data into the Gantt control.
 
 
+{% tabs %}
+  
 {% highlight C# %}
 
 public class GanttController : Controller
 
-    {
+{
 
 
 
-        // GET: /Gantt/
+	// GET: /Gantt/
 
-        public ActionResult Gantt()
+	public ActionResult Gantt()
 
-        {
+	{
 
-            ViewBag.datasource = this.GetDataSource();
+		ViewBag.datasource = this.GetDataSource();
 
-            return View();
+		return View();
 
-        }
+	}
 
 
 
 
 
-        #region CreateDataSource
+	#region CreateDataSource
 
-        private List<Data> GetDataSource()
+	private List<Data> GetDataSource()
 
-        {
+	{
 
-            List<Data> DataCollection = new List<Data>();
+		List<Data> DataCollection = new List<Data>();
 
 
 
-            Data ParentData = new Data()
+		Data ParentData = new Data()
 
-            {
+		{
 
-                TaskId = 1,
+			TaskId = 1,
 
-                TaskName = "Design",
+			TaskName = "Design",
 
-                StartDate = new DateTime(2014, 02, 10),
+			StartDate = new DateTime(2014, 02, 10),
 
-                EndDate = new DateTime(2014, 02, 14),
+			EndDate = new DateTime(2014, 02, 14),
 
-                BaselineStartDate = new DateTime(2014, 02, 10),
+			BaselineStartDate = new DateTime(2014, 02, 10),
 
-                BaselineEndDate = new DateTime(2014, 02, 12),
+			BaselineEndDate = new DateTime(2014, 02, 12),
 
-                Duration = 5
+			Duration = 5
 
-            };
+		};
 
 
 
-            Data ChildData = new Data()
+		Data ChildData = new Data()
 
-            {
+		{
 
-                TaskId = 2,
+			TaskId = 2,
 
-                TaskName = "Software Specification",
+			TaskName = "Software Specification",
 
-                StartDate = new DateTime(2014, 02, 10),
+			StartDate = new DateTime(2014, 02, 10),
 
-                EndDate = new DateTime(2014, 02, 12),
+			EndDate = new DateTime(2014, 02, 12),
 
-                BaselineStartDate = new DateTime(2014, 02, 10),
+			BaselineStartDate = new DateTime(2014, 02, 10),
 
-                BaselineEndDate = new DateTime(2014, 02, 12),
+			BaselineEndDate = new DateTime(2014, 02, 12),
 
-                Duration = 4,
+			Duration = 4,
 
-                Progress = "60",
+			Progress = "60",
 
-                ResourceId = new List<int>() { 2 }
+			ResourceId = new List<int>() { 2 }
 
-            };
+		};
 
-            ParentData.SubTasks = new List<Data>();
+		ParentData.SubTasks = new List<Data>();
 
-            ParentData.SubTasks.Add(ChildData);
+		ParentData.SubTasks.Add(ChildData);
 
 
 
-            ChildData = new Data()
+		ChildData = new Data()
 
-            {
+		{
 
-                TaskId = 3,
+			TaskId = 3,
 
-                TaskName = "Develop prototype",
+			TaskName = "Develop prototype",
 
-                StartDate = new DateTime(2014, 02, 10),
+			StartDate = new DateTime(2014, 02, 10),
 
-                EndDate = new DateTime(2014, 02, 12),
+			EndDate = new DateTime(2014, 02, 12),
 
-                BaselineStartDate = new DateTime(2014, 02, 10),
+			BaselineStartDate = new DateTime(2014, 02, 10),
 
-                BaselineEndDate = new DateTime(2014, 02, 12),
+			BaselineEndDate = new DateTime(2014, 02, 12),
 
-                Duration = 4,
+			Duration = 4,
 
-                Progress = "70",
+			Progress = "70",
 
-                ResourceId = new List<int>() { 3 }
+			ResourceId = new List<int>() { 3 }
 
-            };
+		};
 
-            ParentData.SubTasks.Add(ChildData);
+		ParentData.SubTasks.Add(ChildData);
 
 
 
-            ChildData = new Data()
+		ChildData = new Data()
 
-            {
+		{
 
-                TaskId = 4,
+			TaskId = 4,
 
-                TaskName = "Get approval from customer",
+			TaskName = "Get approval from customer",
 
-                StartDate = new DateTime(2014, 02, 12),
+			StartDate = new DateTime(2014, 02, 12),
 
-                EndDate = new DateTime(2014, 02, 14),
+			EndDate = new DateTime(2014, 02, 14),
 
-                BaselineStartDate = new DateTime(2014, 02, 10),
+			BaselineStartDate = new DateTime(2014, 02, 10),
 
-                BaselineEndDate = new DateTime(2014, 02, 12),
+			BaselineEndDate = new DateTime(2014, 02, 12),
 
-                Duration = 2,
+			Duration = 2,
 
-                Progress = "80",
+			Progress = "80",
 
-                ResourceId = new List<int>() { 1 },
+			ResourceId = new List<int>() { 1 },
 
-                Predecessor = "3FS"
+			Predecessor = "3FS"
 
-            };
+		};
 
-            ParentData.SubTasks.Add(ChildData);
+		ParentData.SubTasks.Add(ChildData);
 
-            ChildData = new Data()
+		ChildData = new Data()
 
-            {
+		{
 
-                TaskId = 5,
+			TaskId = 5,
 
-                TaskName = "Design complete",
+			TaskName = "Design complete",
 
-                StartDate = new DateTime(2014, 02, 14),
+			StartDate = new DateTime(2014, 02, 14),
 
-                EndDate = new DateTime(2014, 02, 14),
+			EndDate = new DateTime(2014, 02, 14),
 
-                BaselineStartDate = new DateTime(2014, 02, 10),
+			BaselineStartDate = new DateTime(2014, 02, 10),
 
-                BaselineEndDate = new DateTime(2014, 02, 12),
+			BaselineEndDate = new DateTime(2014, 02, 12),
 
-                Duration = 0,
+			Duration = 0,
 
-                Predecessor = "4FS"
+			Predecessor = "4FS"
 
-            };
+		};
 
-            ParentData.SubTasks.Add(ChildData);
+		ParentData.SubTasks.Add(ChildData);
 
-            DataCollection.Add(ParentData);
+		DataCollection.Add(ParentData);
 
-            return DataCollection;
+		return DataCollection;
 
-        }
+	}
 
-        #endregion
+	#endregion
 
 
 
 
 
-        public class Data
+	public class Data
 
-        {
+	{
 
-            public int TaskId { get; set; }
+		public int TaskId { get; set; }
 
-            public string TaskName { get; set; }
+		public string TaskName { get; set; }
 
-            public DateTime StartDate { get; set; }
+		public DateTime StartDate { get; set; }
 
-            public DateTime EndDate { get; set; }
+		public DateTime EndDate { get; set; }
 
-            public DateTime BaselineStartDate { get; set; }
+		public DateTime BaselineStartDate { get; set; }
 
-            public DateTime BaselineEndDate { get; set; }
+		public DateTime BaselineEndDate { get; set; }
 
-            public int Duration { get; set; }
+		public int Duration { get; set; }
 
-            public List<Data> SubTasks { get; set; }
+		public List<Data> SubTasks { get; set; }
 
-            public string Progress { get; set; }
+		public string Progress { get; set; }
 
-            public List<int> ResourceId { get; set; }
+		public List<int> ResourceId { get; set; }
 
-            public string Predecessor { get; set; }
+		public string Predecessor { get; set; }
 
-        }
+	}
 
-    }
+}
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript
 
@@ -237,11 +239,7 @@ public class GanttController : Controller
 
 @using Syncfusion.MVC.EJ
 
-
-
 <!DOCTYPE html>    
-
-
 
 <html>
 
@@ -251,13 +249,9 @@ public class GanttController : Controller
 
 </head>
 
-
-
 <body>
 
-
-
-      @(Html.EJ().Gantt("Gantt")
+			  @(Html.EJ().Gantt("Gantt")
 
               .TaskIdMapping("TaskId")
 
@@ -281,19 +275,15 @@ public class GanttController : Controller
 
               )
 
-
-
      @(Html.EJ().ScriptManager())
 
  </body>
 
  </html>
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %}
 
 The output of the above steps is as follows.
 
@@ -301,7 +291,8 @@ The output of the above steps is as follows.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-_Figure 31: Data Binding_
+Data Binding
+{:.caption}
 
 ## Self-Referential Data Binding (Flat Data)
 
@@ -312,10 +303,9 @@ Gantt can be rendered from self-referential data structures, by providing two fi
 
 
 
+{% tabs %}
+
 {% highlight C# %}
-
-
-
 
 public partial class GanttController : Controller
 
@@ -674,7 +664,7 @@ public partial class GanttController : Controller
     }
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -708,7 +698,7 @@ public partial class GanttController : Controller
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 The following screenshot shows the output of the above steps.
 
@@ -716,5 +706,6 @@ The following screenshot shows the output of the above steps.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-_Figure 32: Self-Referential Data Binding_
+Self-Referential Data Binding
+{:.caption}
 

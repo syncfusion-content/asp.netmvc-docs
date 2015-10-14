@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header-customization
+title: Header customization | Accordion  | ASP.NET MVC | Syncfusion
 description: header customization
 platform: ejmvc
 control: Accordion 
@@ -17,37 +17,33 @@ Accordion widget allows you to set Collapsible state for an Accordion header. Th
 
 The following code explains to enable Collapsible state for Accordion using mvc helper.
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 // In the View page, render Accordion with corresponding data and enable Collapsible property.
 
-
-
 <div style="width: 400px">
 
-    @{Html.EJ().Accordion("accordion").Items(data =>
+@{Html.EJ().Accordion("accordion").Items(data =>
 
-               {
+   {
 
-                   data.Add().Text("Essential Chart").ContentTemplate(@<div>
+	   data.Add().Text("Essential Chart").ContentTemplate(@<div>
 
-                       Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
+		   Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
+	   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
 
-                       Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
+		   Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Grid").ContentTemplate(@<div>
+	   data.Add().Text("Essential Grid").ContentTemplate(@<div>
 
-                       Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
+		   Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-               }).Collapsible(true).Render();}
+   }).Collapsible(true).Render();}
 
 </div>
 
@@ -58,9 +54,6 @@ The following code explains to enable Collapsible state for Accordion using mvc 
  Output for Accordion control with collapsible headers.
 
 ![](Header-customization_images/Header-customization_img1.png)
-
-
-
 
 
 
@@ -75,36 +68,34 @@ Accordion widget provides you support to set the event, where the headers should
 
 The following code explains you to configure header expand event for Accordion.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 // In the View page, render Accordion with corresponding data and configure the Events property.
 
-
-
 <div style="width: 400px">
 
-    @{Html.EJ().Accordion("accordion").Items(data =>
+@{Html.EJ().Accordion("accordion").Items(data =>
 
-               {
+   {
 
-                   data.Add().Text("Essential Chart").ContentTemplate(@<div>
+	   data.Add().Text("Essential Chart").ContentTemplate(@<div>
 
-                       Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
+		   Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
+	   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
 
-                       Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
+		   Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Grid").ContentTemplate(@<div>
+	   data.Add().Text("Essential Grid").ContentTemplate(@<div>
 
-                       Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
+		   Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-               }).Events("mouseout").Render();}
+   }).Events("mouseout").Render();}
 
 </div>
 
@@ -128,38 +119,34 @@ Specify the selected item in Accordion panel
 
 The following code explains you to configure selected item for Accordion.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 // In the View page, render Accordion with corresponding data and configure selected item for Accordion based on the index.
 
-
-
-
-
 <div style="width: 400px">
 
-    @{Html.EJ().Accordion("accordion").Items(data =>
+@{Html.EJ().Accordion("accordion").Items(data =>
 
-               {
+   {
 
-                   data.Add().Text("Essential Chart").ContentTemplate(@<div>
+	   data.Add().Text("Essential Chart").ContentTemplate(@<div>
 
-                       Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
+		   Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
+	   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
 
-                       Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
+		   Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Grid").ContentTemplate(@<div>
+	   data.Add().Text("Essential Grid").ContentTemplate(@<div>
 
-                       Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
+		   Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-               }).SelectedItemIndex(2).Render();}
+   }).SelectedItemIndex(2).Render();}
 
 </div>
 
@@ -179,44 +166,40 @@ In Accordion widget you can select multiple panel items using SelectedItems prop
 ### Configure multiple selection in Accordion panel
 
 The following code explains to configure selected items for Accordion.
-{% highlight html %}
 
+{% highlight CSHTML%}
 
 // In the View page, render Accordion with corresponding data and configure multiple items selection for Accordion.
 
-
-
-
-
 <div style="width: 400px">
 
-    @{      //List of integer array with index values.
+@{      //List of integer array with index values.
 
-        List<int> selecteditem = new List<int>() { 0, 1, 2 };
+List<int> selecteditem = new List<int>() { 0, 1, 2 };
 
-    }
+}
 
-    @{Html.EJ().Accordion("accordion").Items(data =>
+@{Html.EJ().Accordion("accordion").Items(data =>
 
-               {
+   {
 
-                   data.Add().Text("Essential Chart").ContentTemplate(@<div>
+	   data.Add().Text("Essential Chart").ContentTemplate(@<div>
 
-                       Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
+		   Essential Chart for ASP.NET MVC is a visually stunning, high-performance charting component that is easy to use. It includes 35 chart types ranging from simple column charts to specialized financial charts. The charts are highly customizable and have a powerful data model that makes data binding simple.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
+	   data.Add().Text("Essential Schedule").ContentTemplate(@<div>
 
-                       Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
+		   Essential Schedule for ASP.NET MVC is an Outlook Calendar-like scheduler control that lets you add rich scheduling capabilities to your web applications. It includes an advanced set of features including data binding, multiple resource views, rich interactivity, support for AJAX, client-side events, and much more.
 
-                   </div>);
+	   </div>);
 
-                   data.Add().Text("Essential Grid").ContentTemplate(@<div>
+	   data.Add().Text("Essential Grid").ContentTemplate(@<div>
 
-                       Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
+		   Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-               }).SelectedItems(selecteditem).EnableMultipleOpen(true).Render();}
+   }).SelectedItems(selecteditem).EnableMultipleOpen(true).Render();}
 
 </div>
 

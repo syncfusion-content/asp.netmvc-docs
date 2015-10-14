@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | Grid | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: Grid
@@ -20,8 +20,9 @@ The globalize.culture.en-US.min.js scripts are changeable based on the culture n
 
 The following code example demonstrates how to switch the culture of Grid as de-DE (German - Germany).
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
 
@@ -84,54 +85,57 @@ public partial class GridController : Controller
 
 
 {% endhighlight  %}
+{% endtabs %} 
 
 The Grid and Pager has its own locale labels for applying the information about specific fields in its control. You can set them in the sample side for each culture based translation. The following code example is applied in the sample side for all the above platforms.
 {% highlight js %}
 <script type="text/javascript">
 
-        // Locale labels for ejGrid
+	// Locale labels for ejGrid
 
-ej.Grid.locale["de-DE"] = {
+	ej.Grid.locale["de-DE"] = 
+	{
 
-            EmptyRecord: "Keine Aufzeichnungen angezeigt",
+		EmptyRecord: "Keine Aufzeichnungen angezeigt",
 
-            GroupDropArea: "Ziehen Sie eine Spaltenüberschrift hier",
+		GroupDropArea: "Ziehen Sie eine Spaltenüberschrift hier",
 
-            DeleteOperationAlert: "Keine Einträge für Löschvorgang ausgewählt",
+		DeleteOperationAlert: "Keine Einträge für Löschvorgang ausgewählt",
 
-            EditOperationAlert: "Keine Einträge für Bearbeiten Betrieb ausgewählt",
+		EditOperationAlert: "Keine Einträge für Bearbeiten Betrieb ausgewählt",
 
-            SaveButton: "Speichern",
+		SaveButton: "Speichern",
 
-            CancelButton: "stornieren",
+		CancelButton: "stornieren",
 
-            EditFormTitle: "Korrektur von",
+		EditFormTitle: "Korrektur von",
 
-            GroupCaptionFormat: "{{:field}}: {{:key}} - {{:count}} {{if count == 1}} Beiträge {{else}} Beiträges {{/if}}",
+		GroupCaptionFormat: "{{:field}}: {{:key}} - {{:count}} {{if count == 1}} Beiträge {{else}} Beiträges {{/if}}",
 
-        };
+	};
 
-       // Locale labels for Grid pager
+	// Locale labels for Grid pager
 
-ej.Pager.locale["de-DE"] = {
+	ej.Pager.locale["de-DE"] = 
+	{
 
-            pagerInfo: "{0} von {1} Seiten ({2} Beiträge)",
+		pagerInfo: "{0} von {1} Seiten ({2} Beiträge)",
 
-            firstPageTooltip: "Zur ersten Seite",
+		firstPageTooltip: "Zur ersten Seite",
 
-            lastPageTooltip: "Zur letzten Seite",
+		lastPageTooltip: "Zur letzten Seite",
 
-            nextPageTooltip: "Zur nächsten Seite",
+		nextPageTooltip: "Zur nächsten Seite",
 
-            previousPageTooltip: "Zurück zur letzten Seite",
+		previousPageTooltip: "Zurück zur letzten Seite",
 
-            nextPagerTooltip: "Zum nächsten Pager",
+		nextPagerTooltip: "Zum nächsten Pager",
 
-            previousPagerTooltip: "Zum vorherigen Pager"
+		previousPagerTooltip: "Zum vorherigen Pager"
 
-        };
+	};
 
-    </script>
+</script>
 
 
 
@@ -141,15 +145,17 @@ The output for the above code example is displayed as the following screenshot.
 
 ![](Localization_images/Localization_img1.png)
 
-_Figure : Localization._
-
+Localization.
+{:.caption}
 
 
 The default values of locale labels in Grid and Pager are listed out in the following code example. You can change the label values based on the cultures with its corresponding meaning of words.
 
 {% highlight js %}
 
-ej.Grid.locale["en-US"] = {
+ej.Grid.locale["en-US"] = 
+
+{
 
             EmptyRecord: "No records to display",
 
@@ -239,41 +245,43 @@ ej.Grid.locale["en-US"] = {
 
             ResponsiveFilter: "Filter",
 
-            ResponsiveSorting: "Sort"
+            ResponsiveSorting: "Sort"
 
-        };
+};
 
-ej.Pager.locale["en-US"] = {
+ej.Pager.locale["en-US"] = 
 
-
-
-        pagerInfo: "{0} of {1} pages ({2} items)",
+{
 
 
 
-        firstPageTooltip: "Go to first page",
+			pagerInfo: "{0} of {1} pages ({2} items)",
 
 
 
-        lastPageTooltip: "Go to last page",
+			firstPageTooltip: "Go to first page",
 
 
 
-        nextPageTooltip: "Go to next page",
+			lastPageTooltip: "Go to last page",
 
 
 
-        previousPageTooltip: "Go to previous page",
+			nextPageTooltip: "Go to next page",
 
 
 
-        nextPagerTooltip: "Go to next Pager",
+			previousPageTooltip: "Go to previous page",
 
 
 
-        previousPagerTooltip: "Go to previous Pager"
+			nextPagerTooltip: "Go to next Pager",
 
-    };
+
+
+		previousPagerTooltip: "Go to previous Pager"
+
+ };
 
 {% endhighlight  %}
 

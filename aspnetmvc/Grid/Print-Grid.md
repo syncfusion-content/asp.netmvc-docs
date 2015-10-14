@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print-Grid
+title: Print Grid | Grid | ASP.NET MVC | Syncfusion
 description: print grid
 platform: ejmvc
 control: Grid
@@ -11,78 +11,74 @@ documentation: ug
 
 Printing is easy with Grid control by using Print Grid feature. Toolbar has the Print icon, it allows to print the Grid records. When you click the Print icon, it internally calls the public print() method of Grid object to print the Grid. You can also use print() method manually to print.
 
-
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-        {
+{
 
-            toolbar.ShowToolbar().ToolbarItems(items =>
+	toolbar.ShowToolbar().ToolbarItems(items =>
 
-            {
+	{
 
-                items.AddTool(ToolBarItems.PrintGrid);
+		items.AddTool(ToolBarItems.PrintGrid);
 
-            });
+	});
 
-        })
+})
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Add();
+	col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right). Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right). Add();
 
-            col.Field("ShipName").HeaderText("ShipName").Add();
+	col.Field("ShipName").HeaderText("ShipName").Add();
 
-            col.Field("ShipCountry").HeaderText("ShipCountry").Add();
+	col.Field("ShipCountry").HeaderText("ShipCountry").Add();
 
-        }))
+}))
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C#%}
 
 public partial class GridController : Controller
 
-    {
+{
 
-        //
+	// GET: /PrintGrid/
 
-        // GET: /PrintGrid/
+	public ActionResult PrintGrid()
 
+	{
 
+		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-        public ActionResult PrintGrid()
+		ViewBag.datasource = DataSource;
 
-        {
+		return View();
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
+	}
 
 
 
-    }
-
-
+}
 
 {% endhighlight  %}
+{% endtabs %} 
 
 ![](Print-Grid_images/Print-Grid_img1.png)
 
-_Figure : Print Grid_
-
+Print Grid
+{:.caption}

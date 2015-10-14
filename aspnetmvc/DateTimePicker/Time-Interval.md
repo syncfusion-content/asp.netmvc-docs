@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time-Interval
+title: Time Interval | DateTimePicker | ASP.NET MVC | Syncfusion
 description: time interval
 platform: ejmvc
 control: DateTimePicker
@@ -13,18 +13,19 @@ You can set time interval between two adjacent time values in the time popup man
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
-   
-     
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized interval*@
+   ~~~ cshtml
 
-		@Html.EJ().DateTimePicker("DateTime").Interval(60).Width("175px")
+	@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized interval*@
+
+	@Html.EJ().DateTimePicker("DateTime").Interval(60).Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
    
    
 2. The following screenshot displays the output for the above code.
 
     ![](Time-Interval_images/Time-Interval_img1.png)
+	
+	Showcase for DateTimePicker with I hour interval in time picker popup
+	{:.caption}

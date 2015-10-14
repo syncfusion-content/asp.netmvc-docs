@@ -1,9 +1,9 @@
----
+﻿---
 layout: post
-title: How to attach a Template to a Word document 
+title: How to attach a Template to a Word document | DocIO  | ASP.NET MVC | Syncfusion
 description: how to attach a template to a word document?
-platform: ejmvc
-control: DocIO
+platform: ejmvc 
+control: DocIO 
 documentation: ug
 ---
 
@@ -11,19 +11,25 @@ documentation: ug
 
 You can use the AttachedTemplate property to attach a template to a Word document using DocIO. The following code example illustrates this.
 
-{% highlight c# %}
-//Sets the location of the template.
-document.AttachedTemplate.Path = @"D:\Test.dot";
+
+{% tabs %}
+
+{% highlight C# %}
+//Sets the location of the template.document.AttachedTemplate.
+Path = @"D:\Test.dot";
 
 //Sets the UpdateStylesOnOpen to ‘true’to automatically update the styles from the attached template each time the document is opened with Microsoft Worddocument.
 UpdateStylesOnOpen = true;
-{% endhighlight  %}
-{% highlight vbnet %}
-//Sets the location of the template document.
-document.AttachedTemplate.Path = @"D:\Test.dot"
 
-//Sets the UpdateStylesOnOpen to ‘true’to automatically update the styles from the attached template each time the document is opened with Microsoft Word.
-document.UpdateStylesOnOpen = True
-{% endhighlight  %}
+{% endhighlight %}
+
+{% highlight VB%}
+'Sets the location of the template document.document.AttachedTemplate.
+Path = @"D:\Test.dot"
+
+'Sets the UpdateStylesOnOpen to ‘true’to automatically update the styles from the attached template each time the document is opened with Microsoft Worddocument.
+UpdateStylesOnOpen = True
+{% endhighlight %}
+{% endtabs %} 
 
 

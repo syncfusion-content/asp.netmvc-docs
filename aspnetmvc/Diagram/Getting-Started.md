@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Diagram  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Diagram
@@ -17,6 +17,8 @@ The following screenshot illustrates the structure of the Diagram control.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+Diagram
+{:.caption}
 
 
 ## Create your first Diagram in MVC
@@ -25,42 +27,40 @@ The following screenshot illustrates the structure of the Diagram control.
 
 1. Create a CSHTML file and add the necessary script and CSS files in the Head tag as shown in the following code example.
 
-   ~~~ html
+   ~~~ cshtml
+
+
+	 <html xmlns="http://www.w3.org/1999/xhtml">
+
+		<head>
+
+			<title>
+
+				Getting Started with the Diagram control for MVC
+
+			</title>
 
 
 
+			<!-- jQuery Script -->
 
-		 <html xmlns="http://www.w3.org/1999/xhtml">
-
-			<head>
-
-				<title>
-
-					Getting Started with the Diagram control for MVC
-
-				</title>
+			<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 
 
-				<!-- jQuery Script -->
+			<!--script to create Diagram-->
 
-				<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+			<script src="http://cdn.syncfusion.com/js/ej.widgets.all-latest.min.js"></script>
 
-
-
-				<!--script to create Diagram-->
-
-				<script src="http://cdn.syncfusion.com/js/ej.widgets.all-latest.min.js"></script>
-
-			</head>
-			<body>
-			</body>
-		</html>
+		</head>
+		<body>
+		</body>
+	</html>
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -68,50 +68,45 @@ The following screenshot illustrates the structure of the Diagram control.
 2. Add the @Html.EJ().Diagram() element in the <body> tag to render the Diagram.
 
 
-   ~~~ js
+   ~~~ cshtml
    
-		<html>
+	<html>
 
-			<body>
+		<body>
 
-				@Html.EJ().Diagram("DiagramContent", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)     
+			@Html.EJ().Diagram("DiagramContent", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)     
 
-			</body>
+		</body>
 
-		</html>
-
-
-
+	</html>
    ~~~
-   {:.prettyprint }
+   
 
 
 
 
 3. Initialize the Diagram widget as follows.
 
-   ~~~ cs
+   ~~~ csharp
+	
+    public ActionResult RenderDiagram()
 
+	{
 
-		  public ActionResult RenderDiagram()
+		DiagramProperties model = new DiagramProperties();
 
-		  {
+		 model.Height = "600px";
 
-				DiagramProperties model = new DiagramProperties();
+		 model.Width = "600px"; 
 
-				 model.Height = "600px";
+		 ViewData["diagramModel"] = model;
 
-				 model.Width = "600px"; 
+		 return View();
 
-				 ViewData["diagramModel"] = model;
-
-				 return View();
-
-		  }
-
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -120,12 +115,14 @@ The following screenshot illustrates the structure of the Diagram control.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+Empty Diagram
+{:.caption}
 
-
-Initialize Data
+### Initialize Data
 
 Initially, you can create hierarchical employee information, JSONData, and assign it to a variable data.
 
+{% tabs %}
 
 
 {% highlight js %}
@@ -178,7 +175,7 @@ Initially, you can create hierarchical employee information, JSONData, and assig
 
 
 
-{% highlight js %}
+{% highlight cshtml %}
 
 
 
@@ -195,9 +192,9 @@ function nodeTemplate(diagram, node) {
             $("#OrgChart").ejDiagram({ nodeTemplate: nodeTemplate });
 
         });
+{% endhighlight %}
 
-
-
+{% highlight C# %}
 
 //Configures data source for diagram.
 
@@ -275,13 +272,12 @@ function nodeTemplate(diagram, node) {
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 The employee data is displayed in the following Diagram .
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
- 
-_Organization Chart_
+Organization Chart
+{:.caption}
 

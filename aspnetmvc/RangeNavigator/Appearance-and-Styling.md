@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | RangeNavigator | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: RangeNavigator
@@ -14,99 +14,92 @@ RangeNavigator is enriched with lots of customization options for labels, gridli
 ## Customize labels
 
 The labels are found along the range, displaying the value of the data it correspond, both on (higher level label) and below (lower level label) the RangeNavigator. RangeNavigator labels are further customized using “Font” property in label Settings. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.LabelSettings(ls=>ls
 
-       .LabelSettings(ls=>ls
+// customizing higher level labels.
 
-           // customizing higher level labels.
+.HigherLevel(hl =>hl                                     
 
-                        .HigherLevel(hl =>hl                                     
+.Style(lst => lst
 
-                           .Style(lst => lst
+		  .Font(f =>f
 
-                                      .Font(f =>f
+			   .Color("#ff0000") 
 
-                                           .Color("#ff0000") 
+			   .Opacity(1)
 
-                                           .Opacity(1)
+			   .Size("12px")                                                                     
 
-                                           .Size("12px")                                                                     
+			   .Style(RangeNavigatorFontStyle.Normal)
 
-                                           .Style(RangeNavigatorFontStyle.Normal)
+			 .Weight(RangeNavigatorFontWeight.Regular)
 
-                                         .Weight(RangeNavigatorFontWeight.Regular)
+					)
 
-                                                )
+				 )
 
-                                             )
+		   )
 
-                                       )
+// customizing lower level labels.
 
-                    // customizing lower level labels.
+.LowerLevel(ll => ll
 
-                       .LowerLevel(ll => ll
+. Style(lst => lst
 
-                           . Style(lst => lst
+	  .Font(f => f
 
-                                  .Font(f => f
+			   .Color("#ff0000")
 
-                                           .Color("#ff0000")
+			   .Opacity(1)
 
-                                           .Opacity(1)
+			   .Size("12px")                                              
 
-                                           .Size("12px")                                              
+			   .Style(RangeNavigatorFontStyle.Normal)                                                              
 
-                                           .Style(RangeNavigatorFontStyle.Normal)                                                              
+			 .Weight(RangeNavigatorFontWeight.Regular)
 
-                                         .Weight(RangeNavigatorFontWeight.Regular)
+			 )
 
-                                         )
+		)
 
-                                    )
+	)                                                                                                                                                                                                                                                                                                                                   
 
-                                )                                                                                                                                                                                                                                                                                                                                   
+)      
 
-                           )      
 
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight  %}
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
-
-_Figure 27: Customize labels_
+Customize labels
+{:.caption}
 
 ## Label Placement:
 
 Labels in RangeNavigator are placed inside or outside of the control. You can customize both the higher and lower level labels using LabelPlacement property in label setting of RangeNavigator. By default LabelPlacement is “outside” for the both higher and lower level labels.
 
 The following screen shot illustrates both the lower and higher level labels that are placed outside the control with LabelPlacement specified as outside. 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.LabelSettings(ls=>ls
 
-            .LabelSettings(ls=>ls
+				.HigherLevel(hl =>hl.LabelPlacement("inside"))                                                                          
 
-                            .HigherLevel(hl =>hl.LabelPlacement("inside"))                                                                          
+				.LowerLevel(ll => ll.LabelPlacement("inside"))                                                                                                                                                                                                                                                                                                                                                              
 
-                            .LowerLevel(ll => ll.LabelPlacement("inside"))                                                                                                                                                                                                                                                                                                                                                              
+			   )    
 
-                           )    
-
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight  %}
 The following screenshot illustrates a RangeNavigator with labels inside the control after specifying the LabelPlacement as inside.
@@ -120,91 +113,89 @@ The following screenshot illustrates a RangeNavigator with labels inside the con
 ## Customize RangeNavigator
 
 RangeNavigator is customized using NavigatorStyleSettings properties. You can customize the selected and unselected region color using SelectedRegionColor, UnselectedRegionColor in NavigatorStyleSettings and the thumb of the slider using ThumbColor, ThumbRadius and ThumbStorke in NavigatorStyleSettings.  MajorGridLineStyle and MinorGridLineStyle are used to customize the grid line color and visibility. 
-{% highlight js %}
+{% highlight CSHTML %}
  
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
 
-                   //  To customize the navigator element     
+//  To customize the navigator element     
 
-       .NavigatorStyleSettings (ns=>ns
+.NavigatorStyleSettings (ns=>ns
 
-                  .Border(br=>br.Color("black").Width(3))
+.Border(br=>br.Color("black").Width(3))
 
-                  .Background("transparent")
+.Background("transparent")
 
-                  .UnselectedRegionColor("white")
+.UnselectedRegionColor("white")
 
-                  .SelectedRegionColor("#5EABDE")
+.SelectedRegionColor("#5EABDE")
 
-                  .ThumbRadius(10)
+.ThumbRadius(10)
 
-                  .ThumbColor("white")
+.ThumbColor("white")
 
-                  .MajorGridLineStyle(mr=>mr.Color("transparent").Visible(true))
+.MajorGridLineStyle(mr=>mr.Color("transparent").Visible(true))
 
-                  .MinorGridLineStyle(mi=>mi.Color("transparent").Visible(true))
+.MinorGridLineStyle(mi=>mi.Color("transparent").Visible(true))
 
-                  )
+)
 
-               //  To customize the labels
+//  To customize the labels
 
-       .LabelSettings(ls=>ls
+.LabelSettings(ls=>ls
 
-                          .HigherLevel(hl =>hl
+.HigherLevel(hl =>hl
 
-                                 .LabelPlacement("inside")
+.LabelPlacement("inside")
 
-                                 .IntervalType(NavigatorIntervalType.Years)                                      
+.IntervalType(NavigatorIntervalType.Years)                                      
 
-                                 .Style(lst => lst                                                       
+.Style(lst => lst                                                       
 
-                                        .HorizontalAlignment(HorizontalAlignment.Left)
+.HorizontalAlignment(HorizontalAlignment.Left)
 
-                                        .Font(f =>f
+.Font(f =>f
 
-                                                  .Color("black") 
+		  .Color("black") 
 
-                                                  .Opacity(1)
+		  .Opacity(1)
 
-                                                  .Size("13px")
+		  .Size("13px")
 
-                                                 )
+	 )
 
-                                           )
+)
 
-                                      )
+)
 
-                           .LowerLevel(ll => ll
+.LowerLevel(ll => ll
 
-                                 .LabelPlacement("inside")                                              
+.LabelPlacement("inside")                                              
 
-                                 .IntervalType(NavigatorIntervalType.Quarters)
+.IntervalType(NavigatorIntervalType.Quarters)
 
-                                 .Style(lst => lst                                               
+.Style(lst => lst                                               
 
-                                      .HorizontalAlignment(HorizontalAlignment.Center)
+.HorizontalAlignment(HorizontalAlignment.Center)
 
-                                      .Font(f => f
+.Font(f => f
 
-                                                 .Color("black")
+		 .Color("black")
 
-                                                 .Opacity(1)
+		 .Opacity(1)
 
-                                                 .Size("12px")
+		 .Size("12px")
 
-                                             )
+	 )
 
-                                        )
+)
 
-                                   )                                                                                                                                                                                                                                                                                                                                   
+)                                                                                                                                                                                                                                                                                                                                   
 
-                           )
+)
 
-       //...
 
-        .Render())
+.Render())
 
 {% endhighlight  %}
 
@@ -234,18 +225,14 @@ RangeNavigator theme is a set of pre-defined options that are applied to the con
 
 ### gradientsaffrondark
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.Theme("azuredark")
 
-        .Theme("azuredark")
-
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight  %}
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: ReportViewer | ReportViewer | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: ReportViewer
 documentation: ug
 ---
 
-# Overview
+# ReportViewer
 
 The ReportViewer is a visualization control to view Microsoft SSRS RDL/RDLC files on a web page and it is powered by HTML5/JavaScript. It has support to bind DataSources/Parameters to the Reports and also supports exporting, paging, zooming and printing the report.
 

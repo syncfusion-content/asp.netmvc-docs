@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering
+title: Filtering | Grid | ASP.NET MVC | Syncfusion
 description: filtering
 platform: ejmvc
 control: Grid
@@ -30,7 +30,9 @@ Filter menu types
 Filter menus are a good UI based filtering option. It visibly denotes filtering option and is flexible to filter records. In String menu filtering, AutoComplete is used as default control to filter; in Numeric menu filtering, NumericTextbox is used as default control to filter. In Date menu filtering, DatePicker control is used as default control to filter and in Boolean menu filtering, CheckBox is used for filtering. 
 
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -46,7 +48,7 @@ Filter menus are a good UI based filtering option. It visibly denotes filtering 
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -79,20 +81,21 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Filtering_images/Filtering_img1.png)
 
-_Figure : Filter menu_
+Filter menu
+{:.caption}
 
 ## Filter Bar
 
 Filter bar is one of the types of filtering. It is otherwise called text filtering as filter bar working is based on text boxes. Through this you can filter records. Filter bars have expression to filter records. They are based on type of column. 
 
-_Table2: List of Filter Bar Expressions_
+_List of Filter Bar Expressions_
 
 <table>
 <tr>
@@ -127,8 +130,10 @@ Boolean filter bar works with either true or false.</td></tr>
 </table>
 
 
+{% tabs %}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -136,7 +141,7 @@ Boolean filter bar works with either true or false.</td></tr>
 
       .AllowPaging()
 
-.AllowFiltering()
+	 .AllowFiltering()
 
       .FilterSettings(filter => { filter.FilterType(FilterType.FilterBar); })
 
@@ -144,7 +149,7 @@ Boolean filter bar works with either true or false.</td></tr>
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -174,12 +179,9 @@ namespace MVCSampleBrowser.Controllers
 }
 
 
-
-
 {% endhighlight  %}
 
-
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -187,7 +189,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Filtering_images/Filtering_img2.png)
 
-_Figure : Filter Bar_
+Filter Bar
+{:.caption}
 
 ## Excel styled menu
 
@@ -201,7 +204,8 @@ The Checkbox list is available in the menu that contains the possible filter val
 
 ![](Filtering_images/Filtering_img3.png)
 
-_Figure : Checkbox list_
+Checkbox list
+{:.caption}
 
 A Search box is available at the top of the check box list that is used to search the possible filter choices. The number of possible filter choices are restricted by the setting the MaxFilterChoices property of the FilterSettings. 
 
@@ -213,16 +217,18 @@ The Submenu items in the filter menu provide the advanced filtering options for 
 
 ![](Filtering_images/Filtering_img4.png)
 
-_Figure : Advanced Filter_
-
+Advanced Filter
+{:.caption}
 
 ![](Filtering_images/Filtering_img5.png)
 
-_Figure : Custom Filter_
+Custom Filter
+{:.caption}
 
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 using MVCSampleBrowser.Models;
 
@@ -272,7 +278,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("Grid")
 
@@ -311,14 +317,14 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %}  
 
 
 ## Filter operators
 
 Grid uses filter operators from ejDataManager, that are used at the time of filtering. Filter operators are used to denote filtering type.
 
-_Table3: List of Column type and Filter operators_
+_List of Column type and Filter operators_
 
 <table>
 <tr>
@@ -347,7 +353,9 @@ ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOper
 
 Grid contains an API to do filtering dynamically after Grid initialize, without the use of User Interaction. It is useful to do filtering dynamically.
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 <div>
 
@@ -494,7 +502,7 @@ Grid contains an API to do filtering dynamically after Grid initialize, without 
 </script>
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -530,11 +538,13 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight  %}
+{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
 
 
 ![](Filtering_images/Filtering_img6.png)
 
-_Figure : Dynamic Filtering_
+Dynamic Filtering
+{:.caption}
 

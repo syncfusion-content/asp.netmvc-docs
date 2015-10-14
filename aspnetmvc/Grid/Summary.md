@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Summary
+title: Summary | Grid | ASP.NET MVC | Syncfusion
 description: summary 
 platform: ejmvc
 control: Grid
@@ -23,50 +23,52 @@ Summary is a key feature of Grid that is used to aggregate a particular column. 
 
 There are some default summary types available for basic summary formula. The following code example is for Default Summary Types.
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .ShowSummary()
+.ShowSummary()
 
-        .AllowPaging()
+.AllowPaging()
 
-        .PageSettings(page => { page.PageSize(5); })
+.PageSettings(page => { page.PageSize(5); })
 
 .SummaryRow(row =>
 
-        {
+{
 
-            row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+	row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
 
-            row.Title("Average").SummaryColumns(col => { col.SummaryType(SummaryType.Average).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+	row.Title("Average").SummaryColumns(col => { col.SummaryType(SummaryType.Average).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
 
-        })
+})
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+	col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
 
-            col.Field("ShipName").HeaderText("Ship Name").Width(110).Add();
+	col.Field("ShipName").HeaderText("Ship Name").Width(110).Add();
 
-            col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
+	col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
 
-        })
+})
 
-    )
+)
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -95,58 +97,60 @@ namespace SyncfusionMvcApplication3.Controllers
 
 
 {% endhighlight  %}
+{% endtabs %} 
 
 ![](Summary_images/Summary_img1.png)
 
-_Figure : Summary_
+Summary
+{:.caption}
 
 ## Custom Summary by String
 
 This property helps you to create custom summary formula for summary. The following code example is for custom summary using Essential JavaScript.
 
+{% tabs %}
 
-{% highlight js %}
 
-  @(Html.EJ().Grid<SyncfusionMvcApplication3.Models.OrdersView>("Summary")
+{% highlight CSHTML %}
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+@(Html.EJ().Grid<SyncfusionMvcApplication3.Models.OrdersView>("Summary")
+
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
 .ShowSummary()
 
-        .AllowPaging()
+.AllowPaging()
 
-        .PageSettings(page => { page.PageSize(5); })
+.PageSettings(page => { page.PageSize(5); })
 
 .SummaryRow(row =>
 
-        {
+{
 
-            row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue((string)ViewBag.data).DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
+	row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue((string)ViewBag.data).DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
 
-        })
+})
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
+	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").Width(70).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").Width(70).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
+	col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
 
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
 
-        })
+})
 
-    )
-
-
+)
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -155,12 +159,7 @@ namespace MVCSampleBrowser.Controllers
     public partial class GridController : Controller
 
     {
-
-
-
         // GET: /Summary/
-
-
 
         public ActionResult Summary()
 
@@ -178,8 +177,6 @@ namespace MVCSampleBrowser.Controllers
 
         }
 
-
-
         private double currency()
 
         {
@@ -193,16 +190,12 @@ namespace MVCSampleBrowser.Controllers
             return value;
 
         } 
-
-
-
     }
 
 }
 
-
 {% endhighlight  %}
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -210,85 +203,52 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img2.png)
 
-_Figure : Custom Summary_
+Custom Summary
+{:.caption}
 
 ## Custom Summary by Function
 
 Custom Summary is used to create custom summary formula for summary. The following code example is for custom summary using Essential JavaScript.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("Summary")
 
+.Datasource((IEnumerable<object>)ViewBag.datasource)
+
+.ShowSummary()
+
+.AllowPaging()
+
+.PageSettings(page => { page.PageSize(5); })
+
+.SummaryRow(row =>
+
+{
+	row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue("currency").DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
+
+})
+
+.Columns(col =>
+
+{
+
+	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
+
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
+
+	col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
+
+	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
+
+})
+
+)
 
 
-                .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-
-
-                .ShowSummary()
-
-
-
-                .AllowPaging()
-
-
-
-                .PageSettings(page => { page.PageSize(5); })
-
-
-
-                .SummaryRow(row =>
-
-                {
-
-
-
-                    row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue("currency").DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
-
-
-
-                })
-
-
-
-                .Columns(col =>
-
-                {
-
-
-
-                    col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-
-
-
-
-                    col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-
-
-                    col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
-
-
-
-                    col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
-
-
-
-                })
-
-
-
-
-
-    )
-
-
-{% endhighlight  %}
-{% highlight js %}
 
 
     <script type="text/javascript">
@@ -315,7 +275,7 @@ Custom Summary is used to create custom summary formula for summary. The followi
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -356,77 +316,80 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
+{% endtabs %} 
 
 ![](Summary_images/Summary_img3.png)
 
-_Figure : Custom Summary by Function_
+Custom Summary by Function
+{:.caption}
 
 ## Group Summary
 
 This property helps you to enable the group summary column in Grid. The following code example is for Group summary.
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
-          .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-          .ShowSummary()
+.ShowSummary()
 
-          .AllowPaging()
+.AllowPaging()
 
-          .PageSettings(page => { page.PageSize(10); })
+.PageSettings(page => { page.PageSize(10); })
 
 .SummaryRow(row =>
 
-          {
+{
 
-              row.ShowTotalSummary(false)
+  row.ShowTotalSummary(false)
 
-                 .SummaryColumns(col =>
+	 .SummaryColumns(col =>
 
-                 {
+	 {
 
-                     col.SummaryType(SummaryType.Average)
+		 col.SummaryType(SummaryType.Average)
 
-                        .DisplayColumn("Freight")
+			.DisplayColumn("Freight")
 
-                        .DataMember("Freight")
+			.DataMember("Freight")
 
-                        .Prefix("Average = ")
+			.Prefix("Average = ")
 
-                        .Format("{0:C}")
+			.Format("{0:C}")
 
-                        .Add();
+			.Add();
 
-                 }).Add();
+	 }).Add();
 
-          })
+})
 
-          .GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
+.GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
 
-          .Columns(col =>
+.Columns(col =>
 
-          {
+{
 
-              col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+  col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
 
-              col.Field("CustomerID").HeaderText("Customer ID").TextAlign(TextAlign.Left).Width(75).Add();
+  col.Field("CustomerID").HeaderText("Customer ID").TextAlign(TextAlign.Left).Width(75).Add();
 
-              col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
+  col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
 
-              col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(150).Add();
+  col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(150).Add();
 
-              col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+  col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
 
-          })
+})
 
-          )
+)
 
 
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -453,9 +416,8 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
 {% endhighlight %}
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -463,75 +425,77 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img4.png)
 
-_Figure : Group Summary_
+Group Summary
+{:.caption}
 
 ## Caption Summary
 
 This property is used to create Caption Summary column in Grid. The following code example is for Caption Summary.
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("Summary")
 
-          .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-          .ShowSummary()
+.ShowSummary()
 
-          .AllowPaging()
+.AllowPaging()
 
-          .PageSettings(page => { page.PageSize(10); })
+.PageSettings(page => { page.PageSize(10); })
 
-          .SummaryRow(row =>
+.SummaryRow(row =>
 
-          {
+{
 
-              row.ShowCaptionSummary(true)
+  row.ShowCaptionSummary(true)
 
-                 .ShowTotalSummary(false)
+	 .ShowTotalSummary(false)
 
-                 .SummaryColumns(col =>
+	 .SummaryColumns(col =>
 
-                 {
+	 {
 
-                     col.SummaryType(SummaryType.Average)
+		 col.SummaryType(SummaryType.Average)
 
-                        .DisplayColumn("Freight")
+			.DisplayColumn("Freight")
 
-                        .DataMember("Freight")
+			.DataMember("Freight")
 
-                        .Format("{0:C}")
+			.Format("{0:C}")
 
-                        .Prefix("Average = ")
+			.Prefix("Average = ")
 
-                        .Add();
+			.Add();
 
-                 }).Add();
+	 }).Add();
 
-          })
+})
 
-          .GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
+.GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
 
-          .Columns(col =>
+.Columns(col =>
 
-          {
+{
 
-              col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+  col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
 
-              col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
+  col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
 
-              col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+  col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-              col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+  col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
 
 
 
-          })
+})
 
-          )
+)
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -560,7 +524,7 @@ namespace MVCSampleBrowser.Controllers
 
 
 {% endhighlight  %}
-
+{% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
@@ -568,5 +532,6 @@ The following output is displayed as a result of the above code example.
 
 ![](Summary_images/Summary_img5.png)
 
-_Figure : Caption Summary_
+Caption Summary
+{:.caption}
 

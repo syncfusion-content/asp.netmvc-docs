@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TargetId
+title: TargetId | NavigationDrawer | ASP.NET MVC | Syncfusion
 description: targetid
 platform: ejmvc
 control: NavigationDrawer
@@ -13,29 +13,29 @@ This property is used to define the target Id for Navigation Drawer. The drawer 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @{
 
-    @Html.EJ().Button("drawerTarget").Text("Open Drawer")
+@Html.EJ().Button("drawerTarget").Text("Open Drawer")
 
-    @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("drawerTarget").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("drawerTarget").ContentTemplate(@<div>
 
-        @Html.EJ().ListView("list").Width(300).Items(items =>
+@Html.EJ().ListView("list").Width(300).Items(items =>
 
-         {
+ {
 
-             items.Add().Text("Home");
+	 items.Add().Text("Home");
 
-             items.Add().Text("Profile");
+	 items.Add().Text("Profile");
 
-             items.Add().Text("Photos");
+	 items.Add().Text("Photos");
 
-             items.Add().Text("Location");
+	 items.Add().Text("Location");
 
-         })
+ })
 
-    </div>)
+</div>)
 
 }
 

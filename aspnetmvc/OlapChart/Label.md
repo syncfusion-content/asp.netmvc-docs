@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Label
+title: Label | OLAPChart | ASP.NET MVC | Syncfusion
 description: label
 platform: ejmvc
 control: OLAPChart
@@ -16,7 +16,7 @@ Label represents the text on the axis data points in the Chart. Each axis data p
 Font style and color of the label text is customized with the help of font and color properties within its respective axis.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(primaryXAxis => 
 primaryXAxis.Font(Font => Font.Color("red").FontWeight(ChartFontWeight.Lighter).Size("14px").Style(ChartFontStyle.Italic)
@@ -35,7 +35,7 @@ primaryXAxis.Font(Font => Font.Color("red").FontWeight(ChartFontWeight.Lighter).
 
 You can rotate the labels to desired angle. The axis labels are rendered in the degree specified in the label rotation property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").PrimaryXAxis(primaryXAxis =>

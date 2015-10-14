@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | PivotGrid | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: PivotGrid
@@ -16,7 +16,7 @@ The PivotGrid control can be exported to the following formats:
 * PDF
 * CSV
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1")Url(Url.Content("~/wcf/OLAPService.svc"))
 
@@ -24,7 +24,8 @@ The PivotGrid control can be exported to the following formats:
 
 
 
-function exportBtnClick(args) {
+function exportBtnClick(args) 
+{
 
     var gridObj = $('#PivotGrid1').data("ejPivotGrid");
 

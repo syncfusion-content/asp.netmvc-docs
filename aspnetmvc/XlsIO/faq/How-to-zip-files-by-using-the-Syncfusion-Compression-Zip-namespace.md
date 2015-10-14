@@ -1,16 +1,17 @@
 ---
 layout: post
-title: How to zip files by using the Syncfusion.Compression.Zip namespace 
+title: How to zip files by using the Syncfusion.Compression.Zip namespace | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to zip files by using the Syncfusion.Compression.Zip namespace
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
 # How to zip files by using the Syncfusion.Compression.Zip namespace
 
 You can use the AddFile method of ZipArchive object to compress files by using XlsIO. The following code example illustrates how to use this method.
- 
+
+{% tabs %} 
 {% highlight C# %}
 Syncfusion.Compression.Zip.ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
 
@@ -29,6 +30,7 @@ zipArchive.AddFile ("Form1.cs");
 zipArchive.Save("SyncfusionCompressFileSample.zip");
 
 zipArchive.Close();
+
 {% endhighlight %}
 
 {% highlight vbnet %}
@@ -46,8 +48,9 @@ zipArchive.Save("SyncfusionCompressFileSample.zip")
 zipArchive.Close()
 
 {% endhighlight %}
-
+{% endtabs %}
 For compressing directories, you can make use of the AddDirectory method. The AddDirectory method adds an empty directory file to a ZipArchive. When you want to add all the files inside the directory, then you should manually add these files by using the AddItem method. For example, you can use the following code example to add the file from the local drive.
+{% tabs %}
 
 {% highlight C# %}
 
@@ -77,3 +80,5 @@ zipArchive.Save("c:\\SyncfusionCompressFileSample.zip")
 zipArchive.Close()
 
 {% endhighlight %}
+{% endtabs %}
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend
+title: Legend | OLAPChart | ASP.NET MVC | Syncfusion
 description: legend
 platform: ejmvc
 control: OLAPChart
@@ -15,7 +15,7 @@ Legend is a color code that helps to differentiate between chart items. Legend a
 
 In OlapChart, you can customize the legend symbol with different shapes like rectangle, circle, cross, diamond, pentagon, hexagon, star, ellipse, triangle etc. Default value of legend shape is “Rectangle”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title
@@ -31,7 +31,7 @@ In OlapChart, you can customize the legend symbol with different shapes like rec
 ## Legend Position
 
 You can customize the legend position in top, bottom, left and right position of the Chart. Default value of legend position is “bottom”. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Legend(legend =>
 legend.Visible(true).RowCount(3).Shape(ChartShape.Star).Position(LegendPosition.Top))
@@ -45,7 +45,7 @@ legend.Visible(true).RowCount(3).Shape(ChartShape.Star).Position(LegendPosition.
 You can align the legend using alignment property of legend. This allows you to align the legend in center, far and near position of Chart Area. The Default value of legend alignment is “Center”.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Legend(legend => legend.Visible(true).RowCount(3).Alignment(TextAlignment.Near))
 
@@ -60,7 +60,7 @@ You can align the legend using alignment property of legend. This allows you to 
 You can draw and customize the outline of Chart legend using border property of legend. Default value of legend border color is “Transparent”.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Legend(legend => 
 legend.Visible(true).RowCount(3).Border(border=>border.Color("red").Width(2)))
@@ -77,7 +77,7 @@ legend.Visible(true).RowCount(3).Border(border=>border.Color("red").Width(2)))
 
 Legend item is represented by an icon or image and a text. This gets rendered automatically corresponding to each Series in the OlapChart. You can customize the Legend item.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Legend(legend => 
@@ -100,10 +100,9 @@ legend.Visible(true).RowCount(3).ItemStyle(ItemSize =>ItemSize.Border(border =>b
 You can customize the legend text - font family, font style, font weight and size using font property of legend. The following code illustrates this.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => title.Text("OlapChart in Essential Studio")).Legend(legend => legend.Visible(true).RowCount(3).Shape(ChartShape.Star))
-
 
 {% endhighlight %}
 ![](Legend_images/Legend_img6.png)

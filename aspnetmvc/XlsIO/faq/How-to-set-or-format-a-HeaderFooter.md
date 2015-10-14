@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to set or format a HeaderFooter 
+title: How to set or format a HeaderFooter | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to set or format a Header/Footer
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,7 +11,8 @@ documentation: ug
 
 The string that the header/footer takes is a script that you can use to format the header/footer. For more information on formatting the string, see <http://support.microsoft.com/?kbid=213618>.
 
- 
+{% tabs %}
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.
@@ -36,12 +37,13 @@ workbook.SaveAs(fileName);
 // Closes the workbook.
 workbook.Close();
 excelEngine.Dispose();    
-  {% endhighlight %}    
+
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
- 
-  
+   
+
 'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -62,5 +64,8 @@ workbook.SaveAs(fileName)
 ' Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
 {% endhighlight %}
+
+{% endtabs %}
 

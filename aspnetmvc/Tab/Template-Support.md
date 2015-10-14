@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | Tab  | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
-control: Tab Control
+control: Tab 
 documentation: ug
 ---
 
@@ -17,71 +17,71 @@ The following code block showcases how to use content template option in the Tab
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
 <div style="width:650px">
 
-    @{Html.EJ().Tab("pizzaMenu").Items(data =>
+@{Html.EJ().Tab("pizzaMenu").Items(data =>
 
-           {
+   {
 
-               data.Add().ID("gardenfresh").Text("GARDEN FRESH (Veg)")
+	   data.Add().ID("gardenfresh").Text("GARDEN FRESH (Veg)")
 
-                   .ContentTemplate(@<div>
+		   .ContentTemplate(@<div>
 
-                    <img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" />
+			<img src="~/Content/accordion/garden-veggie.png" alt="garden-fresh" />
 
-                    <div class="ingredients">
+			<div class="ingredients">
 
-                        Rate    : $50
+				Rate    : $50
 
-                        <br />
+				<br />
 
-                        Ingredients : cheese, onions, green capsicums & tomatoes.
+				Ingredients : cheese, onions, green capsicums & tomatoes.
 
-                    </div>
+			</div>
 
-                </div>);
+		</div>);
 
-               data.Add().ID("cornandspinach").Text("CORN & SPINACH (Veg)")
+	   data.Add().ID("cornandspinach").Text("CORN & SPINACH (Veg)")
 
-                   .ContentTemplate(@<div>
+		   .ContentTemplate(@<div>
 
-                    <img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" />
+			<img src="~/Content/accordion/corn-and-spinach-05.png" alt="garden-fresh" />
 
-                    <div class="ingredients">
+			<div class="ingredients">
 
-                        Rate    : $70
+				Rate    : $70
 
-                        <br />
+				<br />
 
-                        Ingredients : cheese, sweet corn & green capsicums.
+				Ingredients : cheese, sweet corn & green capsicums.
 
-                    </div>
+			</div>
 
-                </div>);
+		</div>);
 
-               data.Add().ID("chickendelite").Text("CHICKEN DELITE (Non-veg)")
+	   data.Add().ID("chickendelite").Text("CHICKEN DELITE (Non-veg)")
 
-                   .ContentTemplate(@<div>
+		   .ContentTemplate(@<div>
 
-                    <img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" />
+			<img src="~/Content/accordion/chicken-delite.png" alt="garden-fresh" />
 
-                    <div class="ingredients">
+			<div class="ingredients">
 
-                        Rate    : $100
+				Rate    : $100
 
-                        <br />
+				<br />
 
-                        Ingredients : cheese, chicken chunks, onions & pineapple chunks.
+				Ingredients : cheese, chicken chunks, onions & pineapple chunks.
 
-                    </div>
+			</div>
 
-                </div>);
+		</div>);
 
-           }).Render();}
+   }).Render();}
 
 </div>
 
@@ -95,9 +95,8 @@ Output:
 
 ![](Template-Support_images/Template-Support_img1.png)
 
-
-
-_Figure 25: Tab control with template support_
+Tab control with template support
+{:.caption}
 
 
 

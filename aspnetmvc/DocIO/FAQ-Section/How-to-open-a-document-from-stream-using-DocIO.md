@@ -1,6 +1,6 @@
----
+﻿---
 layout: post
-title: How to open a document from stream using DocIO 
+title: How to open a document from stream using DocIO | DocIO | ASP.NET MVC | Syncfusion
 description: how to open a document from stream using docio?
 platform: ejmvc
 control: DocIO
@@ -10,8 +10,9 @@ documentation: ug
 # How to open a document from stream using DocIO?
 
 DocIO provides support for opening documents from stream. It gets the document by using .NET classes, and then passes the stream to DocIO as follows.
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 HttpWebRequest request =(HttpWebRequest)WebRequest.Create("http://www.nfpa.org/assets/files//PDF/Forms/EvacuationGuide.doc");
 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 Stream stream = response.GetResponseStream();
@@ -54,20 +55,24 @@ public static byte[] ReadFully(Stream stream, int initialLength)
 	Array.Copy(buffer, ret, read);
 	return ret;
 }
-{% endhighlight  %}
-{% highlight vbnet %}
-Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) HandlesButton1.Click    
-Dim request As HttpWebRequest =CType(WebRequest.Create("http://www.nfpa.org/assets/files//PDF/Forms/EvacuationGuide.doc"), HttpWebRequest)    
-Dim response1 As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)  
-  Dim stream As Stream = response1.GetResponseStream()    
-Dim buffer As Byte() = ReadFully(stream, 32768)   
- Dim ms As MemoryStream = New MemoryStream()  
-  ms.Write(buffer, 0, buffer.Length)  
-  ms.Seek(0, SeekOrigin.Begin)   
-stream.Close()    
-'Creates a new document.   
- Dim doc As WordDocument = New WordDocument()  
-  'Opens the template document from the filestream.
+
+{% endhighlight %}
+{% highlight VB%}
+Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) 
+HandlesButton1.Click 
+   Dim request As HttpWebRequest =CType(WebRequest.Create("http://www.nfpa.org/assets/files//PDF/Forms/EvacuationGuide.doc"), HttpWebRequest)
+   Dim response1 As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse) 
+   Dim stream As Stream = response1.GetResponseStream() 
+   Dim buffer As Byte() = ReadFully(stream, 32768)
+    Dim ms As MemoryStream = New MemoryStream() 
+   ms.Write(buffer, 0, buffer.Length)  
+   ms.Seek(0, SeekOrigin.Begin) 
+   stream.Close() 
+
+   'Creates a new document.  
+   Dim doc As WordDocument = New WordDocument() 
+
+   'Opens the template document from the filestream.
     doc.Open(ms, FormatType.Doc)  
   doc.Save("Sample.doc", FormatType.Doc, response, HttpContentDisposition.InBrowser)End SubPublic Shared Method ReadFully(ByVal stream As Stream, ByVal initialLength As Integer) AsByte()  
   ’If an unhelpful initial length has been passed, just    ’use 32K. 
@@ -95,4 +100,4 @@ chunk = stream.Read(buffer, read, buffer.Length - read)    Do While (chunk
   Return retEnd Method
 {% endhighlight  %}
 
-
+{% endtabs %} 

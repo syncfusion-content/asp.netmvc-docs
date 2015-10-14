@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to create a Chart with a discontinuous range 
+title: How to create a Chart with a discontinuous range | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to create a Chart with a discontinuous range
 platform: ejmvc
-control: XlsIO	
+control: Xlsio
 documentation: ug
 ---
 
@@ -11,9 +11,10 @@ documentation: ug
 
 The following code example illustrates creating a chart with discontiguous data ranges.
 
- 
+{% tabs %} 
  
 {% highlight C# %}
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -97,12 +98,15 @@ workbook.SaveAs(fileName);
  
 //Closes the workbook.
 workbook.Close();
-excelEngine.Dispose();      
-  {% endhighlight %}    
+
+excelEngine.Dispose(); 
+     
+{% endhighlight %}    
 
 
 {% highlight vbnet %}
- 'Step 1: Instantiates the spreadsheet creation engine.
+
+'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -184,5 +188,8 @@ workbook.SaveAs(fileName)
 'Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
+
 {% endhighlight %}
+{% endtabs %}
 

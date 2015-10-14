@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple-Selection
+title: Multiple Selection | ListBox | ASP.NET MVC | Syncfusion
 description: multiple selection
 platform: ejmvc
 control: ListBox
@@ -21,34 +21,34 @@ The following steps explain you the configuration of the AllowMultiSelection for
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div id="control">
+	<div id="control">
 
-			<h5 class="ctrllabel">
+		<h5 class="ctrllabel">
 
-				Select a skill
+			Select a skill
 
-			</h5>
+		</h5>
 
-			@{List<int> indexList = new List<int>();
-
-
-
-			indexList.Add(0);
+		@{List<int> indexList = new List<int>();
 
 
 
-			indexList.Add(3);
+		indexList.Add(0);
 
 
 
-			}       @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
+		indexList.Add(3);
 
-		</div>
+
+
+		}       @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
+
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -70,54 +70,55 @@ The following steps explains you the configuration of SelectedItemlist property 
 1. Add the below code in your view page to render the ListBox with allow multiple selection enabled.
 
 
-   ~~~ html
-		// Add the following code in View page to configure ListBox widget
-		<div id="control">
-			<h5 class="ctrllabel"> 
-				Select a skill  
-			</h5> 
-			@{List<int> indexList = new List<int>();
-			indexList.Add(1);
-			indexList.Add(4); 
-			}  
-			@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df
-			=> df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
-			</div>
+   ~~~ cshtml
+		
+	// Add the following code in View page to configure ListBox widget
+	<div id="control">
+		<h5 class="ctrllabel"> 
+			Select a skill  
+		</h5> 
+		@{List<int> indexList = new List<int>();
+		indexList.Add(1);
+		indexList.Add(4); 
+		}  
+		@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df
+		=> df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
+	</div>
 
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
    
-	   // Add the following code to add list items in the controller page 
-	   public class skillset   
-	   {
-			public string text { get; set; }
-	   }
-		public ActionResult Index() 
-		{ 
-			List<skillset> skill = new List<skillset>();
-			skill.Add(new skillset { text = "ASP.NET" });
-			skill.Add(new skillset { text = "ActionScript" });
-			skill.Add(new skillset { text = "Basic" }); 
-			skill.Add(new skillset { text = "C++" });  
-			skill.Add(new skillset { text = "C#" }); 
-			skill.Add(new skillset { text = "dBase" }); 
-			skill.Add(new skillset { text = "Delphi" });
-			skill.Add(new skillset { text = "ESPOL" }); 
-			skill.Add(new skillset { text = "F#" });   
-			skill.Add(new skillset { text = "FoxPro" }); 
-			skill.Add(new skillset { text = "Java" });  
-			skill.Add(new skillset { text = "J#" });   
-			skill.Add(new skillset { text = "Lisp" }); 
-			skill.Add(new skillset { text = "Logo" });  
-			skill.Add(new skillset { text = "PHP" }); 
-			ViewBag.datasource = skill;   
-			return View();      
-		}
+   ~~~ csharp
+   
+	// Add the following code to add list items in the controller page 
+	public class skillset   
+	{
+		public string text { get; set; }
+	}
+	public ActionResult Index() 
+	{ 
+		List<skillset> skill = new List<skillset>();
+		skill.Add(new skillset { text = "ASP.NET" });
+		skill.Add(new skillset { text = "ActionScript" });
+		skill.Add(new skillset { text = "Basic" }); 
+		skill.Add(new skillset { text = "C++" });  
+		skill.Add(new skillset { text = "C#" }); 
+		skill.Add(new skillset { text = "dBase" }); 
+		skill.Add(new skillset { text = "Delphi" });
+		skill.Add(new skillset { text = "ESPOL" }); 
+		skill.Add(new skillset { text = "F#" });   
+		skill.Add(new skillset { text = "FoxPro" }); 
+		skill.Add(new skillset { text = "Java" });  
+		skill.Add(new skillset { text = "J#" });   
+		skill.Add(new skillset { text = "Lisp" }); 
+		skill.Add(new skillset { text = "Logo" });  
+		skill.Add(new skillset { text = "PHP" }); 
+		ViewBag.datasource = skill;   
+		return View();      
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Output of the above steps.
@@ -139,79 +140,79 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 1. Add the below code in your view page to render the ListBox with checkbox
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add the following code in View page to configure ListBox widget
+	// Add the following code in View page to configure ListBox widget
 
-		<div id="control">
+	<div id="control">
 
-			<h5 class="ctrllabel">
+		<h5 class="ctrllabel">
 
-				Select a skill
+			Select a skill
 
-			</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).ShowCheckbox(true)
+		</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).ShowCheckbox(true)
 
-		</div>
+	</div>
 		
    ~~~
-   {:.prettyprint }
+   
 
-   ~~~ cs
+   ~~~ csharp
 
-		// Add the following code to add list items in the controller page
+	// Add the following code to add list items in the controller page
 
-		public class skillset
+	public class skillset
 
-		{
+	{
 
-			public string text { get; set; }
+		public string text { get; set; }
 
-		}
+	}
 
-		public ActionResult Index()
+	public ActionResult Index()
 
-		{
+	{
 
-			List<skillset> skill = new List<skillset>();
+		List<skillset> skill = new List<skillset>();
 
-			skill.Add(new skillset { text = "ASP.NET" });
+		skill.Add(new skillset { text = "ASP.NET" });
 
-			skill.Add(new skillset { text = "ActionScript" });
+		skill.Add(new skillset { text = "ActionScript" });
 
-			skill.Add(new skillset { text = "Basic" });
+		skill.Add(new skillset { text = "Basic" });
 
-			skill.Add(new skillset { text = "C++" });
+		skill.Add(new skillset { text = "C++" });
 
-			skill.Add(new skillset { text = "C#" });
+		skill.Add(new skillset { text = "C#" });
 
-			skill.Add(new skillset { text = "dBase" });
+		skill.Add(new skillset { text = "dBase" });
 
-			skill.Add(new skillset { text = "Delphi" });
+		skill.Add(new skillset { text = "Delphi" });
 
-			skill.Add(new skillset { text = "ESPOL" });
+		skill.Add(new skillset { text = "ESPOL" });
 
-			skill.Add(new skillset { text = "F#" });
+		skill.Add(new skillset { text = "F#" });
 
-			skill.Add(new skillset { text = "FoxPro" });
+		skill.Add(new skillset { text = "FoxPro" });
 
-			skill.Add(new skillset { text = "Java" });
+		skill.Add(new skillset { text = "Java" });
 
-			skill.Add(new skillset { text = "J#" });
+		skill.Add(new skillset { text = "J#" });
 
-			skill.Add(new skillset { text = "Lisp" });
+		skill.Add(new skillset { text = "Lisp" });
 
-			skill.Add(new skillset { text = "Logo" });
+		skill.Add(new skillset { text = "Logo" });
 
-			skill.Add(new skillset { text = "PHP" });
+		skill.Add(new skillset { text = "PHP" });
 
-			ViewBag.datasource = skill;
+		ViewBag.datasource = skill;
 
-			return View();
+		return View();
 
-		}
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -232,50 +233,51 @@ The following steps explains you the configuration of checkbox options in ListBo
 1. Add the below code in your view page to render the ListBox with all items checked initially.
 
 
-   ~~~ html
-		// Add the following code in View page to configure ListBox widget
-		<div id="control">
-			<h5 class="ctrllabel">
-				Select a skill 
-			</h5>  
-			@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df =>
-			df.Text("text")) .ShowCheckbox(true).CheckAll(true)
-			</div>
+   ~~~ cshtml
+		
+	// Add the following code in View page to configure ListBox widget
+	<div id="control">
+		<h5 class="ctrllabel">
+			Select a skill 
+		</h5>  
+		@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df =>
+		df.Text("text")) .ShowCheckbox(true).CheckAll(true)
+	</div>
 
    ~~~
-   {:.prettyprint }
-	
-   ~~~ cs
    
-		// Add the following code to add list items in the controller page
-		public class skillset
-		{  
-			public string text { get; set; } 
-		}   
-		public ActionResult Index()
-		{  
-			List<skillset> skill = new List<skillset>();  
-			skill.Add(new skillset { text = "ASP.NET" });
-			skill.Add(new skillset { text = "ActionScript" });
-			skill.Add(new skillset { text = "Basic" });
-			skill.Add(new skillset { text = "C++" });  
-			skill.Add(new skillset { text = "C#" }); 
-			skill.Add(new skillset { text = "dBase" }); 
-			skill.Add(new skillset { text = "Delphi" });
-			skill.Add(new skillset { text = "ESPOL" }); 
-			skill.Add(new skillset { text = "F#" });  
-			skill.Add(new skillset { text = "FoxPro" }); 
-			skill.Add(new skillset { text = "Java" }); 
-			skill.Add(new skillset { text = "J#" });   
-			skill.Add(new skillset { text = "Lisp" }); 
-			skill.Add(new skillset { text = "Logo" }); 
-			skill.Add(new skillset { text = "PHP" }); 
-			ViewBag.datasource = skill;    
-			return View();
-		}
+	
+   ~~~ csharp
+   
+	// Add the following code to add list items in the controller page
+	public class skillset
+	{  
+		public string text { get; set; } 
+	}   
+	public ActionResult Index()
+	{  
+		List<skillset> skill = new List<skillset>();  
+		skill.Add(new skillset { text = "ASP.NET" });
+		skill.Add(new skillset { text = "ActionScript" });
+		skill.Add(new skillset { text = "Basic" });
+		skill.Add(new skillset { text = "C++" });  
+		skill.Add(new skillset { text = "C#" }); 
+		skill.Add(new skillset { text = "dBase" }); 
+		skill.Add(new skillset { text = "Delphi" });
+		skill.Add(new skillset { text = "ESPOL" }); 
+		skill.Add(new skillset { text = "F#" });  
+		skill.Add(new skillset { text = "FoxPro" }); 
+		skill.Add(new skillset { text = "Java" }); 
+		skill.Add(new skillset { text = "J#" });   
+		skill.Add(new skillset { text = "Lisp" }); 
+		skill.Add(new skillset { text = "Logo" }); 
+		skill.Add(new skillset { text = "PHP" }); 
+		ViewBag.datasource = skill;    
+		return View();
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Output of the above steps.

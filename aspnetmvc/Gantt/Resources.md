@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resources
+title: Resources | Gantt | ASP.NET MVC | Syncfusion
 description: resources
 platform: ejmvc
 control: Gantt
@@ -18,7 +18,9 @@ Step 2:  Then, specify the field name for id and name of the resource in the Re
 Step 3: The name of the field, which contains the actual resources assigned for a particular task in the Datasource is specified using ResourceInfoMapping.
 
 
-{% highlight c# %}
+{% tabs %}
+
+{% highlight C# %}
 
 
 //..
@@ -69,7 +71,7 @@ ViewBag.resource = this.GetResources();
  
  {% endhighlight %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -93,7 +95,7 @@ ViewBag.resource = this.GetResources();
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 
 
@@ -103,5 +105,5 @@ The following screenshot shows Gantt control with Resources.
 
 ![](Resources_images/Resources_img1.png)
 
-_Figure 49: Resources_
-
+Resources
+{:.caption}

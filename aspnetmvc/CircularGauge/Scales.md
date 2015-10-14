@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scales
+title: Scales | CircularGauge | ASP.NET MVC | Syncfusion
 description: scales
 platform: ejmvc
 control: CircularGauge
@@ -24,9 +24,7 @@ Scales are the basic functional block of the Circular Gauge. By customizing the 
 
 Scale collection is directly added to the Gauge object. Refer the following code example to add scale collection in Gauge control.
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 //For circular gauge rendering
 
@@ -46,8 +44,8 @@ Execute the above code to render the following output.
 
 ![](Scales_images/Scales_img1.png)
 
-
-
+Circular Gauge with scale radius.
+{:.caption}
 
 
 ## Scale Customization
@@ -57,7 +55,7 @@ Execute the above code to render the following output.
 * The Scale border is modified with the object called border. It has two border property namely color and width which are used to customize the border color of the scale and border width of the scale. 
 * Setting the background color improves the look and feel of the Circular Gauge. You can customize the background color of the scale using backgroundColor. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 //For circular gauge rendering
 
@@ -105,14 +103,15 @@ Execute the above code to render the following output.
 
 ![](Scales_images/Scales_img2.png)
 
-
+Circular Gauge with customized scale border
+{:.caption}
 
 ### Pointer Cap
 
 * Pointer cap is a circular shape element that is located at the center of the Circular Gauge. The pointer cap is one of the cynosure of the Circular Gauge. By customizing the pointer cap, Gauge style is improved. The pointer cap is modified with the object pointerCap. 
 * It contains radius, borderColor, bordrWidth, interiorGradient and backgroundColor properties. The property radius is used to set the radius for the pointer cap. interiorGradient is used to provide the gradient effects to the pointer cap.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 //For circular gauge rendering
@@ -149,18 +148,20 @@ pc.Radius(10)
 
 
 {% endhighlight %}
+
 Execute the above code to render the following output.
 
 ![](Scales_images/Scales_img3.png)
 
-
+Circular Gauge with customized pointer cap
+{:.caption}
 
 ### Appearance
 
 * Circular Gauge contains two types of scale direction such as clockwise and counter clockwise. You can set them by enumerable property called direction. And you can set the minimum and maximum values for the scale with the properties minimum and maximum. The two properties minorIntervalValue and majorIntervalValue are the values used to set interval value for the ticks and labels. 
 * The radius property is used to set the radius value for the circular scale and the size property is used to set the scale bar width. You can also adjust the Opacity of the scale with the property opacity. The value for opacity lies between 0 and 1. You can also give some shadow effects for the scale by using the property shadowOffset. The property startAngle is used to set starting position of the scale at certain angle and sweepAngle is used to shrink or expand the scale to certain angle. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // For Circular Gauge rendering
 
@@ -216,7 +217,8 @@ Execute the above code to render the following output.
 
 ![](Scales_images/Scales_img4.png)
 
-
+Circular Gauge with customized scale values
+{:.caption}
 
 ### Enable/Disable properties
 
@@ -228,7 +230,7 @@ You can enable / disable properties in Circular Gauge using some properties in s
 
 You can set Multiple scales for a single Circular Gauge control by using an array of scale objects. Each scale object is independent of each other. The following code example refers to two scale objects in a Gauge.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 // For Circular Gauge rendering
@@ -275,7 +277,7 @@ sc.Size(10)
 
 .Ticks(t =>t.Color("Red").Add())
 
-.Pointers(p => { p.Length(50).Value(40).DistanceFromScale(-30).Add();                     })
+.Pointers(p => { p.Length(50).Value(40).DistanceFromScale(-30).Add();  })
 
 .Direction(Directions.CounterClockwise)
 
@@ -295,7 +297,7 @@ Execute the above code to render the following output.
 
 ![](Scales_images/Scales_img5.png)
 
-
-
+Circular Gauge with multiples scales
+{:.caption}
 
 

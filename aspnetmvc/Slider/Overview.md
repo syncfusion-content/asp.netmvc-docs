@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Slider | Slider | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Slider
 documentation: ug
 ---
 
-# Overview
+# Slider
 
 The Essential ASP.NET MVC Slider provides support to select a value from a particular range as well as selects a range value. The Slider has a sliding base on which the handles are moved. There are three types of Sliders such as default Slider, min-range Slider and range Slider.
 

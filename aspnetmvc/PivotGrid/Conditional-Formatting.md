@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Conditional-Formatting
+title: Conditional Formatting | PivotGrid | ASP.NET MVC | Syncfusion
 description: conditional formatting
 platform: ejmvc
 control: PivotGrid
@@ -16,7 +16,7 @@ Conditional formatting in the PivotGrid control allows you to define conditions 
 
 
 Conditional formatting dialog can be launched by clicking a simple button in the application. The following code example explains on how to launch the conditional formatting dialog.
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc"))
 
@@ -30,7 +30,8 @@ Conditional formatting dialog can be launched by clicking a simple button in the
 
 
 
-function btnClick(e) {
+function btnClick(e) 
+{
 
     pgridObj = $('#PivotGrid1').data("ejPivotGrid");
 
