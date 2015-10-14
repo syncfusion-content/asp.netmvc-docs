@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How-to-format-a-Hyperlink-By-Using-DocIO
+title: How to format a Hyperlink By Using DocIO 
 description: how to format a hyperlink by using docio?
-platform: universal-classic
-control: Control Name undefined
+platform: ejmvc
+control: DocIO
 documentation: ug
 ---
 
 # How to format a Hyperlink By Using DocIO?
 
-### Each field contains:
+## Each field contains:
 
 * Field defines field properties, not formatting.
 * FieldMark or FieldSeparator mark.
@@ -21,26 +21,21 @@ To set CharacterFormat for the field text, you have to find WTextRange between
 The following code example illustrates how to format the hyperlink text.
 
 {% highlight c# %}
-doc.LastParagraph.AppendHyperlink("www.google.com", "google",HyperlinkType.WebLink);
- for (int i = 0, cnt = doc.LastParagraph.Items.Count; i < cnt; i++)
- {
-     if (doc.LastParagraph.Items[i] is WTextRange)
-     {
-         WTextRange text = doc.LastParagraph.Items[i] as WTextRange;
-         text.CharacterFormat.FontSize = 33f;
-     }
- }
-{% endhighlight %}
+doc.LastParagraph.AppendHyperlink("www.google.com", "google",HyperlinkType.WebLink); 
+for (int i = 0, cnt = doc.LastParagraph.Items.Count; i < cnt; i++)
+{     
+	if (doc.LastParagraph.Items[i] is WTextRange)    
+	{       
+   		WTextRange text = doc.LastParagraph.Items[i] as WTextRange;    
+      	text.CharacterFormat.FontSize = 33f;     
+	}
+}
+{% endhighlight  %}
 {% highlight vbnet %}
 doc.LastParagraph.AppendHyperlink("www.google.com", "google", HyperlinkType.WebLink)
-Dim i As Integer = 0, cnt As Integer = doc.LastParagraph.Items.CountWhile i < cnt
-If TypeOf doc.LastParagraph.Items(i) Is WTextRange
- Then
-     Dim text As WTextRange = TryCast(doc.LastParagraph.Items(i), WTextRange)
-     text.CharacterFormat.FontSize = 33.0F
-End If
-i += 1
-End While
-{% endhighlight %}
+Dim i As Integer = 0, cnt As Integer = doc.LastParagraph.Items.CountWhile i < cntIf TypeOf
+ doc.LastParagraph.Items(i) Is WTextRange Then     Dim text As WTextRange = TryCast(doc.LastParagraph.Items(i), WTextRange) 
+    text.CharacterFormat.FontSize = 33.0FEnd Ifi += 1End While
+{% endhighlight  %}
 
 

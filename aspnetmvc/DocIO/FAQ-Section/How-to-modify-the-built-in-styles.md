@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How-to-modify-the-built-in-styles
+title: How to modify the built in styles 
 description: how to modify the built-in styles?
-platform: universal-classic
-control: Control Name undefined
+platform: ejmvc
+control: DocIO
 documentation: ug
 ---
 
-### How to modify the built-in styles?
+# How to modify the built-in styles?
 
 You can use the CreateBuiltinStyle method of the Style class to override the built-in styles.
 
@@ -21,9 +21,8 @@ doc.Styles.Add(style);para.ApplyStyle(style.Name);
 {% endhighlight %}
 {% highlight vbnet %}
 Dim style As Style = TryCast(Style.CreateBuiltinStyle(BuiltinStyle.Heading1, doc), Style)
-style.CharacterFormat.Italic = True
-style.CharacterFormat.UnderlineStyle = UnderlineStyle.DotDash
-doc.Styles.Add(style)para.ApplyStyle(style.Name)
-{% endhighlight %}
+style.CharacterFormat.Italic = Truestyle.CharacterFormat.UnderlineStyle = UnderlineStyle.DotDashdoc.Styles.Add(style)
+para.ApplyStyle(style.Name)
+{% endhighlight  %}
 
 
