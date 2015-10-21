@@ -31,7 +31,7 @@ Using the following steps, you can create a Toolbar control. The basic rendering
 
 
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/toolbar/getting-started) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/toolbar/getting-started) Documentation.
 
 
 
@@ -455,7 +455,7 @@ Add the following styles in the code table to display the Toolbar items as follo
 
 ### Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with <UL> <LI> elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
 
-[Dropdown – GettingStarted](http://docs.syncfusion.com/aspnetmvc/)
+[Dropdown – GettingStarted](http://help.syncfusion.com/aspnetmvc/)
 
 Execute the code to render Toolbar items with separator.
 

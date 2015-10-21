@@ -80,7 +80,6 @@ PrefixIcon = "e-ribbon e-ribbonpaste"
 )
 
 
-
 <ul id="ribbonmenu">
 
 	<li><a>FILE</a>
@@ -96,7 +95,6 @@ PrefixIcon = "e-ribbon e-ribbonpaste"
 	</ul>
 
 <div id="content">Home control</div>
-
 
 
 <script>
@@ -239,6 +237,7 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 
 
 
+
 <script>
 
 	var ribbonObj;
@@ -275,6 +274,7 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 	}
 
 </style>
+
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example
@@ -354,7 +354,6 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-
 <ul id="ribbonmenu">
 
 	<li><a>FILE</a>
@@ -370,7 +369,6 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 	</ul>
 
 <div id="content">Home control</div>
-
 
 
 <script>
@@ -496,7 +494,6 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-    
 <ul id="ribbonmenu">
 
 	<li><a>FILE</a>
@@ -635,7 +632,6 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 )
 
 
-    
 <ul id="ribbonmenu">
 
 	<li><a>FILE</a>
@@ -651,6 +647,7 @@ tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").ContentID("con
 	</ul>
 
 <div id="content">Home control</div>
+
 
 
 
@@ -913,7 +910,6 @@ Specifies the _width_ to the _Ribbon_ control.
     )
 
 
-
 <ul id="ribbonmenu">
 
 	<li><a>FILE</a>
@@ -1139,6 +1135,8 @@ _Content Index_: Ribbon content index, this is optional argument. When this argu
 
     })
 
+
+
     )            
 	
 	
@@ -1237,7 +1235,7 @@ _Collapse_ method is used to minimize the ribbon control tab contents.You can mi
 
 </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
@@ -1314,11 +1312,12 @@ _Expand_ method is used to expand the minimized ribbon control tab contents.You 
 
 <ul id="ribbonmenu">
 
+
 	<li><a>FILE</a></li>
 
 </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
 <script>
 
@@ -1397,15 +1396,17 @@ This method is used to add tab dynamically in the _Ribbon_ control. This method 
 
     )
 
+
 <ul id="ribbonmenu">
+
 
 	<li><a>FILE</a></li>
 
 </ul>
 
-<div id="paste" style="height:40px;width:43px;">Paste</div>
+     <div id="paste" style="height:40px;width:43px;">Paste</div>
 
-<div id="newtab" style="height:35px;width:43px;">AddTab</div>
+     <div id="newtab" style="height:35px;width:43px;">AddTab</div>
 
 <script>
 

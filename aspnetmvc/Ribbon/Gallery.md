@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Gallery | Ribbon | ASP.NET MVC | Syncfusion
 description: gallery
@@ -10,6 +10,7 @@ documentation: ug
 # Gallery
 
 The Ribbon control has _Gallery_ support. By using the _Gallery_ in Ribbon, items are displayed with good look and feel and it also enables to classify the items as groups for easy navigation.Gallery can be included in the tabgroups.
+
 
 To use the _Gallery feature_, include the following properties under tabgroups.
 
@@ -35,6 +36,7 @@ To use the _Gallery feature_, include the following properties under tabgroups.
 {
 
 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+
 
 })
 
@@ -69,7 +71,6 @@ tabgrp.Text("Gallery").AlignType(RibbonAlignType.Rows).Content(cnt =>
 cnt.ContentGroups(cntgrp =>
 
 {
-
 	cntgrp.Id("Galleryribbon").Type(RibbonButtonType.Gallery).ItemWidth("68").ItemHeight("54").Columns(2).ExpandedColumns(3)
 
 

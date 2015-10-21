@@ -10,7 +10,9 @@ documentation: ug
 #  How to add chart labels to scatter points
 
 The following code example illustrates adding chart labels to the scatter points of the chart.
+
 {% tabs %}
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.

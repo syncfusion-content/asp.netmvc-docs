@@ -12,8 +12,11 @@ documentation: ug
 ## Printing Title Rows
 
 The following code example illustrates printing the Title Rows.
+
+
 {% tabs %}
 {% highlight C# %}
+
 
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -36,6 +39,10 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
+
+excelEngine.Dispose();     
+
+
 excelEngine.Dispose(); 
     
 {% endhighlight %}    
@@ -44,6 +51,7 @@ excelEngine.Dispose();
 {% highlight vbnet %}
 
 'Step 1: Instantiates the spreadsheet creation engine.
+
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -66,11 +74,14 @@ excelEngine.Dispose()
 
 {% endhighlight %}
 {% endtabs %}
+
+
 ## Printing the Title Columns
 
 The following code example illustrates printing the Title Columns.
 {% tabs %}
 {% highlight C# %}
+
  
  //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -121,5 +132,7 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
 {% endtabs %}
-For information on Print settings, refer to the section [Print Settings](http://docs.syncfusion.com/windowsforms).
+
+For information on Print settings, refer to the section [Print Settings](http://help.syncfusion.com/windowsforms).

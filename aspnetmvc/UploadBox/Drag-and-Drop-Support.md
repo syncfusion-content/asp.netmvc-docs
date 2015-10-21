@@ -44,7 +44,7 @@ The following steps explain how to enable the drag and drop in the UploadBox con
    ~~~
    
 
-   To know about file action, refer to the following link: <http://docs.syncfusion.com/aspnetmvc/uploadbox/drag-and-drop-support>
+   To know about file action, refer to the following link: <http://help.syncfusion.com/aspnetmvc/uploadbox/drag-and-drop-support>
 
 2. The following screenshot displays the output for the above code.
 

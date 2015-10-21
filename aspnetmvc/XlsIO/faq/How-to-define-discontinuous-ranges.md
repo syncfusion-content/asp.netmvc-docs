@@ -42,12 +42,14 @@ workbook.SaveAs(fileName);
 workbook.Close();
 excelEngine.Dispose();  
 
+
 {% endhighlight %}    
 
 
 {% highlight vbnet %}
 
 'Step 1: Instantiates the spreadsheet creation engine.
+>>>>>>> development
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
 'Step 2: Instantiates the excel application object.
@@ -72,7 +74,9 @@ workbook.SaveAs(fileName)
  
 //Closes the workbook.
 workbook.Close()
+
 excelEngine.Dispose() 
   
 {% endhighlight %}
 {% endtabs %}
+

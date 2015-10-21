@@ -15,7 +15,7 @@ documentation: ug
 
 You can perform the add/edit/delete operations on data binding using URL. Use the following steps to perform the CRUD operation with URL binding in Schedule control.
 
-1. First create the Schedule control sample (MVC) with the necessary database (.sdf/.mdf) tables. Refer to the [getting started](http://docs.syncfusion.com/aspnetmvc/schedule/appointment) to create the sample.
+1. First create the Schedule control sample (MVC) with the necessary database (.sdf/.mdf) tables. Refer to the [getting started](http://help.syncfusion.com/aspnetmvc/schedule/appointment) to create the sample.
 2. Add the following code in the view page to call the action method (GetData) from the view page to bind the data to Schedule control.
 
    ~~~ cshtml

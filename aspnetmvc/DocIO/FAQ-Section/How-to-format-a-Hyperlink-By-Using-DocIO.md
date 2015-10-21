@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to format a Hyperlink By Using DocIO | DocIO | ASP.NET MVC | Syncfusion
 description: how to format a hyperlink by using docio?
@@ -9,7 +9,7 @@ documentation: ug
 
 # How to format a Hyperlink By Using DocIO?
 
-### Each field contains:
+## Each field contains:
 
 * Field defines field properties, not formatting.
 * FieldMark or FieldSeparator mark.
@@ -20,7 +20,6 @@ To set CharacterFormat for the field text, you have to find WTextRange between
 
 The following code example illustrates how to format the hyperlink text.
 {% tabs %}
-
 {% highlight C# %}
 doc.LastParagraph.AppendHyperlink("www.google.com", "google",HyperlinkType.WebLink);
  for (int i = 0, cnt = doc.LastParagraph.Items.Count; i < cnt; i++)
@@ -44,4 +43,5 @@ i += 1
 End While
 {% endhighlight %}
 {% endtabs %} 
+
 

@@ -14,7 +14,7 @@ You can change the grid line color of the Excel worksheet by using the ExcelKnow
  
 {% tabs %} 
 {% highlight C# %}
- 
+
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
 
@@ -41,7 +41,7 @@ excelEngine.Dispose();
 
 
 {% highlight vbnet %}
- 
+
 'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -61,5 +61,6 @@ workbook.SaveAs(fileName)
 'Closes the workbook.
 workbook.Close()
 excelEngine.Dispose()
+
 {% endhighlight %}
 {% endtabs %}

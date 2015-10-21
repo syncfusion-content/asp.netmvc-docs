@@ -34,6 +34,7 @@ workbook.Close();
 
 {% highlight vbnet %}
 
+
  'Saves the workbook to the stream.
 Dim fs As FileStream = New FileStream("Sample.xls", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite)
  
@@ -47,5 +48,7 @@ Dim workbook As IWorkbook = application.Workbooks.Open("sample.xlsx", ExcelOpenT
 workbook.SaveAs(fs)
 workbook.Close()
 
+
 {% endhighlight %}
 {% endtabs %}
+

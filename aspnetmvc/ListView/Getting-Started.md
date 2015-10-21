@@ -25,7 +25,7 @@ The following steps guide you to add a ListView control in a MVC application.
 
 ## Create a simple ListView
 
-1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/listview/getting-started) Documentation.
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/listview/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for ListView rendering.
 
 {% highlight CSHTML %}

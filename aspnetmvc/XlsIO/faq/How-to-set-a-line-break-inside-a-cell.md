@@ -10,9 +10,11 @@ documentation: ug
 # How to set a line break inside a cell
 
 In order to set a line break inside a cell, you have to enable Text Wrapping for the cell and then break the text. The following code example illustrates this.
+
 {% tabs %}
  
 {% highlight C# %}
+
 
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -36,6 +38,7 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
+
 excelEngine.Dispose(); 
         
 {% endhighlight %}    
@@ -65,6 +68,8 @@ workbook.SaveAs(fileName)
 workbook.Close()
 excelEngine.Dispose()
 
+
 {% endhighlight %}
 
 {% endtabs %}
+

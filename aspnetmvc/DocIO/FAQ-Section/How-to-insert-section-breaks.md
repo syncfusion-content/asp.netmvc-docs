@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to insert section breaks | ControlNameundefined | ASP.NET MVC | Syncfusion
 description: how to insert section breaks?
@@ -29,4 +29,5 @@ Dim section As WSection = paragraph.InsertSectionBreak()
 Dim section As WSection = paragraph.InsertSectionBreak(SectionBreakCode.EvenPage)
 {% endhighlight %}
 {% endtabs %} 
+
 

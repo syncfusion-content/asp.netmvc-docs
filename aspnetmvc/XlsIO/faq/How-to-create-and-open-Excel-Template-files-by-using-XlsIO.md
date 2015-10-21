@@ -11,8 +11,10 @@ documentation: ug
 
 You can create either XLT or XLTX Excel Template files by saving a file with the ExcelSaveType property of the SaveAs method. The ExcelSaveType property must be set to SaveAsTemplate to create a template file of the existing file. The following code example illustrates this.
 
+
 {% tabs %}
 {% highlight C# %}
+
 
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -62,6 +64,7 @@ workbook.SaveAs("Sample.xltx", ExcelSaveType.SaveAsTemplate)
 
 An Excel Template file is opened in the same way a document is opened. The following code example illustrates how to open a template file.
 {% tabs %}
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.
@@ -112,3 +115,4 @@ excelEngine.Dispose()
 
 {% endtabs %}
      
+

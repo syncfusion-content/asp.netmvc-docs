@@ -27,7 +27,7 @@ The following screenshot illustrates a Splitter control.
 
 Essential Studio ASP.NET MVC Splitter control has a built-in feature to split the display into horizontal and vertical order.
 
-1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/splitter/getting-started) Documentation.
+1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/splitter/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the Splitter. You can download the desired mobile and name it as galaxy.jpg. ‘ContentTemplate’ property is used to specify the HTML tags within the helper elements. Here we have used the contentTemplate property to specify the contents of the splitter control.
 
    ~~~ cshtml

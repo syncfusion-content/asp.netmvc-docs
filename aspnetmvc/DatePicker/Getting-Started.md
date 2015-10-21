@@ -28,7 +28,7 @@ DatePicker control
 
 ASP.NET MVC DatePicker widget basically renders with built-in features such as keyboard navigation, other months navigation with animations and flexible API’s. You can easily create the DatePicker widget by using simple input textbox element as follows.
 
-1. You can create a MVC Project and add necessary Dlls and scripts. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/datepicker/getting-started).
+1. You can create a MVC Project and add necessary Dlls and scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/datepicker/getting-started).
 2. Add the following code to the corresponding view page for DatePicker rendering.
 
    ~~~ html

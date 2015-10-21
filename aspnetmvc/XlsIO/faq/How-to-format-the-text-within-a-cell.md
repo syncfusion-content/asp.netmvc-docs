@@ -11,6 +11,7 @@ documentation: ug
 
 The text within a cell can be formatted by using the RichText functionality of XlsIO. The following code example illustrates this.
 
+
 {% tabs %}
  
 {% highlight C# %}
@@ -97,4 +98,6 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
 {% endtabs %}
+

@@ -28,7 +28,7 @@ Chart
 
 Getting started with your MVC Chart is very easy. You can start by creating a simple line Chart.
 
-1. Create an MVC Project and add necessary Dll’s and Scripts by referring [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/chart/getting-started) Documentation.
+1. Create an MVC Project and add necessary Dll’s and Scripts by referring [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/chart/getting-started) Documentation.
 2. You can create a simple div tag.
 
    ~~~ xml

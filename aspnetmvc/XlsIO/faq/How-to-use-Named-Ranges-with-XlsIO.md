@@ -10,6 +10,7 @@ documentation: ug
 # How to use Named Ranges with XlsIO
 
 The NamedRanges collection belongs to the workbook and not to the worksheet. When you define two named ranges with the same name then the named range that is defined last replaces the previous named range.
+
 {% tabs %} 
 {% highlight C# %}
  
@@ -27,7 +28,7 @@ IWorksheet mySheet = workbook.Worksheets[0];
 //Loops through the Named Ranges in a spreadsheet.
 foreach (IName name in mySheet.Names)
 {
-MessageBox.Show(name.Name.ToString());
+	MessageBox.Show(name.Name.ToString());
 }
 //There is already a named range called "One". Change the address that it points to.
 mySheet.Names["One"].RefersToRange = mySheet.Range["B6"];
@@ -49,6 +50,7 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
+
 excelengine.Dispose(); 
  
 {% endhighlight %}    
@@ -57,6 +59,7 @@ excelengine.Dispose();
 {% highlight vbnet %}
 
 'Opens an existing Excel 2013 file.
+
 Dim workbook As IWorkbook = excelEngine.Excel.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
  
 'Selects the version to be saved.
@@ -65,7 +68,9 @@ workbook.Version = ExcelVersion.Excel2013
 'Saves it as "Excel 2013" format.
 workbook.SaveAs("Sample.xlsx")
 
+
 {% endhighlight %}
 {% endtabs %}
+
 
 N> You need to change the Excel Version, if you want to save to another version.

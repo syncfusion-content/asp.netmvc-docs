@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started | Ribbon | ASP.NET MVC | Syncfusion
 description: getting started
@@ -15,14 +15,17 @@ This section explains briefly how to create a _Ribbon_ in your application with
 
 The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_ control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
 
+
 ![](Getting-Started_images/Getting-Started_img1.png)
 
 
 
 ###  Create Ribbon Control                     
 
-1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://docs.syncfusion.com/aspnetmvc/ribbon/getting-started) document.
+1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://help.syncfusion.com/aspnetmvc/ribbon/getting-started) document.
+
 2. Add a _Ribbon_ control in the index.cshtml page.The _Width_ property allows you to define the width of the _Ribbon_. In _ApplicationTab_ definition, the _MenuItemID_ property allows you to specify the ID of the ul list to create the application menu. In tabs definition, the _TabGroups_ property allows you to create one or more groups in the tab. In _ContextualTabs_ definition, the _BackgroundColor_ property allows you to define the background color of the contextual tab and _BorderColor_ property allows you to define the border color of the contextual tab.
+
 
 
 
@@ -37,7 +40,9 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 
 	{
 
-	apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
+
+	 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
+
 
 
 	{
@@ -89,7 +94,6 @@ The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You
 	})
 
 	)
-
 
 
 	<ul id="ribbonmenu">
@@ -258,7 +262,6 @@ tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
 })
 
 )
-
 
 
 <ul id="menu">
@@ -542,7 +545,6 @@ PrefixIcon = "e-ribbon e-ribbonunderline"
 })
 
 )
-
 
 
 <ul id="menu">

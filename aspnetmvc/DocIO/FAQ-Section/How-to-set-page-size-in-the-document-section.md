@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to set page size in the document section | DocIo | ASP.NET MVC | Syncfusion
 description: how to set page size in the document section?

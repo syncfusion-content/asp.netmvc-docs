@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Create Template Markers by using XlsIO | XlsIO | ASP.NET MVC | Syncfusion
 description:  How to Create Template Markers by using XlsIO
@@ -68,9 +68,11 @@ The following arguments can be used with the marker to control the formatting wh
 * Copyrange: [top-left cell reference in R1C1]: [bottom-right cell reference in R1C1]-Copies the specified cells after each cell import.
 
 The following code sample illustrates processing and binding the marker with data.
+
 {% tabs %}
 
 {% highlight C# %}
+
 
 //Step 1: Instantiates the spreadsheet creation engine.
 ExcelEngine excelEngine = new ExcelEngine();
@@ -133,7 +135,9 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
 {% endtabs %}
+
 Here, CreateTemplateMarkerProcessor returns ITemplateMarkersProcessor interface that creates and manipulates the marker data. ApplyMarkers method of ITemplateMarkersProcessor is the special method that processes the markers in the template.
 
 This screenshot illustrates binding data with marker variable.

@@ -158,7 +158,7 @@ The Menu control also provides support for Remote data binding. Here the remote 
 
 DataManager is used to manage relational data in JavaScript. DataManager uses two different classes, ej.DataManager for processing, and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are to be read by DataManager. To know more about DataManager and Query refer the following link location.
 
-<http://docs.syncfusion.com/aspnetmvc/menu/data-binding>
+<http://help.syncfusion.com/aspnetmvc/menu/data-binding>
 
 In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](http://mvc.syncfusion.com/Services/Northwnd.svc/) is used as the URL. This acts as web service that is located in the Syncfusion server. The webservice with the name Northwnd.svc is used here.
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to modify the built in styles | DocIo | ASP.NET MVC | Syncfusion
 description: how to modify the built-in styles?
@@ -22,9 +22,8 @@ doc.Styles.Add(style);para.ApplyStyle(style.Name);
 {% endhighlight %}
 {% highlight VB %}
 Dim style As Style = TryCast(Style.CreateBuiltinStyle(BuiltinStyle.Heading1, doc), Style)
-style.CharacterFormat.Italic = True
-style.CharacterFormat.UnderlineStyle = UnderlineStyle.DotDash
-doc.Styles.Add(style)para.ApplyStyle(style.Name)
-{% endhighlight %}
+style.CharacterFormat.Italic = Truestyle.CharacterFormat.UnderlineStyle = UnderlineStyle.DotDashdoc.Styles.Add(style)
+para.ApplyStyle(style.Name)
+{% endhighlight  %}
 
 {% endtabs %} 

@@ -41,12 +41,14 @@ workbook.SaveAs(fileName);
  
 // Closes the workbook.
 workbook.Close();
+
 excelEngine.Dispose(); 
         
 {% endhighlight %}    
 
 
 {% highlight vbnet %}
+
 
  'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
@@ -74,7 +76,9 @@ workbook.SaveAs(fileName)
 workbook.Close()
 excelEngine.Dispose()
 
+
 {% endhighlight %}
 {% endtabs %}
+
 
 N> Locking/Unlocking cells in an unprotected worksheet has no effect.

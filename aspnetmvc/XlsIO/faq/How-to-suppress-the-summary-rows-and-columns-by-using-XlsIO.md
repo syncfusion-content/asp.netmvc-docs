@@ -11,8 +11,9 @@ documentation: ug
 
 You can suppress the summary rows and columns by using the IsSummaryRowBelow and IsSummaryColumnRight properties. The following code example illustrates this.
 
- 
+
 {% tabs %}
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.

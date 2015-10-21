@@ -11,6 +11,7 @@ documentation: ug
 
 XlsIO now provides support to open and save an Excel 2013 Macro Enabled Template to XLSM (Excel 2013 Macro Enabled Document) format. The following code example illustrates this.
 
+
 {% tabs %}
 {% highlight C# %}
 
@@ -44,8 +45,10 @@ workbook = application.Workbooks.Open("MacroTemplate.xltm", ExcelOpenType.Automa
 'Saves the file as XLSM.
 workbook.Version = ExcelVersion.Excel2013
 workbook.SaveAs("Sample.xlsm", ExcelSaveType.SaveAsTemplate)
+
  
 {% endhighlight %}
 {% endtabs %}
+
 
 N> You need to change the Excel Version, if you want to save to another version.

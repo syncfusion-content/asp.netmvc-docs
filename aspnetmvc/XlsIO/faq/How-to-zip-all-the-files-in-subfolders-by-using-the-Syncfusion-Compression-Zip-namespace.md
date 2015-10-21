@@ -10,6 +10,7 @@ documentation: ug
 # How to zip all the files in subfolders by using the Syncfusion.Compression.Zip namespace
 
 The following code example illustrates how to zip all files in subfolders in XlsIO by using the Syncfusion.Compression.Zip namespace.
+
 {% tabs %} 
 {% highlight C# %}
 
@@ -169,5 +170,6 @@ private void button3_Click(object sender, EventArgs e)
         End Sub
 
 {% endhighlight %}
+
 {% endtabs %}
 ![](FAQ_images/FAQ_img2.png)

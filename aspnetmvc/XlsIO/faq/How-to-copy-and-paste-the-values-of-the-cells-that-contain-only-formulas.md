@@ -11,6 +11,7 @@ documentation: ug
 
 You can copy and paste the values of the cells that contain only formulas by setting ExcelCopyRangeOptions of the CopyTo method to None. The following code example illustrates this.
 
+
 {% tabs %} 
 
 {% highlight C# %}
@@ -88,3 +89,4 @@ excelEngine.Dispose()
 
 {% endhighlight %}
 {% endtabs %}
+

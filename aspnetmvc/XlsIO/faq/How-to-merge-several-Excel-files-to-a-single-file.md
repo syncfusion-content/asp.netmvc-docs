@@ -11,7 +11,9 @@ documentation: ug
 
 XlsIO provides support to merge several Excel files to a single file. The following code example illustrates how to do this.
 
+
 {% tabs %} 
+
 {% highlight C# %}
 
  //Step 1: Instantiates the spreadsheet creation engine.
@@ -86,5 +88,6 @@ workbook.Close()
 excelEngine.Dispose()
 
 {% endhighlight %}
+
 {% endtabs %}
 

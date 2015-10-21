@@ -12,7 +12,7 @@ documentation: ug
 The string that the header/footer takes is a script that you can use to format the header/footer. For more information on formatting the string, see <http://support.microsoft.com/?kbid=213618>.
 
 {% tabs %}
- 
+
 {% highlight C# %}
 
 //Step 1: Instantiates the spreadsheet creation engine.
@@ -43,6 +43,7 @@ excelEngine.Dispose();
 
 {% highlight vbnet %}
    
+
 'Step 1: Instantiates the spreadsheet creation engine.
 Dim excelEngine As ExcelEngine = New ExcelEngine
  
@@ -67,3 +68,4 @@ excelEngine.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
+

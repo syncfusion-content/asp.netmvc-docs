@@ -11,6 +11,7 @@ documentation: ug
 
 You can unfreeze rows and columns in XlsIO by using the RemovePanes method. The following code example illustrates this.
 
+
 {% tabs %} 
  
 {% highlight C# %}
@@ -67,3 +68,4 @@ excelEngine.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
+
