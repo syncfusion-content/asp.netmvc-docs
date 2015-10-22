@@ -878,7 +878,7 @@ doc.Close()
 {% endtabs %}  
 
 N> For more information on inserting Headers and Footers to a Word document using DocIO, you can refer to the online documentation
-link:_ <http://help.syncfusion.com/windowsforms/docio/working-with-sections#working-with-headers-and-footers>
+link:_ <http://help.syncfusion.com/FileFormat/DocIO/Working%20with%20Sections#working-with-headers-and-footers>
 
 ## Character Formatting
 
@@ -1327,7 +1327,8 @@ doc.Save("CommentsRemovedDocIO.doc", FormatType.Doc)
 {% endtabs %}  
 
 N> For more information on working with the comments using DocIO, you can refer to the online documentation link:
- <http://help.syncfusion.com/windowsforms/docio/working-with-paragraphs#comments>
+ <http://help.syncfusion.com/FileFormat/DocIO/Working%20with%20Comments>
+ 
 ## Document Protection
 
 You can protect your Word documents with or without a password, from anyone accidentally or deliberately modifying the Word documents. You can specify the protection type for preserving the Word documents.
@@ -1588,7 +1589,7 @@ doc.Save("TOCUpdatedDocIO.doc", FormatType.Doc)
 {% endtabs %}  
 Refer to the online documentation link for more information about adding the table of contents to the Word document using DocIO:
 
-<http://help.syncfusion.com/windowsforms/docio/working-with-table-of-contents>
+<http://help.syncfusion.com/FileFormat/DocIO/Working%20with%20Table%20Of%20Contents>
 
 
 
