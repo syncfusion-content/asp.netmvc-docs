@@ -74,11 +74,10 @@ Then, select Internet application template with Razor view engine and click OK.
 
 1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 
-   N>
-   >
-   > 1. Use the following code example while adding scripts and styles
-   > 2. Apart from the cdn files, the rest of them can be acquired from the following location
-   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+  
+   N> 1. Use the following code example while adding scripts and styles
+      Apart from the cdn files, the rest of them can be acquired from the following location
+      C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ cshtml
 
@@ -573,11 +572,11 @@ Then select Internet application template with Razor view engine and click OK
 
 1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 
-   N>
-   >
-   > 1. Use the following code sample while adding scripts and styles
-   > 2. Apart from cdn files, the rest of them can be acquired from the following location
-   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+
+
+   N>1. Use the following code sample while adding scripts and styles
+     2. Apart from cdn files, the rest of them can be acquired from the following location
+     C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
    ~~~ cshtml
 
@@ -638,6 +637,7 @@ Add the following code example in the Index.cshtml page that is already created:
 
 
 3. In the Add New Item window, select WCF Service and name it as PivotGridService.svc. 
+
 4. Click Add.
 
 

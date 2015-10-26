@@ -16,6 +16,9 @@ Conditional formatting in the PivotGrid control allows you to define conditions 
 
 
 Conditional formatting dialog can be launched by clicking a simple button in the application. The following code example explains on how to launch the conditional formatting dialog.
+
+{% tabs %}  
+
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc"))
@@ -28,6 +31,9 @@ Conditional formatting dialog can be launched by clicking a simple button in the
 
 .ShowRoundedCorner(true).ClientSideEvents(events=>events.Click("btnClick"))
 
+{% endhighlight %}
+	
+{% highlight c# %} 
 
 
 function btnClick(e) 
@@ -44,6 +50,9 @@ function btnClick(e)
 }
 
 {% endhighlight %}
+
+{% endtabs %}  
+
 
 The PivotGrid is formatted with the following three conditions:
 

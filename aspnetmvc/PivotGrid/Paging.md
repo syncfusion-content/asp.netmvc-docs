@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging
 
-Note: This feature is applicable only for OLAP datasource.
+N> This feature is applicable only for OLAP datasource.
 
 ##Pager
 
@@ -53,9 +53,8 @@ PivotGrid with Virtual Scroller
 
 ##OLAP Report for Paging and Virtual Scrolling
 
+
 {% highlight C# %}
-
-
 
 OlapReport olapReport = new OlapReport();
 

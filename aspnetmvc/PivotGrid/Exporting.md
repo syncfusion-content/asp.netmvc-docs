@@ -16,13 +16,17 @@ The PivotGrid control can be exported to the following formats:
 * PDF
 * CSV
 
+{% tabs %}  
+
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1")Url(Url.Content("~/wcf/OLAPService.svc"))
 
 @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
 
+{% endhighlight %}
 
+{% highlight C# %}
 
 function exportBtnClick(args) 
 {
@@ -34,6 +38,8 @@ function exportBtnClick(args)
 }
 
 {% endhighlight %}
+
+{% endtabs %}  
 
 The Export type that is to be mentioned in the parameter takes any one of the following enumerated values such as Excel, Word, PDF and CSV.
 

@@ -15,7 +15,7 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
  You can refer to custom CSS in Layout.cshtml page under shared folder.
 
-
+{% tabs %}  
 
 {% highlight CSHTML %}
 
@@ -1078,8 +1078,9 @@ The PivotGrid control customizes its appearance using user-defined CSS. The cust
 
 }
 
+ {% endhighlight %}
 
-{% endhighlight %}
+{% endtabs %} 
 
 
 ![](Appearance--Styling_images/Appearance--Styling_img1.png)

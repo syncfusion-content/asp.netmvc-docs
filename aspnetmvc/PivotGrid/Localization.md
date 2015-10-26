@@ -13,7 +13,7 @@ N> This feature is currently not applicable for PivotTable Field List.
 
 Localization is the process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, data is displayed in a specific language and culture of a particular country or region. The ASP.NET MVC PivotGrid control provides inherent support to localize its UI.The following table lists the default English localization user interface based on French culture. 
 
-_List of default English localization user interface based on French culture_
+List of default English localization user interface based on French culture
 
 <table>
 <tr>
@@ -100,6 +100,14 @@ The following code example illustrates how to localize PivotGrid’s user interf
 }
 {% endhighlight %}
 
+
+
+N> In order to render the localized PivotGrid, you can reset the content available in both
+
+1. OLAP Grid Control
+
+2. OLAP Cube
+
 {% highlight CSHTML %}
 
 @section ControlsSection{
@@ -112,10 +120,6 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
 {% endhighlight %}
 
-N> In order to render the localized PivotGrid, you can reset the content available in both
-
-1. _OLAP Grid Control_
-2. _OLAP Cube_
 
 ## Localizing Control Information: 
 
@@ -132,9 +136,9 @@ ej.PivotGrid.locale["zh-CN"] =
 
 {% endhighlight %}
 
-##Localizing Cube Information
+## Localizing Cube Information
 
-To get the LocalizedCubeInformation, “_Locale__Identifier__"_ is set in the connection string
+To get the LocalizedCubeInformation, “Locale Identifier" is set in the connection string
 
 
 {% highlight C# %}
