@@ -51,12 +51,13 @@ XML/A provides the most efficient way to access an OLAP database over the Inter
 
 The following code example illustrates how to connect to the SSAS server available online:
 
+{% highlight C# %}
 
 static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
-
+{% endhighlight %}
 
 ### Connecting to Mondrian Server
 

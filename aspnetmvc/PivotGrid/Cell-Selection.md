@@ -13,15 +13,21 @@ The PivotGrid control provides support to select specific ranges of value cells 
 
 The following code example explains on how to enable cell selection in the PivotGrid control.
 
+{% tabs %}  
+
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc")).EnableCellSelection(true).ClientSideEvents(events => events.CellSelection("valueCellClick")).IsResponsive(true)
 
     @(Html.EJ().Chart("container").CommonSeriesOptions(cr => cr.Type(SeriesType.Column).EnableAnimation(true)).Load("loadTheme"))
 
+{% endhighlight %}
+	
+	
+{% highlight c# %} 
 
-
-valueCellClick = function (evt) {
+valueCellClick = function (evt) 
+{
 
     // The event lets the user to perform required operation with the selected set of cells. The details of the selected range would be obtained in the parameter of the event.
 
@@ -32,8 +38,11 @@ valueCellClick = function (evt) {
     colheaders = evt.columnHeader;
 
 }
+
 {% endhighlight %}
 
+
+{% endtabs %}  
 
 ![](Cell-Selection_images/Cell-Selection_img1.png)
 
