@@ -61,4 +61,4 @@ Ribbon control has Backstage page support.The left side of the backstage page co
 
 The following output is displayed as a result of the above code example.
 
-![](backstagepage_images\backstagepage_img1.png)
+![](BackstagePage_images\backstagepage_img1.png)
