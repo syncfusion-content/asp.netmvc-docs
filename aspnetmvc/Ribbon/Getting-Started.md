@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started | Ribbon | ASP.NET MVC | Syncfusion
 description: getting started
