@@ -374,11 +374,11 @@ Report List will hold all the reports of the current session of the OLAP Client
 
 When a change is made in the report, OLAP visualization controls and Axis Element Builder get re-populated with the data contained in the selected report.
 
-## OLAP Grid
+## Pivot Grid
 
 The OLAP Grid control for ASP.NET MVC is easily configurable, presentation-quality business control that reads OLAP data from a Microsoft SQL Server Analysis Services database, an offline cube or XMLA. The OLAP data is displayed with drill-up and drill-down capabilities and features exceptional performance. 
 
-For further information please refer the following link. <http://help.syncfusion.com/aspnetmvc/olapclient/olap-client-elements>
+For further information please refer the following link. <http://help.syncfusion.com/aspnetmvc/pivotgrid/getting-started>
 
 ## OLAP Chart
 
