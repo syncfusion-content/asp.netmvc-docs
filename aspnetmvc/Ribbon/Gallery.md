@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Gallery | Ribbon | ASP.NET MVC | Syncfusion
 description: gallery

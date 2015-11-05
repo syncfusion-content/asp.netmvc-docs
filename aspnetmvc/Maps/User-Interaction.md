@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: User Interaction | Maps | ASP.NET MVC | Syncfusion
 description: user interaction
