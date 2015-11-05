@@ -9,9 +9,9 @@ documentation: ug
 
 # Layout Customization
 
-OLAP Client UI comes with options to customize the Grid and Chart layout, such as:
+**OLAP Client UI** comes with options to customize the **Grid** and **Chart** layout, such as:
 
-1. Default View - Sets the start-up control. 
+1. **Default View** - Sets the start-up control. 
 2. Tab/Tile View – Tab or Tile view to visualize the controls separately or in the same layout. 
 3. Hide Grid/Chart - Hides any one of the control by default. 
 4. Toggle Panel – Turns On/Off the visibility of Cube Browser and Axis Element Builder panels.  
@@ -24,7 +24,7 @@ OLAP Client UI comes with options to customize the Grid and Chart layout, such a
 
 In Tile View representation, both Grid and Chart will be displayed one over the other, in the same layout. 
 
-{% highlight CSHTML%}
+{% highlight html%}
 
 @Html.EJ().Olap().OlapClient("OlapClient1")
 .Url("../wcf/OlapClientService.svc")
