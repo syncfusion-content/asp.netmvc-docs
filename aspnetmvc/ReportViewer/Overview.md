@@ -15,98 +15,27 @@ The ReportViewer is a visualization control to view Microsoft SSRS RDL/RDLC file
 
 The ReportViewer supports the following features.
 
-
-
 * DataSources (SQL Server, Oracle, MS Azure, XML, Business Object and SQL Server Compact Data Sources)
-
-
-
 * Filters and Parameters
-
-
-
 * Built-in Fields and Expressions
-
-
-
 * Grouping and Sorting
-
-
-
 * Report Items
-
-
-
 * Table
-
-
-
 * Matrix
-
-
-
 * List
-
-
-
 * Chart
-
-
-
 * Sparkline
-
-
-
 * Databar
-
-
-
 * Map
-
-
-
 * Gauge
-
-
-
 * Indicator
-
-
-
 * Image
-
-
-
 * Textbox
-
-
-
 * Line
-
-
-
 * Rectangle
-
-
-
 * Subreport
-
-
-
 * Actions: Drilldown, Drill through, Toggle and Document Map
-
-
-
 * Printing, Exporting, Paging, FitToPage and Zooming
-
-
-
 * Report Processing Events
-
-
-
 * KnockOut/AngularJS Support
-
-
-
 * Toolbar Customization

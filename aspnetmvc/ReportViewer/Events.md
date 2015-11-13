@@ -11,7 +11,6 @@ documentation: ug
 
 The ReportViewer has the following client-side events support to listen to the control action.
 
-_Client-Side events_
 
 <table>
 <tr>
@@ -45,69 +44,38 @@ Fires when the report is loaded.</td></tr>
 </table>
 
 
-{% highlight CSHTML %}
+{% highlight html %}
 
-
-@(
-
-Html.EJ().ReportViewer("viewer")
-
-.ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("DatabindingRemote.rdlc")
-
-.ReportServiceUrl(VirtualPathUtility.ToAbsolute("~/api/RDLCReport")).ReportLoaded("reportLoaded")
-
-)
+@(Html.EJ().ReportViewer("viewer")
+.ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local)
+.ReportPath("DatabindingRemote.rdlc")
+.ReportServiceUrl(VirtualPathUtility.ToAbsolute("~/api/RDLCReport")).ReportLoaded("reportLoaded") )
 
 
 <script type="text/javascript">
-
-	function reportLoaded(senderObj) 
-	{
-
-		$.ajax({
-
-			type: "POST",
-
-			contentType: "application/json; charset=utf-8",
-
-			url: '../wcf/Reportservice.svc/GetOrderDetails',
-
-			dataType: "json",
-
-			processData: false,
-
-			crossDomain: true,
-
-			async: false,
-
-			timeout: 5000,
-
-			success: function (result) {
-
-				reportdata = result.d;
-
-				var dataManger = ej.DataManager(reportdata);
-
-				var query = ej.Query().select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCity", "ShipCountry");
-
-				reportResult = dataManger.executeLocal(query);
-
-				var reportModel = $("#viewer").data('ejReportViewer');
-
-				reportModel.model.dataSources = [{ value: reportResult, name: "remote" }];
-
-			},
-
-			error: function (result) {
-
-				alert(result);
-
-			}
-
-		});
-
-	}
-
+    function reportLoaded(senderObj) {
+        $.ajax({
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            url: '../wcf/Reportservice.svc/GetOrderDetails',
+            dataType: "json",
+            processData: false,
+            crossDomain: true,
+            async: false,
+            timeout: 5000,
+            success: function (result) {
+                reportdata = result.d;
+                var dataManger = ej.DataManager(reportdata);
+                var query = ej.Query().select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCity", "ShipCountry");
+                reportResult = dataManger.executeLocal(query);
+                var reportModel = $("#viewer").data('ejReportViewer');
+                reportModel.model.dataSources = [{ value: reportResult, name: "remote" }];
+            },
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
 </script>
 
 {% endhighlight %}
