@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize-Position
+title: Customize Position | NavigationDrawer | ASP.NET MVC | Syncfusion
 description: customize position
 platform: ejmvc
 control: NavigationDrawer
@@ -13,7 +13,7 @@ Position property is used to specify the position whether it is in fixed or rela
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 

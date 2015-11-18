@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resources
+title: Resources | Schedule | ASP.NET MVC | Syncfusion
 description: resources
 platform: ejmvc
 control: Schedule
@@ -67,8 +67,10 @@ _allowMultiple_
 The following code example explains how to render the multiple resources on the Schedule control,
 
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -96,7 +98,7 @@ fields.Datasource(ViewBag.datasource)
 .RecurrenceRule("RecurrenceRule")
 // bind the resource id fields collection of each level.ResourceFields("OwnerId")))
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
 	public partial class ScheduleController : Controller
@@ -136,16 +138,15 @@ namespace MVCSampleBrowser.Controllers
 	}
 }
 {% endhighlight %}
-
+{% endtabs %}
 The output of the above code looks as follows.
 
 
 
 ![](Resources_images/Resources_img1.png)
 
-
-
-   _Figure_ _87_:  schedule with multiple resource.
+schedule with multiple resource.
+{:.caption}
 
 ## Resource Grouping
 
@@ -155,123 +156,120 @@ The following steps defines the way to start with rendering multiple resources o
 
 * Define the appointment data with required resource-related information fields as follows.
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class ScheduleController : Controller
+	public partial class ScheduleController : Controller
 
-{
+	{
 
-//
 
-// GET: /ResourceGrouping/
+	// GET: /ResourceGrouping/
 
-List<Rooms> rooms = new List<Rooms>();
+	List<Rooms> rooms = new List<Rooms>();
 
-List<Rooms> owner = new List<Rooms>();
+	List<Rooms> owner = new List<Rooms>();
 
 
 
-public ActionResult ResourceGrouping()
+		public ActionResult ResourceGrouping()
 
-{
+		{
 
-List<person> persons = new List<person>();
+			List<person> persons = new List<person>();
 
-persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=DAILY;COUNT=10;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", RoomId = "1", OwnerId = "1" });
+			persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=DAILY;COUNT=10;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", RoomId = "1", OwnerId = "1" });
 
-persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "2", OwnerId = "3" });
+			persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "2", OwnerId = "3" });
 
-persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "1" });
+			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "1" });
 
-persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 3, 1, 4, 0, 20), EndTime = new DateTime(2014, 3, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "5" });
+			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 3, 1, 4, 0, 20), EndTime = new DateTime(2014, 3, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "5" });
 
 
 
-//   var DataSource = new ScheduleDataDataContext().MultipleResources.ToList();
+			//   var DataSource = new ScheduleDataDataContext().MultipleResources.ToList();
 
-ViewBag.datasource = persons;
+			ViewBag.datasource = persons;
 
 
 
-rooms.Add(new Rooms { text = "Room1", id = "1", color = "#f8a398" });
+			rooms.Add(new Rooms { text = "Room1", id = "1", color = "#f8a398" });
 
-rooms.Add(new Rooms { text = "Room2", id = "2", color = "#56ca85" });
+			rooms.Add(new Rooms { text = "Room2", id = "2", color = "#56ca85" });
 
-ViewBag.Rooms = rooms;
+			ViewBag.Rooms = rooms;
 
 
 
-owner.Add(new Rooms { text = "Andrew", id = "1", groupId = "1", color = "#f8a398" });
+			owner.Add(new Rooms { text = "Andrew", id = "1", groupId = "1", color = "#f8a398" });
 
-owner.Add(new Rooms { text = "Cruise", id = "3", groupId = "2", color = "#56ca85" });
+			owner.Add(new Rooms { text = "Cruise", id = "3", groupId = "2", color = "#56ca85" });
 
-owner.Add(new Rooms { text = "Jerry", id = "5", groupId = "1", color = "#51a0ed" });
+			owner.Add(new Rooms { text = "Jerry", id = "5", groupId = "1", color = "#51a0ed" });
 
-ViewBag.Owners = owner;
+			ViewBag.Owners = owner;
 
 
 
-List<String> resources = new List<String>();
+			List<String> resources = new List<String>();
 
-resources.Add("Rooms"); resources.Add("Owners");
+			resources.Add("Rooms"); resources.Add("Owners");
 
-ViewBag.Resources = resources;
+			ViewBag.Resources = resources;
 
 
 
-return View();
+			return View();
 
-}
+		}
 
 
 
-}
+	}
 
-public class person
+	public class person
 
-{
+	{
 
-public int Id;
+		public int Id;
 
-public string Subject;
+		public string Subject;
 
-public string RoomId;
+		public string RoomId;
 
-public string OwnerId;
+		public string OwnerId;
 
-public DateTime StartTime;
+		public DateTime StartTime;
 
-public DateTime EndTime;
+		public DateTime EndTime;
 
-public bool AllDay;
+		public bool AllDay;
 
-public bool Recurrence;
+		public bool Recurrence;
 
-public string RecurrenceRule;
+		public string RecurrenceRule;
 
-}
+	}
 
 
 
-public class Rooms
+	public class Rooms
 
-{
+	{
 
-public string text;
+		public string text;
 
-public string id ;
+		public string id ;
 
-public string groupId ;
+		public string groupId ;
 
-public string color ;
+		public string color ;
 
-}
-
-
+	}
 
 }
 
@@ -282,7 +280,7 @@ public string color ;
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -354,17 +352,17 @@ gr.Resources(ViewBag.Resources);
 
 ![](Resources_images/Resources_img2.png)
 
-
-
-  _Figure_ _88_:  schedule with resource grouping.
+schedule with resource grouping.
+{:.caption}
 
 ## Multiple Appointment Creation
 
 * The “allowMultiple” option available for each resource object within the resource collection enables/disables the functionality of saving same appointment for multiple resources. 
 * When this property is set to true, the resource related fields in the appointment window allows you to select multiple resources. Refer the following code example.
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
 	public partial class ScheduleController : Controller
@@ -405,7 +403,7 @@ namespace MVCSampleBrowser.Controllers
 	}
 }
 {% endhighlight %}
-{% highlight html %}
+{% highlight CSHTML %}
 @(Html.EJ()
 .Schedule("Schedule1")
 .Width("100%")
@@ -438,7 +436,7 @@ fields.Datasource(ViewBag.datasource)
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 
 
@@ -448,9 +446,8 @@ fields.Datasource(ViewBag.datasource)
 
 ![](Resources_images/Resources_img3.png)
 
-
-
- _Figure_ _89_:  schedule with multiple resource creation.
+schedule with multiple resource creation.
+{:.caption}
 
 * To save the same appointment for multiple resources, refer the following steps,
 1. Double-click on the required work cell, the appointment window pops up as shown in the following image with an individual autocomplete field for selecting the available resources.
@@ -459,10 +456,9 @@ fields.Datasource(ViewBag.datasource)
 
    ![](Resources_images/Resources_img4.png)
 
-
-
-   _Figure_ _90_:  schedule with multiple appointment window.
-
+	schedule with multiple appointment window.
+    {:.caption}
+	
 2. Since the allowMultiple property is set to ‘true’ for this resource object, so you can select any number of available resources in it as follows.
 
 
@@ -470,18 +466,16 @@ fields.Datasource(ViewBag.datasource)
    ![](Resources_images/Resources_img5.png)
 
 
-
-   _Figure_ _91_:  schedule with multiple appointment window with different type owner.
-
+	schedule with multiple appointment window with different type owner.
+    {:.caption}
+	
 3. The same appointment with the subject Test Ride is created for each resource individually as follows when you click the Done button.
 
 
 
    ![](Resources_images/Resources_img6.png)
 
-
-
-   _Figure_ _92_:  schedule with saved multiple appointments with different type owner
-
+	schedule with saved multiple appointments with different type owner
+    {:.caption}
 
 

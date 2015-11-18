@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Contextual-Tab-and-Tab-Set
+title: Contextual Tab and Tab Set | Ribbon | ASP.NET MVC | Syncfusion
 description: contextual tab and tab set
 platform: ejmvc
 control: Ribbon
@@ -13,113 +13,112 @@ You can add _Contextual Tabs_ and _Tab Set_ in the _Ribbon_ control. In _Context
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
-     .Width("800px")
+.Width("800px")
 
-     .ApplicationTab(apptab =>
+.ApplicationTab(apptab =>
 
-    {
+{
 
-        apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
-               {
+{
 
-                   OpenOnClick = false
+   OpenOnClick = false
 
-               });
+});
 
-    })
+})
 
-    .RibbonTabs(tab =>
+.RibbonTabs(tab =>
 
-    {
+{
 
-        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+tab.Id("home").Text("HOME").TabGroups(tabgrp =>
 
-        {
+{
 
-            tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();  
+tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();  
 
-        }).Add();
+}).Add();
 
-    })
+})
 
-    .ContextualTabs(ctabs => {
+.ContextualTabs(ctabs => {
 
-            ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
+ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
 
-            {
+{
 
-                ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
+ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
 
-                {
+{
 
-                    ctabgrp.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
+	ctabgrp.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
 
-                }).Add();
+}).Add();
 
-            });
+});
 
-            ctabs.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ctab =>
+ctabs.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ctab =>
 
-            {
+{
 
-                ctab.Id("tabset1").Text("Tabset1").TabGroups(ctabgrp =>
+ctab.Id("tabset1").Text("Tabset1").TabGroups(ctabgrp =>
 
-                {
+{
 
-                    ctabgrp.Text("Tabset1 Styles").Type("custom").ContentID("contextualTabset1").Add();
+	ctabgrp.Text("Tabset1 Styles").Type("custom").ContentID("contextualTabset1").Add();
 
-                }).Add();
+}).Add();
 
-                ctab.Id("tabset2").Text("Tabset2").TabGroups(ctabgrp =>
+ctab.Id("tabset2").Text("Tabset2").TabGroups(ctabgrp =>
 
-                {
+{
 
-                    ctabgrp.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
+	ctabgrp.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
 
-                }).Add();
+}).Add();
 
-            });
+});
 
-        })
+})
 
-    )
+)
 
 
+<ul id="ribbonmenu">
 
-    <ul id="menu">
+	<li><a>FILE</a>
 
-        <li><a>FILE</a>
+		<ul>
 
-            <ul>
+			<li><a>New</a></li>
 
-                <li><a>New</a></li>
+			<li><a>Open</a></li>
 
-                <li><a>Open</a></li>
+		</ul>
 
-            </ul>
+	</li>
 
-        </li>
+</ul>
 
-    </ul>
+<div id="Contents">Custom Control</div>
 
-    <div id="Contents">Custom Control</div>
+<div id="contextualTab">
 
-    <div id="contextualTab">
+	<button id="contextualBtn">Contextual Tab</button></div>
 
-        <button id="contextualBtn">Contextual Tab</button></div>
+<div id="contextualTabset1">
 
-    <div id="contextualTabset1">
+	<button id="contextualTabsetBtn1">Contextual Tabset1</button></div>
 
-        <button id="contextualTabsetBtn1">Contextual Tabset1</button></div>
+<div id="contextualTabset2">
 
-    <div id="contextualTabset2">
-
-        <button id="contextualTabsetBtn2">Contextual Tabset2</button></div>
+	<button id="contextualTabsetBtn2">Contextual Tabset2</button></div>
 
 
 

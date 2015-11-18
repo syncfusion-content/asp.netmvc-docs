@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | Chart | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: Chart
@@ -15,25 +15,14 @@ Code:
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <img src="../images/chart/export.png" onclick="onExport()" title="Export Chart" style="float: right" />
 
 <div id="container"></div> 
 
 
-
-
-
-
-
 @(Html.EJ().Chart("container").EnableCanvasRendering(true))
-
-
-
-
-
-
 
 function onExport() {
 

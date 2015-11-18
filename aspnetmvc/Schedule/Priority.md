@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Priority
+title: Priority | Schedule | ASP.NET MVC | Syncfusion
 description: priority
 platform: ejmvc
 control: Schedule
@@ -42,7 +42,10 @@ The following are the sub-properties used within the prioritySettings.
 
 The following code example illustrates on how to render priority feature in the Schedule control.
 
-{% highlight html %}
+{% tabs %}
+
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -77,12 +80,12 @@ The following code example illustrates on how to render priority feature in the�
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 // Follow the code declared in Read only part
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 Execute the above code to render the following output.
 
@@ -101,8 +104,10 @@ Execute the above code to render the following output.
 The following code example illustrates on how to render priority feature with user- defined datasource in the Schedule control. 
 
 
+{% tabs %}
+ 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Schedule("Schedule1")
@@ -118,7 +123,6 @@ The following code example illustrates on how to render priority feature with us
 .ShowLocationField(true)
 
 .PrioritySettings(eve => eve.Enable(true).Text("text").Id("id").Value("value").Template("<div class='${value}'></div>").Datasource((System.Collections.IEnumerable)ViewBag.Priority))  // To display the Priority option in the appointment window while passing custom datasource we need to mention the Template and DataSource like this
-
 
 
 .AppointmentSettings(fields => fields.Datasource(ViewBag.datasource)
@@ -141,7 +145,7 @@ The following code example illustrates on how to render priority feature with us
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -153,15 +157,15 @@ public ActionResult Index()
 
 {
 
-PriorityValue.Add(new Priority { text = "None", id = 1, value = "none" });
+	PriorityValue.Add(new Priority { text = "None", id = 1, value = "none" });
 
-PriorityValue.Add(new Priority { text = "Critical", id = 2, value = "critical" });
+	PriorityValue.Add(new Priority { text = "Critical", id = 2, value = "critical" });
 
-PriorityValue.Add(new Priority { text = "UltraCritical", id = 3, value = "ultracritical" });
+	PriorityValue.Add(new Priority { text = "UltraCritical", id = 3, value = "ultracritical" });
 
-ViewBag.Priority = PriorityValue.ToList();  // We can pass the custom datasource (priority option) for the schedule control like this
+	ViewBag.Priority = PriorityValue.ToList();  // We can pass the custom datasource (priority option) for the schedule control like this
 
-return View();
+	return View();
 
 }
 
@@ -171,18 +175,18 @@ public class Priority
 
 {
 
-public string text { set; get; }
+	public string text { set; get; }
 
-public int id { set; get; }
+	public int id { set; get; }
 
-public string value { set; get; }
+	public string value { set; get; }
 
 }
 
 // For appointment data follow the code declared in Read only part
 
 {% endhighlight %}
-
+{% endtabs %} 
 
 * And then need to define the styles to display the “priority icon/images (you can use your desired images)” with the priority options. 
 * The class name (while defining styles) should be the field name in template. For example if you define the template (ex: Template ("<div class='${value}'></div>")) then you need to define class with “value field and its value should be a class name (ex: critical)”. 
@@ -191,7 +195,7 @@ public string value { set; get; }
 
 The following code example illustrates how to define the css style while using the template.
 
-{% highlight js %}
+{% highlight CSS %}
 
 // Her we are defining the style of the “custom priority icon”
 <style>
@@ -200,41 +204,45 @@ The following code example illustrates how to define the css style while using t
 
 .ultracritical,
 
-.none {
+.none 
 
-height: 16px;
+{
 
-width: 17px;
+	height: 16px;
 
-float: left;
+	width: 17px;
 
-background-repeat: no-repeat;
+	float: left;
 
-padding: 1px;
+	background-repeat: no-repeat;
 
-}
-
-
-
-.critical {
-
-background-image: url('../themes/images/arrowup.png');
-
-background-color: orange;
-
-background-position: 2px;
+	padding: 1px;
 
 }
 
 
 
-.ultracritical {
+.critical 
+{
 
-background-image:url('../themes/images/arrowup.png');
+	background-image: url('../themes/images/arrowup.png');
 
-background-color: red;
+	background-color: orange;
 
-background-position: 2px;
+	background-position: 2px;
+
+}
+
+
+
+.ultracritical 
+{
+
+	background-image:url('../themes/images/arrowup.png');
+
+	background-color: red;
+
+	background-position: 2px;
 
 }
 
@@ -247,8 +255,10 @@ background-position: 2px;
 * Similarly you can use the image tag directly in the template. Following code snippets illustrates the image tag usage in the template.
 
 
+{% tabs %}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -290,7 +300,7 @@ background-position: 2px;
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -332,7 +342,7 @@ public string value { set; get; }
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 On excuting the above mentioned codes will render the same output as follows.
 

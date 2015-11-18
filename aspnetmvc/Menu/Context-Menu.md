@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context-Menu
+title: Context Menu | Menu | ASP.NET MVC | Syncfusion
 description: context menu
 platform: ejmvc
 control: Menu
@@ -18,94 +18,94 @@ In the following example, a context menu for the division containing text is cre
 1. Add the following code in your View page.
 
 
-   ~~~ js
+   ~~~ cshtml
 
 
-		// Add the following code in your CSHTML page.
+	// Add the following code in your CSHTML page.
 
-		   <div id="target" class="textarea">
+	<div id="target" class="textarea">
 
-				HTML is written in the form of HTML elements consisting of tags enclosed in angle
+	HTML is written in the form of HTML elements consisting of tags enclosed in angle
 
-				brackets (like <html> ),within the web page content. HTML tags most commonly
+	brackets (like <html> ),within the web page content. HTML tags most commonly
 
-				come in pairs like and ,although some tags, known as empty elements, are unpaired,
+	come in pairs like and ,although some tags, known as empty elements, are unpaired,
 
-				for example <img>. The purpose of a web browser is to read HTML documents
+	for example <img>. The purpose of a web browser is to read HTML documents
 
-				and compose them into visible or audible web pages. The browser does not display
+	and compose them into visible or audible web pages. The browser does not display
 
-				the HTML tags, but uses the tags to interpret the content of the page.
+	the HTML tags, but uses the tags to interpret the content of the page.
 
-			</div>
+	</div>
 
-			@Html.EJ().Menu("docfile").Items(items =>
+	@Html.EJ().Menu("docfile").Items(items =>
 
-						   {
+	{
 
-							   items.Add().Text("Open").Children(child =>
+	   items.Add().Text("Open").Children(child =>
 
-							   {
+	   {
 
-								   child.Add().Text("Open with notepad");
+		   child.Add().Text("Open with notepad");
 
-								   child.Add().Text("Open with notepad++");
+		   child.Add().Text("Open with notepad++");
 
-							   });
+	   });
 
-							   items.Add().Text("Edit");
+	   items.Add().Text("Edit");
 
-							   items.Add().Text("Save");
+	   items.Add().Text("Save");
 
-							   items.Add().Text("Save as");
+	   items.Add().Text("Save as");
 
-							   items.Add().Text("Print");
+	   items.Add().Text("Print");
 
-							   items.Add().Text("Properties");
+	   items.Add().Text("Properties");
 
-						   }).MenuType(MenuType.ContextMenu).OpenOnClick(true).ContextMenuTarget("#target")
+	}).MenuType(MenuType.ContextMenu).OpenOnClick(true).ContextMenuTarget("#target")
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following code in your style section.
 
-   ~~~ js
+   ~~~ css
 
+	<style type="text/css">
 
-		<style type="text/css">
+		.textarea 
+		{
 
-			.textarea {
+			border: 1px solid;
 
-				border: 1px solid;
+			padding: 10px;
 
-				padding: 10px;
+			position: relative;
 
-				position: relative;
+			text-align: justify;
 
-				text-align: justify;
+			width: 463px;
 
-				width: 463px;
+			color: gray;
 
-				color: gray;
+			margin: 0 auto;
 
-				margin: 0 auto;
+		}
 
-			}
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 The following screen shot displays the output of the above code.
 
 ![](Context-Menu_images/Context-Menu_img1.png)
 
-_Figure: Context Menu_
-
+Context Menu
+{:.caption}
 
 
 You can hide and show the context menu using the following methods.
@@ -119,7 +119,8 @@ Hides the context Menu control. Add the following script code in the sample in o
 
 <script type="text/javascript">
 
-    jQuery(function ($) {
+    jQuery(function ($) 
+	{
 
         $("#menucontrol").ejMenu({
 
@@ -151,7 +152,8 @@ Shows the context menu control. Add the following script code in the sample in o
 
 <script type="text/javascript">
 
-    jQuery(function ($) {
+    jQuery(function ($) 
+	{
 
         $("#menucontrol").ejMenu({
 

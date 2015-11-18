@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Checkbox-Support
+title: Checkbox Support | TreeView | ASP.NET MVC | Syncfusion
 description: checkbox support
 platform: ejmvc
 control: TreeView
@@ -15,83 +15,76 @@ The following steps explain how you can enable the ShowCheckbox property for Tre
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 \\ To configure TreeView in the CSHTML page
 
-
-
 @Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
+	items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+   {
 
-                   {
+	   child.Add().Text("Desktop");
 
-                       child.Add().Text("Desktop");
+	   child.Add().Text("Downloads");
 
-                       child.Add().Text("Downloads");
+	   child.Add().Text("Recent places");
 
-                       child.Add().Text("Recent places");
+   });
 
-                   });
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+	{
 
-        {
+	child.Add().Text("Documents").Children(child1 =>
 
-            child.Add().Text("Documents").Children(child1 =>
+		{
 
-                {
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("Public Documents");
 
-                    child1.Add().Text("Public Documents");
+		});
 
-                });
+	child.Add().Text("Pictures").Children(child1 =>
 
-            child.Add().Text("Pictures").Children(child1 =>
+	{
 
-            {
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("Public Pictures");
 
-                child1.Add().Text("Public Pictures");
+	});	
 
-            });	
+	child.Add().Text("Music").Children(child1 =>
 
-            child.Add().Text("Music").Children(child1 =>
+	{
 
-            {
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("Public Music");
 
-                child1.Add().Text("Public Music");
+	});
 
-            });
+	child.Add().Text("Subversion");
 
-            child.Add().Text("Subversion");
+	});
 
+	items.Add().Text("Computer").Children(child =>
 
+	{
 
-        });
+		child.Add().Text("Folder(C)");
 
-        items.Add().Text("Computer").Children(child =>
+		child.Add().Text("Folder(D)");
 
-        {
+		child.Add().Text("Folder(E)");
 
-            child.Add().Text("Folder(C)");
+	});
 
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
-
-
-
-    }).ShowCheckbox (true)
+}).ShowCheckbox (true)
 
 {% endhighlight %}
 
@@ -105,14 +98,14 @@ The following image is the output for TreeView when ShowCheckbox is set to “Tr
 
 ![](Checkbox-Support_images/Checkbox-Support_img1.png)
 
-
-_Figure42: TreeView with checkbox_
+TreeView with checkbox
+{:.caption}
 
 ## Auto Check Parent Node
 
 To overcome the default functionality of TreeView, when you don’t want the parent node check state being moved to indeterminate state and when you check the corresponding child node, you can enable the property AutoCheckParentNode. You can specify the property AutoCheckParentNode in TreeView as follows.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -190,14 +183,14 @@ To overcome the default functionality of TreeView, when you don’t want the par
 
 ![](Checkbox-Support_images/Checkbox-Support_img2.png)
 
-
-_Figure42: TreeView with AutoCheckParentNode enabled_
+TreeView with AutoCheckParentNode enabled
+{:.caption}
 
 ## Auto Check Nodes
 
 By default while checking a parent node, it will affect the child nodes and vice versa. If you don’t want this functionality (checking a node affecting other node means) you cn disable this using AutoCheck property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
@@ -275,7 +268,8 @@ By default while checking a parent node, it will affect the child nodes and vice
 
 ![](Checkbox-Support_images/Checkbox-Support_img3.png)
 
-_Figure42: TreeView with AutoCheck disabled_
+TreeView with AutoCheck disabled
+{:.caption}
 
 
 
@@ -283,7 +277,7 @@ _Figure42: TreeView with AutoCheck disabled_
 
 You can specify the Checked Nodes in TreeView initially by using the property CheckedNodes. Checked Nodes index collection is given to the integer array. You can specify the property CheckedNodes in TreeView control as follows.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @{List<int> nodes = new List<int>() { 0,4 }; }
 
@@ -367,8 +361,7 @@ You can specify the Checked Nodes in TreeView initially by using the property Ch
 
 ![](Checkbox-Support_images/Checkbox-Support_img4.png)
 
-
-_Figure42: TreeView with Checkednodes_
-
+TreeView with Checkednodes
+{:.caption}
 
 

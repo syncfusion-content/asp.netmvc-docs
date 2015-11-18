@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | DataManager  | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
 control: DataManager
@@ -13,16 +13,17 @@ documentation: ug
 
 DataManager is used to manage relational data. It supports CRUD (Create, Read, Update, and Destroy) in individual requests and Batch. DataManager uses DataManager control for processing and ej.Query for serving the data. DataManager control communicates with data source and ej.Query generates data queries that are read by DataManager. 
 
-## Configure Demo Application
+### Configure Demo Application
 
 This section briefly describes how to make a connection to WCF “Northwind” OData service and generate a report with top five orders from customer HANAR with higher Freight charges.  In this application scenario, you can learn how to bind the DataManager to the Grid control to do paging, filtering and sorting with Grid contol in the DataManager by using ej.Query.
 
-## Create Connection
+### Create Connection
 
 To define connection to data source, you can use the DataManager control. The data source can be local or remote. Local data source is the local data and remote data source is any web service. 
 
 The local data is set as data source by using the following code example.
-{% highlight js %}
+
+{% highlight CSHTML %}
 <%--connection local reference--%>
 
 @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
@@ -73,17 +74,17 @@ public class HomeController : Controller
 {% endhighlight  %}
 In this application, as you have web service for NorthWind database, you can assign the web service URL link to the URL property of DataManager, and you can enable crossDomain to retrieve data from another domain.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 {% endhighlight  %}
 You can use the ej.Query to generate the report from web service.
 
-## Binding with Grid Control
+### Binding with Grid Control
 
 You can bind the DataManager with Grid by defining the ID of DataManager in the DataManagerID property of the Grid control.
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
@@ -118,9 +119,10 @@ When you run, the following table is displayed.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+DataManager with Grid Control
+{:.caption}
 
-
-## Filter
+### Filter
 
 You can generate the Filter query to filter the CustomerID column based on VINET value and it is ran by using the DataManager.
 
@@ -128,7 +130,7 @@ The where function is used to filter the records based on the specified filter c
 
 The select property of ejQuery is used to retrieve the specified columns from the data source.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
@@ -165,15 +167,16 @@ When you run the filter query and bind the result to the Grid, the following tab
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+Data with Filtering
+{:.caption}
 
-
-## Sort
+### Sort
 
 You can generate the Sort query to sort the Freight column in descending order and that is executed by using the DataManager. 
 
 The sortBy property of ejQuery is used to sort the records based on the field and direction specified.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
@@ -212,16 +215,16 @@ When you run the sort query and bind the result to the table, the following tabl
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Data with Sorting_
+Data with Sorting
+{:.caption}
 
 
-
-## Page
+### Page
 
 You can generate the Paging query to get the top four orders and it is ran by using the DataManager.  
 
 The Page property of ejQuery is used to retrieve the records based on the given pageIndex and pageSize.
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Slider | ASP.NET MVC | Syncfusion
 description: appearance and styling	
 platform: ejmvc
 control: Slider
@@ -32,7 +32,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
 
 1. In an VIEW page, specify the desired “ej.widgets.all.min.css” file to load the corresponding theme.
 
-{% highlight html %}
+{% highlight CSHTML %}
 //In _Layout page, specify the desired
  “ej.widgets.all.min.css” file to load the corresponding theme.
  <head>
@@ -45,9 +45,7 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
  <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>
  <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script>
  </head></td><td>
-{% endhighlight %}
 
-{% highlight js %}
 // Add this code in your view page
     @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)    .ShowScale(true).SmallStep(5).LargeStep(20))
     @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")    .ShowScale(true).SmallStep(5).LargeStep(20))
@@ -69,87 +67,90 @@ The following steps explains you on how to configure the Slider with custom them
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add this code in your view page
+	// Add this code in your view page
 
-		@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
+	@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("25,75")
 
-		.Width("500").CssClass("purple"))
+	.Width("500").CssClass("purple"))
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Include the “CssClass” value before each style of the Slider widget and customize the styles as follows.
 
 
-   ~~~ js
+   ~~~ css
+
+	.purple.e-slider.e-widget 
+	{
+
+	  background-color: burlywood;
+
+	  border-color: #bbbcbb;
+
+	}
+
+	.purple.e-tooltip 
+	{
+
+	  background: none repeat scroll 0 0 violet;
+
+	  /* Old browsers */
 
 
 
-		.purple.e-slider.e-widget {
+	  border-color: #1b95cf;
 
-		  background-color: burlywood;
+	  color: white;
 
-		  border-color: #bbbcbb;
+	}
 
-		}
+	.purple.e-slider .e-handle.e-select 
+	{
 
-		.purple.e-tooltip {
+	  background-color: purple;
 
-		  background: none repeat scroll 0 0 violet;
+	  border-color: purple;
 
-		  /* Old browsers */
+	}
 
+	.purple.e-slider .e-handle.e-hover 
+	{
 
+	  background-color: purple;
 
-		  border-color: #1b95cf;
+	  border-color: purple;
 
-		  color: white;
+	}
 
-		}
+	.purple.e-slider .e-handle.e-focus 
+	{
 
-		.purple.e-slider .e-handle.e-select {
+	  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 
-		  background-color: purple;
+	}
 
-		  border-color: purple;
+	.purple.e-slider .e-range 
+	{
 
-		}
+	  background: none repeat scroll 0 0 violet;
 
-		.purple.e-slider .e-handle.e-hover {
-
-		  background-color: purple;
-
-		  border-color: purple;
-
-		}
-
-		.purple.e-slider .e-handle.e-focus {
-
-		  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-
-		}
-
-		.purple.e-slider .e-range {
-
-		  background: none repeat scroll 0 0 violet;
-
-		  /* Old browsers */
+	  /* Old browsers */
 
 
 
-		}
+	}
 
-		.purple.e-scale .e-tick {
+	.purple.e-scale .e-tick 
+	{
 
-		  background-image: url(images/dot.png);
+	  background-image: url(images/dot.png);
 
-		}
-
-		
+	}
    ~~~
-   {:.prettyprint }
+   
 
 Execute the above code example to render the following output.
 
@@ -165,7 +166,7 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the Default Slider.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -187,7 +188,7 @@ The following steps explains you on how to disable the tooltip in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

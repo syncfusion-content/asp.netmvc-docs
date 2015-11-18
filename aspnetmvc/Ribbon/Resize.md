@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize
+title: Resize | Ribbon | ASP.NET MVC | Syncfusion
 description: resize 
 platform: ejmvc
 control: Ribbon
@@ -13,119 +13,121 @@ _Ribbon control_ supports resizing functionality .To enable resizing in the ribb
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-     @(Html.EJ().Ribbon("defaultRibbon")
+@(Html.EJ().Ribbon("defaultRibbon")
 
-     .Width("70%")
+.Width("70%")
 
-.AllowResizing(true)
-
-     .ApplicationTab(apptab =>
-
-    {
-
-        apptab.Type("ApplicationMenu").ItemID("ribbonmenu");
-
-    })
-
-    .RibbonTabs(tab =>
-
-    {
-
-        tab.Id("insert").Text("INSERT").TabGroups(tabgrp =>
-
-        {
-
-            tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-            {
-
-                cnt.ContentGroups(cntgrp =>
-
-                {
-
-                    cntgrp.Id("cut").Text("Cut").Add();
-
-                    cntgrp.Id("copy").Text("Copy").Add();
+    .AllowResizing(true)
 
 
+.ApplicationTab(apptab =>
 
-                }).Add();
+{
 
-            }).Add();
+	apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
 
-            tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
 
-            {
+})
 
-                cnt.ContentGroups(cntgrp =>
+.RibbonTabs(tab =>
 
-                {
+{
 
-                    cntgrp.Id("bold").Text("Bold").Add();
+tab.Id("insert").Text("INSERT").TabGroups(tabgrp =>
 
-                    cntgrp.Id("italic").Text("Italic").Add();
+{
 
-                    cntgrp.Id("underline").Text("Underline").Add();
+tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Rows).Content(cnt =>
 
-                    cntgrp.Id("strikethrough").Text("Strikethrough").Add();
+{
+
+	cnt.ContentGroups(cntgrp =>
+
+	{
+
+		cntgrp.Id("cut").Text("Cut").Add();
+
+		cntgrp.Id("copy").Text("Copy").Add();
 
 
 
-                }).ContentDefaults(df => df.Height("70")).Add();
+	}).Add();
 
-            }).Add();
+}).Add();
 
-            tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
 
-            {
+{
 
-                cnt.ContentGroups(cntgrp =>
+	cnt.ContentGroups(cntgrp =>
 
-                {
+	{
 
-                    cntgrp.Id("New").Text("New").Text("New").Add();
+		cntgrp.Id("bold").Text("Bold").Add();
 
-                }).Add();
+		cntgrp.Id("italic").Text("Italic").Add();
 
+		cntgrp.Id("underline").Text("Underline").Add();
 
-
-            }).Add();
-
-            tabgrp.Text("Actions").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-            {
-
-                cnt.ContentGroups(cntgrp =>
-
-                {
-
-                    cntgrp.Id("undo").Text("Undo").Add();
-
-                    cntgrp.Id("redo").Text("Redo").ToolTip("Redo").Add();
-
-                }).Add();
-
-            }).Add();
+		cntgrp.Id("strikethrough").Text("Strikethrough").Add();
 
 
 
-        }).Add();
+	}).ContentDefaults(df => df.Height("70")).Add();
 
-    })
+}).Add();
 
-     )
+tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
 
-            <ul id="ribbonmenu">
+{
 
-                <li><a>FILE</a>
+	cnt.ContentGroups(cntgrp =>
 
-             <ul><li><a>New</a></li></ul>
+	{
 
-                </li>
+		cntgrp.Id("New").Text("New").Text("New").Add();
 
-            </ul>
+	}).Add();
+
+
+
+}).Add();
+
+tabgrp.Text("Actions").AlignType(RibbonAlignType.Rows).Content(cnt =>
+
+{
+
+	cnt.ContentGroups(cntgrp =>
+
+	{
+
+		cntgrp.Id("undo").Text("Undo").Add();
+
+		cntgrp.Id("redo").Text("Redo").ToolTip("Redo").Add();
+
+	}).Add();
+
+}).Add();
+
+
+
+}).Add();
+
+})
+
+)
+
+<ul id="ribbonmenu">
+
+	<li><a>FILE</a>
+
+ <ul><li><a>New</a></li></ul>
+
+	</li>
+
+</ul>
 
 
 

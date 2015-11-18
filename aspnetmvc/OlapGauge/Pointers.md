@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pointers
+title: Pointers | OLAPGauge | ASP.NET MVC | Syncfusion
 description: pointers
 platform: ejmvc
 control: OLAPGauge
@@ -23,7 +23,7 @@ Two different types of pointer available in OlapGuage are:
 
 You can set the pointer to Needle type by setting “pointerType”property to “Needle” and the pointer to Marker type by setting the “pointerType” properties to “Marker”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
 
@@ -90,9 +90,7 @@ You can set the pointer to Needle type by setting “pointerType”property to �
 You can customize the Pointer length and width using the “pointerLength” and “pointerWidth” property.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -158,7 +156,7 @@ You can customize the Pointer length and width using the “pointerLength” and
 You can customize the Pointer background color using “backgroundcolor”property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -229,10 +227,7 @@ You can customize Pointershapes using the “needlestyle” property.
 
 
 
-{% highlight js %}
-
-
-
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>

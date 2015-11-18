@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering
+title: Filtering | ListView | ASP.NET MVC | Syncfusion
 description: filtering
 platform: ejmvc
 control: ListView
@@ -13,7 +13,7 @@ Filtering is one of the key features of ListView control. The Filtering option i
 
 Refer the following code examples.
 
-{% highlight js %}
+ {% highlight CSHTML %}
 
 @Html.EJ().ListView("lb").Width(300).EnableFiltering(true).Items(items => {    
 
@@ -48,9 +48,10 @@ Refer the following code examples.
 ![](Filtering_images/Filtering_img1.png)
 
 
-_Enable Filtering_
+Enable Filtering
+{:.caption}
 
 ![](Filtering_images/Filtering_img2.png)
 
-_Enable Filtering_
-
+Enable Filtering
+{:.caption}

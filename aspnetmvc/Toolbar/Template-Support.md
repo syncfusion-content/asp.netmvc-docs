@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | Toolbar | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: Toolbar
 documentation: ug
 ---
 
-## Template Support
+# Template Support
 
 Template allows you to insert custom or ASP.NET MVC controls inside the toolbar items. Also you can design simple drop down buttons listing the items and radio button inside the Toolbar.
 
 Set the list for DropDown control inside a list element and define this element as a Toolbar item. You can use all simple controls as a ToolBar item. For example to add RadioButton and DropDownList to Toolbar, use the following code example.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -23,9 +23,7 @@ Set the list for DropDown control inside a list element and define this element 
 
     s.Add().ContentTemplate(@<div>
 
-
-
-        @Html.EJ().RadioButton("radio1").Checked(false)
+    @Html.EJ().RadioButton("radio1").Checked(false)
 
     </div>);
 
@@ -59,6 +57,6 @@ The following screenshot displays a Toolbar with embedded controls.
 
 ![](Template-Support_images/Template-Support_img1.png)
 
-
-_Figure 30: Toolbar with Template_
+Toolbar with Template
+{:.caption}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | DateTimePicker | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: DateTimePicker
@@ -36,21 +36,23 @@ The following list is of the twelve themes supported by DateTimePicker:
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget. 
 
-   ~~~ html
+   ~~~ cshtml
    
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
+	@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with right to left appearance*@
 
-	    @Html.EJ().DateTimePicker("DateTime").Width("175px")
+	@Html.EJ().DateTimePicker("DateTime").Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
    
    
 
 2. The following screenshot displays the output for the above code.
 
 	![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
-
+    
+	Showcase of DateTimePicker with gradient lime dark theme
+	{:.caption}
 
 
 ## Css Class
@@ -62,14 +64,14 @@ Using this CssClass you can override the existing styles under the theme style s
 1. Add the following code in your CSHTML page to render the DateTimePicker.
 
 
-   ~~~ js
+   ~~~ cshtml
    	 
-	    @*Add the following code in your view page to render the DateTimePicker.*@
+	@*Add the following code in your view page to render the DateTimePicker.*@
 
-	    @Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
+	@Html.EJ().DateTimePicker("dt").CssClass("Purple-dark").Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
 
 
    In the following style sheet the exiting theme style sheet file has been over-ridden using root class “Purple-dark”. 
@@ -77,7 +79,7 @@ Using this CssClass you can override the existing styles under the theme style s
 2. Add the following code in your style section.
 
 
-   ~~~ js    
+   ~~~ css    
 	 
 			.Purple-dark .e-week-header {
 
@@ -134,7 +136,7 @@ Using this CssClass you can override the existing styles under the theme style s
 		}
 
    ~~~
-   {:.prettyprint }
+   
 
 
     
@@ -143,5 +145,6 @@ Using this CssClass you can override the existing styles under the theme style s
 
 	![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
+    Showcase for DateTimePicker with cssClass “Purple-dark”
+    {:.caption}
 

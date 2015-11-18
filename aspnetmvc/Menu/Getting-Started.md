@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Menu | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
 control: Menu
@@ -19,7 +19,8 @@ The following screenshot illustrates the appearance of Syncfusion’s website Me
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Figure : Syncfusion Menu_
+Syncfusion Menu
+{:.caption}
 
 The Menu items in the above screenshot allow you to navigate through multiple menus in a page and select an item. It has a hierarchical structure with sub menus. 
 
@@ -27,52 +28,53 @@ The Menu items in the above screenshot allow you to navigate through multiple me
 
 Essential ASP.NET MVC Menu widget basically renders with built-in features like keyboard navigation, show and hides Menu items with animations and flexible API’s. Refer the following guidelines to render Menu control with Local data source value.
 
-1. You can create a MVC Project and add the necessary Dll’s and scripts using the [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/menu/getting-started) Documentation.
+1. You can create a MVC Project and add the necessary Dll’s and scripts using the [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/menu/getting-started) Documentation.
 2. Add the below code in yoyr view page to add the nessary css and script files
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
+	<head>
 
-		<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-
-
-
-			<!--Scripts-->
-
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+	<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+		<!--Scripts-->
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
 
 
 
-			<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
-		</head>
+
+
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Add the following code example to the corresponding view page for Menu rendering.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().Menu("SyncfusionProducts")
+	@Html.EJ().Menu("SyncfusionProducts")
 
    ~~~
-   {:.prettyprint }
+   
 
 4. Execute the above code to render Empty Menu bar.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-_Figure : Essential ASP.NET MVC Menu without menu item_
+Essential ASP.NET MVC Menu without menu item
+{:.caption}
 
 ## Configure Parent Menu items
 
@@ -86,12 +88,10 @@ To navigate the clicked Menu item to a specific URL, define the navigation URL t
 
 Initialize the Menu with data source value as follows. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
 d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText"))
-
-
 
 {% endhighlight %}
 
@@ -101,7 +101,8 @@ Execute the above code to display the Root level Menu items.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure : Essential ASP.NET MVC Menu without sub menu item_
+Essential ASP.NET MVC Menu without sub menu item
+{:.caption}
 
 ## Initialize sub-level Menu items
 
@@ -109,15 +110,12 @@ Each Menu items consist of list of sub level Menu items. Refer the following gui
 
 The following code example explains the initialization of first level sub menu items of Menu control.
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 @Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
 d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c =>
 c.Datasource(cd => 
 cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItemText")))
-
-
 
 {% endhighlight %}
 
@@ -125,7 +123,8 @@ Execute the above code to render the following output.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-_Figure : Essential ASP.NET MVC Menu with sub menu item_
+Essential ASP.NET MVC Menu with sub menu item
+{:.caption}
 
 ## Define multiple level Menu items
 
@@ -133,7 +132,7 @@ You can render sub menu item to multiple level in Menu control. In Menu Widgets,
 
 The following code example explains the initialization of multiple level sub menu items.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
 d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c =>
@@ -150,5 +149,5 @@ Execute the above code to render the multiple sub menus in a hierarchy
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-_Figure : Essential ASP.NET MVC Menu with multiple level  sub menu item_
-
+Essential ASP.NET MVC Menu with multiple level  sub menu item
+{:.caption}

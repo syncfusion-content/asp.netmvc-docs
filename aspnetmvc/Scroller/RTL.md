@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL
+title: RTL | Scroller | ASP.NET MVC | Syncfusion
 description: rtl
 platform: ejmvc
 control: Scroller
@@ -15,7 +15,7 @@ The following steps explains you the configuration of EnableRTL property in Scro
 
 In the View page, add a scroller helper to configure Scroller widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
@@ -55,4 +55,5 @@ The following screenshot displays the Scroller control in RTL direction.
 
 ![](RTL_images/RTL_img1.png)
 
-_Figure_ _8_: _Scroller control in RTL direction_
+Scroller control in RTL direction
+{:.caption}

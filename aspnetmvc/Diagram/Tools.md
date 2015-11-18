@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tools
+title: Tools | Diagram | ASP.NET MVC | Syncfusion
 description: tools
 platform: ejmvc
 control: Diagram
@@ -58,14 +58,11 @@ The following code illustrates how to enable SingleSelect tool.
 {% highlight c# %}
 
 
-
 //Enables SingleSelection 
 
 DiagramProperties DiagramContent = new DiagramProperties();
 
 DiagramContent.Tool = Tool.SingleSelect;
-
-
 
 {% endhighlight %}
 
@@ -74,10 +71,7 @@ Multiple Diagram Tools
 Diagram provides support to enable multiple tools at a time. The following code illustrates how to enable ZoomPan and SingleSelect tool at the same time.
 
 
-
 {% highlight c# %}
-
-
 
 
 //Enables Multiple Selection
@@ -149,7 +143,8 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 
 ![](Tools_images/Tools_img1.png)
 
-
+Rectangle
+{:.caption}
 
 Similarly, you can draw any node by using drawing tool, by assigning the required node to diagram.model.drawType property.
 
@@ -163,16 +158,9 @@ The following code example illustrates how to draw a straight connector at runti
 
 {% highlight js %}
 
-
-
-
 <script type="text/Javascript">
 
-
-
 var diagram = $("#diagram").ejDiagram("instance");
-
-
 
 //Defines the connector to be drawn by using drawing tool
 
@@ -203,5 +191,5 @@ tool: ej.datavisualization.Diagram.Tool.DrawOnce
 
 ![](Tools_images/Tools_img2.jpeg)
 
-
-
+Straight Connector
+{:.caption}

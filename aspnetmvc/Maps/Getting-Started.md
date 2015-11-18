@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Maps | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Maps
@@ -17,11 +17,12 @@ You can configure an EssentialASP.NETMVC Map with simple steps. In this example,
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-_Simple Map_
+Simple Map
+{:.caption}
 
 ### Create a simple MVC Application 
 
-To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/maps/getting-started) Documentation.
+To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/maps/getting-started) Documentation.
 
 #### Preparing Shape Data
 
@@ -37,36 +38,34 @@ You can store the “United States of America.json” file in App_Data folder as
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 
-        public ActionResult Map()
+public ActionResult Map()
 
-        {
+{
 
-            ViewData["mapdata"] = GetUSMap();
+	ViewData["mapdata"] = GetUSMap();
 
-            return View();
+	return View();
 
-        }
-
-
-
-       public object GetUSMap()
-
-        {
-
-            string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
-
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-
-            ser.MaxJsonLength = int.MaxValue;
-
-            return new MapData(usajson);
-
-        }
+}
 
 
+
+public object GetUSMap()
+
+{
+
+	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+
+	JavaScriptSerializer ser = new JavaScriptSerializer();
+
+	ser.MaxJsonLength = int.MaxValue;
+
+	return new MapData(usajson);
+
+}
 
 {% endhighlight %}
 
@@ -78,192 +77,192 @@ The dataSource is populated with USA population data inside the controller relat
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 
-        public ActionResult Map()
+public ActionResult Map()
 
-        {
+{
 
-            ViewData["mapdata"] = GetUSMap();
+	ViewData["mapdata"] = GetUSMap();
 
-            ViewData["datasource"] = GetUSPopulationData();
+	ViewData["datasource"] = GetUSPopulationData();
 
-            return View();
+	return View();
 
-        }
+}
 
 
 
-       public object GetUSMap()
+public object GetUSMap()
 
-        {
+{
 
-            string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
-            JavaScriptSerializer ser = new JavaScriptSerializer();
+	JavaScriptSerializer ser = new JavaScriptSerializer();
 
-            ser.MaxJsonLength = int.MaxValue;
+	ser.MaxJsonLength = int.MaxValue;
 
-            return new MapData(usajson);
+	return new MapData(usajson);
 
-        }
+}
 
 
 
-       public List<CountyPopulationData> GetUSPopulationData()
+public List<CountyPopulationData> GetUSPopulationData()
 
-        {
+{
 
-            List<CountyPopulationData> populationData = new List<CountyPopulationData>
+	List<CountyPopulationData> populationData = new List<CountyPopulationData>
 
-            {
+	{
 
-					new CountyPopulationData(){ Name= "California", Population=38332521},
+			new CountyPopulationData(){ Name= "California", Population=38332521},
 
-					new CountyPopulationData(){ Name= "Texas", Population=26448193},
+			new CountyPopulationData(){ Name= "Texas", Population=26448193},
 
-					new CountyPopulationData(){ Name= "New York", Population=19651127},
+			new CountyPopulationData(){ Name= "New York", Population=19651127},
 
-					new CountyPopulationData(){ Name= "Florida", Population=19552860},
+			new CountyPopulationData(){ Name= "Florida", Population=19552860},
 
-					new CountyPopulationData(){ Name= "Illinois", Population=12882135},
+			new CountyPopulationData(){ Name= "Illinois", Population=12882135},
 
-					new CountyPopulationData(){ Name= "Pennsylvania", Population=12773801},
+			new CountyPopulationData(){ Name= "Pennsylvania", Population=12773801},
 
-					new CountyPopulationData(){ Name= "Ohio", Population=11570808},
+			new CountyPopulationData(){ Name= "Ohio", Population=11570808},
 
-					new CountyPopulationData(){ Name= "Georgia", Population=9992167},
+			new CountyPopulationData(){ Name= "Georgia", Population=9992167},
 
-					new CountyPopulationData(){ Name= "Michigan", Population=9895622},
+			new CountyPopulationData(){ Name= "Michigan", Population=9895622},
 
-					new CountyPopulationData(){ Name= "North Carolina", Population=9848060},
+			new CountyPopulationData(){ Name= "North Carolina", Population=9848060},
 
-					new CountyPopulationData(){ Name= "New Jersey", Population=8899339},
+			new CountyPopulationData(){ Name= "New Jersey", Population=8899339},
 
-					new CountyPopulationData(){ Name= "Virginia", Population=8260405},
+			new CountyPopulationData(){ Name= "Virginia", Population=8260405},
 
-					new CountyPopulationData(){ Name= "Washington", Population=6971406},
+			new CountyPopulationData(){ Name= "Washington", Population=6971406},
 
-					new CountyPopulationData(){ Name= "Massachusetts", Population=6692824},
+			new CountyPopulationData(){ Name= "Massachusetts", Population=6692824},
 
-					new CountyPopulationData(){ Name= "Arizona", Population=6626624},
+			new CountyPopulationData(){ Name= "Arizona", Population=6626624},
 
-					new CountyPopulationData(){ Name= "Indiana", Population=6570902},
+			new CountyPopulationData(){ Name= "Indiana", Population=6570902},
 
-					new CountyPopulationData(){ Name= "Tennessee", Population=6495978},
+			new CountyPopulationData(){ Name= "Tennessee", Population=6495978},
 
-					new CountyPopulationData(){ Name= "Missouri", Population=6044171},
+			new CountyPopulationData(){ Name= "Missouri", Population=6044171},
 
-					new CountyPopulationData(){ Name= "Maryland", Population=5928814},
+			new CountyPopulationData(){ Name= "Maryland", Population=5928814},
 
-					new CountyPopulationData(){ Name= "Wisconsin", Population=5742713},
+			new CountyPopulationData(){ Name= "Wisconsin", Population=5742713},
 
-					new CountyPopulationData(){ Name= "Minnesota", Population=5420380},
+			new CountyPopulationData(){ Name= "Minnesota", Population=5420380},
 
-					new CountyPopulationData(){ Name= "Colorado", Population=5268367},
+			new CountyPopulationData(){ Name= "Colorado", Population=5268367},
 
-					new CountyPopulationData(){ Name= "Alabama", Population=4833722},
+			new CountyPopulationData(){ Name= "Alabama", Population=4833722},
 
-					new CountyPopulationData(){ Name= "South Carolina", Population=4774839},
+			new CountyPopulationData(){ Name= "South Carolina", Population=4774839},
 
-					new CountyPopulationData(){ Name= "Louisiana", Population=4625470},
+			new CountyPopulationData(){ Name= "Louisiana", Population=4625470},
 
-					new CountyPopulationData(){ Name= "Kentucky", Population=4395295},
+			new CountyPopulationData(){ Name= "Kentucky", Population=4395295},
 
-					new CountyPopulationData(){ Name= "Oregon", Population=3930065},
+			new CountyPopulationData(){ Name= "Oregon", Population=3930065},
 
-					new CountyPopulationData(){ Name= "Oklahoma", Population=3850568},
+			new CountyPopulationData(){ Name= "Oklahoma", Population=3850568},
 
-					new CountyPopulationData(){ Name= "Puerto Rico", Population=3615086},
+			new CountyPopulationData(){ Name= "Puerto Rico", Population=3615086},
 
-					new CountyPopulationData(){ Name= "Connecticut", Population=3596080},
+			new CountyPopulationData(){ Name= "Connecticut", Population=3596080},
 
-					new CountyPopulationData(){ Name= "Iowa", Population=3090416},
+			new CountyPopulationData(){ Name= "Iowa", Population=3090416},
 
-					new CountyPopulationData(){ Name= "Mississippi", Population=2991207},
+			new CountyPopulationData(){ Name= "Mississippi", Population=2991207},
 
-					new CountyPopulationData(){ Name= "Arkansas", Population=2959373},
+			new CountyPopulationData(){ Name= "Arkansas", Population=2959373},
 
-					new CountyPopulationData(){ Name= "Utah", Population=2900872},
+			new CountyPopulationData(){ Name= "Utah", Population=2900872},
 
-					new CountyPopulationData(){ Name= "Kansas", Population=2893957},
+			new CountyPopulationData(){ Name= "Kansas", Population=2893957},
 
-					new CountyPopulationData(){ Name= "Nevada", Population=2790136},
+			new CountyPopulationData(){ Name= "Nevada", Population=2790136},
 
-					new CountyPopulationData(){ Name= "New Mexico", Population=2085287},
+			new CountyPopulationData(){ Name= "New Mexico", Population=2085287},
 
-					new CountyPopulationData(){ Name= "Nebraska", Population=1868516},
+			new CountyPopulationData(){ Name= "Nebraska", Population=1868516},
 
-					new CountyPopulationData(){ Name= "West Virginia", Population=1854304},
+			new CountyPopulationData(){ Name= "West Virginia", Population=1854304},
 
-					new CountyPopulationData(){ Name= "Idaho", Population=1612136},
+			new CountyPopulationData(){ Name= "Idaho", Population=1612136},
 
-					new CountyPopulationData(){ Name= "Hawaii", Population=1404054},
+			new CountyPopulationData(){ Name= "Hawaii", Population=1404054},
 
-					new CountyPopulationData(){ Name= "Maine", Population=1328302},
+			new CountyPopulationData(){ Name= "Maine", Population=1328302},
 
-					new CountyPopulationData(){ Name= "New Hampshire", Population=1323459},
+			new CountyPopulationData(){ Name= "New Hampshire", Population=1323459},
 
-					new CountyPopulationData(){ Name= "Rhode Island", Population=1051511},
+			new CountyPopulationData(){ Name= "Rhode Island", Population=1051511},
 
-					new CountyPopulationData(){ Name= "Montana", Population=1015165},
+			new CountyPopulationData(){ Name= "Montana", Population=1015165},
 
-					new CountyPopulationData(){ Name= "Delaware", Population=925749},
+			new CountyPopulationData(){ Name= "Delaware", Population=925749},
 
-					new CountyPopulationData(){ Name= "South Dakota", Population=844877},
+			new CountyPopulationData(){ Name= "South Dakota", Population=844877},
 
-					new CountyPopulationData(){ Name= "Alaska", Population=735132},
+			new CountyPopulationData(){ Name= "Alaska", Population=735132},
 
-					new CountyPopulationData(){ Name= "North Dakota", Population=723393},
+			new CountyPopulationData(){ Name= "North Dakota", Population=723393},
 
-					new CountyPopulationData(){ Name= "District of Columbia", Population=646449},
+			new CountyPopulationData(){ Name= "District of Columbia", Population=646449},
 
-					new CountyPopulationData(){ Name= "Vermont", Population=626630},
+			new CountyPopulationData(){ Name= "Vermont", Population=626630},
 
-					new CountyPopulationData(){ Name= "Wyoming", Population=582658}
+			new CountyPopulationData(){ Name= "Wyoming", Population=582658}
 
-            };
+	};
 
-            return populationData;
+	return populationData;
 
-        }
+}
 
 
 
-    public class CountyPopulationData
+public class CountyPopulationData
 
-    {
+{
 
-        public string name;
+	public string name;
 
-        public string Name
+	public string Name
 
-        {
+	{
 
-            get { return name; }
+		get { return name; }
 
-            set { name = value; }
+		set { name = value; }
 
-        }
+	}
 
 
 
-        public double population;
+	public double population;
 
 
 
-        public double Population
+	public double Population
 
-        {
+	{
 
-            get { return population; }
+		get { return population; }
 
-            set { population = value; }
+		set { population = value; }
 
-        }
+	}
 
-    }
+}
 
 
 
@@ -275,7 +274,7 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @{       
 
@@ -295,12 +294,12 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div style="width: 900px; height: 600px;"></div>
+	<div style="width: 900px; height: 600px;"></div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -308,29 +307,29 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
 
-          <div style="width:900px; height:600px;"> 
+	  <div style="width:900px; height:600px;"> 
 
-             @(Html.EJ().Map("container")
+		 @(Html.EJ().Map("container")
 
-                    .Layers(lr =>
+			.Layers(lr =>
 
-                    {
+			{
 
-                     lr.ShapeData(mapData).Add();
+			 lr.ShapeData(mapData).Add();
 
-                    })
+			})
 
-                    )     
+			)     
 
-          </div>
+	  </div>
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -338,73 +337,73 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
 
-		@{
+	@{
 
-				var mapData = ViewData["mapdata"];
+			var mapData = ViewData["mapdata"];
 
-				var datasource = ViewData["datasource"];
+			var datasource = ViewData["datasource"];
 
-		}
-
-
-
-		<html xmlns="http://www.w3.org/1999/xhtml">
-
-		<head> 
-
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/
-
-		ej.widgets.all.min.js"></script>
-
-		<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
-
-		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/
-
-		ej.unobtrusive.min.js" type="text/javascript"></script>
-
-		@using Syncfusion.JavaScript.DataVisualization.Models
+	}
 
 
 
-		</head>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head> 
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<script src="http://cdn.syncfusion.com/13.1.0.21/js/
+
+	ej.widgets.all.min.js"></script>
+
+	<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
+
+	<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/
+
+	ej.unobtrusive.min.js" type="text/javascript"></script>
+
+	@using Syncfusion.JavaScript.DataVisualization.Models
 
 
 
-		<body>
-
-		<div style="height:600px;width:900px;">
-
-					 @(Html.EJ().Map("container")
-
-							.Layers(lr =>
-
-							{
-
-							 lr.ShapeData(mapData).Add();
-
-							})
-
-							)     
-
-			</div>   
+	</head>
 
 
 
-			@(Html.EJ().ScriptManager())
+	<body>
 
-		</body>
+	<div style="height:600px;width:900px;">
 
-		</html>
+				 @(Html.EJ().Map("container")
+
+						.Layers(lr =>
+
+						{
+
+						 lr.ShapeData(mapData).Add();
+
+						})
+
+						)     
+
+		</div>   
+
+
+
+		@(Html.EJ().ScriptManager())
+
+	</body>
+
+	</html>
 
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -414,7 +413,8 @@ The above code renders a map with default properties and shape input provided th
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-_Map with default properties_
+Map with default properties
+{:.caption}
 
 ## Data Binding in Map
 
@@ -438,34 +438,30 @@ The ShapePropertyPath property is similar to the ShapeDataPath that refers the c
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-        @(Html.EJ().Map("container")            
+@(Html.EJ().Map("container")            
 
-                .Layers(lr =>
+.Layers(lr =>
 
-                {         
-
-
-
-                        lr.ShapeData(mapData) 
-
-                        .ShapeDataPath("name")
-
-                        .ShapePropertyPath("name")
-
-                        .DataSource(datasource)
-
-                        .Add();           
-
-                })      
+{         
 
 
 
-                )
+		lr.ShapeData(mapData) 
+
+		.ShapeDataPath("name")
+
+		.ShapePropertyPath("name")
+
+		.DataSource(datasource)
+
+		.Add();           
+
+})      
 
 
-
+)
 {% endhighlight %}
 
 ### Customize Map Appearance 
@@ -474,59 +470,61 @@ You can customize the shape’s color by using Fill, Stroke and StrokeThickness 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("container")            
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {
+{
 
-                     lr.ShapeData(mapData)              
+	 lr.ShapeData(mapData)              
 
-                     .ShapeDataPath("name")
+	 .ShapeDataPath("name")
 
-                       .ShapePropertyPath("name")
+	   .ShapePropertyPath("name")
 
-                       .DataSource(datasource)
+	   .DataSource(datasource)
 
-                       .EnableSelection(false)
+	   .EnableSelection(false)
 
-                       .EnableMouseHover(true)
+	   .EnableMouseHover(true)
 
-                    .ShapeSettings(ss  =>
+	.ShapeSettings(ss  =>
 
-                    {
+	{
 
-                       ss.Fill("#9CBF4E")
+	   ss.Fill("#9CBF4E")
 
-                            .StrokeThickness(0.5)
+			.StrokeThickness(0.5)
 
-                            .Stroke("White")
+			.Stroke("White")
 
-                            .HighlightStroke ("White")                           
+			.HighlightStroke ("White")                           
 
-                            .HighlightColor("#BC5353")
+			.HighlightColor("#BC5353")
 
-                            .HighlightBorderWidth(1);			
+			.HighlightBorderWidth(1);			
 
-                    })
+	})
 
-                   .Add();         
+   .Add();         
 
-                    })      
+	})      
 
-         ) 
+) 
 
 
 
 {% endhighlight %}
 
-_Customized Map_
+
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+Customized Map
+{:.caption}
 
 ### Customizing Map Appearance by Range
 
@@ -535,69 +533,69 @@ The Range color mapping is used to differentiate the shape’s fill based on its
 N> The EnableGradient property value should be true to apply gradient colors for maps.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {                                          
+{                                          
 
-                     lr.ShapeData(mapData)              
+	lr.ShapeData(mapData)              
 
-                       .ShapeDataPath("name")
+	.ShapeDataPath("name")
 
-                       .ShapePropertyPath("name")
+	.ShapePropertyPath("name")
 
-                       .DataSource(datasource)
+	.DataSource(datasource)
 
-                       .ShowMapItems(false)
+	.ShowMapItems(false)
 
-                       .EnableSelection(false)
+	.EnableSelection(false)
 
-                       .EnableMouseHover(true)
+	.EnableMouseHover(true)
 
-                    .ShapeSettings(ss  =>
+	.ShapeSettings(ss  =>
 
-                    {
+	{
 
-                       ss.Fill("#9CBF4E")
+		ss.Fill("#9CBF4E")
 
-                            .StrokeThickness(0.5)
+		.StrokeThickness(0.5)
 
-                            .Stroke("White")
+		.Stroke("White")
 
-                            .HighlightStroke("White")                           
+		.HighlightStroke("White")                           
 
-                            .HighlightColor("#BC5353")
+		.HighlightColor("#BC5353")
 
-                            .HighlightBorderWidth(1)	
+		.HighlightBorderWidth(1)	
 
-                           .ValuePath("population")
+		.ValuePath("population")
 
-                           .EnableGradient(true)
+		.EnableGradient(true)
 
-                           .RangeColorMappings(cm =>
+		.RangeColorMappings(cm =>
 
-                                    {
+			{
 
-                                        cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Add();
+				cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Add();
 
-                                        cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Add();
+				cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Add();
 
-                                        cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Add();
+				cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Add();
 
-                                        cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Add();
+				cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Add();
 
-                                    });									
+			});									
 
-                        })
+	})
 
-                     .Add();         
+.Add();         
 
-                    })               
+})               
 
-         ) 
+) 
 
 
 
@@ -611,7 +609,8 @@ The following screenshot illustrates a Map with gradient color property enable.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-_Map with gradient color property_
+Map with gradient color property
+{:.caption}
 
 ## Enable Tooltip
 
@@ -619,42 +618,28 @@ The tooltip is displayed only when ShowTooltip is set to _‘_True’ in the sha
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
-        @(Html.EJ().Map("container")
+@(Html.EJ().Map("container")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {                                          
+{                                          
 
-                                              // ...
+	.ShapeSettings(ss  =>
 
-                        .ShapeSettings(ss  =>
-
-                        {
-
-                                                     // ...
-
-                            .ValuePath("name")
-
-                            // ...
+	{
 
 
+		.ValuePath("name")
 
-                        })
+	})
 
+	.ShowTooltip(true);
 
-
-                        .ShowTooltip(true);
-
-                    })           
-
-
-
-         ) 
-
-
+	})           
+) 
 
 {% endhighlight %}
 
@@ -666,7 +651,8 @@ The following screenshot illustrates a map control displaying a Tooltip.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-_Map control with Tooltip_
+Map control with Tooltip
+{:.caption}
 
 ## Legend
 
@@ -686,104 +672,99 @@ You can use LeftLabel and RightLabel property to provide left and right labels f
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("container")
 
-            .Layers(lr =>
+.Layers(lr =>
 
-                {                                          
+	{                                          
 
-                     lr.ShapeData(mapData)              
+	lr.ShapeData(mapData)              
 
-                       .ShapeDataPath("name")
+	.ShapeDataPath("name")
 
-                       .ShapePropertyPath("name")
+	.ShapePropertyPath("name")
 
-                       .DataSource(datasource)
+	.DataSource(datasource)
 
-                       .ShowMapItems(false)
+	.ShowMapItems(false)
 
-                       .EnableSelection(false)
+	.EnableSelection(false)
 
-                       .EnableMouseHover(true)
+	.EnableMouseHover(true)
 
-                    .ShapeSettings(ss  =>
+	.ShapeSettings(ss  =>
 
-                    {
+		{
 
-                       ss.Fill("#9CBF4E")
+		ss.Fill("#9CBF4E")
 
-                            .StrokeThickness(0.5)
+		.StrokeThickness(0.5)
 
-                            .Stroke("White")
+		.Stroke("White")
 
-                            .HighlightStroke("White")                           
+		.HighlightStroke("White")                           
 
-                            .HighlightColor("#BC5353")
+		.HighlightColor("#BC5353")
 
-                            .HighlightBorderWidth(1)	
+		.HighlightBorderWidth(1)	
 
-                           .ValuePath("population")
+		.ValuePath("population")
 
-                           .EnableGradient(true)
+		.EnableGradient(true)
 
-                           .RangeColorMappings(cm =>
+		.RangeColorMappings(cm =>
 
-                                    {
+			{
 
-                                        cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Add();
+				cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Add();
 
-                                        cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Add();
+				cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Add();
 
-                                        cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Add();
+				cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Add();
 
-                                        cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Add();
+				cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Add();
 
-                                    });									
+			});									
 
-                        })
+		})
 
-                        .LegendSettings(ml =>
+	.LegendSettings(ml =>
 
-                        {
+		{
 
-                           ml.ShowLegend(true)
+			ml.ShowLegend(true)
 
-                           .Height(15)
+			.Height(15)
 
-                           .Width(150)
+			.Width(150)
 
-                           .Position(Syncfusion.JavaScript.DataVisualization.
+			.Position(Syncfusion.JavaScript.DataVisualization.
 
-                             Models.DockPosition.Topleft)
+			Models.DockPosition.Topleft)
 
-                           .Type(Syncfusion.JavaScript.DataVisualization.
+			.Type(Syncfusion.JavaScript.DataVisualization.
 
-                             Models.LegendType.Layers)
+			Models.LegendType.Layers)
 
-                           .Mode(Syncfusion.JavaScript.DataVisualization.
+			.Mode(Syncfusion.JavaScript.DataVisualization.
 
-                             Models.LegendMode.Interactive)
+			Models.LegendMode.Interactive)
 
-                           .Title("Population")
+			.Title("Population")
 
-                           .LeftLabel("0.5 M")
+			.LeftLabel("0.5 M")
 
-                           .RightLabel("40 M");                        
+			.RightLabel("40 M");                        
 
-                       })
+		})
 
-                    .Add(); 
+.Add(); 
 
-                    })           
+})           
 
-
-
-         )
-
-
-
+)
 {% endhighlight %}
 
 
@@ -793,7 +774,8 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-_Map displaying an interactive legend_
+Map displaying an interactive legend
+{:.caption}
 
 The complete code sample can be found [here](http://www.syncfusion.com/uploads/user/directTrac/General/MapsMVCGettingStarted2077091750.zip).
 

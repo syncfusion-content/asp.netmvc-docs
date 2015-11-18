@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL
+title: RTL | TimePicker | ASP.NET MVC | Syncfusion
 description: rtl
 platform: ejmvc
 control: TimePicker
@@ -18,7 +18,7 @@ The following steps explains you in enabling the right-to-left property for the 
 1. Add the following code to the corresponding view page to render the TimePicker.   
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with right to left apperence*@
 
@@ -32,7 +32,6 @@ The following screenshot illustrates a TimePicker control when EnableRTL is set 
 
 ![](RTL_images/RTL_img1.png)
 
-
-
-_Figure 18: TimePicker template with RTL support_
+TimePicker template with RTL support
+{:.caption}
 

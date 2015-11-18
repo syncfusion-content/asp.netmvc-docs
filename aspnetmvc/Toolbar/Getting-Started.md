@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Toolbar | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Toolbar
@@ -31,21 +31,18 @@ Using the following steps, you can create a Toolbar control. The basic rendering
 
 
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/toolbar/getting-started) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/toolbar/getting-started) Documentation.
 
 
 
 2. Add the mentioned code to the corresponding view page for Toolbar rendering.
 
-   ~~~ html
+   ~~~ cshtml
 
-
-
-		@Html.EJ().Toolbar("ToolbarItem")
+	@Html.EJ().Toolbar("ToolbarItem")
 
    ~~~
-   {:.prettyprint }
-
+   
 
 
 
@@ -56,9 +53,8 @@ The following output is displayed.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
-_Figure 2: Toolbar without Toolbar items_
+Toolbar without Toolbar items
+{:.caption}
 
 ### Initialize Toolbar Items
 
@@ -66,59 +62,59 @@ Toolbar consists of a list of items. From the following guidelines, you can lear
 
 Initialize the Toolbaritems with <UL> <LI> template as follows. 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div id="ToolbarItem">
 
-    <!--list of toolbar items-->
+	<!--list of toolbar items-->
 
 
 
-    <ul>
+	<ul>
 
-        <li id="OtherFormat" title="Convert PDF files to Word or Excel Online…">
+		<li id="OtherFormat" title="Convert PDF files to Word or Excel Online…">
 
-            <div class="PdfDocument e-icon convertToOthers "></div>
+			<div class="PdfDocument e-icon convertToOthers "></div>
 
-        </li>
+		</li>
 
-        <li id="PDFOnline" title="Convert files to PDF Online">
+		<li id="PDFOnline" title="Convert files to PDF Online">
 
-            <div class="PdfDocument e-icon convertToPdf "></div>
+			<div class="PdfDocument e-icon convertToPdf "></div>
 
-        </li>
+		</li>
 
-        <li id="Signature" title="Sign, add text or send a document for signature">
+		<li id="Signature" title="Sign, add text or send a document for signature">
 
-            <div class=" PdfDocument e-icon signature "></div>
+			<div class=" PdfDocument e-icon signature "></div>
 
-        </li>
+		</li>
 
-        <li id="Save" title="Save file ( Ctrl+S )">
+		<li id="Save" title="Save file ( Ctrl+S )">
 
-            <div class=" PdfDocument e-icon save "></div>
+			<div class=" PdfDocument e-icon save "></div>
 
-        </li>
+		</li>
 
-        <li id="Print" title="Print file ( Ctrl+P ) ">
+		<li id="Print" title="Print file ( Ctrl+P ) ">
 
-            <div class=" PdfDocument e-icon print "></div>
+			<div class=" PdfDocument e-icon print "></div>
 
-        </li>
+		</li>
 
 
 
-        <li id="Message" title="Message">
+		<li id="Message" title="Message">
 
-            <div class=" PdfDocument e-icon msg "></div>
+			<div class=" PdfDocument e-icon msg "></div>
 
-        </li>
+		</li>
 
-    </ul>
+	</ul>
 
 </div>
 
-    @Html.EJ().Toolbar("ToolbarItem").Width("auto").EnableSeparator(true).Height("33px")
+@Html.EJ().Toolbar("ToolbarItem").Width("auto").EnableSeparator(true).Height("33px")
 
 
 
@@ -132,69 +128,62 @@ Apply the given styles in the code table to show the Toolbar items as follows. Y
 
 <style type="text/css" class="cssStyles">
 
+	.e-tooltxt .e-icon 
+	{
 
+		background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon.png');
 
-    .e-tooltxt .e-icon {
+		background-repeat: no-repeat;
 
-        background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-icon.png');
+		display: block;
 
-        background-repeat: no-repeat;
+		height: 30px;
 
-        display: block;
+		width: 30px;
 
-        height: 30px;
+	}
 
-        width: 30px;
+	.convertToOthers 
+	{
 
-    }
+		background-position: -349px 0px;
 
+	}
 
+	.convertToPdf 
+	{
 
-    .convertToOthers {
+		background-position: -527px 0px;
 
-        background-position: -349px 0px;
+	}
 
-    }
+	.signature 
+	{
 
+		background-position: 2px 0px;
 
+	}
 
-    .convertToPdf {
+	.save 
+	{
 
-        background-position: -527px 0px;
+		background-position: -87px 0px;
 
-    }
+	}
 
+	.print 
+	{
 
+		background-position: -43px 0px;
 
-    .signature {
+	}
 
-        background-position: 2px 0px;
+	.msg 
+	{
 
-    }
+		background-position: -483px 0px;
 
-
-
-    .save {
-
-        background-position: -87px 0px;
-
-    }
-
-
-
-    .print {
-
-        background-position: -43px 0px;
-
-    }
-
-
-
-    .msg {
-
-        background-position: -483px 0px;
-
-    }
+	}
 
 </style>
 
@@ -208,8 +197,8 @@ Execute the code to render a Toolbar with a list of Toolbar items.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-_Figure 3: Toolbar with list of toolbar items_
-
+Toolbar with list of toolbar items
+{:.caption}
 
 
 ### Render remaining Toolbar Items
@@ -219,7 +208,7 @@ To achieve the requirements, you need to render all the Toolbar items. You can s
 Initialize the Toolbar items with <UL> <LI> template as follows.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 <div id="ToolbarItem">
@@ -360,93 +349,103 @@ Add the following styles in the code table to display the Toolbar items as follo
 
 <style>
 
-    .zoomIn {
+	.zoomIn 
+	{
 
-        background-position: -175px 0px;
+		background-position: -175px 0px;
 
-    }
+	}
 
-    .readMode {
+	.readMode 
+	{
 
-         background-position: -307px -1px;
+		 background-position: -307px -1px;
 
-    }
+	}
 
-    .zoomOut {
+	.zoomOut 
+	{
 
-        background-position: -219px 0px;
+		background-position: -219px 0px;
 
-    }
-
-
-
-    .fitOne {
-
-        background-position: -264px 0px;
-
-    }
+	}
 
 
 
-    .sticky {
+	.fitOne 
+	{
 
-        background-position: -131px -1px;
+		background-position: -264px 0px;
 
-    }
-
-    #ZoomValue.e-tooltxt .e-icon {
-
-        background-image: none;
-
-    }
+	}
 
 
 
-    #page .PdfDocument input {
+	.sticky 
+	{
 
-        text-align: center;
+		background-position: -131px -1px;
 
-        width: 20px;
+	}
 
-        height: 21px;
+	#ZoomValue.e-tooltxt .e-icon 
+	{
 
-    }
+		background-image: none;
 
-
-
-    #count span {
-
-        width: 30px;
-
-        height: 30px;
-
-        position: relative;
-
-        top: 2px;
-
-        text-align: center;
-
-        vertical-align: middle;
-
-        background-image: none;
-
-    }
+	}
 
 
 
-    .PdfDocument.e-icon.previous {
+	#page .PdfDocument input 
+	{
 
-        background-position: -395px 0px;
+		text-align: center;
 
-    }
+		width: 20px;
+
+		height: 21px;
+
+	}
 
 
 
-    .PdfDocument.e-icon.next {
+	#count span 
+	{
 
-        background-position: -439px 0px;
+		width: 30px;
 
-    }
+		height: 30px;
+
+		position: relative;
+
+		top: 2px;
+
+		text-align: center;
+
+		vertical-align: middle;
+
+		background-image: none;
+
+	}
+
+
+
+	.PdfDocument.e-icon.previous 
+	{
+
+		background-position: -395px 0px;
+
+	}
+
+
+
+	.PdfDocument.e-icon.next 
+	{
+
+		background-position: -439px 0px;
+
+	}
 
 </style>
 
@@ -456,7 +455,7 @@ Add the following styles in the code table to display the Toolbar items as follo
 
 ### Set Zoom value is one of the items in the Toolbar. You need to render the DropDownList control for select zoom value. DropDownList control is rendered with <UL> <LI> elements. The ASP.NET MVCDropdown control with a list of zoom values is used to render Set Zoom value in the above sample code. Refer to the provided link for Dropdown creation.
 
-[Dropdown – GettingStarted](http://docs.syncfusion.com/aspnetmvc/)
+[Dropdown – GettingStarted](http://help.syncfusion.com/aspnetmvc/)
 
 Execute the code to render Toolbar items with separator.
 
@@ -469,14 +468,14 @@ Execute the code to render Toolbar items with separator.
 
 Now that the Toolbar is rendered, you need to render the header and content area to create a PDF Reader. In the following section, you can learn how to render the header (Toolbar), contentsection (PDF viewer area) and how to set the action to Toolbar items.
 
-_Note: PDF reading or rendering is not shown here. Simulation of the PDF Reader app to demonstrate the usage of Toolbar control is provided. PDF rendering area is ignored._
+N> PDF reading or rendering is not shown here. Simulation of the PDF Reader app to demonstrate the usage of Toolbar control is provided. PDF rendering area is ignored._
 
 
 
 Initialize the contentarea and header as specified in the code table.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <!—“control” class used for aligns the pdf reader in center of a page. -->
 
@@ -530,39 +529,42 @@ You can apply the following styles with the above styles to design the PDF heade
 
 <style type="text/css" class="cssStyles">
 
-    #content {
+	#content 
+	{
 
-        float: left;
+		float: left;
 
-        height: 300px;
+		height: 300px;
 
-        width: 633px;
+		width: 633px;
 
-        position: absolute;
+		position: absolute;
 
-    }
-
-
-
-    .control {
-
-        position: relative;
-
-    }
+	}
 
 
 
-    .ctrllabel {
+	.control
+	{
 
-        background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-header.png');
+		position: relative;
 
-        background-repeat: no-repeat;
+	}
 
-        width: 638px;
 
-        height: 32px;
 
-    }
+	.ctrllabel
+	{
+
+		background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-header.png');
+
+		background-repeat: no-repeat;
+
+		width: 638px;
+
+		height: 32px;
+
+	}
 
 </style>
 
@@ -570,13 +572,14 @@ You can apply the following styles with the above styles to design the PDF heade
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-_Figure 5: PDF Reader Appearance_
+PDF Reader Appearance
+{:.caption}
 
 So far, you have added the required toolbar items and configured its appearance. When you click on 
 
 Toolbar items, the operation is performed through client-slide click event. The following code example explains how to perform operations, when you click on the Toolbar items.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div id="ToolbarItem">
 
@@ -598,79 +601,78 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-{% endhighlight %}
-
-{% highlight js %}
 
 <script type="text/javascript">
 
 
 
-    function onItemclick(args) {
+	function onItemclick(args) 
+	{
 
-        //Finds Out the Item that was Clicked in Toolbar
+		//Finds Out the Item that was Clicked in Toolbar
 
-        //args.currentTarget returns the clicked Toolbar element
+		//args.currentTarget returns the clicked Toolbar element
 
-        var option = args.currentTarget.id; /* Find Out the Id of Clicked item. */
+		var option = args.currentTarget.id; /* Find Out the Id of Clicked item. */
 
-        switch (option) {
+		switch (option) 
+		{
 
 			case "OtherFormat":
 
-                //writes a code for Convert pdf files to Other format.
+				//writes a code for Convert pdf files to Other format.
 
-            case "PdfOnline":
+			case "PdfOnline":
 
-               //writes a code for Convert files to Pdf online.
+			   //writes a code for Convert files to Pdf online.
 
-            case "Signature":
+			case "Signature":
 
-                //writes a code for Send a document for signature.
+				//writes a code for Send a document for signature.
 
-            case "Save":
+			case "Save":
 
-               //writes a code for Save content.
+			   //writes a code for Save content.
 
-            case "Print":
+			case "Print":
 
-               //writes a code for Print content.
+			   //writes a code for Print content.
 
-            case "Message":
+			case "Message":
 
-               //writes a code for Send a Message.
+			   //writes a code for Send a Message.
 
-            case "Previous":
+			case "Previous":
 
-               //writes a code for Show previous page.
+			   //writes a code for Show previous page.
 
-            case "Next":
+			case "Next":
 
-               //writes a code for Show Next page.
+			   //writes a code for Show Next page.
 
-            case "ZoomOut":
+			case "ZoomOut":
 
-               //writes a code for Zoom out the page.
+			   //writes a code for Zoom out the page.
 
-            case "ZoomIn":
+			case "ZoomIn":
 
 			   //writes a code for Zoom In the page.
 
-            case "FitFull":
+			case "FitFull":
 
-               //writes a code for Fit one full page to window.
+			   //writes a code for Fit one full page to window.
 
-            case "StickyNote":
+			case "StickyNote":
 
-               //writes a code for Add Sticky Note.
+			   //writes a code for Add Sticky Note.
 
-            case "ReadMode":
+			case "ReadMode":
 
-               //writes a code for view file in read mode.
+			   //writes a code for view file in read mode.
 
-        }
+		}
 
-    }
+	}
 
 
 

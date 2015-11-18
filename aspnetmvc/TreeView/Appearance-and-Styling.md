@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | TreeView | ASP.NET MVC | Syncfusion
 description: appearance and styling
 platform: ejmvc
 control: TreeView
@@ -17,108 +17,108 @@ The following steps explain enabling the CssClass property for TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
    
-   ~~~ js
+   ~~~ cshtml
 
 
-		\\ To configure TreeView in the CSHTML page.
+	\\ To configure TreeView in the CSHTML page.
 
-		    @Html.EJ().TreeView("treeview").Items(items =>
+	@Html.EJ().TreeView("treeview").Items(items =>
 
-			 {
+	{
 
-					items.Add().Text("Favorites").Expanded(true).Children(child =>
+	items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-			       {
+	{
 
-				     child.Add().Text("Desktop");
+	 child.Add().Text("Desktop");
 
-				     child.Add().Text("Downloads");
+	 child.Add().Text("Downloads");
 
-				     child.Add().Text("Recent places");
+	 child.Add().Text("Recent places");
 
-				});
+	});
 
-				    items.Add().Text("Libraries").Expanded(true).Children(child =>
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-				{
+	{
 
-				      child.Add().Text("Documents").Children(child1 =>
+	  child.Add().Text("Documents").Children(child1 =>
 
-				      {
+	  {
 
-						child1.Add().Text("My Documents");
+		child1.Add().Text("My Documents");
 
-						child1.Add().Text("Public Documents");
+		child1.Add().Text("Public Documents");
 
-				      });
+	  });
 
-				      child.Add().Text("Pictures").Children(child1 =>
+	  child.Add().Text("Pictures").Children(child1 =>
 
-				      {
+	  {
 
-					    child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-					    child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-				       });
+	   });
 
-				       child.Add().Text("Music").Children(child1 =>
+	   child.Add().Text("Music").Children(child1 =>
 
-					{
+	{
 
-					    child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-					    child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-					});
+	});
 
-					child.Add().Text("Subversion");
-
-
-
-				   });
-
-				   items.Add().Text("Computer").Children(child =>
-
-				   {
-
-					child.Add().Text("Folder(C)");
-
-					child.Add().Text("Folder(D)");
-
-					child.Add().Text("Folder(E)");
-
-				   });
+	child.Add().Text("Subversion");
 
 
 
-				}).CssClass("customCss")
+	});
+
+	items.Add().Text("Computer").Children(child =>
+
+	{
+
+	child.Add().Text("Folder(C)");
+
+	child.Add().Text("Folder(D)");
+
+	child.Add().Text("Folder(E)");
+
+	});
+
+
+
+	}).CssClass("customCss")
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Define CSS class for customizing the TreeView.
 
    ~~~ css
 
-           .customCss .e-treeview {
+	.customCss .e-treeview 
+		{
 
-			background-color: #E0E0E0;
+		background-color: #E0E0E0;
 
-			/* Old browsers */
+		/* Old browsers */
 
-			color: white;
+		color: white;
 
-			border: 1px solid transparent;
+		border: 1px solid transparent;
 
-			border-image: initial;
+		border-image: initial;
 
-		    }
-
+		}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -128,7 +128,8 @@ The following screenshot displays the TreeView component, configured based on CS
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-_Figure59: TreeView based on CSS class_
+TreeView based on CSS class
+{:.caption}
 
 ## Adjusting TreeView Size
 
@@ -142,82 +143,82 @@ The following steps explain how to use the Height property of TreeView.
 
 1. In the View page, add TreeView helper to configure TreeView.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 \\ To configure TreeView in the CSHTML page
 
-  @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-         {
+{
 
-               items.Add().Text("Favorites").Expanded(true).Children(child =>
+   items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-               {
+   {
 
-                        child.Add().Text("Desktop");
+			child.Add().Text("Desktop");
 
-                        child.Add().Text("Downloads");
+			child.Add().Text("Downloads");
 
-                        child.Add().Text("Recent places");
+			child.Add().Text("Recent places");
 
-                });
+	});
 
-                items.Add().Text("Libraries").Expanded(true).Children(child =>
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-                {
+	{
 
-                      child.Add().Text("Documents").Children(child1 =>
+		  child.Add().Text("Documents").Children(child1 =>
 
-                            {
+				{
 
-                                child1.Add().Text("My Documents");
+					child1.Add().Text("My Documents");
 
-                                child1.Add().Text("Public Documents");
+					child1.Add().Text("Public Documents");
 
-                            });
+				});
 
-                       child.Add().Text("Pictures").Children(child1 =>
+		   child.Add().Text("Pictures").Children(child1 =>
 
-                        {
+			{
 
-                            child1.Add().Text("My Pictures");
+				child1.Add().Text("My Pictures");
 
-                            child1.Add().Text("Public Pictures");
+				child1.Add().Text("Public Pictures");
 
-                        });
+			});
 
-                       child.Add().Text("Music").Children(child1 =>
+		   child.Add().Text("Music").Children(child1 =>
 
-                        {
+			{
 
-                            child1.Add().Text("My Music");
+				child1.Add().Text("My Music");
 
-                            child1.Add().Text("Public Music");
+				child1.Add().Text("Public Music");
 
-                        });
+			});
 
-                       child.Add().Text("Subversion");
-
-
-
-                  });
-
-                  items.Add().Text("Computer").Children(child =>
-
-                  {
-
-                        child.Add().Text("Folder(C)");
-
-                        child.Add().Text("Folder(D)");
-
-                        child.Add().Text("Folder(E)");
-
-                   });
+		   child.Add().Text("Subversion");
 
 
 
-            }).Height("75px")
+	  });
+
+	  items.Add().Text("Computer").Children(child =>
+
+	  {
+
+			child.Add().Text("Folder(C)");
+
+			child.Add().Text("Folder(D)");
+
+			child.Add().Text("Folder(E)");
+
+	   });
+
+
+
+}).Height("75px")
 
 {% endhighlight %}
 
@@ -231,8 +232,8 @@ The following screenshot displays the appearance of Height of the TreeView compo
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
-_Figure60: TreeView with height property_
+TreeView with height property
+{:.caption}
 
 ### Width
 
@@ -243,81 +244,81 @@ The following steps explain how to use the width property for TreeView.
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 \\ To configure TreeView in the CSHTML page
 
-    @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-                {
+{
 
-                    items.Add().Text("Favorites").Expanded(true).Children(child =>
+	items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                    {
+	{
 
-                        child.Add().Text("Desktop");
+		child.Add().Text("Desktop");
 
-                        child.Add().Text("Downloads");
+		child.Add().Text("Downloads");
 
-                        child.Add().Text("Recent places");
+		child.Add().Text("Recent places");
 
-                    });
+	});
 
-                    items.Add().Text("Libraries").Expanded(true).Children(child =>
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-                    {
+	{
 
-                      child.Add().Text("Documents").Children(child1 =>
+	  child.Add().Text("Documents").Children(child1 =>
 
-                           {
+		   {
 
-                                child1.Add().Text("My Documents");
+				child1.Add().Text("My Documents");
 
-                                child1.Add().Text("Public Documents");
+				child1.Add().Text("Public Documents");
 
-                            });
+			});
 
-                      child.Add().Text("Pictures").Children(child1 =>
+	  child.Add().Text("Pictures").Children(child1 =>
 
-                        {
+		{
 
-                            child1.Add().Text("My Pictures");
+			child1.Add().Text("My Pictures");
 
-                            child1.Add().Text("Public Pictures");
+			child1.Add().Text("Public Pictures");
 
-                        });
+		});
 
-                        child.Add().Text("Music").Children(child1 =>
+		child.Add().Text("Music").Children(child1 =>
 
-                        {
+		{
 
-                            child1.Add().Text("My Music");
+			child1.Add().Text("My Music");
 
-                            child1.Add().Text("Public Music");
+			child1.Add().Text("Public Music");
 
-                        });
+		});
 
-                        child.Add().Text("Subversion");
-
-
-
-                    });
-
-                    items.Add().Text("Computer").Children(child =>
-
-                    {
-
-                        child.Add().Text("Folder(C)");
-
-                        child.Add().Text("Folder(D)");
-
-                        child.Add().Text("Folder(E)");
-
-                    });
+		child.Add().Text("Subversion");
 
 
 
-                }).Width("300px")
+	});
+
+	items.Add().Text("Computer").Children(child =>
+
+	{
+
+		child.Add().Text("Folder(C)");
+
+		child.Add().Text("Folder(D)");
+
+		child.Add().Text("Folder(E)");
+
+	});
+
+
+
+}).Width("300px")
 
 
 {% endhighlight %}
@@ -331,6 +332,5 @@ The following screenshot displays the appearance of width of the TreeView compon
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
-
-_Figure61: TreeView with width property_
-
+TreeView with width property
+{:.caption}

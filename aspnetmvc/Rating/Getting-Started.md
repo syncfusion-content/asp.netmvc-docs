@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Rating | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: Rating
@@ -30,161 +30,151 @@ In the above screenshot, you can rate the movie by selecting a corresponding mov
 The Essential Studio ASP.NET MVCRating widget renders with built-in features like Precision, Orientation and flexible APIs. You can easily create the Rating widget by using HTML helper class as follows.
 
 You can create an MVC Project and add the necessary assemblies, styles and scripts to it.
-Refer to [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/rating/getting-started).
+Refer to [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/rating/getting-started).
 
 Add the following code example to the corresponding view page to render Rating inside the Tab control.	
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-            <div class="frame">  
+<div class="frame">  
 
+@{Html.EJ().Tab("moviesTab").Items(evt=> 
 
+{                
 
-            @{Html.EJ().Tab("moviesTab").Items(evt=> 
+	 evt.Add().ID("steelman").Text("Man of Steel").ContentTemplate(
 
-            {                
+		 @<div>
 
-                 evt.Add().ID("steelman").Text("Man of Steel").ContentTemplate(
+			<table>
 
-                     @<div>
+				<tr>
 
-                        <table>
+					<td class="movies-img" valign="top">                                    
 
-                            <tr>
+						<img src="@Url.Content("~/Images/rating/mos.png")" alt="mos" />
 
-                                <td class="movies-img" valign="top">                                    
+					</td>
 
-                                    <img src="@Url.Content("~/Images/rating/mos.png")" alt="mos" />
+					<td valign="top">
 
-                                </td>
+						<div>
 
-                                <td valign="top">
+							<span class="movie-header">Man of Steel</span><br />
 
-                                    <div>
+							Rating :
+											<br />
 
-                                        <span class="movie-header">Man of Steel</span><br />
+							 @Html.EJ().Rating("univRating").Value(4)
 
-                                        Rating :
+							<span>Movie Info:</span>
 
-                                                        <br />
+							<p>
 
+								A young boy learns that he has extraordinary powers and is not of this Earth.
 
+							</p>
 
-                                         @Html.EJ().Rating("univRating").Value(4)
+						</div>
 
-                                        <span>Movie Info:</span>
+					</td>
 
-                                        <p>
+				</tr>
 
-                                            A young boy learns that he has extraordinary powers and is not of this Earth.
+			</table>
 
-                                        </p>
+		</div>);
 
-                                    </div>
+	 evt.Add().ID("woldwar").Text("World War Z").ContentTemplate(
 
-                                </td>
+		 @<div>
 
-                            </tr>
+		<table>
 
-                        </table>
+			<tr>
 
-                    </div>);
+				<td class="movies-img" valign="top">                                
 
+					<img src="@Url.Content("~/Images/rating/wwz.png")" alt="mos" />
 
+				</td>
 
-                 evt.Add().ID("woldwar").Text("World War Z").ContentTemplate(
+				<td valign="top">
 
-                     @<div>
+					<div>
 
-                    <table>
+						<span class="movie-header">World War Z</span><br />
 
-                        <tr>
+						Rating :
+										<br />                                  
 
-                            <td class="movies-img" valign="top">                                
+						@Html.EJ().Rating("wwzRating"). Value(4)
 
-                                <img src="@Url.Content("~/Images/rating/wwz.png")" alt="mos" />
+						<span>Movie Info:</span>
 
-                            </td>
+						<p>
 
-                            <td valign="top">
+							The story revolves around United Nations employee Gerry Lane (Pitt).
 
-                                <div>
+						</p>
 
-                                    <span class="movie-header">World War Z</span><br />
+					</div>
 
-                                    Rating :
+				</td>
 
-                                                    <br />                                  
+			</tr>
 
-                                    @Html.EJ().Rating("wwzRating"). Value(4)
+		</table>
 
-                                    <span>Movie Info:</span>
+	</div>);
 
-                                    <p>
+	 evt.Add().ID("unive").Text("Monsters University").ContentTemplate(
 
-                                        The story revolves around United Nations employee Gerry Lane (Pitt).
+		 @<div>
 
-                                    </p>
+		<table>
 
-                                </div>
+			<tr>
 
-                            </td>
+				<td class="movies-img" valign="top">                                
 
-                        </tr>
+					<img src="@Url.Content("~/Images/rating/mu.png")" alt="mos" />
 
-                    </table>
+				</td>
 
-                </div>);
+				<td valign="top">
 
-                 evt.Add().ID("unive").Text("Monsters University").ContentTemplate(
+					<div>
 
-                     @<div>
+						<span class="movie-header">Monsters University</span><br />
 
-                    <table>
+						Rating :
+										<br />
+										
+						@Html.EJ().Rating("mosRating").Value(3)
 
-                        <tr>
+						<span>Movie Info:</span>
 
-                            <td class="movies-img" valign="top">                                
+						<p>
 
-                                <img src="@Url.Content("~/Images/rating/mu.png")" alt="mos" />
+							Mike Wazowski and James P. Sullivan are an inseparable pair, but that wasn't always the case. 
 
-                            </td>
+						</p>
 
-                            <td valign="top">
+					</div>
 
-                                <div>
+				</td>
 
-                                    <span class="movie-header">Monsters University</span><br />
+			</tr>
 
-                                    Rating :
+		</table>
 
-                                                    <br />
+	</div>);
 
+}).Render();
+}
 
-
-                                    @Html.EJ().Rating("mosRating").Value(3)
-
-                                    <span>Movie Info:</span>
-
-                                    <p>
-
-                                        Mike Wazowski and James P. Sullivan are an inseparable pair, but that wasn't always the case. 
-
-                                    </p>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-                    </table>
-
-                </div>);
-
-            }).Render();}
-
-         </div>
+</div>
 
 
 {% endhighlight %}
@@ -196,31 +186,34 @@ Add the following styles to the corresponding view page to show the Rating in a 
 
 <style type="text/css" class="cssStyles">
 
-        .movies-img {
+	.movies-img 
+	{
 
-            width: 125px;
+		width: 125px;
 
-        }
+	}
 
 
 
-        .movie-header {
+	.movie-header 
+	{
 
-            font-size: 20px;
+		font-size: 20px;
 
-            font-weight: 600;
+		font-weight: 600;
 
-        }
+	}
 
-        .frame {
+	.frame 
+	{
 
-            width: 600px;
+		width: 600px;
 
-            height: 250px;
+		height: 250px;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 

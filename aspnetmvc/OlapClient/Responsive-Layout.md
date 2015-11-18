@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsive-Layout
+title: Responsive Layout | OLAPClient | ASP.NET MVC | Syncfusion
 description: responsive layout
 platform: ejmvc
 control: OLAPClient
@@ -13,7 +13,7 @@ Responsive layout is aimed at crafting sites to provide an optimal viewing exper
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript;
 

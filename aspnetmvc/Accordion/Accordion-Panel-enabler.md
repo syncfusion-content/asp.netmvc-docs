@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accordion-Panel-enabler
+title: Accordion Panel enabler | Accordion  | ASP.NET MVC | Syncfusion
 description: accordion panel enabler
 platform: ejmvc
 control: Accordion 
@@ -15,7 +15,7 @@ You can enable or disable the Accordion widget on initial rendering using the En
 
 The following code explains you on how to enable or disable the Accordion widget
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 // In the View page, render Accordion with corresponding data and disable the control actions.
@@ -66,7 +66,7 @@ The DisabledItems property disables the Accordion items based on the index. This
 
 The following code explains you on how to enable the panel items in Accordion widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 // In the View page, configure Accordion with the corresponding data, and to enable and disable Accordion panel items set the values for EnabledItems and DisabledItems.

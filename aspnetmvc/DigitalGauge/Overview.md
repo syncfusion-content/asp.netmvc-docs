@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: DigitalGauge | DigitalGauge | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: DigitalGauge
 documentation: ug
 ---
 
-# Overview
+# DigitalGauge
 
 Digital Gauge for Essential Studio encompasses the visualization of the segmented display of both the 7-segment numeric values and the 14-segment alphanumeric characters. It can display the following five kinds of character types:
 
@@ -19,8 +19,8 @@ Digital Gauge for Essential Studio encompasses the visualization of the segmente
 
 ![](Overview_images/Overview_img1.png)
 
-_Figure 1: Digital Gauge_
-
+Digital Gauge
+{:.caption}
 
 There are several other properties available in Digital Gauge which enable you to peform various customizations such as changing the space between the characters, segment width, segment length, spacing between the segments, and other customizations.
 

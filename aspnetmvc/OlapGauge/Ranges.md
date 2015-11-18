@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ranges
+title: Ranges | OLAPGauge | ASP.NET MVC | Syncfusion
 description: ranges
 platform: ejmvc
 control: OLAPGauge
@@ -16,7 +16,7 @@ Ranges are objects that highlight a range of values and can display different ra
 You can set the distance between the ranges and scales in OlapGauge using “distanceFromScale”.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -75,7 +75,7 @@ You can set the distance between the ranges and scales in OlapGauge using “dis
 
 You can set the background color for the ranges in OlapGauge using “backgroundColor”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -142,7 +142,7 @@ You can set the background color for the ranges in OlapGauge using “background
 You can customize the Rangesize using “size” property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>

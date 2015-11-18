@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MVVM
+title: MVVM | DigitalGauge | ASP.NET MVC | Syncfusion
 description: mvvm
 platform: ejmvc
 control: DigitalGauge
@@ -22,27 +22,27 @@ ej-DigitalGauge is the control tag, where ej is tag prefix and DigitalGauge is t
 
 <div ng-app="syncApp">
 
-<div ng-controller="DigitalGauge">
+	<div ng-controller="DigitalGauge">
 
-<ej-DigitalGauge id="digitalCore" e-height="500" e-load="loadGaugeTheme">
+		<ej-DigitalGauge id="digitalCore" e-height="500" e-load="loadGaugeTheme">
 
-</ej-DigitalGauge>
+		</ej-DigitalGauge>
 
-</div>
+	</div>
 
 </div>
 
 <script type="text/javascript">
 
-<!—binding the value to the scope variables in application controller-->
+	<!—binding the value to the scope variables in application controller-->
 
-angular.module('syncApp', ['ejangular'])
+	angular.module('syncApp', ['ejangular'])
 
-.controller('DigitalGauge', function ($scope) {
+	.controller('DigitalGauge', function ($scope) {
 
-$scope.nvalue = “text”;
+	$scope.nvalue = “text”;
 
-});
+	});
 
 </script>
 
@@ -53,7 +53,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img1.png)
 
-_Figure 38: Default Digital Gauge in Angular JS_
+Default Digital Gauge in Angular JS
+{:.caption}
 
 ## Adding the Digital Gauge Items
 
@@ -67,19 +68,19 @@ Digital Gauge is rendered with the following code example. You can extend the Ob
 
 <ej-DigitalGauge id="digitalCore">
 
-<!--Adding Item collection to the digital gauge-->
+	<!--Adding Item collection to the digital gauge-->
 
-<e-items>
+		<e-items>
 
-<e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
+			<e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
 
-e-value="Syncfusion" e-characterSetting-opacity="0.8"
+			e-value="Syncfusion" e-characterSetting-opacity="0.8"
 
-e-position-x="52" e-position-y="52">
+			e-position-x="52" e-position-y="52">
 
-</e-item>
+			</e-item>
 
-</e-items>
+		</e-items>
 
 </ej-DigitalGauge>
 
@@ -90,7 +91,8 @@ Finally while running the above codes, the following output will be rendered.
 
 ![](MVVM_images/MVVM_img2.png)
 
-_Figure 39: Digital Gauge Rendered in Angular JS_
+Digital Gauge Rendered in Angular JS
+{:.caption}
 
 ## Two Way Binding
 
@@ -100,41 +102,41 @@ Digital Gauge supports the two way biding for the property value as mentioned ea
 
 <div ng-app="syncApp">
 
-<div ng-controller="DigitalGauge">
+	<div ng-controller="DigitalGauge">
 
-<ej-DigitalGauge id="digitalCore" e-height="200" e-load="loadGaugeTheme">
+		<ej-DigitalGauge id="digitalCore" e-height="200" e-load="loadGaugeTheme">
 
-<e-items>
+			<e-items>
 
-<e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
+				<e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0"
 
-e-characterSetting-opacity="0.8" e-position-x="52"
+				e-characterSetting-opacity="0.8" e-position-x="52"
 
-e-value="nvalue" e-position-y="52">
+				e-value="nvalue" e-position-y="52">
 
-</e-item>
+			</e-item>
 
-</e-items>
+			</e-items>
 
-</ej-DigitalGauge>
+		</ej-DigitalGauge>
 
-Type here <input type="text" id="txtValue" ng-model="nvalue" Style="width:110px"/>
+		Type here <input type="text" id="txtValue" ng-model="nvalue" Style="width:110px"/>
 
-</div>
+	</div>
 
 </div>
 
 <script type="text/javascript">
 
-<!—binding the value to the scope variables in application controller-->
+	<!—binding the value to the scope variables in application controller-->
 
-angular.module('syncApp', ['ejangular'])
+	angular.module('syncApp', ['ejangular'])
 
-.controller('DigitalGauge', function ($scope) {
+	.controller('DigitalGauge', function ($scope) {
 
-$scope.nvalue = "Syncfusion";
+	$scope.nvalue = "Syncfusion";
 
-});
+	});
 
 </script>
 
@@ -145,7 +147,8 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img3.png)
 
-_Figure 40: Digital Gauge with two way binding in Angular JS_
+Digital Gauge with two way binding in Angular JS
+{:.caption}
 
 ## Knockout Binding
 
@@ -157,37 +160,41 @@ _Figure 40: Digital Gauge with two way binding in Angular JS_
 * Two-way binding supports both the processes – it applies the observable values to the Digital Gauge properties as well as the changes made in it is also reflected back and triggered within the observable collections. Only Value of the schedule properties support two-way binding.
 
 
-{% highlight html %}
+{% highlight CSHTML%}
 
 <div id="digitalCore" 
 
-         data-bind="ejDigitalGauge: { 
+	 data-bind="ejDigitalGauge: 
+	 { 
 
-value: samplevalue,
+		value: samplevalue,
 
-                    }">
+	 }">
 
-    </div>
+</div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        $(function () {
+	$(function () 
+	{
 
-            window.viewModel = {
+		window.viewModel = 
+		{
 
-             samplevalue: ko.observable(“syncfusion”),
+		 samplevalue: ko.observable(“syncfusion”),
 
-            };
+		};
 
-            $(function () {
+		$(function () 
+		{
 
-                ko.applyBindings(viewModel);
+			ko.applyBindings(viewModel);
 
-            });
+		});
 
-        });
+	});
 
-    </script>
+</script>
 
 {% endhighlight %}   
 
@@ -197,7 +204,8 @@ Execute the above code to render the following output.
 ![](MVVM_images/MVVM_img4.png)
 
 
-_Figure_ _41_: _Digital Gauge with Knockout binding_
+Digital Gauge with Knockout binding
+{:.caption}
 
 
 

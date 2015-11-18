@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation
+title: Orientation | Rotator | ASP.NET MVC | Syncfusion
 description: orientation
 platform: ejmvc
 control: Rotator
@@ -23,7 +23,7 @@ This property sets the Rotator in HorizontalOrientation. You can refer the follo
 1. In View, create ul-li list of Rotator items and invoke the Rotator helper.
 2. Add the following script in your CSHTML page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -43,7 +43,7 @@ This property sets the Rotator in verticalorientation. You can refer the followi
 2. Add the following script in your CSHTML page.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your CSHTML page and refer local data section for binding Rotator items.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL
+title: RTL | RichTextEditor | ASP.NET MVC | Syncfusion
 description: rtl
 platform: ejmvc
 control: RichTextEditor
@@ -13,11 +13,11 @@ RTL control supports right-to-left functionality and features for languages th
 
 1. Add the following code to the script section in your CSHTML page to initialize the RTE
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	\\ Add the following code in your view page to render the RTE.
+\\ Add the following code in your view page to render the RTE.
 
-	@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).EnableRTL(true).Render(); }
+@{Html.EJ().RTE("rteSample").Width("850px").ContentTemplate(@<p></p>).EnableRTL(true).Render(); }
 
 {% endhighlight %}
 

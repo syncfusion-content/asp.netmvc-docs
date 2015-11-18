@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Easy-Customization
+title: Easy Customization | RadioButton | ASP.NET MVC | Syncfusion
 description: easy customization
 platform: ejmvc
 control: RadioButton
@@ -19,23 +19,23 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@* Here checked and unchecked type of radio buttons are rendered in same group
+@* Here checked and unchecked type of radio buttons are rendered in same group
 
-    set checked state of radio button as follows*@
+set checked state of radio button as follows*@
 
-    @Html.EJ().RadioButton("Radio_checked").Name("Gender").Size(RadioButtonSize.Small).Checked(true)
+@Html.EJ().RadioButton("Radio_checked").Name("Gender").Size(RadioButtonSize.Small).Checked(true)
 
-    <label for="Radio_checked" class="clslab">Male</label>
+<label for="Radio_checked" class="clslab">Male</label>
 
-    <br />
+<br />
 
-    @Html.EJ().RadioButton("Radio_unchecked").Name("Gender").Size(RadioButtonSize.Small).Checked(false)
+@Html.EJ().RadioButton("Radio_unchecked").Name("Gender").Size(RadioButtonSize.Small).Checked(false)
 
-    <label for="Radio_unchecked" class="clslab">Female</label>
+<label for="Radio_unchecked" class="clslab">Female</label>
 
 
 {% endhighlight %}
@@ -47,15 +47,16 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 {% highlight css %}
 
-    <style>
+<style>
 
-        .page-align {
+	.page-align 
+	{
 
-            margin: 100px;
+		margin: 100px;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -75,17 +76,17 @@ The following steps explain the details about rendering the Radio Button with Te
 In the CSHTML page, add the following input elements to configure the Radio Button widget.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@*radio button with text property*@
+@*radio button with text property*@
 
-    @Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male")
+@Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male")
 
-    <br />
+<br />
 
-    @Html.EJ().RadioButton("RadBtn_female").Name("Gender").Size(RadioButtonSize.Small).Checked(false).Text("Female")
+@Html.EJ().RadioButton("RadBtn_female").Name("Gender").Size(RadioButtonSize.Small).Checked(false).Text("Female")
 
 {% endhighlight %}
 
@@ -96,15 +97,16 @@ In the CSHTML page, add the following input elements to configure the Radio Butt
 
 {% highlight css %}
 
-   <style>
+<style>
 
-        .page-align {
+	.page-align 
+	{
 
-            margin: 100px;
+		margin: 100px;
 
-        }
-		
-    </style>
+	}
+	
+</style>
 
 {% endhighlight %}
 
@@ -120,7 +122,7 @@ The following image is displayed as the output for the above steps.
 
 You can render the Radio Button in different sizes. There are some predefined size options available for rendering a Radio Button in an easy way. Each size option has different height and width. It mainly avoids the complexity in rendering Radio Button with complex CSS class. 
 
-_Table_ _1_: _Size_
+_Size_
 
 <table>
 <tr>
@@ -144,43 +146,43 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@* small and medium size of radio buttons in same group
+@* small and medium size of radio buttons in same group
 
-    By default, here no one radio button is checked*@
-	
-	Small size radio buttons
+By default, here no one radio button is checked*@
 
-    <br />
+Small size radio buttons
 
-    @Html.EJ().RadioButton("Radio_Male").Name("Gender").Size(RadioButtonSize.Small).Checked(true)
+<br />
 
-    <label for="Radio_Male" >Male</label>
+@Html.EJ().RadioButton("Radio_Male").Name("Gender").Size(RadioButtonSize.Small).Checked(true)
 
-    <br />
+<label for="Radio_Male" >Male</label>
 
-    @Html.EJ().RadioButton("Radio_Female").Name("Gender").Size(RadioButtonSize.Small).Checked(false)
+<br />
 
-    <label for="Radio_Female" >Female</label>
+@Html.EJ().RadioButton("Radio_Female").Name("Gender").Size(RadioButtonSize.Small).Checked(false)
 
-    <br />
+<label for="Radio_Female" >Female</label>
 
-    Medium size radio buttons
+<br />
 
-    <br />
+Medium size radio buttons
 
-      @Html.EJ().RadioButton("Radio1_Male").Name("Gender1").Size(RadioButtonSize.Medium).Checked(true)
+<br />
 
-    <label for="Radio1_Male">Male</label>
+  @Html.EJ().RadioButton("Radio1_Male").Name("Gender1").Size(RadioButtonSize.Medium).Checked(true)
 
-    <br />
+<label for="Radio1_Male">Male</label>
 
-    @Html.EJ().RadioButton("Radio1_Female").Name("Gender1").Size(RadioButtonSize.Medium).Checked(false)
+<br />
 
-    <label for="Radio1_Female" >Female</label>
+@Html.EJ().RadioButton("Radio1_Female").Name("Gender1").Size(RadioButtonSize.Medium).Checked(false)
+
+<label for="Radio1_Female" >Female</label>
 
 {% endhighlight %}
 
@@ -189,15 +191,16 @@ In the CSHTML page, add the following input elements to configure Radio Button w
 
 {% highlight css %}
 
-   <style>
+<style>
 
-        .page-align {
+	.page-align 
+	{
 
-            margin: 100px;
+		margin: 100px;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -217,39 +220,39 @@ The following steps explain the details about rendering the Radio Button with ri
 
 In the CSHTML page, add the following button elements to configure Radio Button widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-	// Add the code in CSHTML page to configure Radio Button
+// Add the code in CSHTML page to configure Radio Button
 
-	@*set radio button with right to left format*@
+@*set radio button with right to left format*@
 
-     <div class="page-align">
+ <div class="page-align">
 
-        <table class="rightAlign">
+	<table class="rightAlign">
 
-            <tr>
+		<tr>
 
-                <td>
+			<td>
 
-                    @Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male").EnableRTL(true)
+				@Html.EJ().RadioButton("RadBtn_male").Name("Gender").Size(RadioButtonSize.Small).Checked(true).Text("Male").EnableRTL(true)
 
-                </td>
+			</td>
 
-            </tr>
+		</tr>
 
-            <tr>
+		<tr>
 
-                <td>
+			<td>
 
-                    @Html.EJ().RadioButton("RadBtn_female").Name("Gender").Size(RadioButtonSize.Small).Checked(false).Text("Female").EnableRTL(true)
+				@Html.EJ().RadioButton("RadBtn_female").Name("Gender").Size(RadioButtonSize.Small).Checked(false).Text("Female").EnableRTL(true)
 
-                </td>
+			</td>
 
-            </tr>
+		</tr>
 
-        </table>
+	</table>
 
-    </div>
+</div>
 
 {% endhighlight %}
 
@@ -259,21 +262,23 @@ In the above mentioned code, the text property has been used. In LTR format, the
 
 {% highlight css %}
 
-  <style>
+<style>
 
-        .page-align {
+	.page-align 
+	{
 
-            margin: 100px;
+		margin: 100px;
 
-        }
+	}
 
-        .rightAlign {
+	.rightAlign 
+	{
 
-            text-align: right;
+		text-align: right;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 

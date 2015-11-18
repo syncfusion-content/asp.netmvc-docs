@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Holidays
+title: Holidays | Gantt | ASP.NET MVC | Syncfusion
 description: holidays
 platform: ejmvc
 control: Gantt
@@ -12,9 +12,7 @@ documentation: ug
 Holidays in Gantt control is used to highlight the non-working days in Gantt control and it can be initialized with Gantt control by using the following code example.
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
 
@@ -22,26 +20,25 @@ Holidays in Gantt control is used to highlight the non-working days in Gantt con
 
    .Holidays(new List<Syncfusion.JavaScript.Models.Holiday>
 
-                               {
+      {
 
-                                     new Syncfusion.JavaScript.Models.Holiday()
+             new Syncfusion.JavaScript.Models.Holiday()
 
-                                      {
+             {
 
-                                         Day="2/11/2014", 
+                    Day="2/11/2014", 
 
-                                         Background="yellowgreen",
+                    Background="yellowgreen",
 
-                                         Label="Public holiday"         
+                      Label="Public holiday"         
 
-                                      },                        
+                },                        
 
-                               })
+       })
 
-              .Datasource(ViewBag.datasource)
+	.Datasource(ViewBag.datasource)
 
-             )
-
+)
 
 {% endhighlight %}
 
@@ -55,5 +52,5 @@ The following screenshot shows the output of Holidays in Gantt control.
 
 ![](Holidays_images/Holidays_img1.png)
 
-_Figure 51: Holidays_
-
+Holidays
+{:.caption}

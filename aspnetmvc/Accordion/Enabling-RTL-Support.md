@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enabling-RTL-Support
+title: Enabling RTL Support | Accordion  | ASP.NET MVC | Syncfusion
 description: enabling rtl support
 platform: ejmvc
 control: Accordion 
@@ -9,7 +9,7 @@ documentation: ug
 
 # Enabling RTL Support
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 // In the View page, configure Accordion with corresponding data and set EnableRTL property value as true.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thumbnail
+title: Thumbnail | Rotator | ASP.NET MVC | Syncfusion
 description: thumbnail 
 platform: ejmvc
 control: Rotator
@@ -17,7 +17,7 @@ The property ThumbnailSourceID specifies the source for thumbnail elements. The 
 
 You can refer the following code example of Thumbnail in Rotator.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <ul id="slide" style="display: none">
 
@@ -49,45 +49,45 @@ You can refer the following code example of Thumbnail in Rotator.
 
 @Html.EJ().Rotator("slidercontent").Items(itemElement =>
 
-                       {
+{
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" />
+	   <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" />
 
-                           </div>);
+   </div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>
+	   <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>
 
-                           </div>);
+   </div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" />
+	   <img class="image" src="@Url.Content("~/Images/rotator/wheat.jpg")" />
 
-                           </div>);
+   </div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" />
+	   <img class="image" src="@Url.Content("~/Images/rotator/tablet.jpg")" />
 
-                           </div>);
+   </div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" />
+	   <img class="image" src="@Url.Content("~/Images/rotator/sea.jpg")" />
 
-                           </div>);
+   </div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+   itemElement.Add().ContentTemplate(@<div>
 
-                               <img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" />
+	   <img class="image" src="@Url.Content("~/Images/rotator/bread.jpg")" />
 
-                           </div>);
+   </div>);
 
-                       }).SlideWidth("600px").SlideHeight("350px").ShowThumbnail(true).ThumbnailSourceID("slide")          
+}).SlideWidth("600px").SlideHeight("350px").ShowThumbnail(true).ThumbnailSourceID("slide")          
 
 {% endhighlight %}
 

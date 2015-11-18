@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Splitter-Integration
+title: Splitter Integration | Splitter | ASP.NET MVC | Syncfusion
 description: splitter integration
 platform: ejmvc
 control: Splitter
@@ -18,7 +18,7 @@ The following steps explain the implementation of Splitter integration.
 1. In the View page, add the Splitter helper and configure the elements within the split pane. The first pane has the TreeView content and the next one has some content that is related to TreeView.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
   htmlAttribute.Add("class", "_child");}@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>    {
@@ -90,19 +90,19 @@ display: none;
 }
 </style>
 
-{% endhighlight %}
-	
-{% highlight javascript %}
+
 
 <script type="text/javascript">
-    function treeClicked(sender, args) {
-	if (sender.currentElement.hasClass('_child')) {
-	//nodeSelect event handle
-	var content = $('.' + sender.currentElement[0].id).html();
-	$('._content').html(content);
+	function treeClicked(sender, args) 
+	{
+	if (sender.currentElement.hasClass('_child'))
+		{
+			//nodeSelect event handle
+			var content = $('.' + sender.currentElement[0].id).html();
+			$('._content').html(content);
+		}
 	}
-    }
-	</script>
+</script>
 
 {% endhighlight %}
 

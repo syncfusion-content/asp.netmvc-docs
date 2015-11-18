@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientation
+title: Orientation | Menu | ASP.NET MVC | Syncfusion
 description: orientation
 platform: ejmvc
 control: Menu
@@ -18,7 +18,8 @@ Horizontal orientation displays the menu items horizontally and it is the defaul
 The following steps explains you the details on rendering the Menu control. 
 
 1. Add the below code in your view page to render the horizontal menu
-{% highlight js %}
+
+{% highlight CSHTML %}
     
 
 // In the CSHTML page, add the following code to configure Menu control.
@@ -27,73 +28,73 @@ The following steps explains you the details on rendering the Menu control.
 
 @Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+	items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Foundation");
+			child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+			child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+			child.Add().Text("About").Children(child1 =>
 
-                    {
+			{
 
-                        child1.Add().Text("Company");
+				child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+				child1.Add().Text("Location");
 
-                    });
+			});
 
-                });
+		});
 
-            items.Add().Text("Services").Children(child =>
+	items.Add().Text("Services").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Consulting");
+			child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+			child.Add().Text("Outsourcing");
 
-                });
+		});
 
-            items.Add().Text("About");
+	items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+	items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Contact number");
+			child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+			child.Add().Text("E-mail");
 
-                });
+		});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+	items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+		 {
 
 
 
-        }).Width("500")
+			 child.Add().Text("Position").Children(child1 =>
+
+					 {
+
+						 child1.Add().Text("Developer");
+
+						 child1.Add().Text("Manager");
+
+					 });
+
+			 child.Add().Text("Apply online");
+
+		 });
+
+
+
+}).Width("500")
 
 </div>
 
@@ -105,9 +106,8 @@ The following screenshot displays the output of the above code.
 
 ![](Orientation_images/Orientation_img1.png)
 
-
-
-_Figure16: Horizontal Menu_
+Horizontal Menu
+{:.caption}
 
 ## Vertical Menu
 
@@ -115,85 +115,80 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 1. Add the following code in your view page to render vertical menu
 
-
-
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 // Add the following code in the CSHTML page.
 
 <div class="imgframe">
 
-    @Html.EJ().Menu("menucontrol").Items(items =>
+@Html.EJ().Menu("menucontrol").Items(items =>
 
-        {
+{
 
-            items.Add().Id("Home").Text("Home").Children(child =>
+	items.Add().Id("Home").Text("Home").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Foundation");
+			child.Add().Text("Foundation");
 
-                    child.Add().Text("Launch");
+			child.Add().Text("Launch");
 
-                    child.Add().Text("About").Children(child1 =>
+			child.Add().Text("About").Children(child1 =>
 
-                    {
+			{
 
-                        child1.Add().Text("Company");
+				child1.Add().Text("Company");
 
-                        child1.Add().Text("Location");
+				child1.Add().Text("Location");
 
-                    });
+			});
 
-                });
+		});
 
-            items.Add().Text("Services").Children(child =>
+	items.Add().Text("Services").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Consulting");
+			child.Add().Text("Consulting");
 
-                    child.Add().Text("Outsourcing");
+			child.Add().Text("Outsourcing");
 
-                });
+		});
 
-            items.Add().Text("About");
+	items.Add().Text("About");
 
-            items.Add().Id("Contact").Text("Contact Us").Children(child =>
+	items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-                {
+		{
 
-                    child.Add().Text("Contact number");
+			child.Add().Text("Contact number");
 
-                    child.Add().Text("E-mail");
+			child.Add().Text("E-mail");
 
-                });
+		});
 
-            items.Add().Id("Careers").Text("Careers").Children(child =>
+	items.Add().Id("Careers").Text("Careers").Children(child =>
 
-                 {
-
-
-
-                     child.Add().Text("Position").Children(child1 =>
-
-                             {
-
-                                 child1.Add().Text("Developer");
-
-                                 child1.Add().Text("Manager");
-
-                             });
-
-                     child.Add().Text("Apply online");
-
-                 });
+		 {
 
 
 
-        }).Width("200").Orientation(Orientation.Vertical)
+			 child.Add().Text("Position").Children(child1 =>
+
+					 {
+
+						 child1.Add().Text("Developer");
+
+						 child1.Add().Text("Manager");
+
+					 });
+
+			 child.Add().Text("Apply online");
+
+		 });
+
+
+}).Width("200").Orientation(Orientation.Vertical)
 
 </div>
 
@@ -206,6 +201,5 @@ The following screen shot displays the output of the above code.
 ![](Orientation_images/Orientation_img2.png)
 
 
-
-_Figure17: Vertical Menu_
-
+Vertical Menu
+{:.caption}

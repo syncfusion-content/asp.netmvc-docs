@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ribbon-Dependencies
+title: Ribbon Dependencies | Ribbon | ASP.NET MVC | Syncfusion
 description: ribbon dependencies
 platform: ejmvc
 control: Ribbon
@@ -11,7 +11,7 @@ documentation: ug
 
 _ej.web.all.js_ is a bundle of all _ASP.NET MVC_ controls. When you use _ej.web.all.js_ in your application, you can leave this section or else you can try to render _Ribbon_ in your application by using _ej.ribbon_ file. You can refer to the following frameworks and controls in your project.
 
-_Table_ _1_: Ribbon Dependency
+_Ribbon Dependency_
 
 <table>
 <tr>

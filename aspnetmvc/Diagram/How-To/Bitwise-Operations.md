@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bitwise-Operations
+title: Bitwise Operations | Diagram | ASP.NET MVC | Syncfusion
 description: bitwise operations
 platform: ejmvc
 control: Diagram

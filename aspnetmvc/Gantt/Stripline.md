@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stripline
+title: Stripline | Gantt | ASP.NET MVC | Syncfusion
 description: stripline
 platform: ejmvc
 control: Gantt
@@ -12,7 +12,7 @@ documentation: ug
 Stripline in Gantt control is used to highlight the important event in Gantt chart part. By using this feature, you can add the Striplines to highlight important days in your project. The following code example shows you how to add the Stripline in Gantt control.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -22,29 +22,28 @@ Stripline in Gantt control is used to highlight the important event in Gantt cha
 
  .StripLines(new   List<Syncfusion.JavaScript.Models.StripLine> 
 
-                                  {
+   {
 
-                                     new Syncfusion.JavaScript.Models.StripLine()
+        new Syncfusion.JavaScript.Models.StripLine()
 
-                                      { 
+         { 
 
-                                          Day="01/02/2014", 
+                    Day="01/02/2014", 
 
-                                          Label="Project Release", 
+                    Label="Project Release", 
 
-                                          LineStyle="dotted",
+                    LineStyle="dotted",
 
-                                          LineColor="Darkblue",
+                    LineColor="Darkblue",
 
-                                          LineWidth=2 }, 
+                    LineWidth=2 }, 
+        })
 
-                               })
+})                                   	
 
-        })                                   	
+.Datasource(ViewBag.datasource)
 
-        .Datasource(ViewBag.datasource)
-
-        )
+)
 
 
 
@@ -60,5 +59,5 @@ The following screenshot shows stripline in Gantt control.
 
 ![](Stripline_images/Stripline_img1.png)
 
-_Figure 50: Stripline_
-
+Stripline
+{:.caption}

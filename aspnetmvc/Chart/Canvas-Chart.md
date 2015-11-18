@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Canvas-Chart
+title: Canvas Chart | Chart | ASP.NET MVC | Syncfusion
 description: canvas chart
 platform: ejmvc
 control: Chart
@@ -29,7 +29,5 @@ The following screenshot illustrates the canvas chart
 
 ![](Canvas-Chart_images/Canvas-Chart_img1.png)
 
-
-
-_Figure25: Canvas Chart_
-
+Canvas Chart
+{:.caption}

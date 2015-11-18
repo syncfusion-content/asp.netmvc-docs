@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | PercentageTextBox | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: PercentageTextBox
@@ -15,7 +15,7 @@ PercentageTextBox provides RTL (Right-To-Left) support. The alignment of Percent
 
 In the View page add PercentageTextBox helper, and configure the EnableRTL property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().PercentageTextbox("percentage").Value("22").EnableRTL(true)
 

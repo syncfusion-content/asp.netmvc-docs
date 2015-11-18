@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-interaction
+title: Keyboard interaction | ListBox | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: ListBox
@@ -11,7 +11,7 @@ documentation: ug
 
 You can use Keyboard shortcut keys as an alternative to the mouse on using ListBox widget. ListBox Widget allows you to perform all kind of actions using keyboard shortcuts.
 
-_Table_ _4_: Keyboard shortcut keys
+_Keyboard shortcut keys_
 
 <table>
 <tr>
@@ -58,36 +58,36 @@ The following steps explains you to enable keyboard interaction for a ListBox.
 1. Add the below code in your page to render the ListBox
 
 
-   ~~~ js
+   ~~~ cshtml
 
-		// Add the following code in View page to configure ListBox widget
-		<div id="control">  
-			<h5 class="ctrllabel"> 
-				Select a skill 
-			</h5>
-			@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
-			=> df.Text("text"))
-		</div>
-		
+	// Add the following code in View page to configure ListBox widget
+	<div id="control">  
+		<h5 class="ctrllabel"> 
+			Select a skill 
+		</h5>
+		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
+		=> df.Text("text"))
+	</div>
+	
    ~~~
-   {:.prettyprint }
+   
 
    ~~~ js
    
-		// Render ListBox control
-		<script type="text/javascript">
-			$(document).on("keydown", function (e) {
-				if (e.altKey && e.keyCode === 74) { // j- key code. 
-					var target = $('#listboxsample').data("ejListBox");
-					target.selectItemByIndex(1);  
-					$("#listboxsample_container").focus(); 
-				}  
-			});
-		</script>
+	// Render ListBox control
+	<script type="text/javascript">
+		$(document).on("keydown", function (e) {
+			if (e.altKey && e.keyCode === 74) { // j- key code. 
+				var target = $('#listboxsample').data("ejListBox");
+				target.selectItemByIndex(1);  
+				$("#listboxsample_container").focus(); 
+			}  
+		});
+	</script>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Run the sample, press Alt + J to focus in the ListBox widget that enables it and you can navigate using arrow keys.

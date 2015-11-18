@@ -1,72 +1,73 @@
 ---
 layout: post
-title: Disable-double-click-edit
+title: Disable double click edit | Grid | ASP.NET MVC | Syncfusion
 description: disable double-click edit
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-## Disable double-click edit
+# Disable double-click edit
 
 The AllowEditOnDblClick property can be set as True to enable editing the record by double-clicking it. When it is set as False, it cannot be edited by double-clicking it. In that case, you can edit the record by using the Toolbar option only.
 
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
-{% highlight js %}
+@(Html.EJ().Grid<object>("Editing")
 
-  @(Html.EJ().Grid<object>("Editing")
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
+.EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing()
 
 .AllowEditOnDblClick(false);})
 
-        .ToolbarSettings(toolbar =>
+.ToolbarSettings(toolbar =>
 
-            {
+{
 
-                toolbar.ShowToolbar().ToolbarItems(items =>
+	toolbar.ShowToolbar().ToolbarItems(items =>
 
-                {
+	{
 
-                    items.AddTool(ToolBarItems.Add);
+		items.AddTool(ToolBarItems.Add);
 
-                    items.AddTool(ToolBarItems.Edit);
+		items.AddTool(ToolBarItems.Edit);
 
-                    items.AddTool(ToolBarItems.Delete);
+		items.AddTool(ToolBarItems.Delete);
 
-                    items.AddTool(ToolBarItems.Update);
+		items.AddTool(ToolBarItems.Update);
 
-                    items.AddTool(ToolBarItems.Cancel);
+		items.AddTool(ToolBarItems.Cancel);
 
-                });
+	});
 
-            })
+})
 
-        .AllowPaging(true)
+.AllowPaging(true)
 
-        .PageSettings(page => { page.PageSize(8); })
+.PageSettings(page => { page.PageSize(8); })
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
+	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-            col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
 
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
 
-            col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
 
-        })
+})
 
-        )
+)
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace SyncfusionMvcApplication3.Controllers
 
@@ -90,15 +91,13 @@ namespace SyncfusionMvcApplication3.Controllers
 
 }
 
-
-
 {% endhighlight %}
-
+{% endtabs %}
 
 
 The following output is displayed as a result of the above code example.
 
 ![](Disable-double-click-edit_images/Disable-double-click-edit_img1.png)
 
-_Figure : Disable double-click edit_
-
+Disable double-click edit
+{:.caption}

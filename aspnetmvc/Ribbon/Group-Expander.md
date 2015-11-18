@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Group-Expander
+title: Group Expander | Ribbon | ASP.NET MVC | Syncfusion
 description: group expander
 platform: ejmvc
 control: Ribbon
@@ -9,9 +9,11 @@ documentation: ug
 
 # Group Expander
 
-The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _ClientSideOnGroupExpand_.
+The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ value to _true_ to enable the group expander for each group in the ribbon tab. The event for _group expander_ is _GroupExpand_.
 
-{% highlight js %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Ribbon("Ribbon")
 
@@ -21,7 +23,7 @@ The _Ribbon_ control has _group expander_ support. Set _EnableGroupExpander_ val
 
 {
 
-apptab.Type("ApplicationMenu").ItemID("menu").MenuSettings(new MenuProperties()
+apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
 
 {
 
@@ -144,64 +146,68 @@ PrefixIcon = "e-ribbon e-ribbonunderline"
 )
 
 
+<ul id="ribbonmenu">
 
-<ul id="menu">
+	<li><a>FILE</a>
 
-<li><a>FILE</a>
+		<ul>
 
-<ul>
+			<li><a>New</a></li>
 
-<li><a>New</a></li>
+			<li><a>Open</a></li>
 
-<li><a>Open</a></li>
+		</ul>
+
+	</li>
 
 </ul>
 
-</li>
-
-</ul>
 
 
 
 <style type="text/css">
 
-.e-ribbon .e-new:before {
+	.e-ribbon .e-new:before 
+	{
 
-content: "\e646";
+	content: "\e646";
 
-font-size: 36px;
+	font-size: 36px;
 
-position: relative;
+	position: relative;
 
-left: -12px;
+	left: -12px;
 
-top: -4px;
+	top: -4px;
 
-}
-
-
-
-.e-ribbon .e-ribbonitalic:before {
-
-content: "\e635";
-
-}
+	}
 
 
 
-.e-ribbon .bold:before {
+	.e-ribbon .e-ribbonitalic:before 
+	{
 
-content: "\e636";
+	content: "\e635";
 
-}
+	}
 
 
 
-.e-ribbon .e-ribbonunderline:before {
+	.e-ribbon .bold:before
+	{
 
-content: "\e634";
+	content: "\e636";
 
-}
+	}
+
+
+
+	.e-ribbon .e-ribbonunderline:before 
+	{
+
+	content: "\e634";
+
+	}
 
 </style>
 
@@ -213,60 +219,56 @@ namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class RibbonController : Controller
+	public partial class RibbonController : Controller
 
-{
+	{
 
-//
+		// GET: /Sample/
 
-// GET: /Sample/
+		List<FontFamily> fontFamilySample = new List<FontFamily>();
 
-List<FontFamily> fontFamilySample = new List<FontFamily>();
+		List<FontPoint> fontPointSample = new List<FontPoint>();
 
-List<FontPoint> fontPointSample = new List<FontPoint>();
+		public ActionResult Sample()
 
-public ActionResult Sample()
+		{
 
-{
+			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
 
-fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
+			fontFamilySample.Add(new FontFamily { text = "Arial" });
 
-fontFamilySample.Add(new FontFamily { text = "Arial" });
+			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
 
-fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
+			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
 
-fontFamilySample.Add(new FontFamily { text = "Tahoma" });
+			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
 
-fontFamilySample.Add(new FontFamily { text = "Helvetica" });
+			ViewBag.datasource = fontFamilySample;
 
-ViewBag.datasource = fontFamilySample;
+			fontPointSample.Add(new FontPoint { text = "1pt" });
 
-fontPointSample.Add(new FontPoint { text = "1pt" });
+			fontPointSample.Add(new FontPoint { text = "2pt" });
 
-fontPointSample.Add(new FontPoint { text = "2pt" });
+			fontPointSample.Add(new FontPoint { text = "3pt" });
 
-fontPointSample.Add(new FontPoint { text = "3pt" });
+			fontPointSample.Add(new FontPoint { text = "4pt" });
 
-fontPointSample.Add(new FontPoint { text = "4pt" });
+			fontPointSample.Add(new FontPoint { text = "5pt" });
 
-fontPointSample.Add(new FontPoint { text = "5pt" });
+			ViewBag.datasource1 = fontPointSample;
 
-ViewBag.datasource1 = fontPointSample;
+			return View();
 
-return View();
+		}
 
+	}
+	
 }
-
-}
-
-}
-
-
 
 {% endhighlight %}
 
 
-
+{% endtabs %} 
 
 
 The following screenshot illustrates the group New with the group expander.

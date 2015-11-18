@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | DatePicker  | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: DatePicker
@@ -17,11 +17,11 @@ The following steps explain you how to enable the EnableRTL property of the Date
 
 1. In the CSHTML page, add the following code to render the DatePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with right to left direction*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with right to left direction*@
 
-		@Html.EJ().DatePicker("datePicker").EnableRTL(true)
+	@Html.EJ().DatePicker("datePicker").EnableRTL(true)
 
    ~~~
    {:.prettyprint }
@@ -31,4 +31,5 @@ The following steps explain you how to enable the EnableRTL property of the Date
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
-
+RTL Support in DatePicker
+{:.caption}

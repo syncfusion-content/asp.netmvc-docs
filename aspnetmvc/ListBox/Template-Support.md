@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | ListBox | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: ListBox
@@ -19,112 +19,116 @@ The following steps explains you the behaviour of template support with ListBox.
 
 
 
-   ~~~ html
-		// Add the following code in View page to configure ListBox widget
-		<div class="control">
-			<div class="ctrllabel">
-				Template support 
-			</div>  
-		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
-		.Template("<img class='eimg' src='../../Content/images/Employees/${eimg}.png' alt='employee' height='50px' width='50px'/>
-		<div class='ename'> 
-			${text} 
-		</div>
-		<div class='desig'>
-			${desig} 
-		</div>
-		<div class='cont'>
-			${country} 
-		</div>")
+   ~~~ cshtml
+	// Add the following code in View page to configure ListBox widget
+	<div class="control">
+		<div class="ctrllabel">
+			Template support 
+		</div>  
+	@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
+	.Template("<img class='eimg' src='../../Content/images/Employees/${eimg}.png' alt='employee' height='50px' width='50px'/>
+	<div class='ename'> 
+		${text} 
+	</div>
+	<div class='desig'>
+		${desig} 
+	</div>
+	<div class='cont'>
+		${country} 
+	</div>")
 	</div>
 	
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
    
-		  // Add the following code to add list items in the controller page 
-		  public class EmployeeSpecialists 
-		  {           
-				public string text { get; set; }   
-				public string eimg { get; set; }   
-				public string desig { get; set; } 
-				public string country { get; set; }  
-		  } 
-		  public ActionResult Index() 
-		  {
-				List<EmployeeSpecialists> empl = new List<EmployeeSpecialists>();
-				empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" }); 
-				empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" }); 
-				empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });  
-				empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" }); 
-				ViewBag.datasource = empl;     
-				return View();
-		  }
+   ~~~ csharp
+   
+	// Add the following code to add list items in the controller page 
+	public class EmployeeSpecialists 
+	{           
+		public string text { get; set; }   
+		public string eimg { get; set; }   
+		public string desig { get; set; } 
+		public string country { get; set; }  
+	} 
+	public ActionResult Index() 
+	{
+		List<EmployeeSpecialists> empl = new List<EmployeeSpecialists>();
+		empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" }); 
+		empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" }); 
+		empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });  
+		empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" }); 
+		ViewBag.datasource = empl;     
+		return View();
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. Customize the template in CSS. 
 
 
-   ~~~ html
+   ~~~ css
 
-		<style>
+	<style>
 
-			.eimg {
+		.eimg 
+		{
 
-				margin: 0;
+			margin: 0;
 
-				padding: 3px 10px 3px 3px;
+			padding: 3px 10px 3px 3px;
 
-				border: 0 none;
+			border: 0 none;
 
-				width: 60px;
+			width: 60px;
 
-				height: 60px;
+			height: 60px;
 
-				float: left;
+			float: left;
 
-			}
-
-
-
-			.ename {
-
-				font-weight: bold;
-
-				padding: 6px 3px 1px 3px;
-
-			}
+		}
 
 
 
-			.desig, .cont {
+		.ename 
+		{
 
-				font-size: smaller;
+			font-weight: bold;
 
-				padding: 3px 3px -1px 0px;
+			padding: 6px 3px 1px 3px;
 
-			}
+		}
 
 
 
-			#selectexperts li {
+		.desig, .cont 
+		{
 
-				width: 200px;
+			font-size: smaller;
 
-				height: 70px;
+			padding: 3px 3px -1px 0px;
 
-				padding: 5px;
+		}
 
-			}
 
-		</style>
+
+		#selectexperts li 
+		{
+
+			width: 200px;
+
+			height: 70px;
+
+			padding: 5px;
+
+		}
+
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 

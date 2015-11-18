@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behaviour-Settings
+title: Behaviour Settings | TimePicker | ASP.NET MVC | Syncfusion
 description: behaviour settings
 platform: ejmvc
 control: TimePicker
@@ -19,7 +19,7 @@ The following steps explains you on how to set the default value of the TimePick
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with given time value*@
 
@@ -32,9 +32,8 @@ Execute the above code to render the following output.
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img1.png)
 
-
-
-_Figure 9: TimePicker default value_
+TimePicker default value
+{:.caption}
 
 ## Enable/Disable TimePicker widget
 
@@ -46,7 +45,7 @@ The following steps explain you to enable/disable property in TimePicker widget.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render disabled TimePicker widget*@
 
@@ -54,9 +53,9 @@ The following steps explain you to enable/disable property in TimePicker widget.
 
 {% endhighlight %}
 
-_Figure 10: Disabled TimePicker widget_
-
 ![](Behaviour-Settings_images/Behaviour-Settings_img2.png)
+Disabled TimePicker widget
+{:.caption}
 
 Execute the above code to render the following output.
 
@@ -74,7 +73,7 @@ The following steps allows you to disable editing value in TimePicker.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -88,9 +87,8 @@ The following screenshot illustrates a TimePicker textbox configured to restrict
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img3.png)' 
 
-
-
-_Figure 11: TimePicker with PopUp button and enable ReadOnly property_
+TimePicker with PopUp button and enable ReadOnly property
+{:.caption}
 
 ## Rounded Corner
 
@@ -104,7 +102,7 @@ The following steps explain you to change the edges of the textbox to rounded co
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with rounded corner*@
 
@@ -116,9 +114,8 @@ The following screenshot illustrates a TimePicker when ShowRoundedCorner is set 
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img4.png)
 
-
-
-_Figure 12: Rounded corner of_ _TimePicker_ _Textbox_
+Rounded corner of TimePicker Textbox
+{:.caption}
 
 ## Scaling
 
@@ -132,7 +129,7 @@ You can use Height and Width property to customize TimePicker width and height.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specified height and width*@
 
@@ -144,9 +141,8 @@ Execute the above code to render the following output.
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img5.png)
 
-
-
-_Figure 13: Changing Width and Height of the TimePicker._
+Changing Width and Height of the TimePicker.
+{:.caption}
 
 ### Changing TimePicker PopupHeight and PopupWidth
 
@@ -156,7 +152,7 @@ You can use PopupHeight and PopupWidth property to customize TimePicker width an
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specified popup height and width*@
 
@@ -168,9 +164,8 @@ Execute the above code to render the following output.
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img6.png)
 
-
-
-_Figure 14: Changing popup height and width_
+Changing popup height and width
+{:.caption}
 
 ## State persistence
 
@@ -182,7 +177,7 @@ The following steps explains you to use EnablePersistence property.
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
@@ -200,7 +195,7 @@ The following steps explains you to use EnableStrictMode property.
 1. Add the following code to the corresponding view page to render the TimePicker.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with specifies min and max time*@
 
@@ -212,9 +207,8 @@ Execute the above code to render the following output.
 
 ![](Behaviour-Settings_images/Behaviour-Settings_img7.png)
 
-
-
-_Figure 15: Using EnableStrictMode property_
+Using EnableStrictMode property
+{:.caption}
 
 ## Interval
 
@@ -228,7 +222,7 @@ The following steps explains you to change the Time Interval of the TimePicker.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 

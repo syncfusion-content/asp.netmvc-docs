@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dimensions
+title: Dimensions | ListView | ASP.NET MVC | Syncfusion
 description: dimensions
 platform: ejmvc
 control: ListView
@@ -14,7 +14,7 @@ To customize the ListView dimensions, Width and Height properties are used.
 Refer to the following code examples.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJMobile().ListView("lb").Height(600).Width(300).Items(items =>
 
@@ -49,4 +49,5 @@ Refer to the following code examples.
 
 ![](Dimensions_images/Dimensions_img1.png)
 
-_Height_
+Height
+{:.caption}

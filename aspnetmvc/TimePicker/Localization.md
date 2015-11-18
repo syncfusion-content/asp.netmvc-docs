@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | TimePicker | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: TimePicker
@@ -23,7 +23,7 @@ The following steps explains you on how to enable Locale property for TimePicker
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @*Add the following code example to the corresponding CSHTML page to render TimePicker widget with Spanish culture*@
 
@@ -35,6 +35,6 @@ Execute the above code to render the following output.
 
 ![](Localization_images/Localization_img1.png)
 
-
-_Figure 9: TimePicker with es-ES Localization_
+TimePicker with es-ES Localization
+{:.caption}
 

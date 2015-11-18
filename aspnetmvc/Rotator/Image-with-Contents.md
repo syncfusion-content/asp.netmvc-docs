@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Image-with-Contents
+title: Image with Contents | Rotator | ASP.NET MVC | Syncfusion
 description: image with contents 
 platform: ejmvc
 control: Rotator
@@ -10,144 +10,145 @@ documentation: ug
 # Image with Contents 
 
 This feature allows you to add text along with the image in Rotator control. This is achieved by splitting the content into two panels. In the following code example, image is given in the left panel and text is given in the right panel.
-
-{% highlight html %}           
+{% tabs %}
+ 
+{% highlight CSHTML %}           
 
 @{Html.EJ().Rotator("sliderContent").Items(itemElement =>
 
-                       {
+{
 
-                           itemElement.Add().ContentTemplate(@<div>
+	itemElement.Add().ContentTemplate(@<div>
 
-                               <div class="leftPanel">
+	   <div class="leftPanel">
 
-                                   <img src="@Url.Content("~/Images/rotator/tablet.jpg")" />
+		   <img src="@Url.Content("~/Images/rotator/tablet.jpg")" />
 
-                               </div>
+	   </div>
 
-                               <div class="rightPanel blck">
+	   <div class="rightPanel blck">
 
-                                   <div class="contentPanel">Tablet </div>
+		   <div class="contentPanel">Tablet </div>
 
-                                   <ul>
+		   <ul>
 
-                                       <li>A tablet computer, or simply tablet, is a mobile computer with display, circuitry and battery in a single unit.</li>
+			   <li>A tablet computer, or simply tablet, is a mobile computer with display, circuitry and battery in a single unit.</li>
 
-                                       <li>
+			   <li>
 
-                                       Tablets are equipped with sensors, including cameras, microphone, accelerometer and touchscreen,
+			   Tablets are equipped with sensors, including cameras, microphone, accelerometer and touchscreen,
 
-                                   </ul>
+		   </ul>
 
-                               </div>
+	   </div>
 
-                           </div>);
+	</div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+	itemElement.Add().ContentTemplate(@<div>
 
-                               <div class="leftPanel">
+	   <div class="leftPanel">
 
-                                   <img src="@Url.Content("~/Images/rotator/rose.jpg")" />
+		   <img src="@Url.Content("~/Images/rotator/rose.jpg")" />
 
-                               </div>
+	   </div>
 
-                               <div class="rightPanel">
+	   <div class="rightPanel">
 
-                                   <div class="contentPanel">Rose </div>
+		   <div class="contentPanel">Rose </div>
 
-                                   <ul>
+		   <ul>
 
-                                       <li>A rose is a woody perennial of the genus Rosa, within the family Rosaceae</li>
+			   <li>A rose is a woody perennial of the genus Rosa, within the family Rosaceae</li>
 
-                                       <li>Flowers vary in size and shape and are usually large and showy,
+			   <li>Flowers vary in size and shape and are usually large and showy,
 
-                    There are over 100 species
+				There are over 100 species
 
-                                       </li>
+			   </li>
 
-                                   </ul>
+		   </ul>
 
-                               </div>
+	   </div>
 
-                           </div>);
+	</div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+	itemElement.Add().ContentTemplate(@<div>
 
-                               <div class="leftPanel">
+	   <div class="leftPanel">
 
-                                   <img src="@Url.Content("~/Images/rotator/snowfall.jpg")" />
+		   <img src="@Url.Content("~/Images/rotator/snowfall.jpg")" />
 
-                               </div>
+	   </div>
 
-                               <div class="rightPanel rightSide">
+	   <div class="rightPanel rightSide">
 
-                                   <div class="contentPanel">Snowfall </div>
+		   <div class="contentPanel">Snowfall </div>
 
-                                   <ul>
+		   <ul>
 
-                                       <li>Mt. Baker ski area in Washington State has the world record for snowfall at 1,140 inches of snow in the 1998/1999 winter season</li>
+			   <li>Mt. Baker ski area in Washington State has the world record for snowfall at 1,140 inches of snow in the 1998/1999 winter season</li>
 
-                                       <li>Mt. Baker ski area is located near but not on the real 10,781’ Mount Baker</li>
+			   <li>Mt. Baker ski area is located near but not on the real 10,781’ Mount Baker</li>
 
-                                   </ul>
+		   </ul>
 
-                               </div>
+	   </div>
 
-                           </div>);
+	</div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+	itemElement.Add().ContentTemplate(@<div>
 
-                               <div class="leftPanel">
+	   <div class="leftPanel">
 
-                                   <img src="@Url.Content("~/Images/rotator/nature.jpg")" />
+		   <img src="@Url.Content("~/Images/rotator/nature.jpg")" />
 
-                               </div>
+	   </div>
 
-                               <div class="rightPanel">
+	   <div class="rightPanel">
 
-                                   <div class="contentPanel">Nature </div>
+		   <div class="contentPanel">Nature </div>
 
-                                   <ul>
+		   <ul>
 
-                                       <li>The health of the natural environment is critical to the long-term future of the planet</li>
+			   <li>The health of the natural environment is critical to the long-term future of the planet</li>
 
-                                       <li>Nature, in the broadest sense, is equivalent to the natural, physical, or material world or universe.</li>
+			   <li>Nature, in the broadest sense, is equivalent to the natural, physical, or material world or universe.</li>
 
 
 
-                                   </ul>
+		   </ul>
 
-                               </div>
+	   </div>
 
-                           </div>);
+	</div>);
 
-                           itemElement.Add().ContentTemplate(@<div>
+	itemElement.Add().ContentTemplate(@<div>
 
-                               <div class="leftPanel">
+	   <div class="leftPanel">
 
-                                   <img src="@Url.Content("~/Images/rotator/card.jpg")" />
+		   <img src="@Url.Content("~/Images/rotator/card.jpg")" />
 
-                               </div>
+	   </div>
 
-                               <div class="rightPanel credit">
+	   <div class="rightPanel credit">
 
-                                   <div class="contentPanel">Credit card </div>
+		   <div class="contentPanel">Credit card </div>
 
-                                   <ul>
+		   <ul>
 
-                                       <li>A credit card is a payment card issued to users as a system of payment</li>
+			   <li>A credit card is a payment card issued to users as a system of payment</li>
 
-                                       <li>It allows the cardholder to pay for goods and services based on the holder's promise to pay for them</li>
+			   <li>It allows the cardholder to pay for goods and services based on the holder's promise to pay for them</li>
 
 
 
-                                   </ul>
+		   </ul>
 
-                               </div>
+	   </div>
 
-                           </div>);
+	</div>);
 
-                       }).SlideWidth("700px").SlideHeight("300px").ShowPlayButton(true).Render();}
+}).SlideWidth("700px").SlideHeight("300px").ShowPlayButton(true).Render();}
 
 {% endhighlight %}
 
@@ -155,13 +156,15 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 <style type="text/css" class="cssStyles">
 
-    #sliderContent > li {
+    #sliderContent > li 
+	{
 
         background-color: #9ee8d8;
 
     }
 
-    #sliderContent > li .leftPanel {
+    #sliderContent > li .leftPanel 
+	{
 
             float: left;
 
@@ -173,7 +176,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
     }
 
-    #sliderContent > li .leftPanel img {
+    #sliderContent > li .leftPanel img 
+	{
 
                 width: 700px;
 
@@ -181,7 +185,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
     }
 
-    #sliderContent .rightPanel {
+    #sliderContent .rightPanel 
+	{
 
         background-color: #FFFFFF;
 
@@ -203,7 +208,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.credit {
+    #sliderContent .rightPanel.credit 
+	{
 
             opacity: 0.6;
 
@@ -211,7 +217,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck {
+    #sliderContent .rightPanel.blck 
+	{
 
             background-color: black;
 
@@ -219,7 +226,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck li {
+    #sliderContent .rightPanel.blck li 
+	{
 
                 color: white;
 
@@ -231,7 +239,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck .contentPanel {
+    #sliderContent .rightPanel.blck .contentPanel 
+	{
 
                 padding-top: 30px;
 
@@ -241,7 +250,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel .contentPanel {
+    #sliderContent .rightPanel .contentPanel 
+	{
 
             color: #000000;
 
@@ -259,7 +269,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel li {
+    #sliderContent .rightPanel li 
+	{
 
             color: black;
 
@@ -271,7 +282,9 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.rightSide {
+    #sliderContent .rightPanel.rightSide 
+	
+	{
 
             margin-left: 20px;
 
@@ -281,7 +294,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.rightSide li {
+    #sliderContent .rightPanel.rightSide li 
+	{
 
                 color: white;
 
@@ -293,7 +307,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.rightSide .contentPanel {
+    #sliderContent .rightPanel.rightSide .contentPanel 
+	{
 
                 padding-top: 30px;
 
@@ -303,7 +318,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    .rightPanel > ul {
+    .rightPanel > ul 
+	{
 
         padding: 6px 17px;
 
@@ -312,7 +328,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 </style>
 
 {% endhighlight %}
-
+{% endtabs %} 
 ![](Image-with-Contents_images/Image-with-Contents_img1.png)
 
 ## Display items
@@ -322,7 +338,8 @@ This feature allows you to add text along with the image in Rotator control. Thi
 This property specifies the number of Rotator Items to be displayed. The default value is ‘1’. The value set to this property is string or number.
 
 
-{% highlight js %}
+ 
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -338,7 +355,7 @@ This property specifies the number of Rotator Items to be displayed. The default
 
 This property specifies the number of Rotator Items to navigate on a single click (next/previous/play buttons). The NavigateSteps property value must be less than or equal to the DisplayItemCount property value. The default value is ‘1’. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -355,7 +372,7 @@ This property specifies the number of Rotator Items to navigate on a single clic
 
 This property sets the index of the slide that is displayed first. The default value is ‘0’. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -371,7 +388,7 @@ This property sets the index of the slide that is displayed first. The default v
 
 This property sets the space between the Rotator Items.  The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -387,7 +404,7 @@ This property sets the space between the Rotator Items.  The value set to this p
 
 AnimationType property specifies the Type of Animation for the Rotator Item. AnimationType options include slide, fastSlide, slowSlide, and other custom easing Animation Types. The default value is ‘slide’. The value set to this property is string. 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -403,7 +420,7 @@ AnimationType property specifies the Type of Animation for the Rotator Item. Ani
 
 This property sets the speed of slide transition. The default value of AnimationSpeed is ‘600’. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -419,7 +436,7 @@ This property sets the speed of slide transition. The default value of Animation
 
 This property sets the delay between the Rotator Items to move after the slide transition. The default value is 500. The value set to this property is string or number.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -454,7 +471,7 @@ By default, there are 12 themes support available for Rotator control as follows
 
 This property is used to set rootclass for Rotator control theme. The value set to this property is string type.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
@@ -468,31 +485,31 @@ This property is used to set rootclass for Rotator control theme. The value set 
 
 Add the following code in your Css.
 
-{% highlight html %}
+{% highlight CSS %}
 
 <style>
 
-    .flat-lime {
+	.flat-lime 
+	{
 
-        background-color: yellowgreen;
-
-    }
+		background-color: yellowgreen;
+		
+	}
 
 </style>
 
-{% endhighlight %}
 
-{% highlight js %}
 
-    <style type="text/css">
+<style type="text/css">
 
-        .blue {
+	.blue 
+	{
 
-            background-color: lightblue;
+		background-color: lightblue;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 

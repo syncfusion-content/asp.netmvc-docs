@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-Styling
+title: Appearance and Styling | Toolbar | ASP.NET MVC | Syncfusion
 description: appearance and styling 
 platform: ejmvc
 control: Toolbar
@@ -17,7 +17,7 @@ The Height property is used to set height of the Toolbar. Set the value to this 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -36,7 +36,7 @@ The Width property is used to set width of the Toolbar. Set the value to this pr
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your CSHTML page and refer local data section for data source
 
@@ -55,7 +55,7 @@ The ShowRoundedCorner property is Boolean type, which allows us to enable rounde
 
 
 
-{% highlight js %}
+{% highlight CSHTML%}
 
 // Add this code in your CSHTML page and refer local data section for data source
 
@@ -69,8 +69,8 @@ The ShowRoundedCorner property is Boolean type, which allows us to enable rounde
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
-
-_Figure 11: ToolBar control with rounded corner_
+ToolBar control with rounded corner
+{:.caption}
 
 ## Enabling Separator 
 
@@ -78,7 +78,8 @@ The EnableSeparator property is Boolean type, which allow us to set separator be
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
+
 / / Add this code in your CSHTML page and refer local data section for data source
 
 <div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).EnableSeparator(true)
@@ -91,8 +92,8 @@ The EnableSeparator property is Boolean type, which allow us to set separator be
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
-
-_Figure 12: ToolBar control with item separator_
+ToolBar control with item separator
+{:.caption}
 
 ## Themes
 
@@ -117,9 +118,11 @@ By default, there are 12 themes support available for Toolbar control namely
 
 The CssClass property is used to set root class for Toolbar control theme. Set the value to this property as string type.
 
+{% tabs %}
 
 
-{% highlight js %} 
+
+{% highlight CSHTML %} 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
@@ -138,21 +141,21 @@ The CssClass property is used to set root class for Toolbar control theme. Set t
 
 <style>
 
-    .gradient-lime {
+	.gradient-lime 
+	{
 
-        background-color: yellowgreen;
+		background-color: yellowgreen;
 
-    }
+	}
 
 </style>
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 
-
-_Figure 13: ToolBar control with CssClass_
-
+ToolBar control with CssClass
+{:.caption}

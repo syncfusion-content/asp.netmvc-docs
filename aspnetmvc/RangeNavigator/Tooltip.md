@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip
+title: Tooltip | RangeNavigator | ASP.NET MVC | Syncfusion
 description: tooltip
 platform: ejmvc
 control: RangeNavigator
@@ -14,43 +14,38 @@ RangeNavigator provides Tooltip support for sliders. Sliders are used to select 
 ## Customization
 
 RangeNavigator provides support for you to customize the text display in the tooltip and background using TooltipSettings property. You can change font family, font color, font style, font weight. By default “Segoe UI” font family is set to tooltip text.
-{% highlight html %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.TooltipSettings(tl=>tl
 
-           .TooltipSettings(tl=>tl
+.Visible(true)
 
-                           .Visible(true)
+.BackgroundColor("Black")
 
-                           .BackgroundColor("Black")
+//  To customize the tooltip text
 
-                                            //  To customize the tooltip text
+.Font(fn=>fn
 
-                                .Font(fn=>fn
+.Color("red")                                                        
 
-                                         .Color("red")                                                        
+. Family("Segoe UI")                                                         
 
-                                         . Family("Segoe UI")                                                         
+.Style(RangeNavigatorFontStyle.Normal)
 
-                                         .Style(RangeNavigatorFontStyle.Normal)
+.Size("12px")
 
-                                         .Size("12px")
+.Opacity(1)                                                           
 
-                                         .Opacity(1)                                                           
+.Weight(RangeNavigatorFontWeight.Regular)
 
-                                         .Weight(RangeNavigatorFontWeight.Regular)
+)
 
-                                      )
+)     
 
-
-
-                           )     
-
-         //...
-
-        .Render())
+.Render())
 
 {% endhighlight %}
 
@@ -72,18 +67,14 @@ Some of the LabelFormat for DateTime data are as follows:
 
 'hh:mm:ss:tt'
 
-{% highlight html %}
+{% highlight CSHTML %}
  
-
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.TooltipSettings(tl=>tl.LabelFormat("MMM, yyyy"))
 
-          .TooltipSettings(tl=>tl.LabelFormat("MMM, yyyy"))
+.Render())
 
-       //...
-
-        .Render())
 {% endhighlight  %}
 
 ![](Tooltip_images/Tooltip_img2.png)
@@ -94,7 +85,7 @@ Tooltip display mode
 
 By default the tooltip for RangeNavigator gets displayed. You can change this behavior using the TooltipDisplayMode property in the TooltipSettings and it takes the following values.
 
-_Table1: Tooltip values_
+_Tooltip values_
 
 <table>
 <tr>
@@ -111,17 +102,13 @@ ondemand</td><td>
 Tooltip get displayed only when we move the slider.</td></tr>
 </table>
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.TooltipSettings(tl=>tl.TooltipDisplayMode("ondemand"))
 
-          .TooltipSettings(tl=>tl.TooltipDisplayMode("ondemand"))
-
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight %}
 

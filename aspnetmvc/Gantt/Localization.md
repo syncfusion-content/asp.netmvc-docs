@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | Gantt | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: Gantt
@@ -15,7 +15,7 @@ Localization is the key feature that provides solutions to global customers with
 
 The following UIs are provided to localize based on culture. The default English Localization UIs are listed as follows:
 
-_Table 1 : Localization_
+_Localization_
 
 <table>
 <tr>
@@ -104,7 +104,7 @@ calendars: {<br/>
 To localize the Column Header Texts based on French culture, refer to the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -130,107 +130,107 @@ ej.Gantt.localization["fr-FR"] = {
 
 
 
-            //headerText to be displayed in gridtree
+	//headerText to be displayed in gridtree
 
-            columnHeaderTexts: {
+	columnHeaderTexts: {
 
-                taskId: "Tâche Ia",
+		taskId: "Tâche Ia",
 
-                taskName: "Tâche Tâche",
+		taskName: "Tâche Tâche",
 
-                startDate: "Démarrer Date",
+		startDate: "Démarrer Date",
 
-                endDate: "Fin Date",
+		endDate: "Fin Date",
 
-                resourceInfo: "Resources",
+		resourceInfo: "Resources",
 
-                duration: "Durée",
+		duration: "Durée",
 
-                status: "Progrès",
+		status: "Progrès",
 
-                predecessor: "Prédécesseur",
+		predecessor: "Prédécesseur",
 
-                baselineStartDate: "Baseline Démarrer Date",
+		baselineStartDate: "Baseline Démarrer Date",
 
-                baselineEndDate: "Baseline Fin Date"
+		baselineEndDate: "Baseline Fin Date"
 
-            },
-
-
-
-            //string to display in dialog 
-
-            editDialogTexts: {
-
-                addFormTitle: "Nouveau Tâche",
-
-                editFormTitle: "Modifier Tâche",
-
-                saveButton: "Sauver",
-
-                cancelButton: "Annuler"
-
-            },
+	},
 
 
 
-            calendars: {
+	//string to display in dialog 
 
-                standard: {
+	editDialogTexts: {
 
-                    firstDay: 1,
+		addFormTitle: "Nouveau Tâche",
 
-                    days: {
+		editFormTitle: "Modifier Tâche",
 
-                        names: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+		saveButton: "Sauver",
 
-                        namesAbbr: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+		cancelButton: "Annuler"
 
-                        namesShort: ["di", "lu", "ma", "me", "je", "ve", "sa"]
+	},
 
-                    },
 
-                    months: {
 
-                        names: ["janvier", "fÃ©vrier", "mars", "avril", "mai", "juin", "juillet", "aoÃ»t", "septembre", "octobre", "novembre", "dÃ©cembre", ""],
+	calendars: {
 
-                        namesAbbr: ["TEST.", "fÃ©vr.", "mars", "avr.", "mai", "juin", "juil.", "aoÃ»t", "sept.", "oct.", "nov.", "dÃ©c.", ""]
+		standard: {
 
-                    },
+			firstDay: 1,
 
-                    AM: null,
+			days: {
 
-                    PM: null,
+				names: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
 
-                    eras: [{ "name": "ap. J.-C.", "start": null, "offset": 0 }],
+				namesAbbr: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
 
-                    patterns: {
+				namesShort: ["di", "lu", "ma", "me", "je", "ve", "sa"]
 
-                        d: "dd/MM/yyyy",
+			},
 
-                        D: "dddd d MMMM yyyy",
+			months: {
 
-                        t: "HH:mm",
+				names: ["janvier", "fÃ©vrier", "mars", "avril", "mai", "juin", "juillet", "aoÃ»t", "septembre", "octobre", "novembre", "dÃ©cembre", ""],
 
-                        T: "HH:mm:ss",
+				namesAbbr: ["TEST.", "fÃ©vr.", "mars", "avr.", "mai", "juin", "juil.", "aoÃ»t", "sept.", "oct.", "nov.", "dÃ©c.", ""]
 
-                        f: "dddd d MMMM yyyy HH:mm",
+			},
 
-                        F: "dddd d MMMM yyyy HH:mm:ss",
+			AM: null,
 
-                        M: "d MMMM",
+			PM: null,
 
-                        Y: "MMMM yyyy"
+			eras: [{ "name": "ap. J.-C.", "start": null, "offset": 0 }],
 
-                    }
+			patterns: {
 
-                }
+				d: "dd/MM/yyyy",
 
-            }
+				D: "dddd d MMMM yyyy",
 
-        }
+				t: "HH:mm",
 
-     </script>
+				T: "HH:mm:ss",
+
+				f: "dddd d MMMM yyyy HH:mm",
+
+				F: "dddd d MMMM yyyy HH:mm:ss",
+
+				M: "d MMMM",
+
+				Y: "MMMM yyyy"
+
+			}
+
+		}
+
+	}
+
+}
+
+</script>
 
  }
 
@@ -246,5 +246,5 @@ The following screenshot shows Gantt with French culture.
 
 ![](Localization_images/Localization_img1.png)
 
-_Figure 58: Localization_
-
+Localization
+{:.caption}

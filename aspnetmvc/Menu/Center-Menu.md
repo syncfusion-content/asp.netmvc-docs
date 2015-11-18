@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Center-Menu
+title: Center Menu | Menu | ASP.NET MVC | Syncfusion
 description: center menu
 platform: ejmvc
 control: Menu
@@ -13,93 +13,90 @@ You can align the Menu items to center by setting “EnableCenterAlign” proper
 
 1. Add the following code in your view section.
 
-   ~~~ js
+   ~~~ cshtml
 
-  
+	// Add the following code in CSHTML section.
 
-		// Add the following code in CSHTML section.
+	<div class="imgframe">
 
-		<div class="imgframe">
+	@Html.EJ().Menu("menucontrol").Items(items =>
 
-		@Html.EJ().Menu("menucontrol").Items(items =>
+	{
+
+		items.Add().Id("Home").Text("Home").Children(child =>
+
+			{
+
+				child.Add().Text("Foundation");
+
+				child.Add().Text("Launch");
+
+				child.Add().Text("About").Children(child1 =>
 
 				{
 
-					items.Add().Id("Home").Text("Home").Children(child =>
+					child1.Add().Text("Company");
 
-						{
+					child1.Add().Text("Location");
 
-							child.Add().Text("Foundation");
+				});
 
-							child.Add().Text("Launch");
+			});
 
-							child.Add().Text("About").Children(child1 =>
+		items.Add().Text("Services").Children(child =>
 
-							{
+			{
 
-								child1.Add().Text("Company");
+				child.Add().Text("Consulting");
 
-								child1.Add().Text("Location");
+				child.Add().Text("Outsourcing");
 
-							});
+			});
 
-						});
+		items.Add().Text("About");
 
-					items.Add().Text("Services").Children(child =>
+		items.Add().Id("Contact").Text("Contact Us").Children(child =>
 
-						{
+			{
 
-							child.Add().Text("Consulting");
+				child.Add().Text("Contact number");
 
-							child.Add().Text("Outsourcing");
+				child.Add().Text("E-mail");
 
-						});
+			});
 
-					items.Add().Text("About");
+		items.Add().Id("Careers").Text("Careers").Children(child =>
 
-					items.Add().Id("Contact").Text("Contact Us").Children(child =>
+			 {
 
-						{
 
-							child.Add().Text("Contact number");
 
-							child.Add().Text("E-mail");
-
-						});
-
-					items.Add().Id("Careers").Text("Careers").Children(child =>
+				 child.Add().Text("Position").Children(child1 =>
 
 						 {
 
+							 child1.Add().Text("Developer");
 
-
-							 child.Add().Text("Position").Children(child1 =>
-
-									 {
-
-										 child1.Add().Text("Developer");
-
-										 child1.Add().Text("Manager");
-
-									 });
-
-							 child.Add().Text("Apply online");
+							 child1.Add().Text("Manager");
 
 						 });
 
+				 child.Add().Text("Apply online");
+
+			 });
 
 
-				}).Width("500").EnableCenterAlign(true)</div>
+
+	}).Width("500").EnableCenterAlign(true)</div>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 The following screenshot displays the output of the above code.
 
 ![](Center-Menu_images/Center-Menu_img1.png)
 
-
-_Figure: Center Menu_
-
+Center Menu
+{:.caption}

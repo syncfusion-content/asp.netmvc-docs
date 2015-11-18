@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Digital-Elements
+title: Digital Elements | DigitalGauge | ASP.NET MVC | Syncfusion
 description: digital elements
 platform: ejmvc
 control: DigitalGauge
@@ -16,7 +16,7 @@ documentation: ug
 	1. left
 	2. right
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -38,5 +38,6 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Digital-Elements_images/Digital-Elements_img1.png)
 
-_Figure 29: Digital Gauge control with text customization_
+Digital Gauge control with text customization
+{:.caption}
 

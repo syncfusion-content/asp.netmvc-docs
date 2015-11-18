@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segment-Settings
+title: Segment Settings | DigitalGauge | ASP.NET MVC | Syncfusion
 description: segment settings
 platform: ejmvc
 control: DigitalGauge
@@ -15,7 +15,7 @@ documentation: ug
 * You can add gradient effects to the segments with the help of gradient attribute. The opacity of the segment is also adjustable. The space between two  segments are adjusted with spacing property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -48,7 +48,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Segment-Settings_images/Segment-Settings_img1.png)
 
-_Figure 30: Digital Gauge control with segment settings_
+Digital Gauge control with segment settings
+{:.caption}
 
 ## Dimension Modification
 
@@ -56,7 +57,7 @@ _Figure 30: Digital Gauge control with segment settings_
 * You can add gradient effects to the segments with the help of gradient attribute. The opacity of the segment is also adjustable. The space between two  segments are adjusted with spacing property.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -88,5 +89,6 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Segment-Settings_images/Segment-Settings_img2.png)
 
-_Figure 31: Digital Gauge control with segment dimension_
+Digital Gauge control with segment dimension
+{:.caption}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Navigation
+title: Keyboard Navigation | Toolbar | ASP.NET MVC | Syncfusion
 description: keyboard navigation
 platform: ejmvc
 control: Toolbar
@@ -11,7 +11,7 @@ documentation: ug
 
 The entire Toolbar commands can be accessed through the keyboard by specifying the Keyboard Shortcut listed in the following table.
 
-_Table_ _4_: List of keyboard shortcuts
+_List of keyboard shortcuts_
 
 <table>
 <tr>
@@ -55,7 +55,7 @@ Selects the focused item</td></tr>
 
 The following code example illustrates shortcuts associated with the Toolbar items.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 // Add this code in your CSHTML page and refer local data section for data source
@@ -73,5 +73,5 @@ The following code example illustrates shortcuts associated with the Toolbar ite
 ![](Keyboard-Navigation_images/Keyboard-Navigation_img1.png)
 
 
-_Figure_ _32_: ToolBar control with Keyboard shortcuts
-
+ToolBar control with Keyboard shortcuts
+{:.caption}

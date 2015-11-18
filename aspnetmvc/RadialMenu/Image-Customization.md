@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Image-Customization
+title: Image Customization | RadialMenu | ASP.NET MVC | Syncfusion
 description: image customization
 platform: ejmvc
 control: RadialMenu
@@ -17,9 +17,7 @@ You can add the page content with text-area by referring to this section.
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @{
 
@@ -93,8 +91,6 @@ You can add the page content with text-area by referring to this section.
 
 }
 
-
-
 <script type="text/javascript">
 
     $(function () {        
@@ -109,8 +105,6 @@ You can add the page content with text-area by referring to this section.
 
 </script>
 
-
-
 {% endhighlight %}
 
 
@@ -119,25 +113,24 @@ Add the following common style codes for both JS and MVC samples.
 
 {% highlight css %}
 
-    <style type="text/css" class="cssStyles">
+<style type="text/css" class="cssStyles">
 
-        .e-radialmenu .imageclass {
+	.e-radialmenu .imageclass 
+	{
 
-            background-image: url(http://js.syncfusion.com/UG/web/Content/radial/main.png);
+		background-image: url(http://js.syncfusion.com/UG/web/Content/radial/main.png);
 
-        }
-
-
-
-        .e-radialmenu .backimageclass {
-
-            background-image: url(http://js.syncfusion.com/UG/web/Content/radial/Back_button.png);
-
-        }
-
-    </style>
+	}
 
 
+	.e-radialmenu .backimageclass 
+	{
+
+		background-image: url(http://js.syncfusion.com/UG/web/Content/radial/Back_button.png);
+
+	}
+
+</style>
 
 {% endhighlight %}
 

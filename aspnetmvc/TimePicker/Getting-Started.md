@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | TimePicker | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: TimePicker
@@ -27,82 +27,82 @@ The above screenshot illustrates the functionality of a TimePicker, with a time 
 
 Essential MVC TimePicker widget has built-in features such as keyboard navigation, other time navigation with animations, and flexible APIs. You can easily create the TimePicker widget using simple TimePicker element as follows.
 
-1. You can create an MVC Project and add necessary assemblies and scripts to it. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/timepicker/getting-started) Documentation.
+1. You can create an MVC Project and add necessary assemblies and scripts to it. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/timepicker/getting-started) Documentation.
 2. Add the following code to the corresponding view page to render the TimePicker.
 
-   ~~~ html
+   ~~~ cshtml
 
 
-		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-		<table>
+	<table>
 
-		    <tr>
+		<tr>
 
-			<td class="tdclass">Date</td>
+		<td class="tdclass">Date</td>
 
-			<td class="tdclass">Time</td>
+		<td class="tdclass">Time</td>
 
-			<td class="tdclass">Person</td>
+		<td class="tdclass">Person</td>
 
-		    </tr>
+		</tr>
 
-		    <tr>
+		<tr>
 
-			<td class="tdclass">
+		<td class="tdclass">
 
-			    <span class="innerdp">
+			<span class="innerdp">
 
-				@Html.EJ().DatePicker("startDate")
+			@Html.EJ().DatePicker("startDate")
 
-			    </span>
+			</span>
 
-			</td>
+		</td>
 
-			<td class="tdclass">
+		<td class="tdclass">
 
-			    <span class="innerdp">
+			<span class="innerdp">
 
-				@Html.EJ().TimePicker("timestart")
+			@Html.EJ().TimePicker("timestart")
 
-			    </span>
+			</span>
 
-			</td>
+		</td>
 
-			<td class="tdclass">
+		<td class="tdclass">
 
-			    <span class="innerdp">
+			<span class="innerdp">
 
-				@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
+			@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-			    </span>
+			</span>
 
-			</td>
+		</td>
 
-		    </tr>
+		</tr>
 
-		    <tr>
+		<tr>
 
-			<td></td>
+		<td></td>
 
-			<td></td>
+		<td></td>
 
-			<td class="tdclass">
+		<td class="tdclass">
 
-			    <span class="innerdp">
+			<span class="innerdp">
 
-				@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
+			@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-			    </span>
+			</span>
 
-			</td>
+		</td>
 
-		    </tr>
+		</tr>
 
-		</table>
+	</table>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -111,30 +111,32 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
    ~~~ css
 
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-		    .tdclass {
+		.tdclass 
+		{
 
-			width: 70px;
+		width: 70px;
 
-			height: 10px;
+		height: 10px;
 
-			font-weight: bold;
+		font-weight: bold;
 
-			padding: 10px;
+		padding: 10px;
 
-		    }
+		}
 
-		    .innerdp {
+		.innerdp 
+		{
 
-			display: inline-block;
+		display: inline-block;
 
-		    }
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -144,20 +146,20 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
    ~~~ js
 
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
-		    function button()
+		function button()
 
-		    {
+		{
 
-			alert("You have Successfully booked");
+		alert("You have Successfully booked");
 
-		    }
+		}
 
-		</script>
+	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -183,124 +185,124 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
+	@*Add the following code example to the corresponding CSHTML page to render TimePicker widget*@
 
-		<table>
+	<table>
 
-			<tr>
+		<tr>
 
-				<td class="tdclass">Date</td>
+			<td class="tdclass">Date</td>
 
-				<td class="tdclass">StartTime</td>
+			<td class="tdclass">StartTime</td>
 
-				<td class="tdclass">EndTime</td>
+			<td class="tdclass">EndTime</td>
 
-				<td class="tdclass">Person</td>
+			<td class="tdclass">Person</td>
 
-			</tr>
+		</tr>
 
-			<tr>
+		<tr>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
+					@Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
+					@Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
+					@Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
+					@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-			</tr>
+		</tr>
 
-			<tr>
+		<tr>
 
-				<td></td>
+			<td></td>
 
-				<td></td>
+			<td></td>
 
-				<td></td>
+			<td></td>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
+					@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-			</tr>
+		</tr>
 
-		</table>
+	</table>
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following styles to show the TimePicker control in horizontal order in the Content folder.
 
    ~~~ css
 
+	<style type="text/css" class="cssStyles">
+
+		.tdclass 
+		{
+
+		width: 70px;
+
+		height: 10px;
+
+		font-weight: bold;
+
+		padding: 10px;
+
+		}
+
+		.innerdp 
+		{
+
+		display: inline-block;
+
+		}
 
 
-		<style type="text/css" class="cssStyles">
-
-		    .tdclass {
-
-			width: 70px;
-
-			height: 10px;
-
-			font-weight: bold;
-
-			padding: 10px;
-
-		    }
-
-		    .innerdp {
-
-			display: inline-block;
-
-		    }
-
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -333,7 +335,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 		</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -364,7 +366,7 @@ An acknowledgement message appears when you click the Submit button.
 
 You can specify the alert message in the script as follows.
 
-{% highlight JS %}
+{% highlight js %}
 
 <script type="text/javascript">
 

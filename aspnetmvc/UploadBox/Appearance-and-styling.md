@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-and-styling
+title: Appearance and styling | UploadBox | ASP.NET MVC | Syncfusion
 description: appearance and styling 
 platform: ejmvc
 control: UploadBox
@@ -15,7 +15,7 @@ The UploadBox widget provides support to customize the dialog box text and butto
 
 The following table contains the subproperties available under UploadBoxButtonText property. To customize the text, pass the alternate text with corresponding subproperties. 
 
-_Table3: Sub-properties under buttonText property_
+_Sub-properties under buttonText property_
 
 <table>
 <tr>
@@ -46,11 +46,9 @@ The following steps explain the configuration of UploadBoxButtonText property in
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add the UploadBox element.
-
-
 
 @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").UploadBoxButtonText(text=>text.Browse("Choose Files").Cancel("Cancel upload").Upload("Upload file"))
 
@@ -69,7 +67,7 @@ The following screenshot displays the output.
 
 The following table contains the subproperties available under UploadBoxDialogText property. To customize the text, pass the alternate text with corresponding subproperties. 
 
-_Table4: Subproperties under dialogText property_
+_Subproperties under dialogText property_
 
 <table>
 <tr>
@@ -100,7 +98,7 @@ The following steps explain the configuration of UploadBoxDialogText property in
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add the UploadBox element.
 
@@ -126,7 +124,7 @@ The following steps explains the configuration of ShowFileDetails property in Up
 1. In the VIEW page, add the below script to configure the UploadBox element.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, add the UploadBox element.
 
@@ -162,37 +160,35 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
 1. In the View page, add the below script to configure the UploadBox element.
 
-   ~~~ js	
+   ~~~ cshtml	
 
+	// In the CSHTML page, add the UploadBox element.
 
-		// In the CSHTML page, add the UploadBox element.
-
-		@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").CssClass("customcss")
-
-
+	@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").CssClass("customcss")
    ~~~
-   {:.prettyprint }
+   
 
 2. In CSS, configure Custom Styles for the UploadBox.
    
-   ~~~ html
+   ~~~ css
  
-		  <style class="cssStyles">
+	<style class="cssStyles">
 
-		      .customcss .e-select{
+	  .customcss .e-select
+	  {
 
-			    background-color: #FFFFCC;
+		background-color: #FFFFCC;
 
-			    font-weight: bold; 
+		font-weight: bold; 
 
-			    font-family: sans-serif;
+		font-family: sans-serif;
 
-			}
+	}
 
-		    </style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 The following screenshot displays the output.

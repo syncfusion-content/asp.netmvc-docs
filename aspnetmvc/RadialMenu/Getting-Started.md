@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | RadialMenu | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: RadialMenu
@@ -21,15 +21,13 @@ In this section, you can learn how to create a simple Radial Menu in the MVC app
 
 The following steps guide you to add a Radial Menu control.
 
-You can create an MVC Project and add the necessary assemblies, styles, and scripts to it. Refer to the [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/radialmenu/getting-started)
+You can create an MVC Project and add the necessary assemblies, styles, and scripts to it. Refer to the [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/radialmenu/getting-started)
 
 Add the following code example to the corresponding view page to render the Radial Menu.
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().RadialMenu("radialmenu").Items(items =>
 
@@ -43,21 +41,19 @@ items.Add().ImageURL("http://js.syncfusion.com/ug/web/content/radial/copy.png").
 
     items.Add().ImageURL("http://js.syncfusion.com/ug/web/content/radial/Undo.png").Text("Undo"); })
 
-
-
 {% endhighlight %}
 
 
 
 Refer to the following code example to add target content to the Radial Menu.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
 <div id="radialtarget">  
 
-              <textarea id="textarea">
+  <textarea id="textarea">
 
 
 
@@ -83,7 +79,7 @@ Syncfusion Essential JavaScript Studio for Mobile contains the following built-i
 
 By default, the respective render modes are chosen based on the device where the application runs. You can also force and use a particular theme to a control or the whole application that is discussed in later sections. All of the above widgets are highly customizable and also designed with high performance in mind.
 
-            </textarea>
+	</textarea>
 
  </div>
 
@@ -91,21 +87,18 @@ By default, the respective render modes are chosen based on the device where the
 
 <!--Adds Style for Content-->
 
-    <style type="text/css" class="cssStyles">
+<style type="text/css" class="cssStyles">
 
-        #textarea {
+#textarea 
+{
 
-            width: 100%;
+	width: 100%;
 
-            height: 270px;
+	height: 270px;
 
-        }
+}
 
-    </style>  
-
-
-
-
+</style>  
 
 {% endhighlight %}
 
@@ -113,9 +106,7 @@ By default, the respective render modes are chosen based on the device where the
 
 You can set the ID of target content to the Radial Menu as illustrated in the following code example. 
 
-{% highlight html %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().RadialMenu("radialmenu").TargetElementId("radialtarget").Items(items =>
 
@@ -129,35 +120,29 @@ items.Add().ImageURL("http://js.syncfusion.com/ug/web/content/radial/copy.png").
 
     items.Add().ImageURL("http://js.syncfusion.com/ug/web/content/radial/Undo.png").Text("Undo"); })
 
-
-
 {% endhighlight %}
 
 
 
 You can display the Radial Menu by performing the desired action on the target while selecting the text inside the target. Therefore, call the show method in the select action of the content. Refer to the following code example and add it to the script section.
 
-{% highlight html %}
-
-
+{% highlight js %}
 
 <script type="text/javascript">
 
-  $(function () {
+	$(function () 
+	{
 
-        $("#textarea").select(function (e) {
+		$("#textarea").select(function (e) 
+		{
 
-            $('#radialmenu').ejRadialMenu("show");
+			$('#radialmenu').ejRadialMenu("show");
 
-        });
+		});
 
-});
-
+	});
+	
 </script>
-
-
-
-
 
 {% endhighlight %}
 

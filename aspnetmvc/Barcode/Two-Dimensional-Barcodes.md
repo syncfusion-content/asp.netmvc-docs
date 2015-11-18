@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Two-Dimensional-Barcodes
+title: Two Dimensional Barcodes | Barcode | ASP.NET MVC | Syncfusion
 description: two dimensional barcodes
 platform: ejmvc
 control: Barcode
@@ -15,39 +15,39 @@ A QR Barcode is a two-dimensional Barcode that consists of a grid of dark and li
 
 Here is the code snippet to create a QR Barcode:
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
-<div>
+	<div>
 
-@*Sets the following properties:
+		@*Sets the following properties:
 
-Text – Text to encode
+		Text – Text to encode
 
-SymbologyType - Barcode Type (Default: QRBarcode)
+		SymbologyType - Barcode Type (Default: QRBarcode)
 
-XDimension - Size of each block (Optional, Default: 4)
+		XDimension - Size of each block (Optional, Default: 4)
 
-QuietZone – Sets quiet zone on all sides (Optional, Default: All->1)
+		QuietZone – Sets quiet zone on all sides (Optional, Default: All->1)
 
-*@
+		*@
 
 
 
-@Html.EJ().Barcode("barcode")
+		@Html.EJ().Barcode("barcode")
 
-          .Text("B5330E8278BC4C797C49DD3ED5AD9715")
+				  .Text("B5330E8278BC4C797C49DD3ED5AD9715")
 
-          .XDimension(8)
+				  .XDimension(8)
 
-          .SymbologyType(BarcodeSymbolType.QRBarcode)
+				  .SymbologyType(BarcodeSymbolType.QRBarcode)
 
-          .QuietZone(qz => { qz.All(30); })
+				  .QuietZone(qz => { qz.All(30); })
 
-          .Render()
+				  .Render()
 
-</div>
+	</div>
 
 </div>
 

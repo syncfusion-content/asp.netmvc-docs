@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drill-Down-Support
+title: Drill Down Support | TreeMap | ASP.NET MVC | Syncfusion
 description: drill down support
 platform: ejmvc
 control: TreeMap
@@ -41,54 +41,52 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 </table>
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().TreeMap("treemap")
 
-                .DataSource(datasource)
+.DataSource(datasource)
 
-                .EnableDrillDown(true)   
+.EnableDrillDown(true)   
 
 .DrillDownHeaderColor("#199DAF")
 
 .DrillDownSelectionColor("#199DAF")
 
-                .WeightValuePath("Population")
+.WeightValuePath("Population")
 
-                .Levels(lv =>
+.Levels(lv =>
 
-                {
+{
 
-                    lv.GroupPath("Continent")                                    
+	lv.GroupPath("Continent")                                    
 
-                                    .HeaderHeight(25)
+	.HeaderHeight(25)
 
-                                    .GroupGap(5)
+	.GroupGap(5)
 
-                                    .ShowLabels(true).Add();
+	.ShowLabels(true).Add();
 
-                    lv.GroupPath("Country")                                    
+	lv.GroupPath("Country")                                    
 
-                                    .HeaderHeight(25)
+	.HeaderHeight(25)
 
-.GroupGap(0)
+	.GroupGap(0)
 
-                                    .ShowLabels(true).Add();
+	.ShowLabels(true).Add();
 
-                    lv.GroupPath("Name")                                   
+	lv.GroupPath("Name")                                   
 
-                                    .HeaderHeight(25)
+	.HeaderHeight(25)
 
-.GroupGap(0)
+	.GroupGap(0)
 
-                                    .ShowLabels(true).Add();
+	.ShowLabels(true).Add();
 
-                })
+})
 
-
-
-    )
+)
 
 
 
@@ -99,10 +97,11 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 ![](Drill-Down-Support_images/Drill-Down-Support_img1.png)
 
 
-_Before Drill Down_
+Before Drill Down
+{:.caption}
 
 ![](Drill-Down-Support_images/Drill-Down-Support_img2.png)
 
 
-_After Drill Down_
-
+After Drill Down
+{:.caption}

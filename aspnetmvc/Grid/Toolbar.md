@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar
+title: Toolbar | Grid | ASP.NET MVC | Syncfusion
 description: toolbar 
 platform: ejmvc
 control: Grid
@@ -28,7 +28,7 @@ Custom Toolbar is a key functionality, used to customize Toolbar elements. Here 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <script id="Refresh" type="text/x-jsrender">
 
@@ -48,41 +48,42 @@ Custom Toolbar is a key functionality, used to customize Toolbar elements. Here 
 
 @(Html.EJ().Grid<Object>("Grid")
 
-                .Datasource(s => s.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
+.Datasource(s => s.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products"))
 
-        .AllowScrolling()
+.AllowScrolling()
 
-                .ScrollSettings(scroll => { scroll.Height(300).Width(980); })
+.ScrollSettings(scroll => { scroll.Height(300).Width(980); })
 
 .ToolbarSettings(toolbar =>
 
-                {
+{
 
-                    toolbar.ShowToolbar(true).CustomToolbarItems(new List<object>() { new Syncfusion.JavaScript.Models.CustomToolbarItems() { TemplateID = "#Refresh" } });
+	toolbar.ShowToolbar(true).CustomToolbarItems(new List<object>() { new Syncfusion.JavaScript.Models.CustomToolbarItems() { TemplateID = "#Refresh" } });
 
-                })
+})
 
-        .Columns(col =>
+.Columns(col =>
 
-        {
+{
 
-            col.Field("ProductID").HeaderText("Product ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(100).Add();
+	col.Field("ProductID").HeaderText("Product ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(100).Add();
 
-            col.Field("ProductName").HeaderText("Product Name").Width(200).Add();
+	col.Field("ProductName").HeaderText("Product Name").Width(200).Add();
 
-            col.Field("QuantityPerUnit").HeaderText("Quantity").TextAlign(TextAlign.Right).Width(100).Add();
+	col.Field("QuantityPerUnit").HeaderText("Quantity").TextAlign(TextAlign.Right).Width(100).Add();
 
-            col.Field("UnitsOnOrder").HeaderText("UnitsOnOrder").Width(100).Add();
+	col.Field("UnitsOnOrder").HeaderText("UnitsOnOrder").Width(100).Add();
 
-        })
+})
 
-        .ClientSideEvents(eve=>eve.ActionComplete("complete"))
+.ClientSideEvents(eve=>eve.ActionComplete("complete"))
 
-        )
+)
 
 <script>
 
-    function complete(args) {
+    function complete(args) 
+	{
 
         var gridObj = $("#Grid").data("ejGrid");
 
@@ -90,7 +91,9 @@ Custom Toolbar is a key functionality, used to customize Toolbar elements. Here 
 
             selectedItem: 0,
 
-change: function (args) {
+				change: function (args) 
+			
+			{
 
                 if (this.getSelectedValue() != "")
 
@@ -120,5 +123,5 @@ The following output is displayed as a result of the above code example.
 
 ![](Toolbar_images/Toolbar_img1.png)
 
-_Figure : Custom Toolbar_
-
+Custom Toolbar
+{:.caption}

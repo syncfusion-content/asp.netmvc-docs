@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Real-Time-Charts
+title: Real Time Charts | Chart | ASP.NET MVC | Syncfusion
 description: real-time charts
 platform: ejmvc
 control: Chart
@@ -11,7 +11,9 @@ documentation: ug
 
 Essential Chart allows you to create dynamic Charts that update at given interval. They are highly useful in network monitoring applications, stock/finance monitoring applications and manufacturing process indicators where the most up-to-date data are displayed. Dynamic updates are supported by all Chart types including line, area, column, spline, spline area, polar and radar series.
 
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 
 
@@ -87,9 +89,9 @@ Essential Chart allows you to create dynamic Charts that update at given interva
 
         }         
 {% endhighlight  %}
-
+{% endtabs %} 
 
 ![](Real-Time-Charts_images/Real-Time-Charts_img1.png)
 
-
-
+Real-Time Chart
+{:.caption}

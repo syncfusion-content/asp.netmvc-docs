@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Define-value
+title: Define value | Progress Bar | ASP.NET MVC | Syncfusion
 description: define value
 platform: ejmvc
 control: Progress Bar
@@ -17,18 +17,17 @@ The following steps explain you on how to set the Value for the ProgressBar widg
 
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
-{% highlight js %}
+{% highlight CSHTML  %}
 // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized value.
 @Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Value(60).Height("20").Width("500")
-{% endhighlight %}
 
-{% highlight javascript %}
 <script>
-            var progress;
-            $(document).ready(function () {
-			progress = $("#progressbar").data("ejProgressBar");
-			progress.setModel({ text: progress.getValue()});
-            });        
+	var progress;
+	$(document).ready(function () 
+	{
+		progress = $("#progressbar").data("ejProgressBar");
+		progress.setModel({ text: progress.getValue()});
+	});        
 </script>
 
 {% endhighlight %}
@@ -47,17 +46,17 @@ The following steps explain you on how to set the value in Percentage for the Pr
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 // Add the following code example to the corresponding CSHTML page to render the ProgressBar control with customized percentage.
 @Html.EJ().ProgressBar("progressbar").MinValue(40).MaxValue(80).Percentage(60).Height("20").Width("500")
-{% endhighlight %}
-{% highlight javascript %}
+
 <script>
-            var progress;
-            $(document).ready(function () {
-			progress = $("#progressbar").data("ejProgressBar");
-			progress.setModel({ text: progress.getPercentage() + " %"});
-            }); 
+	var progress;
+	$(document).ready(function () 
+	{
+		progress = $("#progressbar").data("ejProgressBar");
+		progress.setModel({ text: progress.getPercentage() + " %"});
+	}); 
 </script>
 
 {% endhighlight %}
@@ -69,6 +68,5 @@ The following screenshot displays the output.
 ![](Define-value_images/Define-value_img2.png)
 
 
-
-_Figure7: Percentage in Progress Bar_
-
+Percentage in Progress Bar
+{:.caption}

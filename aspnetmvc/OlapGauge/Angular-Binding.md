@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular-Binding
+title: Angular Binding | OLAPGauge | ASP.NET MVC | Syncfusion
 description: angular binding
 platform: ejmvc
 control: OLAPGauge

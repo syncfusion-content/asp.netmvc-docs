@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | ListView | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: ListView
@@ -21,77 +21,75 @@ For MVC Wrapper example, you need to create model file for data-binding. Add the
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
+public class ListLocalData
 
+{
 
-   public class ListLocalData
+	public string text { get; set; }
 
-    {
+}  
 
-        public string text { get; set; }
+public static class ListLocalDataModal
 
-    }  
+{
 
-    public static class ListLocalDataModal
+	public static List<ListLocalData> listSource = new List<ListLocalData>();      
 
-    {
+	public static List<ListLocalData> setListSource()
 
-        public static List<ListLocalData> listSource = new List<ListLocalData>();      
+	{
 
-        public static List<ListLocalData> setListSource()
+		listSource.Add(new ListLocalData { text = "Hot Singles"});
 
-        {
+		listSource.Add(new ListLocalData { text = "Rising Artists"});
 
-            listSource.Add(new ListLocalData { text = "Hot Singles"});
+		listSource.Add(new ListLocalData { text = "Live Music"});
 
-            listSource.Add(new ListLocalData { text = "Rising Artists"});
+		listSource.Add(new ListLocalData { text = "Best of 2013 So Far"});
 
-            listSource.Add(new ListLocalData { text = "Live Music"});
+		listSource.Add(new ListLocalData { text = "100 Albums - $5 Each"});
 
-            listSource.Add(new ListLocalData { text = "Best of 2013 So Far"});
+		listSource.Add(new ListLocalData { text = "Hip-Hop and R&B Sale"});
 
-            listSource.Add(new ListLocalData { text = "100 Albums - $5 Each"});
+		listSource.Add(new ListLocalData { text = "CD Deals"});
 
-            listSource.Add(new ListLocalData { text = "Hip-Hop and R&B Sale"});
+		listSource.Add(new ListLocalData { text = "Songs"});
 
-            listSource.Add(new ListLocalData { text = "CD Deals"});
+		listSource.Add(new ListLocalData { text = "Bestselling Albums"});
 
-            listSource.Add(new ListLocalData { text = "Songs"});
+		listSource.Add(new ListLocalData { text = "New Releases"});
 
-            listSource.Add(new ListLocalData { text = "Bestselling Albums"});
+		listSource.Add(new ListLocalData { text = "Bestselling Songs"});
 
-            listSource.Add(new ListLocalData { text = "New Releases"});
+		listSource.Add(new ListLocalData { text = "Rock"});
 
-            listSource.Add(new ListLocalData { text = "Bestselling Songs"});
+		listSource.Add(new ListLocalData { text = "Gospel" });
 
-            listSource.Add(new ListLocalData { text = "Rock"});
+		listSource.Add(new ListLocalData { text = "Jazz"});
 
-            listSource.Add(new ListLocalData { text = "Gospel" });
+		listSource.Add(new ListLocalData { text = "Music Trade-In"});
 
-            listSource.Add(new ListLocalData { text = "Jazz"});
+		listSource.Add(new ListLocalData { text = "Redeem a Gift Card"});
 
-            listSource.Add(new ListLocalData { text = "Music Trade-In"});
+		listSource.Add(new ListLocalData { text = "Band T-Shirts"});
 
-            listSource.Add(new ListLocalData { text = "Redeem a Gift Card"});
+		listSource.Add(new ListLocalData { text = "Mobile MVC"});
 
-            listSource.Add(new ListLocalData { text = "Band T-Shirts"});
+		return listSource;
 
-            listSource.Add(new ListLocalData { text = "Mobile MVC"});
+	}
 
-            return listSource;
+	public static void clearSource()
 
-        }
+	{
 
-        public static void clearSource()
+		listSource.Clear();
 
-        {
+	}       
 
-            listSource.Clear();
-
-        }       
-
-    }
+}
 
 {% endhighlight %}
 
@@ -100,19 +98,17 @@ For MVC Wrapper example, you need to create model file for data-binding. Add the
 You have to modify the controller as the model is added to the sample. You can modify the controller as follows.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
+public ActionResult LocalDataBinding()
 
-        public ActionResult LocalDataBinding()
+{
 
-        {
+	ListLocalDataModal.clearSource();
 
-            ListLocalDataModal.clearSource();
+	return View(ListLocalDataModal.setListSource());
 
-            return View(ListLocalDataModal.setListSource());
-
-        }
-
+}
 
 {% endhighlight %}
 
@@ -122,7 +118,7 @@ You can use the following code example to give you the exact output.
 
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 
 @model List<ListLocalData>
@@ -142,13 +138,12 @@ You can use the following code example to give you the exact output.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
-
-_Local Data Binding_
+Local Data Binding
+{:.caption}
 
 ## FieldSettings
 
-The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://docs.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
+The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://help.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
 
 _FieldSettings_
 
@@ -168,8 +163,7 @@ In DB, you can define your desired class name or styles for the list item throug
 </table>
 Please refer the following code examples.
 
-{% highlight html %}
-
+{% highlight CSHTML %}
 
 
 @model List<FieldSettingsData>
@@ -187,9 +181,6 @@ Please refer the following code examples.
 }
 
 
-
-
-
 {% endhighlight %}
 
 
@@ -198,7 +189,8 @@ Please refer the following code examples.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-_Field Settings_
+Field Settings
+{:.caption}
 
 When you click on the parent item, it navigates to its corresponding child list item as follows.
 
@@ -206,5 +198,5 @@ When you click on the parent item, it navigates to its corresponding child list 
 
 ![](Data-Binding_images/Data-Binding_img3.png)
 
-_Field Settings_
-
+Field Settings
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context-Menu
+title: Context Menu | Schedule | ASP.NET MVC | Syncfusion
 description: context menu
 platform: ejmvc
 control: Schedule
@@ -11,11 +11,11 @@ documentation: ug
 
 * Schedule control is added with the context menu options that opens when you right-click over the cells or appointments. In addition to the default menu items available, it allows you to add the custom menu items and also the sub menu-items as per your requirement.
 
-## contextMenuSettings
+### contextMenuSettings
 
 * It is a collection that holds the menu items data.
 
-## enable
+### enable
 
 * It specifies whether to enable/disable the Context menu options.
 
@@ -23,22 +23,23 @@ menuItems
 
 * It holds the appointment and cell related menu and custom-menu options.
 
-## appointment
+### appointment
 
 * This collection accepts the id, text and parent Id of the menu items that are to be displayed when you right-click the appointments. It can also include custom-menu items.
 
-## cells
+### cells
 
 * This collection accepts the id, text and parent Id of the menu items that are to be displayed when you right-click the Schedule cells. It  also include custom-menu items.
 
-## Appointment Menu Items
+### Appointment Menu Items
 
 * By default, the appointment menu options are provided with 2 items namely Open Appointment and Delete Appointment. 
 * If you want to customize and use your own custom menu items, then you can replace the appointment menu items with their desired collections as explained in the following code.
 
+{% tabs %}
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 @(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1  ))
 // Custom context menu items.
 ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>
@@ -55,7 +56,7 @@ fields.Datasource(ViewBag.datasource)
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
  public partial class ScheduleController :Controller
@@ -88,18 +89,17 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight %}
-
+{% endtabs %} 
 Execute the above code to render the following output.
 
 
 
 ![](Context-Menu_images/Context-Menu_img1.png)
 
+schedule with appointment menu items
+{:.caption}
 
-
- _Figure_ _98_:  schedule with appointment menu items
-
-## Categorize 
+### Categorize 
 
 * A new default menu item is included in the appointment menu items to support the categorize option through context menu. 
 * The categorize data collection that are passed through the categorizesettings is utilised in rendering the categorize options in the context menu. 
@@ -107,8 +107,9 @@ Execute the above code to render the following output.
 You can refer the following code example to render the categorize options in the context menu.
 
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -142,79 +143,80 @@ You can refer the following code example to render the categorize options in the
 )
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 public partial class ScheduleController : Controller
 
 {
 
-public ActionResult CategorizeOption()
+	public ActionResult CategorizeOption()
 
-{
+	{
 
-List<Appointment> appointment = new List<Appointment>();
+		List<Appointment> appointment = new List<Appointment>();
 
-appointment.Add(new Appointment() { Id = "open", Text = "Open Appointment" });
+		appointment.Add(new Appointment() { Id = "open", Text = "Open Appointment" });
 
-appointment.Add(new Appointment() { Id = "delete", Text = "Delete Appointment" });
+		appointment.Add(new Appointment() { Id = "delete", Text = "Delete Appointment" });
 
-appointment.Add(new Appointment() { Id = "categorize", Text = "Categorize" });
+		appointment.Add(new Appointment() { Id = "categorize", Text = "Categorize" });
 
-// categorize data collection
+		// categorize data collection
 
-List<Categorize> CategorizeValue = new List<Categorize>();
+		List<Categorize> CategorizeValue = new List<Categorize>();
 
-CategorizeValue.Add(new Categorize { text = "Blue Category", id = 1, color = "#7499e1", fontColor = "Red" });
+		CategorizeValue.Add(new Categorize { text = "Blue Category", id = 1, color = "#7499e1", fontColor = "Red" });
 
-CategorizeValue.Add(new Categorize { text = "Green Category", id = 2, color = "#7cce6e", fontColor = "White" });
+		CategorizeValue.Add(new Categorize { text = "Green Category", id = 2, color = "#7cce6e", fontColor = "White" });
 
-CategorizeValue.Add(new Categorize { text = "Orange Category", id = 3, color = "#ffaa00", fontColor = "Green" });
+		CategorizeValue.Add(new Categorize { text = "Orange Category", id = 3, color = "#ffaa00", fontColor = "Green" });
 
-var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();
+		var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();
 
-ViewBag.datasource = DataSource;
+		ViewBag.datasource = DataSource;
 
-ViewBag.app = appointment;
+		ViewBag.app = appointment;
 
-ViewBag.categorize = CategorizeValue;
+		ViewBag.categorize = CategorizeValue;
 
-return View();
+		return View();
 
-}
+	}
 
-public class Categorize
+	public class Categorize
 
-{
+	{
 
-public string text { set; get; }
+		public string text { set; get; }
 
-public int id { set; get; }
+		public int id { set; get; }
 
-public string fontColor { set; get; }
+		public string fontColor { set; get; }
 
-public string color { set; get; }
+		public string color { set; get; }
 
-}
+	}
 
 }
 
 {% endhighlight %}
-
+{% endtabs %}  
 * Execute the above code to render the following output with categorized appointments. Also when you right click “Appointment”, the context menu with categorize option is displayed as follows.
 
 ![](Context-Menu_images/Context-Menu_img2.png)
 
 
 
-## Cells 
+### Cells 
 
 * By default, the cells menu options are provided with 5 items namely New Appointment, New Recurring Appointment, Today, Go to Date and Settings with sub-options for views, time-mode and highlighting business hours. 
 * You can customize and use your own custom menu itemsby replacing the cell menu items with the desired collection as explained in the following code example.
 
 
+{% tabs %}
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 @section SampleHeading{<span class="sampleName"> 
 Schedule / Context Menu</span>}@section ControlsSection{
 <div>
@@ -236,7 +238,7 @@ ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.c
 	)
 }
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 {
   public partial class ScheduleController : Controller
@@ -273,7 +275,7 @@ namespace MVCSampleBrowser.Controllers
 }
 
 {% endhighlight %}
-
+{% endtabs %} 
 Execute the above code to render the following output when you right-click on the cells.
 
 
@@ -281,6 +283,5 @@ Execute the above code to render the following output when you right-click on th
 ![](Context-Menu_images/Context-Menu_img3.png)
 
 
-
- _Figure_ _100_:  schedule with cells.
-
+schedule with cells.
+{:.caption}

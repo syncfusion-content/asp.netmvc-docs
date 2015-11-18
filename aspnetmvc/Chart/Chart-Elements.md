@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart-Elements
+title: Chart Elements | Chart | ASP.NET MVC | Syncfusion
 description: chart elements
 platform: ejmvc
 control: Chart
@@ -15,5 +15,5 @@ A Chart is composed of various sub elements such as legends, areas, series, and 
 
 ![](Chart-Elements_images/Chart-Elements_img1.png)
 
-
-
+Chart elements
+{:.caption}

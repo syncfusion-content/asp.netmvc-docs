@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | Schedule | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: Schedule
@@ -16,7 +16,7 @@ documentation: ug
 
 * The following table contains the Key values and its corresponding localized String values for en-US culture. Therefore, to apply your localization/culture to the schedule control, change the “value (string value)” against the “each Key”.
 
-_Table2: List of keys and string values
+_List of keys and string values_
 
 <table>
 <tr>
@@ -354,7 +354,7 @@ _Table2: List of keys and string values
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -591,7 +591,7 @@ Important: An important note while making use of localization in the schedule co
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -615,9 +615,8 @@ Important: An important note while making use of localization in the schedule co
 
 ![](Localization_images/Localization_img1.png)
 
-
-
-  _Figure_ _104__:  schedule with localization._
+schedule with localization.
+{:.caption}
 
 ## RTL
 
@@ -627,7 +626,7 @@ The following code example explains how to enable the rtl property of the Schedu
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Schedule("Schedule1")
 
@@ -666,7 +665,5 @@ fields.Datasource( ViewBag.datasource)
 
 ![](Localization_images/Localization_img2.png)
 
-
-
-   _Figure_ _105_:  schedule with RTL.
-
+schedule with RTL.
+{:.caption}

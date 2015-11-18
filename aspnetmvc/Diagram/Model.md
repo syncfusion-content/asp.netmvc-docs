@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Model
+title: Model | Diagram | ASP.NET MVC | Syncfusion
 description: model
 platform: ejmvc
 control: Diagram
@@ -15,18 +15,11 @@ The following code illustrates how to create a Diagram with some model propertie
 
 
 
-{% highlight js %}
-
-
-
+{% highlight cshtml %}
 
 @*Creates Diagram*@
 
 @Html.EJ().Diagram("Diagram", ViewData["DiagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties).Render()
-
-
-
-
 
 
 using Syncfusion.JavaScript.DataVisualization.DiagramEnums;
@@ -65,5 +58,5 @@ public ActionResult Diagram()
 
 ![](Model_images/Model_img1.png)
 
-
-
+Model
+{:.caption}

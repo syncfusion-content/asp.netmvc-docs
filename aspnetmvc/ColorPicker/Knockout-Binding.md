@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Knockout-Binding
+title: Knockout Binding | ColorPicker | ASP.NET MVC | Syncfusion
 description: knockout binding
 platform: ejmvc
 control: ColorPicker
@@ -22,11 +22,11 @@ Two-way binding supports both the processes. It applies the observable values to
 
 For more information about Knockout binding, you can refer to the online documentation in the following link location,
 
-<http://docs.syncfusion.com/aspnetmvc/colorpicker/knockout-binding>
+<http://help.syncfusion.com/aspnetmvc/colorpicker/knockout-binding>
 
 1. The following example depicts how you can bind data to the ColorPicker widget through knockout support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -71,7 +71,7 @@ For more information about Knockout binding, you can refer to the online documen
 </div>
 {% endhighlight  %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 <script>
 
     window.viewModel = {
@@ -129,5 +129,5 @@ The following screenshot displays the output of the above code example.
 
 ![](Knockout-Binding_images/Knockout-Binding_img1.png)
 
-
-
+ColorPicker with KnockOut Support
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | DatePicker | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: DatePicker
@@ -21,50 +21,53 @@ The following screenshot illustrates the functionality of a date picker with dat
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+DatePicker control
+{:.caption}
+
 ### Create a DatePicker 
 
 ASP.NET MVC DatePicker widget basically renders with built-in features such as keyboard navigation, other months navigation with animations and flexible API’s. You can easily create the DatePicker widget by using simple input textbox element as follows.
 
-1. You can create a MVC Project and add necessary Dlls and scripts. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/datepicker/getting-started).
+1. You can create a MVC Project and add necessary Dlls and scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/datepicker/getting-started).
 2. Add the following code to the corresponding view page for DatePicker rendering.
 
    ~~~ html
 
-		<table>
+	<table>
 
-			<tr>
+		<tr>
 
-				<th class="tdclass">Onward Date</th>
+			<th class="tdclass">Onward Date</th>
 
-				<th class="tdclass">Return date</th>
+			<th class="tdclass">Return date</th>
 
-			</tr>
+		</tr>
 
-			<tr>
+		<tr>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().DatePicker("startDate")
+					@Html.EJ().DatePicker("startDate")
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-				<td class="tdclass">
+			<td class="tdclass">
 
-					<span class="innerdp">
+				<span class="innerdp">
 
-						@Html.EJ().DatePicker("endDate")
+					@Html.EJ().DatePicker("endDate")
 
-					</span>
+				</span>
 
-				</td>
+			</td>
 
-			</tr>
+		</tr>
 
-		</table>
+	</table>
 
    ~~~
    {:.prettyprint }
@@ -101,6 +104,9 @@ By executing the above code samples, you can create two DatePicker widgets in a 
 
 
 ![](Getting-Started_images/Getting-Started_img2.png)
+
+DatePicker control
+{:.caption}
 
 ### Set the Min and Max Date
 
@@ -184,7 +190,9 @@ You can select the “onward journey date” in the first DatePicker and then th
 
         <td class="tdclass">
 
-            <span class="innerdp">                @Html.EJ().DatePicker("endDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(ed => ed.Select("selectedEndDate"))
+            <span class="innerdp">                
+			
+			@Html.EJ().DatePicker("endDate").Value("04/25/2014").MinDate("04/25/2014").MaxDate("06/24/2014").ClientSideEvents(ed => ed.Select("selectedEndDate"))
 
             </span>
 
@@ -199,27 +207,25 @@ You can select the “onward journey date” in the first DatePicker and then th
 
 {% highlight js %}
 <script type="text/javascript">
+	function selectedStartDate(sender) {
 
-    function selectedStartDate(sender) {
+		var selDate = new Date(sender.value); // mentions the selected date.
 
-        var selDate = new Date(sender.value); // mentions the selected date.
+		minDatepicker = $("#endDate").data("ejDatePicker");// creating DatePicker object
 
-        minDatepicker = $("#endDate").data("ejDatePicker");// creating DatePicker object
+		minDatepicker.setModel({ "minDate": selDate });// setting minDate property through setModel of DatePicker object.
 
-        minDatepicker.setModel({ "minDate": selDate });// setting minDate property through setModel of DatePicker object.
+	}
 
-    }
+	function selectedEndDate(sender) {
 
-    function selectedEndDate(sender) {
+		var selDate = new Date(sender.value);
 
-        var selDate = new Date(sender.value);
+		maxDatepicker = $("#startDate").data("ejDatePicker");// creating DatePicker object
 
-        maxDatepicker = $("#startDate").data("ejDatePicker");// creating DatePicker object
+		maxDatepicker.setModel({ "maxDate": selDate });// setting maxDate property through setModel of DatePicker object.
 
-        maxDatepicker.setModel({ "maxDate": selDate });// setting maxDate property through setModel of DatePicker object.
-
-    }
-
+	}
 </script>
 
 {% endhighlight %}
@@ -232,7 +238,13 @@ This scenario is illustrated in the following screenshot.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
+DatePickers with Min/Max Date
+{:.caption}
+
 ![](Getting-Started_images/Getting-Started_img5.png)
+
+DatePickers with Min/Max Date
+{:.caption}
 
 By using the min/max date range property, you can select a date within a given range as follows. 
 

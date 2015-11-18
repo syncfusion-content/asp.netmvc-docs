@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Start-and-Depth-level
+title: Start and Depth level | DateTimePicker | ASP.NET MVC | Syncfusion
 description: start and depth level
 platform: ejmvc
 control: DateTimePicker
@@ -14,7 +14,7 @@ documentation: ug
 DateTimePicker allows you to change the starting level view of Calendar inside the DateTimePicker popup. Consider you are creating a login form for your blog. If the “Birth date” field in the form starts from year, it is easy to select date from year, month and date. By default, the Start Level of DateTimePicker is “Month” level view. The “StartLevel” property receives “enum” value. The “Period” class contains four types of levels. Refer the following table to know the different types of start level.
 
 
-_Table_ _3_: _Start Level_
+_Start Level_
 
 <table>
 <tr>
@@ -49,21 +49,19 @@ In the following example DateTimePicker popup Start level view is set to “cent
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
-   
-     
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Start level*@
-
-		@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).Width("175px")
+   ~~~ cshtml
+     @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Start level*@
+     @Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot displays the output for the above code.
 
    ![](Start-and-Depth-level_images/Start-and-Depth-level_img1.png)
-
+   
+   Showcase of DateTimePicker with short name of day of the week
+   {:.caption}
 
 
 ## Depth Level
@@ -76,17 +74,18 @@ The following code snippet is set to DepthLevel in DateTimePicker.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
-   
-     
-	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Depth level*@
+   ~~~ cshtml
 
-		@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).DepthLevel(Period.Year) .Width("175px")
+	@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Depth level*@
+
+	@Html.EJ().DateTimePicker("DateTime").StartLevel(Period.Century).DepthLevel(Period.Year) .Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot displays the output for the above code.
 
 	![](Start-and-Depth-level_images/Start-and-Depth-level_img2.png)
+	
+	Showcase of DateTimePicker with Depth level 
+	{:.caption}

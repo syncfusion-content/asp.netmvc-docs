@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | Captcha | ASP.NET MVC | Syncfusion
 description: behavior settings 
 platform: ejmvc
 control: Captcha
@@ -21,14 +21,14 @@ The following code example is used to render the Captcha with Refresh support.
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with Refresh button.
  
-   ~~~ javascript
+   ~~~ cshtml
  
 		@Html.EJ().Captcha("captcha").EnableRefreshImage(true).RequestMapper("Refresh")
 		
    ~~~
-   {:.prettyprint }
    
-   ~~~ cs
+   
+   ~~~ csharp
 
 		// Add the following code in controller page for Captcha with refresh image
 		public ActionResult Refresh(CaptchaParams parameters)
@@ -37,14 +37,15 @@ The following code example is used to render the Captcha with Refresh support.
 		}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The following screenshot illustrates the Captcha with Refresh button. 
 
 ![](Behavior-Settings_images/Behavior-Settings_img2.png)
 
-
+Captcha with Refresh button
+{:.caption}
 
 ## Audio Accessibility
 
@@ -54,16 +55,16 @@ The following code example is used to render the Captcha with Audio.
 
 1. Add the following code example to the corresponding CSHTML page to render Captcha with audio button.
 
-   ~~~ javascript
+   ~~~ cshtml
 
-		@Html.EJ().Captcha("captcha").EnableAudio(true)
+	 @Html.EJ().Captcha("captcha").EnableAudio(true)
 
    ~~~
-   {:.prettyprint }
+   
 
 2. The following screenshot illustrates the Captcha with audio button. 
 
 ![](Behavior-Settings_images/Behavior-Settings_img3.png)
 
-
-
+Captcha with Audio support
+{:.caption}

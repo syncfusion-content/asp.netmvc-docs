@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping
+title: Grouping | Grid | ASP.NET MVC | Syncfusion
 description: grouping
 platform: ejmvc
 control: Grid
@@ -15,23 +15,24 @@ Grouping is an important feature in Grid. If you want to analysis any particular
 
 In Grid, there is an option to group columns at Grid Initialize that is rendered through GroupedColumns property in Grid. This is an important option because in some scenarios, need to analyse Grid records with Grouping may arise, at the time of initialize.
 
-
-{% highlight js %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-        .AllowGrouping(true)
+.AllowGrouping(true)
 
-        .GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}))
+.GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}))
 
-        .AllowPaging()
+.AllowPaging()
 
-        )
+)
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MVCSampleBrowser.Controllers
 
@@ -40,12 +41,7 @@ namespace MVCSampleBrowser.Controllers
     public partial class GridController : Controller
 
     {
-
-        //
-
         // GET: /Default/
-
-
 
         public ActionResult Default()
 
@@ -57,16 +53,12 @@ namespace MVCSampleBrowser.Controllers
 
         }
 
-
-
     }
 
 }
 
-
-
 {% endhighlight  %}
-
+{% endtabs %} 
 
 
 The following output is displayed as a result of the above code example.
@@ -75,30 +67,33 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img1.png)
 
-_Figure : Load Grid with Grouping_
+Load Grid with Grouping
+{:.caption}
 
 ## Group Buttons
 
 Group buttons is one of the features under Grouping. It is helpful to do Grouping easily without doing drag and drop. To enable this feature use ShowToggleButton at Grid Initialize.  
 
+{% tabs %}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
 .AllowGrouping(true)
 
-        .GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}).ShowToggleButton(true))
+.GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}).ShowToggleButton(true))
 
-        .AllowPaging()
+.AllowPaging()
 
-        )
+)
 
 
 {% endhighlight  %}
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -124,11 +119,8 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
-
 {% endhighlight  %}
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -136,7 +128,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img2.png)
 
-_Figure : Group Buttons_
+Group Buttons
+{:.caption}
 
 ## Hide Ungroup Button
 
@@ -146,9 +139,13 @@ In GroupDropArea, grouped columns have an option to ungroup a column using Group
 
 ![](Grouping_images/Grouping_img3.png)
 
-_Figure : Ungroup Button_
+Ungroup Button
+{:.caption}
 
-{% highlight html %}
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -163,14 +160,10 @@ _Figure : Ungroup Button_
         )
 
 {% endhighlight  %}
-{% highlight c# %}
-
-
-
+{% highlight C# %}
 namespace MVCSampleBrowser.Controllers
 
 {
-
     public partial class GridController : Controller
 
     {
@@ -185,8 +178,6 @@ namespace MVCSampleBrowser.Controllers
 
         }
 
-
-
     }
 
 }
@@ -195,7 +186,7 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 
-
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -203,15 +194,17 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img4.png)
 
-_Figure : Hide ungroup button_
+Hide ungroup button
+{:.caption}
 
 ## AutoSize Drop Area
 
 If you drag any header to Group column in Grid, it expands smoothly its Group Drop Area portion. In some scenarios, you need to stop this type of animation while grouping. You can use the EnableDropAreaAutoSizing property to stop animation in Group Drop Area.
 
 
+{% tabs %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EditableOrder>("FlatGrid")
 
@@ -226,7 +219,7 @@ If you drag any header to Group column in Grid, it expands smoothly its Group Dr
         )
 {% endhighlight  %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 namespace MVCSampleBrowser.Controllers
@@ -251,11 +244,9 @@ namespace MVCSampleBrowser.Controllers
 
 }
 
-
-
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
@@ -263,7 +254,8 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img5.png)
 
-_Figure : Stop group animation_
+Stop group animation
+{:.caption}
 
 ## Hide Group Drop Area from Grid
 
@@ -271,20 +263,23 @@ In Grid, there is an option to hide the Group Drop Area at Grid Initialize that 
 
 When the ShowDropArea property is set to false, the groupDropArea is hidden. 
 
-{% highlight js %}
+
+{% tabs %}
+
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<MvcApplication11.OrdersView>("FlatGrid")
 
-       .Datasource((IEnumerable<object>)ViewBag.datasource)
+.Datasource((IEnumerable<object>)ViewBag.datasource)
 
-       .AllowPaging()
+.AllowPaging()
 
-       .AllowGrouping()
+.AllowGrouping()
 
 .GroupSettings(group => { group.GroupedColumns(col => { col.Add("ShipCountry"); }).ShowDropArea(false); }))  
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MvcApplication11.Controllers
 
@@ -311,17 +306,17 @@ namespace MvcApplication11.Controllers
         }
 
     }
-
 }
-
 
 {% endhighlight  %}
 
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img6.png)
 
-_Figure : Hide Group Drop Area from Grid_
+Hide Group Drop Area from Grid
+{:.caption}  
 
 

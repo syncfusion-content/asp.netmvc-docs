@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | TreeGrid | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: TreeGrid
@@ -24,19 +24,16 @@ Two types of Data Binding are possible with TreeGrid control,
 
 The following code example shows you how to bind the Hierarchical local data into the TreeGrid control.
 
+{% tabs %}
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 public partial class TreeGridController : Controller
 
 {
 
-        //
-
         // GET: /TreeGridDefault/
-
-
 
         public ActionResult TreeGridDefault()
 
@@ -49,8 +46,6 @@ public partial class TreeGridController : Controller
             return View();
 
         }
-
-
 
         private List<BusinessObject> GetDefaultDataSource()
 
@@ -84,8 +79,6 @@ public partial class TreeGridController : Controller
 
             };
 
-
-
             BusinessObject Child1=new BusinessObject()
 
             {
@@ -103,8 +96,6 @@ public partial class TreeGridController : Controller
                 Progress = 100 
 
             };
-
-
 
             BusinessObject Child2 = new BusinessObject()
 
@@ -125,13 +116,6 @@ public partial class TreeGridController : Controller
             };
 
 
-
-            //...
-
-          //...
-
-
-
             Record1.Children.Add(Child1);
 
             Record1.Children.Add(Child2);
@@ -140,34 +124,15 @@ public partial class TreeGridController : Controller
 
             Record1.Children.Add(Child4);
 
-
-
-
-
-    //...
-
-    //...
-
-
-
-
-
             BusinessObjectCollection.Add(Record1);
-
-
 
             return BusinessObjectCollection;
 
         }
-
-
-
-
-
+		
         public class BusinessObject
 
         {
-
             public int TaskId
 
             {
@@ -177,8 +142,6 @@ public partial class TreeGridController : Controller
                 set;
 
             }
-
-
 
             public string TaskName
 
@@ -190,8 +153,6 @@ public partial class TreeGridController : Controller
 
             }
 
-
-
             public string StartDate
 
             {
@@ -201,8 +162,6 @@ public partial class TreeGridController : Controller
                 set;
 
             }
-
-
 
             public string EndDate
 
@@ -214,8 +173,6 @@ public partial class TreeGridController : Controller
 
             }
 
-
-
             public int Duration
 
             {
@@ -225,8 +182,6 @@ public partial class TreeGridController : Controller
                 set;
 
             }
-
-
 
             public int Progress
 
@@ -238,8 +193,6 @@ public partial class TreeGridController : Controller
 
             }
 
-
-
             public List<BusinessObject> Children
 
             {
@@ -250,12 +203,10 @@ public partial class TreeGridController : Controller
 
             }
 
-
-
         }
 }
 {% endhighlight  %}
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @using Syncfusion.JavaScript
@@ -331,7 +282,7 @@ public partial class TreeGridController : Controller
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 
 The output of the above steps is as follows:
@@ -349,19 +300,16 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 •Parent ID Field- This field contains values that indicate parent nodes. Its name is assigned to the ParentIdMapping property.
 
 
+{% tabs %}
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 public partial class TreeGridController : Controller
 
     {
 
-        //
-
         // GET: /TreeGridDefault/
-
-
 
         public ActionResult TreeGridDefault()
 
@@ -374,8 +322,6 @@ public partial class TreeGridController : Controller
             return View();
 
         }
-
-
 
         private List<BusinessObject> GetDefaultDataSource()
 
@@ -400,11 +346,6 @@ public partial class TreeGridController : Controller
                 });
 
 
-
-
-
-
-
             list.Add(new BusinessObject()
 
             {
@@ -420,8 +361,6 @@ public partial class TreeGridController : Controller
                 Duration = 5,
 
             });
-
-
 
             list.Add(new BusinessObject()
 
@@ -441,8 +380,6 @@ public partial class TreeGridController : Controller
 
             });
 
-
-
             list.Add(new BusinessObject()
 
              {
@@ -461,8 +398,6 @@ public partial class TreeGridController : Controller
 
              });
 
-
-
             list.Add(new BusinessObject()
 
             {
@@ -480,8 +415,6 @@ public partial class TreeGridController : Controller
                 PercentDone = 100,
 
             });
-
-
 
             list.Add(new BusinessObject()
 
@@ -516,16 +449,6 @@ public partial class TreeGridController : Controller
                 PercentDone = 100,
 
             });
-
-
-
-             //...
-
-
-
-           //...
-
-
 
             return list;
 
@@ -571,11 +494,9 @@ public partial class TreeGridController : Controller
 
         }
 
-
-
     }
 {% endhighlight  %}
-{% highlight js %}
+{% highlight CSHTML %}
 
     @(Html.EJ().TreeGrid("TreeGridContainer")                                   
 
@@ -612,7 +533,7 @@ public partial class TreeGridController : Controller
        )
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 The following screenshot shows the output of the above steps,
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Treeview-with-context-menu-support
+title: Treeview with context menu support | TreeView | ASP.NET MVC | Syncfusion
 description: treeview with context menu support
 platform: ejmvc
 control: TreeView
@@ -24,110 +24,101 @@ The following steps explain how you can enable the ShowCheckbox property for Tre
 In the View page, add TreeView helper to configure TreeView.
 
 
-
-{% highlight html %}
+{% highlight CSHTML %}
 
 \\ To configure TreeView in the CSHTML page
 
 <div style="width: 250px">
 
-   @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-         {
+ {
+	   items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-               items.Add().Text("Favorites").Expanded(true).Children(child =>
+	   {
 
-               {
+				child.Add().Text("Desktop");
 
-                        child.Add().Text("Desktop");
+				child.Add().Text("Downloads");
 
-                        child.Add().Text("Downloads");
+				child.Add().Text("Recent places");
 
-                        child.Add().Text("Recent places");
+		});
 
-                });
+		items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-                items.Add().Text("Libraries").Expanded(true).Children(child =>
+		{
 
-                {
+			  child.Add().Text("Documents").Children(child1 =>
 
-                      child.Add().Text("Documents").Children(child1 =>
+				   {
 
-                           {
+						child1.Add().Text("My Documents");
 
-                                child1.Add().Text("My Documents");
+						child1.Add().Text("Public Documents");
 
-                                child1.Add().Text("Public Documents");
+				   });
 
-                           });
+			  child.Add().Text("Pictures").Children(child1 =>
 
-                      child.Add().Text("Pictures").Children(child1 =>
+				{
 
-                        {
+					child1.Add().Text("My Pictures");
 
-                            child1.Add().Text("My Pictures");
+					child1.Add().Text("Public Pictures");
 
-                            child1.Add().Text("Public Pictures");
+				});
 
-                        });
+				child.Add().Text("Music").Children(child1 =>
 
-                        child.Add().Text("Music").Children(child1 =>
+				{
 
-                        {
+					child1.Add().Text("My Music");
 
-                            child1.Add().Text("My Music");
+					child1.Add().Text("Public Music");
 
-                            child1.Add().Text("Public Music");
+				});
 
-                        });
-
-                        child.Add().Text("Subversion");
-
-
-
-                  });
-
-                  items.Add().Text("Computer").Children(child =>
-
-                  {
-
-                        child.Add().Text("Folder(C)");
-
-                        child.Add().Text("Folder(D)");
-
-                        child.Add().Text("Folder(E)");
-
-                   });
+				child.Add().Text("Subversion");
 
 
 
-            })
+		  });
+
+		  items.Add().Text("Computer").Children(child =>
+
+		  {
+
+				child.Add().Text("Folder(C)");
+
+				child.Add().Text("Folder(D)");
+
+				child.Add().Text("Folder(E)");
+
+		   });
+	})
+
+</div>
+
+<div>
+
+@Html.EJ().Menu("treeviewMenu").Items(items =>
+
+	{
+
+		items.Add().Text("Add New Item");
+
+		items.Add().Text("Remove Item");
+
+		items.Add().Text("Disable Item");
+
+		items.Add().Text("Enable Item");
+
+	}).OpenOnClick(false).MenuType(MenuType.ContextMenu).ShowSubLevelArrows(true).ContextMenuTarget("#treeview").ClientSideEvents(s => s.Click("menuclick").BeforeOpen("beforeOpen"))
 
 
 
-    </div>
-
-    <div>
-
-
-
-        @Html.EJ().Menu("treeviewMenu").Items(items =>
-
-            {
-
-                items.Add().Text("Add New Item");
-
-                items.Add().Text("Remove Item");
-
-                items.Add().Text("Disable Item");
-
-                items.Add().Text("Enable Item");
-
-            }).OpenOnClick(false).MenuType(MenuType.ContextMenu).ShowSubLevelArrows(true).ContextMenuTarget("#treeview").ClientSideEvents(s => s.Click("menuclick").BeforeOpen("beforeOpen"))
-
-
-
-    </div>
+</div>
 
 {% endhighlight %}
 
@@ -137,59 +128,63 @@ Define the events in the script as follows,
 
 <script type="text/javascript">
 
-        var tabIndex = 1, treeviewObj, selectedNode;
+	var tabIndex = 1, treeviewObj, selectedNode;
 
-        function beforeOpen(args) {
+	function beforeOpen(args) 
+	{
 
-            var treeviewObj = $("#treeview").data("ejTreeView");
+		var treeviewObj = $("#treeview").data("ejTreeView");
 
-            if (!$(args.target).hasClass("e-text"))
+		if (!$(args.target).hasClass("e-text"))
 
-                args.cancel = true;
+			args.cancel = true;
 
-            else {
+		else 
+		{
 
-                selectedNode = args.target;
+			selectedNode = args.target;
 
-                treeviewObj.selectNode(selectedNode);
+			treeviewObj.selectNode(selectedNode);
 
-            }
+		}
 
-        }
+	}
 
-        function menuclick(args) {
+	function menuclick(args) 
+	{
 
-            var treeviewObj = $("#treeview").data("ejTreeView");
+		var treeviewObj = $("#treeview").data("ejTreeView");
 
-            if (args.events.text == "Add New Item") {
+		if (args.events.text == "Add New Item") 
+		{
 
-                treeviewObj.addNode("Item" + tabIndex, selectedNode);
+			treeviewObj.addNode("Item" + tabIndex, selectedNode);
 
-                tabIndex++;
+			tabIndex++;
 
-            }
+		}
 
-            else if (args.events.text == "Remove Item") {
+		else if (args.events.text == "Remove Item") {
 
-                treeviewObj.removeNode(selectedNode);
+			treeviewObj.removeNode(selectedNode);
 
-            }
+		}
 
-            else if (args.events.text == "Disable Item") {
+		else if (args.events.text == "Disable Item") {
 
-                treeviewObj.disableNode(selectedNode)
+			treeviewObj.disableNode(selectedNode)
 
-            }
+		}
 
-            else if (args.events.text == "Enable Item") {
+		else if (args.events.text == "Enable Item") {
 
-                treeviewObj.enableNode(selectedNode)
+			treeviewObj.enableNode(selectedNode)
 
-            }
+		}
 
-        }
+	}
 
-    </script>
+</script>
 
 {% endhighlight %}
 
@@ -199,8 +194,7 @@ The output for the context menu for TreeView control is as follows.
 
 ![](Treeview-with-context-menu-support_images/Treeview-with-context-menu-support_img1.png)
 
-
-_Figure_ _62_: Context Menu for TreeView
-
+Context Menu for TreeView
+{:.caption}
 
 

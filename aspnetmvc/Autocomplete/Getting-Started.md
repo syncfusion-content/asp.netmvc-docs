@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | AutoComplete  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: AutoComplete
@@ -21,28 +21,29 @@ The following screen shot illustrates the AutoComplete control that searches the
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
+AutoComplete controlwith search
+{:.caption}
 
 ### Create an AutoComplete
 
 ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features like keyboard navigation with animations and flexible API’s. You can easily create the AutoCompleteTextbox widget by the following steps.
 
-1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/autocomplete/getting-started) Documentation.
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://do.syncfusion.com/aspnetmvc/autocomplete/getting-started) Documentation.
 2. Initialize the corresponding AutoComplete widget in the view page.
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div>
+	<div>
 
-			Select Component/s: 
+		Select Component/s: 
 
-		@Html.EJ().Autocomplete("ComponentList")
+	@Html.EJ().Autocomplete("ComponentList")
 
-		</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 3.  Execute the code to render a AutoComplete widget as follows
@@ -51,28 +52,27 @@ ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+Output
+{:.caption}
 
-
-## Populate Data to AutoComplete
+### Populate Data to AutoComplete
 
 You can provide either local data or remote data to the Autocomplete.
 
-### Remote Data Binding
+#### Remote Data Binding
 
 You can assign the required Data from the remote URL by using the DataSource property. You can generate a query to get the required Data from the remote file using Query()property and define the query to get the remote Data. Use AutoCompleteFields property, to map the Data fields to the textbox as shown in the following code example.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
-Select Component/s: 
+	Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 
-'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
+	@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+	d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 
+	'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
 </div>
-
-
 {% endhighlight %}
 
 
@@ -80,29 +80,29 @@ Run this code to render the AutoComplete with components list.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+AutoComplete with Component list
+{:.caption}
 
 You can also set some common customization changes to the AutoComplete textbox like enabling multiple-selection, highlight search and add dropdown icon based on your requirement. 
 
-## Configure Visual Mode with filter option
+#### Configure Visual Mode with filter option
 
 
 
 By default, the AutoComplete is rendered with single-value selection. For multiple-value selection using the property MultiSelectModethatallows you to select multiple Data. There are two types of multiple selection one is ‘delimiter’ and another one is ‘visual mode’. In ‘Delimiter’ mode, the multiple values chosen are separated by using the delimiter character specified. In ‘visual mode’, the values choosen are displayed as box model. Here, the ‘visual mode’ is shown. You can set the FilterType option as StartsWith to sort the suggestion list based on the starting character.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
-    Select Component/s: 
+	Select Component/s: 
 
-@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
- 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).Width("500")
+	@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+	d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
+	 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).Width("500")
 
 </div>
-
 
 {% endhighlight %}
 
@@ -111,11 +111,12 @@ The following screen shot displays the AutoCompletetextbox with selection visual
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
+AutoComplete textbox with selection visual mode
+{:.caption}
 
+#### Configure Highlight Search and Rounded corners
 
-## Configure Highlight Search and Rounded corners
-
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
 
@@ -138,15 +139,16 @@ The following screen shot displays the AutoCompletetextbox with highlight search
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
+AutoComplete text box with highlight search enabled
+{:.caption}
 
-
-## Configure Popup button
+#### Configure Popup button
 
 To enable the DropDown button, you can set ShowPopupButton property to ‘true’ that displays the DropDown icon at the end of textbox. By default, search icon replaces other icons and so you need to override the CSS classes and replace the content to DropDown arrow icon available in core CSS file as follows.
 
-
-
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSS %}
 
 <style>.e-icon.e-search:before 
  {                
@@ -155,7 +157,7 @@ To enable the DropDown button, you can set ShowPopupButton property to ‘true�
 </style>
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div>
     Select Component/s: 
@@ -164,11 +166,11 @@ d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Quer
 f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)
 </div>
 {% endhighlight %}
-
+{% endtabs %} 
 
 The following screen shot displays the AutoCompletetextbox with dropdown icon.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-
-
+AutoComplete textbox with dropdown icon
+{:.caption}

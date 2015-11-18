@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Button-Type
+title: Button Type | Button	 | ASP.NET MVC | Syncfusion
 description: button type
 platform: ejmvc
 control: Button
@@ -11,7 +11,7 @@ documentation: ug
 
 Button is used as normal clickable button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the button in three types. Using the Type property, you can easily render the button in following types.
 
-_Table4: List of Button types_
+_List of Button types_
 
 <table>
 <tr>
@@ -33,18 +33,15 @@ The following steps explains you the details about rendering the Button with abo
 
 1. In the CSHTML page, configure the Button widget as follows.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
 
-
-  @* Set the different types for button control as follows.*@
+@* Set the different types for button control as follows.*@
 
 <div class="control">
-
-
 
         @Html.EJ().Button("button_button").Text("button").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Button)
 
@@ -59,8 +56,7 @@ The following steps explains you the details about rendering the Button with abo
         <br />
 
         @Html.EJ().Button("button_reset").Text("reset").ShowRoundedCorner(true).Size(ButtonSize.Mini).Type(ButtonType.Reset)
-
-    </div>
+</div>
 
 {% endhighlight  %}
 
@@ -68,6 +64,5 @@ Execute the above code to render the following output.
 
 ![](Button-Type_images/Button-Type_img1.png)
 
-
-_Figure 9: Different button types_
-
+Different button types
+{:.caption}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | NumericTextBox | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: NumericTextBox
@@ -17,7 +17,7 @@ In the View page add NumericTextBox helper, and configure the EnableRTL property
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("11").EnableRTL(true)
 
@@ -27,6 +27,5 @@ Output of NumericTextBox when EnableRTL is “True” is as follows.
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
-
-_NumericTextBox with enableRTL_
-
+NumericTextBox with enableRTL
+{:.caption}

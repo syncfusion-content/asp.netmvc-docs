@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar-Support
+title: Toolbar Support | RichTextEditor | ASP.NET MVC | Syncfusion
 description: toolbar support
 platform: ejmvc
 control: RichTextEditor
@@ -43,7 +43,7 @@ Most used clipboard actions are cut, copy, and paste. These tools are used to re
 
 1. To render Rich Text Editor with the above toolbar options, include the following code in your CSHTML page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 \\ Add the following code in your view page
 
@@ -94,44 +94,40 @@ In Rich Text Editor, toolbars are customizable. When you want to include a new t
 
 The following example illustrates how to insert an HTML, JavaScript, or CSS code in the editing area as a code block.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-	\\ Add the following code in your view page
-	<div class="rte">  
-	
-		@*initialization of RTE*@@(Html.EJ().RTE("rteSample").Width("700px")
-		.ContentTemplate(@<p>Place the content in this RTE Text area.By Clicking the "AddText" toolbar item in the RTE toolbar,
-		you can add the text at the place of cursor.</p>)
-		.ShowFooter(true)        
-		.Tools(tool => tool.CustomTool(custom => {  custom.Name("insert code").Tooltip("Insert Code Snippets")
-		.Css("codeInsert").Action("click").Add();        })))    @*Dialog option code for adding the text*@    
-	
-		<div id="cutomSourceCode" title="Paste your content and inset to RTE">        
-			<table>            
-			<tr>                
-			<td colspan="2">                    
-				<textarea id="srcCode" style="width: 550px; height: 250px">                        
-					<div id="srcArea">	</div>                   
-				</textarea>                
-			</td>            
-			</tr>
-			
-			<tr>                
-			<td colspan="2">                    
-				<div class="e-rte-button e-fieldseparate">                        
-					<button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        
-					<button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    
-				</div>                
-			</td>            
-			</tr>       
-			</table>    
-		</div>
+\\ Add the following code in your view page
+<div class="rte">  
+
+	@*initialization of RTE*@@(Html.EJ().RTE("rteSample").Width("700px")
+	.ContentTemplate(@<p>Place the content in this RTE Text area.By Clicking the "AddText" toolbar item in the RTE toolbar,
+	you can add the text at the place of cursor.</p>)
+	.ShowFooter(true)        
+	.Tools(tool => tool.CustomTool(custom => {  custom.Name("insert code").Tooltip("Insert Code Snippets")
+	.Css("codeInsert").Action("click").Add();        })))    @*Dialog option code for adding the text*@    
+
+	<div id="cutomSourceCode" title="Paste your content and inset to RTE">        
+		<table>            
+		<tr>                
+		<td colspan="2">                    
+			<textarea id="srcCode" style="width: 550px; height: 250px">                        
+				<div id="srcArea">	</div>                   
+			</textarea>                
+		</td>            
+		</tr>
+		
+		<tr>                
+		<td colspan="2">                    
+			<div class="e-rte-button e-fieldseparate">                        
+				<button id="src_insert" class="e-rte-btn" tabindex="">Insert</button>                        
+				<button id="src_cancel" class="e-rte-btn" tabindex="">Cancel</button>                    
+			</div>                
+		</td>            
+		</tr>       
+		</table>    
 	</div>
+</div>
  
-{% endhighlight %}
- 
- 
-{% highlight js %}
 
 \\ Add the following code in your script section to render RTE and set the action of the new tool item.     
 var rteObj;    $(function () {        
@@ -163,18 +159,16 @@ In some cases, you may have to remove a particular item from existing toolbar it
 
 1. Add the following code in your CSHTML page.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*Add the following code in your view page.*@@{Html.EJ().RTE("rteSample").Width("850px")
-	.ContentTemplate(@<p></p>).Render(); }
+@*Add the following code in your view page.*@@{Html.EJ().RTE("rteSample").Width("850px")
+.ContentTemplate(@<p></p>).Render(); }
 
-{% endhighlight %}
 
-{% highlight js %}
 
-	@*Add the following code in script section*@.
-	var rteeObj  = $("#rteSample").data("ejRTE");rteeObj.removeToolbarItem("rteSamplecreateTable"); 
-	// remove toolbar item
+@*Add the following code in script section*@.
+var rteeObj  = $("#rteSample").data("ejRTE");rteeObj.removeToolbarItem("rteSamplecreateTable"); 
+// remove toolbar item
 
 {% endhighlight %}
 

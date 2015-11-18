@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drag-and-Drop-Support
+title: Drag and Drop Support | UploadBox | ASP.NET MVC | Syncfusion
 description: drag and drop support
 platform: ejmvc
 control: UploadBox
@@ -27,30 +27,24 @@ The following steps explain how to enable the drag and drop in the UploadBox con
 
 1. In the VIEW page, add the below script to enable the drag and drop in UploadBox control.
 
+   ~~~ cshtml
+	//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
 
+	<div class="frame">
 
-   ~~~ html
+	<div class="control">  
 
-		//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
+		@Html.EJ().Uploadbox("uploadbox")
+		.SaveUrl("Uploadbox/Save")
+		.RemoveUrl("UploadBox/Remove")
+		.AllowDragAndDrop(true).MultipleFilesSelection(true)
+	</div>
 
-		<div class="frame">
-
-		  <div class="control">  
-			
-				@Html.EJ().Uploadbox("uploadbox")
-				.SaveUrl("Uploadbox/Save")
-				.RemoveUrl("UploadBox/Remove")
-				.AllowDragAndDrop(true).MultipleFilesSelection(true)
-
-		   </div>
-
-		  </div>
-
-
+	</div>
    ~~~
-   {:.prettyprint }
+   
 
-   To know about file action, refer to the following link: <http://docs.syncfusion.com/aspnetmvc/uploadbox/drag-and-drop-support>
+   To know about file action, refer to the following link: <http://help.syncfusion.com/aspnetmvc/uploadbox/drag-and-drop-support>
 
 2. The following screenshot displays the output for the above code.
 
@@ -65,25 +59,25 @@ The following steps explain how to enable the drag and drop in the UploadBox con
    In the VIEW page, add the below script to enable the drag and drop in the UploadBox control.
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
+	// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support
 
-	    <div class="frame">
+	<div class="frame">
 
-		  <div class="control">  
-		  @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
-			  .RemoveUrl("Uploadbox/Remove")
-			  .AllowDragAndDrop(true)
-			  .MultipleFilesSelection(true)
-			  .DragAreaText("Drop files here")
+	<div class="control">  
+	@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
+	  .RemoveUrl("Uploadbox/Remove")
+	  .AllowDragAndDrop(true)
+	  .MultipleFilesSelection(true)
+	  .DragAreaText("Drop files here")
 
-		  </div>
+	</div>
 
-		 </div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 3. The following screenshot displays the output for the above code.
@@ -101,24 +95,22 @@ The following steps explain how to enable the drag and drop in the UploadBox con
    In the VIEW page, add the below script to enable the drag and drop in UploadBox control.
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
+	// Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
 
+	<div class="frame">
 
+	  <div class="control">
 
-		<div class="frame">
+		  @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DropAreaHeight("300px").DropAreaWidth("600px")
 
-			  <div class="control">
+	  </div>
 
-				  @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").AllowDragAndDrop(true).MultipleFilesSelection(true).DropAreaHeight("300px").DropAreaWidth("600px")
-
-			  </div>
-
-        </div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. The following screenshot displays the output for the above code.
@@ -139,21 +131,22 @@ The following steps explain how to enable the drag and drop in the UploadBox con
 
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
+	//Add the following code example to the corresponding CSHTML page to render UploadBox with drag and drop support.
 
-			   <div class="control">   
-			   @Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
-			   .RemoveUrl("Uploadbox/Remove")
-			   .AllowDragAndDrop(true)
-			   .MultipleFilesSelection(true)
-			   .ShowBrowseButton(false)
+	<div class="control">   
 
-		 </div>
+		@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save")
+		.RemoveUrl("Uploadbox/Remove")
+		.AllowDragAndDrop(true)
+		.MultipleFilesSelection(true)
+		.ShowBrowseButton(false)
+
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 5. The following screenshot displays the output for the above code.
 

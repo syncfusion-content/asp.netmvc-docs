@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Populate-Data
+title: Populate Data | Maps | ASP.NET MVC | Syncfusion
 description: populate data
 platform: ejmvc
 control: Maps
@@ -25,33 +25,33 @@ You can store the “United States of America.json” file in App_Data folder as
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
-        public ActionResult Map()
+public ActionResult Map()
 
-        {
+{
 
-            ViewData["mapdata"] = GetUSMap();
+	ViewData["mapdata"] = GetUSMap();
 
-            return View();
+	return View();
 
-        }
+}
 
 
 
-       public object GetUSMap()
+public object GetUSMap()
 
-        {
+{
 
-            string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
-            JavaScriptSerializer ser = new JavaScriptSerializer();
+	JavaScriptSerializer ser = new JavaScriptSerializer();
 
-            ser.MaxJsonLength = int.MaxValue;
+	ser.MaxJsonLength = int.MaxValue;
 
-            return new MapData(usajson);
+	return new MapData(usajson);
 
-        } 
+} 
 
 
 
@@ -89,193 +89,189 @@ For better understanding, “MapController.cs” is populated with datas of USA 
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
-        public ActionResult Map()
+public ActionResult Map()
 
-        {
+{
 
-            ViewData["mapdata"] = GetUSMap();
+	ViewData["mapdata"] = GetUSMap();
 
-            ViewData["datasource"] = GetUSPopulationData();
+	ViewData["datasource"] = GetUSPopulationData();
 
-            return View();
+	return View();
 
-        }
+}
 
+public object GetUSMap()
 
+{
 
+	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
+	JavaScriptSerializer ser = new JavaScriptSerializer();
 
-       public object GetUSMap()
+	ser.MaxJsonLength = int.MaxValue;
 
-        {
+	return new MapData(usajson);
 
-            string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+}
 
-            JavaScriptSerializer ser = new JavaScriptSerializer();
 
-            ser.MaxJsonLength = int.MaxValue;
 
-            return new MapData(usajson);
+public List<CountyPopulationData> GetUSPopulationData()
 
-        }
+{
 
+	List<CountyPopulationData> populationData = new List<CountyPopulationData>
 
+	{
 
-       public List<CountyPopulationData> GetUSPopulationData()
+		new CountyPopulationData(){ Name= "California", Population=38332521},
 
-        {
+		new CountyPopulationData(){ Name= "Texas", Population=26448193},
 
-            List<CountyPopulationData> populationData = new List<CountyPopulationData>
+		new CountyPopulationData(){ Name= "New York", Population=19651127},
 
-            {
+		new CountyPopulationData(){ Name= "Florida", Population=19552860},
 
-				new CountyPopulationData(){ Name= "California", Population=38332521},
+		new CountyPopulationData(){ Name= "Illinois", Population=12882135},
 
-				new CountyPopulationData(){ Name= "Texas", Population=26448193},
+		new CountyPopulationData(){ Name= "Pennsylvania", Population=12773801},
 
-				new CountyPopulationData(){ Name= "New York", Population=19651127},
+		new CountyPopulationData(){ Name= "Ohio", Population=11570808},
 
-				new CountyPopulationData(){ Name= "Florida", Population=19552860},
+		new CountyPopulationData(){ Name= "Georgia", Population=9992167},
 
-				new CountyPopulationData(){ Name= "Illinois", Population=12882135},
+		new CountyPopulationData(){ Name= "Michigan", Population=9895622},
 
-				new CountyPopulationData(){ Name= "Pennsylvania", Population=12773801},
+		new CountyPopulationData(){ Name= "North Carolina", Population=9848060},
 
-				new CountyPopulationData(){ Name= "Ohio", Population=11570808},
+		new CountyPopulationData(){ Name= "New Jersey", Population=8899339},
 
-				new CountyPopulationData(){ Name= "Georgia", Population=9992167},
+		new CountyPopulationData(){ Name= "Virginia", Population=8260405},
 
-				new CountyPopulationData(){ Name= "Michigan", Population=9895622},
+		new CountyPopulationData(){ Name= "Washington", Population=6971406},
 
-				new CountyPopulationData(){ Name= "North Carolina", Population=9848060},
+		new CountyPopulationData(){ Name= "Massachusetts", Population=6692824},
 
-				new CountyPopulationData(){ Name= "New Jersey", Population=8899339},
+		new CountyPopulationData(){ Name= "Arizona", Population=6626624},
 
-				new CountyPopulationData(){ Name= "Virginia", Population=8260405},
+		new CountyPopulationData(){ Name= "Indiana", Population=6570902},
 
-				new CountyPopulationData(){ Name= "Washington", Population=6971406},
+		new CountyPopulationData(){ Name= "Tennessee", Population=6495978},
 
-				new CountyPopulationData(){ Name= "Massachusetts", Population=6692824},
+		new CountyPopulationData(){ Name= "Missouri", Population=6044171},
 
-				new CountyPopulationData(){ Name= "Arizona", Population=6626624},
+		new CountyPopulationData(){ Name= "Maryland", Population=5928814},
 
-				new CountyPopulationData(){ Name= "Indiana", Population=6570902},
+		new CountyPopulationData(){ Name= "Wisconsin", Population=5742713},
 
-				new CountyPopulationData(){ Name= "Tennessee", Population=6495978},
+		new CountyPopulationData(){ Name= "Minnesota", Population=5420380},
 
-				new CountyPopulationData(){ Name= "Missouri", Population=6044171},
+		new CountyPopulationData(){ Name= "Colorado", Population=5268367},
 
-				new CountyPopulationData(){ Name= "Maryland", Population=5928814},
+		new CountyPopulationData(){ Name= "Alabama", Population=4833722},
 
-				new CountyPopulationData(){ Name= "Wisconsin", Population=5742713},
+		new CountyPopulationData(){ Name= "South Carolina", Population=4774839},
 
-				new CountyPopulationData(){ Name= "Minnesota", Population=5420380},
+		new CountyPopulationData(){ Name= "Louisiana", Population=4625470},
 
-				new CountyPopulationData(){ Name= "Colorado", Population=5268367},
+		new CountyPopulationData(){ Name= "Kentucky", Population=4395295},
 
-				new CountyPopulationData(){ Name= "Alabama", Population=4833722},
+		new CountyPopulationData(){ Name= "Oregon", Population=3930065},
 
-				new CountyPopulationData(){ Name= "South Carolina", Population=4774839},
+		new CountyPopulationData(){ Name= "Oklahoma", Population=3850568},
 
-				new CountyPopulationData(){ Name= "Louisiana", Population=4625470},
+		new CountyPopulationData(){ Name= "Puerto Rico", Population=3615086},
 
-				new CountyPopulationData(){ Name= "Kentucky", Population=4395295},
+		new CountyPopulationData(){ Name= "Connecticut", Population=3596080},
 
-				new CountyPopulationData(){ Name= "Oregon", Population=3930065},
+		new CountyPopulationData(){ Name= "Iowa", Population=3090416},
 
-				new CountyPopulationData(){ Name= "Oklahoma", Population=3850568},
+		new CountyPopulationData(){ Name= "Mississippi", Population=2991207},
 
-				new CountyPopulationData(){ Name= "Puerto Rico", Population=3615086},
+		new CountyPopulationData(){ Name= "Arkansas", Population=2959373},
 
-				new CountyPopulationData(){ Name= "Connecticut", Population=3596080},
+		new CountyPopulationData(){ Name= "Utah", Population=2900872},
 
-				new CountyPopulationData(){ Name= "Iowa", Population=3090416},
+		new CountyPopulationData(){ Name= "Kansas", Population=2893957},
 
-				new CountyPopulationData(){ Name= "Mississippi", Population=2991207},
+		new CountyPopulationData(){ Name= "Nevada", Population=2790136},
 
-				new CountyPopulationData(){ Name= "Arkansas", Population=2959373},
+		new CountyPopulationData(){ Name= "New Mexico", Population=2085287},
 
-				new CountyPopulationData(){ Name= "Utah", Population=2900872},
+		new CountyPopulationData(){ Name= "Nebraska", Population=1868516},
 
-				new CountyPopulationData(){ Name= "Kansas", Population=2893957},
+		new CountyPopulationData(){ Name= "West Virginia", Population=1854304},
 
-				new CountyPopulationData(){ Name= "Nevada", Population=2790136},
+		new CountyPopulationData(){ Name= "Idaho", Population=1612136},
 
-				new CountyPopulationData(){ Name= "New Mexico", Population=2085287},
+		new CountyPopulationData(){ Name= "Hawaii", Population=1404054},
 
-				new CountyPopulationData(){ Name= "Nebraska", Population=1868516},
+		new CountyPopulationData(){ Name= "Maine", Population=1328302},
 
-				new CountyPopulationData(){ Name= "West Virginia", Population=1854304},
+		new CountyPopulationData(){ Name= "New Hampshire", Population=1323459},
 
-				new CountyPopulationData(){ Name= "Idaho", Population=1612136},
+		new CountyPopulationData(){ Name= "Rhode Island", Population=1051511},
 
-				new CountyPopulationData(){ Name= "Hawaii", Population=1404054},
+		new CountyPopulationData(){ Name= "Montana", Population=1015165},
 
-				new CountyPopulationData(){ Name= "Maine", Population=1328302},
+		new CountyPopulationData(){ Name= "Delaware", Population=925749},
 
-				new CountyPopulationData(){ Name= "New Hampshire", Population=1323459},
+		new CountyPopulationData(){ Name= "South Dakota", Population=844877},
 
-				new CountyPopulationData(){ Name= "Rhode Island", Population=1051511},
+		new CountyPopulationData(){ Name= "Alaska", Population=735132},
 
-				new CountyPopulationData(){ Name= "Montana", Population=1015165},
+		new CountyPopulationData(){ Name= "North Dakota", Population=723393},
 
-				new CountyPopulationData(){ Name= "Delaware", Population=925749},
+		new CountyPopulationData(){ Name= "District of Columbia", Population=646449},
 
-				new CountyPopulationData(){ Name= "South Dakota", Population=844877},
+		new CountyPopulationData(){ Name= "Vermont", Population=626630},
 
-				new CountyPopulationData(){ Name= "Alaska", Population=735132},
+		new CountyPopulationData(){ Name= "Wyoming", Population=582658}
 
-				new CountyPopulationData(){ Name= "North Dakota", Population=723393},
+	};
 
-				new CountyPopulationData(){ Name= "District of Columbia", Population=646449},
+	return populationData;
 
-				new CountyPopulationData(){ Name= "Vermont", Population=626630},
+}
 
-				new CountyPopulationData(){ Name= "Wyoming", Population=582658}
 
-            };
 
-            return populationData;
+public class CountyPopulationData
 
-        }
+{
 
+	public string name;
 
+	public string Name
 
-    public class CountyPopulationData
+	{
 
-    {
+		get { return name; }
 
-        public string name;
+		set { name = value; }
 
-        public string Name
+	}
 
-        {
 
-            get { return name; }
 
-            set { name = value; }
+	public double population;
 
-        }
 
 
+	public double Population
 
-        public double population;
+	{
 
+		get { return population; }
 
+		set { population = value; }
 
-        public double Population
+	}
 
-        {
-
-            get { return population; }
-
-            set { population = value; }
-
-        }
-
-    }
+}
 
 
 
@@ -285,7 +281,7 @@ For better understanding, “MapController.cs” is populated with datas of USA 
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 
 @{       
@@ -305,32 +301,32 @@ The JSON object “populationData” is used as dataSource in the following code
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-        @(Html.EJ().Map("container")            
+@(Html.EJ().Map("container")            
 
-                .Layers(lr =>
+.Layers(lr =>
 
-                {         
-
-
-
-                        lr.ShapeData(mapData)            
-
-                        .ShapeDataPath("name")
-
-                        .ShapePropertyPath("name")
-
-                        .DataSource(datasource)
-
-                        .Add();
-
-                })           
+{         
 
 
 
-                ) 
+	lr.ShapeData(mapData)            
+
+	.ShapeDataPath("name")
+
+	.ShapePropertyPath("name")
+
+	.DataSource(datasource)
+
+	.Add();
+
+})           
+
+
+
+) 
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview
+title: ColorPicker | ColorPicker  | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: ColorPicker

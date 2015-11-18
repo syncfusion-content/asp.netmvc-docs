@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | RadioButton | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: RadioButton
@@ -17,15 +17,15 @@ Set Id for Radio Button control as follows.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*set new id value as follows*@
+@*set new id value as follows*@
 
-    @Html.EJ().RadioButton("RadBtn_Male").Id("male_type").Name("Gender")
+@Html.EJ().RadioButton("RadBtn_Male").Id("male_type").Name("Gender")
 
-    <br />
+<br />
 
-    @Html.EJ().RadioButton("RadBtm_female").Id("female_type").Name("Gender")
+@Html.EJ().RadioButton("RadBtm_female").Id("female_type").Name("Gender")
 
 {% endhighlight %}
 
@@ -38,15 +38,15 @@ Setting a new prefix id for Radio Button control is as follows.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*set new idPrefix  value as follows*@
+@*set new idPrefix  value as follows*@
 
-    @Html.EJ().RadioButton("Radio_Male").IdPrefix("sync_").Name("Gender")
+@Html.EJ().RadioButton("Radio_Male").IdPrefix("sync_").Name("Gender")
 
-    <br />
+<br />
 
-    @Html.EJ().RadioButton("Radio_Female").IdPrefix("sync_").Name("Gender") 
+@Html.EJ().RadioButton("Radio_Female").IdPrefix("sync_").Name("Gender") 
 
 {% endhighlight %}
 
@@ -69,14 +69,14 @@ To identify, on the server side, which one was checked, give different values fo
 Set name and value for each radio button control as follows.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-	@*set name and value for each radio button as follows*@
+@*set name and value for each radio button as follows*@
 
-    @Html.EJ().RadioButton("Radio_Male").Name("Gender").Value("male")
+@Html.EJ().RadioButton("Radio_Male").Name("Gender").Value("male")
 
-    <br />
+<br />
 
-    @Html.EJ().RadioButton("Radio_Female").Name("Gender").Value("female") 
+@Html.EJ().RadioButton("Radio_Female").Name("Gender").Value("female") 
 
 {% endhighlight %}

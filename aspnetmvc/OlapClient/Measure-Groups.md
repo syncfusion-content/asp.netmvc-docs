@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Measure-Groups
+title: Measure Groups | OLAPClient | ASP.NET MVC | Syncfusion
 description: measure groups 
 platform: ejmvc
 control: OLAPClient
@@ -11,11 +11,11 @@ documentation: ug
 
 In Cube Dimension Browser tree-view can be viewed in a filtered manner through the Measure Groups option. This feature allows you to view the list of measure groups and dimensions associated with the selected measure group from the cube.
 
-{% highlight c# %}
+{% highlight C# %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.EnableMeasureGroups(true)
-	.Url(Url.Content("~/wcf/OlapClientService.svc"))
+@Html.EJ().Olap().OlapClient("OlapClient1")
+.EnableMeasureGroups(true)
+.Url(Url.Content("~/wcf/OlapClientService.svc"))
 
 {% endhighlight %}
 

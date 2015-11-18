@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping-Support
+title: Grouping Support | DropDownList | ASP.NET MVC | Syncfusion
 description: grouping support
 platform: ejmvc
 control: DropDownList
@@ -19,46 +19,46 @@ The following steps explain you how to group data items in the DropDownList cont
 
 
 
-   ~~~ js
+   ~~~ cshtml
    
-		// Add the following code example in CSHTML page.
-		@H@Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Check.Models.Books>)ViewBag.datasource)
-		.DropDownListFields(df => df.ID("id").Text("text").Category("category")).Width("200px").AllowGrouping(true)
+	// Add the following code example in CSHTML page.
+	@H@Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Check.Models.Books>)ViewBag.datasource)
+	.DropDownListFields(df => df.ID("id").Text("text").Category("category")).Width("200px").AllowGrouping(true)
 
    ~~~
-   {:.prettyprint }
-
-   ~~~ cs
    
-		// Define the DataSource in the controller page as follows.
-		  List<Books> book = new List<Books>();
-		  public ActionResult Index()
-		  {            
-			  book.Add(new Books { id = 1,  text= "Austria", category= "A"});
-			  book.Add(new Books { id = 2, text= "Australia", category= "A" });
-			  book.Add(new Books { id = 3, text =  "Bangladesh", category= "B"  });
-			  book.Add(new Books { id = 4, text = "Belgium", category= "B"  });
-			  book.Add(new Books { id = 5, text = "Canada", category= "C" });
-			  book.Add(new Books { id = 6, text = "Denmark", category= "D" });
-			  book.Add(new Books { id = 7, text = "Egypt", category= "E"});
-			  book.Add(new Books { id = 8, text = "England", category= "E" });
-			  book.Add(new Books { id = 9, text = "India", category= "I"  });
-			  book.Add(new Books { id = 10, text = "Italy", category= "I"  });
-			  book.Add(new Books { id = 11, text = "Haiti", category= "H" });
-			  book.Add(new Books { id = 12, text = "Jordan", category= "J" });
-			  book.Add(new Books { id = 13, text = "Jamaica", category= "J" });
-			  ViewBag.datasource = book;
-			  return View();
-		   }
-		   public class Books
-		   {
-			  public int id { get; set; }
-			  public string text { get; set; }
-			  public string category { get; set; }
-			}
+
+   ~~~ csharp
+   
+	// Define the DataSource in the controller page as follows.
+	List<Books> book = new List<Books>();
+	public ActionResult Index()
+	{            
+	  book.Add(new Books { id = 1,  text= "Austria", category= "A"});
+	  book.Add(new Books { id = 2, text= "Australia", category= "A" });
+	  book.Add(new Books { id = 3, text =  "Bangladesh", category= "B"  });
+	  book.Add(new Books { id = 4, text = "Belgium", category= "B"  });
+	  book.Add(new Books { id = 5, text = "Canada", category= "C" });
+	  book.Add(new Books { id = 6, text = "Denmark", category= "D" });
+	  book.Add(new Books { id = 7, text = "Egypt", category= "E"});
+	  book.Add(new Books { id = 8, text = "England", category= "E" });
+	  book.Add(new Books { id = 9, text = "India", category= "I"  });
+	  book.Add(new Books { id = 10, text = "Italy", category= "I"  });
+	  book.Add(new Books { id = 11, text = "Haiti", category= "H" });
+	  book.Add(new Books { id = 12, text = "Jordan", category= "J" });
+	  book.Add(new Books { id = 13, text = "Jamaica", category= "J" });
+	  ViewBag.datasource = book;
+	  return View();
+	}
+	public class Books
+	{
+	  public int id { get; set; }
+	  public string text { get; set; }
+	  public string category { get; set; }
+	}
 			
    ~~~
-   {:.prettyprint }
+   
 
 
 2. The above code example illustrates the following output.
@@ -77,52 +77,52 @@ Another way to group DropDownList is by using UL and LI structure. Here, you hav
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().DropDownList("dropdownlist").TargetID(“vegetablelist"). AllowGrouping(true)
 
-                        <div id="vegetablelist">
+<div id="vegetablelist">
 
-                            <ul>
+	<ul>
 
-                                <span>Leafy and Salad</span>
+		<span>Leafy and Salad</span>
 
-                                <li>Cabbage</li>
+		<li>Cabbage</li>
 
-                                <li>Pea</li>
+		<li>Pea</li>
 
-                                <li>Spinach</li>
+		<li>Spinach</li>
 
-                                <li>Wheatgrass</li>
+		<li>Wheatgrass</li>
 
-                                <li>Yarrow </li>
+		<li>Yarrow </li>
 
-                                <span>Beans</span>
+		<span>Beans</span>
 
-                                <li>Chickpea</li>
+		<li>Chickpea</li>
 
-                                <li>Green bean</li> 
+		<li>Green bean</li> 
 
-                                 <span>Bulb and Stem</span>
+		 <span>Bulb and Stem</span>
 
-                                <li>Garlic</li>
+		<li>Garlic</li>
 
-                                <li>Garlic Chives</li>
+		<li>Garlic Chives</li>
 
-                                 <span>Root and Tuberous</span>
+		 <span>Root and Tuberous</span>
 
-                                <li>Beetroot</li>
+		<li>Beetroot</li>
 
-                                <li>Carrot</li>
+		<li>Carrot</li>
 
-                            </ul>
+	</ul>
 
-                        </div>
+</div>
 
 {% endhighlight %}
 
 ![](Grouping-Support_images/Grouping-Support_img2.png)
 
-_Figure 28: Grouping in Dropdownlist by using UL and LI structure_
-
+Grouping in Dropdownlist by using UL and LI structure
+{:.caption}

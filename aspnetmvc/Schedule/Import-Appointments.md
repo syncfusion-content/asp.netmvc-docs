@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Import-Appointments
+title: Import Appointments | Schedule | ASP.NET MVC | Syncfusion
 description: import appointments
 platform: ejmvc
 control: Schedule
@@ -13,7 +13,10 @@ documentation: ug
 * Generally, the import functionality is achieved by using the server-side method renderingImportAppointments that takes the path of an ics file as its parameter. This method can be accessed through the object of the ScheduleImport class. You can dynamically choose the ics files to be imported into the Schedule control by using the upload box to select the ics file from the specific location. 
 * Importing can be achieved by using the following code example in MVC and ASP. It is not applicable for JS, as it is done through server-side.
 
-{% highlight html %}
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
 // Upload box to dynamically import the ICS files from any of the system location
 @(Html.EJ()
 .Uploadbox("UploadDefault")
@@ -60,7 +63,8 @@ dManager.adaptor = new ej.UrlAdaptor();$("#Schedule1")
 #UploadDefault{margin-right: 45px;margin-top: 10px;float: right;}
 #UploadDefault .e-selectpart{padding: 3px 10px;}
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
+
 public partial class ScheduleController : Controller
 {
 	public ActionResult ScheduleImport()
@@ -114,6 +118,7 @@ public partial class ScheduleController : Controller
 }
 
 {% endhighlight %}
+{% endtabs %} 
 
 * Execute the above code. Now, click on the browse button. 
 * It displays a window to choose the ics files which is to be uploaded into the Schedule control as illustrated in the following screenshot. 

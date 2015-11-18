@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Schedule | Schedule | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Schedule
 documentation: ug
 ---
 
-# Overview
+# Schedule
 
 * The Schedule control is an event calendar which is highly customizable and  provide the look and feel of the Outlook-like Scheduler.The major advantage with Schedule is that it allows you to manage and list out various activities of a day for various resources. With the help of this control, the users can track their appointments, create a new one and can edit/delete the older ones. 
 * The basic idea behind the usage of this control is to plan, create and manage the required appointments/events for the users and also to organize various other activities like meetings, important deadlines, tasks, etc. 

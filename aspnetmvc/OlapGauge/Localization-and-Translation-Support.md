@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization-and-Translation-Support
+title: Localization and Translation Support | OLAPGauge | ASP.NET MVC | Syncfusion
 description: localization and translation support
 platform: ejmvc
 control: OLAPGauge
@@ -15,7 +15,7 @@ The following table lists the default English localization User Interface based 
 
 
 
-_Table: List of default English localization User Interface based on French culture_
+_List of default English localization User Interface based on French culture_
 
 
 
@@ -66,41 +66,41 @@ RenderingFailed</td><td>
 The following code example illustrates you on how to localize OlapGuage’s User Interface (UI) based on “French” culture.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-@ScriptSection{
+@ScriptSection
+{
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-ej.olap.OlapGauge.locale["fr-FR"] = {
+ej.olap.OlapGauge.locale["fr-FR"] = 
+	{
 
-                        RevenueGoal: "Objectif de chiffre d'affaires",
+	RevenueGoal: "Objectif de chiffre d'affaires",
 
-                        RevenueValue: "Valeur du chiffre d'affaires",
+	RevenueValue: "Valeur du chiffre d'affaires",
 
-                        RevenueFor: "Recettes pour",
+	RevenueFor: "Recettes pour",
 
-                        MDXqueryExecutionFailed: "L'exécution de la requête MDX pas",
+	MDXqueryExecutionFailed: "L'exécution de la requête MDX pas",
 
-                        PreparingAndExecutingMDXquery: "La préparation et l'exécution de la requête MDX",
+	PreparingAndExecutingMDXquery: "La préparation et l'exécution de la requête MDX",
 
-                        MDXqueryExecutedSuccessfully: "MDX requête exécutée avec succès",
+	MDXqueryExecutedSuccessfully: "MDX requête exécutée avec succès",
 
-                        RenderingStarted: "Rendu commencé",
+	RenderingStarted: "Rendu commencé",
 
-                        RenderingSucceeded: "Rendu réussi",
+	RenderingSucceeded: "Rendu réussi",
 
-                        RenderingFailed: "Rendant pas"
+	RenderingFailed: "Rendant pas"
 
-                    }
+	}
 
-    </script>
+</script>
 
 }
-{% endhighlight  %}
 
-{% highlight js %}
 @Controlsection{
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").Locale("fr-FR").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
@@ -167,7 +167,7 @@ N> In order to render the localized OLAP Gauge, You are required to reset the co
 
 To apply control side localization, refer the following code example:
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 ej.olap.OlapGauge.locale["zh-CN"] = {
@@ -181,9 +181,7 @@ ej.olap.OlapGauge.locale["zh-CN"] = {
 
 To render the localized Cube information,__set “_Locale__Identifier”___in the connection string.
 
-{% highlight c# %}
-
-
+{% highlight C# %}
 
 //1036 refers to “fr-FR” culture.
 

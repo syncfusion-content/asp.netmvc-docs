@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Character-Settings
+title: Character Settings | DigitalGauge | ASP.NET MVC | Syncfusion
 description: character settings
 platform: ejmvc
 control: DigitalGauge
@@ -15,7 +15,7 @@ The opacityof the character is adjustable with the help of opacity property. The
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -47,7 +47,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img1.png)
 
-_Figure 32: Digital Gauge control with character setting_
+Digital Gauge control with character setting
+{:.caption}
 
 
 
@@ -61,7 +62,7 @@ _Figure 32: Digital Gauge control with character setting_
 5. EightCrossEightSquareMatrix.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().DigitalGauge("DigitalGauge1")
 
@@ -106,13 +107,14 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img2.png)
 
-_Figure 33: Digital Gauge control with character type as seven segment_
+Digital Gauge control with character type as seven segment
+{:.caption}
 
 ## Text Positioning
 
 The text in the DigitalGauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and the y variable positions the text in the vertical axis.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering *@
 
@@ -154,13 +156,14 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img3.png)
 
-_Figure 34: Digital Gauge control with position text based on the background image_
+Digital Gauge control with position text based on the background image
+{:.caption}
 
 ## Shadow Effects
 
 The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @* For Digital Gauge rendering*@
 
@@ -205,7 +208,8 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 ![](Character-Settings_images/Character-Settings_img4.png)
 
-_Figure 35: Digital Gauge control with shadow option_
+Digital Gauge control with shadow option
+{:.caption}
 
 
 

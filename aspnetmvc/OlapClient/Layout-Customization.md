@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout-Customization
+title: Layout Customization | OLAPClient | ASP.NET MVC | Syncfusion
 description: layout customization
 platform: ejmvc
 control: OLAPClient
@@ -9,9 +9,9 @@ documentation: ug
 
 # Layout Customization
 
-OLAP Client UI comes with options to customize the Grid and Chart layout, such as:
+**OLAP Client UI** comes with options to customize the **Grid** and **Chart** layout, such as:
 
-1. Default View - Sets the start-up control. 
+1. **Default View** - Sets the start-up control. 
 2. Tab/Tile View – Tab or Tile view to visualize the controls separately or in the same layout. 
 3. Hide Grid/Chart - Hides any one of the control by default. 
 4. Toggle Panel – Turns On/Off the visibility of Cube Browser and Axis Element Builder panels.  
@@ -24,11 +24,11 @@ OLAP Client UI comes with options to customize the Grid and Chart layout, such a
 
 In Tile View representation, both Grid and Chart will be displayed one over the other, in the same layout. 
 
-{% highlight c# %}
+{% highlight html%}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc")
-	.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tile); });
+@Html.EJ().Olap().OlapClient("OlapClient1")
+.Url("../wcf/OlapClientService.svc")
+.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tile); });
 
 {% endhighlight %}
 
@@ -39,11 +39,11 @@ In Tile View representation, both Grid and Chart will be displayed one over the 
 In Tab View representation, both Grid and Chart will be displayed in a separate tab.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc")
-	.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tab); });
+@Html.EJ().Olap().OlapClient("OlapClient1")
+.Url("../wcf/OlapClientService.svc")
+.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tab); });
 
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ After you set defaultView property either to Chart or Grid, the corresponding co
 To display/visualize Chart control by default, set defaultView to Chart.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 	@Html.EJ().Olap().OlapClient("OlapClient1")
 	.Url("../wcf/OlapClientService.svc")
@@ -73,7 +73,7 @@ To display/visualize Chart control by default, set defaultView to Chart.
 To display/visualize Grid control by default, set defaultView to Grid.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapClient("OlapClient1")
 .Url("../wcf/OlapClientService.svc")
@@ -90,7 +90,7 @@ To display/visualize Grid control by default, set defaultView to Grid.
 After you set thedisplayMode option to GridOnly, the Chart is hidden and the data is displayed only in Grid.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapClient("OlapClient1")
 .Url("../wcf/OlapClientService.svc")
@@ -106,7 +106,7 @@ After you set thedisplayMode option to GridOnly, the Chart is hidden and the da
 After you set the displayMode option to ChartOnly, the Grid is hidden and data is displayed only in Chart.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapClient("OlapClient1")
 .Url("../wcf/OlapClientService.svc")
@@ -121,7 +121,7 @@ After you set the displayMode option to ChartOnly, the Grid is hidden and data 
 After you set the displayMode option to ChartAndGrid, data is displayed in both Grid and Chart.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapClient("OlapClient1")
 .Url("../wcf/OlapClientService.svc")
@@ -135,7 +135,7 @@ After you set the displayMode option to ChartAndGrid, data is displayed in both
 
 You are provided with an option to toggle the visibility of Axis Element Builder and Cube Dimension Browser panels in OLAPClient.
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 	@Html.EJ().Olap().OlapClient("OlapClient1")
 	.Url("../wcf/OlapClientService.svc")
@@ -152,11 +152,11 @@ You can maximize OLAP Grid and OLAP Chart to full screen mode inside OLAP Client
 ![](Layout-Customization_images/Layout-Customization_img9.png)
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc")
-	.Title("OLAP Browser").DisplaySettings(disp => { disp.EnableFullScreen(true); });
+@Html.EJ().Olap().OlapClient("OlapClient1")
+.Url("../wcf/OlapClientService.svc")
+.Title("OLAP Browser").DisplaySettings(disp => { disp.EnableFullScreen(true); });
 
 {% endhighlight %}
 

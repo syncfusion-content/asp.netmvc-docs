@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modal-Dialog-Support
+title: Modal Dialog Support | Dialog | ASP.NET MVC | Syncfusion
 description: modal dialog support
 platform: ejmvc
 control: Dialog
@@ -18,7 +18,7 @@ The following steps explains you the implementation of modal dialog.
 1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
 
 
-   ~~~ js
+   ~~~ cshtml
 
 		// In the CSHTML page add the Dialog widget using helpers and set EnableModal to ‘true’. 
 
@@ -26,61 +26,61 @@ The following steps explains you the implementation of modal dialog.
 
 
 
-		@{Html.EJ().Dialog("dialogLoginForm").Title("Login Form").ContentTemplate(@<div>
+	@{Html.EJ().Dialog("dialogLoginForm").Title("Login Form").ContentTemplate(@<div>
 
-					<table>
+				<table>
 
-						<tr>
+					<tr>
 
-							<td>
+						<td>
 
-								User Name
+							User Name
 
-								<input type="text" id="txtName" class="ejinputtext" style="width: 100%" />
+							<input type="text" id="txtName" class="ejinputtext" style="width: 100%" />
 
-							</td>
+						</td>
 
-						</tr>
+					</tr>
 
-						<tr>
+					<tr>
 
-							<td>
+						<td>
 
-								Password
+							Password
 
-								<input type="text" id="Text1" class="ejinputtext" style="width: 100%" />
+							<input type="text" id="Text1" class="ejinputtext" style="width: 100%" />
 
-							</td>
+						</td>
 
-						</tr>
+					</tr>
 
-						<tr>
+					<tr>
 
-							<td align="center">
+						<td align="center">
 
-								<input type="button" id="downloadBtn" value="Login" class="e-btn" style="width: 100px; height: 30px" />
+							<input type="button" id="downloadBtn" value="Login" class="e-btn" style="width: 100px; height: 30px" />
 
-							</td>
+						</td>
 
-						</tr>
+					</tr>
 
-						<tr>
+					<tr>
 
-							<td align="center">
+						<td align="center">
 
-								<a href="#">Forgot Password</a>
+							<a href="#">Forgot Password</a>
 
-							</td>
+						</td>
 
-						</tr>
+					</tr>
 
-					</table>
+				</table>
 
-				</div>).Width(250).Height("250").EnableModal(true).Render();}
+			</div>).Width(250).Height("250").EnableModal(true).Render();}
 
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -89,5 +89,5 @@ The following steps explains you the implementation of modal dialog.
 
    ![](Modal-Dialog-Support_images/Modal-Dialog-Support_img1.png)
 
-   _Figure20: Modal Dialog_
-
+   Modal Dialog
+   {:.caption}

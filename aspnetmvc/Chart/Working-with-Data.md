@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-Data
+title: Working with Data | Chart | ASP.NET MVC | Syncfusion
 description: working with data
 platform: ejmvc
 control: Chart
@@ -16,144 +16,147 @@ Chart gets data either locally or remotely. To populate the Chart with data, you
 EJ Chart provides you an option to bind the data to the Chart using the DataSource property of the series. 
 
 In Controllers:
+
+{% tabs %}
+
 {% highlight c# %}
 
-  public ArrayList GetData()
+public ArrayList GetData()
 
-        {
+{
 
-            ArrayList dataTable = new ArrayList();
+	ArrayList dataTable = new ArrayList();
 
 
 
-            dataTable.Add(new dataVal (“CHEESE BURGER", 100, 15, 15));
+	dataTable.Add(new dataVal (“CHEESE BURGER", 100, 15, 15));
 
-            dataTable.Add(new dataVal ("PIZZA", 100, 15, 9));
+	dataTable.Add(new dataVal ("PIZZA", 100, 15, 9));
 
-            dataTable.Add(new dataVal ("CHICKEN NOODLE", 50, 4, 2));
+	dataTable.Add(new dataVal ("CHICKEN NOODLE", 50, 4, 2));
 
-            dataTable.Add(new dataVal (“YOGURT”, 75, 10, 2));
+	dataTable.Add(new dataVal (“YOGURT”, 75, 10, 2));
 
-            dataTable.Add(new dataVal ("BEEF SANDWICH", 125, 22, 13)); 
+	dataTable.Add(new dataVal ("BEEF SANDWICH", 125, 22, 13)); 
 
-            return dataTable;
+	return dataTable;
 
-        }
+}
 
 
 
-        class dataVal
+class dataVal
 
-        {
+{
 
 
 
-            private string foodname;
+	private string foodname;
 
 
 
-            public string foodName
+	public string foodName
 
-            {
+	{
 
-                get { return foodname; }
+		get { return foodname; }
 
-                set { foodname = value; }
+		set { foodname = value; }
 
-            }
+	}
 
 
 
-            private double calorie;
+	private double calorie;
 
 
 
-            public double calorie
+	public double calorie
 
-            {
+	{
 
-                get { return calorie; }
+		get { return calorie; }
 
-                set { calorie = value; }
+		set { calorie = value; }
 
-            }
+	}
 
 
 
-            private double protein;
+	private double protein;
 
 
 
-            public double protein
+	public double protein
 
-            {
+	{
 
-                get { return protein; }
+		get { return protein; }
 
-                set { protein = value; }
+		set { protein = value; }
 
-            }
+	}
 
 
 
-            private double fat;
+	private double fat;
 
 
 
-            public double fat
+	public double fat
 
-            {
+	{
 
-                get { return fat; }
+		get { return fat; }
 
-                set { fat = value; }
+		set { fat = value; }
 
-            }
+	}
 
 
 
 
 
-           public dataVal(string foodname, double calorie, double protein, double fat)
+   public dataVal(string foodname, double calorie, double protein, double fat)
 
-            {
+	{
 
 
 
-                this.foodname = foodname;
+		this.foodname = foodname;
 
 
 
-                this.calorie = calorie;
+		this.calorie = calorie;
 
 
 
-                this.protein = protein;
+		this.protein = protein;
 
 
 
-                this.fat = fat;
+		this.fat = fat;
 
-            }
-        }
+	}
+}
 
-        public ActionResult SimpleChart()
+public ActionResult SimpleChart()
 
-        {
+{
 
-            var DataSource = GetData();
+	var DataSource = GetData();
 
-            ViewBag.datasource = DataSource;
+	ViewBag.datasource = DataSource;
 
-            return View();
+	return View();
 
-        }
+}
 
 {% endhighlight  %}
+
 In View:
 
-
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -190,9 +193,11 @@ In View:
 
 
 {% endhighlight  %}
+{% endtabs %}  
 ![](Working-with-Data_images/Working-with-Data_img1.png)
 
-
+Chart with local data
+{:.caption}
 
 ## Remote Data
 
@@ -203,12 +208,9 @@ You can bind the Essential Chart to remote data using DataManager and the Query 
 3. oData
 
 The following code example illustrates binding EJ Chart to oData service.   
-{% highlight js %}
+{% highlight CSHTML %}
 
-
-
-
- @(Html.EJ().Chart("container")                                                      
+@(Html.EJ().Chart("container")                                                      
 
   .Series(ser =>
 
@@ -232,7 +234,8 @@ The following code example illustrates binding EJ Chart to oData service.
 {% endhighlight  %}
 
 
+
 ![](Working-with-Data_images/Working-with-Data_img2.png)
 
-
-
+Chart with Remote data
+{:.caption}

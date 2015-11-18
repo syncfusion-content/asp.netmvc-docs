@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Button  | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Button
@@ -16,7 +16,7 @@ The following steps explains the details about rendering the button with Right t
 1. In the CSHTML page, configure the Button widget as follows.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @*Add the code in CSHTML page to configure and initialize the control*@
 
@@ -38,7 +38,5 @@ Execute the above code to render the following output.
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
-
-
-_Figure11: Button in Right to left format_
-
+Button in Right to left format
+{:.caption}

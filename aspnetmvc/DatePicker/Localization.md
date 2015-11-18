@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | DatePicker | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: DatePicker
@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is language support based on the culture in DatePicker. You can achieve the Localization using “Locale” property in DatePicker.
 
-In order to enable [localization](http://docs.syncfusion.com/aspnetmvc/datepicker/localization) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support for ASP.NET MVC controls and the “globalize.js” is a simple JavaScript library that allows you to format and dates based on the specified culture.
+In order to enable [localization](http://help.syncfusion.com/aspnetmvc/datepicker/localization) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support for ASP.NET MVC controls and the “globalize.js” is a simple JavaScript library that allows you to format and dates based on the specified culture.
 
 You can refer the following online link reference for globalize.js
 
@@ -28,14 +28,14 @@ The following steps explain you how to get the Localization.
 1. In the CSHTML page, add the following code to render the DatePicker widget with localization.
 
 
-   ~~~ html
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized localization*@
+	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized localization*@
 
-		@Html.EJ().DatePicker("datePicker").Locale("vi-VN").ButtonText("Hôm nay")
+	@Html.EJ().DatePicker("datePicker").Locale("vi-VN").ButtonText("Hôm nay")
 
    ~~~
-   {:.prettyprint }
+
 
 
 2.  The following screenshot displays the output for the above code.
@@ -44,3 +44,5 @@ The following steps explain you how to get the Localization.
 
 ![](Localization_images/Localization_img1.png)
 
+Localization Support in DatePicker
+{:.caption}

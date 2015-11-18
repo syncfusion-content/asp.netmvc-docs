@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Exploration
+title: Data Exploration | OLAPClient | ASP.NET MVC | Syncfusion
 description: data exploration
 platform: ejmvc
 control: OLAPClient

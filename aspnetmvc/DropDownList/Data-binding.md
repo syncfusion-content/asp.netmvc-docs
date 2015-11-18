@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-binding
+title: Data binding | DropDownList | ASP.NET MVC | Syncfusion
 description: data-binding 
 platform: ejmvc
 control: DropDownList
@@ -13,7 +13,7 @@ documentation: ug
 
 The following sub-properties provides you a way to bind either the local or remote data to the Dropdown control.
 
-_Table_ _1_: Properties ofndropdown list in MVC for data binding_
+_Properties ofndropdown list in MVC for data binding_
 
 <table>
 <tr>
@@ -87,7 +87,9 @@ The following steps explains you the details of data binding with DropdownList.
 
 1. Add the below code in your page with to render the dropdown list with local data
 
-{% highlight html %}
+{% tabs %}
+  
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML<div class="control">
 <div class="ctrllabel">Select a bike</div>  
@@ -100,32 +102,32 @@ The following steps explains you the details of data binding with DropdownList.
 
 {% highlight c# %}
 // Initialize Datasource in the controller  
-      public ActionResult DropdownlistFeatures()  
-      {
-		List<Data> ListOrder = new List<Data>();
-		ListOrder.Add(new Data() { Id = "bk1", Text = "Aache RTR" });  
-		ListOrder.Add(new Data() { Id = "bk2", Text = "CBR 150-R" });  
-		ListOrder.Add(new Data() { Id = "bk3", Text = "CBZ Xtreme" }); 
-		ListOrder.Add(new Data() { Id = "bk4", Text = "Discover" });  
-		ListOrder.Add(new Data() { Id = "bk5", Text = "Dazzler" });  
-		ListOrder.Add(new Data() { Id = "bk6", Text = "Flame" });    
-        ListOrder.Add(new Data() { Id = "bk7", Text = "Fazzer" });  
-		ListOrder.Add(new Data() { Id = "bk8", Text = "FZ-S" });    
-        ListOrder.Add(new Data() { Id = "bk9", Text = "Pulsar" });
-		ListOrder.Add(new Data() { Id = "bk10", Text = "Shine" });
-		ListOrder.Add(new Data() { Id = "bk11", Text = "R15" }); 
-		ListOrder.Add(new Data() { Id = "bk12", Text = "Unicorn" });
-		ViewData["BikeList"] = ListOrder;
-		return View();
-	  }
-	  public class Data
-	  {
-			public string Id { get; set; }
-            public string Text { get; set; } 
-      }
+public ActionResult DropdownlistFeatures()  
+{
+	List<Data> ListOrder = new List<Data>();
+	ListOrder.Add(new Data() { Id = "bk1", Text = "Aache RTR" });  
+	ListOrder.Add(new Data() { Id = "bk2", Text = "CBR 150-R" });  
+	ListOrder.Add(new Data() { Id = "bk3", Text = "CBZ Xtreme" }); 
+	ListOrder.Add(new Data() { Id = "bk4", Text = "Discover" });  
+	ListOrder.Add(new Data() { Id = "bk5", Text = "Dazzler" });  
+	ListOrder.Add(new Data() { Id = "bk6", Text = "Flame" });    
+	ListOrder.Add(new Data() { Id = "bk7", Text = "Fazzer" });  
+	ListOrder.Add(new Data() { Id = "bk8", Text = "FZ-S" });    
+	ListOrder.Add(new Data() { Id = "bk9", Text = "Pulsar" });
+	ListOrder.Add(new Data() { Id = "bk10", Text = "Shine" });
+	ListOrder.Add(new Data() { Id = "bk11", Text = "R15" }); 
+	ListOrder.Add(new Data() { Id = "bk12", Text = "Unicorn" });
+	ViewData["BikeList"] = ListOrder;
+	return View();
+}
+public class Data
+{
+	public string Id { get; set; }
+	public string Text { get; set; } 
+}
 {% endhighlight %}
 
-
+{% endtabs %}
 
 
 Output of the above steps
@@ -134,7 +136,8 @@ Output of the above steps
 
 ![](Data-binding_images/Data-binding_img1.png)
 
-_Figure_ _10_: _Dropdown with Data binding -local_ 
+Dropdown with Data binding -local
+{:.caption}
 
 ## Remote data 
 
@@ -146,7 +149,7 @@ The following steps explains you the details of data binding from remote.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
@@ -166,8 +169,8 @@ Output of the above steps
 
 ![](Data-binding_images/Data-binding_img2.png)
 
-
-_Figure 11: Dropdown with Data binding -Remote_ 
+Dropdown with Data binding -Remote 
+{:.caption}
 
 
 

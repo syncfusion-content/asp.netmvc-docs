@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Task-Relationship
+title: Task Relationship | Gantt | ASP.NET MVC | Syncfusion
 description: task relationship
 platform: ejmvc
 control: Gantt
@@ -51,9 +51,7 @@ The following code example shows you how to show the predecessor in the Gantt co
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -64,8 +62,6 @@ The following code example shows you how to show the predecessor in the Gantt co
 .Datasource(ViewBag.datasource)
 
 )
-
-
 
 {% endhighlight %}
 
@@ -79,5 +75,5 @@ The following screenshot displays the output of the above code.
 
 ![](Task-Relationship_images/Task-Relationship_img5.png)
 
-_Figure 48: Task relationship_
-
+Task relationship
+{:.caption}

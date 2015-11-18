@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization-Support
+title: Localization Support | CurrencyTextBox | ASP.NET MVC | Syncfusion
 description: localization support
 platform: ejmvc
 control: CurrencyTextBox
@@ -13,7 +13,7 @@ Localization is language support based on the culture in CurrencyTextBox. You
 
 CurrencyTextBox widget provides multi-language support using globalization. You can customize the CurrencyTextBoxwith your own language style by using this feature. You can change the localization by using the locale property. The default value for Locale property is en-US .
 
-In order to enable [localization](http://docs.syncfusion.com/aspnetmvc/currencytextboxes/localization-support) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support and the “globalize.js” is a simple JavaScript library that allows you to format the value based on the specified culture.
+In order to enable [localization](http://help.syncfusion.com/aspnetmvc/currencytextboxes/localization-support) refer the following scripts: globalize.cultures.js and globalize.js. The “globalize.cultures.js” includes different language support and the “globalize.js” is a simple JavaScript library that allows you to format the value based on the specified culture.
 
 You can refer the following online link reference for globalize.js
 
@@ -35,7 +35,7 @@ You can dynamically change the language based on their culture.
 
 The following example describes the way to use localization in CurrencyTextBox.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().CurrencyTextbox("currency").Value("33").Locale("de-DE")
 
@@ -51,11 +51,11 @@ Output of CurrencyTextBox with localization.
 
 ![](Localization-Support_images/Localization-Support_img1.png)
 
-
-
+CurrencyTextBox with de-DE locale
+{:.caption}
 
 
 ![](Localization-Support_images/Localization-Support_img2.png)
 
-
-
+CurrencyTextBox with default (en-US) locale	
+{:.caption}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: TimePicker | TimePicker | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: TimePicker
 documentation: ug
 ---
 
-# Overview
+# TimePicker
 
  ![](Overview_images/Overview_img1.png)
 

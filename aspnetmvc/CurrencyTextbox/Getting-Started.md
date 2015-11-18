@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | CurrencyTextBox  | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: CurrencyTextBox
@@ -17,13 +17,14 @@ From the following steps you can learn how to create and use CurrencyTextBox in 
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
+Electricity Bill Calculator
+{:.caption}
 
 ### Create Editors 
 
 ASP.NET MVC Editors renders built-in features like keyboard navigation, min and max range and flexible API’s. 
 
-1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/currencytextbox/getting-started). 
+1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/currencytextbox/getting-started). 
 2. Add necessary helper elements to render the Editor components.
 
    ~~~ html
@@ -113,7 +114,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 		</div>
 
    ~~~
-   {:.prettyprint }
+ 
 
 
 3. The following styles are added to arrange the Editors.  You can add the following location in the URL path for the background image and to apply styling [http://js.syncfusion.com/UG/Web/Content/electricity.png](http://js.syncfusion.com/UG/Web/Content/electricity.png)
@@ -205,7 +206,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 		</style>
 		
    ~~~
-   {:.prettyprint }
+ 
 
 
 
@@ -213,9 +214,8 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
-_CurrencyTextBox with watermark text_
+CurrencyTextBox with watermark text
+{:.caption}
 
 ### Set MinValue, MaxValue and value in CurrencyTextBox
 
@@ -310,7 +310,8 @@ The following screenshot illustrates the output of the above code examples.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-
+CurrencyTextBox with Min/Max Value ranges
+{:.caption}
 
 ### Setting the Strict Mode Option
 
@@ -465,5 +466,6 @@ Run the above code sample, fill the required Textbox fields and click the Calcul
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-
+Electricity bill calculator with alert
+{:.caption}
 

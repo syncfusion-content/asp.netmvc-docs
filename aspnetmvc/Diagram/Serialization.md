@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serialization
+title: Serialization | Diagram | ASP.NET MVC | Syncfusion
 description: serialization
 platform: ejmvc
 control: Diagram

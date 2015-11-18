@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styles-and-Appearance
+title: Styles and Appearance | Tile | ASP.NET MVC | Syncfusion
 description: styles and appearance
 platform: ejmvc
 control: Tile

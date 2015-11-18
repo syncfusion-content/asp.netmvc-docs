@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add-Group-Tiles
+title: Add Group Tiles | Tile | ASP.NET MVC | Syncfusion
 description: add group tiles
 platform: ejmvc
 control: Tile
@@ -31,7 +31,7 @@ To align the small size tiles</td></tr>
 </table>
 To render group tile, refer to the following code example.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div class="group">
 
@@ -53,7 +53,7 @@ To render small-col-2 grouped tile, you need to render the number of tiles insid
 
  Refer the following code examples.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <div class="group">
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting
+title: Exporting | Schedule | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: Schedule
@@ -17,8 +17,10 @@ documentation: ug
 
 Important: Exporting feature is not applicable for JS as it is performed in Server side.
 
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
-{% highlight js %}
 @(Html.EJ().Schedule("Schedule1")
 // Add the necessary schedule properties here)
 <script type="text/javascript">
@@ -29,7 +31,8 @@ var obj = $("#Schedule1").data("ejSchedule");
 </script>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
+
 public partial class ScheduleController : Controller
 {
     ScheduleDataDataContext db = new ScheduleDataDataContext();
@@ -48,6 +51,7 @@ public partial class ScheduleController : Controller
 	}
 }
 {% endhighlight %}
+{% endtabs %} 
 
 Execute the above code to render the following output.
 
@@ -55,7 +59,5 @@ Execute the above code to render the following output.
 
 ![](Exporting_images/Exporting_img1.png)
 
-
-
-_Figure_ _129_: Schedule with Appointment export feature
-
+Schedule with Appointment export feature
+{:.caption}

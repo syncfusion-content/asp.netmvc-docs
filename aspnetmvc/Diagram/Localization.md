@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | Diagram | ASP.NET MVC | Syncfusion
 description: localization 
 platform: ejmvc
 control: Diagram
@@ -52,13 +52,11 @@ $("#DiagramContent").ejDiagram("model.locale","es-ES"); ej.datavisualization.Dia
 
         };
 
-
-
 {% endhighlight %}
 
 
 
 ![](Localization_images/Localization_img1.png)
 
-
-
+Localization
+{:.caption}

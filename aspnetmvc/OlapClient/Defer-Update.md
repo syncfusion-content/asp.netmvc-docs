@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Defer-Update
+title: Defer Update | OLAPClient | ASP.NET MVC | Syncfusion
 description: defer update
 platform: ejmvc
 control: OLAPClient
@@ -22,11 +22,11 @@ The following code example explains how you can enable the Defer Update in OlapC
 
 ![](Defer-Update_images/Defer-Update_images1.png)
 
-_Before Defer Update_
-
+Before Defer Update
+{:.caption}
 
 ![](Defer-Update_images/Defer-Update_images2.png)
 
-_After Defer Update_
-
+After Defer Update
+{:.caption}
 

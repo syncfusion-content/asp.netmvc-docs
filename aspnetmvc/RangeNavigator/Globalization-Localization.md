@@ -15,13 +15,13 @@ RangeNavigator supports Localization and Globalization to customize the labels b
 
 Localization is the process of customizing the user interface based on a culture specific to a particular country or region in order to display regional data.  The culture is represented by a unique string, for example, ―en-US‖ for U.S. English and ―fr-FR‖ for French (common), this is achieved by creating a javascript file “rangeNavigatorSource.fr-FR.js” and setting the equivalent word as illustrated in the following code sample.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-ej.datavisualization.RangeNavigator.locale["fr-FR"] = {
+ej.datavisualization.RangeNavigator.locale["fr-FR"] = 
+{
 
-
-
-    intervals: {
+    intervals: 
+	{
 
         //string to display the intervals on RangeNavigator
 
@@ -34,18 +34,14 @@ ej.datavisualization.RangeNavigator.locale["fr-FR"] = {
 }
 {% endhighlight  %}
 Localization is the key feature that provides solutions globally with the help of localized control. 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.Locale("fr-FR")
 
-          .Locale("fr-FR")
-
-       //...
-
-        .Render())
+.Render())
 
 
 {% endhighlight %}
@@ -56,18 +52,13 @@ Localization is the key feature that provides solutions globally with the help o
 ## RTL
 
 Right-to-Left or RTL describes the ability of application to handle and responds you to communicate with a right-to-left language, like Arabic or Japanese. EnableRTL property is used to change the rendering format to "Right to Left", by default it renders from "Left to Right" in RangeNavigator. 
-{% highlight html %}
-
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("rangecontainer")
 
-       // ...
+.EnableRTL(true)
 
-         .EnableRTL(true)
-
-       //...
-
-        .Render())
+.Render())
 
 {% endhighlight  %}
 

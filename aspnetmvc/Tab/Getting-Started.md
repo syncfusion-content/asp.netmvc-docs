@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | Tab  | ASP.NET MVC | Syncfusion
 description: getting started 
 platform: ejmvc
-control: Tab Control
+control: Tab 
 documentation: ug
 ---
 
@@ -19,9 +19,9 @@ The ASP.NET MVCTab control is an interface that displays the content in multiple
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+Tab control with Hotel Menu items
+{:.caption}
 
-
-_Figure 1: Tab control with Hotel Menu items_
 
 ### Create Tab Control
 
@@ -29,27 +29,27 @@ The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven i
 
 The following steps are used to create Tab control.  
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/tab/getting-started) Documentation.
+1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/tab/getting-started) Documentation.
 2. Add the mentioned code to the corresponding view page for Tab rendering.
 
 
-   ~~~ js
+   ~~~ cshtml
 
 
-		  @Html.EJ().Tab("DishType").Items(data =>
+	@Html.EJ().Tab("DishType").Items(data =>
 
-		{
+	{
 
-		    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div></div>);
+		data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div></div>);
 
-		    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+		data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
 
-		    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+		data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
-		})
+	})
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -60,34 +60,35 @@ The following output is displayed.
 
 ![](Getting-Started_images/Getting-Started_img2.png)' 
 
+Tab control with Header
 
+{:.caption}
 
-_Figure 2: Tab control with Header_
 
 ### Configure Content
 
 In this application, a detailed description is provided to each item. You can specify the contents in the Tab section within the Content template. 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
-  @Html.EJ().Tab("DishType").Items(data =>
+@Html.EJ().Tab("DishType").Items(data =>
 
-    {
+{
 
-    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
+data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
 
-    @Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
 
 
 
 <!--Food item description-->
 
-    <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 </div>);
 
-    })
+})
 
 {% endhighlight %}
 
@@ -100,33 +101,33 @@ The ASP.NET MVCRating control provides an intuitive rating experience that allow
 
 For more information about rating, refer to the following link: 
 
-<http://docs.syncfusion.com/aspnetmvc>
+<http://help.syncfusion.com/aspnetmvc>
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <!--Use the following codes with above Html contents-->
 
 
 
-  @Html.EJ().Tab("DishType").Items(data =>
+@Html.EJ().Tab("DishType").Items(data =>
 
 {
 
-    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
+data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
 
-    @Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
 
 
 
 <!--Food item description-->
 
-    <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 </div>);
 
-    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
 
-    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
 })
 
@@ -147,7 +148,7 @@ Each item has a variety of options, and these options are also specified in the 
 
 The following code example represents sub Tab control rendering using helper function.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <!--Use the following codes with in the  above Html -->
 
@@ -245,25 +246,27 @@ The following code example is used to position the image and content.
 
 <style type="text/css" class="cssStyles">
 
-       /*reuse the previous rating control style section code*/                
+   /*reuse the previous rating control style section code*/                
 
-       .ingredients {
+   .ingredients 
+   {
 
-            height: 180px;
+		height: 180px;
 
-            margin-top: 8px;
+		margin-top: 8px;
 
-        }
+	}
 
-        img {           
+	img 
+	{           
 
-            float: left;        
+		float: left;        
 
-            margin: 10px 26px 5px 1px;
+		margin: 10px 26px 5px 1px;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -281,7 +284,7 @@ Now, you can learn how to set the sub Tab orientation to vertical. By default, T
 
 The following code section renders the sub Tab element in the vertical orientation.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 <!--Use the following codes with in the  above Html -->
 
@@ -382,7 +385,8 @@ The second and third Tab contents are declared in the same method as of the firs
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
+
 @{Html.EJ().Tab("DishType").Items(data => 
         {
 			data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div> 
@@ -438,58 +442,58 @@ The second and third Tab contents are declared in the same method as of the firs
 
 Add third Tab contents in element during initialization using content template option.
 
-{% highlight js %}
+{% highlight CSHTML %}
 @{Html.EJ().Tab("DishType").Items(data =>  
-       {   
-			data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
-			Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
-			@firstTab()  
-			</div>); 
-            data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
-			Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
-			@secondTab() 
-			</div>); 
-            data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
-			Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.  
-			@thirdTab() 
-			</div>); 
-			}).Render();   
+   {   
+		data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
+		Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+		@firstTab()  
+		</div>); 
+		data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+		Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
+		@secondTab() 
+		</div>); 
+		data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+		Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.  
+		@thirdTab() 
+		</div>); 
+		}).Render();   
 
-     @helper thirdTab(){
-	 @Html.EJ().Tab("PastaMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
-	 {     
-		data.Add().ID("KheemaPasta").Text("Kheema Pasta ").ContentTemplate(@<div class="e-content">
-		<img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach.png" alt="kheema-pasta "> 
-		<div class="ingredients"> 
-		<p>     
-		Rate : $30<br /> 
-		Ingredients : chicken, onions, chilly, garlic &amp; tomatoes.<br />
-		Description: Kheema pasta dish make with veg or non-veg type.It is delicious and can be served for dinner, brunch or evening snack. 
-		</p> 
-		</div>  
-		</div>); 
-		data.Add().ID("TunaPasta").Text("Tuna Pasta").ContentTemplate(@<div class="e-content">
-		<img src="http://js.syncfusion.com/demos/web/images/accordion/garden-fresh.png" alt="tuna-pasta">
-		<div class="ingredients">  
-		<p>     
-		Rate : $55<br /> 
-		Ingredients : tomato ,olive, oninor &amp;garlic.<br />  
-		Description: Canned tuna is used to make this yummy tomato sauce.
-		</p>       
-		</div> 
-		</div> );   
-		data.Add().ID("ChannaPasta").Text("Channa Pasta").ContentTemplate(@<div class="e-content"> 
-		<img src="http://js.syncfusion.com/demos/web/images/accordion/zesty-mushroons-and-tomatoes.png" alt="channa-asta"> 
-		<div class="ingredients">   
-		<p>              
-		Rate : $30<br />     
-		Ingredients : sautered spinach mix, sweet corn, parsley &amp;mozarella cheese. .<br /> 
-		Description: This is a pasta dish make with leftover channa masala (chole). This can be made from scratch too by making the channa masala first and then tossing in the cooked pasta. 
-		</p>     
-		</div>      
-		</div>); 
-		})     
-		}
+ @helper thirdTab(){
+ @Html.EJ().Tab("PastaMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
+ {     
+	data.Add().ID("KheemaPasta").Text("Kheema Pasta ").ContentTemplate(@<div class="e-content">
+	<img src="http://js.syncfusion.com/demos/web/images/accordion/corn-and-spinach.png" alt="kheema-pasta "> 
+	<div class="ingredients"> 
+	<p>     
+	Rate : $30<br /> 
+	Ingredients : chicken, onions, chilly, garlic &amp; tomatoes.<br />
+	Description: Kheema pasta dish make with veg or non-veg type.It is delicious and can be served for dinner, brunch or evening snack. 
+	</p> 
+	</div>  
+	</div>); 
+	data.Add().ID("TunaPasta").Text("Tuna Pasta").ContentTemplate(@<div class="e-content">
+	<img src="http://js.syncfusion.com/demos/web/images/accordion/garden-fresh.png" alt="tuna-pasta">
+	<div class="ingredients">  
+	<p>     
+	Rate : $55<br /> 
+	Ingredients : tomato ,olive, oninor &amp;garlic.<br />  
+	Description: Canned tuna is used to make this yummy tomato sauce.
+	</p>       
+	</div> 
+	</div> );   
+	data.Add().ID("ChannaPasta").Text("Channa Pasta").ContentTemplate(@<div class="e-content"> 
+	<img src="http://js.syncfusion.com/demos/web/images/accordion/zesty-mushroons-and-tomatoes.png" alt="channa-asta"> 
+	<div class="ingredients">   
+	<p>              
+	Rate : $30<br />     
+	Ingredients : sautered spinach mix, sweet corn, parsley &amp;mozarella cheese. .<br /> 
+	Description: This is a pasta dish make with leftover channa masala (chole). This can be made from scratch too by making the channa masala first and then tossing in the cooked pasta. 
+	</p>     
+	</div>      
+	</div>); 
+	})     
+	}
 {% endhighlight  %}
 
 
@@ -499,27 +503,30 @@ Apply the following styles to the Tab.
 
 <style type="text/css" class="cssStyles">
 
-        /*to reuse the previous style section code and following css*/        
+	/*to reuse the previous style section code and following css*/        
 
-       .sandwichImg, .pastaImg {
+   .sandwichImg, .pastaImg 
+   {
 
-            height: 25px;
+		height: 25px;
 
-            width: 25px;
+		width: 25px;
 
-        }
+	}
 
-        .sandwichImg {
+	.sandwichImg 
+	{
 
-            background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;                       
+		background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;                       
 
-        }
+	}
 
-        .pastaImg {
+	.pastaImg 
+	{
 
-            background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-veggie.png") no-repeat;                 
+		background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-veggie.png") no-repeat;                 
 
-        }        
+	}        
 
 </style>
 

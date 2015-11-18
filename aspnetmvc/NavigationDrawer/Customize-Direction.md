@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize-Direction
+title: Customize Direction | NavigationDrawer | ASP.NET MVC | Syncfusion
 description: customize direction
 platform: ejmvc
 control: NavigationDrawer
@@ -13,28 +13,25 @@ By using this property, you can set the drawer to be open from right to left dir
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).Direction(NavigationDrawerDirection.Right).ContentTemplate(@<div>
 
-        @Html.EJ().ListView("list").Width(300).Items(items =>
+@Html.EJ().ListView("list").Width(300).Items(items =>
 
-         {
+{
 
-             items.Add().Text("Home");
+	 items.Add().Text("Home");
 
-             items.Add().Text("Profile");
+	 items.Add().Text("Profile");
 
-             items.Add().Text("Photos");
+	 items.Add().Text("Photos");
 
-             items.Add().Text("Location");
+	 items.Add().Text("Location");
 
-         })
+})
 
-    </div>)
-
-
-
+</div>)
 
 
 {% endhighlight %}

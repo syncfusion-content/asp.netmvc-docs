@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swim-lane
+title: Swim lane | Diagram | ASP.NET MVC | Syncfusion
 description: swim lane 
 platform: ejmvc
 control: Diagram
@@ -15,7 +15,8 @@ A swim lane is a visual element used in process flow diagrams or flowcharts. A t
 
 ![](Swim-lane_images/Swim-lane_img1.png)
 
-
+Swim lane Diagram
+{:.caption}
 
 Swim lane contains the following properties.
 
@@ -189,128 +190,125 @@ The following code illustrates how to create a simple swim lane.
 
 {% highlight c# %}
 
+private void GenerateNodes(DiagramProperties diagram)
 
+{
 
-        private void GenerateNodes(DiagramProperties diagram)
+	SwimLane swimlane = new SwimLane();
 
-        {
+	swimlane.Type = "swimlane";
 
-            SwimLane swimlane = new SwimLane();
+	swimlane.Name = "swimlane";
 
-            swimlane.Type = "swimlane";
+	Header header = new Header();
 
-            swimlane.Name = "swimlane";
+	header.Text = "HEADER";
 
-            Header header = new Header();
+	header.Height = 50;
 
-            header.Text = "HEADER";
+	header.FillColor = "#C7D4DF";
 
-            header.Height = 50;
+	header.FontSize = 11;
 
-            header.FillColor = "#C7D4DF";
+	swimlane.Header = header;
 
-            header.FontSize = 11;
+	swimlane.FillColor = "#C7D4DF";
 
-            swimlane.Header = header;
+	swimlane.Orientation = "horizontal";
 
-            swimlane.FillColor = "#C7D4DF";
+	swimlane.OffsetX = 350;
 
-            swimlane.Orientation = "horizontal";
+	swimlane.OffsetY = 290;
 
-            swimlane.OffsetX = 350;
+	swimlane.Height = 100;
 
-            swimlane.OffsetY = 290;
+	swimlane.Width = 450;
 
-            swimlane.Height = 100;
+	swimlane.Lanes = CreateLanes();
 
-            swimlane.Width = 450;
+	diagram.Nodes.Add(swimlane);
 
-            swimlane.Lanes = CreateLanes();
+}
 
-            diagram.Nodes.Add(swimlane);
 
-        }
 
+private Collection CreateLanes()
 
+{
 
-        private Collection CreateLanes()
+	Collection lanCol = new Collection();
 
-        {
+	Collection childCollec = new Collection();
 
-            Collection lanCol = new Collection();
+	childCollec.Add(createNode("Order1", "Node1", 100, 10));
 
-            Collection childCollec = new Collection();
+	childCollec.Add(createNode("Order2", "Node1", 250, 10));
 
-            childCollec.Add(createNode("Order1", "Node1", 100, 10));
+	lanCol.Add(CreateLane("stackCanvas1", "HEADER", "#f5f5f5",
 
-            childCollec.Add(createNode("Order2", "Node1", 250, 10));
+						   childCollec));
 
-            lanCol.Add(CreateLane("stackCanvas1", "HEADER", "#f5f5f5",
+	return lanCol;
 
-                                   childCollec));
+}
 
-            return lanCol;
+private Node createNode(string name, string label, 
 
-        }
+						double mLeft, double mTop)
 
-        private Node createNode(string name, string label, 
+{
 
-                                double mLeft, double mTop)
+	Node node = new Node();
 
-        {
+	node.Name = name;
 
-            Node node = new Node();
+	node.Width = 100;
 
-            node.Name = name;
+	node.Height = 40;
 
-            node.Width = 100;
+	node.Labels.Add(new Label() { Name = name, Text = label });
 
-            node.Height = 40;
+	node.MarginLeft = mLeft;
 
-            node.Labels.Add(new Label() { Name = name, Text = label });
+	node.MarginTop = mTop;
 
-            node.MarginLeft = mLeft;
+	return node;
 
-            node.MarginTop = mTop;
+}
 
-            return node;
 
-        }
 
+private Lane CreateLane(string name, string hText,
 
+					string fillColor, Collection children)
 
-        private Lane CreateLane(string name, string hText,
+{
 
-                            string fillColor, Collection children)
+	Lane lane = new Lane();
 
-        {
+	lane.Name = name;
 
-            Lane lane = new Lane();
+	Header header = new Header();
 
-            lane.Name = name;
+	header.Text = hText;
 
-            Header header = new Header();
+	header.Width = 50;
 
-            header.Text = hText;
+	header.FillColor = "#C7D4DF";
 
-            header.Width = 50;
+	header.FontSize = 11;
 
-            header.FillColor = "#C7D4DF";
+	lane.FillColor = "#f5f5f5";
 
-            header.FontSize = 11;
+	lane.Header = header;
 
-            lane.FillColor = "#f5f5f5";
+	lane.Height = 120;
 
-            lane.Header = header;
+	lane.Children = children;
 
-            lane.Height = 120;
+	return lane;
 
-            lane.Children = children;
-
-            return lane;
-
-        }
-
+}
 {% endhighlight %}
 
 

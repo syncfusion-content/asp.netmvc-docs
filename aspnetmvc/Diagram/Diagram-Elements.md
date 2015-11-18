@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Diagram-Elements
+title: Diagram Elements | Diagram | ASP.NET MVC | Syncfusion
 description: diagram elements
 platform: ejmvc
 control: Diagram
@@ -20,6 +20,9 @@ documentation: ug
 
 
 ![](Diagram-Elements_images/Diagram-Elements_img1.png)
+
+Diagram-elements
+{:.caption}
 
 
 

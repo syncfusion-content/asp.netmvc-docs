@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | AutoComplete | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: DataManager
@@ -13,9 +13,9 @@ documentation: ug
 
 A data source can be bound to a Grid through the DataManager. The DataManager supports JSON array binding. It is useful to bind records in a client-side by using JSON data that is very helpful in Single Page Application (SPA) and in feature rich web application. To achieve this, you can refer to the following code example.
 
-{% highlight js %}
+{% tabs %}
 
-
+{% highlight CSHTML %}
 
 //connection local reference
 
@@ -50,7 +50,8 @@ A data source can be bound to a Grid through the DataManager. The DataManager su
         }))
 
 {% endhighlight %}
-{% highlight c# %}
+
+{% highlight C# %}
 
 
 public class HomeController : Controller
@@ -95,11 +96,15 @@ public class HomeController : Controller
 
 
 {% endhighlight %}
+
+{% endtabs %} 
+
 The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
+Binding loca data to grid
+{:.caption}
 
 ## REST Services
 
@@ -108,7 +113,7 @@ The result of the above code example is illustrated as follows.
 OData is a standardized protocol for creating and consuming data. You can retrieve data from oData service by using DataManager. You can refer to the following code example of remote Data binding by using the oData service.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 
@@ -147,7 +152,8 @@ The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-
+OData binding
+{:.caption}
 
 ## OData V4
 
@@ -194,19 +200,20 @@ The result of the above code example is illustrated as follows.
 ![](Data-Binding_images/Data-Binding_img3.png)
 
 
-
-
+OData v4 request and response
+{:.caption}
 
 ![](Data-Binding_images/Data-Binding_img4.png)
 
-
+OData v4 binding
+{:.caption}
 
 ## WebAPI binding
 
 The Web API is a programmatic interface to define the request and response messages system that is mostly exposed in JSON or XML. The DataManager contains default adaptor to handle the Web API request and responses. The WebApiAdaptor is discussed briefly in the Adaptor section.
 
 Refer to the following code example for consuming the Web API data by using the DataManager.
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Adaptor(AdaptorType.WebApiAdaptor)
 
 
@@ -243,11 +250,15 @@ The request to the Web API and response is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img5.png)
 
+Web API adaptor request and response
+{:.caption}
+
 The result for the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img6.png)
 
-
+Web API data binding
+{:.caption}
 
 ## Other Web Services binding
 
@@ -255,7 +266,7 @@ The DataManager can also retrieve data from the ASP.NET Web methods and ASP.NET 
 
 Refer to the following code example to know how the DataManager can be used to consume data from the web method.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().DataManager("FlatData").URL("WebService1.asmx/getData"))
 
@@ -293,7 +304,8 @@ Refer to the following code example to know how the DataManager can be used to c
 
 ![](Data-Binding_images/Data-Binding_img7.png)
 
-
+ASP.Net Web service binding
+{:.caption}
 
 ## Offline Mode
 
@@ -301,7 +313,7 @@ The offline mode is one of the useful features of the DataManager that can be en
 
 In the following code example, the offline property of the DataManager is set as true.
 
-{% highlight js %}
+{% highlight CSHTML %}
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true))
 
 
@@ -338,7 +350,8 @@ The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img8.png)
 
-
+Figure offline mode 
+{:.caption}   
 
 ## Load on demand
 
@@ -346,7 +359,10 @@ Load on demand is a powerful technique to reduce the band width size of consumin
 
 You can use the following code example for implementing load on demand by using the DataManager.
 
-{% highlight js %}
+
+
+
+{% highlight CSHTML %}
 
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true))
 
@@ -384,8 +400,7 @@ pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 @Html.EJ().Button("submit").Text("Loadondemand").ClientSideEvents(e => { e.Click("onClick"); })
 
-{% endhighlight %}
-{% highlight js %}
+
 <script type="text/javascript" class="jsScript">
 
     function onClick(e) {
@@ -412,17 +427,20 @@ pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
 
 {% endhighlight  %}
 
+
 The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img9.png)
 
-
+Load on demand
+{:.caption}
 
 The request and the response for the above code are sent as follows.
 
 ![](Data-Binding_images/Data-Binding_img10.png)
 
-
+Demanded data     
+{:.caption}
 
 ## Custom Request Headers
 
@@ -431,7 +449,7 @@ You can add custom request headers by using the DataManager and the headers can 
 You can add custom request headers to every request made by the DataManager by using the headers property. Refer to the following code example.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true).Headers(new List<string>() { "DataServiceVersion: 1.0","MaxDataServiceVersion: 1.0"}))
 
 
@@ -470,12 +488,13 @@ The above method generates the request header with custom header as follows.
 
 ![](Data-Binding_images/Data-Binding_img11.png)
 
-
+Request Header with custom headers added
+{:.caption}
 
 ## Cross domain & JSONP
 
 The DataManager contains support for creating cross domain request, you can achieve this by using the crossDomain and jsonp properties of the DataManager. The following code example illustrates on how to create cross domain request. 
-{% highlight js %}
+{% highlight CSHTML %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true))
 
 
@@ -516,14 +535,18 @@ Result of above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img12.png)
 
-
+Cross domain          
+{:.caption}
 
 ## Html Table
 
 Other than JSON and Remote datasource, the DataManager can also fetch and use data from HTML element. You can achieve this by using the table property of the DataManager. The DataManager can fetch data from the HTML table element.
 
 Refer to the following code example for the HTML element binding by using the DataManager.
-{% highlight js %}
+
+
+
+{% highlight CSHTML %}
 <script id="_table1" type="text/template">
 
         <table id="datasource" style="display:none">
@@ -559,8 +582,7 @@ Refer to the following code example for the HTML element binding by using the Da
         </table>
 
   </script>
-{% endhighlight  %}
-{% highlight js %}
+
 @(Html.EJ().DataManager("FlatData").Table("#_table1"))
 
 
@@ -587,9 +609,10 @@ Refer to the following code example for the HTML element binding by using the Da
 
 {% endhighlight  %}
 
+
 The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img13.png)
 
-
-
+HTML Table element binding
+{:.caption}

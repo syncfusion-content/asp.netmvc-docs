@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization
+title: Localization | PivotGrid | ASP.NET MVC | Syncfusion
 description: localization
 platform: ejmvc
 control: PivotGrid
@@ -13,7 +13,7 @@ N> This feature is currently not applicable for PivotTable Field List.
 
 Localization is the process of customizing the user interface (UI) as locale-specific in order to display regional data. Using this feature, data is displayed in a specific language and culture of a particular country or region. The ASP.NET MVC PivotGrid control provides inherent support to localize its UI.The following table lists the default English localization user interface based on French culture. 
 
-_List of default English localization user interface based on French culture_
+List of default English localization user interface based on French culture
 
 <table>
 <tr>
@@ -58,46 +58,57 @@ RenderingFailed</td><td>
 The following code example illustrates how to localize PivotGrid’s user interface based on “French” culture.
 
 
- {% highlight js %}
+{% highlight CSHTML %}
 
-@section ScriptSection{
+@section ScriptSection
+{
 
-<script type="text/javascript">
+	<script type="text/javascript">
 
-        ej.PivotGrid.locale["fr-FR"] = {
+		ej.PivotGrid.locale["fr-FR"] = 
+		{
 
-           SeriesPage: "Série Page",
+			SeriesPage: "Série Page",
 
-           CategoricalPage: "Catégorique Page", 
+			CategoricalPage: "Catégorique Page", 
 
-           MDXqueryExecutionFailed: "L'exécution de la requête MDX pas",
+			MDXqueryExecutionFailed: "L'exécution de la requête MDX pas",
 
-           PreparingAndExecutingMDXquery: "la préparation et l'exécution de la requête MDX",
+			PreparingAndExecutingMDXquery: "la préparation et l'exécution de la requête MDX",
 
-           MDXqueryExecutedSuccessfully: "MDX requête exécutée avec succès",                   
+			MDXqueryExecutedSuccessfully: "MDX requête exécutée avec succès",                   
 
-           RenderingStarted: "rendu commencé",           
+			RenderingStarted: "rendu commencé",           
 
-           RenderingSucceeded: "rendu réussi",
+			RenderingSucceeded: "rendu réussi",
 
-           RenderingFailed: "rendant pas"
+			RenderingFailed: "rendant pas"
 
-          };
+		};
 
-        ej.PivotPager.locale["fr-FR"] = {
+		ej.PivotPager.locale["fr-FR"] = 
+		{
 
-           SeriesPage: "Série Page",
+			SeriesPage: "Série Page",
 
-           CategoricalPage: "Catégorique Page"
+			CategoricalPage: "Catégorique Page"
 
-           };
+		};
 
-      </script>             
+	</script>             
 
 }
 {% endhighlight %}
 
-{% highlight js %}
+
+
+N> In order to render the localized PivotGrid, you can reset the content available in both
+
+1. OLAP Grid Control
+
+2. OLAP Cube
+
+{% highlight CSHTML %}
 
 @section ControlsSection{
 
@@ -109,28 +120,25 @@ The following code example illustrates how to localize PivotGrid’s user interf
 
 {% endhighlight %}
 
-N> In order to render the localized PivotGrid, you can reset the content available in both
 
-1. _OLAP Grid Control_
-2. _OLAP Cube_
-
-##Localizing Control Information: 
+## Localizing Control Information: 
 
 To apply control side Localization, you can refer the following code example.
 
 {% highlight css %}
 
-ej.PivotGrid.locale["zh-CN"] = {
+ej.PivotGrid.locale["zh-CN"] = 
+{
 
-//Corresponding keyword values needs to be set here.
+	//Corresponding keyword values needs to be set here.
 
 } 
 
 {% endhighlight %}
 
-##Localizing Cube Information
+## Localizing Cube Information
 
-To get the LocalizedCubeInformation, “_Locale__Identifier__"_ is set in the connection string
+To get the LocalizedCubeInformation, “Locale Identifier" is set in the connection string
 
 
 {% highlight C# %}
@@ -152,7 +160,5 @@ The following screenshot displays the PivotGrid with French localization:
 
 ![](Localization_images/Localization_img1.png)
 
-
-
-_Localized PivotGrid_
-
+Localized PivotGrid
+{:.caption}

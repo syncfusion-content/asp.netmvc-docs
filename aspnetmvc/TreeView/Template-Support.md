@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template-Support
+title: Template Support | TreeView | ASP.NET MVC | Syncfusion
 description: template support
 platform: ejmvc
 control: TreeView
@@ -15,81 +15,74 @@ The following steps explains how to reder the TreeView using Template.
 
 1. In the Controller page, add a class and define the properties (or) in the Models, add a class as shown below
 
-   ~~~ cs
+   ~~~ csharp
 
 
-		// Define local data source elements with  fields            
+	// Define local data source elements with  fields            
 
 
 
-		public class template
+	public class template
 
-		{
+	{
 
-		    public int id { get; set; }
+		public int id { get; set; }
 
-		    public int pid { get; set; }
+		public int pid { get; set; }
 
-		    public string name { get; set; }
+		public string name { get; set; }
 
-		    public string city { get; set; }
+		public string city { get; set; }
 
-		    public bool hasChild { get; set; }
+		public bool hasChild { get; set; }
 
-		    public bool expanded { get; set; }
+		public bool expanded { get; set; }
 
-		    public string phone { get; set; }
+		public string phone { get; set; }
 
-		    public int imgId { get; set; }
+		public int imgId { get; set; }
 
-		}
+	}
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
 2. In the controller page, create a List of specified class type and specify the DataSource to render the TreeView.
 
-   ~~~ cs
+   ~~~ csharp
 
-		//Refer the Model in the controller
+	//Refer the Model in the controller
 
-		using <Applicationname>.Models;
-
-
-
-			public ActionResult TreeViewFeatures()
-
-			{
+	using <Applicationname>.Models;
 
 
 
-			    List<template> templateData = new List<template>();
+	public ActionResult TreeViewFeatures()
 
-			    templateData.Add(new template { id = 1, name = "UK", hasChild = true, expanded = true });
+	{
 
-			    templateData.Add(new template { id = 2, pid = 1, imgId = 1, name = "Steven John", city = "London", phone = "555-5665-2323" });
+		List<template> templateData = new List<template>();
 
-			    templateData.Add(new template { id = 3, name = "USA", hasChild = true, expanded = true });
+		templateData.Add(new template { id = 1, name = "UK", hasChild = true, expanded = true });
 
-			    templateData.Add(new template { id = 5, pid = 3, imgId = 2, name = "Andrew", city = "Capital way", phone = "934-8374-2455" });
+		templateData.Add(new template { id = 2, pid = 1, imgId = 1, name = "Steven John", city = "London", phone = "555-5665-2323" });
 
-			    templateData.Add(new template { id = 4, pid = 3, imgId = 3, name = "Angelica", city = "Dayton", phone = "988-4243-0806" });
+		templateData.Add(new template { id = 3, name = "USA", hasChild = true, expanded = true });
 
+		templateData.Add(new template { id = 5, pid = 3, imgId = 2, name = "Andrew", city = "Capital way", phone = "934-8374-2455" });
 
+		templateData.Add(new template { id = 4, pid = 3, imgId = 3, name = "Angelica", city = "Dayton", phone = "988-4243-0806" });
 
-			    ViewBag.datasource = templateData;
+		ViewBag.datasource = templateData;
 
-			    return View();
+		return View();
 
-
-
-			 }
-
-
+	 }
+	 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -101,8 +94,6 @@ The following steps explains how to reder the TreeView using Template.
    ~~~ js
 
 		<script id="treeTemplate" type="text/x-jsrender">
-
-
 
 		{{if hasChild}}
 
@@ -134,27 +125,24 @@ The following steps explains how to reder the TreeView using Template.
 
 		{{/if}}
 
-
-
 		</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 4. Using the TreeView helper, specify the Datasource for the TreeView and map the corresponding fields. In the “Template” property specify the “id” of your template as shown below.
 
-   ~~~ html
+   ~~~ cshtml
 
+	<div style="width: 280px">
 
-		<div style="width: 280px">
+		@Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<template>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded")).Template("#treeTemplate").ClientSideEvents(e => e.Create("oncreate"))
 
-		    @Html.EJ().TreeView("tree").TreeViewFields(s => s.Datasource((IEnumerable<template>)ViewBag.datasource).Id("id").ParentId("pid").Text("name").HasChild("hasChild").Expanded("expanded")).Template("#treeTemplate").ClientSideEvents(e => e.Create("oncreate"))
-
-		</div>
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -162,134 +150,124 @@ The following steps explains how to reder the TreeView using Template.
 
    ~~~ css
 
-		<style>
+	<style>
 
-			    #treeview .e-node-hover, #treeview .e-active
+			#treeview .e-node-hover, #treeview .e-active
 
-			{
+		{
 
-			    background-color: transparent;
+			background-color: transparent;
 
-			    border-color: transparent;
+			border-color: transparent;
 
-			}
+		}
 
-			#treeview .e-node-hover
+		#treeview .e-node-hover
 
-			{
+		{
 
-			    opacity: 0.8;
+			opacity: 0.8;
 
-			}
+		}
 
+		.con-img
 
+		{
 
-			.con-img
+			float: left;
 
-			{
+		}
 
-			    float: left;
+		.cont-list
 
-			}
+		{
 
+			background: none repeat scroll 0 0 white;
 
+			border: 1px solid #BBBCBB;
 
-			.cont-list
+			height: 85px;
 
-			{
+			width: 200px;
 
-			    background: none repeat scroll 0 0 white;
+			color: #5c5c5c;
 
-			    border: 1px solid #BBBCBB;
+			line-height: 17px;
 
-			    height: 85px;
+		}
 
-			    width: 200px;
+		.cont-details
 
-			    color: #5c5c5c;
+		{
 
-			    line-height: 17px;
+			margin-top: 12px;
 
-			}
+			font-size: 13px;
 
+		}
 
+		.cont-del 
+		{
 
-			.cont-details
+		background-image: url('../../Content/Images/remove-icon.png');
 
-			{
+		background-position: -6px -10px;
 
-			    margin-top: 12px;
+		background-repeat: no-repeat;
 
-			    font-size: 13px;
+		float: right;
 
-			}
+		height: 16px;
 
+		width: 16px;
 
+		cursor: pointer;
 
-		    .cont-del {
+		}
 
-			background-image: url('../../Content/Images/remove-icon.png');
+		.cont-list .treeFooter
 
-			background-position: -6px -10px;
+		{
 
-			background-repeat: no-repeat;
+			height: 5px;
 
-			float: right;
+			width: 100%;
 
-			height: 16px;
+			background-color: gray;
 
-			width: 16px;
+			margin-top: 17px;
 
-			cursor: pointer;
+		}
 
-		    }
-
-
-
-			.cont-list .treeFooter
-
-			{
-
-			    height: 5px;
-
-			    width: 100%;
-
-			    background-color: gray;
-
-			    margin-top: 17px;
-
-			}
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
 6. Add the following script to delete the Tree nodes on clicking the delete icon.
 
-   ~~~ html
+   ~~~ js
+   
+	<script type="text/javascript">
 
+		function oncreate(evt) {
 
-		<script type="text/javascript">
+		var treeObj = $("#tree").data("ejTreeView");
 
-		    function oncreate(evt) {
+		$("#tree").find(".cont-del").bind("click", function (e) {
 
-			var treeObj = $("#tree").data("ejTreeView");
+			treeObj.removeNode($(e.target).parents("li").first());
 
-			$("#tree").find(".cont-del").bind("click", function (e) {
+		});
 
-			    treeObj.removeNode($(e.target).parents("li").first());
+		}
 
-			});
-
-		    }
-
-		</script>
+	</script>
 
    ~~~
-   {:.prettyprint }
+   
 
 
 
@@ -299,8 +277,8 @@ Output of the TreeView after specifying the Template structure.
 
 ![](Template-Support_images/Template-Support_img2.png)
 
-
-_Figure53: TreeView with Template_
+TreeView with Template
+{:.caption}
 
 
 

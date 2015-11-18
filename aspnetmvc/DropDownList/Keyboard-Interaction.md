@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard-Interaction
+title: Keyboard Interaction | DropDownList | ASP.NET MVC | Syncfusion
 description: keyboard interaction
 platform: ejmvc
 control: DropDownList
@@ -11,7 +11,7 @@ documentation: ug
 
 You can use Keyboard shortcut keys as an alternative to the mouse on using Dropdown widget. Dropdown Widget allows you to perform all kind of actions using keyboard shortcuts.
 
-_Table3: Keyboard Shortcut Keys_
+_Keyboard Shortcut Keys_
 
 <table>
 <tr>
@@ -76,7 +76,9 @@ The following steps explains you to enable keyboard interaction for a dropdown t
 
 
 
-{% highlight html %}
+{% tabs %}
+
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML@Html.
 EJ().DropDownList("dropdownlist").TargetID("list")
@@ -106,7 +108,7 @@ EJ().DropDownList("dropdownlist").TargetID("list")
 	 </script> </td></tr>
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 
 Run the sample, press Alt + J to focus in the Dropdownlist widget that enables it and you can navigate using arrow keys and Esc key to close the popup.
@@ -114,9 +116,8 @@ Run the sample, press Alt + J to focus in the Dropdownlist widget that enables i
 
 ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
-
-
-_Figure 31: Dropdown list focused and moved with Keyboard shortcut_
+Dropdown list focused and moved with Keyboard shortcut
+{:.caption}
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | TagCloud | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: TagCloud
@@ -24,60 +24,61 @@ In the above screenshot, you can see the weighted list and a click on any item d
 
 Essential Studio ASP.NET MVC TagCloud widget has built-in features such as clicking on one of the sites in the TagCloud brings all relevant results only from the selected source. You can easily create the TagCloud widget element as follows.
 
-1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://docs.syncfusion.com/aspnetmvc/tagcloud/getting-started)
+1. You can create a MVC Project and add required assemblies, scripts and styles to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/tagcloud/getting-started)
 2. Add the following code to the corresponding view page to render TagCloud.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech Sites")
+	@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech Sites")
 
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Add the following style to show the weighted list.
 
    ~~~ css
 
-		<style type="text/css">
+	<style type="text/css">
 
-			#tagEvents {
+		#tagEvents 
+		{
 
-				margin: 0 auto;
+			margin: 0 auto;
 
-			}
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 ## Set the Min and Max Font Size
 
 Create the class for WebsiteCollection and define the necessary data members. Add the following code in WebsiteCollection.cs part.
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 // Define local data source elements with  fields            
 
 public class WebsiteCollection
 
-    {
+{
 
-        public string text { get; set; }
+	public string text { get; set; }
 
-        public string url { get; set; }
+	public string url { get; set; }
 
-        public int frequency { get; set; }
+	public int frequency { get; set; }
 
-    }
+}
 
 {% endhighlight %}
 
 You can set the minimum and maximum font size in frequency property by adding the following code example in the Controller.
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Refer the Model in the controller
 
@@ -143,7 +144,7 @@ public ActionResult Index()
 
 You can perform the event operations like MouseOver, MouseOut and Click by adding the following code example inside View page.      
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("oncreate").MouseOver("onmouseover").MouseOut("onmouseout").Click("onclick"))
 
@@ -163,69 +164,77 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 </div>
 
-    @Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("evtpropscheckedevent"))
+@Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("evtpropscheckedevent"))
 
-    <style type="text/css">
+<style type="text/css">
 
-        #tagEvents {
+	#tagEvents 
+	{
 
-            margin: 0 auto;
+		margin: 0 auto;
 
-        }
+	}
 
-    </style>
+</style>
 
 <script>
 
-        function evtpropscheckedevent(args) {
+	function evtpropscheckedevent(args) 
+	{
 
-            tagObj = $("#tagEvents").data("ejTagCloud");
+		tagObj = $("#tagEvents").data("ejTagCloud");
 
-            if (args.isChecked) {
+		if (args.isChecked) 
+		{
 
-                switch (args.selectedText) {
+			switch (args.selectedText) 
+			{
 
-                    case "mouseover": tagObj.option(args.selectedText, "onmouseover"); break;
+				case "mouseover": tagObj.option(args.selectedText, "onmouseover"); break;
 
-                    case "mouseout": tagObj.option(args.selectedText, "onmouseout"); break;
+				case "mouseout": tagObj.option(args.selectedText, "onmouseout"); break;
 
-                    case "click": tagObj.option(args.selectedText, "onclick"); break;
+				case "click": tagObj.option(args.selectedText, "onclick"); break;
 
-                }
+			}
 
-            }
+		}
 
-            else tagObj.option(args.selectedText, null);
+		else tagObj.option(args.selectedText, null);
 
-        }
+	}
 
 
 
-        function oncreate(args) {
+	function oncreate(args) 
+	{
 
-            alert("Tagcloud has been created.");
+		alert("Tagcloud has been created.");
 
-        }
+	}
 
-        function onmouseover(args) {
+	function onmouseover(args) 
+	{
 
-            alert("Mouse pointer is hovered on " + args.value);
+		alert("Mouse pointer is hovered on " + args.value);
 
-        }
+	}
 
-        function onmouseout(args) {
+	function onmouseout(args) 
+	{
 
-            alert("Mouse pointer is hovered awayfrom " + args.value);
+		alert("Mouse pointer is hovered awayfrom " + args.value);
 
-        }
+	}
 
-        function onclick(args) {
+	function onclick(args) 
+	{
 
-            alert( args.value + " is clicked.");
+		alert( args.value + " is clicked.");
 
-        }              
+	}              
 
-    </script>
+</script>
 
 {% endhighlight %}
 

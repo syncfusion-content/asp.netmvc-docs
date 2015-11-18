@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | SplitButton | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: SplitButton
@@ -17,7 +17,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 1. In the VIEW page, add the following button elements to configure Split Button widget
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 //Add the code in the CSHTML page to configure and initialize the control
 
@@ -56,31 +56,29 @@ The following steps explains you the details about rendering the Split Button wi
 
 1. In the VIEW page, add the following button elements to configure Split Button widget.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 //Add the code in the CSHTML page to configure and initialize the control
 
 
 
-    @*Enable the rounded corner for split button control as follows.*@
+@*Enable the rounded corner for split button control as follows.*@
 
-    <div class="spltspan">
+<div class="spltspan">
 
-        @Html.EJ().SplitButton("spltbutton_roundedCorner").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).TargetID("Ul11")
+	@Html.EJ().SplitButton("spltbutton_roundedCorner").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).TargetID("Ul11")
 
-        <ul id="Ul11">
+	<ul id="Ul11">
 
-            <li><span>User</span></li>
+		<li><span>User</span></li>
 
-            <li><span>Guest</span></li>
+		<li><span>Guest</span></li>
 
-            <li><span>Admin</span></li>
+		<li><span>Admin</span></li>
 
-        </ul>
+	</ul>
 
-
-
-    </div>
+</div>
 
 {% endhighlight %}
 

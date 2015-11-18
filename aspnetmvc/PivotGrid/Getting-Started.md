@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | PivotGrid | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: PivotGrid
@@ -74,44 +74,43 @@ Then, select Internet application template with Razor view engine and click OK.
 
 1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 
-   N>
-   >
-   > 1. Use the following code example while adding scripts and styles
-   > 2. Apart from the cdn files, the rest of them can be acquired from the following location
-   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+  
+   N> 1. Use the following code example while adding scripts and styles
+      Apart from the cdn files, the rest of them can be acquired from the following location
+      C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
 
-   ~~~ html
+   ~~~ cshtml
 
-		<head>
-            
-		<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-		<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
+	<head>
+		
+	<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
+	<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 
-		</head>
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
 		
 2. Add the following code example in the body tag of the _Layout.cshtml page.
 
-   ~~~ html
+   ~~~ cshtml
    
-		<body>
-		   @RenderBody()
-		   @Html.EJ().ScriptManager()   
-		</body>
+	<body>
+	   @RenderBody()
+	   @Html.EJ().ScriptManager()   
+	</body>
 
    ~~~
-   {:.prettyprint }
+   
 
 ### Add Control in View page
 
 Add the following code example in the Index.cshtml page that is already created:
   
-{% highlight html %}
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript;
 
@@ -232,18 +231,18 @@ You can add the following methods to the service that are invoked for any server
 
 1. Initialize the PivotGrids helper class. 
 
-   ~~~ cs
+   ~~~ csharp
       
     PivotGrid htmlHelper = new PivotGrid();        
     static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
     JavaScriptSerializer serializer = new JavaScriptSerializer();
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following relevant service methods.
 
-   ~~~ cs
+   ~~~ csharp
 
     //This method provides the required information from server-side when initializing the PivotGrid. 
     public Dictionary<string, object> InitializeGrid(string action, string gridLayout, bool enablePivotFieldList, object customObject)
@@ -347,13 +346,13 @@ You can add the following methods to the service that are invoked for any server
         return olapReport;
     }  
    ~~~
-   {:.prettyprint }		
+   		
 
 ### Configure Web.Config
 
 1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at root folder.
    
-   ~~~ html
+   ~~~ cshtml
 
 	<compilation debug="true" targetFramework="4.5">
 	   <assemblies>
@@ -375,7 +374,7 @@ You can add the following methods to the service that are invoked for any server
 	</compilation>
 
    ~~~
-   {:.prettyprint }
+   
    
    N> xx.x.x.xx in the above code example refers to the current version of the Essential Studio running in your system.
 
@@ -414,7 +413,7 @@ You can add the following methods to the service that are invoked for any server
 
 2. Add the following namespaces file using the following code example to the web.config files at both the root folder and View folder.
 
-   ~~~ cs
+   ~~~ cshtml
 	<namespaces>
 		<add namespace="System.Web.Helpers" />
 		<add namespace="System.Web.Mvc" />
@@ -429,7 +428,7 @@ You can add the following methods to the service that are invoked for any server
 	</namespaces>
 
    ~~~
-   {:.prettyprint }
+   
    
 3. Register the wcf services in web.config file at root folder by adding the following codes.
 4. You can expose services through the properties such as binding, contract and address etc., using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
@@ -438,44 +437,44 @@ You can add the following methods to the service that are invoked for any server
 	3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
 
 
-   ~~~ html
+   ~~~ cshtml
    
-		<system.serviceModel>
-			<services>
-			  <service name="MvcApplication1.wcf.PivotGridService">
-				<endpoint address="" behaviorConfiguration="MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior"
-				  binding="webHttpBinding" contract="MvcApplication1.wcf.IPivotGridService" />
-			  </service>
-			</services>
-		</system.serviceModel>
+	<system.serviceModel>
+		<services>
+		  <service name="MvcApplication1.wcf.PivotGridService">
+			<endpoint address="" behaviorConfiguration="MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior"
+			  binding="webHttpBinding" contract="MvcApplication1.wcf.IPivotGridService" />
+		  </service>
+		</services>
+	</system.serviceModel>
 
    ~~~
-   {:.prettyprint }
+   
    
 5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code example MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior points the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
 
-   ~~~ html
-   
-		<system.serviceModel>
-			<behaviors>
-			  <endpointBehaviors>
-				<behavior name="MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior">
-				  <enableWebScript />
-				</behavior>
-			  </endpointBehaviors>
-			</behaviors>
-		</system.serviceModel>
+   ~~~ cshtml
+
+	<system.serviceModel>
+		<behaviors>
+		  <endpointBehaviors>
+			<behavior name="MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior">
+			  <enableWebScript />
+			</behavior>
+		  </endpointBehaviors>
+		</behaviors>
+	</system.serviceModel>
 
 
    ~~~
-   {:.prettyprint }
+   
 
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “PivotGridService” indicates the class name in the WCF Service.
 
 
 6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
 
-   ~~~ cs
+   ~~~ cshtml
    
 	<appSettings>
 		<add key="webpages:Version" value="2.0.0.0" />
@@ -486,13 +485,13 @@ You can add the following methods to the service that are invoked for any server
 	</appSettings>
 
    ~~~
-   {:.prettyprint }
+   
 
 ## Configuring routing file
 
 You can add the following highlighted line in RouteConfig.cs file inorder to avoid issues while picking the WCF service methods.
 
-{% highlight c# %}
+{% highlight C# %}
 
 public class RouteConfig
 {
@@ -573,45 +572,45 @@ Then select Internet application template with Razor view engine and click OK
 
 1. Add the script files and CSS files in the <head> tag of the _Layout.cshtml page.
 
-   N>
-   >
-   > 1. Use the following code sample while adding scripts and styles
-   > 2. Apart from cdn files, the rest of them can be acquired from the following location
-   > C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
-
-   ~~~ html
 
 
-		<head>
-            
-		<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-		<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
-        
-		</head>
+   N>1. Use the following code sample while adding scripts and styles
+     2. Apart from cdn files, the rest of them can be acquired from the following location
+     C:\Users\<UserName>\AppData\Local\Syncfusion\EssentialStudio\<Version>\JavaScript\assets\
+
+   ~~~ cshtml
+
+
+	<head>
+		
+	<link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"> </script>
+	<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
+	<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
+	
+	</head>
 
    ~~~
-   {:.prettyprint }
+   
 
 		
 2. Add the following code example in the body tag of the _Layout.cshtml page.
 
-   ~~~ html
+   ~~~ cshtml
    
-		<body>
-		   @RenderBody()
-		   @Html.EJ().ScriptManager()   
-		</body>
+	<body>
+	   @RenderBody()
+	   @Html.EJ().ScriptManager()   
+	</body>
 
    ~~~
-   {:.prettyprint }
+   
 
 ### Add Control in View page
 
 Add the following code example in the Index.cshtml page that is already created:
   
-{% highlight html %}
+{% highlight CSHTML %}
 
 @using Syncfusion.JavaScript;
 
@@ -638,6 +637,7 @@ Add the following code example in the Index.cshtml page that is already created:
 
 
 3. In the Add New Item window, select WCF Service and name it as PivotGridService.svc. 
+
 4. Click Add.
 
 
@@ -704,7 +704,7 @@ using Syncfusion.PivotAnalysis.Base;
 
 You can create the PivotGridService class to implement the service methods. You can inherit the class from the IPivotGridService interface that is created automatically while adding any new service.
 
-{% highlight c# %}
+{% highlight C# %}
 
 namespace MvcApplication1.wcf
 {
@@ -726,18 +726,18 @@ You can add the following methods to the service that are invoked for any server
 1. Initialize the PivotGrids helper class. 
 
 
-   ~~~ cs
+   ~~~ csharp
 
     PivotGrid htmlHelper = new PivotGrid();
     JavaScriptSerializer serializer = new JavaScriptSerializer();
     Dictionary<string, object> dict = new Dictionary<string, object>();
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following relevant service methods.
 
-   ~~~ cs
+   ~~~ csharp
    
     //This method provides the required information from the server side when initializing the PivotGrid. 
 	public Dictionary<string, object> InitializeGrid(string action)
@@ -894,13 +894,13 @@ You can add the following methods to the service that are invoked for any server
 	}
 	}
    ~~~
-   {:.prettyprint }
+   
 
 ### Configure Web.Config
 
 1. Register the assemblies by adding the following code example inside the <system.web> tag in web.config file at root folder.
    
-   ~~~ html
+   ~~~ cshtml
 
 	<compilation debug="true" targetFramework="4.5">
 	   <assemblies>
@@ -919,7 +919,7 @@ You can add the following methods to the service that are invoked for any server
 	</compilation>
 
    ~~~
-   {:.prettyprint }
+   
    
    N> xx.x.x.xx in the above code example refers to the current version of the Essential Studio running in your system.
 
@@ -958,7 +958,7 @@ You can add the following methods to the service that are invoked for any server
 
 2. Add the following Namespaces file using the following code sample to the web.config files at both the root folder and View folder.
 
-   ~~~ cs
+   ~~~ cshtml
    
 	<namespaces>
         <add namespace="System.Web.Helpers" />
@@ -974,7 +974,7 @@ You can add the following methods to the service that are invoked for any server
 	</namespaces>
 
    ~~~
-   {:.prettyprint }
+   
    
 3. Register the WCF services in web.config file at root folder by adding the following codes.
 4. You can expose services through the properties such as binding, contract and address etc., using an endpoint.In your appliacation the service name is MvcApplication1.wcf.PivotGridService where PivotGridService is the service class name and MvcApplication1.wcf is the namespace name where service class appears.The following are the properties are that meet the appropriate endpoint.  
@@ -983,7 +983,7 @@ You can add the following methods to the service that are invoked for any server
 	3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint. endpointBehaviors are illustrated as follows
 
 
-   ~~~ html
+   ~~~ cshtml
    
 	<system.serviceModel>
 		<services>
@@ -996,11 +996,11 @@ You can add the following methods to the service that are invoked for any server
 
 
    ~~~
-   {:.prettyprint }
+   
    
 5. The endpointBehaviors contain all the behaviors for an endpoint.You can link each endpoint to the respective behavior only using this name property. In the following code example MvcApplication1.wcf.PivotGridServiceAspNetAjaxBehavior would point the PivotGridService class under the namespace MvcApplication1.wcf in PivotGridService.svc.cs file which is the appropriate behavior for the endpoint. 
 
-   ~~~ html
+   ~~~ cshtml
    
 	<system.serviceModel>
 		<behaviors>
@@ -1014,13 +1014,13 @@ You can add the following methods to the service that are invoked for any server
 
 
    ~~~
-   {:.prettyprint }
+   
 
    N> In this example, “MvcApplication1.wcf” indicates the namespace in the WCF Service and “PivotGridService” indicates the class name in the WCF Service.
 
 6. Set the UnobtrusiveJavaScriptEnabled value to false under appsettings tag as shown here.
 
-   ~~~ cs
+   ~~~ cshtml
    
 	<appSettings>
 		<add key="webpages:Version" value="2.0.0.0" />
@@ -1031,13 +1031,13 @@ You can add the following methods to the service that are invoked for any server
 	</appSettings>
 
    ~~~
-   {:.prettyprint }
+   
 
 ## Configuring routing file
 
 You can add the following highlighted line in RouteConfig.cs file inorder to avoid issues while picking the WCF service methods.
 
-{% highlight c# %}
+{% highlight C# %}
 
 public class RouteConfig
 {

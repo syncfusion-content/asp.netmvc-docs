@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display-Inline
+title: Display Inline | DatePicker | ASP.NET MVC | Syncfusion
 description: display inline
 platform: ejmvc
 control: DatePicker
@@ -15,11 +15,11 @@ The following steps explain you how to get the Calendar control using DatePicker
 
 1. In the CSHTML page, add the following code to render the DatePicker widget with display inline.
 
-   ~~~ js
+   ~~~ cshtml
 
-		@*Add the following code example to the corresponding CSHTML page to get the Calendar control using DatePicker*@
+	@*Add the following code example to the corresponding CSHTML page to get the Calendar control using DatePicker*@
 
-		@Html.EJ().DatePicker("datePicker").TagName("div").DisplayInline(true)
+	@Html.EJ().DatePicker("datePicker").TagName("div").DisplayInline(true)
 
    ~~~
    {:.prettyprint }
@@ -28,3 +28,6 @@ The following steps explain you how to get the Calendar control using DatePicker
 2. The following screenshot displays the output for the above code.
 
 ![](Display-Inline_images/Display-Inline_img1.png)
+
+Calendar date in DatePicker
+{:.caption}

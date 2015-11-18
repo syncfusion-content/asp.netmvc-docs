@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Node
+title: Node | Diagram | ASP.NET MVC | Syncfusion
 description: node
 platform: ejmvc
 control: Diagram
@@ -15,7 +15,8 @@ Nodes are graphical object that represent visual data to be placed on the page.
 
 ![](Node_images/Node_img1.png)
 
-
+Node
+{:.caption}
 
 ## Create Node
 
@@ -23,7 +24,7 @@ Node is created from Node object and added to the Diagram model by using diagram
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 //Creates a node with default shape (Rectangle)
 
@@ -53,6 +54,8 @@ model.Nodes.Add(node);
 
 ![](Node_images/Node_img2.png)
 
+Node
+{:.caption}
 
 
 List of preloaded nodes from symbol palette are added to the Diagram by clicking the palette nodes or by dragging a node and dropping on the Diagram. The method to add node/connector to palette and drag and drop on Diagram is explained in palette section
@@ -101,15 +104,17 @@ node.Shape = BasicShapes.Ellipse;
 
 ![](Node_images/Node_img3.png)
 
-
+Built-in Shapes
+{:.caption}
 
 ## Html
 
 Html elements are embedded in a Diagram through the CustomNodenode. The following code illustrates how a Html node is created.
 
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 //dependency scripts
@@ -130,7 +135,8 @@ Html elements are embedded in a Diagram through the CustomNodenode. The followin
 
 
 {% endhighlight %}
-{% highlight c# %}
+
+{% highlight C# %}
 
 
 
@@ -147,12 +153,13 @@ node.Value="button";
 
 
 {% endhighlight %}
-
+{% endtabs %}  
 
 
 ![](Node_images/Node_img4.png)
 
-
+Html Shape
+{:.caption}
 
 ## Text Node
 
@@ -180,7 +187,8 @@ node.TextBlock = block;
 
 ![](Node_images/Node_img5.png)
 
-
+Text Shape
+{:.caption}
 
 ## Path
 
@@ -188,7 +196,7 @@ You can create complex shapes by using Pathshapenode. It is achieved by assignin
 
 
 
-{% highlight c# %}
+{% highlight C# %}
 
 BasicShape node = new BasicShape();
 
@@ -198,15 +206,14 @@ node.Shape = BasicShapes.Path;
 
 node.PathData = "M 67.2947 100 L 67.2947 0.00102291 L 59.138 0.00102291 M 100 50 L 66.8899 50 M 33.1101 50 L 0 50 M 33.1101 0 L 67.5585 50.0015 L 33.1101 99.9995 Z";
 
-
-
 {% endhighlight %}
 
 
 
 ![](Node_images/Node_img6.png)
 
-
+Path Shape
+{:.caption}
 
 ## Polygon
 
@@ -214,11 +221,7 @@ You can create Polygon by setting the BasicShape node’s type as BasicShapes.Po
 
 The following code illustrates how to create a Polygonnode. 
 
-{% highlight c# %}
-
-
-
-
+{% highlight C# %}
 
 BasicShape node = new BasicShape();
 
@@ -260,17 +263,16 @@ node.Points = points;
 
 ![](Node_images/Node_img7.png)
 
-
+Polygon Shape
+{:.caption}
 
 ## Native 
 
 Diagram supports adding SVG content as shape content. It is achieved by creating node by using CustomNode and assigning the template ID to the TemplateId property. The TemplateId property receives id svg template. The following code illustrates how a Native node is created.
 
-{% highlight c# %}
-
-
-
-
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
  //dependency scripts
 
@@ -296,9 +298,9 @@ Diagram supports adding SVG content as shape content. It is achieved by creating
 
 
 
+{% endhighlight %}
 
-
-
+{% highlight C# %}
 //CustomNode derived from NativeNode class
 
 CustomNode node = new CustomNode ();
@@ -313,12 +315,12 @@ node.Text="Mail";
 
 {% endhighlight %}
 
-
+{% endtabs %} 
 
 ![](Node_images/Node_img8.png)
 
-
-
+Native Shape
+{:.caption}
 
 
 N> Shapes of type Node or HTML cannot be exported to an image format like JPEG, PNG and BMP. It is by design that while exporting, diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML and SVG elements is not feasible. So, this limitation.Note that fill color is applied to the Native Node only when its inline style, or fill, for an SVG child element is not specified. In the following example, the node’s fill color is overridden by the specified color for the group.
@@ -360,7 +362,8 @@ node.Source = "sample/Syncfusion.PNG";
 
 ![](Node_images/Node_img10.png)
 
-
+Image Shape
+{:.caption}
 
 ## Shadow
 
@@ -368,11 +371,12 @@ Dropshadoweffect for a node can be enabled or disabled by using the NodeConstrai
 
 ![](Node_images/Node_img11.png)
 
-
+Shadow
+{:.caption}
 
 The following code example illustrates how to enable or disable the shadow.
 
-{% highlight c# %}
+{% highlight C# %}
 
 
 
@@ -386,16 +390,13 @@ node.Constraints = NodeConstraints.Default | NodeConstraints.Shadow;
 
 node.Constraints = node.Constraints &~ NodeConstraints.Shadow;
 
-
-
 {% endhighlight %}
 
 ## Customizing Shadow
 
 Position and opacity of the shadow can be customized by using opacity, angle, and distance of the shadow. The following code example illustrates how to customize the shadow.
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 
 Node node = new Node ();
@@ -416,7 +417,8 @@ node.Shadow.Angle = 50;
 
 ![](Node_images/Node_img12.png)
 
-
+Shadow Customization
+{:.caption}
 
 ## Appearance
 
@@ -468,12 +470,7 @@ Gets or sets the width of node border.</td></tr>
 </table>
 
 
-{% highlight c# %}
-
-
-
-
-
+{% highlight C# %}
 
 //Sets various appearance properties to node
 
@@ -519,15 +516,14 @@ gradient.Stops.Push(stop);
 
 node.LinearGradient = gradient;
 
-
-
 {% endhighlight %}
 
 
 
 ![](Node_images/Node_img13.png)
 
-
+Customized Node
+{:.caption}
 
 ## Constraints
 
@@ -633,11 +629,9 @@ The following code illustrates how to enable rotate, select constraints, and dis
 {% highlight c# %}
 
 
-
 //Applies selection and rotation constraints only.
 
 node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
-
 
 
 {% endhighlight %}
@@ -646,7 +640,8 @@ node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
 
 ![](Node_images/Node_img14.jpeg)
 
-
+Rotator Constraints–Enabled
+{:.caption}
 
 The following code illustrates how to disable rotate constraints. Disabling rotate constraint does not allow you to rotate the node.
 
@@ -655,21 +650,18 @@ The following code illustrates how to disable rotate constraints. Disabling rota
 {% highlight c# %}
 
 
-
-
  //Disables rotate constraint.
 
 node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
-
-
 
 {% endhighlight %}
 
 ![](Node_images/Node_img15.jpeg)
 
+Rotate Constraints-disabled
+{:.caption}
 
 
 
-
-N> Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
+N> Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](/Diagram/How-To/Bitwise-Operations).
 

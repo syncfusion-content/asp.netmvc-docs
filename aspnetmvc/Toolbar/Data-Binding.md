@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data-Binding
+title: Data Binding | Toolbar | ASP.NET MVC | Syncfusion
 description: data binding
 platform: ejmvc
 control: Toolbar
@@ -17,7 +17,7 @@ The following sub-properties provides a way to bind either the local/remote data
 
 
 
-_Table: Property Table of MVC Toolbar control_
+_Property Table of MVC Toolbar control_
 
 <table>
 <tr>
@@ -120,7 +120,7 @@ In the View page, add Toolbar helper to configure Toolbar.
  }
 {% endhighlight %} 
 
-{% highlight html %} 
+{% highlight CSHTML %} 
  <div class="cols-sample-area"> 
  @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)
  ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip"))
@@ -133,105 +133,117 @@ In the View page, add Toolbar helper to configure Toolbar.
 
 <style type="text/css" class="cssStyles">
 
-    .darktheme .cols-sample-area .e-tooltxt .ToolbarItems {
+	.darktheme .cols-sample-area .e-tooltxt .ToolbarItems 
+	{
 
-        background-image: url('../images/toolbar/ui-icons-metro.png');
+		background-image: url('../images/toolbar/ui-icons-metro.png');
 
-    }
-
-
-
-    .cols-sample-area .e-tooltxt .ToolbarItems {
-
-        display: block;
-
-        background-image: url('../images/toolbar/ui-icons-dark.png');
-
-        height: 22px;
-
-        width: 22px;
-
-    }
+	}
 
 
 
-    .e-tooltxt:hover .ToolbarItems, .darktheme .cols-sample-area .e-tooltxt:hover .ToolbarItems {
+	.cols-sample-area .e-tooltxt .ToolbarItems 
+	{
 
-        background-image: url('../images/toolbar/ui-icons-light.png');
+		display: block;
 
-    }
+		background-image: url('../images/toolbar/ui-icons-dark.png');
 
+		height: 22px;
 
+		width: 22px;
 
-    .ToolbarItems.LeftAlign_tool {
-
-        background-position: -26px -39px;
-
-    }
-
-
-
-    .ToolbarItems.CenterAlign_tool {
-
-        background-position: -55px -39px;
-
-    }
+	}
 
 
 
-    .ToolbarItems.RightAlign_tool {
+	.e-tooltxt:hover .ToolbarItems, .darktheme .cols-sample-area .e-tooltxt:hover .ToolbarItems 
+	{
 
-        background-position: -89px -39px;
+		background-image: url('../images/toolbar/ui-icons-light.png');
 
-    }
-
-
-
-    .ToolbarItems.Justify_tool {
-
-        background-position: -123px -39px;
-
-    }
+	}
 
 
 
-    .ToolbarItems.Bold_tool {
+	.ToolbarItems.LeftAlign_tool 
+	{
 
-        background-position: -159px -39px;
+		background-position: -26px -39px;
 
-    }
-
-
-
-    .ToolbarItems.Italic_tool {
-
-        background-position: -196px -39px;
-
-    }
+	}
 
 
 
-    .ToolbarItems.StrikeThrough_tool {
+	.ToolbarItems.CenterAlign_tool 
+	{
 
-        background-position: -55px -70px;
+		background-position: -55px -39px;
 
-    }
-
-
-
-    .ToolbarItems.Underline_tool {
-
-        background-position: -23px -68px;
-
-    }
+	}
 
 
 
-    .html {
+	.ToolbarItems.RightAlign_tool 
+	{
 
-        background-color: yellowgreen;
+		background-position: -89px -39px;
 
-    }
+	}
+
+
+
+	.ToolbarItems.Justify_tool 
+	{
+
+		background-position: -123px -39px;
+
+	}
+
+
+
+	.ToolbarItems.Bold_tool 
+	{
+
+		background-position: -159px -39px;
+
+	}
+
+
+
+	.ToolbarItems.Italic_tool 
+	{
+
+		background-position: -196px -39px;
+
+	}
+
+
+
+	.ToolbarItems.StrikeThrough_tool 
+	{
+
+		background-position: -55px -70px;
+
+	}
+
+
+
+	.ToolbarItems.Underline_tool 
+	{
+
+		background-position: -23px -68px;
+
+	}
+
+
+
+	.html 
+	{
+
+		background-color: yellowgreen;
+
+	}
 
 </style>
 
@@ -239,14 +251,14 @@ In the View page, add Toolbar helper to configure Toolbar.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-
-_Figure 6: ToolBar control bounded to Local Data_
+ToolBar control bounded to Local Data
+{:.caption}
 
 ## Remote data
 
 You can bind Toolbar to Remote Data using DataManager and the query in fields is used to retrieve the data. DataManager supports the following types of data-binding: JSON, Web Services and OData. It uses two different classes; ej.DataManager for processing, and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are read by the DataManager. In the following link, how to create DataManager is explained in full detail.
 
-<http://docs.syncfusion.com/aspnetmvc/toolbar/data-binding>
+<http://help.syncfusion.com/aspnetmvc/toolbar/data-binding>
 
 The following steps explain how you can bind remote data to Toolbar control.
 
@@ -254,7 +266,7 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Toolbar("toolbarcontent").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
 
@@ -262,7 +274,6 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-
-
-_Figure 7: ToolBar control bounded to Remote Data_
+ToolBar control bounded to Remote Data
+{:.caption}
 

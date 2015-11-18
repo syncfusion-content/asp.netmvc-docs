@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTL-Support
+title: RTL Support | Progress Bar | ASP.NET MVC | Syncfusion
 description: rtl support
 platform: ejmvc
 control: Progress Bar
@@ -16,17 +16,17 @@ The following steps explain how to enable the RTL property of the ProgressBar co
 1. In the VIEW page, add a helper element to render the ProgressBar widget.
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 // Add the following code example to the corresponding CSHTML page to render ProgressBar control to display it in the right-to-left direction.
 @Html.EJ().ProgressBar("progressbar").Value(70).Height("20").Width("500").EnableRTL(true)
-{% endhighlight %}
-{% highlight javascript %}
+
 <script>            
-var progress;
-            $(document).ready(function () {
-			progress = $("#progressbar").data("ejProgressBar");
-			progress.setModel({ text: progress.getValue() + " %"});
-            });
+	var progress;
+	$(document).ready(function () 
+	{
+		progress = $("#progressbar").data("ejProgressBar");
+		progress.setModel({ text: progress.getValue() + " %"});
+	});
 </script>       
 
 {% endhighlight %}

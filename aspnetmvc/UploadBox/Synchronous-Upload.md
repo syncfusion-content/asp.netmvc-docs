@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Synchronous-Upload
+title: Synchronous Upload | UploadBox | ASP.NET MVC | Syncfusion
 description: synchronous upload 
 platform: ejmvc
 control: UploadBox
@@ -20,11 +20,9 @@ The following steps guide you in uploading the file synchronously.
 1. In the VIEW page, create a form with action and post method and then add the script into the form to configure the UploadBox element.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // In the CSHTML page, create a form with action and post method and then add the UploadBox element.
-
-
 
 @using (Html.BeginForm("Index","Home",FormMethod.Post))
 

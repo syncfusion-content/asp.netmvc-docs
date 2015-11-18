@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Miscellaneous
+title: Miscellaneous | Checkbox | ASP.NET MVC | Syncfusion
 description: miscellaneous
 platform: ejmvc
 control: Checkbox
@@ -17,15 +17,11 @@ Set id for Checkbox control as follows.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
+@*set id for checkbox *@
 
-
-    @*set id for checkbox *@
-
-    @Html.EJ().CheckBox("checkbox_id").Id("sync")
-
-
+@Html.EJ().CheckBox("checkbox_id").Id("sync")
 
 {% endhighlight %}
 
@@ -39,11 +35,11 @@ Set prefix id for Checkbox control as follows.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-    @*set prefix id for checkbox *@
+@*set prefix id for checkbox *@
 
-    @Html.EJ().CheckBox("checkbox_idPrefix").IdPrefix("JS")
+@Html.EJ().CheckBox("checkbox_idPrefix").IdPrefix("JS")
 
 {% endhighlight %}
 
@@ -61,11 +57,11 @@ You can set name and value for Checkbox control as follows.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-    @*set name and value for checkbox *@
+@*set name and value for checkbox *@
 
-    @Html.EJ().CheckBox("checkbox").Name("Conformation").Value("received")
+@Html.EJ().CheckBox("checkbox").Name("Conformation").Value("received")
 
 {% endhighlight %}
 

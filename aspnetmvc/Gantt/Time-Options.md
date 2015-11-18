@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time-Options
+title: Time Options | Gantt | ASP.NET MVC | Syncfusion
 description: time options
 platform: ejmvc
 control: Gantt
@@ -23,7 +23,7 @@ Use the following code example for setting different time scales of working hour
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
 
@@ -42,6 +42,9 @@ Use the following code example for setting different time scales of working hour
 
 
 Use the following code example for including time options in start date and end date of a task.
+
+
+{% tabs %}
 
 {% highlight C# %}
 
@@ -283,7 +286,7 @@ public class GanttController : Controller
 
 {% endhighlight %}
 
-
+{% endtabs %}  
 
 Execute the above code to render the following output.
 
@@ -291,5 +294,5 @@ Execute the above code to render the following output.
 
 ![](Time-Options_images/Time-Options_img1.png)
 
-_Figure 33: Gantt with Time Options_
-
+Gantt with Time Options
+{:.caption}

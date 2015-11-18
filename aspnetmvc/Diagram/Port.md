@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Port
+title: Port | Diagram | ASP.NET MVC | Syncfusion
 description: port
 platform: ejmvc
 control: Diagram
@@ -43,7 +43,8 @@ node.Ports.Add(port);
 
 ![](Port_images/Port_img1.png)
 
-
+Port
+{:.caption}
 
 ## Connecting Ports
 
@@ -53,8 +54,7 @@ The following code illustrates how to establish a port connection:
 
 
 
-{% highlight c# %}
-
+{% highlight C# %}
 
 
 //Creates nodes with ports
@@ -115,7 +115,8 @@ private Port GetPort(float offsetX, float offsetY, string name){
 
 ![](Port_images/Port_img2.png)
 
-
+Port to Port Connection
+{:.caption}
 
 ## Appearance
 
@@ -235,5 +236,5 @@ port.Constraints = PortConstraints.Connect;
 
 
 
-N> Ports constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ Bitwise Operations.
+N> Ports constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see [Bitwise Operations](/Diagram/How-To/Bitwise-Operations).
 

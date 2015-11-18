@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview
+title: Dialog  | Dialog | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Dialog
 documentation: ug
 ---
 
-# Overview
+# Dialog 
 
 The Dialog control displays a Dialog window within a webpage. The Dialog enables a message to be displayed, such as supplementary content like images and text, and interactive content like forms. The control can be used to display content on a modal dialog so that users are unable to interact with other items on the page while the dialog is open. The Dialog can also be dragged and resized.
 

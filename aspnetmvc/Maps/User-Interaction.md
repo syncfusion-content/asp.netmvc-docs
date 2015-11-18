@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User-Interaction
+title: User Interaction | Maps | ASP.NET MVC | Syncfusion
 description: user interaction
 platform: ejmvc
 control: Maps
@@ -9,20 +9,71 @@ documentation: ug
 
 # User Interaction
 
-Options like zooming, panning and map selection enables the effective interaction on map elements.
+Options like zooming, panning and map selection enable the effective interaction on Map elements.
 
 ## Map Selection
 
-Each shape in the map can be selected and deselected during interaction with shapes. 
+Each shape in the Map can be selected and deselected during interaction with shapes. 
 
 The SelectionColor property is used to get or set the selected shape color. The SelectionStroke and SelectionStrokeWidth properties are used to customize the selected shape border.
 
-You can select the shape by tapping on the shape. The Single selection is enabled by the EnableSelection property of shape layer. When EnableSelection is set to false, the shapes cannot be selected. 
+You can select the shape by tapping the shape. The single selection is enabled by the EnableSelection property of shape layer. When EnableSelection is set to false, the shapes cannot be selected. 
 
 
+
+{% highlight CSHTML %}
+
+
+@(Html.EJ().Map("maps") 
+
+.Layers(lr =>
+
+{
+
+	Lr
+
+	.ShapeData(mapData)
+
+	.ShapeSettings(sp =>
+
+	{
+
+		sp.StrokeThickness(0.5)
+
+			.Fill("#9CBF4E")
+
+			.Stroke("white")
+
+			.SelectionColor("#BC5353")
+
+			.SelectionStrokeWidth(2)
+
+			.SelectionStroke("white");
+
+	})
+
+	.EnableSelection(true)
+
+	.Add();
+
+})
+
+)        
+
+{% endhighlight %}
+
+
+
+![](User-Interaction_images/User-Interaction_img1.png)
+
+Map with enable selection property
+{:.caption}
+
+## MultiSelection
+
+This feature enables you to select multiple Map shapes on mouse taps accompanied by "**Control**" key press. For this feature to get enabled, set the property `selectionMode` as "**multiple**" along with `enableSelection` property.
 
 {% highlight js %}
-
 
 @(Html.EJ().Map("maps") 
 
@@ -31,48 +82,56 @@ You can select the shape by tapping on the shape. The Single selection is enable
             {
 
                 Lr
-
                 .ShapeData(mapData)
-
-                .ShapeSettings(sp =>
-
-                {
-
-                    sp.StrokeThickness(0.5)
-
-                        .Fill("#9CBF4E")
-
-                        .Stroke("white")
-
-                        .SelectionColor("#BC5353")
-
-                        .SelectionStrokeWidth(2)
-
-                        .SelectionStroke("white");
-
-                })
-
+                // ...
                 .EnableSelection(true)
-
+                .SelectionMode(Multiple)
+                // ...
                 .Add();
 
             })
 
-   )        
+   )       
 
+{% endhighlight %}
+
+![](User-Interaction_images/User-Interaction_img5.png)
+
+_Map with selectionMode property_
+
+
+## Dragging On Selection
+
+This feature enables you to select the shapes by dragging over the shapes. While dragging over the shapes, a rectangle is generated and the shapes that come within the rectangle is selected.
+You can enable this feature by setting the property `draggingOnSelection` in the `layers` to **True**.
+
+{% highlight js %}
+
+        @(Html.EJ().Map("maps") 
+
+            .Layers(lr =>
+
+            {
+
+                Lr
+                // ...
+                .DraggingOnSelection(true)
+                // ...
+                .Add();
+
+            })
+   )      
 
 
 {% endhighlight %}
 
+![](User-Interaction_images/User-Interaction_img4.png)
 
-
-![](User-Interaction_images/User-Interaction_img1.png)
-
-_Map with enable selection property_
+_Map with draggingOnSelection property_
 
 ## Zooming
 
-The zooming feature enables you to zoom in and out of the map to show in-depth information. It is controlled by the level property of the map. When the zoom level of the Map control is increased, the map is zoomed in. When the zoom level is decreased, then the map is zoomed out.
+The zooming feature enables you to zoom in and out of the Map to show in-depth information. It is controlled by the level property of the Map. When the zoom level of the Map control is increased, the Map is zoomed in. When the zoom level is decreased, then the Map is zoomed out.
 
 ### Properties Related to Zooming
 
@@ -85,7 +144,7 @@ The following properties are related to the zooming feature of the Maps control:
 
 #### Level
 
-The Level property determines the map’s scale size when zooming. The default value of Level is 1. 
+The Level property determines the Map’s scale size when zooming. The default value of Level is 1. 
 
 N> The  level cannot be less than 1.
 
@@ -95,67 +154,63 @@ The EnableZoom property enables or disables the zooming feature.
 
 #### MinValue
 
-The MinValue property is used to set the minimum zoom level of the map. 
+The MinValue property is used to set the minimum zoom level of the Map. 
 
 #### MaxValue
 
-The MaxValue property is used to set the maximum zoom level of the map.
+The MaxValue property is used to set the maximum zoom level of the Map.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            .Layers(lr =>
+	.Layers(lr =>
 
-            {
+	{
 
-                lr.ShapeData(mapData)                  
+		lr.ShapeData(mapData)                  
 
-                 .Add();
+		 .Add();
 
-            })
+	})
 
-            .ZoomSettings(zm=>
+	.ZoomSettings(zm=>
 
-            {
+	{
 
-                zm.EnableZoom(true)
+		zm.EnableZoom(true)
 
-                  .MinValue(1)
+		  .MinValue(1)
 
-                  .MaxValue(20)
+		  .MaxValue(20)
 
-                  .Level(1);
+		  .Level(1);
 
-            })               
+	})               
 
-
-
-    )      
-
-
+)      
 
 {% endhighlight %}
 
 ### Additional Options to Zoom the Map
 
-Maps can be zoomed using the following options also,
+Maps can be zoomed by using the following options also,
 
-* Using Zoom method.
-* Using mouse scroll.
-* Using mouse double tap.
-* Using shape selection
-* Using Position
+* Zoom method.
+* Mouse scroll.
+* Mouse double tap.
+* Shape selection
+* Position
 
-#### Using Zoom method
+#### By using Zoom method
 
-You can zoom the Maps using zoom method. The zoom method contains parameter zoom value. The map can be zoomed or scaled based on zoom value parameter.
+You can zoom the Maps by using zoom method. The zoom method contains parameter zoom value. The Map can be zoomed or scaled based on zoom value parameter.
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
    $("#map").ejMap("zoom", 2);
 
@@ -165,57 +220,54 @@ You can zoom the Maps using zoom method. The zoom method contains parameter zoom
 
 
 
-#### Using mouse scroll
+#### By using mouse scroll
 
-You can zoom the map with mouse events using mouse scroll. When the mouse is scrolled up, the map is zoomed in and when the mouse is scrolled down, the map is zoomed out.
+You can zoom the Map with mouse events by using mouse scroll. When the mouse is scrolled up, the Map is zoomed in and when the mouse is scrolled down, the Map is zoomed out.
 
-#### Using mouse double tap
+#### By using mouse double tap
 
-When the map is double-tapped using mouse, the zoom in operation is performed. 
+When the map is double-tapped by using mouse, the zoom in operation is performed. 
 
 
 
 ![](User-Interaction_images/User-Interaction_img2.png)
 
-_Map with zoom_
+Map with zoom
+{:.caption}
 
-#### Using Shape Selection
+#### By using Shape Selection
 
-Map shape is zoomed to the whole map area, on the shape selected. Animation can be applied for that zooming, using the EnableAnimation property as true. 
+Map shape is zoomed to the whole map area on the shape selected. Animation can be applied for that zooming with the EnableAnimation property as true. 
 
 You can enable this feature by setting EnableZoomOnSelection property value as ‘_True_’. 
 
-When EnableZoomOnSelection property is set to true, then, zoom on double click is muted.
+When EnableZoomOnSelection property is set to true, then zooming of the Map control is muted on double click.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            // ...
-
 .ZoomSettings(zm=>
 
-            {
+{
 
-                zm.EnableZoomOnSelection(true);
+	zm.EnableZoomOnSelection(true);
 
-            })                          // ...
+})                       
 
  )      
-
-
 
 {% endhighlight %}
 
 
 
-#### Using Position
+#### By using Position
 
-Depending on the latitude and longitude, you can zoom the map to the exact position. All locations are considered as latitude and longitude values and the exact location is considered as map coordinates.
+Depending on the latitude and longitude, you can zoom the Map to the exact position. All locations are considered as latitude and longitude values and the exact location is considered as Map coordinates.
 
-The navigateTo is a method defined that allows you to zoom the map control to the given location. This method contains three attributes as follows.
+The navigateTo is a method defined that allows you to zoom the Map control to the given location. This method contains three attributes as follows.
 
 _Attribute Table_
 
@@ -247,33 +299,29 @@ Zoom level of the map</td></tr>
 
 <script type="text/javascript">
 
-function buttonClick() {
+	function buttonClick()
+	{
 
- $("#map").ejMap("navigateTo", 13, 80, 5);
+	 $("#map").ejMap("navigateTo", 13, 80, 5);
 
-}
+	}
 
 </script> 
-
-
 
 {% endhighlight %}
 
 ### Panning 
 
-The panning feature enables map navigation. The EnablePan property is used to enable or disable the panning support.
+The panning feature enables the Map navigation. The EnablePan property is used to enable or disable the panning support.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Map("maps") 
 
-            // ...
 
-            .EnablePan(true)
-
-                       // ...
+.EnablePan(true)
 
  )      
 
@@ -285,32 +333,28 @@ The panning feature enables map navigation. The EnablePan property is used to en
 
 Navigation control is built-in with Maps control. With Navigation control, Maps can be panned in any direction and zoomed. It is possible to show or hide the NavigationControl by EnableNavigation property.
 
-### Structure of Navigation Control
+### Structure of the Navigation Control
 
 ![](User-Interaction_images/User-Interaction_img3.png)
 
-_Structure of Navigation Control_
+Structure of Navigation Control
+{:.caption}
 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("maps") 
 
-            // ...
+.NavigationControl(nc =>
 
-            .NavigationControl(nc =>
+{
 
-               {
+   nc.EnableNavigation(true);
 
-                   nc.EnableNavigation(true);
-
-               })
-
-                       // ...
-
+})
+            
  )      
-
-
 
 {% endhighlight %}
 
@@ -318,11 +362,11 @@ _Structure of Navigation Control_
 
 ### Zoom with Navigation Control
 
-With Navigation control, the Maps can be zoomed. When you click on the ZoomIn button the Map is zoomed in and when you click on the ZoomOut button the Map is zoomed out.
+With Navigation control, the Maps can be zoomed. When you click the ZoomIn button, the Map is zoomed in and when you click the ZoomOut button, the Map is zoomed out.
 
 ### Panning with Navigation Control
 
-Maps can be panned with Pan buttons (TopPan button, RightPan button, BottomPan button and LeftPan button). When you click on a particular Pan button the Map is panned on the respective directions.
+Maps can be panned with Pan buttons (TopPan button, RightPan button, BottomPan button, and LeftPan button). When you click a particular Pan button, the Map is panned on the respective directions.
 
 ### Navigation Control Positions
 
@@ -333,7 +377,7 @@ The Navigation control can be positioned in two ways.
 
 ### Absolute Position
 
-Based on the margin values of X and Y-axes, the navigation control can be positioned with the help of the X and Y properties available in AbsolutePosition. For positioning the navigation control based on margins corresponding to a map, DockPosition value is set as _‘_None’.
+Based on the margin values of X and Y-axes, the navigation control can be positioned with the help of the X and Y properties available in AbsolutePosition. For positioning the navigation control based on margins corresponding to a Map, DockPosition value is set as _‘_None’.
 
 ### Dock Position
 
@@ -351,39 +395,33 @@ The navigation control can be positioned in following locations within the conta
 * BottomRight
 * None
 
-You can set this option by using DockPosition property in NavigationControl.
+You can set this option by using the DockPosition property in NavigationControl.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Map("maps") 
 
-            // ...
+      
+.NavigationControl(nc =>
 
-            .NavigationControl(nc =>
+{
 
-               {
+	nc.EnableNavigation(true)
 
-                 nc.EnableNavigation(true)
+	.Orientation(Orientation.Vertical)
 
-                   .Orientation(Orientation.Vertical)
+	.AbsolutePosition(new ShapePoint(5, 12))
 
-                   .AbsolutePosition(new ShapePoint(5, 12))
+	.DockPosition(Syncfusion.JavaScript.
 
-                   .DockPosition(Syncfusion.JavaScript.
+	DataVisualization.Models.DockPosition.None);
 
-                      DataVisualization.Models.DockPosition.None);
+})
 
-               })
-
-                       // ...
-
- )      
-
-
-
+)      
 {% endhighlight %}
 
 

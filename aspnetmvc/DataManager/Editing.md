@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing
+title: Editing | DataManager | ASP.NET MVC | Syncfusion
 description: editing
 platform: ejmvc
 control: DataManager
@@ -14,36 +14,38 @@ Editing is a key feature in the DataManager and it provides support to add a new
 ## Batch Edit
 
 Batch Editing is a unique feature, where requests to add, remove and change are handled altogether at a time rather than passing the request separately for each operation.
-{% highlight js %}
+
+{% highlight CSHTML %}
+
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
-
-
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
-        .DataManagerID("FlatData")
+	.DataManagerID("FlatData")
 
-        .Query("ej.Query().take(5)")
+	.Query("ej.Query().take(5)")
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
 
-            col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
+		col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
 
-            col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
 
 
 
-        })
+	})
 
 )
 {% endhighlight  %}
 
 ## Employee ID
-{% highlight js %}
+
+{% highlight CSHTML %}
+
 <input id="EmployeeID" class="e-ejinputtext" type="text" value="" />
 
 First Name
@@ -130,13 +132,16 @@ Result of the above code example is illustrated as follows.
 
 ![](Editing_images/Editing_img1.png)
 
-
+Batch Editing
+{:.caption}
 
 ## Insert
 
 The insert method of the DataManager is used to add a new record to the table. The JSON data is passed as a parameter to the insert method that is inserted to the data source of the DataManager.
 
-{% highlight js %}
+
+
+{% highlight CSHTML %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Insert").ClientSideEvents(e => { e.Click("onClick"); })
@@ -162,8 +167,7 @@ The insert method of the DataManager is used to add a new record to the table. T
         })
 
 )
-{% endhighlight  %}
-{% highlight js %}
+
     <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -184,44 +188,48 @@ The insert method of the DataManager is used to add a new record to the table. T
 
 {% endhighlight  %}
 
+
 Result of the above code example is illustrated as follows.
 
 ![](Editing_images/Editing_img2.png)
 
-
+Result of using “Insert”
+{:.caption}
 
 ## Update
 
 The update method is used to update the modified changes made to a record in the data source of the DataManager.
-{% highlight js %}
+
+
+
+{% highlight CSHTML %}
+
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
-        .DataManagerID("FlatData")
+	.DataManagerID("FlatData")
 
-        .Query("ej.Query().take(5)")
+	.Query("ej.Query().take(5)")
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
 
-            col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
+		col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
 
-            col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
 
 
 
-        })
+	})
 
 )
 
-{% endhighlight %}
-{% highlight js %}
     <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -242,44 +250,47 @@ The update method is used to update the modified changes made to a record in the
 
 
 {% endhighlight  %}
+
 Result of the above code example is illustrated as follows.
 
 ![](Editing_images/Editing_img3.png)
 
-
+Result of using “update” method
+{:.caption}
 
 ## Remove
 
 The remove method is used to delete a record from the data source of the DataManager.
-{% highlight js %}
+
+
+
+{% highlight CSHTML %}
 @(Html.EJ().DataManager("FlatData").Adaptor(AdaptorType.JsonAdaptor))
 
 @Html.EJ().Button("submit").Text("Update").ClientSideEvents(e => { e.Click("onClick"); })
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
-        .DataManagerID("FlatData")
+	.DataManagerID("FlatData")
 
-        .Query("ej.Query().take(5)")
+	.Query("ej.Query().take(5)")
 
-        .Columns(col =>
+	.Columns(col =>
 
-        {
+	{
 
-            col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
 
-            col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
+		col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
 
-            col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("LastName").HeaderText("LastName").TextAlign(TextAlign.Right).Width(75).Add();
 
 
 
-        })
+	})
 
 )
-{% endhighlight %}
 
-{% highlight js %}
 <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
@@ -304,5 +315,5 @@ Result of the above code example is illustrated as follows.
 
 ![](Editing_images/Editing_img4.png)
 
-
-
+Result of using “remove” method
+{:.caption}

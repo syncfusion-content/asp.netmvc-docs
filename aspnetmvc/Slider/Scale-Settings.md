@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scale-Settings
+title: Scale Settings | Slider | ASP.NET MVC | Syncfusion
 description: scale settings
 platform: ejmvc
 control: Slider
@@ -19,17 +19,16 @@ The following steps explains you the configuration of ShowScale property.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80).ShowScale(true))
 
+@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
 
+.ShowScale(true))
 
-    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
-
-    .ShowScale(true))
 {% endhighlight %}
 	
 Execute the above code example to render the following output.
@@ -46,7 +45,7 @@ The following steps explains you on how to disable the small ticks in Slider.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -81,17 +80,17 @@ The following steps explains you on how to configure the SmallStep and LargeStep
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
 @(Html.EJ().Slider("defaultSlider").Value("60").Width("500").MinValue(40).MaxValue(80)
 
-    .ShowScale(true).SmallStep(5).LargeStep(20))
+.ShowScale(true).SmallStep(5).LargeStep(20))
 
-    @(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
+@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("10,90")
 
-    .ShowScale(true).SmallStep(5).LargeStep(20))
+.ShowScale(true).SmallStep(5).LargeStep(20))
 
 {% endhighlight %}
 Execute the above code example to render the following output.

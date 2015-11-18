@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drag-and-Drop
+title: Drag and Drop | TreeView | ASP.NET MVC | Syncfusion
 description: drag and drop
 platform: ejmvc
 control: TreeView
@@ -18,77 +18,77 @@ The following steps explain enabling the AllowDragAndDrop property for TreeView.
 1.	In the View page, add TreeView helper as shown below 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 \\ To configure TreeView in the CSHTML page
 
 @Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+	items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+			   {
 
-                       child.Add().Text("Desktop");
+				   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+				   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+				   child.Add().Text("Recent places");
 
-                   });
+			   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+	items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+	{
 
-            child.Add().Text("Documents").Children(child1 =>
+		child.Add().Text("Documents").Children(child1 =>
 
-                {
+			{
 
-                    child1.Add().Text("My Documents");
+				child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+				child1.Add().Text("Public Documents");
 
-                });
+			});
 
-            child.Add().Text("Pictures").Children(child1 =>
+		child.Add().Text("Pictures").Children(child1 =>
 
-            {
+		{
 
-                child1.Add().Text("My Pictures");
+			child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+			child1.Add().Text("Public Pictures");
 
-            });
+		});
 
-            child.Add().Text("Music").Children(child1 =>
+		child.Add().Text("Music").Children(child1 =>
 
-            {
+		{
 
-                child1.Add().Text("My Music");
+			child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+			child1.Add().Text("Public Music");
 
-            });
+		});
 
-            child.Add().Text("Subversion");
+		child.Add().Text("Subversion");
 
 
 
-        });
+	});
 
-        items.Add().Text("Computer").Children(child =>
+	items.Add().Text("Computer").Children(child =>
 
-        {
+	{
 
-            child.Add().Text("Folder(C)");
+		child.Add().Text("Folder(C)");
 
-            child.Add().Text("Folder(D)");
+		child.Add().Text("Folder(D)");
 
-            child.Add().Text("Folder(E)");
+		child.Add().Text("Folder(E)");
 
-        });
+	});
 
 }).AllowDragAndDrop(true)
 
@@ -112,85 +112,85 @@ The output for TreeView when AllowDragAndDrop is set to True.
 </td></tr>
 </table>
 
-_Figure41: Drag And Drop TreeView_
+
 
 ## Allow Drop Child
 
 We can prevent the TreeNodes from dropping as child. If we specify the value as false for the AllowDropChild property means, then we can only reorder the Tree nodes, we cannot drop the nodes as child element. Refer the below code to disable the AllowDropChild property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-    @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
-
-
-
-        });
-
-        items.Add().Text("Computer").Children(child =>
-
-        {
-
-            child.Add().Text("Folder(C)");
-
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
+	child.Add().Text("Subversion");
 
 
 
-    }).AllowDragAndDrop(true).AllowDropChild(false)
+});
+
+items.Add().Text("Computer").Children(child =>
+
+{
+
+	child.Add().Text("Folder(C)");
+
+	child.Add().Text("Folder(D)");
+
+	child.Add().Text("Folder(E)");
+
+});
+
+
+
+}).AllowDragAndDrop(true).AllowDropChild(false)
 
 {% endhighlight %}
 
@@ -203,81 +203,78 @@ You can drag the root node and drop it into the same level of node that is a sib
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
-   @Html.EJ().TreeView("treeview").Items(items =>
+@Html.EJ().TreeView("treeview").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
-
-
-
-        });
-
-        items.Add().Text("Computer").Children(child =>
-
-        {
-
-            child.Add().Text("Folder(C)");
-
-            child.Add().Text("Folder(D)");
-
-            child.Add().Text("Folder(E)");
-
-        });
+	child.Add().Text("Subversion");
 
 
 
-    }).AllowDragAndDrop(true).AllowDropSibling(false)
+});
 
+items.Add().Text("Computer").Children(child =>
+
+{
+
+	child.Add().Text("Folder(C)");
+
+	child.Add().Text("Folder(D)");
+
+	child.Add().Text("Folder(E)");
+
+});
+
+}).AllowDragAndDrop(true).AllowDropSibling(false)
 
 
 {% endhighlight %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Node-Persistence-Handling
+title: Node Persistence Handling | TreeView | ASP.NET MVC | Syncfusion
 description: node persistence handling
 platform: ejmvc
 control: TreeView
@@ -18,7 +18,7 @@ The following steps explain how you can enable the EnablePersistence property fo
 1. In the View page, add TreeView helper to configure TreeView.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // To configure TreeView in the CSHTML page
 
@@ -26,69 +26,69 @@ The following steps explain how you can enable the EnablePersistence property fo
 
     {
 
-        items.Add().Text("Favorites").Expanded(true).Children(child =>
+items.Add().Text("Favorites").Expanded(true).Children(child =>
 
-                   {
+		   {
 
-                       child.Add().Text("Desktop");
+			   child.Add().Text("Desktop");
 
-                       child.Add().Text("Downloads");
+			   child.Add().Text("Downloads");
 
-                       child.Add().Text("Recent places");
+			   child.Add().Text("Recent places");
 
-                   });
+		   });
 
-        items.Add().Text("Libraries").Expanded(true).Children(child =>
+items.Add().Text("Libraries").Expanded(true).Children(child =>
 
-        {
+{
 
-            child.Add().Text("Documents").Children(child1 =>
+	child.Add().Text("Documents").Children(child1 =>
 
-                {
+		{
 
-                    child1.Add().Text("My Documents");
+			child1.Add().Text("My Documents");
 
-                    child1.Add().Text("Public Documents");
+			child1.Add().Text("Public Documents");
 
-                });
+		});
 
-            child.Add().Text("Pictures").Children(child1 =>
+	child.Add().Text("Pictures").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Pictures");
+		child1.Add().Text("My Pictures");
 
-                child1.Add().Text("Public Pictures");
+		child1.Add().Text("Public Pictures");
 
-            });
+	});
 
-            child.Add().Text("Music").Children(child1 =>
+	child.Add().Text("Music").Children(child1 =>
 
-            {
+	{
 
-                child1.Add().Text("My Music");
+		child1.Add().Text("My Music");
 
-                child1.Add().Text("Public Music");
+		child1.Add().Text("Public Music");
 
-            });
+	});
 
-            child.Add().Text("Subversion");
+	child.Add().Text("Subversion");
 
 
 
-        });
+});
 
-        items.Add().Text("Computer").Children(child =>
+items.Add().Text("Computer").Children(child =>
 
-        {
+{
 
-            child.Add().Text("Folder(C)");
+	child.Add().Text("Folder(C)");
 
-            child.Add().Text("Folder(D)");
+	child.Add().Text("Folder(D)");
 
-            child.Add().Text("Folder(E)");
+	child.Add().Text("Folder(E)");
 
-        });
+});
 
 }).EnablePersistence(true)
 
@@ -102,6 +102,6 @@ The output for TreeView when EnablePersistence is set to True is as follows.
 
 ![](Node-Persistence-Handling_images/Node-Persistence-Handling_img1.png)
 
-
-_Figure54: TreeView with enablePersistence_
+TreeView with enablePersistence
+{:.caption}
 

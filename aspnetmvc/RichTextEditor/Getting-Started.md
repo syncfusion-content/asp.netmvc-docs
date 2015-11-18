@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | RichTextEditor | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: RichTextEditor
@@ -21,25 +21,25 @@ The following screenshot demonstrates how the RTE control is used in Feedback fo
 
 In the above screenshot , the RTE consists of content editable area with Feedback title.In this RTE application, you can click the PostFeedback toolbar item to send the Feedback information.
 
-## Create a RichTextEditor 
+### Create a RichTextEditor 
 
 ASP.NET MVC RTE widget basically renders by using the simple text area element. 
 
-1. You can create a MVC Project and add the necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/richtexteditor/getting-started) Documentation.
+1. You can create a MVC Project and add the necessary Dll’s and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/richtexteditor/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the RichTextEditor.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@Html.EJ().RTE("FeedbackEditor")
+	@Html.EJ().RTE("FeedbackEditor")
 
    ~~~
-   {:.prettyprint }
+   
 
 	![](Getting-Started_images/Getting-Started_img2.png)
 
 	The following RTE screenshot renders the output of the above steps.
 
-## Configure the Toolbar
+### Configure the Toolbar
 
 The RichTextEditor configures the toolbar items to provide editing and styling functionalities. In this scenario, you can use the default RTE toolbar item to provide Feedback form support. 
 
@@ -50,7 +50,7 @@ The additional functionality toolbar item is necessary to perform the required o
 The following code example renders the additional inbuilt toolbar items to RTE toolbar list.
 
 
-{% highlight c# %}
+{% highlight CSHTML %}
 
 @{
 
@@ -76,7 +76,7 @@ For example, consider ‘create table’ toolbar item is not necessary for the F
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 @Html.EJ().RTE("FeedbackEditor")
 
@@ -104,25 +104,26 @@ The following screenshot displays ‘create table’ toolbar item is removed fro
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-## Configure Custom Toolbar item
+### Configure Custom Toolbar item
 
 To post the Feedback directly, you need additional Toolbar item. The RTE control provides support to create the custom toolbar item for custom action. 
 
 The following code example creates the custom toolbar item in the RTE control. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().RTE("FeedbackEditor").Width("820px").Tools(tool => tool.CustomTool(custom =>
 
-                    custom.Name("PostFeedback").Tooltip("click to Post Feedback messages").Css("Feedback").Add()))
+custom.Name("PostFeedback").Tooltip("click to Post Feedback messages").Css("Feedback").Add()))
 
 
 
-					Add the following styles for the customtoolbaritem.
+Add the following styles for the customtoolbaritem.
 
 <style>
 
-    .Feedback {
+    .Feedback 
+	{
 
         height: 22px;
 
@@ -132,7 +133,9 @@ The following code example creates the custom toolbar item in the RTE control.
 
         text-align: center;
 
-        font-weight: bold;    }
+        font-weight: bold;    
+	
+	}
 
 </style> 
 
@@ -142,7 +145,7 @@ The following screenshot displays RTE with custom toolbar item.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-## Validate the Content
+### Validate the Content
 
 In some cases, to send the Feedback form without contents you can validate them before submitting the Feedback contents. To achieve this validation, you can use getText() method in RTE control.
 
@@ -153,58 +156,61 @@ During the Feedback sending time, you can validate whether the content area is e
 You can specify the custom tool same as previous section with validation operations.
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 <div class="commentSection" style="width: 810px">
 
-    <div class="titleSection">
+	<div class="titleSection">
 
-        <label>Title:</label>
+		<label>Title:</label>
 
-        <input type="text" class="input ejinput" />
+		<input type="text" class="input ejinput" />
 
-    </div>
+	</div>
 
     <!--RTE element section-->
 
 
 
-@Html.EJ().RTE("FeedbackEditor").Width("100%").ClientSideEvents(cs=>cs.Change("change")).Tools(tool => tool.CustomTool(custom =>
+	@Html.EJ().RTE("FeedbackEditor").Width("100%").ClientSideEvents(cs=>cs.Change("change")).Tools(tool => tool.CustomTool(custom =>
 
-                    custom.Name("PostFeedback").Tooltip("click to Post Feedback messages").Css("Feedback").Action("validate").Add()))
+				custom.Name("PostFeedback").Tooltip("click to Post Feedback messages").Css("Feedback").Action("validate").Add()))
 
 
 
-<!-- validation message display area-->
+	<!-- validation message display area-->
 
-        <div class="output"></div>
+	<div class="output"></div>
 
 </div>
 
 <script type="text/javascript">
 
-function validate() {
+	function validate() 
+	{
 
-        var editorObj = $("#FeedbackEditor").data('ejRTE');
+		var editorObj = $("#FeedbackEditor").data('ejRTE');
 
-        if (($.trim(editorObj.getText()).length < 1)) {
+		if (($.trim(editorObj.getText()).length < 1)) 
+		{
 
-            //the content area is empty
+			//the content area is empty
 
-            $(".output").html("The Feedback content is empty");
+			$(".output").html("The Feedback content is empty");
 
-        } else {   //the content area contains information
+		} 
+		else 
+		{   //the content area contains information
 
-            $(".output").html("");
+			$(".output").html("");
 
-            //custom code to send the Feedback form contents 
+			//custom code to send the Feedback form contents 
 
-            alert("The Feedback content has been saved");
+			alert("The Feedback content has been saved");
 
-        }
-
-    }
+		}
+	}
 
 </script>
 
@@ -212,71 +218,76 @@ function validate() {
 
 You can add the following styles to achieve the Feedback form editor application.
 
-{% highlight c# %}
+{% highlight css %}
 
 <style>
 
-    .commentSection {
+	.commentSection 
+	{
 
-            width: 60%;
+		width: 60%;
 
-            background: none repeat scroll 0 0 #f9f9f1;
+		background: none repeat scroll 0 0 #f9f9f1;
 
-            border: 1px solid #e9e9e1;
+		border: 1px solid #e9e9e1;
 
-            padding: 10px;
+		padding: 10px;
 
-        }
-
-
-
-        .titleSection {
-
-            text-indent: 20px;
-
-            float: left;
-
-            padding: 20px 0px;
-
-            width: 100%;
-
-            border: 1px solid #bbbcbb;
-
-        }
+	}
 
 
 
-        .output {
+	.titleSection 
+	{
 
-            height: 20px;
+		text-indent: 20px;
 
-            padding: 5px;
+		float: left;
 
-            color: red;
+		padding: 20px 0px;
 
-        }
+		width: 100%;
 
+		border: 1px solid #bbbcbb;
 
-
-        .titleSection .level {
-
-            margin: 15px 0px 5px 0px;
-
-        }
+	}
 
 
 
-        .input.ejinput {
+	.output 
+	{
 
-            text-indent: 5px;
+		height: 20px;
 
-            height: 24px;
+		padding: 5px;
 
-            width: 80%;
+		color: red;
 
-            margin-left: 5px;
+	}
 
-        }
+
+
+	.titleSection .level 
+	{
+
+		margin: 15px 0px 5px 0px;
+
+	}
+
+
+
+	.input.ejinput 
+	{
+
+		text-indent: 5px;
+
+		height: 24px;
+
+		width: 80%;
+
+		margin-left: 5px;
+
+	}
 
 </style>
 

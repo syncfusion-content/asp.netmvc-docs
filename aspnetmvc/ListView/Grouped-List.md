@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouped-List
+title: Grouped List | ListView | ASP.NET MVC | Syncfusion
 description: grouped list
 platform: ejmvc
 control: ListView
@@ -17,59 +17,59 @@ Refer the following code example.
 
 
 
-{% highlight js %}
+ {% highlight CSHTML %}
 
 @Html.EJ().ListView("firstlevelgrouplist").Width(400).EnableGroupList(true).Groups(gp =>
 
-    {
+{
 
-        gp.Add().Title("Network").Items(items =>
+	gp.Add().Title("Network").Items(items =>
 
-    {
+{
 
-        items.Add().Text("Airplane_Mode");
+	items.Add().Text("Airplane_Mode");
 
-        items.Add().Text("Wi-Fi");
+	items.Add().Text("Wi-Fi");
 
-        items.Add().Text("Notifications");
+	items.Add().Text("Notifications");
 
-        items.Add().Text("Location_Services");
-
-
-
-    });
-
-        gp.Add().Title("Apps").Items(items =>
-
-    {
-
-        items.Add().Text("Sound");
-
-        items.Add().Text("Brightness");
-
-        items.Add().Text("Wallpaper");
+	items.Add().Text("Location_Services");
 
 
 
-    });
+});
 
-        gp.Add().Title("Settings").Items(items =>
+	gp.Add().Title("Apps").Items(items =>
 
-    {
+{
 
-        items.Add().Text("General");
+	items.Add().Text("Sound");
 
-        items.Add().Text("Brightness");
+	items.Add().Text("Brightness");
 
-        items.Add().Text("Wallpaper");
-
-
-
-    });
+	items.Add().Text("Wallpaper");
 
 
 
-    })
+});
+
+	gp.Add().Title("Settings").Items(items =>
+
+{
+
+	items.Add().Text("General");
+
+	items.Add().Text("Brightness");
+
+	items.Add().Text("Wallpaper");
+
+
+
+});
+
+
+
+})
 
 {% endhighlight %}
 
@@ -77,8 +77,8 @@ Refer the following code example.
 
 ![](Grouped-List_images/Grouped-List_img1.png)
 
-
-_First Level Group List_
+First Level Group List
+{:.caption}
 
 ## Nested Child Group List
 
@@ -88,73 +88,67 @@ Refer the following code examples.
 
 
 
-{% highlight js %}
-
-
+{% highlight CSHTML %}
 
 @Html.EJ().ListView("grouplistsamp").Width(400).ShowHeader(true).HeaderTitle("Favourite").EnableGroupList(true).Groups(gp =>
 
-    {
+{
 
-        gp.Add().Title("Network").Items(items =>
+		gp.Add().Title("Network").Items(items =>
 
-    {
+	{
 
-        items.Add().Text("Airplane_Mode");
+		items.Add().Text("Airplane_Mode");
 
-        items.Add().Text("Wi-Fi");
+		items.Add().Text("Wi-Fi");
 
-        items.Add().Text("Notifications");
+		items.Add().Text("Notifications");
 
-        items.Add().Text("Location_Services");
-
-
-
-    });
-
-        gp.Add().Title("Apps").Items(items =>
-
-    {
-
-        items.Add().Text("Sound").PrimaryKey(1).Children(child =>
-
-            {
-
-                child.Add().Text("Ring Tone");
-
-                child.Add().Text("Message Tone");
-
-                child.Add().Text("Notification Tone");
-
-            });
-
-        items.Add().Text("Brightness");
-
-        items.Add().Text("Wallpaper");
+		items.Add().Text("Location_Services");
 
 
 
-    });
+	});
 
-        gp.Add().Title("Settings").Items(items =>
+		gp.Add().Title("Apps").Items(items =>
 
-    {
+	{
 
-        items.Add().Text("General");
+		items.Add().Text("Sound").PrimaryKey(1).Children(child =>
 
-        items.Add().Text("Brightness");
+			{
 
-        items.Add().Text("Wallpaper");
+				child.Add().Text("Ring Tone");
+
+				child.Add().Text("Message Tone");
+
+				child.Add().Text("Notification Tone");
+
+			});
+
+		items.Add().Text("Brightness");
+
+		items.Add().Text("Wallpaper");
 
 
 
-    });
+	});
+
+		gp.Add().Title("Settings").Items(items =>
+
+	{
+
+		items.Add().Text("General");
+
+		items.Add().Text("Brightness");
+
+		items.Add().Text("Wallpaper");
 
 
 
-    })
+	});
 
-
+})
 
 
 {% endhighlight %}
@@ -163,7 +157,5 @@ Refer the following code examples.
 
 ![](Grouped-List_images/Grouped-List_img2.png)
 
-
-
-_Nested Child Group List_
-
+Nested Child Group List
+{:.caption}

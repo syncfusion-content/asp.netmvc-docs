@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-Settings
+title: Behavior Settings | NumericTextBox | ASP.NET MVC | Syncfusion
 description: behavior settings
 platform: ejmvc
 control: NumericTextBox
@@ -17,7 +17,7 @@ DecimalPlaces property specifies number of values allowed after the decimal poin
 
 In the View page add NumericTextBox helper, and configure the DecimalPlaces property as shown below.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").DecimalPlaces(3).Value("333")
 
@@ -39,8 +39,7 @@ NumericTextBox provides state maintenance support. You can maintain the previous
 
 In the View page add NumericTextBox helper, and configure the EnablePersistence property as shown below.
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 
  @Html.EJ().NumericTextbox("numeric").Value("11").EnablePersistence(true) 
@@ -67,7 +66,7 @@ NumericTextBox allows you to use the strict mode option by setting the EnableStr
 
 In the View page add NumericTextBox helper, and configure the EnableStrictMode property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").MinValue(-3).MaxValue(5).Value(“10”).EnableStrictMode(true)
 
@@ -89,7 +88,7 @@ In the View page add NumericTextBox helper, and configure the Enabled property.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("1").Enabled(false) 
 
@@ -119,7 +118,7 @@ In the View page add NumericTextBox helper, and configure the Height and Width p
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Width("100").Height("50").Value("1")
 
@@ -143,7 +142,7 @@ In the View page add NumericTextBox helper, and configure the IncrementStep prop
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").IncrementStep(2).Value("1")
 
@@ -172,7 +171,7 @@ When you have placed the NumericTextBox in a form, the Name property is used to 
 In the View page add NumericTextBox helper, and configure the Name property.  
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Name("Numeric")
 
@@ -188,8 +187,7 @@ In the View page add NumericTextBox helper, and configure the Value property.
 
 
 
-{% highlight js %}
-
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("12")
 
@@ -216,7 +214,7 @@ The minimum limit value can be assigned to the NumericTextBox by using the MinVa
 In the View page add NumericTextBox helper, and configure the MinValue and MaxValue property.  .  
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("2").MinValue(-1).MaxValue(2)
 
@@ -244,7 +242,7 @@ NumericTextBox supports read only option. When you enable the ReadOnly property 
 
 In the View page add NumericTextBox helper, and configure the ReadOnly property.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("1").ReadOnly(true) 
 
@@ -287,7 +285,7 @@ In the View page add NumericTextBox helper, and configure the CssClass property.
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("1").CssClass("customCss")
 
@@ -297,29 +295,29 @@ In the View page add NumericTextBox helper, and configure the CssClass property.
 
 {% highlight css %}
 
-    <style>
+<style>
 
-        .customCss .e-box {
+	.customCss .e-box {
 
-            border-color: #9d241b;
+		border-color: #9d241b;
 
-        }
+	}
 
-        .customCss .e-input {
+	.customCss .e-input {
 
-            background-color: #f6db8d;            
+		background-color: #f6db8d;            
 
-        }
+	}
 
-        .customCss .e-select {
+	.customCss .e-select {
 
-            background-color: #ecf6ac;
+		background-color: #ecf6ac;
 
-            border-color: #3c36e7;
+		border-color: #3c36e7;
 
-        }
+	}
 
-    </style>
+</style>
 
 {% endhighlight %}
 
@@ -339,7 +337,7 @@ In the View page add NumericTextBox helper, and configure the ShowRoundedCorner 
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("1").ShowRoundedCorner(true)
 
@@ -361,7 +359,7 @@ In the View page add NumericTextBox helper, and configure the ShowSpinButton pro
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").Value("1").ShowSpinButton(false)
 
@@ -385,7 +383,7 @@ In the View page add NumericTextBox helper, and configure the ShowSpinButton pro
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().NumericTextbox("numeric").WatermarkText("Numeric")
 

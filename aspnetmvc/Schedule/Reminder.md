@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reminder
+title: Reminder | Schedule | ASP.NET MVC | Syncfusion
 description: reminder
 platform: ejmvc
 control: Schedule
@@ -17,7 +17,7 @@ The following code example explains how to get the reminder list and display it 
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 
@@ -271,7 +271,5 @@ Execute the above code to render the following output.
 
 ![](Reminder_images/Reminder_img1.png)
 
-
-
-   _Figure_ _106_:  schedule with Reminder.
-
+schedule with Reminder.
+{:.caption}

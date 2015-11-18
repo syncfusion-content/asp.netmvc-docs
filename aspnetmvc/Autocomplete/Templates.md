@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Templates
+title: Templates | AutoComplete | ASP.NET MVC | Syncfusion
 description: templates
 platform: ejmvc
 control: AutoComplete
@@ -19,7 +19,7 @@ The following steps explain you how to define a Template to display a text and i
 1. Define DataSource elements with required template fields by using the Sprite CSS class names.
 
 
-   ~~~ cs
+   ~~~ csharp
      public partial class AutocompleteController : Controller
 
      {
@@ -114,12 +114,12 @@ The following steps explain you how to define a Template to display a text and i
      } 
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Configure template structure for AutoComplete control as follows, including a <div> element with image and text in every row of the popup panel. Assign the corresponding variable name within ${<field name>} to map them into the list.
 
 
-   ~~~ html
+   ~~~ cshtml
 
 
      @Html.EJ().Autocomplete("autocomplete")
@@ -131,118 +131,117 @@ The following steps explain you how to define a Template to display a text and i
      .Template("<div class='flag ${Sprite}'></div><div class='txt'> ${_Text_} </div>")
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Define the CSS classes for the sprite images. You can find the images in the following location:
 
 [Installed Drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Images\autocomplete\flags.png
 
-{% highlight css %}
+{% highlight s %}
 
-<style type="text/css">
+<style type="text/s">
 
-        /* Sprite css for country flags */
+	/* Sprite s for country flags */
 
-        .flag
+	.flag
 
-        {
+	{
 
-            background: url("Styles/flags.png") no-repeat;
+		background: url("Styles/flags.png") no-repeat;
 
-            float: left;
+		float: left;
 
-            height: 15px;
+		height: 15px;
 
-            margin-right: 10px;
+		margin-right: 10px;
 
-            margin-top: 3px;
+		margin-top: 3px;
 
-            width: 25px;
+		width: 25px;
 
-        }
+	}
 
-        .flag.flag-am {background-position: -25px 0}
+	.flag.flag-am {background-position: -25px 0}
 
-        .flag.flag-ar {background-position: -50px 0}
+	.flag.flag-ar {background-position: -50px 0}
 
-        .flag.flag-bd {background-position: -75px 0}
+	.flag.flag-bd {background-position: -75px 0}
 
-        .flag.flag-br {background-position: -100px 0}
+	.flag.flag-br {background-position: -100px 0}
 
-        .flag.flag-ca {background-position: -125px 0}
+	.flag.flag-ca {background-position: -125px 0}
 
-        .flag.flag-cn {background-position: 0 -15px}
+	.flag.flag-cn {background-position: 0 -15px}
 
-        .flag.flag-cu {background-position: -25px -15px}
+	.flag.flag-cu {background-position: -25px -15px}
 
-        .flag.flag-dk {background-position: -50px -15px}
+	.flag.flag-dk {background-position: -50px -15px}
 
-        .flag.flag-dz {background-position: -75px -15px}
+	.flag.flag-dz {background-position: -75px -15px}
 
-        .flag.flag-ee {background-position: -100px -15px}
+	.flag.flag-ee {background-position: -100px -15px}
 
-        .flag.flag-eg {background-position: -125px -15px}
+	.flag.flag-eg {background-position: -125px -15px}
 
-        .flag.flag-es {background-position: 0 -30px}
+	.flag.flag-es {background-position: 0 -30px}
 
-        .flag.flag-fi {background-position: -25px -30px}
+	.flag.flag-fi {background-position: -25px -30px}
 
-        .flag.flag-fr {background-position: -50px -30px}
+	.flag.flag-fr {background-position: -50px -30px}
 
-        .flag.flag-gl {background-position: -75px -30px}
+	.flag.flag-gl {background-position: -75px -30px}
 
-        .flag.flag-id {background-position: -100px -30px}
+	.flag.flag-id {background-position: -100px -30px}
 
-        .flag.flag-in {background-position: -125px -30px}
+	.flag.flag-in {background-position: -125px -30px}
 
-        .flag.flag-mx {background-position: 0 -45px}
+	.flag.flag-mx {background-position: 0 -45px}
 
-        .flag.flag-my {background-position: -25px -45px}
+	.flag.flag-my {background-position: -25px -45px}
 
-        .flag.flag-nl {background-position: -50px -45px}
+	.flag.flag-nl {background-position: -50px -45px}
 
-        .flag.flag-no {background-position: -75px -45px}
+	.flag.flag-no {background-position: -75px -45px}
 
-        .flag.flag-nz {background-position: -100px -45px}
+	.flag.flag-nz {background-position: -100px -45px}
 
-        .flag.flag-pl {background-position: -125px -45px}
+	.flag.flag-pl {background-position: -125px -45px}
 
-        .flag.flag-pt {background-position: 0 -60px}
+	.flag.flag-pt {background-position: 0 -60px}
 
-        .flag.flag-qa {background-position: -25px -60px}
+	.flag.flag-qa {background-position: -25px -60px}
 
-        .flag.flag-ro {background-position: -50px -60px}
+	.flag.flag-ro {background-position: -50px -60px}
 
-        .flag.flag-sa {background-position: -75px -60px}
+	.flag.flag-sa {background-position: -75px -60px}
 
-        .flag.flag-sg {background-position: -100px -60px}
+	.flag.flag-sg {background-position: -100px -60px}
 
-        .flag.flag-th {background-position: -125px -60px}
+	.flag.flag-th {background-position: -125px -60px}
 
-        .flag.flag-tr {background-position: 0 -75px}
+	.flag.flag-tr {background-position: 0 -75px}
 
-        .flag.flag-ua {background-position: -25px -75px}
+	.flag.flag-ua {background-position: -25px -75px}
 
-        .flag.flag-us {background-position: -50px -75px}
+	.flag.flag-us {background-position: -50px -75px}
 
-        .flag.flag-uy {background-position: -75px -75px}
+	.flag.flag-uy {background-position: -75px -75px}
 
-        .flag.flag-vn {background-position: -100px -75px}
+	.flag.flag-vn {background-position: -100px -75px}
 
-        .flag.flag-ye {background-position: -125px -75px}
+	.flag.flag-ye {background-position: -125px -75px}
 
-        .txt {
+	.txt {
 
-            display: table-cell;
+		display: table-cell;
 
-            height: 20px;
+		height: 20px;
 
-            vertical-align: middle;
+		vertical-align: middle;
 
-        }  
+	}  
 
-    </style>
-
+</style>
 
 {% endhighlight %}
 
@@ -255,7 +254,5 @@ The following image is the output for AutoComplete widget with Template support.
 
 ![](Templates_images/Templates_img1.png)
 
-
-
-_AutoComplete with Custom template_
-
+AutoComplete with Custom template
+{:.caption}

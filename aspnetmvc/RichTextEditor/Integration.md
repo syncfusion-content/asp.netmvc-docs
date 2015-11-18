@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integration
+title: Integration | RichTextEditor | ASP.NET MVC | Syncfusion
 description: integration
 platform: ejmvc
 control: RichTextEditor
@@ -13,13 +13,13 @@ documentation: ug
 
 Angular Support is a two-way data binding, connecting HTML to JavaScript objects seamlessly. It reduces the amount of code from page. Angular JS adds more functionality and creates powerful dynamic template. Angular JS extends HTML with new directives. 
 
-Angular JS is an open-source web application framework. Angular JS extends HTML with new attribute. It can be added to HTML page with <script> tag. The library reads in HTML that contains additional custom tag attributes. Angular JS extends HTML attribute with Directives and binds data to HTML with Expressions. 
+Angular JS is an open-source web application framework. Angular JS extends HTML with new attribute. It can be added to HTML page with &lt;script&gt; tag. The library reads in HTML that contains additional custom tag attributes. Angular JS extends HTML attribute with Directives and binds data to HTML with Expressions. 
 
 By using this, you can view the equivalent XHTML code of the content in the editing area while you type.
 
 To know more details about the Angular binding, refer to the following link location,
 
-<http://docs.syncfusion.com/aspnetmvc/richtexteditor/integration>
+<http://help.syncfusion.com/aspnetmvc/richtexteditor/integration>
 
 You can bind data to the RTE control through angular support.
 
@@ -27,39 +27,35 @@ The following example illustrates how to bind the RTE data with simple text box 
 
 1. Add the following code in your CSHTML page to initialize the RTE control.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@*Add the following code in your view page to render the RTE control.
-		*@<div ng-app="syncApp" ng-controller="RTECtrl">    
-			<div id="control" style="float: left; width: 30%;">        
-				<textarea id="rteSample" ej-rte e-width="100%" e-height="266" e-value="rteValue"></textarea>        
-				<h6>
-					<span style="font-style: italic; font-weight: normal; position: absolute; ">		
-					Note:Two Way Angular Support</span>
-				</h6>    
-			</div>   
-			
-			<div id="binding" style="float: left; margin-left:10px; width:27%;">        
-				<textarea name="scroll" class="input ejinputarea" ng-model="rteValue" style="height: 262px;"></textarea>    
-			</div>
+	@*Add the following code in your view page to render the RTE control.
+	*@<div ng-app="syncApp" ng-controller="RTECtrl">    
+		<div id="control" style="float: left; width: 30%;">        
+			<textarea id="rteSample" ej-rte e-width="100%" e-height="266" e-value="rteValue"></textarea>        
+			<h6>
+				<span style="font-style: italic; font-weight: normal; position: absolute; ">		
+				Note:Two Way Angular Support</span>
+			</h6>    
+		</div>   
+		
+		<div id="binding" style="float: left; margin-left:10px; width:27%;">        
+			<textarea name="scroll" class="input ejinputarea" ng-model="rteValue" style="height: 262px;"></textarea>    
 		</div>
+	</div>
+
+  
+
+	// Add the following code in your script section.       
+	angular.module('syncApp', ['ejangular'])            
+	.controller('RTECtrl', function ($scope) {                
+	$scope.rteValue = "Description: The Rich Text Editor (RTE) control is an easy to render in client side. 
+	Customer easy to edit the contents and get the HTML content for";               
+	$scope.style = "color:ffffff";});
 
    ~~~
-   {:.prettyprint }
-
-   ~~~ js
-
-		// Add the following code in your script section.       
-		angular.module('syncApp', ['ejangular'])            
-		.controller('RTECtrl', function ($scope) {                
-		$scope.rteValue = "Description: The Rich Text Editor (RTE) control is an easy to render in client side. 
-		Customer easy to edit the contents and get the HTML content for";               
-		$scope.style = "color:ffffff";});
-
-   ~~~
-   {:.prettyprint }
-
-	![](Integration_images/Integration_img1.png)
+   
+    ![](Integration_images/Integration_img1.png)
 
 	The following screenshot displays the output.
 
@@ -77,36 +73,33 @@ When you type this HTML code and focus out from the text area, you can get the r
 
 1. Add the following code in your CSHTML page to initialize the RTE.
 
-   ~~~ html
+   ~~~ cshtml
 
-		@* Add the following code in your view page to initialize the RTE.*@
+	@* Add the following code in your view page to initialize the RTE.*@
+	
+	<div id="control" style="float: left; width: 30%;">
+	
+	<textarea id="rteSample" data-bind="ejRTE: {value:rteValue,width:width,height:height}"></textarea>
+	
+	</div>
+	
+	<div id="binding" style="float: left; font-size:25px; width: 27%">  
+	
+	<textarea name="scroll" style="font-size:25px; height: 262px" class="input ejinputtext" data-bind="value: rteValue"></textarea>
+	
+	</div>
 		
-		<div id="control" style="float: left; width: 30%;">
-		
-		<textarea id="rteSample" data-bind="ejRTE: {value:rteValue,width:width,height:height}"></textarea>
-		
-		</div>
-		
-		<div id="binding" style="float: left; font-size:25px; width: 27%">  
-		
-		<textarea name="scroll" style="font-size:25px; height: 262px" class="input ejinputtext" data-bind="value: rteValue"></textarea>
-		
-		</div>
+  
+
+	// Add the following code in your view page to render RTE.
+	
+	var rte;window.viewModel = {    
+	height: ko.observable(266),    width: ko.observable("95%"),    rteValue: ko.observable("<h1>Demo of current html content</h1>"),};
+	$(function () {    ko.applyBindings(viewModel);    
+	rte = $("#rteSample").data("ejRTE");});
 		
    ~~~
-   {:.prettyprint }
-
-   ~~~ js
-
-		// Add the following code in your view page to render RTE.
-		
-		var rte;window.viewModel = {    
-		height: ko.observable(266),    width: ko.observable("95%"),    rteValue: ko.observable("<h1>Demo of current html content</h1>"),};
-		$(function () {    ko.applyBindings(viewModel);    
-		rte = $("#rteSample").data("ejRTE");});
-		
-   ~~~
-   {:.prettyprint }
+   
 
 	The following screenshot displays the output.
 

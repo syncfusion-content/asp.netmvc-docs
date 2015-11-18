@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Search-Options
+title: Search Options | DropDownList | ASP.NET MVC | Syncfusion
 description: search options 
 platform: ejmvc
 control: DropDownList
@@ -25,13 +25,11 @@ The following steps explains you the configuration of search options in DropDown
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 // Add a DropDownList element using the helper class in CSHTML
 
 @Html.EJ().DropDownList("dropdownlist").TargetID("list").Width("200px").ShowRoundedCorner(true).EnableIncrementalSearch(true).CaseSensitiveSearch(false)
-
-
 
 <div id="list">
 
@@ -62,6 +60,5 @@ Output of the above steps
 ![](Search-Options_images/Search-Options_img1.png)
 
 
-
-_Figure 16: Dropdown with incremental search with case sensitive property_  
-
+Dropdown with incremental search with case sensitive property 
+{:.caption}

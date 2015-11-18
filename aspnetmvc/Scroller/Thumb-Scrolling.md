@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thumb-Scrolling
+title: Thumb Scrolling | Scroller | ASP.NET MVC | Syncfusion
 description: thumb scrolling
 platform: ejmvc
 control: Scroller
@@ -15,45 +15,46 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 1. In the View page, add a scroller helper to configure the EnableTouchScroll property.
 
-   ~~~ html
+   ~~~ cshtml
 
-		// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
+	// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
-		<div id="scrollcontent">
+	<div id="scrollcontent">
 
-			<div> @*Wrapper div for Scroller.*@
+		<div> @*Wrapper div for Scroller.*@
 
-				<div id="innercontent">  @*Content div*@
+			<div id="innercontent">  @*Content div*@
 
-					<h3>MVC </h3>
+				<h3>MVC </h3>
 
-					<p>
+				<p>
 
-						Model–view–controller (MVC) is a software architecture pattern which   
+					Model–view–controller (MVC) is a software architecture pattern which   
 
-						separates the representation of information from the user's interaction
+					separates the representation of information from the user's interaction
 
-						with it. The model consists of application data, business rules, logic, and
+					with it. The model consists of application data, business rules, logic, and
 
-						functions. A view can be any output representation of data, such as a chart
+					functions. A view can be any output representation of data, such as a chart
 
-						or a diagram.
+					or a diagram.
 
-					</p>
-
-				</div>
+				</p>
 
 			</div>
 
 		</div>
 
-		@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableTouchScroll(false).Render();}
+	</div>
+
+	@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableTouchScroll(false).Render();}
 
    ~~~
-   {:.prettyprint }
+   
 
 	The following screenshot displays Scroller control with disabled touch support.
 
 	![](Thumb-Scrolling_images/Thumb-Scrolling_img1.png)
 
-_Figure_ _6_: _Scroller control with disabled touch support_
+	Scroller control with disabled touch support
+	{:.caption}

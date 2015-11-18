@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date-in-other-months
+title: Date in other months | DateTimePicker | ASP.NET MVC | Syncfusion
 description: date in other months
 platform: ejmvc
 control: DateTimePicker
@@ -15,19 +15,20 @@ Consider you are going to calculate the monthly report of your company’s emplo
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 
-   ~~~ js
+   ~~~ cshtml
 	 
-	    @*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized other months*@
+	@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized other months*@
 
-		@Html.EJ().DateTimePicker("DateTime").ShowOtherMonths(false).Width("175px")
+	@Html.EJ().DateTimePicker("DateTime").ShowOtherMonths(false).Width("175px")
 
    ~~~
-   {:.prettyprint }
+   
    
 
 2. The following screenshot displays the output for the above code.
 
 	![](Date-in-other-months_images/Date-in-other-months_img1.png)
-
-
+    
+	Showcase for DateTimePicker without other month dates
+	{:.caption}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events
+title: Events | ReportViewer | ASP.NET MVC | Syncfusion
 description: events
 platform: ejmvc
 control: ReportViewer
@@ -11,7 +11,7 @@ documentation: ug
 
 The ReportViewer has the following client-side events support to listen to the control action.
 
-_Table_ _3_: _Client-Side events_
+_Client-Side events_
 
 <table>
 <tr>
@@ -45,70 +45,68 @@ Fires when the report is loaded.</td></tr>
 </table>
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 
 @(
 
-            Html.EJ().ReportViewer("viewer")
+Html.EJ().ReportViewer("viewer")
 
-              .ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("DatabindingRemote.rdlc")
+.ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local).ReportPath("DatabindingRemote.rdlc")
 
-              .ReportServiceUrl(VirtualPathUtility.ToAbsolute("~/api/RDLCReport")).ReportLoaded("reportLoaded")
+.ReportServiceUrl(VirtualPathUtility.ToAbsolute("~/api/RDLCReport")).ReportLoaded("reportLoaded")
 
-        )
+)
 
-{% endhighlight %}
-
-{% highlight js %}
 
 <script type="text/javascript">
 
-        function reportLoaded(senderObj) {
+	function reportLoaded(senderObj) 
+	{
 
-            $.ajax({
+		$.ajax({
 
-                type: "POST",
+			type: "POST",
 
-                contentType: "application/json; charset=utf-8",
+			contentType: "application/json; charset=utf-8",
 
-                url: '../wcf/Reportservice.svc/GetOrderDetails',
+			url: '../wcf/Reportservice.svc/GetOrderDetails',
 
-                dataType: "json",
+			dataType: "json",
 
-                processData: false,
+			processData: false,
 
-                crossDomain: true,
+			crossDomain: true,
 
-                async: false,
+			async: false,
 
-                timeout: 5000,
+			timeout: 5000,
 
-                success: function (result) {
+			success: function (result) {
 
-                    reportdata = result.d;
+				reportdata = result.d;
 
-                    var dataManger = ej.DataManager(reportdata);
+				var dataManger = ej.DataManager(reportdata);
 
-                    var query = ej.Query().select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCity", "ShipCountry");
+				var query = ej.Query().select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCity", "ShipCountry");
 
-                    reportResult = dataManger.executeLocal(query);
+				reportResult = dataManger.executeLocal(query);
 
-                    var reportModel = $("#viewer").data('ejReportViewer');
+				var reportModel = $("#viewer").data('ejReportViewer');
 
-                    reportModel.model.dataSources = [{ value: reportResult, name: "remote" }];
+				reportModel.model.dataSources = [{ value: reportResult, name: "remote" }];
 
-                },
+			},
 
-                error: function (result) {
+			error: function (result) {
 
-                    alert(result);
+				alert(result);
 
-                }
+			}
 
-            });
+		});
 
-        }
+	}
 
 </script>
 

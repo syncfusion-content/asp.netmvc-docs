@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use-NHibernate-with-Grid
+title: Use NHibernate with Grid | Grid | ASP.NET MVC | Syncfusion
 description: use nhibernate with grid
-platform: wpf
+platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-## Use NHibernate with Grid
+# Use NHibernate with Grid
 
 ### NHibernate
 
@@ -19,63 +19,64 @@ You can populate the Grid with data obtained by using NHibernate. The UrlAdaptor
 
 The Grid initialization is as follows.
 
+{% tabs %}
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Grid<EmployeeMap>("Grid")
 
-            .Datasource(ds =>
+.Datasource(ds =>
 
-                ds.URL("Home/GetData") //Action which returns data
+	ds.URL("Home/GetData") //Action which returns data
 
-                .InsertURL("Home/PerformInsert") 
+	.InsertURL("Home/PerformInsert") 
 
-                .UpdateURL("Home/PerformUpdate")
+	.UpdateURL("Home/PerformUpdate")
 
-                .RemoveURL("Home/PerformDelete")
+	.RemoveURL("Home/PerformDelete")
 
-                .Adaptor(AdaptorType.UrlAdaptor)
+	.Adaptor(AdaptorType.UrlAdaptor)
 
-                )
+)
 
-            .AllowPaging()
+.AllowPaging()
 
-            .EditSettings(edit => edit.AllowEditing().AllowAdding().AllowDeleting().EditMode(EditMode.Normal))
+.EditSettings(edit => edit.AllowEditing().AllowAdding().AllowDeleting().EditMode(EditMode.Normal))
 
-            .ToolbarSettings(tools => tools.ShowToolbar().ToolbarItems(items =>
+.ToolbarSettings(tools => tools.ShowToolbar().ToolbarItems(items =>
 
-            {
+{
 
-                items.AddTool(ToolBarItems.Add);
+	items.AddTool(ToolBarItems.Add);
 
-                items.AddTool(ToolBarItems.Edit);
+	items.AddTool(ToolBarItems.Edit);
 
-                items.AddTool(ToolBarItems.Delete);
+	items.AddTool(ToolBarItems.Delete);
 
-                items.AddTool(ToolBarItems.Update);
+	items.AddTool(ToolBarItems.Update);
 
-                items.AddTool(ToolBarItems.Cancel);
+	items.AddTool(ToolBarItems.Cancel);
 
-            }))
+}))
 
-                .Columns(col =>
+.Columns(col =>
 
-                {
+{
 
-                    col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
 
-                    col.Field("FirstName").HeaderText("First Name").Width(80).Add();
+	col.Field("FirstName").HeaderText("First Name").Width(80).Add();
 
-                    col.Field("LastName").HeaderText("Last Name").Add();
+	col.Field("LastName").HeaderText("Last Name").Add();
 
-                    col.Field("Designation").HeaderText("Designation"). Width(75).Add();
+	col.Field("Designation").HeaderText("Designation"). Width(75).Add();
 
 })
 
 )
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 namespace UsingNHibernate.Controllers
 
@@ -229,39 +230,37 @@ namespace UsingNHibernate.Controllers
 
 }
 
-
-
 {% endhighlight %}
-
+{% endtabs %}  
 The SessionFactory used by the application is as follows.
 
 
 {% highlight c# %}
 public static class AppSession
 
-    {
+{
 
-        public static ISession OpenSession()
+	public static ISession OpenSession()
 
-        {
+	{
 
-            var configuration = new Configuration();
+		var configuration = new Configuration();
 
-            var configurationPath = HttpContext.Current.Server.MapPath(@"~\Models\nHibernateConfig\Employee.cfg.xml");
+		var configurationPath = HttpContext.Current.Server.MapPath(@"~\Models\nHibernateConfig\Employee.cfg.xml");
 
-            configuration.Configure(configurationPath);
+		configuration.Configure(configurationPath);
 
-            var employeeConfigurationFile = HttpContext.Current.Server.MapPath(@"~\Models\nHibernateConfig\EmployeeMap.hbm.xml");
+		var employeeConfigurationFile = HttpContext.Current.Server.MapPath(@"~\Models\nHibernateConfig\EmployeeMap.hbm.xml");
 
-            configuration.AddFile(employeeConfigurationFile);
+		configuration.AddFile(employeeConfigurationFile);
 
-            ISessionFactory sessionFactory = configuration.BuildSessionFactory();
+		ISessionFactory sessionFactory = configuration.BuildSessionFactory();
 
-            return sessionFactory.OpenSession();
+		return sessionFactory.OpenSession();
 
-        }
+	}
 
-    }
+}
 
 {% endhighlight  %}
 

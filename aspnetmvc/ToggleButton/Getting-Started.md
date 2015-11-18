@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | ToggleButton | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
 control: ToggleButton
@@ -19,16 +19,13 @@ The following screenshot illustrates a Toggle Button control.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-
-
-_Figure 1: Toggle Button in OFF state_ 
+Toggle Button in OFF state_ 
+{:.caption}
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-
-
-_Figure 2: Toggle Button in ON state_
-
+Toggle Button in ON state
+{:.caption}
 
 
 ### Create a Toggle Button
@@ -37,15 +34,15 @@ Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to cus
 
 
 
-1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://docs.syncfusion.com/aspnetmvc/togglebutton/getting-started) Documentation.
+1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/togglebutton/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the Toggle Button. 
 
-   ~~~ js
+   ~~~ cshtml
 
-		@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
+	@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
 
    ~~~
-   {:.prettyprint }
+   
 
 3. Output of the above steps.
 

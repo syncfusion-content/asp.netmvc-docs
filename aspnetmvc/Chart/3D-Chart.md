@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3D-Chart
+title: 3D Chart | Chart | ASP.NET MVC | Syncfusion
 description: 3d chart
 platform: ejmvc
 control: Chart
@@ -50,7 +50,7 @@ The following are 3D series types:
 ### 3D Column Chart
 
 Column charts represent data in a vertical rectangular shape. The size of the shape depends upon the data. Different sets of data are compared by using column chart. The comparison is easy when it is set in 3 Dimensional view. Now Essential Chart gives its support for 3D by setting the property Enable3D to true. For clear perception, rotate the 3D column chart to 360 degrees by giving the value as true for EnableRotation property. The depth, wall size, tilt, and rotation of the 3D chart are customized by setting the property Depth, WallSize, Tilt, and Rotation respectively
-{% highlight js %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")
 
@@ -78,12 +78,13 @@ Column charts represent data in a vertical rectangular shape. The size of the sh
 
 ![](3D-Chart_images/3D-Chart_img1.png)
 
-
+3D Column Chart
+{:.caption}
 
 ### 3D Bar Chart
 
 3D Bar charts are similar to 3D Column charts, but it represents the data in horizontal rectangular shape. The size of the bar depends upon the data. You can customize the depth, wall size, tilt, and rotation of the 3D Bar chart by setting the property Depth, WallSize, Tilt, and Rotation respectively
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 
@@ -115,12 +116,13 @@ Column charts represent data in a vertical rectangular shape. The size of the sh
 
 ![](3D-Chart_images/3D-Chart_img2.png)
 
-
+3D Bar Chart
+{:.caption}
 
 ### 3D Stacking Column Chart
 
 3D Stacking Column Charts are similar to 3D Column Charts, but here the Y values of different sets of data are represented in a single vertical bar. You can set different colors and borders for different y values in a single vertical bar by setting the Fill and Border properties. You can customize the depth, wall size, tilt, and rotation of the 3D Stacking Column Chart by setting the property Depth, WallSize, Tilt, and Rotation respectively. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -199,12 +201,13 @@ Column charts represent data in a vertical rectangular shape. The size of the sh
 
 ![](3D-Chart_images/3D-Chart_img3.png)
 
-
+3D Stacking Column Charts Chart
+{:.caption}
 
 ### 3D Stacking Bar Chart
 
 3D Stacking Bar Charts are similar to 3D Bar Charts, but here the Y values of different sets of data are represented in a single horizontal bar. So the comparison of different sets of data is easier than the normal bar chart. You can customize the depth, wall size, tilt, and rotation of the 3D Stacking Bar Chart by setting the property Depth, WallSize, Tilt, and Rotation respectively.      
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -277,12 +280,13 @@ Column charts represent data in a vertical rectangular shape. The size of the sh
 
 ![](3D-Chart_images/3D-Chart_img4.png)
 
-
+3D Stacking Bar
+{:.caption}
 
 ### 3D Pie Chart
 
 Pie Charts are circular with several segments. The segments are calculated from the Y value of the series. Normally, in 2D only the front view of the pie chart can be seen. In 3D, there is an option to see the whole side of the pie chart by enabling the EnableRotation property. You can explode a particular segment of pie series by setting the ExplodeIndex property. You can customize the color of each segment by setting the Fill property, and can also customize the depth, perspective angle, rotation, tilt of the pie chart by setting the appropriate properties.   
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -337,14 +341,17 @@ Pie Charts are circular with several segments. The segments are calculated from 
 
 
 {% endhighlight  %}
+
 ![](3D-Chart_images/3D-Chart_img5.png)
 
-
+3D Pie Chart
+{:.caption}
 
 ### 3D Doughnut Chart
 
 3D Doughnut charts are similar to 3D Pie Charts with the difference of having a hole in the center of the Doughnut chart. The size of the hole is customized by using the DoughnutCoefficient property. The size of the doughnut is customized by using the DoughnutSize property. You can rotate the 3D doughnut chart to 360 degrees by enabling the EnableRotation property. You can customize each segment’s color and border by setting Fill and Border property. 
-{% highlight js %}
+
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -399,15 +406,17 @@ Pie Charts are circular with several segments. The segments are calculated from 
 
 
 {% endhighlight  %}
+
 ![](3D-Chart_images/3D-Chart_img6.png)
 
-
+3D Doughnut Chart
+{:.caption}
 
 ## 100% 3D Stacking Column
 
 100% 3D Stacking Column charts are similar to 3D stacking Column charts. But here, the combined contribution of Y values is the combined total of the vertical bar with 100 percent. You can customize the depth, wall size, tilt and rotate the 100% 3D Stacking Column by using the Depth, Wallsize, Tilt and rotation property respectively.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")  
@@ -474,12 +483,14 @@ The following screenshot displays the 100% 3D Stacking Column.
 
 ![](3D-Chart_images/3D-Chart_img7.png)
 
+100% 3D Stacking Column
+{:.caption}
 
 
 ## 100% 3D Stacking Bar
 
 100% 3D Stacking Bar charts are similar to 3D stacking Bar charts. But here, the combined contribution of Y values is the combined total of the horizontal bar with 100 percent. You can customize the depth, wall size, tilt and rotate the 100% 3D Stacking Bar by using the Depth, WallSize, Tilt and Rotation properties respectively. 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @(Html.EJ().Chart("chartcontainer")
@@ -546,5 +557,6 @@ The following screenshot displays the 100% 3D Stacking Bar.
 
 ![](3D-Chart_images/3D-Chart_img8.png)
 
-
+100% 3D Stacking Bar.
+{:.caption}
 

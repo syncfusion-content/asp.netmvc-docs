@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behavior-and-Settings
+title: Behavior and Settings | WaitingPopup | ASP.NET MVC | Syncfusion
 description: behavior and settings
 platform: ejmvc
 control: WaitingPopup
@@ -17,45 +17,44 @@ The following steps explains you on how to display the WaitingPopup on page load
 
 1. In an VIEW page, add a helper element to render WaitingPopup widget.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div id="target">
+	<div id="target">
 
-		    @Html.EJ().WaitingPopup("target").ShowOnInit(true)
+		@Html.EJ().WaitingPopup("target").ShowOnInit(true)
 
-		</div>
+	</div>
 
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following styles to render WaitingPopup widget.
 
    ~~~ css
 
+	<style type="text/css" class="cssStyles">
 
-		<style type="text/css" class="cssStyles">
+		#control 
+		{
 
-		    #control {
+		height: 320px;
 
-			height: 320px;
+		width: 600px;
 
-			width: 600px;
+		}
 
-		    }
-
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 The following screenshot illustrates the WaitingPopup when ShowOnInit is set to “true”.
 
 ![](Behavior-and-Settings_images/Behavior-and-Settings_img1.png)
 
-
-
-_Figure 5: WaitingPopup with enabled showOnInit property_
+WaitingPopup with enabled showOnInit property
+{:.caption}
 
 ### Enable / Disable Popup Indicator
 
@@ -65,65 +64,64 @@ The following steps explains you to enable / disable popup indicator in WaitingP
 
 1. In the VIEW page, add a helper element to render WaitingPopup widget.
 
-   ~~~ html
+   ~~~ cshtml
 
 
-		Enable popup indicator:
+	Enable popup indicator:
 
-		<div id="target">
+	<div id="target">
 
-		    @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(true).Text("Loading... Please wait...")
-
-
-
-		</div>
+		@Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(true).Text("Loading... Please wait...")
 
 
 
-		Disable popup indicator:
+	</div>
 
-		<div id="target">
 
-		   @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(false).Text("Loading... Please wait...")
 
-		</div>
+	Disable popup indicator:
+
+	<div id="target">
+
+	   @Html.EJ().WaitingPopup("target").ShowOnInit(true).ShowImage(false).Text("Loading... Please wait...")
+
+	</div>
 
    ~~~
-   {:.prettyprint }
+   
 
 2. Add the following styles to render WaitingPopup widget.
 
    ~~~ css
 
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-		    #control {
+		#control 
+		{
 
-			height: 320px;
+		height: 320px;
 
-			width: 600px;
+		width: 600px;
 
-		    }
+		}
 
-		</style>
+	</style>
 
    ~~~
-   {:.prettyprint }
+   
 
 Execute the above code to render the following output.
 
 ![](Behavior-and-Settings_images/Behavior-and-Settings_img2.png)
 
-
-
-_Figure 6: Enabled popup indicator WaitingPopup widget_
+Enabled popup indicator WaitingPopup widget
+{:.caption}
 
 ![](Behavior-and-Settings_images/Behavior-and-Settings_img3.png)
 
-
-
-_Figure 7: Disabled popup indicator WaitingPopup widget_
+Disabled popup indicator WaitingPopup widget
+{:.caption}
 
 ## Show / Hide WaitingPopup
 
@@ -133,59 +131,53 @@ The following steps explains you to show / hide the WaitingPopup widget.
 
 1. In the VIEW page, add a helper element to render WaitingPopup widget.
 
-   ~~~ html
+   ~~~ cshtml
 
-		<div id="target">
-			@Html.EJ().WaitingPopup("target").ShowOnInit(true)
-		</div>
-		
+	<div id="target">
+		@Html.EJ().WaitingPopup("target").ShowOnInit(true)
+	</div>
+	
+	Show WaitingPopup:
+	<script type="text/javascript"> 
+	var popUpObj;   
+	$(function () {
+		$("#target").ejWaitingPopup();
+		popUpObj = $("#target").data("ejWaitingPopup");
+		popUpObj.show();  
+	});</script>Hide WaitingPopup:<script type="text/javascript"> 
+	var popUpObj    $(function () {  
+		$("#target").ejWaitingPopup();
+		popUpObj = $("#target").data("ejWaitingPopup"); 
+		popUpObj.hide(); 
+	});
+	</script>
+
    ~~~
-   {:.prettyprint }
    
-   ~~~ js
-		
-		Show WaitingPopup:
-		<script type="text/javascript"> 
-		var popUpObj;   
-		$(function () {
-			$("#target").ejWaitingPopup();
-			popUpObj = $("#target").data("ejWaitingPopup");
-			popUpObj.show();  
-		});</script>Hide WaitingPopup:<script type="text/javascript"> 
-		var popUpObj    $(function () {  
-			$("#target").ejWaitingPopup();
-			popUpObj = $("#target").data("ejWaitingPopup"); 
-			popUpObj.hide(); 
-		});
-		</script>
-
-   ~~~
-   {:.prettyprint }
 
 2. Add the following styles to render WaitingPopup widget.
 
    ~~~ css
 
-		<style type="text/css" class="cssStyles">
+	<style type="text/css" class="cssStyles">
 
-		    #control {
+		#control 
+		{
 
-			height: 320px;
+		height: 320px;
 
-			width: 600px;
+		width: 600px;
 
-		    }
+		}
 
-		</style>
+	</style>
    ~~~
-   {:.prettyprint }
+   
 
 
 The following screenshot illustrates a WaitingPopup when Show() method is invoked.
 
 ![](Behavior-and-Settings_images/Behavior-and-Settings_img4.png)
 
-
-
-_Figure 8: WaitingPopup with Show() method_
-
+WaitingPopup with Show() method
+{:.caption}

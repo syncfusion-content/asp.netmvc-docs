@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Updating-slider-value
+title: Updating slider value | Slider | ASP.NET MVC | Syncfusion
 description: updating slider value
 platform: ejmvc
 control: Slider
@@ -23,7 +23,7 @@ The following steps explains you the configuration of “Value” and “Values�
 
 1. In an VIEW page, specify the helper elements to render the “Range Slider” and “Default Slider”.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 
@@ -54,7 +54,7 @@ The following steps explains you on how to configure MinValue and MaxValue prope
 
 1. In an VIEW page, specify the helper elements to render the Default Slider and Range Slider.
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 // Add this code in your view page
 

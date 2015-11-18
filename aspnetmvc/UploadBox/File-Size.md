@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File-Size
+title: File Size | UploadBox | ASP.NET MVC | Syncfusion
 description: file size 
 platform: ejmvc
 control: UploadBox
@@ -17,7 +17,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <div class="control"> 
     @Html.EJ().Uploadbox("UploadBox")
@@ -28,18 +28,14 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 </div>
 
-{% endhighlight %}
-
-{% highlight js %}
-
 <script type="text/javascript">
 
-           function fileuploaderror(e) {
+	function fileuploaderror(e) 
+	{
 
-            alert(e.error);
+		alert(e.error);
 
-        }
-
+	}
 </script>
 
 {% endhighlight %}
@@ -47,7 +43,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 To know about file action, we need to refer link:
 
-<http://docs.syncfusion.com/aspnetmvc/uploadbox/file-size>
+<http://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
 
 The following screenshot displays UploadBox control with customized file size.
 

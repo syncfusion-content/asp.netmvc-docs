@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grid-Layout
+title: Grid Layout | PivotGrid | ASP.NET MVC | Syncfusion
 description: grid layout
 platform: ejmvc
 control: PivotGrid
@@ -20,7 +20,7 @@ The four kinds of Layouts supported by the PivotGrid are as follows:
 * Normal top summary
 * No summaries
 
-##Normal
+## Normal
 
 The Normal layout is the default Layout of the PivotGrid where the summary cells are positioned at the bottom of each parent member and child members appear next to their parent.
 
@@ -32,7 +32,7 @@ The Normal layout is the default Layout of the PivotGrid where the summary cel
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url("../wcf/PivotGridService.svc") 
 
@@ -48,7 +48,7 @@ In the Excel-like layout, the summary cells are positioned at the bottom of th
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url("../wcf/PivotGridService.svc")
@@ -65,7 +65,7 @@ In the NormalTopSummary Layout, the summary cells are positioned at the top of
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NormalTopSum
 
@@ -81,7 +81,7 @@ In No Summaries Layout, the summary cells are hidden and the child members appe
 
 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url("../wcf/PivotGridService.svc")
