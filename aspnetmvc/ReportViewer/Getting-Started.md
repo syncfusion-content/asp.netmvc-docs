@@ -50,6 +50,7 @@ The following screenshot displays how to select Internet application template wi
    * Syncfusion.EJ
    * Syncfusion.EJ.MVC
    * Syncfusion.EJ.ReportViewer
+   * Syncfusion.Pdf.Base
    * Syncfusion.XlsIO.Base
    * Syncfusion.DocIO.Base
    * Synfusion.Shared.Wpf
