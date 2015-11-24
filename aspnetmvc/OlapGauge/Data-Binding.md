@@ -31,7 +31,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-##Binding OlapGauge to Cube in local SQL Server
+##Binding OlapGauge to Cube in online SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in online server through XML/A, host server link and database name needs to be set in the connection string. If you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. Below code sample illustrates the same.
 
@@ -102,6 +102,7 @@ namespace OlapGaugeDemo
     
     }
 }
+
 {% endhighlight %}
 
 **Datasource Initialization**
@@ -130,6 +131,7 @@ namespace OlapGaugeDemo
 First, declare the service methods inside **IOlapGaugeService** interface, found in `IOlapGaugeService.cs` file created while adding WCF Service to the Application.
 
 {% highlight c# %}
+
 namespace OlapGaugeDemo
 {
     [ServiceContract]
@@ -139,6 +141,7 @@ namespace OlapGaugeDemo
         Dictionary < string, object > InitializeGauge(string action, string customObject);
     }
 }
+
 {% endhighlight %}
 
 Then, elaborate the service methods inside the main class, found in `OlapGaugeService.svc.cs` file.
@@ -221,6 +224,8 @@ The services could be exposed through the properties, binding, contract and addr
 
 The endpointBehaviors are illustrated as follows
 
+{% highlight xml %}
+
 <system.serviceModel> 
     …… 
     ……
@@ -259,19 +264,22 @@ Routing configuration needs to be done in `RouteConfig.cs` file found under **Ap
 
 {% highlight c# %}
 
-public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            //NOTE: In the following highlighted lines _wcf_ is just the folder name inside which service files(*.svc) are present.
-            routes.IgnoreRoute("{resource}.svc/{*pathInfo}");
-            routes.IgnoreRoute("{resource}.svc");
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "OlapGaugeDemo.Controllers" }
-            );
+public static void RegisterRoutes(RouteCollection routes) {
+    routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+    //NOTE: In the following highlighted lines _wcf_ is just the folder name inside which service files(*.svc) are present.
+    routes.IgnoreRoute("{resource}.svc/{*pathInfo}");
+    routes.IgnoreRoute("{resource}.svc");
+    routes.MapRoute(
+        name: "Default",
+        url: "{controller}/{action}/{id}",
+        defaults: new {
+            controller = "Home", action = "Index", id = UrlParameter.Optional
+        },
+        namespaces: new [] {
+            "OlapGaugeDemo.Controllers"
         }
+    );
+}
 
 {% endhighlight %}
 

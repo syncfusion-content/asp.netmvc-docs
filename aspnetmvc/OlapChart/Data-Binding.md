@@ -31,7 +31,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-##Binding OlapChart to Cube in local SQL Server
+##Binding OlapChart to Cube in online SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in online server through XML/A, host server link and database name needs to be set in the connection string. If you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. Below code sample illustrates the same.
 
@@ -132,6 +132,7 @@ namespace OlapChartDemo
 First, declare the service methods inside **IOlapChartService** interface, found in `IOlapChartService.cs` file created while adding WCF Service to the Application.
 
 {% highlight c# %}
+
 namespace OlapChartDemo
 {
     [ServiceContract]
