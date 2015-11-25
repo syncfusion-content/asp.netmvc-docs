@@ -23,19 +23,22 @@ In the above screenshot, you can upload a resume. It allows .png and .docx file 
 
 ### Create UploadBox widgets
 
-ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, Delete files, check the status of the file, whether it shows complete or failed, and retry uploading the files.  You can easily create the UploadBox widget by using the following steps.
+ASP.NET MVC UploadBox basically renders built-in features like upload multiple files, and deletes the files from Uploadbox. You can know the status of the file whether it is complete or fail and also can retry the upload if it failed. You can easily create the UploadBox widget by using the following steps.
 
-1. You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/uploadbox/getting-started) Documentation.
-2. Add the following code example to the corresponding view page to render the UploadBox.
+You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/uploadbox/getting-started) Documentation.
+
+![](Getting-Started_images/Getting-Started_img4.png)
+
+Add the following code example to the corresponding view page to render the UploadBox.
    
    ~~~ cshtml
 
-	@Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove"))
+	@Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("SaveDefault")).RemoveUrl(@Url.Action("RemoveDefault"))
 
    ~~~
    
 
-3. Add the following script in your controller page.![](Getting-Started_images/Getting-Started_img2.png)
+Add the following ActionResult in your controller.
 
    ~~~ csharp
    
@@ -50,6 +53,8 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
 			var fileName = Path.GetFileName(file.FileName);
 
 			var destinationPath = Path.Combine(Server.MapPath("~/App_Data"), fileName);
+            
+            file.SaveAs(destinationPath);
 
 		}
 
@@ -60,7 +65,7 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
    ~~~
    
 
-4. Add the following Remove ActionResult in your controller page.
+Add the following Remove ActionResult in your controller page.
 
    ~~~ csharp
 
@@ -95,42 +100,8 @@ ASP.NET MVC UploadBox widget has built-in features like Upload multiple files, D
    
 
 
-5. Execute the code to render the following output.
 
-
-
-   ![](Getting-Started_images/Getting-Started_img3.png)
-
-
-
-6. After file upload, the files are saved in a path. Give the path in local host as follows. Add the following code in the script.
-
-   ~~~ js
-
-	<script src="@Url.Content("~/Scripts/properties.js")"></script>
-
-	<script type="text/javascript">
-
-	  $(function () {
-
-
-
-		  $("#UploadDefault").ejUploadbox({
-
-			  saveUrl: "http://localhost:50510/MvcApplication2/saveFiles.ashx",
-
-			  removeUrl: "http://localhost:50510/MvcApplication2/removeFiles.ashx"
-
-		  })
-
-	  });
-
-	</script>
-
-   ~~~
-   
-
-7. Execute the project to render the following output for the given steps. The file is being uploaded.
+Execute the project to render the following output for the given steps. The file is being uploaded.
 
 
 ![](Getting-Started_images/Getting-Started_img4.png)
@@ -139,19 +110,139 @@ UploadBox after uploading
 {:.caption}
 
 
+## Set Restriction for File Extension
+
+In a real-time scenario, some file extensions are restricted. You can either allow files or restrict files by using **extensionsAllow** and **extensionsDeny** respectively in **Uploadbox**. 
+
+N> The SaveUrl and RemoveUrl are the same as above
+
+
+
+
+
+Add the following elements in the view page. 
+
+
+
+  ~~~ cshtml
+
+
+
+<div id="targetElement">
+    <table id="uploadTable">
+        <tr>
+            <td>
+                Extensions:
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="fileallow" class="ejinputtext" placeholder="Format" />
+                @(Html.EJ().Button("upbutton1").Text("Allow").ClientSideEvents(c => c.Click("allowfiletype")))
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="filedeny" class="ejinputtext" placeholder="Format" />
+                @(Html.EJ().Button("upbutton2").Text("Deny").ClientSideEvents(c => c.Click("denyfiletype")))
+            </td>
+            <td>
+               @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("SaveDefault")).RemoveUrl(@Url.Action("RemoveDefault")))
+            </td>
+        </tr>
+    </table>
+</div>
+
+ ~~~
+
+ Add the following code example in script section.
+
+
+
+ ~~~ js
+
+
+ var uploadobject;
+    $(function () {
+        uploadobject = $("#UploadDefault").data("ejUploadbox");
+        $("#upbutton1").ejButton({
+            click: "allowfiletype",
+        });
+        $("#upbutton2").ejButton({
+            click: "denyfiletype",
+        });
+    });
+    function allowfiletype() {
+        uploadobject.option('extensionsAllow', $("#fileallow").val());
+        uploadobject.option('extensionsDeny', "");
+    }
+    function denyfiletype() {
+        uploadobject.option('extensionsAllow', "");
+        uploadobject.option('extensionsDeny', $("#filedeny").val());
+    }
+
+
+ ~~~
+
+
+
+Add the given styles to display the **Uploadbox** with margin alignments.
+
+
+ ~~~ css
+
+
+    #targetElement {
+        width: 520px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    #UploadDefault {
+        float: right;
+    }
+
+    #uploadTable {
+        width: 100%;
+    }
+
+    #fileallow, #filedeny {
+        width: 150px;
+        height: 20px;
+        padding: 5px;
+    }
+
+ ~~~
+
+
+N> You can restrict one or more different extension files by giving file extension seperated by comma (,)
+
+
+The following screenshot displays an **Uploadbox** control with the file extension.
+
+
+
+![](Getting-Started_images/Getting-Started_img1.png) 
+
+The above screenshot shows the **Uploadbox** that allows “.**docx**” and “**.png”** files. 
+
+  
+
 ### Upload Multiple Files
 
-To upload multiple files in UploadBox control, click the Browse button to select files. The selected files appear in the UploadBox control and you can upload all the files by using MultipleFilesSelection property.
+To upload multiple files in UploadBox control, click the Browse button and select multiple files from file explorer window
 
 The following screenshot displays an UploadBox control with multiple files selected.
 
 
 
-{% highlight CSHTML %}
+ ~~~ cshtml
 
 @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove")).MultipleFilesSelection(true)
 
-{% endhighlight %}
+ ~~~
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
