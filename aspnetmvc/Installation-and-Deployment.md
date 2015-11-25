@@ -38,7 +38,7 @@ Deploy the application in the development server by referencing Syncfusion assem
 
 * Delete the **Syncfusion** assembly **GAC** entries in your development machine. Now copy the required reference assemblies to the **bin** folder of your application.
 
-* **Web.config** file is configured according to the referenced **dlls**.
+* **Web.config** file is configured according to the referenced **dlls**.
 
 * In this case, the control’s **DeprecateFunctionalityToRunInPartialTrust** property is turned **on** for the control to work properly. In some cases, few features may not be available. You can refer the control's documentation for more information.
 
@@ -92,11 +92,11 @@ The assemblies based on the version of the .NET framework are packed under the f
 
 <table>
 <tr><td>
-Syncfusion.Compression.Base.dll<br/>
-Syncfusion.EJ.dll<br/>
-Syncfusion.EJ.Olap.dll<br/>
-Syncfusion.Olap.Base.dll<br/>
-Syncfusion.Linq.Base.dll<br/>
+Syncfusion.Compression.Base.dll</td></tr><tr><td>
+Syncfusion.EJ.dll</td></tr><tr><td>
+Syncfusion.EJ.Olap.dll</td></tr><tr><td>
+Syncfusion.Olap.Base.dll</td></tr><tr><td>
+Syncfusion.Linq.Base.dll</td></tr><tr><td>
 Syncfusion.XlsIO.Base.dll
 </td></tr>
 </table>
@@ -114,9 +114,9 @@ Some of the important assemblies available based on the MVC versions (within eac
 
 <table>
 <tr><td>
-Syncfusion.EJ.Mvc.dll<br/>
-Syncfusion.DocIO.Helper.Mvc.dll<br/>
-Syncfusion.Pdf.Helper.Mvc.dll<br/>
+Syncfusion.EJ.Mvc.dll</td></tr><tr><td>
+Syncfusion.DocIO.Helper.Mvc.dll</td></tr><tr><td>
+Syncfusion.Pdf.Helper.Mvc.dll</td></tr><tr><td>
 Syncfusion.XlsIO.Helper.Mvc.dll
 </td></tr>
 </table>
