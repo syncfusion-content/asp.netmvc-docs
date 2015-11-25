@@ -1,3 +1,12 @@
+---
+layout: post
+title: Introduction | ASP.NET MVC | Syncfusion
+description: Introduction
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Welcome to Syncfusion Essential ASP.NET MVC
 
 The **Syncfusion Essential Studio for ASP.NET MVC** is a set of server-side wrappers which is empowered by Essential JavaScript. With the help of the server-side wrapper helper classes, the user can add the Syncfusion MVC components into their application. The MVC helper’s values are passed from the server-side wrapper classes to browser via ScriptManager, the control creation and manipulations takes place in the client-side.

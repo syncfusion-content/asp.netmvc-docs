@@ -1,3 +1,12 @@
+---
+layout: post
+title: Compatibility and Prerequisites | ASP.NET MVC | Syncfusion
+description: Compatibility and System Requirements
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Compatibility and System Requirements
 
 ## Platforms
