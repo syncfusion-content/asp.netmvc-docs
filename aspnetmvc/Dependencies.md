@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dependencies | ASP.NET MVC | Syncfusion
+description: Dependencies and CDN
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Dependencies
 
 Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 4 common libraries –

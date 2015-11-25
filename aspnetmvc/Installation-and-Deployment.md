@@ -1,3 +1,12 @@
+---
+layout: post
+title: Installation and Deployment | ASP.NET MVC | Syncfusion
+description: Installation and Deployment
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Installation and Deployment
 
 ## Installation

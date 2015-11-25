@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started | ASP.NET MVC | Syncfusion
+description: Getting Started
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Getting Started
 
 The similar ways are followed for integrating the Syncfusion ASP.NET MVC controls into MVC 3, MVC 4 & MVC 5 applications, and the only thing that makes it a little bit different is the reference assembly’s version chosen for each of the target MVC application. 

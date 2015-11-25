@@ -1,3 +1,12 @@
+---
+layout: post
+title: VB Syntax | ASP.NET MVC | Syncfusion
+description: VB Syntax
+platform: ejmvc
+control: Common 
+documentation: ug
+---
+
 # Syntax for VB
 
 Since our Syncfusion ASP.NET MVC components can render the control either by using **C#** or **VB**. As only the control declaration syntax varies across languages and other functionalities are usually performed in the client-side.
