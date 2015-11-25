@@ -31,16 +31,16 @@ You can create an MVC project and add necessary assemblies, styles, and scripts 
 
 Add the following code example to the corresponding view page to render the UploadBox.
    
-   ~~~ cshtml
+{% highlight CSHTML %}
 
 	@Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("SaveDefault")).RemoveUrl(@Url.Action("RemoveDefault"))
 
-   ~~~
+{% endhighlight %}
    
 
 Add the following ActionResult in your controller.
 
-   ~~~ csharp
+{% highlight c# %}
    
 	public ActionResult SaveDefault(IEnumerable<HttpPostedFileBase> UploadDefault)
 
@@ -62,12 +62,14 @@ Add the following ActionResult in your controller.
 
 	} 
 
-   ~~~
+{% endhighlight %}
+   
    
 
 Add the following Remove ActionResult in your controller page.
 
-   ~~~ csharp
+
+{% highlight c# %}
 
 
 	public ActionResult RemoveDefault(string[] fileNames)
@@ -96,7 +98,7 @@ Add the following Remove ActionResult in your controller page.
 
 	}
 	
-   ~~~
+{% endhighlight %}
    
 
 
@@ -124,7 +126,7 @@ Add the following elements in the view page.
 
 
 
-  ~~~ cshtml
+{% highlight CSHTML %}
 
 
 
@@ -155,14 +157,13 @@ Add the following elements in the view page.
     </table>
 </div>
 
- ~~~
+{% endhighlight %}
 
  Add the following code example in script section.
 
 
 
- ~~~ js
-
+{% highlight js %}
 
  var uploadobject;
     $(function () {
@@ -184,14 +185,14 @@ Add the following elements in the view page.
     }
 
 
- ~~~
+{% endhighlight %}
 
 
 
 Add the given styles to display the **Uploadbox** with margin alignments.
 
 
- ~~~ css
+{% highlight css %}
 
 
     #targetElement {
@@ -214,7 +215,7 @@ Add the given styles to display the **Uploadbox** with margin alignments.
         padding: 5px;
     }
 
- ~~~
+{% endhighlight %}
 
 
 N> You can restrict one or more different extension files by giving file extension seperated by comma (,)
@@ -238,11 +239,11 @@ The following screenshot displays an UploadBox control with multiple files selec
 
 
 
- ~~~ cshtml
+{% highlight CSHTML %}
 
 @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("Save")).RemoveUrl(@Url.Action("Remove")).MultipleFilesSelection(true)
 
- ~~~
+{% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
