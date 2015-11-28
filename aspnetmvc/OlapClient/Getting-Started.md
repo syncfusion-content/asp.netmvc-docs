@@ -132,7 +132,10 @@ The scripts and style sheets that are mandatorily required to render OlapClient 
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	jquery.globalize.min.js
-5.	ej.web.all.min.js 
+5.  rgbcolor.js
+6.  StackBlur.js
+7.  canvg.js
+8.	ej.web.all.min.js 
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
@@ -145,6 +148,9 @@ Scripts and style sheets are referred under the <head> tag in ** _Layout.cshtml*
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
+    <script type="text/javascript" src="http://gabelerner.github.io/canvg/rgbcolor.js"></script> 
+    <script type="text/javascript" src="http://gabelerner.github.io/canvg/StackBlur.js"></script>
+    <script type="text/javascript" src="http://gabelerner.github.io/canvg/canvg.js"></script>  
     <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
 </head>
 
@@ -162,7 +168,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% endhighlight %}
 
-###Control Initialization
+### Control Initialization
 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
@@ -178,7 +184,7 @@ The **“Url”** property in OlapClient widget points the service endpoint, whe
 
 N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OlapClient". If WCF service is used as endpoint, the Url would look like "~/OlapClientService.svc".
 
-###WebAPI
+### WebAPI
 
 **Adding a WebAPI Controller**
 
@@ -231,7 +237,7 @@ namespace OlapClientDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapClientController.cs` file.
+Now, the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapClientController.cs` file.Also, the database connection for Saving and Loading operations of reports is provided appropriately.  
 
 {% highlight c# %}
 

@@ -9,24 +9,17 @@ documentation: ug
 
 # Defer Update
 
-Defer Update support allows you to refresh the control only on-demand and not during every UI interaction.  To enable this functionality, set the `enableDeferUpdate` property to "True".
-
-The following code example explains how you can enable the Defer Update in OlapClient.
-
+Defer Update support allows the user to refresh the control on-demand and not during every user interaction. To enable this functionality, set the `EnableDeferUpdate` property to true. By default, the value is set to false.
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/wcf/OlapClientService.svc")).EnableDeferUpdate(true).Title("OLAP Browser"))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").EnableDeferUpdate(true)
 
 {% endhighlight %}
 
+After enabling this property, an icon for Defer Update will appear inside the toolbar.
 
-![](Defer-Update_images/Defer-Update_images1.png)
+![](Defer-Update_images/deferupdatebefore.png)
 
-Before Defer Update
-{:.caption}
+On clicking the icon, after making the necessary UI interactions, the PivotGrid and OlapChart controls will be updated according to the OlapReport available at that instant.
 
-![](Defer-Update_images/Defer-Update_images2.png)
-
-After Defer Update
-{:.caption}
-
+![](Defer-Update_images/deferupdateafter.png)
