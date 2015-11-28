@@ -9,92 +9,75 @@ documentation: ug
 
 # Paging
 
-N> This feature is applicable only for OLAP datasource.
+I> This feature is applicable only for OLAP datasource.
 
-##Pager
+## Pager
 
-The PivotGrid is viewed page-by-page through Pager option. The Pager is set to PivotGrid using following code example.
+Paging helps to improve the rendering performance of the PivotGrid control by breaking large amount of data into sections and displaying them.
+ 
+In-order to initialize a "Pager", you need to initialize the widget using **"PivotPager"** method.
 
-
-{% highlight CSHTML %}
-
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc")
-
-@Html.EJ().Pivot().PivotPager("PivotPager1").TargetControlID("PivotGrid1")
-
-{% endhighlight %}
-
-The page size for categorical and series axes are set in the OlapReport. Pager is loaded with current page and total pages of PivotGrid is automatically displayed as illustrated in the following screenshot. The icons to move pages to next, last, previous and first are added.  Also you can directly navigate to the desired page by entering the appropriate numeric value into the text box.
-
-
-
-![](Paging_images/Paging_img1.png)
-
-
-
-##Virtual Scrolling
-
-The large PivotGrid data content is viewed page-by-page using VirtualScrolling. The page size for categorical and series axes are set in OlapReport. By enabling VirtualScrolling, the number of rows and columns for the PivotGrid are set as entered in the OlapReport. By scrolling the horizontal and vertical scrollbars, the categorical and series page numbers are obtained and PivotGrid contents are refreshed accordingly.
+Inside the **"PivotPager"** method, the enumeration property `Mode` needs to be set to **"PivotPager.Mode.Both"** in-order to display both categorical pager and series pager. The other enumerations such as **"PivotPager.Mode.Categorical"** and **"PivotPager.Mode.Series"** will display only categorical pager and series pager respectively.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url("../wcf/PivotGridService.svc").EnableVirtualScrolling(true) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PagingService.svc"))
+@Html.EJ().Pivot().PivotPager("Pager1").Mode(PivotPagerMode.Both).TargetControlID("PivotGrid1")
 
 {% endhighlight %}
 
-![](Paging_images/Paging_img2.png)
+**Following are the navigation option available in Pager.**
 
-PivotGrid with Virtual Scroller
-{:.caption}
+* Move First - Navigates to the first page.
+* Move Previous - Navigates to the previous page from the current page.
+* Move Next - Navigates to the next page from the current page.
+* Move Last - Navigates to the last page. 
+* Numeric Box - Navigates to the desired page by entering an appropriate numeric value.
 
-![](Paging_images/Paging_img3.png)
+![](Paging_images/paging.png)
 
+## Virtual Scrolling
 
+Virtual Scrolling is a technique that allows user to scroll vertically and horizontally the scroll bar to view the paged information. You can enable Virtual Scrolling option in PivotGrid by setting the `EnableVirtualScrolling` property to true.
 
-##OLAP Report for Paging and Virtual Scrolling
+{% highlight CSHTML %}
 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PagingService.svc")).EnableVirtualScrolling(true) 
+
+{% endhighlight %}
+
+![](Paging_images/virtual-scrolling.png)
+
+## Page Setting (Report)
+
+The page setting for categorical and series axes are mandatorily needs to be done in OlapReport class by using the following properties.
+
+* EnablePaging - Specifies a value indicating whether to enable or disable paging in PivotGrid control.
+* PagerOptions.CategoricalPageSize - Specifies the number of categorical columns to be displayed within a page of the PivotGrid control.
+* PagerOptions.SeriesPageSize - Specifies the number of series rows to be displayed within a page of the PivotGrid control.
+* PagerOptions.CategoricalCurrentPage - Set the current page of the categorical axis in PivotGrid control.
+* PagerOptions.SeriesCurrentPage - Set the current page of the series axis in PivotGrid control.
 
 {% highlight C# %}
 
-OlapReport olapReport = new OlapReport();
+OlapReport olapReport = new OlapReport();
+olapReport.EnablePaging = true;
+olapReport.PagerOptions.SeriesPageSize = 4;
+olapReport.PagerOptions.CategorialPageSize = 5;
+olapReport.PagerOptions.CategorialCurrentPage = 1;
+olapReport.PagerOptions.SeriesCurrentPage = 1;
 
-olapReport.CurrentCubeName = "Adventure Works";
+DimensionElement dimensionElement = new DimensionElement() { Name = "Customer" };
+dimensionElement.AddLevel("Customer", "Customer");
+olapReport.CategoricalElements.Add(dimensionElement);
 
-olapReport.Name = "Default Report";
-
-//NOTE: Below code enables the paging option and also sets the page size.
-
-olapReport.EnablePaging = true;
-
-olapReport.PagerOptions.SeriesPageSize = 5;
-
-olapReport.PagerOptions.CategorialPageSize = 4;
-
-DimensionElement dimensionElementColumn = new DimensionElement() { Name ="Customer" };
-
-dimensionElementColumn.AddLevel("City", "City");
-
-olapReport.CategoricalElements.Add(dimensionElementColumn);
-
-DimensionElement dimensionElementRow = new DimensionElement() { Name = "Date"};
-
-dimensionElementRow.AddLevel("Fiscal", "Fiscal Year");
-
+DimensionElement dimensionElementRow = new DimensionElement() { Name = "Customer", HierarchyName = "Customer" };
+dimensionElementRow.AddLevel("Customer Geography", "Country");
 olapReport.SeriesElements.Add(dimensionElementRow);
 
-dimensionElementRow = new DimensionElement() { Name = "Product" };
-
-dimensionElementRow.AddLevel("Category", "Category");
-
-olapReport.SeriesElements.Add(dimensionElementRow);
-
-MeasureElements measureElementColumn = new MeasureElements();
-
-measureElementColumn.Elements.Add(new MeasureElement { Name = "Sales Amount"});
-
+MeasureElements measureElementColumn = new MeasureElements();
+measureElementColumn.Elements.Add(new MeasureElement { Name = "Internet Sales Amount" });
 olapReport.CategoricalElements.Add(measureElementColumn);
 
-
 {% endhighlight %}
-
 

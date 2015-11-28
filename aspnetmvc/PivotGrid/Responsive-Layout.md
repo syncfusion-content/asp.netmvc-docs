@@ -1,31 +1,37 @@
 ---
 layout: post
-title: Responsive Layout | PivotGrid | ASP.NET MVC | Syncfusion
-description: responsive layout
+title: Responsive | PivotGrid | ASP.NET MVC | Syncfusion
+description: responsive
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# Responsive Layout
+# Responsive
 
-Responsive layout is aimed at crafting sites to provide an optimal viewing experience - easy reading. It also provides navigation with a minimum of resizing, panning, and scrolling across a wide range of devices from tablet to desktop. To get responsive layout for PivotGrid, enable IsResponsive API to true. By using this feature, you can achieve an effective view of the PivotGrid control in all devices including desktops, tablets, mobiles, etc. 
+PivotGrid and PivotTable Field list control supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution upto 1024x600. You can enable responsiveness in PivotGrid by setting `IsResponsive` property to true.
+ 
+On resizing the browser, the PivotTable Field list will get collapse and an icon will appear on the left-hand side of the browser. User can toggle its view and perform UI interaction.
 
 {% highlight CSHTML %}
 
-@using Syncfusion.JavaScript;
-
-@using Syncfusion.JavaScript.Olap;
-
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc")).IsResponsive(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).IsResponsive(true)
 
 {% endhighlight %}
 
-![](Responsive-Layout_images/Responsive-Layout_img1.png)
+![](Responsive-Layout_images/normal.png)
 
+_Normal PivotGrid_
 
+![](Responsive-Layout_images/responsive.png)
 
-![](Responsive-Layout_images/Responsive-Layout_img2.png)
+_Responsive PivotGrid_
 
+![](Responsive-Layout_images/res-schema.png)
 
+_Responsive PivotTable Field List - Collapsed_
+
+![](Responsive-Layout_images/res-schema1.png)
+
+_Responsive PivotTable Field List - Expanded_
 

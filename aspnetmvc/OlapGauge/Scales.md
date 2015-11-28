@@ -7,75 +7,61 @@ control: OLAPGauge
 documentation: ug
 ---
 
-# Scales
+# Scale
 
-Scale is a basic unit of radial gauge. You can customize the gauge scales by using properties such as radius, minimum, scale direction, interval values etc. 
+## Adding Scale
 
-## Resizing the Scale Bar
-
-Radius of the Scale Bar is changed with the help of scaleRadius property and in order to make ScaleBar visible, set showScaleBar property to ‘true’. You can set size of the Scale Bar with the help of scaleBareSize and border width using scaleBorderWidth property. 
-
-
+Scale can be added within the OlapGauge widget as an array. 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
-
-{
-
-    scale.ShowRanges(true).Radius(180).ShowScaleBar(true).Size(2).Border(bor=>bor.Width(2.5)).ShowIndicators(true).ShowLabels(true).
-
-        Pointers(pointer =>
-
-        {
-
-            pointer.ShowBackNeedle(true).BackNeedleLength(20).Length(120).Width(7).Add();
-
-            pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
-
-        }).
-
-    Ticks(ticks =>
-
-    {
-
-        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
-
-        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
-
-    })
-
-    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
-
-    .Ranges(ranges =>
-
-    {
-
-        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor=> bor.Color("#fc0606")).Add();
-
-        ranges.DistanceFromScale(-5).Add();
-
-    })
-
-    .CustomLabels(customLabel =>
-
-    {
-
-        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-    }).Add();
-
-})
-
-
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => { scales.Radius(150).Add(); })
 
 {% endhighlight  %}
 
-![](Scales_images/Scales_img1.png)
+![](Scales_images/scale.png) 
 
+## Scale Customization
 
+### Pointer Cap
+Pointer Cap is a circular shape element that is located at the center of the OlapGauge. It can be customized with the **"PointerCap"** option inside scales. Following are the properties used to customize its appearance.
 
+* **Radius** – sets the radius of the pointer cap.
+* **BorderColor** – sets the color of the pointer cap border.
+* **BorderWidth** – sets the width of the pointer cap border.
+* **BackgroundColor** – sets the background color of the pointer cap.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+    scales.PointerCap(pointerCap => pointerCap.Radius(5).BorderWidth(2).BorderColor("green").BackgroundColor("yellow")).Add();
+})
+
+{% endhighlight  %}
+
+![](Scales_images/pointercap.png) 
+
+### Appearance
+The appearance of the scale can be customized through the following properties.
+
+* **Radius** – sets the radius of the scale.
+* **BackgroundColor** – sets the background color of the scale.
+* **Border** – sets the border of the scale with color and width properties.
+* **Size** – sets the size of the scale.
+* **Minimum** – sets the least value of the scale.
+* **Maximum** – sets the highest value of the scale.
+* **MajorIntervalValue** – sets the interval between minor ticks in the scale.
+* **MinorIntervalValue** – sets the interval between major ticks in the scale.
+* **Direction** – sets the direction of the scale.  By default it takes “Clockwise” direction.
+
+The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers` and `ShowScaleBar` properties are used to enable/disable the indicators, ticks, ranges, pointers and scale bar respectively.  By default, these properties are set to true. 
+
+{% highlight CSHTML %}
+
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+    scales.Radius(120).BackgroundColor("yellow").Border(border => border.Color("blue").Width(3)).Size(10).Minimum(20).Maximum(120).MajorIntervalValue(20).MinorIntervalValue(5).Direction(Directions.CounterClockwise).Add();
+})
+
+{% endhighlight  %}
+
+![](Scales_images/Scale-Customization-Appearance.png) 
