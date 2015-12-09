@@ -7,54 +7,44 @@ control: OLAPChart
 documentation: ug
 ---
 
-# Title
+#Title
 
-Title is the area on top of the Chart control that displays the text explaining the OlapChart data. Title text is displayed in a customizable format.  
+##Title Text
 
-## Setting value to Chart Title
-
-Title property allows you to set the default title for a Chart as follows. 
+By using the `title.Text` property, you can add the title text for OlapChart.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => 
-title.Text("OLAP Chart in Essential Studio"))
+//Adding Chart title
+@Html.EJ().Olap().OlapChart("OlapChart1").Title(title => title.Text("OlapChart in Essential Studio")).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
-{% endhighlight  %}
+{% endhighlight %}
 
+![](/js/OlapChart/Title_images/Title_img1.png)
 
-
-![](Title_images/Title_img1.png)
-
-
-
-## Title Text Customization 
-
-You can customize the title text font using title.font property.
+##Title Alignment
+By using the `title.TextAlignment` property, you can align the OlapChart controls title text to center, far or near.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").Title(title => title.Text("OlapChart in Essential Studio")).ClientSideEvents(oEve => { oEve.Load("load"); })
+//Change title text alignment
+@Html.EJ().Olap().OlapChart("OlapChart1").Title(title => title.Text("OlapChart in Essential Studio").TextAlignment(TextAlignment.Near)
+).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
-<script type="text/javascript">
+{% endhighlight %}
 
-    function load(args) {
+![](/js/OlapChart/Title_images/Title_img2.png)
 
-        this.model.title.font.size = "30px",
+##Title Customization
 
-        this.model.title.font.fontStyle = "italic",
+By using the `Title` property, you can add the title text for X-axis and Y-axis. Also title text can be customized by using the `Text` and `Font` properties. On setting `EnableTrim` to true, title text could be trimmed based on its length.
 
-        this.model.title.font.fontWeight = "bold"
+{% highlight CSHTML %}
 
-    }
+//Customizing axis title
+@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.Title(title => title.Text("Fiscal Year").Font(font=> font.Size("16px").FontWeight(ChartFontWeight.Bold).FontStyle(ChartFontStyle.Italic).Color("grey")))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
-</script>
+{% endhighlight %}
 
-
-{% endhighlight  %}
-
-
-![](Title_images/Title_img2.png)
-
-
+![](/js/OlapChart/Title_images/Title_img3.png) 
 

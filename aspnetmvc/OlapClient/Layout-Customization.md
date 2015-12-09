@@ -9,157 +9,160 @@ documentation: ug
 
 # Layout Customization
 
-**OLAP Client UI** comes with options to customize the **Grid** and **Chart** layout, such as:
-
-1. **Default View** - Sets the start-up control. 
-2. Tab/Tile View – Tab or Tile view to visualize the controls separately or in the same layout. 
-3. Hide Grid/Chart - Hides any one of the control by default. 
-4. Toggle Panel – Turns On/Off the visibility of Cube Browser and Axis Element Builder panels.  
-5. Maximized/Fullscreen view of the control(s) providing a precise view.
-
 ## Display View
-
-
-### Tile View
-
-In Tile View representation, both Grid and Chart will be displayed one over the other, in the same layout. 
-
-{% highlight html%}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tile); });
-
-{% endhighlight %}
-
-![](Layout-Customization_images/Layout-Customization_img1.png)
 
 ### Tab View
 
-In Tab View representation, both Grid and Chart will be displayed in a separate tab.
+In Tab View representation, both Grid and Chart will be displayed in a separate tab.  This could be set using the `ControlPlacement` property under the `DisplaySettings` option.  By default, Tab value is set.
 
+{% highlight C# %}
 
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.ControlPlacement(OlapClientControlPlacement.Tab); });
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement( OlapClientControlPlacement.Tab))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img2.png)
+![](Layout-Customization_images/tabview.png)
+
+### Tile View
+
+In Tile View representation, both Grid and Chart will be displayed one over the other, in the same layout.  Tile view can be set by using the `ControlPlacement` property under the `DisplaySettings` option.
+
+{% highlight C# %}
+
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement(OlapClientControlPlacement.Tile))
+
+{% endhighlight %}
+
+![](Layout-Customization_images/tileview.png)
 
 ## Default View
 
-After you set defaultView property either to Chart or Grid, the corresponding control is selected for initial view/visualization, within the layout when the OLAPClient control is loaded for the first time. 
+### Grid View
+
+To display Grid control by default, set `DefaultView` property under `DisplaySettings` option to Grid, which is the default value of the property.
+
+{% highlight C# %}
+
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Grid))
+
+{% endhighlight %}
+
+![](Layout-Customization_images/gridview.png)
 
 ### Chart View
 
-To display/visualize Chart control by default, set defaultView to Chart.
+To display Chart control by default, set the property `DefaultView` property to Chart.
 
+{% highlight C# %}
 
-{% highlight CSHTML %}
-
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc")
-	.Title("OLAP Browser").DisplaySettings(disp => { disp.DefaultView(OlapClientDefaultView.Chart); });
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Chart))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img3.png)
+![](Layout-Customization_images/chartview.png)
 
-### Grid View
-
-To display/visualize Grid control by default, set defaultView to Grid.
-
-
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.DefaultView(OlapClientDefaultView.Grid); });
-
-{% endhighlight %}
-
-![](Layout-Customization_images/Layout-Customization_img4.png)
-
-## Hide Grid/Chart
+## Display Mode
 
 ### Grid Only
 
-After you set thedisplayMode option to GridOnly, the Chart is hidden and the data is displayed only in Grid.
+After setting the `Mode` property under `DisplaySettings` option to GridOnly, the Chart is hidden and the data is displayed only in the Grid.
 
+{% highlight C# %}
 
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.Mode(OlapClientDisplayMode.GridOnly); });
+   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.GridOnly))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img5.png)
-
+![](Layout-Customization_images/gridonlyview.png)
 
 ### Chart Only
 
-After you set the displayMode option to ChartOnly, the Grid is hidden and data is displayed only in Chart.
+After setting the `Mode` property under `DisplaySettings` option to ChartOnly, the Grid is hidden and data is displayed only in the Chart.
 
+{% highlight C# %}
 
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.Mode(OlapClientDisplayMode.ChartOnly); });
+   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartOnly))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img6.png)
+![](Layout-Customization_images/chartonlyview.png)
 
-### Both Grid and Chart
+## Both Chart and Grid
 
-After you set the displayMode option to ChartAndGrid, data is displayed in both Grid and Chart.
+After setting the `Mode` property under `DisplaySettings` option to **ChartAndGrid**, data is displayed in both Grid and Chart.  This is the default value of the property.
 
+{% highlight C# %}
 
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.Mode(OlapClientDisplayMode.ChartAndGrid); });
+   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartAndGrid))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img7.png)
+![](Layout-Customization_images/chartandgridview.png)
 
 ## Toggle Panel
 
-You are provided with an option to toggle the visibility of Axis Element Builder and Cube Dimension Browser panels in OLAPClient.
+Toggle panel option lets the user to toggle the visibility of Axis Element Builder and Cube Dimension Browser panels in OlapClient with a use of a button. The button could be added to the control by using the `EnableTogglePanel` property under `DisplaySettings` option.  This property is disabled by default.
 
-{% highlight CSHTML %}
+{% highlight C# %}
 
-	@Html.EJ().Olap().OlapClient("OlapClient1")
-	.Url("../wcf/OlapClientService.svc")
-	.Title("OLAP Browser").DisplaySettings(disp => { disp.EnableTogglePanel(true); });
-	
+  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableTogglePanel(true))
+
 {% endhighlight %}
 
-![](Layout-Customization_images/Layout-Customization_img8.png)
+![](Layout-Customization_images/toggleview.png)
 
 ## Maximized/Full Screen View
 
-You can maximize OLAP Grid and OLAP Chart to full screen mode inside OLAP Client for a precise view. By selecting Full Screen icon in the toolbar, OLAP Grid and OLAP Chart are maximized depending on the current tab. You can also perform drilldown action in both OLAP Grid and OLAP Chart in the maximized view.
+Full screen view helps to visualize the PivotGrid and OlapChart controls inside OlapClient precisely according to the browser window size.  By selecting full screen icon in the toolbar, PivotGrid/OlapChart is maximized depending on the selected tab.  Drilldown action can also be performed in both PivotGrid and OlapChart in the maximized view.  This option is enabled by setting the `EnableFullScreen` property under `DisplaySettings` option to true.  The value is false by default.
 
-![](Layout-Customization_images/Layout-Customization_img9.png)
+{% highlight C# %}
 
-
-{% highlight CSHTML %}
-
-@Html.EJ().Olap().OlapClient("OlapClient1")
-.Url("../wcf/OlapClientService.svc")
-.Title("OLAP Browser").DisplaySettings(disp => { disp.EnableFullScreen(true); });
+  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableFullScreen(true))
 
 {% endhighlight %}
 
-The following screenshot shows the maximized view of OLAP Grid and OLAP Chart.
+![](Layout-Customization_images/maximizeicon.png)
 
-![](Layout-Customization_images/Layout-Customization_img10.png)
+The following screenshot shows the maximized view of PivotGrid.
+
+![](Layout-Customization_images/maximizedview.png)
+
+## Grid Layout
+
+PivotGrid inside OlapClient control can be rendered in any of the following layouts.
+
+* Normal
+* NormalTopSummary
+* NoSummaries
+* ExcelLikeLayout
+
+The layout is set using the `GridLayout` property. By default, normal layout is set.
+
+{% highlight C# %}
+
+  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").GridLayout(PivotGridLayout.NoSummaries)
+
+{% endhighlight %}
+
+![](Layout-Customization_images/gridlayout.png)
+
+## Chart Types
+
+While loading the OlapClient initially, the OlapChart widget can be rendered in any one of the available chart types using the `ChartType` property.
+
+{% highlight C# %}
+
+  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Area)
+
+{% endhighlight %}
+
+The `ChartType` property takes Column Chart by default. The types available are Column, Stacking Column, Bar, Stacking Bar, Line, Spline, Step Line, Area, Spline Area, Step Area, Stacking Area, Pie, Funnel and Pyramid.
+The Chart Type can also be changed dynamically through the toolbar icon.
+
+![](Layout-Customization_images/charttypes.png)
+
+![](Layout-Customization_images/linechart.png) 
+
+
+
+

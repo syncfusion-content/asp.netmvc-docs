@@ -9,284 +9,131 @@ documentation: ug
 
 # Pointers
 
-Pointers are used to indicate the range on scale area based on the values passed for the range values.
+## Pointer Types
 
-## Types of Pointers
+OlapGauge pointers has two types such as,
 
-Two different types of pointer available in OlapGuage are:
+* Needle
+* Marker
 
-1. Needle
-2. Marker
-
-## Changing Pointer Types
-
-
-You can set the pointer to Needle type by setting “pointerType”property to “Needle” and the pointer to Marker type by setting the “pointerType” properties to “Marker”.
+Needle type pointers are the default pointers which is always located at the center of the Gauge. There are 5 different shapes for the needle pointers which are Rectangle, Triangle, Trapezoid, Arrow and Image.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
-
-{
-
-    scale.ShowRanges(true).Radius(150).ShowScaleBar(true).Size(1).Border(bor=>bor.Width(0.5)).ShowIndicators(true).ShowLabels(true).
-
-        Pointers(pointer =>
-
-        {
-
-		pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(120).Width(7).Add();
-
-		pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
-
-        }).
-
-    Ticks(ticks =>
-
-    {
-
-        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
-
-        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
-
-    })
-
-    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
-
-    .Ranges(ranges =>
-
-    {
-
-        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor=> bor.Color("#fc0606")).Add();
-
-        ranges.DistanceFromScale(-5).Add();
-
-    })
-
-    .CustomLabels(customLabel =>
-
-    {
-
-        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-    }).Add();
-
-})
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => { scales.Pointers(pointers => { pointers.Type(PointerType.Needle).NeedleType(NeedleType.Trapezoid).Add(); }).Add(); })
 
 {% endhighlight  %}
 
+![](Pointers_images/needle pointer.png) 
 
-
-![](Pointers_images/Pointers_img1.png)
-
-
-
-## Length and Width Customization
-
-You can customize the Pointer length and width using the “pointerLength” and “pointerWidth” property.
-
+For marker pointer, the available shapes are Rectangle, Triangle, Ellipse, Diamond, Pentagon, Circle, Slider, Pointer, Wedge, Trapezoid, RoundedRectangle and Image.
 
 {% highlight CSHTML %}
 
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => { scales.Pointers(pointers => { pointers.Type(PointerType.Marker).MarkerType(MarkerType.Diamond).Add(); }).Add(); })
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
+{% endhighlight  %}
 
-{
+![](Pointers_images/marker pointer.png) 
 
-    scale.ShowRanges(true).Radius(150).ShowScaleBar(true).Size(1).Border(bor=>bor.Width(0.5)).ShowIndicators(true).ShowLabels(true).
+## Adding Pointer Collection
 
-        Pointers(pointer =>
+Pointer collection can be directly added to the scales option within the OlapGauge widget as an array. 
 
-        {
+{% highlight CSHTML %}
 
-            pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(60).Width(9).Add();
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => { scales.Pointers(pointers => { pointers.Type(PointerType.Needle).NeedleType(NeedleType.Triangle).Add(); pointers.Type(PointerType.Marker).MarkerType(MarkerType.Diamond).Add(); }).Add(); })
 
-            pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
+{% endhighlight %}
 
-        }).
+![](Pointers_images/pointer collection.png) 
 
-    Ticks(ticks =>
+## Appearance Customization
 
-    {
+The appearance of the pointer can be customized through the following properties.
 
-        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
+* **Border** – sets the "Color" and "Width" of the pointer border.
+* **BackgroundColor** – sets the background color of the pointer.
+* **Length** – sets the length of the pointer.
+* **Width** – sets the width of the pointer.
+* **Opacity** – sets the opacity of the pointer.  By default, the value is 1.
+* **Type** – sets the type of the pointer.  By default, the type is "Needle".
 
-        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
+{% highlight CSHTML %}
 
-    })
-
-    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
-
-    .Ranges(ranges =>
-
-    {
-
-        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor=> bor.Color("#fc0606")).Add();
-
-        ranges.DistanceFromScale(-5).Add();
-
-    })
-
-    .CustomLabels(customLabel =>
-
-    {
-
-        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+    scales.Pointers(pointers => { 
+        //For customizing needle pointer
+        pointers.Border(border => border.Color("green").Width(2)).BackgroundColor("yellow").Length(120).Width(7).Opacity(0.6).Type(PointerType.Needle).NeedleType(NeedleType.Triangle).Add();
+        //For customizing marker pointer 
+        pointers.Border(border => border.Color("green").Width(2)).BackgroundColor("yellow").Length(25).Width(15).Opacity(0.8).Type(PointerType.Marker).MarkerType(MarkerType.Diamond).Add();
     }).Add();
-
 })
 
 {% endhighlight %}
 
-![](Pointers_images/Pointers_img2.png)
+![](Pointers_images/pointer Appearance.png) 
 
+## Pointer Position
 
+Pointer can be positioned with the help of below two properties.
 
-## Background Customization 
+* **DistanceFromScale** -  defines the distance between scale and pointer. By default, the value is 0.
+* **Placement** -  defines the location of the pointer. By default, the value is "Center".
 
-You can customize the Pointer background color using “backgroundcolor”property.
-
-
-{% highlight CSHTML %}
-
-
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
-
-{
-
-    scale.ShowRanges(true).Radius(150).ShowScaleBar(true).Size(1).Border(bor=>bor.Width(0.5)).ShowIndicators(true).ShowLabels(true).
-
-        Pointers(pointer =>
-
-        {
-
-            pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(120).BackgroundColor("red").Width(7).Add();
-
-            pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
-
-        }).
-
-    Ticks(ticks =>
-
-    {
-
-        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
-
-        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
-
-    })
-
-    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
-
-    .Ranges(ranges =>
-
-    {
-
-        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor=> bor.Color("#fc0606")).Add();
-
-        ranges.DistanceFromScale(-5).Add();
-
-    })
-
-    .CustomLabels(customLabel =>
-
-    {
-
-        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-    }).Add();
-
-})
-
-
-
-
-{% endhighlight %}
-
-
-![](Pointers_images/Pointers_img3.png)
-
-
-
-## Shapes Customization
-
-You can customize Pointershapes using the “needlestyle” property. 
-
-
+N> Both the properties can be applied only if the pointer type is set to “Marker”. Needle pointer type appears only at the center of the widget, which is its default position.
 
 {% highlight CSHTML %}
 
-
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url("../wcf/OlapGaugeService.svc").BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
-
-{
-
-    scale.ShowRanges(true).Radius(150).ShowScaleBar(true).Size(1).Border(bor=>bor.Width(0.5)).ShowIndicators(true).ShowLabels(true).
-
-        Pointers(pointer =>
-
-        {
-
-            pointer.Type(PointerType.Needle).ShowBackNeedle(true).BackNeedleLength(20).Length(120).NeedleType(NeedleType.Rectangle).Width(7).Add();
-
-            pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
-
-        }).
-
-    Ticks(ticks =>
-
-    {
-
-        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
-
-        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
-
-    })
-
-    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
-
-    .Ranges(ranges =>
-
-    {
-
-        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor=> bor.Color("#fc0606")).Add();
-
-        ranges.DistanceFromScale(-5).Add();
-
-    })
-
-    .CustomLabels(customLabel =>
-
-    {
-
-        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
-
-    }).Add();
-
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+scales.Pointers(pointers => { pointers.Type(PointerType.Marker).DistanceFromScale(2).Placement(PointerPlacement.Far).Add(); }).Add();
 })
 
 {% endhighlight  %}
 
+![](Pointers_images/pointer positioning.png) 
 
+## Pointer Image
 
-![](Pointers_images/Pointers_img4.png)
+It is possible to replace the pointers with image. To view the pointers as image, we need to set the appropriate location in the `ImageUrl` property.
 
+{% highlight CSHTML %}
 
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+    scales.Pointers(pointers => {
+        //For replacing needle pointer with image        
+        pointers.Type(PointerType.Needle).NeedleType(NeedleType.Image).ImageUrl("../image.png").Add();
+        //For replacing marker pointer with image        
+        pointers.Type(PointerType.Marker).MarkerType(MarkerType.Image).ImageUrl("../image.png").Add();
+    }).Add();
+})
 
+{% endhighlight  %}
+
+![](Pointers_images/marker pointer with image.png) 
+
+## Pointer Value Text
+
+To display the current value of the pointers in OlapGauge widget, **"PointerValueText"** option inside pointers is used.  Following are the properties used to enable and customize the pointer value text.
+ 
+* **ShowValue** – enables the pointer value text by setting the property to "true". By default, its value is "true".
+* **Distance** – sets the distance between pointer and text.
+* **Color** – sets the color of the text.
+* **Opacity** – sets the opacity of the text. By default, its value is 1.
+* **Angle** – sets the rotation angle of the text. By default, its value is 0.
+* **Font** – sets the font size, font style and font family of the text.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
+    scales.Pointers(pointers => {
+        //For needle type
+        pointers.Type(PointerType.Needle).PointerValueText(pointerValueText => pointerValueText.ShowValue(true).Distance(10).Color("red").Opacity(70).Angle(20).Font(font => font.FontFamily("Arial").FontStyle("Normal").Size("15px"))).Add();
+        //For marker type
+pointers.Type(PointerType.Marker).PointerValueText(pointerValueText => pointerValueText.ShowValue(true).Distance(40).Color("red").Opacity(70).Angle(-40).Font(font => font.FontFamily("Arial").FontStyle("Normal").Size("15px"))).Add(); 
+    }).Add();
+})
+
+{% endhighlight  %}
+
+![](Pointers_images/pointer value text.png) 
