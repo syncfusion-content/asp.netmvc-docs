@@ -42,7 +42,9 @@ A layout in which summary cells are positioned besides each parent member and th
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("~/wcf/PivotGridService.svc")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("~/wcf/PivotGridService.svc"))
+
+{% endhighlight %} 
 
 ![](Grid-Layout_images/Grid-Layout_img3.png)
 
