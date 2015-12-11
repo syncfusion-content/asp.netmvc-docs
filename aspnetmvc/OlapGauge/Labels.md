@@ -37,8 +37,10 @@ The appearance of the Label can be customized through the following properties.
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
     scales.Labels(labels =>
     {
-     //for Major labels        labels.Type(GaugeTypes.Major).Color("#1AFF01").Opacity(80).IncludeFirstValue(false).Font(font => font.Size("15px").FontFamily("Arial").FontStyle("Bold")).Add();
-     //for Minor labels   labels.Type(GaugeTypes.Minor).Color("#FF103F").Opacity(80).IncludeFirstValue(true).Font(font => font.Size("10px").FontFamily("Arial").FontStyle("Normal")).Add();
+     //for Major labels        
+     labels.Type(GaugeTypes.Major).Color("#1AFF01").Opacity(80).IncludeFirstValue(false).Font(font => font.Size("15px").FontFamily("Arial").FontStyle("Bold")).Add();
+     //for Minor labels   
+     labels.Type(GaugeTypes.Minor).Color("#FF103F").Opacity(80).IncludeFirstValue(true).Font(font => font.Size("10px").FontFamily("Arial").FontStyle("Normal")).Add();
     }).Add();
 })
 
@@ -55,9 +57,10 @@ The `UnitText` property is used to add some text along with the labels. Normally
 
 @Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
     scales.Labels(labels => { 
-       //for Major labels labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add();
+       //for Major labels 
+       labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add();
        //for Minor labels
-labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add(); 
+       labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add(); 
     }).Add();
 })
 

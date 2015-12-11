@@ -20,31 +20,17 @@ The PivotGrid control can be exported by invoking **"exportPivotGrid"** method, 
 
 {% highlight CSHTML %}
 
-<html>
-//...
-
-<body>
-    //...
-    <div id="PivotGrid1" style="min-height: 275px; min-width: 525px; height: 460px; width: 720px"></div>
-    <script type="text/javascript">
-        $(function() {
-            $("#PivotGrid1").ejPivotGrid({
-                url: "../wcf/OLAPService.svc"
-            });
-            $("#ExportBtn").ejButton({
-                click: "exportBtnClick"
-            });
-        });
-
-        function exportBtnClick(args) {
-            var gridObj = $('#PivotGrid1').data("ejPivotGrid");
-            //Provide an appropriate export option as parameter.
-            gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
-        }
-    </script>
-</body>
-
-</html>                                          
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/api/OLAP"))
+@Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
+<button id="ExportBtn">Export</button>
+<script type="text/javascript">
+    function exportBtnClick(args) {
+        var gridObj = $('#PivotGrid1').data("ejPivotGrid");
+        //Provide an appropriate export option as parameter.
+        gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
+    }
+</script>
+                                        
 
 {% endhighlight %}
 
@@ -75,7 +61,7 @@ For Excel export, **"ej.PivotGrid.ExportOptions.Excel"** enumeration value is se
 {% highlight js %}
 
 function exportBtnClick(args) {
-    var gridObj = $('#PivotGrid').data("ejPivotGrid");
+    var gridObj = $('#PivotGrid1').data("ejPivotGrid");
     gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
 }
 
@@ -91,7 +77,7 @@ For CSV export, **"ej.PivotGrid.ExportOptions.CSV"** enumeration value is sent a
 {% highlight js %}
 
 function exportBtnClick(args) {
-    var gridObj = $('#PivotGrid').data("ejPivotGrid");
+    var gridObj = $('#PivotGrid1').data("ejPivotGrid");
     gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.CSV);
 }
 
@@ -110,7 +96,7 @@ For Word export, “ej.PivotGrid.ExportOptions.Word” enumeration value is sent
 {% highlight js %}
 
 function exportBtnClick(args) {
-    var gridObj = $('#PivotGrid').data("ejPivotGrid");
+    var gridObj = $('#PivotGrid1').data("ejPivotGrid");
     gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Word);
 }
 
@@ -129,7 +115,7 @@ For PDF export, **"ej.PivotGrid.ExportOptions.PDF"** enumeration value is sent a
 {% highlight js %}
 
 function exportBtnClick(args) {
-    var gridObj = $('#PivotGrid').data("ejPivotGrid");
+    var gridObj = $('#PivotGrid1').data("ejPivotGrid");
     gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.PDF);
 }
 
