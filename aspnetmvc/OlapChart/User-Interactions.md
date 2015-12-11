@@ -106,7 +106,7 @@ In OlapChart, you can customize the marker `Shape` with different symbols like r
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).CommonSeriesOptions(comm => { comm.Type(SeriesType.Line);}).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
     oEve => { oEve.SeriesRendering("onSeriesRenders"); })
 <script>
    function onSeriesRenders(args) {
