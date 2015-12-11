@@ -21,7 +21,7 @@ A layout in which summary cells are positioned at the bottom of each parent memb
 
 {% endhighlight %}
 
-![](Grid-Layout_images/Grid-Layout_img1.png)
+![](Grid-Layout_images/layout-normal.png)
 
 ##No Summaries Layout
 
@@ -33,7 +33,7 @@ A layout in which summary cells are completely hidden and the child members appe
 
 {% endhighlight %}
 
-![](Grid-Layout_images/Grid-Layout_img2.png)
+![](Grid-Layout_images/layout-nosummary.png)
 
 
 ##Excel-like Layout
@@ -46,7 +46,7 @@ A layout in which summary cells are positioned besides each parent member and th
 
 {% endhighlight %} 
 
-![](Grid-Layout_images/Grid-Layout_img3.png)
+![](Grid-Layout_images/layout-excel.png)
 
 
 ##Top Summary Layout 
@@ -59,4 +59,4 @@ A layout in which summary cells are positioned at the top of each parent member 
 
 {% endhighlight %}
 
-![](Grid-Layout_images/Grid-Layout_img4.png)
+![](Grid-Layout_images/layout-top.png)

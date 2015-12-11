@@ -105,7 +105,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **<appSettings>** tag in Web.config file at the root folder.
+Set the “UnobtrusiveJavaScriptEnabled” property to false under <appSettings> tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -135,7 +135,7 @@ The scripts and style sheets that are mandatorily required to render OlapChart w
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the <head> tag in ** _Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
     
 {% highlight html %}
 
@@ -161,7 +161,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% endhighlight %}
 
-##Control Initialization
+### Control Initialization
 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
@@ -169,7 +169,7 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
 @using Syncfusion.JavaScript.Olap;
 
-<div> @Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/OlapChart")) </div>
+<div> @Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/OlapChart")).Size(size => size.Height("460px").Width("950px")) </div>
 
 {% endhighlight %}
 
@@ -342,4 +342,4 @@ Now, **OlapChart** is rendered with Customer Count over a period of fiscal years
 
 ###WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple OlapChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/olapchart/data-binding).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple OlapChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/olapchart/data-binding#wcf).

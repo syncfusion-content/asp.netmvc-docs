@@ -7,9 +7,11 @@ control: PivotGrid
 documentation: ug
 ---
 
-# OLAP Connectivity 
+# Data Binding 
 
-###Binding PivotGrid to Offline Cube
+## OLAP
+
+## Binding PivotGrid to Offline Cube
 
 To connect an OLAP Cube available in local machine, set the physical path of the Cube in the connection string. The following code example illustrates the same.
 
@@ -20,7 +22,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-###Binding PivotGrid to Cube in local SQL Server
+## Binding PivotGrid to Cube in local SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in local machine, set the server name and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -31,7 +33,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-###Binding PivotGrid to Cube in online SQL Server
+## Binding PivotGrid to Cube in online SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in online server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -43,7 +45,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-###Binding PivotGrid to Cube in online Mondrian Server
+## Binding PivotGrid to Cube in online Mondrian Server
 
 To connect an OLAP Cube available in Mondrian Server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -56,7 +58,7 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.M
 {% endhighlight %}
 
 
-###Binding PivotGrid to Cube in online ActivePivot Server
+## Binding PivotGrid to Cube in online ActivePivot Server
 To connect an OLAP Cube available in ActivePivot Server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
 {% highlight c# %}
@@ -68,7 +70,7 @@ DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.Act
 {% endhighlight %}
 
 
-###WCF
+### WCF
 
 **Adding a WCF Service**
 
@@ -289,6 +291,8 @@ The endpointBehaviors are illustrated as follows.
 {% highlight xml %}
 
 <system.serviceModel>
+    …… 
+    ……
     <services>
         <service name="PivotGridDemo.OLAPService">
             <endpoint address="" behaviorConfiguration="PivotGridDemo.OLAPServiceAspNetAjaxBehavior" binding="webHttpBinding" contract="PivotGridDemo.IOLAPService" /> </service>
@@ -308,6 +312,8 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
                 <enableWebScript /> </behavior>
         </endpointBehaviors>
     </behaviors>
+    …… 
+    ……
 </system.serviceModel>
 
 {% endhighlight %}
@@ -317,7 +323,7 @@ N> In this example, **“PivotGridDemo”** indicates the name and root namespac
 
 Now, **PivotGrid** will be rendered with Internet Sales Amount over a period of fiscal years across different customer geographic locations.
 
-{% include image.html url="/js/PivotGrid/Getting-Started_images/Getting-Started_img9.png"%}
+{% include image.html url="/js/PivotGrid/Getting-Started_images/olapwebapi.png"%}
 
 ## Relational
 
@@ -329,7 +335,7 @@ If you are using WebAPI controller, refer the "Datasource Initialization" sectio
 
 Or, if you are using WCF service, refer the "Datasource Initialization" section under the following [link].
 
-##WCF
+### WCF
 **Adding a WCF Service**
 
 To add a WCF service in an existing MVC Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as `RelationalService.svc`, click **Add.**
@@ -649,5 +655,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
+{% include image.html url="/js/PivotGrid/Getting-Started_images/relaionalwebapi.png"%}
 
-![](Getting-Started_images/PivotGrid.png) 

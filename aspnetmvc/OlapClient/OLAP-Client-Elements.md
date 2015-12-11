@@ -58,46 +58,45 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 <th>Is Draggable</th>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/Folder icon.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/Folder icon.png)' | markdownify }}</td>
 <td>Display Folder</td>
 <td>Display Folder</td>
 <td>False</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/Measure icon.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/Measure icon.png)' | markdownify }}</td>
 <td>Measure</td>
 <td>Measure</td>
 <td>True</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/Dimension icon.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/Dimension icon.png)' | markdownify }}</td>
 <td>Dimension</td>
 <td>Dimension</td>
 <td>True</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/user defined hierarchy.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/user defined hierarchy.png)' | markdownify }}</td>
 <td>User Defined Hierarchy</td>
 <td>Hierarchy</td>
 <td>True</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/attribute hierarchy.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/attribute hierarchy.png)' | markdownify }}</td>
 <td>Attribute Hierarchy</td>
 <td>Hierarchy</td>
 <td>True</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/first level.png) <br/>
-![](OLAP-Client-Elements_images/second level.png) <br/>
-![](OLAP-Client-Elements_images/third level.png) <br/>
-</td>
+<td>{{ '![](OLAP-Client-Elements_images/first level.png)' | markdownify }}<br/>
+{{ '![](OLAP-Client-Elements_images/second level.png)' | markdownify }}<br/>
+{{ '![](OLAP-Client-Elements_images/third level.png)' | markdownify }}</td>
 <td>Levels (in order)</td>
 <td>Level Element</td>
 <td>True</td>
 </tr>
 <tr>
-<td>![](OLAP-Client-Elements_images/names set element.png)</td>
+<td>{{ '![](OLAP-Client-Elements_images/names set element.png)' | markdownify }}</td>
 <td>Named Set</td>
 <td>Named Set</td>
 <td>True</td>
@@ -269,7 +268,7 @@ Report List drop down contains the names of all the reports in the report collec
 
 On selecting the required report from the report list, the selected report will be set as active report and gets loaded.
 
-![](OLAP-Client-Elements_images/renamereport1.png)
+![](OLAP-Client-Elements_images/reportlis1.png)
 
 ## PivotGrid and OlapChart
 
