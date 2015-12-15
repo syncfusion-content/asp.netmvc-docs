@@ -99,7 +99,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **<appSettings>** tag in Web.config file at the root folder.
+Set the “UnobtrusiveJavaScriptEnabled” property to false under <appSettings> tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -127,7 +127,7 @@ he scripts and style sheets that are mandatorily required to render OlapChart wi
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the <head> tag in ** _Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
     
 {% highlight html %}
 
@@ -135,7 +135,7 @@ Scripts and style sheets are referred under the <head> tag in ** _Layout.cshtml*
     <link href="http://cdn.syncfusion.com/13.3.0.7/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-     <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
 </head>
 
 {% endhighlight %}
@@ -152,7 +152,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% endhighlight %}
 
-###Control Initialization
+### Control Initialization
 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
@@ -351,5 +351,5 @@ Now, **OlapGauge** is rendered with Internet Revenue for Internet Sales Amount o
 
 ###WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple OlapGauge. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/olapgauge/data-binding).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple OlapGauge. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/olapgauge/data-binding#wcf).
 

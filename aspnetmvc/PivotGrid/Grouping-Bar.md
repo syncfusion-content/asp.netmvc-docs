@@ -9,61 +9,40 @@ documentation: ug
 
 # Grouping Bar
 
-N> This feature is applicable only for Relational datasource.
+I> This feature is applicable only for relational datasource.
 
-The PivotGrid control supports Grouping bar that allows you to filter, sort, and remove members of the relational data loaded in the PivotGrid control. The grouped report can also be changed dynamically by using drag and drop operations.
+## Initialization
 
-The following code example explains on how to enable the Grouping bar within the PivotGrid control.
+Grouping Bar allows user to dynamically alter the report by filter, sort and remove operations in the PivotGrid control. Based on the datasource and report bound to the PivotGrid control, Grouping Bar will be automatically populated. You can enable Grouping Bar option in PivotGrid by setting the `EnableGroupingBar` property to true.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/RelationalService.svc")).EnableGroupingBar(true).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
-
-@Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner")
-
-
-
-OnAfterServiceInvoke = function (evt) {
-
-    if (evt.action == "initialize") {
-
-        var PivotSchemaDesigner = $("#PivotSchemaDesigner").data('ejPivotSchemaDesigner');
-
-        if (PivotSchemaDesigner.model.pivotControl == null) {
-
-            PivotSchemaDesigner.model.enableWrapper = true;
-
-            PivotSchemaDesigner.model.pivotControl = this;
-
-            PivotSchemaDesigner.model.layout = "excel";
-
-            PivotSchemaDesigner._load();
-
-        }
-
-    }
-
-}
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/RelationalService.svc")).EnableGroupingBar(true)
 
 {% endhighlight %}
 
-![](Grouping-Bar_images/Grouping-Bar_img1.png)
+![](Grouping-Bar_images/groupingbar.png)
 
+## Filtering
 
+Filtering option available in Grouping Bar allows you to select a specific set of values that needs to be displayed in the PivotGrid control. Atleast one value needed to be in checked state while filtering otherwise “Ok” button will be disabled.
 
+![](Grouping-Bar_images/FILTER.png)
 
+![](Grouping-Bar_images/FILTER1.png)
 
-The following operations can be achieved by using the Grouping bar:
+## Sorting Values
 
-###Filtering
+Sorting option available in Grouping Bar allows you to arrange headers either in ascending or descending order. Sorting option is applicable for fields available only in Row and Column region. By default, headers are sorted in ascending order. Regarding sorting indicator, up arrow denotes ascending order and down arrow denotes descending order.
 
-Filtering option available in the Grouping bar allows you to select a specific set of values that needs to be displayed in the PivotGrid control and hides the rest. By default, the filtering option is applicable only for the Row, Column and Filter areas.
+![](Grouping-Bar_images/sort.png)
 
-###Sorting
+![](Grouping-Bar_images/sort-grid.png)
 
-Sorting option available in the Grouping bar allows you to sort the values besides the respective PivotItem in the PivotGrid control. This option is applicable for the PivotItems available only in the Row and Column areas. The sort indicator present in the button indicates whether the values are in ascending or descending order. Normally, the up arrow indicates ascending order and the down arrow indicates descending order. By default, the values are sorted in ascending order.
+## Removing Field
 
-###Remove
+Remove option available in the Grouping Bar allows you to completely remove a specific field from the PivotGrid control. Remove operation can be either achieved by clicking remove icon available inside each field or by dragging and dropping field out of Grouping Bar region.
 
-Remove option available in the Grouping bar allows you to remove a specific PivotItem from the PivotGridcontrol.
+![](Grouping-Bar_images/remove.png)
 
+![](Grouping-Bar_images/remove-grid.png) 

@@ -531,6 +531,8 @@ Foreign key is a field in relational table. It matches the specific key columns 
 
 To enable the Foreing key field , use ForeignKeyField and ForeignKeyValue propertyof Grid as follows:
 
+I> ForeignkeyField and Field key name must be same.
+
 
 {% tabs %}
 
