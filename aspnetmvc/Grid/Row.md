@@ -7,76 +7,65 @@ control: Grid
 documentation: ug
 ---
 
+
+
 # Row
 
-## Details Template
+It represents the record details that are fetched from the datasource.
 
-Details Template feature provides a detailed view about additional information of each row. If you want to view the detailed information, you can expand a row. To enable Details Template, used DetailsTemplate property of Grid as follows:
+## Row Hover
+
+You can see the mouse hovering effect on the corresponding grid rows using [`EnableRowHover`](http://help.syncfusion.com/js/api/ejgrid#members:enablerowhover "enableRowHover") property. By default its value is `true`.
+
+The following code example describes the above behavior.
 
 
 {% tabs %}
  
 {% highlight  CSHTML %}
 
-<script id="tabGridContents" type="text/x-jsrender">
+@(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-    <div id="contact{{:EmployeeID}}" style="font-weight:bold; padding:5px;">
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        
+        .AllowPaging()   
+        
+        .EnableRowHover(true)
+        
+         .Columns(col =>
+         
+         {
+             col.Field("OrderID").Add();
+             col.Field("EmployeeID").Add();
+             col.Field("ShipCity").Add();
+             col.Field("ShipCountry").Add();
+             col.Field("Freight").Add();
+             
+         }))
 
-        <div id="cont">
-
-            contact:{{:Address}}<br />
-
-            city:{{:City}}<br />
-
-            Country:{{:Country}}<br />
-
-            phone:{{:HomePhone}}<br />
-
-        </div>
-
-    </div>
-
-</script>
-
-@(Html.EJ().Grid<EmployeeView>("DetailTemplate")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowPaging()
-
-   .DetailsTemplate("#tabGridContents") // detail template
-
- )
 
 
 {% endhighlight  %}
 {% highlight C# %}
 
-
-
-
 namespace MVCSampleBrowser.Controllers
 
 {
 
-    public partial class GridController : Controller
-
-    {
-
-
-
-        public ActionResult DetailTemplate()
-
+     public class GridController : Controller
+   
+   {
+           public ActionResult Default()
+        
         {
-
-            var DataSource = new NorthwindDataContext().EmployeeViews.Take(9).ToList();
-
+        
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            
             ViewBag.datasource = DataSource;
-
+            
             return View();
-
         }
-
+        
     }
 
 }
@@ -86,23 +75,20 @@ namespace MVCSampleBrowser.Controllers
 
 {% endtabs %} 
 
-
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Row_images/Row_img1.png)
 
-Details Template
-{:.caption}
 
+## Details Template
 
+It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the [`DetailsTemplate`](http://help.syncfusion.com/js/api/ejgrid#members:detailstemplate "detailsTemplate") property. And also you can change HTML elements in detail template row into JavaScript controls using [`DetailsDataBound `](http://help.syncfusion.com/js/api/ejgrid#events:detailsdatabound "detailsDataBound") event.
 
-## Hierarchy
+On enabling details template, new column will be added in grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
 
+N> It's a standard way to enclose the template within the `script` tag with `type` as "text/x-jsrender".
 
-
-In this section, you can learn how to use the Hierachytree in GridView. The following code example is of HierachyGrid.
+The following code example describes the above behavior.
 
 
 {% tabs %}
@@ -111,50 +97,77 @@ In this section, you can learn how to use the Hierachytree in GridView. The foll
 
 @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
+          .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.DetailsTemplate("#tabGridContents")
+          .DetailsTemplate("#tabGridContents")
 
-.ClientSideEvents(eve => { eve.DetailsDataBound ("detailGridData"); })
+          .ClientSideEvents(eve => { eve.DetailsDataBound("detailGridData"); })
 
+           .Columns(col =>
+
+               {
+                     col.Field("EmployeeID").Add();
+                     col.Field("FirstName").Add();
+                     col.Field("Title").Add();
+                     col.Field("City").Add();
+                      col.Field("Country").Add();
+
+                })
 )
-
-<script src="~/Scripts/jsondata.min.js"></script>
 
 <script id="tabGridContents" type="text/x-jsrender">
 
-	<div class="tabcontrol" id="Test">
+       <div class="tabcontrol" id="Test">
 
-	<div id="detailGrid">
+            <ul>
 
-	</div>
+                    <li><a href="#gridTab{{:EmployeeID}}">Stock Grid</a></li>
 
-		<label id="employeeDet" style="display: none">{{:EmployeeID}}</label>
+              </ul>
 
-	</div>
+        <div id="gridTab{{:EmployeeID}}">
+
+     <div id="detailGrid">
+
+   </div>
+
+  </div>
+
+  </div>
 
 </script>
+
+<script src="~/Scripts/jsondata.min.js"></script>
 
 <script type="text/javascript">
 
-	function detailGridData(e) {
+        function detailGridData(e) {
 
-	var filteredData = e.detailsElement.find("#employeeDet").text();
+          var filteredData = e.data["EmployeeID"];
 
-	// the datasource "window.ordersView" is referred from jsondata.min.js
+          // the datasource "window.ordersView" is referred from jsondata.min.js
 
-	var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true));
+          var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true).take(5));
 
-	e.detailsElement.find("#detailGrid").ejGrid({
+          e.detailsElement.find("#detailGrid").ejGrid({
 
-	dataSource: data,
+          dataSource: data,
 
-	});
+          columns: [
 
-	}
+                        { field: "OrderID" },
+                        { field: "EmployeeID" },
+                        { field: "ShipCity" },
+                        { field: "ShipCountry" },
+	                    { field: "Freight" }
+	               ]
+	     });
+
+       e.detailsElement.find(".tabcontrol").ejTab();
+
+}
 
 </script>
-
 
 {% endhighlight  %}
 {% highlight C# %}
@@ -163,49 +176,38 @@ namespace MVCSampleBrowser.Controllers
 
 {
 
-public partial class GridController : Controller
-
-{
-
-//
-
-// GET: /DetailTemplate/
-
-
-
-public ActionResult DetailTemplate()
-
-{
-
-var DataSource = new NorthwindDataContext().EmployeeViews.Take(9).ToList();
-
-ViewBag.datasource = DataSource;
-
-return View();
-
-}
-
-}
+ public class GridController : Controller
+ 
+    {
+         public ActionResult DetailTemplate()
+        
+        {
+           
+           var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+           
+           ViewBag.datasource = DataSource;
+           
+           return View();
+       
+        }
+    }
 
 }
 
 
 
 {% endhighlight  %}
-{% endtabs %}  
-
+{% endtabs %}
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Row_images/Row_img2.png)
 
-Hierachy
-{:.caption}
 
 ## Row Template
 
-RowTemplate is used to render your template in every row. It is used to place elements inside Grid rows. This feature makes it easier to customise Grid rows with HTML elements.
+Row template enables you to set the customized look and behavior to grid all rows. [`RowTemplate`](http://help.syncfusion.com/js/api/ejgrid#members:rowtemplate "rowTemplate") property can be used bind the `id` of HTML template.
+
+The following code example describes the above behavior.
 
 
 {% tabs %}
@@ -213,112 +215,102 @@ RowTemplate is used to render your template in every row. It is used to place el
 {% highlight  CSHTML %}
 
 <script id="templateData" type="text/x-jsrender">
-
-<tr>
-
-<td class="photo">
-
-<img style="width:130px;height: 160px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
-
-</td>
-
-<td class="details">
-
-<table class="CardTable" cellpadding="3" cellspacing="6">
-
-<colgroup>
-
-<col width="50%">
-
-<col width="50%">
-
-</colgroup>
-
-<tbody>
-
-<tr>
-
-<td class="CardHeader">First Name: </td>
-
-<td style="padding:20px">{{:FirstName}} </td>
-
-</tr>
-
-<tr>
-
-
-
-<td class="CardHeader">
-
-Birth Date:
-
-</td>
-
-<td style="padding:20px">
-
-{{:BirthDate.toLocaleDateString()}}
-
-</td>
-
-</tr>
-
-<tr>
-
-
-
-<td class="CardHeader">
-
-Hire Date:
-
-</td>
-
-<td style="padding:20px">
-
-{{:HireDate.toLocaleDateString()}}
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</td>
-
-</tr>
+    <tr>
+    
+        <td class="photo">
+        
+            <img style="width:130px;height: 160px" src="/13.2.0.29/themes/web/images/employees/{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
+        
+        </td>
+       
+        <td class="details">
+        
+            <table class="CardTable" cellpadding="3" cellspacing="2">
+               
+               <colgroup>
+               
+                     <col width="50%">
+               
+                     <col width="50%">
+               
+               </colgroup>
+                
+                <tbody>
+                   <tr>
+                        
+                        <td class="CardHeader">First Name</td>
+                        
+                        <td>{{:FirstName}} </td>
+                    
+                    </tr>
+                    <tr>
+                        
+                        <td class="CardHeader">
+                            Last Name
+                        </td>
+                        
+                        <td>{{:LastName}}</td>
+                    
+                    </tr>
+                    <tr>
+                       
+                       <td class="CardHeader">
+                            Title
+                        </td>
+                       
+                       <td>{{:Title}}</td>
+                    
+                    </tr>
+                </tbody>
+           
+           </table>
+        
+        </td>
+    
+    </tr>
 
 </script>
 
 <style>
+    .photo img {
+        width: 130px;
+    }
 
-.CardHeader {
+    .photo, .details {
+        border-color: #c4c4c4;
+        border-style: solid;
+    }
 
-font-weight:bold;
+    .photo {
+        border-width: 1px 0px 0px 0px;
+    }
 
-font-size:14px;
+    .details {
+        border-width: 1px 0px 0px 1px;
+    }
 
-padding:20px;
+        .details > table {
+            width: 100%;
+        }
 
-}
-
+    .CardHeader {
+        font-weight: bolder;
+    }
 </style>
-
 
 
 @(Html.EJ().Grid<EmployeeView>("RowTemplate")
 
 .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.ScrollSettings(scroll => scroll.Height(480).Width(500))
+.Query("new ej.Query().take(2)")
 
 .Columns(col =>
-
 {
 
-col.HeaderText("photo").TextAlign(TextAlign.Center).Width(30).Add();
+              col.HeaderText("Photo").Width(30).Add();
 
-col.HeaderText("Employee Details").TextAlign(TextAlign.Left).Width(70).Add();
+              col.HeaderText("Employee Details").Width(70).Add();
 
 })
 
@@ -333,27 +325,21 @@ namespace MVCSampleBrowser.Controllers
 
 {
 
-	public partial class GridController : Controller
-
-	{
-
-
-
-		public ActionResult RowTemplate()
-
-		{
-
-			var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-
-			ViewBag.datasource = DataSource;
-
-			return View();
-
-		}
-
-
-
-	}
+	 public class GridController : Controller
+    
+     {
+       
+        public ActionResult RowTemplate()
+        
+        {
+        
+             var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+        
+              ViewBag.datasource = DataSource;
+        
+              return View();
+        }
+    }
 
 }
 
@@ -361,61 +347,44 @@ namespace MVCSampleBrowser.Controllers
 
 {% endhighlight  %}
 {% endtabs %}
+
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Row_images/Row_img3.png)
 
-Row Template
-{:.caption}
 
-## Customize Hover and AltRow 
+## Alternate row styling
 
-EnableAltRow and EnableRowHover are graphical features in Grid that are used to enable alternate row color in Grid and enable hover effects while hovering over row cells. By default, these two features are enabled in Grid. In this section, you can learn how to cutomize alternative rows color and hover color in the ejGrid controls.
+Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using [`EnableAltRow`](http://help.syncfusion.com/js/api/ejgrid#members:enablealtrow "enableAltRow") property. 
 
+By default its value is `true`, so the following code example describes the how to turn off alternate row behavior.
 
 
 {% tabs %}
  
 {% highlight  CSHTML %}
 
-@*custom style*@
 
-<style>
-
-.e-grid .e-alt_row {
-
-        background-color: lightgreen !important;
-
-    }
-
-
-
-.e-grid .e-hover {
-
-        background: black !important;
-
-    }
-
-</style>
-
-
-
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-    .AllowPaging()
-
-    .PageSettings(page => page.PageSize(5))
-
-.EnableAltRow (true)
-
-    .EnableRowHover(true)
-
-    )
-
+@(Html.EJ().Grid<OrdersView>("Grid")
+        
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        
+        .AllowPaging()
+        
+        .EnableAltRow(false)
+        
+        .Columns(col =>
+         
+         {
+             col.Field("OrderID").Add();
+             col.Field("EmployeeID").Add();
+             col.Field("ShipCity").Add();
+             col.Field("ShipCountry").Add();
+             col.Field("Freight").Add();
+         
+         })
+         
+)
 
 {% endhighlight  %}
 {% highlight C# %}
@@ -423,23 +392,21 @@ EnableAltRow and EnableRowHover are graphical features in Grid that are used to 
 namespace MVCSampleBrowser.Controllers
 
 {
-
-    public partial class GridController : Controller
-
+ 
+ public class GridController : Controller
+    
     {
-
         public ActionResult Default()
-
+        
         {
-
+            
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
+            
             ViewBag.datasource = DataSource;
-
+            
             return View();
-
+        
         }
-
     }
 
 }
@@ -448,11 +415,9 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 
 {% endtabs %} 
+
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Row_images/Row_img4.png)
 
-Customize hover and altrow
-{:.caption}
+
