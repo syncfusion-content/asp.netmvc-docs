@@ -40,6 +40,8 @@ In-order to initialize PivotTable Field List, first you need to define a â€œdivâ
 
 ![](PivotTable-Field-List_images/schema1.png)
 
+## Layout
+
 The top portion of the layout shows Field or Cube items in a categorized way. They can be dynamically added into the report either by drag and drop option or through simple check box selection.
  
 On item(s) selection they will be placed in Row section by default except numeric based item(s) or measures, which will alone be placed in the Value section by default.
