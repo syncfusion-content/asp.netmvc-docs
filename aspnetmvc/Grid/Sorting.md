@@ -9,356 +9,414 @@ documentation: ug
 
 # Sorting
 
-## Default Sorting
+The Grid control has support to sort databound columns in ascending or descending order. This can be achieved by setting [`AllowSorting`](http://help.syncfusion.com/js/api/ejgrid#members:allowsorting "AllowSorting") property as `true`. 
 
-Sorting is a basic technique in Grid. It helps you view Grid records in ascending or descending, based on a particular column. If you want to enable sorting in Grid then use AllowSorting property at Grid initialize. By default, sorting operation can be performed by user interaction (UI) on Grid header.
+To dynamically sort a paticular column, click on its column header. The order switch between ascending and descending each time you click a column header for sorting.
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<object>("Grid")
-
-  .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	.AllowSorting()
-
-  .AllowPaging()
-
-)
-
-namespace SyncfusionMvcApplication3.Controllers
-
-{
-
-    public class HomeController : Controller
-
-    {
-
-        public ActionResult Index()
-
-        {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }         
-
-    }	
-
-}
-
-
-{% endhighlight  %}
-
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Sorting_images/Sorting_img1.png)
-
-Sorting
-{:.caption}
-
-N> Grid also has support to sort more than one column. This behavior is called as multi sorting. To enable this behavior in Grid then use AllowMultiSorting in Grid.
-
-## External Sorting
-
-In Grid, you have an API to sort a column dynamically. The following code example shows you how to sort a column through API. 
+The following code example describes the above behavior.
 
 
 {% tabs %}
-  
-{% highlight CSHTML %}
-
-<select id="columns">
-
-	<option value="OrderID">Order ID</option>
-
-	<option value="CustomerID">Customer ID</option>
-
-	<option value="EmployeeID">Employee ID</option>
-
-	<option value="ShipCity">Ship City</option>
-
-</select>
-
-<br/>
-
-<select id="direction">
-
-	<option>Ascending</option>
-
-	<option>Descending</option>
-
-</select>     
-
-<br/>
-
-<input type="button" value="sort" id="sort"/>
-
-<br/>
+ 
+{% highlight  CSHTML %}
 
 @(Html.EJ().Grid<object>("Grid")
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
 
-.AllowSorting()
+        .AllowPaging()
 
-.AllowPaging()
+        .AllowSorting()
 
+        .Columns(col =>
+                
+                {
+                     col.Field("OrderID").Add();
+                     col.Field("EmployeeID").Add();
+                     col.Field("ShipCity").Add();
+                     col.Field("ShipCountry").Add();
+                     col.Field("Freight").Add();
+               })
 )
 
 {% endhighlight  %}
-
-{% highlight js %}
-
-
-
-   <script type="text/javascript">
-
-    $("#columns,#direction").ejDropDownList();
-
-    $("#sort").ejButton({
-
-        click: function (args) {
-
-            $("#Grid").ejGrid("sortColumn", $("#columns").ejDropDownList("getSelectedValue"), ej.sortOrder[$("#direction").ejDropDownList("getSelectedValue")]);
-
-        }
-
-    });
-
-   </script>
-
-
-{% endhighlight  %}
-
 {% highlight C# %}
 
 
-namespace SyncfusionMvcApplication3.Controllers
 
-{
-
-    public class HomeController : Controller
-
-    {
-
-        public ActionResult Index()
-
-        {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-{% endhighlight %}
-{% endtabs %}
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Sorting_images/Sorting_img3.png)
-
-External Sorting
-{:.caption}
-
-## Multi sorting in Touch device
-
-While using Grid in a touch device environment, you have the option of multi sorting. If you click Grid header it shows a popup to enable or disable single click on Grid header as multi sorting or simple sorting. If you want to enable multi sorting with a single click then click the sorting symbol in popup.
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Sorting_images/Sorting_img4.png)
-
-Multi sorting in touch device
-{:.caption}
-
-N> To enable Multi Sorting, use AllowMultiSorting() property of Grid
-
-## Multi sorting key configs
-
-In the normal way of sorting, if you want to sort any column, you can click the header cell of that column. For multi sorting, you need to press ctrl key plus mouse left click.
-
-If you want to clear sorting for a column then you need to use shift plus mouse left click.
-
-## Clear sorting using API
-
-In Grid, you have an API to clear sorted columns. Through this API, you can clear sorting at any stage.
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
- <input type="button" id="clearsorting" name="sorting" value="clear sorting" />
-
-
-
-    @(Html.EJ().Grid<object>("Grid")
-
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-      .AllowSorting()
-
-      .AllowMultiSorting()
-
-      .AllowPaging()
-
-      )
-
-{% endhighlight  %}
-{% highlight js %}
-
-<script type="text/javascript">
-
-    $("#clearsorting").ejButton({
-
-        click: function (args) {
-
-            $("#Grid").ejGrid("clearSorting");
-
-        }
-
-    });
-
-</script>
-
-{% endhighlight  %}
-{% highlight c# %}
 
 namespace MVCSampleBrowser.Controllers
 
 {
 
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult Index()
-
-        {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        } 
-
-    }
-
-}
-
-{% endhighlight  %}
-
-{% endtabs %}  
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Sorting_images/Sorting_img5.png)
-
-Before sorting clearance
-{:.caption}
-
-![](Sorting_images/Sorting_img6.png)
-
-After sorting clearance
-{:.caption}
-
-## Merge Sort
-
-In the normal way of sorting, first preference is given to capital letters and then small letters. When you do not want discrimination between small and capital letters, you can set “enableLocalizedSort” API as true to sort both small and capital letters.
-
-
-{% tabs %}
- 
-{% highlight CSHTML %}
-
-  @(Html.EJ().Grid<object>("Grid")
-
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	  .AllowSorting()
-
-      .SortSettings(sort => sort.SortedColumns(col => col.Field("CustomerID").Direction(SortOrder.Ascending).Add()))
-
-      .AllowPaging()
-
-      .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(110).Add();
-
-            col.Field("Freight").HeaderText("Freight").Width(75).Add();
-
-            col.Field("ShipCountry").HeaderText("Ship Country").Width(110).Add();
-
-
-
-        })
-
-    )
-
-{% endhighlight  %}
-{% highlight js %}
-
-<script type="text/javascript">
-
-ej.support.enableLocalizedSort = true
-
-</script>
-
-
-{% endhighlight  %}
-
-{% highlight C# %}
-
-
-namespace SyncfusionMvcApplication3.Controllers
-
-{
-
-    public class HomeController : Controller
-
-    {
-
-        public ActionResult Index()
-
-        {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }         
-
-    }   
+       public class GridController : Controller
+   
+   {
+        
+   
+          public ActionResult GridFeatures()
+   
+              {
+   
+                      var DataSource = OrderRepository.GetAllRecords();
+            
+                      ViewBag.datasource = DataSource;
+            
+                      return View();
+        
+                }
+    
+      }
 
 }
+
+
 {% endhighlight  %}
 
 {% endtabs %} 
- The following output is displayed as a result of the above code example.
+
+
+The following output is displayed as a result of the above code example.
+
+![](Sorting_images/Sorting_img1.png)
+
+
+## Initial Sorting
+
+Through `SortedColumns` property of [`SortSettings`](http://help.syncfusion.com/js/api/ejgrid#members:sortsettings "SortSettings"), you can sort the columns while initializing the grid itself. You need to specify the [`Field`](http://help.syncfusion.com/js/api/ejgrid#members:sortsettings-sortedcolumns-field "Field") (Columns) name and [`Direction`](http://help.syncfusion.com/js/api/ejgrid#members:sortsettings-sortedcolumns-direction "Direction") in the `SortedColumns`.
+
+N> 1. For [`Direction`](http://help.syncfusion.com/js/api/ejgrid#members:sortsettings-sortedcolumns-direction "Direction") property you can assign either `string` value ("Descending") or `enum` value (`ej.SortOrder.Descending`). 
+N> 2. You can add multiple columns in `SortedColumns` for multi column sorting while initializing the grid itself.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
+
+
+@(Html.EJ().Grid<object>("Grid")
+        
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        
+        .AllowPaging()
+        
+        .AllowSorting()
+        
+        .SortSettings(sort => sort.SortedColumns(col => col.Field("EmployeeID").Direction(SortOrder.Descending).Add()))
+
+        .Columns(col =>
+           {
+               col.Field("OrderID").Add();
+               col.Field("EmployeeID").Add();
+               col.Field("CustomerID").Add();
+               col.Field("ShipCountry").Add();
+               col.Field("Freight").Add();
+            })
+ )
+
+
+{% endhighlight  %}
+{% highlight C# %}
 
 
 
-![](Sorting_images/Sorting_img7.png)
 
-Grid with MergeSort
-{:.caption}
+namespace MVCSampleBrowser.Controllers
+
+{
+
+       public class GridController : Controller
+   
+   {
+        
+   
+          public ActionResult GridFeatures()
+   
+              {
+   
+                      var DataSource = OrderRepository.GetAllRecords();
+            
+                      ViewBag.datasource = DataSource;
+            
+                      return View();
+        
+                }
+    
+      }
+
+}
+
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+
+The following output is displayed as a result of the above code example.
+
+![](Sorting_images/Sorting_img2.png)
+
+
+## Multi-Column Sorting
+
+Sort multiple columns in grid by setting [`AllowMultiSorting`](http://help.syncfusion.com/js/api/ejgrid#members:allowmultisorting "AllowMultiSorting") property as true. The sorting order is displayed in the header while doing multi sorting.
+
+You can sort more than one column by pressing "Ctrl key + mouse left click" on the column header. To clear sorting for particular column, press "Shift + mouse left click". 
+
+N> [`AllowSorting`](http://help.syncfusion.com/js/api/ejgrid#members:allowsorting "AllowSorting") must be true while enabling multi sort.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
+
+
+
+@(Html.EJ().Grid<object>("Grid")
+       
+       .Datasource((IEnumerable<object>)ViewBag.datasource)
+       
+       .AllowPaging()
+       
+       .AllowSorting()
+       
+       .AllowMultiSorting()
+       
+       .SortSettings(sort =>
+         
+          {
+          
+               sort.SortedColumns(col => col.Field("EmployeeID").Direction(SortOrder.Descending).Add());
+               
+               sort.SortedColumns(col => col.Field("CustomerID").Add());
+           
+           })
+         
+         .Columns(col =>
+             
+             {
+      
+                col.Field("OrderID").Add();
+      
+                col.Field("EmployeeID").Add();
+      
+                 col.Field("CustomerID").Add();
+      
+                 col.Field("ShipCountry").Add();
+      
+                 col.Field("Freight").Add();
+         
+            })
+
+ )
+
+
+
+{% endhighlight  %}
+{% highlight C# %}
+
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+       public class GridController : Controller
+   
+   {
+        
+   
+          public ActionResult GridFeatures()
+   
+              {
+   
+                      var DataSource = OrderRepository.GetAllRecords();
+            
+                      ViewBag.datasource = DataSource;
+            
+                      return View();
+        
+                }
+    
+      }
+
+}
+
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Sorting_images/Sorting_img3.png)
+
+
+## Stable sorting
+
+For sorting, grid uses default browser's sort function for better performance. On multi column sorting in some browsers like chrome, the records order will be different due to unstable implementation of sorting algorithm in it. 
+
+To resolve this, you need to set `ej.support.stableSort` as `false`.
+
+This will tell the "DataManager" to use custom sort function for sorting data. 
+
+Please refer the [link](https://en.wikipedia.org/wiki/Category:Stable_sorts# "link"), to know more information about stable sort.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
+
+
+<script type="text/javascript">
+
+ej.support.stableSort = true
+
+</script>
+
+@(Html.EJ().Grid<object>("Grid")
+        
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        
+        .AllowPaging()
+        
+        .AllowSorting()
+        
+        .AllowMultiSorting()
+        
+         .Columns(col =>
+        
+                {
+              
+                   col.Field("OrderID").Add();
+                   col.Field("EmployeeID").Add();
+                   col.Field("ShipCity").Add();
+                   col.Field("ShipCountry").Add();
+                   col.Field("Freight").Add();
+       
+               })
+
+  )
+
+{% endhighlight  %}
+{% highlight C# %}
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+       public class GridController : Controller
+   
+         {
+        
+   
+          public ActionResult GridFeatures()
+   
+              {
+   
+                      var DataSource = OrderRepository.GetAllRecords();
+            
+                      ViewBag.datasource = DataSource;
+            
+                      return View();
+        
+                }
+    
+        }
+
+}
+
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Sorting_images/Sorting_img4.png)
+
+
+## Touch options
+
+While using Grid in a touch device, you have an option for multi sorting in single tap on the grid header. By tapping on the grid header, it will show the toggle button in small popup with sort icon. Now tap the button to enable multi sorting in single tap.
+
+Again if you tap the popup symbol, then the single tap multi sorting will be disabled. 
+
+N> [`AllowMultiSorting`](http://help.syncfusion.com/js/api/ejgrid#members:allowmultisorting "AllowMultiSorting") and [`AllowSorting`](http://help.syncfusion.com/js/api/ejgrid#members:allowsorting "allowSorting") should be `true` then only the popup will be shown.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight  CSHTML %}
+
+
+@(Html.EJ().Grid<object>("Grid")
+       
+       .Datasource((IEnumerable<object>)ViewBag.datasource)
+       
+       .AllowPaging()
+       
+       .AllowMultiSorting()
+       
+       .AllowSorting()
+       
+       .Columns(col =>
+            
+            {
+            
+                 col.Field("OrderID").Add();
+                 col.Field("EmployeeID").Add();
+                 col.Field("CustomerID").Add();
+                 col.Field("ShipCountry").Add();
+                 col.Field("Freight").Add();
+        
+        })
+)
+
+{% endhighlight  %}
+{% highlight C# %}
+
+
+
+
+namespace MVCSampleBrowser.Controllers
+
+{
+
+       public class GridController : Controller
+   
+   {
+        
+   
+          public ActionResult GridFeatures()
+   
+              {
+   
+                      var DataSource = OrderRepository.GetAllRecords();
+            
+                      ViewBag.datasource = DataSource;
+            
+                      return View();
+        
+                }
+    
+      }
+
+}
+
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Sorting_images/Sorting_img5.png)
+
+
