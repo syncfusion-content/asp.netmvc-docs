@@ -9,9 +9,11 @@ documentation: ug
 
 # Getting Started
 
-This section covers the information required to create a simple PivotGridbound to OLAP datasource. 
+## Creating a simple application with PivotGrid and OLAP datasource
+ 
+This section covers the information required to create a simple PivotGrid bound to OLAP datasource.
 
-N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.**
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.
 
 ###Project Initialization
 
@@ -26,6 +28,7 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
 * Syncfusion.PivotAnalysis.Base
+* Syncfusion.EJ.MVC.dll
 * Syncfusion.XlsIO.Base
 * Syncfusion.Pdf.Base
 * Syncfusion.DocIO.Base
@@ -106,7 +109,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under <appSettings> tag in Web.config file at the root folder.
+Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -126,7 +129,7 @@ Set the “UnobtrusiveJavaScriptEnabled” property to false under <appSettings>
 
 ###Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotGridwidget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
 
 1.  ej.widgets.all.min.css
 2.	jquery-1.10.2.min.js
@@ -135,7 +138,7 @@ The scripts and style sheets that are mandatorily required to render PivotGridwi
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
     
 {% highlight html %}
 
@@ -173,9 +176,9 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 
 {% endhighlight %}
 
-The **“Url”** property in PivotGridwidget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGridwidget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OLAPService". If WCF service is used as endpoint, the Url would look like "~/OLAPServiceService.svc".
+N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OLAPService". If WCF service is used as endpoint, the Url would look like "~/OLAPService.svc".
 
 
 ###WebAPI
@@ -226,7 +229,7 @@ namespace PivotGridDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, PivotGridand JavaScriptSerializer instances are created immediately inside the main class in OLAPServiceController.cs file.
+Now, the connection string to connect OLAP Cube, PivotGrid and JavaScriptSerializer instances are created immediately inside the main class in OLAPServiceController.cs file.
 
 {% highlight c# %}
 
@@ -393,7 +396,7 @@ public class Global: System.Web.HttpApplication {
 
 Now, **PivotGrid** is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
 
-![](Getting-Started_images/PivotGrid.png) 
+![](Getting-Started_images/olapwebapi.png) 
 
 ### WCF
 
@@ -403,7 +406,7 @@ This section demonstrates the utilization of WCF service as endpoint binding OLA
 
 This section covers the information required to create a simple PivotGrid bound to Relational datasource. 
 
-N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.**
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.
 
 ### Project Initialization
 
@@ -416,6 +419,7 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.Compression.Base
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
+* Syncfusion.EJ.MVC.dll
 * Syncfusion.PivotAnalysis.Base
 * Syncfusion.XlsIO.Base
 * Syncfusion.Pdf.Base
@@ -495,7 +499,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **<appSettings>** tag in Web.config file at the root folder.
+Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -514,7 +518,7 @@ Set the “UnobtrusiveJavaScriptEnabled” property to false under **<appSetting
 
 ###Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotGridwidget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
 
 1.  ej.widgets.all.min.css
 2.	jquery-1.10.2.min.js
@@ -561,7 +565,7 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 
 {% endhighlight %}
 
-The **“Url”** property in PivotGridwidget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGridwidget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
 
 N> The above "Index.cshtml" contains WebAPI Url, which is, "~/RelationalService". If WCF service is used as endpoint, the Url would look like "~/RelationalService.svc".
 
@@ -570,7 +574,7 @@ N> The above "Index.cshtml" contains WebAPI Url, which is, "~/RelationalService"
 
 **Adding a WebAPI Controller**
 
-To add a WebAPI controller in an existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `RelationalServiceController.cs`, click Add.
+To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `RelationalServiceController.cs`, click Add.
 
 Now, WebAPI controller is added to the application successfully containing the file **“RelationalServiceController.cs”**.
 
@@ -888,7 +892,7 @@ public class Global: System.Web.HttpApplication {
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
-![](Getting-Started_images/PivotGrid.png) 
+![](Getting-Started_images/relaionalwebapi.png) 
 
 ###WCF
 
