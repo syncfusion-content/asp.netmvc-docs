@@ -236,5 +236,5 @@ port.Constraints = PortConstraints.Connect;
 
 
 
-N> Ports constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see [Bitwise Operations](/Diagram/How-To/Bitwise-Operations).
+N> Ports constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see [Bitwise Operations](/aspnetmvc/Diagram/How-To/Bitwise-Operations).
 
