@@ -663,5 +663,5 @@ Rotate Constraints-disabled
 
 
 
-N> Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](/Diagram/How-To/Bitwise-Operations).
+N> Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](/aspnetmvc/Diagram/How-To/Bitwise-Operations).
 
