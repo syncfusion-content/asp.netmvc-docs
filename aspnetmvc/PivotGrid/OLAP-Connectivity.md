@@ -341,6 +341,8 @@ public static void RegisterRoutes(RouteCollection routes) {
     );
 }
 
+{% endhighlight %}
+
 N> In this example, **“PivotGridDemo”** indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OLAPService” indicates the name of the WCF service created.
 
 Now, **PivotGrid** will be rendered with Internet Sales Amount over a period of fiscal years across different customer geographic locations.
