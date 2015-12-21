@@ -6,83 +6,52 @@ platform: ejmvc
 control: Grid
 documentation: ug
 ---
-
 # Scrolling
 
-## Default Scrolling
+Scrolling can be enabled by setting [`allowScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:allowscrolling "allowScrolling") as `true`. The height and width can be set to grid by using the properties [`scrollSettings.height`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-height "scrollSettings.height") and [`scrollSettings.width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "scrollSettings.width") respectively. 
 
-Scrolling is an important feature in Grid. It makes Grid more compatible with layout and design. The AllowScrolling property is used to enable scrolling functionality to the Grid. The default value for AllowScrolling is false.
+   N> If [`width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "width") and [`height`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-height "height") is not defined in the [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") property then the horizontal and vertical scrollbar is enabled, only when the grid width exceeds the browser width.
 
-In this following code example, ScrollSettings property is used to adjust the Grid width and height. 
+The height and width can be set in percentage and pixel. The default value for [`height`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-height "height") and [`width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "width") in [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") is 0 and `auto` respectively.
 
+The following code example describes the above behavior.
 
 {% tabs %}
  
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<object>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.dataSource)
-
-.AllowScrolling(true)
-
-.ScrollSettings(scroll => scroll.Width(886).Height(300))
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}").Width(100).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-	col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Format("{0:MM/dd/yyyy}").Width(100).Add();
-
-	col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
-
-	col.Field("ShipPostalCode").HeaderText("Postal Code").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Verified").HeaderText("Verified").Width(100).Add();
-
-})
-
-)
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(400).Height(300); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+		        col.Field("ShipCountry").HeaderText("Ship Country").Add()
+                col.Field("ShipAddress").HeaderText("Ship Country").Add();
+		        col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
 
 {% endhighlight  %}
-
 {% highlight C# %}
-
-
-public partial class GridController : Controller
-
-{
-
-     //
-
-     // GET: /VirtualPaging/ 
-
-     public ActionResult VirtualPaging()
-
-     {
-
-          var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-          ViewBag.datasource = DataSource;
-
-         return View();
-
-     } 
-
-    }
-
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
 {% endhighlight  %}
 {% endtabs %} 
@@ -91,335 +60,491 @@ The following output is displayed as a result of the above code example.
 
 ![](Scrolling_images/Scrolling_img1.png)
 
-Scrolling
-{:.caption}
+## Set width and height in pixel 
 
-## Scroll Settings
+To specify the [`scrollSettings.width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "scrollSettings.width") and [`scrollSettings.height`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-height "scrollSettings.height") in pixel, by set the pixel value as integer. 
 
-The ScrollSettings contains the properties to enable scrolling related functionalities in the Grid.
-
-### To Enable Vertical Scrolling
-
-The Height property in the ScrollSettings is used to enable the vertical scroll bar in the Grid. The scroll height should be less than the Grid content height. That is, total rows height for enabling vertical scroll bar.
-
-The Height property can support percentage, pixel and auto values in ScrollSettings. The default value for height in ScrollSettings is 0.
-
-The following code example illustrates how to enable vertical scrolling in the Grid. 
-
+The following code example describes the above behavior.
 
 {% tabs %}
-
+ 
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<object>("Grid")
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(500).Height(300); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+		        col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
 
-.Datasource((IEnumerable<object>)ViewBag.dataSource)
-
-.AllowScrolling(true)
-
-.ScrollSettings(scroll => scroll.Height(300))
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}").Width(100).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-	col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Format("{0:MM/dd/yyyy}").Width(100).Add();
-
-	col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
-
-	col.Field("ShipPostalCode").HeaderText("Postal Code").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Verified").HeaderText("Verified").Width(100).Add();
-
-})
-
-)
 {% endhighlight  %}
-
 {% highlight C# %}
-
-public partial class GridController : Controller
-
-{
-    // GET: /VirtualPaging/ 
-
-    public ActionResult VirtualPaging()
-
-    {
-         var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-         ViewBag.datasource = DataSource;
-
-         return View();
-
-     } 
-
-}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
-![](Scrolling_images/Scrolling_img2.png)
+![](scrolling_images/scrolling_img2.png)
 
-Vertical scrolling Grid
-{:.caption}
+## Set width and height in percentage
 
-### To Enable Horizontal Scrolling
+To specify the [`scrollSettings.width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "scrollSettings.width") and [`scrollSettings.height`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-height "scrollSettings.height") in percentage, by set the percentage value as string.
 
-The Width property in the ScrollSettings is used to enable the horizontal scroll bar in the Grid. The scroll width should be less than the Grid content width. That is, total columns width for enabling horizontal scroll bar.
-
-The Width property can support percentage, pixel and auto values in ScrollSettings. The default value for width in ScrollSettings is auto. The default Grid content width is 100%, when you don’t specify the width to the columns it takes its width value from the Grid content.
-
-When you set Width as auto, it renders Grid with browser calculate value.
-
-The following code example illustrates how to enable horizontal scrolling in the Grid. 
+The following code example describes the above behavior.
 
 {% tabs %}
-  
+ 
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<object>("Grid")
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width("70%").Height("5%"); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+			    col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
 
-.Datasource((IEnumerable<object>)ViewBag.dataSource)
-
-.AllowScrolling(true)
-
-.ScrollSettings(scroll => scroll.Width(800))
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}").Width(100).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-	col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Format("{0:MM/dd/yyyy}").Width(100).Add();
-
-	col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
-
-	col.Field("ShipPostalCode").HeaderText("Postal Code").TextAlign(TextAlign.Right).Width(100).Add();
-
-	col.Field("Verified").HeaderText("Verified").Width(100).Add();
-
-})
-
-)
-
-{% endhighlight %}
-
+{% endhighlight  %}
 {% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
-public partial class GridController : Controller
+{% endhighlight  %}
+{% endtabs %} 
 
-{
+The following output is displayed as a result of the above code example.
 
-    // GET: /VirtualPaging/ 
+![](scrolling_images/scrolling_img3.png)
 
-    public ActionResult VirtualPaging()
+## Set width as auto
 
-    {
+Specify [`width`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-width "width") property of [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") as auto, then the scrollbar is rendered only when the grid width exceeds the browser window width.
 
-        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+The following code example describes the above behavior.
 
-         ViewBag.datasource = DataSource;
+{% tabs %}
+ 
+{% highlight CSHTML %}
 
-         return View();
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width("auto").Height(300); })            
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+			    col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+		        col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
 
-    } 
-}
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
+
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](scrolling_images/scrolling_img4.png)
+
+## Frozen columns
+
+Specify [`frozenColumns`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozencolumns "frozenColumns") property of [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") to freeze the columns(upto the specified frozenColumns value) at the time of scrolling. Horizontal scrollbar must be enabling while specifying [`frozenColumns`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozencolumns "frozenColumns") then only you can scroll and see the remaining columns with freeze pane.
+
+N> [`allowScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:allowscrolling "allowScrolling") must be `true` while specifying [`frozenColumns`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozencolumns "frozenColumns").
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).FrozenColumns(2); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+				col.Field("ShipCity").HeaderText("Ship City").Add();
+				col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
+
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
+
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](scrolling_images/scrolling_img5.png)
+
+
+### Freeze particular columns:
+
+To freeze selected columns in grid at the time of scrolling, by set [`isFrozen`](http://help.syncfusion.com/js/api/ejgrid#members:columns-isfrozen "isFrozen") property of columns as `true`. [`isFrozen`](http://help.syncfusion.com/js/api/ejgrid#members:columns-isfrozen "isFrozen") columns are rendered first in the grid even the columns index is different while declaring the [`columns`](http://help.syncfusion.com/js/api/ejgrid#members:columns "columns").
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(400); })              
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+				col.Field("Freight").HeaderText("Freight").Format("{0:C}").IsFrozen(true).Add(); 
+				col.Field("OrderDate").HeaderText("Order Date").Format("{0:dd/MM/yyyy}").Add();
+				col.Field("ShipCity").HeaderText("Ship City").Add();
+			    col.Field("ShipCountry").HeaderText("Ship Country").Width(100).IsFrozen(true).Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();         
+            })
+		)
+
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
+
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](scrolling_images/scrolling_img6.png)
+
+
+### Frozen Columns alert Messages:
+
+1. If [`allowScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:allowscrolling "allowScrolling") is false while using [`frozenColumns`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozencolumns "frozenColumns") then "Enable [`allowScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:allowscrolling "allowScrolling") while using frozen Columns" alert message is thrown.
+2. If [`frozenColumns`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozencolumns "frozenColumns") is specified out of the grid column view then "Frozen columns should be in grid view area" alert message is thrown.
+3. Frozen Rows and Columns are not supported the following features
+ Grouping
+ Row Template
+ Detail Template
+ Hierarchy Grid 
+ Batch Editing
+
+If any one of the above feature is enabled along with Frozen Rows and Columns, then "Frozen Columns and Rows are not supported for Grouping, Row Template, Detail Template, Hierarchy Grid and Batch Editing" alert message is thrown.
+
+## Frozen Rows
+
+Specify [`frozenRows`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozenrows "frozenRows") property of [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") to freeze rows(upto the specified frozenRows value) at the time of scrolling. Vertical scrollbar must be enabling while specifying [`frozenRows`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozenrows "frozenRows") then only you can scroll and see the remaining rows with freeze pane.
+
+N> [`allowScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:allowscrolling "allowScrolling") must be `true` while specifying [`frozenRows`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-frozenrows "frozenRows").
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).FrozenRows(4); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+				col.Field("ShipCity").HeaderText("Ship City").Add();
+				col.Field("ShipCountry").HeaderText("Ship Country").Add();
+				col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
+
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
+
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](scrolling_images/scrolling_img7.png)
+
+
+## Touch scroll
+
+In [touch](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-enabletouchscroll "touch") supported devices you can scroll and show the content by swipe left, right, top and bottom. Disable touch scroll by setting [`enableTouchScroll`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-enabletouchscroll "enableTouchScroll") property of [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).EnableTouchScroll(false); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+		        col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
+
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
+
+{% endhighlight  %}
+{% endtabs %} 
+
+## Virtual Scrolling
+
+The virtual scrolling support allows you to load data that you require (load data based on page size) without buffering the entire huge database. To enable virtual scrolling by setting [`allowVirtulScrolling`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-allowvirtualscrolling "allowVirtulScrolling") property of [`scrollSettings`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings "scrollSettings") as `true`. It supports two mode of virtualization. They are,
+
+1. Normal Mode
+2. Continuous Mode
+    
+N> The following features are not supported by virtual scrolling 
+N> 1. Grouping
+N> 2. Frozen Rows 
+N> 3. Cell merging 
+N> 4. Detail template 
+N> 5. Row template 
+N> 6. Hierarchy
+
+### Normal Mode:
+
+It allows you to load the grid with data while scrolling. This can be achieved by setting [`virtualScrollMode`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-virtualscrollmode "virtualScrollMode") as `normal`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight CSHTML %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Normal); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+		        col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
+
+{% endhighlight  %}
+{% highlight C# %}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
 {% endhighlight  %}
 {% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
-![](Scrolling_images/Scrolling_img3.png)
-
-Horizontal scrolling Grid
-{:.caption}
-
-## Virtual scrolling on demand
-
-Virtual scrolling is powerful technique in Grid. It makes Grid more compatible with layout and its loading record performance is high. The AllowVirtualScrolling property in ScrollSettings is used to enable virtual scroll functionality in the Grid. The default value for AllowVirtualScrolling is false.
-
-Essential JavaScriptGrid supports two mode of virtualization. They are,
-
-* Normal Mode
-* Continuous Mode
-
-### Normal Mode
+![](scrolling_images/scrolling_img8.png)
 
 
-This feature allows you to load the Grid with data while scrolling. The following code example illustrates how to set VirtualScrollMode as Normal.
+### Continuous Mode:
+
+In Continuous mode, the data is loaded in grid when the scrollbar reaches the end.  You can enable the continuous mode by setting the [`virtualScrollMode`](http://help.syncfusion.com/js/api/ejgrid#members:scrollsettings-virtualscrollmode "virtualScrollMode") property as `continuous`.
+
+The following code example describes the above behavior.
+
 {% tabs %}
-
+ 
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowScrolling()      
-
-.ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(0).Width(300).VirtualScrollMode(VirtualScrollMode.Normal); })
-
-.Columns(col =>
-
-{
-
-     col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-
-     col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
-
-     col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
-
-     col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}")
-
-     .Add();
-
-     col.Field("ShipCity").HeaderText("Ship City").Add();
-
-     col.Field("ShipName").HeaderText("Ship Name").Add();
-})
-)
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+			    col.Field("ShipCity").HeaderText("Ship City").Add();
+		        col.Field("ShipCountry").HeaderText("Ship Country").Add();
+			    col.Field("ShipAddress").HeaderText("Ship Country").Add();
+			    col.Field("ShipPostalCode").HeaderText("ShipPostalCode").Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+            })
+		)
 
 {% endhighlight  %}
 {% highlight C# %}
-
-public partial class GridController : Controller
-
-{
-
-        // GET: /VirtualPaging/ 
-
-	public ActionResult VirtualPaging()
-
-   {
-
-       var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-       ViewBag.datasource = DataSource;
-
-       return View();
-
-    } 
-
-}
+		
+		 namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
 {% endhighlight  %}
-{% endtabs %} 
-The following screenshot displays the Grid while scrolling. The request is sent to the server to fetch data.
+{% endtabs %}
 
-![](Scrolling_images/Scrolling_img4.png)
+The following output is displayed as a result of the above code example.
 
-Normal mode virtual Scrolling
-{:.caption}
-
-The following screenshot displays the Grid after it is loaded with data.
-
-![](Scrolling_images/Scrolling_img5.png)
-
-Grid after loaded with data
-{:.caption}
-
-### Continuous Mode
-
-You can enable the continuous mode by setting the VirtualScrollMode property as Continuous. In Continuous mode, the data is loaded in Grid when the scrollbar reaches the end. The following code example illustrates how to set the continuous mode in virtualization.
-
-{% tabs %}
-
-{% highlight CSHTML %}
- 
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowScrolling()      
-
-.ScrollSettings(scroll => { scroll.AllowVirtualScrolling().Height(0).Width(300).VirtualScrollMode(VirtualScrollMode.Continuous); })
-
-.Columns(col =>
-
-{
-
-      col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-
-      col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
-
-      col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
-
-      col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C}")
-
-      .Add();
-
-       col.Field("ShipCity").HeaderText("Ship City").Add();
-
-       col.Field("ShipName").HeaderText("Ship Name").Add();
-
-})
-
-)
-
-
-{% endhighlight  %}
-
-{% highlight C# %}
-
-
-   public partial class GridController : Controller
-
-    {      
-
-        public ActionResult VirtualPaging()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
+ ![](images/scrolling_img9.PNG)
 
 
 
-    }
 
-{% endhighlight  %}
-{% endtabs %}  
-The following screenshot illustrates the request made to fetch the data after the Grid scrollbar touches the end.
 
-![](Scrolling_images/Scrolling_img6.png)
-
-Continuous mode virtual scrolling
-{:.caption}
-The following screenshot illustrates the Grid after the data is loaded.
-
-![](Scrolling_images/Scrolling_img7.png)
-
-Grid after loaded with data
-{:.caption}
+ 
