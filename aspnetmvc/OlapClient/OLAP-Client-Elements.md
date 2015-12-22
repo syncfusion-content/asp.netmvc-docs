@@ -7,7 +7,7 @@ control: OLAPClient
 documentation: ug
 ---
 
-# OLAP Client: Elements 
+# OlapClient: Elements
 
 ## Cube Selector
 
