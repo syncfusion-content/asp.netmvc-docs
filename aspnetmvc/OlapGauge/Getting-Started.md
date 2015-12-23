@@ -118,7 +118,7 @@ Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings
 
 ###Scripts and CSS Initialization
 
-he scripts and style sheets that are mandatorily required to render OlapChart widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render OlapGauge widget in a MVC Web Application are mentioned in an appropriate order below:
 
 1.  ej.widgets.all.min.css
 2.	jquery-1.10.2.min.js
