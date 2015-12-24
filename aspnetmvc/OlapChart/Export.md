@@ -32,19 +32,31 @@ The OlapChart control can be exported by invoking **“exportOlapChart”** meth
 
 {% endhighlight %}
 
-In-order to perform exporting in OlapChart control, we need to add the following service method as well (either in WCF or WebAPI).In-order to perform exporting in OlapChart control, we need to add the following service method as well (either in WCF or WebAPI).
+For WebAPI controller, the below method needs to be added to perform exporting.
 
 {% highlight c# %}
 
-public void Export(System.IO.Stream stream)
-{
-   System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
-   string args =   System.Web.HttpContext.Current.Server.
-   UrlDecode(sReader.ReadToEnd()).Remove(0, 5);
-   OlapDataManager DataManager = new OlapDataManager(connectionString);
-   string fileName = "Sample";
-   htmlHelper.ExportOlapChart(DataManager, args, fileName,
-   System.Web.HttpContext.Current.Response);
+[System.Web.Http.ActionName("Export")]
+[System.Web.Http.HttpPost]
+public void Export() {
+    string args = HttpContext.Current.Request.Form.GetValues(0)[0];
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    string fileName = "Sample";
+    htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+}
+
+{% endhighlight %}
+
+For WCF service, the below service method needs to be added to perform exporting.
+
+{% highlight c# %}
+
+public void Export(Stream stream) {
+    System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
+    string args = System.Web.HttpContext.Current.Server.UrlDecode(sReader.ReadToEnd()).Remove(0, 5);
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    string fileName = "Sample";
+    htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
 }
 
 {% endhighlight %}
@@ -107,8 +119,8 @@ function exportBtnClick(args) {
 ##PDF Export
 User can export contents of the OlapChart to PDF document for future archival, references and analysis purposes. To achieve PDF export, we need to add the following dependency libraries into the application.
 
-Syncfusion.Compression.Base
-Syncfusion.Pdf.Base
+* Syncfusion.Compression.Base
+* Syncfusion.Pdf.Base
 
 For PDF export, **“ej.olap.OlapChart.ExportOptions.PDF”** enumeration value is sent as the parameter.
 
@@ -127,13 +139,13 @@ function exportBtnClick(args) {
 ##Image Export
 User can export contents of the OlapChart to image format for future archival, references and analysis purposes. We can export OlapChart to the following image formats.
 
-PNG
-EMF
-JPG
-GIF
-BMP
+* PNG
+* EMF
+* JPG
+* GIF
+* BMP
 
-For EMF export, “ej.olap.OlapChart.ExportOptions.EMF” enumeration value is sent as the parameter.
+For EMF export, **“ej.olap.OlapChart.ExportOptions.EMF”** enumeration value is sent as the parameter.
 
 {% highlight js %}
 
@@ -149,19 +161,32 @@ function exportBtnClick(args) {
 ![](Export_images/Export_img4.png)
 
 ##Customize the export document name
-The document name could be customized inside the service method. Following code sample illustrates the same.
+
+The document name could be customized inside the method in WebAPI Controller. Following code sample illustrates the same.
 
 {% highlight c# %}
 
-public void Export(System.IO.Stream stream)
-{
-   System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
-   string args =   System.Web.HttpContext.Current.Server.
-   UrlDecode(sReader.ReadToEnd()).Remove(0, 5);
-   OlapDataManager DataManager = new OlapDataManager(connectionString);
-   string fileName = "Customize the file name here";
-   htmlHelper.ExportOlapChart(DataManager, args, fileName,
-   System.Web.HttpContext.Current.Response);
+[System.Web.Http.ActionName("Export")]
+[System.Web.Http.HttpPost]
+public void Export() {
+    string args = HttpContext.Current.Request.Form.GetValues(0)[0];
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    string fileName = "File name is customized here";
+    htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+}
+
+{% endhighlight %}
+
+For customizing name in WCF Service, below code snippet is used.
+
+{% highlight c# %}
+
+public void Export(System.IO.Stream stream) {
+    System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
+    string args = System.Web.HttpContext.Current.Server.UrlDecode(sReader.ReadToEnd()).Remove(0, 5);
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    string fileName = " File name is customized here ";
+    htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
 }
 
 {% endhighlight %}
