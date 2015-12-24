@@ -9,7 +9,7 @@ documentation: ug
 
 # Defer Update
 
-Defer update support allows you to refresh the widget only on-demand and not during every user interaction
+Defer Update support allows you to refresh the control only on-demand and not during every UI interaction.
 
 {% highlight CSHTML %}
 
@@ -17,17 +17,19 @@ Defer update support allows you to refresh the widget only on-demand and not dur
 
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner").Layout(PivotSchemaDesignerLayout.Excel)
 
-OnAfterServiceInvoke = function(evt) {
-    if (evt.action == "initialize") {
-        var PivotSchemaDesigner = $("#PivotSchemaDesigner").data('ejPivotSchemaDesigner');
-        if (PivotSchemaDesigner.model.pivotControl == null) {
-            PivotSchemaDesigner.model.pivotControl = this;
-            PivotSchemaDesigner.model.enableWrapper = true;
-            PivotSchemaDesigner.model.layout = "excel";
-            PivotSchemaDesigner._load();
+<script type="text/javascript">
+    OnAfterServiceInvoke = function(evt) {
+        if (evt.action == "initialize") {
+            var PivotSchemaDesigner = $("#PivotSchemaDesigner").data('ejPivotSchemaDesigner');
+            if (PivotSchemaDesigner.model.pivotControl == null) {
+                PivotSchemaDesigner.model.pivotControl = this;
+                PivotSchemaDesigner.model.enableWrapper = true;
+                PivotSchemaDesigner.model.layout = "excel";
+                PivotSchemaDesigner._load();
+            }
         }
     }
-}
+</script>
 
 {% endhighlight %}
 

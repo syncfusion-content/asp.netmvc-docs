@@ -13,7 +13,7 @@ documentation: ug
 
 This section covers the information required to create a simple OlapClient bound to OLAP datasource.
 
->**NOTE: ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.**
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ###Project Initialization
 
@@ -21,7 +21,7 @@ Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name th
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
-Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select Add Reference. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
+Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
 * Microsoft.AnalysisServices.AdomdClient.dll
 * Syncfusion.Compression.Base.dll
@@ -50,22 +50,22 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-12.1300.0.43</td><td>    
-12.1350.0.43</td><td>
+13.1300.0.43</td><td>    
+13.1350.0.43</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-12.1400.0.43</td><td>    
-12.1400.0.43</td><td>
+13.1400.0.43</td><td>    
+13.1400.0.43</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-12.1500.0.43</td><td>    
-12.1450.0.43</td><td>
+13.1500.0.43</td><td>    
+13.1450.0.43</td><td>
 5.0</td><td>
 3.0</td>
 </tr>
@@ -77,7 +77,7 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 <compilation debug="true" targetFramework="4.5">
     <assemblies> 
-  		…… 
+        …… 
         ……
         <add assembly="Syncfusion.EJ, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Olap, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -98,7 +98,7 @@ Register the required namespaces in Web.config files available inside Views fold
 {% highlight xml %}
 
 <namespaces> 
-  	…… 
+    …… 
     ……
     <add namespace="Syncfusion.MVC.EJ" />
     <add namespace="Syncfusion.JavaScript" /> 
@@ -108,7 +108,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under <appSettings> tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -139,7 +139,7 @@ The scripts and style sheets that are mandatorily required to render OlapClient 
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared** folder.
     
 {% highlight html %}
 
@@ -190,11 +190,11 @@ N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OlapClient". If WC
 
 To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `OlapClientController.cs`, click **Add**.
 
-Now, WebAPI controller is added to the application successfully containing the file **“OlapClientController.cs”.**
+Now, WebAPI controller is added into the application successfully with the file **“OlapClientController.cs”.**
 
 N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ which is mandatory. For example, in this demo the controller is named as “OlapClientController”.
 
-Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside OlapClientController.cs file.
+Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `OlapClientController.cs` file.
 
 {% highlight c# %}
 
@@ -237,7 +237,7 @@ namespace OlapClientDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapClientController.cs` file.Also, the database connection for Saving and Loading operations of reports is provided appropriately.  
+Now, the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapClientController.cs` file. Also, the database connection for saving and loading reports are provided appropriately.  
 
 {% highlight c# %}
 
@@ -260,7 +260,7 @@ namespace OlapClientDemo
 
 **Service methods in WebAPI Controller**
 
-Define the service methods inside OlapClientController class, found inside `OlapClientController.cs` file, created while adding WebAPI Controller Class to the Application.
+Define the service methods inside OlapClientController class, found inside `OlapClientController.cs` file, created while adding WebAPI Controller Class to the application.
 
 {% highlight c# %}
 
@@ -524,7 +524,7 @@ public class Global: System.Web.HttpApplication
 
 {% endhighlight %}
 
-Now, **OlapClient** is rendered with OlapChart and PivotGrid with Customer Count over a period of fiscal years.
+Now, **OlapClient** is rendered with OlapChart and PivotGrid showing Customer Count over a period of fiscal years.
 
 ![](Getting-Started_images/OlapClient.png)
 

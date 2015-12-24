@@ -13,7 +13,7 @@ documentation: ug
 
 ### Tab View
 
-In Tab View representation, both Grid and Chart will be displayed in a separate tab.  This could be set using the `ControlPlacement` property under the `DisplaySettings` option.  By default, Tab value is set.
+In Tab View representation, both Grid and Chart will be displayed in a separate tab.  This could be set using the `ControlPlacement` property under the `DisplaySettings` option.  By default, **Tab** value is set.
 
 {% highlight C# %}
 
@@ -39,7 +39,7 @@ In Tile View representation, both Grid and Chart will be displayed one over the 
 
 ### Grid View
 
-To display Grid control by default, set `DefaultView` property under `DisplaySettings` option to Grid, which is the default value of the property.
+To display Grid control by default, set `DefaultView` property under `DisplaySettings` option to **Grid**, which is the default value of the property.
 
 {% highlight C# %}
 
@@ -51,7 +51,7 @@ To display Grid control by default, set `DefaultView` property under `DisplaySet
 
 ### Chart View
 
-To display Chart control by default, set the property `DefaultView` property to Chart.
+To display Chart control by default, set the property `DefaultView` property to **Chart**.
 
 {% highlight C# %}
 
@@ -65,7 +65,7 @@ To display Chart control by default, set the property `DefaultView` property to 
 
 ### Grid Only
 
-After setting the `Mode` property under `DisplaySettings` option to GridOnly, the Chart is hidden and the data is displayed only in the Grid.
+After setting the `Mode` property under `DisplaySettings` option to **GridOnly**, the Chart is hidden and the data is displayed only in the Grid.
 
 {% highlight C# %}
 
@@ -77,7 +77,7 @@ After setting the `Mode` property under `DisplaySettings` option to GridOnly, th
 
 ### Chart Only
 
-After setting the `Mode` property under `DisplaySettings` option to ChartOnly, the Grid is hidden and data is displayed only in the Chart.
+After setting the `Mode` property under `DisplaySettings` option to **ChartOnly**, the Grid is hidden and data is displayed only in the Chart.
 
 {% highlight C# %}
 
@@ -87,7 +87,7 @@ After setting the `Mode` property under `DisplaySettings` option to ChartOnly, t
 
 ![](Layout-Customization_images/chartonlyview.png)
 
-## Both Chart and Grid
+### Both Chart and Grid
 
 After setting the `Mode` property under `DisplaySettings` option to **ChartAndGrid**, data is displayed in both Grid and Chart.  This is the default value of the property.
 
@@ -152,11 +152,12 @@ While loading the OlapClient initially, the OlapChart widget can be rendered in 
 
 {% highlight C# %}
 
-  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Area)
+  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Column)
 
 {% endhighlight %}
 
 The `ChartType` property takes Column Chart by default. The types available are Column, Stacking Column, Bar, Stacking Bar, Line, Spline, Step Line, Area, Spline Area, Step Area, Stacking Area, Pie, Funnel and Pyramid.
+
 The Chart Type can also be changed dynamically through the toolbar icon.
 
 ![](Layout-Customization_images/charttypes.png)

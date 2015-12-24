@@ -14,7 +14,9 @@ You can localize the PivotGrid controls text with a collection of localized stri
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).Locale("fr-FR").EnableVirtualScrolling(true).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).Locale("fr-FR").EnableVirtualScrolling(false).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+
+@Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner1").Layout(PivotSchemaDesignerLayout.Excel)
 
 @Html.EJ().Pivot().PivotPager("Pager1").Mode(PivotPagerMode.Both).Locale("fr-FR").TargetControlID("PivotGrid1")
 
@@ -104,7 +106,7 @@ Valeur
 </tr>
 <tr>
 <td>
-ColumnArea
+DragFieldHere
 </td>
 <td>
 Champ de glisser ici
@@ -112,7 +114,7 @@ Champ de glisser ici
 </tr>
 <tr>
 <td>
-RowArea
+ColumnArea
 </td>
 <td>
 Colonne zone
@@ -120,10 +122,18 @@ Colonne zone
 </tr>
 <tr>
 <td>
-ValueArea
+RowArea
 </td>
 <td>
 Déposez ligne ic
+</td>
+</tr>
+<tr>
+<td>
+ValueArea
+</td>
+<td>
+Valeurs de déposer ici
 </td>
 </tr>
 <tr>
@@ -295,7 +305,6 @@ The following table lists the default keywords in French culture for Pivot Pager
 <td>Catégorique Page</td>
 </tr>
 </table>
-
 ##Localization and Globalization of Cube Info
 Content displayed within the PivotGrid control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
  

@@ -11,7 +11,7 @@ documentation: ug
 
 ## OLAP
 
-## Binding PivotGrid to Offline Cube
+### Binding PivotGrid to Offline Cube
 
 To connect an OLAP Cube available in local machine, set the physical path of the Cube in the connection string. The following code example illustrates the same.
 
@@ -22,7 +22,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-## Binding PivotGrid to Cube in local SQL Server
+### Binding PivotGrid to Cube in local SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in local machine, set the server name and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -33,7 +33,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-## Binding PivotGrid to Cube in online SQL Server
+### Binding PivotGrid to Cube in online SQL Server
 
 To connect an OLAP Cube available in SQL Server Analysis Service in online server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -45,7 +45,7 @@ OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
 
-## Binding PivotGrid to Cube in online Mondrian Server
+### Binding PivotGrid to Cube in online Mondrian Server
 
 To connect an OLAP Cube available in Mondrian Server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
@@ -58,7 +58,7 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.M
 {% endhighlight %}
 
 
-## Binding PivotGrid to Cube in online ActivePivot Server
+### Binding PivotGrid to Cube in online ActivePivot Server
 To connect an OLAP Cube available in ActivePivot Server through **XML/A**, set the host server link and database name in the connection string. When you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. The following code example illustrates the same.
 
 {% highlight c# %}
@@ -74,7 +74,7 @@ DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.Act
 
 **Adding a WCF Service**
 
-To add a WCF service in an existing web application, right-click on project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as **OLAPService.svc**, click Add.
+To add a WCF service in an existing MVC web application, right-click on project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as **OLAPService.svc**, click Add.
 
 Now, WCF service is added into your application successfully and it comprises of the following files. The utilization of these files is explained in the immediate sections.
 
@@ -318,12 +318,36 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
 
 {% endhighlight %}
 
+**Configuring routing file**
+
+Routing configuration needs to be done in `RouteConfig.cs` file found under **AppStart** folder. The configuration would allow picking appropriate WCF service without any issues.
+
+{% highlight c# %}
+
+public static void RegisterRoutes(RouteCollection routes) {
+    routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+    //NOTE: In the following highlighted lines _wcf_ is just the folder name inside which service files(*.svc) are present.
+    routes.IgnoreRoute("{resource}.svc/{*pathInfo}");
+    routes.IgnoreRoute("{resource}.svc");
+    routes.MapRoute(
+        name: "Default",
+        url: "{controller}/{action}/{id}",
+        defaults: new {
+            controller = "Home", action = "Index", id = UrlParameter.Optional
+        },
+        namespaces: new [] {
+            "PivotGridDemo.Controllers"
+        }
+    );
+}
+
+{% endhighlight %}
 
 N> In this example, **“PivotGridDemo”** indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OLAPService” indicates the name of the WCF service created.
 
 Now, **PivotGrid** will be rendered with Internet Sales Amount over a period of fiscal years across different customer geographic locations.
 
-{% include image.html url="/js/PivotGrid/Getting-Started_images/olapwebapi.png"%}
+![](Getting-Started_images/olapwebapi.png) 
 
 ## Relational
 
@@ -655,5 +679,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
-{% include image.html url="/js/PivotGrid/Getting-Started_images/relaionalwebapi.png"%}
+![](Getting-Started_images/relaionalwebapi.png) 
 
