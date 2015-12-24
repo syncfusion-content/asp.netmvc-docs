@@ -171,5 +171,3 @@ The following code example describes the above behavior.
  The following output is displayed as a result of the above code example.
 
 ![](paging_images/Paging_img3.png)
-
- 
