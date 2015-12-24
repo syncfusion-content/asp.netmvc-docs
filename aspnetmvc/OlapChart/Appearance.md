@@ -30,7 +30,7 @@ Following are the build-in themes available in the OlapChart.
 * gradient-saffron
 * gradient-saffrondark
 
-By using the `Theme` property, you can set the desired theme in OlapChart. By default, "Flat Light" theme is applied to OlapChart.
+By using the `Theme` property, you can set the desired theme in OlapChart. By default, **"Flat Light"** theme is applied to OlapChart.
 
 {% highlight CSHTML %}
 

@@ -17,9 +17,23 @@ Following code example illustrates on how to localize OlapChart based on **“Fr
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Locale("en-US").Size(size => size.Height("320px").Width("100%"))
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Locale("fr-FR").Size(size => size.Height("320px").Width("100%"))
+
+<script type="text/javascript">
+    ej.olap.OlapChart.locale["fr-FR"] = {
+        Measure: "Mesure",
+        Row: "Rangée",
+        Column: "Colonne",
+        Value: "Valeur",
+        Expand: "Développer",
+        Collapse: "Effondrement",
+        Exit: "Quitter"
+    };
+</script>
 
 {% endhighlight %}
+
+Following table localizes the in-built keywords to **“French”** culture for OlapChart.
 
 <table>
 <tr>

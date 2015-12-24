@@ -12,7 +12,7 @@ documentation: ug
 ##Tooltip
 
 ###Enable Tooltip for Data Points
-Tooltip for the data points can be enabled using the **"visible"** option of the `Tooltip` property under **"commonSeriesOptions"** of the OlapChart.
+Tooltip for the data points can be enabled using the **"Visible"** option of the `Tooltip` property under **"commonSeriesOptions"** of the OlapChart.
 
 {% highlight CSHTML %}
 
@@ -57,7 +57,7 @@ By using `Fill` and `Border` properties of tooltip, you can customize its backgr
 ![](User-Interactions_images/tooltipcustomization.png) 
 
 ###Tooltip with Rounded Corners
-The tooltip properties, `rx` and `ry` are used to customize its corner radius.
+The tooltip properties, `Rx` and `Ry` are used to customize its corner radius.
 
 {% highlight CSHTML %}
 
@@ -73,6 +73,7 @@ The tooltip properties, `rx` and `ry` are used to customize its corner radius.
 ###Enable Zooming
 
 There are two ways to zoom the Chart:
+
 * When `zooming.Enable` option is set to true, you can zoom the Chart by using rubber band selection.
 * When `zooming.EnableMouseWheel` option is set to true, you can zoom the Chart on mouse wheel scrolling.
 
@@ -85,7 +86,7 @@ There are two ways to zoom the Chart:
 
 ![](User-Interactions_images/zooming.png) 
 
-After zooming the Chart, a zooming toolbar will appear with options to zoom, pan and reset. Selecting the **“Pan”** option will allow to view the Chart and selecting the **“Reset”** option will reset the zoomed Chart.
+After zooming the Chart, a zooming toolbar will appear with options to *zoom, pan and reset*. Selecting the **“Pan”** option will allow to view the Chart and selecting the **“Reset”** option will reset the zoomed Chart.
 
 ![](User-Interactions_images/pan.png) 
 
@@ -119,7 +120,7 @@ In OlapChart, you can customize the marker `Shape` with different symbols like r
 ![](User-Interactions_images/marker.png) 
 
 ###Enable Crosshair and Crosshair Label
-Crosshair helps you to view the value at mouse position or touch contact point. Crosshair can be enabled by using the `Visible` option in `Crosshair` property. Crosshair label can be enabled by using the **“visible”** option in `CrosshairLabel` property within its corresponding axis.
+Crosshair helps you to view the value at mouse position or touch contact point. Crosshair can be enabled by using the `Visible` option in `Crosshair` property. Crosshair label can be enabled by using the **“Visible”** option in `CrosshairLabel` property within its corresponding axis.
 
 {% highlight CSHTML %}
 
@@ -136,7 +137,7 @@ By using `Line` property of crosshair, you can customize its line color and widt
 {% highlight CSHTML %}
 
 //Customizing the crosshair label background color and border 
-@Html.EJ().Olap().OlapChart("OlapChart1").CrossHair(crossHair => crossHair.Visible(true)).PrimaryXAxis(primaryX => primaryX.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true).Fill("red").Border(border => border.Color("green").Width(2)))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().OlapChart("OlapChart1").CrossHair(crossHair => crossHair.Line(line => line.Color("gray").Width(2)).Visible(true)).PrimaryXAxis(primaryX => primaryX.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true).Fill("red").Border(border => border.Color("green").Width(2)))).PrimaryYAxis(primaryy => primaryy.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")) 
 
 {% endhighlight %}
 
@@ -145,7 +146,7 @@ By using `Line` property of crosshair, you can customize its line color and widt
 ##Trackball
 
 ###Enable trackball
-Trackball can be enabled by setting both - 'visible' option of the crosshair to true and `Type` option of the crosshair to **“trackball”.** The default value of type is **“crosshair”.**
+Trackball can be enabled by setting both - 'Visible' option of the crosshair to true and `Type` option of the crosshair to **“Trackball”.** The default value of type is **“Crosshair”.**
 
 {% highlight CSHTML %}
 
@@ -157,12 +158,12 @@ Trackball can be enabled by setting both - 'visible' option of the crosshair to 
 ![](User-Interactions_images/trackball.png) 
 
 ###Trackball Marker and Line Customization
-Shape and size of the trackball marker can be customized using the `Shape` and `Size` options of the crosshair marker. Color and width of the trackball line can be customized using the **“line”** option in the crosshair.
+Shape and size of the trackball marker can be customized using the `Shape` and `Size` options of the crosshair marker. Color and width of the trackball line can be customized using the **“Line”** option in the crosshair.
 
 {% highlight CSHTML %}
 
 //Customize the trackball line color and width and Marker visible and shape 
-@Html.EJ().Olap().OlapChart("OlapChart1").CrossHair(crossHair => crossHair.Visible(true).Type(CrosshairType.Trackball).Line(line => line.Color("#800000").Width(2)).Marker(marker => marker.Shape(ChartShape.Pentagon).Visible(true))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().OlapChart("OlapChart1").CrossHair(crossHair => crossHair.Visible(true).Type(CrosshairType.Trackball).Line(line => line.Color("#800000").Width(2)).Marker(marker => marker.Shape(ChartShape.Pentagon).Size(size => size.Height(9).Width(9)).Visible(true))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %} 
 
@@ -318,7 +319,9 @@ To customize the selection styles, use the `border.color`, `border.width` and `o
    function onSeriesRenders(args) {
       for (var seriescount = 0; seriescount < this.model.series.length; seriescount++){
         this.model.series[seriescount].selectionSettings.enable = true;
-        this.model.series[seriescount].selectionSettings.opacity = "0.5";                                                                  this.model.series[seriescount].selectionSettings.border.width = "1.5";                                this.model.series[seriescount].selectionSettings.border.color = "red";
+        this.model.series[seriescount].selectionSettings.opacity = "0.5";                                                                  
+        this.model.series[seriescount].selectionSettings.border.width = "1.5";                                
+        this.model.series[seriescount].selectionSettings.border.color = "red";
     }
 </script>
 
