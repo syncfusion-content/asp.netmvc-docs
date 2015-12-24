@@ -10,7 +10,7 @@ documentation: ug
 It represents the record details that are fetched from the datasource.
 
 ## Row Hover
-You can see the mouse hovering effect on the corresponding grid rows using [`EnableRowHover`] property. By default its value is `true`.
+You can see the mouse hovering effect on the corresponding grid rows using `EnableRowHover` property. By default its value is `true`.
 The following code example describes the above behavior.
 
 {% tabs %}
@@ -48,7 +48,7 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img1.png)
 
 ## Details Template
-It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the [`DetailsTemplate`] property. And also you can change HTML elements in detail template row into JavaScript controls using [`DetailsDataBound `] event.
+It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the `DetailsTemplate` property. And also you can change HTML elements in detail template row into JavaScript controls using `DetailsDataBound ` event.
 
 On enabling details template, new column will be added in grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
 
@@ -124,7 +124,7 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img2.png)
 
 ## Row Template
-Row template enables you to set the customized look and behavior to grid all rows. [`RowTemplate`] property can be used bind the `id` of HTML template.
+Row template enables you to set the customized look and behavior to grid all rows. `RowTemplate` property can be used bind the `id` of HTML template.
 The following code example describes the above behavior.
 
 {% tabs %}
@@ -215,7 +215,7 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img3.png)
 
 ## Alternate row styling
-Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using [`EnableAltRow`] property. 
+Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using `EnableAltRow` property. 
 
 By default its value is `true`, so the following code example describes the how to turn off alternate row behavior.
 
