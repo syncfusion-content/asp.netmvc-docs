@@ -63,7 +63,7 @@ To connect an OLAP Cube available in ActivePivot Server through **XML/A**, set t
 
 {% highlight c# %}
 
-string connectionString=@"Data Source=http://localhost:8081/var_s/xmla; Initial Catalog=VaRCubes; User ID=; Password=; Transport Compression=None;";
+string connectionString=@"Data Source = http://localhost:8080/cva_s/xmla; Initial Catalog = CVAS;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.ActivePivot;
 
@@ -282,8 +282,8 @@ namespace PivotGridDemo {
 
 You can expose services through the properties, binding, contract and address by using an endpoint.
 
-* Contract: This property indicates that the contract of the endpoint is exposing. Here you are referring to IOLAPService contract and hence it is `PivotGridDemo.IOLAPService.`
-* Binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service.
+* Contract: This property indicates that the contract of the endpoint is exposing. Here you are referring to `IOLAPService` contract and hence it is `PivotGridDemo.IOLAPService`.
+* Binding: In your application, you use `webHttpBinding` to post and receive the requests and responses between the client-end and the service.
 * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint.
 
 The endpointBehaviors are illustrated as follows. 
@@ -372,7 +372,7 @@ Now, WCF service is added into the application successfully that comprises of th
 
 **Configuring WCF Service Class**
 
-The following are the list of namespaces to be added on top of the main class inside `RelationalService.svc.cs` file. Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside RelationalService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+The following are the list of namespaces to be added on top of the main class inside `RelationalService.svc.cs` file. Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `RelationalService.svc.cs` and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
 
@@ -612,8 +612,8 @@ namespace PivotGridDemo {
 
 The services could be exposed through the properties, binding, contract and address by using an endpoint.
 
-* Contract: This property indicates that the contract of the endpoint is exposing. Here you are referring to **IRelationalService ** contract and hence it is **PivotGridDemo.IRelationalService **.
-* Binding: In your application, you use webHttpBinding to post and receive the requests and responses between the client-end and the service.
+* Contract: This property indicates that the contract of the endpoint is exposing. Here you are referring to `IRelationalService` contract and hence it is `PivotGridDemo.IRelationalService`.
+* Binding: In your application, you use `webHttpBinding` to post and receive the requests and responses between the client-end and the service.
 * BehaviorConfiguration: This property contains the name of the behavior to be used in the endpoint
 
 The endpointBehaviors are illustrated as follows
