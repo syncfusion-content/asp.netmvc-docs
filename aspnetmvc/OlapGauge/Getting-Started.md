@@ -45,22 +45,22 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-13.1300.0.43</td><td>    
-13.1350.0.43</td><td>
+{{ site.mvc3releaseversion }}</td><td>    
+{{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-13.1400.0.43</td><td>    
-13.1400.0.43</td><td>
+{{ site.mvc4releaseversion }}</td><td>    
+{{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-13.1500.0.43</td><td>    
-13.1450.0.43</td><td>
+{{ site.mvc5releaseversion }}</td><td>    
+{{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
 </tr>
@@ -74,11 +74,11 @@ Register the referenced assemblies in Web.config files available inside Views fo
     <assemblies> 
         …… 
         ……
-        <add assembly="Syncfusion.EJ, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Olap, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Linq.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Olap.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Olap, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
    </assemblies>
 </compilation>
 
@@ -132,10 +132,10 @@ Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml
 {% highlight html %}
 
 <head>
-    <link href="http://cdn.syncfusion.com/13.3.0.7/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-    <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 </head>
 
 {% endhighlight %}
