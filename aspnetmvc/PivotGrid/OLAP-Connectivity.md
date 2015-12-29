@@ -84,7 +84,44 @@ Now, WCF service is added into your application successfully and it comprises of
 
 **Configuring WCF Service Class**
 
-The following are the list of namespaces to be added on top of the main class inside `OLAPService.svc.cs` file. Remove the **“DoWork”** method present inside both `OLAPService.svc.cs` and `IOLAPService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OLAPService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `OLAPService.svc.cs` and `IOLAPService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OLAPService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+
+{% highlight c# %}
+
+namespace PivotGridDemo
+{
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class OLAPService: IOLAPService
+    {
+    
+    }
+}
+
+{% endhighlight %}
+
+**List of Dependency Libraries**
+
+Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
+ 
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+N> If you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET]
+
+* Microsoft.AnalysisServices.AdomdClient
+* Syncfusion.Compression.Base
+* Syncfusion.Linq.Base
+* Syncfusion.Olap.Base
+* Syncfusion.PivotAnalysis.Base
+* Syncfusion.XlsIO.Base
+* Syncfusion.Pdf.Base
+* Syncfusion.DocIO.Base
+* Syncfusion.EJ
+* Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
+
+**List of Namespaces**
+
+Following are the list of namespaces to be added on top of the main class inside `OLAPService.svc.cs` file.
 
 {% highlight c# %}
 
@@ -105,6 +142,7 @@ namespace PivotGridDemo
 }
 
 {% endhighlight %}
+
 
 **Datasource Initialization**
 
@@ -372,7 +410,41 @@ Now, WCF service is added into the application successfully that comprises of th
 
 **Configuring WCF Service Class**
 
-The following are the list of namespaces to be added on top of the main class inside `RelationalService.svc.cs` file. Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `RelationalService.svc.cs` and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `RelationalService.svc.cs` and set **“RequirementsMode”** value to **“Allowed”**.
+
+{% highlight c# %}
+
+namespace PivotGridDemo
+{
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class RelationalService : IRelationalService
+    {
+
+    }
+}
+
+{% endhighlight %}
+
+**List of Dependency Libraries**
+
+Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
+ 
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+* Syncfusion.Compression.Base
+* Syncfusion.Linq.Base
+* Syncfusion.Olap.Base
+* Syncfusion.PivotAnalysis.Base
+* Syncfusion.XlsIO.Base
+* Syncfusion.Pdf.Base
+* Syncfusion.DocIO.Base
+* Syncfusion.EJ
+* Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
+
+**List of Namespaces**
+
+Following are the list of namespaces to be added on top of the main class inside `RelationalService.svc.cs` file.
 
 {% highlight c# %}
 
