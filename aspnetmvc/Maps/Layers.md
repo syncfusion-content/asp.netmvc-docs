@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layers | Maps | ASP.NET MVC | Syncfusion
-description: layers
+title: Layers in Map control
+description: Learn how to apply the layers in Map control
 platform: ejmvc
 control: Maps
 documentation: ug
@@ -9,29 +9,24 @@ documentation: ug
 
 # Layers
 
-Map is maintained through Layers and it can accommodate one or more layers.
+Map is maintained through `Layers` and it can accommodate one or more layers.
 
 ## Multilayers
 
 The Multilayer support allows you to load multiple shape files in a single container, enabling maps to display more information.
 
-### Loading Multiple Shape files in a Single Container
-
-This feature allows the map to load multiple types of shape files in a single container.
-
 ### Adding Multiple Layers in the Map 
 
-The shape layers is the core layer of the map. The multiple layers can be added in the shape Layers as SubShapeFileLayers within the shape Layers.
+The shape layers is the core layer of the map. The multiple layers can be added in the shape Layers as `SubShapeFileLayers` within the shape Layers.
 
-#### SubLayer
+## SubLayer
 
 The subLayer is the collection of shape Layers. 
 
-In this example, World Map shape is used as shape data by utilizing the “WorldMap.json” file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
+In this example, World Map shape is used as shape data by utilizing the `“WorldMap.json”` file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
 
 ..\ Maps_GeoJSON\
 
-#### MVC
 
 Here “MapController.cs” is populated with datas of World Map in “MapController.cs”.
 
@@ -42,29 +37,26 @@ Here “MapController.cs” is populated with datas of World Map in “MapContro
 {% highlight C# %}
 
 
-public ActionResult Map()
+	public ActionResult Map()
 
-{
+	{
 
-	ViewData["world_map"] = GetWorldMap();
+		ViewData["world_map"] = GetWorldMap();
 
-}
+	}
 
+	public object GetWorldMap ()
 
+	{
 
-public object GetWorldMap ()
+		string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
 
-{
+		JavaScriptSerializer ser = new JavaScriptSerializer();
 
-	string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
+		ser.MaxJsonLength = int.MaxValue;
 
-	JavaScriptSerializer ser = new JavaScriptSerializer();
-
-	ser.MaxJsonLength = int.MaxValue;
-
-	return new MapData(worldmapjson);
-
-}
+		return new MapData(worldmapjson);
+	}
 
 {% endhighlight %}
 
@@ -74,66 +66,63 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 {% highlight CSHTML %}
 
-@{       
+	@{       
 
-        var mapData = ViewData["mapdata"];
+    	var mapData = ViewData["mapdata"];
 
         var world_map = ViewData["world_map"];
+  	
+	} 
 
- } 
 
+	@(Html.EJ().Map("maps")
 
-@(Html.EJ().Map("maps")
-
-.Layers(lr =>
-
-{
-
-	lr.ShapeData(world_map)
-
-	.ShapeSettings(ss =>
+	.Layers(lr =>
 
 	{
 
-		ss.Fill("#9CBF4E")
-
-		.StrokeThickness(0.5)
-
-		.Stroke("White");                            
-
-	})
-
-	.SubLayer(ssl =>
-
-	{     
-
-		ssl.ShapeData(mapData)
+		lr.ShapeData(world_map)
 
 		.ShapeSettings(ss =>
 
 		{
 
-		ss.Fill("orange")
+			ss.Fill("#9CBF4E")
 
-		.StrokeThickness(1)
+			.StrokeThickness(0.5)
 
-		.Stroke("White");                            
+			.Stroke("White");                            
 
-	})
+		})
 
-	.Add();                     
+		.SubLayer(ssl =>
 
-	})
+		{     
 
-	.Add();
+			ssl.ShapeData(mapData)
+
+			.ShapeSettings(ss =>
+
+			{
+
+				ss.Fill("orange")
+
+				.StrokeThickness(1)
+
+				.Stroke("White");                            
+
+			})
+
+			.Add();                     
+
+		})
+
+		.Add();
 
 	})           
 
-)            
+	)            
 
 {% endhighlight %}
 
 ![](Layers_images/Layers_img1.png)
-
-Map with layers
-{:.caption}
