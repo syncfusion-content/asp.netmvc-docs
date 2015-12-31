@@ -3,7 +3,7 @@ layout: post
 title: DrillOperation | OLAPChart | ASP.NET MVC | Syncfusion
 description: drill operation
 platform: ejmvc
-control: OLAP Chart
+control: OlapChart
 documentation: ug
 ---
 

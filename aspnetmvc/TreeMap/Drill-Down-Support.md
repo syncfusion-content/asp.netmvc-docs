@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drill Down Support | TreeMap | ASP.NET MVC | Syncfusion
-description: drill down support
+title: DrillDown-Support in Syncfusion treemap control for ASP.NET MVC 
+description: Learn how to give drilldown support in treemap control
 platform: ejmvc
 control: TreeMap
 documentation: ug
@@ -13,7 +13,7 @@ Treemap enables drill down to expose the hierarchy achieved by clicking on a nod
 
 ## Enabling Drill Down
 
-Treemap elements can be drilled down by setting the EnableDrillDown property to true. You can view the hierarchy of the Treemap by clicking on the treemap items and can move to the previous level by clicking on the drill down header. The header color can be customized by changing the values in the property DrillDownHeaderColor and the selection color can be done by changing the DrillDownSelectionColor property.
+Treemap elements can be drilled down by setting the `EnableDrillDown` property to true. You can view the hierarchy of the Treemap by clicking on the treemap items and can move to the previous level by clicking on the drill down header. The header color can be customized by changing the values in the property `DrillDownHeaderColor` and the selection color can be done by changing the `DrillDownSelectionColor` property.
 
 _Drill down Properties_
 
@@ -44,64 +44,60 @@ Gets or sets a color for highlighting tree map item during drill down.</td></tr>
 {% highlight CSHTML %}
 
 
-@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-.DataSource(datasource)
+		.DataSource(datasource)
 
-.EnableDrillDown(true)   
+		.EnableDrillDown(true)   
 
-.DrillDownHeaderColor("#199DAF")
+		.DrillDownHeaderColor("#199DAF")
 
-.DrillDownSelectionColor("#199DAF")
+		.DrillDownSelectionColor("#199DAF")
 
-.WeightValuePath("Population")
+		.WeightValuePath("Population")
 
-.Levels(lv =>
+		.Levels(lv =>
 
-{
+		{
 
-	lv.GroupPath("Continent")                                    
+			lv.GroupPath("Continent")                                    
 
-	.HeaderHeight(25)
+			  .HeaderHeight(25)
 
-	.GroupGap(5)
+			  .GroupGap(5)
 
-	.ShowLabels(true).Add();
+			  .ShowLabels(true).Add();
 
-	lv.GroupPath("Country")                                    
+			lv.GroupPath("Country")                                    
 
-	.HeaderHeight(25)
+			  .HeaderHeight(25)
 
-	.GroupGap(0)
+			  .GroupGap(0)
 
-	.ShowLabels(true).Add();
+			  .ShowLabels(true).Add();
 
-	lv.GroupPath("Name")                                   
+			lv.GroupPath("Name")                                   
 
-	.HeaderHeight(25)
+			  .HeaderHeight(25)
 
-	.GroupGap(0)
+			  .GroupGap(0)
 
-	.ShowLabels(true).Add();
+			  .ShowLabels(true).Add();
 
-})
+		})
 
-)
+	)
 
 
 
 {% endhighlight %}
 
-
-
 ![](Drill-Down-Support_images/Drill-Down-Support_img1.png)
 
 
-Before Drill Down
-{:.caption}
+_Before Drill Down_
 
 ![](Drill-Down-Support_images/Drill-Down-Support_img2.png)
 
 
-After Drill Down
-{:.caption}
+_After Drill Down_

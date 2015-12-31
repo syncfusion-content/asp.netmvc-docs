@@ -9,7 +9,7 @@ documentation: ug
 
 # Chart Types
 
-Essential **OLAP Chart MVC** supports 14 different types of chart as follows:
+Essential **OlapChart MVC** supports 14 different types of chart as follows:
 
 
 * Column
