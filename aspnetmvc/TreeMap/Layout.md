@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout | TreeMap | ASP.NET MVC | Syncfusion
-description: layout
+title: Layout in treeMap control
+description: Learn how to apply the layout in treeMap control
 platform: ejmvc
 control: TreeMap
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Layout
 
-You can decide on the visual representation of nodes belonging to all the treemap levels using the ItemsLayoutMode property of the TreeMap.
+You can decide on the visual representation of nodes belonging to all the treemap levels using the `ItemsLayoutMode` property of the TreeMap.
 
 There are four different TreeMap layouts such as
 
@@ -20,33 +20,31 @@ There are four different TreeMap layouts such as
 
 ## Squarified Layout
 
-Squarifiedlayout creates rectangles with best aspect ratio.
+`Squarifiedlayout` creates rectangles with best aspect ratio.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-.DataSource(datasource)
+		.DataSource(datasource)
 
-.ColorValuePath("Growth")
+		.ColorValuePath("Growth")
 
-.WeightValuePath("Population")               
+		.WeightValuePath("Population")               
 
-.Levels(lv =>
+		.Levels(lv =>
 
-{
+		{
 
-	lv.GroupPath("Continent")
+			lv.GroupPath("Continent")
 
-		.GroupGap(5).Add();
+			  .GroupGap(5).Add();
 
-})     
+		})     
 
-.ItemsLayoutMode("Squarified")           
+		.ItemsLayoutMode("Squarified")           
 
-.Render())
-
-
+		.Render())
 
 {% endhighlight %}
 
@@ -56,15 +54,15 @@ Squarifiedlayout creates rectangles with best aspect ratio.
 
 ## SliceAndDiceAuto Layout
 
-SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
+`SliceAndDiceAuto` layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-.ItemsLayoutMode("SliceAndDiceAuto ")
+		.ItemsLayoutMode("SliceAndDiceAuto ")
 
-.Render())
+		.Render())
 
 {% endhighlight %}
 
@@ -74,15 +72,15 @@ SliceAndDiceAuto layout creates rectangles with high aspect ratio and displays t
 
 ## SliceAndDiceHorizontal Layout
 
-SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and displays them sorted horizontally.
+`SliceAndDiceHorizontal` layout creates rectangles with high aspect ratio and displays them sorted horizontally.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-.ItemsLayoutMode("SliceAndDiceHorizontal ")
+		.ItemsLayoutMode("SliceAndDiceHorizontal ")
 
-.Render())
+		.Render())
 
 {% endhighlight %}
 
@@ -92,16 +90,15 @@ SliceAndDiceHorizontal layout creates rectangles with high aspect ratio and disp
 
 ## SliceAndDiceVertical Layout
 
-SliceAndDiceVertical layout creates rectangles with high aspect ratio and displays them sorted vertical.
+`SliceAndDiceVertical` layout creates rectangles with high aspect ratio and displays them sorted vertical.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().TreeMap("treemap")
+	@(Html.EJ().TreeMap("treemap")
 
-.ItemsLayoutMode("SliceAndDiceVertical ")
+		.ItemsLayoutMode("SliceAndDiceVertical ")
 
-
-.Render())
+		.Render())
 
 {% endhighlight %}
 

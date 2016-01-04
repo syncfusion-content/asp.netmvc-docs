@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Map Elements | Maps | ASP.NET MVC | Syncfusion
-description: map elements
+title: Elements of Syncfusion Maps control for Asp.Net MVC
+description: Learn how to achieve the elements in Map control
 platform: ejmvc
 control: Maps
 documentation: ug
@@ -17,12 +17,12 @@ Markers are notes that is used to leave some message on the map.
 
 There are two ways to set marker for map.
 
-1. Using markers and marker template
-2. Adding marker objects to map.
+* Using markers and marker template
+* Adding marker objects to map.
 
 ### Markers 
 
-The Markers property has a list of objects that contains the data for Annotation. You can visualize these data by using MarkerTemplate property.
+The `Markers` property has a list of objects that contains the data for Annotation. You can visualize these data by using MarkerTemplate property.
 
 
 
@@ -44,9 +44,8 @@ The Markers property has a list of objects that contains the data for Annotation
 
 	 // ...
 
-
-
-   public List<MarkerData> GetMarkers()
+   	
+	public List<MarkerData> GetMarkers()
 
 	{
 
@@ -54,13 +53,11 @@ The Markers property has a list of objects that contains the data for Annotation
 
 		{
 
+			new MarkerData {City = "California", Latitude = 37.0000, Longitude = -120.0000 },
 
+			new MarkerData {City = "New York", Latitude = 40.7127, Longitude = -74.0059 },
 
-		new MarkerData {City = "California", Latitude = 37.0000, Longitude = -120.0000 },
-
-		new MarkerData {City = "New York", Latitude = 40.7127, Longitude = -74.0059 },
-
-		new MarkerData {City = "Iowa", Latitude = 42, Longitude = -93}
+			new MarkerData {City = "Iowa", Latitude = 42, Longitude = -93}
 
 		};
 
@@ -70,166 +67,155 @@ The Markers property has a list of objects that contains the data for Annotation
 
 
 
-public class MarkerData
-
-{
-
-	private double latitude;
-
-	public double Latitude
+	public class MarkerData
 
 	{
 
-		get { return latitude; }
+		private double latitude;
 
-		set { latitude = value; }
+		public double Latitude
 
-	}
+		{
 
+			get { return latitude; }
 
+			set { latitude = value; }
 
-	public double longitude;
+		}
 
-	public double Longitude
+		public double longitude;
 
-	{
+		public double Longitude
 
-		get { return longitude; }
+		{
 
-		set { longitude = value; }
+			get { return longitude; }
 
-	}
+			set { longitude = value; }
 
+		}
 
+		private string city;
 
-	private string city;
+		public string City
 
-	public string City
+		{
 
-	{
+			get { return city; }
 
-		get { return city; }
+			set { city = value; }
 
-		set { city = value; }
+		}
 
-	}
-
-} 
+	} 
 
 
 {% endhighlight %}
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")           
+	@(Html.EJ().Map("container")           
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{
+	{
+					  
+		.Markers(markers)                        
 
-						  
-	.Markers(markers)                        
+		.MarkerTemplate("template")                        
 
-	.MarkerTemplate("template")                        
+	})
 
-})
+	) 
 
-) 
+	<div  id="template" style="display: none;">
+	
+    	<div>
 
-<div  id="template" style="display: none;">
+        	<svg height="100" width="100">
 
-    <div>
+				<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="red" />
 
-        <svg height="100" width="100">
+			</svg>
 
-		<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1"
+    	</div>
 
-				   fill="red" />
-
-		</svg>
-
-    </div>
-
-</div>      
-
+	</div>      
 
 
 {% endhighlight %}
 
 ![](Map-Elements_images/Map-Elements_img1.png)
 
-Map with markers
-{:.caption}
 
 ### Adding Marker objects to map
 
-Without Datasource, n number of markers can be added to shape layers with Markers property. Each marker object contains the following list of properties.
+Without Datasource, n number of markers can be added to shape layers with `Markers` property. Each marker object contains the following list of properties.
 
-* Label - Text that displays some information about the annotation in text format.
-* Latitude - Latitude point determine the Y-axis position of annotation.
-* Longitude - Longitude point determine the X-axis position of annotation.
-
+* `Label` - Text that displays some information about the annotation in text format.
+* `Latitude` - Latitude point determine the Y-axis position of annotation.
+* `Longitude` - Longitude point determine the X-axis position of annotation.
 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")            
+	@(Html.EJ().Map("container")            
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{
+	{
 
-lr.EnableMouseHover(true)
+		lr.EnableMouseHover(true)
 
-.ShapeData(mapData)
+		.ShapeData(mapData)
 
-.ShapeSettings(ss =>
+		.ShapeSettings(ss =>
 
-{
+		{
 
-	  ss.Fill("#9CBF4E")
+	  		ss.Fill("#9CBF4E")
 
-		.StrokeThickness(0.5)
+			.StrokeThickness(0.5)
 
-		.Stroke("White")
+			.Stroke("White")
 
-		.HighlightStroke("White")
+			.HighlightStroke("White")
 
-		.HighlightColor("#BC5353")
+			.HighlightColor("#BC5353")
 
-		.HighlightBorderWidth(1);
+			.HighlightBorderWidth(1);
 
-})
+		})
 
-.Markers(an =>
+		.Markers(an =>
 
-{
+		{
 
-	an.Label("California")
+			an.Label("California")
 
-		.Latitude(37)
+			.Latitude(37)
 
-		.Longitude(-120).Add();
+			.Longitude(-120).Add();
 
-	an.Label("New York")
+			an.Label("New York")
 
-		.Latitude(40.7127)
+			.Latitude(40.7127)
 
-		.Longitude(-74.0059).Add();
+			.Longitude(-74.0059).Add();
 
-	an.Label("Iowa")
+			an.Label("Iowa")
 
-		.Latitude(42)
+			.Latitude(42)
 
-		.Longitude(-93).Add();
+			.Longitude(-93).Add();
 
-})
+		})
 
-.Add();
+		.Add();
 
-})
+		})
 
-) 
+	) 
 
 
 
@@ -239,18 +225,15 @@ lr.EnableMouseHover(true)
 
 ![](Map-Elements_images/Map-Elements_img2.png)
 
-Map with label
-{:.caption}
 
 ## Bubbles 
 
 Bubbles in the Maps control represent the underlying data values of the map. Bubbles are scattered throughout the map shapes that contain bound values.
 
-Bubbles are included when data binding and the BubbleSettings is set to the shape layers. 
+Bubbles are included when data binding and the `BubbleSettings` is set to the shape layers. 
 
-Properties available in bubble setting
 
-_Property table_
+### Properties
 
 <table>
 <tr>
@@ -300,73 +283,67 @@ String</td><td>
 Gets or sets the tooltip template for bubbles.</td></tr>
 </table>
 
-### Adding Bubbles to a Map
+### Add Bubbles to a Map
 
-To add bubbles to a map, the bubble marker setting is added to the shape file layer. Create the Model and ViewModel as illustrated in the Data Binding topic and add the following code. Also set the MaxValue, MinValue, and ValuePath properties as illustrated in the following code sample.
+To add bubbles to a map, the bubble marker setting is added to the shape file layer. Create the Model and ViewModel as illustrated in the Data Binding topic and add the following code. Also set the `MaxValue`, `MinValue`, and `ValuePath` properties as illustrated in the following code sample.
 
-Note: Tooltip and Color Mappings for bubble is to be set as similar to tooltip and color mappings set in layers and ShapeSettings. For more details, refer Tooltip and Color Mappings section.
+N>Tooltip and Color Mappings for bubble is to be set as similar to tooltip and color mappings set in layers and ShapeSettings. For more details, refer Tooltip and Color Mappings section.
 
 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")            
+	@(Html.EJ().Map("container")            
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{
+	{
 
-lr.EnableMouseHover(true)
+		lr.EnableMouseHover(true)
 
-.ShapeData(mapData)
+		.ShapeData(mapData)
 
-.DataSource(population_data)
+		.DataSource(population_data)
 
-.ShapeSettings(ss =>
+		.ShapeSettings(ss =>
 
-{
+		{
 
-	ss.Fill("#9CBF4E")
+			ss.Fill("#9CBF4E")
 
+			.StrokeThickness(0.5)
 
+			.Stroke("White");
 
-		.StrokeThickness(0.5)
+		})
 
-		.Stroke("White");
+		.BubbleSettings(bs =>
 
+		{
 
+			bs.ValuePath("Population ")
 
-})
+			.ShowBubble(true)
 
-.BubbleSettings(bs =>
+			.MinValue(20)
 
-{
+			.MaxValue(40)
 
-	bs.ValuePath("Population ")
+			.Color("#C99639");
 
-		.ShowBubble(true)
+		})
 
-		.MinValue(20)
+		.Add();
 
-		.MaxValue(40)
+	})
 
-		.Color("#C99639");
-
-})
-
-.Add();
-
-})
-
-)
+	)
 {% endhighlight %}
 
 
 
 ![](Map-Elements_images/Map-Elements_img3.png)
 
-Map with bubbles
-{:.caption}
 
 ## Legend
 
@@ -374,40 +351,40 @@ A legend is a key used on a map, contains swatches of symbols with descriptions.
 
 ### Visibility of Legend
 
-The Legends can be made visible by setting the ShowLegend property of legendSettings. 
+The Legends can be made visible by setting the `ShowLegend` property of legendSettings. 
 
 ### Positioning of Legend
 
 The legend can be positioned in two ways.
 
-1. Absolute Position.
-2. Dock Position.
+* Absolute Position.
+* Dock Position.
 
 ### Absolute Position
 
-Based on the margin values of X and Y-axes, the Map legends can be positioned with the support of PositionX and PositionY properties available in LegendSettings. For positioning the legend based on margins corresponding to a map, Position value is set as _‘_None’.
+Based on the margin values of X and Y-axes, the Map legends can be positioned with the support of `PositionX` and `PositionY` properties available in `LegendSettings`. For positioning the legend based on margins corresponding to a map, `Position` value is set as ‘_None_’.
 
 ### Dock Position
 
 The map legends can be positioned in following locations within the container.
 
-1. TopLeft
-2. TopCenter
-3. TopRight
-4. CenterLeft
-5. Center
-6. CenterRight
-7. BottomLeft
-8. BottomRight
-9. BottomCenter
-10. BottomRight
-11. None
+* TopLeft
+* TopCenter
+* TopRight
+* CenterLeft
+* Center
+* CenterRight
+* BottomLeft
+* BottomRight
+* BottomCenter
+* BottomRight
+* None
 
-You can set this option by using Position property in LegendSettings.
+You can set this option by using `Position` property in `LegendSettings`.
 
 ### Legend Size
 
-The map legend size can be modified using Height and Width properties in LegendSettings.
+The map legend size can be modified using `Height` and `Width` properties in `LegendSettings`.
 
 ### Legend for Shapes
 
@@ -419,36 +396,32 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	@(Html.EJ().Map("container")
 
-{
+	.Layers(lr =>
 
+	{
 
+		lr.LegendSettings(ml =>
 
-lr.LegendSettings(ml =>
+		{
 
-{
+			ml .ShowLegend(true)
 
-	ml 
+			.Height(20)
 
-	.ShowLegend(true)
+			.Width(60)
 
-	.Height(20)
+			.PositionX(80)
+			   			
+			.PositionY(90);
 
-	.Width(60)
+		 })
 
-	.PositionX(80)
+	})
 
-   .PositionY(90);
-
-
- })
-
-})
-
-)
+	)
 
 
 
@@ -459,20 +432,18 @@ lr.LegendSettings(ml =>
 
 ![](Map-Elements_images/Map-Elements_img4.png)
 
-Map with legend
-{:.caption}
 
 ### Interactive Legend
 
-The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. You can enable this option by setting Mode property in LegendSettings value as “Interactive” and default value of Mode property is “Default” to enable the normal legend.
+The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. You can enable this option by setting `Mode` property in `LegendSettings` value as “Interactive” and default value of `Mode` property is “Default” to enable the normal legend.
 
-### Title for Interactive Legend
+#### Title for Interactive Legend
 
-You can provide the title for interactive legend by using Title property in LegendSettings.
+You can provide the title for interactive legend by using `Title` property in `LegendSettings`.
 
-### Label for Interactive Legend
+#### Label for Interactive Legend
 
-You can provide the left and right labels to interactive legend by using LeftLabel and RightLabel properties in LegendSettings. 
+You can provide the left and right labels to interactive legend by using `LeftLabel` and `RightLabel` properties in `LegendSettings`. 
 
 N> Here, Range Color Mapping code snippet for shapeSettings with color mappings is referred.
 
@@ -480,41 +451,34 @@ N> Here, Range Color Mapping code snippet for shapeSettings with color mappings 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")
+	@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	.Layers(lr =>
 
 	{
                                       
+		.LegendSettings(ml =>
 
-	.LegendSettings(ml =>
+		{
 
-	{
+			ml.ShowLegend(true)
 
-		ml
+			.Height(15)
 
-		.ShowLegend(true)
+			.Width(150) 
 
-		.Height(15)
+		 	.Position(Syncfusion.JavaScript.DataVisualization.Models.DockPosition.Topleft)
 
-		.Width(150) 
+			.Mode(Syncfusion.JavaScript.DataVisualization.Models.LegendMode.Interactive)
 
-		 .Position(Syncfusion.JavaScript.DataVisualization.
+			.Title("Population")
 
-		Models.DockPosition.Topleft)
+			.LeftLabel("0.5 M")
 
-		.Mode(Syncfusion.JavaScript.DataVisualization.
+			.RightLabel("40 M");
 
-		Models.LegendMode.Interactive)
-
-		.Title("Population")
-
-		.LeftLabel("0.5 M")
-
-		.RightLabel("40 M");
-
-	})                        
-})
+		})                        
+	})
 
 )
 
@@ -524,83 +488,72 @@ N> Here, Range Color Mapping code snippet for shapeSettings with color mappings 
 
 ![](Map-Elements_images/Map-Elements_img5.png)
 
-Map with interactive legend
-{:.caption}
 
 ### Bubble Legend
 
-A bubble legend feature is used to provide the key (legend) for another map element bubble. You can activate the Bubble legend by setting the enum “Type” in LegendSettings as “Bubble” and this enables you to easily identify what value a particular bubble is representing.
+A bubble legend feature is used to provide the key (legend) for another map element bubble. You can activate the Bubble legend by setting the enum `Type` in `LegendSettings` as “_Bubble_” and this enables you to easily identify what value a particular bubble is representing.
 
 
 
 {% highlight CSHTML %}
 
 
-@(Html.EJ().Map("container")
+	@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	.Layers(lr =>
 
 	{
 											  
-	.LegendSettings(ml =>
-
-	{
-
-		ml
-
-		.ShowLegend(true)
-
-		.Height(15)
-
-		.Width(150) 
-
-		.Type(Syncfusion.JavaScript.DataVisualization.
-
-		Models.LegendType.Bubbles)
-
-		.Title("Population");
-
-	})                        
-
-	.BubbleSettings( b1 =>
-
-	{
-
-		b1
-
-		.ShowBubble(true)
-
-		.ValuePath(population)
-
-		.MinValue(20),
-
-		.MaxValue(40)
-
-		.RangeColorMappings(cm =>
+		.LegendSettings(ml =>
 
 		{
 
-																													   cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Range(10688).Add();
+			ml.ShowLegend(true)
 
-			cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Range(19390).Add();
+			.Height(15)
 
-			cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Range(18718).Add();
+			.Width(150) 
 
-			cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Range(30716).Add();
+			.Type(Syncfusion.JavaScript.DataVisualization.Models.LegendType.Bubbles)
 
-		});                               
+			.Title("Population");
+
+		})                        
+
+		.BubbleSettings( b1 =>
+
+		{
+
+			b1.ShowBubble(true)
+
+			.ValuePath(population)
+
+			.MinValue(20),
+
+			.MaxValue(40)
+
+			.RangeColorMappings(cm =>
+
+			{
+			
+				cm.From(500000).To(1000000).GradientColors(new List<string> { "#9CBF4E", "#B8CE7B" }).Range(10688).Add();
+
+				cm.From(1000001).To(5000000).GradientColors(new List<string> { "#B8CE7B", "#CBD89A" }).Range(19390).Add();
+
+				cm.From(5000001).To(10000000).GradientColors(new List<string> { "#CBD89A", "#DEE2B9" }).Range(18718).Add();
+
+				cm.From(10000001).To(40000000).GradientColors(new List<string> { "#DEE2B9", "#F1ECD8" }).Range(30716).Add();
+
+			});                               
+
+		})
 
 	})
 
-	})
-
-) 
+	) 
 
 {% endhighlight %}
 
 
 
 ![](Map-Elements_images/Map-Elements_img6.png)
-
-Bubble Legend
-{:.caption}
