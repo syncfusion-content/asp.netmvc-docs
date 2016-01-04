@@ -124,8 +124,8 @@ The following code example describes the above behavior.
                 col.Field("CustomerID").Add();
                 col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Add();
-  	            col.Field("ShipAddress").Add();
-  	            col.Field("ShipPostalCode").Add();
+                col.Field("ShipAddress").Add();
+                col.Field("ShipPostalCode").Add();
                 col.Field("Freight").Format("{0:C}").Add();    
             })
       	)
@@ -218,8 +218,8 @@ The following code example describes the above behavior.
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
-            	col.Field("ShipCity").Add();
-            	col.Field("ShipCountry").Add();
+             	col.Field("ShipCity").Add();
+               	col.Field("ShipCountry").Add();
                 col.Field("ShipAddress").Add();
                 col.Field("ShipPostalCode").Add();
                 col.Field("Freight").Format("{0:C}").Add();    
@@ -266,7 +266,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
-               	col.Field("Freight").Format("{0:C}").IsFrozen(true).Add(); 
+              	col.Field("Freight").Format("{0:C}").IsFrozen(true).Add(); 
                 col.Field("OrderDate").Format("{0:dd/MM/yyyy}").Add();
                 col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Width(100).IsFrozen(true).Add();
@@ -330,9 +330,9 @@ The following code example describes the above behavior.
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
-             	col.Field("ShipCity").Add();
+               	col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Add();
-	            col.Field("ShipAddress").Add();
+                col.Field("ShipAddress").Add();
                 col.Field("ShipPostalCode").Add();
                 col.Field("Freight").Format("{0:C}").Add();    
             })
@@ -380,8 +380,8 @@ The following code example describes the above behavior.
                 col.Field("CustomerID").Add();
                 col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Add();
-        	    col.Field("ShipAddress").Add();
-        	    col.Field("ShipPostalCode").Add();
+                col.Field("ShipAddress").Add();
+                col.Field("ShipPostalCode").Add();
                 col.Field("Freight").Format("{0:C}").Add();    
             })
        	)
