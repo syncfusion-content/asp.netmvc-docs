@@ -219,7 +219,7 @@ The following code example describes the above behavior.
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
                 col.Field("ShipCity").Add();
-	            col.Field("ShipCountry").Add();
+                col.Field("ShipCountry").Add();
                 col.Field("ShipAddress").Add();
                 col.Field("ShipPostalCode").Add();
                 col.Field("Freight").Format("{0:C}").Add();    
