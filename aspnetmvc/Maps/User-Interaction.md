@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interactive features of Maps control for Asp.Net MVC
 description: Learn how to enables the effective interaction on Map elements
