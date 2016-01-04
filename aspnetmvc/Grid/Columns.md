@@ -9,16 +9,16 @@ documentation: ug
 
 # Columns
 
-Column definitions are used as the DataSource schema in grid and it plays vital role in rendering column values in required format and sorting, filtering, editing based on its type. The field property of the columns is necessary to map the datasource values in grid columns.
+Column definitions are used as the DataSource schema in grid and it plays vital role in rendering column values in required format and sorting, filtering, editing based on its type. The `Field` property of the columns is necessary to map the datasource values in grid columns.
 
-N> 1. The column with Field which are not in the datasource, then the column values will be displayed as empty.
+N> 1. The column with `Field` which are not in the datasource, then the column values will be displayed as empty.
 
-N> 2. If the Field name contains "dot" then it is considered as complex binding.
+N> 2. If the `Field` name contains "dot" then it is considered as complex binding.
 
 
 ## Auto Generation
 
-The columns are automatically generated when Columns declaration is empty or undefined while initializing the grid. Also, all the columns which are in DataSource are bound as a grid Columns.
+The columns are automatically generated when `Columns` declaration is empty or undefined while initializing the grid. Also, all the columns which are in `DataSource` are bound as a grid `Columns`.
 
 {% tabs %}
 
@@ -52,9 +52,9 @@ The following output is displayed as a result of the above code example.
 
 ![](columns_images/columns_img1.png)
 
-### How to set isPrimaryKey for auto generated columns when editing is enabled:
+### How to set `IsPrimaryKey` for auto generated columns when editing is enabled:
 
-Using DataBound event, you can set IsPrimaryKey value as `true` by two ways. The following code example demonstrates the above behavior.
+Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways. The following code example demonstrates the above behavior.
 
 1. If primary key "column index" is known then refer the following code example
 
@@ -152,9 +152,9 @@ Using DataBound event, you can set IsPrimaryKey value as `true` by two ways. The
 
 ### HeaderText
 
-It represents the title for particular column. To enable header text, set HeaderText property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns"). The following code example describes the above behavior.
+It represents the title for particular column. To enable header text, set `HeaderText` property of `Columns`. The following code example describes the above behavior.
 
-N> If HeaderText is not defined then the Field name is considered as header text for that particular column. If Field name and HeaderText also not defined then the column is rendered with "empty" header text.
+N> If `HeaderText` is not defined then the `Field` name is considered as header text for that particular column. If `Field` name and `HeaderText` also not defined then the column is rendered with "empty" header text.
 
 The following code example describes the above behavior.
 
@@ -199,14 +199,14 @@ The following output is displayed as a result of the above code example.
 
 ### Header Text alignment
 
-Align the header text of column header using HeaderTextAlign property of the [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns"). There are four possible ways to align header text, they are
+Align the header text of column header using `HeaderTextAlign` property of the `Columns`. There are four possible ways to align header text, they are
 
 1. Right
 2. Left
 3. Center
 4. Justify
 
-N> For HeaderTextAlign property you can assign `enum` value (`Syncfusion.JavaScript.TextAlign.Right`).
+N> For `HeaderTextAlign` property you can assign `enum` value (`TextAlign.Right`).
 
 The following code example describes the above behavior.
 
@@ -251,11 +251,11 @@ The following output is displayed as a result of the above code example.
 
 ### Header Template
 
-The template design that applies on for the column header. To render template, HeaderTemplateID property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns").
+The template design that applies on for the column header. To render template, `HeaderTemplateID` property of `Columns`.
 
 You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link").
 
-N> It's a standard way to enclose the [`template`](http://help.syncfusion.com/js/api/ejgrid#members:columns-template "template") within the `script` tag with `type` as `text/x-jsrender`.
+N> It's a standard way to enclose the `template` within the `script` tag with `type` as `text/x-jsrender`.
 
 The following code example describes the above behavior.
 
@@ -308,18 +308,19 @@ The following output is displayed as a result of the above code example.
 
 ## Text alignment
 
-You can align both content and header text of particular column using TextAlign property. There are four possible ways to align content and header text of column, they are 
+You can align both content and header text of particular column using `TextAlign` property. There are four possible ways to align content and header text of column, they are 
 
 1. Right
 2. Left
 3. Center
 4. Justify
 
-N> 1. For TextAlign property you can assign `enum` value (`Syncfusion.JavaScript.TextAlign`).
+N> 1. For `TextAlign` property you can assign `enum` value (`TextAlign.Right`).
 
-N> 2. The TextAlign property will affect both content and header text of the grid.
+N> 2. The `TextAlign` property will affect both content and header text of the grid.
 
 The following code example describes the above behavior.
+
 {% tabs %}
 
 {% highlight CSHTML %}
@@ -361,9 +362,9 @@ The following output is displayed as a result of the above code example.
 
 ## Format
 
-Format is the process of customizing the particular column data with specified jquery recognized globalize formats, such as currency, numeric, decimal, percentage or dates. To specify the globalize format, by using Format property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns").
+`Format` is the process of customizing the particular column data with specified jquery recognized globalize formats, such as currency, numeric, decimal, percentage or dates. To specify the globalize format, by using Format property of `Columns`.
 
-The Format value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/jquery/globalize/tree/v0.1.1#format "data format") strings available for the Date and Number types.
+The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/jquery/globalize/tree/v0.1.1#format "data format") strings available for the `Date` and `Number` types.
 
 The following code example describes the above behavior.
 
@@ -408,7 +409,7 @@ The following output is displayed as a result of the above code example.
 
 ## Width
 
-You can specify the width for particular column by setting Width property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns") as in pixel (ex: 100) or in percentage (ex: 40%).
+You can specify the width for particular column by setting `Width` property of `Columns` as in pixel (ex: 100) or in percentage (ex: 40%).
 
 The following code example describes the above behavior.
 
@@ -453,7 +454,7 @@ The following output is displayed as a result of the above code example.
 
 ## Resize to fit 
 
-The AllowResizeToFit property enable the grid to set width to columns based on maximum width of the particular column's content to facilitate full visibility of data in all the grid rows and this automatic behavior is applicable only for the columns which does not have width specified. 
+The `AllowResizeToFit` property enable the grid to set width to columns based on maximum width of the particular column's content to facilitate full visibility of data in all the grid rows and this automatic behavior is applicable only for the columns which does not have width specified. 
 
 On columns where "width is defined", double click on the particular column header's resizer symbol to resize the column to show the whole text. For example, refer the "ShipCity" column in the below code snippet and output screen shot. 
 
@@ -501,7 +502,7 @@ The following output is displayed as a result of the above code example.
 
 ## Auto wrap column
 
-AllowTextWrap property enables the grid to wrap cell content to next line when the content exceeds the boundary of the cell width. 
+`AllowTextWrap` property enables the grid to wrap cell content to next line when the content exceeds the boundary of the cell width. 
 
 The following code example describes the above behavior.
 
@@ -547,7 +548,7 @@ The following output is displayed as a result of the above code example.
 
 ## Reorder
 
-Reordering can be done by drag and drop the particular column header from one index to another index within the grid. Reordering can be enabled by setting AllowReordering property as `true`.
+Reordering can be done by drag and drop the particular column header from one index to another index within the grid. Reordering can be enabled by setting `AllowReordering` property as `true`.
 
 The following code example describes the above behavior.
 
@@ -593,7 +594,7 @@ The following output is displayed as a result of the above code example.
 
 ## Visibility
 
-You can hide particular column in grid view by setting Visible property of it as `false`.
+You can hide particular column in grid view by setting `Visible` property of it as `false`.
 
 The following code example describes the above behavior.
 
@@ -638,9 +639,9 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Merging
 
-The grid has options to merge the grid cells based on the required conditions. This can be enabled by setting AllowCellMerging property as `true` and the merge conditions can be defined in MergeCellInfo event. In this event, you can get the column details and data of that particular row and column which is helpful in defining conditions. 
+The grid has options to merge the grid cells based on the required conditions. This can be enabled by setting `AllowCellMerging` property as `true` and the merge conditions can be defined in `MergeCellInfo` event. In this event, you can get the column details and data of that particular row and column which is helpful in defining conditions. 
 
-You can merge the rows and cells of grid, using `rowMerge`, `colMerge` and `merge` functions available in MergeCellInfo event's argument.
+You can merge the rows and cells of grid, using `rowMerge`, `colMerge` and `merge` functions available in `MergeCellInfo` event's argument.
 
 The following code example describes the above behavior.
 
@@ -701,7 +702,7 @@ The following output is displayed as a result of the above code example.
 
 ## Unbound Column
 
-You can define the unbound columns in grid by not defining Field property for that particular. Value for this columns can be populated either manually using QueryCellInfo event or by using column Template.
+You can define the unbound columns in grid by not defining `Field` property for that particular. Value for this columns can be populated either manually using `QueryCellInfo` event or by using `ColumnTemplate`.
 
 N> Editing, grouping, filtering, sorting, summary and searching support are not available for unbound columns.
 
@@ -757,11 +758,11 @@ The following output is displayed as a result of the above code example.
 
 ## Column Template
 
-Html templates can be specified in the Template property of the particular column as a string (html element) or ID of the template's HTML element.
+Html templates can be specified in the `Template` property of the particular column as a string (html element) or ID of the template's HTML element.
 
 You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "this link"). 
 
-N> If Field is not specified, you will not able to perform editing, grouping, filtering, sorting, search and summary functionalities in particular column.
+N> If `Field` is not specified, you will not able to perform editing, grouping, filtering, sorting, search and summary functionalities in particular column.
 
 The following code example describes the above behavior.
 
@@ -783,7 +784,7 @@ The following code example describes the above behavior.
                 .PageSettings(page => { page.PageSize(4); })
                 .Columns(col =>
                 {
-                    col.HeaderText("Photo").Template("<img style='width: 75px; height: 70px' src='/13.2.0.29/themes/web/images/employees/{{:EmployeeID}}.png' alt='{{: EmployeeID }}' />").Add();
+                    col.HeaderText("Photo").Template("<img style='width: 75px; height: 70px' src='/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png' alt='{{"{{"}}:EmployeeID{{}}}}.png' />").Add();
                     col.Field("EmployeeID").Add();
                     col.Field("FirstName").Add();
                     col.Field("LastName").Add();
@@ -816,7 +817,7 @@ The following output is displayed as a result of the above code example.
 
 ## Controlling Grid actions
 
-You can control the grid actions of a particular column by setting AllowSorting, AllowGrouping, AllowFiltering and AllowEditing properties of it as `false`.
+You can control the grid actions of a particular column by setting `AllowSorting`,`AllowGrouping`, `AllowFiltering` and `AllowEditing` properties of it as `false`.
 
 The following code example describes the above behavior.
 
@@ -863,7 +864,7 @@ The following code example describes the above behavior.
 
 ## Read only
 
-To make a column as "read-only" then set AllowEditing property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns") as `false`.
+To make a column as "read-only" then set `AllowEditing` property of `Columns` as `false`.
 
 The following code example describes the above behavior. 
 
@@ -910,7 +911,7 @@ The following output is displayed as a result of the above code example.
 
 ## Expression Column
 
-Expression column is possible only for Template column. You can use JsRender syntax in the template.
+Expression column is possible only for `Template` column. You can use JsRender syntax in the template.
 
 You can use JsRender syntax in the template.For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link"). 
 
@@ -931,7 +932,7 @@ The following code example describes the above behavior.
                     col.Field("Protein").Add();
                     col.Field("Fat").Add();
                     col.Field("Carbohydrate").Add();
-                    col.HeaderText("Calories In Take").Template("<span>{{:Protein * 4  + Fat * 4 + Carbohydrate * 9 }}</span>").Add();
+                    col.HeaderText("Calories In Take").Template("<span>{{"{{"}}:Protein * 4  + Fat * 4 + Carbohydrate * 9 {{}}}}</span>").Add();
                 })
                 )
 {% endhighlight  %}
@@ -963,14 +964,14 @@ The following output is displayed as a result of the above code example.
 
 ### Default action buttons
 
-Using Command column, you can add CRUD action buttons as one of the grid column, through Type property of Commands. The Type property supports the below default UnboundType buttons.
+Using Command column, you can add `CRUD` action buttons as one of the grid column, through `Type` property of `Commands`. The `Type` property supports the below default `UnboundType` buttons.
 
 1. Edit
 2. Save
 3. Delete
 4. Cancel
 
-Through ButtonOptions property of Commands, you can specify all the button options which are supported by Essential Studio ASP.NET MVC [`Button`](http://help.syncfusion.com/aspnetmvc/button/overview# "Button") control. 
+Through `ButtonOptions` property of `Commands`, you can specify all the button options which are supported by Essential Studio ASP.NET MVC Button control. 
 
 The following code example describes the above behavior.
 
@@ -1039,9 +1040,9 @@ The following output is displayed as a result of the above code example.
 
 ### Custom buttons
 
-You can add custom button in the command column by specifying the Type property of Commands as "empty" or any other `string` instead of `enum` values.
+You can add custom button in the command column by specifying the `Type` property of `Commands` as `empty` or any other `string` instead of `enum` values.
 
-N> 1. For Type property you can assign either `string` value ("edit").
+N> 1. For `Type` property you can assign either `string` value (`edit`).
 
 N> 2. In command column you can add only buttons.
 
@@ -1108,7 +1109,7 @@ The following output is displayed as a result of the above code example.
 
 ## Column Chooser
 
-Column chooser contains all the columns which are defined in the [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns") property, using this you can control the visibility of columns in grid. You can prevent to show the particular column in column chooser by setting ShowInColumnChooser property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns") as `false`. It can be shown in the right corner of grid. To enable column chooser, ShowColumnChooser property as `true`. 
+Column chooser contains all the columns which are defined in the `Columns` property, using this you can control the visibility of columns in grid. You can prevent to show the particular column in column chooser by setting `ShowInColumnChooser` property of `Columns` as `false`. It can be shown in the right corner of grid. To enable column chooser, `ShowColumnChooser` property as `true`. 
 
 The following code example describes the above behavior.
 
@@ -1155,9 +1156,9 @@ The following output is displayed as a result of the above code example.
 
 ## Foreign Key Column
 
-Lookup data source can be bound to DataSource property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns"). Data `field' and `text` can be set using ForeignKeyField and ForeignKeyValue property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns").
+Lookup data source can be bound to `DataSource` property of `Columns`. Data `field` and `text` can be set using `ForeignKeyField` and `ForeignKeyValue` property of `Columns`.
 
-I> For foreign key column the sorting and grouping is based on ForeignKeyField instead of ForeignKeyValue.
+I> For foreign key column the sorting and grouping is based on `ForeignKeyField` instead of `ForeignKeyValue`.
 
 The following code example describes the above behavior.
 
@@ -1206,7 +1207,7 @@ The following output is displayed as a result of the above code example.
 
 ## Custom Attribute
 
-You can add custom attribute for particular column `td` element by using CustomAttributes property of the column.
+You can add custom attribute for particular column `td` element by using `CustomAttributes` property of the column.
 
 Based on custom attribute you can customize the style and appearance of the `td` element or handling Jquery functionalities. 
 
@@ -1226,7 +1227,7 @@ The following code example describes the above behavior.
                     col.Field("OrderID").Add();
                     col.Field("CustomerID").Add();
                     col.Field("EmployeeID").Add();
-                    col.Field("ShipCity").CustomAttributes(custom => { custom.AddAttribute("title","'{{:ShipCity}}'"); }).Add();
+                    col.Field("ShipCity").CustomAttributes(custom => { custom.AddAttribute("title","'{{"{{"}}:ShipCity {{}}}}'"); }).Add();
                     col.Field("ShipCountry").Add(); 
                 })
                 )
@@ -1256,7 +1257,7 @@ The following output is displayed as a result of the above code example.
 
 ## Displaying HTML content
 
-This will helps you to show actual HTML value in grid content and header. To disable html code, set DisableHtmlEncode property of [Columns](http://help.syncfusion.com/aspnetmvc/grid/columns "Columns") as true. 
+This will helps you to show actual HTML value in grid content and header. To disable html code, set `DisableHtmlEncode` property of `Columns` as true. 
 
 The following code example describes the above behavior.
 
@@ -1301,7 +1302,7 @@ The following output is displayed as a result of the above code example.
 
 ## Customize column
 
-You can customize the header and content of that particular column by CssClass property of the column.
+You can customize the header and content of that particular column by `CssClass` property of the column.
 
 The following code example describes the above behavior.
 
@@ -1363,9 +1364,9 @@ The following output is displayed as a result of the above code example.
 
 ## Type
 
-Used to define the type of the particular column data. If the Type property of Columns is not specified then its type is automatically defined based on the first row data of that column.
+Used to define the type of the particular column data. If the `Type` property of `Columns` is not specified then its type is automatically defined based on the first row data of that column.
 
-N> The Type is needed for filtering feature when first row of the data is "null" or "empty".
+N> The `Type` is needed for filtering feature when first row of the data is `null` or `empty`.
 
 The following code example describes the above behavior.
 
