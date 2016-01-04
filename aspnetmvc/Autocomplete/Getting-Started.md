@@ -28,7 +28,7 @@ AutoComplete controlwith search
 
 ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features like keyboard navigation with animations and flexible API’s. You can easily create the AutoCompleteTextbox widget by the following steps.
 
-1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://do.syncfusion.com/aspnetmvc/autocomplete/getting-started) Documentation.
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](/extension/aspnet-mvc-extension/overview) Documentation.
 2. Initialize the corresponding AutoComplete widget in the view page.
 
 
