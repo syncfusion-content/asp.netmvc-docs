@@ -1,40 +1,38 @@
 ---
 layout: post
 title: Searching with Grid widget for Syncfusion Essential MVC
-description: How to enable search opition and its functionalities
+description: How to enable search option and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
 --- 
 # Searching
 
-The grid has an option to search its content using the JavaScript method [`search`](http://help.syncfusion.com/js/api/ejgrid#methods:search "search") with search key as parameter. Also, it provides an option to integrate Search text box in grid toolbar, by adding `search` toolbar item in [`toolbarSetting.toolbarItems`](http://help.syncfusion.com/js/api/ejgrid#members:toolbarsettings-toolbaritems "toolbarSetting.toolbarItems") property.
+The grid has an option to search its content using the JavaScript method `search` with search key as parameter. Also, it provides an option to integrate Search text box in grid toolbar, by adding `Search` toolbar item in `ToolbarItems` property of `ToolbarSettings`.
 
 The following code example describes the above behavior.
 
-{% tabs %}
- 
-{% highlight CSHTML %}
+{% tabs %} 
+{% highlight razor %}
 
 	  @(Html.EJ().Grid<OrdersView>("Searching")
             .Datasource((IEnumerable<object>)ViewBag.datasource)
             .AllowPaging()
-            .ToolbarSettings(toolbar => { toolbar.ShowToolbar().ToolbarItems(items => { items.AddTool(ToolBarItems.Search); }); })
+            .ToolbarSettings(toolbar =>{ toolbar.ShowToolbar().ToolbarItems(items => { items.AddTool(ToolBarItems.Search); }); })
             .AllowSearching()           
             .Columns(col =>
             {
-                col.Field("OrderID").HeaderText("Order ID").Add();
-                col.Field("EmployeeID").HeaderText("Employee ID").Add();   
-			    col.Field("CustomerID").HeaderText("Customer ID").Add();
-		        col.Field("ShipCountry").HeaderText("Ship Country").Add(); 
-                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+			    col.Field("CustomerID").Add();
+		        col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
             })
-		)
-
+        )
 {% endhighlight  %}
-{% highlight C# %}
+{% highlight c# %}
 		
-		 namespace MVCSampleBrowser.Controllers
+	   namespace MVCSampleBrowser.Controllers
      	 {
           public partial class GridController : Controller
           {
@@ -46,7 +44,6 @@ The following code example describes the above behavior.
               }
           }
        }
-
 {% endhighlight  %}
 {% endtabs %}
 
@@ -57,15 +54,14 @@ The following output is displayed as a result of the above code example.
 
 ## Initial Searching
 
-While initializing the grid, there is an option to display only the searched data in grid. To perform initial searching, define `fields`, `operator`, `key` and `ignoreCase` in `searchSettings` property.
+While initializing the grid, there is an option to display only the searched data in grid. To perform initial searching, define `Fields`, `Operator`, `Key` and `IgnoreCase` in `SearchSettings` property.
 
- N> `key` value must be passed as `string`.
+ N> `Key` value must be passed as `string`.
 
 The following code example describes the above behavior.
 
-{% tabs %}
- 
-{% highlight CSHTML %}
+{% tabs %} 
+{% highlight razor %}
 
 	  @(Html.EJ().Grid<OrdersView>("Selection")
             .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -75,18 +71,17 @@ The following code example describes the above behavior.
 			.SearchSettings(col => { col.Fields(search => { search.Add("CustomerID"); }).Operator(Operator.Contains).Key("ra").IgnoreCase(false); })         
             .Columns(col =>
             {
-                col.Field("OrderID").HeaderText("Order ID").Add();
-                col.Field("EmployeeID").HeaderText("Employee ID").Add();   
-			    col.Field("CustomerID").HeaderText("Customer ID").Add();
-		        col.Field("ShipCountry").HeaderText("Ship Country").Add(); 
-                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Add();    
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+			    col.Field("CustomerID").Add();
+		        col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
             })
-		)
-
+        )
 {% endhighlight  %}
-{% highlight C# %}
+{% highlight c# %}
 		
-		 namespace MVCSampleBrowser.Controllers
+        namespace MVCSampleBrowser.Controllers
      	 {
           public partial class GridController : Controller
           {
@@ -96,9 +91,8 @@ The following code example describes the above behavior.
                 ViewBag.datasource = DataSource;
                 return View();
               }
-          }
-       }
-
+           }
+         }
 {% endhighlight  %}
 {% endtabs %}
 
@@ -109,20 +103,20 @@ The following output is displayed as a result of the above code example.
 
 List of supported operators in searching.
 
-<table colspan="1">
+<table>
  <tr>
 <td>
-ej.FilterOperators.equal</td></tr>
+Operator.Equal</td></tr>
 <tr>
 <td>
-ej.FilterOperators.notEqual</td></tr>
+Operator.NotEqual</td></tr>
 <tr>
 <td>
-ej.FilterOperators.startsWith</td></tr>
+Operator.StartsWith</td></tr>
 <tr>
 <td>
-ej.FilterOperators.endsWith</td></tr>
+Operator.EndsWith</td></tr>
 <tr>
 <td>
-ej.FilterOperators.contains</td></tr>
+Operator.Contains</td></tr>
 </table>
