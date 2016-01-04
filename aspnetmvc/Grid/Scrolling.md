@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Scrolling
 
-Scrolling can be enabled by setting `AllowScrolling`  as `true`. The height and width can be set to grid by using the properties `ScrollSettings.Height`  and `ScrollSettings.Width`  respectively. 
+Scrolling can be enabled by setting `AllowScrolling`  as `true`. The height and width can be set to grid by using the properties  `Height` and `Width` property of  `ScrollSettings`. 
 
  N> If `Width`  and `Height`  is not defined in the `ScrollSettings`  property then the horizontal and vertical scrollbar is enabled, only when the grid width exceeds the browser width.
 
@@ -59,7 +59,7 @@ The following output is displayed as a result of the above code example.
 
 ## Set Width and Height in pixel 
 
-To specify the `ScrollSettings.Width`  and `ScrollSettings.Height`  in pixel, by set the pixel value as integer. 
+To specify the `Width` and `Height` property of  `ScrollSettings` in pixel, by set the pixel value as integer. 
 
 The following code example describes the above behavior.
 
@@ -106,7 +106,7 @@ The following output is displayed as a result of the above code example.
 
 ## Set Width and Height in percentage
 
-To specify the `ScrollSettings.Width`  and `ScrollSettings.Height`  in percentage, by set the percentage value as string.
+To specify the `Width` and `Height` property of  `ScrollSettings`  in percentage, by set the percentage value as string.
 
 The following code example describes the above behavior.
 
@@ -122,7 +122,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
-	            col.Field("ShipCity").Add()
+	            col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Add();
         	    col.Field("ShipAddress").Add();
         	    col.Field("ShipPostalCode").Add();
@@ -169,7 +169,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();
                 col.Field("CustomerID").Add();
-                col.Field("ShipCity").Add()
+                col.Field("ShipCity").Add();
                 col.Field("ShipCountry").Add();
                 col.Field("ShipAddress").Add();
                 col.Field("ShipPostalCode").Add();
