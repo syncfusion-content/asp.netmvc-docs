@@ -1,550 +1,670 @@
 ---
 layout: post
-title: Filtering | Grid | ASP.NET MVC | Syncfusion
-description: filtering
+title: Filtering with Grid widget for Syncfusion Essential MVC
+description: How to enable filtering and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-
 # Filtering
 
-Filtering is used to filter particular or related records in Grid to review details of records. To enable filtering behavior in Grid you can add AllowFiltering property at Grid initialize. There are three types of filtering features in grid. They are
+Filtering helps to view particular or related records from dataSource which meets a given filtering criteria. To enable filter, set `AllowFiltering`property as`true`.   
 
-* Filter menu
-* Filter Bar
-* Excel styled menu
+The Grid supports three types of filter, they are
 
-## Filter Menu 
+1. Filter Bar
+2. Menu 
+3. Excel
 
+And also four types of filter menu is available in all filter types, they are
 
-After you enable Filter Menu in Grid, it shows filter menu to filter records. This menu contains filtering options based on column type.
+1. String 
+2. Numeric 
+3. Date 
+4. Boolean
 
-Filter menu types
+The corresponding filter menu is opened based on the column type.
 
-* String menu filtering 
-* Numeric menu filtering
-* Date menu filtering
-* Boolean menu filtering
+N>  1. Need to specify the `Type` of column, when first record data value is empty or null otherwise the filter menu is not opened. 
+N>  2. The default filter type is Filter bar, when `AllowFiltering` is enabled and `FilterType` is not set.
 
-Filter menus are a good UI based filtering option. It visibly denotes filtering option and is flexible to filter records. In String menu filtering, AutoComplete is used as default control to filter; in Numeric menu filtering, NumericTextbox is used as default control to filter. In Date menu filtering, DatePicker control is used as default control to filter and in Boolean menu filtering, CheckBox is used for filtering. 
-
+The following code example describes the above behavior.
 
 {% tabs %}
- 
-{% highlight CSHTML %}
 
-@(Html.EJ().Grid<EditableOrder>("Grid")
+{% highlight razor %}
 
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-      .AllowPaging()
-
-.AllowFiltering()
-
-      .FilterSettings(filter => { filter.FilterType(FilterType.Menu); })
-
-    )
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 {% endhighlight  %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult FilteringMenu()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-
-
-    }
-
-}
-
-
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-{% endtabs %} 
+    
+{% endtabs %}  
+
 The following output is displayed as a result of the above code example.
 
+![](filtering_images/filtering_img1.png)
 
 
-![](Filtering_images/Filtering_img1.png)
+## Menu Filter
 
-Filter menu
-{:.caption}
+You can enable menu filter by setting `FilterType` as `Menu` in `FilterSettings`
+
+There is an option to show or hide the additional filter options in the Menu by setting `ShowPredicate` as `true` or `false` in `FilterSettings` respectively.
+
+N> For `FilterType` property you can assign either `string` value ("Menu") or `enum` value (`Syncfusion.JavaScript.FilterType.Menu`).
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.FilterType(FilterType.Menu); })
+            .Columns(col =>
+              {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+             }))      
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](filtering_images/filtering_img2.png)
+
+Numeric Filter
+
+![](filtering_images/filtering_img3.png)
+
+String Filter
+
+![](filtering_images/filtering_img4.png)
+
+Date Filter
+
+![](filtering_images/filtering_img5.png)
+
+Boolean Filter
+
+
+## Excel-like filter
+
+You can enable excel menu by setting  `FilterType` as` Excel` in `FilterSettings` . The excel menu contains an option such as Sorting, Clear filter, submenu for advanced filtering.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.FilterType(FilterType.Excel); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](filtering_images/filtering_img6.png)
+
+
+Checkbox list generation:
+
+By default, the checkbox list is generated from distinct values of the filter column from dataSource which gives an option to search and select the required items.
+
+Also on checkbox list generation, if the number of distinct values are greater than 1000, then the excel filter will display only first 1000 values to ensure the best performance on rendering and searching. However this limit has been customized according to your requirement by setting `MaxFilterChoices` with required limit in integer.
+
+N> 1. Using excel filter events you can change the dataSource of the checkbox list. 
+N> 2. `Query` of checkbox list can also be changed using excel filter events.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.FilterType(FilterType.Excel).MaxFilterChoices(4); })
+            .Columns(col =>
+             {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+             }))      
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](filtering_images/filtering_img7.png)
+
+
+### Case Sensitivity
+
+To perform filter operation with case sensitive in excel styled filter menu mode by setting `EnableCaseSensitivity` as `true`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.FilterType(FilterType.Excel).EnableCaseSensitivity(true);  })
+            .Columns(col =>
+             {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+             }))      
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](filtering_images/filtering_img8.png)
+
 
 ## Filter Bar
 
-Filter bar is one of the types of filtering. It is otherwise called text filtering as filter bar working is based on text boxes. Through this you can filter records. Filter bars have expression to filter records. They are based on type of column. 
+'Filter bar' row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the `FilterType` as `FilterBar`.
 
-_List of Filter Bar Expressions_
+List of Filter bar Expressions:
 
-<table>
-<tr>
-<td rowspan = "4">
-Numeric column</td><td>
-> value</td><td rowspan = "4">
-To filter numeric column. You can use these expressions.</td></tr>
-<tr>
-<td>
-< value</td></tr>
-<tr>
-<td>
-= value</td></tr>
-<tr>
-<td>
-!= value</td></tr>
-<tr>
-<td>
-String</td><td>
-startsWith</td><td>
-By default, string filtering works starts with operator</td></tr>
-<tr>
-<td>
-Date</td><td>
-Equal</td><td>
-By default, date filter bar matches records with same date value</td></tr>
-<tr>
-<td>
-Boolean</td><td>
-Equal</td><td>
-Boolean filter bar works with either true or false.</td></tr>
-</table>
+You can enter the below filter expressions manually in the filter bar.
 
+ <table>
+        <tr>
+            <th>
+                Expression
+            </th>
+            <th>
+                Example
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Column Type
+            </th>
+        </tr>
+        <tr>
+            <td>
+                =
+            </td>
+            <td>
+                = value
+            </td>
+            <td>
+                Equal
+            </td>
+            <td rowspan="5">
+                Numeric
+            </td>
+        </tr>
+        <tr>
+            <td>
+                != 
+            </td>
+            <td>
+                != value
+            </td>
+            <td>
+                NotEqual
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                >
+            </td>
+            <td>
+                > value
+            </td>
+            <td>
+                GreaterThan
+            </td>
+          
+        </tr>
+        <tr>
+            <td>
+                <
+            </td>
+            <td>
+                < value
+            </td>
+            <td>
+                LessThan
+            </td>
+          
+        </tr>
+        <tr>
+            <td>
+                >=
+            </td>
+            <td>
+                >= value
+            </td>
+            <td>
+                GreaterThanOrEqual
+            </td>
+           >
+        </tr>
+        <tr>
+            <td>
+                <=
+            </td>
+            <td>
+                <= value
+            </td>
+            <td>
+                LessThanOrEqual
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                N/A
+            </td>
+            <td>
+                N/A
+            </td>
+            <td>
+                Always `StartsWith` operator will be used for string filter
+            </td>
+            <td>
+                String
+            </td>
+        </tr>
+        <tr>
+            <td>
+                N/A
+            </td>
+            <td>
+                N/A
+            </td>
+            <td>
+                Always `Equal` operator will be used for Date filter 
+            </td>
+            <td>
+                Date
+            </td>
+        </tr>
+        <tr>
+            <td>
+                N/A
+            </td>
+            <td>
+                N/A
+            </td>
+            <td>
+                Always `Equal` operator will be used for Boolean filter
+            </td>
+            <td>
+                Boolean
+            </td>
+        </tr>
+    </table>
+	
+	
+The following code example describes the above behavior.
 
 {% tabs %}
 
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<EditableOrder>("Grid")
-
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-      .AllowPaging()
-
-	 .AllowFiltering()
-
-      .FilterSettings(filter => { filter.FilterType(FilterType.FilterBar); })
-
-    )
-
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.FilterType(FilterType.FilterBar); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 {% endhighlight  %}
-{% highlight C# %}
 
+{% highlight c# %}
 
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult Filtering()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-
-
-    }
-
-}
-
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-
+    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
+![](filtering_images/filtering_img9.png)
 
 
-![](Filtering_images/Filtering_img2.png)
+Filter bar modes:
 
-Filter Bar
-{:.caption}
+This specifies the grid to start the filter action while typing in the filter bar or after pressing the enter key based on `FilterBarMode`.There are two types of `FilterBarMode`, they are
 
-## Excel styled menu
+1. OnEnter
+2. Immediate
 
-You can enable the Excel like filter menu by setting the FilterType as “excel” of the FilterSettings property. The Filter menu is displayed after clicking the filter icon in the column headers. 
+N> For `FilterBarMode` property you can assign either `string` value (OnEnter) or `enum` value (`Syncfusion.JavaScript.FilterBarMode.OnEnter`).
 
-The filter menu contains options such as Sorting, Clear filter, submenu for the advanced filter options, 
+Filter bar message:
 
-### Checkbox list
+The filter bar message is supported only for the `FilterType` as 'FilterBar'. The filtered data with column name is displayed in the grid pager itself. By default `ShowFilterBarStatus` is 'true'.
 
-The Checkbox list is available in the menu that contains the possible filter value for the column. It shows the list of possible filter values with the checkbox. The filter value can be selected by clicking the checkbox corresponding to that value. By clicking the Ok button, the column is filtered based on the values checked in the checkbox list. The SelectAll checkbox is also present in the checkbox list that allows either select or deselect all the checkboxes.
-
-![](Filtering_images/Filtering_img3.png)
-
-Checkbox list
-{:.caption}
-
-A Search box is available at the top of the check box list that is used to search the possible filter choices. The number of possible filter choices are restricted by the setting the MaxFilterChoices property of the FilterSettings. 
-
-### Advanced Filter
-
-The Submenu items in the filter menu provide the advanced filtering options for end users. When selecting a sub menu item, a separate dialog box opens and displays an advanced filter drop-down that lists the available filter operators for the respective filtering column. The filtering is performed by clicking the Ok button.
-
-
-
-![](Filtering_images/Filtering_img4.png)
-
-Advanced Filter
-{:.caption}
-
-![](Filtering_images/Filtering_img5.png)
-
-Custom Filter
-{:.caption}
-
+The following code example describes the above behavior.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight razor %}
 
-using MVCSampleBrowser.Models;
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowFiltering()
+            .FilterSettings(filter => { filter.ShowFilterBarStatus(true); })
+            .Columns(col =>
+             {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+{% endhighlight  %}
 
-using System;
+{% highlight c# %}
 
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /FilteringMenu/
-
-
-
-        public ActionResult FilteringMenu()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-
-
-    }
-
-}
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<EditableOrder>("Grid")
-
-      .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-      .AllowPaging()
-
-.AllowSorting()
-
-.AllowFiltering()
-
-      .FilterSettings(filter => { filter.FilterType(FilterType.Excel). MaxFilterChoices(100).EnableCaseSensitivity(false); })
-
-      .Columns(col =>
-
-       {
-
-         col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
-
-         col.Field("CustomerID").HeaderText("Customer ID").Add();
-
-         col.Field("OrderDate").HeaderText("Order Date"). Format("{0:MM/dd/yyyy}").Add();
-
-          col.Field("EmployeeID").HeaderText("Employee ID")
-
-             .TextAlign(TextAlign.Right).Add();
-
-          col.Field("ShipCity").HeaderText("Ship City").Add();
-
-          col.Field("Verified").HeaderText("Verified").Add();
-
-        })
-
-    .Render())
-
-
-
-{% endhighlight  %}
+    
 {% endtabs %}  
 
-
-## Filter operators
-
-Grid uses filter operators from ejDataManager, that are used at the time of filtering. Filter operators are used to denote filtering type.
-
-_List of Column type and Filter operators_
-
-<table>
-<tr>
-<th>
-Column type</th><th>
-Filter operators</th></tr>
-<tr>
-<td>
-Number</td><td>
-ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOperators.lessThanej.FilterOperators.lessThanOrEqualej.FilterOperators.equal</td></tr>
-<tr>
-<td>
-String</td><td>
-ej.FilterOperators.startsWithej.FilterOperators.endsWithej.FilterOperators.containsej.FilterOperators.equalej.FilterOperators.notEqual</td></tr>
-<tr>
-<td>
-Boolean</td><td>
-ej.FilterOperators.equalej.FilterOperators.notEqual</td></tr>
-<tr>
-<td>
-Date</td><td>
-ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOperators.lessThanej.FilterOperators.lessThanOrEqualej.FilterOperators.equal</td></tr>
-</table>
-
-## External Filtering
-
-Grid contains an API to do filtering dynamically after Grid initialize, without the use of User Interaction. It is useful to do filtering dynamically.
-
-{% tabs %}
- 
-{% highlight CSHTML %}
-
-<div>
-
-    <div class="row">
-
-        <div class="col-md-1">
-
-            Columns
-
-        </div>
-
-        <div class="col-md-1">
-
-            <select id="columns">
-
-                <option value="OrderID">Order ID</option>
-
-                <option value="CustomerID">Customer ID</option>
-
-                <option value="EmployeeID">Employee ID</option>
-
-                <option value="ShipCity">Ship City</option>
-
-                <option value="Verified">Verified</option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-    <br />
-
-    <div class="row">
-
-        <div class="col-md-1">
-
-            Operator
-
-        </div>
-
-        <div class="col-md-1">
-
-            <select id="operator">
-
-                <option value="contains">Contains</option>
-
-                <option value="endswith">Endswith</option>
-
-                <option value="equal">Equal</option>
-
-                <option value="greaterthan">Greaterthan</option>
-
-                <option value="greaterthanorequal">GreaterThanOrEqual</option>
-
-                <option value="lessthan">LessThan</option>
-
-                <option value="lessthanorequal">LessThanOrEqual</option>
-
-                <option value="notequal">NotEqual</option>
-
-                <option value="startswith">StartsWith</option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-    <br />
-
-    <div class="row">
-
-        <div class="col-md-1">
-
-            Value
-
-        </div>
-
-        <div class="col-md-1">
-
-            <input type="text" class="e-ejinputtext" id="value" style="width: 143px;height:26px" />
-
-        </div>
-
-    </div>
-
-    <br />
-
-    <div class="row">
-
-        <div class="col-md-2">
-
-            <input type="button" id="filter" value="filter" />
-
-        </div>
-
-    </div>
-
-
-
-</div>
-
-
-@(Html.EJ().Grid<EditableOrder>("Grid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowPaging()
-
-        .AllowFiltering()
-
-        .FilterSettings(filter => { filter.FilterType(FilterType.Menu); })
-
-    )
-
-    }
-
-
-
-@(Html.EJ().DropDownList("operator"))
-
-@(Html.EJ().DropDownList("columns"))
-
-@(Html.EJ().Button("filter"))
-
-{% endhighlight  %}
-{% highlight js %}
-
-<script>
-
-    $("#filter").ejButton({
-
-        click: function (args) {
-
-            $("#Grid").ejGrid("filterColumn", $("#columns").ejDropDownList("getSelectedValue"), $("#operator").ejDropDownList("getSelectedValue"), $("#value").val(), "and");
-
-        }
-
-    });
-
-
-
-</script>
-{% endhighlight  %}
-
-{% highlight C# %}
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Filtering/
-
-
-
-        public ActionResult Filtering()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-
-
-    }
-
-}
-
-{% endhighlight  %}
-{% endtabs %} 
 The following output is displayed as a result of the above code example.
 
+![](filtering_images/filtering_img10.png)
 
 
-![](Filtering_images/Filtering_img6.png)
+## Filter Operators
 
-Dynamic Filtering
-{:.caption}
+The grid controls uses filter operators from `DataManager`, which are used at the time of filtering.
+
+List of Column type and Filter operators
+
+<table>
+        <tr>
+            <th>
+                Column Type
+            </th>
+            <th>
+                Filter Operators
+            </th>
+        </tr>
+        <tr>
+            <td rowspan="6">
+                Number
+            </td>
+            <td>
+                FilterOperatorType.GreaterThan
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.GreaterThanOrEqual
+            </td>
+        </tr>
+        <tr>
+       
+            <td>
+                FilterOperatorType.LessThan
+            </td>
+        </tr>
+        <tr>
+            
+            <td>
+                FilterOperatorType.LessThanOrEqual
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.Equal
+            </td>
+        </tr>
+        <tr>
+          >
+            <td>
+                FilterOperatorType.NotEqual
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="5">
+                String
+            </td>
+            <td>
+                FilterOperatorType.StartsWith
+            </td>
+        </tr>
+        <tr>
+          
+            <td>
+                FilterOperatorType.EndsWith
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.Contains
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.Equal
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.NotEqual
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                Boolean
+            </td>
+            <td>
+                FilterOperatorType.Equal
+            </td>
+        </tr>
+        <tr>
+            
+            <td>
+                FilterOperatorType.NotEqual
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="6">
+                Date
+            </td>
+            <td>
+                FilterOperatorType.GreaterThan
+            </td>
+        </tr>
+        <tr>
+            
+            <td>
+                FilterOperatorType.GreaterThanOrEqual
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.LessThan
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.LessThanOrEqual
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                FilterOperatorType.Equal
+            </td>
+        </tr>
+        <tr>
+          
+            <td>
+                FilterOperatorType.NotEqual
+            </td>
+        </tr>
+    </table>
 
