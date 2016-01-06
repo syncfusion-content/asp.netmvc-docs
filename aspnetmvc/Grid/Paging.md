@@ -47,7 +47,7 @@ The code snippet to enable paging is follows.
  
  The following output is displayed as a result of the above code example.
  
- ![](paging_images/Paging_img1.png)
+ ![](Paging_images/Paging_img1.png)
 
 ## Pager with query string
 
