@@ -49,7 +49,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Searching_images/searching_img1.png)
+![](searching_images/searching_img1.png)
 
 
 ## Initial Searching
@@ -98,7 +98,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Searching_images/searching_img2.png)
+![](searching_images/searching_img2.png)
 
 
 List of supported operators in searching.
