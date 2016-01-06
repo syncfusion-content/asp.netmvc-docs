@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping with Grid widget for Syncfusion Essential MVC
-description:How to enable grouping and its functionalities
+description: How to enable grouping and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
