@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Selection with Grid widget for Syncfusion Essential MVC
+title: Selection with Grid widget for Syncfusion Essential MVC
 description: How to enable selection and its functionalities
 platform: ejmvc
 control: Grid
@@ -69,7 +69,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example
 
-![](selection_images/selection_img1.png)
+![](Selection_images/Selection_img1.png)
 
 
 ## Cell Selection
