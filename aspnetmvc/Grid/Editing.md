@@ -1608,6 +1608,8 @@ The following code example describes the above behavior.
         }
 {% endhighlight %}
 
+{% endtabs %} 
+
 Please refer the below image to know about the action parameter
 
 ![](Editing_images/Editing_img24.png)
@@ -1660,6 +1662,8 @@ The following code example describes the above behavior.
 	    }
 
 {% endhighlight %}
+
+{% endtabs %}
 
 Please refer the below image for more information about batch paramaters
 
