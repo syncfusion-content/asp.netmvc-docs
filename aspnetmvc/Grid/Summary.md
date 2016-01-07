@@ -61,7 +61,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ## Supported Aggregates 
 
-Following are the supported list of [aggregates](http://help.syncfusion.com/js/datamanager/summary#) 
+Following are the supported list of aggregates 
 
 * Sum
 * Average
