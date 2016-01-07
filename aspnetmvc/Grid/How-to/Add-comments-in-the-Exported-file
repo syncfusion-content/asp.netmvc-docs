@@ -35,7 +35,7 @@ Using the Range property and AddComment method of the XlsIO IRange Class, we wil
         })) 
         
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
     public partial class GridController : Controller
     {
@@ -90,7 +90,7 @@ We can add comments to the word document using the AppendComment method in the W
         })) 
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
     public partial class GridController : Controller
     {
@@ -146,7 +146,7 @@ We can add comments to a pdf documents using the annotation support provided in 
         })) 
         
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
     public partial class GridController : Controller
     {
