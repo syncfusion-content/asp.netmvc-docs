@@ -17,7 +17,7 @@ Using the Range property and AddComment method of the XlsIO IRange Class, we wil
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -72,7 +72,7 @@ We can add comments to the word document using the AppendComment method in the W
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -128,7 +128,7 @@ We can add comments to a pdf documents using the annotation support provided in 
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
