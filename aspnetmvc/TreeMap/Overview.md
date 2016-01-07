@@ -1,7 +1,7 @@
 ---
 layout: post
-title: TreeMap | TreeMap | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview of Syncfusion treeMap control for ASP.NET MVC
+description: overview of treeMap control
 platform: ejmvc
 control: TreeMap
 documentation: ug
@@ -13,11 +13,11 @@ Essential TreeMap for JavaScript is ideal for visualizing large amounts of data.
 
 ## Key Features
 
-* Levels  - TreeMap levels are used to define levels of various flat data and hierarchical data collection.
-* Layout - Layouts such as Squarified, SliceAndDiceAuto, SliceAndDiceHorizontal and SliceAndDiceVertical determines the visual representation of nodes belonging to all the treemap levels in TreeMap.
-* Visualization for Colors - Easy customization options is provided to customize the colors of the leaf nodes of TreeMap.
+* `Levels`  - TreeMap levels are used to define levels of various flat data and hierarchical data collection.
+* `Layout` - Layouts such as Squarified, SliceAndDiceAuto, SliceAndDiceHorizontal and SliceAndDiceVertical determines the visual representation of nodes belonging to all the treemap levels in TreeMap.
+* `Visualization for Colors` - Easy customization options is provided to customize the colors of the leaf nodes of TreeMap.
 
-### Use Case Scenarios
+## Use Case Scenarios
 
 TreeMap is used to represent large or complex data sets in various applications, such as:
 

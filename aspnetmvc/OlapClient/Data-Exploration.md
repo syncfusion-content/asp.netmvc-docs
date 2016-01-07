@@ -23,15 +23,14 @@ The above filter illustrates that the members France and Germany, along with New
 
 The Filtering tab in the Sorting and Filtering dialog box of OlapClient provides the options to specify custom filters on the multidimensional data. It enables the user to filter the rows and columns of the selected Measure.
 
-* Column Filter - Filters the column in which all of the row items fails to satisfy the filter condition.
-* Row Filter - Filters the row in which all of the column items fails to satisfy the filter condition.
+* **Column Filter** - Filters the column in which all of the row items fails to satisfy the filter condition.
+* **Row Filter** - Filters the row in which all of the column items fails to satisfy the filter condition.
 
 Sorting and Filtering dialog box for rows and columns are opened by clicking the corresponding icon in the toolbar.
 
-![](Data-Exploration_images/filterbyvalue.png)
-
 ![](Data-Exploration_images/columnfilter.png)
 
+![](Data-Exploration_images/filterbyvalue.png)
 
 The following screenshot displays the Filtering tab in Sorting and Filtering Dialog box.  
 

@@ -1,98 +1,76 @@
 ---
 layout: post
-title: Enable Persistence | Grid | ASP.NET MVC | Syncfusion
-description: enable persistence
+title: State Persistence | Grid | ASP.NET MVC | Syncfusion
+description: How to persist grid state across page refresh
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Enable Persistence
+# State Persistence 
 
-EnablePersistence is used to maintain the current state of the Grid model. When you refresh the page, the current grid state is stored in localStorage and it renders from stored model. 
+State Persistence is to maintain the grid state in browser's [local storage](http://www.w3schools.com/html/html5_webstorage.asp#) even if browser refresh or move to next page. State persistence stores Grid's model object in local storage while defining `enablePersistence` as true. 
 
+I>  [localstorage](http://www.w3schools.com/html/html5_webstorage.asp#) is not supported below IE9 then grid state persistence technique is fallback to [cookie](http://www.w3schools.com/js/js_cookies.asp#).
 
-{% tabs %}
+## List of properties are not Persisted by default
 
-{% highlight CSHTML %}
+The following properties are not included while maintaining Grid state in local storage to keep localStorage compact.
 
-@(Html.EJ().Grid<OrdersView>("StateMaintenance")
+* Query
+* isEdit
+* toolbarClick
+* queryCellInfo
+* mergeCellInfo
+* currentViewData
+* enableAltRow
+* enableRTL 
+* contextClick 
+* contextOpen
+* rowDataBound
+* rowTemplate
+* detailsDataBound
+* detailsTemplate
+* childGrid 
+* summaryRows 
+* toolbarSettings
+* editSettings
+* allowMultiSorting 
+* enableAutoSaveOnSelectionChange 
+* locale 
+* allowScrolling 
+* allowCellMerging
+* allowTextWrap 
+* cssClass 
+* dataSource 
+* groupSettings.enableDropAreaAnimation 
+* enableRowHover 
+* showSummary 
+* allowGrouping
+* enableHeaderHover 
+* allowKeyboardNavigation 
+* scrollSettings.frozenRows 
+* scrollSettings.frozenColumns 
+* enableTouch 
+* editSettings.rowPosition 
+* editSettings.showAddNewRow 
+* contextMenuSettings.enableContextMenu
 
-.Datasource((IEnumerable<object>)ViewBag.datasource1)
-
-.AllowSorting()
-
-.AllowGrouping()
-
-.EnableAltRow(true)
-
-.AllowPaging()
-
-.EnablePersistence(true)
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(65).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Format("{0:C}").Add();
-
-	col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
-
-})
-
-)
-{% endhighlight  %}
-
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /StateMaintenance/
+I> The given excluded properties can be included in persist state using `_ignoreOnPersist` in grid prototype. 
 
 
 
-        public ActionResult StateMaintenance()
+## Accessing currently stored state
 
-        {
+Persisted state can be accessed through local storage using corresponding key name. Key name is the combination of plugin name and control id.
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+{% highlight js %}
+var gridStateString = window.localStorage.ejGridGrid; // grid state as string
 
-            ViewBag.dataSource1 = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
+var gridStateObject = JSON.parse(window.localStorage.ejGridGrid);//grid state as object
 
 {% endhighlight %}
 
-{% endtabs %} 
 
-
-The following output is displayed as a result of the above code example.
-
-![](Enable-Persistence_images/Enable-Persistence_img1.png)
-
-EnablePersistence
-{:.caption}
+I> In the above example, "ejGrid" is plugin name and "Grid" is control id.        
 

@@ -13,7 +13,7 @@ documentation: ug
 
 This section covers the information required to create a simple OlapChart bound to OLAP datasource.
 
->**NOTE: ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.**
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ###Project Initialization
 
@@ -21,9 +21,10 @@ Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name th
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
-Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select Add Reference. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
+Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
 * Microsoft.AnalysisServices.AdomdClient.dll
+* Syncfusion.Compression.Base.dll
 * Syncfusion.Linq.Base.dll
 * Syncfusion.Olap.Base.dll
 * Syncfusion.EJ.dll
@@ -48,22 +49,22 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-12.1300.0.43</td><td>    
-12.1350.0.43</td><td>
+{{ site.mvc3releaseversion }}</td><td>    
+{{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-12.1400.0.43</td><td>    
-12.1400.0.43</td><td>
+{{ site.mvc4releaseversion }}</td><td>    
+{{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-12.1500.0.43</td><td>    
-12.1450.0.43</td><td>
+{{ site.mvc5releaseversion }}</td><td>    
+{{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
 </tr>
@@ -75,16 +76,17 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 <compilation debug="true" targetFramework="4.5">
     <assemblies> 
- 	 	…… 
+        …… 
         ……
-        <add assembly="Syncfusion.EJ, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Olap, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Linq.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Olap.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Pdf.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.XlsIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Olap, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
     </assemblies>
 </compilation>
 
@@ -105,7 +107,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -135,16 +137,16 @@ The scripts and style sheets that are mandatorily required to render OlapChart w
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder**.
     
 {% highlight html %}
 
 <head>
-    <link href="http://cdn.syncfusion.com/13.3.0.7/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
-    <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 </head>
 
 {% endhighlight %}
@@ -184,9 +186,9 @@ N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OlapChart". If WCF
 
 To add a WebAPI controller in an existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `OlapChartController.cs`, click Add.
 
-Now, WebAPI controller is added to the application successfully containing the file **“OlapChartController.cs”**.
+Now, WebAPI controller is added into the application successfully with the file **“OlapChartController.cs”**.
 
-N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ that is mandatory. For example, in this demo the controller is named as “OlapChartController”.
+N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ which is mandatory. For example, in this demo the controller is named as “OlapChartController”.
 
 Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `OlapChartController.cs` file.
 
@@ -208,9 +210,6 @@ The following are the list of namespaces to be added on top of the main class in
 
 {% highlight c# %}
 
-using Syncfusion.JavaScript.Olap;
-using Syncfusion.Olap.Manager;
-using Syncfusion.Olap.Reports;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -220,6 +219,9 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using System.Web.Script.Serialization;
+using Syncfusion.JavaScript.Olap;
+using Syncfusion.Olap.Manager;
+using Syncfusion.Olap.Reports;
 
 namespace OlapChartDemo
 {
@@ -233,7 +235,7 @@ namespace OlapChartDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, OlapChart and JavaScriptSerializer instances are created immediately inside the main class in OlapChartController.cs file.
+Now, the connection string to connect OLAP Cube, OlapChart and JavaScriptSerializer instances are created immediately inside the main class in `OlapChartController.cs` file.
 
 {% highlight c# %}
 
@@ -251,7 +253,7 @@ namespace OlapChartDemo
 
 **Service methods in WebAPI Controller**
 
-Define the service methods inside OlapChartController class, found inside `OlapChartController.cs` file, created while adding WebAPI Controller Class to the Application.
+Define the service methods inside OlapChartController class, found inside `OlapChartController.cs` file, created while adding WebAPI Controller Class to the application.
 
 {% highlight c# %}
 

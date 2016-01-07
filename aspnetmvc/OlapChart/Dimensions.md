@@ -3,7 +3,7 @@ layout: post
 title: Dimensions | OLAPChart | ASP.NET MVC | Syncfusion
 description: dimensions
 platform: ejmvc
-control: OLAP Chart
+control: OlapChart
 documentation: ug
 ---
 

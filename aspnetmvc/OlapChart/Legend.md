@@ -64,7 +64,7 @@ You can align the legend to center, far and near based on its position in the Ch
 {% highlight CSHTML %}
 
 //Aligning the legend near to the Chart
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Shape(ChartShape.Star).Alignment(TextAlignment.Near))
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Alignment(TextAlignment.Near))
 
 {% endhighlight %}
 
@@ -88,7 +88,7 @@ By using the `Border` option in legend, you can customize border color and width
 {% highlight CSHTML %}
 
 //Setting border color and width to legend
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Border(border => border.Color("red").Width(2)))
+@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Border(border => border.Color("#FFC342").Width(2)))
 
 {% endhighlight %}
 

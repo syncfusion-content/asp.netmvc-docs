@@ -108,7 +108,7 @@ Keywords</th><th>
 Values</th></tr>
 <tr>
 <td>
-Values</td><td>
+DeferUpdate</td><td>
 "Différer Mise à jour"</td></tr>
 <tr>
 <td>
@@ -118,6 +118,10 @@ MDXQuery</td><td>
 <td>
 Column</td><td>
 "Colonne"</td></tr>
+<tr>
+<td>
+Row</td><td>
+"Rangée"</td></tr>
 <tr>
 <td>
 Slicer</td><td>
@@ -168,7 +172,7 @@ ToggleAxis</td><td>
 "Basculer Axis"</td></tr>
 <tr>
 <td>
-"Basculer Axis"</td><td>
+"ExportToExcel"</td><td>
 "Exporter vers Excel"</td></tr>
 <tr>
 <td>
@@ -194,6 +198,10 @@ Chart</td><td>
 <td>
 OK</td><td>
 "Bien"</td></tr>
+<tr>
+<td>
+Cancel</td><td>
+"Annuler"</td></tr>
 <tr>
 <td>
 MeasureEditor</td><td>

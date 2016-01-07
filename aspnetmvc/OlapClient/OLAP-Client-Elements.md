@@ -1,13 +1,13 @@
 ---
 layout: post
-title: OLAP Client Elements | OLAPClient | ASP.NET MVC | Syncfusion
-description: olap client :elements 
+title: OlapClient Elements | OLAPClient | ASP.NET MVC | Syncfusion
+description: OlapClient :elements 
 platform: ejmvc
 control: OLAPClient
 documentation: ug
 ---
 
-# OLAP Client: Elements 
+# OlapClient: Elements
 
 ## Cube Selector
 
@@ -170,7 +170,7 @@ Member Editor is a dialog which displays the members of the current hierarchy in
 
 ![](OLAP-Client-Elements_images/member editor.png)
 
-The “Check All” and “Uncheck All” option in the dialog lets the user to select and unselect entire nodes for filtering. For more details, about filtering, [click here].
+The “Check All” and “Uncheck All” option in the dialog lets the user to select and unselect entire nodes for filtering. For more details, about filtering, [click here](http://help.syncfusion.com/aspnetmvc/olapclient/data-exploration#filtering-by-member).
 
 ## Toolbar
 
