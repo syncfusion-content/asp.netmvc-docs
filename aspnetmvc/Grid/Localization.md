@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization and localization with Grid widget for ASP.NET MVC | Grid | ASP.NET MVC | Syncfusion
+title: Globalization and Localization with Grid widget for ASP.NET MVC | Grid | ASP.NET MVC | Syncfusion
 description: How to use globalization and localization 
 platform: ejmvc
 control: Grid
