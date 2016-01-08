@@ -13,7 +13,7 @@ You need to use `print()` method from Grid instance to print the Grid. You can a
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 
@@ -94,7 +94,7 @@ By default, the Grid can be print from toolbar. To print from external button ac
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 <button id="print">Print</button>
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
@@ -180,7 +180,7 @@ By default, the Grid will print all records. To print current page, you need to 
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 
