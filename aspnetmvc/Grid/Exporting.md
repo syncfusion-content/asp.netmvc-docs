@@ -9,11 +9,11 @@ documentation: ug
 
 # Exporting
 
-`Exporting` feature provides support to export Grid data into excel, word and pdf files. To export the grid, `export` javascript method should be called with export action as parameter. To make it work from grid tool bar, `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using `ToolbarItems` property of `ToolbarSettings` proeprty which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is
+`Exporting` feature provides support to export Grid data into excel, word and pdf files. To export the grid, `export` javascript method should be called with export action as parameter. To make it work from grid tool bar, `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -78,7 +78,7 @@ documentation: ug
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
@@ -92,7 +92,7 @@ documentation: ug
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron");
 
@@ -106,7 +106,7 @@ documentation: ug
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
@@ -132,7 +132,7 @@ Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, wh
 
 ## Support Export Types
 
-Currently server heleper function allows following three types of exporting.
+Currently server helper function allows following three types of exporting.
 
     1.  Word
     2.  Excel
@@ -140,11 +140,11 @@ Currently server heleper function allows following three types of exporting.
 
 ##  Server side handlers
 
-In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter, you need to serialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, pdf and word documents.
+In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter, you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, pdf and word documents.
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -209,7 +209,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
@@ -223,7 +223,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron");
 
@@ -237,7 +237,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
@@ -249,7 +249,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 {% endtabs %} 
 
-On Exporting the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for Pdf Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the default routing path is ~/Home/ExportToExcel.
+On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for Pdf Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the default routing path is ~/Home/ExportToExcel.
 
 
 
@@ -259,7 +259,7 @@ On Exporting the default routing path to server-side that contains the action na
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -332,7 +332,7 @@ On Exporting the default routing path to server-side that contains the action na
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
@@ -346,7 +346,7 @@ On Exporting the default routing path to server-side that contains the action na
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
         
 		exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron");
 
@@ -360,7 +360,7 @@ On Exporting the default routing path to server-side that contains the action na
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+		GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 
 		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
@@ -378,7 +378,7 @@ In control action method you are able to export all the grids available in curre
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<EmployeeView>("Grid")
     .Datasource((System.Data.DataTable)ViewBag.datasource1)
@@ -402,7 +402,6 @@ In control action method you are able to export all the grids available in curre
     )
 
 {% endhighlight  %}
-{% highlight C# %}
 
  {% highlight c# %}
 
@@ -418,7 +417,7 @@ In control action method you are able to export all the grids available in curre
 	IWorkbook book = null;
 	foreach(string gridProperty in GridModel)
 	{
-		GridProperties gridProp = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), gridProperty);
+		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
 		if (initial)
 		{
 			book = exp.Export(gridProp, EmployeeData, "Export.xlsx", ExcelVersion.Excel2010, true, true, "flat-saffron", true);
@@ -445,7 +444,7 @@ In control action method you are able to export all the grids available in curre
 	bool initial = true;;
 	foreach(string gridProperty in GridModel)
 	{
-		GridProperties gridProp = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), gridProperty);
+		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
 		if (initial)
 		{
 			document = exp.Export(gridProp, EmployeeData, "Export.docx", true, true, "flat-saffron", true);
@@ -471,7 +470,7 @@ In control action method you are able to export all the grids available in curre
 	bool initial = true;
 	foreach(string gridProperty in GridModel)
 	{
-		GridProperties gridProp = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), gridProperty);
+		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
 		if (initial)
 		{
 			document = exp.Export(gridProp, EmployeeData, "Export.pdf", true, true, "flat-saffron", true);
@@ -492,7 +491,7 @@ In control action method you are able to export all the grids available in curre
 
 You can export required grids in single file using `ej.Grid.exportAll` method. This method can be used with export action and array of jquery selector of grid which need to be export. The code snippet for it is
 
-{% highlight JS %}
+{% highlight js %}
 
     $('#exportAll').click(function(){
 			ej.Grid.exportAll('MultipleExportToExcel',['#Grid1', '#Grid2']);
@@ -534,7 +533,7 @@ On server before calling the `Export` function, the data source should be proces
     {
 	ExcelExport exp = new ExcelExport();
 	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+	GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 	var dataSource = new DataOperations().Execute(GridModel, DataSource);
 	exp.Export(properties, dataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
@@ -544,7 +543,7 @@ On server before calling the `Export` function, the data source should be proces
     {
 	WordExport exp = new WordExport();
 	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+	GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 	var dataSource = new DataOperations().Execute(GridModel, DataSource);
 	exp.Export(properties, dataSource, "Export.docx", false, false, "flat-saffron");
     }
@@ -552,7 +551,7 @@ On server before calling the `Export` function, the data source should be proces
     {
 	PdfExport exp = new PdfExport();
 	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+	GridProperties properties = (GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
 	var dataSource = new DataOperations().Execute(GridModel, DataSource);
 	exp.Export(properties, dataSource, "Export.pdf", false, false, "flat-saffron");
     }
@@ -612,7 +611,7 @@ Also, it has `none` option which will export the grid without any theme.  The de
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public partial class GridController : Controller
 
@@ -625,7 +624,7 @@ public partial class GridController : Controller
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties) Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+		GridProperties obj =(GridProperties) DeserializeToModel(typeof(GridProperties),GridModel);
 
 		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "none");
 
@@ -639,7 +638,7 @@ public partial class GridController : Controller
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties) Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+		GridProperties obj =(GridProperties) DeserializeToModel(typeof(GridProperties),GridModel);
 
 		exp.Export(obj, DataSource, "Export.docx", false, false, ExportTheme.FlatSaffron);
 
@@ -653,7 +652,7 @@ public partial class GridController : Controller
 
 		var DataSource = new NorthwindDataContext().OrdersViews.ToList();
 
-		GridProperties obj =(GridProperties) Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),GridModel);
+		GridProperties obj =(GridProperties) DeserializeToModel(typeof(GridProperties),GridModel);
 
 		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
@@ -675,7 +674,7 @@ public partial class GridController : Controller
 
 {% endhighlight %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -791,7 +790,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -830,7 +829,7 @@ The background color of the alternative row of the grid content</td></tr>
 })) 
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 public partial class GridController : Controller
 
@@ -882,7 +881,7 @@ public partial class GridController : Controller
 
 	{
 
-		GridProperties gridProp = Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties),gridProperty);
+		GridProperties gridProp = DeserializeToModel(typeof(GridProperties),gridProperty);
 
 		AutoFormat auto = new AutoFormat();
 
@@ -934,7 +933,7 @@ public partial class GridController : Controller
 
 ## Exporting server events
 
-`Exporting` feature supports server side event handler. You can handle server side event while exporting grid to various files such as Excel,Pdf and Word. The various server side events available in Exporting and its arguement types are listed in the following table.
+`Exporting` feature supports server side event handler. You can handle server side event while exporting grid to various files such as Excel, Pdf and Word. The various server side events available in Exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
@@ -1017,11 +1016,11 @@ It returns the current row of pdf.
 </table>
 
 
-You can customize the particular cell or particula row of exporting files using server events. The code snippet for this is
+You can customize the particular cell or particular  row of exporting files using server events. The code snippet for this is
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
@@ -1060,7 +1059,7 @@ You can customize the particular cell or particula row of exporting files using 
 })) 
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 
 public partial class GridController : Controller
 
@@ -1070,7 +1069,7 @@ public partial class GridController : Controller
     {
             ExcelExport exp = new ExcelExport();
             var DataSource = new NorthwindDataContext().EmployeeViews.Take(100).ToList(); 
-            GridProperties obj =(GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            GridProperties obj =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
             obj.ServerExcelQueryCellInfo = QueryCellInfo;
             exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
     }

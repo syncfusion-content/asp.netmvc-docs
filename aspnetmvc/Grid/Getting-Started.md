@@ -20,7 +20,7 @@ The following steps explain creating first grid with an empty datasource.
 1.  Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentationt](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 2.  Add a Grid control in View file with an empty datasource as like as follows. In `Columns` definition, the `TextAlign` property allows you to align text of the columns, the `Width` property is used to define width of the columns and `Format` property allows you to format the particular columns value.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 	
     @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -52,7 +52,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 2.	Assign the remote service URL to `DataSource` property of Grid control to bind remote data with grid.
 3.	You can retrieve the data from another domain using `CrossDomain` property, and also you can load all the data to grid on initial rendering using `Offline` property.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
 @(Html.EJ().Grid<object>("FlatGrid")
@@ -85,7 +85,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 [`Paging`](http://help.syncfusion.com/aspnetmvc/grid/paging) feature can be enabled by `AllowPaging` property of Grid control. This adds the pager in the bottom of the grid, using that pager you can display the grid records in paged view. The page size can be customized using `PageSize' property
 `PageSettings` property.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -116,7 +116,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 [`Filtering`](http://help.syncfusion.com/aspnetmvc/grid/filtering) feature in Grid is used to facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. Filtering feature can be enabled by AllowFiltering property. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using `FilterType` property of FilterSettings.
 
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
     @(Html.EJ().Grid<object>("FlatGrid")  .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
@@ -154,7 +154,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 ['Grouping'](http://help.syncfusion.com/aspnetmvc/grid/grouping) feature in Grid is used to consolidate Grid data into groups. Grouping allows the categorization of records based on specified columns. You can enable grouping feature by `AllowGrouping` property. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in `GroupedColumns` property of `GroupSettings` property.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
@@ -196,7 +196,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 The following code example shows the option to enable group summary.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
     @(Html.EJ().Grid<object>("FlatGrid")
