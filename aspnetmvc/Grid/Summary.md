@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summary | Grid | ASP.NET MVC | Syncfusion
-description: summary 
+title: Summary with Grid widget for EJMVC
+description: How to enable summary and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
@@ -9,62 +9,30 @@ documentation: ug
 
 # Summary 
 
-Summary is a key feature of Grid that is used to aggregate a particular column. This is useful to analyse the details of a particular column. It has the following types:
+Summary rows visibility can be controlled by `ShowSummary` property and it can be added to grid by using `SummaryRow` array property. The following code example describes the above behavior.
 
-* Sum
-* Average 
-* Count
-* Minimum
-* Maximum
-* Custom
-
-## Default Summary
-
-
-There are some default summary types available for basic summary formula. The following code example is for Default Summary Types.
 
 {% tabs %}
 
 {% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+	})
+	.AllowPaging()
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+		col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.ShowSummary()
-
-.AllowPaging()
-
-.PageSettings(page => { page.PageSize(5); })
-
-.SummaryRow(row =>
-
-{
-
-	row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
-
-	row.Title("Average").SummaryColumns(col => { col.SummaryType(SummaryType.Average).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
-
-})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
-
-	col.Field("ShipName").HeaderText("Ship Name").Width(110).Add();
-
-	col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
-
-})
-
+	})
 )
 
 {% endhighlight %}
@@ -73,465 +41,387 @@ There are some default summary types available for basic summary formula. The fo
 namespace SyncfusionMvcApplication3.Controllers
 
 {
-
     public class HomeController : Controller
-
     {
-
         public ActionResult Index()
-
         {
-
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
             ViewBag.datasource = DataSource;
-
             return View();
 
         }
-
     }
-
 }
-
 
 
 {% endhighlight  %}
 {% endtabs %} 
 
-![](Summary_images/Summary_img1.png)
+![](Summary_images/summaryGrid_img1.png)
 
-Summary
-{:.caption}
+## Supported Aggregates 
 
-## Custom Summary by String
+Following are the supported list of aggregates 
 
-This property helps you to create custom summary formula for summary. The following code example is for custom summary using Essential JavaScript.
+* Sum
+* Average
+* Maximum
+* Minimum
+* False Count
+* True Count
 
-{% tabs %}
+### Sum, Average, Maximum and minimum
 
 
-{% highlight CSHTML %}
+Summaries with `Sum`,`Average`,`Maximum` and `Minimum` aggregate can be defined by using  `SummaryType` in `SummaryColumns` collections. These aggregate are used in `Number` column.
 
-@(Html.EJ().Grid<SyncfusionMvcApplication3.Models.OrdersView>("Summary")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.ShowSummary()
-
-.AllowPaging()
-
-.PageSettings(page => { page.PageSize(5); })
-
-.SummaryRow(row =>
-
-{
-
-	row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue((string)ViewBag.data).DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
-
-})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(70).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
-
-})
-
-)
-{% endhighlight  %}
-
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-        // GET: /Summary/
-
-        public ActionResult Summary()
-
-        {
-
-            ViewBag.data = this.currency().ToString();
-
-
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-        private double currency()
-
-        {
-
-            double rs = 100000;
-
-            double dol = 0.017;
-
-            double value = rs * dol;
-
-            return value;
-
-        } 
-    }
-
-}
-
-{% endhighlight  %}
-{% endtabs %} 
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Summary_images/Summary_img2.png)
-
-Custom Summary
-{:.caption}
-
-## Custom Summary by Function
-
-Custom Summary is used to create custom summary formula for summary. The following code example is for custom summary using Essential JavaScript.
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<EditableOrder>("Summary")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.ShowSummary()
-
-.AllowPaging()
-
-.PageSettings(page => { page.PageSize(5); })
-
-.SummaryRow(row =>
-
-{
-	row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue("currency").DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add();
-
-})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
-
-})
-
-)
-
-
-
-
-    <script type="text/javascript">
-
-
-
-        function currency() {
-
-
-
-            var rs = 100000;
-
-
-
-            var dol = 0.017;
-
-
-
-            return (rs * dol);
-
-        }
-
-    </script>
-
-
-{% endhighlight  %}
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /CustomSummary/
-
-
-
-        public ActionResult CustomSummary()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords().ToList();
-
-
-
-            ViewBag.dataSource = DataSource;
-
-
-
-            return View();
-
-        }
-
-
-
-    }
-
-}
-
-
-{% endhighlight  %}
-
-{% endtabs %} 
-
-![](Summary_images/Summary_img3.png)
-
-Custom Summary by Function
-{:.caption}
-
-## Group Summary
-
-This property helps you to enable the group summary column in Grid. The following code example is for Group summary.
 {% tabs %}
 
 {% highlight CSHTML %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+		row.Title("Average").SummaryColumns(col => { col.SummaryType(SummaryType.Average).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+		row.Title("Maximum").SummaryColumns(col => { col.SummaryType(SummaryType.Maximum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+		row.Title("Minimum").SummaryColumns(col => { col.SummaryType(SummaryType.Minimum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+	  })
+	.AllowPaging()
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+		col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.ShowSummary()
-
-.AllowPaging()
-
-.PageSettings(page => { page.PageSize(10); })
-
-.SummaryRow(row =>
-
-{
-
-  row.ShowTotalSummary(false)
-
-	 .SummaryColumns(col =>
-
-	 {
-
-		 col.SummaryType(SummaryType.Average)
-
-			.DisplayColumn("Freight")
-
-			.DataMember("Freight")
-
-			.Prefix("Average = ")
-
-			.Format("{0:C}")
-
-			.Add();
-
-	 }).Add();
-
-})
-
-.GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
-
-.Columns(col =>
-
-{
-
-  col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
-
-  col.Field("CustomerID").HeaderText("Customer ID").TextAlign(TextAlign.Left).Width(75).Add();
-
-  col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
-
-  col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(150).Add();
-
-  col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-})
-
+	})
 )
 
-
-{% endhighlight  %}
-
+{% endhighlight %}
 {% highlight C# %}
 
-
-namespace MVCSampleBrowser.Controllers
+namespace SyncfusionMvcApplication3.Controllers
 
 {
-
-    public partial class GridController : Controller
-
+    public class HomeController : Controller
     {
-
-        public ActionResult GroupSummary()
-
+        public ActionResult Index()
         {
-
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.dataSource = DataSource;
-
+            ViewBag.datasource = DataSource;
             return View();
 
         }
-
     }
-
 }
 
-{% endhighlight %}
+{% endhighlight  %}
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+![](Summary_images/summaryGrid_img2.png)
 
+### True and False Count 
 
-
-![](Summary_images/Summary_img4.png)
-
-Group Summary
-{:.caption}
-
-## Caption Summary
-
-This property is used to create Caption Summary column in Grid. The following code example is for Caption Summary.
+Summaries with `True` and `False` count aggregate can be defined by using `SummaryType`,`SummaryColumns` collections. `True` and `False` count aggregates are used for Boolean columns.
 
 {% tabs %}
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<EditableOrder>("Summary")
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.Title("False Count").SummaryColumns(col => { col.SummaryType(SummaryType.Falsecount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
+		row.Title("True Count").SummaryColumns(col => { col.SummaryType(SummaryType.Truecount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
+		
+	})  
+	.AllowPaging()
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+		col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
+		col.Field("Verified").HeaderText("Verified").Width(80).Add();
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.ShowSummary()
-
-.AllowPaging()
-
-.PageSettings(page => { page.PageSize(10); })
-
-.SummaryRow(row =>
-
-{
-
-  row.ShowCaptionSummary(true)
-
-	 .ShowTotalSummary(false)
-
-	 .SummaryColumns(col =>
-
-	 {
-
-		 col.SummaryType(SummaryType.Average)
-
-			.DisplayColumn("Freight")
-
-			.DataMember("Freight")
-
-			.Format("{0:C}")
-
-			.Prefix("Average = ")
-
-			.Add();
-
-	 }).Add();
-
-})
-
-.GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
-
-.Columns(col =>
-
-{
-
-  col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
-
-  col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
-
-  col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-  col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-
-
-})
-
+	})
 )
-{% endhighlight  %}
 
+{% endhighlight %}
 {% highlight C# %}
 
-
-namespace MVCSampleBrowser.Controllers
+namespace SyncfusionMvcApplication3.Controllers
 
 {
-
-    public partial class GridController : Controller
-
+    public class HomeController : Controller
     {
-
-        public ActionResult CaptionSummary()
-
+        public ActionResult Index()
         {
-
-            var DataSource = OrderRepository.GetAllRecords().ToList();
-
-            ViewBag.dataSource = DataSource;
-
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
             return View();
 
         }
-
     }
+}
 
+{% endhighlight  %}
+{% endtabs %} 
+
+
+![](Summary_images/summaryGrid_img3.png)
+
+
+### Custom Summary
+
+Custom Summary can be used to create summary values based on your required custom logic and calculations. To enable Custom Summary, `SummaryType` should be `Custom` and `CustomSummaryValue` property need to define as function. In this property `CustomSummaryValue` function, you need to use Grid instance to access `model.dataSource` and `model.currentViewData`. After the custom calculation, the returned value will be displayed in corresponding Summary cell.
+{% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		 row.Title("Currency").SummaryColumns(col => { col.SummaryType(SummaryType.Custom).CustomSummaryValue("currency").DisplayColumn("Freight").Format("{0:C2}").Add(); }).Add(););
+		
+		
+	})  
+	.AllowPaging()
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(70).Add();
+		col.Field("CustomerID").HeaderText("CustomerID").TextAlign(TextAlign.Right).Width(70).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(70).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(70).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(70).Format("{0:C}").Add();
+
+	})
+)
+
+{% endhighlight %}
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+
+        }
+    }
+}
+
+{% endhighlight  %}
+
+{% highlight js %}
+
+<script type="text/javascript">
+  function currency() {
+      //to get grid instance
+      var gridObj = $("#Grid").ejGrid("instance");
+      //ej.sum is aggreagte to add datas of freight from datasource
+      return ej.sum(gridObj.model.dataSource, "Freight");
+  }
+  </script>
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+![](Summary_images/summaryGrid_img4.png)
+
+## Group Summary
+
+Group Summary is used to summarize values of a particular column based on group and it shows at bottom of each Group. To enable Group Summary for particular Group, you need to define `ShowTotalSummary` as false.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.ShowTotalSummary(false).SummaryColumns(col => 
+		{ 
+			col.SummaryType(SummaryType.Sum)
+			.Format("{0:C2}")
+			.DisplayColumn("Freight")
+			.DataMember("Freight")
+			.Prefix("Sum = ")
+			.Add(); 
+		}).Add();
+	})
+	.AllowPaging()
+	.AllowSorting()
+	.AllowGrouping()
+	.GroupSettings(group => { group.GroupedColumns(col => { col.Add("CustomerID"); }); })
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width(80).Add();
+		col.Field("CustomerID").HeaderText("CustomerID").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(150).Add();	
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();		
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+	})
+)
+
+{% endhighlight %}
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![](Summary_images/summaryGrid_img5.png)
+
+
+W> Minimum one column should be grouped to show summary details.
+
+## Group Caption Summary
+
+To show summaries in each Group's Caption row, particular summary row should have `ShowTotalSummary` as `false` and `ShowCaptionSummary` as `true`.
+{% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.ShowTotalSummary(false).SummaryColumns(col => 
+		{ 
+			col.SummaryType(SummaryType.Average)
+			.Format("{0:C2}")
+			.DisplayColumn("Freight")
+			.DataMember("Freight")
+			.Prefix("Average = ")
+			.Add(); 
+		}).Add();
+	})
+	.AllowPaging()
+	.AllowSorting()
+	.AllowGrouping()
+	.GroupSettings(group => { group.GroupedColumns(col => { col.Add("EmployeeID"); }); })
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Width(80).Add();
+		col.Field("CustomerID").HeaderText("CustomerID").TextAlign(TextAlign.Right).Width(75).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(150).Add();	
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();		
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+
+	})
+)
+
+{% endhighlight %}
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![](Summary_images/summaryGrid_img6.png)
+
+
+W> Minimum one column should be grouped to show summary details.
+
+## Format
+
+To format Summary values, `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer [**globalize.js**](https://github.com/jquery/globalize/tree/v0.1.1#)
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.Title("Sum").SummaryColumns(col => { col.SummaryType(SummaryType.Sum).Format("{0:C}").DisplayColumn("Freight").DataMember("Freight").Add(); }).Add();
+	})
+	.AllowPaging()
+	.Columns(col =>
+	{
+		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(80).Add();
+		col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+		col.Field("ShipCountry").HeaderText("Ship Country").Width(100).Add();
+		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(80).Format("{0:C}").Add();
+
+	})
+)
+
+{% endhighlight %}
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+
+        }
+    }
 }
 
 
 {% endhighlight  %}
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+![](Summary_images/summaryGrid_img7.png)
 
 
-
-![](Summary_images/Summary_img5.png)
-
-Caption Summary
-{:.caption}
-
+N>_globalize.js` script need to referred while formatting is applied to summary values._
