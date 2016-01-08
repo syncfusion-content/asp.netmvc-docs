@@ -17,17 +17,17 @@ documentation: ug
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    .DataSource((IEnumerable<object>)ViewBag.datasource)
 
     .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
     {
 
-	items.AddTool(ToolBarItems.ExcelExport);
+	   items.AddTool(ToolBarItems.ExcelExport);
 
-	items.AddTool(ToolBarItems.WordExport);
+       items.AddTool(ToolBarItems.WordExport);
 
-	items.AddTool(ToolBarItems.PdfExport);
+	   items.AddTool(ToolBarItems.PdfExport);
 
     }))
 
@@ -37,17 +37,17 @@ documentation: ug
 
     {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+	   col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Add();
+	   col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+	   col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+	   col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+	   col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Add();
+	   col.Field("ShipCity").HeaderText("Ship City").Add();
 
     })) 
 
@@ -148,7 +148,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    .DataSource((IEnumerable<object>)ViewBag.datasource)
 
     .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
@@ -168,17 +168,17 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
     {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+	   col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Add();
+	   col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+	   col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+	   col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+	   col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Add();
+	   col.Field("ShipCity").HeaderText("Ship City").Add();
 
     })) 
 
@@ -264,17 +264,17 @@ On Exporting, the default routing path to server-side that contains the action n
 
     @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    .DataSource((IEnumerable<object>)ViewBag.datasource)
 
     .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
     {
 
-	items.AddTool(ToolBarItems.ExcelExport);
+	   items.AddTool(ToolBarItems.ExcelExport);
 
-	items.AddTool(ToolBarItems.WordExport);
+	   items.AddTool(ToolBarItems.WordExport);
 
-	items.AddTool(ToolBarItems.PdfExport);
+	   items.AddTool(ToolBarItems.PdfExport);
 
     }))
 
@@ -290,17 +290,17 @@ On Exporting, the default routing path to server-side that contains the action n
 
     {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+	   col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Add();
+	   col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+	   col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+	   col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+	   col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Add();
+	   col.Field("ShipCity").HeaderText("Ship City").Add();
 
     })) 
 
@@ -381,22 +381,22 @@ In control action method you are able to export all the grids available in curre
 {% highlight razor %}
 
     @(Html.EJ().Grid<EmployeeView>("Grid")
-    .Datasource((System.Data.DataTable)ViewBag.datasource1)
+    .DataSource((System.Data.DataTable)ViewBag.datasource1)
     .AllowMultipleExporting()
     .AllowPaging()
     .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
     {
-    items.AddTool(ToolBarItems.ExcelExport);
-    items.AddTool(ToolBarItems.WordExport);
-    items.AddTool(ToolBarItems.PdfExport);
+        items.AddTool(ToolBarItems.ExcelExport);
+        items.AddTool(ToolBarItems.WordExport);
+        items.AddTool(ToolBarItems.PdfExport);
     }))
     .Mappers(map => map.ExportToExcelAction("ExportToExcel").ExportToPdfAction("/Home/ExportToExcel").ExportToWordAction("MultipleExportToWord"))
     .Columns(col =>
     {
-    col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(125).Add();
-    col.Field("FirstName").HeaderText("First Name").Width(100).Add();
-    col.Field("LastName").HeaderText("Last Name").Width(100).Add();
-    col.Field("Title").HeaderText("Title").Width(150).Add();
+        col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(125).Add();
+        col.Field("FirstName").HeaderText("First Name").Width(100).Add();
+        col.Field("LastName").HeaderText("Last Name").Width(100).Add();
+        col.Field("Title").HeaderText("Title").Width(150).Add();
 
     })
     )
@@ -410,25 +410,24 @@ In control action method you are able to export all the grids available in curre
     public void MultipleExportToExcel(string[] GridModel)
 
     {
-	ExcelExport exp = new ExcelExport();
-	var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-	var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
-	bool initial = true;
-	IWorkbook book = null;
-	foreach(string gridProperty in GridModel)
-	{
-		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
-		if (initial)
-		{
-			book = exp.Export(gridProp, EmployeeData, "Export.xlsx", ExcelVersion.Excel2010, true, true, "flat-saffron", true);
-			initial = false;
-		} 
-		else
-		{
-			exp.Export(gridProp, OrderData, "Export.xlsx", ExcelVersion.Excel2010, true, true, "flat-saffron", false, book, MultipleExportType.AppendToSheet, "Second Grid");
-		}
-
-	}
+        ExcelExport exp = new ExcelExport();
+        var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
+        var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
+        bool initial = true;
+        IWorkbook book = null;
+        foreach(string gridProperty in GridModel)
+        {
+            GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
+            if (initial)
+            {
+                book = exp.Export(gridProp, EmployeeData, "Export.xlsx", ExcelVersion.Excel2010, true, true, "flat-saffron", true);
+                initial = false;
+            } 
+            else
+            {
+                exp.Export(gridProp, OrderData, "Export.xlsx", ExcelVersion.Excel2010, true, true, "flat-saffron", false, book, MultipleExportType.AppendToSheet, "Second Grid");
+            }
+        }
 
     }
 
@@ -437,50 +436,48 @@ In control action method you are able to export all the grids available in curre
     public void MultipleExportToWord(string[] GridModel)
 
     {
-	WordExport exp = new WordExport();
-	var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-	var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
-	IWordDocument document = null;
-	bool initial = true;;
-	foreach(string gridProperty in GridModel)
-	{
-		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
-		if (initial)
-		{
-			document = exp.Export(gridProp, EmployeeData, "Export.docx", true, true, "flat-saffron", true);
-			initial = false;
-		} else
-		{
-			exp.Export(gridProp, OrderData, "Export.docx", true, true, "flat-saffron", false, document, "Second Grid");
-		}
-
-	}
+        WordExport exp = new WordExport();
+        var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
+        var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
+        IWordDocument document = null;
+        bool initial = true;;
+        foreach(string gridProperty in GridModel)
+        {
+            GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
+            if (initial)
+            {
+                document = exp.Export(gridProp, EmployeeData, "Export.docx", true, true, "flat-saffron", true);
+                initial = false;
+            } else
+            {
+                exp.Export(gridProp, OrderData, "Export.docx", true, true, "flat-saffron", false, document, "Second Grid");
+            }
+        }
 
     }
 
 // PDF export
 
     public void MultipleExportToPdf(string[] GridModel)
-
     {
-	PdfExport exp = new PdfExport();
-	var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-	var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
-	PdfDocument document = null;
-	bool initial = true;
-	foreach(string gridProperty in GridModel)
-	{
-		GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
-		if (initial)
-		{
-			document = exp.Export(gridProp, EmployeeData, "Export.pdf", true, true, "flat-saffron", true);
-			initial = false;
-		} else
+        PdfExport exp = new PdfExport();
+        var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
+        var OrderData = new NorthwindDataContext().OrdersViews.Take(5).ToList();
+        PdfDocument document = null;
+        bool initial = true;
+        foreach(string gridProperty in GridModel)
+        {
+            GridProperties gridProp = (GridProperties)DeserializeToModel(typeof(GridProperties), gridProperty);
+            if (initial)
+            {
+                document = exp.Export(gridProp, EmployeeData, "Export.pdf", true, true, "flat-saffron", true);
+                initial = false;
+            } else
 
-		{
-			exp.Export(gridProp, OrderData, "Export.pdf", true, true, "flat-saffron", false, document, "Second Grid");
-		}
-	}
+            {
+                exp.Export(gridProp, OrderData, "Export.pdf", true, true, "flat-saffron", false, document, "Second Grid");
+            }
+        }
     }
 
 
@@ -531,29 +528,28 @@ On server before calling the `Export` function, the data source should be proces
 
     public void ExportToExcel(string GridModel)
     {
-	ExcelExport exp = new ExcelExport();
-	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
-	var dataSource = new DataOperations().Execute(GridModel, DataSource);
-	exp.Export(properties, dataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
-
+        ExcelExport exp = new ExcelExport();
+        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+        GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
+        var dataSource = new DataOperations().Execute(GridModel, DataSource);
+        exp.Export(properties, dataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
     }
 
     public void ExportToWord(string GridModel)
     {
-	WordExport exp = new WordExport();
-	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
-	var dataSource = new DataOperations().Execute(GridModel, DataSource);
-	exp.Export(properties, dataSource, "Export.docx", false, false, "flat-saffron");
+        WordExport exp = new WordExport();
+        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+        GridProperties properties =(GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
+        var dataSource = new DataOperations().Execute(GridModel, DataSource);
+        exp.Export(properties, dataSource, "Export.docx", false, false, "flat-saffron");
     }
     public void ExportToPdf(string GridModel)
     {
-	PdfExport exp = new PdfExport();
-	var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-	GridProperties properties = (GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
-	var dataSource = new DataOperations().Execute(GridModel, DataSource);
-	exp.Export(properties, dataSource, "Export.pdf", false, false, "flat-saffron");
+        PdfExport exp = new PdfExport();
+        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+        GridProperties properties = (GridProperties)DeserializeToModel(typeof(GridProperties), GridModel);
+        var dataSource = new DataOperations().Execute(GridModel, DataSource);
+        exp.Export(properties, dataSource, "Export.pdf", false, false, "flat-saffron");
     }
 
 {% endhighlight %}
@@ -613,9 +609,9 @@ Also, it has `none` option which will export the grid without any theme.  The de
 
 {% highlight c# %}
 
-public partial class GridController : Controller
+    public partial class GridController : Controller
 
-{
+    {
 	public void ExportToExcel(string GridModel)
 
 	{
@@ -670,27 +666,27 @@ public partial class GridController : Controller
 
 	}
 	
-  }
+    }
 
 {% endhighlight %}
 
 {% highlight razor %}
 
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.DataSource((IEnumerable<object>)ViewBag.datasource)
 
-			.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+	.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
-			{
+	{
 
-				items.AddTool(ToolBarItems.ExcelExport);
+	   items.AddTool(ToolBarItems.ExcelExport);
 
-				items.AddTool(ToolBarItems.WordExport);
+	   items.AddTool(ToolBarItems.WordExport);
 
-				items.AddTool(ToolBarItems.PdfExport);
+	   items.AddTool(ToolBarItems.PdfExport);
 
-			}))
+	}))
 
 	.AllowPaging()
 
@@ -792,48 +788,48 @@ The background color of the alternative row of the grid content</td></tr>
  
 {% highlight razor %}
 
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
+    .DataSource((IEnumerable<object>)ViewBag.datasource)
 
-		.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+	.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
-		{
+	{
 
-			items.AddTool(ToolBarItems.ExcelExport);
+		items.AddTool(ToolBarItems.ExcelExport);
 
-			items.AddTool(ToolBarItems.WordExport);
+		items.AddTool(ToolBarItems.WordExport);
 
-			items.AddTool(ToolBarItems.PdfExport);
+		items.AddTool(ToolBarItems.PdfExport);
 
-		}))
+	}))
 
-.AllowPaging()
+    .AllowPaging()
 
-.Columns(col =>
+    .Columns(col =>
 
-{
+    {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+        col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+        col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Add();
+        col.Field("ShipCity").HeaderText("Ship City").Add();
 
-})) 
+    })) 
 
 {% endhighlight %}
 {% highlight c# %}
 
-public partial class GridController : Controller
+    public partial class GridController : Controller
 
-{
+    {
 
 	public void ExportToExcel(string GridModel)
 
@@ -923,7 +919,7 @@ public partial class GridController : Controller
 
 	}
 	
- }
+    }
 
 {% endhighlight %}
 
@@ -1022,13 +1018,13 @@ You can customize the particular cell or particular  row of exporting files usin
  
 {% highlight razor %}
 
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
+    .DataSource((IEnumerable<object>)ViewBag.datasource)
 
-		.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+	.ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
 
-		{
+	{
 
 			items.AddTool(ToolBarItems.ExcelExport);
 
@@ -1036,34 +1032,34 @@ You can customize the particular cell or particular  row of exporting files usin
 
 			items.AddTool(ToolBarItems.PdfExport);
 
-		}))
+	}))
 
-.AllowPaging()
+    .AllowPaging()
 
-.Columns(col =>
+    .Columns(col =>
 
-{
+    {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+        col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
 
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
 
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
+        col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right). Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Add();
+        col.Field("ShipCity").HeaderText("Ship City").Add();
 
-})) 
+    })) 
 
 {% endhighlight %}
 {% highlight c# %}
 
-public partial class GridController : Controller
+    public partial class GridController : Controller
 
-{
+    {
 
 	public void ExportToExcel(string GridModel)
     {
@@ -1090,7 +1086,7 @@ public partial class GridController : Controller
 
 	}
 
- }
+    }
 
 {% endhighlight %}
 

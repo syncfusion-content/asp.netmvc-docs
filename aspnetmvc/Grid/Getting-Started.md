@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly bout how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like Paging, Filtering, Grouping and Summary. The following screenshot illustrates the Grid control.
+This section explains briefly about how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like Paging, Filtering, Grouping and Summary. The following screenshot illustrates the Grid control.
 
 ![](Getting-Started_images/Getting-Started_img.png)
 
@@ -28,7 +28,7 @@ The following steps explain creating first grid with an empty datasource.
 
 	{
 
-	    col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
 		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
@@ -55,25 +55,25 @@ You can execute the above code sample to render an empty Grid is rendered with s
 {% highlight razor %}
 
 
-@(Html.EJ().Grid<object>("FlatGrid")
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-.Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   .Columns(col =>
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).Columns(col =>
 
-{
+    {
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+	   col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+	   col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-	col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+	   col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+	   col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
 
-	col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+	   col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-})
+    })
 
-)
+    )
 
 {% endhighlight  %}
 
@@ -89,7 +89,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))      .AllowPaging()
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).AllowPaging()
 
     .Columns(col =>
 
@@ -119,7 +119,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 {% highlight razor %}
 
 
-    @(Html.EJ().Grid<object>("FlatGrid")  .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    @(Html.EJ().Grid<object>("FlatGrid").DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
 
     .AllowPaging()
 
@@ -131,15 +131,15 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     {	
 
-    col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-    col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-    col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+        col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-    col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      
+        col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      
 
-    col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
     })
 
@@ -158,7 +158,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
 
     .AllowGrouping()
 
@@ -201,7 +201,7 @@ The following code example shows the option to enable group summary.
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
 
     .AllowPaging()
 
