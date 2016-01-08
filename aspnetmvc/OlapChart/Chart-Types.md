@@ -9,7 +9,7 @@ documentation: ug
 
 # Chart Types
 
-Essential **OLAP Chart MVC** supports 14 different types of chart as follows:
+Essential **OlapChart MVC** supports 14 different types of chart as follows:
 
 
 * Column
@@ -31,13 +31,13 @@ Essential **OLAP Chart MVC** supports 14 different types of chart as follows:
 ## Column Chart
 
 
-**Column Chart** is the most commonly used chart types. It uses vertical bars (called columns) to display different values of one or more items. Points from adjacent series are drawn as bars next to each other. It is used to compare the frequency, count, total or average of data in different categories. It is ideal to show the variations in the value of an item over a period of time.
+**Column Chart** is the most commonly used chart type. It uses vertical bars (called columns) to display different values of one or more items. Points from adjacent series are drawn as bars next to each other. It is used to compare the frequency, count, total or average of data in different categories. It is ideal to show the variations in the value of an item over a period of time.
 
 {% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -51,12 +51,12 @@ The following screenshot displays a **Column Chart**.
 
 ## Stacking Column Chart
 
-**Stacking Column** Chart is similar to column charts except the “Y-values”. These “Y-values” stack on top of each other in a specified series order. This helps to visualize the relationship of parts to the whole chart.
+**Stacking Column** Chart is similar to column charts except the Y-values. These Y-values stack on top of each other in a specified series order. This helps to visualize the relationship of parts to whole across categories.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -67,15 +67,14 @@ The following screenshot displays the **stacking Column Chart**.
 ![](Chart-Types_images/Chart-Types_img2.png)
 
 
-
 ## Bar Chart
 
-The **Bar Chart** is the simplest and most versatile chart of statistical diagrams. It displays horizontal bars for each point in the series and points from adjacent series. Bar Charts are drawn as bars next to each other. Bar charts are used to compare values across categories, for displaying the variations in the value of an item over time or for comparing the values of several items at a single point in time.
+The **Bar Chart** displays horizontal bars for each point in the series and points from adjacent series. Bar charts are used to compare values across categories, for displaying the variations in the value of an item over time or for comparing the values of several items at a single point in time.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -90,12 +89,12 @@ The following screenshot displays a **Bar Chart**.
 
 ## Stacking Bar Chart
 
-**Stacking BarChart** is a Regularbarchart with the X-values stacked on top of each other in the specified series order.
+**Stacking Bar Chart** is a regular **bar** chart with the X-values stacked on top of each other in the specified series order.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(2))
+comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -115,7 +114,7 @@ A **Pie chart** is used to summarize a set of categorical data or displaying dif
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -135,7 +134,7 @@ The **Pyramid Chart** type displays the data in the form of a triangle. It helps
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -149,12 +148,12 @@ The following screen shot displays the **Pyramid Chart**.
 
 ## Funnel Chart
 
-The **Funnel Chart** type displays the data in the form of an inverted triangle. It helps you to visualize data in a hierarchical structure without any axes.
+The **Funnel Chart**  type displays the data in the form of an inverted triangle. It helps you to visualize data in a hierarchical structure without any axes.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -174,7 +173,7 @@ The **Line Chart** joins the data points on a plot using straight lines that sho
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -187,13 +186,13 @@ The following screenshot displays the **Line Chart**.
 
 ## Step Line Chart
 
-**Step LineChart** uses horizontal and vertical lines to connect the data points resulting in a step like progression. 
+**Step Line Chart** uses horizontal and vertical lines to connect the data points resulting in a step like progression. 
 
 {% highlight CSHTML %}
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -207,13 +206,13 @@ The following screenshot displays the **Step Line Chart**.
 
 ## Spline Chart
 
-The **spline chart** is similar to line charts except it connects different data points using curve lines instead of straight lines.
+The **Spline Chart** is similar to line charts except it connects different data points using curve lines instead of straight lines.
 
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -226,12 +225,12 @@ The following screenshot displays the **Spline Chart**.
 
 ## Area Chart
 
-**Area Chart** emphasizes the degree of change of values over a period of time. Instead of rendering data as discreet bars or columns, an area chart renders it in a continuous ebb-and-flow pattern as defined against the y-axis.
+**Area Chart** emphasizes the degree of change of values over a period of time. Instead of rendering data as discrete bars or columns, an area chart renders it in a continuous ebb-and-flow pattern as defined against the y-axis.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
@@ -249,7 +248,7 @@ The following screenshot displays the **Area Chart**.
 
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
 {% endhighlight %}
@@ -263,13 +262,13 @@ The following screenshot displays a **Step Area Chart**.
 
 ## Spline Area Chart
 
-**Spline Area** chart is similar to Area Chart with the difference in which the data points of a series are connected. It connects each series of points by a smooth spline curve.
+**Spline Area** chart is similar to Area Chart with the difference in which the data points of a series are connected. It connects each series of points by a smooth **spline curve**.
 
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
-comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3))
+comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight  %}
 
@@ -281,13 +280,13 @@ The following Screenshot displays a **Spline Area Chart**.
 
 ## Stacking Area Chart
 
-**Stacking Area** chart is similar to regular area chart except the “Y-values”. These “Y-values” stack on top of each other in the specified series order. This helps to visualize the relationship of parts to the whole data.
+**Stacking Area** chart is similar to regular area chart except the “Y-values”. These “Y-values” stack on top of each other in the specified series order. This helps to visualize the relationship of parts to whole across categories.
 
 
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
- comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).RowCount(3)) 
+ comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true)) 
 
 {% endhighlight %}
 
@@ -308,7 +307,7 @@ A **combination Chart** combines two or more series types in a single Chart. But
 {% highlight CSHTML %}
 
 @Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
-comm.Type(SeriesType.Column); }).Legend(legend => legend.Visible(true).RowCount(3)).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
+comm.Type(SeriesType.Column); }).Legend(legend => legend.Visible(true).RowCount(2)).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
 oEve => { oEve.SeriesRendering("onSeriesRenders"); }) 
     
 <script>

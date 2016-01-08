@@ -56,9 +56,11 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.M
 
 ##Binding OlapClient to Cube in online ActivePivot Server
 
+To connect an OLAP Cube available in ActivePivot Server through XML/A, host server link and database name needs to be set in the connection string. If you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. Below code sample illustrates the same.
+
 {% highlight c# %}
 
-string connectionString = @"Data Source = http://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;"; 
+string connectionString = @"Data Source = http://localhost:8080/cva_s/xmla; Initial Catalog = CVAS;"; 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.ActivePivot;
 
@@ -69,7 +71,7 @@ DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.Act
 
 To add a WCF service in an existing MVC Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as `OlapClientService.svc`, click **Add.**
 
-Now, WCF service is added into the application successfully that comprises of the following files. The utilization of these files is explained in the immediate sections
+Now, WCF service is added into the application successfully which comprises of the following files. The utilization of these files are explained in the immediate sections
 
 * OlapClientService.svc
 * OlapClientService.svc.cs
@@ -77,7 +79,44 @@ Now, WCF service is added into the application successfully that comprises of th
 
 **Configuring WCF Service Class**
 
-The following are the list of namespaces to be added on top of the main class inside `OlapClientService.svc.cs` file. Remove the **“DoWork”** method present inside both `OlapClientService.svc.cs` and `IOlapClientService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapClientService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `OlapClientService.svc.cs` and `IOlapClientService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapClientService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+
+{% highlight c# %}
+
+namespace OlapClientDemo
+{
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class OlapClientService: IOlapClientService
+    {
+    
+    }
+}
+
+{% endhighlight %}
+
+**List of Dependency Libraries**
+
+Next, add the following dependency libraries into your Web Application. You can find these libraries in GAC (Global Assembly Cache) in your machine.
+ 
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now, in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+N> When you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET]
+
+* Microsoft.AnalysisServices.AdomdClient.dll
+* Syncfusion.Compression.Base.dll
+* Syncfusion.Linq.Base.dll
+* Syncfusion.Olap.Base.dll
+* Syncfusion.EJ.dll
+* Syncfusion.EJ.MVC.dll
+* Syncfusion.EJ.Olap.dll
+* Syncfusion.XlsIO.Base.dll
+* Syncfusion.DocIO.Base.dll
+* Syncfusion.Pdf.Base.dll
+* System.Data.SqlServerCe.dll (Version: 4.0.0.0).
+
+**List of Namespaces**
+
+The following are the list of namespaces to be added on top of the main class inside `OlapClientService.svc.cs` file.
 
 {% highlight c# %}
 
@@ -108,7 +147,7 @@ namespace OlapClientDemo
 
 **Datasource Initialization**
 
-Now the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OLAPClientService.svc.cs` file.
+Now the connection string to connect OLAP Cube, OlapClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapClientService.svc.cs` file.
 
 {% highlight c# %}
 
@@ -134,7 +173,7 @@ namespace OlapClientDemo
 
 **Service methods in WCF Service**
 
-First, declare the service methods inside **IOlapClientService** interface, found in `IOlapClientService.cs` file created while adding WCF Service to the Application.
+First, declare the service methods inside **IOlapClientService** interface, found in `IOlapClientService.cs` file created while adding WCF Service to the application.
 
 {% highlight c# %}
 
@@ -447,7 +486,8 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
         ……
         <endpointBehaviors>
             <behavior name="OlapClientDemo.OlapClientServiceAspNetAjaxBehavior">
-                <enableWebScript /> </behavior>
+                <enableWebScript /> 
+            </behavior>
         </endpointBehaviors>
     </behaviors>
 </system.serviceModel>
@@ -478,6 +518,6 @@ public static void RegisterRoutes(RouteCollection routes)
 
 {% endhighlight %}
  
-In this example, **OlapClient** is rendered OlapChart and PivotGrid with Customer Count over a period of fiscal years.
+In this example, **OlapClient** is rendered with OlapChart and PivotGrid showing Customer Count over a period of fiscal years.
  
 ![](Data-Binding_images/OlapClient.png)   

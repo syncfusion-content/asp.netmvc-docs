@@ -56,9 +56,11 @@ DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.M
 
 ##Binding OlapChart to Cube in online ActivePivot Server
 
+To connect an OLAP Cube available in ActivePivot Server through XML/A, host server link and database name needs to be set in the connection string. If you have any credentials to connect your Cube, then set the “User ID” and “Password” attributes accordingly. Below code sample illustrates the same.
+
 {% highlight c# %}
 
-string connectionString = @"Data Source = http://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;"; 
+string connectionString = @"Data Source = http://localhost:8080/cva_s/xmla; Initial Catalog = CVAS;"; 
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.ActivePivot;
 
@@ -69,7 +71,7 @@ DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.Act
 
 To add a WCF service in an existing MVC Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as `OlapChartService.svc`, click **Add.**
 
-Now, WCF service is added into the application successfully that comprises of the following files. The utilization of these files is explained in the immediate sections
+Now, WCF service is added into the application successfully which comprises of the following files. The utilization of these files are explained in the immediate sections
 
 * OlapChartService.svc
 * OlapChartService.svc.cs
@@ -77,13 +79,47 @@ Now, WCF service is added into the application successfully that comprises of th
 
 **Configuring WCF Service Class**
 
-The following are the list of namespaces to be added on top of the main class inside `OlapChartService.svc.cs` file. Remove the **“DoWork”** method present inside both `OlapChartService.svc.cs` and `IOlapChartService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapChartService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `OlapChartService.svc.cs` and `IOlapChartService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapChartService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
 
-using OLAPUTILS = Syncfusion.JavaScript.Olap;
-using Syncfusion.Olap.Manager;
-using Syncfusion.Olap.Reports;
+namespace OlapChartDemo
+{
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class OlapChartService: IOlapChartService
+    {
+    
+    }
+}
+
+{% endhighlight %}
+
+**List of Dependency Libraries**
+
+Next, add the following dependency libraries into your Web Application. These libraries can be found in GAC (Global Assembly Cache) in your machine.
+ 
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now, in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+>**NOTE: If you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET] **
+
+* Microsoft.AnalysisServices.AdomdClient.dll
+* Syncfusion.Compression.Base.dll
+* Syncfusion.Linq.Base.dll
+* Syncfusion.Olap.Base.dll
+* Syncfusion.EJ.dll
+* Syncfusion.EJ.MVC.dll
+* Syncfusion.EJ.Olap.dll
+* Syncfusion.XlsIO.Base.dll
+* Syncfusion.DocIO.Base.dll
+* Syncfusion.Pdf.Base.dll
+
+
+**List of Namespaces**
+
+Following are the list of namespaces to be added on top of the main class inside `OlapChartService.svc.cs` file.
+
+{% highlight c# %}
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,8 +128,11 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.Text;
 using System.Web.Script.Serialization;
-using Syncfusion.JavaScript.Olap;
 using System.Configuration;
+using Syncfusion.JavaScript.Olap;
+using Syncfusion.Olap.Manager;
+using Syncfusion.Olap.Reports;
+using OLAPUTILS = Syncfusion.JavaScript.Olap;
 
 namespace OlapChartDemo
 {
@@ -108,7 +147,7 @@ namespace OlapChartDemo
 
 **Datasource Initialization**
 
-Now the connection string to connect OLAP Cube, OlapChart and JavaScriptSerializer instances are created immediately inside the main class in `OLAPChartService.svc.cs` file.
+Now the connection string to connect OLAP Cube, OlapChart and JavaScriptSerializer instances are created immediately inside the main class in `OlapChartService.svc.cs` file.
 
 {% highlight c# %}
 
@@ -129,7 +168,7 @@ namespace OlapChartDemo
 
 **Service methods in WCF Service**
 
-First, declare the service methods inside **IOlapChartService** interface, found in `IOlapChartService.cs` file created while adding WCF Service to the Application.
+First, declare the service methods inside **IOlapChartService** interface, found in `IOlapChartService.cs` file created while adding WCF Service to the application.
 
 {% highlight c# %}
 
@@ -245,7 +284,8 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
         ……
         <endpointBehaviors>
             <behavior name="OlapChartDemo.OlapChartServiceAspNetAjaxBehavior">
-                <enableWebScript /> </behavior>
+                <enableWebScript /> 
+            </behavior>
         </endpointBehaviors>
     </behaviors>
 </system.serviceModel>

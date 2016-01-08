@@ -115,14 +115,14 @@ By using the `Font` property of the axis, we can customize the labels – font f
 {% highlight CSHTML %}
 
 //Customizing label appearance
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.Font(font=> font.Size("14px").FontWeight(ChartFontWeight.Bold).FontStyle(ChartFontStyle.Italic).Color("blue"))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.Font(font=> font.Size("14px").FontWeight(ChartFontWeight.Bold).FontFamily("Segoe UI").Color("blue"))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 ![](Chart-Axes_images/Chart-Axes_img4.png)
 
 ###Label and Tick Positioning
-Axis labels and ticks can be positioned inside or outside the Chart area by using the `LabelPosition` and `TickLinesPosition` properties. The labels and ticks are positioned outside the Chart area, by default.
+Axis labels and ticks can be positioned inside or outside the Chart area by using the `AxisLabelPosition` and `TickLinesPosition` properties. The labels and ticks are positioned outside the Chart area, by default.
 
 {% highlight CSHTML %}
 
@@ -139,7 +139,7 @@ By using the `MajorGridLines` and `MinorGridLines` properties of the axis, you c
 {% highlight CSHTML %}
 
 //Customizing grid lines
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX. MajorGridLines(mr => mr.Width(5).Color("Red").Visible(true)).MinorGridLines(mg => mg.Width(5).Color("Green").Visible(true))    .MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.MajorGridLines(mr => mr.Width(5).Color("Blue").Visible(true)).MinorGridLines(mg => mg.Width(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -151,7 +151,7 @@ By using the `MajorTickLines` and `MinorTickLines` properties of the axis, you c
 {% highlight CSHTML %}
 
 //Customizing tick lines
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX. MajorTickLines(mr => mr.Width(5).Color("Red").Visible(true)).MinorTickLines(mg => mg.Width(5).Color("Green").Visible(true))    .MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.MajorTickLines(mr => mr.Width(10).Size(15).Color("Blue").Size(15)Visible(true)).MinorTickLines(mg => mg.Width(15).Size(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -181,7 +181,8 @@ The `OpposedPosition` property of Chart axis can be used to place the axis at th
 
 ![](Chart-Axes_images/Chart-Axes_img9.png)
 
-###Smart Axis Labels
+## Smart Axis Labels
+
 When the axis labels overlap with each other based on the Chart dimensions and label size, you can use `LabelIntersection` property of the axis to avoid overlapping. The default value of the `LabelIntersection` property is none. The other options available are rotate45, rotate90, trim, multiplerows, wrap and hide. 
 
 {% highlight CSHTML %}

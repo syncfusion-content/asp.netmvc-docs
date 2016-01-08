@@ -1,983 +1,308 @@
 ---
 layout: post
-title: Selection | Grid | ASP.NET MVC | Syncfusion
-description: selection
+title: Selection with Grid widget for Syncfusion Essential MVC
+description: How to enable selection and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-
 # Selection
 
-The Selection property is used to highlight a row that you select. 
+Selection provides an interactive support to highlight the row, cell or column that you select. Selection can be done through simple Mouse down or Keyboard interaction. To enable selection, set `AllowSelection` as `true`. 
 
-## Types of selection
+## Types of Selection
 
- There are two types of Selections. 
+There are two types of selections available in grid. They are
 
-* Single
-* Multiple
-
-Single selection is used to select a single row, cell or column in Grid. In Multiple selection you can select more than one row, cell or column. Refer to the following code examples of Selection types.
+1. Single 
+2. Multiple 
 
 ### Single Selection
 
-By default, the selection type is “Single”.
+Single selection is an interactive support to select a specific row, cell or column in grid by mouse or keyboard interactions. To enable single selection by setting `SelectionType` property as `Single` and also set `AllowSelection` property as `true`.
 
-### Selection Modes
+### Multiple Selections
 
-#### Row
+Multiple selections is an interactive support to select a group of rows, cells or columns in grid by mouse or keyboard interactions. To enable multiple selections by set `SelectionType`  property as `Multiple` and also set `AllowSelection` property as `true`.
 
-By default, the selection mode of the grid is “Row”. This enables you to select the row in the grid. Refer to the following code example.
+## Row Selection
 
+Row selection is enabled by set `SelectionMode` property of `SelectionSettings` as `Row`. For random row selection, press **"Ctrl + mouse left"** click and for continuous row selection press **"Shift + mouse left"** click on the grid rows. To unselect selected rows, by press **"Ctrl + mouse left"** click on selected row.
 
-{% tabs %}
-{% highlight C# %}
+The following code example describes the above behavior.
 
-using MVCSampleBrowser.Models;
+{% tabs %} 
+{% highlight razor %}
 
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()
+            .SelectionType(SelectionType.Multiple)
+            .SelectionSettings(select => { select.SelectionMode(mode => { mode.AddMode(SelectionMode.Row); }); })            
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+			    col.Field("ShipCity").Add();
+		        col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            })
+        )
 {% endhighlight  %}
+{% highlight c# %}
+		
+        namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         } 
+{% endhighlight  %}
+{% endtabs %}
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row);})      
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
-{% endhighlight %}
-{% endtabs %}  
-
-The following screenshot displays the result of the above code.
+The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img1.png)
 
-Row Selection - Single
-{:.caption}
 
-#### Cell
+## Cell Selection
 
-Cell selection can be enabled using the SelectionMode property. This enables you to select a cell in the grid. Refer to the following code example.
+Cell selection is enabled by set `SelectionMode` property of `SelectionSettings` as `Cell`. For random cell selection, press **"Ctrl + mouse left"** click and for continuous cell selection, press **"Shift + mouse left"** click on the grid cells. To unselect selected cells, press **"Ctrl + mouse left"** on selected cell click.
 
-{% tabs %}
- 
-{% highlight C# %}
+The following code example describes the above behavior.
 
+{% tabs %} 
+{% highlight razor %}
 
-using MVCSampleBrowser.Models;
-
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()
+            .SelectionType(SelectionType.Multiple)
+            .SelectionSettings(select => { select.SelectionMode(mode => { mode.AddMode(SelectionMode.Cell); }); })            
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+                col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            }) 
+        )
 {% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging() 
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Cell);})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
+{% highlight c# %}
+		
+	     namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         }
 {% endhighlight  %}
+{% endtabs %}
 
-{% endtabs %} 
-
-The following screenshot displays the result of the above code.
+The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img2.png)
 
-Cell Selection - Single
-{:.caption}
+### Cell Selection Mode
 
-#### Column
+There are two types of cell selection available in grid. They are
 
-Column selection can be enabled using the SelectionMode property. This enables you to select a particular column in the grid. Refer to the following code example.
+1. Continuous Selection
+2. Box Selection
 
-{% tabs %}
+Box cell selection is to select multiple cells vertically based on the initial column index selection.  
 
-{% highlight C# %}
+The following code example describes the above behavior.
 
-using MVCSampleBrowser.Models;
+{% tabs %} 
+{% highlight razor %}
 
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()
+            .SelectionType(SelectionType.Multiple)
+            .SelectionSettings(select => { select.SelectionMode(mode => { mode.AddMode(SelectionMode.Cell);}).CellSelectionMode(CellSelectionMode.Box); })           
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+	            col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            })
+         )
 {% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Column);})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
+{% highlight c# %}
+		
+	    namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+            }
+          }
 {% endhighlight  %}
-{% endtabs %} 
-The following screenshot displays the result of the above code.
+{% endtabs %}
+
+ The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img3.png)
 
-Cell Selection - Single
-{:.caption}
 
-### Multiple Selection
+## Column Selection
 
-Multiple selection can be enabled using SelectionType property. This allows you to select more than one row, cell and column at a time.
+Column selection can be enabled by setting `SelectionMode` property of `SelectionSettings` as `Column`. For random column selection, press **"Ctrl + mouse left click"** and for continuous column selection, press **"Shift + mouse left click"** on the top of the column header. To unselect selected columns, press **"Ctrl + mouse left click"** on top of the selected column header.
 
-#### Selection Modes
+The following code example describes the above behavior.
 
-#### Row
+{% tabs %} 
+{% highlight razor %}
 
-By default, the selection mode of the grid is “Row”. This enable you to select the row in the grid. Refer to the following code example.
-
-
-
-{% tabs %}
-
-{% highlight C# %}
-
-
-
-
-using MVCSampleBrowser.Models;
-
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()
+            .SelectionType(SelectionType.Multiple)
+            .SelectionSettings(select => { select.SelectionMode(mode => { mode.AddMode(SelectionMode.Column); }); })           
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+	            col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            }) 
+        )
+{% endhighlight  %}
+{% highlight c# %}
+		
+	    namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+          }
+       }
 
 {% endhighlight  %}
-{% highlight CSHTML %}
+{% endtabs %}
 
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionType(SelectionType.Multiple)
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row);})      
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
-{% endhighlight  %}
-{% endtabs %} 
-The following screenshot displays the result of the above code.
+The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img4.png)
 
-Row Selection - Multiple
-{:.caption}
 
-#### Cell
+## Touch options
 
-Cell selection can be enabled using the SelectionMode property. This enables you to select a cell in the grid. Refer to the following code example.
+While using grid in a touch device environment, there is an option for multi selection through single tap on the row and it will shows a popup with multi-selection symbol. Tap the icon to enable multi selection in a single tap.
 
-{% tabs %}
- 
-{% highlight C# %}
+The following code example describes the above behavior. 
 
-using MVCSampleBrowser.Models;
+{% tabs %} 
+{% highlight razor %}
 
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()
+            .SelectionType(SelectionType.Multiple)           
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+	            col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            })
+         )
 {% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging() 
-
-.SelectionType(SelectionType.Multiple)
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Cell);})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
+{% highlight c# %}
+		
+         namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+            }
+          }
 {% endhighlight  %}
-{% endtabs %} 
+{% endtabs %}
 
-The following screenshot displays the result of the above code.
+The following output is displayed as a result of the above code example.
 
 ![](Selection_images/Selection_img5.png)
 
-Cell Selection - Multiple
-{:.caption}
 
-#### Column
+## Toggle Selection
 
-Column selection can be enabled using the SelectionMode property. This enables you to select a particular column in the grid. Refer to the following code example.
+The Toggle selection allows to perform selection and unselection of the particular row, cell or column.  To enable toggle selection, set `EnableToggle` property of `SelectionSettings`  as `true`. If you click on the selected row, cell or column then it will be unselected and vice versa. 
 
-{% tabs %}
+N> If multi selection is enabled, then in first click on any selected row (without pressing Ctrl key), it will clear multi selection and in second click on the same row, it will be unselected. 
 
-{% highlight C# %}
+The following code example describes the above behavior. 
 
-using MVCSampleBrowser.Models;
+{% tabs %} 
+{% highlight razor %}
 
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .EnableRowHover(false)
+            .SelectionSettings(select => { select.EnableToggle(true); })        
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+	            col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            }) 
+         )
 {% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Column);})
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
-{% endhighlight  %}
-
-{% endtabs %} 
-
-The following screenshot displays the result of the above code.
-
-![](Selection_images/Selection_img6.png)
-
-Column Selection - Multiple
-{:.caption}
-
-## Enable All Modes of selection
-
-You can also enable all the three modes of selection. Refer to the following code example.
-
-
-{% tabs %}
-
-{% highlight C# %}
-
-using MVCSampleBrowser.Models;
-
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-{% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row). SelectionMode(SelectionMode.Cell) SelectionMode(SelectionMode.Column)); })
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
-
-
-
-
-
-{% endhighlight  %}
-{% endtabs %} 
-The following screenshot displays the result of the above code.
-
-![](Selection_images/Selection_img7.png)
-
-Enable all modes - Multiple
-{:.caption}
-
-## Enable toggle
-
-You can toggle the selection using the EnableToggle property. This provides support to toggle selection based on the Boolean value specified to the property. By default the EnableToggle property is set to disabled. Refer to the following code example.
-
-
-
-{% tabs %}
-
-{% highlight C# %}
-
-using MVCSampleBrowser.Models;
-
-using System;
-
-using System.Collections.Generic;
-
-using System.Linq;
-
-using System.Web;
-
-using System.Web.Mvc;
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-{% endhighlight  %}
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowSelection()
-
-.AllowPaging()
-
-.SelectionSettings(sel=>{sel.SelectionMode(SelectionMode.Row).EnableToggle(true); })
-
-.Columns(col =>
-
-{
-
-	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-	col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-})
-
-)
+{% highlight c# %}
+		
+	    namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         }
 {% endhighlight  %}
 {% endtabs %}  
-The following screenshot displays the result of the above code.
-
-![](Selection_images/Selection_img8.png)
-
-Select Row
-{:.caption}
-
-![](Selection_images/Selection_img9.png)
-
-Unselect row
-{:.caption}
-## Customize Selection Color
-
-In this section, you can learn how to customize or override selection background color through css. The following code example is for Selection color customization.
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-<style>
-
-	.e-grid td.e-active 
-	{
-
-			background-color: lightseagreen !important;
-
-	}
-
-</style>
-
-
-
-@(Html.EJ().Grid<OrdersView>("Grid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowPaging()
-
-.PageSettings(page => page.PageSize(8))  
-
-.SelectionType(SelectionType.Multiple)
-
-)
-
-
-{% endhighlight  %}
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-{% endhighlight  %}
-
-{% endtabs %}  
-The following output is displayed as a result of the above code example.
-
-
-
-![](Selection_images/Selection_img10.png)
-
-Selection color customization
-{:.caption}
-
-## Get selected record data
-
-In this section, you can learn how to get selected records from one Grid and how this selected record is used to update datasource of another Grid. 
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-<div class="label1">
-
-	Master Grid
-
-</div>
-
-@(Html.EJ().Grid<EmployeeView>("MasterGrid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource1)      
-
-.ClientSideEvents(eve => { eve.RowSelected("rowSelected"); })
-
-)
-
-<div class="label1">
-
-	Detail Grid
-
-</div>
-
-@(Html.EJ().Grid<OrdersView>("DetailGrid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource2)       
-
-.AllowPaging(false)
-
-)
-
-
-
-
-<script src="http://js.syncfusion.com/demos/web/scripts/jsondata.min.js"></script>
-
-<script type="text/javascript">
-
-	$(function () {           
-
-		window.rowSelected = function (args) {
-
-			var employeeID = args.currentData.EmployeeID;
-
-			var detaildata = ej.DataManager(window.gridData).executeLocal(ej.Query().where("EmployeeID", ej.FilterOperators.equal, employeeID, false).take(10));
-
-			var gridObj = $("#DetailGrid").ejGrid("instance");
-
-			gridObj.model.dataSource = ej.DataManager(detaildata.slice(0, 5));
-
-			$("#DetailGrid").ejGrid("refreshContent");
-
-		}
-
-	});
-
-</script>
-
-{% endhighlight  %}
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult MasterDetails()
-
-        {
-
-            var MasterData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-
-            ViewBag.dataSource1 = MasterData;
-
-
-
-            var DetailData = new NorthwindDataContext().OrdersViews.Where(ord => ord.EmployeeID == 1).Take(5).ToList();
-
-            ViewBag.dataSource2 = DetailData;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-{% endhighlight  %}
-{% endtabs %}  
-
-The following output is displayed as a result of the above code example.
-
-![](Selection_images/Selection_img11.png)
-
-Get selected record data
-
-{:.caption}

@@ -1,322 +1,487 @@
 ---
 layout: post
-title: Grouping | Grid | ASP.NET MVC | Syncfusion
-description: grouping
+title: Grouping with Grid widget for Syncfusion Essential MVC
+description: How to enable grouping and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-
 # Grouping
 
-Grouping is an important feature in Grid. If you want to analysis any particular records, based on its category, you can simply group that column and analyse records based on category. There are several flexible options, such as grouped buttons, group close etc. To enable Grouping in Grid, add AllowGrouping at Grid Initialize. 
+The Grid control has options to group the records based on the required column. When grouping is applied, grouped records are organized into a hierarchical structure to facilitate easier expand and collapse of records. To enable grouping, set `AllowGrouping` property as `true`.
 
-## Initial Grouping
+Columns can be grouped by simply dragging the column header and drop on the group drop area or simply click the group button which is displayed in the column. By default, sorting is done while grouping the column.
 
-In Grid, there is an option to group columns at Grid Initialize that is rendered through GroupedColumns property in Grid. This is an important option because in some scenarios, need to analyse Grid records with Grouping may arise, at the time of initialize.
+The following code example describes the above behavior.
 
 {% tabs %}
- 
-{% highlight CSHTML %}
 
-@(Html.EJ().Grid<EditableOrder>("FlatGrid")
+{% highlight razor %}
 
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowGrouping(true)
-
-.GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}))
-
-.AllowPaging()
-
-)
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 {% endhighlight  %}
-{% highlight C# %}
 
-namespace MVCSampleBrowser.Controllers
+{% highlight c# %}
 
-{
-
-    public partial class GridController : Controller
-
-    {
-        // GET: /Default/
-
-        public ActionResult Default()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }
-
-    }
-
-}
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-{% endtabs %} 
-
+    
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Grouping_images/Grouping_img1.png)
 
-Load Grid with Grouping
-{:.caption}
 
-## Group Buttons
+## Initial Grouping
 
-Group buttons is one of the features under Grouping. It is helpful to do Grouping easily without doing drag and drop. To enable this feature use ShowToggleButton at Grid Initialize.  
+While initializing the grid itself, there is an option to group the column and display it in a hierarchical structure. To enable initial grouping, set array of column's `Field` name to be grouped in `GroupedColumns` property  of `GroupSettings`.
 
+The following code example describes the above behavior.
+            
 {% tabs %}
+ 
+{% highlight razor %}
 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<EditableOrder>("FlatGrid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowGrouping(true)
-
-.GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}).ShowToggleButton(true))
-
-.AllowPaging()
-
-)
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.GroupedColumns(col => { col.Add("ShipCountry"); }); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 
 {% endhighlight  %}
-{% highlight C# %}
 
+{% highlight c# %}
 
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult Default()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }
-
-
-    }
-
-}
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
+    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
-
-
 
 ![](Grouping_images/Grouping_img2.png)
 
-Group Buttons
-{:.caption}
 
-## Hide Ungroup Button
+## Multi-Column Grouping
 
-In GroupDropArea, grouped columns have an option to ungroup a column using GroupButton. It is easier than using Drag and Drop to ungroup columns.  By default this UngroupButton is visible. If you want to hide this button, you can use ShowUngroupButton property to hide columns.
+Group multiple columns by simply drag and drop the columns one by one from column header into group drop area.
 
-
-
-![](Grouping_images/Grouping_img3.png)
-
-Ungroup Button
-{:.caption}
-
+The following code example describes the above behavior.
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
-@(Html.EJ().Grid<EditableOrder>("FlatGrid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowGrouping(true)
-
-        .GroupSettings(d=>d.GroupedColumns(new List<string>(1){"ShipCity"}).ShowUngroupButton(false))
-
-        .AllowPaging()
-
-        )
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.GroupedColumns(col => { col.Add("ShipCountry"); col.Add("CustomerID"); }); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 
 {% endhighlight  %}
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
 
-{
-    public partial class GridController : Controller
+{% highlight c# %}
 
-    {
-
-        public ActionResult Default()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-
-{% endtabs %}
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Grouping_images/Grouping_img4.png)
-
-Hide ungroup button
-{:.caption}
-
-## AutoSize Drop Area
-
-If you drag any header to Group column in Grid, it expands smoothly its Group Drop Area portion. In some scenarios, you need to stop this type of animation while grouping. You can use the EnableDropAreaAutoSizing property to stop animation in Group Drop Area.
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<EditableOrder>("FlatGrid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowGrouping(true)
-
-        .GroupSettings(d=>d.EnableDropAreaAutoSizing(false))
-
-        .AllowPaging()
-
-        )
-{% endhighlight  %}
-
-{% highlight C# %}
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult Default()
-
-        {
-
-            ViewBag.datasource = OrderRepository.GetAllRecords();
-
-            return View();
-
-        }
-
-    }
-
-}
-
-{% endhighlight %}
-
+    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
+![](Grouping_images/Grouping_img3.png)
 
 
-![](Grouping_images/Grouping_img5.png)
+## Group Buttons
 
-Stop group animation
-{:.caption}
+To do grouping easily without doing drag and drop column header by setting `ShowToggleButton` property of `GroupSettings` as `true`.
 
-## Hide Group Drop Area from Grid
-
-In Grid, there is an option to hide the Group Drop Area at Grid Initialize that is achieved through the ShowDropArea property of a GroupSettings in the Grid. The default value is true. By using this property, you can avoid ungrouping or further grouping of a column after the initial column grouping.
-
-When the ShowDropArea property is set to false, the groupDropArea is hidden. 
-
+The following code example describes the above behavior.
 
 {% tabs %}
+ 
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Grid<MvcApplication11.OrdersView>("FlatGrid")
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowPaging()
-
-.AllowGrouping()
-
-.GroupSettings(group => { group.GroupedColumns(col => { col.Add("ShipCountry"); }).ShowDropArea(false); }))  
-
-{% endhighlight %}
-{% highlight C# %}
-
-namespace MvcApplication11.Controllers
-
-{
-
-    public class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Grid/
-
-        public ActionResult GridFeatures()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-}
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.ShowToggleButton(true); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
 
 {% endhighlight  %}
 
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img4.png)
+
+
+## Hide Ungroup Button
+
+Hide ungroup button from grouped columns which is in the group drop area by setting the `ShowUngroupButton` property of `GroupSettings` as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.ShowUngroupButton(false); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img5.png)
+
+
+## Hide Grouped Column
+
+While grouping a particular column, there is an option to hide the grouped columns from grid. To enable hide grouped column option, set `ShowGroupedColumn` property of `GroupSettings` as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.ShowGroupedColumn(false); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img6.png)
 
-Hide Group Drop Area from Grid
-{:.caption}  
+
+## AutoSize Drop Area
+
+Drag any column header and move it to the group drop area, then its portion expands smoothly. Stop this animation by setting `EnableDropAreaAutoSizing` property of `GroupSettings` as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.EnableDropAreaAutoSizing(false); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img7.png)
+
+
+## Hide Drop Area 
+
+To avoid ungrouping or further grouping of a column after an initial column grouping by setting `ShowDropArea` property of `GroupSettings` as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.ShowDropArea(false).GroupedColumns(col => { col.Add("ShipCountry"); }); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))      
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img8.png)
+
+
+## Group Caption Format/Group Caption Template
+
+Using `CaptionFormat` property of `GroupSettings` you can render any type of JsRender templates or customizing the group caption text. 
+
+You can use JsRender syntax in the template.For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link").
+
+N>  1. It's a standard way to enclose the `template` within the `script` tag with `type` as "text/x-jsrender". 
+N>  2. Using locale property of `GroupCaptionFormat`, you can only customize the default group caption text.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+     @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowGrouping()
+            .GroupSettings(group => { group.CaptionFormat("#template"); })
+            .ClientSideEvents(eve => { eve.ActionComplete("complete"); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Add();
+                col.Field("ShipCountry").HeaderText("Ship Country").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+            }))  
+
+{% endhighlight  %}
+            
+{% highlight js %}            
+     
+     <script id="template" type="text/x-jsrender">
+                "{{"{{"}}:field{{}}}}-"{{"{{"}}:key{{}}}}
+                  <button id="btn" class="btn">Collapse</button>
+     </script>
+
+     <script>
+             function complete(args) {
+                 $(".btn").ejButton({
+                 click: "btnClick"
+                });
+             }
+             function btnClick(args) {
+                 var gridObj = $("#FlatGrid").data("ejGrid");
+                 gridObj.expandCollapse(this.element.parent().prev());
+                 $("#btn").ejButton("model.text", args.model.text == "Collapse" ? "Expand" : "Collapse");
+             }
+    </script>    
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+    
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img9.png)
+
+
+![](Grouping_images/Grouping_img10.png)
+
+
+
+
+
+
+
 
 
