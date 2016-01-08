@@ -25,7 +25,7 @@ Enabling Responsive row makes the Grid to render the record values in vertical o
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -107,7 +107,7 @@ Searching in mobile layout
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 @using Syncfusion.JavaScript.Models
 
 @(Html.EJ().Grid<OrdersView>("Grid")
@@ -171,7 +171,7 @@ If the client width is between 321px and 800px, then the grid will render in tab
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -229,7 +229,7 @@ By default, the grid is adaptable to its parent container. It can adjust its wid
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -271,7 +271,7 @@ Min Width is used to maintain minimum width for the Grid. To enable Min Width, `
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -317,7 +317,7 @@ Priority makes column to be visible or hidden based on the `Priority` value and 
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)

@@ -14,7 +14,7 @@ Summary rows visibility can be controlled by `ShowSummary` property and it can b
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -77,7 +77,7 @@ Summaries with `Sum`,`Average`,`Maximum` and `Minimum` aggregate can be defined 
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -130,7 +130,7 @@ Summaries with `True` and `False` count aggregate can be defined by using `Summa
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -183,7 +183,7 @@ namespace SyncfusionMvcApplication3.Controllers
 Custom Summary can be used to create summary values based on your required custom logic and calculations. To enable Custom Summary, `SummaryType` should be `Custom` and `CustomSummaryValue` property need to define as function. In this property `CustomSummaryValue` function, you need to use Grid instance to access `model.dataSource` and `model.currentViewData`. After the custom calculation, the returned value will be displayed in corresponding Summary cell.
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -249,7 +249,7 @@ Group Summary is used to summarize values of a particular column based on group 
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -313,7 +313,7 @@ W> Minimum one column should be grouped to show summary details.
 To show summaries in each Group's Caption row, particular summary row should have `ShowTotalSummary` as `false` and `ShowCaptionSummary` as `true`.
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -378,7 +378,7 @@ To format Summary values, `Format` property needs to be assigned in `SummaryColu
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 	.Datasource((IEnumerable<object>)ViewBag.datasource)
