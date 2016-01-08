@@ -321,7 +321,7 @@ public partial class GridController : Controller
 {% highlight js %}
 <script type="text/javascript">
 
-ej.Grid.locale["de-DE"] = {
+ej.Grid.Locale["de-DE"] = {
     EmptyRecord: "Keine Aufzeichnungen angezeigt",
     GroupDropArea: "Ziehen Sie eine Spaltenüberschrift hier",
     DeleteOperationAlert: "Keine Einträge für Löschvorgang ausgewählt",
@@ -332,7 +332,7 @@ ej.Grid.locale["de-DE"] = {
     GroupCaptionFormat: "{{"{{"}}:field{{}}}}: {{"{{"}}:key{{}}}} - {{"{{"}}:count{{}}}} {{"{{"}}if count == 1{{}}}}Beiträge{{"{{"}}else{{}}}}Beiträges{{"{{"}}/if{{}}}}",
     UnGroup: "Klicken Sie hier, um die Gruppierung aufheben"
  };
- ej.Pager.locale["de-DE"] = {
+ ej.Pager.Locale["de-DE"] = {
     pagerInfo: "{0} von {1} Seiten ({2} Beiträge)",
     firstPageTooltip: "Zur ersten Seite",
     lastPageTooltip: "Zur letzten Seite",
