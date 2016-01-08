@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Globalization and localization with Grid widget for ASP.NET MVC | Grid | ASP.NET MVC | Syncfusion
+title: Globalization and Localization with Grid widget for ASP.NET MVC | Grid | ASP.NET MVC | Syncfusion
 description: How to use globalization and localization 
 platform: ejmvc
 control: Grid
@@ -259,7 +259,7 @@ Last Page</td></tr>
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("Localization")
 
@@ -510,7 +510,7 @@ Please find the code
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("Localization")
 
@@ -596,7 +596,7 @@ ej.ExcelFilter.Locale["de-DE"] = {
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("Localization")
 
@@ -664,7 +664,7 @@ By default, Grid render its text and layout from left to right. To customize Gri
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<OrdersView>("Localization")
 

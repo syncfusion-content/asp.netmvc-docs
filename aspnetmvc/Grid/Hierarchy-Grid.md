@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hierarchical binding | Grid | ASP.NET MVC | Syncfusion
-description:  How to bind the hierarchical data
+description: How to bind the hierarchical data
 platform: ejmvc
 control: Grid
 documentation: ug
@@ -13,7 +13,7 @@ Hierarchical binding can be used to create the Grid with parent and child relati
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<EmployeeView>("HierarchyGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -81,7 +81,7 @@ The Grid can able to expand and collapse all the `ChildGrid` through programmati
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 <button id="expand">expandAll</button>
 <button id="collapse">collapseAll</button>
