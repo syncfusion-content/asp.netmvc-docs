@@ -162,7 +162,7 @@ namespace SyncfusionMvcApplication1.Controllers
 {% endhighlight  %}
 {% endtabs %} 
 
-{% endhighlight %}
+
 
 ![](Print-Grid_images/Print_img2.png)
 
