@@ -48,6 +48,7 @@ You need to use `print()` method from Grid instance to print the Grid. You can a
 
 }))
 {% endhighlight  %}
+
 {% highlight C#%}
 
 using System;
@@ -134,6 +135,7 @@ By default, the Grid can be print from toolbar. To print from external button ac
 
 </script>
 {% endhighlight  %}
+
 {% highlight C#%}
 
 using System;
@@ -162,7 +164,6 @@ namespace SyncfusionMvcApplication1.Controllers
 {% endhighlight  %}
 {% endtabs %} 
 
-{% endhighlight %}
 
 ![](Print-Grid_images/Print_img2.png)
 
