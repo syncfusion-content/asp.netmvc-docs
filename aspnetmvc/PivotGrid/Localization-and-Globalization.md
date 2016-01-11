@@ -305,7 +305,9 @@ The following table lists the default keywords in French culture for Pivot Pager
 <td>Catégorique Page</td>
 </tr>
 </table>
-##Localization and Globalization of Cube Info
+
+## Localization and Globalization of Cube Info
+
 Content displayed within the PivotGrid control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
  
 * To get the localized string based on different cultures, from OLAP Cube, you need to set **"Locale Identifier"** in the connection string to a specific culture.

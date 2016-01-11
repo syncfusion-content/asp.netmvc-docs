@@ -9,1051 +9,1403 @@ documentation: ug
 
 # Columns
 
-Colums are a key feature in Grid to define schema in a control based on datasource. It is useful to map field to datasource values.
+Column definitions are used as the DataSource schema in grid and it plays vital role in rendering column values in required format and sorting, filtering, editing based on its type. The `Field` property of the columns is necessary to map the datasource values in grid columns.
 
-## Formatting
+N> 1. The column with `Field` which are not in the datasource, then the column values will be displayed as empty.
 
-Formatting is used to convert data values to human readable formats using specific culture settings. In Grid, you have an option to format a particular column through the Format property. For more details about globalize.js, refer to the link ([https://github.com/jquery/globalize](https://github.com/jquery/globalize)). The following code example shows you how to use formatting in Grid.
+N> 2. If the `Field` name contains "dot" then it is considered as complex binding.
 
+
+## Auto Generation
+
+The columns are automatically generated when `Columns` declaration is empty or undefined while initializing the grid. Also, all the columns which are in `DataSource` are bound as a grid `Columns`.
 
 {% tabs %}
 
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            )       
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+                { 
+                public class GridController : Controller
+                    {        
+                        public ActionResult GridFeatures()
+                        {    
+                                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                                ViewBag.DataSource = DataSource;
+                                return View();
+                                }
+                            }
+                        }                 
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img1.png)
+
+### How to set `IsPrimaryKey` for auto generated columns when editing is enabled:
+
+Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways. The following code example demonstrates the above behavior.
+
+1. If primary key "column index" is known then refer the following code example
+
+{% tabs %}
 
 {% highlight CSHTML %}
 
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .EditSettings(edit =>
+                    {
+                        edit.AllowEditing(true);
+    
+                    })
+                .ClientSideEvents(eve => { eve.DataBound("dataBound"); })
+    )
+    
+    <script type="text/javascript">
+        function dataBound(args) {
+            var column = args.model.columns[0];
+            //(or)
+            var column = this.getColumnByIndex(0);
+            column.isPrimaryKey = true;
+            //Here columns method used to update the particular column
+            this.columns(column, "update");
+        }
+    </script>
+{% endhighlight  %}
 
-@(Html.EJ().Grid<object>("format")
-
-// the datasource gets data
-
-.Datasource((IEnumerable<object>)ViewBag.dataSource) 
-
-.Columns(col =>
-
+{% highlight C# %}
+    
+    namespace MVCSampleBrowser.Controllers
     {
-
-             // the formatting columns
-
-        col.Field("Number").HeaderText("Number").Format("{0:n2}").Add();
-
-        col.Field("Currency").HeaderText("currency").Format("{0:C2}").Add();
-
-        col.Field("Date").HeaderText("Date").Format("{0:MM/dd/yyyy}").Add();
-
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
+        }
     }
+{% endhighlight  %}
 
+{% endtabs %}  
+
+ 2. If primary key "column field name" is known then refer the following code example
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+      @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .EditSettings(edit =>
+                {
+                    edit.AllowEditing(true);
+
+                })
+            .ClientSideEvents(eve => { eve.DataBound("dataBound"); })
     )
 
-)
-
+    <script type="text/javascript">
+        function dataBound(args) {
+            var column = this.getColumnByField("OrderID");
+            column.isPrimaryKey = true;
+            //Here columns method used to update the particular column
+            this.columns(column, "update");
+        }
+    </script>
 {% endhighlight  %}
+
 {% highlight C# %}
 
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-public class GridController : Controller
-
-    {
-
-          public ActionResult ColumnFormatting()
-
-        {
-
-            List<ColumnFormattingData> data = new List<ColumnFormattingData>();
-
-             for (var i = 1; i < 6; i++)
-
-               {
-
-                data.Add(new ColumnFormattingData()
-
+    namespace MVCSampleBrowser.Controllers
                 {
+                    public class GridController : Controller
+                        { 
+                            public ActionResult GridFeatures()
+                                {
+                                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                                    ViewBag.DataSource = DataSource;
+                                    return View();
+                                }
+                            }
+                    }          
+{% endhighlight  %}
 
-                    Number = 100/i,
+{% endtabs %}  
 
-                    Currency = 100/i,
+## Headers
 
-                    Date = DateTime.Now
+### HeaderText
 
-                });
+It represents the title for particular column. To enable header text, set `HeaderText` property of `Columns`. The following code example describes the above behavior.
 
+N> If `HeaderText` is not defined then the `Field` name is considered as header text for that particular column. If `Field` name and `HeaderText` also not defined then the column is rendered with "empty" header text.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Emp ID").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+                col.Field("ShipCountry").HeaderText("Country").Add();
+                col.Field("ShipCity").HeaderText("City").Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
             }
-
-            ViewBag.dataSource = data;
-
-            return View();
-
         }
-
-    }
-
-}
-
-
+    } 
 {% endhighlight  %}
+    
 {% endtabs %}  
 
-The following is the result of column formatting.
+The following output is displayed as a result of the above code example.
 
+![](columns_images/columns_img2.png)
 
+### Header Text alignment
 
-![](Columns_images/Columns_img1.png)
+Align the header text of column header using `HeaderTextAlign` property of the `Columns`. There are four possible ways to align header text, they are
 
-Column formatting
-{:.caption}
+1. Right
+2. Left
+3. Center
+4. Justify
 
-## Template
+N> For `HeaderTextAlign` property you can assign `enum` value (`TextAlign.Right`).
 
-A Template is used to render a specific template to a particular column using Template and TemplateID property. These columns are not bound to Grid.
-
+The following code example describes the above behavior.
 
 {% tabs %}
 
 {% highlight CSHTML %}
 
-
-<script type="text/x-jsrender" id="columnTemplate">  <!--jsrender script-->
-
-    <img style="width:130px;height:100px" src="http://js.syncfusion.com/demos/web/themes/images/Employees//{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
-
-        </script>
-
-    @(Html.EJ().Grid<EmployeeView>("ColumnTemplate")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowPaging()
-
-        .PageSettings (page => page.PageSize(4))
-
-        .Columns(col =>
-
-        {
-
-            //to enable the Template and templateId loads own template
-
-            col.HeaderText("Employee Photo").Template(true).TemplateID("#columnTemplate").TextAlign(TextAlign.Center).Width(25).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(20).Add();
-
-            col.Field("FirstName").HeaderText("First Name").Width(30).Add();
-
-            col.Field("BirthDate").HeaderText("Birth Date").TextAlign(TextAlign.Right).Width(30).Format("{0:MM/dd/yyyy}").Add();      
-
-        })
-
-        )  
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderTextAlign(TextAlign.Right).HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderText("Emp ID").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+                col.Field("ShipCountry").HeaderText("Country").Add();
+                col.Field("ShipCity").HeaderText("City").Add();
+            }))
 {% endhighlight  %}
+
 {% highlight C# %}
 
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        // GET: /Template/
-
-        public ActionResult ColumnTemplate()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            // Data gets from DataContext
-
-            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
+            public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+            }
         }
-
-    }
-
-}  
-
-
+    }    
 {% endhighlight  %}
+
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
+![](columns_images/columns_img3.png)
 
+### Header Template
 
-![](Columns_images/Columns_img2.png)
+The template design that applies on for the column header. To render template, `HeaderTemplateID` property of `Columns`.
 
-Column Template
-{:.caption}
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link").
 
-## Custom Attribute
+N> It's a standard way to enclose the `template` within the `script` tag with `type` as `text/x-jsrender`.
 
-CustomAttributes are a powerful feature of Columns. This is used to modify the styles and appearance of a particular column.
+The following code example describes the above behavior.
 
+{% tabs %}
+
+{% highlight html %}
+
+    <script id="empTemplate" type="text/x-jsrender">
+    Emp ID
+    <span class="e-userlogin e-icon employee"></span>
+    </script>
+{% endhighlight %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").Add();
+                col.Field("EmployeeID").HeaderTemplateID("#empTemplate").Add();
+                col.Field("Freight").HeaderText("Freight").Add();
+                col.Field("ShipCountry").HeaderText("Country").Add();
+                col.Field("ShipCity").HeaderText("City").Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+                {
+                public class GridController : Controller
+                    { 
+                    public ActionResult GridFeatures()
+                        {
+                            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                            ViewBag.DataSource = DataSource;
+                            return View();
+                    }
+                }
+            }        
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img4.png)
+
+## Text alignment
+
+You can align both content and header text of particular column using `TextAlign` property. There are four possible ways to align content and header text of column, they are 
+
+1. Right
+2. Left
+3. Center
+4. Justify
+
+N> 1. For `TextAlign` property you can assign `enum` value (`TextAlign.Right`).
+
+N> 2. The `TextAlign` property will affect both content and header text of the grid.
+
+The following code example describes the above behavior.
 
 {% tabs %}
 
 {% highlight CSHTML %}
 
-
-<style>
-
-        .e-rowcell[employeeid = "5"] {
-
-            color: red;
-
-        }	
-
-</style>
-
- @(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowPaging()
-
-        .PageSettings (page => page.PageSize(7))
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).CustomAttributes(cus => cus.AddAttribute("employeeid", "'{{:EmployeeID}}'")).Add();
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Format("{0:C}").Add();
-
-            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(100).Format("{0:MM/dd/yyyy}").Add();
-
-            col.Field("ShipCountry").HeaderText("Ship City").Width(110).Add();
-
-        })
-)
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").TextAlign(TextAlign.Right).Add();
+                col.Field("EmployeeID").TextAlign(TextAlign.Right).Add();
+                col.Field("Freight").TextAlign(TextAlign.Right).Add();
+                col.Field("ShipCountry").TextAlign(TextAlign.Center).Add();
+                col.Field("ShipCity").TextAlign(TextAlign.Justify).Add();
+            }))
 {% endhighlight  %}
+
 {% highlight C# %}
 
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        // GET: /Custom Attributes/
-
-
-
-        public ActionResult Default()
-
+    namespace MVCSampleBrowser.Controllers
         {
-
-            // Data gets from DataContext
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
+        public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+            }
         }
-
     }
-
-}
-
-
-
 {% endhighlight  %}
+
 {% endtabs %}  
+
 The following output is displayed as a result of the above code example.
 
+![](columns_images/columns_img5.png)
 
-![](Columns_images/Columns_img3.png)
+## Format
 
-Column Customization
-{:.caption}
+`Format` is the process of customizing the particular column data with specified jquery recognized globalize formats, such as currency, numeric, decimal, percentage or dates. To specify the globalize format, by using Format property of `Columns`.
 
-## Read only
+The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/jquery/globalize/tree/v0.1.1#format "data format") strings available for the `Date` and `Number` types.
 
-AllowEditing enables you to edit a column, but it prevents the fields from showing it as editable. If you want to make a column as read-only then set AllowEditing as False for that column. The following code example shows Essential JavaScript Grid column as read-only.
-
+The following code example describes the above behavior.
 
 {% tabs %}
-
 
 {% highlight CSHTML %}
 
-
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-        .AllowPaging()
-
-        .PageSettings (page => page.PageSize(5))
-
-        .EditSettings(edit =>  edit.AllowEditing().AllowDeleting().AllowAdding())
-
-        .Columns(col =>
-
-           {
-
-               col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey (true).TextAlign(TextAlign.Right).Width(60).Add();
-
-                // column read only at while editing
-
-               col.Field("CustomerID").HeaderText("Customer Name").TextAlign(TextAlign.Left).Width(80).AllowEditing(false).Add();
-
-               col.Field("EmployeeID").HeaderText("Employee ID").Width(60).TextAlign(TextAlign.Right).Add();        col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(60).Add()
-
-           })
-
-        )
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();
+                col.Field("Freight").Format("{0:C2}").Add();
+                col.Field("OrderDate").Format("{0:dd/MM/yyyy}").Add();
+                col.Field("ShipCity").Add();
+            }))
 {% endhighlight  %}
 
 {% highlight C# %}
 
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        // GET: /Custom Attributes/
-
-
-
-        public ActionResult Default()
-
-        {
-
-              // Data gets from DataContext
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-{% endhighlight  %}
-{% endtabs %}  
-
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Columns_images/Columns_img4.png)
-
-Read-only
-{:.caption}
-
-## Controlling Grid actions
-
-In Grid, you can control Grid actions through AllowSorting, AllowGrouping, AllowFiltering. The following code example shows you how to disable a particular column. The following example has controlled grouping action in CustomerID column, filtering in EmployeeID column and sorting in Freight column.
-
-
-{% tabs %}
- 
-{% highlight  CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-// the datasource  gets data from controller
-
-.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-.AllowPaging()
-
-.PageSettings(page => page.PageSize(5))
-
-.AllowFiltering()
-
-.AllowGrouping()
-
-.GroupSettings(group => group.GroupedColumns(col => col.Add("OrderID")))
-
-.AllowSorting()
-
-.Columns(col =>
-
-   {
-
-       col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey (true).TextAlign(TextAlign.Right).Width(60).Add();
-
-       col.Field("CustomerID").HeaderText("Customer Name").TextAlign(TextAlign.Left).Width(80).AllowGrouping(false).Add();
-
-       col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(60).AllowFiltering(false).Add();
-
-       col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(60).AllowSorting(false).Add();
-
-   })
-
- )
-
-{% endhighlight  %}
-
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        //
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-{% endhighlight  %}
-
-{% endtabs %} 
-The following output is displayed as a result of the above code example.
-
-
-
-![](Columns_images/Columns_img5.png)
-
-Control Grid actions
-{:.caption}
-
-## Auto-generate column
-
-The columns are automatically generated from the datasource and you do not need specific column declarations. The following code example shows auto-generate column behavior with Grid.
-
-
-{% tabs %}
- 
-{% highlight  CSHTML %}
-
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
-
-.Datasource((IEnumerable<EditableOrder>)ViewBag.datasource)
-
-.AllowPaging()
-
-.PageSettings(page => page.PageSize(5))
-
-)
-
-
-{% endhighlight %}
-{% highlight C# %}
-
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        // GET: /Default/
-
-
-
-        public ActionResult Default()
-
-        {
-
-            var DataSource = OrderRepository.GetAllRecords().ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-{% endhighlight %}
-{% endtabs %} 
-
-The following output is displayed as a result of the above code example.
-
-
-
-![](Columns_images/Columns_img6.png)
-
-Auto-generate columns
-{:.caption}
-
-## Foreign key columns
-
-Foreign key is a field in relational table. It matches the specific key columns of another table. 
-
-To enable the Foreing key field , use ForeignKeyField and ForeignKeyValue propertyof Grid as follows:
-
-I> ForeignkeyField and Field key name must be same.
-
-
-{% tabs %}
-
-{% highlight  CSHTML %}
-
- @(Html.EJ().Grid<OrdersView>("ForeignKey")
-
-	.Datasource((IEnumerable<object>)ViewBag.dataSource1)
-
-	.AllowPaging()
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey (true).TextAlign(TextAlign.Right).Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID")
-
-		   .ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.dataSource2)
-
-		   .TextAlign(TextAlign.Left).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(75).Add();
-
-
-
-	})
-
-)
-
-{% endhighlight %}
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        // GET: /ForeignKeyColumn/
-
-
-
-        public ActionResult ForeignKeyColumn()
-
-        {
-
-            var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.dataSource1 = DataSource1;
-
-            var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
-
-            ViewBag.dataSource2 = DataSource2;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
+    namespace MVCSampleBrowser.Controllers
+                {
+                public class GridController : Controller
+                    { 
+                    public ActionResult GridFeatures()
+                        {
+                            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                            ViewBag.DataSource = DataSource;
+                            return View();
+                }
+            }
+        }        
 {% endhighlight  %}
 
 {% endtabs %}  
 
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img6.png)
+
+## Width
+
+You can specify the width for particular column by setting `Width` property of `Columns` as in pixel (ex: 100) or in percentage (ex: 40%).
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width("10%").Add();
+                col.Field("EmployeeID").Width("15%").Add();
+                col.Field("Freight").Width(100).Add();
+                col.Field("ShipCity").Width(150).Add();
+                col.Field("ShipCountry").Width(100).Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+        public class GridController : Controller
+            { 
+             public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+               }
+          }
+    }
+{% endhighlight  %}
+
+{% endtabs %}  
 
 The following output is displayed as a result of the above code example.
 
+![](columns_images/columns_img7.png)
 
+## Resize to fit 
 
-![](Columns_images/Columns_img7.png)
+The `AllowResizeToFit` property enable the grid to set width to columns based on maximum width of the particular column's content to facilitate full visibility of data in all the grid rows and this automatic behavior is applicable only for the columns which does not have width specified. 
 
-Foreign key columns
-{:.caption}
+On columns where "width is defined", double click on the particular column header's resizer symbol to resize the column to show the whole text. For example, refer the "ShipCity" column in the below code snippet and output screen shot. 
+
+The following code example describes the above behavior. 
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowResizeToFit()
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width(100).Add();
+                col.Field("EmployeeID").Add();
+                col.Field("Freight").Width(75).Add();
+                col.Field("ShipCity").Width(50).Add();
+                col.Field("ShipAddress").Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                }
+            }
+        }  
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img8.png)
+
+## Auto wrap column
+
+`AllowTextWrap` property enables the grid to wrap cell content to next line when the content exceeds the boundary of the cell width. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowTextWrap()
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width(100).Add();
+                col.Field("EmployeeID").Width(100).Add();
+                col.Field("Freight").Width(100).Add();
+                col.Field("ShipCity").Width(150).Add();
+                col.Field("ShipAddress").Width(100).Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+            }
+        }
+    }   
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img9.png)
+
+## Reorder
+
+Reordering can be done by drag and drop the particular column header from one index to another index within the grid. Reordering can be enabled by setting `AllowReordering` property as `true`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowReordering()
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();               
+                col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add();
+                col.Field("Freight").Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+                }
+            }
+        }    
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img10.png)
+
+## Visibility
+
+You can hide particular column in grid view by setting `Visible` property of it as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .Columns(col =>
+            {
+                col.Field("EmployeeID").Add();
+                col.Field("OrderID").Visible(false).Add();
+                col.Field("Freight").Add();         
+                col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+                    }
+                }
+            }
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img11.png)
 
 ## Cell Merging
 
-Cell merging feature enables to merge cells based on your requirement. To enable cell merging , use AllowCellMerging property of Grid as follows.
+The grid has options to merge the grid cells based on the required conditions. This can be enabled by setting `AllowCellMerging` property as `true` and the merge conditions can be defined in `MergeCellInfo` event. In this event, you can get the column details and data of that particular row and column which is helpful in defining conditions. 
 
+You can merge the rows and cells of grid, using `rowMerge`, `colMerge` and `merge` functions available in `MergeCellInfo` event's argument.
 
-{% tabs %}
- 
-{% highlight  CSHTML %}
-
-@(Html.EJ().Grid<MVCCellMerging.Models.Order>("FlatGrid")
-
-	.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	.AllowScrolling()       
-
-	.AllowPaging() 
-
-	.AllowCellMerging ()       
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-		col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
-
-	})
-
-.ClientSideEvents(eve => { eve.MergeCellInfo("cellmerge"); }))
-
-<script type="text/javascript>
-
-function cellmerge(args) {
-
-                       if (args.column.field == "EmployeeID" && args.data.OrderID == 10001) {
-
-                           args.rowMerge(3);
-
-                       }
-
-                       else if (args.column.field == "ShipCity" && args.data.OrderID == 10005) {
-
-                           args.colMerge(3);
-
-                       }
-
-                       else if (args.column.field == "ShipCity" && args.data.OrderID == 10008) {
-
-                           args.merge(0, 3);
-
-                       }
-
-    	}
-
-</script>
-{% endhighlight  %}
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
-    {
-
-        public ActionResult CellMerging()
-
-        {
-
-            var DataSource = new NorthwindDataContext .Orders.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
-        }
-
-    }
-
-}
-
-
-{% endhighlight  %}
-
-{% endtabs %} 
-
-
-Execute the above code to render the following output.
-
-
-
-![](Columns_images/Columns_img8.png)
-
-Cell Merging
-{:.caption}
-
-## AutoWrap Column Cells
-
-AllowTextWrap feature allows you to wrap cell content to next line when the content exceeds the boundary of the Column cells. Use the following code example for Auto wrap in column cells.
-
-
-
+The following code example describes the above behavior.
 
 {% tabs %}
- 
+
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<MVCAutowrap.Models.Order>("FlatGrid")
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .AllowCellMerging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                    col.Field("Freight").Add();
+                })
+                .ClientSideEvents(eve => { eve.MergeCellInfo("mergeCellInfo"); })
+                )
 
-	.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	.AllowScrolling()       
-
-	.AllowPaging() 
-
-	.AllowTextWrap()       
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(100).Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-		col.Field("ShipName").HeaderText("Ship Name").Width(80).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(90).Add();
-
-	}))
-
-
+    <script type="text/javascript">
+        
+        function mergeCellInfo(args)
+        {
+            if (args.column.field == "EmployeeID" && args.data.OrderID == 10248)
+                args.rowMerge(3);
+            else if (args.column.field == "ShipCity" && args.data.OrderID == 10252)
+                args.colMerge(3);
+            else if (args.column.field == "ShipCity" && args.data.OrderID == 10255)
+                args.merge(0, 3);
+        }
+    </script>
 {% endhighlight  %}
+
 {% highlight C# %}
 
-namespace MVCSampleBrowser.Controllers
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+                    }
+                }
+            }
+{% endhighlight  %}
 
-{
+{% endtabs %}  
 
-    public partial class GridController : Controller
+The following output is displayed as a result of the above code example.
 
-    {
+![](columns_images/columns_img12.png)
 
-        public ActionResult TextWrap()
+## Unbound Column
 
-        {
+You can define the unbound columns in grid by not defining `Field` property for that particular. Value for this columns can be populated either manually using `QueryCellInfo` event or by using `ColumnTemplate`.
 
-            var DataSource = new NorthwindDataContext .Orders.ToList();
+N> Editing, grouping, filtering, sorting, summary and searching support are not available for unbound columns.
 
-            ViewBag.datasource = DataSource;
+The following code example describes the above behavior. 
 
-            return View();
+{% tabs %}
 
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                            .AllowPaging()
+                            .EditSettings(edit => { edit.AllowDeleting(); })
+                            .Columns(col =>
+                            {
+                                col.Field("OrderID").IsPrimaryKey(true).Add();
+                                col.Field("EmployeeID").Add();
+                                col.Field("CustomerID").Add();
+                                col.Field("Freight").Add();
+                                col.HeaderText("").Format("<a onclick=\"clk(this)\" href=#>Delete</a>").Add();
+                            })
+                            )
+    
+    <script type="text/javascript">
+        function clk(e) {
+            var obj = $("#FlatGrid").data("ejGrid");
+            obj.deleteRecord("OrderID", obj.getSelectedRecords()[0]);
         }
+    </script>
+{% endhighlight  %}
 
-    }
+{% highlight C# %}
 
-}
+    namespace MVCSampleBrowser.Controllers
+        {
+        public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                }
+            }
+        }
+{% endhighlight  %}
 
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img13.png)
+
+## Column Template
+
+Html templates can be specified in the `Template` property of the particular column as a string (html element) or ID of the template's HTML element.
+
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "this link"). 
+
+N> If `Field` is not specified, you will not able to perform editing, grouping, filtering, sorting, search and summary functionalities in particular column.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight html %}
+
+    <script type="text/x-jsrender" id="columnTemplate">
+        <!--The image is referred from this location "http://jsplayground.syncfusion.com/13.2.0.29/themes/web/images/employees/1.png" based on EmployeeID-->
+        <img style="width: 75px; height: 70px" src="/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png" alt="{{"{{"}}:EmployeeID{{}}}}" />
+    </script>
+{% endhighlight %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .PageSettings(page => { page.PageSize(4); })
+                .Columns(col =>
+                {
+                    col.HeaderText("Photo").Template("<img style='width: 75px; height: 70px' src='/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png' alt='{{"{{"}}:EmployeeID{{}}}}.png' />").Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("FirstName").Add();
+                    col.Field("LastName").Add();
+                    col.Field("Country").Add();
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+        public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                }
+            }
+        }
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img14.png)
+
+## Controlling Grid actions
+
+You can control the grid actions of a particular column by setting `AllowSorting`,`AllowGrouping`, `AllowFiltering` and `AllowEditing` properties of it as `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .AllowResizing()
+                .AllowSorting()
+                .AllowGrouping()
+                .AllowFiltering()
+                .EditSettings(edit => { edit.AllowEditing(); })
+                .Columns(col =>
+                {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").AllowEditing(false).AllowResizing(false).AllowSorting(false).AllowGrouping(false).AllowFiltering(false).Add();
+                    col.Field("Freight").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+        public class GridController : Controller
+            { 
+            public ActionResult GridFeatures()
+                {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                }
+            }
+        }
 {% endhighlight  %}
 
 {% endtabs %} 
 
-Execute the above code to render the following output.
+## Read only
 
-![](Columns_images/Columns_img9.png)
+To make a column as "read-only" then set `AllowEditing` property of `Columns` as `false`.
 
-Grid with Column chooser
-{:.caption}
+The following code example describes the above behavior. 
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowEditing(); })
+                .Columns(col =>
+                {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").AllowEditing(false).Add();
+                    col.Field("Freight").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img15.png)
+
+## Expression Column
+
+Expression column is possible only for `Template` column. You can use JsRender syntax in the template.
+
+You can use JsRender syntax in the template.For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link"). 
+
+N> This expression column is supported at read only mode.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("FoodName").Add();
+                    col.Field("Protein").Add();
+                    col.Field("Fat").Add();
+                    col.Field("Carbohydrate").Add();
+                    col.HeaderText("Calories In Take").Template("<span>{{"{{"}}:Protein * 4  + Fat * 4 + Carbohydrate * 9 {{}}}}</span>").Add();
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().FoodInformation.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img16.png)
+
+
+## Command Column
+
+### Default action buttons
+
+Using Command column, you can add `CRUD` action buttons as one of the grid column, through `Type` property of `Commands`. The `Type` property supports the below default `UnboundType` buttons.
+
+1. Edit
+2. Save
+3. Delete
+4. Cancel
+
+Through `ButtonOptions` property of `Commands`, you can specify all the button options which are supported by Essential Studio ASP.NET MVC Button control. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowEditing().AllowDeleting().AllowAdding(); })
+                .Columns(col =>
+                {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("Freight").EditType(EditingType.Numeric).Add();
+                    col.Field("ShipCountry").Add();
+                    col.HeaderText("Manage Records").Commands(command =>
+                    {
+                        command.Type(UnboundType.Edit)
+                            .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
+                            {
+                                Text = "Edit"
+                            }).Add();
+                        command.Type(UnboundType.Delete)
+                            .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
+                            {
+                                Text = "Delete"
+                            }).Add();
+                        command.Type(UnboundType.Save)
+                            .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
+                            {
+                                Text = "Save"
+                            }).Add();
+                        command.Type(UnboundType.Cancel)
+                            .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
+                            {
+                                Text = "Cancel"
+                            }).Add();
+                    }).IsUnbound(true).Width(150).Add();
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().OrdersView.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img17.png)
+
+### Custom buttons
+
+You can add custom button in the command column by specifying the `Type` property of `Commands` as `empty` or any other `string` instead of `enum` values.
+
+N> 1. For `Type` property you can assign either `string` value (`edit`).
+
+N> 2. In command column you can add only buttons.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("EmployeeID").Add();
+                    col.HeaderText("Employee Details").Commands(command =>
+                    {
+                        command.Type("detail")
+                            .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
+                            {
+                                Text = "Details",
+                                Width = "100px",
+                                Click = "onClick"
+                            }).Add();
+                    })
+                .IsUnbound(true)
+                .TextAlign(TextAlign.Center)
+                .Width(150)
+                .Add();
+                })
+                )
+
+    <script type="text/javascript">
+        function onClick(args) {
+            var grid = $("#FlatGrid").ejGrid("instance");
+            var index = this.element.closest("tr").index();
+            var record = grid.getCurrentViewData()[index];
+            alert("Record Details: " + JSON.stringify(record));
+        }
+    </script>    
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().OrdersView.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img18.png)
 
 ## Column Chooser
 
-Column Chooser is used to view or hide particular column. To enable column chooser, use ShowColumnChooser property of Grid as follows.
+Column chooser contains all the columns which are defined in the `Columns` property, using this you can control the visibility of columns in grid. You can prevent to show the particular column in column chooser by setting `ShowInColumnChooser` property of `Columns` as `false`. It can be shown in the right corner of grid. To enable column chooser, `ShowColumnChooser` property as `true`. 
 
+The following code example describes the above behavior.
 
 {% tabs %}
- 
+
 {% highlight CSHTML %}
 
-@(Html.EJ().Grid<OrdersView>("ColumnChooser")
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .ShowColumnChooser()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").ShowInColumnChooser(false).Add();
+                    col.Field("Freight").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                })
+                )
+{% endhighlight  %}
 
-	.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	.ShowColumnChooser()
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Visible(false).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();                  
-
-		col.Field("Freight").TextAlign(TextAlign.Right). Add();
-
-		col.Field("ShipName").Add();
-
-		col.Field("ShipCountry").Add();
-
-	}))
-
-
-{% endhighlight %}
 {% highlight C# %}
 
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
+    namespace MVCSampleBrowser.Controllers
     {
-
-
-
-        public ActionResult ColumnChooser()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();
-
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource = new NorthwindDataContext().OrdersView.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+            }
         }
-
-
-
     }
-
-}
-
-
 {% endhighlight  %}
+
 {% endtabs %} 
 
-Execute the above code to render the following output.
-
-![](Columns_images/Columns_img10.png)
-
-Grid with Column chooser
-{:.caption}
-
-
-## DisableHtmlEncode
-
-DisableHtmlEncode property helps you show the encoded HTML view of Grid content and header elements. 
-
-The following code example shows you how to set disableHtmlEncode:
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-  @(Html.EJ().Grid<object>("Grid")
-
-  .Datasource((IEnumerable<object>)ViewBag.datasource)
-
-  .AllowSorting()
-
-  .AllowPaging()
-
-  .Columns(col =>
-
-  { 
-
-   Col.Field(“OrderID”).HeaderText(“Order ID”).IsPrimaryKey(true). TextAlign(TextAlign.Right).Add()
-
-    Col.Field(“CustomerID”).HeaderText(“<div>Customer        ID</div>”).disableHtmlEncode(true).Add()
-
-    Col.Field(“EmployeeID”).HeaderText(“<div>Employee ID</div>”).disableHtmlEncode(true). TextAlign(TextAlign.Right).Add()
-
-    Col.Field(“Freight”).HeaderText(“Freight”). TextAlign(TextAlign.Right).Add()
-
-    Col.Field(“ShipCountry”).HeaderText(“Ship Country”).Add() 
-
-
-{% endhighlight %}
-{% highlight C# %}
-
-namespace SyncfusionMvcApplication3.Controllers
-
-{
-
-    public class HomeController : Controller
-
-    {
-
-     public ActionResult HTMLEncode()
-
-      {
-
-       ViewBag.datasource = new NorthwindDataContext.Orders.ToList();
-
-       return View();
-
-      }         
-
-    }	
-
-}
-
-{% endhighlight  %}
-{% endtabs %}  
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/Columns_img11.png)
+![](columns_images/columns_img19.png)
 
-DisableHTMLEncode
-{:.caption}
+## Foreign Key Column
 
-## Stacked Header
+Lookup data source can be bound to `DataSource` property of `Columns`. Data `field` and `text` can be set using `ForeignKeyField` and `ForeignKeyValue` property of `Columns`.
 
-The Stacked Header feature allows additional header rows that span across the grid columns. Columns can be grouped under such headers. You can effectively group extensive data with the help of multilevel Stacked Headers as well. Enable the Stacked Header by setting the ShowStackedHeader property to true and set the stacked header row by using the StakedHeaderRows property. The Stacked Header feature also supports all other grid features including Grouping, Sorting, Filtering, Reordering, etc. 
+I> For foreign key column the sorting and grouping is based on `ForeignKeyField` instead of `ForeignKeyValue`.
 
+The following code example describes the above behavior.
 
 {% tabs %}
- 
-{% highlight  CSHTML %}
 
+{% highlight CSHTML %}
 
-@(Html.EJ().Grid<OrdersView>(“StackedHeaderGrid”)
-
-	.Datasource((IEnumerable<object>)ViewBag.datasource)
-
-	.ShowStackedHeader()
-
-	.StackedHeaderRows(row =>
-
-	{
-
-		row.StackedHeaderColumns(column =>
-
-		{
-
-			column.StackedHeaderText(“OrderDetails”).Column(col =>
-
-			{
-
-				col.Add(“OrderID”);
-
-				col.Add(“OrderDate”);
-
-				col.Add(“Freight”);
-
-			}).Add();
-
-			column.StackedHeaderText(“Ship Details”).Column(col =>
-
-			{
-
-				col.Add(“ShipName”);
-
-				col.Add(“ShipCity”);
-
-				col.Add(“ShipCountry”);
-
-			}).Add();
-
-		}).Add();
-
-	})
-
-	.Columns(col =>
-
-	{
-
-		col.Field(“OrderID”).HeaderText(“Order ID”).TextAlign(TextAlign.Right). Add();
-
-		col.Field(“OrderDate”).HeaderText(“Order Date”).Add();
-
-		col.Field(“Freight”).HeaderText(“Freight”).TextAlign(TextAlign.Right). Add();
-
-		col.Field(“ShipName”).HeaderText(“Ship Name”).TextAlign(TextAlign.Right).Add();
-
-		col.Field(“ShipCity”).HeaderText(“Ship City”).Add();
-
-		col.Field(“ShipCountry”).HeaderText(“Ship Country”).Add();
-
-	}))
-
-
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource1)
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+                .Columns(col =>
+                {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.DataSource2).Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("Freight").Add();
+                    col.Field("ShipCity").Add();
+                })
+                )
 {% endhighlight  %}
+
 {% highlight C# %}
 
-namespace MVCSampleBrowser.Controllers
-
-{
-
-    public partial class GridController : Controller
-
+    namespace MVCSampleBrowser.Controllers
     {
-
-
-
-        public ActionResult DetailTemplate()
-
-        {
-
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-
-            ViewBag.datasource = DataSource;
-
-            return View();        
-
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource1 = DataSource1;
+                var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
+                ViewBag.DataSource2 = DataSource2;    
+                return View();
+            }
         }
-
     }
-
-}
-
-
-
-{% endhighlight %}
+{% endhighlight  %}
 
 {% endtabs %} 
 
-![](Columns_images/Columns_img12.png)
+The following output is displayed as a result of the above code example.
 
-Stacked Header
-{:.caption}
+![](columns_images/columns_img20.png)
 
-![](Columns_images/Columns_img13.png)
+## Custom Attribute
 
-Stacked Header with Grouping
-{:.caption}
+You can add custom attribute for particular column `td` element by using `CustomAttributes` property of the column.
 
+Based on custom attribute you can customize the style and appearance of the `td` element or handling Jquery functionalities. 
+
+You can use JsRender syntax in the template.For more information about JsRender syntax, please refer [the link](http://www.jsviews.com/#jsrapi "the link").
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("ShipCity").CustomAttributes(custom => { custom.AddAttribute("title","'{{"{{"}}:ShipCity {{}}}}'"); }).Add();
+                    col.Field("ShipCountry").Add(); 
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource1;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img21.png)
+
+## Displaying HTML content
+
+This will helps you to show actual HTML value in grid content and header. To disable html code, set `DisableHtmlEncode` property of `Columns` as true. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").HeaderText("<div>Cust ID</div>").disableHtmlEncode(true).Add();
+                    col.Field("EmployeeID").HeaderText("<div>Employee ID</div>").disableHtmlEncode(false).Add();
+                    col.Field("ShipCountry").Add(); 
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource1;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img22.png)
+
+## Customize column
+
+You can customize the header and content of that particular column by `CssClass` property of the column.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight css %}
+
+    .customcss.e-headercell {
+        background-color: #2382c3;
+        color: white;
+        font-family: 'Bell MT';
+        font-size: 20px;
+    }
+    
+    .customcss.e-rowcell {
+        background-color: #ecedee;
+        font-family: 'Bell MT';
+        color: red;
+        font-size: 20px;
+    }
+{% endhighlight %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("EmployeeID").CssClass("customcss").Add();
+                    col.Field("Freight").Add(); 
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource1;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img23.png)
+
+## Type
+
+Used to define the type of the particular column data. If the `Type` property of `Columns` is not specified then its type is automatically defined based on the first row data of that column.
+
+N> The `Type` is needed for filtering feature when first row of the data is `null` or `empty`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Type("string").Add();
+                    col.Field("EmployeeID").Type("number").Add();
+                    col.Field("Freight").Add();
+                    col.Field("ShipCountry").Add(); 
+                })
+                )
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+    public class GridController : Controller
+        { 
+        public ActionResult GridFeatures()
+            {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource1;
+                return View();
+            }
+        }
+    }
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img24.png)

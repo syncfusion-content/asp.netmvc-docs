@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Maps | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with Syncfusion Maps control for Asp.Net MVC
+description: A quick tour to initial users on Syncfusion maps control for Asp.Net MVC
 platform: ejmvc
 control: Maps
 documentation: ug
@@ -13,12 +13,9 @@ This section explains briefly about how to create Maps in your application with 
 
 ## Create your first Map in MVC
 
-You can configure an EssentialASP.NETMVC Map with simple steps. In this example, you can learn how to configure USA population map with customized appearance and tooltip.
+You can configure an Essential ASP.NET MVC Map with simple steps. In this example, you can learn how to configure USA population map with customized appearance and tooltip.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
-
-Simple Map
-{:.caption}
 
 ### Create a simple MVC Application 
 
@@ -28,11 +25,11 @@ To begin, create a new ASP.NET MVC project Razor application. For creating a MVC
 
 The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](http://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
 
-In this example, USA shape is used as shape data by utilizing the “United States of America.json” file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
+In this example, USA shape is used as shape data by utilizing the `United States of America.json` file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
 
-..\ Maps_GeoJSON\All Countries with States
+`..\ Maps_GeoJSON\All Countries with States`
 
-You can store the “United States of America.json” file in App_Data folder as “usa.json”. Then read the complete contents in “usa.json” file and assign to new MapData object in “MapController.cs”  in the following folder location,
+You can store the `United States of America.json` file in App_Data folder as `usa.json`. Then read the complete contents in “usa.json” file and assign to new MapData object in “MapController.cs”  in the following folder location,
 
 ~/Controller/MapController.cs
 
@@ -41,31 +38,29 @@ You can store the “United States of America.json” file in App_Data folder as
 {% highlight C# %}
 
 
-public ActionResult Map()
+	public ActionResult Map()
 
-{
+	{
 
-	ViewData["mapdata"] = GetUSMap();
+		ViewData["mapdata"] = GetUSMap();
 
-	return View();
+		return View();
 
-}
+	}
 
+	public object GetUSMap()
 
+	{
 
-public object GetUSMap()
+		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
-{
+		JavaScriptSerializer ser = new JavaScriptSerializer();
 
-	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+		ser.MaxJsonLength = int.MaxValue;
 
-	JavaScriptSerializer ser = new JavaScriptSerializer();
+		return new MapData(usajson);
 
-	ser.MaxJsonLength = int.MaxValue;
-
-	return new MapData(usajson);
-
-}
+	}
 
 {% endhighlight %}
 
@@ -80,43 +75,43 @@ The dataSource is populated with USA population data inside the controller relat
 {% highlight C# %}
 
 
-public ActionResult Map()
-
-{
-
-	ViewData["mapdata"] = GetUSMap();
-
-	ViewData["datasource"] = GetUSPopulationData();
-
-	return View();
-
-}
-
-
-
-public object GetUSMap()
-
-{
-
-	string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
-
-	JavaScriptSerializer ser = new JavaScriptSerializer();
-
-	ser.MaxJsonLength = int.MaxValue;
-
-	return new MapData(usajson);
-
-}
-
-
-
-public List<CountyPopulationData> GetUSPopulationData()
-
-{
-
-	List<CountyPopulationData> populationData = new List<CountyPopulationData>
+	public ActionResult Map()
 
 	{
+
+		ViewData["mapdata"] = GetUSMap();
+
+		ViewData["datasource"] = GetUSPopulationData();
+
+		return View();
+
+	}
+
+
+
+	public object GetUSMap()
+
+	{
+
+		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+
+		JavaScriptSerializer ser = new JavaScriptSerializer();
+
+		ser.MaxJsonLength = int.MaxValue;
+
+		return new MapData(usajson);
+
+	}
+
+
+
+	public List<CountyPopulationData> GetUSPopulationData()
+
+	{
+
+		List<CountyPopulationData> populationData = new List<CountyPopulationData>
+
+		{
 
 			new CountyPopulationData(){ Name= "California", Population=38332521},
 
@@ -222,47 +217,43 @@ public List<CountyPopulationData> GetUSPopulationData()
 
 			new CountyPopulationData(){ Name= "Wyoming", Population=582658}
 
-	};
+		};
 
-	return populationData;
-
-}
-
-
-
-public class CountyPopulationData
-
-{
-
-	public string name;
-
-	public string Name
-
-	{
-
-		get { return name; }
-
-		set { name = value; }
+		return populationData;
 
 	}
 
 
-
-	public double population;
-
-
-
-	public double Population
+	public class CountyPopulationData
 
 	{
 
-		get { return population; }
+		public string name;
 
-		set { population = value; }
+		public string Name
+
+		{
+
+			get { return name; }
+
+			set { name = value; }
+
+		}
+
+		public double population;
+
+
+		public double Population
+
+		{
+
+			get { return population; }
+
+			set { population = value; }
+
+		}
 
 	}
-
-}
 
 
 
@@ -276,68 +267,58 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 {% highlight CSHTML %}
 
-@{       
+	@{       
 
-        var mapData = ViewData["mapdata"];
+    	var mapData = ViewData["mapdata"];
 
-        var dataSource = ViewData["datasource"];
-
-   }
-
-
+        var dataSource = ViewData["datasource"];    	 
+	 
+	}
 
 {% endhighlight %}
 
 ## Initialize Map
 
-1. Create a <div> tag and set the height and width to determine the map size. 
+* Create a &lt;div&gt; tag and set the height and width to determine the map size. 
+      		
 
-
-
-   ~~~ cshtml
-
+{% highlight CSHTML %}
+	
 	<div style="width: 900px; height: 600px;"></div>
 
-   ~~~
-   
+{% endhighlight %}
+  
+
+
+* Add the following code sample in “Map.cshtml” file, to create the Map control in the View page.
 
 
 
-2. Add the following code sample in “Map.cshtml” file, to create the Map control in the View page.
+{% highlight CSHTML %}
 
+	<div style="width:900px; height:600px;"> 
 
-
-   ~~~ cshtml
-
-
-	  <div style="width:900px; height:600px;"> 
-
-		 @(Html.EJ().Map("container")
+		@(Html.EJ().Map("container")
 
 			.Layers(lr =>
 
 			{
 
-			 lr.ShapeData(mapData).Add();
+				lr.ShapeData(mapData).Add();
 
 			})
 
-			)     
+		)     
 
-	  </div>
+	</div>
 
-
-
-   ~~~
+{% endhighlight %}
    
 
+* The Final Map.cshtml file appears as follows.
 
 
-3. The Final Map.cshtml file appears as follows.
-
-
-
-   ~~~ cshtml
+{% highlight CSHTML %}
 
 
 	@{
@@ -354,45 +335,35 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 	<head> 
 
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-	<script src="http://cdn.syncfusion.com/13.1.0.21/js/
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/ej.widgets.all.min.js"></script>
 
-	ej.widgets.all.min.js"></script>
+		<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
 
-	<script src="http://cdn.jsdelivr.net/jsrender/1.0pre35/jsrender.min.js" type="text/javascript"></script>     
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.unobtrusive.min.js" type="text/javascript"></script>
 
-	<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/
-
-	ej.unobtrusive.min.js" type="text/javascript"></script>
-
-	@using Syncfusion.JavaScript.DataVisualization.Models
-
-
+		@using Syncfusion.JavaScript.DataVisualization.Models
 
 	</head>
 
-
-
 	<body>
 
-	<div style="height:600px;width:900px;">
+		<div style="height:600px;width:900px;">
 
-				 @(Html.EJ().Map("container")
+			@(Html.EJ().Map("container")
 
-						.Layers(lr =>
+				.Layers(lr =>
 
-						{
+				{
 
-						 lr.ShapeData(mapData).Add();
+					lr.ShapeData(mapData).Add();
 
-						})
+				})
 
-						)     
+			)     
 
 		</div>   
-
-
 
 		@(Html.EJ().ScriptManager())
 
@@ -400,21 +371,14 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 	</html>
 
-
-
-   ~~~
+{% endhighlight %}
    
-
-
 
 The above code renders a map with default properties and shape input provided through data in layers.
 
 
-
 ![](Getting-Started_images/Getting-Started_img2.png)
 
-Map with default properties
-{:.caption}
 
 ## Data Binding in Map
 
@@ -426,27 +390,25 @@ The following properties in shape layers is used for binding datas in Maps contr
 
 ### DataSource
 
-The DataSource property accepts collection values as input. For example, you can provide the list of objects as input.
+The `DataSource` property accepts collection values as input. For example, you can provide the list of objects as input.
 
 ### Shape Data Path 
 
-The ShapeDataPath property is used to refer the data ID in DataSource. For example, population MapData contains data ids ‘Name’ and ‘Population’. The ShapeDataPath and the ShapePropertyPath properties are related to each other (refer to ShapePropertyPath for more details).
+The `ShapeDataPath` property is used to refer the data ID in DataSource. For example, population MapData contains data ids ‘Name’ and ‘Population’. The `ShapeDataPath` and `ShapePropertyPath` properties are related to each other (refer to `ShapePropertyPath` for more details).
 
 ### Shape Property Path
 
-The ShapePropertyPath property is similar to the ShapeDataPath that refers the column name in the Data property of shape layers to identify the shape. When the values of the ShapeDataPath property in the DataSource property and the value of ShapePropertyPath in the Data property match, then the associated object from the DataSource is bound to the corresponding shape.
+The `ShapePropertyPath` property is similar to the `ShapeDataPath` that refers the column name in the Data property of shape layers to identify the shape. When the values of the `ShapeDataPath` property in the `DataSource` property and the value of `ShapePropertyPath` in the Data property match, then the associated object from the `DataSource` is bound to the corresponding shape.
 
 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")            
+	@(Html.EJ().Map("container")            
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{         
-
-
+	{         
 
 		lr.ShapeData(mapData) 
 
@@ -458,44 +420,44 @@ The ShapePropertyPath property is similar to the ShapeDataPath that refers the c
 
 		.Add();           
 
-})      
+	})      
 
-
-)
+	)
+	
 {% endhighlight %}
 
 ### Customize Map Appearance 
 
-You can customize the shape’s color by using Fill, Stroke and StrokeThickness properties in ShapeSettings.
+You can customize the shape’s color by using `Fill`, `Stroke` and `StrokeThickness` properties in `ShapeSettings`.
 
 
 
 {% highlight CSHTML %}
 
 
-@(Html.EJ().Map("container")            
+	@(Html.EJ().Map("container")            
 
-.Layers(lr =>
-
-{
-
-	 lr.ShapeData(mapData)              
-
-	 .ShapeDataPath("name")
-
-	   .ShapePropertyPath("name")
-
-	   .DataSource(datasource)
-
-	   .EnableSelection(false)
-
-	   .EnableMouseHover(true)
-
-	.ShapeSettings(ss  =>
+	.Layers(lr =>
 
 	{
 
-	   ss.Fill("#9CBF4E")
+		lr.ShapeData(mapData)              
+
+	 	.ShapeDataPath("name")
+
+	    .ShapePropertyPath("name")
+
+	    .DataSource(datasource)
+
+	    .EnableSelection(false)
+
+	    .EnableMouseHover(true)
+
+		.ShapeSettings(ss  =>
+
+		{
+
+	   		ss.Fill("#9CBF4E")
 
 			.StrokeThickness(0.5)
 
@@ -507,13 +469,13 @@ You can customize the shape’s color by using Fill, Stroke and StrokeThickness 
 
 			.HighlightBorderWidth(1);			
 
-	})
-
-   .Add();         
+		})
+   		
+		.Add();         
 
 	})      
 
-) 
+	) 
 
 
 
@@ -523,59 +485,57 @@ You can customize the shape’s color by using Fill, Stroke and StrokeThickness 
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-Customized Map
-{:.caption}
 
 ### Customizing Map Appearance by Range
 
-The Range color mapping is used to differentiate the shape’s fill based on its underlying value and color ranges. The From and To properties defines the value ranges and the GradientColors property defines the equivalent color ranges respective to their value ranges.
+The Range color mapping is used to differentiate the shape’s fill based on its underlying value and color ranges. The `From` and `To` properties defines the value ranges and the `GradientColors` property defines the equivalent color ranges respective to their value ranges.
 
-N> The EnableGradient property value should be true to apply gradient colors for maps.
+N> The `EnableGradient` property value should be true to apply gradient colors for maps.
 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")
+	@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{                                          
+	{                                          
 
-	lr.ShapeData(mapData)              
+		lr.ShapeData(mapData)              
 
-	.ShapeDataPath("name")
+		.ShapeDataPath("name")
 
-	.ShapePropertyPath("name")
+		.ShapePropertyPath("name")
 
-	.DataSource(datasource)
+		.DataSource(datasource)
 
-	.ShowMapItems(false)
+		.ShowMapItems(false)
 
-	.EnableSelection(false)
+		.EnableSelection(false)
 
-	.EnableMouseHover(true)
+		.EnableMouseHover(true)
 
-	.ShapeSettings(ss  =>
+		.ShapeSettings(ss  =>
 
-	{
+		{
 
-		ss.Fill("#9CBF4E")
+			ss.Fill("#9CBF4E")
 
-		.StrokeThickness(0.5)
+			.StrokeThickness(0.5)
 
-		.Stroke("White")
+			.Stroke("White")
 
-		.HighlightStroke("White")                           
+			.HighlightStroke("White")                           
 
-		.HighlightColor("#BC5353")
+			.HighlightColor("#BC5353")
 
-		.HighlightBorderWidth(1)	
+			.HighlightBorderWidth(1)	
 
-		.ValuePath("population")
+			.ValuePath("population")
 
-		.EnableGradient(true)
+			.EnableGradient(true)
 
-		.RangeColorMappings(cm =>
+			.RangeColorMappings(cm =>
 
 			{
 
@@ -589,13 +549,13 @@ N> The EnableGradient property value should be true to apply gradient colors for
 
 			});									
 
-	})
+		})
 
-.Add();         
+		.Add();         
 
-})               
+	})               
 
-) 
+	) 
 
 
 
@@ -609,37 +569,34 @@ The following screenshot illustrates a Map with gradient color property enable.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-Map with gradient color property
-{:.caption}
 
 ## Enable Tooltip
 
-The tooltip is displayed only when ShowTooltip is set to _‘_True’ in the shape layers. By default, it takes the property of the bound object that is referred in the ValuePath and displays its content on hovering the corresponding shape. The TooltipTemplate property is used for customizing the template for tooltip.
+The tooltip is displayed only when `ShowTooltip` is set to ‘True’ in the shape layers. By default, it takes the property of the bound object that is referred in the `ValuePath` and displays its content on hovering the corresponding shape. The `TooltipTemplate` property is used for customizing the template for tooltip.
 
 
 
 {% highlight CSHTML %}
 
 
-@(Html.EJ().Map("container")
+	@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	.Layers(lr =>
 
-{                                          
+	{                                          
 
-	.ShapeSettings(ss  =>
+		.ShapeSettings(ss  =>
 
-	{
+		{
 
+			.ValuePath("name")
 
-		.ValuePath("name")
+		})
 
-	})
-
-	.ShowTooltip(true);
+		.ShowTooltip(true);
 
 	})           
-) 
+	) 
 
 {% endhighlight %}
 
@@ -651,70 +608,67 @@ The following screenshot illustrates a map control displaying a Tooltip.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-Map control with Tooltip
-{:.caption}
 
 ## Legend
 
-A Legend can be made visible by setting the ShowLegend property in LegendSetting. 
+A Legend can be made visible by setting the `ShowLegend` property in `LegendSetting`. 
 
 ### Interactive Legend
 
-The legends can be made interactive with an arrow mark indicating the exact range color in the legend, when the mouse hovers the corresponding shapes. You can enable this option by setting Mode property in LegendSettings value as _‘_Interactive’. The default value of Mode property is ‘Default’ to enable the normal legend.
+The legends can be made interactive with an arrow mark indicating the exact range color in the legend, when the mouse hovers the corresponding shapes. You can enable this option by setting `Mode` property in `LegendSettings` value as ‘Interactive’. The default value of `Mode` property is ‘Default’ to enable the normal legend.
 
-### Title for Interactive Legend
+#### Title
 
-Use Title property to provide title for interactive legend.
+Use `Title` property to provide title for interactive legend.
 
-### Label for Interactive Legend
+#### Label
 
-You can use LeftLabel and RightLabel property to provide left and right labels for interactive legend. 
-
+You can use `LeftLabel` and `RightLabel` property to provide left and right labels for interactive legend. 
 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Map("container")
+	@(Html.EJ().Map("container")
 
-.Layers(lr =>
+	.Layers(lr =>
 
 	{                                          
+		
+		lr.ShapeData(mapData)              
 
-	lr.ShapeData(mapData)              
+		.ShapeDataPath("name")
 
-	.ShapeDataPath("name")
+		.ShapePropertyPath("name")
 
-	.ShapePropertyPath("name")
+		.DataSource(datasource)
 
-	.DataSource(datasource)
+		.ShowMapItems(false)
 
-	.ShowMapItems(false)
+		.EnableSelection(false)
 
-	.EnableSelection(false)
+		.EnableMouseHover(true)
 
-	.EnableMouseHover(true)
-
-	.ShapeSettings(ss  =>
+		.ShapeSettings(ss  =>
 
 		{
+			
+			ss.Fill("#9CBF4E")
 
-		ss.Fill("#9CBF4E")
+			.StrokeThickness(0.5)
 
-		.StrokeThickness(0.5)
+			.Stroke("White")
 
-		.Stroke("White")
+			.HighlightStroke("White")                           
 
-		.HighlightStroke("White")                           
+			.HighlightColor("#BC5353")
 
-		.HighlightColor("#BC5353")
+			.HighlightBorderWidth(1)	
 
-		.HighlightBorderWidth(1)	
+			.ValuePath("population")
 
-		.ValuePath("population")
+			.EnableGradient(true)
 
-		.EnableGradient(true)
-
-		.RangeColorMappings(cm =>
+			.RangeColorMappings(cm =>
 
 			{
 
@@ -730,7 +684,7 @@ You can use LeftLabel and RightLabel property to provide left and right labels f
 
 		})
 
-	.LegendSettings(ml =>
+		.LegendSettings(ml =>
 
 		{
 
@@ -740,17 +694,11 @@ You can use LeftLabel and RightLabel property to provide left and right labels f
 
 			.Width(150)
 
-			.Position(Syncfusion.JavaScript.DataVisualization.
+			.Position(Syncfusion.JavaScript.DataVisualization.Models.DockPosition.Topleft)
 
-			Models.DockPosition.Topleft)
+			.Type(Syncfusion.JavaScript.DataVisualization.Models.LegendType.Layers)
 
-			.Type(Syncfusion.JavaScript.DataVisualization.
-
-			Models.LegendType.Layers)
-
-			.Mode(Syncfusion.JavaScript.DataVisualization.
-
-			Models.LegendMode.Interactive)
+			.Mode(Syncfusion.JavaScript.DataVisualization.Models.LegendMode.Interactive)
 
 			.Title("Population")
 
@@ -760,11 +708,11 @@ You can use LeftLabel and RightLabel property to provide left and right labels f
 
 		})
 
-.Add(); 
+		.Add(); 
 
-})           
+	})           
 
-)
+	)
 {% endhighlight %}
 
 
@@ -774,8 +722,6 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-Map displaying an interactive legend
-{:.caption}
 
 The complete code sample can be found [here](http://www.syncfusion.com/uploads/user/directTrac/General/MapsMVCGettingStarted2077091750.zip).
 

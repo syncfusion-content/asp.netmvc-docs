@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Grid | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting started with Grid widget for Syncfusion Essential ASP.NET MVC
+description: How to create the Grid, data bind, enable paging, grouping, filtering and add summaries
 platform: ejmvc
 control: Grid
 documentation: ug
@@ -9,208 +9,168 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a Grid in your application with ASP.NET MVC.
+This section explains briefly about how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like Paging, Filtering, Grouping and Summary. The following screenshot illustrates the Grid control.
+
+![](Getting-Started_images/Getting-Started_img.png)
 
 ## Create your first Grid in MVC
 
-The Grid can be easily configured to the DOM element, such as <div>. You can create a Grid with a highly customizable look and feel. You can use the Grid control to generate complex grid-based reports with rich formatting. In the following example, you can take a look at how the transaction of product is managed, analysis of a particular sale using filtering and grouping feature. This section explains you about adding group, filtering and paging of sales products.
+The following steps explain creating first grid with an empty datasource.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+1.  Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentationt](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
+2.  Add a Grid control in View file with an empty datasource as like as follows. In `Columns` definition, the `TextAlign` property allows you to align text of the columns, the `Width` property is used to define width of the columns and `Format` property allows you to format the particular columns value.
 
-Managed sales data
-{:.caption}
+{% highlight razor %}
+	
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-1. Create Syncfusion ASP.NET MVC Application. Refer [common](http://help.syncfusion.com/aspnetmvc/grid/getting-started) document
-2. Add a Grid Control in index.cshtml page.In Columns definition, the TextAlign property allows you to align text of the columns, the Width property is used to define width of the columns and Format property allows you to format the particular columns value.
+	.Columns(col =>
 
-   ~~~ cshtml
+	{
 
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-	@(Html.EJ().Grid<object>("FlatGrid")
+		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-			.Columns(col =>
+		col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-			{
+		col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
 
-				col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-				col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-				col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-				col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-				col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
-			})
-	 )
+		col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+	})
+    )
 		 
-   ~~~
+{% endhighlight  %}
    
-   
-3. You can execute the above code sample to render an empty Grid is rendered with specified column headers, where the data must be specified.
+You can execute the above code sample to render an empty Grid is rendered with specified column headers.
+
+![](Getting-Started_images/Getting-Started_img2.png)
+
+## Data binding
+
+1.	You can bind the data to Grid control by either locally or remotely. The following code example shows how to bind remote data to grid control.
+2.	Assign the remote service URL to `DataSource` property of Grid control to bind remote data with grid.
+3.	You can retrieve the data from another domain using `CrossDomain` property, and also you can load all the data to grid on initial rendering using `Offline` property.
+
+{% highlight razor %}
 
 
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-   ![](Getting-Started_images/Getting-Started_img2.png)
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).Columns(col =>
 
-   Empty grid
-   {:.caption}
-   
-### Set Sales Data
+    {
 
-You can add the following code example in index page to render grid. In DataSource definition, CrossDomain property is enabled to retrieve data from another domain and Offline property allows you to load data on time from server.
+	   col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-{% highlight CSHTML %}
+	   col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
+	   col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-@(Html.EJ().Grid<object>("FlatGrid")
+	   col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
 
-.Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   .Columns(col =>
+	   col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-{
+    })
 
-	col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-	col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-	col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
-
-	col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
-
-	col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
-
-})
-
-)
+    )
 
 {% endhighlight  %}
-The following screenshot displays a Grid with sales data.
-
-
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-Management of sales data
-{:.caption}
 
-### Enable Paging
+## Enable Paging
 
-Paging feature in Grid offers complete navigation support to easily switch between the pages, using the page bar available at the bottom of the Grid control. To enable paging, use AllowPaging property of Grid as follows.
+[`Paging`](http://help.syncfusion.com/aspnetmvc/grid/paging) feature can be enabled by `AllowPaging` property of Grid control. This adds the pager in the bottom of the grid, using that pager you can display the grid records in paged view. The page size can be customized using `PageSize' property
+`PageSettings` property.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-@(Html.EJ().Grid<object>("FlatGrid")
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-.Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))      .AllowPaging()
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).AllowPaging()
 
-   .Columns(col =>
+    .Columns(col =>
 
- {
+    {
 
-     col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-     col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-     col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+        col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-     col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
-
-
-
- })
-
-)
+         col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+    })
+    )
 
 {% endhighlight  %}
 
-Use AllowPaging to switch between pages.
-
-
-
-
+    N> _Pager settings can be customized by using the 'PageSize' and 'PageCount' properties. When it is not given the default values for `PageSize` and `PageCount` are 12 and 8 respectively._
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-Sales data with paging
-{:.caption}
+## Enable Filtering
 
-### Enable Filtering
-
-Filtering feature in Grid is usedto facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. This feature is used to filter particular sales data to review details.
-
-To enable filtering, use AllowFiltering property of Grid as follows.
-
-![](Getting-Started_images/Getting-Started_img5.png)
-
-![](Getting-Started_images/Getting-Started_img6.png)
+[`Filtering`](http://help.syncfusion.com/aspnetmvc/grid/filtering) feature in Grid is used to facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. Filtering feature can be enabled by AllowFiltering property. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using `FilterType` property of FilterSettings.
 
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
-@(Html.EJ().Grid<object>("FlatGrid")  .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    @(Html.EJ().Grid<object>("FlatGrid").DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
 
-   .AllowPaging()
+    .AllowPaging()
 
-   .AllowFiltering()
+    .AllowFiltering()
 
-   .FilterSettings(d => d.FilterType(FilterType.FilterBar))
+    .FilterSettings(d => d.FilterType(FilterType.FilterBar))
 
-   .Columns(col =>
+    .Columns(col =>
 
-     {	
+    {	
 
-      col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+        col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-      col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-      col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+        col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-      col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      
+        col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();      
 
-      col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-      })
+    })
 
- )
+    )
 
 {% endhighlight  %}
 
-The following screenshot illustrates how to filter sales data.
-
-
-
-
-
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-Filtered sales data
-{:.caption}
 
+## Enable Grouping
 
-### Enable Grouping
+['Grouping'](http://help.syncfusion.com/aspnetmvc/grid/grouping) feature in Grid is used to consolidate Grid data into groups. Grouping allows the categorization of records based on specified columns. You can enable grouping feature by `AllowGrouping` property. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in `GroupedColumns` property of `GroupSettings` property.
 
-The Grouping feature in Grid is used to consolidate Grid data into groups. Grouping allows the categorization of records based on specified columns. You can easily group a particular column by simply dragging the column to the upper portion of the Grid. The Grid data is automatically grouped when you drop a particular column. In this example, Grouping feature is used to analyze the shipment details of products.
+{% highlight razor %}
 
-To enable grouping, use AllowGrouping property of Grid as follows.
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-{% highlight CSHTML %}
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
 
-@(Html.EJ().Grid<object>("FlatGrid")
+    .AllowGrouping()
 
-.Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
+    .GroupSettings(group => group.GroupedColumns(col=>col.Add("ShipName") ))
 
-   .AllowGrouping()
+    .AllowFiltering()
 
-   .GroupSettings(group => group.GroupedColumns(col=>col.Add("ShipName") ))
+    .FilterSettings(d => d.FilterType(FilterType.FilterBar))
 
-   .AllowFiltering()
+    .Columns(col =>
 
-   .FilterSettings(d => d.FilterType(FilterType.FilterBar))
-
-   .Columns(col =>
-
-     {
+    {
 
         col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
@@ -220,95 +180,86 @@ To enable grouping, use AllowGrouping property of Grid as follows.
 
         col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();    col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
+    })
 
-
-     })
-
- )
+    )
 
 {% endhighlight  %}
-
-The following screenshot shows the analysis of sales data by grouping unit stock.
-
 
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
-Grouped by ship name
-{:.caption}
 
-### Enable Group Summary
+## Add Summaries
 
-Enable ShowSummary property allows you to summarize the Grid data into groups. Grouping allows the categorization of records based on specified columns. Group summary summarizes the data present in the group. In this example, Group summary is used to summarize freight data of grouped ship name category.
+[`Summaries`](http://help.syncfusion.com/aspnetmvc/grid/summary) can be enabled by setting the `ShowSummary` to true and adding required summary rows and columns in the `SummaryRows` property. 
 
 The following code example shows the option to enable group summary.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
-@(Html.EJ().Grid<object>("FlatGrid")
+    @(Html.EJ().Grid<object>("FlatGrid")
 
-.Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    .DataSource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
 
-   .AllowPaging()
+    .AllowPaging()
 
-   .AllowGrouping()
+    .AllowGrouping()
 
-.ShowSummary()
+    .ShowSummary()
 
-.GroupSettings(group => group.GroupedColumns(col=>col.Add("ShipName") ))
+    .GroupSettings(group => group.GroupedColumns(col=>col.Add("ShipName") ))
 
-   .AllowFiltering()
+    .AllowFiltering()
 
-   .FilterSettings(d => d.FilterType(FilterType.FilterBar))
+    .FilterSettings(d => d.FilterType(FilterType.FilterBar))
 
-.SummaryRow(row =>
+    .SummaryRow(row =>
 
-      {
+    {
 
         row.ShowTotalSummary(false)
 
            .SummaryColumns(col =>
 
-              {
+           {
 
                 col.SummaryType(SummaryType.Sum)
 
-                   .DisplayColumn("Freight")
+                .DisplayColumn("Freight")
 
-                   .DataMember("Freight")
+                .DataMember("Freight")
 
-                   .Prefix("Sum = ")
+                .Prefix("Sum = ")
 
-                   .Format("{0:c3}")
+                .Format("{0:c3}")
 
-                   .Add();
+                .Add();
 
-               }).Add();
+           }).Add();
 
-     })
+    })
 
-  .Columns(col =>
+    .Columns(col =>
 
     {
 
-     col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+         col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
 
-     col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+         col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
 
-     col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+         col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
 
-     col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();                col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+         col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+                        
+         col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-        })
+    })
 
- )
+    )
 
 {% endhighlight  %}
 
-The following screenshot shows the group summary.
-
 ![](Getting-Started_images/Getting-Started_img9.png)
 
-Group summary
-{:.caption}

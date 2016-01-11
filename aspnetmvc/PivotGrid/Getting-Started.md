@@ -13,7 +13,7 @@ documentation: ug
  
 This section covers the information required to create a simple PivotGrid bound to OLAP datasource.
 
-N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ###Project Initialization
 
@@ -21,19 +21,19 @@ Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name th
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
-Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select Add Reference. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
+Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
 * Microsoft.AnalysisServices.AdomdClient
 * Syncfusion.Compression.Base
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
 * Syncfusion.PivotAnalysis.Base
-* Syncfusion.EJ.MVC.dll
 * Syncfusion.XlsIO.Base
 * Syncfusion.Pdf.Base
 * Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
 
 N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
@@ -50,22 +50,22 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-13.3300.0.43</td><td>    
-13.3350.0.43</td><td>
+{{ site.mvc3releaseversion }}</td><td>    
+{{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-13.3400.0.43</td><td>    
-13.3400.0.43</td><td>
+{{ site.mvc4releaseversion }}</td><td>    
+{{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-13.3500.0.43</td><td>    
-13.3450.0.43</td><td>
+{{ site.mvc5releaseversion }}</td><td>    
+{{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
 </tr>
@@ -77,18 +77,18 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 <compilation debug="true" targetFramework="4.5">
     <assemblies> 
- 	 	…… 
+        …… 
         ……
-        <add assembly="Syncfusion.EJ, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Olap, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Linq.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Olap.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Compression.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
-        <add assembly="Syncfusion.PivotAnalysis.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
-        <add assembly="Syncfusion.Pdf.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.XlsIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Olap, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
     </assemblies>
 </compilation>
 
@@ -99,8 +99,8 @@ Register the required namespaces in Web.config files available inside Views fold
 {% highlight xml %}
 
 <namespaces> 
-  	……
-  	……
+    ……
+    ……
     <add namespace="Syncfusion.MVC.EJ" />
     <add namespace="Syncfusion.JavaScript" /> 
 </namespaces>
@@ -109,7 +109,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -143,10 +143,10 @@ Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml
 {% highlight html %}
 
 <head>
-    <link href="http://cdn.syncfusion.com/13.3.0.7/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-    <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 </head>
 
 {% endhighlight %}
@@ -158,7 +158,8 @@ The script manager is initialized immediately after the `RenderBody()` function 
 <body> 
   …… 
   …… 
-  @RenderBody() @(Html.EJ().ScriptManager()) 
+  @RenderBody() 
+  @(Html.EJ().ScriptManager()) 
   
 </body>
 
@@ -172,13 +173,15 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
 @using Syncfusion.JavaScript.Olap;
 
-<div> @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")) </div>
+<div> 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")) 
+</div>
 
 {% endhighlight %}
 
 The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OLAPService". If WCF service is used as endpoint, the Url would look like "~/OLAPService.svc".
+N> The above "Index.cshtml" contains WebAPI Url, which is "~/OLAPService". If WCF service is used as endpoint, the Url would look like "~/OLAPService.svc".
 
 
 ###WebAPI
@@ -187,7 +190,7 @@ N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OLAPService". If W
 
 To add a WebAPI controller in an existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `OLAPServiceController.cs`, click Add.
 
-Now, WebAPI controller is added to the application successfully containing the file **"OLAPServiceController.cs"**.
+Now, WebAPI controller is added to the application successfully with the file **"OLAPServiceController.cs"**.
 
 N> While adding WebAPI Controller Class, name it with the suffix 'Controller' that is mandatory. For example, in this demo the controller is named as **"OLAPServiceController"**.
 
@@ -229,7 +232,7 @@ namespace PivotGridDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, PivotGrid and JavaScriptSerializer instances are created immediately inside the main class in OLAPServiceController.cs file.
+Now, the connection string to connect OLAP Cube, PivotGrid and JavaScriptSerializer instances are created immediately inside the main class in `OLAPServiceController.cs` file.
 
 {% highlight c# %}
 
@@ -406,7 +409,7 @@ This section demonstrates the utilization of WCF service as endpoint binding OLA
 
 This section covers the information required to create a simple PivotGrid bound to Relational datasource. 
 
-N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns them back to client-side for control rendering and re-rendering. The service utilized for communicate could be either WCF or WebAPI based on users requirement.
+N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ### Project Initialization
 
@@ -419,13 +422,13 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.Compression.Base
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
-* Syncfusion.EJ.MVC.dll
 * Syncfusion.PivotAnalysis.Base
 * Syncfusion.XlsIO.Base
 * Syncfusion.Pdf.Base
 * Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
 
 N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
@@ -442,22 +445,22 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-13.3300.0.43</td><td>    
-13.3350.0.43</td><td>
+{{ site.mvc3releaseversion }}</td><td>    
+{{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-13.3400.0.43</td><td>    
-13.3400.0.43</td><td>
+{{ site.mvc4releaseversion }}</td><td>    
+{{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-13.3500.0.43</td><td>    
-13.3450.0.43</td><td>
+{{ site.mvc5releaseversion }}</td><td>    
+{{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
 </tr>
@@ -469,16 +472,16 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 <compilation debug="true" targetFramework="4.5">
     <assemblies> 
- 	 	…… 
+        …… 
         ……
-        <add assembly="Syncfusion.EJ, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Olap, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Linq.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Olap.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Pdf.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.XlsIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= 13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Olap, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
     </assemblies>
 </compilation>
 
@@ -499,7 +502,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the “UnobtrusiveJavaScriptEnabled” property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
     
 {% highlight xml %}
 
@@ -527,15 +530,15 @@ The scripts and style sheets that are mandatorily required to render PivotGrid w
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
-Scripts and style sheets are referred under the <head> tag in ** _Layout.cshtml** file which is found inside **Views > Shared folder.**
+Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
     
 {% highlight html %}
 
 <head>
-    <link href="http://cdn.syncfusion.com/13.3.0.7/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"> </script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"> </script>
-    <script src="http://cdn.syncfusion.com/13.3.0.7/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
 </head>
 
 {% endhighlight %}
@@ -547,7 +550,8 @@ The script manager is initialized immediately after the `RenderBody()` function 
 <body> 
   …… 
   …… 
-  @RenderBody() @(Html.EJ().ScriptManager()) 
+  @RenderBody() 
+  @(Html.EJ().ScriptManager()) 
   
 </body>
 
@@ -561,24 +565,26 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
 @using Syncfusion.JavaScript.Olap;
 
-<div>  @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService.svc")) </div>
+<div> 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService.svc")) 
+</div>
 
 {% endhighlight %}
 
 The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI Url, which is, "~/RelationalService". If WCF service is used as endpoint, the Url would look like "~/RelationalService.svc".
+N> The above "Index.cshtml" contains WebAPI Url, which is "~/RelationalService". If WCF service is used as endpoint, the Url would look like "~/RelationalService.svc".
 
 
 ###WebAPI
 
 **Adding a WebAPI Controller**
 
-To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `RelationalServiceController.cs`, click Add.
+To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as **“RelationalServiceController.cs”**, click **Add**.
 
-Now, WebAPI controller is added to the application successfully containing the file **“RelationalServiceController.cs”**.
+Now, WebAPI controller is added to the application successfully with the file **“RelationalServiceController.cs”**.
 
-N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ that is mandatory. For example, in this demo the controller is named as “RelationalServiceController”.
+N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ which is mandatory. For example, in this demo the controller is named as “RelationalServiceController”.
 
 Next, remove all the existing methods such as "Get", "Post", "Put" and "Delete" present inside `RelationalServiceController.cs` file.
 
