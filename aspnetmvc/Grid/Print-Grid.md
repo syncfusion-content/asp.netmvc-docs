@@ -13,7 +13,7 @@ You need to use `print()` method from Grid instance to print the Grid. You can a
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 
@@ -48,6 +48,7 @@ You need to use `print()` method from Grid instance to print the Grid. You can a
 
 }))
 {% endhighlight  %}
+
 {% highlight C#%}
 
 using System;
@@ -94,7 +95,7 @@ By default, the Grid can be print from toolbar. To print from external button ac
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 <button id="print">Print</button>
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
@@ -134,6 +135,7 @@ By default, the Grid can be print from toolbar. To print from external button ac
 
 </script>
 {% endhighlight  %}
+
 {% highlight C#%}
 
 using System;
@@ -163,7 +165,6 @@ namespace SyncfusionMvcApplication1.Controllers
 {% endtabs %} 
 
 
-
 ![](Print-Grid_images/Print_img2.png)
 
 {:caption}
@@ -180,7 +181,7 @@ By default, the Grid will print all records. To print current page, you need to 
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("PrintGrid")
 

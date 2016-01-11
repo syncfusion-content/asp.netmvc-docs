@@ -74,7 +74,7 @@ namespace SyncfusionMvcApplication1.Controllers
 
 {% endhighlight  %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<object>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
@@ -144,7 +144,7 @@ namespace SyncfusionMvcApplication1.Controllers
 
 {% endhighlight  %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)

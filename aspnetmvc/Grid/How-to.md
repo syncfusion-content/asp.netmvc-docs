@@ -32,7 +32,7 @@ The AllowEditOnDblClick property can be set as True to enable editing the record
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<object>("Editing")
 
@@ -125,7 +125,7 @@ In this section, you can learn how to customize drag and drop element. This drag
 
 {% tabs %}
  
-{% highlight CSHTML %}
+{% highlight razor %}
 
 <style type="text/css">
 
@@ -185,7 +185,7 @@ To apply tooltip for cells, You need to use `CustomAttributes` in columns. For m
 {% tabs %}
 
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -253,7 +253,7 @@ For instance, consider a textbox above Grid and depending on its value, you can 
 {% tabs %}
  
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 Enter EmployeeID Field Value:
 
@@ -375,7 +375,7 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<EJGrid.Models.Order>("Grid")
 
@@ -602,7 +602,7 @@ public class SignalHub: Hub
 {% tabs %}
 
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 
 @(Html.EJ().Grid<OrdersView>("FlatGrid")
@@ -702,7 +702,7 @@ The Grid initialization is as follows.
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Grid<EmployeeMap>("Grid")
 
