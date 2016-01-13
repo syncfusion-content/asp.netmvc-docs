@@ -903,3 +903,126 @@ Now, **PivotGrid** will be rendered with Sales Amount over a set of products acr
 ###WCF
 
 This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotGrid. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotGrid/olap-connectivity#wcf-1).
+
+
+## Creating a simple application with PivotGrid and Relational datasource (Client-Side)
+
+This section covers the information that you need to know to populate a simple PivotGrid with Relational data completely on the client-side.
+
+### Scripts and CSS References  
+
+The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
+
+1. ej.widgets.all.min.css
+2. jquery-1.10.2.min.js
+3. jquery.easing.1.3.min.js
+4. jquery.linq.js
+5. ej.web.all.min.js
+
+Scripts and style sheets are referred under the head tag in _Layout.cshtml file which is found inside Views > Shared folder.
+
+{% highlight html %}    
+
+<head>
+    <link href="http://cdn.syncfusion.com/13.2.0.29/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/linq.js/2.2.0.2/jquery.linq.js" type="text/javascript"></script>
+    <script src="http://cdn.syncfusion.com/13.2.0.29/js/web/ej.web.all.min.js" type="text/javascript"></script>
+    
+</head>    
+
+{% endhighlight %}
+
+### Initialize PivotGrid
+
+Before initializing, empty the contents of Index.cshtml file under Views > Home folder and add the following codes.
+
+{% highlight html %}
+
+@using Syncfusion.JavaScript;
+
+<div>
+    @Html.EJ().Pivot().PivotGrid("PivotGrid1")
+</div>
+
+{% endhighlight %}
+
+### Populate PivotGrid With Data
+
+Let us now see how to populate the PivotGrid control using a sample JSON data as shown below. 
+
+{% highlight html %}
+
+ @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad"))
+ 
+ <script type="text/javascript">
+function onLoad(args) {
+    args.model.dataSource.data = [
+        { Amount: 100, Country: "Canada", Product: "Bike" },
+        { Amount: 200, Country: "Germany", Product: "Van" },
+        { Amount: 300, Country: "Germany", Product: "Car" },
+        { Amount: 150, Country: "United Kingdom", Product: "Bike" },
+        { Amount: 200, Country: "Canada", Product: "Car" }
+    ]}
+</script>
+
+{% endhighlight %}
+
+The JSON data is set to the **"data"** property present inside the **"dataSource"** object. **"dataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotGrid control.
+  
+{% highlight html %}
+  
+ @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();}))
+
+{% endhighlight %}
+
+The above code will generate a simple PivotGrid with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
+
+![](Getting-Started_images/purejs.png) 
+
+### Apply Sorting
+
+You can sort a field either to ascending or descending order using the "sortOrder" property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
+ 
+{% highlight html %}
+
+  @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Country").FieldCaption("Country").SortOrder(SortOrder.Ascending).Add();})) 
+
+{% endhighlight %}
+
+![](Getting-Started_images/purejssorting.png) 
+
+### Apply Filtering
+
+Filtering option allows you to specify a set of values that either need to be displayed or hided. Also filtering option is applicable only for Row, Column and Filter areas.
+
+**"filterItems"** object allow us to apply filtering to the fields using the following properties:
+
+* filterType -  indicates whether the values should be included or excluded.
+* values -  specify an array of values that needs to be included or excluded within the particular field.
+
+{% highlight html %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").FilterItems(filter => { filter.FilterType(PivotAnalysisFilterType.Exclude).Values(value => { value.Add("United Kingdom"); }); }).Add(); })) 
+
+{% endhighlight %}
+
+![](Getting-Started_images/purejsfiltering.png) 
+
+### Apply Summary Types
+Allows us to specify the required summary type that PivotGrid should use in its summary cells. **"totalsum"** is the default summary type. Following are the summary types that are supported:
+
+* totalsum
+* average
+* count
+* minimum
+* maximum
+
+{% highlight html %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Values(values => { values.FieldName("Amount").SummaryType(PivotAnalysisSummaryType.Average).Add(); values.FieldName("Quantity").FieldCaption("Quantity").SummaryType(PivotAnalysisSummaryType.TotalSum).Add(); })) 
+
+{% endhighlight %}
+
+![](Getting-Started_images/purejssummarytype.png) 
