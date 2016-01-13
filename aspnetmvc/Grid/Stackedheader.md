@@ -74,7 +74,4 @@ namespace SyncfusionMvcApplication3.Controllers
 {% endtabs %} 
 
 
-
-{% endhighlight %}
-
 ![](Stackedheader_images/Stackedheader_img1.png)

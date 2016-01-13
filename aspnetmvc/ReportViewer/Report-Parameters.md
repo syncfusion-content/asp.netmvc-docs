@@ -15,15 +15,10 @@ The following code example illustrates how to add ReportParameter at control cre
 
 {% highlight CSHTML %}
 
-@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote).ReportPath("InvoiceTemplate.rdl")
-
-.ReportServiceUrl("/api/ReportApi").Parameters(param =>
-
-{
-
-  param.Name("InvoiceID").Labels(new List<string>() { "InvoiceID" }).Values(new List<string>() { "10250" }).Add();
-
-}))
+@(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote)
+.ReportPath("InvoiceTemplate.rdl")
+.ReportServiceUrl("/api/ReportApi")
+.Parameters(param => {param.Name("InvoiceID").Labels(new List<string>() { "InvoiceID" }).Values(new List<string>() { "10250" }).Add();}))
 
 {% endhighlight %}
 
@@ -33,31 +28,17 @@ The following code example illustrates how to add ReportParameter in Web API.
 {% highlight C# %}
 
 public class ReportsController : ApiController, IReportController
-
 {
-
-	/// <summary>
-
-	/// Report Initialization method that is triggered when report begins to be processed.
-
-	/// </summary>
-
-	/// <param name="reportOptions">The ReportViewer options.</param>
-
-	public void OnInitReportOptions(ReportViewerOptions reportOptions)
-
-	{
-
-		List<ReportParameter> parameters = new List<ReportParameter>();
-
-		parameters.Add(new ReportParameter() { Name = "InvoiceID", Labels = new List<string>() { "InvoiceID" }, Values = new List<string>() { "10250" } });
-
-		reportOptions.ReportModel.Parameters = parameters;
-
-		throw new NotImplementedException();
-
-	}        
-
+    /// <summary>
+    /// Report Initialization method that is triggered when report begins to be processed.
+    /// </summary>
+    /// <param name="reportOptions">The ReportViewer options.</param>
+    public void OnInitReportOptions(ReportViewerOptions reportOptions)
+    {
+        List<ReportParameter> parameters = new List<ReportParameter>();
+        parameters.Add(new ReportParameter() { Name = "InvoiceID", Labels = new List<string>() { "InvoiceID" }, Values = new List<string>() { "10250" } });
+        reportOptions.ReportModel.Parameters = parameters;
+    }        
 }
 
 {% endhighlight %}

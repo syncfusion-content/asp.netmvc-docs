@@ -13,14 +13,7 @@ The ReportViewer has an option to show or hide items in the toolbar. To customiz
 
 {% highlight CSHTML %}
 
-@(
-
-Html.EJ().ReportViewer("viewer")
-
-.ToolbarSettings(tb=>tb.Items(Syncfusion.JavaScript.ReportViewerEnums.ToolbarItems.All & ~Syncfusion.JavaScript.ReportViewerEnums.ToolbarItems.Parameters
-
-))
-
-)
+@(Html.EJ().ReportViewer("viewer")
+.ToolbarSettings(tb=>tb.Items(Syncfusion.JavaScript.ReportViewerEnums.ToolbarItems.All & ~Syncfusion.JavaScript.ReportViewerEnums.ToolbarItems.Parameters)))
 
 {% endhighlight %}

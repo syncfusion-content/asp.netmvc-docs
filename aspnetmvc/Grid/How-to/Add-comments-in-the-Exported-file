@@ -1,0 +1,186 @@
+---
+layout: post
+title: Add comments in the Exported file (Excel, Word or Pdf) | Grid | ASP.NET MVC | Syncfusion
+description: Add comments in the Exported file (Excel, Word or Pdf)
+platform: ejmvc
+control: Grid
+documentation: ug
+---
+
+## Adding comments in the Exported file (Excel, Word or Pdf)
+
+We can add comments in the exported file while exporting the grid control.
+
+# Adding comments in Excel sheet
+
+Using the Range property and AddComment method of the XlsIO IRange Class, we will add comments to any cell of particular range in Excel sheet. 
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {
+              items.AddTool(ToolBarItems.ExcelExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })) 
+        
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public void ExportToExcel(string GridModel)
+        {
+            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            ExcelExport exp = new ExcelExport();
+            IEnumerable data = new NorthwindDataContext().OrdersViews.ToList();
+            IWorkbook book = exp.Export(gridProperty, (IEnumerable)data, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-lime", true);            
+            book.ActiveSheet.Range["A1:D1"].Merge();
+            book.ActiveSheet.Range["A1"].Text = "*Exported Grid Data";//Adding text to the cells of particular range
+            book.ActiveSheet.Range["A1"].AddComment().Text = "*Add Comments";//Adding comments to cells of particular range
+            book.SaveAs("Export.xlsx", ExcelSaveType.SaveAsXLS, System.Web.HttpContext.Current.Response, ExcelDownloadType.Open);
+        }          
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot displays the exported grid with comments added to cells
+
+![](Add-comments-in-the-Exported-file_images/Add-comments-in-the-Exported-file_img1.png)
+
+# Adding Comments in Exported Word document
+
+We can add comments to the word document using the AppendComment method in the Wcomment class of the DocIO namespace. We can traverse through the required row/cell with the help of Wtable class and thus can append the comment to the table cell.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {                    
+              items.AddTool(ToolBarItems.WordExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();            
+        })) 
+
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public void ExportToWord(string GridModel)
+        {
+            WordExport exp = new WordExport();
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            IWordDocument document = exp.Export(gridProperty, (IEnumerable)data, "Export.docx", false, false, "flat-lime", true);
+            var table = document.Sections[0].Tables[0];
+            table.AddRow();//Add new row to the gridtable                    
+            var para = table.Rows[0].Cells[0].AddParagraph().AppendComment("*Comments added");
+            document.Save("Export.docx", FormatType.Docx, System.Web.HttpContext.Current.Response, HttpContentDisposition.Attachment);
+        }
+          
+    }
+    
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows the exported grid with comments added to the document.
+
+![](Add-comments-in-the-Exported-file_images/Add-comments-in-the-Exported-file_img2.png)
+
+# Adding Comments in Exported Pdf document
+
+We can add comments to a pdf documents using the annotation support provided in the Pdf namespace. The Annotation added can be of any format such as freeTextAnnotation, popUpAnnotation, LineAnnotation etc., Based on our requirement, we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {
+              items.AddTool(ToolBarItems.PdfExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })) 
+        
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public void ExportToPdf(string GridModel)
+        {
+            PdfExport exp = new PdfExport();
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
+            RectangleF rectangle = new RectangleF(120, 20, 20, 125);
+            //Creates a new pop-up annotation.
+            PdfPopupAnnotation popupAnnotation = new PdfPopupAnnotation(rectangle, "*Comments added");
+            popupAnnotation.Border.Width = 2;
+            popupAnnotation.Border.HorizontalRadius = 10;
+            popupAnnotation.Border.VerticalRadius = 20;            
+            //Sets the PDF pop-up icon.
+            popupAnnotation.Icon = PdfPopupIcon.Comment;
+            //Adds the annotation to page.
+            pdfdocument.Pages[0].Annotations.Add(popupAnnotation);
+            pdfdocument.Save("Export.pdf", Response, HttpReadType.Save);
+        }
+          
+    }
+    
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot displays the exported grid with comments added to cells
+
+![](Add-comments-in-the-Exported-file_images/Add-comments-in-the-Exported-file_img3.png)
