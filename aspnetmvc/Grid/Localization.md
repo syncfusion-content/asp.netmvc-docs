@@ -349,7 +349,7 @@ ej.Grid.Locale["de-DE"] = {
 {% endtabs %} 
 
 
-![](Globalizationandlocalization._images/Globalizationandlocalization._img1.png)
+![](Localization_images/Globalizationandlocalization._img1.png)
 
 
 I> You need to change pager locale in `ej.Pager.Locale` object.
@@ -587,7 +587,7 @@ ej.ExcelFilter.Locale["de-DE"] = {
 {% endhighlight  %}
 {% endtabs %} 
 
-![](Globalizationandlocalization._images/Globalizationandlocalization._img2.png)
+![](Localization_images/Globalizationandlocalization._img2.png)
 
 
 ## Globalization
@@ -652,7 +652,7 @@ public partial class GridController : Controller
 {% endtabs %} 
 
 
-![](Globalizationandlocalization._images/Globalizationandlocalization._img3.png)
+![](Localization_images/Globalizationandlocalization._img3.png)
 
 I> In the above example, you need to use `globalize.culture.de-DE` script file to globalize values. 
 
@@ -722,6 +722,6 @@ public partial class GridController : Controller
 {% endtabs %} 
 
 
-![](Globalizationandlocalization._images/Globalizationandlocalization._img4.png)
+![](Localization_images/Globalizationandlocalization._img4.png)
 
 
