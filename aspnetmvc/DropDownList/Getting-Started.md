@@ -14,7 +14,7 @@ documentation: ug
 
 2. Add DropDownList control using the helper from EJ namespace. 
 
-    {% highlight chtml %}
+    {% highlight html %}
 
         @Html.EJ().DropDownList("DropDownList1")
             
@@ -29,7 +29,7 @@ documentation: ug
 The DropDownList can be bounded to any local list data and remote data services. You can use [DataManager](http://help.syncfusion.com/js/datamanager/overview) component to serve data from the data services based on the query provided. To bind data to DropDownList control, the Datasource property's URL and Query are used. To render the DropDownList items, map the DropDownListFields with corresponding Fields <br/>
  
 	
-{% highlight chtml %}
+{% highlight html %}
 
     @Html.EJ().DropDownList("dropdownlist").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(6)").DropDownListFields(f => f.Text("CustomerID"))	
 
@@ -43,7 +43,7 @@ Execute the code and to get a DropDownList control with data bound from remote s
 
 DropDownList dimensions can be set using Width and Height Properties.
 	
-{% highlight chtml %}
+{% highlight html %}
 
     @Html.EJ().DropDownList("dropdownlist").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(6)").DropDownListFields(f => f.Text("CustomerID")).Width("300px").Height("50px")
 
