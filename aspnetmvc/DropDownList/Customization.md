@@ -15,7 +15,7 @@ It provides the short description of the expected value in dropdown and will dis
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
@@ -56,7 +56,7 @@ You can use ShowRoundedCorner property to add rounded borders to the input and p
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
@@ -97,7 +97,7 @@ The Enabled property is used to indicate whether the control can respond to the 
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
@@ -136,7 +136,7 @@ Additional HTML attributes can be applied to the control by using HtmlAttributes
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
