@@ -31,7 +31,7 @@ N> By default popup list is shown on DropDownList button click but you can displ
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
@@ -109,7 +109,7 @@ To show a resize handle in the popup list, use EnablePopupResize property. You c
 
 {% tabs %}
 
-    {% highlight chtml %}
+    {% highlight html %}
     
         @model MVCApplication.Controllers.HomeController
         
