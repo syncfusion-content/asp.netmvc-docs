@@ -1,121 +1,253 @@
 ---
 layout: post
-title: Localization | RichTextEditor | ASP.NET MVC | Syncfusion
-description: localization
-platform: ejmvc
-control: RichTextEditor
+title: Localization with RichTextEditor widget for Syncfusion Essential ASP.NET MVC
+description: Initialize the RichTextEditor widget with specified Localization  
+platform: ASP.NET MVC
+control: RTE
 documentation: ug
----
 
+---
 # Localization
 
-You can globalize the RTE, so that users of different cultures can make use of it and post their content. For your convenience, you can format the RTE control to your culture. When your blog is in your culture, the viewers of your culture can understand about your company and its products. You can achieve localization by using the “locale” property. 
+The editor provides option to localize its strings, it is used to adapting the editor to a particular local language. By default, the editor will use the US English (en-US) as its language. Please find the table with list of keys and their corresponding values for default language (en-US).
 
-RTE support all the cultures. Globalize.js is a simple JavaScript library that allows you to use different cultures. Globalize cultures is the open source and you can get all the culture files from [http://cdnjs.com/libraries/globalize/](http://cdnjs.com/libraries/globalize/) link. 
+{% highlight html %}
 
-In this example, globalize.min.js file is used to include all the cultures information. In this example, Spanish culture is used. 
+ej.RTE.Locale["en-US"] = {
+    
+        bold: "Bold",
+        italic: "Italic",
+        underline: "Underline",
+        strikethrough: "Strikethrough",
+        superscript: "Superscript",
+        subscript: "Subscript",
+        justifyCenter: "Align text center",
+        justifyLeft: "Align text left",
+        justifyRight: "Align text right",
+        justifyFull: "Justify",
+        unorderedList: "Insert unordered list",
+        orderedList: "Insert ordered list",
+        indent: "Indent",
+        fileBrowser: "File Browser",
+        outdent: "Decrease Indent",
+        cut: "Cut",
+        copy: "Copy",
+        paste: "Paste",
+        paragraph: "Paragraph",
+        undo: "Undo",
+        redo: "Redo",
+        upperCase: "Upper Case",
+        lowerCase: "Lower Case",
+        clearAll: "Clear All",
+        clearFormat: "Clear Format",
+        createLink: "Insert/Edit hyperlink",
+        removeLink: "Remove hyperlink",
+        image: "Insert image",
+        video: "Insert video",
+        editTable: "Edit Table Properties",
+        embedVideo: "Paste your embed code below",
+        viewHtml: "View HTML",
+        fontName: "Select font family",
+        fontSize: "Select font size",
+        fontColor: "Select color",
+        format: "Format",
+        backgroundColor: "Background color",
+        style: "Styles",
+        deleteAlert: "Are you sure you want to clear all the contents?",
+        copyPasteAlert: "Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.",
+        videoError: "The text area cannot be empty",
+        imageWebUrl: "Web Address",
+        imageAltText: "Image description",
+        dimensions: "Dimensions",
+        constrainProportions: "Constrain Proportions",
+        linkWebUrl: "Web Address",
+        imageLink: "Image as Link",
+        imageBorder: "Image Border",
+        imageStyle: "Style",
+        linkText: "Text",
+        linkToolTip: "ToolTip",
+        html5Support: "This tool icon only enabled in HTML5 supported browsers",
+        linkOpenInNewWindow: "Open link in new window",
+        tableColumns: "No.of Columns",
+        tableRows: "No.of Rows",
+        tableWidth: "Width",
+        tableHeight: "Height",
+        tableCellSpacing: "Cell spacing",
+        tableCellPadding: "Cell padding",
+        tableBorder: "Border",
+        tableCaption: "Caption",
+        tableAlignment: "Alignment",
+        textAlign: "Text align",
+        dialogUpdate: "Update",
+        dialogInsert: "Insert",
+        dialogCancel: "Cancel",
+        dialogApply: "Apply",
+        dialogOk: "Ok",
+        createTable: "Create table",
+        addColumnLeft: "Add column on the left",
+        addColumnRight: "Add column on the right",
+        addRowAbove: "Add row above",
+        addRowBelow: "Add row below",
+        deleteRow: "Delete the row",
+        deleteColumn: "Delete the column",
+        deleteTable: "Delete the table",
+        customTable: "Create custom table...",
+        characters: "Characters",
+        general: "General",
+        advanced: "Advanced",
+        table: "Table",
+        row: "Row",
+        column: "Column",
+        cell: "Cell",
+        solid: "Solid",
+        dotted: "Dotted",
+        dashed: "Dashed",
+        doubled: "Doubled"
+    };
+    var format = [
+    { text: "Paragraph", value: "p", spriteCssClass: "e-paragraph" },
+    { text: "Quotation", value: "blockquote", spriteCssClass: "e-quotation" },
+    { text: "Heading 1", value: "h1", spriteCssClass: "e-h1" },
+    { text: "Heading 2", value: "h2", spriteCssClass: "e-h2" },
+    { text: "Heading 3", value: "h3", spriteCssClass: "e-h3" },
+    { text: "Heading 4", value: "h4", spriteCssClass: "e-h4" },
+    { text: "Heading 5", value: "h5", spriteCssClass: "e-h5" },
+    { text: "Heading 6", value: "h6", spriteCssClass: "e-h6" }
+    ];
 
-1. Add the following code in your CSHTML page to initialize the RTE with Spanish content.
+{% endhighlight %}
 
- 
-{% highlight CSHTML %}
+N>  The culture name has to be specified in a standard format such as [Language Code]-[County/Region Code].
 
-@*Add the following code in your view page to render the RTE with Spanish content.*@
+To localize the editor’s strings with your own localization, copy the default language informations and localize the strings in the values column. For example, to localize the editor in German language (“de-DE”).
 
-@{Html.EJ().RTE("rteSample").Width("850px")
+{% highlight html %}
 
-.ContentTemplate(@<p>    Control de RTE es un fácil de hacer en el lado del cliente .   
+ej.RTE.Locale["de-DE"] = {
+        
+        bold: "fett",
+        italic: "kursiv",
+        underline: "unterstreichen",
+        strikethrough: "Durchgestrichen",
+        superscript: "Hochgestellt ",
+        subscript: "Tiefgestellt",
+        justifyCenter: "Ausrichten von Text Zentrum",
+        justifyLeft: "Ausrichten von Text links",
+        justifyRight: "Ausrichten von Text rechts",
+        justifyFull: "rechtfertigen",
+        unorderedList: "Legen Sie ungeordnete Liste",
+        orderedList: "Geordnete Liste einfügen ",
+        indent: "Gedankenstrich",
+        fileBrowser: "Datei-Browser",
+        outdent: "Einzug verkleinern",
+        cut: "Cut",
+        copy: "Kopie",
+        paste: "Paste",
+        paragraph: "Absatz",
+        undo: "rückgängig machen",
+        redo: "wiederholen",
+        upperCase: "Großbuchstaben",
+        lowerCase: "Kleinbuchstaben",
+        clearAll: "Alles löschen",
+        clearFormat: "Klar Format",
+        createLink: "Einfügen / bearbeiten Hyperlink",
+        removeLink: "Hyperlink entfernen",
+        image: "Bild einfügen",
+        video: "Video einfügen",
+        editTable: " Table Edit Properties",
+        embedVideo: "Fügen Sie Ihren Code einbetten unten",
+        viewHtml: "View HTML",
+        fontName: "Wählen Sie Schriftfamilie",
+        fontSize: "Schriftgröße wählen",
+        fontColor: "Farbe wählen",
+        format: "formatieren",
+        backgroundColor: "Hintergrundfarbe",
+        style: "Styles",
+        deleteAlert: "Sind Sie sicher, dass Sie den gesamten Inhalt löschen?",
+        copyPasteAlert: "Ihr Browser unterstützt keine direkten Zugriff auf die Zwischenablage. Bitte verwenden Sie stattdessen die Strg + X / C / V Tastenkombinationen",
+        videoError: "Der Textbereich kann nicht leer sein",
+        imageWebUrl: "Webadresse",
+        imageAltText: "Bildbeschreibung",
+        dimensions: "Abmessungen",
+        constrainProportions: "Proportionen beschränken",
+        linkWebUrl: "Webadresse",
+        imageLink: "Bild als Link-",
+        imageBorder: "Bild Rand",
+        imageStyle: "Stil",
+        linkText: "Text",
+        linkToolTip: "Tooltip",
+        html5Support: "Dieses Werkzeug-Symbol in HTML5 ist nur aktiviert, unterstützten Browser",
+        linkOpenInNewWindow: "Link in neuem Fenster öffnen",
+        tableColumns: "Keine der Spalten",
+        tableRows: "Keine der Zeilen",
+        tableWidth: "Weite",
+        tableHeight: "Höhe",
+        tableCellSpacing: "Zellenabstand",
+        tableCellPadding: "Zellauffüllung",
+        tableBorder: "Border",
+        tableCaption: "Bildunterschrift",
+        tableAlignment: "Ausrichtung",
+        textAlign: "Text align",
+        dialogUpdate: "aktualisieren",
+        dialogInsert: "Insert",
+        dialogCancel: "Absagen",
+        dialogApply: "Bewerben",
+        dialogOk: "Ok",
+        createTable: "create table",
+        addColumnLeft: "Spalte hinzufügen an der linken",
+        addColumnRight: "Spalte hinzufügen am rechten",
+        addRowAbove: "In Zeile über",
+        addRowBelow: "Zeile hinzufügen unter",
+        deleteRow: "Löschen Sie die Zeile",
+        deleteColumn: "Löschen Sie die Spalte",
+        deleteTable: "Löschen Sie die Tabelle",
+        customTable: "Erstellen Sie benutzerdefinierte Tabelle ...",
+        characters: "Charaktere",
+        general: "Allgemein",
+        advanced: "Erweiterte",
+        table: "Tabelle",
+        row: "Zeile",
+        column: "Spalte",
+        cell: "Zelle",
+        solid: "solide",
+        dotted: "gepunktete",
+        dashed: "Eine gestrichelte",
+        doubled: "verdoppelt",
+        maximize: "maximieren",
+        resize: "minimieren",
+        swatches: "Farbfelder"
+    };
+    
+{% endhighlight %}
 
-Cliente fácil de editar los contenidos y obtener el contenido HTML para el contenido mostrado . 
+You can set the Locale property of the editor to the new language. 
 
-Un control de RTE proporciona a los usuarios una barra de herramientas que ayuda a aplicar formatos  
+{% highlight html %}
 
-de texto enriquecido para el texto introducido en el área de texto .</p>)
+    @{
+        Syncfusion.JavaScript.Models.RTEproperties rte = new Syncfusion.JavaScript.Models.RTEproperties();
 
-.Locale("es-ES").Render(); }
-
-
-\\ Add the following script code in your script section to render RTE with Spanish culture in RTE. 
-ej.RTE.Locale["es-ES"] = 
-{        
-	bold: "audaz",        
-	italic: "itálico",        
-	underline: "subrayar",        
-	strikethrough: "Tachado",	        
-	justifyCenter: "Centrar texto",        
-	justifyLeft: "Alinear texto a la izquierda",       
-	justifyRight: "Alinear texto a la derecha",        
-	justifyFull: "justificar",        
-	fileBrowser: "archivo Browser",        
-	unorderedList: "Inserte lista desordenada",        
-	orderedList: "Insertar lista ordenada",        
-	indent: "muesca",        outdent: "anular sangria",       
-	undo: "deshacer",        
-	redo: "rehacer",        
-	clearAll: "Borrar todo",        
-	clearFormat: "Claro Formato",        
-	createLink: "Insertar / Editar hipervínculo",        
-	image: "insertar una imagen",        
-	video: "insertar vídeo",        
-	embedVideo: "Pegue su código de inserción por debajo de",        
-	viewHtml: "Ver HTML",        
-	format: "formato",        d
-	eleteAlert: "¿Está seguro que desea borrar todo el contenido?",        
-	copyPastAlert: "Your browser doesn't support direct access to the clipboard. 
-	Please use the Ctrl+X/C/V keyboard shortcuts instead.", 
-	videoError: "El área de texto no puede estar vacío",        
-	imageWebUrl: "URL web",        
-	imageAltText: "Descripción",        
-	dimensions: "dimensiones",       
-	constrainProportions: "Restringir proporciones",        
-	linkWebUrl: "URL web",        
-	linkText: "texto",        
-	linkToolTip: "ToolTip",        
-	html5Support: "Este icono de la herramienta sólo disponible en HTML5 apoyó navegadores",        
-	linkOpenInNewWindow: "Abrir enlace en una nueva ventana",       
-	tableColumns: "Columnas No.of",        
-	tableRows: "Numero de Filas",       
-	tableWidth: "ancho de la mesa",       
-	tableHeight: "altura de la mesa",        
-	tableCellSpacing: "El espaciado",        
-	tableCellPadding: "Relleno",       
-	tableBorder: "frontera",        
-	tableCaption: "subtítulo",        
-	tableAlignment: "alineación",        
-	dialogUpdate: "actualización",       
-	dialogInsert: "insertar",        
-	dialogCancel: "cancelar",   
-	dialogOk: "bueno",       
-	createTable: "Crear una tabla",        
-	addColumnLeft: "Añadir la columna de la izquierda",        
-	addColumnRight: "Añadir columna a la derecha",        
-	addRowAbove: "Añadir fila encima",       
-	addRowBelow: "Añadir fila abajo",        
-	deleteRow: "Elimine la fila",        
-	deleteColumn: "Eliminar la columna",        
-	deleteTable: "Eliminar la tabla",        
-	customTable: "Crear una tabla personalizada",        
-	characters: "Personajes"    
-};    
-
-var format_ES = 
-[    
-	{ text: "acápite", value: "p", spriteCssClass: "e-paragraph" },    
-	{ text: "cita", value: "blockquote", spriteCssClass: "e-quotation" },    
-	{ text: "título 1", value: "h1", spriteCssClass: "e-h1" },    
-	{ text: "título 2", value: "h2", spriteCssClass: "e-h2" },    
-	{ text: "título 3", value: "h3", spriteCssClass: "e-h3" },    
-	{ text: "título 4", value: "h4", spriteCssClass: "e-h4" },    
-	{ text: "título 5", value: "h5", spriteCssClass: "e-h5" },    
-	{ text: "título 6", value: "h6", spriteCssClass: "e-h6" }    
-	];   
-
-$("#rteSample").ejRTE("model.format", format_ES);
-      
-{% endhighlight %}  
-
- 
-![](Localization_images/Localization_img1.png)
-
-The following screenshot displays the output.
-
+        List<Syncfusion.JavaScript.Models.Format> list = new List<Syncfusion.JavaScript.Models.Format>{
+            new Syncfusion.JavaScript.Models.Format { Text= "Absatz", Value= "p", SpriteCssClass= "e-paragraph" },
+            new Syncfusion.JavaScript.Models.Format { Text= "Zitat", Value= "blockquote", SpriteCssClass= "e-quotation" },
+            new Syncfusion.JavaScript.Models.Format {  Text= "Kopf 1", Value= "h1", SpriteCssClass= "e-h1"} ,
+            new Syncfusion.JavaScript.Models.Format { Text= "Kopf 2", Value= "h2", SpriteCssClass= "e-h2" },
+            new Syncfusion.JavaScript.Models.Format { Text="Kopf 3", Value="h3", SpriteCssClass= "e-h3" },
+            new Syncfusion.JavaScript.Models.Format { Text= "Kopf 4", Value= "h4", SpriteCssClass= "e-h4" },
+            new Syncfusion.JavaScript.Models.Format { Text= "Kopf 5", Value= "h5", SpriteCssClass= "e-h5" },
+            new Syncfusion.JavaScript.Models.Format { Text= "Kopf 6", Value= "h6", SpriteCssClass= "e-h6" }
+        };
+        rte.Format = list;
+        rte.Value = "Das Richtexteditor (RTE) Steuerung ermöglicht Ihnen, den Inhalt mit Einsatz Tisch und Bilder zu bearbeiten ," +
+        " sondern bietet auch eine Werkzeugleiste , die Rich-Text- Format ," +
+        " um die in der Textarea eingegeben Gehalt gelten können.";
+        rte.Locale = "de-DE";
+       
+    }
+    
+    
+    @{Html.EJ().RTE("rteSample", rte)
+            .Render();}.
+   
+    
+{% endhighlight %}
