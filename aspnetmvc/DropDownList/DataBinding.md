@@ -234,7 +234,7 @@ N> The columns are bounded automatically when the fields are specified with the 
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 
 
 ![](DataBinding_images/DataBinding_img1.jpeg)

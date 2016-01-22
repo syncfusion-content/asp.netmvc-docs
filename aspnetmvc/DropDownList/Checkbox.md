@@ -39,7 +39,7 @@ DropDownList displays checkboxes to the left of each item when you set <b>ShowCh
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 
 ![](Checkbox_images/Checkbox_img1.jpeg)
 
@@ -74,7 +74,7 @@ DropDownList displays checkboxes to the left of each item when you set <b>ShowCh
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 
 ![](Checkbox_images/Checkbox_img2.jpeg)
 
@@ -119,7 +119,7 @@ Each checked item’s text is appended to the textbox with delimiter “,” by 
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 
 ![](Checkbox_images/Checkbox_img3.jpeg)
 
@@ -155,6 +155,6 @@ When you enable this option in DropDownList control, each checked item’s text 
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 
 ![](Checkbox_images/Checkbox_img4.jpeg)

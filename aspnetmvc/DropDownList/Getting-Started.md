@@ -81,7 +81,7 @@ PopupWidth and PopupHeight can be used to create a fixed size popup list.
         }
     {% endhighlight %}
     
- {% endtabs %}
+{% endtabs %}
 	
 ## Setting and Getting Value
 
