@@ -77,7 +77,7 @@ You can use HeaderTemplate property to add any HTML element. Code snippet to add
 
     {% endhighlight %}
 
-{% tabs %}
+{% endtabs %}
 
 The following screenshot exhibits the output of the above code,
 
