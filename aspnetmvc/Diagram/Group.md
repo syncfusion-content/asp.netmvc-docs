@@ -9,120 +9,228 @@ documentation: ug
 
 # Group
 
-Diagram provides support to Group and Ungroup nodes. Group is a composite node that has a set of child nodes/connector and it is a container for its children. All the operations performed on a Group also affect the individual child in that particular Group. You can edit any node/connector in the group individually. On Ungrouping, the children in the group is a individual node/connector of the Diagram model. 
+Group is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, groups, and connectors). Every change made to the group also affects the children. Child elements can be edited individually. 
 
 ## Create Group
 
-You can create Group like node and add it to the Diagram model by using diagram model’s Nodes property. You can set IsGroup property to true to differentiate the group from node.You can set the array of children (nodes/connectors) names to Children property. The group’s children nodes/connectors are added to the node array before adding the group to nodes array. 
+### Add group when initializing diagram
 
-The following code illustrates how a group node is created and added in the nodes array.
+You can add a group to the Diagram model through `Nodes` collection. You can create Group like node and you need to add the child objects to the `Children` collection of the group. The following code illustrates how to create a group node.
 
-{% highlight c# %}
+{% highlight razor %}
+@using Syncfusion.JavaScript.DataVisualization.Models.Collections 
+@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
 
+@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
+    .Nodes(node => {
+        node.Add(new Collection(){
+            new Group(){
+                Name = "group1",
+                Children = new List<object>() {
+                    new BasicShape(){
+                        Name = "rectangle1", OffsetX = 100, OffsetY = 100,
+                        Width = 100, Height = 100,
+                        FillColor = "darkCyan", BorderWidth = 2
+                    },
+                    new BasicShape(){
+                        Name = "rectangle2", OffsetX = 200, OffsetY = 200,
+                        Width = 100, Height = 100,
+                        FillColor = "darkCyan", BorderWidth = 2
+                    },
+                }
+            }
+        });
+    })
+)
+{% endhighlight %}
 
-//Creates a group node
+### Add group at run time
 
-Node node1 = new Node();
+You can add a group node at runtime by using the client side method `add`.
 
-node1.Name = "node1";
+The following code illustrates how a group node is added at run time.
 
-node1.Parent = "group";
+{% highlight js %}
 
-Node node2 = new Node();
+var group = {
+	name: "group1",
+	type: "group",
+	children: [{
+		name: "rectangle1",
+		offsetX: 100,
+		offsetY: 100,
+		width: 100,
+		height: 100,
+		type: "node",
+		fillColor: "darkCyan",
+		borderWidth: 2,
+		labels: [{
+			text: "rectangle1"
+		}]
+	}, {
+		name: "rectangle2",
+		offsetX: 200,
+		offsetY: 200,
+		width: 100,
+		height: 100,
+		type: "node",
+		fillColor: "darkCyan",
+		borderWidth: 2,
+		labels: [{
+			text: "rectangle2"
+		}]
+	}]
+};
 
-node2.Name = "node2";
-
-node2.Parent = "group";
-
-Group group = new Group();
-
-group.Name = "group";
-
-group.Children.Add("node1");
-
-group.Children.Add("node2");
-
-model.Nodes.Add(node1);
-
-model.Nodes.Add(node2);
-
-model.Nodes.Add(group);
-
-
+var diagram = $("#DiagramContent").ejDiagram("instance");
+// Adds group to the Diagram.
+diagram.add(group);
 
 {% endhighlight %}
 
+### Group from palette
 
+Group nodes can be predefined and added to symbol palette. You can drop those groups into Diagram, when required.
 
-![](Group_images/Group_img1.png)
+To explore how to add groups from symbol palette, refer to [Symbol Palette](/js/Diagram/Symbol-Palette "Symbol Palette")
 
-Group
-{:.caption}
+## Container
 
-## Select a Group
+Containers are used to automatically measure and arrange the size and position of the child elements in a predefined manner.
+There are two types of containers available.
 
-You can select a group by clicking any one of its child node. Consecutive clicks on a child object select the parent groups in the order of their creation. In a similar manner, consecutive clicks on a child object leads to the selection of inner groups and eventually the object itself and this cycle continues.
+### Canvas
 
-The following steps illustrate how to select an object that has two groups.
+* The Canvas panel supports absolute positioning and provides the least layout functionality to its contained Diagram elements. 
+* Canvas allows you to position its contained elements by using margin and alignment properties.
+* It allows elements to be either vertically or horizontally aligned.
 
+The `Container` property of group should be defined and its `Type` should be set as `Canvas` to create a canvas panel. The following code illustrates how to add a canvas panel.
 
+{% highlight razor %}
 
-![](Group_images/Group_img2.png)
+@using Syncfusion.JavaScript.DataVisualization.Models.Collections
+@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
+@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
 
-Selecting a Group
-{:.caption}
+@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
+    .Nodes(node => {
+        node.Add(new Collection(){
+            new Group(){
+                Name = "Canvas",
+                OffsetX = 400,
+                OffsetY = 400,
+                FillColor = "#E7EBF4",
+                BorderColor = "black",
 
+                //Sets the container as canvas.
+                Container = new Container() {
+                    Type = ContainerType.Canvas
+                },
 
-1. Click Node1 to select the outer group.
-2. Click again to select the inner group where it belongs.
+                //Sets the padding to give space between the group border and group content.
+                PaddingLeft = 30,
+                PaddingTop = 30,
+                PaddingRight = 30,
+                PaddingBottom = 30,
+                Children = new List<object>() {
+                    new BasicShape(){
+                        Name = "node1", FillColor = "darkCyan",
+                        Width = 100, Height = 100,
+                        MarginTop = 0, MarginLeft = 0,
+                    },
+                    new BasicShape(){
+                        Name = "node2", FillColor = "white",
+                        Width = 100, Height = 100,
+                        // Sets the margin to define the space around the child node.
+                        MarginTop = 30, MarginLeft = 30,
+                    },
+                    new BasicShape(){
+                        Name = "node3", FillColor = "darkCyan",
+                        Width = 100, Height = 100,
+                        MarginTop = 60, MarginLeft = 60,
+                    },
+                    new BasicShape(){
+                        Name = "node4", FillColor = "white",
+                        Width = 100, Height = 100,
+                        MarginTop = 90, MarginLeft = 90,
+                    }
+                }
+            }
+        });
+    })
+)
 
+{% endhighlight %}
 
+![](Group_images/Group_img9.png)
 
-   ![](Group_images/Group_img3.png)
-   Selecting an inner Group
-   {:.caption}
+### Stack
 
+* Stack panel is used to arrange its children in a single line or stack order, either vertically or horizontally.
+* It controls spacing by setting margin properties of child and padding properties of group. By default, a Stack Panel’s `Orientation` is vertical. 
 
-3. Click again to select the child node after all groups have been traversed.
+The `Container` property of group should be defined and its `Type` should be set as `Stack` to create a canvas panel The following code illustrates how to add a stack panel.
 
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.DataVisualization.Models.Collections
+@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
+@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
 
-   ![](Group_images/Group_img4.png)
-   Selecting a Child of Group
-   {:.caption}
+@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
+    .Nodes(node => {
+        node.Add(new Collection(){
+            new Group(){
+                Name = "Stack",
+                OffsetX = 600,
+                OffsetY = 200,
+                FillColor = "#E7EBF4",
+                BorderColor = "black",
 
-## Edit a Group
+                //Sets the container as canvas.
+                Container = new Container() {
+                    Type = ContainerType.Stack
+                },
 
-To edit a group, select the corresponding group. You can apply the following features on Group for editing.
+                // Sets the minimum size for stack panel.
+                MinHeight = 300,
+                MinWidth = 300,
+                Children = new List<object>() {
+                    new BasicShape(){
+                        Name = "node1", FillColor = "darkCyan",
+                        Width = 100, Height = 100,
+                        //Sets the horizontal Alignment for child node.
+                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Left
+                    },
+                    new BasicShape(){
+                        Name = "node2", FillColor = "darkCyan",
+                        Width = 100, Height = 100,
+                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Right 
+                    },
+                    new BasicShape(){
+                        Name = "node3", FillColor = "darkCyan",
+                        Width = 100, Height = 100,
+                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Stretch
+                    }
+                }
+            }
+        });
+    })
+)
 
-For example, resizing a group, automatically resizes its child objects to fit the selection area.
+{% endhighlight %}
 
-_Editing a Group_
+![](Group_images/Group_img10.png)
 
-<table>
-<tr>
-<th>
-Editing Options</th><th>
-Before </th><th>
-After</th></tr>
-<tr>
-<td>
-Resize</td><td>
-{{ '![](Group_images/Group_img5.png)' | markdownify }}
+## Difference between a basic group and containers
 
-</td><td>
-{{ '![](Group_images/Group_img6.png)' | markdownify }}
+| Group | Container |
+|---|---|
+| It arranges the child elements based on the child elementâ??s position and size properties. | Each container has a predefined behaviour to measure and arrange its child elements. Canvas and stack containers are supported in the Diagram. |
+| Padding, Min and Max Size properties are not applicable for basic group. | It is applicable for container. |
+| Children's margin and alignment properties are not applicable for basic group. | It is applicable for container. |
 
-</td></tr>
-<tr>
-<td>
-Rotate</td><td>
-{{ '![](Group_images/Group_img7.png)' | markdownify }}
+## Interaction
 
-</td><td>
-{{ '![](Group_images/Group_img8.png)' | markdownify }}
-
-</td></tr>
-</table>
-
-
+You can edit the group and its children at runtime. For more information about how to interact with a group, refer to [Edit Groups](/js/Diagram/Interaction#selection "Interaction").
