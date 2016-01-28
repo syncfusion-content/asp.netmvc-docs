@@ -18,7 +18,7 @@ Getting started with your MVC Diagram is easy. You can start by creating a simpl
 
 2\. Add a placeholder `div` element to initialize diagram control
 
-{% highlight html %}
+{% highlight razor %}
 
 <div>
     @Html.EJ().Diagram("diagram").Width("100%").Height("600px")
@@ -28,11 +28,20 @@ Getting started with your MVC Diagram is easy. You can start by creating a simpl
 
 3\. This creates an empty diagram
 
-![](/js/Diagram/Getting-Started_images/Getting-Started_img1.png)
+![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img1.png)
 
 ### Create and add Node
 
 Let us create and add a `node` with specific position, size, label and shape.
+{% tabs %}
+{% highlight razor %}
+
+@*Initializes diagram control*@
+<div>
+   @Html.EJ().Diagram("diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
+</div>
+
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -57,12 +66,13 @@ Let us create and add a `node` with specific position, size, label and shape.
    }
   
 {% endhighlight %}
+{% endtabs %}
 
 N> `Labels` property is an array, which indicates that more than one label can be added to a node.
 
 Added node will be displayed in diagram as shown below.
 
-![](/js/Diagram/Getting-Started_images/Getting-Started_img2.png)
+![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img2.png)
 
 ### Connect nodes
 
@@ -116,7 +126,7 @@ Connect these two nodes by adding a `connector` into `Connectors` collection wit
 
 * `Connector` connects the two nodes as shown below.
 
-![](/js/Diagram/Getting-Started_images/Getting-Started_img3.png)
+![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img3.png)
 
 * Default values for all nodes and connectors can be set using default settings. For example if all nodes have same `Width` and `Height`, we can move such properties into `DefaultSettings`. Above code can be rewritten as shown below.
 
@@ -226,7 +236,7 @@ Similarly we can add required nodes and connectors to form a complete flow diagr
 
 Final flow chart will looks as shown below.
 
-![](/js/Diagram/Getting-Started_images/Getting-Started_img4.png)
+![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img4.png)
 
 ## Automatic organization chart
 
@@ -241,7 +251,7 @@ Initializing diagram is already discussed in Flow Diagram > [Initialize diagram]
 	* `Name` is used as a unique identifier and
 	* `ReportingPerson` is used to identify the person to whom an employee report to, in the organization.
 
-{% highlight js %}
+{% highlight razor %}
 
 //Initialize data source - Saved in a JSON file...
 {
@@ -309,7 +319,7 @@ Following code examples indicate how to define the default appearance of node an
 
 {% endhighlight %}
 
-{% highlight js %}
+{% highlight razor %}
 
     //To represent the roles
     var codes = {
@@ -344,4 +354,4 @@ Following code examples indicate how to define the default appearance of node an
 
 * The Employee details are displayed in the Diagram as follows.
 
-![](/js/Diagram/Getting-Started_images/Getting-Started_img5.png)
+![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img5.png)
