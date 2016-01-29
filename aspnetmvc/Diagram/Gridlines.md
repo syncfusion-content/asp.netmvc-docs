@@ -15,16 +15,25 @@ documentation: ug
 
 The `SnapSettings.SnapConstraints` enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.
 
+{% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Shows both horizontal and vertical gridlines*@
-	.SnapSettings(e => e.SnapConstraints(SnapConstraints.ShowLines))
-)
-
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 {% endhighlight %}
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		//Shows both horizontal and vertical gridlines
+		SnapConstraints = SnapConstraints.ShowLines
+	}
+	ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+{% endtabs %}
 
 ![](Gridlines_images/Gridlines_img1.png)
 
@@ -35,25 +44,21 @@ To show only horizontal/vertical gridlines or to hide gridlines, refer to [Const
 You can customize the appearance of the gridlines by using a set of predefined properties. To explore those properties, refer to [Gridlines](/js/api/ejDiagram#snapsettings:horizontalgridlines "Gridlines")
 The `HorizontalGridLines` and `VerticalGridLines` properties allow to customize the appearance of the gridlines. The following code example illustrates how to customize the appearance of gridlines.
 
-{% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.SnapSettings(e => {
-		@*Shows both horizontal and vertical gridlines*@
-		e.SnapConstraints(SnapConstraints.ShowLines)
-
-		@*Customizes the line color and line style to the gridlines.*@
-		.VerticalGridlines(s => {
-			s.LineColor("blue")
-			.LineDashArray("2 2")
-		})
-		.HorizontalGridlines(s => {
-			s.LineColor("blue")
-			.LineDashArray("2 2")
-		});
-	})
-)
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		//Shows both horizontal and vertical gridlines
+		SnapConstraints = SnapConstraints.ShowLines,
+		// Customizes the line color and line style to the gridlines.
+		HorizontalGridlines = new GridLines() { LineColor = "blue", LineDashArray = "2 2" },
+		VerticalGridlines = new GridLines() { LineColor = "blue", LineDashArray = "2 2" } 
+	};
+	ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ![](Gridlines_images/Gridlines_img4.png)
@@ -64,29 +69,30 @@ Thickness and the space between gridlines can be customized by using `LinesInter
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
-{% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.SnapSettings(e => {
-		@*Shows both horizontal and vertical gridlines*@
-		e.SnapConstraints(SnapConstraints.ShowLines)
-
-		@*Customizes the line color and line style to the gridlines.*@
-		.VerticalGridlines(s => {
-			s.LineColor("blue")
-			.LineDashArray("2 2")
-			@*Defines the thickness and intervals for a pattern of lines*@
-			.LinesInterval(new List<decimal>(){1.25m, 14, 0.25m, 15, 0.25m, 15, 0.25m, 15, 0.25m, 15});
-		})
-		.HorizontalGridlines(s => {
-			s.LineColor("blue")
-			.LineDashArray("2 2")
-			@*Defines the thickness and intervals for a pattern of lines*@
-			.LinesInterval(new List<decimal>(){1.25m, 14, 0.25m, 15, 0.25m, 15, 0.25m, 15, 0.25m, 15});
-		});
-	})
-)
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		//Shows both horizontal and vertical gridlines
+		SnapConstraints = SnapConstraints.ShowLines,
+		// Customizes the line color and line style to the gridlines.
+		// Defines the thickness and intervals for a pattern of lines
+		HorizontalGridlines = new GridLines() {
+			LinesInterval = new List<decimal>(){1.25m, 14, 0.25m, 15, 0.25m, 15, 0.25m, 15, 0.25m, 15},
+			LineColor = "blue",
+			LineDashArray = "2 2"
+		},
+		VerticalGridlines = new GridLines() {
+			LinesInterval = new List<decimal>(){1.25m, 14, 0.25m, 15, 0.25m, 15, 0.25m, 15, 0.25m, 15},
+			LineColor = "blue",
+			LineDashArray = "2 2"
+		}
+	};
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ![](Gridlines_images/Gridlines_img2.png)
@@ -99,14 +105,18 @@ This feature allows the Diagram objects to snap to the nearest intersection of g
 
 Snapping to gridlines can be enabled/disabled with the `SnapSettings.SnapConstraints`. The following code example illustrates how to enable/disable the snapping to gridlines.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Enables snapping to both the horizontal and vertical lines.*@
-	.SnapSettings(e => e.SnapConstraints(SnapConstraints.SnapToLines))
-)
-
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		//Enables snapping to both the horizontal and vertical lines.
+		SnapConstraints = SnapConstraints.SnapToLines, 
+	};
+	ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 To enable/disable snapping to horizontal/vertical lines, refer to [Constraints] (/js/Diagram/Constraints#SnapConstraints "Constraints")
@@ -116,18 +126,18 @@ To enable/disable snapping to horizontal/vertical lines, refer to [Constraints] 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the property, `snapInterval`. The following code example illustrates how to customize the snap intervals.
 
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.SnapSettings(e => {
-		@*Shows both horizontal and vertical gridlines*@
-		e.SnapConstraints(SnapConstraints.All)
-
-		@*Defines a set of intervals where the object is snapped.*@
-		@*In this example, the object is snapped to every 10px.*@
-		.VerticalGridlines(s => s.LinesInterval(new List<decimal>(){10}))
-		.HorizontalGridlines(s => s.LinesInterval(new List<decimal>(){10});
-	})
-)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		HorizontalGridlines = new GridLines() { LinesInterval = new List<decimal>(){10} },
+		VerticalGridlines = new GridLines() { LinesInterval = new List<decimal>(){10} },
+		SnapConstraints = SnapConstraints.All	
+	};
+	ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## Snap To Objects
@@ -137,12 +147,13 @@ The snap-to-object provides visual cues to assist with aligning and spacing Diag
 The `EnableSnapToObject` property allows you to enable/disable smart guides. The following code example illustrates how to enable/disable the smart guides.
 
 {% highlight razor %}
-	
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Enables smart guides*@
-	.SnapSettings(e => e.EnableSnapToObject(true))
-)
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.EnableSnapToObject = true;
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ![](Gridlines_images/Gridlines_img4.png)

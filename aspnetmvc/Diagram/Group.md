@@ -17,31 +17,32 @@ Group is used to cluster multiple nodes and connectors into a single element. It
 
 You can add a group to the Diagram model through `Nodes` collection. You can create Group like node and you need to add the child objects to the `Children` collection of the group. The following code illustrates how to create a group node.
 
-{% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-    .Nodes(node => {
-        node.Add(new Collection(){
-            new Group(){
-                Name = "group1",
-                Children = new List<object>() {
-                    new BasicShape(){
-                        Name = "rectangle1", OffsetX = 100, OffsetY = 100,
-                        Width = 100, Height = 100,
-                        FillColor = "darkCyan", BorderWidth = 2
-                    },
-                    new BasicShape(){
-                        Name = "rectangle2", OffsetX = 200, OffsetY = 200,
-                        Width = 100, Height = 100,
-                        FillColor = "darkCyan", BorderWidth = 2
-                    },
-                }
-            }
-        });
-    })
-)
+{% highlight c# %}
+BasicShape node1 = new BasicShape(){
+    Name = "rectangle1",
+    OffsetX = 100,
+    OffsetY = 100,
+    Width = 100,
+    Height = 100,
+    FillColor = "darkCyan",
+    BorderWidth = 2, 
+};
+node1.Labels.Add(new Label() { Text = "Rectangle1" });
+BasicShape node2 = new BasicShape()
+{
+    Name = "rectangle2",
+    OffsetX = 200,
+    OffsetY = 200,
+    Width = 100,
+    Height = 100,
+    FillColor = "darkCyan",
+    BorderWidth = 2,
+};
+node2.Labels.Add(new Label() { Text = "Rectangle2" });
+Group group = new Group() { Name = "group1" };
+group.Children.Add(node1);
+group.Children.Add(node2);
+Diagram.Model.Nodes.Add(group);
 {% endhighlight %}
 
 ### Add group at run time
@@ -51,7 +52,6 @@ You can add a group node at runtime by using the client side method `add`.
 The following code illustrates how a group node is added at run time.
 
 {% highlight js %}
-
 var group = {
 	name: "group1",
 	type: "group",
@@ -85,7 +85,6 @@ var group = {
 var diagram = $("#DiagramContent").ejDiagram("instance");
 // Adds group to the Diagram.
 diagram.add(group);
-
 {% endhighlight %}
 
 ### Group from palette
@@ -107,63 +106,67 @@ There are two types of containers available.
 
 The `Container` property of group should be defined and its `Type` should be set as `Canvas` to create a canvas panel. The following code illustrates how to add a canvas panel.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-    .Nodes(node => {
-        node.Add(new Collection(){
-            new Group(){
-                Name = "Canvas",
-                OffsetX = 400,
-                OffsetY = 400,
-                FillColor = "#E7EBF4",
-                BorderColor = "black",
-
-                //Sets the container as canvas.
-                Container = new Container() {
-                    Type = ContainerType.Canvas
-                },
-
-                //Sets the padding to give space between the group border and group content.
-                PaddingLeft = 30,
-                PaddingTop = 30,
-                PaddingRight = 30,
-                PaddingBottom = 30,
-                Children = new List<object>() {
-                    new BasicShape(){
-                        Name = "node1", FillColor = "darkCyan",
-                        Width = 100, Height = 100,
-                        MarginTop = 0, MarginLeft = 0,
-                    },
-                    new BasicShape(){
-                        Name = "node2", FillColor = "white",
-                        Width = 100, Height = 100,
-                        // Sets the margin to define the space around the child node.
-                        MarginTop = 30, MarginLeft = 30,
-                    },
-                    new BasicShape(){
-                        Name = "node3", FillColor = "darkCyan",
-                        Width = 100, Height = 100,
-                        MarginTop = 60, MarginLeft = 60,
-                    },
-                    new BasicShape(){
-                        Name = "node4", FillColor = "white",
-                        Width = 100, Height = 100,
-                        MarginTop = 90, MarginLeft = 90,
-                    }
-                }
-            }
-        });
-    })
-)
-
+{% highlight c# %}
+BasicShape node1 = new BasicShape()
+{
+    Name = "node1",
+    FillColor = "darkCyan",
+    Width = 100,
+    Height = 100,
+    MarginTop = 0,
+    MarginLeft = 0,
+};
+BasicShape node2 = new BasicShape()
+{
+    Name = "node2",
+    FillColor = "white",
+    Width = 100,
+    Height = 100,
+    // Sets the margin to define the space around the child node.
+    MarginTop = 30,
+    MarginLeft = 30,
+};
+BasicShape node3 = new BasicShape()
+{
+    Name = "node3",
+    FillColor = "darkCyan",
+    Width = 100,
+    Height = 100,
+    MarginTop = 60,
+    MarginLeft = 60,
+};
+BasicShape node4 = new BasicShape()
+{
+    Name = "node4",
+    FillColor = "white",
+    Width = 100,
+    Height = 100,
+    MarginTop = 90,
+    MarginLeft = 90,
+};
+Group group = new Group()
+{
+    Name = "canvas",
+    OffsetX = 400,
+    OffsetY = 400,
+    //Sets the container as canvas.
+    Container = new Container() { Type = ContainerType.Canvas },
+    FillColor = "#E7EBF4",
+    BorderColor = "black",
+    //Sets the padding to give space between the group border and group content.
+    PaddingLeft = 30,
+    PaddingTop = 30,
+    PaddingRight = 30,
+    PaddingBottom = 30,
+};
+group.Children.Add(node1);
+group.Children.Add(node2);
+group.Children.Add(node3);
+group.Children.Add(node4);
+Diagram.Model.Nodes.Add(group);
 {% endhighlight %}
 
-![](Group_images/Group_img9.png)
+![](/Group_images/Group_img9.png)
 
 ### Stack
 
@@ -172,56 +175,43 @@ The `Container` property of group should be defined and its `Type` should be set
 
 The `Container` property of group should be defined and its `Type` should be set as `Stack` to create a canvas panel The following code illustrates how to add a stack panel.
 
-{% highlight razor %}
+{% highlight c# %}
+Node node1 = new Node() {
+    Name = "node1", FillColor = "darkCyan", Width = 100, Height = 100,
+    //Sets the horizontal Alignment for child node.
+    HorizontalAlign = HorizontalAlignment.Left
+};
+Node node2 = new Node() { 
+    Name = "node2", FillColor = "darkCyan", Width = 100, Height = 100,
+    HorizontalAlign = HorizontalAlignment.Right
+};
+Node node3 = new Node()
+{
+    Name = "node3", FillColor = "darkCyan", Width = 100, Height = 100,
+    HorizontalAlign = HorizontalAlignment.Stretch
+};
 
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
+Group group = new Group() {
+    Name = "stack",
+    OffsetX = 600,
+    OffsetY = 200,
 
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-    .Nodes(node => {
-        node.Add(new Collection(){
-            new Group(){
-                Name = "Stack",
-                OffsetX = 600,
-                OffsetY = 200,
-                FillColor = "#E7EBF4",
-                BorderColor = "black",
+    //Sets the container as canvas.
+    Container = new Container() { Type = ContainerType.Stack },
+    FillColor = "#E7EBF4",
+    BorderColor = "black",
 
-                //Sets the container as canvas.
-                Container = new Container() {
-                    Type = ContainerType.Stack
-                },
-
-                // Sets the minimum size for stack panel.
-                MinHeight = 300,
-                MinWidth = 300,
-                Children = new List<object>() {
-                    new BasicShape(){
-                        Name = "node1", FillColor = "darkCyan",
-                        Width = 100, Height = 100,
-                        //Sets the horizontal Alignment for child node.
-                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Left
-                    },
-                    new BasicShape(){
-                        Name = "node2", FillColor = "darkCyan",
-                        Width = 100, Height = 100,
-                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Right 
-                    },
-                    new BasicShape(){
-                        Name = "node3", FillColor = "darkCyan",
-                        Width = 100, Height = 100,
-                        HorizontalAlign = Syncfusion.JavaScript.DataVisualization.DiagramEnums.HorizontalAlignment.Stretch
-                    }
-                }
-            }
-        });
-    })
-)
-
+    // Sets the minimum size for stack panel.
+    MinHeight = 300,
+    MinWidth = 300,
+};
+group.Children.Add(node1);
+group.Children.Add(node2);
+group.Children.Add(node3);
+Diagram.Model.Nodes.Add(group);
 {% endhighlight %}
 
-![](Group_images/Group_img10.png)
+![](/js/Diagram/Group_images/Group_img10.png)
 
 ## Difference between a basic group and containers
 

@@ -354,25 +354,9 @@ To explore the properties of custom commands, refer to [Commands](/js/api/ejDiag
 
 The following code example illustrates how to define a custom command.
 
+{% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-.CommandManager(e=>{
-	e.Commands(new Dictionary<string, object>(){
-		
-		@*Commands to clone the selected item*@
-		{ "clone", new Command() {
-			Execute = "executeClone",
-			CanExecute = "canExecuteClone",
-			
-			@*Defines that the clone command has to be executed on the recognition of Shift+C key press.*@
-			Gesture = new Gesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Shift }
-		}}
-	});
-}))
+@Html.EJ().Diagram("OrganizationChart", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
 	//Method to define whether the command can be executed at the current moment
@@ -391,8 +375,24 @@ The following code example illustrates how to define a custom command.
 		diagram.paste();
 	}
 </script>
-	
 {% endhighlight %}
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Commands to clone the selected item
+	Command clone = new Command() {
+		Execute = "executeClone", CanExecute = "canExecuteClone",
+		//Defines that the clone command has to be executed on the recognition of Shift+C key press.
+		Gesture = new Gesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Shift }
+	};
+	model.CommandManager.Commands.Add("clone", clone);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+{% endtabs %}
 
 ### Modify the existing command
 
@@ -401,27 +401,7 @@ When any one of the default commands is not desired, they can be disabled. To ch
 The following code example illustrates how to disable a command and how to modify the in-built commands.
 
 {% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-.CommandManager(e=>{
-	e.Commands(new Dictionary<string, object>(){
-		
-		@*Assigns null value to an existing command and disables its execution*@
-		{ "nudgeUp", new Command() },
-		{ "nudgeDown", new Command() },
-		{ "nudgeRight", new Command() },
-
-		@*Modifies the existing command - nudgeLeft*@
-		{ "nudgeLeft", new Command() { 
-			Execute = "executeNudgeLeft", CanExecute = "canExecuteNudgeLeft",
-			Gesture = new Gesture() { Key = Keys.Left }
-		}}
-	});
-}))
+@Html.EJ().Diagram("OrganizationChart", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
 	//Method to define whether the command can be executed at the current moment
@@ -437,5 +417,23 @@ The following code example illustrates how to disable a command and how to modif
 		diagram.nudge("left");
 	}
 </script>
-
 {% endhighlight %}
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	Command nudgeLeft = new Command() { Execute = "executeNudgeLeft", CanExecute = "canExecuteNudgeLeft", Gesture = new Gesture() { Key = Keys.Left } };
+	
+	//Assigns null value to an existing command and disables its execution
+	model.CommandManager.Commands.Add("nudgeUp", new Command());
+	model.CommandManager.Commands.Add("nudgeDown", new Command());
+	model.CommandManager.Commands.Add("nudgeRight", new Command());
+	
+	//Modifies the existing command - nudgeLeft
+	model.CommandManager.Commands.Add("nudgeLeft", nudgeLeft);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+{% endtabs %}

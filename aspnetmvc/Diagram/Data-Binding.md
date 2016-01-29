@@ -27,42 +27,7 @@ To map the user defined JSON data with Diagram, you have to configure the fields
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => 
-{
-    e.Type(LayoutTypes.HierarchicalTree).VerticalSpacing(30).HorizontalSpacing(30);
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "darkcyan",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white", Bold = true } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => {
-    e.Id("Name").Parent("ReportingPerson")
-    .DataSource(ds=>
-    {
-        ds.URL("DataSource");
-    });
-})) 
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Binds custom JSON with node
@@ -74,12 +39,43 @@ To map the user defined JSON data with Diagram, you have to configure the fields
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    
+    //Sets the default properties for nodes and connectors
+    Label label = new Label() { Name = "label1", FontColor = "white", Bold = true };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "darkcyan" };
+    model.DefaultSettings.Node.Labels.Add(label);
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };  
+    
+    //Configures data source for Diagram
+    //Defines the unique field of each JSON data
+    model.DataSourceSettings.Id = "Name";
+    //Defines the parent field which builds the relationship
+    model.DataSourceSettings.Parent = "ReportingPerson";
+    //Sets the local data source to the diagram.
+    model.DataSourceSettings.DataSource = GetDataSource(); 
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 
@@ -108,45 +104,9 @@ You can bind the Diagram with Remote Data by using dataManager.
 
 To bind remote data to the Diagram, you have to configure the fields of `DataSourceSettings`. The following code illustrates how to bind remote data to the Diagram.
 
+{% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => 
-{
-    e.Type(LayoutTypes.HierarchicalTree).VerticalSpacing(30).HorizontalSpacing(30);
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "darkcyan",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white", Bold = true } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
-    });
-})
-
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => 
-{ 
-    e.DataSource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
-    .Query(" ej.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName')")
-    .Id("EmployeeID")
-    .Parent("ReportsTo")
-    .TableName("Employees");
-}))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Binds custom JSON with node
@@ -157,6 +117,38 @@ To bind remote data to the Diagram, you have to configure the fields of `DataSou
 </script>
 {% endhighlight %}
 
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    model.Layout.HorizontalSpacing = 30;
+    model.Layout.VerticalSpacing = 30;
+
+    //Sets the default properties for nodes and connectors
+    Label label = new Label() { Name = "label1", FontColor = "white", Bold = true };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "darkcyan" };
+    model.DefaultSettings.Node.Labels.Add(label);
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+
+    model.DataSourceSettings.DataSource = "http://mvc.syncfusion.com/Services/Northwnd.svc/";
+    model.DataSourceSettings.Query = "ej.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName')";
+    model.DataSourceSettings.Id = "EmployeeID";
+    model.DataSourceSettings.Parent = "ReportsTo";
+    model.DataSourceSettings.TableName = "Employees";   
+}
+{% endhighlight %}
+{% endtabs %}
+
 ![](Data-Binding_images/Data-Binding_img2.png)
 
 ## Html Table Data
@@ -166,6 +158,7 @@ The Diagram provides support to populate the Diagram from the **HTML table**. I
 The following code illustrates how to convert HTML table to the Diagram.
 
 {% highlight razor %}
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 @using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
 @using Syncfusion.JavaScript.DataVisualization.Models.Diagram
 @using Syncfusion.JavaScript.DataVisualization.Models.Collections

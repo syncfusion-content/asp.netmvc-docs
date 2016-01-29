@@ -22,49 +22,56 @@ To arrange the nodes in hierarchical structure, you need to specify the layout `
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => { e.Type(LayoutTypes.HierarchicalTree).VerticalSpacing(30).HorizontalSpacing(30); })
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "darkcyan",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("ReportingPerson"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
-  //Binds custom JSON with node
-  function nodeTemplate(diagram, node) {
-      node.labels[0].text = node.Name;
-  }
+    //Binds custom JSON with node
+    function nodeTemplate(diagram, node) {
+        node.labels[0].text = node.Name;
+    }
 </script>
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    
+    //Sets the default properties for nodes and connectors
+    Label label = new Label() { Name = "label1", FontColor = "white" };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "darkcyan" };
+    model.DefaultSettings.Node.Labels.Add(label);
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+
+    //Configures data source for Diagram
+    //Defines the unique field
+    model.DataSourceSettings.Id = "Name";
+    //Defines the relationship
+    model.DataSourceSettings.Parent = "ReportingPerson";
+    //Specifies the dataSource
+    model.DataSourceSettings.DataSource = GetDataSource();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 
@@ -93,23 +100,7 @@ To arrange nodes in a radial tree structure, you need to set the `Layout.Type` a
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => { e.Type(LayoutTypes.RadialTree).VerticalSpacing(30).HorizontalSpacing(30); })
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=> { e.Node(new ImageNode() { Width = 40, Height = 40, BorderColor = "transparent"});})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("ReportingPerson"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Binds custom JSON with node
@@ -121,12 +112,34 @@ To arrange nodes in a radial tree structure, you need to set the `Layout.Type` a
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.RadialTree;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    
+    //Sets the default properties for nodes
+    model.DefaultSettings.Node = new ImageNode() { Width = 40, Height = 40, BorderColor = "transparent" };
+      
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "ReportingPerson";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+    
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 
@@ -176,34 +189,7 @@ The following code example illustrates how to create an organizational chart.
 
 {% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => { e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30).HorizontalSpacing(30); })
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "#546e20",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("Team"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Binds custom JSON with node
@@ -214,12 +200,43 @@ The following code example illustrates how to create an organizational chart.
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.OrganizationalChart;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    
+    //Sets the default properties for nodes
+    Label label = new Label() { Name = "label1", FontColor = "white" };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "#546e20" };
+    model.DefaultSettings.Node.Labels.Add(label);
+
+    //Sets the default properties for connectors
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Team";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 
@@ -259,7 +276,7 @@ Organizational chart layout starts parsing from root and iterate through all its
 
 ### GetLayoutInfo
 
-You can set Chart orientations, chart types, and offset to be left between parent and child nodes by overriding the method, diagram.model.layout.getLayoutInfo. The getLayoutInfo method is called to configure every subtree of the organizational chart. It takes the following arguments.
+You can set Chart orientations, chart types, and offset to be left between parent and child nodes by overriding the method, model.layout.getLayoutInfo. The getLayoutInfo method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
 * `diagram`: Reference of diagram
 * `node`: Parent node to that options are to be customized
@@ -268,17 +285,7 @@ You can set Chart orientations, chart types, and offset to be left between paren
 The following code example illustrates how to define the method getLayoutInfo.
 
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => {
-    e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30)
-    .HorizontalSpacing(30).GetLayoutInfo("getLayoutInfo");
-}))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     var chartOrientations = ej.datavisualization.Diagram.ChartOrientations;
@@ -324,35 +331,7 @@ The following code example illustrates how to set the vertical right arrangement
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => {
-    e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30).HorizontalSpacing(30).GetLayoutInfo("getLayoutInfo");
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "#546e20",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("Manager"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     var chartOrientations = ej.datavisualization.Diagram.ChartOrientations;
@@ -372,12 +351,43 @@ The following code example illustrates how to set the vertical right arrangement
 </script>
 {% endhighlight %}
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.OrganizationalChart;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    model.Layout.GetLayoutInfo = "getLayoutInfo";
+    
+    //Sets the default properties for nodes
+    Label label = new Label() { Name = "label1", FontColor = "white" };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "#546e20" };
+    model.DefaultSettings.Node.Labels.Add(label);
+
+    //Sets the default properties for connectors
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Manager";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 {% highlight js %}
@@ -410,34 +420,7 @@ The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => {
-    e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30).HorizontalSpacing(30).GetLayoutInfo("getLayoutInfo");
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=> {
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "#546e20",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("Team"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Creates the node template
@@ -457,12 +440,43 @@ The following code example illustrates how to add assistants to layout.
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Uses layout to auto-arrange nodes on the Diagram page
+    model.Layout.Type = LayoutTypes.OrganizationalChart;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    model.Layout.GetLayoutInfo = "getLayoutInfo";
+    
+    //Sets the default properties for nodes
+    Label label = new Label() { Name = "label1", FontColor = "white" };
+    model.DefaultSettings.Node = new Node() { Width = 100, Height = 40, FillColor = "#546e20" };
+    model.DefaultSettings.Node.Labels.Add(label);
+
+    //Sets the default properties for connectors
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Team";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 } 
 {% endhighlight %}
 
@@ -494,44 +508,7 @@ The following code illustrates how to arrange the nodes in a "BottomToTop" orien
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => {
-    e.Type(LayoutTypes.OrganizationalChart)
-
-    @*Sets the orientation*@
-    .Orientation(LayoutOrientations.BottomToTop)
-
-    @*Sets the space to be horizontally left between nodes*@
-    .VerticalSpacing(30)
-
-    @*Sets the space to be vertically left between nodes*@
-    .HorizontalSpacing(30)
-    .GetLayoutInfo("getLayoutInfo");
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=> {
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "#546e20",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("Manager"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Creates the node template
@@ -551,12 +528,46 @@ The following code illustrates how to arrange the nodes in a "BottomToTop" orien
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Sets the type of the layout
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    //Sets the orientation
+    model.Layout.Orientation = LayoutOrientations.BottomToTop;
+    //Sets the space to be horizontally left between nodes
+    model.Layout.HorizontalSpacing = 20;
+    //Sets the space to be vertically left between nodes
+    model.Layout.VerticalSpacing = 20;
+    model.Layout.GetLayoutInfo = "getLayoutInfo";
+    
+    //Sets the default properties for nodes and connectors
+    model.DefaultSettings.Node = new Node() { 
+        Width = 100, Height = 40, FillColor = "#546e20",
+        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } }
+    };
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+    
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Manager";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 {% endtabs %}
@@ -570,36 +581,7 @@ This is helpful when you try to expand/collapse a node. It might be expected tha
 
 {% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e =>  {
-    e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30).HorizontalSpacing(30)
-    .GetLayoutInfo("getLayoutInfo")
-    .FixedNode("parent");
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=> {
-    e.Node(new Node() {
-        Width = 100, Height = 40, FillColor = "#546e20",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None }
-    });
-})
-
-@*Configures data source for Diagram*@
-.DataSourceSettings(e => { e.DataSource(ds=> ds.URL("DataSource")).Id("Id").Parent("Manager"); }))
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
     //Creates the node template
@@ -615,12 +597,41 @@ This is helpful when you try to expand/collapse a node. It might be expected tha
 {% endhighlight %}
 
 {% highlight c# %}
-public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Defines default layout as organizational chart
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    model.Layout.FixedNode = "parent";
+    model.Layout.GetLayoutInfo = "getLayoutInfo";
+
+    //Sets the default properties for nodes and connectors
+    model.DefaultSettings.Node = new Node() { 
+        Width = 100, Height = 40, FillColor = "#546e20",
+        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
+    };
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+    
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Manager";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    //Initializes the node template.
+    model.NodeTemplate = "nodeTemplate";
+    ViewData["diagramModel"] = model;
+    return View();
+}
+public Array GetDataSource()
 {
     String allText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/data.json"));
     Dictionary<string, object> requestArgs = (Dictionary<string, object>)new JavaScriptSerializer().DeserializeObject(allText);
     requestArgs = (Dictionary<string, object>)requestArgs["root"];
-    return Json((Array)requestArgs.Values.ElementAt(0), JsonRequestBehavior.AllowGet);
+    return (Array)requestArgs.Values.ElementAt(0);
 }
 {% endhighlight %}
 
@@ -640,25 +651,11 @@ public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
 
 Diagram allows to expand/collapse the sub trees of a layout. `Node.IsExpanded` allows you to expand/collapse its children. The following code example shows how to expand/collapse the children of a node.
 
+{% tabs %}
 {% highlight razor %}
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Sets the default properties for nodes and connectors*@
-
-@*Configures data source for Diagram*@
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => {
-    e.Type(LayoutTypes.OrganizationalChart).VerticalSpacing(30).HorizontalSpacing(30).GetLayoutInfo("getLayoutInfo");
-})) 
+@Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
 <script type="text/javascript">
-  $(window).load(function () {
-      //Defines double click event
-      $("#diagram").ejDiagram({ doubleClick: "onDoubleClick" });
-  });
-
   function onDoubleClick(args) {
       var diagram = $("#diagram").ejDiagram("instance");
       var node = args.element;
@@ -671,6 +668,41 @@ Diagram allows to expand/collapse the sub trees of a layout. `Node.IsExpanded` a
   }
 </script>
 {% endhighlight %}
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    //Defines default layout as organizational chart
+    model.Layout.Type = LayoutTypes.HierarchicalTree;
+    model.Layout.HorizontalSpacing=30;
+    model.Layout.VerticalSpacing=30;
+    model.Layout.GetLayoutInfo = "getLayoutInfo";
+    
+    //Defines double click event
+    model.DoubleClick = "onDoubleClick";
+
+    //Sets the default properties for nodes and connectors
+    model.DefaultSettings.Node = new Node() { 
+        Width = 100, Height = 40, FillColor = "#546e20",
+        Labels = new Collection() { new Label() { Name = "label1", FontColor = "white" } } 
+    };
+    model.DefaultSettings.Connector = new Connector()
+    {
+        Segments = new Collection() { new Segment(Segments.Orthogonal) },
+        TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+    };
+    
+    //Configures data source for Diagram
+    model.DataSourceSettings.Id = "Id";
+    model.DataSourceSettings.Parent = "Team";
+    model.DataSourceSettings.DataSource = GetOrgChartData();
+
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+{% endtabs %}
 
 In above example, while expanding/collapsing a node, it is set as fixed node in order to prevent it from repositioning.
 

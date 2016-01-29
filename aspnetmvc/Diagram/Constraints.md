@@ -25,18 +25,16 @@ For more information about Diagram contraints, refer to [Diagram Constraints](/j
 
 The following example illustrates how to disable page editing.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram")
-	.Width("100%").Height("600px")
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	//Set Diagram in read-only mode
+	model.Constraints = DiagramConstraints.Default &~ DiagramConstraints.PageEditable;
 	
-	@*Set Diagram in read-only mode*@
-	.Constraints(DiagramConstraints.Default &~ DiagramConstraints.PageEditable)
-)
-
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## NodeConstraints
@@ -59,18 +57,18 @@ For more information about node contraints, refer to [Node Constraints](/js/api/
 
 The following code illustrates how to disable rotation.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.Nodes(node => {
-		@*Disables rotation*@
-		node.Add(new BasicShape(){ Constraints = NodeConstraints.Default &~ NodeConstraints.Rotate });
-	})
-)
-
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	//Disables rotation
+	BasicShape task1 = new BasicShape() {
+		Constraints = NodeConstraints.Default &~ NodeConstraints.Rotate 
+	};
+	model.Nodes.Add(task1);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## ConnectorConstraints
@@ -91,18 +89,18 @@ For more information about connector contraints, refer to [Connector Constraints
 
 The following code illustrates how to disable selection.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.Connectors(conn => {
-		@*Disables Selection*@
-		conn.Add(new Connector(){ Constraints = ConnectorConstraints.Default &~ ConnectorConstraints.Select });
-	})
-)
-	
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	//Disables Selection
+	Connector connector1 = new Connector() {
+		Constraints = ConnectorConstraints.Default &~ ConnectorConstraints.Select
+	};
+	model.Connectors.Add(connector1);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## PortConstraints
@@ -117,21 +115,21 @@ For more information about port contraints, refer to [Port Constraints](/js/api/
 
 The following code illustrates how to disable creating connections with a port.
 	
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.Models.Collections
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	.Nodes(node => {
-		node.Add(new BasicShape(){
-			Name = "Node1",
-			Ports = new Collection(){new Port(){ Constraints = PortConstraints.None }}
-		});
-	})
-)
-
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	BasicShape node1 = new BasicShape(){
+		Name = "Node1", 
+		//Defines ports for task2
+		Ports = new Collection() {
+			new Port(){ Constraints = PortConstraints.None },
+		}
+	};
+	model.Nodes.Add(node1);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## SelectorConstraints
@@ -148,16 +146,17 @@ For more information about Selector contraints, refer to [Selector Constraints](
 
 The following code illustrates how to hide rotator.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Hides rotator*@
-	.SelectedItems(new SelectedItems(){ Constraints = SelectorConstraints.All &~ SelectorConstraints.Rotator})
-)
-
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	//Hides rotator
+	model.SelectedItems = new SelectedItems(){
+		Constraints = SelectorConstraints.All &~ SelectorConstraints.Rotator
+	}; 
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## SnapConstraints
@@ -175,16 +174,17 @@ For more information about snap constraints, refer to [Snap Constraints](/js/api
 
 The following code illustrates how to show only horizontal gridlines.
 
-{% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Shows horizontal gridlines*@
-	.SnapSettings(e => e.SnapConstraints(SnapConstraints.ShowHorizontalLines))
-)
-
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	model.SnapSettings = new SnapSettings()
+	{
+		SnapConstraints = SnapConstraints.ShowHorizontalLines
+	};
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## Inherit behaviors
@@ -194,32 +194,24 @@ Some of the behaviors can be defined through both the specific object(node/conne
 The following code example illustrates how to inherit the line bridging behavior from the Diagram model.
 
 {% highlight razor %}
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-	@*Enables/disables line bridging based on the Diagram constraints*@
-	.Connectors(conn =>{
-		conn.Add(new Connector() {
-			Name = "Connector",
-			SourcePoint = new DiagramPoint(100f, 100f),
-			TargetPoint = new DiagramPoint(200f, 200f),
-			
-			@*Sets to inherit bridging from model*@
-			Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
-		});
-	})
-)
-
-@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
-@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
-
-@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")	
-	@*Enables line bridging for all connectors*@
-	.Constraints(DiagramConstraints.Default | DiagramConstraints.Bridging)
-)
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	Connector connector1 = new Connector() {
+		Name = "Connector",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 200f),
+		
+		//Sets to inherit bridging from model
+		Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
+	};
+	model.Connectors.Add(connector1);
+	
+	//Enables line bridging for all connectors
+	model.Constraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
 ## Bitwise Operations
