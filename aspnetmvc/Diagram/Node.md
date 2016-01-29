@@ -11,657 +11,307 @@ documentation: ug
 
 Nodes are graphical object that represent visual data to be placed on the page.
 
-
-
 ![](Node_images/Node_img1.png)
-
-Node
-{:.caption}
 
 ## Create Node
 
-Node is created from Node object and added to the Diagram model by using diagram model’s Nodes property. The node’s name must be unique. The following code illustrates how to create a node and add it to the Diagram.
+A node can be created and added to the Diagram, either programmatically or interactively. Nodes are stacked on the Diagram area from bottom to top in the order they are added.
 
+### Add node through nodes collection
 
+To create a node, You have to create the node object and add that to `Nodes` collection of the Diagram Model. The following code example illustrates how to add a node to the Diagram.
 
 {% highlight C# %}
 
-//Creates a node with default shape (Rectangle)
+            //Initializes Diagram
+            DiagramProperties Model = new DiagramProperties();
+            Model.Height = "600px";
+            Model.Width = "900px";
 
-Node node = new Node();
+            BasicShape Node = new BasicShape();
+            //Name of the node
+            Node.Name = "node1";
 
-node.Name = "Rect1";
+            //Sets the size
+            Node.Width = 100;
+            Node.Height = 100;
 
-node.OffsetX = 400;
+            //Sets the position
+            Node.OffsetX = 250;
+            Node.OffsetY = 250;
 
-node.OffsetY = 60;
+            //Customizes the appearance
+            Node.FillColor = "darkcyan";
+            Node.BorderWidth = 2;
 
-node.Width = 100;
-
-node.Height = 100;
-
-node.FillColor = "darkCyan";
-
-node.BorderWidth = 2;
-
-model.Nodes.Add(node);
-
-
-
+            //Adds node to nodes collection
+            Model.Nodes.Add(Node);
+    
 {% endhighlight %}
-
-
 
 ![](Node_images/Node_img2.png)
 
-Node
-{:.caption}
+### Add node at runtime
 
+Nodes can be added at runtime by using public method, `add`. The following code illustrates how to add a node.
 
-List of preloaded nodes from symbol palette are added to the Diagram by clicking the palette nodes or by dragging a node and dropping on the Diagram. The method to add node/connector to palette and drag and drop on Diagram is explained in palette section
+{% highlight js %}
 
-## Node Shapes
+    // Defines JSON to create a node
+    var node = {
+        name: "node1",
+        width: 100,
+        height: 100,
 
-Diagram has a collection of predefined shapes. The shape to be drawn can be set by using a set of shape specific properties. The most commonly used shapes are:
+        //Sets position
+        offsetX: 250,
+        offsetY: 250,
+        fillColor: "darkcyan",
+        borderWidth: 2
+    };
 
-* Rectangle (A type of basic shape)
-* Ellipse (A type of basic shape)
-* Html
-* Text
-* Native
-* Path (A type of basic shape)
-* Polygon (A type of basic shape)
+    var diagram = $("#diagram").ejDiagram("instance");
 
-## Rectangle
-
-You can create a rectangle with the help of BasicShape and by setting node’s shape as BasicShapes.Rectangle. The following code illustrates how a rectangle node is created.
-
-
-
-{% highlight c# %}
-
-BasicShape node = new BasicShape();
-
-//Creates a node with rectangle shape
-
-node.Shape = BasicShapes.Rectangle;
-
-//Creates a node with rounded rectangle shape
-
-node.Shape = BasicShapes.Rectangle;
-
-node.Shape.CornerRadius = 5; 
-
-//Creates a node with ellipse shape
-
-node.Shape = BasicShapes.Ellipse;
-
-
+    // Adds node to the Diagram
+    diagram.add(node);
 
 {% endhighlight %}
-
-
 
 ![](Node_images/Node_img3.png)
 
-Built-in Shapes
-{:.caption}
+### Add node from palette
 
-## Html
+Nodes can be predefined and added to palette and can be dropped into the Diagram when needed. For more information about adding nodes from symbol palette, refer to [Symbol Palette](/aspnetmvc/Diagram/Symbol-Palette "Symbol Palette").
 
-Html elements are embedded in a Diagram through the CustomNodenode. The following code illustrates how a Html node is created.
+### Create node through data source
 
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about data source, refer to [Data Binding](/aspnetmvc/Diagram/Data-Binding "Data Binding").
 
-{% tabs %}
+### Draw nodes
 
-{% highlight CSHTML %}
+Nodes can be interactively drawn by clicking and dragging the Diagram surface by using **DrawingTool**. For more information about drawing nodes, refer to [Draw Nodes](/aspnetmvc/Diagram/Tools#drawing-tools:shapes "Draw Nodes").
 
+## Update Node at runtime
 
-//dependency scripts
+The client side method `updateNode` is used to update the nodes at run time. The following code example illustrates how to update a node at runtime.
 
-<script src="http://borismoore.github.io/jsrender/jsrender.min.js"></script>
+{% highlight js %}
 
-
-
-<script id="htmlTemplate" type="text/x-jsrender">
-
-        <div>
-
-            <input type="button" value="{{:value}}" />
-
-        </div>
-
- </script>
-
-
+    var diagram = $("#DiagramContent").ejDiagram("instance");
+    diagram.updateNode("nodeName", {
+        fillColor: "#1BA0E2",
+        borderWidth: 5,
+        borderColor: "#000000"
+    })
 {% endhighlight %}
+
+
+## Position
+
+Position of a node is controlled by using its `OffsetX` and `OffsetY` properties. By default, these offset properties represent the distance between origin of the Diagram's page and node's center point. You may expect this Offset values to represent the distance between page origin and node's top left corner instead of center. `Pivot` property helps solve this problem. Default value of node's Pivot point is (0.5, 0.5), that means center of Node.
+
+The following table illustrates how pivot relates offset values with node boundaries.
+
+| Pivot | Offset |
+|---|---|
+| (0.5,0.5) | OffsetX and OffsetY values are considered as the node's center point. |
+| (0,0) | OffsetX and OffsetY values are considered as the top left corner of node |
+| (1,1) | OffsetX and OffsetY values are considered as the bottom right corner of the node. |
+
+
+The following code illustrates how to change the `Pivot` value.
 
 {% highlight C# %}
 
+            //Initializes Diagram
+            DiagramProperties Model = new DiagramProperties();
+            Model.Height = "600px";
+            Model.Width = "900px";
 
+            BasicShape Node = new BasicShape();
+            //Name of the node
+            Node.Name = "node1";
 
-//CustomNode derived from HTMLNode class
+            //Sets the size
+            Node.Width = 100;
+            Node.Height = 50;
 
-CustomNode node = new CustomNode ();
+            //Sets the position
+            Node.OffsetX = 100;
+            Node.OffsetY = 100;
 
-node.Shape.TemplateId = "htmlTemplate";
+            //Sets pivot point 
+            Node.Pivot = new DiagramPoint(0, 0);
 
-node.Value="button";
-
-
-
-
+            //Adds node to nodes collection
+            Model.Nodes.Add(Node);
 
 {% endhighlight %}
-{% endtabs %}  
-
 
 ![](Node_images/Node_img4.png)
 
-Html Shape
-{:.caption}
+## Types
 
-## Text Node
+Diagram allows to add different kind of nodes. To explore the types of nodes, refer to [Types of Nodes](/aspnetmvc/Diagram/Shapes "Types of Nodes").
 
-You can add Text to the Diagram by using Textshapenode. The text shape has Textblock that contains text, font style, and align properties.The following code illustrates how to create a Text node.
+## Appearance
 
+You can customize the appearance of a node by changing its font, fill colors, patterns, line weight and style, or shadow. The following code illustrates how to customize the appearance of the shape.
 
+{% highlight C# %}
 
-{% highlight c# %}
+            //Initializes Diagram
+            DiagramProperties Model = new DiagramProperties();
+            Model.Height = "600px";
+            Model.Width = "900px";
 
-//Creates a node with text content
+            BasicShape Node = new BasicShape();
+            Node.Name = "node1";
+            Node.Width = 100;
+            Node.Height = 100;
+            Node.OffsetX = 100;
+            Node.OffsetY = 100;
 
-TextNode node = new TextNode();
-
-TextBlock block = new TextBlock();
-
-block.TextAlign = TextAlign.Center;
-
-block.Text = "TextNode";
-
-node.TextBlock = block;
+            //Sets styles to a node to customize the appearance
+            Node.FillColor = "darkcyan";
+            Node.BorderWidth = 2;
+            Node.BorderColor = "black";
+            Node.BorderDashArray = "5 5";
+            //Adds node to nodes collection
+            Model.Nodes.Add(Node);
 
 {% endhighlight %}
-
-
 
 ![](Node_images/Node_img5.png)
 
-Text Shape
-{:.caption}
+### Gradient
 
-## Path
+There are two types of gradients.
 
-You can create complex shapes by using Pathshapenode. It is achieved by assigning path string to shape’s PathData. The following code illustrates how a Pathnode is created.
+* **Linear gradient -** Defines a smooth transition between a set of colors (so-called "stops") on a line. 
+* **Radial gradient -** Defines a smooth transition between stops on a circle.
 
-
+The `Gradient` property of Node allows you to define and applies the gradient effect to that node.
 
 {% highlight C# %}
 
-BasicShape node = new BasicShape();
-
-//Creates a node with path shape
-
-node.Shape = BasicShapes.Path;
-
-node.PathData = "M 67.2947 100 L 67.2947 0.00102291 L 59.138 0.00102291 M 100 50 L 66.8899 50 M 33.1101 50 L 0 50 M 33.1101 0 L 67.5585 50.0015 L 33.1101 99.9995 Z";
-
+            BasicShape Node = new BasicShape();
+            Node.Name = "node1";
+            Node.Width = 100;
+            Node.Height = 100;
+            Node.OffsetX = 100;
+            Node.OffsetY = 100;
+            //Initialize the radial gradient
+            RadialGradient Radial = new RadialGradient();
+            Radial.CX = 50;
+            Radial.CY = 50;
+            Radial.FX = 50;
+            Radial.FY = 50;
+            //Initialize the stops
+            Collection Stops = new Collection();
+            Stop Stop = new Stop();
+            Stop.Color = "white";
+            Stop.Offset = 0;
+            Stops.Add(Stop);
+            Stop = new Stop();
+            Stop.Color = "darkCyan";
+            Stop.Offset = 100;
+            Stops.Add(Stop);
+            Radial.Stops = Stops;
+            
+            //Initialize the linear gradient
+            LinearGradient Linear = new LinearGradient();
+            Linear.X1 = 0;
+            Linear.X2 = 50;
+            Linear.Y1 = 0;
+            Linear.Y2 = 50;
+            //Initialize the stops
+            Stops = new Collection();
+            Stop = new Stop();
+            Stop.Color = "white";
+            Stop.Offset = 0;
+            Stops.Add(Stop);
+            Stop = new Stop();
+            Stop.Color = "darkCyan";
+            Stop.Offset = 100;
+            Stops.Add(Stop);
+            Linear.Stops = Stops;
+            
+            //Sets the node gradient as linear gradient
+            Node.Gradient = Linear;
+            Model.Nodes.Add(Node);
+     
+     
+     
 {% endhighlight %}
-
-
 
 ![](Node_images/Node_img6.png)
 
-Path Shape
-{:.caption}
+## Shadow
 
-## Polygon
-
-You can create Polygon by setting the BasicShape node’s type as BasicShapes.Polygon and assigning the desired points to the node’s Point property.
-
-The following code illustrates how to create a Polygonnode. 
+**Diagram** provides support to add **shadow** effect to a node that is disabled by default. It can be enabled with the `Constraints` property of node. The following code illustrates how to drop shadow.
 
 {% highlight C# %}
 
-BasicShape node = new BasicShape();
-
-//Creates a node with polygon shape
-
-node.Shape = BasicShapes.Polygon;
-
-Collection points = new Collection();
-
-points.Add(new DiagramPoint(0,20));
-
-points.Add(new DiagramPoint(25,30));
-
-points.Add(new DiagramPoint(0, 100));
-
-points.Add(new DiagramPoint(100, 100));
-
-points.Add(new DiagramPoint(75,30));
-
-points.Add(new DiagramPoint(100, 20));
-
-points.Add(new DiagramPoint(75, 20));
-
-points.Add(new DiagramPoint(75, 0));
-
-points.Add(new DiagramPoint(25, 0));
-
-points.Add(new DiagramPoint(25, 20));
-
-points.Add(new DiagramPoint(0, 20));
-
-node.Points = points;
-
+            // Defines the node 
+            BasicShape Node = new BasicShape();
+            Node.Name = "node1";
+            Node.Width = 100;
+            Node.Height = 100;
+            Node.OffsetX = 100;
+            Node.OffsetY = 100;
+            //Enables Shadow effect for a node.
+            Node.Constraints = NodeConstraints.Default | NodeConstraints.Shadow;
 
 
 {% endhighlight %}
-
 
 
 ![](Node_images/Node_img7.png)
 
-Polygon Shape
-{:.caption}
+The following code illustrates how to disable shadow effect at runtime.
 
-## Native 
+{% highlight js %}
 
-Diagram supports adding SVG content as shape content. It is achieved by creating node by using CustomNode and assigning the template ID to the TemplateId property. The TemplateId property receives id svg template. The following code illustrates how a Native node is created.
+    var diagram = $("#diagram").ejDiagram("instance");
+    var node = diagram.findNode("node");
+    var nodeConstraints = ej.datavisualization.Diagram.NodeConstraints;
 
-{% tabs %}
- 
-{% highlight CSHTML %}
-
- //dependency scripts
-
-<script src="http://borismoore.github.io/jsrender/jsrender.min.js"></script>
-
-
-
-<script id="svgTemplate" type="text/x-jsrender">
-
-<g id="{{:text}}">
-
-<path d="M 58.813 0 H 3.182 L 30.998 24.141 L 58.813 0 Z 
-
-     M 32.644 34.425 C 32.133 34.87 31.567 35.095 31 35.095 S    
-
-     29.867 34.87 29.353 34.425 L 1 9.826V 60 H 61 V 9.826 L   
-
-     32.644 34.425Z"></path>
-
-     <text x="20" y="45">{{:text}} </text>
-   </g>
-</script> 
-
-
+    //Disables Shadow effect for a node.
+    constraints = node.constraints & ~nodeConstraints.Shadow;
+    diagram.updateNode("node", { constraints: constraints });
 
 {% endhighlight %}
+
+
+### Customizing Shadow
+
+The angle, translation, and opacity of the Shadow can be customized with the `Shadow` property of node. The following code example illustrates how to customize shadow.
 
 {% highlight C# %}
-//CustomNode derived from NativeNode class
 
-CustomNode node = new CustomNode ();
-
-node.Shape = new Shape(Shapes.Native);
-
-node.Shape.TemplateId = "svgTemplate";
-
-node.Text="Mail";
-
-
-
+            // Defines the node 
+            BasicShape Node = new BasicShape();
+            Node.Name = "node1";
+            Node.Width = 100;
+            Node.Height = 100;
+            Node.OffsetX = 100;
+            Node.OffsetY = 100;
+            //Enables Shadow effect for a node.
+            Node.Constraints = NodeConstraints.Default | NodeConstraints.Shadow;
+            //Customize the Node's Shadow effect
+            Node.Shadow.Opacity = .8f;
+            Node.Shadow.Angle = 50;
+            Node.Shadow.Distance = 9;
+            
 {% endhighlight %}
-
-{% endtabs %} 
 
 ![](Node_images/Node_img8.png)
 
-Native Shape
-{:.caption}
+## Interaction
 
-
-N> Shapes of type Node or HTML cannot be exported to an image format like JPEG, PNG and BMP. It is by design that while exporting, diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML and SVG elements is not feasible. So, this limitation.Note that fill color is applied to the Native Node only when its inline style, or fill, for an SVG child element is not specified. In the following example, the node’s fill color is overridden by the specified color for the group.
-
-
-{% highlight html %}
-
-<svg>
-<g id="task">
-<g fill="#fff">
-</g>
-</g>
-</svg>
-
-
-
-{% endhighlight %}
-
-## Image
-
-You can add Image as a node to the Diagram by creating ImageNode and setting the image URL to Source property of shape. The following code illustrates how an Image node is created.
-
-{% highlight c# %}
-
-
-
-
-// Creates a node with image
-
-ImageNode node = new ImageNode();
-
-node.Source = "sample/Syncfusion.PNG";
-
-
-
-{% endhighlight %}
-
-
-
-![](Node_images/Node_img10.png)
-
-Image Shape
-{:.caption}
-
-## Shadow
-
-Dropshadoweffect for a node can be enabled or disabled by using the NodeConstraints.Shadow. The following image represents the drop shadow effect for a Node.
-
-![](Node_images/Node_img11.png)
-
-Shadow
-{:.caption}
-
-The following code example illustrates how to enable or disable the shadow.
-
-{% highlight C# %}
-
-
-
-Node node = new Node ();
-
-//Enables Shadow for the node.
-
-node.Constraints = NodeConstraints.Default | NodeConstraints.Shadow;
-
-//Disables shadow for the node.
-
-node.Constraints = node.Constraints &~ NodeConstraints.Shadow;
-
-{% endhighlight %}
-
-## Customizing Shadow
-
-Position and opacity of the shadow can be customized by using opacity, angle, and distance of the shadow. The following code example illustrates how to customize the shadow.
-
-{% highlight C# %}
-
-
-Node node = new Node ();
-
-//Shadow Customization.
-
-node.Shadow.Opacity = 0.8F;
-
-node.Shadow.Distance = 9;
-
-node.Shadow.Angle = 50;
-
-
-
-{% endhighlight %}
-
-
-
-![](Node_images/Node_img12.png)
-
-Shadow Customization
-{:.caption}
-
-## Appearance
-
-You can customize the appearance of the shapes by using node customization properties.
-
-_Appearance_
-
-<table>
-<tr>
-<th>
-Properties</th><th>
-Data Type</th><th>
-Description</th></tr>
-<tr>
-<td>
-Visible</td><td>
-Boolean</td><td>
-Gets or sets the visibility of the node</td></tr>
-<tr>
-<td>
-BorderColor</td><td>
-String</td><td>
-Gets or sets the border color of the node</td></tr>
-<tr>
-<td>
-FillColor</td><td>
-String</td><td>
-Gets or sets the fill color of the node</td></tr>
-<tr>
-<td>
-Opacity</td><td>
-Double</td><td>
-Gets or sets the opacity of the node</td></tr>
-<tr>
-<td>
-Gradient</td><td>
-Object</td><td>
-Gets or sets the gradient fill of the node</td></tr>
-<tr>
-<td>
-BorderDashArray</td><td>
-String</td><td>
-Gets or sets the pattern of dashes and gaps used to stroke node border.</td></tr>
-<tr>
-<td>
-BorderWidth</td><td>
-Int</td><td>
-Gets or sets the width of node border.</td></tr>
-</table>
-
-
-{% highlight C# %}
-
-//Sets various appearance properties to node
-
-Node node = new Node();
-
-node.BorderWidth = 2;
-
-node.BorderColor = "black";
-
-node.Visible = true;
-
-node.Opacity = 1;
-
-node.BorderDashArray="5 5";
-
-LinearGradient gradient = new LinearGradient();
-
-gradient.X1 = 0;
-
-gradient.X2 = 50;
-
-gradient.Y1 = 0;
-
-gradient.Y2 = 50;
-
-Stop stop = new Stop();
-
-stop.Color = "white";
-
-stop.Offset = 0;
-
-gradient.Stops.Push(stop);
-
-stop = new Stop();
-
-stop.Color = "darkCyan";
-
-stop.Offset = 100;
-
-gradient.Stops.Push(stop);
-
-gradient.Stops.Push(stop);
-
-node.LinearGradient = gradient;
-
-{% endhighlight %}
-
-
-
-![](Node_images/Node_img13.png)
-
-Customized Node
-{:.caption}
+Diagram provides support to drag, resize, or rotate the node interactively. For more information about editing a node at runtime, refer to [Edit Nodes](/aspnetmvc/Diagram/Interaction "Interaction").
 
 ## Constraints
 
-### NodeConstraints
-
-You can enable or disable certain behaviors of Nodes by using Node’s Constraints property.
-
-_Constraints_
-
-<table>
-<tr>
-<th>
-Constraints</th><th>
-Description</th></tr>
-<tr>
-<td>
-Select</td><td>
-Enables or disables selection.</td></tr>
-<tr>
-<td>
-Delete</td><td>
-Enables or disables deletion.</td></tr>
-<tr>
-<td>
-Resize</td><td>
-Enables or disables resizing.</td></tr>
-<tr>
-<td>
-Drag</td><td>
-Enables or disables dragging.</td></tr>
-<tr>
-<td>
-Rotate</td><td>
-Enables or disables rotation.</td></tr>
-<tr>
-<td>
-Connect</td><td>
-Enables or disables connection.</td></tr>
-<tr>
-<td>
-ResizeNorthEast</td><td>
-Enables or disables resizing nodes in the north east direction.</td></tr>
-<tr>
-<td>
-ResizeEast</td><td>
-Enables or disables resizing nodes in the east.</td></tr>
-<tr>
-<td>
-ResizeSouthEast</td><td>
-Enables or disables resizing nodes in the south east.</td></tr>
-<tr>
-<td>
-ResizeSouth </td><td>
-Enables or disables resizing nodes in the south.</td></tr>
-<tr>
-<td>
-ResizeSouthWest</td><td>
-Enables or disables resizing nodes in the south west.</td></tr>
-<tr>
-<td>
-ResizeWest</td><td>
-Enables or disables resizing nodes in the west.</td></tr>
-<tr>
-<td>
-ResizeNorthWest</td><td>
-Enables or disables resizing nodes in the north west direction.</td></tr>
-<tr>
-<td>
-ResizeNorth </td><td>
-Enables or disables resizing nodes in the north.</td></tr>
-<tr>
-<td>
-Shadow</td><td>
-Enables or disables Shadow.</td></tr>
-<tr>
-<td>
-DragLabel</td><td>
-Enables or disables label dragging.</td></tr>
-<tr>
-<td>
-AllowPan</td><td>
-Enables or disables panning while dragging nodes.</td></tr>
-<tr>
-<td>
-AspectRatio</td><td>
-Enables or disables proportional resizing of nodes.</td></tr>
-<tr>
-<td>
-Default</td><td>
-Enables all the constraints.</td></tr>
-<tr>
-<td>
-None</td><td>
-Disables all the constraints.</td></tr>
-</table>
-
-The Default value for the node constraints property is NodeConstraints.Default.
-
-The following code illustrates how to enable rotate, select constraints, and disable other constraints.
-
-
-
-{% highlight c# %}
-
-
-//Applies selection and rotation constraints only.
-
-node.Constraints = NodeConstraints.Select| NodeConstraints.Rotate;
-
-
-{% endhighlight %}
-
-
-
-![](Node_images/Node_img14.jpeg)
-
-Rotator Constraints–Enabled
-{:.caption}
-
-The following code illustrates how to disable rotate constraints. Disabling rotate constraint does not allow you to rotate the node.
-
-
-
-{% highlight c# %}
-
-
- //Disables rotate constraint.
-
-node.Constraints = node.Constraints &~ NodeConstraints.Rotate;
-
-{% endhighlight %}
-
-![](Node_images/Node_img15.jpeg)
-
-Rotate Constraints-disabled
-{:.caption}
-
-
-
-N> Node constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see_ [Bitwise Operations](/aspnetmvc/Diagram/How-To/Bitwise-Operations).
-
+The `constraints` property of node allows you to enable/disable certain features. For more information about node constraints, refer to [Node Constraints](/aspnetmvc/Diagram/Constraints#nodeconstraints "Node Constraints").
