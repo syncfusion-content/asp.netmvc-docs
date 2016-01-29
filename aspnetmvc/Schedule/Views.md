@@ -1,198 +1,309 @@
 ---
-layout: post
-title: Views | Schedule | ASP.NET MVC | Syncfusion
-description: views
+title: Schedule - Views
+description: View options available in Scheduler
 platform: ejmvc
-control: Schedule
+control: schedule
 documentation: ug
+keywords: day, week, workweek, month, timeline, horizontal, custom  
 ---
-
 # Views
 
-## View Customization
+The number of days and its associated appointments are usually grouped together in Scheduler to organize different views. The available view options in Scheduler are as follows,
 
-* The views option in the Schedule control is a collection that allows you to add/remove the view items to it. The items that are added to it is displayed in the date-header section of the Schedule control.
-* It accepts the following string array collections:
-1. Day
-2. Week
-3. WorkWeek
-4. Month
-5. CustomView
+* Day
+* Week
+* Workweek
+* Month
+* Custom View
+* Agenda
+* Timeline View
 
-The following code example describes how to customize the display of view options of the Schedule control.
+Usually these view options are displayed as a toolbar in the date-header section of the Schedule control. The items within the views toolbar can be added/removed based on the value passed to the `Views` property. 
 
-{% tabs %}
+By default, the Schedule control’s active view is **Week** view. Also, it is possible to change the active view of the Scheduler by setting `CurrentView` option with the required view name as depicted below.
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-@{List<string> view = new List<string>() { "Week", "WorkWeek" };}
-
-@(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.Views(view)
-
-.CurrentDate(new DateTime(2014, 5, 1))
-
-.AppointmentSettings(fields => fields.Datasource(ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule"))
-
-)
-{% endhighlight %}
-{% highlight C# %}
-
-// follow the code as same as declared in Read Only part
-
-
-{% endhighlight %}
-{% endtabs %}  
-
-* The following screenshot displays the output of the above code with the view customizations by displaying only two views namely Week and Workweek in the toolbar.
-
-![](Views_images/Views_img1.png)
-
-schedule with view customization.
-{:.caption}
-
-## Current View
-
-* By default, the Schedule control is displayed with the Week view. It is possible to change the current view of the Schedule control by setting the currentView option with the required view name. 
-* The valid enum values that are accepted by currentView property are as follows,
-1. ej.Schedule.CurrentView.Day
-2. ej.Schedule.CurrentView.Week
-3. ej.Schedule.CurrentView.Workweek
-4. ej.Schedule.CurrentView.Month
-5. ej.Schedule.CurrentView.CustomView
-* By setting CustomView option to the currentView property, the dates specified as the start and end in the renderDates object are rendered in the Schedule
-
-The following code example explains how to change the current view of the Schedule control.
-
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.CurrentView(Syncfusion.JavaScript.CurrentView.Day)
-
-.CurrentDate(new DateTime(2014, 5, 1))
-
-.AppointmentSettings(fields => fields.Datasource(ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule"))
-
-)
-
-{% endhighlight %}
-
-* Execute the above code to render the following screenshot that displays day view as the currentView of the Schedule control,
-
-![](Views_images/Views_img2.png)
-
-schedule with current view.
-{:.caption}
-
-## Custom Date Rendering
-
-* It is possible to render only the user-specified date ranges in the Schedule control by using the renderDates property. 
-* To render the Schedule control with specific date ranges, it is necessary to specify the start and end dates as follows.
-
-
-
-{% highlight CSHTML %}
-
-@* Add the customView option to the default available view items as follows*@
-
+@using Syncfusion.JavaScript.Models;
 @{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
 
-List<string> views = new List<string>()
+@{List<string> view = new List<string>() { "Day", "Week", "WorkWeek", "Month" };}
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .Views(view)
+        .CurrentView(CurrentView.Week)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
-{ "Day", "Week", "WorkWeek", "Month", "CustomView" };
+{% endhighlight %}
 
+N> **CurrentView** property accepts Enum value of `CurrentView.<ViewName>`.
+
+## Day 
+
+It represents a single day Scheduler view (single date display) with all its related appointments.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 }
 
 @(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.Views(views) // Renders the above listed view items.
-
-//Sets the currentView as customView.
-
-.CurrentView(CurrentView.CustomView)
-
-//Renders the user-specified date ranges.
-
-.RenderDates(dt => dt.Start(“7/11/2014”).End(“10/12/2014”))
-
-.AppointmentSettings(fields =>
-
-fields.Datasource(ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule")))
-
-
-// follow the code as same as declared in Read Only part
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentView(CurrentView.Day)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
 {% endhighlight %}
 
+## Week
 
-The output of the above code example is as follows.
+It’s a view displaying a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the `FirstDayOfWeek` API which accepts either the `integer` (Sunday=0, Monday=1, Tuesday=2, etc) or `string` (“Sunday”, “Monday”, etc) or `DayOfWeek` enum type value. The default value of this **FirstDayOfWeek** depends on the current culture (language) used in the Scheduler.
 
-![](Views_images/Views_img3.png)
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
 
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentView(CurrentView.Week)
+        .FirstDayOfWeek(DayOfWeek.Monday)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
+{% endhighlight %}
 
+## Work Week 
 
-Important: When the date ranges specified in the renderDates property yield more than the difference of 7 days, then the schedule is rendered in the month-like view with the user provided dates. When the date difference yields less than 7, then the schedule gets rendered in the normal view with the specified dates.
+Workweek view displays the working days of the week (count of 5 days) and its associated appointments. It is also possible to customize the days to be displayed in the work week view using `WorkWeek` API which accepts the string array such as ["Monday", "Tuesday", "Wednesday", "Thursday" and "Friday"]. By default, it renders from Monday to Friday (5 days).
 
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
 
+@{List<string> workWeek = new List<string>() { "Monday", "Tuesday" ,"Wednesday", "Friday", "Saturday" };}
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentView(CurrentView.Workweek)
+        .WorkWeek(workWeek)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+## Month
+
+Month view displays the entire days of a particular month and all its related appointments. An alternative way to navigate to a particular date in a day view directly from Month view, clicking on the appropriate month cell date header will do so. If the week date range column is clicked, it will navigate to the corresponding week view.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentView(CurrentView.Month)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+N> An appointment directly created in Month view will be considered as an all-day appointment.
+
+## Customizing number of days (Custom View)
+
+The Scheduler can be displayed with the user-specified date ranges, such as 4 days or any specific date ranges instead of default view options, by making use of the `RenderDates` property. This property includes two sub properties namely **Start** and **End**, which accepts the date object or date value in string format to specify the date range. 
+
+To display the custom view option in the toolbar-like view options in the scheduler header area, add the `CustomView` value to the views property array collection as shown below. 
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@{List<string> view = new List<string>() { "Day", "Week", "WorkWeek", "Month", "CustomView" };}
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2014, 5, 2))
+        .Views(view)
+        .CurrentView(CurrentView.CustomView)
+        .RenderDates(dt => dt.Start("5/01/2014").End("5/06/2014"))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+## Agenda
+
+This View option lists out the appointments in a grid-like view for the next 7 days by default from the current date. The count of the number of appointments to be listed in this view can be customized using the `AgendaViewSettings.DaysInAgenda`.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2014, 6, 2))
+        .CurrentView(CurrentView.Agenda)
+        .AgendaViewSettings(agendaViewSettings => agendaViewSettings.DaysInAgenda(5))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+N> In Agenda view, the templates can be applied for the date and time columns. Also, the template passed through the `AppointmentTemplateId` will gets applied to the event column in Agenda view.
+
+## Restriction on View Navigation
+
+It is possible to restrict the users to display only the specific list of views in the Schedule header section and also not to navigate to other views that are not listed. 
+
+**For example**, if the views property is set only with `Month` view – then the Schedule header section displays only the Month option in the view toolbar and also other additional available actions like navigating to day/week view on clicking the month header dates and week date-range is stopped.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@{List<string> views = new List<string>() { "Month" };}
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .Views(views)
+        .CurrentDate(new DateTime(2014, 6, 2))
+        .CurrentView(CurrentView.Agenda)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+N> Eventhough Week view is the active view in Scheduler by default, if it is not listed in the views collection – then the first listed option in the views collection will be taken as current view of the Scheduler.
+
+## Timeline View
+
+Timeline view displays the day, time and its associated events horizontally arranged from left to right. By default, Scheduler renders in vertical mode and it can be changed to the timeline mode using `Orientation` property which accepts both the `string` and `Orientation` enum value.
+
+All the applicable features in Vertical mode works similar with Timeline mode (Horizontal) and only the visualization of the layout changes based on the orientation.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2014, 6, 2))
+        .Orientation(Orientation.Horizontal)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}

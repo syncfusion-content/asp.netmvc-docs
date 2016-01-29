@@ -1,287 +1,296 @@
 ---
-layout: post
-title: Context Menu | Schedule | ASP.NET MVC | Syncfusion
-description: context menu
+title: Schedule - Context Menu	
+description: Default and Custom context menu options for appointments and cells in Scheduler
 platform: ejmvc
-control: Schedule
+control: schedule
 documentation: ug
+keywords: context-menu
 ---
-
 # Context Menu
 
-* Schedule control is added with the context menu options that opens when you right-click over the cells or appointments. In addition to the default menu items available, it allows you to add the custom menu items and also the sub menu-items as per your requirement.
+Scheduler provides default context menu options for both appointments as well as work cells. It also allows to define additional custom context menu options.
 
-### contextMenuSettings
+The options that are available under `ContextMenuSettings` are as follows,
 
-* It is a collection that holds the menu items data.
+* **Enable** - Enables/disables the context menu option in Scheduler.
+* **MenuItems** - Contains the sub-menu collections related to both the appointment and cells.
 
-### enable
+## Default Menu Options
 
-* It specifies whether to enable/disable the Context menu options.
+The menu items contains two separate collection based on the appointment and cells. 
 
-menuItems
+### Appointment
 
-* It holds the appointment and cell related menu and custom-menu options.
+The appointment collection includes the following options. 
 
-### appointment
+<table>
+<tr>
+<td>
+Open Appointment (default)</td></tr>
+<tr>
+<td>
+Delete Appointment (default)</td></tr>
+<tr>
+<td>
+Print Appointment</td></tr>
+<tr>
+<td>
+Categorize</td></tr>
+</table>
 
-* This collection accepts the id, text and parent Id of the menu items that are to be displayed when you right-click the appointments. It can also include custom-menu items.
+### Cells
 
-### cells
+The default options available within the cell collection includes - 
 
-* This collection accepts the id, text and parent Id of the menu items that are to be displayed when you right-click the Schedule cells. It  also include custom-menu items.
+<table>
+<tr>
+<td>
+New Appointment</td></tr>
+<tr>
+<td>
+New Recurring Appointment</td></tr>
+<tr>
+<td>
+Today</td></tr>
+<tr>
+<td>
+Go to date</td></tr>
+<tr>
+<td>
+Settings (View, TimeMode, Work Hours) </td></tr>
+</table>
 
-### Appointment Menu Items
+The following code snippet shows how to enable the context menu settings in Scheduler and to make use of it with default available options. 
 
-* By default, the appointment menu options are provided with 2 items namely Open Appointment and Delete Appointment. 
-* If you want to customize and use your own custom menu items, then you can replace the appointment menu items with their desired collections as explained in the following code.
+{% highlight razor %}
 
-{% tabs %}
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
+    <!-- List of Appointment menu options -->
+    List<Appointment> AppMenu = new List<Appointment>();
+    AppMenu.Add(new Appointment { Id = "open", Text = "Open Appointment" });
+    AppMenu.Add(new Appointment { Id = "delete", Text = "Delete Appointment" });
 
-{% highlight CSHTML %}
-@(Html.EJ().Schedule("Schedule1").Width("100%").Height("525px").CurrentDate(new DateTime(2014,4,1  ))
-// Custom context menu items.
-ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>
-item.Cells(ViewBag.cell).Appointment(ViewBag.app))).AppointmentSettings(fields => 
-fields.Datasource(ViewBag.datasource)
-	.Id("Id")
-	.Subject("Subject")
-	.StartTime("StartTime")
-	.EndTime("EndTime")
-	.AllDay("AllDay")
-	.Recurrence("Recurrence")
-	.RecurrenceRule("RecurrenceRule"))
- )
-
-{% endhighlight %}
-
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
-{
- public partial class ScheduleController :Controller
- {
-	 //// GET: /Default/
-	 publixzc ActionResult ContextMenu()
-	 {
-		 List<Appointment> appointment = new List<Appointment>();appointment.Add(new Appointment() { Id = "open", Text = "Open Appointment" });
-		 appointment.Add(new Appointment() { Id = "delete", Text = "Delete Appointment" });
-		 appointment.Add(new Appointment() { Id = "custommenu3", Text = "Custom Menu3" });
-		 appointment.Add(new Appointment() { Id = "custommenu4", Text = "Custom Menu4" });
-		 List<person> persons = new List<person>();
-		 persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU" });
-		 persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 1, 6, 0, 20), EndTime = new DateTime(2014, 4, 1, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		 persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		 persons.Add(new person() { Id = 103, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 5, 6, 0, 20), EndTime = new DateTime(2014, 4, 5, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU" });
-		 ViewBag.dataSource = persons;ViewBag.app = appointment;return View();
-	 }
-	 Public class person
-	 {
-		 Public int Id;
-		 Public string Subject;
-		 Public DateTime StartTime;
-		 Public DateTime EndTime;
-		 Public bool AllDay;
-		 Public bool Recurrence;
-		 Public string RecurrenceRule;
-	 }
- }
+    <!-- List of Cell menu options -->
+    List<Cells> CellMenu = new List<Cells>();
+    CellMenu.Add(new Cells { Id = "new", Text = "New Appointment" });
+    CellMenu.Add(new Cells { Id = "recurrence", Text = "New Recurring Appointment" });
+    CellMenu.Add(new Cells { Id = "today", Text = "Today" });
+    CellMenu.Add(new Cells { Id = "gotodate", Text = "Go to date" });
+    CellMenu.Add(new Cells { Id = "settings", Text = "Settings" });
+    CellMenu.Add(new Cells { Id = "view", Text = "View", ParentId = "settings" });
+    CellMenu.Add(new Cells { Id = "timemode", Text = "TimeMode", ParentId = "settings" });
+    CellMenu.Add(new Cells { Id = "view_Day", Text = "Day", ParentId = "view" });
+    CellMenu.Add(new Cells { Id = "view_Week", Text = "Week", ParentId = "view" });
+    CellMenu.Add(new Cells { Id = "view_Workweek", Text = "WorkWeek", ParentId = "view" });
+    CellMenu.Add(new Cells { Id = "view_Month", Text = "Month", ParentId = "view" });
+    CellMenu.Add(new Cells { Id = "timemode_Hour12", Text = "12 Hour", ParentId = "timemode" });
+    CellMenu.Add(new Cells { Id = "timemode_Hour24", Text = "24 Hour", ParentId = "timemode" });
+    CellMenu.Add(new Cells { Id = "workhours", Text = "Work Hours", ParentId = "settings" });
 }
-
-{% endhighlight %}
-{% endtabs %} 
-Execute the above code to render the following output.
-
-
-
-![](Context-Menu_images/Context-Menu_img1.png)
-
-schedule with appointment menu items
-{:.caption}
-
-### Categorize 
-
-* A new default menu item is included in the appointment menu items to support the categorize option through context menu. 
-* The categorize data collection that are passed through the categorizesettings is utilised in rendering the categorize options in the context menu. 
-
-You can refer the following code example to render the categorize options in the context menu.
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-
 
 @(Html.EJ().Schedule("Schedule1")
-
-.CategorizeSettings(Fields=>Fields.Datasource((IEnumerable)ViewBag.categorize)
-	.Enable(true).AllowMultiple(true).Id("id").Text("text").Color("color").FontColor("fontColor"))
-
-.ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(            ViewBag.app)))
-
-.AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule")
-
-// bind the resource id fields collection of each level
-
-.Categorize("Categorize"))
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
 )
+
 {% endhighlight %}
 
-{% highlight C# %}
+N> In agenda view, only the appointment menu items shows up in the context menu options. For default menu items, the id must be defined with the same value as mentioned in the above code example – as we processed the menus based on this id within our source.
 
-public partial class ScheduleController : Controller
 
-{
+## Custom Menu Options
 
-	public ActionResult CategorizeOption()
 
-	{
+Apart from the default available options, it is also possible to add custom menu options to the context-menu in both the appointment and cell collection.
 
-		List<Appointment> appointment = new List<Appointment>();
+The following code example depicts how **to add the custom menu items** to the appointment and cells collection of the context menu settings.
 
-		appointment.Add(new Appointment() { Id = "open", Text = "Open Appointment" });
+{% highlight razor %}
 
-		appointment.Add(new Appointment() { Id = "delete", Text = "Delete Appointment" });
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-		appointment.Add(new Appointment() { Id = "categorize", Text = "Categorize" });
+    <!-- List of Appointment menu options -->
+    List<Appointment> AppMenu = new List<Appointment>();
+    AppMenu.Add(new Appointment { Id = "open", Text = "Open Appointment" });
+    AppMenu.Add(new Appointment { Id = "delete", Text = "Delete Appointment" });
+    AppMenu.Add(new Appointment { Id = "option1", Text = "User Option 1" });
 
-		// categorize data collection
+    <!-- List of Cell menu options -->
+    List<Cells> CellMenu = new List<Cells>();
+    CellMenu.Add(new Cells { Id = "customoption", Text = "User Option" });
+}
 
-		List<Categorize> CategorizeValue = new List<Categorize>();
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
-		CategorizeValue.Add(new Categorize { text = "Blue Category", id = 1, color = "#7499e1", fontColor = "Red" });
+{% endhighlight %}
 
-		CategorizeValue.Add(new Categorize { text = "Green Category", id = 2, color = "#7cce6e", fontColor = "White" });
+N> The **Id** given for the custom menu items **must be unique** in both the appointment and cells collection. 
 
-		CategorizeValue.Add(new Categorize { text = "Orange Category", id = 3, color = "#ffaa00", fontColor = "Green" });
+## Handling Menu Actions
 
-		var DataSource = new ScheduleDataDataContext().DefaultSchedules.ToList();
+To define specific actions for a click made on the custom menu items, the client-side event `MenuItemClick` can be used as depicted in the below code example.
 
-		ViewBag.datasource = DataSource;
+{% highlight razor %}
 
-		ViewBag.app = appointment;
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-		ViewBag.categorize = CategorizeValue;
+    <!-- List of Appointment menu options -->
+    List<Appointment> AppMenu = new List<Appointment>();
+    AppMenu.Add(new Appointment { Id = "open", Text = "Open Appointment" });
+    AppMenu.Add(new Appointment { Id = "delete", Text = "Delete Appointment" });
+    AppMenu.Add(new Appointment { Id = "option1", Text = "User Option 1" });
+}
 
-		return View();
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ScheduleClientSideEvents(evt => evt.MenuItemClick("onMenuItemClick"))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
-	}
+{% endhighlight %}
 
-	public class Categorize
+{% highlight js %}
 
-	{
-
-		public string text { set; get; }
-
-		public int id { set; get; }
-
-		public string fontColor { set; get; }
-
-		public string color { set; get; }
-
-	}
-
+function onMenuItemClick(args) {
+    //args.events contains information of the clicked menu item.
+    if (args.events.ID == "option1")
+        alert("Custom menu clicked");
 }
 
 {% endhighlight %}
-{% endtabs %}  
-* Execute the above code to render the following output with categorized appointments. Also when you right click “Appointment”, the context menu with categorize option is displayed as follows.
 
-![](Context-Menu_images/Context-Menu_img2.png)
+Also, it is possible to predict the target on which the right click is made either on the cells or appointments with the use of the event `BeforeContextMenuOpen`. The below code example shows how to block the display of context menu when right clicked on the cells by setting **args.cancel** as **true**.
 
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-### Cells 
-
-* By default, the cells menu options are provided with 5 items namely New Appointment, New Recurring Appointment, Today, Go to Date and Settings with sub-options for views, time-mode and highlighting business hours. 
-* You can customize and use your own custom menu itemsby replacing the cell menu items with the desired collection as explained in the following code example.
-
-
-{% tabs %}
-
-
-{% highlight CSHTML %}
-@section SampleHeading{<span class="sampleName"> 
-Schedule / Context Menu</span>}@section ControlsSection{
-<div>
-@{}
-@(Html.EJ()
-.Schedule("Schedule1")
-.Width("100%")
-.Height("525px")
-.CurrentDate(new DateTime(2014,4,1  ))
-// Custom context menu items.
-ContextMenuSettings(menu=>menu.Enable(true).MenuItems(item=>item.Cells(ViewBag.cell))
-.AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
-	.Id("Id").Subject("Subject")
-	.StartTime("StartTime")
-	.EndTime("EndTime")
-	.AllDay("AllDay")
-	.Recurrence("Recurrence")
-	.RecurrenceRule("RecurrenceRule"))
-	)
+    <!-- List of Appointment menu options -->
+    List<Appointment> AppMenu = new List<Appointment>();
+    AppMenu.Add(new Appointment { Id = "open", Text = "Open Appointment" });
+    AppMenu.Add(new Appointment { Id = "delete", Text = "Delete Appointment" });
+    AppMenu.Add(new Appointment { Id = "option1", Text = "User Option 1" });
 }
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ScheduleClientSideEvents(evt => evt.BeforeContextMenuOpen("beforeContextMenuOpen"))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
 {% endhighlight %}
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
-{
-  public partial class ScheduleController : Controller
-  {
-	 //// GET: /Default/
-	 public ActionResult ContextMenu()
-	 {
-		List<Cells> cells = new List<Cells>();
-		cells.Add(new Cells(){ Id = "new", Text = "New Appointment" });
-		cells.Add(new Cells() { Id = "recurrence", Text = "New Recurring Appointment" });
-		cells.Add(new Cells() { Id = "today", Text = "Today" });
-		cells.Add(new Cells() { Id = "gotodate", Text = "Go to date" });
-		cells.Add(new Cells() { Id = "settings", Text = "Settings" });
-		cells.Add(new Cells() { Id = "view", Text = "View", ParentId = "settings" });
-		cells.Add(new Cells() { Id = "timemode", Text = "TimeMode", ParentId = "settings" });
-		cells.Add(new Cells() { Id = "view_Day", Text = "Day", ParentId = "view" });
-		cells.Add(new Cells() { Id = "view_Week", Text = "Week", ParentId = "view" });
-		cells.Add(new Cells() { Id = "view_Workweek", Text = "Workweek", ParentId = "view" });
-		cells.Add(new Cells() { Id = "view_Month", Text = "Month", ParentId = "view" });
-		cells.Add(new Cells() { Id = "timemode_Hour12", Text = "12 Hours", ParentId = "timemode" });
-		cells.Add(new Cells() { Id = "timemode_Hour24", Text = "24 Hours", ParentId = "timemode" });
-		cells.Add(new Cells() { Id = "businesshours", Text = "Business Hours", ParentId = "settings" });
-		cells.Add(new Cells() { Id = "custommenu1", Text = "Custom Menu1" });
-		cells.Add(new Cells() { Id = "custommenu2", Text = "Custom Menu2" });
-		List<person> persons = new List<person>();
-		persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU" });
-		persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 1, 6, 0, 20), EndTime = new DateTime(2014, 4, 1, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		persons.Add(new person() { Id = 103, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 5, 6, 0, 20), EndTime = new DateTime(2014, 4, 5, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU" });
-		ViewBag.dataSource = persons;ViewBag.cell = cells;
-		return View();
-	  }
-  }
+
+{% highlight js %}
+
+function beforeContextMenuOpen(args) {
+    //args.target – target information to depict whether it is cell/appointment
+    if ($(args.events.target).hasClass("e-workcells,e-monthcells"))
+        args.cancel = true;
 }
 
 {% endhighlight %}
-{% endtabs %} 
-Execute the above code to render the following output when you right-click on the cells.
 
+## Adding Categorize Option
 
+To include the default categorize options within the context menu, it is necessary to enable the `CategorizeSettings` property as shown in the below code example.
 
-![](Context-Menu_images/Context-Menu_img3.png)
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-schedule with cells.
-{:.caption}
+    <!-- List of Appointment menu options -->
+    List<Appointment> AppMenu = new List<Appointment>();
+    AppMenu.Add(new Appointment { Id = "open", Text = "Open Appointment" });
+    AppMenu.Add(new Appointment { Id = "delete", Text = "Delete Appointment" });
+    AppMenu.Add(new Appointment { Id = "categorize", Text = "Categorize" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .CategorizeSettings(cat => cat.Enable(true))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+N> The **Categorize** option must be added to the **Appointment** collections simply with an id "categorize", which displays on right clicking over the appointments.
+

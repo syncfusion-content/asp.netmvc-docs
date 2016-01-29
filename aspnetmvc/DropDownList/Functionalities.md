@@ -562,3 +562,64 @@ N> Items are filtered based on “SearchFilterType.Contains” filter type by de
 ![](Functionalities_images/Functionalities_img9.jpeg)
 
 I> When VirtualScrolling enabled with searching, then filter will be applied only on the DropDownList items available at the moment.
+
+
+##Validations
+
+You can validate the DropDownList value on form submission using jQuery Validations, by applying “ValidationRules” and “ValidationMessage” to the DropDownList. 
+
+N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js) script file should be referred for validation, for more details, refer [here](http://jqueryvalidation.org/documentation).
+
+### Validation Rules
+
+The validation rules help you to verify the selected text by adding validation attributes to the input element. This can be set by using ValidationRules property.
+
+### Validation Messages 
+
+You can set your own custom error message by using ValidationMessage property. To display the error message, specify the corresponding annotation attribute followed by the message to display.
+
+N> jQuery predefined error messages to that annotation attribute will be shown when this property is not defined. The below given example explain this behavior of ‘required’ attribute,
+
+When the DropDownList control is rendered, it creates an input hidden element which is used to store the selected items value. Hence, the validation is performed based on the value stored in this hidden element.
+
+Required field and min value validation is demonstrated in the below given example.
+
+{% tabs %}
+
+{% highlight html %}
+
+     @model MVCApplication.Controllers.HomeController
+    <form id="form1">   
+
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).DropDownListFields(Df => Df.Text("Text").Value("Value")).ValidationMessage(vm => vm.AddMessage("required", "* Required").AddMessage("min","Select > 30")).ValidationRules(vr => vr.AddRule("required", true).AddRule("min",30))
+
+        <br /><input type="submit" value="Submit" />
+
+    </form>
+                
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+            List<Data> DropdownData = new List<Data>();
+            DropdownData.Add(new Data { Value = "10", Text = "10" });
+            DropdownData.Add(new Data { Value = "20", Text = "20" });
+            DropdownData.Add(new Data { Value = "30", Text = "30" });
+            DropdownData.Add(new Data { Value = "40", Text = "40" });
+            DropdownData.Add(new Data { Value = "50", Text = "50" });
+            ViewData["DropDownSource"] = DropdownData;
+            return View();
+        }
+        public class Data
+        {
+            public string Value { get; set; }
+            public string Text { get; set; }
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
+
+![](Functionalities_images/Functionalities_img10.jpeg)
