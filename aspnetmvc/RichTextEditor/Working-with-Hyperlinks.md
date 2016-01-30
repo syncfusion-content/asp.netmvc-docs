@@ -9,7 +9,7 @@ documentation: ug
 ---
 # Working with Hyperlinks
 
-A hyperlink can be insert into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
+A hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 
 ## Add and Edit a hyperlink
 
@@ -22,7 +22,7 @@ To add a hyperlink to the editor, follow these instructions:
 
 N> Leave this textbox blank if you want to display the full link as hyperlink in the editor.
 
-5. To display additional helpful information when you place the pointer on the hyperlink, type the required text in the “Tooltip” field.
+5. To display an additional helpful information when you place the pointer on the hyperlink, type the required text in the “Tooltip” field.
 6. Click OK button to insert a hyperlink.
 
 {% highlight html %}

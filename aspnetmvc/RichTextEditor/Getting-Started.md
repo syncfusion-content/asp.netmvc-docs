@@ -9,7 +9,7 @@ documentation: ug
 ---
 # Getting Started
 
-This section helps to understand the getting started of RTE control with the step-by-step instruction in ASP.NET MVC application.
+This section explains the step-by-step instructions to create RichTextEdtior in an ASP.NET MVC application.
 
 ## Create your first RichTextEditor in MVC
 
@@ -40,6 +40,8 @@ You can configure the toolbar with the tools as your application requires.
 
 {% endhighlight %}
 
+![](Getting-Started-images/Toolbar.png)
+
 ## Setting and Getting Content
 
 You can set the content of the editor as follows.
@@ -54,7 +56,7 @@ You can set the content of the editor as follows.
    
 {% endhighlight %}
 
-To retrieve the editor contents using Value property in Post Back method,
+To retrieve the editor contents using Value property in Post Back action,
 
 {% highlight html %}
 
