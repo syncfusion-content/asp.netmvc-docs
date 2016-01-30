@@ -99,7 +99,7 @@ Configure the ImageBrowser and FileBrowser property to insert an image from your
 ![](ImageandFilebrowser_images/ImageandFilebrowser_img2.png)
 
 
-N> FileExplorer component has been implemented and integrated with the editor in Volume 1, 2015 release. For more information about FileExplorer component, see [here](http://helpjs.syncfusion.com/js/fileexplorer/overview#).
+N> FileExplorer component has been implemented and integrated with the editor in Volume 1, 2015 release. For more information about FileExplorer component, see [here](http://help.syncfusion.com/aspnetmvc/fileexplorer/overview).
 
 ## Image Properties
 
