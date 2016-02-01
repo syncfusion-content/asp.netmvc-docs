@@ -7,6 +7,7 @@ control: RTE
 documentation: ug
 
 ---
+
 # Working with Hyperlinks
 
 A hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
@@ -40,6 +41,8 @@ N> Leave this textbox blank if you want to display the full link as hyperlink in
     </div>)
     .ToolsList(toolsList).Tools(tool => tool.Links(links))
     .Render();}
+    
+{% endhighlight %}
 
 N> hyperlinks on a picture are not always visible, but the pointer’s appearance will be changed on positioning the mouse pointer over it.
 
