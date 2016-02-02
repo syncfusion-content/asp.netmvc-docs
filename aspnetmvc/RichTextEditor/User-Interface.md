@@ -20,96 +20,96 @@ The editor’s toolbar contains buttons and dropdowns that help you to format yo
 The following table lists the available buttons and dropdowns on the toolbar:
 
 <table>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Name<br/></td><td colspan=1 rowspan=1>
-        Summary<br/></td><td colspan=1 rowspan=1>
-        Initialization<br/></td><td colspan=1 rowspan=1>
-        isDefault?<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Font <br/></td><td colspan=1 rowspan=1>
-        Applies font type, size, and color to the content<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() { " font"};<br/>List<String> font = new List<string>() { "fontName", "fontSize", "fontColor", "backgroundColor" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Font(font)).Render();}<br/></td><td colspan=1 rowspan=1>
-        No<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Font style<br/></td><td colspan=1 rowspan=1>
-        Applies bold, italic, underline, and strikethrough formatting to the content<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() { " style"};<br/>List<String> style = new List<string>() { "bold", "italic", "underline", "strikethrough" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Styles(style)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Alignment<br/></td><td colspan=1 rowspan=1>
-        Align the content with left, center, and right margin.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() { " alignment"};<br/>List<String> alignment = new List<string>() { "justifyLeft", "justifyCenter" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Alignment (alignment)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        List<br/></td><td colspan=1 rowspan=1>
-        Create a new list item (bulleted/numbered).<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() { "lists"};<br/>List<String> lists = new List<string>() { "unorderedList", "orderedList" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Lists(lists)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Indents<br/></td><td colspan=1 rowspan=1>
-        Allows to increase/decrease the indent level of the content.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() { "indenting"};<br/>List<String> indenting = new List<string> { "outdent", "indent" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Indenting(indenting)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Undo/Redo Action<br/></td><td colspan=1 rowspan=1>
-        Allows to undo/redo the actions<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"doAction"};<br/>List<String> doAction = new List<string>() { "undo", "redo" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. DoAction (doAction)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Hyperlink<br/></td><td colspan=1 rowspan=1>
-        Creates a hyperlink to a text or image to a specific location in the content.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"links"};<br/>List<String> links = new List<string>() { "createLink", "removeLink" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Links (links)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Images<br/></td><td colspan=1 rowspan=1>
-        Inserts an image from an online source or local computer.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"images"};<br/>List<String> images = new List<string>() { "image" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Images (images)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Media<br/></td><td colspan=1 rowspan=1>
-        Allows to embed a video into the document.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"media"};<br/>List<String> media = new List<string>() { "video" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool.Media (media)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Table<br/></td><td colspan=1 rowspan=1>
-        Allows to add or modify Tables<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"tables"};<br/>List<String> tables = new List<string>() { "createTable", "addRowAbove", "addRowBelow", "addColumnLeft", "addColumnRight", "deleteRow", "deleteColumn", "deleteTable" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Tables(tables)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Casing<br/></td><td colspan=1 rowspan=1>
-        Change the case of selected text in the content<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"casing"};<br/>List<String> casing = new List<string>() { "upperCase", "lowerCase" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Casing(casing)).Render();}<br/></td><td colspan=1 rowspan=1>
-        no<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Scripts<br/></td><td colspan=1 rowspan=1>
-        Makes the selected text as superscript (higher) or subscript (lower).<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"effects"};<br/>List<String> effects = new List<string>() { "superscript", "subscript" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool. Effects(effects)).Render();}<br/></td><td colspan=1 rowspan=1>
-        no<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Format<br/></td><td colspan=1 rowspan=1>
-        Clears the formatting options like bold, italic, underline and more.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"formatStyle"};<br/>List<String> formatStyle = new List<string>() { "format" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool.FormatStyle(formatStyle)).Render();}<br/></td><td colspan=1 rowspan=1>
-        yes<br/></td></tr>
-    <tr>
-        <td colspan=1 rowspan=1>
-        Clipboard Actions<br/></td><td colspan=1 rowspan=1>
-        Controls the clipboard actions by applying specific action on the selected content.<br/></td><td colspan=1 rowspan=1>
-        List<String> toolsList = new List<string>() {"clipboard"};<br/>List<String> clipboard = new List<string>() { "cut", "copy", "paste" };<br/>@{Html.EJ().RTE("rteSample"). .ToolsList(toolsList).Tools(tool => tool.Clipboard(clipboard)).Render();}<br/></td><td colspan=1 rowspan=1>
-        no<br/></td></tr>
+<tr>
+<td>
+Name<br/></td><td>
+Summary<br/></td><td>
+Initialization<br/></td><td>
+isDefault?<br/></td></tr>
+<tr>
+<td>
+Font <br/></td><td>
+Applies font type, size, and color to the content<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {" font"};<br/>List&lt;String> font = new List&lt;string>() { "fontName", "fontSize", "fontColor", "backgroundColor" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Font(font)).Render();}<br/></td><td>
+No<br/></td></tr>
+<tr>
+<td>
+Font style<br/></td><td>
+Applies bold, italic, underline, and strikethrough formatting to the content<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() { " style"};<br/>List&lt;String> style = new List&lt;string>() { "bold", "italic", "underline", "strikethrough" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Styles(style)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Alignment<br/></td><td>
+Align the content with left, center, and right margin.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() { " alignment"};<br/>List&lt;String> alignment = new List&lt;string>() { "justifyLeft", "justifyCenter" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Alignment (alignment)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+List<br/></td><td>
+Create a new list item (bulleted/numbered).<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() { "lists"};<br/>List&lt;String> lists = new List&lt;string>() { "unorderedList", "orderedList" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Lists(lists)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Indents<br/></td><td>
+Allows to increase/decrease the indent level of the content.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() { "indenting"};<br/>List&lt;String> indenting = new List&lt;string> { "outdent", "indent" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Indenting(indenting)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Undo/Redo Action<br/></td><td>
+Allows to undo/redo the actions<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"doAction"};<br/>List&lt;String> doAction = new List&lt;string>() { "undo", "redo" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. DoAction (doAction)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Hyperlink<br/></td><td>
+Creates a hyperlink to a text or image to a specific location in the content.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"links"};<br/>List&lt;String> links = new List&lt;string>() { "createLink", "removeLink" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Links (links)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Images<br/></td><td>
+Inserts an image from an online source or local computer.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"images"};<br/>List&lt;String> images = new List&lt;string>() { "image" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Images (images)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Media<br/></td><td>
+Allows to embed a video into the document.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"media"};<br/>List&lt;String> media = new List&lt;string>() { "video" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool.Media (media)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Table<br/></td><td>
+Allows to add or modify Tables<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"tables"};<br/>List&lt;String> tables = new List&lt;string>() { "createTable", "addRowAbove", "addRowBelow", "addColumnLeft", "addColumnRight", "deleteRow", "deleteColumn", "deleteTable" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Tables(tables)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Casing<br/></td><td>
+Change the case of selected text in the content<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"casing"};<br/>List&lt;String> casing = new List&lt;string>() { "upperCase", "lowerCase" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Casing(casing)).Render();}<br/></td><td>
+no<br/></td></tr>
+<tr>
+<td>
+Scripts<br/></td><td>
+Makes the selected text as superscript (higher) or subscript (lower).<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"effects"};<br/>List&lt;String> effects = new List&lt;string>() { "superscript", "subscript" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool. Effects(effects)).Render();}<br/></td><td>
+no<br/></td></tr>
+<tr>
+<td>
+Format<br/></td><td>
+Clears the formatting options like bold, italic, underline and more.<br/></td><td>
+List&lt;String> toolsList = new List&lt;string>() {"formatStyle"};<br/>List&lt;String> formatStyle = new List&lt;string>() { "format" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool.FormatStyle(formatStyle)).Render();}<br/></td><td>
+yes<br/></td></tr>
+<tr>
+<td>
+Clipboard Actions<br/></td><td>
+Controls the clipboard actions by applying specific action on the selected content.<br/></td><td>
+List &lt;String> toolsList = new List&lt;string>() {"clipboard"};<br/>List&lt;String> clipboard = new List&lt;string>() { "cut", "copy", "paste" };<br/>@{Html.EJ().RTE("rteSample").ToolsList(toolsList).Tools(tool => tool.Clipboard(clipboard)).Render();}<br/></td><td>
+no<br/></td></tr>
 </table>
 
 ### Customize Toolbar
