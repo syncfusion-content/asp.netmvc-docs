@@ -206,7 +206,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     … …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -435,7 +434,6 @@ Adding the required JavaScript files into your application plays an important ro
 
 * jquery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
-* jquery.globalize.min.js
 * jsrender.min.js
 
 Apart from the above common scripts, it is also necessary to refer the **ej.web.all.min.js** file in your application, which contains all JavaScript components scripts in minified format.
@@ -479,7 +477,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     … …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -509,7 +506,6 @@ If you want to refer the cdn links instead of the direct script and css referenc
     … …
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script>
     @Html.EJ().ScriptManager() 
@@ -726,7 +722,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -962,7 +957,6 @@ Adding the required JavaScript files into your application plays an important ro
 
 * jquery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
-* jquery.globalize.min.js
 * jsrender.min.js
 
 Apart from the above common scripts, it is also necessary to refer the **ej.web.all.min.js** file in your application, which contains all JavaScript components scripts in minified format.
@@ -1008,7 +1002,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/web/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -1040,7 +1033,6 @@ If you want to refer the cdn links instead of the direct script and css referenc
     …
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script>
     @Html.EJ().ScriptManager() 
@@ -1255,7 +1247,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -1531,7 +1522,6 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -1563,7 +1553,6 @@ If you want to refer the cdn links instead of the direct script and css referenc
     …
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script>
     @Html.EJ().ScriptManager() 
@@ -1649,7 +1638,6 @@ In the next step, the script and css files has to be explicitly referred in the 
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/ej.web.all.min.js")"></script>
     @Html.EJ().ScriptManager() 
@@ -1746,7 +1734,6 @@ Include the reference to the added **ej.unobtrusive.min.js** file in the **_Layo
     …
     <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.easing.1.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.globalize.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/web/ej.web.all.min.js")"></script>
     <script src="@Url.Content("~/Scripts/ej/web/ej.unobtrusive.min.js")"></script>
