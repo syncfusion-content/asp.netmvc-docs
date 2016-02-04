@@ -9,20 +9,17 @@ documentation: ug
 
 # Dependencies
 
-Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 4 common libraries –
+Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 3 common libraries –
 
 * jQuery 1.7.1 and later versions
 * jsRender
 * jQuery.easing
-* jQuery.Globalize
 
 Currently, we use **jQuery 1.10.2** version, which supports almost all the old and modern browsers.
 
 **jsRender** script file is required to render the templates.
 
 **jQuery.easing** script file is required, so as to support the animation effects in the components.
-
-**jQuery.Globalize** script file is to support the globalization concept.
 
 ## Scripts
 
