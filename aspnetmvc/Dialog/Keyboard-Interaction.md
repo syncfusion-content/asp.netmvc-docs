@@ -1,91 +1,60 @@
 ---
 layout: post
 title: Keyboard Interaction | Dialog | ASP.NET MVC | Syncfusion
-description: keyboard interaction	
+description: Keyboard Interaction with Dialog widget.
 platform: ejmvc
-control: Dialog
+control: Control Name undefined
 documentation: ug
+keywords : ejdialog, MVC Dialog, EJ MVC Dialog, Dialog ui, web Dialog, ej Dialog, Dialog control, ASP.NET MVC Dialog, ASP MVC Dialog
 ---
 
-# Keyboard Interaction	
+# Keyboard interaction
 
-The Dialog provides you to interact with the keyboard actions instead of mouse actions. All the Dialog actions can be achieved by using Keyboard shortcuts.
+You can use Keyboard shortcut keys as an alternative for mouse actions to interact with the Dialog widget. The keyboard interaction will be enabled by default in the Dialog widget. It can be disabled by setting `AllowKeyboardNavigation` to false. Please refer the below table for details about short cut keys and its corresponding usage.
 
-_Key shortcuts for Dialog_
-
-<table>
+ <table>
 <tr>
 <th>
 Shortcut Key</th><th>
-Description</th></tr>
+Usage</th></tr>
 <tr>
 <td>
-Alt{{ '[http://en.wikipedia.org/wiki/Access_key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
-Focus the Dialog control</td></tr>
+<kbd>Up</kbd></td><td>
+Moves the dialog at upward direction.</td></tr>
 <tr>
 <td>
-Up</td><td>
-Dialog moves up direction</td></tr>
+<kbd>Down</kbd></td><td>
+Moves the dialog at downward direction.</td></tr>
 <tr>
 <td>
-Down</td><td>
-Dialog moves down direction</td></tr>
+<kbd>Left</kbd></td><td>
+Moves the dialog at left direction.</td></tr>
 <tr>
 <td>
-Right</td><td>
-Dialog moves right direction</td></tr>
+<kbd>Right</kbd></td><td>
+Moves the dialog at right direction.</td></tr>
 <tr>
 <td>
-Left</td><td>
-Dialog moves left direction</td></tr>
+<kbd>Ctrl</kbd> <kbd>Up</kbd></td><td>
+Reduces the dialog height.</td></tr>
 <tr>
 <td>
-Esc</td><td>
-Dialog window close</td></tr>
+<kbd>Ctrl</kbd> <kbd>Down</kbd></td><td>
+Increases the dialog height.</td></tr>
+<tr>
+<td>
+<kbd>Ctrl</kbd> <kbd>Left</kbd></td><td>
+Reduces the dialog width.</td></tr>
+<tr>
+<td>
+<kbd>Ctrl</kbd> <kbd>Right</kbd></td><td>
+Increases the dialog width.</td></tr>
+<tr>
+<td>
+<kbd>Esc</kbd></td><td>
+Closes the dialog <br/>
+{{'N> It will work only if `closeOnEscape` is set to true.' | markdownify }} </td></tr>
 </table>
-
-## Configure Keyboard Interaction
-
-The following steps explains you to enable keyboard interaction for Dialog control.
-
-1. In the VIEW page set a helper element with dialog content for rendering the Dialog control. 
-
-   ~~~ cshtml
-   
-		// In the CSHTML page add the Dialog widget using helpers.
-		@{Html.EJ().Dialog("keyboardDialog").Title("WinRT")
-		.ContentTemplate(@<div>Essential Studio for WinRT contains all the controls you need to build line-of-business tablet applications <span>including grid, chart, map, tree map, SSRS report viewer, rich-text editor, pdf viewer, gauges, barcode, editors, and much more.</span> It also includes a unique set of controls for reading and writing Excel, Word, and PDF documents in Windows store apps. </div>).Width(550).Render();}
-
-   ~~~
-   
-
-   ~~~ js
-    
-	<script type="text/javascript">
-	
-	//Control focus key
-	$(document).on("keydown", function (e) { 
-	if (e.altKey && e.keyCode === 74) { 
-		// j- key code.
-		$("#keyboardDialog").focus(); 
-	    }
-	});
-	</script>
-
-   ~~~
-   
-
-
-
-2. Run the sample and press Alt + j key to focus the Dialog control. You can perform the specified option using keyboard shortcuts.
-
-   ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
-    Dialog with keyboard interaction.
-    {:.caption}
-
-
-
 
 
 

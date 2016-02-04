@@ -1,779 +1,732 @@
 ---
-layout: post
-title: Data binding | Schedule | ASP.NET MVC | Syncfusion
-description: data-binding
+title: Data binding with Schedule	
+description: Binding local and remote data to Scheduler
 platform: ejmvc
-control: Schedule
+control: schedule
 documentation: ug
+keywords: data binding, local data, remote data 
 ---
+# Data Binding
 
-# Data-binding
+## Appointment Fields
 
-* To render appointments to the Schedule control, you are required to bind the appointment data. The following sub-properties helps you to bind either the local/remote data to the Schedule control by binding the appropriate appointment data fields to the corresponding options.
+The below listed names are the appointment fields which holds the appropriate column names from the dataSource.
 
-### dataSource
+<table>
+<tr>
+<th>
+Field name<br/><br/></th><th>
+Description<br/><br/></th></tr>
+<tr>
+<td>
+Id<br/><br/></td><td>
+Binds the <b>Id</b> field name for indexing and performing CRUD operation on the appointments. It’s optional.<br/><br/></td></tr>
+<tr>
+<td>
+StartTime<br/><br/></td><td>
+Binds the appointment start time field name which is <b>mandatory</b>.<br/><br/></td></tr>
+<tr>
+<td>
+StartTimeZone<br/><br/></td><td>
+Binds the name of the start timezone field in the dataSource. If the <b>StartTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
+<tr>
+<td>
+SndTime<br/><br/></td><td>
+Binds the appointment end time field name which is <b>mandatory</b>.<br/><br/></td></tr>
+<tr>
+<td>
+EndTimeZone<br/><br/></td><td>
+Binds the name of the end timezone field in the dataSource. If the <b>EndTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
+<tr>
+<td>
+Subject<br/><br/></td><td>
+Binds the appointment subject field name which holds the summary of the appointment. <br/><br/></td></tr>
+<tr>
+<td>
+Location<br/><br/></td><td>
+Binds the name of the location field. It indicates the appointment location/occurrence place. This field needs to be bind to the Scheduler, when an API <b>ShowLocationField</b> is set to true.<br/><br/></td></tr>
+<tr>
+<td>
+Description<br/><br/></td><td>
+Binds the appointment description field name.<br/><br/></td></tr>
+<tr>
+<td>
+AllDay<br/><br/></td><td>
+Binds the name of the allDay field. It accepts the <b>boolean</b> value and indicates whether the appointment is an allday appointment or not.<br/><br/></td></tr>
+<tr>
+<td>
+Categorize<br/><br/></td><td>
+Binds the name of the categorize field. It indicates the category or status value (red categorize, green, yellow and so on). <br/><br/></td></tr>
+<tr>
+<td>
+Priority<br/><br/></td><td>
+Binds the name of the priority field and indicates the priority (high, low, medium and none) of the appointments. This field should be bind to the Scheduler, when <b>PrioritySettings.Enable</b> is set to true.<br/><br/></td></tr>
+<tr>
+<td>
+ResourceFields<br/><br/></td><td>
+Binds one or more fields in the resource collection. It maps the resource field names with the appointments, denoting to which resource the appointments actually belongs.<br/><br/></td></tr>
+<tr>
+<td>
+Recurrence<br/><br/></td><td>
+Binds the name of the recurrence field. It accepts the <b>boolean</b> value and indicates whether the appointment is a recurrence appointment or not.<br/><br/></td></tr>
+<tr>
+<td>
+RecurrenceRule<br/><br/></td><td>
+Binds the name of the recurrenceRule field. It holds the recurrence pattern associated with the appointments.<br/><br/></td></tr>
+<tr>
+<td>
+RecurrenceId<br/><br/></td><td>
+Binds the recurrence Id field which acts as a parent id for Scheduler recurrence appointments.<br/><br/></td></tr>
+<tr>
+<td>
+RecurrenceExDate<br/><br/></td><td>
+Binds the recurrence Exception field which accepts the recurrence Exception date values.<br/><br/></td></tr>
+</table>
 
-* This property assigns the local json data or remote (url binding) data to the Schedule control.
+{% highlight razor %}
 
-### query 
+@using Syncfusion.JavaScript.Models;
+@{ 
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", AllDay = false, StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Recurrence = false, RecurrenceRule = "", Priority = "high", Categorize = "1", StartTimeZone = "UTC +05:00", EndTimeZone = "UTC +05:00", Location = "US", Description = "Never Giveup on Obstacles", RecurrenceId = "1", RecurrenceExDate = "", ResourceFields = "1" });
+    
+    <!-- Datasource for Grouping Resources -->
+    List<String> Group = new List<String>();
+    Group.Add("Owners");
+    
+    <!-- Datasource for Resources -->
+    List<ResourceFields> Resources = new List<ResourceFields>();
+    Resources.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398" });
+    Resources.Add(new ResourceFields { Id = "3", Text = "Steven", Color = "#56ca85" });
+    Resources.Add(new ResourceFields { Id = "5", Text = "Michael", Color = "#51a0ed" });
+}
 
-* It accepts the data of object type, which is usually the query string to fetch the required data from a specific table based on certain condition. As this property is optional, it is not specified. 
-
-The entire records that are initially assigned through dataSource is taken into consideration.
-
-### tableName
-
-* It maps the corresponding name of the table from the location and the records are fetched to the Schedule control. As this property is optional, it is not specified. It takes the default dataSource into consideration. 
-
-### id
-
-* It maps the corresponding id field name from the data table or json data that is assigned to the dataSource with the id property of the Schedule control. The id value that is fetched from the table is unique for each appointment.
-
-### subject
-
-* It maps the corresponding subject field name from the data table or json data that is assigned to the dataSource with the subject property of the Schedule control. The Subject field denotes the appointment subject and it accepts the value of string type.
-
-### description
-
-* It maps the corresponding description field name from the data table or json data that is assigned to the dataSource with the description property of the Schedule control. The description field is used to save more information related to the appointments. It accepts the value of string type.
-
-### startTime
-
-* It maps the corresponding start time field name from the data table or json data that is assigned to the dataSource with the startTime property of the Schedule control. The startTime denotes the starting time of the appointment and it accepts the value of type dateTime.
-
-### endTime
-
-* It maps the corresponding end time field name from the data table or json data that is assigned to the dataSource with the endTime property of the Schedule control. The endTime denotes the ending time of the appointment and it accepts the dateTime values from the database.
-
-### recurrence
-
-* It maps the corresponding recurrence field name from the data table or json data that is assigned to the dataSource with the recurrence property of the Schedule control. This field determines whether the appointment is  normal or recurrence type. It accepts the Boolean type value either true/false. 
-
-### recurrenceRule
-
-* It maps the corresponding recurrence rule field name from the data table or json data that is assigned to the dataSource with the recurrenceRule property of the Schedule control. This field defines the recurrence repeat string and accepts the string value.
-
-### allDay
-
-* It maps the corresponding all day field name from the data table or json data that is assigned to the dataSource with the allDay property of the Schedule control. This field determines whether the appointment is created for the whole day or not. It accepts the Boolean value and when it is true, the appointment is created as an allday appointment in the Schedule control.
-
-### resourceFields
-
-* It accepts the resource related field names as a string separated by a comma separator. When multiple resources are rendered on a Schedule control with multiple categories, then the name availed for each resource level is binded.
-
-### categorize
-
-* It maps the corresponding categorize field name from the data table or JSON data, to the categorize property of the Schedule control.
-
-### startTimeZone
-
-* It maps the corresponding start timezone field name from the data table or json data that is assigned to the Schedule dataSource. The startTimeZone denotes the timeZone of the appointment start time and accepts the value of type string.
-
-### endTimeZone
-
-* It maps the corresponding end timezone field name from the data table or json data that is assigned to the Schedule dataSource. The endTimeZone denotes the timeZone of the appointment end time and accepts the value of type string.
-
-### Daylight Saving Time
-
-The Schedule control provides support to observe the Daylight Saving Time (DST), so thatthe users in the regions with summer-time adjust the clocks forward one hour close to the start of spring or adjust them backward in the autumn to standard time. In Schedule control, the DST can either be kept on/off that is handled by the newly introduced property isDST. By default, this property is set to false and when it is set to true, you can render the Schedule control appointments with appropriate DST time difference based on the countries. 
-
-The following code example explains on how to include the Daylight saving time option.
-
-
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Schedule("Schedule1")
-
+@(Html.EJ().Schedule("Schedule1")
         .Width("100%")
-
         .Height("525px")
-
-        .CurrentDate(new DateTime(2014,5,12))
-
-        // enable the Daylight saving time property to the schedule 
-
-        .IsDST(false)
-
-        .AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
-
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Group(gr => { gr.Resources(Group); })
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Resources).Text("Text").Id("Id").Color("Color")).Add();
+        })
+        .ShowLocationField(true)
+        .CategorizeSettings(cat => cat.Enable(true))
+        .PrioritySettings(pri => pri.Enable(true))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
-
             .Subject("Subject")
-
             .StartTime("StartTime")
-
+            .StartTimeZone("StartTimeZone")
             .EndTime("EndTime")
-
+            .EndTimeZone("EndTimeZone")
+            .Description("Description")
+            .Location("Location")
             .AllDay("AllDay")
-
+            .Priority("Priority")
+            .Categorize("Categorize")
             .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .RecurrenceId("RecurrenceId")
+            .RecurrenceExDate("RecurrenceExDate")
+            .ResourceFields("OwnerId"))
+)
 
+{% endhighlight %}
+
+
+## Binding to Simple List Data Array
+
+Scheduler supports binding the appointment data to it through the list of appointment object collection as depicted in the below code example.
+
+**Example** - Array of List Data Binding
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-
-        )
-
+)
 
 {% endhighlight %}
 
-## appointment settings:
+## Binding Remote Data Service
 
-### location
+The appointment data can be bound to the Scheduler through [Odata](http://www.odata.org) remote services, by configuring the service URL to the Schedule dataSource API.
 
-* It maps the corresponding location field name from the data table or JSON data, to the location property of the Schedule control.
-* To display the “location field” enable the property “showLocationField”. ShowLocationField is used to display/show the appointments/events location details.
-* You can use the following code example to include the “location field” in schedule control.
-
-
-
-{% highlight CSHTML %}
+{% highlight razor %}
 
 @(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.TimeMode(Syncfusion.JavaScript.TimeMode.Hour12)
-
-.CurrentDate(new DateTime(2014, 6, 2))
-
-.ShowLocationField(true)   // To display the Location field in the appointment Window need to enable this property
-
-.AppointmentSettings(fields => fields.Datasource((IEnumerable)ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Location("Location")        // To display the Location value in the appointment window need to bind the property like this
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule"))
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource("http://mvc.syncfusion.com/OdataServices/Northwnd.svc/").Query("ej.Query().from('Events').take(10)")
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
 )
-{% endhighlight %}
-{% highlight C# %}
-
-// Follow the code declared in Read only part
 
 {% endhighlight %}
 
+## OData V4
 
-On executing the above specified code the Location field will be added in the create appointment window as follows:
+The OData v4 is an improved version of OData protocols. Scheduler supports retrieving and consuming appointment data from [OData v4](http://www.odata.org/documentation) services, just similar to the other remote services. 
 
-![](Data-binding_images/Data-binding_img1.png)
-
-
-
-### priority
-
-* It maps the corresponding priority field name from the data table or JSON data, to the priority property of the Schedule control.
-
-### Local data
-
-* You can locally assign the data to Scheduler control. Inorder to define the local data to the Scheduler control, map the user-defined json data names with its appropriate dataSource column names. 
-* Specify the valid array of appointment objects to the dataSource property of the Schedule control as shown in the below code.
-
-
-
-{% highlight CSHTML %}
-@(Html.EJ()
-.Schedule("Schedule1")
-.Width("100%")
-.Height("525px")
-.CurrentDate(new DateTime(2014, 4, 1))
-.AppointmentSettings(fields => 
-fields.Datasource(ViewBag.datasource)
-.Id("Id")
-.Subject("Subject")
-.StartTime("StartTime")
-.EndTime("EndTime")
-.AllDay("AllDay")
-.Recurrence("Recurrence")
-.RecurrenceRule("RecurrenceRule")))
-{% endhighlight %}
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
-{
-   public partial class ScheduleController : Controller
-   {
-       //// GET: /LocalDataBinding/
-	   public ActionResult LocalDataBinding()
-	   {
-		   List<person> persons = new List<person>();
-		   // three different data	   collection
-		   persons.Add(new person(){Id=100,Subject="product meeting",StartTime=new DateTime(2014,4,1,1,0,20),EndTime=new DateTime(2014,4,1,2,0,20),AllDay=true,Recurrence=false,RecurrenceRule="FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU"});
-		   persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 4, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		   persons.Add(new person() { Id = 102, subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU" });
-		   ViewBag.dataSource = persons;return View();
-	   }
-	   Public class person
-	   {
-	      Public int Id
-		  Public string Subject
-		  Public DateTime StartTime
-		  Public DateTime EndTime
-		  Public bool AllDay
-		  Public bool Recurrence
-		  Public string RecurrenceRule
-	   }
-	}
-}
-
-{% endhighlight %}
-
-On executing the above specified code the Scheduler displays the appointments across the specific timeslots as follows:
-
-
-
-![](Data-binding_images/Data-binding_img2.png)
-
-
-
-_Figure_ _50_: schedule with Local Data Binding
-
-### Remote data
-
-* Apart from assinging the local data you can bind the remote data to the Schedule control using service url.
-* Inorder to avail that option refer the following steps:
-
-
-
-{% highlight CSHTML %}
-
-
+{% highlight razor %}
 
 @(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.CurrentDate(new DateTime(2014,5,6))
-
-// referring data from remote service (url binding)
-
-.AppointmentSettings(fields => fields.Datasource("http://mvc.syncfusion.com/OdataServices/Northwnd.svc/")
-
-// query to fetch the records from the specified table “Events”
-
-.Query("ej.Query().from('Events').take(10)")
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule"))
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .EnableLoadOnDemand(true)
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Orders/").Adaptor(AdaptorType.ODataV4Adaptor))
+            .Id("Id")
+            .Subject("ShipName")
+            .StartTime("OrderDate")
+            .EndTime("RequiredDate")
+            .Description("ShipAddress"))
 )
 
-
 {% endhighlight %}
 
+## WebAPI Binding
 
-The following screenshot displays the remote data bound to the Schedule control.
+The appointment data can be bound to the Scheduler through Web API service which serves as a programmatic interface to define the request and response messaging system.
 
+{% highlight razor %}
 
-![](Data-binding_images/Data-binding_img3.png)
-
-
-
-Figure 51: Schedule with Remote Data BindingLoad On Demand
-
-* Load on demand is a powerful technique that is used to reduce the bandwidth size of consuming data. Load on demand support has been added in our Schedule control, so that, it retrieves only the required appointment data from service/database during loading time, and that too for the current view. 
-* The__enableLoadOnDemand  property is used to enable or disable the load on demand functionality of the schedule.
-* If you have developer tools, you can capture the network transfer to check the consumed data of the Schedule. The following screnshot shows the data being loaded in Schedule.
-
-
-
-![](Data-binding_images/Data-binding_img4.png)
-
-
-
-_Figure 3: Schedule Demanded data_
-
-
-
-The following code example shows you how load on demand works with Schedule.
-
-
-{% highlight CSHTML %}
-@(Html.EJ()
-.Schedule("Schedule1")
-.Width("100%")
-.Height("525px")
-// Enable load on demand property to the schedule
-.EnableLoadOnDemand(true)
-.CurrentDate(new DateTime(2014, 5, 2))
-.EnableAppointmentNavigation(false)
-.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("GetRecords")
-.Adaptor(AdaptorType.UrlAdaptor))
-.Id("Id")
-.Subject("Subject")
-.StartTime("StartTime")
-.EndTime("EndTime")
-.Description("Description")
-.AllDay("AllDay")
-.Recurrence("Recurrence")
-.RecurrenceRule("RecurrenceRule"))
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
 )
-{% endhighlight %}
-{% highlight C# %}
-public partial class ScheduleController : Controller
-{
-  public ActionResult LoadOnDemand()
-  {
-    return View();
-  }
-  //To Get the records from database then filter the collection and return appointment list with count details.
-  public ActionResult GetRecords(string CurrentView, DateTime CurrentDate, string CurrentAction)
-  {
-	  var data = AppointmentRepository.FilterAppointment(CurrentDate, CurrentAction, CurrentView);
-	  BatchDataResult result = new BatchDataResult();
-	  result.result = data;
-	  result.count =AppointmentRepository.GetAllRecords().ToList().Count > 0 ? AppointmentRepository.GetAllRecords().ToList().Max(p => p.Id):1;
-	  return Json(result, JsonRequestBehavior.AllowGet);
-  }
-  public class BatchDataResult
-  {
-	  public IEnumerable result { get; set; }
-	  public int count { get; set; }
-  }
-}
-{% endhighlight %}
-
-
-* Add the file “AppointmentRepository.cs” in the Models folder of your project that contains the code example for filtering appointments – it filters the appointment data to be retrieved from the database and returned to Schedule.
-
-{% highlight C# %}
-
-public static class AppointmentRepository
-
-{
-
-	public static IList<DefaultSchedule> GetAllRecords()
-
-	{
-
-		IList<DefaultSchedule> appoint = (IList<DefaultSchedule>)HttpContext.Current.Session["Appointments"];
-
-		if (appoint == null)
-
-		HttpContext.Current.Session["Appointments"] = appoint = new ScheduleDataDataContext().DefaultSchedules.ToList();
-
-		return appoint;
-
-	}
-
-	//To filter the appointment based on current date, current action and current view
-
-	public static List<DefaultSchedule> FilterAppointment(DateTime CurrentDate, String CurrentAction, String CurrentView)
-
-	{
-
-		DateTime CurrDate = Convert.ToDateTime(CurrentDate);
-
-		DateTime StartDate = FirstWeekDate(CurrDate.Date);
-
-		DateTime EndDate = FirstWeekDate(CurrDate.Date);
-
-		List<DefaultSchedule> appointmentList = GetAllRecords().ToList();
-
-		switch (CurrentView)
-
-		{
-
-			case "day":
-
-			StartDate = CurrentDate;
-
-			EndDate = CurrentDate;
-
-			break;
-
-			case "week":
-
-			EndDate = EndDate.AddDays(7);
-
-			break;
-
-			case "workweek":
-
-			EndDate = EndDate.AddDays(5);
-
-			break;
-
-			case "month":
-
-			StartDate = CurrDate.Date.AddDays(-CurrDate.Day + 1);
-
-			EndDate = StartDate.AddMonths(1);
-
-			break;
-
-		}
-
-		DateTime st; DateTime et;
-
-		appointmentList = GetAllRecords().ToList().Where(app => DateTime.TryParse(app.StartTime.ToString(), out st) &&
-
-		((st.ToLocalTime().Date >= Convert.ToDateTime(StartDate.Date)) &&
-
-		DateTime.TryParse(app.EndTime.ToString(), out et) && (et.ToLocalTime().Date <= Convert.ToDateTime(EndDate.Date))) || app.Recurrence == 1).ToList();
-
-		return appointmentList;
-
-	}
-
-	//To Get first day of schedule based on current date
-
-	internal static DateTime FirstWeekDate(DateTime CurrentDate)
-
-	{
-
-		try
-
-		{
-
-			DateTime FirstDayOfWeek = CurrentDate;
-
-			DayOfWeek WeekDay = FirstDayOfWeek.DayOfWeek;
-
-			switch (WeekDay)
-
-			{
-
-				case DayOfWeek.Sunday:
-
-				break;
-
-				case DayOfWeek.Monday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-1);
-
-				break;
-
-				case DayOfWeek.Tuesday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-2);
-
-				break;
-
-				case DayOfWeek.Wednesday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-3);
-
-				break;
-
-				case DayOfWeek.Thursday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-4);
-
-				break;
-
-				case DayOfWeek.Friday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-5);
-
-				break;
-
-				case DayOfWeek.Saturday:
-
-				FirstDayOfWeek = FirstDayOfWeek.AddDays(-6);
-
-				break;
-
-			}
-
-			return (FirstDayOfWeek);
-
-		}
-
-		catch
-
-		{
-
-			return DateTime.Now;
-
-		}
-
-	}
-
-}
 
 {% endhighlight %}
 
-The following screenshot is the result of the above code example.
+The server-side code to retrieve the appointments are as follows.
 
-![](Data-binding_images/Data-binding_img5.png)
+{% highlight c# %}
 
-
-
-_Figure 4: Schedule with load on demand_
-
-
-
-* [Click here](http://mvc.syncfusion.com/demos/web/schedule/loadondemand) to see how load on demand works with Schedule.
-
-### MySQL Data Bound
-
-* You can render the appointments from the MySQL table to the Schedule control.
-
-The following steps illustrate you how to meet the requirement bind the MySQL data toschedule.
-
-Step 1: Establish a connection with the created database in the MySQL and Schedule control through the controller. In the controller page, create a class, establish & open MySQL connection as follows.
-
-{% highlight C# %}
-
-
-
-public class Default
-
-{
-
-public int Id { get; set; }
-
-public string Subject { get; set; }
-
-public string Location { get; set; }
-
-public DateTime StartTime { get; set; }
-
-public DateTime EndTime { get; set; }
-
-public string Description { get; set; }
-
-public int Owner { get; set; }
-
-public Boolean Recurrence { get; set; }
-
-public Boolean AllDay { get; set; }
-
-public string RecurrenceRule { get; set;
-
-}
+    // To retrieve the appointments from database and bind it to Scheduler
+    public IEnumerable<Event> GetData(String CurrentDate, String CurrentView, String CurrentAction)
+    {
+        return new NORTHWNDEntities().Events.ToList();
+    }
 
 {% endhighlight %}
 
-Step 2: Once the class is created, you can add the following method to convert the database objects into List type as follows.
+## Controller Action Binding with CRUD operation
 
-{% highlight C# %}
+Scheduler supports binding appointment data from the controller by using various available options of `DataSource` property like URL, BatchURL, InsertURL, UpdateURL, RemoveURL and Adaptor.
 
+{% highlight razor %}
 
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").BatchURL("Home/Crud").InsertURL("Home/add").UpdateURL("Home/update").RemoveURL("Home/remove").Adaptor(AdaptorType.UrlAdaptor))
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
-public List<Default> SelectRecords()
-
-{
-
-string qry = "Select * from scheduleappointment";
-
-var list = new List<Default>();
-
-
-
-MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
-
-string myConnectionString = "server=127.0.0.1;uid=root;pwd=xxxxxxxxx;database=scheduledata;"; // Please specify your own connectionstring here with your specific password and databasename. ‘scheduledata’ is a name of the database that we have created in the MySQL server and used here. You can use your own DB here
-
-conn.ConnectionString = myConnectionString;
-
-conn.Open();
-
-
-
-MySqlCommand cmd = new MySqlCommand(qry, conn);
-
-//Create a data reader and Execute the command
-
-MySqlDataReader dataReader = cmd.ExecuteReader();
-
-
-
-while (dataReader.Read())
-
-{
-
-list.Add(new Default
-
-{
-
-Id = int.Parse(dataReader["Id"].ToString()),
-
-Subject = dataReader["Subject"].ToString(),
-
-Location = dataReader["Location"].ToString(),
-
-StartTime = Convert.ToDateTime(dataReader["StartTime"]).ToUniversalTime(),
-
-EndTime = Convert.ToDateTime(dataReader["EndTime"]).ToUniversalTime(),
-
-Description = dataReader["Description"].ToString(),
-
-Owner = int.Parse(dataReader["Owner"].ToString()),
-
-Recurrence = Convert.ToBoolean(dataReader["Recurrence"].ToString()),
-
-AllDay = Convert.ToBoolean(dataReader["AllDay"].ToString()),
-
-RecurrenceRule = dataReader["RecurrenceRule"].ToString(),
-
-});
-
-}
-
-dataReader.Close();
-
-conn.Close();
-
-return list;
-
-}
 {% endhighlight %}
-Step 3: Now the JSON records that are enumerated can be returned to the view page, through the following action.
 
-{% highlight C# %}
+The server-side controller code to handle the CRUD operations are as follows.
 
+{% highlight c# %}
 
+// To initially bind the appointments with Scheduler
+public JsonResult GetData()
+{
+    // ScheduleDataDataContext is a LINQ-to-SQL data class name that is defined in the .dbml file to access the tables from the database 
+    IEnumerable data = new ScheduleDataDataContext().Appointments.Take(100); 
+    return Json(data, JsonRequestBehavior.AllowGet);
+}
 
-    public JsonResult GetData()
+// Triggers while saving a new appointment through quick window
+public JsonResult add(Appointment value)
+{
+    ScheduleDataDataContext db = new ScheduleDataDataContext();
+    int intMax = db.Appointments.ToList().Count > 0 ? db.Appointments.ToList().Max(p => p.Id) : 1;
+    Appointment appoint = new Appointment()
+    {
+        Id = intMax + 1,
+        StartTime = value.StartTime,
+        EndTime = value.EndTime,
+        Subject = value.Subject,
+        Description = value.Description,
+        OwnerId = value.OwnerId,
+        Recurrence = value.Recurrence,
+        AllDay = value.AllDay,
+        RecurrenceRule = value.RecurrenceRule
+    };
+    db.Appointments.InsertOnSubmit(appoint);
+    db.SubmitChanges();
+    return Json(appoint, JsonRequestBehavior.AllowGet);
+}
 
+// Triggers while editing/dragging/resizing the existing appointment
+public JsonResult update(Appointment value)
+{
+    ScheduleDataDataContext db = new ScheduleDataDataContext();
+    var filterData = db.Appointments.Where(c => c.Id == Convert.ToInt32(value.Id));
+    Appointment appoint = db.Appointments.Single(A => A.Id == Convert.ToInt32(value.Id));
+    if (filterData.Count() > 0)
+    {
+        DateTime startTime = Convert.ToDateTime(value.StartTime);
+        DateTime endTime = Convert.ToDateTime(value.EndTime);
+        appoint.StartTime = startTime;
+        appoint.EndTime = endTime;
+        appoint.Subject = value.Subject;
+        appoint.Description = value.Description;
+        appoint.OwnerId = value.OwnerId;
+        appoint.Recurrence = Convert.ToByte(value.Recurrence);
+        appoint.AllDay = value.AllDay;
+        appoint.RecurrenceRule = value.RecurrenceRule;
+    }
+    db.SubmitChanges();
+    return Json(appoint, JsonRequestBehavior.AllowGet);
+}
+
+// Triggers when an appointment is deleted
+public JsonResult remove(string key)
+{
+    ScheduleDataDataContext db = new ScheduleDataDataContext();
+    Appointment app = db.Appointments.Where(c => c.Id == Convert.ToInt32(key)).FirstOrDefault();
+    if (app != null) db.Appointments.DeleteOnSubmit(app);
+    db.SubmitChanges();
+    return Json(app, JsonRequestBehavior.AllowGet);
+}
+
+// Triggers for any of the Scheduler CRUD operation
+public JsonResult Crud(EditParams param)
+{
+    ScheduleDataDataContext db = new ScheduleDataDataContext();
+    if (param.action == "insert" || (param.action == "batch" && param.added != null))  // this block of code will execute while inserting the appointments
+    {
+        var value = param.action == "insert" ? param.value : param.added[0];
+        int intMax = db.Appointments.ToList().Count > 0 ? db.Appointments.ToList().Max(p => p.Id) : 1;
+        DateTime startTime = Convert.ToDateTime(value.StartTime);
+        DateTime endTime = Convert.ToDateTime(value.EndTime);
+        Appointment appoint = new Appointment()
         {
-
-            IEnumerable data = SelectRecords().Take(20); 
-
-            return Json(data, JsonRequestBehavior.AllowGet); }
-			
-{% endhighlight %}
-
-Step 4: In the view page, the dataManger with the specific Url is created as follows and assigned to the Schedule control.
-
-{% highlight javascript %}
-
-<div id="Schedule1"> </div>
-
-<script type="text/javascript">
-
-$(function () {
-
-var rManager = ej.DataManager({
-
-url: "/Home/GetData,
-
-offline: false
-
-});
-
-rManager.adaptor = new ej.UrlAdaptor();
-
-
-
-$("#Schedule1").ejSchedule({
-
-width: "100%",
-
-height: "525px",
-
-showCurrentTimeIndicator: false,
-
-currentDate: new Date("2014,09,06"),
-
-appointmentSettings: {
-
-dataSource: rManager,
-
-id: "Id",
-
-subject: "Subject",
-
-startTime: "StartTime",
-
-endTime: "EndTime",
-
-allDay: "AllDay",
-
-recurrence: "Recurrence",
-
-recurrenceRule: "RecurrenceRule",
-
-resourceFields:"Owner"
-
+            Id = intMax + 1,
+            StartTime = startTime,
+            EndTime = endTime,
+            Subject = value.Subject,
+            Description = value.Description,
+            OwnerId = value.OwnerId,
+            Recurrence = value.Recurrence,
+            AllDay = value.AllDay,
+            RecurrenceRule = value.RecurrenceRule
+        };
+        db.Appointments.InsertOnSubmit(appoint);
+        db.SubmitChanges();
+    }
+    else if (param.action == "remove")  // this block of code will execute while removing the appointment
+    {
+        Appointment app = db.Appointments.Where(c => c.Id == Convert.ToInt32(param.key)).FirstOrDefault();
+        if (app != null) db.Appointments.DeleteOnSubmit(app);
+        db.SubmitChanges();
+    }
+    else if ((param.action == "batch" && param.changed != null) || param.action == "update")   // this block of code will execute while updating the appointment
+    {
+        var value = param.action == "update" ? param.value : param.changed[0];
+        var filterData = db.Appointments.Where(c => c.Id == Convert.ToInt32(value.Id));
+        if (filterData.Count() > 0)
+        {
+            DateTime startTime = Convert.ToDateTime(value.StartTime);
+            DateTime endTime = Convert.ToDateTime(value.EndTime);
+            Appointment appoint = db.Appointments.Single(A => A.Id == Convert.ToInt32(value.Id));
+            appoint.StartTime = startTime;
+            appoint.EndTime = endTime;
+            appoint.Subject = value.Subject;
+            appoint.Description = value.Description;
+            appoint.OwnerId = value.OwnerId;
+            appoint.Recurrence = Convert.ToByte(value.Recurrence);
+            appoint.AllDay = value.AllDay;
+            appoint.RecurrenceRule = value.RecurrenceRule;
+        }
+        db.SubmitChanges();
+    }
+    IEnumerable data = new ScheduleDataDataContext().Appointments.Take(500); 
+    return Json(data, JsonRequestBehavior.AllowGet);
 }
 
-});
-
-
-
-
-
-});
-
+// Class definition for EditParams to be used as parameter in the above Crud method for receiving the object value in it.
+public class EditParams
+{
+    public string key { get; set; }
+    public string action { get; set; }
+    public List<Appointment> added { get; set; }
+    public List<Appointment> changed { get; set; }
+    public Appointment value { get; set; }
+}
 
 {% endhighlight %}
-{% highlight CSHTML %}
+
+
+## Loading Data on Demand
+
+Scheduler supports load on demand concept by retrieving only the filtered appointment data (for the current Scheduler date range) from the service/database during **loading** **time**, and that too only for the current Scheduler view**.** There are 3 parameters made accessible on the server-side namely **CurrentDate**, **CurrentView** and **CurrentAction** through which only the necessary appointments are retrieved from the database and then assigned to the Scheduler dataSource. With this kind of action, Scheduler consumes only lesser data and also reduces the usage of network bandwidth size and loading time. 
+
+The **EnableLoadOnDemand** property is used to enable or disable the load on demand functionality of the schedule.
+
+{% highlight razor %}
 
 @(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.CurrentDate(new DateTime(2014, 6, 2))
-
-.AllowDragDrop(true)
-
-.AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").Adaptor("UrlAdaptor"))
-
-.Id("Id")
-
-.Subject("Subject")
-
-.Description("Description")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.ResourceFields("Owner")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule")
-
-.ResourceFields("Owner"))
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .EnableLoadOnDemand(true)
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
 )
 
 {% endhighlight %}
 
-Important: Add the required script and theme files for the JS schedule control and add the necessary assemblies (dll’s) for MVC schedule control. Also in order to use the MySQL keywords, it is necessary to refer the “MySQL. Data dll” in your project.
+The server-side code to load the Scheduler data on demand is as follows.
+
+{% highlight c# %}
+
+    // retrieve the appointments based on the current date.
+    public IEnumerable<Event> GetData(String CurrentDate, String CurrentView, String CurrentAction)
+    {
+        var dateString = Regex.Match(CurrentDate.ToString(), @"^(\w+\b.*?){4}").ToString(); 
+        string format = "ddd MMM dd yyyy"; 
+        DateTime dateTimeValue;
+        try
+        {
+            dateTimeValue = DateTime.ParseExact(dateString, format, CultureInfo.InvariantCulture);
+        }
+        catch(FormatException)
+        {
+            var dateSplit = CurrentDate.Split(' ');//For IE<=10 Fri Mar 20 11:00:22 UTC+0530 2015
+            if (dateSplit[2].Length == 1) dateSplit[2] = string.Concat("0", dateSplit[2]);
+            dateString = string.Concat(dateSplit[0], ' ', dateSplit[1], ' ', dateSplit[2], ' ', dateSplit[dateSplit.Length - 1]);
+            dateTimeValue = DateTime.ParseExact(dateString, format, CultureInfo.InvariantCulture);
+        }
+    	// AppointmentReposit is a user-defined class within which the FilterAppointment method is defined. 
+        AppointmentReposit rep = new AppointmentReposit();
+        var data = rep.FilterAppointment(dateTimeValue, CurrentAction, CurrentView); 
+        return data;
+    }
+
+    // Method to filter the appointments based on the date range
+    public List<Event> FilterAppointment(DateTime CurrentDate, String CurrentAction, String CurrentView)
+    {
+        DateTime CurrDate = Convert.ToDateTime(CurrentDate);
+        DateTime StartDate = FirstWeekDate(CurrDate.Date);
+        DateTime EndDate = FirstWeekDate(CurrDate.Date);
+        List<Event> appointmentList = new NORTHWNDEntities().Events.ToList();
+        switch (CurrentView)
+        {
+            case "day":
+                StartDate = CurrentDate;
+                EndDate = CurrentDate;
+                break;
+            case "week":
+                EndDate = EndDate.AddDays(7);
+                break;
+            case "workweek":
+                EndDate = EndDate.AddDays(5);
+                break;
+            case "month":
+                StartDate = CurrDate.Date.AddDays(-CurrDate.Day + 1);
+                EndDate = StartDate.AddMonths(1);
+                break;
+        }
+        appointmentList = new NORTHWNDEntities().Events.ToList().Where(app =>
+        ((Convert.ToDateTime(app.StartTime).Date >= Convert.ToDateTime(StartDate.Date)) &&
+        (Convert.ToDateTime(app.EndTime).Date <= Convert.ToDateTime(EndDate.Date)))).ToList();
+        return appointmentList;
+    }
+    
+    internal static DateTime FirstWeekDate(DateTime CurrentDate)
+    {
+        try
+        {
+            DateTime FirstDayOfWeek = CurrentDate;
+            DayOfWeek WeekDay = FirstDayOfWeek.DayOfWeek;
+            switch (WeekDay)
+            {
+                case DayOfWeek.Sunday:
+                    break;
+                case DayOfWeek.Monday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-1);
+                    break;
+                case DayOfWeek.Tuesday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-2);
+                    break;
+                case DayOfWeek.Wednesday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-3);
+                    break;
+                case DayOfWeek.Thursday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-4);
+                    break;
+                case DayOfWeek.Friday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-5);
+                    break;
+                case DayOfWeek.Saturday:
+                    FirstDayOfWeek = FirstDayOfWeek.AddDays(-6);
+                    break;
+            }
+            return (FirstDayOfWeek);
+        }
+        catch
+        {
+            return DateTime.Now;
+        }
+    }
+
+{% endhighlight %}
 
 
+## Entity Framework Data Binding
 
-Step 5: Then run the code example. The control will be rendering with the MySQL table data as shown in following screenshot.
+The appointment data can be bound to the Scheduler through entity framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the entity data model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
 
-![](Data-binding_images/Data-binding_img6.png)
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(Model)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+        ScheduleControlDataEntities db = new ScheduleControlDataEntities(); // Create an object of the entity class to access its underlying tables within the controller page.
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public JsonResult GetData()
+        {
+            IEnumerable data = new ScheduleControlDataEntities().Appointments.Take(100);
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult Batch(EditParams param)
+        {
+            // this block of code will execute while inserting the appointments
+            if (param.action == "insert" || (param.action == "batch" && param.added != null)) 
+            {
+                var value = param.action == "insert" ? param.value : param.added[0];
+                int intMax = db.Appointments.ToList().Count > 0 ? db.Appointments.ToList().Max(p => p.Id) : 1;
+                DateTime startTime = Convert.ToDateTime(value.StartTime);
+                DateTime endTime = Convert.ToDateTime(value.EndTime);
+                var currentTimeZone = TimeZone.CurrentTimeZone;
+                Appointment appoint = new Appointment()
+                {
+                    Id = value.Id,
+                    StartTime = startTime,
+                    EndTime = endTime,
+                    StartTimeZone=value.StartTimeZone,
+                    EndTimeZone=value.EndTimeZone,
+                    Subject = value.Subject,                   
+                    Description = value.Description,                    
+                    Recurrence = value.Recurrence,
+                    RoomId = value.RoomId,
+                    OwnerId = value.OwnerId,
+                    CategoryId = value.CategoryId,
+                    AllDay = value.AllDay,                   
+                    RecurrenceRule = value.RecurrenceRule,                   
+                };
+                db.Appointments.Add(appoint);
+                db.SaveChanges();
+            }
+            if (param.action == "remove" || param.deleted != null) 
+            // this block of code will execute while removing the appointment 
+            {
+                if (param.action == "remove")
+                {
+                    int key = Convert.ToInt32(param.key);
+                    Appointment app = db.Appointments.Where(c => c.Id == key).FirstOrDefault();
+                    if (app != null) db.Appointments.Remove(app);
+                }
+                else
+                {
+                    foreach (var apps in param.deleted)
+                    {
+                        Appointment app = db.Appointments.Where(c => c.Id == apps.Id).FirstOrDefault();
+                        if (apps != null) db.Appointments.Remove(app);
+                    }
+                }
+                db.SaveChanges();
+            }
+            if ((param.action == "batch" && param.changed != null) || param.action == "update")   
+            {
+               // this block of code will execute while updating the appointment
+                var value = param.action == "update" ? param.value : param.changed[0];
+                var filterData = db.Appointments.Where(c => c.Id == Convert.ToInt32(value.Id));
+
+                if (filterData.Count() > 0)
+                {
+                    DateTime startTime = Convert.ToDateTime(value.StartTime);
+                    DateTime endTime = Convert.ToDateTime(value.EndTime);
+                    Appointment appoint = db.Appointments.Single(A => A.Id == Convert.ToInt32(value.Id));
+                    appoint.StartTime = startTime;
+                    appoint.EndTime = endTime;
+                    appoint.Subject = value.Subject;
+                    appoint.StartTimeZone = value.StartTimeZone;
+                    appoint.EndTimeZone = value.EndTimeZone;
+                    appoint.Description = value.Description;
+                    appoint.OwnerId = value.OwnerId;                  
+                    appoint.Recurrence = Convert.ToByte(value.Recurrence);
+                    appoint.RoomId = value.RoomId;
+                    appoint.AllDay = value.AllDay;
+                    appoint.RecurrenceRule = value.RecurrenceRule;
+                }
+                db.SaveChanges();
+            }
+            IEnumerable data = new ScheduleControlDataEntities().Appointments.Take(500); // nw.Appointment.Take(5);
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+{% endhighlight %}
 
 
+## SQL Data Binding
 
+Binding SQL data to Scheduler is quite simple and also it supports the complete CRUD operation to be performed on the appointment data easily. 
 
+{% highlight razor %}
 
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("/Home/GetData").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
 
+{% endhighlight %}
 
+{% highlight c# %}
+        // Mention the correct path of the database to connect. Also ensure, whether the provided database already exists.
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ScheduleDatabase.mdf;Integrated Security=True");
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+        
+        public JsonResult GetData()
+        {
+            using (connection)
+            {
+                connection.Open();
+                // To initially bind the Scheduler with data
+                SqlDataAdapter data = new SqlDataAdapter("select * from ScheduleData", connection);
+                connection.Close();
+                return Json(data, JsonRequestBehavior.AllowGet);
+            }
+        }
+        
+        // To perform other CRUD operations
+        public JsonResult Batch(EditParams param)
+        {
+            if (param.action == "insert" || (param.action == "batch" && param.added != null))
+            {
+                var value = param.action == "insert" ? param.value : param.added[0];
+                connection.Open();
+                SqlCommand add = new SqlCommand("insert into ScheduleData(Id,Subject,StartTime,EndTime,Description,AllDay,Recurrence,RecurrenceRule) values(Id="+ value.Id +",Subject='"+ value.Subject +"', StartTime='"+ value.StartTime +"', EndTime='"+ value.EndTime +"', Description='"+ value.Description +"', AllDay='"+ value.AllDay +"', Recurrence='"+ value.Recurrence +"', RecurrenceRule='"+ value.RecurrenceRule +"')",connection);
+                add.ExecuteNonQuery();
+                connection.Close();
+            }
+            if (param.action == "remove" || param.deleted != null)
+            {
+                connection.Open();
+                if (param.action == "remove")
+                {
+                    int key = Convert.ToInt32(param.key);
+                    SqlCommand delete = new SqlCommand("delete from ScheduleData where Id="+ key +"",connection);
+                    delete.ExecuteNonQuery();
+                }
+                else
+                {
+                    foreach (var apps in param.deleted)
+                    {
+                        SqlCommand delete = new SqlCommand("delete from ScheduleData where Id=" + apps.Id + "", connection);
+                        delete.ExecuteNonQuery();
+                    }
+                }
+                connection.Close();
+            }
+            if ((param.action == "batch" && param.changed != null) || param.action == "update")
+            {
+                connection.Open();
+                var value = param.action == "update" ? param.value : param.changed[0];
+                SqlCommand update = new SqlCommand("update scheduleData set Id = " + value.Id + ", Subject = '" + value.Subject + "', StartTime = '" + value.StartTime + "', EndTime = '" + value.EndTime + "', Description = '" + value.Description + "', AllDay = '" + value.AllDay + "', Recurrence = '" + value.Recurrence + "' where Id = " + value.Id + ",)", connection);
+                update.ExecuteNonQuery();
+                connection.Close();
+            }
+            connection.Open();
+            SqlDataAdapter data = new SqlDataAdapter("select * from ScheduleData", connection);
+            connection.Close();
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+        
+{% endhighlight %}

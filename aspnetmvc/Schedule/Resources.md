@@ -1,481 +1,344 @@
 ---
-layout: post
-title: Resources | Schedule | ASP.NET MVC | Syncfusion
-description: resources
+title: Schedule - Resource handling with multiple option
+description: Handling multiple resources in Scheduler
 platform: ejmvc
-control: Schedule
+control: schedule
 documentation: ug
+keywords: resource, resources, multiple resources, grouping 
 ---
-
 # Resources
 
-## Multiple Resources
+The Scheduler provides **Resources** support, with which the single Scheduler is shared by multiple resources simultaneously. Each resource in the Scheduler is arranged in a column/row wise with individual spacing to display all its respective appointments on a single page. It also supports the grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (**Horizontal** **view**) or else vertical hierarchy one after the other (**Vertical** **view**).
 
-* Multiple Resource feature provides support for rendering multiple resources on the Schedule control. You can group multiple resources under certain categories. 
-* You can also save the appointments simultaneously on multiple resources or within the multiple categories using allowMultiple property enabled for different levels of resources.
-* The two important properties to be defined for grouping the multiple resources are as follows:
+One or more resources can be assigned to the Scheduler appointments by making selection of the resource options available in the appointment window.
 
-## Resources
+## Fields of Resources
 
-* It accepts the resource data as an array collection. Here, you can define the field name with resourceFields to each of the resource level. The order of resource data objects that you provide within the resource collection defines the rendering order of the resources in the Schedule. 
-* The first resource data object provided within the collection is always rendered as the top level order in the Schedule. The important sub-options available are as follows:
+The default options available within the `Resources` collection are as follows,
 
-_field_
+### Name (**String**)
 
-* This option holds the field name to be bound to each level of the resources.
+A unique resource name which is used for differentiating various resource objects while grouping it in various levels.
 
-_title_
+### Title (**String**)
 
-* This option accepts a title string from the user that is displayed as the appropriate title for the resource field on the appointment window.
+It holds the title name of the resource field to be displayed on the Scheduler appointment window.
 
-_name_
+### Field (**String**)
 
-* It uniquely identifies each resource level while grouping.
+It holds the name of the resource field to be bound to the Scheduler appointments which contains the resource Id.
 
-_resourceSettings_
+### AllowMultiple (**Boolean**)
 
-* It accepts the dataSource and bind field names related to the resources data. The sub-options present within it are as follows,
+When set to true, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources.
 
-_dataSource_
+### ResourceSettings (**Object**)
 
-* It either accepts the local JSON data or remote data for the resource related information. The field names it accepts are 
+It holds the field names of the resources to be bound to the Scheduler and also includes the dataSource.
 
-_text_
+The following are the resource fields which must be defined within the **ResourceSettings** that holds the appropriate column names from the dataSource.
 
-* It holds the binding name for text field in the resource dataSource.
+<table>
+<tr>
+<th>
+Field name<br/><br/></th><th>
+Description<br/><br/></th></tr>
+<tr>
+<td>
+Text<br/><br/></td><td>
+Binds the text field name in the dataSource to the resourceSettings <b>Text</b>. These text gets listed out in the resources field of the appointment window. It’s mandatory.<br/><br/><br/><br/></td></tr>
+<tr>
+<td>
+Id<br/><br/></td><td>
+Binds the id field name in the dataSource to the resourceSettings <b>Id</b>. It’s mandatory.<br/><br/><br/><br/></td></tr>
+<tr>
+<td>
+GroupId<br/><br/></td><td>
+Binds the groupId field name in the dataSource to the resourceSettings <b>GroupId</b>. This field is not necessary for a resource object (resource data) defined as first level within the resources collection.<br/><br/><br/><br/></td></tr>
+<tr>
+<td>
+Color<br/><br/></td><td>
+Binds the color field name in the dataSource to the resourceSettings <b>Color</b>. It is optional.<br/><br/><br/><br/></td></tr>
+<tr>
+<td>
+AppointmentClass<br/><br/></td><td>
+Binds the appointmentClass field name in the dataSource. It applies the custom css class name to the appointments based on the resources.<br/><br/><br/><br/></td></tr>
+</table>
 
-_id_
+**Example**: To set the resources options using all the above specified fields,
 
-* It holds the binding name for id field in the resource dataSource.
+{% highlight razor %}
 
-_groupId_
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "", RoomId = "2" });
 
-* It holds the binding name for group id field in the resource dataSource.
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398" });
+    Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95" });
 
-_color_
-
-* It holds the binding name for color field in the resource dataSource.
-
-_appointmentClass_
-
-* It specifies the custom css class name to be applied for the appointments that belongs to each resource.
-
-_allowMultiple_
-
-* This property enables or disables the multiple selections of each resource in the appointment window. 
-
-The following code example explains how to render the multiple resources on the Schedule control,
-
-
-{% tabs %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ()
-.Schedule("Schedule1")
-.Width("100%")
-.Height("525px")
-.CurrentDate(new DateTime(2014,4,1))
-.CurrentView(CurrentView.Month)
-// resource data collection.Resources(res=> 
-{res.Field("OwnerId").Title("Owner").Name("Owners")
-// enable the multiple selection of resources in the appointment window.
-.AllowMultiple(true)
-.ResourceSettings(flds => 
-flds.Datasource(ViewBag.Owners).Text("text")
-.Id("id")
-.Color("color"))
-.Add();}).Group(gr=>
-{gr.Resources(ViewBag. Resources);})
-.AppointmentSettings(fields => 
-fields.Datasource(ViewBag.datasource)
-.Id("Id")
-.Subject("Subject")
-.StartTime("StartTime")
-.EndTime("EndTime")
-.AllDay("AllDay")
-.Recurrence("Recurrence")
-.RecurrenceRule("RecurrenceRule")
-// bind the resource id fields collection of each level.ResourceFields("OwnerId")))
-{% endhighlight %}
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
-{
-	public partial class ScheduleController : Controller
-	{
-		//// GET: /MultipleResource/
-		public ActionResult MultipleResource()
-		{
-			// The appointment data along with resource data to be passed to the dataSource are as follows,
-			List<person> persons = new List<person>();
-			persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=DAILY;COUNT=10;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", RoomId = "1", OwnerId = "1" });
-			persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 1, 6, 0, 20), EndTime = new DateTime(2014, 4, 1, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "2", OwnerId = "3" });
-			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "1" });
-			persons.Add(new person() { Id = 103, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 2, 4, 0, 20), EndTime = new DateTime(2014, 4, 2, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "5" });
-			ViewBag.datasource = persons;List<Rooms> owners = new List<Rooms>();
-			owners.Add(new Rooms { text = "Andrew", id = "1", color = "#f8a398" });
-			owners.Add(new Rooms { text = "Cruise", id = "3", color = "#56ca85" });
-			owners.Add(new Rooms { text = "Jerry", id = "5", color = "#51a0ed" });
-			ViewBag.Owners = owners;List<String> resources = new List<String>();
-			resources.Add("Owners");ViewBag.Resources = resources;return View();
-		}
-	}
-	Public class person
-	{
-		Public int Id;
-		Public string Subject;
-		Public string RoomId;
-		Public string OwnerId;
-		Public DateTime StartTime;
-		Public DateTime EndTime;
-		Public bool AllDay;Public bool Recurrence;Public string RecurrenceRule;
-	}
-	public class Rooms
-	{
-		public string text;
-		public string id ;
-		public string color ;
-	}
+    <!-- Datasource for Rooms -->
+    List<ResourceFields> Room = new List<ResourceFields>();
+    Room.Add(new ResourceFields { Id = "1", Text = "Room1", Color = "#f8a398", GroupId = "1" });
+    Room.Add(new ResourceFields { Id = "2", Text = "Room2", Color = "#56ca85", GroupId = "2" });
+    Room.Add(new ResourceFields { Id = "3", Text = "Room3", Color = "#56ac88", GroupId = "2" });
 }
-{% endhighlight %}
-{% endtabs %}
-The output of the above code looks as follows.
-
-
-
-![](Resources_images/Resources_img1.png)
-
-schedule with multiple resource.
-{:.caption}
-
-## Resource Grouping
-
-* The Schedule control supports another important property group related to the multiple resources. It accepts the unique name assigned to each resources in the resource collection. The names that are all listed in this option is grouped in the Schedule control.
-
-The following steps defines the way to start with rendering multiple resources on the Schedule control.
-
-* Define the appointment data with required resource-related information fields as follows.
-
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-	public partial class ScheduleController : Controller
-
-	{
-
-
-	// GET: /ResourceGrouping/
-
-	List<Rooms> rooms = new List<Rooms>();
-
-	List<Rooms> owner = new List<Rooms>();
-
-
-
-		public ActionResult ResourceGrouping()
-
-		{
-
-			List<person> persons = new List<person>();
-
-			persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=DAILY;COUNT=10;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", RoomId = "1", OwnerId = "1" });
-
-			persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 6, 3, 0, 20), EndTime = new DateTime(2014, 4, 6, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "2", OwnerId = "3" });
-
-			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 5, 1, 4, 0, 20), EndTime = new DateTime(2014, 5, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "1" });
-
-			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 3, 1, 4, 0, 20), EndTime = new DateTime(2014, 3, 1, 7, 0, 20), AllDay = false, Recurrence = true, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "5" });
-
-
-
-			//   var DataSource = new ScheduleDataDataContext().MultipleResources.ToList();
-
-			ViewBag.datasource = persons;
-
-
-
-			rooms.Add(new Rooms { text = "Room1", id = "1", color = "#f8a398" });
-
-			rooms.Add(new Rooms { text = "Room2", id = "2", color = "#56ca85" });
-
-			ViewBag.Rooms = rooms;
-
-
-
-			owner.Add(new Rooms { text = "Andrew", id = "1", groupId = "1", color = "#f8a398" });
-
-			owner.Add(new Rooms { text = "Cruise", id = "3", groupId = "2", color = "#56ca85" });
-
-			owner.Add(new Rooms { text = "Jerry", id = "5", groupId = "1", color = "#51a0ed" });
-
-			ViewBag.Owners = owner;
-
-
-
-			List<String> resources = new List<String>();
-
-			resources.Add("Rooms"); resources.Add("Owners");
-
-			ViewBag.Resources = resources;
-
-
-
-			return View();
-
-		}
-
-
-
-	}
-
-	public class person
-
-	{
-
-		public int Id;
-
-		public string Subject;
-
-		public string RoomId;
-
-		public string OwnerId;
-
-		public DateTime StartTime;
-
-		public DateTime EndTime;
-
-		public bool AllDay;
-
-		public bool Recurrence;
-
-		public string RecurrenceRule;
-
-	}
-
-
-
-	public class Rooms
-
-	{
-
-		public string text;
-
-		public string id ;
-
-		public string groupId ;
-
-		public string color ;
-
-	}
-
-}
-
-{% endhighlight %}
-
-
-* The above specified resource related fields are require to  bound to the resource dataSource and the following code defines the way to provide data to the resources and group collection. This step helps you to render multiple resources on the Schedule control,
-
-
-
-{% highlight CSHTML %}
-
-
 
 @(Html.EJ().Schedule("Schedule1")
-
-.Width("100%")
-
-.Height("525px")
-
-.CurrentDate(new DateTime(2014,4,1))
-
-.CurrentView(CurrentView.Month)
-
-// resource data collection
-
-
-
-.Resources(res=> {
-
-// disables the multiple selection of resources in the appointment window.
-
-res.Field("RoomId").Title("room").Name("Rooms").AllowMultiple(false)
-
-.ResourceSettings(flds => flds.Datasource(ViewBag.Rooms).Text("text").Id("id").Color("color")).Add();
-
-res.Field("OwnerId").Title("owner").Name("Owners").AllowMultiple(true)
-
-.ResourceSettings(flds => flds.Datasource(ViewBag.Owners).Text("text").Id("id").GroupId("groupId").Color("color")).Add();
-
-})
-
-// Groups the resources listed out in the below collection
-
-.Group(gr=> {
-
-gr.Resources(ViewBag.Resources);
-
-})
-
-.AppointmentSettings(fields => fields.Datasource(ViewBag.datasource)
-
-.Id("Id")
-
-.Subject("Subject")
-
-.StartTime("StartTime")
-
-.EndTime("EndTime")
-
-.AllDay("AllDay")
-
-.Recurrence("Recurrence")
-
-.RecurrenceRule("RecurrenceRule")
-
-// bind the resource id fields collection of each level
-
-.ResourceFields("RoomId,OwnerId"))
-
-
-
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(false).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId,RoomId"))
 )
 
 {% endhighlight %}
 
+N> The resource object defined at **First Level** within the **Resources** collection doesn’t make use of the **GroupId** field, as there is no previous levels applicable to map.
 
+## Data Binding
 
-* Execute the above code to render the output as follows.
+The resource data can be bound to the Schedule control through the **ResourceSettings** options available within the **Resources** property. The data-binding can be done either using JSON object collection or DataManager (`ej.DataManager`) instance which contains the resources related data.
 
-![](Resources_images/Resources_img2.png)
+### List Data
 
-schedule with resource grouping.
-{:.caption}
+**Example**: To set the resource data with array of **List** data collection
 
-## Multiple Appointment Creation
+{% highlight razor %}
 
-* The “allowMultiple” option available for each resource object within the resource collection enables/disables the functionality of saving same appointment for multiple resources. 
-* When this property is set to true, the resource related fields in the appointment window allows you to select multiple resources. Refer the following code example.
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-{% tabs %}
-
-{% highlight C# %}
-namespace MVCSampleBrowser.Controllers
-{
-	public partial class ScheduleController : Controller
-	{
-		//// GET: /MultipleResource/
-		List<Rooms> owners = new List<Rooms>();
-		public ActionResult MultipleResource()
-		{
-			List<person> persons = new List<person>();
-			persons.Add(new person() { Id = 100, Subject = "product meeting", StartTime = new DateTime(2014, 4, 1, 1, 0, 20), EndTime = new DateTime(2014, 4, 1, 5, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=DAILY;COUNT=10;INTERVAL=2;BYDAY=MO,TU,WE,TH,FR,SA,SU", RoomId = "1", OwnerId = "1" });
-			persons.Add(new person() { Id = 101, Subject = "conference meeting", StartTime = new DateTime(2014, 4, 1, 6, 0, 20), EndTime = new DateTime(2014, 4, 1, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "2", OwnerId = "3" });
-			persons.Add(new person() { Id = 102, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 3, 4, 0, 20), EndTime = new DateTime(2014, 4, 3, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=10;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "1" });
-			persons.Add(new person() { Id = 103, Subject = "New Meeting ", StartTime = new DateTime(2014, 4, 2, 4, 0, 20), EndTime = new DateTime(2014, 4, 2, 7, 0, 20), AllDay = false, Recurrence = false, RecurrenceRule = "FREQ=WEEKLY;COUNT=1;INTERVAL=1;BYDAY=MO,TU", RoomId = "1", OwnerId = "5" });
-			ViewBag.datasource = persons;
-			owners.Add(new Rooms { text = "Andrew", id = "1", color = "#f8a398" });
-			owners.Add(new Rooms { text = "Cruise", id = "3", color = "#56ca85" });
-			owners.Add(new Rooms { text = "Jerry", id = "5", color = "#51a0ed" });
-			ViewBag.Owners = owners;return View();
-		}
-	}
-	Public class person
-	{
-		Public int Id;
-		Public string Subject;
-		Public string RoomId;
-		Public string OwnerId;
-		Public DateTime StartTime;
-		Public DateTime EndTime;
-		Public bool AllDay;
-		Public bool Recurrence;
-		Public string RecurrenceRule;
-	}
-	public class Rooms
-	{
-		public string text { set; get; }
-		public string id { set; get; }
-		public string color { set; get; }
-	}
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398", GroupId = "1" });
+    Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95", GroupId = "1" });
 }
-{% endhighlight %}
-{% highlight CSHTML %}
-@(Html.EJ()
-.Schedule("Schedule1")
-.Width("100%")
-.Height("525px")
-.CurrentDate(new DateTime(2014,4,1))
-.CurrentView(CurrentView.Month)
-.Resources(res=> 
-{
-// enables the multiple selection of resources in the appointment window.
-res.Field("OwnerId")
-.Title("Owner")
-.Name("Owners")
-.AllowMultiple(true)
-.ResourceSettings(flds => 
-flds.Datasource(ViewBag.Owners)
-.Text("text")
-.Id("id")
-.Color("color"))
-.Add();})
-.AppointmentSettings(fields => 
-fields.Datasource(ViewBag.datasource)
-.Id("Id")
-.Subject("Subject")
-.StartTime("StartTime")
-.EndTime("EndTime").AllDay("AllDay")
-.Recurrence("Recurrence")
-.RecurrenceRule("RecurrenceRule")
 
-// bind the resource id fields collection of each level.ResourceFields("OwnerId")))
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+)
 
 {% endhighlight %}
 
-{% endtabs %}  
+### Remote Data
 
+**Example**: To set the resource data through remote service url,
 
+{% highlight razor %}
 
-* Execute the above code to display the Schedule control with appointments saved for multiple resources differentiated with its specific colors.
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
 
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Resources(res => {
+            res.ResourceSettings(flds => flds.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/Northwnd.svc")).Text("CategoryName").Id("CategoryId").Query("ej.Query().select('CategoryID', 'CategoryName').from('Categories').take(5)")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+)
 
+{% endhighlight %}
 
-![](Resources_images/Resources_img3.png)
+## Multiple Resources (Without Grouping)
 
-schedule with multiple resource creation.
-{:.caption}
+It is possible to display the Scheduler in default look without showcasing all the resources on it, but it allow the user to assign the required resources to the appointments through the appointment window resource options.
 
-* To save the same appointment for multiple resources, refer the following steps,
-1. Double-click on the required work cell, the appointment window pops up as shown in the following image with an individual autocomplete field for selecting the available resources.
+The appointments belonging to all the resources will be displayed on the Scheduler which will be differentiated based on the resource color assigned in the **ResourceSettings** (depicting to which resource that particular appointment belongs). 
 
+**Example**: To display default Scheduler with multiple resource options in the appointment window,
 
+{% highlight razor %}
 
-   ![](Resources_images/Resources_img4.png)
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
 
-	schedule with multiple appointment window.
-    {:.caption}
-	
-2. Since the allowMultiple property is set to ‘true’ for this resource object, so you can select any number of available resources in it as follows.
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398", GroupId = "1" });
+    Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95", GroupId = "1" });
+}
 
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+)
 
+{% endhighlight %}
 
-   ![](Resources_images/Resources_img5.png)
+N> Setting **AllowMultiple** to **true** in the above code snippet allows the user to select multiple resources in the appointment window and also creates multiple copies of the same appointment in the Scheduler for each resources while saving.
 
+## Grouping
 
-	schedule with multiple appointment window with different type owner.
-    {:.caption}
-	
-3. The same appointment with the subject Test Ride is created for each resource individually as follows when you click the Done button.
+Scheduler supports both single and multiple levels of resource grouping that can be customized in both horizontal and vertical Scheduler views. In Vertical view - the levels are displayed in a tree structure one after the other, but in horizontal view – the levels are grouped in a vertically expandable/collapsible structure.
 
+### Single-Level
 
+This type of grouping allows the Scheduler to display all the resources at a single level simultaneously. The appointments will make use of the **Color** defined for the first resource instance as its background color. 
 
-   ![](Resources_images/Resources_img6.png)
+**Example**: To display the Scheduler with single level resource grouping options,
 
-	schedule with saved multiple appointments with different type owner
-    {:.caption}
+{% highlight razor %}
 
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+
+    <!-- Define the Group -->
+    List<String> Group = new List<String>();
+    Group.Add("Owners");
+
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398", GroupId = "1" });
+    Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95", GroupId = "1" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Group(gr => { gr.Resources(Group); })
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+)
+
+{% endhighlight %}
+
+N> The **Name** field mentioned in the **Resource** object needs to be specified within the **Group** property in order to enable the grouping option in Scheduler.
+
+### Multi-Level
+
+This type of grouping displays the resources in the Scheduler at multiple levels with a set of resources grouped under each parent level. The appointments will make use of the **Color** defined for the first/top level resource instance as its background color. 
+
+**Example**: To display the Scheduler with multiple level resource grouping options,
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+
+    <!-- Datasource for Grouping -->
+    List<String> Group = new List<String>();
+    Group.Add("Owners");
+    Group.Add("Rooms");
+
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398", GroupId = "1" });
+    Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95", GroupId = "1" });
+
+    <!-- Datasource for Rooms -->
+    List<ResourceFields> Room = new List<ResourceFields>();
+    Room.Add(new ResourceFields { Id = "1", Text = "Room1", Color = "#f8a398", GroupId = "1" });
+    Room.Add(new ResourceFields { Id = "2", Text = "Room2", Color = "#56ca85", GroupId = "2" });
+    Room.Add(new ResourceFields { Id = "3", Text = "Room3", Color = "#56ac88", GroupId = "2" });
+
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Group(gr => { gr.Resources(Group); })
+        .Resources(res => {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId,RoomId"))
+)
+
+{% endhighlight %}
+
+N> Here, the appointments will make use of the **Color** defined for the Owners resource instance as its background color.
 
