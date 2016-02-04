@@ -1476,7 +1476,6 @@ Adding the required JavaScript files into your application plays an important ro
 
 * jquery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
-* jquery.globalize.min.js
 * jsrender.min.js
 
 Apart from the above common scripts, it is also necessary to refer the **ej.web.all.min.js** file in your application, which contains all JavaScript components scripts in minified format.
