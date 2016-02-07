@@ -20,7 +20,6 @@ Template is applicable to all the below specified elements of the Scheduler,
 
 ## Appointment Template
 
-
 The template design that applies on for the Scheduler appointments. The field names that are mapped from the dataSource to the appropriate field properties within the `AppointmentSettings` can be accessed within the template.
 
 Apart from the dataSource field names, the template can also access the current view of the Scheduler using the name **View** – which can contain either of the following values in lowercase. 
@@ -75,6 +74,117 @@ Usually, the appointments are displayed with its **Subject** and **Start/End tim
     {{"{{"}}else{{}}}}
         <div>{{"{{"}}:Subject{{}}}}{{"{{"}}:Location{{}}}}</div>
     {{"{{"}}/if{{}}}}
+</script>
+
+{% endhighlight %}
+
+## Cells Template
+
+The template design that applies on the Scheduler elements such as alldaycells, workcells and monthcells which allows the customization to be done based on the date, view, resources and timescale. The cells can be customized to add images, colours, and other elements etc and can also access the current view of the Scheduler using the name **view**.
+
+**Alldaycells** - An API named `AllDayCellsTemplateId` can be used to customize the allday cells, which accepts the id of the template design block preceded with a symbol **#**.
+
+**Workcells and Monthcells** - An API named `WorkCellsTemplateId` can be used to customize the work cells in all the views, which accepts the id of the template design block preceded by a symbol **#**. 
+
+The cells can be customized with the following code example.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .AllDayCellsTemplateId("#alldayTemplate") // Alldaycells Template ID
+    .WorkCellsTemplateId("#workTemplate") // Workcells Template ID
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+{% highlight html %}
+
+<!-- Template for Alldaycells -->
+<script id="alldayTemplate" type="text/x-jsrender">
+    <div class="e-icon e-scheduleallday" style="opacity:0.5"></div>
+    <span style="opacity:0.5">AllDay</span>
+</script>
+
+<!-- Template for Workcells and Monthcells -->
+<script id="workTemplate" type="text/x-jsrender">
+    {{"{{"}}if resource.classname == 'e-parentnode'{{"}}"}}
+        {{"{{"}}:resource.text{{"}}"}}
+    {{"{{"}}else{{"}}"}}
+        {{"{{"}}if date.getDay() == 0 || date.getDay() == 6{{"}}"}}
+            <div style="background-color:lightblue">Weekend</div>
+        {{"{{"}}else{{"}}"}}
+            {{"{{"}}if view == 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5{{"}}"}}
+                <div style="background-color:burlywood">Meeting</div>
+            {{"{{"}}else resource.text != 'Party Hall-B' && date.getDate() == 15{{"}}"}}
+                <div style="background-color:thistle">Holiday</div>
+            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5 && date.getHours() == 10{{"}}"}}
+                <div style="background-color:burlywood">Meeting</div>
+            {{"{{"}}else view == 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5{{"}}"}}
+                <div style="background-color:lightblue">Conf.</div>
+            {{"{{"}}else resource.text == 'Party Hall-B' && date.getDate() == 16{{"}}"}}
+                <div style="background-color:darkkhaki">Happyday</div>
+            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5 && date.getHours() == 12{{"}}"}}
+                <div style="background-color:goldenrod">Conf.</div>
+            {{"{{"}}else date.getDate() == 10 && date.getMonth() == 11{{"}}"}}
+                <div style="background-color:palegreen">Day Spl</div>
+            {{"{{"}}else date.getDate() == 25 && date.getMonth() == 11{{"}}"}}
+                <div style="background-color:sandybrown">Christmas</div>
+            {{"{{"}}/if{{"}}"}}
+        {{"{{"}}/if{{"}}"}}
+    {{"{{"}}/if{{"}}"}}
+</script>
+
+{% endhighlight %}
+
+## Dateheader Template
+
+The template design that applies on for the date header part of the Scheduler. An API named `DateHeaderTemplateId`] can be used to customize the date header which accepts the id value of the template design block preceded by a symbol **#**. The template can also access the current view of the Scheduler in using the name **view**.
+
+The Dateheader can be customized with the following code example.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .DateHeaderTemplateId("#dateTemplate") // Dateheader Template ID
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+{% highlight html %}
+
+<!-- Template for Dateheader -->
+<script id="dateTemplate" type="text/x-jsrender">
+    <div>{{"{{"}}:~dTemplate(date){{"}}"}}</div>
+</script>
+
+<script>
+    function _dateFormat(date) {
+        var dFormat = ej.format(new Date(date), "dd/MM");
+        return dFormat;
+    }
+    $.views.helpers({ dTemplate: _dateFormat });
 </script>
 
 {% endhighlight %}
@@ -199,6 +309,64 @@ To perform the above specified same customization in **Horizontal** **Scheduler*
 {% endhighlight %}
 
 N> In horizontal Scheduler, the header template makes use of an additional field namely **classname** which holds either **e-parentnode** or **e-childnode** value. The field **classname** can be used in the application scenario to check for the parent or child header node. You can apply the different template customization accordingly based on it.
+
+## TimeScale with Template
+
+The `TimeScale` is an object collection that holds below timescale related properties such as,
+
+The `TimeScale` is also availed with template options to allow customization. It includes the following 2 properties for customization -
+
+* `MajorSlotTemplateId` - Accepts the id value of the template design block preceded by a symbol **#**, which gets applied for the major time slots.
+* `MinorSlotTemplateId` - Accepts the id value of the template design block preceded by a symbol **#**, which gets applied for the minor time slots.
+
+The template customization for major and minor timeslots can be referred from the following code example.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .TimeScale(ts => ts.Enable(true).majorSlot(60).majorSlotTemplateId("#majorTemplate").minorSlotCount(6).minorSlotTemplateId("#minorTemplate"))
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+{% highlight html %}
+
+<!-- Template for Majorslot -->
+<script id="majorTemplate" type="text/x-jsrender">
+    <div>{{"{{"}}:~major(date){{"}}"}}</div>
+</script>
+
+<!-- Template for Minorslot -->
+<script id="minorTemplate" type="text/x-jsrender">
+    <div>{{"{{"}}:~minor(date){{"}}"}}</div>
+</script>
+
+<script>
+    function _majorFormat(date) {
+        var dFormat = ej.format(new Date(date), "hh:mm:ss");
+        return dFormat;
+    }
+    $.views.helpers({ major: _majorFormat });
+
+    function _minorFormat(date) {
+        var dFormat = ej.format(new Date(date), "hh:mm:ss");
+        return dFormat;
+    }
+    $.views.helpers({ minor: _minorFormat });
+</script>
+
+{% endhighlight %}
 
 ## Priority Settings Template
 
