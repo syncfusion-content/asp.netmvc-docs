@@ -15,7 +15,6 @@ The dimension normally refers to the height and width of the element. With Sched
 
 ## Scheduler Dimension
 
-
 The `Height` and `Width` properties can be defined to set the outer dimension of the Scheduler control.
 
 {% highlight razor %}
@@ -63,6 +62,33 @@ The `CellHeight` property allows the Scheduler to set the height of the cells in
 {% endhighlight %}
 
 N> In **Desktop** mode, the default height value of the cells is set to **20px**, whereas for **Mobile** mode – the Scheduler cells are rendered with **40px** by default.
+
+## Cell Auto-Height
+
+The height of the cells especially in timeline view can be made to adjust automatically based on its exceeding appointment count. It is controlled by an API named [showOverflowButton](/js/api/ejschedule#members:showOverflowButton) which accepts true or false value, denoting whether to enable/disable the cell auto-height adjusting option. To enable this option, set the value of `showOverflowButton` as `false` whereas its default value is `true`.
+
+In **Vertical** view, the same functionality is made applicable only in the **Month View** whereas in **Horizontal** mode, it is applicable in all the views.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .CurrentView(CurrentView.Month)
+    .ShowOverflowButton(false)
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .Description("Description")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
 
 ### Cell Width
 
