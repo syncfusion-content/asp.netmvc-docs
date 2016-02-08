@@ -988,7 +988,7 @@ Using the Range property and AddComment method of the XlsIO IRange Class, we wil
         }
         public void ExportToExcel(string GridModel)
         {
-            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             ExcelExport exp = new ExcelExport();
             IEnumerable data = new NorthwindDataContext().OrdersViews.ToList();
             IWorkbook book = exp.Export(gridProperty, (IEnumerable)data, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-lime", true);            
@@ -1045,7 +1045,7 @@ We can add comments to the word document using the AppendComment method in the W
         {
             WordExport exp = new WordExport();
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             IWordDocument document = exp.Export(gridProperty, (IEnumerable)data, "Export.docx", false, false, "flat-lime", true);
             var table = document.Sections[0].Tables[0];
             table.AddRow();//Add new row to the gridtable                    
@@ -1101,7 +1101,7 @@ We can add comments to a pdf documents using the annotation support provided in 
         {
             PdfExport exp = new PdfExport();
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-            GridProperties gridProperty = Syncfusion.JavaScript.Utils.DeserializeToModel(GridModel,typeof(GridProperties));
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
             RectangleF rectangle = new RectangleF(120, 20, 20, 125);
             //Creates a new pop-up annotation.
@@ -1121,6 +1121,202 @@ We can add comments to a pdf documents using the annotation support provided in 
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot displays the exported grid with comments added to cells
+The following screenshot displays the exported grid with comments added to cells.
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img3.png)
+
+## Adding header and footer in the Exported file (Excel, Word or Pdf)
+
+We can add header and footer in the exported file while exporting the grid control.
+
+# Adding header and footer in Excel sheet
+
+Using the Range Text property and SetValue method of the XlsIO IRange Class, we can add headers and footers in Excel sheet. 
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {
+              items.AddTool(ToolBarItems.ExcelExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })) 
+        
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public void ExportToExcel(string GridModel)
+        {
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            ExcelExport exp = new ExcelExport();
+            IEnumerable data = new NorthwindDataContext().OrdersViews.ToList();
+            IWorkbook book = exp.Export(gridProperty, (IEnumerable)data, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-lime", true);
+            book.ActiveSheet.InsertRow(1);
+
+            // Merging the sheet from Range A1 to D1 for adding title space
+            book.ActiveSheet.Range["A1:D1"].Merge();
+
+            //Adding the title using Text property
+            book.ActiveSheet.Range["A1"].Text = "Grid Order Data";
+            book.ActiveSheet.Range["A1"].CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter;//set text alignment
+
+            //Adding footer using SetValue method
+            book.ActiveSheet.SetValue(book.ActiveSheet.Rows.Length + 2, book.ActiveSheet.Columns.Length - 3, "CopyRights");
+            book.SaveAs("Export.xlsx", ExcelSaveType.SaveAsXLS, System.Web.HttpContext.Current.Response, ExcelDownloadType.Open);
+        }          
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+# Adding header and footer in Exported Word document
+
+We can add header and footer to the word document using the HeadersFooters property in the WHeadersFooters class of the DocIO namespace. We can create an instance of the IWParagraph class and append the header/footer text to it using the AppendText method.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {                    
+              items.AddTool(ToolBarItems.WordExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();            
+        })) 
+
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public void ExportToWord(string GridModel)
+        {
+            WordExport exp = new WordExport();
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            IWordDocument document = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.docx", false, false, "flat-lime", true);
+            IWParagraph para = new WParagraph(document);
+
+            //Add header to the word document
+            para = document.Sections[0].HeadersFooters.Header.AddParagraph();
+            //Insert the header text using AppendText method
+            para.AppendText("[Header]");
+            //Add footer to the word document
+            para = document.Sections[0].HeadersFooters.Footer.AddParagraph();
+            //Insert the footer text using AppendText method
+            para.AppendText("[Footer]");
+
+            //Adding Title to the Grid
+            var index = document.LastSection.Body.ChildEntities.IndexOf(document.LastSection.Tables[0]);
+            WParagraph para1 = new WParagraph(document);
+            para1.Text = "Grid Title";
+            document.LastSection.Body.ChildEntities.Insert(index, para1); 
+            document.Save("Export.docx", FormatType.Docx, System.Web.HttpContext.Current.Response, HttpContentDisposition.Attachment);
+        }
+          
+    }
+    
+{% endhighlight %}
+{% endtabs %}
+
+# Adding header and footer in Exported Pdf document
+
+We can add header/footer to a pdf documents using PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+            {
+              items.AddTool(ToolBarItems.PdfExport);                    
+            }))
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right). Add();          
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })) 
+        
+{% endhighlight %}
+{% highlight c# %}
+
+    public partial class GridController : Controller
+    {
+
+        public ActionResult ExportingGrid()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+        public ActionResult ExportToPdf(string GridModel)
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            PdfExport exp = new PdfExport();
+            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.pdf", false, false, "flat-lime", true);
+
+            RectangleF rect = new RectangleF(0, 0, pdfdocument.PageSettings.Width, 50);
+
+            //create a header pager template
+            PdfPageTemplateElement header = new PdfPageTemplateElement(rect);
+
+            //create a footer pager template
+            PdfPageTemplateElement footer = new PdfPageTemplateElement(rect);
+
+            Font f = new Font("Helvetica", 10, System.Drawing.FontStyle.Bold);
+
+            PdfFont font = new PdfTrueTypeFont(f, true);
+
+            header.Graphics.DrawString("Demo Report", font, PdfBrushes.Black, new Point(250, 0)); //Add custom text to the Header
+            pdfdocument.Template.Top = header; //Append custom template to the document           
+
+            footer.Graphics.DrawString("CopyRights", font, PdfBrushes.Gray, new Point(250, 0));//Add Custom text to footer
+            pdfdocument.Template.Bottom = footer;//Add the footer template to document
+            pdfdocument.Save(Server.MapPath("/Output/Export.pdf"));
+            return RedirectToAction("Index");
+        }
+          
+    }
+    
+{% endhighlight %}
+{% endtabs %}
