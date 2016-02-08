@@ -15,6 +15,7 @@ The Scheduler can be customized in various aspects like -
 * Setting different [Date format](/aspnetmvc/schedule/globalization-and-localization#date-format)
 * Specifying minimum and maximum date ranges 
 * Customize the entire appointment window with the user required fields
+* Setting different time Slot duration
 
 ## Hour Customization
 
@@ -92,6 +93,35 @@ The work hours are differentiated from other normal hours, by depicting the Sche
 {% endhighlight %}
 
 N> By default, work hour **Start** is set to **9** and work hour **End** is set to **18**. Also, the Scheduler cells automatically scrolls up or down based on the work start hour that is set to it, to make the user to view that particular time initially.
+
+## TimeScale
+
+The `TimeScale` is an object collection that holds below timescale related properties such as,
+
+* `Enable` - It accepts true or false value, denoting whether to enable/disable the timescale option. Its default value is `true`.
+* `majorSlot` – To specify the majorSlot duration.
+* `minorSlotCount` – To Specify the minorSlotCount.
+
+The majorSlot and minorSlot can be customized with the following code example.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .TimeScale(ts => ts.Enable(true).majorSlot(60).minorSlotCount(6))
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
 
 ## Date Customization
 

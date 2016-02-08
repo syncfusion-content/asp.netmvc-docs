@@ -499,6 +499,227 @@ function onDragStop(args) {
 
 {% endhighlight %}
 
+### External Drag and Drop
+
+An External Drag and Drop support for dragging and dropping external items to and from the Scheduler control. This action is handled through the property `AppointmentDragArea` which specifies the draggable area which states whether the appointments can be dragged outside of the control or within it.
+
+The following code example lets you dragging and dropping external items to and from the Scheduler control.
+
+{% highlight html %}
+
+<div class="row">
+    <div class="col-md-2">
+        <span class=""><b>Tutorials </b> </span>
+        @Html.EJ().TreeView("drag").Items(items => {
+            items.Add().Text("HTML").Expanded(true).Children(child => {
+                child.Add().Text("Introduction");
+                child.Add().Text("Editors");
+                child.Add().Text("Styles");
+                child.Add().Text("Formatting");
+                child.Add().Text("Tables");
+            });
+        }).AllowDragAndDrop(true).AllowDropChild(false).AllowDropSibling(false).AllowDragAndDropAcrossControl(true).Width("auto").ClientSideEvents(s => s.NodeDropped("onDropped").NodeDragStart("onNodeDrag"))
+    </div>
+    <div class="col-md-9">
+        @using Syncfusion.JavaScript.Models;
+        @{
+            <!-- Datasource for Owners -->
+            List<ResourceFields> resources = new List<ResourceFields>();
+            resources.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398" });
+            resources.Add(new ResourceFields { Id = "3", Text = "Steven", Color = "#56ca95" });
+            resources.Add(new ResourceFields { Id = "5", Text = "Michael", Color = "#51a0ed" });
+
+            <!-- Datasource for Grouping -->
+            List<String> Group = new List<String>();
+            Group.Add("Owners");
+        }
+        @(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .AppointmentDragArea("body")
+        .ShowCurrentTimeIndicator(false)
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(resources).Text("Text").Id("Id").Color("Color")).Add(); })
+        .Group(gr => { gr.Resources(Group); })
+        .ScheduleClientSideEvents(evt => evt.DragStop("onDragStop"))
+        .AppointmentSettings(fields => fields.Datasource(Model)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+        )
+    </div>
+</div>
+
+<div id="customWindow" style="display: none">
+    <form id="custom">
+        <table width="100%" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td>Subject:</td>
+                    <td colspan="2">
+                        <input id="subject" type="text" value="" name="Subject" style="width: 100%" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td colspan="2">
+                        <textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>StartTime:</td>
+                    <td>
+                        @Html.EJ().DateTimePicker("StartTime").Width("150px")
+                    </td>
+                </tr>
+                <tr>
+                    <td>EndTime:</td>
+                    <td>
+                        @Html.EJ().DateTimePicker("EndTime").Width("150px")
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resource:</td>
+                    <td colspan="2">
+                        <input id="resource" type="text" value="" name="Resource" style="width: 100%" readonly />
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <td>ownerId:</td>
+                    <td colspan="2">
+                        <input id="ownerId" type="text" name="OwnerId" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div>
+        <button type="submit" onclick="cancel()" id="btncancel" style="float:right;margin-right:20px;margin-bottom:10px;">Cancel</button>
+        <button type="submit" onclick="save()" id="btnsubmit" style="float:right;margin-right:20px;margin-bottom:10px;">Save</button>
+    </div>
+</div>
+
+{% endhighlight %}
+
+{% highlight js %}
+
+    $(function () {
+        $("#customWindow").ejDialog({
+            width: 600,
+            height: "auto",
+            position: { X: 400, Y: 200 },
+            showOnInit: false,
+            enableModal: true,
+            title: "Create Appointment",
+            enableResize: false,
+            allowKeyboardNavigation: false,
+            close: "clearFields"
+        });
+        $("#btncancel").ejButton({ width: '85px' });
+        $("#btnsubmit").ejButton({ width: '85px' });
+    });
+
+    function onNodeDrag(e) {
+        if (e.targetElementData.parentId == "") return false;
+    }
+
+    function onDropped(e) {
+        if ($(e.target).parents(".e-schedule").length != 0) {
+            var scheduleObj = $("#Schedule1").data("ejSchedule");
+            var index = $($(e.target).context).hasClass("e-workcells") || $($(e.target).context).hasClass("e-alldaycells") ? $($(e.target).context).index() : $($(e.target).context).hasClass("e-alldaycells") ? $($(e.target).context).index() : 7 - ((parseInt($($(e.target).context).index() / 7) + 1) * 7 - $($(e.target).context).index()) + ($($(e.target).context).parent().index() * 7);
+            if (scheduleObj.model.orientation == "horizontal") {
+                index = scheduleObj.model.showTimeScale ? scheduleObj.currentView() !== "month" && !(scheduleObj._isCustomView()) ? Math.floor(index / ((scheduleObj.model.endHour - scheduleObj.model.startHour) * 2)) : index : $(e.event.target).index();
+
+            }
+            var renderDate = (scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "month") ? scheduleObj.monthDays : scheduleObj.model.orientation == "vertical" ? scheduleObj.dateRender : scheduleObj._dateRender;
+            renderDate = scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "customview" && scheduleObj._dateRender.length <= 7 ? scheduleObj._dateRender : renderDate;
+            var curDate = new Date(renderDate[index]);
+
+            var _target = $($(e.target).context);
+            if ($(_target).hasClass("e-workcells") && (scheduleObj.model.showTimeScale) && scheduleObj.currentView() !== "month" && !(scheduleObj._isCustomView())) {
+                var time = scheduleObj.model.orientation == "vertical" ? scheduleObj.model.startHour + ($(e.event.target).parent().index() / 2) : scheduleObj.model.startHour + (($(e.event.target).index() - (((scheduleObj.model.endHour - scheduleObj.model.startHour) * 2) * index)) / 2);
+                var timemin = time.toString().split(".");
+                var cur_StartTime = new Date(curDate).setHours(parseInt(timemin[0]), parseInt(timemin[1]) == 5 ? 30 : 00);
+                var min = (parseInt(new Date(cur_StartTime).getHours()) == 23 && parseInt(new Date(cur_StartTime).getMinutes()) == 30) ? new Date(cur_StartTime).getMinutes() + 29 : new Date(cur_StartTime).getMinutes() + 30;
+                var cur_EndTime = new Date(new Date(cur_StartTime).setMinutes(min));
+            }
+            else if ($(_target).hasClass("e-workcells") && scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "month") {
+                var cur_StartTime = new Date(new Date(curDate).setHours(0, 0));
+                var cur_EndTime = new Date(new Date(curDate).setHours(23, 59));
+            }
+            else {
+                var cur_StartTime = new Date(new Date(curDate).setHours(0, 0));
+                var cur_EndTime = new Date(new Date(curDate).setHours(23, 59));
+                scheduleObj._appointmentAddWindow.find(".allday").ejCheckBox({ checked: true });
+            }
+
+            var StartDate = new Date(cur_StartTime);
+            var StartTime = new Date(cur_StartTime);
+            var endTime = cur_EndTime;
+
+            // To find the resource details
+            var resource = scheduleObj._getResourceValue($($(e.target).context));
+
+            // custom appointmnt window
+
+            $("#subject").val(e.droppedElementData.text);
+            $("#customdescription").val(e.droppedElementData.text);
+            $("#StartTime").ejDateTimePicker({ value: new Date(StartTime) });
+            $("#EndTime").ejDateTimePicker({ value: new Date(endTime) });
+            $("#resource").val(resource.Text);
+            $("#ownerId").val(resource.Id);
+            $("#customWindow").ejDialog("open");
+        }
+    }
+
+    function save() {
+        var obj = {};
+        var formelement = $("#customWindow").find("#custom").get(0);
+        for (var index = 0; index < formelement.length; index++) {
+            var columnName = formelement[index].name, $element = $(formelement[index]);
+            if (columnName != undefined) {
+                if (columnName == "Subject")
+                    var value = formelement[index].value;
+                if (columnName == "Desctiption")
+                    value = formelement[index].value;
+                if (columnName == "StartTime")
+                    value = new Date(formelement[index].value);
+                if (columnName == "EndTime")
+                    value = new Date(formelement[index].value);
+                if (columnName == "OwnerId")
+                    value = formelement[index].value;
+                if (columnName != "Resource")
+                    obj[columnName] = value;
+            }
+
+        }
+        $("#customWindow").ejDialog("close");
+        var object = $("#Schedule1").data("ejSchedule");
+        object.saveAppointment(obj);
+    }
+
+    function cancel() {
+        $("#customWindow").ejDialog("close");
+    }
+
+    function onDragStop(args) {
+        if ($(args.event.target).parents(".e-treeview").length != 0) {
+            $("#drag").ejTreeView({ allowDropChild: true, allowDropSibling: true });
+            treeObj = $("#drag").ejTreeView('instance');
+            var newNode = { id: args.appointment.Id, text: args.appointment.Subject };
+            treeObj.addNode(newNode, $(args.event.target));
+            args.cancel = true;
+        }
+    }
+
+{% endhighlight %}
+
 ## Resize
 
 Resizing an appointment is another way to change its start or end time. Mouse hover on the appointments, so that the resizing handlers gets displayed on either sides of the appointment which allows resizing. The resizing functionality can be enabled/disabled by setting the `EnableAppointmentResize` property. By default it is set to `true`.
