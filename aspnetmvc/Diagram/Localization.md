@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization | Diagram | ASP.NET MVC | Syncfusion
-description: localization 
+title: Globalize and Localize the Diagram control
+description: How to globalize and localize the Diagram control?
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -14,6 +14,7 @@ documentation: ug
 
 The following code illustrates how to provide localization support for Context Menu items.
 
+{% tabs %}
 {% highlight razor %}
 
 @*Initialize diagram control*@
@@ -86,6 +87,7 @@ ej.datavisualization.Diagram.Locale["es-ES"] = {
       ViewData["diagramModel"] = model;
 
 {% endhighlight %}
+{% endtabs %}
 
 ![](/aspnetmvc/Diagram/Localization_images/Localization_img1.png)
 

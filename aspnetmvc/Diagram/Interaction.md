@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction | Diagram | ASP.NET MVC | Syncfusion
-description: interaction
+title: Interactively edit nodes and connectors during runtime
+description: How to select and edit nodes and connectors during runtime?
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -43,7 +43,7 @@ Multiple selected elements are visually represented as shown.
 
 The client side methods `addSelection`, `clearSelection` and `removeSelection` help select/unselect elements at runtime. The following code example illustrates how to select/unselect an item through programmatically.
 
-{% highlight js %}
+{% highlight razor %}
 
 var diagram = $("#DiagramContent").ejDiagram("instance");
 var node = diagram.findNode("node1");
@@ -143,7 +143,7 @@ Source and target points of the selected connectors are represented with two han
 
 ## Drag and drop nodes over other elements
 
-Diagram provides support to drop a node/connector over another node/connector. Drop event is raised to notify that an element is dropped over another one and it is disabled by default. It can enabled with the `constraints` property. The following code illustrates how to enable **dropping**.
+Diagram provides support to drop a node/connector over another node/connector. Drop event is raised to notify that an element is dropped over another one and it is disabled by default. It can enabled with the `Constraints` property. The following code illustrates how to enable **dropping**.
 
 {% highlight c# %}
 
@@ -251,7 +251,7 @@ $("#DiagramContent").ejDiagram({
 Position, size, and style of the user handle can be customized with a set of predefined properties.
 
 The following code example illustrates how to customize the appearance of the user handle.
-{% highlight js %}
+{% highlight razor %}
 
 var UserHandlePositions = ej.datavisualization.Diagram.UserHandlePositions;
 var userHandles = [];

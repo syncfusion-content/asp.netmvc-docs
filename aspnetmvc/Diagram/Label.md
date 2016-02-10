@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Label | Diagram | ASP.NET MVC | Syncfusion
-description: label
+title: Add text annotations to Diagram objects to textually describe them
+description: How to textually describe nodes and connectors?
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 ## Create Label
 
-You can add a label to a node/connector by defining the label object and adding that to the `labels` collection of node/connector. The `text` property of label defines the text to be displayed. The following code illustrates how to create a Label. 
+You can add a label to a node/connector by defining the label object and adding that to the `Labels` collection of node/connector. The `Text` property of label defines the text to be displayed. The following code illustrates how to create a Label. 
 {% tabs %}
 {% highlight razor %}
 
@@ -69,6 +69,7 @@ You can add a label to a node/connector by defining the label object and adding 
 
 {% endhighlight %}
 {% endtabs %}
+
 ![](/aspnetmvc/Diagram/Label_images/Label_img1.png)
 
 To explore more label properties, refer to [Label Properties](/js/api/ejdiagram#members:nodes-labels "Label Properties").
@@ -94,7 +95,7 @@ Label can be aligned relative to the node boundaries. It has margin, offset, hor
 
 ### Offset
 
-The `offset` property of label is used to align the labels based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The `Offset` property of label is used to align the labels based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 The following image shows the relationship between the label position (black colored circle) and offset (fraction values).
 
@@ -102,7 +103,7 @@ The following image shows the relationship between the label position (black col
 
 ### Horizontal and vertical alignements
 
-The `horizontalAlignment` property of label is used to set how the label is horizontally aligned at the label position determined from the fraction values. The `verticalAlignment` property is used to set how label is vertically aligned at the label position. 
+The `HorizontalAlignment` property of label is used to set how the label is horizontally aligned at the label position determined from the fraction values. The `VerticalAlignment` property is used to set how label is vertically aligned at the label position. 
 
 The following tables illustrates all the possible alignments visually with **offset (0, 0).**
 
@@ -226,7 +227,7 @@ The `TextAlign` property of label allows you to set how the text should be align
 
 ## Wrapping
 
-When text overflows node boundaries, you can control it by using text wrapping. So, it is wrapped into multiple lines. The `wrapping` property of label defines how the text should be wrapped. The following code illustrates how to wrap a text in a node.
+When text overflows node boundaries, you can control it by using text wrapping. So, it is wrapped into multiple lines. The `Wrapping` property of label defines how the text should be wrapped. The following code illustrates how to wrap a text in a node.
 
 {% highlight c# %}
 
@@ -263,7 +264,7 @@ When text overflows node boundaries, you can control it by using text wrapping. 
 
 ## Appearance
 
-You can change the font style of the labels with the font specific properties(`fontSize`,`fontFamily`,`fontColor`.,). The following code illustrates how to customize the appearance of a label.
+You can change the font style of the labels with the font specific properties(`FontSize`,`FontFamily`,`FontColor`.,). The following code illustrates how to customize the appearance of a label.
 
 {% highlight c# %}
 
@@ -330,7 +331,7 @@ The fill and border appearances of the text can also be customized with appearan
 
 ## Drag
 
-A **Label** can be displaced from its original position to any preferred location interactively. Dragging is disabled by default. You can enable label dragging with the `constraints` property of node/connector. The following code illustrates how to enable label **dragging**.
+A **Label** can be displaced from its original position to any preferred location interactively. Dragging is disabled by default. You can enable label dragging with the `Constraints` property of node/connector. The following code illustrates how to enable label **dragging**.
 
 {% highlight c# %}
 
@@ -382,7 +383,7 @@ DiagramProperties model = new DiagramProperties();
 
 ## Rotate
 
-You can rotate the labels to any desired angle. Labels are rotated to the angle that is defined by the `rotateAngle` property of label. The following code illustrates how to rotate a label.
+You can rotate the labels to any desired angle. Labels are rotated to the angle that is defined by the `RotateAngle` property of label. The following code illustrates how to rotate a label.
 
 {% highlight c# %}
 
@@ -425,7 +426,7 @@ N> There is no built-in support to rotate labels interactively.
 
 Double-clicking any label will enables **editing** of that. Double-clicking the node enables first label editing. When the focus of editor is lost, the label for the node is updated.
 
-You can programmatically edit the label by changing the `mode` of the label. The following code illustrates how to edit the label programmatically.
+You can programmatically edit the label by changing the `Mode` of the label. The following code illustrates how to edit the label programmatically.
 
 {% highlight razor %}
 
@@ -443,7 +444,7 @@ diagram.updateLabel(node.name, node.labels[0], options);
 
 ### Read Only labels
 
-Diagram allows to create read only labels. You have to set the `readOnly` property of label to enable/disable the read only mode. The following code illustrates how to enable **readOnly** mode.
+Diagram allows to create read only labels. You have to set the `ReadOnly` property of label to enable/disable the read only mode. The following code illustrates how to enable **readOnly** mode.
 
 {% highlight c# %}
 

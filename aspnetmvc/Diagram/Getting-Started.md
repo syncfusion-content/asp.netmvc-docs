@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Diagram  | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting started with Syncfusion Essential Diagram for ASP.NET MVC
+description: Getting started walk through to create your first Flow Diagram and Organizational Chart Diagram
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -290,7 +290,9 @@ Initializing diagram is already discussed in Flow Diagram > [Initialize diagram]
 
 ### Visualize employee
 
-Following code examples indicate how to define the default appearance of node and connector using defaultSetting. The NodeTemplate is used to update each node based on employee data.
+Following code examples indicate how to define the default appearance of node and connector using defaultSettings. The NodeTemplate is used to update each node based on employee data.
+
+{% tabs %}
 {% highlight c# %}
 
      DiagramProperties model = new DiagramProperties();
@@ -335,6 +337,7 @@ Following code examples indicate how to define the default appearance of node an
     }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Apply org chart layout
 
