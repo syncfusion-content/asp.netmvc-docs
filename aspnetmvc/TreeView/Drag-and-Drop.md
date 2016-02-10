@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop
 
-To perform drag and drop operation in TreeView specify “**AllowDragAndDrop**” as true. It allows you to drag and drop node in all level of same TreeView.
+To perform drag and drop operation in TreeView specify **AllowDragAndDrop** as true. It allows you to drag and drop node in all level of same TreeView.
     
     
     
@@ -33,7 +33,7 @@ N>**Note: TreeView provides much easier option to drop the dragged nodes at any 
 
 ## Position Indicators
 
-TreeView provides much easier option to drop the dragged nodes at any levels by indicator lines with icons such as line, plus/minus and restrict icons while dragging and dropping the nodes. It represents exact position where the node to be dropped as sibling or child.
+TreeView provides much easier option to drop the dragged nodes at any levels by indicator lines with icons such as line, plus/ minus and restrict icons while dragging and dropping the nodes. It represents exact position where the node to be dropped as sibling or child.
 
 <table>
 <tr>
@@ -69,8 +69,10 @@ represents the dragged node to be dropped in between the nodes as siblings
 </td>
 </tr>
 </table>
+
 ## Restriction
-You can restrict the dragged nodes to be dropped at siblings or children’s level by using “**AllowDropSibling**” and ’‘**AllowDropChild’** properties.
+
+You can restrict the dragged nodes to be dropped at siblings or children’s level by using **AllowDropSibling** and **AllowDropChild** properties.
     
     
     
@@ -94,9 +96,9 @@ You can restrict the dragged nodes to be dropped at siblings or children’s lev
     
 ## Drag and drop between Trees
 
-You can drag and drop tree nodes between two TreeView by setting “**AllowDragAndDrop**” as true along with “**AllowDragAndDropAcrossControl**” as true.
+You can drag and drop tree nodes between two TreeView by setting **AllowDragAndDrop** as true along with **AllowDragAndDropAcrossControl** as true.
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -139,7 +141,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in data source and specify the drag and drop settings.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source and specify the drag and drop settings.
     
     
     

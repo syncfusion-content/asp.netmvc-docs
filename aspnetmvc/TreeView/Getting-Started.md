@@ -13,13 +13,13 @@ This section explains briefly about how to create a TreeView in ASP.NET MVC plat
 
 ## Create your first TreeView in MVC
 
-Create a MVC Project and add necessary Dll’s, CSS and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started# "") Documentation. After creating this project, you can create a TreeView in following ways.
+Create a MVC Project and add necessary Dll’s, CSS and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation. After creating this project, you can create a TreeView in following ways.
 
 ## TreeView using Helper element
 
-You can create a tree using “Items” API of TreeView control. Here there is no necessary to use a DataSource for rendering TreeView. 
+You can create a tree using “Items” API of TreeView control. Here there is no necessary to use a data source for rendering TreeView. 
 
-In the View page, add TreeView helper as shown below. It will render the TreeView with specified items.
+In the view page, add TreeView helper as shown below. It will render the TreeView with specified items.
     
     {% highlight razor %}
 
@@ -45,13 +45,13 @@ In the View page, add TreeView helper as shown below. It will render the TreeVie
                 
     {% endhighlight %}       
     
-## Tree View using Data Binding
+## TreeView using Data Binding
 
 Another way of creating TreeView is binding with the data source, you can bind local data or remote data source to create a TreeView. 
 
 Render TreeView with local data source.
 
-In the Model page, specify the TreeView node properties as shown below.
+In the model page, specify the TreeView node properties as shown below.
     
     
 
@@ -94,7 +94,7 @@ In the controller page, create a data list which contains the details about tree
     
     
     
-Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource(IEnumerable).html# "") property and mapping data fields with respect to the mapper field in order to form TreeView.
+Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
     
     
     
@@ -142,11 +142,11 @@ Render TreeView with remote data source
     
     
     
-N>**Note: In remote data source, [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager# "") is used to process the data from services and the value has been assigned to DataSource.**
+N>**Note: In remote data source, [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager) is used to process the data from services and the value has been assigned to DataSource.**
 
 ## Create Instance for TreeView
 
-You can create an instance for existing TreeView in following ways. Once a reference has been established, you can use the [API’s](http://help.syncfusion.com/js/api/ejtreeview# "") of TreeView to control its behavior.
+You can create an instance for existing TreeView in following ways. Once a reference has been established, you can use the [API’s](http://help.syncfusion.com/js/api/ejtreeview) of TreeView to control its behavior.
     
         
     {% highlight javascript %}
@@ -163,11 +163,11 @@ You can create an instance for existing TreeView in following ways. Once a refer
     
     
     
-N>**Note: To configure the API settings after TreeView creation, please refer [API configuration](http://help.syncfusion.com/js/api-configuration# ""), [Invoking Methods](http://help.syncfusion.com/js/invoking-methods# "")**.
+N>**Note: To configure the API settings after TreeView creation, please refer [API configuration](http://help.syncfusion.com/js/api-configuration), [Invoking Methods](http://help.syncfusion.com/js/invoking-methods)**.
  
 ## TreeView events
 
-EJ MVC TreeView supports all the [events](http://help.syncfusion.com/js/api/ejtreeview#events "") which is available in EJ TreeView. Refer the following code example to specify an event using HtmlHelper of EJ MVC TreeView.
+EJ MVC TreeView supports all the [events](http://help.syncfusion.com/js/api/ejtreeview#events) which is available in EJ TreeView. Refer the following code example to specify an event using HtmlHelper of EJ MVC TreeView.
     
     
     
