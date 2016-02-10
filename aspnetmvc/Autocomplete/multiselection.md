@@ -1,50 +1,37 @@
 ---
 layout: post
-title: Getting Started | AutoComplete | ASP.NET MVC | Syncfusion
-description: Getting Started
+title: Multiselection | AutoComplete | ASP.NET MVC | Syncfusion 
+description: Multiselection
 platform: aspnetmvc
 control: AutoComplete
 documentation: ug
 ---
 
-# Getting Started
+# MultiSelection
 
-This section helps to understand the getting started of the AutoComplete widget with the step-by-step instructions.
+The AutoComplete widget helps you to select multiple values from the suggestion list using the `MultiSelectMode` property. 
 
-## Create an AutoComplete
+There are two types of multi-selection mode.
 
-Initialize the corresponding AutoComplete widget in the view page.
+1. VisualMode – Selection values are displayed in separate box with close button.
 
-{% highlight razor %}
+2. Delimiter – Selection values are separated using the delimiter character which can be specified using `DelimiterChar` property.
 
-//Initialize the Autotomplete Control
-
-@Html.EJ().Autocomplete("autocomplete")
-
-
-{% endhighlight %}
-
-
-## Databinding
-
-The data for the suggestion list can be populated using the `DataSource` property.
-
-In the Model page, define a Class with `Text` field property.
+In the Model page, define the Class name with Textfield property.
 
 In the Controller, create a list of “Cars” class and add the data.
 
-In the View page, add the Autocomplete helper and bind the data.
+In the View page, add the Autocomplete helper and bind the data as shown below.
 
-
-{% tabs %}        
+{% tabs %}
 {% highlight c# %}
 
 //define model class with the corresponding property
 
-public class Cars
-    {
-        public string Text { get; set; }
-    }
+public class Cars 
+{
+    public string Text { get; set; }
+}
 
 //specify desired datasource data by using the model class properties
 
@@ -81,13 +68,15 @@ public partial class AutocompleteController : Controller
 
 {% highlight razor %}
 
-// In the View page, configure Autocomplete with binding corresponding data
+// In the View page, configure Autocomplete with binding corresponding data and specify MultiSelectMode property
         
 @{
-     Html.EJ()
+    Html.EJ()
         .Autocomplete("autocomplete")
         .Datasource((IEnumerable<Cars>)ViewBag.datasource)
         .AutocompleteFields(f => f.Text("Text")
+        .Width("205")
+        .MultiSelectMode(MultiSelectModeTypes.VisualMode)
         .Render();
 }
 
@@ -96,31 +85,15 @@ public partial class AutocompleteController : Controller
 {% endtabs %}
 
 
-![Data binding](getting-started_images\getting-started_img1.png)
-
-## Enable Popup Button
-
-This button helps you to show all the available suggestions on clicking it.
-
-{% highlight razor %}
-
-// Display popup button in Autocomplete,by enabling ShowPopupButton property
-        
-@{
-     Html.EJ()
-        .Autocomplete("autocomplete")
-        .Datasource((IEnumerable<Cars>)ViewBag.datasource)
-        .AutocompleteFields(f => f.Text("Text")
-        .ShowPopupButton(true)    
-        .Render();
-}
-
-
-{% endhighlight %}
+![AutoComplete-Multiselection](multiselection_images\multiselection_img1.png)
 
 
 
-![Enable popup button](getting-started_images\getting-started_img2.png)
+
+
+
+
+
 
 
 
