@@ -1,233 +1,164 @@
 ---
 layout: post
-title: Data Binding | AutoComplete | ASP.NET MVC | Syncfusion
-description: data-binding
-platform: ejmvc
+title: Data binding | AutoComplete | ASP.NET MVC | Syncfusion
+description: Data binding
+platform: aspnetmvc
 control: AutoComplete
 documentation: ug
 ---
 
-# Data-Binding
+# Data Binding
 
-In order to render the AutoComplete control, the data needs to be bound to it in a proper way. The following sub-properties provide a way to bind either the local or remote data to the AutoComplete widget by binding the appropriate data fields to the corresponding options.
+In order to render the AutoComplete control, the data needs to be bound to it in a proper way. The below sections explains about how to bind either the local or remote data to the AutoComplete widget.
 
 ## Fields
 
-### DataSource 
+The AutoComplete widget has an `AutocompleteFields` property (object) which holds the properties to map with `Datasource` fields. For example, the field object has a `Text` property which is necessary to map with specific field in the `Datasource` to render the suggestion items in the AutoComplete widget.
 
-This property assigns the List of objects to the AutoComplete control. Either local data or remote data can be specified.  
+The field object contains the following properties.
 
-### Query 
+* Text
 
-It accepts the data of object type, usually the query string to fetch the required data from a specific table based on certain condition. This property is optional hence when it is not specified the entire records that are initially assigned through DataSource are taken into consideration.
+* Key
 
-### Key
+* GroupBy
 
-It maps the corresponding key field name from the data table or the List of objects that is assigned to the DataSource with the Key property of the AutoComplete control. The Key value that is fetched from the table is unique for each records.
+* HtmlAttributes
 
-### Text
 
-It maps the corresponding Text field name from the data table or the List of Objects that is assigned to the DataSource with the Text property of the AutoComplete control. The text value that is fetched from the table represents the value to be displayed in the AutoComplete textbox.
-
-### Category
-
-It maps the Category field name from the data table or the List of Objects that is assigned to the DataSource. The Category value that is fetched from the table is made available when Grouping is enabled.
-
-### HtmlAttributes
-
-This allows you to map the CSS styles or classes to the corresponding data from table or the List of Objects data with the AutoComplete items. The HtmlAttributes value customizes the AutoComplete items based on html styling or class assigned to it. 
 
 ## Local data
 
-AutoComplete provides extensive data binding support to populate AutoComplete items, so that the values are mapped to the AutoComplete fields, namely Key and Text. DataBinding helps you bind a key value pair to AutoComplete textbox. Key field takes the unique id of the dataSource elements. Text field gets the value to be displayed in the AutoComplete textbox.
+AutoComplete provides extensive data binding support to populate AutoComplete items. To achieve this, you need to map the corresponding fields with the column names in the Datasource. 
 
-### Defining the Local data for AutoComplete
 
-The following steps explain local data binding to an AutoComplete textbox.
+In the Model page, define the Class name as Countries with Name and Index field property.
 
-1. In the Controller page, define the Class with key and text field. Then create a List of that class and add the data.
+In the Controller, create a list of “Countries” class and add the data as below.
 
-   ~~~ csharp
-			
-			public class CarsList
+In the View page, add the Autocomplete helper and bind the data. Here the Name and Index fields are mapped with `Text` and `Key` properties of the field object respectively.
 
-			{
+{% tabs %}
 
-			  public int UniqueKey { get; set; }
+{% highlight c# %}
 
-			  public string Text { get; set; }
+//define model class with the corresponding property
 
-			}
+public class Countries
+    {
+        public string Name { get; set; }
+        public string Index { get; set; }
+    }
 
+//specify desired datasource data by using the model class properties
 
+public partial class AutocompleteController : Controller
+{
+    public ActionResult Index()
+       {
+            List<Countries> countries = new List<Countries>();
+            countries.Add(new Countries { Name = "Austria", Index = "C1" });
+            countries.Add(new Countries { Name = "Australia", Index = "C2" });
+            countries.Add(new Countries { Name = "Antarctica", Index = "C3" });
+            countries.Add(new Countries { Name = "Bangladesh", Index = "C4" });
+            countries.Add(new Countries { Name = "Belgium", Index = "C5" });
+            countries.Add(new Countries { Name = "Brazil", Index = "C6" });
+            countries.Add(new Countries { Name = "Canada", Index = "C7" });
+            countries.Add(new Countries { Name = "China", Index = "C8" });
+            countries.Add(new Countries { Name = "Cuba", Index = "C9" });
+            countries.Add(new Countries { Name = "Denmark", Index = "C10" });
+            countries.Add(new Countries { Name = "Dominica", Index = "C11" });
+            countries.Add(new Countries { Name = "Europe", Index = "C12" });
+            countries.Add(new Countries { Name = "Egypt", Index = "C13" });
+            countries.Add(new Countries { Name = "England", Index = "C14" });
+            countries.Add(new Countries { Name = "India", Index = "C15" });
+            countries.Add(new Countries { Name = "Indonesia", Index = "C16" });
+            ViewBag.datasource = countries;
+            return View();
+        }
+}
 
-			public partial class AutocompleteController : Controller
 
-			{
+{% endhighlight %}
 
-				List<CarsList> cars = new List<CarsList>();
+{% highlight razor %}
 
-				public ActionResult AutocompleteFeatures()
+// In the View page, configure Autocomplete with binding corresponding data
+    
+@{
+        Html.EJ()
+            .Autocomplete("autocomplete")
+            .Datasource((IEnumerable<Countries>)ViewBag.datasource)
+            .AutocompleteFields(f => f.Text("Name").Key("Index"))
+            .Width("205")
+            .Render();
+}
 
-				{
+{% endhighlight %}
+ {% endtabs %}
 
-					cars.Add(new CarsList { UniqueKey = 1, Text = "Audi S6" });
 
-					cars.Add(new CarsList { UniqueKey = 2, Text = "Austin-Healey" });
+![AutoComplete-LocalData](data-binding_images\data-binding_img1.png)
 
-					cars.Add(new CarsList { UniqueKey = 3, Text = "Alfa Romeo" });
-
-					cars.Add(new CarsList { UniqueKey = 4, Text = "Aston Martin" });
-
-					cars.Add(new CarsList { UniqueKey = 5, Text = "BMW 7" });
-
-					cars.Add(new CarsList { UniqueKey = 6, Text = "Bentley Mulsanne" });
-
-					cars.Add(new CarsList { UniqueKey = 7, Text = "Bugatti Veyron" });
-
-					cars.Add(new CarsList { UniqueKey = 8, Text = "Chevrolet Camaro" });
-
-					cars.Add(new CarsList { UniqueKey = 9, Text = "Cadillac" });
-
-					cars.Add(new CarsList { UniqueKey = 10, Text = "Duesenberg J " });
-
-					cars.Add(new CarsList { UniqueKey = 11, Text = "Dodge Sprinter" });
-
-					cars.Add(new CarsList { UniqueKey = 12, Text = "Elantra" });
-
-					cars.Add(new CarsList { UniqueKey = 13, Text = "Excavator" });
-
-					cars.Add(new CarsList { UniqueKey = 14, Text = "Ford Boss 302" });
-
-					cars.Add(new CarsList { UniqueKey = 15, Text = "Ferrari 360" });
-
-					cars.Add(new CarsList { UniqueKey = 16, Text = "Ford Thunderbird" });
-
-					cars.Add(new CarsList { UniqueKey = 17, Text = "GAZ Siber" });
-
-					cars.Add(new CarsList { UniqueKey = 18, Text = "Honda S2000" });
-
-					cars.Add(new CarsList { UniqueKey = 19, Text = "Hyundai Santro" });
-
-					cars.Add(new CarsList { UniqueKey = 20, Text = "Isuzu Swift" });
-
-					cars.Add(new CarsList { UniqueKey = 21, Text = "Infiniti Skyline" });
-
-					cars.Add(new CarsList { UniqueKey = 22, Text = "Infiniti Skyline" });
-
-					cars.Add(new CarsList { UniqueKey = 23, Text = "Kia Sedona EX" });
-
-					cars.Add(new CarsList { UniqueKey = 24, Text = "Koenigsegg Agera" });
-
-					cars.Add(new CarsList { UniqueKey = 25, Text = "Lotus Esprit" });
-
-					cars.Add(new CarsList { UniqueKey = 26, Text = "Lamborghini Diablo" });
-
-					cars.Add(new CarsList { UniqueKey = 27, Text = "Mercedes-Benz" });
-
-					cars.Add(new CarsList { UniqueKey = 28, Text = "Mercury Coupe" });
-
-					cars.Add(new CarsList { UniqueKey = 29, Text = "Maruti Alto 800" });
-
-					cars.Add(new CarsList { UniqueKey = 30, Text = "Nissan Qashqai" });
-
-					cars.Add(new CarsList { UniqueKey = 31, Text = "Oldsmobile S98" });
-
-					cars.Add(new CarsList { UniqueKey = 32, Text = "Opel Superboss" });
-
-					cars.Add(new CarsList { UniqueKey = 33, Text = "Porsche 356" });
-
-					cars.Add(new CarsList { UniqueKey = 34, Text = "Pontiac Sunbird" });
-
-					cars.Add(new CarsList { UniqueKey = 35, Text = "Scion SRS/SC/SD" });
-
-					cars.Add(new CarsList { UniqueKey = 36, Text = "Saab Sportcombi" });
-
-					cars.Add(new CarsList { UniqueKey = 37, Text = "Subaru Sambar" });
-
-					cars.Add(new CarsList { UniqueKey = 38, Text = "Suzuki Swift" });
-
-					cars.Add(new CarsList { UniqueKey = 39, Text = "Triumph Spitfire" });
-
-					cars.Add(new CarsList { UniqueKey = 40, Text = "Toyota 2000GT" });
-
-					cars.Add(new CarsList { UniqueKey = 41, Text = "Volvo P1800" });
-
-					cars.Add(new CarsList { UniqueKey = 42, Text = "Volkswagen Shirako" });
-
-					cars.Add(new CarsList { UniqueKey = 43, Text = "Ford Boss 302" });
-
-					cars.Add(new CarsList { UniqueKey = 44, Text = "Ferrari 360" });
-
-					cars.Add(new CarsList { UniqueKey = 45, Text = "Ford Thunderbird" });
-
-					ViewBag.datasource = cars;
-
-					return View(); 
-
-				 } 
-
-			}
-   ~~~
-   
-
-2. In the View page, add Autocomplete helper and map the Local   data list to corresponding DataSource and AutoCompleteFields.
-
-
-   ~~~ cshtml
-
-	@Html.EJ().Autocomplete("autocomplete")
-
-	.Datasource((IEnumerable<CarsList>)ViewBag.datasource)
-
-	.AutocompleteFields(field => field.Key("UniqueKey").Text("Text"))
-   
-   ~~~
-   
-
-
-The following image is the output for AutoComplete control with local data binding.
-
-
-
-![](Data-Binding_images/Data-Binding_img1.png)
-
-AutoComplete with local data-binding
-{:.caption}
 
 ## Remote data
 
-AutoComplete provides remote data binding support to populate AutoComplete items, so that the values are mapped to the AutoComplete fields from a remote web service using DataManager and Query. 
+We can bind the data for the Autocomplete from any server that is located as a remote web service. By using `Query` options, you can pass the query string to filter the data that helps to avoid rendering the excessive data. 
 
-DataManager is used to manage relational data. It supports CRUD that is Create, Read, Update, and Destroy, in individual requests and batches. DataManager uses two different classes, ej.DataManager, for processing and ej.Query, for serving data. ej.DataManager communicates with dataSource and ej.Query generates data queries that are read by the DataManager.
+N> Use [ejQuery](http://help.syncfusion.com/js/api/ejquery) to set the `Query` property.
 
-### Configuring remote data for AutoComplete
-
-The following steps explain the remote data binding to an AutoComplete textbox.
+Here the ContactName and SupplierID fields are mapped with Text and Key properties respectively, of the field object.
 
 
+{% highlight razor %}
 
-1. In the View page, map the Local data list to the corresponding DataSource and AutoCompleteFields.
+@{
+    Html.EJ()
+        .Autocomplete("autocomplete")
+        .Datasource(d => d.URL("http://mvc.syncfusion.com/Services/").Offline(false))
+        .Query("ej.Query().from('Suppliers').select('SupplierID', 'ContactName')")
+        .AutocompleteFields(f => f.Text("ContactName").Key("SupplierID"))
+        .Width("205")
+        .Render();
+}
 
 
-{% highlight CSHTML %}
+{% endhighlight %}
 
-@Html.EJ().Autocomplete("autocomplete")
 
-.Datasource(d => d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))
 
-.Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')")
+![AutoComplete-OData](data-binding_images\data-binding_img2.png)
 
-.AutocompleteFields(f => f.Text("ComponentName").Key("ComponentId"))
+
+### Handling errors
+
+In remote binding, the server might not return data sometimes due to various reasons. In such cases we need to handle the error properly. We can handle this using the “[ActionFailure](http://help.syncfusion.com/js/api/ejautocomplete)” event.
+
+{% highlight razor %}
+
+@{
+    Html.EJ()
+        .Autocomplete("autocomplete")
+        .Datasource(d => d.URL("http://mvc.syncfusion.com/Services/").Offline(false))
+        .Query("ej.Query().from('Suppliers').select('SupplierID', 'ContactName')")
+        .AutocompleteFields(f => f.Text("ContactName").Key("SupplierID"))
+        .Width("205")
+        .ClientSideEvents(evt => evt.ActionFailure("onRequestFailure "))
+        .Render();
+}
+    
+<script>
+    function onRequestFailure(args) {
+        //Error handler
+    }
+</script>
+
 
 {% endhighlight %}
 
 
 
 
-The following image is the output for AutoComplete control with remote data binding.
 
-![](Data-Binding_images/Data-Binding_img2.png)
 
-AutoComplete with remote data binding
-{:.caption}
+

@@ -1,85 +1,44 @@
 ---
 layout: post
 title: Keyboard Interaction | AutoComplete | ASP.NET MVC | Syncfusion
-description: keyboard interaction
-platform: ejmvc
+description: Keyboard Interaction
+platform: aspnetmvc
 control: AutoComplete
 documentation: ug
 ---
 
 # Keyboard Interaction
 
-You can use keyboard shortcut keys as an alternative to the mouse while using the AutoComplete widget. The AutoComplete widget allows you to perform all kinds of actions using keyboard shortcuts.
+You can use Keyboard shortcut keys as an alternative for mouse actions to interact with the Autocomplete widget. The keyboard interaction will be enabled by default in the Autocomplete widget. Please refer the below table for details about short cut keys and its corresponding usage.
 
-_Keyboard shortcut keys_
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><th>
-Description</th></tr>
+<td>
+<b>Shortcut Key</b></td><td>
+<b>Usage</b></td></tr>
 <tr>
 <td>
-{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
-Focuses into the AutoComplete text box</td></tr>
+<kbd>Down</kbd></td><td>
+Moves to next item in the suggestion list</td></tr>
 <tr>
 <td>
-Up</td><td>
-Moves to previous item in pop up</td></tr>
+<kbd>Up</kbd></td><td>
+Moves to previous item in the suggestion list</td></tr>
 <tr>
 <td>
-Down</td><td>
-Moves to next item in pop up</td></tr>
-<tr>
-<td>
-Enter</td><td>
+<kbd>Enter</kbd></td><td>
 Selects the focused item</td></tr>
 <tr>
 <td>
-Esc</td><td>
-Closes the popup</td></tr>
+<kbd>Ctrl</kbd>  +  <kbd>Down</kbd></td><td>
+Opens the suggestion list</td></tr>
+<tr>
+<td>
+<kbd>ESC</kbd></td><td>
+Closes the suggestion list</td></tr>
 </table>
 
 
-## Configure Keyboard Interaction
 
-The following steps explain how you can enable keyboard interaction for an AutoComplete textbox.
-
-
-
-1. In the View page, define the AutoComplete control.
-
-
-   ~~~ cshtml 
-
-		@*Refer to the DataSource defined in Local Databinding Step 1 *@
-
-		@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
-
-		htmlAttribute.Add("accesskey", "j");
-
-		}
-
-
-		@(Html.EJ().Autocomplete("autocomplete").HtmlAttributes(htmlAttribute)
-
-			.Datasource((IEnumerable<CarsList>
-
-			)ViewBag.datasource)
-
-			.AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
-
-			.Width("200px"))    
-
-   ~~~
-   
-
-2. Run the sample, press AccessKey + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
-
-
-
-   ![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
-
-	AutoComplete focused with keyboard shortcut
-	{:.caption}
 

@@ -1,107 +1,97 @@
 ---
 layout: post
 title: Grouping | AutoComplete | ASP.NET MVC | Syncfusion
-description: grouping
-platform: ejmvc
+description: Grouping
+platform: aspnetmvc
 control: AutoComplete
 documentation: ug
 ---
 
 # Grouping
 
-AutoComplete widget provides Grouping support for the suggestions list based on the category specified in the dataSource. By default AllowGrouping is set to ‘False’. To enable Grouping for your AutoComplete widget, set the value to ‘True’.
-
-## Configuring Grouping for AutoComplete
-
-The following steps explain you how to configure Grouping for an AutoComplete textbox.
+The suggestion list items can be grouped by providing a header for each set of items. The grouping will be defined based on the `GroupBy` property in fields object.
 
 
+In the Model page, define the Class name as Countries with `Text` and `Category` field property.
 
-1. In the Controller page, define the data list with Key, Text, and Category field for grouping.
+In the Controller page, create a List of “Countries” class and add the data.
 
+In the View page, add the Autocomplete helper and bind the data.
 
-   ~~~ csharp
-   
-		public class CarsList
-
-		{
-
-			public int UniqueKey { get; set; }
-
-			public string Text { get; set; }
-
-			public string Category { get; set; }
-
-		}
-
-		public partial class AutocompleteController : Controller
-
-		{
-
-			List<CarsList> cars = new List<CarsList>();
-
-			public ActionResult AutocompleteFeatures()
-
-			{
-
-					cars.Add(new CarsList { UniqueKey = 1, Text = "Audi S6", Category = "Audi" });
-
-					cars.Add(new CarsList { UniqueKey = 2, Text = "Austin-Healey", Category = "Austin" });
-
-					cars.Add(new CarsList { UniqueKey = 3, Text = "BMW 7", Category = "BMW" });
-
-					cars.Add(new CarsList { UniqueKey = 4, Text = "Chevrolet Camaro", Category = "Chevrolet" });
-
-					cars.Add(new CarsList { UniqueKey = 5, Text = "Mercedes-Benz", Category = "Mercedes" });
-
-					cars.Add(new CarsList { UniqueKey = 6, Text = "Toyota 2000GT", Category = "Toyota" });
-
-					cars.Add(new CarsList { UniqueKey = 7, Text = "Volvo P1800", Category = "Volvo" });
-
-					cars.Add(new CarsList { UniqueKey = 8, Text = "Audi Avant RS 2", Category = "Audi" });
-
-					cars.Add(new CarsList { UniqueKey = 9, Text = "Audi S4 quattro", Category = "Audi" });
-
-					cars.Add(new CarsList { UniqueKey = 10, Text = "BMW M Roadster E85", Category = "BMW" });
-
-					cars.Add(new CarsList { UniqueKey = 11, Text = "Mercedes-Benz Sprinter", Category = "Mercedes" });
-
-					cars.Add(new CarsList { UniqueKey = 12, Text = "Corvette", Category = "Chevrolet" });
-
-					cars.Add(new CarsList { UniqueKey = 13, Text = "Volvo P1800", Category = "Volvo" });
-
-					ViewBag.datasource = cars;
-
-					return View();
-
-			} 
-
-		}
-
-   ~~~
-   
-
-2. In the View page, define the AutoComplete control and enable AllowGrouping property.
+{% tabs %}
+{% highlight c# %}
 
 
-   ~~~ html
+//define model class with the corresponding property
 
-     @Html.EJ().Autocomplete("autocomplete")
+public class Countries
+    {
+        public string Text { get; set; }
+        public string Category { get; set; }
+    }
 
-     .Datasource((IEnumerable<CarsList>)ViewBag.datasource).Width(“205”)
+//specify desired datasource data by using the model class properties
 
-     .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category")).AllowGrouping(true)
-
-   ~~~
-  
+public partial class AutocompleteController : Controller
+    {
+        public ActionResult Index()
+            {
+                List<Countries> countries = new List<Countries>();
+                countries.Add(new Countries { Text = "Austria", Category = "A" });
+                countries.Add(new Countries { Text = "Australia", Category = "A" });
+                countries.Add(new Countries { Text = "Bangladesh", Category = "B" });
+                countries.Add(new Countries { Text = "Brazil", Category = "B" });
+                countries.Add(new Countries { Text = "Canada", Category = "C" });
+                countries.Add(new Countries { Text = "Cuba", Category = "C" });
+                countries.Add(new Countries { Text = "Denmark", Category = "D" });
+                countries.Add(new Countries { Text = "Dominica", Category = "D" });
+                countries.Add(new Countries { Text = "Europe", Category = "E" });
+                countries.Add(new Countries { Text = "Egypt", Category = "E" });
+                countries.Add(new Countries { Text = "India", Category = "I" });
+                countries.Add(new Countries { Text = "Indonesia", Category = "I" });
+                countries.Add(new Countries { Text = "France", Category = "F" });
+                countries.Add(new Countries { Text = "Finland", Category = "F" });
+                countries.Add(new Countries { Text = "Germany", Category = "G" });
+                countries.Add(new Countries { Text = "Greece", Category = "G" });
+                countries.Add(new Countries { Text = "Japan", Category = "J" });
+                countries.Add(new Countries { Text = "Jordan", Category = "J" });
+                countries.Add(new Countries { Text = "Madagascar", Category = "M" });
+                countries.Add(new Countries { Text = "Midway Islands", Category = "M" });
+                countries.Add(new Countries { Text = "Nepal", Category = "N" });
+                countries.Add(new Countries { Text = "Netherlands", Category = "N" });
+                countries.Add(new Countries { Text = "Qatar", Category = "Q" });
+                countries.Add(new Countries { Text = "Romania", Category = "R" });
+                countries.Add(new Countries { Text = "Scotland", Category = "S" });
+                countries.Add(new Countries { Text = "Tibet", Category = "T" });
+                countries.Add(new Countries { Text = "Zambia", Category = "Z" });
+                countries.Add(new Countries { Text = "Zimbabwe", Category = "Z" });
+                ViewBag.datasource = countries;
+                return View();
+            }
+        }
 
 
 
+{% endhighlight %}
 
-The following image is the output for AutoComplete control that provides Grouping.
+{% highlight razor %}
 
-![](Grouping_images/Grouping_img1.png)
+// In the View page, configure Autocomplete with binding corresponding data and group by the datas
 
-AutoComplete popup panel with grouping
-{:.caption}
+@{
+    Html.EJ()
+        .Autocomplete("autocomplete")
+        .Datasource((IEnumerable<Countries>)ViewBag.datasource)
+        .AutocompleteFields(f => f.Text("Text").GroupBy("Category"))
+        .FilterType(FilterOperatorType.Contains)
+        .Render();
+}
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![AutoComplete-Grouping](grouping_images\grouping_img1.png)
+
+
 
