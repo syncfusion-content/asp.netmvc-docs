@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Automatic Layout | Diagram | ASP.NET MVC | Syncfusion
-description: automatic layout
+title: Layout nodes and connectors in an organized structure
+description: How to arrange nodes by using the automatic layouts?
 platform: ejmvc
 control: Diagram
 documentation: ug

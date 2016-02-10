@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding | Diagram | ASP.NET MVC | Syncfusion
-description: data binding
+title: Populate Diagram from external data sources
+description: How to populate the Diagram from the local data, remote data, or html tables?
 platform: ejmvc
 control: Diagram
 documentation: ug

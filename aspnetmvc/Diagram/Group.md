@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Group | Diagram | ASP.NET MVC | Syncfusion
-description: group
+title: Group two or more relevant objects
+description: How to group two or more nodes and connectors?
 platform: ejmvc
 control: Diagram
 documentation: ug
