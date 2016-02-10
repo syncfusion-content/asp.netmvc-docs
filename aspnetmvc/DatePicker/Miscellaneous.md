@@ -1,206 +1,69 @@
 ---
 layout: post
-title: Miscellaneous | DatePicker | ASP.NET MVC | Syncfusion
-description: miscellaneous
+title: Miscellaneous
+description: Configure start day of week, step month, and enable/disable
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
+# Miscellaneous 
 
-# Miscellaneous
+## Start Day
 
-## Define height
+By default EJMVC DatePicker calendar starts with "Sunday" and ends with "Monday". You can redefine this start day by using [StartDay](http://help.syncfusion.com/js/api/ejdatepicker#members:startday) property.
 
-It specifies the height of the DatePicker input text. The “Height” property allows you to set the maximum height of the DatePicker. The value set to this property should be string or Numer type.
+Refer below code to start Wednesday as start day. 
 
-The following steps explain you how to specify the height of the DatePicker input text.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
 
 {% highlight cshtml %}
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized height*@
+    @*sets start day as Wednesday in calendar*@
 
-@Html.EJ().DatePicker("datepicker").Height("22")
+    @Html.EJ().DatePicker("datepick").StartDay(3)
 
 {% endhighlight %}
 
 
-## Define width
+## Step Months
 
-It specifies the width of the DatePicker input text. The “Width” property allows you to set the maximum width of DatePicker. The value set to this property should be string or Numer type
+The EJMVC DatePicker calendar allows you to quick navigate back and forth from one month to previous or next month by clicking the arrow button. By default it is navigate one by one month. You can also navigate by skipping months in odd or even or any count by using [StepMonths](http://help.syncfusion.com/js/api/ejdatepicker#members:stepmonths) property. 
 
-The following steps explain you how to specify the width of the DatePicker input text.
 
-1. In the CSHTML page, add the following code to render the DatePicker widget.
 {% highlight cshtml %}
 
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized width*@
+    @*skips the one months from current month(July to Sept to Nov)*@
 
-@Html.EJ().DatePicker("datepicker").Width("200")
+    @Html.EJ().DatePicker("datepick").StepMonths(2)
+
 
 {% endhighlight %}
 
-## Highlight Section
 
-Highlight section highlights the current month, current week, current workdays. You can highlight a week, month, and work days by using “HighlightSection” property.
+## Read Only
 
-_Highlight Selection_
-
-<table>
-<tr>
-<th>
-Name </th><th>
-Description</th></tr>
-<tr>
-<td>
-Month</td><td>
-Highlight the Current Month.</td></tr>
-<tr>
-<td>
-Week</td><td>
-Highlight the Current Week.</td></tr>
-<tr>
-<td>
-WorkDays</td><td>
-Highlight the Current Workdays</td></tr>
-<tr>
-<td>
-None</td><td>
-Don’t Highlight Anything</td></tr>
-</table>
+You can make EJMVC DatePicker as read only by setting [ReadOnly](http://help.syncfusion.com/js/api/ejdatepicker#members:readonly) property as true. It allows only to read the value and it canâ€™t be changed by interaction.
 
 
-The following steps explain you how to highlight the current week section.
+{% highlight cshtml %}
 
-1. In the CSHTML page, add the following code to render the DatePicker widget.
+    @*sets DatePicker as read only*@
 
-   ~~~ cshtml
+    @Html.EJ().DatePicker("datepick").ReadOnly(true)
 
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized highlight section*@
+{% endhighlight %}
 
-	@Html.EJ().DatePicker("datepicker").HighlightSection(Section.Week)
 
-   ~~~
+## Enable or Disable
+
+You can enable or disable the EJMVC DatePicker textbox by using [Enabled](http://help.syncfusion.com/js/api/ejdatepicker#members:enabled) property. In inline mode DatePicker calendar also gets enabled or disabled. 
+
+
+{% highlight cshtml %}
+
+    @*disables the DatePicker textbox*@
+
+    @Html.EJ().DatePicker("datepick").Enabled(false)
  
 
-
-
-2. The following screenshot displays the output for the above code.   
-
-![](Miscellaneous_images/Miscellaneous_img1.png)
-
-Highlight a current week in DatePicker
-
-## ReadOnly
-
-Readonly property indicates that the DatePicker value can only be read. You can’t edit the value in DatePicker and also the DatePicker calendar popup is not shown. By default “ReadOnly” Boolean value is set to ‘false’.
-
-The following steps explain you how to set the DatePicker value as readonly.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-
-{% highlight cshtml %}
-
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized Readonly*@
-
-@Html.EJ().DatePicker("datepicker").ReadOnly(true)
-
 {% endhighlight %}
 
-## Show Footer
-
-It allows to Show Footer in DatePicker calendar to select today date. By default “ShowFooter” property is set as ‘true’ in DatePicker widget. You can hide footer in the DatePicker when this property is set to “false”.
-
-The following steps explain you how to hide footer in the DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-{% highlight cshtml %}
-
-@*Add the following code example to the corresponding CSHTML page to hide footer in DatePicker widget*@
-
-@Html.EJ().DatePicker("datepicker").ShowFooter(false)
-
-{% endhighlight %}
-
-## Show popup button
-
-It shows the date icon button at right side of textbox and shows DatePicker popup on clicking it that can be achieved by using “ShowPopupButton “property. By default “ShowPopupButton” property is set as “true” in DatePicker widget. 
-
-The following steps explain you how to hide the popupbutton in the DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to hide popupbutton in DatePicker widget*@
-
-	@Html.EJ().DatePicker("datepicker").ShowPopupButton(false)
-
-   ~~~
-   {:.prettyprint }
-
-
-2. The following screenshot displays the output for the above code.
-
-![](Miscellaneous_images/Miscellaneous_img2.png)
-
-Showpopupbutton in DatePicker
-{:.caption}
-
-## Show rounded corner
-
-DatePicker input is displayed in rounded corner style, when this property is set to ‘true’. By default “ShowRoundedCorner” property is set as “false” in DatePicker widget.
-
-The following steps explain you how to show Roundedcorner in the DatePicker.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized rounder corner*@
-
-	@Html.EJ().DatePicker("datepicker").ShowRoundedCorner(true)
-
-   ~~~
-
-
-
-
-2.  The following screenshot displays the output for the above code.
-
-
-
-![](Miscellaneous_images/Miscellaneous_img3.png)
-
-Rounded corner style in DatePicker
-{:.caption}
-
-## Show ToolTip
-
-DatePickerTooltip is displayed while you hover the date. By default “ShowTooltip” property as “true” in DatePicker widget.
-
-The following steps explain you how to hide the ToolTip in the DatePicker.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized tooltip*@
-
-	@Html.EJ().DatePicker("datepicker").ShowTooltip(true)
-
-   ~~~
-   
-
-
-2. The following screenshot displays the output for the above code.
-
-
-
-![](Miscellaneous_images/Miscellaneous_img4.png)
-
-Hide the Tooltip in DatePicker
-{:.caption}
