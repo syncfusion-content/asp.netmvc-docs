@@ -9,9 +9,9 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, Template Option
 
 # Template Option
 
-Tree nodes can be customized by using ‘**Template’** property. Treeview template option requires addition JS library called**’JsRender’**, which helps to create the structured way of tree nodes with simple codes and increased performance. To know more about JsRender - [http://www.jsviews.com/](http://www.jsviews.com/# "") .  
+Tree nodes can be customized by using **Template** property. Treeview template option requires addition JS library called **JsRender**, which helps to create the structured way of tree nodes with simple codes and increased performance. To know more about JsRender - [http://www.jsviews.com/](http://www.jsviews.com/#) .  
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -69,7 +69,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, specify template format and add TreeView helper
+In the view page, specify template format and add TreeView helper.
     
     
     
@@ -179,13 +179,13 @@ In the View page, specify template format and add TreeView helper
     
 **Custom action in nodes**
 
-You can able to perform custom action in TreeView template node. You can able to perform node delete operation while clicking delete icon by using [removeNode](http://help.syncfusion.com/js/api/ejtreeview#methods:removenode "") method TreeView as shown in below code example.
+You can able to perform custom action in TreeView template node. You can able to perform node delete operation while clicking delete icon by using [removeNode](http://help.syncfusion.com/js/api/ejtreeview#methods:removenode) method TreeView as shown in below code example.
     
     
     
     {% highlight javascript %}
     
-    <script>
+    
         function oncreate(args) {
             var treeObj = $("#treeview").data("ejTreeView");
             $("#treeview").find(".cont-del").bind("click", function (e) {
@@ -193,7 +193,7 @@ You can able to perform custom action in TreeView template node. You can able to
                 treeObj.removeNode($(e.target).parents("li").first());
             });
         }
-    </script>
+    
     
     {% endhighlight %}
     
