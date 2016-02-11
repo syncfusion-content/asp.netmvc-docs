@@ -34,7 +34,7 @@ Refer the below German culture file in head section of html page after the refer
 
  {% highlight cshtml %}
    
-    <script src="http://cdn.syncfusion.com/js/assets/scripts/cultures/ej.culture.de-DE.min.js"></script>
+    <script src="http://cdn.syncfusion.com/13.4.0.53/js/cultures/ej.culture.de-DE.min.js"></script>
                 
  {% endhighlight %}
  
