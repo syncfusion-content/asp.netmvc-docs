@@ -144,7 +144,7 @@ You can handle the all available client side events in Essential JavaScript Date
 
 EJMVC DatePicker can be created using DatePickerFor extension, which behaves as strongly typed html helper. This reduce the run time issues while using model values in DatePickerFor , since it will find the issues if any in compilation time itself. Also, to know about the setting model properties to DatePickerFor Control, please refer the link: 
 
-    https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls
+  [https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls](https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls)
 
 Please refer the below code to create the DatePickerFor control in your application
 
