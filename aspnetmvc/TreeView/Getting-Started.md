@@ -142,7 +142,7 @@ Render TreeView with remote data source
     
     
     
-N>**Note: In remote data source, [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager) is used to process the data from services and the value has been assigned to DataSource.**
+N>**In remote data source, [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager) is used to process the data from services and the value has been assigned to DataSource.**
 
 ## Create Instance for TreeView
 
@@ -163,7 +163,7 @@ You can create an instance for existing TreeView in following ways. Once a refer
     
     
     
-N>**Note: To configure the API settings after TreeView creation, please refer [API configuration](http://help.syncfusion.com/js/api-configuration), [Invoking Methods](http://help.syncfusion.com/js/invoking-methods)**.
+N>**To configure the API settings after TreeView creation, please refer [API configuration](http://help.syncfusion.com/js/api-configuration), [Invoking Methods](http://help.syncfusion.com/js/invoking-methods)**.
  
 ## TreeView events
 

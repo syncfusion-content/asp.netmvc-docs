@@ -29,7 +29,7 @@ To perform drag and drop operation in TreeView specify **AllowDragAndDrop** as t
     
     
     
-N>**Note: TreeView provides much easier option to drop the dragged nodes at any levels by indicator lines with icons.**
+N>**TreeView provides much easier option to drop the dragged nodes at any levels by indicator lines with icons.**
 
 ## Position Indicators
 
@@ -217,5 +217,5 @@ You may not need to have two TreeView to be in same structured node while drag a
     {% endhighlight %}
     
     
-N>**Note: auto node structure only applicable for well-structured node object.**
+N>**Auto node structure only applicable for well-structured node object.**
 

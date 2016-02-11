@@ -190,7 +190,7 @@ In the view page, specify following method in script tag to get node value
     
     
     
-N>**Note: Existing TreeView instance can be created by [jQuery.data()](http://api.jquery.com/jQuery.data/#) and you can control the API’s of TreeView behavior**.
+N>**Existing TreeView instance can be created by [jQuery.data()](http://api.jquery.com/jQuery.data/#) and you can control the API’s of TreeView behavior**.
 
 To edit the node text, you can use [updateText](http://help.syncfusion.com/js/api/ejtreeview#methods:updatetext) method as shown below code example. 
     

@@ -314,7 +314,7 @@ In the view page, add TreeView helper and map the properties defined to the corr
     
     
     
-N>**Note: If you want to display nodes in root level, exclude parent attribute or specify “0” in corresponding value.**
+N>**If you want to display nodes in root level, exclude parent attribute or specify “0” in corresponding value.**
 
 ## Local data
 
@@ -479,7 +479,7 @@ You can provide adaptor value either as string value (“ODataAdaptor”) or Enu
     
     
     
-N>**Note: You can use above code until OData service version 3. For OData Service version 4 End Point, we have created a separate adaptor [ej.ODataV4Adaptor](http://helpjs.syncfusion.com/js/datamanager/data-binding#odata-v4) for databinding.**
+N>**You can use above code until OData service version 3. For OData Service version 4 End Point, we have created a separate adaptor [ej.ODataV4Adaptor](http://helpjs.syncfusion.com/js/datamanager/data-binding#odata-v4) for databinding.**
     
     
     
