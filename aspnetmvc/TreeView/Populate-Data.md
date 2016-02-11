@@ -371,17 +371,17 @@ When using remote data binding, the adaptor of [ej.DataManager](http://helpjs.s
 
 The following steps explain how you can bind remote data to TreeView control.
 
-    1. In the View page, add TreeView helper to configure TreeView.
+* In the View page, add TreeView helper to configure TreeView.
 
-    2. In the DataSource field assign remote data source. Here dataManager gets the remote web service and filters the data using Query. The select property of ejQuery is used to retrieve the specified columns from the data source.
+* In the DataSource field assign remote data source. Here dataManager gets the remote web service and filters the data using Query. The select property of ejQuery is used to retrieve the specified columns from the data source.
 
-    3. Assign dataSource and query property values to bind the remote data. Map the corresponding fields in TreeView control 
+* Assign dataSource and query property values to bind the remote data. Map the corresponding fields in TreeView control 
 
 ### OData
 
 **OData** is a standardized protocol for creating and consuming data. You can bind [oData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView” control.
     
-    1. Using **Datasource(DataSource)** API
+   **Using Datasource(DataSource) API**
     
    Create an object for [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSource_members.html#) class using OData service URL and then assign it to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView”. 
     
@@ -413,7 +413,7 @@ The following steps explain how you can bind remote data to TreeView control.
     
     
     
-    2. Using **Datasource(Action&lt;DataSourceBuilder&gt;)** API
+   **Using Datasource(Action&lt;DataSourceBuilder&gt;) API**
     
    Here directly, you can specify the OData service URL using Action<[DataSourceBuilder](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSourceBuilder_members.html#)> 
     
