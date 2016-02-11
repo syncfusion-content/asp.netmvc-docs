@@ -24,31 +24,31 @@ Binds the <b>Id</b> field name for indexing and performing CRUD operation on the
 <tr>
 <td>
 StartTime<br/><br/></td><td>
-Binds the appointment start time field name which is <b>mandatory</b>.<br/><br/></td></tr>
+Binds the appointment start time field name which is <b>mandatory</b> and also its related validation rules.<br/><br/></td></tr>
 <tr>
 <td>
 StartTimeZone<br/><br/></td><td>
-Binds the name of the start timezone field in the dataSource. If the <b>StartTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
+Binds the name of the start timezone field in the dataSource and also its related validation rules. If the <b>StartTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
 <tr>
 <td>
-SndTime<br/><br/></td><td>
-Binds the appointment end time field name which is <b>mandatory</b>.<br/><br/></td></tr>
+EndTime<br/><br/></td><td>
+Binds the appointment end time field name which is <b>mandatory</b> and also its related validation rules.<br/><br/></td></tr>
 <tr>
 <td>
 EndTimeZone<br/><br/></td><td>
-Binds the name of the end timezone field in the dataSource. If the <b>EndTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
+Binds the name of the end timezone field in the dataSource and also its related validation rules. If the <b>EndTimeZone</b> field is not mentioned, then the appointment makes use of the Scheduler timeZone or System timeZone.<br/><br/></td></tr>
 <tr>
 <td>
 Subject<br/><br/></td><td>
-Binds the appointment subject field name which holds the summary of the appointment. <br/><br/></td></tr>
+Binds the appointment subject field name which holds the summary of the appointment and also its related validation rules.<br/><br/></td></tr>
 <tr>
 <td>
 Location<br/><br/></td><td>
-Binds the name of the location field. It indicates the appointment location/occurrence place. This field needs to be bind to the Scheduler, when an API <b>ShowLocationField</b> is set to true.<br/><br/></td></tr>
+Binds the name of the location field and also its related validation rules. It indicates the appointment location/occurrence place. This field needs to be bind to the Scheduler, when an API <b>ShowLocationField</b> is set to true.<br/><br/></td></tr>
 <tr>
 <td>
 Description<br/><br/></td><td>
-Binds the appointment description field name.<br/><br/></td></tr>
+Binds the appointment description field name and also its related validation rules.<br/><br/></td></tr>
 <tr>
 <td>
 AllDay<br/><br/></td><td>
@@ -56,11 +56,11 @@ Binds the name of the allDay field. It accepts the <b>boolean</b> value and indi
 <tr>
 <td>
 Categorize<br/><br/></td><td>
-Binds the name of the categorize field. It indicates the category or status value (red categorize, green, yellow and so on). <br/><br/></td></tr>
+Binds the name of the categorize field and also its related validation rules. It indicates the category or status value (red categorize, green, yellow and so on). <br/><br/></td></tr>
 <tr>
 <td>
 Priority<br/><br/></td><td>
-Binds the name of the priority field and indicates the priority (high, low, medium and none) of the appointments. This field should be bind to the Scheduler, when <b>PrioritySettings.Enable</b> is set to true.<br/><br/></td></tr>
+Binds the name of the priority field, its related validation rules and also indicates the priority (high, low, medium and none) of the appointments. This field should be bind to the Scheduler, when <b>PrioritySettings.Enable</b> is set to true.<br/><br/></td></tr>
 <tr>
 <td>
 ResourceFields<br/><br/></td><td>
@@ -82,6 +82,8 @@ Binds the recurrence Id field which acts as a parent id for Scheduler recurrence
 RecurrenceExDate<br/><br/></td><td>
 Binds the recurrence Exception field which accepts the recurrence Exception date values.<br/><br/></td></tr>
 </table>
+
+The below example depicts the appointment fields accepting the string type mapper fields,
 
 {% highlight razor %}
 
@@ -134,6 +136,61 @@ Binds the recurrence Exception field which accepts the recurrence Exception date
 
 {% endhighlight %}
 
+## Appointment Field Validation
+
+It is possible to validate the required fields of the appointment window from client-side before submitting it, by adding appropriate validation rules to each fields. The appointment fields have been extended to accept both String and object type values. Therefore, in order to perform validations, it is necessary to specify object values for the appointment fields.  
+
+Refer the appointment fields specified with validation rules from the following code example.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for CategorizeSettings -->
+    List<CategorizeSettings> CategorizeValue = new List<CategorizeSettings>();
+    CategorizeValue.Add(new CategorizeSettings { Text = "Blue Category", Id = "1", Color = "#43b496", FontColor = "#ffffff" });
+    CategorizeValue.Add(new CategorizeSettings { Text = "Green Category", Id = "2", Color = "#7f993e", FontColor = "#ffffff" });
+    CategorizeValue.Add(new CategorizeSettings { Text = "Orange Category", Id = "3", Color = "#cc8638", FontColor = "#ffffff" });
+    CategorizeValue.Add(new CategorizeSettings { Text = "Purple Category", Id = "4", Color = "#ab54a0", FontColor = "#ffffff" });
+    CategorizeValue.Add(new CategorizeSettings { Text = "Red Category", Id = "5", Color = "#dd654e", FontColor = "#ffffff" });
+    CategorizeValue.Add(new CategorizeSettings { Text = "Yellow Category", Id = "6", Color = "#d0af2b", FontColor = "#ffffff" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .ShowLocationField(true)
+    .CategorizeSettings(fields => fields.Datasource(CategorizeValue).Enable(true).AllowMultiple(false).Id("Id").Text("Text").Color("Color").FontColor("FontColor"))
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject(subject => subject.Field("Subject").ValidationRules(v => v.AddRule("required", true)))
+        .Location(location => location.Field("Location").ValidationRules(v => v.AddRule("required", true).AddRule("customRule", "/^[a-zA-Z0-9- ]*$/")))
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .Description(des => des.Field("Description").ValidationRules(v => v.AddRule("required", true).AddRule("minlength", 5).AddRule("maxlength", 500)))
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule")
+        .Categorize(categorize => categorize.Field("Categorize").ValidationRules(v => v.AddRule("required", true))))
+)
+
+{% endhighlight %}
+
+{% highlight html %}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+<script type="text/javascript">
+    $(function () {
+        $.validator.addMethod("customRule", function (value, element, options) {
+            var ptn = /^[a-zA-Z0-9- ]*$/;
+            return ptn.test(value);
+        }, "Special character(s) not allowed in Location field");
+    });
+</script>
+
+{% endhighlight %}
 
 ## Binding to Simple List Data Array
 

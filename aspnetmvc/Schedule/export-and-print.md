@@ -8,7 +8,7 @@ keywords: export, import and print
 ---
 # Export and Print
 
-## Export Appointments
+## Export Appointments to ICS file
 
 The Appointments can be exported as a whole collection or else a single appointment alone can be exported from the Scheduler. By default, the appointments are exported to .ics format which can then be imported and used in any of the other external calendars.
 
@@ -132,6 +132,54 @@ public void ExportToICS(FormCollection form)
 		// To export all the appointments
 		data = db.DefaultSchedules.ToList();
 	ScheduleExport obj = new ScheduleExport(model, data);
+}
+
+{% endhighlight %}
+
+## PDF Export
+
+Scheduler supports to export the entire schedule control along with its appointments in PDF format, for which the same [exportSchedule](/js/api/ejschedule#methods:exportschedule) method can be used without passing any id value to its parameter list. To achieve this, keep an individual button to export and when it is clicked, the Scheduler with appointments can be allowed to export as PDF.
+
+The following code example depicts the way to export the Scheduler with appointments in PDF format.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .AppointmentSettings(fields => fields.Datasource(Model)
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .Description("Description")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence"))
+)
+@Html.EJ().Button("submit").Text("Export").Width("80px").Height("30px").ClientSideEvents(cli => cli.Click("onPDFExport"))
+
+{% endhighlight %}
+
+{% highlight js %}
+
+function onPDFExport(args) {
+    var obj = $("#Schedule1").data("ejSchedule");
+    obj.exportSchedule("ExportAsPDF", null, null);
+}
+
+{% endhighlight %}
+
+The server-side action **ExportAsPDF** contains the following code example to export the Scheduler.
+
+{% highlight c# %}
+
+public ActionResult ExportAsPDF(string scheduleModel)
+{
+    PdfExport exp = new PdfExport();
+    PdfDocument document = exp.Export(Request.Form["ScheduleModel"], Request.Form["ScheduleProcesedApps"], "flat-saffron", Request.Form["locale"], PdfPageOrientation.Landscape);
+    document.Save("Schedule.pdf", HttpContext.ApplicationInstance.Response, HttpReadType.Save);
+    return RedirectToAction("PDFExportController");
 }
 
 {% endhighlight %}

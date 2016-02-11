@@ -7,20 +7,16 @@ control: TreeView
 documentation: ug
 ---
 
-# TreeView
+# Overview
 
-The Essential ASP.NET MVC TreeView control represents hierarchical data in a tree-like structure. It allows editing, dragging items to other tree views, adding check boxes, and more. TreeView can be generated from UL LI elements, List of Objects or using OData service.
+The EJ MVC TreeView component provides all the functionalities that is available in [EJ TreeView](http://help.syncfusion.com/js/api/ejtreeview# ""), since it is a server side wrapper of [EJ TreeView](http://help.syncfusion.com/js/api/ejtreeview# "") widget. It represents hierarchical data in a tree-like structure and allows to edit, drag n drop, selection with checkboxes, and more. TreeView can be generated from the specified item list, List of Objects or using OData services.
 
-## Key Features
+## Key features
 
-* Node editing: The TreeView control permits you to edit a node.
-* Node cut, and paste: Cut a node and paste in same TreeView node.
-* Drag and drop: Drag and drop the nodes within the TreeView control, or drag a particular node from one tree to another tree.
-* Check box support: Enables three states for the checkbox and checked node.
-* Data binding: You can populate TreeView items using data binding support like Lsit of objects and OData service.
-* Load on demand: Populate child item on demand.
-* Themes: Essential JavaScript for ASP.NET MVC controls consists of 12 built in themes, including 6 metro and 6 gradient effects, and also supports custom skin option to set user defined themes.
-* Template support: You can generate custom node “LI” element using the jsrender template.
-* RTL: Node text displays the RTL languages.
-* Rich Events & Methods: There are more flexible and efficient methods and events.
-* Keyboard navigation: You can interact with the TreeView control using the keyboard. 
+* [Data Population](#_Populate_Data_1 "")
+* [Node manipulations](#_Tree_Node "")
+* [Drag and drop](#_Drag_and_drop "")
+* [Template](#_Template_Option "")
+* [Checkbox](#_Checkboxes "")
+* Accessibility
+* Appearance and styling
