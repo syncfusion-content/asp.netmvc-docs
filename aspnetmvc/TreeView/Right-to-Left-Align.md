@@ -9,7 +9,7 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, Right to Left Ali
 
 # Right to Left Align
 
-TreeView supports right to left align and it can be applied by specifying ‘**EnableRTL’** as true.
+TreeView supports right to left align and it can be applied by specifying **EnableRTL** as true.
     
     
     
