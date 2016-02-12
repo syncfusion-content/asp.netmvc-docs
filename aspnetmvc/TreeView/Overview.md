@@ -13,10 +13,10 @@ The EJ MVC TreeView component provides all the functionalities that is available
 
 ## Key features
 
-* [Data population](http://help.syncfusion.com/aspnetmvc/treeview/populate-data)
-* [Node manipulations](http://help.syncfusion.com/aspnetmvc/treeview/tree-node)
-* [Drag and drop](http://help.syncfusion.com/aspnetmvc/treeview/drag-and-drop)
-* [Template](http://help.syncfusion.com/aspnetmvc/treeview/template-option)
-* [Checkbox](http://help.syncfusion.com/aspnetmvc/treeview/checkboxes)
+* [Data population](populate-data)
+* [Node manipulations](tree-node)
+* [Drag and drop](drag-and-drop)
+* [Template](template-option)
+* [Checkbox](checkboxes)
 * Accessibility
 * Appearance and styling
