@@ -1,286 +1,107 @@
 ---
 layout: post
-title: Behavior Settings | DatePicker | ASP.NET MVC | Syncfusion
-description: behavior settings
+title: Behaviour Settings
+description: Configure DatePicker Behaviour settings
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
+# Behaviour Settings
 
-# Behavior Settings
+The Essential ASP.NET MVC DatePicker has some default behaviour settings which helps to perform more operation by inbuilt.
 
-## Button Text
+## Selected Date
 
-Set the display text for the Button in the DatePicker popup. By default, ButtonText is set Today (String). Change this default value by using ButtonText property to change the ButtonText.
-
-The following steps explains how to set the ButtonText for DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget.
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized ButtonText*@
-
-	@Html.EJ().DatePicker("datepicker").ButtonText("Todaydate")
-
-   ~~~
-   {:.prettyprint }
+The Essential ASP.NET MVC DatePicker value can be selected through picking date from DatePicker calendar or you can set it by using “Value” property.
 
 
-2. The following screenshot displays the output for the above code.
+EJMVC DatePicker allows only the valid date to be entered and it should be within the specified range. By default, strict mode is enabled in DatePicker, so it will restrict invalid date and resets to previous date if it’s not valid. Also the valid date should be defined in specified range or else it resets to min or maximum date when the entered date is out of range. To know more about strict mode refer [Strict Mode](#strict-mode)
 
+## Date Range
 
+EJMVC DatePicker provides an option to restrict the user to pick the date from specified range of value. You can utilize this option by make use of ‘MinDate’ and ‘MaxDate’ property.
 
-![](Behavior-Settings_images/Behavior-Settings_img1.png)
+**MinDate** - specifies the minimum date to be picked in DatePicker calendar by disabling below date of minDate.
 
-Button Text in DatePicker  
-{:.caption}
-
-## Display Default Date
-
-You can allow or not allow to display default date value in input textbox. By default “DisplayDefaultDate” property is set to ‘true’ in DatePicker widget. You can not allow to display default date value in input textbox of DatePicker widget by setting “DisplayDefaultDate” property as ‘false’.
-
-The following steps explain DisplayDefaultDate in DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with out default date.
+**MaxDate** -  specifies the maximum date to be picked in DatePicker calendar by disabling above date of maxDate. 
+Refer below example to set min and max date range in DatePicker at initialization (You can change the **‘MinDate’** and **‘MaxDate’** value dynamical as like ‘Value’ property)
 
 {% highlight cshtml %}
-
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget without default date*@
-
-@Html.EJ().DatePicker("datepicker").DisplayDefaultDate(false).Value("5/8/2014")
-
-{% endhighlight %}
-
-## Enabled
-
-You can Enable or Disable the DatePicker widget. By default “Enabled” property is set to ‘true’ in DatePicker widget. You can disable the DatePicker widget by setting “Enabled” property as ‘false’.
-
-The following steps explain you how to disable the DatePicker widget.
-
-1. In the CSHTML page, add the following code to disable the DatePicker widget.
-
-{% highlight cshtml %}
-
-@*Add the following code example to the corresponding CSHTML page to disable DatePicker widget*@
-
-@Html.EJ().DatePicker("datepicker").Enabled(false)
-{% endhighlight %}
-
-## Enable strict mode
-
-When EnableStrictMode is set to ‘false’, DatePicker doesn’t allow the value out of the range, it is internally changed to the correct value. By default “EnableStrictMode” property is set as ‘false’ in DatePicker.
-
-The following steps explain you how to enable the “EnableStrictMode” for DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with EnableStrictMode.
-
-
-{% highlight cshtml %}
-
-@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized EnableStrictMode*@
-
-@Html.EJ().DatePicker("datepicker").EnableStrictMode(true)
-
-{% endhighlight %}
-
-## Fields
-
-You can specify the fieldsmapping in DatePicker. You can also provide the support to add image, image styles, sprite css class, query, and HTML attributes.
-
-The DatePicker widget provides support to customize the particular date. i.e. you can customize the date with image and tooltip options. The following table specifies the special date fields and its configuration.
-
-_MVC table_
-
-<table>
-<tr>
-<th>
-Name</th><th>
-Description</th><th>
-Default value</th><th>
-Data type</th></tr>
-<tr>
-<td>
-Date</td><td>
-The date that needs to be customized. </td><td>
-Null </td><td>
-String </td></tr>
-<tr>
-<td>
-Tooltip</td><td>
-Shows the tooltip to mention date while mouse hovering </td><td>
-Null </td><td>
-String </td></tr>
-<tr>
-<td>
-Icon </td><td>
-You can set the customized css with this property. {{     '_Note: You need to set the image as background url and its styles within this class_'| markdownify }}</td><td>
-Null </td><td>
-String</td></tr>
-</table>
-
-
-The following steps explain you how to specify the fieldsmapping in DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with fields mapping.
    
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized fields mapping*@
-
-	@Html.EJ().DatePicker("datePicker").SpecialDates(p =>
-
-	   {
-
-		   p.Add().Date("9/13/2014").Tooltip("America").Icon("flag");
-
-	   })
-
-   ~~~
-   
-
-
-2. Add the following styles to specify the fields mapping in DatePicker widget.
-
-   N> Images for this example are available in ‘installed location /Content/images’ and you need to define images in mentioned CSS. Henceforth the images are displayed.
-
-
-
-   ~~~ css
-
-	<style type="text/css" class="cssStyles">
-
-		.flag .e-image {
-
-			background: url("../Content/images/flags.png") no-repeat scroll -50px -75px rgba(0, 0, 0, 0);
-
-			float: left;
-
-			height: 15px;
-
-			margin-left: 5px;
-
-			margin-top: 1px;
-
-			width: 20px;
-
-		}
-
-		.e-datepicker.e-calendar {
-
-			width: 370px;
-
-		}
-
-	</style>
-
-   ~~~
+    @*sets min and max date to be pick able in datepicker*@
   
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).MinDate("2014/06/03").MaxDate("2014/06/19")
+          
+{% endhighlight %}
+
+N> You can change the **MinDate** and **MaxDate** value dynamically like **Value** property
+
+## Start and Depth Level
+
+Start and depth represents the view of Essential ASP.NET MVC DatePicker calendar. DatePicker calendar has four different level of views, which are month, year, decade and century. It allows you to quick pick date from different months and years by drilling down or up.
+
+By default DatePicker starts with month view and can be drill down into year, decade and century. You can also change the start and depth level view by using [StartLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:startlevel) and [DepthLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:depthlevel) property. So that you can initiate DatePicker calendar to view at any level and control the navigation.
+
+* "Month"   - shows the days in month to pick.
+* "Year"    - shows the months in year to pick.
+* "Decade"  - shows the years in decade to pick.
+* "Century" - shows the decades in century to pick.
+
+{% highlight cshtml %}
+
+    @*sets the start view and defines when the DatePicker calendar to return date*@
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).StartLevel(Period.Year).DepthLevel(Period.Year).DateFormat("MMMM yyyy")
+
+{% endhighlight %}
+
+## Display Inline Mode
+
+The Essential ASP.NET MVC DatePicker provides an option to act as calendar by setting the [DisplayInline](http://help.syncfusion.com/js/api/ejdatepicker#members:displayinline) property as true. In this mode the DatePicker calendar has been placed open state constantly to pick the date. 
+Refer below code example to represent DatePicker as calendar.
+
+{% highlight cshtml %}
+
+    @*sets inline to represent datePicker as DatePicker calendar*@
+
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).DisplayInline(true)
+
+{% endhighlight %}
+
+## Strict Mode
+
+Strict mode in Essential ASP.NET MVC DatePicker allows you to enter valid or invalid date in input textbox, but an error class will get added to exhibit if it is an invalid date. When you set [EnableStrictMode](http://help.syncfusion.com/js/api/ejdatepicker#members:enablestrictmode) to false, DatePicker allows you to enter only the valid date or else it will resets with previous value. 
+
+Also the valid date should be defined in specified range or else it resets to min or maximum date when the entered date is out of range
+
+By default **EnableStrictMode** is true, so you can enter any value other than date too, but an **error** class ("**e** **-** **error**") will get added to wrapper to highlight the invalid date.
+
+{% highlight cshtml %}
+
+    @*sets active strict mode*@
+
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).EnableStrictMode(false)
 
 
-3. The following screenshot displays the output for the above code.
+{% endhighlight %}
 
+You can also override the  **error** class to highlight when invalid date is entered.
 
+{% highlight cshtml %}
 
-![](Behavior-Settings_images/Behavior-Settings_img4.png)
+    @*sets inactive strict mode*@
 
-Fields mapping in DatePicker
-{:.caption}
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).EnableStrictMode(true)
+ 
+{% endhighlight %}
 
-### Define start day of the week
+{% highlight css %}
 
-It specifies the StartDay of the week in DatePicker calendar. By default “Value” is set to 0 (Sunday). 
+    <style>
+        /* error class to highlight invalid date */
 
-The following steps explain you how to specify the StartDay of the week in DatePicker widget.
+        .e-error .e-input {
+            color: Red; /* highlights invalid date font color in input */
+        }
+    </style>
 
-1. In the CSHTML page, add the following code to render the DatePicker widget with StartDay (Tuesday)
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to specify the start day of the week in DatePicker widget*@
-
-	@Html.EJ().DatePicker("datePicker").StartDay(2)
-
-   ~~~
-
-
-
-2. The following screenshot displays the output for the above code.
-
-![](Behavior-Settings_images/Behavior-Settings_img5.png)
-
-Start day of the week in DatePicker
-{:.caption}
-
-## Step months
-
-It specifies the number of months to navigate at one click in next and previous button that is achieved by “StepMonths” property. You can change the StepMonths by changing the default value using “StepMonths” property. 
-
-The following steps explain you how to specify the number of months to navigate at one click.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with stepMonths.
-
-
-   ~~~ cshtml
-
-	@*Add the following code example to the corresponding CSHTML page to specify the number of months to navigate at one click in DatePicker widget*@
-
-	@Html.EJ().DatePicker("datePicker").StepMonths(2)
-
-   ~~~
-   {:.prettyprint }
-
-
-## Define value
-
-It specifies the selected date value. You can specify the selected date value by using “Value” property.
-
-The following steps explain you how to specify the selected value.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with selected value.
-
-
-   ~~~ cshtml
-   
-	@*Add the following code example to the corresponding CSHTML page to specify selected value in DatePicker widget*@
-
-	@Html.EJ().DatePicker("datePicker").Value("5/8/2014")
-
-   ~~~
-
-
-
-2.  The following screenshot displays the output for the above code.
-
-
-
-![](Behavior-Settings_images/Behavior-Settings_img6.png)
-
-Value in DatePicker
-{:.caption}
-
-### Watermark Text
-
-It specifies the WatermarkText to display the input text in DatePicker. By default “WatermarkText” property is set as “select date” in DatePicker. 
-
-The following steps explain you how to specify the WatermarkText in DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with watermark text.
-
-   ~~~ cshtml
-   
-	@*Add the following code example to the corresponding CSHTML page to specify Watermark Text in DatePicker widget*@
-
-	@Html.EJ().DatePicker("datePicker").WatermarkText("Enter Date")
-
-   ~~~
-
-
-2. The following screenshot displays the output for the above code.
-
-
-
-![](Behavior-Settings_images/Behavior-Settings_img7.png)
-
-Watermark Text in DatePicker
-{:.caption}
+{% endhighlight %}

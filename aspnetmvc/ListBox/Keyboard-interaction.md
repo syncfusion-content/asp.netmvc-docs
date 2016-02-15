@@ -9,90 +9,94 @@ documentation: ug
 
 # Keyboard interaction
 
-You can use Keyboard shortcut keys as an alternative to the mouse on using ListBox widget. ListBox Widget allows you to perform all kind of actions using keyboard shortcuts.
-
-_Keyboard shortcut keys_
+You can use Keyboard shortcut keys as an alternative for mouse actions to interact with the ListBox widget. Please refer the below table for details about short cut keys and its corresponding usage.
 
 <table>
 <tr>
-<th>
-Shortcut Key</th><th>
-Description</th></tr>
+<td>
+<b>Shortcut Key</b></td><td>
+<b>Usage</b></td></tr>
 <tr>
 <td>
-{{ '[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j	</td><td>
-Focuses into the ListBox text box</td></tr>
-<tr>
-<td>
-Up</td><td>
-Moves to previous item in the ListBox</td></tr>
-<tr>
-<td>
-Down</td><td>
-Moves to next item in the ListBox</td></tr>
-<tr>
-<td>
-Enter</td><td>
+<kbd>Enter</kbd></td><td>
 Selects the focused item</td></tr>
 <tr>
 <td>
-Left </td><td>
-Moves to previous item in the ListBox</td></tr>
+<kbd>Up</kbd></td><td>
+Moves to previous item</td></tr>
 <tr>
 <td>
-Right </td><td>
-Moves to next item in the ListBox</td></tr>
+<kbd>Down</kbd></td><td>
+Moves to next item</td></tr>
 <tr>
 <td>
-Home</td><td>
-Navigates to the starting item </td></tr>
+<kbd>Left</kbd></td><td>
+Moves to previous item</td></tr>
 <tr>
 <td>
-End</td><td>
-Navigates to the end item </td></tr>
+<kbd>Right</kbd></td><td>
+Moves to next item</td></tr>
+<tr>
+<td>
+<kbd>Home</kbd></td><td>
+Moves to first item</td></tr>
+<tr>
+<td>
+<kbd>End</kbd></td><td>
+Moves to last item</td></tr>
 </table>
-Configure keyboard interaction
 
-The following steps explains you to enable keyboard interaction for a ListBox.
+N> Initial focus can be done by pressing tab key multiple times until it is focused.
 
-1. Add the below code in your page to render the ListBox
+## Incremental Search
+
+The [Incremental search](https://en.wikipedia.org/wiki/Incremental_search) helps in finding the specific item in the ListBox,as the user types the text one or more possible matches for the text are found and the first matched item will be selected.It can be enabled in the ListBox widget using “EnableIncrementalSearch” property. The search can be case sensitive or case insensitive.
+
+{% highlight razor %}
+
+@{Html.EJ().ListBox("listbox")
+      .TargetID("listdata")
+      .EnableIncrementalSearch(true)
+      .CaseSensitiveSearch(true)
+      .Render();}
+
+<ul id="listdata">
+    <li>Audi A4</li>
+    <li>Audi A5</li>
+    <li>Audi A6</li>
+    <li>Audi A7</li>
+    <li>Audi A8</li>
+    <li>BMW 501</li>
+    <li>BMW 502</li>
+    <li>BMW 503</li>
+    <li>Batch</li>
+    <li>BMW 507</li>
+    <li>BMW 3200</li>
+    <li>Cut</li>
+    <li>Copy</li>
+    <li>Paste</li>
+    <li>Add</li>
+    <li>Delete</li>
+    <li>D5ishCover</li>
+    <li>Di5shCover</li>
+    <li>Dis5hCover</li>
+    <li>Dish5Cover</li>
+    <li>DishC5over</li>
+    <li>DishCo5ver</li>
+    <li>DishCov5er</li>
+    <li>DishCove5r</li>
+    <li>Comments</li>
+    <li>Links</li>
+    <li>Clear Formatting</li>
+</ul>
 
 
-   ~~~ cshtml
-
-	// Add the following code in View page to configure ListBox widget
-	<div id="control">  
-		<h5 class="ctrllabel"> 
-			Select a skill 
-		</h5>
-		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
-		=> df.Text("text"))
-	</div>
-	
-   ~~~
-   
-
-   ~~~ js
-   
-	// Render ListBox control
-	<script type="text/javascript">
-		$(document).on("keydown", function (e) {
-			if (e.altKey && e.keyCode === 74) { // j- key code. 
-				var target = $('#listboxsample').data("ejListBox");
-				target.selectItemByIndex(1);  
-				$("#listboxsample_container").focus(); 
-			}  
-		});
-	</script>
+{% endhighlight %}
 
 
-   ~~~
-   
 
+![](Keyboard-interaction_images\Keyboard-interaction_img1.png)
 
-2. Run the sample, press Alt + J to focus in the ListBox widget that enables it and you can navigate using arrow keys.
+Press <kbd> tab </kbd> key to get ListBox focus and press <kbd>“A”</kbd> (enable caps lock or press <kbd>shift</kbd> +<kbd> “A”</kbd> since case sensitive search is enabled) to get the below output.
 
-
-![](Keyboard-interaction_images/Keyboard-interaction_img1.png)
-
-
+![](Keyboard-interaction_images\Keyboard-interaction_img1.png)
