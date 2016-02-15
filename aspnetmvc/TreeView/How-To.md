@@ -11,11 +11,11 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, How To
 
 ## Update the modified data from tree to database.
 
-TreeView allows us to get the updated tree data after performing such operation like node editing, drag and drop, add and remove node. Using [getTreeData](http://help.syncfusion.com/js/api/ejtreeview#methods:gettreedata "") method you can get the updated tree data.
+TreeView allows us to get the updated tree data after performing such operation like node editing, drag and drop, add and remove node. Using [getTreeData](http://help.syncfusion.com/js/api/ejtreeview#methods:gettreedata) method you can get the updated tree data.
 
 Refer the following code block to know how to get updated data from TreeView.
 
-In the controller page, create a data List that contains the details about tree nodes and specify the method to store modified data.
+In the controller page, create a data list that contains the details about tree nodes and specify the method to store modified data.
     
     
     
@@ -56,7 +56,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and specify the scripts for sending modified data through Ajax action with that also specify clear cache option.
+In the view page, add TreeView helper and specify the scripts for sending modified data through Ajax action with that also specify clear cache option.
     
     
     
@@ -133,9 +133,9 @@ The following code example illustrates how to configure the context menu element
 
 And each functionality in the context menu option is done by specific methods. For example, you have added the new item in TreeView by using the addNode() method, delete the item using removeNode() method, disable the item using disableNode() method and enable the item enableNode() method respectively.
 
-The following steps explain how you can enable the ShowCheckbox property for TreeView.
+The following steps explain how you can enable the **ShowCheckbox** property for TreeView.
 
-In the View page, add TreeView helper and specify context menu.
+In the view page, add TreeView helper and specify context menu.
     
     
     
@@ -241,9 +241,9 @@ The output for the context menu for TreeView control is as follows.
 
 ## Sorted data using refresh method
 
-TreeView allows you to refresh the entire tree data by using [refresh](http://help.syncfusion.com/js/api/ejtreeview#methods:refresh "") method. Refer the below code block to know how to sort entire tree data using refresh method.
+TreeView allows you to refresh the entire tree data by using [refresh](http://help.syncfusion.com/js/api/ejtreeview#methods:refresh) method. Refer the below code block to know how to sort entire tree data using refresh method.
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -273,7 +273,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the scripts for sorting and refreshing Tree data.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the scripts for sorting and refreshing Tree data.
     
     
     
@@ -321,7 +321,7 @@ In the View page, add TreeView helper and map the properties defined in to the 
 
 TreeView allows us to persist the updated data after performing some tree operations like node add and delete. Refer the following code block to know how to persist updated tree data after refresh.
 
-In the controller page, create a data List that contains the details about tree nodes and specify the method to store modified data.
+In the controller page, create a data list that contains the details about tree nodes and specify the method to store modified data.
     
     
     
@@ -362,7 +362,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and specify the scripts for sending modified data through Ajax action.
+In the view page, add TreeView helper and specify the scripts for sending modified data through Ajax action.
     
     
     
@@ -445,7 +445,7 @@ In the View page, add TreeView helper and specify the scripts for sending modifi
 
 You can able to filter TreeView nodes based on node text. Refer the below code blocks to filter tree nodes based on the node text.
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -475,7 +475,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the script for filtering Tree nodes.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the script for filtering tree nodes.
     
     
     
@@ -692,11 +692,11 @@ TreeView allows us to bind and update tree data in mapped data component while a
     
     
     
-## Set Tooltip for TreeView nodes
+## Set tooltip for TreeView nodes
 
-TreeView allows you to set tooltip option to TreeView nodes using [fields.linkAttribute](http://help.syncfusion.com/js/api/ejtreeview#members:fields-linkattribute "") property of TreeView. Refer the below code block to know how to set tooltip for TreeView nodes.
+TreeView allows you to set tooltip option to TreeView nodes using [fields.linkAttribute](http://help.syncfusion.com/js/api/ejtreeview#members:fields-linkattribute) property of TreeView. Refer the below code block to know how to set tooltip for TreeView nodes.
 
-In the Model page, add a class and define the properties as shown below.
+In the model page, add a class and define the properties as shown below.
     
     
     
@@ -722,7 +722,7 @@ In the Model page, add a class and define the properties as shown below.
     
     
     
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -811,7 +811,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in datasource
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource
     
     
     
@@ -834,9 +834,9 @@ In the View page, add TreeView helper and map the properties defined in to the 
     
 ## Auto hide/show the expand/collapse icon of TreeView
 
-You can able to display expand icon on mouse entering into TreeView and hide while leaving from the TreeView. Refer the below code block to know how to hide/show the expand/collapse icons automatically based on mouse position.
+You can able to display expand icon on mouse entering into TreeView and hide while leaving from the TreeView. Refer the below code block to know how to hide/ show the expand/collapse icons automatically based on mouse position.
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -866,7 +866,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the scripts to hide and show the icons of Tree nodes.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the scripts to hide and show the icons of tree nodes.
     
     
     
@@ -909,7 +909,7 @@ In the View page, add TreeView helper and map the properties defined in to the 
 
 You can able to customize the TreeView expand and collapse icon by using “cssClass” property of TreeView. Refer the below code block to know how to customize the expand/collapse icons.
 
-In the View page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the styles for customizing expand/ collapse icon of TreeView.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the styles for customizing expand/ collapse icon of TreeView.
     
     
     
@@ -960,7 +960,7 @@ You have to create a hidden element for storing custom details of checked nodes 
 
 Refer the following code block to know how to get checked nodes details in server end 
 
-In the View page, add TreeView helper and specify the scripts for adding checked node details in form element.
+In the view page, add TreeView helper and specify the scripts for adding checked node details in form element.
     
     
     
@@ -1065,7 +1065,7 @@ Using following partial view page, you can display the custom details of checked
 
 TreeView provides Ajax action supports to populate the data for rendering TreeeView nodes. Refer the following code blocks to achieve this behavior. 
 
-In the Model page, specify the TreeView node properties as shown below.
+In the model page, specify the TreeView node properties as shown below.
     
     
     
@@ -1084,7 +1084,7 @@ In the Model page, specify the TreeView node properties as shown below.
     
     
     
-In the controller page, create a data List which contains the details about tree nodes and specify Ajax action handling method.
+In the controller page, create a data list which contains the details about tree nodes and specify Ajax action handling method.
     
     
     
@@ -1190,7 +1190,7 @@ In the controller page, create a data List which contains the details about tree
     
     
     
-In the View page, add TreeView helper and map the properties defined to the corresponding fields in data source.
+In the view page, add TreeView helper and map the properties defined to the corresponding fields in data source.
     
     
     

@@ -9,18 +9,19 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, State Persistence
 
 # State Persistence
 
-TreeView state can be persisted by using ‘EnablePersistence’. In which user intractable model values only has been persisted in order to maintain performance. 
+TreeView state can be persisted by using ‘**EnablePersistence**’. In which user intractable model values only has been persisted in order to maintain performance. 
 
-The model values of below are maintained through Id basis of tree node.
+The model values of below are maintained through id basis of tree node.
+
 * selected
 * checked
-* expanded/collapsed state
+* expanded/ collapsed state
 
-N>**Note: In UL li template state has been persisted by index.**
+N>**In UL li template state has been persisted by index.**
 
-TreeView stores its model in local storage / cookies of browser before page refreshes and reinitialized with their stored model after refresh
+TreeView stores its model in local storage / cookies of browser before page refreshes and reinitialized with their stored model after refresh.
 
-In the controller page, create a data List that contains the details about tree nodes.
+In the controller page, create a data list that contains the details about tree nodes.
     
     
     
@@ -50,7 +51,7 @@ In the controller page, create a data List that contains the details about tree 
     
     
     
-In the View page, add TreeView helper with following properties
+In the view page, add TreeView helper with following properties.
     
     
     
