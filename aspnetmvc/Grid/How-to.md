@@ -1330,7 +1330,7 @@ Using `search` method of grid, you can search the string in grid externally with
 
 @(Html.EJ().Button("search")
 .Text("Searching")
-.ClientSideEvents(eve => { eve.Change("onSearching"); })
+.ClientSideEvents(eve => { eve.Click("onSearching"); })
 )
 @(Html.EJ().Grid<OrdersView>("Grid")
 .Datasource((IEnumerable<object>)ViewBag.datasource)
