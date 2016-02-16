@@ -1320,3 +1320,61 @@ We can add header/footer to a pdf documents using PdfPageTemplateElement class. 
     
 {% endhighlight %}
 {% endtabs %}
+
+# External Search in Grid
+
+Using `search` method of grid, you can search the string in grid externally without using in-built toolbar search support. While using `search` method it is necessary to set `AllowSearching` property as `true`. The following code example explains the above behavior.
+{% tabs %}
+{% highlight razor %}
+<input type="text" id="srchstr" class="e-ejinputtext" />
+
+@(Html.EJ().Button("search")
+.Text("Searching")
+.ClientSideEvents(eve => { eve.Click("onSearching"); })
+)
+@(Html.EJ().Grid<OrdersView>("Grid")
+.Datasource((IEnumerable<object>)ViewBag.datasource)
+.AllowPaging()
+.AllowSearching()
+.Columns(col =>
+{
+col.Field("OrderID").Add();
+col.Field("CustomerID").Add();
+col.Field("EmployeeID").Add();
+col.Field("Freight").Add();
+col.Field("ShipCity").Add();
+col.Field("ShipCountry").Add();
+})
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+function onSearching(args) {
+var obj = $("#Grid").ejGrid("instance");
+var val = $("#srchstr").val();
+obj.search(val);
+}
+{% endhighlight %}
+
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+  public class HomeController : Controller
+    {
+        public ActionResult Index()
+           {
+             ViewBag.datasource = OrderRepository.GetAllRecords();
+             return View();
+            }         
+     }	
+}
+{% endhighlight %}
+{% endtabs %}
+The following output is displayed as a result of the above code example.
+![](How-to_images/ExternalSearching_img1.jpeg)
+
+
