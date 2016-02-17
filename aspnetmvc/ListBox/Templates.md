@@ -66,7 +66,7 @@ public class EmployeeSpecialists
  
 ## See Also
 
-[Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/data-binding)
+[Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/databinding)
 
 Define the styles for the template as below.
 

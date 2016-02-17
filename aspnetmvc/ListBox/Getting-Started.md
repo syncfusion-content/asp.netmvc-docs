@@ -48,7 +48,7 @@ We can populate data in the ListBox widget using `DataSource` and `Fields` prope
 
 ### See Also
 
-[Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/data-binding)
+[Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/databinding)
 
 In the Model page, define the Class name as Bikes with BikeId and BikeName field property.
 

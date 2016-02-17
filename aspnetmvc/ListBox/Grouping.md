@@ -55,7 +55,7 @@ The header for each group can be defined using the “span” element”.
 
 The grouped ListBox can be also created via databinding which is explained below. The data items can be categorized by using a specific field in the ListBox widget.
 
-{% seealso %} [Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/data-binding). {% endseealso %}
+{% seealso %} [Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/databinding). {% endseealso %}
 
 The grouping will be defined based on the “GroupBy” Property in fields object.
 
