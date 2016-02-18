@@ -1,6 +1,6 @@
 ---
 title: How To| TreeView | ASP.NET MVC | Syncfusion
-description: How To
+description: How To section
 platform: ejmvc
 control: TreeView
 documentation: UG
@@ -273,7 +273,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the scripts for sorting and refreshing Tree data.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the scripts for sorting and refreshing tree data.
     
     
     
@@ -475,7 +475,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the script for filtering tree nodes.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the script for filtering tree nodes.
     
     
     
@@ -600,9 +600,9 @@ In the view page, add TreeView helper and map the properties defined in to the 
     
     
     
-## Angular data binding to update data while add and remove node
+## AngularJS data binding to update data while add and remove node
 
-TreeView allows us to bind and update tree data in mapped data component while add and removing node using Angular binding. Refer the below code block to know how to update data using Angular binding.
+TreeView allows us to bind and update tree data in mapped data component while add and removing node using AngularJS binding. Refer the below code block to know how to update data using AngularJS binding.
     
     
     
@@ -672,7 +672,7 @@ TreeView allows us to bind and update tree data in mapped data component while a
                 treeobj.removeNode(treeobj.getSelectedNode());  // Twoway binding when remove node
             };
     
-            // Delete from outside Tree
+            // Delete from outside tree
             $scope.delete = function (iid) {
                 for (var i = $scope.dataList.length - 1; i > -1; i--) {
                     if ($scope.dataList[i].iid === iid)
@@ -811,7 +811,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source
     
     
     
@@ -866,7 +866,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the scripts to hide and show the icons of tree nodes.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the scripts to hide and show the icons of tree nodes.
     
     
     
@@ -909,7 +909,7 @@ In the view page, add TreeView helper and map the properties defined in to the 
 
 You can able to customize the TreeView expand and collapse icon by using “cssClass” property of TreeView. Refer the below code block to know how to customize the expand/collapse icons.
 
-In the view page, add TreeView helper and map the properties defined in to the corresponding fields in datasource with that specify the styles for customizing expand/ collapse icon of TreeView.
+In the view page, add TreeView helper and map the properties defined in to the corresponding fields in data source with that specify the styles for customizing expand/ collapse icon of TreeView.
     
     
     
@@ -1063,7 +1063,7 @@ Using following partial view page, you can display the custom details of checked
 
 ## Populate data for TreeView using Ajax
 
-TreeView provides Ajax action supports to populate the data for rendering TreeeView nodes. Refer the following code blocks to achieve this behavior. 
+TreeView provides Ajax action supports to populate the data for rendering TreeView nodes. Refer the following code blocks to achieve this behavior. 
 
 In the model page, specify the TreeView node properties as shown below.
     
@@ -1215,7 +1215,7 @@ In the view page, add TreeView helper and map the properties defined to the corr
     
     
     
-## Populate data for TreeView using XML datasource
+## Populate data for TreeView using XML data source
 
 TreeView provides XML data binding support to populate the data for rendering TreeeView nodes, so that values can be mapped to the TreeView fields from an existing XML data source as below.
     

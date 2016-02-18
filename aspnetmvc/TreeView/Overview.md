@@ -1,7 +1,7 @@
 ---
 layout: post
-title: TreeView | TreeView | ASP.NET MVC | Syncfusion
-description: overview 
+title: Overview | TreeView | ASP.NET MVC | Syncfusion
+description: TreeView introduction with key features
 platform: ejmvc
 control: TreeView
 documentation: ug

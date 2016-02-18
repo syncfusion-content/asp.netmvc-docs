@@ -1,6 +1,6 @@
 ---
 title: Right to Left Align  | TreeView | ASP.NET MVC | Syncfusion
-description: Right to Left Align  
+description: Right to Left Align support for TreeView
 platform: ejmvc
 control: TreeView
 documentation: UG
