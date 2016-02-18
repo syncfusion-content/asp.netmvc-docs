@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | TreeView | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with TreeView | TreeView | ASP.NET MVC | Syncfusion
+description:  To get start with TreeView by adding references
 platform: ejmvc
 control: TreeView
 documentation: ug
@@ -13,7 +13,7 @@ This section explains briefly about how to create a TreeView in ASP.NET MVC plat
 
 ## Create your first TreeView in MVC
 
-Create a MVC Project and add necessary Dll’s, CSS and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation. After creating this project, you can create a TreeView in following ways.
+Create a MVC Project and add necessary assemblies, CSS and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation. After creating this project, you can create a TreeView in following ways.
 
 ## TreeView using Helper element
 
@@ -167,7 +167,7 @@ N>**To configure the API settings after TreeView creation, please refer [API con
  
 ## TreeView events
 
-EJ MVC TreeView supports all the [events](http://help.syncfusion.com/js/api/ejtreeview#events) which is available in EJ TreeView. Refer the following code example to specify an event using HtmlHelper of EJ MVC TreeView.
+EJ MVC TreeView supports all the [events](http://help.syncfusion.com/js/api/ejtreeview#events) which is available in EJ TreeView. Refer the following code example to specify an event using HTML helper of EJ MVC TreeView.
     
     
     

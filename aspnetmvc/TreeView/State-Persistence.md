@@ -1,6 +1,6 @@
 ---
 title: State Persistence  | TreeView | ASP.NET MVC | Syncfusion
-description: State Persistence
+description: State Persistence option in TreeView
 platform: ejmvc
 control: TreeView
 documentation: UG

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drag and Drop | TreeView | ASP.NET MVC | Syncfusion
-description: drag and drop
+title: TreeView with Drag and Drop option | TreeView | ASP.NET MVC | Syncfusion
+description: specify Drag and Drop option in TreeView and its settings
 platform: ejmvc
 control: TreeView
 documentation: ug
