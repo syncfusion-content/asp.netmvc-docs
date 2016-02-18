@@ -1,6 +1,6 @@
 ---
 title: Populate Data | TreeView | ASP.NET MVC | Syncfusion
-description: Populate Data
+description: To populate the data for TreeView
 platform: ejmvc
 control: TreeView
 documentation: UG
@@ -371,15 +371,15 @@ When using remote data binding, the adaptor of [ej.DataManager](http://helpjs.s
 
 The following steps explain how you can bind remote data to TreeView control.
 
-* In the View page, add TreeView helper to configure TreeView.
+* In the view page, add TreeView helper to configure TreeView.
 
-* In the DataSource field assign remote data source. Here dataManager gets the remote web service and filters the data using Query. The select property of ejQuery is used to retrieve the specified columns from the data source.
+* In the DataSource field assign remote data source. Here DataManager gets the remote web service and filters the data using Query API. The select property of ej.Query is used to retrieve the specified columns from the data source.
 
-* Assign dataSource and query property values to bind the remote data. Map the corresponding fields in TreeView control 
+* Assign DataSource and Query property values to bind the remote data. Map the corresponding fields in TreeView control 
 
 ### OData
 
-**OData** is a standardized protocol for creating and consuming data. You can bind [oData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView” control.
+**OData** is a standardized protocol for creating and consuming data. You can bind [OData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView” control.
     
    **Using Datasource(DataSource) API**
     
@@ -511,9 +511,9 @@ N>**You can use above code until OData service version 3. For OData Service vers
     
     
     
-### WebApi
+### Web API
 
-Using [ej.WebApiAdaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors#webapi-adaptor), you can bind WebApi service data to TreeView as shown in below code example.
+Using [ej.WebApiAdaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors#webapi-adaptor), you can bind Web API service data to TreeView as shown in below code example.
     
     
     
@@ -570,7 +570,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and specify the custom Adaptor as shown below.
+In the view page, add TreeView helper and specify the custom adaptor as shown below.
     
     
     
