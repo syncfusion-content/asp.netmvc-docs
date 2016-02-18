@@ -1,6 +1,6 @@
 ---
-title: Tree Node | TreeView | ASP.NET MVC | Syncfusion
-description: Tree Node
+title: Tree Node manipulation | TreeView | ASP.NET MVC | Syncfusion
+description: handling operations in tree Node
 platform: ejmvc
 control: TreeView
 documentation: UG

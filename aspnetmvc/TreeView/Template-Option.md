@@ -1,6 +1,6 @@
 ---
 title: Template Option  | TreeView | ASP.NET MVC | Syncfusion
-description: Template Option
+description: rendering TreeView using Template Option
 platform: ejmvc
 control: TreeView
 documentation: UG
