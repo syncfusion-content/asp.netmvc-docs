@@ -9,672 +9,194 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly how to create a _Ribbon_ in your application with _ASP.NET MVC_.
+This section explains briefly how to create a Ribbon in your application with ASP.NET MVC. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 
-## Create your Ribbon in MVC
+## Control Initialization
 
-The _Ribbon_ can be easily configured to the DOM element, such as _<div>_. You can create a _Ribbon_ with a highly customizable look and feel. The _Ribbon_ control displays the controls in multiple tabs. This section explains about the ribbon tabs, adding controls to the groups, expand/collapse ribbon option, and the control separator.
+Ribbon can be initialized with `ApplicationTab` and UL list is needed for binding Menu to application Menu which can be specified through `MenuItemID` which denotes `Id` of UL.
 
+Define the Application Tab with `Type` as `Menu` to render simple Ribbon control.
+          
+{% highlight CSHTML %}
+
+      @(Html.EJ().Ribbon("defaultRibbon")
+      .Width("500")
+        .ApplicationTab(apptab => {
+                apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+                        OpenOnClick = false
+                });
+        }))
+        <ul id="Ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+                <li><a>Save</a></li>
+                <li><a>Save As</a></li>
+                <li><a>Print</a></li>
+            </ul>
+        </li>
+    </ul>
+
+{% endhighlight  %}
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
+N> Set the required `Width` to Ribbon, else default parent container or window Width will be considered.
 
+## Adding Tabs
 
-###  Create Ribbon Control                     
+RibbonTab is a set of related groups which are combined into single item. For creating Tab, `Id` and `Text` properties should be specified. 
 
-1. Create _Syncfusion ASP.NET MVC_ Application. Refer to the [common](http://help.syncfusion.com/aspnetmvc/ribbon/getting-started) document.
+{% highlight CSHTML %}
 
-2. Add a _Ribbon_ control in the index.cshtml page.The _Width_ property allows you to define the width of the _Ribbon_. In _ApplicationTab_ definition, the _MenuItemID_ property allows you to specify the ID of the ul list to create the application menu. In tabs definition, the _TabGroups_ property allows you to create one or more groups in the tab. In _ContextualTabs_ definition, the _BackgroundColor_ property allows you to define the background color of the contextual tab and _BorderColor_ property allows you to define the border color of the contextual tab.
+     @(Html.EJ().Ribbon("defaultRibbon")
+     .Width("500")
+         .ApplicationTab(apptab => {
+                 apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+                         OpenOnClick = false
+                 });
+         })
+         .RibbonTabs(tab => {
+                 tab.Id("home").Text("HOME").TabGroups(tabgrp => {}).Add();
+         })
+    )
+     <ul id="Ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+                <li><a>Save</a></li>
+                <li><a>Save As</a></li>
+                <li><a>Print</a></li>
+            </ul>
+        </li>
+    </ul>
 
-
-
-
-   ~~~ cshtml
-
-
-	@(Html.EJ().Ribbon("Ribbon")
-
-	.Width("500px")
-
-	.ApplicationTab(apptab =>
-
-	{
-
-
-	 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
-
-
-
-	{
-
-	OpenOnClick = false
-
-	});
-
-	})
-
-	.RibbonTabs(tab =>
-
-	{
-
-	tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-
-	{
-
-	tabgrp.Text("New").Type("custom").ContentID("ribbonContent").Add();
-
-	}).Add();
-
-	tab.Id("calculator").Text("CALCULATOR").TabGroups(tabgrp =>
-
-	{
-
-	tabgrp.Text("Numbers").Type("custom").ContentID("inserttab").Add();
-
-	}).Add();
-
-	})
-
-	.ContextualTabs(ctabs => {
-
-	ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
-
-	{
-
-	ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
-
-	{
-
-	ctabgrp.Text("Table Style").Type("custom").ContentID("designtab").Add();
-
-	}).Add();
-
-	});
-
-	})
-
-	)
-
-
-	<ul id="ribbonmenu">
-
-	<li><a>FILE</a>
-
-	<ul>
-
-	<li><a>New</a></li>
-
-	<li><a>Open</a></li>
-
-	</ul>
-
-	</li>
-
-	</ul>
-
-	<div id="ribbonContent">Ribbon control</div>
-
-	<div id="inserttab">Insert Tab</div>
-
-	<div id="designtab">Design Tab</div>
-
-
-
-   ~~~
-   
-
-
-
-4. The following screenshot illustrates the _Ribbon_ control.
+{% endhighlight  %}
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 
+## Configuring Groups
 
+List of controls are combined as logical `ContentGroups ` into RibbonTabs. TabGroup alignment type as “Rows/Columns”, Default is `Rows`. 
 
-###  Add Controls
-
-Add controls to each _Ribbon_ tab by using the property _Content_. You can also add _custom_ controls by using the property _ContentID_. The property _AlignType_ is used to align the groups in row or column order. The_Ribbon_ control has _Button_, _Split button, DropdownList, Toggle button, Gallery, and Custom_ controls support.The default _AlignType_ is RibbonAlignType.Rows.
-
-
-{% tabs %}
+Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup collection with Button control settings.
 
 {% highlight CSHTML %}
 
-
-@(Html.EJ().Ribbon("Ribbon")
-
-.Width("800px")
-
-.ApplicationTab(apptab =>
-
-{
-
-apptab.Type(ApplicationTabType.Menu).MenuItemID("menu").MenuSettings(new MenuProperties()
-
-{
-
-OpenOnClick = false
-
-});
-
-})
-
-.RibbonTabs(tab =>
-
-
-
-tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-
-{
-
-tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-{
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
-
-{
-
-
-
-ContentType = ContentType.ImageOnly,
-
-ImagePosition = ImagePosition.ImageTop,
-
-PrefixIcon = "e-ribbon e-new"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
-
-}).Add();
-
-tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-{
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
-
-{
-
-DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
-
-Value = "Segoe UI",
-
-Width = "150px"
-
-}).Add();
-
-cntgrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
-
-{
-
-DataSource = (IEnumerable<FontPoint>)ViewBag.datasource1,
-
-Value = "1pt",
-
-Width = "65px"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.DropDownList).Height("28px").IsBig(false)).Add();
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("bold").Text("Bold").ToolTip("Bold").ButtonSettings(new ButtonProperties()
-
-{
-
-ContentType = ContentType.ImageOnly,
-
-PrefixIcon = "e-ribbon bold"
-
-}).Add();
-
-cntgrp.Id("italic").Text("Italic").ToolTip("Italic").ButtonSettings(new ButtonProperties()
-
-{
-
-ContentType = ContentType.ImageOnly,
-
-PrefixIcon = "e-ribbon e-ribbonitalic"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.Button).IsBig(false)).Add();
-
-}).Add();
-
-tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
-
-}).Add();
-
-})
-
-)
-
-
-<ul id="menu">
-
-	<li><a>FILE</a>
-
-		<ul>
-
-			<li><a>New</a></li>
-
-			<li><a>Open</a></li>
-
-		</ul>
-
-	</li>
-
-</ul>
-
-<div id="Contents"><button id="custom">Custom Control</button></div>
-
-
-
-
-<style type="text/css">
-
-	.e-ribbon .e-new:before 
-	{
-
-		content: "\e646";
-
-		font-size: 36px;
-
-		position: relative;
-
-		left: -12px;
-
-		top: -4px;
-
-	}
-
-
-
-	.e-ribbon .e-ribbonitalic:before 
-	{
-
-		content: "\e635";
-
-	}
-
-
-
-	.e-ribbon .bold:before 
-	{
-
-		content: "\e636";
-
-	}
-
-</style>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-	public partial class RibbonController : Controller
-
-	{
-
-		//
-
-		// GET: /Sample/
-
-		List<FontFamily> fontFamilySample = new List<FontFamily>();
-
-		List<FontPoint> fontPointSample = new List<FontPoint>();
-
-		public ActionResult Sample()
-
-		{
-
-			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
-
-			fontFamilySample.Add(new FontFamily { text = "Arial" });
-
-			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
-
-			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
-
-			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
-
-			ViewBag.datasource = fontFamilySample;
-
-			fontPointSample.Add(new FontPoint { text = "1pt" });
-
-			fontPointSample.Add(new FontPoint { text = "2pt" });
-
-			fontPointSample.Add(new FontPoint { text = "3pt" });
-
-			fontPointSample.Add(new FontPoint { text = "4pt" });
-
-			fontPointSample.Add(new FontPoint { text = "5pt" });
-
-			ViewBag.datasource1 = fontPointSample;
-
-			return View();
-
-		}
-
-
-
-	}
-
-}
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-The following screenshot illustrates Ribbon with controls.
+     @(Html.EJ().Ribbon("defaultRibbon")
+     .Width("500")
+        .ApplicationTab(apptab => {
+                apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+                        OpenOnClick = false
+                });
+        })
+        .RibbonTabs(tab => {
+                tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+                        tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
+                                cnt.ContentGroups(cntgrp => {
+                                        cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                                                ContentType = ContentType.ImageOnly,
+                                                        ImagePosition = ImagePosition.ImageTop,
+                                                        PrefixIcon = "e-Ribbon e-new",
+                                                        Click = "executeAction"
+                                        }).Add();
+                                }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
+                        }).Add();
+                }).Add();
+        }))
+        <ul id="Ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+                <li><a>Save</a></li>
+                <li><a>Save As</a></li>
+                <li><a>Print</a></li>
+            </ul>
+        </li>
+    </ul>
+    }
+    @section StyleSection{
+    <link href="~/Content/ej/Ribbon-css/ej.icons.css" rel="stylesheet" />
+    }
+
+{% endhighlight  %}
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
+## Adding Controls to Group
 
-
-### Expand/Collapse
-
-The _Ribbon_ has expand/collapse support. The following screenshot illustrates _Ribbon_ in the expanded state.
-
-
-
-![](Getting-Started_images/Getting-Started_img4.png)
-
-
-
-The following screenshot illustrates _Ribbon_ in the collapsed state,
-
-![](Getting-Started_images/Getting-Started_img5.png)
-
-
-
-### Separator for Controls
-
-_Control Separator_ support has been provided in the _Ribbon_ control. Set _EnableSeparator_ value to _true_ to enable the separator after a control. _Control Separator_ supports only row type group.
-
-{% tabs %}
-
+Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corresponding `Type` specified like Button, SplitButton, ToggleButton, DropDownList, Gallery, Custom, etc. Default type is `Button`.
 
 {% highlight CSHTML %}
 
-
-@(Html.EJ().Ribbon("Ribbon")
-
-.Width("700px")
-
-.ApplicationTab(apptab =>
-
-{
-
-apptab.Type(ApplicationTabType.Menu).MenuItemID("menu").MenuSettings(new MenuProperties()
-
-{
-
-OpenOnClick = false
-
-});
-
-})
-
-.RibbonTabs(tab =>
-
-{
-
-tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-
-{
-
-tabgrp.Text("New").AlignType(RibbonAlignType.Rows).EnableGroupExpander(true).Content(cnt =>
-
-{
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
-
-{
-
-
-
-ContentType = ContentType.ImageOnly,
-
-ImagePosition = ImagePosition.ImageTop,
-
-PrefixIcon = "e-ribbon e-new"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
-
-}).Add();
-
-tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
-
-{
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
-
-{
-
-DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
-
-Value = "Segoe UI",
-
-Width = "150px"
-
-}).Add();
-
-cntgrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
-
-{
-
-DataSource = (IEnumerable<FontPoint>)ViewBag.datasource1,
-
-Value = "1pt",
-
-Width = "65px"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.DropDownList).Height("28px").IsBig(false)).Add();
-
-cnt.ContentGroups(cntgrp =>
-
-{
-
-cntgrp.Id("bold").Text("Bold").ToolTip("Bold").ButtonSettings(new ButtonProperties()
-
-{
-
-ContentType = ContentType.ImageOnly,
-
-PrefixIcon = "e-ribbon bold"
-
-}).Add();
-
-cntgrp.Id("italic").Text("Italic").ToolTip("Italic").EnableSeparator(true).ButtonSettings(new ButtonProperties()
-
-{
-
-ContentType = ContentType.ImageOnly,
-
-PrefixIcon = "e-ribbon e-ribbonitalic"
-
-}).Add();
-
-cntgrp.Id("underline").Text("Underline").ToolTip("Underline").ButtonSettings(new ButtonProperties()
-
-{
-
-ContentType = ContentType.ImageOnly,
-
-PrefixIcon = "e-ribbon e-ribbonunderline"
-
-}).Add();
-
-}).ContentDefaults(df => df.Type(RibbonButtonType.Button).IsBig(false)).Add();
-
-}).Add();
-
-}).Add();
-
-})
-
-)
-
-
-<ul id="menu">
-
-	<li><a>FILE</a>
-
-		<ul>
-
-			<li><a>New</a></li>
-
-			<li><a>Open</a></li>
-
-		</ul>
-
-	</li>
-
-</ul>
-
-
-
-
-<style type="text/css">
-
-	.e-ribbon .e-new:before 
-	{
-
-	content: "\e646";
-
-	font-size: 36px;
-
-	position: relative;
-
-	left: -12px;
-
-	top: -4px;
-
-	}
-
-
-
-	.e-ribbon .e-ribbonitalic:before 
-	{
-
-	content: "\e635";
-
-	}
-
-
-
-	.e-ribbon .bold:before 
-	{
-
-	content: "\e636";
-
-	}
-
-
-
-	.e-ribbon .e-ribbonunderline:before 
-	{
-
-	content: "\e634";
-
-	}
-
-</style>
-
-{% endhighlight %}
-{% highlight c# %}
-
-namespace MVCSampleBrowser.Controllers
-
-{
-
-	public partial class RibbonController : Controller
-
-	{
-
-		//
-
-		// GET: /Sample/
-
-		List<FontFamily> fontFamilySample = new List<FontFamily>();
-
-		List<FontPoint> fontPointSample = new List<FontPoint>();
-
-		public ActionResult Sample()
-
-		{
-
-			fontFamilySample.Add(new FontFamily { text = "Segoe UI" });
-
-			fontFamilySample.Add(new FontFamily { text = "Arial" });
-
-			fontFamilySample.Add(new FontFamily { text = "Times New Roman" });
-
-			fontFamilySample.Add(new FontFamily { text = "Tahoma" });
-
-			fontFamilySample.Add(new FontFamily { text = "Helvetica" });
-
-			ViewBag.datasource = fontFamilySample;
-
-			fontPointSample.Add(new FontPoint { text = "1pt" });
-
-			fontPointSample.Add(new FontPoint { text = "2pt" });
-
-			fontPointSample.Add(new FontPoint { text = "3pt" });
-
-			fontPointSample.Add(new FontPoint { text = "4pt" });
-
-			fontPointSample.Add(new FontPoint { text = "5pt" });
-
-			ViewBag.datasource1 = fontPointSample;
-
-			return View();
-
-		}
-
-	}
-
-}
-
-
-{% endhighlight %}
-
-{% endtabs %} 
-
-The following screenshot illustrates the control separator after the Italic Button control.
-
-![](Getting-Started_images/Getting-Started_img6.png)
-
-
+     @(Html.EJ().Ribbon("defaultRibbon")
+     .Width("500")
+        .ApplicationTab(apptab => {
+                apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+                        OpenOnClick = false
+                });
+        })
+        .RibbonTabs(tab => {
+                tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+                        tabgrp.Text("SplitButton & Dropdown").AlignType(RibbonAlignType.Columns).Content(cnt => {
+                               cnt.ContentGroups(cntgrp => {
+                                        cntgrp.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
+                                                ContentType = ContentType.ImageOnly,
+                                                        PrefixIcon = "e-Ribbon e-Ribbonpaste",
+                                                        TargetID = "pasteSplit",
+                                                        ArrowPosition = ArrowPosition.Bottom,
+                                                        ButtonMode = ButtonMode.Dropdown
+
+                                        }).Add();
+                                }).ContentDefaults(df => df.Type(RibbonButtonType.SplitButton).Width("50px").Height("70px")).Add();
+                                cnt.ContentGroups(cntgrp => {
+                                        cntgrp.Id("fontfamily").DropdownSettings(new DropDownListProperties() {
+                                                DataSource = (IEnumerable < FontFamily > ) ViewBag.datasource,
+                                                        Text = "Segoe UI",
+                                                        Select = "executeAction",
+                                                        Width = "150px"
+                                        }).Add();
+
+                                }).ContentDefaults(df => df.Type(RibbonButtonType.DropDownList).Height("28px")).Add();
+                        }).Add();
+                  }).Add();
+           }))
+     )
+    <ul id="Ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+                <li><a>Save</a></li>
+                <li><a>Save As</a></li>
+                <li><a>Print</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul id="pasteSplit">
+        <li><a>Paste</a></li>
+    </ul>
+    }
+    @section StyleSection{
+    <link href="~/Content/ej/Ribbon-css/ej.icons.css" rel="stylesheet" />
+    <style>
+        .e-pastetip {
+            background-image: url("../Content/ej/common-images/Ribbon/paste.png");
+            background-repeat: no-repeat;
+            height: 64px;
+            width: 64px;
+        }
+    </style>
+    }
+
+{% endhighlight  %}
+
+![](Getting-Started_images/Getting-Started_img4.png)
 

@@ -7,130 +7,80 @@ control: Ribbon
 documentation: ug
 ---
 
-# Contextual Tab and Tab Set
+# Contextual Tab And Tab Set
 
-You can add _Contextual Tabs_ and _Tab Set_ in the _Ribbon_ control. In _ContextualTabs_ definition, use _RibbonTabs_ property to add _contextual tabs_ and _contextual tab set_. In _ContextualTabs_ definition, use _BackgroundColor_ property to apply background color to the _Contextual Tabs_ and _Tab Set_. Use _BorderColor_ property to apply border color to the _Contextual__Tabs_ and _Tab Set._
-
-
+Contextual Tabs are collection of Tabs that extended styling and can be shown based on some criteria. Contextual Tabs can be added like `RibbonTabs` including TabGroup and TabContent section. You can set `BackGroundColor` and `BorderColor` to highlight them as Tab set.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Ribbon("Ribbon")
+     @(Html.EJ().Ribbon("Ribbon")
+     .Width("500")
+         .ApplicationTab(apptab => {
+                 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
+                       {
+                             OpenOnClick = false
+                       });
+          })
+         .RibbonTabs(tab => {
+         tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+                 tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
+         }).Add();
+         })
+         .ContextualTabs(ctabs => {
+         ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab => {
+         ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp => {
+                  ctabgrp.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
+     }).Add();
+     });
+         ctabs.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ctab => {
+         ctab.Id("tabset1").Text("Tabset1").TabGroups(ctabgrp => {
+                ctabgrp.Text("Tabset1 Style").Type("custom").ContentID("headings").Add();
+     }).Add();
+         ctab.Id("tabset2").Text("Tabset2").TabGroups(ctabgrp => {
+                ctabgrp.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
+     }).Add();
+     });
+     })
+     )
+    <ul id="ribbonmenu">
+    <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+           </ul>
+        </li>
+    </ul>
+    <div id="headings" class="e-headings">
+        <div>
+            <p>AaBbCcDd</p>
+            <p>No Spacing</p>
+        </div>
+        <div>
+            <p class="e-strong">AaBbCcDd</p>
+            <p>Strong</p>
+        </div>
+        <div>
+            <p class="e-emphasis">AaBbCcDd</p>
+            <p>Emphasis</p>
+        </div>
+    </div>
+    <div id="Contents">Custom Control</div>
+    <div id="contextualTab">
+    <button id="contextualBtn">Contextual Tab</button>
+    </div>
+    <div id="contextualTabset2">
+    <button id="contextualTabsetBtn2">Contextual Tabset2</button>
+    </div>
+    @section StyleSection{
+    <link href="~/Content/ej/ribbon-css/ej.icons.css" rel="stylesheet" />
+    }
 
-.Width("800px")
-
-.ApplicationTab(apptab =>
-
-{
-
-apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
-
-{
-
-   OpenOnClick = false
-
-});
-
-})
-
-.RibbonTabs(tab =>
-
-{
-
-tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-
-{
-
-tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();  
-
-}).Add();
-
-})
-
-.ContextualTabs(ctabs => {
-
-ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab =>
-
-{
-
-ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp =>
-
-{
-
-	ctabgrp.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
-
-}).Add();
-
-});
-
-ctabs.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ctab =>
-
-{
-
-ctab.Id("tabset1").Text("Tabset1").TabGroups(ctabgrp =>
-
-{
-
-	ctabgrp.Text("Tabset1 Styles").Type("custom").ContentID("contextualTabset1").Add();
-
-}).Add();
-
-ctab.Id("tabset2").Text("Tabset2").TabGroups(ctabgrp =>
-
-{
-
-	ctabgrp.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
-
-}).Add();
-
-});
-
-})
-
-)
-
-
-<ul id="ribbonmenu">
-
-	<li><a>FILE</a>
-
-		<ul>
-
-			<li><a>New</a></li>
-
-			<li><a>Open</a></li>
-
-		</ul>
-
-	</li>
-
-</ul>
-
-<div id="Contents">Custom Control</div>
-
-<div id="contextualTab">
-
-	<button id="contextualBtn">Contextual Tab</button></div>
-
-<div id="contextualTabset1">
-
-	<button id="contextualTabsetBtn1">Contextual Tabset1</button></div>
-
-<div id="contextualTabset2">
-
-	<button id="contextualTabsetBtn2">Contextual Tabset2</button></div>
-
-
-
-{% endhighlight %}
-
-
-
-
-
-The following screenshot illustrates _Ribbon_ with _Contextual Tabs and Tab Set_.
+{% endhighlight  %}
 
 ![](Contextual-Tab-and-Tab-Set_images/Contextual-Tab-and-Tab-Set_img1.png)
+
+
 
 
 
