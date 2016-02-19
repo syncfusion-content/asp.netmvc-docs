@@ -67,6 +67,8 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
 
 Application Menu can be rendered using JSON Data Source. Please refer `this` page to set data source to `ejMenu`.
 
+{% tabs %}
+
 {% highlight CSHTML %}
 
       @(Html.EJ().Ribbon("MenuJson")
@@ -114,17 +116,8 @@ Application Menu can be rendered using JSON Data Source. Please refer `this` pag
 
 {% endhighlight  %}
 
-{% highlight %}
+{% highlight C# %}
 
-     using MVCSampleBrowser.Models;
-     using System;
-     using System.Collections.Generic;
-     using System.Linq;
-     using System.Web;
-     using System.Web.Mvc;
-
-     namespace MVCSampleBrowser.Controllers
-    {
     public partial class RibbonController : Controller
     {
         List<MenuJson> Ribbon = new List<MenuJson>();
@@ -150,6 +143,8 @@ Application Menu can be rendered using JSON Data Source. Please refer `this` pag
     }
 
 {% endhighlight  %}
+
+{% endtabs %}  
 
 ![](Application-Tab_images/Bindingdatasource_img2.png)
 
