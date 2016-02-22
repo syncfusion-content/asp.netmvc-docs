@@ -16,35 +16,35 @@ The Application Tab is used to represent a `Menu` that do some operations, such 
 
 ## Application Menu
 
-The Application Menu is similar to traditional file Menu options and Syncfusion `Menu` control is used internally to render this. To show Application Menu in Ribbon, set the `Type` as `Menu` and `MenuSettings` to customize properties of `ejMenu`.
+The Application Menu is similar to traditional file Menu options and Syncfusion `Menu` control is used internally to render this. To show Application Menu in Ribbon, set the `Type` as `Menu` and [`MenuSettings`](http://help.syncfusion.com/aspnetmvc/menu/getting-started) to customize properties of `ejMenu`.
 
-### Create Using Template
+### _Create Using Template_
 
 Set the UL element `Id` to `MenuItemID` property to create Application Menu and it will acts as template to render Menu.
 
 {% highlight CSHTML %}
 
     @(Html.EJ().Ribbon("defaultRibbon")
-     .Width("500")
-         .ApplicationTab(apptab => {
-                 apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
-                         OpenOnClick = false
-                 });
-         })
-         .RibbonTabs(tab => {
-                 tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-                         tabgrp.Text("New").ContentID("Contents").Type("custom").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                                 cnt.ContentGroups(cntgrp => {
-                                         cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
-                                                 ContentType = ContentType.ImageOnly,
-                                                         ImagePosition = ImagePosition.ImageTop,
-                                                         PrefixIcon = "e-Ribbon e-new",
-                                                         Click = "executeAction"
-                                         }).Add();
-                                 }).Add();
-                         }).Add();
-                 }).Add();
-         }))
+    .Width("500")
+    .ApplicationTab(apptab => {
+        apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+            OpenOnClick = false
+        });
+    })
+    .RibbonTabs(tab => {
+        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+            tabgrp.Text("New").ContentID("Contents").Type("custom").AlignType(RibbonAlignType.Rows).Content(cnt => {
+                cnt.ContentGroups(cntgrp => {
+                    cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                        ContentType = ContentType.ImageOnly,
+                            ImagePosition = ImagePosition.ImageTop,
+                            PrefixIcon = "e-Ribbon e-new",
+                            Click = "executeAction"
+                    }).Add();
+                }).Add();
+            }).Add();
+        }).Add();
+    }))
     <div id="Contents">Custom control</div>
     <ul id="Ribbonmenu">
         <li>
@@ -63,51 +63,42 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
 
 ![](Application-Tab_images/Createusingtemplate_img1.png)
 
-### Binding Data Source
+### _Binding Data Source_
 
-Application Menu can be rendered using JSON Data Source. Please refer `this` page to set data source to `ejMenu`.
+Application Menu can be rendered using JSON Data Source. Please refer [`this`](http://help.syncfusion.com/aspnetmvc/menu/data-binding) page to set data source to `ejMenu`.
 
 {% tabs %}
 
 {% highlight CSHTML %}
 
       @(Html.EJ().Ribbon("MenuJson")
-                .Width("500")
-                .ApplicationTab(apptab =>
-                {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties()
-                    {
-                        OpenOnClick = true,
-                        MenuFields = new MenuFields()
-                        {
+         .Width("500")
+         .ApplicationTab(apptab => {
+             apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+                 OpenOnClick = true,
+                     MenuFields = new MenuFields() {
 
-                            DataSource = (IEnumerable<MenuJson>)ViewBag.datasource,
-                            Text = "text",
-                            ParentId = "parentid",
-                            Id = "id"
-
-                        }
-                    });
-                })
-                .RibbonTabs(tab =>
-                {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
-                    {
-                        tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
-                        {
-                            cnt.ContentGroups(cntgrp =>
-                            {
-                                cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties()
-                                {
-                                    ContentType = ContentType.ImageOnly,
-                                    ImagePosition = ImagePosition.ImageTop,
-                                    PrefixIcon = "e-Ribbon e-new",
-                                    Click = "executeAction"
-                                }).Add();
-                            }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
-                        }).Add();
-                    }).Add();
-                })
+                         DataSource = (IEnumerable < MenuJson > ) ViewBag.datasource,
+                             Text = "text",
+                             ParentId = "parentid",
+                             Id = "id"
+                     }
+             });
+         })
+         .RibbonTabs(tab => {
+             tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+                 tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
+                     cnt.ContentGroups(cntgrp => {
+                         cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                             ContentType = ContentType.ImageOnly,
+                                 ImagePosition = ImagePosition.ImageTop,
+                                 PrefixIcon = "e-Ribbon e-new",
+                                 Click = "executeAction"
+                         }).Add();
+                     }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
+                 }).Add();
+             }).Add();
+         })
     <ul id="Ribbonmenu"></ul>
     }
     @section StyleSection{
@@ -163,33 +154,33 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
 
 {% highlight CSHTML %}
 
-    @(Html.EJ().Ribbon("defaultRibbon")
+       @(Html.EJ().Ribbon("defaultRibbon")
     .Width("500")
-         .ApplicationTab(apptab => {
-                 apptab.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings => {
-                         bsSettings.Text("FILE").Height("350").Width("100%").HeaderWidth("120").Pages(bsPage => {
-                                 bsPage.Id("new").Text("New").ContentID("newCon").Add();
-                                 bsPage.Id("close").Text("Close").EnableSeparator(true).ItemType(ItemType.Button).Add();
-                                 bsPage.Id("account").Text("Office Account").ContentID("accountCon").Add();
-                         });
-                 });
-         })
-         .RibbonTabs(tab => {
-                 tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-                         tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                                 cnt.ContentGroups(cntgrp => {
-                                         cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+    .ApplicationTab(apptab => {
+        apptab.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings => {
+            bsSettings.Text("FILE").Height("350").Width("100%").HeaderWidth("120").Pages(bsPage => {
+                bsPage.Id("new").Text("New").ContentID("newCon").Add();
+                bsPage.Id("close").Text("Close").EnableSeparator(true).ItemType(ItemType.Button).Add();
+                bsPage.Id("account").Text("Office Account").ContentID("accountCon").Add();
+            });
+        });
+    })
+    .RibbonTabs(tab => {
+        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
+            tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
+                cnt.ContentGroups(cntgrp => {
+                    cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
 
-                                                 ContentType = ContentType.ImageOnly,
-                                                         ImagePosition = ImagePosition.ImageTop,
-                                                         PrefixIcon = "e-ribbon e-new",
-                                                         Click = "executeAction"
-                                         }).Add();
-                                 }).Add();
-                         }).Add();
-                 }).Add();
-         })
-         .ClientSideEvents(evt => evt.Create("createControl")))
+                        ContentType = ContentType.ImageOnly,
+                            ImagePosition = ImagePosition.ImageTop,
+                            PrefixIcon = "e-ribbon e-new",
+                            Click = "executeAction"
+                    }).Add();
+                }).Add();
+            }).Add();
+        }).Add();
+    })
+    .ClientSideEvents(evt => evt.Create("createControl")))
          <div id="newCon">
          <table>
                 <tr>
