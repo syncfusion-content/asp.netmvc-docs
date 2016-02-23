@@ -1,0 +1,219 @@
+---
+layout: post
+title: Group | Ribbon | ASP.NET MVC | Syncfusion
+description: Group
+platform: ejmvc
+control: Ribbon
+documentation: ug
+keywords: group,ribbon group
+---
+
+# Group
+
+Group is a collection of logical content groups that are combined under related Tab. Each group can be defined using content groups or custom content.
+
+## Adding Tab Groups
+
+Group items can be added to Tabs by specifying `Text` and corresponding `Content` to be displayed. The content of group can be specified as either with `Content` collection, `ContentID` or `CustomContent`.
+
+## Adding Content
+
+Add content to Group item which is based on `Type` of content specified. The available types are `Button` , `SplitButton`, `ToggleButton`,`Gallery`, and `DropDownList`.
+
+Groups and defaults settings can be added with the `Content`.
+
+## Defaults
+
+The `Height`, `Width`, `Type`, `IsBig` property to the controls in the `ContentGroups` can be specified commonly.
+
+The `Height` & `Width` applicable to Button, SplitButton, DropDownList ,ToggleButton controls and `IsBig` applicable to only button controls ( button, split , toggle)
+
+## Adding Content Groups
+
+Controls such as button, split button, dropdown list, toggle button, gallery in the subgroup of the Ribbon Tab can be rendered. All of these can be customized using its corresponding settings property such as `ButtonSettings`, `DropdownSettings`, etc.
+
+Custom controls or items (such as table, div etc.) can be added when the `Type` set as `Custom`. `Defaults` control settings of group can be specified for an `individual group` instead of specifying them to Content `Groups ` collection commonly.
+
+`ToolTip` and `CustomTooltip` can be specified for each group controls.
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Ribbon("defaultRibbon")
+        .Width("500px")
+        .ApplicationTab(apptab =>
+        {
+            apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+        })
+        .RibbonTabs(tab =>
+        {
+            tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+            {
+                tabgrp.Text("Clipboard").Content(cnt =>
+                {
+                    cnt.ContentGroups(cntgrp =>
+                    {  cntgrp.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
+                                                {
+                                                    ContentType = ContentType.ImageOnly,
+                                                    PrefixIcon = "e-ribbon e-ribbonpaste",
+                                                    TargetID = "pasteSplit",
+                                                }).Add();
+                    }).Add();
+                }).Add();
+                tabgrp.Text("Font").AlignType(RibbonAlignType.Columns).Content(cnt =>
+                {
+                    cnt.ContentGroups(cntgrp =>
+                    {
+                        cntgrp.Id("cut").ToggleButtonSettings(new ToggleButtonProperties()
+                        {
+                            DefaultText = "Cut",
+                            ActiveText = "Cut Over"
+                        }).Add();
+                        cntgrp.Id("copy").ToggleButtonSettings(new ToggleButtonProperties()
+                        {
+                            DefaultText = "Copy",
+                            ActiveText = "Copy Over"
+                        }).Add();
+                    }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("75px").Height("30px").Type(RibbonButtonType.ToggleButton)).Add();
+                }).Add();
+            }).Add();
+        })
+    )
+    <ul id="ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>Open</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul id="pasteSplit">
+        <li><a>Paste Special</a></li>
+    </ul>
+    
+{% endhighlight  %}
+
+![](Group_images/Group_img1.png)
+
+##Enable Separator 
+
+Separates the control from the next control in the group when group `AlignType` is `Rows`. Set “true” to `EnableSeparator`.
+
+ {% highlight CSHTML %}
+
+    @(Html.EJ().Ribbon("defaultRibbon")
+        .Width("500px")
+        .ApplicationTab(apptab =>
+        {
+            apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+        })
+        .RibbonTabs(tab =>
+        {
+            tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+            {
+                tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+                {
+                    cnt.ContentGroups(cntgrp =>
+                    {                        cntgrp.Id("new").Text("New").ToolTip("New").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                        {
+                            Width = "100",
+                        }).Add();
+                        cntgrp.Id("font").Text("Font").ToolTip("Font").ButtonSettings(new ButtonProperties()
+                        {
+                            Width = "150",
+                        }).Add();
+                    }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Height("70px")).Add();
+                }).Add();
+            }).Add();
+        })
+    )
+    <ul id="ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+                <li><a>Open</a></li>
+            </ul>
+        </li>
+    </ul>
+
+ {% endhighlight  %}
+ 
+ ![](Group_images/Group_img2.png)
+ 
+ ##Adding Custom Content 
+ 
+Set group `Type` as `custom` to add custom items such as div, table and custom controls. With type as custom, content can be added in two ways as specified below.
+
+*	HTML contents can be directly added into the groups as string content using `CustomContent`. property
+
+*	Custom template id can be specified to render those specific custom template using `ContentID` property
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Ribbon("defaultRibbon")
+                .Width("500")
+                .ApplicationTab(apptab =>
+                {
+                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                })
+                .RibbonTabs(tab =>
+                {
+                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    {
+                        tabgrp.Text("New").Type("custom").CustomContent("<button id='customContent'>Using Custom Content</button>").Add();
+                        tabgrp.Text("Data").Type("custom").ContentID("btn").Add();
+                    }).Add();
+                })
+)
+    <ul id="ribbonmenu">
+    <li>
+        <a>FILE</a>
+        <ul>
+            <li><a>New</a></li>
+            <li><a>Open</a></li>
+        </ul>
+    </li>
+    </ul>
+    <button id='btn'>Using Content ID</button>
+
+{% endhighlight  %}
+ 
+![](Group_images/Group_img3.png)
+
+## Group Expander
+
+  Set `EnableGroupExpander` as true to show Group Expander for each group in Tab. These expanders can be customized using `GroupExpand` event, such as to show popup dialog.
+  
+  {% highlight CSHTML %}
+  
+    @(Html.EJ().Ribbon("defaultRibbon")
+                .Width("500")
+                .ApplicationTab(apptab =>
+                {
+                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                })
+                .RibbonTabs(tab =>
+                {
+                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    {
+                        tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").EnableGroupExpander(true).ContentID("btn").Add();
+                })
+                .ClientSideEvents(evt => evt.GroupExpand("groupExpand"))
+    )
+      <ul id="ribbonmenu">
+        <li>
+            <a>FILE</a>
+            <ul>
+                <li><a>New</a></li>
+            </ul>
+        </li>
+    </ul>
+    <button id='btn'>Home button</button>   
+      <script>
+        function groupExpand(args) {
+            alert("Group expander click triggered");}
+    </script>    
+      
+  {% endhighlight  %}
+  
+  ![](Group_images/Group_img4.png)
