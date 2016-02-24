@@ -15,6 +15,7 @@ Template is applicable to all the below specified elements of the Scheduler,
 * Date header
 * Resource header
 * Priority field
+* TimeScale
 * Date and time columns in Agenda view
 * Tooltip
 
@@ -118,31 +119,31 @@ The cells can be customized with the following code example.
 
 <!-- Template for Workcells and Monthcells -->
 <script id="workTemplate" type="text/x-jsrender">
-    {{"{{"}}if resource.classname == 'e-parentnode'{{"}}"}}
-        {{"{{"}}:resource.text{{"}}"}}
-    {{"{{"}}else{{"}}"}}
-        {{"{{"}}if date.getDay() == 0 || date.getDay() == 6{{"}}"}}
+    {{"{{"}}if resource.classname == 'e-parentnode'{{}}}}
+        {{"{{"}}:resource.text{{}}}}
+    {{"{{"}}else{{}}}}
+        {{"{{"}}if date.getDay() == 0 || date.getDay() == 6{{}}}}
             <div style="background-color:lightblue">Weekend</div>
-        {{"{{"}}else{{"}}"}}
-            {{"{{"}}if view == 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5{{"}}"}}
+        {{"{{"}}else{{}}}}
+            {{"{{"}}if view == 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5{{}}}}
                 <div style="background-color:burlywood">Meeting</div>
-            {{"{{"}}else resource.text != 'Party Hall-B' && date.getDate() == 15{{"}}"}}
+            {{"{{"}}else resource.text != 'Party Hall-B' && date.getDate() == 15{{}}}}
                 <div style="background-color:thistle">Holiday</div>
-            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5 && date.getHours() == 10{{"}}"}}
+            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-A' && date.getDay() == 5 && date.getHours() == 10{{}}}}
                 <div style="background-color:burlywood">Meeting</div>
-            {{"{{"}}else view == 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5{{"}}"}}
+            {{"{{"}}else view == 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5{{}}}}
                 <div style="background-color:lightblue">Conf.</div>
-            {{"{{"}}else resource.text == 'Party Hall-B' && date.getDate() == 16{{"}}"}}
+            {{"{{"}}else resource.text == 'Party Hall-B' && date.getDate() == 16{{}}}}
                 <div style="background-color:darkkhaki">Happyday</div>
-            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5 && date.getHours() == 12{{"}}"}}
+            {{"{{"}}else view != 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5 && date.getHours() == 12{{}}}}
                 <div style="background-color:goldenrod">Conf.</div>
-            {{"{{"}}else date.getDate() == 10 && date.getMonth() == 11{{"}}"}}
+            {{"{{"}}else date.getDate() == 10 && date.getMonth() == 11{{}}}}
                 <div style="background-color:palegreen">Day Spl</div>
-            {{"{{"}}else date.getDate() == 25 && date.getMonth() == 11{{"}}"}}
+            {{"{{"}}else date.getDate() == 25 && date.getMonth() == 11{{}}}}
                 <div style="background-color:sandybrown">Christmas</div>
-            {{"{{"}}/if{{"}}"}}
-        {{"{{"}}/if{{"}}"}}
-    {{"{{"}}/if{{"}}"}}
+            {{"{{"}}/if{{}}}}
+        {{"{{"}}/if{{}}}}
+    {{"{{"}}/if{{}}}}
 </script>
 
 {% endhighlight %}
@@ -176,7 +177,7 @@ The Dateheader can be customized with the following code example.
 
 <!-- Template for Dateheader -->
 <script id="dateTemplate" type="text/x-jsrender">
-    <div>{{"{{"}}:~dTemplate(date){{"}}"}}</div>
+    <div>{{"{{"}}:~dTemplate(date){{}}}}</div>
 </script>
 
 <script>
@@ -344,12 +345,12 @@ The template customization for major and minor timeslots can be referred from th
 
 <!-- Template for Majorslot -->
 <script id="majorTemplate" type="text/x-jsrender">
-    <div>{{"{{"}}:~major(date){{"}}"}}</div>
+    <div>{{"{{"}}:~major(date){{}}}}</div>
 </script>
 
 <!-- Template for Minorslot -->
 <script id="minorTemplate" type="text/x-jsrender">
-    <div>{{"{{"}}:~minor(date){{"}}"}}</div>
+    <div>{{"{{"}}:~minor(date){{}}}}</div>
 </script>
 
 <script>
@@ -463,7 +464,7 @@ To define the template option for tooltip, the  `TooltipSettings` must be enable
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ToolTipSettings(tooltip => tooltip.Enable(true).Template("#tooltipTemplate"))
+        .ToolTipSettings(tooltip => tooltip.Enable(true).TemplateId("#tooltipTemplate"))
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")

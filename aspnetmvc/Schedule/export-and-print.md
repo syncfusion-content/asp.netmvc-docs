@@ -273,7 +273,9 @@ The following code example depicts the way to print a particular appointment.
 
 ## Import Appointments
 
-To Import appointments to the Scheduler, server-side method `renderingImportAppointments` can be used which is depicted in the following code example.
+To Import appointments into the Scheduler, server-side method `renderingImportAppointments` can be used to render the appointments which can be retrived from specified file path location.
+
+To Import appointments into the Scheduler, refer the following code as example.
 
 {% highlight razor %}
 
@@ -308,7 +310,7 @@ To Import appointments to the Scheduler, server-side method `renderingImportAppo
 
 {% endhighlight %}
 
-The server-side code example to import the Scheduler appointments are as follows.
+The server-side action **Import ICS File** contains the following code example to import the Scheduler appointments.
 
 {% highlight c# %}
 
