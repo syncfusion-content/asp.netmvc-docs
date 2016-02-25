@@ -208,11 +208,11 @@ N>  [localstorage](http://www.w3schools.com/html/html5_webstorage.asp#) is not s
 
 ## Change the Font
 
-By default, the editor’s &lt; iframe &gt; is initialized with “Segoe UI” font. To change it, select a different font from the drop-down in the editor’s toolbar. To apply different font for particular section of the content, select the text that you would like to change, and select a required font from the drop-down to apply the changes to the selected text.
+By default, the editor’s &lt; iframe &gt; is initialized with “Segoe UI” font name and 3(12pt) font size. To change it, select a different font name and font size from the drop-down in the editor’s toolbar. To apply different font style for particular section of the content, select the text that you would like to change, and select a required font style from the drop-down to apply the changes to the selected text.
 
-### Set Default Font
+### Set Default Font and Font Size
 
-* Set a default font to the font drop-down programmatically.
+* Set a default font name and font size to the font name and size drop-down programmatically.
 
 {% highlight html %}
 
@@ -238,13 +238,15 @@ By default, the editor’s &lt; iframe &gt; is initialized with “Segoe UI” f
             var editor = $("#rteSample").ejRTE("instance");
             var ddl = editor._fontStyleDDL.ejDropDownList("instance");
             ddl.selectItemByIndex(7);
+            var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
+            ddlSize.selectItemByIndex(5);
         }
     
     </script>
 
 {% endhighlight %}
 
-* You can set default font for &lt; iframe &gt;’s body tag using [IFrameAttributes](user-interface#iframe-attributes) property.
+* You can set default font name and size for &lt; iframe &gt;’s body tag using [IFrameAttributes](user-interface#iframe-attributes) property.
 
 {% highlight html %}
 
@@ -255,9 +257,10 @@ By default, the editor’s &lt; iframe &gt; is initialized with “Segoe UI” f
         users with a toolbar that helps them to apply rich text formats to the text entered
         in the text area.
     </div>)
-    .IFrameAttributes(new Dictionary<string,object>{{"style", "font-family:Arial;"}})
+    .IFrameAttributes(new Dictionary<string, object> { { "style", "font-family:Arial;;font-size:14px;" } })
     .Render();
-    
+    }
+  
 {% endhighlight %}
 
 * If you want to override the default font from CSS, create a style tag with CSS styles and append it to the &lt; iframe &gt;’s head tag of the editor.
@@ -291,37 +294,41 @@ By default, the editor’s &lt; iframe &gt; is initialized with “Segoe UI” f
 
 {% endhighlight %}
 
-### Adding Fonts
+### Adding Font names and size
 
-If you want to add additional fonts to font drop-down, pass the font information as JSON data and bind it with instance of drop-down. 
+If you want to add additional font names and sizes to font drop-down, pass the font information as JSON data and bind it with instance of drop-down. 
 
 {% highlight html %}
 
     @{List<String> toolsList = new List<string>() { "font" };
     List<String> font = new List<string>() { "fontName", "fontSize", "fontColor", "backgroundColor" };}
-
-
+    
+    
     @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
-        The Rich Text Editor
-        (RTE) control is an easy to render in client side. Customer easy to edit the contents
-        and get the HTML content for the displayed content. A rich text editor control provides
-        users with a toolbar that helps them to apply rich text formats to the text entered
-        in the text area.
-    </div>)
-        .ClientSideEvents(e => e.Create("Oncreate"))
-        .ToolsList(toolsList).Tools(tool => tool.Font(font))
-        .Render();}
+            The Rich Text Editor
+            (RTE) control is an easy to render in client side. Customer easy to edit the contents
+            and get the HTML content for the displayed content. A rich text editor control provides
+            users with a toolbar that helps them to apply rich text formats to the text entered
+            in the text area.
+        </div>)
+            .ClientSideEvents(e => e.Create("Oncreate"))
+            .ToolsList(toolsList).Tools(tool => tool.Font(font))
+            .Render();}
     <br />
     
     <script>
         function Oncreate() {
             var editor = $("#rteSample").ejRTE("instance");
-            editor.defaults.fontName.push({ text: "Calibri Light", value: "CalibriLight" }, { text: "Calibri", value: "Calibri" });
+            editor.defaults.fontName.push({ text: "Calibri Light", value: "CalibriLight" }, { text: "Calibri", value: "Calibri" });
+            editor.defaults.fontSize.push({ text: "8 (42pt)", value: "8" });
             var ddl = editor._fontStyleDDL.ejDropDownList("instance");
+            var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
             ddl.option({ "dataSource": editor.defaults.fontName });
+            ddlSize.option({ "dataSource": editor.defaults.fontSize });
             ddl.selectItemByValue("CalibriLight");
+            ddlSize.selectItemByValue("8");
         }
-
+    
     </script>
 
 {% endhighlight %}
@@ -360,13 +367,41 @@ You can validate the RichTextEditor’s value on form submission by applying Val
 
 N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js) script file should be referred for validation, for more details, refer [here](http://jqueryvalidation.org/documentation).
 
+### jQuery Validation Methods
 
-### Validation Rules
+The following are jquery validation methods.
+
+_List of jquery validation methods_
+
+<table>
+<tr>
+<th>
+Rules</th><th>
+Description</th></tr>
+<tr>
+<td>
+required</td><td>
+ Requires value for the RichTextEditor control.</td></tr>
+<tr>
+<td>
+minWordCount</td><td>
+ Requires the value to be of given minimum words count.</td></tr>
+<tr>
+<td>
+minlength</td><td>
+ Requires the value to be of given minimum characters count.</td></tr>
+<tr>
+<td>
+maxlength</td><td>
+ Requires the value to be of given maximum characters count.</td></tr>
+</table>
+
+#### Validation Rules
 
 The validation rules help you to verify the content by adding validation attributes to the text area. This can be set by using ValidationRules property.
 
 
-### Validation Messages 
+#### Validation Messages 
 
 You can set your own custom error message by using ValidationMessage property. To display the error message, specify the corresponding annotation attribute followed by the message to display.
 
@@ -392,4 +427,194 @@ Required field and minWordCount values validation is demonstrated in the below g
 {% endhighlight %}
 
 ![](WorkingwithContent_images/validation.png)
+
+### Client Side Validation
+
+In the Client Side Validation you can provide a better user experience by responding quickly at the browser level. When you perform a Client Side Validation, all the user inputs validated in the user's browser itself. Client Side validation does not require a round trip to the server, so the network traffic which will help your server perform better.
+
+ASP.NET MVC supports client side validation. First of all you need to take a reference of two JavaScript files from Scripts folder, jquery.validate.min.js and jquery.validate.unobtrusive.min.js in your layout file as shown below.
+
+{% highlight html %}
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+{% endhighlight %}
+
+Now, add following two settings in &lt;appsettings&gt; section of web.config, if it is not there.
+    
+{% highlight html %}
+
+    <appSettings>
+        <add key="ClientValidationEnabled" value="true" />
+        <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    </appSettings>
+
+{% endhighlight %}
+
+1.	DataAnnotations provides a built-in set of validation attributes that you can apply declaratively to any class or property. Create RTE class to take advantage of the built-in Required validation attributes. 
+       
+    {% highlight html %}
+    
+        using System.ComponentModel.DataAnnotations;
+        public class RTE
+        {
+            [Required(ErrorMessage = "RTE value is Required")]
+            public string value { get; set; }
+        }
+        
+    {% endhighlight %}
+
+2.  After that you need to create the controller's action methods. These render views on the UI and bind a model with the view. So let's create a controller as follows.
+
+    {% highlight html %}
+    
+        public ActionResult RichTextEditorFeatures()
+        {
+    
+            controlInitialization();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RichTextEditorFeatures(RTE model)
+        {
+            if (ModelState.IsValid)
+            {
+                //perform some action
+                return RedirectToAction("Home");
+            }
+            controlInitialization();
+            return View(model);
+        }
+        public void controlInitialization()
+        {
+            RTEproperties property = new RTEproperties();
+            List<String> toolsList = new List<string>() { "alignment" };
+    
+            List<String> alignment = new List<string>() { "justifyLeft", "justifyCenter" };
+    
+            property.ToolsList = toolsList;
+            RTEtools tools = new RTEtools();
+            tools.Alignment = alignment;
+    
+            ViewData["edit"] = property;
+        }
+    
+    {% endhighlight %}
+
+    In our example, the form is not posted to the server when there are validation errors detected on the client side.
+
+3.	Below is the RichTextEditorFeatures.cshtml view and It's used by the action methods shown above both to display the initial form and to redisplay it in the event of an error.
+
+     {% highlight html %}
+    
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            @Html.EJ().RTEFor(model => model.value, (Syncfusion.JavaScript.Models.RTEproperties)ViewData["edit"])
+        
+            
+            
+            
+            @Html.ValidationMessageFor(model => model.value)
+            <br />
+            @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Post").Type(ButtonType.Submit)
+        }
+        
+     {% endhighlight %}
+     
+ 
+### Server side Validation
+
+In the Server Side Validation, the input submitted by the user is being sent to the server and validated using one of server side scripting languages. After the validation process on the Server Side, the feedback is sent back to the client.
+
+ASP.NET MVC uses Data Annotations attributes to implement validations. Data Annotations includes built-in validation attributes for different validation rules, which can be applied to the properties of model class. ASP.NET MVC framework will automatically enforce these validation rules and display validation messages in the view.
+
+1.	First of all, apply DataAnnnotation attribute on the properties of RTE model class. Here, we have validate the value of the RichTextEditor should not be empty. 
+
+    {% highlight html %}
+    
+        using System.ComponentModel.DataAnnotations;
+        public class RTE
+        {
+                [Required(ErrorMessage = "RTE value is Required")]
+                public string value { get; set; }
+        }
+    
+    {% endhighlight %}
+
+2.	Create an action method in the controller that returns a view with a model after the post request.
+
+    {% highlight html %}
+    
+        public ActionResult RichTextEditorFeatures()
+        {
+    
+            controlInitialization();
+            return View();
+        }
+    
+        [HttpPost]
+        public ActionResult RichTextEditorFeatures(RTE model)
+        {
+            if (ModelState.IsValid)
+            {
+                //perform some action
+                return RedirectToAction("Home");
+            }
+            controlInitialization();
+            return View(model);
+        }
+    
+        public void controlInitialization()
+        {
+            RTEproperties property = new RTEproperties();
+            List<String> toolsList = new List<string>() { "alignment" };
+    
+          List<String> alignment = new List<string>() { "justifyLeft", "justifyCenter" };
+    
+            property.ToolsList = toolsList;
+            RTEtools tools = new RTEtools();
+            tools.Alignment = alignment;
+    
+            ViewData["edit"] = property;
+        }
+        
+    {% endhighlight %}
+    
+    As you can see in the POST Edit method, we first check if the ModelState is valid or not. If ModelState is valid then perform some action, if not then return RichTextEditorFeatures view again with the same RTE data.
+    
+    ModelState.IsValid determines that whether submitted values satisfy all the DataAnnotation validation attributes applied to model properties.
+
+3.	After that, created a view for RichTextEditor.
+
+    {% highlight html %}
+    
+            @model ClientValidation.Models.RTE
+        
+            @{
+                ViewBag.Title = "RTE";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+            }
+            <h2>RTE Features:</h2>
+            <br/>
+            @using (Html.BeginForm())
+            {
+                @Html.EJ().RTEFor(model => model.value, (Syncfusion.JavaScript.Models.RTEproperties)ViewData["edit"])
+            
+                @Html.ValidationMessageFor(model => model.value)
+                <br />
+                @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Post").Type(ButtonType.Submit)
+            }
+        
+    {% endhighlight %}
+
+    As you can see in the above RichTextEditorFeatures.cshtml, it calls Html Helper method ValidationMessageFor for every field. ValidationMessageFor is responsible to display error message for the specified field.
+    So now, it will display default validation message when you submit the form without entering a value for the RichTextEditor.
+
+![](WorkingwithContent_images/Server.png)
+
+
+
+
 
