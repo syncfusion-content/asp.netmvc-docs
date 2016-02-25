@@ -7,9 +7,9 @@ control: RTE
 documentation: ug
 
 ---
-# Strongly types HTML helper 
+# Strongly typed HTML helper 
 
-The RTEFor control supports strongly typed HTML helpers which use lambda expressions to reference models or view models passed to a view template. These helpers allow you to define the value of the RichTextEditorFor from the model. The following steps explain how to use the strongly typed helpers to create RichTextEditorFor.
+The RTE control supports strongly typed HTML helpers which use lambda expressions to reference models or view models passed to a view template. These helpers allow you to define the value of the RichTextEditorFor from the model. The following steps explain how to use the strongly typed helpers to create RichTextEditorFor.
 
 Add a class named "RTE" in the Models folder and replace the code with the following code:
 
