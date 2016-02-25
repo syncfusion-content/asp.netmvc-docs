@@ -50,5 +50,5 @@ In View, invoke the strongly typed RichTextEditor helper with the lambda express
 
 {% endhighlight %}
 
-![](StronglytypesHTM helper_images/Strongly.png)
+![](StronglytypedHTMLhelper_images/Strongly.png)
 
