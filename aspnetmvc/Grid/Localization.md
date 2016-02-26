@@ -592,7 +592,7 @@ ej.ExcelFilter.Locale["de-DE"] = {
 
 ## Globalization
 
-[`jQuery.globalize`](https://github.com/jquery/globalize/tree/v0.1.1) library is used to globalize numeric values in Grid control using `Format` property in `Columns`. Globalize values will be automatically used when `Locale` property is set with locale string value for example `en-US`.
+`ej.globalize` library is used to globalize numeric values in Grid control using `Format` property in `Columns`. Globalize values will be automatically used when `Locale` property is set with locale string value for example `en-US`.
 
 {% tabs %}
 
