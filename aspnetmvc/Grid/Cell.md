@@ -9,9 +9,27 @@ documentation: ug
 
 # Cell
 
-## Auto wrap column
+## Auto wrap 
 
-`AllowTextWrap` property enables the grid to wrap cell content to next line when the content exceeds the boundary of the cell width. 
+Auto wrap enables the Grid to wrap cell content or header content to next line when the content exceeds the boundary of the cell width. To enable auto wrap, set `AllowTextWrap` property as `true`. 
+
+We can specify the mode of auto wrap using `WrapMode` property of the `TextWrapSettings`. 
+
+Three types of `WrapMode` are available and they are,
+  
+ 1. Both
+ 2. Header
+ 3. Content 
+ 
+N> 1. By default the `WrapMode` will be set as `Both`. 
+
+N> 2. While using `TextWrapSettings` then it is must to set `AllowTextWrap` as `true`.
+
+N> 3. For `WrapMode` property you can assign `enum` value (`Syncfusion.JavaScript.WrapMode.Both`).
+ 
+## Both
+
+When `WrapMode` of `TextWrapSettings` property set as `Both` then the auto wrap will be enable for both grid content and header. 
 
 The following code example describes the above behavior.
 
@@ -23,13 +41,14 @@ The following code example describes the above behavior.
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowTextWrap()
+            .TextWrapSettings(wrap => { wrap.WrapMode(WrapMode.Both); })
             .Columns(col =>
             {
                 col.Field("OrderID").Width(100).Add();
                 col.Field("EmployeeID").Width(100).Add();
                 col.Field("Freight").Width(100).Add();
                 col.Field("ShipCity").Width(150).Add();
-                col.Field("ShipAddress").Width(100).Add();
+                col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
             }))
 {% endhighlight  %}
 
@@ -54,6 +73,100 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](Cell_images/Cell_img1.png)
+
+### Header
+
+When `WrapMode` of `TextWrapSettings` property set as `Header` then the auto wrap will be enable only for grid header alone. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowTextWrap()
+            .TextWrapSettings(wrap => { wrap.WrapMode(WrapMode.Header); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width(100).Add();
+                col.Field("EmployeeID").Width(100).Add();
+                col.Field("Freight").Width(100).Add();
+                col.Field("ShipCity").Width(150).Add();
+                col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+            }
+        }
+    }   
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Cell_images/Cell_img1_1.png)
+
+### Content
+
+When `WrapMode` of `TextWrapSettings` property set as `Content` then the auto wrap will be enable only for grid content alone. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .AllowTextWrap()
+            .TextWrapSettings(wrap => { wrap.WrapMode(WrapMode.Header); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width(100).Add();
+                col.Field("EmployeeID").Width(100).Add();
+                col.Field("Freight").Width(100).Add();
+                col.Field("ShipCity").Width(150).Add();
+                col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
+            }))
+{% endhighlight  %}
+
+{% highlight C# %}
+
+    namespace MVCSampleBrowser.Controllers
+            {
+            public class GridController : Controller
+                { 
+                public ActionResult GridFeatures()
+                    {
+                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                        ViewBag.DataSource = DataSource;
+                        return View();
+            }
+        }
+    }   
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Cell_images/Cell_img1_2.png)
 
 ## Cell Merging
 
