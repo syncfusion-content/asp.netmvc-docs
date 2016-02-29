@@ -8,11 +8,11 @@ documentation: ug
 keywords: screen tips,ribbon screen tips
 ---
 
-#Screen Tips 
+# Screen Tips 
 
 ScreenTip/Tooltip is used to reduce the controls related Help that are needed to the end user to do control related actions.
 
-##HTML Tooltip
+## HTML Tooltip
 
 Standard `html tooltip` can be set using `ToolTip` property of each group item.
 
@@ -57,11 +57,11 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
 
 ![](Screen-Tips_images/Screen-Tips_img1.png)
 
-#Custom Tooltip
+## Custom Tooltip
 
 Custom Tooltip is used to set detailed help to the user about the controls. You can set`Title`, `Content` and `PrefixIcon` class to customize the tooltip with icons.
 
-##For Groups
+### For Groups
  
 `CustomTooltip` for each group controls can be specified. Such as to the controls Button, SplitButton, DropDownList etc.
 
@@ -129,7 +129,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
 
 ![](Screen-Tips_images/Screen-Tips_img2.png)
 
-#For Gallery
+### For Gallery
 
 `CustomTooltip` for each `Gallery` and `CustomGalleryItems` button control can be specified. 
 

@@ -177,7 +177,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
 
 ![](Controls-Support_images/Controls-Support_img1.png)
 
-##Custom
+## Custom
 
 You can set `Type` as `custom` to render custom controls and Custom element id has to be specified as `ContentID`.You can change the element defined in the custom template to appropriate Syncfusion control in the event of Ribbon `Create`.
 
