@@ -8,13 +8,13 @@ documentation: ug
 keywords: resize,ribbon resize
 ---
 
-#Resize 
+# Resize 
 
 Ribbon control dynamically resizes to display possible number of controls in the optimal layout as the application window size changes.
 
 As the window is narrowed, controls in the Ribbon will be combined as group button with dropdown arrow, in which controls can be expanded with dropdown arrow.
 
-##Enable Resizing 
+## Enable Resizing 
 
 Set `AllowResizing` as true to enable resizing in Ribbon.
 
@@ -70,7 +70,7 @@ Set `AllowResizing` as true to enable resizing in Ribbon.
 
 ![](Resize_images/Resize_img1.png)
 
-#Group Button Customization
+## Group Button Customization
  
 Based on window size, detailed group is shrined into single button and you can expand group items with group button click.
 

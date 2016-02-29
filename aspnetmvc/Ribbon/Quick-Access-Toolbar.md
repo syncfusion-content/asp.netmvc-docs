@@ -8,7 +8,7 @@ documentation: ug
 keywords: quick access toolbar,ribbon quick access toolbar
 ---
 
-#Quick Access Toolbar
+# Quick Access Toolbar
 
 Quick Access Toolbar provides the shortcuts to the most commonly used commands by placing the controls at the Quick Access Toolbar section. It can be placed at the top or bottom of the Ribbon.
 

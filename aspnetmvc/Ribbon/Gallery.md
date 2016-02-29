@@ -8,11 +8,11 @@ documentation: ug
 keywords: gallery,ribbon gallery
 ---
 
-#Gallery 
+# Gallery 
 
 Galleries are used to display items that can be arranged in a grid-type layout. Items in the gallery can be customized as `Button/Menu` to display images, text, or both images and text. You can set `Type` of group as `Gallery`.
 
-##Gallery Items
+## Gallery Items
 
 Gallery items are collection of the items to be included in the main gallery. You can set `Text` and `ToolTip` to gallery item which can also be customized with `ButtonSettings`. 
 
@@ -115,7 +115,7 @@ Ribbon Gallery.
 Gallery at Expanded State
 {:.caption}
 
-#Custom Gallery Items
+## Custom Gallery Items
 
 Custom gallery items are the additional items to be displayed at gallery expanded state. You can set `CustomItemType` as `Button` or `Menu`, Default is `Button`.
 
