@@ -16,19 +16,19 @@ Group is a collection of logical content groups that are combined under related 
 
 Group items can be added to Tabs by specifying `Text` and corresponding `Content` to be displayed. The content of group can be specified as either with `Content` collection, `ContentID` or `CustomContent`.
 
-## Adding Content
+### Adding Content
 
 Add content to Group item which is based on `Type` of content specified. The available types are `Button` , `SplitButton`, `ToggleButton`,`Gallery`, and `DropDownList`.
 
 Groups and defaults settings can be added with the `Content`.
 
-## Defaults
+#### _Defaults_
 
 The `Height`, `Width`, `Type`, `IsBig` property to the controls in the `ContentGroups` can be specified commonly.
 
 The `Height` & `Width` applicable to Button, SplitButton, DropDownList ,ToggleButton controls and `IsBig` applicable to only button controls ( button, split , toggle)
 
-## Adding Content Groups
+#### _Adding Content Groups_
 
 Controls such as button, split button, dropdown list, toggle button, gallery in the subgroup of the Ribbon Tab can be rendered. All of these can be customized using its corresponding settings property such as `ButtonSettings`, `DropdownSettings`, etc.
 
@@ -94,7 +94,7 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
 
 ![](Group_images/Group_img1.png)
 
-##Enable Separator 
+#### _Enable Separator_ 
 
 Separates the control from the next control in the group when group `AlignType` is `Rows`. Set “true” to `EnableSeparator`.
 
@@ -140,7 +140,7 @@ Separates the control from the next control in the group when group `AlignType` 
  
  ![](Group_images/Group_img2.png)
  
- ##Adding Custom Content 
+### Adding Custom Content 
  
 Set group `Type` as `custom` to add custom items such as div, table and custom controls. With type as custom, content can be added in two ways as specified below.
 
@@ -164,7 +164,7 @@ Set group `Type` as `custom` to add custom items such as div, table and custom c
                         tabgrp.Text("Data").Type("custom").ContentID("btn").Add();
                     }).Add();
                 })
-)
+    )
     <ul id="ribbonmenu">
     <li>
         <a>FILE</a>

@@ -88,7 +88,7 @@ Objects with in these Array Collections can be extended by using hyphen. E.g. `e
 
 ![](Angular-Support_images/Angular-Support_img1.png)
 
-# Gallery and Custom Tooltip
+## Gallery and Custom Tooltip
                 
 GalleryItems is an Array Collection and the inner tag is used for it inside the Ribbon Groups. Object of this Array Collection can be extended by using hyphen.
  
