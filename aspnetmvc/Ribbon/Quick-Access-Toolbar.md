@@ -8,13 +8,19 @@ documentation: ug
 keywords: quick access toolbar,ribbon quick access toolbar
 ---
 
-#Quick Access Toolbar
+# Quick Access Toolbar
 
 Quick Access Toolbar provides the shortcuts to the most commonly used commands by placing the controls at the Quick Access Toolbar section. It can be placed at the top or bottom of the Ribbon.
 
-Set `ShowQAT` as true to enable Quick Access Toolbar in Ribbon. It supports the Button, Split Button, Toggle Button controls. The `QuickAccessMode` is used to change the controls state in Quick Access Toolbar through options as `Toolbar`,`Menu` and `none`. Default value is `none`.
+Set `ShowQAT` as true to enable Quick Access Toolbar in Ribbon. It supports the Button, Split Button, Toggle Button controls. The `QuickAccessMode` is used to change the controls state in Quick Access Toolbar through options as `Toolbar`,`Menu` and `none`. Default value is `none` and QAT toolbar is created with specified controls added in Toolbar.
 
-The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
+The `ToolBar` option used to set controls visibility in Quick Access Toolbar.The `Menu` option shows the controls in Quick Access Menu and does not show controls in Quick Access Toolbar.
+
+Once the controls are visible in Toolbar , then controls state will be set as ticked in Quick Access Menu and vice versa.
+
+The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`.
+
+`More Commands` command provides with Quick Access Menu. This can be customized using `QatMenuItemClick` event, such as to show popup dialog. 
 
 {% highlight CSHTML %}
 
