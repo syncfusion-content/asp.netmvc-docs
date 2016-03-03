@@ -33,7 +33,7 @@ localStorage.setItem("diagram", JSON.stringify(json));
 
 {% endhighlight %}
 
-Diagram can also be saved as raster or vector image files. For more information about saving the Diagram as images, refer to [Exporting](/mvc/Diagram/Exporting "Exporting").
+Diagram can also be saved as raster or vector image files. For more information about saving the Diagram as images, refer to [Exporting](/aspnetmvc/Diagram/Exporting "Exporting").
 
 
 ## Load

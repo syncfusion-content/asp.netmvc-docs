@@ -42,36 +42,25 @@ To show tooltip on mouse over, the `Tooltip` property of Diagram model needs to 
     <!--Define tooltip template-->
     <script type="text/x-jsrender" id="mouseovertooltip">
         <div style="background-color: #F08080; color: white; white-space: nowrap; height: 20px">
-            <span style="padding: 5px;"> {{"{{"}}:Designation{{}}}} </span>
+           <span style="padding: 5px;"> {{:addInfo.Designation}} </span>
         </div>
     </script>
 
 {% endhighlight %}
 
-{% highlight js %}
+{% highlight c# %}
 
-    public class CustomNode : Node
-    {
-        private string sDesignation;
-        [DefaultValue("")]
-        [JsonProperty("Designation")]
-        public string Designation
-        {
-            get { return sDesignation; }
-            set { sDesignation = value; }
-        }
-    }
-
-    public partial class DiagramController : Controller
+   public partial class DiagramController : Controller
     {
         public ActionResult DiagramFeatures()
         {
-            // To Enables multiple tools
+           //Initialize the Diagram Model
             DiagramProperties Model = new DiagramProperties();
 
             Model.Width = "100%";
             Model.Height = "700px";
             //Defines mouse over tooltip
+            Model.Tooltip = new Tooltip();
             Model.Tooltip.TemplateId = "mouseovertooltip";
             Model.Tooltip.Alignment.Horizontal = HorizontalAlignment.Center;
             Model.Tooltip.Alignment.Vertical = VerticalAlignment.Center;
@@ -80,17 +69,21 @@ To show tooltip on mouse over, the `Tooltip` property of Diagram model needs to 
             Collection Labels = new Collection();
             Labels.Add(Label);
             //Defines nodes
-            Node = new CustomNode()
-              {
-                  Name = "elizabeth",
-                  Width = 70,
-                  Height = 40,
-                  OffsetX = 100,
-                  OffsetY = 100,
-                  FillColor = "darkCyan",
-                  Designation = "Managing Director",
-                  Labels = Labels
-              };
+            Node Node = new Node()
+            {
+                Name = "elizabeth",
+                Width = 70,
+                Height = 40,
+                OffsetX = 100,
+                OffsetY = 100,
+                FillColor = "darkCyan",
+
+                Labels = Labels
+            };
+            Node.AddInfo = new Dictionary<string, object>();
+            Dictionary<string, object> AddInfo = new Dictionary<string, object>();
+            AddInfo.Add("Designation", "Managing Director");
+            Node.AddInfo = AddInfo;
             Model.Nodes.Add(Node);
             ViewData["diagramModel"] = Model;
             return View();
@@ -148,7 +141,7 @@ Diagram provides support to show tooltip around the node/connector that is hover
     <!--Define tooltip template-->
     <script type="text/x-jsrender" id="mouseovertooltip">
         <div style="background-color: #F08080; color: white; padding: 5px;">
-            <span> {{"{{"}}:Designation{{}}}} </span>
+            <span style="padding: 5px;"> {{:addInfo.Designation}} </span>
         </div>
     </script>
 
@@ -156,15 +149,30 @@ Diagram provides support to show tooltip around the node/connector that is hover
 
 {% highlight c# %}
 
+            //Initialize the Diagram Model
             DiagramProperties Model = new DiagramProperties();
-            CustomNode Node = new CustomNode();
 
+            Model.Width = "100%";
+            Model.Height = "700px";
+            //Defines mouse over tooltip
+            Model.Tooltip = new Tooltip();
+            Model.Tooltip.TemplateId = "mouseovertooltip";
+            Model.Tooltip.Alignment.Horizontal = HorizontalAlignment.Center;
+            Model.Tooltip.Alignment.Vertical = VerticalAlignment.Center;
+
+            Label Label = new Label() { Text = "Elizabeth", FontColor = "white", Bold = true };
+            Collection Labels = new Collection();
+            Labels.Add(Label);
+            BasicShape Node = new BasicShape();
+
+            //Defines nodes
             Node.Name = "elizabeth";
             Node.Width = 70; Node.Height = 40;
             Node.OffsetX = 100; Node.OffsetY = 100;
             //Removes inherit tooltip from constraints
             Node.Constraints = NodeConstraints.Default & ~NodeConstraints.InheritTooltip;
-            //Disables tooltip for a node
+            //Defines tooltip for a node
+            Node.Tooltip = new Tooltip();
             //Defines template id
             Node.Tooltip.TemplateId = "mouseovertooltip";
             //Sets to show tooltip around the element
@@ -176,11 +184,10 @@ Diagram provides support to show tooltip around the node/connector that is hover
 
             //Defines vertical alignment around node
             Node.Tooltip.Alignment.Vertical = VerticalAlignment.Top;
-
-            Node.Designation = "Director";
-            Node.FillColor = "darkcyan";
-            Label Label = new Label() { Text = "Elizabeth", FontColor = "white", Bold = true };
-
+            Node.AddInfo = new Dictionary<string, object>();
+            Dictionary<string, object> AddInfo = new Dictionary<string, object>();
+            AddInfo.Add("Designation", "Managing Director");
+            Node.AddInfo = AddInfo;
             Model.Nodes.Add(Node);
             
 {% endhighlight %}
@@ -193,10 +200,23 @@ To display the tooltip at mouse position, you need to set "Mouse" option to the 
 
 {% highlight c# %}
 
-            //Disables tooltip for any node/connector
+             //Initialize the Diagram Model
             DiagramProperties Model = new DiagramProperties();
-            CustomNode Node = new CustomNode();
 
+            Model.Width = "100%";
+            Model.Height = "700px";
+            //Defines mouse over tooltip
+            Model.Tooltip = new Tooltip();
+            Model.Tooltip.TemplateId = "mouseovertooltip";
+            Model.Tooltip.Alignment.Horizontal = HorizontalAlignment.Center;
+            Model.Tooltip.Alignment.Vertical = VerticalAlignment.Center;
+
+            Label Label = new Label() { Text = "Elizabeth", FontColor = "white", Bold = true };
+            Collection Labels = new Collection();
+            Labels.Add(Label);
+            BasicShape Node = new BasicShape();
+
+            //Defines nodes
             Node.Name = "elizabeth";
             Node.Width = 70; Node.Height = 40;
             Node.OffsetX = 100; Node.OffsetY = 100;
@@ -209,13 +229,13 @@ To display the tooltip at mouse position, you need to set "Mouse" option to the 
             Node.Tooltip.RelativeMode = RelativeMode.Mouse;
             //Sets margin - absolute distance between mouse position and tooltip
             Node.Tooltip.Margin.Top = 10;
-            Node.Tooltip.Margin.Left = 10; 
+            Node.Tooltip.Margin.Left = 10;
 
-            Node.Designation = "Director";
-            Node.FillColor = "darkcyan";
-            Label Label = new Label() { Text = "Elizabeth", FontColor = "white", Bold = true };
-
-            Model.Nodes.Add(Node); 
+            Node.AddInfo = new Dictionary<string, object>();
+            Dictionary<string, object> AddInfo = new Dictionary<string, object>();
+            AddInfo.Add("Designation", "Managing Director");
+            Node.AddInfo = AddInfo;
+            Model.Nodes.Add(Node);
 
 {% endhighlight %}
 

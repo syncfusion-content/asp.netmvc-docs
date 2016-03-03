@@ -135,18 +135,16 @@ When more than one of those tools are applied, a tool is activated based on the 
 
 You can set the desired tool to the `tool` property of the Diagram model. The following code illustrates how to enable single/multiple tools.
 
-{% highlight js %}
+{% highlight c# %}
 
-    // To Enable Single Tool 
-    $("#diagram").ejDiagram({
-        //Enables a Single Selection
-        tool: ej.datavisualization.Diagram.Tool.SingleSelect
-    });
+                // To Enable Single Tool 
+                DiagramProperties model = new DiagramProperties();
+                model.Tool = Tool.SingleSelect;
+                ViewData["Diagram"] = model;
 
-    // Enables multiple tools
-    $("#diagram").ejDiagram({
-        // Selects when you click a node and pans when you click the Diagram surface
-        tool: ej.datavisualization.Diagram.Tool.SingleSelect | ej.datavisualization.Diagram.Tool.ZoomPan
-    });
+                // Enables multiple tools
+                DiagramProperties model = new DiagramProperties();
+                model.Tool = Tool.SingleSelect | Tool.ZoomPan;
+                ViewData["Diagram"] = model;
 
 {% endhighlight %}
