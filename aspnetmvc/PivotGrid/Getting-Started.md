@@ -43,8 +43,8 @@ The version of Syncfusion libraries based on .NET framework and MVC version are 
 <tr>
 <th>
 MVC Version</th><th>
-MVC Version of Syncfusion dlls</th><th>
-Base Version of Syncfusion dlls</th><th>
+MVC Version of Syncfusion dll</th><th>
+Base Version of Syncfusion dll</th><th>
 System.Web.Mvc</th><th>
 System.Web.WebPages</th>
 </tr>
@@ -438,8 +438,8 @@ The version of Syncfusion libraries based on .NET framework and MVC version are 
 <tr>
 <th>
 MVC Version</th><th>
-MVC Version of Syncfusion dlls</th><th>
-Base Version of Syncfusion dlls</th><th>
+MVC Version of Syncfusion dll</th><th>
+Base Version of Syncfusion dll</th><th>
 System.Web.Mvc</th><th>
 System.Web.WebPages</th>
 </tr>
@@ -1011,17 +1011,17 @@ Filtering option allows you to specify a set of values that either need to be di
 ![](Getting-Started_images/purejsfiltering.png) 
 
 ### Apply Summary Types
-Allows us to specify the required summary type that PivotGrid should use in its summary cells. **"totalsum"** is the default summary type. Following are the summary types that are supported:
+Allows us to specify the required summary type that PivotGrid should use in its summary cells. **"Sum"** is the default summary type. Following are the summary types that are supported:
 
-* totalsum
-* average
-* count
-* minimum
-* maximum
+* Sum
+* Average
+* Count
+* Min
+* Max
 
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").SummaryType(PivotAnalysisSummaryType.Average).Add(); values.FieldName("Quantity").FieldCaption("Quantity").SummaryType(PivotAnalysisSummaryType.TotalSum).Add(); }))  
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").SummaryType(PivotAnalysisSummaryType.Average).Add(); values.FieldName("Quantity").FieldCaption("Quantity").SummaryType(PivotAnalysisSummaryType.Sum).Add(); }))  
 
 {% endhighlight %}
 

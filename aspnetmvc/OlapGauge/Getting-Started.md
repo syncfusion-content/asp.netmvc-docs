@@ -38,8 +38,8 @@ The version of Syncfusion libraries based on .NET framework and MVC version are 
 <tr>
 <th>
 MVC Version</th><th>
-MVC Version of Syncfusion dlls</th><th>
-Base Version of Syncfusion dlls</th><th>
+MVC Version of Syncfusion dll</th><th>
+Base Version of Syncfusion dll</th><th>
 System.Web.Mvc</th><th>
 System.Web.WebPages</th>
 </tr>
