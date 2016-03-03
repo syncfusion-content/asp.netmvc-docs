@@ -13,7 +13,7 @@ Diagram tracks the history of actions that are performed after loading the time 
 
 ## Undo and Redo
 
-Diagram provides inbuilt support to track the changes that are made through interaction and through public APIs. The changes can be reverted or restored either through short cut keys or through commands.
+Diagram provides built-in support to track the changes that are made through interaction and through public APIs. The changes can be reverted or restored either through short cut keys or through commands.
 
 ### Undo redo through short cut keys
 

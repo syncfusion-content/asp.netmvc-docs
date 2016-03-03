@@ -24,11 +24,11 @@ var json = diagram.save();
 
 {% endhighlight %}
 
-This json data can be converted to string and stored for future use. The following snippet illustrates how to save the serialized JSON into local storage.
+This JSON data can be converted to string and stored for future use. The following snippet illustrates how to save the serialized JSON into local storage.
 
 {% highlight js %}
 
-//Saves the json object in to local storage
+//Saves the JSON object in to local storage
 localStorage.setItem("diagram", JSON.stringify(json));
 
 {% endhighlight %}
@@ -42,10 +42,10 @@ Diagram is loaded from the Serialized JSON data. The client side method, `load` 
 
 {% highlight js %}
 
-//Retrieves the json object from local storage
+//Retrieves the JSON object from local storage
 json = JSON.parse(localStorage.getItem("diagram"));
 
-//Loads the Diagram from saved json data
+//Loads the Diagram from saved JSON data
 diagram.load(json);
 
 {% endhighlight %}
@@ -73,7 +73,7 @@ function nodeCollectionChange(args) {
 
 {% endhighlight %}
 
-* Html / Native template needs to be retained in the application level, while loading the native and html node.
+* HTML / Native template needs to be retained in the application level, while loading the native and HTML node.
 
 {% highlight html %}
 
@@ -92,12 +92,12 @@ diagram.load(json);
 
 {% endhighlight %}
 
-* Css classes have to be retained in the application level, while loading the Diagram.
+* CSS classes have to be retained in the application level, while loading the Diagram.
 
 {% highlight html %}
 
 <style>
-	<!-- css class needs to be retained while loading the Diagram.-->
+	<!-- CSS class needs to be retained while loading the Diagram.-->
 	.nodeCss {
 		fill: black;
 		stroke: cyan;
