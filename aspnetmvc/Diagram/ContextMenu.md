@@ -2,7 +2,7 @@
 layout: post
 title: Add context menu items to ease the execution of frequently used commands
 description: How to execute frequently used commands by using context menu items?
-platform: js
+platform: ejmvc
 control: Diagram
 documentation: ug
 ---
@@ -10,17 +10,21 @@ documentation: ug
 # Context Menu
 
 In graphical user interface (GUI), a context menu is a type of menu that appears when you perform right-click operation. Nested level of context menu items can be created.
-Diagram provides some in-built context menu items and allows to define custom menu items.
+Diagram provides some built-in context menu items and allows to define custom menu items.
 
 ## Default Context Menu
 
 The `EnableContextMenu` property helps you to enable/disable the context menu. Diagram provides some default context menu items to ease the execution of some frequently used commands.
 The following code illustrates how to enable the default context menu items.
 
-{% highlight razor %}
+{% highlight c# %}
 
-@*Disables the context menu*@
-@Html.EJ().Diagram("Diagram").Width("100%").Height("600px").EnableContextMenu(false)
+                DiagramProperties Model = new DiagramProperties();
+                Model.Height = "600px";
+                Model.Width = "600px";
+                //Disables the context menu
+                Model.EnableContextMenu = false;
+                ViewData["Diagram"] = Model;)
 
 {% endhighlight %}
 
@@ -31,37 +35,21 @@ The following code illustrates how to enable the default context menu items.
 Apart from the default context menu items, you can define some additional context menu items. Those additional items have to be defined and added to `ContextMenu.Items`. Sub menu items for context menu can set using `ContextMenu.Items.SubItems`
 The following code example illustrate how to add custom context menu items.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight c# %}
+                
+                DiagramProperties Model = new DiagramProperties();
+                Model.Height = "600px";
+                Model.Width = "600px";
+                //enable the context menu
+                Model.EnableContextMenu = true;
+                Model.ContextMenu = new DiagramContextMenu();
+                List<ContextMenuItem> SubItems = new List<ContextMenuItem>();
+                SubItems.Add(new ContextMenuItem() { Name = "zoomIn", Text = "ZoomIn", });
+                SubItems.Add(new ContextMenuItem() { Name = "zoomOut", Text = "ZoomOut", });
+                Model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
+                ViewData["Diagram"] = Model;
 
-@*Enables the context menu*@
-@Html.EJ().Diagram("Diagram").Width("100%").Height("600px").EnableContextMenu(true)
-	
 {% endhighlight %}
-
-{% highlight js %}
-$("#DiagramContent").ejDiagram({
-	contextMenu: {
-		// Defines the custom context menu items
-		items: [{
-			name: "zoom",
-			// Text to be displayed
-			text: "Zoom",
-			// Defines the sub items
-			subItems: [{
-				name: "zoomIn",
-				text: "ZoomIn"
-			},{
-				name: "zoomOut",
-				text: "ZoomOut"
-			}]
-		}],
-		// Hides the default context menu items
-		showCustomMenuItemsOnly: true
-	}
-});
-{% endhighlight %}
-{% endtabs %}
 
 When you want to display only your custom context menu items, you can set true to the `showCustomMenuItemsOnly` property.
 
@@ -91,32 +79,35 @@ The following code example illustrates how to customize the icon of context menu
 You would be notified with events when you try to open the context menu items(`contextMenuBeforeOpen`) and when you click the menu items(`contextMenuClick`). The following code example illustrates how to define those events.
 
 {% tabs %}
-{% highlight c# %}
-
-@*Enables the context menu*@
-@Html.EJ().Diagram("Diagram").Width("100%").Height("600px").EnableContextMenu(true)
+{% highlight c# %} 
+ 
+                DiagramProperties Model = new DiagramProperties();
+                Model.Height = "600px";
+                Model.Width = "600px";
+                //enable the context menu
+                Model.EnableContextMenu = true;
+                Model.ContextMenu = new DiagramContextMenu();
+                List<ContextMenuItem> SubItems = new List<ContextMenuItem>();
+                SubItems.Add(new ContextMenuItem() { Name = "zoomIn", Text = "ZoomIn", });
+                SubItems.Add(new ContextMenuItem() { Name = "zoomOut", Text = "ZoomOut", });
+                Model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
+                Model.ContextMenuBeforeOpen = "contextMenuBeforeOpen";
+                Model.ContextMenuClick = "contextMenuClick";
 	
 {% endhighlight %}
 
-{% highlight js %}
-$(window).load(function () {
-	//Defines double click event
-	$("#diagram").ejDiagram({
-		contextMenuBeforeOpen: "contextMenuBeforeOpen",
-		ContextMenuClick: "contextMenuClick"
-	});
-});
+{% highlight js %} 
 
-function contextMenuBeforeOpen(args) {
-	//do your custom action here.
-}
+    function contextMenuBeforeOpen(args) {
+        //do your custom action here.
+    }
 
-function contextMenuClick(args) {
-	switch (args.text) {
-		case "zoom":
-			//do your custom action here.
-		break;
-	}
-}
+    function contextMenuClick(args) {
+        switch (args.text) {
+            case "zoom":
+                //do your custom action here.
+            break;
+        }
+    }
 {% endhighlight %}
 {% endtabs %}

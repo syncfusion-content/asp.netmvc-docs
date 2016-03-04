@@ -14,7 +14,7 @@ Getting started with your MVC Diagram is easy. You can start by creating a simpl
 ## Flow Diagram
 
 ### Initialize Diagram
-1\. Create an ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and to add necessary dll’s and script files.
+1\. Create an ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and to add necessary assemblies and script files.
 
 2\. Add a placeholder `div` element to initialize diagram control
 

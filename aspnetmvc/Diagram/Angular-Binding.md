@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Angular Binding | Diagram | ASP.NET MVC | Syncfusion
-description: angular binding
+title: AngularJS Binding | Diagram | ASP.NET MVC | Syncfusion
+description: AngularJS Binding
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Angular Binding
+# AngularJS Binding
 
-AngularJS is a JavaScript framework added to a CSHTML page with a &lt;script&gt; tag. It extends HTML attributes with directives and binds data to HTML with expressions. AngularJS directives allow you to specify custom and reusable HTML tags that moderate the behavior of certain elements. Angularbinding uses directives to plug its action into the page. Directives, all prefaced with ng-, are placed in HTML attributes. To know more about Angular binding refer to: <http://help.syncfusion.com/aspnetmvc/diagram/angular-binding>
+AngularJS is a JavaScript Framework added to a CSHTML page with a &lt;script&gt; tag. It extends HTML attributes with directives and binds data to HTML with expressions. AngularJS directives allow you to specify custom and reusable HTML tags that moderate the behavior of certain elements. AngularJS binding uses directives to plug its action into the page. Directives, all prefaced with ng-, are placed in HTML attributes. To know more about AngularJS binding refer to: <http://help.syncfusion.com/aspnetmvc/diagram/angular-binding>
 
 
 
-Apply the plugin and property assigning the Diagram element through the directive that starts with the letter e-.  The following code illustrates how to bind data to the Diagram component through Angularsupport.
+Apply the plugin and property assigning the Diagram element through the directive that starts with the letter e-.  The following code illustrates how to bind data to the Diagram component through AngularJS support.
 
 
 
@@ -21,7 +21,7 @@ Apply the plugin and property assigning the Diagram element through the directiv
 
 
 
-//References to be added for angular support.
+//References to be added for AngularJS support.
 
 <script src="@Url.Content("~/Scripts/angular-min.js")"></script>
 
@@ -93,5 +93,5 @@ angular.module('syncApp', ['ejangular'])
 
 ![](Angular-Binding_images/Angular-Binding_img1.png)
 
-Angular Binding
+AngularJS Binding
 {:.caption}

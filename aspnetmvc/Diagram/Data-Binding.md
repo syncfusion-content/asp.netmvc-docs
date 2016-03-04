@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populate Diagram from external data sources
-description: How to populate the Diagram from the local data, remote data, or html tables?
+description: How to populate the Diagram from the local data, remote data, or HTML tables?
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -12,12 +12,12 @@ documentation: ug
 * Diagram can be populated with the nodes and connectors based on the information provided from an external data source.
 * Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
 
-To explore those properties, see [Data source settings](/js/api/ejDiagram#members:datasourcesettings "Data source settings")
+To explore those properties, see [Data source settings](http://help.syncfusion.com/CR/cref_files/aspnet/ejweb/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.DataSourceSettings.html "Data source settings")
 
 * Diagram supports three different kinds of Data binding.
 	* Local Data
 	* Remote Data
-	* Html Table Data
+	* HTML Table Data
 
 ## Local Data
 
@@ -100,7 +100,7 @@ You can bind the Diagram with Remote Data by using dataManager.
 
 * DataManager supports the following types of data-binding: JSON, Web Services, oData.
 * It uses two different classes: ej.DataManager for processing and ej.Query for serving data. ej.DataManager communicates with data source and ej.Query generates data queries that are read by the dataManager.
-* To learn more, refer to [Data Manager](/js/DataManager/Getting-Started "Data Manager").
+* To learn more, refer to [Data Manager](/aspnetmvc/DataManager/Getting-Started "Data Manager").
 
 To bind remote data to the Diagram, you have to configure the fields of `DataSourceSettings`. The following code illustrates how to bind remote data to the Diagram.
 
@@ -151,42 +151,46 @@ public ActionResult Index()
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-## Html Table Data
+## HTML Table Data
 
 The Diagram provides support to populate the Diagram from the **HTML table**. It is flexible to convert HTML table to Diagram by using **Data Manager**.
 
 The following code illustrates how to convert HTML table to the Diagram.
 
+{% tabs %}
+{% highlight c# %}
+
+                DiagramProperties Model = new DiagramProperties();
+                Model.Height = "600px";
+                Model.Width = "600px";
+                //Initializes the node template.
+                Model.NodeTemplate = "nodeTemplate";
+                Model.Layout.Type = LayoutTypes.HierarchicalTree;
+                Model.Layout.VerticalSpacing = 30;
+                Model.Layout.HorizontalSpacing = 30;
+                Model.DefaultSettings.Node = new Node()
+                {
+                    Width = 120,
+                    Height = 40,
+                    BorderColor = "transparent",
+                    Labels = new Collection() { new Label() { Name = "label1", FontColor = "#ffffff" } }
+                };
+                Model.DefaultSettings.Connector = new Connector()
+                {
+                    Segments = new Collection() { new Segment(Segments.Orthogonal) },
+                    TargetDecorator = new Decorator() { FillColor = "#4F4F4F", BorderColor = "#4F4F4F" }
+                };
+                ViewData["Diagram"] = Model;
+                
+{% endhighlight %}
 {% highlight razor %}
+
 @Html.EJ().Diagram("Diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 @using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
 @using Syncfusion.JavaScript.DataVisualization.Models.Diagram
 @using Syncfusion.JavaScript.DataVisualization.Models.Collections
 
 @(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
-
-@*Initializes the node template.*@
-.NodeTemplate("nodeTemplate")
-
-@*Uses layout to auto-arrange nodes on the Diagram page*@
-.Layout(e => 
-{
-    e.Type(LayoutTypes.HierarchicalTree).VerticalSpacing(30).HorizontalSpacing(30);
-})
-
-@*Sets the default properties for nodes and connectors*@
-.DefaultSettings(e=>
-{
-    e.Node(new Node() {
-        Width = 120, Height = 40, BorderColor = "transparent",
-        Labels = new Collection() { new Label() { Name = "label1", FontColor = "#ffffff" } } 
-    })
-    .Connector(new Connector(){
-        Segments = new Collection() { new Segment(Segments.Orthogonal) },
-        TargetDecorator = new Decorator() { FillColor = "#4F4F4F", BorderColor = "#4F4F4F" }
-    });
-})
-
 @*Configures data source for Diagram*@
 .DataSourceSettings(e => 
 { 
@@ -273,5 +277,6 @@ The following code illustrates how to convert HTML table to the Diagram.
     }
 </script>
 {% endhighlight %}
+{% endtabs %}
 
 ![](Data-Binding_images/Data-Binding_img4.png)
