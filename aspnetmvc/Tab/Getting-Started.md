@@ -25,7 +25,7 @@ Tab control with Hotel Menu items
 
 ### Create Tab Control
 
-The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven interface from your content. The content can be text, graphics or HTML. You can create the Tab headers using Text and Content templateproperty
+The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven interface from your content. The content can be text, graphics or HTML. You can create the Tab headers using Text and Content template property
 
 The following steps are used to create Tab control.  
 

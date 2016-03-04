@@ -13,7 +13,7 @@ The UploadBox widget provides support to customize the dialog box text and butto
 
 ## Customizing Button Text
 
-The following table contains the subproperties available under UploadBoxButtonText property. To customize the text, pass the alternate text with corresponding subproperties. 
+The following table contains the sub properties available under UploadBox ButtonText property. To customize the text, pass the alternate text with corresponding sub properties. 
 
 _Sub-properties under buttonText property_
 
@@ -65,7 +65,7 @@ The following screenshot displays the output.
 
 ## Customizing Upload Dialog
 
-The following table contains the subproperties available under UploadBoxDialogText property. To customize the text, pass the alternate text with corresponding subproperties. 
+The following table contains the sub properties available under UploadBox DialogText property. To customize the text, pass the alternate text with corresponding sub properties. 
 
 _Subproperties under dialogText property_
 
@@ -117,7 +117,7 @@ The following screenshot displays the output.
 
 ## Show or Hide File details 
 
-The ShowFileDetails property is Boolean type, which allow us to show or hidefiledetails in the uploaded file listdialog. To hide the uploaded file details, set ShowFileDetails property is set to ‘false’. By default value of ShowFileDetails property is set to ‘true’.
+The ShowFileDetails property is Boolean type, which allow us to show or hide filedetails in the uploaded file list dialog. To hide the uploaded file details, set ShowFileDetails property is set to ‘false’. By default value of ShowFileDetails property is set to ‘true’.
 
 The following steps explains the configuration of ShowFileDetails property in UploadBox.
 
@@ -154,7 +154,7 @@ By default, there are 12-theme support available for UploadBox control namely,
 
 ## Custom CSS
 
-CSSclass customizes the UploadBox control’s appearance. Define a CSSclass as per the requirement and assign the class name to CssClass property. The data type is string. 
+Cssclass customizes the UploadBox control’s appearance. Define a Cssclass as per the requirement and assign the class name to CssClass property. The data type is string. 
 
 The following steps explain the configuration of CssClass property in UploadBox. 
 

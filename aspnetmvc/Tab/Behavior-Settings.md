@@ -100,7 +100,7 @@ When the page gets refreshed or reloaded, the Tab state is changed (i.e.) the fo
 
 The following code example is used to render the Tab widget with state maintenance. 
 
-1. Add the following code in your view page for Tabstatemaintenance.
+1. Add the following code in your view page for Tab state maintenance.
 
    ~~~ cshtml
 
@@ -131,7 +131,7 @@ The following code example is used to render the Tab widget with state maintenan
 
 
 
-2. The following screenshot illustrates the Tab with Statemaintenance.
+2. The following screenshot illustrates the Tab with State maintenance.
 
 ![](Behavior-Settings_images/Behavior-Settings_img3.png)
 

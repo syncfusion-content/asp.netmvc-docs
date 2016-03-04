@@ -23,7 +23,7 @@ The following steps guide you in adding a Navigation Drawer control for a web ap
 
 You can create an MVC Project and add the necessary assemblies, styles and scripts to it.  Refer to the [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/navigationdrawer/getting-started)
 
-To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set thetext for list itemsby using Text property. You can paste the following code in corresponding view page.
+To add a Navigation Drawer control, call NavigationDrawer helper. You can display the navigational item as a list by using ListView. This is achieved by creating the ListView inside the content template. You can set the text for list items by using Text property. You can paste the following code in corresponding view page.
 
 
 {% highlight CSHTML %}
@@ -303,7 +303,7 @@ Create corresponding content elements for each options in the navigation list as
 
 
 
-You can load the desired content for the navigation items by updating the content through MouseDown handler of listview. You can define the handler and pass the method name with MouseDown attribute through listViewSettings. Also to know which item’s content is being loaded in the page, make the list selection to persist in the drawer by setting persistSelection as true. Refer to the following code example.
+You can load the desired content for the navigation items by updating the content through MouseDown handler of ListView. You can define the handler and pass the method name with MouseDown attribute through listViewSettings. Also to know which item’s content is being loaded in the page, make the list selection to persist in the drawer by setting persistSelection as true. Refer to the following code example.
 
 
 

@@ -13,7 +13,7 @@ This section explains briefly about how to create an UploadBox in ASP.NET MVC ap
 
 ## Create your first UploadBox in MVC
 
-ASP.NET MVC UploadBox provides support to upload the files or photos within your webpage. From the following guidelines, you can learn how to upload the file that is used in a Resume Upload scenario. This helps you to restrict some file extensions, while uploading the resume in the server by using UploadBox control. The following screenshot demonstrates the functionality of UploadBox with file extension.
+ASP.NET MVC UploadBox provides support to upload the files or photos within your web page. From the following guidelines, you can learn how to upload the file that is used in a Resume Upload scenario. This helps you to restrict some file extensions, while uploading the resume in the server by using UploadBox control. The following screenshot demonstrates the functionality of UploadBox with file extension.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -218,7 +218,7 @@ Add the given styles to display the **Uploadbox** with margin alignments.
 {% endhighlight %}
 
 
-N> You can restrict one or more different extension files by giving file extension seperated by comma (,)
+N> You can restrict one or more different extension files by giving file extension separated by comma (,)
 
 
 The following screenshot displays an **Uploadbox** control with the file extension.

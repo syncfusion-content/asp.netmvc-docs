@@ -37,7 +37,7 @@ This property sets the Rotator in HorizontalOrientation. You can refer the follo
 
 ## Vertical
 
-This property sets the Rotator in verticalorientation. You can refer the following steps to set VerticalOrientation for Rotator control.
+This property sets the Rotator in vertical orientation. You can refer the following steps to set VerticalOrientation for Rotator control.
 
 1. Create ul-li list of Rotator items and invoke the Rotator helper.
 2. Add the following script in your CSHTML page.
