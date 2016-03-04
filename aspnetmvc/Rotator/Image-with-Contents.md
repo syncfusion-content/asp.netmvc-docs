@@ -469,7 +469,7 @@ By default, there are 12 themes support available for Rotator control as follows
 
 ## CssClass
 
-This property is used to set rootclass for Rotator control theme. The value set to this property is string type.
+This property is used to set root class for Rotator control theme. The value set to this property is string type.
 
 {% highlight CSHTML %}
 
@@ -483,7 +483,7 @@ This property is used to set rootclass for Rotator control theme. The value set 
 
 {% endhighlight %}
 
-Add the following code in your Css.
+Add the following code in your CSS.
 
 {% highlight CSS %}
 

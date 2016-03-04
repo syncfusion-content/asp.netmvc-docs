@@ -15,7 +15,7 @@ This section explains briefly about how to create a Toolbar in your ASP.NET MVC 
 
 ### Create Toolbar for PDF Reader
 
-Toolbar control displays a list of tools in a webpage. It is used to customize Toolbar items of any functionality, by using enriched client-side methods. This control consists of a collection of unordered lists, containing text and images into a <div>. From the following section, you can learn how to customize Toolbar control for a PDF Reader scenario. The following screen shot shows the appearance of Toolbar in PDF Reader simulator application.
+Toolbar control displays a list of tools in a web page. It is used to customize Toolbar items of any functionality, by using enriched client-side methods. This control consists of a collection of unordered lists, containing text and images into a <div>. From the following section, you can learn how to customize Toolbar control for a PDF Reader scenario. The following screen shot shows the appearance of Toolbar in PDF Reader simulator application.
 
 Here, the Toolbar consists of a Toolbar with title and text area as PDF Reader.
 
@@ -58,9 +58,9 @@ Toolbar without Toolbar items
 
 ### Initialize Toolbar Items
 
-Toolbar consists of a list of items. From the following guidelines, you can learn how to initialize the Toolbaritems with <UL> <LI> template. 								
+Toolbar consists of a list of items. From the following guidelines, you can learn how to initialize the Toolbar items with <UL> <LI> template. 								
 
-Initialize the Toolbaritems with <UL> <LI> template as follows. 
+Initialize the Toolbar items with <UL> <LI> template as follows. 
 
 {% highlight CSHTML %}
 
@@ -466,13 +466,13 @@ Execute the code to render Toolbar items with separator.
 
 ### Add Actions to Toolbar Items
 
-Now that the Toolbar is rendered, you need to render the header and content area to create a PDF Reader. In the following section, you can learn how to render the header (Toolbar), contentsection (PDF viewer area) and how to set the action to Toolbar items.
+Now that the Toolbar is rendered, you need to render the header and content area to create a PDF Reader. In the following section, you can learn how to render the header (Toolbar), content section (PDF viewer area) and how to set the action to Toolbar items.
 
 N> PDF reading or rendering is not shown here. Simulation of the PDF Reader app to demonstrate the usage of Toolbar control is provided. PDF rendering area is ignored._
 
 
 
-Initialize the contentarea and header as specified in the code table.
+Initialize the content area and header as specified in the code table.
 
 
 {% highlight CSHTML %}

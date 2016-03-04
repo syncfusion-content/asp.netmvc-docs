@@ -82,7 +82,7 @@ You can use the CssClass to customize the TagCloud appearance. Any of the CssCla
 
 The following steps allows you to configure CssClass for TagCloud.
 
-1. In the View page, add thebelow script to configure TagCloud widget.
+1. In the View page, add the below script to configure TagCloud widget.
 
    ~~~ cshtml
    

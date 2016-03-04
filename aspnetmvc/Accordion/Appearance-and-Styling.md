@@ -15,7 +15,7 @@ You can customize the Accordion panel height using HeightAdjustMode property. It
 
 ### Configure Height of Accordion panel
 
-The following code explains to configure the height of ther Accordion content panel.
+The following code explains to configure the height of the Accordion content panel.
 
 {% highlight CSHTML %}
 

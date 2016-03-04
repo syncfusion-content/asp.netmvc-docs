@@ -9,7 +9,7 @@ documentation: ug
 
 # RTL Support
 
-Right to Left alignment of Captcha can be achieved by enabling EnableRTL propertyto true. When this property is set as true, refresh image and audio button are displayed in left side of captcha and also auto validation text box characters are entered from right to left. To achieve this, enable refresh, audio, and auto validation properties. By default RTL property value is set as false.
+Right to Left alignment of Captcha can be achieved by enabling EnableRTL property to true. When this property is set as true, refresh image and audio button are displayed in left side of captcha and also auto validation text box characters are entered from right to left. To achieve this, enable refresh, audio, and auto validation properties. By default RTL property value is set as false.
 
 The following code example is used to render the Captcha with RTL support.
 

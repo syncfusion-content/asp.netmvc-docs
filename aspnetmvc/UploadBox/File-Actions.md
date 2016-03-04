@@ -15,7 +15,7 @@ To save the uploaded file in MVC, create an ActionResult and trigger the same in
 
 The following steps explain the configuration of SaveUrl property in the UploadBox. 
 
-1. In the VIEW page, add the below scriptto configure the UploadBox element.
+1. In the VIEW page, add the below script to configure the UploadBox element.
 
    ~~~ cshtml
 

@@ -13,7 +13,7 @@ This section explains you briefly on how to create a Button in your application 
 
 ## Create your first Button in MVC
 
-Essential ASP.NET MVC Button provides support to display a Button control within your webpage and allows you to Click, Toggle Click, Reset, and Submit. Using the following guidelines, you can customize Button for a real-time Multimedia player scenario. This allows you to Play, Pause, Stop, Mute, Unmute a music player. 
+Essential ASP.NET MVC Button provides support to display a Button control within your web page and allows you to Click, Toggle Click, Reset, and Submit. Using the following guidelines, you can customize Button for a real-time Multimedia player scenario. This allows you to Play, Pause, Stop, Mute, Un-mute a music player. 
 
 The following screenshot illustrates the functionality of Button in Multimedia player control.
 

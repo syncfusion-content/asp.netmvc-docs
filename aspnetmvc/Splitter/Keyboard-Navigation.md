@@ -106,7 +106,7 @@ The following steps explain to enable keyboard interaction for Splitter widget.
 
 
 
-1. Run the sample and press Alt + J to focus the Splitter widget. We can fully utilize the functionalionality of the splitter control by using keyboard shortcuts.
+1. Run the sample and press Alt + J to focus the Splitter widget. We can fully utilize the functionality of the splitter control by using keyboard shortcuts.
 
 
 
