@@ -348,7 +348,7 @@ Product Key
 
 ## Set Mask value to Product key textbox
 
-You can set mask value for Productkey textbox by setting the desired values to the MaskEdit control.
+You can set mask value for Product key textbox by setting the desired values to the MaskEdit control.
 
 {% highlight CSHTML %}
 

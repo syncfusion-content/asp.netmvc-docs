@@ -26,7 +26,7 @@ Refer to the following code examples.
 {% endhighlight %}
 
 
-In ImageTemplateId property, you can give Live Tile images outside the Tile rendering. To achieve this, you are required to give image content inside the element where the path is specified by templateid. You can update the ImageTemplateId dynamically through updateTemplateID public method.
+In ImageTemplateId property, you can give Live Tile images outside the Tile rendering. To achieve this, you are required to give image content inside the element where the path is specified by template id. You can update the ImageTemplateId dynamically through updateTemplateID public method.
 
 Refer to the following code examples. 
 

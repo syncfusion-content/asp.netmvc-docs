@@ -59,7 +59,7 @@ Captcha with customized Hatch style
 
 ## Pattern
 
-You can customize the patterns of the Captcha by enabling EnablePattern propertyto true. When the property is set to true, Captcha characters renders with strikeout. By default the property is set as true.
+You can customize the patterns of the Captcha by enabling EnablePattern property to true. When the property is set to true, Captcha characters renders with strikeout. By default the property is set as true.
 
 The following code example is used to render the Captcha with hard visibility mode.
 
@@ -83,7 +83,7 @@ Captcha without pattern
 
 ## Background and Font color 
 
-You can customize the appearance of Captcha controlby using the following property. PatternForeColor is used to set background pattern color. PatternBackColor is used to set background color for Captcha. ForeColor is used to set Captcha text color.
+You can customize the appearance of Captcha control by using the following property. PatternForeColor is used to set background pattern color. PatternBackColor is used to set background color for Captcha. ForeColor is used to set Captcha text color.
 
 The following code example is used to render the Captcha with customized appearance.
 

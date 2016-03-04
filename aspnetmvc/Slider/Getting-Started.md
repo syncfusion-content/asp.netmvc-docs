@@ -23,7 +23,7 @@ The following screenshot illustrates the functionality of Slider control. You ca
 
 ### Create a Slider
 
-ASP.NET MVC Slider controlallows you to switch between different ranges of input. The basic Slider is horizontal and has a single handle that can be moved with the mouse or by using the arrow keys. You can easily create the Slider control using @Html.helper as follows.
+ASP.NET MVC Slider control allows you to switch between different ranges of input. The basic Slider is horizontal and has a single handle that can be moved with the mouse or by using the arrow keys. You can easily create the Slider control using @Html.helper as follows.
 
 1. Create an MVC Project and add necessary assembly, scripts, and styles to it.
 

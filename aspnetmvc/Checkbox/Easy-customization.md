@@ -78,7 +78,7 @@ Checkbox with Non-Tri state and Tri-state
 
 ## Check State
 
-You require an option to set indeterminate state for Checkbox. By using CheckState property, you can set any state that is illustrated in following table. Before using this property, enable the Tri-state for Checkbox. EnableTriState propertyis set true.
+You require an option to set indeterminate state for Checkbox. By using CheckState property, you can set any state that is illustrated in following table. Before using this property, enable the Tri-state for Checkbox. EnableTriState property is set true.
 
 _List of check states_
 

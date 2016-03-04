@@ -9,7 +9,7 @@ documentation: ug
 
 # ToggleButton
 
-The Toggle Button allows you to perform the toggle option by using checked and unchecked state. This ToggleButton can be helpful to you to check their states.  Toggle Button is used as normal clickable button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the Toggle Button in three types by using the type property. 
+The Toggle Button allows you to perform the toggle option by using checked and unchecked state. This ToggleButton can be helpful to you to check their states.  Toggle Button is used as normal click able button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the Toggle Button in three types by using the type property. 
 
 ## Key Features
 

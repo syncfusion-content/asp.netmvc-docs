@@ -9,7 +9,7 @@ documentation: ug
 
 # Easy customization
 
-Split Button is used in many applications. Split Button Size, mages and Content are varied according to each application. The following sections describes you some customizable options for Split Button that can perform easily. 
+Split Button is used in many applications. Split Button Size, images and Content are varied according to each application. The following sections describes you some customizable options for Split Button that can perform easily. 
 
 ## Content for Split button
 
@@ -226,7 +226,7 @@ Execute the above code to render the following output.
 
 ## ContentType
 
-The content of the Split Button is mainly rendered as text and images. Instead of using complex CSS classes to render Split Button with different content types, you can use some predefined content type options listed in the following table. Using this ContentType propertyyou can easily add different types of content for Split Button. Split Button supports the following content types.
+The content of the Split Button is mainly rendered as text and images. Instead of using complex CSS classes to render Split Button with different content types, you can use some predefined content type options listed in the following table. Using this ContentType property you can easily add different types of content for Split Button. Split Button supports the following content types.
 
 _List of content types_
 

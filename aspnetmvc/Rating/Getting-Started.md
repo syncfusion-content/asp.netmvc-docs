@@ -13,7 +13,7 @@ This section explains briefly how to create a Rating control in the ASP.NET MVC.
 
 ## Create your first Rating control in MVC
 
-Essential Studio ASP.NET MVCRating control provides support to display Rating bar within your webpage, and allows you to rate the products. Refer to the following guidelines to customize the Rating control for a real-time movie download application. You can use Rating control to rate a movie. In this real-time application, Essential Studio ASP.NET MVCTab control is used to display the movies information with rating star.To know more about Tab control, refer to the Getting Started of the Tab control.
+Essential Studio ASP.NET MVCRating control provides support to display Rating bar within your web page, and allows you to rate the products. Refer to the following guidelines to customize the Rating control for a real-time movie download application. You can use Rating control to rate a movie. In this real-time application, Essential Studio ASP.NET MVCTab control is used to display the movies information with rating star.To know more about Tab control, refer to the Getting Started of the Tab control.
 
 The following screenshot demonstrates the functionality of a Rating control with a Rating range of 0 to 5. 
 

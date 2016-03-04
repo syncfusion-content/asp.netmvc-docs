@@ -21,7 +21,7 @@ The following screenshot displays the drag and drop support.
 
 ### Enable drag and drop 
 
-AllowDragAndDrop property is Boolean type which allow us to enable or disable the Drag and Drop.  When you want to drag and drop multiple files, you can enable multiple file selection by setting MultipleFilesSelection as True in theUploadBoxcontrol. By default the AllowDragAndDrop property is set as False in the UploadBox control.
+AllowDragAndDrop property is Boolean type which allow us to enable or disable the Drag and Drop.  When you want to drag and drop multiple files, you can enable multiple file selection by setting MultipleFilesSelection as True in theUploadBox control. By default the AllowDragAndDrop property is set as False in the UploadBox control.
 
 The following steps explain how to enable the drag and drop in the UploadBox control.
 

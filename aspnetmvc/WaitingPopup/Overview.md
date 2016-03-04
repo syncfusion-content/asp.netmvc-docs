@@ -9,7 +9,7 @@ documentation: ug
 
 # WaitingPopup
 
-The WaitingPopup controlfor MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
+The WaitingPopup control for MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
 ### Key Features
 
@@ -25,7 +25,7 @@ This section explains briefly about how to create a WaitingPopup in your applica
 
 ## Create your first Waiting Popup in MVC
 
-ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your webpage. From the following guidelines, you can learn how to create a Waiting Popup in a real-time Login page scenario. This helps you in authentication model. The following screenshot illustrates the functionality of a Waiting Popup in a Login page scenario.
+ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your web page. From the following guidelines, you can learn how to create a Waiting Popup in a real-time Login page scenario. This helps you in authentication model. The following screenshot illustrates the functionality of a Waiting Popup in a Login page scenario.
 
 
 
