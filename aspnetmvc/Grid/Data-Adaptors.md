@@ -401,7 +401,7 @@ For instance, though we have not provided in-built support to bind XML data, you
  
 https://www.syncfusion.com/kb/3375/how-to-process-xml-data-from-server-using-datamanager-and-bound-to-grid 
 
-Note: To create a custom Adaptor for remote service, the `UrlAdaptor` can be used as base Adaptor. 
+N> To create a custom Adaptor for remote service, the `UrlAdaptor` can be used as base Adaptor. 
 
 #  DataAnnotation
 
@@ -471,7 +471,7 @@ Please find the following list of annotation attributes that are supported in Gr
 </table>        
 
 
-Note: Grid Properties has more priority than Data Annotation. For Instance, if `DisplayName` Attribute is set to a Field in Grid Model class and also we set different value to the respective Grid Columns property `HeaderText`, then the value of `HeaderText` property will be considered and shown in Grid header.
+N> Grid Properties has more priority than Data Annotation. For Instance, if `DisplayName` Attribute is set to a Field in Grid Model class and also we set different value to the respective Grid Columns property `HeaderText`, then the value of `HeaderText` property will be considered and shown in Grid header.
 
 The following code example shows how data annotation works in Grid Control.
 
