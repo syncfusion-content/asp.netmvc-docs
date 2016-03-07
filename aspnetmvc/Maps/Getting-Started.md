@@ -68,7 +68,7 @@ You can store the `United States of America.json` file in App_Data folder as `us
 
 ### Prepare Data Source
 
-The dataSource is populated with USA population data inside the controller relative to shape data. For better understanding, “MapController.cs” is populated with datas of USA Population in “MapController.cs”.
+The dataSource is populated with USA population data inside the controller relative to shape data. For better understanding, “MapController.cs” is populated with data of USA Population in “MapController.cs”.
 
 
 
@@ -382,7 +382,7 @@ The above code renders a map with default properties and shape input provided th
 
 ## Data Binding in Map
 
-The following properties in shape layers is used for binding datas in Maps control.
+The following properties in shape layers is used for binding data in Maps control.
 
 * DataSource
 * ShapeDataPath
