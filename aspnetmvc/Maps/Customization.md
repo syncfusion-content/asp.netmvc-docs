@@ -189,7 +189,7 @@ When the underlying value is below any of the given sorted range or above the so
 ![](Customization_images/Customization_img2.png)
 
 
-* `EqualColorMapping` - The Equalcolormapping is used to differentiate the shape’s fill based on its underlying Value and Color. The properties of Equal color mapping is listed in the following table.
+* `EqualColorMapping` - The Equal color mapping is used to differentiate the shape’s fill based on its underlying Value and Color. The properties of Equal color mapping is listed in the following table.
 
 <table>
 <tr>
@@ -211,7 +211,7 @@ Gets or sets the color for mapping.</td></tr>
 
 In Equal color mapping, value property contains the values of the field set in `ColorValuePath` property of shape settings.
 
-Here “MapController.cs” is populated with datas of USA Election in “MapController.cs” to provide election data as input datasource.
+Here “MapController.cs” is populated with data of USA Election in “MapController.cs” to provide election data as input datasource.
 
 
 {% tabs %}
