@@ -11,7 +11,7 @@ documentation: ug
 
 Rating provides support for Vertical orientation. By default Rating renders with Horizontal orientation. You can change the orientation by the Orientation property.
 
-The following code example is used to render the Rating control with Verticalorientation.
+The following code example is used to render the Rating control with Vertical orientation.
 
 Add the following code in your view page to render the Rating with customizedOrientation.
 

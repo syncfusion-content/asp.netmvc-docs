@@ -11,7 +11,7 @@ documentation: ug
 
 ## Auto Validation
 
-You can validate the Captcha characters by default when you click the submit button without adding any validation code. You can achieve this by enabling EnableAutoValidation propertyto true. By default, this property is set as false. When this property is set as true Captcha renders with textbox.  Here, you can also customize the error message by using CustomErrorMessage property that accepts the string value. 
+You can validate the Captcha characters by default when you click the submit button without adding any validation code. You can achieve this by enabling EnableAutoValidation property to true. By default, this property is set as false. When this property is set as true Captcha renders with textbox.  Here, you can also customize the error message by using CustomErrorMessage property that accepts the string value. 
 
 Next, define the target button that performs validation. You can achieve this by using TargetButton property. The button id that performs the click action should be assigned in TargetButton. 
 
@@ -95,7 +95,7 @@ Captcha validation by method
 
 ## Case Sensitive Validation 
 
-Captcha supports to check case sensitivity (Upper case and lower case) of the Captcha characters at the time of validation. You can achieve this by enabling EnableCaseSensitivity propertyto true. By default this value is set as true.
+Captcha supports to check case sensitivity (Upper case and lower case) of the Captcha characters at the time of validation. You can achieve this by enabling EnableCaseSensitivity property to true. By default this value is set as true.
 
 The following code example is used to render the Captcha with Case sensitive validation support.
 

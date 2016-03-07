@@ -13,7 +13,7 @@ Toggle Button is used in all applications. ToggleButton size, content and conten
 
 ## Toggle State
 
-Toggle button has two states like off / on state in a switch. By default you can set any state at initial and then you can move from one state to another state by clicking on the Toggle Button. These two states are Default and Active.ToggleState property is used toset the state of Toggle Button as default state or active state. Default value of ToggleState is false.
+Toggle button has two states like off / on state in a switch. By default you can set any state at initial and then you can move from one state to another state by clicking on the Toggle Button. These two states are Default and Active.ToggleState property is used to set the state of Toggle Button as default state or active state. Default value of ToggleState is false.
 
 The following steps explains you the details about rendering the Toggle Button with different ToggleState.
 

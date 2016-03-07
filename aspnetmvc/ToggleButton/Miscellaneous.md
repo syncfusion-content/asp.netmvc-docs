@@ -39,7 +39,7 @@ Toggle button with Rounder corner
 
 ## PreventToggle
 
-This property is used to prevent the state change of Toggle Button when it is clicked. When you set PreventToggle propertyas true, then the state of the Toggle Button is not changed even though it is clicked. Default value of PreventToggle is false.
+This property is used to prevent the state change of Toggle Button when it is clicked. When you set PreventToggle property as true, then the state of the Toggle Button is not changed even though it is clicked. Default value of PreventToggle is false.
 
 The following steps explains you the details about rendering the Toggle Button with PreventToggle property enabled.
 

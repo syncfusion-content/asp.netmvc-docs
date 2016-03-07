@@ -13,7 +13,7 @@ This section explains briefly about how to create a Rotator in your ASP.NET MVC 
 
 ## Create your first Rotator in MVC
 
-ASP.NET MVC Rotator provides support to display the provided number of images within your webpage in a rotating manner. Refer the following guidelines to create a Rotator widget for a real-time website banner scenario that has five images that slide automatically. When you click the center button, images slide in a rotating manner and on second click, the rotation stops.
+ASP.NET MVC Rotator provides support to display the provided number of images within your web page in a rotating manner. Refer the following guidelines to create a Rotator widget for a real-time website banner scenario that has five images that slide automatically. When you click the center button, images slide in a rotating manner and on second click, the rotation stops.
 
 The following screenshot illustrates a Rotator widget.
 

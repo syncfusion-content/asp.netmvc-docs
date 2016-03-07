@@ -63,7 +63,7 @@ Execute the above code example to render the following output.
 
 When you want to display the Slider widget in a different style based on the appearance of your application, you can use this CssClass property to apply custom theme for the Slider. Specify a class name as the value for CssClass property. The specified class is added to the wrapper of the Slider widget. Now, you can easily override the styles of the Slider widget by accessing the styles from the root level (using the cssclass specified).
 
-The following steps explains you on how to configure the Slider with custom theme using the CssClass property. Here, a class name “purple” is specified for the CssCalss.
+The following steps explains you on how to configure the Slider with custom theme using the CssClass property. Here, a class name “purple” is specified for the CssClass.
 
 1. In an VIEW page, specify the helper elements to render the “Default Slider” and “Range Slider”.
 

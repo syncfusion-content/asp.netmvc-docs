@@ -49,7 +49,7 @@ Captcha with Refresh button
 
 ## Audio Accessibility
 
-Sometimes, Captcha characters are too hard to identify. In this case Captcha with audio helps to understand the Captcha character.  Captcha supports captcha with audio.  You can achieve this by enabling EnableAudio propertyto true. When this property is set true, captcha renders with audio button and when you click the audio button it readouts the captcha characters. By default Captcha renders without audio button.
+Sometimes, Captcha characters are too hard to identify. In this case Captcha with audio helps to understand the Captcha character.  Captcha supports captcha with audio.  You can achieve this by enabling EnableAudio property to true. When this property is set true, captcha renders with audio button and when you click the audio button it readouts the captcha characters. By default Captcha renders without audio button.
 
 The following code example is used to render the Captcha with Audio.
 

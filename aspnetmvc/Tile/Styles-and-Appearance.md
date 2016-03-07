@@ -31,7 +31,7 @@ It class is applied to the child <div> of the Tile.</td></tr>
 <tr>
 <td>
 e-enabled-text</td><td>
-It class is applied to the textof Tile when text element is active</td></tr>
+It class is applied to the text of Tile when text element is active</td></tr>
 <tr>
 <td>
 e-tile-text</td><td>

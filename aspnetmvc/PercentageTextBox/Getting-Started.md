@@ -217,7 +217,7 @@ PercentageTextBox with watermark text
 
 ## Set MinValue, MaxValue and value in PercentageTextBox
 
-You can set the “MinValue”,“MaxValue” and “Value” in Numeric, percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the Maskedit widget by using the”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
+You can set the “MinValue”,“MaxValue” and “Value” in Numeric, percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the Maskedit widget by using the ”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
 
 {% highlight CSHTML %}
 

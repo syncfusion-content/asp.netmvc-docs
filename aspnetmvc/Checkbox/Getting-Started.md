@@ -13,7 +13,7 @@ This section explains briefly about how to create a Checkbox in your application
 
 ## Create your first Checkbox in MVC
 
-Essential ASP.NET MVC Checkbox provides support to multiple selections within your webpage, and allows you to select options from the list. Refer the following guidelines to create multiple or single selection List Receiving App using Checkbox that helps you to get the value of checked Checkbox using the button. The following screenshot illustrates the functionality of Checkbox with button action.
+Essential ASP.NET MVC Checkbox provides support to multiple selections within your web page, and allows you to select options from the list. Refer the following guidelines to create multiple or single selection List Receiving App using Checkbox that helps you to get the value of checked Checkbox using the button. The following screenshot illustrates the functionality of Checkbox with button action.
 
 
 

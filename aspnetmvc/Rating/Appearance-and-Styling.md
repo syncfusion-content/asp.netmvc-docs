@@ -11,7 +11,7 @@ documentation: ug
 
 ## Show ToolTip
 
-Rating control provides support for Tooltip values. This is achieved by enabling the ShowTooltip property to True. When you move the mouse over the Rating control, it displays the Tooltip value as ratingvalue. By default, this property value is set to True.
+Rating control provides support for Tooltip values. This is achieved by enabling the ShowTooltip property to True. When you move the mouse over the Rating control, it displays the Tooltip value as rating value. By default, this property value is set to True.
 
 The following code example is used to render the Rating control without tooltip.
 
@@ -65,7 +65,7 @@ You can customize the width and height of the Rating by ShapeWidth and ShapeHeig
 
 The following code example is used to render the Rating control with customized ShapeWidth and ShapeHeight.
 
-In this sample, the default rating star is replaced by crystal-stars.png local imgae by overriding the Rating control css.
+In this sample, the default rating star is replaced by crystal-stars.png local image by overriding the Rating control css.
 
 Add the following code in your view page to render the Rating with customized ShapeWidth and ShapeHeight.
 
@@ -200,7 +200,7 @@ By default, there are 12 themes support available for Rating control namely:
 
 The style of the Rating control is customized by CssClass property. 
 
-The following code example is used to render the Rating control with customizedstyle.
+The following code example is used to render the Rating control with customized style.
 
 Add the following HTML to render the Rating with customized style. In this, hovering behaviors, tooltip position and display have been customized by using custom css class.
 

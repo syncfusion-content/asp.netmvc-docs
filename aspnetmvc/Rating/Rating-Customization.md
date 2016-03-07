@@ -61,9 +61,9 @@ The following screenshot illustrates the Rating with custom defined value.
 
 Rating control provides support for setting the MinimumValue. This is achieved by adding the MinValue property. When the MinValue property is set, the Rating value starts with MinValue+1.
 
-The following code example is used to render the Rating control with minimumrating value specfied.
+The following code example is used to render the Rating control with minimum rating value specfied.
 
-Add the following code in your view page to render the Rating with Minimumvalue.
+Add the following code in your view page to render the Rating with Minimum value.
 
 
 
@@ -97,7 +97,7 @@ Add the following code in your view page to render the Rating with Minimumvalue.
 
 
 
-The following screenshot Rating value starts with 4 since MinValuevalue is set as 3.
+The following screenshot Rating value starts with 4 since MinValue value is set as 3.
 
 ![](Rating-Customization_images/Rating-Customization_img2.png)
 
@@ -106,11 +106,11 @@ Rating with minimum value as 4
 
 ## Max Value
 
-Rating controlprovides support for setting Maximumvalue. This is achieved by adding the MaxValue property. By default, MaxValue is five.
+Rating controlprovides support for setting Maximum value. This is achieved by adding the MaxValue property. By default, MaxValue is five.
 
-The following code example is used to render the Rating control with maximumrating value spefied
+The following code example is used to render the Rating control with maximum rating value specified
 
-Add the following code in your view pageto render the Rating with maximumvalue.
+Add the following code in your view page to render the Rating with maximum value.
 
 
 
@@ -144,7 +144,7 @@ Add the following code in your view pageto render the Rating with maximumvalue.
 
 
 
-The following screenshot illustrates the Rating with maximumvalue.
+The following screenshot illustrates the Rating with maximum value.
 
 
 
@@ -231,7 +231,7 @@ Rating control supports customized increment value for Rating. This is achieved 
 
 The following code example is used to render the Rating control with customized increment.
 
-Add the followingcode in your view page to render the Rating with customized increment.
+Add the following code in your view page to render the Rating with customized increment.
 
 
 

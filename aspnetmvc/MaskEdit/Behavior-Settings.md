@@ -66,7 +66,7 @@ Textboxes with enabled as True
 Textboxes with enabled as False
 {:.caption}
 
-## Adjusting Txtbox Size
+## Adjusting Textbox Size
 
 MaskEditTextBox size can be modified by using the Height and Width properties. You can customize the size of Textbox by using these properties.
 
@@ -140,7 +140,7 @@ The MaskEditTextBox has an option that shows the error value with red colored te
 
 ### Configure Error Visibility
 
-In the View page use the corresponding Textbox helperfor rendering Textbox controls. 
+In the View page use the corresponding Textbox helper for rendering Textbox controls. 
 
 
 
@@ -187,7 +187,7 @@ The MaskEdit provides the option to define the MaskFormat to the value. The defa
 
 The following steps explain the implementation of MaskEdit Properties.
 
-In the View page use the corresponding Textbox helperfor rendering MaskEdit control. 
+In the View page use the corresponding Textbox helper for rendering MaskEdit control. 
 
 
 
@@ -342,13 +342,13 @@ Output of MaskEditTextBox when ShowRoundedCorner is “True”.
 Textboxes with showRoundedCorner
 {:.caption}
 
-### Watr Mark Text Support
+### Water Mark Text Support
 
 The Textboxes provide water mark text support. You can display the initial value in the control by water mark.
 
 #### Configure Water Mark Text
 
-In the View page use the corresponding Textbox helperfor rendering Textbox controls. 
+In the View page use the corresponding Textbox helper for rendering Textbox controls. 
 
 {% highlight CSHTML %} 
 
@@ -369,7 +369,7 @@ The MaskEditTextBox provides text alignment support that allows you to set the a
 
 #### Configure Text Alignment
 
-In the View page use the corresponding MaskEdit helperfor rendering MaskEdit control. 
+In the View page use the corresponding MaskEdit helper for rendering MaskEdit control. 
 
 
 
