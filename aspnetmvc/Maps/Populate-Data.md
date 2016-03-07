@@ -59,7 +59,7 @@ The Maps control supports data binding with the `DataSource` property in the sha
 
 ### Properties
 
-The following properties in shape layers is be used for binding datas in Maps control,
+The following properties in shape layers is be used for binding data in Maps control,
 
 * Data Source
 * shapeDataPath
@@ -79,7 +79,7 @@ The `ShapePropertyPath` property is similar to the `ShapeDataPath` that refers t
 
 The `Datasource` is populated with JSON data relative to shape data and stored in JSON object. The USA population as datasource is used for better understanding. 
 
-For better understanding, “MapController.cs” is populated with datas of USA Population in “MapController.cs” and you can refer both shape data and datasource as illustrated in the following “Map.cshtml”,
+For better understanding, “MapController.cs” is populated with data of USA Population in “MapController.cs” and you can refer both shape data and datasource as illustrated in the following “Map.cshtml”,
 
 
 
