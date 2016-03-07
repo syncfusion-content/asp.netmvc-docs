@@ -24,7 +24,7 @@ This section briefly explains on how to create a Linear Gauge control for your a
 
 ASP.NET MVC Linear Gauge widget basically renders with flexible APIs. You can easily create the Linear Gauge widget by the following steps.
 
-1. First create an MVC Project and add necessary Dlls and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
+1. First create an MVC Project and add necessary Dll's and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/ug/js/default.htm) Documentation.
 2. Add the following code example to the corresponding view page to render Linear Gauge.
 
    ~~~ js

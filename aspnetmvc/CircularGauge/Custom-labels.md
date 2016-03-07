@@ -52,9 +52,9 @@ cl.TextAngle(10)
 
 ### Basic Customization
 
-* You can customize Customlabels using the properties such as textAngle, color and font. textAngle attribute is used to display the custom labels in the specified angles and color attribute is used to display the custom labels in specified color. 
-* You can use Value attribute to set the text value in the customlabels. To display the custom labels, set showCustomLabels as ‘true’. To set the location of the custom label in Circular Gauge, location property is used. By using x and y axis you can adjust the position of the custom labels.
-* Font option is also available on  Customlabels. The basic three properties of fonts such as size, family and style can be achieved by size, fontStyle and fontFamily attributes. 
+* You can customize custom labels using the properties such as textAngle, color and font. textAngle attribute is used to display the custom labels in the specified angles and color attribute is used to display the custom labels in specified color. 
+* You can use Value attribute to set the text value in the custom abels. To display the custom labels, set showCustomLabels as ‘true’. To set the location of the custom label in Circular Gauge, location property is used. By using x and y axis you can adjust the position of the custom labels.
+* Font option is also available on  custom labels. The basic three properties of fonts such as size, family and style can be achieved by size, fontStyle and fontFamily attributes. 
 
 
 {% highlight CSHTML %}
