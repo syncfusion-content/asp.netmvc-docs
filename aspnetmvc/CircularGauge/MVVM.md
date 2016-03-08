@@ -537,7 +537,7 @@ Execute the above code to render the following output. The following screenshot 
 
 ![](MVVM_images/MVVM_img8.png)
 
-Circular Gauge with Knockout binding
+Circular Gauge with KnockoutJS binding
 {:.caption}
 
 
