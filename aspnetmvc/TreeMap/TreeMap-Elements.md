@@ -27,7 +27,7 @@ You can decide the size of the legend icons by setting `IconWidth` and `IconHeig
 
 ### Label for Legend
 
-You can customize the labels of the legenditem using `LegendLabel` property of `RangeColorMapping`. 
+You can customize the labels of the legend item using `LegendLabel` property of `RangeColorMapping`. 
 
 {% highlight CSHTML %}
 
@@ -90,7 +90,7 @@ You can customize the labels of the legenditem using `LegendLabel` property of `
 
 ## Header
 
-You can set headers for each level by setting the `ShowHeader` propery of the each TreeMap levels. The `HeaderHeight` property helps to set the height of the header and Group path value determines the header value. You can customize the default header appearance by setting the `HeaderTemplate` of the TreeMap levels.
+You can set headers for each level by setting the `ShowHeader` property of the each TreeMap levels. The `HeaderHeight` property helps to set the height of the header and Group path value determines the header value. You can customize the default header appearance by setting the `HeaderTemplate` of the TreeMap levels.
 
 {% highlight CSHTML %}
 

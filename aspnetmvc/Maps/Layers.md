@@ -11,7 +11,7 @@ documentation: ug
 
 Map is maintained through `Layers` and it can accommodate one or more layers.
 
-## Multilayers
+## Multilayer
 
 The Multilayer support allows you to load multiple shape files in a single container, enabling maps to display more information.
 
@@ -28,7 +28,7 @@ In this example, World Map shape is used as shape data by utilizing the `“Worl
 ..\ Maps_GeoJSON\
 
 
-Here “MapController.cs” is populated with datas of World Map in “MapController.cs”.
+Here “MapController.cs” is populated with data of World Map in “MapController.cs”.
 
 ~/Controller/MapController.cs
 
