@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a GanttChart in your application with ASP.NET MVC.
+This section explains briefly about how to create a Gantt chart in your application with ASP.NET MVC.
 
 ## Create your first Gantt in MVC
 
