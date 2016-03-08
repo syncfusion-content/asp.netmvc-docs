@@ -361,7 +361,7 @@ An axis displaying a logarithmic scale is very useful when your data values span
 
 ![](Axis_images/Axis_img11.png)
 
-Chart with Logarthimic Axis
+Chart with Logarithimic Axis
 {:.caption}
 
 ### Chart Axis Properties:
@@ -892,7 +892,7 @@ It is rendered in Chart area for each interval of axis range. By default, it is 
 
 ### Minor Grid Lines
 
-It is rendered between the major gridlines of Chart area.To display minor grid lines in Chart area enable Visible property of “MinorGridLines” and set values to “MinorTicksPerInterval” in the respective axis. By default, ‘Visibile’ property is set to “false”. You can customize the minor grid lines width, and dashArray of gridline.
+It is rendered between the major gridlines of Chart area.To display minor grid lines in Chart area enable Visible property of “MinorGridLines” and set values to “MinorTicksPerInterval” in the respective axis. By default, ‘Visible’ property is set to “false”. You can customize the minor grid lines width, and dashArray of gridline.
 
 
 {% highlight CSHTML %}

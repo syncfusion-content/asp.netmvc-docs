@@ -78,6 +78,6 @@ Execute the above code to render the following output.
 
 ![](Gauge-Position_images/Gauge-Position_img1.png)
 
-Semi-circular Gauge with Default topleft position
+Semi-circular Gauge with default top left position
 {:.caption}
 

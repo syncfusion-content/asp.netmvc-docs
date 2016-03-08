@@ -225,7 +225,7 @@ Area Chart
 
 ## Range Area Chart
 
-Range Area Charts are similar to regular area Charts except that, each area is rendered over a range.  Specify the y-axis high and low values for each point for the Range Area Chart. You can customize the series color and borderusing Fill and Border properties in series.
+Range Area Charts are similar to regular area Charts except that, each area is rendered over a range.  Specify the y-axis high and low values for each point for the Range Area Chart. You can customize the series color and border using Fill and Border properties in series.
 
 
 
@@ -595,7 +595,7 @@ The following screenshot displays the 100% Stacking area chart.
 
 ## Column Chart
 
-Column Charts are among the most common Chart types that are used. It uses vertical bars (columns) to display different values of one or more items. It is similar to a bar Chart except that the bars are vertical and not horizontal as in bar Chart. Points from adjacent series are drawn as bars next to each other. You can customize the series color and borderusing Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+Column Charts are among the most common Chart types that are used. It uses vertical bars (columns) to display different values of one or more items. It is similar to a bar Chart except that the bars are vertical and not horizontal as in bar Chart. Points from adjacent series are drawn as bars next to each other. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
 
 
 
@@ -670,7 +670,7 @@ Column Chart
 
 ## RangeColumn Chart
 
-RangeColumn Chart is similar to the Column Chart except that each column is rendered over a range. Specify the y-axis Starting and Ending values for each point for the RangeColumn Chart. You can customize the series color and borderusing Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+RangeColumn Chart is similar to the Column Chart except that each column is rendered over a range. Specify the y-axis Starting and Ending values for each point for the RangeColumn Chart. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
 
 
 
@@ -735,7 +735,7 @@ RangeColumn Chart
 
 ## StackingColumn Chart
 
-Stacking Column Charts are similar to regular column Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole.You can customize the series color and borderusing Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+Stacking Column Charts are similar to regular column Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole.You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
 
 
 
@@ -867,7 +867,7 @@ The following screenshot displays the 100% Stacking column chat.
 
 ## Bar Chart
 
-Bar Chart is the simplest and most versatile of statistical diagrams. It displays horizontal bars for each point in the series and points from adjacent series are drawn as bars next to each other. Bar Charts are used to compare values across categories, to display variations in the value of an item over time or to display the values of several items at a single point in time.You can customize the series color and borderusing Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+Bar Chart is the simplest and most versatile of statistical diagrams. It displays horizontal bars for each point in the series and points from adjacent series are drawn as bars next to each other. Bar Charts are used to compare values across categories, to display variations in the value of an item over time or to display the values of several items at a single point in time.You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
 
 
 
@@ -932,15 +932,15 @@ Bar Chart
 
 {% endhighlight  %}
 
-## Stackingbar Chart
+## Stacking bar Chart
 
-Stacking Bar Charts are similar to regular bar Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole. You can customize the series color and borderusing Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+Stacking Bar Charts are similar to regular bar Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
 
 
 
 ![](Chart-Types_images/Chart-Types_img14.png)
 
-Stackingbar Chart
+Stacking bar Chart
 {:.caption}
 
 {% highlight CSHTML %}
@@ -1066,7 +1066,7 @@ Stackingbar Chart
 
 
 {% endhighlight  %}
-The following screenshot displays the 100% Stackingbar chart.
+The following screenshot displays the 100% Stacking bar chart.
 
 ![](Chart-Types_images/Chart-Types_img15.png)
 
@@ -1150,7 +1150,7 @@ Spline Chart
 
 ## Pie Chart
 
-A Pie Chart renders y values as slices in a pie. The slices are rendered in proportion to the whole that is the sum of all the y values in the series. Consequently, Pie Charts are used to visualize the proportional contribution in terms of percentage or fraction of categories of data to the whole data set. The x values in the data series are treated only as nominal in categorical, qualitative data. The Pie Chart displays only one Data Series at a time. You can customize the series color and borderusing Fill and Border properties in series and each slice of series using Fill and Border properties in point.
+A Pie Chart renders y values as slices in a pie. The slices are rendered in proportion to the whole that is the sum of all the y values in the series. Consequently, Pie Charts are used to visualize the proportional contribution in terms of percentage or fraction of categories of data to the whole data set. The x values in the data series are treated only as nominal in categorical, qualitative data. The Pie Chart displays only one Data Series at a time. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
 
 
 
@@ -1207,7 +1207,7 @@ Pie Chart
 
 ## Doughnut Chart
 
-Doughnut Charts are pie Charts with a hole, whose value is specified as the doughnut coefficient. The Doughnut Chart is best suited for presenting data in proportions. You can customize the series color and borderusing Fill and Border properties in series and each slice of series using Fill and Border properties in point.
+Doughnut Charts are pie Charts with a hole, whose value is specified as the doughnut coefficient. The Doughnut Chart is best suited for presenting data in proportions. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
 
 
 
@@ -1332,7 +1332,7 @@ Semi Pie Chart
 
 ## Pyramid Chart
 
-The Pyramid Chart type displays the data that when totalled renders 100%. This type of Chart is a single series Chart representing the data as portions of 100%, and this Chart does not use any axes. You can customize the series color and borderusing Fill and Border properties in series and each slice of series using Fill and Border properties in point.
+The Pyramid Chart type displays the data that when totaled renders 100%. This type of Chart is a single series Chart representing the data as portions of 100%, and this Chart does not use any axes. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
 
 
 
@@ -1662,7 +1662,7 @@ BearFillColor is used to specify a fill color for the segments that indicate a d
 
 ### DrawMode
 
-DrawMode is used to specify the open and close draw mode to hiloopenclose series.
+DrawMode is used to specify the open and close draw mode to HiLoOpenClose series.
 
 * Open - Points only the opening value of that period.
 * Close - Points out the closing value of that period.
@@ -1721,7 +1721,7 @@ DrawMode is used to specify the open and close draw mode to hiloopenclose series
 
 ## Candle
 
-A CandleSeries displays each data point with a combination of a vertical column and a vertical line. The height of the vertical line represents the difference between high and low value of a datapoint, whereas the height of the vertical column represents the difference between the Open and Close values of a data point. You can also change the color and stroke thickness of the series using the Fill, Borderwidth properties respectively.
+A CandleSeries displays each data point with a combination of a vertical column and a vertical line. The height of the vertical line represents the difference between high and low value of a datapoint, whereas the height of the vertical column represents the difference between the Open and Close values of a data point. You can also change the color and stroke thickness of the series using the Fill, BorderWidth properties respectively.
 
 The following properties are useful in mapping the value of each data point in a Candle.
 
@@ -1878,7 +1878,7 @@ To create a simple Hilo series use the following code example.
 
 ## Polar
 
-A Polar Chart is a circular graph on which data is displayed in terms of values and angles. The x values define the angles at which the data points are plotted. The y value defines the distance of the data points from the center of the graph, with the center of the graph usually starting at 0. You can customize the series color and borderusing Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
+A Polar Chart is a circular graph on which data is displayed in terms of values and angles. The x values define the angles at which the data points are plotted. The y value defines the distance of the data points from the center of the graph, with the center of the graph usually starting at 0. You can customize the series color and border using Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
 
 ### LineType
 
@@ -1949,7 +1949,7 @@ To create a simple Polar series use the following code example.
 
 ## RadarSeries 
 
-RadarSeries is a x, y Chart of three or more quantitative variables represented on multiple axis lines originating from the same point. You can customize the series color and borderusing Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
+RadarSeries is a x, y Chart of three or more quantitative variables represented on multiple axis lines originating from the same point. You can customize the series color and border using Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
 
 ### Area Type
 

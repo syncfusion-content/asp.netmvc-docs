@@ -36,7 +36,7 @@ Legend Title
 
 ## Legend Position
 
-You can position the legend at top, bottom, left or right position of the Chart. Default value of legendposition is “Bottom”.  And you can align the legend position using “Alignment” property of legend.  This allows you to align the legend at center, far and near position of Chart area.  Default value of legendalignment is “Center”. 
+You can position the legend at top, bottom, left or right position of the Chart. Default value of legend position is “Bottom”.  And you can align the legend position using “Alignment” property of legend.  This allows you to align the legend at center, far and near position of Chart area.  Default value of legend alignment is “Center”. 
 
 {% highlight CSHTML %}
 
@@ -195,7 +195,7 @@ Chart with customized Legend Opacity and Item Padding
 
 ### Scrollbar for legends:
 
-Essential Chart allows you to customize the legend height and width using size property. Default value of the height and width are null and it varies depending upon the legend position. If the legen is in top or bottom of the chart, default value of height is 20% of chart height and width is 100% of chart width. Similarly if it is in the left or right side of the chart, default value of height is 100% of chart height and width is 20% of chart width.
+Essential Chart allows you to customize the legend height and width using size property. Default value of the height and width are null and it varies depending upon the legend position. If the legend is in top or bottom of the chart, default value of height is 20% of chart height and width is 100% of chart width. Similarly if it is in the left or right side of the chart, default value of height is 100% of chart height and width is 20% of chart width.
 
 This property supports both pixels and percentage values. E.g. 100 or 10%.
 

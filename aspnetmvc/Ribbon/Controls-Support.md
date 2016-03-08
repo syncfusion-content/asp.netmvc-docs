@@ -40,7 +40,6 @@ The following table describes about the built in controls `Type` and their corre
 <td class="example last">
 	SplitButtonSettings: {
                           ContentType: ej.ContentType.ImageOnly,
-                          PrefixIcon: "e-ribbon e-ribbonpaste",
                           TargetID: "pasteSplit",
                           ButtonMode: "dropdown",
                           ArrowPosition: ej.ArrowPosition.Bottom
@@ -54,9 +53,7 @@ The following table describes about the built in controls `Type` and their corre
 	ToggleButtonSettings: {
                            ContentType: ej.ContentType.ImageOnly,
                            DefaultText: "Italic",
-                           ActiveText: "Italic",
-                           DefaultPrefixIcon: "e-ribbon e-ribbonitalic",
-                           ActivePrefixIcon: "e-ribbon e-ribbonitalic"
+                           ActiveText: "Italic"
                            }
  </td>
 </tr>
@@ -65,7 +62,7 @@ The following table describes about the built in controls `Type` and their corre
 <td class="control settings"><span class="param-type">DropDownList - DropDownSettings</span></td>
 <td class="example last">
 	DropDownSettings: {
-                      DataSource: fontsize,
+                      DataSource: size,
                       Text: "1pt",
                       Width: 65
                       }

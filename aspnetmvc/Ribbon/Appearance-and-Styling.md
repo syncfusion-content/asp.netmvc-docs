@@ -45,7 +45,7 @@ List of custom classes that are need to override styles. The following are speci
 
 ### Contextual Tabs
 
-*	`e-contextliset`, `e-contextul`, `e-contextualtabset` -This class is applied to the contextual tab and contextual tab set in the Ribbon.
+*	`e-contextliset`, `e-contextual`, `e-contextualtabset` -This class is applied to the contextual tab and contextual tab set in the Ribbon.
 
 ### Custom Tooltip
 

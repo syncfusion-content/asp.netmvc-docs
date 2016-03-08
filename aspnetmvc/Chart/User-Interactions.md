@@ -158,7 +158,7 @@ Chart with Customized ToolTip Font
 
 ### Tooltip Animation
 
-Essential Chart provides you animation support for tooltip template. You can enable this by setting “EnableAnimation” to true. The “Duration” property in tooltip specificies the time taken to animate the tooltip, by default the duration is set to “500ms”.
+Essential Chart provides you animation support for tooltip template. You can enable this by setting “EnableAnimation” to true. The “Duration” property in tooltip specifies the time taken to animate the tooltip, by default the duration is set to “500ms”.
 
 {% highlight CSHTML %}
 
@@ -334,7 +334,7 @@ Chart with Crosshairs enabled
 
 ### Trackball:
 
-In order to track a data point closer to the mouse position or touch contact point, you can use Trackball. You can customize the track ball appearance using the Marker and Line property in the crosshair. To display a label containing the relevant data point value information, you can enable the CrosshairLabel.Visible property in the corresponding axis of the Chart. For example, to display the x-axis label, set the Visible property of CrosshairLabel inthe PrimaryAxis to true. 
+In order to track a data point closer to the mouse position or touch contact point, you can use Trackball. You can customize the track ball appearance using the Marker and Line property in the crosshair. To display a label containing the relevant data point value information, you can enable the CrosshairLabel.Visible property in the corresponding axis of the Chart. For example, to display the x-axis label, set the Visible property of CrosshairLabel in the PrimaryAxis to true. 
 {% highlight CSHTML %}
 
 @(Html.EJ().Chart("chartcontainer")

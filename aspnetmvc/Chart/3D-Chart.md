@@ -414,7 +414,7 @@ Pie Charts are circular with several segments. The segments are calculated from 
 
 ## 100% 3D Stacking Column
 
-100% 3D Stacking Column charts are similar to 3D stacking Column charts. But here, the combined contribution of Y values is the combined total of the vertical bar with 100 percent. You can customize the depth, wall size, tilt and rotate the 100% 3D Stacking Column by using the Depth, Wallsize, Tilt and rotation property respectively.
+100% 3D Stacking Column charts are similar to 3D stacking Column charts. But here, the combined contribution of Y values is the combined total of the vertical bar with 100 percent. You can customize the depth, wall size, tilt and rotate the 100% 3D Stacking Column by using the Depth, WallSize, Tilt and Rotation property respectively.
 
 {% highlight CSHTML %}
 
