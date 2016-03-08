@@ -18,7 +18,7 @@ It is possible to add object, array collection in the Ribbon control with angula
 
 Ribbon Tabs and Contextual Tabs are Array Collections and the inner tag is used for them.
 
-Objects with in these Array Collections can be extended by using hyphen. E.g. `e-applicationtab-menuItemid="ribbonmenu"`
+Objects with in these Array Collections can be extended by using hyphen. E.g. `e-applicationtab-menuitemid="menu"`
 
 {% highlight CSHTML %}
 
