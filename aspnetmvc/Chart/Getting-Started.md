@@ -53,7 +53,7 @@ Getting started with your MVC Chart is very easy. You can start by creating a si
    ~~~
    
 
-The above code example renders a Chart with the default Columnseries type and some random values assigned to the column series. 
+The above code example renders a Chart with the default Column series type and some random values assigned to the column series. 
 
 The following screenshot displays the Chart.
 
@@ -345,7 +345,7 @@ In the Chart when JSON is added, the axes are provided explicitly and the Chart 
 
 You can use PrimaryXAxis and PrimaryYAxis options to initialize the axes. As the data contains string values along x-axis, you can set ValueType as category for PrimaryXAxis and double for PrimaryYAxis. 
 
-Since the values are in Farenheit for Temperature and Inches for Precipetation, you need to initialize different axis instance for each unit. You can use “LabelFormat” option to add suffix for axis labels.
+Since the values are in Fahrenheit for Temperature and Inches for Precipitation, you need to initialize different axis instance for each unit. You can use “LabelFormat” option to add suffix for axis labels.
 
 In order to add additional Axes to the Chart other than PrimaryXAxis and PrimaryYAxis, you need to initialize axes option with collection of axis and set Name for axis in the Axes collection.
 
@@ -510,7 +510,7 @@ Chart with Labels
 
 ### Enable Tooltip
 
-To display the tooltip of Chart series, you can enable the “Visible” property of “Tooltip” in the specific series. By default, it displays XandY value of points on mouse over the points. The following code example shows how to enable Tooltip.
+To display the tooltip of Chart series, you can enable the “Visible” property of “Tooltip” in the specific series. By default, it displays X and Y value of points on mouse over the points. The following code example shows how to enable Tooltip.
 
 
 

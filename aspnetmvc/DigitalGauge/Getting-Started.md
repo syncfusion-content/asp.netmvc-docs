@@ -23,7 +23,7 @@ Digital Thermometer
 
 ASP.NET MVC Digital Gauge widget basically renders with flexible APIs. You can easily create the Digital Gauge widget by using the following steps.
 
-1. First create an MVC Project and add necessary Dlls and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/digitalgauge/getting-started) Documentation.
+1. First create an MVC Project and add necessary Dll's and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/digitalgauge/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render Digital Gauge.
 
    ~~~ cshtml
