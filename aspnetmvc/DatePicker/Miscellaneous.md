@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Miscellaneous
-description: Configure start day of week, step month, and enable/disable
+description: Configure start day of week, step month, and enabled/disabled state of DatePicker
 platform: ejmvc
 control: DatePicker
 documentation: ug
@@ -17,9 +17,9 @@ Refer below code to start Wednesday as start day.
 
 {% highlight cshtml %}
 
-    @*sets start day as Wednesday in calendar*@
+        @*sets start day as Wednesday in calendar*@
 
-    @Html.EJ().DatePicker("datepick").StartDay(3)
+        @Html.EJ().DatePicker("datepick").StartDay(3)
 
 {% endhighlight %}
 
@@ -31,9 +31,9 @@ The EJMVC DatePicker calendar allows you to quick navigate back and forth from o
 
 {% highlight cshtml %}
 
-    @*skips the one months from current month(July to Sept to Nov)*@
+        @*skips the one months from current month(July to Sept to Nov)*@
 
-    @Html.EJ().DatePicker("datepick").StepMonths(2)
+        @Html.EJ().DatePicker("datepick").StepMonths(2)
 
 
 {% endhighlight %}
@@ -46,9 +46,9 @@ You can make EJMVC DatePicker as read only by setting [ReadOnly](http://help.syn
 
 {% highlight cshtml %}
 
-    @*sets DatePicker as read only*@
+        @*sets DatePicker as read only*@
 
-    @Html.EJ().DatePicker("datepick").ReadOnly(true)
+        @Html.EJ().DatePicker("datepick").ReadOnly(true)
 
 {% endhighlight %}
 
@@ -60,10 +60,10 @@ You can enable or disable the EJMVC DatePicker textbox by using [Enabled](http:/
 
 {% highlight cshtml %}
 
-    @*disables the DatePicker textbox*@
+        @*disables the DatePicker textbox*@
 
-    @Html.EJ().DatePicker("datepick").Enabled(false)
- 
+        @Html.EJ().DatePicker("datepick").Enabled(false)
+    
 
 {% endhighlight %}
 
