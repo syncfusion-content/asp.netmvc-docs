@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence
-description: DatePicker - State persistence properties 
+description: DatePicker - State persistence support 
 platform: ejmvc
 control: DatePicker
 documentation: ug

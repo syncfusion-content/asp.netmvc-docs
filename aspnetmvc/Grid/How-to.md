@@ -1378,3 +1378,188 @@ The following output is displayed as a result of the above code example.
 ![](How-to_images/ExternalSearching_img1.jpeg)
 
 
+#  Configure Grid through Grid Model properties
+    
+There comes a time when you want to set Grid properties other than using Grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to Grid Helper.
+
+We can set Grid properties in server-side using  `GridProperties`  class and use it in view page using Grid Helper overload.
+
+In addition to `id` parameter of Grid helper we can also pass `GridProperties` Model as another parameter to Grid helper. 
+
+The following code example shows you how to set Grid properties such as `AllowPaging`, `DataSource` and `Columns` in Controller using `GridProperties` class.
+
+{% tabs %}   
+{% highlight razor %}
+    
+        @model Syncfusion.JavaScript.Models.GridProperties
+        @(Html.EJ().Grid<object>("FlatGrid",Model))          
+      
+      
+{% endhighlight  %}
+{% highlight c# %}
+
+        namespace EJGrid.Controllers
+         {
+         public class HomeController : Controller
+          {
+         public ActionResult Index()
+          {            
+            List<Column> cols = new List<Column>();
+            cols.Add(new Column() { Field = "OrderID" });
+            cols.Add(new Column() { Field = "EmployeeID" });
+            cols.Add(new Column() { Field = "ShipCity" });
+            cols.Add(new Column() { Field = "ShipCountry" });
+            cols.Add(new Column() { Field = "Freight" });
+
+            GridProperties prop = new GridProperties();
+            prop.DataSource = OrderRepository.GetAllRecords();
+            prop.Columns = cols;
+            prop.AllowPaging = true;
+            return View(prop);
+          }
+         }
+        }
+{% endhighlight  %}
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](How-to_images/Configure Grid through Grid Model properties_img1.png)
+
+#  Work with partial views
+
+The Grid can be rendered in either `Unobtrusive` or `Non-unobtrusive` mode.
+       
+In unobtrusive mode, to load grid from partial view via AJAX, in the success callback, the partial view should be parsed using `ej.widget.init` method.  
+
+ N> The `ej.widget.init` method is available in `ej.unobtrusive.min.js` file.
+    
+ N> If  `InitUnobtrusiveInScriptManager`  key is set in appSettings of web config then the `Html.EJ().ScriptManager()` should be placed in the partial view.
+
+ The following code example describes the above behavior.
+
+{% tabs %}   
+{% highlight razor %}
+
+           @(Html.EJ().Grid<OrdersView>("PartialGrid")
+                .Datasource((IEnumerable<OrdersView>)Model)
+                .AllowPaging()           
+                .Columns(col =>
+                 {
+                    col.Field(o => o.OrderID).HeaderText("Order ID").Width(70).TextAlign(TextAlign.Right).Add();
+                    col.Field(o => o.EmployeeID).HeaderText("Employee ID").Width(70).TextAlign(TextAlign.Right).Add();
+                    col.Field(o => o.CustomerID).HeaderText("Customer ID").Width(70).Add();
+                    col.Field(o => o.Freight).HeaderText("Freight").Width(70).TextAlign(TextAlign.Right).Add();
+                })
+             )
+{% endhighlight  %}
+{% highlight c# %}
+
+          namespace Grid.Controllers
+           {      
+            public class HomeController : Controller
+             {
+              public ActionResult Index()
+              {           
+               return View();
+              }
+              public ActionResult GetPartial()
+              {
+               var model = new NorthwindDataContext().OrdersViews.ToList();
+               return PartialView("_GridPartial", model);
+               }
+              }
+           }
+{% endhighlight  %}
+{% highlight html %}
+   
+         <div id="target"></div>
+{% endhighlight  %}
+{% highlight js %}     
+    
+        <script>
+          $(function(){      
+             $.ajax({
+                 url:'@Url.Action("GetPartial")',
+                 success: function(doc){                
+                 $("#target").html(doc);
+                 ej.widget.init($("#target"));
+                }
+             });
+          });
+       </script>
+{% endhighlight  %}
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](How-to_images/Work with partial views_img1.png)
+
+
+In non-unobtrusive mode, to load grid from partial view via AJAX, the `ScriptManager` Html helper should be placed at the bottom of the partial view.
+
+N> The `Html.EJ().ScriptManager()` which is placed in the Layout page will not initiate control rendering in partial view hence every partial view should have their own `ScriptManager`.
+
+The following code example describes the above behavior.
+
+{% tabs %}   
+{% highlight razor %}
+
+           @(Html.EJ().Grid<OrdersView>("PartialGrid")
+                .Datasource((IEnumerable<OrdersView>)Model)
+                .AllowPaging()           
+                .Columns(col =>
+                 {
+                    col.Field(o => o.OrderID).HeaderText("Order ID").Width(70).TextAlign(TextAlign.Right).Add();
+                    col.Field(o => o.EmployeeID).HeaderText("Employee ID").Width(70).TextAlign(TextAlign.Right).Add();
+                    col.Field(o => o.CustomerID).HeaderText("Customer ID").Width(70).Add();
+                    col.Field(o => o.Freight).HeaderText("Freight").Width(70).TextAlign(TextAlign.Right).Add();
+                })
+            )
+           @(Html.EJ().ScriptManager())
+{% endhighlight  %}
+{% highlight c# %}
+
+        namespace Grid.Controllers
+        {      
+         public class HomeController : Controller
+         {
+          public ActionResult Index()
+           {           
+            return View();
+           }
+           public ActionResult GetPartial()
+           {
+            var model = new NorthwindDataContext().OrdersViews.ToList();
+            return PartialView("_GridPartial", model);
+          }
+         }
+        }
+{% endhighlight  %}
+{% highlight html %}
+   
+          <div id="target"></div>
+ {% endhighlight  %}
+{% highlight js %}     
+    
+            <script>
+                 $(function(){      
+                 $.ajax({
+                 url:'@Url.Action("GetPartial")',
+                success: function(doc){                
+                 $("#target").html(doc);
+                 }
+               });
+            });
+           </script>     
+{% endhighlight  %}
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](How-to_images/Work with partial views_img2.png)
+
+See Also
+
+For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
+

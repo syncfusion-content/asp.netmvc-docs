@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and Localization
-description: Globalize formatting and Localize strings in DatePicker  
+description: Globalize formatting and Localize strings with DatePicker  
 platform: ejmvc
 control: DatePicker
 documentation: ug
