@@ -1,156 +1,185 @@
 ---
 layout: post
-title: Display Format | DatePicker | ASP.NET MVC | Syncfusion
-description: display format
+title: Display Format
+description: Formatting - Date and Time, Headers.
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
+# Formatting
 
-# Display Format
+Formatting is the way of displaying the date or number as string in some standard format which is based on culture specific or user need.
+
+Below table shows the patterns to format date value.
+
+<table>
+<tr>
+<th>
+Format Pattern </th><th>
+Description </th><th>
+Result</th></tr>
+<tr>
+<td>
+d<br/><br/></td><td>
+The day of the month between 1 and 31 <br/><br/></td><td>
+"1"  to "31"<br/><br/></td></tr>
+<tr>
+<td>
+dd<br/><br/></td><td>
+The day of the month with leading zero if required.<br/><br/></td><td>
+"01" to "31"<br/><br/></td></tr>
+<tr>
+<td>
+ddd<br/><br/></td><td>
+Abbreviated day name.<br/><br/></td><td>
+"Mon" to "Sun"<br/><br/></td></tr>
+<tr>
+<td>
+dddd<br/><br/></td><td>
+The full day name<br/><br/></td><td>
+"Monday" to "Sunday"<br/><br/></td></tr>
+<tr>
+<td>
+<br/><br/></td><td>
+<br/><br/></td><td>
+<br/><br/></td></tr>
+<tr>
+<td>
+M<br/><br/></td><td>
+The month of the year between 1 - 12<br/><br/></td><td>
+"1" to "12"<br/><br/></td></tr>
+<tr>
+<td>
+MM<br/><br/></td><td>
+The month of the year with leading zero if required<br/><br/></td><td>
+"01" to "12"<br/><br/></td></tr>
+<tr>
+<td>
+MMM<br/><br/></td><td>
+Abbreviated month name<br/><br/></td><td>
+"Jan" to "Dec"<br/><br/></td></tr>
+<tr>
+<td>
+MMMM<br/><br/></td><td>
+The full month name<br/><br/></td><td>
+"January" to "December"<br/><br/></td></tr>
+<tr>
+<td>
+<br/><br/></td><td>
+<br/><br/></td><td>
+<br/><br/></td></tr>
+<tr>
+<td>
+yy<br/><br/></td><td>
+The year as a two-digit number<br/><br/></td><td>
+"99" or "08"<br/><br/></td></tr>
+<tr>
+<td>
+yyyy<br/><br/></td><td>
+The full four digit year<br/><br/></td><td>
+"1999" or "2008"<br/><br/></td></tr>
+</table>
 
 ## Date Format
 
-DateFormat defines a format or structure of the displayed date in the textbox. You can change the Date Format by using “DateFormat” property.
+Each culture has some specific date format. Date format defines a format or structure of the displayed date in the textbox of EJMVC DatePicker component. You can change the date format by using [DateFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:dateformat) property
 
-The standard formats are listed as follows,
-
-_Date format_
+The standard formats are listed as follows
 
 <table>
 <tr>
 <th>
-Format Name</th><th>
-   Formats</th></tr>
+Format Name <br/><br/></th><th>
+Formats <br/><br/></th></tr>
 <tr>
 <td>
-Default</td><td>
-MM/dd/yyyy</td></tr>
+Default<br/><br/></td><td>
+"M/d/yyyy"<br/><br/></td></tr>
 <tr>
 <td>
-Short</td><td>
- d M, y</td></tr>
+Short<br/><br/></td><td>
+d, M, y<br/><br/></td></tr>
 <tr>
 <td>
-Medium</td><td>
-d MM, y</td></tr>
+Medium <br/><br/></td><td>
+d MM, y<br/><br/></td></tr>
 <tr>
 <td>
-Full</td><td>
-dddd,MMMM,yy</td></tr>
+Full <br/><br/></td><td>
+dddd, MMMM, yy<br/><br/></td></tr>
 <tr>
 <td>
-UTC</td><td>
-yyyy-MM-dd</td></tr>
+UTC<br/><br/></td><td>
+yyyy-MM-dd<br/><br/></td></tr>
 </table>
+By default **en-US** culture Date format is "M/d/yyyy".
 
 
-You can display the date value depending on culture using above specified DateFormat.
+{% highlight cshtml %}
 
-The following steps explain you how to set the date format as "d MM, y".
+    @*sets en-US culture with specified date format*@
 
-1. In the CSHTML page, add the following code to render the DatePicker widget with DateFormat.
+    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
 
-   ~~~ cshtml
+{% endhighlight %}
 
-	@*Add the following code example to the corresponding CSHTML page to get the date format as "d MM, y" in DatePicker widget*@
+To get the culture and date format of DatePicker, refer the below code example
 
-	@Html.EJ().DatePicker("datePicker").DateFormat("d MM, y")
 
-   ~~~
+{% highlight js %}
+
+        // create instance for datePicker
+
+        // only after control creation we can get dateObj otherwise it throws exception
+
+        var dateObj = $("#datePicker").ejDatePicker('instance');
+
+        dateObj.option('locale'); //returns the culture in string
+
+        dateObj.option('dateFormat');// returns the date Format in string  
+
+{% endhighlight %}
+
+
+N> by default date format is based on culture specific. You have to refer the required culture specific files in layout page of your web application in order to localize DatePicker and customize different format for that culture. 
+
+
+## Header Format
+
+EJMVC DatePicker calendar consists of header, day header, days and footer section. In which header section shows the current view of DatePicker calendar by displaying the selected day or month or year. It can be formatted as like date format by using [HeaderFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:headerformat) property.
+
+{% highlight cshtml %}
+
+    @*sets the selected header format to display in header*@
+
+    @Html.EJ().DatePicker("datepick").HeaderFormat("yyyy MMMM")
+
+
+{% endhighlight %}
+
+## Day Header
+
+Day header determines the days name to be displayed in terms of short, medium and long in EJMVC DatePicker calendar by using [DayHeaderFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:dayheaderformat) property. Also the DatePicker calendar size varies with this specified values.
+
+{% highlight cshtml %}
+
+    @*sets the day header as long*@
+
+    @Html.EJ().DatePicker("datepick").DayHeaderFormat(Header.Long)
+
+
+{% endhighlight %}
+
+## Tooltip with Formatting
+
+The EJMVC DatePicker calendar shows tooltip on hovering the date by specifying the formatted date of hovered date. Its helps you to get clear view about the date going to select. You can show or hide this tooltip option by using [ShowTooltip](http://help.syncfusion.com/js/api/ejdatepicker#members:showtooltip ) property.
+
+You can also change the format of tooltip by using [TooltipFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:tooltipformat) property. Below codes example allows to show tooltip and format its value. 
+
+{% highlight cshtml %}
    
+    @*sets and shows tooltip on hovering date on calendar*@
 
-
-2.  The following screenshot displays the output for the above code.
-
-
-
-![](Display-Format_images/Display-Format_img1.png)
-
-DateFormat in DatePicker 
-{:.caption}
-
-## Day header format
-
-It specifies the header format of days in short, long or min types. You can set the DatePickerdayheader format by using “DayHeaderFormat” property. By default “DayHeaderFormat” property is set as “ShowHeaderMin” in DatePicker widget. 
-
-Enum for DatePicker startLevel and depthLevel
-
-<table>
-<tr>
-<th>
-Day header</th><th>
-Description</th></tr>
-<tr>
-<td>
-ShowHeaderShort</td><td>
-It shows the day header format in short</td></tr>
-<tr>
-<td>
-ShowHeaderMin</td><td>
-It shows the header format in min</td></tr>
-<tr>
-<td>
-ShowHeaderLong</td><td>
-It shows the day header format in long</td></tr>
-<tr>
-<td>
-ShowHeaderNone</td><td>
-Removes the day header</td></tr>
-</table>
-
-
-The following steps explain you how to get the DayHeaderFormat for DatePicker widget.
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with DayHeaderFormat.
-
-
-   ~~~ cshtml
-   
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized DayHeaderFormat.*@
-
-	@Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.ShowHeaderLong)
-
-   ~~~
-  
-
-
-
-2.  The following screenshot displays the output for the above code.
-
-
-
-![](Display-Format_images/Display-Format_img2.png)
-
-Header Format in DatePicker
-{:.caption}
-
-## Header format
-
-It specifies the Header format to be displayed in the pop up of DatePicker. The header in the DatePicker popup is displayed in the specified format. By default “DayHeaderFormat” property is set as “MMMM yyyy” in DatePicker widget. 
-
-The following steps explain you how to the header format to be displayed in the pop up of DatePicker.
-
-
-
-1. In the CSHTML page, add the following code to render the DatePicker widget with header format.
-
-
-   ~~~ cshtml
-   
-	@*Add the following code example to the corresponding CSHTML page to render DatePicker widget with customized header format*@
-
-	@Html.EJ().DatePicker("datePicker").HeaderFormat("MMMM/yy")
-
-   ~~~
-  
-
-
-2. The following screenshot displays the output for the above code.
-
-
-
-![](Display-Format_images/Display-Format_img3.png)
-
-Header Format in DatePicker
-{:.caption}
+    @Html.EJ().DatePicker("datepick").ShowTooltip(true).TooltipFormat("dd/MM/yy")
+       
+{% endhighlight %}
