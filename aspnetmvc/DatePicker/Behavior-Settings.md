@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Behaviour Settings
-description: Configure DatePicker Behaviour settings
+description: Configure the DatePicker behavior settings
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
-# Behaviour Settings
+# Behavior Settings
 
-The Essential ASP.NET MVC DatePicker has some default behaviour settings which helps to perform more operation by inbuilt.
+The Essential ASP.NET MVC DatePicker has some default behavior settings which helps to perform more operation by built-in.
 
 ## Selected Date
 
@@ -38,7 +38,7 @@ N> You can change the **MinDate** and **MaxDate** value dynamically like **Value
 
 ## Start and Depth Level
 
-Start and depth represents the view of Essential ASP.NET MVC DatePicker calendar. DatePicker calendar has four different level of views, which are month, year, decade and century. It allows you to quick pick date from different months and years by drilling down or up.
+Start and depth represents the view of Essential ASP.NET MVC DatePicker calendar. DatePicker calendar has four different level of views, which are month, year, decade and century. It allows you to quick pick date from different months and years by navigating through different views.
 
 By default DatePicker starts with month view and can be drill down into year, decade and century. You can also change the start and depth level view by using [StartLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:startlevel) and [DepthLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:depthlevel) property. So that you can initiate DatePicker calendar to view at any level and control the navigation.
 
@@ -49,8 +49,8 @@ By default DatePicker starts with month view and can be drill down into year, de
 
 {% highlight cshtml %}
 
-    @*sets the start view and defines when the DatePicker calendar to return date*@
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).StartLevel(Period.Year).DepthLevel(Period.Year).DateFormat("MMMM yyyy")
+        @*sets the start view and defines when the DatePicker calendar to return date*@
+        @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).StartLevel(Period.Year).DepthLevel(Period.Year).DateFormat("MMMM yyyy")
 
 {% endhighlight %}
 

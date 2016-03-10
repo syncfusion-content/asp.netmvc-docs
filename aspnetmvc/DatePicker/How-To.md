@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How-to
-description: How-to section
+description: How-to section - The frequently used options with DatePicker 
 platform: ejmvc
 control: DatePicker
 documentation: ug

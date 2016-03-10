@@ -1,14 +1,14 @@
 ---
 layout: post
 title: DatePicker Customization
-description: DatePicker customization such as dimension, highlight dates, other months, etc.
+description: DatePicker customization options such as dimension, highlight dates, other months, etc.
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
 # Customization
 
-The Essential ASP.NET MVC DatePicker provides more flexible way to customize the below listed properties.
+EJMVC DatePicker appearance can be customized using below listed properties. 
 
 ## Set Dimension 
 
@@ -17,22 +17,22 @@ By default DatePicker has standard height and width (height: "30" and width: "14
 
 {% highlight cshtml %}
 
-    @*sets height and width of the datepicker control*@
+        @*sets height and width of the datepicker control*@
 
-    @Html.EJ().DatePicker("datepick").Height("50px").Width("300px")
+        @Html.EJ().DatePicker("datepick").Height("50px").Width("300px")
 
 
 {% endhighlight %}
 
 
-Mostly dimension plays a vital role in web page to get responsive layout in all devices. DatePicker is a form control and you can make it as responsive by specifying its width as **100%**.
+Since EJMVC DatePicker is a form control and you can make it as responsive by specifying its width as **100%**.
 
 
 {% highlight cshtml %}
 
-    @*sets width as 100 percentage*@
+        @*sets width as 100 percentage*@
 
-    @Html.EJ().DatePicker("datepick").Width("100%")
+        @Html.EJ().DatePicker("datepick").Width("100%")
 
 
 {% endhighlight %}
@@ -84,7 +84,7 @@ You can show or hide the other month days from EJMVC DatePicker calendar by usin
 
 ## Highlight Special Date
 
-The Essential ASP.NET MVC DatePicker allows you to highlight the special dates in EJMVC DatePicker calendar by using [SpecialDates](http://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) property. It receives the List of dataSpecial date fields such as, in which the data should contain the date value, icon CSS class and tooltip as field values with any names.
+The Essential ASP.NET MVC DatePicker allows you to highlight the special dates in EJMVC DatePicker calendar by using [SpecialDates](http://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) property. It receives the list of "dataSpecial" date fields such as, in which the data should contain the date value, icon CSS class and tooltip as field values with any names.
 
 Special Date property has following properties,
 
