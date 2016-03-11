@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Getting started with DatePicker
-description: To get start with DatePicker by adding references.
+description: To get start with DatePicker with required assemblies,files
 platform: ejmvc
 control: DatePicker
 documentation: ug
 ---
 # Getting Started
 
-## A new MVC Application and required dll’s with dependent files
+## A new MVC application and required assemblies with dependent files
 
-To get start with Essential ASP.NET MVC DatePicker, create a new  MVC Application and add the required DLL’s in references and then refer the below specified dependent CSS file as well as scripts
+To get start with Essential ASP.NET MVC DatePicker, create a new  MVC application and add the required assemblies in references and then refer the below specified dependent CSS file as well as scripts
 
-To create a MVC Project and add necessary Dll’s you can use the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
+To create a MVC project and add necessary assemblies you can use the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
 
 CSS file
 
@@ -29,7 +29,7 @@ Internal script files
 <table>
 <tr>
 <th>
-FileÂ </th><th>
+File</th><th>
 Description / Usage </th></tr>
 <tr>
 <td>
@@ -59,12 +59,11 @@ Below is a simple Layout CSHTML file with required CSS and script reference adde
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
        
-    <link rel="stylesheet" href="http://cdn.syncfusion.com/13.4.0.53/js/web/flat-azure/ej.web.all.min.css" />
+    <link rel="stylesheet" href="http://cdn.syncfusion.com/13.4.0.63/js/web/flat-azure/ej.web.all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
-    <script src="http://cdn.syncfusion.com/13.4.0.53/js/web/ej.web.all.min.js"> </script>
-    <script src="http://cdn.syncfusion.com/13.4.0.53/js/common/ej.unobtrusive.min.js"></script>
+    <script src="http://cdn.syncfusion.com/13.4.0.63/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/13.4.0.63/js/common/ej.unobtrusive.min.js"></script>
 
     </head>
     
@@ -142,7 +141,7 @@ You can handle the all available client side events in Essential JavaScript Date
 
 ## Strongly Typed Html Helper
 
-EJMVC DatePicker can be created using DatePickerFor extension, which behaves as strongly typed html helper. This reduce the run time issues while using model values in DatePickerFor , since it will find the issues if any in compilation time itself. Also, to know about the setting model properties to DatePickerFor Control, please refer the link: 
+EJMVC DatePicker can be created using DatePickerFor extension, which behaves as strongly typed html helper. This reduce the run time issues while using model values in DatePickerFor , since it will find the issues if any in compilation time itself. Also, to know about the setting model properties to DatePickerFor control, please refer the link: 
 
   [https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls](https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls)
 

@@ -1,127 +1,538 @@
 ---
 layout: post
-title: Data Adaptors | Grid | ASP.NET MVC | Syncfusion
-description: data adaptors
+title: data-Adaptor with Grid widget for Syncfusion Essential MVC
+description: How to enable data-Adaptor and its functionalities
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
+#  Data Adaptors
 
-# Data Adaptors
+The Data Adaptor is a mechanism through which the `DataManager` interact with the remote service or local dataSource. The `DataManager` has several preconfigured Data Adaptors, refer to the [link](http://help.syncfusion.com/aspnetmvc/datamanager/data-Adaptors).
+   
+In Grid, the Adaptor can be specified using the `Adaptor` property of the `DataSource` builder.
+ 
+ 
+N> For the `Adaptor` builder, you can assign Adaptor name either as `string` value (”JsonAdaptor”) or Enum value as `AdaptorType.JsonAdaptor`.
+ 
+ 
+ ##  Json Adaptor
 
-DataManager consists of three concepts, commonly called as adaptors, that are used to manipulate data. There are two types of adaptors in DataManager. They are
+The Json Adaptor is used when the grid is bound with local datasource. It can be enabled in Grid using `Adaptor` property as `AdaptorType.JsonAdaptor`. The `JsonAdaptor` is the default Adaptor used by `DataManager` when bind with local dataSource such as IEnumerabe, DataTable etc.  
 
-* OData Adaptor
-* Cache Adaptor
+ The following code example describes the above behavior.
+ 
+{% tabs %}  
+{% highlight razor %} 
 
-## OData Adaptor
+          @(Html.EJ().Grid<Person>("Grid")
+                .Datasource(ds => ds.Json((IEnumerable<Person>)ViewBag.datasource).Adaptor(AdaptorType.JsonAdaptor))
+                .Columns(col =>
+                {
+                    col.Field(p => p.FirstName).HeaderText("First Name").TextAlign(TextAlign.Left).Add();
+                    col.Field(p => p.LastName).HeaderText("Last Name").TextAlign(TextAlign.Left).Add();
+                    col.Field(p => p.Email).HeaderText("Email").TextAlign(TextAlign.Left).Add();
+                 })
+              )
+{% endhighlight  %}
+{% highlight c# %}
+    
+          namespace Grid.Controllers
+           {    
+           public class HomeController : Controller
+            {        
+          public ActionResult Index()
+             {
+               List<Person> Persons = new List<Person>();
+               Persons.Add(new Person() { FirstName = "John", LastName = "Beckett", Email = "john@syncfusion.com" });
+               Persons.Add(new Person() { FirstName = "Ben", LastName = "Beckett", Email = "ben@syncfusion.com" });
+               Persons.Add(new Person() { FirstName = "Andrew", LastName = "Beckett", Email = "andrew@syncfusion.com" });
+               ViewBag.datasource = Persons;
+               return View();
+              }
+            }
+          }
+{% endhighlight  %}
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+ ![](Data-Adaptors_images/Data-Adaptor_img1.png)
+   
+##  Url Adaptor
+
+The Url Adaptor is the base Adaptor that would interact with remote services. It can be enabled in Grid using `Adaptor` property of `DataSource` as `AdaptorType.UrlAdaptor`. For every operations, an AJAX post will be send to the specified data service. 
+    
+N> When using `UrlAdaptor`, grid actions such as `Paging, Filtering` and `Sorting` should be handled at the server side itself. We have `DataOperation` class to do these server side operations. Please refer to the kb [link](https://www.syncfusion.com/kb/4300).
 
 
-Now a days oData is a very useful technique in consuming data. You can use oData protocol through DataManager’s ODataadaptor. The following code example demonstrates how you can use oDataadaptor with Grid.
+The following code example describes the above behavior.
 
+{% tabs %}  
+{% highlight razor %} 
 
-{% highlight CSHTML %}
+         @(Html.EJ().Grid<OrdersView>("Grid")
+                    .Datasource(ds => ds.URL(@Url.Action("DataSource"))                               
+                    .Adaptor(AdaptorType.UrlAdaptor))
+                    .AllowPaging()
+                    .Columns(col =>
+                     {
+                            col.Field(p => p.OrderID).HeaderText("Order ID").Add();
+                            col.Field(p => p.CustomerID).HeaderText("Customer ID").TextAlign(TextAlign.Left).Add();
+                            col.Field(p => p.EmployeeID).HeaderText("Employee ID").Add();
+                            col.Field(p => p.Freight).HeaderText("Freight").Format("{0:C2}").Add();
+                  })
+            )
+{% endhighlight  %}
+{% highlight c# %}
+        
+     namespace Grid.Controllers
+     {
+       using Syncfusion.JavaScript;
+       using Syncfusion.JavaScript.DataSources;    
+       public class HomeController : Controller
+        {
+        public IEnumerable OrderData = new NorthwindDataContext().OrdersViews.ToList();
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult DataSource(DataManager dm) 
+        {
+            IEnumerable data = OrderData;
+            DataOperations operation = new DataOperations();
+            if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+            {
+                data= operation.PerformSorting(data, dm.Sorted);
+            }            
+            if (dm.Where != null && dm.Where.Count > 0) //Filtering
+            {
+                data= operation.PerformWhereFilter(data, dm.Where, dm.Where[0].Operator);
+            }            
+            int count = data.Cast<OrdersView>().Count();
+            if (dm.Skip != 0)
+            {
+                data= operation.PerformSkip(data, dm.Skip);
+            }            
+            if (dm.Take != 0)
+            {
+                data= operation.PerformTake(data, dm.Take);
+            }
+            return Json(new { result = data, count = count });
+          }
+        }
+      }
+{% endhighlight  %}
+{% endtabs %} 
 
-@(Html.EJ().Grid<object>("Grid")
+ I> 1. The response from server should be wrapped in an object with properties named `result` to hold the data and `count` to hold the total records count.
+ 
+ I> 2. The `count` must be returned along with response when paging is enabled in Grid.
+ 
+ The following output is displayed as a result of the above code example.
+ 
+ ![](Data-Adaptors_images/Data-Adaptor_img2.png)
+ 
+ 
+ ##  OData Adaptor
+ 
+OData Adaptor that is extended from `UrlAdaptor`, is used for consuming data through OData Service. 
+  
+We have an online OData Service http://mvc.syncfusion.com/Services/Northwnd.svc/Orders created specifically for Syncfusion Controls
 
-	.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Products")
+Note: `ODataAdaptor` is the default Adaptor of `DataManager` and so no need to specify Adaptor when binding OData service
 
-	.Columns(col =>
+You can use the following code example to use OData Adaptor.
 
-	{
+{% tabs %}  
+{% highlight razor %} 
 
-		col.Field("ProductID").HeaderText("Product ID").TextAlign(TextAlign.Right).Add();
+        @(Html.EJ().Grid<object>("FlatGrid")
+                   .Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders").Adaptor(AdaptorType.ODataAdaptor))   
+                   .AllowPaging()
+                   .Columns(col =>
+                   {
+                         col.Field("OrderID").Add();
+                         col.Field("EmployeeID").Add();
+                         col.Field("CustomerID").Add();
+                         col.Field("ShipCountry").Add();
+                         col.Field("Freight").Add();
+                  })
+                )
+{% endhighlight  %}
+{% endtabs %} 
 
-		col.Field("ProductName").HeaderText("Product Name").Add();
+The following output is displayed as a result of the above code example.
 
-		col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Add();
+ ![](Data-Adaptors_images/Data-Adaptor_img3.png)
 
-		col.Field("UnitPrice").HeaderText("Unit Price").TextAlign(TextAlign.Right).Add();
+##  ODataV4 Adaptor
 
+ODataV4 Adaptor that is extended from `ODataAdaptor`, is used for consuming data from ODataV4 Service
+       
+To consume ODataV4 service, set the service link to the `Url` property of Grid `DataSource` and you can set Adaptor type as `AdaptorType.ODataV4Adaptor` to the `Adaptor` Property of Grid `DataSource`
 
+You can use the following code example to use ODataV4 Adaptor.
 
-	})
+{% tabs %}  
+{% highlight razor %} 
 
- )
-
-
+        @(Html.EJ().Grid<object>("FlatGrid")
+                   .Datasource(ds => ds.URL("http://services.odata.org/v4/northwind/northwind.svc/Orders").Adaptor(AdaptorType.ODataV4Adaptor))
+                   .AllowPaging()
+                   .Columns(col =>
+                   {
+                     col.Field("OrderID").Add();
+                     col.Field("EmployeeID").Add();
+                     col.Field("CustomerID").Add();
+                     col.Field("ShipCountry").Add();
+                     col.Field("Freight").Add();
+                 })
+            )
 
 {% endhighlight  %}
+{% endtabs %} 
 
-The following screenshot is the result of the above code example.
+The following output is displayed as a result of the above code example.
 
-
-
-![](Data-Adaptors_images/Data-Adaptors_img1.png)
-
-OData Adaptor
-{:.caption}
+ ![](Data-Adaptors_images/Data-Adaptor_img4.png)
 
 
-## Cache Adaptor
+##  WebAPI Adaptor
 
-Cache Adaptor is a technique used to cache multiple page data by using the property enableCaching. You can provide the number of pages that is required to cache in single request using CachingPageSize property. It enables you to reduce multiple request to server. You can use any type of adaptor with multiple page caching by using cache adaptor. The following code illustrates how to create cache adaptor and use it with grid.
+WebAPI Adaptor that is extended from `ODataAdaptor`, is used for consuming data from WebAPI Service
 
-{% tabs %}
+To consume Web API service, set the service link to the `Url` property of Grid `DataSource` and you can set Adaptor type as `AdaptorType.WebApiAdaptor` to the `Adaptor` Property of Grid `DataSource`.
 
+You can use the following code example to use WebAPI Adaptor.
 
-{% highlight CSHTML %}
+{% tabs %}  
+{% highlight razor %}
 
-@(Html.EJ().Grid<OrdersView>("CacheAdaptor")
+        @(Html.EJ().Grid<object>("FlatGrid")
+                   .Datasource(ds => ds.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
+                   .AllowPaging()
+                   .Columns(col =>
+                    {
+                       col.Field("OrderID").Add();
+                       col.Field("EmployeeID").Add();
+                       col.Field("CustomerID").Add();
+                       col.Field("ShipCountry").Add();
+                       col.Field("Freight").Add();
+                   })
+                )
+{% endhighlight  %}
+{% highlight c# %}
+        
+        namespace EJGrid.Controllers 
+        {
+          public class OrdersController: ApiController 
+           { 
+             // GET: api/Orders 
+             NORTHWNDEntities db = new NORTHWNDEntities(); 
+             public object Get() 
+              { 
+                 var queryString = HttpContext.Current.Request.QueryString; 
+                 int skip = Convert.ToInt32(queryString["$skip"]); 
+                 int take = Convert.ToInt32(queryString["$top"]); 
+                 var data = db.Orders.Skip(skip).Take(take).ToList(); 
+                 return new { Items = data.Skip(skip).Take(take), Count = data.Count() }; 
+              } 
+            } 
+         }
+{% endhighlight  %}
+{% endtabs %} 
 
-  .Datasource(ds =>         ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/")
+The following output is displayed as a result of the above code example.
 
-  .EnableCaching().CachingPageSize(10).TimeTillExpiration(120000))
+ ![](Data-Adaptors_images/Data-Adaptor_img5.png)
 
-   .Columns(col =>
+##  RemoteSave Adaptor
 
-	{
+Sometimes you may need to perform all Grid Actions in client-side except the CRUD operations that should be interacted with server-side to persist data. It can be achieved in Grid by using `RemoteSaveAdaptor`.
 
-	   col.Field("OrderID").HeaderText("OrderID").TextAlign(TextAlign.Right).Add();
+Datasource must be set to `Json` Property and set Adaptor type as `AdaptorType.WebApiAdaptor` to the `Adaptor` Property of Grid `DataSource`. CRUD operations can be mapped to server-side using `UpdateUrl`, `InsertUrl`, `RemoveUrl`, `BatchUrl`, `CrudUrl` properties.
 
-	   col.Field("CustomerID").HeaderText("Customer ID").Add();
+You can use the following code example to use RemoteSaveAdaptor.
 
-	   col.Field("EmployeeID.TextAlign(TextAlign.Right).Add();
+{% tabs %}  
+{% highlight razor %}
 
-		col.Field("Freight.TextAlign(TextAlign.Right).Add();
-
-		col.Field("ShipCity").HeaderText("Ship City"). Add();
-
-		col.Field("OrderDate").TextAlign(TextAlign.Right).Add();
-
-	})
-
-)
-
-
+        @(Html.EJ().Grid<object>("FlatGrid")
+                   .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                   .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
+                   .AllowPaging()
+                   .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+                   .ToolbarSettings(toolbar =>
+                    {
+                   toolbar.ShowToolbar().ToolbarItems(items =>
+                      {
+                          items.AddTool(ToolBarItems.Add);
+                          items.AddTool(ToolBarItems.Edit);
+                          items.AddTool(ToolBarItems.Delete);
+                          items.AddTool(ToolBarItems.Update);
+                          items.AddTool(ToolBarItems.Cancel);
+                       });
+                 })
+                .Columns(col =>
+                 {
+                   col.Field("OrderID").IsPrimaryKey(true).Add();
+                   col.Field("EmployeeID").Add();
+                   col.Field("CustomerID").Add();
+                   col.Field("ShipCountry").Add();
+                   col.Field("Freight").Add();
+                })
+            )
 {% endhighlight  %}
 {% highlight c# %}
 
-
-public partial class GridController : Controller
-
-{
-
-	// GET: /UrlBinding/
-
-	public ActionResult CacheAdaptor()
-
-	{
-
-		return View();
-
-	}
-
-}
+        namespace EJGrid.Controllers
+          {
+             public class HomeController : Controller
+              {
+             public ActionResult Index()
+              {
+                var data = OrderRepository.GetAllRecords();
+                ViewBag.dataSource = data;
+                return View();
+              }
+             public ActionResult Update(EditableOrder value)
+              {
+                OrderRepository.Update(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+              }
+             public ActionResult Insert(EditableOrder value)
+              {
+                OrderRepository.Add(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+             }
+            public ActionResult Remove(int key)
+            {
+               OrderRepository.Delete(key);
+               var data = OrderRepository.GetAllRecords();
+               return Json(data, JsonRequestBehavior.AllowGet);
+            }
+         }
+      }
 
 {% endhighlight  %}
+{% endtabs %} 
 
+The following output is displayed as a result of the above code example.
+
+ ![](Data-Adaptors_images/Data-Adaptor_img6.png)
+
+On performing CRUD operations in Grid, the record changes will be sent to server-side as in the following screenshot.
+
+ ![](Data-Adaptors_images/Data-Adaptor_img7.png)
+
+
+##  Foreign Key Adaptor
+
+The Grid can have a look up column. The Foreign key column using `ForeignKeyField` has some limitations such as sort/group operations on column will happen based on `Field` instead of `ForeignKeyField`. The `ForeignKeyAdaptor` can be used to overcome this limitation.
+      
+ N> It works by specifying a virtual column (which is not in the grid datasource) in the Grid. This Adaptor should be initialized in the `Load` event of the grid. `ForeignKeyAdaptor` supported for only local data binding.
+
+The following code example describes the above behavior.      
+
+
+{% tabs %}  
+{% highlight razor %}
+
+        @(Html.EJ().Grid<OrdersView>("Grid")
+                   .Datasource((IEnumerable<OrdersView>)ViewBag.datasource)
+                   .AllowPaging()
+                   .AllowSorting()
+                   .Columns(col =>
+                  {
+                     col.Field(p => p.OrderID).HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+                     col.Field(p => p.CustomerID).HeaderText("Customer ID").Add();
+                     col.Field("FirstName").HeaderText("Name").Add();
+                     col.Field(p => p.Freight).HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C2}").Add();
+                  })
+               .ClientSideEvents(evt => evt.Load("onLoad"))
+           )
+{% endhighlight  %}
+{% highlight c# %}
+
+        namespace Grid.Controllers
+         {      
+          public class HomeController : Controller
+           {
+           public ActionResult Index()
+            {
+              ViewBag.datasource = new NorthwindDataContext().OrdersViews.ToList();
+              ViewBag.employeeData = new JavaScriptSerializer().Serialize(new NorthwindDataContext().EmployeeViews.ToList());
+              return View();
+            }
+          }
+        }
+ {% endhighlight  %}
+{% highlight js %}
+
+        <script>
+            var employeeData = @Html.Raw(ViewBag.employeeData);
+            function onLoad(args) {
+                 this.model.dataSource.Adaptor = new ej.ForeignKeyAdaptor([{ field: "EmployeeID", foreignKeyField: "EmployeeID", foreignKeyValue: "FirstName", dataSource: employeeData }], "JsonAdaptor");
+             }
+       </script>
+{% endhighlight  %}
+{% endtabs %}           
+
+ I> 1. The `Field` name of the virtual column should be the name of the field to display from foreign datasource.
+
+ I> 2. By default, the `ForeignKeyAdaptor` uses `JsonAdaptor`, to use other Adaptors specify the Adaptor name as the second argument during initialization.
+
+The following output is displayed as a result of the above code example.
+
+ ![](Data-Adaptors_images/Data-Adaptor_img8.png)
+
+##  Custom Adaptor         
+
+Instead of using the pre-configured Adaptors, the `DataManager` allow us to write our own data Adaptor.
+
+Please refer here for more details about creating custom Adaptor.
+
+The custom Adaptor should be assigned to the Grid `DataSource` in the `Load` event.
+
+For instance, though we have not provided in-built support to bind XML data, you can achieve by creating custom Adaptor as explained in below KB.
+ 
+https://www.syncfusion.com/kb/3375/how-to-process-xml-data-from-server-using-datamanager-and-bound-to-grid 
+
+N> To create a custom Adaptor for remote service, the `UrlAdaptor` can be used as base Adaptor. 
+
+#  DataAnnotation
+
+Data Annotations help us to define the rules to the model classes or properties for data validation and displaying suitable messages to end users.
+
+You can enable Data Annotation by binding the corresponding Class to Grid helper and thus data annotations attributes will be mapped to the corresponding Grid Column property.
+
+Please find the following list of annotation attributes that are supported in Grid Control.
+
+<table>
+  <tr>
+     <th>Attribute Name</th>
+     <th>Functioanlity in Grid</th>
+  </tr>
+  <tr>
+     <td>BindAttribute - Exlcude</td>
+     <td>To exclude the corresponding field from Grid Columns property in AutoGenerate Grid</td>
+  </tr>
+  <tr>
+     <td>DisplayName</td>
+     <td>It sets `HeaderText` property of Grid Column</td>
+  </tr>
+  <tr>
+     <td>ReadOnly</td>
+     <td>It sets `AllowEditing` for a particular column</td>
+  </tr>
+  <tr>
+     <td>Key</td>
+     <td>To Set `PrimaryKey` in Grid Columns</td>
+   </tr>
+   <tr>
+     <td>ScaffoldColumn</td>
+     <td>It sets `Visible` property of Grid Columns which is used to hide or show a Column in Grid</td>
+   </tr>
+   <tr>
+     <td>DisplayFormat - DataFormatString</td>
+     <td>To sets `Format` property of Grid Column that renders corresponding Grid Column data in respective format.</td>
+   </tr>
+   <tr>
+     <td>DatabaseGenerated(DatabaseGeneratedOption.Identity)</td>
+     <td>To set `isIdentity` Property of Grid Column</td></tr>
+   <tr>
+     <td>Validation
+       <ul>
+          <li>RequiredAttribute</li>
+          <li>StringLengthAttribute</li>
+          <li>RangeAttribute</li>
+          <li>RegularExpressionAttribute</li>
+          <li>MinLengthAttribute</li>
+          <li>MaxLengthAttribute</li>
+          <li>CompareAttribute</li>
+          <li>DataTypeAttribute</li>
+          <li>DataType.Custom</li>
+          <li>DataType.Date</li>
+          <li>DataType.DateTime</li>
+          <li>DataType.EmailAddress</li>
+          <li>DataType.ImageUrl</li>
+          <li>DataType.Url</li>
+          <li>Custom DataType </li>   
+      </ul>
+     </td>
+     <td>The data annotaion validations attribute would used as `validation rules` in Grid CRUD operations</td>
+   </tr>
+   <tr>
+   <td>ForeignKey</td>
+   <td>Set `ForeignKeyField` Property of Grid Column</td></tr>   
+</table>        
+
+
+N> Grid Properties has more priority than Data Annotation. For Instance, if `DisplayName` Attribute is set to a Field in Grid Model class and also we set different value to the respective Grid Columns property `HeaderText`, then the value of `HeaderText` property will be considered and shown in Grid header.
+
+The following code example shows how data annotation works in Grid Control.
+
+{% tabs %}  
+{% highlight razor %}
+
+             @model IEnumerable<EditableOrder>
+             @(Html.EJ().Grid<EditableOrder>("FlatGrid")
+                        .Datasource(Model)
+                        .AllowPaging()
+                  )
+{% endhighlight  %}
+{% highlight c# %}
+            
+        namespace EJGrid.Controllers
+         {
+         public class EditableOrder
+          {
+           [Display(Name = "Order ID")]
+           public int OrderID
+            {
+              get;
+              set;
+            }
+           [Display(Name = "Emp ID")]
+           public int? EmployeeID
+            {
+              get;
+              set;
+            }
+           [Display(Name = "Freight")]
+           public decimal? Freight
+            {
+              get;
+              set;
+           }
+          [Display(Name = "Country")]
+          public string ShipCountry
+           {
+             get;
+             set;
+           }
+          [Display(Name = "City")]
+          public string ShipCity
+           {
+             get;
+             set;
+           }
+         }
+         public class HomeController : Controller
+          {
+           public ActionResult Index()
+            {
+              List<EditableOrder> data = OrderRepository.GetAllRecords() ;
+              return View(data);
+            }
+          }
+        }
+{% endhighlight  %}
 {% endtabs %}  
-The following screenshot is the result of the above code example.
+          
+The following output is displayed as a result of the above code example.
 
-
-
-![](Data-Adaptors_images/Data-Adaptors_img2.png)
-
-Cache Adaptor
-{:.caption}
+ ![](Data-Adaptors_images/Data-Adaptor_img9.png)

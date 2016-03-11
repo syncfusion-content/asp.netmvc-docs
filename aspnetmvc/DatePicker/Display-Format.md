@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display Format
-description: Formatting - Date and Time, Headers.
+description: Configuring display format of DatePicker
 platform: ejmvc
 control: DatePicker
 documentation: ug
@@ -117,9 +117,9 @@ By default **en-US** culture Date format is "M/d/yyyy".
 
 {% highlight cshtml %}
 
-    @*sets en-US culture with specified date format*@
+        @*sets en-US culture with specified date format*@
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
+        @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
 
 {% endhighlight %}
 
@@ -150,9 +150,9 @@ EJMVC DatePicker calendar consists of header, day header, days and footer sectio
 
 {% highlight cshtml %}
 
-    @*sets the selected header format to display in header*@
+        @*sets the selected header format to display in header*@
 
-    @Html.EJ().DatePicker("datepick").HeaderFormat("yyyy MMMM")
+        @Html.EJ().DatePicker("datepick").HeaderFormat("yyyy MMMM")
 
 
 {% endhighlight %}
@@ -163,9 +163,9 @@ Day header determines the days name to be displayed in terms of short, medium an
 
 {% highlight cshtml %}
 
-    @*sets the day header as long*@
+            @*sets the day header as long*@
 
-    @Html.EJ().DatePicker("datepick").DayHeaderFormat(Header.Long)
+            @Html.EJ().DatePicker("datepick").DayHeaderFormat(Header.Long)
 
 
 {% endhighlight %}

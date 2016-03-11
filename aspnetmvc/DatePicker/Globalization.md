@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and Localization
-description: Globalize formatting and Localize strings in DatePicker  
+description: Globalize formatting and Localize strings with DatePicker  
 platform: ejmvc
 control: DatePicker
 documentation: ug
@@ -19,10 +19,10 @@ N> All the culture-specific script files are available within the below specifie
 <tr>
 <td>
 
-    (installed location)\Syncfusion\Essential Studio\13.4.0.53\JavaScript\assets\scripts\cultures
+    (installed location)\Syncfusion\Essential Studio\13.4.0.63\JavaScript\assets\scripts\cultures
 
     For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, 
-    C:\Program Files (x86)\Syncfusion\Essential Studio\13.4.0.53\JavaScript\assets\scripts\cultures
+    C:\Program Files (x86)\Syncfusion\Essential Studio\13.4.0.63\JavaScript\assets\scripts\cultures
 
 </td></tr>
 </table>
@@ -34,7 +34,7 @@ Refer the below German culture file in head section of html page after the refer
 
  {% highlight cshtml %}
    
-    <script src="http://cdn.syncfusion.com/13.4.0.53/js/cultures/ej.culture.de-DE.min.js"></script>
+    <script src="http://cdn.syncfusion.com/13.4.0.63/js/cultures/ej.culture.de-DE.min.js"></script>
                 
  {% endhighlight %}
  
