@@ -1077,7 +1077,7 @@ N> The **Project** **Configuration** **Wizard** which gets integrated into the V
 
 #### Integration of Syncfusion MVC components into the new MVC5 Application using Project Configuration Wizard
 
-To add our Syncfusion MVC controls (here, **DatePicker** control is taken for example) into the new ASP.NET MVC4 application using **Syncfusion** **Project** **Configuration** **Wizard**, follow the below steps -
+To add our Syncfusion MVC controls (here, **DatePicker** control is taken for example) into the new ASP.NET MVC 5 application using **Syncfusion** **Project** **Configuration** **Wizard**, follow the below steps -
 
 Start the Visual Studio 2013 and select **File** -> **New** -> **Project**. As you have installed MVC extension in your machine, you can see the Syncfusion Project template in the **New** **Project** pop-up, as shown in the below image,
 
