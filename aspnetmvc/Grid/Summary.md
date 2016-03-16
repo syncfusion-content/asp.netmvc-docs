@@ -178,7 +178,7 @@ namespace SyncfusionMvcApplication3.Controllers
 ![](Summary_images/summaryGrid_img3.png)
 
 
-### Custom Summary
+## Custom Summary
 
 Custom Summary can be used to create summary values based on your required custom logic and calculations. To enable Custom Summary, `SummaryType` should be `Custom` and `CustomSummaryValue` property need to define as function. In this property `CustomSummaryValue` function, you need to use Grid instance to access `model.dataSource` and `model.currentViewData`. After the custom calculation, the returned value will be displayed in corresponding Summary cell.
 {% tabs %}
