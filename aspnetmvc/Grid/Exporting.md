@@ -373,8 +373,8 @@ On Exporting, the default routing path to server-side that contains the action n
 
 ##  Multiple Exporting
 
-`AllowMultipleExporting` property allows you to export multiple grids into same file. Once you enable `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to contorl action method.
-In control action method you are able to export all the grids available in current page. The code snippet for this is
+`AllowMultipleExporting` property allows you to export multiple grids into same file. Once you enable `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
+In controller action method you are able to export all the grids available in current page. The code snippet for this is
 
 {% tabs %}
  
@@ -556,7 +556,7 @@ On server before calling the `Export` function, the data source should be proces
 
 ## Local data 
 
-By default, client data source is not sent to server to prevent unwanted data transfer since all data origin is server. In case, if you don't want to query the data source again for exporting in server, the grid's client [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) can be sent to server on export postback by removing the [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) property in grid's ignore list. The code snippet for this as follows
+By default, client data source is not sent to server to prevent unwanted data transfer since all data origin is server. In case, if you don't want to query the data source again for exporting in server, the grid's client [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) can be sent to server on export PostBack by removing the [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) property in grid's ignore list. The code snippet for this as follows
 
 {% highlight js %}
 
@@ -719,7 +719,7 @@ When the theme is set as none and the autoFormat is not set to the grid, then no
 
 
 
-The **AutoFormat** Class can be used to customize the styles or themes applied to the exported grid. With the autoFormat class, you can provide required color to the grid content, altrow background or border color.
+The **AutoFormat** Class can be used to customize the styles or themes applied to the exported grid. With the autoFormat class, you can provide required color to the grid content, alt row background or border color.
 
 The customized theme is applied to the grid, only when the selected theme is either “none” or ExportTheme.None.
 
@@ -937,7 +937,7 @@ The background color of the alternative row of the grid content</td></tr>
 Event Name
 </th>
 <th>
-Arguement 
+Argument 
 </th>
 <th>
 Description
