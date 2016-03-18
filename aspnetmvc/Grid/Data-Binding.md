@@ -6,16 +6,17 @@ platform: ejmvc
 control: Grid
 documentation: ug
 --- 
-# Data binding
+# Data Binding
 
 Grid `DataSource` property allows to bind datasource as the instance of one of the following types.
    
-     •	Collection that implements IEnumerable or IEnumerable<T>.
-     •	DataTable.
-     •	ITypedList.
-     •	REST Service URL as string.
-     •	Table – Allows to bind HTML Table and it accepts table template script “ID”.
-     •	ORM components such as Entity Framework/Linq to SQL.
+*	Collection that implements IEnumerable or IEnumerable<T>.
+*	DataTable.
+*	ITypedList.
+*	REST Service URL as string.
+*	Table – Allows to bind HTML Table and it accepts table template script "ID".
+*	ORM components such as Entity Framework/Linq to SQL.
+     
 We can also bind the above type of datasource by using lambda Expressions of Grid `DataSource` Property.
   
 In the following section, let us see on how to bind various datasources to Grid using `DataSource` API.
@@ -235,7 +236,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
 
      @(Html.EJ().Grid<object>("FlatGrid")
-                .Datasource((IEnumerable<object>)ViewBag.dataSource)
+         .Datasource((IEnumerable<object>)ViewBag.dataSource)
          .AllowPaging()
          .Columns(col =>
         {
@@ -325,7 +326,6 @@ For more information on ITypedList interface please refer to this [link](https:/
 The Grid can display nested or navigation properties in the column that would provide the way to display the field from another entity. The complex property can be provided in the `Field` property builder either as string value concatenated by dot or using lambda Expression.   
 
 N> 1. To use lambda Expression, the Grid should be associated with some business object and `Field` definition using lambda expression will not work for dynamic object.
-  
 N> 2. To display navigation properties using complex binding, the corresponding property should be eager loaded. Lazy loading is not supported for complex binding. 
   
 The following code example describes the above behavior.
@@ -370,11 +370,11 @@ The following output is displayed as a result of the above code example.
 
 W> A navigation property that represents the "many" end of a relationship cannot be specified using lambda expression. Instead `Field` name can be provide as string in such as case.
   
-##  WCF Data Service / OData Service
+##  WCF DataService / OData Service
 
 WCF Data Services is a component of the .NET Framework that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of representational state transfer (REST).
 
-To consume WCF Data Service in Grid control, provide the service link directly to the Grid `DataSource` property.
+To consume WCF DataService in Grid control, provide the service link directly to the Grid `DataSource` property.
 
 We have an online OData Service `http://mvc.syncfusion.com/Services/Northwnd.svc/Order` created specifically for Syncfusion Controls
 
@@ -777,11 +777,11 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% highlight js %}
 
-            <script>
+             <script>
                  function OnActionFailure(args) {
                      alert(args.error.status + " : " + args.error.statusText);
                  }
-           </script>
+             </script>
 {% endhighlight  %}
 {% endtabs %}
 
