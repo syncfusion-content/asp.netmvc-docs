@@ -568,19 +568,7 @@ function cancel() {
 
 ## Query cell info
 
-It is possible to customize the scheduler DOM element in that scheduler using `QueryCellEvent` event. There are several main things that we can customize through query cell info event.
-
-* Work cell
-* Month cell
-* All day cell
-* Appointment
-* Time cells
-* Date header cells
-* Resource header cell
-* Agenda time cell
-* Agenda resource cell
-* Agenda date cell
-* Agenda event cell
+It is possible to format and customize almost every child elements of scheduler such as work cells, header cells, time cells and so on using `QueryCellEvent` event. 
 
 The following code snippet shows how to customize the appointment and work cells based on the query cell info event.
      
@@ -630,3 +618,68 @@ While loading the above scheduler the below function called by `QueryCellInfo` e
     </script>
 
 {% endhighlight %}
+
+The Scheduler elements are listed below which can be formatted through this event. The names are listed in the format with which it can be accessed or used within the requestType argument of the event.
+
+<table class="params">
+    <thead>
+        <tr>
+            <th>Request Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="name">appointment</td>
+            <td class="description">Depicts the appointment element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">agendacells</td>
+            <td class="description">Depicts the Agenda Cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">alldaycells</td>
+            <td class="description">Depicts the AllDay cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">headercells</td>
+            <td class="description">Depicts the header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">resourceheadercells</td>
+            <td class="description">Depicts the resource header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">leftheadercells</td>
+            <td class="description">Depicts the left empty space on header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">leftindentcells</td>
+            <td class="description">Depicts the left empty space on date cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">timecells</td>
+            <td class="description">Depicts the left side time panel cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">headerdate</td>
+            <td class="description">Depicts the header date cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">emptytd</td>
+            <td class="description">Depicts the empty space above the vertical scroller within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">resourcegroupheader</td>
+            <td class="description">Depicts the header group cell in horizontal orientation in the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">monthcells</td>
+            <td class="description">Depicts the month cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">workcells</td>
+            <td class="description">Depicts the work cell element within the Scheduler.</td>
+        </tr>
+    </tbody>
+</table>
