@@ -370,11 +370,11 @@ The following output is displayed as a result of the above code example.
 
 W> A navigation property that represents the "many" end of a relationship cannot be specified using lambda expression. Instead `Field` name can be provide as string in such as case.
   
-##  WCF DataService / OData Service
+##  WCF Data Service / OData Service
 
 WCF Data Services is a component of the .NET Framework that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of representational state transfer (REST).
 
-To consume WCF DataService in Grid control, provide the service link directly to the Grid `DataSource` property.
+To consume WCF Data Service in Grid control, provide the service link directly to the Grid `DataSource` property.
 
 We have an online OData Service `http://mvc.syncfusion.com/Services/Northwnd.svc/Order` created specifically for Syncfusion Controls
 
