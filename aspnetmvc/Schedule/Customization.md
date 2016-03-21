@@ -4,7 +4,7 @@ description: Customization of working hours, date, and appointment window
 platform: ejmvc
 control: schedule
 documentation: ug
-keywords: customization, work hours, appointment window, display hours, Query cell event
+keywords: customization, work hours, appointment window, display hours, Query cell info
 ---
 # Customization
 
@@ -598,7 +598,7 @@ The following code snippet shows how to customize the appointment and work cells
 
 {% endhighlight %}
 
-While loading the above scheduler the below function called by `QueryCellInfo` event and format the DOM element based on given scenario
+While loading the scheduler using above code, the below function gets triggered by the `QueryCellInfo` event which customizes the corresponding DOM element.
 
 
 {% highlight html %}
