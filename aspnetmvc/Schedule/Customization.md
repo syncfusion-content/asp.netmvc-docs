@@ -4,7 +4,7 @@ description: Customization of working hours, date, and appointment window
 platform: ejmvc
 control: schedule
 documentation: ug
-keywords: customization, work hours, appointment window, display hours 
+keywords: customization, work hours, appointment window, display hours, Query cell event
 ---
 # Customization
 
@@ -566,3 +566,120 @@ function cancel() {
 
 {% endhighlight %}
 
+## Query cell info
+
+It is possible to format and customize almost every child elements of scheduler such as work cells, header cells, time cells and so on using `QueryCellEvent` event. 
+
+The following code snippet shows how to customize the appointment and work cells based on the query cell info event.
+     
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .ScheduleClientSideEvents(evt => evt.QueryCellInfo("checkFormat"))
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+While loading the above scheduler the below function called by `QueryCellInfo` event and format the DOM element based on given scenario
+
+
+{% highlight html %}
+
+    <script type="text/javascript">
+     function checkFormat(args) {
+	    switch (args.requestType) {
+		case "workcells":
+			args.element.css("background-color", "#ffe9cc");
+			break;
+		case "monthcells":
+			args.element.css("background-color", "#faa41a");
+			args.element.css("border-color", "#faa41a");
+			break;
+		}
+    }
+    </script>
+
+{% endhighlight %}
+
+The Scheduler elements are listed below which can be formatted through this event. The names are listed in the format with which it can be accessed or used within the requestType argument of the event.
+
+<table class="params">
+    <thead>
+        <tr>
+            <th>Request Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="name">appointment</td>
+            <td class="description">Depicts the appointment element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">agendacells</td>
+            <td class="description">Depicts the Agenda Cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">alldaycells</td>
+            <td class="description">Depicts the AllDay cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">headercells</td>
+            <td class="description">Depicts the header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">resourceheadercells</td>
+            <td class="description">Depicts the resource header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">leftheadercells</td>
+            <td class="description">Depicts the left empty space on header cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">leftindentcells</td>
+            <td class="description">Depicts the left empty space on date cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">timecells</td>
+            <td class="description">Depicts the left side time panel cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">headerdate</td>
+            <td class="description">Depicts the header date cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">emptytd</td>
+            <td class="description">Depicts the empty space above the vertical scroller within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">resourcegroupheader</td>
+            <td class="description">Depicts the header group cell in horizontal orientation in the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">monthcells</td>
+            <td class="description">Depicts the month cell element within the Scheduler.</td>
+        </tr>
+        <tr>
+            <td class="name">workcells</td>
+            <td class="description">Depicts the work cell element within the Scheduler.</td>
+        </tr>
+    </tbody>
+</table>

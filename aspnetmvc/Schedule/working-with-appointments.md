@@ -289,20 +289,22 @@ N> All these CRUD operations on appointments (add/edit/delete) can also be done 
 
 #### Through Programmatically
 
-You can delete the appointments dynamically through the public method `deleteAppointment`, which accepts the Guid of the appointment data as its argument. The Guid is availed as one of the appointment element’s attribute.
+You can delete the appointments dynamically through the public method `deleteAppointment`, which accepts the Guid of the appointment or complete appointment data as its argument. The Guid is availed as one of the appointment element’s attribute.
 
-For example, here the below code example depicts the way to delete the appointments programmatically by calling the **deleteAppointment** function within the `AppointmentClick` event, which triggers whenever the user clicks on an appointment.
+#### Example 1 - Using GUID 
+
+The below code example depicts the way to delete the appointments using GUID programmatically by calling the **deleteAppointment** function within the `AppointmentClick` event, which triggers whenever the user clicks on an appointment.
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
-@{
-    <!-- Datasource for Appointments -->
-    List<ScheduleFields> Appoint = new List<ScheduleFields>();
-    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
-}
+    @using Syncfusion.JavaScript.Models;
+    @{
+        <!-- Datasource for Appointments -->
+        List<ScheduleFields> Appoint = new List<ScheduleFields>();
+        Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+    }
 
-@(Html.EJ().Schedule("Schedule1")
+    @(Html.EJ().Schedule("Schedule1")
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2014, 6, 2))
@@ -315,17 +317,56 @@ For example, here the below code example depicts the way to delete the appointme
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
             .ScheduleClientSideEvents(evt => evt.AppointmentClick("onAppointmentClick"))
-)
+    )
 
 {% endhighlight %}
 
 {% highlight js %}
 
-function onAppointmentClick(args) {
-    var schObj = $("#schedule").data("ejSchedule");
-    schObj.deleteAppointment(args.appointment.Guid);
-    // $($(".e-appointment")[0]).attr("guid") --> To get the guid attribute value of an element directly.
-}
+    function onAppointmentClick(args) {
+        var schObj = $("#schedule").data("ejSchedule");
+        schObj.deleteAppointment(args.appointment.Guid);
+        // $($(".e-appointment")[0]).attr("guid") --> To get the guid attribute value of an element directly.
+    }
+
+{% endhighlight %}
+
+#### Example 2 - Using Appointment object 
+
+The below code example depicts the way to delete the appointments using appointment data programmatically by calling the **deleteAppointment** function within the `AppointmentClick` event, which triggers whenever the user clicks on an appointment.
+
+{% highlight razor %}
+
+    @using Syncfusion.JavaScript.Models;
+    @{
+        <!-- Datasource for Appointments -->
+        List<ScheduleFields> Appoint = new List<ScheduleFields>();
+        Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+    }
+
+    @(Html.EJ().Schedule("Schedule1")
+            .Width("100%")
+            .Height("525px")
+            .CurrentDate(new DateTime(2014, 6, 2))
+            .AppointmentSettings(fields => fields.Datasource(Appoint)
+                .Id("Id")
+                .Subject("Subject")
+                .StartTime("StartTime")
+                .EndTime("EndTime")
+                .AllDay("AllDay")
+                .Recurrence("Recurrence")
+                .RecurrenceRule("RecurrenceRule"))
+                .ScheduleClientSideEvents(evt => evt.AppointmentClick("onAppointmentClick"))
+    )
+
+{% endhighlight %}
+
+{% highlight js %}
+
+    function onAppointmentClick(args) {
+        var schObj = $("#schedule").data("ejSchedule");
+        schObj.deleteAppointment(args.appointment);
+    }
 
 {% endhighlight %}
 
