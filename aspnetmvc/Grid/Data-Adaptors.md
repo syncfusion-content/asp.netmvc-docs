@@ -14,9 +14,8 @@ In Grid, the Adaptor can be specified using the `Adaptor` property of the `DataS
  
  
 N> For the `Adaptor` builder, you can assign Adaptor name either as `string` value (”JsonAdaptor”) or Enum value as `AdaptorType.JsonAdaptor`.
- 
- 
- ##  Json Adaptor
+  
+##  Json Adaptor
 
 The Json Adaptor is used when the grid is bound with local datasource. It can be enabled in Grid using `Adaptor` property as `AdaptorType.JsonAdaptor`. The `JsonAdaptor` is the default Adaptor used by `DataManager` when bind with local dataSource such as IEnumerabe, DataTable etc.  
 
@@ -126,7 +125,6 @@ The following code example describes the above behavior.
 {% endtabs %} 
 
  I> 1. The response from server should be wrapped in an object with properties named `result` to hold the data and `count` to hold the total records count.
- 
  I> 2. The `count` must be returned along with response when paging is enabled in Grid.
  
  The following output is displayed as a result of the above code example.
@@ -134,13 +132,13 @@ The following code example describes the above behavior.
  ![](Data-Adaptors_images/Data-Adaptor_img2.png)
  
  
- ##  OData Adaptor
+##  OData Adaptor
  
 OData Adaptor that is extended from `UrlAdaptor`, is used for consuming data through OData Service. 
   
 We have an online OData Service http://mvc.syncfusion.com/Services/Northwnd.svc/Orders created specifically for Syncfusion Controls
 
-Note: `ODataAdaptor` is the default Adaptor of `DataManager` and so no need to specify Adaptor when binding OData service
+N> `ODataAdaptor` is the default Adaptor of `DataManager` and so no need to specify Adaptor when binding OData service
 
 You can use the following code example to use OData Adaptor.
 
@@ -333,7 +331,7 @@ On performing CRUD operations in Grid, the record changes will be sent to server
 
 The Grid can have a look up column. The Foreign key column using `ForeignKeyField` has some limitations such as sort/group operations on column will happen based on `Field` instead of `ForeignKeyField`. The `ForeignKeyAdaptor` can be used to overcome this limitation.
       
- N> It works by specifying a virtual column (which is not in the grid datasource) in the Grid. This Adaptor should be initialized in the `Load` event of the grid. `ForeignKeyAdaptor` supported for only local data binding.
+N> It works by specifying a virtual column (which is not in the grid datasource) in the Grid. This Adaptor should be initialized in the `Load` event of the grid. `ForeignKeyAdaptor` supported for only local data binding.
 
 The following code example describes the above behavior.      
 
@@ -382,7 +380,6 @@ The following code example describes the above behavior.
 {% endtabs %}           
 
  I> 1. The `Field` name of the virtual column should be the name of the field to display from foreign datasource.
-
  I> 2. By default, the `ForeignKeyAdaptor` uses `JsonAdaptor`, to use other Adaptors specify the Adaptor name as the second argument during initialization.
 
 The following output is displayed as a result of the above code example.
@@ -403,136 +400,4 @@ https://www.syncfusion.com/kb/3375/how-to-process-xml-data-from-server-using-dat
 
 N> To create a custom Adaptor for remote service, the `UrlAdaptor` can be used as base Adaptor. 
 
-#  DataAnnotation
 
-Data Annotations help us to define the rules to the model classes or properties for data validation and displaying suitable messages to end users.
-
-You can enable Data Annotation by binding the corresponding Class to Grid helper and thus data annotations attributes will be mapped to the corresponding Grid Column property.
-
-Please find the following list of annotation attributes that are supported in Grid Control.
-
-<table>
-  <tr>
-     <th>Attribute Name</th>
-     <th>Functioanlity in Grid</th>
-  </tr>
-  <tr>
-     <td>BindAttribute - Exlcude</td>
-     <td>To exclude the corresponding field from Grid Columns property in AutoGenerate Grid</td>
-  </tr>
-  <tr>
-     <td>DisplayName</td>
-     <td>It sets `HeaderText` property of Grid Column</td>
-  </tr>
-  <tr>
-     <td>ReadOnly</td>
-     <td>It sets `AllowEditing` for a particular column</td>
-  </tr>
-  <tr>
-     <td>Key</td>
-     <td>To Set `PrimaryKey` in Grid Columns</td>
-   </tr>
-   <tr>
-     <td>ScaffoldColumn</td>
-     <td>It sets `Visible` property of Grid Columns which is used to hide or show a Column in Grid</td>
-   </tr>
-   <tr>
-     <td>DisplayFormat - DataFormatString</td>
-     <td>To sets `Format` property of Grid Column that renders corresponding Grid Column data in respective format.</td>
-   </tr>
-   <tr>
-     <td>DatabaseGenerated(DatabaseGeneratedOption.Identity)</td>
-     <td>To set `isIdentity` Property of Grid Column</td></tr>
-   <tr>
-     <td>Validation
-       <ul>
-          <li>RequiredAttribute</li>
-          <li>StringLengthAttribute</li>
-          <li>RangeAttribute</li>
-          <li>RegularExpressionAttribute</li>
-          <li>MinLengthAttribute</li>
-          <li>MaxLengthAttribute</li>
-          <li>CompareAttribute</li>
-          <li>DataTypeAttribute</li>
-          <li>DataType.Custom</li>
-          <li>DataType.Date</li>
-          <li>DataType.DateTime</li>
-          <li>DataType.EmailAddress</li>
-          <li>DataType.ImageUrl</li>
-          <li>DataType.Url</li>
-          <li>Custom DataType </li>   
-      </ul>
-     </td>
-     <td>The data annotaion validations attribute would used as `validation rules` in Grid CRUD operations</td>
-   </tr>
-   <tr>
-   <td>ForeignKey</td>
-   <td>Set `ForeignKeyField` Property of Grid Column</td></tr>   
-</table>        
-
-
-N> Grid Properties has more priority than Data Annotation. For Instance, if `DisplayName` Attribute is set to a Field in Grid Model class and also we set different value to the respective Grid Columns property `HeaderText`, then the value of `HeaderText` property will be considered and shown in Grid header.
-
-The following code example shows how data annotation works in Grid Control.
-
-{% tabs %}  
-{% highlight razor %}
-
-             @model IEnumerable<EditableOrder>
-             @(Html.EJ().Grid<EditableOrder>("FlatGrid")
-                        .Datasource(Model)
-                        .AllowPaging()
-                  )
-{% endhighlight  %}
-{% highlight c# %}
-            
-        namespace EJGrid.Controllers
-         {
-         public class EditableOrder
-          {
-           [Display(Name = "Order ID")]
-           public int OrderID
-            {
-              get;
-              set;
-            }
-           [Display(Name = "Emp ID")]
-           public int? EmployeeID
-            {
-              get;
-              set;
-            }
-           [Display(Name = "Freight")]
-           public decimal? Freight
-            {
-              get;
-              set;
-           }
-          [Display(Name = "Country")]
-          public string ShipCountry
-           {
-             get;
-             set;
-           }
-          [Display(Name = "City")]
-          public string ShipCity
-           {
-             get;
-             set;
-           }
-         }
-         public class HomeController : Controller
-          {
-           public ActionResult Index()
-            {
-              List<EditableOrder> data = OrderRepository.GetAllRecords() ;
-              return View(data);
-            }
-          }
-        }
-{% endhighlight  %}
-{% endtabs %}  
-          
-The following output is displayed as a result of the above code example.
-
- ![](Data-Adaptors_images/Data-Adaptor_img9.png)
