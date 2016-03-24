@@ -18,7 +18,7 @@ The following code example describes the above behavior.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowGrouping()
@@ -34,7 +34,7 @@ The following code example describes the above behavior.
 
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -429,7 +429,23 @@ The following code example describes the above behavior.
             }))  
 
 {% endhighlight  %}
-            
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
+ 
 {% highlight js %}            
      
      <script id="template" type="text/x-jsrender">
@@ -450,24 +466,7 @@ The following code example describes the above behavior.
              }
     </script>    
 
-{% endhighlight  %}
-
-{% highlight c# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-              { 
-                public ActionResult GridFeatures()
-                 {
-                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                   ViewBag.DataSource = DataSource;
-                   return View();
-                 }
-             }
-        } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.

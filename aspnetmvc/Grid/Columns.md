@@ -12,7 +12,6 @@ documentation: ug
 Column definitions are used as the DataSource schema in grid and it plays vital role in rendering column values in required format and sorting, filtering, editing based on its type. The `Field` property of the columns is necessary to map the datasource values in grid columns.
 
 N> 1. The column with `Field` which are not in the datasource, then the column values will be displayed as empty.
-
 N> 2. If the `Field` name contains "dot" then it is considered as complex binding.
 
 
@@ -22,15 +21,14 @@ The columns are automatically generated when `Columns` declaration is empty or u
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             )       
 {% endhighlight  %}
-
-{% highlight C# %}
+{% highlight c# %}
 
     namespace MVCSampleBrowser.Controllers
                 { 
@@ -60,18 +58,17 @@ Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways.
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .EditSettings(edit =>
-                    {
-                        edit.AllowEditing(true);
-    
-                    })
+                  {
+                    edit.AllowEditing(true);
+                 })
                 .ClientSideEvents(eve => { eve.DataBound("dataBound"); })
-    )
+               )
     
     <script type="text/javascript">
         function dataBound(args) {
@@ -84,30 +81,27 @@ Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways.
         }
     </script>
 {% endhighlight  %}
-
-{% highlight C# %}
+{% highlight c# %}
     
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+      namespace MVCSampleBrowser.Controllers
+       {
+        public class GridController : Controller
+         { 
+           public ActionResult GridFeatures()
+             {
                 var DataSource = new NorthwindDataContext().OrdersViews.ToList();
                 ViewBag.DataSource = DataSource;
                 return View();
-            }
-        }
-    }
+             }
+          }
+       }
 {% endhighlight  %}
-
 {% endtabs %}  
 
  2. If primary key "column field name" is known then refer the following code example
 
 {% tabs %}
-
-{% highlight CSHTML %}
+{% highlight razor %}
 
       @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
@@ -115,10 +109,9 @@ Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways.
             .EditSettings(edit =>
                 {
                     edit.AllowEditing(true);
-
                 })
             .ClientSideEvents(eve => { eve.DataBound("dataBound"); })
-    )
+           )
 
     <script type="text/javascript">
         function dataBound(args) {
@@ -129,23 +122,30 @@ Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways.
         }
     </script>
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-                {
-                    public class GridController : Controller
-                        { 
-                            public ActionResult GridFeatures()
-                                {
-                                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                                    ViewBag.DataSource = DataSource;
-                                    return View();
-                                }
-                            }
-                    }          
+          namespace MVCSampleBrowser.Controllers
+              {
+                public class GridController : Controller
+                   { 
+                     public ActionResult GridFeatures()
+                       {
+                         var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                         ViewBag.DataSource = DataSource;
+                         return View();
+                        }
+                    }
+              }          
 {% endhighlight  %}
-
+{% highlight js %}
+    
+        function dataBound(args) {
+             var column = this.getColumnByField("OrderID");
+             column.isPrimaryKey = tru
+             //Here columns method used to update the particular column
+             this.columns(column, "update");
+          }
+ {% endhighlight  %}   
 {% endtabs %}  
 
 ## Headers
@@ -159,38 +159,35 @@ N> If `HeaderText` is not defined then the `Field` name is considered as header 
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
-            .Datasource((IEnumerable<object>)ViewBag.DataSource)
-            .AllowPaging()
-            .Columns(col =>
-            {
+         @(Html.EJ().Grid<Object>("FlatGrid")
+              .Datasource((IEnumerable<object>)ViewBag.DataSource)
+              .AllowPaging()
+              .Columns(col =>
+              {
                 col.Field("OrderID").HeaderText("Order ID").Add();
                 col.Field("EmployeeID").HeaderText("Emp ID").Add();
                 col.Field("Freight").HeaderText("Freight").Add();
                 col.Field("ShipCountry").HeaderText("Country").Add();
                 col.Field("ShipCity").HeaderText("City").Add();
-            }))
+             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                ViewBag.DataSource = DataSource;
-                return View();
-            }
-        }
-    } 
-{% endhighlight  %}
-    
+          namespace MVCSampleBrowser.Controllers
+           {
+             public class GridController : Controller
+              { 
+               public ActionResult GridFeatures()
+                {
+                  var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                  ViewBag.DataSource = DataSource;
+                  return View();
+                }
+              }
+            } 
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -211,10 +208,9 @@ N> For `HeaderTextAlign` property you can assign `enum` value (`TextAlign.Right`
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -226,23 +222,21 @@ The following code example describes the above behavior.
                 col.Field("ShipCity").HeaderText("City").Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
+      namespace MVCSampleBrowser.Controllers
         {
-            public class GridController : Controller
-            { 
+          public class GridController : Controller
+           { 
             public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
-            }
-        }
-    }    
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+             }
+           }
+         }    
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -260,18 +254,9 @@ N> It's a standard way to enclose the `template` within the `script` tag with `t
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight html %}
-
-    <script id="empTemplate" type="text/x-jsrender">
-    Emp ID
-    <span class="e-userlogin e-icon employee"></span>
-    </script>
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -283,23 +268,28 @@ The following code example describes the above behavior.
                 col.Field("ShipCity").HeaderText("City").Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-                {
-                public class GridController : Controller
-                    { 
-                    public ActionResult GridFeatures()
+           namespace MVCSampleBrowser.Controllers
+            {
+              public class GridController : Controller
+               { 
+                 public ActionResult GridFeatures()
                         {
                             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
                             ViewBag.DataSource = DataSource;
                             return View();
-                    }
-                }
-            }        
+                         }
+                     }
+                  }        
 {% endhighlight  %}
+{% highlight js %}
 
+        <script id="empTemplate" type="text/x-jsrender">
+          Emp ID
+          <span class="e-userlogin e-icon employee"></span>
+        </script>
+{% endhighlight %}
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -316,16 +306,15 @@ You can align both content and header text of particular column using `TextAlign
 4. Justify
 
 N> 1. For `TextAlign` property you can assign `enum` value (`TextAlign.Right`).
-
 N> 2. The `TextAlign` property will affect both content and header text of the grid.
 
 The following code example describes the above behavior.
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -337,23 +326,21 @@ The following code example describes the above behavior.
                 col.Field("ShipCity").TextAlign(TextAlign.Justify).Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-        public class GridController : Controller
-            { 
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
             public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
-            }
+             {
+               var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+               ViewBag.DataSource = DataSource;
+               return View();
+             }
+           }
         }
-    }
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -369,10 +356,9 @@ The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). T
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -384,23 +370,21 @@ The following code example describes the above behavior.
                 col.Field("ShipCity").Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-                {
-                public class GridController : Controller
-                    { 
-                    public ActionResult GridFeatures()
-                        {
-                            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                            ViewBag.DataSource = DataSource;
-                            return View();
+        namespace MVCSampleBrowser.Controllers
+         {
+           public class GridController : Controller
+            { 
+              public ActionResult GridFeatures()
+               {
+                  var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                  ViewBag.DataSource = DataSource;
+                  return View();
                 }
-            }
-        }        
+             }
+          }        
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -414,10 +398,9 @@ You can specify the width for particular column by setting `Width` property of `
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -429,23 +412,21 @@ The following code example describes the above behavior.
                 col.Field("ShipCountry").Width(100).Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
+       namespace MVCSampleBrowser.Controllers
         {
-        public class GridController : Controller
-            { 
+          public class GridController : Controller
+           { 
              public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
-               }
+              {
+                 var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                 ViewBag.DataSource = DataSource;
+                 return View();
+              }
           }
-    }
+       }
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -461,10 +442,9 @@ On columns where "width is defined", double click on the particular column heade
 The following code example describes the above behavior. 
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowResizeToFit()
@@ -477,23 +457,21 @@ The following code example describes the above behavior.
                 col.Field("ShipAddress").Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-            { 
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
             public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
-                }
-            }
-        }  
+             {
+               var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+               ViewBag.DataSource = DataSource;
+               return View();
+             }
+          }
+       }  
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -508,10 +486,9 @@ Reordering can be done by drag and drop the particular column header from one in
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowReordering()
@@ -524,23 +501,21 @@ The following code example describes the above behavior.
                 col.Field("Freight").Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-                }
-            }
-        }    
+       namespace MVCSampleBrowser.Controllers
+         {
+           public class GridController : Controller
+             { 
+               public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                 }
+             }
+          }    
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -554,10 +529,9 @@ You can hide particular column in grid view by setting `Visible` property of it 
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .Columns(col =>
@@ -569,23 +543,21 @@ The following code example describes the above behavior.
                 col.Field("ShipCountry").Add(); 
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-                    }
-                }
-            }
+       namespace MVCSampleBrowser.Controllers
+         {
+           public class GridController : Controller
+             { 
+               public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                  }
+               }
+          }
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -602,47 +574,46 @@ N> Editing, grouping, filtering, sorting, summary and searching support are not 
 The following code example describes the above behavior. 
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
+         @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowDeleting(); })
+                .Columns(col =>
+                  {
+                    col.Field("OrderID").IsPrimaryKey(true).Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("Freight").Add();
+                    col.HeaderText("").Format("<a onclick=\"clk(this)\" href=#>Delete</a>").Add();
+                   })
+                 )
+{% endhighlight  %}
+{% highlight c# %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
-                            .Datasource((IEnumerable<object>)ViewBag.DataSource)
-                            .AllowPaging()
-                            .EditSettings(edit => { edit.AllowDeleting(); })
-                            .Columns(col =>
-                            {
-                                col.Field("OrderID").IsPrimaryKey(true).Add();
-                                col.Field("EmployeeID").Add();
-                                col.Field("CustomerID").Add();
-                                col.Field("Freight").Add();
-                                col.HeaderText("").Format("<a onclick=\"clk(this)\" href=#>Delete</a>").Add();
-                            })
-                            )
+         namespace MVCSampleBrowser.Controllers
+          {
+            public class GridController : Controller
+             { 
+               public ActionResult GridFeatures()
+                 {
+                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                    ViewBag.DataSource = DataSource;
+                    return View();
+                  }
+              }
+           }
+{% endhighlight  %}
+{% highlight js %}
     
-    <script type="text/javascript">
+     <script type="text/javascript">
         function clk(e) {
             var obj = $("#FlatGrid").data("ejGrid");
             obj.deleteRecord("OrderID", obj.getSelectedRecords()[0]);
         }
     </script>
 {% endhighlight  %}
-
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-        public class GridController : Controller
-            { 
-            public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
-                }
-            }
-        }
-{% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -660,18 +631,9 @@ N> If `Field` is not specified, you will not able to perform editing, grouping, 
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight html %}
-
-    <script type="text/x-jsrender" id="columnTemplate">
-        <!--The image is referred from this location "http://jsplayground.syncfusion.com/13.2.0.29/themes/web/images/employees/1.png" based on EmployeeID-->
-        <img style="width: 75px; height: 70px" src="/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png" alt="{{"{{"}}:EmployeeID{{}}}}" />
-    </script>
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .PageSettings(page => { page.PageSize(4); })
@@ -682,26 +644,30 @@ The following code example describes the above behavior.
                     col.Field("FirstName").Add();
                     col.Field("LastName").Add();
                     col.Field("Country").Add();
-                })
-                )
+                }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
+      namespace MVCSampleBrowser.Controllers
         {
-        public class GridController : Controller
+           public class GridController : Controller
             { 
-            public ActionResult GridFeatures()
+              public ActionResult GridFeatures()
                 {
-                    var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
+                  var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                  ViewBag.DataSource = DataSource;
+                  return View();
                 }
-            }
-        }
+              }
+          }
 {% endhighlight  %}
+{% highlight js %}
 
+     <script type="text/x-jsrender" id="columnTemplate">
+        <!--The image is referred from this location "http://jsplayground.syncfusion.com/13.2.0.29/themes/web/images/employees/1.png" based on EmployeeID-->
+        <img style="width: 75px; height: 70px" src="/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png" alt="{{"{{"}}:EmployeeID{{}}}}" />
+    </script>
+{% endhighlight %}
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -715,10 +681,9 @@ You can control the grid actions of a particular column by setting `AllowSorting
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+        @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .AllowResizing()
@@ -733,26 +698,23 @@ The following code example describes the above behavior.
                     col.Field("Freight").Add();
                     col.Field("ShipCity").Add();
                     col.Field("ShipCountry").Add();
-                })
-                )
+                }) )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-        public class GridController : Controller
-            { 
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+           { 
             public ActionResult GridFeatures()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    ViewBag.DataSource = DataSource;
-                    return View();
+              {
+                 var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                 ViewBag.DataSource = DataSource;
+                 return View();
                 }
             }
         }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 ## Read only
@@ -762,10 +724,9 @@ To make a column as "read-only" then set `AllowEditing` property of `Columns` as
 The following code example describes the above behavior. 
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .EditSettings(edit => { edit.AllowEditing(); })
@@ -779,23 +740,21 @@ The following code example describes the above behavior.
                 })
                 )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
+     namespace MVCSampleBrowser.Controllers
+      {
+       public class GridController : Controller
         { 
-        public ActionResult GridFeatures()
+          public ActionResult GridFeatures()
             {
-                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                ViewBag.DataSource = DataSource;
-                return View();
+              var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+              ViewBag.DataSource = DataSource;
+              return View();
             }
-        }
-    }
+         }
+      }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -813,10 +772,9 @@ N> This expression column is supported at read only mode.
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+        @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -829,23 +787,21 @@ The following code example describes the above behavior.
                 })
                 )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
+            public ActionResult GridFeatures()
+              {
                 var DataSource = new NorthwindDataContext().FoodInformation.ToList();
                 ViewBag.DataSource = DataSource;
                 return View();
-            }
-        }
-    }
+              }
+          }
+      }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -869,10 +825,9 @@ Through `ButtonOptions` property of `Commands`, you can specify all the button o
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+        @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .EditSettings(edit => { edit.AllowEditing().AllowDeleting().AllowAdding(); })
@@ -905,26 +860,23 @@ The following code example describes the above behavior.
                                 Text = "Cancel"
                             }).Add();
                     }).IsUnbound(true).Width(150).Add();
-                })
-                )
+                }) )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
-                var DataSource = new NorthwindDataContext().OrdersView.ToList();
-                ViewBag.DataSource = DataSource;
-                return View();
-            }
-        }
-    }
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
+            public ActionResult GridFeatures()
+              {
+                 var DataSource = new NorthwindDataContext().OrdersView.ToList();
+                 ViewBag.DataSource = DataSource;
+                 return View();
+              }
+          }
+       }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -936,23 +888,21 @@ The following output is displayed as a result of the above code example.
 You can add custom button in the command column by specifying the `Type` property of `Commands` as `empty` or any other `string` instead of `enum` values.
 
 N> 1. For `Type` property you can assign either `string` value (`edit`).
-
 N> 2. In command column you can add only buttons.
 
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+        @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
                 {
                     col.Field("EmployeeID").Add();
                     col.HeaderText("Employee Details").Commands(command =>
-                    {
+                     {
                         command.Type("detail")
                             .ButtonOptions(new Syncfusion.JavaScript.Models.ButtonProperties()
                             {
@@ -966,34 +916,33 @@ The following code example describes the above behavior.
                 .Width(150)
                 .Add();
                 })
-                )
-
-    <script type="text/javascript">
-        function onClick(args) {
-            var grid = $("#FlatGrid").ejGrid("instance");
-            var index = this.element.closest("tr").index();
-            var record = grid.getCurrentViewData()[index];
-            alert("Record Details: " + JSON.stringify(record));
-        }
-    </script>    
+                )   
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
-                var DataSource = new NorthwindDataContext().OrdersView.ToList();
-                ViewBag.DataSource = DataSource;
-                return View();
-            }
-        }
-    }
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         { 
+           public ActionResult GridFeatures()
+             {
+               var DataSource = new NorthwindDataContext().OrdersView.ToList();
+               ViewBag.DataSource = DataSource;
+               return View();
+             }
+         }
+      }
 {% endhighlight  %}
-
+{% highlight js %}
+            <script type="text/javascript">
+               function onClick(args) {
+                 var grid = $("#FlatGrid").ejGrid("instance");
+                 var index = this.element.closest("tr").index();
+                 var record = grid.getCurrentViewData()[index];
+                 alert("Record Details: " + JSON.stringify(record));
+               }
+           </script> 
+{% endhighlight  %}
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -1007,10 +956,9 @@ Column chooser contains all the columns which are defined in the `Columns` prope
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .ShowColumnChooser()
@@ -1021,26 +969,23 @@ The following code example describes the above behavior.
                     col.Field("Freight").Add();
                     col.Field("ShipCity").Add();
                     col.Field("ShipCountry").Add();
-                })
-                )
+                }) )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
+     namespace MVCSampleBrowser.Controllers
+      {
+       public class GridController : Controller
         { 
-        public ActionResult GridFeatures()
+         public ActionResult GridFeatures()
             {
                 var DataSource = new NorthwindDataContext().OrdersView.ToList();
                 ViewBag.DataSource = DataSource;
                 return View();
             }
-        }
-    }
+         }
+      }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -1056,10 +1001,9 @@ I> For foreign key column the sorting and grouping is based on `ForeignKeyField`
 The following code example describes the above behavior.
 
 {% tabs %}
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+{% highlight razor %}
+ 
+         @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource1)
                 .AllowPaging()
                 .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -1070,18 +1014,16 @@ The following code example describes the above behavior.
                     col.Field("CustomerID").Add();
                     col.Field("Freight").Add();
                     col.Field("ShipCity").Add();
-                })
-                )
-{% endhighlight  %}
+                }) )
+{% endhighlight  %} 
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+       namespace MVCSampleBrowser.Controllers
+        {
+         public class GridController : Controller
+          { 
+           public ActionResult GridFeatures()
+             {
                 var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
                 ViewBag.DataSource1 = DataSource1;
                 var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
@@ -1089,9 +1031,8 @@ The following code example describes the above behavior.
                 return View();
             }
         }
-    }
+      }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -1105,7 +1046,35 @@ You can customize the header and content of that particular column by `CssClass`
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
+        @(Html.EJ().Grid<Object>("FlatGrid")
+                .Datasource((IEnumerable<object>)ViewBag.DataSource)
+                .AllowPaging()
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("EmployeeID").CssClass("customcss").Add();
+                    col.Field("Freight").Add(); 
+                })
+                )
+{% endhighlight  %}
+{% highlight c# %}
+
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
+            public ActionResult GridFeatures()
+             {
+                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource1;
+                return View();
+             }
+          }
+       }
+{% endhighlight  %}
 {% highlight css %}
 
     .customcss.e-headercell {
@@ -1122,38 +1091,6 @@ The following code example describes the above behavior.
         font-size: 20px;
     }
 {% endhighlight %}
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
-                .Datasource((IEnumerable<object>)ViewBag.DataSource)
-                .AllowPaging()
-                .Columns(col =>
-                {
-                    col.Field("OrderID").Add();
-                    col.Field("CustomerID").Add();
-                    col.Field("EmployeeID").CssClass("customcss").Add();
-                    col.Field("Freight").Add(); 
-                })
-                )
-{% endhighlight  %}
-
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
-                var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
-                ViewBag.DataSource = DataSource1;
-                return View();
-            }
-        }
-    }
-{% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -1169,10 +1106,9 @@ N> The `Type` is needed for filtering feature when first row of the data is `nul
 The following code example describes the above behavior.
 
 {% tabs %}
-
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+{% highlight razor %}
+   
+        @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -1182,26 +1118,23 @@ The following code example describes the above behavior.
                     col.Field("EmployeeID").Type("number").Add();
                     col.Field("Freight").Add();
                     col.Field("ShipCountry").Add(); 
-                })
-                )
+                }) )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+       namespace MVCSampleBrowser.Controllers
+        {
+          public class GridController : Controller
+           { 
+             public ActionResult GridFeatures()
+              {
                 var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
                 ViewBag.DataSource = DataSource1;
                 return View();
-            }
-        }
-    }
+              }
+           }
+         }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
