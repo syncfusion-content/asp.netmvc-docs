@@ -297,7 +297,7 @@ This type of grouping displays the resources in the Scheduler at multiple levels
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
-    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "", RoomId = "1", OwnerId = "1" });
 
     <!-- Datasource for Grouping -->
     List<String> Group = new List<String>();
@@ -342,3 +342,60 @@ This type of grouping displays the resources in the Scheduler at multiple levels
 
 N> Here, the appointments will make use of the **Color** defined for the Owners resource instance as its background color.
 
+### Different Working days and Hours for Resources
+
+It is possible to assign different workdays and workhours for each resources present within the Scheduler. The process of assigning different working days for each individual resources is applicable only with vertical Scheduler mode and not in timeline view, whereas the customization of workhours for each resources is applicable on both the Scheduler orientation.  Within the `resourceSettings` property, the custom workdays and workhours can be defined with the following 3 properties.
+
+* Start – `Start` is used to define the work start hour for each individual resources
+* End – `End` is used to define the work end hour for each individual resources
+* WorkWeek – `WorkWeek` is used to define the working days for each individual resources
+
+**Example**: To display the Scheduler with each resources having different workhours and workdays, the code example is depicted below.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.Models;
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "", RoomId = "1", OwnerId = "5" });
+
+    <!-- Datasource for Grouping -->
+    List<String> Group = new List<String>();
+    Group.Add("Owners");
+    Group.Add("Rooms");
+
+    <!-- Datasource for Rooms -->
+    List<ResourceFields> Room = new List<ResourceFields>();
+    Room.Add(new ResourceFields { Id = "1", Text = "Room1", Color = "#f8a398", GroupId = "1" });
+    Room.Add(new ResourceFields { Id = "2", Text = "Room2", Color = "#56ca95", GroupId = "1" });
+
+    <!-- Datasource for Owners -->
+    List<ResourceFields> Owner = new List<ResourceFields>();
+    Owner.Add(new ResourceFields { Text = "Nancy", Id= "1", GroupId = "1", Color = "#ffaa00", Start = "10", End = "18", WorkWeek = new List<string> { "monday", "wednesday", "friday" } });
+    Owner.Add(new ResourceFields { Text = "Steven", Id = "3", GroupId = "2", Color = "#f8a398", Start = "6", End = "10", WorkWeek = new List<string> { "tuesday", "thursday" } });
+    Owner.Add(new ResourceFields { Text = "Michael", Id = "5", GroupId = "1", Color = "#7499e1", Start = "11", End = "15", WorkWeek = new List<string> { "sunday", "tuesday", "thursday", "saturday" } });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .Group(gr => { gr.Resources(Group); })
+        .Resources(res => {
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color").GroupId("GroupId").Start("Start").End("End").WorkWeek("WorkWeek")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("RoomId,OwnerId"))
+)
+
+{% endhighlight %}
