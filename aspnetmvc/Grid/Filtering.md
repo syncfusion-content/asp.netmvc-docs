@@ -31,10 +31,9 @@ N>  2. The default filter type is Filter bar, when `AllowFiltering` is enabled a
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -47,11 +46,10 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
             }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
-        {
+      namespace MVCSampleBrowser.Controllers
+          {
             public class GridController : Controller
               { 
                 public ActionResult GridFeatures()
@@ -62,8 +60,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -82,10 +79,9 @@ N> For `FilterType` property you can assign either `string` value ("Menu") or `e
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -99,10 +95,9 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
              }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -114,8 +109,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -144,10 +138,9 @@ You can enable excel menu by setting  `FilterType` as` Excel` in `FilterSettings
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -161,10 +154,9 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
             }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -176,8 +168,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -197,10 +188,9 @@ N> 2. `Query` of checkbox list can also be changed using excel filter events.
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -214,10 +204,9 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
              }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -229,8 +218,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -245,10 +233,9 @@ To perform filter operation with case sensitive in excel styled filter menu mode
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -262,11 +249,10 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
              }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
-        {
+     namespace MVCSampleBrowser.Controllers
+         {
             public class GridController : Controller
               { 
                 public ActionResult GridFeatures()
@@ -277,8 +263,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -431,10 +416,9 @@ You can enter the below filter expressions manually in the filter bar.
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -448,10 +432,9 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
             }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -463,8 +446,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -488,10 +470,9 @@ The filter bar message is supported only for the `FilterType` as 'FilterBar'. Th
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowFiltering()
@@ -505,11 +486,10 @@ The following code example describes the above behavior.
                 col.Field("Freight").HeaderText("Freight").Add();
             }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
-        {
+       namespace MVCSampleBrowser.Controllers
+          {
             public class GridController : Controller
               { 
                 public ActionResult GridFeatures()
@@ -518,10 +498,9 @@ The following code example describes the above behavior.
                    ViewBag.DataSource = DataSource;
                    return View();
                  }
-             }
-        } 
-{% endhighlight  %}
-    
+              }
+           } 
+{% endhighlight  %}    
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.

@@ -44,8 +44,8 @@ The following code example describes the above behavior.
             {
                 col.Field("OrderID").Add();
                 col.Field("EmployeeID").Add();   
-			    col.Field("ShipCity").Add();
-		        col.Field("ShipCountry").Add(); 
+	 	  	    col.Field("ShipCity").Add();
+	 	        col.Field("ShipCountry").Add(); 
                 col.Field("Freight").Add();    
             })
         )
