@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend | Chart | ASP.NET MVC | Syncfusion
-description: legend
+title: Chart legend| Chart  | ASP.NET MVC | Syncfusion
+description: How to cutomize the legend in Essential JavaScript Chart.
 platform: ejmvc
 control: Chart
 documentation: ug
@@ -9,244 +9,432 @@ documentation: ug
 
 # Legend
 
-Essential Chart allows you to customize its legend position, color, border, size, shape, padding, font styles, opacity etc. You can enable and disable Chart legends using legend Visible property. Default value of legendVisible property is set to “true”. 
+The legend contains the list of Chart Series and Trendlines that appear in a chart. 
 
-## Legend Title
+## Legend Visibility
 
-EJ Chart provides Legend Title support to the information about the series. It also provides options to customize the Legend Title with fonts and alignment.
+By default, the legend is enabled in the chart. You can enable or disable it by using the *Visible* option of the **Legend**.
+
+{% highlight cshtml %}
 
 
-{% highlight CSHTML %}
+@(Html.EJ().Chart("chartContainer")
 
-@(Html.EJ().Chart("chartcontainer")
+      // ...
+    
+    //Visible chart legend
+    .Legend(lg=>lg.Visible(true))
+     //...
+ )
 
-	.Legend(lg=>lg.Visible(true)).Title(lt=>lt.Text("Countries").
-    TextAlignment(TextAlignment.Center).Font(fn=>fn.Color("black").Size("12px")))     
 
-)           
-
-{% endhighlight  %}
-
-The following screenshot displays Legend Title:
+{% endhighlight %}
 
 ![](Legend_images/Legend_img1.png)
 
-Legend Title
-{:.caption}
+[Click](http://mvc.syncfusion.com/demos/web/chart/legendposition) here to view the online demo sample for legend customization.
 
-## Legend Position
 
-You can position the legend at top, bottom, left or right position of the Chart. Default value of legend position is “Bottom”.  And you can align the legend position using “Alignment” property of legend.  This allows you to align the legend at center, far and near position of Chart area.  Default value of legend alignment is “Center”. 
+## Legend title
 
-{% highlight CSHTML %}
+To add the title to the legend, you have to specify the **Legend.Title.Text** option.
 
-@(Html.EJ().Chart("chartcontainer")
+{% highlight cshtml %}
 
-// ...
 
-   .Legend(lg=>lg.Visible(true).Position(LegendPosition.Bottom)
+@(Html.EJ().Chart("chartContainer")
 
-        .Alignment(TextAlignment.Center))
+      // ...
+    
+    //Visible chart legend
+    .Legend(lg=>lg.Title(tl=>
+        //Add title to the chart legend
+        tl.Text("Countries"))
+    )
+     //...
+ )
 
-// ...
 
-   )
-
-{% endhighlight  %}
+{% endhighlight %}
 
 ![](Legend_images/Legend_img2.png)
 
-Chart with Legend position
-{:.caption}
 
-## Customization
+## Position and Align the Legend
 
-### Legend border and shape:
+By using the **Position** option, you can position the legend at *Left*, *Right*, *Top* or *Bottom* of the chart. The legend is positioned at the **Bottom** of the chart, by default.
 
-In Essential Chart, you can customize the legend shape with different symbols like rectangle, circle, cross, diamond, pentagon, hexagon, star, ellipse, triangle etc. Default value of legend “Shape” is “Rectangle”. And you can draw and customize the outline of Chart legends using border property of legend. Default value of legend border color is “Transparent”. 
+{% highlight cshtml %}
 
-{% highlight CSHTML %}
 
-@(Html.EJ().Chart("chartcontainer")
+@(Html.EJ().Chart("chartContainer")
 
-// ...
+      // ...
+    
+    .Legend(lg=>lg.
+        //...
+        //Place the legend at top of the chart        
+        Position(LegendPosition.Top)
+    )
+     //...
+ )
 
-    .Legend(lg=>lg.Visible(true).Border(br=>br.Color("red").Width(2))
 
-       .Shape(ChartShape.Circle))
-
-// ...
-
-   )
-
-{% endhighlight  %}
+{% endhighlight %}
 
 ![](Legend_images/Legend_img3.png)
 
-Chart with customized Legend border and shape
-{:.caption}
+**Legend Alignment**
 
-### Legend RowCount and ColumnCount:
+You can align the legend to the *Center*, *Far* or *Near* based on its position by using the **Alignment** option.
 
-Essential Chart allows you to display the legend items for row and column wise using “RowCount” and “ColumnCount” property. This is used to avoid overlapping between legends and Chart area when using more legends in Chart area.
-
-{% highlight CSHTML %}
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer")
+@(Html.EJ().Chart("chartContainer")
 
-// ...
+      // ...
+    
+    .Legend(lg=>lg.
+        //...
+        //The below two settings will place the legend at the top-right corner of the chart.
+        Position(LegendPosition.Top)
+        .Alignment(Syncfusion.JavaScript.DataVisualization.TextAlignment.Far)
+    )
+     //...
+ )
 
-.Legend(lg=>lg.Visible(true).RowCount(2))
-
-// ...
-
-)
 
 {% endhighlight %}
 
 ![](Legend_images/Legend_img4.png)
 
-Chart with customized Legend RowCount and ColumnCount
-{:.caption}
+## Arrange legend items in the rows and columns
 
-### Legend item style and border customization:
+You can arrange the legend items horizontally and vertically by using the **RowCount** and **ColumnCount** options of the legend.
 
-Essential Chart allows you to customize the legend item size, and border color and width using “ItemStyle” property. Default value of legend item size is (10, 10), and legend item border color is “Transparent”.
+* When only the RowCount is specified, the legend items are arranged according to the RowCount and number of columns may vary based on the number of legend items.
 
+* When only the ColumnCount is specified, the legend items are arranged according to the ColumnCount and number of rows may vary based on the number of legend items.
 
-{% highlight CSHTML %}
+* When both the options are specified, then the one which has higher value is given preference. For example, when the RowCount is 4 and ColumnCount is 3, legend items are arranged in 4 rows.
 
-@(Html.EJ().Chart("chartcontainer")
+* When both the options are specified and have the same value, the preference is given to the ColumnCount when it is positioned at the top/bottom position. The preference is given to the RowCount when it is positioned at the left/right position.
+ 
 
-// ...
-
-  .Legend(lg=>lg.Visible(true).RowCount(2).ItemStyle(it=>it.Height(12).Width(12)
-
-  .Border(br=>br.Color("magenta").Width(1.5))))
-
-// ...
-
-     )
+{% highlight cshtml %}
 
 
-{% endhighlight  %}
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Arrange legend items in 4 rows and approximately 4 columns. Column couldn’t may vary based on number of items.
+        .RowCount(4)
+        .ColumnCount(4)
+    )
+     //...
+ )
+
+
+{% endhighlight %}
 
 ![](Legend_images/Legend_img5.png)
 
-Chart with Legend item size and border customization
-{:.caption}
+## Customization
 
-### Legend font
+### Legend shape
 
-You can customize the legend font family, font style, font weight and size and font styles using “Font” property of Legend. This is illustrated in the following code example.
+To change the legend icon shape, you have to specify the shape in the **Shape** property of the legend. When you want the legend icon to display the prototype of the series, you have to set the **SeriesType** as shape.
+
+{% highlight cshtml %}
 
 
-{% highlight CSHTML %}
+@(Html.EJ().Chart("chartContainer")
 
-@(Html.EJ().Chart("chartcontainer")
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Change legend shape
+        .Shape(ChartShape.SeriesType)
+    )
+     //...
+ )
 
-// ...
 
-     .Legend(lg=>lg.Visible(true).Font(fn=>fn.FontFamily("Segoe UI")
-
-     .FontStyle(ChartFontStyle.Normal).FontWeight(ChartFontWeight.Regular).Size("15px"))
-
-     .RowCount(2).Border(br=>br.Color("red").Width(2)).Shape(ChartShape.Circle))
-
-// ...
-
-      )
-
-{% endhighlight  %}
+{% endhighlight %}
 
 ![](Legend_images/Legend_img6.png)
 
-Chart with Customized Legend Font
-{:.caption}
+### Legend items size and border
 
-### Legend opacity and item padding:
+You can change the size of the legend items by using the *ItemStyle.Width* and *ItemStyle.Height* options. To change the legend item border, use **Border** option of the legend ItemStyle.
 
-Essential Chart allows you to set “Opacity” for Chart legends. And you can define the spacing between the legend items using “ItemPadding” property of legend. Default value of ItemPadding size is 10.
+{% highlight cshtml %}
 
 
-{% highlight CSHTML %}
+@(Html.EJ().Chart("chartContainer")
 
-@(Html.EJ().Chart("chartcontainer")
-
-//...
-
-    .Legend(lg=>lg.Visible(true).Opacity(1.5).ItemPadding(20)
-
-       .ItemStyle(it=>it.Height(12).Width(12).Border(br=>br.Color("magenta")
-
-       .Width(1.5))))
-
-// ...
-
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Change legend items border, height and width
+        .ItemStyle(itm=>itm.Width(13).Height(13).Border(br=>br.Width(1).Color("#FF0000")))
+    )
+     //...
  )
 
 
-{% endhighlight  %}
+{% endhighlight %}
+
 ![](Legend_images/Legend_img7.png)
 
-Chart with customized Legend Opacity and Item Padding
-{:.caption}
+### Legend size
 
-### Scrollbar for legends:
+By default, legend takes 20% of the **Height** horizontally when it was placed on the top or bottom position and 20% of the **Width** vertically while placing on the left or right position of the chart. You can change this default legend size by using the **Size** option of the legend.  
 
-Essential Chart allows you to customize the legend height and width using size property. Default value of the height and width are null and it varies depending upon the legend position. If the legend is in top or bottom of the chart, default value of height is 20% of chart height and width is 100% of chart width. Similarly if it is in the left or right side of the chart, default value of height is 100% of chart height and width is 20% of chart width.
-
-This property supports both pixels and percentage values. E.g. 100 or 10%.
-
-Scrollbar is enabled for the legends, when the legend size is greater than the user specified value or than the default value of the legend size. 
-{% highlight CSHTML %}
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer")
+@(Html.EJ().Chart("chartContainer")
 
-        // ...
-
-        .CommonSeriesOptions(series=>series.Type(CSeriesType.Pie))
-
-        .Size(sz=>sz.Height(‘600’).Width(‘800’))
-
-        .Legend(lg=>lg.Visible(true).Shape(ChartShape.Circle).ColumnCount(2)
-
-                . Size(size=>size.Height(‘25%’).Width(‘150’)))                 	 // ...
-
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Change legend size
+        .Size(sz=>sz.Height("100").Width("550"))
+    )
+     //...
  )
 
-{% endhighlight  %}
 
-![](Legend_images/Legend_img8.jpeg)
+{% endhighlight %}
 
-Legends with scroll bar
-{:.caption}
+![](Legend_images/Legend_img8.png)
 
-### Custom Legend Icons:
+### Legend Item Padding
 
-You can customize the shape of the legend icon. Normally the available shapes are circle, rectangle, star, wedge, uparrow, downarrow, pentagon, etc. By default, the shape of the legend icon is rectangle, you can modify this by setting Shape property of Legend. If you want series type as icon then set the Shape property value as “SeriesType”. You can customize the height and width of the icon by setting ItemStyle property
-{% highlight CSHTML %}
+You can control the spacing between the legend items by using the **ItemPadding** option of the legend.  The default value is 10. 
 
-@(Html.EJ().Chart("chartcontainer")
-
-// ...
-
-   .Legend(lg=>lg.Visible(true).Position(LegendPosition.Bottom)
-
-           .Shape(ChartShape.SeriesType) .ItemStyle(item=>item.Height(15)
-
-           .Width(15)))
-
-// ...
-
-   )
+{% highlight cshtml %}
 
 
-{% endhighlight  %}
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Add space between each legend item
+        .ItemPadding(15)
+    )
+     //...
+ )
+
+
+{% endhighlight %}
 
 ![](Legend_images/Legend_img9.png)
 
-Customized Legend Icon
-{:.caption}
+### Legend border
+
+You can customize the legend border by using the **Border** option in the legend. 
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Set border color and width to legend
+        .Border(br=>br.Color("#FFC342").Width(2))
+    )
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Legend_images/Legend_img10.png)
+
+### Scrollbar for legend
+
+You can enable or disable the legend scrollbar by using the **EnableScrollbar** option of the legend. When you disable the scrollbar option, the legend does not consider the default size and chart draws in the reaming space. The default value of EnableScrollbar option is **True**.  
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Enable scrollbar option in for legend
+        .EnableScrollbar(true)
+        .Size(sz=>sz.Width("430").Height("80"))
+    )
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Legend_images/Legend_img11.png)
+
+### Customize the legend text
+
+To customize the legend item text and title you can use the **Legend.Font** and **Legend.Title** options. You can change the legend title alignment by using the TextAlignment option of the legend title.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+        //...
+        //Customize the legend item text
+        .Font(fnt=>fnt.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Normal)
+            .FontWeight(ChartFontWeight.Bold).Size("15px"))
+        .Title(tl=>tl
+            .TextAlignment(Syncfusion.JavaScript.DataVisualization.TextAlignment.Center)
+            //Customize the legend title text
+            .Font(fnt=>fnt.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Italic)
+                .FontWeight(ChartFontWeight.Bold).Size("12px"))
+        )
+    )
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Legend_images/Legend_img12.png)
+
+### LegendItems Text Overflow
+
+**Trim**
+
+You can trim the legend item text when its width exceeds the **Legend.TextWidth**, by specifying *TextOverflow* as **Trim**. The original text will be displayed on mouse hover.
+
+{% highlight cshtml %}
+
+      @(Html.EJ().Chart("container") 
+         // ... 
+
+         //trim the legend text  
+         .Legend(lg=>lg.Visible(true).TextOverflow(TextOverflow.Trim)
+                 .TextWidth(34))
+         // ... 
+
+       )
+
+{% endhighlight %}
+
+![](Legend_images/Legend_img13.png)
+
+
+**Wrap**
+
+By specifying *TextOverflow* as **Wrap**, you can wrap the legend text by word.
+
+![](Legend_images/Legend_img14.png)
+
+**WrapTrim**
+
+You can wrap and trim the legend text by specifying *TextOverflow* as **WrapTrim**. The original text will be displayed on mouse hover.
+
+![](Legend_images/Legend_img15.png)
+
+
+## Handle the legend item clicked
+
+You can get the legend item details such as *Index*, *Bounds*, *Shape* and *Series* by subscribing the **LegendItemClick** event on the chart. When the legend item is clicked, it triggers the event and returns the Legend information. 
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+       .Visible(true)
+        //...       
+    )
+     //Subscribe the legenditem click event
+     .LegendItemClick("onlegendclicked")
+ )
+        
+     function onlegendclicked(sender) {
+        //Get legend item details on legend item click.
+        var legendItem = sender.data;
+      }
+
+{% endhighlight %}
+
+
+## Series selection on legend item click
+
+You can select a specific series or point while clicking on the corresponding legend item through disabling the **ToggleSeriesVisibility** option of the legend. The default value of toggleSeriesVisibility option is **True**. To customize the series selection refer to the series Selection.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+    .Legend(lg=>lg
+       //Disable series collapsing on legend item clicked
+       .ToggleSeriesVisibility(false)
+        //...       
+    )
+     //...
+ )
+      
+
+{% endhighlight %}
+
+![](Legend_images/Legend_img16.png)
+
+
+## Collapsing legend item
+
+You can collapse the specific series/point legend item displaying in the chart, by setting the **VisibleOnLegend** as *Hidden* in the point or series.
+
+{% highlight cshtml %}
+
+
+     @(Html.EJ().Chart("chartContainer")
+	   // ...              
+        . Series(sr =>{
+
+             //Initializing Series
+             sr.Points(pt => {
+                 pt.X("Albania").Y(60.1).Add();
+                 //...
+                 //Collapse the point's legend item in the legend collection
+                 pt.X("New Zealand").Y(82.8).VisibleOnLegend(VisibleOnLegend.Hidden).Add(); 
+             })// visible the EmptyPointSettings
+             .EmptyPointSettings(e => e.Visible(true)).Add();                     
+             // ...
+         })
+     .Legend(lg=>lg.Visible(true))
+       // ...
+    )
+      
+{% endhighlight %}
+
+![](Legend_images/Legend_img17.png)
+
