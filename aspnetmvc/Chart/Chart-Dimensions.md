@@ -74,7 +74,7 @@ You can specify the chart size in percentage by using the Size property. The cha
 
 ## Responsive chart
 
-To resize the Chart when the browser or the chart container is resized, set the **CanResize** property to **True**, where the chart adapts to the changes in size of the container.
+To resize the Chart when the browser or the chart container is resized, set the **IsResponsive** property to **True**, where the chart adapts to the changes in size of the container.
 
 {% highlight cshtml %}
 
@@ -82,8 +82,8 @@ To resize the Chart when the browser or the chart container is resized, set the 
 
       // ...
          
-     //Enable canResize to change the chart size dynamically.
-     .CanResize(true)
+     //Enable IsResponsive to change the chart size dynamically.
+     .IsResponsive(true)
  )
 
 {% endhighlight %} 
