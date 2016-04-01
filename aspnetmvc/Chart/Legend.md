@@ -350,9 +350,9 @@ By specifying *TextOverflow* as **Wrap**, you can wrap the legend text by word.
 
 ![](Legend_images/Legend_img14.png)
 
-**WrapTrim**
+**WrapAndTrim**
 
-You can wrap and trim the legend text by specifying *TextOverflow* as **WrapTrim**. The original text will be displayed on mouse hover.
+You can wrap and trim the legend text by specifying *TextOverflow* as **WrapAndTrim**. The original text will be displayed on mouse hover.
 
 ![](Legend_images/Legend_img15.png)
 

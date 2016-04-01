@@ -579,25 +579,25 @@ To customize the highlighted series, use the *Color*, *Border* and *Opacity* opt
 
 EjChart provides pattern support for highlighting the data by setting the value to the **Pattern** property of the HighlightSettings. The different types of highlight patterns are as follows.
 
-1.	chessboard
-2.	crosshatch
-3.	dots
-4.	packman
-5.	grid
-6.	turquoise
-7.	star
-8.	triangle
-9.	circle
-10.	tile
-11.	horizontalDash
-12.	verticalDash
-13.	rectangle
-14.	box
-15.	verticalStripe
-16.	horizontalStripe
-17.	bubble
-18.	diagonalBackward
-19.	diagonalForward
+1.	Chessboard
+2.	Crosshatch
+3.	Dots
+4.	Pacman
+5.	Grid
+6.	Turquoise
+7.	Star
+8.	Triangle
+9.	Circle
+10.	Tile
+11.	HorizontalDash
+12.	VerticalDash
+13.	Rectangle
+14.	Box
+15.	VerticalStripe
+16.	HorizontalStripe
+17.	Bubble
+18.	DiagonalBackward
+19.	DiagonalForward 
 
 {% highlight cshtml %}
 
@@ -685,7 +685,7 @@ N> When mouse is clicked on the data points, the corresponding series legend als
 
 ### Selection Mode
 
-You can set three different selection mode for highlighting the data point and series by using the **Mode** property of the SelectionSettings.
+You can set four different selection mode for highlighting the data point and series by using the **Mode** property of the SelectionSettings.
 
 * Series
 * Points
@@ -911,25 +911,25 @@ To customize the selection styles, use the *Color*, *Border* and *Opacity* optio
 
 EjChart provides pattern support for the data selection by setting the value to the **Pattern** property of the SelectionSettings. The different types of selection patterns are as follows.
 
-1.	chessboard
-2.	crosshatch
-3.	dots
-4.	packman
-5.	grid
-6.	turquoise
-7.	star
-8.	triangle
-9.	circle
-10.	tile
-11.	horizontalDash
-12.	verticalDash
-13.	rectangle
-14.	box
-15.	verticalStripe
-16.	horizontalStripe
-17.	bubble
-18.	diagonalBackward
-19.	diagonalForward
+1.	Chessboard
+2.	Crosshatch
+3.	Dots
+4.	Pacman
+5.	Grid
+6.	Turquoise
+7.	Star
+8.	Triangle
+9.	Circle
+10.	Tile
+11.	HorizontalDash
+12.	VerticalDash
+13.	Rectangle
+14.	Box
+15.	VerticalStripe
+16.	HorizontalStripe
+17.	Bubble
+18.	DiagonalBackward
+19.	DiagonalForward 
 
 {% highlight cshtml %}
 

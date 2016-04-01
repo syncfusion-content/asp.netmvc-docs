@@ -42,7 +42,7 @@ The Data points that uses the **null** or **undefined** as value are considered 
 
 ## EmptyPointSettings
 
-You can customize the empty points visibility and change its **DisplayMode** *(gap, zero and average)* using *EmptyPointSettings* option.
+You can customize the empty points visibility and change its **DisplayMode** *(Gap, Zero and Average)* using *EmptyPointSettings* option.
 
 {% highlight cshtml %}
 
