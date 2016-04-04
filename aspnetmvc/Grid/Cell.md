@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cells | Grid | ASP.NET MVC | Syncfusion
-description: cells
+title: Cell with Grid widget for Syncfusion Essential MVC
+description: How to use and customize the grid cells
 platform: ejmvc
 control: Grid
 documentation: ug
@@ -22,9 +22,7 @@ Three types of `WrapMode` are available and they are,
  3. Content 
  
 N> 1. By default the `WrapMode` will be set as `Both`. 
-
 N> 2. While using `TextWrapSettings` then it is must to set `AllowTextWrap` as `true`.
-
 N> 3. For `WrapMode` property you can assign `enum` value (`Syncfusion.JavaScript.WrapMode.Both`).
  
 ## Both
@@ -35,9 +33,9 @@ The following code example describes the above behavior.
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowTextWrap()
@@ -51,23 +49,21 @@ The following code example describes the above behavior.
                 col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-            }
-        }
-    }   
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controlle
+           { 
+             public ActionResult GridFeatures()
+               {
+                  var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                  ViewBag.DataSource = DataSource;
+                  return View();
+               }
+           }
+        }   
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -81,10 +77,9 @@ When `WrapMode` of `TextWrapSettings` property set as `Header` then the auto wra
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowTextWrap()
@@ -98,23 +93,21 @@ The following code example describes the above behavior.
                 col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-            }
-        }
-    }   
+      namespace MVCSampleBrowser.Controllers
+        {
+         public class GridController : Controller
+           { 
+             public ActionResult GridFeatures()
+              {
+                  var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                  ViewBag.DataSource = DataSource;
+                  return View();
+              }
+           }
+        }   
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -128,10 +121,9 @@ When `WrapMode` of `TextWrapSettings` property set as `Content` then the auto wr
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .AllowTextWrap()
@@ -145,23 +137,21 @@ The following code example describes the above behavior.
                 col.Field("ShipAddress").HeaderText("Ship Address").Width(100).Add();
             }))
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-            }
-        }
-    }   
+      namespace MVCSampleBrowser.Controllers
+        {
+          public class GridController : Controller
+            { 
+              public ActionResult GridFeatures()
+                {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                }
+             }
+          }   
 {% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -177,10 +167,9 @@ You can merge the rows and cells of grid, using `rowMerge`, `colMerge` and `merg
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .AllowCellMerging()
@@ -193,38 +182,37 @@ The following code example describes the above behavior.
                     col.Field("Freight").Add();
                 })
                 .ClientSideEvents(eve => { eve.MergeCellInfo("mergeCellInfo"); })
-                )
+               )
+{% endhighlight  %}
+{% highlight c# %}
 
-    <script type="text/javascript">
-        
-        function mergeCellInfo(args)
+       namespace MVCSampleBrowser.Controllers
         {
+         public class GridController : Controller
+           { 
+            public ActionResult GridFeatures()
+              {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.DataSource = DataSource;
+                return View();
+               }
+            }
+          }
+{% endhighlight  %}
+{% highlight c# %}
+
+     <script type="text/javascript">         
+        function mergeCellInfo(args)
+         {
             if (args.column.field == "EmployeeID" && args.data.OrderID == 10248)
                 args.rowMerge(3);
             else if (args.column.field == "ShipCity" && args.data.OrderID == 10252)
                 args.colMerge(3);
             else if (args.column.field == "ShipCity" && args.data.OrderID == 10255)
                 args.merge(0, 3);
-        }
+         }
     </script>
 {% endhighlight  %}
-
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-            {
-            public class GridController : Controller
-                { 
-                public ActionResult GridFeatures()
-                    {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.DataSource = DataSource;
-                        return View();
-                    }
-                }
-            }
-{% endhighlight  %}
-
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -243,10 +231,9 @@ You can use JsRender syntax in the template.For more information about JsRender 
 The following code example describes the above behavior.
 
 {% tabs %}
+{% highlight razor %}
 
-{% highlight CSHTML %}
-
-    @(Html.EJ().Grid<Object>("FlatGrid")
+      @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -257,25 +244,23 @@ The following code example describes the above behavior.
                     col.Field("ShipCity").CustomAttributes(custom => { custom.AddAttribute("title","'{{"{{"}}:ShipCity {{}}}}'"); }).Add();
                     col.Field("ShipCountry").Add(); 
                 })
-                )
+               )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
+            public ActionResult GridFeatures()
+             {
                 var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
                 ViewBag.DataSource = DataSource1;
                 return View();
             }
-        }
-    }
+          }
+       }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -290,9 +275,9 @@ The following code example describes the above behavior.
 
 {% tabs %}
 
-{% highlight CSHTML %}
+{% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+       @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -302,25 +287,23 @@ The following code example describes the above behavior.
                     col.Field("EmployeeID").HeaderText("<div>Employee ID</div>").disableHtmlEncode(false).Add();
                     col.Field("ShipCountry").Add(); 
                 })
-                )
+               )
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-    namespace MVCSampleBrowser.Controllers
-    {
-    public class GridController : Controller
-        { 
-        public ActionResult GridFeatures()
-            {
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          { 
+            public ActionResult GridFeatures()
+             {
                 var DataSource1 = new NorthwindDataContext().OrdersViews.ToList();
                 ViewBag.DataSource = DataSource1;
                 return View();
-            }
-        }
-    }
+             }
+          }
+       }
 {% endhighlight  %}
-
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -336,14 +319,14 @@ When you move the cursor over the particular cell it provides an information abo
 
 Html templates can be specified in the `Tooltip` property of the particular column cell as a string (HTML element) or ID of the template's HTML element.You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "this link"). 
 
-N> It's a standard way to enclose the template within the `script` tag with `type` as "text/x-jsrender".
- 
+N> It's a standard way to enclose the template within the `script` tag with `type` as "text/x-jsrender". 
 N> The `Tooltip` template must contain `value` property to bind the corresponding cell text in tooltip
  
 The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
+ 
  @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
@@ -356,24 +339,26 @@ The following code example describes the above behavior.
                 })
                 )
 {% endhighlight  %}
-{% highlight js %}
-<script type="text/template" id="colTip">
-    {{"{{"}}:value{{}}}}
-</script>
-{% endhighlight  %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
-        {
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
            public ActionResult DetailTemplate()
                {
-                      var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                      ViewBag.datasource = DataSource;
-                      return View();
-               }
+                  var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                  ViewBag.datasource = DataSource;
+                  return View();
+                }
+           }
         }
-  }
+{% endhighlight  %}
+{% highlight js %}
+
+     <script type="text/template" id="colTip">
+          {{"{{"}}:value{{}}}}
+      </script>
 {% endhighlight  %}
 {% endtabs %}
 
@@ -385,7 +370,7 @@ The following output is displayed as a result of the above code example.
 
 When the cell value contains a long text that is not fit into the grid column cell, the `ClipMode` property is used. By using the `ClipMode`, the cell value will be displayed with ellipsis or with clipped content when the text overflows inside a column cell.
 
-N> 1. By default the `ClipMode` will be set as `Clip`. 
+N> By default the `ClipMode` will be set as `Clip`. 
 
 **List of types**
   
@@ -401,7 +386,8 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
- @(Html.EJ().Grid<Object>("FlatGrid")
+
+     @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -414,18 +400,19 @@ The following code example describes the above behavior.
                 )
 {% endhighlight  %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
-        {
-           public ActionResult DetailTemplate()
-               {
-                      var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                      ViewBag.datasource = DataSource;
-                      return View();
-               }
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
+          public ActionResult DetailTemplate()
+            {
+               var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+               ViewBag.datasource = DataSource;
+                return View();
+             }
+          }
         }
-  }
 {% endhighlight  %}
 {% endtabs %}
 
@@ -442,7 +429,8 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
- @(Html.EJ().Grid<Object>("FlatGrid")
+
+     @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -455,18 +443,19 @@ The following code example describes the above behavior.
                 )
 {% endhighlight  %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
-        {
-           public ActionResult DetailTemplate()
-               {
-                      var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                      ViewBag.datasource = DataSource;
-                      return View();
-               }
-        }
-  }
+
+      namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+          {
+            public ActionResult DetailTemplate()
+             {
+                  var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                  ViewBag.datasource = DataSource;
+                  return View();
+              }
+          }
+       }
 {% endhighlight  %}
 {% endtabs %}
 
@@ -484,7 +473,8 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
- @(Html.EJ().Grid<Object>("FlatGrid")
+
+      @(Html.EJ().Grid<Object>("FlatGrid")
                 .Datasource((IEnumerable<object>)ViewBag.DataSource)
                 .AllowPaging()
                 .Columns(col =>
@@ -496,24 +486,26 @@ The following code example describes the above behavior.
                 })
                 )
 {% endhighlight  %}
-{% highlight js %}
-<script type="text/template" id="colTip">
-    {{"{{"}}:value{{}}}}
-</script>
-{% endhighlight  %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
-        {
-           public ActionResult DetailTemplate()
-               {
-                      var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                      ViewBag.datasource = DataSource;
-                      return View();
-               }
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
+          public ActionResult DetailTemplate()
+            {
+               var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+             }
+          }
         }
-  }
+{% endhighlight  %}
+{% highlight js %}
+
+      <script type="text/template" id="colTip">
+          {{"{{"}}:value{{}}}}
+      </script>
 {% endhighlight  %}
 {% endtabs %}
 

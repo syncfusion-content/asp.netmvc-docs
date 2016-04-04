@@ -26,10 +26,9 @@ N> For `ToolbarItems` property you can assign either `string` value ("Add") or `
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -53,10 +52,9 @@ The following code example describes the above behavior.
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
               }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -68,15 +66,14 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
 
 ![](Editing_images/Editing_img1.png)
 
-## Cell edit type and its editoptions
+## Cell edit type and its edit options
 
 The edit type of bound column can be customized using `EditType` property of `Columns`. The following Essential JavaScript controls are supported inbuilt by `EditType`. You can set the `EditType` based on specific data type of the column. 
 
@@ -118,10 +115,9 @@ N> 2. For `EditType` property you can assign either `string` value ("Numeric") o
 The following code example describes the above behavior 
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -148,10 +144,9 @@ The following code example describes the above behavior
 
                 }))      
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -163,8 +158,7 @@ The following code example describes the above behavior
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -210,9 +204,23 @@ The following code example describes the above behavior.
                 
               })) 
               
+{% endhighlight  %}  
+{% highlight c# %}
+
+     namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
 {% endhighlight  %}
-            
-{% highlight js %}
+ {% highlight js %}
 
      <script id="template" type="text/x-jsrender">
         function create() 
@@ -233,24 +241,7 @@ The following code example describes the above behavior.
     
     </script>
     
-{% endhighlight %}
-
-{% highlight c# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-              { 
-                public ActionResult GridFeatures()
-                 {
-                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                   ViewBag.DataSource = DataSource;
-                   return View();
-                 }
-             }
-        } 
-{% endhighlight  %}
-    
+{% endhighlight %}   
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -297,10 +288,9 @@ The following code example describes the above behavior.
                }))      
 
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -328,7 +318,6 @@ Set `EditMode` as `InlineForm`, then edit form will be inserted next to the row 
 The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
@@ -356,10 +345,9 @@ The following code example describes the above behavior.
                 }))      
 
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -371,8 +359,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -401,7 +388,7 @@ The following code example describes the above behaviour.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .ClientSideEvents(eve => { eve.ActionComplete("complete"); })
@@ -426,7 +413,21 @@ The following code example describes the above behaviour.
               }))  
  
 {% endhighlight  %} 
-            
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}            
 {% highlight js %}			  
     
 <script id="template" type="text/template">                             
@@ -468,24 +469,7 @@ The following code example describes the above behaviour.
               }
         </script>
 			  
-{% endhighlight  %}
-
-{% highlight c# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-              { 
-                public ActionResult GridFeatures()
-                 {
-                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                   ViewBag.DataSource = DataSource;
-                   return View();
-                 }
-             }
-        } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -509,7 +493,7 @@ The following code example describes the above behavior.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().EditMode(EditMode.Dialog); })
@@ -534,10 +518,9 @@ The following code example describes the above behavior.
                }))      
 
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -549,8 +532,7 @@ The following code example describes the above behavior.
                  }
              }
         } 
-{% endhighlight  %}
-    
+{% endhighlight  %}    
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -575,10 +557,9 @@ N> 3. For `EditMode` property you can assign either `string` value (`DialogTempl
 The following code example describes the above behaviour.
 
 {% tabs %}
-
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .ClientSideEvents(eve => { eve.ActionComplete("complete"); })
@@ -602,7 +583,21 @@ The following code example describes the above behaviour.
                      
               }))  
 {% endhighlight  %}
-              
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}               
 {% highlight js %} 		  
     
  <script id="template" type="text/template">
@@ -644,24 +639,7 @@ The following code example describes the above behaviour.
               }
         </script>
 			  
-{% endhighlight  %}
-
-{% highlight c# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-              { 
-                public ActionResult GridFeatures()
-                 {
-                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                   ViewBag.DataSource = DataSource;
-                   return View();
-                 }
-             }
-        } 
-{% endhighlight  %}
-    
+{% endhighlight  %}   
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -774,10 +752,9 @@ The following code example describes the above behavior.
              }))      
 
 {% endhighlight  %}
-
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -841,7 +818,21 @@ The following code example describes the above behaviour.
 				   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
               }))  
 {% endhighlight  %}
-              
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+             }
+        } 
+{% endhighlight  %}
 {% highlight js %}              
 			  
   <script id="template" type="text/template">
@@ -883,24 +874,7 @@ The following code example describes the above behaviour.
               }
         </script>
 			  
-{% endhighlight  %}
-
-{% highlight c# %}
-
-    namespace MVCSampleBrowser.Controllers
-        {
-            public class GridController : Controller
-              { 
-                public ActionResult GridFeatures()
-                 {
-                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                   ViewBag.DataSource = DataSource;
-                   return View();
-                 }
-             }
-        } 
-{% endhighlight  %}
-    
+{% endhighlight  %}   
 {% endtabs %} 
 
 The following output is displayed as a result of the above code example.
@@ -951,7 +925,6 @@ The following code example describes the above behavior.
                }))      
 
 {% endhighlight  %}
-
 {% highlight c# %}
 
     namespace MVCSampleBrowser.Controllers
@@ -987,7 +960,7 @@ The following code example describes the above behavior.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().EditMode(EditMode.Batch).ShowConfirmDialog(); })
@@ -1015,7 +988,7 @@ The following code example describes the above behavior.
 
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -1047,7 +1020,7 @@ The following code example describes the above behavior.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<Object>("FlatGrid")
+     @(Html.EJ().Grid<Object>("FlatGrid")
             .Datasource((IEnumerable<object>)ViewBag.DataSource)
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().ShowDeleteConfirmDialog(); })
@@ -1075,7 +1048,7 @@ The following code example describes the above behavior.
 
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 
@@ -1828,7 +1801,7 @@ The following code example describes the above behavior.
 
 {% highlight c# %}
 
-    namespace MVCSampleBrowser.Controllers
+     namespace MVCSampleBrowser.Controllers
         {
             public class GridController : Controller
               { 

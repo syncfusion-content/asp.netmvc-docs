@@ -15,11 +15,12 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
-@(Html.EJ().Grid<OrdersView>("FlatGrid")
-        .Datasource((IEnumerable<object>)ViewBag.datasource)
-        .AllowPaging()   
-        .EnableRowHover(true)        
-        .Columns(col =>
+
+     @(Html.EJ().Grid<OrdersView>("FlatGrid")
+         .Datasource((IEnumerable<object>)ViewBag.datasource)
+         .AllowPaging()   
+         .EnableRowHover(true)        
+         .Columns(col =>
           {
              col.Field("OrderID").Add();
              col.Field("EmployeeID").Add();
@@ -29,18 +30,19 @@ The following code example describes the above behavior.
         }))
 {% endhighlight %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
+
+     namespace MVCSampleBrowser.Controllers
       {
-          public ActionResult Default()
-                {
-                    var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.datasource = DataSource;
-                        return View();
-                 }
-       }
-  }
+       public class GridController : Controller
+        {
+         public ActionResult Default()
+          {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+           }
+        }
+      }
 {% endhighlight  %}
 {% endtabs %} 
 The following output is displayed as a result of the above code example.
@@ -48,6 +50,7 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img1.png)
 
 ## Details Template
+
 It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the `DetailsTemplate` property. And also you can change HTML elements in detail template row into JavaScript controls using `DetailsDataBound ` event.
 
 On enabling details template, new column will be added in grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
@@ -58,7 +61,8 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight  razor %}
-@(Html.EJ().Grid<EmployeeView>("DetailTemplate")
+
+   @(Html.EJ().Grid<EmployeeView>("DetailTemplate")
           .Datasource((IEnumerable<object>)ViewBag.datasource)
           .DetailsTemplate("#tabGridContents")
           .ClientSideEvents(eve => { eve.DetailsDataBound("detailGridData"); })
@@ -70,13 +74,29 @@ The following code example describes the above behavior.
                      col.Field("City").Add();
                      col.Field("Country").Add();
                 })
-)
+               )
+{% endhighlight  %}
+{% highlight c# %}
+
+     namespace MVCSampleBrowser.Controllers
+       {
+         public class GridController : Controller
+           { 
+             public ActionResult DetailTemplate()
+               {
+                   var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                }
+           }
+      }
 {% endhighlight  %}
 {% highlight js %}
-<script id="tabGridContents" type="text/x-jsrender">
-       <div class="tabcontrol" id="Test">
+
+   <script id="tabGridContents" type="text/x-jsrender">
+        <div class="tabcontrol" id="Test">
                   <ul>
-                         <li><a href="#gridTab{{"{{"}}:EmployeeID {{}}}}">Stock Grid</a></li>
+                      <li><a href="#gridTab{{"{{"}}:EmployeeID {{}}}}">Stock Grid</a></li>
                   </ul>
              <div id="gridTab{{"{{"}}:EmployeeID {{}}}}">
                   <div id="detailGrid">
@@ -104,26 +124,13 @@ The following code example describes the above behavior.
 }
 </script>
 {% endhighlight  %}
-{% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-     public class GridController : Controller
-        {
-           public ActionResult DetailTemplate()
-               {
-                      var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
-                      ViewBag.datasource = DataSource;
-                      return View();
-               }
-        }
-  }
-{% endhighlight  %}
 {% endtabs %}
 The following output is displayed as a result of the above code example.
 
 ![](Row_images/Row_img2.png)
 
 ## Row Template
+
 Row template enables you to set the customized look and behavior to grid all rows. `RowTemplate` property can be used bind the `id` of HTML template.
 The following code example describes the above behavior.
 
@@ -215,13 +222,15 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img3.png)
 
 ## Alternate row styling
+
 Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using `EnableAltRow` property. 
 
 By default its value is `true`, so the following code example describes the how to turn off alternate row behavior.
 
 {% tabs %}
 {% highlight  razor %}
-@(Html.EJ().Grid<OrdersView>("Grid")
+
+   @(Html.EJ().Grid<OrdersView>("Grid")
          .Datasource((IEnumerable<object>)ViewBag.datasource)
          .AllowPaging()
          .EnableAltRow(false)
@@ -236,18 +245,19 @@ By default its value is `true`, so the following code example describes the how 
 )
 {% endhighlight  %}
 {% highlight c# %}
-namespace MVCSampleBrowser.Controllers
-  {
-    public class GridController : Controller
-        {
-        public ActionResult Default()
-                {
-                        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                        ViewBag.datasource = DataSource;
-                        return View();
-                }
-         }
-  }
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
+           public ActionResult Default()
+            {
+               var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+               ViewBag.datasource = DataSource;
+               return View();
+            }
+        }
+     }
 {% endhighlight  %}
 {% endtabs %} 
 The following output is displayed as a result of the above code example.

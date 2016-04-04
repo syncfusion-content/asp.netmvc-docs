@@ -107,33 +107,7 @@ Apart from default pager, there is an option to render a specific custom templat
 The following code example describes the above behavior.
 
 {% tabs %} 
-{% highlight js %}
 
-         <script id="template" type="text/x-jsrender">
-            <input id="currentPage" type="text" style="text-align: center; width: 32px; height: 21px; background: white;" value="1" />
-            <label>of 200</label>
-            <button id="btn">Go to</button>
-         </script>
-          <script>
-            function create(args) {
-                     $("#btn").ejButton({
-                       click : "btnClick"
-                         });
-                       }
-             function btnClick(args) {
-                     var val = $("#currentPage").val();
-                     var gridObj = $("#Grid").data("ejGrid");
-                      gridObj.gotoPage(args.val);
-                     }
-           </script>
-{% endhighlight  %}
-{% highlight css %}
-
-     .e-grid .e-pager .e-pagercontainer {
-	       border-width: 0px;
-	       overflow: visible;
-         }         
-{% endhighlight  %} 
 {% highlight razor %}
 
         @(Html.EJ().Grid<OrdersView>("Paging")
@@ -166,6 +140,33 @@ The following code example describes the above behavior.
      }
 
 {% endhighlight  %}
+{% highlight js %}
+
+         <script id="template" type="text/x-jsrender">
+            <input id="currentPage" type="text" style="text-align: center; width: 32px; height: 21px; background: white;" value="1" />
+            <label>of 200</label>
+            <button id="btn">Go to</button>
+         </script>
+          <script>
+            function create(args) {
+                     $("#btn").ejButton({
+                       click : "btnClick"
+                         });
+                       }
+             function btnClick(args) {
+                     var val = $("#currentPage").val();
+                     var gridObj = $("#Grid").data("ejGrid");
+                      gridObj.gotoPage(args.val);
+                     }
+           </script>
+{% endhighlight  %}
+{% highlight css %}
+
+     .e-grid .e-pager .e-pagercontainer {
+	       border-width: 0px;
+	       overflow: visible;
+         }         
+{% endhighlight  %} 
  {% endtabs %}  
  
  The following output is displayed as a result of the above code example.
