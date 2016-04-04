@@ -129,7 +129,7 @@ To customize the selected intervals, use color, border and opacity options in th
            
            //Maximum data to be displayed in the rangenavigator control
            .ScrollRangeSettings(scrl=>
-               scrl.Start("2010, 1, 1").End("2011, 11, 31")
+               scrl.Start("2010/1/1").End("2011/11/31")
                )
                
            //Subscribe the event on scrollbar position changed 

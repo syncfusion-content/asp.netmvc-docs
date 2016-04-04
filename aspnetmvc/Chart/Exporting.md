@@ -26,7 +26,7 @@ In client-side rendered chart can be exported as PNG image or as SVG file.
 
         @(Html.EJ().Chart("chartcontainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
               .EnableCanvasRendering(true)
-              .Exporting(ex =>ex.FileName("ChartSnapshot").Type(ChartExportingType.PNG)))
+              .ExportSettings(ex =>ex.FileName("ChartSnapshot").Type(ChartExportingType.PNG)))
 
     <script>
         function download() {
@@ -75,7 +75,7 @@ To convert the chart data from client to server-side, refer to the following ste
 
      @(Html.EJ().Chart("chartcontainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
               .EnableCanvasRendering(true)
-              .Exporting(ex => ex.Type(ChartExportingType.JPG).Action("ExportToImage").Mode(ChartExportingMode.Server))
+              .ExportSettings(ex => ex.Type(ChartExportingType.JPG).Action("ExportToImage").Mode(ChartExportingMode.Server))
               )
 
     <script>
@@ -269,11 +269,18 @@ Export multiple chart to excel at server-side
 
 ## Naming the exported file
 
-ejChart provides options to customize the name of the file to be exported. This can be done by setting the name of the file to the property “fileName” in exporting.
+EjChart provides options to customize the name of the file to be exported. This can be done by setting the name of the file to the property “fileName” in exporting.
 
 ## Rotating the chart
 
 We can also rotate the chart and can export it. Possible angles of rotation are 0, 90, -90 and 180 degree. This can be achieved by setting values to the “angle” property in exporting.
+
+{% highlight cshtml %}
+     @(Html.EJ().Chart("chartcontainer")
+              .ExportSettings(ex => ex.Angle(180).Action("ExportToImage"))
+      )
+
+  {% endhighlight %}
 
 ![](Exporting_images/Exporting_img3.png)
 
