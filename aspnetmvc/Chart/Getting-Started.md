@@ -9,538 +9,340 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly you on how to create a Chart in your application with ASP.NET MVC.
+This section explains you the steps required to populate the Chart with data, add data labels, tooltips and title to the Chart. This section covers only the minimal features that you need to know to get started with the Chart.
 
-## Create your first Chart in ASP.NET MVC
+## Installation and Deployment
 
-This section encompasses how to configure the MVC Charts for your business needs. You can also pass the required data to default Chart and customize it according to your requirements. In this example, you can see how to display the average climate data for Washington, DC during the period 1961 -1990.
+It describes you on how to configure the Syncfusion dependencies in your ASP.NET MVC application to create a Chart.
 
+### Referencing Syncfusion Assemblies
 
+The following assemblies need to be referenced in your application for using Essential Chart MVC
 
+1. Syncfusion.EJ.dll
+2. Syncfusion.EJ.MVC.dll
 
+Follow the steps given below to deploy the application in the development server by referencing the dll in **GAC**.
+
+* Web.config file should be configured according to the referenced dlls. 
+* To deploy your application, you have to ensure that the above referenced assemblies (in your web.config files) are present in the GAC.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-Chart
-{:.caption}
+And, add Syncfusion namespace in the Web.config file of Views folder to generate Chart builder code in View page.
 
-### Configure Chart
+![](Getting-Started_images/Getting-Started_img2.png) 
 
-Getting started with your MVC Chart is very easy. You can start by creating a simple line Chart.
-
-1. Create an MVC Project and add necessary Dll’s and Scripts by referring [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/chart/getting-started) Documentation.
-2. You can create a simple div tag.
-
-   ~~~ xml
-   
-		<div>
-
-		</div>
-		
-   ~~~
-  
-
-3. You can add the following code in the index.cshtml file to create the Chart control in the View page. 
-
-   ~~~ xml
-   
-	 <div> 
-	 
-		@(Html.EJ().Chart("chartcontainer") ) 
-
-     </div> 
-
-   ~~~
-   
-
-The above code example renders a Chart with the default Column series type and some random values assigned to the column series. 
-
-The following screenshot displays the Chart.
+N> If you are referring Syncfusion dll's manually from bin folder to create MVC Chart, then remove Culture, Version and PublicKeyToken attributes used in all, and nodes.
 
 
+###  Adding script reference
 
-![](Getting-Started_images/Getting-Started_img2.png)
+Add the below scripts references and Syncfusion **ScriptManager** to execute the script as mentioned in the following code snippet in layout page.
 
-Chart
-{:.caption}
+{% highlight cshtml %}
 
 
-### Add a Chart series
+    <!--  jquery script  -->
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+    
+    <!-- Essential JS UI widget -->
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script>
+    
+    <!--Add Syncfusion Script Manager -->
+    @Html.EJ().ScriptManager()
 
-By default, line series is used. To create a series, you need to add the following code example to the scripts. For example, the following steps illustrate how to add a column series to the Chart.
 
-1. You need to add the name of the series displayed in the Chart legend.
-2. Then, you need to specify the type of series you want to render using “type” property.
-3. You can add x and y points to the series as in the following code example.
+{% endhighlight %}
 
-{% highlight CSHTML %}
-@(Html.EJ().Chart("chartcontainer")
-.Series(sr =>
-{
-	sr.Points(pt =>
-		{
-			pt.X("Jan").Y(3.03).Add();
 
-			pt.X("Feb").Y(2.48).Add();
+To render the MVC Chart in unobtrusive mode refer **ej.unobtrusive.js** script file. Otherwise set false to **UnobtrusiveJavaScriptEnabled** in Web.config file.
 
-			pt.X("Mar").Y(3.23).Add();
+In the above code, ej.web.all.min.js script reference has been added for demonstration purpose. It is not recommended to use this for deployment purpose, as its file size is larger since it contains all the widgets. Instead, you can use [`CSG`](http://csg.syncfusion.com/) utility to generate a custom script file with the required widgets for deployment purpose.
 
-			pt.X("Apr").Y(3.15).Add();
 
-			pt.X("May").Y(4.13).Add();
+## Initialize chart
 
-			pt.X("Jun").Y(3.23).Add();
+Add the following code in the index.cshtml file to create the Chart control in View page.
 
-			pt.X("Jul").Y(4.13).Add();
+{% highlight cshtml %}
 
-			pt.X("Aug").Y(4.88).Add();
+<div>
 
-			pt.X("Sep").Y(3.82).Add();
+    @(Html.EJ().Chart("chartContainer"))
 
-			pt.X("Oct").Y(3.07).Add();
+</div>
 
-			pt.X("Nov").Y(2.83).Add();
 
-			pt.X("Dec").Y(2.8).Add();
 
-		}).Name("Precipitation").Type(SeriesType.Column).Add();
-})
-)
-{% endhighlight  %}
+{% endhighlight %}
 
-The following screenshot displays a Chart series:
 
+Now, the Chart is rendered with some auto-generated random values and with default Column chart type.
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-Chart series
-{:.caption}
 
-### Add JSON data to the Chart
-
-You can add JSON data to the Chart using the datasource property in Chart series.
-
-In Controllers/HomeController.cs.
-
-{% tabs %}
- 
-{% highlight C# %}
-
-public ArrayList GetData()
-
-{
-
-		ArrayList dataTable = new ArrayList();
-
-
-
-		dataTable.Add(new ChartData("Jan", 42, 27, 3.03));
-
-		dataTable.Add(new ChartData("Feb", 44, 28, 2.48));
-
-		dataTable.Add(new ChartData("Mar", 53, 35, 3.23));
-
-		dataTable.Add(new ChartData("Apr", 64, 44, 3.15));
-
-		dataTable.Add(new ChartData("May", 75, 54, 4.13));
-
-		dataTable.Add(new ChartData("Jun", 83, 63, 3.23));
-
-		dataTable.Add(new ChartData("Jul", 87, 68, 4.13));
-
-		dataTable.Add(new ChartData("Aug", 84, 66, 4.88));
-
-		dataTable.Add(new ChartData("Sep", 78, 59, 3.82));
-
-		dataTable.Add(new ChartData("Oct", 67, 48, 3.07));
-
-		dataTable.Add(new ChartData("Nov", 55, 38, 2.83));
-
-		dataTable.Add(new ChartData("Dec", 45, 29, 2.8));
-
-		return dataTable;
-
-}
-
-
-
-private class ChartData
-
-{
-
-		private String xmonth;
-
-
-
-		public String Xmonth
-
-		{
-
-			get { return xmonth; }
-
-			set { xmonth = value; }
-
-		}
-
-
-
-		private double precipitation;
-
-
-
-		public double Precipitation
-
-		{
-
-			get { return precipitation; }
-
-			set { precipitation = value; }
-
-		}
-
-
-
-		private double high;
-
-
-
-		public double High
-
-		{
-
-			get { return high; }
-
-			set { high = value; }
-
-		}
-
-
-
-		private double low;
-
-
-
-		public double Low
-
-		{
-
-			get { return low; }
-
-			set { low = value; }
-
-		}
-
-
-
-		public ChartData(String xdate, double high, double low, double precipitation)
-
-		{
-
-			this.Xmonth = xdate;
-
-			this.Precipitation = precipitation;
-
-			this.High = high;
-
-			this.Low = low;
-
-		}
-
-}
-
-
-
-public ActionResult Index()
-
-{
-
-		var DataSource = GetData();
-
-		ViewBag.datasource = DataSource;
-
-		return View();
-
-}
-
-{% endhighlight  %}
-
-In Index.cshtml
-
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-        .Series(sr =>
-
-                    {
-
-                        sr.Name("Precipitation")
-
-                          .Type(SeriesType.Column)
-
-
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("Precipitation")
-
-                          .Add();
-
-                        sr.Name("Low")
-
-                        .Type(SeriesType.Line)
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("Low")
-
-                          .Add();
-
-                        sr.Name("High")
-
-                          .Type(SeriesType.Line)
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("Low")
-
-
-
-                          .Add();
-
-
-
-                    })
-
+Initialize the chart by using the ejChart method. The chart is rendered to the size of its container, by default. You can also customize the chart dimension either by setting the width and height of the container element as in the above code example or by using the **Size** option of the Chart. Refer to the [`Chart Dimensions`](chart-dimensions.html) to know more about setting the size of the chart.
+
+
+## Populate chart with data
+
+Now, let’s see how to plot data source to the Chart. First, let us generate a data source containing following fields in controller– Month and Sales.
+
+{% highlight csharp %}
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            //// Create dataSource to chart
+            List<ChartData> data = new List<ChartData>();
+            data.Add(new ChartData("Jan", 35));
+            data.Add(new ChartData("Feb", 28));
+            data.Add(new ChartData("Mar", 34));
+            data.Add(new ChartData("Apr", 32));
+            data.Add(new ChartData("May", 40));
+            data.Add(new ChartData("Jun", 32));
+            data.Add(new ChartData("Jul", 35));
+            data.Add(new ChartData("Aug", 55));
+            data.Add(new ChartData("Sep", 38));
+            data.Add(new ChartData("Oct", 30));
+            data.Add(new ChartData("Nov", 25));
+            data.Add(new ChartData("Dec", 32));
+            ///...
+            ViewBag.ChartData = data;
+            return View();
+        }
+     }          
+
+    public class ChartData {
+        public string Month;
+        public double Sales;
+        public ChartData(string month, double sales)
+        {
+            this.Month = month;
+            this.Sales = sales;
+        }
+    }
+
+{% endhighlight %}
+
+
+Add a Series object to the chart using **Series** option and set the chart type as **Line** using **Type** option. 
+
+{% highlight cshtml %}
+
+
+           @using Syncfusion.JavaScript.DataVisualization
+           <div>
+
+               @(Html.EJ().Chart("chartContainer")
+                    .Series(sr =>
+                         { 
+                            //Change series type
+                            sr.Type(SeriesType.Line).Add();                  
+                         })
+               )
+          </div>
+
+
+{% endhighlight %}
+
+You can also add multiple series objects based on your requirement. Refer [`Chart Types`](Chart-Types.html) and [`Chart Series`](Chart-Series.html) sections to know more about chart types, how to add multiple series and customize series appearance.
+
+Next, map the Month and Sales values in the data source to the Line series by setting XName and YName with the field names respectively, and then set the actual data using DataSource option. Refer [`Data Binding`](working-with-data.html) section to know more about binding local and remote data to the chart.
+
+{% highlight cshtml %}
+
+
+     @(Html.EJ().Chart("chartContainer")
+            .Series(sr =>
+                {
+                    sr.DataSource(ViewBag.ChartData)
+                    .Type(SeriesType.Line)
+                    .XName("Month").YName("Sales")
+                    .Add();                  
+                })
        )
 
-{% endhighlight  %}
 
-{% endtabs %} 
-The following screenshot displays the Chart when JSON data is added.
-
+{% endhighlight %}
 
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-Chart with JSON data
-{:.caption}
 
-### Add Chart Axis of your choice
+Since the data is related to Sales, format the vertical axis labels by adding ‘$’ as a prefix and ‘K’ as a suffix to each label. This can be achieved by setting the “${value}K” to the **LabelFormat** option of the axis. Here, {value} acts as a placeholder for each axis label, “$” and “K” are the actual prefix and suffix added to each axis label. 
 
-In the Chart when JSON is added, the axes are provided explicitly and the Chart initializes the right axis based on the data type. You can also specify the axis type of your choice using ValueType option and customize the options available in the axis. The following axis types are supported:
+The following code example illustrates this,
 
-* Category -   String data can be plotted using category axis. Category axis can be initialized only as x-axis.
-* Double -   Numeric values can be plotted using double axis.
-* Datetime - DateTime can be plotted using datetime axis. This type of axis can be initialized only as x-axis.
-* Logarithmic - Numeric values can be plotted using logarithm axis.
-
-You can use PrimaryXAxis and PrimaryYAxis options to initialize the axes. As the data contains string values along x-axis, you can set ValueType as category for PrimaryXAxis and double for PrimaryYAxis. 
-
-Since the values are in Fahrenheit for Temperature and Inches for Precipitation, you need to initialize different axis instance for each unit. You can use “LabelFormat” option to add suffix for axis labels.
-
-In order to add additional Axes to the Chart other than PrimaryXAxis and PrimaryYAxis, you need to initialize axes option with collection of axis and set Name for axis in the Axes collection.
-
-The following code example illustrates how to add Chart axis.
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-          .PrimaryXAxis(xAxis => xAxis.ValueType(AxisValueType.Category))
+{% highlight cshtml %}
 
 
+     @(Html.EJ().Chart("chartContainer")
 
-          .PrimaryYAxis(yAxis => yAxis.ValueType(AxisValueType.Double)
+            //Customize the axis label format.
+            .PrimaryYAxis(pry=>pry.LabelFormat("${value}K"))
 
-                                .LabelFormat("{value}°F")
-
-                                .Range(range => range.Min(0).Max(120).Interval(20)))
-
-
-
-          .Axes(additionalAxis => additionalAxis.Orientation(Orientation.Vertical)
-
-                                 .OpposedPosition(true)
-
-                                 . Name("Precipitation")
-
-                                 .Range(range => range.Min(0).Max(6).Interval(1))
-
-                                 .LabelFormat("{value} inch").Add())    
-
-         // ...             
-
-       )
-{% endhighlight  %}
-
-### Assign the axis to the respective series
-
-To assign the axis to the respective series you can set YAxisName property of the series. In the following code example, YAxisName of Column series is set to “Precipitation”. This is the name set to the axis in the above code example.
+            //...
+     )
 
 
-
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-         // ...             
-
-        .Series(sr =>
-
-                    {
-
-                        sr.Name("Precipitation")
-
-                          .Type(SeriesType.Column)
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("Precipitation")
-
-
-
-.YAxisName("Precipitation").Add();
-
-                        sr.Name("Low")
-
-                          .Type(SeriesType.Line)
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("Low")
-
-                          .Add();
-
-                        sr.Name("High")
-
-                          .Type(SeriesType.Line)
-
-                         .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
-
-                         .XName("Xmonth")
-
-                         .YName("High")
-
-                          .Add();
-
-
-
-                    })
-
-        )
-
-{% endhighlight  %}
-
-The following screenshot displays a Chart with desired output.
-
-
+{% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
-Chart with axes
-{:.caption}
 
-### Add Data Labels
-
-Data Labels display the series points in Chart. To display the data labels, you need to enable the “Visible” property of DataLabel in the Marker of specific series. By default, it displays the Y value with label format provided in axis (For example: 4.88 inch). The following code example shows how to add DataLabels.
+Refer [`Axis`](Axis.html) section to know more about axis types, adding multiple axes and other customization options.
 
 
+## Add Data Labels
+
+You can add data labels to improve the readability of the chart. This can be achieved by enabling the Visible option in the **DataLabel** option. Now, the data labels are rendered at the top of all the data points.
+
+The following code example illustrates this,
 
 
-{% highlight html %}
+
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer")
-
-        .Series(sr =>
-
-                    {
-
-                     // ...
-
-                        sr.Name("Precipitation")
-
-                       .Marker(marker => marker.DataLabel(datalabel => datalabel
-
-                                              .Visible(true)
-
-                                              .TextPosition(TextPosition.Top)
-
-                                              .Fill("#FF7777")
-
-                                              .Offset(20)
-
-                                              .Shape(ChartShape.Rectangle)
-
-                                              .Font(ft => ft.Color("white"))
-
-                                     )).Add();
-
-                       // ...             
-
-                    })
-
-        )
-
-{% endhighlight  %}
-
-The following screenshot displays the Chart when data Labels are enabled.
+     @(Html.EJ().Chart("chartContainer")
+             .Series(sr =>
+                { 
+                     //Display datalabel in chart
+                    .Marker(mr=>mr.DataLabel(dl=>dl.Visible(true)))
+                    //...
+                    .Add();                  
+                })
+                //...
+     )
 
 
+{% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-Chart with Labels
-{:.caption}
 
-### Enable Tooltip
+There are situations where the default label content is not sufficient to the user. In this case, you can use the **Template** option to format the label content with some additional information.
 
-To display the tooltip of Chart series, you can enable the “Visible” property of “Tooltip” in the specific series. By default, it displays X and Y value of points on mouse over the points. The following code example shows how to enable Tooltip.
+ {% highlight html %}
 
-
-
-{% highlight html %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-        .Series(sr =>
-
-                    {
-
-                        sr.Name("Precipitation")
-
-                        // ...             
-
-                          .Tooltip(tt=>tt.Visible(true)).Add();    
-
-                       // ...             
-
-                    })
-
-        )
-
-{% endhighlight  %}
-
-The following screen shot displays the Chart when tooltip is enabled.
+<!DOCTYPE html>
+<html>
+<body>
+      <div id="dataLabelTemplate" style="display:none; padding:3px;background-color:#B9C5C9; opacity:0.8;">
+         <div id="point">#point.x#:$#point.y#K</div>
+      </div>
+</body>
+</html>
 
 
+{% endhighlight %}
+
+The above HTML template is used as a template for each data label. Here, “point.x” and “point.y” are the placeholder text used to display the corresponding data point’s x & y value.
+
+The following code example shows how to set the id of the above template to Template option,
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("chartContainer")
+             .Series(sr =>
+                { 
+                     //Display datalabel in chart
+                   .Marker(mr=>mr.DataLabel(dl=>dl.Visible(true).
+                        //Set the id of HTML template to the chart series
+                        Template("dataLabelTemplate"))
+                        )
+                    //...
+                    .Add();                  
+                })
+                //...
+     )
+
+
+{% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-Chart with ToolTip
-{:.caption}
+
+Refer to the [`Data Markers`](Data-Markers.html) section to know more about the options available to customize it.
+
+## Enable Legend
+
+You can enable or disable the legend by using the Visible option in the **Legend**. It is enabled in the chart, by default.
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("chartContainer")
+            .Series(sr =>
+                {
+                        //Add series name to display on the legend item
+                        .Name("Sales")
+                        .Add();                  
+                })
+                //Enable chart legend
+                .Legend(lgn=>lgn.Visible(true))
+                //...
+     )
+
+
+{% endhighlight %}
+
+![](Getting-Started_images/Getting-Started_img8.png)
+
+
+Refer to the [`Legend`](Legend.html) section to know more about how to position legend and customize its appearance.
+
+## Enable Tooltip
+
+The Tooltip is useful when you cannot display information by using the **DataLabels** due to the space constraints. You can enable tooltip by using the Visible option of the **Tooltip** in the specific series.
+
+The following code example illustrates this,
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("chartContainer")
+            .Series(sr =>
+                {
+                        //...
+                        //Enable tooltip in chart area
+                        .Tooltip(tl=>tl.Visible(true))
+                    .Add();                  
+                })
+                //...
+     )
+
+
+{% endhighlight %}
+
+![](Getting-Started_images/Getting-Started_img9.png)
+
+
+Refer to the [`Tooltip`](user-interactions.html) section to know more about formatting tooltip contents and customizing its appearance.
+
+## Add Chart Title
+
+You need to add a title to the chart to provide quick information to the user about the data being plotted in the chart. You can add it by using the Text option of the **Title**.
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("chartContainer")
+
+                // ...
+                 //Add chart title
+                .Title(tl=>tl.Text("Sales Analysis"))
+                // ...
+     )
+
+
+{% endhighlight %}
+
+![](Getting-Started_images/Getting-Started_img10.png)
+
+
+Refer to the [`Chart Title`](chart-title.html) section to know more about aligning Title, customizing its appearance and adding SubTitle to the chart.

@@ -1,0 +1,52 @@
+---
+layout: post
+title: State Persistence | AutoComplete  | ASP.NET MVC | Syncfusion
+description: state persistence
+platform: ejmvc
+control: AutoComplete
+documentation: ug
+---
+
+# State Persistence
+
+AutoComplete widget can store the model value in the browser’s cookies. Every time after initial rendering, the control gets the model from the cookie only. Using EnablePersistence property you can store the model value in cookies. So when any changes are made dynamically, the values are updated in the cookie. On refreshing the page, the previous state of the AutoComplete control is maintained in the cookie and the control is rendered from it.
+
+## Configure state persistence of AutoComplete
+
+The following steps explain you how to enable state maintenance for AutoComplete.
+
+
+
+1. In the View page, define the AutoComplete control and configure state persistence by using EnablePersistence property.
+
+
+{% highlight CSHTML %}
+
+@*Refer to the DataSource defined in Local Databinding Step 1 *@
+
+@Html.EJ().Autocomplete("autocomplete")
+
+    .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
+
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+
+    .EnablePersistence(true)
+
+
+{% endhighlight %}
+
+The following image is the output for AutoComplete when EnablePersistence is set to ‘True’.
+
+<table>
+<tr>
+<td>
+{{ '![](State-Persistence_images/State-Persistence_img1.png)' | markdownify }}
+1. Autocomplete during value selection<br></td><td>
+{{ '![](State-Persistence_images/State-Persistence_img2.png)' | markdownify }}
+2. Autocomplete after page refresh</td></tr>
+</table>
+
+
+AutoComplete with State maintenance
+{:.caption}
+

@@ -13,7 +13,7 @@ This section explains briefly about how to create a RangeNavigator in your ASP.N
 
 ## Create your first RangeNavigator in MVC
 
-This section encompasses the details on how to configure the RangeNavigator and update the chart control for RangeNavigator’s selected range. It also helps you to learn how to pass the required data to RangeNavigator and customize the scale and selected range for your requirements. In this example, you will learn how to configure the RangeNavigator to analyze sales of a product for a particular quarter in a year.
+This section encompasses the details on how to configure the RangeNavigator and update the chart control for RangeNavigator’s selected range. It also helps you to learn how to pass the required data to RangeNavigator and customize the scale and selected range for your requirements. In this example, you will learn how to configure the RangeNavigator to analyse sales of a product for a particular quarter in a year.
 
 
 
@@ -367,7 +367,7 @@ The following screenshot displays the RangeNavigator with the type series as “
 
 ### Enable tooltip
 
-Tooltip can be customized for RangeNavigator using tooltip option. You can also use TooltipDisplayMode option in tooltip to display the tooltip “always” or “ondemand” (displays tooltip only while dragging the sliders). You can also specify label format for tooltip using LabelFormat.
+Tooltip can be customized for RangeNavigator using tooltip option. You can also use ToolipDisplayMode option in tooltip to display the tooltip “always” or “ondemand” (displays tooltip only while dragging the sliders). You can also specify label format for tooltip using LabelFormat.
 {% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("scrollcontent")

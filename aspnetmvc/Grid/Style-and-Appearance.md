@@ -143,7 +143,7 @@ To modify Grid appearance, you need to override default CSS of Grid. Please find
                 e-selectionbackground
             </td>
             <td>
-                This class is added to rowcell's of grid. this is override selection.
+                This class is added to row cell's of grid. this is override selection.
             </td>
         </tr>
         <tr>

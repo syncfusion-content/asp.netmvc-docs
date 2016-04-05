@@ -382,7 +382,7 @@ N> 2. `name` attribute is used to get the changed field values while saving the 
 N> 3.  It's a standard way to enclose the `Template` within the `script` tag with `type` as "text/x-jsrender".
 N> 4.  For `EditMode` property you can assign either `string` value (`InlineFormTemplate`) or `enum` value (`Syncfusion.JavaScript.EditMode.InlineTemplateForm`) 
 
-The following code example describes the above behaviour.
+The following code example describes the above behavior.
 
 {% tabs %}
 
@@ -554,7 +554,7 @@ N> 1. `value` attribute is used to bind the corresponding field value while edit
 N> 2. `name` attribute is used to get the changed field values while save the edited record. 
 N> 3. For `EditMode` property you can assign either `string` value (`DialogTemplate`) or `enum` value (`Syncfusion.JavaScript.EditMode.DialogTemplate`).
 
-The following code example describes the above behaviour.
+The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -787,12 +787,11 @@ While using template, you can change the elements that are defined in the templa
 
 N> 1. `value` attribute is used to bind the corresponding field value while editing. 
 N> 2. `name` attribute is used to get the changed field values while save the edited record. 
-N> 3. For `EditMode` property you can assign either `string` value (`ExternalFormTemplate') or `enum` value (`Syncfusion.JavaScript.EditMode.ExternalFormTemplate`).
+N> 3. For `EditMode` property you can assign either `string` value (`ExternalFormTemplate`) or `enum` value (`Syncfusion.JavaScript.EditMode.ExternalFormTemplate`).
 
-The following code example describes the above behaviour.
+The following code example describes the above behavior.
 
 {% tabs %}
-
 {% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
@@ -1638,7 +1637,7 @@ The following code example describes the above behavior.
 
 {% endtabs %}
 
-Please refer the below image for more information about batch paramaters
+Please refer the below image for more information about batch parameters
 
 ![](Editing_images/Editing_img25.png)
 

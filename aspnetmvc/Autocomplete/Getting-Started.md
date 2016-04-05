@@ -1,126 +1,176 @@
 ---
 layout: post
-title: Getting Started | AutoComplete | ASP.NET MVC | Syncfusion
-description: Getting Started
-platform: aspnetmvc
+title: Getting Started | AutoComplete  | ASP.NET MVC | Syncfusion
+description: getting started
+platform: ejmvc
 control: AutoComplete
 documentation: ug
 ---
 
 # Getting Started
 
-This section helps to understand the getting started of the AutoComplete widget with the step-by-step instructions.
+This section explains briefly about how to create an AutoComplete in your ASP.NET MVC application.
 
-## Create an AutoComplete
+## Create your first AutoComplete in MVC
 
-Initialize the corresponding AutoComplete widget in the view page.
+This section helps you to configure the AutoComplete control in your application and also helps you to learn how to pass the required data to it and to customize its various options according to your requirements. 
 
-{% highlight razor %}
+In this section,  the flat-saffron theme (default) for the Autocomplete is explained.
 
-//Initialize the Autotomplete Control
+The following screen shot illustrates the AutoComplete control that searches the list of components available in the database. 
 
-@Html.EJ().Autocomplete("autocomplete")
+![](Getting-Started_images/Getting-Started_img1.png)
 
+AutoComplete controlwith search
+{:.caption}
+
+### Create an AutoComplete
+
+ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features like keyboard navigation with animations and flexible API’s. You can easily create the AutoCompleteTextbox widget by the following steps.
+
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](/extension/aspnet-mvc-extension/overview) Documentation.
+2. Initialize the corresponding AutoComplete widget in the view page.
+
+
+   ~~~ cshtml
+
+	<div>
+
+		Select Component/s: 
+
+	@Html.EJ().Autocomplete("ComponentList")
+
+	</div>
+
+   ~~~
+   
+
+
+3.  Execute the code to render a AutoComplete widget as follows
+
+
+
+![](Getting-Started_images/Getting-Started_img2.png)
+
+Output
+{:.caption}
+
+### Populate Data to AutoComplete
+
+You can provide either local data or remote data to the Autocomplete.
+
+#### Remote Data Binding
+
+You can assign the required Data from the remote URL by using the DataSource property. You can generate a query to get the required Data from the remote file using Query()property and define the query to get the remote Data. Use AutoCompleteFields property, to map the Data fields to the textbox as shown in the following code example.
+
+{% highlight CSHTML %}
+
+<div>
+
+	Select Component/s: 
+
+	@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+	d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 
+	'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).Width("500")
+</div>
+{% endhighlight %}
+
+
+Run this code to render the AutoComplete with components list.
+
+![](Getting-Started_images/Getting-Started_img3.png)
+
+AutoComplete with Component list
+{:.caption}
+
+You can also set some common customization changes to the AutoComplete textbox like enabling multiple-selection, highlight search and add dropdown icon based on your requirement. 
+
+#### Configure Visual Mode with filter option
+
+
+
+By default, the AutoComplete is rendered with single-value selection. For multiple-value selection using the property MultiSelectModethatallows you to select multiple Data. There are two types of multiple selection one is ‘delimiter’ and another one is ‘visual mode’. In ‘Delimiter’ mode, the multiple values chosen are separated by using the delimiter character specified. In ‘visual mode’, the values choosen are displayed as box model. Here, the ‘visual mode’ is shown. You can set the FilterType option as StartsWith to sort the suggestion list based on the starting character.
+
+
+{% highlight CSHTML %}
+
+<div>
+
+	Select Component/s: 
+
+	@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+	d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
+	 'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).Width("500")
+
+</div>
 
 {% endhighlight %}
 
 
-## Databinding
+The following screen shot displays the AutoCompletetextbox with selection visual mode.
 
-The data for the suggestion list can be populated using the `DataSource` property.
+![](Getting-Started_images/Getting-Started_img4.png)
 
-In the Model page, define a Class with `Text` field property.
+AutoComplete textbox with selection visual mode
+{:.caption}
 
-In the Controller, create a list of “Cars” class and add the data.
+#### Configure Highlight Search and Rounded corners
 
-In the View page, add the Autocomplete helper and bind the data.
+{% highlight CSHTML %}
 
+<div>
 
-{% tabs %}        
-{% highlight c# %}
+    Select Component/s: 
 
-//define model class with the corresponding property
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=> 
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId',
+'ComponentName')").AutocompleteFields(f=> f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500")
 
-public class Cars
-    {
-        public string Text { get; set; }
-    }
-
-//specify desired datasource data by using the model class properties
-
-public partial class AutocompleteController : Controller
-    {
-        public ActionResult Index()
-            {
-                List<Cars> cars = new List<Cars>();
-                cars.Add(new Cars { Text = "Audi S6" });
-                cars.Add(new Cars { Text = "Austin-Healey" });
-                cars.Add(new Cars { Text = "Alfa Romeo" });
-                cars.Add(new Cars { Text = "Aston Martin" });
-                cars.Add(new Cars { Text = "BMW 7" });
-                cars.Add(new Cars { Text = "Bentley Mulsanne" });
-                cars.Add(new Cars { Text = "Bugatti Veyron" });
-                cars.Add(new Cars { Text = "Chevrolet Camaro" });
-                cars.Add(new Cars { Text = "Cadillac" });
-                cars.Add(new Cars { Text = "Duesenberg J" });
-                cars.Add(new Cars { Text = "Dodge Sprinter" });
-                cars.Add(new Cars { Text = "Elantra" });
-                cars.Add(new Cars { Text = "Excavator" });
-                cars.Add(new Cars { Text = "Ford Boss 302" });
-                cars.Add(new Cars { Text = "Ferrari 360" });
-                cars.Add(new Cars { Text = "Ford Thunderbird" });
-                cars.Add(new Cars { Text = "GAZ Siber" });
-                ViewBag.datasource = cars;
-                return View();
-            }
-    }
-
-
+</div>
 
 {% endhighlight %}
 
-{% highlight razor %}
-
-// In the View page, configure Autocomplete with binding corresponding data
-        
-@{
-     Html.EJ()
-        .Autocomplete("autocomplete")
-        .Datasource((IEnumerable<Cars>)ViewBag.datasource)
-        .AutocompleteFields(f => f.Text("Text")
-        .Render();
-}
+When you set the HighlightSearch property to ‘true’, the characters typed in textbox gets highlighted in the suggestion list. To display textbox reforms from sharp ends to rounded ends, you can enable the ShowRoundedCorner property.
 
 
-{% endhighlight %}
-{% endtabs %}
 
 
-![Data binding](getting-started_images\getting-started_img1.png)
+The following screen shot displays the AutoCompletetextbox with highlight search enabled.
 
-## Enable Popup Button
+![](Getting-Started_images/Getting-Started_img5.png)
 
-This button helps you to show all the available suggestions on clicking it.
+AutoComplete text box with highlight search enabled
+{:.caption}
 
-{% highlight razor %}
+#### Configure Popup button
 
-// Display popup button in Autocomplete,by enabling ShowPopupButton property
-        
-@{
-     Html.EJ()
-        .Autocomplete("autocomplete")
-        .Datasource((IEnumerable<Cars>)ViewBag.datasource)
-        .AutocompleteFields(f => f.Text("Text")
-        .ShowPopupButton(true)    
-        .Render();
-}
+To enable the DropDown button, you can set ShowPopupButton property to ‘true’ that displays the DropDown icon at the end of textbox. By default, search icon replaces other icons and so you need to override the CSS classes and replace the content to DropDown arrow icon available in core CSS file as follows.
 
+{% tabs %}
+ 
+{% highlight CSS %}
 
+<style>.e-icon.e-search:before 
+ {                
+    content:"\e63b";  
+ }
+</style>
 {% endhighlight %}
 
+{% highlight CSHTML %}
 
+<div>
+    Select Component/s: 
+@Html.EJ().Autocomplete("ComponentList").Datasource(d=>
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')").AutocompleteFields(f=>
+f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes.VisualMode).FilterType(FilterOperatorType.StartsWith).HighlightSearch(true).ShowRoundedCorner(true).Width("500").ShowPopupButton(true)
+</div>
+{% endhighlight %}
+{% endtabs %} 
 
-![Enable popup button](getting-started_images\getting-started_img2.png)
+The following screen shot displays the AutoCompletetextbox with dropdown icon.
 
+![](Getting-Started_images/Getting-Started_img6.png)
 
-
+AutoComplete textbox with dropdown icon
+{:.caption}
