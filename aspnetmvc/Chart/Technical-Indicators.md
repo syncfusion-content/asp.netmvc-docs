@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technical Indicators | Chart | ASP.NET MVC | Syncfusion
-description: technical indicators
+title: Technical Indicators| Chart  | ASP.NET MVC | Syncfusion
+description: What are the different types of technical indicators supported in Essential Chart for financial analysis.
 platform: ejmvc
 control: Chart
 documentation: ug
@@ -9,482 +9,450 @@ documentation: ug
 
 # Technical Indicators
 
-Technical indicators are the base of technical analysis, used to determine the future of financial, stock or economic trends. Indicators serve three broad functions: to alert, to confirm and to predict actions. Future price levels can be predicted easily with the help of given data and it also supports you to enter or exit a trade and enables to make a profit.
-
-The following are the Technical indicators supported by Essential Chart.
-
-## Accumulation Distribution Indicator
-
-Accumulation distribution indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called signal line. Essential Chart also provides options to customize the width and color of the signal line. 
-
-{% highlight CSHTML %}
-
-
- @(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-       {ax.Name("indicator").Orientation("vertical").OpposedPosition(true)
-
-      .Add();})
-
-// ...
-
-.Indicators(ind=>
-
-          {
-
-              ind.SeriesName("indicator")
-
-             .Type(ChartIndicatorType.Accumulationdistribution)
-
-             .YAxisName("indicator")
-
-          })
-
-{% endhighlight  %}
-
-The following screenshot displays Accumulation Distribution indicator.
-
-
-
-![](Technical-Indicators_images/Technical-Indicators_img1.png)
-
-Accumulation Distribution indicator
-{:.caption}
-
-## Average True Range Indicator
-
-Average true range Indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called as signal line. You can also customize the width and color of the signal line. 
-
-{% highlight CSHTML %}
-
-
-
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("indicator").Orientation("vertical").OpposedPosition(true)
-
-      .Add();})
-
-// ...
-
-    .Indicators(ind=>
-
-          {
-
-              ind.SeriesName("indicator").Period(14)
-
-.Type(ChartIndicatorType.Atr)
-
-                 .YAxisName("indicator")
-
-              })
-
-
-
-
-
-{% endhighlight  %}
-
-
-The following screenshot displays the Average true range indicator.
-
-![](Technical-Indicators_images/Technical-Indicators_img2.png)
-
-Average true range indicator
-{:.caption}
-
-## Bollinger Band Indicator
-
-Bollinger Band Indicator is one of the technical indicator supported by Essential Chart. It contains three lines namely upper band, lower band and signal line. Upper band, lower band are calculated based on the standard deviations value. Signal band is calculated based on the simple moving average. You can also customize the width and color of the upper band, lower band and signal line. The default value of period is 14.The default value of standardDeviations is 2.
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("indicator").Orientation("vertical").OpposedPosition(true)
-
-      .Add();
-
-})
-
-// ...
-
- .Indicators(ind=>
-
-{
-
-              ind.SeriesName("indicator").Period(4)
-
-              .StandardDeviations(2)
-
-.Type(ChartIndicatorType.Bollingerband)
-
-              .YAxisName("indicator")
-
-
-
- })
-
-{% endhighlight  %}
-
-The following screenshot displays the Bollinger Band indicator.
-
-![](Technical-Indicators_images/Technical-Indicators_img3.png)
-
-Bollinger Band indicator
-{:.caption}
-
-## Exponential Moving Average Indicator
-
-Exponential Moving Average Indicator is one of the technical indicator supported by Essential Chart. The indicator renders a line called signal line. You can also customize properties such as width, color etc., of the signal line.
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-       .Axes(ax=>         
-
-          {  ax.Name("indicator")
-
-               .Orientation("vertical")
-
-               .OpposedPosition(true)
-
-               .Add();
-
-          })
-
-
-
-    .Indicators(ind=>
-
-          {
-
-              ind.SeriesName("indicator")
-
-                 .Period(14)
-
-.Type(ChartIndicatorType.Ema)
-
-                 .YAxisName("indicator")
-
-           })
+EjChart control supports 10 types of technical indicators. 
+
+## Bind data to render the indicator
+
+You can bind the series **DataSource** to the indicator by setting the specific series name to the indicator by using the *Indicators.SeriesName* property.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+      //Initializing Series
+      .Series(sr =>
+      {
+          sr
+              .XName("XDate").High("High").Low("Low").Open("Open").Close("Close")
+              //Set name to series
+              .Name("Hilo")
+              .DataSource(ViewBag.ChartData).Add();
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set Hilo series dataSource to indicator using seriesName
+          .SeriesName("Hilo").Add();
+      })
+        //...
+ )
 
 {% endhighlight %}
 
-The following screenshot displays the Exponential Moving Average Indicator
+{% highlight csharp %}
+
+           //// Create dataSource to chart
+            List<ChartData> data = new List<ChartData>();
+            data.Add(new ChartData("2010/7/1", 38, 10, 58, 27));
+            data.Add(new ChartData("2010/7/8", 28, 15, 48, 58));
+            data.Add(new ChartData("2010/7/9", 54, 35, 85, 98));
+            data.Add(new ChartData("2010/7/10", 52, 21, 38, 85));
+            ///...
+            ViewBag.ChartData = data;
+
+{% endhighlight %}
+Also, you can add data to the indicator directly by using the DataSource option of the indicator.  
+
+{% highlight cshtml %}
+
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+     
+      //Initializing Indicators  
+      .Indicators(ind => { ind
+              //Add dataSource to indicator directly
+              .XName("XDate").High("High").Low("Low").Open("Open").Close("Close")
+              .DataSource(ViewBag.ChartData).Add();
+      })
+        //...
+  )
+
+{% endhighlight %}
+
+	
+## Indicator Types
+
+### Accumulation Distribution
+
+To create an Accumulation Distribution indicator, set the *Indicators.Type* as **AccumulationDistribution**. Accumulation Distribution require **Volume** field additionally with the DataSource to calculate the signal line.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+          sr
+              .XName("XDate").High("High").Low("Low").Open("Open").Close("Close").Volume("Volume")
+              //Set name to series
+              .Name("Hilo")
+              .DataSource(ViewBag.ChartData).Add();
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.AccumulationDistribution)
+          .SeriesName("Hilo").Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
+
+![](Technical-Indicators_images/Technical-Indicators_img1.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/accumulationdistribution) here to view the Accumulation Distribution indicator online demo sample.
+
+
+### Average True Range (ATR)
+
+You can create an ATR indicator by setting the Indicators.Type as **ATR** in the Indicators. 
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.ATR).Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
+
+![](Technical-Indicators_images/Technical-Indicators_img2.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/atr) here to view the ATR indicator online demo sample.
+
+
+### Bollinger Band 
+
+Bollinger Band indicator is created by setting the Indicators.Type as **BollingerBand**. It contains three lines, namely upper band, lower band and signal line. Bollinger Band default value of the *Period* is 14 and *StandardDeviations* is 2.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.BollingerBand).Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
+
+![](Technical-Indicators_images/Technical-Indicators_img3.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/bollingerband) here to view the Bollinger Band indicator online demo sample.
+
+
+### Exponential Moving Average (EMA)
+
+To render an EMA indicator, you have to set the Indicators.Type as **EMA**.  
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.EMA).Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img4.png)
 
-Exponential Moving Average Indicator
-{:.caption}
-
-## Momentum Technical Indicator
-
-Momentum is one of the technical indicator supported by Essential Chart. The indicator renders two lines namely upper band and signal line. Upper band always render at value 100 and signal band is calculated based on the momentum formula. Essential Chart also provide options to customize the width and color of the upper band and signal line. You can also change the value for period. The default value of period is 14. 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("indicator").Orientation("vertical").OpposedPosition(true)
-
-      .Add();})
-
-// ...
-
-    .Indicators(ind=>
-
-          {
-
-              ind.SeriesName("indicator").Period(4)
-
-.Type(ChartIndicatorType.Momentum)
-
-                 .YAxisName("indicator")
-
-              })
+[Click](http://mvc.syncfusion.com/demos/web/chart/ema) here to view the EMA indicator online demo sample.
 
 
-{% endhighlight  %}
-The following screenshot displays the momentum technical indicator.
+### Momentum 
+
+Momentum Technical indicator is created by setting the Indicators.Type as **Momentum**. The momentum indicator renders two lines, namely upper band and signal line. Upper band always rendered at the value 100 and the signal line is calculated based on the momentum of the data.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.Momentum).Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img5.png)
 
-Momentum technical indicator
-{:.caption}
 
-## Moving Average Convergence Divergence Indicator
-
-MACD is one of the technical indicator supported by Essential Chart. It contains three lines namely Macd line, Signal line and Histogram column series that is used to differentiate macd and signal line. And also enumeration property: MacdType,Line, Histogram and Both. By default, line series contain macd and signal line. Enumeration type both contain line and histogram series. Macd and signal line is calculated based on the ShortPeriod,LongPeriod and Trigger value with indicator formula and histogram displays the difference between them. Essential Chart also provides options to customize the width and color of the macd and signal line and histogram with tooltip and animation options. The value for short, long period and trigger value can also be changed.
+[Click](http://mvc.syncfusion.com/demos/web/chart/momentum) here to view the Momentum indicator online demo sample.
 
 
-{% highlight CSHTML %}
+### Moving Average Convergence Divergence (MACD)
+
+To render an MACD indicator, you have to set the Indicators.Type as **MACD**.  MACD indicator contains Macd line, Signal line and Histogram column. Histogram is used to differentiate MACD and signal line.
+
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.MACD).Add();
+      })
+        //...
+ )
 
 
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("yAxis1").Orientation("vertical").OpposedPosition(true)
-
-      .Add();})
-
-// ...
-
-    .Indicators(ind=>
-
-            ind.Type(ChartIndicatorType.Macd).SeriesName("Hilo").YAxisName("yAxis1")
-
-                .ShortPeriod(12).LongPeriod(26).Trigger(9)
-
-                .Fill("darkblue").Width(1)
-
-                .MacdLine(ml=>ml.Fill("green").Width(1))
-
-                .MacdType(MacdType.Both)                           
-
-                .Histogram(hs=>hs.Fill("red").Opacity(1)
-
-                .Border(br=>br.Color("red").Width(1))).Add())
-
-)
-
-{% endhighlight  %}
-
-The following screenshot displays the MACD technical indicator
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img6.png)
 
-MACD Indicator
-{:.caption}
-
-## Relative Strength Index Indicator
-
-RSI is one of the technical indicator supported by Essential Chart. It contains three lines namely upper band, lower band and signal line. Upper and lower band always render at value 70 and 30 respectively and signal band is calculated based on the RSI formula. You can also customize the width and color of the upper band, lower band and signal line with tooltip and animation options. 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("yAxis1").Orientation("vertical").OpposedPosition(true)
-
-      .Add();})
-
-// ...
-
-    .Indicators(ind=>ind.Type(ChartIndicatorType.Rsi)
-
-                .SeriesName("Hilo").Period(14).YAxisName("yAxis1")
-
-                .Fill("darkblue").Width(1)
-
-                .Tooltip(tl=>tl.Visible(true))
-
-                .UpperLine(ul=>ul.Fill("green").Width(1))
-
-                .LowerLine(ll=>ll.Fill("red").Width(1))
-
-                .Add())
-
-)
+[Click](http://mvc.syncfusion.com/demos/web/chart/macd) here to view the MACD indicator online demo sample.
 
 
-{% endhighlight  %}
-The following screenshot displays the RSI technical indicator
+#### MacdType
+
+By using the **MacdType** enumeration property, you can change the MACD rendering as *Line*, *Histogram* or *Both*. 
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          .Type(ChartIndicatorType.MACD)
+          //Set macd draw type
+          .MacdType(MacdType.Histogram)
+          .Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img7.png)
 
-RSI technical indicator
-{:.caption}
+### Relative Strength Index (RSI)
 
-## Simple Moving Average Indicator
+To render the RSI indicator, set the Indicators.Type as **RSI**. It contains three lines, namely upper band, lower band and signal line. Upper and lower band always render at value 70 and 30 respectively and signal line is calculated based on the *RSI* formula.
 
-Simple Moving Average Indicator is one of the technical indicators supported by Essential Chart. The indicator rendered is called as signal line. Signal line is calculated based on the simple moving average. You can also customize the Period, width and color of the signal line. The default value of period is 14.
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
+{% highlight cshtml %}
 
 
+ @(Html.EJ().Chart("chartContainer")
 
-  .Axes(ax=>         
-
-   { 
-
-     ax.Name("indicator")
-
-         .Orientation("vertical")
-
-         .OpposedPosition(true)
-
-         .Add();})
-
-// ...
-
-
-
- .Indicators(ind=>
-
-    {
-
-      ind.SeriesName("indicator").Period(4)
-
-         .StandardDeviations(2)
-
-         .Type(ChartIndicatorType.Bollingerband)                     
-
-         .YAxisName("indicator")
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.RSI)
+          .Add();
+      })
+        //...
+ )
 
 
+{% endhighlight %}
 
-     })
-
-
-{% endhighlight  %}
-
-The following screenshot displays the Simple Moving Average Indicator.
 
 ![](Technical-Indicators_images/Technical-Indicators_img8.png)
 
-Simple Moving Average Indicator
-{:.caption}
+[Click](http://mvc.syncfusion.com/demos/web/chart/rsi) here to view the RSI indicator online demo sample.
 
-## Stochastic Technical Indicator
 
-Stochastic technical indicator is one of the most common indicators used in technical analysis. The indicators render four lines namely upper line, lower line, stochastic line and signal line. Upper line always render at value 80 and lower line is render at value 20. Stochastic and Signal Lines are calculated based on stochastic formulas. You can also customize the width and color of the all lines. 
+### Simple Moving Average (SMA)
+
+To render the SMA indicator, you should specify the Indicators.Type as **SMA**.  
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.SMA)
+          .Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img9.png)
 
-Stochastic technical indicator
-{:.caption}
-
-{% highlight CSHTML %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/sma) here to view the SMA indicator online demo sample.
 
 
-   @(Html.EJ().Chart("chartcontainer")
+### Stochastic 
 
-         // ... 
+For the Stochastic indicator, you need to set the Indicators.Type as **Stochastic**. The Stochastic indicator renders four lines namely, upper line, lower line, stochastic line and the signal line. Upper line always rendered at value 80 and the lower line is rendered at value 20. Stochastic and Signal Lines are calculated based on the stochastic formula.
 
-
-
-           .Axes(ax=>         
-
-        {
-
-         ax.Name("indicator")
-
-         .Orientation("vertical")
-
-         .OpposedPosition(true)
-
-         .Add();
-
-        })
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
 
-// ...
-
-
-
-    .Indicators(ind=>
-
-        {
-
-         ind.SeriesName("indicator")
-
-         .Period(14)
-
-         .KPeriod(3)
-
-         .DPeriod(3)
-
-         .Type(ChartIndicatorType.Stochastic)
-
-         .YAxisName("indicator")
-
-        })
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.Stochastic)
+          .Add();
+      })
+        //...
+ )
 
 
-
-                  // ...
-
-{% endhighlight  %}
-
-## Triangular Moving Average Indicator
-
-Triangular Moving Average Indicator is one of the technical indicator supported by Essential Chart. The indicator rendered is called as signal line. You can also customize the width and color of the signal line. 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-	                // ... 
-
-  .Axes(ax=>         
-
-   {ax.Name("indicator").Orientation("vertical").OpposedPosition(true)
-
-      .Add();
-
-})
-
-// ...
-
-.Indicators(ind=>
-
-{
-
-              ind.SeriesName("indicator").Period(14)
-
-              .Type(ChartIndicatorType.TMA)
-
-              .YAxisName("indicator")
-
-
-
- })
-
-{% endhighlight  %}
-
-The following screenshot displays the Triangular Moving Average indicator.
+{% endhighlight %}
 
 ![](Technical-Indicators_images/Technical-Indicators_img10.png)
 
-Triangular Moving Average Indicator
-{:.caption}
+[Click](http://mvc.syncfusion.com/demos/web/chart/stochastic) here to view the stochastic indicator online demo sample.
 
 
+### Triangular Moving Average (TMA)
+
+To render the TMA indicator, you should specify the Indicators.Type as **Tma**. 
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+      //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //Set indicator type
+          .Type(ChartIndicatorType.TMA)
+          .Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
+
+![](Technical-Indicators_images/Technical-Indicators_img11.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/tma) here to view the TMA indicator online demo sample.
+
+
+## Enable Tooltip 
+
+To display the indicator tooltip, use *Visible* option of the **Indicators.Tooltip**. Also, you can change and customize the tooltip color, border, format and font properties similar to the series tooltip.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+        //Initializing Series
+      .Series(sr =>
+      {
+         //...
+      })
+        //Initializing Indicators  
+      .Indicators(ind => { ind
+          //...
+          .Tooltip(tl=>tl.
+              //Enable tooltip for indicator
+              Visible(true))
+          .Add();
+      })
+        //...
+ )
+
+
+{% endhighlight %}
+
+![](Technical-Indicators_images/Technical-Indicators_img12.png)

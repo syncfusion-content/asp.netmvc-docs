@@ -1,2020 +1,2523 @@
 ---
 layout: post
-title: Chart Types | Chart | ASP.NET MVC | Syncfusion
-description: chart types
+title: Chart types |Chart  | ASP.NET MVC | Syncfusion
+description: What are the different types of Charts available in Essential JavaScript Chart.
 platform: ejmvc
 control: Chart
 documentation: ug
 ---
 
-# Chart Types
-
-Essential Chart control supports more than 20 types of Chart for your business requirements. Each one is highly and easily configurable with built-in support for creating stunning visual effects.
-
-Chart types are specified on each series through the Type property. All the Chart types are required to have at least one x and one y value. Certain Chart types require more than one y value.
-
-You can combine several Chart types in one Chart using the Type property on series to set different Chart types for each series.
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")   
-
-
-
-.Series(ser=>
-
-            {
-
-              ser.Name("columnSeries").Type(SeriesType.Column).Add();
-
-              ser.Name("lineSeries").Type(SeriesType.Line).Add();
-
-            })
-
-
-
-              //.......
-
-)
-
-
-{% endhighlight  %}
-In multiple series case, you can use CommonSeriesOptions property to specify the properties that are common for all series in Chart. 
-
-{% highlight CSHTML %}
-
-
-
-
- @(Html.EJ().Chart("chartcontainer")   
-
-              .CommonSeriesOptions(cr=>cr.Type(SeriesType.Line).EnableAnimation(false).Marker(mr=>mr.Shape(ChartShape.Circle).Size(sz=>sz.Height(10).Width(10)).Visible(true)))                
-
-
-
-//.......
-
-
-
-)
-{% endhighlight  %}
+# ChartTypes
 
 ## Line Chart
 
-Line Charts join points on a plot using straight lines showing trends in data at equal intervals. Line Charts treats the input as non-numeric, categorical information, equally spaced along the x-axis.
+To render a Line Chart, set the series **Type** as **Line** in the chart series. To change the line segment color, you can use the **Fill** property of the series.
 
-You can configure the appearance of the lines and the points with options Fill used and Width of line.
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series.
+         sr.Type(SeriesType.Line).Fill("#E94649").Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img1.png)
 
-Line Chart
-{:.caption}
 
-{% highlight CSHTML %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/default) here to view the Line Chart online demo sample.
 
 
+### Change the line width
+
+To change the width of the line segment, you can use the **Width** property in the series.
+
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer") 
+ @(Html.EJ().Chart("chartContainer")
 
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the width of line series
+         sr.Width(3).Add();
+     })
+     
+     //...
+  )
 
-
-  .Series(ser=>
-
-            {     
-
-              ser.Name("India").Type(SeriesType.Line).Points(po =>
-
-                    {
-
-                        po.X(2005).Y(28).Add();
-
-                        po.X(2006).Y(35).Add();
-
-                        po.X(2007).Y(42).Add();
-
-                        po.X(2008).Y(37).Add();
-
-                        po.X(2009).Y(41).Add();
-
-                        po.X(2010).Y(35).Add();
-
-                        po.X(2011).Y(37).Add();
-
-                    }).Add();                
-
-            })
-
-              //.......
-
-)
-{% endhighlight  %}
-
-## StepLine Chart
-
-Step Line Charts use horizontal and vertical lines to connect data points resulting in a step like progression. You can configure the appearance of line using Fill and Width property in series.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img2.png)
 
-Step Line Chart
-{:.caption}
 
-{% highlight CSHTML %}
+### Dashed lines
 
-@(Html.EJ().Chart("chartcontainer") 
+To render the line series with dotted lines, you can use the **DashArray** option of the series.
 
+{% highlight cshtml %}
 
+ @(Html.EJ().Chart("chartContainer")
 
-.Series(ser=>
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change dash array to display dotted or dashed lines
+         sr.DashArray("5,5").Add();
+     })
+     
+     //...
+ )
 
-{         
-
-	ser.Name("India").Type(SeriesType.StepLine).Points(po =>
-
-		{
-
-			po.X(2006).Y(430).Add();
-
-			po.X(2007).Y(416).Add();
-
-			po.X(2008).Y(404).Add();
-
-			po.X(2009).Y(390).Add();
-
-			po.X(2010).Y(376).Add();
-
-			po.X(2011).Y(362).Add();
-
-			po.X(2012).Y(351).Add();                    
-
-		 }).Add();                
-
-})
-
-)
-{% endhighlight  %}
-
-## Area Chart
-
-Area Chart is rendered using a collection of line segments connected to form a closed-loop area filled with a specified color.You can plot multiple series on the same Chart. You can use Fill in series to customize the series color and the Border to customize the series border color and width.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img3.png)
 
-Area Chart
-{:.caption}
 
-{% highlight CSHTML %}
+### Changing the line cap
 
-@(Html.EJ().Chart("chartcontainer") 
+For customizing the start and end caps of the line segment, you can use the **LineCap** property.  
 
-
-
-.Series(ser=>
-
-{                        
-
-	ser.Name("Product B").Type(SeriesType.Area).Points(po =>
-
-		{
-
-			po.X(1900).Y(2.6).Add();
-
-			po.X(1920).Y(2.8).Add();
-
-			po.X(1940).Y(2.6).Add();
-
-			po.X(1960).Y(3).Add();
-
-			po.X(1980).Y(3.6).Add();
-
-			po.X(2000).Y(3).Add();
-
-		}).Add();
+{% highlight cshtml %}
 
 
+ @(Html.EJ().Chart("chartContainer")
 
-	ser.Name("ProductC").Type(SeriesType.Area).Points(po =>
-
-	{
-
-		po.X(1900).Y(2.8).Add();
-
-		po.X(1920).Y(2.5).Add();
-
-		po.X(1940).Y(2.8).Add();
-
-		po.X(1960).Y(3.2).Add();
-
-		po.X(1980).Y(2.9).Add();
-
-		po.X(2000).Y(2).Add();
-
-	}).Add();                
-
-})
-
-)
-{% endhighlight  %}
-
-## Range Area Chart
-
-Range Area Charts are similar to regular area Charts except that, each area is rendered over a range.  Specify the y-axis high and low values for each point for the Range Area Chart. You can customize the series color and border using Fill and Border properties in series.
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change line cap
+         sr.LineCap(ChartLineCap.Square).Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img4.png)
 
-Range Area Chart
-{:.caption}
+
+### Changing the line join
+
+You can use the **LineJoin** property to specify how two intersecting line segments should be joined.
+
+{% highlight cshtml %}
 
 
-{% highlight CSHTML %}
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change line join
+         sr.LineJoin(ChartLineJoin.Round).Add();
+     })
+     
+     //...
+ )
 
 
-@(Html.EJ().Chart("chartcontainer") 
-
-
-
-  .Series(ser=>
-
-            {                        
-
-             ser.Name("Product B").Type(SeriesType.RangeArea.Points(po =>
-
-                    {
-
-                        po.X(1900).High(4).Low(2).Add();
-
-                        po.X(1920). High (4.5). Low(2.5).Add();
-
-                        po.X(1940). High (5). Low(3).Add();
-
-                        po.X(1960). High (5.3). Low(3.3).Add();
-
-                        po.X(1980). High (5). Low(3).Add();
-
-                        po.X(2000). High (4.5). Low(2.5).Add();
-
-                        po.X(2020). High (4). Low(2).Add();
-
-                    }).Add();
-
-
-
-            ser.Name("ProductC").Type(SeriesType.RangeArea).Points(po =>
-
-                {
-
-                    po.X(1900).High(2).Low(0).Add();
-
-                    po.X(1920). High (2.5). Low(0.5).Add();
-
-                    po.X(1940). High (3). Low(1).Add();
-
-                    po.X(1960). High (3.3). Low(1.3).Add();
-
-                    po.X(1980). High (3). Low(1).Add();
-
-                    po.X(2000). High (2.5). Low(0.5).Add();
-
-                    po.X(2020). High (2). Low(0).Add();
-
-                }).Add();                
-
-            })
-
-              //.......
-
-)
-
-{% endhighlight  %}
-
-## StepArea Chart
-
-Step Area Charts are similar to regular area Charts except that, instead of a straight line tracing the shortest path between points, the values are connected by continuous vertical and horizontal lines forming a step like progression. You can use the Fill and Border properties in series to customize the series color and border.
-
+{% endhighlight %}
 
 
 ![](Chart-Types_images/Chart-Types_img5.png)
 
-Step Area Chart
-{:.caption}
 
-{% highlight CSHTML %}
+### MultiColor Line
 
+You can change the color of the line segments by using the *Fill* property of the each *Points* in the series.
 
-
-
-@(Html.EJ().Chart("chartcontainer") 
+{% highlight cshtml %}
 
 
+     @(Html.EJ().Chart("chartContainer")
+            //...
+                .Series(sr =>
+                {
+                    //Adding Candle series
+                    sr.Points(pts=>{
+                        pts.Fill("red").Add();
+                    }) .Add();
+                })  
+             //...              
+     )
 
-  .Series(ser=>
+{% endhighlight %}
 
-            {                        
+![](Chart-Types_images/Chart-Types_img81.png)
 
-              ser.Name("Brazil").Type(SeriesType.StepArea).Points(po =>
+[Click](http://mvc.syncfusion.com/demos/web/chart/multicolor) here to view the MultiColor Line Chart online demo sample.
 
-                    {
+ 
+## Step Line Chart
 
-                        po.X(2000).Y(416).Add();
+To render a Step Line Chart, set the series Type as **StepLine"** in the chart series. To change the StepLine segment color, you can use the Fill property of the series.
 
-                        po.X(2001).Y(490).Add();
-
-                        po.X(2002).Y(470).Add();
-
-                        po.X(2003).Y(500).Add();
-
-                        po.X(2004).Y(449).Add();
-
-                        po.X(2005).Y(470).Add();
-
-                        po.X(2006).Y(437).Add();
-
-                        po.X(2007).Y(458).Add();
-
-                        po.X(2008).Y(500).Add();
-
-                        po.X(2009).Y(473).Add();
-
-                        po.X(2010).Y(520).Add();
-
-                        po.X(2011).Y(509).Add();
-
-                    }).Add(); 
-
-              })   
-
-        //.......
-
-   )
-{% endhighlight  %}
-
-## SplineArea Chart
-
-Spline Area Chart is similar to an Area Chart except the difference in the way the points of a series are connected. It connects each series of points by a smooth spline curve. You can plot multiple series on the same Chart. To customize the series color and border, use the Fill and Border properties in series.
+{% highlight cshtml %}
 
 
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series.
+         sr.Type(SeriesType.StepLine).Fill("#E94649").Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img6.png)
 
-Spline Area Chart
-{:.caption}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer") 
-
-.Series(ser=>
-
-{                                        
-
-ser.Name("US").Type(SeriesType.SplineArea).Points(po =>
-
-	{
-
-		po.X(2002).Y(2.2).Add();
-
-		po.X(2003).Y(3.4).Add();
-
-		po.X(2004).Y(2.8).Add();
-
-		po.X(2005).Y(1.6).Add();
-
-		po.X(2006).Y(2.3).Add();
-
-		po.X(2007).Y(2.5).Add();
-
-		po.X(2008).Y(2.9).Add();
-
-		po.X(2009).Y(3.8).Add();
-
-		po.X(2010).Y(1.4).Add();
-
-		po.X(2011).Y(3.1).Add();
-
-	}).Add();
+[Click](http://mvc.syncfusion.com/demos/web/chart/stepline) here to view the Step Line Chart online demo sample.
 
 
+### Changing the line width
 
-ser.Name("Germany").Type(SeriesType.SplineArea).Points(po =>
+To change the line width, you can use the **Width** property.  
 
-{
+{% highlight cshtml %}
 
-	po.X(2002).Y(0.8).Add();
+@(Html.EJ().Chart("chartContainer")
 
-	po.X(2003).Y(1.3).Add();
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the width of step line series
+         sr.Width(3).Add();
+     })
+     
+     //...
+ )
 
-	po.X(2004).Y(1.1).Add();
-
-	po.X(2005).Y(1.6).Add();
-
-	po.X(2006).Y(2).Add();
-
-	po.X(2007).Y(1.7).Add();
-
-	po.X(2008).Y(2.3).Add();
-
-	po.X(2009).Y(2.7).Add();
-
-	po.X(2010).Y(1.1).Add();
-
-	po.X(2011).Y(2.3).Add();
-
-}).Add();                 
-
-})   
-
-//.......
-
-)
-
-{% endhighlight  %}
-
-## StackingArea Chart
-
-Stacking Area Charts are similar to regular area Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole. You can customize the series color and border using Fill and Border properties in series.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img7.png)
 
-StackingArea Chart
-{:.caption}
 
-{% highlight CSHTML %}
+### Dashed lines
 
+To render the step line series with dotted lines, you can use the DashArray option of the series.
 
-@(Html.EJ().Chart("chartcontainer") 
+{% highlight cshtml %}
 
+@(Html.EJ().Chart("chartContainer")
 
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change dash array to display dotted or dashed lines
+         sr.DashArray("5,5").Add();
+     })
+     
+     //...
+ )
 
-.Series(ser=>
-
-{                                                      
-
-  ser.Name("US").Type(SeriesType.StackingArea).Points(po =>
-
-		{
-
-			po.X(2002).Y(6).Add();
-
-			po.X(2003).Y(7.5).Add();
-
-			po.X(2004).Y(6).Add();
-
-			po.X(2005).Y(6.5).Add();
-
-			po.X(2006).Y(7.4).Add();
-
-			po.X(2007).Y(7.9).Add();
-
-			po.X(2008).Y(7.5).Add();
-
-			po.X(2009).Y(8.5).Add();
-
-			po.X(2010).Y(4.8).Add();
-
-			po.X(2011).Y(9.3).Add();
-
-		}).Add();
-
-
-
- ser.Name("Indonesia").Type(SeriesType.StackingArea).Points(po =>
-
-	{
-
-		po.X(2002).Y(3.5).Add();
-
-		po.X(2003).Y(4.9).Add();
-
-		po.X(2004).Y(3.7).Add();
-
-		po.X(2005).Y(7.5).Add();
-
-		po.X(2006).Y(4.8).Add();
-
-		po.X(2007).Y(2.6).Add();
-
-		po.X(2008).Y(4.7).Add();
-
-		po.X(2009).Y(3.7).Add();
-
-		po.X(2010).Y(3.5).Add();
-
-		po.X(2011).Y(3.6).Add();
-
-	}).Add();    
-
-
-
-})   
-
-//.......
-
-)
-{% endhighlight  %}
-
-## 100% Stacking area chart  
-
-100% Stacking area is similar to the stacking area chart. But here, the series display multiple data series as stacked areas and the cumulative portion of each stacked element is summed to 100%.  
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("container")	 
-
-   .Series(sr =>
-
-       {
-
-          sr.Points(pt =>
-
-                  {
-
-                     pt.X("2006").Y(34).Add();
-
-                     pt.X("2007").Y(20).Add();
-
-                     pt.X("2008").Y(40).Add();
-
-                     pt.X("2009").Y(51).Add();
-
-                     pt.X("2010").Y(26).Add();
-
-                     pt.X("2011").Y(37).Add();
-
-                     pt.X("2012").Y(54).Add();
-
-                     pt.X("2013").Y(44).Add();
-
-                     pt.X("2014").Y(48).Add();                       
-
-                    }).Name("USA").Type(SeriesType.StackingArea100).Add();
-
-         sr.Points(pt =>
-
-                {
-
-                    pt.X("2006").Y(51).Add();
-
-                    pt.X("2007").Y(26).Add();
-
-                    pt.X("2008").Y(37).Add();
-
-                    pt.X("2009").Y(51).Add();
-
-                    pt.X("2010").Y(26).Add();
-
-                    pt.X("2011").Y(37).Add();
-
-                    pt.X("2012").Y(43).Add();
-
-                    pt.X("2013").Y(23).Add();
-
-                    pt.X("2014").Y(55).Add();
-
-                 }).Name("India").Type(SeriesType.StackingArea100).Add();  
-
-)
-
-{% endhighlight  %}
-
-The following screenshot displays the 100% Stacking area chart.
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img8.png)
 
-100% Stacking area chart.
-{:.caption}
 
-## Column Chart
+### Changing the line cap
 
-Column Charts are among the most common Chart types that are used. It uses vertical bars (columns) to display different values of one or more items. It is similar to a bar Chart except that the bars are vertical and not horizontal as in bar Chart. Points from adjacent series are drawn as bars next to each other. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+For customizing the start and end caps of the line segment, you can use the LineCap property.  
+
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change line cap
+         sr.LineCap(ChartLineCap.Square).Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img9.png)
 
-Column Chart
-{:.caption}
 
-{% highlight CSHTML %}
+### Changing the line join
 
+You can use the LineJoin property to specify how two intersecting line segments should be joined.
 
- @(Html.EJ().Chart("chartcontainer") 
-
+{% highlight cshtml %}
 
 
-  .Series(ser=>
+@(Html.EJ().Chart("chartContainer")
 
-            {                                                      
-
-             ser.Name("Gold").Type(SeriesType.Column).Points(po =>
-
-                    {
-
-                        po.X("USA").Y(50).Add();
-
-                        po.X("China").Y(40).Add();
-
-                        po.X("Japan").Y(70).Add();
-
-                        po.X("Australia").Y(60).Add();
-
-                        po.X("France").Y(50).Add();
-
-                        po.X("Germany").Y(40).Add();
-
-                        po.X("Italy").Y(40).Add();
-
-                        po.X("Sweden").Y(30).Add();
-
-                    }).Add();
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change line join
+         sr.LineJoin(ChartLineJoin.Round).Add();
+     })
+     
+     //...
+ )
 
 
-
-             ser.Name("Silver").Type(SeriesType.Column).Points(po =>
-
-                {
-
-                    po.X("USA").Y(70).Add();
-
-                    po.X("China").Y(60).Add();
-
-                    po.X("Japan").Y(60).Add();
-
-                    po.X("Australia").Y(56).Add();
-
-                    po.X("France").Y(45).Add();
-
-                    po.X("Germany").Y(30).Add();
-
-                    po.X("Italy").Y(35).Add();
-
-                    po.X("Sweden").Y(25).Add();
-
-                }).Add();    
-
-          })   
-
-        //.......
-
-   )
-{% endhighlight  %}
-
-## RangeColumn Chart
-
-RangeColumn Chart is similar to the Column Chart except that each column is rendered over a range. Specify the y-axis Starting and Ending values for each point for the RangeColumn Chart. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
-
+{% endhighlight %}
 
 
 ![](Chart-Types_images/Chart-Types_img10.png)
 
-RangeColumn Chart
-{:.caption}
 
-{% highlight CSHTML %}
+## Area Chart
 
+To render an Area chart, you can specify the series Type as **Area** in the chart series. To change the Area color, you can use the Fill property of the series.
 
+{% highlight cshtml %}
 
 
- @(Html.EJ().Chart("chartcontainer") 
+ @(Html.EJ().Chart("chartContainer")
 
-
-
-  .Series(ser=>
-
-            {                                                      
-
-              ser.Name("India).Points(po =>
-
-                    {
-
-                        po.X("Jan").Low(0.7).High(6.1).Add();
-
-                        po.X("Feb").Low(1.3).High(6.3).Add();
-
-                        po.X("Mar").Low(1.9).High(8.5).Add();
-
-                        po.X("Apr").Low(3.1).High(10.8).Add();
-
-                        po.X("May").Low(5.7).High(14.4).Add();
-
-                    }).Add();
-
-
-
-                ser.Name("Germany").Points(po =>
-
-                {
-
-                    po.X("Jan").Low(1.7).High(7.1).Add();
-
-                    po.X("Feb").Low(1.9).High(7.7).Add();
-
-                    po.X("Mar").Low(1.2).High(7.5).Add();
-
-                    po.X("Apr").Low(2.5).High(9.8).Add();
-
-                    po.X("May").Low(4.7).High(11.4).Add();
-
-                }).Add();    
-
-          })   
-
-        //.......
-
-   )
-{% endhighlight  %}
-
-## StackingColumn Chart
-
-Stacking Column Charts are similar to regular column Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole.You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
-
-
-
-![](Chart-Types_images/Chart-Types_img11.png)
-
-StackingColumn Chart
-{:.caption}
-
-{% highlight CSHTML %}
-
-
-
-
- @(Html.EJ().Chart("chartcontainer") 
-
-
-
-  .Series(sr =>
-
-            {
-
-             sr.Points(pt =>
-
-              {
-
-                 pt.X("Jan").Y(900).Add();
-
-                 pt.X("Feb").Y(820).Add();
-
-                 pt.X("Mar").Y(880).Add();
-
-                 pt.X("Apr").Y(725).Add();
-
-                 pt.X("May").Y(765).Add();                 
-
-               }).Name("Google").Type(SeriesType.StackingColumn).Add();
-
-
-
-              sr.Points(pt =>
-
-               {
-
-                  pt.X("Jan").Y(190).Add();
-
-                  pt.X("Feb").Y(226).Add();
-
-                  pt.X("Mar").Y(194).Add();
-
-                  pt.X("Apr").Y(250).Add();
-
-                  pt.X("May").Y(222).Add();
-
-                 }).Name("Bing").Type(SeriesType.StackingColumn).Add();    
-
-            })
-
-  //.......
-
-   )
-{% endhighlight  %}
-
-## 100% Stacking column chart 
-
-100% Stacking column is similar to the stacking column charts. But here, the combined contribution of Y values is the combined total of the vertical column with 100 percent.
-
-
-{% highlight CSHTML %}
-
-
-
-
-@(Html.EJ().Chart("container")	 
-
-   .Series(sr =>
-
-       {
-
-          sr.Points(pt =>
-
-                {     
-
-                     pt.X("2006").Y(900).Add();                 
-
-                     pt.X("2007").Y(544).Add();
-
-                     pt.X("2008").Y(880).Add();
-
-                     pt.X("2009").Y(725).Add();
-
-                     pt.X("2010").Y(765).Add();
-
-                     pt.X("2011").Y(679).Add();
-
-                     pt.X("2012").Y(770).Add();
-
-                  }).Type(SeriesType.StackingColumn100).Add();
-
-         sr.Points(pt =>
-
-                {
-
-                    pt.X("2006").Y(190).Add();                 
-
-                    pt.X("2007").Y(226).Add();
-
-                    pt.X("2008").Y(194).Add();
-
-                    pt.X("2009").Y(545).Add();
-
-                    pt.X("2010").Y(222).Add();
-
-                    pt.X("2011").Y(181).Add();
-
-                    pt.X("2012").Y(128).Add();                    
-
-                 }).Type(SeriesType.StackingColumn100).Add();  
-
-)
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series.
+         sr.Type(SeriesType.Area).Fill("#69D2E7").Add();
+     })
+     
+     //...
+ )
 
 
 {% endhighlight %}
-The following screenshot displays the 100% Stacking column chat.
+
+![](Chart-Types_images/Chart-Types_img11.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/area) here to view the Area Chart online demo.
+
+
+## Range Area Chart
+
+To render a Range Area Chart, set the Type as **RrangeArea** in the chart series. To change the RangeArea color, you can use the Fill property of the series.
+
+Since the RangeArea series requires two y values for a point, you have to add the **High** and **Low** value. High and Low value specifies the maximum and minimum range of the points.
+
+* When you are using the Points option, specify the high and low values by using the High and Low option of the point.
+
+* When you are using the DataSource option to assign the data, map the fields from the dataSource that contain High and Low values by using the Series.High and Series.Low options. 
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.RangeArea).Fill("Indigo")
+             //Use High and Low values instead of Y
+             .Points(pt=>{pt.X("1935").High(80).Low(70).Add();
+                 //..
+             })
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img12.png)
 
-100% Stacking column chart
-{:.caption}
-
-## Bar Chart
-
-Bar Chart is the simplest and most versatile of statistical diagrams. It displays horizontal bars for each point in the series and points from adjacent series are drawn as bars next to each other. Bar Charts are used to compare values across categories, to display variations in the value of an item over time or to display the values of several items at a single point in time.You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
+[Click](http://mvc.syncfusion.com/demos/web/chart/rangearea) here to view Range Area Chart online demo.
 
 
+## Step Area Chart
+
+To render a Step Area Chart, set the Type as **StepArea** in the chart series. To change the StepArea color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.StepArea).Fill("#69D2E7")
+            //...
+             .Add();
+     })
+     
+     //...
+ )  
+
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img13.png)
 
-Bar Chart
-{:.caption}
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer") 
+[Click](http://mvc.syncfusion.com/demos/web/chart/steparea) here to view Step Area Chart online demo.
 
 
+## Spline Area Chart
 
-   .Series(sr =>
+To render a Spline Area Chart, set the Type as **SplineArea** in the chart series. To change the SplineArea color, you can use the Fill property of the series.
 
-              {
+{% highlight cshtml %}
 
-                 sr.Points(pt =>
+ 
+@(Html.EJ().Chart("chartContainer")
 
-                  {
-
-                    pt.X(2006).Y(7.8).Add();
-
-                    pt.X(2007).Y(7.2).Add();
-
-                    pt.X(2008).Y(6.8).Add();
-
-                    pt.X(2009).Y(10.7).Add();
-
-                    pt.X(2010).Y(10.8).Add();
-
-                    pt.X(2011).Y(9.8).Add();
-
-                    }).Name("India").Type(SeriesType.Bar).Add();
-
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.SplineArea).Fill("#C4C24A")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
-                sr.Points(pt =>
-
-                {
-
-                   pt.X(2006).Y(4.8).Add();
-
-                   pt.X(2007).Y(4.6).Add();
-
-                   pt.X(2008).Y(7.2).Add();
-
-                   pt.X(2009).Y(9.3).Add();
-
-                   pt.X(2010).Y(9.7).Add();
-
-                   pt.X(2011).Y(9).Add();
-
-                }).Name("US").Type(SeriesType.Bar).Add();
-
-            })
-
-  //.......
-
-  )
-
-{% endhighlight  %}
-
-## Stacking bar Chart
-
-Stacking Bar Charts are similar to regular bar Charts except that the Y values stack on top of each other in the specified series order. This enables you to visualize the relationship of parts to the whole. You can customize the series color and border using Fill and Border properties in series and each segment of series using Fill and Border properties in point.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img14.png)
 
-Stacking bar Chart
-{:.caption}
+[Click](http://mvc.syncfusion.com/demos/web/chart/splinearea) here to view Spline Area Chart online demo.
 
-{% highlight CSHTML %}
 
+## Stacked Area Chart
 
+To render a Stacked Area Chart, set the Type as **StackingArea** in the chart series. To change the StackingArea color, you can use the Fill property of the series.
 
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer") 
+@(Html.EJ().Chart("chartContainer")
 
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.StackingArea).Fill("#69D2E7")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
-    .Series(sr =>
-
-      {
-
-        sr.Points(pt =>
-
-           {
-
-              pt.X("Jan").Y(6).Add();
-
-              pt.X("Feb").Y(8).Add();
-
-              pt.X("Mar").Y(12).Add();
-
-              pt.X("Apr").Y(15.5).Add();
-
-              pt.X("May").Y(20).Add();
-
-              pt.X("June").Y(24).Add();
-
-              pt.X("July").Y(28).Add();
-
-            }).Name("Apple").Type(SeriesType.StackingBar).Add();
-
-
-
-           sr.Points(pt =>
-
-             {
-
-               pt.X("Jan").Y(-1).Add();
-
-               pt.X("Feb").Y(-1.5).Add();
-
-               pt.X("Mar").Y(-2).Add();
-
-               pt.X("Apr").Y(-2.5).Add();
-
-               pt.X("May").Y(-3).Add();
-
-               pt.X("June").Y(-3.5).Add();
-
-                pt.X("July").Y(-4).Add();            
-
-              }).Name("Wastage").Type(SeriesType.StackingBar).Add();
-
-            })
-
-     //.......
-
-  )
-{% endhighlight  %}
-
-## 100% Stacking bar chart 
-
-100% Stacking bar is similar to stacking bar charts. Here, the combined contribution of Y values is the combined total of the horizontal bar with 100 percent. 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("container")	 
-
-   .Series(sr =>
-
-       {
-
-          sr.Points(pt =>
-
-                {                      
-
-                     pt.X("2007").Y(453).Add();
-
-                     pt.X("2008").Y(354).Add();
-
-                     pt.X("2009").Y(282).Add();
-
-                     pt.X("2010").Y(321).Add();
-
-                     pt.X("2011").Y(333).Add();
-
-                     pt.X("2012").Y(351).Add();
-
-                     pt.X("2013").Y(403).Add();
-
-                     pt.X("2014").Y(421).Add();                       
-
-                  }).Type(SeriesType.StackingBar100).Add();
-
-         sr.Points(pt =>
-
-                {
-
-                    pt.X("2007").Y(876).Add();
-
-                    pt.X("2008").Y(564).Add();
-
-                    pt.X("2009").Y(242).Add();
-
-                    pt.X("2010").Y(121).Add();
-
-                    pt.X("2011").Y(343).Add();
-
-                    pt.X("2012").Y(451).Add();
-
-                    pt.X("2013").Y(203).Add();
-
-                    pt.X("2014").Y(431).Add();
-
-                 }).Type(SeriesType.StackingBar100).Add();  
-
-)
-
-
-{% endhighlight  %}
-The following screenshot displays the 100% Stacking bar chart.
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img15.png)
 
-100% Stacking bar chart 
-{:.caption}
 
-## Spline Chart
-
-Spline Chart is similar to a Line Chart except that it connects the different data points using splines instead of straight lines. You can configure the appearance of the lines and the points with options Fill used and the Width of lines.
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea) here to view Stacked Area Chart online demo.
 
 
+## 100% Stacked Area Chart  
+
+To render a 100% Stacked Area Chart, set the Type as **StackingArea100** in the chart series. To change the StackingArea100 color, you can use the Fill property of the series.   
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.StackingArea100).Fill("#C4C24A")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img16.png)
 
-Spline Chart
-{:.caption}
 
-{% highlight html %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea100) here to view 100% Stacked Area Chart online demo.
 
 
+## Column Chart
+
+To render a Column Chart, set the Type as **Column** in the chart series. To change the color of the column series, you can use the Fill property.  
+
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer") 
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the series type and fill color
+         sr.Type(SeriesType.Column).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
-
-  .Series(sr =>
-
-    {
-
-       sr.Points(pt =>
-
-        {
-
-          pt.X("Jan").Y(-1).Add();
-
-          pt.X("Feb").Y(-1).Add();
-
-          pt.X("Mar").Y(2).Add();
-
-          pt.X("Apr").Y(8).Add();
-
-          pt.X("May").Y(6).Add();
-
-            pt.X("June").Y(18).Add();
-
-            pt.X("July").Y(11).Add();                      
-
-       }).Name("London").Type(SeriesType.Spline).Add();
-
-
-
-         sr.Points(pt =>
-
-          {
-
-            pt.X("Jan").Y(3).Add();
-
-            pt.X("Feb").Y(3.5).Add();
-
-            pt.X("Mar").Y(7).Add();
-
-            pt.X("Apr").Y(5.5).Add();
-
-            pt.X("May").Y(5).Add();
-
-            pt.X("June").Y(13.5).Add();
-
-            pt.X("July").Y(16).Add();                
-
-      }).Name("Germany").Type(SeriesType.Spline).Add();
-
-   })
-
-
-
-//.......
-
-  )   
-{% endhighlight  %}
-
-## Pie Chart
-
-A Pie Chart renders y values as slices in a pie. The slices are rendered in proportion to the whole that is the sum of all the y values in the series. Consequently, Pie Charts are used to visualize the proportional contribution in terms of percentage or fraction of categories of data to the whole data set. The x values in the data series are treated only as nominal in categorical, qualitative data. The Pie Chart displays only one Data Series at a time. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img17.png)
 
-Pie Chart
-{:.caption}
 
-{% highlight CSHTML %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/column) here to view Column Chart demo.
 
 
-@(Html.EJ().Chart("chartcontainer") 
+### Change a point color
+
+You can change the color of a column by using the Fill property of the point.
+
+{% highlight cshtml %}
 
 
+  @(Html.EJ().Chart("chartContainer")
 
-    .Series(sr =>
-
+      // ...
+    
+     .Series(sr =>
      {
-
-       sr.Points(pt =>
-
-         {
-
-            pt.X("Labour").Y(28).Text("Labour 28%").Add();
-
-            pt.X("Legal").Y(10).Text("Legal, 10%").Add();
-
-            pt.X("Production").Y(20).Text("Production, 20%").Add();
-
-            pt.X("License").Y(15).Text("License, 15%").Add();
-
-            pt.X("Facilities").Y(23).Text("Facilites, 23%").Add();
-
-            pt.X("Taxes").Y(17).Text("Taxes, 17%").Add();
-
-            pt.X("Insurance").Y(12).Text("Insurance, 12%").Add();
-
-          }).Marker(mr => { mr.DataLabel(db => { db.Visible(true)
-
-           .ConnectorLine(cl => cl.Height(15)).Font(fn => { fn.Size("20px"); }); });})     
-
-              .Name("Newyork").Type(SeriesType.Pie).Explode(true)
-
-                .LabelPosition(ChartLabelPosition.Outside).ExplodeIndex(2).Add();
-
-       })
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
-
-  //.......
-
-  )  
-{% endhighlight  %}
-
-## Doughnut Chart
-
-Doughnut Charts are pie Charts with a hole, whose value is specified as the doughnut coefficient. The Doughnut Chart is best suited for presenting data in proportions. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
-
-
+{% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img18.png)
 
-Doughnut Chart
-{:.caption}
 
-{% highlight html %}
+## RangeColumn Chart
+
+To render a Range Column Chart, set the Type as **RangeColumn** in the chart series. To change the RangeColumn color, use the Fill property of the series.
+
+Since, the RangeColumn series requires two y values for a point, add the High and Low value. High and Low value specifies the maximum and minimum range of the points.
+
+* When you are using the Points option, specify the high and low values by using the High and Low option of the point.
+
+* When you are using the DataSource option to assign the data, you have to map the fields from the dataSource that contains high and low values by using the Series.High and Series.Low) options.  
+
+{% highlight cshtml %}
 
 
+ @(Html.EJ().Chart("chartContainer")
 
-
- @(Html.EJ().Chart("chartcontainer") 
-
-
-
-    .Series(sr =>
-
+      // ...
+    
+     .Series(sr =>
      {
-
-       sr.Points(pt =>
-
-         {
-
-            pt.X("Labour").Y(28).Text("Labour 28%").Add();
-
-            pt.X("Legal").Y(10).Text("Legal, 10%").Add();
-
-            pt.X("Production").Y(20).Text("Production, 20%").Add();
-
-            pt.X("License").Y(15).Text("License, 15%").Add();
-
-            pt.X("Facilities").Y(23).Text("Facilites, 23%").Add();
-
-            pt.X("Taxes").Y(17).Text("Taxes, 17%").Add();
-
-            pt.X("Insurance").Y(12).Text("Insurance, 12%").Add();
-
-          }).Marker(mr => { mr.DataLabel(db => { db.Visible(true)
-
-           .ConnectorLine(cl => cl.Height(15)).Font(fn => { fn.Size("20px"); }); });})     
-
-              .Name("Newyork").Type(SeriesType.Doughnut).Explode(true)
-
-                .LabelPosition(ChartLabelPosition.Outside).Add();
-
-       })
+         //Set chart type to series
+         sr.Type(SeriesType.RangeColumn).Fill("#E94649")
+        //Use high and low values instead of y
+        .Points(pt=>{pt.High("6.1").Low(0.7).Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-  //.......
+![](Chart-Types_images/Chart-Types_img19.png)
 
-  )  
-{% endhighlight  %}
-
-## Semi Pie and Doughnut Chart
-
-The semi pie and doughnut chart is a semicircular chart. Data are represented in different sectors within a semi-circle.
-
-EJ Chart allows you to create semi pie and doughnut chart using StartAngle and EndAngle property. Default values of StartAngle and EndAngle are null. The specified data are represented within start angle to end angle degree.
+[Click](http://mvc.syncfusion.com/demos/web/chart/rangecolumn) here to view Range Column Chart online demo.
 
 
+### Change a point color 
+
+To change the color of a range column, you can use the Fill property of point. 
+
+{% highlight cshtml %}
 
 
-{% highlight CSHTML %}
+  @(Html.EJ().Chart("chartContainer")
 
-
-
-
-@(Html.EJ().Chart("chartcontainer") 
-
-                // ......
-
-    .Series(sr =>
-
+      // ...
+    
+     .Series(sr =>
      {
+        //change a point color of Range column
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
-       sr.Points(pt =>
+{% endhighlight %}
 
-         {
-
-            pt.X("Australia").Y(53.3).Text("Australia 53.3").Add();
-
-            pt.X("China").Y(55.7).Text("China 55.7").Add();
-
-            pt.X("India").Y(60.5).Text("India 60.5").Add();
-
-            pt.X("Japan").Y(12.5).Text("Japan 12.5").Add();
-
-            pt.X("South Africa").Y(79.4).Text("South Africa 79.4").Add();
-
-            pt.X("United Kingdom").Y(70.9).Text("United Kingdom 70.9").Add();
-
-            pt.X("United States").Y(45.0).Text("United States 45.0").Add();
-
-          })})     
-
-          .Name("Agricultural Land").SeriesType(SeriesType.Doughnut)
-
-          .LabelPosition(ChartLabelPosition.Outside).StartAngle(-90).EndAngle(90).Add();
-
-       })
-
-        //.......
-
-  .Render())  
+![](Chart-Types_images/Chart-Types_img20.png)
 
 
-{% endhighlight  %}
+## Stacked Column Chart
 
-![](Chart-Types_images/Chart-Types_img19.jpeg)
+To render a Stacked Column Chart, set the Type as **StackingColumn** in the chart series. To change the StackingColumn color, you can use the Fill property of the series.
 
-Semi Doughnut Chart
-{:.caption}
+{% highlight cshtml %}
 
-![](Chart-Types_images/Chart-Types_img20.jpeg)
 
-Semi Pie Chart
-{:.caption}
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.StackingColumn).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img21.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn) here to view Stacked Column Chart online demo.
+
+
+### Group stacked columns
+
+You can use the **StackingGroup** property to group the stacked columns. Columns with same group name are stacked on top of each other.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         // For grouping stacked columns
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+          // For grouping stacked columns
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img22.png)
+
+
+### Change a point color
+
+To change the color of a stacking column, you can use the Fill property of the point. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+        //change a point color of Stacking column
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img23.png)
+
+
+## 100% Stacked Column Chart    
+
+To render a 100% Stacked Column Chart, set the Type as **StackingColumn100** in the chart series. To change the StackingColumn100 color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series
+         sr.Type(SeriesType.StackingColumn100).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img24.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn100) here to view 100% Stacked Column Chart online demo.
+
+
+### Group 100% stacked columns
+
+By using the **StackingGroup** property, you can group the 100% stacking columns. Columns with same group name are stacked on top of each other. 
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         // For grouping 100% stacked columns
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+          // For grouping 100% stacked columns
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img25.png)
+
+
+### Change a point color
+
+To change the color of a 100% stacking column, you can use the Fill property of the point. 
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+        //change a point color of 100% Stacking column
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img26.png)
+
+
+## Bar Chart
+
+To render a bar Chart, set the Type as **Bar** in the chart series. To change the bar color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series
+         sr.Type(SeriesType.Bar).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img27.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/bar) here to view Bar Chart demo.
+
+
+### Change the color of a bar
+
+By using the Fill property of the point, you can change the specific point of the series. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+        //change a point color of bar
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img28.png)
+
+
+## Stacked Bar Chart
+
+To render a Stacked Bar Chart, set the Type as **StackingBar** in the chart series. To change the StackingBar color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series
+         sr.Type(SeriesType.StackingBar).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ )         
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img29.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar) here to view Stacked Bar Chart online demo.
+
+
+### Group stacked bars
+
+You can use the **StackingGroup** property to group the stacking bars with the same group name. 
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         // For grouping stacking bar
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+          // For grouping stacking bar
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img30.png)
+
+
+### Change a point color
+
+You can change the color of a stacking bar by using the Fill property of the point.
+
+{% highlight cshtml %}
+
+   @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+        //change a point color of stacking bar
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img31.png)
+
+
+## 100% Stacked Bar Chart
+
+To render a 100% Stacked Bar Chart, set the Type as **StackingBar100** in the chart series. To change the StackingBar100 color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series
+         sr.Type(SeriesType.StackingBar100).Fill("#E94649")
+            //...
+             .Add();
+     })
+     
+     //...
+ )   
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img32.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar100) here to view 100% Stacked Bar Chart online demo.
+
+By using the StackingGroup property, you can group the 100% stacking bars with the same group name. 
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         // For grouping 100% stacking bar
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+          // For grouping 100% stacking bar
+         sr.StackingGroup("GroupOne")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img33.png)
+
+
+### Change a point color
+
+To change the color of a 100% stacking bar, you can use the Fill property of the point. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+        //change a point color of 100% stacking bar
+        sr.Points(pt=>{pt.Fill("skyblue").Add();})
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img34.png)
+
+## Spline Chart
+
+To render a Spline Chart, set the Type as **Spline** in the chart series. To change the Spline segment color, you can use the Fill property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change type and color of the series
+         sr.Type(SeriesType.Spline).Fill("#6ADCB0")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img35.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/spline) here to view the Spline Chart online demo sample.
+
+
+### Change the spline width
+
+To change the spline segment width, you can use the Width property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the width of spline series
+         sr.Width(3)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img36.png)
+
+
+### Dashed lines
+
+To render the spline series with dotted lines, you can use the DashArray option of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change dash array to display dotted or dashed splines
+         sr.DashArray("5,5")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img37.png)
+
+
+## Pie Chart
+
+You can create a pie chart by setting the series Type as **Pie** in the chart series.
+
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.Pie)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img38.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/pie) here to view the Pie chart online demo sample.
+
+
+### Change the pie size
+
+You can use the **PieCoefficient** property to change the diameter of the Pie chart with respect to the plot area. It ranges from 0 to 1 and the default value is **0.8**.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change pie chart coefficient value
+         sr.PieCoefficient(0.4f)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img39.png)
+
+
+### Explode a pie segment
+
+You can explode a pie segment on the chart load by using the **ExplodeIndex** of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set point index value to explode the pie segment.
+         sr.ExplodeIndex(1)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img40.png)
+
+
+### Explode all the segments
+
+To explode all the segments of the Pie chart, you can enable the **ExplodeAll** property.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable explodeAll property for pie chart. 
+         sr.ExplodeAll(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img41.png)
+
+
+### Explode a pie segment on mouse over
+
+To explode a pie segment on a mouse over, you can enable the **Explode** property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable pie explode option on mouse over the chart 
+         sr.Explode(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img42.png)
+
+
+### Sector of Pie
+
+EjChart allows you to render all the data points/segments in the semi-pie, quarter-pie or in any sector by using the **StartAngle** and **EndAngle** options.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         sr.Type(SeriesType.Pie)
+         //Set startAngle and endAngle to draw the semi pie chart
+         .StartAngle(-90).EndAngle(90)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img43.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/semipie) here to view the Semi Pie Chart online demo sample.
+
+
+
+## Doughnut Chart
+
+To create a Doughnut chart, you can specify the series Type as **Doughnut** in the chart series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.Doughnut)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img44.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/doughnut) here to view the Doughnut Chart online demo sample.
+
+
+### Change Doughnut inner radius
+
+You can change the doughnut chart inner radius by using the **DoughnutCoefficient** with respect to the plot area. It ranges from 0 to 1 and the default value is **0.4**.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change doughnut chart coefficient value
+         sr.DoughnutCoefficient(0.6f)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img45.png)
+
+
+### Change the doughnut size
+
+You can use the **DoughnutSize** property to change the diameter of the Doughnut chart with respect to the plot area. It ranges from 0 to 1 and the default value is **0.8**.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change doughnut chart coefficient value
+         sr.DoughnutSize(0.4f)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img46.png)
+
+
+### Explode a doughnut segment
+
+To explode a specific doughnut segment, set the index to be exploded by using the **ExplodeIndex** option of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set point index value to explode the doughnut segment. 
+         sr.ExplodeIndex(1)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img47.png)
+
+
+### Explode all the segments
+
+To explode all the segments, you can enable the **ExplodeAll** property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable explodeAll property of doughnut chart
+         sr.ExplodeAll(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img48.png)
+
+
+### Explode a doughnut segment on mouse over
+
+To explode a doughnut segment on a mouse over, you can enable the **Explode** property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable doughnut explode option on mouse over the chart
+         sr.Explode(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img49.png)
+
+
+### Sector of Doughnut
+
+EjChart allows you to render all the data points/segments in the semi-doughnut, quarter- doughnut or in any sector by using the **StartAngle** and **EndAngle** options.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         sr.Type(SeriesType.Doughnut)
+             //Set startAngle and endAngle to draw the semi doughnut chart
+             .StartAngle(-90).EndAngle(90)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img50.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/semipie) here to view the Semi Doughnut Chart online demo sample.
+
+
+
+## Multiple Pie Chart
+
+EjChart provides support to render more than one series in pie and in doughnut chart. Radius of each series is calculated based on the radius of the previous series. And in addition legend is displayed according to the list of chart series.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+       // ...    
+       .Series(sr =>
+       {
+            //Adding multiple pie series
+           sr.Type(SeriesType.Pie)
+              //...
+             .Add();
+             //Adding multiple pie series
+            sr.Type(SeriesType.Pie).Add();
+        })
+     
+     //...
+   )
+
+{% endhighlight %}
+
+**Multiple Pie** 
+
+![](Chart-Types_images/Chart-Types_img82.png)
+
+
+**Multiple Doughnut** 
+
+![](Chart-Types_images/Chart-Types_img83.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/multiplepie) here to view the Multiple Pie chart online demo sample.
+
+### Start and End Angle Support
+
+In the Multiple Pie chart, the start and end angle property is also supported.
+
+**Sector of Multiple Pie**
+
+![](Chart-Types_images/Chart-Types_img84.png)
+
+
+**Sector of Multiple Doughnut**
+
+![](Chart-Types_images/Chart-Types_img85.png)
 
 
 ## Pyramid Chart
 
-The Pyramid Chart type displays the data that when totaled renders 100%. This type of Chart is a single series Chart representing the data as portions of 100%, and this Chart does not use any axes. You can customize the series color and border using Fill and Border properties in series and each slice of series using Fill and Border properties in point.
+To create a Pyramid chart, you can specify the series Type as **Pyramid** in the chart series.  
+
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
 
-![](Chart-Types_images/Chart-Types_img21.png)
-
-Pyramid Chart
-{:.caption}
-
-{% highlight CSHTML %}
-
-
-
-
- @(Html.EJ().Chart("chartcontainer") 
-
-
-
+      // ...
+    
      .Series(sr =>
-
      {
-
-       sr.Points(pt =>
-
-          {
-
-           pt.X("India").Y(24).Text("India 24%").Add();
-
-           pt.X("Japan").Y(25).Text("Japan 25%").Add();
-
-           pt.X("Australia").Y(20).Text("Australia 20%").Add();
-
-           pt.X("USA").Y(35).Text("USA 35%").Add();
-
-           pt.X("China").Y(23).Text("China 23%").Add();
-
-           pt.X("Germany").Y(27).Text("Germany 27%").Add();
-
-            pt.X("France").Y(22).Text("France 22%").Add();
-
-          }).Marker(mr => { mr.DataLabel(db => { db.Visible(true).Shape(ChartShape   
-
-             .Rectangle).Font(fn => { fn.Color("white").Size("15px"); }); }); })
-
-              .Name("Newyork").Type(SeriesType.Pyramid)
-
-               .LabelPosition(ChartLabelPosition.Outside).Add();                           
-
-       })
+         //Set chart type to series
+         sr.Type(SeriesType.Pyramid)
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
 
 
+{% endhighlight %}
 
-   //.......
+![](Chart-Types_images/Chart-Types_img51.png)
 
-  )   
-{% endhighlight  %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/pyramid) here to view the Pyramid Chart online demo sample.
+
+
+### Pyramid Mode
+
+Pyramid mode has two types, *Linear* and *Surface* respectively. The default **PyramidMode** type is "Linear".
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change pyramid mode 
+         sr.PyramidMode(PyramidMode.Surface)
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img52.png)
+
+### Gap between the segments
+
+You can control the gap between the segments by using the **GapRatio** option of the series. Its ranges from 0 to 1.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set gapRatio value to pyramid chart
+         sr.GapRatio(0.1f)
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img53.png)
+
+
+### Explode a pyramid segment
+
+You can explode a pyramid segment on the chart load by using the **ExplodeIndex** of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set point index value to explode the pyramid segment. 
+         sr.ExplodeIndex(4)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img54.png)
+
 
 ## Funnel Chart
 
-The Funnel chart is a single series chart representing the data as portions of 100%, and this chart does not use any axes. Funnel charts are often used to represent stages in a sales process and expresses the amount of potential revenue for each stage. This type of chart can also be useful in identifying potential problem area in an organization’s sales process. You can customize the funnel width and height using FunnelWidth and FunnelHeight properties.
+You can create a funnel chart by setting the series Type as **Funnel** in the chart series.  
 
-![](Chart-Types_images/Chart-Types_img22.png)
-
-Funnel Chart
-{:.caption}
-
-{% highlight CSHTML %}
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
 
-
- @(Html.EJ().Chart("chartcontainer") 
-
-
-
+      // ...
+    
      .Series(sr =>
-
      {
-
-       sr.Points(pt =>
-
-          {
-
-           pt.X("Renewed").Y(18.20).Text("Renewed : 18.20%").Add();
-
-           pt.X("Subscribe").Y(27.3).Text("Subscribe : 27.3%").Add();
-
-           pt.X("Support").Y(55.9).Text("Contact to Support : 55.9%").Add();
-
-           pt.X("Downloaded").Y(76.8).Text("Downloaded a trial 76.8%").Add();
-
-           pt.X("Visited").Y(100).Text("Visited Web Site : 100%").Add();
-
-         }).Marker(mr => { mr.DataLabel(db => { db.Visible(true).Shape(ChartShape   
-
-             .Rectangle).Font(fn => { fn.Color("white").Size("15px"); }); }); })
-
-             .Name("Website").SeriesType(SeriesType.Funnel)
-
-             .FunnelWidth("32.7%").
-
-             .FunnelHeight("11.2%")
-
-             .LabelPosition(ChartLabelPosition.Outside).Add();                           
-
-       })
+         //Set chart type to series
+         sr.Type(SeriesType.Funnel)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-   //.......
+![](Chart-Types_images/Chart-Types_img55.png)
 
-  )   
-{% endhighlight  %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/funnel) here to view the Funnel Chart online demo sample.
+
+
+### Change the funnel width and height
+
+Funnel segments height and width is calculated from the chart size, by default. You can change this height and width directly without changing the chart size by using the **FunnelHeight** and **FunnelWidth** property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change funnel height and width
+         sr.FunnelHeight("22%")
+             .FunnelWidth("25%")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img56.png)
+
+
+### Explode a funnel segment
+
+You can explode a funnel segment on the chart load by using the **ExplodeIndex** of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set point index value to explode the funnel segment. 
+         sr.ExplodeIndex(3)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img57.png)
+
 
 ## Bubble Chart
 
-Bubble Chart is an extension of the Scatter Chart (or XY-Chart) where each data marker is represented by a circle whose dimension forms a third variable. Consequently, bubble Charts allow three-variable comparisons allowing for easy visualization of complex interdependencies that are not apparent in two-variable Charts. Bubble Charts are frequently used in market and product comparison studies.
+To create a Bubble chart, you can set the series Type as **Bubble** in the chart series. Bubble chart requires 3 fields (*X, Y and Size*) to plot a point. Here, **Size** is used to specify the size of each bubble segment. 
+
+{% highlight csharp %}
+
+     // Create dataSource to bubble chart
+            List<ChartData> data =new List<ChartData>();
+            data.Add(new ChartData("Jan", 35, 1.34));
+            data.Add(new ChartData("Feb", 28, 1.05));
+            data.Add(new ChartData("Mar", 34, 0.45));
+            data.Add(new ChartData("Apr", 32, 1.10));
+            ViewBag.ChartData = data;
 
 
+{% endhighlight %}
 
-![](Chart-Types_images/Chart-Types_img23.png)
+           
+{% highlight cshtml %}
 
-Bubble Chart
-{:.caption}
+@(Html.EJ().Chart("chartContainer")
 
-{% highlight CSHTML %}
- 
-
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-    .Series(sr =>
-
-      {
-
-        sr.Points(pt =>
-
-          {
-
-            pt.X(92.2).Y(7.8).Size(1.347).Fill("#E94649").Add();
-
-            pt.X(74).Y(6.5).Size(1.241).Fill("#F6B53F").Add();  
-
-            pt.X(90.4).Y(6.0).Size(0.238).Fill("#6FAAB0").Add();
-
-            pt.X(99.4).Y(2.2).Size(0.312).Fill("#C4C24A").Add();
-
-            pt.X(88.6).Y(1.3).Size(0.197).Fill("#FB954F").Add();
-
-            pt.X(54.9).Y(3.7).Size(0.177).Fill("#D9CEB2").Add();
-
-            pt.X(99).Y(0.7).Size(0.0818).Fill("#FF8D8D").Add();
-
-            pt.X(72).Y(2.0).Size(0.0826).Fill("#69D2E7").Add();
-
-            pt.X(99.6).Y(3.4).Size(0.143).Fill("#E27F2D").Add();
-
-            pt.X(99).Y(0.2).Size(0.128).Fill("#6A4B82").Add();
-
-            pt.X(86.1).Y(4.0).Size(0.115).Fill("#F6B53F").Add();
-
-            pt.X(92.6).Y(6.6).Size(0.096).Fill("#C4C24A").Add();
-
-            pt.X(61.3).Y(14.5).Size(0.162).Fill("#FF8D8D").Add();
-
-            pt.X(56.8).Y(6.1).Size(0.151).Fill("#69D2E7").Add();
-
-           }).EnableAnimation(true).Type(SeriesType.Bubble).Name("pound").Add();
-
-       })
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.Bubble)
+             //Add datasource and set xName, yName and size to bubble chart
+             .XName("Month")
+             .XName("Sales")
+             .Size("Profit")
+             .DataSource(ViewBag.ChartData)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-   //.......
-
-  )   
+![](Chart-Types_images/Chart-Types_img58.png)
 
 
-{% endhighlight  %}
-
-{% highlight css %}
-
-<ej:Chart ID="Chart1" runat="server">
-
-   <Series>
-
-        <ej:Series Name="Pound" Type="Bubble" EnableAnimation="True" Opacity="0.7">
-
-                    <Points >
-
-                        <ej:Points Fill="#E94649" Size="1.347" Text="China" X="92.2" Y="7.8"/> 
-
-                        <ej:Points Fill="#F6B53F" Size="1.241" Text="India" X="74" Y="6.5"/>  
-
-                        <ej:Points Fill="#6FAAB0" Size="0.238" Text="Indonesia" X="90.4" Y="6.0"/>  
-
-                        <ej:Points Fill="#C4C24A" Size="0.312" Text="US" X="99.4" Y="2.2"/>  
-
-                        <ej:Points Fill="#FB954F" Size="0.197" Text="Brazil" X="88.6" Y="1.3"/>  
-
-                        <ej:Points Fill="#D9CEB2" Size="0.177" Text="Pakistan" X="54.9" Y="3.7"/>  
-
-                        <ej:Points Fill="#FF8D8D" Size="0.0818" Text="Germany" X="99" Y="0.7"/>  
-
-                        <ej:Points Fill="#69D2E7" Size="0.0826" Text="Egypt" X="72" Y="2.0"/>  
-
-                        <ej:Points Fill="#E27F2D" Size="0.143" Text="Russia" X="99.6" Y="3.4"/>  
-
-                        <ej:Points Fill="#6A4B82" Size="0.128" Text="Japan" X="99" Y="0.2"/>  
-
-                        <ej:Points Fill="#F6B53F" Size="0.115" Text="Mexico" X="86.1" Y="4.0"/>  
-
-                        <ej:Points Fill="#C4C24A" Size="0.096" Text="Philippines" X="92.6" Y="6.6"/>  
-
-                        <ej:Points Fill="#FF8D8D" Size="0.162" Text="Nigeria" X="61.3" Y="14.5"/>  
-
-                        <ej:Points Fill="#69D2E7" Size="0.151" Text="Bangladesh" X="56.8" Y="6.1"/>     
-
-                    </Points>
-
-                </ej:Series>
-
-            </Series> 
-
-  </ej:Chart>
-
-{% endhighlight  %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/bubble) here to view the Bubble Chart online demo sample.
 
 ## Scatter
 
-In Scatter Series, each data point is represented as an ellipse, and the width and height of each ellipse is set using the Size Width and Height properties of marker. You can also change the color, stroke, and stroke thickness of the series using the Fill, Border color, and Width properties of marker respectively.
+To create a Scatter chart, you can set the series Type as **Scatter** in the chart series. 
 
-The following code example is used to create a simple scatter series. 
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
 
-.Series(sr =>
-
- {
-
-    sr.Points(pt =>
-
+      // ...
+    
+     .Series(sr =>
      {
-
-           pt.X(10).Y(126.45).Add();
-
-           pt.X(11).Y(150.99).Add();
-
-           pt.X(12).Y(40.19).Add();
-
-           pt.X(13).Y(160.23).Add();
-
-           pt.X(15).Y(200.89).Add();                  
-
-    }).Type(SeriesType.Scatter).Marker(mr=>mr.Size(sz=>sz.Height(10).Width(10)))    
-
-         .Name("Scatter").Add();
-
-   })
+         //Set chart type to series
+         sr.Type(SeriesType.Scatter)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-  //.......
-
-  )    
-{% endhighlight  %}
-
-![](Chart-Types_images/Chart-Types_img24.png)
-
-Scatter
-{:.caption}
-
-## HiLoOpenCloseSeries 
-
-A HiLoOpenCloseSeries displays each data point as a group of two horizontal lines and one vertical line. The height of the vertical line depends on the difference between the high value and low value of the data point. The width of the horizontal lines depends on the time span interval. The line indicating the open value is at the left side of the vertical line, and the line indicating the closed value is at its right side. You can also change the color, and stroke thickness of the series using the FIll, BorderWidth properties respectively.
-
-The following properties are useful in mapping the value of each data point in a HiLoOpenCloseSeries: 
-
-_Property Table_
-
-<table>
-<tr>
-<th>
-API</th><th>
-Description</th></tr>
-<tr>
-<td>
-X</td><td>
-Represents the x-values</td></tr>
-<tr>
-<td>
-Open</td><td>
-Represents the Open values</td></tr>
-<tr>
-<td>
-High</td><td>
-Represents the high values</td></tr>
-<tr>
-<td>
-Low</td><td>
-Represents the low values</td></tr>
-<tr>
-<td>
-Close</td><td>
-Represents the close values</td></tr>
-</table>
+![](Chart-Types_images/Chart-Types_img59.png)
 
 
-![](Chart-Types_images/Chart-Types_img25.png)
+[Click](http://mvc.syncfusion.com/demos/web/chart/scatter) here to view the Scatter Chart online demo sample.
 
-HiLoOpenCloseSeries
-{:.caption}
+### Customize the scatter chart
 
-### BullFillColor
+You can change the scatter size by using the **Size** property of the series marker. And you can change the scatter color by using the series Fill property. 
 
-BullFillColor is used to specify a fill color for the segments that indicates an increase in stock price in the measured time interval.
+{% highlight cshtml %}
 
-### BearFillColor
 
-BearFillColor is used to specify a fill color for the segments that indicate a decrease in stock price in the measured time interval.
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+             sr.Marker(mr=>mr.Size(sz=>sz.Height(15).Width(15)))
+             //Set fill color to scatter series
+             .Fill("#41F282")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img60.png)
+
+
+## HiloOpenClose Chart 
+
+To create a HiloOpenClose chart, you can set the series Type as **HiloOpenClose** in the chart series. HiloOpenClose chart requires 5 fields *(X, High, Low, Open and Close)* to plot a segment.  
+
+
+{% highlight csharp %}
+
+        // Create dataSource to chart
+            List<ChartData> data =new List<ChartData>();
+            data.Add(new ChartData("Jan", 38, 10,38, 29));
+            data.Add(new ChartData("Feb", 28, 15, 18, 27));
+            data.Add(new ChartData("Mar", 54, 35, 38, 49));
+            data.Add(new ChartData("Apr", 52, 21, 35, 29));
+            ViewBag.ChartData = data;
+{% endhighlight %}
+
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+             //Set chart type to series
+             sr.Type(SeriesType.HiloOpenClose)
+                 //Add datasource and set xName, high and low to hiloopenclose chart
+             .XName("Month")
+             .High("High")
+             .Low("Low")
+             .Open("Open")
+             .Close("Close")
+             .DataSource(ViewBag.ChartData)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img61.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/hiloopenclose) here to view the HiloOpenClose Chart online demo sample.
+
 
 ### DrawMode
 
-DrawMode is used to specify the open and close draw mode to HiLoOpenClose series.
+You can change the HiloOpenClose chart **DrawMode** to *Open, Close* or *Both*. The default value of DrawMode is **Both**. 
 
-* Open - Points only the opening value of that period.
-* Close - Points out the closing value of that period.
-* Both - Points out both the opening and the closing values of that period.
-
- To create a simple HiLoOpenCloseSeries use the following code example.
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
+{% highlight cshtml %}
 
 
+@(Html.EJ().Chart("chartContainer")
 
-.Series(sr =>
-
- {
-
-   sr.Points(pt =>
-
+      // ...
+    
+     .Series(sr =>
      {
-
-          pt.X(new DateTime(1950, 1, 12)).High(125.45).Low(70.23).Open(115.22)  
-
-            .Close(90.44).Add();
-
-          pt.X(new DateTime(1953, 1,12)).High(150.99).Low(60.23).Open(120.55) 
-
-            .Close(70.90).Add();
-
-          pt.X(new DateTime(1956, 1, 12)).High(200.19).Low(130.37).Open(160.13) 
-
-            .Close(190.78).Add();
-
-          pt.X(new DateTime(1959, 1, 12)).High(160.23).Low(90.16).Open(140.38) 
-
-            .Close(110.24).Add();
-
-          pt.X(new DateTime(1962, 1, 12)).High(200.89).Low(100.23).Open(180.90) 
-
-            .Close(120.29).Add();
+         //Change the OHLC drawMode type
+             sr.DrawMode(SeriesDrawMode.Open)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-  }).Name("Series").Type(SeriesType.HiloOpenClose).DrawMode(SeriesDrawMode.Both)
-
-   .Border(br=>br.Width(2)).Add();
-
-})
+![](Chart-Types_images/Chart-Types_img62.png)
 
 
+### Bull and Bear Color	
 
-  //.......
+Hiloopenclose chart **BullFillColor** is used to specify a fill color for the segments that indicates an increase in stock price in the measured time interval and **BearFillColor** is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval. 
 
-  )   
-{% endhighlight  %}
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change bullFill and bearFill color of hiloopenclose chart
+         sr.BearFillColor("#FF6600")
+             .BullFillColor("#336600")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img63.png)
+
 
 ## Candle
 
-A CandleSeries displays each data point with a combination of a vertical column and a vertical line. The height of the vertical line represents the difference between high and low value of a datapoint, whereas the height of the vertical column represents the difference between the Open and Close values of a data point. You can also change the color and stroke thickness of the series using the Fill, BorderWidth properties respectively.
-
-The following properties are useful in mapping the value of each data point in a Candle.
-
-_Property Table_
-
-<table>
-<tr>
-<th>
-API</th><th>
-Description</th></tr>
-<tr>
-<td>
-X</td><td>
-Represents the x-values</td></tr>
-<tr>
-<td>
-Open</td><td>
-Represents the Open values.</td></tr>
-<tr>
-<td>
-High</td><td>
-Represents the high values</td></tr>
-<tr>
-<td>
-Low</td><td>
-Represents the low values</td></tr>
-<tr>
-<td>
-Close</td><td>
-Represents the close values</td></tr>
-</table>
+You can create a Candle chart by specifying the series Type as **Candle** in the chart series. Candle chart requires 5 fields *(X, High, Low, Open and Close)* to plot a segment.
 
 
-![](Chart-Types_images/Chart-Types_img26.png)
+{% highlight csharp %}
 
-Candle
-{:.caption}
+        // Create dataSource to chart
+            List<ChartData> data =new List<ChartData>();
+            data.Add(new ChartData("Jan", 38, 10,38, 29));
+            data.Add(new ChartData("Feb", 28, 15, 18, 27));
+            data.Add(new ChartData("Mar", 54, 35, 38, 49));
+            data.Add(new ChartData("Apr", 52, 21, 35, 29));
+            ViewBag.ChartData = data;
 
-### BullFillColor
-
-BullFillColor is used to specify a fill color for the segment that indicates an increase in stock price in the measured time interval.
-
-### BearFillColor
-
-BearFillColor is used to specify a fill color for the segment that indicates a decrease in stock price in the measured time interval.
-
-To create a simple Candle series use the following code example. 
-{% highlight html %}
+{% endhighlight %}
 
 
+{% highlight cshtml %}
 
 
-@(Html.EJ().Chart("chartcontainer")
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+             //Set chart type to series
+             sr.Type(SeriesType.Candle)
+                 //Add datasource and set xName, high and low to candle chart
+             .XName("Month")
+             .High("High")
+             .Low("Low")
+             .Open("Open")
+             .Close("Close")
+             .DataSource(ViewBag.ChartData)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
 
-.Series(sr =>
+![](Chart-Types_images/Chart-Types_img64.png)
 
- {
-
-  sr.Points(pt =>
-
-      {
-
-        pt.X(new DateTime(1950, 1, 12)).High(125).Low(70).Open(115).Close(90).Add();
-
-        pt.X(new DateTime(1953, 1, 12)).High(150).Low(60).Open(120).Close(70).Add();
-
-        pt.X(new DateTime(1956, 1, 12)).High(200).Low(140).Open(160).Close(190).Add();
-
-        pt.X(new DateTime(1959, 1, 12)).High(160).Low(90).Open(140).Close(110).Add();
-
-        pt.X(new DateTime(1962, 1, 12)).High(200).Low(100).Open(180).Close(120).Add();
-
-      }).Name("Series").Type(SeriesType.Candle).Border(br=>br.Width(2)).Add();
-
-  })
+[Click](http://mvc.syncfusion.com/demos/web/chart/candle) here to view the Candle Chart online demo sample.
 
 
+### Bull and Bear Color
 
-  //.......
+Candle chart **BullFillColor** is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval and **BearFillColor** is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
 
-  )  
-{% endhighlight  %}
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change bullFill and bearFill color of candle chart
+         sr.BearFillColor("#FF6600")
+             .BullFillColor("#336600")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img65.png)
+
 
 ## Hilo
 
-Ina HiLoSeries, each segment is represented by a line. The height of the line depends on the difference between the high value and low value of the data point. You can also change the color and stroke thickness of the series using the Fill, BorderWidth properties respectively.
+Hilo chart is created by setting the series Type as **Hilo** in the chart series. Hilo chart requires 3 fields *(X, High and Low)* to plot a segment.  
 
-The following properties are useful in mapping the value of each data point in a Hilo.
-
-_Property Table_
-
-<table>
-<tr>
-<th>
-API</th><th>
-Description</th></tr>
-<tr>
-<td>
-X</td><td>
-Represents the x-values</td></tr>
-<tr>
-<td>
-High</td><td>
-Represents the high values</td></tr>
-<tr>
-<td>
-Low</td><td>
-Represents the low values</td></tr>
-</table>
+{% highlight csharp %}
 
 
-![](Chart-Types_images/Chart-Types_img27.png)
+     // Create dataSource to chart
+            List<ChartData> data =new List<ChartData>();
+            data.Add(new ChartData("Jan", 38, 10));
+            data.Add(new ChartData("Feb", 28, 15));
+            data.Add(new ChartData("Mar", 54, 35));
+            data.Add(new ChartData("Apr", 52, 21));
+            ViewBag.ChartData = data;
+            
 
-HiLoSeries
-{:.caption}
+{% endhighlight %}
 
-To create a simple Hilo series use the following code example. 
-{% highlight CSHTML %}
+            
+{% highlight cshtml %}
+ 
+ @(Html.EJ().Chart("chartContainer")
 
-@(Html.EJ().Chart("chartcontainer")
-
-
-
- .Series(sr =>
-
-   {
-
-     sr.Points(pt =>
-
-      {
-
-         pt.X(new DateTime(1950, 1, 12)).High(126.45).Low(70.23).Add();
-
-         pt.X(new DateTime(1953, 1, 12)).High(150.99).Low(60.23).Add();
-
-         pt.X(new DateTime(1956, 1, 12)).High(200.19).Low(130.37).Add();
-
-         pt.X(new DateTime(1959, 1, 12)).High(160.23).Low(90.16).Add();
-
-         pt.X(new DateTime(1962, 1, 12)).High(200.89).Low(100.23).Add();                  
-
-       }).Name("Series").Type(SeriesType.Hilo).Border(br=>br.Width(2)).Add();
-
-    })
-
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.Hilo)
+             //Add datasource and set xName, high and low to hilo chart
+             .XName("Month")
+             .High("High")
+             .Low("Low")
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
 
 
-   //.......
+{% endhighlight %}
 
-  )  
-{% endhighlight  %}
+![](Chart-Types_images/Chart-Types_img66.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/hilo) here to view the Hilo Chart online demo sample.
+
 
 ## Polar
 
-A Polar Chart is a circular graph on which data is displayed in terms of values and angles. The x values define the angles at which the data points are plotted. The y value defines the distance of the data points from the center of the graph, with the center of the graph usually starting at 0. You can customize the series color and border using Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
+Polar chart is created by setting the series Type as **Polar** in the chart series. 
 
-### LineType
-
-![](Chart-Types_images/Chart-Types_img28.png)
-
-Line Polar Chart
-{:.caption}
-
-### Area Type
-
-![](Chart-Types_images/Chart-Types_img29.png)
-
-Area Polar Chart
-{:.caption}
-
-### Column Type
-
-![](Chart-Types_images/Chart-Types_img30.png)
-
-Column Polar Chart
-{:.caption}
+{% highlight cshtml %}
 
 
-To create a simple Polar series use the following code example.
+@(Html.EJ().Chart("chartContainer")
 
-
-{% highlight CSHTML %}
-
-
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-  .Series(sr =>
-
+      // ...
+    
+     .Series(sr =>
      {
-
-       sr.Points(pt =>
-
-        {
-
-           pt.X("1900").Y(10).Add();
-
-           pt.X("1991").Y(3).Add();
-
-           pt.X("1992").Y(20).Add();
-
-           pt.X("1993").Y(16).Add();
-
-           pt.X("1994").Y(10).Add();
-
-           pt.X("1995").Y(18).Add();
-
-           pt.X("1996").Y(16).Add();
-
-           pt.X("1997").Y(15).Add();
-
-         }).Name("India").EnableAnimation(true).Width(3).Add();
-
-      })
-
-  //.......
-
-  )  
-{% endhighlight  %}
-
-## RadarSeries 
-
-RadarSeries is a x, y Chart of three or more quantitative variables represented on multiple axis lines originating from the same point. You can customize the series color and border using Fill and Border properties in series. You can use IsClosed property in series to specify whether the series drawn is in closed form. It supports three types of rendering such as Line, Area and Column.
-
-### Area Type
-
-![](Chart-Types_images/Chart-Types_img31.png)
-
-Area RadarSeries
-{:.caption}
-
-### Line type
-
-![](Chart-Types_images/Chart-Types_img32.png)
-
-Line RadarSeries
-{:.caption}
-
-### Column type
-
-![](Chart-Types_images/Chart-Types_img33.png)
-
-Column RadarSeries
-{:.caption}
-
-To create simple RadarSeries use the following code example. 
-{% highlight CSHTML %}
+         //Set chart type to series
+         sr.Type(SeriesType.Polar)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
 
 
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img67.png)
 
 
-@(Html.EJ().Chart("chartcontainer")
+[Click](http://mvc.syncfusion.com/demos/web/chart/polar) here to view the Polar Chart online demo sample.
+
+
+### DrawType
+
+Polar **DrawType** property is used to change the series plotting type to *Line*, *Column* or *Area*. The default value of DrawType is **Line**.  
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change polar series drawType
+         sr.DrawType(DrawType.Column)
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img68.png)
+
+
+### Stack columns in Polar chart
+
+By using the **IsStacking** property, you can specify whether the column has to be stacked when the DrawType is column. Its default value is **False**.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable isStacking property for stacked column polar chart
+         sr.IsStacking(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img69.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/windrose) here to view the Polar Wind Rose Chart online demo sample.
+
+
+## Radar Chart  
+
+To create a Radar chart, you can specify the series Type as **Radar** in the chart series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Set chart type to series
+         sr.Type(SeriesType.Radar)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+{% endhighlight %}
+
+
+![](Chart-Types_images/Chart-Types_img70.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/radar) here to view the Radar Chart online demo sample.
+
+
+### DrawType
+
+Radar **DrawType** property is used to change the series plotting type to *Line*, *Column* or *Area*. The default value of DrawType is **Line**.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change radar series drawType
+         sr.DrawType(DrawType.Column)
+            //...
+             .Add();
+     })
+     
+     //...
+ )  
+
+
+{% endhighlight %}
+
+
+![](Chart-Types_images/Chart-Types_img71.png)
+
+
+### Stack columns in Radar chart
+
+By using the **IsStacking** property, you can specify whether the column has to be stacked when the DrawType is set as Column. Its default value is set to *False*.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Enable isStacking property for stacked column radar chart
+         sr.IsStacking(true)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+
+![](Chart-Types_images/Chart-Types_img72.png)
+
+
+## Waterfall Chart 
+
+For rendering a Waterfall chart, set series *Type* as **Waterfall** in the chart series. To change the waterfall series segment color use *Fill* option of series and use *PositiveFill* property to differentiate the positive segments.
+
+N> The inline property of the **Series.PositiveFill** has the first priority and override the **Series.Fill**.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+       
+        .Series(sr =>
+            {
+                //...
+                //Change series type
+                sr.Type(SeriesType.Waterfall)
+                .Fill("#C64E4A").PositiveFill("#93C952").Add();
+            })
+       //...
+  )
+  
+{% endhighlight %}
+
+
+![](Chart-Types_images/Chart-Types_img73.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/waterfall) here to view the Waterfall Chart online demo sample.
+
+
+**ShowIntermediateSum**
+
+To display the summary of values since the last intermediate point of the waterfall series, set **ShowIntermediateSum** property as true in the specific point.
+
+
+{% highlight cshtml %}
+
+
+   @(Html.EJ().Chart("container")
+   
+        //...
+        .Series(sr =>
+            {
+                sr.Points(pt =>
+                    {
+                       //Enable showIntermediateSum in to a point.
+                        pt.X("Intermediate sum").ShowIntermediateSum(true).Add();
+                        //...
+                        
+                    }).Add();
+            })
+            
+          //...
+    )
+
+{% endhighlight %}
+
+
+**ShowTotalSum**
+
+The sum of all previous point in the waterfall series is displayed on enabling the **ShowTotalSum** property for a specific point.
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("container")
+         
+         //...
+        .Series(sr =>
+            {
+                sr.Points(pt =>
+                    {
+                       //Enable showTotalSum in to a point.
+                        pt.X("Total sum").ShowTotalSum(true).Add();
+                        //...
+                        
+                    }).Add();
+            })
+            
+          //...
+    )
+
+
+{% endhighlight %}
+
+
+### ConnectorLine
+
+To customize the connector line color, width, opacity and dashArray of the waterfall series, you can use **ConnectorLine** option of series.
+
+{% highlight cshtml %}
+
+
+    @(Html.EJ().Chart("container")
+        .Series(sr =>
+            {
+                sr .ConnectorLine(cl=>cl.Color("#333000")
+                   .Width(1).Opacity(1).DashArray("2,3"))
+                   .Add();
+            })
+            
+          //...
+    )
+
+
+{% endhighlight %}
+
+
+![](Chart-Types_images/Chart-Types_img74.png)
 
 
 
-  .Series(sr =>
+## Errorbar Chart 
 
-    {
+EjChart can generate Error bar for Cartesian type series *(Line, Column, Bar, Scatter, Area, Candle, Hilo, etc.)*. To render the Error bar for the series, set *Visibility* as *“Visibile”* to **ErrorBar** in the series.
 
-      sr.Points(pt =>
 
-       {
+{% highlight cshtml %}
 
-          pt.X("1900").Y(10).Add();
 
-          pt.X("1991").Y(3).Add();
+@(Html.EJ().Chart("container")     
+        
+        //...       
+        .Series(sr =>
+               {
+                  //To toggle the error bar visibility
+                 sr.ErrorBar(er =>
+                           er.Visible("visible")).Add();
+                  
+             })            
+          //...          
+     )
 
-          pt.X("1992").Y(20).Add();
+{% endhighlight %}
 
-          pt.X("1993").Y(16).Add();
+![](Chart-Types_images/Chart-Types_img75.png)
 
-          pt.X("1994").Y(10).Add();
 
-          pt.X("1995").Y(18).Add();
+[Click](http://mvc.syncfusion.com/demos/web/chart/errorbar) here to view the Errorbar Chart online demo sample.
 
-          pt.X("1996").Y(16).Add();
 
-          pt.X("1997").Y(15).Add();
+### Changing Error Bar Type
 
-       }).Name("India").EnableAnimation(true).Type(SeriesType.Radar)
+You can change the error bar rendering type using [`type`](../api/ejchart.html#members:series-errorBar-type) *(like fixedValue, percentage, standardDeviation, standardError and custom)* option of errorBar. To change the error bar line length you can use [`verticalErrorValue`](../api/ejchart.html#members:series-errorBar-verticalErrorValue) property.
 
-          .Border(br=>br.Width(3).Color("black")).DrawType(SeriesDrawType.Area).Add();           
+{% highlight cshtml %}
 
-    })
 
-  //.......
+   @(Html.EJ().Chart("container")     
+        
+        //...       
+        .Series(sr =>
+               {
+                  //To change the error bar type
+                 sr.ErrorBar(er =>
+                    er.Type(ErrorBarType.FixedValue)
+                    .VerticalErrorValue(3)).Add();
+             })            
+        //...          
+     )
 
-  )  
+{% endhighlight %}
 
-{% endhighlight  %}
+![](Chart-Types_images/Chart-Types_img76.png)
 
+
+#### Customizing error bar type              
+
+To customize the error bar type, set error bar Type as **Custom** and then change the horizontal/vertical positive and negative value of error bar.
+
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("container")     
+  
+        //...       
+        .Series(sr =>
+               {
+                  //To change the error bar type. 
+                 sr.ErrorBar(er =>
+                           er.Type(ErrorBarType.Custom)
+                              .VerticalPositiveErrorValue(5)
+                              .HorizontalPositiveErrorValue(1)
+                              .VerticalNegativeErrorValue(5)
+                              .HorizontalNegativeErrorValue(1)).Add();
+             })            
+        //...          
+    ) 
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img77.png)
+
+
+### Changing Error Bar Mode
+
+Error bar mode is used to define whether the error bar line has to be drawn *Horizontally, Vertically* or in *Both* side.  To change the error bar mode use ErrorBar.Mode option.
+
+
+{% highlight cshtml %}
+
+
+   @(Html.EJ().Chart("container")     
+        //...       
+        .Series(sr =>
+               {
+                  //To change the error bar mode. 
+                 sr.ErrorBar(er =>
+                           er.Type(ErrorBarType.FixedValue)
+                             .Mode(ErrorBarMode.Vertical)).Add();
+             })            
+        //...          
+    )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img78.png)
+
+
+### Changing Error Bar Direction
+
+You can change the error bar direction to plus, minus or both side using ErrorBar.Directions option.
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("container")     
+        //...       
+        .Series(sr =>
+               {
+                  //To change the error bar direction 
+                 sr.ErrorBar(er =>
+                           er.Type(ErrorBarType.FixedValue)
+                             .Mode(ErrorBarMode.Vertical)
+                             .Direction(ErrorBarDirection.Minus)).Add();
+             })            
+        //...          
+    )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img79.png)
+
+
+### Customizing Error bar cap
+
+To customize the errorBar cap visibility, length, width and fill color, you can use **Cap** option in the **Series.ErrorBar**.
+
+{% highlight cshtml %}
+
+
+ @(Html.EJ().Chart("container")     
+ 
+        //...       
+        .Series(sr =>
+               {
+               //To customize the error bar cap
+                 sr.ErrorBar(er =>
+                           er.Cap(cp=>
+                                   cp.Visible(true)
+                                    .Length((20),
+                                    .Width(1),
+                                    .Fill(“#000000”))).Add();
+             })            
+        //...          
+   )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img80.png)

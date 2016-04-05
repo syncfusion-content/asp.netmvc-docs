@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis | Chart | ASP.NET MVC | Syncfusion
-description: axis
+title: Chart Axis |Chart  | ASP.NET MVC | Syncfusion
+description: How to customize the grid lines, tick lines, labels and title of chart axis
 platform: ejmvc
 control: Chart
 documentation: ug
@@ -9,1045 +9,1106 @@ documentation: ug
 
 # Axis
 
-Charts typically have two axes that are used to measure and categorize data: a vertical (y) axis, and a horizontal (x) axis. To make a Chart easier to understand, you can add axis titles, tick marks, and labels. You can also change the alignment of axis title and format the labels that are displayed on axes. By default horizontal (x) axis and vertical (y) axis gets added to the Chart with axis labels, gridlines, and tick lines. You can also customize these axis explicitly by adding axis title or removing gridlines, tick lines that are added to the axis by default.
+**Charts** typically have two axes that are used to measure and categorize data: a vertical (y) axis, and a horizontal (x) axis.
 
-## Chart Axis supports the following types:
+Vertical axis always uses numerical or logarithmic scale. Horizontal(x) axis supports the following types of scale:
 
-* [Double](#double)
-* [DateTime](#datetime-axis)
-* [Category](#category-axis)
-* [Logarithmic](#logarithmic-axis)
+* Category
+* Numeric
+* DateTime
+* Logarithmic
 
-You can choose any of the Chart axis type using the” ValueType” property in axis. Axis calculates the range and interval automatically based on the series data points. 
-{% highlight CSHTML %}
+## Category Axis
 
+Category axis displays the text labels instead of numbers. To use the categorical axis, you can set the **ValueType** property of the axis to the **Category**. Default value of ValueType is **Double**.
 
-@(Html.EJ().Chart("container")
+{% highlight cshtml %}
 
+  @(Html.EJ().Chart("chartContainer")
 
+      // ...
 
-         .PrimaryXAxis(xaxis=>xaxis.MajorTickLines(mt=>mt.Visible(false))
+     .PrimaryXAxis(
+          //Use categorical scale in primary X axis
+          px=>px.ValueType(AxisValueType.Category)
+     )
+        // ...
+    )
 
-              .Title(tl=>tl.Text("Country")))
-
-         .PrimaryYAxis(yaxis=>yaxis.Title(tl=>tl.Text("Production")))
-
-
-
-       //...
-
-         )
 
 {% endhighlight %}
 
-![](Axis_images/Axis_img1.png)
 
-Chart with Axis
-{:.caption}
-
-## Double 
-
-By default the ValueType of the axis is double and it represents the numerical data.
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-       // ...
-
-     .PrimaryXAxis(pr=>pr.Title(tl=>tl.Text("Year")).ValueType(AxisValueType.Double))
-
-        .Series(sr =>
-
-          {
-
-            sr.Points(pt =>
-
-             {
-
-                pt.X(200).Y(10).Add();
-
-                pt.X(210).Y(15).Add();
-
-                pt.X(220).Y(24).Add(); 
-
-                pt.X(230).Y(11).Add();
-
-                pt.X(240).Y(23).Add();
-
-                pt.X(250).Y(13).Add();
-
-                pt.X(260).Y(16).Add();
-
-                pt.X(270).Y(10).Add();
-
-                pt.X(280).Y(18).Add();
-
-              }).Name("product A").Add();
-
-          })
-
-         //...
-
-      )
+![](Axis_images/axis_img1.png)
 
 
-{% endhighlight  %}
-With the default auto range calculation, the range padding properties allows you to customize the automatic range calculation.
-
-### Range Padding:
-
-#### None:
-
-By default, the RangePadding for Numerical Axis is none.
-
-The following screenshot displays a Chart’s x-axis with RangePadding set to None.
+[Click](http://mvc.syncfusion.com/demos/web/chart/column) here to view our online demo sample that uses Category axis.
 
 
+### Place labels on ticks
 
-![](Axis_images/Axis_img2.png)
+Labels in the category axis can be placed on the ticks by setting the **LabelPlacement** property of axis to the onTicks. The default value of the LabelPlacement property is betweenTicks i.e. labels are placed between the ticks, by default.
 
-Chart with double axis
-{:.caption}
+{% highlight cshtml %}
 
-#### Additional:
+@(Html.EJ().Chart("chartContainer")
 
-If RangePadding for Numerical Axis is set to Additional, the interval of the axis is added as padding.
+      // ...
 
-The following screenshot illustrates a Chart’s x-axis with RangePadding set to Additional.
-
-
-
-![](Axis_images/Axis_img3.png)
-
-Chart’s x-axis with RangePadding set to Additional
-{:.caption}
-
-#### Normal:
-
-Normal RangePadding for a Numerical Axis is used mostly for the y-axis to have padding based on the Range calculation.
-
-The following screenshot illustrates a Chart’s y-axis with RangePadding set to Normal.
+     .PrimaryXAxis(
+          //Placing X-axis labels on the ticks
+          px=>px.LabelPlacement("onTicks")
+     )
+        // ...
+    )
 
 
+{% endhighlight %}
 
-![](Axis_images/Axis_img4.png)
-
-Chart’s y-axis with RangePadding set to Normal
-{:.caption}
-
-#### Round:
-
-Round RangePadding for a Numerical Axis rounds the range of the Chart axis to the nearest possible value divisible by the interval.
-
-The following screenshot illustrates a Chart’s x-axis with RangePadding set to Round.
+![](Axis_images/axis_img2.png)
 
 
+### Display labels after a fixed interval
 
-![](Axis_images/Axis_img5.png)
+To display the labels after a fixed interval n, you can set the **Interval** property of the axis range as **n**. The default value of the interval is 1 i.e. all the labels are displayed.
 
-Chart’s x-axis with RangePadding set to Round
-{:.caption}
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Displaying labels after 2 intervals
+          px=>px.Range(ra=>ra.Interval(2))
+     )
+        // ...
+    )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img3.png)
+
+
+### Indexed Category Axis
+
+Category axis can also plot points based on index value of data points. Index based plotting can be enabled by setting **IsIndexed** property to true in the axis.
+
+{% highlight cshtml %}
+
+     @(Html.EJ().Chart("chartContainer")
+            //...
+            .PrimaryXAxis(px=>px.IsIndexed(true))
+                .Series(sr =>
+                {
+                    //Adding Candle series
+                    sr.Points(pts=>{
+                        pts.X("Monday").Y(50).Add();
+                        pts.X("Tuesday").Y(40).Add();
+                        pts.X("Wednesday").Y(70).Add();
+                        pts.X("Thursday").Y(60).Add();
+                        pts.X("Friday").Y(50).Add();
+                        pts.X("Monday").Y(40).Add();
+                        pts.X("Monday").Y(30).Add();
+                    }) .Add();
+                })                
+     )
+
+{% endhighlight %}
+
+
+![](Axis_images/axis_img50.png)
+
+**While Category axis IsIndexed value false**
+
+![](Axis_images/axis_img51.png)
+
+
+## Numeric Axis 
+
+Numeric axis uses numerical scale and displays numbers as labels. To use numeric axis, you can set the **ValueType** property of the axis to **Double**. 
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Use numerical scale in primary Y axis
+          px=>px.ValueType(AxisValueType.Double)
+     )
+        // ...
+    )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img4.png)
+
+
+### Customize numeric range
+
+To customize the range of an axis, you can use the **Range** property of the axis to set the **Minimum**, **Maximum** and **Interval** values. Nice range is calculated automatically based on the provided data, by default.
+
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Customizing Y-axis range
+          px=>px.Range(ra=>ra.Min(0).Max(50))
+     )
+        // ...
+    )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img5.png)
+
+
+#### Customizing numeric interval
+
+Axis interval can be customized by using the **Interval** property of the axis range. Nice interval is calculated based on the minimum and maximum value of the provided data, by default.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Set interval to PrimaryYAxis
+          px=>px.Range(ra=>ra.Interval(5))
+     )
+        // ...
+    )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img6.png)
+
+
+### Apply padding to the range
+
+Padding can be applied to the minimum and maximum extremes of the axis range by using the **RangePadding** property. Numeric axis supports the following types of padding
+
+* None
+* Round
+* Additional
+* Normal
+
+**None**
+
+When the value of the RangePadding property is **None**, padding can not be applied to the axis. This is also the default value of the rangePadding. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Applying none as range padding
+          px=>px.RangePadding(ChartRangePadding.None)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img7.png)
+
+
+#### Round
+
+When the value of RangePadding property is **Round**, the axis range is rounded to the nearest possible value divided by the interval.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Applying round as range padding
+          px=>px.RangePadding(ChartRangePadding.Round)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+**Chart before rounding axis range**
+
+![](Axis_images/axis_img8.png)
+
+
+**Chart after rounding axis range**
+
+![](Axis_images/axis_img9.png)
+
+
+**Additional**
+
+When the value of the RangePadding property is **Additional**, the axis range is rounded and an interval of the axis is added as padding to the minimum and maximum values of the range.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Applying additional range padding
+          px=>px.RangePadding(ChartRangePadding.Additional)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img10.png)
+
+
+**Normal**
+
+When the value of the RangePadding property is **Normal**, the padding is applied to the axis based on the range calculation.
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Applying normal range padding
+          px=>px.RangePadding(ChartRangePadding.Normal)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img11.png)
+
 
 ## DateTime Axis
 
-The DateTime Axis has a property IntervalType that sets the DateTime interval to one of the following:
+Date time axis uses date time scale and displays the date time values as axis labels in the specified format. To use date time axis, set the ValueType property of the axis to **Datetime**.
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Use date time scale in primary X axis
+          px=>px.ValueType(AxisValueType.Datetime)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img12.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/datetimeaxis) here to view our online demo sample for date time axis.
+
+ 
+### Customizing date time range
+ 
+ Axis range can be customized by using the Range property to set the **Minimum**, **Maximum** and **Interval** values. Nice range is calculated automatically based on the provided data, by default.
+ 
+ {% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing X-axis date time range
+          px=>px.Range(ra=>ra.Min("2000/6/1").Max("2010/6/1"))
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+![](Axis_images/axis_img13.png)
+
+
+### Date time intervals
+
+Date time intervals can be customized by using the **Interval** and **IntervalType** properties of the axis. For example, when you set Interval as **2** and IntervalType as **Years**, it considers the 2 years as interval.
+
+Essential Chart supports the following types of interval for date time axis.
 
 * Days
 * Hours
 * Milliseconds
-* Minutes 
+* Minutes
 * Months
 * Seconds
 * Years
 
-The Interval property of DateTime Axis can be any double value based on the IntervalType.
-{% highlight CSHTML %}
+{% highlight cshtml %}
 
-@(Html.EJ().Chart("chartcontainer")
-
-          // ...    
-
-   .PrimaryXAxis(pr=>pr.Title(tl=>tl.Text("Year")).ValueType(AxisValueType.Datetime)
-
-    .Range(ra=>ra.Min(new DateTime(2000,6,1)).Max(new DateTime(2010,6,1)).Interval(1))
-
-     .IntervalType(ChartIntervalType.Years))
-
-     .Series(sr =>
-
-       {
-
-         sr.Points(pt =>
-
-           {
-
-             pt.X(new DateTime(2000, 06, 11)).Y(10).Add();
-
-             pt.X(new DateTime(2002, 03, 07)).Y(30).Add();
-
-             pt.X(new DateTime(2004, 03, 06)).Y(15).Add();
-
-             pt.X(new DateTime(2006, 03, 30)).Y(65).Add();
-
-             pt.X(new DateTime(2008, 03, 08)).Y(90).Add();
-
-             pt.X(new DateTime(2010, 03, 08)).Y(85).Add();                          
-
-            }).Name("sales").Type(SeriesType.Line).Add();
-
-         })
-
-          //...
-
-          )
-
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img6.png)
-
-Chart with DateTime Axis
-{:.caption}
-
-With the default auto range calculation, the RangePadding properties for date-time axis allow you to customize the automatic range calculation.
-
-### Range Padding:
-
-#### None:
-
-By default, the RangePadding for a DateTime Axis is none.
-
-The following screenshot illustrates a Chart’s x-axis with RangePadding set to none. 
-
-
-
-![](Axis_images/Axis_img7.png)
-
-Chart’s x-axis with RangePadding set to None
-{:.caption}
-
-#### Additional:
-
-If RangePadding for DateTime Axis is set to Additional, the DateTime interval of the axis is added as padding.
-
-The following screenshot illustrates a Chart’s x-axis with RangePadding set to Additional.
-
-
-
-![](Axis_images/Axis_img8.png)
-
-Chart’s x-axis with RangePadding set to Additional
-{:.caption}
-
-#### Round:
-
-Round RangePadding for a DateTime Axis rounds the range of the Chart axis to the nearest possible Date Time value.
-
-The following screenshot illustrates a Chart’s x-axis with RangePadding set to Round.
-
-
-
-![](Axis_images/Axis_img9.png)
-
-Chart’s x-axis with RangePadding set to Round
-{:.caption}
-
-## Category Axis
-
-Category (x) axis displays text labels instead of numerical intervals. By default, the interval is 1 for which all the labels are displayed. To display every nth label, you can set that in Interval property. For example, to display every 2nd label, you can set Interval as 2. 
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-          // ...      
-
-         .PrimaryYAxis(pr=>pr.Title(tl=>tl.Text("Medals")) 
-
-          .Range(ra=>ra.Min(0).Max(80).Interval(20)))
-
-           .Series(sr =>
-
-              {
-
-                  sr.Points(pt =>
-
-                      {
-
-                          pt.X("USA").Y(50).Add();
-
-                          pt.X("China").Y(40).Add();
-
-                          pt.X("Japan").Y(70).Add();
-
-                          pt.X("Australia").Y(60).Add();
-
-                          pt.X("France").Y(50).Add();
-
-                          pt.X("Germany").Y(40).Add();
-
-                          pt.X("Italy").Y(40).Add();
-
-                          pt.X("Sweden").Y(30).Add();      
-
-                      }).Name("Gold").Type(SeriesType.Line).Add();
-
-              })
-
-          //...
-
-          )
-
-
-
-{% endhighlight %}
-
-![](Axis_images/Axis_img10.png)
-
-Chart with Category Axis
-{:.caption}
-
-## Logarithmic Axis
-
-An axis displaying a logarithmic scale is very useful when your data values span orders of magnitude. Log axis is enabled using ValueType property.
-{% highlight CSHTML  %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-          // ...
-
-          .PrimaryYAxis(pr=>pr.ValueType(AxisValueType.Logarithmic))
-
-          .Series(sr =>
-
-              {
-
-                  sr.Points(pt =>
-
-                      {
-
-                          pt.X(1990).Y(80).Add();
-
-                          pt.X(1991).Y(200).Add();
-
-                          pt.X(1992).Y(400).Add();
-
-                          pt.X(1993).Y(600).Add();
-
-                          pt.X(1994).Y(900).Add();
-
-                          pt.X(1995).Y(140).Add();
-
-                          pt.X(1996).Y(2000).Add();
-
-                          pt.X(1997).Y(4000).Add();
-
-                          pt.X(1998).Y(6000).Add();
-
-                          pt.X(1999).Y(8000).Add();
-
-                          pt.X(2000).Y(9000).Add();
-
-                      }).Type(SeriesType.Line).Add();
-
-              })
-
-          //...
-
-          )
-
-
-{% endhighlight %}
-
-![](Axis_images/Axis_img11.png)
-
-Chart with Logarithimic Axis
-{:.caption}
-
-### Chart Axis Properties:
-
-_Chart Axis Properties Table_
-
-<table>
-<tr>
-<th>
-Chart Axis Properties</th><th>
-Description</th></tr>
-<tr>
-<td>
-DesiredIntervals</td><td>
-An integer property used to indicate the preferred total number of intervals to be displayed for auto range calculation.</td></tr>
-<tr>
-<td>
-MaximumLabels</td><td>
-An Integer property used to indicate number of labels per 100 pixels. By default, 3 labels renders for 100 pixels of length.</td></tr>
-</table>
-
-## Multiple Axis
-
-In cases of multiple series, a Chart can have multiple x and y axes to represent each series. The axes can be arranged in stacking or side-by-side mode. By default, the axes are arranged in side-by-side mode. In order to arrange the axis in a stacking mode, you can split the Chart into number of rows or columns using RowDefinitions and ColumnDefinitions and then you can place the required axis in the desired row and column. Heights of the vertical axes are customized using the RowHeight property in RowDefinitions and the width of the horizontal axes are customized using ColumnWidth property in ColumnDefinitions.
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-  .RowDefinitions(rowdef=>
-
-   {
-
-     rowdef.RowHeight(50).Unit("percentage").Add();
-
-     rowdef.RowHeight(50).Unit("percentage").Add();
-
-    })
-
-  .PrimaryXAxis(xaxis=>xaxis.Title(tit=>tit.Text("Month")))          
-
-  .PrimaryYAxis(yaxis=>yaxis.Range(r=>r.Min(0).Max(60).Interval(10))
-
-      .Title(tit=>tit.Text("Temperature(Fahrenheit)")))
-
-  .Axes(ax=>
-
-      {                     
-
-        ax.Orientation(Orientation.Vertical).RowIndex(1). Name("yAxis")
-
-          .Title(tl=>tl.Text("Temperature(Celsius)")).PlotOffset(20).Add();
-
-      })
-
-  .Series(ser=>
-
-      {
-
-         ser.Name("Germany").Points(po =>
-
-          {
-
-            po.X("Jan").Y(15).Add();
-
-            po.X("Feb").Y(20).Add();
-
-            po.X("Mar").Y(35).Add();
-
-            po.X("Apr").Y(40).Add();
-
-            po.X("May").Y(30).Add();
-
-            po.X("Jun").Y(40).Add();
-
-            po.X("Jul").Y(43).Add();
-
-            po.X("Aug").Y(35).Add();
-
-           }).Add(); 
-
-
-
-          ser.Name("India").YAxisName("yAxis").Points(po=>
-
-           {
-
-             po.X("Jan").Y(33).Add();
-
-             po.X("Feb").Y(31).Add();
-
-             po.X("Mar").Y(30).Add();
-
-             po.X("Apr").Y(28).Add();
-
-             po.X("May").Y(29).Add();
-
-             po.X("Jun").Y(30).Add();
-
-             po.X("Jul").Y(33).Add();
-
-             po.X("Aug").Y(32).Add();                                                                                                                                                          
-
-            }).Add();
-
-        })
-
-
-
-       // ...
-
-     )
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img12.png)
-
-Chart with Multiple Axis
-{:.caption}
-
-In the above code, you can remove the RowDefinition and RowIndex from axis to arrange the axes in the side-by- side mode.
-
-
-
-![](Axis_images/Axis_img13.png)
-
-Chart with Multiple Axis
-{:.caption}
-
-### Spanning Axis:
-
-Charts having multiple series have multiple x and y axis to represent each series. By default, the axes are arranged in the corresponding row/column position. Spanning feature allows you to span the axis across multiple panes/rows. 
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-       // split the chart area into 3 rows with different height       
-
-   .RowDefinitions(rowdef=>
-
-     {
-
-       rowdef.RowHeight(25).Unit("percentage").Add();
-
-       rowdef.RowHeight(25).Unit("percentage").Add();
-
-       rowdef.RowHeight(50).Unit("percentage").Add();   
-
-     })
-
-   .PrimaryXAxis(xaxis=>xaxis.Title(tit=>tit.Text("Date")))
-
-   .PrimaryYAxis(yaxis=>yaxis.Range(r=>r.Min(0).Max(100).Interval(25))
-
-       .RowIndex(0)  // renders in 1st row                
-
-       .Font(fn=>fn.Size("14px")).Title(tit=>tit.Text("Quater1")))
-
-   .Axes(ax=>
-
-    {                      
-
-     ax.RowIndex(1).RowSpan(2) // renders in 2nd row and spans to 2 rows
-
-       .AxisName("y1SecondQuater").Range(ra=>ra.Min(0).Max(100)
-
-       .Interval(20)).Title(tl=>tl.Text("Quater 2")).PlotOffset(30).Add();                    
-
-     ax.Name("y2SecondQuater").RowSpan(3) // renders in 1st row and spans to 3 rows
-
-       .Range(ra=>ra.Min(0).Max(100)
-
-       .Interval(10)).Title(tl=>tl.Text("Quater 3")).Add();
-
-     })
-
-
-
-    .Series(ser=>
-
-     {
-
-       ser.Name("Gold").Type(SeriesType.Column).Points(po =>
-
-        {
-
-          po.X("USA").Y(50).Add();
-
-          po.X("China").Y(40).Add();
-
-          po.X("Japan").Y(70).Add();
-
-          po.X("Australia").Y(60).Add();
-
-          po.X("France").Y(50).Add();
-
-          po.X("Germany").Y(40).Add();
-
-          po.X("Italy").Y(40).Add();
-
-          po.X("Sweden").Y(30).Add();
-
-        }).Add(); 
-
-
-
-        ser.Name("Silver").YAxisName("y1SecondQuater").Points(po=>
-
-         {
-
-           po.X("USA").Y(70).Add();
-
-           po.X("China").Y(60).Add();
-
-           po.X("Japan").Y(40).Add();
-
-           po.X("Australia").Y(36).Add();
-
-           po.X("France").Y(25).Add();
-
-           po.X("Germany").Y(30).Add();
-
-           po.X("Italy").Y(35).Add();
-
-           po.X("Sweden").Y(25).Add();                                                                                                                                                         
-
-         }).Add();
-
-
-
-        ser.Name("Bronze").YAxisName("y2SecondQuater").Type(SeriesType.Spline)
-
-           .Points(po =>
-
-         {
-
-           po.X("USA").Y(10).Add();
-
-           po.X("China").Y(19).Add();
-
-           po.X("Japan").Y(40).Add();
-
-           po.X("Australia").Y(70).Add();
-
-           po.X("France").Y(35).Add();
-
-           po.X("Germany").Y(82).Add();
-
-             po.X("Italy").Y(57).Add();
-
-             po.X("Sweden").Y(97).Add();
-
-           }).Add();
-
-       })
-
-
+ @(Html.EJ().Chart("chartContainer")
 
       // ...
 
-   )
-
-{% endhighlight %}
-
-![](Axis_images/Axis_img14.png)
-
-Chart with Spanning Axis
-{:.caption}
-
-## Axis Title
-
-You can customize the ejChart Axis title text, font styles and color using “Title” property of axis. 
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
- .PrimaryXAxis(xaxis=>xaxis.Title(tit=>tit.Text("Expenditure")
-
-    .Font(fn=>fn.Color("#AA3EEF").FontFamily("Segoe UI").FontStyle(ChartFontStyle.Normal)
-
-    .Size("16px").Opacity(1).FontWeight(ChartFontWeight.Regular))))
-
-
-
- .PrimaryYAxis(xaxis=>xaxis.Title(tit=>tit.Text("Expense")
-
-    .Font(fn=>fn.Color("#AA3EEF").FontFamily("Segoe UI").FontStyle(ChartFontStyle.Normal)
-
-    .Size("16px").Opacity(1).FontWeight(ChartFontWeight.Regular))))
-
-
-
-  // ...
-
-)
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img15.png)
-
-Chart with Axis Title
-{:.caption}
-
-### Trim Title
-
-Essential Chart supports TrimmingAxisTitles with the properties, EnableTrim and MaximumTitleWidth. These are useful for shortening the lengthy titles. On hovering with the mouse, you can see the full title in the tooltip.
-
-![](Axis_images/Axis_img16.png)
-
-X-Axis Title Trim  
-{:.caption} 
-
-![](Axis_images/Axis_img17.png)
-
-Y-Axis Title Trim
-{:.caption}
-
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("container") 
-
-
-
-     .PrimaryXAxis(pr => pr.Title(tl => tl.Text("List of countries which are using solar power in the year 2014")))
-
-
-
-     .PrimaryYAxis(pr => pr.Range(ra => ra.Min(0).Max(40).Interval(5)).Title(tl => tl.Text("Measurements of Solar power used in different countries in the year 2014( in GW)")).LabelFormat("{value}GW"))
-
-
-
-           //.......
-
-  )   
-{% endhighlight  %}
-
-## Labels
-
-The axis labels are present along the axis showing the value of the data it corresponds to. You can further customize the Chart axis labels using “Font” and “LabelFormat” properties of the axis. 
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-  .PrimaryXAxis(xaxis=>xaxis.Title(tit=>tit.Text("Expenditure")
-
-    .Font(fn=>fn.Size("11px").Color("red"))))
-
-
-
-  .PrimaryYAxis(xaxis=>xaxis.Title(tit=>tit.Text("Efficiency")
-
-    .Font(fn=>fn.Size("11px").Color("red"))).LabelFormat("{value}%"))
-
-
-
-   // ...            
-
-  )
-
-
-{% endhighlight %}
-
-![](Axis_images/Axis_img18.png)
-
-Chart with Axis Labels
-{:.caption}
-
-### LabelPlacement:
-
-The category axis includes the LabelPlacement property that is used to set the labels of the axis between the tick lines or on the tick lines of the category axis. By default the LabelPlacement value for the category axis is BetweenTicks.
-
-There are two types of LabelPlacement:
-
-* BetweenTicks
-* OnTicks
-{% highlight CSHTML %}
-
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-    .PrimaryXAxis(xaxis=>xaxis.Title(tit=>tit.Text("Countries")
-
-         .Font(fn=>fn.Size("11px").Color("red"))).LabelPlacement("onTicks"))
-
-
-
-    // ...
-
-  )
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img19.png)
-
-Chart with LabelPlacement OnTicks
-{:.caption}
-
-
-
-![](Axis_images/Axis_img20.png)
-
-Chart with LabelPlacement BetweenTicks
-{:.caption}
-
-### Label Position
-
-Axis labels can further be customized to render inside the chart area using the property LabelPosition. By default, it is set as outside. This helps to display labels in a proper manner while multiple axes are used in the chart.
-{% highlight CSHTML %}
-
-
- @(Html.EJ().Chart("chartcontainer") 
-
-      .PrimaryXAxis(pr=>pr.AxisLabelPosition(AxislabelPosition.Inside))
-
-      .PrimaryYAxis(pr=>pr.AxisLabelPosition(AxislabelPosition.Inside))
-
-)   
-
-{% endhighlight %}
-
-![](Axis_images/Axis_img21.png)
-
-Label inside Chart
-{:.caption}
-
-
-
-### Axis label trimming 
-
-Chart provides support for trimming y axis labels and x axis labels by using the properties EnableTrim and MaximumLabelWidth. These are used to show the lengthy labels in a shorter form. On mouse hover, it shows the full label in the tooltip.
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
- .PrimaryXAxis(pr => pr.EnableTrim(true).MaximumLabelWidth(34))
-
- .PrimaryYAxis(pr => pr.EnableTrim(true).MaximumLabelWidth(34))
-
-)
-
-{% endhighlight  %}
-
-The following screenshot displays the Chart Axis with trimming
-
-![](Axis_images/Axis_img22.png)
-
-Axis Label Trimming
-{:.caption}
-
-## Tick Marks
-
-Tick lines are displayed horizontally and vertically in Chart axis based on the orientation of the axis.
-
-### Major Tick Lines
-It is rendered in Chart axis for each interval of axis range. By default, it is visible. You can collapse it by setting ‘Visible’ as false. You can customize the major tick lines width, opacity, and color.
-
-### Minor Tick Lines
-
-It is rendered between the major tick lines of Chart axis. To display MinorTickLines in Chart axis enable visible property of “MinorTickLines” and set values to “MinorTicksPerInterval” in the respective axis. By default, it is invisible. You can customize the minor tick lines width, and color.
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-  .PrimaryXAxis(xaxis=>xaxis.MajorTickLines(mr=>mr.Width(1.5).Size(6).Visible(true))
-
-    .MinorTickLines(mt=>mt.Width(1).Size(4).Visible(true)).MinorTicksPerInterval(5))
-
-
-
-  .PrimaryYAxis(yaxis=>yaxis.MajorTickLines(mr=>mr.Width(1.5).Size(6).Visible(true))
-
-    .MinorTickLines(mt=>mt.Width(1).Size(4).Visible(true)).MinorTicksPerInterval(5))
-
-
-
-  // ...
-
-)
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img23.png)
-
-Chart with Tick lines
-{:.caption}
-
-### Tick lines placement
-
-You can customize tick lines and render them inside the chart area using the property TickLinesPosition. By default, it is set as outside. This property will be used when labels are inside.
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer") 
-
-       .PrimaryXAxis(pr=>pr.TickLinesPosition(TickLinesPosition.Inside))
-
-       .PrimaryYAxis(pr=>pr.TickLinesPosition(TickLinesPosition.Inside))
-
-  ) 
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img24.png)
-
-Tick Lines inside chart
-{:.caption}
-
-## Grid Lines	
-
-Grid lines are displayed in horizontal and vertical position in Chart area based on the intervals.
-
-### Major Grid Lines
-
-It is rendered in Chart area for each interval of axis range. By default, it is visible. You can collapse it by setting ‘Visible’ property to false. You can customize the major gridlines width, opacity, and dashArray of gridline.
-
-### Minor Grid Lines
-
-It is rendered between the major gridlines of Chart area.To display minor grid lines in Chart area enable Visible property of “MinorGridLines” and set values to “MinorTicksPerInterval” in the respective axis. By default, ‘Visible’ property is set to “false”. You can customize the minor grid lines width, and dashArray of gridline.
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
- .PrimaryXAxis(xaxis=>xaxis.MajorGridLines(mr=>mr.Width(2).DashArray("").Visible(true)
-
-    .Opacity(1)).MinorGridLines(mg=>mg.Width(1).DashArray("").Visible(true))
-
-    .MinorTicksPerInterval(1))
-
-
-
- .PrimaryYAxis(yaxis=>yaxis.MajorGridLines(mr=>mr.Width(2).DashArray("").Visible(true)
-
-     .Opacity(1)).MinorGridLines(mg=>mg.Width(1).DashArray("").Visible(true))     
-
-     .MinorTicksPerInterval(1))
-
-
-
-  // ...
-
-)
-
-{% endhighlight  %}
-
-![](Axis_images/Axis_img25.png)
-
-Chart with Grid lines       
-{:.caption}
-
-### Alternate Grid Band
-
-Grid Band is the distance between two adjacent major grid lines which are displayed in horizontal and vertical position.
-
-### Even Grid Band
-
-Even Grid Band are counted from axes lines, i.e the band which is immediate adjacent for axes lines. By default, the even grid band color is transparent. You can highlight the even grid band by setting Fill property of Even. You can customize the Opacity of the even grid band color.
-
-### Odd Grid Band
-
-Immediate adjacent band of every even grid bands are Odd Grid Bands. You can discriminate the odd grid band from even by setting Fill property of Odd. You can customize the Opacity of the odd grid band color.
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("container")
-
-
-
-      .PrimaryXAxis(pr => pr.AlternateGridBand(ag => ag.Even(ev =>   
-
-                    ev.Fill("#E896E8").Opacity(0.5))))              
-
-      .PrimaryYAxis(pr => pr.AlternateGridBand(ag => ag.Odd(od => 
-
-                    od.Fill("#E6F0E7").Opacity(0.5))))
-
-  // ...
-
-)
-{% endhighlight  %}
-
-
-![](Axis_images/Axis_img26.png)
-
-Chart explaining grid band
-{:.caption}
-
-## Inversed Axis
-
-You can display the Chart series in to inversed position using “IsInversed” property of Chart Axis. This is illustrated in the following code.
-
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-  .PrimaryYAxis(yaxis=>yaxis.IsInversed(true))
-
-
-
-    // ...
-
+     .PrimaryXAxis(
+          //Customizing X-axis date time range
+          px=>px.Range(ra=>ra.Interval(2)).IntervalType(ChartIntervalType.Years)
+     )
+        // ...
  )
 
-{% endhighlight  %}
+{% endhighlight %}
 
-![](Axis_images/Axis_img27.png)
 
-Chart with Inversed Axis
-{:.caption}
-
-## Opposed Position
-
-By default, the x-axis is arranged horizontally at the bottom of the Chart and the y-axis is arranged vertically at the left side of the Chart. You can change the alignment of the axis by setting OpposedPosition to true, which arranges the x-axis at the top and the y-axis at the right of the Chart.  
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-    .PrimaryXAxis(xaxis =>xaxis.OpposedPosition(true))
-
-    .PrimaryYAxis(yaxis=>yaxis.OpposedPosition(true))
+![](Axis_images/axis_img14.png)
 
 
 
-   // ...
+### Apply padding to the range
 
-    )
+Padding can be applied to the minimum and maximum extremes of the range by using the **RangePadding** property. Date time axis supports the following types of padding
 
-{% endhighlight  %}
+* None
+* Round
+* Aditional
 
-![](Axis_images/Axis_img28.png)
+**None**
 
-Chart with OpposedPosition set to True
-{:.caption}
+When the value of the RangePadding property is **None**, padding is applied to the axis. This is also the default value of the rangePadding. 
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Applying none as range padding
+          px=>px.RangePadding(ChartRangePadding.None)
+     )
+        // ...
+ )
+
+{% endhighlight %} 
+
+![](Axis_images/axis_img15.png)
+
+
+**Round**
+
+When the value of the RangePadding property is **Round**, the axis range is rounded to the nearest possible date time value.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Applying round as range padding
+          px=>px.RangePadding(ChartRangePadding.Round)
+     )
+        // ...
+ )
+
+{% endhighlight %} 
+
+**Chart before rounding axis range**
+
+![](Axis_images/axis_img16.png)
+
+
+**Chart after rounding axis range**
+
+![](Axis_images/axis_img17.png)
+
+
+**Additional** 
+
+When the value of the RangePadding property is **Additional**, the range is rounded and date time interval of the axis are added as padding to the minimum and maximum extremes of the range.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Applying additional as range padding
+          px=>px.RangePadding(ChartRangePadding.Additional)
+     )
+        // ...
+ )
+
+{% endhighlight %} 
+
+![](Axis_images/axis_img18.png)
+
+
+## Logarithmic Axis
+
+Logarithmic axis uses logarithmic scale and it is very useful in visualizing when the data has values with both lower order of magnitude **(eg: 10<sup>-6</sup>)** and higher order of magnitude **(eg: 10<sup>6</sup>)**. To use logarithmic axis, set the ValueType property of the axis to **Logarithmic**.  
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Use logarithmic scale in primary X axis
+          px=>px.ValueType(AxisValueType.Logarithmic)
+     )
+        // ...
+ )
+
+
+{% endhighlight %}
+
+
+![](Axis_images/axis_img19.png)
+
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/logaxis) here to view our online demo sample link for logarithmic axis.
+
+### Customize Logarithmic range
+
+Logarithmic range can be customized by using the Range property of the axis to change the Minimum, Maximum and Interval values. Nice range is calculated automatically based on the provided data, by default.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Customizing logarithmic range
+          px=>px.Range(ra=>ra.Min(1).Max(5))
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img20.png)
+
+
+### Logarithmic base
+
+Logarithmic base can be customized by using the **LogBase** property of the axis. The default value of the LogBase is **10**.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Customizing logarithmic base
+          px=>px.LogBase(2)
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img21.png)
+
+
+### Logarithmic interval
+
+Logarithmic axis interval can be customized by using the Interval property of the axis. When the logarithmic base is 10 and logarithmic interval is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the interval is 1. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Customizing logarithmic interval
+          px=>px.Range(ra=>ra.Interval(2))
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img22.png)
+      
+
+## Label Format
+
+### Format numeric labels
+
+Numeric labels can be formatted by using the **LabelFormat** property. Numeric values can be formatted with n (number with decimal points), c (currency) and p (percentage) commands.
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Applying currency format to axis labels
+          px=>px.LabelFormat("c")
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img23.png)
+
+
+The following table describes the result of applying some commonly used label formats on numeric values. 
+ 
+<table>
+<tr>
+<td><b>Label Value</b></td>
+<td><b>Label Format property value</b></td>
+<td><b>Result </b></td>
+<td><b>Description </b></td>
+</tr>        
+<tr>
+<td>1000</td>
+<td>n1</td>
+<td>1000.0</td>
+<td>The Number is rounded to 1 decimal place</td>
+</tr> 
+<tr>
+<td>1000</td>
+<td>n2</td>
+<td>1000.00</td>
+<td>The Number is rounded to 2 decimal place</td>
+</tr> 
+<tr>
+<td>1000</td>
+<td>n3</td>
+<td>1000.000</td>
+<td>The Number is rounded to 3 decimal place</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p1</td>
+<td>1.0%</td>
+<td>The Number is converted to percentage with 1 decimal place</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p2</td>
+<td>1.00%</td>
+<td>The Number is converted to percentage with 2 decimal place</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p3</td>
+<td>1.000%</td>
+<td>The Number is converted to percentage with 3 decimal place</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>c1</td>
+<td>$1,000.0</td>
+<td>The Currency symbol is appended to number and number is rounded to 1 decimal place</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>c2</td>
+<td>$1,000.00</td>
+<td>The Currency symbol is appended to number and number is rounded to 2 decimal place</td>
+</tr>
+</table>
+
+
+### Format date time values
+
+Date time labels can be formatted by using the **LabelFormat** property of the axis.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Formatting date time labels in date/Month name/Year format
+          px=>px.LabelFormat("dd/MMMM/yyyy")
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img24.png)
+
+
+The following table describes the result of applying some common date time formats to the labelFormat property
+
+<table>
+<tr>
+<td><b>Label Value</b></td>
+<td><b>Label Format Property Value</b></td>
+<td><b>Result </b></td>
+<td><b>Description </b></td>
+</tr>        
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>dddd</td>
+<td>Monday</td>
+<td>The Date is displayed in day format</td>
+</tr> 
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>MM/dd/yyyy</td>
+<td>04/10/2000</td>
+<td>The Date is displayed in month/date/year format</td>
+</tr> 
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>n3</td>
+<td>1000.000</td>
+<td>The Number is rounded to 3 decimal place</td>
+</tr>
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>MMM</td>
+<td>Apr</td>
+<td>The Shorthand month for the date is displayed</td>
+</tr>
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>t</td>
+<td>12:00 AM</td>
+<td>Time of the date value is displayed as label</td>
+</tr>
+<tr>
+<td>new Date(2000, 03, 10)</td>
+<td>hh:mm:ss</td>
+<td>12:00:00</td>
+<td>The Label is displayed in hours:minutes:seconds format</td>
+</tr>
+</table>
+
+### Custom label format
+
+Prefix and suffix can be added to the category labels by using the LabelFormat property. You can use the *{value}* as placeholder text in your custom text, it is replaced with the corresponding axis label at the runtime.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Adding prefix and suffix to axis labels
+          px=>px.LabelFormat("${value} K")
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img25.png)
+
+
+## Common axis features
+
+Customization of features such as axis title, labels, grid lines and tick lines are common to all the axis. Each of these features are explained in this section.
+
+### Axis Visibility
+
+Axis visibility can be controlled by using the **Visible** property of the axis. The default value of the Visible property is **True**. 
+
+{% highlight cshtml %}
+
+  @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryYAxis(
+          //Disabling visibility of Y-axis
+          px=>px.Visible(false)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img26.png)
+
+
+### Axis title
+
+The **Title** property in the axis provides options to customize the text and font of the axis title. Axis does not display the title, by default. Title text can also be trimmed based on the title text length or specified length.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing axis title
+          px=>px.Title(tl=>tl.EnableTrim(true)
+              .MaximumTitleWidth(80)
+              .Text("Month")
+              .Font(ft=>ft.Color("grey").
+                  FontWeight(ChartFontWeight.Bold)
+                  .FontFamily("Segoe UI")
+                  .Size("16px")))
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img27.png)
+
+
+### Label customization
+
+The **Font** property of the axis provides options to customize the FontFamily, Color, Opacity, Size and FontWeight of the axis labels.  
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing label appearance
+          px=>px.Font(ft=>ft.Color("blue").
+                  FontWeight(ChartFontWeight.Bold)
+                  .FontFamily("Segoe UI")
+                  .Size("14px"))
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img28.png)
+
+
+### Label and tick positioning
+ 
+Axis labels and ticks can be positioned inside or outside the chart area by using the **LabelPosition** and **TickPosition** properties. The labels and ticks are positioned outside the chart area, by default.
+ 
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing label and tick positions
+          px=>px.AxisLabelPosition(AxislabelPosition.Inside).TickLinesPosition(TickLinesPosition.Inside)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img29.png)
+
+
+### Edge labels placement
+
+Labels with long text at the edges of an axis may appear partially outside the chart. The **EdgeLabelPlacement** property can be used to avoid the partial appearance of the labels at the corners. 
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing edge label placement
+          px=>px.EdgeLabelPlacement(EdgeLabelPlacement.Shift)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+**Chart before setting edge label placement to X-axis**
+
+![](Axis_images/axis_img30.png)
+
+
+**Chart after setting edge label placement to X-axis**
+
+![](Axis_images/axis_img31.png)
+
+
+### Grid lines customization
+
+The **MajorGridLines** and **MinorGridLines** properties in the axis are used to customize the major grid lines and minor grid lines of an axis. They provide options to change the Width, Color, Visibility and Opacity of the grid lines. The minor grid lines are not visible, by default.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing grid lines
+          px=>px.MajorGridLines(ma=>ma.Color("blue").Visible(true).Width(1))
+              .MinorGridLines(mi=>mi.Color("red").Visible(false).Width(1))
+              .MinorTicksPerInterval(0)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img32.png)
+
+
+### Tick lines customization
+
+The **MajorTickLines** and **MinorTickLines** properties in the axis are used to customize the major tick lines of an axis and minor tick lines of an axis. They provide options to change the Width, Size, Color and Visibility of the grid lines. The minor tick lines are not visible, by default.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Customizing tick lines
+          px=>px.MajorTickLines(ma=>ma.Color("blue").Visible(true).Width(1).Size(5))
+              .MinorTickLines(mi=>mi.Color("red").Visible(false).Width(1).Size(5))
+              .MinorTicksPerInterval(0)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img33.png)
+
+  
+### Inversing axis
+
+Axis can be inversed by using the **IsInversed** property of the axis. The default value of the IsInversed property is **False**.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Inversing the X-axis
+          px=>px.IsInversed(false)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+**Chart before inversing the axes**
+
+![](Axis_images/axis_img34.png)
+
+
+**Chart after inversing the axes**
+
+![](Axis_images/axis_img35.png)
+   
+
+### Place axes at the opposite side
+
+The **OpposedPosition** property of axis can be used to place the axis at the opposite side of its default position. The default value of the OpposedPosition property is **False**. 
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Placing axis at the opposite side of its normal position
+          px=>px.OpposedPosition(true)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+**Chart with X and Y axes at normal position**
+
+![](Axis_images/axis_img36.png)
+
+
+**Chart with Y-axis at opposed position**
+
+![](Axis_images/axis_img37.png)
+
+
+### Maximum number of labels per 100 pixels
+
+A maximum of 3 labels are displayed for each 100 pixels in the axis, by default. The maximum number of labels that is present within the 100 pixels length can be customized by using the **MaximumLabels** property of the axis. This property is applicable only for an automatic range calculation and it does not work when you set the value for Interval property in the axis range.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Maximum number of labels per 100 pixels
+          px=>px.MaximumLabels(1)
+              //....
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+**Chart before setting maximum labels per 100 pixels**
+
+![](Axis_images/axis_img38.png)
+
+
+**Chart after setting maximum labels one per 100 pixels**
+
+![](Axis_images/axis_img39.png)
+
+
+
+## Multiple Axis
+
+Multiple axes can be used in the Chart and chart area can be split into multiple panes to draw multiple series with multiple axes.
+
+![](Axis_images/axis_img40.png)
+
+
+An additional horizontal or vertical axis can be added to the chart by adding an axis instance to the **Axes** collection and then you can associate it to a series by specifying the name of the axis to the **XAxisName** or **YAxisName** property of the series.
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     //  Creating a secondary horizontal axis
+     .Axes(ax => { ax.Name("SecondaryX").Add(); ax.Name("SecondaryY").Add(); })
+     .Series(sr =>
+     {
+         //  Binding secondary X-axis with a series
+         sr.XAxisName("SecondaryX")
+             //  Binding secondary Y-axis with a series
+             .YAxisName("SecondaryX").Add();
+     })
+        // ...
+ )
+
+
+{% endhighlight %}
+
+
+
+![](Axis_images/axis_img41.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the multiple axis online demo sample.
+
 
 ## Smart Axis Labels
 
-Sometimes the Chart dimensions could cause the labels to intersect. You can avoid overlapping labels using “LabelIntersectAction” property of char axis. The Chart by default renders the texts one over the other. But, it also has some built-in capabilities to work around this overlap and lets you dictate the technique to follow. Refer to the following properties.
+When the Axis labels overlap with each other based on the chart dimensions and label size, you can use the **LabelIntersectAction** property of the axis to avoid overlapping. The default value of the LabelIntersectAction is **None**. The other available values of the Label Intersect Actions are **Rotate45**, **Rotate90**, **Trim**, **MultipleRows**, **Wrap** and **Hide**.
 
-* Rotate45 – Rotate the labels to 45 degree.
-* Rotate90 – Rotate the labels to 90 degree
-* Trim – Intersecting labels will be trim and mouse over the labels, it displays the trimmed text like tooltip.
-* MultipleRows – Split the intersecting labels in to multiple rows and display on the axis
-* Wrap – Wrap the intersecting text and display
-* Hide – It doesn’t display the intersecting label texts on the axis.
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     // Avoid overlapping of x-axis labels
+     .PrimaryXAxis(px=>px.LabelIntersectAction(LabelIntersectAction.MultipleRows)
+         
+     // ...
+ )
 
 
-{% highlight CSHTML %}
-
-@(Html.EJ().Chart("chartcontainer")
-
-
-
-  .PrimaryXAxis(xaxis=>xaxis.LabelIntersectAction(LabelIntersectAction.Rotate45))                  
-
-  .PrimaryYAxis(yaxis=>yaxis.LabelIntersectAction(LabelIntersectAction.None))
+{% endhighlight %}
 
 
 
-  // ...
+![](Axis_images/axis_img42.png)
 
-)
 
-{% endhighlight  %}
+[Click](http://mvc.syncfusion.com/demos/web/chart/smartaxislabels) here to view our online demo sample for smart axis labels.
 
-![](Axis_images/Axis_img29.png)
 
-Chart with Smart Axis Labels
-{:.caption}
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **Rotate45**.
+
+![](Axis_images/axis_img43.png)
+
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **Rotate90**.
+
+![](Axis_images/axis_img44.png)
+
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **Wrap**.
+
+![](Axis_images/axis_img45.png)
+
+
+The following screenshot displays the result, when of setting the **trim** as value to the LabelIntersectAction property.
+
+![](Axis_images/axis_img46.png)
+
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **Hide**.
+
+![](Axis_images/axis_img47.png)
+
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **MultipleRows **.
+
+![](Axis_images/axis_img48.png)
+
+
+The following screenshot displays the result, when the LabelIntersectAction property is set as **WrapByWord**.
+
+![](/js/Chart/Axis_images/axis_img49.png)
