@@ -23,7 +23,7 @@ Range collection can be directly added to the scale object. Refer the following 
 
 .Height(150).Width(600).Orientation(Orientation.Horizontal)
 
-.LabelColor("Black").EnableResize(true)
+.LabelColor("Black").IsResponsive(true)
 
 
 
@@ -340,7 +340,7 @@ You can set multiple ranges by adding an array of range objects. Refer the follo
 
 .Height(150).Width(600).Orientation(Orientation.Horizontal)
 
-.LabelColor("Black").EnableResize(true)
+.LabelColor("Black").IsResponsive(true)
 
 
 

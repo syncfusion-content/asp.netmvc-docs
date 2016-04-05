@@ -20,10 +20,10 @@ Bullet Graph supports animation that makes the performance measure bar to animat
 
 ## Responsiveness during browser resize
 
-Bullet Graph is made responsive when resizing the browser by using EnableResizing property. By default the value of this property is true in Bullet Graph. 
+Bullet Graph is made responsive when resizing the browser by using IsResponsive property. By default the value of this property is true in Bullet Graph. 
 {% highlight js %}
 
-@(Html.EJ().BulletGraph("Bullets").EnableResizing(true).Value(8).ComparativeMeasureValue(5))
+@(Html.EJ().BulletGraph("Bullets").IsResponsive(true).Value(8).ComparativeMeasureValue(5))
 
 {% endhighlight %}
 
