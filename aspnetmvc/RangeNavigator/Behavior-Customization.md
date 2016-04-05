@@ -49,7 +49,7 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
 	function loadingdata(sender) 
 	{
 
-		 sender.model. isResponsive = false;
+		 sender.model.isResponsive = false;
 
 	}
 
