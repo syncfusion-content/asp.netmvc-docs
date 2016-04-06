@@ -399,7 +399,7 @@ public ActionResult Index()
 When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
 The following code example illustrates how to disable a command and how to modify the built-in commands.
-
+{% tabs %}
 {% highlight razor %}
 @Html.EJ().Diagram("OrganizationChart", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 
