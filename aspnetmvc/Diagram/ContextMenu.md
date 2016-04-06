@@ -19,12 +19,10 @@ The following code illustrates how to enable the default context menu items.
 
 {% highlight c# %}
 
-                DiagramProperties Model = new DiagramProperties();
-                Model.Height = "600px";
-                Model.Width = "600px";
+                DiagramProperties model = new DiagramProperties();
                 //Disables the context menu
-                Model.EnableContextMenu = false;
-                ViewData["Diagram"] = Model;)
+                model.EnableContextMenu = false;
+                ViewData["Diagram"] = model;
 
 {% endhighlight %}
 
@@ -37,17 +35,17 @@ The following code example illustrate how to add custom context menu items.
 
 {% highlight c# %}
                 
-                DiagramProperties Model = new DiagramProperties();
-                Model.Height = "600px";
-                Model.Width = "600px";
+                DiagramProperties model = new DiagramProperties();
+                model.Height = "600px";
+                model.Width = "600px";
                 //enable the context menu
-                Model.EnableContextMenu = true;
-                Model.ContextMenu = new DiagramContextMenu();
+                model.EnableContextMenu = true;
+                model.ContextMenu = new DiagramContextMenu();
                 List<ContextMenuItem> SubItems = new List<ContextMenuItem>();
                 SubItems.Add(new ContextMenuItem() { Name = "zoomIn", Text = "ZoomIn", });
                 SubItems.Add(new ContextMenuItem() { Name = "zoomOut", Text = "ZoomOut", });
-                Model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
-                ViewData["Diagram"] = Model;
+                model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
+                ViewData["Diagram"] = model;
 
 {% endhighlight %}
 
@@ -81,18 +79,18 @@ You would be notified with events when you try to open the context menu items(`c
 {% tabs %}
 {% highlight c# %} 
  
-                DiagramProperties Model = new DiagramProperties();
-                Model.Height = "600px";
-                Model.Width = "600px";
+                DiagramProperties model = new DiagramProperties();
+                model.Height = "600px";
+                model.Width = "600px";
                 //enable the context menu
-                Model.EnableContextMenu = true;
-                Model.ContextMenu = new DiagramContextMenu();
+                model.EnableContextMenu = true;
+                model.ContextMenu = new DiagramContextMenu();
                 List<ContextMenuItem> SubItems = new List<ContextMenuItem>();
                 SubItems.Add(new ContextMenuItem() { Name = "zoomIn", Text = "ZoomIn", });
                 SubItems.Add(new ContextMenuItem() { Name = "zoomOut", Text = "ZoomOut", });
-                Model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
-                Model.ContextMenuBeforeOpen = "contextMenuBeforeOpen";
-                Model.ContextMenuClick = "contextMenuClick";
+                model.ContextMenu.Items.Add(new ContextMenuItem() { Name = "zoom", Text = "Zoom", SubItems = SubItems });
+                model.ContextMenuBeforeOpen = "contextMenuBeforeOpen";
+                model.ContextMenuClick = "contextMenuClick";
 	
 {% endhighlight %}
 
