@@ -262,7 +262,7 @@ The user can choose the items displayed in the zooming toolbar by specifying the
 
 ### Enable ScrollBar
 
-EjChart provides scrollbar support to view the other portions of chart area which is not shown in the view port when zoomed, by setting true to [`enableScrollbar`](../api/ejchart#members:zooming-enablescrollbar) option in [`zooming`](../api/ejchart#members:zooming).  
+EjChart provides scrollbar support to view the other portions of chart area which is not shown in the view port when zoomed, by setting true to **EnableScrollbar** option in **Zooming**.  
 
 {% highlight cshtml %}
 
