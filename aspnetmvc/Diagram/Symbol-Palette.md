@@ -28,7 +28,7 @@ The following code example illustrates how to define a palette and how its added
 
 You can add any number of palettes to the `Palettes` collection of the symbol palette. The following example illustrates how to define symbol palette with a palette object that is defined in the previous step.
 
-{% highlight CSHTML%}
+{% highlight html %}
 
     //Initializes overview
     
