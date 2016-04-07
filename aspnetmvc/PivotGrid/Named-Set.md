@@ -50,7 +50,7 @@ olapReport.CategoricalElements.Add(dimensionElementColumn);
 olapReport.CategoricalElements.Add(measureElementColumn);
 olapReport.SeriesElements.Add(dimensionElementRow);
 
-{% highlight html %}
+{% endhighlight %}
 
 ![](KPI_images/servernamedset.png)
 
