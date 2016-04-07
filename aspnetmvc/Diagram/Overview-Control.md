@@ -54,6 +54,7 @@ overview.SourceID = "Diagram1";
 ViewData["overview"] = overview;   
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Zoom and Pan
 
