@@ -16,7 +16,7 @@ By default, Diagram displays a tooltip to provide the size, position, and angle 
 
 | Drag | Resize | Rotate |
 |---|---|---|
-| ![](/Tooltip_images/Tooltip_img1.png) | ![](/Tooltip_images/Tooltip_img2.png) | ![](/Tooltip_images/Tooltip_img3.png) |
+| ![](Tooltip_images/Tooltip_img1.png) | ![](Tooltip_images/Tooltip_img2.png) | ![](Tooltip_images/Tooltip_img3.png) |
 
 ### Disable default tooltip
 
@@ -91,7 +91,7 @@ To show tooltip on mouse over, the `Tooltip` property of Diagram model needs to 
         
 {% endhighlight %} 
 
-![](/Tooltip_images/Tooltip_img4.png)
+![](Tooltip_images/Tooltip_img4.png)
 
 ### Disable tooltip at runtime
 
@@ -192,7 +192,7 @@ Diagram provides support to show tooltip around the node/connector that is hover
             
 {% endhighlight %}
 
-![](/Tooltip_images/Tooltip_img5.png)
+![](Tooltip_images/Tooltip_img5.png)
 
 ### Tooltip relative to mouse position
 
@@ -239,6 +239,6 @@ To display the tooltip at mouse position, you need to set "Mouse" option to the 
 
 {% endhighlight %}
 
-![](/Tooltip_images/Tooltip_img6.png)
+![](Tooltip_images/Tooltip_img6.png)
 
 
