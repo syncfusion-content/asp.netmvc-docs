@@ -53,7 +53,7 @@ The following screenshot displays how to select Internet application template wi
    * Syncfusion.Pdf.Base
    * Syncfusion.XlsIO.Base
    * Syncfusion.DocIO.Base
-   * Synfusion.Shared.Wpf
+   * Syncfusion.Shared.Wpf
    * Syncfusion.Chart.Wpf
    * Syncfusion.Gauge.Wpf
    * Syncfusion.SfMaps.Wpf 
@@ -217,7 +217,7 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
    <h2>Index</h2>
    <div>    
        @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote)
-	   .ReportServiceUrl("/api/SSRSReport")
+	   .ReportServiceUrl("/api/ReportApi")
 	   .ReportServerUrl("http://76.74.153.81/ReportServer")
 	   .ReportPath("/SSRSSamples2/Territory Sales"))  
    </div>
