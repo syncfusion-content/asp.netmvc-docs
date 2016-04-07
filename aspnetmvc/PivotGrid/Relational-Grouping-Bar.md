@@ -9,15 +9,32 @@ documentation: ug
 
 # Grouping Bar
 
-I> This feature is applicable only for relational datasource.
-
 ## Initialization
 
-Grouping Bar allows user to dynamically alter the report by filter, sort and remove operations in the PivotGrid control. Based on the datasource and report bound to the PivotGrid control, Grouping Bar will be automatically populated. You can enable Grouping Bar option in PivotGrid by setting the `EnableGroupingBar` property to true.
+Grouping Bar allows user to dynamically alter the report by filter, sort and  remove operations in the PivotGrid control. Based on the Relational datasource and report bound to the PivotGrid control, Grouping Bar will be automatically populated. You can enable Grouping Bar option in PivotGrid by setting the `EnableGroupingBar` property to true.
+
+##Client Mode
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/RelationalService.svc")).EnableGroupingBar(true)
+ @Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableGroupingBar(true).ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); rows.FieldName("State").FieldCaption("State").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); values.FieldName("Quantity").Add(); }).Filters(filters => { filters.FieldName("Date").FieldCaption("Date").Add(); }))
+ 
+ <script type="text/javascript">
+        function onLoad(args) {
+            args.model.dataSource.data = pivot_dataset;//Array of data
+        }
+</script>
+
+{% endhighlight %}
+
+![](Grouping-Bar_images/realtionalclientGB.png)
+
+
+##Server Mode
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService")).EnableGroupingBar(true)
 
 {% endhighlight %}
 
@@ -46,3 +63,4 @@ Remove option available in the Grouping Bar allows you to completely remove a sp
 ![](Grouping-Bar_images/remove.png)
 
 ![](Grouping-Bar_images/remove-grid.png) 
+

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Exporting | PivotGrid | ASP.NET MVC | Syncfusion
 description: exporting
@@ -9,18 +9,82 @@ documentation: ug
 
 # Exporting
 
-The PivotGrid control can be exported to the following file formats.
+The following table lists the exported file format for both Client and Server Mode of Relational datasource.
 
-* Excel 
-* CSV
-* Word
-* PDF
+<table>
+<tr>
+<th>
+Mode
+</th>
+<th>
+File Formats
+</th>
+</tr>
+<tr>
+<td>
+Client Mode
+</td>
+<td>
+Excel
+</td>
+</tr>
+<tr>
+<td>
+Server Mode
+</td>
+<td>
+Excel, Word, PDF and CSV
+</td>
+</tr>
+</table>
 
 The PivotGrid control can be exported by invoking **"exportPivotGrid"** method, with an appropriate export option as parameter.
 
+##Client Mode
+
+For client side, Relational datasource contents can be exported only to Excel. The document can be saved from the browser to the local disk drive for later use.
+
+{% highlight js %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); }))
+
+@Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("btnExportClick"); }).Text("ExcelExport")
+
+<script type="text/javascript">
+    function onLoad(args) {
+        args.model.dataSource.data = pivot_dataset;// Array of Data
+    }
+    
+    function btnExportClick(args) {
+        var gridObj = $('#PivotGrid1').data("ejPivotGrid");
+        gridObj.exportPivotGrid("ExcelExport");
+    }
+</script>
+
+{% endhighlight %}
+
+
+Add the below code in PivotGridController.cs which is inside Controller folder to perform exporting
+
+{% highlight c# %}
+
+public void ExcelExport() {
+    PivotGridExport pGrid = new PivotGridExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    string fileName = "Sample";
+    pGrid.ExportToExcel(fileName, args, System.Web.HttpContext.Current.Response);
+}
+
+{% endhighlight %}
+
+
+![](Exporting_images/RelationalClientMode.png)
+
+##Server Mode
+
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/api/OLAP"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/RelationalService"))
 @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
 <button id="ExportBtn">Export</button>
 <script type="text/javascript">
@@ -81,23 +145,7 @@ function exportBtnClick(args) {
 
 {% endhighlight %}  
 
-![](Exporting_images/excelexport.png)
-
-## CSV Export
-User can export contents of the PivotGrid to CSV document for future archival, references and analysis purposes.
-
-For CSV export, **"ej.PivotGrid.ExportOptions.CSV"** enumeration value is sent as the parameter.
-
-{% highlight js %}
-
-function exportBtnClick(args) {
-    var gridObj = $('#PivotGrid1').data("ejPivotGrid");
-    gridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.CSV);
-}
-
-{% endhighlight %} 
-
-![](Exporting_images/csvexport.png)
+![](Exporting_images/Sampleexcel.png)
 
 ## Word Export
 User can export contents of the PivotGrid to Word document for future archival, references and analysis purposes. To achieve Word export, we need to add the following dependency libraries into the application.
@@ -116,7 +164,7 @@ function exportBtnClick(args) {
 
 {% endhighlight %} 
 
-![](Exporting_images/wordexport1.png)
+![](Exporting_images/Sampleword.png)
 
 ## PDF Export
 User can export contents of the PivotGrid to PDF document for future archival, references and analysis purposes. To achieve PDF export, we need to add the following dependency libraries into the application.
@@ -135,7 +183,8 @@ function exportBtnClick(args) {
 
 {% endhighlight %} 
 
-![](Exporting_images/pdfexport.png)
+![](Exporting_images/Samplepdf.png)
+
 
 ## Customize the export document name
 
@@ -154,6 +203,7 @@ public void Export() {
 
 {% endhighlight %}
 
+
 For customizing name in WCF Service, below code snippet is used.
 
 {% highlight c# %}
@@ -167,4 +217,5 @@ public void Export(System.IO.Stream stream) {
 }
 
 {% endhighlight %}
+
 

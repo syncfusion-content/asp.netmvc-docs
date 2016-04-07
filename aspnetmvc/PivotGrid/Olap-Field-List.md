@@ -13,13 +13,39 @@ documentation: ug
 
 Field List, also known as Pivot Schema Designer, allows user to add, rearrange, filter and remove fields to show data in PivotGrid exactly the way they want.
 
-Based on the datasource, OLAP or Relational, bound to the PivotGrid control, PivotTable Field List will be automatically populated with Cube Information or Field Names respectively. PivotTable Field List provides an Excel like appearance and behavior.
+Based on the datasource, OLAP, bound to the PivotGrid control, PivotTable Field List will be automatically populated with Cube Information or Field Names. PivotTable Field List provides an Excel like appearance and behavior.
 
-In-order to initialize PivotTable Field List, first you need to define a “div” tag with an appropriate “id” attribute which acts as a container for the widget. Then you need to initialize the PivotTable Field List by using the **"PivotSchemaDesigner"** method. 
+In-order to initialize PivotTable Field List, first you need to define a “div” tag with an appropriate “id” attribute which acts as a container for the widget. Then you need to initialize the PivotTable Field List by using the **"PivotSchemaDesigner"** method.
+
+##Client Mode
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.RenderSuccess("loadSchemaDesigner")).DataSource(dataSource => dataSource.Values(values => { values.Axis(AxisName.Column).Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Add(); }).Rows(rows => { rows.FieldName("[Customer].[Customer Geography]").Add(); }).Columns(columns=>{columns.FieldName("[Date].[Fiscal]").Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Cube("Adventure Works").Catalog("Adventure Works DW 2008 SE"))
+@Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner")
+
+<script type="text/javascript">
+    function loadSchemaDesigner(args) {
+        var PivotSchemaDesigner = $("#PivotSchemaDesigner").data('ejPivotSchemaDesigner');
+        if (PivotSchemaDesigner.model.pivotControl == null) {
+            PivotSchemaDesigner.model.pivotControl = this;
+            PivotSchemaDesigner.model.enableWrapper = true;
+            PivotSchemaDesigner.model.layout = "excel";
+            PivotSchemaDesigner._load();
+        }
+        args.model.renderSuccess = null;
+    }
+</script>
+
+{% endhighlight %}
+
+![](PivotTable-Field-List_images/OlapClientMode.png)
+
+##Server Mode 
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner").Layout(PivotSchemaDesignerLayout.Excel)
 
 <script type="text/javascript">
@@ -68,3 +94,5 @@ Values can be filtered by checking/unchecking the check box besides them, inside
 ![](PivotTable-Field-List_images/filter.png)
 
 ![](PivotTable-Field-List_images/filter1.png)
+
+

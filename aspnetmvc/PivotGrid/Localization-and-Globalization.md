@@ -351,7 +351,7 @@ You can render our PivotGrid control from Right to Left by setting `EnableRTL` p
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).EnableRTL(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).EnableRTL(true)
 
 {% endhighlight %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Grid Layout
 
-I> This feature is applicable only for OLAP datasource.
+I> This feature is applicable only for OLAP datasource at Server Mode.
 
 ## Normal Layout
 
@@ -17,7 +17,7 @@ A layout in which summary cells are positioned at the bottom of each parent memb
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/wcf/PivotGridService.svc")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/OLAPService")) 
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ A layout in which summary cells are completely hidden and the child members appe
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url(Url.Content("~/wcf/PivotGridService.svc"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url(Url.Content("~/OLAPService"))
 
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ A layout in which summary cells are positioned besides each parent member and th
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("~/wcf/PivotGridService.svc"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("~/OLAPService"))
 
 {% endhighlight %} 
 
@@ -55,8 +55,9 @@ A layout in which summary cells are positioned at the top of each parent member 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NormalTopSummary).Url(Url.Content("~/wcf/PivotGridService.svc"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NormalTopSummary).Url(Url.Content("~/OLAPService"))
 
 {% endhighlight %}
 
 ![](Grid-Layout_images/layout-top.png)
+
