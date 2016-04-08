@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-#Styling
+# Styling
 By default, PivotGrid supports **13** different themes.
 
 * default-theme

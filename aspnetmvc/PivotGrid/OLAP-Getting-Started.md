@@ -72,7 +72,7 @@ This section covers the information required to create a simple PivotGrid bound 
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
-###Project Initialization
+### Project Initialization
 
 Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **"PivotGridDemo"**. 
 
@@ -184,7 +184,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 {% endhighlight %}
 
 
-###Scripts and CSS Initialization
+### Scripts and CSS Initialization
 
 The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
 
@@ -241,7 +241,7 @@ The **“Url”** property in PivotGrid widget points the service endpoint, wher
 N> The above "Index.cshtml" contains WebAPI Url, which is "~/OLAPService". If WCF service is used as endpoint, the Url would look like "~/OLAPService.svc".
 
 
-###WebAPI
+### WebAPI
 
 **Adding a WebAPI Controller**
 
