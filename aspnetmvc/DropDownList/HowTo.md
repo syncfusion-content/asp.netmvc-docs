@@ -83,3 +83,105 @@ The following screenshot exhibits the output of the above code,
 
 ![](HowTo_images/HowTo_img2.jpeg)
 
+## Render the DropDownList in Partial View using normal mode
+
+Create a Partial View and define as follows
+
+{% highlight razor %}
+
+    @using DropdownList.Models
+
+    @Html.EJ().DropDownList("DropDown").Datasource((List<DropDownValue>)ViewData["DataSrc"]).DropDownListFields(df=>df.Text("Text").Value("Value"))
+    @Html.EJ().ScriptManager()
+
+{% endhighlight %}
+
+***Note: While rendering a control in the partial view, we need to specify @Html.EJ().ScriptManager() in the partial view page after the initializing the control.***
+
+Render the partial view into parental view
+
+{% highlight razor %}
+    
+    @Html.Partial("PartialView1")
+
+{% endhighlight %}
+
+Define DataSource and other required properties for rendering a simple DropDownList
+
+{% highlight c# %}
+   
+    public ActionResult MainView()
+        {
+            List<DropDownValue> data = new List<DropDownValue>() { };
+            data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
+            data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" });
+            data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
+            data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
+            data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
+            ViewData["DataSrc"] = data;
+            return View();
+         }
+         
+{% endhighlight %}
+
+## Render the DropDownList in Partial View using Unobtrusive mode
+
+When you enable the **unobtrusive** in your application, refer to the **ej.unobtrusive.min.js** file in the application.
+You have to set the value of **UnobtrusiveJavaScriptEnabled** to **true** in Root directory **web.config** file as shown in the following code example.
+{% highlight xml %}
+
+    <appSettings>
+        <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    </appSettings>
+
+{% endhighlight %}
+
+After setting the value as **true,** refer to the unobtrusive script file in the **_Layout page** as shown in the following code example.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+    <head>
+    <script src="@Url.Content("~/Scripts/ej/ej.unobtrusive.min.js")"></script>
+    </head>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create a Partial View and define as follows
+
+{% highlight razor %}
+
+    @using DropdownList.Models
+
+    @Html.EJ().DropDownList("DropDown").Datasource((List<DropDownValue>)ViewData["DataSrc"]).DropDownListFields(df=>df.Text("Text").Value("Value"))
+
+
+{% endhighlight %}
+
+Render the partial view into parental view.
+
+{% highlight razor %}
+    
+    @Html.Partial("PartialView1")
+
+{% endhighlight %}
+
+Define DataSource and other required properties for rendering a simple DropDownList
+
+{% highlight c# %}
+    
+    public ActionResult MainView()
+        {
+            List<DropDownValue> data = new List<DropDownValue>() { };
+            data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
+            data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" });
+            data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
+            data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
+            data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
+            ViewData["DataSrc"] = data;
+            return View();
+         }
+{% endhighlight %}
