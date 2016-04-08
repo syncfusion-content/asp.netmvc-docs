@@ -16,7 +16,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 ## Create Connector
 
 Connector can be created by defining the start and end points. The path to be drawn can be defined with a collection of segments.
-To explore the properties of a `Connector`, refer to [Connector Properties](http://help.syncfusion.com/CR/cref_files/aspnetmvc/ejweb/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Connector_members.html "Connector Properties").
+To explore the properties of a `Connector`, refer to [Connector Properties](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Connector_members.html "Connector Properties").
 
 ### Add connectors through connectors collection
 
@@ -466,7 +466,7 @@ public ActionResult Index()
 ## Decorator
 
 Start and end points of a connector can be decorated with some customizable shapes like arrows, circles, diamond or path. You can decorate the connection end points with the `SourceDecorator` and `TargetDecorator` properties of connector.
-To explore the properties of decorators, refer to [Decorator Properties](http://help.syncfusion.com/CR/cref_files/aspnet/ejweb/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Connector~SourceDecorator.html "Decorator Properties").
+To explore the properties of decorators, refer to [Decorator Properties](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Decorator_members.html "Decorator Properties").
 
 The `Shape` property of decorator allows to define the shape of the decorators. The following code example illustrates how to create decorators of various shapes.
 
@@ -645,7 +645,7 @@ public ActionResult Index()
 
 The direction of the bridge can be customized with the property `BridgeDirection`. BridgeDirection defines the intersecting segment where the bridge has to be inserted. By default, the bridge direction points to the top.
 
-To explore the bridge directions, refer to [Bridge Directions](http://help.syncfusion.com/CR/cref_files/aspnet/ejweb/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties~BridgeDirection.html "Bridge Directions").
+To explore the bridge directions, refer to [Bridge Directions](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties~BridgeDirection.html "Bridge Directions").
 
 The following code example illustrates how to draw the bridge at the bottom direction.
 
@@ -774,4 +774,4 @@ public ActionResult Index()
 Diagram allows to edit the connectors at runtime. To edit the connector segments at runtime, refer to [Connection Editing](/js/Diagram/Interaction#connection-editing "Connection Editing").
 
 ## Constraints
-The `Constraints` property of connector allows to enable/disable certain features of connectors. For more information about constraints, refer to [Connector Constraints](http://help.syncfusion.com/CR/cref_files/aspnet/ejweb/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.DiagramEnums.ConnectorConstraints.html "Connector Constraints").
+The `Constraints` property of connector allows to enable/disable certain features of connectors. For more information about constraints, refer to [Connector Constraints](/aspnetmvc/Diagram/Constraints#connectorconstraints "Connector Constraints").
