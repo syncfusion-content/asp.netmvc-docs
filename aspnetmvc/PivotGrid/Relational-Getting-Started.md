@@ -245,7 +245,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 {% endhighlight %}
 
-###Scripts and CSS Initialization
+### Scripts and CSS Initialization
 
 The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
 
@@ -302,7 +302,7 @@ The **“Url”** property in PivotGrid widget points the service endpoint, wher
 N> The above "Index.cshtml" contains WebAPI Url, which is "~/RelationalService". If WCF service is used as endpoint, the Url would look like "~/RelationalService.svc".
 
 
-###WebAPI
+### WebAPI
 
 **Adding a WebAPI Controller**
 
@@ -626,7 +626,7 @@ Now, **PivotGrid** will be rendered with Sales Amount over a set of products acr
 
 ![](Getting-Started_images/relaionalwebapi.png) 
 
-###WCF
+### WCF
 
 This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotGrid. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotGrid/olap-connectivity#wcf-1).
 

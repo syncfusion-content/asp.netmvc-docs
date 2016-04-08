@@ -326,7 +326,7 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 ![](Localization_images/localization.png)
 
-##Localization and Globalization of Relational Info
+## Localization and Globalization of Relational Info
 Content displayed within the PivotGrid control are obtained from the Relational datasource. So following are the steps that needs to done to get localized as well as globalized content.
  
 * To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.  
@@ -345,7 +345,7 @@ pivotSetting.PivotCalculations.Add(new PivotComputationInfo {
 
 ![](Localization_images/localizationinfo.png)
 
-##RTL
+## RTL
 
 You can render our PivotGrid control from Right to Left by setting `EnableRTL` property to true.
 
