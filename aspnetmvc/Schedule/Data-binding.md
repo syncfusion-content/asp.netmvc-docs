@@ -302,7 +302,7 @@ The server-side code to retrieve the appointments are as follows.
 
 {% endhighlight %}
 
-## Databinding using OLEDB
+## Data Binding using OLEDB
 
 The appointment data can also be bound to the Scheduler using OLEDB database as depicted below.
 
@@ -365,7 +365,7 @@ The server-side controller code to retrieve and bind the appointment data to Sch
 
 {% endhighlight %}
 
-The control code to handle the CRUD operation are as follows.
+The controller code to handle the CRUD operation are as follows.
 
 {% highlight c# %}
 
