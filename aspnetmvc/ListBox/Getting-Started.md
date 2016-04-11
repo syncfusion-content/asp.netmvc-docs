@@ -9,134 +9,495 @@ documentation: ug
 
 # Getting Started
 
-This section helps to understand the getting started of the ListBox widget with the step-by-step instructions.
+This section explains briefly on how to create a ListBox control in your ASP.NET MVC application.
 
-## Create ListBox
+## Create your first ListBox in MVC
 
-Create a MVC Project and add the necessary Dlls and scripts with the help of the given [MVC Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation.
+Here you can learn how to customize ListBox in Contact Selection tool. This allows you display the list of contacts, to select and move them to the next ListBox that has the selected items. The following example illustrates simulator of Group Creation tool like Skype messenger.
 
-Add the following code snippet to the corresponding view page to render the ListBox.
+The following screenshot demonstrates the functionality of ListBox with Multi-Selection and Drag and Drop features.
 
-{% highlight razor %}
 
-@Html.EJ().ListBox("listbox").TargetID("carslist")
-<div>
-    <ul id="carslist">
-        <li>Audi A4</li>
-        <li>Audi A5</li>
-        <li>Audi A6</li>
-        <li>Audi A7</li>
-        <li>Audi A8</li>
-        <li>BMW 501</li>
-        <li>BMW 502</li>
-        <li>BMW 503</li>
-        <li>Batch</li>
-        <li>BMW 507</li>
-        <li>BMW 3200</li>
-        <li>Cut</li>
-    </ul>
+
+![](Getting-Started_images/Getting-Started_img1.png)
+
+Skype Group creation tool Simulator using ListBox
+{:.caption}
+
+In the above screenshot, you can select a list item from the first ListBox widget. After you select the item, you can move the selected item to the second ListBox widget. 
+
+### Create a ListBox Widget
+
+EssentialASP.NET MVCListBox control renders with built-in features.
+
+The following steps are used to create ListBox control.  
+
+1. You can create an MVC Project and add necessary Dll with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/listbox/getting-started) Documentation.
+2. Please add the below code in your layout._cshtml page to add necessary script and css files to render the ListBox control.
+
+   ~~~ cshtml
+
+	<head>
+
+	<link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+
+
+
+		<!--Scripts-->
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+
+
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+
+
+
+		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+
+
+
+		<script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"> </script>
+
+	</head>
+		
+   ~~~
+   
+
+     Create a CSHTML file in View page and add the following code sample to it. 
+
+3. Add the following code in your view page to render ListBox controls.
+
+
+
+   ~~~ cshtml  
+
+	<div id="sample">
+
+		<h5>
+
+			<b>Add people</b></h5>
+
+		<p>
+
+			Choose a contact and click move button to add in group
+
+		</p>
+
+		<br />
+
+		<div id="control">
+
+			<div id="container1">
+
+				<p>
+
+					Contacts List</p>
+
+				@Html.EJ().ListBox("list1")
+
+			</div>
+
+			<div id="container2">
+
+				<p>
+
+					People in this group</p>
+
+				@Html.EJ().ListBox("list2")
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+   ~~~
+   
+
+
+4. Add the following style section for the ListBox controls alignment. 
+
+   ~~~ css
+
+	<style type="text/css" class="cssStyles">
+
+		#control 
+		{
+
+			height: 350px;
+
+			width: 500px;
+
+			padding: 25px;
+
+			background-color: #f7f7f7;
+
+			display: flex;
+
+		}
+
+		#sample 
+		{
+
+			height: 472px;
+
+			width: 600px;
+
+		}
+
+		#list2_container 
+		{
+
+			float: right;
+
+		}
+
+		#list1_container 
+		{
+
+			float: left;
+
+		}
+
+		.middlebuttons 
+		{
+
+			padding: 91px 25px 25px 25px;
+
+		}
+
+		#container1, #container2 
+		{
+
+			width: 200px;
+
+		}
+
+		img 
+		{
+
+			padding-right: 10px;
+
+			padding-top: 3px;
+
+			width: 18px;
+
+			height: 15px;
+
+		}
+
+		#form1 
+		{
+
+			padding: 25px;
+
+		}
+
+
+
+	</style>
+
+   ~~~
+   
+
+5. Run this code to render an empty ListBox control.
+
+
+
+![](Getting-Started_images/Getting-Started_img2.png)
+
+Render ListBox with <ul></ul> element
+{:.caption}
+
+### Configure ListBox with Items
+
+To populate items inside ListBox, you have to add list items inside <ul> as <li></li> elements. The TargetID property is used to get the list items from the target. The Id of the ul that has the list items is given as the TargetID. Include the following <ul>, <li> elements in your sample.
+
+
+
+{% highlight html %}   
+
+<div id="sample">
+
+    <h5>
+
+        <b>Add people</b></h5>
+
+    <p>
+
+        Choose a contact and click move button to add in group
+
+    </p>
+
+    <br />
+
+    <div id="control">
+
+        <div id="container1">
+
+            <p>
+
+                Contacts List</p>
+
+            @Html.EJ().ListBox("list1").TargetID("select")
+
+            <ul id="select">
+
+                <li>
+
+                    <img src="~/images/listbox/busy.png" alt="Categorize" />
+
+                    Nancy</li>
+
+                <li>
+
+                    <img src="~/images/listbox/busy.png" alt="Done" />
+
+                    Andrew</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Flag" />
+
+                    Janet</li>
+
+                <li>
+
+                    <img src="~/images/listbox/away.png" alt="Forward" />
+
+                    Margaret</li>
+
+                <li>
+
+                    <img src="~/images/listbox/away.png" alt="Move" />
+
+                    Michael</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="E-mail" />
+
+                    Robert</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Meeting" />
+
+                    Laura</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
+
+                    Anne</li>
+
+                <li>
+
+                    <img src="~/images/listbox/away.png" alt="Move" />
+
+                    Suyama</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="E-mail" />
+
+                    Callahan</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Meeting" />
+
+                    Peacock</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
+
+                    Fuller</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
+
+                    Davolio</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
+
+                    Dodsworth</li>
+
+                <li>
+
+                    <img src="~/images/listbox/avail.png" alt="Reply" />
+
+                    Louis</li>
+
+            </ul>
+
+        </div>
+
+        <div class="middlebuttons">
+
+            @Html.EJ().Button("Add").Text(">>").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("add"))
+
+            <br />
+
+            <br />
+
+            @Html.EJ().Button("Remove").Text("<<").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("remove"))
+
+        </div>
+
+        <div id="container2">
+
+            <p>
+
+                People in this group</p>
+
+            @Html.EJ().ListBox("list2")
+
+            <ul id="selecteditems">
+
+            </ul>
+
+        </div>
+
+    </div>
+
 </div>
 
 {% endhighlight %}
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
 
-## Databinding
-
-We can populate data in the ListBox widget using `DataSource` and `Fields` properties.
-
-### See Also
-
-[Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/databinding)
-
-In the Model page, define the Class name as Bikes with BikeId and BikeName field property.
-
-In the Controller, create a list of “Bikes” class and add the data.
-
-In the View page, add the ListBox helper and bind the data.
-
-{% tabs %}
-{% highlight c# %}
+Run the above code to render ListBox with list items rendered inside ListBox. ListBox with Contact list items is shown as follows.
 
 
-//define model class with the corresponding property
-
-public class Bikes
-    {
-        public string BikeId { get; set; }
-        public string BikeName { get; set; }
-    }
-
-//specify desired datasource data by using the model class properties
-
-public partial class ListBoxController : Controller
-    {
-        List<Bikes> bike = new List<Bikes>();
-        public ActionResult Index()
-        {
-            bike.Add(new Bikes { BikeId = "bk1", BikeName = "Apache RTR" });
-            bike.Add(new Bikes { BikeId = "bk2", BikeName = "CBR 150-R" });
-            bike.Add(new Bikes { BikeId = "bk3", BikeName = "CBZ Xtreme" });
-            bike.Add(new Bikes { BikeId = "bk4", BikeName = "Discover" });
-            bike.Add(new Bikes { BikeId = "bk5", BikeName = "Dazzler" });
-            bike.Add(new Bikes { BikeId = "bk6", BikeName = "Flame" });
-            bike.Add(new Bikes { BikeId = "bk7", BikeName = "Fazzer" });
-            bike.Add(new Bikes { BikeId = "bk8", BikeName = "FZ-S" });
-            bike.Add(new Bikes { BikeId = "bk9", BikeName = "Pulsar" });
-            bike.Add(new Bikes { BikeId = "bk10", BikeName = "Shine" });
-            bike.Add(new Bikes { BikeId = "bk11", BikeName = "R15" });
-            bike.Add(new Bikes { BikeId = "bk12", BikeName = "Unicorn" });
-            ViewBag.datasource = bike;
-            return View();
-        }
-    }
-
-
-{% endhighlight %}
-
-{% highlight razor %}
-
-@{
-    Html.EJ().ListBox("bikeList")
-        .Datasource((IEnumerable<Bikes>)ViewBag.datasource)
-        .ListBoxFields(df => df.ID("BikeId")
-        .Text("BikeName")).Render();
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![](Getting-Started_images/Getting-Started_img2.png)
-
-## Selection
-
-The ListBox widget supports item selection.
-
-### See Also
-
-[Selection](http://help.syncfusion.com/js/listbox/selection)
-
-{% highlight razor %}
-
-@Html.EJ().ListBox("listbox").TargetID("carslist").SelectedIndex(2)
-    <div>
-        <ul id="carslist">
-            <li>Audi A4</li>
-            <li>Audi A5</li>
-            <li>Audi A6</li>
-            <li>Audi A7</li>
-            <li>Audi A8</li>
-            <li>BMW 501</li>
-            <li>BMW 502</li>
-            <li>BMW 503</li>
-            <li>Batch</li>
-            <li>BMW 507</li>
-            <li>BMW 3200</li>
-            <li>Cut</li>
-        </ul>
-    </div>
-    
-{% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img3.png)
+
+ListBox with Contact list items
+{:.caption}
+
+### Enable Drag and Drop 
+
+You can drag an item from a ListBox and drop it in droppable element.To drag and drop a list item across controls or within a control, you have to set the AllowDragAndDrop property as “True”. 
+
+Please refer the below code snippet:
+
+{% highlight CSHTML %}
+  
+@Html.EJ().ListBox("list1").TargetID("select").AllowDragAndDrop(true)
+
+@Html.EJ().ListBox("list2").AllowDragAndDrop(true)
+
+{% endhighlight %}
+
+Run the above code example to render the following ListBox with Drag and drop feature. ListBox with Drag and Drop list items across control is as follows:
+
+
+
+![](Getting-Started_images/Getting-Started_img4.png)
+
+ListBox with Drag and Drop list items
+{:.caption}
+
+Enable Multiple Selection 
+
+You can select multiple list items simultaneously in ListBox control, and move the multiple, selected items to the selection ListBox. To select multiple items in a ListBox, set the AllowMultiSelection property for the ListBox as “True”.
+
+
+
+{% highlight CSHTML %}
+   
+
+@Html.EJ().ListBox("list1").TargetID("select").AllowMultiSelection(true)
+
+.AllowDragAndDrop(true)
+
+{% endhighlight %}
+
+Run the above code example to render the following ListBox with Multiple selection feature. ListBox control with Multiple Selection of list items is as follows.
+
+
+
+![](Getting-Started_images/Getting-Started_img5.png)
+
+ListBox  with Multiple Selection of list items
+{:.caption}
+
+### Add items to a Second ListBox
+
+You have to move the selected list items to the second ListBox using AddItem(value) method and remove existing item in the first ListBox using RemoveItem() method.
+
+The following code sample explains how to add an item to a second ListBox.
+
+
+
+{% highlight js %}
+
+<script type="text/javascript">
+
+	function add(e) 
+	{
+
+		var firstListBox = $('#list1').data("ejListBox");
+
+		var selecteditems = firstListBox.getSelectedItems();
+
+		var len = selecteditems.length;
+
+		for (i = 0; i < len; i++) 
+		{
+
+			var value = $(selecteditems[i]).html();
+
+			selecteditems[i].remove();
+
+			var target = $('#list2').data("ejListBox");
+
+			target.addItem(value);
+
+		}
+
+	}
+
+    function remove(e) 
+	{
+
+        var firstListBox = $('#list2').data("ejListBox");
+
+        var selecteditem = firstListBox.getSelectedItems();
+
+        var len = selecteditem.length;
+
+        for (i = 0; i < len; i++) 
+		{
+
+            var value = $(selecteditem[i]).html();
+
+            selecteditem[i].remove();
+
+            var target = $('#list1').data("ejListBox");
+
+            target.addItem(value);
+
+        }
+
+    }
+
+</script>
+
+{% endhighlight %}
+
+Run this code and you can see the output. Selected items from the first ListBox have been moved to second ListBox using AddItem() and RemoveItem() method and it is displayed in the following figure.
+
+
+
+![](Getting-Started_images/Getting-Started_img6.png)
+
+ListBox Selection moved to Second ListBox
+{:.caption}
