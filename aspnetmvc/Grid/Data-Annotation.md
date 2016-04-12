@@ -17,10 +17,10 @@ Please find the following list of annotation attributes that are supported in Gr
 <table>
   <tr>
      <th>Attribute Name</th>
-     <th>Functioanlity in Grid</th>
+     <th>Functionality in Grid</th>
   </tr>
   <tr>
-     <td>BindAttribute - Exlcude</td>
+     <td>BindAttribute - Exclude</td>
      <td>To exclude the corresponding field from Grid Columns property in AutoGenerate Grid</td>
   </tr>
   <tr>
@@ -66,7 +66,7 @@ Please find the following list of annotation attributes that are supported in Gr
           <li>Custom DataType </li>   
       </ul>
      </td>
-     <td>The data annotaion validations attribute would used as `validation rules` in Grid CRUD operations</td>
+     <td>The data annotation validations attribute would used as `validation rules` in Grid CRUD operations</td>
    </tr>
    <tr>
    <td>ForeignKey</td>
