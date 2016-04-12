@@ -17,7 +17,7 @@ N> For the `Adaptor` builder, you can assign Adaptor name either as `string` val
   
 ##  Json Adaptor
 
-The Json Adaptor is used when the grid is bound with local datasource. It can be enabled in Grid using `Adaptor` property as `AdaptorType.JsonAdaptor`. The `JsonAdaptor` is the default Adaptor used by `DataManager` when bind with local dataSource such as IEnumerabe, DataTable etc.  
+The Json Adaptor is used when the grid is bound with local datasource. It can be enabled in Grid using `Adaptor` property as `AdaptorType.JsonAdaptor`. The `JsonAdaptor` is the default Adaptor used by `DataManager` when bind with local dataSource such as IEnumerable, DataTable etc.  
 
  The following code example describes the above behavior.
  
@@ -62,7 +62,7 @@ The following output is displayed as a result of the above code example.
 
 The Url Adaptor is the base Adaptor that would interact with remote services. It can be enabled in Grid using `Adaptor` property of `DataSource` as `AdaptorType.UrlAdaptor`. For every operations, an AJAX post will be send to the specified data service. 
     
-N> When using `UrlAdaptor`, grid actions such as `Paging, Filtering` and `Sorting` should be handled at the server side itself. We have `DataOperation` class to do these server side operations. Please refer to the kb [link](https://www.syncfusion.com/kb/4300).
+N> When using `UrlAdaptor`, grid actions such as `Paging, Filtering` and `Sorting` should be handled at the server side itself. We have `DataOperation` class to do these server side operations. Please refer to the Knowledge Base [link](https://www.syncfusion.com/kb/4300).
 
 
 The following code example describes the above behavior.
