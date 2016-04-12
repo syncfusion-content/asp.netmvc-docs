@@ -57,8 +57,10 @@ The following screenshot displays how to select Internet application template wi
    * Syncfusion.Chart.Wpf
    * Syncfusion.Gauge.Wpf
    * Syncfusion.SfMaps.Wpf 
-
-   N> Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting dlls from ASP.NET WebApi nuget package.
+   
+   N> Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies
+   N>
+   N> Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting assemblies from ASP.NET WebApi NuGet package.
 
 3. Click OK
 
@@ -99,7 +101,7 @@ Add the following code example in the Index.cshtml page that is already create
 
 {% endhighlight %}
 
-N> Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\ X.X.X.X\Common\Data\ejReportTemplate). “X.X.X.X” is the Essential Studio Release Version.
+N> Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate). {{ site.releaseversion }} is the Essential Studio Release Version.
 
 
 ### Add WebAPI controller for ReportViewer
@@ -218,8 +220,8 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
    <div>    
        @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote)
 	   .ReportServiceUrl("/api/ReportApi")
-	   .ReportServerUrl("http://76.74.153.81/ReportServer")
-	   .ReportPath("/SSRSSamples2/Territory Sales"))  
+	   .ReportServerUrl("http://mvc.syncfusion.com/reportserver")
+	   .ReportPath("/SSRSSamples2/Territory Sales new"))  
    </div>
    ~~~
    

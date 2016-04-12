@@ -9,14 +9,14 @@ documentation: ug
 
 # SSRS Configuration
 
-The ReportViewer has support to load RDL/RDLC reports from SSRS server. You have to set your SSRS server URL to ReportViewer’s reportServerUrl property and set the relative path of RDL/RDLC file in SSRS to ReportViewer’s reportPath property. 
+The ReportViewer has support to load RDL/RDLC reports from SSRS server. You have to set your SSRS server URL to ReportViewer’s ReportServerUrl property and set the relative path of RDL/RDLC file in SSRS to ReportViewer’s ReportPath property. 
 
 {% highlight cshtml %}
 
 @(Html.EJ().ReportViewer("viewer").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Remote)
 .ReportServiceUrl("/api/SSRSReport")
-.ReportServerUrl("http://76.74.153.81/ReportServer")
-.ReportPath("/SSRSSamples2/Territory Sales New ")) 
+.ReportServerUrl("http://mvc.syncfusion.com/ReportServer")
+.ReportPath("/SSRSSamples2/Territory Sales new")) 
 
 {% endhighlight %}
 
