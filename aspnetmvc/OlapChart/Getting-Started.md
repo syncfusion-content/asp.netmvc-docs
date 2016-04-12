@@ -36,14 +36,14 @@ Now add the following dependency libraries as references into your MVC Web Appli
 
 N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
-The version of Syncfusion libraries based on .NET framework and MVC version are classified below. For example, 13.3 version is illustrated as,
+The version of Syncfusion libraries based on .NET Framework and MVC version are classified below. For example, 13.3 version is illustrated as,
 
 <table>
 <tr>
 <th>
 MVC Version</th><th>
-MVC Version of Syncfusion dll</th><th>
-Base Version of Syncfusion dll</th><th>
+MVC Version of Syncfusion assembly</th><th>
+Base Version of Syncfusion assembly</th><th>
 System.Web.Mvc</th><th>
 System.Web.WebPages</th>
 </tr>
@@ -177,7 +177,7 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 
 The **“Url”** property in OlapChart widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in OlapChart widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI Url, which is, "~/OlapChart". If WCF service is used as endpoint, the Url would look like "~/OlapChartService.svc".
+N> The above "Index.cshtml" contains WebAPI URL, which is, "~/OlapChart". If WCF service is used as endpoint, the URL would look like "~/OlapChartService.svc".
 
 
 ###WebAPI
