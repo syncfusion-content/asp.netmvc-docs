@@ -103,14 +103,14 @@ The result of the above code example is illustrated as follows.
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-Binding loca data to grid
+Binding local data to grid
 {:.caption}
 
 ## REST Services
 
 ## OData binding
 
-OData is a standardized protocol for creating and consuming data. You can retrieve data from oData service by using DataManager. You can refer to the following code example of remote Data binding by using the oData service.
+OData is a standardized protocol for creating and consuming data. You can retrieve data from OData service by using DataManager. You can refer to the following code example of remote Data binding by using the OData service.
 
 
 {% highlight CSHTML %}
@@ -262,7 +262,7 @@ Web API data binding
 
 ## Other Web Services binding
 
-The DataManager can also retrieve data from the ASP.NET Web methods and ASP.NET MVC Controller`s action. You can achieve this by using the UrlAdaptor of the DataManager. The UrlAdaptor is discussed briefly in the adaptor section.  By default, the Url Adaptor is used when accessing remote data. 
+The DataManager can also retrieve data from the ASP.NET Web methods and ASP.NET MVC Controller`s action. You can achieve this by using the UrlAdaptor of the DataManager. The UrlAdaptor is discussed briefly in the adaptor section.  By default, the URL Adaptor is used when accessing remote data. 
 
 Refer to the following code example to know how the DataManager can be used to consume data from the web method.
 
@@ -304,7 +304,7 @@ Refer to the following code example to know how the DataManager can be used to c
 
 ![](Data-Binding_images/Data-Binding_img7.png)
 
-ASP.Net Web service binding
+ASP.NET Web service binding
 {:.caption}
 
 ## Offline Mode
@@ -493,7 +493,7 @@ Request Header with custom headers added
 
 ## Cross domain & JSONP
 
-The DataManager contains support for creating cross domain request, you can achieve this by using the crossDomain and jsonp properties of the DataManager. The following code example illustrates on how to create cross domain request. 
+The DataManager contains support for creating cross domain request, you can achieve this by using the crossDomain and JSONP properties of the DataManager. The following code example illustrates on how to create cross domain request. 
 {% highlight CSHTML %}
 @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true))
 
@@ -538,7 +538,7 @@ Result of above code example is illustrated as follows.
 Cross domain          
 {:.caption}
 
-## Html Table
+## HTML Table
 
 Other than JSON and Remote datasource, the DataManager can also fetch and use data from HTML element. You can achieve this by using the table property of the DataManager. The DataManager can fetch data from the HTML table element.
 
