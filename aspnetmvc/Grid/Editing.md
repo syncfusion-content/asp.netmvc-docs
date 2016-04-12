@@ -1108,7 +1108,7 @@ maxlength</td><td>
 Requires the element to be of given maximum length.</td></tr>
 <tr>
 <td>
-rangelength</td><td>
+range</td><td>
 Requires the element to be in given value range.</td></tr>
 <tr>
 <td>
