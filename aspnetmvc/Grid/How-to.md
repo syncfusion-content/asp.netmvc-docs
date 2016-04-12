@@ -572,7 +572,7 @@ namespace EJGrid.Controllers
 
 Grid  supports SignalR features for live updates in record. Please find the below option to configure signalR with Grid. 
 
-1) Before configure SignalR with ejGrid. You need to Setup SignalR configuration in visual studio project. For reference, please find the link.
+1) Before configure SignalR with ejGrid. You need to Setup SignalR configuration in Visual Studio project. For reference, please find the link.
 
 N> [signalR](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr#setup "signalr") 
 
@@ -692,7 +692,7 @@ This [blog](https://www.syncfusion.com/blogs/post/Copying-and-Pasting-Excel-Shee
 
 ### NHibernate
 
-NHibernate is an object-relational mapping (ORM) solution for the Microsoft .NET platform. It provides a framework for mapping an object-oriented domain model to a traditional relational database.
+NHibernate is an object-relational mapping (ORM) solution for the Microsoft .NET platform. It provides a Framework for mapping an object-oriented domain model to a traditional relational database.
 
 ### Populate Grid with data by using NHibernate
 
@@ -945,9 +945,9 @@ public static class AppSession
 
 {% endhighlight  %}
 
-N> In the above code example, the ORM mapping is performed by using the xml-documents and the mapping files are Employee.cfg.xml and EmployeeMap.hbm.xml
+N> In the above code example, the ORM mapping is performed by using the XML-documents and the mapping files are Employee.cfg.xml and EmployeeMap.hbm.xml
 
-## Adding comments in the Exported file (Excel, Word or Pdf)
+## Adding comments in the Exported file (Excel, Word or PDF)
 
 We can add comments in the exported file while exporting the grid control.
 
@@ -1062,9 +1062,9 @@ The following screenshot shows the exported grid with comments added to the docu
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img2.png)
 
-# Adding Comments in Exported Pdf document
+# Adding Comments in Exported PDF document
 
-We can add comments to a pdf documents using the annotation support provided in the Pdf namespace. The Annotation added can be of any format such as freeTextAnnotation, popUpAnnotation, LineAnnotation etc., Based on our requirement, we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
+We can add comments to a PDF documents using the annotation support provided in the PDF namespace. The Annotation added can be of any format such as freeTextAnnotation, popUpAnnotation, LineAnnotation etc., Based on our requirement, we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
 
 {% tabs %}
 
@@ -1125,7 +1125,7 @@ The following screenshot displays the exported grid with comments added to cells
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img3.png)
 
-## Adding header and footer in the Exported file (Excel, Word or Pdf)
+## Adding header and footer in the Exported file (Excel, Word or PDF)
 
 We can add header and footer in the exported file while exporting the grid control.
 
@@ -1253,9 +1253,9 @@ We can add header and footer to the word document using the HeadersFooters prope
 {% endhighlight %}
 {% endtabs %}
 
-# Adding header and footer in Exported Pdf document
+# Adding header and footer in Exported PDF document
 
-We can add header/footer to a pdf documents using PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
+We can add header/footer to a PDF documents using PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
 
 {% tabs %}
 
@@ -1496,7 +1496,7 @@ The following output is displayed as a result of the above code example.
 ![](How-to_images/Work with partial views_img1.png)
 
 
-In non-unobtrusive mode, to load grid from partial view via AJAX, the `ScriptManager` Html helper should be placed at the bottom of the partial view.
+In non-unobtrusive mode, to load grid from partial view via AJAX, the `ScriptManager` HTML helper should be placed at the bottom of the partial view.
 
 N> The `Html.EJ().ScriptManager()` which is placed in the Layout page will not initiate control rendering in partial view hence every partial view should have their own `ScriptManager`.
 
