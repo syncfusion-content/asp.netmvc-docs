@@ -18,9 +18,9 @@ This section covers the information that you need to know to populate a simple P
 The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
 
 1. ej.widgets.all.min.css
-2. jquery-1.10.2.min.js
-3. jquery.easing.1.3.min.js
-4. jquery.linq.js
+2. jQuery-1.10.2.min.js
+3. jQuery.easing.1.3.min.js
+4. jQuery.linq.js
 5. ej.web.all.min.js
 
 Scripts and style sheets are referred under the head tag in _Layout.cshtml file which is found inside Views > Shared folder.
@@ -158,14 +158,14 @@ Now add the following dependency libraries as references into your MVC Web Appli
 
 N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
-The version of Syncfusion libraries based on .NET framework and MVC version are classified below. For example, 14.1 version is illustrated as,
+The version of Syncfusion libraries based on .NET Framework and MVC version are classified below. For example, 14.1 version is illustrated as,
 
 <table>
 <tr>
 <th>
 MVC Version</th><th>
-MVC Version of Syncfusion dll</th><th>
-Base Version of Syncfusion dll</th><th>
+MVC Version of Syncfusion assembly</th><th>
+Base Version of Syncfusion assembly</th><th>
 System.Web.Mvc</th><th>
 System.Web.WebPages</th>
 </tr>
@@ -299,7 +299,7 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 
 The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI Url, which is "~/RelationalService". If WCF service is used as endpoint, the Url would look like "~/RelationalService.svc".
+N> The above "Index.cshtml" contains WebAPI URL, which is "~/RelationalService". If WCF service is used as endpoint, the URL would look like "~/RelationalService.svc".
 
 
 ### WebAPI
