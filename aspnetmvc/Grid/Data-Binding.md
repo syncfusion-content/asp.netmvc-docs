@@ -69,7 +69,7 @@ The following output is displayed as a result of the above code example.
 
 A DataTable, which represents one table of in-memory relational data that has in-built schema to work easily with data column and data row objects.
 
-Binding DataTable to Grid is a very simpler way that you only need to set DataTable model to Grid `DataSource` api.
+Binding DataTable to Grid is a very simpler way that you only need to set DataTable model to Grid `DataSource` API.
 
 The following code example describes the above behavior.
 
@@ -133,7 +133,7 @@ The following output is displayed as a result of the above code example.
 
 ##  Entity Framework
 
-The collection of business objects generated from Entity Framework ORM can be used as Grid`s datasource. The Grid can be used with entity framework using either code first technique or Database first technique.
+The collection of business objects generated from Entity Framework ORM can be used as Grid`s datasource. The Grid can be used with Entity Framework using either code first technique or Database first technique.
 
 The following code example describes the above behavior.
 
@@ -219,7 +219,7 @@ The following output is displayed as a result of the above code example.
 
 See Also
 
-For more information on using Linq to SQL please refer to this [link]( http://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
+For more information on using LINQ to SQL please refer to this [link]( http://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
 
 
 ##  ITypedList Binding 
