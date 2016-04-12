@@ -12,7 +12,7 @@ documentation: ug
 DataManger uses adaptors to process data. There are three types of adaptors in the DataManger. They are
 
 * JSON Adaptor
-* Url Adaptor
+* URL Adaptor
 * OData Adaptor
 
 Here, you can learn when and how each adaptor is used.
@@ -68,7 +68,7 @@ JSON adaptor
 
 ## URL Adaptor
 
-Url Adaptor of the DataManager can be used when you are required to use remote service to retrieve data. It interacts with server-side for all DataManager Queries and CRUD operations. Now, in the following code example, the data is retrived from the MVCController. 
+URL Adaptor of the DataManager can be used when you are required to use remote service to retrieve data. It interacts with server-side for all DataManager Queries and CRUD operations. Now, in the following code example, the data is retrieved from the MVCController. 
 
 {% tabs %}
 
@@ -161,12 +161,12 @@ The result of the above code example is illustrated as follows.
 
 ![](Data-Adaptors_images/Data-Adaptors_img2.png)
 
-Url Adaptor
+URL Adaptor
 {:.caption}
 
 ## OData Adaptor
 
-Odata Adaptor that is extended from Url Adaptor is used for consuming data through oData Service. You can use the following code example to use oData adaptor.
+OData Adaptor that is extended from URL Adaptor is used for consuming data through OData Service. You can use the following code example to use OData adaptor.
 
 {% highlight CSHTML %}
 
