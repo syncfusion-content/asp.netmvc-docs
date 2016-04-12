@@ -177,9 +177,9 @@ See Also
 For more information on creating and consuming Entity Framework, please refer this [link]( https://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc). 
 
 
-## Linq to SQL
+## LINQ to SQL
 
-The Linq to SQL can be used as the data source of the Grid. And the Object Relation class which is used to map with Relational table, can be used as the type of the Grid to leverage the Data Annotation.
+The LINQ to SQL can be used as the data source of the Grid. And the Object Relation class which is used to map with Relational table, can be used as the type of the Grid to leverage the Data Annotation.
       
 The following code example describes the above behavior.
 
@@ -737,7 +737,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img15.png)
 
-###  Handling Http Errors
+###  Handling HTTP Errors
 
 During server interaction from the Grid, there may occur some server-side exceptions and you can acquire those error messages or exception details in client-side using `ActionFailure` event of Grid control.
 
