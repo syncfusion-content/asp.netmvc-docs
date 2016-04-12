@@ -476,7 +476,7 @@ AND</td></tr>
 <tr>
 <td>
 Ok</td><td>
-Ok</td></tr>
+OK</td></tr>
 <tr>
 <td>
 MathCase</td><td>
