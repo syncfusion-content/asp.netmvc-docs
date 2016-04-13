@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard Interaction
 
-You can use Keyboard shortcut keys as an alternative to the mouse on using TimePicker widget. TimePicker widget allows you to perform all kinds of actions using keyboard shortcuts. For enabling the keyboard navigation, we need to set the access key to TimePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictinary object. The IDictionary represents a generic collection of key/value pairs.
+You can use Keyboard shortcut keys as an alternative to the mouse on using TimePicker widget. TimePicker widget allows you to perform all kinds of actions using keyboard shortcuts. For enabling the keyboard navigation, we need to set the access key to TimePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictionary object. The IDictionary represents a generic collection of key/value pairs.
 
 The various keyboard shortcuts available within the TimePicker widget are discussed in the following table.
 
@@ -73,7 +73,7 @@ Closes the popup</td></tr>
 
 ## Configure Keyboard Interaction
 
-The following steps explains you on how to enable keyboard interaction for the TimePicker widget with accesskey as “j”. We can set the any other key as accesskey in TimePicker control.
+The following steps explains you on how to enable keyboard interaction for the TimePicker widget with access key as “j”. We can set the any other key as access key in TimePicker control.
 
 1. Add the following code to the corresponding view page to render the TimePicker.
 

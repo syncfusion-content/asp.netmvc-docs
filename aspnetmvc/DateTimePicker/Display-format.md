@@ -60,7 +60,7 @@ You can also customize the format. Refer the following list to create your custo
 * ss – Seconds.
 * tt - The AM/PM designator.
 
-In the following example, set DateTimeFormat to fulldatetime format.
+In the following example, set DateTimeFormat to full datetime format.
 
 1. Add the following code in your CSHTML page to render DateTimePicker widget.
 

@@ -17,9 +17,9 @@ The Essential ASP.NET MVC (EJMVC) DatePicker component provides the support for 
 * Range the date value to pick.
 * Quick picking date by drill down or up.
 * State persistence.
-* Strongly typed html editor
+* Strongly typed HTML editor
 * Responsive dimension.
 * Flexible customization.
 * Custom styling.
-* Inbuilt JQuery validation.
+* Built-in jQuery validation.
 * Accessibility (keyboard and ARIA).

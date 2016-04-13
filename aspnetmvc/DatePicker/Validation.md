@@ -12,7 +12,7 @@ EJMVC DatePicker provides very cool way to validate the value by custom rules an
 
 DatePicker supports this validation by built-in, so you can do client validation with simple steps to validate and respond validation message. The jQuery validate plugin rules and custom methods can be used in the DatePicker control with the help of two properties,[ValidationRules](http://help.syncfusion.com/js/api/ejdatepicker#members:validationrules) and [ValidationMessage](http://help.syncfusion.com/js/api/ejdatepicker#members:validationmessage). 
 
-Before using those properties, you need to add the jQuery validate plugin to your html page.
+Before using those properties, you need to add the jQuery validate plugin to your HTML page.
 
 Refer the below jQuery validation plugin script after jQuery script reference.
 

@@ -7,7 +7,7 @@ control: TimePicker
 documentation: ug
 ---
 
-# Behaviour Settings
+# Behavior Settings
 
 ## Set value of the TimePicker widget
 

@@ -71,7 +71,7 @@ Below is a simple Layout CSHTML file with required CSS and script reference adde
 
 ## DatePicker Initialization
 
-The Essential ASP.NET MVC DatePicker can be created using html helper like below code example (Razor code)
+The Essential ASP.NET MVC DatePicker can be created using HTML helper like below code example (Razor code)
 
 {% highlight cshtml %}
 
@@ -116,7 +116,7 @@ You can assign values to existing EJMVC DatePicker using its instance. Consider 
 
 {% endhighlight %}
 
-N> Existing DatePicker instance can be created by jQuery.data() and you can control the API’s of DatePicker behaviour.
+N> Existing DatePicker instance can be created by jQuery.data() and you can control the API’s of DatePicker behavior.
 
 ## Client Side Events
 
@@ -139,9 +139,9 @@ You can handle the all available client side events in Essential JavaScript Date
 {% endhighlight %}
 
 
-## Strongly Typed Html Helper
+## Strongly Typed HTML Helper
 
-EJMVC DatePicker can be created using DatePickerFor extension, which behaves as strongly typed html helper. This reduce the run time issues while using model values in DatePickerFor , since it will find the issues if any in compilation time itself. Also, to know about the setting model properties to DatePickerFor control, please refer the link: 
+EJMVC DatePicker can be created using DatePickerFor extension, which behaves as strongly typed HTML helper. This reduce the run time issues while using model values in DatePickerFor , since it will find the issues if any in compilation time itself. Also, to know about the setting model properties to DatePickerFor control, please refer the link: 
 
   [https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls](https://www.syncfusion.com/kb/4670/how-to-define-properties-for-for-controls)
 
