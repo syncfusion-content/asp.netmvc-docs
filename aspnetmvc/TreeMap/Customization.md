@@ -21,7 +21,7 @@ You can customize the colors of the leaf nodes of TreeMap using the ColorMapping
 * `RangeBrushColorMapping`
 * `DesaturationColorMapping`
 
-## Uni Color Mapping
+## UniColorMapping
 
 You can color, all the leaf nodes with the same color by setting the color value of the `UniColorMapping` property of the TreeMap.
 
