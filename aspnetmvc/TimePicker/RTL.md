@@ -9,7 +9,7 @@ documentation: ug
 
 # RTL
 
-This feature supports to change the left-to-right alignment of the TimePicker widget to right-to-left when set the EnableRTL as true. By default EnableRTL valueis set as “false”. The custom template TimePicker also supports RTL.
+This feature supports to change the left-to-right alignment of the TimePicker widget to right-to-left when set the EnableRTL as true. By default EnableRTL value is set as “false”. The custom template TimePicker also supports RTL.
 
 ## Enabling Right-To-Left Support
 
