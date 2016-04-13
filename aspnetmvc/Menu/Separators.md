@@ -104,7 +104,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 	Menu with Separators
 	{:.caption}
 	
-2. Add the following codein your view page to display the Menu control without separator by setting EnableSeparator as false.
+2. Add the following code in your view page to display the Menu control without separator by setting EnableSeparator as false.
 
    ~~~ cshtml
 

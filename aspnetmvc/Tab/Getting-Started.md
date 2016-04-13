@@ -29,7 +29,7 @@ The ASP.NET MVCTab widget basically builds a dynamic, interactive, menu-driven i
 
 The following steps are used to create Tab control.  
 
-1. You can create an MVC Project and add necessary Dll and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/tab/getting-started) Documentation.
+1. You can create an MVC Project and add necessary assembly and script with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/tab/getting-started) Documentation.
 2. Add the mentioned code to the corresponding view page for Tab rendering.
 
 
@@ -97,7 +97,7 @@ You can provide more customization to the Tab by using rating control, to descri
 
 ### Create the Rating 
 
-The ASP.NET MVCRating control provides an intuitive rating experience that allows you to select the number of stars that represents the rating. The following code example explains you the creation of rating control. We can create the Rating control using html helper. We can render the rating control and its description inside the content template of first tab control.
+The ASP.NET MVC Rating control provides an intuitive rating experience that allows you to select the number of stars that represents the rating. The following code example explains you the creation of rating control. We can create the Rating control using HTML helper. We can render the rating control and its description inside the content template of first tab control.
 
 For more information about rating, refer to the following link: 
 

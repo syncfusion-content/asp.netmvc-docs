@@ -567,11 +567,11 @@ I> When VirtualScrolling enabled with searching, then filter will be applied onl
 ##Validations
 
 DropDownList value can be validated in following ways,
-1. Using jQuery Validators
+1. Using jQuery Validator
 2. Client side Validation
 3. Server side validation
 
-### Using jQuery Validators
+### Using jQuery Validator
 You can validate the DropDownList value on form submission using jQuery Validations, by applying “ValidationRules” and “ValidationMessage” to the DropDownList. 
 
 N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js) script file should be referred for validation, for more details, refer [here](http://jqueryvalidation.org/documentation).
