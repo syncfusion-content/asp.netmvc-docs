@@ -996,7 +996,11 @@ The following output is displayed as a result of the above code example.
 
 Lookup data source can be bound to `DataSource` property of `Columns`. Data `field` and `text` can be set using `ForeignKeyField` and `ForeignKeyValue` property of `Columns`.
 
+In the `DataSource` property, we can bound local and remote data.
+
 I> For foreign key column the sorting and grouping is based on `ForeignKeyField` instead of `ForeignKeyValue`.
+
+N> In remote data, datasource should be configured to perform select and filter operations since the Grid will try to fetch required columns using select operation and required data using filter operation.
 
 The following code example describes the above behavior.
 
@@ -1011,6 +1015,8 @@ The following code example describes the above behavior.
                 {
                     col.Field("OrderID").IsPrimaryKey(true).Add();
                     col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.DataSource2).Add();
+                          //(or)
+                    col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource("http://mvc.syncfusion.com/Services/Northwnd.svc/Employees/").Add();
                     col.Field("CustomerID").Add();
                     col.Field("Freight").Add();
                     col.Field("ShipCity").Add();
