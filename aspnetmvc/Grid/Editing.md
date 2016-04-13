@@ -1078,7 +1078,7 @@ The below validation script files are needed when editing is enabled with valida
 2. jquery.validate.unobtrusive.min.js
  
  
-### Jquery Validation
+### jQuery Validation
 
 
 You can set validation rules using ` ValidationRules` property of `Columns`. The following are jQuery validation methods.
