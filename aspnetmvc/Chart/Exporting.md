@@ -193,7 +193,7 @@ public void ExportChart(string Data, string ChartModel)
   
 ### Excel Exporting
   
-Excel exporting is a server-side operation. In addition have to refer Syncfusion.XlsIO assembly or Assembly to export as excel.
+Excel exporting is a server-side operation. In addition have to refer Syncfusion.XlsIO assembly to export as excel.
 
 ![](Exporting_images/Exporting_img1.png)
 
