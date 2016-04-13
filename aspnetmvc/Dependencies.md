@@ -12,7 +12,7 @@ documentation: ug
 Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 3 common libraries –
 
 * jQuery 1.7.1 and later versions
-* jsRender
+* JsRender
 * jQuery.easing
 
 Currently, we use **jQuery 1.10.2** version, which supports almost all the old and modern browsers.
@@ -30,7 +30,7 @@ Currently, we use **jQuery 1.10.2** version, which supports almost all the old a
   _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86)**, then navigate to the below location,_
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets`
 
-* When you navigate to the above location, you can see the folder named **external**, where the common script libraries (like jQuery, jQuery.easing, jsRender and so on) are available and another folder named **scripts** within which the Syncfusion components UI scripts are available in a minified format. You can copy the required scripts from the location depicted below and use it in your application.
+* When you navigate to the above location, you can see the folder named **external**, where the common script libraries (like jQuery, jQuery.easing, JsRender and so on) are available and another folder named **scripts** within which the Syncfusion components UI scripts are available in a minified format. You can copy the required scripts from the location depicted below and use it in your application.
 
   ![](Dependencies_images/Dependencies_img1.jpeg)
 
@@ -43,7 +43,7 @@ Currently, we use **jQuery 1.10.2** version, which supports almost all the old a
   _**For** **example**, If you have installed the Essential Studio package within **C:\Program Files (x86),** then navigate to the below location,_
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css`
 
-* When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related css files are present within the **mobile** folder and all the css files related to web components are availed within the **web** folder. You can copy the required css files from the location depicted below and use it in your application.
+* When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related CSS files are present within the **mobile** folder and all the CSS files related to web components are availed within the **web** folder. You can copy the required CSS files from the location depicted below and use it in your application.
 
   ![](Dependencies_images/Dependencies_img2.jpeg)
 
