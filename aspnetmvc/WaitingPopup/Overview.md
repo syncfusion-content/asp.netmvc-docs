@@ -42,7 +42,7 @@ ASP.NET MVC Waiting Popup widget has a built-in feature to block all other actio
 
 ### Create Login Page
 
-In a real-time Login page scenario, when you click on the Login button, the Waiting Popup is displayed. This is achieved by using the btnClick.
+In a real-time Login page scenario, when you click on the Login button, the Waiting Popup is displayed. This is achieved by using the button Click.
 
 1. Add the following code example to the corresponding view page to create Login page with username and password.
 
@@ -171,7 +171,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
    
 
 
-4. The following screenshot displays the Userlogin.
+4. The following screenshot displays the User login.
 
 
 

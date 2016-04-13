@@ -65,7 +65,7 @@ You can customize the width and height of the Rating by ShapeWidth and ShapeHeig
 
 The following code example is used to render the Rating control with customized ShapeWidth and ShapeHeight.
 
-In this sample, the default rating star is replaced by crystal-stars.png local image by overriding the Rating control css.
+In this sample, the default rating star is replaced by crystal-stars.png local image by overriding the Rating control CSS.
 
 Add the following code in your view page to render the Rating with customized ShapeWidth and ShapeHeight.
 
@@ -202,7 +202,7 @@ The style of the Rating control is customized by CssClass property.
 
 The following code example is used to render the Rating control with customized style.
 
-Add the following HTML to render the Rating with customized style. In this, hovering behaviors, tooltip position and display have been customized by using custom css class.
+Add the following HTML to render the Rating with customized style. In this, hovering behaviors, tooltip position and display have been customized by using custom CSS class.
 
 
 {% highlight CSHTML %}

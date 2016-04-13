@@ -9,7 +9,7 @@ documentation: ug
 ---
 # Getting Started
 
-This section explains the step-by-step instructions to create RichTextEdtior in an ASP.NET MVC application.
+This section explains the step-by-step instructions to create RichTextEditor in an ASP.NET MVC application.
 
 ## Create your first RichTextEditor in MVC
 

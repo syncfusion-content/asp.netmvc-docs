@@ -9,7 +9,7 @@ documentation: ug
 
 # AJAX settings
 
-Accordion widgets allow you to load content for the Accordion panel using Ajax. This renders content from the specified URL location that is set to the anchor tag. You can set the destination file URL string by using AjaxUrl property Ajax contents enables you to load the content of the Accordion panel when it is expanded. This enhances the Accordion control efficiency when a large content is to be loaded into the panel.
+Accordion widgets allow you to load content for the Accordion panel using AJAX. This renders content from the specified URL location that is set to the anchor tag. You can set the destination file URL string by using AjaxUrl property AJAX contents enables you to load the content of the Accordion panel when it is expanded. This enhances the Accordion control efficiency when a large content is to be loaded into the panel.
 
 ## Populate accordion with AJAX content
 

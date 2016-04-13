@@ -25,9 +25,9 @@ This property receive query to retrieve data from the table (query is same as SQ
 
 It maps the corresponding text field name from the data table or JSON data that is assigned to the Datasource with the Text property of the TagCloud control. The Text value that is fetched from the table renders the value to be displayed in the TagCloud.
 
-### Url
+### URL
 
-Url field in the data table or JSON data assigned the Datasource is mapped to the Url property of the TagCloud control. The Url property defines the link to be navigated on clicking the corresponding text item.
+URL field in the data table or JSON data assigned the Datasource is mapped to the URL property of the TagCloud control. The URL property defines the link to be navigated on clicking the corresponding text item.
 
 ### Frequency
 
@@ -35,7 +35,7 @@ It maps to the Frequency field name from the data table or JSON data that is ass
 
 ## Local Binding
 
-Local databinding allows you to map JSON data to TagCloud, that the corresponding Text, Url, and Frequency fields are assigned with a local JSON data.
+Local data binding allows you to map JSON data to TagCloud, that the corresponding Text, URL, and Frequency fields are assigned with a local JSON data.
 
 ### Defining the Local data for TagCloud
 

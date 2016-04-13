@@ -91,7 +91,7 @@ The following properties provides you a way to bind either local or remote data 
             <br/>
         </td>
         <td>
-            It is used to categorize the items based on a specific field. The value mapped to this field must be able tp group the popup items.
+            It is used to categorize the items based on a specific field. The value mapped to this field must be able to group the popup items.
             <br/>
         </td>
     </tr>
@@ -306,7 +306,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
 
 ## Virtual Scrolling 
 
-To improve the performance when displaying large data set, you can use “AllowVirtualScrolling” and VirtualScrollMode property. This retrieves only a fixed amount of list items and loads remaining data on scrolling. The items will be fetched via Ajax request.
+To improve the performance when displaying large data set, you can use “AllowVirtualScrolling” and VirtualScrollMode property. This retrieves only a fixed amount of list items and loads remaining data on scrolling. The items will be fetched via AJAX request.
 
 This supports two modes of virtualization. They are,
 

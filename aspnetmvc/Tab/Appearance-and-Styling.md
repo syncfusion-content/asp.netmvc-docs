@@ -113,7 +113,7 @@ Header Image Customization
 
 By enabling ‘ShowRoundedCorner’ property, you can customize the shape of the Tab widget from regular rectangular shape to rounded rectangle shape that is set to ‘false’ by default. 
 
-The following code example is used to render the Tab widget with Roundedcorner.
+The following code example is used to render the Tab widget with rounded corner.
 
 1. Add the following code in your view page to render Tab with rounder corner.
 

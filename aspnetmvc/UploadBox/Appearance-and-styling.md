@@ -67,7 +67,7 @@ The following screenshot displays the output.
 
 The following table contains the sub properties available under UploadBox DialogText property. To customize the text, pass the alternate text with corresponding sub properties. 
 
-_Subproperties under dialogText property_
+_Sub properties under dialogText property_
 
 <table>
 <tr>
@@ -117,7 +117,7 @@ The following screenshot displays the output.
 
 ## Show or Hide File details 
 
-The ShowFileDetails property is Boolean type, which allow us to show or hide filedetails in the uploaded file list dialog. To hide the uploaded file details, set ShowFileDetails property is set to ‘false’. By default value of ShowFileDetails property is set to ‘true’.
+The ShowFileDetails property is Boolean type, which allow us to show or hide file details in the uploaded file list dialog. To hide the uploaded file details, set ShowFileDetails property is set to ‘false’. By default value of ShowFileDetails property is set to ‘true’.
 
 The following steps explains the configuration of ShowFileDetails property in UploadBox.
 

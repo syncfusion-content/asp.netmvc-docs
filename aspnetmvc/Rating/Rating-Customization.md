@@ -61,7 +61,7 @@ The following screenshot illustrates the Rating with custom defined value.
 
 Rating control provides support for setting the MinimumValue. This is achieved by adding the MinValue property. When the MinValue property is set, the Rating value starts with MinValue+1.
 
-The following code example is used to render the Rating control with minimum rating value specfied.
+The following code example is used to render the Rating control with minimum rating value specified.
 
 Add the following code in your view page to render the Rating with Minimum value.
 
@@ -106,7 +106,7 @@ Rating with minimum value as 4
 
 ## Max Value
 
-Rating controlprovides support for setting Maximum value. This is achieved by adding the MaxValue property. By default, MaxValue is five.
+Rating control provides support for setting Maximum value. This is achieved by adding the MaxValue property. By default, MaxValue is five.
 
 The following code example is used to render the Rating control with maximum rating value specified
 

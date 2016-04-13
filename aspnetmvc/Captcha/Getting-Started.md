@@ -11,7 +11,7 @@ documentation: ug
 
 ## Create your first Captcha in ASP.NET MVC
 
-This section enables you to configure the Captcha control in your ASP.NET MVC application and also in learning how to use captcha with auto validation in web forms.
+This section enables you to configure the Captcha control in your ASP.NET MVC application and also in learning how to use captcha with auto validation in Web forms.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -22,7 +22,7 @@ Captcha control with AutoValidation
 
 The Captcha is one of the way to prevent dictionary attacks, it basically comes with the random text. The following steps are used to create Captcha control.  
 
-1. You can create an MVC Project and add necessary Dll and script with the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/captcha/getting-started) Documentation.
+1. You can create an MVC Project and add necessary assembly and script with the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/captcha/getting-started) Documentation.
 2. Add the following code to the corresponding view page for Captcha rendering.
 
 
@@ -72,7 +72,7 @@ The Captcha is one of the way to prevent dictionary attacks, it basically comes 
    ~~~
    
 
-N> Version=XX.XXXX.X.X - It will vary depend up on .Net frame work version and Essential studio version you have using. If you are using Essential studio version as-12.3.0.36 and .Net frame work is 4.5 use like following Version=12.3450.0.36 
+N> Version=XX.XXXX.X.X - It will vary depend up on .NET Framework version and Essential Studio version you have using. If you are using Essential Studio version as-12.3.0.36 and .NET Framework is 4.5 use like following Version=12.3450.0.36 
 
 
 
