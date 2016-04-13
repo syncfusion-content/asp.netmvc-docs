@@ -15,15 +15,15 @@ Semi-circular Gauge can be positioned within the canvas element which provides b
 
 * Semi-circular Gauge can be positioned with the help of the attribute called gaugePosition. It is an enumerable value. You can position the gauge away from the corner with the help of the distanceFromCorner attribute. 
 * The possible enum values for the gaugePosition are as follows:
-1. Topleft
-2. Topcenter
-3. Topright
-4. Middleleft
+1. TopLeft
+2. TopCenter
+3. TopRight
+4. MiddleLeft
 5. Center
-6. Middleright
-7. Bottomleft
-8. Bottomcenter
-9. Bottomright
+6. MiddleRight
+7. BottomLeft
+8. BottomCenter
+9. BottomRight
 
 
 {% tabs %}
