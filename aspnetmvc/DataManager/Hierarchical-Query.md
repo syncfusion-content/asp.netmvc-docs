@@ -9,7 +9,7 @@ documentation: ug
 
 # Hierarchical Query
 
-The DataManager contains support to manage the hierarchicalquery. The hierarchical queries are commonly required when you use foreign key binding. The hierarchical query can be provided by using the hierarchical function. This method accepts two parameters such as the query and the selector function. 
+The DataManager contains support to manage the hierarchical query. The hierarchical queries are commonly required when you use foreign key binding. The hierarchical query can be provided by using the hierarchical function. This method accepts two parameters such as the query and the selector function. 
 
 ## foreignKey
 
