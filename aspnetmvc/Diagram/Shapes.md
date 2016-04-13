@@ -107,7 +107,7 @@ N> HTML node cannot be exported to image format, like JPEG, PNG, and BMP. It is 
 
 ## Native
 
-**Diagram** provides support to embed **SVG** element into a node. To create a native node, the node can be created with NativeNode class. Also, you need to define the id of the svg template by using the `TemplateId` property of node. The following code illustrates how a **Native node** is created.
+**Diagram** provides support to embed **SVG** element into a node. To create a native node, the node can be created with NativeNode class. Also, you need to define the id of the SVG template by using the `TemplateId` property of node. The following code illustrates how a **Native node** is created.
 
 {% highlight html %}
 
@@ -236,7 +236,7 @@ The list of flow shapes are as follows.
 
 ## BPMN Shapes
 
-BPMN shapes are used to represent the internal business procedure in a graphical notation and enables you to communicate the procedures in a standard manner. To create a bpmn shape, node can be created with BPMNNode class and its `Shape` should be set as any one of the built-in shape. [BPMN Shapes](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.BPMNNode~Shape.html "BPMN Shapes"). The following code example illustrates how to create a simple business process. 
+BPMN shapes are used to represent the internal business procedure in a graphical notation and enables you to communicate the procedures in a standard manner. To create a BPMN shape, node can be created with BPMNNode class and its `Shape` should be set as any one of the built-in shape. [BPMN Shapes](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.BPMNNode~Shape.html "BPMN Shapes"). The following code example illustrates how to create a simple business process. 
 
 {% highlight c# %}
 

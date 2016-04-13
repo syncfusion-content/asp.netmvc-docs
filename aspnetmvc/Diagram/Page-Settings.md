@@ -49,7 +49,7 @@ The following code illustrates how to customize the page size and the appearance
 
 ![](Page-Settings_images/Page-Settings_img3.png)
 
-N> When the PageWidth and PgeHeight are not specified, the rectangular region that completely fits all nodes and connectors are considered as page size.
+N> When the PageWidth and PageHeight are not specified, the rectangular region that completely fits all nodes and connectors are considered as page size.
 
 ## MultiplePage and PageBreaks
 
@@ -76,7 +76,7 @@ The following code illustrates how to enable multiple page and page break lines.
 ## Boundary Constraints
 
  Diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized or rotated. 
- `BoundaryConstraints` property of page settings allows you to customize the interactable region. To explore the boundary constraints, refer refer [Boundary Constraints](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.PageSettings~BoundaryConstraints.html  "Boundary Constraints").
+ `BoundaryConstraints` property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer refer [Boundary Constraints](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.PageSettings~BoundaryConstraints.html  "Boundary Constraints").
 
 The following code example illustrates how to define boundaryConstraints.
 

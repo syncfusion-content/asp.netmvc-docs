@@ -284,7 +284,7 @@ public ActionResult Index()
 
 Orthogonal segments are used to create segments that are perpendicular to each other.
 
-Set the segment `Type` as "Othogonal" to create a default orthogonal segment. The following code example illustrates how to create a default orthogonal segment.
+Set the segment `Type` as "Orthogonal" to create a default orthogonal segment. The following code example illustrates how to create a default orthogonal segment.
 
 {% highlight c# %}
 public ActionResult Index()
