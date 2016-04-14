@@ -9,9 +9,9 @@ documentation: ug
 
 # Keyboard interaction
 
-The AllowKeyboardNavigation property turns on keyboard interaction with the Rotator items. You must set this property to ‘true’ to access the keyboard shortcuts. The default value is ‘true’. The value set to this property is Boolean.
+The AllowKeyboardNavigation property turns on keyboardinteraction with the Rotator items. You must set this property to ‘true’ to access the keyboard shortcuts. The default value is ‘true’. The value set to this property is Boolean.
 
-The entire Rotator commands are accessed through the keyboard by specifying the Keyboard Shortcut in the following table.
+The entire Rotator commands are accessed through the keyboard by specifying the KeyboardShortcut in the following table.
 
 <table>
 <tr>
