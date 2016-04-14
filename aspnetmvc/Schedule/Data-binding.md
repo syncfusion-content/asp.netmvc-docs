@@ -52,7 +52,7 @@ Binds the appointment description field name and also its related validation rul
 <tr>
 <td>
 AllDay<br/><br/></td><td>
-Binds the name of the allDay field. It accepts the <b>boolean</b> value and indicates whether the appointment is an allday appointment or not.<br/><br/></td></tr>
+Binds the name of the <b>AllDay</b> field. It accepts the <b>boolean</b> value and indicates whether the appointment is an all-day appointment or not.<br/><br/></td></tr>
 <tr>
 <td>
 Categorize<br/><br/></td><td>
@@ -783,7 +783,7 @@ The server-side code to load the Scheduler data on demand is as follows.
 
 ## Entity Framework Data Binding
 
-The appointment data can be bound to the Scheduler through entity framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the entity data model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
+The appointment data can be bound to the Scheduler through Entity Framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the Entity Data Model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
 
 {% highlight razor %}
 

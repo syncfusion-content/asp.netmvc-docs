@@ -14,7 +14,7 @@ The client-side validation of the fields present within the custom appointment w
 
 Refer the steps [here](/aspnetmvc/schedule/customization#appointment-window-customization) and create a sample for Custom Appointment window, before proceeding with the following validations.
 
-In the custom appointment window sample, create an additional css class **validation** as mentioned below to add it to the appropriate fields, if the validation of such fields fails.
+In the custom appointment window sample, create an additional CSS class **validation** as mentioned below to add it to the appropriate fields, if the validation of such fields fails.
 
 {% highlight css %}
 
