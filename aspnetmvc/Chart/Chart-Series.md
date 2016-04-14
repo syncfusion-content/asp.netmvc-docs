@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple Series
 
-In EjChart, you can add multiple series object in the **Series** options. The series are rendered in the order it is added to the Series option, by default. You can change this order by using the ZOrder option.  
+In EjChart, you can add multiple series object in the **Series** options. The series are rendered in the order it is added to the Series option, by default. You can change this order by using the **ZOrder** option.  
 
 {% highlight cshtml %}
 

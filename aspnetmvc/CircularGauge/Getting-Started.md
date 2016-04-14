@@ -11,7 +11,7 @@ documentation: ug
 
 * The ASP.NET MVC Circular Gauge provides support to display the Circular Gauge within your web page and allows you to customize it. This section encompasses the details on how to configure Circular Gauge. 
 * You will learn how to provide data for a Circular Gauge and display that data in a suitable way. In addition, you will learn how to customize the default Circular Gauge appearance, according to your requirements. 
-* As a result, you will get a Circular Gauge that shows you how the Automobile speedometer works with rpm (Rotation per Minute), kmph (Kilometer per hour) and speed level indication (Safe, Caution and Danger). 
+* As a result, you will get a Circular Gauge that shows you how the Automobile speedometer works with rpm (Rotation per Minute), kph (Kilometer per hour) and speed level indication (Safe, Caution and Danger). 
 
 
 
@@ -122,7 +122,7 @@ Circular Gauge with Dark Background
 ## Provide Scale Values
 
 * The pointer cap can be customized with the following options. Cap radius, cap border color, cap background color, pointer cap border width are some of the properties that are customizable.
-* The speed limit in the gauge has maximum value of 200 kmph. So you can set maximum value for the gauge as 200.
+* The speed limit in the gauge has maximum value of 200 kph. So you can set maximum value for the gauge as 200.
 * Major Ticks have the interval value of 20 and minor ticks have the interval value of 5. Show ranges and show indicators are used to display the ranges and indicators in their respective positions.
 
 {% highlight CSHTML %}

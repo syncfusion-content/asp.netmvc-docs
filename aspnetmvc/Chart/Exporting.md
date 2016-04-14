@@ -15,7 +15,7 @@ Exporting a chart can be done in both client-side and in server-side. This can b
 
 In client-side rendered chart can be exported as PNG image or as SVG file.
 
-* Export as PNG - The chart can be exported to image when it is rendered in HTML5 Canvas. To render a chart in canvas, set the enabelCanvasRendering option to true. To export the chart, you can use the export method of the chart. Refer to the online KB link of exporting chart to know more about chart exporting.
+* Export as PNG - The chart can be exported to image when it is rendered in HTML5 Canvas. To render a chart in canvas, set the *EnableCanvasRendering* option to true. To export the chart, you can use the export method of the chart. Refer to the online KB link of exporting chart to know more about chart exporting.
 
 * Export as SVG - Chart can be exported as SVG if it is rendered as a scalable vector graphics element. By default chart will be rendered as SVG. 
 
@@ -61,9 +61,9 @@ To convert the chart data from client to server-side, refer to the following ste
 
 4. Currently, the chart data can be exported at server-side only through the helper functions in the “.Net”. So to use exporting in your projects, it is required to create a server with any of the following.
  
-	i). ASP.Net MVC Controller
+	i). ASP.NET MVC Controller
     
-    ii). ASP.Net Webforms
+    ii). ASP.NET Webform
     
     iii). WebAPI
     
@@ -87,7 +87,7 @@ To convert the chart data from client to server-side, refer to the following ste
     </script>
   {% endhighlight %}
   
-  At the server side the chart can be exported as jpg, png, SVG, PDF, word document and as excel documents. For this the following code have to place in the controller
+  At the server side the chart can be exported as JPG, PNG, SVG, PDF, word document and as excel documents. For this the following code have to place in the controller
   
   {% highlight csharp %}
 public void ExportChart(string Data, string ChartModel)
@@ -193,7 +193,7 @@ public void ExportChart(string Data, string ChartModel)
   
 ### Excel Exporting
   
-Excel exporting is a server-side operation. In addition have to refer Syncfusion.XlsIO dll to export as excel.
+Excel exporting is a server-side operation. In addition have to refer Syncfusion.XlsIO assembly to export as excel.
 
 ![](Exporting_images/Exporting_img1.png)
 

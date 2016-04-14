@@ -9,9 +9,9 @@ documentation: ug
 
 # MVVM
 
-## Angular JS
+## AngularJS
 
-Digital Gauge contains angular support. It is possible to add object as well as array object in the Digital Gauge. The two way binding support is given to the value for displaying the text.
+Digital Gauge contains AngularJS support. It is possible to add object as well as array object in the Digital Gauge. The two way binding support is given to the value for displaying the text.
 
 
 ## Rendering the Digital Gauge
@@ -53,7 +53,7 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img1.png)
 
-Default Digital Gauge in Angular JS
+Default Digital Gauge in AngularJS
 {:.caption}
 
 ## Adding the Digital Gauge Items
@@ -91,7 +91,7 @@ Finally while running the above codes, the following output will be rendered.
 
 ![](MVVM_images/MVVM_img2.png)
 
-Digital Gauge Rendered in Angular JS
+Digital Gauge Rendered in AngularJS
 {:.caption}
 
 ## Two Way Binding
@@ -147,13 +147,13 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img3.png)
 
-Digital Gauge with two way binding in Angular JS
+Digital Gauge with two way binding in AngularJS
 {:.caption}
 
-## Knockout Binding
+## KnockoutJS Binding
 
 
-* Knockout support allows you to bind the html elements against any of the available data models.Two types of knockout binding is supported as of angular,
+* KnockoutJS support allows you to bind the HTML elements against any of the available data models.Two types of KnockoutJS binding is supported as of AngularJS,
 	1. one-way binding
 	2. two-way binding
 * One way binding refers to the process of applying observable values to all the available properties of the Digital Gauge control, but the changes made in it does not reflect and trigger in turn to the observable collection. This kind of binding applies to all the properties of the Digital Gauge control.

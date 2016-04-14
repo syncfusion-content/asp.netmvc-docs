@@ -22,9 +22,9 @@ The following assemblies need to be referenced in your application for using Ess
 1. Syncfusion.EJ.dll
 2. Syncfusion.EJ.MVC.dll
 
-Follow the steps given below to deploy the application in the development server by referencing the dll in **GAC**.
+Follow the steps given below to deploy the application in the development server by referencing the assembly in **GAC**.
 
-* Web.config file should be configured according to the referenced dlls. 
+* Web.config file should be configured according to the referenced assemblies. 
 * To deploy your application, you have to ensure that the above referenced assemblies (in your web.config files) are present in the GAC.
 
 ![](Getting-Started_images/Getting-Started_img1.png)

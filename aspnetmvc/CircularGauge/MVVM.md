@@ -9,9 +9,9 @@ documentation: ug
 
 # MVVM
 
-## Angular JS
+## AngularJS
 
-Circular Gauge contains angular support. You can add object as well as array object in the Circular Gauge. The two way binding support is given to the pointer value, minimum scale value and maximum scale value. 
+Circular Gauge contains AngularJS support. You can add object as well as array object in the Circular Gauge. The two way binding support is given to the pointer value, minimum scale value and maximum scale value. 
 
 ## Rendering the Circular Gauge
 
@@ -70,7 +70,7 @@ Execute the above code to render the output as follows.
 
 ![](MVVM_images/MVVM_img1.png)
 
-Default Circular gauge in Angular JS
+Default Circular gauge in AngularJS
 {:.caption}
 
 
@@ -112,7 +112,7 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img2.png)
 
-Circular gauge with scale customization in Angular JS
+Circular gauge with scale customization in AngularJS
 {:.caption}
 
 
@@ -158,7 +158,7 @@ Execute the above code to render the output as follows.
 
 ![](MVVM_images/MVVM_img3.png)
 
-Circular gauge with pointer customization in Angular JS
+Circular gauge with pointer customization in AngularJS
 {:.caption}
 
 
@@ -202,7 +202,7 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img4.png)
 
-Circular gauge with label customization in Angular JS
+Circular gauge with label customization in AngularJS
 {:.caption}
 
 
@@ -259,7 +259,7 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img5.png)
 
-Circular gauge with ticks customization in Angular JS
+Circular gauge with ticks customization in AngularJS
 {:.caption}
 
 
@@ -329,7 +329,7 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img6.png)
 
-Circular gauge Rendered in Angular JS
+Circular gauge Rendered in AngularJS
 {:.caption}
 
 
@@ -472,12 +472,12 @@ Execute the above code to render the following output.
 
 ![](MVVM_images/MVVM_img7.png)
 
-Circular gauge with two way binding in Angular JS
+Circular gauge with two way binding in AngularJS
 {:.caption}
 
-## Knockout JS
+## KnockoutJS
 
-* Knockout support allows you to bind the HTML elements against any of the available data models.Two types of knockout binding is supported as of angular,
+* KnockoutJS support allows you to bind the HTML elements against any of the available data models.Two types of KnockoutJS binding is supported as of AngularJS,
 1. one-way binding
 2. two-way binding
 * One way binding refers to the process of applying observable values to all the available properties of the Circular Gauge control, but the changes made in gauge control does not reflect and trigger in turn to the observable collection. This kind of binding applies to all the properties of the circular gauge control.

@@ -238,7 +238,7 @@ Momentum Technical indicator is created by setting the Indicators.Type as **Mome
 
 ### Moving Average Convergence Divergence (MACD)
 
-To render an MACD indicator, you have to set the Indicators.Type as **MACD**.  MACD indicator contains Macd line, Signal line and Histogram column. Histogram is used to differentiate MACD and signal line.
+To render an MACD indicator, you have to set the Indicators.Type as **MACD**.  MACD indicator contains MACD line, Signal line and Histogram column. Histogram is used to differentiate MACD and signal line.
 
 {% highlight cshtml %}
 
@@ -396,7 +396,7 @@ For the Stochastic indicator, you need to set the Indicators.Type as **Stochasti
 
 ### Triangular Moving Average (TMA)
 
-To render the TMA indicator, you should specify the Indicators.Type as **Tma**. 
+To render the TMA indicator, you should specify the Indicators.Type as **TMA**. 
 
 {% highlight cshtml %}
 
