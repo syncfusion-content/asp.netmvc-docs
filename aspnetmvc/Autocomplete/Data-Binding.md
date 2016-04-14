@@ -35,7 +35,7 @@ It maps the Category field name from the data table or the List of Objects that 
 
 ### HtmlAttributes
 
-This allows you to map the CSS styles or classes to the corresponding data from table or the List of Objects data with the AutoComplete items. The HtmlAttributes value customizes the AutoComplete items based on html styling or class assigned to it. 
+This allows you to map the CSS styles or classes to the corresponding data from table or the List of Objects data with the AutoComplete items. The HtmlAttributes value customizes the AutoComplete items based on HTML styling or class assigned to it. 
 
 ## Local data
 

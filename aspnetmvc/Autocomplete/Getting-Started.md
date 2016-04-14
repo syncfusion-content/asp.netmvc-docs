@@ -21,7 +21,7 @@ The following screen shot illustrates the AutoComplete control that searches the
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-AutoComplete controlwith search
+AutoComplete control with search
 {:.caption}
 
 ### Create an AutoComplete
@@ -89,7 +89,7 @@ You can also set some common customization changes to the AutoComplete textbox l
 
 
 
-By default, the AutoComplete is rendered with single-value selection. For multiple-value selection using the property MultiSelectModethatallows you to select multiple Data. There are two types of multiple selection one is ‘delimiter’ and another one is ‘visual mode’. In ‘Delimiter’ mode, the multiple values chosen are separated by using the delimiter character specified. In ‘visual mode’, the values choosen are displayed as box model. Here, the ‘visual mode’ is shown. You can set the FilterType option as StartsWith to sort the suggestion list based on the starting character.
+By default, the AutoComplete is rendered with single-value selection. For multiple-value selection using the property MultiSelectMode that allows you to select multiple Data. There are two types of multiple selection one is ‘delimiter’ and another one is ‘visual mode’. In ‘Delimiter’ mode, the multiple values chosen are separated by using the delimiter character specified. In ‘visual mode’, the values chosen are displayed as box model. Here, the ‘visual mode’ is shown. You can set the FilterType option as StartsWith to sort the suggestion list based on the starting character.
 
 
 {% highlight CSHTML %}
@@ -107,7 +107,7 @@ By default, the AutoComplete is rendered with single-value selection. For multip
 {% endhighlight %}
 
 
-The following screen shot displays the AutoCompletetextbox with selection visual mode.
+The following screen shot displays the AutoComplete textbox with selection visual mode.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
@@ -135,7 +135,7 @@ When you set the HighlightSearch property to ‘true’, the characters typed in
 
 
 
-The following screen shot displays the AutoCompletetextbox with highlight search enabled.
+The following screen shot displays the AutoComplete textbox with highlight search enabled.
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
@@ -168,7 +168,7 @@ f.Text("ComponentName").Key("ComponentId")).MultiSelectMode(MultiSelectModeTypes
 {% endhighlight %}
 {% endtabs %} 
 
-The following screen shot displays the AutoCompletetextbox with dropdown icon.
+The following screen shot displays the AutoComplete textbox with dropdown icon.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 

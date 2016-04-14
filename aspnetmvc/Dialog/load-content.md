@@ -14,7 +14,7 @@ By default, the content inside the ContentTemplate property element is considere
 
 Also, we can render the Dialog widget content through the following ways.
 
-1. Request through Ajax
+1. Request through AJAX
 
 2. Request iframe content
 
