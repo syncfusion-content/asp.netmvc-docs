@@ -11,9 +11,9 @@ documentation: ug
 
 AutoComplete widget allows you to select multiple values from the suggestions list using the MultiSelectMode property. Multiple values are selected when MultiSelectMode value is set to VisualMode or Delimiter. 
 
-Delimitermode separates multiple items using a separator character defined. When the delimiter mode is set, you can define the delimiter character using DelimiterChar. It takes a single character and it is a symbol. 
+Delimiter mode separates multiple items using a separator character defined. When the delimiter mode is set, you can define the delimiter character using DelimiterChar. It takes a single character and it is a symbol. 
 
-Visualmode selects multiple items by enclosing the item in a rounded rectangle with a close icon to remove item from the selection.
+VisualMode selects multiple items by enclosing the item in a rounded rectangle with a close icon to remove item from the selection.
 
 ## Configuring MultiSelection Mode
 
