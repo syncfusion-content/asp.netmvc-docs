@@ -63,7 +63,7 @@ N> Based on the navigation, the appointments that lies between the particular da
 
 The Scheduler dates can be navigated on two aspects either in a continuous or random manner. On pressing the previous and next navigation arrow keys in the Scheduler header will move the scheduler one date back and forth respectively.
 
-Another way of navigating through dates is by making use of the inbuilt calendar available within the Scheduler which pops out when the header date range is clicked. Selecting any date in the calendar will make the Scheduler to move to that particular date appropriately.
+Another way of navigating through dates is by making use of the built-in calendar available within the Scheduler which pops out when the header date range is clicked. Selecting any date in the calendar will make the Scheduler to move to that particular date appropriately.
 
 ### Handling date navigation actions
 
