@@ -160,7 +160,7 @@ In RichTextEditor’s preRender event, define your custom Tools as follows.
 	
 {% endhighlight %}
 
-In ajax post back, Retrieve the content from the uploaded files and set the extracted text to the RichTextEditor.
+In AJAX post back, Retrieve the content from the uploaded files and set the extracted text to the RichTextEditor.
 
 {% highlight html %}
 
@@ -235,7 +235,7 @@ N> If you have selected the document in .pdf format, the text only extracted fro
 
 In above screenshot, use Browse options to browse your files and upload the content to RichTextEditor.
 
-Use DropDownList control in the toolbar to choose the any one type be it is pdf or word document and click Export button to export the content of the RichTextEditor to the selected type.
+Use DropDownList control in the toolbar to choose the any one type be it is PDF or word document and click Export button to export the content of the RichTextEditor to the selected type.
 
 ![](HowTo_images/Word2.png)
 

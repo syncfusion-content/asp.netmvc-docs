@@ -16,7 +16,7 @@ Bullet Graph supports title and subtitle to convey what is represented in Bullet
 Title is set to Bullet Graph using Text property in CaptionSettings. Caption settings also include properties like Location, Font, and TextAngle for customizing the caption of Bullet Graph.
 
 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
@@ -59,7 +59,7 @@ Bullet Graph with title
 Subtitle is added to Bullet Graph using Text property of Subtitle in CaptionSettings. Subtitle also provides properties like Location, TextAngle and Font to customize subtitle similar to caption.
 
 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
@@ -109,7 +109,7 @@ Bullet Graph with subtitle
 You can add Indicator to bullet graph by enabling Visible and setting Text properties of Indicator in CaptionSettings. Indicator is used to represent whether target is achieved or not with text and symbol by comparing current and target values in bullet graph. 
 
 Indicator displays a symbol along with text which is different from caption and subtitle. Images like logos can be used in indicator instead of symbols. Indicator has properties such as Symbol, Text, TextSpacing, TextAngle, Location and Font. 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
 
@@ -193,7 +193,7 @@ The following screenshot displays the BulletGraph with Trim.
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img4.png)
 
-BulletGrpah with trim
+BulletGraph with trim
 {:.caption}
 
 ## Text Placement
@@ -203,7 +203,7 @@ All the caption group elements (caption, subtitle, and indicator) in the Bullet 
 ### Text Position
 
 The property TextPosition, is used to position the text at the top, bottom, left, and right side of the quantitative scale. The default value of this property is Float. By default, text can be placed at any desired location by using the Location property. 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 
@@ -236,7 +236,7 @@ Bullet Graph with title automatically positioned above the scale
 ### Text Alignment
 
 Alignment of text at different positions with respect to scale can be customized by using the TextAlignment property. Text can be aligned in the near, center, and far locations of the scale. Text alignment depends upon TextPosition property and is not applicable when the value of the TextPosition property is Float. The default value of the TextAlignment property is Near. 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 
@@ -285,7 +285,7 @@ Bullet graph with the title aligned at near and sub title aligned at center posi
 
 Text elements aligned at the same position are anchored by using the TextAnchor property. These can be anchored at the Start, Middle, and End. The default value of this property is Start and applicable only when two or more text elements are aligned at the same position. 
 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 
@@ -331,7 +331,7 @@ Bullet Graph with title text anchored at the center with respect to subtitle tex
 ### Padding
 
 The space required between text and quantitative scale is customized by using the Padding property. The default value of this property is 5 and not applicable when the value of the TextPosition property is Float. 
-{% highlight js %}
+{% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
 

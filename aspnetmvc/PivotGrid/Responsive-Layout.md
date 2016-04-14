@@ -15,7 +15,7 @@ On resizing the browser, the PivotTable Field list will get collapse and an icon
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).IsResponsive(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).IsResponsive(true)
 
 {% endhighlight %}
 

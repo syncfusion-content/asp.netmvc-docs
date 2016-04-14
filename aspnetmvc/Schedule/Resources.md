@@ -46,23 +46,23 @@ Description<br/><br/></th></tr>
 <tr>
 <td>
 Text<br/><br/></td><td>
-Binds the text field name in the dataSource to the resourceSettings <b>Text</b>. These text gets listed out in the resources field of the appointment window. It’s mandatory.<br/><br/><br/><br/></td></tr>
+Binds the `Text` field name in the dataSource to the ResourceSettings <b>Text</b>. These text gets listed out in the resources field of the appointment window. It’s mandatory.<br/><br/><br/><br/></td></tr>
 <tr>
 <td>
 Id<br/><br/></td><td>
-Binds the id field name in the dataSource to the resourceSettings <b>Id</b>. It’s mandatory.<br/><br/><br/><br/></td></tr>
+Binds the `Id` field name in the dataSource to the ResourceSettings <b>Id</b>. It’s mandatory.<br/><br/><br/><br/></td></tr>
 <tr>
 <td>
 GroupId<br/><br/></td><td>
-Binds the groupId field name in the dataSource to the resourceSettings <b>GroupId</b>. This field is not necessary for a resource object (resource data) defined as first level within the resources collection.<br/><br/><br/><br/></td></tr>
+Binds the `GroupId` field name in the dataSource to the ResourceSettings <b>GroupId</b>. This field is not necessary for a resource object (resource data) defined as first level within the resources collection.<br/><br/><br/><br/></td></tr>
 <tr>
 <td>
 Color<br/><br/></td><td>
-Binds the color field name in the dataSource to the resourceSettings <b>Color</b>. It is optional.<br/><br/><br/><br/></td></tr>
+Binds the `Color` field name in the dataSource to the ResourceSettings <b>Color</b>. It is optional.<br/><br/><br/><br/></td></tr>
 <tr>
 <td>
 AppointmentClass<br/><br/></td><td>
-Binds the appointmentClass field name in the dataSource. It applies the custom css class name to the appointments based on the resources.<br/><br/><br/><br/></td></tr>
+Binds the `AppointmentClass` field name in the dataSource. It applies the custom CSS class name to the appointments based on the resources.<br/><br/><br/><br/></td></tr>
 </table>
 
 **Example**: To set the resources options using all the above specified fields,
@@ -156,7 +156,7 @@ The resource data can be bound to the Schedule control through the **ResourceSet
 
 ### Remote Data
 
-**Example**: To set the resource data through remote service url,
+**Example**: To set the resource data through remote service URL,
 
 {% highlight razor %}
 

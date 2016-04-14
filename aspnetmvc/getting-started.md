@@ -14,7 +14,7 @@ The similar ways are followed for integrating the Syncfusion ASP.NET MVC control
 There are three ways for embedding our controls into ASP.NET MVC application:
 
 * Integration using Syncfusion Project Template
-* Through Syncfusion Nuget Packages
+* Through Syncfusion NuGet Packages
 * Through Manual Integration into the new/existing Application
 
 The procedure that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
@@ -36,7 +36,7 @@ Before making use of the **Syncfusion** **Project** **Template**, you also need 
 
 After the successful installation of the MVC extension, you can make use of the **Project** **Configuration** **Wizard** in Visual Studio to create the Syncfusion MVC application with the required Syncfusion MVC controls. 
 
-N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and css references in your application, based on the Syncfusion controls that we choose in the Wizard.     
+N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and CSS references in your application, based on the Syncfusion controls that we choose in the Wizard.     
 
 #### Integration of Syncfusion MVC components into the new MVC3 Application using Project Configuration Wizard
 
@@ -60,7 +60,7 @@ Choose the required control name from the controls list and then click on **Crea
 
 ![](getting-started_images/getting-started_img4.jpeg)
 
-Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and css files are located into your project and also gets configured automatically in the **web.config** file. The script and css reference has also been automatically referred in the **_Layout.cshtml** page.
+Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and CSS files are located into your project and also gets configured automatically in the **web.config** file. The script and CSS reference has also been automatically referred in the **_Layout.cshtml** page.
 
 The new Syncfusion MVC application is created successfully and now add the below **DatePicker** code in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -76,7 +76,7 @@ Simply build and run the project by pressing F5, so that you can now see the out
 
 Thus the **DatePicker** control is rendered successfully with its default appearance.
 
-### Through Syncfusion Nuget Packages
+### Through Syncfusion NuGet Packages
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC3 application by making use of the **Syncfusion** **Nuget** **Packages**, refer the following steps -  
 
@@ -94,11 +94,11 @@ The above two steps allows you to create your initial MVC project successfully. 
 
 ![](getting-started_images/getting-started_img8.jpeg)
 
-#### Configuring Syncfusion Nuget Packages
+#### Configuring Syncfusion NuGet Packages
 
-The steps to download and configure the required Syncfusion Nuget Packages in Visual Studio are as follows,
+The steps to download and configure the required Syncfusion NuGet Packages in Visual Studio are as follows,
 
-Download the Syncfusion Nuget Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
+Download the Syncfusion NuGet Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
 
 ![](getting-started_images/getting-started_img9.jpeg)
 
@@ -110,34 +110,34 @@ In Visual Studio, navigate to **Tools** -> **Library** **Package** **Manager** -
 ![](getting-started_images/getting-started_img10.jpeg)
 
 Select **Package** **Manager** -> **Package** **Sources** in the above pop-up and click on the ![](getting-started_images/getting-started_img11.jpeg)
-button to navigate to the location where the above collection of nuget packages are located (namely, within the **Nuget** **Packages** folder) in your system.
+button to navigate to the location where the above collection of NuGet packages are located (namely, within the **Nuget** **Packages** folder) in your system.
 
 ![](getting-started_images/getting-started_img12.jpeg)
 
-N> The **Source** textbox in the above image denotes the location of the nuget packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
+N> The **Source** textbox in the above image denotes the location of the NuGet packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
 
 Now click the **Add** button and the package name will be listed in the **Available** **package** **sources** list as shown below and then Click **OK**.
 
 ![](getting-started_images/getting-started_img13.jpeg)
 
-The configuration part of Syncfusion nuget packages ends here and now it is necessary to proceed with its installation.
+The configuration part of Syncfusion NuGet packages ends here and now it is necessary to proceed with its installation.
 
-#### Installing Nugets into your project
+#### Installing NuGet into your project
 
-The following steps will help you to add the references of the **Syncfusion** assemblies, required scripts and css files into your Project.
+The following steps will help you to add the references of the **Syncfusion** assemblies, required scripts and CSS files into your Project.
 
 Right click on your project in the solution explorer and select **Manage** **Nuget** **Packages** options from the sub-menu that pop-up on the screen. Select the **Syncfusion** **Nuget** **Packages** within the **Online** tab, which will display the list of available packages in it, as shown below.
 
 ![](getting-started_images/getting-started_img14.jpeg)
 
 
-Install the **Syncfusion.ASPNETMVC340** (based on your target MVC application version (MVC3) and the .NET framework (4.0) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
+Install the **Syncfusion.ASPNETMVC340** (based on your target MVC application version (MVC3) and the .NET Framework (4.0) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
 
-The below image depicts that the Nuget Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC3 & .NET framework version 4.0) has been successfully installed into your project.
+The below image depicts that the NuGet Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC3 & .NET Framework version 4.0) has been successfully installed into your project.
 
 ![](getting-started_images/getting-started_img15.jpeg)
 
-Once the package installation is completed, all the required assembly references, scripts and css files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
+Once the package installation is completed, all the required assembly references, scripts and CSS files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
 
 #### Unobtrusive Setting in Web.config file
 
@@ -189,7 +189,7 @@ Since the stylesheets are automatically loaded into the **Content** folder of yo
 
 #### Adding reference to the required JavaScript files
 
-It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for css files. 
+It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -218,7 +218,7 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
 
-I> If your application contains duplicate/multiple references to the jquery files, remove it – as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
+I> If your application contains duplicate/multiple references to the jQuery files, remove it – as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
 
 #### Adding Syncfusion MVC control
 
@@ -280,7 +280,7 @@ Once you have installed the Essential Studio package in your system, the Syncfus
 
 ![](getting-started_images/getting-started_img20.jpeg)
 
-Now the **Add** **Reference** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **.NET** tab, by choosing the appropriate versions (**{{ site.40esreleaseversion }}** version for **Syncfusion.EJ** assembly and **{{ site.mvc3releaseversion }}** version for **Syncfusion.EJ.Mvc**). The version to be chosen for the reference assemblies is based on the framework and the MVC versions used in the application. 
+Now the **Add** **Reference** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **.NET** tab, by choosing the appropriate versions (**{{ site.40esreleaseversion }}** version for **Syncfusion.EJ** assembly and **{{ site.mvc3releaseversion }}** version for **Syncfusion.EJ.Mvc**). The version to be chosen for the reference assemblies is based on the Framework and the MVC versions used in the application. 
 
 ##### Steps for adding reference assemblies from the installed location
 
@@ -299,9 +299,9 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 N> In the above image, the **MVC** folder contains all the assemblies required for the MVC controls differentiated under the different MVC version category (**MVC3**, **MVC4**, **MVC5**). **Syncfusion.EJ.Mvc** **dll** is available within this folder.
 
-The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET framework versions that your application uses. Based on your application’s framework version used, you can choose assemblies from it. The common assembly **Syncfusion.EJ** is available within these folders.
+The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET Framework versions that your application uses. Based on your application’s framework version used, you can choose assemblies from it. The common assembly **Syncfusion.EJ** is available within these folders.
 
-Now add the **Sycfusion.EJ.Mvc** dll to your application from the below specified location, (since you are working on the **MVC3** application, therefore navigate further into the folder MVC\MVC3, from the previously mentioned location – refer the below images)
+Now add the **Syncfusion.EJ.Mvc** Assembly to your application from the below specified location, (since you are working on the **MVC3** application, therefore navigate further into the folder MVC\MVC3, from the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\MVC\MVC3`
 
@@ -310,7 +310,7 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 ![](getting-started_images/getting-started_img23.jpeg)
 
-Now you need to add the **Sycfusion.EJ** assembly to your application from the below specified location, (since MVC3 assemblies (_System.Web.Mvc,System.Web.Razor etc_) uses the .NET framework version 4.0 for compilation purpose we also need to refer the same framework to avoid assembly conflict issues, therefore navigate to the folder **4.0** and select the above base assemblies, in the previously mentioned location – refer the below images)
+Now you need to add the **Syncfusion.EJ** assembly to your application from the below specified location, (since MVC3 assemblies (_System.Web.Mvc,System.Web.Razor etc_) uses the .NET Framework version 4.0 for compilation purpose we also need to refer the same Framework to avoid assembly conflict issues, therefore navigate to the folder **4.0** and select the above base assemblies, in the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.0`
 
@@ -397,7 +397,7 @@ N> The main reason for referring the Script manager in _Layout file is that, it 
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required css files into your application. You need to copy all the required css files into your application from the following location,
+To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. You need to copy all the required CSS files into your application from the following location,
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web`
 
@@ -432,7 +432,7 @@ Once the stylesheets are added in your application, include the below specified 
 
 Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
 
-* jquery-1.10.2.min.js 
+* jQuery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
 * jsrender.min.js
 
@@ -460,7 +460,7 @@ Now, create a folder named `ej` within the `Scripts` folder of your application 
 
 ![](getting-started_images/getting-started_img29.jpeg)
 
-Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for css files. 
+Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -487,11 +487,11 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> If your application contains duplicate/multiple references to the jquery files, remove it – as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
+I> If your application contains duplicate/multiple references to the jQuery files, remove it – as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
 
 #### CDN Link reference
 
-If you want to refer the cdn links instead of the direct script and css references in your application, then you need to make use of the below references in the **_Layout.cshtml** file,
+If you want to refer the CDN links instead of the direct script and CSS references in your application, then you need to make use of the below references in the **_Layout.cshtml** file,
 
 {% highlight razor %}
 
@@ -546,7 +546,7 @@ Before making use of the **Syncfusion** **Project** **Template**, you also need 
 
 After the successful installation of the MVC extension, you can make use of the **Project** **Configuration** **Wizard** in Visual Studio to create the Syncfusion MVC application with the required Syncfusion MVC controls. 
 
-N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and css references in your application, based on the Syncfusion controls that we choose in the Wizard.     
+N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and CSS references in your application, based on the Syncfusion controls that we choose in the Wizard.     
 
 #### Integration of Syncfusion MVC components into the new MVC4 Application using Project Configuration Wizard
 
@@ -570,7 +570,7 @@ Choose the required control name from the controls list and then click on **Crea
 
 ![](getting-started_images/getting-started_img34.jpeg)
 
-Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and css files are located into your project and also gets configured automatically in the **web.config** file. The script and css reference has also been automatically referred in the **_Layout.cshtml** page.
+Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and CSS files are located into your project and also gets configured automatically in the **web.config** file. The script and CSS reference has also been automatically referred in the **_Layout.cshtml** page.
 
 The new Syncfusion MVC application is created successfully and now add the below **DatePicker** code in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -586,7 +586,7 @@ Simply build and run the project by pressing F5, so that you can now see the out
 
 Thus the **DatePicker** control is rendered successfully with its default appearance.
 
-### Through Syncfusion Nuget Packages
+### Through Syncfusion NuGet Packages
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC4 application by making use of the **Syncfusion** **Nuget** **Packages** – refer the below steps.
 
@@ -604,11 +604,11 @@ The above two steps allows you to create your initial MVC project successfully. 
 
 ![](getting-started_images/getting-started_img38.jpeg)
 
-#### Configuring Syncfusion Nuget Packages
+#### Configuring Syncfusion NuGet Packages
 
-The steps to download and configure the required Syncfusion Nuget Packages in Visual Studio are as follows, 
+The steps to download and configure the required Syncfusion NuGet Packages in Visual Studio are as follows, 
 
-Download the Syncfusion Nuget Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
+Download the Syncfusion NuGet Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
 
 ![](getting-started_images/getting-started_img39.jpeg)
 
@@ -619,33 +619,33 @@ In Visual Studio, navigate to **Tools** -> **Library** **Package** **Manager** -
 ![](getting-started_images/getting-started_img40.jpeg)
 
 Select **Package** **Manager** -> **Package** **Sources** in the above pop-up and click on the ![](getting-started_images/getting-started_img41.jpeg)
-button to navigate to the location where the above collection of nuget packages are located (namely, within the **Nuget** **Packages** folder) in your system.
+button to navigate to the location where the above collection of NuGet packages are located (namely, within the **Nuget** **Packages** folder) in your system.
 
 ![](getting-started_images/getting-started_img42.jpeg)
 
-N> The **Source** textbox in the above image denotes the location of the nuget packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
+N> The **Source** textbox in the above image denotes the location of the NuGet packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
 
 Now click the **Add** button and the package name will be listed in the **Available** **package** **sources** list as shown below and then Click **OK**.
 
 ![](getting-started_images/getting-started_img43.jpeg)
 
-The configuration part of Syncfusion nuget packages ends here and now it is necessary to proceed with its installation.
+The configuration part of Syncfusion NuGet packages ends here and now it is necessary to proceed with its installation.
 
-#### Installing Nugets into your project
+#### Installing NuGet into your project
 
-The following steps will help you to add the references of the **Syncfusion** assemblies, required scripts and css files into your Project.
+The following steps will help you to add the references of the **Syncfusion** assemblies, required scripts and CSS files into your Project.
 
 Right click on your project in the solution explorer and select **Manage** **Nuget** **Packages** options from the sub-menu that pop-up on the screen. Select the **Syncfusion** **Nuget** **Packages** within the **Online** tab, which will display the list of available packages in it, as shown below.
 
 ![](getting-started_images/getting-started_img44.jpeg)
 
-Install the **SyncfusionASPNETMVC440** (based on your target MVC application version (MVC4) and the .NET framework (4.0) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
+Install the **SyncfusionASPNETMVC440** (based on your target MVC application version (MVC4) and the .NET Framework (4.0) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
 
-The below image depicts that the Nuget Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC4 & .NET framework version 4.0) has been successfully installed into your project.
+The below image depicts that the NuGet Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC4 & .NET Framework version 4.0) has been successfully installed into your project.
 
 ![](getting-started_images/getting-started_img45.jpeg)
 
-Once the package installation is completed, all the required assembly references, scripts and css files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
+Once the package installation is completed, all the required assembly references, scripts and CSS files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
 
 #### Unobtrusive Setting in Web.config file
 
@@ -704,7 +704,7 @@ Since the stylesheets are automatically loaded into the Content folder of your a
 
 #### Adding reference to the required JavaScript files
 
-It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for css files. 
+It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -732,7 +732,7 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jquery versions multiple times, which will cause the script error. Make sure that the jquery scripts are not again referred through bundles in **_Layout.cshtml** file. 
+I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file. 
 
 #### Adding Syncfusion MVC control
 
@@ -792,7 +792,7 @@ Once you have installed the Essential Studio package in your system, the Syncfus
 
 ![](getting-started_images/getting-started_img50.jpeg)
 
-Now the **Reference** **Manager** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **Extensions** tab as below, by choosing the appropriate versions (**{{ site.40esreleaseversion }}**). The version to be chosen for the reference assemblies is based on the framework and the MVC versions used in the application.
+Now the **Reference** **Manager** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **Extensions** tab as below, by choosing the appropriate versions (**{{ site.40esreleaseversion }}**). The version to be chosen for the reference assemblies is based on the Framework and the MVC versions used in the application.
 
 ![](getting-started_images/getting-started_img51.jpeg)
 
@@ -814,9 +814,9 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 N> In the above image, the **MVC** folder contains all the assemblies required for the MVC controls differentiated under the different MVC version category (**MVC3**, **MVC4**, **MVC5**). **Syncfusion.EJ.Mvc** **dll** is available within this folder.
 
-The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET framework versions that your application uses. Based on your application’s framework version used, you can choose assemblies from it. The common assembly **Syncfusion.EJ** is available within these folders.
+The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET Framework versions that your application uses. Based on your application’s Framework version used, you can choose assemblies from it. The common assembly **Syncfusion.EJ** is available within these folders.
 
-Now add the **Sycfusion.EJ.Mvc** dll to your application from the below specified location, (since you are working on the MVC 4 application, therefore navigate further into the folder MVC\MVC4, from the previously mentioned location – refer the below images)
+Now add the **Syncfusion.EJ.Mvc** Assembly to your application from the below specified location, (since you are working on the MVC 4 application, therefore navigate further into the folder MVC\MVC4, from the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\MVC\MVC4`
 
@@ -825,7 +825,7 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 ![](getting-started_images/getting-started_img54.jpeg)
 
-Now you need to add the **Sycfusion.EJ** assembly to your application from the below specified location, (since MVC4 assemblies (_System.Web.Mvc,System.Web.Razor etc_) uses the .NET framework version 4.0 for compilation purpose we also need to refer the same framework to avoid assembly conflict issues, therefore navigate to the folder **4.0** and select the above base assemblies, in the previously mentioned location – refer the below images)
+Now you need to add the **Syncfusion.EJ** assembly to your application from the below specified location, (since MVC4 assemblies (_System.Web.Mvc,System.Web.Razor etc_) uses the .NET Framework version 4.0 for compilation purpose we also need to refer the same Framework to avoid assembly conflict issues, therefore navigate to the folder **4.0** and select the above base assemblies, in the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.0`
 
@@ -918,7 +918,7 @@ N> The main reason for referring the Script manager in _Layout file is that, it 
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required css files into your application. You need to copy all the required css files into your application from the following location,
+To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. You need to copy all the required CSS files into your application from the following location,
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web`
 
@@ -955,7 +955,7 @@ Once the stylesheets are added in your application, include the below specified 
 
 Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
 
-* jquery-1.10.2.min.js 
+* jQuery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
 * jsrender.min.js
 
@@ -983,7 +983,7 @@ Now, create a folder named `ej/web` within the `Scripts` folder of your applicat
 
 ![](getting-started_images/getting-started_img60.jpeg)
 
-Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for css files. 
+Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -1012,11 +1012,11 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jquery versions multiple times, which will cause the script error. Make sure that the jquery scripts are not again referred through bundles in **_Layout.cshtml** file. 
+I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file. 
 
 #### CDN Link reference
 
-If you want to refer the cdn links instead of the direct script and css references in your application, then you need to make use of the below references in the _Layout.cshtml file,
+If you want to refer the CDN links instead of the direct script and CSS references in your application, then you need to make use of the below references in the _Layout.cshtml file,
 
 {% highlight razor %}
 
@@ -1073,7 +1073,7 @@ Before making use of the **Syncfusion** **Project** **Template**, you also need 
 
 After the successful installation of the MVC extension, you can make use of the **Project** **Configuration** **Wizard** in Visual Studio to create the Syncfusion MVC application with the required Syncfusion MVC controls. 
 
-N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and css references in your application, based on the Syncfusion controls that we choose in the Wizard.     
+N> The **Project** **Configuration** **Wizard** which gets integrated into the Visual Studio, automates the process of Configuration and Reference of Syncfusion assemblies within the newly created application. It also automate the process of adding all the required scripts and CSS references in your application, based on the Syncfusion controls that we choose in the Wizard.     
 
 #### Integration of Syncfusion MVC components into the new MVC5 Application using Project Configuration Wizard
 
@@ -1097,7 +1097,7 @@ Choose the required control name from the controls list and then click on **Crea
 
 ![](getting-started_images/getting-started_img65.jpeg)
 
-Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and css files are located into your project and also gets configured automatically in the **web.config** file. The script and css reference has also been automatically referred in the **_Layout.cshtml** page.
+Now you can notice in the **References**, **Scripts** and **Content** folder of your application that all the required assemblies, scripts and CSS files are located into your project and also gets configured automatically in the **web.config** file. The script and CSS reference has also been automatically referred in the **_Layout.cshtml** page.
 
 The new Syncfusion MVC application is created successfully and now add the below **DatePicker** code in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -1113,9 +1113,9 @@ Simply build and run the project by pressing F5, so that you can now see the out
 
 Thus the **DatePicker** control is rendered successfully with its default appearance.
 
-### Through Syncfusion Nuget Packages
+### Through Syncfusion NuGet Packages
 
-Since **MVC5** is the default version available within the **Visual** **Studio** **2013**, therefore the application won’t be labelled separately as MVC 5 in the **New** **Project** template. You need to simply select the **ASP.NET** **Web** **application** in the **New** **Project** dialog and choose **MVC** in the next step.
+Since **MVC5** is the default version available within the **Visual** **Studio** **2013**, therefore the application won’t be labeled separately as MVC 5 in the **New** **Project** template. You need to simply select the **ASP.NET** **Web** **application** in the **New** **Project** dialog and choose **MVC** in the next step.
 
 #### Creation of First MVC application
 
@@ -1131,11 +1131,11 @@ The above two steps allows you to create your initial MVC5 project successfully.
 
 ![](getting-started_images/getting-started_img69.jpeg)
 
-#### Configuring Syncfusion Nuget Packages
+#### Configuring Syncfusion NuGet Packages
 
-The steps to download and configure the required Syncfusion Nuget Packages in Visual Studio 2013 are as follows.
+The steps to download and configure the required Syncfusion NuGet Packages in Visual Studio 2013 are as follows.
 
-Download the Syncfusion Nuget Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
+Download the Syncfusion NuGet Packages for **ASP.NET** **MVC** & **JavaScript** from [here](http://nuget.syncfusion.com/login) and save it in your system. The downloaded file is a zip formatted file, therefore unzip the folders and copy only the below specified packages present within it. Create a new folder namely **Nuget** **Packages** in any of the particular location in your system and place the below specified files into it,
 
 ![](getting-started_images/getting-started_img70.jpeg)
 
@@ -1150,28 +1150,28 @@ button at the top to add new package source to the project. Now the pop-up will 
 
 ![](getting-started_images/getting-started_img73.jpeg)
 
-To add the required packages into your project, navigate to the location where the above specified collection of Syncfusion Nuget packages are located (namely, within the **Nuget** **Packages** folder) in your system, by clicking on the ![](getting-started_images/getting-started_img74.jpeg)
-button and provide it with a unique name (Syncfusion Nuget Packages) as shown in the below image. Click on the **Update** button now and the new package name get listed in the **Available** **package** **sources** list as shown below and then click **OK**.
+To add the required packages into your project, navigate to the location where the above specified collection of Syncfusion NuGet packages are located (namely, within the **Nuget** **Packages** folder) in your system, by clicking on the ![](getting-started_images/getting-started_img74.jpeg)
+button and provide it with a unique name (Syncfusion NuGet Packages) as shown in the below image. Click on the **Update** button now and the new package name get listed in the **Available** **package** **sources** list as shown below and then click **OK**.
 
 ![](getting-started_images/getting-started_img75.jpeg)
 
-N> The **Source** textbox in the above image denotes the location of the Syncfusion nuget packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
+N> The **Source** textbox in the above image denotes the location of the Syncfusion NuGet packages in your machine and the **Name** section, allows you to provide a unique name which we will refer in the package installation section later.
 
-The configuration part of Syncfusion Nuget packages ends here and now it is necessary to proceed with its installation.
+The configuration part of Syncfusion NuGet packages ends here and now it is necessary to proceed with its installation.
 
-#### Installing Nugets into your project
+#### Installing NuGet into your project
 
 Right click on your project in the solution explorer and select **Manage** **Nuget** **Packages** options from the sub-menu that pop-up on the screen. Select the **Syncfusion** **Nuget** **Packages** within the **Online** tab, which will display the list of available packages in it, as shown below.
 
 ![](getting-started_images/getting-started_img76.jpeg)
 
-Install the **Syncfusion.ASPNETMVC545** (based on your target MVC application version (MVC5) and the .NET framework (4.5) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
+Install the **Syncfusion.ASPNETMVC545** (based on your target MVC application version (MVC5) and the .NET Framework (4.5) used in the sample application) package now, which automatically installs the **SyncfusionJavaScript** package together.
 
-The below image depicts that the Nuget Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC5 & .NET framework version 4.5) has been successfully installed into your project.
+The below image depicts that the NuGet Packages for **JavaScript** and **ASP.NET** **MVC** (with MVC5 & .NET Framework version 4.5) has been successfully installed into your project.
 
 ![](getting-started_images/getting-started_img77.jpeg)
 
-Once the package installation is completed, all the required assembly references, scripts and css files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
+Once the package installation is completed, all the required assembly references, scripts and CSS files will be automatically added to your application. Also, it configures the **web.config** file automatically. The remaining changes that you need to do in your application are as follows. 
 
 #### Unobtrusive Setting in Web.config file
 
@@ -1228,7 +1228,7 @@ Since the stylesheets are automatically loaded into the Content folder of your a
 
 #### Adding reference to the required JavaScript files
 
-It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for css files. 
+It is mandatory to include the reference to the required JavaScript files in your project, so as to render the Syncfusion MVC controls properly. This should be done within the **_Layout.cshtml** file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -1257,7 +1257,7 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jquery versions multiple times, which will cause the script error. Make sure that the jquery scripts are not again referred through bundles in **_Layout.cshtml** file. 
+I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file. 
 
 #### Adding Syncfusion MVC control
 
@@ -1317,7 +1317,7 @@ Once you have installed the Essential Studio package in your system, the Syncfus
 
 ![](getting-started_images/getting-started_img82.jpeg)
 
-Now the **Reference** **Manager** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **Extensions** tab as below, by choosing the appropriate versions (**{{ site.45esreleaseversion }}** version for **Syncfusion.EJ** assembly and **{{ site.mvc5releaseversion }}** version for **Syncfusion.EJ.Mvc**). The version to be chosen for the reference assemblies is based on the framework and the MVC versions used in the application.
+Now the **Reference** **Manager** pop-up will appear on the screen. In that pop-up, select the required assemblies from the **Extensions** tab as below, by choosing the appropriate versions (**{{ site.45esreleaseversion }}** version for **Syncfusion.EJ** assembly and **{{ site.mvc5releaseversion }}** version for **Syncfusion.EJ.Mvc**). The version to be chosen for the reference assemblies is based on the Framework and the MVC versions used in the application.
 
 ![](getting-started_images/getting-started_img83.jpeg)
 
@@ -1338,9 +1338,9 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 N> In the above image, the **MVC** folder contains all the assemblies required for the MVC controls differentiated under the different MVC version category (**MVC3**, **MVC4**, **MVC5**). **Syncfusion.EJ.Mvc** **dll** is available within this folder.
 
-The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET framework versions that your application uses. Based on your application’s framework version used, you can choose assemblies from it. The other common assembly **Syncfusion.EJ** is available within these folders.
+The other folders **3.5**, **4.0**, **4.5**, **4.5.1** in the above image denotes the .NET Framework versions that your application uses. Based on your application’s Framework version used, you can choose assemblies from it. The other common assembly **Syncfusion.EJ** is available within these folders.
 
-Now add the **Sycfusion.EJ.Mvc** dll to your application from the below specified location, (since you are working on the MVC 5 application, therefore navigate further into the folder MVC\MVC5, from the previously mentioned location – refer the below images)
+Now add the **Syncfusion.EJ.Mvc** Assembly to your application from the below specified location, (since you are working on the MVC 5 application, therefore navigate further into the folder MVC\MVC5, from the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\MVC\MVC5`
 
@@ -1349,7 +1349,7 @@ _**For** **example**, If you have installed the Essential Studio package within 
 
 ![](getting-started_images/getting-started_img86.jpeg)
 
-Now you need to add the **Sycfusion.EJ** assembly to your application from the below specified location, (since MVC5 assemblies (System.Web.Mvc,System.Web.Razor etc) uses the .NET framework version 4.5 for compilation purpose we also need to refer the same framework to avoid assembly conflict issues, therefore navigate to the folder **4.5** and select the above base assemblies, in the previously mentioned location – refer the below images)
+Now you need to add the **Syncfusion.EJ** assembly to your application from the below specified location, (since MVC5 assemblies (System.Web.Mvc,System.Web.Razor etc) uses the .NET Framework version 4.5 for compilation purpose we also need to refer the same Framework to avoid assembly conflict issues, therefore navigate to the folder **4.5** and select the above base assemblies, in the previously mentioned location – refer the below images)
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5`
 
@@ -1438,7 +1438,7 @@ N> The main reason for referring the Script manager in _Layout file is that, it 
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required css files into your application. You need to copy all the required css files into your application from the following location,
+To render the Syncfusion MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. You need to copy all the required CSS files into your application from the following location,
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web`
 
@@ -1474,7 +1474,7 @@ Once the stylesheets are added in your application, include the below specified 
 
 Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
 
-* jquery-1.10.2.min.js 
+* jQuery-1.10.2.min.js 
 * jquery.easing.1.3.min.js
 * jsrender.min.js
 
@@ -1502,7 +1502,7 @@ Now, create a folder named `ej` within the `Scripts` folder of your application 
 
 ![](getting-started_images/getting-started_img92.jpeg)
 
-Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for css files. 
+Once the scripts are added in your application, now it is necessary to include the reference to it in your project. This should be done within the _Layout.cshtml file, as we did previously for CSS files. 
 
 Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, within the head section,
 
@@ -1531,11 +1531,11 @@ Add the below script references in the **~/Views/Shared/_Layout.cshtml** file, w
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jquery versions multiple times, which will cause the script error. Make sure that the jquery scripts are not again referred through bundles in **_Layout.cshtml** file.
+I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file.
 
 #### CDN Link reference
 
-If you want to refer the cdn links instead of the direct script and css references in your application, then you need to make use of the below references in the _Layout.cshtml file,
+If you want to refer the CDN links instead of the direct script and CSS references in your application, then you need to make use of the below references in the _Layout.cshtml file,
 
 {% highlight razor %}
 
@@ -1590,7 +1590,7 @@ Make appropriate selection in it and click **Next** button, which again opens th
 
 ![](getting-started_images/getting-started_img95.jpeg)
 
-Select your required control in it and click **Create**, so that all the required assemblies, scripts & css references needed to render the control will get automatically added to your existing project and also the configurations in web.config will also be done automatically. 
+Select your required control in it and click **Create**, so that all the required assemblies, scripts & CSS references needed to render the control will get automatically added to your existing project and also the configurations in web.config will also be done automatically. 
 
 Ensure whether the **Unobtrusive** setting is enabled in your application’s web.config file. If it is enabled, then you need to change its value to **false** in your application as shown below,
 
@@ -1620,7 +1620,7 @@ Since, the Unobtrusive setting in the web.config file is disabled now, therefore
 
 N> The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, then the script manager can be excluded, as the control is initialized using HTML5 attributes.
 
-In the next step, the script and css files has to be explicitly referred in the head section of the **_Layout.cshtml** page of your existing application as shown below,
+In the next step, the script and CSS files has to be explicitly referred in the head section of the **_Layout.cshtml** page of your existing application as shown below,
 
 {% highlight razor %}
 
@@ -1647,7 +1647,7 @@ In the next step, the script and css files has to be explicitly referred in the 
 
 N> The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
-I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jquery versions multiple times, which will cause the script error. Make sure that the jquery scripts are not again referred through bundles in **_Layout.cshtml** file.
+I> Since the **jquery-1.10.2.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file.
 
 Now you can add the below **DatePicker** code in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -1681,7 +1681,7 @@ The option **Backup** in the above window will copy the original project (with o
 
 Now the corresponding Syncfusion assembly version references, CSS, Script files and also the web.config version changes will be added and reflected automatically in the newly migrated project. You can simply build and run your migrated project by pressing **F5**.
 
-N> i. Since we are migrating the older **Syncfusion** **MVC** **project** here, therefore we assume that all the required script and css references are already configured in the _Layout.cshtml page of your old project.
+N> i. Since we are migrating the older **Syncfusion** **MVC** **project** here, therefore we assume that all the required script and CSS references are already configured in the _Layout.cshtml page of your old project.
 N> ii. Also, we assume that the Unobtrusive setting is set to **false** and also other assembly configurations & namespace reference are already present within the web.config file.
 N> iii. Also, ensure the presence of **ScriptManager** code in the _Layout.cshtml page of your old project. 
 

@@ -52,7 +52,7 @@ Binds the appointment description field name and also its related validation rul
 <tr>
 <td>
 AllDay<br/><br/></td><td>
-Binds the name of the allDay field. It accepts the <b>boolean</b> value and indicates whether the appointment is an allday appointment or not.<br/><br/></td></tr>
+Binds the name of the <b>AllDay</b> field. It accepts the <b>boolean</b> value and indicates whether the appointment is an all-day appointment or not.<br/><br/></td></tr>
 <tr>
 <td>
 Categorize<br/><br/></td><td>
@@ -299,6 +299,204 @@ The server-side code to retrieve the appointments are as follows.
     {
         return new NORTHWNDEntities().Events.ToList();
     }
+
+{% endhighlight %}
+
+## Data Binding using OLEDB
+
+The appointment data can also be bound to the Scheduler using OLEDB database as depicted below.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 5))
+        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").CrudURL("Home/Batch").Adaptor("UrlAdaptor"))
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .StartTimeZone("StartTimeZone")
+            .EndTimeZone("EndTimeZone")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+The server-side controller code to retrieve and bind the appointment data to Scheduler are as follows. Also, define a class with all the required appointment fields as depicted in the below code example.
+
+{% highlight c# %}
+
+        // Define a class with all appointment fields
+        public class ScheduleData
+        {
+            public int Id { get; set; }
+            public string Subject { get; set; }
+            public DateTime StartTime { get; set; }
+            public DateTime EndTime { get; set; }
+            public Boolean AllDay { get; set; }
+            public Boolean Recurrence { get; set; }
+            public string RecurrenceRule { get; set; }
+            public string StartTimeZone { get; set; }
+            public string EndTimeZone { get; set; }
+            public string Description { get; set; }
+        }
+
+        // To retrieve the appointments from database and bind it to Scheduler
+        public JsonResult GetData()
+        {
+            // Mention your own dataSource to be used here.
+            string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+            DataSet myDataSet = new DataSet();
+            OleDbConnection myAccessConn = new OleDbConnection(strAccessConn);
+            OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
+            OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+            myAccessConn.Open();
+            myDataAdapter.Fill(myDataSet, "DefaultSchedule");
+            List<ScheduleData> datasource = new List<ScheduleData>();
+            datasource = myDataSet.Tables[0].AsEnumerable().Select(dataRow => new ScheduleData { Id = dataRow.Field<int>("Id"), Subject = dataRow.Field<string>("Subject"), StartTime = dataRow.Field<DateTime>("StartTime"), EndTime = dataRow.Field<DateTime>("EndTime"), AllDay = dataRow.Field<bool>("AllDay"), Recurrence = dataRow.Field<bool>("Recurrence"), RecurrenceRule = dataRow.Field<string>("RecurrenceRule"), Description = dataRow.Field<string>("Description"), StartTimeZone = dataRow.Field<string>("StartTimeZone"), EndTimeZone = dataRow.Field<string>("EndTimeZone") }).ToList();
+            myAccessConn.Close();
+            return Json(datasource, JsonRequestBehavior.AllowGet);
+        }
+
+{% endhighlight %}
+
+The controller code to handle the CRUD operation are as follows.
+
+{% highlight c# %}
+
+        public JsonResult Batch(EditParams param)
+        {
+            // Mention your own dataSource to be used here.
+            string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+            if (param.action == "insert" || (param.action == "batch" && param.added != null))  // this block of code will execute while inserting the appointments
+            {
+                var value = param.action == "insert" ? param.value : param.added[0];
+                using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                {
+                    OleDbCommand cmd = new OleDbCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO DefaultSchedule(Subject,StartTime,EndTime,AllDay,Recurrence,RecurrenceRule,Description,StartTimeZone,EndTimeZone) VALUES (@Subject,@StartTime,@EndTime,@AllDay,@Recurrence,@RecurrenceRule,@Description,@StartTimeZone,@EndTimeZone)";
+                    if (string.IsNullOrEmpty(value.Subject))
+                        cmd.Parameters.AddWithValue("@Subject", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@Subject", value.Subject);
+                    cmd.Parameters.AddWithValue("@StartTime", value.StartTime);
+                    cmd.Parameters.AddWithValue("@EndTime", value.EndTime);
+                    cmd.Parameters.AddWithValue("@AllDay", value.AllDay);
+                    cmd.Parameters.AddWithValue("@Recurrence", value.Recurrence);
+                    if (string.IsNullOrEmpty(value.RecurrenceRule))
+                        cmd.Parameters.AddWithValue("@RecurrenceRule", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@RecurrenceRule", value.RecurrenceRule);
+                    if (string.IsNullOrEmpty(value.Description))
+                        cmd.Parameters.AddWithValue("@Description", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@Description", value.Description);
+                    if (string.IsNullOrEmpty(value.StartTimeZone))
+                        cmd.Parameters.AddWithValue("@StartTimeZone", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@StartTimeZone", value.StartTimeZone);
+                    if (string.IsNullOrEmpty(value.EndTimeZone))
+                        cmd.Parameters.AddWithValue("@EndTimeZone", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@EndTimeZone", value.EndTimeZone);
+                    cmd.Connection = myCon;
+                    myCon.Open();
+                    cmd.ExecuteNonQuery();
+                    myCon.Close();
+                }
+            }
+            if (param.action == "remove" || param.deleted != null)  // this block of code will execute while removing the appointment
+            {
+                if (param.action == "remove")
+                {
+                    using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                    {
+                        myCon.Open();
+                        OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
+                        cmd.Parameters.AddWithValue("@Key", param.key);
+                        cmd.ExecuteNonQuery();
+                        myCon.Close();
+                    }
+                }
+                else
+                {
+                    foreach (var apps in param.deleted)
+                    {
+                        using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                        {
+                            myCon.Open();
+                            OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
+                            cmd.Parameters.AddWithValue("@Key", apps.Id);
+                            cmd.ExecuteNonQuery();
+                            myCon.Close();
+                        }
+                    }
+                }
+            }
+            if ((param.action == "batch" && param.changed != null) || param.action == "update")   // this block of code will execute while updating the appointment
+            {
+                var value = param.action == "update" ? param.value : param.changed[0];
+                using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                {
+                    myCon.Open();
+                    OleDbCommand cmd = new OleDbCommand("UPDATE DefaultSchedule SET Subject=@Subject,StartTime=@StartTime,EndTime=@EndTime,AllDay=@AllDay,Recurrence=@Recurrence,RecurrenceRule=@RecurrenceRule,Description=@Description,StartTimeZone=@StartTimeZone,EndTimeZone=@EndTimeZone  WHERE Id = @Key", myCon);
+                    if (string.IsNullOrEmpty(value.Subject))
+                        cmd.Parameters.AddWithValue("@Subject", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@Subject", value.Subject);
+                    cmd.Parameters.AddWithValue("@StartTime", value.StartTime);
+                    cmd.Parameters.AddWithValue("@EndTime", value.EndTime);
+                    cmd.Parameters.AddWithValue("@AllDay", value.AllDay);
+                    cmd.Parameters.AddWithValue("@Recurrence", value.Recurrence);
+                    if (string.IsNullOrEmpty(value.RecurrenceRule))
+                        cmd.Parameters.AddWithValue("@RecurrenceRule", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@RecurrenceRule", value.RecurrenceRule);
+                    if (string.IsNullOrEmpty(value.Description))
+                        cmd.Parameters.AddWithValue("@Description", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@Description", value.Description);
+                    if (string.IsNullOrEmpty(value.StartTimeZone))
+                        cmd.Parameters.AddWithValue("@StartTimeZone", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@StartTimeZone", value.StartTimeZone);
+                    if (string.IsNullOrEmpty(value.EndTimeZone))
+                        cmd.Parameters.AddWithValue("@EndTimeZone", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@EndTimeZone", value.EndTimeZone);
+                    cmd.Parameters.AddWithValue("@Key", value.Id);
+                    cmd.ExecuteNonQuery();
+                    myCon.Close();
+                }
+            }
+            OleDbConnection myAccessConn = new OleDbConnection(strAccessConn);
+            OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
+            OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
+            DataSet myDataSet = new DataSet();
+            myAccessConn.Open();
+            myDataAdapter.Fill(myDataSet, "DefaultSchedule");
+            List<ScheduleData> datasource = new List<ScheduleData>();
+            datasource = myDataSet.Tables[0].AsEnumerable().Select(dataRow => new ScheduleData { Id = dataRow.Field<int>("Id"), Subject = dataRow.Field<string>("Subject"), StartTime = dataRow.Field<DateTime>("StartTime"), EndTime = dataRow.Field<DateTime>("EndTime"), AllDay = dataRow.Field<bool>("AllDay"), Recurrence = dataRow.Field<bool>("Recurrence"), RecurrenceRule = dataRow.Field<string>("RecurrenceRule"), Description = dataRow.Field<string>("Description"), StartTimeZone = dataRow.Field<string>("StartTimeZone"), EndTimeZone = dataRow.Field<string>("EndTimeZone") }).ToList();
+            myAccessConn.Close();
+            return Json(datasource, JsonRequestBehavior.AllowGet);
+        }
+        
+        // Class definition for EditParams to be used as parameter in the above Crud method for receiving the object value in it.
+        public class EditParams
+        {
+            public string key { get; set; }
+            public string action { get; set; }
+            public List<ScheduleData> added { get; set; }
+            public List<ScheduleData> changed { get; set; }
+            public List<ScheduleData> deleted { get; set; }
+            public ScheduleData value { get; set; }
+        }
 
 {% endhighlight %}
 
@@ -585,7 +783,7 @@ The server-side code to load the Scheduler data on demand is as follows.
 
 ## Entity Framework Data Binding
 
-The appointment data can be bound to the Scheduler through entity framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the entity data model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
+The appointment data can be bound to the Scheduler through Entity Framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the Entity Data Model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
 
 {% highlight razor %}
 

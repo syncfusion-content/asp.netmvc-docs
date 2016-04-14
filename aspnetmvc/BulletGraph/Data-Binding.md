@@ -67,7 +67,7 @@ ViewBag.DataSource = data;
 
 {% endhighlight %}
 
-The following screenshot displays Bullet Graph with local data generated using Javascript
+The following screenshot displays Bullet Graph with local data generated using JavaScript
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 

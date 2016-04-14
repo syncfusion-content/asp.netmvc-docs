@@ -15,7 +15,7 @@ Accordion widget allows you to set Collapsible state for an Accordion header. Th
 
 ## Enable Collapsible settings
 
-The following code explains to enable Collapsible state for Accordion using mvc helper.
+The following code explains to enable Collapsible state for Accordion using MVC helper.
 
 {% highlight CSHTML %}
 

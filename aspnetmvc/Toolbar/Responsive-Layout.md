@@ -9,7 +9,7 @@ documentation: ug
 
 # Responsive Layout
 
-Responsive Layout is aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors). You can achieve Responsive Layout by using default functionality of Toolbar with IsResponsive as true and also you need to give Toolbar Width as in percentage value and add ej.responsive.css file in this sample. CDN link for the responsive css file is as follows.
+Responsive Layout is aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors). You can achieve Responsive Layout by using default functionality of Toolbar with IsResponsive as true and also you need to give Toolbar Width as in percentage value and add ej.responsive.css file in this sample. CDN link for the responsive CSS file is as follows.
 
 [http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
 

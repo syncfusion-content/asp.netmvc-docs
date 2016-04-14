@@ -1007,7 +1007,7 @@ It holds the binding name for <b>value</b> field in the priority dataSource.<br/
 
 ### Appointment Search
 
-The public method `searchAppointment` is used to search the appointments in the scheduler dataSource. It contains below four arguments such as search string, search field, filter operator and ignorecase.
+The client-side public method `searchAppointments` is used to search the appointments in the Scheduler dataSource. It contains the below four arguments such as search string, search field, filter operator and ignore case.
 
 **searchString** - It is used to search the given word / sentence with in the appointments data.
 

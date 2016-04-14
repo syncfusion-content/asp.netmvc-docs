@@ -219,7 +219,7 @@ After zooming the chart, a zooming toolbar will appear with options to *zoom*, *
 
 ### Types of zooming
 
-The *Type* option in zooming specifies whether the chart is allowed to scale along the horizontal axis(x) or vertical axis(y) or along both axis(xy). The default value of the Type is **xy** (both axis).
+The *Type* option in zooming specifies whether the chart is allowed to scale along the horizontal axis(X) or vertical axis(Y) or along both axis(X,Y). The default value of the Type is **"X,Y"** (both axis).
 
 {% highlight cshtml %}
 
@@ -435,7 +435,7 @@ X and Y values displayed in the trackball tooltip are formatted based on its axi
 
 ## Highlight
 
-EjChart provides highlighting support for the series and data points on mouse hover. To enable the highlighting option, set the *Enable* property to *True* in the **Highlightsettings** of the series.
+EjChart provides highlighting support for the series and data points on mouse hover. To enable the highlighting option, set the *Enable* property to *True* in the **HighlightSettings** of the series.
 
 N> When hovering mouse on the data points, the corresponding series legend also will be highlighted.
 
@@ -463,7 +463,7 @@ N> When hovering mouse on the data points, the corresponding series legend also 
 
 ### Highlight Mode
 
-You can set three different highlight mode for the highlighting data point and series by using the **Mode** property of the *Highlightsettings*.
+You can set three different highlight mode for the highlighting data point and series by using the **Mode** property of the *HighlightSettings*.
 
 * Series
 * Points
@@ -471,7 +471,7 @@ You can set three different highlight mode for the highlighting data point and s
 
 **Series mode**
 
-To highlight all the data points of the specified series, you can set the **Series** value to the *Mode* option in the highlighSettings. 
+To highlight all the data points of the specified series, you can set the **Series** value to the *Mode* option in the HighlightSettings. 
 
 
 {% highlight cshtml %}

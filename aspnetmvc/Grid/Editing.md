@@ -75,7 +75,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell edit type and its edit options
 
-The edit type of bound column can be customized using `EditType` property of `Columns`. The following Essential JavaScript controls are supported inbuilt by `EditType`. You can set the `EditType` based on specific data type of the column. 
+The edit type of bound column can be customized using `EditType` property of `Columns`. The following Essential JavaScript controls are supported built-in by `EditType`. You can set the `EditType` based on specific data type of the column. 
 
 * `NumericTextBox` control for integers, double, and decimal data types.
 * `DatePicker` control for date data type.
@@ -1078,10 +1078,10 @@ The below validation script files are needed when editing is enabled with valida
 2. jquery.validate.unobtrusive.min.js
  
  
-### Jquery Validation
+### jQuery Validation
 
 
-You can set validation rules using ` ValidationRules` property of `Columns`. The following are Jquery validation methods.
+You can set validation rules using ` ValidationRules` property of `Columns`. The following are jQuery validation methods.
 
 __List__ __of__ __Jquery__ __validation__ __methods__
 
@@ -1108,7 +1108,7 @@ maxlength</td><td>
 Requires the element to be of given maximum length.</td></tr>
 <tr>
 <td>
-rangelength</td><td>
+range</td><td>
 Requires the element to be in given value range.</td></tr>
 <tr>
 <td>
@@ -1120,16 +1120,12 @@ max</td><td>
 The element requires a given maximum.</td></tr>
 <tr>
 <td>
-range</td><td>
-Requires the element to be in a given value range.</td></tr>
-<tr>
-<td>
 email</td><td>
 The element requires a valid email.</td></tr>
 <tr>
 <td>
 url</td><td>
-The element requires a valid url</td></tr>
+The element requires a valid URL</td></tr>
 <tr>
 <td>
 date</td><td>
@@ -1156,7 +1152,7 @@ equalTo</td><td>
 Requires the element to be the same as another.</td></tr>
 </table>
 
-Grid supports all the standard validation methods of Jquery, please refer the Jquery validation documentation [link](http://jqueryvalidation.org/documentation/# "link") for more information.
+Grid supports all the standard validation methods of jQuery, please refer the jQuery validation documentation [link](http://jqueryvalidation.org/documentation/# "link") for more information.
 
 The following code example describes the above behavior.
 
@@ -1214,7 +1210,7 @@ The following output is displayed as a result of the above code example.
 
 ### Custom Validation
 
-In addition to Jquery validation methods, you can also add your own custom validation methods for a specific column. Function call to custom validator function to be mentioned within `ValidationRules` property of `Columns`. 
+In addition to jQuery validation methods, you can also add your own custom validation methods for a specific column. Function call to custom validator function to be mentioned within `ValidationRules` property of `Columns`. 
 
 Using `messages` property of `ValidationRules` you can specify the error message for that column.
 

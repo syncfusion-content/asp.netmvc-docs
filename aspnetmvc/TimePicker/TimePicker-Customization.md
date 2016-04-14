@@ -9,7 +9,7 @@ documentation: ug
 
 # TimePicker Customization
 
-The TimePicker provides support to display a TimePicker in your webpage and allows you to pick a time from it.
+The TimePicker provides support to display a TimePicker in your web page and allows you to pick a time from it.
 
 ## Creating TimePicker Widget
 

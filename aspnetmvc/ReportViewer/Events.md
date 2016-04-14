@@ -24,7 +24,7 @@ Fires when the ReportViewer is destroyed.</td></tr>
 <tr>
 <td>
 drillThrough</td><td>
-Fires during drill through action done in report and event can be cancelled.</td></tr>
+Fires during drill through action done in report and event can be canceled.</td></tr>
 <tr>
 <td>
 renderingBegin</td><td>
@@ -36,7 +36,7 @@ Report loaded method that is triggered when report and sub report begin loading.
 <tr>
 <td>
 reportError</td><td>
-Fires when any error occurs while rendering the report and event can be cancelled.</td></tr>
+Fires when any error occurs while rendering the report and event can be canceled.</td></tr>
 <tr>
 <td>
 reportLoaded</td><td>

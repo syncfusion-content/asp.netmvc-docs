@@ -69,7 +69,7 @@ The following output is displayed as a result of the above code example.
 
 A DataTable, which represents one table of in-memory relational data that has in-built schema to work easily with data column and data row objects.
 
-Binding DataTable to Grid is a very simpler way that you only need to set DataTable model to Grid `DataSource` api.
+Binding DataTable to Grid is a very simpler way that you only need to set DataTable model to Grid `DataSource` API.
 
 The following code example describes the above behavior.
 
@@ -133,7 +133,7 @@ The following output is displayed as a result of the above code example.
 
 ##  Entity Framework
 
-The collection of business objects generated from Entity Framework ORM can be used as Grid`s datasource. The Grid can be used with entity framework using either code first technique or Database first technique.
+The collection of business objects generated from Entity Framework ORM can be used as Grid`s datasource. The Grid can be used with Entity Framework using either code first technique or Database first technique.
 
 The following code example describes the above behavior.
 
@@ -177,9 +177,9 @@ See Also
 For more information on creating and consuming Entity Framework, please refer this [link]( https://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc). 
 
 
-## Linq to SQL
+## LINQ to SQL
 
-The Linq to SQL can be used as the data source of the Grid. And the Object Relation class which is used to map with Relational table, can be used as the type of the Grid to leverage the Data Annotation.
+The LINQ to SQL can be used as the data source of the Grid. And the Object Relation class which is used to map with Relational table, can be used as the type of the Grid to leverage the Data Annotation.
       
 The following code example describes the above behavior.
 
@@ -219,7 +219,7 @@ The following output is displayed as a result of the above code example.
 
 See Also
 
-For more information on using Linq to SQL please refer to this [link]( http://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
+For more information on using LINQ to SQL please refer to this [link]( http://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
 
 
 ##  ITypedList Binding 
@@ -737,7 +737,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Data-Binding_images/Data-Binding_img15.png)
 
-###  Handling Http Errors
+###  Handling HTTP Errors
 
 During server interaction from the Grid, there may occur some server-side exceptions and you can acquire those error messages or exception details in client-side using `ActionFailure` event of Grid control.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector | Diagram | ASP.NET MVC | Syncfusion
-description: connector
+title: Draw a line connecting two points, nodes or ports
+description: How to draw a line to connect points, nodes, or ports?
 platform: ejmvc
 control: Diagram
 documentation: ug
@@ -9,868 +9,769 @@ documentation: ug
 
 # Connector
 
-Connectors are objects used to create a link between two nodes. A connector is a line that has connection points at the ends of the line and stays connected to the elements that you attach it to.
+Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 
-
-
-![](Connector_images/Connector_img1.jpeg)
-
-Connector
-{:.caption}
+![](Connector_images/Connector_img1.png)
 
 ## Create Connector
 
-Connector is created from JSON data and added to the Diagram model by using Diagram Model’s Connectors property. The connector’s name must be unique. 
+Connector can be created by defining the start and end points. The path to be drawn can be defined with a collection of segments.
+To explore the properties of a `Connector`, refer to [Connector Properties](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Connector_members.html "Connector Properties").
 
-By default, the connector type is straight.
+### Add connectors through connectors collection
 
-The following code illustrates how to create a Connector and add it to Diagram.
-
-
+The `SourcePoint` and `TargetPoint` properties of connector allow you to define the end points of a `Connector`. The following code example illustrates how to add a connector through connector collection.
 
 {% highlight c# %}
-
-//Creates a connector
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-connector.SourcePoint = new DiagramPoint(300,40);
-
-connector.TargetPoint = new DiagramPoint(400, 250);
-
-connector.LineWidth=2;
-
-model.Connectors.Push(connector);
-
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+			//Name of the connector
+			Name = "Connector",
+			//Sets source and target points
+			SourcePoint = new DiagramPoint(100f, 100f),
+			TargetPoint = new DiagramPoint(200f, 200f),
+		};
+	model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
-
-
 
 ![](Connector_images/Connector_img2.png)
 
-Connector
-{:.caption}
+### Add connector at run time
 
-## Segments
-
-The connector has three types of segments.
-
-* Orthogonal Segments
-* Straight Segments
-* Bezier Segments
-
-### Orthogonal Segments
-
-Orthogonal segments are visually represented based on the specified length and direction values. 
-
-The following code example illustrates how to add a Connector with an OrthogonalSegment.
-
-
-
-{% highlight c# %}
-
-//Creates a connector with orthogonal line segment
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-connector.Segments = new Collection();
-
-
-
-//Creates orthogonal segment 
-
-Segment segment = new Segment();
-
-segment.Type= Segments.Orthogonal;
-
-//Adds segments 
-
-connector.Segments.Add(segment);
-
-connector.SourcePoint = new DiagramPoint(300, 40);
-
-connector.TargetPoint = new DiagramPoint(400, 250);
-
-connector.LineWidth = 2;
-
-model.Connectors.Push(connector);
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img3.png)
-
-Orthogonal Segment
-{:.caption}
-
-The following code illustrates how to customize Orthogonal Segment.
-
-
-
-{% highlight C# %}
- 
-
-
-//Creates a connector with orthogonal line segment
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-connector.Segments = new Collection();
-
-
-
-//Creates orthogonal segment 
-
-Segment segment = new Segment();
-
-segment.Type= Segments. Orthogonal;
-
-
-
-//Length and Direction for orthogonal segment
-
-segment.Length = 90;
-
-segment.Direction = "bottom";
-
-
-
-//Adds segments 
-
-connector.Segments.Add(segment);
-
-connector.SourcePoint = new DiagramPoint(300,40);
-
-connector.TargetPoint = new DiagramPoint(400, 250);
-
-connector.LineWidth=2;
-
-model.Connectors.Push(connector);
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img4.png)
-
-Orthogonal Segment
-{:.caption}
-
-### Straight Segment
-
-The straight segments can be added by specifying points as to where the line has to be drawn. The segment end point links the SourcePoint and TargetPoint of the connector. 
-
-The following code example illustrates how to add straight segment through code.
-
-{% highlight C# %}
-
-//Creates a connector with control points
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-//Creates straight segment 
-
-connector.Segments = new Collection();
-
-Segment segment1 = new Segment();
-
-segment1.Type= Segments. Straight;
-
-//Adds Points for segments
-
-Segment1.Point = new DiagramPoint(400,150);
-
-Segment segment2 = new Segment();
-
-Segment2.Type= Segments. Straight;
-
-Segment2.Point = new DiagramPoint(300,10);
-
-//Adds segments 
-
-connector.Segments.Add(segment1);
-
-connector.Segments.Add(segment2);
-
-
-
-connector.SourcePoint = new DiagramPoint(350,200);
-
-connector.TargetPoint = new DiagramPoint(200, 50);
-
-model.Connectors.Push(connector);
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img5.png)
-
-Polyline
-{:.caption}
-
-![](Connector_images/Connector_img6.png)
-
-Single Line
-{:.caption}
-
-The control points can be added or deleted at runtime with shortcut key combination ctrl + shift +click on the control point.
-
-## Bezier Segment
-
-Bezier segments can be added through points or vector.
-
-* Points (point1, point2) are absolute and are specified based on the origin of the page.
-* Vectors (vector1, vector2) are relative and are specified based on the length and angle between end points and control points.
-
-The following code example illustrates how to add Bezier segments.
-
-
-
-{% highlight C# %}
-
-//Creates a connector with bezier line segment
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-//Creates Bezier segment 
-
-connector.Segments = new Collection();
-
-Segment segment1 = new Segment();
-
-segment1.Type= Segments.Bezier;
-
-//Adds control points for segments
-
-segment1.Point1 = new DiagramPoint(40,80);
-
-segment1.Point2 = new DiagramPoint(40,72);
-
-
-//Addssegments 
-
-connector.Segments.Add(segment1);
-
-connector.SourcePoint = new DiagramPoint(350,200);
-
-connector.TargetPoint = new DiagramPoint(200, 50);
-
-model.Connectors.Push(connector);
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img7.png)
-
-Bezier Segments
-{:.caption}
-
-The following code example illustrates how to add vector point to Bezier segments.
-
-
-
-{% highlight C# %}
-
-
-//Creates a connector with bezier line segment
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-//Creates bezier segment 
-
-connector.Segments = new Collection();
-
-Segment segment1 = new Segment();
-
-segment1.Type= Segments.Bezier;
-
-//Adds Vector Points for segments
-
-segment1.Vector1 = new DiagramPoint(180,120);
-
-segment1.Vector2 = new DiagramPoint(10, 140);
-
-//Adds segments 
-
-connector.Segments.Add(segment1);
-
-connector.SourcePoint = new DiagramPoint(310,180);
-
-connector.TargetPoint = new DiagramPoint(190,40);
-
-model.Connectors.Push(connector);
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img8.png)
-
-Bezier segment with vectors
-{:.caption}
-
-## Editing Segments
-
-The segments can be edited during runtime by dragging control thumbs. Segments can be updated when neighboring segments are adjusted.
-
-
-
-![](Connector_images/Connector_img9.png)
-
-Segment Editing
-{:.caption}
-
-## Connector Padding
-
-Connector Padding allows you to adjust the space between connector’s end point and the object where it is connected (Node, Group, or Port). 
-
-### Endpoint adjustment specific to connector ends
-
-Padding distance between source or target end with its connected end (Node, Group, or Port) can be adjusted by using SourcePadding and TargetPadding, respectively.
-
-The following code example illustrates how to adjust the distance by using padding property.
-
-
-{% highlight c# %}
-
-
-Connector connector = new Connector();
-
-connector.SourcePadding = 15;
-
-connector.TargetPadding = 20;
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img10.png)
-
-Endpoint’s adjustment specific to connector’s ends
-{:.caption}
-
-### Endpoint adjustment specific to nodes
-
-ConnectorPadding property of a node is used to specify the amount of space needed in pixels between a node and all its connected edges.
-
-The following code examples illustrate how to pad edges connected to a node.
-
-{% highlight c# %}
-
-Node node = new Node();
-
-node.ConnectorPadding = 20;
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img11.png)
-
-Endpoint’s adjustment specific to nodes
-{:.caption}
-
-### Endpoint adjustment specific to ports
-
-ConnectorPadding property of a port is used to specify the amount of space needed in pixels between a port and all its connected edges.
-
-The following code examples illustrate how to pad edges connected to a port.
-
-{% highlight c# %}
-
-//Sets Padding for a port.
-
-Port port = new Port();
-
-port.ConnectorPadding = 20;
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img12.png)
-
-Endpoint adjustment specific to ports
-{:.caption}
-
-## Line Bridging
-
-Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. When two line connectors meet each other, the line with the higher z-order draws an arc over the line with lower z-order.
-
-Only straight and orthogonal connectors support line bridging.
-
-Line bridging is disabled, by default. You can enable it by adding ConnectorConstraints.Bridging in constraints.
-
-The following code illustrates how to enable line bridging.
-
-
-{% highlight c# %}
-
-//Enables Line Bridging for a single connector
-
-Connector connector = new Connector();
-
-connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
-
-//Enables Line Bridging for all connectors added to Diagram model
-
-DiagramContent.Constraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img13.png)
-
-Line Bridging
-{:.caption}
-
-When the connector constraint is set as ConnectorConstraints.InheritBridging, bridging is based on DiagramConstraints.
-
-### Line Bridging Direction
-
-Direction of the Line Bridge can be customized by using the BridgeDirection property. This property decides the intersecting segment that shows a bridge based on your preferred direction. 
-
-The default value for the Diagram model’s BridgeDirection property is BridgeDirection.Top.
-
-_BridgeDirection Property_
-
-<table>
-<tr>
-<th>
-Properties</th><th>
-Description</th><th>
-Value</th></tr>
-<tr>
-<td>
-BridgeDirection</td><td>
-Gets or sets the BridgeDirection for horizontal and vertical lines.</td><td>
-EnumBridgeDirection.LeftBridgeDirection.RightBridgeDirection.TopBridgeDirection.Bottom</td></tr>
-</table>
-
-The following code example is used to set Bridge Direction.
-
-
-
-Example 1: Bridge for Horizontal Connector with BridgeDirection as Top.
-
-
-{% highlight c# %}
-
-
-DiagramProperties model = new DiagramProperties();
-
-//Sets the Bridge Direction
-
-model.BridgeDirection = BridgeDirection.Top;
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img14.png)
-
-BridgeDirection.Top
-{:.caption}
-
-
-
-Example 2: Bridge for Vertical Connector with BridgeDirection as Left.
-
-
-{% highlight c# %}
-
-
-DiagramProperties model = new DiagramProperties();
-
-//Sets the Bridge Direction
-
-model.BridgeDirection = BridgeDirection.Left;
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img15.png)
-
-BridgeDirection.Left
-{:.caption}
-
-
-The following API method is used to change the BridgeDirection at runtime.
-
-
+Connectors can be added at runtime with the client side method, `add`. The following code example illustrates how to add connector at runtime.
 
 {% highlight js %}
 
-var diagram = $("#diagram").ejDiagram("instance");
-
-//Updates the Bridge Direction at runtime.
-
-diagram.update({ bridgeDirection: ej.datavisualization.Diagram.BridgeDirection.Top });
+// Defines JSON
+var connector = {
+	name: "connector",
+	sourcePoint: {
+		x: 100,
+		y: 100
+	},
+	targetPoint: {
+		x: 200,
+		y: 200
+	}
+};
+var diagram = $("#DiagramContent").ejDiagram("instance");
+// Adds to the Diagram
+diagram.add(connector);
 
 {% endhighlight %}
 
-## Corner Radius
+![](Connector_images/Connector_img3.png)
 
-CornerRadius support enables you to create connectors with rounded corners. 
+### Connectors from palette
 
-The following code example illustrates how to set corner radius for connectors.
+Connectors can be predefined and added to the symbol palette. You can drop those connectors into the Diagram, when required.
 
+For more information about adding connectors from symbol palette, refer to [Symbol Palette](/aspnetmvc/Diagram/Symbol-Palette "Symbol Palette").
 
+### Connectors through data source
+
+Connectors are automatically generated based on the relationships defined through the data source.
+The default properties for these connectors are fetched from default settings.
+
+For more information about data source, refer to [Data Binding](/aspnetmvc/Diagram/Data-Binding "Data Binding").
+
+### Draw connectors
+
+Connectors can be interactively drawn by clicking and dragging on the Diagram surface by using **DrawingTool**. For more information about drawing connectors, refer to [Draw Connectors](/aspnetmvc/Diagram/Tools#drawing-tools:connectors "Draw Connectors").
+
+## Update Connector at runtime
+
+The client side method, `updateConnector` is used to update the connectors at run time. The following code example illustrates how to update a connector at runtime.
+
+{% highlight js %}
+var diagram = $("#DiagramContent").ejDiagram("instance");
+diagram.updateConnector("connectorName", {
+	lineColor: "#1BA0E2",
+	lineWidth: 5,
+	lineDashArray: "5,5"
+});
+{% endhighlight %}
+
+## Connect nodes
+
+The `SourceNode` and `TargetNode` properties allow to define the nodes to be connected. The following code example illustrates how to connect two nodes.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    FlowShape task1 = new FlowShape(){
+		Name = "task1", OffsetX = 200, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	FlowShape task1 = new FlowShape(){
+		Name = "task2", OffsetX = 400, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } } 
+	};
+	
+	//Sets nodes collection to the Diagram model
+	model.Nodes.Add(task1);
+	model.Nodes.Add(task2);
+    
+	Connector connector = new Connector() {
+		Name = "flow1",
+		//Sets source and target node
+		SourceNode = "task1",
+		TargetNode = "task2"
+	};
+	//Sets connectors collection to the Diagram model
+	model.Connectors.Add(connector);
+	
+	//Defines the properties that carry the common values
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, FillColor = "darkCyan",
+		BorderColor = "black", Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { FontColor = "white" } } 
+	};
+	
+	ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img4.png)
+
+N> By default, connections are created at the intersecting point of segments and node bounds. The connection between any specific point of source and target nodes can be achieved with connection ports.
+
+### Connections with ports
+
+The `SourcePort` and `TargetPort` properties allow to create connections between some specific points of source/target nodes. The following code example illustrates how to create port to port connections.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    FlowShape task1 = new FlowShape(){
+		Name = "task1", OffsetX = 350, OffsetY = 300, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	FlowShape task2 = new FlowShape(){
+		Name = "task2", OffsetX = 200, OffsetY = 250, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } },
+		
+		//Defines ports for task2
+		Ports = new Collection() {
+			new Port(){
+				Name="in", Offset= new DiagramPoint(1f, 0.65f), Shape = PortShapes.Circle,
+				Visibility = PortVisibility.Visible, FillColor = "black"
+			},
+			new Port(){
+				Name="out", Offset= new DiagramPoint(1f, 0.35f), Shape = PortShapes.Circle,
+				Visibility = PortVisibility.Visible, FillColor = "black"
+			}
+		}
+	};
+	FlowShape task3 = new FlowShape(){
+		Name = "task3", OffsetX = 350, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	//Sets nodes collection to the Diagram model
+	model.Nodes.Add(task1);
+	model.Nodes.Add(task2);
+	model.Nodes.Add(task3);
+	
+	Connector connector = new Connector() {
+		Name = "flow1",
+		//Sets source and target node
+		SourceNode = "task1",
+		TargetNode = "task2",
+		//Name of the target port defined in the target node
+		TargetPort = "in"
+	};
+	Connector connector = new Connector() {
+		Name = "flow2",
+		//Sets source and target node
+		SourceNode = "task2",
+		TargetNode = "task3",
+		//Name of the target port defined in the target node
+		SourcePort = "out"
+	};
+	//Sets connectors collection to the Diagram model
+	model.Connectors.Add(connector);
+	
+	//Defines the properties that carry the common values
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, FillColor = "darkCyan",
+		BorderColor = "black", Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { FontColor = "white" } } 
+	};
+	model.DefaultSettings.Connector = new Connector(){
+		Segments = new Collection(){ new Segment(){ Type = Segments.Orthogonal }}
+	}
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img5.png)
+
+## Segments
+
+The path of the connector is defined with a collection of segments. There are three types of segments.
+
+### Straight
+
+Straight segment allows to create a straight line.
+To create a straight line, you should specify the `Type` of the segment as "straight" and add a straight segment to `Segments` collection. The following code example illustrates how to create a default straight segment.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 200f),
+		
+		//Defines segment collection
+		//When there is no previous segment, line starts from source point
+		//When the end point is not specified, line ends at target point
+		//Defines the type of the segment
+		Segments = new Collection() { new Segment() { Type = Segments.Straight }}
+	};
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/connector_img6.png)
+
+The `Point` property of straight segment allows you to define the end point of it. The following code example illustrates how to define the end point of a straight segment.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 300f),
+		
+		//Defines segment collection
+		//When there is no previous segment, line starts from source point
+		//When the end point is not specified, line ends at target point
+		//Defines the type of the segment
+		Segments = new Collection() { new Segment() {
+			Type = Segments.Straight,
+			// Defines the end point of the segment
+			// Additional straight line will be drawn from this end point to the target point
+			Point = new DiagramPoint(100f, 200f)
+		}}
+	}
+	
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img7.png)
+
+### Orthogonal
+
+Orthogonal segments are used to create segments that are perpendicular to each other.
+
+Set the segment `Type` as "Orthogonal" to create a default orthogonal segment. The following code example illustrates how to create a default orthogonal segment.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 200f),
+		
+		//Defines segment collection
+		//Defines the type of the segment
+		Segments = new Collection() { new Segment() { Type = Segments.Orthogonal }}
+	}
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img8.png)
+
+The `Length` and `Direction` properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 200f),
+		
+		//Defines segment collection
+		Segments = new Collection() { new Segment() {
+			//Defines the type of the segment
+			Type = Segments.Orthogonal,
+			// Orthogonal segment of 50px length to the bottom
+			Length = 50,
+			// Additional orthogonal segments will be added from the end of the last segment to the target point
+			Direction = "right"
+		}}
+	}
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img9.png)
+
+#### Avoid overlapping
+
+Orthogonal segments are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following images illustrate how orthogonal segments are re-routed.
+
+![](Connector_images/Connector_img10.png)
+
+![](Connector_images/Connector_img11.png)
+
+N> Overlapping with source and target nodes are only avoided. Other nodes are not considered as obstacles.
+
+### Bezier
+
+Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
+
+To create a bezier segment, the `Segment.Type` is set as `Bezier`. The following code example illustrates how to create a default Bezier segment.
 
 {% highlight c# %}
 
-//For node creation refer the link Node Creation
-
-//For Creating connection refer to the link Connecting nodes
-
-//Adds corner radius for connector
-
-Connector connector = new Connector();
-
-Connector.CornerRadius=20;
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 100f),
+		TargetPoint = new DiagramPoint(200f, 200f),
+		
+		//Defines segment collection
+		Segments = new Collection() { new Segment() {
+			//Defines the type of the segment
+			Type = Segments.Bezier
+		}}
+	}
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
+![](Connector_images/Connector_img12.png)
 
+The `Point1` and `Point2` properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the Bezier segments with control points.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 200f),
+		TargetPoint = new DiagramPoint(250f, 200f),
+		
+		//Defines segment collection
+		Segments = new Collection() { new Segment() {
+			//Defines the type of the segment
+			Type = Segments.Bezier, 
+			//First control point: an absolute position from the page origin
+			Point1 = new DiagramPoint(125f, 75f),
+			//Second control point: an absolute position from the page origin
+			Point2 = new DiagramPoint(225f, 75f)
+		}}
+	}
+    //Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img13.png)
+
+The `Vector1` and `Vector2` properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
+
+{% highlight js %}
+//Defines JSON
+var connector = {
+	name: "connector",
+	sourcePoint: { x: 100, y: 200 },
+	targetPoint: { x: 250, y: 200 },
+	//Defines segment collection
+	segments: [
+	{
+		// Defines the type of the segment
+		type: "bezier",
+		// Length and angle between the source point and the first control point
+		vector1: { angle: 270, distance: 75 },
+		// Length and angle between the target point and the second control point
+		vector2: { angle: 270, distance: 75 }
+	}]
+};
+connectors.push(connector);
+{% endhighlight %}
+
+![](Connector_images/Connector_img14.png)
+
+### Complex segments
+
+Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to `Connector.Segments` collection. The Following code example illustrates how to create a connector with multiple segments.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1",
+		SourcePoint = new DiagramPoint(100f, 200f), TargetPoint = new DiagramPoint(250f, 300f),
+		//Defines segment collection
+		Segments = new Collection() {
+			// Segment of length 100px to the bottom
+			new Segment() { Type = Segments.Orthogonal, Length = 100, Direction = "bottom" },
+			
+			// Segment of length 150px to the bottom
+			//Additional orthogonal segments will be added from the end of the last segment to the target point
+			new Segment() { Type = Segments.Orthogonal, Length = 150, Direction = "right" }
+		}
+	}
+ 	//Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img15.png)
+
+## Decorator
+
+Start and end points of a connector can be decorated with some customizable shapes like arrows, circles, diamond or path. You can decorate the connection end points with the `SourceDecorator` and `TargetDecorator` properties of connector.
+To explore the properties of decorators, refer to [Decorator Properties](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.Diagram.Decorator_members.html "Decorator Properties").
+
+The `Shape` property of decorator allows to define the shape of the decorators. The following code example illustrates how to create decorators of various shapes.
+
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector1 = new Connector() {
+		Name = "connector1",SourcePoint = new DiagramPoint(100f, 100f), TargetPoint = new DiagramPoint(200f, 200f),
+		//Decorator shape - Circle
+		SourceDecorator = new Decorator() { Shape = DecoratorShapes.Circle, Width = 10, Height = 10 },
+		//Decorator shape - Arrow
+		TargetDecorator = new Decorator() { Shape = DecoratorShapes.Arrow, Width = 10, Height = 10 }
+	};
+	Connector connector2 = new Connector() {
+		Name = "connector2",SourcePoint = new DiagramPoint(300f, 100f), TargetPoint = new DiagramPoint(400f, 200f),
+		//Decorator shape - Diamond
+		SourceDecorator = new Decorator() { Shape = DecoratorShapes.Diamond, Width = 10, Height = 10 },
+		//Decorator shape - Open Arrow
+		TargetDecorator = new Decorator() { Shape = DecoratorShapes.OpenArrow, Width = 10, Height = 10 }
+	};
+	Connector connector3 = new Connector() {
+		Name = "connector3",SourcePoint = new DiagramPoint(500f, 100f), TargetPoint = new DiagramPoint(600f, 200f),
+		//Decorator shape - Path
+		TargetDecorator = new Decorator() { Shape = DecoratorShapes.Path, PathData = "M 376.892,225.284L 371.279,211.95L 376.892,198.617L 350.225,211.95L 376.892,225.284 Z" }
+	};
+	
+	//Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector1);
+	model.Connectors.Add(connector2);
+	model.Connectors.Add(connector3);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+
+{% endhighlight %}
 
 ![](Connector_images/Connector_img16.png)
 
-Corner Radius
-{:.caption}
+## Padding
 
-## Connecting Nodes
+Padding is used to leave space between the Connector's end point and the object to where it is connected.
 
-Connector is connected to the bounds of the node and at a specific point on the node.You are required to assign the source node name to connector’s SourceNode property and target node name to connector’s TargetNode property, in order to establish the connection. The port to port connection between specific points on node is established by assigning the name of the node’s port to connector’s TargetPort /SourcePort. At runtime, you can change the point of connection while dragging or rotating node.
-
-
+The `SourcePadding` and `TargetPadding` properties of connector define the space to be left between the connection end points and the source and target nodes of connector. The following code example illustrates how to leave space between the connection end points and source, target nodes.
 
 {% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	FlowShape task1 = new FlowShape(){
+		Name = "task1", OffsetX = 200, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	FlowShape task2 = new FlowShape(){
+		Name = "task2", OffsetX = 400, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } } 
+	};
+	model.Nodes.Add(task1);
+	model.Nodes.Add(task2);
+	
+	model.Nodes.Add(new Connector() {
+		Name = "flow1", SourceNode = "task1", TargetNode = "task2",
+		//Space between source point and source object
+		SourcePadding = 5,
+		//Space between target point and target object
+		TargetPadding = 10
+	});
+	
+	//Defines the properties that carry the common values
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, BorderColor = "black", FillColor = "darkCyan",
+		Labels = new Collection() { new Label() { FontColor = "white" } } 
+	}
+	ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
 
+![](Connector_images/Connector_img17.png)
 
+The `ConnectorPadding` property of node defines the space to be left between the node bounds and its edges. The following code example illustrates how to leave the space between a node and its connections.
 
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	FlowShape task1 = new FlowShape() {
+		Name = "task1", OffsetX = 200, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } },
+		//Space between the node and its edges
+		ConnectorPadding = 5
+	};
+	FlowShape task2 = new FlowShape() {
+		Name = "task2", OffsetX = 400, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } } 
+	};
+	model.Nodes.Add(task1);
+	model.Nodes.Add(task2);
+	
+	model.Connectors.Add( new Connector() { Name = "flow1", SourceNode = "task1", TargetNode = "task2" });
+	
+	//Sets the default properties for nodes
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, BorderColor = "black", FillColor = "darkCyan",
+			Labels = new Collection() { new Label() { FontColor = "white" } } 
+	};
+	ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
 
-//for node creation refer to the link [Node creation](http://help.syncfusion.com/aspnetmvc/diagram/connector)
+![](Connector_images/Connector_img18.png)
 
-//Creates a connection between headNode/tailNode using connector
+The `ConnectorPadding` property of port defines the space between the ports and its in/out edges. The following code example illustrates how to leave the space between ports and its connections.
 
-Connector connector = new Connector();
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	FlowShape task1 = new FlowShape() {
+		Name = "task1", OffsetX = 200, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	FlowShape task2 = new FlowShape() {
+		Name = "task2", OffsetX = 400, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } },
+		//Defines ports for task2
+		Ports = new Collection() {
+			new Port(){
+				Name = "port", Offset = new DiagramPoint(0f, 0.5f), Shape = PortShapes.Circle,
+				Visibility = PortVisibility.Visible, FillColor = "black",
+				//Space between port and its edges
+				ConnectorPadding = 5
+			}
+		}
+	};
+	model.Nodes.Add(task1);
+	model.Nodes.Add(task2);
+	
+	model.Connectors.Add(new Connector() { Name = "flow1", SourceNode = "task1", TargetNode = "task2", TargetPort = "port"});
+	
+	//Sets the default properties for nodes
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, BorderColor = "black", FillColor = "darkCyan",
+		Labels = new Collection() { new Label() { FontColor = "white" } }
+	}
+	ViewData["diagramModel"] = model;
+    return View();
+}		
+{% endhighlight %}
 
-connector.SourceNode = "headNode"; //Sets name of sourceNode
+![](Connector_images/Connector_img19.png)
 
-connector.TargetNode = "tailNode"; //Sets name of targetNode
+## Bridging
 
+Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. When two line connectors meet each other, the line with the higher z-order (upper one) draws an arc over the underlying connector.
+Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
 
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "Connector1", SourcePoint = new DiagramPoint(100f, 100f), TargetPoint = new DiagramPoint(200f, 200f),
+		//Removes inherit bridging or else bridging is enabled/disabled based on the Diagram constraints
+		//And includes bridging
+		Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.InheritBridging | ConnectorConstraints.Bridging
+	};
+	model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
+
+![](Connector_images/Connector_img20.png)
+
+The direction of the bridge can be customized with the property `BridgeDirection`. BridgeDirection defines the intersecting segment where the bridge has to be inserted. By default, the bridge direction points to the top.
+
+To explore the bridge directions, refer to [Bridge Directions](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties~BridgeDirection.html "Bridge Directions").
+
+The following code example illustrates how to draw the bridge at the bottom direction.
+
+{% highlight razor %}
+
+@using Syncfusion.JavaScript.DataVisualization.DiagramEnums 
+@using Syncfusion.JavaScript.DataVisualization.Models.Diagram
+
+@(Html.EJ().Diagram("Diagram").Width("100%").Height("600px")
+	@*Sets the bridge direction*@
+	.BridgeDirection(BridgeDirection.Bottom)
+	@*Enables bridging for every connector added in the model*@
+	.Constraints(DiagramConstraints.Default | DiagramConstraints.Bridging)
+)
 
 {% endhighlight %}
 
+![](Connector_images/Connector_img21.png)
 
+**Limitation**: Bezier segments do not support bridging.
 
-![](Connector_images/Connector_img17.jpeg)
+## Corner radius
 
-Node to Node Connection
-{:.caption}
+Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with `CornerRadius` property.
 
-The point of connection is changed optimally at runtime while performing operations such as Rotating and Dragging on Source/Target Node of Connector. In case of static or specific point connection at runtime, the Port assists to maintain specific point connection between Nodes.
+{% highlight c# %}
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+	FlowShape task1 = new FlowShape() {
+		Name = "task1", OffsetX = 200, OffsetY = 200, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 1" } } 
+	};
+	FlowShape task1 = new FlowShape() {
+		Name = "task2", OffsetX = 350, OffsetY = 300, Shape = FlowShapes.Process,
+		Labels = new Collection() { new Label() { Text = "Task 2" } },
+	};
+	Connector connector = new Connector() {
+		Name = "flow1",
+		SourceNode = "task1",
+		TargetNode = "task2",
+		//Sets the radius for the rounded corner
+		CornerRadius = 10
+	};
+	//Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+	
+    //Sets the default properties for nodes
+	model.DefaultSettings.Node = new Node() {
+		Width = 100, Height = 50, BorderColor = "black", FillColor = "darkCyan",
+		Labels = new Collection() { new Label() { FontColor = "white" } } 
+	};
+	model.DefaultSettings.Connector = new Connector(){
+		Segments = new Collection(){ new Segment(){ Type = Segments.Orthogonal }}
+	}
+	ViewData["diagramModel"] = model;
+    return View();
+}
+{% endhighlight %}
 
-## Connecting Ports
-
-Port establishes the connection with nodes at a specific point.
-
-For creating specific port connection, refer to the link [Port to Port Connection.](http://help.syncfusion.com/aspnet/diagram/port)
+![](Connector_images/Connector_img22.png)
 
 ## Appearance
 
-You can customize the appearance of the connector by setting a desired value to the appropriate appearance properties. The following code illustrates how to customize the appearance of connector.
+Stroke width, stroke color, and style of the lines and decorators can be customized with a set of defined properties.
 
-_Appearance_
+### Segment Appearance
 
-<table>
-<tr>
-<th>
-Properties</th><th>
-Data Type</th><th>
-Description</th></tr>
-<tr>
-<td>
-LineWidth</td><td>
-Int</td><td>
-Gets or sets the width of the line</td></tr>
-<tr>
-<td>
-LineDashArray</td><td>
-String</td><td>
-Gets or sets the pattern of dashes and gaps used to stroke connector border.</td></tr>
-<tr>
-<td>
-LineColor</td><td>
-String</td><td>
-Gets or sets the line color of the connector</td></tr>
-<tr>
-<td>
-Opacity</td><td>
-Int</td><td>
-Gets or sets the opacity of the connector</td></tr>
-</table>
-
+The following code example illustrates how to customize the segment appearance.
 
 {% highlight c# %}
-
-
- //Sets various appearance properties to connector
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-connector.LineWidth = 2;
-
-connector.LineColor = "green";
-
-connector.LineDashArray = "4 4";
-
-connector.Segment = new Segment(Segments.Orthogonal);
-
-connector.SourcePoint = new DiagramPoint(10, 10);
-
-connector.TargetPoint = new DiagramPoint(70, 40);
-
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		Name = "connector", SourcePoint = new DiagramPoint(100f, 100f), TargetPoint = new DiagramPoint(200f, 200f),
+		//Stroke width of the line
+		LineWidth = 2,
+		//Stroke color
+		LineColor = "green",
+		//Line style
+		LineDashArray = "2,2",
+		//Opacity of the line
+		Opacity = 0.8,
+	};
+	//Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
-##  Decorator
+### Decorator Appearance
 
-You can decorate the source point and target point of the connector by using decorator shape. The SourceDecorator and TargetDecorator properties are used to add decorators to connector.The following code illustrates how decorator is created and added at connector’s target point.
-
-
+The following code example illustrates how to customize the appearance of the decorator.
 
 {% highlight c# %}
-
-
-
-
-
-
-//Sets TargetDecorator and SourceDecorator
-
-Connector connector = new Connector();
-
-connector.Name = "Connector";
-
-connector.TargetDecorator = new Decorator();
-
-connector.TargetDecorator.Shape = DecoratorShapes.Arrow;
-
-connector.TargetDecorator.Width = 10;
-
-connector.TargetDecorator.Height = 10;
-
-connector.SourceDecorator.Shape = DecoratorShapes.Circle;
-
-connector.SourceDecorator.Width = 10;
-
-connector.SourceDecorator.Height = 10;
-
-
-
+public ActionResult Index()
+{
+    DiagramProperties model = new DiagramProperties();
+    Connector connector = new Connector() {
+		//Customizes the appearance of decorator
+		TargetDecorator = = new Decorator(){
+			//Defines the shape
+			Shape = DecoratorShapes.Arrow,
+			//Fills color of the decorator
+			FillColor = "red",
+			//Stroke color
+			BorderColor = "green",
+			//Stroke width
+			BorderWidth = 2,
+			Width = 10,
+			Height = 10
+		}
+	};
+	//Sets connectors collection to the Diagram model
+    model.Connectors.Add(connector);
+    ViewData["diagramModel"] = model;
+    return View();
+}
 {% endhighlight %}
 
-## Decorator Appearance
+![](Connector_images/Connector_img23.png)
 
-Decorator appearance is customized by setting the desired value to the appropriate appearance properties.
-
-_Decorator Appearance_
-
-<table>
-<tr>
-<th>
-Properties</th><th>
-Data Type</th><th>
-Description</th></tr>
-<tr>
-<td>
-Width</td><td>
-Int</td><td>
-Gets or sets the width of the decorator.</td></tr>
-<tr>
-<td>
-Height</td><td>
-Int</td><td>
-Gets or sets the height of the decorator.</td></tr>
-<tr>
-<td>
-BorderColor</td><td>
-String</td><td>
-Gets or sets the border color of the decorator.</td></tr>
-<tr>
-<td>
-FillColor</td><td>
-String</td><td>
-Gets or sets the fill color of the decorator.</td></tr>
-<tr>
-<td>
-Shape</td><td>
-DecoratorShapes</td><td>
-Gets or sets the shape of the decorator.</td></tr>
-<tr>
-<td>
-PathData</td><td>
-String</td><td>
-Gets or sets the path data of the decorator.</td></tr>
-</table>
-
-
-The following code illustrates how to customize Decorator Shape.
-
-
-
-{% highlight c# %}
-
-
-
-
-
-
-//Sets various appearance properties to decorator
-
-Connector connector = new Connector();
-
-connector.TargetDecorator.Shape = DecoratorShapes.Arrow;
-
-connector.TargetDecorator.Width = 8;
-
-connector.TargetDecorator.Height = 8;
-
-connector.TargetDecorator.BorderColor = "black";
-
-connector.SourceDecorator.Shape = DecoratorShapes.Circle;
-
-connector.SourceDecorator.Width = 8;
-
-connector.SourceDecorator.Height = 8;
-
-connector.SourceDecorator.FillColor = "yellow";
-
-
-
-{% endhighlight %}
-
-
-
-![](Connector_images/Connector_img18.jpeg)
-
-Decorator Shape
-{:.caption}
+## Interaction
+Diagram allows to edit the connectors at runtime. To edit the connector segments at runtime, refer to [Connection Editing](/js/Diagram/Interaction#connection-editing "Connection Editing").
 
 ## Constraints
-
-Connector Constraints
-
-You can enable or disable certain behaviors of Connectors by using the Constraints property.__
-
-_Constraints_
-
-<table>
-<tr>
-<th>
-Constraints</th><th>
-Description</th></tr>
-<tr>
-<td>
-None</td><td>
-Disable all the constraints.</td></tr>
-<tr>
-<td>
-Select</td><td>
-Enables or disables selection.</td></tr>
-<tr>
-<td>
-Delete</td><td>
-Enables or disables deletion.</td></tr>
-<tr>
-<td>
-Drag</td><td>
-Enables or disables dragging.</td></tr>
-<tr>
-<td>
-DragSourceEnd</td><td>
-Enables or disables the source end to be dragged.</td></tr>
-<tr>
-<td>
-DragTargetEnd</td><td>
-Enables or disables the target end to be dragged.</td></tr>
-<tr>
-<td>
-DragsegmentThumbs</td><td>
-Enables or disables control point and end point of every segment in a connector for editing.</td></tr>
-<tr>
-<td>
-Bridging</td><td>
-Enables or disables bridging to the connector.</td></tr>
-<tr>
-<td>
-DragLabel</td><td>
-Enables or disables label of node to be dragged.</td></tr>
-<tr>
-<td>
-InheritBridging</td><td>
-Enables or disables bridging based on the diagram constraints.</td></tr>
-<tr>
-<td>
-Default</td><td>
-Enables all constraints.</td></tr>
-</table>
-
-
-The default value for the connector constraints property is ConnectorConstraints.Default.
-
-### Example
-
-The following code illustrates how to disable select constraints of connector. Disabling select constraints does not allow you to select connector.
-
-
-
-{% highlight c# %}
-
-//Disables select constraint
-
-connector.Constraints = connector.Constraints &~(ConnectorConstraints.Select);
-
-{% endhighlight %}
-
-
-
-
-
-N> Connectors constraints property is manipulated by using bitwise operations. For more information about bitwise operations, see [Bitwise Operations](http://help.syncfusion.com/aspnet/diagram/constraints) 
-
+The `Constraints` property of connector allows to enable/disable certain features of connectors. For more information about constraints, refer to [Connector Constraints](/aspnetmvc/Diagram/Constraints#connectorconstraints "Connector Constraints").

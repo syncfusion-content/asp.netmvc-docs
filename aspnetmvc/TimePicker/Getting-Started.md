@@ -13,7 +13,7 @@ This section explains briefly about how to create a TimePicker in your applicati
 
 ## Create your first TimePicker in MVC
 
-Essential MVCTimePicker provides support to display the time in your webpage and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
+Essential MVCTimePicker provides support to display the time in your web page and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -362,7 +362,7 @@ You can select the Start time in the first TimePicker and select the End time wi
 
 ### Display Reserved Time 
 
-An acknowledgement message appears when you click the Submit button. 
+An acknowledgment message appears when you click the Submit button. 
 
 You can specify the alert message in the script as follows.
 

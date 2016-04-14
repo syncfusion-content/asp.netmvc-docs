@@ -42,7 +42,7 @@ Add the following assemblies in your MVC application for using Barcode control:
 
 * Syncfusion.Core.dll
 * Syncfusion.EJ.dll
-* Syncfusion.EJ.MVCdll
+* Syncfusion.EJ.MVC.dll
 
 These Syncfusion assemblies can either be referenced from Global Assembly Cache (GAC) or from the installed folder.
 

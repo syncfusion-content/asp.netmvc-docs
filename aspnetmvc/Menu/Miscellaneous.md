@@ -487,7 +487,7 @@ Title text for Responsive Layout
 
 ## Show root level arrows
 
-Specifies the main menu item arrows to display only when it contains child menu items. You can use “ShowRooltLevelArrows” property to display the arrows of main menu items only when it contains child menu items. This property accepts Boolean value. Its default value is true. 
+Specifies the main menu item arrows to display only when it contains child menu items. You can use “ShowRootLevelArrows” property to display the arrows of main menu items only when it contains child menu items. This property accepts Boolean value. Its default value is true. 
 
 1. Add the following code in your view page to render the menu with root level arrows
 

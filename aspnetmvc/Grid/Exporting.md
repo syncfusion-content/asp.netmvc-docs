@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting
 
-`Exporting` feature provides support to export Grid data into excel, word and pdf files. To export the grid, `export` javascript method should be called with export action as parameter. To make it work from grid tool bar, `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is
+`Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar, `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is
 
 {% tabs %}
  
@@ -136,11 +136,11 @@ Currently server helper function allows following three types of exporting.
 
     1.  Word
     2.  Excel
-    3.  Pdf
+    3.  PDF
 
 ##  Server side handlers
 
-In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter, you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, pdf and word documents.
+In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter, you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, PDF and word documents.
 
 {% tabs %}
  
@@ -249,7 +249,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 {% endtabs %} 
 
-On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for Pdf Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the default routing path is ~/Home/ExportToExcel.
+On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for PDF Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the default routing path is ~/Home/ExportToExcel.
 
 
 
@@ -486,7 +486,7 @@ In controller action method you are able to export all the grids available in cu
   
 ## Export required grid in single file
 
-You can export required grids in single file using `ej.Grid.exportAll` method. This method can be used with export action and array of jquery selector of grid which need to be export. The code snippet for it is
+You can export required grids in single file using `ej.Grid.exportAll` method. This method can be used with export action and array of jQuery selector of grid which need to be export. The code snippet for it is
 
 {% highlight js %}
 
@@ -929,7 +929,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 ## Exporting server events
 
-`Exporting` feature supports server side event handler. You can handle server side event while exporting grid to various files such as Excel, Pdf and Word. The various server side events available in Exporting and its argument types are listed in the following table.
+`Exporting` feature supports server side event handler. You can handle server side event while exporting grid to various files such as Excel, PDF and Word. The various server side events available in Exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
@@ -995,7 +995,7 @@ ServerPdfQueryCellInfo
 currentCell
 </td>
 <td>
-It returns the current cell of pdf.
+It returns the current cell of PDF.
 </td>
 </tr>
 <tr>
@@ -1006,7 +1006,7 @@ ServerPdfRowInfo
 range
 </td>
 <td>
-It returns the current row of pdf.
+It returns the current row of PDF.
 </td>
 </tr>
 </table>

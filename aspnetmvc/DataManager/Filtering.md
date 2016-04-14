@@ -25,23 +25,23 @@ Filter operators</th></tr>
 <tr>
 <td>
 Number</td><td>
-ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOperators.lessThanej.FilterOperators.lessThanOrEqualej.FilterOperators.equal</td></tr>
+ej.FilterOperators.greaterThan,ej.FilterOperators.greaterThanOrEqual,ej.FilterOperators.lessThan,ej.FilterOperators.lessThanOrEqual,ej.FilterOperators.equal</td></tr>
 <tr>
 <td>
 String</td><td>
-ej.FilterOperators.startsWithej.FilterOperators.endsWithej.FilterOperators.containsej.FilterOperators.equalej.FilterOperators.notEqual</td></tr>
+ej.FilterOperators.startsWith,ej.FilterOperators.endsWith,ej.FilterOperators.contains,ej.FilterOperators.equal,ej.FilterOperators.notEqual</td></tr>
 <tr>
 <td>
 Boolean</td><td>
-ej.FilterOperators.equalej.FilterOperators.notEqual</td></tr>
+ej.FilterOperators.equal,ej.FilterOperators.notEqual</td></tr>
 <tr>
 <td>
 Date</td><td>
-ej.FilterOperators.greaterThanej.FilterOperators.greaterThanOrEqualej.FilterOperators.lessThanej.FilterOperators.lessThanOrEqualej.FilterOperators.equal</td></tr>
+ej.FilterOperators.greaterThan,ej.FilterOperators.greaterThanOrEqual,ej.FilterOperators.lessThan,ej.FilterOperators.lessThanOrEqual,ej.FilterOperators.equal</td></tr>
 </table>
 
 
-## lessThan
+## lessthan
 
 This operator is used to get the records with values lesser than the filter value.
 

@@ -34,6 +34,6 @@ To work with Syncfusion MVC components, you need to install the following
 
 * **Visual Studio 2010** or higher
 * **ASP.NET MVC3**, **MVC4** and **MVC5** (**beta 8**)
-* **.NET framework version 4.0** or higher
+* **.NET Framework version 4.0** or higher
 * **Microsoft SQL Server 2005** or higher
 * **Web browsers** with **JavaScript** enabled

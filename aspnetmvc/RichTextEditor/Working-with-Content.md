@@ -369,9 +369,9 @@ N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.val
 
 ### jQuery Validation Methods
 
-The following are jquery validation methods.
+The following are jQuery validation methods.
 
-_List of jquery validation methods_
+_List of jQuery validation methods_
 
 <table>
 <tr>
@@ -528,9 +528,9 @@ Now, add following two settings in &lt;appsettings&gt; section of web.config, if
 
 In the Server Side Validation, the input submitted by the user is being sent to the server and validated using one of server side scripting languages. After the validation process on the Server Side, the feedback is sent back to the client.
 
-ASP.NET MVC uses Data Annotations attributes to implement validations. Data Annotations includes built-in validation attributes for different validation rules, which can be applied to the properties of model class. ASP.NET MVC framework will automatically enforce these validation rules and display validation messages in the view.
+ASP.NET MVC uses Data Annotations attributes to implement validations. Data Annotations includes built-in validation attributes for different validation rules, which can be applied to the properties of model class. ASP.NET MVC Framework will automatically enforce these validation rules and display validation messages in the view.
 
-1.	First of all, apply DataAnnnotation attribute on the properties of RTE model class. Here, we have validate the value of the RichTextEditor should not be empty. 
+1.	First of all, apply DataAnnotation attribute on the properties of RTE model class. Here, we have validate the value of the RichTextEditor should not be empty. 
 
     {% highlight html %}
     
@@ -609,7 +609,7 @@ ASP.NET MVC uses Data Annotations attributes to implement validations. Data Anno
         
     {% endhighlight %}
 
-    As you can see in the above RichTextEditorFeatures.cshtml, it calls Html Helper method ValidationMessageFor for every field. ValidationMessageFor is responsible to display error message for the specified field.
+    As you can see in the above RichTextEditorFeatures.cshtml, it calls HTML Helper method ValidationMessageFor for every field. ValidationMessageFor is responsible to display error message for the specified field.
     So now, it will display default validation message when you submit the form without entering a value for the RichTextEditor.
 
 ![](WorkingwithContent_images/Server.png)

@@ -208,12 +208,12 @@ If the client width is between 321px and 800px, then the grid will render in tab
 ![](Responsive_images/Responsive_img8.png)
 {:caption}
 
-Default tablayout
+Default tab layout
 
 ![](Responsive_images/Responsive_img9.png)
 
 {:caption}
-Filtering design in tablayout.
+Filtering design in tab layout.
 
 ## Width
 

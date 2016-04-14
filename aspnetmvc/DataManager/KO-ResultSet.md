@@ -63,5 +63,5 @@ Before changing the model, EmployeeID 1 has FullName value as Nancy Davolio. Aft
 
 ![](KO-ResultSet_images/KO-ResultSet_img1.png)
 
-KnockOut Resultset
+Knockout Resultset
 {:.caption}
