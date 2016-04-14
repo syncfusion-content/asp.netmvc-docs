@@ -82,7 +82,7 @@ First Level Group List
 
 ## Nested Child Group List
 
-While selecting a list item that is grouped, you can also render another set of list items. This is achieved by defining the desired child item list within the list containing”PrimaryKeyValue”. This PrimaryKeyValue property relates the parent child for identifying its appropriate child when clicking on the parent list item.
+While selecting a list item that is grouped, you can also render another set of list items. This is achieved by defining the desired child item list within the list containing ”PrimaryKeyValue”. This PrimaryKeyValue property relates the parent child for identifying its appropriate child when clicking on the parent list item.
 
 Refer the following code examples.
 

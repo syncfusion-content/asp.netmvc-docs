@@ -43,7 +43,7 @@ It class is applied to image of Tile</td></tr>
 <tr>
 <td>
 e-tile-template</td><td>
-It class is applied to tile image when tile has imagetemplateid property.</td></tr>
+It class is applied to tile image when tile has image template id property.</td></tr>
 <tr>
 <td>
 e-live-tile-text</td><td>
@@ -51,7 +51,7 @@ It class is applied to text elements of individual live tile in the Tile control
 <tr>
 <td>
 e-template-caption</td><td>
-This class is applied to tile caption when tile has captiontemplateid property.</td></tr>
+This class is applied to tile caption when tile has caption template id property.</td></tr>
 </table>
 
 
