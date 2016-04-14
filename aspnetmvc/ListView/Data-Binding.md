@@ -11,7 +11,7 @@ documentation: ug
 
 ## Local Data Binding
 
-Essential Studio WebJS ListView provides support for Data Binding. Data Binding provides a simple and consistent way for applications to present and interact with data. Elements can be bounded to data from a variety of data sources. In local data binding, the data source is written inside the program. Then it is handled by the ListView control. DataSource is used to get the data source that holds the list items.
+Essential Studio WebJS ListView provides support for Data Binding. Data Binding provides a simple and consistent way for applications to present and interact with data. Elements can be bounded to data from a variety of data sources. In local databinding, the data source is written inside the program. Then it is handled by the ListView control. DataSource is used to get the data source that holds the list items.
 
 Please refer the following code examples.
 

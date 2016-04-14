@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data binding | ListBox | ASP.NET MVC | Syncfusion
+title: Databinding | ListBox | ASP.NET MVC | Syncfusion
 description: data binding 
 platform: ejmvc
 control: ListBox
 documentation: ug
 ---
 
-# Data binding 
+# Databinding 
 
 ## Field mapping
 
