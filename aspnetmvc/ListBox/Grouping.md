@@ -13,7 +13,7 @@ ListBox items can be grouped by providing a heading (header) for each set of ite
 
 1. Using span tag
 
-2. Databinding
+2. Data binding
 
 
 ## Using span tag
@@ -51,9 +51,9 @@ The header for each group can be defined using the “span” element”.
 ![](Grouping_images\Grouping_img1.png)
 
 
-## Databinding
+## Data binding
 
-The grouped ListBox can be also created via databinding which is explained below. The data items can be categorized by using a specific field in the ListBox widget.
+The grouped ListBox can be also created via data binding which is explained below. The data items can be categorized by using a specific field in the ListBox widget.
 
 {% seealso %} [Data Binding](http://help.syncfusion.com/aspnetmvc/listbox/databinding). {% endseealso %}
 

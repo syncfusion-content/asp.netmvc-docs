@@ -14,7 +14,7 @@ This section helps to understand the getting started of the Dialog widget with t
 
 ## Create a Dialog
 
-Create a MVC Project and add the necessary Dlls and scripts with the help of the given [MVC Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation.
+Create a MVC Project and add the necessary DLL and scripts with the help of the given [MVC Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation.
 
 Add the following code snippet to the corresponding view page to render the Dialog.
 

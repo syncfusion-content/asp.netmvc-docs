@@ -37,7 +37,7 @@ Refer to the following code examples.
 
 
 
-You can give images for each tile through css classes by using ImageClass property. You can define your desired styles in the specified class.
+You can give images for each tile through CSS classes by using ImageClass property. You can define your desired styles in the specified class.
 
 Refer to the following code examples.
 
