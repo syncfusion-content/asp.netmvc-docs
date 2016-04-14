@@ -776,9 +776,6 @@ For DropDownList, we have to create a sample using Data Annotation API to valida
         public class DropDownListModel
         {
             public List<DropDownValue> DropData { get; set; }
-
-            [Required(ErrorMessage = "DropDownList value is Required")]
-            public string SelectedTextValue { get; set; }
         }
 
         public class DropDownValue
@@ -837,9 +834,8 @@ For DropDownList, we have to create a sample using Data Annotation API to valida
         {
             @Html.ValidationSummary(true)
 
-            @Html.EJ().DropDownListFor(Model => Model.SelectedTextValue,(Syncfusion.JavaScript.Models.DropDownListProperties)ViewData["properties"])
+            @Html.EJ().DropDownListFor(Model => Model.DropData,(Syncfusion.JavaScript.Models.DropDownListProperties)ViewData["properties"])
 
-                @Html.ValidationMessageFor(model => model.SelectedTextValue)
             <br />
             @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Post").Type(ButtonType.Submit)
         }
@@ -848,4 +844,3 @@ For DropDownList, we have to create a sample using Data Annotation API to valida
 
     {% endtabs %}
 
-![](Functionalities_images/Functionalities_img11.jpeg)
