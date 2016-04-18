@@ -446,8 +446,6 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %} 
 
-{% endhighlight %}
-
 The following output is displayed before dropping Grid rows.
 
 ![](Row_images/Row_img7.png)
