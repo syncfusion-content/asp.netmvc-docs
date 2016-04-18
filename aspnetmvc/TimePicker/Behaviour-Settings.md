@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Behaviour Settings | TimePicker | ASP.NET MVC | Syncfusion
-description: behaviour settings
+title: Behavior Settings | TimePicker | ASP.NET MVC | Syncfusion
+description: behavior settings
 platform: ejmvc
 control: TimePicker
 documentation: ug
