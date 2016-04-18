@@ -265,3 +265,290 @@ The following output is displayed as a result of the above code example.
 ![](Row_images/Row_img4.png)
 
 
+## Drag-and-Drop
+
+Grid rows can be reordered, dropped to another Grid or custom control by enabling `AllowRowDragAndDrop` Grid property.
+
+N> To enable selection of multiple rows by mouse dragging on Grid rows, `SelectionType` property of Grid must be set to “multiple”.
+
+### Reorder
+
+By simply enabling the property `AllowRowDragAndDrop`, Grid rows can be reordered within the same Grid.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight  razor %}
+
+@(Html.EJ().Grid<OrdersView>("Grid")
+        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .AllowSorting()
+        .AllowPaging()
+        .SelectionType(SelectionType.Multiple)
+        .AllowRowDragAndDrop()
+        .RowDropSettings(drop => drop.RowDropMapper("RowDropHandler"))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+        })
+)
+{% endhighlight  %}
+{% highlight c# %}
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
+           public ActionResult Default()
+            {
+               ViewBag.datasource =OrderRepository.GetAllRecords();
+               return View();
+            }
+            public ActionResult RowDropHandler(List<EditableOrder> changed)
+            {
+                JavaScriptSerializer ser = new JavaScriptSerializer();
+                RowDropModel dropDetails = (RowDropModel)ser.Deserialize(Request.Headers["rowDropDetails"], typeof(RowDropModel));
+                var count = 0;
+                foreach (var item in changed)
+                {
+                    EditableOrder result = OrderRepository.GetAllRecords().Where(o => o.OrderID == item.OrderID).FirstOrDefault();
+                    OrderRepository.GetAllRecords().Remove(result);
+                    OrderRepository.GetAllRecords().Insert(dropDetails.DestinationRowIndex + count, item);
+                    count++;
+                }
+                return Json(changed, JsonRequestBehavior.AllowGet);
+           }
+
+        }
+     }
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed before reordering rows. 
+
+![](Row_images/Row_img5.png)
+{:Before Drop}
+
+The following output is displayed after reordering rows.
+
+![](Row_images/Row_img6.png)
+{:After Drop}
+
+### Grid-to-Grid
+
+To drag and drop rows between two Grid, enable the Grid property `AllowRowDragAndDrop` and specify the target Grid ID in `DropTargetID` property of Grid `RowDropSettings`.
+
+Dragged and Dropped rows can be mapped to server-side using `RowDragMapper` and `RowDropMapper` property of Grid `RowDropSettings`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight  razor %}
+<div style="float:left;width:49%">
+    @(Html.EJ().Grid<OrdersView>("Grid")
+        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .AllowSorting()
+        .AllowPaging()
+        .SelectionType(SelectionType.Multiple)
+        .AllowRowDragAndDrop()
+        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler").RowDropMapper("RowDropHandler").DropTargetID("#DestGrid"))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+        }))
+    </div>
+
+<div style="float:right;width:49%">
+    @(Html.EJ().Grid<OrdersView>("DestGrid")
+        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource2).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .AllowSorting()
+        .AllowPaging()
+        .SelectionType(SelectionType.Multiple)
+        .AllowRowDragAndDrop()
+        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler2").RowDropMapper("RowDropHandler2").DropTargetID("#Grid"))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+        }))
+    </div>
+
+{% endhighlight  %}
+{% highlight c# %}
+
+     namespace MVCSampleBrowser.Controllers
+{
+    public partial class GridController : Controller
+    {
+
+        JavaScriptSerializer ser = new JavaScriptSerializer();
+        public ActionResult DragAndDrop()
+        {
+           
+            ViewBag.datasource2 = OrderRepository.GetAllRecords2();  
+            ViewBag.datasource = OrderRepository.GetAllRecords();
+            return View();
+        }
+
+        public ActionResult RowDragHandler(List<EditableOrder> deleted)
+        {
+            OrderRepository.Delete(deleted);
+            return Json(deleted, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult RowDragHandler2(List<EditableOrder> deleted)
+        {
+            OrderRepository.Delete2(deleted);
+            return Json(deleted, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult RowDropHandler(List<EditableOrder> added)
+        {
+            RowDropModel dropDetails = (RowDropModel)ser.Deserialize(Request.Headers["rowDropDetails"], typeof(RowDropModel));
+            var count = 0;
+            var data = OrderRepository.GetAllRecords();
+            if (added != null)
+            {
+                foreach (var item in added)
+                {
+                    data.Insert(dropDetails.DestinationRowIndex + count, item);
+                    count++;
+                }
+            }
+            return Json(added, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult RowDropHandler2(List<EditableOrder> added)
+        {
+            RowDropModel dropDetails = (RowDropModel)ser.Deserialize(Request.Headers["rowDropDetails"], typeof(RowDropModel));
+            var count = 0;
+            var data = OrderRepository.GetAllRecords2();
+            foreach (var item in added)
+            {
+                data.Insert(dropDetails.DestinationRowIndex + count, item);
+                count++;
+            }
+            return Json(added, JsonRequestBehavior.AllowGet);
+        }
+
+    }
+}
+
+{% endhighlight  %}
+{% endtabs %} 
+
+{% endhighlight %}
+
+The following output is displayed before dropping Grid rows.
+
+![](Row_images/Row_img7.png)
+{:Before Drop}
+
+The following output is displayed after dropping Grid rows.
+
+![](Row_images/Row_img8.png)
+{:After Drop}
+
+### Grid-to-Custom control
+
+You can also drag and drop grid rows to any custom control. For instance, let it be a form.
+
+Enable the Grid property `AllowRowDragAndDrop` and specify the target form element ID in `DropTargetID` property of Grid `RowDropSettings`.
+
+On dropping the Grid records on Form element, Grid event “RowDrop” would be triggered by which we can populate input elements in Form.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight  razor %}
+<div style="float:left;width:49%">
+    @(Html.EJ().Grid<OrdersView>("Grid")
+        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .AllowSorting()
+        .AllowPaging()
+        .AllowRowDragAndDrop()
+        .RowDropSettings(drop => drop.DropTargetID("#DropForm"))
+        .ClientSideEvents(eve => eve.RowDrop("rowDropHandler"))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+        }))
+    </div>
+
+<div style="float:right;width:38%">
+    <form role="form" id="dropForm" style="width:98%">
+        <fieldset style="text-align:center; font-weight:700"><legend>Record Details</legend></fieldset>
+        <div class="form-group row">
+            <label for="OrderID">Order ID:</label>
+            <input class="form-control" name="OrderID">
+        </div>
+        <div class="form-group row">
+            <label for="CustomerID">Customer ID:</label>
+            <input name="CustomerID" class="form-control">
+        </div>
+        <div class="form-group row">
+            <label for="EmployeeID">Employee ID:</label>
+            <input name="EmployeeID" class="form-control">
+        </div>
+        <div class="form-group row">
+            <label for="Freight">Freight:</label>
+            <input name="Freight" class="form-control">
+        </div>
+        <div class="form-group row">
+            <label for="ShipCity">Ship City:</label>
+            <input name="ShipCity" class="form-control">
+        </div>
+        <br />
+    </form>
+</div>
+
+{% endhighlight  %}
+{% highlight c# %}
+
+     namespace MVCSampleBrowser.Controllers
+      {
+        public class GridController : Controller
+         {
+           public ActionResult Default()
+            {
+               ViewBag.datasource =OrderRepository.GetAllRecords();
+               return View();
+            }
+        }
+     }
+{% endhighlight  %}
+{% highlight js %}
+<script type="text/javascript">
+function rowDropHandler(args) {
+        for (var key in args.data[0]) {
+            $('#dropForm input[name=' + key + ']').val(args.data[0][key]);
+        }
+    }
+
+</script>
+
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed before dropping the rows on Form.
+
+![](Row_images/Row_img9.png)
+{:Before Drop}
+
+The following output is displayed after dropping the rows on Form.
+
+![](Row_images/Row_img10.png)
+{:After Drop}
