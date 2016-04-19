@@ -27,5 +27,5 @@ The FileExplorer control contains the following key features.
 * Shows total number of items in currently selected folder.
 * Customizing panel layout.
 * Filter the required files in FileExplorer.
-* Customizable Ajax settings option.
+* Customizable AJAX settings option.
 * Contains Keyboard right to left, localization, custom tool option.

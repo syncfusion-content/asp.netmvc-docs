@@ -41,7 +41,7 @@ The EJMVC DatePicker calendar allows you to quick navigate back and forth from o
 
 ## Read Only
 
-You can make EJMVC DatePicker as read only by setting [ReadOnly](http://help.syncfusion.com/js/api/ejdatepicker#members:readonly) property as true. It allows only to read the value and it canâ€™t be changed by interaction.
+You can make EJMVC DatePicker as read only by setting [ReadOnly](http://help.syncfusion.com/js/api/ejdatepicker#members:readonly) property as true. It allows only to read the value and it cannot be changed by interaction.
 
 
 {% highlight cshtml %}

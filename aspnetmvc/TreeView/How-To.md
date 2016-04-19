@@ -56,7 +56,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and specify the scripts for sending modified data through Ajax action with that also specify clear cache option.
+In the view page, add TreeView helper and specify the scripts for sending modified data through AJAX action with that also specify clear cache option.
     
     
     
@@ -362,7 +362,7 @@ In the controller page, create a data list that contains the details about tree 
     
     
     
-In the view page, add TreeView helper and specify the scripts for sending modified data through Ajax action.
+In the view page, add TreeView helper and specify the scripts for sending modified data through AJAX action.
     
     
     
@@ -1061,9 +1061,9 @@ Using following partial view page, you can display the custom details of checked
     {% endhighlight %}
 
 
-## Populate data for TreeView using Ajax
+## Populate data for TreeView using AJAX
 
-TreeView provides Ajax action supports to populate the data for rendering TreeView nodes. Refer the following code blocks to achieve this behavior. 
+TreeView provides AJAX action supports to populate the data for rendering TreeView nodes. Refer the following code blocks to achieve this behavior. 
 
 In the model page, specify the TreeView node properties as shown below.
     
@@ -1084,7 +1084,7 @@ In the model page, specify the TreeView node properties as shown below.
     
     
     
-In the controller page, create a data list which contains the details about tree nodes and specify Ajax action handling method.
+In the controller page, create a data list which contains the details about tree nodes and specify AJAX action handling method.
     
     
     
@@ -1217,7 +1217,7 @@ In the view page, add TreeView helper and map the properties defined to the corr
     
 ## Populate data for TreeView using XML data source
 
-TreeView provides XML data binding support to populate the data for rendering TreeeView nodes, so that values can be mapped to the TreeView fields from an existing XML data source as below.
+TreeView provides XML data binding support to populate the data for rendering TreeView nodes, so that values can be mapped to the TreeView fields from an existing XML data source as below.
     
     {% tabs %}
     

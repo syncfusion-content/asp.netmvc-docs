@@ -7,7 +7,7 @@ control: Slider
 documentation: ug
 ---
 
-# Behaviour Settings
+# Behavior Settings
 
 ### Height
 
