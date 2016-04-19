@@ -7,7 +7,7 @@ control: ColorPicker
 documentation: ug
 ---
 
-# Angular Binding
+# AngularJS Binding
 
 The ColorPicker widget is availed with two types of angularJS support namely, 
 
@@ -16,15 +16,15 @@ The ColorPicker widget is availed with two types of angularJS support namely,
 
 One-way binding refers to the process of applying scope values to all the available properties of the ColorPicker widget. The changes made in ColorPicker widget are not reflected or triggered in turn to the scope collection. This kind of binding is applied to all the properties of the ColorPicker widget.
 
-Two-way binding supports both the processes. It applies the scope values to the ColorPicker properties, as well as the changes made in the ColorPicker widget are reflected back and triggered within the angular scope change function.
+Two-way binding supports both the processes. It applies the scope values to the ColorPicker properties, as well as the changes made in the ColorPicker widget are reflected back and triggered within the angularJS scope change function.
 
 Apply the plugin and property assigning to the ColorPicker widget element through the directive that starts with “e-“.
 
-To know more about the Angular binding, you can refer to the online documentation in the following link location,
+To know more about the AngularJS binding, you can refer to the online documentation in the following link location,
 
 <http://help.syncfusion.com/js/angularjs>
 
-1. The following code example depicts the way to bind data to the ColorPicker widget through angular support.
+1. The following code example depicts the way to bind data to the ColorPicker widget through angularJS support.
 
 {% highlight CSHTML %}
 
@@ -126,6 +126,6 @@ The following screenshot displays the output of the above code example.
 
 ![](Angular-Binding_images/Angular-Binding_img1.png)
 
-ColorPicker with Angular Support
+ColorPicker with AngularJS Support
 {:.caption}
 

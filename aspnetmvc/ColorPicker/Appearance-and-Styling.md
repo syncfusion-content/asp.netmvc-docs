@@ -313,7 +313,7 @@ Using this property you can override the existing styles under the theme style s
    ~~~
    {:.prettyprint }
 
-2. Custom Css Styles.
+2. Custom CSS Styles.
 
 {% highlight css %}
 

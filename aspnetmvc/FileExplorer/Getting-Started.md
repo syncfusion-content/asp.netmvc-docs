@@ -43,7 +43,7 @@ ASP.NET MVC FileExplorer widget renders built-in features like accessing online
    ~~~
    
 
-3. Add the following code example to the corresponding controller page, FileActionDefault method is triggered, when you have made Ajax request on client-side. This FileActionDefault method finds out the specific operations using the ActionType property and calls the FileExplorerOperations methods according to that.
+3. Add the following code example to the corresponding controller page, FileActionDefault method is triggered, when you have made AJAX request on client-side. This FileActionDefault method finds out the specific operations using the ActionType property and calls the FileExplorerOperations methods according to that.
 
    ~~~ csharp
 
@@ -144,7 +144,7 @@ ASP.NET MVC FileExplorer widget renders built-in features like accessing online
 
 FileExplorerOperations is a predefined Class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side. 
 
-By default, we send following parameters in data field of corresponding Ajax request. This helps to handle server side operation. Some Server side action method will only return the response data. This response data and request parameter are explained in following table. 
+By default, we send following parameters in data field of corresponding AJAX request. This helps to handle server side operation. Some Server side action method will only return the response data. This response data and request parameter are explained in following table. 
 
 _FileExplorerOperations_
 

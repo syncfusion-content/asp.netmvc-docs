@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance and Styling	
 
-Slider widget looks sleek and enriched with good UI appearance. It is included with both metro (flat) theme and gradient theme support. Totally twelve inbuilt themes are provided including six flat themes and six gradient themes. The themes include three colour variations such as “Azure”, “Lime” and “Saffron”. The themes supported by the Slider widgets are as follows,
+Slider widget looks sleek and enriched with good UI appearance. It is included with both metro (flat) theme and gradient theme support. Totally twelve built-in themes are provided including six flat themes and six gradient themes. The themes include three color variations such as “Azure”, “Lime” and “Saffron”. The themes supported by the Slider widgets are as follows,
 
 * default-theme
 * flat-azure-dark
@@ -59,7 +59,7 @@ Execute the above code example to render the following output.
 
 
 
-## Css Class
+## CSS Class
 
 When you want to display the Slider widget in a different style based on the appearance of your application, you can use this CssClass property to apply custom theme for the Slider. Specify a class name as the value for CssClass property. The specified class is added to the wrapper of the Slider widget. Now, you can easily override the styles of the Slider widget by accessing the styles from the root level (using the cssclass specified).
 
