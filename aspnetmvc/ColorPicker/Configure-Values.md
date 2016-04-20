@@ -61,7 +61,7 @@ Cancel</td></tr>
 
 The ColorPicker control consists of more number of sub controls and elements. To provide some information about each element and sub control, you can use the tooltip concept and you can achieve this by using TooltipText property.
 
-To configure the TooltipText, usethe following listed elements and its corresponding default value.
+To configure the TooltipText, use the following listed elements and its corresponding default value.
 
 _List of Tooltip elements_
 

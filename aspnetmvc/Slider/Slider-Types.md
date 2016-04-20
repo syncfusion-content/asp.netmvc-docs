@@ -11,7 +11,7 @@ documentation: ug
 
 This feature allows you to specify the type of Slider. There are three different types of Slider, Default Slider, Min-Range Slider and Range Slider. By default, Default Slider renders. You can use the SliderType property to choose the type of Slider. Data type of this property is “Enum”
 
-Both Default Slider and Min-Range Slider have same behaviour that is used to select a single value. In Min-Range Slider, a shadow is considered from the start value to current handle position. But Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
+Both Default Slider and Min-Range Slider have same behavior that is used to select a single value. In Min-Range Slider, a shadow is considered from the start value to current handle position. But Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
 Possible Slider types are as follows,
 

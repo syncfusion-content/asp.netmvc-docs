@@ -43,7 +43,7 @@ The most used clipboard actions are cut, copy, and paste. These tools are used 
    ~~~
    
 
-2. Add the following code block to the corresponding controller page, the FileActionDefault method is triggered, when you have made ajax request on client-side. This FileActionDefault method finds out the specific operation using the ActionType property and then call FileExplorerOperations methods according to that.
+2. Add the following code block to the corresponding controller page, the FileActionDefault method is triggered, when you have made AJAX request on client-side. This FileActionDefault method finds out the specific operation using the ActionType property and then call FileExplorerOperations methods according to that.
 
    ~~~ csharp
 

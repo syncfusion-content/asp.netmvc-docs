@@ -13,7 +13,7 @@ This section explains briefly about how to create a Slider in your application w
 
 ## Create your first Slider in MVC
 
-ASP.NET MVC Slider provides support to display a Slider within the webpage. The following section explains you on how to use Sliders in a real-time application to select a mobile model within specified range in Mobile Purchase.
+ASP.NET MVC Slider provides support to display a Slider within the web page. The following section explains you on how to use Sliders in a real-time application to select a mobile model within specified range in Mobile Purchase.
 
 The following screenshot illustrates the functionality of Slider control. You can select a mobile model in the dropdown to purchase it at any rate specified in the Mobile RateSlider and you can also specify the number of mobiles you need by selecting the Mobile CountSlider. Simultaneously, you can observe the change in mobile rate and count using Sliders.
 
