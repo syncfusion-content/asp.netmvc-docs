@@ -69,14 +69,10 @@ namespace PdfViewerSample
 Set the value of **UnobtrusiveJavaScriptEnabled** to **false** in Web.config of Project (To enable the Unobstrusive option, please look at this [link](http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application)).
 Add below namespace in Web.config of Views.
 
-<table>
-<tr>
-<td>
+{% highlight XML %}
 <add namespace="Syncfusion.EJ"/>
 <add namespace="Syncfusion.MVC.EJ"/>
-</td>
-</tr>
-</table>
+{% endhighlight %}
 
 ###Add View
 
