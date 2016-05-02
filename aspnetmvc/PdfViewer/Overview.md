@@ -2,12 +2,12 @@
 layout: post
 title: Overview | PDF viewer | ASP .NET MVC | Syncfusion
 description: Overview
-platform: ASP .NET MVC
+platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
 
-#Overview
+# Overview
 
 PDF viewer for ASP .NET MVC is a visualization component for viewing and printing PDF documents in web pages. It is powered by HTML5/JavaScript and provides various customizations.
 
