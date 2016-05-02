@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started | PDF viewer | ASP .NET MVC | Syncfusion
 description: getting started
-platform: ASP .NET MVC
+platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
@@ -22,7 +22,7 @@ In the Project template select Empty template
 
 ![](GettingStarted_images/GettingStarted_img2.jpeg)
 
-###Add Controller
+### Add Controller
 
 Add new controller and name it as **PdfSampleController.cs**
 
@@ -36,7 +36,7 @@ Add below references and set the Copy Local property to **True**
 * Syncfusion.EJ.PdfViewer
 * Sycnfusion.EJ.MVC
 
-###Modify RouteConfig.cs
+### Modify RouteConfig.cs
 
 Modify the routing to map to the **PdfSample** controller as below
 
@@ -78,13 +78,13 @@ Add below namespace in Web.config of Views.
 </tr>
 </table>
 
-###Add View
+### Add View
 
 Create a new folder PdfSample in Views and add new view **Index.cshtml** in it.
 
 ![](GettingStarted_images/GettingStarted_img4.jpeg)
 
-###i) Displaying PDF document using Remote service
+### i) Displaying PDF document using Remote service
 
 Add below code snippet to Index.cshtml. Here, PDF viewer uses the hosted service in the remote machine to process the PDF.
 
@@ -115,7 +115,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the hosted service
 
 N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejpdfviewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
 
-###ii) Displaying PDF document using Web API
+### ii) Displaying PDF document using Web API
 
 Add new folder **webapi** in the solution and add new Web API Controller Class. Name it as **PdfViewerController** and click OK
 
@@ -197,7 +197,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the Web API to pro
 
 N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejpdfviewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
 
-###Output
+### Output
 
 Run the sample and you will see the PDF viewer control as in the below screenshot.
 
