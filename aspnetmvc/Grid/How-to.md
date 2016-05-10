@@ -1559,6 +1559,55 @@ The following output is displayed as a result of the above code example.
 
 ![](How-to_images/Work with partial views_img2.png)
 
+{% tabs %}
+
+## Rendering the grid using Grid Properties in server-side
+
+The GridProperties helps to render the Grid control in server-side.
+
+The following code example which will explain to render the grid control in server-side.
+
+{% tabs %}
+
+{% highlight razor %}
+
+
+  @(Html.EJ().Grid<object>("FlatGrid", Model))
+  
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   namespace Grid.Controllers
+   {
+     public class GridController : Controller
+     {
+        public ActionResult GridFeatures()
+        {
+            GridProperties grid = new GridProperties();
+            List<Column> colList = new List<Column>();
+            colList.Add(new Column() { Field = "OrderID", HeaderText="Order ID", TextAlign = Syncfusion.JavaScript.TextAlign.Right, Width = 75 });
+            colList.Add(new Column() { Field = "CustomerID", HeaderText = "Customer ID", Width = 80 });
+            colList.Add(new Column() { Field = "ShipName", HeaderText = "Ship Name", Width = 100 });
+            colList.Add(new Column() { Field = "ShipCity", HeaderText = "Ship City", Width = 100 });
+            colList.Add(new Column() { Field = "Freight", HeaderText = "Freight", Width = 80, TextAlign = Syncfusion.JavaScript.TextAlign.Right });
+            grid.Columns = colList;
+            grid.AllowPaging = true;
+            grid.DataSource = OrderRepository.GetAllRecords().ToList();
+            return View(grid);
+        }
+     }
+   }
+   
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Getting-Started_images/Getting-Started_img4.png)
+
 See Also
 
 For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
