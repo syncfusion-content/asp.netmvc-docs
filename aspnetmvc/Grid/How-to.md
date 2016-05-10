@@ -1559,8 +1559,6 @@ The following output is displayed as a result of the above code example.
 
 ![](How-to_images/Work with partial views_img2.png)
 
-{% tabs %}
-
 ## Rendering the grid using Grid Properties in server-side
 
 The GridProperties helps to render the Grid control in server-side.
