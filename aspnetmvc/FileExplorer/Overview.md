@@ -1,13 +1,32 @@
 ---
-layout: post
-title: FileExplorer | FileExplorer | ASP.NET MVC | Syncfusion
-description: overview
-platform: ejmvc
+title: Overview| FileExplorer | ASP.NET MVC | Syncfusion
+description: FileExplorer introduction with key features.
+platform: ASP.NET MVC
 control: FileExplorer
-documentation: ug
+documentation: UG
+keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Overview
 ---
 
-# FileExplorer
+# Overview
 
-FileExplorer provides a Windows Explorer-like functionality for any web application. It allows end-users to browse, select and upload files or change the folder structure by renaming, moving and deleting files or folders. File and folder management capabilities are fully customizable and can be disabled when necessary.
+The EJ MVC FileExplorer component provides all the functionalities that is available in [EJ FileExplorer](http://help.syncfusion.com/js/fileexplorer/overview#), since it is a server side wrapper of [EJ FileExplorer](http://help.syncfusion.com/js/fileexplorer/overview#) widget. It is an interface for managing the file system through any web application. It allows the user to perform the most common file operations suchas browse files, open, create, rename, copy, paste or move, delete and file searching.
+For a live demo of FileExplorer check the online sample from [here](http://mvc.syncfusion.com/demos/web/fileexplorer/default#).
 
+N> The FileExplorer control was officially added with the Essential studio ASP.NET MVC package from the v13.1 release only.
+
+![](Overview_images/Overview_img1.jpeg)
+
+## Key features
+
+* Windows explorer like functionalities and appearances
+* Handy file operations (copy, paste, move and delete)
+* File download and upload
+* File type restriction
+* Easy UI customization
+* Different layouts (grid, tile and large icons view)
+* Context menu support
+* Built-in image viewer support
+* Keyboard navigation
+* Right to Left alignment (RTL) support
+* Localization support
+* File access rules
