@@ -249,7 +249,7 @@ The following output is displayed as a result of the above code example.
 
 Sometimes you may need to perform all Grid Actions in client-side except the CRUD operations that should be interacted with server-side to persist data. It can be achieved in Grid by using `RemoteSaveAdaptor`.
 
-Datasource must be set to `Json` Property and set Adaptor type as `AdaptorType.WebApiAdaptor` to the `Adaptor` Property of Grid `DataSource`. CRUD operations can be mapped to server-side using `UpdateUrl`, `InsertUrl`, `RemoveUrl`, `BatchUrl`, `CrudUrl` properties.
+Datasource must be set to `Json` Property and set Adaptor type as `AdaptorType.RemoteSaveAdaptor` to the `Adaptor` Property of Grid `DataSource`. CRUD operations can be mapped to server-side using `UpdateUrl`, `InsertUrl`, `RemoveUrl`, `BatchUrl`, `CrudUrl` properties.
 
 You can use the following code example to use RemoteSaveAdaptor.
 
