@@ -255,8 +255,11 @@ In the view page, create the tools list and add FileExplorer helper as shown bel
 The Search bar can be customize through the “[FilterSettings](http://help.syncfusion.com/js/api/ejfileexplorer#members:filtersettings)” property. By default the search doesn’t consider the case sensitivity, and the search works based on “[FilterType](http://help.syncfusion.com/js/api/ejfileexplorer#members:filtersettings-filtertype)”.
 
 The FileExplorer allows the following filter types in the search functionality.
+
 * “FilterOperator.StartsWith” – Supports to search text with starts with
+
 * “FilterOperator.Contains” – Supports to search text with contains with
+
 * “FilterOperator.EndsWith” – Supports to search text with ends with
 
 In the view page, you can configure the filter type with enabling case sensitivity like below:
@@ -338,7 +341,9 @@ In the view page, add FileExplorer helper and specify custom tool as shown below
 ## Enable / Disable the Toolbar Item
 
 Each toolbar item can be enabled or disabled through the below client-side public methods.
+
 * [enableToolbarItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:enabletoolbaritem)
+
 * [disableToolbarItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:disabletoolbaritem)
 
 These methods accepts the tool name as the parameter. It also allows the parameter as tool item index or the jQuery object of the tool item.

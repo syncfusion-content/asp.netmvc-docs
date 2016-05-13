@@ -8,7 +8,7 @@ keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Context M
 ---
 # Context Menu
 
-The context-menu has [list of items](#_Context_menu_items) which helps to perform FileExplorer operations, and it appears based on the target such as file or folder.
+The context-menu has [list of items](#context-menu-items) which helps to perform FileExplorer operations, and it appears based on the target such as file or folder.
 
 ## Context menu items
 
@@ -129,15 +129,15 @@ The presence of the context menu can be controlled by the “[ShowContextMenu](
 
 In the view page, add FileExplorer helper and specify the context menu visibility as false.
     
-    {% highlight razor %}
+{% highlight razor %}
     
-        @(Html.EJ().FileExplorer("fileExplorer")
-            .Path("~/FileExplorerContent/")
-            .AjaxAction(@Url.Content("FileActionDefault"))
-            .ShowContextMenu(false)
-        )
+    @(Html.EJ().FileExplorer("fileExplorer")
+        .Path("~/FileExplorerContent/")
+        .AjaxAction(@Url.Content("FileActionDefault"))
+        .ShowContextMenu(false)
+    )
         
-    {% endhighlight %}
+{% endhighlight %}
     
 ## Enable / Disable the Context menu Item
 
