@@ -1615,7 +1615,7 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 
 {% endhighlight %}
 
-*  Open the command prompt with[Administrator mode](https://technet.microsoft.com/en-in/library/cc947813(v=ws.10).aspx) and run the above command,which will download the **DNVM (.NET Version Manager)**as mentioned in the below screenshotand place it in your user profile. The DNVM works manipulate from this installed path.
+*  Open the command prompt with [Administrator mode](https://technet.microsoft.com/en-in/library/cc947813(v=ws.10).aspx) and run the above command,which will download the **DNVM (.NET Version Manager)**as mentioned in the below screenshotand place it in your user profile. The DNVM works manipulate from this installed path.
 
 ![](getting-started_images/getting-started_img100.jpeg)
 
@@ -1628,7 +1628,7 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 {% highlight text %}
 
 
-**C:\Users> where dnvm**
+C:\Users> where dnvm
 
 
 
@@ -1641,7 +1641,7 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 {% highlight text %}
 
 
-**C:\Users> dnvm**
+C:\Users> dnvm
 
 
 
@@ -1656,7 +1656,7 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 {% highlight text %}
 
 
-**C:\Users> dnvm upgrade**
+C:\Users> dnvm upgrade
 
 
 
@@ -1668,12 +1668,12 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 
 *  After this installation is completed, run the below command which will list out the DNX version installed in your local machine. 
 
-N> The default version is marked with asterisk (***) symbol.
+N> The default version is marked with asterisk (*) symbol.
 
 {% highlight text %}
 
 
-**C:\Users> dnvm list**
+C:\Users> dnvm list
 
 
 
@@ -1688,7 +1688,7 @@ N> The default version is marked with asterisk (***) symbol.
 {% highlight text %}
 
 
-**C:\Users> dnvm use 1.0.0-rc1-update2 -p**
+C:\Users> dnvm use 1.0.0-rc1-update2 -p
 
 
 
@@ -1703,7 +1703,7 @@ N> The default version is marked with asterisk (***) symbol.
 {% highlight text %}
 
 
-**C:\Users> dnvm list**
+C:\Users> dnvm list
 
 
 
@@ -1714,7 +1714,7 @@ N> The default version is marked with asterisk (***) symbol.
 {% highlight text %}
 
 
-**C:\Users\{user name}\.dnx\alias**
+C:\Users\{user name}\.dnx\alias
 
 
 
@@ -1896,7 +1896,7 @@ I> Since the **jquery-1.11.3.min.js** file is referred explicitly in the applica
 {% highlight c# %}
 
 
-<**ej-script-manager**></**ej-script-manager**> 
+<ej-script-manager></ej-script-manager> 
 
 
 
@@ -1911,7 +1911,7 @@ I> Since the **jquery-1.11.3.min.js** file is referred explicitly in the applica
 {% highlight c# %}
 
 
-<**ej-rating** id="DefaultRating" **value**="3" />
+<ej-rating id="DefaultRating" value="3" />
 
 
 
