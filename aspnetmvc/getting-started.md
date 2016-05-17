@@ -1576,13 +1576,16 @@ Now build and run the application by pressing F5, you can see something similar 
 
 The DatePicker is rendered with its default appearance. You can then use its various properties to set its value and also make use of its available events to trigger when necessary.
 
-## ASP.NET MVC6 and RC1 Configuration
+## MVC6 Application
 
 This document briefly explains how to configure the ASP.NET MVC6 to your local machine.
 
-### Prerequisites
+### System Requirements:
 
-The following prerequisites are necessary to work on ASP.NET MVC6. So please make sure to have these on your system
+
+
+To work with ASP.NET MVC 6, you need to make sure is whether you have installed the following software on your machine
+
 
 
 *  Download [Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=49989) Update 1.
@@ -1590,17 +1593,18 @@ The following prerequisites are necessary to work on ASP.NET MVC6. So please mak
 *  Download [Microsoft ASP.NET Web Tools 2015 (RC1)](https://www.microsoft.com/en-us/download/details.aspx?id=49959).
 
 
-### Configuration steps
+
+### Installation
 
 
 
-Refer the following steps to configure ASP.NET MVC6 on your system
+Refer the following steps to configure ASP.NET MVC 6 on your system
 
 
 
 *  Open the [GitHub ASP.NET](https://github.com/aspnet/home) page that guides you to configure the ASP.NET MVC6.
 
-*  From that page you have to copy the below mentioned command for Upgrading **DNVM**.
+*  Copy the below mentioned command for Upgrading **DNVM** from that page.
 
 {% highlight text %}
 
@@ -1611,12 +1615,13 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 {% endhighlight %}
 
-*  Run this command in command prompt in [Administrator mode](https://technet.microsoft.com/en-in/library/cc947813(v=ws.10).aspx),which will download the **DNVM (.NET Version Manager)**script as mentioned in the below screenshotand place it in your user profile. The DNVM works manipulate from this installed path.
+*  Open the command prompt with[Administrator mode](https://technet.microsoft.com/en-in/library/cc947813(v=ws.10).aspx) and run the above command,which will download the **DNVM (.NET Version Manager)**as mentioned in the below screenshotand place it in your user profile. The DNVM works manipulate from this installed path.
 
 ![](getting-started_images/getting-started_img100.jpeg)
 
 
-*  Now you can check the existing location of **DNVM** by executing the following command in a prompt window.
+
+*  Now you check with the existing location of **DNVM** by executing the following command in a command prompt.
 
 
 
@@ -1631,7 +1636,7 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 
 
-*  After the DNVM installation, execute the following mentioned command in the prompt window to know about the current DNVM version.
+*  After the DNVM installation, execute the following command to know about the current DNVM version.
 
 {% highlight text %}
 
@@ -1661,7 +1666,9 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 ![](getting-started_images/getting-started_img102.jpeg)
 
-*  After this installation is completed, please run the below mentioned command. It will list out the DNX version installed in your local machine. In which, the default selected version is marked with asterisk (*****) symbol.
+*  After this installation is completed, run the below command which will list out the DNX version installed in your local machine. 
+
+N> The default version is marked with asterisk (***) symbol.
 
 {% highlight text %}
 
@@ -1676,7 +1683,7 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 ![](getting-started_images/getting-started_img103.jpeg)
 
-*  If, the asterisk symbol is not marked to any specific installed DNX version. You need to update the default one to latest DNX version by execute the following command in prompt window.
+*  If the asterisk symbol is not marked to any specific installed DNX version, you need to update the default one to latest DNX version by execute the following command in prompt window.
 
 {% highlight text %}
 
@@ -1691,7 +1698,7 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 ![](getting-started_images/getting-started_img104.jpeg)
 
-*  Then execute the **dnvm list** command to identify the modified active DNX version.
+*  Execute the **dnvm list** command to identify the modified active DNX version.
 
 {% highlight text %}
 
@@ -1702,9 +1709,7 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 
 {% endhighlight %}
 
-
-
-*  Once again, please ensure whether the changes are got reflected in your local machine by checking the **default.txt** file available in the following location. This should contain the version same as the default active version that you have selected.
+*  Please ensure whether the changes are got reflected in your local machine by checking the **default.txt** file which is available in the following location. This should contain the version same as the default active version that you have selected.
 
 {% highlight text %}
 
@@ -1716,9 +1721,12 @@ Refer the following steps to configure ASP.NET MVC6 on your system
 {% endhighlight %}
 
 
-## Deploying ASP.NET MVC6 Sample
 
-The following steps helps to know how to run the ASP.NET MVC6 sample.
+
+
+### Deploying the ASP.NET MVC 6 Sample
+
+ The following steps helps to know how to run the ASP.NET MVC 6 sample.
 
 *  Open the **Visual Studio 2015**.
 
@@ -1732,61 +1740,51 @@ The following steps helps to know how to run the ASP.NET MVC6 sample.
 
 ![](getting-started_images/getting-started_img105.jpeg)
 
-* Click OK to create the ASP.NET MVC6 application.
+*  Click OK to create the ASP.NET MVC 6 application.
 
-* In Solution Explorer window, right click the project name and choose the “**Properties**” option.
+*  In Solution Explorer window, right click the project name and choose the “**Properties**” option.
 
-* In that Property window, open the application tab and choose the latest DNX version (list out the existing configured version) from the Solution SDK DNX Version combo box, then save the project.
+*  In that property window, open the application tab and choose the latest DNX version (list out the existing configured version) from the Solution SDK DNX Version combo box, then save the project.
 
-* Select the **Tools -> NuGet Package Manager -> Package Manger Settings -> Package Manager**.
+*  Select the **Tools -> NuGet Package Manager -> Package Manger Settings -> Package Manager**.
 
-* In this Package Sources window, you need to add the MVC6 related online feed link and click OK button to complete the configuration. (This online feed will helps to download an unavailable packages in local machine that may be used in your application)
+*  In this Package Sources window, you need to add the MVC 6 related online feed link and click OK button to complete the configuration. (This online feed will helps to download an unavailable packages in local machine that may be used in your application)
 
 ![](getting-started_images/getting-started_img106.jpeg)
 
 
 
-* Then press F5 or click the **IIS Express** option to deploy and run your web application project.
+*  Press F5 or click the **IIS Express** option to deploy and run your web application project.
 
 
 
 ![](getting-started_images/getting-started_img107.jpeg)
 
-## Deploying Syncfusion Components in ASP.NET MVC6
-
-After your successful ASP.NET MVC6configuration to your local machine and Visual Studio 2015, Please refer the below steps to deploy our Syncfusion components in ASP.NET MVC6Web applications.Before follow the below guidelines,please make sure that you have installed our latest [Essential Studio ASP.NET MVC](http://www.syncfusion.com/downloads/aspnetmvc) setup in your machine.
 
 
 
-* Open the **Visual Studio 2015**.
 
-* Select **File - > New Project**.
+### Deploying Syncfusion components into ASP.NET MVC 6 Application
 
-* Choose **Templates -> Visual C# -> ASP.NET Web Application**.
+After successfully configured ASP.NET MVC 6 to your local machine, refer the below steps to deploy our Syncfusion components into ASP.NET MVC6Web applications.Before follow the below guidelines,please make sure that you have installed our latest [Essential Studio ASP.NET MVC](http://www.syncfusion.com/downloads/aspnetmvc) setup in your machine.
 
-* Specify the name and location for the project.
 
-* Select the Web Application option from an ASP.NET 5 Template.
 
-* Click OK to create the Web Application project.
+[Follow the steps which is mentioned in “**Deploying the ASP.NET MVC 6 Sample**” to create and configure the MVC 6 application]
 
-* Right click the project name from the solution explorer window then choose the properties option.
-
-* In the application tab of property window, choose the “**1.0.0-rc1-update2**” from the Solution SDK DNX Version combo box.
-
-* Open the **project.json** file from the solution explorer window and type our **Syncfusion NuGet** Packages as mentioned below,
+*  Open the **project.json** file from the solution explorer window and type our **Syncfusion NuGet** Packages as mentioned below,
 
 ![](getting-started_images/getting-started_img108.jpeg)
 
 
 
-* After this NuGet package references, save the **project.json** file to include the two Syncfusion packages to your application.
+*  After this NuGet package references, save the **project.json** file to include the two Syncfusion packages to your application.
 
 ![](getting-started_images/getting-started_img109.jpeg)
 
 
 
-* Now open **_viewImports.cshtml** file from the views folder and add the following namespace for our components references and Tag Helper support.
+*  Now open **_viewImports.cshtml** file from the views folder and add the following namespace for components references and Tag Helper support.
 
 
 
@@ -1800,6 +1798,7 @@ After your successful ASP.NET MVC6configuration to your local machine and Visual
 
 
 {% endhighlight %}
+
 
 
 
@@ -1886,11 +1885,11 @@ Refer the below mandatory Script files in the **layout.cshtml** page to render o
 
 
 
-> Also completely remove the already referred scripts and themes within the **environment** tag. The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
+N> Also completely remove the already referred scripts and themes within the **environment** tag. The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
 
 I> Since the **jquery-1.11.3.min.js** file is referred explicitly in the application, therefore make sure that your application doesn’t refer to any other jQuery versions multiple times, which will cause the script error. Make sure that the jQuery scripts are not again referred through bundles in **_Layout.cshtml** file.
 
-* Then add **ScriptManager** to end of the body tag in the **layout.cshtml** page. The ScriptManager used to place our control initialization script in the page. 
+*  Add **ScriptManager** to the bottom of the **layout.cshtml** page. The ScriptManager used to place our control initialization script in the page. 
 
 
 
@@ -1903,7 +1902,9 @@ I> Since the **jquery-1.11.3.min.js** file is referred explicitly in the applica
 
 {% endhighlight %}
 
-* After the all configuration completion, open your view page to render our Syncfusion components with ASP.NET MVC6 Tag Helper syntax.
+
+
+*  Open your view page to render Syncfusion components with ASP.NET MVC 6 Tag Helper syntax.
 
 
 
@@ -1918,7 +1919,7 @@ I> Since the **jquery-1.11.3.min.js** file is referred explicitly in the applica
 
 
 
-* Finally compile your project, after successful compilation then press F5 key to deploy your project.
+*  Finally compile your project, after successful compilation then press F5 key to deploy your project.
 
 
 
