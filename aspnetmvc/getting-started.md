@@ -1576,9 +1576,8 @@ Now build and run the application by pressing F5, you can see something similar 
 
 The DatePicker is rendered with its default appearance. You can then use its various properties to set its value and also make use of its available events to trigger when necessary.
 
-## MVC6 Application
+## MVC 6 Application
 
-This document briefly explains how to configure the ASP.NET MVC6 to your local machine.
 
 ### System Requirements:
 
@@ -1602,7 +1601,7 @@ Refer the following steps to configure ASP.NET MVC 6 on your system
 
 
 
-*  Open the [GitHub ASP.NET](https://github.com/aspnet/home) page that guides you to configure the ASP.NET MVC6.
+*  Open the [GitHub ASP.NET](https://github.com/aspnet/home) page that guides you to configure the ASP.NET MVC 6.
 
 *  Copy the below mentioned command for Upgrading **DNVM** from that page.
 
@@ -1766,7 +1765,7 @@ C:\Users\{user name}\.dnx\alias
 
 ### Deploying Syncfusion components into ASP.NET MVC 6 Application
 
-After successfully configured ASP.NET MVC 6 to your local machine, refer the below steps to deploy our Syncfusion components into ASP.NET MVC6Web applications.Before follow the below guidelines,please make sure that you have installed our latest [Essential Studio ASP.NET MVC](http://www.syncfusion.com/downloads/aspnetmvc) setup in your machine.
+After successfully configured ASP.NET MVC 6 to your local machine, refer the below steps to deploy our Syncfusion components into ASP.NET MVC 6 Web applications. Before follow the below guidelines, please make sure that you have installed our latest [Essential Studio ASP.NET MVC](http://www.syncfusion.com/downloads/aspnetmvc) setup in your machine.
 
 
 
