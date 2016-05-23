@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Getting Started | OLAPChart | ASP.NET MVC | Syncfusion
+title: Getting Started | PivotChart | ASP.NET MVC | Syncfusion
 description: getting started
 platform: ejmvc
-control: OLAPChart
+control: PivotChart
 documentation: ug
 ---
 
 # Getting Started
 
-## Creating a simple application with OlapChart 
+## Creating a simple application with PivotChart 
 
-This section covers the information required to create a simple OlapChart bound to OLAP datasource.
+This section covers the information required to create a simple PivotChart bound to OLAP datasource.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ###Project Initialization
 
-Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **“OlapChartDemo”**. 
+Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **“PivotChartDemo”**. 
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
@@ -127,7 +127,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ###Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render OlapChart widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotChart widget in a MVC Web Application are mentioned in an appropriate order below:
 
 1.  ej.widgets.all.min.css
 2.	jquery-1.10.2.min.js
@@ -171,32 +171,32 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
 @using Syncfusion.JavaScript.Olap;
 
-<div> @Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/OlapChart")).Size(size => size.Height("460px").Width("950px")) </div>
+<div> @Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/PivotChart")).Size(size => size.Height("460px").Width("950px")) </div>
 
 {% endhighlight %}
 
-The **“Url”** property in OlapChart widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in OlapChart widget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotChart widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart widget as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI URL, which is, "~/OlapChart". If WCF service is used as endpoint, the URL would look like "~/OlapChartService.svc".
+N> The above "Index.cshtml" contains WebAPI URL, which is, "~/PivotChart". If WCF service is used as endpoint, the URL would look like "~/PivotChartService.svc".
 
 
 ###WebAPI
 
 **Adding a WebAPI Controller**
 
-To add a WebAPI controller in an existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `OlapChartController.cs`, click Add.
+To add a WebAPI controller in an existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as `PivotChartController.cs`, click Add.
 
-Now, WebAPI controller is added into the application successfully with the file **“OlapChartController.cs”**.
+Now, WebAPI controller is added into the application successfully with the file **“PivotChartController.cs”**.
 
-N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ which is mandatory. For example, in this demo the controller is named as “OlapChartController”.
+N> While adding WebAPI Controller Class, name it with the suffix ‘Controller’ which is mandatory. For example, in this demo the controller is named as “PivotChartController”.
 
-Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `OlapChartController.cs` file.
+Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `PivotChartController.cs` file.
 
 {% highlight c# %}
 
-namespace OlapChartDemo
+namespace PivotChartDemo
 {
-    public class OlapChartController: ApiController
+    public class PivotChartController: ApiController
     {
     
     }
@@ -206,7 +206,7 @@ namespace OlapChartDemo
 
 **Adding the List of Namespaces**
 
-The following are the list of namespaces to be added on top of the main class inside `OlapChartController.cs` file.
+The following are the list of namespaces to be added on top of the main class inside `PivotChartController.cs` file.
 
 {% highlight c# %}
 
@@ -223,9 +223,9 @@ using Syncfusion.JavaScript.Olap;
 using Syncfusion.Olap.Manager;
 using Syncfusion.Olap.Reports;
 
-namespace OlapChartDemo
+namespace PivotChartDemo
 {
-    public class OlapChartController: ApiController
+    public class PivotChartController: ApiController
     {
     
     }
@@ -235,15 +235,15 @@ namespace OlapChartDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, OlapChart and JavaScriptSerializer instances are created immediately inside the main class in `OlapChartController.cs` file.
+Now, the connection string to connect OLAP Cube, PivotChart and JavaScriptSerializer instances are created immediately inside the main class in `PivotChartController.cs` file.
 
 {% highlight c# %}
 
-namespace OlapChartDemo
+namespace PivotChartDemo
 {
-    public class OlapChartController: ApiController
+    public class PivotChartController: ApiController
     {
-        OlapChart htmlHelper = new OlapChart();
+        PivotChart htmlHelper = new PivotChart();
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         JavaScriptSerializer serializer = new JavaScriptSerializer();
     }
@@ -253,15 +253,15 @@ namespace OlapChartDemo
 
 **Service methods in WebAPI Controller**
 
-Define the service methods inside OlapChartController class, found inside `OlapChartController.cs` file, created while adding WebAPI Controller Class to the application.
+Define the service methods inside PivotChartController class, found inside `PivotChartController.cs` file, created while adding WebAPI Controller Class to the application.
 
 {% highlight c# %}
 
-namespace OlapChartDemo
+namespace PivotChartDemo
 {
-    public class OlapChartController: ApiController
+    public class PivotChartController: ApiController
     {
-        OlapChart htmlHelper = new OlapChart();
+        PivotChart htmlHelper = new PivotChart();
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         JavaScriptSerializer serializer = new JavaScriptSerializer();
         [System.Web.Http.ActionName("InitializeChart")]
@@ -287,7 +287,7 @@ namespace OlapChartDemo
             string args = HttpContext.Current.Request.Form.GetValues(0)[0];
             OlapDataManager DataManager = new OlapDataManager(connectionString);
             string fileName = "Sample";
-            htmlHelper.ExportOlapChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+            htmlHelper.ExportPivotChart(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
         }
         private OlapReport CreateOlapReport()
         {
@@ -338,10 +338,10 @@ public class Global: System.Web.HttpApplication
 
 {% endhighlight %}
 
-Now, **OlapChart** is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
+Now, **PivotChart** is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
 
 ![](Getting-Started_images/OlapChart.png) 
 
 ###WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple OlapChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/olapchart/data-binding#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/pivotchart/data-binding#wcf).

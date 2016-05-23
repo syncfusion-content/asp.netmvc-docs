@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Chart Types | OLAPChart | ASP.NET MVC | Syncfusion
+title: Chart Types | PivotChart | ASP.NET MVC | Syncfusion
 description: chart types
 platform: ejmvc
-control: OLAPChart
+control: PivotChart
 documentation: ug
 ---
 
 # Chart Types
 
-Essential **OlapChart MVC** supports 14 different types of chart as follows:
+Essential **PivotChart MVC** supports 14 different types of chart as follows:
 
 
 * Column
@@ -36,7 +36,7 @@ Essential **OlapChart MVC** supports 14 different types of chart as follows:
 {% highlight CSHTML %}
 
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -55,7 +55,7 @@ The following screenshot displays a **Column Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -73,7 +73,7 @@ The **Bar Chart** displays horizontal bars for each point in the series and poin
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -93,7 +93,7 @@ The following screenshot displays a **Bar Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -113,7 +113,7 @@ A **Pie chart** is used to summarize a set of categorical data or displaying dif
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -133,7 +133,7 @@ The **Pyramid Chart** type displays the data in the form of a triangle. It helps
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -152,7 +152,7 @@ The **Funnel Chart**  type displays the data in the form of an inverted triangle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -172,7 +172,7 @@ The **Line Chart** joins the data points on a plot using straight lines that sho
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -191,7 +191,7 @@ The following screenshot displays the **Line Chart**.
 {% highlight CSHTML %}
 
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -211,7 +211,7 @@ The **Spline Chart** is similar to line charts except it connects different data
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -229,7 +229,7 @@ The following screenshot displays the **Spline Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
@@ -247,7 +247,7 @@ The following screenshot displays the **Area Chart**.
 {% highlight CSHTML %}
 
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => { 
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => { 
 comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 
@@ -267,7 +267,7 @@ The following screenshot displays a **Step Area Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => {
 comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight  %}
@@ -285,7 +285,7 @@ The following Screenshot displays a **Spline Area Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => {
  comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true)) 
 
 {% endhighlight %}
@@ -306,13 +306,13 @@ A **combination Chart** combines two or more series types in a single Chart. But
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url("../wcf/OlapChartService.svc").CommonSeriesOptions(comm => {
+@Html.EJ().Olap().PivotChart("PivotChart1").Url("../wcf/PivotChartService.svc").CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Column); }).Legend(legend => legend.Visible(true).RowCount(2)).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
 oEve => { oEve.SeriesRendering("onSeriesRenders"); }) 
     
 <script>
 function onSeriesRenders(args) {
-    this.model.series[5].type = ej.olap.OlapChart.ChartTypes.Line;
+    this.model.series[5].type = ej.olap.PivotChart.ChartTypes.Line;
     this.model.series[5].marker.visible = true;
 </script>
 
