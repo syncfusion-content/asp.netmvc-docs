@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Series | OLAPChart | ASP.NET MVC | Syncfusion
+title: Series | PivotChart | ASP.NET MVC | Syncfusion
 description: series
 platform: ejmvc
-control: OLAPChart
+control: PivotChart
 documentation: ug
 ---
 
 #Series
 
 ##Series Point customization
-By using the `Fill` and `Border` properties of Chart series, you can customize the OlapChart series color, border color and border width.
+By using the `Fill` and `Border` properties of Chart series, you can customize the PivotChart series color, border color and border width.
  
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
     oEve => { oEve.SeriesRendering("onSeriesRenders"); })
 <script>
    function onSeriesRenders(args) {

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: 3D-Visualization | OLAPChart | ASP.NET MVC | Syncfusion
+title: 3D-Visualization | PivotChart | ASP.NET MVC | Syncfusion
 description: 3d visualization
 platform: ejmvc
-control: OLAPChart
+control: PivotChart
 documentation: ug
 ---
 
 # 3D Visualization
 
-The OlapChart control allows you to view the Cube information in a 3D view with 5 different chart types such as Bar, Column, Stacking Bar, Stocking Column and Pie.
+The PivotChart control allows you to view the Cube information in a 3D view with 5 different chart types such as Bar, Column, Stacking Bar, Stocking Column and Pie.
 
 ## 3D Column Chart
 
@@ -17,7 +17,7 @@ The OlapChart control allows you to view the Cube information in a 3D view with 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ The OlapChart control allows you to view the Cube information in a 3D view with 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ The OlapChart control allows you to view the Cube information in a 3D view with 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ The OlapChart control allows you to view the Cube information in a 3D view with 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ The OlapChart control allows you to view the Cube information in a 3D view with 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}   
 
@@ -73,7 +73,7 @@ We can rotate the 3D Chart towards left or right by setting an appropriate angle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Rotation(40).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(40).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %} 
 

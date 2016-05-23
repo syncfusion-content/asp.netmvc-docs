@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Dimensions | OLAPChart | ASP.NET MVC | Syncfusion
+title: Dimensions | PivotChart | ASP.NET MVC | Syncfusion
 description: dimensions
 platform: ejmvc
-control: OlapChart
+control: PivotChart
 documentation: ug
 ---
 
@@ -11,23 +11,23 @@ documentation: ug
 
 ##Set size in percentage
 
-You can customize the OlapChart dimension by setting the width and height of the widget in percentage.
+You can customize the PivotChart dimension by setting the width and height of the widget in percentage.
 
 {% highlight CSHTML %}
 
 //Set size to Chart container
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("80%").Width("80%"))
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("80%").Width("80%"))
 
 {% endhighlight %}
 
 ##Set size in pixels
 
-You can customize the OlapChart dimension by setting the width and height of the widget in pixels.
+You can customize the PivotChart dimension by setting the width and height of the widget in pixels.
 
 {% highlight CSHTML %}
 
 //Set size to Chart container
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -35,12 +35,12 @@ You can customize the OlapChart dimension by setting the width and height of the
 
 ##Responsive
 
-OlapChart widget supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution upto 1024x600. You can enable responsiveness in OlapChart by setting `isResponsive` property to true.
+PivotChart widget supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution upto 1024x600. You can enable responsiveness in PivotChart by setting `isResponsive` property to true.
 
 {% highlight CSHTML %}
 
 //Enable responsiveness to change the Chart size dynamically.
-@Html.EJ().Olap().OlapChart("OlapChart1").Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px")).IsResponsive(true)
+@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px")).IsResponsive(true)
 
 {% endhighlight %}
 

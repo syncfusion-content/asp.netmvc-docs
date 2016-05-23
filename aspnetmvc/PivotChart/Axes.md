@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Axes | OLAPChart | ASP.NET MVC | Syncfusion
+title:  Axes | PivotChart | ASP.NET MVC | Syncfusion
 description: axes 
 platform: ejmvc
-control: OLAPChart
+control: PivotChart
 documentation: ug
 ---
 
@@ -17,7 +17,7 @@ By using the `LabelFormat` property, you can format the numeric labels. Numeric 
 {% highlight CSHTML %}
 
 //Applying currency format to axis labels
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryYAxis(primaryY => primaryY.LabelFormat("c")).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryYAxis(primaryY => primaryY.LabelFormat("c")).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -89,7 +89,7 @@ By using the `LabelFormat` property of `PrimaryYAxis`, you can add the category 
 {% highlight CSHTML %}
 
 //Adding prefix and suffix to axis labels
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryYAxis(primaryY => primaryY.LabelFormat("${value}K")).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryYAxis(primaryY => primaryY.LabelFormat("${value}K")).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ Axis visibility can be set by using the `Visible` property of the respective axi
 {% highlight CSHTML %}
 
 //Disabling visibility of Y-axis
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryYAxis(primaryY => primaryY.Visible(false)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryYAxis(primaryY => primaryY.Visible(false)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -115,7 +115,7 @@ By using the `Font` property of the axis, we can customize the labels – font f
 {% highlight CSHTML %}
 
 //Customizing label appearance
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.Font(font=> font.Size("14px").FontWeight(ChartFontWeight.Bold).FontFamily("Segoe UI").Color("blue"))).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.Font(font=> font.Size("14px").FontWeight(ChartFontWeight.Bold).FontFamily("Segoe UI").Color("blue"))).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -127,7 +127,7 @@ Axis labels and ticks can be positioned inside or outside the Chart area by usin
 {% highlight CSHTML %}
 
 //Customizing label and tick positions
- @Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.AxisLabelPosition(AxislabelPosition.Inside).TickLinesPosition(TickLinesPosition.Inside)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+ @Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.AxisLabelPosition(AxislabelPosition.Inside).TickLinesPosition(TickLinesPosition.Inside)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -139,7 +139,7 @@ By using the `MajorGridLines` and `MinorGridLines` properties of the axis, you c
 {% highlight CSHTML %}
 
 //Customizing grid lines
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.MajorGridLines(mr => mr.Width(5).Color("Blue").Visible(true)).MinorGridLines(mg => mg.Width(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.MajorGridLines(mr => mr.Width(5).Color("Blue").Visible(true)).MinorGridLines(mg => mg.Width(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -151,7 +151,7 @@ By using the `MajorTickLines` and `MinorTickLines` properties of the axis, you c
 {% highlight CSHTML %}
 
 //Customizing tick lines
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.MajorTickLines(mr => mr.Width(10).Size(15).Color("Blue").Size(15)Visible(true)).MinorTickLines(mg => mg.Width(15).Size(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.MajorTickLines(mr => mr.Width(10).Size(15).Color("Blue").Size(15)Visible(true)).MinorTickLines(mg => mg.Width(15).Size(25).Color("Red").Visible(true)).MinorTicksPerInterval(1)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -163,7 +163,7 @@ Axis can be inversed by using the `IsInversed` property of the axis. By default,
 {% highlight CSHTML %}
 
 //Inversing the X and Y-axis
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.IsInversed(true)).PrimaryYAxis(primaryY => primaryY.IsInversed(true)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.IsInversed(true)).PrimaryYAxis(primaryY => primaryY.IsInversed(true)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -175,7 +175,7 @@ The `OpposedPosition` property of Chart axis can be used to place the axis at th
 {% highlight CSHTML %}
 
 //Placing axis at the opposite side of its normal position
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX.OpposedPosition(true)).PrimaryYAxis(primaryY => primaryY.OpposedPosition(true)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.OpposedPosition(true)).PrimaryYAxis(primaryY => primaryY.OpposedPosition(true)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -188,7 +188,7 @@ When the axis labels overlap with each other based on the Chart dimensions and l
 {% highlight CSHTML %}
 
 // Avoid overlapping of x-axis labels
-@Html.EJ().Olap().OlapChart("OlapChart1").PrimaryXAxis(primaryX => primaryX. LabelIntersectAction(LabelIntersectAction.MultipleRows)).Url(Url.Content("~/wcf/OlapChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX. LabelIntersectAction(LabelIntersectAction.MultipleRows)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
