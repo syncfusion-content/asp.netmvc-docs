@@ -423,3 +423,97 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img7.png)
 
+## Handling Aggregation in serverside
+
+The Aggregation at serverside is handled by using `aggregate` key. While using remote data, Summary Row must be handled by returning summary column datasource into the `aggregate` property of `result` object.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+
+  .Datasource(ds => ds.URL("/Grid/DataSource").Adaptor("UrlAdaptor"))
+  .ShowSummary()
+  .AllowPaging()
+  .SummaryRow(row =>
+   {
+       row.ShowTotalSummary(true)
+       row.Title("Sum").SummaryColumns(col ={
+       col.SummaryType(SummaryType.Sum)
+       .DisplayColumn("Freight")
+       .DataMember("Freight")
+       .Format("{0:C}")
+       .Add();
+    }).Add();
+})
+
+.Columns(col =>
+{
+   col.Field("OrderID").HeaderText("Order ID").Width(100).Add();
+   col.Field("EmployeeID").HeaderText("Employee ID").Width(100).Add();
+   col.Field("Freight").HeaderText("Freight").Width(100).Format("{0:C}").Add();
+   col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+})
+)
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace MvcApplication4.Controllers
+{
+    public partial class GridController: Controller
+       {
+        public ActionResult GridFeatures()
+           {
+
+             ViewBag.dataSource = OrderRepository.GetAllRecords().ToList();
+			 return View();
+           }
+
+     public ActionResult DataSource(DataManager dm)
+       {
+            IEnumerable DataSource = OrderRepository.GetAllRecords();
+		    DataOperations ds = new DataOperations();
+            List<string> str = new List<string>();
+            if (dm.Aggregates != null)
+             {
+               for (var i = 0; i < dm.Aggregates.Count; i++)
+               str.Add(dm.Aggregates[i].Field);
+               result.aggregate = ds.PerformSelect(DataSource, str);
+             }
+
+       DataSource = ds.PerformSkip(DataSource, dm.Skip);
+       result.result = ds.PerformTake(DataSource, dm.Take);
+       result.count = DataSource.AsQueryable().Count();
+       return Json(result, JsonRequestBehavior.AllowGet);
+
+       }
+
+    public class DataResult
+       {
+         public IEnumerable result { get; set; }
+         public int count { get; set; }
+         public IEnumerable aggregate { get; set; }
+         public IEnumerable groupDs { get; set; }
+       }
+
+   }
+
+}
+
+{% endhighlight %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Summary_images/summaryGrid_img8.png)
+
+
+
+
+
