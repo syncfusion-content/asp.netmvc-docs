@@ -661,13 +661,6 @@ The following code example describes the above behavior.
               }
           }
 {% endhighlight  %}
-{% highlight js %}
-
-     <script type="text/x-jsrender" id="columnTemplate">
-        <!--The image is referred from this location "http://jsplayground.syncfusion.com/13.2.0.29/themes/web/images/employees/1.png" based on EmployeeID-->
-        <img style="width: 75px; height: 70px" src="/13.2.0.29/themes/web/images/employees/{{"{{"}}:EmployeeID{{}}}}.png" alt="{{"{{"}}:EmployeeID{{}}}}" />
-    </script>
-{% endhighlight %}
 {% endtabs %}  
 
 The following output is displayed as a result of the above code example.
@@ -859,7 +852,7 @@ The following code example describes the above behavior.
                             {
                                 Text = "Cancel"
                             }).Add();
-                    }).IsUnbound(true).Width(150).Add();
+                    }).Width(150).Add();
                 }) )
 {% endhighlight  %}
 {% highlight c# %}
@@ -910,8 +903,7 @@ The following code example describes the above behavior.
                                 Width = "100px",
                                 Click = "onClick"
                             }).Add();
-                    })
-                .IsUnbound(true)
+                    })                
                 .TextAlign(TextAlign.Center)
                 .Width(150)
                 .Add();
