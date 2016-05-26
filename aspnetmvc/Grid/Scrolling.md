@@ -409,6 +409,7 @@ The virtual scrolling support allows you to load data that you require (load dat
 
 1. Normal Mode
 2. Continuous Mode
+3. Virtualization
     
 N> The following features are not supported by virtual scrolling 
 N> 1. Grouping
@@ -513,3 +514,59 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
  ![](scrolling_images/scrolling_img9.png)
+
+
+### Virtualization:
+
+It allows you to load the grid with data while scrolling. It is an improvised virtual scrolling feature. In order to enable this, you need to enable both the AllowVirtualScrolling and EnableVirtualization(new) property of the Grid ScrollSettings. Some of the relevant functionalities of this are,
+
+1.	White space will not be appeared in the Grid. 
+2.	Improved page rendering performance. 
+
+This can be achieved by setting `EnableVirtualization`  as `true`.
+
+The following code example describes the above behavior.
+
+{% tabs %} 
+{% highlight razor %}
+
+	  @(Html.EJ().Grid<OrdersView>("Scrolling")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowScrolling()
+            .ScrollSettings(col => { col.Width(550).Height(300).AllowVirtualScrolling(true).EnableVirtualization(true); })             
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();
+                col.Field("CustomerID").Add();
+                col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add();
+                col.Field("ShipAddress").Add();
+                col.Field("ShipPostalCode").Add();
+                col.Field("Freight").Format("{0:C}").Add();    
+            })
+       	)
+{% endhighlight  %}
+{% highlight c# %}
+		
+        namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Scrolling()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+        }
+{% endhighlight  %}
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![](scrolling_images/scrolling_img10.png)
+
+
+ 
