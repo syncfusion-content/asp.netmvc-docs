@@ -49,7 +49,7 @@ By default, the Schedule control’s active view is **Week** view. Also, it is p
 
 {% endhighlight %}
 
-N> **CurrentView** property accepts Enum value of `CurrentView.<ViewName>`.
+N> The **CurrentView** property accepts Enum value of `CurrentView.<ViewName>`.
 
 ## Day 
 
@@ -112,7 +112,7 @@ It’s a view displaying a count of 7 days (from Sunday to Saturday) with all it
 
 ## Work Week 
 
-Workweek view displays the working days of the week (count of 5 days) and its associated appointments. It is also possible to customize the days to be displayed in the work week view using `WorkWeek` API which accepts the string array such as ["Monday", "Tuesday", "Wednesday", "Thursday" and "Friday"]. By default, it renders from Monday to Friday (5 days).
+Work week view displays the working days of the week (count of 5 days) and its associated appointments. It is also possible to customize the days to be displayed in the work week view using `WorkWeek` API which accepts the string array such as ["Monday", "Tuesday", "Wednesday", "Thursday" and "Friday"]. By default, it renders from Monday to Friday (5 days).
 
 {% highlight razor %}
 
@@ -211,6 +211,10 @@ To display the custom view option in the toolbar-like view options in the schedu
 )
 
 {% endhighlight %}
+
+When the date difference between the provided start and end date is greater than 7, then the month-like view will get displayed in Vertical Scheduler mode - whereas with the date difference less than 7 days displays the Scheduler with exact count of the specified days.
+
+N> When the `CurrentDate` property of Scheduler is set with a date, that lies beyond the specified custom date range - then the Scheduler navigates to the current date with the mentioned date differences.  
 
 ## Agenda
 

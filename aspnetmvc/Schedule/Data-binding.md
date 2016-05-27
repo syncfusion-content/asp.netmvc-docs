@@ -60,7 +60,7 @@ Binds the name of the categorize field and also its related validation rules. It
 <tr>
 <td>
 Priority<br/><br/></td><td>
-Binds the name of the priority field, its related validation rules and also indicates the priority (high, low, medium and none) of the appointments. This field should be bind to the Scheduler, when <b>PrioritySettings.Enable</b> is set to true.<br/><br/></td></tr>
+Binds the name of the priority field and its related validation rules, which indicates the priority (high, low, medium and none) of the appointments. This field should be bind to the Scheduler, when <b>PrioritySettings.Enable</b> is set to true.<br/><br/></td></tr>
 <tr>
 <td>
 ResourceFields<br/><br/></td><td>
@@ -138,7 +138,7 @@ The below example depicts the appointment fields accepting the string type mappe
 
 ## Appointment Field Validation
 
-It is possible to validate the required fields of the appointment window from client-side before submitting it, by adding appropriate validation rules to each fields. The appointment fields have been extended to accept both String and object type values. Therefore, in order to perform validations, it is necessary to specify object values for the appointment fields.  
+It is possible to validate the required fields of the appointment window from client-side before submitting it, by adding appropriate validation rules to each of the fields. The appointment fields have been extended to accept both String and object type values. Therefore, in order to perform validations, it is necessary to specify object values for the appointment fields.    
 
 Refer the appointment fields specified with validation rules from the following code example.
 
@@ -269,7 +269,7 @@ The OData v4 is an improved version of OData protocols. Scheduler supports retri
 
 ## WebAPI Binding
 
-The appointment data can be bound to the Scheduler through Web API service which serves as a programmatic interface to define the request and response messaging system.
+The Schedule appointment data can also be bound through the Web API services. It is a programmatic interface to define the request and response messages system that is mostly exposed in **JSON** or **XML**.
 
 {% highlight razor %}
 
@@ -554,7 +554,8 @@ public JsonResult add(Appointment value)
     };
     db.Appointments.InsertOnSubmit(appoint);
     db.SubmitChanges();
-    return Json(appoint, JsonRequestBehavior.AllowGet);
+    IEnumerable data = new ScheduleDataDataContext().Appointments.Take(500); 
+    return Json(data, JsonRequestBehavior.AllowGet);
 }
 
 // Triggers while editing/dragging/resizing the existing appointment
@@ -577,7 +578,8 @@ public JsonResult update(Appointment value)
         appoint.RecurrenceRule = value.RecurrenceRule;
     }
     db.SubmitChanges();
-    return Json(appoint, JsonRequestBehavior.AllowGet);
+    IEnumerable data = new ScheduleDataDataContext().Appointments.Take(500); 
+    return Json(data, JsonRequestBehavior.AllowGet);
 }
 
 // Triggers when an appointment is deleted
@@ -587,7 +589,8 @@ public JsonResult remove(string key)
     Appointment app = db.Appointments.Where(c => c.Id == Convert.ToInt32(key)).FirstOrDefault();
     if (app != null) db.Appointments.DeleteOnSubmit(app);
     db.SubmitChanges();
-    return Json(app, JsonRequestBehavior.AllowGet);
+    IEnumerable data = new ScheduleDataDataContext().Appointments.Take(500); 
+    return Json(data, JsonRequestBehavior.AllowGet);
 }
 
 // Triggers for any of the Scheduler CRUD operation
@@ -660,7 +663,7 @@ public class EditParams
 
 ## Loading Data on Demand
 
-Scheduler supports load on demand concept by retrieving only the filtered appointment data (for the current Scheduler date range) from the service/database during **loading** **time**, and that too only for the current Scheduler view**.** There are 3 parameters made accessible on the server-side namely **CurrentDate**, **CurrentView** and **CurrentAction** through which only the necessary appointments are retrieved from the database and then assigned to the Scheduler dataSource. With this kind of action, Scheduler consumes only lesser data and also reduces the usage of network bandwidth size and loading time. 
+Load on demand feature allows the Scheduler to retrieve only the filtered appointment data (for the current Scheduler date range) from the service/database during **loading time**, and that too only for the current Scheduler view. There are 3 parameters made available on the server-side namely **CurrentDate**, **CurrentView** and **CurrentAction** through which only the necessary appointments are retrieved from the database and then assigned to the Scheduler dataSource. With this kind of Scheduler action, consuming only lesser data will reduce the usage of network bandwidth size and loading time. 
 
 The **EnableLoadOnDemand** property is used to enable or disable the load on demand functionality of the schedule.
 

@@ -111,15 +111,15 @@ The following code snippet shows how to enable the context menu settings in Sche
 
 {% endhighlight %}
 
-N> In agenda view, only the appointment menu items shows up in the context menu options. For default menu items, the id must be defined with the same value as mentioned in the above code example – as we processed the menus based on this id within our source.
+N> In agenda view, only the appointment menu items shows up in the context menu options. For default menu items, the id must be defined with the same value as mentioned in the above code example – as we have processed the menus based on this id within our source.
 
 
 ## Custom Menu Options
 
 
-Apart from the default available options, it is also possible to add custom menu options to the context-menu in both the appointment and cell collection.
+Apart from the default available options, it is also possible to add custom menu options to the context-menu of both the appointment and cell collection.
 
-The following code example depicts how **to add the custom menu items** to the appointment and cells collection of the context menu settings.
+The following code example depicts how **to add the custom menu items** to the appointment and cell collection of the context menu settings.
 
 {% highlight razor %}
 
@@ -158,7 +158,7 @@ The following code example depicts how **to add the custom menu items** to the a
 
 {% endhighlight %}
 
-N> The **Id** given for the custom menu items **must be unique** in both the appointment and cells collection. 
+N> The **Id** given for the custom menu items **must be unique** in both the appointment and cell collection. 
 
 ## Handling Menu Actions
 
@@ -208,7 +208,7 @@ function onMenuItemClick(args) {
 
 {% endhighlight %}
 
-Also, it is possible to predict the target on which the right click is made either on the cells or appointments with the use of the event `BeforeContextMenuOpen`. The below code example shows how to block the display of context menu when right clicked on the cells by setting **args.cancel** as **true**.
+Also, it is possible to predict the target on which the right click is made, either on the cells or appointments with the use of the event `BeforeContextMenuOpen`. The below code example shows how to block the display of context menu when right clicked on the cells by setting **args.cancel** as **true**.
 
 {% highlight razor %}
 
@@ -247,8 +247,8 @@ Also, it is possible to predict the target on which the right click is made eith
 {% highlight js %}
 
 function beforeContextMenuOpen(args) {
-    //args.target – target information to depict whether it is cell/appointment
-    if ($(args.events.target).hasClass("e-workcells,e-monthcells"))
+    //args.events.target – target information to depict either cell/appointment
+    if ($(args.events.target).hasClass("e-workcells") || $(args.events.target).hasClass("e-monthcells"))
         args.cancel = true;
 }
 
@@ -292,5 +292,5 @@ To include the default categorize options within the context menu, it is necessa
 
 {% endhighlight %}
 
-N> The **Categorize** option must be added to the **Appointment** collections simply with an id "categorize", which displays on right clicking over the appointments.
+N> The **Categorize** option must be added to the **Appointment** collections simply with an id "categorize", which displays on right clicking the appointments.
 
