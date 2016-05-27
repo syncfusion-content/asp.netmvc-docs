@@ -1587,9 +1587,9 @@ To work with ASP.NET MVC 6, you need to make sure is whether you have installed 
 
 
 
-*  Download [Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=49989) Update 1.
+*  Visual Studio 2015 Update 1 and above.
 
-*  Download [Microsoft ASP.NET Web Tools 2015 (RC1)](https://www.microsoft.com/en-us/download/details.aspx?id=49959).
+*  Microsoft ASP.NET Web Tools 2015 (RC1).
 
 
 
