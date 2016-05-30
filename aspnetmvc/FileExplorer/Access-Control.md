@@ -439,17 +439,18 @@ N> If needed, customer can also add additional data along with existing properti
 ### Example
 
 We can make a FileExplorer with access rule by doing following steps,
+
 1.	Add the following code example to the corresponding View page to render the FileExplorer.
 
-{% highlight c# %}
+    ~~~ csharp
     
     @Html.EJ().FileExplorer("fileExplorer").Path("~/FileContent/").AjaxAction(@Url.Content("FileAccessDefault"))
 
-{% endhighlight %}
+    ~~~
 
 2.	Add the following code example to the corresponding controller page. The `FileAccessDefault` method triggers from Ajax request with specific ActionType value as parameter.
 
-{% highlight c# %}
+    ~~~ csharp
     
     public ActionResult FileAccessDefault(FileExplorerParams args)
     {
@@ -505,7 +506,7 @@ We can make a FileExplorer with access rule by doing following steps,
         return rules;
     }
 
-{% endhighlight %}
+    ~~~
 
 The following screenshot displays the output of the above code.
 
