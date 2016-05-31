@@ -32,7 +32,7 @@ The following code example renders the scheduler from 7.00 AM to 6.00 PM.
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -69,7 +69,7 @@ The work hours are differentiated from other normal hours, by depicting the Sche
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -133,7 +133,7 @@ The Current date indicates the date with which the Scheduler loads initially and
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -166,7 +166,7 @@ The following code example show how to set the `MinDate` and `MaxDate` propertie
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -200,7 +200,7 @@ The following code example lets you create the custom appointment with a single 
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -574,7 +574,7 @@ The following code snippet shows how to customize the appointment and work cells
      
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();

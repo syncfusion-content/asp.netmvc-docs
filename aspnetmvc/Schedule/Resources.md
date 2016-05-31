@@ -69,7 +69,7 @@ Binds the `AppointmentClass` field name in the dataSource. It applies the custom
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -121,7 +121,7 @@ The resource data can be bound to the Schedule control through the **ResourceSet
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -160,7 +160,7 @@ The resource data can be bound to the Schedule control through the **ResourceSet
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -198,7 +198,7 @@ The appointments belonging to all the resources will be displayed on the Schedul
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -245,7 +245,7 @@ This type of grouping allows the Scheduler to display all the resources at a sin
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -293,7 +293,7 @@ This type of grouping displays the resources in the Scheduler at multiple levels
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -354,7 +354,7 @@ It is possible to assign different workdays and workhours for each resources pre
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();

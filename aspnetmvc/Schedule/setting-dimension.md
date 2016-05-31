@@ -37,7 +37,7 @@ The `CellHeight` property allows the Scheduler to set the height of the cells in
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -96,7 +96,7 @@ The `CellWidth` property allows the Scheduler to set the width of the cells in p
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();

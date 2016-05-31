@@ -16,7 +16,7 @@ By default, setting 100% width to the Scheduler makes it adaptable to the window
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -42,7 +42,7 @@ To set the Scheduler height – set the **Height** property of the Scheduler wit
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -91,7 +91,7 @@ The following code snippet depicts the Scheduler code with responsive set to tru
 
 {% highlight html %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
