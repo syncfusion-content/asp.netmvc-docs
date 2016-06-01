@@ -532,3 +532,31 @@ When you set the EnableResize property to true, resize handle will be displayed 
 
 N> When you set the EnableRTL property to true, the resize handle will automatically positioned to the bottom-left corner of the editor.
 
+
+#### Characters Count/Word Count
+
+The editor automatically counts the number of characters and words in the content while you type. The characters and words count displayed at the bottom of the editor. You can limit the number of characters in your content using MaxLength property. By default, the editor sets the characters limit value as 7000 characters.
+
+{% highlight html %}
+
+    @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
+        The Rich Text Editor
+        (RTE) control is an easy to render in client side. Customer easy to edit the contents
+        and get the HTML content for the displayed content. A rich text editor control provides
+        users with a toolbar that helps them to apply rich text formats to the text entered
+        in the text area.
+    </div>)
+    .ShowFooter(true)
+    .ShowWordCount(true)
+    .ShowCharCount(true)
+    .Render();}
+    
+{% endhighlight %}
+
+By clicking the Characters Count/Word Count labels in footer , The word and character count information dialog is opened. It contains the details of the number of words and characters with and without spacing.  
+
+![](UserInterface_images/wordchar.png)
+
+N> The editor counts the characters by including the space, and this validation occurs while pasting the content into the editor also.
+
+
