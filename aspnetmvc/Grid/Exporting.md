@@ -491,7 +491,7 @@ You can export required grids in single file using `ej.Grid.exportAll` method. T
 {% highlight js %}
 
     $('#exportAll').click(function(){
-			ej.Grid.exportAll('MultipleExportToExcel',['#Grid1', '#Grid2']);
+			ej.Grid.exportAll('MultipleExportToExcel',['Grid1', 'Grid2']);
 		});
 
 {% endhighlight %}
