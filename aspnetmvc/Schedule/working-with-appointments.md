@@ -1347,3 +1347,233 @@ function reminderCustom(args) {
 
 N> Whenever the reminder setting is enabled in the Scheduler with some specific value (in minutes) assigned to the **AlertBefore** property, the **Reminder** event gets triggered before this specified value. It includes the reminder appointment’s entire information in its arguments.
 
+## Block Time Intervals
+
+It allows to block the particular timeslots in Schedule. When specific timeslots are blocked, the appointments that lies in that range can either be made read-only or else can be allowed to interact with the users based on the value assigned to the `IsBlockAppointment` property.
+
+### Blockout Settings
+
+The `BlockoutSettings` holds the below block intervals related properties such as,
+
+* `Enable` - It accepts true or false value, denoting whether to enable/disable the block intervals option. It's default value is `false`.
+* `TemplateId` – It applies the template design to block the intervals.
+* `DataSource` – Binds the block intervals dataSource collection. This property should be assigned either with the JSON data array collection or instance of DataManager (`ej.DataManager`).
+
+The below blockout fields holds the appropriate column names from the dataSource - 
+
+<table>
+<tr>
+<th>
+Field name<br/><br/></th><th>
+Description<br/><br/></th></tr>
+<tr>
+<td>
+Id<br/><br/></td><td>
+It holds the binding name for <b>Id</b> field in the blockout dataSource<br/><br/></td></tr>
+<tr>
+<td>
+Subject<br/><br/></td><td>
+It holds the binding name for <b>Subject</b> field in the blockout dataSource<br/><br/></td></tr>
+<tr>
+<td>
+StartTime<br/><br/></td><td>
+It holds the binding name for <b>StartTime</b> field in the blockout dataSource.<br/><br/></td></tr>
+<tr>
+<td>
+EndTime<br/><br/></td><td>
+It holds the binding name for <b>EndTime</b> field in the blockout dataSource.<br/><br/></td></tr>
+<tr>
+<td>
+IsBlockAppointment<br/><br/></td><td>
+It holds the binding name for <b>IsBlockAppointment</b> field in the blockout dataSource.<br/><br/></td></tr>
+<tr>
+<td>
+IsAllDay<br/><br/></td><td>
+It holds the binding name for <b>IsAllDay</b> field in the blockout dataSource.<br/><br/></td></tr>
+<tr>
+<td>
+ResourceId<br/><br/></td><td>
+It holds the binding name for <b>ResourceId</b> field in the blockout dataSource.<br/><br/></td></tr>
+<tr>
+<td>
+CustomStyle<br/><br/></td><td>
+It holds the binding name for <b>CustomStyle</b> field in the blockout dataSource.<br/><br/></td></tr>
+</table>
+The below example depicts the appointment fields accepting the string type mapper fields.
+
+Create a new Class to define the block intervals to be passed to the Scheduler as mentioned below,
+
+{% highlight c# %}
+    
+    public class BlockData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Boolean IsBlockAppointment { get; set; }
+        public string ResourceId { get; set; }
+        public bool IsAllDay { get; set; }
+    }
+    
+{% endhighlight %}
+
+{% highlight razor %}
+
+    @using MyProject.Models; // Here MyProject defines your project name to access the model class
+    @{
+        <!-- Datasource for Block Intervals -->
+        List<BlockData> blockData = new List<BlockData>();
+        blockData.Add(new BlockData { Id = 1, Subject = "Service", StartTime = new DateTime(2015, 11, 10, 9, 00, 00), EndTime = new DateTime(2015, 11, 10, 10, 00, 00), IsBlockAppointment = true });
+        blockData.Add(new BlockData { Id = 2, Subject = "Maintenance", StartTime = new DateTime(2015, 11, 11, 11, 00, 00), EndTime = new DateTime(2015, 11, 11, 13, 00, 00), IsBlockAppointment = true });
+    }
+
+    @(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 10))
+        .BlockoutSettings(fields => fields.Enable(true)
+            .Datasource(blockData)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .IsBlockAppointment("IsBlockAppointment"))        
+        )
+
+{% endhighlight %}
+
+
+### Blocking Appointments
+
+The Appointments that lies within the blocked time range can be restricted to perform CRUD operations in it and can be made read-only. This can be achieved by setting `IsBlockAppointment` property to true.
+
+
+{% highlight razor %}
+
+    @using MyProject.Models; // Here MyProject defines your project name to access the model class
+    @{
+        <!-- Datasource for Block Intervals -->
+        List<BlockData> blockData = new List<BlockData>();
+        blockData.Add(new BlockData { Id = 1, Subject = "Service", StartTime = new DateTime(2015, 11, 10, 9, 00, 00), EndTime = new DateTime(2015, 11, 10, 10, 00, 00), IsBlockAppointment = true });        
+    }
+
+    @(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 10))
+        //Configure the blockout settings
+        .BlockoutSettings(fields => fields.Enable(true)
+            .Datasource(blockData)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            //Bind the block appointment field in datasource                    
+            .IsBlockAppointment("IsBlockAppointment"))
+        )
+
+{% endhighlight %}
+
+### Customizing block time intervals
+
+The `BlockoutSettings` holds the below properties to customize the block intervals such as,
+
+* `TemplateId` - Template design that applies on the block intervals.
+* `CustomStyle` - The custom css that applies on the blocked intervals.
+
+{% highlight razor %}
+
+    @using MyProject.Models; // Here MyProject defines your project name to access the model class
+    @{
+        <!-- Datasource for Block Intervals -->
+        List<BlockData> blockData = new List<BlockData>();
+        blockData.Add(new BlockData { Id = 1, Subject = "Service", StartTime = new DateTime(2015, 11, 10, 9, 00, 00), EndTime = new DateTime(2015, 11, 10, 10, 00, 00), IsBlockAppointment = true });        
+    }
+
+    @(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 10))
+        //Configure the blockout settings
+        .BlockoutSettings(fields => fields.Enable(true)
+            .TemplateId("#blocktemplate")
+            .Datasource(blockData)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .IsBlockAppointment("IsBlockAppointment"))
+        )
+
+{% endhighlight %}
+
+{% highlight html %}
+
+<!--Template to apply block intervals-->
+<script id="blocktemplate" type="text/x-jsrender">
+   <div style="height:100%">
+      <div>{{:Subject}}</div>
+   </div>
+</script>
+
+{% endhighlight %}
+
+### Blocking time interval based on resources
+
+* `ResourceId` - property used within the `BlockoutSettings` which accepts the resource id's can be used to apply the block intervals based on the resources.
+
+{% highlight razor %}
+
+    @using MyProject.Models; // Here MyProject defines your project name to access the model class
+    @{
+        <!-- Datasource for Block Intervals -->
+        List<BlockData> blockData = new List<BlockData>();
+        blockData.Add(new BlockData { Id = 1, Subject = "Service", StartTime = new DateTime(2015, 11, 10, 9, 00, 00), EndTime = new DateTime(2015, 11, 10, 10, 00, 00), IsBlockAppointment = true, ResourceId = "1" });        
+    
+        <!-- Datasource for Appointments -->
+        List<ScheduleData> Appoint = new List<ScheduleData>();
+        Appoint.Add(new ScheduleData { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 11, 10, 00, 00), EndTime = new DateTime(2015, 11, 11, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "",OwnerId="1" });
+
+        <!-- Define the Group -->
+        List<String> Group = new List<String>();
+        Group.Add("Owners");
+
+        <!-- Datasource for Owners -->
+        List<ResourceFields> Owner = new List<ResourceFields>();
+        Owner.Add(new ResourceFields { Id = "1", Text = "Nancy", Color = "#f8a398", GroupId = "1" });
+        Owner.Add(new ResourceFields { Id = "2", Text = "Steven", Color = "#56ca95", GroupId = "1" });
+    }
+    @(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2015, 11, 10))
+         //Configure the blockout settings
+        .BlockoutSettings(fields => fields.Enable(true)
+            .Datasource(blockData)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .IsBlockAppointment("IsBlockAppointment")
+            //resource id mapper field
+            .ResourceId("ResourceId"))
+        .Group(gr => { gr.Resources(Group); })
+        .Resources(res =>
+        {
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+        })
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .Description("Description")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule")
+            .ResourceFields("OwnerId"))
+        )
+
+{% endhighlight %}
+
