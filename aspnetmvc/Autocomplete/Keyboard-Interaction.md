@@ -67,7 +67,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 
 			)ViewBag.datasource)
 
-			.AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+			.AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
 			.Width("200px"))    
 

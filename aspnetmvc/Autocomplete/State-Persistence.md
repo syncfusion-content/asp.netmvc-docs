@@ -28,7 +28,7 @@ The following steps explain you how to enable state maintenance for AutoComplete
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .EnablePersistence(true)
 
