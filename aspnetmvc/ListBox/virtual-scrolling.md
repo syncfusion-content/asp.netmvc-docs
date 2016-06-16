@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Load on Demand support | ListBox | ASP.NET MVC | Syncfusion
-description: load-on-demand support 
+title: VirtualScrolling support | ListBox | ASP.NET MVC | Syncfusion
+description: VirtualScrolling support 
 platform: ejmvc
 control: ListBox
 documentation: ug
 ---
 
-# Load-on-Demand support 
+# VirtualScrolling support 
 
-ListBox widget provides the Load-onDemand support, when binding the remote data for the ListBox. It loads partially, only a set of data from remote server loaded initially, and imports data further upon loading. To enable Load-onDemand support, set the EnableLoadOnDemand property as true. You can set ItemsCount that specifies number of items in the ListBox. You can load any number of items upon request with ItemRequest ClientSide Event.
+ListBox widget provides the VirtualScrolling support, when binding the remote data for the ListBox. It loads partially, only a set of data from remote server loaded initially, and imports data further upon loading. To enable VirtualScrolling support, set the EnableVirtualScrolling property as true. You can set ItemsCount that specifies number of items in the ListBox. You can load any number of items upon request with ItemRequest ClientSide Event.
 
-The following steps explains you the behaviour of Load-onDemand support in ListBox.
+The following steps explains you the behaviour of VirtualScrolling support in ListBox.
 
 1. Add the below code in your page to render the ListBox
 
@@ -25,8 +25,8 @@ The following steps explains you the behaviour of Load-onDemand support in ListB
 			</h5>  
 			@Html.EJ().ListBox("customerList").Datasource(ds =>
 			ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers')").ListBoxFields(f => 
-			f.Text("CustomerID")).ItemsCount(91) .EnableLoadOnDemand(true).ClientSideEvents(e => 
-			e.ItemRequest("itemRequested"))
+			f.Text("CustomerID")).ItemsCount(91) .AllowVirtualScrolling(true).ClientSideEvents(e => 
+			e.ActionBegin("itemRequested"))
 		</div>
 	
    ~~~

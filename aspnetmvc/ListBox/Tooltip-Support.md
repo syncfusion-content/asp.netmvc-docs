@@ -22,7 +22,7 @@ The following steps explains you the configuration of Tooltip properties in List
 			Select a skill 
 		</h5> 
 		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df =>
-		df.Text("text").ToolTipText("tooltip")) .EnableTooltip(true)
+		df.Text("text").TooltipText("tooltip"))
 	</div>
 
    ~~~

@@ -29,7 +29,7 @@ The following steps explain how you can enable the right-to-left property for an
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .Width("250px").EnableRTL(true)
 

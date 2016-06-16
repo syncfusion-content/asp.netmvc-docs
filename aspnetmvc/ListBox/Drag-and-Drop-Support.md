@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop Support
 
-ListBox widget provides the Drag and Drop support. A list item can be dragged from a ListBox control and can be dropped in any droppable element. To enable Drag and Drop support, set the AllowDragAndDrop property as true. In control, enable the AllowDragAndDrop property where you want to drop list Item.
+ListBox widget provides the Drag and Drop support. A list item can be dragged from a ListBox control and can be dropped in any droppable element. To enable Drag and Drop support, set the AllowDrag and AllowDrop property as true. In control, enable the AllowDrag and AllowDrop property where you want to drop list Item.
 
 The following steps explains you the behaviour of template support with ListBox.
 
@@ -24,10 +24,10 @@ The following steps explains you the behaviour of template support with ListBox.
 			Drag and drop skills 
 		</h5>
 		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df =>
-		df.Text("text")) .AllowDragAndDrop(true)
+		df.Text("text")) .AllowDrag(true).AllowDrop(true)
 	</div>
 	<div class="control2"> 
-		@Html.EJ().ListBox("dragsample").AllowDragAndDrop(true)
+		@Html.EJ().ListBox("dragsample").AllowDrag(true).AllowDrop(true)
 	</div>
 		
    ~~~

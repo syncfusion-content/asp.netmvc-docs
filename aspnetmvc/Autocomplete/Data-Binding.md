@@ -29,9 +29,9 @@ It maps the corresponding key field name from the data table or the List of obje
 
 It maps the corresponding Text field name from the data table or the List of Objects that is assigned to the DataSource with the Text property of the AutoComplete control. The text value that is fetched from the table represents the value to be displayed in the AutoComplete textbox.
 
-### Category
+### GroupBy
 
-It maps the Category field name from the data table or the List of Objects that is assigned to the DataSource. The Category value that is fetched from the table is made available when Grouping is enabled.
+It maps the groupBy field name from the data table or JSON data that is assigned to the dataSource. The groupBy value that is fetched from the table is made to group the values in the datasource.
 
 ### HtmlAttributes
 

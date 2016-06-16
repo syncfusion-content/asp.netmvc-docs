@@ -81,7 +81,7 @@ The following steps explain you how to configure Grouping for an AutoComplete te
    ~~~
    
 
-2. In the View page, define the AutoComplete control and enable AllowGrouping property.
+2. In the View page, define the AutoComplete control and then give the Category filed for GroupBy field property.
 
 
    ~~~ html
@@ -90,7 +90,7 @@ The following steps explain you how to configure Grouping for an AutoComplete te
 
      .Datasource((IEnumerable<CarsList>)ViewBag.datasource).Width(“205”)
 
-     .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category")).AllowGrouping(true)
+     .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
    ~~~
   

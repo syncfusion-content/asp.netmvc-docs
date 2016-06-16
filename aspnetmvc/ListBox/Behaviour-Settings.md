@@ -89,9 +89,9 @@ The following steps explains you the configuration of TargetID property in ListB
 
 ## Select the value by index 
 
-ListBox widget provides you support to select an item by mentioning the index of the item. The SelectedItemIndex property helps you to select the particular item from the list. Its date type is number. 
+ListBox widget provides you support to select an item by mentioning the index of the item. The SelectedIndex property helps you to select the particular item from the list. Its date type is number. 
 
-The following steps explains you the configuration of SelectedItemIndex property in ListBox.
+The following steps explains you the configuration of SelectedIndex property in ListBox.
 
 1. Add the below code in your page to render the ListBox
 
@@ -107,7 +107,7 @@ The following steps explains you the configuration of SelectedItemIndex property
 
 		</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
 
-		=> df.Text("text")).SelectedItemIndex(2)
+		=> df.Text("text")).SelectedIndex(2)
 
 	</div>
 

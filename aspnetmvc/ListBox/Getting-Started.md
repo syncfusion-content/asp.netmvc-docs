@@ -384,15 +384,15 @@ ListBox with Contact list items
 
 ### Enable Drag and Drop 
 
-You can drag an item from a ListBox and drop it in droppable element.To drag and drop a list item across controls or within a control, you have to set the AllowDragAndDrop property as “True”. 
+You can drag an item from a ListBox and drop it in droppable element.To drag and drop a list item across controls or within a control, you have to set the AllowDrag and AllowDrop property as “True”. 
 
 Please refer the below code snippet:
 
 {% highlight CSHTML %}
   
-@Html.EJ().ListBox("list1").TargetID("select").AllowDragAndDrop(true)
+@Html.EJ().ListBox("list1").TargetID("select").AllowDrag(true).AllowDrop(true)
 
-@Html.EJ().ListBox("list2").AllowDragAndDrop(true)
+@Html.EJ().ListBox("list2").AllowDrag(true).AllowDrop(true)
 
 {% endhighlight %}
 

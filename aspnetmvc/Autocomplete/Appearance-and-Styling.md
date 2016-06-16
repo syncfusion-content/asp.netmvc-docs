@@ -31,7 +31,7 @@ The following steps explain the dimensional properties of an AutoComplete textbo
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .Height("50px").Width("250px")
 
@@ -75,7 +75,7 @@ The following steps explain enabling the ShowRoundedCorner property for an AutoC
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .ShowRoundedCorner(true)
 
@@ -113,7 +113,7 @@ The following steps explain you how to configure WatermarkText property for an A
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .Width("250px").WatermarkText("Select an item")
 
@@ -149,7 +149,7 @@ The following steps help you set height and width of the popup panel of an AutoC
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .Width("250px").PopupHeight("80px").PopupWidth("350px")
 
@@ -189,7 +189,7 @@ The following steps are used to set the time delay to load the popup panel of an
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
-    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").Category("Category"))
+    .AutocompleteFields(field => field.Key("UniqueKey").Text("Text").GroupBy("Category"))
 
     .Width("250px").DelaySuggestionTimeout(1000)
 

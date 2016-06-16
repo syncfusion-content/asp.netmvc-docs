@@ -82,7 +82,7 @@ The following steps explains you the configuration of SelectedItemlist property 
 		indexList.Add(4); 
 		}  
 		@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df
-		=> df.Text("text")).SelectedItemlist(indexList).AllowMultiSelection(true)
+		=> df.Text("text")).SelectedIndices(indexList).AllowMultiSelection(true)
 	</div>
 
    ~~~
