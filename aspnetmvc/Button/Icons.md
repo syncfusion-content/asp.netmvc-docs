@@ -17,7 +17,7 @@ Syntax: .e-icon .e-[icon description]
 
 ## Adding icon in Button
 
-For example, you can render the desired icon in the button by using the following table that contains the listed icons’ CSS class names in the “PrefixIcon” property of button component. Also, use “ContentType” property to display the icon in the button. In the following code example, specify the “ContentType” of the button as imageonly.    
+For example, you can render the desired icon in the button by using the following table that contains the listed icons’ CSS class names in the “PrefixIcon” property of button component. Also, use “ContentType” property to display the icon in the button. In the following code example, specify the “ContentType” of the button as ImageOnly.    
 
 Refer to the following link to know what are the values passed in the “ContentType” property
 
