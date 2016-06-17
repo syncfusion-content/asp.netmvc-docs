@@ -149,11 +149,11 @@ _List of checkbox size_
 <tr>
 <td>
 Small</td><td>
-Creates checkbox with inbuilt small size height, width specified.</td></tr>
+Creates checkbox with Built-in small size height, width specified.</td></tr>
 <tr>
 <td>
 Medium</td><td>
-Creates checkbox with inbuilt medium size height, width specified.</td></tr>
+Creates checkbox with Built-in medium size height, width specified.</td></tr>
 </table>
 
 

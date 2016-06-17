@@ -9,7 +9,7 @@ documentation: ug
 
 # Checkbox
 
-The Essential ASP.NET MVC Checkbox control allows you to check an option to perform an action. This control allows you to select true, false or an intermediate option. These checkboxes are supported with themes. The html check box control is rendered as Essential ASP.NET MVC Checkbox control.
+The Essential ASP.NET MVC Checkbox control allows you to check an option to perform an action. This control allows you to select true, false or an intermediate option. These checkboxes are supported with themes. The HTML check box control is rendered as Essential ASP.NET MVC Checkbox control.
 
 ## Key Features
 
