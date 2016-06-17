@@ -11,7 +11,7 @@ documentation: ug
 
 KnockoutJS support allows you to bind the HTML elements against any of the available data models.
 
-Two types of knockoutJS binding is supported,
+Two types of KnockoutJS binding is supported,
 
 * One-way binding
 * Two-way binding
@@ -24,7 +24,7 @@ For more information about KnockoutJS binding, you can refer to the online docum
 
 <http://help.syncfusion.com/aspnetmvc/colorpicker/knockout-binding>
 
-1. The following example depicts how you can bind data to the ColorPicker widget through knockoutJS support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
+1. The following example depicts how you can bind data to the ColorPicker widget through KnockoutJS support that enables and populates data to a ColorPicker widget based on the value set to the other ColorPicker widget.
 
 {% highlight CSHTML %}
 
@@ -129,5 +129,5 @@ The following screenshot displays the output of the above code example.
 
 ![](Knockout-Binding_images/Knockout-Binding_img1.png)
 
-ColorPicker with KnockOutJS Support
+ColorPicker with KnockoutJS Support
 {:.caption}
