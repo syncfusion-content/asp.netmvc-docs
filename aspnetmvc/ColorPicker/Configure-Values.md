@@ -96,7 +96,7 @@ SeaWolf</td><td>
 Sea Wolf</td></tr>
 <tr>
 <td>
-Webcolors</td><td>
+WebColors</td><td>
 Web Colors</td></tr>
 <tr>
 <td>

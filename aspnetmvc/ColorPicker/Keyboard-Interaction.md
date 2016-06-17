@@ -68,7 +68,7 @@ Upwards to value 100</td></tr>
 
 The following steps explain how you can enable keyboard interaction for ColorPicker textbox.
 
-1. In the CSHTML page, configure the ColorPicker widget and enable keyboard interaction by the accesskey property.
+1. In the CSHTML page, configure the ColorPicker widget and enable keyboard interaction by the access key property.
 {% tabs %}
 
 {% highlight CSHTML %}
