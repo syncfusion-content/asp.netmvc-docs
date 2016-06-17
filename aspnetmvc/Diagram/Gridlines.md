@@ -65,7 +65,7 @@ public ActionResult Index()
 
 ### Line Intervals
 
-Thickness and the space between gridlines can be customized by using `LinesInterval` property. In the linesInterval collections, values at the odd places are refered as the thickness of lines and the values at the even places are refered as the space between gridlines.
+Thickness and the space between gridlines can be customized by using `LinesInterval` property. In the linesInterval collections, values at the odd places are referred as the thickness of lines and the values at the even places are refered as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
