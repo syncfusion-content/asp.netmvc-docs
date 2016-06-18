@@ -77,7 +77,7 @@ Make text italic<br/><br/></td></tr>
 <kbd>CTRL</kbd> + <kbd>B</kbd><br/><br/></td><td>
 Make text bold<br/><br/></td></tr></table>
 
-To disable the keyboard navigation, set the AllowKeyboardnavigation property of the editor to false (its default value is true). It will disable all the keyboard navigation shortcuts except for the UP/DOWN keys and PAGE UP/PAGE DOWN keys.
+To disable the keyboard navigation, set the AllowKeyboardNavigation property of the editor to false (its default value is true). It will disable all the keyboard navigation shortcuts except for the UP/DOWN keys and PAGE UP/PAGE DOWN keys.
 
 {% highlight html %}
 
@@ -88,7 +88,7 @@ To disable the keyboard navigation, set the AllowKeyboardnavigation property of 
         A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
     
     </p>)
-        .AllowKeyboardnavigation(false)
+        .AllowKeyboardNavigation(false)
         .Render();}
   
 
