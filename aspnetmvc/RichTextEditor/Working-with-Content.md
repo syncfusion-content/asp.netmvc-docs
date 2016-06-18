@@ -441,7 +441,7 @@ ASP.NET MVC supports client side validation. First of all you need to take a ref
     
 {% endhighlight %}
 
-Now, add following two settings in &lt;appsettings&gt; section of web.config, if it is not there.
+Now, add following two settings in &lt;appSettings&gt; section of web.config, if it is not there.
     
 {% highlight html %}
 
