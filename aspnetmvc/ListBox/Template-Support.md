@@ -9,9 +9,9 @@ documentation: ug
 
 # Template Support
 
-ListBox widget provides the template support, when binding the data for the ListBox. For this behaviour, set the common syntax /element in template property. You can add any HTML mark-up element inside the ListBox using this property.
+ListBox widget provides the template support, when binding the data for the ListBox. For this behavior, set the common syntax /element in template property. You can add any HTML mark-up element inside the ListBox using this property.
 
-The following steps explains you the behaviour of template support with ListBox.
+The following steps explains you the behavior of template support with ListBox.
 
 1. Add the below code in your view page to render the ListBox
 
