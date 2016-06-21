@@ -68,7 +68,15 @@ IsResponsive</td></tr>
 <tr>
 <td>
 EnableRecurrenceValidation</td><td>
-</td></tr>
+ShowOverflowButton</td></tr>
+<tr>
+<td>
+AllowDragAndDrop</td><td>
+ShowDeleteConfirmationDialog</td></tr>
+<tr>
+<td>
+ShowNextPrevMonth</td><td>
+AppointmentDragArea</td></tr>
 </table>
 
 The Schedule properties that are not retained while maintaining state persistence are included within the **ignoreOnPersist** list, which makes it not to persist by default.

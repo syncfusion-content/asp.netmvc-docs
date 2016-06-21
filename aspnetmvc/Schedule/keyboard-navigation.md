@@ -30,15 +30,15 @@ Pressing enter key, after a single/multiple scheduler cell selection will make t
 <tr>
 <td>
 <kbd>Esc</kbd></td><td>
-Closes any of the popup within the Schedule control.</td></tr>
+Closes any of the popup that displays on the Schedule control</td></tr>
 <tr>
 <td>
 <kbd>Alt</kbd>+<kbd>N</kbd></td><td>
-Opens the create Appointment window</td></tr>
+Opens the Create Appointment window</td></tr>
 <tr>
 <td>
 <kbd>Ctrl</kbd>+<kbd>E</kbd></td><td>
-Opens the edit Appointment window</td></tr>
+Opens the Edit Appointment window</td></tr>
 <tr>
 <td>
 <kbd>Alt</kbd>+<kbd>C</kbd></td><td>
@@ -54,11 +54,11 @@ Next date navigation</td></tr>
 <tr>
 <td>
 <kbd>Alt</kbd>+<kbd>+</kbd></td><td>
-Forward traversing through the view items in the toolbar</td></tr>
+Forward traversing of view items in the toolbar</td></tr>
 <tr>
 <td>
 <kbd>Alt</kbd>+<kbd>-</kbd></td><td>
-Reverse traversing through the view items in the toolbar</td></tr>
+Reverse traversing of view items in the toolbar</td></tr>
 <tr>
 <td>
 <kbd>Space</kbd></td><td>
@@ -66,7 +66,7 @@ When the previous/next navigation icons are currently being focused, pressing sp
 <tr>
 <td>
 <kbd>Del</kbd></td><td>
-Deletes the appointment.</td></tr>
+Deletes the currently selected appointment</td></tr>
 <tr>
 <td>
 <kbd>Tab</kbd></td><td>
@@ -74,7 +74,7 @@ Traversing through the appointments.</td></tr>
 <tr>
 <td>
 <kbd>Shift</kbd>+<kbd>tab</kbd></td><td>
-Traversal of appointments in a reverse order.</td></tr>
+Traversing through the appointments in a forward direction</td></tr>
 </table>
 
 N> By default `AllowKeyboardNavigation` property is set to **true**, which allows the Scheduler to be accessed through the above specified keys.
