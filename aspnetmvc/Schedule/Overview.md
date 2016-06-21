@@ -22,7 +22,7 @@ Some of the key features of Scheduler are as follows,
 * **Orientation** - Two types of control orientation is supported namely – Vertical and Horizontal (Timeline View).
 * **Categories** - 6 default types of Appointment categories along with user customization options are available to differentiate the appointment status.
 * **Template** - Template customization provided for appointments, resource header, cells, date header, priority, tooltip, time scale and agenda view.
-* **Time Zone & DST** - Supports observation of Daylight Saving Time in Scheduler for whichever time zone it is applicable.
+* **TimeZone & DST** - Supports observation of Daylight Saving Time in Scheduler for whichever time zone it is applicable.
 * **Export & Print** - Supports exporting of single/all appointment(s) to an ICS file and also Prints all/specific appointment(s).
 * **PDF Export** - Supports exporting of entire Scheduler into PDF format.
 * **Appointment window Customization** – Entire appointment window can be customized with the user required fields.
