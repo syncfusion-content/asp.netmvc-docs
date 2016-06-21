@@ -240,7 +240,7 @@ The following code example shows the way to set the specific time zone value wit
 
 {% endhighlight %}
 
-### Setting different TimeZone for Scheduler Appointments
+### Different TimeZone for Scheduler Appointments
 
 Apart from the default action of applying specific timezone to the entire Scheduler, it is also possible to set different time zone values for each appointments through the properties **startTimeZone** and **endTimeZone** which can be defined as separate fields within the appointment dataSource. When these properties are not explicitly defined for appointments, the appointments Start and End time will be processed based on the Scheduler time zone.
 
@@ -276,7 +276,7 @@ The following code snippet shows how to define isDST and the time zones for spec
 
 {% endhighlight %}
 
-### Customizing the TimeZone Collection
+### Customizing TimeZone Collection
 
 It is also possible to define or customize the default time zone collection of the Scheduler, by using the `TimeZoneCollection` API as follows.
 
@@ -398,7 +398,7 @@ If the `DateFormat` property is not specified particularly, then it will be take
 
 ## First Day of Week
 
-The `FirstDayOfWeek` property allows to set any of the week days as start of the week/workweek/month view in Scheduler. It accepts either the `integer` (Sunday=0, Monday=1, Tuesday=2, etc) or `string` (“Sunday”, “Monday”, etc). The default value of this `FirstDayOfWeek` depends on the current culture (language) assigned to the Scheduler.
+The `FirstDayOfWeek` property allows to set any of the week days as start of the week/workweek/month view in Scheduler. It accepts either the `integer` (Sunday=0, Monday=1, Tuesday=2, etc) or `string` (“Sunday”, “Monday”, etc) value. The default value of this `FirstDayOfWeek` property depends on the current culture (language) assigned to the Scheduler.
 
 To set different first day of week in Scheduler,
 
