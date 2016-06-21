@@ -12,7 +12,7 @@ Navigation in Scheduler can be classified based on Scheduler views, date and als
 
 ## View Navigation
 
-By default, all the [available view options](/aspnetmvc/schedule/views) except the Custom View are available at the top right corner of the Schedule header, which can be traverse through continuously as and when needed.  
+By default, all the [available view options](/aspnetmvc/schedule/views) except the custom view are available at the top right corner of the Schedule header, which can be traverse through continuously as and when needed.  
 
 Clicking on the particular date header in the Week/Work Week/Month/Custom View will navigate to the day view automatically. Also, clicking on the week header ranges displayed at the left side in the month view will navigate to the Week view. These particular actions can take place only if the Week and Day view options are present in the `Views` Collection.
 
