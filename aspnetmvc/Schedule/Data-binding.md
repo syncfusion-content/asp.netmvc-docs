@@ -89,7 +89,7 @@ Create a new Class to define the data to be passed to the Scheduler as mentioned
 
 {% highlight c# %}
 
-public class ScheduleData
+public class ScheduleData 
     {
         public string Id { get; set; }
         public string Subject { get; set; }
@@ -105,12 +105,17 @@ public class ScheduleData
         public string RecurrenceRule { get; set; }
     }
     
+ // Define the below model classes, if there is a need to use those classes in view page
+   
 public class ResourceFields
     {
         public string Text { set; get; }
         public string Id { set; get; }
         public string GroupId { set; get; }
         public string Color { set; get; }
+        public int WorkHourStart { set; get; }
+        public int WorkHourEnd { set; get; }
+        public List<string> CustomDays { set; get; }
     }
     
 public class CategorizeSettings
