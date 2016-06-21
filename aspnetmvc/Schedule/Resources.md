@@ -125,7 +125,7 @@ N> The resource object defined at **First Level** within the **Resources** colle
 
 ## Data Binding
 
-The resources data can be bound to the Schedule control through the **resourceSettings** option available within the **resources** property. The data-binding can be done either using JSON object collection or DataManager (`ej.DataManager`) instance which contains the resources related data.
+The resources data can be bound to the Schedule control through the **ResourceSettings** option available within the **Resources** property. The data-binding can be done either using JSON object collection or DataManager (`ej.DataManager`) instance which contains the resources related data.
 
 ### List Data
 
