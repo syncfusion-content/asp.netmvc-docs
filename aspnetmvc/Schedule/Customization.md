@@ -16,7 +16,7 @@ The Scheduler can be customized in various aspects like -
 * Specifying minimum and maximum date ranges 
 * Customize the entire appointment window with the user required fields
 * Setting different time Slot duration
-* Complete Scheduler customization using queryCellInfo event
+* Complete Scheduler customization using `QueryCellInfo` event
 * Setting different [FirstDayOfWeek](/aspnetmvc/schedule/globalization-and-localization#first-day-of-week)
 
 ## Hour Customization
@@ -64,7 +64,7 @@ The following code example renders the scheduler from 7.00 AM to 6.00 PM.
 Working hours indicates the work hour limit within the Scheduler, which is highlighted visually with white colored work cells. To enable the highlighting of work hours on the Scheduler, set the **Highlight** option available within the `WorkHours` property to **true**. By default, it is set to true and includes the below specified options,
 
 * **Highlight** –  enables/disables the highlighting of work hours.
-* **Start** - ets the start time of the working/business hour in a day. 
+* **Start** - sets the start time of the working/business hour in a day. 
 * **End** - sets the end time limit of the working/business hour in a day.  
 
 
@@ -93,18 +93,18 @@ Working hours indicates the work hour limit within the Scheduler, which is highl
 
 {% endhighlight %}
 
-N> By default, work hour **start** is set to **9** and **end** is set to **18**. Also, the Scheduler cells automatically scrolls up or down based on the starting work hour, to make the user to view that particular time initially.
+N> By default, work hour **Start** is set to **9** and **End** is set to **18**. Also, the Scheduler cells automatically scrolls up or down based on the starting work hour, to make the user to view that particular time initially.
 
 ## TimeScale
 
-The `TimeScale`  allows the user to set the required time slot duration for the work cells that displays on the Scheduler. It provides option to customize both the major and minor slots using template option. It includes the below properties such as,
+The `TimeScale` allows the user to set the required time slot duration for the work cells that displays on the Scheduler. It provides option to customize both the major and minor slots using template option. It includes the below properties such as,
 
-* `Enable` - It accepts true or false value, denoting whether to show or hide the time slots. Its default value is `true`.
-* `majorSlot` – Specifies the major time slot duration.
-* `minorSlotCount` – Specifies the value, based on which the minor time slots are divided into appropriate count. 
-* `TimeScale templates` – 2 template options available for customizing timeScales namely `minorSlotTemplateId` and `majorSlotTemplateId`.  
+* `Enable` - It accepts true or false value, denoting whether to show or hide the time slots. Its default value is `True`.
+* `MajorSlot` – Specifies the major time slot duration.
+* `MinorSlotCount` – Specifies the value, based on which the minor time slots are divided into appropriate count. 
+* TimeScale Templates – 2 template options available for customizing time scales namely `MinorSlotTemplateId` and `MajorSlotTemplateId`.  
 
-The majorSlot and minorSlot can be customized with the following code example.
+The MajorSlot and MinorSlot can be customized with the following code example.
 
 {% highlight razor %}
 
@@ -112,7 +112,7 @@ The majorSlot and minorSlot can be customized with the following code example.
     .Width("100%")
     .Height("525px")
     .CurrentDate(new DateTime(2015, 11, 5))
-    .TimeScale(ts => ts.Enable(true).majorSlot(60).minorSlotCount(6))
+    .TimeScale(ts => ts.Enable(true).MajorSlot(60).MinorSlotCount(6))
     .AppointmentSettings(fields => fields
         .Id("Id")
         .Subject("Subject")
