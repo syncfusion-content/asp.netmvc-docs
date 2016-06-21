@@ -1480,7 +1480,7 @@ The Appointments that lies within the blocked time range can be restricted to pe
 The `BlockoutSettings` holds the below properties to customize the block intervals such as,
 
 * `TemplateId` - Template design that applies on the block intervals.
-* `CustomStyle` - The custom css that applies on the blocked intervals.
+* `CustomStyle` - The custom CSS that applies on the blocked intervals.
 
 {% highlight razor %}
 
@@ -1521,7 +1521,7 @@ The `BlockoutSettings` holds the below properties to customize the block interva
 
 ### Blocking time interval based on resources
 
-* `ResourceId` - property used within the `BlockoutSettings` which accepts the resource id's can be used to apply the block intervals based on the resources.
+* `ResourceId` property used within the `BlockoutSettings` which accepts the resource id's can be used to apply the block intervals based on the resources.
 
 {% highlight razor %}
 
