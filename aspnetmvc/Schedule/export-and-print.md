@@ -273,7 +273,7 @@ The following code example depicts the way to print a particular appointment.
 
 #### Using print() method
 
-The public method `print` needs to be used here by passing the appointment object as its argument, that needs to be printed.
+The client-side public method `print` needs to be used here by passing the appointment object as its argument, that needs to be printed.
 
 For example, here the below code example depicts the way to print the particular appointment programmatically by calling the **print** function within the `AppointmentClick` event, which triggers whenever the user clicks on an appointment.
 
