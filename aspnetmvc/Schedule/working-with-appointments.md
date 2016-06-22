@@ -58,7 +58,7 @@ The quick window option can be enabled/disabled by using `ShowQuickWindow` API, 
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -88,7 +88,7 @@ Another way to disable the quick window option at dynamic time can be achieved t
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -148,7 +148,7 @@ To prevent the display of default appointment window on double clicking the Sche
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -186,7 +186,7 @@ You can add/edit the appointments dynamically through the public method `saveApp
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -244,7 +244,7 @@ A pop-up with a confirmation message will get displayed before deleting an appoi
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -298,7 +298,7 @@ The below code example depicts the way to delete the appointments using GUID pro
 
 {% highlight razor %}
 
-    @using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
     @{
         <!-- Datasource for Appointments -->
         List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -337,7 +337,7 @@ The below code example depicts the way to delete the appointments using appointm
 
 {% highlight razor %}
 
-    @using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
     @{
         <!-- Datasource for Appointments -->
         List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -388,7 +388,7 @@ To stop the save, edit and delete actions on the Scheduler appointments, followi
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -434,7 +434,7 @@ An interaction with the appointments of the Scheduler can be enabled/disabled th
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -466,7 +466,7 @@ The appointment time can be modified through the drag and drop behavior, by drag
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -508,7 +508,7 @@ The following code example shows how to cancel the dragging functionality with t
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -562,7 +562,7 @@ The following code example lets you dragging and dropping external items to and 
         }).AllowDragAndDrop(true).AllowDropChild(false).AllowDropSibling(false).AllowDragAndDropAcrossControl(true).Width("auto").ClientSideEvents(s => s.NodeDropped("onDropped").NodeDragStart("onNodeDrag"))
     </div>
     <div class="col-md-9">
-        @using Syncfusion.JavaScript.Models;
+     @using MyProject.Models; // Here MyProject defines your project name to access the model class
         @{
             <!-- Datasource for Owners -->
             List<ResourceFields> resources = new List<ResourceFields>();
@@ -767,7 +767,7 @@ Resizing an appointment is another way to change its start and end time. Mouse h
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -809,7 +809,7 @@ The following code example shows how to cancel the resizing functionality with t
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -857,7 +857,7 @@ We have below 6 default values for Categorize dataSource collection.
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for CategorizeSettings -->
     List<CategorizeSettings> CategorizeValue = new List<CategorizeSettings>();
@@ -898,7 +898,7 @@ It holds the binding name for <b>FontColor</b> field in the categorize dataSourc
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -944,7 +944,7 @@ The `PrioritySettings` holds the below priority related properties such as,
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for PrioritySettings -->
     List<PrioritySettings> PriorityValue = new List<PrioritySettings>();
@@ -975,7 +975,7 @@ It holds the binding name for <b>value</b> field in the priority dataSource.<br/
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -1021,7 +1021,7 @@ The public method `searchAppointments` is used to search the appointments in the
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -1090,7 +1090,7 @@ The appointments can be filtered or shortlisted based on the simple or complex c
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -1240,7 +1240,7 @@ To know more about other possible combinations of above specified recurrence rul
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -1271,7 +1271,7 @@ The default recurrence validation has been included for recurrence appointments 
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
@@ -1309,7 +1309,7 @@ Reminder option notifies all the appointments before some specific time. By defa
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();

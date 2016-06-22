@@ -83,15 +83,92 @@ RecurrenceExDate<br/><br/></td><td>
 Binds the recurrence Exception field which accepts the recurrence Exception date values.<br/><br/></td></tr>
 </table>
 
-The below example depicts the appointment fields accepting the string type mapper fields,
+The below example depicts the appointment fields accepting the string type mapper fields.
+
+Create a new Class **ScheduleData** to define the appointment related data to be passed to the Scheduler as mentioned below,
+
+{% highlight c# %}
+
+public class ScheduleData 
+    {
+        public string Id { get; set; }
+        public string Subject { get; set; }
+        public string Description { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Categorize { get; set; }
+        public string RoomId { get; set; }
+        public string OwnerId { get; set; }
+        public string Priority { get; set; }
+        public bool AllDay { get; set; }
+        public bool Recurrence { get; set; }
+        public string RecurrenceRule { get; set; }
+    }
+{% endhighlight %}
+
+Also, define the below model classes in your application, if there is a need to make use of the features such as multiple resources, categories, priorities, context menu and timzone collection in your sample application.
+   
+{% highlight c# %}
+
+// Define the below class, whenever the multiple resources and grouping feature is used in your sample project.
+public class ResourceFields
+    {
+        public string Text { set; get; }
+        public string Id { set; get; }
+        public string GroupId { set; get; }
+        public string Color { set; get; }
+        public int WorkHourStart { set; get; }
+        public int WorkHourEnd { set; get; }
+        public List<string> CustomDays { set; get; }
+    }
+    
+// Define the below class, whenever the category related data is to be used in Scheduler.
+public class CategorizeSettings
+    {
+        public string Text { set; get; }
+        public string Id { set; get; }
+        public string FontColor { set; get; }
+        public string Color { set; get; }
+    }
+
+// Define the below class, whenever the priorities are to be used for Scheduler appointments.
+public class PrioritySettings
+    {
+        public string Text { set; get; }
+        public string Value { set; get; }
+    }
+    
+// Define the below two classes (Appointment and Cells), if context menu items are to be used in the Scheduler.
+public class Appointment
+    {
+        public string Text { set; get; }
+        public string Id { set; get; }
+    }
+public class Cells
+    {
+        public string Text { set; get; }
+        public string Id { set; get; }
+        public string ParentId { set; get; }
+    }
+    
+// Define the below class, if timezone collection to be specified for Scheduler.
+public class TimezoneCollection
+    {
+        public string Text { set; get; }
+        public string Id { set; get; }
+        public string Value { set; get; }
+    }
+
+{% endhighlight %}
+
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{ 
     <!-- Datasource for Appointments -->
-    List<ScheduleFields> Appoint = new List<ScheduleFields>();
-    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", AllDay = false, StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Recurrence = false, RecurrenceRule = "", Priority = "high", Categorize = "1", StartTimeZone = "UTC +05:00", EndTimeZone = "UTC +05:00", Location = "US", Description = "Never Giveup on Obstacles", RecurrenceId = "1", RecurrenceExDate = "", ResourceFields = "1" });
+    List<ScheduleData> Appoint = new List<ScheduleData>();
+    Appoint.Add(new ScheduleData { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
     
     <!-- Datasource for Grouping Resources -->
     List<String> Group = new List<String>();
@@ -144,7 +221,7 @@ Refer the appointment fields specified with validation rules from the following 
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for CategorizeSettings -->
     List<CategorizeSettings> CategorizeValue = new List<CategorizeSettings>();
@@ -200,7 +277,7 @@ Scheduler supports binding the appointment data to it through the list of appoin
 
 {% highlight razor %}
 
-@using Syncfusion.JavaScript.Models;
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
 @{
     <!-- Datasource for Appointments -->
     List<ScheduleFields> Appoint = new List<ScheduleFields>();
