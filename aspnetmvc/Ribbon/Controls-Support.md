@@ -74,6 +74,8 @@ The following table describes about the built in controls `Type` and their corre
 N> 1. You can specify type either to group’s collection or to each group.
 N> 2. For `Type` property you can assign either string value (“SplitButton”) or enum value (RibbonButtonType.SplitButton).
 
+{% tabs %}
+
 {% highlight CSHTML %}
 
     @(Html.EJ().Ribbon("defaultRibbon")
@@ -171,6 +173,34 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
     </li>
     </ul>
 {% endhighlight  %}
+
+{% highlight C# %}
+
+    public partial class RibbonController: Controller
+    {
+		List<FontFamily> fontFamily1 = new List<FontFamily>();
+        List<FontPoint> fontPoint1 = new List<FontPoint>();
+        public ActionResult RibbonFeatures()
+        {
+            fontFamily1.Add(new FontFamily { text = "Segoe UI" });
+            fontFamily1.Add(new FontFamily { text = "Arial" });
+            fontFamily1.Add(new FontFamily { text = "Times New Roman" });
+            fontFamily1.Add(new FontFamily { text = "Tahoma" });
+            fontFamily1.Add(new FontFamily { text = "Helvetica" });
+            ViewBag.datasource = fontFamily1;
+            fontPoint1.Add(new FontPoint { text = "1pt" });
+            fontPoint1.Add(new FontPoint { text = "2pt" });
+            fontPoint1.Add(new FontPoint { text = "3pt" });
+            fontPoint1.Add(new FontPoint { text = "4pt" });
+            fontPoint1.Add(new FontPoint { text = "5pt" });
+            ViewBag.datasource1 = fontPoint1;
+            return View();
+         } 
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![](Controls-Support_images/Controls-Support_img1.png)
 
