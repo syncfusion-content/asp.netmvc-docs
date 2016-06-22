@@ -16,7 +16,7 @@ This section explains you on how to create the TreeGrid control in your applicat
 ![](Getting-Started_images/Getting-Started_img1.png)
 
 
-1. Create Syncfusion ASP.NET MVC Application. You can refer the [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/treegrid/getting-started)to create new project and add necessary DLL’s and script files.
+1. Create Syncfusion ASP.NET MVC Application. You can refer the [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/treegrid/getting-started) to create new project and add necessary DLL’s and script files.
 
 2. Add a TreeGrid Control in index.cshtml page with an empty datasource like as follows.
 
@@ -509,10 +509,10 @@ You can enable Editing in TreeGrid using EditSettings API as illustrated in the 
 
 You are also provided with the following editors’ support in TreeGrid control
 
-* Stringedit
-* Booleanedit
-* Numericedit
-* Dropdownedit
+* String
+* Boolean
+* Numeric
+* Dropdown
 * Datepicker
 * Datetimepicker
 

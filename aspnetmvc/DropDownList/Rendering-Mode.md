@@ -11,7 +11,7 @@ documentation: ug
 
 DropDownList control can be created using UL-LI element. 
 
-By default DropDownList control is rendered using DropDownList helper to which you can pass popup items using Datasource and DropoDownListFields property. 
+By default DropDownList control is rendered using DropDownList helper to which you can pass popup items using Datasource and DropDownListFields property. 
 ## Using UL-LI
 
 You can bind the predefined set of UL-LI elements to generate the list of popup items. These items can be customized by adding any images, div elements, radio buttons, text boxes etc.

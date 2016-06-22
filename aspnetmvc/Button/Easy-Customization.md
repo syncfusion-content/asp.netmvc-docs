@@ -25,19 +25,19 @@ Creates button with content size.</td></tr>
 <tr>
 <td>
 Mini</td><td>
-Creates button with inbuilt mini size height, width specified.</td></tr>
+Creates button with Built-in mini size height, width specified.</td></tr>
 <tr>
 <td>
 Small</td><td>
-Creates button with inbuilt small size height, width specified.</td></tr>
+Creates button with Built-in small size height, width specified.</td></tr>
 <tr>
 <td>
 Medium</td><td>
-Creates button with inbuilt medium size height, with specified.</td></tr>
+Creates button with Built-in medium size height, with specified.</td></tr>
 <tr>
 <td>
 Large</td><td>
-Creates button with inbuilt large size height, width specified.</td></tr>
+Creates button with Built-in large size height, width specified.</td></tr>
 </table>
 Apart from the above mentioned predefined size option, you can set your own width and height for button using Height and Width property.
 
@@ -121,9 +121,9 @@ Supports image with both ends and middle in text.</td></tr>
 
 Icons inside the Button is added easily using PrefixIcon and SuffixIcon property. Location of the icon in button is a necessary thing and you can easily customize it using the following mentioned options.
 
-Button control also supports the build-in icon libraries. The ej.widgets.core.minCSS contains definitions for important icons that can be used in buttons. Simply you can use these build-in icons by mentioning the icon class name as value in PrefixIcon and SuffixIcon property. You can use any font icons that are defined in ej.widgets.core.minCSS. It avoids the complexity in specifying icon using sprite image and CSS.
+Button control also supports the Built-in icon libraries. The ej.widgets.core.minCSS contains definitions for important icons that can be used in buttons. Simply you can use these Built-in icons by mentioning the icon class name as value in PrefixIcon and SuffixIcon property. You can use any font icons that are defined in ej.widgets.core.minCSS. It avoids the complexity in specifying icon using sprite image and CSS.
 
-For example the following mentioned build-in CSS class are used to show the font icons that is used by media player.
+For example the following mentioned Built-in CSS class are used to show the font icons that is used by media player.
 
 e-mediaback
 

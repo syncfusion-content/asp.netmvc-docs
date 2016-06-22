@@ -51,9 +51,9 @@ Toggle button with two different toggle states
 
 You can add icons in prefix and suffix position of Toggle Button. Location of Icon is customized easily using the following mentioned option. This is applicable for the content type’s ImageOnly, TextAndImage, ImageTextImage and ImageBoth.
 
-Toggle Button control also supports the build-in icon libraries. The ej.widgets.core.min.css contains the definition for important icons that are used in toggle buttons. You can use these build-in icons by mentioning the icon class name as value in DefaultPrefixIcon, DefaultSuffixIcon, ActivePrefixIcon,and ActiveSuffixIcon property. You can use any font icons that is defined in ej.widgets.core.min.css it avoids the complexity in specifying icon using sprite image and CSS.
+Toggle Button control also supports the Built-in icon libraries. The ej.widgets.core.min.css contains the definition for important icons that are used in toggle buttons. You can use these Built-in icons by mentioning the icon class name as value in DefaultPrefixIcon, DefaultSuffixIcon, ActivePrefixIcon,and ActiveSuffixIcon property. You can use any font icons that is defined in ej.widgets.core.min.css it avoids the complexity in specifying icon using sprite image and CSS.
 
-For example the following mentioned build-in CSS class are used to show the font icons that are used by media player.
+For example the following mentioned Built-in CSS class are used to show the font icons that are used by media player.
 
 * e-mediaback
 * e-mediaforward
@@ -149,19 +149,19 @@ Creates toggle button with content size.</th></tr>
 <tr>
 <td>
 Mini</td><td>
-Creates toggle button with inbuilt mini size height, width specified.</td></tr>
+Creates toggle button with Built-in mini size height, width specified.</td></tr>
 <tr>
 <td>
 Small</td><td>
-Creates toggle button with inbuilt small size height, width specified.</td></tr>
+Creates toggle button with Built-in small size height, width specified.</td></tr>
 <tr>
 <td>
 Medium</td><td>
-Creates toggle button with inbuilt medium size height, width specified.</td></tr>
+Creates toggle button with Built-in medium size height, width specified.</td></tr>
 <tr>
 <td>
 Large</td><td>
-Creates toggle button with inbuilt large size height, width specified.</td></tr>
+Creates toggle button with Built-in large size height, width specified.</td></tr>
 </table>
 
 

@@ -20,7 +20,7 @@ The following section explains you on how to set orientation for the toolbar.
 
 By default the Orientation property sets the Toolbar in horizontal orientation. You can refer the following steps to set horizontal orientation for Toolbar control. Default value of Orientation is Horizontal.
 
-1. In View, create ul-li list of toolbar items and invoke the toolbar helper.
+1. In View, create UL-LI list of toolbar items and invoke the toolbar helper.
 2. Add the following code in your CSHTML page.
 
    ~~~ cshtml
@@ -52,7 +52,7 @@ Toolbar with Horizontal Orientation
 
 This property sets the Toolbar in vertical orientation. You can refer the following steps to set Vertical Orientation for Toolbar control.
 
-1. Create ul-li list of toolbar items and invoke the toolbar helper.
+1. Create UL-LI list of toolbar items and invoke the toolbar helper.
 2. Add the following script in your HTML page.
 
    ~~~ cshtml

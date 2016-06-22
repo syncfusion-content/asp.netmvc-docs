@@ -195,7 +195,7 @@ Some browsers block the clipboard access from JavaScript. If you want to use the
 
 The editor is capable to persist its content with HTML format. By default, the persistence support is disabled in the editor. When you set the EnablePersistence property to true, the persistence will be enabled in the editor.
 
-N>  [localstorage](http://www.w3schools.com/html/html5_webstorage.asp#) is not supported below ie9 version, therefore persistence support is fallback to [cookie](http://www.w3schools.com/js/js_cookies.asp#).
+N>  [local storage](http://www.w3schools.com/html/html5_webstorage.asp#) is not supported below ie9 version, therefore persistence support is fallback to [cookie](http://www.w3schools.com/js/js_cookies.asp#).
 
 {% highlight html %}
 
@@ -441,7 +441,7 @@ ASP.NET MVC supports client side validation. First of all you need to take a ref
     
 {% endhighlight %}
 
-Now, add following two settings in &lt;appsettings&gt; section of web.config, if it is not there.
+Now, add following two settings in &lt;appSettings&gt; section of web.config, if it is not there.
     
 {% highlight html %}
 
