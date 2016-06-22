@@ -154,7 +154,7 @@ By default, there are 12-theme support available for UploadBox control namely,
 
 ## Custom CSS
 
-Cssclass customizes the UploadBox control’s appearance. Define a Cssclass as per the requirement and assign the class name to CssClass property. The data type is string. 
+CssClass customizes the UploadBox control’s appearance. Define a CssClass as per the requirement and assign the class name to CssClass property. The data type is string. 
 
 The following steps explain the configuration of CssClass property in UploadBox. 
 

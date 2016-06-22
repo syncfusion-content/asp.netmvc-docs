@@ -13,7 +13,7 @@ This section briefly describes you on how to create a QuizApp and RegistrationAp
 
 ## Create your first RadioButton in MVC
 
-ASP.NET MVC RadioButton provides support to display the RadioButton within your webpage, and allows you to pick your choice. Using the following guidelines, you can customize RadioButton for a real-time QuizApp and RegistrationApp scenarios. This allows you to select the corresponding choice for each question.
+ASP.NET MVC RadioButton provides support to display the RadioButton within your web page, and allows you to pick your choice. Using the following guidelines, you can customize RadioButton for a real-time QuizApp and RegistrationApp scenarios. This allows you to select the corresponding choice for each question.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 

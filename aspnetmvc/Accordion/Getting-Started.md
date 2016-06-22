@@ -413,7 +413,7 @@ You can customize the Header icon using Custom Icon property. This property is h
 
 You can change the + and - symbols in the Accordion header, that are default icons with Up and Down arrow icons. 
 
-Up and Down arrow icons are available in e-arrowheadup and e- arrowheaddown classes respectively in the ej.widgets.core.min.css stylesheets from the sample. 
+Up and Down arrow icons are available in e-arrowheadup and e-arrowheaddown classes respectively in the ej.widgets.core.min.css stylesheets from the sample. 
 
 You can set the Up/Down arrow icon to Accordion header, by adding e-arrowheadup and e-arrowheaddown class to SelectedHeader and Header properties respectively.
 

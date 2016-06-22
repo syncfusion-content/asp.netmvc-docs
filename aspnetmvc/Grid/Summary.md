@@ -423,9 +423,9 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img7.png)
 
-## Handling Aggregation in serverside
+## Handling Aggregation in server side
 
-The Aggregation at serverside is handled by using `aggregate` key. While using remote data, Summary Row must be handled by returning summary column datasource into the `aggregate` property of `result` object.
+The Aggregation at server side is handled by using `aggregate` key. While using remote data, Summary Row must be handled by returning summary column datasource into the `aggregate` property of `result` object.
 
 The following code example describes the above behavior.
 

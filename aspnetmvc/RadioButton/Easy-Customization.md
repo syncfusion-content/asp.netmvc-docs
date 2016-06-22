@@ -11,7 +11,7 @@ documentation: ug
 
 ## Checked status
 
-You have options to set the state of the radio button as either checked or unchecked. When you select any option from the group of radio buttons, a dot mark appears inside the circle. This is called the checkedstate. Previously selected radio buttons in this group are unselected that is they go to the unchecked state. The Checked property is used to set the state of the radio button.
+You have options to set the state of the radio button as either checked or unchecked. When you select any option from the group of radio buttons, a dot mark appears inside the circle. This is called the checked state. Previously selected radio buttons in this group are unselected that is they go to the unchecked state. The Checked property is used to set the state of the radio button.
 
 The following steps explain the details about rendering the Radio Button with the checked option
 
@@ -132,11 +132,11 @@ Description</th></tr>
 <tr>
 <td>
 Small</td><td>
-Creates radio button with inbuilt small size height, width specified.</td></tr>
+Creates radio button with Built-in small size height, width specified.</td></tr>
 <tr>
 <td>
 Medium</td><td>
-Creates radio button with inbuilt medium size height, width specified.</td></tr>
+Creates radio button with Built-in medium size height, width specified.</td></tr>
 </table>
 
 

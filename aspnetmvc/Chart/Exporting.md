@@ -63,7 +63,7 @@ To convert the chart data from client to server-side, refer to the following ste
  
 	i). ASP.NET MVC Controller
     
-    ii). ASP.NET Webform
+    ii). ASP.NET Web Form
     
     iii). WebAPI
     

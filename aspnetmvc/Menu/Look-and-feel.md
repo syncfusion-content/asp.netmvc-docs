@@ -26,7 +26,7 @@ Essential JavaScript controls feature 12 built-in themes, six flat and gradient 
 * gradient-saffron
 * gradient-saffron-dark
 
-## Cssclass
+## CssClass
 
 Menu control also customizes its appearance using user-defined CSS and custom skin options (colors and backgrounds). To apply custom themes you can use the “CssClass” property. “CssClass” property sets the root class for Menu control theme.
 

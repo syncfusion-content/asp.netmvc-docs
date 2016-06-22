@@ -23,7 +23,6 @@ External script files
 * [jQuery 1.7.1](http://jquery.com/#) and later versions.
 * [jQuery.easing.js](http://gsgd.co.uk/sandbox/jquery/easing/#) - to support the animation effects.
 
-
 Internal script files
 
 <table>
@@ -34,12 +33,19 @@ Description / Usage </th></tr>
 <tr>
 <td>
 ej.core.min.js<br/><br/></td><td>
-Must be referred always before using all the JS controls.<br/><br/></td></tr>
+Includes only the widget basic functions and framework features. Must be referred always before using all the JS controls<br/><br/></td></tr>
+<tr>
+<td>
+ej.globalize.min.js<br/><br/></td><td>
+To support the globalization.<br/><br/></td></tr>
 <tr>
 <td>
 ej.datepicker.min.js<br/><br/></td><td>
 DatePicker plugin.<br/><br/></td></tr>
 </table>
+
+N> From V13.4.0.53 onwards, jQuery.globalize.min.js file has been replaced with our script file ej.globalize.min.js to support the globalization for our widgets. For version lower than 13.4.0.53, refer jQuery.globalize.min.js.
+
 You can make use of **ej.web.all.min.js** file which encapsulates all EJMVC components and frameworks in single file.
 
 

@@ -72,19 +72,19 @@ Creates split button with content size.</td></tr>
 <tr>
 <td>
 Mini</td><td>
-Creates split button with inbuilt mini size height, width specified.</td></tr>
+Creates split button with Built-in mini size height, width specified.</td></tr>
 <tr>
 <td>
 Small</td><td>
-Creates split button with inbuilt small size height, width specified.</td></tr>
+Creates split button with Built-in small size height, width specified.</td></tr>
 <tr>
 <td>
 Medium</td><td>
-Creates split button with inbuilt medium size height, width specified.</td></tr>
+Creates split button with Built-in medium size height, width specified.</td></tr>
 <tr>
 <td>
 Large</td><td>
-Creates split button with inbuilt large size height, width specified.</td></tr>
+Creates split button with Built-in large size height, width specified.</td></tr>
 </table>
 
 
@@ -257,9 +257,9 @@ Supports image with both ends and middle in text.</td></tr>
 
 Icons inside the Split Button is added easily using PrefixIcon and SuffixIcon property. Location of the icon in Split Button is a necessary thing. You can customize the location of Icon easily using the following mentioned options.
 
-Split Button control also supports the build-in icon libraries. The ej.widgets.core.min.css contains definitions for important icons that are used in Split Buttons. You can use these build-in icons by mentioning the icon class name as value in PrefixIcon and SuffixIcon property. You can use any font icons that is defined in ej.widgets.core.min.css. It avoids the complexity in specifying icon using sprite image and CSS.
+Split Button control also supports the Built-in icon libraries. The ej.widgets.core.min.css contains definitions for important icons that are used in Split Buttons. You can use these Built-in icons by mentioning the icon class name as value in PrefixIcon and SuffixIcon property. You can use any font icons that is defined in ej.widgets.core.min.css. It avoids the complexity in specifying icon using sprite image and CSS.
 
-For example the following build-in CSS classes are used to display the font icons that is used by media player.
+For example the following Built-in CSS classes are used to display the font icons that is used by media player.
 
 * e-mediaback
 * e-mediaforward
