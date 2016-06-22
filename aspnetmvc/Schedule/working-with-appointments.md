@@ -1357,7 +1357,7 @@ The `BlockoutSettings` holds the below block intervals related properties such a
 
 * `Enable` - It accepts true or false value, denoting whether to enable/disable the block intervals option. It's default value is `false`.
 * `TemplateId` – It applies the template design to block the intervals.
-* `DataSource` – Binds the block intervals dataSource collection. This property should be assigned either with the JSON data array collection or instance of DataManager (`ej.DataManager`).
+* `Datasource` – Binds the block intervals dataSource collection. This property should be assigned either with the JSON data array collection or instance of DataManager (`ej.DataManager`).
 
 The below blockout fields holds the appropriate column names from the dataSource - 
 
