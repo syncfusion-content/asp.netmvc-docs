@@ -85,7 +85,7 @@ Binds the recurrence Exception field which accepts the recurrence Exception date
 
 The below example depicts the appointment fields accepting the string type mapper fields.
 
-Create a new Class to define the data to be passed to the Scheduler as mentioned below,
+Create a new Class **ScheduleData** to define the appointment related data to be passed to the Scheduler as mentioned below,
 
 {% highlight c# %}
 
@@ -104,9 +104,13 @@ public class ScheduleData
         public bool Recurrence { get; set; }
         public string RecurrenceRule { get; set; }
     }
-    
- // Define the below model classes, if there is a need to use those classes in view page
+{% endhighlight %}
+
+Also, define the below model classes in your application, if there is a need to make use of the features such as multiple resources, categories, priorities, context menu and timzone collection in your sample application.
    
+{% highlight c# %}
+
+// Define the below class, whenever the multiple resources and grouping feature is used in your sample project.
 public class ResourceFields
     {
         public string Text { set; get; }
@@ -118,6 +122,7 @@ public class ResourceFields
         public List<string> CustomDays { set; get; }
     }
     
+// Define the below class, whenever the category related data is to be used in Scheduler.
 public class CategorizeSettings
     {
         public string Text { set; get; }
@@ -125,12 +130,15 @@ public class CategorizeSettings
         public string FontColor { set; get; }
         public string Color { set; get; }
     }
-    
+
+// Define the below class, whenever the priorities are to be used for Scheduler appointments.
 public class PrioritySettings
     {
         public string Text { set; get; }
         public string Value { set; get; }
     }
+    
+// Define the below two classes (Appointment and Cells), if context menu items are to be used in the Scheduler.
 public class Appointment
     {
         public string Text { set; get; }
@@ -142,6 +150,8 @@ public class Cells
         public string Id { set; get; }
         public string ParentId { set; get; }
     }
+    
+// Define the below class, if timezone collection to be specified for Scheduler.
 public class TimezoneCollection
     {
         public string Text { set; get; }
