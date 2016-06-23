@@ -8,75 +8,27 @@ keywords: recurrence editor, recurrence widget, ejRecurrenceEditor, js recurrenc
 ---
 # Recurrence Editor
 
+The Recurrence Editor includes the entire recurrence related information in a separate portable manner which can be either utilized as a separate widget or else can be embed within the appointment window of Scheduler to enable recurrence options within it. The recurrence rule can be easily generated based on the frequency selected. The customizations such as changing the labels of the recurrence editor is also possible to achieve through its properties. The frequencies available are Never, Daily, Weekly, Monthly, Yearly and Every weekday.
+
 ## Getting Started
 
-To render the RecurrenceEditor control, the following list of external dependencies are needed, 
+Follow the steps as mentioned in the [Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) page of the Introduction part to create an MVC application with required assembly references, scripts and stylesheets to render the Recurrence Editor.
 
-* [jQuery](http://jquery.com) - 1.7.1 and later versions
-* [jsRender](https://github.com/borismoore/jsrender) - to render the templates
-* [jQuery.easing](http://gsgd.co.uk/sandbox/jquery/easing) - to support animation effects in the components
+Add the basic Recurrence Editor code in the View page as shown below,
 
-The other required internal dependencies are tabulated below,
-
-
-<table>
-<tr>
-<th>
-File<br/><br/></th><th>
-Description/Usage<br/><br/></th></tr>
-<tr>
-<td>
-ej.core.min.js<br/><br/></td><td>
-Must be referred always first before using all the JS controls.<br/><br/></td></tr>
-<tr>
-<td>
-ej.globalize.min.js<br/><br/></td><td>
-Must be referred to localize any of the JS control's text and content.<br/><br/></td></tr>
-<tr>
-<td>
-ej.recurrenceeditor.min.js<br/><br/></td><td>
-Schedule core file<br/><br/></td></tr>
-<tr>
-<td>
-ej.scroller.js<br/><br/>ej.button.min.js<br/><br/>ej.datepicker.min.js<br/><br/>ej.checkbox.min.js<br/><br/>ej.editor.min.js<br/><br/>ej.dropdownlist.min.js<br/><br/>ej.togglebutton.min.js<br/><br/>ej.radiobutton.min.js<br/><br/></td><td>
-These files are referred for proper working of the sub-controls used within RecurrenceEditor.<br/><br/></td></tr>
-</table>
-
-N> RecurrenceEditor uses one or more sub-controls, therefore refer the `ej.web.all.min.js` (which encapsulates all the `ej` controls and frameworks in a single file) in the application instead of referring all the above specified internal dependencies. 
-
-To get the real appearance of the RecurrenceEditor, the dependent css file `ej.web.all.min.css` (which includes styles of all the widgets) should also needs to be referred.
-
-# Overview
-
-The **EJ Recurrence Editor** is allowed to show the different recurrence type which used in the schedule recurrence appointment creation as a portable. Using this control we can render recurrence editor anywhere in web page and can generate the recurrence rule based on value we selected. In this control, we can change the labels of the recurrence editor also customize the elements and frequencies using the properties
- 
-
-**Key Features**
-
-Some of the key features of Scheduler are as follows, 
-
-* **Frequencies** - 6 types of views are available namely Never, Daily, Weekly, Monthly, Yearly, Everyweekday.
-* **SelectedRecurrenceType** - Selecting the recurrence types in the recurrence editor. 
-* **firstDayOfWeek** - showing the first day in the week of date picker in recurrence editor.
-
-## Basic Rendering the recurrence Editor
-
-The recurrence Editor is an widget which is used the show the different recurrence type. it is used to generate the rule based on which we selected in the recurrence rule. 
-
-Here, the example fo the basic recurrence editor widget.
 {% highlight razor %}
 
   @(Html.EJ().RecurrenceEditor("RecurrenceEditor")
-        .SelectedRecurrenceType: 0,  
-            )
+        .SelectedRecurrenceType(0)  
+    )
 
 {% endhighlight %}
 
-## Recurrence Editor for generate the recurrence rule.
+## Generating Recurrence Rule
 
-The Recurrrence Editor is used to generate the recurrence rule for the scheduler appointment rendering.
+The Recurrence Editor can be used to generate the recurrence rule as a string, based on the repeat options selected.
 
-The following code example depicts the way to render the recurrence editor and generate the recurrence rule.
+The following code example depicts the way to generate the recurrence rule.
 
 {% highlight razor %}
         @(Html.EJ().RecurrenceEditor("RecurrenceEditor")
@@ -84,11 +36,12 @@ The following code example depicts the way to render the recurrence editor and g
         .RecurrenceEditorClientSideEvents(evt=>evt.Create("onCreate"))
         )
 {% endhighlight %}
+
+Define a button separately and add it to the page as shown below and while clicking on it, make use of the client-side public method `getRecurrenceRule` of the Recurrence Editor to generate the recurrence rule string explicitly.
         
 {% highlight html %}
 
-    <div id="customWindow" style="display: none"></div>
-    <button type="donerecur" onclick="closerecurence()" id="donerecur1" class='recurbutton' style="float:right;margin-right:20px;margin-bottom:10px;">Recurrence String</button>
+    <button onclick="closerecurrence()" id="donerecur1" class='recurbutton' style="float:right;margin-right:20px;margin-bottom:10px;">Recurrence String</button>
     
  {% endhighlight %} 
  
@@ -99,9 +52,9 @@ The following code example depicts the way to render the recurrence editor and g
          $("#RecurrenceEditor").after($("#donerecur1"));
 
      });
-     function closerecurence() {
+     function closerecurrence() {
          var obj = $(".e-recurrenceeditor").data("ejRecurrenceEditor")
-         obj.closeRecurPublic();
+         obj.getRecurrenceRule(); // recurrence rule gets generated here, as per the options selected in the recurrence editor
          alert(obj._recRule);
 
      }
