@@ -20,7 +20,7 @@ N> By default, the Schedule control is localized in **en-US** culture.
 
 To localize Scheduler into any particular culture, it is necessary to refer the culture-specific script files in your application after the reference of **ej.web.all.min.js** file, which are available under the following location.                   
 
-_<**Installed location**>\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\cultures_
+_<**Installed location**>\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\i18n_
 
 The following code example shows how to localize the Schedule control in **fr-FR** culture.
 
@@ -51,7 +51,7 @@ The following code example shows how to localize the Schedule control in **fr-FR
 {% endhighlight %}
 
 {% highlight html %}
-<script src="@Url.Content("~/Scripts/cultures/ej.culture.fr-FR.min.js")"></script>
+<script src="@Url.Content("~/Scripts/i18n/ej.culture.fr-FR.min.js")"></script>
 <script>
     ej.Schedule.Locale["fr-FR"] = {
         ReminderWindowTitle: "Fenêtre de rappel",
