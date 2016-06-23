@@ -133,6 +133,8 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
 
 Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corresponding `Type` specified like Button, SplitButton, ToggleButton, DropDownList, Gallery, Custom, etc. Default type is `Button`.
 
+{% tabs %}
+
 {% highlight CSHTML %}
 
         @(Html.EJ().Ribbon("defaultRibbon")
@@ -196,6 +198,28 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
     }
 
 {% endhighlight  %}
+
+{% highlight C# %}
+
+    public partial class RibbonController: Controller
+    {
+		List<FontFamily> fontFamily1 = new List<FontFamily>();
+        List<FontPoint> fontPoint1 = new List<FontPoint>();
+        public ActionResult RibbonFeatures()
+        {
+            fontFamily1.Add(new FontFamily { text = "Segoe UI" });
+            fontFamily1.Add(new FontFamily { text = "Arial" });
+            fontFamily1.Add(new FontFamily { text = "Times New Roman" });
+            fontFamily1.Add(new FontFamily { text = "Tahoma" });
+            fontFamily1.Add(new FontFamily { text = "Helvetica" });
+            ViewBag.datasource = fontFamily1;
+            return View();
+         } 
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 

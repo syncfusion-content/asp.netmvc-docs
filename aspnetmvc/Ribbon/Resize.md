@@ -76,6 +76,8 @@ Based on window size, detailed group is shrined into single button and you can e
 
 For each group shirked for resizing, Custom Class will be added based on group text.For example, `e-Action` whereas `Action` is group text. Using this custom class, group button can be customized such as to set icons etc.
 
+{% tabs %}
+
 {% highlight CSHTML %}
 
     @section ControlsSection{
@@ -212,5 +214,33 @@ For each group shirked for resizing, Custom Class will be added based on group t
      }
      
 {% endhighlight %}
+
+{% highlight C# %}
+
+    public partial class RibbonController: Controller
+    {
+		List<FontFamily> fontFamily1 = new List<FontFamily>();
+        List<FontPoint> fontPoint1 = new List<FontPoint>();
+        public ActionResult RibbonFeatures()
+        {
+            fontFamily1.Add(new FontFamily { text = "Segoe UI" });
+            fontFamily1.Add(new FontFamily { text = "Arial" });
+            fontFamily1.Add(new FontFamily { text = "Times New Roman" });
+            fontFamily1.Add(new FontFamily { text = "Tahoma" });
+            fontFamily1.Add(new FontFamily { text = "Helvetica" });
+            ViewBag.datasource = fontFamily1;
+            fontPoint1.Add(new FontPoint { text = "1pt" });
+            fontPoint1.Add(new FontPoint { text = "2pt" });
+            fontPoint1.Add(new FontPoint { text = "3pt" });
+            fontPoint1.Add(new FontPoint { text = "4pt" });
+            fontPoint1.Add(new FontPoint { text = "5pt" });
+            ViewBag.datasource1 = fontPoint1;
+            return View();
+         } 
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![](Resize_images/Resize_img2.png)
