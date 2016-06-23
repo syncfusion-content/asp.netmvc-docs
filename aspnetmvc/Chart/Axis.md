@@ -742,6 +742,72 @@ Prefix and suffix can be added to the category labels by using the LabelFormat p
 
 Customization of features such as axis title, labels, grid lines and tick lines are common to all the axis. Each of these features are explained in this section.
 
+### Axis Crossing
+
+Axis can be positioned anywhere in chart area using the **CrossesAt** property of axis. This property specifies where the horizontal axis should intersect or cross the vertical axis and vice versa. Default value of *CrossesAt* property is null.
+
+{% highlight cshtml %}
+
+	@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Crosses primary Y axis at 0
+          px=>px.CrossesAt(0)
+              //....
+     )
+        // ...
+	)
+
+{% endhighlight %}
+
+![](Axis_images/axis_img52.png)
+
+
+#### Crossing a specific Axis
+
+The **CrossesInAxis** property takes axis name as input and determines the axis used for crossing. By default all the horizontal axes crosses in primary Y axis and all the vertical axes crosses in primary X axis.
+
+{% highlight cshtml %}
+
+	@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Crosses secondary vertical axis at -0.2
+          px=>px.CrossesAt(-0.2)
+		        .CrossesInAxis('SecondaryYAxis')
+              //....
+     )
+        // ...
+	)
+
+{% endhighlight %}
+
+![](Axis_images/axis_img53.png)
+
+Axis will be placed in the opposite side if value of *CrossesAt* property is greater than the maximum value of crossing axis (axis name provided through *CrossesInAxis* property or primary Y axis for horizontal axis).
+
+{% highlight cshtml %}
+
+	@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          //Crosses primary Y axis at 200
+          px=>px.CrossesAt(200)
+              //....
+     )
+        // ...
+	)
+
+{% endhighlight %}
+
+![](Axis_images/axis_img54.png)
+
 ### Axis Visibility
 
 Axis visibility can be controlled by using the **Visible** property of the axis. The default value of the Visible property is **True**. 
