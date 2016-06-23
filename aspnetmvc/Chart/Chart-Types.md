@@ -541,6 +541,52 @@ You can change the color of a column by using the Fill property of the point.
 
 ![](Chart-Types_images/Chart-Types_img18.png)
 
+### Column width customization
+
+Width of any column type series can be customized by using the **ColumnWidth** property. Default value of *ColumnWidth* is 0.7. Value ranges from 0 to 1. Here 1 corresponds to 100% of available width and 0 corresponds to 0% of available width.
+
+N> Width of a column also depends upon the *ColumnSpacing* property, because *ColumnSpacing* will reduce the space available for drawing a column. This is also applicable for StackingColumn, StackingColumn100, Bar, StackingBar, StackingBar100, RangeColumn, HiLo, HiLoOpenClose, Candle and Waterfall charts.
+
+{% highlight cshtml %}
+
+    @(Html.EJ().Chart("chartContainer")
+
+      .Series(sr =>
+      { 
+	    //Customizing column width for a specific series
+        sr.ColumnWidth(0.8).Add();
+        //...
+      })
+        // ...
+    )	
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img88.png)
+
+### Spacing between column series
+
+Spacing between column type series can be customized using the **ColumnSpacing** property. Default value of *ColumnSpacing* is 0. Value ranges from 0 to 1. Here 1 corresponds to 100% available space and 0 corresponds to 0% available space.
+
+N> Space between columns will also affect the width of the column. For example, setting 20% spacing and 100% width will render columns with 80% of total width. This is also applicable for StackingColumn, StackingColumn100, Bar, StackingBar, StackingBar100, RangeColumn, HiLo, HiLoOpenClose, Candle and Waterfall charts.
+
+{% highlight cshtml %}
+
+	@(Html.EJ().Chart("chartContainer")
+
+      .Series(sr =>
+      { 
+	    //Customizing column spacing for a specific series
+        sr.ColumnSpacing(0.2).Add();
+        //...
+      })
+        // ...
+    )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img89.png)
+
 
 ## RangeColumn Chart
 
