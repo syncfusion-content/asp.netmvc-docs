@@ -14,7 +14,7 @@ This section explains briefly about how to add and use a PDF viewer control in y
 
 ##Create your first PDF viewer application in ASP.NET MVC
 
-Create a new project in the visual studio by selecting the ASP.NET MVC Empty Web Application template. The following screenshot displays the Project Creation Wizard in Visual Studio 2012.
+Create a new project in the Visual Studio by selecting the ASP.NET MVC Empty Web Application template. The following screenshot displays the Project Creation Wizard in Visual Studio 2012.
 
 ![](GettingStarted_images/GettingStarted_img1.jpeg)
 
@@ -34,7 +34,7 @@ Add below references and set the Copy Local property to **True**
 * Syncfusion.Pdf.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.PdfViewer
-* Sycnfusion.EJ.MVC
+* Syncfusion.EJ.MVC
 
 ### Modify RouteConfig.cs
 
@@ -66,7 +66,7 @@ namespace PdfViewerSample
 
 ###Modify Web.config
 
-Set the value of **UnobtrusiveJavaScriptEnabled** to **false** in Web.config of Project (To enable the Unobstrusive option, please look at this [link](http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application)).
+Set the value of **UnobtrusiveJavaScriptEnabled** to **false** in Web.config of Project (To enable the Unobtrusive option, please look at this [link](http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application)).
 Add below namespace in Web.config of Views.
 
 {% highlight XML %}
@@ -109,11 +109,11 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the hosted service
 </html>
 {% endhighlight %}
 
-N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejpdfviewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
+N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejPdfViewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
 
 ### ii) Displaying PDF document using Web API
 
-Add new folder **webapi** in the solution and add new Web API Controller Class. Name it as **PdfViewerController** and click OK
+Add new folder **WebApi** in the solution and add new Web API Controller Class. Name it as **PdfViewerController** and click OK
 
 ![](GettingStarted_images/GettingStarted_img5.jpeg)
 
@@ -191,7 +191,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the Web API to pro
 </html>
 {% endhighlight %}
 
-N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejpdfviewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
+N> For adding scripts and styles, please refer **Add Scripts and Styles** section of [ejPdfViewer](http://help.syncfusion.com/js/pdfviewer/getting-started)
 
 ### Output
 
