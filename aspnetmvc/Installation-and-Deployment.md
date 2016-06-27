@@ -146,10 +146,15 @@ The assemblies based on the version of the .NET framework are packed under the f
 <tr><td>
 Syncfusion.Compression.Base.dll</td></tr><tr><td>
 Syncfusion.EJ.dll</td></tr><tr><td>
+Syncfusion.EJ.Export.dll</td></tr><tr><td>
 Syncfusion.EJ.Olap.dll</td></tr><tr><td>
+Syncfusion.EJ.PdfViewer.dll</td></tr><tr><td>
+Syncfusion.EJ.ReportViewer.dll</td></tr><tr><td>
 Syncfusion.Olap.Base.dll</td></tr><tr><td>
 Syncfusion.Linq.Base.dll</td></tr><tr><td>
-Syncfusion.XlsIO.Base.dll
+Syncfusion.XlsIO.Base.dll</td></tr><tr><td>
+Syncfusion.Pdf.Base.dll</td></tr><tr><td>
+Syncfusion.DocIO.Base.dll
 </td></tr>
 </table>
 
@@ -169,6 +174,7 @@ Some of the important assemblies available based on the MVC versions (within eac
 Syncfusion.EJ.Mvc.dll</td></tr><tr><td>
 Syncfusion.DocIO.Helper.Mvc.dll</td></tr><tr><td>
 Syncfusion.Pdf.Helper.Mvc.dll</td></tr><tr><td>
-Syncfusion.XlsIO.Helper.Mvc.dll
+Syncfusion.XlsIO.Helper.Mvc.dll</td></tr><tr><td>
+Syncfusion.PdfViewer.Mvc.dll
 </td></tr>
 </table>
