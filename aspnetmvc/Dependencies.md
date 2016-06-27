@@ -15,8 +15,6 @@ Other than the above specified assemblies, Scripts and StyleSheets are the two e
 * JsRender
 * jQuery.easing
 
-Currently, we use **jQuery 1.10.2** version, which supports almost all the old and modern browsers.
-
 **jsRender** script file is required to render the templates.
 
 **jQuery.easing** script file is required, so as to support the animation effects in the components.
