@@ -13,7 +13,7 @@ The Kanban control for ASP.NET MVC is an efficient way to visualize the workflow
 
 Some important features of the Kanban control are:
 
-*	DataSource - Bind the Kanban control with an array of JSON objects or [`ej.DataManager`] (http://help.syncfusion.com/aspnetmvc/datamanager/overview) which support OData and remote web service binding.
+*	DataSource - Bind the Kanban control with an array of JSON objects or [`ej.DataManager`](http://help.syncfusion.com/aspnetmvc/datamanager/overview) which support OData and remote web service binding.
 *   Swim lane – Supports Swim lane grouping.
 *   Filters – Supports filtering based on user Query.
 *   Editing - Offers card editing, inserting, and deleting using Dialog.

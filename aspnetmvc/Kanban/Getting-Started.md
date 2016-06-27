@@ -15,7 +15,7 @@ This section explains briefly how to create a Kanban in your application with AS
 
 The following steps explain creating first Kanban with an empty columns.
 
-1.	Create Syncfusion ASP.NET MVC application. You can refer MVC Getting Started documentation to create new project and add necessary dll’s and script files.
+1.	Create Syncfusion ASP.NET MVC application. You can refer  [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 2.	Add a Kanban control in View file with an empty columns as like as follows. In Columns definition, the `HeaderText` property allows you to set text to column headers.
 
 {% highlight html %}
@@ -35,7 +35,7 @@ The following steps explain creating first Kanban with an empty columns.
 
 ## Data Binding
 
-You can bind the data to Kanban control by either locally or remotely. Assign the remote service URL to DataSource property of Kanban control to bind remote data using ‘ej.DataManager’.
+You can bind the data to Kanban control by either locally or remotely. Assign the remote service URL to DataSource property of Kanban control to bind remote data using `ej.DataManager`.
 
 For demonstration purpose, [`Northwind OData service`](http://mvc.syncfusion.com/Services/Northwnd.svc/) is used in this tutorial. Refer to the following code example.
 
@@ -62,7 +62,7 @@ N>  ODataAdaptor is the default adaptor used within DataManager. While binding t
 In order to display cards in Kanban control, you need to map the database fields to Kanban cards and `columns`. The required mapping field are listed as follows
 
 *  `KeyField` - Map the column name to use as `Key` values to columns.
-*  `Columns` -  Map the corresponding `key` values of `KeyField` column to each columns
+*  `Columns` -  Map the corresponding `Key` values of `KeyField` column to each columns
 *  `Content` - Map the column name to use as content to cards in the Fields.
 *  `PrimaryKey` - Map the column name to use as Primary Key in Fields.
 
