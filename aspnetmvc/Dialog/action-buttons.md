@@ -51,3 +51,50 @@ You can display only the necessary buttons in the Dialog widget by configuring t
 
 ![Action Buttons](action-buttons_images\action-buttons_img1.png)
 
+## Customizing Action Buttons
+
+We can customize the action buttons in dialog widget.
+
+You can add new action button in the dialog widget by configuring the `actionButtonClick` event.
+
+{% highlight razor %}
+
+
+    @{
+    List<string> actionButtons = new List<string>();
+    actionButtons.Add("close");
+    actionButtons.Add("maximize");
+    actionButtons.Add("minimize");
+	actionButtons.Add("collapsible");
+	actionButtons.Add("pin");
+	actionButtons.Add("mediaplay");
+	actionButtons.Add("search");
+    }
+
+    @{
+        Html.EJ()
+            .Dialog("dialog")
+            .Title("Dialog")
+            .ActionButtons(actionButtons)
+			.ClientSideEvents(evt =>evt.ActionButtonClick("playMedia"))
+            .ContentTemplate(@<p>This is a Dialog</p>)
+            .Render();			
+    }
+
+{% endhighlight %}
+	
+
+{% highlight javascript %}
+          
+		  function playMedia(args)
+		    {
+               console.log(args.buttonID);
+            }
+		
+{% endhighlight %}
+      
+
+
+
+![Action Buttons](action-buttons_images\action-buttons_img2.png)
+
