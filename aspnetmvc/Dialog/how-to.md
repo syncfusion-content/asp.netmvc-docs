@@ -125,5 +125,62 @@ Add the below script to the view page
 
 {% endhighlight %}
 
+## Create a Confirmation Dialog with Footer section
 
+Essential JS library supports Alert Dialog widgets.
+
+Using `ShowFooter` property to render Alert Dialog with Footers in Dialog widget.
+
+Create a Dialog Widget with enabling Footer property.
+
+{% highlight razor %}
+
+    <div class="control">
+        @Html.EJ().Button("btnOpen").Size(ButtonSize.Medium).Type(ButtonType.Button).Height("30").Width("150").ClientSideEvents(evt=>evt.Click("onOpen")).Text("Click to open dialog")
+        @{Html.EJ().Dialog("basicDialog").Containment(".control").Title("Software Installation Agreement").ContentTemplate(                                        
+                 @<div class="cnt">
+                    Do you really leave the session?
+            </div>).Target(".control").ShowFooter(true).FooterTemplateId("sample").ClientSideEvents(evt => evt.Close("onDialogClose")).Render();
+        }
+
+    </div>
+
+	
+{% endhighlight %}
+
+Add the following script to close and open the Dialog widget.
+
+{% highlight javascript %}
+
+     $("#btnOpen").hide();
+    function onDialogClose(args) {
+        $("#btnOpen").show();
+    }
+    function onOpen() {
+        $("#btnOpen").hide();
+        $("#basicDialog").ejDialog("open");
+	});
+
+{% endhighlight %}
+
+Initialize Footer in Dialog widgets by adding the script section as below.
+
+{% highlight javascript %}
+
+    <script id="sample" type="text/x-jsrender">
+	<div class="footerspan" style="float:right">
+	
+          @Html.EJ().Button("btn1").Size(ButtonSize.Mini).Height("30").Width("70").Text("Ok")
+		  
+          @Html.EJ().Button("btn2").Size(ButtonSize.Mini).Height("30").Width("70").Text("Cancel")
+		  
+    </div>
+    <div class="condition" style="float:left; margin-left:15px">
+      @Html.EJ().CheckBox("check1").Text("Dont ask me this again")
+    </div> 
+    </script>
+ 
+{% endhighlight %}
+
+![Create Alert Dialog](how-to_images\dialog-footer1.png)
 
