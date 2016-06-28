@@ -270,7 +270,7 @@ On selecting the required report from the report list, the selected report will 
 
 ![](OLAP-Client-Elements_images/reportlis1.png)
 
-## PivotGrid and OlapChart
+## PivotGrid and PivotChart
 
-The [PivotGrid](http://help.syncfusion.com/aspnetmvc/pivotgrid/overview) and [OlapChart](http://help.syncfusion.com/aspnetmvc/olapchart/overview) controls will be rendered with respect to the operations done at axis element builder.
+The [PivotGrid](http://help.syncfusion.com/aspnetmvc/pivotgrid/overview) and [PivotChart](http://help.syncfusion.com/aspnetmvc/pivotchart/overview) controls will be rendered with respect to the operations done at axis element builder.
 
