@@ -17,7 +17,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}   
 
@@ -73,7 +73,7 @@ We can rotate the 3D Chart towards left or right by setting an appropriate angle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Rotation(40).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(40).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %} 
 

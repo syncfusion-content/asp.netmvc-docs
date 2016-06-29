@@ -24,18 +24,13 @@ Drill down, also called roll down, is the reverse of drill up. It navigates from
 DrillSuccess event gets triggered when you right-click on the PivotChart and select any option available in the context menu to perform drill up or drill down operation.
 
 {% highlight CSHTML %}
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).ClientSideEvents(oEve => {oEve.DrillSuccess("DrillSuccess")}); 
-
-
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).ClientSideEvents(oEve => {oEve.DrillSuccess("DrillSuccess")}); 
 
 <script type="text/javascript">
 
     function DrillSuccess(args) {
-
         alert("Drill Success");
-
     }
-
 </script>
 {% endhighlight %}
 
