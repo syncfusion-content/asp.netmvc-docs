@@ -35,7 +35,7 @@ By using the `Theme` property, you can set the desired theme in PivotChart. By d
 {% highlight CSHTML %}
 
 //Using gradient theme
-@Html.EJ().Olap().PivotChart("PivotChart1").Theme(Syncfusion.JavaScript.DataVisualization.ChartTheme.GradientLight).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Theme(Syncfusion.JavaScript.DataVisualization.ChartTheme.GradientLight).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ To customize the PivotChart border, use `Border` property in PivotChart.
 {% highlight CSHTML %}
 
 //Customize the chart border and opacity
-@Html.EJ().Olap().PivotChart("PivotChart1").Border(border => border.Color("#FF0000").Width(5)).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Border(border => border.Color("#FF0000").Width(5)).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ The PivotChart control background can be customized by using the `Background` pr
 {% highlight CSHTML %}
 
 //Setting background for Chart area
-@Html.EJ().Olap().PivotChart("PivotChart1").ChartArea(area => area.Background("skyblue")).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").ChartArea(area => area.Background("skyblue")).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -73,7 +73,7 @@ By using the `AlternateGridBand` property of the axis, you can provide different
 {% highlight CSHTML %}
 
 //Customizing horizontal grid bands at even position
-@Html.EJ().Olap().PivotChart("PivotChart1").PrimaryYAxis(primaryYAxis => primaryYAxis.AlternateGridBand(gridband => gridband.Even(even => even.Fill("#A7A9AB").Opacity(0.1)))).Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").PrimaryYAxis(primaryYAxis => primaryYAxis.AlternateGridBand(gridband => gridband.Even(even => even.Fill("#A7A9AB").Opacity(0.1)))).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -85,6 +85,6 @@ You can enable animation by using the `EnableAnimation` property under `CommonSe
 {% highlight CSHTML %}
 
 //Enabling animation in series
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).CommonSeriesOptions(comm => { comm.EnableAnimation(true); }).Size(size => size.Height("460px").Width("100%"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).CommonSeriesOptions(comm => { comm.EnableAnimation(true); }).Size(size => size.Height("460px").Width("100%"))
 
 {% endhighlight %}

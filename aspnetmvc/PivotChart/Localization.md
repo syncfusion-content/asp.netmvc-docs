@@ -17,7 +17,7 @@ Following code example illustrates on how to localize PivotChart based on **“F
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Locale("fr-FR").Size(size => size.Height("320px").Width("100%"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Locale("fr-FR").Size(size => size.Height("320px").Width("100%"))
 
 <script type="text/javascript">
     ej.olap.PivotChart.locale["fr-FR"] = {
@@ -70,6 +70,24 @@ Exit</td><td>
 “Quitter "</td>    
 </tr>
 </table>
+
+## Localization and Globalization of Cube Info (Client Mode)
+
+Content displayed within the PivotChart control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
+
+* To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**. 
+* To bind the globalized content in PivotChart control, we need to set **"Locale"** property to a specific culture and want to refer specific culture file in the sample.
+ 
+N> Culture files are present under **"Syncfusion\EssentialStudio\14.2.0.26\MVC\Samples\web\Scripts\cultures".**
+ 
+{% highlight CSHTML %}
+
+//1036 refers to “fr-FR” culture.
+ @Html.EJ().Pivot().PivotChart("PivotChart1").Locale("fr-FR").CommonSeriesOptions(comm => { comm.Type(SeriesType.Column).Tooltip(tool => { tool.Visible(true); }).EnableAnimation(true); }).Size(size => size.Height("350px").Width("100%")).PrimaryXAxis(primaryXAxis => primaryXAxis.Title(title => title.Text("Date - Fiscal")).LabelRotation(0)).PrimaryYAxis(primaryYAxis => primaryYAxis.Title(title => title.Text("Internet Sales Amount"))).Legend(legend => legend.Visible(true).RowCount(2)).ClientSideEvents(
+                  oEve => { oEve.Load("loadTheme"); }).IsResponsive(true).DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();})
+.Data("http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+
+{% endhighlight %}
 
 ## Localization and Globalization of Cube Info
 
