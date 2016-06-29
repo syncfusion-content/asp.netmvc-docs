@@ -16,7 +16,7 @@ You can customize the PivotChart dimension by setting the width and height of th
 {% highlight CSHTML %}
 
 //Set size to Chart container
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("80%").Width("80%"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("80%").Width("80%"))
 
 {% endhighlight %}
 
@@ -27,7 +27,7 @@ You can customize the PivotChart dimension by setting the width and height of th
 {% highlight CSHTML %}
 
 //Set size to Chart container
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ PivotChart widget supports responsive rendering based on the target device (desk
 {% highlight CSHTML %}
 
 //Enable responsiveness to change the Chart size dynamically.
-@Html.EJ().Olap().PivotChart("PivotChart1").Url(Url.Content("~/wcf/PivotChartService.svc")).Size(size => size.Height("460px").Width("950px")).IsResponsive(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).IsResponsive(true)
 
 {% endhighlight %}
 
