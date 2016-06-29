@@ -29,40 +29,35 @@ Client side events can be wired in the same way as properties. But here all the 
    
    ~~~ cshtml
    
-	   @(Html.EJ().DatePicker("MyFirstDatepicker")
-					.MinDate(new DateTime(2016,5,1))
-					.MaxDate(new DateTime(2016,12,31))
-					.Value(DateTime.Now.AddDays(1) )
-					.ClientSideEvents( events =>
-											events.Change("datepicker_change") // To handle datepicker change event
-												  .Select("datepicker_select") // To handle datepicker select event
-									 )
-								
-		 )
-
+	@(Html.EJ().DatePicker("MyFirstDatepicker")
+		.MinDate(new DateTime(2016,5,1))
+		.MaxDate(new DateTime(2016,12,31))
+		.Value(DateTime.Now.AddDays(1) )
+		.ClientSideEvents( events =>
+		events.Change("datepicker_change") // To handle datepicker change event
+	    .Select("datepicker_select") // To handle datepicker select event
+	    )								
+     )
    ~~~
 
 2. Declare the client side events in Script sections
 
-   ~~~ js
-			@section scripts{
+   ~~~ cshtml
+			
+	@section scripts{
 
-				<script>
-					function datepicker_change(args) {
-						// event handler 
-						//args contains entire model of DatePicker to get the value of all properties
-					}
-
-
-					function datepicker_select(args) {
-						// event handler 
-						//args contains entire model of DatePicker to get the value of all properties
-
-					}
-
-				</script>
-
+		<script>
+			function datepicker_change(args) {
+			// event handler 
+			//args contains entire model of DatePicker to get the value of all properties
 			}
+            function datepicker_select(args) {
+			// event handler 
+			//args contains entire model of DatePicker to get the value of all properties
+            }
+        </script>
+
+	}
 
    ~~~
    
@@ -74,43 +69,40 @@ Syncfusion JavaScript widget client side methods can be accessed via their clien
 
    ~~~ cshtml
    
-		 @(Html.EJ().DatePicker(“MyFirstDatepicker")
-					.MinDate(new DateTime(2016,5,1))
-					.MaxDate(new DateTime(2016,12,31))
-					.Value(DateTime.Now.AddDays(1) )                
-								
-		 )
+	@(Html.EJ().DatePicker(“MyFirstDatepicker")
+		.MinDate(new DateTime(2016,5,1))
+		.MaxDate(new DateTime(2016,12,31))
+	    .Value(DateTime.Now.AddDays(1) )                								
+	)
 
    ~~~
    
 2. Access the client side object using jQuery.data() as shown below
 
-   ~~~ js
+   ~~~ cshtml
    
-		<script>
+	<script>
 
-				$(document).ready(function () {
-
-					var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");
-
-				});
-		</script>
+		$(document).ready(function () {
+        var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");
+	    });
+		
+    </script>
 
    
    ~~~
 
 3. Access the method from client side object as like properties access as show below
 
-   ~~~ js
-		<script>
-				$(document).ready(function () {
-					
-					var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");            
-					datepickerObject.disable(); // to disable the datepicker object
-					var selectedDate = datepickerObject.getValue(); // to access the selected value            
-
-				});
-	    </script>
+   ~~~ cshtml
+		
+	<script>
+		$(document).ready(function () {
+		var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");            
+		datepickerObject.disable(); // to disable the datepicker object
+		var selectedDate = datepickerObject.getValue(); // to access the selected value            
+        });
+	</script>
 			
    ~~~
    
@@ -130,43 +122,43 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 
    ~~~ cshtml
    
-		@Scripts.Render("~/Scripts/ej/common/ej.globalize.js")
-		@Scripts.Render("~/Scripts/ej/i18n/ej.culture.fr-FR.min.js")
+	@Scripts.Render("~/Scripts/ej/common/ej.globalize.js")
+	@Scripts.Render("~/Scripts/ej/i18n/ej.culture.fr-FR.min.js")
 		
    ~~~
 
 3. Set the culture by using  **preferredCulture()** method. Here we used French (fr-FR) culture as current culture   
 
-   ~~~ js
+   ~~~ cshtml
    
-		<script>
-		   if (typeof (ej.globalize) != 'undefined') {
-				ej.globalize.preferredCulture("fr-FR");//set Culture fr-FR 
-			}
-		</script>
+	<script>
+		if (typeof (ej.globalize) != 'undefined') {
+		ej.globalize.preferredCulture("fr-FR");//set Culture fr-FR 
+		}
+	</script>
 
    ~~~
    
 4. Use **format()** method to format the object like numbers, date, price etc…   
 
-   ~~~ js
+   ~~~ cshtml
    
 	<script>
-			if (typeof (ej.globalize) != 'undefined') {
-				console.log("en-US Culture : ");
-				ej.globalize.preferredCulture("en-US");  //set Culture. Default culture is en-US         
-				console.log(ej.globalize.format(53422, 'C')); // Formatting Price
-				console.log(ej.globalize.format(new Date(2016,07,15), 'D')); //Formatting date
-				console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number
+		if (typeof (ej.globalize) != 'undefined') {
+		console.log("en-US Culture : ");
+		ej.globalize.preferredCulture("en-US");  //set Culture. Default culture is en-US         
+		console.log(ej.globalize.format(53422, 'C')); // Formatting Price
+		console.log(ej.globalize.format(new Date(2016,07,15), 'D')); //Formatting date
+		console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number
 
-				console.log("fr-FR Culture : ");
-				ej.globalize.preferredCulture("fr-FR");//set Culture fr-FR 
+		console.log("fr-FR Culture : ");
+		ej.globalize.preferredCulture("fr-FR");//set Culture fr-FR 
 				
-				console.log(ej.globalize.format(53422, 'C'));// Formatting Price
-				console.log(ej.globalize.format(new Date(2016, 07, 15), 'D')); //Formatting date
-				console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number          
+		console.log(ej.globalize.format(53422, 'C'));// Formatting Price
+		console.log(ej.globalize.format(new Date(2016, 07, 15), 'D')); //Formatting date
+		console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number          
 			}
-       </script>
+    </script>
 
    ~~~
 
@@ -176,11 +168,11 @@ Find the steps to globalize the MVC application from below
 
 1. Specify the target culture in **web.config** file under **<system.web>** root
 
-   ~~~ cshtml
+   ~~~ xml
    
-		 <system.web>
-			<globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
-		 </system.web>
+	<system.web>
+	<globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
+	</system.web>
 
    ~~~
 
@@ -189,7 +181,7 @@ Find the steps to globalize the MVC application from below
 
    ~~~ cshtml
    
-			@Scripts.Render("~/Scripts/ej/i18n/ej.culture." + System.Globalization.CultureInfo.CurrentCulture.Name.ToString() + ".min.js")
+	@Scripts.Render("~/Scripts/ej/i18n/ej.culture." + System.Globalization.CultureInfo.CurrentCulture.Name.ToString() + ".min.js")
 			
    ~~~
 
@@ -197,15 +189,14 @@ Find the steps to globalize the MVC application from below
 
    ~~~ cshtml
    
-		<script>
-				if (typeof (ej.globalize) != 'undefined') {
-					ej.globalize.preferredCulture('@System.Threading.Thread.CurrentThread.CurrentCulture.Name');//access the current culture from web.config and set it
-					console.log(ej.globalize.format(53422, 'C'));// Formatting Price
-					console.log(ej.globalize.format(new Date(2016, 07, 15), 'D')); //Formatting date
-					console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number
-
-				}
-		</script>
+	<script>
+		if (typeof (ej.globalize) != 'undefined') {
+		ej.globalize.preferredCulture('@System.Threading.Thread.CurrentThread.CurrentCulture.Name');//access the current culture from web.config and set it
+		console.log(ej.globalize.format(53422, 'C'));// Formatting Price
+		console.log(ej.globalize.format(new Date(2016, 07, 15), 'D')); //Formatting date
+		console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number
+        }
+	</script>
 
    ~~~
    
@@ -217,11 +208,11 @@ Find the steps to configure the Syncfusion Components to particular language fro
 
 1. Specify the target culture in **web.config** file under **<system.web>** root
 
-   ~~~ cshtml
+   ~~~ xml
    
-		<system.web>
-	     <globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
-		</system.web>
+	<system.web>
+	    <globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
+	</system.web>
 
    ~~~
 
@@ -230,7 +221,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
 
    ~~~ cshtml
    
-	 @Scripts.Render("~/Scripts/ej/i18n/ej.culture." + System.Globalization.CultureInfo.CurrentCulture.Name.ToString() + ".min.js")
+	@Scripts.Render("~/Scripts/ej/i18n/ej.culture." + System.Globalization.CultureInfo.CurrentCulture.Name.ToString() + ".min.js")
 
    ~~~
    
@@ -253,16 +244,15 @@ Find the steps to configure the Syncfusion Components to particular language fro
   
    ~~~ cshtml
   
-		  @(Html.EJ().DatePicker("MyFirstDatepicker")
-						.MinDate(new DateTime(2016, 5, 1))
-						.MaxDate(new DateTime(2016, 12, 31))
-						.Locale(System.Threading.Thread.CurrentThread.CurrentCulture.Name) // Specify the UI culture
-						.ClientSideEvents(events =>
-												events.Change("datepicker_change") // To handle datepicker change event
-													  .Select("datepicker_select") // To handle datepicker select event
-										 )
-
-			)
+	@(Html.EJ().DatePicker("MyFirstDatepicker")
+		.MinDate(new DateTime(2016, 5, 1))
+		.MaxDate(new DateTime(2016, 12, 31))
+		.Locale(System.Threading.Thread.CurrentThread.CurrentCulture.Name) // Specify the UI culture
+		.ClientSideEvents(events =>
+		events.Change("datepicker_change") // To handle datepicker change event
+		.Select("datepicker_select") // To handle datepicker select event
+		)
+    )
    ~~~
    
 6. Compile and execute the application. You can able to see the below output in the browser
