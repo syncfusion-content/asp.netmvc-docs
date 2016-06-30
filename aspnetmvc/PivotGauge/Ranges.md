@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Ranges | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Ranges | PivotGauge | ASP.NET MVC | Syncfusion
 description: ranges
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -11,13 +11,13 @@ documentation: ug
 
 ## Adding Range Collection
 
-Range collection can be directly added to the scales option within the OlapGauge widget as an array.
+Range collection can be directly added to the scales option within the PivotGauge control as an array.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Ranges(ranges => { ranges.DistanceFromScale(10).Add(); }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Ranges(ranges => { ranges.DistanceFromScale(10).Add(); }).Add();
+    })
 
 {% endhighlight  %}
 
@@ -38,16 +38,16 @@ Positioning the range could be set either through `Placement` or `DistanceFromSc
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Ranges(ranges => {
-        ranges.StartValue(20).EndValue(50).StartWidth(2).EndWidth(6).Border(border => border.Color("red").Width(2)).BackgroundColor("yellow").DistanceFromScale(20).Add();
-        ranges.StartValue(50).EndValue(100).StartWidth(2).EndWidth(7).Border(border => border.Color("green").Width(2)).BackgroundColor("blue").Placement(RangePlacement.Near).Add();
-    }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Ranges(ranges => {
+            ranges.StartValue(20).EndValue(50).StartWidth(2).EndWidth(6).Border(border => border.Color("red").Width(2)).BackgroundColor("yellow").DistanceFromScale(20).Add();
+            ranges.StartValue(50).EndValue(100).StartWidth(2).EndWidth(7).Border(border => border.Color("green").Width(2)).BackgroundColor("blue").Placement(RangePlacement.Near).Add();
+        }).Add();
+    })
 
 {% endhighlight %}
 
-![](Ranges_images/range customization.png) 
+![](Ranges/AppearanceCustomization.png) 
 
 N> On setting both the position properties - "DistanceFromScale" and "Placement" for a range, the value set in "DistanceFromScale" is given preference. 
 
@@ -57,14 +57,14 @@ Multiple ranges can be added by placing an array of objects in **"Ranges"** opti
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Ranges(ranges => {
-        ranges.StartValue(0).EndValue(10).BackgroundColor("green").DistanceFromScale(-5).Add();
-        ranges.StartValue(10).EndValue(30).BackgroundColor("yellow").DistanceFromScale(-5).Add();
-        ranges.StartValue(30).EndValue(50).BackgroundColor("red").DistanceFromScale(-5).Add();
-    }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Ranges(ranges => {
+            ranges.StartValue(0).EndValue(10).BackgroundColor("green").DistanceFromScale(-5).Add();
+            ranges.StartValue(10).EndValue(30).BackgroundColor("yellow").DistanceFromScale(-5).Add();
+            ranges.StartValue(30).EndValue(50).BackgroundColor("red").DistanceFromScale(-5).Add();
+        }).Add();
+    })
 
 {% endhighlight  %}
 
-![](Ranges_images/multiple ranges.png) 
+![](Ranges/MultipleRanges.png) 
