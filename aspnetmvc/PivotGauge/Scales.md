@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Scales | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Scales | PivotGauge | ASP.NET MVC | Syncfusion
 description: scales
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -11,20 +11,20 @@ documentation: ug
 
 ## Adding Scale
 
-Scale can be added within the OlapGauge widget as an array. 
+Scale can be added within the PivotGauge control as an array. 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => { scales.Radius(150).Add(); })
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => { scales.Radius(150).Add(); })
 
 {% endhighlight  %}
 
-![](Scales_images/scale.png) 
+![](Scales/AddingScale.png) 
 
 ## Scale Customization
 
 ### Pointer Cap
-Pointer Cap is a circular shape element that is located at the center of the OlapGauge. It can be customized with the **"PointerCap"** option inside scales. Following are the properties used to customize its appearance.
+Pointer Cap is a circular shape element that is located at the center of the PivotGauge. It can be customized with the **"PointerCap"** option inside scales. Following are the properties used to customize its appearance.
 
 * **Radius** – sets the radius of the pointer cap.
 * **BorderColor** – sets the color of the pointer cap border.
@@ -33,13 +33,13 @@ Pointer Cap is a circular shape element that is located at the center of the Ola
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.PointerCap(pointerCap => pointerCap.Radius(5).BorderWidth(2).BorderColor("green").BackgroundColor("yellow")).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.PointerCap(pointerCap => pointerCap.Radius(5).BorderWidth(2).BorderColor("green").BackgroundColor("yellow")).Add();
+    })
 
 {% endhighlight  %}
 
-![](Scales_images/pointercap.png) 
+![](Scales/PointerCap.png) 
 
 ### Appearance
 The appearance of the scale can be customized through the following properties.
@@ -58,10 +58,10 @@ The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers` and `ShowScaleBa
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Radius(120).BackgroundColor("yellow").Border(border => border.Color("blue").Width(3)).Size(10).Minimum(20).Maximum(120).MajorIntervalValue(20).MinorIntervalValue(5).Direction(Directions.CounterClockwise).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Radius(120).BackgroundColor("yellow").Border(border => border.Color("blue").Width(3)).Size(10).Minimum(20).Maximum(120).MajorIntervalValue(20).MinorIntervalValue(5).Direction(Directions.CounterClockwise).Add();
+    })
 
 {% endhighlight  %}
 
-![](Scales_images/Scale-Customization-Appearance.png) 
+![](Scales/Appearance.png) 

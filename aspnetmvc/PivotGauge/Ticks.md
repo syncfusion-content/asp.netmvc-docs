@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Ticks | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Ticks | PivotGauge | ASP.NET MVC | Syncfusion
 description: ticks
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -11,13 +11,13 @@ documentation: ug
 
 ## Adding Tick Collection
 
-Tick collection can be directly added to the scales option within the OlapGauge widget as an array.
+Tick collection can be directly added to the scales option within the PivotGauge control as an array.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Ticks(ticks => { ticks.Type(CircularTickTypes.Major).Add(); }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Ticks(ticks => { ticks.Type(CircularTickTypes.Major).Add(); }).Add();
+    })
 
 {% endhighlight  %}
 
@@ -35,10 +35,10 @@ The appearance of the tick can be customized through the following properties.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Ticks(ticks => { ticks.Type(CircularTickTypes.Major).Height(15).Width(4).Angle(0).Color("green").DistanceFromScale(2).Placement(TickPlacement.Near).Add(); }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Ticks(ticks => { ticks.Type(CircularTickTypes.Major).Height(15).Width(4).Angle(0).Color("green").DistanceFromScale(2).Placement(TickPlacement.Near).Add(); }).Add();
+    })
 
 {% endhighlight  %}
 
-![](Ticks_images/tick customization.png) 
+![](Ticks/TickCustomization.png) 
