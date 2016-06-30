@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Animation | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Animation | PivotGauge | ASP.NET MVC | Syncfusion
 description: animation
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -13,6 +13,6 @@ The animation option makes the pointer to rotate from minimum value to actual va
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).EnableAnimation(true).AnimationSpeed(1000)
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").EnableAnimation(true).AnimationSpeed(1000)
 
 {% endhighlight  %}

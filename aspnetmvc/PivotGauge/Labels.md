@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Labels | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Labels | PivotGauge | ASP.NET MVC | Syncfusion
 description: labels 
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -11,13 +11,13 @@ documentation: ug
 
 ## Adding Label Collection
 
-Label collection can be directly added to the scales option within the OlapGauge widget as an array.
+Label collection can be directly added to the scales option within the PivotGauge control as an array.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Labels(labels => { labels.Angle(20).Add(); }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Labels(labels => { labels.Angle(20).Add(); }).Add();
+    })
 
 {% endhighlight  %}
 
@@ -34,19 +34,19 @@ The appearance of the Label can be customized through the following properties.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Labels(labels =>
-    {
-     //for Major labels        
-     labels.Type(GaugeTypes.Major).Color("#1AFF01").Opacity(80).IncludeFirstValue(false).Font(font => font.Size("15px").FontFamily("Arial").FontStyle("Bold")).Add();
-     //for Minor labels   
-     labels.Type(GaugeTypes.Minor).Color("#FF103F").Opacity(80).IncludeFirstValue(true).Font(font => font.Size("10px").FontFamily("Arial").FontStyle("Normal")).Add();
-    }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Labels(labels =>
+        {
+            //for Major labels        
+            labels.Type(GaugeTypes.Major).Color("#1AFF01").Opacity(80).IncludeFirstValue(false).Font(font => font.Size("15px").FontFamily("Arial").FontStyle("Bold")).Add();
+            //for Minor labels   
+            labels.Type(GaugeTypes.Minor).Color("#FF103F").Opacity(80).IncludeFirstValue(true).Font(font => font.Size("10px").FontFamily("Arial").FontStyle("Normal")).Add();
+        }).Add();
+    })
 
 {% endhighlight  %}
 
-![](Labels_images/label customization.png) 
+![](Labels/AppearanceCustomization.png) 
 
 
 ## Unit Text
@@ -55,17 +55,17 @@ The `UnitText` property is used to add some text along with the labels. Normally
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).Scales(scales => {
-    scales.Labels(labels => { 
-       //for Major labels 
-       labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add();
-       //for Minor labels
-       labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add(); 
-    }).Add();
-})
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
+        scales.Labels(labels => { 
+            //for Major labels 
+            labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add();
+            //for Minor labels
+            labels.Type(GaugeTypes.Minor).UnitText("$").UnitTextPosition(UnitTextPlacement.Front).Add(); 
+        }).Add();
+    })
 
 {% endhighlight %}
 
-![](Labels_images/unittext.png) 
+![](Labels/UnitText.png) 
 
 

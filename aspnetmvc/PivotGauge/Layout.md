@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Layout | OLAPGauge | ASP.NET MVC | Syncfusion
+title: Layout | PivotGauge | ASP.NET MVC | Syncfusion
 description: layout 
 platform: ejmvc
-control: OLAPGauge
+control: PivotGauge
 documentation: ug
 ---
 
@@ -15,11 +15,11 @@ Gauges can be arranged in specified number of rows by using the `RowsCount` prop
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).RowsCount(2)
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").RowsCount(2)
 
 {% endhighlight %}
 
-![](Layout_images/row based.png) 
+![](Layout/Row-wiseLayout.png) 
 
 ## Column-wise Layout
 
@@ -27,12 +27,8 @@ Gauges can be arranged in specified number of columns by using the `ColumnsCount
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapGauge("OlapGauge1").Url(Url.Content("~/OlapGauge")).ColumnsCount(2)
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").ColumnsCount(2)
 
 {% endhighlight  %}
 
-![](Layout_images/column based.png) 
-
-
-
-
+![](Layout/Column-wiseLayout.png)
