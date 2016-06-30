@@ -1,4 +1,4 @@
-# DataBinding 
+﻿# DataBinding 
 
 ## Binding PivotGauge to Collection
 This section demonstrates binding of a collection to the PivotGauge control as datasource. For more information on this datasource refer to the following links.
