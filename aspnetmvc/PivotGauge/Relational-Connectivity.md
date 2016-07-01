@@ -1,4 +1,13 @@
-﻿# DataBinding 
+---
+layout: post
+title: Relational Connectivity | PivotGauge | ASP.NET MVC | Syncfusion
+description: Relational connectivity 
+platform: ejmvc
+control: PivotGauge
+documentation: ug
+---
+
+# DataBinding 
 
 ## Binding PivotGauge to Collection
 This section demonstrates binding of a collection to the PivotGauge control as datasource. For more information on this datasource refer to the following links.
