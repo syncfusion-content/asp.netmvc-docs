@@ -235,7 +235,7 @@ PivotChart provides pattern support for highlighting the data by setting an appr
 * chessboard
 * crosshatch
 * dots
-* packman
+* pacman
 * grid
 * turquoise
 * star
@@ -335,7 +335,7 @@ PivotChart provides pattern support for the selecting the data by setting an app
 * chessboard
 * crosshatch
 * dots
-* packman
+* pacman
 * grid
 * turquoise
 * star
