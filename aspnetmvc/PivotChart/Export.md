@@ -328,7 +328,7 @@ function exportBtnClick(args)
     chartObj.exportPivotChart("ExcelExport","fileName");
 
 
-{% highlight js %}
+{% endhighlight %}
     
 ###Server Mode
 
