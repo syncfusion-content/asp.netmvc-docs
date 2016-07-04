@@ -203,7 +203,7 @@ The JSON data is set to the **"Data"** property present inside the **"DataSource
 
 The above code will generate a simple PivotGauge as shown below.
 
-![](Relational-Getting-Started/PopulatePivotGaugeWithData.png) 
+![](Relational-Getting-Started_images/PopulatePivotGaugeWithData.png) 
 
 ## Creating a simple application with PivotGauge and Relational datasource (Server Mode)
 
@@ -569,7 +569,7 @@ Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could 
 
 Now, **PivotGauge** will be rendered as shown in the below figure.
 
-![](Relational-Getting-Started/ServerMode.png) 
+![](Relational-Getting-Started_images/ServerMode.png) 
 
 ### WCF
 

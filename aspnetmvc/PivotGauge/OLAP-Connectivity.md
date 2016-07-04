@@ -278,4 +278,4 @@ Routing configuration needs to be done in `RouteConfig.cs` file found under **Ap
 
 Now, PivotGauge is rendered with customer count over across different customer geographic locations.
 
-![](Olap-Connectivity/ServerModeWCF.png)
+![](Olap-Connectivity_images/ServerModeWCF.png)

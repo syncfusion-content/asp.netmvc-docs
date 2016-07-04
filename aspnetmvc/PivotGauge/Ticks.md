@@ -41,4 +41,4 @@ The appearance of the tick can be customized through the following properties.
 
 {% endhighlight  %}
 
-![](Ticks/TickCustomization.png) 
+![](Ticks_images/TickCustomization.png) 

@@ -41,7 +41,7 @@ The appearance of the custom labels can be customized through the following prop
 
 {% endhighlight  %}
 
-![](Custom-Label/AppearanceCustomization.png) 
+![](Custom-Label_images/AppearanceCustomization.png) 
 
 ## Multiple Custom Labels
 
@@ -60,4 +60,4 @@ Multiple custom labels can be set to a PivotGauge Control by adding an array of 
 
 {% endhighlight  %}
 
-![](Custom-Label/MultipleCustomLabels.png) 
+![](Custom-Label_images/MultipleCustomLabels.png) 

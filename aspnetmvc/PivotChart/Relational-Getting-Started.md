@@ -179,7 +179,7 @@ The JSON data is set to the **"data"** property present inside the **"dataSource
 
 The above code will generate a simple PivotChart with sales amount over products in different regions.
 
-![](Relational-Getting-Started/PopulatePivotChartWithData.png) 
+![](Relational-Getting-Started_images/PopulatePivotChartWithData.png) 
 
 ### Apply Sorting
 
@@ -194,7 +194,7 @@ You can sort a field either to ascending or descending order using the "sortOrde
 
 {% endhighlight %}
 
-![](Relational-Getting-Started/ApplySorting.png) 
+![](Relational-Getting-Started_images/ApplySorting.png) 
 
 ### Apply Filtering
 
@@ -211,7 +211,7 @@ Filtering option allows you to specify a set of values that either need to be di
   
 {% endhighlight %}
 
-![](Relational-Getting-Started/ApplyFiltering.png) 
+![](Relational-Getting-Started_images/ApplyFiltering.png) 
 
 ## Creating a simple application with PivotChart and Relational datasource (Server Mode)
 
@@ -604,7 +604,7 @@ Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could 
 
 Now, **PivotChart** will be rendered with amount over a set of products across different customer geographic locations.
 
-![](Relational-Getting-Started/ServerMode.png) 
+![](Relational-Getting-Started_images/ServerMode.png) 
 
 ### WCF
 

@@ -321,5 +321,5 @@ Routing configuration needs to be done in `RouteConfig.cs` file found under **Ap
 
 Now, **PivotChart** will be rendered as shown in the below figure.
 
-![](Relational-Connectivity/ServerModeWCF.png) 
+![](Relational-Connectivity_images/ServerModeWCF.png) 
 
