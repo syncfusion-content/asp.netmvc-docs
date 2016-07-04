@@ -159,7 +159,7 @@ Initializes the OLAP datasource for PivotChart widget as shown below.
 
 The above code will generate a simple PivotChart with "Fiscal" field in Row, "Customer Geography" field in Column and "Internet Sales Amount" field in Value section.
 
-![](OLAP-Getting-Started/PopulatePivotChartWithDataSource.png) 
+![](OLAP-Getting-Started_images/PopulatePivotChartWithDataSource.png) 
 
 ## Creating a simple application with PivotChart and OLAP datasource (Server Mode)
  
@@ -469,7 +469,7 @@ Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could 
 
 Now, **PivotChart** is rendered with customer count over a period of fiscal years across different customer geographic locations.
 
-![](OLAP-Getting-Started/ServerMode.png) 
+![](OLAP-Getting-Started_images/ServerMode.png) 
 
 ### WCF
 
