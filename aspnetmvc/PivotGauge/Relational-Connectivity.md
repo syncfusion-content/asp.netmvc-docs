@@ -306,4 +306,4 @@ Routing configuration needs to be done in `RouteConfig.cs` file found under **Ap
 
 Now, **PivotGauge** will be rendered as shown in the below figure.
 
-![](Relational-Connectivity/ServerModeWCF.png)
+![](Relational-Connectivity_images/ServerModeWCF.png)

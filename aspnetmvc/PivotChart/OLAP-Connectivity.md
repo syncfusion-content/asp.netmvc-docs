@@ -281,5 +281,5 @@ Routing configuration needs to be done in `RouteConfig.cs` file found under **Ap
 N> In this example, “PivotChartDemo” indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OlapChartService” indicates the name of the WCF service created.
 Now, PivotChart is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
 
-![](OLAP-Connectivity/ServerModeWCF.png)
+![](OLAP-Connectivity_images/ServerModeWCF.png)
 
