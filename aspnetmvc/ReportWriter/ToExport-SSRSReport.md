@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
-description: export ssrs
+description: export ssrs 
 platform: ejmvc
 control: ReportWriter
 documentation: ug
