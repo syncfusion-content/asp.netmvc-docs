@@ -489,7 +489,7 @@ Value2
 </td>
 </tr><tr>
 <td>
-Editcondtion
+Editcondition
 </td>
 <td>
 Modifier Condition
