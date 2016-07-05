@@ -1,3 +1,12 @@
+---
+layout: post
+title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
+description: export types
+platform: ejmvc
+control: ReportWriter
+documentation: ug
+---
+
 ## Export Types
 
 The ReportWriter provides support for exporting report as PDF, Word, Excel and HTML documents with the help of the ReportWriter class.

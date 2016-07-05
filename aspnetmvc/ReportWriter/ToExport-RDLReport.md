@@ -1,3 +1,12 @@
+---
+layout: post
+title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
+description: to export rdl
+platform: ejmvc
+control: ReportWriter
+documentation: ug
+---
+
 ## To Export RDL Reports
 
 The ReportWriter has options to save the RDL reports. The following code example helps you to generate the RDL report using ReportWriter.

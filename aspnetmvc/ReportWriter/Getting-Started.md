@@ -1,3 +1,12 @@
+---
+layout: post
+title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
+description: getting started
+platform: ejmvc
+control: ReportWriter
+documentation: ug
+---
+
 # Getting Started with ASP.NET MVC Application
 
 This section describes how to export the Report Server report as PDF, Word, Excel, PPT and HTML formats in ASP.NET MVC application using ReportWriter.
