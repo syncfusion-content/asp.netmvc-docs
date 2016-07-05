@@ -89,9 +89,9 @@ In order to display cards in Kanban control, you need to map the database fields
 
 ![](Getting_Started_images/Getting_Started_img3.png)
 
-N> `PrimaryKey` field is mandatory for “Drag and Drop”,”Selection” and “Editing” Features.
+N> `PrimaryKey` field is mandatory for "Drag and Drop","Selection" and "Editing" Features.
 
-## SwimlaneKey
+## Enable Swimlane
 
 `Swimlane` can be enabled by mapping the `SwimlaneKey` to appropriate column name in `DataSource`. This enables the grouping of the cards based on the mapped column values.
 
