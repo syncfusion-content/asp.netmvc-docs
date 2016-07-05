@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
-description: to export rdlc
+description: export rdlc
 platform: ejmvc
 control: ReportWriter
 documentation: ug
