@@ -1,4 +1,13 @@
-## Generate RDLC Reports
+---
+layout: post
+title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
+description: to export rdlc
+platform: ejmvc
+control: ReportWriter
+documentation: ug
+---
+
+## To Export RDLC Reports
 
 The ReportWriter has support to view and save the RDLC reports. The following code helps you to bind data to ReportWriter.
 

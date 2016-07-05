@@ -1,3 +1,12 @@
+---
+layout: post
+title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
+description: reportwriter api
+platform: ejmvc
+control: ReportWriter
+documentation: ug
+---
+
 # ReportWriter API
 
 ## Constructors
