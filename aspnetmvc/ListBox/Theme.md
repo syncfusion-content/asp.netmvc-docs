@@ -44,7 +44,7 @@ CSS class can be used to customize the ListBox control appearance. Define a CSS 
 
 The following steps explains you the configuration of CssClass properties in ListBox.
 
-1. Add the below code in your view page to render the ListBox with custom css class.
+1. Add the below code in your view page to render the ListBox with custom CSS class.
 
 
    ~~~ cshtml

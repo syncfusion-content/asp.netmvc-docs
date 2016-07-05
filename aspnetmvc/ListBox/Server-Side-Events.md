@@ -21,17 +21,17 @@ Event Description</th></tr>
 <td>
 OnCheckChange</td><td>
 Occurs when CheckBox value is changed.</td><td>
-Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Namee.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
+Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Name.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
 <tr>
 <td>
 OnValueSelect</td><td>
 Occurs when Listbox Active Node is changed</td><td>
-Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Namee.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
+Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Name.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
 <tr>
 <td>
 OnIndexChanged</td><td>
 Occurs when selected list item Index is Change.</td><td>
-Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Namee.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
+Event Argument contains the following parameters.e.IsChecked – Status of Listbox Checkbox.e.Text – Text of Listbox Selected item.e.Value – Value of Listbox Selected item.e.SelectedText –Text of Listbox Selected item.e.ItemId – Index Value of Listbox Selected item.e.EventType – Event Name.Arguments – Contain keys and values for SelectedText and Args.</td></tr>
 </table>
 In an ASPX page, add the Listbox control to configure Listbox events.
 

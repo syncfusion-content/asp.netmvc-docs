@@ -11,7 +11,7 @@ documentation: ug
 
 ListBox widget provides the VirtualScrolling support, when binding the remote data for the ListBox. It loads partially, only a set of data from remote server loaded initially, and imports data further upon loading. To enable VirtualScrolling support, set the EnableVirtualScrolling property as true. You can set ItemsCount that specifies number of items in the ListBox. You can load any number of items upon request with ItemRequest ClientSide Event.
 
-The following steps explains you the behaviour of VirtualScrolling support in ListBox.
+The following steps explains you the behavior of VirtualScrolling support in ListBox.
 
 1. Add the below code in your page to render the ListBox
 
