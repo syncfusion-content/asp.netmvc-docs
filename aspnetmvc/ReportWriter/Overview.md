@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
-description: overview
+title: Explore the features of the ReportWriter control
+description: What are all the main features of the ReportWriter control?
 platform: ejmvc
 control: ReportWriter
 documentation: ug
