@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
-description: reportwriter api
+title: Explore the Information about ReportWriter API
+description: What are the api used in reportwriter and why we need it?
 platform: ejmvc
 control: ReportWriter
 documentation: ug

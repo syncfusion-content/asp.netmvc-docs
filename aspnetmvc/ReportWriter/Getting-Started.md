@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ReportWriter | ReportWriter | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting started with Syncfusion Essential ReportWriter for ASP.NET MVC 
+description: Getting started walk through to create ReportWriter control
 platform: ejmvc
 control: ReportWriter
 documentation: ug
