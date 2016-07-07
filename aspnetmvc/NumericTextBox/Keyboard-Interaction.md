@@ -42,7 +42,7 @@ Focus the next element</td></tr>
 
 The following steps explain the implementation of keyboard interaction in NumericTextBox.
 
-In the View page add NumericTextBox helper. Set the accesskey property to the NumericTextBox for focusing the control while key is pressed. We need to use ‘HtmlAttributes’ property to add the ”accesskey” attribute to the Editor elements. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string,object> to specify the HTML attributes.
+In the View page add NumericTextBox helper. Set the access key property to the NumericTextBox for focusing the control while key is pressed. We need to use ‘HtmlAttributes’ property to add the ”access key” attribute to the Editor elements. ‘HtmlAttributes’ property is used to add HTML attributes like, id, class etc.. to the components. We need to use IDictionary<string,object> to specify the HTML attributes.
 
 
 
