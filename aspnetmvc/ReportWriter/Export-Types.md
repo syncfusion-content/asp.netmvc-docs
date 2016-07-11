@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Saving a Report as Various Documents
+title: Exporting a Report as Various Documents formats
 description: How To save a report as PDF, Word, Excel, PPT and HTML documents?
 platform: ejmvc
 control: ReportWriter
 documentation: ug
 ---
 
-# Saving Reports
+# Exporting Reports
 
-Essential ReportWriter provides support for saving a report as a PDF, Word, Excel, PPT and HTML documents with the help of the class ReportWriter. The report elements such as Tablix, matrices, charts, gauges, shapes, and text boxes are supported in this feature. 
+Essential ReportWriter provides support for Exporting a report as a PDF, Word, Excel, PPT and HTML documents with the help of the class ReportWriter. The report elements such as Tablix, matrices, charts, gauges, shapes, and text boxes are supported in this feature. 
 
 ### Exporting Report as PDF
 
