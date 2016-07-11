@@ -162,6 +162,10 @@ The following steps helps to create a ASP.NET Core web application to configure 
 
    ![](getting-started_images/getting-started_img20.png)
    
+*  In the Solution Explorer window, click the **"Show All Files"** button.
+
+   ![](getting-started_images/getting-started_img115.jpeg)
+   
 *  Open **Bower.json** file to include the following necessary packages.   
 
    ![](getting-started_images/getting-started_img17.png)
