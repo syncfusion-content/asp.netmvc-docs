@@ -74,7 +74,7 @@ ToolBar control with rounded corner
 
 ## Enabling Separator 
 
-The EnableSeparator property is Boolean type, which allow us to set separator between Toolbar items in Toolbar control. It separates one or more list items. When you want to separate two set of items, then define them in two separate ‘ul’ elements. Default value of EnableSeparator is false.
+The EnableSeparator property is Boolean type, which allow us to set separator between Toolbar items in Toolbar control. It separates one or more list items. When you want to separate two set of items, then define them in two separate ‘UL’ elements. Default value of EnableSeparator is false.
 
 
 
