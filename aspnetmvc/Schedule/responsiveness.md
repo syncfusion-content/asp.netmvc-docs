@@ -38,7 +38,7 @@ By default, setting 100% width to the Scheduler makes it adaptable to the window
 
 {% endhighlight %}
 
-To auto-resize the Scheduler height – set the **Height** property of the Scheduler to **100%** and also set some specific height (either percentage or pixel values) to its parent container (or) to the html and body tag elements as shown below.
+To auto-resize the Scheduler height – set the **Height** property of the Scheduler to **100%** and also set some specific height (either percentage or pixel values) to its parent container (or) to the HTML and body tag elements as shown below.
 
 {% highlight razor %}
 

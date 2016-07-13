@@ -106,7 +106,7 @@ public class ScheduleData
     }
 {% endhighlight %}
 
-Also, define the below model classes in your application, if there is a need to make use of the features such as multiple resources, categories, priorities, context menu and timzone collection in your sample application.
+Also, define the below model classes in your application, if there is a need to make use of the features such as multiple resources, categories, priorities, context menu and timezone collection in your sample application.
    
 {% highlight c# %}
 
