@@ -60,7 +60,7 @@ The following code sample explains how to customize PivotTreeMap appearance usin
 
 {% endhighlight %}
 
-![](ColorMapping_images/ColorMapping_img1.png)
+![](Color-Mapping_images/ColorMapping_img1.png)
 
 ### Range Color Mapping
 
@@ -94,6 +94,6 @@ The following code sample explains how to customize PivotTreeMap appearance usin
 
 {% endhighlight %}
 
-![](ColorMapping_images/ColorMapping_img2.png)
+![](Color-Mapping_images/ColorMapping_img2.png)
 
 
