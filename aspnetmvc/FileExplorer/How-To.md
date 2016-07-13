@@ -30,7 +30,7 @@ To suppress this warning, you need to specify the "*Access data sources across d
 
 **Option 2: Using JSONP for cross-origin request**
 
-Using JSONP data type, you can perform cross origin-request. To enable cross-origin request, in your “FileExplorer”, you have to specify “**AjaxDataType”**as “**jsonp**”. And we have provided “**doJSONPAction**” method to handle “jsonp” type Ajax request on server side.  Please refer below code snippet to specify “**AjaxDataType”**as “**jsonp**”.
+Using JSONP data type, you can perform cross origin-request. To enable cross-origin request, in your “FileExplorer”, you have to specify “**AjaxDataType”**as “**jsonp**”. And we have provided “**doJSONPAction**” method to handle “jsonp” type AJAX request on server side.  Please refer below code snippet to specify “**AjaxDataType”**as “**jsonp**”.
 
 Code example [CSHTML]:
 

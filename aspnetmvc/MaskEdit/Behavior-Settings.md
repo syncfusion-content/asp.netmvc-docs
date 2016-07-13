@@ -215,7 +215,7 @@ MaskEdit with MaskFormat
 
 ![](Behavior-Settings_images/Behavior-Settings_img11.png)
 
-MaskEdit with HidePromtOnLeave
+MaskEdit with HidePromptOnLeave
 {:.caption}
 
 
