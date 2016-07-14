@@ -140,7 +140,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 	
 For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
-## ASP.NET Core 1.0 (RC2) Application
+## ASP.NET Core 1.0 (RC2) Application with Visual Studio
 
 ### System Requirements:
 
@@ -231,7 +231,277 @@ The following steps helps to create a ASP.NET Core web application to configure 
 *  Finally compile your project, after successful compilation then press F5 key to deploy your project.   
 
    ![](getting-started_images/getting-started_img19.png)
-   
+
+## ASP.NET Core 1.0 (RC2) Application with Visual Studio Code
+
+### System Requirements:
+
+* Visual Studio [Code](https://code.visualstudio.com/)
+
+* DotNetCore 1.0.0 [Preview1](https://download.microsoft.com/download/4/6/1/46116DFF-29F9-4FF8-94BF-F9BE05BE263B/DotNetCore.1.0.0.RC2-VS2015Tools.Preview1.exe)
+
+### ASP.NET Core Project creation using Yeoman:
+
+To create an ASP.NET Core 1.0.0 application,we will use the[yeoman ](http://yeoman.io/)tool. This is a scaffolding tool for Modern web apps and helps us to quick start a new web project.
+
+Since **Visual Studio Code** uses folder structure for storing files of application, we will create a folder of the name **ASP.NET.**
+
+* Install Node from [https://nodejs.org/](https://nodejs.org/)
+
+* Open the Command prompt window in Administrator mode and execute the below mentioned command to install the **Yeoman** tool in your local machine by using **npm**.
+
+{% highlight text %}
+
+
+npm install -g yo
+
+
+
+{% endhighlight %}
+
+
+
+* After installing **Yo** you need to install the ASP.NET generator, gulp and bower.
+
+
+
+{% highlight text %}
+
+
+npm install -g yo generator-aspnet gulp bower
+
+
+
+{% endhighlight %}
+
+
+
+* Once Yeoman generator installed successfully, run the below command to invoke a ASP.NET Core project creation wizard.
+
+
+
+{% highlight text %}
+
+
+yo aspnet
+
+
+
+{% endhighlight %}
+
+
+
+![](getting-started_images/getting-started_img116.JPG)
+
+
+
+* From the list of available projects, select the **Web Application Basic [without Membership and Authorization]** by using arrow keys.
+
+
+
+![](getting-started_images/getting-started_img117.JPG)
+
+
+
+* And then provide the project name or simply press the enter key to create the project with default name.
+
+
+
+![](getting-started_images/getting-started_img118.JPG)
+
+
+### ASP.NET Core Project creation from Command Prompt
+
+
+
+* Create a new folder in your local directory.
+
+* Open the command prompt from your local directory with administrator mode.
+
+* In the command prompt we have an options to develop a below listed types of projects. The default type as console application. If you want to create any other specific type project, need to specify the **-t** (template) key in command before the project type name. To know more about the project options and its syntax declarations refer the [dotnet](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-new) link.
+
+{% highlight text %}
+
+
+Console
+Web
+Lib
+xunittest
+
+
+
+{% endhighlight %}
+
+
+
+* Then run the below mentioned command to create a new web application. After command execution the project will be created within your folder.
+
+
+
+{% highlight text %}
+
+
+dotnet new -t web
+
+
+
+{% endhighlight %}
+
+
+
+![](getting-started_images/getting-started_img119.JPG)
+
+
+### Configure Syncfusion Components in ASP.NET Core Application
+
+
+
+* Open Visual Studio Code and open your ASP.NET folder using **Open -> Folder** menu. Now your project folder is loaded in Visual Studio Code application.
+
+
+
+![](getting-started_images/getting-started_img120.JPG)
+
+
+
+* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your visual studio code.
+
+
+
+![](getting-started_images/getting-started_img121.JPG)
+
+
+
+
+
+* In **bower.json** file specify our Syncfusion packages with our latest version.
+
+![](getting-started_images/getting-started_img122.JPG)
+
+
+
+* Open quick window (Ctrl + p) to run the “bower install” command to installed our Scripts and CSS to your application **wwwroot - > lib** folder.
+
+
+
+![](getting-started_images/getting-started_img123.JPG)
+
+
+
+**Note**: Recommended to install the “Bower **package watcher**” extension will helps to load the packages once whenever save the **bower.json** file.
+
+* Now open your **project.****json** file to specify our assembly packages.
+
+
+
+![](getting-started_images/getting-started_img124.JPG)
+
+
+
+* Open “**_viewimports.cshtml**” file from the views folder and add the following namespace for components references and Tag Helper support.
+
+
+
+{% highlight cshtml %}
+
+
+@using Syncfusion.JavaScript
+@addTagHelper *, Syncfusion.EJ
+
+
+
+{% endhighlight %}
+
+
+
+* open command prompt window with administrator rights and navigate to your project folder then execute the following command to restore the packages specified in your **project.json** file.
+
+
+
+{% highlight text %}
+
+
+dotnet restore
+
+
+
+{% endhighlight %}
+
+
+
+![](getting-started_images/getting-started_img125.JPG)
+
+
+
+* Now refer the necessary scripts and CSS files in your **_layout.cshtml** page.
+
+{% highlight cshtml %}
+
+<html>
+<head>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/lib/syncfusion-javascript/Content/ej/web/bootstrap-theme/ej.web.all.min.css" rel="stylesheet" />
+        <link href="~/lib/syncfusion-javascript/Content/ej/web/responsive-css/ej.responsive.css" rel="stylesheet" />
+    </environment>
+</head>
+<body>
+
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
+        <script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
+        <script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
+    </environment>
+
+</body>
+</html>
+
+
+{% endhighlight %}
+
+
+
+* Add **ScriptManager** to the bottom of the **layout.cshtml** page. The **ScriptManager** used to place our control initialization script in the page.
+
+
+
+{% highlight cshtml %}
+
+
+<**ej-script-manager**></**ej-script-manager**>
+
+
+{% endhighlight %}
+
+
+
+* Now open your view page to render our Syncfusion components in Tag Helper syntax.
+
+
+
+{% highlight cshtml %}
+
+
+<**ej-date-picker** id="datepicker" **value**="@DateTime.Now"></**ej-date-picker**>
+
+
+
+{% endhighlight %}
+
+
+
+* Finally press F5 key to deploy your project.
+
+
+
+![](getting-started_images/getting-started_img126.JPG)
+
+
+
 ## Convert to Syncfusion Project
 
 Project conversion wizard helps to convert the existing MVC application into Syncfusion MVC application.  Please find the Steps for conversion from below:
