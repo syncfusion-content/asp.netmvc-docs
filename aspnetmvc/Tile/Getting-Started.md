@@ -54,19 +54,23 @@ Refer to the following code example.
 
 <div id="tile" style="margin-top: 45px;">
 
-        <div class="group">
+        <div class="e-tile-group">
 
-            <div class="column">
+            <div class="e-tile-column">
 
                 @Html.EJ().Tile("tile1").ImagePosition(TileImagePosition.Fill).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/ web/content/tile/people_1.png").Text("People")
 
-                @Html.EJ().Tile("tile2").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/alerts.png")
+                <div class="e-tile-small-col-2"> 
 
-                @Html.EJ().Tile("tile3").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/bing.png")
+                    @Html.EJ().Tile("tile2").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/alerts.png")
 
-                @Html.EJ().Tile("tile4").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/camera.png")
+                    @Html.EJ().Tile("tile3").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/bing.png")
 
-                @Html.EJ().Tile("tile5").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/ web/content/tile/messages.png")
+                    @Html.EJ().Tile("tile4").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/camera.png")
+
+                    @Html.EJ().Tile("tile5").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Small).ImageUrl("http://js.syncfusion.com/ug/ web/content/tile/messages.png")
+
+                </div>
 
                 @Html.EJ().Tile("tile6").ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/games.png").Text("Play")
 
@@ -74,7 +78,7 @@ Refer to the following code example.
 
             </div>
 
-            <div class="column">
+            <div class="e-tile-column">
 
                 @Html.EJ().Tile("tile9").ImagePosition(TileImagePosition.Fill).TileSize(TileSize.Medium).ImageUrl("http://js.syncfusion.com/ug/web/content/tile/people_2.png").Text("People")
 

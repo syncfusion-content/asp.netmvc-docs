@@ -20,7 +20,7 @@ Refer to the following code examples.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Tile("tile").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/messages.png").Text("Messages").Badge(badge => { badge.Enabled(true).MaxValue(80).MinValue(10).Value(88); }).ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium)
+@Html.EJ().Tile("tile").ImageUrl("http://js.syncfusion.com/UG/Web/Content/tile/messages.png").Badge(badge => { badge.Enabled(true).MaxValue(80).MinValue(10).Value(88); }).ImagePosition(TileImagePosition.Center).TileSize(TileSize.Medium)
 
 {% endhighlight %}
 

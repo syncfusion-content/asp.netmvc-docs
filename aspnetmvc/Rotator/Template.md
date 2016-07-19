@@ -33,8 +33,9 @@ The property template specifies the structure for slide li elements. The default
 
    // Add the following code to add slide image items in the controller page
 
-   // GET: /RotatorLocalData/
+  
         List<localdata> LocalValues = new List<localdata>();
+   
         public ActionResult LocalData()
         {    
            LocalValues.Add(new localdata{ text= "Beautiful Bird", url= "../Images/rotator/bird.jpg" });
@@ -44,8 +45,8 @@ The property template specifies the structure for slide li elements. The default
            LocalValues.Add(new localdata { text = "Snow Fall", url = "../Images/rotator/snowfall.jpg" });
            LocalValues.Add(new localdata { text = "Credit Card", url = "../Images/rotator/card.jpg" });
            LocalValues.Add(new localdata { text = "Amazing Sculptures", url = "../Images/rotator/sculpture.jpg" });
-            ViewBag.datasource=LocalValues;
-            return View();
+           ViewBag.datasource=LocalValues;
+           return View();
         } 
 
      ~~~
