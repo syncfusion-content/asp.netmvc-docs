@@ -12,14 +12,15 @@ documentation: ug
 ImagePosition property is used to adjust the position of Tile image at the Center on initialization. The possible values for the ImagePosition are as follows
 
 1. Center
-2. Top
-3. Bottom
-4. Right
-5. Left
+2. TopCenter
+3. BottomCenter
+4. RightCenter
+5. LeftCenter
 6. TopLeft
-7. BottomRight
-8. BottomLeft 
-9. Fill
+7. TopRight
+8. BottomRight
+9. BottomLeft 
+10. Fill
 
 ImageUrl property is used to set the background image for Tile, where the image is given in the path specified by ImageUrl property.
 
