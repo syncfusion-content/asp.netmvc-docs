@@ -124,19 +124,19 @@ Using this CssClass you can override the existing styles under the theme style s
 
 	<style type="text/css" class="cssStyles">
 
-		.Purple-dark {
-
-			background: pink;
-
-		}
-
-
-
-		.Purple-dark.e-horizontal .e-list > a {
-
-				color: #4800ff;
-
-		 }
+	.Purple-dark .e-menu,.e-menu.e-horizontal .e-list > ul {     
+         
+       background: pink;              
+     
+     }
+     
+     
+    
+    .Purple-dark .e-menu.e-horizontal .e-list > a {    
+    
+      color: blue;      
+      
+     }
 
 	</style>
 
