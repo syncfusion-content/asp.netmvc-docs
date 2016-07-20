@@ -66,8 +66,8 @@ Add the following code example for MVC samples
 
 {% highlight CSHTML %}
 
-
-@Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").CaptionTemplateId("captionTemplate").TileSize(TileSize.Wide)
+ 						
+	@Html.EJ().Tile("tile").ImageTemplateId("imageTemplate").ImagePosition(TileImagePosition.Fill).TileSize(TileSize.Wide).Caption(caption => { caption.Enabled(true); caption.Text("Windows Store"); })
 
 <div id="imageTemplate">
 
@@ -86,8 +86,6 @@ Add the following code example for MVC samples
         </div>
 
     </div>
-
-    <div id="captionTemplate" class="title">Windows Store</div>
 
 {% endhighlight %}
 
