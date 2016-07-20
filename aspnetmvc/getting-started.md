@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblys version chosen for each of the target MVC application. 
+The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
 
 There are two ways for embedding our controls into ASP.NET MVC application:
 
@@ -253,10 +253,6 @@ Since **Visual Studio Code** uses folder structure for storing files of applic
 
 npm install -g yo
 
-
-
-
-
 {% endhighlight %}
 
 * After installing **Yo** you need to install the ASP.NET generator, gulp and bower.
@@ -265,10 +261,6 @@ npm install -g yo
 
 npm install -g yo generator-aspnet gulp bower
 
-
-
-
-
 {% endhighlight %}
 
 * Once Yeoman generator installed successfully, run the below command to invoke a ASP.NET Core project creation wizard.
@@ -276,10 +268,6 @@ npm install -g yo generator-aspnet gulp bower
 {% highlight text %}
 
 yo aspnet
-
-
-
-
 
 {% endhighlight %}
 
@@ -446,10 +434,6 @@ The following steps helps to create a ASP.NET Core web application to configure 
 {% highlight text %}
 dotnet new -t web
 
-
-
-
-
 {% endhighlight %}
 
 ![](getting-started_images/getting-started_img119.JPG)
@@ -497,10 +481,6 @@ dotnet new -t web
 
 {% highlight text %}
 dotnet restore
-
-
-
-
 
 {% endhighlight %}
 
@@ -576,10 +556,6 @@ dotnet restore
 
 ![](getting-started_images/getting-started_img126.JPG)
 
-
-
-
-
 ## Convert to Syncfusion Project
 
 Project conversion wizard helps to convert the existing MVC application into Syncfusion MVC application.  Please find the Steps for conversion from below:
@@ -633,7 +609,6 @@ Project conversion wizard helps to convert the existing MVC application into Syn
 		<add key="UnobtrusiveJavaScriptEnabled" value="false" />
 	</appSettings>
 
-   
    ~~~	   
    
 7. Now you can add the Syncfusion control into your target cshtml file.  
