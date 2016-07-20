@@ -45,10 +45,6 @@ Essential ASP.NET MVC Menu widget basically renders with built-in features like 
 
 
 
-		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
-
-
-
 		<script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
 

@@ -51,10 +51,6 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
 
 
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
-
-
-
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
 
 
