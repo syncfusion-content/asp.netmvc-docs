@@ -11,7 +11,7 @@ documentation: ug
 
 ReportWriter is a class library that enables the user to render reports defined in Microsoft’s RDL format (2008 or 2008 R2) as PDF, Word, Excel, PPT and HTML documents.
  
-**The important features of WPF ReportWriter are listed as follows:**
+**The important features of ASP MVC ReportWriter are listed as follows:**
 
 * RDL Specification - Supports RDL Specification for the SQL Server 2008 and RDL Specification for the SQL Server 2008 R2 only. List of available report definition formats [msdn.microsoft.com/library/dd297486](https://msdn.microsoft.com/library/dd297486.aspx)
 * Data sources - You can use advanced database servers DataSources in ReportWriter (SQL and Oracle).
