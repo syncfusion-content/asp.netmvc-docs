@@ -47,7 +47,7 @@ In an ASPX page, add the Listbox control to configure Listbox events.
 
 
 
-The following code example define listboxsample _ValueSelect server side event in behind.
+The following code example define listbox sample _ValueSelect server side event in behind.
 
 {% highlight c# %}
 

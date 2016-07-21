@@ -61,7 +61,7 @@ It defines the sprite CSS for the image tag.</td></tr>
 <tr>
 <td>
 HtmlAttributes</td><td>
-It defines the html attributes such as id, class, styles for the item</td></tr>
+It defines the HTML attributes such as id, class, styles for the item</td></tr>
 <tr>
 <td>
 Selected</td><td>
