@@ -17,7 +17,7 @@ The model values of below are maintained through id basis of tree node.
 * checked
 * expanded/ collapsed state
 
-N>**In UL li template state has been persisted by index.**
+N>**In "UL" "li" template state has been persisted by index.**
 
 TreeView stores its model in local storage / cookies of browser before page refreshes and reinitialized with their stored model after refresh.
 
