@@ -39,10 +39,8 @@ The following steps explains you on how to apply “flat-lime-dark” theme to t
  <title>Slider</title>
  <!--Flat-saffron theme-->
  <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-saffron-dark/ej.web.all.min.css" rel="stylesheet" />
- <!--scripts-->        <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js">
- </script>
- <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"> </script>
- <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>
+ <!--scripts-->
+ <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
  <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script>
  </head></td><td>
 
