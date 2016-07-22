@@ -13,14 +13,14 @@ The similar steps are followed for integrating the Syncfusion controls into MVC 
 
 There are two ways for embedding our controls into ASP.NET MVC application:
 
-1. Through Nuget Packages
+1. Through NuGet Packages
 2. Integration using Project Template
 
 The procedure that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
 
 
 
-## Through Nuget Packages
+## Through NuGet Packages
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer the following steps 
 
@@ -122,7 +122,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![](getting-started_images/getting-started_img5.png)
 	
-4. Now you can notice the **Sycfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files
+4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files
 
 	![](getting-started_images/getting-started_img6.png)
 	
@@ -255,7 +255,7 @@ npm install -g yo
 
 {% endhighlight %}
 
-* After installing **Yo** you need to install the ASP.NET generator, gulp and bower.
+* After installing **Yo** you need to install the ASP.NET generator, gulp and Bower.
 
 {% highlight text %}
 
@@ -291,7 +291,7 @@ yo aspnet
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your visual studio code.
+* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
@@ -446,7 +446,7 @@ dotnet new -t web
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your visual studio code.
+* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
