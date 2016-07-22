@@ -116,7 +116,7 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 
 1. Add the reference ej.globalize.min.js script into your application. 
 
-   I > **ej.globalize.min.js** library already avails in within **ej.web.all.min.js** file, therefore it is not necessary to externally refer it in your application if you have referred **ej.web.all.min.js** already. For version lower than 13.4.0.53 refer **jQuery.globalize.min.js** along with **ej.web.all.min.js**
+   N> **ej.globalize.min.js** library already avails in within **ej.web.all.min.js** file, therefore it is not necessary to externally refer it in your application if you have referred **ej.web.all.min.js** already. For version lower than 13.4.0.53 refer **jQuery.globalize.min.js** along with **ej.web.all.min.js**
 
 2. Add the required culture file into page which is located in **assets/scripts/i18n**.
 
@@ -171,7 +171,7 @@ Find the steps to globalize the MVC application from below
    ~~~ xml
    
 	<system.web>
-	<globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
+	<globalization uiCulture="fr-FR" culture="fr-FR" enableClientBasedCulture="true"/>
 	</system.web>
 
    ~~~
@@ -211,7 +211,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
    ~~~ xml
    
 	<system.web>
-	    <globalization uiCulture="fr-FR" culture="fr-FR"  enableClientBasedCulture="true"/>
+	    <globalization uiCulture="fr-FR" culture="fr-FR" enableClientBasedCulture="true"/>
 	</system.web>
 
    ~~~
@@ -226,7 +226,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
    ~~~
    
    
-3. Download and refer the Syncfusion UI component localized text from [ej-glob](https://github.com/syncfusion/ej-global/tree/master/localetexts) repository.
+3. Download and refer the Syncfusion UI component localized text from [ej-global](https://github.com/syncfusion/ej-global/tree/master/localetexts) repository.
 
    
    ![](core-concepts_images/core-concepts_img1.png)
@@ -274,7 +274,7 @@ When the above code is executed on the browser, the button widget will render wi
 
 {% highlight cshtml %}
 
-<button id="button11" class="e-button e-js e-btn-normal e-btn e-select e-widget e-corner-all" tabindex="" type="submit" role="button" aria-describedby="login" aria-disabled="false"></button>
+<button id="button11" class="e-button e-js e-btn-normal e-btn e-select e-widget e-txt e-corner" tabindex="" type="submit" role="button" aria-describedby="login" aria-disabled="false">Login</button>
 
 {% endhighlight %}
 
