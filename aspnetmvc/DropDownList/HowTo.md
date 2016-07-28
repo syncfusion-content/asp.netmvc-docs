@@ -184,4 +184,60 @@ Define DataSource and other required properties for rendering a simple DropDownL
             ViewData["DataSrc"] = data;
             return View();
          }
+         
+{% endhighlight %}
+
+
+## Dynamically bind the data to ejDropDownList on ajax call
+
+Render the DropDownList with the empty DataSource, In client event called “click” of Button control, the ajax post is called.
+
+{% highlight c# %}
+
+    @Html.EJ().DropDownList("bikeList").DropDownListFields(df => df.ID("empid").Text("text")).ClientSideEvents(e => e.Create("onCreate"))<br />
+
+    @Html.EJ().Button("button").Text("click").ClientSideEvents(e => e.Click("onClick"))
+    
+{% endhighlight %}
+
+{% highlight html %}
+
+    public class DropDownController : Controller
+    {
+        // GET: DropDown
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Add()
+        {
+            return RedirectToAction("Index", "DropDown");
+        }
+    }
+
+{% endhighlight %}
+
+Once the ajax call is success, bind the data to the dropdown list on ajax call by using the property “dataSource”.
+
+{% highlight javascript %}
+
+    function onClick() {
+
+        $.ajax({
+            url: '/DropDown/Add',
+            type: 'POST'
+        }).success(function (result) {
+            BikeList = [
+                { empid: "bk1", text: "Apache RTR" }, { empid: "bk2", text: "CBR 150-R" }, { empid: "bk3", text: "CBZ Xtreme" },
+                { empid: "bk4", text: "Discover" }, { empid: "bk5", text: "Dazzler" }, { empid: "bk6", text: "Flame" },
+                { empid: "bk7", text: "Fazzer" }, { empid: "bk8", text: "FZ-S" }, { empid: "bk9", text: "Pulsar" },
+                { empid: "bk10", text: "Shine" }, { empid: "bk11", text: "R15" }, { empid: "bk12", text: "Unicorn" }
+            ];
+
+            var data1 = $("#bikeList").data("ejDropDownList");
+            data1.option("dataSource", BikeList);
+
+        })
+    }
+    
 {% endhighlight %}
