@@ -150,7 +150,7 @@ To work with ASP.NET Core 1.0, you need to make sure is whether you have install
 
 * Visual Studio 2015 [Update 2](http://download.microsoft.com/download/c/8/6/c868d99e-f6cb-4b6f-955e-4571614e6fdb/vs2015.2.exe) and above.
 
-* DotNetCore [1.0.0](https://go.microsoft.com/fwlink/?LinkId=817245).
+* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245).
 
 #### Configure Syncfusion Components in ASP.NET Core Application:
 
@@ -241,7 +241,7 @@ The following steps helps to create a ASP.NET Core web application to configure 
 #### System Requirements:
 
 * Visual Studio [Code](https://code.visualstudio.com/#)
-* DotNetCore [1.0.0](https://go.microsoft.com/fwlink/?LinkId=817245)
+* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245)
 
 The following steps helps to create a ASP.NET Core web application to configure our components.
 
@@ -394,7 +394,7 @@ dotnet restore
 #### System Requirements:
 
 * Visual Studio [Code](https://code.visualstudio.com/#)
-* DotNetCore [1.0.0](https://go.microsoft.com/fwlink/?LinkId=817245)
+* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245)
 
 To create an ASP.NET Core 1.0.0 application, we will use the [**yeoman**](http://yeoman.io/#) tool. This is a scaffolding tool for Modern web apps and helps us to quick start a new web project. 
 
