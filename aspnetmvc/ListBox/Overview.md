@@ -23,7 +23,7 @@ The ListBox control provides a list of options and allows you to choose an item 
 * Template: Supports using templates to display list items.
 * Keyboard navigation: Supports switching focus to the control and navigation through the list items with the key press.
 * RTL: Supports displaying the ListBox with list items in direction from right to left.
-* LoadonDemand: Provides LoadonDemand support for ListBox control, to load only specific set of List Data items.
+* LoadOnDemand: Provides LoadOnDemand support for ListBox control, to load only specific set of List Data items.
 
 
 

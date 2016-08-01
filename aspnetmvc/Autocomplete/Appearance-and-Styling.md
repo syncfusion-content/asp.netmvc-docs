@@ -224,7 +224,7 @@ CSS class is used to customize the AutoComplete control’s appearance. Define C
 
 Configure AutoComplete textbox using CSS class
 
-The following steps allow you to configure CSSclass for an AutoComplete textbox.
+The following steps allow you to configure CssClass for an AutoComplete textbox.
 
 
 

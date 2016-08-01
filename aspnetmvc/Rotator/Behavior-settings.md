@@ -74,7 +74,7 @@ This property specifies the position of the Pager in the Rotator Item. The defau
 * Syncfusion.JavaScript.PagerPosition.BottomLeft
 * Syncfusion.JavaScript.PagerPosition.BottomRight
 * Syncfusion.JavaScript.PagerPosition.Outside
-* Syncfusion.JavaScript.PagerPosition.TopCentre
+* Syncfusion.JavaScript.PagerPosition.TopCenter
 * Syncfusion.JavaScript.PagerPosition.TopLeft
 * Syncfusion.JavaScript.PagerPosition.TopRight
 
