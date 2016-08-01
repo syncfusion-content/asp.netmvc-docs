@@ -396,7 +396,7 @@ dotnet restore
 * Visual Studio [Code](https://code.visualstudio.com/#)
 * DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245)
 
-To create an ASP.NET Core 1.0.0 application, we will use the [**yeoman**](http://yeoman.io/#) tool. This is a scaffolding tool for Modern web apps and helps us to quick start a new web project. 
+To create an ASP.NET Core 1.0 application, we will use the [**yeoman**](http://yeoman.io/#) tool. This is a scaffolding tool for Modern web apps and helps us to quick start a new web project. 
 
 Since **Visual Studio Code** uses folder structure for storing files of application, we will create a folder of the name **ASP.NET**
 
