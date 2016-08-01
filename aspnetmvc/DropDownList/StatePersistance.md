@@ -5,6 +5,7 @@ description: State Persistence support to DropDownList control for Syncfusion AS
 platform: MVC
 control: DropDownList
 documentation: ug
+keywords: Persistence, DropDownList, dropdown, State Persistence
 ---
 
 # State Persistence

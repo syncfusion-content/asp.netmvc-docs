@@ -5,6 +5,8 @@ description: Describes about the data binding in DropDownList control for Syncfu
 platform: MVC
 control: DropDownList
 documentation: ug
+keywords: DropDownList, dropdown, data binding, Local data, Remote data
+
 ---
 
 # Data Binding

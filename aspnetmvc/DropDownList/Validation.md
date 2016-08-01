@@ -5,6 +5,8 @@ description: Describes about the data binding in DropDownList control for Syncfu
 platform: MVC
 control: DropDownList
 documentation: ug
+keywords: Validation, DropDownList, dropdown, jQuery Validator, Client side Validation, Server side Validation
+
 ---
 
 # Validations

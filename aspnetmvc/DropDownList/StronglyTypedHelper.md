@@ -5,6 +5,8 @@ description: How To Section in DropDownList control for Syncfusion ASP.NET MVC
 platform: js
 control: DropDownList
 documentation: ug
+keywords: Strongly Typed HTML Helper, DropDownList, dropdown, HTML Helper
+
 ---
 
 # Strongly Typed HTML Helper

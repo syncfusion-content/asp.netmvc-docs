@@ -5,6 +5,7 @@ description: Describes about rendering mode in DropDownList control for Syncfusi
 platform: mvc
 control: DropDownList
 documentation: ug
+keywords: Rendering, DropDownList, dropdown, Rendering Mode
 ---
 
 # Rendering Mode
@@ -12,7 +13,8 @@ documentation: ug
 DropDownList control can be created using UL-LI element. 
 
 By default DropDownList control is rendered using DropDownList helper to which you can pass popup items using Datasource and DropDownListFields property. 
-## Using UL-LI
+
+## Target Rendering
 
 You can bind the predefined set of UL-LI elements to generate the list of popup items. These items can be customized by adding any images, div elements, radio buttons, text boxes etc.
 
