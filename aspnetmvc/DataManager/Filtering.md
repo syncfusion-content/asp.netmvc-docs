@@ -41,7 +41,7 @@ ej.FilterOperators.greaterThan,ej.FilterOperators.greaterThanOrEqual,ej.FilterOp
 </table>
 
 
-## lessthan
+## lessThan
 
 This operator is used to get the records with values lesser than the filter value.
 
@@ -68,7 +68,7 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img1.png)
 
-Filter using “lessthan” operator
+Filter using “lessThan” operator
 {:.caption}
 
 ## greaterThan
@@ -99,7 +99,7 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img2.png)
 
-Filter using “greaterthan” operator
+Filter using “greaterThan” operator
 {:.caption}
 
 ## lessThanOrEqual
@@ -128,7 +128,7 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img3.png)
 
-Filter using “lessthanorequal” operator
+Filter using “lessThanOrEqual” operator
 {:.caption}
 
 ## greaterThanOrEqual
@@ -173,7 +173,7 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img4.png)
 
-Filter using “greaterthanorequal” operator
+Filter using “greaterThanOrEqual” operator
 {:.caption}
 
 ## equal
@@ -267,7 +267,7 @@ Result of the above code example is illustrated as follows.
 
 ![](Filtering_images/Filtering_img6.png)
 
-Filter using “notequal” operator
+Filter using “notEqual” operator
 {:.caption}
 
 ## contains
