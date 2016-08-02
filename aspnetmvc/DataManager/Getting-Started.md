@@ -15,7 +15,7 @@ DataManager is used to manage relational data. It supports CRUD (Create, Read, U
 
 ### Configure Demo Application
 
-This section briefly describes how to make a connection to WCF “Northwind” OData service and generate a report with top five orders from customer HANAR with higher Freight charges.  In this application scenario, you can learn how to bind the DataManager to the Grid control to do paging, filtering and sorting with Grid contol in the DataManager by using ej.Query.
+This section briefly describes how to make a connection to WCF “Northwind” OData service and generate a report with top five orders from customer HANAR with higher Freight charges.  In this application scenario, you can learn how to bind the DataManager to the Grid control to do paging, filtering and sorting with Grid control in the DataManager by using ej.Query.
 
 ### Create Connection
 
@@ -72,7 +72,7 @@ public class HomeController : Controller
 
 
 {% endhighlight  %}
-In this application, as you have web service for NorthWind database, you can assign the web service URL link to the URL property of DataManager, and you can enable crossDomain to retrieve data from another domain.
+In this application, as you have web service for Northwnd database, you can assign the web service URL link to the URL property of DataManager, and you can enable crossDomain to retrieve data from another domain.
 
 {% highlight CSHTML %}
 

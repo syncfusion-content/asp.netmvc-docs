@@ -247,7 +247,7 @@ The following steps helps to create a ASP.NET Core web application to configure 
 
 * Create a new folder in your local directory.
 * Open the command prompt from your local directory with administrator mode.
-* In the command prompt we have an options to develop a below listed types of projects. The default type as console application. If you want to create any other specific type project, need to specify the **-****t** (template) key in command before the project type name. To know more about the project options and its syntax declarations refer the [dotnet](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-new#) link.
+* In the command prompt we have an options to develop a below listed types of projects. The default type as console application. If you want to create any other specific type project, need to specify the **-****t** (template) key in command before the project type name. To know more about the project options and its syntax declarations refer the [.NET](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-new#) link.
 
 {% highlight text %}
 
