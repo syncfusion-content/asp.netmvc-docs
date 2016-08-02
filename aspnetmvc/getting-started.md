@@ -303,12 +303,12 @@ dotnet new -t web
 
 * Open **“_viewimports.cshtml**” file from the views folder and add the following namespace for components references and Tag Helper support.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
   
 	@using Syncfusion.JavaScript
 	@addTagHelper "*, Syncfusion.EJ"
  
-   ~~~
+   {% endhighlight %}
 
 * open command prompt window with administrator rights and navigate to your project folder then execute the following command to restore the packages specified in your **project.json** file.
 
@@ -371,19 +371,19 @@ dotnet restore
 
 * Add **ScriptManager** to the bottom of the **layout.cshtml** page. The **ScriptManager** used to place our control initialization script in the page.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
    
     <ej-script-manager></ej-script-manager>
 	
-   ~~~
+   {% endhighlight %}
 
 * Now open your view page to render our Syncfusion components in Tag Helper syntax.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
    
 	<ej-date-picker id="datepicker" value="@DateTime.Now"></ej-date-picker>
 	
-   ~~~
+   {% endhighlight %}
 
 * Finally press F5 key to deploy your project.
 
@@ -469,12 +469,12 @@ yo aspnet
 
 * Open **“_viewimports.cshtml**” file from the views folder and add the following namespace for components references and Tag Helper support.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
   
 	@using Syncfusion.JavaScript
 	@addTagHelper "*, Syncfusion.EJ"
  
-   ~~~
+   {% endhighlight %}
 
 * open command prompt window with administrator rights and navigate to your project folder then execute the following command to restore the packages specified in your **project.json** file.
 
@@ -538,19 +538,19 @@ dotnet restore
 
 * Add **ScriptManager** to the bottom of the **layout.cshtml** page. The **ScriptManager** used to place our control initialization script in the page.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
    
     <ej-script-manager></ej-script-manager>
 	
-   ~~~
+   {% endhighlight %}
 
 * Now open your view page to render our Syncfusion components in Tag Helper syntax.
 
-   ~~~ cshtml
+   {% highlight cshtml %}
    
 	<ej-date-picker id="datepicker" value="@DateTime.Now"></ej-date-picker>
 	
-   ~~~
+   {% endhighlight %}
 
 * Finally press F5 key to deploy your project.
 
