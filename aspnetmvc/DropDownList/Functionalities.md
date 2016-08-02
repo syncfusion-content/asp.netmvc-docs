@@ -5,12 +5,162 @@ description: Functionalities in the DropDownList control for Syncfusion ASP.NET 
 platform: mvc
 control: DropDownList
 documentation: ug
+keywords: DropDownList, dropdown, Selection, Grouping, Sorting
+
 ---
 # Functionalities
 
 ## Selection
 
 By default only one item can be selected from the popup list. For multiple selection, you have to enable [checkboxes](Checkbox). The selected item consist of active class (“e-active”) to differentiate it from other items.
+
+The following API’s, select the items in the DropDownList via text or value or indices.
+
+<table>
+    <tr>
+        <th>
+            Properties
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{'[value](http://help.syncfusion.com/js/api/ejdropdownlist#members:value)'| markdownify }} 
+            <br/>
+        </td>
+        <td>
+            To select an item initially, you can pass the item’s value via value property.
+            <br/>
+            {{'N> Also multiple items can select via Value property, the given values should be separated by delimiter character. ' | markdownify }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[text](http://help.syncfusion.com/js/api/ejdropdownlist#members:text)'| markdownify }} 
+            <br/>
+        </td>
+        <td>
+            To select an item initially, you can pass the item’s text via text property.
+            <br/>
+            {{'N> Also multiple items can select via Value property, the given values should be separated by delimiter character. ' | markdownify }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[selectedIndex](http://help.syncfusion.com/js/api/ejdropdownlist#members:selectedindex)'| markdownify }} 
+            <br/>
+        </td>
+        <td>
+            Select a single item by passing an index value to the selectedIndex property.
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             {{'[selectedIndices](http://help.syncfusion.com/js/api/ejdropdownlist#members:selectedindices)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            Select more than one items by passing index values to the selectedIndices property when multi selection enabled. 
+            <br/>
+        </td>
+    </tr>
+</table>
+
+N> Index starts from 0 here.
+N> To use “selectedIndices” property, you should enable wither showCheckbox or multipSelectMode property.
+
+The following methods, select the items in the DropDownList.
+
+<table>
+    <tr>
+        <th>
+            Methods
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{'[selectItemByIndices](http://help.syncfusion.com/js/api/ejdropdownlist#methods:selectitembyindices)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to select the list of items in the DropDownList through the Index of the items.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[selectItemByText](http://help.syncfusion.com/js/api/ejdropdownlist#methods:selectItemByText)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to select an item in the DropDownList by using the given text value.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[selectItemByValue](http://help.syncfusion.com/js/api/ejdropdownlist#methods:selectitembyvalue)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to select an item in the DropDownList by using the given value.
+            <br/>
+        </td>
+    </tr>
+</table>
+
+The following methods, used to retrieve the items from the DropDownList.
+
+<table>
+    <tr>
+        <th>
+            Methods
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {{'[getListData](http://help.syncfusion.com/js/api/ejdropdownlist#methods:getlistdata)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to retrieve the items that are bound with the DropDownList.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[getSelectedItem](http://help.syncfusion.com/js/api/ejdropdownlist#methods:getselecteditem)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to get the selected items in the DropDownList.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{'[getSelectedValue](http://help.syncfusion.com/js/api/ejdropdownlist#methods:getSelectedValue)'| markdownify }}
+            <br/>
+        </td>
+        <td>
+            This method is used to retrieve the items value that are selected in the DropDownList.
+            <br/>
+        </td>
+    </tr>
+</table>
+
+I> When multiSelectMode is enabled in a DropDownList and selected items having same text but its value is different means, the items can be selected. Please refer the online link
 
 ### Using value or text
 
@@ -273,9 +423,22 @@ The below given example explains the behavior of grouping with List data binding
 ![](Functionalities_images/Functionalities_img3.jpeg)
 
 N> Grouping has restrictions in the following scenarios,
+
 N> 1.  It is not supported on using HTML "select" element with predefined set of options
+
 N> 2.  When using UL-LI elements you need to use “e-category” class in LI element to specify it as the grouping header. The following code will explain this behavior,
 
+N> 3.  The sorting behavior varies when grouping is enabled in the DropDownList, based on browser as we have used browser based stable sorting method when there is multiple level of sorting. 
+
+N> 4.  To overcome this behavior on sorting order with browser, we suggest you to set ej.support.stableSort as false from the script when the page is loaded or in document ready function.
+   
+   {% highlight javascript %}
+    <script type="text/javascript">
+            $(document).ready(function () {
+                ej.support.stableSort = false;            
+            });
+    </script>
+   {% endhighlight %}
 
 {% highlight html %}
 
@@ -408,7 +571,9 @@ Configuring the data items for cascading to the series of DropDownList is demons
 
 ![](Functionalities_images/Functionalities_img6.jpeg)
 
-You can also bind the data source to the cascading DropDownList dynamically using ClientSideEvent Cascade as demonstrated below,
+### Binding the data source to the cascading DropDownList using cascade event
+
+Bind the data source to the cascading DropDownList dynamically using ClientSideEvent Cascade as demonstrated below,
 
 {% tabs %}
 
@@ -475,6 +640,104 @@ You can also bind the data source to the cascading DropDownList dynamically usin
 {% endtabs %}
 
 ![](Functionalities_images/Functionalities_img7.jpeg)
+
+### Multi-Level Cascading
+
+The below scenario can be explained with three DropDownList for the multi-level cascading.
+
+{% tabs %}
+
+	{% highlight C# %}
+    
+    public partial class DropdownlistController: Controller
+    {
+        List<groups> group = new List<groups>();
+        List<Countries> country = new List<Countries>();
+        List<Capital> capital = new List<Capital>();
+        public ActionResult DropdownlistFeatures()
+        {
+            group.Add(new groups { parentId = "a", text = "Group A" });
+            group.Add(new groups { parentId = "b", text = "Group B" });
+            group.Add(new groups { parentId = "c", text = "Group C" });
+            group.Add(new groups { parentId = "d", text = "Group D" });
+            group.Add(new groups { parentId = "e", text = "Group E" });
+            ViewBag.datasource = group;
+            country.Add(new Countries { value = 11, parentId = "a", text = "Algeria" });
+            country.Add(new Countries { value = 12, parentId = "a", text = "Armenia" });
+            country.Add(new Countries { value = 13, parentId = "a", text = "Bangladesh" });
+            country.Add(new Countries { value = 14, parentId = "a", text = "Cuba" });
+            country.Add(new Countries { value = 15, parentId = "b", text = "Denmark" });
+            country.Add(new Countries { value = 16, parentId = "b", text = "Egypt"});
+            country.Add(new Countries { value = 17, parentId = "c", text = "Finland"});
+            country.Add(new Countries { value = 18, parentId = "c", text = "India" });
+            country.Add(new Countries { value = 19, parentId = "c", text = "Malaysia"});
+            country.Add(new Countries { value = 20, parentId = "d", text = "New Zealand"});
+            country.Add(new Countries { value = 21, parentId = "d", text = "Norway" });
+            country.Add(new Countries { value = 22, parentId = "d", text = "Romania" });
+            country.Add(new Countries { value = 23, parentId = "e", text = "Singapore"});
+            country.Add(new Countries { value = 24, parentId = "e", text = "Thailand" });
+            country.Add(new Countries { value = 25, parentId = "e", text = "Ukraine"});
+            ViewBag.datasource1 = country;
+            capital.Add(new Capital { value = 11, text = "Algiers" });
+            capital.Add(new Capital { value = 12, text = "Cairo" });
+            capital.Add(new Capital { value = 13, text = "Copenhagen" });
+            capital.Add(new Capital { value = 14, text = "Washington" });
+            capital.Add(new Capital { value = 15, text = "Denmark" });
+            capital.Add(new Capital { value = 16, text = "Yerevan" });
+            capital.Add(new Capital { value = 17, text = "Copenhagen" });
+            capital.Add(new Capital { value = 18, text = "New Delhi" });
+            capital.Add(new Capital { value = 19, text = "Havana" });
+            capital.Add(new Capital { value = 20, text = "Brasília" });
+            capital.Add(new Capital { value = 21, text = "Lima" });
+            capital.Add(new Capital { value = 22, text = "Canberra" });
+            capital.Add(new Capital { value = 23, text = "Wellington" });
+            capital.Add(new Capital { value = 24, text = "Alfred Faure" });
+            capital.Add(new Capital { value = 25, text = "King Edward Point" });
+            ViewBag.capital = capital;
+              return View();
+         } 
+    }
+    public class groups
+    {
+        public string text { get; set; }
+        public string parentId { get; set; }
+      
+    }
+    public class Countries
+    {
+        public string text { get; set; }
+       
+        public int value { get; set; }
+        public string parentId { get; set; }
+        
+    }
+    public class Capital
+    {
+        public string text { get; set; }
+        public int value { get; set; }
+    }
+    {% endhighlight %}
+    
+    {% highlight html %}
+    
+    <div class="control" style="float: left;">
+        <span class="txt">Select Group</span>
+        @Html.EJ().DropDownList("groupsList").Datasource((IEnumerable<groups>)ViewBag.datasource).DropDownListFields(f => f.Value("parentId").Text("text")).CascadeTo("countryList")
+    </div>
+    <div class="control" style="float: left;">
+        <span class="txt">Select Country</span>
+        @Html.EJ().DropDownList("countryList").Datasource((IEnumerable<Countries>)ViewBag.datasource1).DropDownListFields(f => f.Value("value").Text("text")).CascadeTo("capitalList").Enabled(false)
+    </div>
+    <div class="control" style="float: left;">
+        <span class="txt">Select Country</span>
+        @Html.EJ().DropDownList("capitalList").Datasource((IEnumerable<Capital>)ViewBag.capital).Enabled(false)
+    </div>
+
+     {% endhighlight %}
+    
+{% endtabs %}
+
+First two DropDownList cascaded based on the parentId, and then from second to third, cascading performed based on the value field.
 
 ## Search
 
@@ -563,284 +826,4 @@ N> Items are filtered based on “SearchFilterType.Contains” filter type by de
 
 I> When VirtualScrolling enabled with searching, then filter will be applied only on the DropDownList items available at the moment.
 
-
-##Validations
-
-DropDownList value can be validated in following ways,
-1. Using jQuery Validator
-2. Client side Validation
-3. Server side validation
-
-### Using jQuery Validator
-You can validate the DropDownList value on form submission using jQuery Validations, by applying “ValidationRules” and “ValidationMessage” to the DropDownList. 
-
-N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js) script file should be referred for validation, for more details, refer [here](http://jqueryvalidation.org/documentation).
-
-#### Validation Rules
-
-The validation rules help you to verify the selected text by adding validation attributes to the input element. This can be set by using ValidationRules property.
-
-#### Validation Messages 
-
-You can set your own custom error message by using ValidationMessage property. To display the error message, specify the corresponding annotation attribute followed by the message to display.
-
-N> jQuery predefined error messages to that annotation attribute will be shown when this property is not defined. The below given example explain this behavior of ‘required’ attribute,
-
-When the DropDownList control is rendered, it creates an input hidden element which is used to store the selected items value. Hence, the validation is performed based on the value stored in this hidden element.
-
-Required field and min value validation is demonstrated in the below given example.
-
-{% tabs %}
-
-{% highlight html %}
-
-     @model MVCApplication.Controllers.HomeController
-    <form id="form1">   
-
-        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).DropDownListFields(Df => Df.Text("Text").Value("Value")).ValidationMessage(vm => vm.AddMessage("required", "* Required").AddMessage("min","Select > 30")).ValidationRules(vr => vr.AddRule("required", true).AddRule("min",30))
-
-        <br /><input type="submit" value="Submit" />
-
-    </form>
-                
-{% endhighlight %}
-
-{% highlight javascript %}
-
-        $.validator.setDefaults({
-            ignore: [],
-            errorClass: 'e-validation-error', // to get the error message on jquery validation
-            errorPlacement: function (error, element) {
-                $(error).insertAfter(element.closest(".e-widget"));
-            }
-            // any other default options and/or rules
-        });
-        //If necessary, we can create custom rules as below. here method defined for min
-        $.validator.addMethod("min",
-            function (value, element, params) {
-                if (!/Invalid|NaN/.test(value)) {
-                    return parseInt(value) > params;
-                }
-            }, 'Must be greater than 30.');
-				
-{% endhighlight %}
-
-{% highlight c# %}
-	
-    public ActionResult Index()
-        {
-            List<Data> DropdownData = new List<Data>();
-            DropdownData.Add(new Data { Value = "10", Text = "10" });
-            DropdownData.Add(new Data { Value = "20", Text = "20" });
-            DropdownData.Add(new Data { Value = "30", Text = "30" });
-            DropdownData.Add(new Data { Value = "40", Text = "40" });
-            DropdownData.Add(new Data { Value = "50", Text = "50" });
-            ViewData["DropDownSource"] = DropdownData;
-            return View();
-        }
-        public class Data
-        {
-            public string Value { get; set; }
-            public string Text { get; set; }
-        }
-	
-{% endhighlight %}
-
-{% endtabs %}
-
-![](Functionalities_images/Functionalities_img10.jpeg)
-
-### Client Side Validation
-
-When you are developing the MVC application in Visual Studio then the client-side becomes enabled by default, but you can easily enable or disable the writing of the following app setting code snippet in the web.config file.
-
-{% tabs %}
-
-{% highlight xml %}
-
-    <appSettings>
-    
-        <add key="ClientValidationEnabled" value="true" />
-        <add key="UnobtrusiveJavaScriptEnabled" value="true" />
-    </appSettings>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-After setting the value as **true,** refer to the jQuery validation script file in the **_Layout page** as shown in the following code example.
-
-{% tabs %}
-
-{% highlight html %}
-
-    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The jQuery validation plug-in takes advantage of the Data Annotation attributes defined in the model. Let's create a Sample model that has a single property with Data annotation attributes.
-
-{% tabs %}
-
-{% highlight c# %}
-
-    using System.ComponentModel.DataAnnotations;
-    public class DropDownListModel
-    {
-        [Required(ErrorMessage = "DropDownList value is Required")]
-        public List<DropDownValue> DropData { get; set; }
-    }
-
-    public class DropDownValue
-    {
-        public string Text { get; set; }
-        public string Value { get; set; }
-
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-After that you need to create the controller's action methods. These render views on the UI and bind a model with the view. So let's create a controller as follows.
-The view is created as in the following code snippet:
-
-{% tabs %}
-
-{% highlight razor %}
-    
-    @model MvcApplication.Models.DropDownListModel
-
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-
-        @Html.EJ().DropDownListFor(Model => Model. DropData,(Syncfusion.JavaScript.Models.DropDownListProperties)ViewData["properties"])
-        <br />
-        @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Post").Type(ButtonType.Submit)
-    }
-
-{% endhighlight %}
-
-{% highlight c# %}
-    
-    using MvcApplication.Models;
-    using Syncfusion.JavaScript.Models;
-        public ActionResult DropdownlistFeatures()
-        {
-            BindingData();
-            return View();
-         }
-        public void BindingData()
-        {
-            List<DropDownValue> data = new List<DropDownValue>() { };
-            data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
-            data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" });
-            data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
-            data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
-            data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-            DropDownListProperties ddl = new DropDownListProperties();
-            ddl.DataSource = data;
-            DropDownListFields ddf = new DropDownListFields();
-            ddf.Text = "Text";
-            ddf.Value = "Value";
-            ddl.DropDownListFields = ddf;
-            ViewData["properties"] = ddl;
-        }        
-        [HttpPost]
-        public ActionResult DropdownlistFeatures(DropDownListModel model)
-        {
-            BindingData();
-            return View(model);
-        }
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Server side Validation
-
-The ASP.NET MVC Framework validates any data passed to the controller action that is executing.
-For DropDownList, we have to create a sample using Data Annotation API to validate the model data for it.
-1. Create a model named DropDownListModel (DropDownListModel*.cs*) under the *Models* folder and applies Data Annotation attributes on the properties of the DropDownListModel class that is the Text property of the DropDownList.
-2. Now, create an action method in the controller that returns a view with a model after the post request.
-
-    {% tabs %}
-
-    {% highlight c# %}
-        
-        using System.ComponentModel.DataAnnotations;
-        public class DropDownListModel
-        {
-            public List<DropDownValue> DropData { get; set; }
-        }
-
-        public class DropDownValue
-        {
-            public string Text { get; set; }
-            public string Value { get; set; }
-
-        }
-
-    {% endhighlight %}
-
-    {% highlight c# %}
-        
-        using MvcApplication.Models;
-        using Syncfusion.JavaScript.Models;
-            public ActionResult DropdownlistFeatures()
-            {
-                BindingData();
-                return View();
-            }
-            public void BindingData()
-            {
-                List<DropDownValue> data = new List<DropDownValue>() { };
-                data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
-                data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" });
-                data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
-                data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
-                data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-                DropDownListProperties ddl = new DropDownListProperties();
-                ddl.DataSource = data;
-                DropDownListFields ddf = new DropDownListFields();
-                ddf.Text = "Text";
-                ddf.Value = "Value";
-                ddl.DropDownListFields = ddf;
-                ViewData["properties"] = ddl;
-            }   
-            [HttpPost]
-            public ActionResult DropdownlistFeatures(DropDownListModel model)
-            {
-                if(ModelState.IsValid)
-                    BindingData();
-                return View(model);
-            }
-
-    {% endhighlight %}
-
-    {% endtabs %}
-
-3. After that, created a view to get value and show an error message if the value of the DropDownList is not given.
-    
-    {% tabs %}
-
-    {% highlight razor %}
-
-        @using (Html.BeginForm())
-        {
-            @Html.ValidationSummary(true)
-
-            @Html.EJ().DropDownListFor(Model => Model.DropData,(Syncfusion.JavaScript.Models.DropDownListProperties)ViewData["properties"])
-
-            <br />
-            @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Post").Type(ButtonType.Submit)
-        }
-
-    {% endhighlight %}
-
-    {% endtabs %}
 

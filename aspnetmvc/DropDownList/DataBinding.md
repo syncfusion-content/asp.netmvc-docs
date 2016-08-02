@@ -5,6 +5,8 @@ description: Describes about the data binding in DropDownList control for Syncfu
 platform: MVC
 control: DropDownList
 documentation: ug
+keywords: DropDownList, dropdown, data binding, Local data, Remote data
+
 ---
 
 # Data Binding
@@ -241,6 +243,301 @@ N> The columns are bounded automatically when the fields are specified with the 
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/> 
 
+## SQL Data Binding
+
+Fetch the Data from SQL data source and initialize the control with DataSource property. Specify the column names in the Fields property. 
+
+{% tabs %}
+
+	{% highlight html %}
+    
+        @Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag.Data).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
+		
+	{% endhighlight %}
+    
+    {% highlight c# %}
+        public ActionResult DropdownlistFeatures()
+        {
+            List<Employee> data = new List<Employee>();
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SampleDB.mdf;Integrated Security=True");
+            using (con)
+            {
+                con.Open();
+                SqlDataReader myReader = null;
+                SqlCommand myCommand = new SqlCommand("select * From [Table]",
+                                                         con);
+                myReader = myCommand.ExecuteReader();
+                if (myReader.Read())
+                {
+                    
+                        data.Add(new Employee(myReader["Name"].ToString(), myReader["Designation"].ToString()));
+                    
+                }
+                con.Close();
+                ViewBag.Data = data;
+                
+            }
+            return View();
+         }
+        public class Employee
+        {
+            public string Name { get; set; }
+            public string Designation { get; set; }
+            public Employee(string name, string deg)
+            {
+                this.Name = name;
+                this.Designation = deg;
+            
+            }
+        }
+    {% endhighlight %}
+    
+{% endtabs %}
+
+## LINQ Data Binding
+
+Language-Integrated Query (LINQ) is not only about retrieving data. It is also a powerful tool for transforming data. By using a LINQ query, you can use a source sequence as input and modify it in many ways to create a new output sequence.
+
+Defines model class
+
+{% highlight C# %}
+
+    public class Employee
+    {
+        public string name { set; get; }
+        public string empID { set; get; }
+        public string desgination { set; get; }
+        public Employee() { }
+        public Employee(string ename, string eid, string edesg)
+        {
+            name = ename;
+            empID = eid;
+            desgination = edesg;
+        }
+        
+    }
+
+{% endhighlight %}
+
+In code behind, fetch the data from Employee class and assigned to the DropDownList as follows
+
+{% highlight C# %}
+
+    public ActionResult DropdownlistFeatures()
+    {
+
+        List<Employee> data = new List<Employee>() { };
+        data.Add(new Employee("Nancy", "E11011", "Technical Writer"));
+        data.Add(new Employee("Angel", "E11012", "Professor"));
+        data.Add(new Employee("Daniah", "E11013", "Dancer"));
+        data.Add(new Employee("Jenifer", "E11014", "Beautician"));
+        data.Add(new Employee("Prince", "E11015", "Developer"));
+
+        var db = from result in data
+                    select result;
+
+        ViewBag.dataSource = db.ToList();
+        return View();
+    }
+    
+{% endhighlight %}
+
+{% highlight html %}
+
+    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Employee>)ViewBag.datasource).DropDownListFields(df => df.ID("empID").Text("name").Value("desgination")).WatermarkText("Select a Student").Width("100%")
+
+{% endhighlight %}
+
+## XmlDataSource
+
+XmlDataSource is used to work with XML documents. The following steps explain the details about the data binding from XmlDataSource
+
+Step 1: Create an xml Data source as follows
+
+{% highlight xml %}
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <Students>
+    <Student>
+        <Name>Abhishek</Name>
+        <Location>Dhanbad</Location>
+    </Student>
+    <Student>
+        <Name>Aman</Name>
+        <Location>Samastipur</Location>
+    </Student>
+    <Student>
+        <Name>Vicky</Name>
+        <Location>Munger</Location>
+    </Student>
+    <Student>
+        <Name>Chandan</Name>
+        <Location>Bhagalpur</Location>
+    </Student>
+    <Student>
+        <Name>Ravi</Name>
+        <Location>Dhanbad</Location>
+    </Student>
+    </Students>
+    
+{% endhighlight %}
+
+Step 2: Read data from the XML file
+
+{% highlight C# %}
+
+    using System.Xml;
+    using DataBinding.Models;
+    public ActionResult DropdownlistFeatures()
+    {
+        List<Product> data = new List<Product>();
+        
+        using (XmlReader reader = XmlReader.Create("D:/Sample/MVC/DataBinding/DataBinding/App_Data/XMLData.xml"))
+        {
+            while (reader.Read())
+            {
+                if (reader.IsStartElement())
+                {
+                    switch (reader.Name.ToString())
+                    {
+                        case "Name":
+                            data.Add(new Product { name = reader.ReadString() });
+                            break;
+                    }
+                }
+            }
+        }
+
+    ViewBag.data = data;
+    return View();
+    }
+    
+{% endhighlight %}
+
+Step 3: Assign the data to the DropDownList’s DataSource property. Specify the column names in the fields property.
+
+{% highlight Razor %}
+
+    @using DataBinding.Models
+    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Product>)ViewBag.data).DropDownListFields(df => df.Text("name").Value("name")).WatermarkText("Select a Student").Width("100%")   
+
+{% endhighlight %}
+
+## EntityDataSource
+
+Bind data to the DropDownList through Entity Framework. Please follow the below steps.
+
+1.	Create an entity data model
+Please refer the [link](http://www.entityframeworktutorial.net/EntityFramework5/create-dbcontext-in-entity-framework5.aspx) for more information
+
+2.	Refer the entity data model to your project and bind the data to the DropDownList
+
+In code behind, create an object for the Entity mode (NORTHWNDEntities) and fetch the data from the Employees class and stored it to the List.
+Assign the data to the DropDownList’s DataSource property. Specify the column names in the fields property.
+
+
+{% highlight C# %}
+
+    public ActionResult DropdownlistFeatures()
+    {
+        NORTHWNDEntities sample = new NORTHWNDEntities();
+        var dataset = sample.Employees
+                    .Select(x => new Employee
+                    {
+                        EmployeeID = x.EmployeeID,
+                        FirstName = x.FirstName                     
+                    }).ToList();
+        ViewBag.DataSource = dataset;
+    }
+    public class Employee
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }
+
+{% endhighlight %}
+
+{% highlight Razor %}
+
+    @Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.Text("FirstName ").Value("EmployeeID ")).Width("150px")
+
+{% endhighlight %}
+
+## AccessDataSource
+
+The data can also be bound to the DropDownList using OLEDB database as depicted below.
+
+{% highlight Razor %}
+
+    Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
+
+{% endhighlight %}
+
+The server-side code to retrieve and bind the data to DropDownList are as follows. Also, define a class with all the required fields as depicted in the below code example.
+
+{% highlight C# %}
+
+    public ActionResult DropdownlistFeatures()
+    {            
+
+        OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Database.mdb");
+        conn.Open();
+        OleDbCommand cmd = new OleDbCommand(" SELECT * from [Employees]", conn);
+        OleDbDataReader reader = null;
+        List<EmpDetails> data = new List<EmpDetails>();
+        reader = cmd.ExecuteReader();
+        while (reader.Read())
+        {
+            data.Add(new EmpDetails(reader["Name"].ToString(), reader["Designation"].ToString()));
+            
+        }
+        conn.Close();
+        ViewBag. DataSource = data;
+        
+
+    }
+    public class EmpDetails
+    {
+        public string Name { get; set; }
+        public string Designation { get; set; }
+        public EmpDetails(string name, string deg)
+        {
+            this.Name = name;
+            this.Designation = deg;
+
+        }
+    }
+    
+{% endhighlight %}
+
+## Linq to SQL Data Binding
+
+The LINQ to SQL can be used as the data source of the DropDownList in which the data model of a relational database is mapped to an object model and allow us to use the LINQ technology to access SQL database.
+
+To create LINQ to SQL classes
+•	Right-click the App_Code folder and then click Add New Item.
+•	Under Installed templates, select Linq to SQL Classes template, type a name for the .dbml file, and then click Add.
+•	The Object Relational Designer window is displayed.
+•	In Server Explorer, drag the database table into the Object Relational Designer window.
+•	The table and its columns are represented as an entity in the designer window.
+
+![](DataBinding_images/LinqtoSql.jpg)
+
+In code behind, fetch the data from classes and stored it to the Viewbag as follows
+
+{% highlight C# %}
+    
+    ViewBag.dataSource = new SampleDataContext().Customers.ToList();
+    
+{% endhighlight %}
+
+{% highlight html %}
+
+    @Html.EJ().DropDownList("customers").Datasource((IEnumerable<Customer>)ViewBag.dataSource).DropDownListFields(df => df.Text("CompanyName").Value("CustomerID")).WatermarkText("Select a Customer").Width("100%")
+    
+{% endhighlight %}
+    
+![](DataBinding_images/LinqtoSql2.jpg)
 
 ## Remote data 
 
@@ -257,7 +554,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 {% endhighlight %}
            
           
-### OData Version 4
+## OData Version 4
 
 For OData Version 4 support ODataV4Adaptor should be used. By using URL property of Datasource, you can bind OData Version 4 Service link and specify  Adaptor value as enum AdaptorType.ODataV4Adaptor.
 
@@ -275,7 +572,7 @@ For further details about OData service please refer [the link](http://www.odata
 
 N> Events associated with remote data bind is listed [here](http://help.syncfusion.com/js/api/ejdropdownlist#events). 
 
-### WebAPI
+## WebAPI
 
 Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The data from WebApi service must be returned as an object that has property “Items” with its value as data source and another property “Count” with its value as dataSource’s total records count.
 

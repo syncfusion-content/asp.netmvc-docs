@@ -5,20 +5,22 @@ description: To get start with DropDownList by adding references.
 platform: MVC
 control: DropDownList
 documentation: ug
+keywords: DropDownList, dropdown, Populating data
 ---
 
 # Getting Started
 
 ## Creating your first DropDownList in MVC application
+
 1. Create an MVC Project and add necessary assemblies, scripts and CSS files given in [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started#manual-integration-of-syncfusion-mvc-components-into-newexisting-mvc-applications) Documentation.
 
 2. Add DropDownList control using the helper from EJ namespace. 
 
-    {% highlight html %}
+        {% highlight html %}
 
-        @Html.EJ().DropDownList("DropDownList1")
-            
-    {% endhighlight %}
+            @Html.EJ().DropDownList("DropDownList1")
+                
+        {% endhighlight %}
 
 3. Execute the code and get a empty DropDownList control as below
 

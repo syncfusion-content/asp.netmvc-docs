@@ -5,6 +5,7 @@ description: Web accessibliy support to DropDownList control for Syncfusion ASP.
 platform: mvc
 control: DropDownList
 documentation: ug
+keywords: Keyboard Navigation, DropDownList, Accessibility
 ---
 
 # Accessibility 
@@ -28,7 +29,7 @@ Keyboard shortcut keys are,
 </tr>
 <tr>
     <td>
-        [Access key](http://en.wikipedia.org/wiki/Access_key) + j
+         {{'[Access key](http://en.wikipedia.org/wiki/Access_key)' | markdownify }} + j
         <br/>
     </td>
     <td>
