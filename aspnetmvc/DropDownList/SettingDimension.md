@@ -5,6 +5,8 @@ description: Setting Dimensions to DropDownList control for Syncfusion ASP.NET M
 platform: js
 control: DropDownList
 documentation: ug
+keywords: Auto Sizing, DropDownList, dropdown, popup size
+
 ---
 
 # Setting dimensions 

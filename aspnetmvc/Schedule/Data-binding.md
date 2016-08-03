@@ -1010,14 +1010,50 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
         
         public JsonResult GetData()
         {
+           
             using (connection)
             {
-                connection.Open();
-                // To initially bind the Scheduler with data
-                SqlDataAdapter data = new SqlDataAdapter("select * from ScheduleData", connection);
-                connection.Close();
-                return Json(data, JsonRequestBehavior.AllowGet);
+               
+                DataTable myDataSet = new DataTable();
+                SqlConnection myAccessConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ScheduleControlData.mdf;Integrated Security=True");
+                SqlCommand myAccessCommand = new SqlCommand("SELECT * FROM ScheduleData", myAccessConn);
+                SqlDataAdapter myDataAdapter = new SqlDataAdapter(myAccessCommand);
+                myAccessConn.Open();
+                myDataAdapter.Fill(myDataSet);
+                List<DataRow> datasource = myDataSet.AsEnumerable().ToList();
+
+                List<Scheduledb> scheduleList = new List<Scheduledb>();
+                for (int i = 0; i < datasource.Count; i++)
+                {
+                    Scheduledb datum = new Scheduledb();
+                    datum.Id = Convert.ToInt32(datasource[i]["Id"]);
+                    datum.Subject = datasource[i]["Subject"].ToString();
+                    datum.StartTime = Convert.ToDateTime(datasource[i]["StartTime"]);
+                    datum.EndTime = Convert.ToDateTime(datasource[i]["EndTime"]);
+                    datum.AllDay = Convert.ToBoolean(datasource[i]["AllDay"]);
+                    datum.Recurrence = Convert.ToBoolean(datasource[i]["Recurrence"]);
+                    datum.RecurrenceRule = datasource[i]["RecurrenceRule"].ToString();
+                    datum.StartTimeZone = datasource[i]["StartTimeZone"].ToString();
+                    datum.EndTimeZone = datasource[i]["EndTimeZone"].ToString();
+                    datum.Description = datasource[i]["Description"].ToString();
+                    scheduleList.Add(datum);
+                } 
+                myAccessConn.Close();
+                return Json(scheduleList, JsonRequestBehavior.AllowGet);
             }
+        }
+        public class Scheduledb
+        {
+            public int Id { get; set; }
+            public string Subject { get; set; }
+            public DateTime StartTime { get; set; }
+            public DateTime EndTime { get; set; }
+            public Boolean AllDay { get; set; }
+            public Boolean Recurrence { get; set; }
+            public string RecurrenceRule { get; set; }
+            public string StartTimeZone { get; set; }
+            public string EndTimeZone { get; set; }
+            public string Description { get; set; }
         }
         
         // To perform other CRUD operations
@@ -1027,8 +1063,9 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
             {
                 var value = param.action == "insert" ? param.value : param.added[0];
                 connection.Open();
-                SqlCommand add = new SqlCommand("insert into ScheduleData(Id,Subject,StartTime,EndTime,Description,AllDay,Recurrence,RecurrenceRule) values(Id="+ value.Id +",Subject='"+ value.Subject +"', StartTime='"+ value.StartTime +"', EndTime='"+ value.EndTime +"', Description='"+ value.Description +"', AllDay='"+ value.AllDay +"', Recurrence='"+ value.Recurrence +"', RecurrenceRule='"+ value.RecurrenceRule +"')",connection);
-                add.ExecuteNonQuery();
+                sql = "insert into ScheduleData (Id,EndTime,Recurrence,StartTime,Subject,AllDay,RecurrenceRule,StartTimeZone,EndTimeZone,Description) values(" + value.Id + ",'" + value.EndTime + "','" + value.Recurrence + "','" + value.StartTime + "','" + value.Subject + "','" + value.AllDay + "','" + value.RecurrenceRule +"','" + value.StartTimeZone + "','" + value.EndTimeZone + "','" + value.Description + "')";
+                adapter1.InsertCommand = new SqlCommand(sql, connection);
+                adapter1.InsertCommand.ExecuteNonQuery();
                 connection.Close();
             }
             if (param.action == "remove" || param.deleted != null)
@@ -1037,7 +1074,7 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
                 if (param.action == "remove")
                 {
                     int key = Convert.ToInt32(param.key);
-                    SqlCommand delete = new SqlCommand("delete from ScheduleData where Id="+ key +"",connection);
+                    SqlCommand delete = new SqlCommand("delete from ScheduleData where Id=" + key + "", connection);
                     delete.ExecuteNonQuery();
                 }
                 else
@@ -1054,14 +1091,12 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
             {
                 connection.Open();
                 var value = param.action == "update" ? param.value : param.changed[0];
-                SqlCommand update = new SqlCommand("update scheduleData set Id = " + value.Id + ", Subject = '" + value.Subject + "', StartTime = '" + value.StartTime + "', EndTime = '" + value.EndTime + "', Description = '" + value.Description + "', AllDay = '" + value.AllDay + "', Recurrence = '" + value.Recurrence + "' where Id = " + value.Id + ",)", connection);
-                update.ExecuteNonQuery();
+                sql = "update scheduleData set EndTime='" + value.EndTime + "',Recurrence='" + value.Recurrence + "',StartTime='" + value.StartTime + "',Subject='" + value.Subject + "',AllDay='" + value.AllDay + "',RecurrenceRule='" + value.RecurrenceRule + "',StartTimeZone = '" + value.StartTimeZone + "',EndTimeZone = '" + value.EndTimeZone + "'where Id='" + value.Id + "'";
+                adapter1.UpdateCommand = new SqlCommand(sql, connection);
+                adapter1.UpdateCommand.ExecuteNonQuery();
                 connection.Close();
             }
-            connection.Open();
-            SqlDataAdapter data = new SqlDataAdapter("select * from ScheduleData", connection);
-            connection.Close();
-            return Json(data, JsonRequestBehavior.AllowGet);
+           return GetData();
         }
         
 {% endhighlight %}

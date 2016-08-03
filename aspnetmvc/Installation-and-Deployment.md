@@ -29,7 +29,7 @@ The steps to install the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio 
 2. Select `NuGet Package Manager | Package Sources` and click `Add` button to add the `Package Name` and `Package Source` of Syncfusion NuGet Packages.    
 
    **Name**: Name of the package that listed in Available package sources  
-   **Source**: Syncfusion ASP.NET MVC NuGet Package feed url 
+   **Source**: Syncfusion ASP.NET MVC NuGet Package feed URL
    [http://nuget.syncfusion.com/aspnetmvc](http://nuget.syncfusion.com/aspnetmvc)
     
    ![](installation-and-deployment_images/NuGetConfig2.jpeg)
@@ -94,7 +94,7 @@ Once the NuGet source has been added, then install the NuGet package which is av
 
 mono nuget.exe install [Package name] 
 
-For Ex: mono nuget.exe install “Syncfusion.EJ” –Prerelease 
+For Ex: mono nuget.exe install “Syncfusion.EJ” – Pre release 
 
 For Linux OS :
 
@@ -116,7 +116,7 @@ The MVC applications are deployed in the development server by referencing the S
 
 Deploy the application in the development server by referencing the **assemblies** from **GAC**.
 
-* **Web.config** file is configured according to the referenced **dlls**. 
+* **Web.config** file is configured according to the referenced **dll**. 
 
 * When you deploy your application, ensure that the above referenced assemblies (in your **web.config** files) are present in the **GAC**. This method supports almost all the features of the control.
 
@@ -128,18 +128,18 @@ Deploy the application in the development server by referencing Syncfusion assem
 
 * Delete the **Syncfusion** assembly **GAC** entries in your development machine. Now copy the required reference assemblies to the **bin** folder of your application.
 
-* **Web.config** file is configured according to the referenced **dlls**.
+* **Web.config** file is configured according to the referenced **dll**.
 
 * In this case, the control’s **DeprecateFunctionalityToRunInPartialTrust** property is turned **on** for the control to work properly. In some cases, few features may not be available. You can refer the control's documentation for more information.
 
 N> If you have XML, mdb or other data files in your application, ensure that they have sufficient security permissions. Only the Authenticated Users should have access to the files and directory, so as to permit the ASP.NET code to open the file at run-time.
-Also, ensure that the machine.config of the deployed system includes appropriate entries for Mozilla and so on within the <browsercaps> tag. The default entries consider these browsers as downlevel and hence will not render the Syncfusion controls properly.
+Also, ensure that the machine.config of the deployed system includes appropriate entries for Mozilla and so on within the <browsercaps> tag. The default entries consider these browsers as down level and hence will not render the Syncfusion controls properly.
 
 ## Install Location & Samples
 
 Here, the default location on your machine is illustrated where the **Essential Studio package** or the **Essential Studio for ASP.NET MVC** suite gets installed, from where the Syncfusion assemblies and dashboard samples can be accessed.
 
-* The below specified location is the place from where all the assemblies, scripts, css files and samples are available,
+* The below specified location is the place from where all the assemblies, scripts, CSS files and samples are available,
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\`
 
@@ -173,12 +173,12 @@ _**For example**, If you have installed the Essential Studio package within **C:
 
 The Syncfusion assemblies are packed in a separate folder on the basis of the following two types,
 
-  * .Net framework version
+  * .NET Framework version
   * MVC version
   
-### .Net framework version-based assemblies
+### .NET Framework version-based assemblies
 
-The assemblies based on the version of the .NET framework are packed under the folders namely **3.5**, **4.0**, **4.5** and **4.5.1** available in the above specified location. Some of the important assemblies available based on the .NET frameworks under each folders (3.5, 4.0, 4.5, 4.5.1) are listed below,
+The assemblies based on the version of the .NET Framework are packed under the folders namely **3.5**, **4.0**, **4.5** and **4.5.1** available in the above specified location. Some of the important assemblies available based on the .NET frameworks under each folders (3.5, 4.0, 4.5, 4.5.1) are listed below,
 
 <table>
 <tr><td>
@@ -198,7 +198,7 @@ Syncfusion.DocIO.Base.dll
 
 ### MVC version-based assemblies
 
-The assemblies based on the version of the MVC framework (MVC3, MVC4, MVC5) are packed under the folder namely **MVC** available in the below location,
+The assemblies based on the version of the MVC Framework (MVC3, MVC4, MVC5) are packed under the folder namely **MVC** available in the below location,
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\ {{ site.releaseversion }}\MVC`
 
