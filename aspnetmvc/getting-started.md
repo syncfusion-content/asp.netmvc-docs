@@ -148,7 +148,7 @@ For more information about Project Configuration Templates and their options det
 
 To work with ASP.NET Core 1.0, you need to make sure is whether you have installed the following software on your machine
 
-* Visual Studio 2015 [Update 2](http://download.microsoft.com/download/c/8/6/c868d99e-f6cb-4b6f-955e-4571614e6fdb/vs2015.2.exe) and above.
+* Visual Studio 2015 [Update 3](https://go.microsoft.com/fwlink/?LinkId=691129).
 
 * DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245).
 
