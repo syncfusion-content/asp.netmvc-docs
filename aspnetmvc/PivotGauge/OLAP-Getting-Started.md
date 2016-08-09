@@ -62,7 +62,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             ……
             ……
@@ -106,7 +106,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 The scripts and style sheets that are mandatorily required to render PivotGauge widget in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -254,7 +254,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             …… 
             ……
@@ -301,7 +301,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 The scripts and style sheets that are mandatorily required to render PivotGauge widget in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 

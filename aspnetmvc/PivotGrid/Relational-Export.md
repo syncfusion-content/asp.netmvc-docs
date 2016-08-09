@@ -24,7 +24,7 @@ The PivotGrid control can be exported by invoking **“exportPivotGrid”** meth
     @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); })) 
                   
 //If you want to render PivotGrid in Server Mode.
-  @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/RelationalService.svc"))
+  @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/RelationalService.svc"))
 
   @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
   <script type="text/javascript">

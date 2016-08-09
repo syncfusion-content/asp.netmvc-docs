@@ -25,7 +25,7 @@ The PivotGrid control can be exported by invoking **“exportPivotGrid”** meth
 .Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
                   
 //If you want to render PivotGrid in Server Mode.
-  @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/OLAPService.svc"))
+  @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService.svc"))
 
   @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
   <script type="text/javascript">

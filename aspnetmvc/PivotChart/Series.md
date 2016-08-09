@@ -14,7 +14,7 @@ By using the `Fill` and `Border` properties of Chart series, you can customize t
  
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
     oEve => { oEve.SeriesRendering("onSeriesRenders"); })
 <script>
    function onSeriesRenders(args) {

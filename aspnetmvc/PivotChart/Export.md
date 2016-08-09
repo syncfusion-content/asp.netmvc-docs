@@ -24,7 +24,7 @@ The PivotChart control can be exported by invoking **“exportPivotChart”** me
   @Html.EJ().Pivot().PivotChart("PivotChart1").CommonSeriesOptions(comm => { comm.Type(SeriesType.Column).Tooltip(tool => { tool.Visible(true); }).EnableAnimation(true); }).Size(size => size.Height("460px").Width("100%")).PrimaryYAxis(primaryYAxis => primaryYAxis.Title(title => title.Text("Amount"))).Legend(legend => legend.Visible(true)).ClientSideEvents(oEve => { oEve.Load("load"); }).IsResponsive(true).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); rows.FieldName("State").FieldCaption("State").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); }))
                   
 //If you want to render PivotChart in Server Mode.
-  @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc"))..Size(size => size.Height("460px").Width("100%"))
+  @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc"))..Size(size => size.Height("460px").Width("100%"))
 
   @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
   <script type="text/javascript">

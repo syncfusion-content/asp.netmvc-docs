@@ -9,7 +9,13 @@ documentation: ug
 
 # 3D Visualization
 
-The PivotChart control allows you to view the Cube information in a 3D view with 5 different chart types such as Bar, Column, Stacking Bar, Stocking Column and Pie.
+The PivotChart control allows you to view the data in a 3D view. Following are the chart types that are supported:
+
+* Bar
+* Column
+* Stacking Bar
+* Stocking Column 
+* Pie
 
 ## 3D Column Chart
 
@@ -17,7 +23,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -29,7 +35,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Bar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -40,7 +46,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -51,7 +57,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}
 
@@ -62,7 +68,7 @@ The PivotChart control allows you to view the Cube information in a 3D view with
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(24).CommonSeriesOptions(comm => { comm.Type(SeriesType.Pie); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %}   
 
@@ -73,7 +79,7 @@ We can rotate the 3D Chart towards left or right by setting an appropriate angle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Rotation(40).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Rotation(40).CommonSeriesOptions(comm => { comm.Type(SeriesType.Column); }).Size(size => size.Height("450px").Width("100%")).Enable3D(true)
 
 {% endhighlight %} 
 

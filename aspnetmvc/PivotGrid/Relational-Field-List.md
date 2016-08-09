@@ -15,7 +15,7 @@ Field List, also known as Pivot Schema Designer, allows user to add, rearrange, 
 
 Based on the datasource, Relational, bound to the PivotGrid control, PivotTable Field List will be automatically populated with Cube Information or Field Names. PivotTable Field List provides an Excel like appearance and behavior.
 
-In-order to initialize PivotTable Field List, first you need to define a “div” tag with an appropriate “id” attribute which acts as a container for the widget. Then you need to initialize the PivotTable Field List by using the **"PivotSchemaDesigner"** method.
+In-order to initialize PivotTable Field List, first you need to define a “div” tag with an appropriate “id” attribute which acts as a container for the control. Then you need to initialize the PivotTable Field List by using the **"PivotSchemaDesigner"** method.
 
 ### Client Mode
 
@@ -45,7 +45,7 @@ In-order to initialize PivotTable Field List, first you need to define a “div�
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/RelationalService")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner").Layout(PivotSchemaDesignerLayout.Excel)
 
 <script type="text/javascript">

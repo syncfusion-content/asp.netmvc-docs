@@ -190,11 +190,11 @@ namespace OlapClientDemo
         [OperationContract]
         Dictionary < string, object > InitializeChart(string action, string currentReport, string customObject);
         [OperationContract]
-        Dictionary <string, object> InitializeTreeMap(string action, string currentReport, string customObject);
+        Dictionary < string, object > InitializeTreeMap(string action, string currentReport, string customObject);
         [OperationContract]
         Dictionary < string, object > DrillChart(string action, string drilledSeries, string olapReport, string clientReports);
         [OperationContract]
-        Dictionary <string, object> DrillTreeMap(string action, string drillInfo, string olapReport, string clientReports);
+        Dictionary < string, object > DrillTreeMap(string action, string drillInfo, string olapReport, string clientReports);
         [OperationContract]
         Dictionary < string, object > InitializeGrid(string action, string currentReport, string gridLayout, string customObject);
         [OperationContract]
@@ -273,7 +273,7 @@ namespace OlapClientDemo
                 return htmlHelper.GetJsonData(action, DataManager);
             }
             //This method provides the required information from the server side for initializing the PivotTreeMap.
-         public Dictionary <string, object> InitializeTreeMap(string action, string currentReport, string customObject)
+         public Dictionary < string, object > InitializeTreeMap(string action, string currentReport, string customObject)
             {
                 OlapDataManager DataManager = new OlapDataManager(connectionString);
                 DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(currentReport));
@@ -288,7 +288,7 @@ namespace OlapClientDemo
                 return htmlHelper.GetJsonData(action, DataManager, drilledSeries);
             }
             //This method provides the required information from the server side while drill up/down operation is performed in PivotTreeMap.
-        public Dictionary <string, object> DrillTreeMap(string action, string drillInfo, string olapReport, string clientReports)
+        public Dictionary < string, object > DrillTreeMap(string action, string drillInfo, string olapReport, string clientReports)
             {
                 OlapDataManager DataManager = new OlapDataManager(connectionString);
                 DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(olapReport));

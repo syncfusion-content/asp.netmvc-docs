@@ -16,7 +16,7 @@ By using the `title.Text` property, you can add the title text for PivotChart.
 {% highlight CSHTML %}
 
 //Adding Chart title
-@Html.EJ().Pivot().PivotChart("PivotChart1").Title(title => title.Text("PivotChart in JS")).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Title(title => title.Text("PivotChart in JS")).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ By using the `title.TextAlignment` property, you can align the PivotChart contro
 
 //Change title text alignment
 @Html.EJ().Pivot().PivotChart("PivotChart1").Title(title => title.Text("PivotChart in JS").TextAlignment(TextAlignment.Near)
-).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ By using the `Title` property, you can add the title text for X-axis and Y-axis.
 {% highlight CSHTML %}
 
 //Customizing axis title
-@Html.EJ().Pivot().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.Title(title => title.Text("Fiscal Year").Font(font=> font.Size("16px").FontFamily("Segoe UI").FontWeight(ChartFontWeight.Bold).Color("grey")))).Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").PrimaryXAxis(primaryX => primaryX.Title(title => title.Text("Fiscal Year").Font(font=> font.Size("16px").FontFamily("Segoe UI").FontWeight(ChartFontWeight.Bold).Color("grey")))).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
