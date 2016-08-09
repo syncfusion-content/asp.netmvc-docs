@@ -17,7 +17,7 @@ Following code example illustrates on how to localize PivotChart based on **“F
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Locale("fr-FR").Size(size => size.Height("320px").Width("100%"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Locale("fr-FR").Size(size => size.Height("320px").Width("100%"))
 
 <script type="text/javascript">
     ej.olap.PivotChart.locale["fr-FR"] = {

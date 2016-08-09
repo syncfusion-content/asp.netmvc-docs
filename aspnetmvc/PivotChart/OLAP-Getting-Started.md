@@ -62,7 +62,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             ……
             ……
@@ -104,9 +104,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotChart widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotChart control in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -125,7 +125,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
     </head>
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight cshtml %}
 
@@ -146,15 +146,23 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
     @using Syncfusion.JavaScript;
 
     @Html.EJ().Pivot().PivotChart("PivotChart1")
+    
+    <style>
+        #PivotChart1 {
+            width:950px;
+            height:460px;
+        }
+    </style>
+    
 {% endhighlight %}
 
 ### Populate PivotChart With DataSource
 
-Initializes the OLAP datasource for PivotChart widget as shown below.
+Initializes the OLAP datasource for PivotChart control as shown below.
 
 {% highlight html %}
 
-    @Html.EJ().Pivot().PivotChart("PivotChart1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Size(size=>size.Height("350px").Width("800px"))
+    @Html.EJ().Pivot().PivotChart("PivotChart1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Size(size=>size.Height("460px").Width("950px"))
 {% endhighlight %}
 
 The above code will generate a simple PivotChart with "Fiscal" field in Row, "Customer Geography" field in Column and "Internet Sales Amount" field in Value section.
@@ -226,7 +234,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             …… 
             ……
@@ -271,9 +279,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotChart widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotChart control in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -292,7 +300,7 @@ Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml
     </head>
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight html %}
 
@@ -312,10 +320,18 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
     @using Syncfusion.JavaScript;
 
-    @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/OlapChart")) 
+    @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/OlapChart")).Size(size=>size.Height("460px").Width("950px"))
+    
+    <style>
+        #PivotChart1 {
+            width:950px;
+            height:460px;
+        }
+    </style> 
+    
 {% endhighlight %}
 
-The **“Url”** property in PivotChart widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart widget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotChart control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart control as endpoint are WCF and WebAPI.
 
 N> The above "Index.cshtml" contains WebAPI URL, which is "/OlapChart". If WCF service is used as endpoint, the URL would look like "/OlapChartService.svc".
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Adding Custom Label Collection
 
-Custom label collection can be directly added to the scales option within the PivotGauge control as an array.
+You can apply custom custom label Collection by using `CustomLabels` which can be directly added to the scales option within the PivotGauge control.
 
 {% highlight CSHTML %}
 
@@ -45,7 +45,7 @@ The appearance of the custom labels can be customized through the following prop
 
 ## Multiple Custom Labels
 
-Multiple custom labels can be set to a PivotGauge Control by adding an array of objects within the `CustomLabels` option.
+Multiple ranges can be added in `CustomLabels` to the scales option within the PivotGauge control.
 
 {% highlight CSHTML %}
 

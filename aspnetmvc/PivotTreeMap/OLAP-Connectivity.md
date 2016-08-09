@@ -174,7 +174,7 @@ namespace PivotTreeMaptDemo
     public interface IPivotTreeMapService
     {
         [OperationContract]
-        Dictionary<string, object> InitializeTreeMap(string action, string currentReport, string customObject);
+        Dictionary< string, object > InitializeTreeMap(string action, string currentReport, string customObject);
 
         [OperationContract]
         Dictionary<string, object> DrillTreeMap(string action, string drillInfo, string olapReport, string customObject);
@@ -195,7 +195,7 @@ namespace PivotTreeMaptDemo
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;"; 
         JavaScriptSerializer serializer = new JavaScriptSerializer(); 
         //This method provides the required information from the server side when initializing the PivotTreeMap.
-        public Dictionary<string, object> InitializeTreeMap(string action, string currentReport, string customObject)
+        public Dictionary< string, object > InitializeTreeMap(string action, string currentReport, string customObject)
         {
             OlapDataManager DataManager = null;
             DataManager = new OlapDataManager(connectionString);

@@ -58,6 +58,7 @@ To add them to your Web Application, right-click on **References** in Solution E
 * Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
 
 **List of Namespaces**
 
@@ -241,13 +242,16 @@ Secondly, you need to elaborate the service methods inside the main class, found
 
             private void BindData()
             {
-                this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total", ShowSubTotal = false });
+                this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total" });
                 this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "State", FieldHeader = "State", TotalHeader = "Total" });
                 this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "Date", FieldHeader = "Date", TotalHeader = "Total" });
-                this.pivotChart.PivotEngine.PivotColumns.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total", ShowSubTotal = false });
+                this.pivotChart.PivotEngine.PivotColumns.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total" });
                 this.pivotChart.PivotEngine.PivotCalculations.Add(new PivotComputationInfo { CalculationName = "Amount", Description = "Amount", FieldHeader = "Amount", FieldName = "Amount", Format = "C", SummaryType = Syncfusion.PivotAnalysis.Base.SummaryType.DoubleTotalSum });
             }
         }
+        .....
+        ..... // Datasource initialization
+        .....
     }
 {% endhighlight %}
 
@@ -293,13 +297,6 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
 {% endhighlight %}
 
 N> In this example, **“PivotChartDemo”** indicates the name and root namespace of the Web Application created in Visual Studio IDE and **“RelationalChartService”** indicates the name of the WCF service created.
-
-After creating and adding WCF Service to the project, the property **url** of PivotChart is let to point the created WCF Service.
-
-{% highlight cshtml %}
-
-    @Html.EJ().Pivot().PivotChart("PivotChart1").Url("/RelationalChartService.svc").Size(size=>size.Width("800px").Height("350px"))
-{% endhighlight %}
 
 **Configuring routing file**
 

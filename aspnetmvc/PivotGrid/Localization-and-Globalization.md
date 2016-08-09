@@ -14,7 +14,7 @@ You can localize the PivotGrid controls text with a collection of localized stri
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/wcf/PivotGridService.svc")).Locale("fr-FR").EnableVirtualScrolling(false).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/PivotGridService.svc")).Locale("fr-FR").EnableVirtualScrolling(false).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner1").Layout(PivotSchemaDesignerLayout.Excel)
 
@@ -1126,7 +1126,7 @@ You can render our PivotGrid control from Right to Left by setting `EnableRTL` p
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).EnableRTL(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableRTL(true)
 
 {% endhighlight %}
 

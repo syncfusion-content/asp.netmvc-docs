@@ -102,6 +102,7 @@ N> If you have installed any version of SQL Server Analysis Service (SSAS) or Mi
 * Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.Olap
+* Syncfusion.EJ.MVC
 
 **List of Namespaces**
 
