@@ -11,36 +11,49 @@ documentation: ug
 
 ##Legend Visibility
 
-You can enable or disable legend using the `Visible` property inside the `legend` object. By default, legend is enabled in PivotChart.
+You can enable or disable legend using the `Visible` property inside the `legend` object.
+
+N> By default, the legend is visible in PivotChart.
 
 {% highlight CSHTML %}
 
 //Legend Visibility set as true
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
 
 {% endhighlight %}
 
 ![](Legend_images/Legend_img1.png) 
 
 ##Legend Shape
-You can customize the legend `Shape` in PivotChart widget to rectangle, circle, cross, diamond, pentagon, hexagon, star, ellipse, triangle etc. Default value of legend shape is “Rectangle”.
+You can customize the legend `Shape` in PivotChart control. Default value of legend shape is “Rectangle”. Following legend shapes that are supported:
+* Rectangle
+* Circle
+* Cross
+* Diamond
+* Pentagon
+* Hexagon
+* Star
+* Ellipse
+* Triangle etc.
 
 {% highlight CSHTML %}
 
 //Applying legend shape
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Shape(ChartShape.Star))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Shape(ChartShape.Star))
 
 {% endhighlight %}
 
 ![](Legend_images/Legend_img2.png) 
 
 ##Legend Position
-By using the `Position` property, you can place the legend at top, bottom, left or right of the PivotChart. Default value of legend position is “bottom”.
+By using the `Position` property, you can place the legend at top, bottom, left or right of the PivotChart. 
+
+N> Default value of legend position is "bottom" in PivotChart.
 
 {% highlight CSHTML %}
 
 //Place the legend at top of the Chart
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Shape(ChartShape.Star).Position(LegendPosition.Top))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Shape(ChartShape.Star).Position(LegendPosition.Top))
 
 {% endhighlight %}
 
@@ -52,7 +65,7 @@ To add the legend title, you have to specify the title text in `title.Text` prop
 {% highlight CSHTML %}
 
 //Add title to the Chart legend
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Title(title => title.Text("Countries")))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Title(title => title.Text("Countries")))
 
 {% endhighlight %}
 
@@ -64,7 +77,7 @@ You can align the legend to center, far and near based on its position in the Ch
 {% highlight CSHTML %}
 
 //Aligning the legend near to the Chart
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Alignment(TextAlignment.Near))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Alignment(TextAlignment.Near))
 
 {% endhighlight %}
 
@@ -76,7 +89,7 @@ By using the legend `ItemStyle.width`, `ItemStyle.height` and `ItemStyle.border`
 {% highlight CSHTML %}
 
 //Changing legend items border, height and width
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).ItemStyle(ItemSize => ItemSize.Border(border => border.Color("magenta").Width(1.5)).Height(12).Width(12)))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).ItemStyle(ItemSize => ItemSize.Border(border => border.Color("magenta").Width(1.5)).Height(12).Width(12)))
 
 {% endhighlight %}
 
@@ -88,7 +101,7 @@ By using the `Border` option in legend, you can customize border color and width
 {% highlight CSHTML %}
 
 //Setting border color and width to legend
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Border(border => border.Color("#FFC342").Width(2)))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Border(border => border.Color("#FFC342").Width(2)))
 
 {% endhighlight %}
 
@@ -100,7 +113,7 @@ By using the `Font` option, you can customize the font family, font style, font 
 {% highlight CSHTML %}
 
 ///Customizing the legend text 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("~/wcf/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Font(font => font.FontFamily("Segoe UI").FontWeight(ChartFontWeight.Bold).FontStyle(ChartFontStyle.Italic).Size("13px")))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Font(font => font.FontFamily("Segoe UI").FontWeight(ChartFontWeight.Bold).FontStyle(ChartFontStyle.Italic).Size("13px")))
 
 {% endhighlight %}
 

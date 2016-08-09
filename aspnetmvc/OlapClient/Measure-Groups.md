@@ -13,7 +13,7 @@ In Cube Dimension Browser, treeview can be viewed in a filtered manner through t
 
 {% highlight C# %}
 
-@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").EnableMeasureGroups(true)
+@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").EnableMeasureGroups(true)
 
 {% endhighlight %}
 

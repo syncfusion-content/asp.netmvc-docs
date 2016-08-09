@@ -17,7 +17,7 @@ A layout in which summary cells are positioned at the bottom of each parent memb
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("~/OLAPService")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("/OLAPService")) 
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ A layout in which summary cells are completely hidden and the child members appe
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url(Url.Content("~/OLAPService"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.NoSummaries).Url(Url.Content("/OLAPService"))
 
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ A layout in which summary cells are positioned besides each parent member and th
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("~/OLAPService"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("/OLAPService"))
 
 {% endhighlight %} 
 

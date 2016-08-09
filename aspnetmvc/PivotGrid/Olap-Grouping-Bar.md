@@ -27,7 +27,7 @@ Grouping Bar allows user to dynamically alter the report by filter and remove op
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).EnableGroupingBar(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableGroupingBar(true)
 
 {% endhighlight %}
 

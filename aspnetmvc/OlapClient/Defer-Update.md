@@ -12,7 +12,7 @@ documentation: ug
 Defer Update support allows the user to refresh the control on-demand and not during every user interaction. To enable this functionality, set the `EnableDeferUpdate` property to true. By default, the value is set to false.
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").EnableDeferUpdate(true)
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").EnableDeferUpdate(true)
 
 {% endhighlight %}
 

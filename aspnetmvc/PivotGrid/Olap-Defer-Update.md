@@ -15,7 +15,7 @@ Defer Update support allows you to refresh the control only on-demand and not du
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).ClientSideEvents(events => events.AfterServiceInvoke("OnAfterServiceInvoke"))
 
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner").Layout(PivotSchemaDesignerLayout.Excel)
 

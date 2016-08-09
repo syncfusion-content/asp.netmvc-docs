@@ -17,7 +17,7 @@ N> Write-back is only supported for measures that use the **SUM** aggregation.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")).EnableCellEditing(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableCellEditing(true)
 
 {% endhighlight %}
 

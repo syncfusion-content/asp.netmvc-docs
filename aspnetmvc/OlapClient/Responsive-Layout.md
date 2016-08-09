@@ -14,7 +14,7 @@ OlapClient widget supports responsive rendering based on the target device (desk
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").IsResponsive(true)
+@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").IsResponsive(true)
 
 {% endhighlight %}
 
