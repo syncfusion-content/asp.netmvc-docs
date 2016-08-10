@@ -62,7 +62,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             ……
             ……
@@ -104,9 +104,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotChart widget in an MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotChart control in an MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -125,7 +125,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
     </head>
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight cshtml %}
 
@@ -146,6 +146,13 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
     @using Syncfusion.JavaScript;
 
     @Html.EJ().Pivot().PivotChart("PivotChart1")
+    
+    <style>
+        #PivotChart1 {
+            width:950px;
+            height:460px;
+        }
+    </style>
 {% endhighlight %}
 
 ### Populate PivotChart With Data
@@ -167,13 +174,20 @@ Let us now see how to populate the PivotChart control using a sample JSON data a
             ]
         }
     </script>
+    
+    <style>
+        #PivotChart1 {
+            width:950px;
+            height:460px;
+        }
+    </style>
 {% endhighlight %}
 
 The JSON data is set to the **"data"** property present inside the **"dataSource"** object. **"dataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotChart control.
   
 {% highlight cshtml %}
   
-    @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();})).Size(size=>size.Height("350px").Width("800px"))
+    @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();})).Size(size=>size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -183,14 +197,16 @@ The above code will generate a simple PivotChart with sales amount over products
 
 ### Apply Sorting
 
-You can sort a field either to ascending or descending order using the "sortOrder" property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
+You can sort a field either to ascending or descending order using the "sortOrder" property. Sorting is applicable only for Row and Column fields.
+
+N> By default, fields are arranged in ascending order.
  
 {% highlight cshtml %}
 
     @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource
     .Rows(rows => { rows.FieldName("Country").FieldCaption("Country").SortOrder(SortOrder.Descending).Add();})
     .Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); })
-    .Values(values => { values.FieldName("Amount").Add();})).Size(size=>size.Height("350px").Width("800px"))
+    .Values(values => { values.FieldName("Amount").Add();})).Size(size=>size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -207,7 +223,7 @@ Filtering option allows you to specify a set of values that either need to be di
 
 {% highlight cshtml %}
 
-    @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").FilterItems(filter => { filter.FilterType(PivotAnalysisFilterType.Exclude).Values(value => { value.Add("United Kingdom"); }); }).Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); }))
+    @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").FilterItems(filter => { filter.FilterType(PivotAnalysisFilterType.Exclude).Values(value => { value.Add("United Kingdom"); }); }).Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); })).Size(size=>size.Height("460px").Width("950px"))
   
 {% endhighlight %}
 
@@ -275,7 +291,7 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 {% highlight xml %}
 
-    <compilation debug="true" targetFramework={Framework version}>
+    <compilation debug="true" targetFramework="4.0">
         <assemblies> 
             …… 
             ……
@@ -319,9 +335,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotChart widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotChart control in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -340,7 +356,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
     </head>
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight cshtml %}
 
@@ -360,11 +376,18 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
     
     @using Syncfusion.JavaScript;
 
-    @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChart"))
+    @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChart")).Size(size=>size.Width("950px").Height("460px"))
 
+    <style>
+        #PivotChart1 {
+            width:950px;
+            height:460px;
+        }
+    </style>
+    
 {% endhighlight %}
 
-The **“Url”** property in PivotChart widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart widget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotChart control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart control as endpoint are WCF and WebAPI.
 
 N> The above "Index.cshtml" contains WebAPI URL, which is "/RelationalChart". If WCF service is used as endpoint, the URL would look like "/RelationalChartService.svc".
 
@@ -573,12 +596,15 @@ Define the service methods inside RelationalChartController class, found inside 
 
             private void BindData()
             {
-                this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total", ShowSubTotal = false });
+                this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total" });
                 this.pivotChart.PivotEngine.PivotRows.Add(new PivotItem { FieldMappingName = "State", FieldHeader = "State", TotalHeader = "Total" });
-                this.pivotChart.PivotEngine.PivotColumns.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total", ShowSubTotal = false });
+                this.pivotChart.PivotEngine.PivotColumns.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total" });
                 this.pivotChart.PivotEngine.PivotCalculations.Add(new PivotComputationInfo { CalculationName = "Amount", Description = "Amount", FieldHeader = "Amount", FieldName = "Amount", Format = "C", SummaryType = Syncfusion.PivotAnalysis.Base.SummaryType.DoubleTotalSum });
             }
         }
+        .....
+        ..... // Datasource initialization
+        .....
     }
 
 {% endhighlight %}

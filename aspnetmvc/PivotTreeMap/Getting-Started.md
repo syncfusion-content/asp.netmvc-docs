@@ -22,7 +22,7 @@ Select the View engine as **‘Razor’** and Project template as **‘Internet 
 
 The scripts and style sheets that are mandatorily required to render PivotTreeMap control in a MVC Web Application which are highlighted below in an appropriate order.
 
-1.	ej.widgets.all.min.css
+1.	ej.web.all.min.css
 2.	jQuery-1.10.2.min.js
 3.	jQuery.easing.1.3.min.js
 4.	ej.web.all.min.js
@@ -154,7 +154,7 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 {% highlight xml %}
 
-<compilation debug="true" targetFramework="4.5">
+<compilation debug="true" targetFramework="4.0">
     <assemblies> 
         …… 
         ……
@@ -209,7 +209,7 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 ### Scripts and CSS Initialization
 The scripts and style sheets that are mandatorily required to render a PivotTreeMap control in a Web Application are mentioned in an appropriate order.
 
-1.	ej.widgets.all.min.css
+1.	ej.web.all.min.css
 2.	jQuery-1.10.2.min.js
 3.	jQuery.easing.1.3.min.js
 4.	ej.web.all.min.js
@@ -356,7 +356,7 @@ namespace PivotTreeMapDemo
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;"; 
         [System.Web.Http.ActionName("InitializeTreeMap")]
         [System.Web.Http.HttpPost]
-        public Dictionary<string, object> InitializeTreeMap(Dictionary<string, object> jsonResult)
+        public Dictionary< string, object > InitializeTreeMap(Dictionary<string, object> jsonResult)
         {
             OlapDataManager DataManager = null;
             DataManager = new OlapDataManager(connectionString);

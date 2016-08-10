@@ -15,9 +15,9 @@ This section covers the information that you need to know to populate a simple P
 
 ### Scripts and CSS References  
 
-The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
-1. ej.widgets.all.min.css
+1. ej.web.all.min.css
 2. jQuery-1.10.2.min.js
 3. jQuery.easing.1.3.min.js
 4. jQuery.linq.js
@@ -54,7 +54,7 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
 
 ### Populate PivotGrid With DataSource
 
-Initializes the OLAP datasource for PivotGrid widget as shown below.
+Initializes the OLAP datasource for PivotGrid control as shown below.
 
 {% highlight html %}
 
@@ -132,7 +132,7 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 {% highlight xml %}
 
-<compilation debug="true" targetFramework="4.5">
+<compilation debug="true" targetFramework="4.0">
     <assemblies> 
         …… 
         ……
@@ -186,9 +186,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -208,7 +208,7 @@ Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml
 
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight html %}
 
@@ -231,14 +231,14 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 @using Syncfusion.JavaScript.Olap;
 
 <div> 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/OLAPService")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")) 
 </div>
 
 {% endhighlight %}
 
-The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotGrid control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid control as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI URL, which is "~/OLAPService". If WCF service is used as endpoint, the URL would look like "~/OLAPService.svc".
+N> The above "Index.cshtml" contains WebAPI URL, which is "/OLAPService". If WCF service is used as endpoint, the URL would look like "/OLAPService.svc".
 
 
 ### WebAPI
@@ -403,6 +403,15 @@ namespace PivotGridDemo {
             htmlHelper.ExportPivotGrid(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
         }
 
+        [System.Web.Http.ActionName("DeferUpdate")]
+        [System.Web.Http.HttpPost]
+        public Dictionary<string, object> DeferUpdate(Dictionary<string, object> jsonResult)
+        {
+            OlapDataManager DataManager = new OlapDataManager(connectionString);
+            DataManager.SetCurrentReport(Syncfusion.JavaScript.Olap.Utils.DeserializeOlapReport(jsonResult["currentReport"].ToString()));
+            return htmlHelper.GetJsonData(jsonResult["action"].ToString(), DataManager, null, jsonResult["filterParams"].ToString());
+        }
+        
         private OlapReport CreateOlapReport() {
             OlapReport olapReport = new OlapReport();
             olapReport.CurrentCubeName = "Adventure Works";

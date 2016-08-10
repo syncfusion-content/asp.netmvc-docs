@@ -34,7 +34,7 @@ Grouping Bar allows user to dynamically alter the report by filter, sort and  re
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService")).EnableGroupingBar(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/RelationalService")).EnableGroupingBar(true)
 
 {% endhighlight %}
 

@@ -15,12 +15,11 @@ This section covers the information that you need to know to populate a simple P
 
 ### Scripts and CSS References  
 
-The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
-1. ej.widgets.all.min.css
+1. ej.web.all.min.css
 2. jQuery-1.10.2.min.js
 3. jQuery.easing.1.3.min.js
-4. jQuery.linq.js
 5. ej.web.all.min.js
 
 Scripts and style sheets are referred under the head tag in _Layout.cshtml file which is found inside Views > Shared folder.
@@ -31,7 +30,6 @@ Scripts and style sheets are referred under the head tag in _Layout.cshtml file 
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/linq.js/2.2.0.2/jquery.linq.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
     
 </head>    
@@ -63,12 +61,31 @@ Let us now see how to populate the PivotGrid control using a sample JSON data as
  <script type="text/javascript">
 function onLoad(args) {
     args.model.dataSource.data = [
-        { Amount: 100, Country: "Canada", Product: "Bike" },
-        { Amount: 200, Country: "Germany", Product: "Van" },
-        { Amount: 300, Country: "Germany", Product: "Car" },
-        { Amount: 150, Country: "United Kingdom", Product: "Bike" },
-        { Amount: 200, Country: "Canada", Product: "Car" }
-    ]}
+    { Amount: 100, Country: "Canada", Date: "FY 2005", Product: "Bike", Quantity: 2, State: "Alberta" },
+    { Amount: 200, Country: "Canada", Date: "FY 2006", Product: "Van", Quantity: 3, State: "British Columbia" },
+    { Amount: 300, Country: "Canada", Date: "FY 2007", Product: "Car", Quantity: 4, State: "Brunswick" },
+    { Amount: 150, Country: "Canada", Date: "FY 2008", Product: "Bike", Quantity: 3, State: "Manitoba" },
+    { Amount: 200, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 4, State: "Ontario" },
+    { Amount: 100, Country: "Canada", Date: "FY 2007", Product: "Van", Quantity: 1, State: "Quebec" },
+    { Amount: 200, Country: "France", Date: "FY 2005", Product: "Bike", Quantity: 2, State: "Charente-Maritime" },
+    { Amount: 250, Country: "France", Date: "FY 2006", Product: "Van", Quantity: 4, State: "Essonne" },
+    { Amount: 300, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 3, State: "Garonne (Haute)" },
+    { Amount: 150, Country: "France", Date: "FY 2008", Product: "Van", Quantity: 2, State: "Gers" },
+    { Amount: 200, Country: "Germany", Date: "FY 2006", Product: "Van", Quantity: 3, State: "Bayern" },
+    { Amount: 250, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 3, State: "Brandenburg" },
+    { Amount: 150, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 4, State: "Hamburg" },
+    { Amount: 200, Country: "Germany", Date: "FY 2008", Product: "Bike", Quantity: 4, State: "Hessen" },
+    { Amount: 150, Country: "Germany", Date: "FY 2007", Product: "Van", Quantity: 3, State: "Nordrhein-Westfalen" },
+    { Amount: 100, Country: "Germany", Date: "FY 2005", Product: "Bike", Quantity: 2, State: "Saarland" },
+    { Amount: 150, Country: "United Kingdom", Date: "FY 2008", Product: "Bike", Quantity: 5, State: "England" },
+    { Amount: 250, Country: "United States", Date: "FY 2007", Product: "Car", Quantity: 4, State: "Alabama" },
+    { Amount: 200, Country: "United States", Date: "FY 2005", Product: "Van", Quantity: 4, State: "California" },
+    { Amount: 100, Country: "United States", Date: "FY 2006", Product: "Bike", Quantity: 2, State: "Colorado" },
+    { Amount: 150, Country: "United States", Date: "FY 2008", Product: "Car", Quantity: 3, State: "New Mexico" },
+    { Amount: 200, Country: "United States", Date: "FY 2005", Product: "Bike", Quantity: 4, State: "New York" },
+    { Amount: 250, Country: "United States", Date: "FY 2008", Product: "Car", Quantity: 3, State: "North Carolina" },
+    { Amount: 300, Country: "United States", Date: "FY 2007", Product: "Van", Quantity: 4, State: "South Carolina" }
+        ]}
 </script>
 
 {% endhighlight %}
@@ -247,9 +264,9 @@ Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings**
 
 ### Scripts and CSS Initialization
 
-The scripts and style sheets that are mandatorily required to render PivotGrid widget in a MVC Web Application are mentioned in an appropriate order below:
+The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
-1.  ej.widgets.all.min.css
+1.  ej.web.all.min.css
 2.	jquery-1.10.2.min.js
 3.	jquery.easing.1.3.min.js
 4.	ej.web.all.min.js 
@@ -269,7 +286,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
 
 {% endhighlight %}
 
-The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate widget related scripts.
+The script manager is initialized immediately after the `RenderBody()` function call in **_Layout.cshtml** file in-order to generate control related scripts.
 
 {% highlight html %}
 
@@ -292,14 +309,14 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 @using Syncfusion.JavaScript.Olap;
 
 <div> 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("~/RelationalService")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/RelationalService")) 
 </div>
 
 {% endhighlight %}
 
-The **“Url”** property in PivotGrid widget points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid widget as endpoint are WCF and WebAPI.
+The **“Url”** property in PivotGrid control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotGrid control as endpoint are WCF and WebAPI.
 
-N> The above "Index.cshtml" contains WebAPI URL, which is "~/RelationalService". If WCF service is used as endpoint, the URL would look like "~/RelationalService.svc".
+N> The above "Index.cshtml" contains WebAPI URL, which is "/RelationalService". If WCF service is used as endpoint, the URL would look like "/RelationalService.svc".
 
 
 ### WebAPI
@@ -332,9 +349,16 @@ The following are the list of namespaces to be added on top of the main class in
 
 {% highlight c# %}
 
-using System.Web.Script.Serialization;
 using Syncfusion.JavaScript;
-using Syncfusion.PivotAnalysis.Base; 
+using Syncfusion.PivotAnalysis.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web;
+using System.Web.Http;
+using System.Web.Script.Serialization;
 
 namespace PivotGridDemo
 {
@@ -582,20 +606,26 @@ namespace PivotGridDemo {
             return dict;
         }
 
+        [System.Web.Http.ActionName("DeferUpdate")]
+        [System.Web.Http.HttpPost]
+        public Dictionary<string, object> DeferUpdate(Dictionary<string, object> jsonResult)
+        {
+            htmlHelper.PopulateData(jsonResult["currentReport"].ToString());
+            dict = htmlHelper.GetJsonData(jsonResult["action"].ToString(), ProductSales.GetSalesData(), null, null, null, jsonResult["sortedHeaders"].ToString(), jsonResult["filterParams"].ToString());
+            return dict;
+        }
+        
         private PivotReport BindDefaultData() {
             PivotReport pivotSetting = new PivotReport();
-            pivotSetting.PivotRows.Add(new PivotItem {
-                FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total", ShowSubTotal = false
-            });
-            pivotSetting.PivotColumns.Add(new PivotItem {
-                FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total", ShowSubTotal = false
-            });
-            pivotSetting.PivotCalculations.Add(new PivotComputationInfo {
-                CalculationName = "Amount", Description = "Amount", FieldHeader = "Amount", FieldName = "Amount", Format = "C", SummaryType = Syncfusion.PivotAnalysis.Base.SummaryType.DoubleTotalSum
-            });
+            pivotSetting.PivotRows.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total" });
+            pivotSetting.PivotColumns.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total" });
+            pivotSetting.PivotCalculations.Add(new PivotComputationInfo { CalculationName = "Amount", Description = "Amount", FieldHeader = "Amount", FieldName = "Amount", Format = "C", SummaryType = Syncfusion.PivotAnalysis.Base.SummaryType.DoubleTotalSum });
             return pivotSetting;
         }
     }
+        .....
+        ..... // Initialize the datasource
+        .....
 }
 
 {% endhighlight %}
@@ -628,6 +658,6 @@ Now, **PivotGrid** will be rendered with Sales Amount over a set of products acr
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotGrid. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotGrid/olap-connectivity#wcf-1).
+This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotGrid. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotGrid/relational-connectivity#wcf-1).
 
 

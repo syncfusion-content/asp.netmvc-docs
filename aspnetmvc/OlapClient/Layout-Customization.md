@@ -17,7 +17,7 @@ In Tab View representation, both Grid and Chart will be displayed in a separate 
 
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement( OlapClientControlPlacement.Tab))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement( OlapClientControlPlacement.Tab))
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ In Tile View representation, both Grid and Chart will be displayed one over the 
 
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement(OlapClientControlPlacement.Tile))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement(OlapClientControlPlacement.Tile))
 
 {% endhighlight %}
 
@@ -43,7 +43,7 @@ To display Grid control by default, set `DefaultView` property under `DisplaySet
 
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Grid))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Grid))
 
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ To display Chart control by default, set the property `DefaultView` property to 
 
 {% highlight C# %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Chart))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Chart))
 
 {% endhighlight %}
 
@@ -69,7 +69,7 @@ After setting the `Mode` property under `DisplaySettings` option to **GridOnly**
 
 {% highlight C# %}
 
-   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.GridOnly))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.GridOnly))
 
 {% endhighlight %}
 
@@ -81,7 +81,7 @@ After setting the `Mode` property under `DisplaySettings` option to **ChartOnly*
 
 {% highlight C# %}
 
-   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartOnly))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartOnly))
 
 {% endhighlight %}
 
@@ -93,7 +93,7 @@ After setting the `Mode` property under `DisplaySettings` option to **ChartAndGr
 
 {% highlight C# %}
 
-   @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartAndGrid))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartAndGrid))
 
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ Toggle panel option lets the user to toggle the visibility of Axis Element Build
 
 {% highlight C# %}
 
-  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableTogglePanel(true))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableTogglePanel(true))
 
 {% endhighlight %}
 
@@ -117,7 +117,7 @@ Full screen view helps to visualize the PivotGrid and OlapChart controls inside 
 
 {% highlight C# %}
 
-  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableFullScreen(true))
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableFullScreen(true))
 
 {% endhighlight %}
 
@@ -140,7 +140,7 @@ The layout is set using the `GridLayout` property. By default, normal layout is 
 
 {% highlight C# %}
 
-  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").GridLayout(PivotGridLayout.NoSummaries)
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").GridLayout(PivotGridLayout.NoSummaries)
 
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ While loading the OlapClient initially, the OlapChart widget can be rendered in 
 
 {% highlight C# %}
 
-  @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("~/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Column)
+    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Column)
 
 {% endhighlight %}
 

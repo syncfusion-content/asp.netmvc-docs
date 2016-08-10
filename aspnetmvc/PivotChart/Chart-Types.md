@@ -36,8 +36,8 @@ Essential **PivotChart MVC** supports 14 different types of chart as follows:
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -55,8 +55,8 @@ The following screenshot displays a **Column Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -73,8 +73,8 @@ The **Bar Chart** displays horizontal bars for each point in the series and poin
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -93,8 +93,8 @@ The following screenshot displays a **Bar Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -113,8 +113,8 @@ A **Pie chart** is used to summarize a set of categorical data or displaying dif
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -133,8 +133,8 @@ The **Pyramid Chart** type displays the data in the form of a triangle. It helps
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -152,8 +152,8 @@ The **Funnel Chart**  type displays the data in the form of an inverted triangle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -172,8 +172,8 @@ The **Line Chart** joins the data points on a plot using straight lines that sho
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -191,8 +191,8 @@ The following screenshot displays the **Line Chart**.
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -211,8 +211,8 @@ The **Spline Chart** is similar to line charts except it connects different data
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -229,8 +229,8 @@ The following screenshot displays the **Spline Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
@@ -247,8 +247,8 @@ The following screenshot displays the **Area Chart**.
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => { 
-comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px"))
 
 
 {% endhighlight %}
@@ -267,8 +267,8 @@ The following screenshot displays a **Step Area Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => {
-comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true))
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
+comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight  %}
 
@@ -285,8 +285,8 @@ The following Screenshot displays a **Spline Area Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => {
- comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true)) 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
+ comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")) 
 
 {% endhighlight %}
 
@@ -306,8 +306,8 @@ A **combination Chart** combines two or more series types in a single Chart. But
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url("../wcf/RelationalChartService.svc").CommonSeriesOptions(comm => {
-comm.Type(SeriesType.Column); }).Legend(legend => legend.Visible(true).RowCount(2)).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
+comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
 oEve => { oEve.SeriesRendering("onSeriesRenders"); }) 
     
 <script>
