@@ -1,7 +1,7 @@
 ---
 title: User Interface| FileExplorer | ASP.NET MVC | Syncfusion
 description: FileExplorer UI sections
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, User interface

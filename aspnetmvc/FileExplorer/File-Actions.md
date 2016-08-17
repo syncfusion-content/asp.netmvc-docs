@@ -1,7 +1,7 @@
 ---
 title: File Actions | FileExplorer | ASP.NET MVC | Syncfusion
 description: Explains different file and folder related operations in FileExplorer control.
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, File actions

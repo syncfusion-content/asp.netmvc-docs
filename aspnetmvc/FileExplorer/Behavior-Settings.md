@@ -1,7 +1,7 @@
 ---
 title: Behavior Settings| FileExplorer | ASP.NET MVC | Syncfusion
 description: Customize the behavior of FileExplorer
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer, Syncfusion, EJ MVC FileExplorer, UG document, Behavior settings

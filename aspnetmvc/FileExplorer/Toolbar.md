@@ -1,7 +1,7 @@
 ---
 title: Toolbar | FileExplorer | ASP.NET MVC | Syncfusion
 description: Toolbar support in FileExplorer control
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Toolbar
