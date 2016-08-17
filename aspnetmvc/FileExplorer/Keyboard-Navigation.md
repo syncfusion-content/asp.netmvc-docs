@@ -1,7 +1,7 @@
 ---
 title: Keyboard Navigation | FileExplorer | ASP.NET MVC | Syncfusion
 description: Keyboard navigation support in FileExplorer
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Keyboard navigation

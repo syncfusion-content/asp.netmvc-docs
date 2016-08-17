@@ -1,7 +1,7 @@
 ---
 title: How To | FileExplorer | ASP.NET MVC | Syncfusion
 description: “How to do” section for FileExplorer
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, How To

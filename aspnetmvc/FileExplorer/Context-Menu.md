@@ -1,7 +1,7 @@
 ---
 title: Context Menu | FileExplorer | ASP.NET MVC | Syncfusion
 description: Context Menu support in FileExplorer 
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Context Menu
