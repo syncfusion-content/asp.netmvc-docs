@@ -1,7 +1,7 @@
 ---
 title: Getting Started | FileExplorer | ASP.NET MVC | Syncfusion
 description: To get start with FileExplorer by adding references
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Getting Started

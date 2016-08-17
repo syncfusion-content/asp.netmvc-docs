@@ -1,7 +1,7 @@
 ---
 title: Customization | FileExplorer | ASP.NET MVC | Syncfusion
 description: Customization support in FileExplorer
-platform: ASP.NET MVC
+platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Customization
