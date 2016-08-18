@@ -9,7 +9,7 @@ documentation: ug
 
 # KO ResultSet
 
-The DataManager contains a default method to subscribe the view model properties as KO observable. This is done at the success of the executeQuery by using the getKnockoutModel. You can also provide computed properties to the viewmodel by using the getKnockoutModel.
+The DataManager contains a default method to subscribe the view model properties as KO observable. This is done at the success of the executeQuery by using the getKnockoutModel. You can also provide computed properties to the view model by using the getKnockoutModel.
 
 The following code example illustrates how the model is made observable and updated.
 
@@ -63,5 +63,5 @@ Before changing the model, EmployeeID 1 has FullName value as Nancy Davolio. Aft
 
 ![](KO-ResultSet_images/KO-ResultSet_img1.png)
 
-Knockout Resultset
+Knockout ResultSet
 {:.caption}

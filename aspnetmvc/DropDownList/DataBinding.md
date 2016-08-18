@@ -523,7 +523,7 @@ To create LINQ to SQL classes
 
 ![](DataBinding_images/LinqtoSql.jpg)
 
-In code behind, fetch the data from classes and stored it to the Viewbag as follows
+In code behind, fetch the data from classes and stored it to the ViewBag as follows
 
 {% highlight C# %}
     
