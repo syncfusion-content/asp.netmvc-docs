@@ -168,7 +168,7 @@ The following steps helps to create a ASP.NET Core web application to configure 
 
    ![](getting-started_images/getting-started_img115.jpeg)
    
-*  Open **Bower.json** file to include the following necessary packages.   
+*  Open **bower.json** file to include the following necessary packages.   
 
    ![](getting-started_images/getting-started_img17.png)
 
@@ -289,7 +289,7 @@ dotnet new -t web
 ![](getting-started_images/getting-started_img122.JPG)
 
 
-* Open quick window (Ctrl + p) to run the “bower install” command to installed our Scripts and CSS to your application **wwwroot - > lib** folder.
+* Open quick window (Ctrl + p) to run the `bower install` command to install our scripts and CSS to your application **wwwroot - > lib** folder.
 
 ![](getting-started_images/getting-started_img123.JPG)
 
@@ -455,7 +455,7 @@ yo aspnet
 ![](getting-started_images/getting-started_img122.JPG)
 
 
-* Open quick window (Ctrl + p) to run the “**bower install**” command to installed our Scripts and CSS to your application **wwwroot -> lib** folder.
+* Open quick window (Ctrl + p) to run the `bower install` command to install our scripts and CSS to your application **wwwroot -> lib** folder.
 
 ![](getting-started_images/getting-started_img123.JPG)
 
