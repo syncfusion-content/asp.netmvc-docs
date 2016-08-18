@@ -352,7 +352,7 @@ In code behind, fetch the data from Employee class and assigned to the DropDownL
 
 XmlDataSource is used to work with XML documents. The following steps explain the details about the data binding from XmlDataSource
 
-Step 1: Create an xml Data source as follows
+Step 1: Create an XML Data source as follows
 
 {% highlight xml %}
 
@@ -510,13 +510,13 @@ The server-side code to retrieve and bind the data to DropDownList are as follow
     
 {% endhighlight %}
 
-## Linq to SQL Data Binding
+## LINQ to SQL Data Binding
 
 The LINQ to SQL can be used as the data source of the DropDownList in which the data model of a relational database is mapped to an object model and allow us to use the LINQ technology to access SQL database.
 
 To create LINQ to SQL classes
 •	Right-click the App_Code folder and then click Add New Item.
-•	Under Installed templates, select Linq to SQL Classes template, type a name for the .dbml file, and then click Add.
+•	Under Installed templates, select LINQ to SQL Classes template, type a name for the .dbml file, and then click Add.
 •	The Object Relational Designer window is displayed.
 •	In Server Explorer, drag the database table into the Object Relational Designer window.
 •	The table and its columns are represented as an entity in the designer window.

@@ -279,7 +279,7 @@ dotnet new -t web
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
+* Now open your **bower.json** JSON file and add the necessary packages to load our script and CSS. Instead of that need to install the Bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
@@ -445,7 +445,7 @@ yo aspnet
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
+* Now open your **bower.json** JSON file and add the necessary packages to load our script and CSS. Instead of that need to install the Bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
