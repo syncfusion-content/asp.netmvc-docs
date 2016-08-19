@@ -144,11 +144,12 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-Response data should be in JSON format with key name as ‘{{'**files’** '| markdownify }} and JSON fields should be with following field names
+Response data should be in JSON format with key name as "{{'**files** '| markdownify }}" and JSON fields should be with following field names
 <br/>
  {{'*“name,  isFile, hasChild”.*'| markdownify }}
 <br/>
 {{'*For example:*'| markdownify }}
+<br/>
 {
 "{{'**files**'| markdownify }}":[{"{{'**name":"bird.jpg**'| markdownify }}","type":"File","size":102182,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null},
 {"{{'**name":"sea.jpg**'| markdownify }}","type":"File","size":97145,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null }],
@@ -190,7 +191,7 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-Response data should be in JSON format with key name as ‘{{'**files’**'| markdownify }}.
+Response data should be in JSON format with key name as "{{'**files**'| markdownify }}".
 In that returning JSON, “{{'**name**'| markdownify }}” field is necessary.
 <br/>
 <br/>
@@ -512,7 +513,7 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-It should return data in JSON format with key name as ‘{{'**files’** '| markdownify }} and JSON fields need to be with following field names
+It should return data in JSON format with key name as "{{'**files** '| markdownify }}" and JSON fields need to be with following field names
 <br/>
  {{'*“name,  isFile, hasChild”.*'| markdownify }}
 {
