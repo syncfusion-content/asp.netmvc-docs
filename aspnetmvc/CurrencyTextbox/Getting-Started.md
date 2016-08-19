@@ -13,7 +13,7 @@ This section explains briefly about how to create a EJMVC CurrencyTextBox in ASP
 
 ## Create your first CurrencyTextBox in MVC
 
-From the following steps you can learn how to create and use CurrencyTextBox in your application. Here we have showcased, a small Electric bill calculator application using EJMVC Editors widgets.The Essential ASP.NET MVC Editors control includes numeric, percentage, currency and maskedit textbox controls. This will guide you to use the wide range of Editors functionalities to complete this application. 
+From the following steps you can learn how to create and use CurrencyTextBox in your application. Here we have showcased, a small Electric bill calculator application using EJMVC Editors widgets.The Essential ASP.NET MVC Editors control includes Numeric, Percentage, Currency and MaskEdit textbox controls. This will guide you to use the wide range of Editors functionalities to complete this application. 
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -219,7 +219,7 @@ CurrencyTextBox with watermark text
 
 ### Set MinValue, MaxValue and value in CurrencyTextBox
 
-You can set the “MinValue”,“MaxValue” and “Value” in Currency, percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the Maskedit widget by using the ”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
+You can set the “MinValue”,“MaxValue” and “Value” in Currency, Percentage and Currency text boxes for maintaining the range in Editors widgets. In this scenario, you have to enter the values between the default ranges and enter the phone number in the MaskEdit widget by using the ”MaskFormat” property. By using DecimalPlaces property for CurrencyTextBox you can get decimal values. The following code example illustrates how to achieve this.
 
 {% highlight html%}
 
@@ -404,7 +404,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 {% endhighlight %}
 
-Run the above code example and you can see that it restricts entering a value exceeding the MinValue and MaxValue range mentioned in the numeric textbox.
+Run the above code example and you can see that it restricts entering a value exceeding the MinValue and MaxValue range mentioned in the Numeric textbox.
 
 ### Set Calculation process with CurrencyTextBox Widgets
 
