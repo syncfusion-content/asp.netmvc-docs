@@ -10,23 +10,20 @@ keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, How To
 
 ## File handling operations
 
-When you have made AJAX request on client-side, “FileActionDefault” method is triggered. Here received AJAX data will be stored in “[FileExplorerParams](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#)” parameter. This “FileActionDefault” method finds out the specific operations using the “ActionType” property and calls the corresponding built-in methods of “[FileExplorerOperations](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#)” class.
+In controller page, we have specified some built-in classes at "**FileActionDefault**" action method. It helps to perform the server side operation of FileExplorer and you can find the details about these classes at below.
 
-In controller page, we have specified some built-in classes at FileActionDefault action method. It helps to perform the server side operation of FileExplorer and you can find the details about these classes at below.
+When you have made AJAX request on client-side, “FileActionDefault” method is triggered in controller part. Here received AJAX data will be stored in “[FileExplorerParams](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#)” parameter. This “FileActionDefault” method finds out the specific operations using the “ActionType” property and calls the corresponding built-in methods of “[FileExplorerOperations](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#)” class.
 
-**BasicFileOperations class**
-
+**BasicFileOperations class** - 
 “BasicFileOperations” is an abstract class and it is useful for handling file operations in server end. By inheriting this class, easily you can implement a new custom class for handling file operations in server end. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.BasicFileOperations.html#) of “BasicFileOperations”
 
-**FileExplorerOperations class**
-
+**FileExplorerOperations class** -
 This class is useful for handling file operations in server end. This class inherits the “BasicFileOperations” class and its abstract methods has been implemented here for managing files in **underlying machine's physical file system**. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#) of “FileExplorerOperations”
 
-**FileExplorerParams class**
-
+**FileExplorerParams class** -
 “FileExplorerParams” class is used to receive the AJAX data in server side. In server side, we have a common method to handle all the AJAX requests, which is raised from client part of FileExplorer. This method contains “FileExplorerParams” object as a parameter and it is used to store the AJAX request data that will be useful for handling file operations. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#) of “FileExplorerParams”
 
-N> Here “ActionType” specifies following operations such as “Read”, “CreateFolder”, “Paste”, “Remove”, “Rename”, “Getdetails”, “Download”, “Upload”, “Search”. Following [section](#_Abstract_methods_in) contains the details about each operation.
+N> Here “ActionType” specifies following operations such as “Read”, “CreateFolder”, “Paste”, “Remove”, “Rename”, “Getdetails”, “Download”, “Upload”, “Search”. Following [section](#abstract-methods-in-basicfileoperations-class) contains the details about each operation.
 
 ## Customizing AJAX handling functions
 
@@ -36,7 +33,7 @@ In FileExplorer, server side functionalities are necessary to handle the AJAX re
 
 Using “[FileExplorerOperations](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#)” class, you can manage the underlying machine's physical file system with the help of FileExplorer control. Here you can override the necessary methods that is available in “**FileExplorerOperations**” by sub classing the existing “**FileExplorerOperations**” class.
 
-Below code example shows how to override “[GetDetails](#_GetDetails(string,_string[],_IEnume)” method, which is available in **“FileExplorerOperations**”
+Below code example shows how to override “**GetDetails**” method, which is available in **“FileExplorerOperations**”
 
     
     {% highlight c# %}
@@ -85,7 +82,7 @@ When overriding the particular methods were not enough, you can create a new cus
 
 #### Notes to Implementers
 
-When you implement a derived class of “BasicFileOperations”, you must provide implementations for following methods and its details has been given in this [section](#_Abstract_methods_in)
+When you implement a derived class of “BasicFileOperations”, you must provide implementations for following methods and its details has been given in this [section](#abstract-methods-in-basicfileoperations-class)
 
 * Read
 * CreateFolder
@@ -97,6 +94,8 @@ When you implement a derived class of “BasicFileOperations”, you must provi
 * GetDetails
 * GetImage
 * Search
+
+<br/>
 
 ### Abstract methods in BasicFileOperations class
 
@@ -117,7 +116,8 @@ When you implement a derived class of “BasicFileOperations”, you must provi
 {{'**Operation**'| markdownify }}: Read
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path
 <br/>
 {{'**Type  :** '| markdownify }}String
@@ -144,11 +144,13 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-Response data should be in JSON format with key name as ‘{{'**files’** '| markdownify }} and JSON fields should be with following field names
+Response data should be in JSON format with key name as "{{'**files** '| markdownify }}" and JSON fields should be with following field names
 <br/>
  {{'*“name,  isFile, hasChild”.*'| markdownify }}
 <br/>
+<br/>
 {{'*For example:*'| markdownify }}
+<br/>
 {
 "{{'**files**'| markdownify }}":[{"{{'**name":"bird.jpg**'| markdownify }}","type":"File","size":102182,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null},
 {"{{'**name":"sea.jpg**'| markdownify }}","type":"File","size":97145,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null }],
@@ -169,7 +171,8 @@ It used to get all immediate files and sub-folders of the given path and it retu
 {{'**Operation**'| markdownify }}: CreateFolder
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String<br/>
 {{'**Description:**'| markdownify }}
@@ -190,11 +193,12 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-Response data should be in JSON format with key name as ‘{{'**files’**'| markdownify }}.
+Response data should be in JSON format with key name as "{{'**files**'| markdownify }}".
 In that returning JSON, “{{'**name**'| markdownify }}” field is necessary.
 <br/>
 <br/>
 {{'*For example:*'| markdownify }}
+<br/>
 {"files":[{"{{'**name":"New folder**'| markdownify }}","type":"Directory","size":0,"dateModified":"2/25/2016 7:31:02 AM","hasChild":true,"isFile":false,"filterPath":null}],"details":null,"error":null}
 <br/>
 <br/>
@@ -209,7 +213,8 @@ It used to create a new folder in given path with specified name
 {{'**Operation:**'| markdownify }}Remove
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name:**'| markdownify }}names<br/>
 {{'**Type  :** '| markdownify }}String[]<br/>
 {{'**Description:**'| markdownify }}
@@ -243,7 +248,8 @@ It helps to remove the specified items from given path.
 {{'**Operation:**'| markdownify }}Rename
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String<br/>
 {{'**Description:**'| markdownify }}
@@ -288,7 +294,8 @@ This method helps to rename the file/folder, which is available in given path.
 {{'**Operation:**'| markdownify }}Paste
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: sourceDir<br/>
 {{'**Type  :** '| markdownify }}String<br/>
 {{'**Description:**'| markdownify }}
@@ -346,7 +353,8 @@ This method helps to copy or move files from one location to another location.
 {{'**Operation:**'| markdownify }}Upload
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: files<br/>
 {{'**Type  :** '| markdownify }}IEnumerable&lt;System.Web.HttpPostedFileBase&gt;<br/>
 {{'**Description:**'| markdownify }}
@@ -380,7 +388,8 @@ This method helps to upload the specified files to given directory
 {{'**Operation:**'| markdownify }}Download
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String <br/>
 {{'**Description:**'| markdownify }}
@@ -388,7 +397,7 @@ Specifies the parent directory path of selected files, which is going to be down
 <br/> 
 <br/>
 {{'**Name**'| markdownify }}: names<br/>
-{{'**Type  :** '| markdownify }}String {{'**[]**'| markdownify }}<br/>
+{{'**Type  :** '| markdownify }}String []<br/>
 {{'**Description:**'| markdownify }}
 specifies the name of files that is need to be downloaded
 <br/> 
@@ -408,12 +417,16 @@ Return type of this method is “void”
 This method helps to download the specified files.
 </td>
 </tr>
+
+
+
 <tr>
 <td>
 {{'**Operation:**'| markdownify }}GetDetails
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String <br/>
 {{'**Description:**'| markdownify }}
@@ -421,7 +434,7 @@ Specifies the parent directory path of selected file
 <br/> 
 <br/>
 {{'**Name**'| markdownify }}: names<br/>
-{{'**Type  :** '| markdownify }}String {{'**[]**'| markdownify }}<br/>
+{{'**Type  :** '| markdownify }}String []<br/>
 {{'**Description:**'| markdownify }}
 Specifies the name of files in order to get it’s details
 <br/> 
@@ -436,7 +449,8 @@ It contains the basic details about selected files
 <td>
 Response data should be in JSON format like below
 <br/>
-{{{'**details**'| markdownify }}:[{CreationTime:"4/28/2015 9:44:32 AM", Extension:".png", Format:"Archive", FullName:"F:\All samples\FileExplorer_Custom\FileExplorerContent\human.png", LastAccessTime:"4/28/2015 9:44:32 AM", LastWriteTime:"3/31/2015 3:16:35 PM", Length:11059, Name:"human.png"}]}
+<br/>
+{details : [{CreationTime:"4/28/2015 9:44:32 AM", Extension:".png", Format:"Archive", FullName:"F:\All samples\FileExplorer_Custom\FileExplorerContent\human.png", LastAccessTime:"4/28/2015 9:44:32 AM", LastWriteTime:"3/31/2015 3:16:35 PM", Length:11059, Name:"human.png"}]}
 
 <br/>
 Note: Here you may add additional date fields along with existing JSON data using “FileDetails” class.
@@ -447,12 +461,15 @@ This method used to get the details of the specified file or directory.
 
 </td>
 </tr>
+
+
 <tr>
 <td>
 {{'**Operation:**'| markdownify }}GetImage
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String <br/>
 {{'**Description:**'| markdownify }}
@@ -479,7 +496,8 @@ This method helps to get an image using “HttpResponse” option
 {{'**Operation:**'| markdownify }}Search
 <br/>
 <br/>
-{{'**Request Parameter:**'| markdownify }}
+{{'**Request Parameter**'| markdownify }}
+<br/>
 {{'**Name**'| markdownify }}: path<br/>
 {{'**Type  :** '| markdownify }}String<br/>
 {{'**Description:**'| markdownify }}
@@ -512,9 +530,12 @@ It contains the details about selected folder
 <br/>
 </td>
 <td>
-It should return data in JSON format with key name as ‘{{'**files’** '| markdownify }} and JSON fields need to be with following field names
+It should return data in JSON format with key name as "{{'**files**'| markdownify }}" and JSON fields need to be with following field names.
 <br/>
  {{'*“name,  isFile, hasChild”.*'| markdownify }}
+ <br/><br/>
+ {{'*For example:*'| markdownify }}
+ <br/>
 {
 "{{'**files**'| markdownify }}":[{"{{'**name":"bird.jpg**'| markdownify }}","type":"File","size":102182,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null},
 {"{{'**name":"sea.jpg**'| markdownify }}","type":"File","size":97145,"dateModified":"1/9/2016 6:48:42 AM","{{'**hasChild":false,"isFile":true**'| markdownify }},"filterPath":null }],
@@ -977,7 +998,7 @@ In above code block, “Path” denotes the filesystem path that are to be explo
     
 Once you have completed the above steps, you will get an output like below.
 
-![http://help.syncfusion.com/aspnetmvc/fileexplorer/Getting-Started_images/Getting-Started_img3.png](combined_images/combined_img1.jpeg)
+![](HowTo_images/HowTo_img2.jpeg)
 
 FileExplorerOperations is a predefined class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side.
 
@@ -1006,9 +1027,10 @@ Read
 String ActionType,String Path,String ExtensionsAllow
 </td>
 <td>
-Should return data in array of JSON format and JSON fields need to be in following field names
+Should return data in array of JSON format and JSON fields need to be in following field names.
 <br/>
-{{ '_â€œname, size, type, dateModified, hasChildâ€_' | markdownify }}
+"{{ '**name, size, type, dateModified, hasChild**' | markdownify }}"
+<br/>
 <br/>
 {{ '_For example:_' | markdownify }}[{name: "7.png", type: "File", size: 11439, dateModified: "3/31/2015 3:16:38 PM", hasChild: false},{name: "human.png", type: "File", size: 11059, dateModified: "3/31/2015 3:16:35 PM", hasChild: false}]
 <br/>
@@ -1083,7 +1105,9 @@ String ActionType, String Path, String Name,String Type
 <td>
 Response data should be in JSON format like below 
 <br/>
+<br/>
 {CreationTime:"4/28/2015 9:44:32 AM", Extension:".png", Format:"Archive", FullName:"F:\All samples\FileExplorer_Custom\FileExplorerContent\human.png", LastAccessTime:"4/28/2015 9:44:32 AM", LastWriteTime:"3/31/2015 3:16:35 PM", Length:11059, Name:"human.png"} 
+<br/>
 <br/>
 Here you may add additional date fields with this JSON
 <br/>
