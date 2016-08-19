@@ -188,9 +188,9 @@ Define DataSource and other required properties for rendering a simple DropDownL
 {% endhighlight %}
 
 
-## Dynamically bind the data to ejDropDownList on ajax call
+## Dynamically bind the data to ejDropDownList on AJAX call
 
-Render the DropDownList with the empty DataSource, In client event called “click” of Button control, the ajax post is called.
+Render the DropDownList with the empty DataSource, In client event called “click” of Button control, the AJAX post is called.
 
 {% highlight c# %}
 
@@ -217,7 +217,7 @@ Render the DropDownList with the empty DataSource, In client event called “cli
 
 {% endhighlight %}
 
-Once the ajax call is success, bind the data to the dropdown list on ajax call by using the property “dataSource”.
+Once the ajax call is success, bind the data to the dropdown list on AJAX call by using the property “dataSource”.
 
 {% highlight javascript %}
 

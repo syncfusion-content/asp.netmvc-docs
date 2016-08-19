@@ -168,7 +168,7 @@ The following steps helps to create a ASP.NET Core web application to configure 
 
    ![](getting-started_images/getting-started_img115.jpeg)
    
-*  Open **Bower.json** file to include the following necessary packages.   
+*  Open **bower.json** file to include the following necessary packages.   
 
    ![](getting-started_images/getting-started_img17.png)
 
@@ -279,7 +279,7 @@ dotnet new -t web
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
+* Now open your **bower.json** JSON file and add the necessary packages to load our script and CSS. Instead of that need to install the Bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
@@ -289,7 +289,7 @@ dotnet new -t web
 ![](getting-started_images/getting-started_img122.JPG)
 
 
-* Open quick window (Ctrl + p) to run the “bower install” command to installed our Scripts and CSS to your application **wwwroot - > lib** folder.
+* Open quick window (Ctrl + p) to run the `bower install` command to install our scripts and CSS to your application **wwwroot - > lib** folder.
 
 ![](getting-started_images/getting-started_img123.JPG)
 
@@ -445,7 +445,7 @@ yo aspnet
 ![](getting-started_images/getting-started_img120.JPG)
 
 
-* Now open your **bower.json** json file and add the necessary packages to load our script and CSS. Instead of that need to install the bower extension in your Visual Studio code.
+* Now open your **bower.json** JSON file and add the necessary packages to load our script and CSS. Instead of that need to install the Bower extension in your Visual Studio code.
 
 ![](getting-started_images/getting-started_img121.JPG)
 
@@ -455,7 +455,7 @@ yo aspnet
 ![](getting-started_images/getting-started_img122.JPG)
 
 
-* Open quick window (Ctrl + p) to run the “**bower install**” command to installed our Scripts and CSS to your application **wwwroot -> lib** folder.
+* Open quick window (Ctrl + p) to run the `bower install` command to install our scripts and CSS to your application **wwwroot -> lib** folder.
 
 ![](getting-started_images/getting-started_img123.JPG)
 

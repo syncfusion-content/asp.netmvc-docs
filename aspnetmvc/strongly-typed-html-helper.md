@@ -296,7 +296,7 @@ In View, invoke the strongly typed NumericTextBoxFor helper with the lambda expr
 
 ![](stronlyTyped_images/img4.jpg)
 
-When the form is submitted, it will perform an Http Post request to the controller. The action with the HttpPost attribute will handle the request.
+When the form is submitted, it will perform an HTTP Post request to the controller. The action with the HttpPost attribute will handle the request.
 
 {% highlight C# %}
 

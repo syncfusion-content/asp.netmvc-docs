@@ -30,7 +30,6 @@ ej.touch.min.js</td><td>
 Must be referred for touch events supports.</td></tr>
 <tr>
 <td>
-ej.tilebase.min.js <br>
 ej.tile.min.js</td><td>
 Must be referred to render Tile control and to handle Tile specific operations.</td></tr>
 </table>
