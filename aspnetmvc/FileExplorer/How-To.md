@@ -14,13 +14,13 @@ In controller page, we have specified some built-in classes at "**FileActionDefa
 
 When you have made AJAX request on client-side, “FileActionDefault” method is triggered in controller part. Here received AJAX data will be stored in “[FileExplorerParams](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#)” parameter. This “FileActionDefault” method finds out the specific operations using the “ActionType” property and calls the corresponding built-in methods of “[FileExplorerOperations](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#)” class.
 
-**BasicFileOperations class** - 
+**BasicFileOperations class**
 “BasicFileOperations” is an abstract class and it is useful for handling file operations in server end. By inheriting this class, easily you can implement a new custom class for handling file operations in server end. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.BasicFileOperations.html#) of “BasicFileOperations”
 
-**FileExplorerOperations class** -
+**FileExplorerOperations class**
 This class is useful for handling file operations in server end. This class inherits the “BasicFileOperations” class and its abstract methods has been implemented here for managing files in **underlying machine's physical file system**. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations.html#) of “FileExplorerOperations”
 
-**FileExplorerParams class** -
+**FileExplorerParams class**
 “FileExplorerParams” class is used to receive the AJAX data in server side. In server side, we have a common method to handle all the AJAX requests, which is raised from client part of FileExplorer. This method contains “FileExplorerParams” object as a parameter and it is used to store the AJAX request data that will be useful for handling file operations. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#) of “FileExplorerParams”
 
 N> Here “ActionType” specifies following operations such as “Read”, “CreateFolder”, “Paste”, “Remove”, “Rename”, “Getdetails”, “Download”, “Upload”, “Search”. Following [section](#abstract-methods-in-basicfileoperations-class) contains the details about each operation.
@@ -998,7 +998,7 @@ In above code block, “Path” denotes the filesystem path that are to be explo
     
 Once you have completed the above steps, you will get an output like below.
 
-![](HowTo_images/HowTo_img2.jpeg)
+![](HowTo_images/HowTo_img2.png)
 
 FileExplorerOperations is a predefined class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side.
 
