@@ -232,6 +232,6 @@ Add the following code example to the corresponding controller page.
 Once you have completed the above steps, you will get an output like below.
 ![](GettingStarted_images/GettingStarted_img1.jpeg)
 
-N> In the [section](#_File_handling_operations), you can know the details about file handling operations, which are performed at server side of “FileExplorer”.
+N> In the [section](How-To.html#file-handling-operations), you can know the details about file handling operations, which are performed at server side of “FileExplorer”.
 
-N> If you are using 13.3.0.7rd or later version of script files and assemblies, above specified code blocks are helpful to render “FileExplorer” control. Also in future, we will provide the support based on this. If you are using the older version of Essential Studio (Before 13.3.0.7), refer following [section](#_Create_FileExplorer_ in_older_version) to render “FileExplorer” control.
+N> If you are using 13.3.0.7rd or later version of script files and assemblies, above specified code blocks are helpful to render “FileExplorer” control. Also in future, we will provide the support based on this. If you are using the older version of Essential Studio (Before 13.3.0.7), refer following [section](How-To.html#create-fileexplorer-in-older-version) to render “FileExplorer” control.
