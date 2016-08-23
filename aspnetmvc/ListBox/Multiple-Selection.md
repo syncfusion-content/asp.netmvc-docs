@@ -63,9 +63,9 @@ The following steps explain you the configuration of the AllowMultiSelection for
 
 ## Multiple selection through index 
 
-You can select the list of items from the ListBox using selectedItemlist property. Its data type is array. To achieve this, you need to set true to AllowMultiSelection property in ListBox. 
+You can select the list of items from the ListBox using selectedItemList property. Its data type is array. To achieve this, you need to set true to AllowMultiSelection property in ListBox. 
 
-The following steps explains you the configuration of SelectedItemlist property in ListBox
+The following steps explains you the configuration of SelectedItemList property in ListBox
 
 1. Add the below code in your view page to render the ListBox with allow multiple selection enabled.
 
