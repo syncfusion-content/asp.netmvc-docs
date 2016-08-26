@@ -52,8 +52,8 @@ From below you can see the available toolbar items and its categorization:
             List<String> searchBar = new List<string>() {
                 "Searchbar"
             };
-            List<String> sortby = new List<string>() {
-                "Sortby"
+            List<String> sortBy = new List<string>() {
+                "SortBy"
             };
         }
         @*all tools categories are placed in the toolbar by the below order*@
@@ -67,7 +67,7 @@ From below you can see the available toolbar items and its categorization:
                 "copyPaste",
                 "getProperties",
                 "searchBar",
-                "sortby"
+                "sortBy"
             };
         }
     
