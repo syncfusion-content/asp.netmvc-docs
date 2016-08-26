@@ -23,7 +23,7 @@ This class is useful for handling file operations in server end. This class inhe
 **FileExplorerParams class**
 “FileExplorerParams” class is used to receive the AJAX data in server side. In server side, we have a common method to handle all the AJAX requests, which is raised from client part of FileExplorer. This method contains “FileExplorerParams” object as a parameter and it is used to store the AJAX request data that will be useful for handling file operations. Refer [class reference](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerParams.html#) of “FileExplorerParams”
 
-N> Here “ActionType” specifies following operations such as “Read”, “CreateFolder”, “Paste”, “Remove”, “Rename”, “Getdetails”, “Download”, “Upload”, “Search”. Following [section](#abstract-methods-in-basicfileoperations-class) contains the details about each operation.
+N> Here “ActionType” specifies following operations such as “Read”, “CreateFolder”, “Paste”, “Remove”, “Rename”, “GetDetails”, “Download”, “Upload”, “Search”. Following [section](#abstract-methods-in-basicfileoperations-class) contains the details about each operation.
 
 ## Customizing AJAX handling functions
 
