@@ -175,6 +175,13 @@ The following output is displayed as a result of the above code example.
 
 ![](filtering_images/filtering_img6.png)
 
+### Filtering Between Values
+
+By using the custom filter feature of the Excel filter, we can filter betwen values of the column. The following screenshot depicts the usage of "Between" option of the custom filter dialog.
+
+{% include image.html url="filtering_images/filterbetween_img1.png" caption="Selecting between filter option from Excel filter dialog"%}
+
+{% include image.html url="filtering_images/filterbetween_img2.png" caption="Filtering column for between values"%}
 
 Checkbox list generation:
 
@@ -354,7 +361,7 @@ You can enter the below filter expressions manually in the filter bar.
             <td>
                 GreaterThanOrEqual
             </td>
-           >
+           
         </tr>
         <tr>
             <td>
@@ -556,7 +563,7 @@ List of Column type and Filter operators
             </td>
         </tr>
         <tr>
-          >
+          
             <td>
                 FilterOperatorType.NotEqual
             </td>
