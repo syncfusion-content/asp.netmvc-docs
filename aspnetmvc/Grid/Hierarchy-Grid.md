@@ -9,7 +9,9 @@ documentation: ug
 
 # Hierarchical Bindings
 
-Hierarchical binding can be used to create the Grid with parent and child relation, this facilitate you to view the child records for a particular row by clicking on the Expander button present in first column of each grid row. This can be enabled by defining `ChildGrid` and `QueryString`. `ChildGrid` is to define options of child and `QueryString` is to define the relation between parent and child grid.
+Hierarchical binding can be used to create the Grid with parent and child relation, this facilitate you to view the child records for a particular row by clicking on the Expander button present in first column of each grid row. This can be enabled by defining `ChildGrid` and `QueryString`.
+
+The `ChildGrid` property is used define the model properties that has to be applied on the child grid. The `ChildGrid` is the extended class of the base class Grid such that it holds all the properties of the Grid. The `QueryString` is to define the relation between parent and child grid. The `QueryString` property is used to denote the foreignKey field in the parent grid which is to be mapped with the primaryKey field of the child grid. Based on the mapping, the child grid records are filtered from the table and is bound as datasource for the child grid.
 
 {% tabs %}
 
