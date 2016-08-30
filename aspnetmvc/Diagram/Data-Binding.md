@@ -280,3 +280,224 @@ The following code illustrates how to convert HTML table to the Diagram.
 {% endtabs %}
 
 ![](Data-Binding_images/Data-Binding_img4.png)
+
+# CRUD
+
+* This feature allows the user to read the DataSource and perform add/edit/delete the data in datasource at runtime.
+
+## Read DataSource
+
+* This feature allows you to define nodes and connectors collection in the DataSource and ConnectionDataSource respectively.
+* We can set the data collection in the model’s DataSourceSettings DataSource property. The nodes will be generated based on the data specified in the DataSource. 
+* We can set the connector collection in the model’s DataSourceSettings ConnectionDataSource property.
+* If we have a data (data will be set in the DataSource property) with parent relationship in the database and also defined the connector in the ConnectionDataSource simultaneously, then the connectors set in the ConnectionDataSource will be considered as a priority to render the connector.
+
+{% tabs %}
+{% highlight c# %}
+ 
+         model.DataSourceSettings = new DataSourceSettings()
+            {
+               //set the data collection
+                DataSource = DiagramContext.HierarchicalData.ToList(),
+                //bind the column name to the Id property which generates the unique name for the object
+                Id = "Name",
+                //Specify the custom property/columns which is available in the DataSource.
+                CustomFields = new List<string>() 
+                {
+                    "Description",
+                    "Color"
+                },
+                ConnectionDataSource = new ConnectionDataSourceSettings()
+                {
+                    //set the connector collection
+                    DataSource = DiagramContext.HierarchicalDetails.ToList(),
+                  //bind the column name to the Id property which generates the unique name for the object 
+                    Id = "Name",
+                    SourceNode = "SourceNode",
+                    TargetNode = "TargetNode",
+
+                //Specify the custom property/columns which is available in the ConnectionDataSource.
+                 CustomFields = new List<string>() 
+                    {
+                    "Description",
+                    "Color"
+                     },
+                }
+            };
+            
+{% endhighlight %}
+{% endtabs %}
+
+## How to perform Editing at runtime
+
+We need to specify the URL for create/update/destroy of nodes and connectors.
+
+## InsertData
+
+* The following code example illustrates how to send the newly added/inserted data from client to server side.
+
+{% tabs %}
+{% highlight js %}
+
+var diagram = $("#diagram").ejDiagram("instance");
+//Sends the newly added nodes/connectors from client side to the server side through the URL which is specified in server side.
+diagram.insertData();
+
+{% endhighlight %}
+
+{% highlight c# %}
+ 
+            model.DataSourceSettings = new DataSourceSettings()
+            {
+                CrudAction = new CRUDAction()
+                {
+                   //Specify the method name which is used to get the newly added data from client side to the server side 
+                    Create = "/Diagram/InsertShape",                
+                },
+                ConnectionDataSource = new ConnectionDataSourceSettings()
+                {
+ 
+                    CrudAction = new CRUDAction()
+                    {
+                    //Specify the method name which is used to get the newly added data from client side to the server side                         
+                     Create = "/Diagram/InsertConnector",
+                    }
+                }
+            };
+
+        [HttpPost]
+        public void InsertShape(List<HierarchicalData> data)
+        {
+            foreach (HierarchicalData hdata in data)
+            {
+                DiagramContext.HierarchicalData.InsertOnSubmit(hdata);
+                DiagramContext.SubmitChanges();
+            }
+        }
+
+        [HttpPost]
+        public void InsertConnector(List<HierarchicalDetail> data)
+        {
+            foreach (HierarchicalDetail hdata in data)
+            {
+                DiagramContext.HierarchicalDetails.InsertOnSubmit(hdata);
+                DiagramContext.SubmitChanges();
+            }
+        }
+
+{% endhighlight %}
+{% endtabs %}
+
+## UpdateData
+
+* The following code example illustrates how to send the updated data from client to the server side.
+
+{% tabs %}
+{% highlight js %}
+
+var diagram = $("#diagram").ejDiagram("instance");
+//Sends the updated nodes/connectors from client side to the server side through the URL which is specified in server side.
+diagram.updateData();
+
+{% endhighlight %}
+
+{% highlight c# %}
+ 
+        model.DataSourceSettings = new DataSourceSettings()
+            {
+                CrudAction = new CRUDAction()
+                {
+                 //Specify the method name which is used to get the updated data from client side to the server side                         
+                    Create = "/Diagram/UpdateShape",                
+                },
+                ConnectionDataSource = new ConnectionDataSourceSettings()
+                {
+                    CrudAction = new CRUDAction()
+                    {
+                        //Specify the method name which is used to get the updated data from client side to the server side                        
+                        Create = "/Diagram/UpdateConnector",
+                    }
+                }
+            };
+        [HttpPost]
+        public void UpdateShape(List<HierarchicalData> data)
+        {
+            foreach (HierarchicalData hdata in data)
+            {
+                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hdata.Name);
+                originalData.Description = hdata.Description;
+                originalData.Color = hdata.Color;
+                DiagramContext.SubmitChanges();
+            }
+            
+        }
+        [HttpPost]
+        public void UpdateConnector(List<HierarchicalDetail> data)
+        {
+            foreach (HierarchicalDetail hdata in data)
+            {
+                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hdata.Name);
+                originalData.SourceNode = hdata.SourceNode;
+                originalData.TargetNode = hdata.TargetNode;
+                DiagramContext.SubmitChanges();
+            }
+        }
+
+{% endhighlight %}
+{% endtabs %}
+
+## DeleteData
+
+The following code example illustrates how to send the deleted data from client to the server side.
+
+{% tabs %}
+{% highlight js %}
+
+var diagram = $("#diagram").ejDiagram("instance");
+//Sends the deleted nodes/connectors from client side to the server side through the URL which is specified in server side.
+diagram.removeData();
+
+{% endhighlight %}
+
+{% highlight c# %}
+ 
+       model.DataSourceSettings = new DataSourceSettings()
+            {
+                CrudAction = new CRUDAction()
+                {
+                    
+                     //Specify the method name which is used to get the deleted data from client side to the server side                                            
+                      Create = "/Diagram/DeleteShape",                
+                },
+                ConnectionDataSource = new ConnectionDataSourceSettings()
+                {
+                    CrudAction = new CRUDAction()
+                    {
+                      //Specify the method name which is used to get the updated data from client side to the server side                        
+                        Create = "/Diagram/DeleteConnector",
+                    }
+                }
+            };
+        [HttpPost]
+        public void DeleteShape(List<HierarchicalData> data)
+        {
+            foreach (HierarchicalData hdata in data)
+            {
+                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hdata.Name);
+                DiagramContext.HierarchicalData.DeleteOnSubmit(originalData);
+                DiagramContext.SubmitChanges();
+            }
+        }
+        [HttpPost]
+        public void DeleteConnector(List<HierarchicalDetail> data)
+        {
+            foreach (HierarchicalDetail hdata in data)
+            {
+                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hdata.Name);
+                DiagramContext.HierarchicalDetails.DeleteOnSubmit(originalData);
+                DiagramContext.SubmitChanges();
+            }
+        }
+
+{% endhighlight %}
+{% endtabs %}
