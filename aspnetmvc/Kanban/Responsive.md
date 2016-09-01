@@ -1,0 +1,124 @@
+
+---
+layout: post
+title: Responsive | Kanban | ASP.NET MVC | Syncfusion
+description: Responsive
+documentation: ug
+control: Kanban
+platform: ejmvc
+---
+
+# Responsive
+
+The Kanban control has support for responsive behavior based on client browser’s width and height. To enable responsive, `IsResponsive` property should be true. 
+
+## Width
+
+By default, the Kanban is adaptable to its parent container. It can adjust its width of columns based on parent container width. You can also assign width of `Columns` in percentage. 
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+        .DataSource((IEnumerable<object>)ViewBag.datasource)
+        .IsResponsive(true)
+        .Columns(col =>
+        {
+            col.HeaderText("Backlog").Key("Open").Width(10).Add();
+            col.HeaderText("In Progress").Key("InProgress").Width(10).Add();
+            col.HeaderText("Done").Key("Close").Width(10).Add();
+        })
+        .KeyField("Status")
+        .Fields(field =>
+        {
+            field.Content("Summary")
+                .Tag("Tags")
+                .PrimaryKey("Id");
+        })
+        
+    )
+  
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+ 
+{% endhighlight  %}
+
+{% endtabs %}  
+
+N>  `AllowScrolling` should be false while defining width in percentage.
+
+## Min Width
+
+Min Width is used to maintain minimum width for the Kanban. If the Kanban width is less than `MinWidth` then the scrollbar will be displayed to maintain minimum width.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+     .DataSource((IEnumerable<object>)ViewBag.datasource)
+     .IsResponsive(true)
+     .MinWidth(700)
+     .Columns(col =>
+     {
+         col.HeaderText("Backlog").Key("Open").Width(120).Add();
+         col.HeaderText("In Progress").Key("InProgress").Width(110).Add();
+         col.HeaderText("Done").Key("Close").Width(110).Add();
+     })
+     .KeyField("Status")
+     .Fields(field =>
+     {
+         field.Content("Summary")
+             .Tag("Tags")
+             .PrimaryKey("Id");
+     })
+    )
+
+  
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+ 
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Responsive_images/responsive_img1.png)
