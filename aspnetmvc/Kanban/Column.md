@@ -1,0 +1,342 @@
+---
+layout: post
+title: Column | Kanban | ASP.NET MVC | Syncfusion
+description: Column
+documentation: ug
+control: Kanban
+platform: ejmvc
+---
+
+# Columns
+
+Column fields are present in the [`dataSource`](https://help.syncfusion.com/js/api/ejgrid#members:datasource) schema and it is rendering cards based its mapping column values.
+
+## Key Mapping
+
+To render Kanban with simple cards, you need to map the `dataSource` fields to Kanban cards and `Columns`. The required mapping field are listed as follows
+
+
+<table>
+<tr>
+<th>
+Mapping Fields</th><th>
+Description</th></tr>
+<tr>
+<td>
+`KeyField`</td><td>
+Map the column name to use as `Key` values to columns.</td></tr>
+<tr>
+<td>
+`Columns.Key` </td><td>
+Map the corresponding `key` values of `KeyField` column to each columns.</td></tr>
+<tr>
+<td>
+`Columns.HeaderText`</td><td>
+ It represents the title for particular column</td></tr>
+<tr>
+<td>
+`Fields.Content`</td><td>
+Map the column name to use as content to cards.</td></tr>
+</table>
+
+N> 1. If the column with `KeyField` is not in the dataSource and `Key` values specified will not available in column values, then the cards will not be rendered.
+N> 2. If the `Fields.Content` is not in the dataSource, then empty cards will be rendered.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+   
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Testing").Key("Testing").Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })                
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {                    
+                            field.Content("Summary");
+                            
+                    })
+    )
+
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+    
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img.png)
+
+## Headers
+
+### Header Template
+
+The template design that applies on for the column header. To render template, set `HeaderTemplate` property of the `Columns`.
+
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer the link.
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+        <!—Column Template -->
+        <script id="column1" type="text/x-jsrender">
+            <span class="e-backlog e-icon"></span> Backlog
+        </script>
+        <div id="column4">
+            <span class="e-done e-icon"></span> Done
+        </div>
+    <div id='Kanban'></div> 
+
+{% endhighlight %}
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                        .DataSource((IEnumerable<object>)ViewBag.datasource)
+                        .Columns(col =>
+                        {
+                            col.HeaderText("Backlog").Key("Open").HeaderTemplate("#column1").Add();
+                            col.HeaderText("In Progress").Key("InProgress").Add();
+                            col.HeaderText("Testing").Key("Testing").Add();
+                            col.HeaderText("Done").Key("Close").HeaderTemplate("#column4").Add();
+                        })                
+                        .KeyField("Status")
+                        .Fields(field =>
+                        {                    
+                                field.Content("Summary");
+                                
+                        })
+        )
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+                 
+{% endhighlight  %}
+
+{% endtabs %}  
+{% highlight css %}
+
+    /*CSS for Header template icon*/
+    .e-backlog,.e-done {
+        font-size: 16px;
+        padding-right: 5px;
+        display: inline-block;
+        }    
+    .e-backlog:before {
+        content: "\e807";
+        }    
+    .e-done:before {
+        content: "\e80a";
+        }
+
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img1.png)
+
+## Width
+
+You can specify the width for particular column by setting `Width` property of `Columns` as in pixel (ex: 100) or in percentage (ex: 40%).
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Width(70).Add();
+                        col.HeaderText("In Progress").Key("InProgress").Width("40%").Add();
+                        col.HeaderText("Testing").Key("Testing").Width(90).Add();
+                        col.HeaderText("Done").Key("Close").Width(90).Add();
+                    })                
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {                    
+                            field.Content("Summary");
+                            
+                    })
+    )
+
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img2.png)
+
+## Visibility 
+
+You can hide particular column in Kanban by setting `Visible` property of it as false.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Testing").Key("Testing").Visible(false).Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })                
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {                    
+                            field.Content("Summary");
+                            
+                    })
+    )
+
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+    public partial class KanbanController : Controller
+    {
+        public ActionResult KanbanFeatures()
+        {
+            var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+    }
+}
+            
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img3.png)
+
+## IsCollasped 
+
+You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use “Expand/Collapse” Column.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+ 
+    @(Html.EJ().Kanban("Kanban")
+                   .DataSource((IEnumerable<object>)ViewBag.datasource)
+                   .AllowToggleColumn(true)
+                   .Columns(col =>
+                   {
+                       col.HeaderText("Backlog").Key("Open").IsCollapsed(true).Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+                       col.HeaderText("Testing").Key("Testing").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                   })                
+                  .KeyField("Status")
+                  .Fields(field =>
+                  {                    
+                          field.Content("Summary");
+                          field.PrimaryKey("Id");
+                        
+                  })
+
+    
+{% endhighlight  %}
+{% highlight c# %}
+
+    @(Html.EJ().Kanban("Kanban")
+                   .DataSource((IEnumerable<object>)ViewBag.datasource)
+                   .AllowToggleColumn(true)
+                   .Columns(col =>
+                   {
+                       col.HeaderText("Backlog").Key("Open").IsCollapsed(true).Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+                       col.HeaderText("Testing").Key("Testing").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                   })                
+                  .KeyField("Status")
+                  .Fields(field =>
+                  {                    
+                          field.Content("Summary");
+                          field.PrimaryKey("Id");
+                        
+                  })
+
+
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img4.png)

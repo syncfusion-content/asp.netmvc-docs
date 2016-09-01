@@ -1,0 +1,66 @@
+---
+layout: post
+title: Swimlanes | Kanban | ASP.NET MVC | Syncfusion
+description: Swimlanes
+documentation: ug
+control: Kanban
+platform: ejmvc
+--
+
+# Swim lanes
+
+Swim lanes are a horizontal categorization of issues in the Kanban control which brings transparency to the workflow. This can be enabled by mapping the `SwimlaneKey` to appropriate column name in the `DataSource`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")
+                            .SwimlaneKey("Assignee")
+                            .ImageUrl("ImgUrl")         
+                            .PrimaryKey("Id");
+                    })
+                    
+                    
+    )
+
+  
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+              
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Swimlane_images/swimlane_img1.png)
