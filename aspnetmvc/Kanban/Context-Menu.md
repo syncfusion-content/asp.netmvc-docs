@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Context Menu  | Kanban | ASP.NET MVC | Syncfusion
