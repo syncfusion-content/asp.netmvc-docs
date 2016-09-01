@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Responsive | Kanban | ASP.NET MVC | Syncfusion
