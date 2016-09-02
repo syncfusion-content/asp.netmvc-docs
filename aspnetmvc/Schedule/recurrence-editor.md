@@ -53,10 +53,8 @@ Define a button separately and add it to the page as shown below and while click
 
      });
      function closerecurrence() {
-         var obj = $(".e-recurrenceeditor").data("ejRecurrenceEditor")
-         obj.getRecurrenceRule(); // recurrence rule gets generated here, as per the options selected in the recurrence editor
-         alert(obj._recRule);
-
+         var obj = $(".e-recurrenceeditor").data("ejRecurrenceEditor");
+         alert(obj.getRecurrenceRule()) ; // recurrence rule generated as per the options selected in the recurrence editor will be displayed here
      }
      function onCreate() {
          this.element.find("#recurrencetype_wrapper").css("width", "33%");
