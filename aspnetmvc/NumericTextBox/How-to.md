@@ -27,7 +27,7 @@ By adding this class, the textbox will have standard look and appearance as othe
 
 Textbox will be rendered as shown below
 
-![](How_to/normaltextbox_customize.png)
+![](How-To/normaltextbox-customize.png)
 
 Normal textbox as Syncfusion textbox
 {:.caption}
