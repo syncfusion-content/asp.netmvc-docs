@@ -15,17 +15,16 @@ In color mapping, when white color is set to value 0 and red color is set for va
 
 {% highlight c# %}
 
-        public ActionResult Default()
-        {
-            HeatMapProperties Heatmap = new HeatMapProperties();
-            List<HeatMapColorMapping> colorCollection = new List<HeatMapColorMapping>();
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#8ec8f8", Label = new HeatMapLabel() { Text = "0" }, Value = 0 });
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#0d47a1", Label = new HeatMapLabel() { Text = "100" }, Value = 100 });
-            Heatmap.ColorMappingCollection = colorCollection;
-            ViewData["HeatMapModel"] = Heatmap;
-            return View();
-        }
-
+public ActionResult Default()
+{
+    HeatMapProperties Heatmap = new HeatMapProperties();
+    List<HeatMapColorMapping> colorCollection = new List<HeatMapColorMapping>();
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#8ec8f8", Label = new HeatMapLabel() { Text = "0" }, Value = 0 });
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#0d47a1", Label = new HeatMapLabel() { Text = "100" }, Value = 100 });
+    Heatmap.ColorMappingCollection = colorCollection;
+    ViewData["HeatMapModel"] = Heatmap;
+    return View();
+}
 
 {% endhighlight %}
 

@@ -17,25 +17,24 @@ Legend can be created with color mapping as shown below.
 
 {% highlight c# %}
 
-        public ActionResult TableDataBinding()
-        {
-            List<HeatMapColorMapping> colorCollection = new List<HeatMapColorMapping>();
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#fe0002", Label = new HeatMapLabel() { Text = "Poor" }, Value = 0 });
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#ffff01", Label = new HeatMapLabel() { Text = "Average" }, Value = 3 });
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#13ab11", Label = new HeatMapLabel() { Text = "Good" }, Value = 6 });
-            colorCollection.Add(new HeatMapColorMapping() { Color = "#005ba2", Label = new HeatMapLabel() { Text = "Excellent" }, Value = 10 });
-            Heatmap.ColorMappingCollection = colorCollection;
+public ActionResult TableDataBinding()
+{
+    List<HeatMapColorMapping> colorCollection = new List<HeatMapColorMapping>();
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#fe0002", Label = new HeatMapLabel() { Text = "Poor" }, Value = 0 });
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#ffff01", Label = new HeatMapLabel() { Text = "Average" }, Value = 3 });
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#13ab11", Label = new HeatMapLabel() { Text = "Good" }, Value = 6 });
+    colorCollection.Add(new HeatMapColorMapping() { Color = "#005ba2", Label = new HeatMapLabel() { Text = "Excellent" }, Value = 10 });
+    Heatmap.ColorMappingCollection = colorCollection;
 
-            HeatMapLegendProperties legend = new HeatMapLegendProperties();
-            legend.ColorMappingCollection = colorCollection;
-            legend.Orientation = HeatMapLegendOrientation.Horizontal;
-            legend.LegendMode = HeatMapLegendMode.Gradient;
-            legend.Height = "50px";
-            legend.Width = "75%"; 
-            ViewData["HeatMapLegendModel"] = legend;
-            return View();
-        }
-
+    HeatMapLegendProperties legend = new HeatMapLegendProperties();
+    legend.ColorMappingCollection = colorCollection;
+    legend.Orientation = HeatMapLegendOrientation.Horizontal;
+    legend.LegendMode = HeatMapLegendMode.Gradient;
+    legend.Height = "50px";
+    legend.Width = "75%"; 
+    ViewData["HeatMapLegendModel"] = legend;
+    return View();
+}
 
 {% endhighlight %}
 
@@ -53,16 +52,16 @@ There are two modes for Legend
 
 {% highlight c# %}
 
-        public ActionResult TableDataBinding()
-        { 
-            HeatMapLegendProperties legend = new HeatMapLegendProperties();
+public ActionResult TableDataBinding()
+{ 
+    HeatMapLegendProperties legend = new HeatMapLegendProperties();
 
-            legend.Orientation = HeatMapLegendOrientation.Horizontal;
-            legend.LegendMode = HeatMapLegendMode.Gradient;
+    legend.Orientation = HeatMapLegendOrientation.Horizontal;
+    legend.LegendMode = HeatMapLegendMode.Gradient;
 
-            ViewData["HeatMapLegendModel"] = legend;
-            return View();
-        }
+    ViewData["HeatMapLegendModel"] = legend;
+    return View();
+}
 
 
 {% endhighlight %}
@@ -73,16 +72,16 @@ There are two modes for Legend
 
 {% highlight c# %} 
 
-        public ActionResult TableDataBinding()
-        {
-            HeatMapLegendProperties legend = new HeatMapLegendProperties();
+public ActionResult TableDataBinding()
+{
+    HeatMapLegendProperties legend = new HeatMapLegendProperties();
 
-            legend.Orientation = HeatMapLegendOrientation.Horizontal;
-            legend.LegendMode = HeatMapLegendMode.List;
+    legend.Orientation = HeatMapLegendOrientation.Horizontal;
+    legend.LegendMode = HeatMapLegendMode.List;
 
-            ViewData["HeatMapLegendModel"] = legend;
-            return View();
-        }
+    ViewData["HeatMapLegendModel"] = legend;
+    return View();
+}
         
 {% endhighlight %}
 
@@ -98,16 +97,16 @@ There are 2 types of Orientation, applicable for Gradient and List Mode
 
 {% highlight c# %} 
 
-        public ActionResult TableDataBinding()
-        {
-            HeatMapLegendProperties legend = new HeatMapLegendProperties();
+public ActionResult TableDataBinding()
+{
+    HeatMapLegendProperties legend = new HeatMapLegendProperties();
 
-            legend.Orientation = HeatMapLegendOrientation.Horizontal;
-            legend.LegendMode = HeatMapLegendMode.List;
+    legend.Orientation = HeatMapLegendOrientation.Horizontal;
+    legend.LegendMode = HeatMapLegendMode.List;
 
-            ViewData["HeatMapLegendModel"] = legend;
-            return View();
-        }
+    ViewData["HeatMapLegendModel"] = legend;
+    return View();
+}
         
 {% endhighlight %}
 
@@ -117,16 +116,16 @@ There are 2 types of Orientation, applicable for Gradient and List Mode
 
 {% highlight c# %} 
 
-        public ActionResult TableDataBinding()
-        {
-            HeatMapLegendProperties legend = new HeatMapLegendProperties();
+public ActionResult TableDataBinding()
+{
+    HeatMapLegendProperties legend = new HeatMapLegendProperties();
 
-            legend.Orientation = HeatMapLegendOrientation.Vertical;
-            legend.LegendMode = HeatMapLegendMode.List;
+    legend.Orientation = HeatMapLegendOrientation.Vertical;
+    legend.LegendMode = HeatMapLegendMode.List;
 
-            ViewData["HeatMapLegendModel"] = legend;
-            return View();
-        }
+    ViewData["HeatMapLegendModel"] = legend;
+    return View();
+}
         
 {% endhighlight %}
 
