@@ -20,38 +20,38 @@ Mapping Fields</th><th>
 Description</th></tr>
 <tr>
 <td>
- `Content` </td><td> Map the column name to use as content to cards.</td></tr>
+ {{ 'Content' | markdownify }} </td><td> Map the column name to use as content to cards.</td></tr>
 <tr>
 <td>
-`Tag` </td><td>
+{{ 'Tag'| markdownify }} </td><td>
 Map the column name to use as tag. Multiple tags can be given with comma separated.  E.g. "API","SQL, Database".</td></tr>
 <tr>
 <td>
-`Color` </td><td>
+{{ 'Color' | markdownify }} </td><td>
  Map the column name to use as colors to highlight cards left border.</td></tr>
 <tr>
 <td>
-`ColorMapping`</td><td>
-Map the colors to use with column values which is mapped with `fields.color`.</td></tr>
+{{ 'ColorMapping' | markdownify }} </td><td>
+Map the colors to use with column values which is mapped with {{ 'fields.color' | markdownify }}. </td></tr>
 <tr>
 <td>
-`ImageUrl` </td><td>
+{{ 'ImageUrl' | markdownify }} </td><td>
 Map the column name to use as image to cards.</td></tr>
 <tr>
 <td>
-`PrimaryKey`</td><td>
+{{ 'PrimaryKey' | markdownify }} </td><td>
 Map the column name to use as primary key to cards.</td></tr>
 <tr>
 <td>
-`PriorityKey`</td><td>
+{{ 'PriorityKey'| markdownify }}</td><td>
 Map the column name to use as priority key to cards.</td></tr>
 <tr>
 <td>
- `Title`</td><td>
-Map the column name to use as title to cards. Default title is  `primaryKey`.</td></tr>
+ {{ 'Title' | markdownify }} </td><td>
+Map the column name to use as title to cards. Default title is {{ 'primaryKey' | markdownify }}.</td></tr>
 <tr>
 <td>
-`AllowTitle`</td><td>
+{{ 'AllowTitle'| markdownify }} </td><td>
 Set as true to enable title for card.</td></tr>
 </table>
 
