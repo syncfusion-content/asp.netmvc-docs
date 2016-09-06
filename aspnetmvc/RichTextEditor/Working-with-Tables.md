@@ -5,6 +5,7 @@ description: Working with Tables customization for RichTextEditor widget
 platform: js
 control: RTE
 documentation: ug
+keywords: RichTextEditor, Tables, Insert Row, Remove Row, Remove Columns, Insert Columns
 
 ---
 # Working with Tables
@@ -20,20 +21,20 @@ By default, [Insert Table](http://help.syncfusion.com/js/api/ejrte#members:tools
 
 {% highlight html %}
 
-    @{
-        List<String> toolsList = new List<string>() { "tables" };
-        List<String> tables = new List<string>() { "createTable", "addRowAbove", "addRowBelow", "addColumnLeft", "addColumnRight", "deleteRow", "deleteColumn", "deleteTable" };
-    }
-    <br />
-    @{Html.EJ().RTE("rteSample").Width("820px").ContentTemplate(@<div>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>Vestibulum auctor dapibus neque.</li>
-        </ul>
-    </div>)
-    .ToolsList(toolsList)
-    .Tools(tool => tool.Tables(tables)).Render();}
+@{
+    List<String> toolsList = new List<string>() { "tables" };
+    List<String> tables = new List<string>() { "createTable", "addRowAbove", "addRowBelow", "addColumnLeft", "addColumnRight", "deleteRow", "deleteColumn", "deleteTable" };
+}
+<br />
+@{Html.EJ().RTE("rteSample").Width("820px").ContentTemplate(@<div>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+</div>)
+.ToolsList(toolsList)
+.Tools(tool => tool.Tables(tables)).Render();}
 
 {% endhighlight %}
 

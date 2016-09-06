@@ -5,6 +5,7 @@ description: Working with content selection in RichTextEditor widget
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, Select All, Select a Range, Get Selection
 
 ---
 # Working with Selection
@@ -19,21 +20,21 @@ N> the selection highlight is invisible if the editor does not have focus. So, i
 
 {% highlight html %}
 
-    @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
-        The Rich Text Editor (RTE) control is an easy to render in
-        client side. Customer easy to edit the contents and get the HTML content for the displayed content. A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
-    </div>)
-        .Render();}
+@{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
+    The Rich Text Editor (RTE) control is an easy to render in
+    client side. Customer easy to edit the contents and get the HTML content for the displayed content. A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+</div>)
+    .Render();}
 
-    <br />
-    @Html.EJ().Button("Button1").ClientSideEvents(e => e.Click("selectAll")).Text("Select All")
-        
-    <script>
-        function selectAll() {
-            var editor = $("#rteSample").ejRTE("instance");
-            editor.selectAll();
-        }
-    </script>
+<br />
+@Html.EJ().Button("Button1").ClientSideEvents(e => e.Click("selectAll")).Text("Select All")
+    
+<script>
+    function selectAll() {
+        var editor = $("#rteSample").ejRTE("instance");
+        editor.selectAll();
+    }
+</script>
 
 {% endhighlight %}
 
@@ -43,34 +44,33 @@ You can programmatically select a range of content in the editor using the [sele
 
 {% highlight html %}
 
-    @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>Vestibulum auctor dapibus neque.</li>
-        </ul>
-    </div>)
-        .Render();}
+@{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+</div>).Render();}
 
-    <br />
-    @Html.EJ().Button("button1").ClientSideEvents(e => e.Click("select")).Text("Select")
-        
-    <script>
-        function select() {
-            var editor = $("#rteSample").ejRTE("instance");
-            range = editor.createRange();
-            var liTag = $(editor.getDocument().body).find("li");
-            if (!editor._isIE8()) {
-                range.setStart(liTag[1], 0);
-                range.setEnd(liTag[2], 1);
-            }
-            else {
-                range = editor.getDocument().body.createTextRange()
-                range.moveToElementText(liTag[2]);
-            }
-            editor.selectRange(range);
+<br />
+@Html.EJ().Button("button1").ClientSideEvents(e => e.Click("select")).Text("Select")
+    
+<script>
+    function select() {
+        var editor = $("#rteSample").ejRTE("instance");
+        range = editor.createRange();
+        var liTag = $(editor.getDocument().body).find("li");
+        if (!editor._isIE8()) {
+            range.setStart(liTag[1], 0);
+            range.setEnd(liTag[2], 1);
         }
-    </script>
+        else {
+            range = editor.getDocument().body.createTextRange()
+            range.moveToElementText(liTag[2]);
+        }
+        editor.selectRange(range);
+    }
+</script>
 
 {% endhighlight %}
 
@@ -83,26 +83,21 @@ The following public methods helps you to retrieve the selected content from the
 
 {% highlight html %}
 
-    @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-            <li>Vestibulum auctor dapibus neque.</li>
-        </ul>
-
-    </div>)
-            .Render();}
-
-    <br />
-    @Html.EJ().Button("button1").ClientSideEvents(e=>e.Click("select")).Text("Select")
-    
-    
-    <script>
-        function select() {
-            var editor = $("#rteSample").ejRTE("instance");
-            var selectedText = editor.getText();
-            var selectedHtml = editor.getSelectedHtml();
-        }
-    </script>
+@{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+</div>).Render();}
+<br />
+@Html.EJ().Button("button1").ClientSideEvents(e=>e.Click("select")).Text("Select")
+<script>
+    function select() {
+        var editor = $("#rteSample").ejRTE("instance");
+        var selectedText = editor.getText();
+        var selectedHtml = editor.getSelectedHtml();
+    }
+</script>
 
 {% endhighlight %}
