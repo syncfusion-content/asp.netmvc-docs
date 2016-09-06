@@ -23,19 +23,19 @@ Mapping Fields</th><th>
 Description</th></tr>
 <tr>
 <td>
-`KeyField`</td><td>
-Map the column name to use as `Key` values to columns.</td></tr>
+{{ 'KeyField' | markdownify }} </td><td>
+Map the column name to use as {{ 'Key'| markdownify }} values to columns.</td></tr>
 <tr>
 <td>
-`Columns.Key` </td><td>
-Map the corresponding `key` values of `KeyField` column to each columns.</td></tr>
+{{ 'Columns.Key' | markdownify }} </td><td>
+Map the corresponding {{ 'key'| markdownify }} values of {{ 'KeyField'| markdownify }} column to each columns.</td></tr>
 <tr>
 <td>
-`Columns.HeaderText`</td><td>
+{{ 'Columns.HeaderText'| markdownify }} </td><td>
  It represents the title for particular column</td></tr>
 <tr>
 <td>
-`Fields.Content`</td><td>
+{{ 'Fields.Content'| markdownify }} </td><td>
 Map the column name to use as content to cards.</td></tr>
 </table>
 

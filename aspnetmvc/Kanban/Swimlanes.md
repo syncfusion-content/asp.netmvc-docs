@@ -5,7 +5,7 @@ description: Swimlanes
 documentation: ug
 control: Kanban
 platform: ejmvc
---
+---
 
 # Swim lanes
 

@@ -317,7 +317,7 @@ Example</th>
 <tr>
 <td>
 Numeric</td><td>
- `TextBoxes` </td>
+ {{ 'TextBoxes' | markdownify }} </td>
 <td>
 control for integers, double, and decimal data’s</td>
 <td>
@@ -335,7 +335,7 @@ HTML Textbox</td>
 <tr>
 <td>
 DatePicker </td><td>
-`DatePicker` </td>
+{{ 'DatePicker'| markdownify }} </td>
 <td>
 control for date data</td>
 <td>
@@ -344,7 +344,7 @@ DateEditOptions(new DatePickerProperties() { ButtonText="Now"})</td>
 <tr>
 <td>
 DateTimePicker </td><td>
-`DateTimePicker` </td>
+{{ 'DateTimePicker'| markdownify }} </td>
 <td>
 control for date data-time data</td>
 <td>
@@ -353,7 +353,7 @@ DateTimeEditOptions(new DateTimePickerProperties() { Enabled=true})</td>
 <tr>
 <td>
 DropDown </td><td>
- `DropDownList` </td>
+{{ 'DropDownList'| markdownify }} </td>
 <td>
 control for list of data</td>
 <td>
@@ -362,7 +362,7 @@ DropdownEditOptions(new DropDownListProperties() { AllowGrouping=true})</td>
 <tr>
 <td>
 RTE </td><td>
-`RTE` </td>
+{{ 'RTE'| markdownify }} </td>
 <td>
 control for customizing text in RTE format</td>
 <td>
