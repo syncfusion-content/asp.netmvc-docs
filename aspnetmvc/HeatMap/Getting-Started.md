@@ -1,8 +1,8 @@
-﻿---
+---
 layout: post
 title: Getting started with Syncfusion Essential HeatMap for ASP.NET MVC
 description: Getting started walk through to create your first HeatMap.
-platform: ejweb
+platform: ejmvc
 control: HeatMap
 documentation: ug
 ---
