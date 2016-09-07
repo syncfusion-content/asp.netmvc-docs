@@ -217,7 +217,7 @@ Render the DropDownList with the empty DataSource, In client event called “cli
 
 {% endhighlight %}
 
-Once the ajax call is success, bind the data to the dropdown list on AJAX call by using the property “dataSource”.
+Once the AJAX call is success, bind the data to the dropdown list on AJAX call by using the property “dataSource”.
 
 {% highlight javascript %}
 
