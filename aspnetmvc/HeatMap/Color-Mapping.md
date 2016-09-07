@@ -7,6 +7,7 @@ control: HeatMap
 documentation: ug
 ---
 
+
 # Color Mapping
 
 Color mapping is used to indicate values as colors instead of numerical values. For example, if a HeatMap represents a data from 0 to 100. `ColorMapping` is used to specify a color for lower value and higher value. For any value between two values, a medium color will be automatically be chosen.
