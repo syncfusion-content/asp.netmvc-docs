@@ -371,7 +371,7 @@ RTEEditOptions(new RTEproperties() { EnableResize=true})</td>
 <tr>
 <td>
 TextArea </td><td>
-Html TextArea</td>
+HTML TextArea</td>
 <td>
 Control for multi-line plain-text editing</td>
 <td>

@@ -123,7 +123,7 @@ The following output is displayed as a result of the above code example.
 
 ## Template
 
-Templates are used to create custom card layout as per the user convenient. Html templates can be specified in the `Template` property of the `CardSettings` as an ID of the template’s HTML element.
+Templates are used to create custom card layout as per the user convenient. HTML templates can be specified in the `Template` property of the `CardSettings` as an ID of the template’s HTML element.
 
 You can use JsRender syntax in the template. For more information about JsRender syntax, please refer this [`link`](https://www.jsviews.com/).
 
