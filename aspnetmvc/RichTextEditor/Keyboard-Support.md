@@ -5,6 +5,7 @@ description: Keyboard navigation Support for RichTextEditor widget
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, Keyboard Support
 
 ---
 # Keyboard Support

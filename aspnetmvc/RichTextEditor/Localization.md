@@ -5,6 +5,7 @@ description: Initialize the RichTextEditor widget with specified Localization
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, Localization
 
 ---
 # Localization
