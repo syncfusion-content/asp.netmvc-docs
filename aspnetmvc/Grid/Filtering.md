@@ -177,7 +177,7 @@ The following output is displayed as a result of the above code example.
 
 ### Filtering Between Values
 
-By using the custom filter feature of the Excel filter, we can filter betwen values of the column. The following screenshot depicts the usage of "Between" option of the custom filter dialog.
+By using the custom filter feature of the Excel filter, we can filter between values of the column. The following screenshot depicts the usage of "Between" option of the custom filter dialog.
 
 {% include image.html url="filtering_images/filterbetween_img1.png" caption="Selecting between filter option from Excel filter dialog"%}
 
