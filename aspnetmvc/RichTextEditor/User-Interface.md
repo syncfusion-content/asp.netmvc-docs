@@ -267,6 +267,8 @@ Upon clicking the "Insert" button, the special character will be added to the RT
     }
 </script>
 
+{% endhighlight %}
+
 Define the CSS that will be applied to the custom tool.
 
 {% highlight html %}
