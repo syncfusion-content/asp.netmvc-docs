@@ -143,98 +143,61 @@ Please find the below table for default context menu items and its actions.
  </table>
  
 {% tabs %}
-{% highlight cshtml %}
+{% highlight RAZOR %}
 
-@(Html.EJ().Grid<object>("FlatGrid")
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
-    .EditSettings(edit =>
-    {
-        edit.AllowAdding().AllowDeleting().AllowEditing();
-    })
-    .ToolbarSettings(toolbar =>
-    {
-        toolbar.ShowToolbar().ToolbarItems(items =>
+    @(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .EditSettings(edit =>
         {
-            items.AddTool(ToolBarItems.Add);
-            items.AddTool(ToolBarItems.Edit);
-            items.AddTool(ToolBarItems.Delete);
-            items.AddTool(ToolBarItems.Update);
-            items.AddTool(ToolBarItems.Cancel);
-        });
-    })
-    .ContextMenuSettings(contextMenu =>
-    {
-        contextMenu.EnableContextMenu();
-    })
-    .AllowPaging()
-    .AllowSorting()
-    .AllowGrouping()
-    .Columns(col =>
-    {
-        col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+            edit.AllowAdding().AllowDeleting().AllowEditing();
+        })
+        .ToolbarSettings(toolbar =>
+        {
+            toolbar.ShowToolbar().ToolbarItems(items =>
+            {
+                items.AddTool(ToolBarItems.Add);
+                items.AddTool(ToolBarItems.Edit);
+                items.AddTool(ToolBarItems.Delete);
+                items.AddTool(ToolBarItems.Update);
+                items.AddTool(ToolBarItems.Cancel);
+            });
+        })
+        .ContextMenuSettings(contextMenu =>
+        {
+            contextMenu.EnableContextMenu();
+        })
+        .AllowPaging()
+        .AllowSorting()
+        .AllowGrouping()
+        .Columns(col =>
+        {
+            col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
 
-        col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").Format("{0:c2}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-        col.Field("ShipName").HeaderText("Ship Name").Width(150).Add();
+            col.Field("ShipName").HeaderText("Ship Name").Width(150).Add();
 
-    })
-)
+        })
+    )
 {% endhighlight  %}
 
 {% highlight c# %}
 
-namespace MvcApplication66.Controllers
-{
-    public class HomeController : Controller
+    namespace MVCSampleBrowser.Controllers
     {
-        public static List<Orders> order = new List<Orders>();
-        public ActionResult Index(){
-            GetData();
-            ViewBag.datasource = order;
-            return View();
-        }
-        public void GetData() {
-            int orderId = 10643;
-            int empId = 0;
-            for (int i = 1; i < 10; i++)
-            {
-                order.Add(new Orders(orderId + 1, "ALFKI", empId + 1, 32.38, "Alfreds Futterkiste "));
-                order.Add(new Orders(orderId + 2, "ANATR", empId + 2, 11.61, "Ana Trujillo Emparedados y helados"));
-                order.Add(new Orders(orderId + 3, "ANTON", empId + 3, 45.34, "Antonio Moreno Taquería"));
-                order.Add(new Orders(orderId + 4, "AROUT", empId + 4, 37.28, "Around the Horn"));
-                order.Add(new Orders(orderId + 5, "BERGS", empId + 5, 67.00, "Berglunds snabbköp"));
-                order.Add(new Orders(orderId + 6, "BLONP", empId + 6, 23.32, "Blondel père et fils"));
-                orderId += 6;
-                empId += 6;
-            }
-        }
-        public class Orders
+        public class GridController : Controller
         {
-            public Orders()
-            {
-
+            public ActionResult Index(){
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
             }
-            public Orders(long OrderId, string CustomerId, int EmployeeId, double Freight, string ShipName)
-            {
-                this.OrderID = OrderId;
-                this.CustomerID = CustomerId;
-                this.EmployeeID = EmployeeId;
-                this.Freight = Freight;
-                this.ShipName = ShipName;
-                
-            }
-            public long OrderID { get; set; }
-            public string CustomerID { get; set; }
-            public int EmployeeID { get; set; }
-            public double Freight { get; set; }
-            public string ShipName { get; set; }
         }
     }
-}
 
 {% endhighlight  %}
     
@@ -259,113 +222,58 @@ N> `AllowGrouping`, `AllowSorting` should be enabled to perform default context 
 
 ## Custom Context Menu
 
-Custom context menu is used to create your own menu item and its action. To add customized context menu items, you need to use [`contextMenuSettings.customContextMenuItems`](http://help.syncfusion.com/js/api/ejgrid#members:contextmenusettings-customcontextmenuitems "contextMenuSettings.customContextMenuItems") property and to bind required actions for this, use [`contextClick`](http://help.syncfusion.com/js/api/ejgrid#events:contextclick "contextClick") event.
+Custom context menu is used to create your own menu item and its action. To add customized context menu items, you need to use `ContextMenuSettings.CustomContextMenuItems` property and to bind required actions for this, use `ContextClick` event.
 
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight RAZOR %}
 
-@(Html.EJ().Grid<object>("FlatGrid")
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
-    .EditSettings(edit =>
-    {
-        edit.AllowAdding().AllowDeleting().AllowEditing();
-    })
-    .ToolbarSettings(toolbar =>
-    {
-        toolbar.ShowToolbar().ToolbarItems(items =>
+    @(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ContextMenuSettings(contextMenu =>
         {
-            items.AddTool(ToolBarItems.Add);
-            items.AddTool(ToolBarItems.Edit);
-            items.AddTool(ToolBarItems.Delete);
-            items.AddTool(ToolBarItems.Update);
-            items.AddTool(ToolBarItems.Cancel);
-        });
-    })
-    .ContextMenuSettings(contextMenu =>
-    {
-        contextMenu.EnableContextMenu();
-        contextMenu.ContextMenuItems(new List<string>(){
-            "Clear Selection"
-        });
-    })
-    .AllowPaging()
-    .AllowSorting()
-    .AllowGrouping()
-    .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
-    .Columns(col =>
-    {
-        col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+            contextMenu.EnableContextMenu();
+            contextMenu.DisableDefaultItems();
+            contextMenu.CustomContextMenuItems(c => c.AddItem("clear_selection", "Clear Selection"));
+        })
+        .AllowPaging()        
+        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .Columns(col =>
+        {
+            col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
 
-        col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").Format("{0:c2}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-        col.Field("ShipName").HeaderText("Ship Name").Width(150).Add();
+            col.Field("ShipCountry").HeaderText("Ship Country").Width(150).Add();
 
-    })
-)
-<script type="text/javascript">
-    function contextclick(args) {
-        if (args.text == "Clear Selection")
-            this.clearSelection();
-    }
-</script>
+        })
+    )
+    <script type="text/javascript">
+        function contextclick(args) {
+            if (args.text == "Clear Selection")
+                this.clearSelection();
+        }
+    </script>
 
 {% endhighlight  %}
 
 {% highlight c# %}
 
-namespace MvcApplication66.Controllers
-{
-    public class HomeController : Controller
+    namespace MVCSampleBrowser.Controllers
     {
-        public static List<Orders> order = new List<Orders>();
-        public ActionResult Index(){
-            GetData();
-            ViewBag.datasource = order;
-            return View();
-        }
-        public void GetData() {
-            int orderId = 10643;
-            int empId = 0;
-            for (int i = 1; i < 10; i++)
-            {
-                order.Add(new Orders(orderId + 1, "ALFKI", empId + 1, 32.38, "Alfreds Futterkiste "));
-                order.Add(new Orders(orderId + 2, "ANATR", empId + 2, 11.61, "Ana Trujillo Emparedados y helados"));
-                order.Add(new Orders(orderId + 3, "ANTON", empId + 3, 45.34, "Antonio Moreno Taquería"));
-                order.Add(new Orders(orderId + 4, "AROUT", empId + 4, 37.28, "Around the Horn"));
-                order.Add(new Orders(orderId + 5, "BERGS", empId + 5, 67.00, "Berglunds snabbköp"));
-                order.Add(new Orders(orderId + 6, "BLONP", empId + 6, 23.32, "Blondel père et fils"));
-                orderId += 6;
-                empId += 6;
-            }
-        }
-        public class Orders
+        public class GridController : Controller
         {
-            public Orders()
-            {
-
+            public ActionResult Index(){
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
             }
-            public Orders(long OrderId, string CustomerId, int EmployeeId, double Freight, string ShipName)
-            {
-                this.OrderID = OrderId;
-                this.CustomerID = CustomerId;
-                this.EmployeeID = EmployeeId;
-                this.Freight = Freight;
-                this.ShipName = ShipName;
-                
-            }
-            public long OrderID { get; set; }
-            public string CustomerID { get; set; }
-            public int EmployeeID { get; set; }
-            public double Freight { get; set; }
-            public string ShipName { get; set; }
         }
     }
-}
 
 {% endhighlight  %}
     
@@ -376,120 +284,68 @@ namespace MvcApplication66.Controllers
 
 ## Sub Context Menu
 
-Sub context menu is used to add customized sub menu to the custom context menu item. To add a sub context menu, you need to use [`contextMenuSettings.subContextMenu`](http://help.syncfusion.com/js/api/ejgrid#members:contextmenusettings-subcontextmenu "contextMenuSettings.subContextMenu") property and to bind required actions for this, use [`contextClick`](http://help.syncfusion.com/js/api/ejgrid#events:contextclick "contextClick") event.
+Sub context menu is used to add customized sub menu to the custom context menu item. To add a sub context menu, you need to use `ContextMenuSettings.SubContextMenu` property and to bind required actions for this, use `ContextClick` event.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight RAZOR %}
 
-@(Html.EJ().Grid<object>("FlatGrid")
-    .Datasource((IEnumerable<object>)ViewBag.datasource)
-    .EditSettings(edit =>
-    {
-        edit.AllowAdding().AllowDeleting().AllowEditing();
-    })
-    .ToolbarSettings(toolbar =>
-    {
-        toolbar.ShowToolbar().ToolbarItems(items =>
+    @(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .ContextMenuSettings(contextMenu =>
         {
-            items.AddTool(ToolBarItems.Add);
-            items.AddTool(ToolBarItems.Edit);
-            items.AddTool(ToolBarItems.Delete);
-            items.AddTool(ToolBarItems.Update);
-            items.AddTool(ToolBarItems.Cancel);
-        });
-    })
-    .ContextMenuSettings(contextMenu =>
-    {
-        contextMenu.EnableContextMenu();
-        contextMenu.ContextMenuItems(new List<string>(){
-            "Clear Selection",
-            "Hide Column"
-        });
-        contextMenu.SubContextMenu(submenu =>
+            contextMenu.EnableContextMenu();
+            contextMenu.DisableDefaultItems();
+            contextMenu.CustomContextMenuItems(c => 
+            { 
+                c.AddItem("clear_selection", "Clear Selection");
+                c.AddItem("Hide_column", "Hide Column");
+            });
+            contextMenu.SubContextMenu(submenu =>
+            {
+                submenu.ContextMenuItem("Hide Column").SubMenu(new List<string>() { "Order ID", "Customer ID", "Employee ID" }).Add();
+            });
+        })
+        .AllowPaging()        
+        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .Columns(col =>
         {
-            submenu.ContextMenuItem("Hide Column").SubMenu(new List<string>() { "Order ID", "Customer ID", "Employee ID" }).Add();
-        });
-     })
-    .AllowPaging()
-    .AllowSorting()
-    .AllowGrouping()
-    .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
-    .Columns(col =>
-    {
-        col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+            col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
 
-        col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
 
-        col.Field("Freight").Format("{0:c3}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").Format("{0:c2}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
 
-        col.Field("ShipName").HeaderText("Ship Name").Width(150).Add();
+            col.Field("ShipCountry").HeaderText("Ship Country").Width(150).Add();
 
-    })
-)
+        })
+    )
 
-<script type="text/javascript">
-    function contextclick(args) {
-        if (args.text == "Clear Selection")
-            this.clearSelection();
-        else if (args.text != "Hide Column")
-            this.hideColumns(args.text);
-    }
-</script>
+    <script type="text/javascript">
+        function contextclick(args) {
+            if (args.text == "Clear Selection")
+                this.clearSelection();
+            else if (args.text == "Hide Column")
+                this.hideColumns(args.text);
+        }
+    </script>
 
 {% endhighlight  %}
 
 {% highlight c# %}
 
-namespace MvcApplication66.Controllers
-{
-    public class HomeController : Controller
+    namespace MVCSampleBrowser.Controllers
     {
-        public static List<Orders> order = new List<Orders>();
-        public ActionResult Index(){
-            GetData();
-            ViewBag.datasource = order;
-            return View();
-        }
-        public void GetData() {
-            int orderId = 10643;
-            int empId = 0;
-            for (int i = 1; i < 10; i++)
-            {
-                order.Add(new Orders(orderId + 1, "ALFKI", empId + 1, 32.38, "Alfreds Futterkiste "));
-                order.Add(new Orders(orderId + 2, "ANATR", empId + 2, 11.61, "Ana Trujillo Emparedados y helados"));
-                order.Add(new Orders(orderId + 3, "ANTON", empId + 3, 45.34, "Antonio Moreno Taquería"));
-                order.Add(new Orders(orderId + 4, "AROUT", empId + 4, 37.28, "Around the Horn"));
-                order.Add(new Orders(orderId + 5, "BERGS", empId + 5, 67.00, "Berglunds snabbköp"));
-                order.Add(new Orders(orderId + 6, "BLONP", empId + 6, 23.32, "Blondel père et fils"));
-                orderId += 6;
-                empId += 6;
-            }
-        }
-        public class Orders
+        public class GridController : Controller
         {
-            public Orders()
-            {
-
+            public ActionResult Index(){
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
             }
-            public Orders(long OrderId, string CustomerId, int EmployeeId, double Freight, string ShipName)
-            {
-                this.OrderID = OrderId;
-                this.CustomerID = CustomerId;
-                this.EmployeeID = EmployeeId;
-                this.Freight = Freight;
-                this.ShipName = ShipName;
-                
-            }
-            public long OrderID { get; set; }
-            public string CustomerID { get; set; }
-            public int EmployeeID { get; set; }
-            public double Freight { get; set; }
-            public string ShipName { get; set; }
         }
     }
-}
 
 {% endhighlight  %}
     
