@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to | NumericTextBox | ASP.NET MVC | Syncfusion
+title: How To | NumericTextBox | ASP.NET MVC | Syncfusion
 description: how to
 platform: ejmvc
 control: NumericTextBox
