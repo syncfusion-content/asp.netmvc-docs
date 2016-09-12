@@ -13,7 +13,7 @@ documentation: ug
  
 ![](Overview_images/Overview_images_img1.png)
 
-## Key features:
+##Key features:
 
  * 2 types of data source mapping (TableMapping, CellMapping)
  * Color mapping

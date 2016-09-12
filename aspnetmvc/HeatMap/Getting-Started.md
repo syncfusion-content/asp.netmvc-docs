@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Essential HeatMap for ASP.NET MVC
-description: Getting started walk through to create your first HeatMap.
+title: Getting started with Syncfusion Essential HeatMap for JavaScript
+description: Getting started walk through to create your first Heat map.
 platform: ejmvc
 control: HeatMap
 documentation: ug
