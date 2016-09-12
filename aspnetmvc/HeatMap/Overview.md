@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Explore the features of the HeatMap control.
+title: HeatMap | HeatMap | ASP.NET MVC | Syncfusion
 description: Explore the features of the HeatMap control.
 platform: ejmvc
 control: HeatMap
@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview
 
-**Essential HeatMap MVC** represents tabular data values as gradient colors instead of numbers. Low and high values are different colors with different gradients.
+**Essential HeatMap ASP.NET MVC** represents tabular data values as gradient colors instead of numbers. Low and high values are different colors with different gradients.
  
 ![](Overview_images/Overview_images_img1.png)
 
-## Key features:
+##Key features:
 
  * 2 types of data source mapping (TableMapping, CellMapping)
  * Color mapping
