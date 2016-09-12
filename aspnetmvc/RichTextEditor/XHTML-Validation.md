@@ -5,6 +5,7 @@ description: XHTML Validation to format the RichTextEditor widget's content
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, XHTML Validation
 
 ---
 # XHTML Validation
@@ -13,12 +14,12 @@ The editor provides option to validate its content through the EnableXHTML prope
 
 {% highlight html %}
 
-      @{Html.EJ().RTE("rteSample").Width("820px").ContentTemplate(@<div>
-              The RichTextEditor (RTE) control enables you to edit the contents with insert table and images
-              It also provides a toolbar that helps to apply rich text formats to the content entered in the TextArea
-          </div>)
-          .EnableXHTML(true)
-          .Render();}
+@{Html.EJ().RTE("rteSample").Width("820px").ContentTemplate(@<div>
+        The RichTextEditor (RTE) control enables you to edit the contents with insert table and images
+        It also provides a toolbar that helps to apply rich text formats to the content entered in the TextArea
+</div>)
+.EnableXHTML(true)
+.Render();}
 
 {% endhighlight %}
 

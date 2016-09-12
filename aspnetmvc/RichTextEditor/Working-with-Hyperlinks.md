@@ -5,6 +5,7 @@ description: Working with Hyperlinks customization in RichTextEditor widget
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, Hyperlinks
 
 ---
 
@@ -28,19 +29,19 @@ N> Leave this textbox blank if you want to display the full link as hyperlink in
 
 {% highlight html %}
 
-    @{
-        List<String> toolsList = new List<string>() { "links" };
-        List<String> links = new List<string>() { "createLink", "removeLink" };
-    }
+@{
+    List<String> toolsList = new List<string>() { "links" };
+    List<String> links = new List<string>() { "createLink", "removeLink" };
+}
 
-    @{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
-        The Rich Text Editor (RTE) control is an easy to render in client side. 
-        Customer easy to edit the contents and get the HTML content for the displayed content. 
-        A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+@{Html.EJ().RTE("rteSample").Width("800px").ContentTemplate(@<div>
+    The Rich Text Editor (RTE) control is an easy to render in client side. 
+    Customer easy to edit the contents and get the HTML content for the displayed content. 
+    A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
 
-    </div>)
-    .ToolsList(toolsList).Tools(tool => tool.Links(links))
-    .Render();}
+</div>)
+.ToolsList(toolsList).Tools(tool => tool.Links(links))
+.Render();}
     
 {% endhighlight %}
 

@@ -5,6 +5,7 @@ description: XHTML Validation to format the RichTextEditor widget's content
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, HTML helper, Strongly typed
 
 ---
 # Strongly typed HTML helper 
@@ -15,10 +16,10 @@ Add a class named "RTE" in the Models folder and replace the code with the follo
 
 {% highlight html %}
 
-    public class RTE
-    {
-            public string value { get; set; }
-    }
+public class RTE
+{
+    public string value { get; set; }
+}
 
 {% endhighlight %}
 
@@ -26,13 +27,13 @@ In the controller, pass the model to the View.
 
 {% highlight html %}
 
-    using UserInterface.Models;
-    public ActionResult RichTextEditorFeatures()
-    {
-        RTE obj = new RTE ();    
-        obj.value = "JavaScript is the programming language of HTML and the Web.";
-        return View(obj);
-    }
+using UserInterface.Models;
+public ActionResult RichTextEditorFeatures()
+{
+    RTE obj = new RTE ();    
+    obj.value = "JavaScript is the programming language of HTML and the Web.";
+    return View(obj);
+}
 
 {% endhighlight %}
 
@@ -40,13 +41,12 @@ In View, invoke the strongly typed RichTextEditor helper with the lambda express
 
 {% highlight html %}
 
-    @model UserInterface.Models.RTE
+@model UserInterface.Models.RTE
 
-    @using (Html.BeginForm())
-    { 
-               @Html.EJ().RTEFor(model => model.value )
-    
-    }
+@using (Html.BeginForm())
+{ 
+    @Html.EJ().RTEFor(model => model.value )
+}
 
 {% endhighlight %}
 

@@ -5,6 +5,7 @@ description: Configuring and working with Image and File browser in RichTextEdit
 platform: ASP.NET MVC
 control: RTE
 documentation: ug
+keywords: RichTextEditor, File browser, Image, Image Browser
 
 ---
 
@@ -18,19 +19,19 @@ If you want to insert an image from online source like Google, ping, etc., you n
 
 {% highlight html %}
 
-    @{
-        List<String> toolsList = new List<string>() { "images" };
-        List<String> images = new List<string>() { "image" };
-    }
-    @{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
-        The Rich Text Editor (RTE) control is an easy to render in client side.
-        Customer easy to edit the contents and get the HTML content for the displayed content.
-        A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+@{
+    List<String> toolsList = new List<string>() { "images" };
+    List<String> images = new List<string>() { "image" };
+}
+@{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
+    The Rich Text Editor (RTE) control is an easy to render in client side.
+    Customer easy to edit the contents and get the HTML content for the displayed content.
+    A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
 
-    </p>)
-    .ShowFooter(true)
-    .ToolsList(toolsList)
-    .Tools(tool => tool.Images(images)).Render();}
+</p>)
+.ShowFooter(true)
+.ToolsList(toolsList)
+.Tools(tool => tool.Images(images)).Render();}
       
 {% endhighlight %}
 
@@ -43,56 +44,56 @@ Configure the ImageBrowser and FileBrowser property to insert an image from your
 
 {% highlight html %}
 
-    @{
-        List<String> toolsList = new List<string>() { "images" };
-        List<String> images = new List<string>() { "image" };
-    }
-    @{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
-        The Rich Text Editor (RTE) control is an easy to render in client side.
-        Customer easy to edit the contents and get the HTML content for the displayed content.
-        A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
-    </p>)
-    .ShowFooter(true)
-    .Tools(tool => tool.Images(images))
-    .ToolsList(toolsList)
-    .ImageBrowser(img => img.FilePath("~/FileExplorerContent/")
-        .ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg")
-        .AjaxAction(@Url.Content("FileActionMethods")))
-    .FileBrowser(file => file.FilePath("~/FileExplorerContent/")
-        .ExtensionAllow("*.png,*.txt,*.jpg,*.docx")
-        .AjaxAction("FileActionMethods"))
-    .Render();}
+@{
+    List<String> toolsList = new List<string>() { "images" };
+    List<String> images = new List<string>() { "image" };
+}
+@{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
+    The Rich Text Editor (RTE) control is an easy to render in client side.
+    Customer easy to edit the contents and get the HTML content for the displayed content.
+    A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+</p>)
+.ShowFooter(true)
+.Tools(tool => tool.Images(images))
+.ToolsList(toolsList)
+.ImageBrowser(img => img.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg")
+    .AjaxAction(@Url.Content("FileActionMethods")))
+.FileBrowser(file => file.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.txt,*.jpg,*.docx")
+    .AjaxAction("FileActionMethods"))
+.Render();}
 
 {% endhighlight %}
 
 {% highlight html %}
 
-        public ActionResult FileActionMethods(Syncfusion.JavaScript.FileExplorerParams args)
-        {
-                Syncfusion.JavaScript.FileExplorerOperations opeartion = new Syncfusion.JavaScript.FileExplorerOperations();
-                    switch (args.ActionType)
-                    {
-                        case "Read":
-                            return Json(opeartion.Read(args.Path, args.ExtensionsAllow));
-                        case "CreateFolder":
-                            return Json(opeartion.CreateFolder(args.Path, args.Name));
-                        case "Paste":
-                            return Json(opeartion.Paste(args.LocationFrom, args.LocationTo, args.Names, args.Action, args.CommonFiles));
-                        case "Remove":
-                            return Json(opeartion.Remove(args.Names, args.Path));
-                        case "Rename":
-                            return Json(opeartion.Rename(args.Path, args.Name, args.NewName, args.CommonFiles));
-                        case "GetDetails":
-                            return Json(opeartion.GetDetails(args.Path, args.Names));
-                        case "Download":
-                            opeartion.Download(args.Path, args.Names);
-                            break;
-                        case "Upload":
-                            opeartion.Upload(args.FileUpload, args.Path);
-                            break;
-                    }
-                return Json("");
-        }
+public ActionResult FileActionMethods(Syncfusion.JavaScript.FileExplorerParams args)
+{
+    Syncfusion.JavaScript.FileExplorerOperations opeartion = new Syncfusion.JavaScript.FileExplorerOperations();
+    switch (args.ActionType)
+    {
+        case "Read":
+            return Json(opeartion.Read(args.Path, args.ExtensionsAllow));
+        case "CreateFolder":
+            return Json(opeartion.CreateFolder(args.Path, args.Name));
+        case "Paste":
+            return Json(opeartion.Paste(args.LocationFrom, args.LocationTo, args.Names, args.Action, args.CommonFiles));
+        case "Remove":
+            return Json(opeartion.Remove(args.Names, args.Path));
+        case "Rename":
+            return Json(opeartion.Rename(args.Path, args.Name, args.NewName, args.CommonFiles));
+        case "GetDetails":
+            return Json(opeartion.GetDetails(args.Path, args.Names));
+        case "Download":
+            opeartion.Download(args.Path, args.Names);
+            break;
+        case "Upload":
+            opeartion.Upload(args.FileUpload, args.Path);
+            break;
+    }
+    return Json("");
+}
 
 {% endhighlight %} 
 
@@ -118,6 +119,7 @@ You can resize an image manually by selecting an image. And drag the handle unti
 
 ![](ImageandFilebrowser_images/ImageandFilebrowser_img4.png)
 
+N> Set the default height and width of the Images which was inserted into the RTE text area in “change” event of RTE - {{'[Link](http://jsplayground.syncfusion.com/Sync_rghpsadi)'| markdownify }}
 
 ### Set Width and Height
 
@@ -126,23 +128,106 @@ The editor provides you to set the Width and Height properties to change the siz
 {% highlight html %}
 
 	
-    @{
-        List<String> toolsList = new List<string>() { "images" };
-        List<String> images = new List<string>() { "image" };
-    }
-    @{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
-        The Rich Text Editor
-        (RTE) control is an easy to render in client side. Customer easy to edit the contents
-        and get the HTML content for the displayed content. A rich text editor control provides
-        users with a toolbar that helps them to apply rich text formats to the text entered
-        in the text area.
-    </p>).ShowFooter(true)
-    .ToolsList(toolsList)
-    .Tools(tool => tool.Images(images))
-    .ShowDimensions(true)
-    .Render();}
+@{
+    List<String> toolsList = new List<string>() { "images" };
+    List<String> images = new List<string>() { "image" };
+}
+@{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
+    The Rich Text Editor
+    (RTE) control is an easy to render in client side. Customer easy to edit the contents
+    and get the HTML content for the displayed content. A rich text editor control provides
+    users with a toolbar that helps them to apply rich text formats to the text entered
+    in the text area.
+</p>).ShowFooter(true)
+.ToolsList(toolsList)
+.Tools(tool => tool.Images(images))
+.ShowDimensions(true)
+.Render();}
   
 
 {% endhighlight %}
 
 ![](ImageandFilebrowser_images/ImageandFilebrowser_img5.png)
+
+## Suppression of the Image Browser
+
+The General and Advanced tabs in the RTE Image browser can be removed by setting its corresponding display CSS property to none.
+
+{% highlight CSS %}
+
+    <style type="text/css" class="cssStyles">
+        div.e-rte-imageTab.e-tab.e-js.e-widget {
+            display: none;
+        }
+    </style>
+    
+ {% endhighlight %}
+ 
+ Can remove the Add Newfolder button by using [removeToolbarItem](https://help.syncfusion.com/js/api/ejrte#methods:removetoolbaritem) property of Image Browser in the RTE create event. 
+
+{% highlight html %}
+
+@{
+    List<String> toolsList = new List<string>() { "images" };
+    List<String> images = new List<string>() { "image" };
+}
+@{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
+    The Rich Text Editor (RTE) control is an easy to render in client side.
+    Customer easy to edit the contents and get the HTML content for the displayed content.
+    A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+</p>)
+.ShowFooter(true)
+.Tools(tool => tool.Images(images))
+.ToolsList(toolsList)
+.ImageBrowser(img => img.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg")
+    .AjaxAction(@Url.Content("FileActionMethods")))
+.FileBrowser(file => file.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.txt,*.jpg,*.docx")
+    .AjaxAction("FileActionMethods"))
+.ClientSideEvents(e => e.Create("onCreate"))
+.Render();}
+
+<script>
+
+    function onCreate(args){
+        this._explorerObj.removeToolbarItem("NewFolder");
+    }
+    
+</script>
+    
+ {% endhighlight %}
+ 
+ In RTE control, there is no direct support for the autoUpload option. But this can be achieved by enabling the autoUpload at create event of RTE.
+
+{% highlight html %}
+
+@{
+    List<String> toolsList = new List<string>() { "images" };
+    List<String> images = new List<string>() { "image" };
+}
+@{Html.EJ().RTE("rteSample").Width("100%").ContentTemplate(@<p>
+    The Rich Text Editor (RTE) control is an easy to render in client side.
+    Customer easy to edit the contents and get the HTML content for the displayed content.
+    A rich text editor control provides users with a toolbar that helps them to apply rich text formats to the text entered in the text area.
+</p>)
+.ShowFooter(true)
+.Tools(tool => tool.Images(images))
+.ToolsList(toolsList)
+.ImageBrowser(img => img.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.gif,*.jpg,*.jpeg")
+    .AjaxAction(@Url.Content("FileActionMethods")))
+.FileBrowser(file => file.FilePath("~/FileExplorerContent/")
+    .ExtensionAllow("*.png,*.txt,*.jpg,*.docx")
+    .AjaxAction("FileActionMethods"))
+.ClientSideEvents(e => e.Create("onCreate"))
+.Render();}
+
+<script>
+    function onCreate(args){
+        this._explorerObj._uploadtag.data("ejUploadbox").option("autoUpload", true);
+    }
+    
+</script>
+    
+ {% endhighlight %}

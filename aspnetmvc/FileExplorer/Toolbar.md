@@ -186,7 +186,7 @@ The Search bar is the textbox which is used to search the files from the current
 <tr>
 <td>
 Sort by <br/><br/></td><td>
-It's used to sorting the files from the current directory.The sorting can be done based on the columns availbale from grid,in both ascending and descending order.<br/><br/><br/><br/></td>
+It's used to sorting the files from the current directory.The sorting can be done based on the columns available from grid,in both ascending and descending order.<br/><br/><br/><br/></td>
 </tr>
 </table>
 
