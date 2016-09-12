@@ -17,7 +17,7 @@ In the view page, add FileExplorer helper and specify the multi selection as tru
         @(Html.EJ().FileExplorer("fileExplorer")
             .Path("~/FileExplorerContent/")
             .AjaxAction(@Url.Content("FileActionDefault"))        
-            .AllowMultiSelection(true)
+            .AllowMultiSelection(false)
         )
         
     {% endhighlight %}
