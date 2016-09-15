@@ -528,7 +528,7 @@ The following code example describes the above behavior.
 	  @(Html.EJ().Grid<OrdersView>("Scrolling")
             .Datasource((IEnumerable<object>)ViewBag.datasource)
             .AllowScrolling()
-            .ScrollSettings(col => { col.Width(550).Height(300).AllowVirtualScrolling(true).EnableVirtualization(true); })             
+            .ScrollSettings(col => { col.Width(550).Height(300).EnableVirtualization(true); })             
             .Columns(col =>
             {
                 col.Field("OrderID").Add();
