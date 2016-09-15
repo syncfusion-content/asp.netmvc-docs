@@ -71,6 +71,51 @@ The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img1.png)
 
+## Row Selection By Checkbox Column
+
+Row selection by Checkbox can be enabled using column `Type` as `checkbox`. It enables grid to select rows using checkbox column. It also provides the option to select/deselect all the rows in Grid using a checkbox in the corresponding column header. 
+
+Without `Field` property of Checkox column, it acts as a template column and if sorting, editing, etc., are need to be handled by checkbox column, then it is necessary to specify `Field` property.
+
+The following code example describes the above behavior.
+
+{% tabs %} 
+{% highlight razor %}
+
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()          
+            .Columns(col =>
+            {
+                col.Type("Checkbox").Width(50).Add();
+                col.Field("OrderID").IsPrimaryKey(true).Width(80).TextAlign(TextAlign.Right).Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Width(75).TextAlign(TextAlign.Right).Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Width(75).TextAlign(TextAlign.Right).Add();  
+            })
+        )
+{% endhighlight  %}
+{% highlight c# %}
+		
+        namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         } 
+{% endhighlight  %}
+{% endtabs %}
+
+The following output is displayed as a result of the above code example
+
+![](Selection_images/Selection_img12.png)
 
 ## Cell Selection
 
