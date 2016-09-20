@@ -52,9 +52,6 @@ From below you can see the available toolbar items and its categorization:
             List<String> searchBar = new List<string>() {
                 "Searchbar"
             };
-            List<String> sortBy = new List<string>() {
-                "SortBy"
-            };
         }
         @*all tools categories are placed in the toolbar by the below order*@
         @{
@@ -66,8 +63,7 @@ From below you can see the available toolbar items and its categorization:
                 "editing",
                 "copyPaste",
                 "getProperties",
-                "searchBar",
-                "sortBy"
+                "searchBar"
             };
         }
     
@@ -182,11 +178,6 @@ It displays the details of the current selected file or folder.<br/><br/><br/><b
 Search bar<br/><br/></td>
 <td>
 The Search bar is the textbox which is used to search the files from the current directory. It list the files based on the user search.<br/><br/>The search behavior of the “search bar” can be customize, for details check <br/>{{'[here](#_Search_bar)'| markdownify }}.<br/><br/></td>
-</tr>
-<tr>
-<td>
-Sort by <br/><br/></td><td>
-It's used to sorting the files from the current directory.The sorting can be done based on the columns available from grid,in both ascending and descending order.<br/><br/><br/><br/></td>
 </tr>
 </table>
 
