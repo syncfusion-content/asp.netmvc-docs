@@ -59,7 +59,6 @@ You can specify the click event to corresponding image/text of **Radial Menu** i
 
 You can add the page content in RTE control by referring to this section
 
-{% highlight html %}
 
 {% highlight razor %}
 
@@ -210,6 +209,7 @@ You can add slidersettings in radial menu items by referring this section.
             }
 
 {% endhighlight %}
+
 Add the following script in your code.
     
 {% highlight javascript %}
