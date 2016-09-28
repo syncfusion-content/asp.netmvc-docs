@@ -722,4 +722,4 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-The complete code sample can be found [here](http://www.syncfusion.com/uploads/user/directTrac/General/MapsMVCGettingStarted2077091750.zip)
+The complete code sample can be found [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Map_GettingStarted-1349939768)
