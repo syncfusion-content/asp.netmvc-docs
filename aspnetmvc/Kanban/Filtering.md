@@ -13,7 +13,7 @@ Filtering allows to filter the collection of cards from `dataSource` which meets
 
 You can also define display tip to describe filter definition to user using property `Description`. If the `Description` property is not defined, given `Text` will act as display tip.
 
-We can also customize filter option through external button or [`customtoolbaritems`](https://help.syncfusion.com/js/api/ejkanban#members:customtoolbaritems) by using [`filterCards()`](https://help.syncfusion.com/js/api/ejkanban#methods:filtercards) method.
+We can also customize filter option through external button or [`customToolbarItems`](https://help.syncfusion.com/js/api/ejkanban#members:customtoolbaritems) by using [`filterCards()`](https://help.syncfusion.com/js/api/ejkanban#methods:filtercards) method.
 
 The following code example describes the above behavior.
 
