@@ -11,7 +11,7 @@ platform: ejmvc
 
 The Kanban control has support for dynamic insertion, updating and deletion of cards. 
 
-Set `AllowEditing` and `AllowAdding` property as true to enable editing/inserting respectively. The primary key for the data source should be defined in `PrimayKey`, for editing to work properly. 
+Set `AllowEditing` and `AllowAdding` property as true to enable editing/inserting respectively. The primary key for the data source should be defined in `PrimaryKey`, for editing to work properly. 
 
 You can start the edit action by double clicking the particular card. Similarly, you can add new card to Kanban either by double clicking the particular cell or on an external button which is bound to call [`addCard`](https://help.syncfusion.com/js/api/ejkanban#methods:kanbanedit-addcard) method of Kanban. 
 
@@ -380,7 +380,7 @@ Control for multi-line plain-text editing</td>
 </table>
 
 N> 1. If `EditType` is not set, then by default it will display HTML textbox while editing a card.
-N> 2. For `EditType` property you can assign either string value (“numericedit”) or `enum` value (`ej.Kanban.EditingType.Numeric`).
+N> 2. For `EditType` property you can assign either string value (`numericedit`) or `enum` value (`ej.Kanban.EditingType.Numeric`).
 
 The following code example describes the above behavior.
 
