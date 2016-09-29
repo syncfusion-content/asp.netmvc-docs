@@ -30,12 +30,14 @@ The steps to install the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio 
 
    **Name**: Name of the package that listed in Available package sources  
    **Source**: Syncfusion ASP.NET MVC NuGet Package feed URL
-   [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
+   [http://nuget.syncfusion.com/aspnetmvc](http://nuget.syncfusion.com/aspnetmvc)
     
    ![](installation-and-deployment_images/NuGetConfig2.jpeg)
 
    N> The `Source` text box in the above image denotes the location of the NuGet packages and the `Name` section, allows you to provide a unique name for NuGet Packages Source.
-   
+   You may face the NuGet package installation/restore error while installing the Syncfusion ASP.NET Core NuGet packages from Syncfusion Public feed URL since some URL redirecting issue in NuGet Package Manager. To resolve this, use the below Syncfusion ASP.NET MVC NuGet feed link. 
+   Syncfusion ASP.NET MVC NuGet Full Feed Link: [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
+ 
 I> Syncfusion other platforms NuGet packages feed links are available [here](http://nuget.syncfusion.com/)
 
 ### NuGet Installation
