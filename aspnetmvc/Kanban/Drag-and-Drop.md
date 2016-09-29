@@ -17,7 +17,7 @@ N> It is not possible transit cards to other swim lanes through Drag and Drop.
 
 Prioritizing cards is easy with drag-and-drop re-ordering that helps you to categorize most important work at the top. Cards can be categorized with priority by mapping specific database field into `Priority` property.
 
-`RankId` defined in the dataSource which is consist priority of cards. The `RankId` will be changed while card ordering changes through `DragandDrop` and `Editing`.
+`RankId` defined in the dataSource which is consist priority of cards. The `RankId` will be changed while card ordering changes through `Drag and Drop` and `Editing`.
 
 The following code example describes the above behavior.
 
