@@ -446,7 +446,7 @@ To consume Web API service, set the service link to the `URL` property of Grid `
 
 DataOperation queries such as sorting, filtering, etc., would be sent to Web API Service corresponding to Grid actions performed and they need to be handled manually as Web API Service does not process it by default.
 
- N> In ASP.NET core default casing as camelcase.So, we need to return the data as JSON and the JSON object must contain a property as `result` with dataSource as its value and one more property `count` with the dataSource total records count as its value.
+ N> In ASP.NET core default casing as camelCase.So, we need to return the data as JSON and the JSON object must contain a property as `result` with dataSource as its value and one more property `count` with the dataSource total records count as its value.
  
 The following code example describes the above behavior.
     
