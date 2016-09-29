@@ -103,7 +103,7 @@ The following code example describes the above behavior.
 
 {% highlight html %}
 
-        <!‚ÄîColumn Template -->
+        <!óColumn Template -->
         <script id="column1" type="text/x-jsrender">
             <span class="e-backlog e-icon"></span> Backlog
         </script>
@@ -282,9 +282,9 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img3.png)
 
-## IsCollasped 
+## IsCollapsed 
 
-You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use ‚ÄúExpand/Collapse‚Äù Column.
+You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use ìExpand/Collapseî Column.
 
 The following code example describes the above behavior.
 
