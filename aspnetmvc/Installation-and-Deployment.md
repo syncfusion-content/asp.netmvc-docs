@@ -35,7 +35,7 @@ The steps to install the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio 
    ![](installation-and-deployment_images/NuGetConfig2.jpeg)
 
    N> The `Source` text box in the above image denotes the location of the NuGet packages and the `Name` section, allows you to provide a unique name for NuGet Packages Source.
-   Syncfusion Asp.Net.Core NuGet packages are available in [ASP.NET MVC] (http://nuget.syncfusion.com/aspnetmvc) NuGet repository until v14.2.0.32. You may face the NuGet package installation/restore error while installing the Syncfusion ASP.NET Core NuGet packages from Syncfusion Public feed URL since some URL redirecting issue in NuGet Package Manager. To resolve this, use the below Syncfusion ASP.NET MVC NuGet feed link. 
+   Syncfusion Asp.Net.Core NuGet packages are available in [ASP.NET MVC](http://nuget.syncfusion.com/aspnetmvc) NuGet repository until v14.2.0.32. You may face the NuGet package installation/restore error while installing the Syncfusion ASP.NET Core NuGet packages from Syncfusion Public feed URL since some URL redirecting issue in NuGet Package Manager. To resolve this, use the below Syncfusion ASP.NET MVC NuGet feed link. 
    Syncfusion ASP.NET MVC NuGet Full Feed Link: [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
  
 I> Syncfusion other platforms NuGet packages feed links are available [here](http://nuget.syncfusion.com/)
