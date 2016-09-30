@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Column | Kanban | ASP.NET MVC | Syncfusion
 description: Column
