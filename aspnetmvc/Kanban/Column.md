@@ -103,7 +103,7 @@ The following code example describes the above behavior.
 
 {% highlight html %}
 
-        <!—Column Template -->
+        <!-- Column Template -->
         <script id="column1" type="text/x-jsrender">
             <span class="e-backlog e-icon"></span> Backlog
         </script>
