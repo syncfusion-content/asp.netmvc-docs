@@ -614,7 +614,7 @@ The following chart types can be rendered as cylinder in both 2D and in 3D view.
 
 {% endhighlight %}
 
-![](/js/Chart/Chart-Types_images/Chart-Types_img91.png)
+![](Chart-Types_images/Chart-Types_img91.png)
 
 ## RangeColumn Chart
 
