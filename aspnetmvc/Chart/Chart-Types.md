@@ -565,7 +565,7 @@ N> Width of a column also depends upon the *ColumnSpacing* property, because *Co
 ![](Chart-Types_images/Chart-Types_img88.png)
 
 ### Column with rounded corners
-Corners of the column chart can be customized by setting value to the **cornerRadius** property.
+Corners of the column chart can be customized by setting value to the **CornerRadius** property.
 
 {% highlight cshtml %}
 
