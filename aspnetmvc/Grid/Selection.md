@@ -71,6 +71,51 @@ The following output is displayed as a result of the above code example
 
 ![](Selection_images/Selection_img1.png)
 
+## Multiple Row Selection using Checkbox Column
+
+Select multiple rows in grid by using Checkbox column and it can be enabled by set column `Type` as `checkbox`. It also provides the option to select/deselect all the rows in Grid using a checkbox in the corresponding column header.
+
+If the `Field` property of Checkbox column is not defined, then it acts as a template column. So `Field` property is necessary to perform grid actions like sorting, editing, etc., for the corresponding Checkbox column.
+
+The following code example describes the above behavior.
+
+{% tabs %} 
+{% highlight razor %}
+
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .AllowSelection()          
+            .Columns(col =>
+            {
+                col.Type("Checkbox").Width(50).Add();
+                col.Field("OrderID").IsPrimaryKey(true).Width(80).TextAlign(TextAlign.Right).Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Width(75).TextAlign(TextAlign.Right).Add();
+                col.Field("Freight").HeaderText("Freight").Format("{0:C}").Width(75).TextAlign(TextAlign.Right).Add();  
+            })
+        )
+{% endhighlight  %}
+{% highlight c# %}
+		
+        namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         } 
+{% endhighlight  %}
+{% endtabs %}
+
+The following output is displayed as a result of the above code example
+
+![](Selection_images/Selection_img12.png)
 
 ## Cell Selection
 
