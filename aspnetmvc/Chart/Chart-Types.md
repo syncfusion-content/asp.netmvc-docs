@@ -588,6 +588,34 @@ N> Space between columns will also affect the width of the column. For example, 
 ![](Chart-Types_images/Chart-Types_img89.png)
 
 
+### Cylindrical Chart
+
+To render a cylindrical chart, set the [`columnFacet`](../api/ejchart.html#members:series-columnfacet) property as "cylinder" in the chart series along with the series type. 
+
+The following chart types can be rendered as cylinder in both 2D and in 3D view.
+
+* Column Chart, Bar Chart, Stacked Column Chart, Stacked Bar Chart, 100% Stacked Column Chart, 100% Stacked Bar Chart.
+
+
+{% highlight cshtml %}
+
+    @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .Series(sr =>
+     {
+         // To change the shape of the series.
+         sr.Type(SeriesType.Line).ColumnFacet(ColumnFacet.Cylinder).Add();
+     })
+
+     //...
+)
+
+{% endhighlight %}
+
+![](/js/Chart/Chart-Types_images/Chart-Types_img91.png)
+
 ## RangeColumn Chart
 
 To render a Range Column Chart, set the Type as **RangeColumn** in the chart series. To change the RangeColumn color, use the Fill property of the series.
