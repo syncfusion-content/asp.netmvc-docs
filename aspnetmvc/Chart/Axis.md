@@ -859,7 +859,7 @@ The **Title** property in the axis provides options to customize the text and fo
 
 ![](Axis_images/axis_img27.png)
 
-You can modify the position of the axis title either inside or outside the chart area using the property **position**. By default, it will be placed outside the chart area. In addition, you can also change the alignment of the title to near, far and center by **alignment** property, using **offset** property you can change the position with respect to pixels.
+You can modify the position of the axis title either inside or outside the chart area using the property **Position**. By default, it will be placed outside the chart area. In addition, you can also change the alignment of the title to near, far and center by **Alignment** property, using **Offset** property you can change the position with respect to pixels.
 
 {% highlight cshtml %}
 
@@ -1204,7 +1204,7 @@ Axis can be customized with multiple levels of labels using the **MultiLevelLabe
 
 {% endhighlight %}
 
-![](/js/Chart/Axis_images/axis_img57.png)
+![](Axis_images/axis_img57.png)
 
 ### Customizing the multi-Level labels
 The color, width and type of the border can be customized. The default border type is **Rectangle**. And the other supported border types are namely brace, curly brace, without top/bottom border and none. 
@@ -1219,9 +1219,9 @@ The color, width and type of the border can be customized. The default border ty
 
 {% endhighlight %}
 
-![](/js/Chart/Axis_images/axis_img58.png)
+![](Axis_images/axis_img58.png)
 
-The text of the labels can be customized using the **text** and **font** properties 
+The text of the labels can be customized using the **Text** and **Font** properties 
 
 {% highlight cshtml %}
 
@@ -1233,9 +1233,9 @@ The text of the labels can be customized using the **text** and **font** propert
      
 {% endhighlight %}
 
-![](/js/Chart/Axis_images/axis_img59.png)
+![](Axis_images/axis_img59.png)
 
-You can change the alignment of the text to far, near and center position using the **textAlignment** property. By default, the text will be center aligned. 
+You can change the alignment of the text to far, near and center position using the **TextAlignment** property. By default, the text will be center aligned. 
 
 {% highlight cshtml %}
 
@@ -1247,9 +1247,9 @@ You can change the alignment of the text to far, near and center position using 
        
 {% endhighlight %}
 
-![](/js/Chart/Axis_images/axis_img60.png)
+![](Axis_images/axis_img60.png)
 
-You can trim, wrap or wrapandtrim the text if it exceeds the maximum text width value using the property **textOverflow**
+You can trim, wrap or wrapandtrim the text if it exceeds the maximum text width value using the property **TextOverflow**
 
 {% highlight cshtml %}
 
@@ -1263,7 +1263,7 @@ You can trim, wrap or wrapandtrim the text if it exceeds the maximum text width 
 
 The below screenshot shows the trimmed multi-level labels
 
-![](/js/Chart/Axis_images/axis_img61.png)
+![](Axis_images/axis_img61.png)
 
-And these labels can be placed in various rows using the **level** property.
-[Click](http://mvc.syncfusion.com/demos/web/chart/multilevellabels)here to view the multi-level labels online demo sample.
+And these labels can be placed in various rows using the **Level** property.
+[Click](http://mvc.syncfusion.com/demos/web/chart/multilevellabels) here to view the multi-level labels online demo sample.
