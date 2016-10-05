@@ -564,6 +564,19 @@ N> Width of a column also depends upon the *ColumnSpacing* property, because *Co
 
 ![](Chart-Types_images/Chart-Types_img88.png)
 
+### Column with rounded corners
+Corners of the column chart can be customized by setting value to the **CornerRadius** property.
+
+{% highlight cshtml %}
+
+    @(Html.EJ().Chart("container")
+        .CommonSeriesOptions(cr => cr.CornerRadius(20)
+     ))
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img90.png)   
+
 ### Spacing between column series
 
 Spacing between column type series can be customized using the **ColumnSpacing** property. Default value of *ColumnSpacing* is 0. Value ranges from 0 to 1. Here 1 corresponds to 100% available space and 0 corresponds to 0% available space.

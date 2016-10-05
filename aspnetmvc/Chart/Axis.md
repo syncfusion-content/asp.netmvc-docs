@@ -859,6 +859,18 @@ The **Title** property in the axis provides options to customize the text and fo
 
 ![](Axis_images/axis_img27.png)
 
+You can modify the position of the axis title either inside or outside the chart area using the property **Position**. By default, it will be placed outside the chart area. In addition, you can also change the alignment of the title to near, far and center by **Alignment** property, using **Offset** property you can change the position with respect to pixels.
+
+{% highlight cshtml %}
+
+    @(Html.EJ().Chart("container")
+      .PrimaryXAxis(pr => pr.Title(tl => tl
+      .AxisTitlePosition(AxisTitlePosition.Inside).Alignment(Alignment.Near).Offset(10))
+    ))
+
+{% endhighlight %}
+
+![](Axis_images/axis_img62.png)
 
 ### Label customization
 
@@ -1178,3 +1190,80 @@ The following screenshot displays the result, when the LabelIntersectAction prop
 The following screenshot displays the result, when the LabelIntersectAction property is set as **WrapByWord**.
 
 ![](/js/Chart/Axis_images/axis_img49.png)
+
+## Multi-level Labels
+Axis can be customized with multiple levels of labels using the **MultiLevelLabels** property. These labels are placed based on the start and end range values and we can add any number of labels to an axis.
+
+{% highlight cshtml %}     
+
+        @(Html.EJ().Chart("chartcontainer") 
+            .PrimaryXAxis(prx => prx.MultiLevelLabels(multiLevelLabels=> {
+                multiLevelLabels.Visible(true).Text("Quater 1").Start(-0.5).End(2.5).Add();
+           })
+        ))  
+
+{% endhighlight %}
+
+![](Axis_images/axis_img57.png)
+
+### Customizing the multi-Level labels
+The color, width and type of the border can be customized. The default border type is **Rectangle**. And the other supported border types are namely brace, curly brace, without top/bottom border and none. 
+
+{% highlight cshtml %}
+
+     @(Html.EJ().Chart("chartcontainer")
+        .PrimaryXAxis(prx => prx.MultiLevelLabels(
+            multiLevelLabels=> {multiLevelLabels. Border(br=>br.Type(MultiLevelLabelBorder.Brace).Width(2).Color("Black"))).Add();
+         })
+      ))  
+
+{% endhighlight %}
+
+![](Axis_images/axis_img58.png)
+
+The text of the labels can be customized using the **Text** and **Font** properties 
+
+{% highlight cshtml %}
+
+       @(Html.EJ().Chart("chartcontainer")
+        .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {multiLevelLabels.Text("Year - 2015")
+            .Font(ft=> ft.FontFamily("Algerian").Size("12px").Color("Black")).Add();
+        })
+       ))  
+     
+{% endhighlight %}
+
+![](Axis_images/axis_img59.png)
+
+You can change the alignment of the text to far, near and center position using the **TextAlignment** property. By default, the text will be center aligned. 
+
+{% highlight cshtml %}
+
+        @(Html.EJ().Chart("chartcontainer")
+        .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {
+            multiLevelLabels.TextAlignment(Alignment.Far).Add();
+         })
+        ))  
+       
+{% endhighlight %}
+
+![](Axis_images/axis_img60.png)
+
+You can trim, wrap or wrapandtrim the text if it exceeds the maximum text width value using the property **TextOverflow**
+
+{% highlight cshtml %}
+
+       @(Html.EJ().Chart("chartcontainer")
+       .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {
+        multiLevelLabels.TextOverflow(TextOverflow.Trim).MaximumTextWidth(40).Add();
+       })
+      ))  
+        
+{% endhighlight %}
+
+The below screenshot shows the trimmed multi-level labels
+
+![](Axis_images/axis_img61.png)
+
+And these labels can be placed in various rows using the **Level** property.
+[Click](http://mvc.syncfusion.com/demos/web/chart/multilevellabels) here to view the multi-level labels online demo sample.
