@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Getting started with Tooltip widget for Syncfusion Essential JS
+title: Getting started | Toolbar | ASP.NET MVC | Syncfusion
 description: How to create the Tooltip
 platform: ejmvc
 control: Tooltip
 documentation: ug
-keywords : ejTooltip, Tooltip, js Tooltip, Tooltip widget
+keywords : MVC Tooltip, mvc Tooltip, ASP.NET MVC Tooltip,MVC Tooltip widget,MVC Tooltip Appearance, MVC Tooltip Dimensions
 ---
 # Getting started
 
@@ -24,15 +24,15 @@ Using the following steps, you can create a Tooltip control. The basic rendering
 {% highlight CSHTML %}
 
     <div class="frame">    
-        <div class="img" id="sample">
+        <div class="img" id="sample1">
             <a target="_blank" href="image/taj.png">
-            <img src="http://js.syncfusion.com/demos/web/images/tooltip/template-05.png" alt="Delphi">
+            <img src="http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-05.png" alt="Delphi">
             </a>
             <div class="desc">Delphi Succinctly</div>
         </div>
     </div>
 
-    @Html.EJ().Tooltip("sample").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.")
+    @Html.EJ().Tooltip("sample1").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.")
 
 
 
@@ -72,10 +72,10 @@ Tooltip dimensions can be set using [width](http://help.syncfusion.com/js/api/ej
 {% highlight CSHTML %}
  
     <div class="control">
-        TypeScript lets you write <a id="test"><u> JavaScript</u> </a>the way you really want to.
+        TypeScript lets you write <a id="tooltip1"><u> JavaScript</u> </a>the way you really want to.
     </div>
 
-    @Html.EJ().Tooltip("test").Content("JavaScript is the programming language of HTML and the Web.").Width("100px").Height("100px")
+    @Html.EJ().Tooltip("tooltip1").Content("JavaScript is the programming language of HTML and the Web.").Width("100px").Height("100px")
         
 {% endhighlight %}
 
@@ -87,12 +87,12 @@ You can configure the appearance of the Tooltip with the title, close button and
  
     <div class="img" id="sample">
         <a target="_blank" href="image/taj.png">
-        <img src="http://js.syncfusion.com/demos/web/images/tooltip/template-05.png" alt="Delphi">
+        <img src="http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-05.png" alt="Delphi">
         </a>
         <div class="desc">Delphi Succinctly</div>
     </div>
 
-    @Html.EJ().Tooltip("test").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.").Width("180px").Title("Delphi Succinctly").CloseMode(CloseMode.Sticky).IsBalloon(false)
+    @Html.EJ().Tooltip("sample").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.").Width("180px").Title("Delphi Succinctly").CloseMode(CloseMode.Sticky).IsBalloon(false)
     
 {% endhighlight %}
 
