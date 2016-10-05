@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization | Toolbar | ASP.NET MVC | Syncfusion
+title: Customization | Tooltip | ASP.NET MVC | Syncfusion
 description: Customization in Tooltip widget for Syncfusion Essential MVC
 platform: ejmvc
 control: Tooltip

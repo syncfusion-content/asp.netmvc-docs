@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position | Toolbar | ASP.NET MVC | Syncfusion
+title: Position | Tooltip | ASP.NET MVC | Syncfusion
 description: Positionining support to Tooltip widget for Syncfusion Essential MVC
 platform: ejmvc
 control: Tooltip

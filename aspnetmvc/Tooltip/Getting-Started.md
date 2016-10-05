@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started | Toolbar | ASP.NET MVC | Syncfusion
+title: Getting started | Tooltip | ASP.NET MVC | Syncfusion
 description: How to create the Tooltip
 platform: ejmvc
 control: Tooltip

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How To | Toolbar | ASP.NET MVC | Syncfusion
+title: How To | Tooltip | ASP.NET MVC | Syncfusion
 description: How To section of Tooltip widget
 platform: ejmvc
 control: Tooltip

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview | Toolbar | ASP.NET MVC | Syncfusion
+title: Overview | Tooltip | ASP.NET MVC | Syncfusion
 description: overview
 platform: ejmvc
 control: Tooltip Control
