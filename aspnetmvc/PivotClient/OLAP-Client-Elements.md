@@ -105,7 +105,7 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 
 ## Axis Element Builder
 
-Axis Element Builder allows you to build the elements in the axes of PivotClient.  It supports three axes namely Categorical, Series and Slicer. Based on the construction of axes, PivotGrid and OlapChart will display the resultant data.
+Axis Element Builder allows you to build the elements in the axes of PivotClient.  It supports three axes namely Categorical, Series and Slicer. Based on the construction of axes, PivotGrid and PivotChart will display the resultant data.
 
 ### Categorical (Column)
 
