@@ -58,7 +58,7 @@ Please find the below table for default context menu items and its actions.
             </td>
         </tr>
         <tr>
-            <td rowspan="9">
+            <td rowspan="10">
                 Card
             </td>
             <td>
@@ -132,7 +132,15 @@ Please find the below table for default context menu items and its actions.
                 Move the card to Swim lane which is chosen from given list
             </td>
         </tr>
-    </table>
+          <tr>
+            <td>
+              Print Card
+            </td>
+            <td>
+              Print the specific card
+            </td>
+        </tr>
+  </table>
 
 The following code example describes the above behavior.
 
@@ -160,6 +168,7 @@ The following code example describes the above behavior.
 
   
 {% endhighlight  %}
+
 {% highlight c# %}
 
     namespace MVCSampleBrowser
@@ -180,7 +189,6 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 
 {% endtabs %}  
-
 
 The following output is displayed as a result of the above code example.
 
@@ -218,6 +226,7 @@ The following code example describes the above behavior.
     )
   
 {% endhighlight  %}
+
 {% highlight c# %}
 
     namespace MVCSampleBrowser
@@ -277,9 +286,9 @@ The following code example describes the above behavior.
                 }
             ))
     )
-
-  
+	
 {% endhighlight  %}
+
 {% highlight c# %}
 
     namespace MVCSampleBrowser
