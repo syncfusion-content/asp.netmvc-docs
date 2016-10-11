@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Column | Kanban | ASP.NET MVC | Syncfusion
 description: Column
 documentation: ug
@@ -284,7 +283,7 @@ The following output is displayed as a result of the above code example.
 
 ## IsCollapsed 
 
-You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use “Expand/Collapse” Column.
+You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use `Expand/Collapse` Column.
 
 The following code example describes the above behavior.
 
