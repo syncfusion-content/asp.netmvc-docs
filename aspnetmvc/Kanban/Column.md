@@ -282,9 +282,9 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img3.png)
 
-## IsCollapsed 
+## Toggle 
 
-You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use �Expand/Collapse� Column.
+You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use `Expand/Collapse` Column.
 
 The following code example describes the above behavior.
 
