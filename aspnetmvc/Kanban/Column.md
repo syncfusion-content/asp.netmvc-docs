@@ -284,7 +284,7 @@ The following output is displayed as a result of the above code example.
 
 ## IsCollapsed 
 
-You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use “Expand/Collapse” Column.
+You can set particular column collapsed state in Kanban by setting `IsCollapsed` property of it as true. You need to set `AllowToggleColumn` as true to use ï¿½Expand/Collapseï¿½ Column.
 
 The following code example describes the above behavior.
 
@@ -340,3 +340,171 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img4.png)
+
+## Allow Dragging
+
+You can enable and disable drag behavior to the cards in the Kanban columns using the `AllowDrag` property and the default value is `true`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)                   
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").AllowDrag(false).Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")
+                            .Priority("RankId")           
+                            .PrimaryKey("Id");
+                    })
+                    
+                    
+    )
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img5.png)
+
+## Allow Dropping
+
+You can enable and disable drop behavior to the cards in the Kanban columns using the `AllowDrop` property and the default value is `true`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)                   
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Done").Key("Close").AllowDrop(false).Add();
+                    })
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")
+                            .Priority("RankId")           
+                            .PrimaryKey("Id");
+                    })
+                    
+                    
+    )
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img6.png)
+
+# Items Count
+
+You can show total cards count in each column's header using the property `EnableTotalCount` and the default value is `false`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)                   
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress").Key("InProgress").Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })
+                    .KeyField("Status")
+                    .EnableTotalCount(true)
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")  
+                            .PrimaryKey("Id");
+                    })
+                    
+                    
+    )
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+
+The following output is displayed as a result of the above code example.
+
+![](Items_count_images/Items_count_img7.png)
