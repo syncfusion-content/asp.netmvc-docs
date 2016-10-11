@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Layout Customization | OLAPClient | ASP.NET MVC | Syncfusion
+title: Layout Customization | PivotClient | ASP.NET MVC | Syncfusion
 description: layout customization
 platform: ejmvc
-control: OLAPClient
+control: PivotClient
 documentation: ug
 ---
 
 # Layout Customization
 
-## Display View
+## Control Placement 
 
 ### Tab View
 
-In Tab View representation, both Grid and Chart will be displayed in a separate tab.  This could be set using the `ControlPlacement` property under the `DisplaySettings` option.  By default, **Tab** value is set.
+In Tab View representation, both Grid and Chart will be displayed in separate tabs.  This could be set by using the `ControlPlacement` property under the `DisplaySettings` option.  By default, **Tab** value is set.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement( OlapClientControlPlacement.Tab))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.ControlPlacement( PivotClientControlPlacement.Tab))
 
 {% endhighlight %}
 
@@ -25,11 +25,11 @@ In Tab View representation, both Grid and Chart will be displayed in a separate 
 
 ### Tile View
 
-In Tile View representation, both Grid and Chart will be displayed one over the other, in the same layout.  Tile view can be set by using the `ControlPlacement` property under the `DisplaySettings` option.
+In Tile View representation, both Grid and Chart will be displayed one above the other, in the same layout. Tile view can be set by using the `ControlPlacement` property under the `DisplaySettings` option.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.ControlPlacement(OlapClientControlPlacement.Tile))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.ControlPlacement(PivotClientControlPlacement.Tile))
 
 {% endhighlight %}
 
@@ -41,9 +41,9 @@ In Tile View representation, both Grid and Chart will be displayed one over the 
 
 To display Grid control by default, set `DefaultView` property under `DisplaySettings` option to **Grid**, which is the default value of the property.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Grid))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.DefaultView( PivotClientDefaultView.Grid))
 
 {% endhighlight %}
 
@@ -53,9 +53,9 @@ To display Grid control by default, set `DefaultView` property under `DisplaySet
 
 To display Chart control by default, set the property `DefaultView` property to **Chart**.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.DefaultView( OlapClientDefaultView.Chart))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.DefaultView( PivotClientDefaultView.Chart))
 
 {% endhighlight %}
 
@@ -65,11 +65,11 @@ To display Chart control by default, set the property `DefaultView` property to 
 
 ### Grid Only
 
-After setting the `Mode` property under `DisplaySettings` option to **GridOnly**, the Chart is hidden and the data is displayed only in the Grid.
+By the `Mode` property under `DisplaySettings` option to **GridOnly**, PivotGrid component alone will get rendered and PivotChart will not be rendered.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.GridOnly))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.Mode( PivotClientDisplayMode.GridOnly))
 
 {% endhighlight %}
 
@@ -77,11 +77,11 @@ After setting the `Mode` property under `DisplaySettings` option to **GridOnly**
 
 ### Chart Only
 
-After setting the `Mode` property under `DisplaySettings` option to **ChartOnly**, the Grid is hidden and data is displayed only in the Chart.
+By the `Mode` property under `DisplaySettings` option to **ChartOnly**, PivotChart component alone will get rendered and PivotGrid will not be rendered.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartOnly))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.Mode( PivotClientDisplayMode.ChartOnly))
 
 {% endhighlight %}
 
@@ -89,23 +89,23 @@ After setting the `Mode` property under `DisplaySettings` option to **ChartOnly*
 
 ### Both Chart and Grid
 
-After setting the `Mode` property under `DisplaySettings` option to **ChartAndGrid**, data is displayed in both Grid and Chart.  This is the default value of the property.
+By the `Mode` property under `DisplaySettings` option to **ChartAndGrid**, data is displayed in both Grid and Chart.  This is the default value of the property.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title( "OLAP Browser").DisplaySettings(displaySettings=>displaySettings.Mode( OlapClientDisplayMode.ChartAndGrid))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.Mode( PivotClientDisplayMode.ChartAndGrid))
 
 {% endhighlight %}
 
-![](Layout-Customization_images/chartandgridview.png)
+![](Layout-Customization_images/tileview.png)
 
 ## Toggle Panel
 
-Toggle panel option lets the user to toggle the visibility of Axis Element Builder and Cube Dimension Browser panels in OlapClient with a use of a button. The button could be added to the control by using the `EnableTogglePanel` property under `DisplaySettings` option.  This property is disabled by default.
+Toggle panel option lets the user to toggle the visibility of Axis Element Builder and Cube Dimension Browser panels in PivotClient with a use of a button. The button could be added to the control by enabling the `EnableTogglePanel` property under `DisplaySettings` option.  This property is disabled by default.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableTogglePanel(true))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.EnableTogglePanel(true))
 
 {% endhighlight %}
 
@@ -113,11 +113,11 @@ Toggle panel option lets the user to toggle the visibility of Axis Element Build
 
 ## Maximized/Full Screen View
 
-Full screen view helps to visualize the PivotGrid and OlapChart controls inside OlapClient precisely according to the browser window size.  By selecting full screen icon in the toolbar, PivotGrid/OlapChart is maximized depending on the selected tab.  Drilldown action can also be performed in both PivotGrid and OlapChart in the maximized view.  This option is enabled by setting the `EnableFullScreen` property under `DisplaySettings` option to true.  The value is false by default.
+Full screen view helps to visualize the PivotGrid and PivotChart controls inside PivotClient precisely according to the browser window size.  By selecting full screen icon in the toolbar, the control which is in the view gets maximized.  Drilldown action can also be performed in both PivotGrid and PivotChart in the maximized view.  This option is enabled by setting the `EnableFullScreen` property under `DisplaySettings` option to true.  The value is false by default.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").DisplaySettings(displaySettings=>displaySettings.EnableFullScreen(true))
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).DisplaySettings(displaySettings=>displaySettings.EnableFullScreen(true))
 
 {% endhighlight %}
 
@@ -127,32 +127,14 @@ The following screenshot shows the maximized view of PivotGrid.
 
 ![](Layout-Customization_images/maximizedview.png)
 
-## Grid Layout
-
-PivotGrid inside OlapClient control can be rendered in any of the following layouts.
-
-* Normal
-* NormalTopSummary
-* NoSummaries
-* ExcelLikeLayout
-
-The layout is set using the `GridLayout` property. By default, normal layout is set.
-
-{% highlight C# %}
-
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").GridLayout(PivotGridLayout.NoSummaries)
-
-{% endhighlight %}
-
-![](Layout-Customization_images/gridlayout.png)
 
 ## Chart Types
 
-While loading the OlapClient initially, the OlapChart widget can be rendered in any one of the available chart types using the `ChartType` property.
+While loading the PivotClient initially, the PivotChart widget can be rendered in any one of the available chart types using the `ChartType` property.
 
-{% highlight C# %}
+{% highlight CSHTML %}
 
-    @Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").ChartType(OlapChartType.Column)
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).ChartType(PivotChartType.Column)
 
 {% endhighlight %}
 

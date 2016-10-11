@@ -1,23 +1,25 @@
 ---
 layout: post
-title: Measure Groups | OLAPClient | ASP.NET MVC | Syncfusion
+title: Measure Groups | PivotClient | ASP.NET MVC | Syncfusion
 description: measure groups 
 platform: ejmvc
-control: OLAPClient
+control: PivotClient
 documentation: ug
 ---
 
 # Measure Groups
 
-In Cube Dimension Browser, treeview can be viewed in a filtered manner through the Measure Groups option. This feature allows you to view the list of measure groups and dimensions associated with the selected measure group from the cube. For enabling this, the `EnableMeasureGroups` property is set to true. By default, its value is set to false.
+I> This feature is applicable only for OLAP data source bound from server-side. 
 
-{% highlight C# %}
+In Cube Dimension Browser, treeview can be viewed in a filtered manner through the Measures option. This feature allows you to view the list of measure groups and dimensions associated with the selected measure group from the cube. For enabling this, the `EnableMeasureGroups` property is set to true. By default, its value is set to false.
 
-@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").EnableMeasureGroups(true)
+{% highlight cshtml %}
+
+    @Html.EJ().Pivot().PivotClient("PivotClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").EnableMeasureGroups(true)
 
 {% endhighlight %}
 
-On selecting a measure group from the drop-down list, the Cube Dimension Browser treeview displays the related dimensions as follows.
+On selecting a measure group from the drop-down list, the Cube Dimension Browser treeview displays the related measures and dimensions as follows.
 
 ![](Measure-Groups_images/measure.png)
 
