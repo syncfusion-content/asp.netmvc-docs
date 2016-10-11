@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Responsive Layout | OLAPClient | ASP.NET MVC | Syncfusion
+title: Responsive Layout | PivotClient | ASP.NET MVC | Syncfusion
 description: responsive layout
 platform: ejmvc
-control: OLAPClient
+control: PivotClient
 documentation: ug
 ---
 
 # Responsive Layout
 
-OlapClient widget supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution upto 1024x600. You can enable responsiveness in OlapClient by setting `IsResponsive` property to true.
+PivotClient widget supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution up to 1024x600. You can enable responsiveness in PivotClient by setting `IsResponsive` property to true.
 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Olap().OlapClient("OlapClient1").Url(Url.Content("/OlapClient")).Title("OLAP Browser").IsResponsive(true)
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).IsResponsive(true)
 
 {% endhighlight %}
 
