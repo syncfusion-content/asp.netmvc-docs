@@ -80,7 +80,6 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 	<body>
 		@Scripts.Render("~/bundles/jquery")
 		@Scripts.Render("~/bundles/bootstrap")  
-		@Scripts.Render("~/Scripts/jquery.easing.1.3.js")
 		@Scripts.Render("~/Scripts/jsrender.min.js")
 		@Scripts.Render("~/Scripts/ej/web/ej.web.all.min.js")  
 		@RenderSection("scripts", required: false)
@@ -150,7 +149,7 @@ To work with ASP.NET Core 1.0, you need to make sure is whether you have install
 
 * Visual Studio 2015 [Update 3](https://go.microsoft.com/fwlink/?LinkId=691129).
 
-* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245).
+* DotNetCore 1.0
 
 #### Configure Syncfusion Components in ASP.NET Core Application:
 
@@ -204,7 +203,6 @@ The following steps helps to create a ASP.NET Core web application to configure 
 			<script src="~/lib/jquery/dist/jquery.js"></script>
 			<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 			<script src="~/js/site.js" asp-append-version="true"></script>
-			<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
 			<script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 			<script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
 		</environment> 
@@ -241,7 +239,7 @@ The following steps helps to create a ASP.NET Core web application to configure 
 #### System Requirements:
 
 * Visual Studio [Code](https://code.visualstudio.com/#)
-* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245)
+* DotNetCore 1.0
 
 The following steps helps to create a ASP.NET Core web application to configure our components.
 
@@ -353,8 +351,6 @@ dotnet restore
 
 <script src="~/js/site.js" asp-append-version="true"></script>
 
-<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
-
 <script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 
 <script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
@@ -394,7 +390,7 @@ dotnet restore
 #### System Requirements:
 
 * Visual Studio [Code](https://code.visualstudio.com/#)
-* DotNetCore [1.0](https://go.microsoft.com/fwlink/?LinkId=817245)
+* DotNetCore 1.0
 
 To create an ASP.NET Core 1.0 application, we will use the [**yeoman**](http://yeoman.io/#) tool. This is a scaffolding tool for Modern web apps and helps us to quick start a new web project. 
 
@@ -520,8 +516,6 @@ dotnet restore
 
 <script src="~/js/site.js" asp-append-version="true"></script>
 
-<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
-
 <script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 
 <script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
@@ -593,7 +587,6 @@ Project conversion wizard helps to convert the existing MVC application into Syn
 		… …
 		@Scripts.Render("~/bundles/jquery")
 		@Scripts.Render("~/bundles/bootstrap")  
-		@Scripts.Render("~/Scripts/jquery.easing.1.3.min.js")
 		@Scripts.Render("~/Scripts/jsrender.min.js")
 		@Scripts.Render("~/Scripts/ej/ej.web.all.min.js")  
 		@RenderSection("scripts", required: false)
