@@ -80,7 +80,6 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 	<body>
 		@Scripts.Render("~/bundles/jquery")
 		@Scripts.Render("~/bundles/bootstrap")  
-		@Scripts.Render("~/Scripts/jquery.easing.1.3.js")
 		@Scripts.Render("~/Scripts/jsrender.min.js")
 		@Scripts.Render("~/Scripts/ej/web/ej.web.all.min.js")  
 		@RenderSection("scripts", required: false)
@@ -204,7 +203,6 @@ The following steps helps to create a ASP.NET Core web application to configure 
 			<script src="~/lib/jquery/dist/jquery.js"></script>
 			<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 			<script src="~/js/site.js" asp-append-version="true"></script>
-			<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
 			<script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 			<script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
 		</environment> 
@@ -352,8 +350,6 @@ dotnet restore
 <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 
 <script src="~/js/site.js" asp-append-version="true"></script>
-
-<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
 
 <script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 
@@ -520,8 +516,6 @@ dotnet restore
 
 <script src="~/js/site.js" asp-append-version="true"></script>
 
-<script src="~/lib/jquery.easing/js/jquery.easing.min.js"></script>
-
 <script src="~/lib/syncfusion-javascript/Scripts/jsrender.min.js"></script>
 
 <script src="~/lib/syncfusion-javascript/Scripts/ej/web/ej.web.all.min.js"></script>
@@ -593,7 +587,6 @@ Project conversion wizard helps to convert the existing MVC application into Syn
 		… …
 		@Scripts.Render("~/bundles/jquery")
 		@Scripts.Render("~/bundles/bootstrap")  
-		@Scripts.Render("~/Scripts/jquery.easing.1.3.min.js")
 		@Scripts.Render("~/Scripts/jsrender.min.js")
 		@Scripts.Render("~/Scripts/ej/ej.web.all.min.js")  
 		@RenderSection("scripts", required: false)
