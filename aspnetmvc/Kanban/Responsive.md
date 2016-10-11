@@ -9,7 +9,107 @@ platform: ejmvc
 
 # Responsive
 
-The Kanban control has support for responsive behavior based on client browser’s width and height. To enable responsive, `IsResponsive` property should be true. 
+The Kanban control has support for responsive behavior based on client browser’s width and height. To enable responsive, `IsResponsive` property should be true.There are two modes of responsive layout is available in Kanban based on client width. They are.
+
+* Mobile(<480px)
+* Desktop(>480px)
+
+## Mobile Layout
+
+If client width is less than 480px, the Kanban will render in mobile mode. In which, you can see that kanban user interface is customized and redesigned for best view in small screens.To enable responsive, `IsResponsive` property should be true. 
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                   .DataSource((IEnumerable<object>)ViewBag.datasource)
+                   .IsResponsive(true)
+                   .AllowSelection(false)
+                   .AllowKeyboardNavigation(true)
+                   .AllowTitle(true)
+                   .Columns(col =>
+                   {
+                       col.HeaderText("Backlog").Key("Open").ShowAddButton(true).Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+                       col.HeaderText("Testing").Key("Testing").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                   })
+                  .KeyField("Status")
+                   .EditSettings(edit =>
+                          {
+                              edit.AllowAdding(true)
+                                  .AllowEditing(true)
+                                  .EditItems(e =>
+                                  {
+                                      e.Field("Id").ValidationRules(rule => { rule.AddRule("required", true).AddRule("number", true); }).Add();
+                                      e.Field("Status").EditType(KanbanEditingType.Dropdown).Add();
+                                      e.Field("Assignee").EditType(KanbanEditingType.Dropdown).Add();
+                                      e.Field("Estimate").EditType(KanbanEditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).ValidationRules(rule => { rule.AddRule("range", "[0,1000]"); }).Add();
+                                      e.Field("Summary").EditType(KanbanEditingType.TextArea).ValidationRules(rule => { rule.AddRule("required", true); }).Add();
+                                  }).EditMode(KanbanEditMode.Dialog);
+                          })
+                          .AllowSearching(true)
+                           .FilterSettings(filter =>
+                           {
+                               filter.Text("Janet Issues").Query("new ej.Query().where('Assignee', 'equal', 'Janet Leverling')").Description("Displays issues which matches the assignee as 'Janet Leverling").Add();
+                               filter.Text("Testing Issues").Query("new ej.Query().where('Status', 'equal', 'Testing')").Description("Display the issues of 'Testing'").Add();
+                           })
+                  .Fields(field =>
+                  {
+                      field.Color("Type")
+                           .PrimaryKey("Id")
+                           .Content("Summary")
+                           .ImageUrl("ImgUrl");
+                  })
+    )
+  
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+ 
+{% endhighlight  %}
+
+{% endtabs %}  
+
+![](Responsive_images/Responsive_img2.png)
+
+
+W> IE8 and IE9 does not support responsive kanban. `ej.responsive.css` should be referred to display Responsive Kanban.
+
+![](Responsive_images/Responsive_img3.png)
+{:caption}
+CRUD in mobile layout
+
+![](Responsive_images/Responsive_img4.png)
+{:caption}
+Filtering in mobile layout
+
+![](Responsive_images/Responsive_img5.png)
+{:caption}
+Searching in mobile layout
+
+![](Responsive_images/Responsive_img6.png)
+
+![](Responsive_images/Responsive_img7.png)
+{:caption}
+Kanban with Swim-lane
+
 
 ## Width
 

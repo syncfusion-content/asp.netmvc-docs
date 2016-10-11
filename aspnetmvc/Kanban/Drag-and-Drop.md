@@ -70,3 +70,4 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](Drag_and_Drop_images/drag_and_drop_img1.png) 
+
