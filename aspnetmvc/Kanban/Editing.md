@@ -300,6 +300,267 @@ The following output is displayed as a result of the above code example.
 
 ![](Editing_images/editing_img3.png)
 
+### External Form
+
+Set the `EditMode` as externalform to open the edit form in outside kanban content.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+        .DataSource((IEnumerable<object>)ViewBag.datasource)
+        .Columns(col =>
+        {
+            col.HeaderText("Backlog").Key("Open").Add();
+            col.HeaderText("In Progress").Key("InProgress").Add();
+            col.HeaderText("Done").Key("Close").Add();
+        })  
+        .KeyField("Status")
+        .Fields(field =>
+        {
+            field.Content("Summary")
+                .PrimaryKey("Id");
+        })
+        .EditSettings(edit =>
+        {
+            edit.AllowAdding(true)
+                .AllowEditing(true)
+                .EditItems(e =>
+                {
+                    e.Field("Id").Add();
+                    e.Field("Status").EditType(KanbanEditingType.Dropdown).Add();
+                    e.Field("Summary").EditType(KanbanEditingType.TextArea).Add();
+                }).EditMode(KanbanEditMode.ExternalForm);
+        })
+    )
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+         
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Editing_images/editing_img11.png)
+
+Form Position:
+
+Form Position can be customized by setting the `FormPosition` property of `EditSettings' as "right" or "bottom".
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+        .DataSource((IEnumerable<object>)ViewBag.datasource)
+        .Columns(col =>
+        {
+            col.HeaderText("Backlog").Key("Open").Add();
+            col.HeaderText("In Progress").Key("InProgress").Add();
+            col.HeaderText("Done").Key("Close").Add();
+        })  
+        .KeyField("Status")
+
+        .Fields(field =>
+        {
+            field.Content("Summary")
+                .PrimaryKey("Id");
+        })
+        .EditSettings(edit =>
+        {
+            edit.AllowAdding(true)
+                .AllowEditing(true)
+                .FormPosition(KanbanFormPosition.Right)
+                .EditItems(e =>
+                {
+                    e.Field("Id").Add();
+                    e.Field("Status").EditType(KanbanEditingType.Dropdown).Add();
+                    e.Field("Assignee").EditType(KanbanEditingType.Dropdown).Add();
+                    e.Field("Estimate").EditType(KanbanEditingType.Numeric).NumericEditOptions(new EditorProperties()
+                    {
+                        DecimalPlaces = 2
+                    }).Add();
+                    e.Field("Summary").EditType(KanbanEditingType.TextArea).Add();
+                }).EditMode(KanbanEditMode.ExternalForm);
+        })
+    )
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+         
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Editing_images/editing_img12.png)
+
+### External Template Form
+
+You can edit any of the fields pertaining to a single card of data and apply it to a template so that the same format is applied to all the other cards that you may edit later. 
+
+Using this template support, you can edit the fields that are not bound to Kanban Edit Items.
+
+To edit the cards using External template form, set `EditMode` as externalformtemplate and specify the template id to `ExternaFormTemplate` property of `EditSettings`.
+
+While using template, you can change the elements that are defined in the template, to appropriate Syncfusion JS controls based on the column type. This can be achieved by using `ActionComplete` event of Kanban.
+
+N> 1. `value` attribute is used to bind the corresponding field value while editing. 
+N> 2. `name` attribute is used to get the changed field values while save the edited card. 
+N> 3. For `EditMode` property you can assign either `string` value ("externalformtemplate") or `enum` value (`ej.Kanban.EditMode.ExternalFormTemplate`).
+
+The following code example describes the above behavior.
+
+{% highlight html %}
+
+    <script id="template" type="text/template">
+                        <table cellspacing="10">
+                            <tr>
+                                <td style="text-align: right;">Id
+                                </td>
+                                <td style="text-align: left">
+                                    <input id="Id" name="Id" value="{{: Id}}" class="e-field e-ejinputtext valid e-disable" style="text-align: right; width: 175px; height: 28px" disabled="disabled" />
+                                </td>
+                                <td style="text-align: right;">Status
+                                </td>
+                                <td style="text-align: left">
+                                    <select id="Status" name="Status">
+                                        <option value="Close">Close</option>
+                                        <option value="InProgress">InProgress</option>
+                                        <option value="Open">Open</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right;">Assignee
+                                </td>
+                                <td style="text-align: left">
+                                    <select id="Assignee" name="Assignee">
+                                        <option value="Nancy Davloio">Nancy Davloio</option>
+                                        <option value="Andrew Fuller">Andrew Fuller</option>
+                                        <option value="Janet Leverling">Janet Leverling</option>
+                                        <option value="Margaret hamilt">Margaret hamilt</option>
+                                        <option value="Steven walker">Steven walker</option>
+                                        <option value="Michael Suyama">Michael Suyama</option>
+                                        <option value="Robert King">Robert King</option>
+                                        <option value="Laura Callahan">Laura Callahan</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+    </script>
+
+{% endhighlight %}
+
+{% tabs %}
+
+{% highlight razor %}
+ 
+    @(Html.EJ().Kanban("Kanban")
+        .DataSource((IEnumerable<object>)ViewBag.datasource)
+        .ClientSideEvents(eve => eve.ActionComplete("complete"))
+        .Columns(col =>
+        {
+            col.HeaderText("Backlog").Key("Open").Add();
+            col.HeaderText("In Progress").Key("InProgress").Add();
+            col.HeaderText("Done").Key("Close").Add();
+        })
+        .KeyField("Status")
+
+        .Fields(field =>
+        {
+            field.Content("Summary")
+                .PrimaryKey("Id");
+        })
+        .EditSettings(edit =>
+        {
+            edit.AllowAdding(true)
+                .AllowEditing(true)
+                .EditMode(KanbanEditMode.ExternalFormTemplate)
+                .DialogTemplate("#template");
+        })
+    )
+ 
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %}  
+
+{% highlight javascript %}
+
+    function complete(args) {
+        if ((args.requestType == "beginedit" || args.requestType == "add") && args.model.editSettings.editMode == "externalformtemplate") {
+            $("#Assignee").ejDropDownList({ width: '175px' });
+            $("#Status").ejDropDownList({ width: '175px' });
+            if (args.requestType == "beginedit" || args.requestType == "add") {
+                $("#Assignee").ejDropDownList("setSelectedValue", args.data['Assignee']);
+                $("#Status").ejDropDownList("setSelectedValue", args.data['Status']);
+            }        
+        }
+    }
+
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+
+![](Editing_images/editing_img13.png)
+
+
 ### Cell edit type and its params
 
 The edit type of bound column can be customized using `EditType` property of `Columns`. The following Essential JavaScript controls are supported built-in by `EditType`. You can set the `EditType` based on specific data type of the column.
