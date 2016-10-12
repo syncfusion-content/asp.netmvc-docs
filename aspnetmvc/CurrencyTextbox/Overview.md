@@ -20,7 +20,7 @@ Essential ASP.NET MVC CurrencyTextBox is used to display only currency values. I
 * Keyboard Navigation—You can interact with CurrencyTextBox by using keyboard.
 * RTL Support—Support for right to left alignment of textbox input.
 * Decimal Values—You can configure the textbox to accept decimal values.
-* Themes—CurrencyTextBox consist of 16 built-in themes , and also support custom skins for creating user-defined themes.
+* Themes—CurrencyTextBox consist of 17 built-in themes , and also support custom skins for creating user-defined themes.
 
 
 

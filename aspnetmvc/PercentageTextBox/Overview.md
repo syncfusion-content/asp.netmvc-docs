@@ -20,7 +20,7 @@ Essential ASP.NET MVC PercentageTextBox is used to display only percentage value
 * Keyboard Navigation—You can interact with PercentageTextBox by using keyboard.
 * RTL Support—Support for right to left alignment of textbox input.
 * Decimal Values—You can configure the textbox to accept decimal values.
-* Themes—PercentageTextBox consist of 16 built-in themes , and also support custom skins for creating user-defined themes.
+* Themes—PercentageTextBox consist of 17 built-in themes , and also support custom skins for creating user-defined themes.
 
 
 

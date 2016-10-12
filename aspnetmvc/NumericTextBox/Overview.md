@@ -20,4 +20,4 @@ Essential ASP.NET MVC NumericTextBox is used to display only numeric values. It 
 * Keyboard Navigation—You can interact with NumericTextBox by using keyboard.
 * RTL Support—Support for right to left alignment of textbox input.
 * Decimal Values—You can configure the textbox to accept decimal values.
-* Themes—NumericTextBox consist of 16 built-in themes, and also support custom skins for creating user-defined themes.
+* Themes—NumericTextBox consist of 17 built-in themes, and also support custom skins for creating user-defined themes.
