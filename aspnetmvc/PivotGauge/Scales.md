@@ -15,7 +15,7 @@ Scale can be added within the PivotGauge control.
 
 {% highlight CSHTML %}
 
-    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => { scales.Radius(150).Add(); })
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => { scales.ShowScaleBar(true).Radius(150).Add(); })
 
 {% endhighlight  %}
 
@@ -34,7 +34,7 @@ Pointer Cap is a circular shape element which is located at the center of the Pi
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
-        scales.PointerCap(pointerCap => pointerCap.Radius(5).BorderWidth(2).BorderColor("green").BackgroundColor("yellow")).Add();
+        scales.ShowScaleBar(true).PointerCap(pointerCap => pointerCap.Radius(5).BorderWidth(2).BorderColor("green").BackgroundColor("yellow")).Add();
     })
 
 {% endhighlight  %}
@@ -54,12 +54,12 @@ The appearance of the scale can be customized through the following properties.
 * **MinorIntervalValue** – sets the interval between major ticks in the scale.
 * **Direction** – sets the direction of the scale.  By default it takes “Clockwise” direction.
 
-The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers` and `ShowScaleBar` properties are used to enable/disable the indicators, ticks, ranges, pointers and scale bar respectively.  By default, these properties are set to true. 
+The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers` and `ShowScaleBar` properties are used to enable/disable the indicators, ticks, ranges, pointers and scale bar respectively.  By default, `ShowTicks` and `ShowPointers` are set to true, other properties are set as false.
 
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
-        scales.Radius(120).BackgroundColor("yellow").Border(border => border.Color("blue").Width(3)).Size(10).Minimum(20).Maximum(120).MajorIntervalValue(20).MinorIntervalValue(5).Direction(Directions.CounterClockwise).Add();
+        scales.ShowScaleBar(true).Radius(120).BackgroundColor("yellow").Border(border => border.Color("blue").Width(3)).Size(10).Minimum(20).Maximum(120).MajorIntervalValue(20).MinorIntervalValue(5).Direction(Directions.CounterClockwise).Add();
     })
 
 {% endhighlight  %}

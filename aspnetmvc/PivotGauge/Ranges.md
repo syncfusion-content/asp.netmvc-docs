@@ -16,7 +16,7 @@ Range collection can be directly added to the scales option within the PivotGaug
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
-        scales.Ranges(ranges => { ranges.DistanceFromScale(10).Add(); }).Add();
+        scales.ShowRanges(true).Ranges(ranges => { ranges.DistanceFromScale(10).Add(); }).Add();
     })
 
 {% endhighlight  %}
@@ -41,7 +41,7 @@ N> By default, placement takes the value “near”, whereas other enumeration v
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
-        scales.Ranges(ranges => {
+        scales.ShowRanges(true).Ranges(ranges => {
             ranges.StartValue(20).EndValue(50).StartWidth(2).EndWidth(6).Border(border => border.Color("red").Width(2)).BackgroundColor("yellow").DistanceFromScale(20).Add();
             ranges.StartValue(50).EndValue(100).StartWidth(2).EndWidth(7).Border(border => border.Color("green").Width(2)).BackgroundColor("blue").Placement(RangePlacement.Near).Add();
         }).Add();
@@ -60,7 +60,7 @@ Multiple ranges can be added in `Ranges` to the scales option within the PivotGa
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
-        scales.Ranges(ranges => {
+        scales.ShowRanges(true).Ranges(ranges => {
             ranges.StartValue(0).EndValue(10).BackgroundColor("green").DistanceFromScale(-5).Add();
             ranges.StartValue(10).EndValue(30).BackgroundColor("yellow").DistanceFromScale(-5).Add();
             ranges.StartValue(30).EndValue(50).BackgroundColor("red").DistanceFromScale(-5).Add();

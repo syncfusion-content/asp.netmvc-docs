@@ -22,11 +22,12 @@ Full Circle frame lets the PivotGauge display in circular shape. Frame type can 
 ![](Frame-Type_images/FullCircle.png)
 
 ## Half Circle
-Half Circle frame lets the PivotGauge display in semi-circular shape. For this, frame type needs to be set as "HalfCircle" within the `FrameType` property.
+Half Circle frame lets the PivotGauge to display in semi-circular shape. For this, frame type needs to be set as "HalfCircle" within the `FrameType` property and need to set `StartAngle` and `SweepAngle` for the PivotGauge in the `Scales` property.
+
 
 {% highlight CSHTML %}
 
-    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Frame(frame=> { frame.FrameType(Frame.HalfCircle) })
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Frame(frame=>frame.FrameType(Frame.HalfCircle).HalfCircleFrameStartAngle(180).HalfCircleFrameEndAngle(360)).Scales(scale =>{ scale.StartAngle(180).SweepAngle(180).Add();})
 
 {% endhighlight %}
 
