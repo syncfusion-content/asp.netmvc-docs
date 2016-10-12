@@ -272,9 +272,10 @@ Output of PercentageTextBox when ReadOnly is “True” is as follows. Percentag
 
 PercentageTextBox control’s style and appearance can be controlled based on CSS classes. In order to apply styles you need to refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. If the file ej.web.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.web.all.min.css is the combination of these two. 
 
-By default, there are 12 themes support available namely:
+By default, there are 17 themes support available namely:
 
-* bootstrap-theme
+* bootstrap
+* flat-azure
 * flat-azure-dark
 * fat-lime
 * flat-lime-dark
