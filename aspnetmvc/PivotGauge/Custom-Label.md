@@ -52,9 +52,9 @@ Multiple ranges can be added in `CustomLabels` to the scales option within the P
     @Html.EJ().Pivot().PivotGauge("PivotGauge1").Scales(scales => {
         scales.CustomLabels(customLabels =>
         {
-            customLabels.Position(position => position.X(180).Y(150)).Color("red").Add();
-            customLabels.Position(position => position.X(180).Y(320)).Color("green").Add();
-            customLabels.Position(position => position.X(180).Y(290)).Color("blue").Add();
+            customLabels.Position(position => position.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("red").Add();
+            customLabels.Position(position => position.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("green").Add();
+            customLabels.Position(position => position.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("blue").Add();
         }).Add();
     })
 

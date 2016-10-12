@@ -11,7 +11,7 @@ documentation: ug
 
 ##Legend Visibility
 
-You can enable or disable legend using the `Visible` property inside the `legend` object.
+You can enable or disable legend using the `Visible` property inside the `Legend` object.
 
 N> By default, the legend is visible in PivotChart.
 
@@ -26,6 +26,7 @@ N> By default, the legend is visible in PivotChart.
 
 ##Legend Shape
 You can customize the legend `Shape` in PivotChart control. Default value of legend shape is “Rectangle”. Following legend shapes that are supported:
+
 * Rectangle
 * Circle
 * Cross
