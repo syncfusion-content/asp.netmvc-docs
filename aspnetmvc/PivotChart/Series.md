@@ -7,9 +7,9 @@ control: PivotChart
 documentation: ug
 ---
 
-#Series
+# Series
 
-##Series Point customization
+## Series Point customization
 By using the `Fill` and `Border` properties of Chart series, you can customize the PivotChart series color, border color and border width.
  
 {% highlight CSHTML %}
