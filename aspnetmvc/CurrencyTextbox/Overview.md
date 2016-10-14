@@ -16,11 +16,11 @@ Essential ASP.NET MVC CurrencyTextBox is used to display only currency values. I
 * Min and Max Values—Specifies value range for the textbox.
 * Spin Buttons—Enable you to increase or decrease the current value in the textbox.
 * Step Value—Enables you to increment or decrement the current value by step value.
-* Localization— EJ MVC CurrencyTextBox has localization support. It use ej.globalize.js file to globalize and localize the format, and parse numbers and dates according to the culture.
+* Globalization— EJ MVC CurrencyTextBox has globalization support. It use ej.globalize.js file to globalize the number format, and parse numbers according to the culture.
 * Keyboard Navigation—You can interact with CurrencyTextBox by using keyboard.
 * RTL Support—Support for right to left alignment of textbox input.
 * Decimal Values—You can configure the textbox to accept decimal values.
-* Themes—CurrencyTextBox consist of 12 built-in themes (6 – flat and 6 – gradient effects), and also support custom skins for creating user-defined themes.
+* Themes—CurrencyTextBox consist of 17 built-in themes , and also support custom skins for creating user-defined themes.
 
 
 
