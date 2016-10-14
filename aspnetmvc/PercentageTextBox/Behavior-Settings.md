@@ -270,11 +270,12 @@ Output of PercentageTextBox when ReadOnly is “True” is as follows. Percentag
 
 ### Theme
 
-PercentageTextBox control’s style and appearance can be controlled based on CSS classes. In order to apply styles you need to refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. If the file ej.widgets.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.widgets.all.min.css is the combination of these two. 
+PercentageTextBox control’s style and appearance can be controlled based on CSS classes. In order to apply styles you need to refer 2 files namely, ej.widgets.core.min.css and ej.theme.min.css. If the file ej.web.all.min.css is referred, then it is not necessary to include the files ej.widgets.core.min.css and ej.theme.min.css in your project, as ej.web.all.min.css is the combination of these two. 
 
-By default, there are 12 themes support available namely:
+By default, there are 17 themes support available namely:
 
-* default-theme
+* bootstrap
+* flat-azure
 * flat-azure-dark
 * fat-lime
 * flat-lime-dark
@@ -286,6 +287,10 @@ By default, there are 12 themes support available namely:
 * gradient-lime-dark
 * gradient-saffron
 * gradient-saffron-dark
+* high-contrast-01
+* high-contrast-02
+* material
+* office-365
 
 ##CSS Class
 
@@ -370,7 +375,7 @@ Output of PercentageTextBox when ShowRoundedCorner is “True”.
 
 ### Spin Button Support
 
-PercentageTextBox provides you the option as to whether to display the split button in the widget or remove it from the control by using showSpinButton property.
+PercentageTextBox provides you the option as to whether to display the spin button in the widget or remove it from the control by using showSpinButton property.
 
 ### Configure Spin Button
 
