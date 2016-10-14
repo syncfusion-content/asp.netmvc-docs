@@ -7,7 +7,7 @@ control: PivotChart
 documentation: ug
 ---
 
-#Exporting
+# Exporting
 
 The PivotChart control can be exported to the following file formats.
 
@@ -86,11 +86,11 @@ public void Export(System.IO.Stream stream) {
 
 {% endhighlight %}
 
-##Excel Export
+## Excel Export
 
 User can export contents of the PivotChart to Excel document for future archival, references and analysis purposes.
 
-###Client Mode
+### Client Mode
 
 To achieve Excel export, method name **"ExcelExport"** and file name is sent as the parameter.
 
@@ -121,7 +121,7 @@ public void ExcelExport()
 
 {% endhighlight %}
 
-###Server Mode
+### Server Mode
 
 To achieve Excel export, we need to add the following dependency libraries into the application.
 
@@ -143,10 +143,10 @@ function exportBtnClick(args)
 
 ![](Export_images/Export_ExcelClient.png)
 
-##Word Export
+## Word Export
 User can export contents of the PivotChart to Word document for future archival, references and analysis purposes.
 
-###Client Mode
+### Client Mode
 
 To achieve Word export, method name **"WordExport"** and file name is sent as the parameter.
 
@@ -177,7 +177,7 @@ public void WordExport()
 
 {% endhighlight %}
 
-###Server Mode
+### Server Mode
 
  To achieve Word export, we need to add the following dependency libraries into the application.
 
@@ -199,11 +199,11 @@ function exportBtnClick(args)
 
 ![](Export_images/Export_WordClient.png)
 
-##PDF Export
+## PDF Export
 
 User can export contents of the PivotChart to PDF document for future archival, references and analysis purposes.
 
-###Client Mode
+### Client Mode
 
 To achieve Word export, method name **"PDFExport"** and file name is sent as the parameter.
 
@@ -234,7 +234,7 @@ public void PDFExport()
 
 {% endhighlight %}
 
-###Server Mode
+### Server Mode
 
 To achieve PDF export, we need to add the following dependency libraries into the application.
 
@@ -256,7 +256,7 @@ function exportBtnClick(args)
 
 ![](Export_images/Export_PDFClient.png)
 
-##Image Export
+## Image Export
 User can export contents of the PivotChart to image format for future archival, references and analysis purposes. We can export PivotChart to the following image formats.
 
 * PNG
@@ -265,7 +265,7 @@ User can export contents of the PivotChart to image format for future archival, 
 * GIF
 * BMP
 
-###Client Mode
+### Client Mode
 
 To achieve image export, method name **"ImageExport"** ,**“ej.PivotChart.ExportOptions.PNG”** and file name is sent as the parameter.This is similar to other image formats.
 
@@ -296,7 +296,7 @@ public void ImageExport()
 
 {% endhighlight %}
 
-###Server Mode
+### Server Mode
 
 To export PivotChart in PNG format, **“ej.PivotChart.ExportOptions.PNG”** enumeration value is sent as the parameter. This is similar to other image formats.
 
@@ -314,9 +314,9 @@ function exportBtnClick(args)
 
 ![](Export_images/Export_PNGClient.png)
 
-##Customize the export document name
+## Customize the export document name
 
-###Client Mode
+### Client Mode
 
 For customizing file name, we need to send file name as parameter to the **“exportPivotChart”**  method along with method name.
 
@@ -330,7 +330,7 @@ function exportBtnClick(args)
 
 {% endhighlight %}
     
-###Server Mode
+### Server Mode
 
 For customizing name in WebAPI controller, below code snippet is used.
 

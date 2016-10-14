@@ -7,9 +7,9 @@ control: PivotChart
 documentation: ug
 ---
 
-#Dimensions
+# Dimensions
 
-##Set size in percentage
+## Set size in percentage
 
 You can customize the PivotChart dimension by setting the width and height of the control in percentage.
 
@@ -27,7 +27,7 @@ You can customize the PivotChart dimension by setting the width and height of th
     
 {% endhighlight %}
 
-##Set size in pixels
+## Set size in pixels
 
 You can customize the PivotChart dimension by setting the width and height of the control in pixels.
 
@@ -47,7 +47,7 @@ You can customize the PivotChart dimension by setting the width and height of th
 
 ![](Dimensions_images/Dimensions.png) 
 
-##Responsive
+## Responsive
 
 PivotChart control supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution upto 1024x600. You can enable responsiveness in PivotChart by setting `isResponsive` property to true.
 
