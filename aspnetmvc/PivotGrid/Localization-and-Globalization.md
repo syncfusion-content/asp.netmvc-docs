@@ -10,7 +10,7 @@ documentation: ug
 # Localization and Globalization
 
 ## Localization in PivotGrid 
-You can localize the PivotGrid controls text with a collection of localized strings using **"ej.PivotGrid.locale"** for different cultures. By default, the PivotGrid control is localized in **"en-US"** culture.
+You can localize the PivotGrid controls text with a collection of localized strings using **"ej.PivotGrid.Locale"** for different cultures. By default, the PivotGrid control is localized in **"en-US"** culture.
 
 {% highlight CSHTML %}
 
@@ -39,19 +39,19 @@ You can localize the PivotGrid controls text with a collection of localized stri
     };
 
 
-      ej.PivotGrid.Locale["fr-FR"] = {
-        Sort:"Tri",
-        SelectField: "sélectionnez Champ",
-        LabelFilterLabel:"Afficher les éléments pour lesquels l'étiquette",
-        ValueFilterLabel:"Afficher les éléments pour lesquels",
-        ...
-        ...
+  ej.PivotGrid.Locale["fr-FR"] = {
+       Sort:"Tri",
+       SelectField: "sélectionnez Champ",
+       LabelFilterLabel:"Afficher les éléments pour lesquels l'étiquette",
+       ValueFilterLabel:"Afficher les éléments pour lesquels",
+       ...
+       ...
     };
 
-ej.PivotPager.locale["fr-FR"] = {
-    SeriesPage: "Série Page",
-    CategoricalPage: "Catégorique Page"
-}; 
+  ej.PivotPager.Locale["fr-FR"] = {
+      SeriesPage: "Série Page",
+      CategoricalPage: "Catégorique Page"
+  }; 
 < /script>
 
 {% endhighlight %}
@@ -1057,7 +1057,7 @@ Content displayed within the PivotGrid control are obtained from the OLAP Cube. 
 * To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**. 
 * To bind the globalized content in PivotGrid control, we need to set **"Locale"** property to a specific culture and want to refer specific culture file in the sample. 
  
-N> Culture files are present under **"Syncfusion\EssentialStudio\14.2.0.26\MVC\Samples\web\Scripts\cultures".**
+N> Culture files are present under **"[installed drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Scripts\cultures".**
  
 {% highlight CSHTML %}
 
@@ -1093,7 +1093,7 @@ Content displayed within the PivotGrid control are obtained from the Relational 
 * To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.  
 * To globalize the values appear in PivotGrid , we need to set **"Format"** and **"Locale"** property to a specific culture and want to refer specific culture file in the sample. 
 
-N> Culture files are present under **"Syncfusion\EssentialStudio\14.2.0.26\MVC\Samples\web\Scripts\cultures".**
+N> Culture files are present under **"[installed drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Scripts\cultures".**
  
 {% highlight CSHTML %}
 
