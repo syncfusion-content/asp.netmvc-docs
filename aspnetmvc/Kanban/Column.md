@@ -90,6 +90,59 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img.png)
 
+## Multiple Key Mapping
+
+You can map more than one datasource fields as `Key` values to show different key cards into single column. For e.g , you can map "Validate,Inprogress" keys under "In progress" column. 
+
+The following code example and screenshot which describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+   
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                        col.HeaderText("Backlog").Key("Open").Add();
+                        col.HeaderText("In Progress or Validate").Key("InProgress,Validate").Add();
+                        col.HeaderText("Testing").Key("Testing").Add();
+                        col.HeaderText("Done").Key("Close").Add();
+                    })                
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {                    
+                            field.Content("Summary");
+                            
+                    })
+    )
+
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+    
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img9.png)
+
 ## Headers
 
 ### Header Template
