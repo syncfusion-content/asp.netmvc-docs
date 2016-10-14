@@ -14,13 +14,13 @@ Ribbon control dynamically resizes to display possible number of controls in the
 
 As the window is narrowed, controls in the Ribbon will be combined as group button with dropdown arrow, in which controls can be expanded with dropdown arrow.
 
-## Enable Resizing 
+## Tablet Layout 
 
-Set `AllowResizing` as true to enable resizing in Ribbon.
+Set `IsResponsive` as true to enable resizing in Ribbon.If client width is above  420px or control content exceeds the page then, the ribbon will render in Tablet mode.
 
 {% highlight CSHTML %}
 
-    @(Html.EJ().Ribbon("defaultRibbon").AllowResizing(true)
+    @(Html.EJ().Ribbon("defaultRibbon").IsResponsive(true)
         .Width("40%")
         .ApplicationTab(apptab =>
         {
@@ -69,6 +69,168 @@ Set `AllowResizing` as true to enable resizing in Ribbon.
 {% endhighlight %}
 
 ![](Resize_images/Resize_img1.png)
+
+## Mobile Layout
+
+If client width is less than 420px, the ribbon will render in mobile mode. In which, you can see that ribbon user interface is customized and redesigned for best view in small screens.
+The customized features includes responsive tab & group rendering, backstage, gallery and button controls.
+
+### Responsive Tab and group
+
+Set `IsResponsive` as true to enable responsive mode in Ribbon.
+   
+
+{% highlight html %}
+
+    @(Html.EJ().Ribbon("defaultRibbon")
+    .IsResponsive(true)
+    .RibbonTabs(tab =>
+    {
+        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+        {
+            tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
+            { 
+                cnt.ContentGroups(cntgrp =>
+                {
+                    cntgrp.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText="Bold",
+                        ActiveText="Bold",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resbold",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resbold",
+                    }).Add();
+                    cntgrp.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Italic",
+                        ActiveText = "Italic",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resitalic",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resitalic",
+                    }).Add();
+                    cntgrp.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Underline",
+                        ActiveText = "Underline",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resunderline",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resunderline",
+                    }).Add();
+                    cntgrp.Id("strikethrough").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Strikethrough",
+                        ActiveText = "Strikethrough",
+                        DefaultPrefixIcon = "e-icon e-ribbon strikethrough",
+                        ActivePrefixIcon = "e-icon e-ribbon strikethrough",
+                    }).Add();
+                    cntgrp.Id("superscript").IsMobileOnly(true).Text("Superscript").ButtonSettings(new ButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        PrefixIcon = "e-icon e-ribbon e-superscripticon",
+                    }).Add();
+                }).ContentDefaults(df => df.IsBig(false)).Add();
+            }).Add();
+        }).Add();
+        })
+    )
+
+{% endhighlight %}
+
+![](Resize_images/responsive1.png)
+
+N> To make the Ribbon control to react as responsive in mobile devices, it is necessary to refer the additional `ej.responsive.css` file in the application.
+
+## Mobile Toolbar Customization
+
+ Set `IsMobileOnly` as true to group control to show the controls 
+ in the Mobile Toolbar of the ribbon. For each tab , first row of mobile ribbon will pick and display the controls which is set as `IsMobileOnly` with look adapt to mobile mode.If `IsMobileOnly` property is not defined to any of the control within tab, then by default fist group content will be displayed in first row toolbar.
+
+ To adapt to proper display of controls , following layout will be customized with constants display.
+
+  * First ribbon toolbar and Button controls with min-height. 
+  * Drop down control will adapt to full screen width.
+  * All button controls icon will be displayed commonly as Top position.
+  
+  
+  {% highlight html %}
+
+     @(Html.EJ().Ribbon("defaultRibbon")
+    .IsResponsive(true)
+    .RibbonTabs(tab =>
+    {
+        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+        {
+            tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
+            { 
+                cnt.ContentGroups(cntgrp =>
+                {
+                    cntgrp.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText="Bold",
+                        ActiveText="Bold",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resbold",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resbold",
+                    }).Add();
+                    cntgrp.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Italic",
+                        ActiveText = "Italic",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resitalic",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resitalic",
+                    }).Add();
+                    cntgrp.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Underline",
+                        ActiveText = "Underline",
+                        DefaultPrefixIcon = "e-icon e-ribbon e-resunderline",
+                        ActivePrefixIcon = "e-icon e-ribbon e-resunderline",
+                    }).Add();
+                    cntgrp.Id("strikethrough").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        DefaultText = "Strikethrough",
+                        ActiveText = "Strikethrough",
+                        DefaultPrefixIcon = "e-icon e-ribbon strikethrough",
+                        ActivePrefixIcon = "e-icon e-ribbon strikethrough",
+                    }).Add();
+                    cntgrp.Id("superscript").Text("Superscript").ButtonSettings(new ButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        PrefixIcon = "e-icon e-ribbon e-superscripticon",
+                    }).Add();
+                }).ContentDefaults(df => df.IsBig(false)).Add();
+            }).Add();
+        }).Add();
+        })
+    )
+{% endhighlight %}
+
+![](Resize_images/responsive2.png)
+{:caption}
+Ribbon Responsive with MobileToolbar 
+
+### Customized Features
+
+The customized layout for  Quick Access Toolbar, backstage, gallery can be seen following screen shots.
+ 
+ ![](Resize_images/responsive3.png)
+ {:caption}
+Ribbon Responsive with Quick Access Toolbar 
+ 
+ ![](Resize_images/responsive4.png)
+ ![](Resize_images/responsive5.png)
+ {:caption}
+Ribbon Responsive with backstage
+ 
+ ![](Resize_images/responsive6.png)
+ {:caption}
+Ribbon Responsive with gallery
+
+
 
 ## Group Button Customization
  
