@@ -74,7 +74,7 @@ The PivotChart control allows you to view the data in a 3D view. Following are t
 
 ![](3D-Visualization_images/pie3d.png)
 
-##Rotating 3D Chart
+## Rotating 3D Chart
 We can rotate the 3D Chart towards left or right by setting an appropriate angle value to the `Rotation` property. The direction of the Chart display depends upon the positive or negative angle value.
 
 {% highlight CSHTML %}
