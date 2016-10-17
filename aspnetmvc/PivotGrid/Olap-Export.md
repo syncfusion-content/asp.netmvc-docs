@@ -164,7 +164,7 @@ public void PDFExport()
 
 {% endhighlight %}
 
-##CSV Export
+### CSV Export
 
 User can export the contents of PivotGrid to a CSV document for future archival, references and analysis purposes.
 
