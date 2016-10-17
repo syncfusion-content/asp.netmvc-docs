@@ -105,21 +105,19 @@ To apply conditional formats for a range use `CFormatRule` property.The followi
 {% highlight cshtml %}
 
 
-@(Html.EJ().Spreadsheet<object>("Spreadsheet")
-        .Sheets(sheet =>
-            {
-                sheet.RangeSettings(range =>
-                {
-                    range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-                }).Add();
-                sheet.CFormatRule(cformatrule =>
-                {
-                    cformatrule.Action("GreaterThan").Inputs("10").Color("RedFill").Range("D2:D8").Add();
-                }).Add();
-            })
+@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.RangeSettings(range =>
+        {
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+        }).CFormatRule(cformatrule =>
+        {
+            cformatrule.Action(SpreadsheetCFormatRuleAction.GreaterThan).Inputs(new List<string>() { "10" }).Color(SpreadsheetCFormatHighlightColor.RedFill).Range("D2:D8").Add();
+        }).Add();
 
-     )
-
+    })
+    )
 
 {% endhighlight %}
 
@@ -131,6 +129,7 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 
 {% highlight cshtml %}
 
+
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
         .ExportSettings(export =>
                         {
@@ -139,6 +138,20 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 
         )
     )
+
+
+{% endhighlight %}
+
+{% highlight csharp %}
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public void ExportToExcel(string sheetModel, string sheetData, string password)
+        {
+            if (String.IsNullOrEmpty(password))
+                Spreadsheet.Save(sheetModel, sheetData, "sample", ExportFormat.XLSX, ExcelVersion.Excel2013);
+            else
+                Spreadsheet.Save(sheetModel, sheetData, "sample", ExportFormat.XLSX, ExcelVersion.Excel2013, password);
+        }
 
 {% endhighlight %}
 
