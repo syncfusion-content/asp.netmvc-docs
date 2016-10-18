@@ -28,3 +28,21 @@ documentation: ug
 
 * Instead of enabling data markers and labels when there are large number of data points, you can use **Trackball** and **Tooltip** to view point information.
 
+## Lazy Loading
+
+Lazy loading feature provides an effective way for loading data on demand by scrolling and viewing a smaller range of data from a larger collection.
+
+{% highlight javascript %}
+
+@(Html.EJ().Chart("chartContainer")
+                // Enable to zoom and scrollbar option
+        .PrimaryXAxis(xaxis => xaxis.ScrollbarSettings(sc => sc.Visible(“true”)
+                  .CanResize(“true”)
+                  .Range(ra => ra.Min("2009/1/1").Max("2014/1/1"))))
+               //  ..
+)
+
+
+{% endhighlight %}
+
+![](Performance_images/Perform_img1.png)

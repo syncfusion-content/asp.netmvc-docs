@@ -437,6 +437,30 @@ X and Y values displayed in the trackball tooltip are formatted based on its axi
 
 ![](User-Interactions_images/User-Interactions_img14.png)
 
+
+You can able to show the trackball tooltip in two modes, using trackballTooltipSettings.
+
+                1.	Grouping.
+                2.	Float. 
+
+{% highlight javascript %}
+
+
+@(Html.EJ().Chart("chartContainer")
+   //  ..
+               .Crosshair(zn => zn.Visible(true).type(CrosshairType.Trackball)
+                   .TrackballTooltipSettings(tl => tl.Rx(“3”)
+                   .Ry(“3”).Fill(“whitesmoke”).Mode(TrackballDisplayMode.Grouping)
+                   .Border(br => br.Width(“1”).Color(“grey”)))
+  //  ..
+)
+
+
+{% endhighlight %}
+
+![](User-Interactions_images/User-Interactions_img30.png)
+
+
 ## Highlight
 
 EjChart provides highlighting support for the series and data points on mouse hover. To enable the highlighting option, set the *Enable* property to *True* in the **HighlightSettings** of the series.
@@ -1035,5 +1059,27 @@ To get the series information when selecting the specific series, subscribe to t
 {% endhighlight %}
 
 
+### Selection on Load
+
+We can able to select the point/series programmatically on chart load, by setting series and point index in the selectedDataPointIndexes property.
+
+{% highlight javascript %}
+
+
+  @(Html.EJ().Chart("chartContainer") 
+                           //.... . . 
+              .SelectedDataPointIndexes(sr => {
+                  //Adding Selected Data point indexes 
+                       sr.SeriesIndex(“0”).PointIndex(“2”)
+                       sr.SeriesIndex(“1”).PointIndex(“4”)
+                                 //.... . . 
+               }).Add(); 
+                           //.... . . 
+     }) 
+)
+
+
+{% endhighlight %}
+![](User-Interactions_images/User-Interactions_img29.png)
 
 
