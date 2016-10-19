@@ -20,9 +20,9 @@ CSS file
 
 External script files
 
-* [jQuery 1.7.1](http://jquery.com/#) and later versions.
-* [jQuery.easing.js](http://gsgd.co.uk/sandbox/jquery/easing/#) - to support the animation effects.
+* [jQuery](http://jquery.com/#) (from the version 1.7.1 to 3.1.0)
 
+jQuery.easing external dependency has been removed from version 14.3.0.49 onwards. Kindly include this jQuery.easing dependency for versions lesser than 14.3.0.49 in order to support animation effects.
 Internal script files
 
 <table>
@@ -65,11 +65,10 @@ Below is a simple Layout CSHTML file with required CSS and script reference adde
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
        
-    <link rel="stylesheet" href="http://cdn.syncfusion.com/13.4.0.63/js/web/flat-azure/ej.web.all.min.css" />
+    <link rel="stylesheet" href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"> </script>
-    <script src="http://cdn.syncfusion.com/13.4.0.63/js/web/ej.web.all.min.js"> </script>
-    <script src="http://cdn.syncfusion.com/13.4.0.63/js/common/ej.unobtrusive.min.js"></script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
 
     </head>
     
