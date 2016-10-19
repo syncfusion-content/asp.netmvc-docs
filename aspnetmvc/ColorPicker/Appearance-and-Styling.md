@@ -264,11 +264,9 @@ The core style sheet applies styles related to positioning and size, but are not
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"  />
 
-    <link href=" http://cdn.syncfusion.com/js/web/flat-saffron-dark/ej.web.all-latest.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/js/web/flat-saffron-dark/ej.web.all-latest.min.css" rel="stylesheet" />
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <script src="http://cdn.syncfusion.com/js/web/ej.web.all-latest.min.js"></script>
 
@@ -287,6 +285,8 @@ The core style sheet applies styles related to positioning and size, but are not
 </html>
 
 {% endhighlight  %}
+
+N> jQuery.easing external dependency has been removed from version 14.3.0.49 onwards. Kindly include this jQuery.easing dependency for versions lesser than 14.3.0.49 in order to support animation effects.
 
 The following screenshot displays the output of the above code example.
 
