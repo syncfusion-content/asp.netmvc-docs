@@ -245,7 +245,7 @@ The example below demonstrates how to add a custom tool button
         and get the HTML content for the displayed content. A rich text editor control provides
         users with a toolbar that helps them to apply rich text formats to the text entered
         in the text area.
-    </p>).ShowFooter(true).ToolsList(toolsList).Tools(tool => tool.CustomTools(customTools => customTools.Text("Insert - O").Tooltip("Special Characters").Css("insertsc").Action("CustomTool").Add())).Render();}
+    </p>).ShowFooter(true).ToolsList(toolsList).Tools(tool => tool.CustomTools(customTools => customTools.Text("Insert - O").Tooltip("Special Characters").Css("insert-special-character").Action("CustomTool").Add())).Render();}
 
 {% endhighlight %}
 
@@ -255,7 +255,7 @@ Upon clicking the "Insert" button, the special character will be added to the RT
 
 <script>
     var rteObj =  $("#rteSample").data("ejRTE");
-    $(".insertsc").ejButton();
+    $(".insert-special-character").ejButton();
     $("#specialcharacter").ejDialog({ enableResize: false, enableModal: true, showOnInit: false, width: "auto", position: { X: 218, Y: 38 } });
     $(".specialtbl tbody tr td" ).addClass("specialtd").on( "click", customTdClick);
     function customTdClick(args) {
@@ -289,5 +289,5 @@ Define the CSS that will be applied to the custom tool.
 
 N> The CSS class that defined for custom tool is directly applies to the newly added toolbar item. 
 
-I> The custom buttons get a insertsc CSS class to allow styling, where name is the name specified in the custom tool configuration.
+I> The custom buttons get a `insert-special-character` CSS class to allow styling, where name is the name specified in the custom tool configuration.
 
