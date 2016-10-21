@@ -28,11 +28,11 @@ Now, the Spreadsheet is rendered with default row and column count.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
-## Populate Spreadsheet with Data:
+## Populate Spreadsheet with Data
 
 Now, this section explains how to populate JSON data to the Spreadsheet. You can set `DataSource` property in `Sheets` settings to populate JSON data in Spreadsheet.
 
-1. Initialize Spreadsheet with dataSource.
+1) Initialize Spreadsheet with dataSource.
 
 {% highlight cshtml %}
 
@@ -49,7 +49,7 @@ Now, this section explains how to populate JSON data to the Spreadsheet. You can
 
 {% endhighlight %}
 
-2. Create datasource for Spreadsheet control.
+2) Create datasource for Spreadsheet control.
 
 {% highlight csharp %}
 
@@ -90,9 +90,7 @@ Now, this section explains how to populate JSON data to the Spreadsheet. You can
             public int Amount { get; set; }
             public int Discount { get; set; }
             public int Profit { get; set; }
-        }            public int Profit { get; set; }
-        }
-
+        }            
 {% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img2.png)
