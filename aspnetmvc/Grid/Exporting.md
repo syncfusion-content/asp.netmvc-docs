@@ -721,8 +721,6 @@ When the theme is set as none and the autoFormat is not set to the grid, then no
 
 The **AutoFormat** Class can be used to customize the styles or themes applied to the exported grid. With the autoFormat class, you can provide required color to the grid content, alt row background or border color.
 
-The customized theme is applied to the grid, only when the selected theme is either “none” or ExportTheme.None.
-
 The various properties available under the autoFormat class are listed in the following table.
 
 <table>
@@ -841,7 +839,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 		GridProperties obj = ConvertGridObject(GridModel);
 
-		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "none");
+		exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
 
 	}
 
@@ -855,7 +853,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 		GridProperties obj = ConvertGridObject(GridModel);
 
-		exp.Export(obj, DataSource, "Export.docx", false, false, ExportTheme.None);
+		exp.Export(obj, DataSource, "Export.docx", false, false, ExportTheme.FlatSaffron);
 
 	}
 
@@ -869,7 +867,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 		GridProperties obj = ConvertGridObject(GridModel);
 
-		exp.Export(obj, DataSource, "Export.pdf", false, false, "none");
+		exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron");
 
 	}
 
@@ -878,6 +876,8 @@ The background color of the alternative row of the grid content</td></tr>
 	{
 
 		GridProperties gridProp = DeserializeToModel(typeof(GridProperties),gridProperty);
+		
+		GridExtensions ext = new GridExtensions();
 
 		AutoFormat auto = new AutoFormat();
 
@@ -900,6 +900,8 @@ The background color of the alternative row of the grid content</td></tr>
 		auto.GHeaderBgColor = Color.Crimson;
 
 		auto.AltRowBgColor = Color.LightCyan;
+		
+		ext.SetTheme(auto, "flat-saffron");
 
 		gridProp.AutoFormat = auto;
 
