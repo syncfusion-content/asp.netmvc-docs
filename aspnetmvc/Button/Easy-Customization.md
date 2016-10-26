@@ -53,7 +53,7 @@ The following steps explains you the details about rendering the button with dif
 
 <div class="control">        
 	
-	@Html.EJ().Button("button_normal").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+	@Html.EJ().Button("button_normal").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-handup")
 
 
 
@@ -69,11 +69,11 @@ The following steps explains you the details about rendering the button with dif
 
 
 
-	@Html.EJ().Button("button_large").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
+	@Html.EJ().Button("button_large").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup")
 
 
 
-	@Html.EJ().Button("button_customSize").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").Height("50").Width("150")
+	@Html.EJ().Button("button_customSize").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").Height("50").Width("150")
 
 
 
@@ -161,7 +161,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	<div class="control">           
 
-		@Html.EJ().Button("button_imageOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+		@Html.EJ().Button("button_imageOnly").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-handup")
 
 
 
@@ -169,21 +169,21 @@ The following steps explains you the details about rendering the Button with abo
 
 
 
-		@Html.EJ().Button("button_imageBoth").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
+		@Html.EJ().Button("button_imageBoth").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette")
 
 
 
-		@Html.EJ().Button("button_textAndImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
+		@Html.EJ().Button("button_textAndImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup")
 
 
 
-		@Html.EJ().Button("button_imageTextImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
-
-		<br />
+		@Html.EJ().Button("button_imageTextImage").Text("login").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette")
 
 		<br />
 
-		@Html.EJ().Button("button_small_imageOnly").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+		<br />
+
+		@Html.EJ().Button("button_small_imageOnly").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-handup")
 
 
 
@@ -191,15 +191,15 @@ The following steps explains you the details about rendering the Button with abo
 
 
 
-		@Html.EJ().Button("button_small_imageBoth").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette")
+		@Html.EJ().Button("button_small_imageBoth").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageBoth).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette")
 
 
 
-		@Html.EJ().Button("button_small_textAndImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup")
+		@Html.EJ().Button("button_small_textAndImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup")
 
 
 
-		@Html.EJ().Button("button_small_imageTextImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette")
+		@Html.EJ().Button("button_small_imageTextImage").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.ImageTextImage).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette")
 
 
 
@@ -259,55 +259,55 @@ The following steps explains you the details about rendering the Button with abo
 
 
 
-		@Html.EJ().Button("button_normal_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+		@Html.EJ().Button("button_normal_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-		@Html.EJ().Button("button_mini_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+		@Html.EJ().Button("button_mini_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-		@Html.EJ().Button("button_small_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+		@Html.EJ().Button("button_small_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-		@Html.EJ().Button("button_medium_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
+		@Html.EJ().Button("button_medium_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 
 
-		@Html.EJ().Button("button_large_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft)
-
-		<br />
-
-		<br />
-
-		@Html.EJ().Button("button_normal_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
-
-
-
-		@Html.EJ().Button("button_mini_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
-
-
-
-		@Html.EJ().Button("button_small_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
-
-
-
-		@Html.EJ().Button("button_medium_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
-
-
-
-		@Html.EJ().Button("button_large_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight)
+		@Html.EJ().Button("button_large_imageLeft").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft)
 
 		<br />
 
 		<br />
 
-		@Html.EJ().Button("button_imageTop").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageTop).Width("60")
+		@Html.EJ().Button("button_normal_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight)
 
 
 
-		@Html.EJ().Button("button_imageBottom").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageBottom).Width("60")
+		@Html.EJ().Button("button_mini_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Mini).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight)
+
+
+
+		@Html.EJ().Button("button_small_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight)
+
+
+
+		@Html.EJ().Button("button_medium_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight)
+
+
+
+		@Html.EJ().Button("button_large_imageRight").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight)
+
+		<br />
+
+		<br />
+
+		@Html.EJ().Button("button_imageTop").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageTop).Width("60")
+
+
+
+		@Html.EJ().Button("button_imageBottom").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageBottom).Width("60")
 
 
 
@@ -364,23 +364,23 @@ The following steps explains you the details about rendering the Button with abo
 
 
 
-		@Html.EJ().Button("button_customCss1").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss1")
+		@Html.EJ().Button("button_customCss1").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss1")
 
 
 
-		@Html.EJ().Button("button_customCss2").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss2")
+		@Html.EJ().Button("button_customCss2").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss2")
 
 
 
-		@Html.EJ().Button("button_customCss3").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss3")
+		@Html.EJ().Button("button_customCss3").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss3")
 
 
 
-		@Html.EJ().Button("button_customCss4").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss4")
+		@Html.EJ().Button("button_customCss4").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss4")
 
 
 
-		@Html.EJ().Button("button_customCss5").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss5")
+		@Html.EJ().Button("button_customCss5").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).CssClass("customCss5")
 
 
 

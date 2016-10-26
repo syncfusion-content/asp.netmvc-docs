@@ -36,8 +36,8 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
         <td>                   
 			@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
-			.ContentType(ContentType.TextAndImage).ToggleState(true).DefaultPrefixIcon("e-mediaplay")
-			.ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
+			.ContentType(ContentType.TextAndImage).ToggleState(true).DefaultPrefixIcon("e-icon e-mediaplay")
+			.ActivePrefixIcon("e-icon e-mediapause").DefaultText("Play").ActiveText("Pause")
 
 
 
@@ -108,7 +108,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 				<td>                   
 					@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
 					.ContentType(ContentType.TextAndImage).ToggleState(true).ClientSideEvents(e => e.Create("play").Click("pause")
-					.Change("play")).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").DefaultText("Play").ActiveText("Pause")
+					.Change("play")).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediapause").DefaultText("Play").ActiveText("Pause")
 
 				   </td>
 
