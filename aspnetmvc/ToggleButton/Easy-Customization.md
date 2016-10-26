@@ -24,11 +24,11 @@ The following steps explains you the details about rendering the Toggle Button w
 
 @*set the state for toggle button*@
 
-@Html.EJ().ToggleButton("toggleButton_default").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Pause").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").ToggleState(false)
+@Html.EJ().ToggleButton("toggleButton_default").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Pause").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediapause").ToggleState(false)
 
 <br/>    
 
-@Html.EJ().ToggleButton("toggleButton_active").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Pause").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause").ToggleState(true)
+@Html.EJ().ToggleButton("toggleButton_active").Size(ButtonSize.Small).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Pause").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediapause").ToggleState(true)
 
 		
 {% endhighlight %}
@@ -114,7 +114,7 @@ The following script explains you the details about rendering the Toggle Button 
 
     @*set the prefix, suffix build in icons in default and active state*@
 
-    @Html.EJ().ToggleButton("toggleButton_iconsAndStates").ContentType(ContentType.ImageTextImage).ShowRoundedCorner(true).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-redo ").ActiveSuffixIcon("e-undo ")
+    @Html.EJ().ToggleButton("toggleButton_iconsAndStates").ContentType(ContentType.ImageTextImage).ShowRoundedCorner(true).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-redo").ActiveSuffixIcon("e-icon e-undo")
 
 {% endhighlight %}
 
@@ -187,7 +187,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_normal").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_normal").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td> </tr><tr>
 
@@ -211,13 +211,13 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_large").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_large").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td></tr><tr> 
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customSize").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").Height("50").Width("150")
+				@Html.EJ().ToggleButton("toggleButton_customSize").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").Height("50").Width("150")
 
 			</td>
 
@@ -290,7 +290,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_imageOnly").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_imageOnly").ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td>
 
@@ -302,19 +302,19 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_imageBoth").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-undo").ActiveSuffixIcon("e-redo")
+				@Html.EJ().ToggleButton("toggleButton_imageBoth").ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-undo").ActiveSuffixIcon("e-icon e-redo")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_textAndImage").ShowRoundedCorner(true).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_textAndImage").ShowRoundedCorner(true).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_imageTextImage").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-undo").ActiveSuffixIcon("e-redo")
+				@Html.EJ().ToggleButton("toggleButton_imageTextImage").ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-undo").ActiveSuffixIcon("e-icon e-redo")
 
 			</td>
 
@@ -332,7 +332,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_small_imageonly").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_small_imageonly").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td>
 
@@ -344,19 +344,19 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_small_imageBoth").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-undo").ActiveSuffixIcon("e-redo")
+				@Html.EJ().ToggleButton("toggleButton_small_imageBoth").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-undo").ActiveSuffixIcon("e-icon e-redo")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_small_textAndImage").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext")
+				@Html.EJ().ToggleButton("toggleButton_small_textAndImage").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_small_imageTextImage").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-mediaforward ").ActivePrefixIcon("e-mediaback ").DefaultSuffixIcon("e-undo").ActiveSuffixIcon("e-redo")
+				@Html.EJ().ToggleButton("toggleButton_small_imageTextImage").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-undo").ActiveSuffixIcon("e-icon e-redo")
 
 			</td>
 
@@ -424,31 +424,31 @@ The following steps explains you the details about rendering the Toggle Button w
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_normal_imageLeft").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageLeft)
+                    @Html.EJ().ToggleButton("toggleButton_normal_imageLeft").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageLeft)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_mini_imageLeft").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageLeft)
+                    @Html.EJ().ToggleButton("toggleButton_mini_imageLeft").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageLeft)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_small_imageLeft").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageLeft)
+                    @Html.EJ().ToggleButton("toggleButton_small_imageLeft").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageLeft)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_medium_imageLeft").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageLeft)
+                    @Html.EJ().ToggleButton("toggleButton_medium_imageLeft").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageLeft)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_large_imageLeft").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageLeft)
+                    @Html.EJ().ToggleButton("toggleButton_large_imageLeft").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageLeft)
 
                 </td>
 
@@ -468,31 +468,31 @@ The following steps explains you the details about rendering the Toggle Button w
 
                  <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_normal_imageRight").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageRight)
+                    @Html.EJ().ToggleButton("toggleButton_normal_imageRight").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageRight)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_mini_imageRight").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageRight)
+                    @Html.EJ().ToggleButton("toggleButton_mini_imageRight").Size(ButtonSize.Mini).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageRight)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_small_imageRight").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageRight)
+                    @Html.EJ().ToggleButton("toggleButton_small_imageRight").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageRight)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_medium_imageRight").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageRight)
+                    @Html.EJ().ToggleButton("toggleButton_medium_imageRight").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageRight)
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_large_imageRight").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageRight)
+                    @Html.EJ().ToggleButton("toggleButton_large_imageRight").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageRight)
 
                 </td>
 
@@ -512,13 +512,13 @@ The following steps explains you the details about rendering the Toggle Button w
 
                  <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_imageTop").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageTop).Height("60").Width("50")
+                    @Html.EJ().ToggleButton("toggleButton_imageTop").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageTop).Height("60").Width("50")
 
                 </td>
 
                 <td class="btnsht">
 
-                    @Html.EJ().ToggleButton("toggleButton_imageBottom").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").ImagePosition(ImagePosition.ImageBottom).Height("60").Width("50")
+                    @Html.EJ().ToggleButton("toggleButton_imageBottom").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").ImagePosition(ImagePosition.ImageBottom).Height("60").Width("50")
 
                 </td>
 
@@ -589,31 +589,31 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customCSS1").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss1")
+				@Html.EJ().ToggleButton("toggleButton_customCSS1").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").CssClass("customCss1")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customCSS2").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss2")
+				@Html.EJ().ToggleButton("toggleButton_customCSS2").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").CssClass("customCss2")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customCSS3").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss3")
+				@Html.EJ().ToggleButton("toggleButton_customCSS3").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").CssClass("customCss3")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customCSS4").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss4")
+				@Html.EJ().ToggleButton("toggleButton_customCSS4").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").CssClass("customCss4")
 
 			</td>
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_customCSS5").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").CssClass("customCss5")
+				@Html.EJ().ToggleButton("toggleButton_customCSS5").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward").CssClass("customCss5")
 
 			</td>
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Button Type | Button	 | ASP.NET MVC | Syncfusion
+title: Button Type | Button | ASP.NET MVC | Syncfusion
 description: button type
 platform: ejmvc
 control: Button

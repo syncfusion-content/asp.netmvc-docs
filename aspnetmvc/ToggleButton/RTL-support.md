@@ -24,13 +24,13 @@ The following steps explains you the details about rendering the Toggle Button w
 
 	@*enable right to left alignment*@
 
-	@Html.EJ().ToggleButton("toggleButton_rtl").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-medianext").EnableRTL(true)       
+	@Html.EJ().ToggleButton("toggleButton_rtl").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).DefaultText("Play").ActiveText("Next").DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-medianext").EnableRTL(true)       
 
 </div>
 
 {% endhighlight %}
 
-In above mentioned code example PrefixIcon property is used and the icon that is to be on left side, (before text) is rendered on right side as EnableRTL property is used with PrefixIcon.  Consequently, the alignment is changed in right to left order.
+In above mentioned code example PrefixIcon property is used and the icon that is to be on left side, (before text) is rendered on right side as EnableRTL property is used with PrefixIcon. Consequently, the alignment is changed in right to left order.
 
 Output of above steps
 
