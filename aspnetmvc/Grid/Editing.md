@@ -1675,7 +1675,7 @@ The following code example describes the above behavior.
 
 {% endhighlight  %}
 
-To perform the CRUD Operation in ODataV4 we need not explicitly mention any URL explicitly for Insert, Update or Delete operations in grid instead we can retrieve it using the `PUT`, `POST` and `DELETE` semantics of the OData which will be handled on the URL property already specified.
+To perform the CRUD Operation in ODataV4 we need not explicitly mention any URL for Insert, Update or Delete operations in grid instead we can retrieve it using the `PUT`, `POST` and `DELETE` semantics of the OData which will be handled on the URL property already specified.
 
 The following code example describes the above behavior.
 
