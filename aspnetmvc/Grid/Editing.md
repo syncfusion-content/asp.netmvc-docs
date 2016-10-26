@@ -1638,6 +1638,142 @@ Please refer the below image for more information about batch parameters
 ![](Editing_images/Editing_img25.png)
 
 
+### Performing CRUD Operation on ODataV4 Adaptor 
+
+ODataV4 Adaptor that is extended from `ODataAdaptor`, is used for consuming data from ODataV4 Service
+       
+To consume ODataV4 service, set the service link to the `Url` property of Grid `DataSource` and you can set Adaptor type as `AdaptorType.ODataV4Adaptor` to the `Adaptor` Property of Grid `DataManager`. We can bind this `DataManager` as dataSource for the Grid.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<object>("Grid")
+            .Datasource(ds => { ds.URL("/odata/Orders").Adaptor(AdaptorType.ODataV4Adaptor); })
+            .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().EditMode(EditMode.Normal); })
+            .ToolbarSettings(toolbar =>
+            {
+                toolbar.ShowToolbar().ToolbarItems(items =>
+                {
+                    items.AddTool(ToolBarItems.Add);
+                    items.AddTool(ToolBarItems.Edit);
+                    items.AddTool(ToolBarItems.Delete);
+                    items.AddTool(ToolBarItems.Update);
+                    items.AddTool(ToolBarItems.Cancel);
+                });
+            })
+         .AllowPaging()
+         .Columns(col =>
+          {
+             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).IsIdentity(true).Width(50).Add();
+             col.Field("EmployeeID").HeaderText("Employee ID").Width(50).Add();
+             col.Field("ShipCity").HeaderText("ShipCity").Width(50).Add();
+          })
+)
+
+{% endhighlight  %}
+
+To perform the CRUD Operation in ODataV4 we need not explicitly mention any URL for Insert, Update or Delete operations in grid instead we can retrieve it using the `PUT`, `POST` and `DELETE` semantics of the OData which will be handled on the URL property already specified.
+
+The following code example describes the above behavior.
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+           public class GridController : ODataController
+              { 
+                // GET: Orders
+                 NORTHWNDEntities db = new NORTHWNDEntities();
+                  [EnableQuery]
+                 public IQueryable<Order> Get()
+                  {
+                        return db.Orders;
+                   }
+              }
+       } 
+{% endhighlight  %}
+    
+{% endtabs %} 
+
+The Get method returns the entire Order collection. This Get Method returns the data to the Grid from the database.
+
+### Insert Record:
+
+To add a new data to the database, add the following method to controller page.
+
+The following code example describes the above behavior.
+
+{% highlight c# %}
+     
+    // POST odata/Orders
+        public async Task<Order> Post(Order order) 
+        {
+             // Perform ADD operation
+            
+        }
+
+{% endhighlight %}
+
+Please refer the below image.
+
+![](Editing_images/Editing_img31.png)
+
+Here the newly added record details are bound to the ‘order’ parameter.
+
+### Update Record:
+
+To update an existing data from  the database, add the following method to Controller page. 
+
+The following code example describes the above behavior.
+
+{% highlight c# %}
+          
+        // PUT odata/Orders(5)
+        public async Task<Order> Put(Order order) 
+        {
+            
+           //Edit operation in database
+        }
+
+{% endhighlight %}
+
+Please refer the below image.
+
+![](Editing_images/Editing_img32.png)
+
+Here the modified row data will be obtained in the order parameter.
+
+### Delete Record:
+
+To delete a data from the database, add the following method to controller. 
+
+The following code example describes the above behavior.
+
+{% highlight c# %}
+
+       // DELETE odata/Orders(5)
+        public async Task<IHttpActionResult> Delete([FromODataUri] int key)
+        {
+            
+         // Delete operation in database            
+        }
+
+{% endhighlight %}
+
+Please refer the below image.
+
+![](Editing_images/Editing_img33.png)
+
+The deleted record primary key value is bound to the ‘key’ parameter. 
+
+Please refer the below image.
+
+![](Editing_images/Editing_img34.png)
+
+
 ## Adding New Row Position
 
 To add new row in the top or bottom position of grid content, set `RowPosition` property of `EditSettings` depending on the requirement.
