@@ -28,15 +28,15 @@ Also in the button sample, you can use the icon class names as follows,
 {% highlight CSHTML %}
 
 
-@Html.EJ().Button("button").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup")
+@Html.EJ().Button("button").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-handup")
 
 
 
-@Html.EJ().SplitButton("splitbutton").ContentType(ContentType.ImageOnly).PrefixIcon("e-calender")
+@Html.EJ().SplitButton("splitbutton").ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-calender")
 
 
 
-@Html.EJ().ToggleButton("toggleButton").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-mediaplay").ActivePrefixIcon("e-mediapause")
+@Html.EJ().ToggleButton("toggleButton").Size(ButtonSize.Small).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediapause")
 
 
 {% endhighlight %}
@@ -77,7 +77,7 @@ e-reload</td><td>
 </td></tr>
 <tr>
 <td>
-e-collaps</td><td>
+e-collapse</td><td>
 {{'![](Icons_images/Icons_img6.png)'| markdownify }}
 </td></tr>
 <tr>

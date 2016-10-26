@@ -26,7 +26,7 @@ The following steps explains the details about rendering the button with Right t
 
 <div class="control">
 
-        @Html.EJ().Button("button_rtl").Text("button").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").EnableRTL(true)
+        @Html.EJ().Button("button_rtl").Text("button").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").EnableRTL(true)
 
 </div>
 
