@@ -43,7 +43,7 @@ The following steps explain you the details on rendering the Split Button with
 
 
 
-	@Html.EJ().SplitButton("spltbutton11").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.ImageOnly).TargetID("Ul11").PrefixIcon("e-uiLight e-login").ArrowPosition(ArrowPosition.Left)
+	@Html.EJ().SplitButton("spltbutton11").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.ImageOnly).TargetID("Ul11").PrefixIcon("e-icon e-login").ArrowPosition(ArrowPosition.Left)
 
 	<ul id="Ul11">
 

@@ -30,7 +30,7 @@ The following script explains you the details about rendering the Split Button w
 
         <div class="spltspan">
 
-            @Html.EJ().SplitButton("spltbutton").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11")
+            @Html.EJ().SplitButton("spltbutton").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11")
 
             <ul id="Ul11">
 
@@ -111,7 +111,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 				<div class="spltspan">
 
-					@Html.EJ().SplitButton("spltbutton_normal").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.ImageOnly).PrefixIcon("e-login:before").TargetID("Ul11")
+					@Html.EJ().SplitButton("spltbutton_normal").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Normal).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-login").TargetID("Ul11")
 
 					<ul id="Ul11">
 
@@ -177,7 +177,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_large").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-login:before").TargetID("Ul51")
+				@Html.EJ().SplitButton("spltbutton_large").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Large).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").TargetID("Ul51")
 
 				<ul id="Ul51">
 
@@ -193,7 +193,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_customSize").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-login:before").TargetID("Ul61").Height("50").Width("150")
+				@Html.EJ().SplitButton("spltbutton_customSize").Text("login").ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").TargetID("Ul61").Height("50").Width("150")
 
 				<ul id="Ul61">
 
@@ -300,7 +300,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 				<div class="spltspan">
 
-					@Html.EJ().SplitButton("spltbutton_imageOnly").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-handup").TargetID("Ul11")
+					@Html.EJ().SplitButton("spltbutton_imageOnly").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).PrefixIcon("e-icon e-handup").TargetID("Ul11")
 
 					<ul id="Ul11">
 
@@ -334,7 +334,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_imageBoth").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-handup").SuffixIcon("e-palette").TargetID("Ul31")
+				@Html.EJ().SplitButton("spltbutton_imageBoth").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageBoth).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette").TargetID("Ul31")
 
 				<ul id="Ul31">
 
@@ -350,7 +350,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_textAndImage").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").TargetID("Ul41")
+				@Html.EJ().SplitButton("spltbutton_textAndImage").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").TargetID("Ul41")
 
 				<ul id="Ul41">
 
@@ -366,7 +366,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_imageTextImage").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-handup").SuffixIcon("e-palette").TargetID("Ul51")
+				@Html.EJ().SplitButton("spltbutton_imageTextImage").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.ImageTextImage).PrefixIcon("e-icon e-handup").SuffixIcon("e-icon e-palette").TargetID("Ul51")
 
 				<ul id="Ul51">
 
@@ -441,7 +441,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 				<div class="spltspan">
 
-					@Html.EJ().SplitButton("spltbutton_normal_imageLeft").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11")
+					@Html.EJ().SplitButton("spltbutton_normal_imageLeft").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11")
 
 					<ul id="Ul11">
 
@@ -459,7 +459,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td>
 
-				@Html.EJ().SplitButton("spltbutton_small_imageLeft").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21")
+				@Html.EJ().SplitButton("spltbutton_small_imageLeft").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21")
 
 				<ul id="Ul21">
 
@@ -475,7 +475,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_medium_imageLeft").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31")
+				@Html.EJ().SplitButton("spltbutton_medium_imageLeft").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31")
 
 				<ul id="Ul31">
 
@@ -491,7 +491,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			   <td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_large_imageLeft").Text("login").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41")
+				@Html.EJ().SplitButton("spltbutton_large_imageLeft").Text("login").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41")
 
 				<ul id="Ul41">
 
@@ -513,7 +513,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 				<div class="spltspan">
 
-					@Html.EJ().SplitButton("spltbutton_normal_imageRight").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul51")
+					@Html.EJ().SplitButton("spltbutton_normal_imageRight").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul51")
 
 					<ul id="Ul51">
 
@@ -531,7 +531,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td>
 
-				@Html.EJ().SplitButton("spltbutton_small_imageRight").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul61")
+				@Html.EJ().SplitButton("spltbutton_small_imageRight").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul61")
 
 				<ul id="Ul61">
 
@@ -547,7 +547,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_medium_imageRight").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul71")
+				@Html.EJ().SplitButton("spltbutton_medium_imageRight").Text("login").Size(ButtonSize.Medium).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul71")
 
 				<ul id="Ul71">
 
@@ -563,7 +563,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td class="btnsht">
 
-				@Html.EJ().SplitButton("spltbutton_large_imageRight").Text("login").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul81")
+				@Html.EJ().SplitButton("spltbutton_large_imageRight").Text("login").Size(ButtonSize.Large).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageRight).TargetID("Ul81")
 
 				<ul id="Ul81">
 
@@ -585,7 +585,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 				<div class="spltspan">
 
-					@Html.EJ().SplitButton("spltbutton_imageTop").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageTop).TargetID("Ul91").Height("60")
+					@Html.EJ().SplitButton("spltbutton_imageTop").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageTop).TargetID("Ul91").Height("60")
 
 					<ul id="Ul91">
 
@@ -603,7 +603,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 			<td>
 
-				@Html.EJ().SplitButton("spltbutton_imageBottom").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageBottom).TargetID("Ul101").Height("60")
+				@Html.EJ().SplitButton("spltbutton_imageBottom").Text("login").Size(ButtonSize.Normal).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageBottom).TargetID("Ul101").Height("60")
 
 				<ul id="Ul101">
 
@@ -678,7 +678,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 					<div class="spltspan">
 
-						@Html.EJ().SplitButton("spltbutton_customCSS1").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").CssClass("customCss1")
+						@Html.EJ().SplitButton("spltbutton_customCSS1").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").CssClass("customCss1")
 
 						<ul id="Ul11">
 
@@ -696,7 +696,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 				<td>
 
-					@Html.EJ().SplitButton("spltbutton_customCSS2").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21").CssClass("customCss2")
+					@Html.EJ().SplitButton("spltbutton_customCSS2").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul21").CssClass("customCss2")
 
 					<ul id="Ul21">
 
@@ -712,7 +712,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 				<td class="btnsht">
 
-					@Html.EJ().SplitButton("spltbutton_customCSS3").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31").CssClass("customCss3")
+					@Html.EJ().SplitButton("spltbutton_customCSS3").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul31").CssClass("customCss3")
 
 					<ul id="Ul31">
 
@@ -728,7 +728,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 				<td class="btnsht">
 
-					@Html.EJ().SplitButton("spltbutton_customCSS4").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41").CssClass("customCss4")
+					@Html.EJ().SplitButton("spltbutton_customCSS4").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul41").CssClass("customCss4")
 
 					<ul id="Ul41">
 
@@ -744,7 +744,7 @@ The following steps explains you the details about rendering the Split Button wi
 
 				<td class="btnsht">
 
-					@Html.EJ().SplitButton("spltbutton_customCSS5").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul51").CssClass("customCss5")
+					@Html.EJ().SplitButton("spltbutton_customCSS5").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-handup").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul51").CssClass("customCss5")
 
 					<ul id="Ul51">
 
