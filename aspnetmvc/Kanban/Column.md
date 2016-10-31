@@ -505,7 +505,7 @@ The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img6.png)
 
-# Items Count
+## Items Count
 
 You can show total cards count in each column's header using the property `EnableTotalCount` and the default value is `false`.
 
@@ -559,4 +559,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Items_count_images/Items_count_img7.png)
+![](Columns_images/column_img7.png)
