@@ -88,7 +88,7 @@ The following code example describes the above behavior.
             .AllowSelection()          
             .Columns(col =>
             {
-                col.Type("Checkbox").Width(50).Add();
+                col.Type("checkbox").Width(50).Add();
                 col.Field("OrderID").IsPrimaryKey(true).Width(80).TextAlign(TextAlign.Right).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Width(75).Add();
                 col.Field("EmployeeID").HeaderText("Employee ID").Width(75).TextAlign(TextAlign.Right).Add();
