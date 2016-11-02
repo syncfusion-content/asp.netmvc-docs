@@ -76,7 +76,7 @@ public class ItemDetail
 ~~~cshtml
 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
-.Sheets(sheet =>
+    .Sheets(sheet =>
     {
         sheet.RangeSettings(range =>
         {
