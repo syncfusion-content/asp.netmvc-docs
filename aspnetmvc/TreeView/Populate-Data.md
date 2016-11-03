@@ -679,11 +679,13 @@ The following screenshot displays the load on demand for local data source in Tr
 
 ![](Populate-Data_images/Populate-Data_img1.png)
 
-While expanding the parent node {:.caption}
+While expanding the parent node
+{:.caption}
 
 ![](Populate-Data_images/Populate-Data_img2.png)
 
-After expanding the parent node {:.caption}
+After expanding the parent node
+{:.caption}
 
 For more details about load on demand for local data source, refer the sample [here](http://mvc.syncfusion.com/demos/web/treeview/loadondemand).
 
@@ -796,10 +798,12 @@ The following screenshot displays the load on demand for URL adaptor in TreeView
 
 ![](Populate-Data_images/Populate-Data_img1.png)
 
-While expanding the parent node {:.caption}
+While expanding the parent node
+{:.caption}
 
 ![](Populate-Data_images/Populate-Data_img2.png)
 
-After expanding the parent node {:.caption}
+After expanding the parent node
+{:.caption}
     
     
