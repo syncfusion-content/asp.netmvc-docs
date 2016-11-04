@@ -36,7 +36,7 @@ You can add annotations to the chart by using the **Annotations** option. By usi
 [Click](http://mvc.syncfusion.com/demos/web/chart/annotations) here to view the Annotations online demo sample.
 
 
-N> Annotations are not supported for the charts rendered in 3D.
+N> Annotations are not supported in the 3D chart types.
 
 
 ## Rotate the annotation template
