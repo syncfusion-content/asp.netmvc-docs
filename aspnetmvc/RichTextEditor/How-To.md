@@ -334,7 +334,7 @@ parameters.Add("spellcheck", "true");
 
 {% endhighlight %}
 
-In the above sample, we have disabled the RTE content menu by setting “ShowContextMenu” property as false, so that on right click to the RTE we can get the browser spell check suggestion after enabling the `spellchecker` in Iframe by setting the `spellcheck` as true in [iframeAttributes](https://help.syncfusion.com/js/api/ejrte#members:iframeattributes) property.
+In the above sample, we have disabled the RTE content menu by setting “ShowContextMenu” property as false, so that on right click to the RTE we can get the browser spell check suggestion after enabling the `spell checker` in Iframe by setting the `spellcheck` as true in [iframeAttributes](https://help.syncfusion.com/js/api/ejrte#members:iframeattributes) property.
 
 ## Pass the RTE from partial view to main view using AJAX call
 
