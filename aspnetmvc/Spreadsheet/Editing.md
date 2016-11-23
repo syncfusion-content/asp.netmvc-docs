@@ -1,0 +1,202 @@
+---
+layout: post
+title: Editing with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+description: How to Edit the Spreadsheet 
+platform: ejmvc
+control: Spreadsheet
+documentation: ug
+---
+
+# Editing 
+
+You can edit the contents of a cell directly in the cell. You can also do this by typing in the formula bar. When you edit the cell, Spreadsheet is operating in edit mode. In this mode some of the options are unavailable. You can use `AllowEditing` property to enable/disable editing feature.
+
+N> By default `AllowEditing` property is set to true.
+
+## Edit the Cell
+
+You can perform this by one of the following ways,
+
+* Double click on the cell to perform editing. This starts the edit mode and positions the cursor at the end of the cell.
+* Press F2 Key to edit the active cell.
+* Use Formula bar to perform editing.
+* Use Backspace and Delete Key to delete the contents of a cell.
+* Use "Alt + Enter" keys to perform multi line editing.
+* Using `editCell` method.
+
+## Save the edited cell
+
+You can do this by one of the following ways,
+
+* Perform mouse click on any other cell other than the current editing cell.
+* Perform Enter/Tab key press on the cell.
+* Using `saveCell` method.
+
+N> Edited cells are automatically formatted (right/left/center/Number Formatting) based on cell values.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+    })
+    .ClientSideEvents(events => events.LoadComplete("loadComplete"))
+)
+
+<script type="text/javascript">
+    function loadComplete(args) {
+        if(!this.isImport) {
+            this.XLEdit.editCell(3, 0, true); //if true, it maintains the existing data otherwise it clears the data.
+            //this.XLEdit.saveCell(); 
+        }
+    }
+</script>
+    
+{% endhighlight %}
+{% highlight c# %}
+
+namespace MVCSampleBrowser.Controllers
+{
+    public partial class SpreadsheetController : Controller
+    {
+        public ActionResult Default()
+        {
+            List<ItemDetail> lItems = new List<ItemDetail>();
+            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
+            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
+            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
+            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
+            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
+            ViewBag.Datasource = lItems;
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![](Editing_images/Editing_img1.png)
+
+## Read-Only Cells
+
+You can restrict/prevent the editing in the specified change. You can use `AllowLockCell` property to enable/disable the lock cells. You can do using following ways,
+
+* Using `lockCells` method to lock the selected cells. Then you need to protect the sheet using `protectSheet` method to restrict the editing.
+* Using "lock Cells” option under Changes tab in REVIEW tab of ribbon. Then Using "protect Sheet” option under Changes tab in REVIEW tab of ribbon to restrict editing.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .AllowLockCell(true)
+    .Sheets(sheet =>
+    {
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+    })
+    .ClientSideEvents(events => events.LoadComplete("loadComplete"))
+)
+
+<script type="text/javascript">
+    function loadComplete(args) {
+        if(!this.isImport) {
+            this.protectSheet(false);
+            this.lockCells("A1:A5”, true);
+            this.protectSheet(true);
+        }
+    }
+</script>
+    
+{% endhighlight %}
+{% highlight c# %}
+
+namespace MVCSampleBrowser.Controllers
+{
+    public partial class SpreadsheetController : Controller
+    {
+        public ActionResult Default()
+        {
+            List<ItemDetail> lItems = new List<ItemDetail>();
+            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
+            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
+            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
+            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
+            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
+            ViewBag.Datasource = lItems;
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![](Editing_images/Editing_img2.png)
+
+## Events
+
+The following events will trigger when editing and saving the cell. 
+
+* `cellEdit` - Triggered when the cell is edited.
+* `cellSave` - Triggered when save the edited cell.
+
+## Data binding
+
+You can bind the data to Spreadsheet using data manager. You can refer `Data Binding` to know more about this. You can use `saveBatchChanges` method to update the changes in server.  
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+    })
+    .ClientSideEvents(events => events.LoadComplete("loadComplete"))
+)
+
+<script type="text/javascript">
+    function loadComplete(args) {
+        if(!this.isImport) {
+            this.XLEdit.updateValue("I2", "amazon");
+            this.XLEdit.updateValue("J2", "flipkart");
+            this.saveBatchChanges(this.getActiveSheetIndex());
+        }
+    }
+</script>
+    
+{% endhighlight %}
+{% highlight c# %}
+
+namespace MVCSampleBrowser.Controllers
+{
+    public partial class SpreadsheetController : Controller
+    {
+        public ActionResult Default()
+        {
+            List<ItemDetail> lItems = new List<ItemDetail>();
+            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
+            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
+            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
+            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
+            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
+            ViewBag.Datasource = lItems;
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

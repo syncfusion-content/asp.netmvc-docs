@@ -173,7 +173,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>
         <td>
-            index
+            Index
         </td>
         <td>
             To specify particular cell
@@ -181,7 +181,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>
         <td>
-            value
+            Value
         </td>
         <td>
             To specify value. It may be string, integer, formula etc.
@@ -189,7 +189,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>
         <td>
-            style
+            Style
         </td>
         <td>
             To specify style in the cell
@@ -197,7 +197,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>
         <td>
-            format
+            Format
         </td>
         <td>
             To specify number format in the cell
@@ -205,7 +205,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>
         <td>
-            comment
+            Comment
         </td>
         <td>
             To specify comment in the cell
@@ -213,7 +213,7 @@ Spreadsheet can bind data for individual cells in a sheet. The data may contain 
     </tr>
     <tr>        
         <td>
-            hyperlink
+            Hyperlink
         </td>
         <td>
             To specify hyperlink in the cell
@@ -234,7 +234,7 @@ The individual row properties are listed below,
     </tr>
     <tr>
         <td>
-            index
+            Index
         </td>
         <td>
             To specify particular row
@@ -242,7 +242,7 @@ The individual row properties are listed below,
     </tr>
     <tr>
         <td>
-            height
+            Height
         </td>
         <td>
             To specify height in the row
@@ -250,7 +250,7 @@ The individual row properties are listed below,
     </tr>
 </table>
 
-You can specify particular row with `index` property and its height with `height` property in the rows' property collection. The following code illustrates cell binding in Spreadsheet,
+You can specify particular row with `Index` property and its height with `Height` property in the `Rows` property collection. The following code illustrates cell binding in Spreadsheet,
 
 {% highlight cshtml %}
 
@@ -397,7 +397,7 @@ The following output is displayed as a result of the above code snippets.
 
 ### Range Binding
 
-Spreadsheet can bind data for one or more range in a sheet using `rangeSettings`. The individual range properties are listed below,
+Spreadsheet can bind data for one or more range in a sheet using `RangeSettings`. The individual range properties are listed below,
 
 <table>
     <tr>
@@ -410,23 +410,23 @@ Spreadsheet can bind data for one or more range in a sheet using `rangeSettings`
     </tr>
     <tr>
         <td>
-            dataSource
+            DataSource
         </td>
         <td>
-            To specify JSON or `DataManager`
+            To specify JSON or {{'`DataManager`' | markdownify}}
         </td>
     </tr>
     <tr>    
         <td>
-            query
+            Query
         </td>
         <td>
-            To specify query for `DataManager`
+            To specify query for {{'`DataManager`' | markdownify}}
         </td>
     </tr>
     <tr>
         <td>    
-            startCell
+            StartCell
         </td>
         <td>
             To specify start cell of a range
@@ -434,7 +434,7 @@ Spreadsheet can bind data for one or more range in a sheet using `rangeSettings`
     </tr>
     <tr>
         <td>
-            primarykey
+            PrimaryKey
         </td>
         <td>
             To specify data source primary key
@@ -442,7 +442,7 @@ Spreadsheet can bind data for one or more range in a sheet using `rangeSettings`
     </tr>
     <tr>
         <td>
-            showHeader
+            ShowHeader
         </td>
         <td>
             To show data source header
@@ -450,7 +450,7 @@ Spreadsheet can bind data for one or more range in a sheet using `rangeSettings`
     </tr>
     <tr>
         <td>
-            headerStyles
+            HeaderStyles
         </td>
         <td>
             To specify header styles
@@ -515,7 +515,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            dataSource
+            DataSource
         </td>
         <td>
             DataManager
@@ -523,15 +523,15 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            query
+            Query
         </td>
         <td>
-            To specify query for `DataManager`
+            To specify query for {{'`DataManager`' | markdownify}}
         </td>
     </tr>
     <tr>
         <td>
-            startCell
+            StartCell
         </td>
         <td>
             To specify start cell of a range
@@ -539,7 +539,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            primarykey
+            PrimaryKey
         </td>
         <td>
             To specify data source primary key
@@ -547,7 +547,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            showHeader
+            ShowHeader
         </td>
         <td>
             To show data source header
@@ -555,7 +555,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            headerStyles
+            HeaderStyles
         </td>
         <td>
             To specify header styles
@@ -563,7 +563,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
     </tr>
     <tr>
         <td>
-            fieldAsColumnHeader
+            FieldAsColumnHeader
         </td>
         <td>
             To show data source fields in column header
@@ -578,7 +578,9 @@ The following code illustrates sheet binding in Spreadsheet
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders").Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)").FieldAsColumnHeader(true).PrimaryKey("OrderID").Add();
+        sheet.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")
+        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight'])
+        .take(5)").FieldAsColumnHeader(true).PrimaryKey("OrderID").Add();
     })
 )
     
