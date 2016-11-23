@@ -8,11 +8,11 @@ documentation: ug
 --- 
 
 # Open and Save
-The native data format for spreadsheet is JSON. You can load and store JSON data with spreadsheet. In Spreadsheet we have `saveAsJSON` and `loadFromJSON` method which is used to save spreadsheet as JSON and same JSON used to render spreadsheet.
+The native data format for Spreadsheet is JSON. You can load and store JSON data with Spreadsheet. In Spreadsheet we have `saveAsJSON` and `loadFromJSON` method which is used to save Spreadsheet as JSON and same JSON used to render Spreadsheet.
 
 {% highlight javascript %}
 
-function SaveAsJSON() {
+function saveAsJSON() {
     var xlObj = $("#Spreadsheet").data("ejSpreadsheet");
     window.xlData = xlObj.saveAsJSON();
 }
@@ -20,14 +20,14 @@ function SaveAsJSON() {
 function loadFromJSON() {
     var xlObj = $("#Spreadsheet").data("ejSpreadsheet");
     xlObj.loadFromJSON(window.xlData);
-}
+}   
     
 {% endhighlight %}
 
-When you open excel file, it need to be read and converted to client side Spreadsheet model. The converted client side Spreadsheet model is sent as JSON which is used to render spreadsheet. Similarly, when you save the spreadsheet, the client spreadsheet model is sent to the server as JSON for processing and saved. `Server configuration` is used for this process. 
+When you open excel file, it need to be read and converted to client side Spreadsheet model. The converted client side Spreadsheet model is sent as JSON which is used to render Spreadsheet. Similarly, when you save the Spreadsheet, the client Spreadsheet model is sent to the server as JSON for processing and saved. `Server configuration` is used for this process. 
 
 ## Open 
-The Spreadsheet can open excel documents as like excel application with its data, style, format. To enable open option in Spreadsheet set `allowImport` option to `true`. Since Spreadsheet uses a server side helper to open document, set `importMapper` in `importSettings` to map server action.
+The Spreadsheet can open excel documents as like excel application with its data, style, format. To enable open option in Spreadsheet set `AllowImport` option to `true`. Since Spreadsheet uses a server side helper to open document, set `ImportMapper` in `ImportSettings` to map server action.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -69,14 +69,14 @@ Following file types can be opened in Spreadsheet
 * XLSX
 * CSV
 
-[`Click`](http://mvc.syncfusion.com/demos/web/spreadsheet/importexport# "Click") here to view online demo sample. You can open excel documents in following ways
+[`Click`](http://mvc.syncfusion.com/demos/web/spreadsheet/importexport "Click") here to view online demo sample. You can open excel documents in following ways
 
 1. Initial settings
 2. Methods
 3. User Interface
 
 ### Initial settings
-The spreadsheet can load excel documents initially. The document can be specified either from client side or in server side. To load excel documents initially from client side, set `importUrl` in `importSettings`. The code snippets for document initial load on client side are as follows,
+The Spreadsheet can load excel documents initially. The document can be specified either from client side or in server side. To load excel documents initially from client side, set `ImportUrl` in `ImportSettings`. The code snippets for document initial load on client side are as follows,
 
 {% tabs %}
 {% highlight cshtml %}
@@ -112,7 +112,7 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-To load excel documents initially from server side, set `importOnLoad`as `true` and assign document stream or URL in the server. The code snippets for document initial load from server side are as follows,
+To load excel documents initially from server side, set `ImportOnLoad`as `true` and assign document stream or URL in the server. The code snippets for document initial load from server side are as follows,
 
 {% tabs %}{% highlight cshtml %}
 
@@ -151,7 +151,7 @@ namespace MVCSampleBrowser.Controllers
 ![](Open-and-Save_images/Open-and-Save_img1.jpeg)
 
 ### Methods
-To open an excel document, `import` method should be called with import options as a parameter. The spreadsheet can open excel document as a stream or file URL.
+To open an excel document, `import` method should be called with import options as a parameter. The Spreadsheet can open excel document as a stream or file URL.
  
 #### Stream
 Spreadsheet can open excel document as a stream and the document stream was either from the client side or it can be specified in server side. The code snippets to open excel document as a stream from client side are as follows,
@@ -234,7 +234,7 @@ namespace MVCSampleBrowser.Controllers
 You can dynamically open excel document by clicking the file menu in ribbon and choose Open to upload excel file. 
 
 ## Save
-The Spreadsheet can save its data, style, format into an excel file. To enable save option in Spreadsheet set `allowExporting` option in `exportSettings` as `true`. Since Spreadsheet uses server side helper to save documents set `excelUrl` in `exportSettings` option.
+The Spreadsheet can save its data, style, format into an excel file. To enable save option in Spreadsheet set `AllowExporting` option in `ExportSettings` as `true`. Since Spreadsheet uses server side helper to save documents set `ExcelUrl` in `ExportSettings` option.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -306,7 +306,7 @@ You can save Spreadsheet contents with following file types,
 * CSV
 * PDF
 
-[`Click`](http://mvc.syncfusion.com/demos/web/spreadsheet/importexport# "Click") here to view online demo sample. You can save excel documents in following ways
+[`Click`](http://mvc.syncfusion.com/demos/web/spreadsheet/importexport "Click") here to view online demo sample. You can save excel documents in following ways
 
 1. Methods
 2. User Interface
@@ -324,7 +324,7 @@ function saveAsFile() {
 {% endhighlight %}
 
 ### User Interface
-You can dynamically save spreadsheet by clicking file menu in ribbon and choose `SaveAs` option.
+You can dynamically save Spreadsheet by clicking file menu in ribbon and choose `SaveAs` option.
 
 ## Server dependencies
 Import and Export Helper functions are available in the assembly `Syncfusion.EJ.Export`, which is available in Essential Studio and Essential JavaScript builds. The full list of assemblies needed for Spreadsheet import and export are as follows.

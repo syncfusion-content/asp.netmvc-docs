@@ -8,7 +8,7 @@ documentation: ug
 --- 
 
 # Rows and columns
-Spreadsheet is a tabular format consisting of rows and columns. Rows and Columns are used to represent the editing area in Spreadsheet. The intersection point of rows and columns are called as Cells. In that you can perform editing. You have `rowCount` and `columnCount` in sheets property and model for defining the rows and columns count. By default, Spreadsheet creates `20` rows and `21` columns. Based on this grid content will be created.
+Spreadsheet is a tabular format consisting of rows and columns. Rows and Columns are used to represent the editing area in Spreadsheet. The intersection point of rows and columns are called as Cells. In that you can perform editing. You have `RowCount` and `ColCount` in sheets property and model for defining the rows and columns count. By default, Spreadsheet creates `20` rows and `21` columns. Based on this grid content will be created.
 
 ## Rows 
 Rows are a collection of cells that run horizontally. Each row is identified by the row number in the row header.
@@ -65,7 +65,7 @@ You can perform the following list of operations in rows and columns,
 * Resizing
 
 ## Insert 
-You can insert blank cells, rows or columns based on the selection in a worksheet. You have to enable the `allowInsert` property to perform the insert operation. You can access insert operation through,
+You can insert blank cells, rows or columns based on the selection in a worksheet. You have to enable the `AllowInsert` property to perform the insert operation. You can access insert operation through,
 
 * OTHERS tab in ribbon.
 * Context menu
@@ -109,7 +109,7 @@ You can dynamically insert the selected number of blank columns to the left of t
 You can also perform insert entire column using `insertEntireColumn` method.
 
 ## Delete 
-You can delete a range of cells, rows or columns based on the selection in worksheet. You have to enable the `allowDelete` property to perform Delete Operation. 
+You can delete a range of cells, rows or columns based on the selection in worksheet. You have to enable the `AllowDelete` property to perform Delete Operation. 
 You can access delete operation through,
 
 * OTHERS tab in Ribbon
@@ -337,12 +337,13 @@ The following output is displayed as a result of the above code example.
 ![](Rows-and-columns_images/Rows-and-columns_img3.jpeg)
 
 ## Resizing
-You can change `columnWidth` and `rowHeight` with the specified value. You have to enable `allowResizing` to perform resizing.
+You can change `ColumnWidth` and `RowHeight` with the specified value. You have to enable `AllowResizing` property to perform resizing.
+
 You can perform resizing using one of the following ways,
 
 * Resize option in column header and row header.
-* Set the column width by using `setColWidth` method or `columnWidth` property.
-* Set the row height by using `setRowHeight` method or `rowHeight` property.
+* Set the column width by using `setColWidth` method or `ColumnWidth` property.
+* Set the row height by using `setRowHeight` method or `RowHeight` property.
 
 The following code example describes the above behavior.
 
