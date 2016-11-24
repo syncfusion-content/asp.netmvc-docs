@@ -337,7 +337,7 @@ The following code example describes the above behavior.
 <script type="text/javascript">
     function loadComplete(args) {
         if(!this.isImport) 
-            this.XLDragDrop.moveRangeTo([1, 0, 3, 1], [7, 0, 9, 1]);
+            this.XLDragDrop.moveRangeTo([1, 6, 4, 7], [1, 9, 4, 10]);
     }
 </script>
     
@@ -439,9 +439,42 @@ The following code example describes the above behavior.
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.RangeSettings(range =>
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).StartCell("A1")
+        .Rows(rows =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).StartCell("B1").Add();
+            rows.Index(1).Cells(cells =>
+            {
+                cells.Index(8).Value("1").Add();
+                cells.Index(9).Value("1").Add();
+                cells.Index(10).Value("1").Add();
+                cells.Index(11).Value("1").Add();
+                cells.Index(13).Value("Name").Add();
+            }).Add();
+            rows.Index(2).Cells(cells =>
+            {
+                cells.Index(8).Value("2").Add();
+                cells.Index(9).Value("2").Add();
+                cells.Index(10).Value("2").Add();
+                cells.Index(11).Value("2").Add();
+                cells.Index(13).Value("Casual Shoes").Add();
+                cells.Index(14).Value("Casual").Add();
+            }).Add();
+            rows.Index(3).Cells(cells =>
+            {
+                cells.Index(8).Value("3").Add();
+                cells.Index(9).Value("3").Add();
+                cells.Index(10).Value("3").Add();
+                cells.Index(11).Value("3").Add();
+                cells.Index(13).Value("Formal Shoes").Add();
+            }).Add();
+            rows.Index(4).Cells(cells =>
+            {
+                cells.Index(8).Value("4").Add();
+                cells.Index(9).Value("4").Add();
+                cells.Index(10).Value("4").Add();
+                cells.Index(11).Value("4").Add();
+                cells.Index(13).Value("Sports Shoes").Add();
+            }).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -450,13 +483,6 @@ The following code example describes the above behavior.
 <script type="text/javascript">
     function loadComplete(args) {
         if(!this.isImport) {
-            this.setWidthToColumns([ 80, 142, 132, 110, 105, 102, 112, 122, 122, 102 ]);
-            xlFormat.format({ "style": { "font-weight": "bold" } }, "A1:H1");
-            xlFormat.format({ "type": "shortdate" }, "B2:B11");
-            xlFormat.format({ "type": "time" }, "C2:C11"); 
-            xlFormat.format({ "type": "currency" }, "E2:H11");
-            this.XLEdit.updateValue("A1", "FirstName");
-            this.XLEdit.updateValue("A2", "Casual");
             this.XLFormat.format({ "style": { "background-color": "yellow" } }, "E2:F2");
             this.XLFormat.format({ "style": { "background-color": "red" } }, "E4:F4");
             this.XLFormat.format({ "style": { "background-color": "blue" } }, "E5:F5");
