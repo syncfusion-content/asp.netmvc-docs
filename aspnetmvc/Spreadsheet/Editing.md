@@ -89,7 +89,7 @@ The following output is displayed as a result of the above code example.
 You can restrict/prevent the editing in the specified change. You can use `AllowLockCell` property to enable/disable the lock cells. You can do using following ways,
 
 * Using `lockCells` method to lock the selected cells. Then you need to protect the sheet using `protectSheet` method to restrict the editing.
-* Using "lock Cells” option under Changes tab in REVIEW tab of ribbon. Then Using "protect Sheet” option under Changes tab in REVIEW tab of ribbon to restrict editing.
+* Using "Lock Cells” option under Changes group of REVIEW tab in ribbon. Then Using "Protect Sheet” option under Changes group of REVIEW tab in ribbon to restrict editing.
 
 The following code example describes the above behavior.
 

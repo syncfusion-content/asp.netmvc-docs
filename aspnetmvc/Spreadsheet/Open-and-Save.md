@@ -148,7 +148,7 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![](Open-and-Save_images/Open-and-Save_img1.jpeg)
+![](Open-and-Save_images/Open-and-Save_img1.png)
 
 ### Methods
 To open an excel document, `import` method should be called with import options as a parameter. The Spreadsheet can open excel document as a stream or file URL.
