@@ -488,15 +488,15 @@ The following code example describes the above behavior.
             this.XLFormat.format({ "style": { "background-color": "blue" } }, "E5:F5");
             
             //copy Cells
-            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [3, 7, 3, 7], fillRange: "H5:H7", fillType: "copycells", direction: "down" }); 
+            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 8, 4, 8], fillRange: "I6:I10", fillType: "copycells", direction:"down" }); 
             //fill series
-            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [4, 6, 4, 6], fillRange: "G6:G10", fillType: "fillseries", direction: "down" }); 
+            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 9, 4, 9], fillRange: "J6:J10", fillType: "fillseries", direction: "down" }); 
             //fill formatting only
-            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 5, 4, 5], fillRange: "F6:F10", fillType: "fillformattingonly", direction: "down" }); 
+            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 10, 4, 10], fillRange: "K6:K10", fillType: "fillformattingonly", direction: "down" }); 
             //fill without formatting
-            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 4, 1, 4], fillRange: "E3:E10", fillType: "fillwithoutformatting", direction: "down" }); 
+            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 11, 4, 11], fillRange: "L6:L10", fillType: "fillwithoutformatting", direction: "down" }); 
             //flash fill
-            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 0, 1, 0], fillRange: "A3:A6", fillType: "flashfill", direction: "down" }); 
+            this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [2, 14, 2, 14], fillRange: "O4:O6", fillType: "flashfill", direction: "down" });
         }
     }
 </script>
