@@ -23,7 +23,7 @@ To bind local data to the Spreadsheet, you can assign a JSON array to the worksh
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+        range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(false).Add();
     })
 )
     
@@ -36,12 +36,12 @@ namespace MVCSampleBrowser.Controllers
     {
         public ActionResult Default()
         {
-            List<ItemDetail> lItems = new List<ItemDetail>();
-            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
-            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
-            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
-            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
-            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
+            List<OrderDetail> lItems = new List<OrderDetail>();
+            lItems.Add(new OrderDetail() { OrderID = 10248, CustomerID = "VINET", EmployeeID = 5, ShipCity = "Reims", ShipCountry = "France" });
+            lItems.Add(new OrderDetail() { OrderID = 10249, CustomerID = "TOMSP", EmployeeID = 6, ShipCity = "Münster", ShipCountry = "Germany" });
+            lItems.Add(new OrderDetail() { OrderID = 10250, CustomerID = "HANAR", EmployeeID = 4, ShipCity = "Rio de Janeiro", ShipCountry = "Brazil" });
+            lItems.Add(new OrderDetail() { OrderID = 10251, CustomerID = "VICTE", EmployeeID = 3, ShipCity = "Lyon", ShipCountry = "France" });
+            lItems.Add(new OrderDetail() { OrderID = 10252, CustomerID = "SUPRD", EmployeeID = 4, ShipCity = "Charleroi", ShipCountry = "Belgium" });
             ViewBag.Datasource = lItems;
             return View();
         }
@@ -65,7 +65,7 @@ To bind remote data to the Spreadsheet, you can assign a service data as an inst
     {
         sheet.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")
         .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight'])
-        .take(5)").Add();
+        .take(50)").Add();
     })
 )
     
@@ -482,12 +482,21 @@ namespace MVCSampleBrowser.Controllers
     {
         public ActionResult Default()
         {
-            List<ItemDetail> lItems = new List<ItemDetail>();
-            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
-            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
-            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
-            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
-            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
+            List<MarkDetail> lItems = new List<MarkDetail>();
+            lItems.Add(new MarkDetail() { Name = "VINET", Average = 90, Grade = "S" });
+            lItems.Add(new MarkDetail() { Name = "TOMSP", Average = 83, Grade = "A" });
+            lItems.Add(new MarkDetail() { Name = "HANAR", Average = 80, Grade = "A" });
+            lItems.Add(new MarkDetail() { Name = "VICTE", Average = 93, Grade = "S" });
+            lItems.Add(new MarkDetail() { Name = "SUPRD", Average = 60, Grade = "D" });
+            lItems.Add(new MarkDetail() { Name = "CHOPS", Average = 71, Grade = "C" });
+            lItems.Add(new MarkDetail() { Name = "WELLI", Average = 88, Grade = "A" });
+            lItems.Add(new MarkDetail() { Name = "HILLA", Average = 95, Grade = "S" });
+            lItems.Add(new MarkDetail() { Name = "ERNSH", Average = 69, Grade = "D" });
+            lItems.Add(new MarkDetail() { Name = "CENTC", Average = 77, Grade = "C" });
+            lItems.Add(new MarkDetail() { Name = "OTTIK", Average = 95, Grade = "S" });
+            lItems.Add(new MarkDetail() { Name = "RATTC", Average = 85, Grade = "A" });
+            lItems.Add(new MarkDetail() { Name = "FOLKO", Average = 90, Grade = "A" });
+            lItems.Add(new MarkDetail() { Name = "BLONP", Average = 97, Grade = "S" });
             ViewBag.Datasource = lItems;
             return View();
         }
@@ -580,7 +589,7 @@ The following code illustrates sheet binding in Spreadsheet
     {
         sheet.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")
         .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight'])
-        .take(5)").FieldAsColumnHeader(true).PrimaryKey("OrderID").Add();
+        .take(50)").FieldAsColumnHeader(true).PrimaryKey("OrderID").Add();
     })
 )
     

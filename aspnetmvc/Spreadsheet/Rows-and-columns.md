@@ -206,7 +206,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Rows-and-columns_images/Rows-and-columns_img1.jpeg)
+![](Rows-and-columns_images/Rows-and-columns_img1.png)
 
 ## Show and Hide 
 You can show or hide the rows and columns in Spreadsheet using methods and context menu. 
@@ -271,7 +271,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Rows-and-columns_images/Rows-and-columns_img2.jpeg)
+![](Rows-and-columns_images/Rows-and-columns_img2.png)
 
 ### Show Row
 You can show the hidden rows dynamically by using one of the following ways,
@@ -334,7 +334,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Rows-and-columns_images/Rows-and-columns_img3.jpeg)
+![](Rows-and-columns_images/Rows-and-columns_img3.png)
 
 ## Resizing
 You can change `ColumnWidth` and `RowHeight` with the specified value. You have to enable `AllowResizing` property to perform resizing.

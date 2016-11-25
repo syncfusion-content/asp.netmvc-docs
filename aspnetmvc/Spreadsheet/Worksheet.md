@@ -58,7 +58,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img1.jpeg)
+![](Worksheet_images/Worksheet_img1.png)
 
 ### Copy
 The Spreadsheet provides support to create a copy of an existing worksheet. You can dynamically copy a worksheet by using one of the following ways,
@@ -86,7 +86,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img2.jpeg)
+![](Worksheet_images/Worksheet_img2.png)
 
 ### Move
 The Spreadsheet provides support to move an existing worksheet. You can dynamically move a worksheet by using one of the following ways,
@@ -114,7 +114,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img3.jpeg)
+![](Worksheet_images/Worksheet_img3.png)
 
 ### Remove
 The Spreadsheet has support for removing an existing worksheet. You can dynamically remove the existing sheet by following ways,
@@ -144,7 +144,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img4.jpeg)
+![](Worksheet_images/Worksheet_img4.png)
 
 ### Rename
 The Spreadsheet has support for renaming an existing worksheet. You can dynamically rename worksheet by using one of the following ways,
@@ -172,7 +172,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img5.jpeg)
+![](Worksheet_images/Worksheet_img5.png)
 
 ## Headers
 Headers in the Spreadsheet are numbered rows and lettered columns in worksheets. It makes ease of view and reference to your data. You can dynamically show/ hide worksheet header by using one of the following ways,
@@ -199,7 +199,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img6.jpeg)
+![](Worksheet_images/Worksheet_img6.png)
 
 ## Show / Hide Sheets
 You can dynamically show/ hide worksheet by using one of the following ways,
@@ -230,7 +230,7 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img7.jpeg)
+![](Worksheet_images/Worksheet_img7.png)
 
 ## Show / Hide Gridlines
 Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show/hide gridlines by using one of the following ways,
@@ -252,5 +252,5 @@ The following code example describes the above behavior
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Worksheet_images/Worksheet_img8.jpeg)
+![](Worksheet_images/Worksheet_img8.png)
 
