@@ -74,6 +74,32 @@ To bind remote data to the Spreadsheet, you can assign a service data as an inst
 The following output is displayed as a result of the above code snippets.
 ![](Data-Binding_images/Data-Binding_img2.png)
 
+### Offline Mode
+
+To avoid sending post back request to server on every action, Spreadsheet allows user to create, update and delete data on client side. To enable this, set `Offline` property of `DataManager` as `true` to fetch all data from server on initial rendering of Spreadsheet and perform all operation on client side.
+
+The following code illustrates Offline data binding for Spreadsheet,
+
+{% highlight cshtml %}
+
+@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true)))
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.DataManagerID("FlatData")
+        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipName',  'ShipAddress'])")
+        .PrimaryKey("OrderID").Add();
+    })
+)
+    
+{% endhighlight %}
+
+The following output is displayed as a result of the above code snippets.
+![](Data-Binding_images/Data-Binding_img2.png)
+
+N> For further reference about `Offline` property in `DataManager` refer following [`link`](https://help.syncfusion.com/aspnetmvc/datamanager/data-binding#offline-mode "link")
+
 ## HTML Table Data
 
 A HTML Table element can also be used as the data source of Spreadsheet. To use HTML Table as data source, the table element should be passed to worksheet `DataSource` property of Spreadsheet as an instance of the `DataManager`. The following code illustrates how to bind HTML Table data to the Spreadsheet,
