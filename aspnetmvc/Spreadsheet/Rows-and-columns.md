@@ -7,8 +7,8 @@ control: Spreadsheet
 documentation: ug
 --- 
 
-# Rows and columns
-Spreadsheet is a tabular format consisting of rows and columns. Rows and Columns are used to represent the editing area in Spreadsheet. The intersection point of rows and columns are called as Cells. In that you can perform editing. You have `RowCount` and `ColCount` in sheets property and model for defining the rows and columns count. By default, Spreadsheet creates `20` rows and `21` columns. Based on this grid content will be created.
+# Rows and Columns
+Spreadsheet is a tabular format consisting of rows and columns. Rows and columns are used to represent the editing area in Spreadsheet. The intersection point of rows and columns are called as Cells. In that you can perform editing. You have `RowCount` and `ColCount` in sheets property for defining the rows and columns count. By default, Spreadsheet creates `20` rows and `21` columns. Based on this grid content will be created.
 
 ## Rows 
 Rows are a collection of cells that run horizontally. Each row is identified by the row number in the row header.
@@ -65,7 +65,7 @@ You can perform the following list of operations in rows and columns,
 * Resizing
 
 ## Insert 
-You can insert blank cells, rows or columns based on the selection in a worksheet. You have to enable the `AllowInsert` property to perform the insert operation. You can access insert operation through,
+You can insert blank cells, rows or columns based on the selection in a worksheet. You have to enable the `AllowInsert` property to perform the insert operation. You can perform insert operation through,
 
 * OTHERS tab in ribbon.
 * Context menu
@@ -109,8 +109,8 @@ You can dynamically insert the selected number of blank columns to the left of t
 You can also perform insert entire column using `insertEntireColumn` method.
 
 ## Delete 
-You can delete a range of cells, rows or columns based on the selection in worksheet. You have to enable the `AllowDelete` property to perform Delete Operation. 
-You can access delete operation through,
+You can delete a range of cells, rows or columns based on the selection in worksheet. You have to enable the `AllowDelete` property to perform delete operation. 
+You can perform delete operation through,
 
 * OTHERS tab in Ribbon
 * Context menu
@@ -131,7 +131,7 @@ You can dynamically delete the selected range of cells and shift the other cells
 * Click Delete in the context menu and select “Shift Cells Left” option in Delete dialog.
 * Select Delete Cells in Delete button of OTHERS tab in Ribbon and select “Shift Cells Left” option in Delete dialog.
 
-You can also perform delete shift up using `deleteShiftLeft` method.
+You can also perform delete shift left using `deleteShiftLeft` method.
 
 ###  Delete Entire Row
 You can dynamically delete the selected rows and shift the other rows to top by following ways,
@@ -394,3 +394,6 @@ namespace MVCSampleBrowser.Controllers
 }
 {% endhighlight %}
 {% endtabs %}
+
+The following output is displayed as a result of the above code example.
+![](Rows-and-columns_images/Rows-and-columns_img4.png)

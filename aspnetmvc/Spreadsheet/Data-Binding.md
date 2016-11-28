@@ -102,7 +102,7 @@ N> For further reference about `Offline` property in `DataManager` refer followi
 
 ## HTML Table Data
 
-A HTML Table element can also be used as the data source of Spreadsheet. To use HTML Table as data source, the table element should be passed to worksheet `DataSource` property of Spreadsheet as an instance of the `DataManager`. The following code illustrates how to bind HTML Table data to the Spreadsheet,
+An HTML Table element can also be used as the data source of Spreadsheet. To use HTML Table as data source, the table element should be passed to worksheet `DataSource` property of Spreadsheet as an instance of the `DataManager`. The following code illustrates how to bind HTML Table data to the Spreadsheet,
 
 {% highlight cshtml %}
 
@@ -553,7 +553,7 @@ Spreadsheet can bind data for a sheet. The individual sheet properties are liste
             DataSource
         </td>
         <td>
-            DataManager
+            To specify JSON or {{'`DataManager`' | markdownify}}
         </td>
     </tr>
     <tr>

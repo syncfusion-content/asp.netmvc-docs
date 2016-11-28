@@ -11,8 +11,8 @@ keywords:
 # Worksheet
 Worksheet is a collection of cells organized in the form of rows and columns that allow us to store, format, manipulate and display data in grid format. You can create multiple sheets in Spreadsheet and use sheet tab for switching between those worksheets. By default, Spreadsheet creates single worksheet since default `SheetCount` value is `1`.
 
-## List of Sheet Operation 
-The following list of operations done within the Worksheet are
+## List of Sheet Operations 
+You can perform following operations in worksheet,
  
 * Add
 * Remove
@@ -28,7 +28,7 @@ The Spreadsheet has support for inserting new sheet. You can insert sheet into t
 ### Add Sheet
 You can dynamically add a sheet by one of the following ways,
 
-* Click the New sheet button in the Spreadsheet sheet tab.
+* Click the new sheet button in the Spreadsheet sheet tab.
 * Using `addNewSheet` method.
 
 ### Insert Sheet
@@ -120,7 +120,7 @@ The following output is displayed as a result of the above code example.
 The Spreadsheet has support for removing an existing worksheet. You can dynamically remove the existing sheet by following ways,
 
 * Right click on the worksheet in the sheet tab and then click Delete option in the context menu.
-* Select the existing worksheet, Click OTHERS tab in the ribbon and select Delete dropdown button. Then click Delete Sheet.
+* Select the existing worksheet, click OTHERS tab in the ribbon and select Delete dropdown button. Then click Delete Sheet.
 
 You can also remove an active worksheet using `deleteSheet` method.
 
@@ -175,7 +175,7 @@ The following output is displayed as a result of the above code example.
 ![](Worksheet_images/Worksheet_img5.png)
 
 ## Headers
-Headers in the Spreadsheet are numbered rows and lettered columns in worksheets. It makes ease of view and reference to your data. You can dynamically show/ hide worksheet header by using one of the following ways,
+Headers in the Spreadsheet are numbered rows and lettered columns in worksheets. It makes ease of view and reference to your data. You can dynamically show/hide worksheet header by using one of the following ways,
 
 * Select PAGE LAYOUT tab in the ribbon and uncheck Headings in the Show group.
 * Show/Hide the worksheet headers using `ShowHeadings` property and `showHeadings` method.
@@ -202,10 +202,10 @@ The following output is displayed as a result of the above code example.
 ![](Worksheet_images/Worksheet_img6.png)
 
 ## Show / Hide Sheets
-You can dynamically show/ hide worksheet by using one of the following ways,
+You can dynamically show/hide worksheet by using one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Hide or Unhide in the context menu
-* Hide the sheet using ‘hideSheet’ method.
+* Hide the sheet using `hideSheet` method.
 * Show the hidden sheet using `unhideSheet` method.
 
 The following code example describes the above behavior
