@@ -57,21 +57,21 @@ The following code example describes the above behavior.
 
 ![](Context-Menu_images/context-menu_img1.png)
 
-Contextmenu at Cell 
+Context menu at Cell 
 {:.caption}
 
 ![](Context-Menu_images/context-menu_img2.png)
 
-Contextmenu at Column Header 
+Context menu at Column Header 
 {:.caption}
 
 ![](Context-Menu_images/context-menu_img3.png)
 
-Contextmenu at Row Header 
+Context menu at Row Header 
 {:.caption}
 
 ![](Context-Menu_images/context-menu_img4.png)
 
-Contextmenu at Pager 
+Context menu at Pager 
 {:.caption}
 
