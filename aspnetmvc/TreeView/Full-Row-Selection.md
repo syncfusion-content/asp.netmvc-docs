@@ -133,10 +133,10 @@ In the view page, add TreeView helper and map the properties defined in to the c
 
 <script id="treeTemplate" type="text/x-jsrender">
 
-    {{if !hasChild}}
-    <span class="con-img {{>cls}}"></span>
-    {{/if}}
-    {{>name}}
+    {{"{{"}}if !hasChild{{}}}}
+    <span class="con-img {{"{{"}}>cls{{}}}}"></span>
+    {{"{{"}}/if{{}}}}
+    {{"{{"}}>name{{}}}}
 
 </script>
 	
