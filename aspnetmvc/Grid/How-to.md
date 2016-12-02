@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip and signalR binding with Grid widget for MVC
-description: How to use tooltip and signalR binding in Grid
+title: How to
+description: How to
 platform: ejmvc
 control: Grid
 documentation: ug
@@ -1321,7 +1321,7 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
 {% endhighlight %}
 {% endtabs %}
 
-# External Search in Grid
+## External Search in Grid
 
 Using `search` method of grid, you can search the string in grid externally without using in-built toolbar search support. While using `search` method it is necessary to set `AllowSearching` property as `true`. The following code example explains the above behavior.
 {% tabs %}
@@ -1378,7 +1378,7 @@ The following output is displayed as a result of the above code example.
 ![](How-to_images/ExternalSearching_img1.jpeg)
 
 
-#  Configure Grid through Grid Model properties
+##  Configure Grid through Grid Model properties
     
 There comes a time when you want to set Grid properties other than using Grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to Grid Helper.
 
@@ -1426,7 +1426,7 @@ The following output is displayed as a result of the above code example.
 
 ![](How-to_images/Configure Grid through Grid Model properties_img1.png)
 
-#  Work with partial views
+##  Work with partial views
 
 The Grid can be rendered in either `Unobtrusive` or `Non-unobtrusive` mode.
        
