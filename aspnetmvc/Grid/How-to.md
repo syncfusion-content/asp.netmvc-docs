@@ -951,7 +951,7 @@ N> In the above code example, the ORM mapping is performed by using the XML-docu
 
 We can add comments in the exported file while exporting the grid control.
 
-# Adding comments in Excel sheet
+### Adding comments in Excel sheet
 
 Using the Range property and AddComment method of the XlsIO IRange Class, we will add comments to any cell of particular range in Excel sheet. 
 
@@ -1006,7 +1006,7 @@ The following screenshot displays the exported grid with comments added to cells
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img1.png)
 
-# Adding Comments in Exported Word document
+### Adding Comments in Exported Word document
 
 We can add comments to the word document using the AppendComment method in the WComment class of the DocIO namespace. We can traverse through the required row/cell with the help of WTable class and thus can append the comment to the table cell.
 
@@ -1062,7 +1062,7 @@ The following screenshot shows the exported grid with comments added to the docu
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img2.png)
 
-# Adding Comments in Exported PDF document
+### Adding Comments in Exported PDF document
 
 We can add comments to a PDF documents using the annotation support provided in the PDF namespace. The Annotation added can be of any format such as freeTextAnnotation, popUpAnnotation, LineAnnotation etc., Based on our requirement, we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
 
@@ -1129,7 +1129,7 @@ The following screenshot displays the exported grid with comments added to cells
 
 We can add header and footer in the exported file while exporting the grid control.
 
-# Adding header and footer in Excel sheet
+### Adding header and footer in Excel sheet
 
 Using the Range Text property and SetValue method of the XlsIO IRange Class, we can add headers and footers in Excel sheet. 
 
@@ -1188,7 +1188,7 @@ Using the Range Text property and SetValue method of the XlsIO IRange Class, we 
 {% endhighlight %}
 {% endtabs %}
 
-# Adding header and footer in Exported Word document
+### Adding header and footer in Exported Word document
 
 We can add header and footer to the word document using the HeadersFooters property in the WHeadersFooters class of the DocIO namespace. We can create an instance of the IWParagraph class and append the header/footer text to it using the AppendText method.
 
@@ -1253,7 +1253,7 @@ We can add header and footer to the word document using the HeadersFooters prope
 {% endhighlight %}
 {% endtabs %}
 
-# Adding header and footer in Exported PDF document
+### Adding header and footer in Exported PDF document
 
 We can add header/footer to a PDF documents using PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
 
