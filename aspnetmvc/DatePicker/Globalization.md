@@ -13,7 +13,7 @@ Essential ASP.NET MVC DatePicker has been provided with built-in localization su
 More than 350 culture specific files are available to localize the date. To know more about EJ globalize support, please refer the below link      
  [http://help.syncfusion.com/js/localization](http://help.syncfusion.com/js/localization) 
 
-N> All the culture-specific script files are available within the below specified location, once you have installed Essential Studio in your machine, therefore it is not necessary to download these files explicitly.
+N> Seven culture-specific script files are available in the below specified location. For all other culture files, please download from the [GitHub](https://github.com/syncfusion/ej-global/tree/master/i18n) location.
 
 <table>
 <tr>
@@ -34,7 +34,7 @@ Refer the below German culture file in head section of HTML page after the refer
 
  {% highlight cshtml %}
    
-    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/i18n/ej.culture.de-DE.min.js"></script>
+    <script src="https://cdn.syncfusion.com/js/assets/i18n/ej.culture.de-DE.min.js"></script>
                 
  {% endhighlight %}
  

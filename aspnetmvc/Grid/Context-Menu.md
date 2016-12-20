@@ -234,7 +234,7 @@ Custom context menu is used to create your own menu item and its action. To add 
         {
             contextMenu.EnableContextMenu();
             contextMenu.DisableDefaultItems();
-            contextMenu.CustomContextMenuItems(c => c.AddItem("clear_selection", "Clear Selection"));
+            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }});
         })
         .AllowPaging()        
         .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
@@ -291,20 +291,16 @@ Sub context menu is used to add customized sub menu to the custom context menu i
 
     @(Html.EJ().Grid<object>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
-        .ContextMenuSettings(contextMenu =>
-        {
-            contextMenu.EnableContextMenu();
-            contextMenu.DisableDefaultItems();
-            contextMenu.CustomContextMenuItems(c => 
-            { 
-                c.AddItem("clear_selection", "Clear Selection");
-                c.AddItem("Hide_column", "Hide Column");
-            });
-            contextMenu.SubContextMenu(submenu =>
-            {
-                submenu.ContextMenuItem("Hide Column").SubMenu(new List<string>() { "Order ID", "Customer ID", "Employee ID" }).Add();
-            });
-        })
+         .ContextMenuSettings(contextMenu =>
+                        {
+                            contextMenu.EnableContextMenu();
+                            contextMenu.DisableDefaultItems();
+                            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContexMenuItems() { Id = "hide", Text = "Hide Column" } });
+                            contextMenu.SubContextMenu(submenu =>
+                            {
+                                submenu.ContextMenuItem("hide").SubMenu(new List<string>() { "Order ID", "Customer ID", "Employee ID" }).Add();
+                            });
+                        })
         .AllowPaging()        
         .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
         .Columns(col =>
