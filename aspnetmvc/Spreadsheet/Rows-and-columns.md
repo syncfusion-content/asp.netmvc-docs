@@ -20,17 +20,13 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight cshtml %}
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-            range.StartCell("A1").Add();
-            range.ShowHeader(true).Add();
-        }).Add();
-        sheet.RowCount(50).Add();
-        sheet.ColCount(36).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
+        }).RowCount(50).ColCount(36).Add();
     })
 )
 {% endhighlight %}
@@ -157,14 +153,12 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight cshtml %}
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-            range.StartCell("A1").Add();
-            range.ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -227,14 +221,12 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight cshtml %}
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-            range.StartCell("A1").Add();
-            range.ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -288,14 +280,12 @@ You can show the hidden columns dynamically by using one of the following ways,
 The following code example describes the above behavior.
 
 {% tabs %}{% highlight cshtml %}
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")    
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")    
     .Sheets(sheet =>
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-            range.StartCell("A1").Add();
-            range.ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -348,7 +338,7 @@ You can perform resizing using one of the following ways,
 The following code example describes the above behavior.
 
 {% tabs %}{% highlight cshtml %}
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ScrollSettings(scroll =>
     {
         scroll.Height(510);

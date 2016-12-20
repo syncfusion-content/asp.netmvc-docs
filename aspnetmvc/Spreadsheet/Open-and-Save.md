@@ -84,8 +84,7 @@ The Spreadsheet can load excel documents initially. The document can be specifie
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ImportSettings(import =>
     {
-        import.ImportMapper("Import");
-        import.ImportUrl("http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx");
+        import.ImportMapper("Import").ImportUrl("http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx");
     })
 )
     
@@ -119,8 +118,7 @@ To load excel documents initially from server side, set `ImportOnLoad`as `true` 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ImportSettings(import =>
     {
-        import.ImportOnLoad(true);
-        import.ImportMapper("Import");
+        import.ImportOnLoad(true).ImportMapper("Import");
     })
 )
 
@@ -242,10 +240,7 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 @(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
     .ExportSettings(export =>
     {
-        export.AllowExporting(true);
-        export.ExcelUrl("ExportToExcel");
-        export.CsvUrl("ExportToCSV");
-        export.PdfUrl("ExportToPDF");
+        export.AllowExporting(true).ExcelUrl("ExportToExcel").CsvUrl("ExportToCSV").PdfUrl("ExportToPDF");
     })
 )
     
