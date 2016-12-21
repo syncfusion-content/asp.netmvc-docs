@@ -221,7 +221,6 @@ namespace MVCSampleBrowser.Controllers
             importRequest.Url = "http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx";
             return importRequest.SpreadsheetActions();
         }
-
     }
 }
     
