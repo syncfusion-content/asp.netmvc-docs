@@ -29,14 +29,14 @@ The Spreadsheet has support for inserting new sheet. You can insert sheet into t
 You can dynamically add a sheet by one of the following ways,
 
 * Click the new sheet button in the Spreadsheet sheet tab.
-* Using `addNewSheet` method.
+* Using [`addNewSheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:addnewsheet "addNewSheet") method.
 
 ### Insert Sheet
 You can dynamically insert a sheet by one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Insert option in the context menu.
 * Click OTHERS tab in the ribbon and select Insert Sheet option in Insert dropdown button.
-* Using `insertSheet` method.
+* Using [`insertSheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:insertsheet "insertSheet") method.
 
 The following code example describes the above behavior
 
@@ -64,7 +64,7 @@ The following output is displayed as a result of the above code example.
 The Spreadsheet provides support to create a copy of an existing worksheet. You can dynamically copy a worksheet by using one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Move or Copy in the context menu. Check the “Create a copy” checkbox in the “Move or Copy” dialog.
-* Copy an existing worksheet using `copySheet` method.
+* Copy an existing worksheet using [`copySheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:copysheet "copySheet") method.
 
 The following code example describes the above behavior
 
@@ -92,7 +92,7 @@ The following output is displayed as a result of the above code example.
 The Spreadsheet provides support to move an existing worksheet. You can dynamically move a worksheet by using one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Move or Copy in the context menu. Select the sheet that you have to move in the “Move or Copy” dialog.
-* Move an existing worksheet using `copySheet` method.
+* Move an existing worksheet using [`copySheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:copysheet "copySheet") method.
 
 The following code example describes the above behavior
 
@@ -122,7 +122,7 @@ The Spreadsheet has support for removing an existing worksheet. You can dynamica
 * Right click on the worksheet in the sheet tab and then click Delete option in the context menu.
 * Select the existing worksheet, click OTHERS tab in the ribbon and select Delete dropdown button. Then click Delete Sheet.
 
-You can also remove an active worksheet using `deleteSheet` method.
+You can also remove an active worksheet using [`deleteSheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:deletesheet "deleteSheet") method.
 
 The following code example describes the above behavior
 
@@ -150,7 +150,7 @@ The following output is displayed as a result of the above code example.
 The Spreadsheet has support for renaming an existing worksheet. You can dynamically rename worksheet by using one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Rename option in the context menu.
-* Rename an active worksheet using `sheetRename` method.
+* Rename an active worksheet using [`sheetRename`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:sheetrename "sheetRename") method.
 
 The following code example describes the above behavior
 
@@ -177,24 +177,19 @@ The following output is displayed as a result of the above code example.
 ## Headers
 Headers in the Spreadsheet are numbered rows and lettered columns in worksheets. It makes ease of view and reference to your data. You can dynamically show/hide worksheet header by using one of the following ways,
 
-* Select PAGE LAYOUT tab in the ribbon and uncheck Headings in the Show group.
-* Show/Hide the worksheet headers using `ShowHeadings` property and `showHeadings` method.
+* Select PAGE LAYOUT tab in the ribbon and then check or uncheck Headings in the Show group.
+* Show/Hide the worksheet headers using `ShowHeadings` property and [`showHeadings`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:showheadings "showHeadings") method.
 
 The following code example describes the above behavior
 
 {% highlight cshtml %}
 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
-    .ClientSideEvents(events => events.LoadComplete("loadComplete"))
+    .Sheets(sheet =>
+    {
+        sheet.ShowHeadings(false).Add();
+    })
 )
-
-<script type="text/javascript">
-    function loadComplete(args) {
-        if (!this.isImport) {
-            this.showHeadings(false);			
-        }
-    }
-</script>
     
 {% endhighlight %}
 
@@ -205,8 +200,8 @@ The following output is displayed as a result of the above code example.
 You can dynamically show/hide worksheet by using one of the following ways,
 
 * Right clicking on the worksheet in the sheet tab and then click Hide or Unhide in the context menu
-* Hide the sheet using `hideSheet` method.
-* Show the hidden sheet using `unhideSheet` method.
+* Hide the sheet using [`hideSheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:hidesheet "hideSheet") method.
+* Show the hidden sheet using [`unhideSheet`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:unhidesheet "unhideSheet") method.
 
 The following code example describes the above behavior
 
@@ -235,8 +230,8 @@ The following output is displayed as a result of the above code example.
 ## Show / Hide Gridlines
 Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show/hide gridlines by using one of the following ways,
 
-* Select PAGE LAYOUT tab in the ribbon and uncheck Gridlines in the Show group.
-* Show/Hide gridlines in a worksheet using `ShowGridlines` property and `showGridlines` method.
+* Select PAGE LAYOUT tab in the ribbon and then check or uncheck Gridlines in the Show group.
+* Show/Hide gridlines in a worksheet using `ShowGridlines` property and [`showGridlines`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:showgridlines "showGridlines") method.
 
 The following code example describes the above behavior
 
