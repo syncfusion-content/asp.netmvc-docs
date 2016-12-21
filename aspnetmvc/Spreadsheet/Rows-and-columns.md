@@ -25,7 +25,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).RowCount(50).ColCount(36).Add();
     })
 )
@@ -158,7 +158,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -226,7 +226,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -285,7 +285,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).StartCell("A1").ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))

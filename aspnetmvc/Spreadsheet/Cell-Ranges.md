@@ -23,7 +23,7 @@ You have following features in Cell Range,
 
 ## Comment
 
-Comment is used to add notes to individual cell to give additional information for the data it contains. When a cell has a comment, a red indicator appears in the corner of the cell. When mouse hover on the cell, the comment will appear. You can use `AllowComments` property to enable/disable comments. 
+Comment is used to give additional information for an individual cell about data it contains. When a cell has a comment, a red indicator appears in the corner of the cell. When mouse hover on the cell, the comment will appear. You can use `AllowComments` property to enable/disable comments. 
 
 ### To insert a Comment
 
@@ -97,7 +97,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Navigation
 
-Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. You have the following support for cell navigation.
+Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. You have the following keys for cell navigation.
 
 N> In the below table, first cell and last cell is based on the used range.
 
@@ -114,10 +114,7 @@ N> In the below table, first cell and last cell is based on the used range.
 <tr><td>Page Up<br/></td><td>Go to previous block<br/></td></tr>
 <tr><td>Home<br/></td><td>Go to first cell of the same row<br/></td></tr>
 <tr><td>End<br/></td><td>Go to last cell of the same row<br/></td></tr>
-<tr><td>F2<br/></td><td>Start edit<br/></td></tr>
 <tr><td>Enter<br/></td><td>Save the current cell changes and navigate to the next row.<br/></td></tr>
-<tr><td>Delete<br/></td><td>Delete selected cells<br/></td></tr>
-<tr><td>Esc<br/></td><td>Cancel edit mode and discard changes.<br/></td></tr>
 <tr><td>Tab<br/></td><td>Go to next cell<br/></td></tr>
 <tr><td>Shift + Tab<br/></td><td>Go to previous cell<br/></td></tr>
 <tr><td>Shift + Up Arrow<br/></td><td>Go to previous row or previous row cell with selection<br/></td></tr>

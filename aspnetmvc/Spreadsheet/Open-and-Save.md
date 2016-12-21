@@ -185,7 +185,6 @@ namespace MVCSampleBrowser.Controllers
             importRequest.FileStream = getFileStream(); // assign file stream
             return importRequest.SpreadsheetActions();
         }
- 
     }
 }
 
@@ -237,7 +236,7 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 {% tabs %}
 {% highlight cshtml %}
 
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ExportSettings(export =>
     {
         export.AllowExporting(true).ExcelUrl("ExportToExcel").CsvUrl("ExportToCSV").PdfUrl("ExportToPDF");
@@ -253,13 +252,6 @@ namespace MVCSampleBrowser.Controllers
     {
         public ActionResult Default()
         {
-            List<ItemDetail> lItems = new List<ItemDetail>();
-            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
-            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
-            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
-            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
-            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
-            ViewBag.Datasource = lItems;
             return View();
         }
         
@@ -283,7 +275,6 @@ namespace MVCSampleBrowser.Controllers
         {
             Spreadsheet.Save(sheetModel, sheetData, "sample", ExportFormat.PDF);
         }
-
     }
 }
     
