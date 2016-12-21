@@ -608,7 +608,7 @@ You have following features in Merge Cell,
 * Merge Cells
 * Merge & Center
 * Merge Across
-
+ 
 ### Merge Cells
 
 You can combine two or more cells located in the same row or column into a single cell. When cells with multiple values are merged, upper-left most cell's data will be the data of merged cell. 
