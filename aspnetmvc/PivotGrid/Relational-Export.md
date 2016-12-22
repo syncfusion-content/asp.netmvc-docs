@@ -217,7 +217,7 @@ function exportBtnClick(args)
 
 I> This feature is applicable only at server mode operation.
 
-In order to perform exporting with the use of PivotEngine available in server-side, the 'url' property obtained in the “BeforeExport” event is set to the value "server" as shown below.
+In order to perform exporting with the use of PivotEngine available in server-side, the 'exportMode' property obtained in the “BeforeExport” event is set to the value "ej.PivotGrid.ExportMode.PivotEngine" as shown below.
 
 {% highlight CSHTML %}
 
@@ -230,7 +230,7 @@ In order to perform exporting with the use of PivotEngine available in server-si
             pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
         }
         function Export(args) {
-            args.url="server";
+            args.exportMode = ej.PivotGrid.ExportMode.PivotEngine;
         }
    </script>
     

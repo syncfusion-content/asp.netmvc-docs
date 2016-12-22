@@ -280,7 +280,7 @@ You can specify particular row with `Index` property and its height with `Height
 
 {% highlight cshtml %}
 
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ScrollSettings(scroll =>
     {
         scroll.Height(510);
