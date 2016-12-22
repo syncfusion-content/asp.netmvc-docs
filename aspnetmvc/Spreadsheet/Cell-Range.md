@@ -419,7 +419,7 @@ You can do this by one of the following ways,
 
 #### Flash Fill 
 
-To fill the column when it senses a pattern from adjacent column data based on what you type
+To fill the column when it senses a pattern from adjacent column data based on what you type.
 
 You can do this by one of the following ways,
 
@@ -603,7 +603,7 @@ The following output is displayed as a result of the above code example.
 
 Merge cell is a single cell created by combining two or more individual cells together. You can use `AllowMerging` property to enable/disable merge cells. The cell reference for a merged cell is the cell in the upper left corner of the original selected range or group of cells.
 
-You have following features in Merge Cell,
+You have following options in Merge Cell,
 
 * Merge Cells
 * Merge & Center
