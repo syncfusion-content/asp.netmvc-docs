@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard with Spreadsheet widget for Syncfusion Essential ASP .Net MVC
+title: Clipboard with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
 description: How to use the Spreadsheet Clipboard
 platform: ejmvc
 control: Spreadsheet
