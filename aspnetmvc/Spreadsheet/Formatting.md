@@ -146,8 +146,6 @@ You can apply text format for a cell by specifying `Style` property in cell data
 
 {% highlight cshtml %}
 
-<div id="Spreadsheet"></div>
-
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
@@ -246,7 +244,7 @@ The following output is displayed as a result of the above code example.
 
 #### User Interface
 
-You can wrap or unwrap text in a cell using wrap text option in ribbon `HOME` tab.
+You can wrap or unwrap text in a cell using `Wrap text` option in ribbon `HOME` tab.
 
 ## Cell Formatting
 
@@ -283,7 +281,7 @@ You can apply border for a cell or range of cells through following ways,
 
 2) Apply border for a cell or range of cells using border options in ribbon `HOME` tab
 
-3) Use draw border options in ribbon `HOME` tab
+3) Use `Draw Border` options in ribbon `HOME` tab
 
 ### Fill color
 
@@ -291,7 +289,7 @@ To highlight cell or range of cells from whole workbook you can apply background
 
 ### Cell Styles
 
-Cell styles is a collection of pre-defined styles with multiple formatting characteristics to apply several formats in one step. You can apply cell style for a cell using `cell style` option in ribbon `HOME` tab. The following screenshot illustrate this,
+Cell styles is a collection of pre-defined styles with multiple formatting characteristics to apply several formats in one step. You can apply cell style for a cell using `Cell Styles` option in ribbon `HOME` tab. The following screenshot illustrate this,
 
 ![](Formatting_images/Formatting_img7.png)
 
@@ -314,16 +312,16 @@ Clear option is used to clear cell contents, formats or any attached comments fr
 5) Clear Hyperlinks
 
 #### Clear All
-To clear content, format, comment, hyperlink etc. from a cell or range of cells, use clear all option in Spreadsheet. Use [`clearAll`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearall "clearAll") method to clear cells via code.
+To clear content, format, comment, hyperlink etc. from a cell or range of cells, use `Clear All` option in Spreadsheet. Use [`clearAll`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearall "clearAll") method to clear cells via code.
 
 #### Clear Formats
-To clear `formats` in a cell or range of cells use clear formats option in Spreadsheet. Use [`clearAllFormat`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearallformat "clearAllFormat") method to clear formats via code.
+To clear `formats` in a cell or range of cells use `Clear Formats` option in Spreadsheet. Use [`clearAllFormat`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearallformat "clearAllFormat") method to clear formats via code.
 
 #### Clear Contents
-To clear `contents` in a cell or range of cells use clear contents option in Spreadsheet. Use [`clearContents`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearcontents "clearContents") method to clear contents via code.
+To clear `contents` in a cell or range of cells use `Clear Contents` option in Spreadsheet. Use [`clearContents`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:clearcontents "clearContents") method to clear contents via code.
 
 #### Clear Comments
-To clear `comment` in a cell or range of cells use clear comments option in Spreadsheet. Use `clearComments` method to clear comments via code.
+To clear `comment` in a cell or range of cells use `Clear Comments` option in Spreadsheet. Use `clearComments` method to clear comments via code.
 
 #### Clear Hyperlinks
-To clear `hyperlink` in a cell or range of cells use clear hyperlink option in Spreadsheet. Use `clearHyperlinks` method to clear hyperlinks via code.
+To clear `hyperlink` in a cell or range of cells use `Clear Hyperlinks` option in Spreadsheet. Use `clearHyperlinks` method to clear hyperlinks via code.
