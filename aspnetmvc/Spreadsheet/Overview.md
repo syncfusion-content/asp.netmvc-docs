@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: overview
-platform: ASP.NET MVC 
+platform: ejmvc
 control: Spreadsheet
 documentation: ug
 keywords: 
