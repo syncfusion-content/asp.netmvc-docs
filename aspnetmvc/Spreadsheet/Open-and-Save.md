@@ -8,7 +8,7 @@ documentation: ug
 --- 
 
 # Open and Save
-The native data format for Spreadsheet is JSON. You can load and store JSON data with Spreadsheet. In Spreadsheet we have `saveAsJSON` and `loadFromJSON` method which is used to save Spreadsheet as JSON and same JSON used to render Spreadsheet.
+The native data format for Spreadsheet is JSON. You can load and store JSON data with Spreadsheet. In Spreadsheet we have [`saveAsJSON`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:saveasjson "saveAsJSON") and [`loadFromJSON`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:loadfromjson "loadFromJSON") method which is used to save Spreadsheet as JSON and same JSON used to render Spreadsheet.
 
 {% highlight javascript %}
 
@@ -84,8 +84,7 @@ The Spreadsheet can load excel documents initially. The document can be specifie
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ImportSettings(import =>
     {
-        import.ImportMapper("Import");
-        import.ImportUrl("http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx");
+        import.ImportMapper("Import").ImportUrl("http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx");
     })
 )
     
@@ -119,8 +118,7 @@ To load excel documents initially from server side, set `ImportOnLoad`as `true` 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ImportSettings(import =>
     {
-        import.ImportOnLoad(true);
-        import.ImportMapper("Import");
+        import.ImportOnLoad(true).ImportMapper("Import");
     })
 )
 
@@ -151,7 +149,7 @@ namespace MVCSampleBrowser.Controllers
 ![](Open-and-Save_images/Open-and-Save_img1.png)
 
 ### Methods
-To open an excel document, `import` method should be called with import options as a parameter. The Spreadsheet can open excel document as a stream or file URL.
+To open an excel document, [`import`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:import "import") method should be called with import options as a parameter. The Spreadsheet can open excel document as a stream or file URL.
  
 #### Stream
 Spreadsheet can open excel document as a stream and the document stream was either from the client side or it can be specified in server side. The code snippets to open excel document as a stream from client side are as follows,
@@ -187,7 +185,6 @@ namespace MVCSampleBrowser.Controllers
             importRequest.FileStream = getFileStream(); // assign file stream
             return importRequest.SpreadsheetActions();
         }
- 
     }
 }
 
@@ -224,7 +221,6 @@ namespace MVCSampleBrowser.Controllers
             importRequest.Url = "http://mvc.syncfusion.com/Spreadsheet/LargeData.xlsx";
             return importRequest.SpreadsheetActions();
         }
-
     }
 }
     
@@ -239,13 +235,10 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 {% tabs %}
 {% highlight cshtml %}
 
-@(Html.EJ().Spreadsheet<ItemDetail>("Spreadsheet")
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .ExportSettings(export =>
     {
-        export.AllowExporting(true);
-        export.ExcelUrl("ExportToExcel");
-        export.CsvUrl("ExportToCSV");
-        export.PdfUrl("ExportToPDF");
+        export.AllowExporting(true).ExcelUrl("ExportToExcel").CsvUrl("ExportToCSV").PdfUrl("ExportToPDF");
     })
 )
     
@@ -258,13 +251,6 @@ namespace MVCSampleBrowser.Controllers
     {
         public ActionResult Default()
         {
-            List<ItemDetail> lItems = new List<ItemDetail>();
-            lItems.Add(new ItemDetail() { ItemName = "Casual Shoes", Date = new DateTime(2014, 02, 14), Time = new DateTime(2014, 02, 14, 11, 34, 32), Quantity = 10, Price = 20, Amount = 200, Discount = 1, Profit = 10 });
-            lItems.Add(new ItemDetail() { ItemName = "Sports Shoes", Date = new DateTime(2014, 06, 11), Time = new DateTime(2014, 06, 11, 05, 56, 32), Quantity = 20, Price = 30, Amount = 600, Discount = 5, Profit = 50 });
-            lItems.Add(new ItemDetail() { ItemName = "Formal Shoes", Date = new DateTime(2014, 07, 27), Time = new DateTime(2014, 07, 27, 03, 32, 44), Quantity = 20, Price = 15, Amount = 300, Discount = 7, Profit = 27 });
-            lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
-            lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
-            ViewBag.Datasource = lItems;
             return View();
         }
         
@@ -288,7 +274,6 @@ namespace MVCSampleBrowser.Controllers
         {
             Spreadsheet.Save(sheetModel, sheetData, "sample", ExportFormat.PDF);
         }
-
     }
 }
     
@@ -312,7 +297,7 @@ You can save Spreadsheet contents with following file types,
 2. User Interface
 
 ### Methods
-To save Spreadsheet document as excel file, `export` method should be called with file type as parameter. The code snippets to save Spreadsheet document are as follows,
+To save Spreadsheet document as excel file, [`export`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlexport-export "export") method should be called with file type as parameter. The code snippets to save Spreadsheet document are as follows,
 
 {% highlight javascript %}
 

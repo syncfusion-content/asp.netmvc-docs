@@ -17,13 +17,13 @@ You have following features in Cell Range,
 * Cell Navigation
 * Data Validation
 * Drag and Drop
-* Drag Fill
+* Auto Fill
 * Hyperlink
 * Merge Cell
 
 ## Comment
 
-Comment is used to add notes to individual cell to give additional information for the data it contains. When a cell has a comment, a red indicator appears in the corner of the cell. When mouse hover on the cell, the comment will appear. You can use `AllowComments` property to enable/disable comments. 
+Comment is used to give additional information for an individual cell about the data it contains. When a cell has a comment, a red indicator appears in the corner of the cell. When mouse hover on the cell, the comment will appear. You can use `AllowComments` property to enable/disable comments. 
 
 ### To insert a Comment
 
@@ -31,15 +31,15 @@ You can insert a comment by using one of the following ways,
 
 * Using "New" button under Comments group of REVIEW Tab in ribbon.
 * Using context menu to select "Insert Comment" option in "Comment".
-* Using `setComment` method.
+* Using [`setComment`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcomment-setcomment "setComment") method.
 
-### To Remove a Comment
+### To remove a Comment
 
 You can remove a comment by using one of the following ways,
 
 * Using "Delete" button under Comments group of REVIEW Tab in ribbon.
 * Using context menu to select "Delete Comment" option in "Comment".
-* Using `deleteComment` method.
+* Using [`deleteComment`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcomment-deletecomment "deleteComment") method.
 
 The following code example describes the above behavior.
 
@@ -51,7 +51,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -97,9 +97,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Navigation
 
-Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. You have the following support for cell navigation.
-
-N> In the below table, first cell and last cell is based on the used range.
+Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. The following list of keys used for cell navigation are,
 
 <table>
 <colgroup><col width="180px" /></colgroup>
@@ -114,10 +112,7 @@ N> In the below table, first cell and last cell is based on the used range.
 <tr><td>Page Up<br/></td><td>Go to previous block<br/></td></tr>
 <tr><td>Home<br/></td><td>Go to first cell of the same row<br/></td></tr>
 <tr><td>End<br/></td><td>Go to last cell of the same row<br/></td></tr>
-<tr><td>F2<br/></td><td>Start edit<br/></td></tr>
 <tr><td>Enter<br/></td><td>Save the current cell changes and navigate to the next row.<br/></td></tr>
-<tr><td>Delete<br/></td><td>Delete selected cells<br/></td></tr>
-<tr><td>Esc<br/></td><td>Cancel edit mode and discard changes.<br/></td></tr>
 <tr><td>Tab<br/></td><td>Go to next cell<br/></td></tr>
 <tr><td>Shift + Tab<br/></td><td>Go to previous cell<br/></td></tr>
 <tr><td>Shift + Up Arrow<br/></td><td>Go to previous row or previous row cell with selection<br/></td></tr>
@@ -129,6 +124,8 @@ N> In the below table, first cell and last cell is based on the used range.
 <tr><td>Ctrl + Left Arrow<br/></td><td>Go to next cell from the first empty cell in leftwards.<br/></td></tr>
 <tr><td>Ctrl+ Right Arrow<br/></td><td>Go to previous cell from the first empty cell in rightwards.<br/></td></tr>
 </table>
+
+N> In the above table, "Ctrl + Home" and "Ctrl + End" is based on the used range.
 
 ## Data Validation
 
@@ -143,7 +140,7 @@ N> * jquery.validate.unobtrusive.min.js
 You can apply data validation by using one of the following ways,
 
 * Using "Data Validation" option in Data Validation button under Data Tools group of DATA Tab in ribbon, Data Validation dialog will be opened in that you can perform Validation.
-* Using `applyDVRules` method.
+* Using [`applyDVRules`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlvalidate-applydvrules "applyDVRules") method.
 
 The following code example describes the above behavior.
 
@@ -155,7 +152,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -194,12 +191,12 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-#### To Clear validation
+#### To clear validation
 
 You can clear data validation rule by one of the following ways,
 
 * Using "Clear Validation" option in Data Validation button under Data Tools group of DATA Tab in ribbon.
-* Using `clearDV` method.
+* Using [`clearDV`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlvalidate-cleardv "clearDV") method.
 
 The following code example describes the above behavior.
 {% tabs %}
@@ -211,7 +208,6 @@ The following code example describes the above behavior.
         sheet.RangeSettings(range =>
         {
             range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-            range.ShowHeader(true).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -251,12 +247,12 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-#### To Format invalid data
+#### To format invalid data
 
 You can highlight the invalid data by using following ways,
 
 * Using "Format Invalid Data" option in Data Validation button under Data Tools group of DATA Tab in ribbon.
-* Using `highlightInvalidData` method.
+* Using [`highlightInvalidData`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlvalidate-highlightinvaliddata "highlightInvalidData") method.
 
 The following code example describes the above behavior.
 {% tabs %}
@@ -267,7 +263,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -317,7 +313,7 @@ Drag and drop is used to pick a selected cells and drop it into a new place on t
 You can do this by one of the following ways,
 
 * Using mouse drag and drop.
-* Using `moveRangeTo` Method.
+* Using [`moveRangeTo`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragdrop-moverangeto "moveRangeTo") Method.
 
 The following code example describes the above behavior.
 {% tabs %}
@@ -328,7 +324,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -368,16 +364,16 @@ namespace MVCSampleBrowser.Controllers
 The following output is displayed as a result of the above code example.
 ![](Cell-Ranges_images/Cell-Ranges_img3.png)
 
-## Drag Fill
+## Auto Fill
 
-Drag Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use `AllowAutoFill` property to enable/disable the drag fill support. You can also use `ShowFillOptions` property to enable/disable the fill option and `FillType` property to change the default auto fill option which is available in `AutoFillSettings`. 
+Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use `AllowAutoFill` property to enable/disable the auto fill support. You can also use `ShowFillOptions` property to enable/disable the fill option and `FillType` property to change the default auto fill option which is available in `AutoFillSettings`. 
 
 You can do this by one of the following ways.
 
-* Using "Drag Fill" menu which is open, while drag and drop the fill handle element.
-* Using `autoFill` method.
+* Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
+* Using [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method.
 
-In Drag Fill we have following options, 
+In Auto Fill we have following options, 
 
 * Copy Cells
 * Fill Series
@@ -389,10 +385,10 @@ N> The default auto fill option is "fillSeries" which can be referred from `Fill
 
 #### Copy Cells
 
-To copy the selected cell content to the adjacent cells. You can do this by one of the following ways.
+To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
 
-* Using fill handle to select the adjacent cell range and "Copy Cells" option in "Drag Fill" menu to fill the adjacent cells.
-* Using "copyCells" as fill type in `autoFill` method to fill the adjacent cells.
+* Using fill handle to select the adjacent cell range and "Copy Cells" option in "AutoFillOptions" menu to fill the adjacent cells.
+* Using "copyCells" as fill type in [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method to fill the adjacent cells.
 
 #### Fill Series
 
@@ -400,8 +396,8 @@ To fill the series of numbers, characters, or dates based on selected cell conte
 
 You can do this by one of the following ways,
 
-* Using fill handle to select the adjacent cell range and "Fill Series" option in "Drag Fill" menu to fill the adjacent cells.
-* Using "fillSeries" as fill type in `autoFill` method to fill the adjacent cells.
+* Using fill handle to select the adjacent cell range and "Fill Series" option in "AutoFillOptions" menu to fill the adjacent cells.
+* Using "fillSeries" as fill type in [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method to fill the adjacent cells.
 
 #### Fill Formatting Only
 
@@ -409,8 +405,8 @@ To fill the cell style and number formatting based on the selected cell content 
 
 You can do this by one of the following ways,
 
-* Using fill handle to select the adjacent cell range and "Fill Formatting Only" option in "Drag Fill" menu to fill the adjacent cells.
-* Using "fillFormattingOnly" as fill type in `autoFill` method to fill the adjacent cells.
+* Using fill handle to select the adjacent cell range and "Fill Formatting Only" option in "AutoFillOptions" menu to fill the adjacent cells.
+* Using "fillFormattingOnly" as fill type in [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method to fill the adjacent cells.
 
 #### Fill Without Formatting
 
@@ -418,18 +414,17 @@ To fill series of numbers, characters, or dates based on the selected cells to t
 
 You can do this by one of the following ways,
 
-* Using fill handle to select the adjacent cell range and "Fill Without Formatting" option in "Drag Fill" menu to fill the adjacent cells.
-* Using "fillWithoutFormatting" as fill type in `autoFill` method to fill the adjacent cells.
+* Using fill handle to select the adjacent cell range and "Fill Without Formatting" option in "AutoFillOptions" menu to fill the adjacent cells.
+* Using "fillWithoutFormatting" as fill type in [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method to fill the adjacent cells.
 
 #### Flash Fill 
 
+To fill the column when it senses a pattern from adjacent column data based on what you type.
+
 You can do this by one of the following ways,
 
-* Using fill handle to select the adjacent cell range and "Flash Fill" option in "Drag Fill" menu to fill the adjacent cells.
-* Using "flashFill" as fill type in `autoFill` method to fill the adjacent cells.
-
-The following output is displayed as a result of the "Drag Fill" menu in User Interface.
-![](Cell-Ranges_images/Cell-Ranges_img4.png)
+* Using fill handle to select the adjacent cell range and "Flash Fill" option in "AutoFillOptions" menu to fill the adjacent cells.
+* Using "flashFill" as fill type in [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method to fill the adjacent cells.
 
 The following code example describes the above behavior.
 
@@ -439,7 +434,7 @@ The following code example describes the above behavior.
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).StartCell("A1")
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource)
         .Rows(rows =>
         {
             rows.Index(1).Cells(cells =>
@@ -530,22 +525,22 @@ The following output is displayed as a result of the above code example.
 
 ## Hyperlink
 
-Hyperlink is used to navigate to web links or cell reference to other sheets or within the sheet in Spreadsheet. You can use `AllowHyperlink` property to enable/disable Hyperlink.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use `AllowHyperlink` property to enable/disable Hyperlink.
 
-### To Insert a Hyperlink
+### To insert a Hyperlink
 
 You can insert a hyperlink by one of the following ways,
 
 * Using "Hyperlink" button under Links group of INSERT Tab in ribbon.
 * Using context menu to select "Insert Hyperlink" option in "Hyperlink".
-* Using `setHyperlink` method.
+* Using [`setHyperlink`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:sethyperlink "setHyperlink") method.
 
-### To Remove a Hyperlink
+### To remove a Hyperlink
 
 You can remove a hyperlink by one of the following ways,
 
 * Using context menu to select "Remove Hyperlink" option in Hyperlink.
-* Using `removeHyperlink` method.
+* Using [`removeHyperlink`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:removehyperlink "removeHyperlink") method.
 
 The following code example describes the above behavior.
 
@@ -557,7 +552,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -606,8 +601,14 @@ The following output is displayed as a result of the above code example.
 
 ## Merge Cell
 
-Merge cell is a single cell created by combining two or more individual cells together. You can use `AllowMerging` property to enable/disable merge cells. The cell reference for a merged cell is the cell in the upper left corner of the original selected range or group of cells. 
+Merge cell is a single cell created by combining two or more individual cells together. You can use `AllowMerging` property to enable/disable merge cells. The cell reference for a merged cell is the cell in the upper left corner of the original selected range or group of cells.
 
+You have following options in Merge Cell,
+
+* Merge Cells
+* Merge & Center
+* Merge Across
+ 
 ### Merge Cells
 
 You can combine two or more cells located in the same row or column into a single cell. When cells with multiple values are merged, upper-left most cell's data will be the data of merged cell. 
@@ -615,7 +616,7 @@ You can combine two or more cells located in the same row or column into a singl
 You can do this by one of the following ways,
 
 * Using "Merge Cells" option in Merge & Center button under Alignment group of HOME Tab in ribbon.
-* Using `mergeCells` method.
+* Using [`mergeCells`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:mergecells "mergeCells") method.
 
 ### Merge & Center
 
@@ -623,8 +624,7 @@ You can combine two or more cells located in the same row or column into a singl
 
 * Using Merge & Center button under Alignment group of HOME Tab in ribbon.
 * Using "Merge & Center" option in Merge & Center button under Alignment group of HOME Tab in ribbon.
-* Using `mergeCells` method.
-* Using `mergeCenter` property to enable/disable the center alignment.
+* Using [`mergeCells`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:mergecells "mergeCells") method with `mergeCenter` property as `true` to enable the center alignment.
 
 ### Merge Across
 
@@ -645,7 +645,7 @@ The following code example describes the behavior of Merge Cells, Merge & Center
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -694,7 +694,7 @@ The following output is displayed as a result of the above code example.
 You can split the merged cell into multiple cells. You can do this by one of the following ways,
 
 * Using "Unmerge cells" option in Merge & Center button under Alignment group of HOME Tab in ribbon.
-* Using `unMergeCells` method.
+* Using [`unMergeCells`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:unmergecells "unMergeCells") method.
 
 The following code example describes the above behavior.
 
@@ -706,7 +706,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))

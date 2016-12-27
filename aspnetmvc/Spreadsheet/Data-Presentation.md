@@ -24,9 +24,9 @@ Data presentation is helpful for proper representation of data in Spreadsheet. Y
 
 You can insert the controls like Button, Checkbox, Dropdown list and Date picker. You can use `AllowCellType` property to enable/disable cell type operations.
 
-### To Insert a Cell Type.
+### To insert a Cell Type.
 
-You can insert the cell type by using `CellTypes` properties. The individual cell type properties are listed below,
+You can insert the controls like Button, Checkbox, Dropdown list and Date picker. You can use [`allowCellType`](http://help.syncfusion.com/api/js/ejspreadsheet#members:allowcelltype "allowCellType") property to enable/disable cell type operations. The individual cell type properties are listed below,
 
 <table>
     <tr>
@@ -42,7 +42,7 @@ You can insert the cell type by using `CellTypes` properties. The individual cel
             Range
         </td>
         <td>
-            To specify range for cell type builder
+            To specify range for cell type 
         </td>
     </tr>
     <tr>
@@ -71,9 +71,9 @@ You can insert the cell type by using `CellTypes` properties. The individual cel
     </tr>
 </table>
 
-### To Remove Cell Type
+### To remove Cell Type
 
-You can delete the cell type in the selected range of cells by using `removeCellTypes` method.
+You can delete the cell type in the selected range of cells by using [`removeCellTypes`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcelltype-removecelltypes "removeCellTypes") method.
 
 The following code example describes the above behavior. 
 
@@ -84,7 +84,7 @@ The following code example describes the above behavior.
     .AllowCellType(true)
     .Sheets(sheet =>
     {
-        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true)
+        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource)
         .CellTypes(ctype =>
         {
             ctype.Range("E1").Setting(setting =>
@@ -152,7 +152,7 @@ The following output is displayed as a result of the above code example.
 
 Chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of x axis and y axis. You can use `AllowCharts` property to enable/disable chart operations.
 
-### Type of Charts
+### Types of Chart
 
 The following types of charts are available in Spreadsheet.
 
@@ -167,7 +167,7 @@ The following types of charts are available in Spreadsheet.
 You can create the Chart by one of the following ways,
 
 * Using "Chart Type" button to Select the type of chart under Charts group of INSERT Tab in ribbon.
-* Using `createChart` method to create the chart.
+* Using [`createChart`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlchart-createchart "createChart") method to create the chart.
 
 ### Chart Customization
 
@@ -195,7 +195,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -249,7 +249,7 @@ You can define conditions such as greater than, less than, between, equal to, te
 You can do this by one of the following ways,
 
 * Using "Conditional Formatting" option in Conditional Formatting button of HOME Tab in ribbon to open the conditional formatting dialog.
-* Using `setCFRule` method to define the condition.
+* Using [`setCFRule`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcformat-setcfrule "setCFRule") method to define the condition.
 
 The following code example describes the above behavior.
 
@@ -262,7 +262,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -315,7 +315,7 @@ The following output is displayed as a result of the above code example.
 You can clear the defined rules by using one of the following ways,
 
 * Using "Clear Rules" option in Conditional Formatting button of HOME Tab in ribbon to clear the rule.
-* Using `clearCF` method to clear the defined rules.
+* Using [`clearCF`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcformat-clearcf "clearCF") method to clear the defined rules.
 
 The following code example describes the above behavior.
 
@@ -327,7 +327,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -397,7 +397,7 @@ You can do this by one of the following ways,
 
 * Using dropdown button in filter header to open the filter dialog.
 * Using context menu to select "Filter by Selected Cell's Value" option in Filter. 
-* Using `filterByActiveCell` method.
+* Using [`filterByActiveCell`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfilter-filterbyactivecell "filterByActiveCell") method.
 
 The following code example describes the above behavior.
 {% tabs %}
@@ -409,7 +409,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -468,7 +468,7 @@ You can do this by one of the following ways,
 * Using context menu to select "Clear Filter" option in Filter.
 * Using "Clear Filter" option in "Sort & Filter" button under Editing group of HOME Tab in ribbon.
 * Using "Clear Filter" option under Sort and Filter group of DATA Tab in ribbon.
-* Using `clearFilter` method to perform clear filtering.
+* Using [`clearFilter`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfilter-clearfilter "clearFilter") method to perform clear filtering.
 
 The following code example describes the above behavior.
 
@@ -481,7 +481,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -550,8 +550,8 @@ Pivot table is a program tool that allows you to reorganize and summarize select
 You can do this by one of the following ways,
 
 * Using "Pivot Table" option under Tables group of INSERT Tab in ribbon.
-* Using `createPivotTable` method to create pivot table
-* Using `deletePivotTable` method to remove the pivot table.
+* Using [`createPivotTable`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlpivot-createpivottable "createPivotTable") method to create pivot table
+* Using [`deletePivotTable`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlpivot-deletepivottable "deletePivotTable") method to remove the pivot table.
 
 The following code example describes the above behavior.
 
@@ -564,7 +564,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -675,7 +675,7 @@ You can do this by one of the following ways,
 * Using "Sort A to Z" or "Sort Z to A" button in Sort & Filter group of DATA Tab in ribbon.
 * Using context menu to select "Sort A to Z" or "Sort Z to A" for strings and option in Sort.
 * Using "Sort A to Z" or "Sort Z to A" for strings an "Sort Smallest to Largest" or "Sort Largest to Smallest" for numbers in filter dialog.
-* Using `sortByRange` method.
+* Using [`sortByRange`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlsort-sortbyrange "sortByRange") method.
 
 The following code example describes the above behavior.
 
@@ -688,7 +688,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(true).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -749,7 +749,7 @@ You can do this by one of the following ways,
 
 * Using "Format As Table" under Styles group of HOME Tab in ribbon.
 * Using Table option under Tables group of INSERT Tab in ribbon.
-* Using `createTable` method to insert a table and `removeTable` to delete a table.
+* Using [`createTable`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlformat-createtable "createTable") method to insert a table and [`removeTable`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlformat-removetable "removeTable") to delete a table.
 
 ### Table Customization
 
@@ -776,7 +776,7 @@ The following code example describes the above behavior.
     {
         sheet.RangeSettings(range =>
         {
-            range.Datasource((IEnumerable<object>)ViewBag.Datasource).ShowHeader(false).Add();
+            range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
         }).Add();   
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
