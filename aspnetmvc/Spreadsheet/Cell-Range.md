@@ -97,9 +97,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Navigation
 
-Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. Please find the following list of keys that are used for cell navigation.
-
-N> In the below table, first cell and last cell is based on the used range.
+Cell navigation is used to navigate through the cells using keyboard. You can use `AllowKeyboardNavigation` property to enable/disable cell navigation. The following list of keys used for cell navigation are,
 
 <table>
 <colgroup><col width="180px" /></colgroup>
@@ -126,6 +124,8 @@ N> In the below table, first cell and last cell is based on the used range.
 <tr><td>Ctrl + Left Arrow<br/></td><td>Go to next cell from the first empty cell in leftwards.<br/></td></tr>
 <tr><td>Ctrl+ Right Arrow<br/></td><td>Go to previous cell from the first empty cell in rightwards.<br/></td></tr>
 </table>
+
+N> In the above table, "Ctrl + Home" and "Ctrl + End" is based on the used range.
 
 ## Data Validation
 
