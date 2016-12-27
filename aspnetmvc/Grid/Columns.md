@@ -1112,37 +1112,37 @@ Description</th>
 <tr>
 <td>
 string</td><td>
-Returns the text value in the column cells </td>
+Gets or sets the type of the column value as string </td>
 </tr>
 <tr>
 <td>
 number</td><td>
-Returns the numeric value in the column cells </td>
+Gets or sets the type of the column value as number</td>
 </tr>
 <tr>
 <td>
 date</td><td>
-Returns the date format of the column cells and the date picker renders automatically on edit and time without specifying the editType Property</td>
+Gets or sets the type of the column value as date</td>
 </tr>
 <tr>
 <td>
 datetime</td><td>
-Returns the datetime format of the column cells and the date time picker renders automatically on edit time without specifying the editType Property </td>
+Gets or sets the type of the column value as datetime</td>
 </tr>
 <tr>
 <td>
 boolean</td><td>
-Returns the true or false value </td>
+Gets or sets the type of the column value as true or false </td>
 </tr>
 <tr>
 <td>
 guid</td><td>
-Returns the guid value in the column cells</td>
+Gets or sets the type of the column value as guid</td>
 </tr>
 <tr>
 <td>
 checkbox </td><td>
-Specifies column type as checkbox for row selection </td>
+Gets or sets the type of the column value as checkbox for row selection </td>
 </tr>
 </table>
 
