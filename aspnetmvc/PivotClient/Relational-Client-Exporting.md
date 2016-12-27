@@ -76,14 +76,14 @@ The document name to be exported could be customized. Following code sample illu
 
 I> This feature is applicable only at server mode operation.
 
-In order to perform exporting with the use of PivotEngine available in server-side, the 'url' property obtained in the “beforeExport” event is set to empty as shown below.
+In order to perform exporting with the use of PivotEngine available in server-side, the 'exportMode' property obtained in the “BeforeExport” event is set to "ej.PivotClient.ExportMode.PivotEngine" as shown below.
 
 {% highlight CSHTML %}
 
     @Html.EJ().Pivot().PivotClient("PivotClient1").Url(Url.Content("/RelationalClient")).ClientExportMode(ClientExportMode.ChartAndGrid).ClientSideEvents(oEve => { oEve.BeforeExport("Export"); })
    <script type="text/javascript">
         function Export(args) {
-            args.url = "";
+          args.exportMode = ej.PivotClient.ExportMode.PivotEngine;
         }
    </script>
     
