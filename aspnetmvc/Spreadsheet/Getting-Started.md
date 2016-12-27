@@ -1,7 +1,7 @@
 ---
 title: Getting Started for Essential ASP.NET MVC Spreadsheet
 description: How to create a Spreadsheet with data source, apply format and export it as excel file.
-platform: ASP.NET MVC
+platform: ejmvc
 control: Spreadsheet
 documentation: UG
 keywords: 
@@ -16,7 +16,7 @@ This section explains briefly about how to create Spreadsheet in your ASP.NET MV
 The following steps explains how to create spreadsheet,
 
 1. Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll's and script files.  
-2. Add the following code example in view page to render Spreadsheet control. Spreadsheet is rendered with default `Height` and `Width`. You can also customize Spreadsheet dimension by setting `Height` and `Width` property in `ScrollSettings`. 
+2. Add the following code example in view page to render Spreadsheet control. Spreadsheet is rendered with default height and width. You can also customize Spreadsheet dimension by setting `Height` and `Width` property in `ScrollSettings`. 
 
 ~~~cshtml
 @(Html.EJ().Spreadsheet<object>("Spreadsheet"))
@@ -119,11 +119,13 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 ~~~cshtml
 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    //...
     .ExportSettings(export =>
         {
             export.ExcelUrl("ExportToExcel");
         }
     )
+    //...
 )
 
 ~~~
@@ -131,6 +133,7 @@ The Spreadsheet can save its data, style, format into an excel file. To enable s
 ~~~csharp
 
 [AcceptVerbs(HttpVerbs.Post)]
+//...
 public void ExportToExcel(string sheetModel, string sheetData, string password)
 {
     if (String.IsNullOrEmpty(password))
@@ -138,7 +141,7 @@ public void ExportToExcel(string sheetModel, string sheetData, string password)
     else
         Spreadsheet.Save(sheetModel, sheetData, "sample", ExportFormat.XLSX, ExcelVersion.Excel2013, password);
 }
-
+//...
 ~~~
 
 Use shortcut `Ctrl + S` to save Spreadsheet as excel file.
