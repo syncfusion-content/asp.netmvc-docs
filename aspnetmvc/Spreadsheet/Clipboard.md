@@ -19,8 +19,8 @@ This function cuts the selected range values and make it available in clipboard.
 You can do this by one of the following ways. 
 
 * Using "Ctrl-X" key.
-* Using `Cut` button of `HOME` tab in ribbon to perform cut operation.
-* Using `Cut` option in `Context Menu`.
+* Using Cut button of HOME tab in ribbon to perform cut operation.
+* Using Cut option in Context Menu.
 * Using [`cut`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-cut "cut") method.
 
 ## Copy
@@ -30,8 +30,8 @@ This function copies the selected range values and make it available in clipboar
 You can do this by one of the following ways. 
 
 * Using "Ctrl-C" key.
-* Using `Copy` button of `HOME` tab in ribbon to perform copy operation.
-* Using `Copy` option in `Context Menu`.
+* Using Copy button of HOME tab in ribbon to perform copy operation.
+* Using Copy option in Context Menu.
 * Using [`copy`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-copy "copy") method.
 
 ## Paste
@@ -48,17 +48,14 @@ N> The default paste option is Paste Special. This is working only within the cu
 You can do this by one of the following ways,
 
 * Using "Ctrl-V" key.
-* Using `Paste` button of `HOME` tab in ribbon to perform paste operation.
-* Using `Paste` option in `Context Menu`.
+* Using Paste button of HOME tab in ribbon to perform paste operation.
+* Using Paste option in Context Menu.
 * Using [`paste`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-paste "paste") method.
 
 The following code example describes the above behavior.
 
+{% tabs %}
 {% highlight cshtml %}
-<div id="Spreadsheet"></div>
-{% endhighlight %}
-
-{% highlight javascript %}
 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .AllowClipboard(true)

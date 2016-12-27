@@ -17,12 +17,12 @@ N> Default value of `UndoredoStep` property is 20. You can perform 20 undo or re
 
 Undo reverses the last action you performed with spreadsheet. You can do this by following ways.
 
-* Use `Undo` button of `HOME` tab in ribbon.
+* Use Undo button of HOME tab in ribbon.
 * Use "Ctrl + Z" key.
 
 ## Redo the action
 
 Redo reverses the last undo action you performed with spreadsheet. You can do this by following ways.
 
-* Use `Redo` button of `HOME` tab in ribbon.
+* Use Redo button of HOME tab in ribbon.
 * Use "Ctrl + Y" key.
