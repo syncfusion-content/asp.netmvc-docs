@@ -19,7 +19,7 @@ The two types of selection mode are as follows
 
 ## Selection Type
 
-There are four types of selection in Spreadsheet
+There are four types of selection in Spreadsheet,
 
 1. Cell Selection
 2. Row Selection
