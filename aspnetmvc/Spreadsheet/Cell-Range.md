@@ -368,7 +368,7 @@ The following output is displayed as a result of the above code example.
 
 Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use `AllowAutoFill` property to enable/disable the auto fill support. You can also use `ShowFillOptions` property to enable/disable the fill option and `FillType` property to change the default auto fill option which is available in `AutoFillSettings`. 
 
-You can do this by one of the following ways.
+You can do this by one of the following ways,
 
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
 * Using [`autoFill`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xldragfill-autofill "autoFill") method.
@@ -478,9 +478,9 @@ The following code example describes the above behavior.
 <script type="text/javascript">
     function loadComplete(args) {
         if(!this.isImport) {
-            this.XLFormat.format({ "style": { "background-color": "yellow" } }, "E2:F2");
-            this.XLFormat.format({ "style": { "background-color": "red" } }, "E4:F4");
-            this.XLFormat.format({ "style": { "background-color": "blue" } }, "E5:F5");
+            this.XLFormat.format({ "style": { "background-color": "yellow" } }, "K2:L2");
+            this.XLFormat.format({ "style": { "background-color": "red" } }, "K4:L4");
+            this.XLFormat.format({ "style": { "background-color": "blue" } }, "K5:L5");
             
             //copy Cells
             this.XLDragFill.autoFill({ sheetIdx: 1, dataRange: [1, 8, 4, 8], fillRange: "I6:I10", fillType: "copycells", direction:"down" }); 

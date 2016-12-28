@@ -26,56 +26,13 @@ You can insert the controls like Button, Checkbox, Dropdown list and Date picker
 
 ### To insert a Cell Type.
 
-You can insert the controls like Button, Checkbox, Dropdown list and Date picker. You can use [`allowCellType`](http://help.syncfusion.com/api/js/ejspreadsheet#members:allowcelltype "allowCellType") property to enable/disable cell type operations. The individual cell type properties are listed below,
-
-<table>
-    <tr>
-        <th>
-            Properties
-        </th>
-        <th>
-            Description
-        </th>
-    </tr>
-    <tr>
-        <td>
-            Range
-        </td>
-        <td>
-            To specify range for cell type 
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Setting
-        </td>
-        <td>
-            To specify the cell type setting
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Type
-        </td>
-        <td>
-            To specify the cell type
-        </td>
-    </tr>
-    <tr>
-        <td>
-            CustomCellTypes
-        </td>
-        <td>
-            To specify the custom cell types for spreadsheet
-        </td>
-    </tr>
-</table>
+You can insert the cell type to the selected range of cells by using [`addCellTypes`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcelltype-addcelltypes "addCellTypes") method. 
 
 ### To remove Cell Type
 
 You can delete the cell type in the selected range of cells by using [`removeCellTypes`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcelltype-removecelltypes "removeCellTypes") method.
 
-The following code example describes the above behavior. 
+The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight cshtml %}
