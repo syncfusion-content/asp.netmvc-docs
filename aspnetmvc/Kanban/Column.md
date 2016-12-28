@@ -560,3 +560,61 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img7.png)
+
+## Customize Items Count Text
+
+You can customize the Items count text using the property `TotalCount.Text`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+             @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)                   
+                    .Columns(col =>
+                     {
+                       col.HeaderText("Backlog").Key("Open").TotalCount(
+                            t => {
+                                t.Text("Backlog Count");
+                            }
+                           ).Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                    })
+                    .KeyField("Status")
+                    .EnableTotalCount(true)
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")  
+                            .PrimaryKey("Id");
+                    })
+                )
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img8.png)
