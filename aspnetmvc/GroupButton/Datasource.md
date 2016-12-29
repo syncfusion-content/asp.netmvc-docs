@@ -128,7 +128,7 @@ namespace Groupbutton_mvc
 
 The following screenshot displays the output of the above code.
 
-![](DataSource/object.png)
+![](Datasource_images/object.png)
 
 Local data of GroupButton
 {:.caption}
