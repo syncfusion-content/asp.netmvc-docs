@@ -99,7 +99,7 @@ Print dialog with selected area print in chrome browser
 You have an option to print the spreadsheet with gridlines or without gridlines. You can do this by one of the following ways,
 
 * Check or uncheck the Gridlines option under Show group of PAGE LAYOUT tab in ribbon to print with Gridlines.
-* Using `ShowGridlines` property in `Sheets` to enable / disable the gridlines.
+* Using `ShowGridlines` property to enable / disable the gridlines.
 
 The following code example describes the above behavior.
 
@@ -147,10 +147,10 @@ Print dialog without gridlines in chrome browser
 
 ## Print with Headings
 
-You have an option to print the spreadsheet with gridlines or without headers. You can do this by one of the following ways,
+You have an option to print the spreadsheet with headers or without headers. You can do this by one of the following ways,
 
 * Check or uncheck the Headings option under Show group of PAGE LAYOUT tab in ribbon. 
-* Using `ShowHeadings` property in `Sheets` to enable / disable gridlines.
+* Using `ShowHeadings` property to enable / disable showHeadings.
 
 The following code example describes the above behavior.
 

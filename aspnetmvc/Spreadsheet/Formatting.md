@@ -202,7 +202,7 @@ The following output is displayed as a result of the above code example.
 
 You can apply text format for a cell through text formatting options in ribbon `HOME` tab.
 
-### Wrap text 
+### Wrap Text 
 
 To make text appearance on multiple lines in a cell, you can apply wrap text to the cell. So, that the text wraps automatically or you can enter a manual line break using `ALT + ENTER` key in edit mode. Use `AllowWrap` API to enable/disable wrap text. You can apply wrap text for a cell in following ways,
 

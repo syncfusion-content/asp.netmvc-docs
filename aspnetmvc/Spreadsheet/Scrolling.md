@@ -17,7 +17,7 @@ You can scroll through worksheet using one of the following ways,
 * Using the scroll bars
 * Using the mouse
 
-## Set height and width for scrolling
+## Set height and width for Scrolling
 
 To set height and width in spreadsheet use `Height` and `Width` property in `ScrollSettings`. The default value for `Height` and `Width` is `100%`.
 The height and width can be set in percentage or pixel.
@@ -41,7 +41,7 @@ The following output is displayed as a result of the above code example.
 
 ## Responsive
 
-Spreadsheet has support for responsive behavior based on client browser's width and height. To enable responsive, `IsResponsive` property in `ScrollSettings` should be `true`. The three modes of responsive layout is available in Spreadsheet based on client width are,
+Spreadsheet has support for responsive behavior based on client browser's width and height. To enable responsive, `IsResponsive` property in `ScrollSettings` should be `true`. The three modes of responsive layout available in Spreadsheet based on client width are,
 
 * Mobile(<420px)
 * Tablet (420px to 617px)
@@ -74,12 +74,12 @@ Ribbon in tablet layout.
 
 ## Scroll Mode
 
-Spreadsheet has supports two type of modes in scrolling. You can use [`scrollSettings.scrollMode`](https://help.syncfusion.com/api/js/ejspreadsheet#members:scrollsettings-scrollmode "scrollSettings.scrollMode") property to specify the mode of scrolling.
+Spreadsheet supports two type of modes in scrolling. You can use `ScrollMode` property in `ScrollSettings` to specify the mode of scrolling.
 
 * Normal - This mode doesn't create new row/column when the scrollbar reaches the end.
 * Infinite - This mode creates new row/column when the scrollbar reaches the end.
 
-N> Default value of scrollMode property is infinite mode.
+N> Default value of ScrollMode property is Infinite mode.
 
 ## Virtual Scrolling
 
