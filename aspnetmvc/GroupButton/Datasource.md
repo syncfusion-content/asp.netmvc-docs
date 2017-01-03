@@ -72,11 +72,11 @@ Specifies initial selection state of GroupButton item</td></tr>
 <td>
 ContentType</td><td>
 Specifies Content type of Groupbutton Item. The possible values are <br/>
-1. textonly <br/>
-2. imageonly <br/>
-3. imageboth <br/>
-4. textandimage <br/>
-5. imagetextimage <br/>
+1. TextOnly <br/>
+2. ImageOnly <br/>
+3. ImageBoth <br/>
+4. TextAndImage <br/>
+5. ImageTextImage <br/>
 </td></tr>
 </table>
 
