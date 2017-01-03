@@ -79,7 +79,7 @@ Spreadsheet supports two type of modes in scrolling. You can use `ScrollMode` pr
 * Normal - This mode doesn't create new row/column when the scrollbar reaches the end.
 * Infinite - This mode creates new row/column when the scrollbar reaches the end.
 
-N> Default value of ScrollMode property is Infinite mode.
+N> Default value of `ScrollMode` property is `Infinite` mode.
 
 ## Virtual Scrolling
 

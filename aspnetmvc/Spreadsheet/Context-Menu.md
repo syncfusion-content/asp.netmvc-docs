@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu
 
-Context Menu is used to improve user interaction with Spreadsheet using popup menu. This will open when right clicking on Cell/Column Header/Row Header/ Pager in Spreadsheet. You can use `EnableContextMenu` property to enable/disable context menu. 
+Context Menu is used to improve user interaction with Spreadsheet using popup menu. This will open when right clicking on Cell/Column Header/Row Header/Pager in Spreadsheet. You can use `EnableContextMenu` property to enable/disable context menu. 
 
 ## Default Context Menu items
 
@@ -35,8 +35,8 @@ Please find the below table for default context menu items and its actions.
     <tr><td>Clear Contents<br/></td><td>Delete the contents in the selected cells.<br/></td></tr>
     <tr><td>Insert<br/></td><td>Insert new cells or rows or columns to worksheet.<br/></td></tr>
     <tr><td>Delete<br/></td><td>Delete existing cells or rows or columns from worksheet.<br/></td></tr>
-    <tr><td>Hide<br/></td><td>Hide the selected columns / rows.<br/></td></tr>
-    <tr><td>Unhide<br/></td><td>Unhide the selected columns / rows.<br/></td></tr>
+    <tr><td>Hide<br/></td><td>Hide the selected columns/rows.<br/></td></tr>
+    <tr><td>Unhide<br/></td><td>Unhide the selected columns/rows.<br/></td></tr>
     <tr><td rowspan = "7">Pager<br/></td><td>Insert<br/></td><td>Insert new worksheet to spreadsheet.<br/></td></tr>
     <tr><td>Delete<br/></td><td>Delete the selected worksheet from spreadsheet.<br/></td></tr>
     <tr><td>Move or copy<br/></td><td>Opens move or copy dialog to move worksheet or to create duplicate worksheet.<br/></td></tr>
