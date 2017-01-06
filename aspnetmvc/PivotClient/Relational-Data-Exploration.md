@@ -29,4 +29,8 @@ The data can be grouped when more than one field element is added to Categorical
 
 ![](Data-Exploration_images/relational-grouping.png)
 
+## Searching
 
+Members can be searched and displayed from the members list inside the Member Editor dialog.
+
+![](Data-Exploration_images/relationalsearchgrouping.png) 

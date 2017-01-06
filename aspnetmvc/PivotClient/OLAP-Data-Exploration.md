@@ -86,4 +86,8 @@ The data can be grouped when more than one dimension element is added to column 
 
 ![](Data-Exploration_images/grouping.png)
 
+## Searching
 
+Members can be searched and displayed from the members list inside the Member Editor dialog.
+
+![](Data-Exploration_images/Searchingbymember.png) 
