@@ -102,6 +102,18 @@ N> By default, the value for the `Type` option in zooming is “x,y” (indicati
 
 {% endhighlight %}
 
+### Enable Scrollbar
+
+* When `zooming.enableScrollbar` option is set to true, you can scroll the chart by using scrollbar or with the use of mouse whell.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotChart("PivotChart1").Zooming(zoom => { zoom.EnableScrollbar(true); })
+
+{% endhighlight %} 
+
+![](User-Interactions_images/scrollbar.png)
+
 ## Marker and Crosshair
 
 ### Marker Shape Customization
