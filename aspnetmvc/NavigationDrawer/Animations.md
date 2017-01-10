@@ -28,7 +28,7 @@ The default value is Overlay.
 
 @Html.EJ().Button("drawerTarget").Text("Open Drawer")
 
-@Html.EJ().NavigationDrawer("navpane").Type(NavigationDrawerType.Slide).TargetId("drawerTarget").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Type(NavigationDrawerType.Slide).TargetId("drawerTarget").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").Width(300).Items(items =>
 
