@@ -1479,7 +1479,7 @@ __Parameters__ __Table__
                 action, key, keyColumn
             </td>
             <td>
-                public ActionResult CrudUrl(string action, int key, string keyColumn){ }
+                public ActionResult CrudUrl(string action, int? key, string keyColumn){ }
             </td>
         </tr>
         <tr>
