@@ -437,7 +437,7 @@ The following code example describes the above behavior.
         sheet.RangeSettings(rangeSettings =>
         {
             rangeSettings.Datasource((IEnumerable<ItemDetail>)ViewBag.Datasource).Add();
-            rangeSettings.Datasource((IEnumerable<SampleData>)ViewBag.Datasource1).StartCell("I1").Add();
+            rangeSettings.Datasource((IEnumerable<SampleData>)ViewBag.SampleData).StartCell("I1").Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -492,7 +492,7 @@ namespace MVCSampleBrowser.Controllers
             sampleData.Add(new SampleData() { i = 2, j = 2, k = 2, l = 2 });
             sampleData.Add(new SampleData() { i= 3, j= 3, k= 3, l= 3});
             sampleData.Add(new SampleData() { i= 4, j= 4, k= 4, l= 4 });
-            ViewBag.Datasource1 = sampleData;
+            ViewBag.SampleData = sampleData;
             
             return View();
         }
