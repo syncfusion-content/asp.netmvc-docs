@@ -167,8 +167,8 @@ The following output is displayed as a result of the above code example.
 You can define name for range of cells through user interface using `Define Name` option in `OTHERS` tab. The following screenshot describes the above behavior,
 ![](Formulas_images/Formula_img4.png)
 
-N> Defining name for cell reference or table will be accessible across all sheets.
-N> Named Ranges will be displayed in Name Manger dialog box.
+N> 1. Defining name for cell reference or table will be accessible across all sheets.
+N> 2. Named Ranges will be displayed in Name Manger dialog box.
 
 ## Formula Bar
 
