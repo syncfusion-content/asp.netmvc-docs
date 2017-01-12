@@ -674,8 +674,8 @@ Code example [CSHTML]:
     {% highlight razor %}
     
         @(Html.EJ().FileExplorer("fileExplorer")
-            .Path("http://mvc.syncfusion.com/ODataServices/FileBrowser/")
-            .AjaxAction("http://mvc.syncfusion.com/OdataServices/fileExplorer/fileoperation/doJSONPAction")
+            .Path("http://js.syncfusion.com/demos/ejServices/Content/FileBrowser/")
+            .AjaxAction("http://js.syncfusion.com/demos/ejServices/api/FileExplorer/FileOperations")
             .AjaxDataType("jsonp")
         )
         
