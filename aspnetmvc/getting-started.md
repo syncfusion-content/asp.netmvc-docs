@@ -9,16 +9,15 @@ documentation: ug
 
 # Getting Started
 
-The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
+This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications. There are three ways for embedding our controls into ASP.NET application:
 
-There are two ways for embedding our controls into ASP.NET MVC application:
-
-1. Through NuGet Packages
-2. Integration using Project Template
+1. Using Syncfusion Project Template
+2. Through Syncfusion NuGet Packages
+3. Through Manual Integration into the new/existing Application
 
 The procedure that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
 
-
+The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
 
 ## Through NuGet Packages
 
@@ -105,7 +104,11 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 	![](getting-started_images/getting-started_img2.png)
 
+For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/overview)
+
 ## Using Project Template
+
+Syncfusion provides the Visual Studio Project Templates for the Syncfusion ASP.NET MVC platform to create a Syncfusion MVC application.
 
 The **Project** **Configuration** **Wizard** automates the process of configuring the required Syncfusion assemblies, scripts and their styles within the newly created application. Lets look onto these topics in detail in the below sections.
 
@@ -138,6 +141,226 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 	![](getting-started_images/getting-started_img7.png)
 	
 For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
+
+## Manual Integration
+
+This topic mainly focusses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application. 
+
+### Creation of First ASP.NET MVC Application
+
+Follow the below steps to create a normal ASP.NET MVC application,
+
+1.	Start the Visual Studio. Create a new MVC application by selecting File -> New -> Project and save it with a meaningful name as shown below,
+
+![](getting-started_images/Manual1.png)
+
+2.	Now your initial ASP.NET MVC application is created successfully. Now you can build and run your application by pressing Ctrl+F5.
+
+It’s time to add some other essential things to your application that allows you to make use of our Syncfusion ASP.NET MVC controls into it.
+
+### For Existing Applications
+
+If you want to add our Syncfusion ASP.NET MVC controls into your existing application, then you just need to open your existing application and proceed with the following steps.
+
+#### Adding the required StyleSheets
+
+To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required css files into your application. You need to copy all the required css files into your application from the following location,
+
+N> <installed location>\Syncfusion\Essential Studio\13.1.0.21\JavaScript\assets\css\web
+N> For example, If you have installed the Essential Studio within C:\Program Files (x86), then navigate to the below location,
+N> C:\Program Files (x86)\Syncfusion\Essential Studio\13.1.0.21\JavaScript\assets\css\web
+
+When you navigate to the above location, you can find the files shown in the below image, which you need to copy entirely and paste it into your root application. 
+
+![](getting-started_images/Manual2.png)
+
+Before pasting it into your application, create a folder structure with names ej/web within the Content folder of your application and place all the copied files into it as shown below,
+
+![](Getting-Started_images/Manual3.png)
+Solution Explorer - Project with css files copied into the Content folder
+{:.caption}
+
+
+N> The common-images folder is needed to be copied into your application mandatorily, as it includes all the common font icons and other images required for the control to render.
+
+Once the CSS files are added in your application, include the reference to "ej.web.all.min.css" file in the _Layout.cshtml page, within the head section.
+
+{% highlight html %}
+
+<link href="~/Content/ej/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+
+### Adding the required JavaScript files
+
+Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
+
+* jquery-1.10.2.min.js 
+* jquery.easing.1.3.min.js
+* jquery.globalize.min.js
+* jsrender.min.js
+
+Apart from the above common scripts, it is also necessary to refer the ej.web.all.min.js file in your application, which plays a major role in control creation.
+
+The dependencies are available in the following locations of your machine. Please copy these files from location given
+
+<table>
+<tr>
+<th>Files</th>
+<th>Location</th>
+</tr>
+<tr>
+<td>jquery-1.10.2.min.js<br/>jsrender.min.js</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\external</td>
+</tr>
+<tr>
+<td>ej.web.all.min.js</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\scripts\web</td>
+</tr>
+<tr>
+<td>ej.webform.min.js</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\scripts\common</td>
+</tr>
+</table>
+
+N> Example for "Syncfusion Installed location" is "C:\Program Files (x86)\Syncfusion"
+
+Now, create a folder named `ej`, under the Scripts folder of your application and place the copied files ej.web.all.min.js into it as shown below,
+
+![](Getting-Started_images/Manual4.png)
+Solution Explorer - Script files copied into the Scripts folder of the project
+{:.caption}
+
+Once the scripts are added in your application, now it is necessary to include the reference to it in your application. This should be done within the Site.Master file, as we did previously for CSS files. 
+Add the below script references in the _Layout.cshtml file within the head section,
+
+{% highlight html %}
+
+	<link href="Content/ej/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
+	<script src='<%= Page.ResolveClientUrl("~/Scripts/jquery-1.10.2.min.js")%>' type="text/javascript"></script>
+	<script src='<%= Page.ResolveClientUrl("~/Scripts/jsrender.min.js")%>' type="text/javascript"></script>
+	<script src='<%= Page.ResolveClientUrl("~/Scripts/ej/ej.web.all.min.js")%>' type="text/javascript"></script>
+
+{% endhighlight %}
+
+### CDN Link reference
+
+If you want to refer the cdn links instead of the direct script and css references in your application, then you need to make use of the below references in the Site.Master file,
+
+{% highlight html %}
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"></script>
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.globalize.min.js"></script>
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script> 
+
+    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.webform.min.js"></script>
+
+</head>    
+
+{% endhighlight %}
+
+### Assembly Reference
+
+Refer the following assemblies in your newly created ASP.NET application, which allows you to use any of the Syncfusion ASP.NET controls within it.
+
+* Syncfusion.EJ
+* Syncfusion.EJ.Web
+
+The reference to the Syncfusion assemblies can be added to your application in either of the following ways, 
+-	Referring from GAC
+-	Referring from the installed location
+
+#### Referring from GAC
+
+1.	Once you have installed the Essential Studio package in your system, the Syncfusion assemblies are automatically registered in the GAC. You can easily add the reference assemblies to your project by choosing Add Reference option.
+
+2.	Now the Reference Manager pop-up will appear on the screen. In that pop-up, select the required assemblies from the Extensions tab as below, by choosing the appropriate versions (13.1450.0.21). The version to be chosen for the reference assemblies is based on the framework used in the application.
+
+![](Getting-Started_images/Manual5.png)
+Reference Manager Pop-up
+{:.caption}
+
+#### Referring from the installed location
+
+1.	Add the reference assemblies to your project by choosing Add Reference option,
+
+2.	Now the Reference Manager pop-up will appear on the screen. Select the Browse tab in it and navigate to the installed location of the Syncfusion Essential Studio package in your system. (As depicted in the below image.)
+
+N> <installed location>\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15
+N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location,
+N> C:\Program Files (x86)\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15
+
+![](Getting-Started_images/Manual6.png)
+Reference Manager Pop-up with Browse button clicked
+{:.caption}
+
+N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET framework version. Based on the framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
+
+3.	Add the Sycfusion.EJ, Syncfusion.EJ.MVC and Syncfusion.Core assemblies to your application from the below specified location,
+
+N> <installed location>\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15\4.5 <BR>
+For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, <BR>
+C:\Program Files (x86)\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15\4.5
+
+4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown below,
+
+![](Getting-Started_images/Manual7.png)
+Selected Assemblies added to the Project reference
+{:.caption}
+
+### Registering Syncfusion Assemblies within the Web.config
+
+In your application’s web.config file, add the below assembly information within the <assemblies> tag.
+
+{% highlight xml %}
+
+<system.web>
+    <compilation debug="true" targetFramework="4.5">
+          <assemblies>
+
+            <add assembly="Syncfusion.EJ, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+            <add assembly="Syncfusion.EJ.Mvc, Version=14.4500.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+
+          </assemblies>
+    </compilation>
+    <authentication mode="Forms">
+   …
+</system.web>
+
+{% endhighlight %}
+
+1.	Add the below DatePicker code as shown below in your view page,
+
+{% highlight html %}
+
+   @Html.EJ().DatePicker("DatePick").DateFormat("MM/dd/yyyy").ShowOtherMonths(false).EnableRTL(false).Locale("en-US")
+
+{% endhighlight %}
+
+N> Add the DatePicker code within the Content section, by removing the unwanted code within it.
+
+2. Finally build and run the project by pressing F5, so that you can now see the output similar to the below screenshot in your web browser,
+
+![](Getting-Started_images/Manual8.png)
+DatePicker control displaying on the web browser
+{:.caption}
+
+Thus the DatePicker control is rendered successfully with its default appearance. You can then use its various properties to set its value and also make use of its available events to trigger when necessary.
 
 ## ASP.NET Core 1.0 Application 
 
@@ -552,88 +775,3 @@ dotnet restore
 
 
 
-## Convert to Syncfusion Project
-
-Project conversion wizard helps to convert the existing MVC application into Syncfusion MVC application.  Please find the Steps for conversion from below:
-
-1. Open your existing application in Visual Studio and right click on your project in the solution explorer. In the context Menu , find & select the **Syncfusion** **VS** **Extension** **->** **Convert** **to** **Syncfusion** **MVc** **(Web)** **Application**
-
-	![](getting-started_images/getting-started_img8.png)
-
-2. It opens the **Project** **Conversion** **wizard** as shown below. In this wizard, select your components (here the components are grouped based on usage) from the left panel. Click **Convert**.
-
-	![](getting-started_images/getting-started_img9.png)
-
-3. It will prompt the **Project Backup** dialog to save your current project (with older version) into **Backup** folder of the same project location. Click **Yes** and continue
-
-	![](getting-started_images/getting-started_img10.png)
-
-4. Now you can notice the **Syncfusion MVC assembly references, Scripts and Styles** are configured into your existing application. Also it configures the webconfig files. 
-
-	![](getting-started_images/getting-started_img11.png)
-
-5. Since we are converting our earlier working application, we need to configure the **_Layout.cshtml** file or **your active layout** file manually.Include the **Syncfusion theme (default-theme/ej.web.all.min.css) & Script file** references into your **_Layout.cshtml** file as shown below
-
-   ~~~ cshtml
-   
-	<head>
-		<meta charset="utf-8" />
-		<title>@ViewBag.Title - My ASP.NET MVC Application</title>
-		… …
-		@Styles.Render("~/Content/ej/web/bootstrap-theme/ej.web.all.min.css")
-    </head>
-
-	<body>
-		… …
-		@Scripts.Render("~/bundles/jquery")
-		@Scripts.Render("~/bundles/bootstrap")  
-		@Scripts.Render("~/Scripts/jsrender.min.js")
-		@Scripts.Render("~/Scripts/ej/ej.web.all.min.js")  
-		@RenderSection("scripts", required: false)
-		@Html.EJ().ScriptManager();
-	</body>
-		
-   ~~~		
-
-6. Change the **Unobtrusive** setting value to **false** in your application as shown below, 
-
-   ~~~ cshtml
-   
-	<appSettings>
-		<add key="ClientValidationEnabled" value="true" />
-		<add key="UnobtrusiveJavaScriptEnabled" value="false" />
-	</appSettings>
-
-   ~~~	   
-   
-7. Now you can add the Syncfusion control into your target cshtml file.  
-
-   ~~~ cshtml
-   
-	@Html.EJ().DatePicker("MyFirstDatepicker")
-		
-   ~~~   
-   
-8. Compile and execute the application. You can able to see the below output in the browser.   
-   
-   
-   ![](getting-started_images/getting-started_img12.png)
-   
-   
-## Migrate Syncfusion Project into another version
-
-The Migrate Wizard helps to upgrade/downgrade the Syncfusion Project into another version. This is solutions for developer who has multiple version of Essential Studio and want to upgrade/downgrade the project without manually corrections in the csproj, web.config, Content & Scripts. The wizard automated the manual migration steps, so you can switch between difference versions by simple below steps   
-   
-1. Open your existing application in Visual Studio and right click on your project in the solution explorer. In the context Menu , find & select the **Syncfusion VS Extension -> Migrate the Project to Another Version**   
-   
-   ![](getting-started_images/getting-started_img13.png)
-   
-2. Now the migration window opened as shown below. The Essential Studio version dropdown populated with Syncfusion which is installed in your machine. You can choose the required version and click **Migrate** button to downgrade/upgrade purpose.  
-   
-	![](getting-started_images/getting-started_img14.png)
-   
-3. It will prompt the **Project Backup** dialog to save your current project (with older version) into **Backup** folder of the same project location.    
-   
-    ![](getting-started_images/getting-started_img15.png)
-   
-4. Now the corresponding Syncfusion assembly references, Styles, Scripts and webconfig entries are replaced based on the selected Syncfusion version.   
