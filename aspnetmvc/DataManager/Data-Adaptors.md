@@ -453,7 +453,7 @@ Custom adaptor
 
 ## Cache Adaptor
 
-Cache Adaptor is used to cache the data of the visited pages. It prevents new requests for the previously visited pages. It can be enabled by using the `enableCaching` property. You can configure cache page size and duration of caching by using `cachingPageSize` and `timeTillExpiration` properties of the [`ej.DataManager`](http://help.syncfusion.com/api/js/ejdatamanager# "DataManager"). 
+Cache Adaptor is used to cache the data of the visited pages. It prevents new requests for the previously visited pages. It can be enabled by using the `EnableCaching` property. You can configure cache page size and duration of caching by using CachingPageSize and TimeTillExpiration properties of the "DataManager". 
 
 {% highlight html %}
 
@@ -516,6 +516,27 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 Cache Adaptor
 {:.caption}
 
-N> The unit for TimeTillExpiration is in milliseconds <BR>
-1000 ms = 1 second.
+Cache Adaptor has the following unique properties, 
+
+<table>
+    <tr>
+        <th>
+            Properties
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td> TimeTillExpiration </td>
+        <td> Specifies the duration of cached pages in milliseconds </td>
+    </tr>
+    <tr>
+        <td> CachingPageSize </td>
+        <td> A number of pages to be cached </td>
+    </tr>
+</table>
+
 
