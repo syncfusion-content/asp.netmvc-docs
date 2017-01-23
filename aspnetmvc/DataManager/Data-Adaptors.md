@@ -450,3 +450,93 @@ Result of above code example is as follows.
 
 Custom adaptor   
 {:.caption}
+
+## Cache Adaptor
+
+Cache Adaptor is used to cache the data of the visited pages. It prevents new requests for the previously visited pages. It can be enabled by using the `EnableCaching` property. You can configure cache page size and duration of caching by using CachingPageSize and TimeTillExpiration properties of the "DataManager". 
+
+{% highlight html %}
+
+    @(Html.EJ().Grid<OrdersView>("Grid")
+        .Datasource(ds => ds.URL(@Url.Action("DataSource"))
+        .EnableCaching()
+        .CachingPageSize(4)
+        .TimeTillExpiration(120000)
+        .Adaptor(AdaptorType.UrlAdaptor))
+        .AllowPaging()
+        .Columns(col =>
+            {
+                col.Field(p => p.OrderID).HeaderText("Order ID").Add();
+                col.Field(p => p.CustomerID).HeaderText("Customer ID").TextAlign(TextAlign.Left).Add();
+                col.Field(p => p.EmployeeID).HeaderText("Employee ID").Add();
+                col.Field(p => p.Freight).HeaderText("Freight").Format("{0:C2}").Add();
+            })
+    )
+
+{% endhighlight %}
+
+{% highlight html %}
+    //Refer the Syncfusion DataSource dll 
+    using Syncfusion.JavaScript;
+    using Syncfusion.JavaScript.DataSources;
+
+    public IEnumerable OrderData = new NorthwindDataContext().OrdersViews.ToList();
+    public ActionResult GridFeatures()
+    {
+        return View();
+    }
+    public ActionResult DataSource(DataManager dm) 
+    {
+        IEnumerable data = OrderData;
+        DataOperations operation = new DataOperations();
+        if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+        {
+            data= operation.PerformSorting(data, dm.Sorted);
+        }            
+        if (dm.Where != null && dm.Where.Count > 0) //Filtering
+        {
+            data= operation.PerformWhereFilter(data, dm.Where, dm.Where[0].Operator);
+        }            
+        int count = data.Cast<OrdersView>().Count();
+        if (dm.Skip != 0)
+        {
+            data= operation.PerformSkip(data, dm.Skip);
+        }            
+        if (dm.Take != 0)
+        {
+            data= operation.PerformTake(data, dm.Take);
+        }
+        return Json(new { result = data, count = count });
+        }
+    }
+
+{% endhighlight %}
+
+![](Data-Adaptors_images/Data-Adaptors_img7.png)
+Cache Adaptor
+{:.caption}
+
+Cache Adaptor has the following unique properties, 
+
+<table>
+    <tr>
+        <th>
+            Properties
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td> TimeTillExpiration </td>
+        <td> Specifies the duration of cached pages in milliseconds </td>
+    </tr>
+    <tr>
+        <td> CachingPageSize </td>
+        <td> A number of pages to be cached </td>
+    </tr>
+</table>
+
+
