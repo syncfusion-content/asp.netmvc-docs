@@ -700,7 +700,7 @@ You can do this by one of the following ways,
 
 ## Table
 
-A table is a data structure that organizes information into rows and columns. You can use `AllowFormatAsTable` property enable/disable table operations. 
+A table is a data structure that organizes information into rows and columns. You can use `AllowFormatAsTable` property to enable/disable table operations. 
 
 You can do this by one of the following ways,
 
@@ -715,8 +715,8 @@ You can perform the following customizations for table. These are available in D
 <table>
     <colgroup><col width="150px" /></colgroup>
     <tr><th>Feature</br></th><th>Description</br></th></tr>
-    <tr><td>Resize Table</br></td><td>You can resize the table only to increase row count.</br></td></tr>
-    <tr><td>Convert to Range</br></td><td>You can remove the table using this option.</br></td></tr>
+    <tr><td>Resize Table</br></td><td>You can add new rows to the table.</br></td></tr>
+    <tr><td>Convert to Range</br></td><td>You can convert the table to regular range of data without losing any table style format.</br></td></tr>
     <tr><td>First Column</br></td><td>You can highlight the first column of the table.</br></td></tr>
     <tr><td>Last Column</br></td><td>You can highlight the last column of the table.</br></td></tr>
     <tr><td>Total Row</br></td><td>You can insert a new row in the bottom of the table to display the total value of the last column. You can toggle this by using checkbox.</br></td></tr>

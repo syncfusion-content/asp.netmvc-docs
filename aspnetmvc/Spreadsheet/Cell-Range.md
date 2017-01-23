@@ -434,42 +434,10 @@ The following code example describes the above behavior.
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource)
-        .Rows(rows =>
+        sheet.RangeSettings(rangeSettings =>
         {
-            rows.Index(1).Cells(cells =>
-            {
-                cells.Index(8).Value("1").Add();
-                cells.Index(9).Value("1").Add();
-                cells.Index(10).Value("1").Add();
-                cells.Index(11).Value("1").Add();
-                cells.Index(13).Value("Name").Add();
-            }).Add();
-            rows.Index(2).Cells(cells =>
-            {
-                cells.Index(8).Value("2").Add();
-                cells.Index(9).Value("2").Add();
-                cells.Index(10).Value("2").Add();
-                cells.Index(11).Value("2").Add();
-                cells.Index(13).Value("Casual Shoes").Add();
-                cells.Index(14).Value("Casual").Add();
-            }).Add();
-            rows.Index(3).Cells(cells =>
-            {
-                cells.Index(8).Value("3").Add();
-                cells.Index(9).Value("3").Add();
-                cells.Index(10).Value("3").Add();
-                cells.Index(11).Value("3").Add();
-                cells.Index(13).Value("Formal Shoes").Add();
-            }).Add();
-            rows.Index(4).Cells(cells =>
-            {
-                cells.Index(8).Value("4").Add();
-                cells.Index(9).Value("4").Add();
-                cells.Index(10).Value("4").Add();
-                cells.Index(11).Value("4").Add();
-                cells.Index(13).Value("Sports Shoes").Add();
-            }).Add();
+            rangeSettings.Datasource((IEnumerable<ItemDetail>)ViewBag.Datasource).Add();
+            rangeSettings.Datasource((IEnumerable<SampleData>)ViewBag.SampleData).StartCell("I1").Add();
         }).Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
@@ -478,6 +446,12 @@ The following code example describes the above behavior.
 <script type="text/javascript">
     function loadComplete(args) {
         if(!this.isImport) {
+            this.XLEdit.updateValue("N2", "Name");
+            this.XLEdit.updateValue("N3", "Casual Shoes");
+            this.XLEdit.updateValue("N4", "Formal Shoes");
+            this.XLEdit.updateValue("N5", "Sports Shoes");
+            this.XLEdit.updateValue("O2", "FirstName");
+            this.XLEdit.updateValue("O3", "Casual");
             this.XLFormat.format({ "style": { "background-color": "yellow" } }, "K2:L2");
             this.XLFormat.format({ "style": { "background-color": "red" } }, "K4:L4");
             this.XLFormat.format({ "style": { "background-color": "blue" } }, "K5:L5");
@@ -512,6 +486,14 @@ namespace MVCSampleBrowser.Controllers
             lItems.Add(new ItemDetail() { ItemName = "Sandals & Floaters", Date = new DateTime(2014, 11, 21), Time = new DateTime(2014, 11, 21, 06, 23, 54), Quantity = 15, Price = 20, Amount = 300, Discount = 11, Profit = 67 });
             lItems.Add(new ItemDetail() { ItemName = "Flip- Flops & Slippers", Date = new DateTime(2014, 06, 23), Time = new DateTime(2014, 06, 23, 12, 43, 59), Quantity = 30, Price = 10, Amount = 300, Discount = 10, Profit = 70 });
             ViewBag.Datasource = lItems;
+            
+            List <SampleData> sampleData = new List<SampleData>();
+            sampleData.Add(new SampleData() { i = 1, j=1, k=1,l=1});
+            sampleData.Add(new SampleData() { i = 2, j = 2, k = 2, l = 2 });
+            sampleData.Add(new SampleData() { i= 3, j= 3, k= 3, l= 3});
+            sampleData.Add(new SampleData() { i= 4, j= 4, k= 4, l= 4 });
+            ViewBag.SampleData = sampleData;
+            
             return View();
         }
     }

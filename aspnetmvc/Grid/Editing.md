@@ -1462,13 +1462,35 @@ __Parameters__ __Table__
         </tr>
         <tr>
             <td>
-                Crud Update,Crud Remove,Crud Insert
+                Crud Update,Crud Insert
             </td>
             <td>
                 value, action
             </td>
             <td>
                 public ActionResult CrudUrl(EditableOrder value, string action){ }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Crud Remove
+            </td>
+            <td>
+                action, key, keyColumn
+            </td>
+            <td>
+                public ActionResult CrudUrl(string action, int? key, string keyColumn){ }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Crud Remove - Multi Delete
+            </td>
+            <td>
+                action, key, deleted
+            </td>
+            <td>
+                public ActionResult CrudUrl(string action, string key, List &lt;EditableOrder&gt; deleted){ }
             </td>
         </tr>
  </table>

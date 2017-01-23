@@ -19,7 +19,7 @@ This property is used to define the target Id for Navigation Drawer. The drawer 
 
 @Html.EJ().Button("drawerTarget").Text("Open Drawer")
 
-@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("drawerTarget").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("drawerTarget").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").Width(300).Items(items =>
 

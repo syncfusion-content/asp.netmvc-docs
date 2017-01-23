@@ -36,10 +36,6 @@ The following code example describes the above behavior,
 {% highlight cshtml %}
 
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
-    .SelectionSettings(selectionOption =>
-    {
-        selectionOption.SelectionUnit(SpreadsheetSelectionUnit.Range);
-    })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
 )
 

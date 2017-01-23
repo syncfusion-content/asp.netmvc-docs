@@ -757,8 +757,6 @@ namespace PivotGridDemo
             return null;
         }
 
-        [System.Web.Http.ActionName("LoadReportFromDB")]
-        [System.Web.Http.HttpPost]
         public Dictionary<string, object> LoadReportFromDB(Dictionary<string, object> jsonResult)
         {
             byte[] reportString = new byte[2 * 1024];
@@ -766,25 +764,35 @@ namespace PivotGridDemo
             var reports = "";
             string mode = jsonResult["operationalMode"].ToString();
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            foreach (DataRow row in GetDataTable().Rows)
+            if (mode == "serverMode" && jsonResult.ContainsKey("clientReports"))
             {
-                if ((row.ItemArray[0] as string).Equals(jsonResult["reportName"].ToString()))
+                reports = jsonResult["clientReports"].ToString();
+            }
+            else
+            {
+                foreach (DataRow row in GetDataTable().Rows)
                 {
-                    if (mode == "clientMode")
+                    if ((row.ItemArray[0] as string).Equals(jsonResult["reportName"].ToString()))
                     {
-                        reportString = (row.ItemArray[1] as byte[]);
-                        dictionary.Add("report", Encoding.UTF8.GetString(reportString));
-                        break;
-                    }
-                    else if (mode == "serverMode")
-                    {
-                        reports = OLAPUTILS.Utils.CompressData(row.ItemArray[1] as byte[]);
-                        report = htmlHelper.DeserializedReports(reports);
-                        htmlHelper.PivotReport = report;
-                        dictionary = htmlHelper.GetJsonData("loadOperation", ProductSales.GetSalesData(), "Load Report", jsonResult["reportName"].ToString());
-                        break;
+                        if (mode == "clientMode")
+                        {
+                            reportString = (row.ItemArray[1] as byte[]);
+                            dictionary.Add("report", Encoding.UTF8.GetString(reportString));
+                            break;
+                        }
+                        else if (mode == "serverMode")
+                        {
+                            reports = OLAPUTILS.Utils.CompressData(row.ItemArray[1] as byte[]);
+                            break;
+                        }
                     }
                 }
+            }
+            if (reports != "")
+            {
+                report = htmlHelper.DeserializedReports(reports);
+                htmlHelper.PivotReport = report;
+                dictionary = htmlHelper.GetJsonData("loadOperation", ProductSales.GetSalesData(), "Load Report", jsonResult["reportName"].ToString());
             }
             return dictionary;
         }

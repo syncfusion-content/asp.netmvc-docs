@@ -146,6 +146,18 @@ The Chart Type can also be changed dynamically through the toolbar icon.
 
 ![](Layout-Customization_images/linechart.png) 
 
+## Report Toolbar
 
+Icons can be either enabled/disabled inside the report toolbar. This can be achieved by setting the properties under `ToolbarIconSettings` option to false. The value is true by default.
 
+{% highlight CSHTML %}
 
+    @Html.EJ().Pivot().PivotClient("PivotClient1”).ToolbarIconSettings(toolbaricon => { toolbaricon.EnableAddReport(false).EnableNewReport(false).EnableRemoveReport(false); })
+
+{% endhighlight %}
+
+![](Layout-Customization_images/toolbarIconSettings1.png)
+
+The following screenshot shows after disabling the toolbar icons.
+
+![](Layout-Customization_images/toolbarIconSettings2.png)

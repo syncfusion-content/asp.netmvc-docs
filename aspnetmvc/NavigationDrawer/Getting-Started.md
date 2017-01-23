@@ -28,7 +28,7 @@ To add a Navigation Drawer control, call NavigationDrawer helper. You can displa
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -83,7 +83,7 @@ To set the target icon image from sprite and to position the target icon properl
 
 	{
 
-		 background-position: 0 -338px;
+		 background-position: 0 -331px;
 
 		 font-size: 34px;
 
@@ -137,7 +137,7 @@ Set the TargetId property as follows.
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -174,7 +174,7 @@ You can set the images for Navigation Drawer by using the ImageClass property as
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -226,23 +226,23 @@ You can define the image classes specified for the list items as follows.
 
 	{
 
-		background-position: 0 -253px;
+		background-position: 0 -180px;
 
 	}
 
-	.icon-photo
+	.icon-photos
 
 	{
 
-		background-position: 0 -168px;
+		background-position: 0 -120px;
 
 	}
 
-	.icon-locations
+	.icon-location
 
 	{
 
-		background-position: 0 -85px;
+		background-position: 0 -58px;
 
 	}    
 </style>
@@ -309,7 +309,7 @@ You can load the desired content for the navigation items by updating the conten
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).ClientSideEvents(click => click.MouseDown("slideMenuClick")).PersistSelection(true).Width(300).Items(items =>
 

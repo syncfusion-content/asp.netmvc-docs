@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section provides details on how to create and customize Groupbutton control in an ASP.net MVC application.
+This section provides details on how to create and customize Groupbutton control in an ASP.NET MVC application.
 
 ## Dependencies
 
@@ -18,11 +18,11 @@ The following assemblies are needs to referenced to render a Groupbutton control
 1. Syncfusion.EJ.dll
 2. Syncfusion.EJ.MVC.dll
 
-The script and CSS dependencies for rendering Gropubutton is given in the [JS help document](https://help.syncfusion.com/js/groupbutton/getting-started#a-new-html-document-and-required-codes).
+The script and CSS dependencies for rendering Groupbutton is given in the [JS help document](https://help.syncfusion.com/js/groupbutton/getting-started#a-new-html-document-and-required-codes).
 
 ## Create a simple GroupButton control
 
-Create an ASP.net MVC project and add necessary DLLs and script dependencies with the help of given Getting started document.
+Create an ASP.NET MVC project and add necessary DLLs and script dependencies with the help of given Getting started document.
 
 Add the below code in the view page to render a simple groupbutton control.
 

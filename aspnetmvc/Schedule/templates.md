@@ -464,7 +464,7 @@ To define the template option for tooltip, the  `TooltipSettings` must be enable
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ToolTipSettings(tooltip => tooltip.Enable(true).TemplateId("#tooltipTemplate"))
+        .TooltipSettings(tooltip => tooltip.Enable(true).TemplateId("#tooltipTemplate"))
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")

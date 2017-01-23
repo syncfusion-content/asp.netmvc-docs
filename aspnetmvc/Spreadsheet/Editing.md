@@ -86,7 +86,7 @@ The following output is displayed as a result of the above code example.
 
 ## Read-Only Cells
 
-You can restrict/prevent the editing in the specified change. You can use `AllowLockCell` property to enable/disable the lock cells. You can do using following ways,
+You can restrict/prevent the editing in the specified range. You can use `AllowLockCell` property to enable/disable the lock cells. You can do this by one of the following ways,
 
 * Using [`lockCells`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:lockcells "lockCells") method to lock the selected cells. Then you need to protect the sheet using [`protectSheet`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:protectsheet "protectSheet") method to restrict the editing.
 * Using "Lock Cells” option under Changes group of REVIEW tab in ribbon. Then Using "Protect Sheet” option under Changes group of REVIEW tab in ribbon to restrict editing.
