@@ -67,7 +67,7 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 
 Find the steps to globalize the MVC application from below
 
-1. Specify the target culture in **web.config** file under **<system.web>** root
+1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root
 
    ~~~ xml
    
