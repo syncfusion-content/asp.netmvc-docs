@@ -17,15 +17,16 @@ The Strongly-Typed HTML helper (i.e., NumericTextBox) takes lambda as a paramete
 Strongly typed views are used for rendering specific types of model objects, instead of using the general ViewData structure.
 
 The following list of controls supports Strongly-Typed HTML Helper
-•	Autocomplete.
-•	Checkbox and Radio Button
-•	DatePicker.
-•	DateTimePicker
-•	DropDownList
-•	Mask Edit.
-•	Numeric, Currency, and Percentage Textbox.
-•	RichTextEditor
-•	TimePicker
+
+* Autocomplete.
+* Checkbox and Radio Button
+* DatePicker.
+* DateTimePicker
+* DropDownList
+* Mask Edit.
+* Numeric, Currency, and Percentage Textbox.
+* RichTextEditor
+* TimePicker
 
 The following steps explain how to use the strongly typed helpers to create a NumericTextBox
 

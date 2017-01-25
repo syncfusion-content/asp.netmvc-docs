@@ -12,7 +12,7 @@ Localization is the process of customizing an application for given language and
 
 Find the steps to configure the Syncfusion Components to particular language from below
 
-1. Specify the target culture in **web.config** file under **<system.web>** root
+1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root
 
    ~~~ xml
    
