@@ -41,7 +41,7 @@ The following output is displayed as a result of the above code example.
 
 ## Responsive
 
-Spreadsheet has support for responsive behavior based on client browser's width and height. To enable responsive, `IsResponsive` property in `ScrollSettings` should be `true`. The three modes of responsive layout available in Spreadsheet based on client width are,
+Spreadsheet has support for responsive behavior based on client browser's width and height. To enable responsive, set `IsResponsive` property in `ScrollSettings` as `true`. The three modes of responsive layout available in Spreadsheet based on client width are,
 
 * Mobile(<420px)
 * Tablet (420px to 617px)

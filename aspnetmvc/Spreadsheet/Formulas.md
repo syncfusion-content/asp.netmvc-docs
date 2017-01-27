@@ -116,6 +116,55 @@ N> 1. The list of supported formulas can be find in following [`link`](https://h
 N> 2. Constant values, cell references, formulas and named ranges can be passed as argument to formulas
 N> 3. Selection can be used to mention cell references within formula
 
+## User Defined Functions
+
+The list of formulas supported in Spreadsheet is sufficient for most of your calculations. If not, you can create and use your own function using user defined function option. 
+
+You can add your own function to Spreadsheet using [`addCustomFormula`](https://help.syncfusion.com/js/api/ejspreadsheet#methods:addcustomformula "addCustomFormula") method. The following code example describes the above behaviour,
+
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.Rows(rows =>
+        {
+            rows.Cells(cells =>
+            {
+                cells.Value("1").Add();
+            }).Add();
+            rows.Cells(cells =>
+            {
+                cells.Value("2").Add();
+            }).Add();
+        }).Add();
+    })
+    .ClientSideEvents(events => events.LoadComplete("loadComplete"))
+)
+
+<script>
+    function loadComplete() {
+        this.addCustomFormula("CUSTOMTOTAL", "customTotal");
+        this.XLEdit.updateCellValue({ rowIndex: 2, colIndex: 0 }, "=CUSTOMTOTAL(A1,A2,3)");
+    }
+    function customTotal(args) {
+        var param1, param2, param3, value, xlObj = $('#Spreadsheet').data("ejSpreadsheet"),
+        argument = xlObj.getValueFromFormulaArg(args);
+        param1 = argument["arg1"];
+        param2 = argument["arg2"];
+        param3 = argument["arg3"];
+        value = param1 * param2 + param3;
+        return value;
+    }
+</script>
+
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+![](Formulas_images/Formula_img5.png)
+
+To remove user defined function from Spreadsheet use [`removeCustomFormula`](https://help.syncfusion.com/js/api/ejspreadsheet#methods:removecustomformula "removeCustomFormula") method.
+
 ## Named Ranges
 
 To give descriptive name for cell reference or table and it can be used in formula. In Spreadsheet name can be added to cell reference in following ways,
