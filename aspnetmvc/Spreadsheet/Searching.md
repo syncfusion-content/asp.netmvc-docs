@@ -23,7 +23,7 @@ You have following options in Searching.
 This is used to search the contents of a cell. You can do this by one of the following ways,
 
 * Using "Find" option in Find and Select button of OTHERS tab in ribbon to open the Find and Replace dialog.
-* Using `findNext` and `findPrevious` methods to search the given value in workbook.
+* Using [`findNext`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlsearch-findnext "findNext") and [`findPrevious`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlsearch-findprevious "findPrevious") methods to search the given value in workbook.
 * Using "Ctrl + F" key to open the Find and Replace dialog with Find tab enabled.
 
 The following output is displayed as a result of Find and Replace dialog with Find tab enabled.
@@ -120,9 +120,10 @@ You can do this by one of the following ways,
 * Using "Go To" option in Find and Select button of OTHERS tab in ribbon to open the Go To dialog.
 * Using "Ctrl + G" key to open the Go To dialog.
 
-The following output is displayed the Go To dialog.
-
 ![](Searching_images/Searching_img6.png)
+
+Go To dialog
+{:.caption}
 
 The following output is displayed as a result of goto to cell "F10".
 
