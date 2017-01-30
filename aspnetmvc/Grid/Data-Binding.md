@@ -10,7 +10,7 @@ documentation: ug
 
 Grid `DataSource` property allows to bind datasource as the instance of one of the following types.
    
-*	Collection that implements IEnumerable or IEnumerable<T>.
+*	Collection that implements IEnumerable or IEnumerable&lt;T&gt;.
 *	DataTable.
 *	ITypedList.
 *	REST Service URL as string.

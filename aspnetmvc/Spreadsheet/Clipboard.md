@@ -18,7 +18,7 @@ This function cuts the selected range values and make it available in clipboard.
 
 You can do this by one of the following ways. 
 
-* Using "Ctrl-X" key.
+* Using "Ctrl + X" key.
 * Using Cut button of HOME tab in ribbon to perform cut operation.
 * Using Cut option in Context Menu.
 * Using [`cut`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-cut "cut") method.
@@ -29,7 +29,7 @@ This function copies the selected range values and make it available in clipboar
 
 You can do this by one of the following ways. 
 
-* Using "Ctrl-C" key.
+* Using "Ctrl + C" key.
 * Using Copy button of HOME tab in ribbon to perform copy operation.
 * Using Copy option in Context Menu.
 * Using [`copy`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-copy "copy") method.
@@ -47,7 +47,7 @@ N> The default paste option is Paste Special. This is working only within the cu
 
 You can do this by one of the following ways,
 
-* Using "Ctrl-V" key.
+* Using "Ctrl + V" key.
 * Using Paste button of HOME tab in ribbon to perform paste operation.
 * Using Paste option in Context Menu.
 * Using [`paste`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlclipboard-paste "paste") method.
@@ -108,4 +108,4 @@ The following output is displayed as a result of the above code example.
 
 ![](Clipboard_images/Clipboard_img1.png)
 
-N> Similarly you can perform clipboard operations for shapes( Chart and Image).
+N> Similarly you can perform clipboard operations for shapes (Chart and Image).
