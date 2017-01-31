@@ -5,6 +5,7 @@ description: customization
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Customization, Misspell Word Appearance, Restrict Suggestion Count
 ---
 
 # Customization
