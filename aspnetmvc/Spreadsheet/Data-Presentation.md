@@ -26,7 +26,10 @@ You can insert the controls like Button, Checkbox, Dropdown list and Date picker
 
 ### To insert a Cell Type.
 
-You can insert the cell type to the selected range of cells by using [`addCellTypes`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcelltype-addcelltypes "addCellTypes") method. 
+You can insert the cell type to the selected range of cells by one of the following ways
+
+* Using `CellTypes` property in sheets.
+* Using [`addCellTypes`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:xlcelltype-addcelltypes "addCellTypes") method. 
 
 ### To remove Cell Type
 
@@ -44,22 +47,13 @@ The following code example describes the above behavior.
         sheet.Datasource((IEnumerable<object>)ViewBag.Datasource)
         .CellTypes(ctype =>
         {
-            ctype.Range("E1").Setting(setting =>
-            {
-                setting.Type(CustomCellTypes.CheckBox).IsChecked(true);
-            }).Add();
-            ctype.Range("B1").Setting(setting =>
-            {
-                setting.Type(CustomCellTypes.DatePicker);
-                setting.Value("2/12/2016");
-            }).Add();
             ctype.Range("A1").Setting(setting =>
             {
                 setting.Type(CustomCellTypes.DropDownList).DataSourceRange("A2:A11");
             }).Add();
             ctype.Range("D1").Setting(setting =>
             {
-                setting.Type(CustomCellTypes.Button).Text("BUTTON").Color("green");
+                setting.Type(CustomCellTypes.Button).Text("BUTTON").BackgroundColor("green");
             }).Add();
             ctype.Range("C1").Setting(setting =>
             {
@@ -72,8 +66,12 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        if (!this.isImport) 
+        var xlCellType = this.XLCellType;
+        if (!this.isImport) {
+            xlCellType.addCellTypes("B1", {"type" : ej.Spreadsheet.CustomCellType.DatePicker, 'value' : '2/12/2016'},  1);
+            xlCellType.addCellTypes("E1", {"type" : ej.Spreadsheet.CustomCellType.CheckBox, "isChecked" : true },  1);
             this.XLCellType.removeCellTypes("C1");
+        }
     }
 </script>
     
@@ -741,12 +739,11 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var i, formatObj = [],xlFormat = this.XLFormat, formatName = ["TableStyleLight8", "TableStyleLight10"];
-            if (!this.isImport) {
-                for (i = 0; i < formatName.length; i++)
-                    formatObj[i] = { "header": true, "name": "Table" + (i + 1), "formatName": formatName[i] };
-                xlFormat.createTable(formatObj[0], "A1:B4");
-                xlFormat.createTable(formatObj[1], "D1:E4");
+        var xlFormat = this.XLFormat;
+        if (!this.isImport) {
+            xlFormat.createTable({ "header": true, "formatName": "TableStyleLight8" }, "A1:B4");
+            xlFormat.createTable({ "header": true, "formatName": "TableStyleLight10" }, "D1:E4");
+        }
     }
 </script>
     
