@@ -158,11 +158,11 @@ The following code example describes the above behavior.
 
 {% tabs %}
 {% highlight cshtml %}
-
+@(Html.EJ().DataManager("DataManager").URL("Default").Adaptor(AdaptorType.UrlAdaptor).BatchURL("BatchUpdate"))
 @(Html.EJ().Spreadsheet<object>("Spreadsheet")
     .Sheets(sheet =>
     {
-        sheet.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
+        sheet.DataManagerID("DataManager").PrimaryKey("ItemName").Add();
     })
     .ClientSideEvents(events => events.LoadComplete("loadComplete"))
 )
@@ -196,6 +196,11 @@ namespace MVCSampleBrowser.Controllers
             return View();
         }
     }
+
+     public ActionResult BatchUpdate( List<ItemDetail> changed,  List<ItemDetail> added,  List<ItemDetail> deleted, string action, string key)
+        {
+            //Save the batch changes
+        }
 }
 
 {% endhighlight %}
