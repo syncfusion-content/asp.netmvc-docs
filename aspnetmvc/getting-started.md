@@ -144,7 +144,7 @@ For more information about Project Configuration Templates and their options det
 
 ## Manual Integration
 
-This topic mainly focusses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application. 
+This topic mainly focuses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application. 
 
 ### Creation of First ASP.NET MVC Application
 
@@ -164,7 +164,7 @@ If you want to add our Syncfusion ASP.NET MVC controls into your existing applic
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required css files into your application. You need to copy all the required css files into your application from the following location,
+To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. You need to copy all the required css files into your application from the following location,
 
 N> <installed location>\Syncfusion\Essential Studio\13.1.0.21\JavaScript\assets\css\web
 N> For example, If you have installed the Essential Studio within C:\Program Files (x86), then navigate to the below location,
@@ -177,7 +177,7 @@ When you navigate to the above location, you can find the files shown in the bel
 Before pasting it into your application, create a folder structure with names ej/web within the Content folder of your application and place all the copied files into it as shown below,
 
 ![](Getting-Started_images/Manual3.png)
-Solution Explorer - Project with css files copied into the Content folder
+Solution Explorer - Project with CSS files copied into the Content folder
 {:.caption}
 
 
@@ -246,7 +246,7 @@ Add the below script references in the _Layout.cshtml file within the head secti
 
 ### CDN Link reference
 
-If you want to refer the cdn links instead of the direct script and css references in your application, then you need to make use of the below references in the Site.Master file,
+If you want to refer the CDN links instead of the direct script and CSS references in your application, then you need to make use of the below references in the Site.Master file,
 
 {% highlight html %}
 
@@ -289,7 +289,7 @@ The reference to the Syncfusion assemblies can be added to your application in e
 
 1.	Once you have installed the Essential Studio package in your system, the Syncfusion assemblies are automatically registered in the GAC. You can easily add the reference assemblies to your project by choosing Add Reference option.
 
-2.	Now the Reference Manager pop-up will appear on the screen. In that pop-up, select the required assemblies from the Extensions tab as below, by choosing the appropriate versions (13.1450.0.21). The version to be chosen for the reference assemblies is based on the framework used in the application.
+2.	Now the Reference Manager pop-up will appear on the screen. In that pop-up, select the required assemblies from the Extensions tab as below, by choosing the appropriate versions (13.1450.0.21). The version to be chosen for the reference assemblies is based on the Framework used in the application.
 
 ![](Getting-Started_images/Manual5.png)
 Reference Manager Pop-up
@@ -309,9 +309,9 @@ N> C:\Program Files (x86)\Syncfusion\Essential Studio\14.4.0.15\precompiledassem
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
-N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET framework version. Based on the framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
+N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
 
-3.	Add the Sycfusion.EJ, Syncfusion.EJ.MVC and Syncfusion.Core assemblies to your application from the below specified location,
+3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC and Syncfusion.Core assemblies to your application from the below specified location,
 
 N> <installed location>\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15\4.5 <BR>
 For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, <BR>
