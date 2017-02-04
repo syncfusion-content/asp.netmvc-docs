@@ -22,7 +22,7 @@ The script and CSS dependencies for rendering Groupbutton is given in the [JS he
 
 ## Create a simple GroupButton control
 
-Create an ASP.NET MVC project and add necessary DLLs and script dependencies with the help of given Getting started document.
+Create an ASP.NET MVC project and add necessary assemblies and script dependencies with the help of given Getting started document.
 
 Add the below code in the view page to render a simple groupbutton control.
 
