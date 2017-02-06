@@ -5,6 +5,7 @@ description: dictionary
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Dictionary, Default Dictionary, Custom Dictionary
 ---
 
 # Dictionary

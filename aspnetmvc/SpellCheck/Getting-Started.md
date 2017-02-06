@@ -5,6 +5,7 @@ description: getting started
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Getting Started, Service Reference, Spell Checking, Dependencies
 ---
 
 # Getting Started
