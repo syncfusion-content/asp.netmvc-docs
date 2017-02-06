@@ -5,6 +5,7 @@ description: overview
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: SpellCheck, Key Features, Custom Dictionary, Ignore Settings, Customize Menu Items, Ignore Words, Misspell Word Style, Maximum Suggestion Count
 ---
 
 # SpellCheck

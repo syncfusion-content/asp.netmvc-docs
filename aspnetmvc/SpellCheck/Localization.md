@@ -5,6 +5,7 @@ description: localization
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Localization, Localizing Specific Words
 ---
 
 # Localization

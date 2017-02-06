@@ -5,6 +5,7 @@ description: modes
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Operations, Dialog Mode, Context Menu Mode, Handling Dialog Actions, Context Menu Mode, Handling Menu Actions
 ---
 
 

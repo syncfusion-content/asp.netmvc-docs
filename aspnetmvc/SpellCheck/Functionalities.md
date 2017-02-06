@@ -5,6 +5,7 @@ description: Functionalities
 platform: ejmvc
 control: SpellCheck 
 documentation: ug
+keywords: Functionalities, Check Spelling, Ignore Words, IgnoreAll, Ignore Settings, Change Words
 ---
 
 # Functionalities
