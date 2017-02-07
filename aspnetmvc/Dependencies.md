@@ -1662,15 +1662,15 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage sortdirect"></div>
-<div class="txt">sortdirect</div>
+<div class="txt">sort direct</div>
 </td>
 <td>
 <div class="spriteimage shoppingcart"></div>
-<div class="txt">shoppingcart</div>
+<div class="txt">shopping cart</div>
 </td>
 <td>
 <div class="spriteimage shoppingcart_01"></div>
-<div class="txt">shoppingcart_01</div>
+<div class="txt">shopping cart_01</div>
 </td>
 <td>
 <div class="spriteimage cursor"></div>
@@ -1796,11 +1796,11 @@ The complete list of EJ icons are listed in the following table. You have to use
 <tr>
 <td>
 <div class="spriteimage checkmark"></div>
-<div class="txt">checkmark</div>
+<div class="txt">check mark</div>
 </td>
 <td>
 <div class="spriteimage checkmark_01"></div>
-<div class="txt">checkmark_01</div>
+<div class="txt">check mark_01</div>
 </td>
 <td>
 <div class="spriteimage media-play"></div>
@@ -1915,7 +1915,7 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage filternone"></div>
-<div class="txt">filternone</div>
+<div class="txt">filter none</div>
 </td>
 <td>
 <div class="spriteimage filternone_01"></div>
@@ -2084,7 +2084,7 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage fullborders"></div>
-<div class="txt">fullborders</div>
+<div class="txt">full borders</div>
 </td>
 <td>
 <div class="spriteimage threed"></div>
@@ -2157,22 +2157,22 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage vertical-barchart"></div>
-<div class="txt">vertical-barchart</div>
+<div class="txt">vertical-bar chart</div>
 </td>
 </tr>
 
 <tr>
 <td>
 <div class="spriteimage vertical-barchart_01"></div>
-<div class="txt">vertical-barchart_01</div>
+<div class="txt">vertical-bar chart_01</div>
 </td>
 <td>
 <div class="spriteimage horizontal-barchart"></div>
-<div class="txt">horizontal-barchart</div>
+<div class="txt">horizontal-bar chart</div>
 </td>
 <td>
 <div class="spriteimage horizontal-barchart_01"></div>
-<div class="txt">horizontal-barchart_01</div>
+<div class="txt">horizontal-bar chart_01</div>
 </td>
 <td>
 <div class="spriteimage pie-chart"></div>
@@ -2283,11 +2283,11 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage pdf"></div>
-<div class="txt">pdf</div>
+<div class="txt">PDF</div>
 </td>
 <td>
 <div class="spriteimage pdf_01"></div>
-<div class="txt">pdf_01</div>
+<div class="txt">PDF_01</div>
 </td>
 <td>
 <div class="spriteimage pdf-export"></div>
@@ -2314,7 +2314,7 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage ie"></div>
-<div class="txt">ie</div>
+<div class="txt">IE</div>
 </td>
 <td>
 <div class="spriteimage exit"></div>
@@ -2402,11 +2402,11 @@ The complete list of EJ icons are listed in the following table. You have to use
 </td>
 <td>
 <div class="spriteimage paperclip"></div>
-<div class="txt">paperclip</div>
+<div class="txt">paper clip</div>
 </td>
 <td>
 <div class="spriteimage paperclip_01"></div>
-<div class="txt">paperclip_01</div>
+<div class="txt">paper clip_01</div>
 </td>
 <td>
 <div class="spriteimage circle"></div>
