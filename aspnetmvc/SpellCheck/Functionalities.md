@@ -133,7 +133,7 @@ public ActionResult ContextMenu()
  
 Once you have run the above code, you get an output like below.
 
-![](images/customization_img1.png) 
+![](functionalities_images/contextmenu.png) 
 
 ## Ignore Settings
 

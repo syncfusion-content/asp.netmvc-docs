@@ -11,7 +11,7 @@ keywords: Operations, Dialog Mode, Context Menu Mode, Handling Dialog Actions, C
 
 # Operations
 
-Essential SpellCheck provides two ways to perform the spellcheck operation(error correction). They are,
+Essential SpellCheck provides two ways to perform the spell check operation(error correction). They are,
 
  * Dialog Mode
  * Context Menu Mode
@@ -20,7 +20,7 @@ Essential SpellCheck provides two ways to perform the spellcheck operation(error
 
 ### Description
 
-SpellCheck provides the dialog mode option to perform the following spellcheck operations.
+SpellCheck provides the dialog mode option to perform the following spell check operations.
 
  * Ignore Once
  * IgnoreAll
@@ -137,7 +137,7 @@ The following code example used to define some actions after the dialog closing 
 		
 {% endhighlight %}
 
-It is possible to predict the error word details before starting the spellcheck operations through dialog mode by using the client side event start. The below code example describes the above behavior.
+It is possible to predict the error word details before starting the spell check operations through dialog mode by using the client side event start. The below code example describes the above behavior.
 
 {% highlight CSHTML %}
 
@@ -195,15 +195,16 @@ You can get the corrected text content details before updating it into target el
 
 ## Context Menu Mode
 
-SpellCheck provides default context menu options to perform the spellcheck operations. It also allows to define additional custom context menu options.
+SpellCheck provides default context menu options to perform the spell check operations. It also allows to define additional custom context menu options.
 
 The options that are available under contextMenuSettings are as follows,
  * enable - Enables/disables the context menu option in SpellCheck.
- * menuItems - Contains the options to perform spellcheck operations.
+ * menuItems - Contains the options to perform spell check operations.
 
 ## Default Menu Options
 
-The menu items contains the following options to perform the spellcheck operation.
+The menu items contains the following options to perform the spell check operation.
+
  * IgnoreAll
  * Add to Dictionary
 
