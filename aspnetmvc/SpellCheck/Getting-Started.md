@@ -39,7 +39,7 @@ The CheckWords method will perform the splitting of target sentence into separat
 
 ## Spell Checking
 
- To spell check the content of the target element, you need to add one button and calling any one of the spellcheck method showInDialog or validate by clicking the button to highlight the error words.
+ To spell check the content of the target element, you need to add one button and calling any one of the spell check method showInDialog or validate by clicking the button to highlight the error words.
 The following code example depicts that checking the spelling of the target element through the showInDialog method.
 
 {% highlight CSHTML %}
@@ -96,7 +96,7 @@ Used to handle data operation and should be used while binding data to JS contro
 <tr>
 <td>
 ej.spellcheck.min.js<br/><br/></td><td>
-SpellCheck core script file.<br/><br/></td></tr>
+spell check core script file.<br/><br/></td></tr>
 <tr>
 <td>
 ej.unobtrusive.min.js<br/><br/></td><td>
