@@ -410,6 +410,145 @@ public void Export(System.IO.Stream stream) {
 
 {% endhighlight %}
 
+## Exporting Customization
+
+You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
+
+{% highlight CSHTML %}
+
+
+ @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.BeforeExport("Exporting"))
+
+  @Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
+  <script type="text/javascript">
+        function exportBtnClick(args) {
+            var pGridObj = $('#PivotGrid1').data("ejPivotGrid");
+            //JSON Export 
+            pGridObj.exportPivotGrid("ExcelExport","fileName");
+            //PivotEngine Export 
+            pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
+        }
+        function Exporting(args) {
+            args.title = "PivotGrid";
+            args.description = "Displays both OLAP and Relational datasource in tabular format";
+        }
+   </script>
+    
+{% endhighlight %}
+
+You can also edit the exporting document with the use of a server side event for required exporting option.
+
+{% highlight c# %}
+
+//...
+using Syncfusion.EJ.Export;
+using Syncfusion.Compression.Base;
+using Syncfusion.XlsIO;
+using Syncfusion.DocIO.Base;
+using Syncfusion.Pdf.Base;
+
+//Following methods needs to be added in MVC controller file of the application for JSON export
+public void ExcelExport()
+{
+    PivotGridExcelExport pGrid = new PivotGridExcelExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    string fileName = "Sample";
+    pGrid.ExcelExport += pGrid_ExcelExport;
+    pGrid.ExportToExcel(fileName, args, System.Web.HttpContext.Current.Response);
+}
+
+void pGrid_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
+{
+    //You can customize exporting document here.
+}
+public void PDFExport()
+{
+    PivotGridPDFExport pGrid = new PivotGridPDFExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    string fileName = "Sample";
+    pGrid.AddPDFHeaderFooter += pGrid_AddPDFHeaderFooter;
+    pGrid.PDFExport += pGrid_PDFExport;
+    pGrid.ExportToPDF(fileName, args, System.Web.HttpContext.Current.Response);
+}
+
+void pGrid_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can customize exporting document here.
+}
+
+void pGrid_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can add header/footer information to the pdf document.
+}
+
+public void CSVExport()
+{
+    PivotGridCSVExport pGrid = new PivotGridCSVExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    string fileName = "Sample";
+    pGrid.CSVExport += pGrid_CSVExport;
+    pGrid.ExportToCSV(fileName, args, System.Web.HttpContext.Current.Response);
+}
+
+void pGrid_CSVExport(object sender, string csvString)
+{
+    //You can customize exporting document here.
+}
+
+public void WordExport()
+{
+    PivotGridWordExport pGrid = new PivotGridWordExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    string fileName = "Sample";
+    pGrid.WordExport += pGrid_WordExport;
+    pGrid.ExportToWord(fileName, args, System.Web.HttpContext.Current.Response);
+}
+
+void pGrid_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
+{
+    //You can customize exporting document here.
+}
+
+//Following service methods needs to be added in WEBAPI controller file for PivotEngine export
+
+[System.Web.Http.ActionName("Export")]
+[System.Web.Http.HttpPost]
+public void Export()
+{
+    string args = HttpContext.Current.Request.Form.GetValues(0)[0];
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    string fileName = "Sample";
+    htmlHelper.ExcelExport += htmlHelper_ExcelExport;
+    htmlHelper.WordExport += htmlHelper_WordExport;
+    htmlHelper.AddPDFHeaderFooter += htmlHelper_AddPDFHeaderFooter;
+    htmlHelper.PDFExport += htmlHelper_PDFExport;
+    htmlHelper.CSVExport += htmlHelper_CSVExport;
+    htmlHelper.ExportPivotGrid(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+}
+
+void htmlHelper_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
+{
+    //You can customize exporting document here.
+}
+void htmlHelper_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
+{
+    //You can customize exporting document here.
+}
+void htmlHelper_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can add header/footer information to the pdf document.
+}
+void htmlHelper_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can customize exporting document here.
+}
+void htmlHelper_CSVExport(object sender, string csvString)
+{
+    //You can customize exporting document here.
+}
+
+{% endhighlight %}
+
 The below screenshot shows the PivotGrid control exported to Excel document.
 
 ![](Exporting_images/ExportOLAPExcel.png)

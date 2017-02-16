@@ -53,7 +53,7 @@ To get the localized string based on different cultures, from OLAP Cube, we need
 
 {% highlight CSHTML %}
 
-    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Locale("fr-FR").DataSource(dataSource => dataSource.Data("http://bi.syncfusion.com/olap/msmdpump.dll;LocaleIdentifier=1036;"))
+    @Html.EJ().Pivot().PivotGauge("PivotGauge1").Locale("fr-FR").DataSource(dataSource => dataSource.Data("http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;"))
 
 {% endhighlight %}
 
