@@ -25,7 +25,7 @@ Add the above CSS link in the code sample.
 
 // Add the following code in your CSHTML page.
 
-<div class="imgframe">
+    <div class="imgframe">
 
     @Html.EJ().Menu("menucontrol").Items(items =>
 
@@ -97,7 +97,7 @@ Add the above CSS link in the code sample.
 
         }).Width("200")
 
-</div>
+    </div>
 
 
 {% endhighlight  %}
@@ -105,7 +105,19 @@ Add the above CSS link in the code sample.
 
 The following screenshot displays the output for the above code. 
 
-![](Responsive-Layout_images/Responsive-Layout_img2.png)
+![](Responsive-Layout_images/Responsive.png)
 
 Menu with responsive layout
 {:.caption}
+
+
+##Responsive in Mobile or Tablet:
+
+Menu will be displayed  in mobile or Tablet as shown in the below image:
+
+![](Responsive-Layout_images/ResponsiveLayout.png)
+
+N> Window width below  767px is considered as Mobile or Tablet mode in our menu.
+
+
+

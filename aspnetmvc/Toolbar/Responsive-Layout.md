@@ -23,7 +23,7 @@ Add the above css link in the code sample.        
 
 {% highlight CSHTML %}
 
-<div class="control">
+    <div class="control">
 
     @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).Items(s =>
 
@@ -69,7 +69,7 @@ Add the above css link in the code sample.        
 
     }).Items(s3 =>
 
-{
+    {
 
     s3.Add().Id("FitFull").SpriteCssClass("PdfDocument e-icon fitOne ").TooltipText("Fit one full page to window");
 
@@ -77,11 +77,11 @@ Add the above css link in the code sample.        
 
     s3.Add().Id("ReadMode").SpriteCssClass("PdfDocument e-icon readMode ").TooltipText("View File in Read Mode");
 
-})
+       })
 
     @helper dropdown()
 
-{
+       {
 
     <div id="percentlist">
 
@@ -111,16 +111,16 @@ Add the above css link in the code sample.        
 
     @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
 
-}
+      }
 
-</div>
+       </div>
 
 {% endhighlight %}
 
 {% highlight css %}
 
 
-<style type="text/css" class="cssStyles">
+        <style type="text/css" class="cssStyles">
 
 	.e-tooltxt .PdfDocument.e-icon 
 	{
@@ -304,7 +304,7 @@ Add the above css link in the code sample.        
 
 	}
 
-</style>
+    </style>
 
 {% endhighlight %}
 
@@ -312,6 +312,208 @@ Add the above css link in the code sample.        
 
 Execute the above code to render the following output.
 
-![](Responsive-Layout_images/Responsive-Layout_img1.png)
+![](Responsive-Layout_images/ResponsiveLayout.png)
+
+## responsiveType:Inline
+
+We can set the responsiveType property to inline to display the overflown toolbar items as inline toolbar.
+
+{% highlight CSHTML %}
 
 
+        @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Inline).Items(s =>
+
+       {
+ 
+        s.Add().Id("OtherFormat").SpriteCssClass("PdfDocument e-icon convertToOthers ").TooltipText("Convert PDF files to Word or Excel Online…");
+
+        s.Add().Id("PDFOnline").SpriteCssClass("PdfDocument e-icon convertToPdf ").TooltipText("Convert files to PDF Online");
+
+        s.Add().Id("Signature").SpriteCssClass("PdfDocument e-icon signature ").TooltipText("Sign, add text or send a document for signature");
+
+        s.Add().Id("Save").SpriteCssClass("PdfDocument e-icon save ").TooltipText("Save file ( Ctrl+S )");
+
+        s.Add().Id("Print").SpriteCssClass("PdfDocument e-icon print ").TooltipText("Print file ( Ctrl+P )");
+
+        s.Add().Id("Message").SpriteCssClass("PdfDocument e-icon msg ").TooltipText("Message");
+
+    }).Items(s1 =>
+
+    {
+
+        s1.Add().Id("Previous").SpriteCssClass("PdfDocument e-icon previous ").TooltipText("Show previous page ( Left Arrow )");
+
+        s1.Add().Id("Next").SpriteCssClass("PdfDocument e-icon next ").TooltipText("Show next page ( Right Arrow )");
+
+        s1.Add().Id("page").SpriteCssClass("PdfDocument ").ContentTemplate(@<input type="text" value="1" />);
+
+        s1.Add().Id("count").ContentTemplate(@<span>/1</span>);
+
+    }).Items(s2 =>
+
+    {
+
+        s2.Add().Id("ZoomOut").SpriteCssClass("PdfDocument e-icon zoomOut ").TooltipText("Zoom Out");
+
+        s2.Add().Id("ZoomIn").SpriteCssClass("PdfDocument e-icon zoomIn ").TooltipText("Zoom In");
+
+        s2.Add().Id("ZoomValue").SpriteCssClass("PdfDocument ").ContentTemplate(@<div>
+
+        @dropdown()
+
+    </div>);
+
+    }).Items(s3 =>
+
+    {
+
+    s3.Add().Id("FitFull").SpriteCssClass("PdfDocument e-icon fitOne ").TooltipText("Fit one full page to window");
+
+    s3.Add().Id("StickyNote").SpriteCssClass("PdfDocument e-icon sticky ").TooltipText("Add stick note ( Ctrl+6 ) ");
+
+    s3.Add().Id("ReadMode").SpriteCssClass("PdfDocument e-icon readMode ").TooltipText("View File in Read Mode");
+
+    })
+
+    @helper dropdown()
+
+    {
+
+    <div id="percentlist">
+
+        <ul>
+
+            <li>10%</li>
+
+            <li>25%</li>
+
+            <li>50%</li>
+
+            <li>100%</li>
+
+            <li>400%</li>
+
+            <li>800%</li>
+
+            <li>1600%</li>
+
+            <li>3200%</li>
+
+            <li>6400%</li>
+
+        </ul>
+
+    </div>
+
+    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
+
+     }
+
+
+{% endhighlight %}
+
+
+The following output will be displayed while executing the above code:
+
+![](Responsive-Layout_images/Inline.png)
+
+## responsiveType:Popup
+
+We can set the responsiveType property to popup to display the overflown toolbar items as popup. This the default value of enum responsiveType.
+
+{% highlight CSHTML %}
+
+    @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Popup).Items(s =>
+
+    {
+
+        s.Add().Id("OtherFormat").SpriteCssClass("PdfDocument e-icon convertToOthers ").TooltipText("Convert PDF files to Word or Excel Online…");
+
+        s.Add().Id("PDFOnline").SpriteCssClass("PdfDocument e-icon convertToPdf ").TooltipText("Convert files to PDF Online");
+
+        s.Add().Id("Signature").SpriteCssClass("PdfDocument e-icon signature ").TooltipText("Sign, add text or send a document for signature");
+
+        s.Add().Id("Save").SpriteCssClass("PdfDocument e-icon save ").TooltipText("Save file ( Ctrl+S )");
+
+        s.Add().Id("Print").SpriteCssClass("PdfDocument e-icon print ").TooltipText("Print file ( Ctrl+P )");
+
+        s.Add().Id("Message").SpriteCssClass("PdfDocument e-icon msg ").TooltipText("Message");
+
+    }).Items(s1 =>
+
+    {
+
+        s1.Add().Id("Previous").SpriteCssClass("PdfDocument e-icon previous ").TooltipText("Show previous page ( Left Arrow )");
+
+        s1.Add().Id("Next").SpriteCssClass("PdfDocument e-icon next ").TooltipText("Show next page ( Right Arrow )");
+
+        s1.Add().Id("page").SpriteCssClass("PdfDocument ").ContentTemplate(@<input type="text" value="1" />);
+
+        s1.Add().Id("count").ContentTemplate(@<span>/1</span>);
+
+    }).Items(s2 =>
+
+    {
+
+        s2.Add().Id("ZoomOut").SpriteCssClass("PdfDocument e-icon zoomOut ").TooltipText("Zoom Out");
+
+        s2.Add().Id("ZoomIn").SpriteCssClass("PdfDocument e-icon zoomIn ").TooltipText("Zoom In");
+
+        s2.Add().Id("ZoomValue").SpriteCssClass("PdfDocument ").ContentTemplate(@<div>
+
+        @dropdown()
+
+    </div>);
+
+    }).Items(s3 =>
+
+    {
+
+    s3.Add().Id("FitFull").SpriteCssClass("PdfDocument e-icon fitOne ").TooltipText("Fit one full page to window");
+
+    s3.Add().Id("StickyNote").SpriteCssClass("PdfDocument e-icon sticky ").TooltipText("Add stick note ( Ctrl+6 ) ");
+
+    s3.Add().Id("ReadMode").SpriteCssClass("PdfDocument e-icon readMode ").TooltipText("View File in Read Mode");
+
+    })
+
+    @helper dropdown()
+
+    {
+
+    <div id="percentlist">
+
+        <ul>
+
+            <li>10%</li>
+
+            <li>25%</li>
+
+            <li>50%</li>
+
+            <li>100%</li>
+
+            <li>400%</li>
+
+            <li>800%</li>
+
+            <li>1600%</li>
+
+            <li>3200%</li>
+
+            <li>6400%</li>
+
+        </ul>
+
+    </div>
+
+    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
+
+    }
+
+{% endhighlight %}
+
+
+The  following output will be displayed while executing the above code:
+
+![](Responsive-Layout_images/ResponsiveLayout.png)
