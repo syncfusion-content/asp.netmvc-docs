@@ -795,26 +795,23 @@ namespace PivotClientDemo {
 
 {% endhighlight %}
 
-**Configure routing in Global Application Class**
+**Configure routing in WebAPIConfig Class**
 
-If Global.asax file is not found in your MVC Web Application then add a new one. To add a **Global.asax** in your existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **Global Application Class** and name it as `Global.asax`, click **Add.**
- 
-Once the Global.asax file is created, remove all the existing code inside the "Application_Start" function. Then routing could be configured as shown in the following code example.
+Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
 
 {% highlight c# %}
 
-public class Global: System.Web.HttpApplication {
-    protected void Application_Start(object sender, EventArgs e) {
-        System.Web.Http.GlobalConfiguration.Configuration.Routes.MapHttpRoute(
+public static class WebApiConfig
+{
+    public static void Register(HttpConfiguration config)
+    {
+        config.Routes.MapHttpRoute(
             name: "DefaultApi",
             routeTemplate: "{controller}/{action}/{id}",
-            defaults: new {
-                id = RouteParameter.Optional
-            });
-        AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", true);
+            defaults: new { id = RouteParameter.Optional }
+        );
     }
 }
-
 {% endhighlight %}
 
 Now, **PivotClient** is rendered with PivotChart and PivotGrid showing Customer Count over a period of fiscal years.

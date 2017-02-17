@@ -26,7 +26,7 @@ Also hyperlink option provides separate events for row header, column header, va
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).ClientSideEvents(events => events.ValueCellHyperlinkClick("CellClickEvent").RowHeaderHyperlinkClick("CellClickEvent").ColumnHeaderHyperlinkClick("CellClickEvent").SummaryCellHyperlinkClick("CellClickEvent")).HyperlinkSettings(hypLink => hypLink.EnableColumnHeaderHyperlink(true).EnableRowHeaderHyperlink(true).EnableValueCellHyperlink(true).EnableSummaryCellHyperlink(true))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(events => events.ValueCellHyperlinkClick("CellClickEvent").RowHeaderHyperlinkClick("CellClickEvent").ColumnHeaderHyperlinkClick("CellClickEvent").SummaryCellHyperlinkClick("CellClickEvent")).HyperlinkSettings(hypLink => hypLink.EnableColumnHeaderHyperlink(true).EnableRowHeaderHyperlink(true).EnableValueCellHyperlink(true).EnableSummaryCellHyperlink(true))
 
 <script type="text/javascript">
     CellClickEvent = function(evt) {
@@ -45,7 +45,7 @@ The **"cellSelection"** event would be triggered as soon as the selection proces
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableCellSelection(true).ClientSideEvents(events => events.CellSelection("valueCellClick"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableCellSelection(true).ClientSideEvents(events => events.CellSelection("valueCellClick"))
 
 <script type="text/javascript">
     valueCellClick = function(evt) {
@@ -67,7 +67,7 @@ Cell context is enabled by setting the `EnableCellContext` property to true. The
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableCellContext(true).ClientSideEvents(events=>events.CellContext("cell_RightClick"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableCellContext(true).ClientSideEvents(events=>events.CellContext("cell_RightClick"))
 
 <script type="text/javascript">
     cell_RightClick = function(evt) {
@@ -82,7 +82,7 @@ Conditional formatting allows user to highlight particular cells with certain co
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/OLAPService")).EnableConditionalFormatting(true)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableConditionalFormatting(true)
 @Html.EJ().Button("Button1").Size(ButtonSize.Normal).Text("Conditional").ShowRoundedCorner(true).ClientSideEvents(events => events.Click("btnClick"))
 
 <script type="text/javascript">

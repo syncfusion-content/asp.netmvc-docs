@@ -119,18 +119,6 @@ For WCF service, the below service method needs to be added to perform exporting
 
 {% endhighlight %}
 
-The below screenshot shows the PivotGrid and PivotChart controls exported to Excel document.
-
-![](Exporting_images/excelexport.png)
-
-The below screenshot shows the PivotGrid and PivotChart controls exported to Word document.
-
-![](Exporting_images/wordexport.png)
-
-The below screenshot shows the PivotGrid and PivotChart controls exported to PDF document.
-
-![](Exporting_images/pdfexport.png)
-
 ### Customize the export document name
 
 The document name could be customized inside the method in WebAPI Controller. Following code sample illustrates the same.
@@ -163,3 +151,118 @@ For customizing name in WCF Service, below code snippet is used.
 
 
 {% endhighlight %}
+
+## Exporting Customization
+
+You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
+
+{% highlight cshtml %}
+
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(oEve => { oEve.BeforeExport("Exporting"); })
+   <script type="text/javascript">
+        function Exporting(args) {
+            //ClientMode export    
+            args.url = "ExportPivotClient";
+            //PivotEngine Export
+            args.exportMode = ej.PivotClient.ExportMode.PivotEngine;
+            
+            args.title = "PivotClient";
+            args.description = "Visualizes both OLAP and Relational datasource in tabular and graphical formats";
+        }
+   </script>
+    
+{% endhighlight %}
+
+You can also edit the exporting document with the use of a server side event for required exporting option.
+
+{% highlight c# %}
+
+//...
+using Syncfusion.EJ.Export;
+using Syncfusion.Compression.Base;
+using Syncfusion.XlsIO;
+using Syncfusion.DocIO.Base;
+using Syncfusion.Pdf.Base;
+
+//Following methods needs to be added in MVC controller file of the application for JSON Export.
+public void ExportPivotClient()
+{
+    JavaScriptSerializer serializer = new JavaScriptSerializer() { MaxJsonLength = Int32.MaxValue };
+    PivotClientExport pivotClient = new PivotClientExport();
+    string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
+    pivotClient.ExcelExport += pivotClient_ExcelExport;
+    pivotClient.WordExport += pivotClient_WordExport;
+    pivotClient.AddPDFHeaderFooter += pivotClient_AddPDFHeaderFooter;
+    pivotClient.PDFExport += pivotClient_PDFExport;
+    pivotClient.ExportPivotClient(string.Empty, args, System.Web.HttpContext.Current.Response);
+
+}
+
+void pivotClient_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can customize exporting document here.
+}
+
+void pivotClient_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can add header/footer information to the pdf document.
+}
+
+void pivotClient_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
+{
+    //You can customize exporting document here.
+}
+
+void pivotClient_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
+{
+    //You can customize exporting document here.
+}  
+
+//Following service method needs to be added in WebAPI controller for PivotEngine Export.
+[System.Web.Http.ActionName("ExportOlapClient")]
+[System.Web.Http.HttpPost]
+public void ExportOlapClient()
+{
+    string args = HttpContext.Current.Request.Form.GetValues(0)[0];
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
+    olapClientHelper.ExcelExport += olapClientHelper_ExcelExport;
+    olapClientHelper.WordExport += olapClientHelper_WordExport;
+    olapClientHelper.AddPDFHeaderFooter += olapClientHelper_AddPDFHeaderFooter;
+    olapClientHelper.PDFExport += olapClientHelper_PDFExport;
+    string fileName = "Sample";
+    olapClientHelper.ExportPivotClient(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
+}
+
+void olapClientHelper_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can customize exporting document here.
+}
+
+void olapClientHelper_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
+{
+    //You can add header/footer information to the pdf document.
+}
+
+void olapClientHelper_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
+{
+    //You can customize exporting document here.
+}
+
+void olapClientHelper_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
+{
+    //You can customize exporting document here.
+}
+
+{% endhighlight %}
+
+The below screenshot shows the PivotGrid and PivotChart controls exported to Excel document.
+
+![](Exporting_images/excelexport.png)
+
+The below screenshot shows the PivotGrid and PivotChart controls exported to Word document.
+
+![](Exporting_images/wordexport.png)
+
+The below screenshot shows the PivotGrid and PivotChart controls exported to PDF document.
+
+![](Exporting_images/pdfexport.png)
