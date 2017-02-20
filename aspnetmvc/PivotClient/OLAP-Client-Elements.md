@@ -279,7 +279,7 @@ Any one of the report from the report collection could be selected from the drop
 ### Remove
 Remove option removes the saved report from the report collection.  On clicking the icon at toolbar, a dialog will open prompting for user’s confirmation on removal of report as shown below.
 
-![](OLAP-Client-Elements_images/removerecord1.png)
+![](OLAP-Client-Elements_images/removerecord.png)
 
 On clicking OK button, the report gets removed from the collection. On clicking Cancel button, the operation gets aborted.
 
