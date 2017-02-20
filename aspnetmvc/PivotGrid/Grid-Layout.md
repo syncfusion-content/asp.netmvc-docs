@@ -9,8 +9,6 @@ documentation: ug
 
 # Grid Layout
 
-I> This feature is applicable only for OLAP datasource at Server Mode.
-
 ## Normal Layout
 
 A layout in which summary cells are positioned at the bottom of each parent member and their child members appear next to them. Normal layout is the default layout in PivotGrid control. The enumeration property `Layout` needs to be set to **"PivotGridLayout.Normal"** in-order to view PivotGrid in normal layout. 
@@ -24,6 +22,8 @@ A layout in which summary cells are positioned at the bottom of each parent memb
 ![](Grid-Layout_images/layout-normal.png)
 
 ## No Summaries Layout
+
+I> This feature is applicable only for OLAP datasource.
 
 A layout in which summary cells are completely hidden and the child members appear next to their parent member.  The enumeration property `Layout` needs to be set to **"PivotGridLayout.NoSummaries"** in-order to view PivotGrid without summaries. 
 
@@ -50,6 +50,8 @@ A layout in which summary cells are positioned besides each parent member and th
 
 
 ## Top Summary Layout 
+
+I> This feature is applicable only for OLAP datasource only at Server Mode.
 
 A layout in which summary cells are positioned at the top of each parent member and their child members appear next to them. The enumeration property `Layout` needs to be set to **"PivotGridLayout.NormalTopSummary"** in-order to view PivotGrid in top summaries layout. 
 
