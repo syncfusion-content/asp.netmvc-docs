@@ -56,14 +56,6 @@ AddFormTitle</td><td>
 Add New Record</td></tr>
 <tr>
 <td>
-NotActionKeyAlert</td><td>
-This Key-Combination is not available </td></tr>
-<tr>
-<td>
-KeyConfigAlertText</td><td>
-This Key-Combination has already been assigned to</td></tr>
-<tr>
-<td>
 GroupCaptionFormat</td><td>
 {{"{{"}}:headerText{{}}}}: {{"{{"}}:key{{}}}} - {{"{{"}}:count{{}}}} {{"{{"}}if count == 1 {{}}}} item {{"{{"}}else{{}}}} items {{"{{"}}/if{{}}}}</td></tr>
 <tr>
