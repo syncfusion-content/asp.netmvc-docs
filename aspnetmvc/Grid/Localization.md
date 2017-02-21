@@ -40,7 +40,7 @@ SaveButton</td><td>
 Save</td></tr>
 <tr>
 <td>
-OkButton</td><td>
+OKButton</td><td>
 OK</td></tr>
 <tr>
 <td>
@@ -56,11 +56,11 @@ AddFormTitle</td><td>
 Add New Record</td></tr>
 <tr>
 <td>
-Notactionkeyalert</td><td>
+NotActionKeyAlert</td><td>
 This Key-Combination is not available </td></tr>
 <tr>
 <td>
-Keyconfigalerttext</td><td>
+KeyConfigAlertText</td><td>
 This Key-Combination has already been assigned to</td></tr>
 <tr>
 <td>
@@ -475,7 +475,7 @@ PredicateAnd</td><td>
 AND</td></tr>
 <tr>
 <td>
-Ok</td><td>
+OK</td><td>
 OK</td></tr>
 <tr>
 <td>
