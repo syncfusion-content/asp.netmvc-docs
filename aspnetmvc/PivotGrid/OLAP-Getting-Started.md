@@ -426,6 +426,7 @@ namespace PivotGridDemo
     {
         Syncfusion.JavaScript.PivotGrid htmlHelper = new Syncfusion.JavaScript.PivotGrid();
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        static int cultureIDInfoval = 1033; 
         JavaScriptSerializer serializer = new JavaScriptSerializer();
         string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports
 
@@ -511,9 +512,22 @@ namespace PivotGridDemo
         public Dictionary<string, object> SaveReport(Dictionary<string, object> jsonResult)
         {
             string mode = jsonResult["operationalMode"].ToString();
+            bool isDuplicate = true;
             SqlCeConnection con = new SqlCeConnection() { ConnectionString = conStringforDB };
             con.Open();
-            SqlCeCommand cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            SqlCeCommand cmd1 = null;
+            foreach (DataRow row in GetDataTable().Rows)
+            {
+                if ((row.ItemArray[0] as string).Equals(jsonResult["reportName"].ToString()))
+                {
+                    isDuplicate = false;
+                    cmd1 = new SqlCeCommand("update ReportsTable set Report=@Reports where ReportName like @ReportName", con);
+                }
+            }
+            if (isDuplicate)
+            {
+                cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            }
             cmd1.Parameters.Add("@ReportName", jsonResult["reportName"].ToString());
             if (mode == "clientMode")
                 cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(jsonResult["clientReports"].ToString()).ToArray());
