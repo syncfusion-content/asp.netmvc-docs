@@ -119,7 +119,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
 <head>
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js" type="text/javascript"></script>
-    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
 </head>
 {% endhighlight %}
 
@@ -221,9 +221,6 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
 * Syncfusion.PivotAnalysis.Base
-* Syncfusion.XlsIO.Base
-* Syncfusion.Pdf.Base
-* Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.Pivot
 * Syncfusion.EJ.MVC
@@ -324,7 +321,7 @@ Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml**
 <head>
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js" type="text/javascript"></script>
-    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
 </head>
 {% endhighlight %}
 
@@ -348,7 +345,32 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 
 @using Syncfusion.JavaScript;
 
-@Html.EJ().Pivot().PivotGauge("PivotGauge1").Url(Url.Content("/Relational"))
+@Html.EJ().Pivot().PivotGauge("PivotGauge1").Url(Url.Content("/Relational")).BackgroundColor("transparent").EnableTooltip(true).Scales(scale =>
+{
+    scale.ShowRanges(true).Radius(150).ShowScaleBar(true).Size(1).Border(bor => bor.Width(0.5)).ShowIndicators(true).ShowLabels(true).
+        Pointers(pointer =>
+        {
+            pointer.ShowBackNeedle(true).BackNeedleLength(20).Length(120).Width(7).Add();
+            pointer.Type(PointerType.Marker).DistanceFromScale(5).Placement(PointerPlacement.Center).BackgroundColor("#29A4D9").Length(25).Width(15).MarkerType(MarkerType.Diamond).Add();
+        }).
+    Ticks(ticks =>
+    {
+        ticks.Type(CircularTickTypes.Major).DistanceFromScale(2).Height(16).Width(1).Color("#8c8c8c").Add();
+        ticks.Type(CircularTickTypes.Minor).Height(6).Width(1).DistanceFromScale(2).Color("#8c8c8c").Add();
+    })
+    .Labels(labels => { labels.Color("#8c8c8c").Add(); })
+    .Ranges(ranges =>
+    {
+        ranges.DistanceFromScale(-5).BackgroundColor("#fc0606").Border(bor => bor.Color("#fc0606")).Add();
+        ranges.DistanceFromScale(-5).Add();
+    })
+    .CustomLabels(customLabel =>
+    {
+        customLabel.Position(location => location.X(180).Y(290)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
+        customLabel.Position(location => location.X(180).Y(320)).Font(font => font.Size("10px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
+        customLabel.Position(location => location.X(180).Y(150)).Font(font => font.Size("12px").FontFamily("Segoe UI").FontStyle("Normal")).Color("#666666").Add();
+    }).Add();
+}).ClientSideEvents(oCli => { oCli.RenderSuccess("loadPivotGaugeTheme"); }).IsResponsive(true).LabelFormatSettings(labelFormatSettings=> labelFormatSettings.DecimalPlaces(2))
 
 {% endhighlight %}
 

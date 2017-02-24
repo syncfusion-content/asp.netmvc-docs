@@ -104,12 +104,9 @@ N> If you have installed any version of SQL Server Analysis Service (SSAS) or Mi
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
 * Syncfusion.PivotAnalysis.Base
-* Syncfusion.XlsIO.Base
-* Syncfusion.Pdf.Base
-* Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.MVC
-* Syncfusion.EJ.Olap
+* Syncfusion.EJ.Pivot
 
 **List of Namespaces**
 
@@ -122,13 +119,13 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using System.Web.Script.Serialization;
 using Syncfusion.Olap.Manager;
 using Syncfusion.Olap.Reports;
 using Syncfusion.JavaScript;
 using OLAPUTILS = Syncfusion.JavaScript.Olap;
+using System.ServiceModel.Activation;
+
 
 namespace PivotTreeMaptDemo
 {
@@ -287,6 +284,24 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
 {% endhighlight %}
 
 N> In this example, **“PivotTreeMapDemo”** indicates the name and root namespace of the Application created in Visual Studio IDE and **“OlapService”** indicates the name of the WCF service created.
+
+**Configuring routing file**
+
+Routing configuration needs to be done in `RouteConfig.cs` file found under **AppStart** folder. The configuration would allow picking appropriate WCF service without any issues.
+
+{% highlight c# %}
+
+public static void RegisterRoutes(RouteCollection routes) {
+    routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+    routes.IgnoreRoute("{resource}.svc/{*pathInfo}");
+    routes.IgnoreRoute("{resource}.svc");
+    routes.MapRoute(
+        name: "Default",
+        url: "{controller}/{action}/{id}",
+        defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+    );
+}
+{% endhighlight %}
 
 The above code will generate a simple PivotTreeMap showing Customer Count over different customer geographic locations across a period of fiscal years.
 
