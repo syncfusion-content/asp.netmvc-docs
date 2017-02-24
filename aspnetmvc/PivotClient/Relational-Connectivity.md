@@ -306,14 +306,30 @@ namespace PivotClientDemo {
         {
             return pivotClient.GetJsonData(action, ProductSales.GetSalesData(), args);
         }
-        public Dictionary<string, object> SaveReportToDB(string reportName, string operationalMode, string analysisMode, string olapReport, string clientReports)
+       public Dictionary<string, object> SaveReportToDB(string reportName, string operationalMode, string analysisMode, string olapReport, string clientReports)
         {
             reportName = reportName + "##" + operationalMode.ToLower() + "#>>#" + analysisMode.ToLower();
+            bool isDuplicate = true;
             SqlCeConnection con = new SqlCeConnection() { ConnectionString = conStringforDB };
             con.Open();
-            SqlCeCommand cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            SqlCeCommand cmd1 = null;
+            foreach (DataRow row in GetDataTable().Rows)
+            {
+                if ((row.ItemArray[0] as string).Equals(reportName))
+                {
+                    isDuplicate = false;
+                    cmd1 = new SqlCeCommand("update ReportsTable set Report=@Reports where ReportName like @ReportName", con);
+                }
+            }
+            if (isDuplicate)
+            {
+                cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            }
             cmd1.Parameters.Add("@ReportName", reportName);
-            cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(clientReports).ToArray());
+            if (operationalMode.ToLower() == "servermode" && analysisMode == "olap")
+                cmd1.Parameters.Add("@Reports", OLAPUTILS.Utils.GetReportStream(clientReports).ToArray());
+            else
+                cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(clientReports).ToArray());
             cmd1.ExecuteNonQuery();
             con.Close();
             return null;
@@ -376,7 +392,7 @@ namespace PivotClientDemo {
             return dictionary;
         }
 
-        public Dictionary<string, object> LoadReportFromDB(string reportName, string operationalMode,string analysisMode, string olapReport, string clientReports)
+        public Dictionary<string, object> LoadReportFromDB(string reportName, string operationalMode, string analysisMode, string olapReport, string clientReports)
         {
             PivotReport report = new PivotReport();
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -397,16 +413,16 @@ namespace PivotClientDemo {
                     }
                     else
                     {
-                    byte[] reportString = new byte[2 * 1024];
-                    reportString = (row.ItemArray[1] as byte[]);
+                        byte[] reportString = new byte[2 * 1024];
+                        reportString = (row.ItemArray[1] as byte[]);
                         if (analysisMode.ToLower() == "pivot" && operationalMode.ToLower() == "servermode")
                             dictionary = pivotClient.GetJsonData("LoadReport", ProductSales.GetSalesData(), Encoding.UTF8.GetString(reportString));
                         else
                             dictionary.Add("report", Encoding.UTF8.GetString(reportString));
-                    break;
-                }
+                        break;
+                    }
 
-            }
+                }
             }
             return dictionary;
         }

@@ -158,11 +158,12 @@ Initializes the OLAP datasource for PivotTreeMap control as shown below.
 @Html.EJ().Pivot().PivotTreeMap("PivotTreeMap1").IsResponsive(true).DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();})
 .Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
-<script id="tooltipTemplate" type="application/jsrender">
-    <div style="background:White; color:black; font-size:12px; font-weight:normal; border: 1px solid #4D4D4D; white-space: nowrap;border-radius: 2px; margin-right: 25px; min-width: 110px;padding-right: 5px; padding-left: 5px; width: auto; height: auto;">
-        <p>Measures : {{:~Measures(#data)}}</p><p>Column : {{:~Column(#data)}}</p><p>Value : {{:~Value(#data)}}</p>
-    </div>
-</script>
+ <!--Tooltip labels can be localized here-->
+    <script id="tooltipTemplate" type="application/jsrender"> 
+        <div style="background:White; color:black; font-size:12px; font-weight:normal; border: 1px solid #4D4D4D; white-space: nowrap;border-radius: 2px; margin-right: 25px; min-width: 110px;padding-right: 5px; padding-left: 5px; padding-bottom: 2px ;width: auto; height: auto;">
+            <div>Measure(s) : {{:~Measures(#data)}}</div><div>Row : {{:~Row(#data)}}</div><div>Column : {{:~Column(#data)}}</div><div>Value : {{:~Value(#data)}}</div>
+        </div>
+    </script>  
 
 {% endhighlight %}
 
@@ -188,9 +189,6 @@ Now add the following dependency libraries as references into your Web Applicati
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
 * Syncfusion.PivotAnalysis.Base
-* Syncfusion.XlsIO.Base
-* Syncfusion.Pdf.Base
-* Syncfusion.DocIO.Base
 * Syncfusion.EJ
 * Syncfusion.EJ.MVC
 * Syncfusion.EJ.Pivot
@@ -246,9 +244,6 @@ Register the referenced assemblies in Web.config files available inside Views fo
         <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
         <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
-        <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
     </assemblies>
 </compilation>
 
@@ -333,15 +328,15 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
 @using Syncfusion.JavaScript; 
 
 <div> 
-    @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/Olap")) 
+   @Html.EJ().Pivot().PivotTreeMap("PivotTreeMap1").Url(Url.Content("/Olap")) 
 </div>
 
 <!--Tooltip labels can be localized here-->
-<script id="tooltipTemplate" type="application/jsrender">
-    <div style="background:White; color:black; font-size:12px; font-weight:normal; border: 1px solid #4D4D4D; white-space: nowrap;border-radius: 2px; margin-right: 25px; min-width: 110px;padding-right: 5px; padding-left: 5px; width: auto; height: auto;">
-        <p>Measures : {{:~Measures(#data)}}</p><p>Column : {{:~Column(#data)}}</p><p>Value : {{:~Value(#data)}}</p>
+<script id="tooltipTemplate" type="application/jsrender"> 
+    <div style="background:White; color:black; font-size:12px; font-weight:normal; border: 1px solid #4D4D4D; white-space: nowrap;border-radius: 2px; margin-right: 25px; min-width: 110px;padding-right: 5px; padding-left: 5px; padding-bottom: 2px ;width: auto; height: auto;">
+        <div>Measure(s) : {{:~Measures(#data)}}</div><div>Row : {{:~Row(#data)}}</div><div>Column : {{:~Column(#data)}}</div><div>Value : {{:~Value(#data)}}</div>
     </div>
-</script>
+</script>  
 
 {% endhighlight %}
 

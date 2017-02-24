@@ -17,7 +17,7 @@ You can hide the **Sub Total** for respective fields in rows and columns by sett
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Columns(columns => { columns.FieldName("[Date].[Fiscal]").Add(); columns.ShowSubTotal(false); }))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Date").FieldCaption("Date").ShowSubTotal(false).Add(); rows.FieldName("Product").FieldCaption("Product").Add(); }).Columns(columns => { columns.FieldName("Country").FieldCaption("Country").Add(); columns.FieldName("State").FieldCaption("State").Add(); }).Values(values => { values.FieldName("Amount").Add(); values.FieldName("Quantity").Add(); }))
 
 {% endhighlight %}
 

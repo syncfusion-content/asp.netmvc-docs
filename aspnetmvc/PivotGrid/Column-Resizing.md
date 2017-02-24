@@ -15,7 +15,7 @@ You can enable column resizing option in PivotGrid by setting the `EnableColumnR
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableColumnResizing(false).DataSource(.....)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableColumnResizing(true).DataSource(.....)
 
 {% endhighlight %} 
 
