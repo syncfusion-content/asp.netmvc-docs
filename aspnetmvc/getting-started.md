@@ -15,7 +15,7 @@ This section describes how to configure the Syncfusion ASP.NET MVC components in
 2. Through Syncfusion NuGet Packages
 3. Through Manual Integration into the new/existing Application
 
-The procedure that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
+The procedures that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
 
 The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
 
