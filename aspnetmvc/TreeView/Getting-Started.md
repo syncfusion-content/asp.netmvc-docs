@@ -122,14 +122,14 @@ Render TreeView with remote data source
     @(Html.EJ().TreeView("treeView")
         .TreeViewFields(field =>
             field.Datasource(data =>
-                data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+                data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
             )
             .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
             .Id("CategoryID")
             .Text("CategoryName")
             .Child(childField =>
                 childField.Datasource(data =>
-                    data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
+                    data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
                 .TableName("Products")
                 .Id("ProductID")
                 .ParentId("CategoryID")
