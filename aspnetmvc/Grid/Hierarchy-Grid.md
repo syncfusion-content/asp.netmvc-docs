@@ -29,7 +29,7 @@ The `ChildGrid` property is used to define the model properties that has to be a
         })
                  .ChildGrid(child =>
                  {
-                     child.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/")
+                     child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
                         .QueryString("EmployeeID")
                         .AllowPaging()
                         .PageSettings(page => page.PageSize(5))
@@ -92,7 +92,7 @@ The Grid can able to expand and collapse all the `ChildGrid` through programmati
         .Datasource((IEnumerable<object>)ViewBag.datasource)
         .ChildGrid(child =>
         {
-            child.Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/")
+            child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
                .QueryString("EmployeeID")
                .AllowPaging()
                .PageSettings(page => page.PageSize(5))
