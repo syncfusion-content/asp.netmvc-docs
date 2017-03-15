@@ -5,6 +5,7 @@ description: Cards
 documentation: ug
 control: Kanban
 platform: ejmvc
+keywords: cards,kanban cards,card Customization,card template,card tooltip
 ---
 
 # Cards
