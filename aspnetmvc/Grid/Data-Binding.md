@@ -376,7 +376,7 @@ WCF Data Services is a component of the .NET Framework that enables you to creat
 
 To consume WCF DataService in Grid control, provide the service link directly to the Grid `DataSource` property.
 
-We have an online OData Service `http://mvc.syncfusion.com/Services/Northwnd.svc/Order` created specifically for Syncfusion Controls
+We have an online OData Service `http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders` created specifically for Syncfusion Controls
 
 The following code example describes the above behavior.
 
@@ -384,7 +384,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
     
         @(Html.EJ().Grid<object>("FlatGrid")
-            .Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")
+            .Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
             .AllowPaging()
             .Columns(col =>
              {
@@ -592,7 +592,7 @@ The following code example describes the above behavior.
  {% highlight razor %} 
  
          @(Html.EJ().Grid<object>("FlatGrid")
-             .Datasource("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")
+             .Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
              .AllowPaging()
              .Columns(col =>
               {
@@ -622,7 +622,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
         
          @(Html.EJ().Grid<object>("FlatGrid")
-              .Datasource(ds =>   ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders").Offline(true))              
+              .Datasource(ds =>   ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Offline(true))              
               .AllowPaging()
               .Columns(col =>
               {
