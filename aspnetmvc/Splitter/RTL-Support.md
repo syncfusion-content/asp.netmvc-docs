@@ -114,7 +114,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 		</h3>
 
-		Essential Mvc Grid offers full featured a Grid control with extensive support for
+		Essential MVC Grid offers full featured a Grid control with extensive support for
 
 		Grouping and the display of hierarchical data.
 

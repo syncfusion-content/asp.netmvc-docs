@@ -22,7 +22,7 @@ The following steps explain you how to enable state maintenance for AutoComplete
 
 {% highlight CSHTML %}
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 

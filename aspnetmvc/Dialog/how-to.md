@@ -176,7 +176,7 @@ Initialize Footer in Dialog widgets by adding the script section as below.
 		  
     </div>
     <div class="condition" style="float:left; margin-left:15px">
-      @Html.EJ().CheckBox("check1").Text("Dont ask me this again")
+      @Html.EJ().CheckBox("check1").Text("Don't ask me this again")
     </div> 
     </script>
  
