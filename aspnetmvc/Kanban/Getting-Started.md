@@ -143,7 +143,7 @@ Filters allows to filter the collection of cards from `DataSource` which meets t
     })
     .FilterSettings(filter =>
     {
-        filter.Text("Janet Issues").Query("new ej.Query().where('Assignee', 'equal', 'Janet Leverling')").Description("Displays issues which matches the assignee as 'Janet Leverling").Add();
+        filter.Text("Janet Issues").Query("new ej.Query().where('Assignee', 'equal', 'Janet')").Description("Displays issues which matches the assignee as 'Janet").Add();
         filter.Text("Testing Issues").Query("new ej.Query().where('Status', 'equal', 'Testing')").Description("Display the issues of 'Testing'").Add();
     })
     )

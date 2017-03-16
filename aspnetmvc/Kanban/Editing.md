@@ -207,12 +207,12 @@ The following code example describes the above behavior.
                                 </td>
                                 <td style="text-align: left">
                                     <select id="Assignee" name="Assignee">
-                                        <option value="Nancy Davloio">Nancy Davloio</option>
+                                        <option value="Nancy Davloio">Nancy</option>
                                         <option value="Andrew Fuller">Andrew Fuller</option>
-                                        <option value="Janet Leverling">Janet Leverling</option>
-                                        <option value="Margaret hamilt">Margaret hamilt</option>
+                                        <option value="Janet Leverling">Janet</option>
+                                        <option value="Margaret hamilt">Margaret</option>
                                         <option value="Steven walker">Steven walker</option>
-                                        <option value="Michael Suyama">Michael Suyama</option>
+                                        <option value="Michael Suyama">Michael</option>
                                         <option value="Robert King">Robert King</option>
                                         <option value="Laura Callahan">Laura Callahan</option>
                                     </select>
@@ -474,12 +474,12 @@ The following code example describes the above behavior.
                                 </td>
                                 <td style="text-align: left">
                                     <select id="Assignee" name="Assignee">
-                                        <option value="Nancy Davloio">Nancy Davloio</option>
+                                        <option value="Nancy">Nancy Davloio</option>
                                         <option value="Andrew Fuller">Andrew Fuller</option>
-                                        <option value="Janet Leverling">Janet Leverling</option>
-                                        <option value="Margaret hamilt">Margaret hamilt</option>
+                                        <option value="Janet">Janet Leverling</option>
+                                        <option value="Margaret">Margaret hamilt</option>
                                         <option value="Steven walker">Steven walker</option>
-                                        <option value="Michael Suyama">Michael Suyama</option>
+                                        <option value="Michael">Michael Suyama</option>
                                         <option value="Robert King">Robert King</option>
                                         <option value="Laura Callahan">Laura Callahan</option>
                                     </select>
@@ -914,14 +914,14 @@ The following code example describes the above behavior.
                            .PrimaryKey("Id")
                            .Priority("RankId");
                   })
-                  .ClientSideEvents(evt => evt.ToolBarClick("toolbarClick"))
+                  .ClientSideEvents(eve => eve.ToolBarClick("toolbarClick"))
     )
     
     <script type="text/javascript">
      function toolbarClick(args) {
         if (args.itemName == "Delete" && this.element.find(".e-kanbancard").hasClass("e-cardselection")) {
-            var selectedcard = this.element.find(".e-cardselection");
-            this.KanbanEdit.deleteCard(selectedcard.attr("id"));
+            var selected = this.element.find(".e-cardselection");
+            this.KanbanEdit.deleteCard(selected.attr("id"));
         }
 
        }

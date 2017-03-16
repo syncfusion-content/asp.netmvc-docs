@@ -68,7 +68,7 @@ The following code example describes the above behavior.
                 .Tag("Tags")
                 .PrimaryKey("Id");
         })
-        .SelectioType(SelectionType.Multiple)
+        .SelectionType(SelectionType.Multiple)
     )
   
   

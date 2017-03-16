@@ -39,7 +39,7 @@ The following code example describes the above behavior.
         })
         .FilterSettings(filter =>
         {
-            filter.Text("Janet Issues").Query("new ej.Query().where('Assignee', 'equal', 'Janet Leverling')").Description("Displays issues which matches the assignee as 'Janet Leverling").Add();
+            filter.Text("Janet Issues").Query("new ej.Query().where('Assignee', 'equal', 'Janet')").Description("Displays issues which matches the assignee as 'Janet").Add();
             filter.Text("Closed  Issues").Query("new ej.Query().where('Status', 'equal', 'Close')").Description("Display the 'Closed' issues").Add();
         })     
     )
