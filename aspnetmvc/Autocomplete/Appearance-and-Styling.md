@@ -25,7 +25,7 @@ The following steps explain the dimensional properties of an AutoComplete textbo
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -69,7 +69,7 @@ The following steps explain enabling the ShowRoundedCorner property for an AutoC
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -107,7 +107,7 @@ The following steps explain you how to configure WatermarkText property for an A
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -143,7 +143,7 @@ The following steps help you set height and width of the popup panel of an AutoC
 
 {% highlight CSHTML %}
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -183,7 +183,7 @@ The following steps are used to set the time delay to load the popup panel of an
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -272,7 +272,7 @@ The following steps allow you to configure CssClass for an AutoComplete textbox.
 
    ~~~ cshtml
 
-		@*Refer to the DataSource defined in Local Databinding Step 1 *@
+		@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 		@Html.EJ().Autocomplete("autocomplete")
 

@@ -24,7 +24,7 @@ The following steps explain the configuration of the filtering conditions for an
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 
 
@@ -63,7 +63,7 @@ The following steps explain how to enable the AutoFill property for an AutoCompl
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 
 
@@ -104,7 +104,7 @@ The following steps explain how to enable the sorting property for an AutoComple
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 
 
@@ -148,7 +148,7 @@ The following steps explain you how to enable this property.
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 <div style="width: 400px">
 
@@ -216,7 +216,7 @@ The following steps explains you how to configure the Popup button for an AutoCo
 {% highlight CSHTML %}	
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -256,7 +256,7 @@ The following steps help you to disable editing in an AutoComplete textbox.
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -298,7 +298,7 @@ The following steps allow you to set text for empty results of an AutoComplete t
 
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 

@@ -25,7 +25,7 @@ The following steps explain how you can enable the HighlightSearch property for 
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
@@ -65,7 +65,7 @@ The following steps explain you how to enable the CaseSensitiveSearch property f
 
 {% highlight CSHTML %}
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 

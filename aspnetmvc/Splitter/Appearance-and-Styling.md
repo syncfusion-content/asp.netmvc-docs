@@ -100,7 +100,7 @@ p.Add().ContentTemplate(
 
 		</h3>
 
-		Essential Mvc Grid offers full featured a Grid control with extensive support for
+		Essential MVC Grid offers full featured a Grid control with extensive support for
 
 		Grouping and the display of hierarchical data.
 
@@ -212,7 +212,7 @@ p =>
 
 				 <h3 class="h3">Grid </h3>
 
-				 Essential Mvc Grid offers full featured a Grid control with extensive support for
+				 Essential MVC Grid offers full featured a Grid control with extensive support for
 
 				 Grouping and the display of hierarchical data.
 
@@ -296,7 +296,7 @@ p =>
 
 				 <h3 class="h3">Grid </h3>
 
-				 Essential Mvc Grid offers full featured a Grid control with extensive support for
+				 Essential MVC Grid offers full featured a Grid control with extensive support for
 
 				 Grouping and the display of hierarchical data.
 
@@ -394,7 +394,7 @@ In the View page add the Splitter helper and customize the Splitter appearance.
 
                      <h3 class="h3">Grid </h3>
 
-                     Essential Mvc Grid offers full featured a Grid control with extensive support for
+                     Essential MVC Grid offers full featured a Grid control with extensive support for
 
                      Grouping and the display of hierarchical data.
 
