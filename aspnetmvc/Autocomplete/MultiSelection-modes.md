@@ -26,7 +26,7 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
 {% highlight CSHTML %}
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 <div style="width: 600px">
 

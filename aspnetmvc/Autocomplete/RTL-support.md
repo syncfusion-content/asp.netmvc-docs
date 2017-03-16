@@ -23,7 +23,7 @@ The following steps explain how you can enable the right-to-left property for an
 {% highlight CSHTML %}
 
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 @Html.EJ().Autocomplete("autocomplete")
 
