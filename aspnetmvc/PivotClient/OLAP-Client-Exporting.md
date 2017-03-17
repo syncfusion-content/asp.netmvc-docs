@@ -205,7 +205,7 @@ void pivotClient_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 
 void pivotClient_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 {
-    //You can add header/footer information to the pdf document.
+    //You can add header/footer information to the PDF document.
 }
 
 void pivotClient_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
@@ -240,7 +240,7 @@ void olapClientHelper_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc
 
 void olapClientHelper_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 {
-    //You can add header/footer information to the pdf document.
+    //You can add header/footer information to the PDF document.
 }
 
 void olapClientHelper_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument document)
