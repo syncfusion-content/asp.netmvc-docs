@@ -482,7 +482,7 @@ void pGrid_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 
 void pGrid_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 {
-    //You can add header/footer information to the pdf document.
+    //You can add header/footer information to the PDF document.
 }
 
 public void CSVExport()
@@ -541,7 +541,7 @@ void htmlHelper_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument docu
 }
 void htmlHelper_AddPDFHeaderFooter(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 {
-    //You can add header/footer information to the pdf document.
+    //You can add header/footer information to the PDF document.
 }
 void htmlHelper_PDFExport(object sender, Syncfusion.Pdf.PdfDocument pdfDoc)
 {

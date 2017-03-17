@@ -167,7 +167,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 ### Method
-You can freeze rows using [`freezeRows`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfreeze-freezeRows "freezeRows") method. 
+You can freeze rows using [`freezeRows`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfreeze-freezerows "freezeRows") method. 
 
 The following code example describes the above behavior,
 
@@ -264,7 +264,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 ### Method
-You can apply freeze columns using [`freezeColumns`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfreeze-freezeColumns "freezeColumns") method. 
+You can apply freeze columns using [`freezeColumns`](https://help.syncfusion.com/api/js/ejspreadsheet#methods:xlfreeze-freezecolumns "freezeColumns") method. 
 The following code example describes the above behavior
 
 {% tabs %}
