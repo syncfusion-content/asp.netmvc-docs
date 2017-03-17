@@ -58,10 +58,10 @@ The following code example describes the above behavior.
         public ActionResult KanbanFeatures()
         {
             List<Tasks> Task = new List<Tasks>();
-            Task.Add(new Tasks(1, "Open", "Analyze the new requirements gathered from the customer.", "Nancy Davloio"));
+            Task.Add(new Tasks(1, "Open", "Analyze the new requirements gathered from the customer.", "Nancy"));
             Task.Add(new Tasks(2, "InProgress", "Improve application performance", "Andrew Fuller"));
-            Task.Add(new Tasks(3, "Open", "Arrange a web meeting with the customer to get new requirements.","Janet Leverling"));
-            Task.Add(new Tasks(4, "InProgress", "Fix the issues reported in the IE browser.", "Janet Leverling"));
+            Task.Add(new Tasks(3, "Open", "Arrange a web meeting with the customer to get new requirements.","Janet"));
+            Task.Add(new Tasks(4, "InProgress", "Fix the issues reported in the IE browser.", "Janet"));
             Task.Add(new Tasks(5, "Testing", "Fix the issues reported by the customer.","Steven walker"));
             ViewBag.datasource = Task;
             return View();
