@@ -661,7 +661,7 @@ It has three functions. They are
 
 1. `create` - It is used to create the control at time of initialize.
 2. `read`   - It is used to read the Filter value selected.
-3. `write`  - It is used to assign the value selected for filtering.
+3. `write`  - It is used to render the control and assign the value selected for filtering.
 
 
 The following code example describes the above behavior.
@@ -706,30 +706,23 @@ namespace MVCSampleBrowser.Controllers
 {% highlight js %}
 
      <script type="text/javascript">
-		$(function () {
-            $("#sampleProperties").ejPropertiesPanel();
-        });
-        function autoComplete_create(args) {
+		function autoComplete_create(args) {
             return "<input>"
         }
-
         function autoComplete_write(args) {
 			var gridObj = $("#Filtering").ejGrid("instance");
             var data = ej.DataManager(gridObj.model.dataSource).executeLocal(new ej.Query().select("CustomerID"));
             args.element.ejAutocomplete({ width: "100%", dataSource: data, enableDistinct: true, focusOut: ej.proxy(args.column.filterBarTemplate.read, this, args) });
         }
-
         function autoComplete_read(args) {
             this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
         }
-
         function dropdown_write(args) {
             var data = [{ text: "clear", value: "clear" }, { text: "1", value: 1 }, { text: "2", value: 2 }, { text: "3", value: 3 }, { text: "4", value: 4 },
                                                             { text: "5", value: 5 }, { text: "6", value: 6 }, { text: "7", value: 7 }, { text: "8", value: 8 }, { text: "9", value: 9 }
             ]
             args.element.ejDropDownList({ width: "100%", dataSource: data, change: ej.proxy(args.column.filterBarTemplate.read, this, args) })
         }
-
         function dropdown_read(args) {
             if (args.element.val() == "clear") {
                 this.clearFiltering(args.column.field);
@@ -740,29 +733,15 @@ namespace MVCSampleBrowser.Controllers
         function numeric_write(args) {
             args.element.ejNumericTextbox({ width: "100%",decimalPlaces: 2, focusOut: ej.proxy(args.column.filterBarTemplate.read, this, args) });
         }
-
         function numeric_read(args) {
             this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
         }
-
         function check_write(args) {
             args.element.ejCheckBox({ change: ej.proxy(args.column.filterBarTemplate.read, this, args) });
         }
         function check_read(args) {
             this.filterColumn(args.column.field, "equal", args.element.parent().attr('aria-checked'), "and", true)
         }
-		function clearFilter(args){
-			var obj = $("#Filtering").ejGrid("instance");
-			obj.clearFiltering(args.text)
-			if(args.text == "Verified")
-				$("#ej" +args.text+ "_filterBarcell").find('.e-icon').removeClass('e-checkmark');
-			if(args.text == "Frieght")
-			{
-				var numObj = $("#Freight_filterBarcell").ejNumericTextbox('instance');
-				numObj.option("value"," ")
-			}
-			$("#clDr").ejDropDownList("model.selectedIndex",-1) 
-		}
     </script>
     
 {% endhighlight %}   
