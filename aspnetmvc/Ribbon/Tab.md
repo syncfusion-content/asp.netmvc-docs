@@ -15,21 +15,21 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
 
       @(Html.EJ().Ribbon("defaultRibbon")
       .Width("500")
-      .ApplicationTab(apptab => {
-          apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+      .ApplicationTab(app => {
+          app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
               OpenOnClick = false
           });
       })
       .RibbonTabs(tab => {
-          tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-              tabgrp.Text("Save").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                  cnt.ContentGroups(cntgrp => {
-                      cntgrp.Id("print").Text("Print").ButtonSettings(new ButtonProperties() {
+          tab.Id("home").Text("HOME").TabGroups(tabgroup => {
+              tabgroup.Text("Save").AlignType(RibbonAlignType.Rows).Content(ctn => {
+                  ctn.ContentGroups(ctngrp => {
+                      ctngrp.Id("print").Text("Print").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
                               PrefixIcon = "e-Ribbon e-print"
                       }).Add();
-                      cntgrp.Id("save").Text("Save").ButtonSettings(new ButtonProperties() {
+                      ctngrp.Id("save").Text("Save").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
                               PrefixIcon = "e-Ribbon e-save"
@@ -37,8 +37,8 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
                   }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("50px").Height("70px")).Add();
               }).Add();
           }).Add();
-          tab.Id("sendrec").Text("Send/Receive").TabGroups(tabgrp => {
-              tabgrp.Text("Send/Receive").Type("custom").ContentID("sendReceive").AlignType(RibbonAlignType.Columns).Content(cnt => {
+          tab.Id("sendrec").Text("Send/Receive").TabGroups(tabgroup => {
+              tabgroup.Text("Send/Receive").Type("custom").ContentID("sendReceive").AlignType(RibbonAlignType.Columns).Content(ctn => {
 
               }).Add();
           }).Add();
@@ -47,7 +47,7 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
     <div id="sendReceive">
         Send/Receive All Folders
     </div>
-    <ul id="Ribbonmenu">
+    <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>
