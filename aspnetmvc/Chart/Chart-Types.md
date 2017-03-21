@@ -2608,3 +2608,96 @@ To customize the errorBar cap visibility, length, width and fill color, you can 
 {% endhighlight %}
 
 ![](Chart-Types_images/Chart-Types_img80.png)
+
+
+## Box and Whisker Chart 
+
+To render a Box and Whisker Chart, set the series *type* as **"boxandwhisker"** .Box and Whisker chart requires
+2 fields (x and y) to plot a segment. The feild y requires n number of data or it should  contain minimum of five values to plot a segment.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+                sr.Points(pt =>
+                {                                             
+                        pt.X("Development").Y(22,22,23,25,25,25,26,27,27,28,28,29,30,32,34,32,34,36,35,38).Add();
+                        pt.X("Testing").Y(22,33,23,25,26,28,29,30,34,33,32,31,50).Add();
+                        pt.X("HR").Y(22,24,25,30,32,34,36,38,39,41,35,36,40,56).Add();     
+                        pt.X("Finance").Y(26,27,28,30,32,34,35,37,35,37,45).Add();
+                        pt.X("R&D").Y(26,27,29,32,34,35,36,37,38,39,41,43,58).Add();
+                })
+                .Type(SeriesType.BoxAndWhisker)              
+             })   
+        //...
+   )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img90.png)
+
+### BoxPlotMode
+ 
+You can change the rendering mode of the  Box and Whisker series using the *BoxPlotMode* property .to *exclusive*, *inclusive* or *normal*. The default value of *BoxPlotMode* is **"exclusive"**.The other boxPlotModes available are `inclusive` and *normal*. 
+
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+                .BoxPlotMode(BoxPlotMode.Inclusive)
+            })
+        //...
+    )
+
+{% endhighlight %}
+
+### ShowMedian
+
+Box and Whisker *showMedian* property is used to show the box and whisker average value. The default value of *showMedian* is **"false"**.  
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+                .ShowMedian(true)  
+            })
+        //...
+ )
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img91.png)
+
+###  Customize the Outlier
+
+Outlier symbol, width and height can be customized using outlierSettings through *outlierSettings* property. By default Outlier symbol is displayed as circle with a height and width of 6 pixels.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+                .OutlierSettings(ot=>ot.Shape(ChartShape.Triangle)
+                .Size(sz=>sz.Height(10).Width(10))).Add(); 
+            })
+        //...
+)
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img92.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/boxandwhisker) here to view the Box and Whisker Chart online demo sample.
