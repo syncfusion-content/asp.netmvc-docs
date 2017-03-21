@@ -80,22 +80,22 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
 
     @(Html.EJ().Ribbon("defaultRibbon")
                         .Width("100%")
-                        .ApplicationTab(apptab =>
+                        .ApplicationTab(app =>
                         {
-                            apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
+                            app.Type(ApplicationTabType.Menu).MenuItemID("ribbon").MenuSettings(new MenuProperties()
                             {
                                 OpenOnClick = false
                             });
                         })
                         .RibbonTabs(tab =>
                         {
-                            tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                            tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                             {
-                                tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+                                tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
                                 {
-                                    cnt.ContentGroups(cntgrp =>
+                                    ctn.ContentGroups(ctngrp =>
                                     {
-                                        cntgrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                                        ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             ImagePosition = ImagePosition.ImageTop,
@@ -103,11 +103,11 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                         }).Add();
                                     }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
                                 }).Add();
-                                tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Columns).Content(cnt =>
+                                tabgroup.Text("Clipboard").AlignType(RibbonAlignType.Columns).Content(ctn =>
                                 {
-                                    cnt.ContentGroups(cntgrp =>
+                                    ctn.ContentGroups(ctngrp =>
                                     {
-                                        cntgrp.Id("paste").Text("Paste").ToolTip("Paste").SplitButtonSettings(new SplitButtonProperties()
+                                        ctngrp.Id("paste").Text("Paste").ToolTip("Paste").SplitButtonSettings(new SplitButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             PrefixIcon = "e-ribbon e-ribbonpaste",
@@ -117,26 +117,26 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                         }).Add();
                                     }).ContentDefaults(df => df.Type(RibbonButtonType.SplitButton).Width("50px").Height("70px")).Add();
                                 }).Add();
-                                tabgrp.Text("Font").AlignType(RibbonAlignType.Rows).Content(cnt =>
+                                tabgroup.Text("Font").AlignType(RibbonAlignType.Rows).Content(ctn =>
                                 {
-                                    cnt.ContentGroups(cntgrp =>
+                                    ctn.ContentGroups(ctngrp =>
                                     {
-                                        cntgrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
+                                        ctngrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
                                         {
                                             DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
                                             Text = "Segoe UI",
                                             Width = "150px"
                                         }).Add();
-                                        cntgrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
+                                        ctngrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
                                         {
                                             DataSource = (IEnumerable<FontPoint>)ViewBag.datasource1,
                                             Text = "1pt",
                                             Width = "65px"
                                         }).Add();
                                     }).ContentDefaults(df => df.Type(RibbonButtonType.DropDownList).Height("28px")).Add();
-                                    cnt.ContentGroups(cntgrp =>
+                                    ctn.ContentGroups(ctngrp =>
                                     {
-                                        cntgrp.Id("bold").ToolTip("Bold").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                        ctngrp.Id("bold").ToolTip("Bold").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Bold",
@@ -144,7 +144,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                             DefaultPrefixIcon = "e-ribbon bold",
                                             ActivePrefixIcon = "e-ribbon bold",
                                         }).Add();
-                                        cntgrp.Id("italic").ToolTip("Italic").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                        ctngrp.Id("italic").ToolTip("Italic").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Italic",
@@ -157,7 +157,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                             }).Add();
                         })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
     <li>
         <a>FILE</a>
         <ul>
@@ -212,26 +212,26 @@ You can set `Type` as `custom` to render custom controls and Custom element id h
 
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("600")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("Font").Content(cnt =>
+                        tabgroup.Text("Font").Content(ctn =>
                         {
-                            cnt.ContentGroups(cntgrp =>
+                            ctn.ContentGroups(ctngrp =>
                             {
-                                cntgrp.Id("fontcolor").ToolTip("Font Color").ContentID("fontcolor").Add();
+                                ctngrp.Id("fontcolor").ToolTip("Font Color").ContentID("fontcolor").Add();
                             }).ContentDefaults(df => df.Type(RibbonButtonType.Custom).Height("30px")).Add();
                         }).Add();
-                        tabgrp.Text("Operators").Type("custom").ContentID("design").Add();
+                        tabgroup.Text("Operators").Type("custom").ContentID("design").Add();
                     }).Add();
                 })
                 .ClientSideEvents(evt => evt.Create("createControl"))    )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>

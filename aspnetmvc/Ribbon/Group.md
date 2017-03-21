@@ -40,18 +40,18 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
 
     @(Html.EJ().Ribbon("defaultRibbon")
         .Width("500px")
-        .ApplicationTab(apptab =>
+        .ApplicationTab(app =>
         {
-            apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+            app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
         })
         .RibbonTabs(tab =>
         {
-            tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+            tab.Id("home").Text("HOME").TabGroups(tabgroup =>
             {
-                tabgrp.Text("Clipboard").Content(cnt =>
+                tabgroup.Text("Clipboard").Content(ctn =>
                 {
-                    cnt.ContentGroups(cntgrp =>
-                    {  cntgrp.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
+                    ctn.ContentGroups(ctngrp =>
+                    {  ctngrp.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
                                                 {
                                                     ContentType = ContentType.ImageOnly,
                                                     PrefixIcon = "e-ribbon e-ribbonpaste",
@@ -59,16 +59,16 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
                                                 }).Add();
                     }).Add();
                 }).Add();
-                tabgrp.Text("Font").AlignType(RibbonAlignType.Columns).Content(cnt =>
+                tabgroup.Text("Font").AlignType(RibbonAlignType.Columns).Content(ctn =>
                 {
-                    cnt.ContentGroups(cntgrp =>
+                    ctn.ContentGroups(ctngrp =>
                     {
-                        cntgrp.Id("cut").ToggleButtonSettings(new ToggleButtonProperties()
+                        ctngrp.Id("cut").ToggleButtonSettings(new ToggleButtonProperties()
                         {
                             DefaultText = "Cut",
                             ActiveText = "Cut Over"
                         }).Add();
-                        cntgrp.Id("copy").ToggleButtonSettings(new ToggleButtonProperties()
+                        ctngrp.Id("copy").ToggleButtonSettings(new ToggleButtonProperties()
                         {
                             DefaultText = "Copy",
                             ActiveText = "Copy Over"
@@ -78,7 +78,7 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
             }).Add();
         })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -102,22 +102,22 @@ Separates the control from the next control in the group when group `AlignType` 
 
     @(Html.EJ().Ribbon("defaultRibbon")
         .Width("500px")
-        .ApplicationTab(apptab =>
+        .ApplicationTab(app =>
         {
-            apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+            app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
         })
         .RibbonTabs(tab =>
         {
-            tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+            tab.Id("home").Text("HOME").TabGroups(tabgroup =>
             {
-                tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+                tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
                 {
-                    cnt.ContentGroups(cntgrp =>
-                    {                        cntgrp.Id("new").Text("New").ToolTip("New").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    ctn.ContentGroups(ctngrp =>
+                    {                        ctngrp.Id("new").Text("New").ToolTip("New").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                         {
                             Width = "100",
                         }).Add();
-                        cntgrp.Id("font").Text("Font").ToolTip("Font").ButtonSettings(new ButtonProperties()
+                        ctngrp.Id("font").Text("Font").ToolTip("Font").ButtonSettings(new ButtonProperties()
                         {
                             Width = "150",
                         }).Add();
@@ -126,7 +126,7 @@ Separates the control from the next control in the group when group `AlignType` 
             }).Add();
         })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -152,20 +152,20 @@ Set group `Type` as `custom` to add custom items such as div, table and custom c
 
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("500")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("New").Type("custom").CustomContent("<button id='customContent'>Using Custom Content</button>").Add();
-                        tabgrp.Text("Data").Type("custom").ContentID("btn").Add();
+                        tabgroup.Text("New").Type("custom").CustomContent("<button id='customContent'>Using Custom Content</button>").Add();
+                        tabgroup.Text("Data").Type("custom").ContentID("btn").Add();
                     }).Add();
                 })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
     <li>
         <a>FILE</a>
         <ul>
@@ -188,19 +188,19 @@ Set group `Type` as `custom` to add custom items such as div, table and custom c
   
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("500")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").EnableGroupExpander(true).ContentID("btn").Add();
+                        tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Type("custom").EnableGroupExpander(true).ContentID("btn").Add();
                 })
-                .ClientSideEvents(evt => evt.GroupExpand("groupExpand"))
+                .ClientSideEvents(event => event.GroupExpand("groupExpand"))
     )
-      <ul id="ribbonmenu">
+      <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>
