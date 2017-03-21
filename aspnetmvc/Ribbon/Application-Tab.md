@@ -26,16 +26,16 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
 
     @(Html.EJ().Ribbon("defaultRibbon")
     .Width("500")
-    .ApplicationTab(apptab => {
-        apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+    .ApplicationTab(app=> {
+        app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
             OpenOnClick = false
         });
     })
     .RibbonTabs(tab => {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-            tabgrp.Text("New").ContentID("Contents").Type("custom").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                cnt.ContentGroups(cntgrp => {
-                    cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+        tab.Id("home").Text("HOME").TabGroups(tab => {
+            tab.Text("New").ContentID("Contents").Type("custom").AlignType(RibbonAlignType.Rows).Content(ctn => {
+                ctn.ContentGroups(ctngrp => {
+                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
                             PrefixIcon = "e-Ribbon e-new",
@@ -46,7 +46,7 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
         }).Add();
     }))
     <div id="Contents">Custom control</div>
-    <ul id="Ribbonmenu">
+    <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -73,8 +73,8 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
 
       @(Html.EJ().Ribbon("MenuJson")
          .Width("500")
-         .ApplicationTab(apptab => {
-             apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+         .ApplicationTab(app => {
+             app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
                  OpenOnClick = true,
                      MenuFields = new MenuFields() {
 
@@ -86,10 +86,10 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
              });
          })
          .RibbonTabs(tab => {
-             tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-                 tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                     cnt.ContentGroups(cntgrp => {
-                         cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+             tab.Id("home").Text("HOME").TabGroups(tab => {
+                 tab.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
+                     ctn.ContentGroups(ctngrp => {
+                         ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                              ContentType = ContentType.ImageOnly,
                                  ImagePosition = ImagePosition.ImageTop,
                                  PrefixIcon = "e-Ribbon e-new",
@@ -99,7 +99,7 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
                  }).Add();
              }).Add();
          })
-    <ul id="Ribbonmenu"></ul>
+    <ul id="Ribbon"></ul>
     }
     @section StyleSection{
     <link href="~/Content/ej/Ribbon-css/ej.icons.css" rel="stylesheet" />
@@ -115,11 +115,11 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
         public ActionResult Methods()
         {
 
-            Ribbon.Add(new MenuJson { id = 1, parentid = null, text = "File" });
-            Ribbon.Add(new MenuJson { id = 11, parentid = "1", text = "Open" });
-            Ribbon.Add(new MenuJson { id = 12, parentid = "1", text = "Save" });
-            Ribbon.Add(new MenuJson { id = 121, parentid = "12", text = "Save As" });
-            Ribbon.Add(new MenuJson { id = 122, parentid = "12", text = "Save All" });
+            Ribbon.Add(new MenuJson { id = 1, parent = null, text = "File" });
+            Ribbon.Add(new MenuJson { id = 11, parent = "1", text = "Open" });
+            Ribbon.Add(new MenuJson { id = 12, parent = "1", text = "Save" });
+            Ribbon.Add(new MenuJson { id = 121, parent = "12", text = "Save As" });
+            Ribbon.Add(new MenuJson { id = 122, parent = "12", text = "Save All" });
             ViewBag.datasource = Ribbon;
             return View();
         }
@@ -127,7 +127,7 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
         {
             public string text { get; set; }
             public int id { get; set; }
-            public string parentid { get; set; }
+            public string parent { get; set; }
         }
     }
    
@@ -156,8 +156,8 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
 
        @(Html.EJ().Ribbon("defaultRibbon")
     .Width("500")
-    .ApplicationTab(apptab => {
-        apptab.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings => {
+    .ApplicationTab(app => {
+        app.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings => {
             bsSettings.Text("FILE").Height("350").Width("100%").HeaderWidth("120").Pages(bsPage => {
                 bsPage.Id("new").Text("New").ContentID("newCon").Add();
                 bsPage.Id("close").Text("Close").EnableSeparator(true).ItemType(ItemType.Button).Add();
@@ -166,10 +166,10 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
         });
     })
     .RibbonTabs(tab => {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-            tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                cnt.ContentGroups(cntgrp => {
-                    cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+        tab.Id("home").Text("HOME").TabGroups(tab => {
+            tab.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
+                ctn.ContentGroups(ctngrp => {
+                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
 
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
@@ -180,7 +180,7 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
             }).Add();
         }).Add();
     })
-    .ClientSideEvents(evt => evt.Create("createControl")))
+    .ClientSideEvents(event => event.Create("createControl")))
          <div id="newCon">
          <table>
                 <tr>

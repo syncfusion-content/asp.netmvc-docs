@@ -15,8 +15,8 @@ Contextual Tabs are collection of Tabs that extended styling and can be shown ba
 
      @(Html.EJ().Ribbon("Ribbon")
      .Width("500")
-         .ApplicationTab(apptab => {
-                 apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu").MenuSettings(new MenuProperties()
+         .ApplicationTab(app => {
+                 app.Type(ApplicationTabType.Menu).MenuItemID("ribbon").MenuSettings(new MenuProperties()
                        {
                              OpenOnClick = false
                        });
@@ -42,7 +42,7 @@ Contextual Tabs are collection of Tabs that extended styling and can be shown ba
      });
      })
      )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
     <li>
             <a>FILE</a>
             <ul>

@@ -24,39 +24,39 @@ N> The `ItemHeight` and `ItemWidth` for gallery item can be set, if not set defa
 
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("500")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("Gallery").Type("galary").Content(cnt =>
+                        tabgroup.Text("Gallery").Type("galary").Content(ctn =>
                         {
-                            cnt.ContentGroups(cntgrp =>
+                            ctn.ContentGroups(ctngrp =>
                             {
-                                cntgrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gi =>
+                                ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                                 {
-                                    gi.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties()
+                                    gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         PrefixIcon = "e-gallerycontent1 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
+                                    gallery.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         PrefixIcon = "e-gallerycontent2 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
+                                    gallery.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         PrefixIcon = "e-gallerycontent3 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
+                                    gallery.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         PrefixIcon = "e-gallerycontent4 e-gbtnimg",
@@ -68,7 +68,7 @@ N> The `ItemHeight` and `ItemWidth` for gallery item can be set, if not set defa
                     }).Add();
                 })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -125,50 +125,50 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
 
     @(Html.EJ().Ribbon("defaultRibbon")
      .Width("500")
-     .ApplicationTab(apptab =>
+     .ApplicationTab(app =>
     {
-        apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+        app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
     })
     .RibbonTabs(tab =>
     {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+        tab.Id("home").Text("HOME").TabGroups(tabgroup =>
         {
-            tabgrp.Text("Gallery").Type("galary").Content(cnt =>
+            tabgroup.Text("Gallery").Type("galary").Content(ctn =>
             {
-                cnt.ContentGroups(cntgrp =>
+                ctn.ContentGroups(ctngrp =>
                 {
-                    cntgrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gi =>
+                    ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                     {
-                        gi.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties(){
+                        gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties(){
                         ContentType=ContentType.ImageOnly,
                         PrefixIcon="e-gallerycontent1 e-gbtnimg",
                         CssClass="e-gbtnposition"
                         }).Add();
-                        gi.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
+                        gallery.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
                             PrefixIcon = "e-gallerycontent2 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
-                        gi.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
+                        gallery.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
                             PrefixIcon = "e-gallerycontent3 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
-                        gi.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
+                        gallery.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
                             PrefixIcon = "e-gallerycontent4 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
-                    }).CustomGalleryItems(gleit =>
+                    }).CustomGalleryItems(customgallery =>
                     {
-                        gleit.CustomItemType(CustomItemType.Menu).MenuId("custommenu").MenuSettings(new MenuProperties()
+                        customgallery.CustomItemType(CustomItemType.Menu).MenuId("custommenu").MenuSettings(new MenuProperties()
                         {
                             OpenOnClick = false
                         }).Add();
-                        gleit.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).ButtonSettings(new ButtonProperties()
+                        customgallery.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).ButtonSettings(new ButtonProperties()
                         {
                             CssClass = "e-extrabtnstyle"
                         }).Add();
@@ -178,7 +178,7 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
         }).Add();
     })
     )
-       <ul id="ribbonmenu">
+       <ul id="ribbon">
     <li>
         <a>FILE</a>
     </li>

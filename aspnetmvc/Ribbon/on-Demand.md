@@ -40,9 +40,9 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
    @(Html.EJ().Ribbon("defaultRibbon")
      .Width("50%")
      .EnableOnDemand(true)
-     .ApplicationTab(apptab =>
+     .ApplicationTab(app =>
          {
-             apptab.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings =>
+             app.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings =>
              {
                  bsSettings.Text("FILE").Height("350").Width("100%").HeaderWidth("120").Pages(bsPage =>
                  {
@@ -54,27 +54,27 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
         })
      .RibbonTabs(tab =>
        {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+        tab.Id("home").Text("HOME").TabGroups(tabgroup =>
         {
-           tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Columns).GroupExpanderSettings(grpExp =>
+           tabgroup.Text("Clipboard").AlignType(RibbonAlignType.Columns).GroupExpanderSettings(groupExp =>
             {
-                grpExp.ToolTip("Clipboard");
-            }).Content(cnt =>
+                groupExp.ToolTip("Clipboard");
+            }).Content(ctn =>
             {
-                cnt.ContentGroups(cntgrp =>
+                ctn.ContentGroups(ctngrp =>
                 {
-                    cntgrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-ribbonpaste"
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).IsBig(true).Width("50px").Height("70px")).Add();
             }).Add();
-           tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+           tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
            {
-               cnt.ContentGroups(cntgrp =>
+               ctn.ContentGroups(ctngrp =>
                {
-                   cntgrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                   ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                    {
                        ContentType = ContentType.ImageOnly,
                        ImagePosition = ImagePosition.ImageTop,
@@ -83,18 +83,18 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
                }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
            }).Add();
         }).Add();
-        tab.Id("layout").Text("LAYOUT").TabGroups(tabgrp =>
+        tab.Id("layout").Text("LAYOUT").TabGroups(tabgroup =>
         {
-            tabgrp.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(cnt =>
+            tabgroup.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                cnt.ContentGroups(cntgrp =>
+                ctn.ContentGroups(ctngrp =>
                 {
-                    cntgrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-bullet"
                     }).Add();
-                    cntgrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-numbericon"
@@ -177,13 +177,13 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
                     <a href="#">Sign out</a>
                 </div>
                 
-   @(Html.EJ().Ribbon("defaultRibbon")
+    @(Html.EJ().Ribbon("defaultRibbon")
      .Width("50%")
      .EnableOnDemand(true)
      .Collapsible(true)
-     .ApplicationTab(apptab =>
+     .ApplicationTab(app =>
          {
-             apptab.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings =>
+             app.Type(ApplicationTabType.Backstage).BackstageSettings(bsSettings =>
              {
                  bsSettings.Text("FILE").Height("350").Width("100%").HeaderWidth("120").Pages(bsPage =>
                  {
@@ -195,27 +195,27 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
         })
      .RibbonTabs(tab =>
        {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+        tab.Id("home").Text("HOME").TabGroups(tabgroup =>
         {
-           tabgrp.Text("Clipboard").AlignType(RibbonAlignType.Columns).GroupExpanderSettings(grpExp =>
+           tabgroup.Text("Clipboard").AlignType(RibbonAlignType.Columns).GroupExpanderSettings(groupExp =>
             {
-                grpExp.ToolTip("Clipboard");
-            }).Content(cnt =>
+                groupExp.ToolTip("Clipboard");
+            }).Content(ctn =>
             {
-                cnt.ContentGroups(cntgrp =>
+                ctn.ContentGroups(ctngrp =>
                 {
-                    cntgrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-ribbonpaste"
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).IsBig(true).Width("50px").Height("70px")).Add();
             }).Add();
-           tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt =>
+           tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
            {
-               cnt.ContentGroups(cntgrp =>
+               ctn.ContentGroups(ctngrp =>
                {
-                   cntgrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                   ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                    {
                        ContentType = ContentType.ImageOnly,
                        ImagePosition = ImagePosition.ImageTop,
@@ -224,18 +224,18 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
                }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
            }).Add();
         }).Add();
-        tab.Id("layout").Text("LAYOUT").TabGroups(tabgrp =>
+        tab.Id("layout").Text("LAYOUT").TabGroups(tabgroup =>
         {
-            tabgrp.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(cnt =>
+            tabgroup.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                cnt.ContentGroups(cntgrp =>
+                ctn.ContentGroups(ctngrp =>
                 {
-                    cntgrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-bullet"
                     }).Add();
-                    cntgrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    ctngrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-numbericon"
