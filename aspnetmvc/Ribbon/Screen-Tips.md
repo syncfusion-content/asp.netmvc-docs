@@ -20,20 +20,20 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
 
       @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("20%")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("Clipboard").Content(cnt =>
+                        tabgroup.Text("Clipboard").Content(ctn =>
                         {
-                            cnt.ContentGroups(cntgrp =>
+                            ctn.ContentGroups(ctngrp =>
                             {
-                                cntgrp.Id("cut").Text("Cut").ToolTip("Remove the selection and put it on clipboard").Add();
-                                cntgrp.Id("copy").Text("Copy").ToolTip("Put a copy of selection on clipboard").ButtonSettings(new ButtonProperties()
+                                ctngrp.Id("cut").Text("Cut").ToolTip("Remove the selection and put it on clipboard").Add();
+                                ctngrp.Id("copy").Text("Copy").ToolTip("Put a copy of selection on clipboard").ButtonSettings(new ButtonProperties()
                                 {
                                     ContentType = ContentType.TextAndImage,
                                     PrefixIcon = "e-ribbon e-ribboncopy",
@@ -43,7 +43,7 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
                     }).Add();
                 })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -70,25 +70,25 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
     @section ControlsSection {
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("450")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgrp.Text("Clipboard").Content(cnt =>
+                        tabgroup.Text("Clipboard").Content(ctn =>
                         {
-                            cnt.ContentGroups(cntgrp =>
+                            ctn.ContentGroups(ctngrp =>
                             {
-                                cntgrp.Id("paste").Text("Paste").CustomToolTip(new CustomToolTip()
+                                ctngrp.Id("paste").Text("Paste").CustomToolTip(new CustomToolTip()
                                 {
                                     Title = "Paste",
                                     Content = "<h6>Paste the content.<br/><br/>Add content on the Clipboard to your document.</h6>",
                                     PrefixIcon = "e-pastetip",
                                 }).Add();
-                                cntgrp.Id("copy").Text("Copy").CustomToolTip(new CustomToolTip()
+                                ctngrp.Id("copy").Text("Copy").CustomToolTip(new CustomToolTip()
                                 {
                                     Title = "Copy",
                                     Content = "<h6>Copy the content.</h6>",
@@ -102,7 +102,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
                     }).Add();
                 })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
      <li>
         <a>FILE</a>
         <ul>
@@ -140,22 +140,22 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
     @section ControlsSection {
     @(Html.EJ().Ribbon("defaultRibbon")
                 .Width("500")
-                .ApplicationTab(apptab =>
+                .ApplicationTab(app =>
                 {
-                    apptab.Type(ApplicationTabType.Menu).MenuItemID("ribbonmenu");
+                    app.Type(ApplicationTabType.Menu).MenuItemID("ribbon");
                 })
                 .RibbonTabs(tab =>
                 {
-                    tab.Id("home").Text("HOME").TabGroups(tabgrp =>
+                    tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
 
-                        tabgrp.Text("Gallery").Type("Galary").Content(cnt =>
+                        tabgroup.Text("Gallery").Type("Galary").Content(ctn =>
                         {
-                            cnt.ContentGroups(cntgrp =>
+                            ctn.ContentGroups(ctngrp =>
                             {
-                                cntgrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gi =>
+                                ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                                 {
-                                    gi.Text("Style 1").CustomToolTip(new CustomToolTip()
+                                    gallery.Text("Style 1").CustomToolTip(new CustomToolTip()
                                     {
                                         Title = "Style 1",
                                         Content = "<I>Style 1 to customize the table</I>",
@@ -165,7 +165,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                         PrefixIcon = "e-gallerycontent1 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("Style 2").CustomToolTip(new CustomToolTip()
+                                    gallery.Text("Style 2").CustomToolTip(new CustomToolTip()
                                     {
                                         Title = "Style 2",
                                         Content = "<I>Style 2 to customize the table</I>",
@@ -175,7 +175,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                         PrefixIcon = "e-gallerycontent2 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("Style 3").CustomToolTip(new CustomToolTip()
+                                    gallery.Text("Style 3").CustomToolTip(new CustomToolTip()
                                     {
                                         Title = "Style 3",
                                         Content = "<I>Style 3 to customize the table</I>",
@@ -185,7 +185,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                         PrefixIcon = "e-gallerycontent3 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                    gi.Text("Style 4").CustomToolTip(new CustomToolTip()
+                                    gallery.Text("Style 4").CustomToolTip(new CustomToolTip()
                                     {
                                         Title = "Style 4",
                                         Content = "<I>Style 4 to customize the table</I>",
@@ -195,10 +195,10 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                         PrefixIcon = "e-gallerycontent4 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                }).CustomGalleryItems(gleit =>
+                                }).CustomGalleryItems(galleryitems =>
                                 {
 
-                                    gleit.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).CustomToolTip(new CustomToolTip()
+                                    galleryitems.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).CustomToolTip(new CustomToolTip()
                                     {
                                         Title="Clear Format",
                                         Content = "<I>To clear formatting</I>"
@@ -206,7 +206,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     {
                                         CssClass="e-extrabtnstyle"
                                     }).Add();
-                                    gleit.CustomItemType(CustomItemType.Menu).MenuId("extramenu").MenuSettings(new MenuProperties()
+                                    galleryitems.CustomItemType(CustomItemType.Menu).MenuId("extramenu").MenuSettings(new MenuProperties()
                                     {
                                         OpenOnClick = false
                                     }).Add();
@@ -216,7 +216,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                     }).Add();
                 })
     )
-    <ul id="ribbonmenu">
+    <ul id="ribbon">
         <li>
             <a>FILE</a>
         </li>
