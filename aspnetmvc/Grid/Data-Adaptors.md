@@ -136,7 +136,7 @@ The following code example describes the above behavior.
  
 OData Adaptor that is extended from `UrlAdaptor`, is used for consuming data through OData Service. 
   
-We have an online OData Service http://mvc.syncfusion.com/Services/Northwnd.svc/Orders created specifically for Syncfusion Controls
+We have an online OData Service http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders created specifically for Syncfusion Controls
 
 N> `ODataAdaptor` is the default Adaptor of `DataManager` and so no need to specify Adaptor when binding OData service
 
@@ -146,7 +146,7 @@ You can use the following code example to use OData Adaptor.
 {% highlight razor %} 
 
         @(Html.EJ().Grid<object>("FlatGrid")
-                   .Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders").Adaptor(AdaptorType.ODataAdaptor))   
+                   .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Adaptor(AdaptorType.ODataAdaptor))   
                    .AllowPaging()
                    .Columns(col =>
                    {

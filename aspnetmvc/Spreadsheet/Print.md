@@ -9,7 +9,7 @@ documentation: ug
 
 # Print
 
-This feature is used for produce text and graphics from a computer screen or file onto a sheet of paper. You can use `AllowPrinting` property in `PrintSettings` to enable/disable the print operation.
+This feature is used to produce text and graphics from a computer screen or file into a sheet of paper. You can use `AllowPrinting` property in `PrintSettings` to enable/disable the print operation.
 
 You have following options in printing.
 

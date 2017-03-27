@@ -21,12 +21,12 @@ Define the Application Tab with `Type` as `Menu` to render simple Ribbon control
 
       @(Html.EJ().Ribbon("defaultRibbon")
      .Width("500")
-     .ApplicationTab(apptab => {
-         apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+     .ApplicationTab(app => {
+         app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
              OpenOnClick = false
          });
         }))
-        <ul id="Ribbonmenu">
+        <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -53,16 +53,16 @@ RibbonTab is a set of related groups which are combined into single item. For cr
 
         @(Html.EJ().Ribbon("defaultRibbon")
         .Width("500")
-        .ApplicationTab(apptab => {
-            apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+        .ApplicationTab(app => {
+            app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
                 OpenOnClick = false
             });
         })
         .RibbonTabs(tab => {
-            tab.Id("home").Text("HOME").TabGroups(tabgrp => {}).Add();
+            tab.Id("home").Text("HOME").TabGroups(tabgroup => {}).Add();
         })
              )
-     <ul id="Ribbonmenu">
+     <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -89,16 +89,16 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
 
      @(Html.EJ().Ribbon("defaultRibbon")
     .Width("500")
-    .ApplicationTab(apptab => {
-        apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+    .ApplicationTab(app => {
+        app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
             OpenOnClick = false
         });
     })
     .RibbonTabs(tab => {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-            tabgrp.Text("New").AlignType(RibbonAlignType.Rows).Content(cnt => {
-                cnt.ContentGroups(cntgrp => {
-                    cntgrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+        tab.Id("home").Text("HOME").TabGroups(tabgroup => {
+            tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
+                ctn.ContentGroups(ctngrp => {
+                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
                             PrefixIcon = "e-Ribbon e-new",
@@ -108,7 +108,7 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
             }).Add();
         }).Add();
     }))
-        <ul id="Ribbonmenu">
+        <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>
@@ -139,16 +139,16 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
 
         @(Html.EJ().Ribbon("defaultRibbon")
     .Width("500")
-    .ApplicationTab(apptab => {
-        apptab.Type(ApplicationTabType.Menu).MenuItemID("Ribbonmenu").MenuSettings(new MenuProperties() {
+    .ApplicationTab(app => {
+        app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties() {
             OpenOnClick = false
         });
     })
     .RibbonTabs(tab => {
-        tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-            tabgrp.Text("SplitButton & Dropdown").AlignType(RibbonAlignType.Columns).Content(cnt => {
-                cnt.ContentGroups(cntgrp => {
-                    cntgrp.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
+        tab.Id("home").Text("HOME").TabGroups(tabgoup => {
+            tabgoup.Text("SplitButton & Dropdown").AlignType(RibbonAlignType.Columns).Content(ctn => {
+                ctn.ContentGroups(ctngrp => {
+                    ctngrp.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             PrefixIcon = "e-Ribbon e-Ribbonpaste",
                             TargetID = "pasteSplit",
@@ -157,8 +157,8 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
     
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.SplitButton).Width("50px").Height("70px")).Add();
-                cnt.ContentGroups(cntgrp => {
-                    cntgrp.Id("fontfamily").DropdownSettings(new DropDownListProperties() {
+                ctn.ContentGroups(ctngrp => {
+                    ctngrp.Id("fontfamily").DropdownSettings(new DropDownListProperties() {
                         DataSource = (IEnumerable < FontFamily > ) ViewBag.datasource,
                             Text = "Segoe UI",
                             Select = "executeAction",
@@ -169,7 +169,7 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
             }).Add();
         }).Add();
     })))
-    <ul id="Ribbonmenu">
+    <ul id="Ribbon">
         <li>
             <a>FILE</a>
             <ul>

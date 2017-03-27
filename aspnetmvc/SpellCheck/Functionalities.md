@@ -144,7 +144,7 @@ The [ignore settings](/api/js/ejspellcheck#members:ignoresettings) helps to igno
 * [ignoreMixedCaseWords](/api/js/ejspellcheck#members:ignoresettings-ignoremixedcasewords) - ignoring the mixed case words from an error word consideration.
 * [ignoreFileNames](/api/js/ejspellcheck#members:ignoresettings-ignorefilenames) - ignoring the file address path from an error word consideration.
 * [ignoreUrl](/api/js/ejspellcheck#members:ignoresettings-ignoreurl) - ignoring the url links from an error word consideration.
-* [ignoreEmailAddress]((/api/js/ejspellcheck#members:ignoresettings-ignoreemailaddress)) - ignoring the email address from an error word consideration.
+* [ignoreEmailAddress](/api/js/ejspellcheck#members:ignoresettings-ignoreemailaddress) - ignoring the email address from an error word consideration.
 
 
 The following code example uses to enable the checking of all the words formed with alphanumeric, uppercase, mixed case words and file paths and email addresses.

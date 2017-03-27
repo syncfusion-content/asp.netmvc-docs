@@ -32,7 +32,7 @@ The following steps explain the configuration of the Multiple Columns for an Aut
 
 {% highlight CSHTML %}
 
-@*Refer to the DataSource defined in Local Databinding Step 1 *@
+@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
     <div style="width: 600px">
 

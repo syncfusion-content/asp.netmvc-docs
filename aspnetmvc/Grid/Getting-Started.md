@@ -57,7 +57,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).Columns(col =>
+    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true)).Columns(col =>
 
     {
 
@@ -89,7 +89,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true)).AllowPaging()
+    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true)).AllowPaging()
 
     .Columns(col =>
 
@@ -119,7 +119,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 {% highlight razor %}
 
 
-    @(Html.EJ().Grid<object>("FlatGrid").Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    @(Html.EJ().Grid<object>("FlatGrid").Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))   
 
     .AllowPaging()
 
@@ -158,7 +158,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
+    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
 
     .AllowGrouping()
 
@@ -201,7 +201,7 @@ The following code example shows the option to enable group summary.
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://mvc.syncfusion.com/UGService/api/Orders").CrossDomain(true).Offline(true))   
+    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))   
 
     .AllowPaging()
 

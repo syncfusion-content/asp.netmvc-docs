@@ -329,9 +329,22 @@ namespace PivotGridDemo
         public Dictionary<string, object> SaveReport(string reportName, string operationalMode, string olapReport, string clientReports)
         {
             string mode = operationalMode;
+            bool isDuplicate = true;
             SqlCeConnection con = new SqlCeConnection() { ConnectionString = conStringforDB };
             con.Open();
-            SqlCeCommand cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            SqlCeCommand cmd1 = null;
+            foreach (DataRow row in GetDataTable().Rows)
+            {
+                if ((row.ItemArray[0] as string).Equals(reportName))
+                {
+                    isDuplicate = false;
+                    cmd1 = new SqlCeCommand("update ReportsTable set Report=@Reports where ReportName like @ReportName", con);
+                }
+            }
+            if (isDuplicate)
+            {
+                cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
+            }
             cmd1.Parameters.Add("@ReportName", reportName);
             //cmd1.Parameters.Add("@Reports", OLAPUTILS.Utils.GetReportStream(clientReports).ToArray());
             if (mode == "serverMode")
@@ -374,7 +387,8 @@ namespace PivotGridDemo
                     }
                 }
             }
-            if (reports != "") {
+            if (reports != "")
+            {
                 report = htmlHelper.DeserializedReports(reports);
                 htmlHelper.PivotReport = report;
                 dictionary = htmlHelper.GetJsonData("loadOperation", ProductSales.GetSalesData(), "Load Report", reportName);
@@ -391,6 +405,7 @@ namespace PivotGridDemo
             con.Close();
             return dSet.Tables[0];
         }
+
 
         public Dictionary<string, object> DeferUpdate(string action, string filterParams, string sortedHeaders, string currentReport)
         {
@@ -414,7 +429,7 @@ namespace PivotGridDemo
         }
     }
     .....
-    ..... // Initialize the datasourse
+    ..... // Initialize the datasource
     .....
 }
 

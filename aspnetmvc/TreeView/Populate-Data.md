@@ -391,7 +391,7 @@ The following steps explain how you can bind remote data to TreeView control.
     
     @{
         DataSource treeData = new DataSource();
-        treeData.URL = "http://mvc.syncfusion.com/Services/Northwnd.svc/";
+        treeData.URL = "//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/";
     }
     @(Html.EJ().TreeView("treeView")
         .TreeViewFields(field =>
@@ -424,14 +424,14 @@ The following steps explain how you can bind remote data to TreeView control.
     @(Html.EJ().TreeView("treeView")
         .TreeViewFields(field =>
             field.Datasource(data =>
-                data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+                data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
             )
             .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
             .Id("CategoryID")
             .Text("CategoryName")
             .Child(childField =>
                 childField.Datasource(data =>
-                    data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+                    data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
                 )
                 .TableName("Products")
                 .Id("ProductID")
@@ -456,7 +456,7 @@ You can provide adaptor value either as string value (“ODataAdaptor”) or Enu
     @(Html.EJ().TreeView("treeView")
         .TreeViewFields(field =>
             field.Datasource(data =>
-                data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+                data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
                 .Adaptor(AdaptorType.ODataAdaptor)
             )
             .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
@@ -464,7 +464,7 @@ You can provide adaptor value either as string value (“ODataAdaptor”) or Enu
             .Text("CategoryName")
             .Child(childField =>
                 childField.Datasource(data =>
-                    data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")
+                    data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
                     .Adaptor(AdaptorType.ODataAdaptor)
                 )
                 .TableName("Products")
@@ -488,7 +488,7 @@ N>**You can use above code until OData service version 3. For OData Service vers
     @(Html.EJ().TreeView("treeView")
         .TreeViewFields(field =>
             field.Datasource(data =>
-                data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Categories")
+                data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Categories")
                 .Adaptor(AdaptorType.ODataV4Adaptor)
             )
             .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
@@ -496,7 +496,7 @@ N>**You can use above code until OData service version 3. For OData Service vers
             .Text("CategoryName")
             .Child(childField =>
                 childField.Datasource(data =>
-                    data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Products")
+                    data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Products")
                     .Adaptor(AdaptorType.ODataV4Adaptor)
                 )
                 .TableName("Products")
@@ -698,11 +698,11 @@ Refer below code example to load data on demand from remote data source.
     
 @(Html.EJ().TreeView("treeView").LoadOnDemand(true).TreeViewFields(field =>
     field.Datasource(data => 
-        data.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
+        data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
         .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
         .Id("CategoryID").Text("CategoryName").HasChild("CategoryName").Child(child =>
             child.Datasource(cdata =>
-                cdata.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/"))
+                cdata.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
                 .TableName("Products").ParentId("CategoryID").Text("ProductName")))
 )
     

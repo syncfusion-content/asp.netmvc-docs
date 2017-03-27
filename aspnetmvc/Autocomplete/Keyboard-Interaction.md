@@ -52,7 +52,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 
    ~~~ cshtml 
 
-		@*Refer to the DataSource defined in Local Databinding Step 1 *@
+		@*Refer to the DataSource defined in Local Data binding Step 1 *@
 
 		@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
 
