@@ -51,3 +51,4 @@ The following steps explain the configuration of ExtensionsDeny property in Uplo
 
 {% endhighlight %}
 
+N> When **ExtensionsDeny** and **ExtensionsAllow** properties have same file extension, the extension will be allowed.
