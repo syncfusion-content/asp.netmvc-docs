@@ -677,8 +677,8 @@ The following code example describes the above behavior.
         .Columns(col =>
         {
             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-            col.Field("CustomerID").HeaderText("Customer ID").FilterBarTemplate(filterbar => filterbar.Create("autoComplete_create").Write("autoComplete_write").Read("autoComplete_read")).Width(90).Add();
-            col.Field("EmployeeID").HeaderText("Employee ID").FilterBarTemplate(filterbar => filterbar.Write("dropdown_write").Read("dropdown_read")).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("CustomerID").FilterBarTemplate(filterbar => filterbar.Create("autoComplete_create").Write("autoComplete_write").Read("autoComplete_read")).Width(90).Add();
+            col.Field("EmployeeID").HeaderText("EmployeeID").FilterBarTemplate(filterbar => filterbar.Write("dropdown_write").Read("dropdown_read")).TextAlign(TextAlign.Right).Width(75).Add();
             col.Field("Freight").HeaderText("Freight").FilterBarTemplate(filterbar => filterbar.Write("numeric_write").Read("numeric_read")).TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
             col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
             col.Field("Verified").HeaderText("Verified").TextAlign(TextAlign.Center).FilterBarTemplate(filterbar => filterbar.Write("check_write").Read("check_read")).Width(80).Add();
