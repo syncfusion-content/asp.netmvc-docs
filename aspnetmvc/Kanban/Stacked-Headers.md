@@ -39,10 +39,10 @@ The following code example describes the above behavior.
         })
         .StackedHeaderRows(rows =>
             {
-            rows.StackedHeaderColumns(colums =>
+            rows.StackedHeaderColumns(Columns =>
             {
-            colums.HeaderText("Unresolved").Column("Backlog,Validated,In Progress").Add();
-            colums.HeaderText("Resolved").Column("Testing,Done").Add();
+            Columns.HeaderText("Unresolved").Column("Backlog,Validated,In Progress").Add();
+            Columns.HeaderText("Resolved").Column("Testing,Done").Add();
             }).Add();
             })
     )
