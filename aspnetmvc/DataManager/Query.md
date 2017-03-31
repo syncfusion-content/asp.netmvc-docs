@@ -4,7 +4,7 @@ title: Query | DataManager | ASP.NET MVC | Syncfusion
 description: query
 platform: ejmvc
 control: DataManager
-documentation: 
+documentation:  ug
 keywords: select, From, Clone, Expand
 ---
 
