@@ -724,7 +724,7 @@ To render a Stacked Column Chart, set the Type as **StackingColumn** in the char
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn) here to view Stacked Column Chart online demo.
 
 
-### Group stacked columns
+### Cluster / Group stacked columns
 
 You can use the **StackingGroup** property to group the stacked columns. Columns with same group name are stacked on top of each other.
 
@@ -812,7 +812,7 @@ To render a 100% Stacked Column Chart, set the Type as **StackingColumn100** in 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn100) here to view 100% Stacked Column Chart online demo.
 
 
-### Group 100% stacked columns
+### Cluster / Group 100% stacked columns
 
 By using the **StackingGroup** property, you can group the 100% stacking columns. Columns with same group name are stacked on top of each other. 
 
@@ -959,7 +959,7 @@ To render a Stacked Bar Chart, set the Type as **StackingBar** in the chart seri
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar) here to view Stacked Bar Chart online demo.
 
 
-### Group stacked bars
+### Cluster / Group stacked bars
 
 You can use the **StackingGroup** property to group the stacking bars with the same group name. 
 
