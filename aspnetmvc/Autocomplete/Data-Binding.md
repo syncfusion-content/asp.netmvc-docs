@@ -203,31 +203,105 @@ DataManager is used to manage relational data. It supports CRUD that is Create
 
 ### Configuring remote data for AutoComplete
 
-The following steps explain the remote data binding to an AutoComplete textbox.
+The below following types are used to bind remote datasource to an AutoComplete textbox.
 
 
+###OData
 
-1. In the View page, map the Local data list to the corresponding DataSource and AutoCompleteFields.
+OData is a standardized protocol for creating and consuming data. You can provide the [OData service](http://www.odata.org/) URL directly to the Datasource URL property.
 
 
-{% highlight CSHTML %}
+{% highlight html %}
 
-@Html.EJ().Autocomplete("autocomplete")
+    @Html.EJ().Autocomplete("selectcar").Datasource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").AutocompleteFields(af => af.Text("CustomerID")).Width("300") 
 
-.Datasource(d => d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))
+{% endhighlight %}
 
-.Query("ej.Query().from('ComponentLists').select('ComponentId', 'ComponentName')")
+Run the code to get the following output
 
-.AutocompleteFields(f => f.Text("ComponentName").Key("ComponentId"))
+![](Data-Binding_images\odata_img1.png)
+
+###OData Version 4
+
+For OData Version 4 support ODataV4Adaptor should be used. By using URL property of Datasource, you can bind OData Version 4 Service link and specify Adaptor value as enum AdaptorType.ODataV4Adaptor.
+
+For further details about OData service please refer [the link](http://www.odata.org/).
+
+{% highlight html %}
+
+
+@Html.EJ().Autocomplete("selectdata").Datasource(ds => ds.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).AutocompleteFields(af => af.Text("RegionDescription")).Width("300").ShowPopupButton(true) 
 
 {% endhighlight %}
 
 
+Run the code to get the following output.
+
+![](Data-Binding_images\odataversion4_img1.png)
+
+### URL Adaptor
+
+URL Adaptor of **DataManager** can be used when you are required to use remote service to retrieve data. It interacts with server-side for all **DataManager** Queries and **CRUD** operations.
+
+Now, in the following code example the data is retrieved from **Controller**.
+
+{% highlight html %}
+
+@Html.EJ().Autocomplete("selectcar").Datasource(ds => ds.URL(Url.Action("DataSource", "Autocomplete")).Adaptor(AdaptorType.UrlAdaptor)).Query("ej.Query()").AutocompleteFields(af => af.Text("text")).Width("300").FilterType(FilterOperatorType.Contains)
+
+{% endhighlight %}
 
 
-The following image is the output for AutoComplete control with remote data binding.
+**Controller:**
 
-![](Data-Binding_images/Data-Binding_img2.png)
+{% highlight c# %}
 
-AutoComplete with remote data binding
-{:.caption}
+public JsonResult DataSource()
+        {
+
+            IEnumerable Data = setListSource();
+            return Json(Data, JsonRequestBehavior.AllowGet);
+        }
+
+        public static List<CarsList> setListSource()
+        {
+            List<CarsList> cars = new List<CarsList>();
+
+            cars.Add(new CarsList { uniqueKey = 1, text = "Audi S6", company = "Audi" });
+            cars.Add(new CarsList { uniqueKey = 2, text = "Austin-žHealey", company = "Austin" });
+            cars.Add(new CarsList { uniqueKey = 3, text = "BMW š7", company = "BMW" });
+            cars.Add(new CarsList { uniqueKey = 4, text = "Chevrolet Camarož", company = "Chevrolet" });
+            cars.Add(new CarsList { uniqueKey = 6, text = "Ferrari š360", company = "Ferrari" });
+            cars.Add(new CarsList { uniqueKey = 7, text = "Honda S2000", company = "Honda" });
+            cars.Add(new CarsList { uniqueKey = 8, text = "Hyundai Santroš", company = "Hyundai" });
+            cars.Add(new CarsList { uniqueKey = 9, text = "Isuzu Swift", company = "Isuzu" });
+            cars.Add(new CarsList { uniqueKey = 10, text = "Jaguar XJS", company = "Jaguar" });
+            cars.Add(new CarsList { uniqueKey = 11, text = "iLotus Esprit", company = "Lotus" });
+            cars.Add(new CarsList { uniqueKey = 12, text = "Mercedes-Benz", company = "Mercedes" });
+            cars.Add(new CarsList { uniqueKey = 13, text = "Toyota ž2000GT", company = "Toyota" });
+            cars.Add(new CarsList { uniqueKey = 14, text = "Volvo P1800", company = "Volvo" });
+            return cars;
+        }
+{% endhighlight %}
+
+
+Run the code to get the following output
+
+![](Data-Binding_images\urladaptormvc_img1.png)
+
+### WebAPI
+
+**WebApi** Adaptor, extended from **ODataAdaptor**, of **DataManager** is used for retrieving data from WebApi service. [ASP.NET Web API](https://msdn.microsoft.com/en-us/library/hh833994%28v=vs.108%29.aspx) is a Framework for building HTTP services. You can retrieve data from ASP.NET Web API by using [DataManager](https://help.syncfusion.com/js/datamanager/getting-started). Using WebApiAdaptor, you can bind WebApi service’s data to Autocomplete. The data from WebApi service must be returned as an object that has its value as data source and field property customerID with its value as Datasource total records count.
+
+{% highlight html %}
+
+
+   @(Html.EJ().Autocomplete("selectauto").Datasource(ds => ds.URL(Url.Action("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/")).Adaptor(AdaptorType.WebApiAdaptor)).Query("ej.Query().from('Customers')").Width("300").AutocompleteFields(fs => fs.Text("CustomerID")))
+
+
+{% endhighlight %}
+
+Run the code to get the following output.
+
+![](Data-Binding_images\webapi_img1.png)
+
