@@ -19,11 +19,6 @@ The following code snippet illustrates
          //.. to add the hierarchical levels 
                       })
  )
-<ej:SunburstChart  ID="container" runat="server" >
-<Levels>
-  <%--To Add Multiple levels for reprsenting the hierarchical data   --%>
-</Levels>  
-</ej:SunburstChart> 
 
 {% endhighlight %}
 
