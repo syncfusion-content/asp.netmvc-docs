@@ -5,6 +5,7 @@ description: hierarchical query
 platform: ejmvc
 control: DataManager
 documentation: ug
+keywords: Hierarchical Query, foreignkey
 ---
 
 # Hierarchical Query
@@ -16,35 +17,23 @@ The DataManager contains support to manage the hierarchical query. The hierarchi
 The foreignkey method of ej.Query can be used to refer to another table fields. The foreignkey method accepts one parameter, the foreign key value. 
 
 The following code example illustrates the hierarchical query and foreignkey method. 
+
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc"))
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("ej.Query().from('Orders').search('TM', ['CustomerID', 'Employee.FirstName']).page(1, 4).hierarchy(ej.Query().foreignKey('OrderID').from('Order_Details').sortBy('Quantity'),function () {return [10410, 10492, 10949, 10742, 10975]})")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-	.DataManagerID("FlatData")
-
-	.Query("ej.Query().from('Orders').search('TM', ['CustomerID', 'Employee.FirstName']).page(1, 4).hierarchy(ej.Query().foreignKey('OrderID').from('Order_Details').sortBy('Quantity'),function () {return [10410, 10492, 10949, 10742, 10975]})")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
+	)
 
 {% endhighlight  %}
 
