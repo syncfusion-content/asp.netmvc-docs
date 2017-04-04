@@ -5,6 +5,8 @@ description: data adaptors
 platform: ejmvc
 control: DataManager
 documentation: ug
+keywords: JSON Adaptor, URL Adaptor, OData Adaptor, Odata4 Adaptor, WebApi Adaptor, Cache Adaptor, Custom Adaptor, RemoteSave Adaptor
+
 ---
 
 # Data Adaptors
@@ -21,45 +23,103 @@ Here, you can learn when and how each adaptor is used.
 
 JSONAdaptor is used to process JSON data. It contains methods to process the given JSON data based on the queries. The following code example illustrates on how to use the JSONAdaptor.
 
-{% highlight CSHTML %}
+**JSONAdaptor** has the following unique in-built methods, 
 
-@(Html.EJ().DataManager("FlatData").Json((IEnumerable<object>)ViewBag.dataSource))
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+     <tr>
+        <td> processQuery(ds, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> Used to prepare query string for the request data </td>
+    </tr>
+    <tr>
+        <td> processResponse(data, ds, query, xhr) </td>
+         <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+            </table>
+        </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+    <tr>
+        <td> insert(dm, data) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
 
+{% highlight C# %}
 
+    public ActionResult GridFeatures()
+    {
+        var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+        ViewBag.dataSource = DataSource;
+        return View();
+    }
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-        .DataManagerID("FlatData")
-
-        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-        })
-
-)
 {% endhighlight %}
 
+{% highlight CSHTML %}
+
+    @(Html.EJ().DataManager("FlatData").Json((IEnumerable<object>)ViewBag.dataSource))
+
+    @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+            .DataManagerID("FlatData")
+            .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+                col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+                col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+            })
+    )
+
+{% endhighlight %}
 
 The result of above code example is illustrated as follows.
-
-
 
 ![](Data-Adaptors_images/Data-Adaptors_img1.png)
 
@@ -70,94 +130,131 @@ JSON adaptor
 
 URL Adaptor of the DataManager can be used when you are required to use remote service to retrieve data. It interacts with server-side for all DataManager Queries and CRUD operations. Now, in the following code example, the data is retrieved from the MVCController. 
 
+**UrlAdaptor** has the following unique in-built methods, 
+
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+     <tr>
+        <td> processQuery(dm, query, hierarchyFilters) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> hierarchyFilters </td> <td> ej.Query </td> <td> The hierarchical query can be provided by using the hierarchical function.  </td> </tr>
+            </table>
+        </td>
+        <td> Used to prepare query string for the request data </td>
+    </tr>
+    <tr>
+        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+         <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array of Result</td> </tr>
+                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+                <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
+                <tr>  <td> changes </td> <td> Object </td> <td> Specified changes to the Data Source </td> </tr>
+            </table>
+        </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+    <tr>
+        <td> insert(dm, data, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
+
 {% tabs %}
 
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
+    @(Html.EJ().DataManager("FlatData").URL("Home/DataSource").Adaptor(AdaptorType.UrlAdaptor))
 
+    @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+            .DataManagerID("FlatData")
+            .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
+            .Columns(col =>
+            {
+                col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+                col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+                col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+                col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+            })
 
-
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-        .DataManagerID("FlatData")
-
-        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-        })
-
-)
+    )
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 
-		public class HomeController : Controller
-
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
         {
-
-            public ActionResult Index()
-
-            {
-
-                return View();
-
-            }
-
-            public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
-
-            {
-
-                var DataSource = OrderRepository.GetAllRecords();
-
-                DataResult result = new DataResult();
-
-                result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
-
-                result.count = DataSource.Count();
-
-                return Json(result, JsonRequestBehavior.AllowGet);
-
-            }
-
-            public class DataResult
-
-            {
-
-                public IEnumerable<EditableOrder> result { get; set; }
-
-                public int count { get; set; }
-
-            }
-
+            return View();
         }
+        public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+        {
+            var DataSource = OrderRepository.GetAllRecords();
+            DataResult result = new DataResult();
+            result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
+            result.count = DataSource.Count();
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+        public class DataResult
+        {
+            public IEnumerable<EditableOrder> result { get; set; }
+            public int count { get; set; }
+        }
+
+    }
 
 {% endhighlight %}
 
 {% endtabs %}
 
 The result of the above code example is illustrated as follows.
-
-
 
 ![](Data-Adaptors_images/Data-Adaptors_img2.png)
 
@@ -168,43 +265,83 @@ URL Adaptor
 
 OData Adaptor that is extended from URL Adaptor is used for consuming data through OData Service. You can use the following code example to use OData adaptor.
 
+**ODataAdaptor** has the following unique in-built methods, 
+
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+    <tr>
+        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+         <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+                <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
+                <tr>  <td> changes </td> <td> Object </td> <td> Specified changes to the Data Source </td> </tr>
+            </table>
+        </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+     <tr>
+        <td> insert(dm, data, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
+
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true).CrossDomain(true))
+    @(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Offline(true).CrossDomain(true))
 
-
-
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
+    @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
         .DataManagerID("FlatData")
-
         .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
         .Columns(col =>
-
         {
-
             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
+            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();  
             col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
             col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
             col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
         })
-
-)
-
+    )
 
 {% endhighlight %}
-
 
 The result of the above code example is illustrated as follows.
 
@@ -216,48 +353,102 @@ OData adaptor
 ## WebAPI Adaptor
 
 WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrieving data from WebAPI service. Refer to the following code example.
-{% highlight CSHTML %}
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/UGService/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
 
+**WebApiAdaptor** has the following unique in-built methods, 
 
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+    <tr>
+        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+         <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+                <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
+                <tr>  <td> changes </td> <td> Object </td> <td> Specified changes to the Data Source </td> </tr>
+            </table>
+        </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+     <tr>
+        <td> insert(dm, data, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+{% highlight C# %}
 
-        .DataManagerID("FlatData")
-
-        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
-        .Columns(col =>
-
+    public class EmployeeController : ApiController
+    {
+        static readonly IEmployeeRepository repository = new EmployeeRepository();
+        // GET api/<controller>
+        [HttpGet]
+        public object Get()
         {
-
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-        })
-
-)
-
+            var data = repository.GetAll().ToList();
+            return new { Items = data, Count = data.Count() };
+        }
+    }
 
 {% endhighlight %}
 
+{% highlight CSHTML %}
+
+    @(Html.EJ().DataManager("FlatData").URL("/api/Employee").Adaptor(AdaptorType.WebApiAdaptor))
+
+    @(Html.EJ().Grid<Sample.Models.Employee>("FlatGrid")
+            .DataManagerID("FlatData")
+            .Query("new ej.Query().select(['EmployeeID', 'FirstName', 'LastName'])")
+            .Columns(col =>
+            {
+                col.Field("EmployeeID").HeaderText("EmployeeID").IsPrimaryKey(true).Width(75).Add();
+                col.Field("FirstName").HeaderText("FirstName").Width(80).Add();
+                col.Field("LastName").HeaderText("LastName").Add();
+            })
+    )
+
+{% endhighlight %}
 
 Result of the above code example is illustrated as follows.
 
-
-
-![](Data-Adaptors_images/Data-Adaptors_img4.png)
+![](Editing_images/RemoteInsert.png) 
 
 Web API Adaptor
 {:.caption}
@@ -266,90 +457,116 @@ Web API Adaptor
 
 RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for binding local data and performs all DataManager queries in client-side. It interacts with server-side only for CRUD operations to pass the modified records. Refer to the following code example.
 
-{% tabs %}
+**RemoteSaveAdaptor** has the following unique in-built methods, 
 
-{% highlight CSHTML %}
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+    <tr>
+        <td> insert(dm, data, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName, query) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
 
+{% tabs %}  
+{% highlight razor %}
 
-@(Html.EJ().DataManager("FlatData").Json((IEnumerable<object>)ViewBag.dataSource).Adaptor(AdaptorType.RemoteSaveAdaptor))
-
-
-
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-        .DataManagerID("FlatData")
-
-        .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
-        .Columns(col =>
-
-        {
-
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-            col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-        })
-
-)
+    @(Html.EJ().Grid<object>("FlatGrid")
+                .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+                .ToolbarSettings(toolbar =>
+                {
+                toolbar.ShowToolbar().ToolbarItems(items =>
+                    {
+                        items.AddTool(ToolBarItems.Add);
+                        items.AddTool(ToolBarItems.Edit);
+                        items.AddTool(ToolBarItems.Delete);
+                        items.AddTool(ToolBarItems.Update);
+                        items.AddTool(ToolBarItems.Cancel);
+                    });
+                })
+            .Columns(col =>
+                {
+                col.Field("OrderID").IsPrimaryKey(true).Add();
+                col.Field("EmployeeID").Add();
+                col.Field("CustomerID").Add();
+                col.Field("ShipCountry").Add();
+                col.Field("Freight").Add();
+            })
+        )
 
 {% endhighlight  %}
+{% highlight c# %}
 
-{% highlight C# %}
-
-
-
-
-
-		public class HomeController : Controller
-
-        {
-
-            public ActionResult Index()
-
-            {
-
+        namespace EJGrid.Controllers
+          {
+             public class HomeController : Controller
+              {
+             public ActionResult Index()
+              {
+                var data = OrderRepository.GetAllRecords();
+                ViewBag.dataSource = data;
                 return View();
-
-            }
-
-            public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
-
+              }
+             public ActionResult Update(EditableOrder value)
+              {
+                OrderRepository.Update(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+              }
+             public ActionResult Insert(EditableOrder value)
+              {
+                OrderRepository.Add(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+             }
+            public ActionResult Remove(int key)
             {
-
-                var DataSource = OrderRepository.GetAllRecords();
-
-                DataResult result = new DataResult();
-
-                result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
-
-                result.count = DataSource.Count();
-
-                return Json(result, JsonRequestBehavior.AllowGet);
-
+               OrderRepository.Delete(key);
+               var data = OrderRepository.GetAllRecords();
+               return Json(data, JsonRequestBehavior.AllowGet);
             }
-
-            public class DataResult
-
-            {
-
-                public IEnumerable<EditableOrder> result { get; set; }
-
-                public int count { get; set; }
-
-            }
-
-        }
+         }
+      }
 
 {% endhighlight  %}
 {% endtabs %} 
@@ -365,39 +582,20 @@ RemoteSave Adaptor
 
 Custom Adaptor is a key technique to customize adaptors in the DataManager. It is useful to write own adaptor. Normally ej.Adaptor is base class for all adaptors. Therefore, first inherit the ej.Adaptor to develop the customized one and then override functionality in Custom Adaptor with base class. The following code example illustrates you how to create the Custom Adaptor.
 
-
-
-
 {% highlight html %}
 
-@(Html.EJ().DataManager("FlatData”))
+    @(Html.EJ().DataManager("FlatData”))
 
-
-
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
+    @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
         .DataManagerID("FlatData")
-
         .Query("new ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)")
-
-
-
         .Columns(col =>
-
         {
-
             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
             col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
             col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
             col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
             col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
         })
 
 )
@@ -409,38 +607,25 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
         $(function () {// Document is ready.
 
             //new custom adaptor implementation
-
             //able to implement more option in custom adaptor other than insert
-
             var customAdaptor = new ej.Adaptor().extend({
-
                 insert: function (dm, data) {
-
                     return dm.dataSource.json.push(data);
-
                 },
-
                 processQuery: ej.JsonAdaptor.prototype.processQuery // reused process query from json adaptor
-
             });
 
             window.FlatData.Adaptor = new customAdaptor()
-
             window.FlatData.insert({ OrderID: 10240, CustomerID: "HANAR", EmployeeID: 3, ShipCity: "Reims", Freight: "23.4" });
-
             window.FlatData.insert({ OrderID: 10241, CustomerID: "HANAR", EmployeeID: 2, ShipCity: "Reimse", Freight: "21.4" });
-
             window.FlatData.insert({ OrderID: 10242, CustomerID: "VINET", EmployeeID: 5, ShipCity: "Lyon", Freight: "13.4" });
-
-            var obj = $("#MainContent_OrdersGrid").ejGrid("instance");
-
+            var obj = $("#FlatGrid").ejGrid("instance");
             obj.dataSource(window.FlatData.executeLocal(new ej.Query().take(7)));
 
         })
 
-
-
 </script>
+
 {% endhighlight %}
 
 
@@ -451,11 +636,115 @@ Result of above code example is as follows.
 Custom adaptor   
 {:.caption}
 
+Using Custom Adaptor, you can override the existing method of Extended Adaptor, 
+
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+    <tr>
+        <td> beforeSend </td>
+        <td> Custom headers can be set using pre-request callback beforeSend, by using the setRequestHeader method can be used to modify the XMLHTTPRequest </td>
+    </tr>
+     <tr>
+        <td> processQuery </td>
+        <td> Used to prepare query string for the request data </td>
+    </tr>
+    <tr>
+        <td> processResponse </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+    <tr>
+        <td> insert </td>
+        <td> The insert method of the data manager is used to add a new record to the table </td>
+    </tr>
+    <tr>
+        <td> remove </td>
+        <td> The remove action submits the data items that should be deleted </td>
+    </tr>
+    <tr>
+        <td> update </td>
+        <td> The update method is used to update the modified changes made to a record in the data source of the DataManager. </td>
+    </tr>
+</table>
+
 ## Cache Adaptor
 
 Cache Adaptor is used to cache the data of the visited pages. It prevents new requests for the previously visited pages. It can be enabled by using the `EnableCaching` property. You can configure cache page size and duration of caching by using CachingPageSize and TimeTillExpiration properties of the "DataManager". 
 
-{% highlight html %}
+**CacheAdaptor** has the following unique in-built methods, 
+
+<table>
+    <tr>
+        <th> Properties<br/> </th>
+        <th> Parameters<br/> </th>
+        <th> Description <br/> </th>
+    </tr>
+     <tr>
+        <td> processQuery(dm, query, hierarchyFilters) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> hierarchyFilters </td> <td> ej.Query </td> <td> The hierarchical query can be provided by using the hierarchical function.  </td> </tr>
+            </table>
+        </td>
+        <td> Used to prepare query string for the request data </td>
+    </tr>
+    <tr>
+        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+         <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+                <tr>  <td> request </td> <td> Object </td> <td>  Sets the default query for the data source </td> </tr>
+                <tr>  <td> changes </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
+            </table>
+        </td>
+        <td> Used to precess the response which is return from the Data Source </td>
+    </tr>
+    <tr>
+        <td> insert(dm, data, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
+                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Inserts a data item in the data table. </td>
+    </tr>
+    <tr>
+        <td> remove(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> It is used to remove the data from the dataSource </td>
+    </tr>
+    <tr>
+        <td> update(dm, keyField, value, tableName) </td>
+        <td> 
+            <table>
+                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
+                <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
+                <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
+            </table>
+        </td>
+        <td> Updates existing record and saves the changes to the table.. </td>
+    </tr>
+</table>
+
+
+{% highlight CSHTML %}
 
     @(Html.EJ().Grid<OrdersView>("Grid")
         .Datasource(ds => ds.URL(@Url.Action("DataSource"))
@@ -475,7 +764,7 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight C# %}
     //Refer the Syncfusion DataSource dll 
     using Syncfusion.JavaScript;
     using Syncfusion.JavaScript.DataSources;

@@ -5,6 +5,7 @@ description: summary
 platform: ejmvc
 control: DataManager
 documentation: ug
+keywords: Sum, Average, Minimum, Maximum, Distinct
 ---
 
 # Summary 
@@ -23,58 +24,33 @@ The ej provides several data utilization methods to achieve summary.
 
 The Sum summary type provides the sum of the data. The Sum data utilization method accepts two parameters, they are JSON data and the fieldname where the sum is calculated. The following code example illustrates the Default Summary Types.
 
-
-
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+	)
 
-	.DataManagerID("FlatData")
-
-	.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
-
-
-<script type="text/javascript" class="jsScript">
-
-	setTimeout(function () {
-
-		var proxy = $("#MainContent_OrdersGrid").ejGrid("instance");
-
-		var data = proxy._currentJsonData;
-
-		var sum = ej.sum(data, "EmployeeID");//Calculates the sum Freight
-
-		$("body").append("<span>Sum:" + sum + "</spn>");
-
-	}, 3000);
-
-</script>
+	<script type="text/javascript" class="jsScript">
+		setTimeout(function () {
+			var proxy = $("#FlatGrid").ejGrid("instance");
+			var data = proxy._currentJsonData;
+			var sum = ej.sum(data, "EmployeeID");//Calculates the sum Freight
+			$("body").append("<span>Sum:" + sum + "</spn>");
+		}, 3000);
+	</script>
 
 {% endhighlight %}
-
-
 
 The result of the above code example is illustrated as follows.
 
@@ -89,58 +65,33 @@ The Minimum of a particular field can be calculated by using the ej.min data uti
 
 The minimum of particular field can be calculated as follows.
 
-
-
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-	.DataManagerID("FlatData")
-
-	.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
-
+	)
 
     <script type="text/javascript" class="jsScript">
-
         setTimeout(function () {
-
-            var proxy = $("#MainContent_OrdersGrid").ejGrid("instance");
-
+            var proxy = $("#FlatGrid").ejGrid("instance");
             var data = proxy._currentJsonData;
-
             var min = ej.min(data, "EmployeeID");//Calculates the min Freight
-
             $("body").append("<span>Min:" + min.EmployeeID + "</spn>");
-
         }, 3000);
-
     </script>
 
 {% endhighlight  %}
-
-
 
 The result of the above code example is illustrated as follows.
 
@@ -155,59 +106,33 @@ The Maximum of a particular field can be calculated by using the ej.max data uti
 
 The maximum of particular field can be calculated as follows.
 
- 
-
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
-
-	.DataManagerID("FlatData")
-
-	.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
-
-
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
+	)
 
     <script type="text/javascript" class="jsScript">
-
         setTimeout(function () {
-
-            var proxy = $("#MainContent_OrdersGrid").ejGrid("instance");
-
+            var proxy = $("#FlatGrid").ejGrid("instance");
             var data = proxy._currentJsonData;
-
             var max = ej.max(data, "EmployeeID"); //Calculates the max Freight
-
             $("body").append("<span>Max:" + max.EmployeeID + "</spn>");
-
         }, 3000);
-
     </script>
+
 {% endhighlight  %}
-
-
-
 
 The result for the above code example is illustrated as follows.
 
@@ -220,53 +145,32 @@ Summary - Maximum
 
 The Average summary type provides the average of the given data. The Average data utilization method accepts two parameters, they are JSON/Array data and the fieldname where the sum is calculated. Use the following code example for calculating the average of the given JSON data.
 
-
-
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
+	)
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+	<script type="text/javascript" class="jsScript">
 
-	.DataManagerID("FlatData")
+		setTimeout(function () {
+			var proxy = $("#FlatGrid").ejGrid("instance");
+			var data = proxy._currentJsonData;
+			var avg = ej.avg(data, "EmployeeID");//Calculates the avg Freight
+			$("body").append("<span>Avg:" + avg + "</spn>");
+		}, 3000);
 
-	.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,30)")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
-
-<script type="text/javascript" class="jsScript">
-
-	setTimeout(function () {
-
-		var proxy = $("#MainContent_OrdersGrid").ejGrid("instance");
-
-		var data = proxy._currentJsonData;
-
-		var avg = ej.avg(data, "EmployeeID");//Calculates the avg Freight
-
-		$("body").append("<span>Avg:" + avg + "</spn>");
-
-	}, 3000);
-
-</script>
+	</script>
 
 {% endhighlight  %}
 
@@ -284,53 +188,31 @@ In a data, a field may contain many duplicate values; and sometimes you are requ
 
 The following code example illustrates how to use the ej.distinct method. In the following code, the third parameter of distinct method is set as true and hence it fetches the whole record from the provided data.
 
-
-
 {% highlight CSHTML %}
 
-@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders"))
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,35)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
+		})
+	)
 
-@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+	<script type="text/javascript" class="jsScript">
+		setTimeout(function () {
+			var proxy = $("#FlatGrid").ejGrid("instance");
+			var data = proxy._currentJsonData;
+			var distinct = ej.distinct(data, "EmployeeID", true);//Calculates the distinct
+			proxy.dataSource(distinct);
+		}, 3000);
 
-	.DataManagerID("FlatData")
-
-	.Query("new ej.Query().select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCity').range(25,35)")
-
-	.Columns(col =>
-
-	{
-
-		col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-
-		col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
-
-		col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
-
-		col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
-
-
-
-	})
-
-)
-
-<script type="text/javascript" class="jsScript">
-
-	setTimeout(function () {
-
-		var proxy = $("#MainContent_OrdersGrid").ejGrid("instance");
-
-		var data = proxy._currentJsonData;
-
-		var distinct = ej.distinct(data, "EmployeeID", true);//Calculates the avg Freight
-
-		proxy.dataSource(distinct);
-
-	}, 3000);
-
-</script>
+	</script>
 
 {% endhighlight  %}
 
