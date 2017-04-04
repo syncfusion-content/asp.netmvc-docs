@@ -5,6 +5,8 @@ description: getting started
 platform: ejmvc
 control: DataManager
 documentation: ug
+keywords: DataManager, Binding with Grid, Create Connection, Page, Sort
+
 ---
 
 # Getting Started 
@@ -17,7 +19,7 @@ DataManager is used to manage relational data. It supports CRUD (Create, Read, U
 
 This section briefly describes how to make a connection to WCF “Northwind” OData service and generate a report with top five orders from customer HANAR with higher Freight charges.  In this application scenario, you can learn how to bind the DataManager to the Grid control to do paging, filtering and sorting with Grid control in the DataManager by using ej.Query.
 
-### Create Connection
+## Create Connection
 
 To define connection to data source, you can use the DataManager control. The data source can be local or remote. Local data source is the local data and remote data source is any web service. 
 
@@ -81,10 +83,12 @@ In this application, as you have web service for Northwnd database, you can assi
 {% endhighlight  %}
 You can use the ej.Query to generate the report from web service.
 
-### Binding with Grid Control
+## Binding with Grid Control
 
 You can bind the DataManager with Grid by defining the ID of DataManager in the DataManagerID property of the Grid control.
+
 {% highlight CSHTML %}
+
 @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
@@ -122,7 +126,7 @@ When you run, the following table is displayed.
 DataManager with Grid Control
 {:.caption}
 
-### Filter
+## Filter
 
 You can generate the Filter query to filter the CustomerID column based on VINET value and it is ran by using the DataManager.
 
@@ -170,7 +174,7 @@ When you run the filter query and bind the result to the Grid, the following tab
 Data with Filtering
 {:.caption}
 
-### Sort
+## Sort
 
 You can generate the Sort query to sort the Freight column in descending order and that is executed by using the DataManager. 
 
@@ -219,7 +223,7 @@ Data with Sorting
 {:.caption}
 
 
-### Page
+## Page
 
 You can generate the Paging query to get the top four orders and it is ran by using the DataManager.  
 
@@ -262,10 +266,6 @@ The Page property of ejQuery is used to retrieve the records based on the given 
 {% endhighlight %}
 
 ![](Getting-Started_images/Getting-Started_img4.png)
-
-
-
-
 
 In this section, you can learn how to enable basic properties available in the DataManager and the usage of the various queries in the DataManager.  
 
