@@ -28,16 +28,38 @@ keywords: DropDownList, dropdown, Populating data
 
 ## Populating data
 
-The DropDownList can be bounded to any local list data and remote data services. You can use [DataManager](http://help.syncfusion.com/js/datamanager/overview) component to serve data from the data services based on the query provided. To bind data to DropDownList control, the Datasource property's URL and Query are used. To render the DropDownList items, map the DropDownListFields with corresponding Fields <br/>
+The DropDownList can be bounded to any local list data and remote data services. You can use [DataManager](http://help.syncfusion.com/js/datamanager/overview) component to serve data from the data services based on the query provided.You can bind data locally from controller also. To render the DropDownList items, map the DropDownListFields with corresponding Fields <br/>
  
 	
 {% highlight html %}
 
-    @Html.EJ().DropDownList("dropdownlist").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(6)").DropDownListFields(f => f.Text("CustomerID"))	
+    @Html.EJ().DropDownList("customersList").Datasource((IEnumerable<Customers>)ViewBag.datasource).DropDownListFields(df => df.ID("id").Text("text").Value("text"))	
 
 {% endhighlight %}
 
-Execute the code and to get a DropDownList control with data bound from remote service
+{% highlight c# %}
+  
+        List<Customers> customer = new List<Customers>();
+        public ActionResult Index()
+        {
+            customer.Add(new Customers { id = "1", text = "ALFKI" });
+            customer.Add(new Customers { id = "2", text = "ANATR" });
+            customer.Add(new Customers { id = "3", text = "ANTON" });
+            customer.Add(new Customers { id = "4", text = "AROUT" });
+            customer.Add(new Customers { id = "5", text = "BERGS" });
+            customer.Add(new Customers { id = "6", text = "BLAUS" });
+            ViewBag.datasource = customer;
+            return View();
+        }
+
+       public class Customers
+        {
+            public string id { get; set; }
+            public string text { get; set; }
+        }
+  {% endhighlight  %}
+
+Execute the code and to get a DropDownList control with data bound from controller
 
 ![](Getteing-Started_images/Getteing-Started_img2.jpeg)
 
@@ -47,9 +69,31 @@ DropDownList dimensions can be set using Width and Height Properties.
 	
 {% highlight html %}
 
-    @Html.EJ().DropDownList("dropdownlist").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(6)").DropDownListFields(f => f.Text("CustomerID")).Width("300px").Height("50px")
+     @Html.EJ().DropDownList("customersList").Datasource((IEnumerable<Customers>)ViewBag.datasource).DropDownListFields(df => df.ID("id").Text("text").Value("text")).Width("300px").Height("50px")
 
 {% endhighlight %}
+
+{% highlight c# %}
+  
+        List<Customers> customer = new List<Customers>();
+        public ActionResult Index()
+        {
+            customer.Add(new Customers { id = "1", text = "ALFKI" });
+            customer.Add(new Customers { id = "2", text = "ANATR" });
+            customer.Add(new Customers { id = "3", text = "ANTON" });
+            customer.Add(new Customers { id = "4", text = "AROUT" });
+            customer.Add(new Customers { id = "5", text = "BERGS" });
+            customer.Add(new Customers { id = "6", text = "BLAUS" });
+            ViewBag.datasource = customer;
+            return View();
+        }
+
+       public class Customers
+        {
+            public string id { get; set; }
+            public string text { get; set; }
+        }
+  {% endhighlight  %}
 
 **Setting dimensions to Popup list**
 
