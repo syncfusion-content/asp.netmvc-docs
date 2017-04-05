@@ -86,9 +86,16 @@ Initialize the Menu with data source value as follows.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText"))
-
+      @Html.EJ().Menu("syncfusionProducts").Items(items =>
+               {
+                   items.Add().Url("#").Id("Products").Text("Products");
+                   items.Add().Url("").Text("Support");
+                   items.Add().Url("").Id("Purchase").Text("Purchase");
+                   items.Add().Url("").Id("Downloads").Text("Downloads");
+                   items.Add().Id("Resources").Url("").Text("Resources");
+                   items.Add().Url("").Id("Company").Text("Company");
+               })
+			   
 {% endhighlight %}
 
 Execute the above code to display the Root level Menu items.
@@ -108,11 +115,59 @@ The following code example explains the initialization of first level sub menu i
 
 {% highlight CSHTML %}
 
-@Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c =>
-c.Datasource(cd => 
-cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItemText")))
+          @Html.EJ().Menu("syncfusionProducts").Items(items =>
+               {
+                   items.Add().Url("#").Id("Products").Text("Products").Children(child =>
+                       {
+                           child.Add().Url("").Text("ASP.NET");
+                           child.Add().Url("").Text("ASP.NET MVC");
+                           child.Add().Url("").Text("Mobile MVC");
+                           child.Add().Url("").Text("Silverlight");
+                           child.Add().Url("").Text("Windows Forms");
+                           child.Add().Url("").Text("Windows Phone");
+                           child.Add().Url("").Text("WinRT (XMAL)");
+                           child.Add().Url("").Text("WPF");
+                           child.Add().Url("").Text("Orubase Studio");
+                           child.Add().Url("").Text("Metro Studio");
+                           child.Add().Url("").Text("What's New");
+                       });
+                   items.Add().Url("").Text("Support").Children(child =>
+                       {
+                           child.Add().Url("").Text("Direct-Trac Support");
+                           child.Add().Url("").Text("Community Forums");
+                           child.Add().Url("").Text("Knowledge Base");
+                           child.Add().Url("").Text("Online Documentation");
+                           child.Add().Url("").Text("Services");
+                       });
+                   items.Add().Url("").Id("Purchase").Text("Purchase");
+                   items.Add().Url("").Id("Downloads").Text("Downloads").Children(child =>
+                       {
+                           child.Add().Url("").Text("Evaluation");
+                           child.Add().Url("").Text("Free E-Books");
+                           child.Add().Url("").Text("Metro Studio");
+                           child.Add().Url("").Text("Latest Version");
+                           child.Add().Url("").Text("Version History");
+                       });
+                   items.Add().Id("Resources").Url("").Text("Resources").Children(child =>
+                      {
+                          child.Add().Url("").Text("Technology Resource Portal");
+                          child.Add().Url("").Text("Case Studies");
+                          child.Add().Url("").Text("Bouchers & Datasheets");
+                          child.Add().Url("").Text("FAQ");
+                      });
+                   items.Add().Url("").Id("Company").Text("Company").Children(child =>
+                   {
+                       child.Add().Url("").Text("About Us");
+                       child.Add().Url("").Text("Company Blog");
+                       child.Add().Url("").Text("Technical Blog");
+                       child.Add().Url("").Text("Newsletter");
+                       child.Add().Url("").Text("Partners");
+                       child.Add().Url("").Text("Locations");
+                       child.Add().Url("").Text("Contact Us");
+                       child.Add().Url("").Text("Careers");
+                   });
 
+               })
 {% endhighlight %}
 
 Execute the above code to render the following output.
@@ -129,14 +184,97 @@ You can render sub menu item to multiple level in Menu control. In Menu Widgets,
 The following code example explains the initialization of multiple level sub menu items.
 
 {% highlight CSHTML %}
+      
+	   @Html.EJ().Menu("syncfusionProducts").Items(items =>
+               {
+                   items.Add().Url("#").Id("Products").Text("Products").Children(child =>
+                       {
+                           child.Add().Url("").Text("ASP.NET");
+                           child.Add().Url("").Text("ASP.NET MVC");
+                           child.Add().Url("").Text("Mobile MVC");
+                           child.Add().Url("").Text("Silverlight");
+                           child.Add().Url("").Text("Windows Forms");
+                           child.Add().Url("").Text("Windows Phone");
+                           child.Add().Url("").Text("WinRT (XMAL)");
+                           child.Add().Url("").Text("WPF");
+                           child.Add().Url("").Text("Orubase Studio");
+                           child.Add().Url("").Text("Metro Studio");
+                           child.Add().Url("").Text("What's New").Children(child1 =>
+                               {
+                                   child1.Add().Url("").Text("ASP.NET");
+                                   child1.Add().Url("").Text("WPF");
+                                   child1.Add().Url("").Text("Silverlight");
+                                   child1.Add().Url("").Text("Windows Forms");
+                                   child1.Add().Url("").Text("Windows Phone");
+                                   child1.Add().Url("").Text("ASP.NET MVC");
+                                   child1.Add().Url("").Text("ASP.NET");
+                               });
+                       });
+                   items.Add().Url("").Text("Support").Children(child =>
+                       {
+                           child.Add().Url("").Text("Direct-Trac Support");
+                           child.Add().Url("").Text("Community Forums");
+                           child.Add().Url("").Text("Knowledge Base");
+                           child.Add().Url("").Text("Online Documentation");
+                           child.Add().Url("").Text("Services").Children(child1 =>
+                               {
+                                   child1.Add().Url("").Text("Consulting");
+                                   child1.Add().Url("").Text("Training");
+                               });
+                       });
+                   items.Add().Url("").Id("Purchase").Text("Purchase");
+                   items.Add().Url("").Id("Downloads").Text("Downloads").Children(child =>
+                       {
+                           child.Add().Url("").Text("Evaluation");
+                           child.Add().Url("").Text("Free E-Books");
+                           child.Add().Url("").Text("Metro Studio");
+                           child.Add().Url("").Text("Latest Version");
+                           child.Add().Url("").Text("Version History");
+                       });
+                   items.Add().Id("Resources").Url("").Text("Resources").Children(child =>
+                      {
+                          child.Add().Url("").Text("Technology Resource Portal").Children(child1 =>
+                                      {
+                                          child1.Add().Url("").Text("E-Books");
+                                          child1.Add().Url("").Text("White Papers");
+                                      });
+                          child.Add().Url("").Text("Case Studies");
+                          child.Add().Url("").Text("Bouchers & Datasheets");
+                          child.Add().Url("").Text("FAQ");
+                      });
+                   items.Add().Url("").Id("Company").Text("Company").Children(child =>
+                   {
+                       child.Add().Url("").Text("About Us").Children(child1 =>
+                           {
+                               child1.Add().Url("").Text("More About Us");
+                               child1.Add().Url("").Text("Management");
+                               child1.Add().Url("").Text("News & Events");
+                               child1.Add().Url("").Text("Customer Quotes");
+                               child1.Add().Url("").Text("Customer Lists");
+                               child1.Add().Url("").Text("Case Studies");
+                               child1.Add().Url("").Text("Awards");
+                               child1.Add().Url("").Text("Media Kit");
+                           });
+                       child.Add().Url("").Text("Company Blog");
+                       child.Add().Url("").Text("Technical Blog");
+                       child.Add().Url("").Text("Newsletter");
+                       child.Add().Url("").Text("Partners").Children(child1 =>
+                           {
+                               child1.Add().Url("").Text("Technology Partners");
+                               child1.Add().Url("").Text("Training Partners");
+                               child1.Add().Url("").Text("Consulting Partners");
+                           });
+                       child.Add().Url("").Text("Locations").Children(child1 =>
+                       {
+                           child1.Add().Url("").Text("RDU");
+                           child1.Add().Url("").Text("Chennai");
+                       });
+                       child.Add().Url("").Text("Contact Us");
+                       child.Add().Url("").Text("Careers");
+                   });
 
-@Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d => 
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c =>
-c.Datasource(cd => 
-cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItemText").Child(cc =>
-cc.Datasource(ccd =>
-ccd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("InnerItems").Id("InnerSubItemID").ParentId("SubItemID").Text("InnerSubItemText"))))
-
+               })
+   
 
 {% endhighlight %}
 
