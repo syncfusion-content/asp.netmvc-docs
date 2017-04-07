@@ -69,7 +69,7 @@ The following steps explain local data binding to an AutoComplete textbox.
 
 You need to add the class in the Models. Define the Class with key and text field. Then create a List of that class and add the data.
 
-    {% highlight CSHTML %}
+    {% highlight c# %}
 
         public class ComponentsList
         {
@@ -106,7 +106,7 @@ You need to add the class in the Models. Define the Class with key and text fiel
 
 In the controller page, you need to pass the model class to the corresponding view.
 
-    {% highlight CSHTML %}
+    {% highlight c# %}
 
             public ActionResult Index()
             {
