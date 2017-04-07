@@ -656,7 +656,7 @@ List of Column type and Filter operators
 
 ## FilterBar Template
 
-Usually enabling allowFiltering, will create default textbox in Grid FilterBar. So, Using [`FilterBarTemplate`] property of `columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+Usually enabling allowFiltering, will create default textbox in Grid FilterBar. So, Using [`FilterBarTemplate`] property of `Columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
 It has three functions. They are    
 
 1. `create` - It is used to create the control at time of initialize.
@@ -676,7 +676,7 @@ The following code example describes the above behavior.
         .AllowPaging()
         .Columns(col =>
         {
-            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
             col.Field("CustomerID").HeaderText("CustomerID").FilterBarTemplate(filterbar => filterbar.Create("autoComplete_create").Write("autoComplete_write").Read("autoComplete_read")).Width(90).Add();
             col.Field("EmployeeID").HeaderText("EmployeeID").FilterBarTemplate(filterbar => filterbar.Write("dropdown_write").Read("dropdown_read")).TextAlign(TextAlign.Right).Width(75).Add();
             col.Field("Freight").HeaderText("Freight").FilterBarTemplate(filterbar => filterbar.Write("numeric_write").Read("numeric_read")).TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
