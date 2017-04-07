@@ -222,7 +222,7 @@ The following code example describes the above behavior.
                 .SwimlaneKey("Assignee")
                 .PrimaryKey("Id");
         })
-        .ContextMenuSettings(menu => menu.Enable(true) .MenuItems(menuitem=>menuitem.Add()).CustomMenuItems(custom => custom.Text("Clear Selection").Target(ContextTarget.All).Add()))
+        .ContextMenuSettings(menu => menu.Enable(true) .MenuItems(menuitem=> menuitem.Reset()).CustomMenuItems(custom => custom.Text("Clear Selection").Target(ContextTarget.All).Add()))
     )
   
 {% endhighlight  %}
