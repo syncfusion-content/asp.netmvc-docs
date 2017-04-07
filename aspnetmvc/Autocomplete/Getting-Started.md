@@ -26,7 +26,7 @@ AutoComplete control with search
 
 ### Create an AutoComplete
 
-ASP.NET MVC AutoComplete Textbox widget basically renders with built-in features like keyboard navigation with animations and flexible API’s. You can easily create the AutoCompleteTextbox widget by the following steps.
+ASP.NET MVC AutoComplete textbox widget basically renders with built-in features like keyboard navigation with animations and flexible API’s. You can easily create the AutoCompleteTextbox widget by the following steps.
 
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](/extension/aspnet-mvc-extension/overview) Documentation.
 2. Initialize the corresponding AutoComplete widget in the view page.
@@ -117,7 +117,7 @@ In the controller page, you need to pass the model class to the corresponding vi
 
     {% endhighlight %}
 
-In the View page, add Autocomplete helper and map the Local data list to corresponding DataSource and AutoCompleteFields. You need to refer the model class at the top of the page.
+In the View page, add Autocomplete helper and map the local data list to corresponding DataSource and AutoCompleteFields. You need to refer the model class at the top of the page.
 
     {% highlight CSHTML %}
 
@@ -170,6 +170,8 @@ AutoComplete textbox with selection visual mode
 
 #### Configure Highlight Search and Rounded corners
 
+When you set the HighlightSearch property to ‘true’, the characters typed in textbox gets highlighted in the suggestion list. To display textbox reforms from sharp ends to rounded ends, you can enable the ShowRoundedCorner property.
+
     {% highlight CSHTML %}
 
         <div>
@@ -181,8 +183,6 @@ AutoComplete textbox with selection visual mode
         </div>
 
     {% endhighlight %}
-
-When you set the HighlightSearch property to ‘true’, the characters typed in textbox gets highlighted in the suggestion list. To display textbox reforms from sharp ends to rounded ends, you can enable the ShowRoundedCorner property.
 
 
 The following screen shot displays the AutoComplete textbox with highlight search enabled.
