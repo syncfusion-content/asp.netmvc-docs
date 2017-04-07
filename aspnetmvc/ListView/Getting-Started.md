@@ -26,35 +26,56 @@ The following steps guide you to add a ListView control in a MVC application.
 ## Create a simple ListView
 
 1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/listview/getting-started) Documentation.
-2. Add the following code example to the corresponding view page for ListView rendering.
+2. You need to add the class in the Models. Define the Class with key and text field. Then create a List of that class and add the data.
 
-{% highlight CSHTML %}
+    {% highlight c# %}
 
-@Html.EJ().ListView("Listview")
+        public class ListData
+        {
+            public string texts { get; set; }
+        }
+        public static class ListDataModal
+        {
+            public static List<ListData> listTempSource = new List<ListData>();
+            public static List<ListData> setListDataSource()
+            {
+                listTempSource.Add(new ListData { texts = "Inbox" });
+                listTempSource.Add(new ListData { texts = "VIP" });
+                listTempSource.Add(new ListData { texts = "Drafts" });
+                listTempSource.Add(new ListData { texts = "Sent" });
+                listTempSource.Add(new ListData { texts = "Junk" });
+                listTempSource.Add(new ListData { texts = "Trash" });
+                listTempSource.Add(new ListData { texts = "All mails" });
+                listTempSource.Add(new ListData { texts = "Mail" });
+                return listTempSource;
+            }        
+        }
 
-.Items(items=>
+    {% endhighlight %}
 
-    {
+In the controller page, you need to pass the model class to the corresponding view.
 
-        items.Add().Text("Inbox");
+    {% highlight c# %}
 
-        items.Add().Text("VIP");
+            public ActionResult Index()
+            {
+            
+            return View(ListDataModal.setListDataSource());               
+            }
 
-        items.Add().Text("Drafts");
+    {% endhighlight %}
 
-        items.Add().Text("Sent");
+In the View page, add ListView helper and map the Local data list to corresponding DataSource and ListviewFields. You need to refer the model class at the top of the page.
 
-        items.Add().Text("Junk");
+    {% highlight CSHTML %}
 
-        items.Add().Text("Trash");
+        @model List<ApplicationName.Models.ListData>
 
-        items.Add().Text("All mails");
+        @{
+        @Html.EJ().ListView("Listview").ShowHeader(false).Height(206).Width(400).DataSource(Model).FieldSettings(f => { f.Text("texts"); });
+        }
 
-        items.Add().Text("Mail");
-
-   })
-
-{% endhighlight %}
+    {% endhighlight %}
 
 Run the above code to render the following output.
 
@@ -67,30 +88,13 @@ You can add a header for ListView using ShowHeader property. Refer to the follow
 
 {% highlight CSHTML %}
 
-<!—Add Listview control with header -->
+    <!—Add Listview control with header -->
 
-@Html.EJ().ListView("Listview").ShowHeader(true).HeaderTitle("Mailbox")
+    @model List<ApplicationName.Models.ListData>
 
-.Items(items=>
-
-    {
-        items.Add().Text("Inbox");
-
-        items.Add().Text("VIP");
-
-        items.Add().Text("Drafts");
-
-        items.Add().Text("Sent");
-
-        items.Add().Text("Junk");
-
-        items.Add().Text("Trash");
-
-        items.Add().Text("All mails");
-
-        items.Add().Text("Mail");
-
-   })
+	@{
+    @Html.EJ().ListView("Listview").ShowHeader(true).HeaderTitle("Mailbox").Height(206).Width(400).DataSource(Model).FieldSettings(f => { f.Text("texts"); });
+    }
    
 {% endhighlight %}
 
