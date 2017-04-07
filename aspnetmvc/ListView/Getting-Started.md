@@ -69,7 +69,7 @@ In the View page, add ListView helper and map the Local data list to correspondi
 
     {% highlight CSHTML %}
 
-        @model List<MvcApplication7.Models.ListData>
+        @model List<ApplicationName.Models.ListData>
 
         @{
         @Html.EJ().ListView("Listview").ShowHeader(false).Height(206).Width(400).DataSource(Model).FieldSettings(f => { f.Text("texts"); });
@@ -90,7 +90,7 @@ You can add a header for ListView using ShowHeader property. Refer to the follow
 
     <!—Add Listview control with header -->
 
-    @model List<MvcApplication7.Models.ListData>
+    @model List<ApplicationName.Models.ListData>
 
 	@{
     @Html.EJ().ListView("Listview").ShowHeader(true).HeaderTitle("Mailbox").Height(206).Width(400).DataSource(Model).FieldSettings(f => { f.Text("texts"); });
