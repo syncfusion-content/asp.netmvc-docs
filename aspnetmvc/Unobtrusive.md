@@ -51,6 +51,8 @@ After setting the value as true, refer to the unobtrusive script file in the _La
 
 {% endhighlight %}
 
+N> ej.unobtrusive.min.js script should be referred next to ej.web.all.min.js file reference since it is dependent on it.
+
 By default, its necessary to add Script Manager code in the _Layout.cshtml file present within the ~/Views/Shared folder of your application.
 
 {% highlight html %}
@@ -90,11 +92,9 @@ When the above code is executed on the browser, the DropDownList control will re
 
 ## Enabling Client Side Validation
 
-One of the more useful things MVC includes is Unobtrusive Validation with the usage of the jQuery Validate plugin and the Unobtrusive library. This lightweight library allows us to add validation to our MVC views without any additional client-side coding; we only have to use attributes like RequiredAttribute and RangeAttribute and include the correct script files. 
+We have to refer the required jQuery validation scripts to perform Client-side Validation before postback when form submitted. This can be enabled or disabled by ClientValidationEnabled key in app settings of  web.config file.
 
-It means that we can implement simple client-side validation without writing a ton of validation code, and that we can improve the user experience simply by adding the appropriate attributes and including the appropriate script files.
-
-Unobtrusive Validation allows us to take the already-existing validation attributes and use them client-side to make our user experience that much nicer.
+In this section we have explained how to perform Client-Side Validation for DropDownList control with DataAnnotations attribute.
 
 Define the view model for DropDownList control as follows, 
 
