@@ -92,7 +92,7 @@ When the above code is executed on the browser, the DropDownList control will re
 
 ## Enabling Client Side Validation
 
-Unobtrusive Validation is one of the useful things in MVC which can be done with the usage of Validate plugin and the unobtrusive library. This allows us to add validation to MVC views by using attributes like Required Attribute and Range Attribute with correct script reference without any additional client-side coding. 
+Unobtrusive Validation is one of the useful things in MVC which can be done with the usage of jQuery Validate plugin and the unobtrusive library. This allows us to add validation to MVC views by using attributes like Required Attribute and Range Attribute with correct script reference without any additional client-side coding. 
 
 This enhances the user experience in a simple way by using the existing validation attributes in client side 
 
