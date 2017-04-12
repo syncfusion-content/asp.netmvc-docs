@@ -51,7 +51,7 @@ After setting the value as true, refer to the unobtrusive script file in the _La
 
 {% endhighlight %}
 
-N>ej.unobtrusive.min.js script should be referred next to ej.web.all.min.js file reference since it dependent on it.
+N> ej.unobtrusive.min.js script should be referred next to ej.web.all.min.js file reference since it dependent on it.
 
 By default, its necessary to add Script Manager code in the _Layout.cshtml file present within the ~/Views/Shared folder of your application.
 
