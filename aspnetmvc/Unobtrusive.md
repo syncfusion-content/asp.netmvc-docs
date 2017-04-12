@@ -92,7 +92,7 @@ When the above code is executed on the browser, the DropDownList control will re
 
 ## Enabling Client Side Validation
 
-Client-side Validation will validate the data before postback as soon as the data is submitted.You have to refer the required jQuery validation scripts for validation.You can enable or disable Client-side Validation by setting value in web.config file.
+We have to refer the required jQuery validation scripts to perform Client-side Validation before postback when form submitted. This can be enabled or disabled by ClientValidationEnabled key in app settings of  web.config file.
 
 In this section we have explained how to perform Client-Side Validation for DropDownList control with DataAnnotations attribute.
 
