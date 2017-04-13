@@ -47,7 +47,7 @@ In the view page, add TreeView helper as shown below. It will render the TreeVie
     
 ## TreeView using Data Binding
 
-Another way of creating TreeView is binding with the data source, you can bind local data or remote data source to create a TreeView. 
+Another way of creating TreeView is binding with the data source, you can bind local data source to create a TreeView. 
 
 Render TreeView with local data source.
 
@@ -112,38 +112,6 @@ Above data can be directly assigned to [DataSource](http://help.syncfusion.com/c
     {% endhighlight %}
     
     
-    
-Render TreeView with remote data source
-    
-    
-    
-    {% highlight razor %}
-
-    @(Html.EJ().TreeView("treeView")
-        .TreeViewFields(field =>
-            field.Datasource(data =>
-                data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/")
-            )
-            .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
-            .Id("CategoryID")
-            .Text("CategoryName")
-            .Child(childField =>
-                childField.Datasource(data =>
-                    data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
-                .TableName("Products")
-                .Id("ProductID")
-                .ParentId("CategoryID")
-                .Text("ProductName")
-            )
-        )
-    )
-    
-    {% endhighlight %}
-    
-    
-    
-N>**In remote data source, [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager) is used to process the data from services and the value has been assigned to DataSource.**
-
 ## Create Instance for TreeView
 
 You can create an instance for existing TreeView in following ways. Once a reference has been established, you can use the [API’s](http://help.syncfusion.com/js/api/ejtreeview) of TreeView to control its behavior.
