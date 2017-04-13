@@ -35,7 +35,7 @@ The following steps explain creating first Kanban with an empty columns.
 
 ## Data Binding
 
-You can bind the data to Kanban control by either locally or remotely. Assign the remote service URL to DataSource property of Kanban control to bind remote data using `ej.DataManager`.
+You can bind the data to Kanban control by either locally or remotely. Assign the local data to DataSource property of Kanban control to bind local data.
 
 {% tabs %}
 
