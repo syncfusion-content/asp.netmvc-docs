@@ -48,16 +48,16 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 ## Data binding
 
-1.	You can bind the data to Grid control by either locally or remotely. The following code example shows how to bind remote data to grid control.
-2.	Assign the remote service URL to `DataSource` property of Grid control to bind remote data with grid.
-3.	You can retrieve the data from another domain using `CrossDomain` property, and also you can load all the data to grid on initial rendering using `Offline` property.
+You can bind the data to Grid control using `DataSource` property.
 
 {% highlight razor %}
 
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true)).Columns(col =>
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    
+    .Columns(col =>
 
     {
 
@@ -77,6 +77,23 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 {% endhighlight  %}
 
+{% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+{% endhighlight  %}
+
 ![](Getting-Started_images/Getting-Started_img3.png)
 
 
@@ -89,7 +106,9 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true)).AllowPaging()
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    
+    .AllowPaging()
 
     .Columns(col =>
 
@@ -107,6 +126,23 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 {% endhighlight  %}
 
+{% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+{% endhighlight  %}
+
     N> _Pager settings can be customized by using the 'PageSize' and 'PageCount' properties. When it is not given the default values for `PageSize` and `PageCount` are 12 and 8 respectively._
 
 ![](Getting-Started_images/Getting-Started_img4.png)
@@ -119,7 +155,9 @@ You can execute the above code sample to render an empty Grid is rendered with s
 {% highlight razor %}
 
 
-    @(Html.EJ().Grid<object>("FlatGrid").Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))   
+    @(Html.EJ().Grid<object>("FlatGrid")
+    
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
 
     .AllowPaging()
 
@@ -147,6 +185,23 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 {% endhighlight  %}
 
+{% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+{% endhighlight  %}
+
 ![](Getting-Started_images/Getting-Started_img7.png)
 
 
@@ -158,7 +213,9 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))    .AllowPaging()
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
+    
+    .AllowPaging()
 
     .AllowGrouping()
 
@@ -186,6 +243,23 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 {% endhighlight  %}
 
+{% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+{% endhighlight  %}
+
 
 ![](Getting-Started_images/Getting-Started_img8.png)
 
@@ -201,7 +275,7 @@ The following code example shows the option to enable group summary.
 
     @(Html.EJ().Grid<object>("FlatGrid")
 
-    .Datasource(d=>d.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").CrossDomain(true).Offline(true))   
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
 
     .AllowPaging()
 
@@ -258,6 +332,23 @@ The following code example shows the option to enable group summary.
     })
 
     )
+
+{% endhighlight  %}
+
+{% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
 
 {% endhighlight  %}
 
