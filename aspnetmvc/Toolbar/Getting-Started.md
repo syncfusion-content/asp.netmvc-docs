@@ -120,9 +120,7 @@ Initialize the Toolbar items with <UL> <LI> template as follows.
 
 {% endhighlight %}
 
-Apply the given styles in the code table to show the Toolbar items as follows. You can refer images from any location. For the following code example, the images have been referred from the given location.
-
-[http://js.syncfusion.com/UG/Web/Content/](http://js.syncfusion.com/UG/Web/Content/)pdf-icon.png
+Apply the given styles in the code table to show the Toolbar items as follows. You can refer images from any location.
 
 {% highlight css %}
 
