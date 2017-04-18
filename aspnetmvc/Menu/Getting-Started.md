@@ -76,7 +76,7 @@ Essential ASP.NET MVC Menu without menu item
 
 Each Menu consists of a list of Menu items with list of sub level Menu item. Refer the following guidelines to initialize the root level elements of Menu control with Remote data source value. RootLevelItems data service is created to define the root level Menu items, sub items and InnerItems data services to initialize the sub level and inner sub levels and both can be referred from the following service location. In Menu Widgets mention the RootLevelItem Data Source in the Datasource property. Elements’s properties like Id, Text, URL, and Parent Id can be defined using our menu fields and it explained briefly under the concept and features of Menu control.
 
-[http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/](http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/)
+[http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/](http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/)
 
 
 
