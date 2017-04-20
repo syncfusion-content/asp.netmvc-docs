@@ -19,9 +19,7 @@ In the View page, define the following code.
 
 @Html.EJ().Signature("mysignature").Height("400px").StrokeWidth(3).BackgroundImage("../../Images/progressbar/water.png").IsResponsive(true).saveWithBackground(true)
 
-<a id="download">
-    <input id="signsave" class="e-btn" type="button" value="Save" />
- </a> 
+ @Html.EJ().Button("signsave").Text("Save").ShowRoundedCorner(true).ClientSideEvents(evt => evt.Click("onsave")) 
 
 {% endhighlight %}
 
@@ -30,27 +28,12 @@ Add the following script to define the download format for the canvas.
 {% highlight js %}
 
 <script type="text/javascript">
-        $(function () {
-            
-            $("#signsave").ejButton({
-                size: "normal",
-                showRoundedCorner: true,
-            });
-            var client = document.getElementById('download');
-            if (client.addEventListener)
-                client.addEventListener('click', downloadClient, false);
-            else
-                client.attachEvent('onclick', downloadClient, false);
 
-            function downloadClient(e) {
-                var sign = $("signature").ejSignature("instance");
-                sign.option("saveImageFormat", "jpg")                   // set the save image format dynamically
-                this.download = "Signature." + sign.model.saveImageFormat + "";
-                var div = $("signature");
-                var canvas = div["children"]()[0];
-                this.href = canvas.toDataURL("image/" + sign.model.saveImageFormat + "", 1.0);
-            }
-        });
+     function onsave() {
+            var sign = $("#mysignature").ejSignature("instance");
+            sign.option("saveImageFormat", "jpg") 
+            sign.save("MySignature");
+        }
 
     </script>
 
