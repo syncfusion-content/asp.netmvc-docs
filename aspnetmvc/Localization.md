@@ -32,7 +32,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
    ~~~
    
    
-3. Download and refer the Syncfusion UI component localized text from [ej-global](https://github.com/syncfusion/ej-global/tree/master/localetexts) repository.
+3. Download and refer the Syncfusion UI component localized text from [ej-global](https://github.com/syncfusion/ej-global/tree/master) repository.
 
    
    ![](core-concepts_images/core-concepts_img1.png)
