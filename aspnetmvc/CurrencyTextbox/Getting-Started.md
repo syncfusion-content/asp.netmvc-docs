@@ -31,8 +31,6 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 		<div class="editors">
 
-		<div class="ele-icon"></div>
-
 		<div class="ele-txt" style="">Electricity Bill Calculator</div>
 
 		<br />
@@ -107,7 +105,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 			 </tbody></table>
 
-		  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
+		  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
 		  </div>
 
@@ -117,33 +115,11 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
  
 
 
-3. The following styles are added to arrange the Editors.  You can add the following location in the URL path for the background image and to apply styling [http://js.syncfusion.com/UG/Web/Content/electricity.png](http://js.syncfusion.com/UG/Web/Content/electricity.png)
+3. The following styles are added to arrange the Editors.
 
    ~~~ css
 
 		<style type="text/css" class="cssStyles">
-
-			.ele-icon
-
-			{
-
-				display: inline-block;
-
-				background-image: url(http://js.syncfusion.com/UG/Web/Content/electricity.png);
-
-				background-repeat: no-repeat;
-
-				background-size: contain;
-
-				height: 50px;
-
-				width: 50px;
-
-				margin-left:50px;
-
-				margin-top:15px;
-
-			}
 
 			.ele-txt
 
@@ -225,8 +201,6 @@ You can set the “MinValue”,“MaxValue” and “Value” in Currency, Perce
 
 <div class="editors">
 
-<div class="ele-icon"></div>
-
 <div class="ele-txt" style="">Electricity Bill Calculator</div>
 
 <br />
@@ -299,7 +273,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Currency, Perce
 
   <div class="paybill">
 
-    @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
+    @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
   </div>
 
@@ -319,8 +293,6 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 {% highlight html %}
 <div class="editors">
-
-<div class="ele-icon"></div>
 
 <div class="ele-txt" style="">ElectricityBill Calculator</div><br />
 
@@ -396,7 +368,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
   <div class="paybill">
 
-		@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender")
+		@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").
 
   </div>
 
@@ -410,7 +382,7 @@ Run the above code example and you can see that it restricts entering a value ex
 
 You can use events to calculate the total and displays the value. You can achieve this with the help of Click event in the button widget. The calculation steps are written in the call back function of Click event button.
 
-To customize the button, set the ContentType as TextAndImage to include the icon before the text. Add the PrefixIcon value as “e-calender” and add the ClientSideEvents for click event.
+To customize the button, you can set the ContentType as TextAndImage to include the icon before the text and add the ClientSideEvents for click event.
 
 {% highlight js %}
 <div class="editors">
@@ -421,7 +393,7 @@ To customize the button, set the ContentType as TextAndImage to include the icon
 
   <div class="paybill">
 
-   @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ContentType(ContentType.TextAndImage).PrefixIcon("e-calender").ClientSideEvents(c=>c.Click("calculateBill"))
+   @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ClientSideEvents(c=>c.Click("calculateBill"))
 
   </div>
 
