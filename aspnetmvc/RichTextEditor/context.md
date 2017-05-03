@@ -88,8 +88,8 @@ To add a new item to the editor ContextMenu, you need to use the ‘[insertMenuO
 <script>
     $("#rteSample").ejRTE({ contextMenuClick: function(args){//handle menu-item click action.
     } });
-    var rteeObj =  $("#rteSample").data("ejRTE");// Inserts new item to the contextmenu 
-    rteeObj.insertMenuOption({newItem:"Show Table Details",                                                 
+    var rteObj =  $("#rteSample").data("ejRTE");// Inserts new item to the context menu 
+    rteObj.insertMenuOption({newItem:"Show Table Details",                                                 
     targetItem: "Table Properties",
     insertType:("insertAfter"),
     menuType:{text:false,image:false,hyperlink:false,table:true},                             
@@ -116,8 +116,8 @@ To remove a menu-item from the editor ContextMenu, you have to use the ‘remove
 .Render();}
 
 <script>
-    var rteeObj = $("#rteSample").data("ejRTE"); 
-    rteeObj.removeMenuOption("Table-Properties");
+    var rteObj = $("#rteSample").data("ejRTE"); 
+    rteObj.removeMenuOption("Table-Properties");
 </script> 
 
 {% endhighlight %}
