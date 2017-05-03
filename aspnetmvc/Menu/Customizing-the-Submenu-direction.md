@@ -131,7 +131,7 @@ In the following example, the Sub menus opens in the Left side of the menu.
 
 		  child.Add().Text("Case Studies");
 
-		  child.Add().Text("Bouchers & Datasheets");
+		  child.Add().Text("Boucher's & Data sheets");
 
 		  child.Add().Text("FAQ");
 

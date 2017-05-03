@@ -55,7 +55,7 @@ The following steps explains you the local data binding to TagCloud widget,
 	public int Frequency { get; set; }        
 }
 
- //Refer the Model in the controllerusing <Applicationname>.Models;    
+ //Refer the Model in the controller using <Applicationname>.Models;    
  List<WebsiteCollection> sites = new List<WebsiteCollection>();         
  public ActionResult Index()        
  {           

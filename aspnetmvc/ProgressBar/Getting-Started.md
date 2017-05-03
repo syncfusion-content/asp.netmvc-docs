@@ -106,7 +106,7 @@ In this scenario, the advancement of the Progress Bar is changed according to th
 
 <script> 
 
-	var progresObj, k = 10, i = 0;
+	var progressObj, k = 10, i = 0;
 
 	$(document).keydown(function() {
 
@@ -149,34 +149,34 @@ In this scenario, the advancement of the Progress Bar is changed according to th
 	$(function () 
 	{
 
-		progresObj = $("#progressBar").data("ejProgressBar");       
+		progressObj = $("#progressBar").data("ejProgressBar");       
 
 	});
 
 	function progress() 
 	{
 
-		progresObj.option("text", " verystrong");
+		progressObj.option("text", " very strong");
 
-		progresObj.option("percentage", k + 90);
+		progressObj.option("percentage", k + 90);
 
 	}
 
 	function progress1() 
 	{
 
-		progresObj.option("text", "strong");
+		progressObj.option("text", "strong");
 
-		progresObj.option("percentage", k + 50);
+		progressObj.option("percentage", k + 50);
 
 	}
 
 	function progress2() 
 	{
 
-		progresObj.option("percentage", k + 10);
+		progressObj.option("percentage", k + 10);
 
-		progresObj.option("text", "weak");  
+		progressObj.option("text", "weak");  
 
 
 

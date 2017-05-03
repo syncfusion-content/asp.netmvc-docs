@@ -765,7 +765,7 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 {% endhighlight %}
 
 {% highlight C# %}
-    //Refer the Syncfusion DataSource dll 
+    //Refer the Syncfusion DataSource assembly 
     using Syncfusion.JavaScript;
     using Syncfusion.JavaScript.DataSources;
 
