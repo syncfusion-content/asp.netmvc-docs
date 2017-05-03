@@ -684,7 +684,7 @@ The below scenario can be explained with three DropDownList for the multi-level 
             capital.Add(new Capital { value = 17, text = "Copenhagen" });
             capital.Add(new Capital { value = 18, text = "New Delhi" });
             capital.Add(new Capital { value = 19, text = "Havana" });
-            capital.Add(new Capital { value = 20, text = "Brasília" });
+            capital.Add(new Capital { value = 20, text = "Brasilia" });
             capital.Add(new Capital { value = 21, text = "Lima" });
             capital.Add(new Capital { value = 22, text = "Canberra" });
             capital.Add(new Capital { value = 23, text = "Wellington" });
