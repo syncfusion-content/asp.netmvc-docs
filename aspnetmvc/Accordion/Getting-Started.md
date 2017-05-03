@@ -75,7 +75,7 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
             <h4>DocIO</h4>
         </li>
         <li>
-            <h4>Pdf  </h4>
+            <h4>PDF  </h4>
         </li>
         <li>
             <h4>Gauge  </h4>
@@ -177,7 +177,7 @@ You can also open all the panels during initialization using the SelectedItems p
 				<h4>DocIO</h4>
 			</li>
 			<li>
-				<h4>Pdf  </h4>
+				<h4>PDF  </h4>
 			</li>
 			<li>
 				<h4>Gauge  </h4>
@@ -284,7 +284,7 @@ N> ShowRoundedCorner property is false by default.
 
 			<li>
 
-				<h4>Pdf  </h4>
+				<h4>PDF  </h4>
 
 			</li>
 
@@ -432,7 +432,7 @@ You can set the Up/Down arrow icon to Accordion header, by adding e-arrowheadup 
 
 			<li>
 
-				<h4>Pdf  </h4>
+				<h4>PDF  </h4>
 
 			</li>
 
