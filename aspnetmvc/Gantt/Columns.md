@@ -65,7 +65,7 @@ public class GanttCustomColumnController : Controller
 
 
 
-        #region Create DataSource
+        // Create DataSource
 
 
 
@@ -236,10 +236,6 @@ public class GanttCustomColumnController : Controller
             return DataCollection;
 
         }
-
-
-
-        #endregion
 
 
 

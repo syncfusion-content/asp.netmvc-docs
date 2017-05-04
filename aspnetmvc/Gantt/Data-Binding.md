@@ -43,11 +43,6 @@ public class GanttController : Controller
 	}
 
 
-
-
-
-	#region CreateDataSource
-
 	private List<Data> GetDataSource()
 
 	{
@@ -193,11 +188,6 @@ public class GanttController : Controller
 		return DataCollection;
 
 	}
-
-	#endregion
-
-
-
 
 
 	public class Data
