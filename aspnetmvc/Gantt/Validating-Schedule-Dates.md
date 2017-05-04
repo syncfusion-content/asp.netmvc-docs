@@ -27,7 +27,7 @@ PrevTimeSpan and NextTimeSpan toolbar items are used to create new time span bas
 
 	.ToolBarSettings(tbs=>tbs.showToolBar(true)
 
-	.ToobarItems(new List<GanttToolbarItems>()
+	.ToolbarItems(new List<GanttToolbarItems>()
 
 	{ GanttToolbarItems.PrevTimeSpan,
 

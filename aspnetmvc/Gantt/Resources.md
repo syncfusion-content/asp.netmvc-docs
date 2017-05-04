@@ -33,7 +33,7 @@ ViewBag.resource = this.GetResources();
 
 //...
 
- #region CreateResource Collection
+// Create resource collection
 
  public class Resource
 
@@ -67,9 +67,7 @@ ViewBag.resource = this.GetResources();
 
  }
 
- #endregion  
- 
- {% endhighlight %}
+{% endhighlight %}
 
 {% highlight CSHTML %}
 
