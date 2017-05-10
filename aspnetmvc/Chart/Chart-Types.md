@@ -2702,3 +2702,104 @@ Outlier symbol, width and height can be customized using outlierSettings through
 ![](Chart-Types_images/Chart-Types_img92.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/boxandwhisker) here to view the Box and Whisker Chart online demo sample.
+
+## Pie Of Pie Chart
+To render the pie of pie chart, set the series `Type` as **pieofpie**. Pie of pie chart is used for displaying the data of a pie slice as another pie chart. The values in the second pie is displayed based on the **splitMode**  property.
+
+{% highlight cshtml %}
+@(Html.EJ().Chart("container")
+.Series(sr =>
+{
+sr.Points(pt =>
+{
+                                           pt.X("Saudi Arabia").Y(58).Text("58%").Add();
+                                           pt.X("Persian Gulf").Y(15).Text("15%").Add();
+                                           pt.X("Canada").Y(13).Text("13%").Add();
+                                           pt.X("Venezuela").Y(8).Text("8%").Add();
+                                           pt.X("Mexico").Y(3).Text("3%").Add();
+                                           pt.X("Russia").Y(2).Text("2%").Add();
+                                           pt.X("Miscellaneous").Y(1).Text("1%").Add();
+                                       })
+                                       .SplitValue("10")
+                                       .Type(SeriesType.PieOfPie).Add();
+                    })           
+         
+        )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img93.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/chart/pieofpie) here to view the Pie Of Pie Chart online demo sample.
+
+### Split Mode and Split Value 
+The points to be displayed in the second pie is decided based on the `splitMode` property.**SplitMode** property takes the following values. 
+* Position – Have to split the data points based on its position
+* Value – Have to split the data points based on its Y value
+* Percentage – Have to split the points based on the percentage value
+* Indexes – The data points with the specified indexes are split separately 
+ By default, the splitMode is set to  **Value**. 
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+                .SplitMode(SplitMode.Position)
+                .SplitValue("3").Add(); 
+            })
+        //...
+)
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img94.png)
+
+### Changing Pie Of Pie Size
+The size of the second Pie can be customized by using the `PieOfPieCoefficient` property. The default value of pieOfPieCoefficient is **0.6**.Its value ranges from 0 to 1.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+             .PieOfPieCoefficient("1").Add(); 
+            })
+        //...
+)
+
+{% endhighlight %}
+
+The following screenshot represents the pie of pie series with pieOfPieCoefficient as 1
+
+![](Chart-Types_images/Chart-Types_img95.png)
+
+#### Customizing the Gap
+
+The distance between the two pies in the pie of pie chart can be controlled by using the `GapWidth` property. The default value is **50**.
+
+ {% highlight cshtml %}
+
+@(Html.EJ().Chart("container")
+
+        //...
+        .Series(sr =>
+            {
+             .GapWidth("150").Add(); 
+            })
+        //...
+)
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img96.png)
+
+
+
