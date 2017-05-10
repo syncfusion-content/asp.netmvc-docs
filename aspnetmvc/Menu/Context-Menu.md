@@ -39,7 +39,7 @@ In the following example, a context menu for the division containing text is cre
 
 	</div>
 
-	@Html.EJ().Menu("docfile").Items(items =>
+	@Html.EJ().Menu("file").Items(items =>
 
 	{
 
@@ -122,7 +122,7 @@ Hides the context Menu control. Add the following script code in the sample in o
     jQuery(function ($) 
 	{
 
-        $("#menucontrol").ejMenu({
+        $("#menu").ejMenu({
 
             width: 500,
 
@@ -132,7 +132,7 @@ Hides the context Menu control. Add the following script code in the sample in o
 
         //initialize the menu object
 
-        var menuObj = $("#menucontrol").data("ejMenu");
+        var menuObj = $("#menu").data("ejMenu");
 
 
 
@@ -155,7 +155,7 @@ Shows the context menu control. Add the following script code in the sample in o
     jQuery(function ($) 
 	{
 
-        $("#menucontrol").ejMenu({
+        $("#menu").ejMenu({
 
             width: 500,
 
@@ -165,7 +165,7 @@ Shows the context menu control. Add the following script code in the sample in o
 
         //initialize the menu object
 
-        var menuObj = $("#menucontrol").data("ejMenu");
+        var menuObj = $("#menu").data("ejMenu");
 
 
 

@@ -161,12 +161,12 @@ After that you need to create the controller’s action methods. These render vi
         data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" }); 
         data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" }); 
         data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-        DropDownListProperties ddl = new DropDownListProperties(); 
-        ddl.DataSource = data;
-        DropDownListFields ddf = new DropDownListFields();
-        ddf.Text = "Text";
-        ddf.Value = "Value"; 
-        ddl.DropDownListFields = ddf; ViewData["properties"] = ddl; 
+        DropDownListProperties obj = new DropDownListProperties(); 
+        obj.DataSource = data;
+        DropDownListFields fields = new DropDownListFields();
+        fields.Text = "Text";
+        fields.Value = "Value"; 
+        obj.DropDownListFields = fields; ViewData["properties"] = obj; 
     } 
     [HttpPost]
     public ActionResult DropdownlistFeatures(DropDownListModel model) 

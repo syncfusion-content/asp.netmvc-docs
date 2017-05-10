@@ -25,7 +25,7 @@ Add the above css link in the code sample.        
 
     <div class="control">
 
-    @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).Items(s =>
+    @Html.EJ().Toolbar("Toolbar").Width("65%").Height("33px").IsResponsive(true).Items(s =>
 
     {
 
@@ -83,7 +83,7 @@ Add the above css link in the code sample.        
 
        {
 
-    <div id="percentlist">
+    <div id="percent">
 
         <ul>
 
@@ -109,7 +109,7 @@ Add the above css link in the code sample.        
 
     </div>        
 
-    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
+    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percent")
 
       }
 
@@ -321,7 +321,7 @@ We can set the responsiveType property to inline to display the overflown toolba
 {% highlight CSHTML %}
 
 
-        @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Inline).Items(s =>
+        @Html.EJ().Toolbar("Toolbar").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Inline).Items(s =>
 
        {
  
@@ -379,7 +379,7 @@ We can set the responsiveType property to inline to display the overflown toolba
 
     {
 
-    <div id="percentlist">
+    <div id="percent">
 
         <ul>
 
@@ -405,7 +405,7 @@ We can set the responsiveType property to inline to display the overflown toolba
 
     </div>
 
-    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
+    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percent")
 
      }
 
@@ -423,7 +423,7 @@ We can set the responsiveType property to popup to display the overflown toolbar
 
 {% highlight CSHTML %}
 
-    @Html.EJ().Toolbar("ToolbarItem").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Popup).Items(s =>
+    @Html.EJ().Toolbar("Toolbar").Width("65%").Height("33px").IsResponsive(true).ResponsiveType(ResponsiveType.Popup).Items(s =>
 
     {
 
@@ -481,7 +481,7 @@ We can set the responsiveType property to popup to display the overflown toolbar
 
     {
 
-    <div id="percentlist">
+    <div id="percent">
 
         <ul>
 
@@ -507,7 +507,7 @@ We can set the responsiveType property to popup to display the overflown toolbar
 
     </div>
 
-    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percentlist")
+    @Html.EJ().DropDownList("selectPercent").Width("90").Value("100%").TargetID("percent")
 
     }
 

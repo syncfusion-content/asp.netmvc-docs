@@ -17,7 +17,7 @@ Set the list for DropDown control inside a list element and define this element 
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-@Html.EJ().Toolbar("toolbarcontent").Items(s =>
+@Html.EJ().Toolbar("toolbar").Items(s =>
 
 {
 
@@ -29,7 +29,7 @@ Set the list for DropDown control inside a list element and define this element 
 
     s.Add().ContentTemplate(@<div>
 
-        @Html.EJ().DropDownList("selectcar").Height("23").Width("100").TargetID("cars").SelectedItemIndex(0)
+        @Html.EJ().DropDownList("select").Height("23").Width("100").TargetID("cars").SelectedItemIndex(0)
 
         <div id="cars">
 

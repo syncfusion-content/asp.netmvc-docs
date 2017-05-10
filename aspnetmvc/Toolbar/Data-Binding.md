@@ -106,23 +106,23 @@ In the View page, add Toolbar helper to configure Toolbar.
  using <Applicationname>.Models;
  public ActionResult Index()
  { 
-	List<ToolbarLocalBinding> toolslist = new List<ToolbarLocalBinding>(); 
-	toolslist.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });
-	toolslist.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "centre" }); 
-	toolslist.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });  
-	toolslist.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });  
-	toolslist.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });  
-	toolslist.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" }); 
-	toolslist.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });  
-	toolslist.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" }); 
-	ViewBag.datasource = toolslist; 
+	List<ToolbarLocalBinding> tools = new List<ToolbarLocalBinding>(); 
+	tools.Add(new ToolbarLocalBinding { IconId = "1", SpriteCss = "LeftAlign_tool", Tooltip = "left" });
+	tools.Add(new ToolbarLocalBinding { IconId = "2", SpriteCss = "CenterAlign_tool", Tooltip = "center" }); 
+	tools.Add(new ToolbarLocalBinding { IconId = "3", SpriteCss = "RightAlign_tool", Tooltip = "right" });  
+	tools.Add(new ToolbarLocalBinding { IconId = "4", SpriteCss = "Justify_tool", Tooltip = "justify" });  
+	tools.Add(new ToolbarLocalBinding { IconId = "5", SpriteCss = "Bold_tool", Tooltip = "bold" });  
+	tools.Add(new ToolbarLocalBinding { IconId = "6", SpriteCss = "Italic_tool", Tooltip = "italic" }); 
+	tools.Add(new ToolbarLocalBinding { IconId = "7", SpriteCss = "StrikeThrough_tool", Tooltip = "strike" });  
+	tools.Add(new ToolbarLocalBinding { IconId = "8", SpriteCss = "Underline_tool", Tooltip = "underline" }); 
+	ViewBag.datasource = tools; 
 	return View();    
  }
 {% endhighlight %} 
 
 {% highlight CSHTML %} 
  <div class="cols-sample-area"> 
- @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)
+ @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<MVCSamples.Models.ToolbarLocalBinding>)
  ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip"))
  .Orientation(Orientation.Horizontal)
  </div>
@@ -268,7 +268,7 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Toolbar("toolbarcontent").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
+@Html.EJ().Toolbar("toolbar").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
 
 {% endhighlight %}
 

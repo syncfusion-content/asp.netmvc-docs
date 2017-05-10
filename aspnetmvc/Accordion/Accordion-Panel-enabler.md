@@ -75,9 +75,9 @@ The following code explains you on how to enable the panel items in Accordion wi
 
 @{      //List of integer array with index values.
 
-    List<int> enableditem = new List<int>() { 1, 2 };
+    List<int> enabled = new List<int>() { 1, 2 };
 
-    List<int> disableditem = new List<int>() { 0 };
+    List<int> disabled = new List<int>() { 0 };
 
 }
 
@@ -103,7 +103,7 @@ The following code explains you on how to enable the panel items in Accordion wi
 
                     Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-            }).SelectedItemIndex(1).EnabledItems(enableditem).DisableItems(disableditem).EnableMultipleOpen(true).Render();}
+            }).SelectedItemIndex(1).EnabledItems(enabled).DisableItems(disabled).EnableMultipleOpen(true).Render();}
 
 </div>
 

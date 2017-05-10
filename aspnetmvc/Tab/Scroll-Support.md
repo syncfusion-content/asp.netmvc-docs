@@ -28,31 +28,31 @@ You can use the following code example to render the Tab widget with scroll butt
 
 <div style="width: 550px">
 
-	@{Html.EJ().Tab("dishtab").Items(data =>
+	@{Html.EJ().Tab("dish").Items(data =>
 
    {
 
-	   data.Add().ID("pizzatype").Text("Pizza Type")
+	   data.Add().ID("pizza").Text("Pizza Type")
 
 		   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-	   data.Add().ID("pastatype").Text("Pasta Type")
+	   data.Add().ID("pasta").Text("Pasta Type")
 
 		   .ContentTemplate(@<div>Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-	   data.Add().ID("burgertype").Text("Burger Type")
+	   data.Add().ID("burger").Text("Burger Type")
 
 		   .ContentTemplate(@<div>Burger cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-	   data.Add().ID("sandwichtype").Text("Sandwich Type")
+	   data.Add().ID("sandwich").Text("Sandwich Type")
 
 		   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-	   data.Add().ID("spaghettitype").Text("Spaghetti Type")
+	   data.Add().ID("spaghetti").Text("Spaghetti Type")
 
 		   .ContentTemplate(@<div>Spaghetti cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-	   data.Add().ID("ramentype").Text("Ramen Type")
+	   data.Add().ID("ramen").Text("Ramen Type")
 
 		   .ContentTemplate(@<div>Ramen cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 

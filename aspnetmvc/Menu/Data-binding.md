@@ -78,9 +78,9 @@ To define the local data to the Menu control, map the user-defined JSON data nam
 {% highlight CSHTML %}
 
 // Add the following code in your CSHTML page.
-@Html.EJ().Menu("menujson").MenuFields(f => 
+@Html.EJ().Menu("menu").MenuFields(f => 
 f.Datasource((IEnumerable<Check.Controllers.CheckController.MenuJson>)ViewBag.datasource)
-.Id("pid").Text("mtext").ParentId("parent"))
+.Id("id").Text("text").ParentId("parent"))
 	   
 {% endhighlight %}
 
@@ -97,46 +97,46 @@ namespace Check.Controllers
 	{
 		public class MenuJson    
 		{   
-			public string mtext { get; set; } 
-			public int pid { get; set; }  
+			public string text { get; set; } 
+			public int id { get; set; }  
 			public string parent { get; set; }  
 		}   
 		List<MenuJson> menu = new List<MenuJson>();  
 		public ActionResult DataBindingJson()    
 		{          
-			menu.Add(new MenuJson { pid = 1, mtext = "Group A", parent = null }); 
-			menu.Add(new MenuJson { pid = 2, mtext = "Group B", parent = null });
-            menu.Add(new MenuJson { pid = 3, mtext = "Group C", parent = null });  
-			menu.Add(new MenuJson { pid = 4, mtext = "Group D", parent = null });  
-			menu.Add(new MenuJson { pid = 5, mtext = "Group E", parent = null });  
-			menu.Add(new MenuJson { pid = 11, parent = "1", mtext = "Algeria" });  
-			menu.Add(new MenuJson { pid = 12, parent = "1", mtext = "Armenia" });   
-			menu.Add(new MenuJson { pid = 13, parent = "1", mtext = "Bangladesh" }); 
-			menu.Add(new MenuJson { pid = 14, parent = "1", mtext = "Cuba" });      
-			menu.Add(new MenuJson { pid = 15, parent = "2", mtext = "Denmark" });   
-			menu.Add(new MenuJson { pid = 16, parent = "2", mtext = "Egypt" });     
-			menu.Add(new MenuJson { pid = 17, parent = "3", mtext = "Finland" });   
-			menu.Add(new MenuJson { pid = 18, parent = "3", mtext = "India" });     
-			menu.Add(new MenuJson { pid = 19, parent = "3", mtext = "Malaysia" });   
-			menu.Add(new MenuJson { pid = 20, parent = "4", mtext = "New Zealand" });
-            menu.Add(new MenuJson { pid = 21, parent = "4", mtext = "Norway" });      
-			menu.Add(new MenuJson { pid = 22, parent = "4", mtext = "Romania" });     
-			menu.Add(new MenuJson { pid = 23, parent = "5", mtext = "Singapore" });   
-			menu.Add(new MenuJson { pid = 24, parent = "5", mtext = "Thailand" });      
-			menu.Add(new MenuJson { pid = 25, parent = "5", mtext = "Ukraine" });     
-			menu.Add(new MenuJson { pid = 26, parent = "11", mtext = "First Place" }); 
-			menu.Add(new MenuJson { pid = 27, parent = "12", mtext = "Second Place" }); 
-			menu.Add(new MenuJson { pid = 28, parent = "13", mtext = "Third place" });     
-			menu.Add(new MenuJson { pid = 29, parent = "14", mtext = "Fourth Place" });  
-			menu.Add(new MenuJson { pid = 30, parent = "15", mtext = "First Place" });    
-			menu.Add(new MenuJson { pid = 31, parent = "16", mtext = "Second Place" }); 
-			menu.Add(new MenuJson { pid = 32, parent = "17", mtext = "Third Place" });     
-			menu.Add(new MenuJson { pid = 33, parent = "18", mtext = "First Place" });    
-			menu.Add(new MenuJson { pid = 34, parent = "19", mtext = "Second Place" });
-			menu.Add(new MenuJson { pid = 36, parent = "21", mtext = "Second Place" });   
-			menu.Add(new MenuJson { pid = 37, parent = "22", mtext = "Third place" });
-			menu.Add(new MenuJson { pid = 39, parent = "24", mtext = "First Place" });    
-			menu.Add(new MenuJson { pid = 40, parent = "25", mtext = "Second Place" });   
+			menu.Add(new MenuJson { id = 1, text = "Group A", parent = null }); 
+			menu.Add(new MenuJson { id = 2, text = "Group B", parent = null });
+            menu.Add(new MenuJson { id = 3, text = "Group C", parent = null });  
+			menu.Add(new MenuJson { id = 4, text = "Group D", parent = null });  
+			menu.Add(new MenuJson { id = 5, text = "Group E", parent = null });  
+			menu.Add(new MenuJson { id = 11, parent = "1", text = "Algeria" });  
+			menu.Add(new MenuJson { id = 12, parent = "1", text = "Armenia" });   
+			menu.Add(new MenuJson { id = 13, parent = "1", text = "Bangladesh" }); 
+			menu.Add(new MenuJson { id = 14, parent = "1", text = "Cuba" });      
+			menu.Add(new MenuJson { id = 15, parent = "2", text = "Denmark" });   
+			menu.Add(new MenuJson { id = 16, parent = "2", text = "Egypt" });     
+			menu.Add(new MenuJson { id = 17, parent = "3", text = "Finland" });   
+			menu.Add(new MenuJson { id = 18, parent = "3", text = "India" });     
+			menu.Add(new MenuJson { id = 19, parent = "3", text = "Malaysia" });   
+			menu.Add(new MenuJson { id = 20, parent = "4", text = "New Zealand" });
+            menu.Add(new MenuJson { id = 21, parent = "4", text = "Norway" });      
+			menu.Add(new MenuJson { id = 22, parent = "4", text = "Romania" });     
+			menu.Add(new MenuJson { id = 23, parent = "5", text = "Singapore" });   
+			menu.Add(new MenuJson { id = 24, parent = "5", text = "Thailand" });      
+			menu.Add(new MenuJson { id = 25, parent = "5", text = "Ukraine" });     
+			menu.Add(new MenuJson { id = 26, parent = "11", text = "First Place" }); 
+			menu.Add(new MenuJson { id = 27, parent = "12", text = "Second Place" }); 
+			menu.Add(new MenuJson { id = 28, parent = "13", text = "Third place" });     
+			menu.Add(new MenuJson { id = 29, parent = "14", text = "Fourth Place" });  
+			menu.Add(new MenuJson { id = 30, parent = "15", text = "First Place" });    
+			menu.Add(new MenuJson { id = 31, parent = "16", text = "Second Place" }); 
+			menu.Add(new MenuJson { id = 32, parent = "17", text = "Third Place" });     
+			menu.Add(new MenuJson { id = 33, parent = "18", text = "First Place" });    
+			menu.Add(new MenuJson { id = 34, parent = "19", text = "Second Place" });
+			menu.Add(new MenuJson { id = 36, parent = "21", text = "Second Place" });   
+			menu.Add(new MenuJson { id = 37, parent = "22", text = "Third place" });
+			menu.Add(new MenuJson { id = 39, parent = "24", text = "First Place" });    
+			menu.Add(new MenuJson { id = 40, parent = "25", text = "Second Place" });   
 			ViewBag.datasource = menu;  
 			return View();
 		} 
@@ -170,9 +170,9 @@ In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](htt
 @Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d =>
 d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c => 
 c.Datasource(cd => 
-cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))  .TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItemText").Child(cc => 
+cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))  .TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItetext").Child(cc => 
 cc.Datasource(ccd => 
-ccd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("InnerItems").Id("InnerSubItemID").ParentId("SubItemID").Text("InnerSubItemText"))))
+ccd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("InnerItems").Id("InnerSubItemID").ParentId("SubItemID").Text("InnerSubItetext"))))
 
 {% endhighlight %}
 

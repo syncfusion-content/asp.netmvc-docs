@@ -27,7 +27,7 @@ By default the Orientation property sets the Toolbar in horizontal orientation. 
 
 	// Add this code in your CSHTML page and refer local data section for data source
 
-	<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
+	<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Horizontal)
 
 	</div>
 
@@ -61,7 +61,7 @@ This property sets the Toolbar in vertical orientation. You can refer the follow
 
 	<div class="cols-sample-area">    
 	
-		@Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
+		@Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).Orientation(Syncfusion.JavaScript.Orientation.Vertical)
 
 	</div>
 
