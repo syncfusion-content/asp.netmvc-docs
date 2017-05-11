@@ -372,6 +372,73 @@ namespace SyncfusionMvcApplication3.Controllers
 
 W> Minimum one column should be grouped to show summary details.
 
+## Summary Template
+
+Using `Template` property of `SummaryColumns` you can render any type of JsRender templates or customizing the summary value.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@(Html.EJ().Grid<OrdersView>("Summary")
+	.Datasource((IEnumerable<object>)ViewBag.datasource)
+	.ShowSummary()
+	.SummaryRow(row =>
+	{
+		row.ShowTotalSummary(false).SummaryColumns(col => 
+		{ 
+			col.SummaryType(SummaryType.Average)
+			.Format("{0:C2}")
+			.DisplayColumn("Freight")
+			.DataMember("Freight")
+			.Template("#templateData")
+			.Add(); 
+		}).Add();
+	})
+	
+	.Columns(col =>
+	{
+		col.Field("OrderID").Add();
+		col.Field("EmployeeID").Add();		
+		col.Field("Freight").Format("{0:C}").Add();
+	})
+)
+
+{% endhighlight %}
+{% highlight C# %}
+
+namespace SyncfusionMvcApplication3.Controllers
+
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.Take(5).ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight js %}
+
+<script id="templateData" type="text/x-jsrender">
+     Freight has Average of {{:summaryValue}} in  dollars
+</script>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![](Summary_images/summaryGrid_img9.png)
+
 ## Format
 
 To format Summary values, `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer [**globalize.js**](https://github.com/jquery/globalize/tree/v0.1.1#)
