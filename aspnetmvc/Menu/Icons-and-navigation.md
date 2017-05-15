@@ -17,8 +17,8 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
    ~~~ cshtml
    
 	// Add the following code in your CSHTML page 
-	@Html.EJ().Menu("menujson").MenuFields(f => 
-	f.Datasource((IEnumerable<Check.Controllers.CheckController.icons>)ViewBag.datasource).Id("pid").Text("mtext").ParentId("parent").SpriteCssClass("sprite"))
+	@Html.EJ().Menu("menu").MenuFields(f => 
+	f.Datasource((IEnumerable<Check.Controllers.CheckController.icons>)ViewBag.datasource).Id("id").Text("text").ParentId("parent").SpriteCssClass("sprite"))
 
    ~~~
    			  
@@ -36,49 +36,49 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 		{     
 			public class icons 
 			{  
-				public string mtext { get; set; }
+				public string text { get; set; }
 				public string sprite { get; set; }
-				public int pid { get; set; }
+				public int id { get; set; }
 				public string parent { get; set; }
 			}    
 			List<icons> menu = new List<icons>(); 
 			public ActionResult DataBindingJson() 
 			{
-				menu.Add(new MenuJson { pid = 1, mtext = "Group A", parent = null }); 
-				menu.Add(new MenuJson { pid = 2, mtext = "Group B", parent = null }); 
-				menu.Add(new MenuJson { pid = 3, mtext = "Group C", parent = null });
-				menu.Add(new MenuJson { pid = 4, mtext = "Group D", parent = null });
-				menu.Add(new MenuJson { pid = 5, mtext = "Group E", parent = null }); 
-				menu.Add(new MenuJson { pid = 11, parent = "1", mtext = "Algeria", sprite = "flag-dz" });
-				menu.Add(new MenuJson { pid = 12, parent = "1", mtext = "Armenia", sprite = "flag-am" });
-				menu.Add(new MenuJson { pid = 13, parent = "1", mtext = "Bangladesh", sprite = "flag-bd" }); 
-				menu.Add(new MenuJson { pid = 14, parent = "1", mtext = "Cuba", sprite = "flag-cu" });  
-				menu.Add(new MenuJson { pid = 15, parent = "2", mtext = "Denmark", sprite = "flag-dk" }); 
-				menu.Add(new MenuJson { pid = 16, parent = "2", mtext = "Egypt", sprite = "flag-eg" });  
-				menu.Add(new MenuJson { pid = 17, parent = "3", mtext = "Finland", sprite = "flag-fi" });
-				menu.Add(new MenuJson { pid = 18, parent = "3", mtext = "India", sprite = "flag-in" }); 
-				menu.Add(new MenuJson { pid = 19, parent = "3", mtext = "Malaysia", sprite = "flag-my" });
-				menu.Add(new MenuJson { pid = 20, parent = "4", mtext = "New Zealand", sprite = "flag-nz" });
-				menu.Add(new MenuJson { pid = 21, parent = "4", mtext = "Norway", sprite = "flag-no" });
-				menu.Add(new MenuJson { pid = 22, parent = "4", mtext = "Romania", sprite = "flag-ro" });
-				menu.Add(new MenuJson { pid = 23, parent = "5", mtext = "Singapore", sprite = "flag-sg" });
-				menu.Add(new MenuJson { pid = 24, parent = "5", mtext = "Thailand", sprite = "flag-th" }); 
-				menu.Add(new MenuJson { pid = 25, parent = "5", mtext = "Ukraine", sprite = "flag-ua" }); 
-				menu.Add(new MenuJson { pid = 26, parent = "11", mtext = "First Place" });  
-				menu.Add(new MenuJson { pid = 27, parent = "12", mtext = "Second Place" }); 
-				menu.Add(new MenuJson { pid = 28, parent = "13", mtext = "Third place" }); 
-				menu.Add(new MenuJson { pid = 29, parent = "14", mtext = "Fourth Place" }); 
-				menu.Add(new MenuJson { pid = 30, parent = "15", mtext = "First Place" });  
-				menu.Add(new MenuJson { pid = 31, parent = "16", mtext = "Second Place" }); 
-				menu.Add(new MenuJson { pid = 32, parent = "17", mtext = "Third Place" }); 
-				menu.Add(new MenuJson { pid = 33, parent = "18", mtext = "First Place" }); 
-				menu.Add(new MenuJson { pid = 34, parent = "19", mtext = "Second Place" }); 
-				menu.Add(new MenuJson { pid = 35, parent = "20", mtext = "First Place" }); 
-				menu.Add(new MenuJson { pid = 36, parent = "21", mtext = "Second Place" });
-				menu.Add(new MenuJson { pid = 37, parent = "22", mtext = "Third place" }); 
-				menu.Add(new MenuJson { pid = 38, parent = "23", mtext = "Third Place" }); 
-				menu.Add(new MenuJson { pid = 39, parent = "24", mtext = "First Place" }); 
-				menu.Add(new MenuJson { pid = 40, parent = "25", mtext = "Second Place" });
+				menu.Add(new MenuJson { id = 1, text = "Group A", parent = null }); 
+				menu.Add(new MenuJson { id = 2, text = "Group B", parent = null }); 
+				menu.Add(new MenuJson { id = 3, text = "Group C", parent = null });
+				menu.Add(new MenuJson { id = 4, text = "Group D", parent = null });
+				menu.Add(new MenuJson { id = 5, text = "Group E", parent = null }); 
+				menu.Add(new MenuJson { id = 11, parent = "1", text = "Algeria", sprite = "flag-dz" });
+				menu.Add(new MenuJson { id = 12, parent = "1", text = "Armenia", sprite = "flag-am" });
+				menu.Add(new MenuJson { id = 13, parent = "1", text = "Bangladesh", sprite = "flag-bd" }); 
+				menu.Add(new MenuJson { id = 14, parent = "1", text = "Cuba", sprite = "flag-cu" });  
+				menu.Add(new MenuJson { id = 15, parent = "2", text = "Denmark", sprite = "flag-dk" }); 
+				menu.Add(new MenuJson { id = 16, parent = "2", text = "Egypt", sprite = "flag-eg" });  
+				menu.Add(new MenuJson { id = 17, parent = "3", text = "Finland", sprite = "flag-fi" });
+				menu.Add(new MenuJson { id = 18, parent = "3", text = "India", sprite = "flag-in" }); 
+				menu.Add(new MenuJson { id = 19, parent = "3", text = "Malaysia", sprite = "flag-my" });
+				menu.Add(new MenuJson { id = 20, parent = "4", text = "New Zealand", sprite = "flag-nz" });
+				menu.Add(new MenuJson { id = 21, parent = "4", text = "Norway", sprite = "flag-no" });
+				menu.Add(new MenuJson { id = 22, parent = "4", text = "Romania", sprite = "flag-ro" });
+				menu.Add(new MenuJson { id = 23, parent = "5", text = "Singapore", sprite = "flag-sg" });
+				menu.Add(new MenuJson { id = 24, parent = "5", text = "Thailand", sprite = "flag-th" }); 
+				menu.Add(new MenuJson { id = 25, parent = "5", text = "Ukraine", sprite = "flag-ua" }); 
+				menu.Add(new MenuJson { id = 26, parent = "11", text = "First Place" });  
+				menu.Add(new MenuJson { id = 27, parent = "12", text = "Second Place" }); 
+				menu.Add(new MenuJson { id = 28, parent = "13", text = "Third place" }); 
+				menu.Add(new MenuJson { id = 29, parent = "14", text = "Fourth Place" }); 
+				menu.Add(new MenuJson { id = 30, parent = "15", text = "First Place" });  
+				menu.Add(new MenuJson { id = 31, parent = "16", text = "Second Place" }); 
+				menu.Add(new MenuJson { id = 32, parent = "17", text = "Third Place" }); 
+				menu.Add(new MenuJson { id = 33, parent = "18", text = "First Place" }); 
+				menu.Add(new MenuJson { id = 34, parent = "19", text = "Second Place" }); 
+				menu.Add(new MenuJson { id = 35, parent = "20", text = "First Place" }); 
+				menu.Add(new MenuJson { id = 36, parent = "21", text = "Second Place" });
+				menu.Add(new MenuJson { id = 37, parent = "22", text = "Third place" }); 
+				menu.Add(new MenuJson { id = 38, parent = "23", text = "Third Place" }); 
+				menu.Add(new MenuJson { id = 39, parent = "24", text = "First Place" }); 
+				menu.Add(new MenuJson { id = 40, parent = "25", text = "Second Place" });
 				ViewBag.datasource = menu; 
 				return View();  
 			} 
@@ -184,11 +184,11 @@ Navigation in Menu control is the default usage to navigate into the other web p
 
 		<div class="imgframe">
 
-		@Html.EJ().Menu("weblink").Items(items =>
+		@Html.EJ().Menu("link").Items(items =>
 
 			{
 
-				items.Add().Url("#").Id("searchengine").Text("Search engine").Children(child =>
+				items.Add().Url("#").Id("search").Text("Search engine").Children(child =>
 
 					{
 

@@ -29,11 +29,11 @@ The following code example explains you the Rating control creation. The input e
 
 <div style="width:550px">
 
-@{Html.EJ().Tab("dishtab").Items(data =>
+@{Html.EJ().Tab("dish").Items(data =>
 
 	   {
 
-		   data.Add().ID("pizzatype").Text("Pizza Type")
+		   data.Add().ID("pizza").Text("Pizza Type")
 
 			   .ContentTemplate(@<div>Rating:@Html.EJ().Rating("PRating").Value(4)
 
@@ -41,7 +41,7 @@ The following code example explains you the Rating control creation. The input e
 
 			   </div>);
 
-		   data.Add().ID("sandwichtype").Text("Sandwich Type")
+		   data.Add().ID("sandwich").Text("Sandwich Type")
 
 			   .ContentTemplate(@<div>Rating:@Html.EJ().Rating("SRating").Value(4)
 

@@ -22,7 +22,7 @@ Each item has a variety of options and these options are also specified in the l
 
    ~~~ cshtml
 
-	// Add the following code example to the corresponding CSHTML page to render sub Tab with ajax content.
+	// Add the following code example to the corresponding CSHTML page to render sub Tab with AJAX content.
 
 
 
@@ -30,7 +30,7 @@ Each item has a variety of options and these options are also specified in the l
 
 		 {
 
-			 data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
+			 data.Add().ID("Pizza").Text("Pizza Menu").ContentTemplate(@<div>
 
 				Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -38,7 +38,7 @@ Each item has a variety of options and these options are also specified in the l
 
 			</div>);
 
-			 data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+			 data.Add().ID("sandwitch").Text("Sandwizza Menu").ContentTemplate(@<div>
 
 				Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -46,7 +46,7 @@ Each item has a variety of options and these options are also specified in the l
 
 			</div>);
 
-			 data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+			 data.Add().ID("Pasta").Text("Pasta Menu").ContentTemplate(@<div>
 
 				Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -60,7 +60,7 @@ Each item has a variety of options and these options are also specified in the l
 
 			{
 
-			@Html.EJ().Tab("PizzaType").Items(data =>
+			@Html.EJ().Tab("Pizza").Items(data =>
 
 			  {	
 
@@ -78,7 +78,7 @@ Each item has a variety of options and these options are also specified in the l
 
 		{
 
-		@Html.EJ().Tab("sandwichtype").Items(data =>
+		@Html.EJ().Tab("sandwich").Items(data =>
 
 			{
 

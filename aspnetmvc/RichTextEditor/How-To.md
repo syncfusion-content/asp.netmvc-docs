@@ -97,18 +97,18 @@ function OnRender(args) {
 
     var importDocs = $("#Import");
     $("#Import").find("div").remove();
-    var importtarget = $("<div id='importFiles'></div>");
-    importDocs.append(importtarget);
+    var target = $("<div id='importFiles'></div>");
+    importDocs.append(target);
 
     var exportDocs = $("#Export");
     $("#Export").find("div").remove();
-    var exporttarget = $("<button id='exportFiles'></button>");
-    exportDocs.append(exporttarget);
+    var export = $("<button id='exportFiles'></button>");
+    exportDocs.append(export);
 
-    var ddl = $("#DropType");
+    var drop = $("#DropType");
     $("#DropType").find("div").remove();
-    var ddltarget = $("<input id='selectType'></div>");
-    ddl.append(ddltarget);
+    var droptarget = $("<input id='selectType'></div>");
+    drop.append(droptarget);
 
     $("#importFiles").ejUploadbox({
         saveUrl: "/saveFiles.ashx",
@@ -207,8 +207,8 @@ public string xhtmlValidation(string value)
     {
         if (value.Contains("<html"))
         {
-            int num = value.IndexOf("<body>");
-            value = value.Remove(0, num + 6);
+            int number = value.IndexOf("<body>");
+            value = value.Remove(0, number + 6);
             value = value.Replace("</body></html>", "");
         }
         value = value.Replace("\"", "'");
@@ -267,7 +267,7 @@ public void RichTextEditorFeatures(string rte2, string selectType)
         writer.Flush();
         stream.Position = 0;
         document = new WordDocument(stream, FormatType.Html, XHTMLValidationType.Strict);
-        document.Save("Samplerte.docx", FormatType.Docx, HttpContext.ApplicationInstance.Response, HttpContentDisposition.Attachment);
+        document.Save("Sample.docx", FormatType.Docx, HttpContext.ApplicationInstance.Response, HttpContentDisposition.Attachment);
     }
 }
     
@@ -344,7 +344,7 @@ In main view, the Button control is rendered, upon clicking to the Button, the A
 
 @Html.EJ().Button("button1").Text("Load RTE").ShowRoundedCorner(true).Size(ButtonSize.Small).ClientSideEvents(e => e.Click("onClick"))
 
-<div id="displayNarr"></div>
+<div id="display"></div>
 
 <script type="text/javascript">
     var value;
@@ -355,8 +355,8 @@ In main view, the Button control is rendered, upon clicking to the Button, the A
             contentType: "application/json; charset=utf-8",
             async: false,
             success: function (value) {
-                $("#displayNarr").html(value);
-                ej.widget.init("#displayNarr");
+                $("#display").html(value);
+                ej.widget.init("#display");
             }
         });
     }

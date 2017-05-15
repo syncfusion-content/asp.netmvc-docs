@@ -24,13 +24,13 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 	.SaveUrl("Uploadbox/Save")
 	.RemoveUrl("UploadBox/Remove")
 	.FileSize(848576)
-	.ClientSideEvents(e => e.Error("fileuploaderror"))
+	.ClientSideEvents(e => e.Error("error"))
 
 </div>
 
 <script type="text/javascript">
 
-	function fileuploaderror(e) 
+	function error(e) 
 	{
 
 		alert(e.error);

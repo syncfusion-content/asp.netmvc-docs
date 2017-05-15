@@ -164,7 +164,7 @@ The following steps explain the configuration of CssClass property in UploadBox.
 
 	// In the CSHTML page, add the UploadBox element.
 
-	@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").CssClass("customcss")
+	@Html.EJ().Uploadbox("uploadbox").SaveUrl("Uploadbox/Save").RemoveUrl("Uploadbox/Remove").CssClass("custom")
    ~~~
    
 
@@ -174,7 +174,7 @@ The following steps explain the configuration of CssClass property in UploadBox.
  
 	<style class="cssStyles">
 
-	  .customcss .e-select
+	  .custom .e-select
 	  {
 
 		background-color: #FFFFCC;

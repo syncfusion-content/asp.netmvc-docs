@@ -140,15 +140,15 @@ Add the following elements in the view page.
         </tr>
         <tr>
             <td>
-                <input type="text" id="fileallow" class="ejinputtext" placeholder="Format" />
-                @(Html.EJ().Button("upbutton1").Text("Allow").ClientSideEvents(c => c.Click("allowfiletype")))
+                <input type="text" id="Allow" class="ejinputtext" placeholder="Format" />
+                @(Html.EJ().Button("upbutton1").Text("Allow").ClientSideEvents(c => c.Click("allow")))
             </td>
             <td></td>
         </tr>
         <tr>
             <td>
-                <input type="text" id="filedeny" class="ejinputtext" placeholder="Format" />
-                @(Html.EJ().Button("upbutton2").Text("Deny").ClientSideEvents(c => c.Click("denyfiletype")))
+                <input type="text" id="Deny" class="ejinputtext" placeholder="Format" />
+                @(Html.EJ().Button("upbutton2").Text("Deny").ClientSideEvents(c => c.Click("deny")))
             </td>
             <td>
                @Html.EJ().Uploadbox("UploadDefault").SaveUrl(@Url.Action("SaveDefault")).RemoveUrl(@Url.Action("RemoveDefault")))
@@ -165,23 +165,23 @@ Add the following elements in the view page.
 
 {% highlight js %}
 
- var uploadobject;
+ var object;
     $(function () {
-        uploadobject = $("#UploadDefault").data("ejUploadbox");
+        object = $("#UploadDefault").data("ejUploadbox");
         $("#upbutton1").ejButton({
-            click: "allowfiletype",
+            click: "allow",
         });
         $("#upbutton2").ejButton({
-            click: "denyfiletype",
+            click: "deny",
         });
     });
-    function allowfiletype() {
-        uploadobject.option('extensionsAllow', $("#fileallow").val());
-        uploadobject.option('extensionsDeny', "");
+    function allow() {
+        object.option('extensionsAllow', $("#Allow").val());
+        object.option('extensionsDeny', "");
     }
-    function denyfiletype() {
-        uploadobject.option('extensionsAllow', "");
-        uploadobject.option('extensionsDeny', $("#filedeny").val());
+    function deny() {
+        object.option('extensionsAllow', "");
+        object.option('extensionsDeny', $("#Deny").val());
     }
 
 
@@ -209,7 +209,7 @@ Add the given styles to display the **Uploadbox** with margin alignments.
         width: 100%;
     }
 
-    #fileallow, #filedeny {
+    #Allow, #Deny {
         width: 150px;
         height: 20px;
         padding: 5px;
