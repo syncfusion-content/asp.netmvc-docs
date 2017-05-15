@@ -41,9 +41,10 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 {% endhighlight %}
 
 
+
 To know about file action, we need to refer link:
 
-<http://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
+    <http://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
 
 The following screenshot displays UploadBox control with customized file size.
 
@@ -65,5 +66,22 @@ When you try to browse the file with exceeded FileSize, we cannot browse and upl
 
 
 
+You can also customize the error message by converting the file size into mb and display the corresponding value in error message.
 
+
+{% highlight CSHTML %}
+
+     <script type="text/javascript">
+
+	  function fileuploaderror(e) 
+	   {
+	     alert("The selected file size is too large. Please select a file less than " + Math.round(e.model.fileSize / (1024 * 1024)) + "mb");
+       }
+    </script>
+
+{% endhighlight %}
+
+Now you will get the error message as shown in the below image
+
+![](File-Size_images/File-Size_img3.png)
 
