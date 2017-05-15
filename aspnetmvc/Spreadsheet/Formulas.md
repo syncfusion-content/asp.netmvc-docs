@@ -118,7 +118,58 @@ N> 3. Selection can be used to mention cell references within formula
 
 ## User Defined Functions
 
-The list of formulas supported in Spreadsheet is sufficient for most of your calculations. If not, you can create and use your own function using user defined function option. 
+The list of formulas supported in Spreadsheet is sufficient for most of your calculations. If not, you can create and use your own function using user defined function option. You can add user defined function to Spreadsheet in following ways,
+
+1. Initial Load
+
+2. Method
+
+### Initial Load
+
+You can add your own function to Spreadsheet at initial load with `CustomFormulas` property. The following code example describes the above behavior,
+
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+    .Sheets(sheet =>
+    {
+        sheet.Rows(rows =>
+        {
+            rows.Cells(cells =>
+            {
+                cells.Value("1").Add();
+            }).Add();
+            rows.Cells(cells =>
+            {
+                cells.Value("2").Add();
+            }).Add();
+            rows.Cells(cells =>
+            {
+                cells.Value("=CUSTOMTOTAL(A1,A2,3)").Add();
+            }).Add();
+        }).Add();
+    })
+    .CustomFormulas(formula => { formula.FormulaName("CUSTOMTOTAL").FunctionName("customTotal").Add(); })
+    )
+
+<script>
+function customTotal(args) {
+     var param1, param2, param3, value, xlObj = $('#Spreadsheet').data("ejSpreadsheet"),
+     argument = xlObj.getValueFromFormulaArg(args);
+     param1 = argument["arg1"];
+     param2 = argument["arg2"];
+     param3 = argument["arg3"];
+     value = param1 * param2 + param3;
+    return value;
+}
+</script>
+ 
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+![](Formulas_images/Formula_img5.png)
+
+### Method
 
 You can add your own function to Spreadsheet using [`addCustomFormula`](https://help.syncfusion.com/js/api/ejspreadsheet#methods:addcustomformula "addCustomFormula") method. The following code example describes the above behavior,
 
@@ -167,11 +218,46 @@ To remove user defined function from Spreadsheet use [`removeCustomFormula`](htt
 
 ## Named Ranges
 
-To give descriptive name for cell reference or table and it can be used in formula. In Spreadsheet name can be added to cell reference in following ways,
+To understand the purpose of cell reference or table, you can define a meaningful name using named ranges support. By using names, you can make your formula much easier to understand and maintain. You can add named ranges to Spreadsheet in following ways,
     
-1. Method
+1. Initial Load
+    
+2. Method
 
-2. User Interface
+3. User Interface
+
+### Initial Load
+
+You can add named ranges at initial load with `NameManager` property. The following code example describes the above behavior,
+
+{% highlight cshtml %}
+
+@(Html.EJ().Spreadsheet<object>("Spreadsheet")
+.Sheets(sheet =>
+{
+    sheet.Rows(rows =>
+    {
+        rows.Cells(cells =>
+        {
+            cells.Value("1").Add();
+        }).Add();
+        rows.Cells(cells =>
+        {
+            cells.Value("2").Add();
+        }).Add();
+        rows.Cells(cells =>
+        {
+            cells.Value("=SUM(inputrange)").Add();
+        }).Add();
+    }).Add();
+})
+    .NameManager(manager => { manager.Name("inputrange").RefersTo("=Sheet1!$A$1:$A$2").Add(); })
+)
+
+{% endhighlight %}
+
+The following output is displayed as a result of the above code example.
+![](Formulas_images/Formula_img3.png)
 
 ### Method
 
