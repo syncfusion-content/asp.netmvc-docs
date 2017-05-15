@@ -159,14 +159,14 @@ You can also open all the panels during initialization using the SelectedItems p
     @{
 
     List
-<int> selecteditem = new List
+<int> selected = new List
     <int>() { 0, 1, 2 };
 
 }
 
 
 
-@{Html.EJ().Accordion("basicAccordion").EnableMultipleOpen(true).SelectedItems(selecteditem).Items(data =>
+@{Html.EJ().Accordion("basicAccordion").EnableMultipleOpen(true).SelectedItems(selected).Items(data =>
 
 {
 
@@ -262,13 +262,13 @@ N> ShowRoundedCorner property is false by default.
 
     @{
 
-    List<int> selecteditem = new List<int>() { 0, 1, 2 };
+    List<int> selected = new List<int>() { 0, 1, 2 };
 
 }
 
 
 
-@{Html.EJ().Accordion("basicAccordion").EnableMultipleOpen(true).SelectedItems(selecteditem).ShowRoundedCorner(true).Items(data =>
+@{Html.EJ().Accordion("basicAccordion").EnableMultipleOpen(true).SelectedItems(selected).ShowRoundedCorner(true).Items(data =>
 
    {
 

@@ -38,11 +38,11 @@ Add the following code example to the corresponding view page to render Rating i
 
 <div class="frame">  
 
-@{Html.EJ().Tab("moviesTab").Items(evt=> 
+@{Html.EJ().Tab("moviesTab").Items(event=> 
 
 {                
 
-	 evt.Add().ID("steelman").Text("Man of Steel").ContentTemplate(
+	 event.Add().ID("steel").Text("Man of Steel").ContentTemplate(
 
 		 @<div>
 
@@ -85,7 +85,7 @@ Add the following code example to the corresponding view page to render Rating i
 
 		</div>);
 
-	 evt.Add().ID("woldwar").Text("World War Z").ContentTemplate(
+	 event.Add().ID("war").Text("World War Z").ContentTemplate(
 
 		 @<div>
 
@@ -128,7 +128,7 @@ Add the following code example to the corresponding view page to render Rating i
 
 	</div>);
 
-	 evt.Add().ID("unive").Text("Monsters University").ContentTemplate(
+	 event.Add().ID("university").Text("Monsters University").ContentTemplate(
 
 		 @<div>
 

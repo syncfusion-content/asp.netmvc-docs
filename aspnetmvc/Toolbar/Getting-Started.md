@@ -273,7 +273,7 @@ Initialize the Toolbar items with <UL> <LI> template as follows.
 
         <li id="ZoomValue">
 
-            <div id="carlist">
+            <div id="car">
 
                 <ul>
 
@@ -299,7 +299,7 @@ Initialize the Toolbar items with <UL> <LI> template as follows.
 
             </div>
 
-            @Html.EJ().DropDownList("car").Width("90").Value("100%").TargetID("carlist")
+            @Html.EJ().DropDownList("car").Width("90").Value("100%").TargetID("car")
 
         </li>
 
@@ -481,7 +481,7 @@ Initialize the content area and header as specified in the code table.
 
 
 
-    <div class="ctrllabel"></div>
+    <div class="label"></div>
 
     <div id="ToolbarItem">
 
@@ -551,7 +551,7 @@ You can apply the following styles with the above styles to design the PDF heade
 
 
 
-	.ctrllabel
+	.label
 	{
 
 		background-image: url('http://js.syncfusion.com/UG/Web/Content/pdf-header.png');

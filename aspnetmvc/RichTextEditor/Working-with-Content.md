@@ -108,11 +108,11 @@ The ContentEditable attribute allows you to make any element of HTML content to 
     in the text area.
     <p> Cannot Edit </p>
 </div>)
-.ClientSideEvents(e => e.Create("onCreate"))
+.ClientSideEvents(e => e.Create("Create"))
 .Render();}
 
 <script>
-    function onCreate() {
+    function Create() {
         var editor = $("#rteSample").ejRTE("instance");
         var iframeDoc = editor.getDocument();
         var paragraph = $("p", iframeDoc.body);
@@ -230,16 +230,16 @@ N> •	By default, the editor’s < iframe > is initialized with “Segoe UI” 
     users with a toolbar that helps them to apply rich text formats to the text entered
     in the text area.
 </div>)
-        .ClientSideEvents(e => e.Create("Oncreate"))
+        .ClientSideEvents(e => e.Create("Create"))
     .ToolsList(toolsList).Tools(tool => tool.Font(font))
     .Render();}
 <br />
 
 <script>
-    function Oncreate() {
+    function Create() {
         var editor = $("#rteSample").ejRTE("instance");
-        var ddl = editor._fontStyleDDL.ejDropDownList("instance");
-        ddl.selectItemByIndex(7);
+        var obj = editor._fontStyleDDL.ejDropDownList("instance");
+        obj.selectItemByIndex(7);
         var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
         ddlSize.selectItemByIndex(5);
     }
@@ -276,12 +276,12 @@ N> •	By default, the editor’s < iframe > is initialized with “Segoe UI” 
     users with a toolbar that helps them to apply rich text formats to the text entered
     in the text area. 
 </div>)
-.ClientSideEvents(e => e.Create("Oncreate"))
+.ClientSideEvents(e => e.Create("Create"))
 .Render();}
     <br />
 
 <script>
-    function Oncreate() {
+    function Create() {
         var css = "html,body{font-family:sans-serif;font-size:14px; }";
         var editorDoc = $("#rteSample").ejRTE("instance").getDocument();
         var styleTag = document.createElement("style");
@@ -312,21 +312,21 @@ List<String> font = new List<string>() { "fontName", "fontSize", "fontColor", "b
     and get the HTML content for the displayed content. A rich text editor control provides
     users with a toolbar that helps them to apply rich text formats to the text entered
     in the text area.</div>)
-    .ClientSideEvents(e => e.Create("Oncreate"))
+    .ClientSideEvents(e => e.Create("Create"))
     .ToolsList(toolsList).Tools(tool => tool.Font(font))
     .Render();}
 <br />
 
 <script>
-    function Oncreate() {
+    function Create() {
         var editor = $("#rteSample").ejRTE("instance");
         editor.defaults.fontName.push({ text: "Calibri Light", value: "CalibriLight" }, { text: "Calibri", value: "Calibri" });
         editor.defaults.fontSize.push({ text: "8 (42pt)", value: "8" });
-        var ddl = editor._fontStyleDDL.ejDropDownList("instance");
+        var obj = editor._fontStyleDDL.ejDropDownList("instance");
         var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
-        ddl.option({ "dataSource": editor.defaults.fontName });
+        obj.option({ "dataSource": editor.defaults.fontName });
         ddlSize.option({ "dataSource": editor.defaults.fontSize });
-        ddl.selectItemByValue("CalibriLight");
+        obj.selectItemByValue("CalibriLight");
         ddlSize.selectItemByValue("8");
     }
 

@@ -241,7 +241,7 @@ You can even achieve auto positioning for Context Menu. Use the following code s
 
 	</div>
 
-	@Html.EJ().Menu("docfile").Items(items =>
+	@Html.EJ().Menu("file").Items(items =>
 
 	   {
 

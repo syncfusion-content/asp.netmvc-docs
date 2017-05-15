@@ -131,9 +131,9 @@ In this scenario, the advancement of the Progress Bar is changed according to th
 		else if (i > 7) 
 		{
 
-			var pwd = $("#password").val();
+			var password = $("#password").val();
 
-			if (/^[a-zA-Z0-9- ]*$/.test(pwd) == false) 
+			if (/^[a-zA-Z0-9- ]*$/.test(password) == false) 
 			{
 
 				progress();

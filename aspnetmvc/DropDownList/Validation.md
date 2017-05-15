@@ -54,7 +54,7 @@ Required field and min value validation is demonstrated in the below given examp
 
         $.validator.setDefaults({
             ignore: [],
-            errorClass: 'e-validation-error', // to get the error message on jquery validation
+            errorClass: 'e-validation-error', // to get the error message on jQuery validation
             errorPlacement: function (error, element) {
                 $(error).insertAfter(element.closest(".e-widget"));
             }
@@ -186,13 +186,13 @@ The view is created as in the following code snippet:
             data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
             data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
             data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-            DropDownListProperties ddl = new DropDownListProperties();
-            ddl.DataSource = data;
-            DropDownListFields ddf = new DropDownListFields();
-            ddf.Text = "Text";
-            ddf.Value = "Value";
-            ddl.DropDownListFields = ddf;
-            ViewData["properties"] = ddl;
+            DropDownListProperties obj = new DropDownListProperties();
+            obj.DataSource = data;
+            DropDownListFields fields = new DropDownListFields();
+            fields.Text = "Text";
+            fields.Value = "Value";
+            obj.DropDownListFields = fields;
+            ViewData["properties"] = obj;
         }        
         [HttpPost]
         public ActionResult DropdownlistFeatures(DropDownListModel model)
@@ -249,13 +249,13 @@ For DropDownList, we have to create a sample using Data Annotation API to valida
                 data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
                 data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
                 data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-                DropDownListProperties ddl = new DropDownListProperties();
-                ddl.DataSource = data;
-                DropDownListFields ddf = new DropDownListFields();
-                ddf.Text = "Text";
-                ddf.Value = "Value";
-                ddl.DropDownListFields = ddf;
-                ViewData["properties"] = ddl;
+                DropDownListProperties obj = new DropDownListProperties();
+                obj.DataSource = data;
+                DropDownListFields fields = new DropDownListFields();
+                fields.Text = "Text";
+                fields.Value = "Value";
+                obj.DropDownListFields = fields;
+                ViewData["properties"] = obj;
             }   
             [HttpPost]
             public ActionResult DropdownlistFeatures(DropDownListModel model)

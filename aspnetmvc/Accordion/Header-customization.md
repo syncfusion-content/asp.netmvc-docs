@@ -175,7 +175,7 @@ The following code explains to configure selected items for Accordion.
 
 @{      //List of integer array with index values.
 
-List<int> selecteditem = new List<int>() { 0, 1, 2 };
+List<int> selected = new List<int>() { 0, 1, 2 };
 
 }
 
@@ -199,7 +199,7 @@ List<int> selecteditem = new List<int>() { 0, 1, 2 };
 
 		   Essential Grid for ASP.NET MVC is a feature-rich control that provides extensive appearance customization options with support for grouped records. With Essential Grid for ASP.NET MVC, you can create a grid with a highly customizable look and feel. This grid is very useful for generating complex grid-based reports with rich formatting. It supports paging, sorting, grouping, filtering, and editing features. It also supports a JSON mode in which you can handle all the operations like paging and sorting. The performance of these operations in the JSON mode will be much faster than if the grid were to handle them. Essential Grid generates clean HTML in compliance with XHTML 1.0. It supports any kind of IEnumerable data source. It uses LINQ data retrieval techniques for handling data sources, and offers high performance.</div>);
 
-   }).SelectedItems(selecteditem).EnableMultipleOpen(true).Render();}
+   }).SelectedItems(selected).EnableMultipleOpen(true).Render();}
 
 </div>
 

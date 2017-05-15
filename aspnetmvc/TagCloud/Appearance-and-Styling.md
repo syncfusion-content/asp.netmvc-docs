@@ -43,9 +43,9 @@ The following steps explains you to configure format for a TagCloud.
 
 <%-- Configure datasource referring local data binding section and assign it to datasource property -- %>
 
-@Html.EJ().TagCloud("tagcloudformat").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.Cloud)
+@Html.EJ().TagCloud("tagcloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.Cloud)
 
-@Html.EJ().TagCloud("tagCloudlist").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.List)
+@Html.EJ().TagCloud("tagCloud").Datasource((IEnumerable<WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("Text").Url("Url").Frequency("Frequency")).Title("Tech sites").Format(Formats.List)
 
 {% endhighlight %}
 

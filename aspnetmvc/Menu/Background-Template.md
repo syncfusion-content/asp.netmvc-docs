@@ -50,7 +50,7 @@ Initialize the Template Menu as illustrated in the following code example.
 
 						<li><a>JavaScript</a></li>
 
-						<li><a>JQuery</a></li>
+						<li><a>jQuery</a></li>
 
 						<li><a>PHP Basics</a></li>
 

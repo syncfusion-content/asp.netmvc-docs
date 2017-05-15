@@ -385,30 +385,30 @@ The below given example explains the behavior of grouping with List data binding
     {% highlight c# %}
         public ActionResult Index()
         {
-            List<VegetableList> VegeList = new List<VegetableList>();
-            VegeList.Add(new VegetableList { Name = "Cabbage", Category = "Leafy and Salad" }); 
-            VegeList.Add(new VegetableList { Name = "Pea", Category = "Leafy and Salad" }); 
-            VegeList.Add(new VegetableList { Name = "Spinach", Category = "Leafy and Salad" }); 
-            VegeList.Add(new VegetableList { Name = "Wheatgrass", Category = "Leafy and Salad" }); 
-            VegeList.Add(new VegetableList { Name = "Yarrow", Category = "Leafy and Salad" }); 
-            VegeList.Add(new VegetableList { Name = "Chickpea", Category = "Beans" }); 
-            VegeList.Add(new VegetableList { Name = "Green bean", Category = "Beans" }); 
-            VegeList.Add(new VegetableList { Name = "Horse gram", Category = "Beans" }); 
-            VegeList.Add(new VegetableList { Name = "Peanut", Category = "Beans" });
-            VegeList.Add(new VegetableList { Name = "Pigeon pea", Category = "Beans" }); 
-            VegeList.Add(new VegetableList { Name = "Garlic", Category = "Bulb and Stem" }); 
-            VegeList.Add(new VegetableList { Name = "Garlic Chives", Category = "Bulb and Stem" }); 
-            VegeList.Add(new VegetableList { Name = "Lotus root", Category = "Bulb and Stem" }); 
-            VegeList.Add(new VegetableList { Name = "Nopal", Category = "Bulb and Stem" });
-            VegeList.Add(new VegetableList { Name = "Onion", Category = "Bulb and Stem" }); 
-            VegeList.Add(new VegetableList { Name = "Shallot", Category = "Bulb and Stem" }); 
-            VegeList.Add(new VegetableList { Name = "Beetroot", Category = "Root and Tuberous" }); 
-            VegeList.Add(new VegetableList { Name = "Carrot", Category = "Root and Tuberous" }); 
-            VegeList.Add(new VegetableList { Name = "Ginger", Category = "Root and Tuberous" }); 
-            VegeList.Add(new VegetableList { Name = "Potato", Category = "Root and Tuberous" }); 
-            VegeList.Add(new VegetableList { Name = "Radish", Category = "Root and Tuberous"}); 
-            VegeList.Add(new VegetableList { Name = "Turmeric", Category = "Root and Tuberous" });
-            ViewData["VegData"] = VegeList;
+            List<VegetableList> Vegetables = new List<VegetableList>();
+            Vegetables.Add(new VegetableList { Name = "Cabbage", Category = "Leafy and Salad" }); 
+            Vegetables.Add(new VegetableList { Name = "Pea", Category = "Leafy and Salad" }); 
+            Vegetables.Add(new VegetableList { Name = "Spinach", Category = "Leafy and Salad" }); 
+            Vegetables.Add(new VegetableList { Name = "Wheat grass", Category = "Leafy and Salad" }); 
+            Vegetables.Add(new VegetableList { Name = "Yarrow", Category = "Leafy and Salad" }); 
+            Vegetables.Add(new VegetableList { Name = "Chickpea", Category = "Beans" }); 
+            Vegetables.Add(new VegetableList { Name = "Green bean", Category = "Beans" }); 
+            Vegetables.Add(new VegetableList { Name = "Horse gram", Category = "Beans" }); 
+            Vegetables.Add(new VegetableList { Name = "Peanut", Category = "Beans" });
+            Vegetables.Add(new VegetableList { Name = "Pigeon pea", Category = "Beans" }); 
+            Vegetables.Add(new VegetableList { Name = "Garlic", Category = "Bulb and Stem" }); 
+            Vegetables.Add(new VegetableList { Name = "Garlic Chives", Category = "Bulb and Stem" }); 
+            Vegetables.Add(new VegetableList { Name = "Lotus root", Category = "Bulb and Stem" }); 
+            Vegetables.Add(new VegetableList { Name = "Nopal", Category = "Bulb and Stem" });
+            Vegetables.Add(new VegetableList { Name = "Onion", Category = "Bulb and Stem" }); 
+            Vegetables.Add(new VegetableList { Name = "Shallot", Category = "Bulb and Stem" }); 
+            Vegetables.Add(new VegetableList { Name = "Beetroot", Category = "Root and Tuberous" }); 
+            Vegetables.Add(new VegetableList { Name = "Carrot", Category = "Root and Tuberous" }); 
+            Vegetables.Add(new VegetableList { Name = "Ginger", Category = "Root and Tuberous" }); 
+            Vegetables.Add(new VegetableList { Name = "Potato", Category = "Root and Tuberous" }); 
+            Vegetables.Add(new VegetableList { Name = "Radish", Category = "Root and Tuberous"}); 
+            Vegetables.Add(new VegetableList { Name = "Turmeric", Category = "Root and Tuberous" });
+            ViewData["VegData"] = Vegetables;
             return View();
         }
         public class VegetableList
@@ -439,9 +439,9 @@ N> Grouping has restrictions in the following scenarios, <BR>
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList").TargetID("groupinglist").Width("150px").PopupHeight("300px").WatermarkText("Select a vegetable")
+     @Html.EJ().DropDownList("DropDownList").TargetID("grouping").Width("150px").PopupHeight("300px").WatermarkText("Select a vegetable")
 
-        <div id="groupinglist">
+        <div id="grouping">
             <ul>
                 <span class="e-category">Header 1</span>
                 <li>Item 1</li>

@@ -23,11 +23,11 @@ The following code block showcases how to use content template option in the Tab
 
 <div style="width:650px">
 
-@{Html.EJ().Tab("pizzaMenu").Items(data =>
+@{Html.EJ().Tab("pizza").Items(data =>
 
    {
 
-	   data.Add().ID("gardenfresh").Text("GARDEN FRESH (Veg)")
+	   data.Add().ID("garden").Text("GARDEN FRESH (Veg)")
 
 		   .ContentTemplate(@<div>
 
@@ -45,7 +45,7 @@ The following code block showcases how to use content template option in the Tab
 
 		</div>);
 
-	   data.Add().ID("cornandspinach").Text("CORN & SPINACH (Veg)")
+	   data.Add().ID("corn").Text("CORN & SPINACH (Veg)")
 
 		   .ContentTemplate(@<div>
 
@@ -63,7 +63,7 @@ The following code block showcases how to use content template option in the Tab
 
 		</div>);
 
-	   data.Add().ID("chickendelite").Text("CHICKEN DELITE (Non-veg)")
+	   data.Add().ID("chicken").Text("CHICKEN DELITE (Non-veg)")
 
 		   .ContentTemplate(@<div>
 
