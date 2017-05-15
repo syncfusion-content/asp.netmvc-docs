@@ -58,15 +58,7 @@ When you want to browse the file within the fileSize, you can browse and upload 
 
 
 
-When you try to browse the file with exceeded FileSize, we cannot browse and upload the files.
-
-
-
-![](File-Size_images/File-Size_img2.png)
-
-
-
-You can also customize the error message by converting the file size into mb and display the corresponding value in error message.
+When you try to browse the file with exceeded FileSize, an error message will be displayed as an alert.You can customize the error message by converting the file size into mb and display the corresponding value in error message.
 
 
 {% highlight CSHTML %}
@@ -75,7 +67,7 @@ You can also customize the error message by converting the file size into mb and
 
 	  function fileuploaderror(e) 
 	   {
-	     alert("The selected file size is too large. Please select a file less than " + Math.round(e.model.fileSize / (1024 * 1024)) + "mb");
+	     alert("The selected file size is too large. Please select a file less than " + Math.round(e.model.fileSize / (1024 * 1024)) + "MB");
        }
     </script>
 
@@ -85,3 +77,4 @@ Now you will get the error message as shown in the below image
 
 ![](File-Size_images/File-Size_img3.png)
 
+N> By default, UploadBox will display the file size as bytes value in error message.
