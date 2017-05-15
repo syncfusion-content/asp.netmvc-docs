@@ -36,15 +36,15 @@ The following steps are used to create Tab control.
    ~~~ cshtml
 
 
-	@Html.EJ().Tab("DishType").Items(data =>
+	@Html.EJ().Tab("Dish").Items(data =>
 
 	{
 
-		data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div></div>);
+		data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div></div>);
 
-		data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+		data.Add().ID("type").Text("dish Type").ContentTemplate(@<div></div>);
 
-		data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+		data.Add().ID("sandwich").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
 	})
 
@@ -76,15 +76,15 @@ In this application, a detailed description is provided to each item. You can sp
 
 {
 
-data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
+data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-@Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
 
 
 
 <!--Food item description-->
 
-<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+<p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 </div>);
 
@@ -113,21 +113,21 @@ For more information about rating, refer to the following link:
 
 {
 
-data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
+data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-@Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
 
 
 
 <!--Food item description-->
 
-<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+<p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 </div>);
 
-data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+data.Add().ID("type").Text("dish Type").ContentTemplate(@<div></div>);
 
-data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+data.Add().ID("sandwich").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
 })
 
@@ -157,23 +157,23 @@ The following code example represents sub Tab control rendering using helper fun
 
 {
 
-    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div> Rating:
+    data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-    @Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+    @Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
 
 
 
 <!--Food item description-->
 
-    <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+    <p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
        @firstTab()
 
 </div>);
 
-    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+    data.Add().ID("type").Text("dish Type").ContentTemplate(@<div></div>);
 
-    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+    data.Add().ID("sandwich").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
 })
 
@@ -181,7 +181,7 @@ The following code example represents sub Tab control rendering using helper fun
 
 {
 
-    @Html.EJ().Tab("PizzaMenu").Items(data =>
+    @Html.EJ().Tab("dish").Items(data =>
 
     {
 
@@ -197,7 +197,7 @@ The following code example represents sub Tab control rendering using helper fun
 
                 <br />
 
-                Description: Small pizza bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.
+                Description: Small dish bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.
 
             </div>
 
@@ -292,25 +292,25 @@ The following code section renders the sub Tab element in the vertical orientati
 
 {
 
-    data.Add().ID("pizzamenu").Text("Pizza Menu").ContentTemplate(@<div>
+    data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div>
 
         Rating:
 
-        @Html.EJ().Rating("RatingPizza").Value(4).Precision(Precision.Exact)
+        @Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
 
 
 
         <!--Food item description-->
 
-        <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+        <p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
         @firstTab()
 
     </div>);
 
-    data.Add().ID("pizzatype").Text("Pizza Type").ContentTemplate(@<div></div>);
+    data.Add().ID("type").Text("dish Type").ContentTemplate(@<div></div>);
 
-    data.Add().ID("sandwichtype").Text("Sandwich Type").ContentTemplate(@<div></div>);
+    data.Add().ID("sandwich").Text("Sandwich Type").ContentTemplate(@<div></div>);
 
 })
 
@@ -318,7 +318,7 @@ The following code section renders the sub Tab element in the vertical orientati
 
 {
 
-    @Html.EJ().Tab("PizzaMenu").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
+    @Html.EJ().Tab("dish").HeaderPosition(HeaderPosition.Left).Height("221").Items(data =>
 
     {
 
@@ -334,7 +334,7 @@ The following code section renders the sub Tab element in the vertical orientati
 
                 <br />
 
-                Description: Small pizza bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.
+                Description: Small dish bases are topped with spinach and paneer and fresh cream, a nice layer of mozzarella cheese. This is baked until the cheese is all hot and gooey.
 
             </div>
 
@@ -389,15 +389,15 @@ The second and third Tab contents are declared in the same method as of the firs
 
 @{Html.EJ().Tab("DishType").Items(data => 
         {
-			data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div> 
-			Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+			data.Add().ID("type").Text("dish Menu").ContentTemplate(@<div> 
+			dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 			@firstTab()
             </div>);
 			data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
 			Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
 			@secondTab() 
 			</div>);  
-			data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+			data.Add().ID("Pasta").Text("Pasta Menu").ContentTemplate(@<div>
 			</div>);  
 		}).Render();
 
@@ -410,7 +410,7 @@ The second and third Tab contents are declared in the same method as of the firs
 				Rate    : $55<br />  
 				Ingredients : grilled chicken, corn &amp;olives.
 				<br />    
-				Description: To make an appetizer pizza made with crescent roll dough, baked and topped with flavored cream cheese and crispy fresh vegetables.
+				Description: To make an appetizer dish made with crescent roll dough, baked and topped with flavored cream cheese and crispy fresh vegetables.
 				Broccoli, carrots, and bell peppers make this a wonderfully delicious vegetarian treat
 				</div> 
 				</div>);
@@ -445,15 +445,15 @@ Add third Tab contents in element during initialization using content template o
 {% highlight CSHTML %}
 @{Html.EJ().Tab("DishType").Items(data =>  
    {   
-		data.Add().ID("Pizzatype").Text("Pizza Menu").ContentTemplate(@<div>
-		Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
+		data.Add().ID("type").Text("dish Menu").ContentTemplate(@<div>
+		dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 		@firstTab()  
 		</div>); 
 		data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
 		Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
 		@secondTab() 
 		</div>); 
-		data.Add().ID("Pastatype").Text("Pasta Menu").ContentTemplate(@<div>
+		data.Add().ID("Pasta").Text("Pasta Menu").ContentTemplate(@<div>
 		Pasta cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.  
 		@thirdTab() 
 		</div>); 

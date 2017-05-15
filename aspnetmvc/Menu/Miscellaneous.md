@@ -24,7 +24,7 @@ Specifies the height of the root menu. You can customize the height of the Menu 
 
 	<div class="imgframe">
 
-		@Html.EJ().Menu("menucontrol").Items(items =>
+		@Html.EJ().Menu("menu").Items(items =>
 
 			{
 
@@ -112,7 +112,7 @@ Specifies the width of the main menu. You can customize the width of the Menu co
 
 	<div class="imgframe">
 
-	@Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menu").Items(items =>
 
 			{
 
@@ -205,7 +205,7 @@ Specifies the sub menu items to be show or open only on click. It accepts the Bo
 
 <div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+@Html.EJ().Menu("menu").Items(items =>
 
         {
 
@@ -301,7 +301,7 @@ Animation type is used to enable or disable the Animation when hover or click on
 
 <div class="imgframe">
 
-	@Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menu").Items(items =>
 
 	{
 
@@ -400,7 +400,7 @@ Specifies the title to the responsive menu. You can provide title to the Menu co
 
 <div class="imgframe">
 
-	@Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menu").Items(items =>
 
 	{
 
@@ -501,7 +501,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 <div class="imgframe">
 
-  @Html.EJ().Menu("menucontrol").Items(items =>
+  @Html.EJ().Menu("menu").Items(items =>
 
 	{
 
@@ -569,7 +569,7 @@ Specifies the main menu item arrows to display only when it contains child menu 
 
 
 
-	}).Width("500").ShowRooltLevelArrows(false)
+	}).Width("500").ShowRootLevelArrows(false)
 
 </div>
 
@@ -603,7 +603,7 @@ Specifies the sub menu items arrows to display only when it contains child menu 
 
 <div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+@Html.EJ().Menu("menu").Items(items =>
 
 	{
 

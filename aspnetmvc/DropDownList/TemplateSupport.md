@@ -30,13 +30,13 @@ In the demo, a List data is created with Text, Image, Role and Country which is 
 	{% highlight html %}
         @model MVCApplication.Controllers.HomeController
         
-        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Employee1>)ViewData["LocalDataSource"]).HeaderTemplate("<div class='eheader'><span>PHOTO</span> <span>DETAILS</span></div>").Template("<div><img class='imgId' src='../Content/Employees/${Image}.png' alt='employee'/> <div class='ename'> ${Text} </div><div class='role'> ${Role} </div><div class='cont'> ${Country} </div></div>")
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Employee1>)ViewData["LocalDataSource"]).HeaderTemplate("<div class='eheader'><span>PHOTO</span> <span>DETAILS</span></div>").Template("<div><Image class='ImageId' src='../Content/Employees/${Image}.png' alt='employee'/> <div class='ename'> ${Text} </div><div class='role'> ${Role} </div><div class='cont'> ${Country} </div></div>")
 		
 	{% endhighlight %}
     
     {% highlight css %}
 
-    	.imgId {
+    	.ImageId {
         	margin: 0;
         	padding: 3px 10px 3px 3px;
         	border: 0 none;
@@ -50,40 +50,40 @@ In the demo, a List data is created with Text, Image, Role and Country which is 
     {% highlight c# %}
         public ActionResult Index()
         {
-           List<Employee1> EmpData = new List<Employee1>();
-            EmpData.Add(new Employee1
+           List<Employee1> Data = new List<Employee1>();
+            Data.Add(new Employee1
             {
                 Text = "Erik Linden",
                 Role = "Representative",
                 Country = "England",
                 Image = "3",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee1
+            Data.Add(new Employee1
             {
                 Text = "John Linden",
                 Role = "Representative",
                 Country = "Norway",
                 Image = "6",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee1
+            Data.Add(new Employee1
             {
                 Text = "Louis",
                 Role = "Representative",
                 Country = "Australia",
                 Image = "7",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee1
+            Data.Add(new Employee1
             {
                 Text = "Lawrence",
                 Role = "Representative",
                 Country = "India",
                 Image = "8",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            ViewData["LocalDataSource"] = EmpData;
+            ViewData["LocalDataSource"] = Data;
             return View();
         }
         public class Employee
@@ -92,7 +92,7 @@ In the demo, a List data is created with Text, Image, Role and Country which is 
             public string Role { get; set; }
             public string Country { get; set; }
             public string Image { get; set; }
-            public string ImgAttr { get; set; }
+            public string ImageAttr { get; set; }
         }
     {% endhighlight %}
     
@@ -100,5 +100,5 @@ In the demo, a List data is created with Text, Image, Role and Country which is 
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/>
 
-![](TemplateSupport_images/TemplateSupport_img1.jpeg)
+![](TemplateSupport_images/TemplateSupport_Image1.jpeg)
 

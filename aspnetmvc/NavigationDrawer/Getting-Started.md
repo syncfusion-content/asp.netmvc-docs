@@ -28,7 +28,7 @@ To add a Navigation Drawer control, call NavigationDrawer helper. You can displa
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -137,7 +137,7 @@ Set the TargetId property as follows.
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -174,7 +174,7 @@ You can set the images for Navigation Drawer by using the ImageClass property as
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -309,7 +309,7 @@ You can load the desired content for the navigation items by updating the conten
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).ClientSideEvents(click => click.MouseDown("slideMenuClick")).PersistSelection(true).Width(300).Items(items =>
 

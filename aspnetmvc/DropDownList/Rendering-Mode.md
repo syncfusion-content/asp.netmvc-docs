@@ -22,9 +22,9 @@ Create a div with UL-LI elements and assign that div id into TargetID property f
 
 {% highlight html %}
 
-	@Html.EJ().DropDownList("DropDownList1").TargetID("mailtoolslist")
+	@Html.EJ().DropDownList("DropDownList1").TargetID("mail")
 
-	<div id="mailtoolslist">
+	<div id="mail">
 
     	<ul>
 
@@ -133,7 +133,7 @@ Create a div with UL-LI elements and assign that div id into TargetID property f
 		
         	$('#dropdown1').ejDropDownList({
 			
-            	targetID: "mailtoolslist"
+            	targetID: "mail"
 				
         	});
 			

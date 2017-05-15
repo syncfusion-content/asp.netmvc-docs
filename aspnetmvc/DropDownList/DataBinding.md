@@ -170,13 +170,13 @@ N> The columns are bounded automatically when the fields are specified with the 
 	{% highlight html %}
         @model MVCApplication.Controllers.HomeController
         
-        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Employee>)ViewData["LocalDataSource"]).DropDownListFields(Df => Df.Text("Text").Value("Country").Category("Role").ImageUrl("Image").ImageAttributes("ImgAttr"))
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Employee>)ViewData["LocalDataSource"]).DropDownListFields(Df => Df.Text("Text").Value("Country").Category("Role").ImageUrl("Image").ImageAttributes("ImageAttr"))
 		
 	{% endhighlight %}
     
     {% highlight css %}
 
-    	.imgId {
+    	.ImageId {
         	margin: 0;
         	padding: 3px 10px 3px 3px;
         	border: 0 none;
@@ -190,40 +190,40 @@ N> The columns are bounded automatically when the fields are specified with the 
     {% highlight c# %}
         public ActionResult Index()
         {
-            List<Employee> EmpData = new List<Employee>();
-            EmpData.Add(new Employee
+            List<Employee> Data = new List<Employee>();
+            Data.Add(new Employee
             {
                 Text = "Erik Linden",
                 Role = "Executive",
                 Country = "England",
                 Image = "../Content/Employees/3.png",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee
+            Data.Add(new Employee
             {
                 Text = "John Linden",
                 Role = "Representative",
                 Country = "Norway",
                 Image = "../Content/Employees/6.png",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee
+            Data.Add(new Employee
             {
                 Text = "Louis",
                 Role = "Representative",
                 Country = "Australia",
                 Image = "../Content/Employees/7.png",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            EmpData.Add(new Employee
+            Data.Add(new Employee
             {
                 Text = "Lawrence",
                 Role = "Executive",
                 Country = "India",
                 Image = "../Content/Employees/8.png",
-                ImgAttr = "class='imgId'"
+                ImageAttr = "class='ImageId'"
             });
-            ViewData["LocalDataSource"] = EmpData;
+            ViewData["LocalDataSource"] = Data;
             return View();
         }
         public class Employee
@@ -232,14 +232,14 @@ N> The columns are bounded automatically when the fields are specified with the 
             public string Role { get; set; }
             public string Country { get; set; }
             public string Image { get; set; }
-            public string ImgAttr { get; set; }
+            public string ImageAttr { get; set; }
         }
     {% endhighlight %}
     
 {% endtabs %}
 
 
-![](DataBinding_images/DataBinding_img1.jpeg)
+![](DataBinding_images/DataBinding_Image1.jpeg)
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/> 
 
@@ -306,13 +306,13 @@ Defines model class
     {
         public string name { set; get; }
         public string empID { set; get; }
-        public string desgination { set; get; }
+        public string designation { set; get; }
         public Employee() { }
-        public Employee(string ename, string eid, string edesg)
+        public Employee(string name, string id, string designation)
         {
-            name = ename;
-            empID = eid;
-            desgination = edesg;
+            name = name;
+            empID = id;
+            designation = designation;
         }
         
     }
@@ -344,7 +344,7 @@ In code behind, fetch the data from Employee class and assigned to the DropDownL
 
 {% highlight html %}
 
-    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Employee>)ViewBag.datasource).DropDownListFields(df => df.ID("empID").Text("name").Value("desgination")).WatermarkText("Select a Student").Width("100%")
+    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Employee>)ViewBag.datasource).DropDownListFields(df => df.ID("empID").Text("name").Value("designation")).WatermarkText("Select a Student").Width("100%")
 
 {% endhighlight %}
 
@@ -568,7 +568,7 @@ For further details about OData service please refer [the link](http://www.odata
 {% endhighlight %}
            
            
-![](DataBinding_images/DataBinding_img2.jpeg)
+![](DataBinding_images/DataBinding_Image2.jpeg)
 
 N> Events associated with remote data bind is listed [here](http://help.syncfusion.com/js/api/ejdropdownlist#events). 
 
@@ -591,15 +591,15 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
         // GET api/<controller>       
         public PageResult<EmployeePhoto> Get(ODataQueryOptions opts)
         {
-            List<EmployeePhoto> emp = db.EmployeePhotos.ToList();            
+            List<EmployeePhoto> photos = db.EmployeePhotos.ToList();            
 
-            return new PageResult<EmployeePhoto>(emp as IEnumerable<EmployeePhoto>, null, emp.Count);
+            return new PageResult<EmployeePhoto>(photos as IEnumerable<EmployeePhoto>, null, photos.Count);
         }
     } 
 
 {% endhighlight %}
 
-![](DataBinding_images/DataBinding_img3.jpeg)
+![](DataBinding_images/DataBinding_Image3.jpeg)
 
 ## Virtual Scrolling 
 

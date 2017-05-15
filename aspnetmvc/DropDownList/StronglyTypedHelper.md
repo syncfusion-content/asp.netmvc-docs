@@ -56,13 +56,13 @@ In the controller, pass the model to the View.
             data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" });
             data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" });
             data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-            DropDownListProperties ddl = new DropDownListProperties();
-            ddl.DataSource = data;
-            DropDownListFields ddf = new DropDownListFields();
-            ddf.Text = "Text";
-            ddf.Value = "Value";
-            ddl.DropDownListFields = ddf;
-            ViewData["properties"] = ddl;
+            DropDownListProperties obj = new DropDownListProperties();
+            obj.DataSource = data;
+            DropDownListFields fields = new DropDownListFields();
+            fields.Text = "Text";
+            fields.Value = "Value";
+            obj.DropDownListFields = fields;
+            ViewData["properties"] = obj;
         }
 
 {% endhighlight %}
@@ -130,14 +130,14 @@ In controller, defines Data source and properties for the both DropDownLists. Th
 
             DropDownListModel model = new DropDownListModel();
             
-            DropDownListProperties ddl = new DropDownListProperties();
-            DropDownListFields ddf = new DropDownListFields();
-            ddl.DataSource = data;
-            ddl.CascadeTo = "getDept";
-            ddf.Text = "Name";
-            ddf.Value = "Department";
-            ddl.DropDownListFields = ddf;
-            ViewData["properties"] = ddl;
+            DropDownListProperties obj = new DropDownListProperties();
+            DropDownListFields fields = new DropDownListFields();
+            obj.DataSource = data;
+            obj.CascadeTo = "getDept";
+            fields.Text = "Name";
+            fields.Value = "Department";
+            obj.DropDownListFields = fields;
+            ViewData["properties"] = obj;
 
             List<DeptDetails> dept = new List<DeptDetails>() { };
             dept.Add(new DeptDetails() { Department = "Computer Science", Subject = "Software Engineering" });
@@ -157,12 +157,12 @@ In controller, defines Data source and properties for the both DropDownLists. Th
             dept.Add(new DeptDetails() { Department = "Marine", Subject = "Ocean structures" });
 
             DropDownListProperties deptProperties = new DropDownListProperties();
-            DropDownListFields ddlFields = new DropDownListFields();
+            DropDownListFields objFields = new DropDownListFields();
             deptProperties.DataSource = dept;
             deptProperties.Enabled = false;
-            ddlFields.Text = "Subject";
-            ddlFields.Value = "Department";
-            deptProperties.DropDownListFields = ddlFields;
+            objFields.Text = "Subject";
+            objFields.Value = "Department";
+            deptProperties.DropDownListFields = objFields;
             ViewData["Department"] = deptProperties;
 
             return View(model);

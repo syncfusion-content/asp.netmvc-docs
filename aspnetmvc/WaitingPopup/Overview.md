@@ -78,7 +78,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 			 <td>                         
 			 
-			 @Html.EJ().Button("buttonnormal").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("btnload").Click("btnClick"))
+			 @Html.EJ().Button("button").Text("Login").Size(ButtonSize.Large).ClientSideEvents(e =>e.Create("load").Click("Click"))
 
 			 </td>                    
 
@@ -143,13 +143,13 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 	<script>
 
-			function btnClick(e)
+			function Click(e)
 
 			{
 
-			var wp = $("#target").data("ejWaitingPopup");
+			var popup = $("#target").data("ejWaitingPopup");
 
-			wp.show();
+			popup.show();
 
 			setTimeout(success, 5000);
 

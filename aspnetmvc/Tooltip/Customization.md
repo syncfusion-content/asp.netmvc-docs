@@ -16,12 +16,12 @@ By default you can add any text or image to the Tooltip. To customize the toolti
 
 {% highlight CSHTML %}
 
-    <div class="ctrl" id="centerImg">
+    <div class="ctrl" id="centerImage">
         <img class="ctrImg" src="http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-04.png" />
         <div class="new">Roslyn Succinctly</div>
     </div>
 
-    @Html.EJ().Tooltip("centerImg").Content("<div class='main'> <div class='poster'> <img src='http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-2.png' width='150px' height='120px'> </div> <div class='def'> <h4> Roslyn Succinctly </h4><div class='description'>Microsoft has only recently embraced the world of open source software, offering <a href='#'>More...</a> </div>").Width("350px")
+    @Html.EJ().Tooltip("centerImage").Content("<div class='main'> <div class='poster'> <img src='http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-2.png' width='150px' height='120px'> </div> <div class='def'> <h4> Roslyn Succinctly </h4><div class='description'>Microsoft has only recently embraced the world of open source software, offering <a href='#'>More...</a> </div>").Width("350px")
 
 {% endhighlight %}
 {% highlight css %}
@@ -77,12 +77,12 @@ Tooltip title can be customized with the image or any HTML element.
 
 {% highlight CSHTML %}
     
-    <div class="ctrl" id="centerImg">
+    <div class="ctrl" id="centerImage">
         <img class="ctrImg" src="http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-04.png" />
         <div class="new">Roslyn Succinctly</div>
     </div>
 
-    @Html.EJ().Tooltip("centerImg").Content("<div>Microsoft has only recently embraced the world of open source software, offering <a href='#'>More...</a> </div>").Title("<div><img class='titleImg' src='http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-2.png' /> <div class='description'> Roslyn Succinctly </div> </div> ")
+    @Html.EJ().Tooltip("centerImage").Content("<div>Microsoft has only recently embraced the world of open source software, offering <a href='#'>More...</a> </div>").Title("<div><img class='titleImg' src='http://mvc.syncfusion.com/demos/web/content/images/tooltip/template-2.png' /> <div class='description'> Roslyn Succinctly </div> </div> ")
 
  {% endhighlight %}   
  {% highlight css %}
@@ -93,7 +93,7 @@ Tooltip title can be customized with the image or any HTML element.
             float: left;
             margin-right: 10px;
         }
-        #centerImg{
+        #centerImage{
             margin-left : 300px;
             margin-top : 250px;
             position : absolute;

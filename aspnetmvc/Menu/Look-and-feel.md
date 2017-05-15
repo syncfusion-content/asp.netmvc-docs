@@ -40,7 +40,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
 	<div class="imgframe">
 
-			@Html.EJ().Menu("menucontrol").Items(items =>
+			@Html.EJ().Menu("menu").Items(items =>
 
 			{
 

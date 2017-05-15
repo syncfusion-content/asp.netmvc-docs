@@ -24,11 +24,11 @@ The following code example is used to render the Tab element in RTL format.
 
 	<div style="width:550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("pizza").Text("Pizza Type")
 
 					   .ContentTemplate(@<div>
 
@@ -36,7 +36,7 @@ The following code example is used to render the Tab element in RTL format.
 
 					   </div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwich").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 

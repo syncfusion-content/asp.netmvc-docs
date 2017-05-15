@@ -146,7 +146,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 {% highlight CSHTML %}
 
-@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("oncreate").MouseOver("onmouseover").MouseOut("onmouseout").Click("onclick"))
+@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("create").MouseOver("mouseover").MouseOut("mouseout").Click("click"))
 
 
 
@@ -164,7 +164,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 </div>
 
-@Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("evtpropscheckedevent"))
+@Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("event"))
 
 <style type="text/css">
 
@@ -179,7 +179,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 <script>
 
-	function evtpropscheckedevent(args) 
+	function event(args) 
 	{
 
 		tagObj = $("#tagEvents").data("ejTagCloud");
@@ -190,11 +190,11 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 			switch (args.selectedText) 
 			{
 
-				case "mouseover": tagObj.option(args.selectedText, "onmouseover"); break;
+				case "mouseover": tagObj.option(args.selectedText, "mouseover"); break;
 
-				case "mouseout": tagObj.option(args.selectedText, "onmouseout"); break;
+				case "mouseout": tagObj.option(args.selectedText, "mouseout"); break;
 
-				case "click": tagObj.option(args.selectedText, "onclick"); break;
+				case "click": tagObj.option(args.selectedText, "click"); break;
 
 			}
 
@@ -206,28 +206,28 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 
 
-	function oncreate(args) 
+	function create(args) 
 	{
 
 		alert("Tagcloud has been created.");
 
 	}
 
-	function onmouseover(args) 
+	function mouseover(args) 
 	{
 
 		alert("Mouse pointer is hovered on " + args.value);
 
 	}
 
-	function onmouseout(args) 
+	function mouseout(args) 
 	{
 
-		alert("Mouse pointer is hovered awayfrom " + args.value);
+		alert("Mouse pointer is hovered away from " + args.value);
 
 	}
 
-	function onclick(args) 
+	function click(args) 
 	{
 
 		alert( args.value + " is clicked.");

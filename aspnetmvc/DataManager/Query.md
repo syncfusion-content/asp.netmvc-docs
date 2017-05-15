@@ -139,7 +139,7 @@ The expand query of the DataManager is used to perform complex data binding.
             {
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
-                col.Field("Employee.FirstName").HeaderText("Emp Name").TextAlign(TextAlign.Right).Width(75).Add();
+                col.Field("Employee.FirstName").HeaderText("Employee Name").TextAlign(TextAlign.Right).Width(75).Add();
                 col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
                 col.Field("ShipCity").HeaderText("Ship City").Width(110).Add();
             })

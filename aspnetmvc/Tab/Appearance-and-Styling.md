@@ -22,29 +22,29 @@ The following code example is used to add the header image for the root Tab head
 
 	// Add the following code example to the corresponding CSHTML page to render Tab with header image.
 
-	 <div id="dishtab" style="width:550px">
+	 <div id="dish" style="width:550px">
 
 		<ul>
 
-			<li><span class="dish pizzaImg"></span><a href="#pizzatype">Pizza Type</a></li>
+			<li><span class="dish dishImg"></span><a href="#dishtype">dish Type</a></li>
 
 			<li><span class="dish sandwichImg"></span><a href="#sandwichtype">Sandwich Type</a></li>
 
 		</ul>
 
-		<div id="pizzatype" style="background-color: #F5F5F5">
+		<div id="dish" style="background-color: #F5F5F5">
 
-			<p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+			<p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 		</div>	
 
-		<div id="sandwichtype" style="background-color: #F5F5F5">        
+		<div id="sandwich" style="background-color: #F5F5F5">        
 
 			<p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
 
 		</div>
 
-		@Html.EJ().Tab("dishtab")
+		@Html.EJ().Tab("dish")
 
 	</div>
 
@@ -70,7 +70,7 @@ The following code example is used to add the header image for the root Tab head
 
 		}
 
-		.pizzaImg 
+		.dishImg 
 		{
 
 			background: url("http://js.syncfusion.com/UG/Web/Content/rsz_chicken-delite.png") no-repeat;
@@ -127,15 +127,15 @@ The following code example is used to render the Tab widget with rounded corner.
 
 	<div style="width: 550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwich").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -170,15 +170,15 @@ The following code example is used to render the Tab widget with enable/disable.
 
 	<div style="width: 550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwich").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -217,15 +217,15 @@ The following code example is used to render the Tab widget with Reload icon.
 
 	<div style="width: 550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwich").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -265,15 +265,15 @@ The following code example is used to render the Tab widget with customized coll
 
 	<div style="width: 550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwich").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -316,13 +316,13 @@ The following code example is used to render the Tab widget with customized heig
 
 	<div style="width: 550px">
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
 				  data.Add().ID("sandwichtype").Text("Sandwich Type")
 
@@ -366,13 +366,13 @@ The following code example is used to render the Tab widget with customized widt
 
 	<div>
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
 				   data.Add().ID("sandwichtype").Text("Sandwich Type")
 
@@ -433,13 +433,13 @@ The following code example is used to render the Tab widget with customized styl
 
 	<div>
 
-		@{Html.EJ().Tab("dishtab").Items(data =>
+		@{Html.EJ().Tab("dish").Items(data =>
 
 			   {
 
-				   data.Add().ID("pizzatype").Text("Pizza Type")
+				   data.Add().ID("dish").Text("dish Type")
 
-					   .ContentTemplate(@<div>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
+					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
 				   data.Add().ID("sandwichtype").Text("Sandwich Type")
 

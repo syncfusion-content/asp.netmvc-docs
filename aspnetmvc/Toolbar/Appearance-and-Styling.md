@@ -22,7 +22,7 @@ The Height property is used to set height of the Toolbar. Set the value to this 
 / / Add this code in your CSHTML page and refer local data section for data source
 
 <div class="cols-sample-area">
-    @Html.EJ().Toolbar("toolbarcontent").Width("250").Height("300").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag
+    @Html.EJ().Toolbar("toolbar").Width("250").Height("300").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag
 	.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip"))
 
 </div>
@@ -41,7 +41,7 @@ The Width property is used to set width of the Toolbar. Set the value to this pr
 // Add this code in your CSHTML page and refer local data section for data source
 
 <div class="cols-sample-area"> 
-   @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
+   @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
    .ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip"))
 
 </div>
@@ -60,7 +60,7 @@ The ShowRoundedCorner property is Boolean type, which allows us to enable rounde
 // Add this code in your CSHTML page and refer local data section for data source
 
 <div class="cols-sample-area">  
-  @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
+  @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
   .ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).ShowRoundedCorner(true)
 
 </div>
@@ -82,7 +82,7 @@ The EnableSeparator property is Boolean type, which allow us to set separator be
 
 / / Add this code in your CSHTML page and refer local data section for data source
 
-<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).EnableSeparator(true)
+<div class="cols-sample-area">    @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource).ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).EnableSeparator(true)
 
 </div>
 
@@ -127,7 +127,7 @@ The CssClass property is used to set root class for Toolbar control theme. Set t
 / / Add this code in your CSHTML page and refer local data section for data source
 
 <div class="cols-sample-area"> 
-   @Html.EJ().Toolbar("toolbarcontent").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
+   @Html.EJ().Toolbar("toolbar").Width("250").Datasource((IEnumerable<ToolbarLocalBinding>)ViewBag.datasource)
    .ToolbarFields(f => f.ID("IconId").SpriteCssClass("SpriteCss").TooltipText("Tooltip")).CssClass("gradient-lime")
 
 </div>
