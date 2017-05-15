@@ -22,31 +22,26 @@ The following code example is used to add the header image for the root Tab head
 
 	// Add the following code example to the corresponding CSHTML page to render Tab with header image.
 
-	 <div id="dish" style="width:550px">
+	  <div style="width: 500px">
+        @{Html.EJ().Tab("dish").Items(data =>
+           {
+               data.Add().ID("pizza").Text("Pizza").ContentTemplate(@<div id="pizzatype" style="background-color: #F5F5F5">
+            <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+            </div>);
+              data.Add().ID("sandwichtype").Text("Sandwich").ContentTemplate(@<div id="sandwichtype" style="background-color: #F5F5F5">
+            <p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
+            </div>);
+            }).SelectedItemIndex(1).ClientSideEvents(e =>e.Create("create")).Render();}
+    </div>
+    <script>
+  
+           function create(args)
+            {
+                $("#dish ul li:first").find("a").prepend('<span class="dish pizzaImg"></span>');
+                $("#dish ul li:last").find("a").prepend('<span class="dish sandwichImg"></span>');
+            }
 
-		<ul>
-
-			<li><span class="dish dishImg"></span><a href="#dishtype">dish Type</a></li>
-
-			<li><span class="dish sandwichImg"></span><a href="#sandwichtype">Sandwich Type</a></li>
-
-		</ul>
-
-		<div id="dish" style="background-color: #F5F5F5">
-
-			<p>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
-
-		</div>	
-
-		<div id="sandwich" style="background-color: #F5F5F5">        
-
-			<p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
-
-		</div>
-
-		@Html.EJ().Tab("dish")
-
-	</div>
+    </script>
 
    ~~~
    
@@ -58,43 +53,26 @@ The following code example is used to add the header image for the root Tab head
    ~~~ css
 
 	<style type="text/css" class="cssStyles">
+    	 .dish {
+              display: inline-block;
+             }
 
-		.dish 
-		{
+     .pizzaImg {
+        background: url("http://js.syncfusion.com/demos/web/content/images/accordion/chicken-delite.png") no-repeat;
+        height: 25px;
+        width: 25px;
+        margin:2px;
+        background-position: -18px;
+        }
 
-			display: inline-block;
-
-			vertical-align: middle;
-
-			margin: 0px -9px 0px 9px;           
-
-		}
-
-		.dishImg 
-		{
-
-			background: url("http://js.syncfusion.com/UG/Web/Content/rsz_chicken-delite.png") no-repeat;
-
-			height: 25px;
-
-			width: 25px;
-
-		}
-
-		.sandwichImg, .pastaImg {
-
-			height: 25px;
-
-			width: 25px;
-
-		}
-
-		.sandwichImg 
-		{
-
-			background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;
-
-		}
+     .sandwichImg {
+        background: url("http://js.syncfusion.com/demos/web/content/images/accordion/garden-fresh.png") no-repeat;
+        padding:1px;
+        height: 25px;
+        width: 25px;
+        margin:2px;
+        background-position: -18px;
+        }
 
 	</style> 
    ~~~
