@@ -21,6 +21,6 @@ Please refer the following code examples.
 
 {% highlight CSHTML %}
 
-    @Html.EJ().ListView("locallistview").Width(400).Height(300).DataSource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/").CrossDomain(true)).Query("ej.Query().from('Customers')").FieldSettings(f => f.Text("CustomerID")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous)
+    @Html.EJ().ListView("locallistview").Width(400).Height(300).DataSource(ds => ds.URL("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").CrossDomain(true)).Query("ej.Query().from('Customers')").FieldSettings(f => f.Text("CustomerID")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous)
 
 {% endhighlight %}
