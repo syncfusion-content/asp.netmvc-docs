@@ -74,7 +74,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
    ~~~
    
 
-2. Run the sample, press AccessKey + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
+2. Run the sample, press Access Key + J to focus in the AutoComplete widget and you can navigate using the arrow keys. Use the Escape key to close the popup.
 
 
 

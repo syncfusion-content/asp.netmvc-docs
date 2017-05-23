@@ -51,7 +51,7 @@ The following code example define listbox sample _ValueSelect server side event 
 
 {% highlight c# %}
 
-    // Add the code in csharp page
+    // Add the code in C Sharp page
 
 
 
@@ -81,7 +81,7 @@ The following code example define listbox sample _ValueSelect server side event 
 
         //e.SelectedText – Text  of selected node
 
-        //e.ItemId – Index value of slected node
+        //e.ItemId – Index value of selected node
 
 
 
