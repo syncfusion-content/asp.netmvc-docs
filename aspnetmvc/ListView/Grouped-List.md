@@ -90,7 +90,7 @@ Refer the following code examples.
 
 {% highlight CSHTML %}
 
-@Html.EJ().ListView("grouplistsamp").Width(400).ShowHeader(true).HeaderTitle("Favourite").EnableGroupList(true).Groups(gp =>
+@Html.EJ().ListView("grouplistsamp").Width(400).ShowHeader(true).HeaderTitle("Favorites").EnableGroupList(true).Groups(gp =>
 
 {
 
