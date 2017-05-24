@@ -30,7 +30,7 @@ The following steps explains you the configuration of ScrollOneStepBy property i
 				Model–view–controller (MVC) is a software architecture pattern which 
 				separates the representation of information from the user's interaction
 				with it. The model consists of application data, business rules, logic, and
-				functions. A view can be any output representation of data, such as a chartor a diagram.
+				functions. A view can be any output representation of data, such as a chart or a diagram.
 			</p>
 			</div>
 		</div>

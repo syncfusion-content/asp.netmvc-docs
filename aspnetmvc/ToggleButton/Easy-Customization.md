@@ -112,7 +112,7 @@ The following script explains you the details about rendering the Toggle Button 
 
 //Add the code in CSHTML page to configure the widget and initialize the control
 
-    @*set the prefix, suffix build in icons in default and active state*@
+    @*set the prefix, suffix built-in icons in default and active state*@
 
     @Html.EJ().ToggleButton("toggleButton_iconsAndStates").ContentType(ContentType.ImageTextImage).ShowRoundedCorner(true).DefaultText("forward").ActiveText("backward").DefaultPrefixIcon("e-icon e-mediaforward").ActivePrefixIcon("e-icon e-mediaback").DefaultSuffixIcon("e-icon e-redo").ActiveSuffixIcon("e-icon e-undo")
 

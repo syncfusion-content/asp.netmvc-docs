@@ -30,7 +30,7 @@ For more information about KnockoutJS binding, you can refer to the online docum
 
 
 
-@*Add the following script in view page for knockout support*@
+@*Add the following script in view page for KnockoutJS support*@
 
 <script src="http://cdn.syncfusion.com/js/assets/external/knockout.min.js"> </script>
 

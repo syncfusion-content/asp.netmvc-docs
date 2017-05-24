@@ -56,7 +56,7 @@ In a real-time appointment booking scenario, the booking is open only for a limi
 
 {% highlight CSHTML %}
 	 
-@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Mintime and Maxtime*@
+@*Add the following code example to the corresponding CSHTML page to render DateTimePicker widget with customized Min time and Max time*@
 
 @Html.EJ().DateTimePicker("DateTime").MinDateTime("5/10/2015 09:00 AM").MaxDateTime("5/20/2015 06:00 PM").Interval(30).Width("175px").Value("5/15/2015 09:00 AM")
 

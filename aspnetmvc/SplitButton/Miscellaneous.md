@@ -25,7 +25,7 @@ The following steps explains you the details about rendering the Split Button wi
 
     <div class="spltspan">
 
-        @Html.EJ().SplitButton("spltbutton_text").Text("signin").Size(ButtonSize.Small).TargetID("Ul11")
+        @Html.EJ().SplitButton("spltbutton_text").Text("sign in").Size(ButtonSize.Small).TargetID("Ul11")
 
         <ul id="Ul11">
 

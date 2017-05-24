@@ -73,7 +73,7 @@ The following steps explain how you can enable keyboard interaction for ColorPic
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget and enable keyboard interaction by the accesskey property*@
+@*In the CSHTML page, add the HTMl helpers to render ColorPicker widget and enable keyboard interaction by the access key property*@
 @Html.EJ().ColorPicker("colorPicker").Value("#278787")
 {% endhighlight  %}
 {% highlight js %}
