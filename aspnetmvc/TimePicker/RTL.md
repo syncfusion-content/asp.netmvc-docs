@@ -20,7 +20,7 @@ The following steps explains you in enabling the right-to-left property for the 
 
 {% highlight CSHTML %}
 
-@*Add the following code example to the corresponding CSHTML page to render TimePicker widget with right to left apperence*@
+@*Add the following code example to the corresponding CSHTML page to render TimePicker widget with right to left appearance*@
 
 @Html.EJ().TimePicker("time").EnableRTL(true)
 

@@ -21,7 +21,7 @@ The ShowPreview property is Boolean type and its default value is true.
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").ShowPreview(true)
 
@@ -44,7 +44,7 @@ The ShowRecentColors property is Boolean type and its default value is false.
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787").ShowRecentColors(true)
 
@@ -69,7 +69,7 @@ The EnableOpacity property is Boolean type and its default value is true.
 {% highlight CSHTML %}
 
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").EnableOpacity(false) 
 
@@ -94,7 +94,7 @@ The Columns property is Number type and its default value is 10.
 {% highlight CSHTML %}
 
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").Columns(9)
 

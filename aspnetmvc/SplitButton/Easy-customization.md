@@ -288,7 +288,7 @@ The following steps explains you the details on rendering the Split Button with 
 
 
 
-@*Set the different content types and use the necessary build-in icons for split button control as follows.*@
+@*Set the different content types and use the necessary built-in icons for split button control as follows.*@
 
 <div class="control">
 

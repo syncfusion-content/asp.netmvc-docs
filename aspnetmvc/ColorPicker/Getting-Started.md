@@ -268,11 +268,11 @@ You can refer to the following link for more information on creation on ListBox
 
 			jQuery(function ($) {
 
-				//initliaze the listbox with object creation
+				//initialize the listbox with object creation
 
 				listBoxObj = $("#selectPriority").data('ejListBox');
 
-				//initliaze the colorpicker with object creation
+				//initialize the colorpicker with object creation
 
 				colorObj = $("#CategoryColor").data('ejColorPicker');        
 

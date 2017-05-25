@@ -18,7 +18,7 @@ The getValue() method in ColorPicker returns the hexadecimal value.
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
  @Html.EJ().ColorPicker("colorPicker").Value("#278787")
 {% endhighlight  %}
 {% highlight js %}
@@ -40,7 +40,7 @@ The setValue() method in ColorPicker is used to set the color value. The given v
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
  @Html.EJ().ColorPicker("colorPicker")
 {% endhighlight  %}
 {% highlight js %}
@@ -63,7 +63,7 @@ The getColor() method in ColorPicker control returns the color value in r,g,b,a 
 {% highlight CSHTML%}
 
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@ 
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@ 
 @Html.EJ().ColorPicker("colorPicker").Value("#278787")
 {% endhighlight  %}
 {% highlight js %}
