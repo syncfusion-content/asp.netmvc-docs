@@ -39,7 +39,7 @@ Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to cus
 
    ~~~ cshtml
 
-	@Html.EJ().ToggleButton("tbutton").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
+	@Html.EJ().ToggleButton("button").Size(ButtonSize.Mini).ShowRoundedCorner(true).DefaultText("Play")
 
    ~~~
    

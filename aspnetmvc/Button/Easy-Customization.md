@@ -157,7 +157,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	@*Add the code in CSHTML page to configure and initialize the control*@
 
-	@* Set the different content types and use the necessary build-in icons for button control as follows.*@
+	@* Set the different content types and use the necessary built-in icons for button control as follows.*@
 
 	<div class="control">           
 
