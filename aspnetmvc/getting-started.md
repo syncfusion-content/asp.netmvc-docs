@@ -196,8 +196,6 @@ Once the CSS files are added in your application, include the reference to "ej.w
 
 Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
 •	jquery.min.js (from the version 1.7.1 to 3.1.0)
-•	jquery.easing.1.3.min.js
-•	jquery.globalize.min.js
 •	jsrender.min.js
 
 N> jQuery-2.1.4, jQuery-3.0.0 support has been given from ejVersion 13.2.0.29, 14.3.0.49 onwards respectively.<BR>
