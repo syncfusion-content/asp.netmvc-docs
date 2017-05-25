@@ -207,7 +207,7 @@ For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget
 
 ## Manual Integration
 
-This topic mainly focuses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application. 
+This topic mainly focuses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application.
 
 ### Creation of First ASP.NET MVC Application
 
@@ -217,23 +217,23 @@ Follow the below steps to create a normal ASP.NET MVC application,
 
 ![](getting-started_images/Manual1.png)
 
-2.	Now your initial ASP.NET MVC application is created successfully. Now you can build and run your application by pressing Ctrl+F5.
+2. Build and run your application by pressing Ctrl+F5.
 
-It’s time to add some other essential things to your application that allows you to make use of our Syncfusion ASP.NET MVC controls into it.
+It’s time to add some other essential things to your application that allows you to make use of our Syncfusion ASP.NET MVC controls. For that, follow steps explained in the Existing Application section.
 
 ### For Existing Applications
 
-If you want to add our Syncfusion ASP.NET MVC controls into your existing application, then you just need to open your existing application and proceed with the following steps.
+To add our Syncfusion ASP.NET MVC controls to your existing application, open your existing application and proceed with the following steps.
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. You need to copy all the required css files into your application from the following location,
+To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. Copy all the required CSS files into your application from the following location,
 
-N> <installed location>\Syncfusion\Essential Studio\13.1.0.21\JavaScript\assets\css\web
+N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web
 N> For example, If you have installed the Essential Studio within C:\Program Files (x86), then navigate to the below location,
-N> C:\Program Files (x86)\Syncfusion\Essential Studio\13.1.0.21\JavaScript\assets\css\web
+N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web
 
-When you navigate to the above location, you can find the files shown in the below image, which you need to copy entirely and paste it into your root application. 
+Navigate to above mentioned location, find the files as shown in the below image. Copy entirely and paste it into your root application.
 
 ![](getting-started_images/Manual2.png)
 
@@ -258,11 +258,13 @@ Once the CSS files are added in your application, include the reference to "ej.w
 ### Adding the required JavaScript files
 
 Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
+•	jquery.min.js ( 1.7.1 and later versions)
+•	jsrender.min.js
 
-* jquery-1.10.2.min.js 
-* jquery.easing.1.3.min.js
-* jquery.globalize.min.js
-* jsrender.min.js
+N> jQuery-2.1.4, jQuery-3.0.0 support has been given from ejVersion 13.2.0.29, 14.3.0.49 onwards respectively.<BR>
+
+
+•	ej.globalize.min.js library avails as built-in within ej.web.all.min.js file, therefore it is not necessary to externally refer it in your application (applicable for version 13.4.0.53 and higher). For version lower than 13.4.0.53, refer jQuery.globalize.min.js along with ej.web.all.min.js <BR>
 
 Apart from the above common scripts, it is also necessary to refer the ej.web.all.min.js file in your application, which plays a major role in control creation.
 
@@ -275,15 +277,15 @@ The dependencies are available in the following locations of your machine. Pleas
 </tr>
 <tr>
 <td>jquery-1.10.2.min.js<br/>jsrender.min.js</td>
-<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\external</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\external</td>
 </tr>
 <tr>
 <td>ej.web.all.min.js</td>
-<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\scripts\web</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\web</td>
 </tr>
 <tr>
 <td>ej.webform.min.js</td>
-<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\13.1.0.21\JavaScript\assets\scripts\common</td>
+<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\common</td>
 </tr>
 </table>
 
@@ -319,7 +321,7 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 
     <title><%: Page.Title %> - My ASP.NET Application</title>
 
-    <link href="http://cdn.syncfusion.com/13.1.0.21/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
 
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
@@ -329,9 +331,9 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 
     <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js"></script>
 
-    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.web.all.min.js"></script> 
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script> 
 
-    <script src="http://cdn.syncfusion.com/13.1.0.21/js/web/ej.webform.min.js"></script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.webform.min.js"></script>
 
 </head>    
 
@@ -364,9 +366,9 @@ Reference Manager Pop-up
 
 2.	Now the Reference Manager pop-up will appear on the screen. Select the Browse tab in it and navigate to the installed location of the Syncfusion Essential Studio package in your system. (As depicted in the below image.)
 
-N> <installed location>\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15
+N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location,
-N> C:\Program Files (x86)\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15
+N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 
 ![](Getting-Started_images/Manual6.png)
 Reference Manager Pop-up with Browse button clicked
@@ -376,9 +378,9 @@ N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framewo
 
 3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC and Syncfusion.Core assemblies to your application from the below specified location,
 
-N> <installed location>\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15\4.5 <BR>
+N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5 <BR>
 For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, <BR>
-C:\Program Files (x86)\Syncfusion\Essential Studio\14.4.0.15\precompiledassemblies\14.4.0.15\4.5
+C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5
 
 4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown below,
 
