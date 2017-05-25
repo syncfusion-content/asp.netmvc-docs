@@ -30,7 +30,7 @@ To know more about the AngularJS binding, you can refer to the online documentat
 
 
 
-@*Add the following scripts in your view page for angular support*@
+@*Add the following scripts in your view page for AngularJS support*@
 
 <script src="http://cdn.syncfusion.com/js/assets/external/angular.min.js"></script>
 
@@ -62,7 +62,7 @@ To know more about the AngularJS binding, you can refer to the online documentat
 
                     </div>
 
-                    <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px; margin-left: 45px;">Note:Two Way Angular Support</span></h6>
+                    <h6><span style="font-style: italic; font-weight: normal; position: absolute; margin-top: 5px; margin-left: 45px;">Note:Two Way AngularJS Support</span></h6>
 
                 </div>
 

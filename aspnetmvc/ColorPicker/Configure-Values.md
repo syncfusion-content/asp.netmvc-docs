@@ -19,7 +19,7 @@ The OpacityValue property is Number type and its default value is 100.
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").OpacityValue(40)   
 
@@ -143,7 +143,7 @@ When it is necessary to set the button text and TooltipText values in Spanish cu
 
 {% highlight CSHTML %}
 
-@*In the CSHTML page, add the Html helpers to render ColorPicker widget*@
+@*In the CSHTML page, add the HTML helpers to render ColorPicker widget*@
 
  @Html.EJ().ColorPicker("colorPicker").Value("#278787").ColorPickerButtonText(color=> color.Apply("aplicar").Cancel("cancelar")).ColorPickerTooltipText(tooltip=> 
 
