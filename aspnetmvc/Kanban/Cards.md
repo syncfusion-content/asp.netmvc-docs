@@ -77,7 +77,7 @@ The following code example describes the above behavior.
                     {
                         field.Color("Type")
                             .Content("Summary")
-                            .ImageUrl("ImgUrl")
+                            .ImageUrl("Image")  
                             .Tag("Tags")
                             .Priority("RankId")                  
                             .PrimaryKey("Id");
@@ -132,7 +132,7 @@ The following code example describes the above behavior.
 
 {% highlight html %}
 
-    <script id="cardtemplate" type="text/x-jsrender">        
+    <script id="template" type="text/x-jsrender">        
             <table>
             <tr>
                 <td class="photo">
@@ -226,7 +226,7 @@ The following code example describes the above behavior.
                                 .Add("#fbae19", "Epic")
                                 .Add("#6a5da8", "Others");
                         });
-                        card.Template("#cardtemplate");
+                        card.Template("#template");
                     })
                     
     )
