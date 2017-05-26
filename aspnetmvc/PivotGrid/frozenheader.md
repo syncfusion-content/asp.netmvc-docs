@@ -36,3 +36,13 @@ We can also freeze the row/column headers individually by setting the below prop
 {% endhighlight %}
 
 ![](FrozenHeader_images/col_freeze.png)
+
+We can also set the size of the scroller (horizontal and vertical) in PivotGrid by using below property.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(.....).FrozenHeaderSettings(frohead => frohead.ScrollerSize(18))
+    
+{% endhighlight %}
+
+![](FrozenHeader_images/scroll_size.png)
