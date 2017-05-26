@@ -222,7 +222,7 @@ The following code example describes the above behavior.
                 .SwimlaneKey("Assignee")
                 .PrimaryKey("Id");
         })
-        .ContextMenuSettings(menu => menu.Enable(true) .MenuItems(menuitem=> menuitem.Reset()).CustomMenuItems(custom => custom.Text("Clear Selection").Target(ContextTarget.All).Add()))
+        .ContextMenuSettings(menu => menu.Enable(true) .MenuItems(item=> item.Reset()).CustomMenuItems(custom => custom.Text("Clear Selection").Target(ContextTarget.All).Add()))
     )
   
 {% endhighlight  %}
@@ -264,7 +264,7 @@ The following code example describes the above behavior.
 
     @(Html.EJ().Kanban("Kanban")
         .DataSource((IEnumerable<object>)ViewBag.datasource)
-        .ClientSideEvents(eve => eve.ContextClick("contextclick"))
+        .ClientSideEvents(eve => eve.ContextClick("click"))
         .Columns(col =>
         {
             col.HeaderText("Backlog").Key("Open").Add();
@@ -279,7 +279,7 @@ The following code example describes the above behavior.
                 .SwimlaneKey("Assignee")
                 .PrimaryKey("Id");
         })
-        .ContextMenuSettings(menu => menu.Enable(true).MenuItems(menuitem=>menuitem.Add()).CustomMenuItems(custom =>
+        .ContextMenuSettings(menu => menu.Enable(true).MenuItems(item=>item.Add()).CustomMenuItems(custom =>
                 {
             custom.Text("Clear Selection").Target(ContextTarget.All).Add();         
             custom.Text("Move to Column").Target(ContextTarget.All).Template("#template").Add();
@@ -323,7 +323,7 @@ The following code example describes the above behavior.
 
 {% highlight javascript %}
 
-    function contextclick(args)
+    function click(args)
     {
         if (args.text == "Clear Selection")
             this.clearSelection();

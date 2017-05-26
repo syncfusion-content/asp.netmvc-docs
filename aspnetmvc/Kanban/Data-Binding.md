@@ -246,7 +246,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
      
     @(Html.EJ().Kanban("Kanban")
-                    .DataSource(ds => ds.URL("http://services.odata.org/v4/northwind/northwind.svc/Suppliers").Adaptor(AdaptorType.ODataV4Adaptor))
+                    .DataSource(data => data.URL("http://services.odata.org/v4/northwind/northwind.svc/Suppliers").Adaptor(AdaptorType.ODataV4Adaptor))
                     .Columns(col =>
                     {
                         col.HeaderText("Order Administrator ").Key("Order Administrator").Add();
@@ -282,7 +282,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
     @(Html.EJ().Kanban("Kanban")
-        .DataSource(ds => ds.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
+        .DataSource(data => data.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
         .Columns(col =>
         {
             col.HeaderText("Backlog").Key("Backlog ").Add();
