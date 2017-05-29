@@ -64,7 +64,7 @@ If client width is less than 480px, the Kanban will render in mobile mode. In wh
                       field.Color("Type")
                            .PrimaryKey("Id")
                            .Content("Summary")
-                           .ImageUrl("ImgUrl");
+                           .ImageUrl("Image");
                   })
     )
   

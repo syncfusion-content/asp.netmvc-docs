@@ -474,12 +474,12 @@ The following code example describes the above behavior.
                                 </td>
                                 <td style="text-align: left">
                                     <select id="Assignee" name="Assignee">
-                                        <option value="Nancy">Nancy Davloio</option>
+                                        <option value="Nancy">Nancy</option>
                                         <option value="Andrew Fuller">Andrew Fuller</option>
-                                        <option value="Janet">Janet Leverling</option>
-                                        <option value="Margaret">Margaret hamilt</option>
+                                        <option value="Janet">Janet</option>
+                                        <option value="Margaret">Margaret</option>
                                         <option value="Steven walker">Steven walker</option>
-                                        <option value="Michael">Michael Suyama</option>
+                                        <option value="Michael">Michael</option>
                                         <option value="Robert King">Robert King</option>
                                         <option value="Laura Callahan">Laura Callahan</option>
                                     </select>
@@ -883,16 +883,16 @@ The following code example describes the above behavior.
 {% highlight razor %}
  
     @(Html.EJ().Kanban("Kanban")
-       .DataSource(ds => ds.URL("GetData").CrudURL("Crud").Adaptor(AdaptorType.UrlAdaptor))
+       .DataSource(data => data.URL("GetData").CrudURL("Crud").Adaptor(AdaptorType.UrlAdaptor))
                    .Columns(col =>
                    {
                        col.HeaderText("Backlog").Key("Open").ShowAddButton(true).Add();
                        col.HeaderText("In Progress").Key("InProgress").Add();
                        col.HeaderText("Done").Key("Close").Add();
                    })
-                           .CustomToolbarItems(cus =>
+                           .CustomToolbarItems(custom =>
                                        {
-                                           cus.Template("#Delete").Add();
+                                           custom.Template("#Delete").Add();
                                        })
                   .EditSettings(edit =>
                           {

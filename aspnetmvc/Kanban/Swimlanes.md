@@ -30,7 +30,7 @@ The following code example describes the above behavior.
                     {
                         field.Content("Summary")
                             .SwimlaneKey("Assignee")
-                            .ImageUrl("ImgUrl")         
+                            .ImageUrl("Image")         
                             .PrimaryKey("Id");
                     })
                     
@@ -93,7 +93,7 @@ The following code example describes the above behavior.
                     {
                         field.Content("Summary")
                             .SwimlaneKey("Assignee")
-                            .ImageUrl("ImgUrl")         
+                            .ImageUrl("Image")         
                             .PrimaryKey("Id");
                     })                                      
     )
@@ -158,7 +158,7 @@ The following code example describes the above behavior.
                     {
                         field.Content("Summary")
                             .SwimlaneKey("Assignee")
-                            .ImageUrl("ImgUrl")
+                            .ImageUrl("Image")
                             .PrimaryKey("Id");
                     })
 
@@ -220,7 +220,7 @@ The following code example describes the above behavior.
                     {
                         field.Content("Summary")
                             .SwimlaneKey("Assignee")
-                            .ImageUrl("ImgUrl")
+                            .ImageUrl("Image")
                             .PrimaryKey("Id");
                     })
                     .SwimlaneSettings(ss =>
