@@ -9,17 +9,116 @@ documentation: ug
 
 # Getting Started
 
-This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications. There are three ways for embedding our controls into ASP.NET application:
+This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications. There are four ways for embedding our controls into ASP.NET application:
 
-1. Using Syncfusion Project Template
-2. Through Syncfusion NuGet Packages
-3. Through Manual Integration into the new/existing Application
+1. Through Syncfusion Project Template
+3. Through Syncfusion Project Conversion 
+3. Through Syncfusion NuGet Packages
+4. Through Manual Integration into the new/existing Application
 
 The procedures that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
 
 The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
 
-## Through NuGet Packages
+## Through Syncfusion Project Template
+
+Syncfusion provides the Visual Studio Project Templates for the Syncfusion ASP.NET MVC platform to create a Syncfusion MVC application.
+
+The **Project** **Configuration** **Wizard** automates the process of configuring the required Syncfusion assemblies, scripts and their styles within the newly created application. Lets look onto these topics in detail in the below sections.
+
+1. In Visual Studio, create a New **Syncfusion** **ASP.NET** **MVC** **Application** project from **Syncfusion** **Project** **Template** that you can see in the **New** **Project** pop-up as shown in the below image. Name it as SyncfusionMvcApplication1 and click **OK**
+
+	![](getting-started_images/getting-started_img3.png)
+
+2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC3** and keep the **other** options as default. Click **Next**.
+
+	![](getting-started_images/getting-started_img4.png)
+	
+3. Next window containing the list of Syncfusion MVC controls will be shown. Choose the required controls and then click **Create**.
+
+	![](getting-started_images/getting-started_img5.png)
+	
+4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files
+
+	![](getting-started_images/getting-started_img6.png)
+	
+5. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
+
+   ~~~ cshtml
+		
+	@Html.EJ().DatePicker("MyFirstDatepicker")
+
+   ~~~
+
+6. Compile and execute the application. You can able to see the below output in the browser.
+
+	![](getting-started_images/getting-started_img7.png)
+	
+For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
+
+## Through Syncfusion Project Conversion
+
+Syncfusion Project Conversion is a Visual Studio add-in that converts an existing ASP.NET MVC Project into a Syncfusion ASP.NET MVC Project by adding the required assemblies and resource files.
+
+The following steps help you use the Syncfusion Project Conversion in the existing ASP.NET MVC (Web) Project.
+
+1. Open an existing Microsoft MVC Project or create a new Microsoft MVC Project.
+2. Right-click on Project and select Syncfusion VS Extensions and choose the Convert to Syncfusion MVC (Web) Application. Refer to the following screenshot for more information.
+
+   ![](getting-started_images/ProjectConversion_img1.jpeg)
+
+3. Project Conversion Wizard opens so that you can configure the project.
+
+   ![](getting-started_images/ProjectConversion_img2.jpeg)
+
+   The following configurations are used in the Project Conversion Wizard.
+   
+   **Assemblies From:**
+
+   Choose the assembly location:
+
+	1. Added From GAC - Refer the assemblies from the Global Assembly Cache
+	2. Added from Installed Location - Refer the assemblies from the Syncfusion Installed locations.
+    3. Add Referenced Assemblies to Solution - Copy and refer to the assemblies from project's solution file lib directory.
+
+   ![](getting-started_images/Project-Conversion_img3.jpeg)
+    
+   **Choose the Theme:**
+   
+   The master page of project will be updated based on selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
+   
+   ![](getting-started_images/Project-Conversion_img4.jpeg)
+   
+   **Choose CDN Support:**
+
+   The master page of the project will be updated based on required Syncfusion CDN links.
+   
+   ![](getting-started_images/Project-Conversion_img20.jpeg)
+   
+   **Choose Copy Global Resources:**
+    
+   The localization culture files will be shipped into Scripts\ej\i18n directory of the project.
+   
+   ![](getting-started_images/Project-Conversion_img21.jpeg)
+
+4. Choose the required controls from Components section and Click the **Convert** button to convert it into a Syncfusion Project.
+
+   ![](getting-started_images/ProjectConversion_img5.jpeg)
+   
+5. The **Project Backup** dialog will be opened. If click Yes it will backup the current project before converting it to Syncfusion project. If click No it will convert the project to Syncfusion project without backup. 
+   
+   ![](getting-started_images/Project-Conversion_img6.jpeg)
+
+
+6. The required Syncfusion Reference Assemblies, Scripts and CSS are included in the MVC Project. Refer to the following screenshots for more information.
+
+   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img7.png](getting-started_images/ProjectConversion_img7.jpeg)
+
+   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img8.png](getting-started_images/ProjectConversion_img8.jpeg)
+
+   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img9.png](getting-started_images/ProjectConversion_img9.jpeg)
+
+## Through Syncfusion NuGet Packages
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer the following steps 
 
@@ -105,42 +204,6 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 	![](getting-started_images/getting-started_img2.png)
 
 For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/overview)
-
-## Using Project Template
-
-Syncfusion provides the Visual Studio Project Templates for the Syncfusion ASP.NET MVC platform to create a Syncfusion MVC application.
-
-The **Project** **Configuration** **Wizard** automates the process of configuring the required Syncfusion assemblies, scripts and their styles within the newly created application. Lets look onto these topics in detail in the below sections.
-
-1. In the Visual Studio 2010, create a New **Syncfusion** **ASP.NET** **MVC** **Application** project from **Syncfusion** **Project** **Template** that you can see in the **New** **Project** pop-up as shown in the below image. Name it as SyncfusionMvcApplication1 and click **OK**
-
-	![](getting-started_images/getting-started_img3.png)
-
-2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC3** and keep the **other** options as default. Click **Next**.
-
-	![](getting-started_images/getting-started_img4.png)
-	
-3. Next window containing the list of Syncfusion MVC controls will be shown. Choose the required controls and then click **Create**.
-
-	![](getting-started_images/getting-started_img5.png)
-	
-4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files
-
-	![](getting-started_images/getting-started_img6.png)
-	
-5. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
-
-   ~~~ cshtml
-		
-	@Html.EJ().DatePicker("MyFirstDatepicker")
-
-   ~~~
-
-6. Compile and execute the application. You can able to see the below output in the browser.
-
-	![](getting-started_images/getting-started_img7.png)
-	
-For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
 ## Manual Integration
 
