@@ -1183,3 +1183,51 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](columns_images/columns_img24.png)
+
+## Column Layout
+
+You can set the Grid's columns layout based on either Grid width or its columns width using [`columnLayout`](https://help.syncfusion.com/api/js/ejgrid#members:columnlayout "columnLayout") property of Grid. There are two ways to set the column layout, they are 
+
+1. Auto
+2. Fixed
+
+N> 1. For [`columnLayout`](https://help.syncfusion.com/api/js/ejgrid#members:columnlayout "columnLayout") property you can assign either `string` value ("fixed") or `enum` value (`ej.Grid.ColumnLayout.Fixed`).
+
+{% tabs %}
+{% highlight razor %}
+
+     @(Html.EJ().Grid<Object>("FlatGrid")
+            .Datasource((IEnumerable<object>)ViewBag.DataSource)
+            .AllowPaging()
+            .ColumnLayout(ColumnLayout.Fixed)
+            .Columns(col =>
+            {
+                col.Field("OrderID").Width(80).Add();
+                col.Field("EmployeeID").Width(80).Add();
+                col.Field("ShipCity").Width(90).Add();
+                col.Field("ShipName").Width(110).Add();
+                col.Field("ShipCountry").Width(100).Add();
+                col.Field("Freight").Width(80).Add();
+            }))
+{% endhighlight  %}
+{% highlight c# %}
+
+       namespace MVCSampleBrowser.Controllers
+        {
+          public class GridController : Controller
+           { 
+             public ActionResult GridFeatures()
+              {
+                 var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                 ViewBag.DataSource = DataSource;
+                 return View();
+              }
+          }
+       }
+{% endhighlight  %}
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](columns_images/columns_img25.png)
+
