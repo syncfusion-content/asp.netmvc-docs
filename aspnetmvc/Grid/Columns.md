@@ -1191,8 +1191,6 @@ You can set the Grid's columns layout based on either Grid width or its columns 
 1. Auto
 2. Fixed
 
-N> 1. For `ColumnLayout` property you can assign either `string` value ("fixed") or `enum` value (`ej.Grid.ColumnLayout.Fixed`).
-
 {% tabs %}
 {% highlight razor %}
 
