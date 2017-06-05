@@ -1186,12 +1186,12 @@ The following output is displayed as a result of the above code example.
 
 ## Column Layout
 
-You can set the Grid's columns layout based on either Grid width or its columns width using [`columnLayout`](https://help.syncfusion.com/api/js/ejgrid#members:columnlayout "columnLayout") property of Grid. There are two ways to set the column layout, they are 
+You can set the Grid's columns layout based on either Grid width or its columns width using `ColumnLayout` property of Grid. There are two ways to set the column layout, they are 
 
 1. Auto
 2. Fixed
 
-N> 1. For [`columnLayout`](https://help.syncfusion.com/api/js/ejgrid#members:columnlayout "columnLayout") property you can assign either `string` value ("fixed") or `enum` value (`ej.Grid.ColumnLayout.Fixed`).
+N> 1. For `ColumnLayout` property you can assign either `string` value ("fixed") or `enum` value (`ej.Grid.ColumnLayout.Fixed`).
 
 {% tabs %}
 {% highlight razor %}
