@@ -17,7 +17,7 @@ WebAPI Batch Editing is a unique feature, where requests to add, remove and chan
 ## Configuration
 Below are listed the steps for you to follow when configuring the DataManager for ASP.NET MVC to do batch updates.
 
-In order to using batch in Web API, you should register a route with a batch handler or creating the server. The below code creates the server and configures a web API route and a batch route.
+In order to using batch in Web API, you should register a route with a batch handler or create an OWIN server. The below code creates the server and configures a web API route and a batch route.
 
 {% highlight C# %}
 
