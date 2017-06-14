@@ -239,7 +239,7 @@ N> The columns are bounded automatically when the fields are specified with the 
 {% endtabs %}
 
 
-![](DataBinding_images/DataBinding_Image1.jpeg)
+![](DataBinding_images/DataBinding_img1.jpeg)
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/> 
 
@@ -568,7 +568,7 @@ For further details about OData service please refer [the link](http://www.odata
 {% endhighlight %}
            
            
-![](DataBinding_images/DataBinding_Image2.jpeg)
+![](DataBinding_images/DataBinding_img2.jpeg)
 
 N> Events associated with remote data bind is listed [here](http://help.syncfusion.com/js/api/ejdropdownlist#events). 
 
@@ -599,7 +599,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
 
 {% endhighlight %}
 
-![](DataBinding_images/DataBinding_Image3.jpeg)
+![](DataBinding_images/DataBinding_img3.jpeg)
 
 ## Virtual Scrolling 
 
