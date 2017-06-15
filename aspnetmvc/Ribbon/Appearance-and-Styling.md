@@ -9,6 +9,80 @@ keywords: appearance and styling,ribbon appearance and styling
 
 # Appearance and Styling
 
+## CssClass 
+
+When you want to display the **Ribbon** widget in a different style based on the appearance of your application, you can use this **cssClass** property to apply custom theme for the **Ribbon**. Specify a class name as the value for **cssClass** property. The specified class is added to the root element of the **Ribbon** widget. Now, you can easily override the styles of the **Ribbon** widget by accessing the styles from the root level (using the cssClass specified).
+
+In an view page, define the Ribbon control and configure the Ribbon with custom theme by using the CssClass property.
+
+~~~ cshtml
+
+@(Html.EJ().Ribbon("defaultRibbon")
+    .Width("500")
+    .CssClass("custom")
+    .ApplicationTab(app =>
+    {
+        app.Type(ApplicationTabType.Menu).MenuItemID("Ribbon").MenuSettings(new MenuProperties()
+        {
+            OpenOnClick = false
+        });
+    })
+    .RibbonTabs(tab =>
+    {
+        tab.Id("home").Text("HOME").TabGroups(tabgroup =>
+        {
+            tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
+            {
+                ctn.ContentGroups(ctngrp =>
+                {
+                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties()
+                    {
+                        ContentType = ContentType.ImageOnly,
+                        ImagePosition = ImagePosition.ImageTop,
+                        PrefixIcon = "e-Ribbon e-new",
+                        Click = "executeAction"
+                    }).Add();
+                }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
+            }).Add();
+        }).Add();
+    }))
+<ul id="Ribbon">
+    <li>
+        <a>FILE</a>
+        <ul>
+            <li><a>New</a></li>
+            <li><a>Open</a></li>
+            <li><a>Save</a></li>
+            <li><a>Save As</a></li>
+            <li><a>Print</a></li>
+        </ul>
+    </li>
+</ul>
+
+~~~
+
+
+~~~ css
+
+.custom.e-js .e-header {
+    background: #179bd7;
+}
+
+.custom.e-js .e-content {
+   background: #ddd;
+}
+
+.custom .e-rbn-button.e-btn.e-select {
+    background: #f5f5f5;
+    color: #333;
+}
+
+~~~
+
+Execute the above code example to render the following output.
+
+![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+
 ## Themes
 
 Ribbon control’s style and appearance are controlled based on CSS classes and it has support of 12 default themes. You can check List of themes available for JavaScript’s control which is mentioned in [`this`](http://help.syncfusion.com/js/theming-in-essential-javascript-components) page.
