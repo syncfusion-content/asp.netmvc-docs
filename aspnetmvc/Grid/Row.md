@@ -107,7 +107,7 @@ The following code example describes the above behavior.
 <script src="~/Scripts/jsondata.min.js"></script>
 <script type="text/javascript">
       function detailGridData(e) {
-          var filteredData = e.data["EmployeeID"];
+          var filteredData = e.rowData["EmployeeID"];
           // the datasource "window.ordersView" is referred from jsondata.min.js
           var data = ej.DataManager(window.ordersView).executeLocal(ej.Query().where("EmployeeID", "equal", parseInt(filteredData), true).take(5));
           e.detailsElement.find("#detailGrid").ejGrid({
@@ -531,8 +531,8 @@ The following code example describes the above behavior.
 {% highlight js %}
 <script type="text/javascript">
 function rowDropHandler(args) {
-        for (var key in args.data[0]) {
-            $('#dropForm input[name=' + key + ']').val(args.data[0][key]);
+        for (var key in args.rowData[0]) {
+            $('#dropForm input[name=' + key + ']').val(args.rowData[0][key]);
         }
     }
 
