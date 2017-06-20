@@ -532,7 +532,7 @@ It contains the details about selected folder
 <td>
 It should return data in JSON format with key name as "{{'**files**'| markdownify }}" and JSON fields need to be with following field names.
 <br/>
- {{'*“name,  isFile, hasChild”.*'| markdownify }}
+ {{'*“name,  isFile, hasChild,filterPath”.*'| markdownify }}
  <br/><br/>
  {{'*For example:*'| markdownify }}
  <br/>
