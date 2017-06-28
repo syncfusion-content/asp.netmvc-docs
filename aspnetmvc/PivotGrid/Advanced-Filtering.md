@@ -35,8 +35,6 @@ In server mode, you can enable the Advanced Filtering and Sorting option in Pivo
 
 Sorting provides an option to sort the members of a field either in ascending or descending order. 
 
-I> This feature is not applicable for OLAP datasource bound from server-side. 
-
 ![](AdvanceFiltering_images/sorting.png)
 
 ## Label Filtering

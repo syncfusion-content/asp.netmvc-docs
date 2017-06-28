@@ -139,6 +139,17 @@ Toggle panel option lets the user to toggle the visibility of Axis Element Build
 
 ![](Layout-Customization_images/toggleview.png)
 
+## Collapse Toggle Panel By Default
+Allows the user to hide PivotClient's Cube Browser and Axis Element Builder panels while initiate the widget. You can enable this option in PivotClient by setting `CollapseCubeBrowserByDefault` property to true.  
+
+{% highlight CSHTML %}
+
+    @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); })).CollapseCubeBrowserByDefault(true)
+
+{% endhighlight %}
+
+![](Layout-Customization_images/collapse-cube-browser-by-default.png)
+
 ## Maximized/Full Screen View
 
 Full screen view helps to visualize the PivotGrid and PivotChart controls inside PivotClient precisely according to the browser window size.  By selecting full screen icon in the toolbar, the control which is in the view gets maximized.  Drilldown action can also be performed in both PivotGrid and PivotChart in the maximized view.  This option is enabled by setting the `EnableFullScreen` property under `DisplaySettings` option to true.  The value is false by default.

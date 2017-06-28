@@ -177,6 +177,8 @@ Select the View engine as **‘Razor’** and Project template as **‘Internet 
 
 Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
+N> If you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET]. And if you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
+
 * Microsoft.AnalysisServices.AdomdClient
 * Syncfusion.Compression.Base
 * Syncfusion.Linq.Base
@@ -190,8 +192,6 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.EJ.Export
 * Syncfusion.EJ.Pivot
 * Syncfusion.EJ.MVC
-
-N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
 The version of Syncfusion libraries based on .NET Framework and MVC version are classified below. For example, version is illustrated as,
 

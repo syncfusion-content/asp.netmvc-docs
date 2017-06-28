@@ -214,6 +214,36 @@ You can sort a field either to ascending or descending order using the "sortOrde
 
 ![](Getting-Started_images/purejssorting.png) 
 
+### Sort Row/Column by Date
+
+You can sort a field either to ascending or descending order acording to date by using the **sortOrder** property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
+
+N> To apply sorting by date, you need to specify the require `format` and `formatString` to the field.
+
+{% highlight cshtml %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Date").FieldCaption("Date").Format("date").FormatString("dd-MM-yyyy").SortOrder(SortOrder.Descending).Add();}).Columns(columns => { columns.FieldName("Day").FieldCaption("Day").Format("date").FormatString("ddd").SortOrder(SortOrder.Ascending).Add(); }).Values(values => { values.FieldName("Amount").Add();}))  
+
+<script type="text/javascript">
+function onLoad(args) {
+    args.model.dataSource.data = [
+            { Amount: 100, Date: "5-1-2017", Day: "Wednesday" },
+            { Amount: 200, Date: "1-2-2017", Day: "Sunday" },
+            { Amount: 300, Date: "1-1-2018", Day: "Thursday" },
+            { Amount: 150, Date: "5-1-2018", Day: "Wednesday" },
+            { Amount: 200, Date: "1-2-2017", Day: "Thursday" },
+            { Amount: 100, Date: "1-1-2018", Day: "Sunday" },
+            { Amount: 200, Date: "5-1-2017", Day: "Wednesday" },
+            { Amount: 250, Date: "1-2-2017", Day: "Sunday" }
+            //....
+        ];
+}
+</script>
+
+{% endhighlight %}
+
+![](Getting-Started_images/sortbydate.png)
+
 ### Apply Filtering
 
 Filtering option allows you to specify a set of values that either need to be displayed or hided. Also filtering option is applicable only for Row, Column and Filter areas.
@@ -262,6 +292,8 @@ Select the View engine as **‘Razor’** and Project template as **‘Internet 
 
 Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select Add Reference. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
+N> If you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
+
 * Syncfusion.Compression.Base
 * Syncfusion.Linq.Base
 * Syncfusion.Olap.Base
@@ -274,8 +306,6 @@ Now add the following dependency libraries as references into your MVC Web Appli
 * Syncfusion.EJ.Export
 * Syncfusion.EJ.Pivot
 * Syncfusion.EJ.MVC
-
-N> If any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility is installed, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET].
 
 The version of Syncfusion libraries based on .NET Framework and MVC version are classified below. For example, version is illustrated as,
 
