@@ -639,7 +639,7 @@ public class SignalHub: Hub
         };
         $.connection.hub.start().done(function () {
             window.actionComplete = function (args) {
-                if (args.requestType == "save" || args.requestType == "delete") window.signal.server.modify(args.requestType == "delete" ? args.requestType : window.previousAction, JSON.stringify(args.data));
+                if (args.requestType == "save" || args.requestType == "delete") window.signal.server.modify(args.requestType == "delete" ? args.requestType : window.previousAction, JSON.stringify(args.rowData));
                 if (args.requestType != "delete") window.previousAction = args.requestType;
             }
         });
