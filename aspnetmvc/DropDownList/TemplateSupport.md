@@ -100,5 +100,5 @@ In the demo, a List data is created with Text, Image, Role and Country which is 
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/>
 
-![](TemplateSupport_images/TemplateSupport_Image1.jpeg)
+![](TemplateSupport_images/TemplateSupport_img1.jpeg)
 
