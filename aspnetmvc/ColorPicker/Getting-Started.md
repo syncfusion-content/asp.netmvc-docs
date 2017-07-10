@@ -32,7 +32,7 @@ In the following sections you can learn, How to:
 
 Use the following steps to create the ColorPicker control.
 
-1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/colorpicker/getting-started) Documentation.
+1. You can create a MVC Project and add necessary Dll’s and Scripts with the help of the given [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
 2. Add the following code example to the corresponding view page for rendering the ColorPicker window.
 
    ~~~ cshtml
