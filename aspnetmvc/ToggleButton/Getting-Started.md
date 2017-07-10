@@ -34,7 +34,7 @@ Essential Studio ASP.NET MVC Toggle Button control has a built-in feature to cus
 
 
 
-1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/togglebutton/getting-started) Documentation.
+1. Create an MVC Project and add required assemblies, scripts, and styles to it.  Refer [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
 2. Add the following code example to the corresponding view page to render the Toggle Button. 
 
    ~~~ cshtml
