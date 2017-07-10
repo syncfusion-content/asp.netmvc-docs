@@ -39,6 +39,7 @@ Appointments play a dynamic role within the Schedule control with which the user
 The appointments can be added/edited in the Scheduler using any one of the following ways,
 
 * Quick window
+* Inline creation/editing
 * Default appointment window
 * [Context menu](/aspnetmvc/schedule/context-menu)
 * Through programmatically
@@ -100,6 +101,82 @@ Another way to disable the quick window option at dynamic time can be achieved t
         .Height("525px")
         .CurrentDate(new DateTime(2014, 6, 2))
         .ShowQuickWindow(true)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+        .ScheduleClientSideEvents(evt => evt.CellClick("onCellClick"))
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+
+function onCellClick(args) {
+    args.cancel = true;
+}
+
+{% endhighlight %}
+
+
+#### Inline creation/editing
+
+Another easier way, for adding or editing the appointment’s subject alone can be achieved using inline Add/Edit support. It allows the user to add and edit the appointments inline.
+
+To get familiar with inline Add mode, single click on any of the Scheduler cells or press `enter` key on the selected cells. When the inline adding mode is ON, a text box will get created within the clicked Scheduler cells with a blinking cursor in it, requiring the user to enter the subject of an appointment. Once the subject is entered, the appointment will be saved on pressing the `enter` key. 
+
+To enable inline edit mode, single click on any of the existing appointment’s subject, so that the user can edit the subject of that appointment. The edited subject of that appointment is then updated on pressing the `enter` key.
+
+The inline option can be enabled/disabled on Scheduler by using the `AllowInline` API, whereas its default value is set to **false**.
+
+{% highlight razor %}
+
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2014, 6, 2))
+        .AllowInline(true)
+        .AppointmentSettings(fields => fields.Datasource(Appoint)
+            .Id("Id")
+            .Subject("Subject")
+            .StartTime("StartTime")
+            .EndTime("EndTime")
+            .AllDay("AllDay")
+            .Recurrence("Recurrence")
+            .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
+##### Enabling Inline Edit alone
+
+It is possible to disable the inline appointment creation and enabling only the editing mode of inline by making use of the `CellClick` event. The below code example shows the way to disable the inline appointment creation while clicking on the cells, but appointments can be edited while clicking on it’s subject.
+
+{% highlight razor %}
+
+@using MyProject.Models; // Here MyProject defines your project name to access the model class
+@{
+    <!-- Datasource for Appointments -->
+    List<ScheduleFields> Appoint = new List<ScheduleFields>();
+    Appoint.Add(new ScheduleFields { Id = "1", Subject = "Meeting", StartTime = new DateTime(2015, 11, 10, 10, 00, 00), EndTime = new DateTime(2015, 11, 10, 11, 00, 00), Description = "", AllDay = false, Recurrence = false, RecurrenceRule = "" });
+}
+
+@(Html.EJ().Schedule("Schedule1")
+        .Width("100%")
+        .Height("525px")
+        .CurrentDate(new DateTime(2014, 6, 2))
+        .AllowInline(true)
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
