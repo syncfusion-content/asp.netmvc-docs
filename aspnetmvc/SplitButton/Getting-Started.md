@@ -19,7 +19,7 @@ The HTML button element and the <UL>, <LI> can be easily configured as Essential
 
 Essential ASP.NET MVC Split Button control contains built-in features such as Click and different option choosing. You can easily create the Split Button control by using HTML helper as follows.
 
-1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](http://help.syncfusion.com/aspnetmvc/splitbutton/getting-started)
+1. You can create an MVC Project and add necessary assemblies, styles and scripts to it.  Refer [MVC-Getting Started.](https://help.syncfusion.com/aspnetmvc/getting-started)
 2. Add the following code to the corresponding View page to render Split Button.
 
 
