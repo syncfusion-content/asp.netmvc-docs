@@ -654,3 +654,103 @@ List of Column type and Filter operators
         </tr>
     </table>
 
+## FilterBar Template
+
+Usually enabling AllowFiltering, will create default textbox in Grid FilterBar. So, Using [`FilterBarTemplate`] property of `Columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+It has three functions. They are    
+
+1. `create` - It is used to create the control at time of initialize.
+2. `read`   - It is used to read the Filter value selected.
+3. `write`  - It is used to render the control and assign the value selected for filtering.
+
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<EditableOrder>("Filtering")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .AllowFiltering()
+        .AllowPaging()
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("CustomerID").HeaderText("CustomerID").FilterBarTemplate(filterbar => filterbar.Create("autoComplete_create").Write("autoComplete_write").Read("autoComplete_read")).Width(90).Add();
+            col.Field("EmployeeID").HeaderText("EmployeeID").FilterBarTemplate(filterbar => filterbar.Write("dropdown_write").Read("dropdown_read")).TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("Freight").HeaderText("Freight").FilterBarTemplate(filterbar => filterbar.Write("numeric_write").Read("numeric_read")).TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
+            col.Field("Verified").HeaderText("Verified").TextAlign(TextAlign.Center).FilterBarTemplate(filterbar => filterbar.Write("check_write").Read("check_read")).Width(80).Add();
+        })
+    )
+              
+{% endhighlight  %}  
+{% highlight c# %}
+
+namespace MVCSampleBrowser.Controllers
+  {
+    public partial class GridController : Controller
+    {
+        public ActionResult Filtering()
+        {
+            var DataSource = OrderRepository.GetAllRecords().ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+
+     }
+  }
+
+{% endhighlight  %}
+{% highlight js %}
+
+     <script type="text/javascript">
+		function autoComplete_create(args) {
+            return "<input>"
+        }
+        function autoComplete_write(args) {
+			var gridObj = $("#Filtering").ejGrid("instance");
+            var data = ej.DataManager(gridObj.model.dataSource).executeLocal(new ej.Query().select("CustomerID"));
+            args.element.ejAutocomplete({ width: "100%", dataSource: data, enableDistinct: true, focusOut: ej.proxy(args.column.filterBarTemplate.read, this, args) });
+        }
+        function autoComplete_read(args) {
+            this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
+        }
+        function dropdown_write(args) {
+            var data = [{ text: "clear", value: "clear" }, { text: "1", value: 1 }, { text: "2", value: 2 }, { text: "3", value: 3 }, { text: "4", value: 4 },
+                                                            { text: "5", value: 5 }, { text: "6", value: 6 }, { text: "7", value: 7 }, { text: "8", value: 8 }, { text: "9", value: 9 }
+            ]
+            args.element.ejDropDownList({ width: "100%", dataSource: data, change: ej.proxy(args.column.filterBarTemplate.read, this, args) })
+        }
+        function dropdown_read(args) {
+            if (args.element.val() == "clear") {
+                this.clearFiltering(args.column.field);
+                args.element.val("")
+            }
+            this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
+        }
+        function numeric_write(args) {
+            args.element.ejNumericTextbox({ width: "100%",decimalPlaces: 2, focusOut: ej.proxy(args.column.filterBarTemplate.read, this, args) });
+        }
+        function numeric_read(args) {
+            this.filterColumn(args.column.field, "equal", args.element.val(), "and", true)
+        }
+        function check_write(args) {
+            args.element.ejCheckBox({ change: ej.proxy(args.column.filterBarTemplate.read, this, args) });
+        }
+        function check_read(args) {
+            this.filterColumn(args.column.field, "equal", args.element.parent().attr('aria-checked'), "and", true)
+        }
+    </script>
+    
+{% endhighlight %}   
+{% endtabs %} 
+
+
+The following output is displayed as a result of the above code example.
+
+![](filtering_images/filtering_img11.png)
+{:caption}
+After Filtering
+
