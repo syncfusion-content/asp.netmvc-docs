@@ -22,7 +22,7 @@ The following code illustrates how to provide localization support for Context M
    @Html.EJ().Diagram("diagram", ViewData["diagramModel"] as Syncfusion.JavaScript.DataVisualization.Models.DiagramProperties)
 </div>
 
-// Defines the context menu items with spanish language
+// Defines the context menu items with Spanish language
 ej.datavisualization.Diagram.Locale["es-ES"] = {
 	cut: "Corte",
 	copy: "Copia",

@@ -35,7 +35,7 @@ public ActionResult Default()
     CellMapping.Row = new PropertyMapping() { PropertyName = "Year", DisplayName = "Year" };
     CellMapping.Value = new PropertyMapping() { PropertyName = "Value" };
     Collection columnMapping = new Collection();
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Vegie-spread", DisplayName = "Vegie-spread" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Veggie-spread", DisplayName = "Veggie-spread" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Tofuaa", DisplayName = "Tofuaa" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Alice Mutton", DisplayName = "Alice Mutton" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Konbu", DisplayName = "Konbu" });
@@ -55,7 +55,7 @@ public ActionResult Default()
 public Collection GetCellSource()
 {
     Collection collection = new Collection();
-    string[] name = { "Vegie-spread", "Tofuaa", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties" };
+    string[] name = { "Veggie-spread", "Tofuaa", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties" };
     Random random = new Random();
 
     foreach (string item in name)
@@ -98,7 +98,7 @@ public Collection GetTableSource()
 {
     Collection collection = new Collection();
     Random random = new Random();
-    string[] rows = { "Vegie-spread", "Tofuaa", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties", "Boston Crab Meat", "Raclette Courdavault" };
+    string[] rows = { "Veggie-spread", "Tofuaa", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties", "Boston Crab Meat", "Raclette Courdavault" };
     for (int i = 0; i < 8; i++)
     {
         collection.Add(new SampleTableData()
