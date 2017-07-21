@@ -194,7 +194,7 @@ The following code illustrates how to convert HTML table to the Diagram.
 @*Configures data source for Diagram*@
 .DataSourceSettings(e => 
 { 
-    e.DataSource(ds => ds.Table("#htmlbinding"))
+    e.DataSource(dataSource => dataSource.Table("#htmlBinding"))
     .Id("Id")
     .Parent("ReportingPerson");
 }))
@@ -368,9 +368,9 @@ diagram.insertData();
         [HttpPost]
         public void InsertShape(List<HierarchicalData> data)
         {
-            foreach (HierarchicalData hdata in data)
+            foreach (HierarchicalData hierarchicalData in data)
             {
-                DiagramContext.HierarchicalData.InsertOnSubmit(hdata);
+                DiagramContext.HierarchicalData.InsertOnSubmit(hierarchicalData);
                 DiagramContext.SubmitChanges();
             }
         }
@@ -378,9 +378,9 @@ diagram.insertData();
         [HttpPost]
         public void InsertConnector(List<HierarchicalDetail> data)
         {
-            foreach (HierarchicalDetail hdata in data)
+            foreach (HierarchicalDetail hierarchicalData in data)
             {
-                DiagramContext.HierarchicalDetails.InsertOnSubmit(hdata);
+                DiagramContext.HierarchicalDetails.InsertOnSubmit(hierarchicalData);
                 DiagramContext.SubmitChanges();
             }
         }
@@ -422,11 +422,11 @@ diagram.updateData();
         [HttpPost]
         public void UpdateShape(List<HierarchicalData> data)
         {
-            foreach (HierarchicalData hdata in data)
+            foreach (HierarchicalData hierarchicalData in data)
             {
-                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hdata.Name);
-                originalData.Description = hdata.Description;
-                originalData.Color = hdata.Color;
+                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hierarchicalData.Name);
+                originalData.Description = hierarchicalData.Description;
+                originalData.Color = hierarchicalData.Color;
                 DiagramContext.SubmitChanges();
             }
             
@@ -434,11 +434,11 @@ diagram.updateData();
         [HttpPost]
         public void UpdateConnector(List<HierarchicalDetail> data)
         {
-            foreach (HierarchicalDetail hdata in data)
+            foreach (HierarchicalDetail hierarchicalData in data)
             {
-                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hdata.Name);
-                originalData.SourceNode = hdata.SourceNode;
-                originalData.TargetNode = hdata.TargetNode;
+                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hierarchicalData.Name);
+                originalData.SourceNode = hierarchicalData.SourceNode;
+                originalData.TargetNode = hierarchicalData.TargetNode;
                 DiagramContext.SubmitChanges();
             }
         }
@@ -481,9 +481,9 @@ diagram.removeData();
         [HttpPost]
         public void DeleteShape(List<HierarchicalData> data)
         {
-            foreach (HierarchicalData hdata in data)
+            foreach (HierarchicalData hierarchicalData in data)
             {
-                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hdata.Name);
+                HierarchicalData originalData = DiagramContext.HierarchicalData.Single(h => h.Name == hierarchicalData.Name);
                 DiagramContext.HierarchicalData.DeleteOnSubmit(originalData);
                 DiagramContext.SubmitChanges();
             }
@@ -491,9 +491,9 @@ diagram.removeData();
         [HttpPost]
         public void DeleteConnector(List<HierarchicalDetail> data)
         {
-            foreach (HierarchicalDetail hdata in data)
+            foreach (HierarchicalDetail hierarchicalData in data)
             {
-                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hdata.Name);
+                HierarchicalDetail originalData = DiagramContext.HierarchicalDetails.Single(h => h.Name == hierarchicalData.Name);
                 DiagramContext.HierarchicalDetails.DeleteOnSubmit(originalData);
                 DiagramContext.SubmitChanges();
             }
