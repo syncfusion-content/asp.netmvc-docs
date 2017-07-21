@@ -42,8 +42,8 @@ public ActionResult Default()
     columnMapping.Add(new HeaderMapping() { PropertyName = "Veggie-spread", DisplayName = "Veggie-spread" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Tofu", DisplayName = "Tofu" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Alice Mutton", DisplayName = "Alice Mutton" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Konbu", DisplayName = "Konbu" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Fløtemysost", DisplayName = "Fløtemysost" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Donut", DisplayName = "Donut" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Burger", DisplayName = "Burger" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Perth Pasties", DisplayName = "Perth Pasties" });
     CellMapping.ColumnMapping = columnMapping;
     HeaderMapping headerMapping = new HeaderMapping() { PropertyName = "Year", DisplayName = "Year", ColumnStyle = new ColumnStyle() { Width = 105, TextAlign = HeatMapTextAlign.Right } };
@@ -73,8 +73,8 @@ public ActionResult Default()
     columnMapping.Add(new HeaderMapping() { PropertyName = "Veggie-spread", DisplayName = "Veggie-spread" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Tofu", DisplayName = "Tofu" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Alice Mutton", DisplayName = "Alice Mutton" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Konbu", DisplayName = "Konbu" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Fløtemysost", DisplayName = "Fløtemysost" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Donut", DisplayName = "Donut" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Burger", DisplayName = "Burger" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Perth Pasties", DisplayName = "Perth Pasties" });
     CellMapping.ColumnMapping = columnMapping;
     HeaderMapping headerMapping = new HeaderMapping() { PropertyName = "Year", DisplayName = "Year", ColumnStyle = new ColumnStyle() { Width = 105, TextAlign = HeatMapTextAlign.Right } };
@@ -100,7 +100,7 @@ public ActionResult Default()
 public Collection GetCellSource()
 {
     Collection collection = new Collection();
-    string[] name = { "Veggie-spread", "Tofu", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties" };
+    string[] name = { "Veggie-spread", "Tofu", "Alice Mutton", "Donut", "Burger", "Perth Pasties" };
     Random random = new Random();
 
     foreach (string item in name)
@@ -178,8 +178,8 @@ public ActionResult Default()
     columnMapping.Add(new HeaderMapping() { PropertyName = "Veggie-spread", DisplayName = "Veggie-spread" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Tofu", DisplayName = "Tofu" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Alice Mutton", DisplayName = "Alice Mutton" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Konbu", DisplayName = "Konbu" });
-    columnMapping.Add(new HeaderMapping() { PropertyName = "Fløtemysost", DisplayName = "Fløtemysost" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Donut", DisplayName = "Donut" });
+    columnMapping.Add(new HeaderMapping() { PropertyName = "Burger", DisplayName = "Burger" });
     columnMapping.Add(new HeaderMapping() { PropertyName = "Perth Pasties", DisplayName = "Perth Pasties" });
     CellMapping.ColumnMapping = columnMapping;
     HeaderMapping headerMapping = new HeaderMapping() { PropertyName = "Year", DisplayName = "Year", ColumnStyle = new ColumnStyle() { Width = 105, TextAlign = HeatMapTextAlign.Right } };
@@ -203,7 +203,7 @@ public ActionResult Default()
 public Collection GetCellSource()
 {
     Collection collection = new Collection();
-    string[] name = { "Veggie-spread", "Tofu", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties" };
+    string[] name = { "Veggie-spread", "Tofu", "Alice Mutton", "Donut", "Burger", "Perth Pasties" };
     Random random = new Random();
 
     foreach (string item in name)
