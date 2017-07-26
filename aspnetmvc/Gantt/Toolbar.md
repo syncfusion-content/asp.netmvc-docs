@@ -46,7 +46,7 @@ Using Gantt default toolbar items we can perform below operations.
 
 We can enable Gantt toolbar by using below code example:
 {% highlight CSHTML %}
-  @(Html.EJ().Gantt("Ganttsample")                   
+  @(Html.EJ().Gantt("Gantt")                   
                    .ToolbarSettings(toolbar =>
                    {
                        toolbar.ShowToolbar(true);

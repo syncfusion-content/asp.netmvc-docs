@@ -522,7 +522,7 @@ You can show the relationship in tasks by using the PredecessorMapping as follow
 
      //...
 
-     .PredecessorMapping("Predescessor")
+     .PredecessorMapping("Predecessor")
 
      .Render())
 

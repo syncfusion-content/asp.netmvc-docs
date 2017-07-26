@@ -660,7 +660,7 @@ public partial class GanttController : Controller
 
 
 
-        @(Html.EJ().Gantt("GantContainer")
+        @(Html.EJ().Gantt("GanttContainer")
 
               .TaskIdMapping("Id")
 

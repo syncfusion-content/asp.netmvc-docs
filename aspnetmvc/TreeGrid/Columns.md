@@ -268,7 +268,7 @@ public partial class TreeGridController : Controller
 
 	<div class='{{if expanded}}e-treegridexpand {{else hasChildRecords}}e-treegridcollapse {{/if}} {{if level===4}}e-doc{{/if}}' style='height:20px;width:30px;margin:auto;float:left;margin-left:10px;
 
-	style='float: left;display:inline-block; unselectable='on'></div>
+	float: left;display:inline-block;' unselectable='on'></div>
 
 	<div class='e-cell' style='display:inline-block;width:100%' unselectable='on'>{{:#data['Name']}}</div>
 
