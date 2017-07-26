@@ -316,7 +316,7 @@ public class GanttCustomColumnController : Controller
 
                     case "ASP.NET":
 
-                        cellValue = "asp.png";
+                        cellValue = "image1.png";
 
                         break;
 
@@ -324,7 +324,7 @@ public class GanttCustomColumnController : Controller
 
                     case "ASP.NET MVC":
 
-                        cellValue = "mvc.png";
+                        cellValue = "image2.png";
 
                         break;
 
@@ -332,7 +332,7 @@ public class GanttCustomColumnController : Controller
 
                     case "JS":
 
-                        cellValue = "js.png";
+                        cellValue = "image3.png";
 
                         break;
 
@@ -340,7 +340,7 @@ public class GanttCustomColumnController : Controller
 
                     case "Mobile MVC":
 
-                        cellValue = "mob.png";
+                        cellValue = "image4.png";
 
                         break;
 
@@ -348,7 +348,7 @@ public class GanttCustomColumnController : Controller
 
                     case "Silverlight":
 
-                        cellValue = "sl.png";
+                        cellValue = "image5.png";
 
                         break;
 
@@ -356,7 +356,7 @@ public class GanttCustomColumnController : Controller
 
                     case "Windows Forms":
 
-                        cellValue = "wf.png";
+                        cellValue = "image6.png";
 
                         break;
 
@@ -364,7 +364,7 @@ public class GanttCustomColumnController : Controller
 
                     case "Windows Phone":
 
-                        cellValue = "wp.png";
+                        cellValue = "image7.png";
 
                         break;
 

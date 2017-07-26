@@ -33,7 +33,7 @@ In the Week schedule mode, the upper part of the schedule header displays the we
 
 @(Html.EJ().Gantt("Gantt")
 
-  .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Week)
+  .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Week)
 
   .WeekHeaderFormat("MMM dd , yyyy ")
 
@@ -67,7 +67,7 @@ In the Week schedule mode, the upper part of the schedule header displays the Mo
 
 //...                             
 
-.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Month)
+.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Month)
 
 .MonthHeaderFormat("MMM yyyy")
 
@@ -97,7 +97,7 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 
 @(Html.EJ().Gantt("Gantt")
 
-.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Year)
+.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Year)
 
 .YearHeaderFormat("yyyy")
 
@@ -129,7 +129,7 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 
   //...
 
- .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttscheduleHeaderType.Day)
+ .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Day)
 
  .DayHeaderFormat("dd,MM,yy ")
 
@@ -181,8 +181,8 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 	  .ScheduleHeaderSettings(sh =>
 	  {
 		 
-		 sh.ScheduleHeaderType(GanttscheduleHeaderType.Hour);
-		 sh.MinutesPerInterval(GanttminutesPerInterval.FiveMinutes);   
+		 sh.ScheduleHeaderType(GanttScheduleHeaderType.Hour);
+		 sh.MinutesPerInterval(GanttMinutesPerInterval.FiveMinutes);   
 	   
 	  })
 )		   

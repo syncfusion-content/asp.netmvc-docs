@@ -79,7 +79,7 @@ function write(args)
            width: "100%", 
            dataSource: autocompleteData,
            enableDistinct: true,
-           value: args.rowdata !== undefined ? args.rowdata["taskName"] : "" 
+           value: args.rowData !== undefined ? args.rowData["taskName"] : "" 
       });
 }
 
