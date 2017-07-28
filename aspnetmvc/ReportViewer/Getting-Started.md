@@ -96,7 +96,7 @@ Add the following code example in the Index.cshtml page that is already create
 }
 <h2>Index</h2>
 <div>
-    @Html.EJ().ReportViewer("viewer").ReportPath("~/App_Data/Sales Dashboard.rdl").ReportServiceUrl("/api/ReportApi").Render();
+    @{Html.EJ().ReportViewer("viewer").ReportPath("~/App_Data/Sales Dashboard.rdl").ReportServiceUrl("/api/ReportApi").Render();}
 </div>
 
 {% endhighlight %}
