@@ -40,7 +40,7 @@ To draw a shape, you need to set the JSON of that shape to the `drawType` proper
 
     //To draw an object multiple times, activate continuous draw tool
     diagram.update({
-        tool: ej.datavisualization.Diagram.Tool.ContinuousDraw,
+        tool: ej.datavisualization.Diagram.Tool.ContinuesDraw,
     });
 
 {% endhighlight %}

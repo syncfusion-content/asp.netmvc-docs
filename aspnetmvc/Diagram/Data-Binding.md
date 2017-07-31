@@ -194,13 +194,13 @@ The following code illustrates how to convert HTML table to the Diagram.
 @*Configures data source for Diagram*@
 .DataSourceSettings(e => 
 { 
-    e.DataSource(dataSource => dataSource.Table("#htmlBinding"))
+    e.DataSource(dataSource => dataSource.Table("#binding"))
     .Id("Id")
     .Parent("ReportingPerson");
 }))
 
 <!-- HTML Table -->
-<script id="htmlbinding" type="text/template" >
+<script id="binding" type="text/template" >
     <table style="display: none">
         <thead>
             <tr>

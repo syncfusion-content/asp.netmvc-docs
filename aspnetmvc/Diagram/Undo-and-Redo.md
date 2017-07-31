@@ -51,12 +51,12 @@ The following code example illustrates how to save the existing property values.
 var diagram = $("#diagram").ejDiagram("instance");
 
 //Creates a custom entry and adds that to history manager
-var entry = { object: node, prevState: node.info };
+var entry = { object: node, prevState: node.employeeInfo };
 diagram.model.historyManager.push(entry);
 
 //Updates the new information
 var newValue = { role: "New role" };
-node.info = newValue;
+node.employeeInfo = newValue;
 
 {% endhighlight %}
 
@@ -66,7 +66,7 @@ node.info = newValue;
 
 //Updates the new information
 var newValue = { role: "New role" };
-node.info = newValue;
+node.employeeInfo = newValue;
 
 {% endhighlight %}
 
@@ -90,10 +90,10 @@ ViewData["DiagramModel"] = diagram;
 function customUndoRedo(args) {
 	var diagram = $("#diagram").ejDiagram("instance");
 	var node = args.object;
-	var currentState = node.info;
+	var currentState = node.employeeInfo;
 
 	//Resets the state
-	node.info = args.prevState;
+	node.employeeInfo = args.prevState;
 
 	//Saves the previous state
 	args.prevState = currentState;
