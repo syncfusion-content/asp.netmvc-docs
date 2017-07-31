@@ -98,7 +98,7 @@ public Collection GetTableSource()
 {
     Collection collection = new Collection();
     Random random = new Random();
-    string[] rows = { "Veggie-spread", "Tofuaa", "Alice Mutton", "Konbu", "Fløtemysost", "Perth Pasties", "Boston Crab Meat", "Raclette Courdavault" };
+    string[] rows = { "Veggie-spread", "Tofuaa", "Alice Mutton", "Donut", "Fløtemysost", "Perth Pasties", "Boston Crab Meat", "Raclette Burger" };
     for (int i = 0; i < 8; i++)
     {
         collection.Add(new SampleTableData()
