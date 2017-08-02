@@ -282,3 +282,25 @@ However, you can force the chart to animate series by calling the animate method
 
 {% endhighlight %}
 
+### Control the Speed of animation
+
+To control the speed of animation, you can use the [`animationDuration`](../api/ejchart#members:series-animationduration) property in the series. 
+
+
+
+{% highlight cshtml %}
+
+ @(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+      .Series(
+          //Enabling animation of series
+          sr => { sr.EnableAnimation(true).AnimationDuration(2000).Add(); 
+      })
+        // ...
+    )
+
+
+{% endhighlight %}
+
