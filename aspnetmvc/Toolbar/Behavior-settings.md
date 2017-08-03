@@ -58,9 +58,11 @@ The Hide property is Boolean type, which allow us to show or hide the Toolbar. D
 
 ## Disable Or Enable Separate Toolbar Item
 
+The following are some methods which can be used to disable or enable separate toolbar item.
+
 ### Disable Item
 
-The **Toolbar** property **disableItem** and **disableItemByID** can be used to disable separate toolbar item. 
+The **Toolbar** method **disableItem** and **disableItemByID** can be used to disable separate toolbar item. In the below code we have disabled the third toolbar item by using these two methods
 
 {% highlight html %}
 
@@ -109,11 +111,11 @@ OR
 
 ### Enable Item
 
-The **Toolbar** property **enableItem** and **enableItemByID** can be used to enable separate toolbar item. 
+The **Toolbar** method **enableItem** and **enableItemByID** can be used to enable separate toolbar item. In the below code we have disbaled the first five items initially and enabled the third toolbar item by using these two methods
 
 {% highlight html %}
 
-	@Html.EJ().Toolbar("editingToolbar").Items(s =>
+	@Html.EJ().Toolbar("editingToolbar").DisabledItemIndices(new List<int> {0,1,2,3,4}).Items(s =>
        {
            s.Add().SpriteCssClass("e-icon e-cut_01").TooltipText("Cut");
            s.Add().SpriteCssClass("e-icon e-copy_02").TooltipText("Copy");
@@ -153,5 +155,4 @@ OR
         
 {% endhighlight %}
 
-
-
+![](Behavior-settings_images/Behaviour-settings2.jpg)
