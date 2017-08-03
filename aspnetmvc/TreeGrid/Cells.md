@@ -30,12 +30,12 @@ Please find the example describes the above behavior.
 {% endhighlight %}
 
 The following output shows the result of above code example.
-![](/js/TreeGrid/Cell/tooltip.png)
+![](Cell/tooltip.png)
 
 {:caption}
 Cell Tooltip
 
-![](/js/TreeGrid/Cell/headerTooltip.png)
+![](Cell/headerTooltip.png)
 
 {:caption}
 Header Tooltip
@@ -118,7 +118,7 @@ Please find code example describes the cell tooltip template support.
 
 The following output shows the result of above code example.
 
-![](/js/TreeGrid/Cell/gridcelltemplate.png)
+![](Cell/gridcelltemplate.png)
 
 ### Column tooltip
 
@@ -156,7 +156,7 @@ Please refer the following code example for setting a custom tooltip for a speci
 
 The following output shows the output of above code snippets.
 
-![](/js/TreeGrid/Cell/cellTooltipTemplate.png)
+![](Cell/cellTooltipTemplate.png)
 
 N> Template element should be enclosed with `<script>` tag with type as `“text/x-jsrender”`.
 
@@ -195,7 +195,7 @@ Please refer the following code example for setting a custom tooltip for a speci
 
 The following output shows the result of above code example.
 
-![](/js/TreeGrid/Cell/headetTooltipTemplate.png)
+![](Cell/headetTooltipTemplate.png)
 
 
 ## Clip Mode
@@ -240,7 +240,7 @@ The following code example describes the above behavior.
 
 The following output shows the result of above code example.
 
-![](/js/TreeGrid/Cell/clipmode.png)
+![](Cell/clipmode.png)
 
 ### Ellipsis
 
@@ -271,7 +271,7 @@ The following code example describes the above behavior.
 
 The following output is shows the result of the above code example.
 
-![](/js/TreeGrid/Cell/ecllipsismode.png)
+![](Cell/ecllipsismode.png)
 
 ## Text Wrap
 Text wrap enables the TreeGrid to wrap cell content or header content to next line when the content exceeds the boundary of the cell width.
@@ -298,7 +298,7 @@ The following code example describes the above behavior.
 
 The following output shows the result of above code example.
 
-![](/js/TreeGrid/Cell/headerTextOverflow.png)
+![](Cell/headerTextOverflow.png)
 
 ### Content Text Wrap
 
@@ -325,4 +325,4 @@ The following code example describes the above behavior.
 
 The following output shows the result of above code example.
 
-![](/js/TreeGrid/Cell/textWrap.png)
+![](Cell/textWrap.png)
