@@ -1222,7 +1222,7 @@ Spline series supports four types of curves, namely natural, monotonic, cardinal
 
 ### Change the cardinal spline tension
 
-To change cardinal spline tension, you can use the **CardinalSplineTension** property in the series.The default value of CardinalSplineTension is **0.5**.Its value ranges from 0 to 1.
+To change cardinal spline tension, you can use the **CardinalSplineTension** property in the series. The default value of CardinalSplineTension is **0.5**. Its value ranges from 0 to 1.
 
 
 {% highlight cshtml %}

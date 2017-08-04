@@ -296,7 +296,7 @@ To control the speed of animation, you can use the [`animationDuration`](../api/
 
       .Series(
           //Enabling animation of series
-          sr => { sr.EnableAnimation(true).AnimationDuration(2000).Add(); 
+          sr => { sr.EnableAnimation(true).AnimationDuration("2000").Add(); 
       })
         // ...
     )
