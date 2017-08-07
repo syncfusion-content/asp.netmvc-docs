@@ -88,7 +88,7 @@ function nodeCollectionChange(args) {
 
 {% highlight js %}
 
-diagram.load(json);
+diagram.load(saveData);
 
 {% endhighlight %}
 
