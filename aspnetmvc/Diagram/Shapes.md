@@ -194,7 +194,7 @@ Path node is a commonly used basic shape that allows visually to represent the g
 
             //Sets shape as Path
             Node.Shape = BasicShapes.Path;
-            //Defines svg pathdata
+            //Defines SVG path data
             Node.PathData = "M35.2441,25 L22.7161,49.9937 L22.7161,0.006575
             L35.2441,25 z M22.7167,25 L-0.00131226,25 M35.2441,49.6337 
             L35.2441,0.368951 M35.2441,25 L49.9981,25";
@@ -249,7 +249,7 @@ BPMN shapes are used to represent the internal business procedure in a graphical
             Node.OffsetY = 100;
             Node.BorderWidth = 2;
             Node.BorderColor = "black";
-            //Sets the type of bpmn shape
+            //Sets the type of BPMN shape
             Node.Shape = BPMNShapes.Event;
             //Sets type of the Event
             Node.Event = BPMNEvents.End;
@@ -397,7 +397,7 @@ To create a BPMN activity, you need to set the `Shape` as "Activity". You also n
             Node.OffsetY = 100;
             Node.BorderWidth = 2;
             Node.BorderColor = "black";
-            //Sets the type of bpmn shape
+            //Sets the type of BPMN shape
             Node.Shape = BPMNShapes.Event;
             //Sets type of the Event
             Node.Event = BPMNEvents.End;
@@ -429,7 +429,7 @@ The `Task` property of node allows you to define the `Type` of task such as send
             Node.OffsetY = 100;
             Node.BorderWidth = 2;
             Node.BorderColor = "black";
-            //Sets the type of bpmn shape
+            //Sets the type of BPMN shape
             Node.Shape = BPMNShapes.Event;
             //Sets type of the Event
             Node.Event = BPMNEvents.End;
@@ -527,7 +527,7 @@ Compensation is triggered when operation is partially failed and you can enable 
             Node.OffsetY = 100;
             Node.BorderWidth = 2;
             Node.BorderColor = "black";
-            //Sets the type of bpmn shape
+            //Sets the type of BPMN shape
             Node.Shape = BPMNShapes.Activity;
             //Sets the type of BPMN Activity
             Node.Activity = BPMNActivity.Task;
@@ -544,7 +544,7 @@ Compensation is triggered when operation is partially failed and you can enable 
             Node.OffsetY = 100;
             Node.BorderWidth = 2;
             Node.BorderColor = "black";
-            //Sets the type of bpmn shape
+            //Sets the type of BPMN shape
             Node.Shape = BPMNShapes.Activity;
             //Sets the type of BPMN Activity
             Node.Activity = BPMNActivity.SubProcess;

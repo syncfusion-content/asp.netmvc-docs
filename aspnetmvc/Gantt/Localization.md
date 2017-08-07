@@ -437,7 +437,7 @@ The default date format used in the Gantt control is “MM/dd/yyyy”. Date form
 
     .DateFormat("dd/MM/yyyy")
 
-    .ScheduleHeaderSettings(sc => sc.WeekHeaderFormat("dd/MM/yyyy"))
+    .ScheduleHeaderSettings(ScheduleHeader => ScheduleHeader.WeekHeaderFormat("dd/MM/yyyy"))
 
     .Locale("fr-FR")
 

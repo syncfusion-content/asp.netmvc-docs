@@ -252,9 +252,9 @@ private List<RowData> getRowData()
 
    {
 
-     Name = "David william",
+     Name = "David William",
 
-     FullName = "David william",
+     FullName = "David William",
 
      Designation = "Vice President",
 
@@ -425,7 +425,7 @@ The following code shows how to render row drag tooltip with tooltip template.
 
 	  tt.ShowTooltip(true);
 
-	  tt.TooltipTemplate("#customtooltip");
+	  tt.TooltipTemplate("#customTooltip");
 
 	}) 
 

@@ -27,7 +27,7 @@ The ContextMenuItems property is used to add the menu items to context menu, thi
 
 	 })
 
-	.ContextMenuSettings(cms=>cms.showContextMenu(true)
+	.ContextMenuSettings(contextMenu=>contextMenu.showContextMenu(true)
 
 	.ContextMenuItems(new List<TreeGridContextMenuItems>()
 
@@ -63,9 +63,9 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 
 @(Html.EJ().TreeGrid("treegrid1")
 
-        .ContextMenuSettings(cms=>cms.showContextMenu(true))
+        .ContextMenuSettings(contextMenu=>contextMenu.showContextMenu(true))
 
-        .ContextMenuOpen(customMenu)
+        .ContextMenuOpen("customMenu")
 
  .Render())
 
@@ -81,7 +81,7 @@ Context menu can be customized by adding a new custom menu item to it. In TreeGr
 
       headerText: "customMenu",
 
-   iconPath: “url(…/images/custommenu.png)”,
+   iconPath: “url(…/images/customMenu.png)”,
 
    eventHandler: customMenuClick,
 
