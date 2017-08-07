@@ -180,11 +180,11 @@ The following code examples illustrates how to insert a child to a group interac
 {% highlight c# %}
      DiagramProperties model = new DiagramProperties();
      //Sets the drop event
-     model.Drop = "ondrop";	 
+     model.Drop = "drop";	 
 {% endhighlight %}
 
 {% highlight razor %}
-function ondrop(args) {
+function drop(args) {
 	if (args.target && args.element) {
 		//Element that is being dropped
 		var node = args.element;
@@ -217,12 +217,12 @@ var CloneTool = (function (base) {
 		base.call(this, name);
 	}
 	// Defines the required events
-	CloneTool.prototype.mouseup = function (evt) {
+	CloneTool.prototype.mouseup = function (event) {
 		//clones the selected elements when the custom handle is clicked.
 		this.diagram.copy();
 		//Pastes the cloned elements.
 		this.diagram.paste();
-		base.prototype.mouseup.call(this, evt);
+		base.prototype.mouseup.call(this, event);
 	};
 	return CloneTool;
 })(ej.datavisualization.Diagram.ToolBase);

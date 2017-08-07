@@ -20,7 +20,7 @@ The Diagram is serialized as JSON data while saving. The client side method, `sa
 var diagram = $("#Diagram").ejDiagram("instance");
 
 //save() returns serialized JSON data of the Diagram
-var json = diagram.save();
+var saveData = diagram.save();
 
 {% endhighlight %}
 
@@ -43,7 +43,7 @@ Diagram is loaded from the Serialized JSON data. The client side method, `load` 
 {% highlight js %}
 
 //Retrieves the JSON object from local storage
-json = JSON.parse(localStorage.getItem("diagram"));
+saveData = JSON.parse(localStorage.getItem("diagram"));
 
 //Loads the Diagram from saved JSON data
 diagram.load(json);
@@ -88,7 +88,7 @@ function nodeCollectionChange(args) {
 
 {% highlight js %}
 
-diagram.load(json);
+diagram.load(saveData);
 
 {% endhighlight %}
 
