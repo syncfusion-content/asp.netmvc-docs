@@ -482,11 +482,22 @@ The diagram control now supports defining the drag limit to the label while drag
 
     DiagramProperties model = new DiagramProperties();
 
+    Collection Labels = new Collection();
+    Labels.Add(new Label()
+    {
+        DragLimit = new LabelMargin()
+        {
+            Left = 30,
+            Right = 30,
+            Bottom = 30,
+            Top = 30
+        }
+    });
     model.Connectors.Add(new Connector()
     {
         Name = "node",
-        Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragLabel | ConnectorConstraints.DragLimit
-
+        Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragLabel | ConnectorConstraints.DragLimit,
+        Labels = Labels
     });
     ViewData["diagramModel"] = model;
 
