@@ -476,7 +476,7 @@ Diagram allows to create read only labels. You have to set the `ReadOnly` proper
 
 ### Drag Limit
 
-The diagram control now supports defining the drag limit to the label while dragging from the connector and also update the postion to the nearest segment offset.
+Diagram label dragging can be restricted by enabling/disabling `DragLimit` constraints of the connectors. Also we can define the drag limit in all direction using `DragLimit` property of the connector. Drag limit only applicable for connector labels.
 
 {% highlight c# %}
 
@@ -485,6 +485,7 @@ The diagram control now supports defining the drag limit to the label while drag
     Collection Labels = new Collection();
     Labels.Add(new Label()
     {
+        // Defines the drag limit property in all direction
         DragLimit = new LabelMargin()
         {
             Left = 30,
@@ -496,6 +497,7 @@ The diagram control now supports defining the drag limit to the label while drag
     model.Connectors.Add(new Connector()
     {
         Name = "node",
+        // Enable DragLimit constraints to the connector.
         Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragLabel | ConnectorConstraints.DragLimit,
         Labels = Labels
     });
