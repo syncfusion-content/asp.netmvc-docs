@@ -23,7 +23,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 
 
-@{Html.EJ().Splitter("outterSplitter").Height("300").Width("600").Orientation(Orientation.Vertical).EnableRTL(true)
+@{Html.EJ().Splitter("outerSplitter").Height("300").Width("600").Orientation(Orientation.Vertical).EnableRTL(true)
 
       .PaneProperties(
 
@@ -131,7 +131,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 <style type="text/css">
 
-    #outterSplitter 
+    #outerSplitter 
 	{
 
         margin: 0 auto;

@@ -3,7 +3,7 @@ layout: post
 title: Server Side Events | ControlNameundefined | ASP.NET MVC | Syncfusion
 description: server side events
 platform: aspnet
-control: Control Name undefined
+control: Control Name
 documentation: ug
 ---
 
@@ -39,7 +39,7 @@ In an ASPX page, add the Listbox control to configure Listbox events.
 
 <%--Add serverside event for ListBox control as follows--%>
 
-<ej:ListBox ID="listboxsample" DataTextField="CustomerID" OnValueSelect="listboxsample_CheckChange" runat="server">
+<ej:ListBox ID="listBoxSample" DataTextField="CustomerID" OnValueSelect="listBoxSample_CheckChange" runat="server">
 
 </ej:ListBox>
 
@@ -59,13 +59,13 @@ The following code example define listbox sample _ValueSelect server side event 
 
     {
 
-        this.listboxsample.DataSource = "http://mvc.syncfusion.com/Services/Northwnd.svc/";
+        this.listBoxSample.DataSource = "http://mvc.syncfusion.com/Services/Northwnd.svc/";
 
-        this.listboxsample.Query = "ej.Query().from('Customers')";
+        this.listBoxSample.Query = "ej.Query().from('Customers')";
 
     }
 
-    protected void listboxsample_CheckChange(object sender, Syncfusion.JavaScript.Web.ListBoxEventArgs e)
+    protected void listBoxSample_CheckChange(object sender, Syncfusion.JavaScript.Web.ListBoxEventArgs e)
 
     {
 

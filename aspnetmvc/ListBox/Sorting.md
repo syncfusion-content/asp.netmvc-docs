@@ -11,7 +11,7 @@ documentation: ug
 
     We can change ListBox items rendering order either as ascending or descending, by using "SortOrder" property. By default SortOrder will be "None". Please use code as like in below,
 
-    This is example code position of the ListBox may change if your are apply styles as per ypur requirement.
+    This is example code position of the ListBox may change if your are apply styles as per your requirement.
 
     1. Add the below code in your view page to render the ListBox with sorting option
 
@@ -19,7 +19,7 @@ documentation: ug
             //Add the following code in View page to configure ListBox widget
           <div class="contents">
                 <span class="txt">Select skill</span>
-                @Html.EJ().ListBox("skillset").Datasource((IEnumerable<SkillSet>)ViewBag.DataSource1).SortOrder(SortOrder.None).ListBoxFields(df => df.Value("skill"))
+                @Html.EJ().ListBox("skillSet").Datasource((IEnumerable<skillSet>)ViewBag.DataSource1).SortOrder(SortOrder.None).ListBoxFields(df => df.Value("skill"))
             </div>
          ~~~
 
@@ -28,20 +28,20 @@ documentation: ug
 	// Add the following code to add listbox items in the controller page
  public partial class ListBoxController : Controller
     {
-        List<SkillSet> veg1 = new List<SkillSet>();
+        List<skillSet> veg1 = new List<skillSet>();
         List<GroupList> skills = new List<GroupList>();
         // GET: /Sorting/
         public ActionResult Sorting()
         {            
-            veg1.Add(new SkillSet { skill = "F#" });
-            veg1.Add(new SkillSet { skill = "ActionScript" });
-            veg1.Add(new SkillSet { skill = "Delphi" });
-            veg1.Add(new SkillSet { skill = "Basic" });
-            veg1.Add(new SkillSet { skill = "C++" });
-            veg1.Add(new SkillSet { skill = "ESPOL" });
-            veg1.Add(new SkillSet { skill = "C#" });
-            veg1.Add(new SkillSet { skill = "DBase" });
-            veg1.Add(new SkillSet { skill = "ASP.NET" });
+            veg1.Add(new skillSet { skill = "F#" });
+            veg1.Add(new skillSet { skill = "ActionScript" });
+            veg1.Add(new skillSet { skill = "Delphi" });
+            veg1.Add(new skillSet { skill = "Basic" });
+            veg1.Add(new skillSet { skill = "C++" });
+            veg1.Add(new skillSet { skill = "ESPOL" });
+            veg1.Add(new skillSet { skill = "C#" });
+            veg1.Add(new skillSet { skill = "DBase" });
+            veg1.Add(new skillSet { skill = "ASP.NET" });
             ViewBag.DataSource1 = veg1;
             return View();
             }
@@ -49,7 +49,7 @@ documentation: ug
         ~~~ 
     
     ~~~ csharp
-         public class SkillSet
+         public class skillSet
             {
                public string skill { get; set; }
 

@@ -43,7 +43,7 @@ You can set the images for each item by giving the image **url** with the **Imag
 
 {% highlight razor %}
 
-      @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+      @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
     =>
     {
         items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy");
@@ -74,7 +74,7 @@ Refer to the following code example to add target content to the **Radial Menu**
                             <p>A view requests from the model the information that it needs to generate an output representation to the user.</p>
                         </textarea>
                         @{
-                            Html.EJ().RTE("rteSample1").Width("100%").MinWidth("10px").ShowContextMenu(false).ClientSideEvents(evt => evt.Create("rteCreate").Change("rteChange").Select("radialShow")).ShowToolbar(false).Render();
+                            Html.EJ().RTE("rteSample1").Width("100%").MinWidth("10px").ShowContextMenu(false).ClientSideEvents(clientSideEvent => clientSideEvent.Create("rteCreate").Change("rteChange").Select("radialShow")).ShowToolbar(false).Render();
                         }
                     </div>
                 </div>
@@ -113,13 +113,13 @@ You can display the **Radial Menu** by performing desired action on the target c
 {% highlight javascript %}
              
         function radialShow(e) {
-            var target = $("#radialtarget1"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+            var target = $("#radialRarget1"), radialRadius = 150, radialDiameter = 2 * radialRadius,
             // To get Iframe positions
                 iframeY = target.offset().top + e.event.clientY, iframeX = target.offset().left + e.event.clientX,
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                radialEle.ejRadialMenu("setPosition", x, y);
+                radialElement.ejRadialMenu("setPosition", x, y);
             }
             
 

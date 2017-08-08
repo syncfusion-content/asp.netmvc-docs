@@ -15,7 +15,7 @@ EnableRTL feature supports to change the left-to-right alignment of the Rotator 
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 .EnableRTL(true)

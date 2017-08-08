@@ -114,13 +114,13 @@ Delete Card
 </td></tr>
 <tr>
 <td>
-TopofRow
+TopRow
 </td><td>
 Top of Row
 </td></tr>
 <tr>
 <td>
-BottomofRow
+BottomRow
 </td><td>
 Bottom of Row
 </td></tr>

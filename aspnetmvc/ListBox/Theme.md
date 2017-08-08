@@ -54,8 +54,8 @@ The following steps explains you the configuration of CssClass properties in Lis
 		<h5 class="ctrllabel">
 			Select a skill  
 		</h5> 
-		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)
-		ViewBag.datasource).ListBoxFields(df => df.Text("text")) .CssClass("customclass")
+		@Html.EJ().ListBox("listBoxSample").Datasource((IEnumerable<ug_listbox.controllers.skillSet>)
+		ViewBag.datasource).ListBoxFields(df => df.Text("text")) .CssClass("customClass")
 	</div>
 
    ~~~
@@ -64,28 +64,28 @@ The following steps explains you the configuration of CssClass properties in Lis
    ~~~ csharp
 		
 	// Add the following code to add list items in the controller page
-	public class skillset
+	public class skillSet
 	{ 
 		public string text { get; set; }
 	} 
 	public ActionResult Index()
 	{           
-		List<skillset> skill = new List<skillset>();
-		skill.Add(new skillset { text = "ASP.NET" }); 
-		skill.Add(new skillset { text = "ActionScript" });
-		skill.Add(new skillset { text = "Basic" });    
-		skill.Add(new skillset { text = "C++" });  
-		skill.Add(new skillset { text = "C#" });  
-		skill.Add(new skillset { text = "dBase" }); 
-		skill.Add(new skillset { text = "Delphi" }); 
-		skill.Add(new skillset { text = "ESPOL" }); 
-		skill.Add(new skillset { text = "F#" });   
-		skill.Add(new skillset { text = "FoxPro" }); 
-		skill.Add(new skillset { text = "Java" });  
-		skill.Add(new skillset { text = "J#" });   
-		skill.Add(new skillset { text = "Lisp" }); 
-		skill.Add(new skillset { text = "Logo" }); 
-		skill.Add(new skillset { text = "PHP" });   
+		List<skillSet> skill = new List<skillSet>();
+		skill.Add(new skillSet { text = "ASP.NET" }); 
+		skill.Add(new skillSet { text = "ActionScript" });
+		skill.Add(new skillSet { text = "Basic" });    
+		skill.Add(new skillSet { text = "C++" });  
+		skill.Add(new skillSet { text = "C#" });  
+		skill.Add(new skillSet { text = "dBase" }); 
+		skill.Add(new skillSet { text = "Delphi" }); 
+		skill.Add(new skillSet { text = "ESPOL" }); 
+		skill.Add(new skillSet { text = "F#" });   
+		skill.Add(new skillSet { text = "FoxPro" }); 
+		skill.Add(new skillSet { text = "Java" });  
+		skill.Add(new skillSet { text = "J#" });   
+		skill.Add(new skillSet { text = "Lisp" }); 
+		skill.Add(new skillSet { text = "Logo" }); 
+		skill.Add(new skillSet { text = "PHP" });   
 		ViewBag.datasource = skill;   
 		return View();     
 	}
@@ -102,7 +102,7 @@ The following steps explains you the configuration of CssClass properties in Lis
 
 	<style>
 
-		.customclass 
+		.customClass 
 		{
 
 			background-color: #FFFFCC;

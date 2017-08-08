@@ -65,7 +65,7 @@ The following steps explains you to enable keyboard interaction for a ListBox.
 		<h5 class="ctrllabel"> 
 			Select a skill 
 		</h5>
-		@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
+		@Html.EJ().ListBox("listBoxSample").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df 
 		=> df.Text("text"))
 	</div>
 	
@@ -78,9 +78,9 @@ The following steps explains you to enable keyboard interaction for a ListBox.
 	<script type="text/javascript">
 		$(document).on("keydown", function (e) {
 			if (e.altKey && e.keyCode === 74) { // j- key code. 
-				var target = $('#listboxsample').data("ejListBox");
+				var target = $('#listBoxSample').data("ejListBox");
 				target.selectItemByIndex(1);  
-				$("#listboxsample_container").focus(); 
+				$("#listBoxSample_container").focus(); 
 			}  
 		});
 	</script>

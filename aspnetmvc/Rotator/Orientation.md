@@ -27,7 +27,7 @@ This property sets the Rotator in HorizontalOrientation. You can refer the follo
 
 // Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px")
 .SlideHeight("350px")
@@ -47,7 +47,7 @@ This property sets the Rotator in vertical orientation. You can refer the follow
 
 // Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 .Orientation(Syncfusion.JavaScript.Orientation.Vertical)

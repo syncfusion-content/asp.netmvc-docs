@@ -19,7 +19,7 @@ You can add the page content in RTE control by referring this section.
 
 {% highlight razor %}
 
-        @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+        @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialTarget1").Items(items
         =>
         {
             items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy");
@@ -134,10 +134,10 @@ The **Enabled** property to enable or disable badges. **Value** attribute is to 
 
 {% highlight razor %}
 
-      @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+      @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialRarget1").Items(items
     =>
     {
-        items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy")..Badge(badge => badge.Enabled(true).Value(2));
+        items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy").Badge(badge => badge.Enabled(true).Value(2));
         items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/paste.png")).Text("Paste");
         items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/redo.png")).Text("Redo");
         items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/undo.png")).Text("Undo");
@@ -156,7 +156,7 @@ Add the following script in your code.
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                radialEle.ejRadialMenu("setPosition", x, y);
+                radialElement.ejRadialMenu("setPosition", x, y);
         }
 
 {% endhighlight %}
@@ -179,7 +179,7 @@ You can add SliderSettings in radial menu items by referring this section.
 {% highlight razor %}
 
     @{
-        Html.EJ().RadialMenu("nestedradialmenu").ImageClass("imageclass").BackImageClass("backimageclass").TargetElementId("radialtarget2").Items(items =>
+        Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("imageClass").BackImageClass("backImageClass").TargetElementId("radialTarget2").Items(items =>
         {
             items.Add().Text("Copy").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Click("Bold"); 
             items.Add().Text("Font").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png").Type(MenuItemType.Slider).SliderSettings(slider => slider.StrokeWidth(1).Ticks(new List<double> { 0, 2, 4, 6, 8, 10, 12, 14 })));              
@@ -221,7 +221,7 @@ Add the following script in your code.
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                radialEle.ejRadialMenu("setPosition", x, y);
+                radialElement.ejRadialMenu("setPosition", x, y);
           }     
 
 

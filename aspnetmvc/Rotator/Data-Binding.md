@@ -47,7 +47,7 @@ Rotator provides the data binding support for the Rotator item. So you can bind 
 
 // Define local data source elements with  fields            
 
-public class Localdata
+public class LocalData
 
 {
 
@@ -64,27 +64,27 @@ using <Application name>.Models;
 
 
 
-        List<Localdata> localvalues = new List<Localdata>();
+        List<LocalData> localValues = new List<LocalData>();
 
         public ActionResult Index()
 
         {
 
-            localvalues.Add(new Localdata { Text = "Beautiful Bird", Url = "../Images/rotator/bird.jpg" });
+            localValues.Add(new LocalData { Text = "Beautiful Bird", Url = "../Images/rotator/bird.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Colorful Night", Url = "../Images/rotator/night.jpg" });
+            localValues.Add(new LocalData { Text = "Colorful Night", Url = "../Images/rotator/night.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Technology", Url = "../Images/rotator/tablet.jpg" });
+            localValues.Add(new LocalData { Text = "Technology", Url = "../Images/rotator/tablet.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Nature", Url = "../Images/rotator/nature.jpg" });
+            localValues.Add(new LocalData { Text = "Nature", Url = "../Images/rotator/nature.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Snow Fall", Url = "../Images/rotator/snowfall.jpg" });
+            localValues.Add(new LocalData { Text = "Snow Fall", Url = "../Images/rotator/snowfall.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Credit Card", Url = "../Images/rotator/card.jpg" });
+            localValues.Add(new LocalData { Text = "Credit Card", Url = "../Images/rotator/card.jpg" });
 
-            localvalues.Add(new Localdata { Text = "Amazing Sculptures", Url = "../Images/rotator/sculpture.jpg" });
+            localValues.Add(new LocalData { Text = "Amazing Sculptures", Url = "../Images/rotator/sculpture.jpg" });
 
-            ViewBag.datasource = localvalues;
+            ViewBag.datasource = localValues;
 
             return View();
 
@@ -94,7 +94,7 @@ using <Application name>.Models;
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text")
 .Url("Url")).SlideWidth("600px")
 .SlideHeight("350px")

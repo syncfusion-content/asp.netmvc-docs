@@ -33,9 +33,9 @@ The following steps explain the implementation of Splitter integration.
 	  {                        
 	       child.Add().Id("tools").Text("Galaxy").HtmlAttributes(htmlAttribute);
 		   });
-		   items.Add().Text("Harddisk").Expanded(true).Children(child =>
+		   items.Add().Text("HardDisk").Expanded(true).Children(child =>
 		   { 
-      		   child.Add().Id("chart").Text("Segate").HtmlAttributes(htmlAttribute);
+      		   child.Add().Id("chart").Text("Seagate").HtmlAttributes(htmlAttribute);
 		    });
 		   items.Add().Text("Logo").Expanded(true).Children(child =>
 		   {

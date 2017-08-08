@@ -22,7 +22,7 @@ The property template specifies the structure for slide li elements. The default
 	// Add the following code in View page to configure Rotator widget
 
     <div class="frame">
-            @Html.EJ().Rotator("rot").Datasource((IEnumerable<localdata>)ViewBag.datasource).SlideWidth("100%").SlideHeight("350px").IsResponsive(true)
+            @Html.EJ().Rotator("rot").Datasource((IEnumerable<localData>)ViewBag.datasource).SlideWidth("100%").SlideHeight("350px").IsResponsive(true)
             .Template("<div class='image'><img src = ${url} title = ${text} class='image'/> </div>")
     </div>          
 
@@ -34,17 +34,17 @@ The property template specifies the structure for slide li elements. The default
    // Add the following code to add slide image items in the controller page
 
   
-        List<localdata> LocalValues = new List<localdata>();
+        List<localData> LocalValues = new List<localData>();
    
         public ActionResult LocalData()
         {    
-           LocalValues.Add(new localdata{ text= "Beautiful Bird", url= "../Images/rotator/bird.jpg" });
-           LocalValues.Add(new localdata { text = "Colorful Night", url = "../Images/rotator/night.jpg" });
-           LocalValues.Add(new localdata { text = "Technology", url = "../Images/rotator/tablet.jpg" });
-           LocalValues.Add(new localdata { text = "Nature", url = "../Images/rotator/nature.jpg" });
-           LocalValues.Add(new localdata { text = "Snow Fall", url = "../Images/rotator/snowfall.jpg" });
-           LocalValues.Add(new localdata { text = "Credit Card", url = "../Images/rotator/card.jpg" });
-           LocalValues.Add(new localdata { text = "Amazing Sculptures", url = "../Images/rotator/sculpture.jpg" });
+           LocalValues.Add(new localData{ text= "Beautiful Bird", url= "../Images/rotator/bird.jpg" });
+           LocalValues.Add(new localData { text = "Colorful Night", url = "../Images/rotator/night.jpg" });
+           LocalValues.Add(new localData { text = "Technology", url = "../Images/rotator/tablet.jpg" });
+           LocalValues.Add(new localData { text = "Nature", url = "../Images/rotator/nature.jpg" });
+           LocalValues.Add(new localData { text = "Snow Fall", url = "../Images/rotator/snowfall.jpg" });
+           LocalValues.Add(new localData { text = "Credit Card", url = "../Images/rotator/card.jpg" });
+           LocalValues.Add(new localData { text = "Amazing Sculptures", url = "../Images/rotator/sculpture.jpg" });
            ViewBag.datasource=LocalValues;
            return View();
         } 

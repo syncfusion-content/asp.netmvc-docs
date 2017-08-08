@@ -24,7 +24,7 @@ The following steps explain the implementation of AutoResize option in the Split
 
 {% highlight CSHTML %}
 
-@{Html.EJ().Splitter("outterSplitter").Height("280")
+@{Html.EJ().Splitter("outerSplitter").Height("280")
 
 .Width("100%").Orientation(Orientation.Vertical).EnableAutoResize(true)
 
@@ -118,7 +118,7 @@ p.Add().ContentTemplate(
 
 <style type="text/css">
 
-    #outterSplitter 
+    #outerSplitter 
 	{
 
         margin: 0 auto;

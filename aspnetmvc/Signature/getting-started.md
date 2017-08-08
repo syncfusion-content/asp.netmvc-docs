@@ -23,7 +23,7 @@ Add Signature control using the helper from EJ namespace.
 
 {% highlight razor %}
 
-  @Html.EJ().Signature("mysign").Height("400px")
+  @Html.EJ().Signature("mySign").Height("400px")
 
 {% endhighlight %}
 
@@ -39,7 +39,7 @@ The following code example is used to render the Signature control with customiz
 
 {% highlight razor %}
 
-  @Html.EJ().Signature("mysign").Height("500px").Width("200px")
+  @Html.EJ().Signature("mySign").Height("500px").Width("200px")
 
 {% endhighlight %}
 

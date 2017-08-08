@@ -161,7 +161,7 @@ The following steps are used to create ListBox control.
 
 		}
 
-		.middlebuttons 
+		.middleButtons 
 		{
 
 			padding: 91px 25px 25px 25px;
@@ -339,7 +339,7 @@ To populate items inside ListBox, you have to add list items inside <ul> as <li>
 
         </div>
 
-        <div class="middlebuttons">
+        <div class="middleButtons">
 
             @Html.EJ().Button("Add").Text(">>").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("add"))
 
@@ -359,7 +359,7 @@ To populate items inside ListBox, you have to add list items inside <ul> as <li>
 
             @Html.EJ().ListBox("list2")
 
-            <ul id="selecteditems">
+            <ul id="selectedItems">
 
             </ul>
 
@@ -446,16 +446,16 @@ The following code sample explains how to add an item to a second ListBox.
 
 		var firstListBox = $('#list1').data("ejListBox");
 
-		var selecteditems = firstListBox.getSelectedItems();
+		var selectedItems = firstListBox.getSelectedItems();
 
-		var len = selecteditems.length;
+		var len = selectedItems.length;
 
 		for (i = 0; i < len; i++) 
 		{
 
-			var value = $(selecteditems[i]).html();
+			var value = $(selectedItems[i]).html();
 
-			selecteditems[i].remove();
+			selectedItems[i].remove();
 
 			var target = $('#list2').data("ejListBox");
 
@@ -470,16 +470,16 @@ The following code sample explains how to add an item to a second ListBox.
 
         var firstListBox = $('#list2').data("ejListBox");
 
-        var selecteditem = firstListBox.getSelectedItems();
+        var selectedItem = firstListBox.getSelectedItems();
 
-        var len = selecteditem.length;
+        var length = selectedItem.length;
 
-        for (i = 0; i < len; i++) 
+        for (i = 0; i < length; i++) 
 		{
 
-            var value = $(selecteditem[i]).html();
+            var value = $(selectedItem[i]).html();
 
-            selecteditem[i].remove();
+            selectedItem[i].remove();
 
             var target = $('#list1').data("ejListBox");
 
