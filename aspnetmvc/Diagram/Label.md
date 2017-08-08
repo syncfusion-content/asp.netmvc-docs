@@ -473,6 +473,39 @@ Diagram allows to create read only labels. You have to set the `ReadOnly` proper
 
 {% endhighlight %}
 
+
+### Drag Limit
+
+Diagram label dragging can be restricted by enabling/disabling `DragLimit` constraints of the connectors. Also we can define the drag limit in all direction using `DragLimit` property of the connector. Drag limit only applicable for connector labels.
+
+{% highlight c# %}
+
+    DiagramProperties model = new DiagramProperties();
+
+    Collection Labels = new Collection();
+    Labels.Add(new Label()
+    {
+        // Defines the drag limit property in all direction
+        DragLimit = new LabelMargin()
+        {
+            Left = 30,
+            Right = 30,
+            Bottom = 30,
+            Top = 30
+        }
+    });
+    model.Connectors.Add(new Connector()
+    {
+        Name = "node",
+        // Enable DragLimit constraints to the connector.
+        Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragLabel | ConnectorConstraints.DragLimit,
+        Labels = Labels
+    });
+    ViewData["diagramModel"] = model;
+
+{% endhighlight %}
+
+
 ## Multiple labels
 
 You can add any number of labels to a node or connector. The following code illustrates how to add multiple labels to a node. 
