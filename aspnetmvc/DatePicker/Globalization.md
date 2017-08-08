@@ -44,7 +44,7 @@ Set German culture to DatePicker at initialization.
 
 {% highlight cshtml %}
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).Locale("de-DE")
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).Locale("de-DE")
 
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ By default the EJMVC DatePicker input has “select date” as watermark text, y
 
     @*sets watermark text and button text*@
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).WatermarkText("enter the date value").ButtonText("current date")
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).WatermarkText("enter the date value").ButtonText("current date")
 
 
 {% endhighlight %}

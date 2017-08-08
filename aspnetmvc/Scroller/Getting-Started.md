@@ -24,11 +24,11 @@ Essential Studio ASP.NET MVC Scroller control has a built-in feature to customiz
 
    ~~~ cshtml
 
-	<div id="scrollcontent">
+	<div id="scrollContent">
 
 		<div> @* Wrapper div for Scroller.*@
 
-			<div class="innercontent"> @* Content div*@
+			<div class="innerContent"> @* Content div*@
 
 				<h3> MVC </h3>
 
@@ -52,7 +52,7 @@ Essential Studio ASP.NET MVC Scroller control has a built-in feature to customiz
 
 	</div>  
 
-	@{ Html.EJ().Scroller("scrollcontent").Height(150).Width(300).Render(); }
+	@{ Html.EJ().Scroller("scrollContent").Height(150).Width(300).Render(); }
 
    ~~~
    
@@ -63,7 +63,7 @@ Essential Studio ASP.NET MVC Scroller control has a built-in feature to customiz
 
 	<style type="text/css" class="cssStyles">
 
-		.innercontent
+		.innerContent
 		{
 
 		width: 400px;

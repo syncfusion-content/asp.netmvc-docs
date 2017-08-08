@@ -28,7 +28,7 @@ EJMVC DatePicker allows you to restrict date selection in specific range by usin
 
     @*handler to listen each date create*@
 
-    @Html.EJ().DatePicker("datepick").ClientSideEvents(evt => evt.BeforeDateCreate("restrictDate"))
+    @Html.EJ().DatePicker("datePicker").ClientSideEvents(clientSideEvent => clientSideEvent.BeforeDateCreate("restrictDate"))
 
     <script>   
    
@@ -55,7 +55,7 @@ EJMVC DatePicker is responsive control, you have to just set the input element w
 
     @*sets the height and width to 100%*@
 
-    @Html.EJ().DatePicker("datepick").Height("100%").Width("100%")
+    @Html.EJ().DatePicker("datePicker").Height("100%").Width("100%")
 
 
 {% endhighlight %}

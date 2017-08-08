@@ -19,7 +19,7 @@ The following steps explains you the configuration of ScrollOneStepBy property i
 
 	// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
-	<div id="scrollcontent">
+	<div id="scrollContent">
 
 		<div>                              
 			@*Wrapper div for Scroller.*@
@@ -36,7 +36,7 @@ The following steps explains you the configuration of ScrollOneStepBy property i
 		</div>
 	</div>
 
-	@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).ScrollOneStepBy(50).Render();}
+	@{Html.EJ().Scroller("scrollContent").Height(170).Width(350).ScrollOneStepBy(50).Render();}
 	
    ~~~
    

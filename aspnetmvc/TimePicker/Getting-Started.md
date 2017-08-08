@@ -39,19 +39,19 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		<tr>
 
-		<td class="tdclass">Date</td>
+		<td class="tdClass">Date</td>
 
-		<td class="tdclass">Time</td>
+		<td class="tdClass">Time</td>
 
-		<td class="tdclass">Person</td>
+		<td class="tdClass">Person</td>
 
 		</tr>
 
 		<tr>
 
-		<td class="tdclass">
+		<td class="tdClass">
 
-			<span class="innerdp">
+			<span class="innerDisplay">
 
 			@Html.EJ().DatePicker("startDate")
 
@@ -59,19 +59,19 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		</td>
 
-		<td class="tdclass">
+		<td class="tdClass">
 
-			<span class="innerdp">
+			<span class="innerDisplay">
 
-			@Html.EJ().TimePicker("timestart")
+			@Html.EJ().TimePicker("timeStart")
 
 			</span>
 
 		</td>
 
-		<td class="tdclass">
+		<td class="tdClass">
 
-			<span class="innerdp">
+			<span class="innerDisplay">
 
 			@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
@@ -87,9 +87,9 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		<td></td>
 
-		<td class="tdclass">
+		<td class="tdClass">
 
-			<span class="innerdp">
+			<span class="innerDisplay">
 
 			@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
@@ -113,7 +113,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 	<style type="text/css" class="cssStyles">
 
-		.tdclass 
+		.tdClass 
 		{
 
 		width: 70px;
@@ -126,7 +126,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		}
 
-		.innerdp 
+		.innerDisplay 
 		{
 
 		display: inline-block;
@@ -193,21 +193,21 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 		<tr>
 
-			<td class="tdclass">Date</td>
+			<td class="tdClass">Date</td>
 
-			<td class="tdclass">StartTime</td>
+			<td class="tdClass">StartTime</td>
 
-			<td class="tdclass">EndTime</td>
+			<td class="tdClass">EndTime</td>
 
-			<td class="tdclass">Person</td>
+			<td class="tdClass">Person</td>
 
 		</tr>
 
 		<tr>
 
-			<td class="tdclass">
+			<td class="tdClass">
 
-				<span class="innerdp">
+				<span class="innerDisplay">
 
 					@Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
 
@@ -215,29 +215,29 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			</td>
 
-			<td class="tdclass">
+			<td class="tdClass">
 
-				<span class="innerdp">
+				<span class="innerDisplay">
 
-					@Html.EJ().TimePicker("timestart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
-
-				</span>
-
-			</td>
-
-			<td class="tdclass">
-
-				<span class="innerdp">
-
-					@Html.EJ().TimePicker("timeend").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
+					@Html.EJ().TimePicker("timeStart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
 
 				</span>
 
 			</td>
 
-			<td class="tdclass">
+			<td class="tdClass">
 
-				<span class="innerdp">
+				<span class="innerDisplay">
+
+					@Html.EJ().TimePicker("timeEnd").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
+
+				</span>
+
+			</td>
+
+			<td class="tdClass">
+
+				<span class="innerDisplay">
 
 					@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
@@ -255,9 +255,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			<td></td>
 
-			<td class="tdclass">
+			<td class="tdClass">
 
-				<span class="innerdp">
+				<span class="innerDisplay">
 
 					@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
@@ -278,7 +278,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 	<style type="text/css" class="cssStyles">
 
-		.tdclass 
+		.tdClass 
 		{
 
 		width: 70px;
@@ -291,7 +291,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 		}
 
-		.innerdp 
+		.innerDisplay 
 		{
 
 		display: inline-block;
@@ -318,7 +318,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			var selDate = sender.value; // mentions the selected time.
 
-			minTimepicker = $("#timeend").data("ejTimePicker");// creating TimePicker object
+			minTimepicker = $("#timeEnd").data("ejTimePicker");// creating TimePicker object
 
 			minTimepicker.setModel({ "minTime": selDate });// setting minTime property through setModel of TimePicker object.
 
@@ -380,11 +380,11 @@ You can specify the alert message in the script as follows.
 
 
 
-                    var b = $('#timestart').val();
+                    var b = $('#timeStart').val();
 
 
 
-                    var d = $('#timeend').val();
+                    var d = $('#timeEnd').val();
 
 
 

@@ -238,7 +238,7 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 
 {% highlight CSHTML %}
 
-@Html.EJ().Button("buttonnormal").Text("Submit").Size(ButtonSize.Normal)
+@Html.EJ().Button("buttonNormal").Text("Submit").Size(ButtonSize.Normal)
 
 {% endhighlight %}
 
@@ -258,7 +258,7 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 
         $("button").click(function () {
 
-            var checkeditem = [];                                               
+            var checkedItem = [];                                               
 
 
 
@@ -270,7 +270,7 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 
 
 
-                 checkeditem.push($("#" + $(this)[0].id).ejCheckBox("option","value"));
+                 checkedItem.push($("#" + $(this)[0].id).ejCheckBox("option","value"));
 
 
 
@@ -278,7 +278,7 @@ You can receive the Hobbies and Interest values using Checkbox. You can create a
 
 
 
-            alert(checkeditem);        });
+            alert(checkedItem);        });
 
     });
 
@@ -339,11 +339,11 @@ You can get the Media Player file type application like video, audio and picture
 
 					<td class="chkrad">
 
-						@Html.EJ().CheckBox("Checkboxs4").Value(".avi").Size(Size.Medium)
+						@Html.EJ().CheckBox("Checkboxs4").Value(".AVI").Size(Size.Medium)
 
 						<label for="Checkboxs4" class="clslab">
 
-							.avi
+							.AVI
 
 						</label>
 

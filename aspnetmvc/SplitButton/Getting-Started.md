@@ -25,7 +25,7 @@ Essential ASP.NET MVC Split Button control contains built-in features such as Cl
 
    ~~~ cshtml
 
-	@Html.EJ().SplitButton("sbutton").Text("Save").ShowRoundedCorner(true).Size(ButtonSize.Large).TargetID("target")
+	@Html.EJ().SplitButton("splitButton").Text("Save").ShowRoundedCorner(true).Size(ButtonSize.Large).TargetID("target")
 
    ~~~
   
