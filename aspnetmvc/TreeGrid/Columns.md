@@ -478,5 +478,83 @@ You can also disable the visibility of the particular column in column collectio
 
 ![](Columns_images/Columns_img4.png)
 
+## Command Column
 
+### Default action buttons
+
+Using command columns in TreeGrid, we can display a separate column to perform CRUD operations.It is also possible to perform any custom actions by using custom command buttons. Command column can be defined in TreeGrid using `columns.commands` property.
+A command column can be customized by using `type` and `buttonOptions` properties.
+
+* **type** – Using this property we can add required action buttons in TreeGrid command column such as edit,delete,save and cancel.
+* **buttonOptions** - Using this property we can customize the button in the command column with the properties available in [ejButton](https://help.syncfusion.com/api/js/ejbutton#members "ejButton").
+
+{% highlight CSHTML %}
+@(Html.EJ().TreeGrid("TreeGridContainer")              
+              .Columns(co =>
+              {                                
+                  co.HeaderText("Manage Records").Commands(command =>
+                      {
+                          command.Type(TreeGridUnboundType.Edit)
+                              .ButtonOptions(new ButtonProperties()
+                              {
+                                  Text = "Edit", 
+                                  Width="58"
+                              }).Add();
+                          command.Type(TreeGridUnboundType.Delete)
+                              .ButtonOptions(new ButtonProperties()
+                              {
+                                  Text = "Delete",
+                                  Width = "58"
+                              }).Add();
+                          command.Type(TreeGridUnboundType.Save)
+                              .ButtonOptions(new ButtonProperties()
+                              {
+                                  Text = "Save",
+                                  Width = "58"
+                              }).Add();
+                          command.Type(TreeGridUnboundType.Cancel)
+                              .ButtonOptions(new ButtonProperties()
+                              {
+                                  Text = "Cancel",
+                                  Width = "58"
+                              }).Add();
+                      }).Add();
+              })      
+    )
+{% endhighlight %}
+
+![](Columns_images/Columns_img5.png)
+
+### Custom buttons
+
+We can also add custom buttons to the command column by specifying text value other than default buttons to the type property. We can also bind actions to the custom button using [click](https://help.syncfusion.com/api/js/ejbutton#events:click "click") client side event of ejButton.
+
+{% highlight CSHTML %}
+  @(Html.EJ().TreeGrid("TreeGridContainer")
+              .Columns(co =>
+              {
+                   co.HeaderText("Manage Records").Commands(command =>
+                      {
+                          command.Type("Details")
+                              .ButtonOptions(new ButtonProperties()
+                              {
+                                  Text = "Details",
+                                  Width = "58",
+                                  Click = "onClick"
+                              }).Add();
+                      }).Add();                         
+              })    
+    )
+<script type="text/javascript">
+        function onClick(args) {
+            var $tr = $(args.e.target).closest('tr'),
+                 treeObj = $("#TreeGridContainer").data("ejTreeGrid"),
+                 rowIndex = treeObj.getIndexByRow($tr),
+                 record = treeObj.model.currentViewData[rowIndex];
+            alert("Task Name: " + record.item.TaskName);
+        }
+</script>
+{% endhighlight %}
+
+![](Columns_images/Columns_img6.png)
 
