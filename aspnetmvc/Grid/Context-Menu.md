@@ -234,7 +234,7 @@ Custom context menu is used to create your own menu item and its action. To add 
         {
             contextMenu.EnableContextMenu();
             contextMenu.DisableDefaultItems();
-            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }});
+            contextMenu.CustomContextMenuItems(new List<CustomContextMenuItems> { new CustomContextMenuItems() { Id = "clear", Text = "Clear Selection" }});
         })
         .AllowPaging()        
         .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
@@ -295,7 +295,7 @@ Sub context menu is used to add customized sub menu to the custom context menu i
                         {
                             contextMenu.EnableContextMenu();
                             contextMenu.DisableDefaultItems();
-                            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContexMenuItems() { Id = "hide", Text = "Hide Column" } });
+                            contextMenu.CustomContextMenuItems(new List<CustomContextMenuItems> { new CustomContextMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContextMenuItems() { Id = "hide", Text = "Hide Column" } });
                             contextMenu.SubContextMenu(submenu =>
                             {
                                 submenu.ContextMenuItem("hide").SubMenu(new List<string>() { "Order ID", "Customer ID", "Employee ID" }).Add();
