@@ -25,7 +25,7 @@ The Json Adaptor is used when the grid is bound with local datasource. It can be
 {% highlight razor %} 
 
           @(Html.EJ().Grid<Person>("Grid")
-                .Datasource(ds => ds.Json((IEnumerable<Person>)ViewBag.datasource).Adaptor(AdaptorType.JsonAdaptor))
+                .Datasource(datasource => datasource.Json((IEnumerable<Person>)ViewBag.datasource).Adaptor(AdaptorType.JsonAdaptor))
                 .Columns(col =>
                 {
                     col.Field(p => p.FirstName).HeaderText("First Name").TextAlign(TextAlign.Left).Add();
@@ -71,7 +71,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
 
          @(Html.EJ().Grid<OrdersView>("Grid")
-                    .Datasource(ds => ds.URL(@Url.Action("DataSource"))                               
+                    .Datasource(datasource => datasource.URL(@Url.Action("DataSource"))                               
                     .Adaptor(AdaptorType.UrlAdaptor))
                     .AllowPaging()
                     .Columns(col =>
@@ -96,26 +96,26 @@ The following code example describes the above behavior.
         {
             return View();
         }
-        public ActionResult DataSource(DataManager dm) 
+        public ActionResult DataSource(DataManager datamanager) 
         {
             IEnumerable data = OrderData;
             DataOperations operation = new DataOperations();
-            if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+            if (datamanager.Sorted != null && datamanager.Sorted.Count > 0) //Sorting
             {
-                data= operation.PerformSorting(data, dm.Sorted);
+                data= operation.PerformSorting(data, datamanager.Sorted);
             }            
-            if (dm.Where != null && dm.Where.Count > 0) //Filtering
+            if (datamanager.Where != null && datamanager.Where.Count > 0) //Filtering
             {
-                data= operation.PerformWhereFilter(data, dm.Where, dm.Where[0].Operator);
+                data= operation.PerformWhereFilter(data, datamanager.Where, datamanager.Where[0].Operator);
             }            
             int count = data.Cast<OrdersView>().Count();
-            if (dm.Skip != 0)
+            if (datamanager.Skip != 0)
             {
-                data= operation.PerformSkip(data, dm.Skip);
+                data= operation.PerformSkip(data, datamanager.Skip);
             }            
-            if (dm.Take != 0)
+            if (datamanager.Take != 0)
             {
-                data= operation.PerformTake(data, dm.Take);
+                data= operation.PerformTake(data, datamanager.Take);
             }
             return Json(new { result = data, count = count });
           }
@@ -146,7 +146,7 @@ You can use the following code example to use OData Adaptor.
 {% highlight razor %} 
 
         @(Html.EJ().Grid<object>("FlatGrid")
-                   .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Adaptor(AdaptorType.ODataAdaptor))   
+                   .Datasource(datasource => datasource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Adaptor(AdaptorType.ODataAdaptor))   
                    .AllowPaging()
                    .Columns(col =>
                    {
@@ -176,7 +176,7 @@ You can use the following code example to use ODataV4 Adaptor.
 {% highlight razor %} 
 
         @(Html.EJ().Grid<object>("FlatGrid")
-                   .Datasource(ds => ds.URL("http://services.odata.org/v4/northwind/northwind.svc/Orders").Adaptor(AdaptorType.ODataV4Adaptor))
+                   .Datasource(datasource => datasource.URL("http://services.odata.org/v4/northwind/northwind.svc/Orders").Adaptor(AdaptorType.ODataV4Adaptor))
                    .AllowPaging()
                    .Columns(col =>
                    {
@@ -208,7 +208,7 @@ You can use the following code example to use WebAPI Adaptor.
 {% highlight razor %}
 
         @(Html.EJ().Grid<object>("FlatGrid")
-                   .Datasource(ds => ds.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
+                   .Datasource(datasource => datasource.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
                    .AllowPaging()
                    .Columns(col =>
                     {
@@ -257,7 +257,7 @@ You can use the following code example to use RemoteSaveAdaptor.
 {% highlight razor %}
 
         @(Html.EJ().Grid<object>("FlatGrid")
-                   .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                   .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
                    .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
                    .AllowPaging()
                    .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -350,7 +350,7 @@ The following code example describes the above behavior.
                      col.Field("FirstName").HeaderText("Name").Add();
                      col.Field(p => p.Freight).HeaderText("Freight").TextAlign(TextAlign.Right).Format("{0:C2}").Add();
                   })
-               .ClientSideEvents(evt => evt.Load("onLoad"))
+               .ClientSideEvents(event => event.Load("onLoad"))
            )
 {% endhighlight  %}
 {% highlight c# %}
