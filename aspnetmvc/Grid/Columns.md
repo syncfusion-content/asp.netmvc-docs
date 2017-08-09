@@ -141,7 +141,7 @@ Using `DataBound` event, you can set `IsPrimaryKey` value as `true` by two ways.
     
         function dataBound(args) {
              var column = this.getColumnByField("OrderID");
-             column.isPrimaryKey = tru
+             column.isPrimaryKey = true;
              //Here columns method used to update the particular column
              this.columns(column, "update");
           }
@@ -167,7 +167,7 @@ The following code example describes the above behavior.
               .Columns(col =>
               {
                 col.Field("OrderID").HeaderText("Order ID").Add();
-                col.Field("EmployeeID").HeaderText("Emp ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
                 col.Field("Freight").HeaderText("Freight").Add();
                 col.Field("ShipCountry").HeaderText("Country").Add();
                 col.Field("ShipCity").HeaderText("City").Add();
@@ -216,7 +216,7 @@ The following code example describes the above behavior.
             .Columns(col =>
             {
                 col.Field("OrderID").HeaderTextAlign(TextAlign.Right).HeaderText("Order ID").Add();
-                col.Field("EmployeeID").HeaderText("Emp ID").Add();
+                col.Field("EmployeeID").HeaderText("Employee ID").Add();
                 col.Field("Freight").HeaderText("Freight").Add();
                 col.Field("ShipCountry").HeaderText("Country").Add();
                 col.Field("ShipCity").HeaderText("City").Add();
@@ -262,7 +262,7 @@ The following code example describes the above behavior.
             .Columns(col =>
             {
                 col.Field("OrderID").HeaderText("Order ID").Add();
-                col.Field("EmployeeID").HeaderTemplateID("#empTemplate").Add();
+                col.Field("EmployeeID").HeaderTemplateID("#employeeTemplate").Add();
                 col.Field("Freight").HeaderText("Freight").Add();
                 col.Field("ShipCountry").HeaderText("Country").Add();
                 col.Field("ShipCity").HeaderText("City").Add();
@@ -285,8 +285,8 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% highlight js %}
 
-        <script id="empTemplate" type="text/x-jsrender">
-          Emp ID
+        <script id="employeeTemplate" type="text/x-jsrender">
+          Employee ID
           <span class="e-userlogin e-icon employee"></span>
         </script>
 {% endhighlight %}
@@ -586,7 +586,7 @@ The following code example describes the above behavior.
                     col.Field("EmployeeID").Add();
                     col.Field("CustomerID").Add();
                     col.Field("Freight").Add();
-                    col.HeaderText("").Format("<a onclick=\"clk(this)\" href=#>Delete</a>").Add();
+                    col.HeaderText("").Format("<a onclick=\"click(this)\" href=#>Delete</a>").Add();
                    })
                  )
 {% endhighlight  %}
@@ -608,7 +608,7 @@ The following code example describes the above behavior.
 {% highlight js %}
     
      <script type="text/javascript">
-        function clk(e) {
+        function click(e) {
             var obj = $("#FlatGrid").data("ejGrid");
             obj.deleteRecord("OrderID", obj.getSelectedRecords()[0]);
         }
