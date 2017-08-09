@@ -53,7 +53,7 @@ The following code example describes the above behavior.
 
       namespace MVCSampleBrowser.Controllers
        {
-         public class GridController : Controlle
+         public class GridController : Controller
            { 
              public ActionResult GridFeatures()
                {
