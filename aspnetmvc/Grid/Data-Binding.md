@@ -94,30 +94,30 @@ The following code example describes the above behavior.
               cl = new DataColumn("Name");
               dt.Columns.Add(cl);
 
-              DataRow dr = dt.NewRow();
-              dr[0] = 1;
-              dr[1] = "John";
-              dt.Rows.Add(dr);
+              DataRow datarow = dt.NewRow();
+              datarow[0] = 1;
+              datarow[1] = "John";
+              dt.Rows.Add(datarow);
               
-              dr = dt.NewRow();
-              dr[0] = 2;
-              dr[1] = "Smith";
-              dt.Rows.Add(dr);
+              datarow = dt.NewRow();
+              datarow[0] = 2;
+              datarow[1] = "Smith";
+              dt.Rows.Add(datarow);
 
-              dr = dt.NewRow();
-              dr[0] = 3;
-              dr[1] = "Tomps";
-              dt.Rows.Add(dr);
+              datarow = dt.NewRow();
+              datarow[0] = 3;
+              datarow[1] = "Tomps";
+              dt.Rows.Add(datarow);
 
-              dr = dt.NewRow();
-              dr[0] = 4;
-              dr[1] = "Hanar";
-              dt.Rows.Add(dr);
+              datarow = dt.NewRow();
+              datarow[0] = 4;
+              datarow[1] = "Hanar";
+              dt.Rows.Add(datarow);
 
-              dr = dt.NewRow();
-              dr[0] = 5;
-              dr[1] = "Reek";
-              dt.Rows.Add(dr);
+              datarow = dt.NewRow();
+              datarow[0] = 5;
+              datarow[1] = "Reek";
+              dt.Rows.Add(datarow);
 
               ViewBag.dataSource = dt;
              return View();
@@ -259,31 +259,31 @@ The following code example describes the above behavior.
              : base()
             {
                // Get the 'shape' of the list. 
-              // Only get the public properties marked with Browsable = true.
-             PropertyDescriptorCollection pdc = TypeDescriptor.GetProperties(
+              // Only get the public properties marked with Browse able = true.
+             PropertyDescriptorCollection propertydescriptorcollection = TypeDescriptor.GetProperties(
                  typeof(T),
                  new Attribute[] { new BrowsableAttribute(true) });
 
              // Sort the properties.
-             properties = pdc.Sort();
+             properties = propertydescriptorcollection.Sort();
             }
           #region ITypedList Implementation
           public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors)
           {
-             PropertyDescriptorCollection pdc;
+             PropertyDescriptorCollection propertydescriptorcollection;
              if (listAccessors != null && listAccessors.Length > 0)
              {
                 // Return child list shape.
-                pdc = ListBindingHelper.GetListItemProperties(listAccessors[0].PropertyType);
+                propertydescriptorcollection = ListBindingHelper.GetListItemProperties(listAccessors[0].PropertyType);
              }
              else
              {
                 // Return properties in sort order.
-                pdc = properties;
+                propertydescriptorcollection = properties;
              }
-             return pdc;
+             return propertydescriptorcollection;
           }
-          // This method is only used in the design-time framework 
+          // This method is only used in the design-time Framework 
          // and by the obsolete DataGrid control.
          public string GetListName(PropertyDescriptor[] listAccessors)
          {
@@ -299,13 +299,13 @@ The following code example describes the above behavior.
          public ActionResult Index()
          {
             var data = OrderRepository.GetAllRecords();
-            SortableBindingList<EditableOrder> ord = new SortableBindingList<EditableOrder>();
+            SortableBindingList<EditableOrder> order = new SortableBindingList<EditableOrder>();
             
             foreach (var temp in data)
             {
-                ord.Add(temp);
+                order.Add(temp);
             }
-            ViewBag.dataSource = ord;
+            ViewBag.dataSource = order;
             return View();
           }
         }
@@ -418,7 +418,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
          @(Html.EJ().Grid<object>("FlatGrid")
-             .Datasource(ds => ds.URL("http://services.odata.org/v4/northwind/northwind.svc/Orders").Adaptor(AdaptorType.ODataV4Adaptor))
+             .Datasource(datasource => datasource.URL("http://services.odata.org/v4/northwind/northwind.svc/Orders").Adaptor(AdaptorType.ODataV4Adaptor))
              .AllowPaging()
              .Columns(col =>
              {
@@ -454,7 +454,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
     
         @(Html.EJ().Grid<object>("FlatGrid")
-             .Datasource(ds => ds.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
+             .Datasource(datasource => datasource.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor))
              .AllowPaging()
              .Columns(col =>
               {
@@ -503,7 +503,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
         @(Html.EJ().Grid<object>("Grid")
-              .Datasource(ds => ds.Table("#GridTable"))            
+              .Datasource(datasource => datasource.Table("#GridTable"))            
               .Columns(col =>
                {
                 col.Field("Laptop").HeaderText("Laptop").TextAlign(TextAlign.Left).Add();
@@ -622,7 +622,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
         
          @(Html.EJ().Grid<object>("FlatGrid")
-              .Datasource(ds =>   ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Offline(true))              
+              .Datasource(datasource =>   datasource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders").Offline(true))              
               .AllowPaging()
               .Columns(col =>
               {
@@ -654,7 +654,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
    
           @(Html.EJ().Grid<OrdersView>("Grid")
-                .Datasource(ds => ds.URL(@Url.Action("DataSource"))
+                .Datasource(datasource => datasource.URL(@Url.Action("DataSource"))
                 .EnableCaching()
                 .CachingPageSize(4)
                 .TimeTillExpiration(120000)
@@ -687,7 +687,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
  
       @(Html.EJ().Grid<OrdersView>("Grid")
-            .Datasource(ds => ds.URL(@Url.Action("DataSource"))
+            .Datasource(datasource => datasource.URL(@Url.Action("DataSource"))
             .Adaptor(AdaptorType.UrlAdaptor))
             .Query("ej.Query().addParams('Syncfusion', true)")
             .AllowPaging()
@@ -718,7 +718,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
         
            @(Html.EJ().Grid<OrdersView>("Grid")
-                 .Datasource(ds => ds.URL(@Url.Action("DataSource"))
+                 .Datasource(datasource => datasource.URL(@Url.Action("DataSource"))
                  .Headers(new { Syncfusion = false })
                  .Adaptor(AdaptorType.UrlAdaptor))
                  .AllowPaging()
@@ -765,7 +765,7 @@ The following code example describes the above behavior.
 {% highlight razor %} 
 
         @(Html.EJ().Grid<OrdersView>("Grid")
-                   .Datasource(ds => ds.URL(@Url.Action("DataSources"))
+                   .Datasource(datasource => datasource.URL(@Url.Action("DataSources"))
                    .Adaptor(AdaptorType.UrlAdaptor))
                    .Columns(col =>
                    {
@@ -774,7 +774,7 @@ The following code example describes the above behavior.
                        col.Field(p => p.EmployeeID).HeaderText("Employee ID").Add();
                        col.Field(p => p.Freight).HeaderText("Freight").Format("{0:C2}").Add();
                    })
-                    .ClientSideEvents(evt => evt.ActionFailure("OnActionFailure"))
+                    .ClientSideEvents(event => event.ActionFailure("OnActionFailure"))
               )
 {% endhighlight  %}
 {% highlight js %}
