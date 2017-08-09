@@ -1,7 +1,7 @@
 ---
 layout: post
-title: TreeGrid Printing | TreeGrid | ASP.NET MVC | Syncfusion
-description: treegrid printing
+title: Printing | TreeGrid | ASP.NET MVC | Syncfusion
+description: printing
 platform: ejmvc
 control: TreeGrid
 documentation: ug
