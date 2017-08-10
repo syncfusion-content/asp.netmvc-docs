@@ -484,7 +484,6 @@ To render a 100% Stacked Area Chart, set the Type as **StackingArea100** in the 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea100) here to view 100% Stacked Area Chart online demo.
 
 
-
 ## Column Chart
 
 To render a Column Chart, set the Type as **Column** in the chart series. To change the color of the column series, you can use the Fill property.  
@@ -1132,7 +1131,6 @@ To render a Spline Chart, set the Type as **Spline** in the chart series. To cha
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/spline) here to view the Spline Chart online demo sample.
-
 
 
 ### Change the spline width
