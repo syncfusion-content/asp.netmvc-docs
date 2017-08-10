@@ -237,7 +237,7 @@ Custom context menu is used to create your own menu item and its action. To add 
             contextMenu.CustomContextMenuItems(new List<CustomContextMenuItems> { new CustomContextMenuItems() { Id = "clear", Text = "Clear Selection" }});
         })
         .AllowPaging()        
-        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .ClientSideEvents(eve => {eve.ContextClick("context_click");})
         .Columns(col =>
         {
             col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
@@ -253,7 +253,7 @@ Custom context menu is used to create your own menu item and its action. To add 
         })
     )
     <script type="text/javascript">
-        function contextclick(args) {
+        function context_click(args) {
             if (args.text == "Clear Selection")
                 this.clearSelection();
         }
@@ -302,7 +302,7 @@ Sub context menu is used to add customized sub menu to the custom context menu i
                             });
                         })
         .AllowPaging()        
-        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .ClientSideEvents(eve => {eve.ContextClick("context_click");})
         .Columns(col =>
         {
             col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
@@ -319,7 +319,7 @@ Sub context menu is used to add customized sub menu to the custom context menu i
     )
 
     <script type="text/javascript">
-        function contextclick(args) {
+        function context_click(args) {
             if (args.text == "Clear Selection")
                 this.clearSelection();
             else if (args.text == "Hide Column")
