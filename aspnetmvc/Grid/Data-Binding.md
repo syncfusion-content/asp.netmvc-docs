@@ -267,7 +267,6 @@ The following code example describes the above behavior.
              // Sort the properties.
              properties = propertydescriptorcollection.Sort();
             }
-          #region ITypedList Implementation
           public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors)
           {
              PropertyDescriptorCollection propertydescriptorcollection;
@@ -289,7 +288,6 @@ The following code example describes the above behavior.
          {
            return typeof(T).Name;
          }
-        #endregion
       }
 
      namespace EJGrid.Controllers
