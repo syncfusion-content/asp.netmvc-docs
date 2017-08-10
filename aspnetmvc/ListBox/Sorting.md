@@ -19,7 +19,7 @@ documentation: ug
             //Add the following code in View page to configure ListBox widget
           <div class="contents">
                 <span class="txt">Select skill</span>
-                @Html.EJ().ListBox("skillSet").Datasource((IEnumerable<skillSet>)ViewBag.DataSource1).SortOrder(SortOrder.None).ListBoxFields(df => df.Value("skill"))
+                @Html.EJ().ListBox("skillSet").Datasource((IEnumerable<SkillSet>)ViewBag.DataSource1).SortOrder(SortOrder.None).ListBoxFields(df => df.Value("skill"))
             </div>
          ~~~
 
@@ -28,20 +28,20 @@ documentation: ug
 	// Add the following code to add listbox items in the controller page
  public partial class ListBoxController : Controller
     {
-        List<skillSet> veg1 = new List<skillSet>();
+        List<SkillSet> veg1 = new List<SkillSet>();
         List<GroupList> skills = new List<GroupList>();
         // GET: /Sorting/
         public ActionResult Sorting()
         {            
-            veg1.Add(new skillSet { skill = "F#" });
-            veg1.Add(new skillSet { skill = "ActionScript" });
-            veg1.Add(new skillSet { skill = "Delphi" });
-            veg1.Add(new skillSet { skill = "Basic" });
-            veg1.Add(new skillSet { skill = "C++" });
-            veg1.Add(new skillSet { skill = "ESPOL" });
-            veg1.Add(new skillSet { skill = "C#" });
-            veg1.Add(new skillSet { skill = "DBase" });
-            veg1.Add(new skillSet { skill = "ASP.NET" });
+            veg1.Add(new SkillSet { skill = "F#" });
+            veg1.Add(new SkillSet { skill = "ActionScript" });
+            veg1.Add(new SkillSet { skill = "Delphi" });
+            veg1.Add(new SkillSet { skill = "Basic" });
+            veg1.Add(new SkillSet { skill = "C++" });
+            veg1.Add(new SkillSet { skill = "ESPOL" });
+            veg1.Add(new SkillSet { skill = "C#" });
+            veg1.Add(new SkillSet { skill = "DBase" });
+            veg1.Add(new SkillSet { skill = "ASP.NET" });
             ViewBag.DataSource1 = veg1;
             return View();
             }
@@ -49,7 +49,7 @@ documentation: ug
         ~~~ 
     
     ~~~ csharp
-         public class skillSet
+         public class SkillSet
             {
                public string skill { get; set; }
 
