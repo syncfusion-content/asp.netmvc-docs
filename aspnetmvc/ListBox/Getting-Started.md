@@ -161,7 +161,7 @@ The following steps are used to create ListBox control.
 
 		}
 
-		.middleButtons 
+		.middle-buttons 
 		{
 
 			padding: 91px 25px 25px 25px;
@@ -339,7 +339,7 @@ To populate items inside ListBox, you have to add list items inside <ul> as <li>
 
         </div>
 
-        <div class="middleButtons">
+        <div class="middle-buttons">
 
             @Html.EJ().Button("Add").Text(">>").ShowRoundedCorner(true).ClientSideEvents(e => e.Click("add"))
 

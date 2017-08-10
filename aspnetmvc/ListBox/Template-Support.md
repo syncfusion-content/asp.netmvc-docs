@@ -26,8 +26,8 @@ The following steps explains you the behavior of template support with ListBox.
 			Template support 
 		</div>  
 	@Html.EJ().ListBox("listBoxSample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
-	.Template("<img class='employeeImg' src='../../Content/images/Employees/${employeeImg}.png' alt='employee' height='50px' width='50px'/>
-	<div class='ename'> 
+	.Template("<img class='employee-image' src='../../Content/images/Employees/${employee-image}.png' alt='employee' height='50px' width='50px'/>
+	<div class='e-name'> 
 		${text} 
 	</div>
 	<div class='design'>
@@ -47,7 +47,7 @@ The following steps explains you the behavior of template support with ListBox.
 	public class EmployeeSpecialists 
 	{           
 		public string text { get; set; }   
-		public string employeemployeeImg { get; set; }   
+		public string employeeImg { get; set; }   
 		public string design { get; set; } 
 		public string country { get; set; }  
 	} 
@@ -73,7 +73,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 	<style>
 
-		.employeeImg 
+		.employee-image 
 		{
 
 			margin: 0;
@@ -92,7 +92,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 
 
-		.ename 
+		.e-name 
 		{
 
 			font-weight: bold;

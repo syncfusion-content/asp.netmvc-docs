@@ -11,14 +11,14 @@ documentation: ug
 
 You can customize the **Radial Menu’s** Center and Back images by using the **ImageClass** and **BackImageClass** properties. Every menu item can be added with image using **url** property. By using this **ImageClass** attribute, you can customize the **Radial Menu** center image. 
 
-Sub-Items are also supported in the **Radial Menu**. To navigate Sub-Items, click the arrows in the outer ring and it displays the corresponding sub-items group. Clicking the center button when a sub-items group is shown, displays the items on the previous level. Nested **Radial Menu** has the second level back button. In this case, you can use the **BackImageClass** attribute to change your second level back button. **BackImageClass** is used to customize the **nestedRadialMenu** back image. Refer to the following code example.
+Sub-Items are also supported in the **Radial Menu**. To navigate Sub-Items, click the arrows in the outer ring and it displays the corresponding sub-items group. Clicking the center button when a sub-items group is shown, displays the items on the previous level. Nested **Radial Menu** has the second level back button. In this case, you can use the **BackImageClass** attribute to change your second level back button. **BackImageClass** is used to customize the **nestedRadialmenu** back image. Refer to the following code example.
 
 You can add the page content with text-area by referring to this section.
 
 {% highlight razor %}
 
     @{
-       Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("imageClass").BackImageClass("backImageClass").TargetElementId("radialTarget2").Items(items =>
+       Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("image-class").BackImageClass("backimage-class").TargetElementId("radialTarget2").Items(items =>
         {
             items.Add().Text("Copy").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png"));
             items.Add().Text("Font").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png")).Children(children =>
@@ -62,7 +62,7 @@ Add the following script in your code.
 {% highlight javascript %}
 
         function radialShow(e) {
-            var target = $("#radialtarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+            var target = $("#radialTarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
             // To get Iframe positions
                 iframeY = target.offset().top + e.event.clientY, iframeX = target.offset().left + e.event.clientX,
             // To set Radial Menu position within target
@@ -78,12 +78,12 @@ Add the following styles in your code.
 {% highlight css %}
 
     <style type="text/css" class="cssStyles">
-        .e-radialmenu .imageClass
+        .e-radialmenu .image-class
         {
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/main.png");
         }
         
-        .e-radialmenu .backImageClass
+        .e-radialmenu .backimage-class
         {
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/Back_button.png");
         }
