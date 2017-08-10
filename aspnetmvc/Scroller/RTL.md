@@ -23,7 +23,7 @@ In the View page, add a scroller helper to configure Scroller widget.
 
   <div>  @*Wrapper div for Scroller.*@
 
-     <div id="innerContent"> @*Content div*@
+     <div class="inner-content"> @*Content div*@
 
         <h3>MVC </h3>
 

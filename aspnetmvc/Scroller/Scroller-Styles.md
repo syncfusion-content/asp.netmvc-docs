@@ -47,7 +47,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
   <div> @*Wrapper div for Scroller.*@
 
-     <div id="innerContent"> @*Content div*@
+     <div class="inner-content"> @*Content div*@
 
         <h3>MVC </h3>
 
@@ -82,7 +82,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 	<style type="text/css">
 
-		#innerContent 
+		.inner-content 
 		{
 
 		width: 400px;

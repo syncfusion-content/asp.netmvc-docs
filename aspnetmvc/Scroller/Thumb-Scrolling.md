@@ -23,7 +23,7 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 		<div> @*Wrapper div for Scroller.*@
 
-			<div id="innerContent">  @*Content div*@
+			<div class="inner-content">  @*Content div*@
 
 				<h3>MVC </h3>
 

@@ -39,19 +39,19 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		<tr>
 
-		<td class="tdClass">Date</td>
+		<td class="table-cell">Date</td>
 
-		<td class="tdClass">Time</td>
+		<td class="table-cell">Time</td>
 
-		<td class="tdClass">Person</td>
+		<td class="table-cell">Person</td>
 
 		</tr>
 
 		<tr>
 
-		<td class="tdClass">
+		<td class="table-cell">
 
-			<span class="innerDisplay">
+			<span class="inner-display">
 
 			@Html.EJ().DatePicker("startDate")
 
@@ -59,9 +59,9 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		</td>
 
-		<td class="tdClass">
+		<td class="table-cell">
 
-			<span class="innerDisplay">
+			<span class="inner-display">
 
 			@Html.EJ().TimePicker("timeStart")
 
@@ -69,9 +69,9 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		</td>
 
-		<td class="tdClass">
+		<td class="table-cell">
 
-			<span class="innerDisplay">
+			<span class="inner-display">
 
 			@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
@@ -87,9 +87,9 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		<td></td>
 
-		<td class="tdClass">
+		<td class="table-cell">
 
-			<span class="innerDisplay">
+			<span class="inner-display">
 
 			@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
@@ -113,7 +113,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 	<style type="text/css" class="cssStyles">
 
-		.tdClass 
+		.table-cell 
 		{
 
 		width: 70px;
@@ -126,7 +126,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 		}
 
-		.innerDisplay 
+		.inner-display 
 		{
 
 		display: inline-block;
@@ -193,21 +193,21 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 		<tr>
 
-			<td class="tdClass">Date</td>
+			<td class="table-cell">Date</td>
 
-			<td class="tdClass">StartTime</td>
+			<td class="table-cell">StartTime</td>
 
-			<td class="tdClass">EndTime</td>
+			<td class="table-cell">EndTime</td>
 
-			<td class="tdClass">Person</td>
+			<td class="table-cell">Person</td>
 
 		</tr>
 
 		<tr>
 
-			<td class="tdClass">
+			<td class="table-cell">
 
-				<span class="innerDisplay">
+				<span class="inner-display">
 
 					@Html.EJ().DatePicker("startDate").Value("5/11/2015").MinDate("5/11/2015").MaxDate("6/11/2015")
 
@@ -215,9 +215,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			</td>
 
-			<td class="tdClass">
+			<td class="table-cell">
 
-				<span class="innerDisplay">
+				<span class="inner-display">
 
 					@Html.EJ().TimePicker("timeStart").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60).ClientSideEvents(e => e.Select("selectedStartTime"))
 
@@ -225,9 +225,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			</td>
 
-			<td class="tdClass">
+			<td class="table-cell">
 
-				<span class="innerDisplay">
+				<span class="inner-display">
 
 					@Html.EJ().TimePicker("timeEnd").MinTime("9:00 AM").MaxTime("10:00 PM").Interval(60)
 
@@ -235,9 +235,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			</td>
 
-			<td class="tdClass">
+			<td class="table-cell">
 
-				<span class="innerDisplay">
+				<span class="inner-display">
 
 					@Html.EJ().NumericTextbox("NumericTextbox").Value("0")
 
@@ -255,9 +255,9 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 			<td></td>
 
-			<td class="tdClass">
+			<td class="table-cell">
 
-				<span class="innerDisplay">
+				<span class="inner-display">
 
 					@Html.EJ().Button("Submit").Width("100px").Size(ButtonSize.Small).Text("Submit").ClientSideEvents(s => s.Click("button"))
 
@@ -278,7 +278,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 	<style type="text/css" class="cssStyles">
 
-		.tdClass 
+		.table-cell 
 		{
 
 		width: 70px;
@@ -291,7 +291,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 		}
 
-		.innerDisplay 
+		.inner-display 
 		{
 
 		display: inline-block;

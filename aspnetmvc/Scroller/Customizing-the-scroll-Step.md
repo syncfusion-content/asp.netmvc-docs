@@ -23,7 +23,7 @@ The following steps explains you the configuration of ScrollOneStepBy property i
 
 		<div>                              
 			@*Wrapper div for Scroller.*@
-			<div id="innercontent">       
+			<div class="inner-content">       
 			@*Content div*@
 			<h3>MVC </h3>	
 			<p> 
