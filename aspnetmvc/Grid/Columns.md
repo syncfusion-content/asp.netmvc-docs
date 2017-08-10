@@ -1053,7 +1053,7 @@ The following code example describes the above behavior.
                 {
                     col.Field("OrderID").Add();
                     col.Field("CustomerID").Add();
-                    col.Field("EmployeeID").CssClass("customcss").Add();
+                    col.Field("EmployeeID").CssClass("customizes").Add();
                     col.Field("Freight").Add(); 
                 })
                 )
@@ -1075,14 +1075,14 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% highlight css %}
 
-    .customcss.e-headercell {
+    .customizes.e-headercell {
         background-color: #2382c3;
         color: white;
         font-family: 'Bell MT';
         font-size: 20px;
     }
     
-    .customcss.e-rowcell {
+    .customizes.e-rowcell {
         background-color: #ecedee;
         font-family: 'Bell MT';
         color: red;
