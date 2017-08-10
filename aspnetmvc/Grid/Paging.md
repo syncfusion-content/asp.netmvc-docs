@@ -172,3 +172,51 @@ The following code example describes the above behavior.
  The following output is displayed as a result of the above code example.
 
 ![](Paging_images/Paging_img3.png)
+
+## Pager with pageSize drop down
+
+There is an option to set the size of page by means of selecting from the page size values available at the dropdown in pager. Once selected it updates the pageSize value accordingly. To render drop down in pager, provide the pageSize values you wish to display in drop down as `array` to `pageSizeList` property of `pageSettings`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight razor %}
+
+    @(Html.EJ().Grid<object>("Paging")
+                .Datasource((IEnumerable<object>)ViewBag.datasource)
+                .AllowPaging()
+                .PageSettings(p => { p.PageSizeList(new List<int>() { 7, 2 }); 
+                })
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("Freight").Format("{0:C}").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                })
+    )
+
+ {% endhighlight  %} 
+ {% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+ {% endhighlight  %}
+ {% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+ ![](Paging_images/Paging_img6.png)
