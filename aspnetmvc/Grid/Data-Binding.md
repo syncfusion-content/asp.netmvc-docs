@@ -259,7 +259,7 @@ The following code example describes the above behavior.
              : base()
             {
                // Get the 'shape' of the list. 
-              // Only get the public properties marked with Browse able = true.
+              // Only get the public properties marked with Browsable = true.
              PropertyDescriptorCollection propertydescriptorcollection = TypeDescriptor.GetProperties(
                  typeof(T),
                  new Attribute[] { new BrowsableAttribute(true) });
