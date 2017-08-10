@@ -1102,7 +1102,7 @@ We can add comments to a PDF documents using the annotation support provided in 
             PdfExport exp = new PdfExport();
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
-            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
+            PdfDocument document = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
             RectangleF rectangle = new RectangleF(120, 20, 20, 125);
             //Creates a new pop-up annotation.
             PdfPopupAnnotation popupAnnotation = new PdfPopupAnnotation(rectangle, "*Comments added");
@@ -1112,8 +1112,8 @@ We can add comments to a PDF documents using the annotation support provided in 
             //Sets the PDF pop-up icon.
             popupAnnotation.Icon = PdfPopupIcon.Comment;
             //Adds the annotation to page.
-            pdfdocument.Pages[0].Annotations.Add(popupAnnotation);
-            pdfdocument.Save("Export.pdf", Response, HttpReadType.Save);
+            document.Pages[0].Annotations.Add(popupAnnotation);
+            document.Save("Export.pdf", Response, HttpReadType.Save);
         }
           
     }
@@ -1293,9 +1293,9 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             PdfExport exp = new PdfExport();
-            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.pdf", false, false, "flat-lime", true);
+            PdfDocument document = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.pdf", false, false, "flat-lime", true);
 
-            RectangleF rect = new RectangleF(0, 0, pdfdocument.PageSettings.Width, 50);
+            RectangleF rect = new RectangleF(0, 0, document.PageSettings.Width, 50);
 
             //create a header pager template
             PdfPageTemplateElement header = new PdfPageTemplateElement(rect);
@@ -1308,11 +1308,11 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
             PdfFont font = new PdfTrueTypeFont(f, true);
 
             header.Graphics.DrawString("Demo Report", font, PdfBrushes.Black, new Point(250, 0)); //Add custom text to the Header
-            pdfdocument.Template.Top = header; //Append custom template to the document           
+            document.Template.Top = header; //Append custom template to the document           
 
             footer.Graphics.DrawString("CopyRights", font, PdfBrushes.Gray, new Point(250, 0));//Add Custom text to footer
-            pdfdocument.Template.Bottom = footer;//Add the footer template to document
-            pdfdocument.Save(Server.MapPath("/Output/Export.pdf"));
+            document.Template.Bottom = footer;//Add the footer template to document
+            document.Save(Server.MapPath("/Output/Export.pdf"));
             return RedirectToAction("Index");
         }
           
