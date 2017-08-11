@@ -7,11 +7,11 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Column Resizing
+# Resizing Column
 
-Allows you to resize the column by changing its width while holding and dragging the column border using the mouse.
+Allows the user to change the column width by holding and dragging the column border using the mouse pointer.
 
-You can enable column resizing option in PivotGrid by setting the `EnableColumnResizing` property to true.
+You can enable the resizing option in PivotGrid by setting the `EnableColumnResizing` property to true.
 
 {% highlight CSHTML %}
 
@@ -20,3 +20,12 @@ You can enable column resizing option in PivotGrid by setting the `EnableColumnR
 {% endhighlight %} 
 
 ![](Column-Resizing_images/columnresizing.png)
+
+
+Additionally, the property `ResizeColumnsToFit` automatically adjusts the width of each column based on the maximum content length available in the respective column.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableColumnResizing(true).ResizeColumnsToFit(true).DataSource(.....)
+
+{% endhighlight %} 
