@@ -285,7 +285,7 @@ By using the **MacdType** enumeration property, you can change the MACD renderin
         //Initializing Indicators  
       .Indicators(ind => { ind
           .Type(ChartIndicatorType.MACD)
-          //Set macd draw type
+          //Set MACD draw type
           .MacdType(MacdType.Histogram)
           .Add();
       })
@@ -444,7 +444,7 @@ To display the indicator tooltip, use *Visible* option of the **Indicators.Toolt
         //Initializing Indicators  
       .Indicators(ind => { ind
           //...
-          .Tooltip(tl=>tl.
+          .Tooltip(tooltip=>tooltip.
               //Enable tooltip for indicator
               Visible(true))
           .Add();

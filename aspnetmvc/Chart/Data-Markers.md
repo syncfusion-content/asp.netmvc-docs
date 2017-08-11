@@ -67,7 +67,7 @@ The following code example illustrates this,
             sr
                 //..
                 .Marker(mr=>mr.Visible(true).Shape(ChartShape.Image)
-                 .Size(sz => sz.Height(20).Width(20)).ImageUrl("sun_annotation.png")
+                 .Size(size => size.Height(20).Width(20)).ImageUrl("sun_annotation.png")
                 ).Add();
         })
          //...
@@ -97,7 +97,7 @@ The following code example shows how to enable data label and set its horizontal
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         //Set text alignment to data label text	
                         .Visible(true)
                         .HorizontalTextAlignment(Syncfusion.JavaScript.DataVisualization.TextAlignment.Center)
@@ -140,7 +140,7 @@ The following code example shows how to add background shapes and set template t
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true)
                          //Set template to data label
                          .Template("template"))
@@ -149,7 +149,7 @@ The following code example shows how to add background shapes and set template t
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true)
                     //Add background shape to the data label
                     .Shape(ChartShape.Rectangle).Border(br=>br.Width(1).Color("red"))
@@ -159,7 +159,7 @@ The following code example shows how to add background shapes and set template t
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true))                         
                 ).Add();
         })
@@ -188,12 +188,12 @@ The following code example shows how to rotate data label text and customize the
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true)
                         //Rotate data label and customize the font
                         .Angle(300)
                         .Offset(15)
-                        .Font(fn=>fn.Color("black").Size("13px"))
+                        .Font(font=>font.Color("black").Size("13px"))
                         )
                 ).Add();
         })
@@ -222,9 +222,9 @@ The following code example shows how to set textPosition to display data label i
             sr
                 //..
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true)
-                    // Place the data label text position in the centre of the rectangle
+                    // Place the data label text position in the center of the rectangle
                     .TextPosition(TextPosition.Middle)
                         )
                 ).Add();
@@ -251,20 +251,20 @@ The following code example shows how to set the LabelPosition,
         {
             //Adding shapes to series1
             sr
-                .Points(pts=>{
-                    pts.X("India").Y(24).Text("India 24%").Add();
-                    pts.X("Japan").Y(25).Text("Japan 25%").Add();
-                    pts.X("Australia").Y(20).Text("Australia 20%").Add();
-                    pts.X("USA").Y(35).Text("USA 35%").Add();
-                    pts.X("China").Y(23).Text("China 23%").Add();
-                    pts.X("Germany").Y(27).Text("Germany 27%").Add();
-                    pts.X("France").Y(22).Text("France 22%").Add();
+                .Points(pt=>{
+                    pt.X("India").Y(24).Text("India 24%").Add();
+                    pt.X("Japan").Y(25).Text("Japan 25%").Add();
+                    pt.X("Australia").Y(20).Text("Australia 20%").Add();
+                    pt.X("USA").Y(35).Text("USA 35%").Add();
+                    pt.X("China").Y(23).Text("China 23%").Add();
+                    pt.X("Germany").Y(27).Text("Germany 27%").Add();
+                    pt.X("France").Y(22).Text("France 22%").Add();
                 })
                 .Marker(mr=>mr
-                    .DataLabel(dl=>dl
+                    .DataLabel(label=>label
                         .Visible(true)
                        .Shape(ChartShape.Rectangle)
-                        .Font(fn=>fn.Color("white"))
+                        .Font(font=>font.Color("white"))
                         )
                 )
                 //Display data label outside position 
@@ -298,8 +298,8 @@ The label can be wrapped for pie, doughnut, funnel, and pyramid series by settin
                            //.... . . 
               .Series(sr => {
                   //Adding series 
-                       sr.Marker(mr => mr.DataLabel(DL=>
-                              DL.Visible("true")
+                       sr.Marker(mr => mr.DataLabel(label=>
+                              label.Visible("true")
                                  .EnableWrap("true")
                                  .MaximumLabelWidth(32)
                          ))
@@ -333,32 +333,32 @@ When the data is provided by using the Points option, you can add marker for eac
         {
             //Adding shapes to series1
             sr
-                .Points(pts=>{
-                    pts.X("Jan").Y(35).Add();
-                    pts.X("Feb").Y(28).Add();
-                    pts.X("Mar").Y(34).Add();
-                    pts.X("Apr").Y(32).Add();
-                    pts.X("May").Y(40).Add();
-                    pts.X("Jun").Y(32).Add();
-                    pts.X("Jul").Y(35).Add();
-                    pts.X("Aug").Y(55).Marker(mr=>mr
+                .Points(pt=>{
+                    pt.X("Jan").Y(35).Add();
+                    pt.X("Feb").Y(28).Add();
+                    pt.X("Mar").Y(34).Add();
+                    pt.X("Apr").Y(32).Add();
+                    pt.X("May").Y(40).Add();
+                    pt.X("Jun").Y(32).Add();
+                    pt.X("Jul").Y(35).Add();
+                    pt.X("Aug").Y(55).Marker(mr=>mr
                         //Enable and customize the data label for a point
-                        .DataLabel(dl=>dl.Visible(true).Offset(-10).Shape(ChartShape.UpArrow)
-                        .Font(fn=>fn.Color("white").Size("11px"))
-                        .Margin(mrg=>mrg.Right(15).Left(15).Top(10).Bottom(10))
+                        .DataLabel(label=>label.Visible(true).Offset(-10).Shape(ChartShape.UpArrow)
+                        .Font(font=>font.Color("white").Size("11px"))
+                        .Margin(margin=>margin.Right(15).Left(15).Top(10).Bottom(10))
                         .Fill("green"))
                         ).Add();
-                    pts.X("Sep").Y(38).Add();
-                    pts.X("Oct").Y(30).Add();
-                    pts.X("Nov").Y(25).Marker(mr => mr
+                    pt.X("Sep").Y(38).Add();
+                    pt.X("Oct").Y(30).Add();
+                    pt.X("Nov").Y(25).Marker(mr => mr
                         //Enable and customize the data label for a point
-                       .DataLabel(dl => dl.Visible(true).Offset(-22).Shape(ChartShape.DownArrow)
+                       .DataLabel(label => label.Visible(true).Offset(-22).Shape(ChartShape.DownArrow)
                            .VerticalTextAlignment(Syncfusion.JavaScript.DataVisualization.TextAlignment.Near)
-                       .Font(fn => fn.Color("white").Size("11px"))
-                       .Margin(mrg => mrg.Right(15).Left(15).Top(10).Bottom(10))
+                       .Font(font => font.Color("white").Size("11px"))
+                       .Margin(margin => margin.Right(15).Left(15).Top(10).Bottom(10))
                        .Fill("red"))
                        ).Add();
-                    pts.X("Dec").Y(32).Add();
+                    pt.X("Dec").Y(32).Add();
                 }).Add();
         })
          //...
@@ -445,7 +445,7 @@ This feature is used to connect label and data point by using a line. It can be 
         {
             //Adding shapes to series1
             sr
-               .Marker(mr=>mr.DataLabel(dl=>dl
+               .Marker(mr=>mr.DataLabel(label=>label
                    // Set connector line type and customize the color
                    .ConnectorLine(cl=>cl.Color("black").Type(ConnectorType.Bezier))
                    ))
@@ -481,11 +481,11 @@ The following code example shows how to enable smart labels,
                            .EnableSmartLabels(true).StartAngle(145)
                                           .Marker(mr =>
                                           {
-                                              mr.DataLabel(db =>
+                                              mr.DataLabel(label =>
                                               {
-                                                  db.Visible(true).ConnectorLine(cl => cl.Color("black")
+                                                  label.Visible(true).ConnectorLine(cl => cl.Color("black")
                                                       .Height(60).Type(ConnectorType.Bezier)).Shape(ChartShape.None)
-                                                      .Font(fn => { fn.Size("14px"); });
+                                                      .Font(font => { font.Size("14px"); });
                                               });
                                           }).Name("Expenses").Type(SeriesType.Pie).Add();
                     })

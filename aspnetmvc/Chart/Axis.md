@@ -81,7 +81,7 @@ To display the labels after a fixed interval n, you can set the **Interval** pro
 
      .PrimaryXAxis(
           //Displaying labels after 2 intervals
-          px=>px.Range(ra=>ra.Interval(2))
+          axis=>axis.Range(range=>range.Interval(2))
      )
         // ...
     )
@@ -104,14 +104,14 @@ Category axis can also plot points based on index value of data points. Index ba
                 .Series(sr =>
                 {
                     //Adding Candle series
-                    sr.Points(pts=>{
-                        pts.X("Monday").Y(50).Add();
-                        pts.X("Tuesday").Y(40).Add();
-                        pts.X("Wednesday").Y(70).Add();
-                        pts.X("Thursday").Y(60).Add();
-                        pts.X("Friday").Y(50).Add();
-                        pts.X("Monday").Y(40).Add();
-                        pts.X("Monday").Y(30).Add();
+                    sr.Points(pt=>{
+                        pt.X("Monday").Y(50).Add();
+                        pt.X("Tuesday").Y(40).Add();
+                        pt.X("Wednesday").Y(70).Add();
+                        pt.X("Thursday").Y(60).Add();
+                        pt.X("Friday").Y(50).Add();
+                        pt.X("Monday").Y(40).Add();
+                        pt.X("Monday").Y(30).Add();
                     }) .Add();
                 })                
      )
@@ -162,7 +162,7 @@ To customize the range of an axis, you can use the **Range** property of the axi
 
      .PrimaryYAxis(
           //Customizing Y-axis range
-          px=>px.Range(ra=>ra.Min(0).Max(50))
+          px=>px.Range(range=>range.Min(0).Max(50))
      )
         // ...
     )
@@ -185,7 +185,7 @@ Axis interval can be customized by using the **Interval** property of the axis r
 
      .PrimaryYAxis(
           //Set interval to PrimaryYAxis
-          px=>px.Range(ra=>ra.Interval(5))
+          px=>px.Range(range=>range.Interval(5))
      )
         // ...
     )
@@ -310,8 +310,8 @@ By default the Y axis will be always calculated from the value 0 for column, bar
 
 {% highlight cshtml %}
 
-@(Html.EJ().Chart("chartcontainer")
-        .PrimaryYAxis(yaxis => yaxis.RangePadding(ChartRangePadding.None).StartFromZero(false))
+@(Html.EJ().Chart("container")
+        .PrimaryYAxis(axis => axis.RangePadding(ChartRangePadding.None).StartFromZero(false))
     )
 
 {% endhighlight %}
@@ -357,7 +357,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 
      .PrimaryXAxis(
           //Customizing X-axis date time range
-          px=>px.Range(ra=>ra.Min("2000/6/1").Max("2010/6/1"))
+          axis=>axis.Range(range=>range.Min("2000/6/1").Max("2010/6/1"))
      )
         // ...
  )
@@ -390,7 +390,7 @@ Essential Chart supports the following types of interval for date time axis.
 
      .PrimaryXAxis(
           //Customizing X-axis date time range
-          px=>px.Range(ra=>ra.Interval(2)).IntervalType(ChartIntervalType.Years)
+          axis=>axis.Range(range=>range.Interval(2)).IntervalType(ChartIntervalType.Years)
      )
         // ...
  )
@@ -489,8 +489,8 @@ DateTime category axis takes date time value as input but behaves like category 
 
 {% highlight cshtml %}
 
-    @(Html.EJ().Chart("chartcontainer")
-      .PrimaryXAxis(xaxis => xaxis.ValueType(AxisValueType.DateTimeCategory))
+    @(Html.EJ().Chart("container")
+      .PrimaryXAxis(axis => axis.ValueType(AxisValueType.DateTimeCategory))
     )
 
 {% endhighlight %}
@@ -505,10 +505,10 @@ Axis range can be customized by using the *range* property to set the **Minimum*
 
 {% highlight cshtml %}
 
-@(Html.EJ().Chart("chartcontainer")
+@(Html.EJ().Chart("container")
          .PrimaryXAxis(
           //Customizing X axis date time category range
-           xaxis => xaxis.Range(ra => ra.Min(0).Max(4)))
+           axis => axis.Range(range => range.Min(0).Max(4)))
     )
 
 {% endhighlight %}
@@ -531,8 +531,8 @@ Essential Chart supports the following types of interval for date time category 
 
 {% highlight cshtml %}
 
-    @(Html.EJ().Chart("chartcontainer")
-         .PrimaryXAxis(xaxis => xaxis.IntervalType(ChartIntervalType.Months))
+    @(Html.EJ().Chart("container")
+         .PrimaryXAxis(axis => axis.IntervalType(ChartIntervalType.Months))
     )
 
 {% endhighlight %}
@@ -578,7 +578,7 @@ Logarithmic range can be customized by using the Range property of the axis to c
 
      .PrimaryYAxis(
           //Customizing logarithmic range
-          px=>px.Range(ra=>ra.Min(1).Max(5))
+          px=>px.Range(range=>range.Min(1).Max(5))
      )
         // ...
  )
@@ -622,7 +622,7 @@ Logarithmic axis interval can be customized by using the Interval property of th
 
      .PrimaryYAxis(
           //Customizing logarithmic interval
-          px=>px.Range(ra=>ra.Interval(2))
+          px=>px.Range(range=>range.Interval(2))
               //....
      )
         // ...
@@ -941,7 +941,7 @@ The **Title** property in the axis provides options to customize the text and fo
 
      .PrimaryXAxis(
           //Customizing axis title
-          px=>px.Title(tl=>tl.EnableTrim(true)
+          px=>px.Title(title=>title.EnableTrim(true)
               .MaximumTitleWidth(80)
               .Text("Month")
               .Font(ft=>ft.Color("grey").
@@ -1294,9 +1294,9 @@ Axis can be customized with multiple levels of labels using the **MultiLevelLabe
 
 {% highlight cshtml %}     
 
-        @(Html.EJ().Chart("chartcontainer") 
-            .PrimaryXAxis(prx => prx.MultiLevelLabels(multiLevelLabels=> {
-                multiLevelLabels.Visible(true).Text("Quater 1").Start(-0.5).End(2.5).Add();
+        @(Html.EJ().Chart("container") 
+            .PrimaryXAxis(axis => axis.MultiLevelLabels(multiLevelLabels=> {
+                multiLevelLabels.Visible(true).Text("Quarter 1").Start(-0.5).End(2.5).Add();
            })
         ))  
 
@@ -1309,8 +1309,8 @@ The color, width and type of the border can be customized. The default border ty
 
 {% highlight cshtml %}
 
-     @(Html.EJ().Chart("chartcontainer")
-        .PrimaryXAxis(prx => prx.MultiLevelLabels(
+     @(Html.EJ().Chart("container")
+        .PrimaryXAxis(axis => axis.MultiLevelLabels(
             multiLevelLabels=> {multiLevelLabels. Border(br=>br.Type(MultiLevelLabelBorder.Brace).Width(2).Color("Black"))).Add();
          })
       ))  
@@ -1323,8 +1323,8 @@ The text of the labels can be customized using the **Text** and **Font** propert
 
 {% highlight cshtml %}
 
-       @(Html.EJ().Chart("chartcontainer")
-        .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {multiLevelLabels.Text("Year - 2015")
+       @(Html.EJ().Chart("container")
+        .PrimaryXAxis(axis =>axis.MultiLevelLabels(multiLevelLabels=> {multiLevelLabels.Text("Year - 2015")
             .Font(ft=> ft.FontFamily("Algerian").Size("12px").Color("Black")).Add();
         })
        ))  
@@ -1337,8 +1337,8 @@ You can change the alignment of the text to far, near and center position using 
 
 {% highlight cshtml %}
 
-        @(Html.EJ().Chart("chartcontainer")
-        .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {
+        @(Html.EJ().Chart("container")
+        .PrimaryXAxis(axis =>axis.MultiLevelLabels(multiLevelLabels=> {
             multiLevelLabels.TextAlignment(Alignment.Far).Add();
          })
         ))  
@@ -1351,8 +1351,8 @@ You can trim, wrap or wrapAndTrim the text if it exceeds the maximum text width 
 
 {% highlight cshtml %}
 
-       @(Html.EJ().Chart("chartcontainer")
-       .PrimaryXAxis(prx =>.MultiLevelLabels(multiLevelLabels=> {
+       @(Html.EJ().Chart("container")
+       .PrimaryXAxis(axis =>axis.MultiLevelLabels(multiLevelLabels=> {
         multiLevelLabels.TextOverflow(TextOverflow.Trim).MaximumTextWidth(40).Add();
        })
       ))  

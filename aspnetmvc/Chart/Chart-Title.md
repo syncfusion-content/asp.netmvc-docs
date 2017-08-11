@@ -137,7 +137,7 @@ You can change the SubTitle alignment to *Center*, *Far* and *Near* by using the
     @(Html.EJ().Chart("chartContainer")
           //...
 
-         .Title(tl = >tl
+         .Title(title = >title
               //...
               .SubTitle(st=>st
                    //Change subtitle text alignment
