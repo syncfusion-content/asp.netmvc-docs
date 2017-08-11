@@ -72,57 +72,57 @@ publicActionResult LocalDataBinding()
 
 {
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2013", value = "90", comparitiveMeasureValue = "100" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2013", value = "90", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2012", value = "93", comparitiveMeasureValue = "99" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2012", value = "93", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2011", value = "98", comparitiveMeasureValue = "96" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2011", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2010", value = "102", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2010", value = "102", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2009", value = "77", comparitiveMeasureValue = "96" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2009", value = "77", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2008", value = "99", comparitiveMeasureValue = "99" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2008", value = "99", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2007", value = "106", comparitiveMeasureValue = "94" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2007", value = "106", comparativeMeasureValue = "94" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2006", value = "105", comparitiveMeasureValue = "95" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2006", value = "105", comparativeMeasureValue = "95" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2005", value = "98", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2005", value = "98", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2004", value = "87", comparitiveMeasureValue = "100" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2004", value = "87", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2003", value = "105", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2003", value = "105", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2002", value = "84", comparitiveMeasureValue = "100" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2002", value = "84", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2001", value = "93", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2001", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "2000", value = "96", comparitiveMeasureValue = "101" });
+	lclbnd.Add(newBulletLocalDataBind { category = "2000", value = "96", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1999", value = "107", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1999", value = "107", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1998", value = "98", comparitiveMeasureValue = "101" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1998", value = "98", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1997", value = "92", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1997", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1996", value = "98", comparitiveMeasureValue = "96" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1996", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1995", value = "96", comparitiveMeasureValue = "107" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1995", value = "96", comparativeMeasureValue = "107" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1994", value = "92", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1994", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1993", value = "103", comparitiveMeasureValue = "92" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1993", value = "93", comparitiveMeasureValue = "98" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1991", value = "95", comparitiveMeasureValue = "96" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1991", value = "95", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1990", value = "103", comparitiveMeasureValue = "92" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1990", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1989", value = "102", comparitiveMeasureValue = "103" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1989", value = "102", comparativeMeasureValue = "103" });
 
-	lclbnd.Add(newBulletLocalDataBind { catagory = "1988", value = "112", comparitiveMeasureValue = "93" });
+	lclbnd.Add(newBulletLocalDataBind { category = "1988", value = "112", comparativeMeasureValue = "93" });
 
 	ViewBag.datasource = lclbnd;
 
@@ -147,7 +147,7 @@ Once the DataSource property is assigned with the required values, you can bind 
 
        fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-          .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+          .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
           .FeatureMeasure("value");
 
@@ -188,7 +188,7 @@ Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGrap
 
          fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-            .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+            .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
             .FeatureMeasure("value");
 
@@ -235,7 +235,7 @@ By default, 3 ranges are displayed in the BulletGraph control during the initial
 
        fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-          .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+          .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
           .FeatureMeasure("value");
 
@@ -302,7 +302,7 @@ You can do the following code changes in the quantitative scale to customize the
 
          fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-           .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+           .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
            .FeatureMeasure("value");
 
@@ -370,7 +370,7 @@ You can add the following code example to display an appropriate Caption and Sub
 
          fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-           .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+           .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
            .FeatureMeasure("value");
 
@@ -456,7 +456,7 @@ You can use a Tooltip in your application to display the values of forecasted ra
 
          fie.Datasource((IEnumerable<BulletLocalDataBind>)ViewBag.datasource)
 
-           .Category("category").ComparativeMeasure("comparitiveMeasureValue")
+           .Category("category").ComparativeMeasure("comparativeMeasureValue")
 
            .FeatureMeasure("value");
 

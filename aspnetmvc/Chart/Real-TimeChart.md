@@ -21,7 +21,7 @@ N> You can get the chart **instance** using instance method.
         //Rendering empty Chart without data
       .Series(sr =>
       {
-          sr.Points(pts =>
+          sr.Points(pt =>
           {
               
           }).Add();
