@@ -28,7 +28,7 @@ N> For the **OHLC** type series, you have to map four dataSource fields *High, L
           //Add series
           sr.Type(SeriesType.Line).Add();
       })
-      .Load("onchartload")
+      .Load("onChartLoad")
       //...
  )
  
@@ -43,7 +43,7 @@ var chartData = [
           { month: 'Jul', sales: 35 },  { month: 'Aug', sales: 55 }, { month: 'Sep', sales: 38 },
           { month: 'Oct', sales: 30 }, { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }];
           
-    function onchartload(sender) {
+    function onChartLoad(sender) {
         var data = GetData();
         sender.model.series[0].dataSource = chartData;
         sender.model.series[0].xName = "month";
@@ -69,13 +69,13 @@ var chartData = [
       {
           sr
               //Adding data points using x and y field of points
-            .Points(pts =>
+            .Points(pt =>
             {
-                pts.X("John").Y(10000).Add();
-                pts.X("Jake").Y(12000).Add();
-                pts.X("Petter").Y(18000).Add();
-                pts.X("James").Y(11000).Add();
-                pts.X("Mary").Y(9700).Add();
+                pt.X("John").Y(10000).Add();
+                pt.X("Jake").Y(12000).Add();
+                pt.X("Petter").Y(18000).Add();
+                pt.X("James").Y(11000).Add();
+                pt.X("Mary").Y(9700).Add();
             }).Add();
       })
         
@@ -153,16 +153,16 @@ N> All the properties in EjChart supports one way AngularJS binding except inner
 
        //Data source for chart.
         var obj = [
-                { "Day": 1, "John": 57, "Hendry": 43 },
-                { "Day": 2, "John": 73, "Hendry": 27 },
-                { "Day": 3, "John": 49, "Hendry": 51 },
-                { "Day": 4, "John": 63, "Hendry": 37 },
-                { "Day": 5, "John": 44, "Hendry": 56 },
-                { "Day": 6, "John": 49, "Hendry": 51 },
-                { "Day": 7, "John": 61, "Hendry": 39 },
-                { "Day": 8, "John": 35, "Hendry": 65 },
-                { "Day": 9, "John": 45, "Hendry": 55 },
-                { "Day": 10, "John": 37, "Hendry": 63 }
+                { "Day": 1, "John": 57, "Hendrik": 43 },
+                { "Day": 2, "John": 73, "Hendrik": 27 },
+                { "Day": 3, "John": 49, "Hendrik": 51 },
+                { "Day": 4, "John": 63, "Hendrik": 37 },
+                { "Day": 5, "John": 44, "Hendrik": 56 },
+                { "Day": 6, "John": 49, "Hendrik": 51 },
+                { "Day": 7, "John": 61, "Hendrik": 39 },
+                { "Day": 8, "John": 35, "Hendrik": 65 },
+                { "Day": 9, "John": 45, "Hendrik": 55 },
+                { "Day": 10, "John": 37, "Hendrik": 63 }
         ];
         
         

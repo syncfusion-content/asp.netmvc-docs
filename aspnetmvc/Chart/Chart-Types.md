@@ -151,8 +151,8 @@ You can change the color of the line segments by using the *Fill* property of th
                 .Series(sr =>
                 {
                     //Adding Candle series
-                    sr.Points(pts=>{
-                        pts.Fill("red").Add();
+                    sr.Points(pt=>{
+                        pt.Fill("red").Add();
                     }) .Add();
                 })  
              //...              
@@ -632,7 +632,7 @@ Corners of the column chart can be customized by setting value to the **CornerRa
 {% highlight cshtml %}
 
     @(Html.EJ().Chart("container")
-        .CommonSeriesOptions(cr => cr.CornerRadius(20)
+        .CommonSeriesOptions(options => options.CornerRadius(20)
      ))
 
 {% endhighlight %}
@@ -2026,7 +2026,7 @@ You can change the scatter size by using the **Size** property of the series mar
     
      .Series(sr =>
      {
-             sr.Marker(mr=>mr.Size(sz=>sz.Height(15).Width(15)))
+             sr.Marker(marker=>marker.Size(size=>size.Height(15).Width(15)))
              //Set fill color to scatter series
              .Fill("#41F282")
             //...
@@ -2581,8 +2581,8 @@ EjChart can generate Error bar for Cartesian type series *(Line, Column, Bar, Sc
         .Series(sr =>
                {
                   //To toggle the error bar visibility
-                 sr.ErrorBar(er =>
-                           er.Visible("visible")).Add();
+                 sr.ErrorBar(era =>
+                           era.Visible("visible")).Add();
                   
              })            
           //...          
@@ -2609,8 +2609,8 @@ You can change the error bar rendering type using **Type** *(like FixedValue, Pe
         .Series(sr =>
                {
                   //To change the error bar type
-                 sr.ErrorBar(er =>
-                    er.Type(ErrorBarType.FixedValue)
+                 sr.ErrorBar(era =>
+                    era.Type(ErrorBarType.FixedValue)
                     .VerticalErrorValue(3)).Add();
              })            
         //...          
@@ -2634,8 +2634,8 @@ To customize the error bar type, set error bar Type as **Custom** and then chang
         .Series(sr =>
                {
                   //To change the error bar type. 
-                 sr.ErrorBar(er =>
-                           er.Type(ErrorBarType.Custom)
+                 sr.ErrorBar(era =>
+                           era.Type(ErrorBarType.Custom)
                               .VerticalPositiveErrorValue(5)
                               .HorizontalPositiveErrorValue(1)
                               .VerticalNegativeErrorValue(5)
@@ -2663,8 +2663,8 @@ Error bar mode is used to define whether the error bar line has to be drawn *Hor
         .Series(sr =>
                {
                   //To change the error bar mode. 
-                 sr.ErrorBar(er =>
-                           er.Type(ErrorBarType.FixedValue)
+                 sr.ErrorBar(era =>
+                           era.Type(ErrorBarType.FixedValue)
                              .Mode(ErrorBarMode.Vertical)).Add();
              })            
         //...          
@@ -2686,8 +2686,8 @@ You can change the error bar direction to plus, minus or both side using ErrorBa
         .Series(sr =>
                {
                   //To change the error bar direction 
-                 sr.ErrorBar(er =>
-                           er.Type(ErrorBarType.FixedValue)
+                 sr.ErrorBar(era =>
+                           era.Type(ErrorBarType.FixedValue)
                              .Mode(ErrorBarMode.Vertical)
                              .Direction(ErrorBarDirection.Minus)).Add();
              })            
@@ -2712,9 +2712,9 @@ To customize the errorBar cap visibility, length, width and fill color, you can 
         .Series(sr =>
                {
                //To customize the error bar cap
-                 sr.ErrorBar(er =>
-                           er.Cap(cp=>
-                                   cp.Visible(true)
+                 sr.ErrorBar(era =>
+                           era.Cap(cap=>
+                                   cap.Visible(true)
                                     .Length((20),
                                     .Width(1),
                                     .Fill(“#000000”))).Add();
@@ -2730,7 +2730,7 @@ To customize the errorBar cap visibility, length, width and fill color, you can 
 ## Box and Whisker Chart 
 
 To render a Box and Whisker Chart, set the series *type* as **boxandwhisker** .Box and Whisker chart requires
-2 fields (x and y) to plot a segment. The feild y requires n number of data or it should  contain minimum of five values to plot a segment.
+2 fields (x and y) to plot a segment. The field y requires n number of data or it should  contain minimum of five values to plot a segment.
 
 {% highlight cshtml %}
 
@@ -2808,8 +2808,8 @@ Outlier symbol, width and height can be customized using outlierSettings through
         //...
         .Series(sr =>
             {
-                .OutlierSettings(ot=>ot.Shape(ChartShape.Triangle)
-                .Size(sz=>sz.Height(10).Width(10))).Add(); 
+                .OutlierSettings(outlier=>outlier.Shape(ChartShape.Triangle)
+                .Size(size=>size.Height(10).Width(10))).Add(); 
             })
         //...
 )

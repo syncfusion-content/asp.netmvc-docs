@@ -41,7 +41,7 @@ You can also set the chart dimension by using the **Size** property of the chart
             // ...
          
            //Set size to chart container
-           .Size(sz=>sz.Height("450").Width("600"))
+           .Size(size=>size.Height("450").Width("600"))
     )
 
 
@@ -62,7 +62,7 @@ You can specify the chart size in percentage by using the Size property. The cha
            // ...
          
            //Set size to chart container
-           .Size(sz=>sz.Height("90%").Width("80%"))
+           .Size(size=>size.Height("90%").Width("80%"))
      )
   </div>
 

@@ -24,13 +24,13 @@ In client-side rendered chart can be exported as PNG image or as SVG file.
      <!--Chart download link-->
     <a id="download" style="cursor: pointer; position: absolute;right: 150px;">ExportChart</a>
 
-        @(Html.EJ().Chart("chartcontainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
+        @(Html.EJ().Chart("container").ChartArea(area => area.Border(ab => ab.Color("transparent")))
               .EnableCanvasRendering(true)
               .ExportSettings(ex =>ex.FileName("ChartSnapshot").Type(ChartExportingType.PNG)))
 
     <script>
         function download() {
-            var canvas = $("#chartcontainer").ejChart("export");
+            var canvas = $("#container").ejChart("export");
             this.href = canvas;
         }
         if (document.getElementById('download').addEventListener)
@@ -73,7 +73,7 @@ To convert the chart data from client to server-side, refer to the following ste
       <!--Export Chart-->
         <button onclick="download()" value="Export">Export</button>
 
-     @(Html.EJ().Chart("chartcontainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
+     @(Html.EJ().Chart("container").ChartArea(area => area.Border(ab => ab.Color("transparent")))
               .EnableCanvasRendering(true)
               .ExportSettings(ex => ex.Type(ChartExportingType.JPG).Action("ExportToImage").Mode(ChartExportingMode.Server))
               )
@@ -81,7 +81,7 @@ To convert the chart data from client to server-side, refer to the following ste
     <script>
         //Export chart to excel
         function download() {
-            $("#chartcontainer").ejChart("export");
+            $("#container").ejChart("export");
         }
 
     </script>
@@ -175,13 +175,13 @@ public void ExportChart(string Data, string ChartModel)
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             IEnumerable div = (IEnumerable)serializer.Deserialize(ChartModel, typeof(IEnumerable));
             ChartProperties chartProp = new ChartProperties();
-            foreach (KeyValuePair<string, object> ds in div)
+            foreach (KeyValuePair<string, object> d in div)
             {
-                var property = chartProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
+                var property = chartProp.GetType().GetProperty(d.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
                 if (property != null)
                 {
                     Type type = property.PropertyType;
-                    string serialize = serializer.Serialize(ds.Value);
+                    string serialize = serializer.Serialize(d.Value);
                     object value = serializer.Deserialize(serialize, type);
                    property.SetValue(chartProp, value, null);
                 }
@@ -276,7 +276,7 @@ EjChart provides options to customize the name of the file to be exported. This 
 We can also rotate the chart and can export it. Possible angles of rotation are 0, 90, -90 and 180 degree. This can be achieved by setting values to the “angle” property in exporting.
 
 {% highlight cshtml %}
-     @(Html.EJ().Chart("chartcontainer")
+     @(Html.EJ().Chart("container")
               .ExportSettings(ex => ex.Angle(180).Action("ExportToImage"))
       )
 

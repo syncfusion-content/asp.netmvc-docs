@@ -21,7 +21,7 @@ Tooltip for the data points can be enabled by using the *Visible* option of the 
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Enable tooltip for the series
                              .Visible(true)
                              ).Add();
@@ -47,7 +47,7 @@ You can also use * **#series.<optionname>#** * as placeholder to display the val
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Displaying tooltip in a format
                              .Format("#series.name# <br/> #point.x# : #point.y#  (g/kWh)")
                              ).Add();
@@ -87,7 +87,7 @@ You can also use * **#series.<optionname>#** * as place holder to display the va
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Set template id to tooltip template
                              .Template("Tooltip")
                              ).Add();
@@ -116,7 +116,7 @@ N> Tooltip is animated only if the template is specified for tooltip.
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Enable tooltip template animation and set duration time
                              .EnableAnimation(true).Duration("1000ms")
                              ).Add();
@@ -140,7 +140,7 @@ The *Fill* and *Border* options are used to customize the background color and b
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Change tooltip color and border
                              .Fill("#FF9933")
                              .Border(br => br.Color("#993300").Width(1))
@@ -166,7 +166,7 @@ The options *RX* and *RY* are used to customize the corner radius of the tooltip
           //...
           .Series(ser =>
                       {
-                         ser.Tooltip(tl=>tl
+                         ser.Tooltip(tooltip=>tooltip
                              //Customize the corner radius of the tooltip rectangle.
                              .RX(50).RY(50)
                              // ...
@@ -200,7 +200,7 @@ N> Pinch zooming is supported only in browsers that support multi-touch gestures
 
      @(Html.EJ().Chart("chartContainer")
           //...
-       .Zooming(zm=>zm
+       .Zooming(zoom=>zoom
            //Enable zooming in chart
            .Enable(true)
            )
@@ -230,7 +230,7 @@ The *Type* option in zooming specifies whether the chart is allowed to scale alo
 
      @(Html.EJ().Chart("chartContainer")
           //...
-       .Zooming(zm=>zm
+       .Zooming(zoom=>zoom
            .Enable(true)
            //Enable horizontal zooming
            .Type("x")
@@ -253,7 +253,7 @@ The user can choose the items displayed in the zooming toolbar by specifying the
      @(Html.EJ().Chart("container")       
         //Customizing zooming toolbar
         .Zooming(
-             zm => zm.Enable(true).ToolbarItems (new List<string>() 
+             zoom => zoom.Enable(true).ToolbarItems (new List<string>() 
                     {"reset”, “zoomIn", "zoomOut"})
                  )            
         //...          
@@ -274,7 +274,7 @@ EjChart provides scrollbar support to view the other portions of chart area whic
      @(Html.EJ().Chart("container")       
         //Customizing zooming toolbar
         .Zooming(
-             zm => zm.Enable(true)
+             zoom => zoom.Enable(true)
                  .EnableScrollbar(true)
                  )            
         //...          
@@ -300,16 +300,16 @@ Crosshair can be enabled by using the **Visible** option in the Crosshair. Cross
      @(Html.EJ().Chart("chartContainer")
           //...
           
-          .PrimaryXAxis(prx=>prx.CrosshairLabel(csl=>csl
+          .PrimaryXAxis(axis=>axis.CrosshairLabel(label=>label
               //Enable crosshairLabel to X-Axis
               .Visible(true))
               )
-          .PrimaryYAxis(pry=>pry.CrosshairLabel(csl=>csl
+          .PrimaryYAxis(axis=>axis.CrosshairLabel(label=>label
               //Enable crosshairLabel to Y-Axis
               .Visible(true))
               )
           //Initializing Crosshair
-          .Crosshair(crh=>crh.Visible(true))
+          .Crosshair(crosshair=>crosshair.Visible(true))
           //...
      )
 
@@ -332,16 +332,16 @@ The *Fill* and *Border* options of the **CrosshairLabel** is used to customize t
      @(Html.EJ().Chart("chartContainer")
           //...
           
-          .PrimaryYAxis(pry=>pry.CrosshairLabel(csl=>csl
+          .PrimaryYAxis(axis=>axis.CrosshairLabel(label=>label
               //Customizing the crosshair label background color and border
               .Fill("red").Border(br=>br.Color("green").Width(2))
               ))
               
           //Initializing Crosshair
-          .Crosshair(crh=>crh
+          .Crosshair(crosshair=>crosshair
               .Visible(true)
               //Customizing the crosshair line
-              .Line(lin=>lin.Color("grey").Width(2))
+              .Line(line=>line.Color("grey").Width(2))
               )
           //...
      )
@@ -367,7 +367,7 @@ Trackball can be enabled by setting the *Visible* option of the crosshair to *Tr
           //...
          
           //Initializing Crosshair
-          .Crosshair(crh=>crh
+          .Crosshair(crosshair=>crosshair
               .Visible(true)
               //Change crosshair type to trackball
               .Type(CrosshairType.Trackball)
@@ -394,14 +394,14 @@ Shape and size of the trackball marker can be customized by using the *Shape* an
           //...
          
           //Initializing Crosshair
-          .Crosshair(crh=>crh
+          .Crosshair(crosshair=>crosshair
               .Visible(true)
               //Customize the trackball line color and width
               .Line(lin=>lin.Color("#800000").Width(2))
               //Customize the trackball marker shape size and visibility
               .Marker(mr=>mr
                   //Enable/disable trackball marker
-                  .Visible(true).Shape(ChartShape.Pentagon).Size(sz=>sz.Width(9).Height(9))
+                  .Visible(true).Shape(ChartShape.Pentagon).Size(size=>size.Width(9).Height(9))
               )
           //...
         )
@@ -423,11 +423,11 @@ X and Y values displayed in the trackball tooltip are formatted based on its axi
           //...
           
           //Add format to crosshair label
-         .PrimaryXAxis(prx=>prx.LabelFormat("MMM, yyyy"))
-         .PrimaryYAxis(pry=>pry.LabelFormat("{value}K"))
+         .PrimaryXAxis(axis=>axis.LabelFormat("MMM, yyyy"))
+         .PrimaryYAxis(axis=>axis.LabelFormat("{value}K"))
          
           //Initializing Crosshair
-          .Crosshair(crh=>crh
+          .Crosshair(crosshair=>crosshair
               .Visible(true)
               //...
           )
@@ -448,8 +448,8 @@ You can able to show the trackball tooltip in two modes, using trackballTooltipS
 
 @(Html.EJ().Chart("chartContainer")
    //  ..
-               .Crosshair(zn => zn.Visible(true).type(CrosshairType.Trackball)
-                   .TrackballTooltipSettings(tl => tl.Rx(“3”)
+               .Crosshair(crosshair => crosshair.Visible(true).type(CrosshairType.Trackball)
+                   .TrackballTooltipSettings(trackball => trackball.Rx(“3”)
                    .Ry(“3”).Fill(“whitesmoke”).Mode(TrackballDisplayMode.Grouping)
                    .Border(br => br.Width(“1”).Color(“grey”)))
   //  ..
@@ -477,7 +477,7 @@ N> When hovering mouse on the data points, the corresponding series legend also 
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                       // enable the highlight settings
                       .Enable(true)).Add();
           })
@@ -512,7 +512,7 @@ To highlight all the data points of the specified series, you can set the **Seri
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                       //Change highlight mode
                       .Mode(ChartMode.Series)
                       ).Add();
@@ -538,7 +538,7 @@ To highlight a single point, you can set the **Point** value to the *Mode* optio
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                       //Change highlight mode
                       .Mode(ChartMode.Point)
                       ).Add();
@@ -564,7 +564,7 @@ To highlight the points that corresponds to the same index in all the series, se
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                       //Change highlight mode
                       .Mode(ChartMode.Cluster)
                       ).Add();
@@ -590,7 +590,7 @@ To customize the highlighted series, use the *Color*, *Border* and *Opacity* opt
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                         //Customizing styles
                         .Border(br=>br.Color("red").Width(1.5))
                         .Opacity(0.5).Color("green")
@@ -637,7 +637,7 @@ EjChart provides pattern support for highlighting the data by setting the value 
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                        .Pattern(ChartPattern.Chessboard)
                       ).Add();
           })
@@ -670,7 +670,7 @@ To create a custom pattern for the highlighting data points, set the pattern typ
           .Series(sr =>
           {
               sr
-                  .HighlightSettings(hs => hs
+                  .HighlightSettings(highlight => highlight
                       //Add custom pattern for highlighting data
                       .Pattern(ChartPattern.Custom)
                       .CustomPattern("dots_a")
@@ -866,7 +866,7 @@ To select a data point or a series on mouse click based on the **SelectionSettin
         .CommonSeriesOptions(
 
           cm => cm.SelectionSettings(
-              hs => hs.Enable(true)                   
+              selection => selection.Enable(true)                   
                   //Selection mode is series or point ,cluster 
                   .Mode(ChartMode.Series)
                   //Selection type is single
@@ -892,7 +892,7 @@ For selecting multiple data points or series on mouse click, set **SelectionSett
 
           cm => cm.SelectionSettings(
 
-               hs => hs.Enable(true)                   
+               selection => selection.Enable(true)                   
                   //Selection mode is series or point, cluster
                   .Mode(ChartMode.Series)
                   //Selection type is multiple
@@ -1089,8 +1089,8 @@ EjChart provides support to change the location of the rendered points. This can
 
 {% highlight cshtml %}
 
-@(Html.EJ().Chart("chartcontainer")
-          .CommonSeriesOptions(cm => cm.DragSettings(dr => dr.Enable(true)))
+@(Html.EJ().Chart("container")
+          .CommonSeriesOptions(options => options.DragSettings(drag => drag.Enable(true)))
     )
 
 {% endhighlight %}
@@ -1105,8 +1105,8 @@ To drag the point along x and y axes, you can specify **type** as xy in *dragSet
 
 {% highlight cshtml %}
 
-@(Html.EJ().Chart("chartcontainer")
-          .CommonSeriesOptions(cm => cm.DragSettings(dr => dr.Type(DragType.Y)))
+@(Html.EJ().Chart("container")
+          .CommonSeriesOptions(options => options.DragSettings(drag => drag.Type(DragType.Y)))
     )
 
 {% endhighlight %}

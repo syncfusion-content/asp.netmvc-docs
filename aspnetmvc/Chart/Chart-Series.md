@@ -65,10 +65,10 @@ The following code example explains on how to enable marker, tooltip and animati
 
       // ...
       //Initializing Common Properties for all the series
-      .CommonSeriesOptions(cso=>cso.Type(SeriesType.Line).EnableAnimation(true)
-          .Border(br=>br.Width(2))
-          .Marker(mr=>mr.Visible(true).Shape(ChartShape.Circle).Size(sz=>sz.Height(10).Width(10)))
-          .Tooltip(tl=>tl.Visible(true).Template("Tooltip")))
+      .CommonSeriesOptions(options=>options.Type(SeriesType.Line).EnableAnimation(true)
+          .Border(border=>border.Width(2))
+          .Marker(marker=>marker.Visible(true).Shape(ChartShape.Circle).Size(size=>size.Height(10).Width(10)))
+          .Tooltip(tooltip=>tooltip.Visible(true).Template("Tooltip")))
      //Adding Multiple Series
      .Series(sr =>
      {

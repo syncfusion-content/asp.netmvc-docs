@@ -110,13 +110,13 @@ To split the chart area horizontally into a number of columns, use ColumnDefinit
 
       // ...
         //  Splitting chart area into multiple columns
-      .ColumnDefinitions(cd =>
+      .ColumnDefinitions(cdn =>
       {
-          cd
+          
               //  Split first column of the chart area
               .Unit("percentage").ColumnWidth(50).Add();
           //  Split second column of the chart area
-          cd.Unit("percentage").ColumnWidth(50).Add();
+          cdn.Unit("percentage").ColumnWidth(50).Add();
       })
       
       .Axes(ax =>
@@ -151,11 +151,11 @@ For spanning the horizontal axis along multiple panes horizontally, you can use 
 
       // ...
       //  Splitting chart area into multiple columns
-      .ColumnDefinitions(cd =>
+      .ColumnDefinitions(cdn =>
       {
         //...
       })
-      .PrimaryXAxis(prx=>prx
+      .PrimaryXAxis(axis=>axis
           //  Span the PrimaryXAxis    
           .Name("xAxis1").ColumnSpan(2)
           )
