@@ -55,7 +55,7 @@ DateRangePicker
 
 Start Date can be selected from any calendar in the popup of DateRangePicker. The date which is selected in the calendar in any following cases will be considered as StartDate of a date range,
 
-1. Click on empty calendar (with no start date, range, end date)
+1. Click on any date in an calendar of daterange popup where there is no selection in calendars.
 
 2. Click on date which is lesser than existing start date
 
@@ -72,7 +72,7 @@ Start Date of range can be set using API called **StartDate**, please refer the 
 
         {% endhighlight %}
    
-StartDate can be set to popup, by entering the date value into first input box in popup also.
+And also, StartDate can be set to popup, by entering the date value into first input box in popup.
 
 
 ## End Date

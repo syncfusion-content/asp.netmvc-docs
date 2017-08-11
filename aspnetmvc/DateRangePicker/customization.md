@@ -18,6 +18,7 @@ Height and width of the DateRangePicker can be changed using corresponding API (
 
 Add the following code in your CSHTML page to render DateRangePicker with customized **Height** and **Width**.
 
+   
    ~~~ cshtml
     @*Add the following code example to the corresponding CSHTML page to render DateRangePicker widget with customized height and width*@
         
@@ -52,16 +53,19 @@ The value of DateRangePicker can be sustained even after form post back and page
 The DateRangePicker Model value will be stored in local storage / cookies of browser before page refreshes and reinitialized with the restored model after refresh.
 
 
-## Preser Ranges
+## Preset Ranges
 
 We can make use of **Ranges** API for easy selection of preset ranges from the popup. Each preset range will have a label which will be displayed on the right side of the popup with user-defined name. By clicking the labels the associated date ranges will get updated in the popup, automatically.
    
 ~~~ cshtml
     @*Add the following code example to the corresponding CSHTML page to enable state persistence in DateRangePicker widget*@
 
-    @{List<Object> Special = new List<Object>() { new DateTime(2016, 5, 11), new DateTime(2016, 5, 15) };}
+    @{List<Object> lastweek = new List<Object>() { DateTime.Today.AddDays(-7),DateTime.Today.AddDays(-1)};}
+    @{List<Object> lastmonth = new List<Object>() { DateTime.Today.AddMonths(-1), DateTime.Today.AddDays(-1) };}
+    @{List<Object> lastyear = new List<Object>() { DateTime.Today.AddYears(-1), DateTime.Today.AddDays(-1) };}
+    @{List<Object> special = new List<Object>() { "12/25/2017", "1/1/2018" };}
 
-    @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Special Week").Range(Special)).Width("60%")
+    @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Last Week").Range(lastweek)).Ranges(p => p.Add().Label("Last Month").Range(lastmonth)).Ranges(m=>m.Add().Label("Last Year").Range(lastyear)).Ranges(n => n.Add().Label("Special Week").Range(special)).Width("60%")
 ~~~
 
 Execute the above code to render the following output.

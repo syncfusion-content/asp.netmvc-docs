@@ -35,13 +35,12 @@ Add the following code in your CSHTML page to render DateRangePicker with value.
 
 ## Seperator
 
-Separator will be “- “by default and this can be changed using API called **Separator**. Please check with below code example to setting/changing the separator using **Separator** API. The value of the DateRangePicker popup will be presented with two date strings which is separated by **Separator** 
-(e.g “11/1/2016 - 11/2/2017”).
+The value of the DateRangePicker popup will be presented with two date strings which is separated by **Separator** (e.g “11/1/2016 - 11/2/2017”).By default , the symbol "-" which seperates the two date strings of the value and this can be changed using API called **Separator**. Please check with below code example to setting/changing the separator using **Separator** API.
 
 Add the following code in your CSHTML page to render DateRangePicker widget with value seperated by separator.
 
    ~~~ cshtml
-    @Html.EJ().DateRangePicker("DateRangePick").Value("7/31/2017 - 8/31/2017").Width("25%").Separator("$")
+    @Html.EJ().DateRangePicker("DateRangePick").Value("7/31/2017 $ 8/31/2017").Width("25%").Separator("$")
    ~~~
 
 Execute the above code to render the following output.

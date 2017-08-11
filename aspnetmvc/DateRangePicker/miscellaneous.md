@@ -11,28 +11,28 @@ documentation: ug
 
 Editing in input box can be disabled by setting the false value to **AllowEdit** API. By default this property will be true and we can edit the value in input box.
 
-~~~ cshtml
-	
+    ~~~ cshtml
+        
     @Html.EJ().DateRangePicker("DateRange").AllowEdit(false)
 
-   ~~~  
+    ~~~  
+   
 
 # Enable/Disable
 
 The control can be enabled / disabled using public methods, **enable** or **disable**.
 
- ~~~ cshtml
+~~~ cshtml
 	
     @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2016").ClientSideEvents(p => p.Create("Create"))
 
     <script>
     //Create event triggers after DateRangePicker created successfully.
-     function Create() {
+        function Create() {
             $("#DateRange").ejDateRangePicker('disable');
-        } 
+            } 
     </script>
-
-   ~~~  
+~~~  
 
 ## Clear Ranges
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # DateRangePicker
 
-The Essential ASP.NET MVC DateRangePicker control allows the user to select two dates from two calendars in the popup to form the date ranges. Also, DateRangePicker has the flexible options which provides the easiest way to get the details within the date ranges in application.
+The Essential ASP.NET MVC DateRangePicker control allows the user to select datee range from two calendars in the popup. Also, DateRangePicker has the flexible options which provides the easiest way to get the details within the date ranges in application.
 
 ## Key Features
 
