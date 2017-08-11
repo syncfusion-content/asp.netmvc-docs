@@ -25,7 +25,7 @@ In the above screenshot, you can see the start date and end date selection of a 
 
 ## Create a DateRangePicker 
 
-ASP.NET MVC DateRangePicker widget basically renders with built-in features like calendar to calendar navigation with animations and flexible APIs. You can easily create the DateRangePicker widget using simple DateRangePicker elements as follows.
+ASP.NET MVC DateRangePicker widget basically renders with built-in features like navigation between two calendars in popup with animations and flexible APIs. You can easily create the DateRangePicker widget using simple DateRangePicker elements as follows.
 
 1. Create an MVC Project, add necessary assemblies and scripts.
 
