@@ -31,7 +31,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 		<div class="editors">
 
-		<div class="ele-txt" style="">Electricity Bill Calculator</div>
+		<div class="elementText" style="">Electricity Bill Calculator</div>
 
 		<br />
 
@@ -105,7 +105,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 			 </tbody></table>
 
-		  <div class="paybill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
+		  <div class="payBill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
 		  </div>
 
@@ -121,7 +121,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 		<style type="text/css" class="cssStyles">
 
-			.ele-txt
+			.elementText
 
 			{
 
@@ -161,7 +161,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 				}
 
-			.paybill
+			.payBill
 
 			{
 
@@ -201,7 +201,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Currency, Perce
 
 <div class="editors">
 
-<div class="ele-txt" style="">Electricity Bill Calculator</div>
+<div class="elementText" style="">Electricity Bill Calculator</div>
 
 <br />
 
@@ -271,7 +271,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Currency, Perce
 
 </table>
 
-  <div class="paybill">
+  <div class="payBill">
 
     @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
@@ -294,7 +294,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 {% highlight html %}
 <div class="editors">
 
-<div class="ele-txt" style="">ElectricityBill Calculator</div><br />
+<div class="elementText" style="">ElectricityBill Calculator</div><br />
 
 <table class="editors">
 
@@ -366,7 +366,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 </table>
 
-  <div class="paybill">
+  <div class="payBill">
 
 		@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").
 
@@ -391,7 +391,7 @@ To customize the button, you can set the ContentType as TextAndImage to include 
 
 @* Please refer the table format for textboxes customization *@
 
-  <div class="paybill">
+  <div class="payBill">
 
    @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ClientSideEvents(c=>c.Click("calculateBill"))
 
@@ -407,27 +407,27 @@ function calculateBill() {
 
         // Declares Necessary variable creation 
 
-        var kmcalc, servtax, amuntperkm;
+        var unitMetre, serviceTax, amountPerKm;
 
-        umcalc = $("#numeric").data("ejNumericTextbox");// Object of Numeric 
+        unitMetre = $("#numeric").data("ejNumericTextbox");// Object of Numeric 
 
-        servtax = $("#percent").data("ejPercentageTextbox");// Object of Percentage
+        serviceTax = $("#percent").data("ejPercentageTextbox");// Object of Percentage
 
-        amuntperkm = $("#currency").data("ejCurrencyTextbox"); // Object of Currency
+        amountPerKm = $("#currency").data("ejCurrencyTextbox"); // Object of Currency
 
-        cusmob = $("#maskedit").data("ejMaskEdit"); // Object of MaskEdit        
+        mobileNumber = $("#maskedit").data("ejMaskEdit"); // Object of MaskEdit        
 
         // This is used to calculate the Net amount
 
-        var netamunt = umcalc.model.value * amuntperkm.model.value;
+        var netAmount = unitMetre.model.value * amountPerKm.model.value;
 
         // This is used to calculate the service tax amount
 
-        var sTax = (netamunt * servtax.model.value) / 100;
+        var sTax = (netAmount * serviceTax.model.value) / 100;
 
         // This shows the calculated amount for the units
 
-        alert("The amount $" + (netamunt + sTax) + " has been sent as message to " + cusmob.model.value + ".");
+        alert("The amount $" + (netAmount + sTax) + " has been sent as message to " + mobileNumber.model.value + ".");
 
     }
 
@@ -440,4 +440,3 @@ Run the above code sample, fill the required Textbox fields and click the Calcul
 
 Electricity bill calculator with alert
 {:.caption}
-

@@ -43,8 +43,8 @@ The following code example shows the way to export single appointment from the S
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2014, 6, 2))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu)))
-        .ScheduleClientSideEvents(evt => evt.MenuItemClick("onMenuItemClick"))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu)))
+        .ScheduleClientSideEvents(event => event.MenuItemClick("onMenuItemClick"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -101,7 +101,7 @@ The following code example depicts the way to export all the Scheduler appointme
             .RecurrenceRule("RecurrenceRule"))
 )
 
-@(Html.EJ().Button("export").Text("Export").ClientSideEvents(evt => evt.Click("onClick")))
+@(Html.EJ().Button("export").Text("Export").ClientSideEvents(event => event.Click("onClick")))
 
 
 {% endhighlight %}
@@ -157,7 +157,7 @@ The following code example depicts the way to export the Scheduler with appointm
         .AllDay("AllDay")
         .Recurrence("Recurrence"))
 )
-@Html.EJ().Button("submit").Text("Export").Width("80px").Height("30px").ClientSideEvents(cli => cli.Click("onPDFExport"))
+@Html.EJ().Button("submit").Text("Export").Width("80px").Height("30px").ClientSideEvents(event => event.Click("onPDFExport"))
 
 {% endhighlight %}
 
@@ -384,7 +384,7 @@ The following code example shows the way to print the entire Scheduler, by keepi
             .RecurrenceRule("RecurrenceRule"))
 )
 
-@Html.EJ().Button("print").Text("Print").ClientSideEvents(evt => evt.Click("onClick"))
+@Html.EJ().Button("print").Text("Print").ClientSideEvents(event => event.Click("onClick"))
 
 
 {% endhighlight %}
@@ -425,7 +425,7 @@ The following code example depicts the way to print a particular appointment.
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2014, 6, 2))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu)))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu)))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -458,8 +458,8 @@ For example, here the below code example depicts the way to print the particular
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 9))
-        .ScheduleClientSideEvents(evt =>
-         evt.AppointmentClick("onAppointmentClick"))
+        .ScheduleClientSideEvents(event =>
+         event.AppointmentClick("onAppointmentClick"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -490,7 +490,7 @@ Refer the following code example to import the appointments into Scheduler.
 
 {% highlight razor %}
 
-@Html.EJ().Button("submit").Text("Submit").ClientSideEvents(evt => evt.Click("ScheduleImport"))
+@Html.EJ().Button("submit").Text("Submit").ClientSideEvents(event => event.Click("ScheduleImport"))
 @(Html.EJ().Schedule("Schedule1")
         .Width("100%")
         .Height("525px")

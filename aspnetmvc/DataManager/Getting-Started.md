@@ -44,7 +44,7 @@ public class HomeController : Controller
 
             }
 
-            public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+            public ActionResult DataSource(Syncfusion.JavaScript.DataManager dataManagerObj)
 
             {
 
@@ -52,7 +52,7 @@ public class HomeController : Controller
 
                 DataResult result = new DataResult();
 
-                result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
+                result.result = DataSource.Skip(dataManagerObj.Skip).Take(dataManagerObj.Take).ToList();
 
                 result.count = DataSource.Count();
 

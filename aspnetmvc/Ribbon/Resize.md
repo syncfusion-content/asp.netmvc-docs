@@ -282,7 +282,7 @@ For each group shirked for resizing, Custom Class will be added based on group t
             {
                 ctn.ContentGroups(ctngrp =>
                 {
-                    ctngrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
+                    ctngrp.Id("fontFamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
                     {
                         DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
                         Text = "Segoe UI",

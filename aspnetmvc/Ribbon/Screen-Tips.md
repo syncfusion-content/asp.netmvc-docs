@@ -30,10 +30,10 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
                     {
                         tabgroup.Text("Clipboard").Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                             {
-                                ctngrp.Id("cut").Text("Cut").ToolTip("Remove the selection and put it on clipboard").Add();
-                                ctngrp.Id("copy").Text("Copy").ToolTip("Put a copy of selection on clipboard").ButtonSettings(new ButtonProperties()
+                                contentGroup.Id("cut").Text("Cut").ToolTip("Remove the selection and put it on clipboard").Add();
+                                contentGroup.Id("copy").Text("Copy").ToolTip("Put a copy of selection on clipboard").ButtonSettings(new ButtonProperties()
                                 {
                                     ContentType = ContentType.TextAndImage,
                                     PrefixIcon = "e-ribbon e-ribboncopy",
@@ -80,15 +80,15 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
                     {
                         tabgroup.Text("Clipboard").Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                             {
-                                ctngrp.Id("paste").Text("Paste").CustomToolTip(new CustomToolTip()
+                                contentGroup.Id("paste").Text("Paste").CustomToolTip(new CustomToolTip()
                                 {
                                     Title = "Paste",
                                     Content = "<h6>Paste the content.<br/><br/>Add content on the Clipboard to your document.</h6>",
                                     PrefixIcon = "e-pastetip",
                                 }).Add();
-                                ctngrp.Id("copy").Text("Copy").CustomToolTip(new CustomToolTip()
+                                contentGroup.Id("copy").Text("Copy").CustomToolTip(new CustomToolTip()
                                 {
                                     Title = "Copy",
                                     Content = "<h6>Copy the content.</h6>",
@@ -149,11 +149,11 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                     tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
 
-                        tabgroup.Text("Gallery").Type("Galary").Content(ctn =>
+                        tabgroup.Text("Gallery").Type("Gallery").Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                             {
-                                ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
+                                contentGroup.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                                 {
                                     gallery.Text("Style 1").CustomToolTip(new CustomToolTip()
                                     {
@@ -195,10 +195,10 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                         PrefixIcon = "e-gallerycontent4 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
-                                }).CustomGalleryItems(galleryitems =>
+                                }).CustomGalleryItems(galleryItems =>
                                 {
 
-                                    galleryitems.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).CustomToolTip(new CustomToolTip()
+                                    galleryItems.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).CustomToolTip(new CustomToolTip()
                                     {
                                         Title="Clear Format",
                                         Content = "<I>To clear formatting</I>"
@@ -206,7 +206,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     {
                                         CssClass="e-extrabtnstyle"
                                     }).Add();
-                                    galleryitems.CustomItemType(CustomItemType.Menu).MenuId("extramenu").MenuSettings(new MenuProperties()
+                                    galleryItems.CustomItemType(CustomItemType.Menu).MenuId("extraMenu").MenuSettings(new MenuProperties()
                                     {
                                         OpenOnClick = false
                                     }).Add();
@@ -221,7 +221,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
             <a>FILE</a>
         </li>
     </ul>
-    <ul id="extramenu">
+    <ul id="extraMenu">
         <li>
             <a>New Quick Step</a>
             <ul>

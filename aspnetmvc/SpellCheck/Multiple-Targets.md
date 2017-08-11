@@ -37,7 +37,7 @@ The following code example describes the above behavior.
         But reember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
-    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
     @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
   }
@@ -66,7 +66,7 @@ If the user specifies multiple targets in ControlsToValidate property, the contr
         But reember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
-    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
     @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
   }
@@ -102,7 +102,7 @@ By using ControlsToValidate property, you can spell check Multiple HTML elements
         But reember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
-    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+    @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
     @Html.EJ().Button("SpellCheck").Text("Spell check using context menu").ClientSideEvents(evet => evet.Click("showContextMenu"))
   }
@@ -119,9 +119,3 @@ By using ControlsToValidate property, you can spell check Multiple HTML elements
 
 
 N> We couldn’t highlight the error word in the target element itself, while checking the elements that doesn’t support the html or innerHTML value.
-
-
- 
-
-
-

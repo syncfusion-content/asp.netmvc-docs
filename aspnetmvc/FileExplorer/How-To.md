@@ -639,7 +639,7 @@ You can manage the files that are available in database using our FileExplorer c
     
     //"Product" is a table name, which is defined in SQL database
     
-    SQLFileExplorerOperations sqlobj = new SQLFileExplorerOperations("FileExplorerConnection", "Product");
+    SQLFileExplorerOperations sqlObj = new SQLFileExplorerOperations("FileExplorerConnection", "Product");
     
     {% endhighlight %}
     
@@ -875,8 +875,8 @@ You can add custom column in grid view of “FileExplorer”. To achieve this re
                             type = "File",
                             dateModified = file.LastWriteTime.ToString(),
                             hasChild = false,
-                            //assign the value in extention property
-                            extention = file.Extension
+                            //assign the value in extension property
+                            extension = file.Extension
                         });
     
                     var directories = directory.GetDirectories().Select(subDirectory => new CustomFileExplorerDirectoryContent
@@ -887,7 +887,7 @@ You can add custom column in grid view of “FileExplorer”. To achieve this re
                         type = "Directory",
                         dateModified = subDirectory.LastWriteTime.ToString(),
                         hasChild = subDirectory.GetDirectories().Length > 0 ? true : false,
-                        extention = ""
+                        extension = ""
                     });
     
                     object fileDetails = files.Concat(directories);
@@ -910,7 +910,7 @@ You can add custom column in grid view of “FileExplorer”. To achieve this re
             public bool hasChild { get; set; }
             public bool isFile { get; set; }
             //add custom property
-            public string extention { get; set; }        
+            public string extension { get; set; }        
         }
     
         //customize the FileExplorer response
@@ -936,7 +936,7 @@ In the view page, add the custom column in grid using “[GridSettings](http://h
                     column.Add().Field("name").HeaderText("Name").Width("30%");
                     column.Add().Field("type").HeaderText("Type");
                     //adding new column
-                    column.Add().Field("extention").HeaderText("Extention");
+                    column.Add().Field("extension").HeaderText("Extension");
                     column.Add().Field("size").HeaderText("Size");
                     column.Add().Field("dateModified").HeaderText("Date Modified");
                 }

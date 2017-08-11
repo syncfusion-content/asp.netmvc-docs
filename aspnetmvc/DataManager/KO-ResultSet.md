@@ -39,7 +39,7 @@ The following code example illustrates how the model is made observable and upda
 					<div class="form-group">
 						<label class="col-sm-4 control-label">EmployeeID</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="empId">
+							<input type="text" class="form-control" id="employeeId">
 						</div>
 					</div>
 					<div class="form-group">
@@ -56,7 +56,7 @@ The following code example illustrates how the model is made observable and upda
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-4 col-sm-4">
-							<button type="button" id="formsubmit" class="btn btn-default">Change</button>
+							<button type="button" id="formSubmit" class="btn btn-default">Change</button>
 						</div>
 					</div>
 				</form>
@@ -89,11 +89,11 @@ The following code example illustrates how the model is made observable and upda
 					ko.applyBindings(pageModel);
 				});
 			}, 1000);
-			$("#formsubmit").click(function (e) {
-				var empId = parseInt($("#empId").val(), 10);
+			$("#formSubmit").click(function (e) {
+				var employeeId = parseInt($("#employeeId").val(), 10);
 				var fName = $("#first").val();
 				var lName = $("#last").val();
-				employee = window.pageModel.employees()[empId - 1];
+				employee = window.pageModel.employees()[employeeId - 1];
 				employee.FirstName(fName);
 				employee.LastName(lName);
 			});

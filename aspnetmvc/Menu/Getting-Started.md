@@ -152,7 +152,7 @@ The following code example explains the initialization of first level sub menu i
                       {
                           child.Add().Url("").Text("Technology Resource Portal");
                           child.Add().Url("").Text("Case Studies");
-                          child.Add().Url("").Text("Bouchers & Datasheets");
+                          child.Add().Url("").Text("Bouchers & DataSheets");
                           child.Add().Url("").Text("FAQ");
                       });
                    items.Add().Url("").Id("Company").Text("Company").Children(child =>

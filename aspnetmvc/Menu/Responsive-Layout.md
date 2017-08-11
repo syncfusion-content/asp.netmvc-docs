@@ -27,7 +27,7 @@ Add the above CSS link in the code sample.
 
     <div class="imgframe">
 
-    @Html.EJ().Menu("menucontrol").Items(items =>
+    @Html.EJ().Menu("menuControl").Items(items =>
 
         {
 

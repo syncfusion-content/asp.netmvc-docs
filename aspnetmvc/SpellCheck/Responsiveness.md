@@ -21,7 +21,7 @@ The following code example describes the above behavior.
     The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
 </div><br />
  
-   @Html.EJ().("TextArea").SpellCheck("TextArea").IsResponsive(true).DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().("TextArea").SpellCheck("TextArea").IsResponsive(true).DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
 }
 
@@ -36,9 +36,9 @@ The dialog of spell check control is rendering based on the client browser’s w
     The fouders had initially limited the websites membrship to Harvard students, but later expanded it to collges in the Boston area, the Ivy League, and Stanford Univrsity. It graually added support for students at various other universities and later to high-school students.
 </div><br />
  
-   @Html.EJ().SpellCheck("TextArea").IsResponsive(true).DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").IsResponsive(true).DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
+    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
  
 }
  
