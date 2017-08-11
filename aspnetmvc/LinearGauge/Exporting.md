@@ -28,13 +28,13 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     .BackgroundColor("transparent")
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowRanges(true)
 
     .Length(310)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
@@ -46,7 +46,7 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     .Width(10).MarkerBackgroundColor("#4D4D4D")
 
-    .Border(bor=>bor.Color("4D4D4D")).Add();
+    .Border(border=>border.Color("4D4D4D")).Add();
 
     })
 
@@ -54,13 +54,13 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     //Adding label collection
 
-    .Labels(lbl => {
+    .Labels(label => {
 
-        lbl.Font(fnt => {
+        label.Font(font => {
 
-            fnt.Size("11px").FontFamily("SegoeUI").FontStyle("bold");
+            font.Size("11px").FontFamily("SegoeUI").FontStyle("bold");
 
-        }).DistanceFromScale(dfs=>dfs.X(-13)).Add();
+        }).DistanceFromScale(distance=>distance.X(-13)).Add();
 
     })
 
@@ -68,9 +68,9 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     //Adding bar pointer collection
 
-    .BarPointers(barptr => {
+    .BarPointers(bar => {
 
-        barptr.BarPointerValue(50)
+        bar.BarPointerValue(50)
 
         .Width(4).BarPointerDistanceFromScale(8)
 
@@ -94,21 +94,21 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     //Adding ranges collection
 
-    .Ranges(rng =>
+    .Ranges(range =>
 
     {
 
-        rng.EndValue(60).StartValue(0).RangeBackgroundColor("#F6B53F")
+        range.EndValue(60).StartValue(0).RangeBackgroundColor("#F6B53F")
 
-        .Border(bor=>bor.Color("#F6B53F"))
+        .Border(border=>border.Color("#F6B53F"))
 
         .StartWidth(4).EndWidth(4).Add();
 
 
 
-        rng.EndValue(100).StartValue(60).RangeBackgroundColor("#E94649")
+        range.EndValue(100).StartValue(60).RangeBackgroundColor("#E94649")
 
-        .Border(bor=>bor.Color("#E94649"))
+        .Border(border=>border.Color("#E94649"))
 
         .StartWidth(4).EndWidth(4).Add();
 
@@ -122,11 +122,11 @@ Linear Gauge has an exporting feature that converts Gauge control into image for
 
     $(function () {
 
-        $("#btnExportImage").ejButton({ width: "100px", click: "buttonclickevent", });
+        $("#btnExportImage").ejButton({ width: "100px", click: "buttonClickEvent", });
 
     });
 
-    function buttonclickevent() {
+    function buttonClickEvent() {
 
         var FileName = $("#txtFileName").val();
 

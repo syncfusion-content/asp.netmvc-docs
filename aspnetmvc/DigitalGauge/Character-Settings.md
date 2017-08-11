@@ -136,7 +136,7 @@ The text in the DigitalGauge is positioned with position object. This object con
 
 .SegmentSettings(cs=>cs.Color("Yellow"))
 
-.Position(Pos=>Pos
+.Position(position=>position
 
 // For setting horizontal position
 

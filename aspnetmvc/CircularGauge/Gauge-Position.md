@@ -57,7 +57,7 @@ Semi-circular Gauge can be positioned within the canvas element which provides b
 				.MinorIntervalValue(10)
 				.ShowScaleBar(true)
 				.Size(1)
-				.Border(bor => bor.Width(0.5))
+				.Border(border => border.Width(0.5))
 				.StartAngle(270)
 				.SweepAngle(180).Add();}))
 {% endhighlight %}

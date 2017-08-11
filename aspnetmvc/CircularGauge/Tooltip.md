@@ -23,7 +23,7 @@ documentation: ug
 @(Html.EJ().CircularGauge(“circularGaugeTooltip”)
 
 //Defines the tooltip object.
-.Tooltip(ttp=>ttp
+.Tooltip(tooltip=>tooltip
 
 // Enables the label tooltip.
 .ShowLabelTooltip(true)
@@ -35,7 +35,7 @@ documentation: ug
 .Scales(SC =>{SC.Radius(130).ShowLabels(true)
 
 //Customizes the custom label options.
-.CustomLabels(cl => {cl.Value(“0 9 5 3 4 5”).Font(f =>f.Size("20px").FontFamily("Arial").FontStyle("bold")).Position(pos => pos.X(180).Y(200))
+.CustomLabels(cl => {cl.Value(“0 9 5 3 4 5”).Font(f =>f.Size("20px").FontFamily("Arial").FontStyle("bold")).Position(position => position.X(180).Y(200))
 .Add();})
 
 //Customizes the pointers options.
@@ -74,7 +74,7 @@ In Tooltip option, you can customize the Tooltip window by adding the tooltip te
 
 @(Html.EJ().CircularGauge(“circularGaugeTooltip”)
 //Defines the tooltip object.
-.Tooltip(ttp=>ttp
+.Tooltip(tooltip=>tooltip
 
 // Enables the label tooltip.
 .ShowLabelTooltip(true)
@@ -89,7 +89,7 @@ In Tooltip option, you can customize the Tooltip window by adding the tooltip te
 .Scales(SC =>{SC.Radius(130).ShowLabels(true)
 
 // Customizes the custom label options.
-.CustomLabels(cl => {cl.Value(“0 9 5 3 4 5”).Font(f =>f.Size("20px").FontFamily("Arial").FontStyle("bold")).Position(pos => pos.X(180).Y(200)).Add();})
+.CustomLabels(cl => {cl.Value(“0 9 5 3 4 5”).Font(f =>f.Size("20px").FontFamily("Arial").FontStyle("bold")).Position(position => position.X(180).Y(200)).Add();})
 
 // Customizes the pointers options..pointers(PO =>{PO.Value(60).Length(90).Add();})
 .Add();

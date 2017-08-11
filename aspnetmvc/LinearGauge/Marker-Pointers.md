@@ -24,13 +24,13 @@ You can add Marker Pointer collection directly to the scale object. To add point
 
 
 
-//Adding Scale Colection
+//Adding Scale Collection
 
 
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true)
 
@@ -46,11 +46,11 @@ You can add Marker Pointer collection directly to the scale object. To add point
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5)
+        bar.Width(5)
 
         .BarPointerBackgroundColor("Grey").BarPointerDistanceFromScale(15).Add();
 
@@ -66,11 +66,11 @@ You can add Marker Pointer collection directly to the scale object. To add point
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -107,9 +107,9 @@ The value property is the important element in the marker pointer collection whi
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(30).BackgroundColor("#AEC75F").Border(bor => bor.Color("#AEC75F").Width(30))
+    scale.Width(30).BackgroundColor("#AEC75F").Border(border => border.Color("#AEC75F").Width(30))
 
     .Direction(Directions.Clockwise).Type(ScaleType.RoundedRectangle)
 
@@ -127,7 +127,7 @@ The value property is the important element in the marker pointer collection whi
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.Angle(90).DistanceFromScale(dsc => dsc.Y(100).X(0)).Add(); })
+    .Labels(label => { label.Angle(90).DistanceFromScale(distance => distance.Y(100).X(0)).Add(); })
 
 
 
@@ -139,11 +139,11 @@ The value property is the important element in the marker pointer collection whi
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(45).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(45).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(45).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(45).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -183,9 +183,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.BackgroundColor("#AEC75F").Border(bor => bor.Color("#AEC75F").Width(30))
+    scale.BackgroundColor("#AEC75F").Border(border => border.Color("#AEC75F").Width(30))
 
     .Direction(Directions.Clockwise).Type(ScaleType.RoundedRectangle)
 
@@ -203,7 +203,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.Angle(90).DistanceFromScale(dsc => dsc.Y(100).X(0)).Add(); })
+    .Labels(label => { label.Angle(90).DistanceFromScale(distance => distance.Y(100).X(0)).Add(); })
 
 
 
@@ -215,11 +215,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-1).Y(45)).Add();
+        .DistanceFromScale(distance => distance.X(-1).Y(45)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-1).Y(45)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(-1).Y(45)).Height(6).Add();
 
     }).Add();
 
@@ -258,9 +258,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(30).BackgroundColor("#AEC75F").Border(bor => bor.Color("#AEC75F").Width(30))
+    scale.Width(30).BackgroundColor("#AEC75F").Border(border => border.Color("#AEC75F").Width(30))
 
     .Direction(Directions.Clockwise).Type(ScaleType.RoundedRectangle)
 
@@ -278,7 +278,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.Angle(90).DistanceFromScale(dsc => dsc.Y(100).X(0)).Add(); })
+    .Labels(label => { label.Angle(90).DistanceFromScale(distance => distance.Y(100).X(0)).Add(); })
 
 
 
@@ -290,11 +290,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-1).Y(45)).Add();
+        .DistanceFromScale(distance => distance.X(-1).Y(45)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-1).Y(45)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(-1).Y(45)).Height(6).Add();
 
     }).Add();
 
@@ -352,11 +352,11 @@ Linear Gauge can contain multiple pointers on it. You can use any combination an
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(30).BackgroundColor("#AEC75F")
+    scale.Width(30).BackgroundColor("#AEC75F")
 
-    .Border(bor => bor.Color("#AEC75F").Width(30))
+    .Border(border => border.Color("#AEC75F").Width(30))
 
     .Direction(Directions.Clockwise)
 
@@ -404,7 +404,7 @@ Linear Gauge can contain multiple pointers on it. You can use any combination an
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.Angle(90).DistanceFromScale(dsc => dsc.Y(100).X(0)).Add(); })
+    .Labels(label => { label.Angle(90).DistanceFromScale(distance => distance.Y(100).X(0)).Add(); })
 
 
 
@@ -416,11 +416,11 @@ Linear Gauge can contain multiple pointers on it. You can use any combination an
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(45).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(45).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(45).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(45).Y(0)).Height(6).Add();
 
     })
 
@@ -430,7 +430,7 @@ Linear Gauge can contain multiple pointers on it. You can use any combination an
 
     .CustomLabels(cl => { cl.Value("Weather Condition in California")
 
-    .Position(pos => pos.X(52).Y(20)).Add();
+    .Position(position => position.X(52).Y(20)).Add();
 
     })
 

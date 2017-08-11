@@ -29,9 +29,9 @@ Range collection can be directly added to the scale object. Refer the following 
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).BackgroundColor("transparent").Border(bor => bor.Color("transparent").Width(0)).ShowMarkerPointers(true)
+    scale.Width(0).BackgroundColor("transparent").Border(border => border.Color("transparent").Width(0)).ShowMarkerPointers(true)
 
     .ShowBarPointers(false).ShowCustomLabels(true).Direction(Directions.Clockwise)
 
@@ -41,7 +41,7 @@ Range collection can be directly added to the scale object. Refer the following 
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(0).Y(50)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(0).Y(50)).Add(); })
 
 
 
@@ -53,11 +53,11 @@ Range collection can be directly added to the scale object. Refer the following 
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(25).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(25).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(25).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(25).Y(0)).Add();
 
     })
 
@@ -81,9 +81,9 @@ Range collection can be directly added to the scale object. Refer the following 
 
     //Adding range collection
 
-    .Ranges(rng=>{
+    .Ranges(range=>{
 
-        rng.StartValue(-20).EndValue(60).StartWidth(0)
+        range.StartValue(-20).EndValue(60).StartWidth(0)
 
         .EndWidth(20).RangeBackgroundColor("#FEBE48")
 
@@ -122,11 +122,11 @@ The major attributes for ranges are startValue and endValue. The startValue defi
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-sc.Width(4).BackgroundColor("#10ADF5").ShowMarkerPointers(false)
+scale.Width(4).BackgroundColor("#10ADF5").ShowMarkerPointers(false)
 
-.Border(bor => bor.Color("transparent").Width(0))
+.Border(border => border.Color("transparent").Width(0))
 
 .ShowBarPointers(false).Length(310).ShowRanges(true)
 
@@ -134,9 +134,9 @@ sc.Width(4).BackgroundColor("#10ADF5").ShowMarkerPointers(false)
 
 //Adding label collection
 
-.Labels(lbl => {
+.Labels(label => {
 
-lbl.Font(fnt => fnt.Size("11px").FontStyle("Bold")
+label.Font(font => font.Size("11px").FontStyle("Bold")
 
 .FontFamily("Segoe UI")).Add(); })
 
@@ -156,13 +156,13 @@ tic.Type(TickType.MajorInterval).Width(1).Color("#8c8c8c").Add();
 
 //Adding range collection
 
-.Ranges(rng=>{
+.Ranges(range=>{
 
-rng.StartValue(0).EndValue(50).StartWidth(8)
+range.StartValue(0).EndValue(50).StartWidth(8)
 
 .EndWidth(8).RangeBackgroundColor("#F6B53F").DistanceFromScale(5).Add();
 
-rng.StartValue(70).EndValue(100).StartWidth(8)
+range.StartValue(70).EndValue(100).StartWidth(8)
 
 .EndWidth(8).RangeBackgroundColor("#E94649").DistanceFromScale(5).Add();
 
@@ -197,11 +197,11 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(4).BackgroundColor("transparent").ShowMarkerPointers(false)
+    scale.Width(4).BackgroundColor("transparent").ShowMarkerPointers(false)
 
-    .Border(bor => bor.Color("transparent").Width(0))
+    .Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(false).Length(310).ShowRanges(true)
 
@@ -209,9 +209,9 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => {
+    .Labels(label => {
 
-    lbl.Font(fnt => fnt.Size("11px").FontStyle("Bold")
+    label.Font(font => font.Size("11px").FontStyle("Bold")
 
     .FontFamily("Segoe UI")).Add(); })
 
@@ -231,13 +231,13 @@ Execute the above code to render the following output.
 
     //Adding range collection
 
-    .Ranges(rng=>{
+    .Ranges(range=>{
 
-        rng.StartValue(0).EndValue(50).StartWidth(18).Border(bor => bor.Color("Black").Width(2))
+        range.StartValue(0).EndValue(50).StartWidth(18).Border(border => border.Color("Black").Width(2))
 
         .EndWidth(3).RangeBackgroundColor("#F6B53F").DistanceFromScale(10).Add();
 
-        rng.StartValue(70).EndValue(100).StartWidth(18).Border(bor => bor.Color("Black").Width(2))
+        range.StartValue(70).EndValue(100).StartWidth(18).Border(border => border.Color("Black").Width(2))
 
         .EndWidth(3).RangeBackgroundColor("#E94649").DistanceFromScale(10).Add();
 
@@ -268,11 +268,11 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(4).BackgroundColor("transparent").ShowMarkerPointers(false)
+    scale.Width(4).BackgroundColor("transparent").ShowMarkerPointers(false)
 
-    .Border(bor => bor.Color("transparent").Width(0))
+    .Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(false).Length(310).ShowRanges(true)
 
@@ -280,9 +280,9 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => {
+    .Labels(label => {
 
-    lbl.Font(fnt => fnt.Size("11px").FontStyle("Bold")
+    label.Font(font => font.Size("11px").FontStyle("Bold")
 
     .FontFamily("Segoe UI")).Add(); })
 
@@ -302,15 +302,15 @@ Execute the above code to render the following output.
 
     //Adding range collection
 
-    .Ranges(rng=>{
+    .Ranges(range=>{
 
-        rng.StartValue(0).EndValue(50).StartWidth(18).Border(bor=> bor.Color("Black").Width(2))
+        range.StartValue(0).EndValue(50).StartWidth(18).Border(border=> border.Color("Black").Width(2))
 
         .EndWidth(3).RangeBackgroundColor("#F6B53F").DistanceFromScale(10)
 
         .Placement(RangePlacement.Near).DistanceFromScale(-30).Add();
 
-        rng.StartValue(70).EndValue(100).StartWidth(18).Border(bor=> bor.Color("Black").Width(2))
+        range.StartValue(70).EndValue(100).StartWidth(18).Border(border=> border.Color("Black").Width(2))
 
         .EndWidth(3).RangeBackgroundColor("#E94649").DistanceFromScale(10)
 
@@ -346,9 +346,9 @@ You can set multiple ranges by adding an array of range objects. Refer the follo
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).BackgroundColor("transparent").Border(bor=> bor.Color("transparent").Width(0)).ShowMarkerPointers(true)
+    scale.Width(0).BackgroundColor("transparent").Border(border=> border.Color("transparent").Width(0)).ShowMarkerPointers(true)
 
     .ShowBarPointers(false).ShowCustomLabels(true).Direction(Directions.Clockwise)
 
@@ -358,7 +358,7 @@ You can set multiple ranges by adding an array of range objects. Refer the follo
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(0).Y(50)).Add(); })
+    .Labels(label => { label.DistanceFromScale(dc => dc.X(0).Y(50)).Add(); })
 
 
 
@@ -370,11 +370,11 @@ You can set multiple ranges by adding an array of range objects. Refer the follo
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(-1).Y(20)).Add();
+        .DistanceFromScale(distance => distance.X(-1).Y(20)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(-1).Y(20)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(-1).Y(20)).Add();
 
     })
 
@@ -398,37 +398,37 @@ You can set multiple ranges by adding an array of range objects. Refer the follo
 
     //Adding range collection
 
-    .Ranges(rng=>{
+    .Ranges(range=>{
 
-        rng.StartValue(-20).EndValue(0).StartWidth(5)
+        range.StartValue(-20).EndValue(0).StartWidth(5)
 
         .EndWidth(10).RangeBackgroundColor("#2788B1")
 
-        .Border(bor => bor.Color("#2788B1"))
+        .Border(border => border.Color("#2788B1"))
 
         .Placement(RangePlacement.Near).DistanceFromScale(20).Add();
 
-        rng.StartValue(0).EndValue(20).StartWidth(10)
+        range.StartValue(0).EndValue(20).StartWidth(10)
 
         .EndWidth(15).RangeBackgroundColor("#A5BA28")
 
-        .Border(bor => bor.Color("#A5BA28"))
+        .Border(border => border.Color("#A5BA28"))
 
         .Placement(RangePlacement.Near).DistanceFromScale(20).Add();
 
-        rng.StartValue(20).EndValue(40).StartWidth(15)
+        range.StartValue(20).EndValue(40).StartWidth(15)
 
         .EndWidth(20).RangeBackgroundColor("#FEBE48")
 
-        .Border(bor => bor.Color("#FEBE48"))
+        .Border(border => border.Color("#FEBE48"))
 
         .Placement(RangePlacement.Near).DistanceFromScale(20).Add();
 
-        rng.StartValue(40).EndValue(60).StartWidth(20)
+        range.StartValue(40).EndValue(60).StartWidth(20)
 
         .EndWidth(25).RangeBackgroundColor("Red")
 
-        .Border(bor => bor.Color("Red"))
+        .Border(border => border.Color("Red"))
 
         .Placement(RangePlacement.Near).DistanceFromScale(20).Add();
 

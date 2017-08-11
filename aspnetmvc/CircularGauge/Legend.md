@@ -39,11 +39,11 @@ The text displayed in the legend can be customized by using the `LegendText` pro
 {% highlight cshtml %}
 
  @(Html.EJ().CircularGauge("circulargauge1")
-                .Scales(sc =>
+                .Scales(scale =>
                 {
-                    sc.Ranges(ran =>
+                    scale.Ranges(range =>
                     {
-                        ran.LegendText("Light air").Add();
+                        range.LegendText("Light air").Add();
 
                     })
         
@@ -135,7 +135,7 @@ You can change the size of the legend items by using the `Width` and `Height` pr
     .Legend(lg=>lg
         //...
         //Change legend items border, height and width
-        .ItemStyle(itm=>itm.Width(13).Height(13).Border(br=>br.Width(2).Color("#FF0000")))
+        .ItemStyle(item=>item.Width(13).Height(13).Border(br=>br.Width(2).Color("#FF0000")))
     )
      //...
  )
@@ -159,7 +159,7 @@ You can change the default legend size by using the `Size` property of the legen
     .Legend(lg=>lg
         //...
         //Change legend size
-        .Size(sz=>sz.Height("100").Width("350"))
+        .Size(size=>size.Height("100").Width("350"))
     )
      //...
  )
@@ -231,7 +231,7 @@ The font of the legend item text can be customized by using the `Font`  property
     .Legend(lg=>lg
         //...
         //Customize the legend item text
-        .Font(fnt=>fnt.FontFamily("Segoe UI").FontStyle(CircularGaugeFontStyle.Normal)
+        .Font(font=>font.FontFamily("Segoe UI").FontStyle(CircularGaugeFontStyle.Normal)
             .FontWeight(CircularGaugeFontWeight.Bold).Size("15px"))
             )
      //...
@@ -258,11 +258,11 @@ LegendItemRender event triggers before rendering the legend items. This event is
        .Visible(true)
         //...       
     )
-     //Subscribe the legenditem click event
-     .LegendItemRender("onlegendRender")
+     //Subscribe the legend item render event
+     .LegendItemRender("onLegendRender")
  )
         
-     function onlegendclicked(sender) {
+     function onLegendRender(sender) {
         //Get legend item details before rendering
         var legendItem = sender.data;
       }
@@ -284,11 +284,11 @@ You can get the legend item details such as *Rangeindex, bounds and shape* by su
        .Visible(true)
         //...       
     )
-     //Subscribe the legenditem click event
-     .LegendItemClick("onlegendclicked")
+     //Subscribe the legend item click event
+     .LegendItemClick("onLegendClicked")
  )
         
-     function onlegendclicked(sender) {
+     function onLegendClicked(sender) {
         //Get legend item details on legend item click.
         var legendItem = sender.data;
       }
