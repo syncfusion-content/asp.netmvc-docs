@@ -22,10 +22,10 @@ You can create horizontal stripline by adding the **Stripline** in the *vertical
 
       // ...
         //Initializing Primary Y Axis
-      .PrimaryYAxis(pry => pry.StripLine(stl =>
+      .PrimaryYAxis(axis => axis.StripLine(line =>
       {
           //Enable Stripline
-          stl.Visible(true)
+          line.Visible(true)
           .Start(30).End(40).Add();
       }))
         //...
@@ -51,10 +51,10 @@ You can create vertical stripline by adding the Stripline in the *horizontal axi
 
       // ...
         //Initializing Primary X Axis
-      .PrimaryXAxis(prx => prx.StripLine(stl =>
+      .PrimaryXAxis(axis => axis.StripLine(line =>
       {
           //Create vertical Stripline using horizontal Axis
-          stl.Visible(true)
+          line.Visible(true)
           .Start(3).End(7).Add();
       }))
         //...
@@ -75,11 +75,11 @@ To customize the stripLine text, use the **Text** and **Font** options.
 
       // ...
         //Initializing Primary Y Axis
-      .PrimaryYAxis(pry => pry.StripLine(stl =>
+      .PrimaryYAxis(axis => axis.StripLine(line =>
       {
           //Customize the stripLine text and font styles
-          stl.Text("High Temperature")
-          .Font(fnt=>fnt.Size("18px").Color("white")).Add();
+          line.Text("High Temperature")
+          .Font(font=>font.Size("18px").Color("white")).Add();
       }))
         //...
  )
@@ -100,10 +100,10 @@ Stripline text can be aligned by using the **TextAlignment** property.
 
       // ...
         //Initializing Primary Y Axis
-      .PrimaryYAxis(pry => pry.StripLine(stl =>
+      .PrimaryYAxis(axis => axis.StripLine(line =>
       {
           //Set stripLine text alignment to top position
-          stl.TextAlignment(StriplineTextAlignment.MiddleTop)
+          line.TextAlignment(StriplineTextAlignment.MiddleTop)
           .Add();
       }))
         //...
@@ -124,10 +124,10 @@ To customize the stripLine styles, use the *Color, Opacity, BorderWidth and Bord
 
       // ...
         //Initializing Primary Y Axis
-      .PrimaryYAxis(pry => pry.StripLine(stl =>
+      .PrimaryYAxis(axis => axis.StripLine(line =>
       {
           //Customize the StripLine rectangle
-          stl.Color("#33CCFF").BorderWidth(2).Opacity(0.5).BorderColor("red")
+          line.Color("#33CCFF").BorderWidth(2).Opacity(0.5).BorderColor("red")
           .Add();
       }))
         //...
@@ -149,10 +149,10 @@ Stripline **ZIndex** property is used to display the stripLine either behind or 
 
       // ...
         //Initializing Primary Y Axis
-      .PrimaryYAxis(pry => pry.StripLine(stl =>
+      .PrimaryYAxis(axis => axis.StripLine(line =>
       {
           //Change stripLine ZIndex
-          stl.ZIndex(ChartZIndex.Over)
+          line.ZIndex(ChartZIndex.Over)
           .Add();
       }))
         //...

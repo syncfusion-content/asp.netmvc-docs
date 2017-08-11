@@ -36,9 +36,9 @@ Lazy loading feature provides an effective way for loading data on demand by scr
 
 @(Html.EJ().Chart("chartContainer")
                 // Enable to zoom and scrollbar option
-        .PrimaryXAxis(xaxis => xaxis.ScrollbarSettings(sc => sc.Visible(“true”)
+        .PrimaryXAxis(axis => axis.ScrollbarSettings(scroll => scroll.Visible(“true”)
                   .CanResize(“true”)
-                  .Range(ra => ra.Min("2009/1/1").Max("2014/1/1"))))
+                  .Range(range => range.Min("2009/1/1").Max("2014/1/1"))))
                //  ..
 )
 

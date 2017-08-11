@@ -73,9 +73,9 @@ Marker, DataLabel and Fill color of each point in a series can be customized ind
 
       .Series(sr =>
       { 
-        sr.Points(pts => {
+        sr.Points(pt => {
             //Customizing marker and fill color of a point
-            pts.X("0").Y(210).Fill("#E27F2D").Marker(mr => mr.Visible(true)).Add();
+            pt.X("0").Y(210).Fill("#E27F2D").Marker(mr => mr.Visible(true)).Add();
             //...
         })
        .Add();
@@ -100,7 +100,7 @@ To customize the series border color, width and dashArray, you can use **Series.
 
       .Series(sr =>
       { 
-        sr.Border(br=>br.Color("blue").Widh(2).DashArray("5,3")).Add();
+        sr.Border(border=>border.Color("blue").Width(2).DashArray("5,3")).Add();
         //...
       })
         // ...
@@ -213,9 +213,9 @@ You can provide different color for alternate grid rows and columns formed by th
 
       // ...
             
-      .PrimaryYAxis(py=>
+      .PrimaryYAxis(axis=>
           //Customizing horizontal grid bands at even position
-          py.AlternateGridBand(ag=>ag.Even(en=>en.Fill("#A7A9AB").Opacity(0.1)))
+          axis.AlternateGridBand(band=>band.Even(en=>en.Fill("#A7A9AB").Opacity(0.1)))
           )
       
       // ...

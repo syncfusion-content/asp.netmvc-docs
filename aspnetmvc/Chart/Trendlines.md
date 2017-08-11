@@ -19,9 +19,9 @@ EjChart can generate Trendlines for Cartesian type series *(Line, Column, Scatte
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Enable Trendline to chart series
                         .Visibility("visible").Add();
                 }).Add();
@@ -49,9 +49,9 @@ A trendline can be customized by using the properties such as *Fill*, *Width*, *
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Customize the Trendline styles
                         .Fill("#99CCFF").Width(3).Opacity(1).DashArray("2,3").Add();
                 }).Add();
@@ -88,9 +88,9 @@ To render Linear Trendline, you have to set the **Type** as *Linear*.
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.Linear).Add();
                 }).Add();
@@ -115,9 +115,9 @@ Exponential Trendline can be rendered by setting the *Type* as Exponential.
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.Exponential).Add();
                 }).Add();
@@ -142,9 +142,9 @@ Logarithmic Trendline can be rendered by setting the *Type* as Logarithmic.
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.Logarithmic).Add();
                 }).Add();
@@ -170,9 +170,9 @@ Power Trendline can be rendered by setting the *Type* of the trendline as Power.
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.Power).Add();
                 }).Add();
@@ -198,9 +198,9 @@ Polynomial Trendline can be rendered by setting the trendline *Type* as Polynomi
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.Polynomial).Add();
                 }).Add();
@@ -226,9 +226,9 @@ MovingAverage Trendline can be rendered by setting the Type of the trendline as 
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Change Trendline type
                         .Type(TrendlineType.MovingAverage).Add();
                 }).Add();
@@ -261,9 +261,9 @@ The value set for **ForwardForecast** is used to determine the distance moving t
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Set forward forecasting value
                         .ForwardForecast(5).Add();
                 }).Add();
@@ -289,9 +289,9 @@ The value set for the **BackwardForecast** is used to determine the past trends.
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Set backward forecasting value
                         .BackwardForecast(5).Add();
                 }).Add();
@@ -317,9 +317,9 @@ To display the legend item for trendline, use the **Name** property. You can int
         .Series(sr =>
         {
             sr
-                .Trendlines(trnd =>
+                .Trendlines(trendline =>
                 {
-                    trnd
+                    trendline
                         //Set Trendline name to display in the legend
                         .Name("Linear").Add();
                 }).Add();

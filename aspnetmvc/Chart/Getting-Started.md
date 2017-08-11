@@ -212,8 +212,8 @@ The following code example illustrates this,
      @(Html.EJ().Chart("chartContainer")
              .Series(sr =>
                 { 
-                     //Display datalabel in chart
-                    .Marker(mr=>mr.DataLabel(dl=>dl.Visible(true)))
+                     //Display data label in chart
+                    .Marker(mr=>mr.DataLabel(label=>label.Visible(true)))
                     //...
                     .Add();                  
                 })
@@ -252,8 +252,8 @@ The following code example shows how to set the id of the above template to Temp
     @(Html.EJ().Chart("chartContainer")
              .Series(sr =>
                 { 
-                     //Display datalabel in chart
-                   .Marker(mr=>mr.DataLabel(dl=>dl.Visible(true).
+                     //Display data label in chart
+                   .Marker(mr=>mr.DataLabel(label=>label.Visible(true).
                         //Set the id of HTML template to the chart series
                         Template("dataLabelTemplate"))
                         )
@@ -286,7 +286,7 @@ You can enable or disable the legend by using the Visible option in the **Legend
                         .Add();                  
                 })
                 //Enable chart legend
-                .Legend(lgn=>lgn.Visible(true))
+                .Legend(legend=>legend.Visible(true))
                 //...
      )
 
@@ -312,7 +312,7 @@ The following code example illustrates this,
                 {
                         //...
                         //Enable tooltip in chart area
-                        .Tooltip(tl=>tl.Visible(true))
+                        .Tooltip(tooltip=>tooltip.Visible(true))
                     .Add();                  
                 })
                 //...
@@ -337,7 +337,7 @@ You need to add a title to the chart to provide quick information to the user ab
 
                 // ...
                  //Add chart title
-                .Title(tl=>tl.Text("Sales Analysis"))
+                .Title(title=>title.Text("Sales Analysis"))
                 // ...
      )
 

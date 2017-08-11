@@ -47,9 +47,9 @@ To add the title to the legend, you have to specify the **Legend.Title.Text** op
       // ...
     
     //Visible chart legend
-    .Legend(lg=>lg.Title(tl=>
+    .Legend(legend=>legend.Title(title=>
         //Add title to the chart legend
-        tl.Text("Countries"))
+        title.Text("Countries"))
     )
      //...
  )
@@ -183,7 +183,7 @@ You can change the size of the legend items by using the *ItemStyle.Width* and *
     .Legend(lg=>lg
         //...
         //Change legend items border, height and width
-        .ItemStyle(itm=>itm.Width(13).Height(13).Border(br=>br.Width(1).Color("#FF0000")))
+        .ItemStyle(item=>item.Width(13).Height(13).Border(br=>br.Width(1).Color("#FF0000")))
     )
      //...
  )
@@ -207,7 +207,7 @@ By default, legend takes 20% of the **Height** horizontally when it was placed o
     .Legend(lg=>lg
         //...
         //Change legend size
-        .Size(sz=>sz.Height("100").Width("550"))
+        .Size(size=>size.Height("100").Width("550"))
     )
      //...
  )
@@ -280,7 +280,7 @@ You can enable or disable the legend scrollbar by using the **EnableScrollbar** 
         //...
         //Enable scrollbar option in for legend
         .EnableScrollbar(true)
-        .Size(sz=>sz.Width("430").Height("80"))
+        .Size(size=>size.Width("430").Height("80"))
     )
      //...
  )
@@ -304,12 +304,12 @@ To customize the legend item text and title you can use the **Legend.Font** and 
     .Legend(lg=>lg
         //...
         //Customize the legend item text
-        .Font(fnt=>fnt.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Normal)
+        .Font(font=>font.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Normal)
             .FontWeight(ChartFontWeight.Bold).Size("15px"))
-        .Title(tl=>tl
+        .Title(title=>title
             .TextAlignment(Syncfusion.JavaScript.DataVisualization.TextAlignment.Center)
             //Customize the legend title text
-            .Font(fnt=>fnt.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Italic)
+            .Font(font=>font.FontFamily("Segoe UI").FontStyle(ChartFontStyle.Italic)
                 .FontWeight(ChartFontWeight.Bold).Size("12px"))
         )
     )
@@ -372,7 +372,7 @@ You can get the legend item details such as *Index*, *Bounds*, *Shape* and *Seri
        .Visible(true)
         //...       
     )
-     //Subscribe the legenditem click event
+     //Subscribe the legend item click event
      .LegendItemClick("onlegendclicked")
  )
         

@@ -20,7 +20,7 @@ EjChart supports localization for its axis labels and tooltip. To render the cha
 @(Html.EJ().Chart("chartContainer")
 
       // ...
-      //Render chart in french locale
+      //Render chart in French locale
       .Locale("fr-FR")
       //...
  )

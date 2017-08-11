@@ -13,11 +13,11 @@ The rendered chart can be printed directly from the browser by calling the publi
 {% highlight cshtml %}
 
 <button type="button" onclick="print()" ></button> 
-@(Html.EJ().Chart("chartcontainer"))
+@(Html.EJ().Chart("container"))
 <script>
 function print() {
-var chartObj = $("#chartcontainer").ejChart("instance");
-chartObj.print("chartcontainer");
+var chartObj = $("#container").ejChart("instance");
+chartObj.print("container");
         }
 
 </script>
