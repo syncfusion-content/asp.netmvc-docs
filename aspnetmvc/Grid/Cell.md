@@ -53,7 +53,7 @@ The following code example describes the above behavior.
 
       namespace MVCSampleBrowser.Controllers
        {
-         public class GridController : Controlle
+         public class GridController : Controller
            { 
              public ActionResult GridFeatures()
                {
@@ -283,7 +283,7 @@ The following code example describes the above behavior.
                 .Columns(col =>
                 {
                     col.Field("OrderID").Add();
-                    col.Field("CustomerID").HeaderText("<div>Cust ID</div>").disableHtmlEncode(true).Add();
+                    col.Field("CustomerID").HeaderText("<div>Customer ID</div>").disableHtmlEncode(true).Add();
                     col.Field("EmployeeID").HeaderText("<div>Employee ID</div>").disableHtmlEncode(false).Add();
                     col.Field("ShipCountry").Add(); 
                 })

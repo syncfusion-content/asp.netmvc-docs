@@ -281,7 +281,7 @@ The following code example describes the above behavior.
 {% highlight  razor %}
 
 @(Html.EJ().Grid<OrdersView>("Grid")
-        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
         .AllowSorting()
         .AllowPaging()
         .SelectionType(SelectionType.Multiple)
@@ -350,12 +350,12 @@ The following code example describes the above behavior.
 {% highlight  razor %}
 <div style="float:left;width:49%">
     @(Html.EJ().Grid<OrdersView>("Grid")
-        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
         .AllowSorting()
         .AllowPaging()
         .SelectionType(SelectionType.Multiple)
         .AllowRowDragAndDrop()
-        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler").RowDropMapper("RowDropHandler").DropTargetID("#DestGrid"))
+        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler").RowDropMapper("RowDropHandler").DropTargetID("#DestignationGrid"))
         .Columns(col =>
         {
             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
@@ -367,8 +367,8 @@ The following code example describes the above behavior.
     </div>
 
 <div style="float:right;width:49%">
-    @(Html.EJ().Grid<OrdersView>("DestGrid")
-        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource2).Adaptor(AdaptorType.RemoteSaveAdaptor))
+    @(Html.EJ().Grid<OrdersView>("DestignationGrid")
+        .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource2).Adaptor(AdaptorType.RemoteSaveAdaptor))
         .AllowSorting()
         .AllowPaging()
         .SelectionType(SelectionType.Multiple)
@@ -470,7 +470,7 @@ The following code example describes the above behavior.
 {% highlight  razor %}
 <div style="float:left;width:49%">
     @(Html.EJ().Grid<OrdersView>("Grid")
-        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
+        .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource).Adaptor(AdaptorType.RemoteSaveAdaptor))
         .AllowSorting()
         .AllowPaging()
         .AllowRowDragAndDrop()

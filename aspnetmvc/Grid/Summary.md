@@ -232,7 +232,7 @@ namespace SyncfusionMvcApplication3.Controllers
   function currency() {
       //to get grid instance
       var gridObj = $("#Grid").ejGrid("instance");
-      //ej.sum is aggreagte to add datas of freight from datasource
+      //ej.sum is aggregate to add data's of freight from datasource
       return ej.sum(gridObj.model.dataSource, "Freight");
   }
   </script>
@@ -502,7 +502,7 @@ The following code example describes the above behavior.
 
 @(Html.EJ().Grid<OrdersView>("Summary")
 
-  .Datasource(ds => ds.URL("/Grid/DataSource").Adaptor("UrlAdaptor"))
+  .Datasource(datasource => datasource.URL("/Grid/DataSource").Adaptor("UrlAdaptor"))
   .ShowSummary()
   .AllowPaging()
   .SummaryRow(row =>
@@ -542,20 +542,20 @@ namespace MvcApplication4.Controllers
 			 return View();
            }
 
-     public ActionResult DataSource(DataManager dm)
+     public ActionResult DataSource(DataManager datamanager)
        {
             IEnumerable DataSource = OrderRepository.GetAllRecords();
-		    DataOperations ds = new DataOperations();
-            List<string> str = new List<string>();
-            if (dm.Aggregates != null)
+		    DataOperations dataoperations = new DataOperations();
+            List<string> string = new List<string>();
+            if (datamanager.Aggregates != null)
              {
-               for (var i = 0; i < dm.Aggregates.Count; i++)
-               str.Add(dm.Aggregates[i].Field);
-               result.aggregate = ds.PerformSelect(DataSource, str);
+               for (var i = 0; i < datamanager.Aggregates.Count; i++)
+               string.Add(datamanager.Aggregates[i].Field);
+               result.aggregate = datasource.PerformSelect(DataSource, string);
              }
 
-       DataSource = ds.PerformSkip(DataSource, dm.Skip);
-       result.result = ds.PerformTake(DataSource, dm.Take);
+       DataSource = datasource.PerformSkip(DataSource, datamanager.Skip);
+       result.result = datasource.PerformTake(DataSource, datamanager.Take);
        result.count = DataSource.AsQueryable().Count();
        return Json(result, JsonRequestBehavior.AllowGet);
 

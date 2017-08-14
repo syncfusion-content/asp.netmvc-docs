@@ -184,9 +184,9 @@ namespace SyncfusionMvcApplication1.Controllers
 
 <script type="text/javascript">
     function onToolBarClick(args) {
-        var tbarObj = $(args.target),
+        var toolbar = $(args.target),
           grid = this;
-        if (tbarObj.hasClass("Collapse")) grid.collapseAll(); //collapse Grid using grid instance, `this` is grid instance
+        if (toolbar.hasClass("Collapse")) grid.collapseAll(); //collapse Grid using grid instance, `this` is grid instance
         else grid.refreshContent(); //refresh content using grid instance
     }
 </script>
