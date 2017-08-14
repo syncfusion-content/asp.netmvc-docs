@@ -546,12 +546,12 @@ namespace MvcApplication4.Controllers
        {
             IEnumerable DataSource = OrderRepository.GetAllRecords();
 		    DataOperations dataoperations = new DataOperations();
-            List<string> string = new List<string>();
+            List<string> aggregateFields = new List<string>();
             if (datamanager.Aggregates != null)
              {
                for (var i = 0; i < datamanager.Aggregates.Count; i++)
                string.Add(datamanager.Aggregates[i].Field);
-               result.aggregate = datasource.PerformSelect(DataSource, string);
+               result.aggregate = datasource.PerformSelect(DataSource, aggregateFields);
              }
 
        DataSource = datasource.PerformSkip(DataSource, datamanager.Skip);
