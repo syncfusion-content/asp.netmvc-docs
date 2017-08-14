@@ -37,7 +37,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		<div class="inner">
 
-	<div class="ctrllabel">
+	<div class="control-label">
 
 			Select a Mobile
 
@@ -61,25 +61,25 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		</div>
 
-			<span class="columnleft">
+			<span class="column-left">
 
 			<span>Mobile Rate</span>
 
 		</span>
 
-		<span class="columnright">
+		<span class="column-right">
 
 			<span>Rs </span><span class="value"></span>
 
 	</span>    
 
-	@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+	@Html.EJ().Slider("rateSlider").Height("20px").Value("100").MinValue(5000).MaxValue(30000).IncrementStep(20).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
 	<span class="Columnleft">
 
 				<span>Mobile Count</span>
 
-			</span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+			</span>        @Html.EJ().Slider("countSlider").Height("20px").Value("1").MinValue(1).MaxValue(10).IncrementStep(1).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
 			You are choosing:
 
@@ -112,7 +112,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		}
 
-		.ctrllabel, .loan
+		.control-label, .loan
 
 		{
 
@@ -120,7 +120,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		}
 
-		.columnright
+		.column-right
 
 		{
 
@@ -163,7 +163,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 			var mobileObj, rateObj, countObj;
 
-			function onchange(args) {
+			function onChange(args) {
 
 				$('#' + args.id).parent().prev().find('.value').html(args.value)
 
@@ -215,47 +215,47 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		<div class="inner">
 
-			<div id="loanheading">
+			<div id="loanHeading">
 
 				Details of Loan
 
 			</div>
 
-			<span class="columnleft">
+			<span class="column-left">
 
 				<span>Loan Amount</span>
 
 			</span>
 
-			<span class="columnright">
+			<span class="column-right">
 
 				<span>Rs </span><span class="value">25000</span>
 
-			</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+			</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
-			<span class="columnleft">
+			<span class="column-left">
 
 				<span>Interest Rate</span>
 
 			</span>
 
-			<span class="columnright">
+			<span class="column-right">
 
 				<span class="value"></span><span>% pa</span>
 
-			</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange"))
+			</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
-			<span class="columnleft">
+			<span class="column-left">
 
 				<span>Tenure</span>
 
 			</span>
 
-			<span class="columnright">
+			<span class="column-right">
 
 				<span class="value"></span><span>Years</span>
 
-			</span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(evt => evt.Change("onchange").Slide("onchange")) 
+			</span>        @Html.EJ().Slider("tenureSlider").Height("16px").Value("3").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(event => event.Change("onChange").Slide("onChange")) 
 
 				Your Monthly EMI Amount is
 
@@ -301,7 +301,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		#loanheading
+		#loanHeading
 
 		{
 
@@ -309,7 +309,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		.columnleft
+		.column-left
 
 		{
 
@@ -317,7 +317,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		.columnright
+		.column-right
 
 		{
 
@@ -344,7 +344,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		var loanObj, interestObj, tenureObj;
 
-		function onchange(args) 
+		function onChange(args) 
 		{
 
 			$('#' + args.id).parent().prev().find('.value').html(args.value)
@@ -368,13 +368,13 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 			var y = interest / 1200;
 
-			var tenureamt = tenure * 12;
+			var tenureAmount = tenure * 12;
 
 			//actual processing
 
-			var top = y * (Math.pow((1 + y), tenureamt));
+			var top = y * (Math.pow((1 + y), tenureAmount));
 
-			var bottom = (Math.pow((1 + y), tenureamt)) - 1;
+			var bottom = (Math.pow((1 + y), tenureAmount)) - 1;
 
 			var ans = top / bottom;
 

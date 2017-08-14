@@ -268,7 +268,7 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Toolbar("toolbar").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
+@Html.EJ().Toolbar("toolbar").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Orders').take(6)").ToolbarFields(f => f.Text("CustomerID")).Orientation(Orientation.Horizontal).Width("340")
 
 {% endhighlight %}
 
@@ -276,4 +276,3 @@ The following steps explain how you can bind remote data to Toolbar control.
 
 ToolBar control bounded to Remote Data
 {:.caption}
-

@@ -78,7 +78,7 @@ In this application, a detailed description is provided to each item. You can sp
 
 data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-@Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("RatingDish").Value(4).Precision(Precision.Exact)
 
 
 
@@ -115,7 +115,7 @@ For more information about rating, refer to the following link:
 
 data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-@Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
+@Html.EJ().Rating("RatingDish").Value(4).Precision(Precision.Exact)
 
 
 
@@ -159,7 +159,7 @@ The following code example represents sub Tab control rendering using helper fun
 
     data.Add().ID("dish").Text("dish Menu").ContentTemplate(@<div> Rating:
 
-    @Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
+    @Html.EJ().Rating("RatingDish").Value(4).Precision(Precision.Exact)
 
 
 
@@ -296,7 +296,7 @@ The following code section renders the sub Tab element in the vertical orientati
 
         Rating:
 
-        @Html.EJ().Rating("Ratingdish").Value(4).Precision(Precision.Exact)
+        @Html.EJ().Rating("RatingDish").Value(4).Precision(Precision.Exact)
 
 
 
@@ -393,7 +393,7 @@ The second and third Tab contents are declared in the same method as of the firs
 			dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 			@firstTab()
             </div>);
-			data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+			data.Add().ID("sandwichType").Text("Sandwizza Menu").ContentTemplate(@<div>
 			Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
 			@secondTab() 
 			</div>);  
@@ -420,7 +420,7 @@ The second and third Tab contents are declared in the same method as of the firs
 				Rate    : $100<br /> 
 				Ingredients : onions, grilled chicken, chicken salami &amp; tomatoes.   
 				<br />      
-				Description: Juicy chunks of boneless chicken roasted on open fire.This takeaway favourite is freezer-friendly and quick to reheat, giving you the chance to get ahead. 
+				Description: Juicy chunks of boneless chicken roasted on open fire.This takeaway favorite is freezer-friendly and quick to reheat, giving you the chance to get ahead. 
 				</div>   
 				</div>); 
 				data.Add().ID("PaneerTikka").Text("Paneer Tikka  ").ContentTemplate(@<div class="e-content"> 
@@ -449,7 +449,7 @@ Add third Tab contents in element during initialization using content template o
 		dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 		@firstTab()  
 		</div>); 
-		data.Add().ID("sandwitchtype").Text("Sandwizza Menu").ContentTemplate(@<div>
+		data.Add().ID("sandwichType").Text("Sandwizza Menu").ContentTemplate(@<div>
 		Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
 		@secondTab() 
 		</div>); 

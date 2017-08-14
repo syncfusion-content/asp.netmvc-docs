@@ -240,8 +240,8 @@ N> •	By default, the editor’s < iframe > is initialized with “Segoe UI” 
         var editor = $("#rteSample").ejRTE("instance");
         var obj = editor._fontStyleDDL.ejDropDownList("instance");
         obj.selectItemByIndex(7);
-        var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
-        ddlSize.selectItemByIndex(5);
+        var dropdownSize = editor._fontSizeDDL.ejDropDownList("instance");
+        dropdownSize.selectItemByIndex(5);
     }
 
 </script>
@@ -323,11 +323,11 @@ List<String> font = new List<string>() { "fontName", "fontSize", "fontColor", "b
         editor.defaults.fontName.push({ text: "Calibri Light", value: "CalibriLight" }, { text: "Calibri", value: "Calibri" });
         editor.defaults.fontSize.push({ text: "8 (42pt)", value: "8" });
         var obj = editor._fontStyleDDL.ejDropDownList("instance");
-        var ddlSize = editor._fontSizeDDL.ejDropDownList("instance");
+        var dropdownSize = editor._fontSizeDDL.ejDropDownList("instance");
         obj.option({ "dataSource": editor.defaults.fontName });
-        ddlSize.option({ "dataSource": editor.defaults.fontSize });
+        dropdownSize.option({ "dataSource": editor.defaults.fontSize });
         obj.selectItemByValue("CalibriLight");
-        ddlSize.selectItemByValue("8");
+        dropdownSize.selectItemByValue("8");
     }
 
 </script>

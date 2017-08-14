@@ -19,7 +19,7 @@ You can use HeaderTemplate property to add any HTML element. Code snippet to add
 
         @model MVCApplication.Controllers.HomeController
         
-        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).DropDownListFields(Df => Df.Text("Text").Value("Value")).HeaderTemplate("<div class='temp'><input id='check' type='checkbox' />   </div>").ShowCheckbox(true).Width("300").ClientSideEvents(ce=>ce.Create("create"))
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).DropDownListFields(Df => Df.Text("Text").Value("Value")).HeaderTemplate("<div class='temp'><input id='check' type='checkbox' />   </div>").ShowCheckbox(true).Width("300").ClientSideEvents(clientEvent=>clientEvent.Create("create"))
         
     {% endhighlight %}
 

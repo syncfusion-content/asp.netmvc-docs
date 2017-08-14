@@ -49,7 +49,7 @@ Usually, the appointments are displayed with its **Subject** and **Start/End tim
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AppointmentTemplateId("#apptemplate")
+        .AppointmentTemplateId("#appTemplate")
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")
@@ -66,7 +66,7 @@ Usually, the appointments are displayed with its **Subject** and **Start/End tim
 {% highlight html %}
 
 <!-- Template for Appointment -->
-<script id="apptemplate" type="text/x-jsrender">
+<script id="appTemplate" type="text/x-jsrender">
     {{"{{"}}if View !== "agenda"{{}}}}
     <div style="height:100%; background-color:orange; margin-left: 5px;">
         <div style="margin-left: 2px;">{{"{{"}}:Subject{{}}}}</div>
@@ -95,7 +95,7 @@ The cells can be customized with the following code example.
     .Width("100%")
     .Height("525px")
     .CurrentDate(new DateTime(2015, 11, 5))
-    .AllDayCellsTemplateId("#alldayTemplate") // Alldaycells Template ID
+    .AllDayCellsTemplateId("#allDayTemplate") // Alldaycells Template ID
     .WorkCellsTemplateId("#workTemplate") // Workcells Template ID
     .AppointmentSettings(fields => fields
         .Id("Id")
@@ -112,7 +112,7 @@ The cells can be customized with the following code example.
 {% highlight html %}
 
 <!-- Template for Alldaycells -->
-<script id="alldayTemplate" type="text/x-jsrender">
+<script id="allDayTemplate" type="text/x-jsrender">
     <div class="e-icon e-scheduleallday" style="opacity:0.5"></div>
     <span style="opacity:0.5">AllDay</span>
 </script>
@@ -134,11 +134,11 @@ The cells can be customized with the following code example.
             {{"{{"}}else view == 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5{{}}}}
                 <div style="background-color:lightblue">Conf.</div>
             {{"{{"}}else resource.text == 'Party Hall-B' && date.getDate() == 16{{}}}}
-                <div style="background-color:darkkhaki">Happyday</div>
+                <div style="background-color:darkkhaki">HappyDay</div>
             {{"{{"}}else view != 'month' && resource.text == 'Party Hall-B' && date.getDay() == 5 && date.getHours() == 12{{}}}}
                 <div style="background-color:goldenrod">Conf.</div>
             {{"{{"}}else date.getDate() == 10 && date.getMonth() == 11{{}}}}
-                <div style="background-color:palegreen">Day Spl</div>
+                <div style="background-color:palegreen">Day Special</div>
             {{"{{"}}else date.getDate() == 25 && date.getMonth() == 11{{}}}}
                 <div style="background-color:sandybrown">Christmas</div>
             {{"{{"}}/if{{}}}}
@@ -160,7 +160,7 @@ The Date header can be customized with the following code example.
     .Width("100%")
     .Height("525px")
     .CurrentDate(new DateTime(2015, 11, 5))
-    .DateHeaderTemplateId("#dateTemplate") // Dateheader Template ID
+    .DateHeaderTemplateId("#dateTemplate") // Date header Template ID
     .AppointmentSettings(fields => fields
         .Id("Id")
         .Subject("Subject")
@@ -175,7 +175,7 @@ The Date header can be customized with the following code example.
 
 {% highlight html %}
 
-<!-- Template for Dateheader -->
+<!-- Template for Date header -->
 <script id="dateTemplate" type="text/x-jsrender">
     <div>{{"{{"}}:~dTemplate(date){{}}}}</div>
 </script>
@@ -225,7 +225,7 @@ To customize the resource header with some additional images or other customizat
         .Group(gr => { gr.Resources(Group); })
         .ResourceHeaderTemplateId("#resTemplate")
         .Resources(res => {
-            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -282,7 +282,7 @@ To perform the above specified same customization in **Horizontal** **Scheduler*
         .Group(gr => { gr.Resources(Group); })
         .ResourceHeaderTemplateId("#resTemplate")
         .Resources(res => {
-            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -387,14 +387,14 @@ When template is applied for the `PrioritySettings`, these default icons will be
     List<PrioritySettings> Priority = new List<PrioritySettings>();
     Priority.Add(new PrioritySettings { Text = "none", Value = "none" });
     Priority.Add(new PrioritySettings { Text = "critical", Value = "critical" });
-    Priority.Add(new PrioritySettings { Text = "ultracritical", Value = "ultracritical" });
+    Priority.Add(new PrioritySettings { Text = "ultra-critical", Value = "ultra-critical" });
 }
 
 @(Html.EJ().Schedule("Schedule1")
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .PrioritySettings(prty => prty.Enable(true).Datasource(Priority).Text("Text").Value("Value").Template("<div class='${Text}'></div>"))
+        .PrioritySettings(priority => priority.Enable(true).Datasource(Priority).Text("Text").Value("Value").Template("<div class='${Text}'></div>"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -414,7 +414,7 @@ When template is applied for the `PrioritySettings`, these default icons will be
 <!-- Style for Priority Template -->
 <style type="text/css">
     .critical,
-    .ultracritical,
+    .ultra-critical,
     .none {
         height: 13px;
         width: 13px;
@@ -431,7 +431,7 @@ When template is applied for the `PrioritySettings`, these default icons will be
         background-position: -13px;
     }
 
-    .ultracritical {
+    .ultra-critical {
         background-color: #56ca85;
         background-position: -59px;
     }
@@ -516,8 +516,8 @@ The following code snippet shows how to customize the content of the date, time 
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AgendaViewSettings(agenda => agenda.TimeColumnTemplateId("#timetemplate").DateColumnTemplateId("#datetemplate"))
-        .AppointmentTemplateId("#apptemplate")
+        .AgendaViewSettings(agenda => agenda.TimeColumnTemplateId("#timeTemplate").DateColumnTemplateId("#dateTemplate"))
+        .AppointmentTemplateId("#appTemplate")
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")
@@ -534,7 +534,7 @@ The following code snippet shows how to customize the content of the date, time 
 {% highlight html %}
 
 <!-- Template for date column -->
-<script id="datetemplate" type="text/x-jsrender">
+<script id="dateTemplate" type="text/x-jsrender">
     <div style="height:100%">
         <div>
             <div>{{"{{"}}:~dateDisplay(StartTime){{}}}}</div>
@@ -543,7 +543,7 @@ The following code snippet shows how to customize the content of the date, time 
 </script>
 
 <!-- Template for time column -->
-<script id="timetemplate" type="text/x-jsrender">
+<script id="timeTemplate" type="text/x-jsrender">
     <div style="height:100%">
         <div>
             <div>{{"{{"}}:~timeDisplay(StartTime){{}}}}</div>
@@ -552,7 +552,7 @@ The following code snippet shows how to customize the content of the date, time 
 </script>
 
 <!-- Template for appointment which applies for event column in agenda view. -->
-<script id="apptemplate" type="text/x-jsrender">
+<script id="appTemplate" type="text/x-jsrender">
     {{"{{"}}if View !== "agenda"{{}}}}
     <div style="height:100%; background-color:orange; margin-left: 5px;">
         <div style="margin-left: 2px;">{{"{{"}}:Subject{{}}}}</div>

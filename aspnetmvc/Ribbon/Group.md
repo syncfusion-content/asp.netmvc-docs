@@ -50,8 +50,8 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
             {
                 tabgroup.Text("Clipboard").Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
-                    {  ctngrp.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
+                    ctn.ContentGroups(contentGroup =>
+                    {  contentGroup.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
                                                 {
                                                     ContentType = ContentType.ImageOnly,
                                                     PrefixIcon = "e-ribbon e-ribbonpaste",
@@ -61,14 +61,14 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
                 }).Add();
                 tabgroup.Text("Font").AlignType(RibbonAlignType.Columns).Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
+                    ctn.ContentGroups(contentGroup =>
                     {
-                        ctngrp.Id("cut").ToggleButtonSettings(new ToggleButtonProperties()
+                        contentGroup.Id("cut").ToggleButtonSettings(new ToggleButtonProperties()
                         {
                             DefaultText = "Cut",
                             ActiveText = "Cut Over"
                         }).Add();
-                        ctngrp.Id("copy").ToggleButtonSettings(new ToggleButtonProperties()
+                        contentGroup.Id("copy").ToggleButtonSettings(new ToggleButtonProperties()
                         {
                             DefaultText = "Copy",
                             ActiveText = "Copy Over"
@@ -112,12 +112,12 @@ Separates the control from the next control in the group when group `AlignType` 
             {
                 tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
-                    {                        ctngrp.Id("new").Text("New").ToolTip("New").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    ctn.ContentGroups(contentGroup =>
+                    {                        contentGroup.Id("new").Text("New").ToolTip("New").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                         {
                             Width = "100",
                         }).Add();
-                        ctngrp.Id("font").Text("Font").ToolTip("Font").ButtonSettings(new ButtonProperties()
+                        contentGroup.Id("font").Text("Font").ToolTip("Font").ButtonSettings(new ButtonProperties()
                         {
                             Width = "150",
                         }).Add();

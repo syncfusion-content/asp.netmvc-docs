@@ -187,7 +187,7 @@ public class TimezoneCollection
         .CurrentDate(new DateTime(2015, 11, 5))
         .Group(gr => { gr.Resources(Group); })
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Resources).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fieldss => fieldss.Datasource(Resources).Text("Text").Id("Id").Color("Color")).Add();
         })
         .ShowLocationField(true)
         .CategorizeSettings(cat => cat.Enable(true))
@@ -261,8 +261,8 @@ Refer the appointment fields specified with validation rules from the following 
 <script type="text/javascript">
     $(function () {
         $.validator.addMethod("customRule", function (value, element, options) {
-            var ptn = /^[a-zA-Z0-9- ]*$/;
-            return ptn.test(value);
+            var expression = /^[a-zA-Z0-9- ]*$/;
+            return expression.test(value);
         }, "Special character(s) not allowed in Location field");
     });
 </script>
@@ -334,7 +334,7 @@ The OData v4 is an improved version of OData protocols. Scheduler supports retri
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .EnableLoadOnDemand(true)
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Orders/").Adaptor(AdaptorType.ODataV4Adaptor))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Orders/").Adaptor(AdaptorType.ODataV4Adaptor))
             .Id("Id")
             .Subject("ShipName")
             .StartTime("OrderDate")
@@ -389,7 +389,7 @@ The appointment data can also be bound to the Scheduler using OLEDB database as 
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").CrudURL("Home/Batch").Adaptor("UrlAdaptor"))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("Home/GetData").CrudURL("Home/Batch").Adaptor("UrlAdaptor"))
             .Id("Id")
             .Subject("Subject")
             .StartTime("StartTime")
@@ -427,9 +427,9 @@ The server-side controller code to retrieve and bind the appointment data to Sch
         public JsonResult GetData()
         {
             // Mention your own dataSource to be used here.
-            string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+            string stringAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
             DataSet myDataSet = new DataSet();
-            OleDbConnection myAccessConn = new OleDbConnection(strAccessConn);
+            OleDbConnection myAccessConn = new OleDbConnection(stringAccessConn);
             OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
             OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
             myAccessConn.Open();
@@ -449,11 +449,11 @@ The controller code to handle the CRUD operation are as follows.
         public JsonResult Batch(EditParams param)
         {
             // Mention your own dataSource to be used here.
-            string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
+            string stringAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|/ScheduleDb.MDB";
             if (param.action == "insert" || (param.action == "batch" && param.added != null))  // this block of code will execute while inserting the appointments
             {
                 var value = param.action == "insert" ? param.value : param.added[0];
-                using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                using (OleDbConnection myCon = new OleDbConnection(stringAccessConn))
                 {
                     OleDbCommand cmd = new OleDbCommand();
                     cmd.CommandType = CommandType.Text;
@@ -492,7 +492,7 @@ The controller code to handle the CRUD operation are as follows.
             {
                 if (param.action == "remove")
                 {
-                    using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                    using (OleDbConnection myCon = new OleDbConnection(stringAccessConn))
                     {
                         myCon.Open();
                         OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
@@ -505,7 +505,7 @@ The controller code to handle the CRUD operation are as follows.
                 {
                     foreach (var apps in param.deleted)
                     {
-                        using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                        using (OleDbConnection myCon = new OleDbConnection(stringAccessConn))
                         {
                             myCon.Open();
                             OleDbCommand cmd = new OleDbCommand("DELETE FROM DefaultSchedule WHERE Id = @Key", myCon);
@@ -519,7 +519,7 @@ The controller code to handle the CRUD operation are as follows.
             if ((param.action == "batch" && param.changed != null) || param.action == "update")   // this block of code will execute while updating the appointment
             {
                 var value = param.action == "update" ? param.value : param.changed[0];
-                using (OleDbConnection myCon = new OleDbConnection(strAccessConn))
+                using (OleDbConnection myCon = new OleDbConnection(stringAccessConn))
                 {
                     myCon.Open();
                     OleDbCommand cmd = new OleDbCommand("UPDATE DefaultSchedule SET Subject=@Subject,StartTime=@StartTime,EndTime=@EndTime,AllDay=@AllDay,Recurrence=@Recurrence,RecurrenceRule=@RecurrenceRule,Description=@Description,StartTimeZone=@StartTimeZone,EndTimeZone=@EndTimeZone  WHERE Id = @Key", myCon);
@@ -552,7 +552,7 @@ The controller code to handle the CRUD operation are as follows.
                     myCon.Close();
                 }
             }
-            OleDbConnection myAccessConn = new OleDbConnection(strAccessConn);
+            OleDbConnection myAccessConn = new OleDbConnection(stringAccessConn);
             OleDbCommand myAccessCommand = new OleDbCommand("SELECT * FROM DefaultSchedule", myAccessConn);
             OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
             DataSet myDataSet = new DataSet();
@@ -587,7 +587,7 @@ Scheduler supports binding appointment data from the controller by using various
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("Home/GetData").BatchURL("Home/Crud").InsertURL("Home/add").UpdateURL("Home/update").RemoveURL("Home/remove").Adaptor(AdaptorType.UrlAdaptor))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("Home/GetData").BatchURL("Home/Crud").InsertURL("Home/add").UpdateURL("Home/update").RemoveURL("Home/remove").Adaptor(AdaptorType.UrlAdaptor))
             .Id("Id")
             .Subject("Subject")
             .StartTime("StartTime")
@@ -751,7 +751,7 @@ The **EnableLoadOnDemand** property is used to enable or disable the load on dem
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .EnableLoadOnDemand(true)
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
             .Id("Id")
             .Subject("Subject")
             .StartTime("StartTime")
@@ -987,7 +987,7 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("/Home/GetData").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("/Home/GetData").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
             .Id("Id")
             .Subject("Subject")
             .StartTime("StartTime")
@@ -1022,10 +1022,10 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
                 myDataAdapter.Fill(myDataSet);
                 List<DataRow> datasource = myDataSet.AsEnumerable().ToList();
 
-                List<Scheduledb> scheduleList = new List<Scheduledb>();
+                List<ScheduleDatabase> scheduleList = new List<ScheduleDatabase>();
                 for (int i = 0; i < datasource.Count; i++)
                 {
-                    Scheduledb datum = new Scheduledb();
+                    ScheduleDatabase datum = new ScheduleDatabase();
                     datum.Id = Convert.ToInt32(datasource[i]["Id"]);
                     datum.Subject = datasource[i]["Subject"].ToString();
                     datum.StartTime = Convert.ToDateTime(datasource[i]["StartTime"]);
@@ -1042,7 +1042,7 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
                 return Json(scheduleList, JsonRequestBehavior.AllowGet);
             }
         }
-        public class Scheduledb
+        public class ScheduleDatabase
         {
             public int Id { get; set; }
             public string Subject { get; set; }

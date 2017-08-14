@@ -22,22 +22,22 @@ Contextual Tabs are collection of Tabs that extended styling and can be shown ba
                        });
           })
          .RibbonTabs(tab => {
-         tab.Id("home").Text("HOME").TabGroups(tabgrp => {
-                 tabgrp.Text("CustomControls").Type("custom").ContentID("Contents").Add();
+         tab.Id("home").Text("HOME").TabGroups(tabGroup => {
+                 tabGroup.Text("CustomControls").Type("custom").ContentID("Contents").Add();
          }).Add();
          })
-         .ContextualTabs(ctabs => {
-         ctabs.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ctab => {
-         ctab.Id("Design").Text("DESIGN").TabGroups(ctabgrp => {
-                  ctabgrp.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
+         .ContextualTabs(contextualTab => {
+         contextualTab.BackgroundColor("#FCFBEB").BorderColor("#F2CC1C").RibbonTabs(ribbonTab => {
+         ribbonTab.Id("Design").Text("DESIGN").TabGroups(contextTabGroup => {
+                  contextTabGroup.Text("Table Style Options").Type("custom").ContentID("contextualTab").Add();
      }).Add();
      });
-         ctabs.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ctab => {
-         ctab.Id("tabset1").Text("Tabset1").TabGroups(ctabgrp => {
-                ctabgrp.Text("Tabset1 Style").Type("custom").ContentID("headings").Add();
+         contextualTab.BackgroundColor("blue").BorderColor("lightblue").RibbonTabs(ribbonTab => {
+         ribbonTab.Id("tabset1").Text("Tabset1").TabGroups(contextTabGroup => {
+                contextTabGroup.Text("Tabset1 Style").Type("custom").ContentID("headings").Add();
      }).Add();
-         ctab.Id("tabset2").Text("Tabset2").TabGroups(ctabgrp => {
-                ctabgrp.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
+         ribbonTab.Id("tabset2").Text("Tabset2").TabGroups(contextTabGroup => {
+                contextTabGroup.Text("Tabset2 Styles").Type("custom").ContentID("contextualTabset2").Add();
      }).Add();
      });
      })

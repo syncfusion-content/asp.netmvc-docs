@@ -30,7 +30,7 @@ The following code example depicts the way to customize the error word highlight
     MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
 </div><br />
  
-    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).MisspellWordCss("highlight")
+    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).MisspellWordCss("highlight")
  
  
     @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))
@@ -75,7 +75,7 @@ The following code example describes the way to control the suggestion count.
     MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
 </div><br />
  
-    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).MaxSuggestionCount(5)
+    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).MaxSuggestionCount(5)
  
  
     @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))

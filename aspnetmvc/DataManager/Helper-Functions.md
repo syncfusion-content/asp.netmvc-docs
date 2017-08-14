@@ -78,12 +78,12 @@ Please refer the online (link)[https://en.wikipedia.org/wiki/Time_zone#List_of_U
     </div>
     <script type="text/javascript">
         var serverTimeZoneDiff = -5.0   // if your server is in EST time zone (UTC -5.0) (in hours)
-        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differents and convert it to hours;
+        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
         ej.serverTimezoneOffset = serverTimeZoneDiff + clientSideTimeZoneDiff;
         $(function () {
-            var dm = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
+            var dataManagerObj = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
             $("#Grid").ejGrid({
-                dataSource: dm,
+                dataSource: dataManagerObj,
                 allowPaging: true,
                 columns: ["OrderID", "EmployeeID", "CustomerID", "OrderDate", "Freight"]
             });
@@ -111,12 +111,12 @@ Let see an example, when they observe the Daylight saving time.
     </div>
     <script type="text/javascript">
         var serverTimeZoneDiff = -4.0  // if your server is in EDT time zone (UTC -4.0) (in hours)
-        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differents and convert it to hours;
+        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
         ej.serverTimezoneOffset = serverTimeZoneDiff + clientSideTimeZoneDiff;
         $(function () {
-            var dm = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
+            var dataManagerObj = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
             $("#Grid").ejGrid({
-                dataSource: dm,
+                dataSource: dataManagerObj,
                 allowPaging: true,
                 columns: ["OrderID", "EmployeeID", "CustomerID", "OrderDate", "Freight"]
             });

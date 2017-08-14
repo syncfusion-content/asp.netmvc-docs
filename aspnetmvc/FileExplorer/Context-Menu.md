@@ -183,29 +183,29 @@ Add the following code example to the corresponding controller page.
 
 public ActionResult FileActionContextMenu(FileExplorerParams args)
 {
-    FileExplorerOperations opeartion = new FileExplorerOperations();
+    FileExplorerOperations operation = new FileExplorerOperations();
     switch (args.ActionType)
     {
         case "Read":
-            return Json(opeartion.Read(args.Path, args.ExtensionsAllow));
+            return Json(operation.Read(args.Path, args.ExtensionsAllow));
         case "CreateFolder":
-            return Json(opeartion.CreateFolder(args.Path, args.Name));
+            return Json(operation.CreateFolder(args.Path, args.Name));
         case "Paste":
-            return Json(opeartion.Paste(args.LocationFrom, args.LocationTo, args.Names, args.Action, args.CommonFiles));
+            return Json(operation.Paste(args.LocationFrom, args.LocationTo, args.Names, args.Action, args.CommonFiles));
         case "Remove":
-            return Json(opeartion.Remove(args.Names, args.Path));
+            return Json(operation.Remove(args.Names, args.Path));
         case "Rename":
-            return Json(opeartion.Rename(args.Path, args.Name, args.NewName, args.CommonFiles));
+            return Json(operation.Rename(args.Path, args.Name, args.NewName, args.CommonFiles));
         case "GetDetails":
-            return Json(opeartion.GetDetails(args.Path, args.Names));
+            return Json(operation.GetDetails(args.Path, args.Names));
         case "Download":
-            opeartion.Download(args.Path, args.Names);
+            operation.Download(args.Path, args.Names);
             break;
         case "Upload":
-            opeartion.Upload(args.FileUpload, args.Path);
+            operation.Upload(args.FileUpload, args.Path);
             break;
         case "Search":
-            return Json(opeartion.Search(args.Path, args.ExtensionsAllow, args.SearchString, args.CaseSensitive));
+            return Json(operation.Search(args.Path, args.ExtensionsAllow, args.SearchString, args.CaseSensitive));
     }
     return Json("");
 }
@@ -217,7 +217,7 @@ In the view page, add FileExplorer helper and specify the **ContextMenuSettings*
 {% highlight razor %}
 
 @* removed the "NewFolder" item from NavigationPane ContextMenu *@
-@{List<String> navbar = new List<string>() { "Upload", "|", "Delete", "Rename", "|", "Cut", "Copy", "Paste", "|", "Getinfo" }; }
+@{List<String> navBar = new List<string>() { "Upload", "|", "Delete", "Rename", "|", "Cut", "Copy", "Paste", "|", "Getinfo" }; }
 @* added the custom ContextMenu item (View) to Current working directory ContextMenu *@
 @{List<String> cwd = new List<string>() { "Refresh", "Paste", "|", "SortBy", "View", "|", "NewFolder", "Upload", "|", "Getinfo" };}
 @* removed "Upload" item from Selected files/ folder's ContextMenu *@
@@ -227,7 +227,7 @@ In the view page, add FileExplorer helper and specify the **ContextMenuSettings*
 
 @Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").ContextMenuSettings(
     settings => settings.Items(
-        item => item.Navbar(navbar).Cwd(cwd).Files(files)
+        item => item.Navbar(navBar).Cwd(cwd).Files(files)
     ).CustomMenuFields(fields =>
     {
         fields.Add().Id("View").Text("View by").SpriteCssClass("custom-grid").Child(child =>
@@ -285,7 +285,7 @@ function menuBeforeOpen(args) {
     args.dataSource.pop();
 }
 function menuOpen(args) {
-    //you can also idendify which context menu is opened by 
+    //you can also identify which context menu is opened by 
     if (args.contextMenu == "cwd") {
         //do your custom action here.
     }

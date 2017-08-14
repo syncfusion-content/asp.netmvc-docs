@@ -23,7 +23,7 @@ Lets position the Tooltips (stems) left center corner at the right center of the
         <div class="desc">Delphi Succinctly</div>
     </div>
 
-    @Html.EJ().Tooltip("sample").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.").Position(pos => pos.Target(target => target.Horizontal("right").Vertical("center")).Stem(stem => stem.Horizontal("left").Vertical("center")))
+    @Html.EJ().Tooltip("sample").Content("Learn the fundamentals of Delphi to build a variety of solutions for many devices and platforms.").Position(position => position.Target(target => target.Horizontal("right").Vertical("center")).Stem(stem => stem.Horizontal("left").Vertical("center")))
 
 {% endhighlight %}
 
@@ -132,7 +132,7 @@ It also possible to place the tooltip relation to the window as follows
         </div>
     </div>
 
-    @Html.EJ().Tooltip("tooltip5").Content("JavaScript is the programming language of HTML and the Web.").Position(pos => pos.Target(target => target.Horizontal("right").Vertical("bottom"))).Associate(Associate.Window)
+    @Html.EJ().Tooltip("tooltip5").Content("JavaScript is the programming language of HTML and the Web.").Position(position => position.Target(target => target.Horizontal("right").Vertical("bottom"))).Associate(Associate.Window)
 
 {% endhighlight %}
     
@@ -146,7 +146,7 @@ And last but not least, absolute positioning via X,Y co-ordinates e.g. a Tooltip
         </div>
     </div>
 
-    @Html.EJ().Tooltip("tooltip6").Content("JavaScript is the programming language of HTML and the Web.").Position(pos => pos.Target(target => target.Horizontal(10).Vertical(10))).Associate(Associate.Axis)
+    @Html.EJ().Tooltip("tooltip6").Content("JavaScript is the programming language of HTML and the Web.").Position(position => position.Target(target => target.Horizontal(10).Vertical(10))).Associate(Associate.Axis)
 
 {% endhighlight %}
 

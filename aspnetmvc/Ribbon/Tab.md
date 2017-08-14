@@ -23,13 +23,13 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
       .RibbonTabs(tab => {
           tab.Id("home").Text("HOME").TabGroups(tabgroup => {
               tabgroup.Text("Save").AlignType(RibbonAlignType.Rows).Content(ctn => {
-                  ctn.ContentGroups(ctngrp => {
-                      ctngrp.Id("print").Text("Print").ButtonSettings(new ButtonProperties() {
+                  ctn.ContentGroups(contentGroup => {
+                      contentGroup.Id("print").Text("Print").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
                               PrefixIcon = "e-Ribbon e-print"
                       }).Add();
-                      ctngrp.Id("save").Text("Save").ButtonSettings(new ButtonProperties() {
+                      contentGroup.Id("save").Text("Save").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
                               PrefixIcon = "e-Ribbon e-save"
@@ -37,7 +37,7 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
                   }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("50px").Height("70px")).Add();
               }).Add();
           }).Add();
-          tab.Id("sendrec").Text("Send/Receive").TabGroups(tabgroup => {
+          tab.Id("sendRec").Text("Send/Receive").TabGroups(tabgroup => {
               tabgroup.Text("Send/Receive").Type("custom").ContentID("sendReceive").AlignType(RibbonAlignType.Columns).Content(ctn => {
 
               }).Add();

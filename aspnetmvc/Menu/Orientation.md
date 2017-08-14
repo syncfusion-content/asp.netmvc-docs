@@ -26,7 +26,7 @@ The following steps explains you the details on rendering the Menu control.
 
 <div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+@Html.EJ().Menu("menuControl").Items(items =>
 
 {
 
@@ -121,7 +121,7 @@ You can also render Menu control in vertical direction using orientation.To set 
 
 <div class="imgframe">
 
-@Html.EJ().Menu("menucontrol").Items(items =>
+@Html.EJ().Menu("menuControl").Items(items =>
 
 {
 
