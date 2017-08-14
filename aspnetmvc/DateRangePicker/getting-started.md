@@ -59,7 +59,7 @@ Start Date can be selected from any calendar in the popup of DateRangePicker. Th
 
 2. Click on date which is lesser than existing start date
 
-3. Click on calendar when already there is start date and end date is updated.
+3. Click on calendar when already there is start date and end date is updated.In this case exiting selection will be cleared fully and clicked date will be set as startdate to form new range.
 
 Start Date of range can be set using API called **StartDate**, please refer the below code example:
 
