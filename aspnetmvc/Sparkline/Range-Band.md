@@ -16,7 +16,7 @@ The range band feature is used to highlight a particular range along the y-axis 
 @(Html.EJ().Sparkline("container")
 
  //To customize the range Band of the sparkline
-  .RangeBandSettings(rb => rb.StartRange(4).EndRange(30).Color("#ff14ae").Opacity(0.4))
+  .RangeBandSettings(range => range.StartRange(4).EndRange(30).Color("#ff14ae").Opacity(0.4))
  )
 
 

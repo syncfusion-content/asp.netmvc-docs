@@ -20,7 +20,7 @@ Apply the plugin and property assigning the Map element through the directive 
 {% highlight CSHTML %}
 
 
-      //References to be added for angular support.
+      //References to be added for AngularJS support.
 
             <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
 
@@ -59,15 +59,15 @@ Apply the plugin and property assigning the Map element through the directive 
             
             {          
 
-                  $scope.nenablezoom = true,          
+                  $scope.enablezoom = true,          
 
-                  $scope.nshapedata = usMap;
+                  $scope.shapedata = usMap;
 
-                  $scope.nfill = "#9CBF4E";
+                  $scope.fill = "#9CBF4E";
 
-                  $scope.nstrokethickness = "0.5";
+                  $scope.strokethickness = "0.5";
 
-                  $scope.nstroke = "white";      
+                  $scope.stroke = "white";      
 
             });
 

@@ -40,11 +40,11 @@ The above properties of `ShapeSettings` are applied only when `AutoFill` propert
 
 	@(Html.EJ().Map("container")            
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-    		lr.ShapeData(mapData)
+    		layer.ShapeData(mapData)
 
 			.EnableMouseHover(true)
 
@@ -129,11 +129,11 @@ Gets or sets the start point and end point gradient colors to be applied for spe
 
 	@(Html.EJ().Map("map")            
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)
+			layer.ShapeData(mapData)
 
 			.ShapeDataPath("name")
 
@@ -311,11 +311,11 @@ Here “MapController.cs” is populated with data of USA Election in “MapCont
 
 	@(Html.EJ().Map("maps") 
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)
+			layer.ShapeData(mapData)
 
 			.ShapeDataPath("State")
 
@@ -323,11 +323,11 @@ Here “MapController.cs” is populated with data of USA Election in “MapCont
 		
 			.DataSource(datasource)
 
-			.ShapeSettings(sp =>
+			.ShapeSettings(shape =>
 
 			{
 		
-				sp.StrokeThickness(0.5)
+				shape.StrokeThickness(0.5)
 
 				.AutoFill(false)
 
@@ -372,17 +372,17 @@ When `AutoFill` property is set to true, shapes are filled with default colors f
 
 	@(Html.EJ().Map("maps") 
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)
+			layer.ShapeData(mapData)
 
-			.ShapeSettings(sp =>
+			.ShapeSettings(shape =>
 
 			{
 
-				sp.StrokeThickness(0.5)
+				shape.StrokeThickness(0.5)
 
 		  		.Stroke("white")
 
@@ -417,18 +417,18 @@ This property is enabled only when `ColorPalette` property value is set to “Cu
 
 	@(Html.EJ().Map("container")
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)
+			layer.ShapeData(mapData)
 
-			.ShapeSettings(sp =>
+			.ShapeSettings(shape =>
 
 			{
 
   					
-				sp.ColorPalette(ColorPalette.CustomPalette)
+				shape.ColorPalette(ColorPalette.CustomPalette)
 
 	  			.AutoFill(true)
 
@@ -468,15 +468,15 @@ The tooltip is displayed only when you set `ShowTooltip` to “True” in the sh
 
 	@(Html.EJ().Map("container")
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 			{
 
-				lr.ShapeData(mapData)                                                 
+				layer.ShapeData(mapData)                                                 
 
-				.ShapeSettings(sp=>
+				.ShapeSettings(shape=>
 								
-				Sp.ValuePath(“name”);
+				shape.ValuePath(“name”);
 									
 			})
 
@@ -505,17 +505,17 @@ The `ToolTipTemplate` property is used for customizing the template for tooltip.
 
 	@(Html.EJ().Map("container")
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)					
+			layer.ShapeData(mapData)					
 
-			.ShapeSettings(sp=>
+			.ShapeSettings(shape=>
 			
 			{
 							  
-				Sp.ValuePath(“name”);								
+				shape.ValuePath(“name”);								
 
 			});
 

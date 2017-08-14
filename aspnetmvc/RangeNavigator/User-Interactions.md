@@ -18,10 +18,10 @@ EjRangeNavigator provides highlighting supports to the intervals on mouse hover.
    @(Html.EJ().RangeNavigator("rangeContainer")
           //...
 
-        .NavigatorStyleSettings(nvs=>
-               nvs.HighlightSettings(hls=>
+        .NavigatorStyleSettings(navigator=>
+               navigator.HighlightSettings(highlight=>
                    // enable the highlight settings
-                   hls.Enable(true))
+                   highlight.Enable(true))
                 )
      )
 
@@ -42,10 +42,10 @@ To customize the highlighted intervals, use color, border and opacity options in
     @(Html.EJ().RangeNavigator("rangeContainer")
            //...
 
-          .NavigatorStyleSettings(nvs=>
-               nvs.HighlightSettings(hls=>
+          .NavigatorStyleSettings(navigator=>
+               navigator.HighlightSettings(highlight=>
                    // enable the highlight settings
-                   hls.Enable(true)
+                   highlight.Enable(true)
                     // customizing style
                    .Color("#006fa0")
                    .Border(br=>br.Color("red").Width(2))
@@ -68,10 +68,10 @@ EjRangeNavigator provides selection supports to the intervals by, clicking and d
    @(Html.EJ().RangeNavigator("rangeContainer")
           //...
 
-        .NavigatorStyleSettings(nvs=>
-               nvs.SelectionSettings(shls=>
-                   // enable the selectio settings
-                   shls.Enable(true)
+        .NavigatorStyleSettings(navigator=>
+               navigator.SelectionSettings(selection=>
+                   // enable the selection settings
+                   selection.Enable(true)
                    )
                 )
      )
@@ -93,10 +93,10 @@ To customize the selected intervals, use color, border and opacity options in th
  @(Html.EJ().RangeNavigator("rangeContainer")
           //...
 
-        .NavigatorStyleSettings(nvs=>
-               nvs.SelectionSettings(shls=>
-                   // enable the selectio settings
-                   shls.Enable(true)
+        .NavigatorStyleSettings(navigator=>
+               navigator.SelectionSettings(selection=>
+                   // enable the selection settings
+                   selection.Enable(true)
                     // customizing style
                    .Color("#27e8e5’")
                    .Border(br=>br.Color("red").Width(2))
@@ -128,8 +128,8 @@ To customize the selected intervals, use color, border and opacity options in th
            .EnableScrollbar(true)
            
            //Maximum data to be displayed in the rangenavigator control
-           .ScrollRangeSettings(scrl=>
-               scrl.Start("2010/1/1").End("2011/11/31")
+           .ScrollRangeSettings(range=>
+               range.Start("2010/1/1").End("2011/11/31")
                )
                
            //Subscribe the event on scrollbar position changed 

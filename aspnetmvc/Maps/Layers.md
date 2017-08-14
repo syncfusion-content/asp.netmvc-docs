@@ -49,13 +49,13 @@ Here “MapController.cs” is populated with data of World Map in “MapControl
 
 	{
 
-		string worldmapjson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
+		string data = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/WorldMap.json"));
 
 		JavaScriptSerializer ser = new JavaScriptSerializer();
 
 		ser.MaxJsonLength = int.MaxValue;
 
-		return new MapData(worldmapjson);
+		return new MapData(data);
 	}
 
 {% endhighlight %}
@@ -77,11 +77,11 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 	@(Html.EJ().Map("maps")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.ShapeData(world_map)
+		layer.ShapeData(world_map)
 
 		.ShapeSettings(ss =>
 
@@ -95,11 +95,11 @@ Refer both USA data and world map data as illustrated in the following “Map.cs
 
 		})
 
-		.SubLayer(ssl =>
+		.SubLayer(sublayer =>
 
 		{     
 
-			ssl.ShapeData(mapData)
+			sublayer.ShapeData(mapData)
 
 			.ShapeSettings(ss =>
 

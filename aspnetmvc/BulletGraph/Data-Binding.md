@@ -48,9 +48,9 @@ ViewBag.DataSource = data;
 
 {% highlight CSHTML %}
 
-@(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60).QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60).QuantitativeScaleSettings( scale=>
 
-	qs.Location( loc=> loc.x(50).y(20))
+	scale.Location( loc=> loc.x(50).y(20))
 
 	.Interval(1))
 
@@ -82,9 +82,9 @@ Bullet Graph provides option to bind data from a remote server using ejDataManag
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(60)
 
-	.QuantitativeScaleSettings(qs=>
+	.QuantitativeScaleSettings(scale=>
 
-	qs.Location(loc=>loc.x(50).y(20))
+	scale.Location(loc=>loc.x(50).y(20))
 
 	.Minimum(5)
 

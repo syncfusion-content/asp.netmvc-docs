@@ -19,7 +19,7 @@ RangeNavigator control is designed to visualize large number of data and navigat
 RangeNavigator is also used with numeric data and the ValueType for this data is “numeric” 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .ValueType("numeric")
 
@@ -40,7 +40,7 @@ The following screenshot displays the RangeNavigator with numeric data.
 By default the ValueType of the RangeNavigator is “datetime” and represents the DateTime values. 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .ValueType("datetime")
 
@@ -68,11 +68,11 @@ By default IntervalType for higher level labels are Years and for lower level la
 {% highlight CSHTML %}
 
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .LabelSettings(ls=>ls
 
-.HigherLevel(hl=>hl.IntervalType(NavigatorIntervalType.Years))            
+.HigherLevel(higher=>higher.IntervalType(NavigatorIntervalType.Years))            
 
 .LowerLevel(li=>li.IntervalType(NavigatorIntervalType.Quarters))  
 

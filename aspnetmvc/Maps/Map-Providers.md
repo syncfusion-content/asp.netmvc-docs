@@ -23,11 +23,11 @@ You can enable this feature by setting the LayerType property value as "OSM".
 
 	@(Html.EJ().Map("map")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.OSM)
+		layer.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.OSM)
 
 		.UrlTemplate("http://a.tile.openstreetmap.org/level/tileX/tileY.png”);
 
@@ -59,11 +59,11 @@ You can enable this feature by defining the `LayerType` as “Bing”.
 
 	@(Html.EJ().Map("map")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.Bing)
+		layer.LayerType(Syncfusion.JavaScript.DataVisualization.Models.LayerType.Bing)
 
 		.Key("// ...bingMapKey”).Add();
 
