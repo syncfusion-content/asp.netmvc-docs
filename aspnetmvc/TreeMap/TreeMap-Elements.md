@@ -261,4 +261,3 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 ![](TreeMap-Elements_images/TreeMap-Elements_img3.png)
 
 
-
