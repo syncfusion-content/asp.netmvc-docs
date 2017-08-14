@@ -28,7 +28,7 @@ The following code example is used to add the header image for the root Tab head
                data.Add().ID("pizza").Text("Pizza").ContentTemplate(@<div id="pizzatype" style="background-color: #F5F5F5">
             <p>Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
             </div>);
-              data.Add().ID("sandwichtype").Text("Sandwich").ContentTemplate(@<div id="sandwichtype" style="background-color: #F5F5F5">
+              data.Add().ID("sandwichType").Text("Sandwich").ContentTemplate(@<div id="sandwichType" style="background-color: #F5F5F5">
             <p>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</p>
             </div>);
             }).SelectedItemIndex(1).ClientSideEvents(e =>e.Create("create")).Render();}
@@ -302,7 +302,7 @@ The following code example is used to render the Tab widget with customized heig
 
 					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				  data.Add().ID("sandwichtype").Text("Sandwich Type")
+				  data.Add().ID("sandwichType").Text("Sandwich Type")
 
 					  .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -352,7 +352,7 @@ The following code example is used to render the Tab widget with customized widt
 
 					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwichType").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -419,7 +419,7 @@ The following code example is used to render the Tab widget with customized styl
 
 					   .ContentTemplate(@<div>dish cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.</div>);
 
-				   data.Add().ID("sandwichtype").Text("Sandwich Type")
+				   data.Add().ID("sandwichType").Text("Sandwich Type")
 
 					   .ContentTemplate(@<div>Sandwich cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 

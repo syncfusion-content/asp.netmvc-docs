@@ -56,7 +56,7 @@ The Access-Control-Request-Method is used when issuing a preflight request to le
 {% endhighlight %}
 
 N> 
-Preflighted requests: <BR>
+Preflightedrequests: <BR>
 Setting custom headers to XHR triggers a preflight request. With simple words this mean that preflight request first sends an HTTP request by the OPTIONS method to the resource on the remote domain, to make sure that the request is safe to send. According W3C for non-same origin requests using the HTTP GET method a preflight request is made when headers other than Accept and Accept-Language are set.
 
 ## Access-Control-Request-Headers

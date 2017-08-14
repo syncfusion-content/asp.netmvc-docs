@@ -304,18 +304,18 @@ The following code example depicts the way to achieve the customization of defau
 
     // This function executes when the checkboxes are checked/unchecked
     function onCreate(args) {
-        var customDesign = "<tr class='customfields'><td class='e-textlabel'>Event Type</td><td><input class='appType' type='text'/></td><td class='e-textlabel'>Event Status </td><td><input class='status' type='text'/></td></tr>";
+        var customDesign = "<tr class='customfields'><td class='e-textlabel'>Event Type</td><td><input class='app-type' type='text'/></td><td class='e-textlabel'>Event Status </td><td><input class='status' type='text'/></td></tr>";
         $("." + this._id + "parrow").after(customDesign);
     }
 
     // This function executes before the appointment window gets opened.
     function onAppointmentOpen(args) {
         if (!ej.isNullOrUndefined(args.appointment)) {
-            // if double clicked on the appointments, retrieve the custom field values from the appointment object and fills it in the appropriate fields.               this._appointmentAddWindow.find(".appType").val(args.appointment.AppointmentType);
+            // if double clicked on the appointments, retrieve the custom field values from the appointment object and fills it in the appropriate fields.               this._appointmentAddWindow.find(".app-type").val(args.appointment.AppointmentType);
             this._appointmentAddWindow.find(".status").val(args.appointment.Status);
         } else {
             // if double clicked on the cells, clears the field values.               
-            this._appointmentAddWindow.find(".appType").val("");
+            this._appointmentAddWindow.find(".app-type").val("");
             this._appointmentAddWindow.find(".status").val("");
         }
     }
@@ -434,7 +434,7 @@ The following code example depicts the way to synchronize the Schedule with Outl
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 12))
-               .AppointmentSettings(fields => fields.Datasource(dataSrc => dataSrc.URL("/Home/GetApp").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
+               .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("/Home/GetApp").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
                .Id("Id")
                 .Subject("Subject")
                 .StartTime("StartTime")

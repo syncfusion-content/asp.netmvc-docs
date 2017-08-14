@@ -387,7 +387,7 @@ When template is applied for the `PrioritySettings`, these default icons will be
     List<PrioritySettings> Priority = new List<PrioritySettings>();
     Priority.Add(new PrioritySettings { Text = "none", Value = "none" });
     Priority.Add(new PrioritySettings { Text = "critical", Value = "critical" });
-    Priority.Add(new PrioritySettings { Text = "ultraCritical", Value = "ultraCritical" });
+    Priority.Add(new PrioritySettings { Text = "ultra-critical", Value = "ultra-critical" });
 }
 
 @(Html.EJ().Schedule("Schedule1")
@@ -414,7 +414,7 @@ When template is applied for the `PrioritySettings`, these default icons will be
 <!-- Style for Priority Template -->
 <style type="text/css">
     .critical,
-    .ultraCritical,
+    .ultra-critical,
     .none {
         height: 13px;
         width: 13px;
@@ -431,7 +431,7 @@ When template is applied for the `PrioritySettings`, these default icons will be
         background-position: -13px;
     }
 
-    .ultraCritical {
+    .ultra-critical {
         background-color: #56ca85;
         background-position: -59px;
     }

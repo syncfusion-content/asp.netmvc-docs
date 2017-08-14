@@ -37,7 +37,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		<div class="inner">
 
-	<div class="ctrlLabel">
+	<div class="control-label">
 
 			Select a Mobile
 
@@ -61,13 +61,13 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		</div>
 
-			<span class="columnLeft">
+			<span class="column-left">
 
 			<span>Mobile Rate</span>
 
 		</span>
 
-		<span class="columnRight">
+		<span class="column-right">
 
 			<span>Rs </span><span class="value"></span>
 
@@ -112,7 +112,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		}
 
-		.ctrlLabel, .loan
+		.control-label, .loan
 
 		{
 
@@ -120,7 +120,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 		}
 
-		.columnRight
+		.column-right
 
 		{
 
@@ -221,37 +221,37 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 			</div>
 
-			<span class="columnLeft">
+			<span class="column-left">
 
 				<span>Loan Amount</span>
 
 			</span>
 
-			<span class="columnRight">
+			<span class="column-right">
 
 				<span>Rs </span><span class="value">25000</span>
 
 			</span>    @Html.EJ().Slider("loanSlider").Height("16px").Value("25000").MinValue(10000).MaxValue(1000000).IncrementStep(10).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
-			<span class="columnLeft">
+			<span class="column-left">
 
 				<span>Interest Rate</span>
 
 			</span>
 
-			<span class="columnRight">
+			<span class="column-right">
 
 				<span class="value"></span><span>% pa</span>
 
 			</span>        @Html.EJ().Slider("interestSlider").Height("16px").Value("4").MinValue(1).MaxValue(20).IncrementStep(1).ClientSideEvents(event => event.Change("onChange").Slide("onChange"))
 
-			<span class="columnLeft">
+			<span class="column-left">
 
 				<span>Tenure</span>
 
 			</span>
 
-			<span class="columnRight">
+			<span class="column-right">
 
 				<span class="value"></span><span>Years</span>
 
@@ -309,7 +309,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		.columnLeft
+		.column-left
 
 		{
 
@@ -317,7 +317,7 @@ This section explains how to use the Slider control for EMI Calculation. The fin
 
 		}
 
-		.columnRight
+		.column-right
 
 		{
 

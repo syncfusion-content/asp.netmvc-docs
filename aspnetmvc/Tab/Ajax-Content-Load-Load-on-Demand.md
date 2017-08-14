@@ -38,7 +38,7 @@ Each item has a variety of options and these options are also specified in the l
 
 			</div>);
 
-			 data.Add().ID("sandwitch").Text("Sandwizza Menu").ContentTemplate(@<div>
+			 data.Add().ID("sandwich").Text("Sandwizza Menu").ContentTemplate(@<div>
 
 				Sandwizza cooked to perfection tossed with bread, milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health.
 
@@ -82,9 +82,9 @@ Each item has a variety of options and these options are also specified in the l
 
 			{
 
-				data.Add().ID("gardenveggie").Text("Corn Spinach").Url("Content/gardenVeggie.html");
+				data.Add().ID("GardenVeggie").Text("Corn Spinach").Url("Content/gardenVeggie.html");
 
-				data.Add().ID("chickentikka").Text("Chicken-Delite").Url("Content/chickenTikka.html"); data.Add().ID("PaneerTikka").Text("PaneerTikka").Url("Content/paneerTikka.html");
+				data.Add().ID("ChickenTikka").Text("Chicken-Delite").Url("Content/chickenTikka.html"); data.Add().ID("PaneerTikka").Text("PaneerTikka").Url("Content/paneerTikka.html");
 
 			})
 

@@ -257,7 +257,7 @@ Upon clicking the "Insert" button, the special character will be added to the RT
     var rteObj =  $("#rteSample").data("ejRTE");
     $(".insert-special-character").ejButton();
     $("#specialCharacter").ejDialog({ enableResize: false, enableModal: true, showOnInit: false, width: "auto", position: { X: 218, Y: 38 } });
-    $(".specialtbl tbody tr td" ).addClass("specialTd").on( "click", customTdClick);
+    $(".specialtbl tbody tr td" ).addClass("special-td").on( "click", customTdClick);
     function customTdClick(args) {
         rteObj.executeCommand("inserthtml", args.currentTarget.innerText);
         $("#specialCharacter").ejDialog("close");
@@ -278,7 +278,7 @@ Define the CSS that will be applied to the custom tool.
     {
         border:1px solid #c8c8c8;
     }
-    .specialTd:hover
+    .special-td:hover
     {
         background-color:#86bcea;
         cursor:pointer;

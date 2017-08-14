@@ -595,7 +595,7 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-@Html.EJ().Toolbar("ToolbarItem").ClientSideEvents(e => e.Click("onItemclick")).Width("auto").EnableSeparator(true)
+@Html.EJ().Toolbar("ToolbarItem").ClientSideEvents(e => e.Click("onItemClick")).Width("auto").EnableSeparator(true)
 
 
 
@@ -604,7 +604,7 @@ Toolbar items, the operation is performed through client-slide click event. The 
 
 
 
-	function onItemclick(args) 
+	function onItemClick(args) 
 	{
 
 		//Finds Out the Item that was Clicked in Toolbar

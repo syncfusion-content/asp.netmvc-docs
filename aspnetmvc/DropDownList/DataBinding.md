@@ -549,7 +549,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 
 {% highlight html %}
                
-       @Html.EJ().DropDownList("DropDownList1").Datasource(dataSrc => dataSrc.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).DropDownListFields(df=>df.Text("ShipCountry").Value("OrderID"))
+       @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).DropDownListFields(df=>df.Text("ShipCountry").Value("OrderID"))
 		
 {% endhighlight %}
            
@@ -563,7 +563,7 @@ For further details about OData service please refer [the link](http://www.odata
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSrc =>dataSrc.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).DropDownListFields(df => df.Text("RegionDescription").Value("RegionID"))
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource =>dataSource.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).DropDownListFields(df => df.Text("RegionDescription").Value("RegionID"))
      
 {% endhighlight %}
            
@@ -578,7 +578,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSrc => dataSrc.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor)).DropDownListFields(df => df.Text("Name").Value("EmployeeID"))
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor)).DropDownListFields(df => df.Text("Name").Value("EmployeeID"))
      
 {% endhighlight %}
 
@@ -619,7 +619,7 @@ It loads the data on scrolling the list of items. This can be achieved by settin
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSrc => dataSrc.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Normal).ItemsCount(7)
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Normal).ItemsCount(7)
      
 {% endhighlight %}
 
@@ -632,6 +632,6 @@ N> In both modes, set of items will be fetched based on the count specified in t
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSrc => dataSrc.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous).ItemsCount(7)
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous).ItemsCount(7)
      
 {% endhighlight %}

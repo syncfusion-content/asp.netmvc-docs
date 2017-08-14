@@ -32,7 +32,7 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
         <th> Description <br/> </th>
     </tr>
      <tr>
-        <td> processQuery(dataObj, query) </td>
+        <td> processQuery(dataManagerObj, query) </td>
         <td> 
             <table>
                 <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
@@ -509,7 +509,7 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
 {% highlight razor %}
 
     @(Html.EJ().Grid<object>("FlatGrid")
-                .Datasource(dataSrc => dataSrc.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                .Datasource(dataSource => dataSource.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
                 .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
                 .AllowPaging()
                 .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -747,7 +747,7 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 {% highlight CSHTML %}
 
     @(Html.EJ().Grid<OrdersView>("Grid")
-        .Datasource(dataSrc => dataSrc.URL(@Url.Action("DataSource"))
+        .Datasource(dataSource => dataSource.URL(@Url.Action("DataSource"))
         .EnableCaching()
         .CachingPageSize(4)
         .TimeTillExpiration(120000)

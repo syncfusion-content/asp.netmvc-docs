@@ -30,7 +30,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 	<div class="editors">
 
-	<div class="elementText" style="">Electricity Bill Calculator</div>
+	<div class="element-text" style="">Electricity Bill Calculator</div>
 
 	<br />
 
@@ -104,7 +104,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 		 </tbody></table>
 
-	  <div class="payBill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
+	  <div class="pay-bill">      @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
 	  </div>
 
@@ -119,7 +119,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 	<style type="text/css" class="cssStyles">
 
-		.elementText
+		.element-text
 
 		{
 
@@ -159,7 +159,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 			}
 
-		.payBill
+		.pay-bill
 
 		{
 
@@ -199,7 +199,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Numeric, Percen
 
 <div class="editors">
 
-<div class="elementText" style="">Electricity Bill Calculator</div>
+<div class="element-text" style="">Electricity Bill Calculator</div>
 
 <br />
 
@@ -269,7 +269,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Numeric, Percen
 
 </table>
 
-  <div class="payBill">
+  <div class="pay-bill">
 
     @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
@@ -293,7 +293,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 <div class="editors">
 
-<div class="elementText" style="">ElectricityBill Calculator</div><br />
+<div class="element-text" style="">ElectricityBill Calculator</div><br />
 
 <table class="editors">
 
@@ -365,7 +365,7 @@ You can set the “StrictMode” option to restrict entering values defined outs
 
 </table>
 
-  <div class="payBill">
+  <div class="pay-bill">
 
 @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate")
 
@@ -391,7 +391,7 @@ To customize the button, you can set the ContentType as TextAndImage to include 
 
 @* Please refer the table format for textboxes customization *@
 
-  <div class="payBill">
+  <div class="pay-bill">
 
    @Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Calculate").ClientSideEvents(c=>c.Click("calculateBill"))
 
