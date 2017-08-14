@@ -1132,6 +1132,68 @@ To render a Spline Chart, set the Type as **Spline** in the chart series. To cha
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/spline) here to view the Spline Chart online demo sample.
 
+### Change the spline width
+
+To change the spline segment width, you can use the Width property of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change the width of spline series
+         sr.Width(3)
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img36.png)
+
+
+### Dashed lines
+
+To render the spline series with dotted lines, you can use the DashArray option of the series.
+
+{% highlight cshtml %}
+
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+    
+     .Series(sr =>
+     {
+         //Change dash array to display dotted or dashed splines
+         sr.DashArray("5,5")
+            //...
+             .Add();
+     })
+     
+     //...
+ )
+
+
+{% endhighlight %}
+
+![](Chart-Types_images/Chart-Types_img37.png)
+
+
+## Pie Chart
+
+You can create a pie chart by setting the series Type as **Pie** in the chart series.
+
+
+
 {% highlight cshtml %}
 
 
