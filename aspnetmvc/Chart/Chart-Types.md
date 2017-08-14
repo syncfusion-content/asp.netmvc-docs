@@ -1132,6 +1132,7 @@ To render a Spline Chart, set the Type as **Spline** in the chart series. To cha
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/spline) here to view the Spline Chart online demo sample.
 
+
 ### Change the spline width
 
 To change the spline segment width, you can use the Width property of the series.
@@ -1191,7 +1192,6 @@ To render the spline series with dotted lines, you can use the DashArray option 
 ## Pie Chart
 
 You can create a pie chart by setting the series Type as **Pie** in the chart series.
-
 
 
 {% highlight cshtml %}
