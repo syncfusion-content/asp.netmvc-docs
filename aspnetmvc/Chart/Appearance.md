@@ -281,3 +281,4 @@ However, you can force the chart to animate series by calling the animate method
 
 
 {% endhighlight %}
+
