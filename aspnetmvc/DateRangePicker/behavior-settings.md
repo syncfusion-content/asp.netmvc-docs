@@ -13,7 +13,7 @@ DateRangePicker has some default behavior settings which helps you to perform mo
 
 ## Value
 
-DateRangePicker value can be selected through picking two date values from available two DatePicker calendar or you can set it by using **Value** property.
+DateRangePicker value can be selected through picking two date values from available two calendars on popup or you can set it by using **Value** property.
 
 Add the following code in your CSHTML page to render DateRangePicker with value.
 
