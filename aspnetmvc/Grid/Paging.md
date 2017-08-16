@@ -175,7 +175,7 @@ The following code example describes the above behavior.
 
 ## Pager with pageSize drop down
 
-There is an option to set the size of page by means of selecting from the page size values available at the dropdown in pager. Once selected it updates the pageSize value accordingly. To render drop down in pager, provide the pageSize values you wish to display in drop down as `array` to `pageSizeList` property of `pageSettings`.
+There is an option to set the size of page by means of selecting from the page size values available at the dropdown in pager. Once selected it updates the pageSize value accordingly. To render drop down in pager, provide the pageSize values you wish to display in drop down as `array` to `PageSizeList` property of `PageSettings`.
 
 The following code example describes the above behavior.
 
