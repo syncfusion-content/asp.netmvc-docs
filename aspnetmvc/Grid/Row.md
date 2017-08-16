@@ -355,7 +355,7 @@ The following code example describes the above behavior.
         .AllowPaging()
         .SelectionType(SelectionType.Multiple)
         .AllowRowDragAndDrop()
-        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler").RowDropMapper("RowDropHandler").DropTargetID("#DestignationGrid"))
+        .RowDropSettings(drop => drop.RowDragMapper("RowDragHandler").RowDropMapper("RowDropHandler").DropTargetID("#DesignationGrid"))
         .Columns(col =>
         {
             col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
