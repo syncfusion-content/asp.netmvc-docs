@@ -29,17 +29,17 @@ Qualitative Range represents the quality of a specific range in quantitative sca
 
 	}).QualitativeRangeSize(80)
 
-	.QuantitativeScaleSettings(qs =>
+	.QuantitativeScaleSettings(scale =>
 
-	qs.FeatureMeasure(fm =>
+	scale.FeatureMeasure(measure =>
 
 	{
 
-		fm.Value(55).ComparativeMeasureValue(75).Category("Year 1").Add();
+		measure.Value(55).ComparativeMeasureValue(75).Category("Year 1").Add();
 
-		fm.Value(65).ComparativeMeasureValue(70).Category("Year 2").Add();
+		measure.Value(65).ComparativeMeasureValue(70).Category("Year 2").Add();
 
-		fm.Value(80).ComparativeMeasureValue(65).Category("Year 3").Add();
+		measure.Value(80).ComparativeMeasureValue(65).Category("Year 3").Add();
 
 	})
 

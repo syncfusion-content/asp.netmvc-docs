@@ -18,9 +18,9 @@ Title is set to Bullet Graph using Text property in CaptionSettings. Caption set
 
 {% highlight cshtml %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-		qs.Location( loc=> loc.x(110).y(200))
+		scale.Location( loc=> loc.x(110).y(200))
 
 		.Minimum(0)
 
@@ -28,7 +28,7 @@ Title is set to Bullet Graph using Text property in CaptionSettings. Caption set
 
 		.Interval(1)
 
-		.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+		.FeatureMeasure(measure=>measure.Value(4).ComparativeMeasureValue(3.5)))
 
 	    .Height(700)
 
@@ -61,9 +61,9 @@ Subtitle is added to Bullet Graph using Text property of Subtitle in CaptionSett
 
 {% highlight cshtml %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-	qs.Location( loc=> loc.x(110).y(200))
+	scale.Location( loc=> loc.x(110).y(200))
 
 	.Minimum(0)
 
@@ -71,7 +71,7 @@ Subtitle is added to Bullet Graph using Text property of Subtitle in CaptionSett
 
 	.Interval(1)
 
-	.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+	.FeatureMeasure(measure=>measure.Value(4).ComparativeMeasureValue(3.5)))
 
 	.Height(700)
 
@@ -111,9 +111,9 @@ You can add Indicator to bullet graph by enabling Visible and setting Text prope
 Indicator displays a symbol along with text which is different from caption and subtitle. Images like logos can be used in indicator instead of symbols. Indicator has properties such as Symbol, Text, TextSpacing, TextAngle, Location and Font. 
 {% highlight cshtml %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-	qs.Location( loc=> loc.x(110).y(200))
+	scale.Location( loc=> loc.x(110).y(200))
 
 	.Minimum(0)
 
@@ -123,7 +123,7 @@ Indicator displays a symbol along with text which is different from caption and 
 
 	.LabelSettings(ls=>ls.LabelPrefix("$").LabelSuffix("K"))
 
-	.FeatureMeasure(fm=>fm.Value(4).ComparativeMeasureValue(3.5)))
+	.FeatureMeasure(measure=>measure.Value(4).ComparativeMeasureValue(3.5)))
 
 	.Height(700)
 

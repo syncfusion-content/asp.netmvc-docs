@@ -43,7 +43,7 @@ Linear Gauge is rendered with the following code example.
 
     .controller('LinearGauge', function ($scope) {
 
-    $scope.nvalue = 0;
+    $scope.value = 0;
 
     });
 
@@ -393,7 +393,7 @@ Linear Gauge support the two way binding for the property value, minimum and max
 
     .controller('LinearGauge', function ($scope) {
 
-    $scope.nvalue = 50;
+    $scope.value = 50;
 
     });
 
@@ -426,7 +426,7 @@ Execute the above code to render the following output.
 
          data-bind="ejLinearGauge: { 
 
-                    value: samplevalue,
+                    value: sampleValue,
 
                     minimum: minimumValue,
 

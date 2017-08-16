@@ -52,7 +52,7 @@ Apply the plugin and property assigning the Treemap element through the direct
     </script>
 
     
-    //References to be added for angular support.
+    //References to be added for AngularJS support.
 
     <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
 
@@ -102,23 +102,23 @@ Apply the plugin and property assigning the Treemap element through the direct
 
         angular.module('syncApp', ['ejangular'])
 
-            .controller('TreeMapcontroller', function ($scope) {
+            .controller('TreeMapController', function ($scope) {
 
-                $scope.ndatasource = population_data;
+                $scope.datasource = population_data;
 
-                $scope.ncolorValuePath = "Growth";
+                $scope.colorValuePath = "Growth";
 
-                $scope.nweightValuePath = "Growth";
+                $scope.weightValuePath = "Growth";
 
-                $scope.nlabelPath = "Country";
+                $scope.labelPath = "Country";
 
-                $scope.ngroupPath = "Continent";
+                $scope.groupPath = "Continent";
 
-                $scope.ngroupGap = 5;
+                $scope.groupGap = 5;
 
-                $scope.nshowHeader = true;
+                $scope.showHeader = true;
 
-                $scope.ncolor = "#2380BB";
+                $scope.color = "#2380BB";
 
             });
 

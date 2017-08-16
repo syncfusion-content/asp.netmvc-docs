@@ -30,13 +30,13 @@ The text in the Digital Gauge is positioned with position object. This object co
 
 it.Value("YELLOW").SegmentSettings(cs =>
 
-cs.Color("Yellow")).Position(pos=>pos.X(80).Y(0)).Add();
+cs.Color("Yellow")).Position(position=>position.X(80).Y(0)).Add();
 
 // For setting Item2
 
 it.Value("RED").SegmentSettings(cs =>
 
-cs.Color("Red")).Position(pos => pos.X(80).Y(20)).Add();
+cs.Color("Red")).Position(position => position.X(80).Y(20)).Add();
 
 // For setting Item3
 

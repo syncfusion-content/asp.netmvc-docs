@@ -74,11 +74,11 @@ sc1.ShowScaleBar(true)
 
 .Size(10)
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.Border(bo =>bo.Width(2).Color("Yellow"))
+pointer.Border(bo =>bo.Width(2).Color("Yellow"))
 
 .BackgroundColor("#FAF4B5")
 
@@ -150,11 +150,11 @@ sc1.ShowRanges(true)
 
 .Radius(150).Size(2)
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.Value(40).Length(100)
+pointer.Value(40).Length(100)
 
 .ShowBackNeedle(true).Add();
 
@@ -221,9 +221,9 @@ sc1.ShowRanges(true)
 
 .BackgroundColor("Yellow")
 
-.Border(bo =>bo.Width(1.5).Color("Red"))
+.Border(border =>border.Width(1.5).Color("Red"))
 
-.PointerCap(pc => pc.BackgroundColor("Yellow").BorderColor("Red").BorderWidth(0.5).Radius(10))
+.PointerCap(cap => cap.BackgroundColor("Yellow").BorderColor("Red").BorderWidth(0.5).Radius(10))
 
 .Labels(lb =>
 
@@ -239,11 +239,11 @@ lb.Type(GaugeTypes.Major).Color("Red").Add();
 
 })
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.Length(110)
+pointer.Length(110)
 
 .BackgroundColor("Yellow")
 

@@ -67,11 +67,11 @@ You can customize the labels of the legend item using `LegendLabel` property of 
 
 		})
 
-		.TreeMapLegend(tl =>
+		.TreeMapLegend(legend =>
 
 		{
 
-			tl. IconWidth(20)
+			legend. IconWidth(20)
 
 			  . IconHeight(20);
 
@@ -105,11 +105,11 @@ You can set headers for each level by setting the `ShowHeader` property of the e
 
 		.ShowLegend(true)
 
-		.TreeMapLegend(tl =>
+		.TreeMapLegend(legend =>
 
 		{
 
-			tl.IconWidth(17)
+			legend.IconWidth(17)
 
 			.IconHeight(17);
 
@@ -139,13 +139,13 @@ You can set headers for each level by setting the `ShowHeader` property of the e
 
 				.HeaderHeight(30)                           
 
-				.HeaderTemplate("headertemplate").Add();                            
+				.HeaderTemplate("template").Add();                            
 
 		})   
    		
 		.Render())
 
-  		<script  id="headertemplate" type="application/jsrender">
+  		<script  id="template" type="application/jsrender">
 							
 			<div style="background-color: white; margin:5px">
     
@@ -180,11 +180,11 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 
 		.ShowLegend(true)
 
-		.TreeMapLegend(tl =>
+		.TreeMapLegend(legend =>
 
 		{
 
-			tl. IconWidth(17)
+			legend. IconWidth(17)
 
 			  . IconHeight(17);
 
@@ -200,7 +200,7 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 
 			  .HeaderHeight(30)                           
 
-			  .HeaderTemplate("headertemplate").Add();                            
+			  .HeaderTemplate("headerTemplate").Add();                            
 
 		})   
 
@@ -226,13 +226,13 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 
 			   .ShowLabels(true)
 
-				.LabelTemplate("labeltemplate");
+				.LabelTemplate("labelTemplate");
 
 		})
 
 	 	.Render())
 
-		<script  id="headertemplate" type="application/jsrender">
+		<script  id="headerTemplate" type="application/jsrender">
 
 			<div style="background-color: white; margin:5px">
 
@@ -242,7 +242,7 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 
 		</script>      
 
-		<script  id="labeltemplate" type="application/jsrender">
+		<script  id="labelTemplate" type="application/jsrender">
 
 			<div style="background-color: transparent;">
 

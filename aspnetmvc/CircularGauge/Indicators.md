@@ -38,7 +38,7 @@ ind.Height(10)
 
 .Type(IndicatorType.Circle)
 
-.Position(pos =>pos.X(185).Y(300)).Add();
+.Position(position =>position.X(185).Y(300)).Add();
 
 }).Add();
 
@@ -83,11 +83,11 @@ sc1.ShowIndicators(true)
 
 .ShowScaleBar(true).Radius(120).Size(5)
 
-.Pointers(pc =>
+.Pointers(pointer =>
 
 {
 
-pc.BackgroundColor("#5DF243")
+pointer.BackgroundColor("#5DF243")
 
 .Border(bo =>bo.Width(1.5).Color("Black"))
 
@@ -113,7 +113,7 @@ ind.Height(10)
 
 // For setting indicator position
 
-.Position(pos =>pos.X(185).Y(300)).Add();
+.Position(position =>position.X(185).Y(300)).Add();
 
 }).Add();
 
@@ -156,11 +156,11 @@ sc1.ShowIndicators(true)
 
 .ShowScaleBar(true).Radius(150).Size(5)
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.BackgroundColor("#5DF243")
+pointer.BackgroundColor("#5DF243")
 
 .Border(bo =>bo.Width(1.5).Color("Black"))
 
@@ -188,7 +188,7 @@ ind.Height(10)
 
 // For setting indicator position
 
-.Position(pos =>pos.X(185).Y(300))
+.Position(position =>position.X(185).Y(300))
 
 // For setting indicator state range collection
 
@@ -258,11 +258,11 @@ sc1.ShowIndicators(true)
 
 .ShowScaleBar(true).Radius(150).Size(5)
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.Length(110).Value(70).Add();
+pointer.Length(110).Value(70).Add();
 
 })
 
@@ -288,7 +288,7 @@ ind.Height(10).Width(10)
 
 
 
-.Position(pos =>pos.X(165).Y(300))
+.Position(position =>position.X(165).Y(300))
 
 .StateRanges(st =>
 
@@ -318,7 +318,7 @@ ind.Height(10).Width(10)
 
 .Type(IndicatorType.Circle)
 
-.Position(pos =>pos.X(215).Y(300))
+.Position(position =>position.X(215).Y(300))
 
 .StateRanges(st =>
 

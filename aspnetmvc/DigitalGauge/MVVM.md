@@ -40,7 +40,7 @@ ej-DigitalGauge is the control tag, where ej is tag prefix and DigitalGauge is t
 
 	.controller('DigitalGauge', function ($scope) {
 
-	$scope.nvalue = “text”;
+	$scope.value = “text”;
 
 	});
 
@@ -112,7 +112,7 @@ Digital Gauge supports the two way biding for the property value as mentioned ea
 
 				e-characterSetting-opacity="0.8" e-position-x="52"
 
-				e-value="nvalue" e-position-y="52">
+				e-value="value" e-position-y="52">
 
 			</e-item>
 
@@ -134,7 +134,7 @@ Digital Gauge supports the two way biding for the property value as mentioned ea
 
 	.controller('DigitalGauge', function ($scope) {
 
-	$scope.nvalue = "Syncfusion";
+	$scope.value = "Syncfusion";
 
 	});
 
@@ -167,7 +167,7 @@ Digital Gauge with two way binding in AngularJS
 	 data-bind="ejDigitalGauge: 
 	 { 
 
-		value: samplevalue,
+		value: sampleValue,
 
 	 }">
 
@@ -181,7 +181,7 @@ Digital Gauge with two way binding in AngularJS
 		window.viewModel = 
 		{
 
-		 samplevalue: ko.observable(“syncfusion”),
+		 sampleValue: ko.observable(“syncfusion”),
 
 		};
 

@@ -116,7 +116,7 @@ The `Markers` property has a list of objects that contains the data for Annotati
 
 	@(Html.EJ().Map("container")           
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 					  
@@ -161,11 +161,11 @@ Without Datasource, n number of markers can be added to shape layers with `Marke
 
 	@(Html.EJ().Map("container")            
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.EnableMouseHover(true)
+		layer.EnableMouseHover(true)
 
 		.ShapeData(mapData)
 
@@ -295,11 +295,11 @@ N>Tooltip and Color Mappings for bubble is to be set as similar to tooltip and c
 
 	@(Html.EJ().Map("container")            
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.EnableMouseHover(true)
+		layer.EnableMouseHover(true)
 
 		.ShapeData(mapData)
 
@@ -399,11 +399,11 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.LegendSettings(ml =>
+		layer.LegendSettings(ml =>
 
 		{
 
@@ -453,7 +453,7 @@ N> Here, Range Color Mapping code snippet for shapeSettings with color mappings 
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
                                       
@@ -500,7 +500,7 @@ A bubble legend feature is used to provide the key (legend) for another map elem
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 											  

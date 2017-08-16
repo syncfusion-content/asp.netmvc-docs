@@ -21,11 +21,11 @@ Pointer collection is directly added to the scale object. To add pointer collect
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Pointers(PO =>
+scale.Pointers(PO =>
 
 {
 
@@ -59,11 +59,11 @@ Pointer value is the important element in the Circular Gauge that indicates the 
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.ShowScaleBar(true)
+scale.ShowScaleBar(true)
 
 .MajorIntervalValue(10)
 
@@ -158,7 +158,7 @@ PO.Value(45)
 
 // For setting pointer border
 
-.Border(bor =>bor.Color(ConsoleColor.Green.ToString()).Width(2))
+.Border(border =>border.Color(ConsoleColor.Green.ToString()).Width(2))
 
 // For setting pointer opacity
 
@@ -202,7 +202,7 @@ sc1.ShowScaleBar(true)
 
 .BackgroundColor(ConsoleColor.Yellow.ToString())
 
-.Border(bor =>bor.Color(ConsoleColor.Red.ToString()).Width(2))
+.Border(border =>border.Color(ConsoleColor.Red.ToString()).Width(2))
 
 .Pointers(PO =>
 
@@ -216,7 +216,7 @@ PO.Value(45)
 
 // For setting pointer border
 
-.Border(bor =>bor.Color(ConsoleColor.Red.ToString()).Width(2))
+.Border(border =>border.Color(ConsoleColor.Red.ToString()).Width(2))
 
 // For setting pointer length
 
@@ -272,7 +272,7 @@ sc1.ShowScaleBar(true)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(bor=>bor.Color(ConsoleColor.Blue.ToString()).Width(2))
+.Border(boderr=>border.Color(ConsoleColor.Blue.ToString()).Width(2))
 
 .Pointers(PO =>
 
@@ -286,7 +286,7 @@ PO.Value(40)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(bor=>bor.Color(ConsoleColor.Blue.ToString()).Width(2))
+.Border(border=>border.Color(ConsoleColor.Blue.ToString()).Width(2))
 
 // For setting distance between scale and pointer
 
@@ -376,17 +376,17 @@ In this type, needle pointer is completely replaced by image. You can implement 
 
 // To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))
 
-// To set scale options.Scales(scl =>      {
+// To set scale options.Scales(scale =>      {
 
           // set basic appearance
-          scl.ShowRanges(true).ShowLabels(false).StartAngle(180)
+          scale.ShowRanges(true).ShowLabels(false).StartAngle(180)
 		  .SweepAngle(180).Radius(130).ShowScaleBar(false)  
 
 		  // To set pointer option  
-		  .Pointers(pon => {      
+		  .Pointers(pointer => {      
 
 		  // To set pointer type as needle 
-		  pon.Type(PointerType.Needle)  
+		  pointer.Type(PointerType.Needle)  
 
 		  // To set needle type as image 
 		  .NeedleType(NeedleType.Image)  
@@ -404,13 +404,13 @@ In this type, needle pointer is completely replaced by image. You can implement 
 	  .Ticks(tic => { tic.Height(0).Width(0).Add(); }) 
 
 	  // To set range options 
-	  .Ranges(rng => {   
-		rng.DistanceFromScale(-30).StartValue(0)  
+	  .Ranges(range => {   
+		range.DistanceFromScale(-30).StartValue(0)  
 			.EndValue(70).Size(40).Add();       
 			
-		rng.DistanceFromScale(30).StartValue(70) 
+		range.DistanceFromScale(30).StartValue(70) 
 			.EndValue(100).BackgroundColor("#fc0606")
-			.Border(bor => or.Color("#fc0606")).Size(40).Add();  
+			.Border(border => border.Color("#fc0606")).Size(40).Add();  
        }).Add();
   })
 )
@@ -444,16 +444,16 @@ In this type, the marker pointer is completely replaced by the image. You can im
 @(Html.EJ().CircularGauge("circulargauge1")
 // To set frame type as half circle .Frame(fr => fr.FrameType(Frame.HalfCircle))
 
-// To set scale options.Scales(scl =>
+// To set scale options.Scales(scale =>
       {          
 			// set basic appearance  
-			scl.ShowRanges(true).ShowLabels(false).StartAngle(180) 
+			scale.ShowRanges(true).ShowLabels(false).StartAngle(180) 
 				.SweepAngle(180).Radius(130).ShowScaleBar(false)  
 
 				// To set pointer option    
-				.Pointers(pon => {   
+				.Pointers(pointer => {   
 						// To set pointer type as marker 
-						pon.Type(PointerType.Marker)   
+						pointer.Type(PointerType.Marker)   
 
 						// To set needle type as image  
 						.MarkerType(MarkerType.Image)   
@@ -471,12 +471,12 @@ In this type, the marker pointer is completely replaced by the image. You can im
 				.Ticks(tic => { tic.Height(0).Width(0).Add(); })   
 
 				// To set range options     
-				.Ranges(rng => {         
-					rng.DistanceFromScale(-30).StartValue(0) 
+				.Ranges(range => {         
+					range.DistanceFromScale(-30).StartValue(0) 
 						.EndValue(70).Size(40).Add();       
-					rng.DistanceFromScale(30).StartValue(70)   
+					range.DistanceFromScale(30).StartValue(70)   
 						.EndValue(100).BackgroundColor("#fc0606")  
-						.Border(bor => or.Color("#fc0606")).Size(40).Add();    
+						.Border(border => border.Color("#fc0606")).Size(40).Add();    
 						}).Add();
 	})
 )
@@ -510,17 +510,17 @@ In this type, marker pointer is drawn first and then the image is loaded. You ca
 // To set frame type as half circle
  .Frame(fr => fr.FrameType(Frame.HalfCircle))
  // To set scale options
- .Scales(scl =>      {
+ .Scales(scale =>      {
 
  // set basic appearance 
- scl.ShowRanges(true).ShowLabels(false).StartAngle(180)
+ scale.ShowRanges(true).ShowLabels(false).StartAngle(180)
  .SweepAngle(180).Radius(130).ShowScaleBar(false)  
 
  // To set pointer option   
- .Pointers(pon => {  
+ .Pointers(pointer => {  
 
  // To set pointer type as marker  
- pon.Type(PointerType.Marker)    
+ pointer.Type(PointerType.Marker)    
 
  // To set needle type as rectangle  
  .MarkerType(MarkerType.Rectangle)  
@@ -533,19 +533,19 @@ In this type, marker pointer is drawn first and then the image is loaded. You ca
 
  // To set pointer dimension          
  .Length(30).Width(100)               
- .Border(bor => bor.Color("Black").Width(3))  
+ .Border(border => border.Color("Black").Width(3))  
  .Add(); })        
 
  // To set tick options  
  .Ticks(tic => { tic.Height(0).Width(0).Add(); }) 
 
  // To set range options       
- .Ranges(rng => {          
- rng.DistanceFromScale(-30).StartValue(0)     
+ .Ranges(range => {          
+ range.DistanceFromScale(-30).StartValue(0)     
  .EndValue(70).Size(40).Add();        
- rng.DistanceFromScale(30).StartValue(70)
+ range.DistanceFromScale(30).StartValue(70)
  .EndValue(100).BackgroundColor("#fc0606") 
- .Border(bor => bor.Color("#fc0606")).Size(40).Add();  
+ .Border(border => border.Color("#fc0606")).Size(40).Add();  
  }).Add(); 
  })
  )
@@ -591,7 +591,7 @@ sc1.ShowScaleBar(true)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(bor =>bor.Color(ConsoleColor.Green.ToString()).Width(2))
+.Border(border =>border.Color(ConsoleColor.Green.ToString()).Width(2))
 
 .Pointers(PO =>
 
@@ -609,7 +609,7 @@ PO.Value(40)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(bor =>bor.Color(ConsoleColor.Green.ToString()).Width(2)).Add();
+.Border(border =>border.Color(ConsoleColor.Green.ToString()).Width(2)).Add();
 
 // For setting pointer2
 
@@ -627,7 +627,7 @@ PO.Placement(PointerPlacement.Near)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(bor =>bor.Color(ConsoleColor.Green.ToString()).Width(2)).Add();
+.Border(border =>border.Color(ConsoleColor.Green.ToString()).Width(2)).Add();
 
 }).Add();
 
@@ -665,18 +665,18 @@ Circular Gauge with multiple pointers
 .Ticks(tic => { tic.Height(0).Width(0).Add(); })
 
 // Setting range properties
-.Ranges(ran =>
+.Ranges(range =>
 {
-ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
-bor.Color("#1B4279")).Add();
-ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
-bor.Color("#91B8F3")).Add();
+range.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(border => 
+border.Color("#1B4279")).Add();
+range.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(border => 
+border.Color("#91B8F3")).Add();
 })
 
 // Setting pointer option
-.Pointers(PO =>{PO.PointerValueText(po=>
+.Pointers(pointer =>{pointer.PointerValueText(po=>
 
-// enable showValue propertypo
+// enable showValue property
 .ShowValue(true)
 
 // setting distance property
@@ -739,16 +739,16 @@ SC.ShowRanges(true)
 .Ticks(tic => { tic.Height(0).Width(0).Add(); })
 
 // Setting range properties
-.Ranges(ran =>
+.Ranges(range =>
 {
-ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
-bor.Color("#1B4279")).Add();
-ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
-bor.Color("#91B8F3")).Add();
+range.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(border => 
+border.Color("#1B4279")).Add();
+range.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(border => 
+border.Color("#91B8F3")).Add();
 })
 
 // Setting pointer option
-.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10)
+.Pointers(pointer =>{pointer.PointerValueText(po=>po.ShowValue(true).Distance(10)
 
 // Setting opacity property
 .Opacity(1)
@@ -812,14 +812,14 @@ tic.Height(0).Width(0)
 .Add(); })
 
 // Setting range properties
-.Ranges(ran =>{
-ran.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(bor => 
-	bor.Color("#1B4279")).Add();
-ran.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(bor => 
-bor.Color("#91B8F3")).Add();})
+.Ranges(range =>{
+range.Size(40).StartValue(0).EndValue(50).BackgroundColor("#1B4279").Border(border => 
+	border.Color("#1B4279")).Add();
+range.Size(40).StartValue(50).EndValue(100).BackgroundColor("#91B8F3").Border(border => 
+border.Color("#91B8F3")).Add();})
 
 // Setting pointer option
-.Pointers(PO =>{PO.PointerValueText(po=>po.ShowValue(true).Distance(10).Opacity(1).Color("Red").autoAngle(false).Angle(0)
+.Pointers(pointer =>{pointer.PointerValueText(value=>value.ShowValue(true).Distance(10).Opacity(1).Color("Red").autoAngle(false).Angle(0)
 
 // Setting font option.Font(fo=>fo.Size("15px").FontFamily("Arial").FontStyle("Normal"))).Add();}).Add();
 })

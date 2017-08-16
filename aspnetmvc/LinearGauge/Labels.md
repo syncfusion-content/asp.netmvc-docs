@@ -31,9 +31,9 @@ Label collection can be directly added to the scale object. Refer the following 
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false).ShowCustomLabels(true)
 
@@ -41,11 +41,11 @@ Label collection can be directly added to the scale object. Refer the following 
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(10).BarPointerDistanceFromScale(13).Add();
+        bar.Width(10).BarPointerDistanceFromScale(13).Add();
 
     })
 
@@ -53,7 +53,7 @@ Label collection can be directly added to the scale object. Refer the following 
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.TextColor("White").Add(); })
+    .Labels(label => { label.TextColor("White").Add(); })
 
 
 
@@ -65,11 +65,11 @@ Label collection can be directly added to the scale object. Refer the following 
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -110,9 +110,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
 .ShowBarPointers(true).ShowMarkerPointers(false).ShowCustomLabels(true)
 
@@ -120,11 +120,11 @@ sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
 
 //Adding bar pointer collection
 
-.BarPointers(bp =>
+.BarPointers(bar =>
 
 {
 
-bp.Width(10).BarPointerDistanceFromScale(13).Add();
+bar.Width(10).BarPointerDistanceFromScale(13).Add();
 
 })
 
@@ -132,9 +132,9 @@ bp.Width(10).BarPointerDistanceFromScale(13).Add();
 
 //Adding label collection
 
-.Labels(lbl => { lbl.TextColor("Red").Angle(10).Opacity(0.5)
+.Labels(label => { label.TextColor("Red").Angle(10).Opacity(0.5)
 
-.Font(fon=>fon.Size("12px").FontStyle("Arial").FontFamily("Bold"))
+.Font(font=>font.Size("12px").FontStyle("Arial").FontFamily("Bold"))
 
 .IncludeFirstValue(false).Add(); })
 
@@ -148,11 +148,11 @@ bp.Width(10).BarPointerDistanceFromScale(13).Add();
 
 tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-.DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+.DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
 tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-.DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+.DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
 }).Add();
 
@@ -192,9 +192,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(5).Border(bor => bor.Color("#AEC75F").Width(2)).BackgroundColor("White")
+    scale.Width(5).Border(border => border.Color("#AEC75F").Width(2)).BackgroundColor("White")
 
     .MajorIntervalValue(25).MinorIntervalValue(5)
 
@@ -206,11 +206,11 @@ Execute the above code to render the following output.
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(4).BarPointerBackgroundColor("Red").Add();
+        bar.Width(4).BarPointerBackgroundColor("Red").Add();
 
     })
 
@@ -218,7 +218,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.Angle(90).DistanceFromScale(dc =>
+    .Labels(label => { label.Angle(90).DistanceFromScale(dc =>
 
     dc.X(0).Y(60)).UnitText("%").Add(); })
 
@@ -232,11 +232,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(25).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(25).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(25).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(25).Y(0)).Height(6).Add();
 
     })
 
@@ -246,7 +246,7 @@ Execute the above code to render the following output.
 
     .CustomLabels(cl => { cl.Value("Download in Progress")
 
-    .Position(pos => pos.X(53).Y(20)).Add(); }).Add();
+    .Position(position => position.X(53).Y(20)).Add(); }).Add();
 
 }))
 

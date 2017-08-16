@@ -14,7 +14,7 @@ SunburstChart provides selection support for the points on mouse click. To enabl
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true))
+     .SelectionSettings(selection=>selection.Enable(true))
  )
 
 {% endhighlight %}
@@ -33,7 +33,7 @@ SunburstChart provides selection support for the points on mouse click. To enabl
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true).Type(SunburstSelectionType.Color).Color("Red"))
+     .SelectionSettings(selection=>selection.Enable(true).Type(SunburstSelectionType.Color).Color("Red"))
  )
 
  {% endhighlight %}
@@ -55,7 +55,7 @@ The following code shows how to set the selection type as child
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true).Mode(SunburstSelectionMode.Child))
+     .SelectionSettings(selection=>selection.Enable(true).Mode(SunburstSelectionMode.Child))
  )
 
 
@@ -71,7 +71,7 @@ The parent mode can be enabled by using the below code
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true).Mode(SunburstSelectionMode.Parent))
+     .SelectionSettings(selection=>selection.Enable(true).Mode(SunburstSelectionMode.Parent))
  )
 
 
@@ -102,7 +102,7 @@ The following code snippet is used for the all mode of selection settings
 {% highlight cshtml %}
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true).Mode(SunburstSelectionMode.All))
+     .SelectionSettings(selection=>selection.Enable(true).Mode(SunburstSelectionMode.All))
  )
 
 

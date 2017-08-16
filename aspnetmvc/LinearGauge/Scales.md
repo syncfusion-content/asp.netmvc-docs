@@ -41,21 +41,21 @@ Scale is the basic element of Linear Gauge. Scale collection is directly added t
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(8).Position(pos => pos.X(20).Y(50))
+    scale.Width(8).Position(position => position.X(20).Y(50))
 
     .BackgroundColor("Grey")
 
-    .Border(bor => bor.Color("Grey").Width(0))
+    .Border(border => border.Color("Grey").Width(0))
 
     .ShowBarPointers(false).ShowMarkerPointers(true)
 
 
 
-    //Adding label colletion
+    //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(ds => ds.X(50).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(50).Y(0)).Add(); })
 
 
 
@@ -85,11 +85,11 @@ Scale is the basic element of Linear Gauge. Scale collection is directly added t
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -126,13 +126,13 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(8).Position(pos => pos.X(20).Y(50))
+    scale.Width(8).Position(position => position.X(20).Y(50))
 
     .BackgroundColor("#FE8282")
 
-    .Border(bor => bor.Color("Red").Width(1))
+    .Border(border => border.Color("Red").Width(1))
 
     .Opacity(0.5).ShadowOffset(10).Type(ScaleType.RoundedRectangle)
 
@@ -142,7 +142,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(ds => ds.X(50).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(50).Y(0)).Add(); })
 
 
 
@@ -172,11 +172,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -211,9 +211,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(18).Minimum(10)
+    scale.Width(18).Minimum(10)
 
     .Maximum(210)
 
@@ -223,11 +223,11 @@ Execute the above code to render the following output.
 
     .Direction(Directions.CounterClockwise)
 
-    .Position(pos => pos.X(20).Y(50))
+    .Position(position => position.X(20).Y(50))
 
     .BackgroundColor("Grey")
 
-    .Border(bor => bor.Color("Grey").Width(1))
+    .Border(border => border.Color("Grey").Width(1))
 
     .ShowBarPointers(false).ShowMarkerPointers(true)
 
@@ -235,7 +235,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(ds => ds.X(50).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(50).Y(0)).Add(); })
 
 
 
@@ -265,11 +265,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -311,15 +311,15 @@ For rectangular scale type, the scale renders with rectangular structure. Refer 
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(18).Length(300).Type(ScaleType.Rectangle)
+    scale.Width(18).Length(300).Type(ScaleType.Rectangle)
 
-        .Position(pos => pos.X(54).Y(50))
+        .Position(position => position.X(54).Y(50))
 
         .BackgroundColor("#C0B08E")
 
-        .Border(bor => bor.Color("#C0B08E").Width(1))
+        .Border(border => border.Color("#C0B08E").Width(1))
 
         .ShowMarkerPointers(false)
 
@@ -331,13 +331,13 @@ For rectangular scale type, the scale renders with rectangular structure. Refer 
 
            tic.Type(TickType.MajorInterval).Width(2).Color("#206BA4")
 
-              .DistanceFromScale(ds => ds.X(-27).Y(0))
+              .DistanceFromScale(distance => distance.X(-27).Y(0))
 
               .Placement(TickPlacement.Far).Add();
 
            tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#206BA4")
 
-              .DistanceFromScale(ds => ds.X(-27).Y(0)).Height(6)
+              .DistanceFromScale(distance => distance.X(-27).Y(0)).Height(6)
 
               .Placement(TickPlacement.Far).Add();
 
@@ -375,23 +375,23 @@ For rounded rectangular scale type, the scale renders as rectangular structure b
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(8).Type(ScaleType.RoundedRectangle)
+    scale.Width(8).Type(ScaleType.RoundedRectangle)
 
     .Direction(Directions.Clockwise)
 
-    .Position(pos => pos.X(60).Y(50))
+    .Position(position => position.X(60).Y(50))
 
     .BackgroundColor("#206BA4")
 
-    .Border(bor => bor.Color("#206BA4").Width(1))
+    .Border(border => border.Color("#206BA4").Width(1))
 
 
 
-    //Adding label colection
+    //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dfs => dfs.X(-20).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(-20).Y(0)).Add(); })
 
 
 
@@ -403,13 +403,13 @@ For rounded rectangular scale type, the scale renders as rectangular structure b
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0))
+        .DistanceFromScale(distance => distance.X(-27).Y(0))
 
         .Placement(TickPlacement.Far).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0)).Height(6)
+        .DistanceFromScale(distance => distance.X(-27).Y(0)).Height(6)
 
         .Placement(TickPlacement.Far).Add();
 
@@ -449,15 +449,15 @@ For thermometer scale type, the scale renders as thermometer structure with roun
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(18).Length(300).Type(ScaleType.Thermometer)
+    scale.Width(18).Length(300).Type(ScaleType.Thermometer)
 
-    .Position(pos => pos.X(54).Y(50))
+    .Position(position => position.X(54).Y(50))
 
     .BackgroundColor("#C0B08E")
 
-    .Border(bor => bor.Color("#C0B08E").Width(1))
+    .Border(border => border.Color("#C0B08E").Width(1))
 
     .ShowMarkerPointers(false).ShowBarPointers(false)
 
@@ -471,13 +471,13 @@ For thermometer scale type, the scale renders as thermometer structure with roun
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0))
+        .DistanceFromScale(distance => distance.X(-27).Y(0))
 
         .Placement(TickPlacement.Far).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0)).Height(6)
+        .DistanceFromScale(distance => distance.X(-27).Y(0)).Height(6)
 
         .Placement(TickPlacement.Far).Add();
 
@@ -511,23 +511,23 @@ You can set multiple scales for a single Linear Gauge control by using an array 
 
 //Adding Scale collection
 
-.Scales(sc =>
+.Scales(scale =>
 
 //Adding Scale 1
 
 {
 
-    sc.Width(8)
+    scale.Width(8)
 
-    .Position(pos => pos.X(15).Y(50))
+    .Position(position => position.X(15).Y(50))
 
     .BackgroundColor("Grey")
 
-    .Border(bor => bor.Color("Grey").Width(1))
+    .Border(border => border.Color("Grey").Width(1))
 
     .ShowMarkerPointers(true).ShowBarPointers(false)
 
-    .Labels(lbl => { lbl.DistanceFromScale(dfs => dfs.X(50).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(50).Y(0)).Add(); })
 
 
 
@@ -549,11 +549,11 @@ You can set multiple scales for a single Linear Gauge control by using an array 
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#8c8c8c")
 
-        .DistanceFromScale(ds => ds.X(30).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(30).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -561,15 +561,15 @@ You can set multiple scales for a single Linear Gauge control by using an array 
 
     //Adding Scale 2
 
-    sc.Width(8).Direction(Directions.Clockwise)
+    scale.Width(8).Direction(Directions.Clockwise)
 
     .Type(ScaleType.RoundedRectangle)
 
-    .Position(pos => pos.X(90).Y(50))
+    .Position(position => position.X(90).Y(50))
 
     .BackgroundColor("#206BA4")
 
-    .Border(bor => bor.Color("#206BA4").Width(1))
+    .Border(border => border.Color("#206BA4").Width(1))
 
     .ShowMarkerPointers(false).ShowBarPointers(false).ShowLabels(false)
 
@@ -583,13 +583,13 @@ You can set multiple scales for a single Linear Gauge control by using an array 
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0))
+        .DistanceFromScale(distance => distance.X(-27).Y(0))
 
         .Placement(TickPlacement.Far).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Height(6).Color("#206BA4")
 
-        .DistanceFromScale(ds => ds.X(-27).Y(0)).Height(6)
+        .DistanceFromScale(distance => distance.X(-27).Y(0)).Height(6)
 
         .Placement(TickPlacement.Far).Add();
 
@@ -599,15 +599,15 @@ You can set multiple scales for a single Linear Gauge control by using an array 
 
     //Adding Scale 3
 
-    sc.Width(18).Length(300)
+    scale.Width(18).Length(300)
 
-    .Position(pos => pos.X(54).Y(50))
+    .Position(position => position.X(54).Y(50))
 
     .Type(ScaleType.Thermometer)
 
     .BackgroundColor("#C0B08E")
 
-    .Border(bor => bor.Color("#C0B08E").Width(1))
+    .Border(border => border.Color("#C0B08E").Width(1))
 
     .ShowMarkerPointers(false).ShowBarPointers(false)
 

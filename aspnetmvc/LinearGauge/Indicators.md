@@ -40,13 +40,13 @@ Indicators simply indicates the current status of the pointer. Indicators are in
 
     .BackgroundColor("transparent").MajorIntervalValue(30)
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowIndicators(true).ShowBarPointers(false)
 
     .Length(310)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
@@ -70,11 +70,11 @@ Indicators simply indicates the current status of the pointer. Indicators are in
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
     })
 
@@ -82,13 +82,13 @@ Indicators simply indicates the current status of the pointer. Indicators are in
 
     //Adding indicator collection
 
-    .Indicators(ind =>
+    .Indicators(indicator =>
 
     {
 
-        ind.Type(IndicatorType.Circle).Height(10)
+        indicator.Type(IndicatorType.Circle).Height(10)
 
-        .Width(10).Position(pos => pos.X(55).Y(100)).Add();
+        .Width(10).Position(position => position.X(55).Y(100)).Add();
 
     })
 
@@ -134,13 +134,13 @@ State ranges are used to specify the indicator behavior in the certain region. s
 
     .BackgroundColor("transparent").MajorIntervalValue(30)
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowIndicators(true).ShowBarPointers(false)
 
     .Length(310).ShowRanges(true)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
@@ -164,11 +164,11 @@ State ranges are used to specify the indicator behavior in the certain region. s
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
     })
 
@@ -176,13 +176,13 @@ State ranges are used to specify the indicator behavior in the certain region. s
 
     //Adding indicator collection
 
-    .Indicators(ind =>
+    .Indicators(indicator =>
 
     {
 
-        ind.Height(10).Width(10).Type(IndicatorType.Circle)
+        indicator.Height(10).Width(10).Type(IndicatorType.Circle)
 
-        .Position(pos => pos.X(55).Y(100))
+        .Position(position => position.X(55).Y(100))
 
 
 
@@ -222,27 +222,27 @@ State ranges are used to specify the indicator behavior in the certain region. s
 
     //Adding range collection
 
-    .Ranges(rng =>
+    .Ranges(range =>
 
     {
 
-        rng.StartWidth(5).EndWidth(5).StartValue(0)
+        range.StartWidth(5).EndWidth(5).StartValue(0)
 
         .EndValue(200).RangeBackgroundColor("#94C361")
 
-        .Border(bor => bor.Width(1).Color("#94C361")).Add();
+        .Border(border => border.Width(1).Color("#94C361")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(200)
+        range.StartWidth(5).EndWidth(5).StartValue(200)
 
         .EndValue(250).RangeBackgroundColor("#F9CF67")
 
-        .Border(bor => bor.Width(1).Color("#F9CF67")).Add();
+        .Border(border => border.Width(1).Color("#F9CF67")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(250)
+        range.StartWidth(5).EndWidth(5).StartValue(250)
 
         .EndValue(300).RangeBackgroundColor("#F89B83")
 
-        .Border(bor => bor.Width(1).Color("#F89B83")).Add();
+        .Border(border => border.Width(1).Color("#F89B83")).Add();
 
     })
 
@@ -285,13 +285,13 @@ The backgroundColor and borderColor sets the appearance behavior for the indicat
 
     .BackgroundColor("transparent").MajorIntervalValue(30)
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowIndicators(true).ShowBarPointers(false)
 
     .Length(310)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
@@ -315,11 +315,11 @@ The backgroundColor and borderColor sets the appearance behavior for the indicat
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
     })
 
@@ -327,13 +327,13 @@ The backgroundColor and borderColor sets the appearance behavior for the indicat
 
     //Adding indicator collection
 
-    .Indicators(ind =>
+    .Indicators(indicator =>
 
     {
 
-        ind.Type(IndicatorType.Circle).Height(10)
+        indicator.Type(IndicatorType.Circle).Height(10)
 
-        .Width(10).Position(pos => pos.X(55).Y(100))
+        .Width(10).Position(position => position.X(55).Y(100))
 
         .StateRanges(sr =>
 
@@ -391,17 +391,17 @@ The basic font options available for the textual type indicators in the Linear G
 
     .BackgroundColor("transparent").MajorIntervalValue(30)
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowIndicators(true).ShowBarPointers(false)
 
     .Length(310).ShowRanges(true)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
-    //Adding marker pointer collecrion
+    //Adding marker pointer collection
 
     .MarkerPointers(mp =>
 
@@ -421,11 +421,11 @@ The basic font options available for the textual type indicators in the Linear G
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
     })
 
@@ -433,17 +433,17 @@ The basic font options available for the textual type indicators in the Linear G
 
     //Adding indicator collection
 
-    .Indicators(ind =>
+    .Indicators(indicator =>
 
     {
 
-        ind.IndicatorFont(fnt=>
+        indicator.IndicatorFont(font=>
 
-        fnt.Size("12px").FontStyle("Bold").FontFamily("Arial"))
+        font.Size("12px").FontStyle("Bold").FontFamily("Arial"))
 
         .Type(IndicatorType.text)
 
-        .IndicatorTextLocation(pos => pos.X(55).Y(100))
+        .IndicatorTextLocation(position => position.X(55).Y(100))
 
 
 
@@ -483,27 +483,27 @@ The basic font options available for the textual type indicators in the Linear G
 
     //Adding range collection
 
-    .Ranges(rng =>
+    .Ranges(range =>
 
     {
 
-        rng.StartWidth(5).EndWidth(5).StartValue(0)
+        range.StartWidth(5).EndWidth(5).StartValue(0)
 
         .EndValue(200).RangeBackgroundColor("#94C361")
 
-        .Border(bor => bor.Width(1).Color("#94C361")).Add();
+        .Border(border => border.Width(1).Color("#94C361")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(200)
+        range.StartWidth(5).EndWidth(5).StartValue(200)
 
         .EndValue(250).RangeBackgroundColor("#F9CF67")
 
-        .Border(bor => bor.Width(1).Color("#F9CF67")).Add();
+        .Border(border => border.Width(1).Color("#F9CF67")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(250)
+        range.StartWidth(5).EndWidth(5).StartValue(250)
 
         .EndValue(300).RangeBackgroundColor("#F89B83")
 
-        .Border(bor => bor.Width(1).Color("#F89B83")).Add();
+        .Border(border => border.Width(1).Color("#F89B83")).Add();
 
     })
 
@@ -549,13 +549,13 @@ You can set multiple indicators in a single Linear Gauge by adding an array of i
 
     .BackgroundColor("transparent").MajorIntervalValue(30)
 
-    .Border(bor=>bor.Color("transparent").Width(0))
+    .Border(border=>border.Color("transparent").Width(0))
 
     .ShowIndicators(true).ShowBarPointers(false)
 
     .Length(310).ShowRanges(true)
 
-    .Position(pos => { pos.X(51).Y(50); })
+    .Position(position => { position.X(51).Y(50); })
 
 
 
@@ -579,11 +579,11 @@ You can set multiple indicators in a single Linear Gauge by adding an array of i
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(7).Y(0)).Add();
+        .DistanceFromScale(distance =>distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
     })
 
@@ -591,27 +591,27 @@ You can set multiple indicators in a single Linear Gauge by adding an array of i
 
     //Adding ranges collection
 
-    .Ranges(rng =>
+    .Ranges(range =>
 
     {
 
-        rng.StartWidth(5).EndWidth(5).StartValue(0)
+        range.StartWidth(5).EndWidth(5).StartValue(0)
 
         .EndValue(200).RangeBackgroundColor("#94C361")
 
-        .Border(bor => bor.Width(1).Color("#94C361")).Add();
+        .Border(border => border.Width(1).Color("#94C361")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(200)
+        range.StartWidth(5).EndWidth(5).StartValue(200)
 
         .EndValue(250).RangeBackgroundColor("#F9CF67")
 
-        .Border(bor => bor.Width(1).Color("#F9CF67")).Add();
+        .Border(border => border.Width(1).Color("#F9CF67")).Add();
 
-        rng.StartWidth(5).EndWidth(5).StartValue(250)
+        range.StartWidth(5).EndWidth(5).StartValue(250)
 
         .EndValue(300).RangeBackgroundColor("#F89B83")
 
-        .Border(bor => bor.Width(1).Color("#F89B83")).Add();
+        .Border(border => border.Width(1).Color("#F89B83")).Add();
 
     })
 
@@ -619,17 +619,17 @@ You can set multiple indicators in a single Linear Gauge by adding an array of i
 
     //Adding indicator collection
 
-    .Indicators(ind =>
+    .Indicators(indicator =>
 
     {
 
         //Adding indicator 1
 
-        ind.Height(10).Width(10)
+        indicator.Height(10).Width(10)
 
         .Type(IndicatorType.Circle)
 
-        .Position(pos => pos.X(35).Y(100))
+        .Position(position => position.X(35).Y(100))
 
         .StateRanges(sr=>{
 
@@ -657,11 +657,11 @@ You can set multiple indicators in a single Linear Gauge by adding an array of i
 
         //Adding indicator 2
 
-        ind.Height(10).Width(10)
+        indicator.Height(10).Width(10)
 
         .Type(IndicatorType.Circle)
 
-        .Position(pos => pos.X(75).Y(100))
+        .Position(position => position.X(75).Y(100))
 
         .StateRanges(sr =>
 

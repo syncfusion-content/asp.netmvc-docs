@@ -19,9 +19,9 @@ Quantitative Scale range is set using the properties Minimum, Maximum and Interv
 {% highlight html %}
 
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.Minimum(0)
+                                            scale.Minimum(0)
 
                                             .Maximum(10))                                      
 
@@ -43,9 +43,9 @@ Bullet Graph does not position quantitative scale automatically based on its siz
 
 {% highlight html %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.Location(loc=>loc.x(20).y(20))
+                                            scale.Location(loc=>loc.x(20).y(20))
 
                                             )                                      
 
@@ -67,9 +67,9 @@ Color, size and width of Major tick lines are customized using MajorTickSettings
 
 {% highlight html %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.MajorTickSettings(mt=>
+                                            scale.MajorTickSettings(mt=>
 
                                                 mt.Size(15).Width(3).Stroke(System.Drawing.Color.Gray))
 
@@ -93,11 +93,11 @@ Bullet Graph quantitative scale with customized major ticks
 Minor ticks can also be customized similar to major ticks. The properties Stroke, Width and Size of MinorTickSettings are used to customize Minor ticks in quantitative scale. Stroke specifies the color of ticks, Width specifies the width of ticks and Size specifies the height of the ticks. 
 {% highlight html %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.MinorTickSettings(mt=>
+                                            scale.MinorTickSettings(tick=>
 
-                                                mt.Size(7).Width(3).Stroke(System.Drawing.Color.Gray))
+                                                tick.Size(7).Width(3).Stroke(System.Drawing.Color.Gray))
 
                                             )                                     
 
@@ -117,9 +117,9 @@ Bullet Graph quantitative scale with customized minor ticks
 Ticks are positioned below, above or inside the quantitative scale. By default ticks are positioned below the quantitative scale. The TickPosition property is used to customize the position of ticks in quantitative scale. Ticks can be placed inside the quantitative scale by setting TickPosition to Cross. 
 {% highlight html %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.TickPosition(TickPosition.Above)
+                                            scale.TickPosition(TickPosition.Above)
 
                                             )                                     
 
@@ -143,17 +143,17 @@ Quantitative scale ticks can be placed either inside or outside the scale using 
 
 @(Html.EJ().BulletGraph("Bullets") .QualitativeRangeSize(50)
 
-                  .QuantitativeScaleSettings(qs =>
+                  .QuantitativeScaleSettings(scale =>
 
                       {
 
-                          qs.Location(loc => loc.x(108).y(10))
+                          scale.Location(location => location.x(108).y(10))
 
                             .LabelSettings(ls=> ls.Offset(0).Size(10))
 
                             .TickPlacement(Syncfusion.JavaScript.DataVisualization.BulletTickPlacement.Inside)
 
-                            .FeatureMeasure(fm => {fm.ComparativeMeasureValue(6).Value(8).Add();});                            
+                            .FeatureMeasure(measure => {measure.ComparativeMeasureValue(6).Value(8).Add();});                            
 
                       })
 
@@ -179,9 +179,9 @@ Quantitative scale labels are customized with prefix, suffix, font, color and si
 
 {% highlight html %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings(scale=>
 
-                                            qs.LabelSettings(label=>
+                                            scale.LabelSettings(label=>
 
                                                 label.Stroke(System.Drawing.Color.Blue)
 
@@ -228,17 +228,17 @@ Quantitative scale labels can be placed either inside or outside the scale using
 
 @(Html.EJ().BulletGraph("Bullets").QualitativeRangeSize(50)
 
-                  .QuantitativeScaleSettings(qs =>
+                  .QuantitativeScaleSettings(scale =>
 
                       {
 
-                          qs.Location(loc => loc.x(108).y(10))
+                          scale.Location(loc => loc.x(108).y(10))
 
                             .LabelSettings(ls=> ls.Offset(0).Size(10)
 
                             .LabelPlacement(Syncfusion.JavaScript.DataVisualization.BulletLabelPlacement.Inside))
 
-                            .FeatureMeasure(fm => {fm.ComparativeMeasureValue(6).Value(8).Add();});                            
+                            .FeatureMeasure(measure => {measure.ComparativeMeasureValue(6).Value(8).Add();});                            
 
                       })
 
@@ -262,11 +262,11 @@ Bullet Graph with labels inside quantitative scale
 Performance measure bar is customized using FeaturedMeasureSettings in QuantitativeScaleSettings property. Color of the bar is customized using Stroke property and width using Width property. By default bar is drawn in black color with 6 pixels of width. 
 {% highlight js %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.FeaturedMeasureSettings(fms=>
+                                            scale.FeaturedMeasureSettings(measure=>
 
-                                                fms.Stroke(System.Drawing.Color.Blue).Width(4))                                                 
+                                                measure.Stroke(System.Drawing.Color.Blue).Width(4))                                                 
 
                                             ).Value(5))
 
@@ -284,11 +284,11 @@ Bullet Graph quantitative scale with customized performance measure bar
 Comparative symbol color and width are customized using ComparativeMeasureSettings through QuantitativeScaleSettings property. Color of the symbol is customized using Stroke property and width using Width property. By default Comparative measure symbol is displayed in black color with a width of 5 pixels. 
 {% highlight js %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.ComparativeMeasureSettings(cms=>
+                                            scale.ComparativeMeasureSettings(measure=>
 
-                                                cms.Stroke(System.Drawing.Color.Blue).Width(4))                                                 
+                                                measure.Stroke(System.Drawing.Color.Blue).Width(4))                                                 
 
                                             ).ComparativeMeasureValue(5)                                   
 
@@ -308,17 +308,17 @@ Bullet Graph with customized comparative symbol
 Bullet Graph supports comparing more than one performance at a time, given that all the comparisons are related using FeatureMeasure in QuantitativeScaleSettings property. 
 {% highlight js %}
 
-@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( qs=>
+@(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
 
-                                            qs.FeatureMeasure(fm=>
+                                            scale.FeatureMeasure(measure=>
 
                                                 {
 
-                                                    fm.Value(6).ComparativeMeasureValue(3).Category("2010").Add();
+                                                    measure.Value(6).ComparativeMeasureValue(3).Category("2010").Add();
 
-                                                    fm.Value(9).ComparativeMeasureValue(6).Category("2011").Add();
+                                                    measure.Value(9).ComparativeMeasureValue(6).Category("2011").Add();
 
-                                                    fm.Value(5).ComparativeMeasureValue(5).Category("2012").Add();
+                                                    measure.Value(5).ComparativeMeasureValue(5).Category("2012").Add();
 
                                                 })
 

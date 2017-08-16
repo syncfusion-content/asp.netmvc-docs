@@ -18,7 +18,7 @@ The Series property provides access to a collection of all series that are defin
 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 // Adding Series
 
@@ -38,13 +38,13 @@ The Series property provides access to a collection of all series that are defin
 
  })  
 
-.Load("loadingdata")    
+.Load("loadingData")    
 
 .Render())
 
 <script type="text/javascript">
 
-	function loadingdata(sender) 
+	function loadingData(sender) 
 	{
 
 				 data = GetData();
@@ -57,7 +57,7 @@ The Series property provides access to a collection of all series that are defin
 
 	}
 
-	// Method to get data in json format
+	// Method to get data in JSON format
 
 	function GetData() 
 	{

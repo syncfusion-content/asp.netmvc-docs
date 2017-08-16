@@ -142,7 +142,7 @@ Run the above code example and you will get the following gauge as the output.
 
     .Length(335)
 
-    . Border(bor=>bor.Width(1))
+    . Border(border=>border.Width(1))
 
     .ShowCustomLabels(true)
 
@@ -203,9 +203,9 @@ In Linear Gauge the two types of pointers available are: Marker pointer and Bar 
 
     .MarkerPointers(mp => { mp.MarkerOpacity(0).Add(); })
 
-    .BarPointers(bp => {
+    .BarPointers(bar => {
 
-    bp.Width(10)
+    bar.Width(10)
 
     .BarPointerDistanceFromScale(0)
 
@@ -262,15 +262,15 @@ Add Label Customization
 
     //Add the labels customization code here
 
-    .Labels(lbl =>
+    .Labels(label =>
 
     {
 
-        lbl.Placement(LabelPlacement.Near)
+        label.Placement(LabelPlacement.Near)
 
-        .Font(fnt => {
+        .Font(font => {
 
-            fnt.Size("10px")
+            font.Size("10px")
 
             .FontFamily("Segoe UI")
 
@@ -280,9 +280,9 @@ Add Label Customization
 
 
 
-        lbl.Placement(LabelPlacement.Far)
+        label.Placement(LabelPlacement.Far)
 
-        .DistanceFromScale(dfs=>dfs.X(13)).Add();
+        .DistanceFromScale(distance=>distance.X(13)).Add();
 
     })
 
@@ -343,7 +343,7 @@ Run the above code example and you will get the following gauge as output.
 
         .Color("#8c8c8c")
 
-        .DistanceFromScale(dfs=>dfs.Y(4)).Add();
+        .DistanceFromScale(distance=>distance.Y(4)).Add();
 
 
 
@@ -355,7 +355,7 @@ Run the above code example and you will get the following gauge as output.
 
         .Color("#8c8c8c")
 
-        .DistanceFromScale(dfs=>dfs.Y(4)).Add();
+        .DistanceFromScale(distance=>distance.Y(4)).Add();
 
 
 
@@ -369,7 +369,7 @@ Run the above code example and you will get the following gauge as output.
 
         .Color("#8c8c8c")
 
-        .DistanceFromScale(dfs=>dfs.Y(4)).Add();
+        .DistanceFromScale(distance=>distance.Y(4)).Add();
 
 
 
@@ -383,7 +383,7 @@ Run the above code example and you will get the following gauge as output.
 
         .Color("#8c8c8c")
 
-        .DistanceFromScale(dfs=>dfs.Y(4)).Add();
+        .DistanceFromScale(distance=>distance.Y(4)).Add();
 
     })
 
@@ -436,9 +436,9 @@ Run the above code example and you will get the following gauge as output.
 
     //Add the Custom labels customization code here
 
-    .CustomLabels(clbl => {
+    .CustomLabels(label => {
 
-    clbl.Value("(° C)")
+    label.Value("(° C)")
 
     .Position(loc => loc.X(44).Y(78))
 
@@ -456,7 +456,7 @@ Run the above code example and you will get the following gauge as output.
 
 
 
-    clbl.Value("(° F)")
+    label.Value("(° F)")
 
     .Position(loc => loc.X(56).Y(78))
 
@@ -474,7 +474,7 @@ Run the above code example and you will get the following gauge as output.
 
 
 
-    clbl.Position(loc => loc.X(51).Y(90))
+    label.Position(loc => loc.X(51).Y(90))
 
     .Font(f => {
 
@@ -519,7 +519,7 @@ Add the function that converts the temperature in degree to Fahrenheit in the la
 
 .LabelColor("#8c8c8c")
 
-.ClientSideEvents(cli=>cli.DrawLabels("DrawLabel"))
+.ClientSideEvents(event=>event.DrawLabels("DrawLabel"))
 
 .EnableAnimation(false)
 
@@ -543,7 +543,7 @@ Add the function that converts the temperature in degree to Fahrenheit in the la
 
     .Length(335)
 
-    . Border(bor=>bor.Width(1))
+    . Border(border=>border.Width(1))
 
     .ShowCustomLabel(true)
 
@@ -594,7 +594,7 @@ Add the function that displays the current temperature value in the custom label
 
 .LabelColor("#8c8c8c")
 
-.ClientSideEvents(cli=>cli. DrawCustomLabel("DrawCustomLabel"))
+.ClientSideEvents(event=>event. DrawCustomLabel("DrawCustomLabel"))
 
 .EnableAnimation(false)
 
@@ -618,7 +618,7 @@ Add the function that displays the current temperature value in the custom label
 
     .Length(335)
 
-    .Border(bor=>bor.Width(1))
+    .Border(border=>border.Width(1))
 
     .ShowCustomLabel(true)
 
@@ -643,59 +643,59 @@ Add the function that displays the current temperature value in the custom label
 
             var temp = args.scaleElement.barPointers[0].value;
 
-            var fahValue = (temp * (9 / 5)) + 32;
+            var value = (temp * (9 / 5)) + 32;
 
             if (temp == -10) {
 
-                args.style.textValue = "Very Cold Weather" + "(" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Very Cold Weather" + "(" + value.toFixed(1) + "° F)";
 
             }
 
             else if ((temp > -10 && temp < 0) || (temp > 0 && temp < 15)) {
 
-                args.style.textValue = "Cool Weather" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Cool Weather" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp == 0) {
 
-                args.style.textValue = "Freezing point of Water" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Freezing point of Water" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp >= 15 && temp < 30) {
 
-                args.style.textValue = "Room Temperature" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Room Temperature" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp == 30) {
 
-                args.style.textValue = "Beach Weather" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Beach Weather" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp == 37) {
 
-                args.style.textValue = "Body Temperature" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Body Temperature" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp == 40) {
 
-                args.style.textValue = "Hot Bath Temperature" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Hot Bath Temperature" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp > 40 && temp < 100) {
 
-                args.style.textValue = "Very Hot Temperature" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Very Hot Temperature" + " (" + value.toFixed(1) + "° F)";
 
             }
 
             else if (temp == 100) {
 
-                args.style.textValue = "Boiling point of Water" + " (" + fahValue.toFixed(1) + "° F)";
+                args.style.textValue = "Boiling point of Water" + " (" + value.toFixed(1) + "° F)";
 
             }
 

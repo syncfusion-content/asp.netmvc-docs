@@ -17,9 +17,9 @@ RangeNavigator provides support for you to customize the text display in the too
 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-.TooltipSettings(tl=>tl
+.TooltipSettings(tooltip=>tooltip
 
 .Visible(true)
 
@@ -27,7 +27,7 @@ RangeNavigator provides support for you to customize the text display in the too
 
 //  To customize the tooltip text
 
-.Font(fn=>fn
+.Font(font=>font
 
 .Color("red")                                                        
 
@@ -69,9 +69,9 @@ Some of the LabelFormat for DateTime data are as follows:
 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-.TooltipSettings(tl=>tl.LabelFormat("MMM, yyyy"))
+.TooltipSettings(tooltip=>tooltip.LabelFormat("MMM, yyyy"))
 
 .Render())
 
@@ -104,9 +104,9 @@ Tooltip get displayed only when we move the slider.</td></tr>
 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-.TooltipSettings(tl=>tl.TooltipDisplayMode("ondemand"))
+.TooltipSettings(tooltip=>tooltip.TooltipDisplayMode("ondemand"))
 
 .Render())
 
