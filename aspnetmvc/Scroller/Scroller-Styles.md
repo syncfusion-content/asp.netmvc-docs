@@ -43,11 +43,11 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 
 
-<div id="scrollcontent">
+<div id="scrollContent">
 
   <div> @*Wrapper div for Scroller.*@
 
-     <div id="innercontent"> @*Content div*@
+     <div class="inner-content"> @*Content div*@
 
         <h3>MVC </h3>
 
@@ -71,7 +71,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 </div>
 
-@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).ScrollTop(10).ScrollLeft(20).ButtonSize(20).Render();}
+@{Html.EJ().Scroller("scrollContent").Height(170).Width(350).ScrollTop(10).ScrollLeft(20).ButtonSize(20).Render();}
 
 {% endhighlight %}
 
@@ -82,7 +82,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 	<style type="text/css">
 
-		#innercontent 
+		.inner-content 
 		{
 
 		width: 400px;
@@ -93,7 +93,7 @@ In the View page, add the Scroller helper to configure Scroller widget.
 
 
 
-		#scrollcontent {
+		#scrollContent {
 
 		border: 1px solid grey;
 

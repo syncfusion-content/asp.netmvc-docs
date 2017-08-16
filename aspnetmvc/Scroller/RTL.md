@@ -23,7 +23,7 @@ In the View page, add a scroller helper to configure Scroller widget.
 
   <div>  @*Wrapper div for Scroller.*@
 
-     <div id="innercontent"> @*Content div*@
+     <div class="inner-content"> @*Content div*@
 
         <h3>MVC </h3>
 
@@ -47,7 +47,7 @@ In the View page, add a scroller helper to configure Scroller widget.
 
 </div>
 
-@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableRTL(true).Render();}
+@{Html.EJ().Scroller("scrollContent").Height(170).Width(350).EnableRTL(true).Render();}
 
 {% endhighlight %}
 

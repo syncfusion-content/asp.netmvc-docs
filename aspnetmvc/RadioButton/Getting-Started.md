@@ -228,19 +228,19 @@ Essential Studio ASP.NET MVCRadioButton widget has a built-in feature to select 
 
     {
 
-        var checkeditem = [];
+        var checkedItem = [];
 
             $(".e-radiobtn:checked").each(function (index, Element) {
 
                 //if ($(this).ejRadioButton('isChecked')) {
 
-                    checkeditem.push($(this).parent().siblings().html());
+                    checkedItem.push($(this).parent().siblings().html());
 
                 //}
 
             });
 
-            alert(checkeditem);
+            alert(checkedItem);
 
     }
 
@@ -452,7 +452,7 @@ Add the following code example in the index page.
 	function button() 
 	{
 
-		var checkeditem = [];
+		var checkedItem = [];
 
 		var result = "";
 
@@ -461,11 +461,11 @@ Add the following code example in the index page.
 
 			quest = index + 1;
 
-			checkeditem.push("Question" + quest + ":" + $(this).parent().siblings().html().trim()+" ");             
+			checkedItem.push("Question" + quest + ":" + $(this).parent().siblings().html().trim()+" ");             
 
 		});
 
-		alert(checkeditem);
+		alert(checkedItem);
 
 	}
 

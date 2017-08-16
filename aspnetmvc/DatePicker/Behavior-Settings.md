@@ -30,7 +30,7 @@ Refer below example to set min and max date range in DatePicker at initializatio
    
     @*sets min and max date to be pick able in datepicker*@
   
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).MinDate("2014/06/03").MaxDate("2014/06/19")
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).MinDate("2014/06/03").MaxDate("2014/06/19")
           
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ By default DatePicker starts with month view and can be drill down into year, de
 {% highlight cshtml %}
 
         @*sets the start view and defines when the DatePicker calendar to return date*@
-        @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).StartLevel(Period.Year).DepthLevel(Period.Year).DateFormat("MMMM yyyy")
+        @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).StartLevel(Period.Year).DepthLevel(Period.Year).DateFormat("MMMM yyyy")
 
 {% endhighlight %}
 
@@ -63,7 +63,7 @@ Refer below code example to represent DatePicker as calendar.
 
     @*sets inline to represent datePicker as DatePicker calendar*@
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).DisplayInline(true)
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).DisplayInline(true)
 
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ By default **EnableStrictMode** is true, so you can enter any value other than
 
     @*sets active strict mode*@
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).EnableStrictMode(false)
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).EnableStrictMode(false)
 
 
 {% endhighlight %}
@@ -90,7 +90,7 @@ You can also override the  **error** class to highlight when invalid date is ent
 
     @*sets inactive strict mode*@
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).EnableStrictMode(true)
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).EnableStrictMode(true)
  
 {% endhighlight %}
 

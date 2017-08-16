@@ -21,11 +21,11 @@ Set Id for Radio Button control as follows.
 
 @*set new id value as follows*@
 
-@Html.EJ().RadioButton("RadBtn_Male").Id("male_type").Name("Gender")
+@Html.EJ().RadioButton("RadioButton_Male").Id("male_type").Name("Gender")
 
 <br />
 
-@Html.EJ().RadioButton("RadBtm_female").Id("female_type").Name("Gender")
+@Html.EJ().RadioButton("RadioButton_female").Id("female_type").Name("Gender")
 
 {% endhighlight %}
 

@@ -119,7 +119,7 @@ By default **en-US** culture Date format is "M/d/yyyy".
 
         @*sets en-US culture with specified date format*@
 
-        @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
+        @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
 
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ EJMVC DatePicker calendar consists of header, day header, days and footer sectio
 
         @*sets the selected header format to display in header*@
 
-        @Html.EJ().DatePicker("datepick").HeaderFormat("yyyy MMMM")
+        @Html.EJ().DatePicker("datePicker").HeaderFormat("yyyy MMMM")
 
 
 {% endhighlight %}
@@ -165,7 +165,7 @@ Day header determines the days name to be displayed in terms of short, medium an
 
             @*sets the day header as long*@
 
-            @Html.EJ().DatePicker("datepick").DayHeaderFormat(Header.Long)
+            @Html.EJ().DatePicker("datePicker").DayHeaderFormat(Header.Long)
 
 
 {% endhighlight %}
@@ -180,6 +180,6 @@ You can also change the format of tooltip by using [TooltipFormat](http://help.s
    
     @*sets and shows tooltip on hovering date on calendar*@
 
-    @Html.EJ().DatePicker("datepick").ShowTooltip(true).TooltipFormat("dd/MM/yy")
+    @Html.EJ().DatePicker("datePicker").ShowTooltip(true).TooltipFormat("dd/MM/yy")
        
 {% endhighlight %}

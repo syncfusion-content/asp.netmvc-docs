@@ -80,7 +80,7 @@ The Essential ASP.NET MVC DatePicker can be created using HTML helper like below
 
 {% highlight cshtml %}
 
-    @Html.EJ().DatePicker("datepick")
+    @Html.EJ().DatePicker("datePicker")
             
 {% endhighlight %}
 
@@ -92,7 +92,7 @@ The Essential ASP.NET MVC DatePicker provides an options to configure all its pr
 
 {% highlight cshtml %}
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).DateFormat("yyyy/MM/dd")
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).DateFormat("yyyy/MM/dd")
 
 {% endhighlight %}
 
@@ -129,7 +129,7 @@ You can handle the all available client side events in Essential JavaScript Date
 
 {% highlight cshtml %}
 
-    @Html.EJ().DatePicker("datepick").Value(System.DateTime.Now).ClientSideEvents(e => e.Change("onChange"))
+    @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).ClientSideEvents(e => e.Change("onChange"))
 	
     <script>    
     
