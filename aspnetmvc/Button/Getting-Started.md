@@ -35,7 +35,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
       <tr>                
 
         <td>                   
-			@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
+			@Html.EJ().ToggleButton("playPause").Size(ButtonSize.Large).ShowRoundedCorner(true)
 			.ContentType(ContentType.TextAndImage).ToggleState(true).DefaultPrefixIcon("e-icon e-mediaplay")
 			.ActivePrefixIcon("e-icon e-mediapause").DefaultText("Play").ActiveText("Pause")
 
@@ -47,7 +47,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
            </td>
 
-           <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).Text("Unmute")
+           <td>                   @Html.EJ().Button("Unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).Text("Unmute")
 
            </td>           
 
@@ -106,7 +106,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 			  <tr>                
 
 				<td>                   
-					@Html.EJ().ToggleButton("playpause").Size(ButtonSize.Large).ShowRoundedCorner(true)
+					@Html.EJ().ToggleButton("playPause").Size(ButtonSize.Large).ShowRoundedCorner(true)
 					.ContentType(ContentType.TextAndImage).ToggleState(true).ClientSideEvents(e => e.Create("play").Click("pause")
 					.Change("play")).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediapause").DefaultText("Play").ActiveText("Pause")
 
@@ -116,7 +116,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 				   </td>
 
-				   <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("unmute")).Text("Unmute")
+				   <td>                   @Html.EJ().Button("Unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("Unmute")).Text("Unmute")
 
 				   </td>           
 
@@ -185,7 +185,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 	 }
 
-	function unmute()
+	function Unmute()
 
 	{
 

@@ -23,7 +23,7 @@ The following steps explains you the details about rendering the button with Rig
 
 <div class="spltspan">
 
-	@Html.EJ().SplitButton("spltbutton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
+	@Html.EJ().SplitButton("splitButton_rtl").Text("login").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.TextAndImage).PrefixIcon("e-icon e-login").ImagePosition(ImagePosition.ImageLeft).TargetID("Ul11").EnableRTL(true)
 
 	<ul id="Ul11">
 

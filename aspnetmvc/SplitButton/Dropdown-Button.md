@@ -22,7 +22,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 
 
-	@Html.EJ().SplitButton("dropdownbtn").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("menu1").ButtonMode(ButtonMode.Dropdown)
+	@Html.EJ().SplitButton("dropdownButton").Text("login").ShowRoundedCorner(true).Size(ButtonSize.Medium).ContentType(ContentType.TextOnly).TargetID("menu1").ButtonMode(ButtonMode.Dropdown)
 
 	<ul id="menu1">
 

@@ -19,7 +19,7 @@ Refer below code to start Wednesday as start day.
 
         @*sets start day as Wednesday in calendar*@
 
-        @Html.EJ().DatePicker("datepick").StartDay(3)
+        @Html.EJ().DatePicker("datePicker").StartDay(3)
 
 {% endhighlight %}
 
@@ -33,7 +33,7 @@ The EJMVC DatePicker calendar allows you to quick navigate back and forth from o
 
         @*skips the one months from current month(July to Sept to Nov)*@
 
-        @Html.EJ().DatePicker("datepick").StepMonths(2)
+        @Html.EJ().DatePicker("datePicker").StepMonths(2)
 
 
 {% endhighlight %}
@@ -48,7 +48,7 @@ You can make EJMVC DatePicker as read only by setting [ReadOnly](http://help.syn
 
         @*sets DatePicker as read only*@
 
-        @Html.EJ().DatePicker("datepick").ReadOnly(true)
+        @Html.EJ().DatePicker("datePicker").ReadOnly(true)
 
 {% endhighlight %}
 
@@ -62,7 +62,7 @@ You can enable or disable the EJMVC DatePicker textbox by using [Enabled](http:/
 
         @*disables the DatePicker textbox*@
 
-        @Html.EJ().DatePicker("datepick").Enabled(false)
+        @Html.EJ().DatePicker("datePicker").Enabled(false)
     
 
 {% endhighlight %}

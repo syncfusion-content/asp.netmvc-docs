@@ -51,7 +51,7 @@ If validation gets fail, in-built “error” class will be added to correspondi
     {
     //Sets the field to be required with validation message
     
-    @Html.EJ().DatePicker("datepick").ValidationRules(rule => rule.AddRule("required", true)).ValidationMessage(msg => msg.AddMessage("required", "Required Date value"));
+    @Html.EJ().DatePicker("datePicker").ValidationRules(rule => rule.AddRule("required", true)).ValidationMessage(msg => msg.AddMessage("required", "Required Date value"));
     <input type="submit" value="click here!" />
     
     } 

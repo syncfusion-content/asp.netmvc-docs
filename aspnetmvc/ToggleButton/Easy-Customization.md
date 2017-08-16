@@ -332,7 +332,7 @@ The following steps explains you the details about rendering the Toggle Button w
 
 			<td class="btnsht">
 
-				@Html.EJ().ToggleButton("toggleButton_small_imageonly").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
+				@Html.EJ().ToggleButton("toggleButton_small_imageOnly").Size(ButtonSize.Small).ShowRoundedCorner(true).ContentType(ContentType.ImageOnly).DefaultPrefixIcon("e-icon e-mediaplay").ActivePrefixIcon("e-icon e-mediaforward")
 
 			</td>
 
