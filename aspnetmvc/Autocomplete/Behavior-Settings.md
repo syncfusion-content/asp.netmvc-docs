@@ -176,7 +176,7 @@ The following steps explain you how to enable this property.
 
                 Distinct enabled</span></h6>
 
-        @Html.EJ().Autocomplete("autocompletedistinct")
+        @Html.EJ().Autocomplete("autocompleteDistinct")
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 

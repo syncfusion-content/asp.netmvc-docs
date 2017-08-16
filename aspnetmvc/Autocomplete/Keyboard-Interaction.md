@@ -56,7 +56,7 @@ The following steps explain how you can enable keyboard interaction for an AutoC
 
 		@{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
 
-		htmlAttribute.Add("accesskey", "j");
+		htmlAttribute.Add("accessKey", "j");
 
 		}
 

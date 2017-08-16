@@ -91,7 +91,7 @@ You need to add the class in the Models. Define the Class with key and text fiel
                 component.Add(new ComponentsList { ComponentName = "Schedule" });
                 component.Add(new ComponentsList { ComponentName = "Scrollbar" });
                 component.Add(new ComponentsList { ComponentName = "Slider" });
-                component.Add(new ComponentsList { ComponentName = "RangeNavigatior" });
+                component.Add(new ComponentsList { ComponentName = "RangeNavigator" });
                 component.Add(new ComponentsList { ComponentName = "Rating" });
                 component.Add(new ComponentsList { ComponentName = "RichTextEditor" });
                 component.Add(new ComponentsList { ComponentName = "Tab" });
