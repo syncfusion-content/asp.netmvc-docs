@@ -91,6 +91,6 @@ OlapReport olapReport = new OlapReport();
 olapReport.CurrentCubeName = "Adventure Works";
 olapReport.EnablePaging = true;
 olapReport.PagerOptions.SeriesPageSize = 4;
-olapReport.PagerOptions.CategorialPageSize = 5;
+olapReport.PagerOptions.CategoricalPageSize = 5;
 
 {% endhighlight %}
