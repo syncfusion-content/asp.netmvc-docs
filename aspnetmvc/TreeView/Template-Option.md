@@ -25,7 +25,7 @@ In the controller page, create a data list that contains the details about tree 
                 treeData.Add(new LoadData { 
                     Id = 1,
                     Name = "UK",
-                    Cls = "uk-style",
+                    ClassName = "uk-style",
                     HasChild = true,
                     Expanded = true
                 });
@@ -40,7 +40,7 @@ In the controller page, create a data list that contains the details about tree 
                 treeData.Add(new LoadData { 
                     Id = 3,
                     Name = "USA",
-                    Cls = "usa-style",
+                    ClassName = "usa-style",
                     HasChild = true,
                     Expanded = true
                 });
@@ -77,7 +77,7 @@ In the view page, specify template format and add TreeView helper.
     
     <script id="treeTemplate" type="text/x-jsrender">
         {{"{{"}}if HasChild{{}}}}
-        <div class={{"{{"}}>Cls{{}}}}>{{"{{"}}>Name{{}}}}</div>
+        <div class={{"{{"}}>ClassName{{}}}}>{{"{{"}}>Name{{}}}}</div>
         {{"{{"}}else{{}}}}
         <div class="cont-list">
             <img class="con-img" src="http://mvc.syncfusion.com/demos/web/images/treeview/template-image-{{"{{"}}>ImgId{{}}}}.png" />
@@ -104,7 +104,7 @@ In the view page, specify template format and add TreeView helper.
             )
             .Template("#treeTemplate")
             .ClientSideEvents(events => 
-                events.Create("oncreate")
+                events.Create("onCreate")
             )
         )
     </div>
@@ -164,7 +164,7 @@ In the view page, specify template format and add TreeView helper.
         }
     </style>
     <script>
-        function oncreate(args) {
+        function onCreate(args) {
             var treeObj = $("#treeview").data("ejTreeView");
             $("#treeview").find(".cont-del").bind("click", function (e) {
                 e.preventDefault();
@@ -186,7 +186,7 @@ You can able to perform custom action in TreeView template node. You can able to
     {% highlight javascript %}
     
     
-        function oncreate(args) {
+        function onCreate(args) {
             var treeObj = $("#treeview").data("ejTreeView");
             $("#treeview").find(".cont-del").bind("click", function (e) {
                 e.preventDefault();

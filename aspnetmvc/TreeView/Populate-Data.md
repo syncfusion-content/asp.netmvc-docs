@@ -202,7 +202,7 @@ In the controller page, create a data list which contains the details about tree
                     Text = "Item 1",
                     Expanded = true,
                     NodeProperty = new Dictionary<string, string>() {
-                    { "class", "textblue" },
+                    { "class", "text-blue" },
                     { "value", "Item 1" }
                     }
                 });
@@ -212,7 +212,7 @@ In the controller page, create a data list which contains the details about tree
                     Parent = 0,
                     Text = "Item 2",
                     LinkProperty = new Dictionary<string, string>() {
-                    { "class", "textunderline" },
+                    { "class", "text-underline" },
                     { "href", "http://www.syncfusion.com" },
                     { "target", "_blank"}
                     }
@@ -593,8 +593,8 @@ In the view page, add TreeView helper and specify the custom adaptor as shown be
             var treeObj = $("#tree").ejTreeView("instance");
             var treeData = treeObj.model.fields.dataSource;
             var customAdaptor = new ej.Adaptor().extend({
-                insert: function (dm, data) {
-                    return dm.dataSource.json.push(data);
+                insert: function (dataManagerObj, data) {
+                    return dataManagerObj.dataSource.json.push(data);
                 },
                 processQuery: ej.JsonAdaptor.prototype.processQuery
             });
@@ -621,36 +621,36 @@ In the controller page, create a data list that contains the details about tree 
     
 public class HomeController : Controller
 {
-    List<loadondemand> data = new List<loadondemand>();
+    List<loadOnDemand> data = new List<loadOnDemand>();
     public ActionResult Index()
     {
-        data.Add(new loadondemand { id = 1, name = "Local Disk(C:)", hasChild = true });
-        data.Add(new loadondemand { id = 2, name = "Local Disk(D:)", hasChild = true });
-        data.Add(new loadondemand { id = 3, name = "Local Disk(E:)", hasChild = true });
-        data.Add(new loadondemand { id = 4, parentId = 1, name = "Folder 1", hasChild = true });
-        data.Add(new loadondemand { id = 5, parentId = 1, name = "Folder 2" });
-        data.Add(new loadondemand { id = 6, parentId = 1, name = "Folder 3" });
-        data.Add(new loadondemand { id = 7, parentId = 2, name = "Folder 4" });
-        data.Add(new loadondemand { id = 8, parentId = 2, name = "Folder 5", hasChild = true });
-        data.Add(new loadondemand { id = 9, parentId = 2, name = "Folder 6" });
-        data.Add(new loadondemand { id = 10, parentId = 3, name = "Folder 7" });
-        data.Add(new loadondemand { id = 11, parentId = 3, name = "Folder 8" });
-        data.Add(new loadondemand { id = 12, parentId = 3, name = "Folder 9", hasChild = true });
-        data.Add(new loadondemand { id = 13, parentId = 4, name = "File 1" });
-        data.Add(new loadondemand { id = 14, parentId = 4, name = "File 2" });
-        data.Add(new loadondemand { id = 15, parentId = 4, name = "File 3" });
-        data.Add(new loadondemand { id = 16, parentId = 8, name = "File 4" });
-        data.Add(new loadondemand { id = 17, parentId = 8, name = "File 5" });
-        data.Add(new loadondemand { id = 18, parentId = 8, name = "File 6" });
-        data.Add(new loadondemand { id = 19, parentId = 12, name = "File 7" });
-        data.Add(new loadondemand { id = 20, parentId = 12, name = "File 8" });
-        data.Add(new loadondemand { id = 21, parentId = 12, name = "File 9" });
+        data.Add(new loadOnDemand { id = 1, name = "Local Disk(C:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 2, name = "Local Disk(D:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 3, name = "Local Disk(E:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 4, parentId = 1, name = "Folder 1", hasChild = true });
+        data.Add(new loadOnDemand { id = 5, parentId = 1, name = "Folder 2" });
+        data.Add(new loadOnDemand { id = 6, parentId = 1, name = "Folder 3" });
+        data.Add(new loadOnDemand { id = 7, parentId = 2, name = "Folder 4" });
+        data.Add(new loadOnDemand { id = 8, parentId = 2, name = "Folder 5", hasChild = true });
+        data.Add(new loadOnDemand { id = 9, parentId = 2, name = "Folder 6" });
+        data.Add(new loadOnDemand { id = 10, parentId = 3, name = "Folder 7" });
+        data.Add(new loadOnDemand { id = 11, parentId = 3, name = "Folder 8" });
+        data.Add(new loadOnDemand { id = 12, parentId = 3, name = "Folder 9", hasChild = true });
+        data.Add(new loadOnDemand { id = 13, parentId = 4, name = "File 1" });
+        data.Add(new loadOnDemand { id = 14, parentId = 4, name = "File 2" });
+        data.Add(new loadOnDemand { id = 15, parentId = 4, name = "File 3" });
+        data.Add(new loadOnDemand { id = 16, parentId = 8, name = "File 4" });
+        data.Add(new loadOnDemand { id = 17, parentId = 8, name = "File 5" });
+        data.Add(new loadOnDemand { id = 18, parentId = 8, name = "File 6" });
+        data.Add(new loadOnDemand { id = 19, parentId = 12, name = "File 7" });
+        data.Add(new loadOnDemand { id = 20, parentId = 12, name = "File 8" });
+        data.Add(new loadOnDemand { id = 21, parentId = 12, name = "File 9" });
         ViewBag.datasource = data;
         return View();
     }
 }
 
-public class loadondemand
+public class loadOnDemand
 {
     public int id { get; set; }
     public int? parentId { get; set; }
@@ -669,7 +669,7 @@ In the view page, add TreeView helper and map the properties defined in to the 
 {% highlight razor %}
     
 @Html.EJ().TreeView("tree").LoadOnDemand(true).TreeViewFields(field =>
-    field.Datasource((IEnumerable<loadondemand>)ViewBag.datasource)
+    field.Datasource((IEnumerable<loadOnDemand>)ViewBag.datasource)
     .Id("id").Text("name").ParentId("parentId").HasChild("hasChild")
 )
     
@@ -687,7 +687,7 @@ While expanding the parent node
 After expanding the parent node
 {:.caption}
 
-For more details about load on demand for local data source, refer the sample [here](http://mvc.syncfusion.com/demos/web/treeview/loadondemand).
+For more details about load on demand for local data source, refer the sample [here](http://mvc.syncfusion.com/demos/web/treeview/loadOnDemand).
 
 
 For remote data source, TreeView loads the first level nodes initially. While expand the node from TreeView, the data manager passes the query to the controller. Based on this query, you can filter the data from table and return to TreeView.
@@ -701,8 +701,8 @@ Refer below code example to load data on demand from remote data source.
         data.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
         .Query("ej.Query().from('Categories').select('CategoryID,CategoryName').take(3)")
         .Id("CategoryID").Text("CategoryName").HasChild("CategoryName").Child(child =>
-            child.Datasource(cdata =>
-                cdata.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
+            child.Datasource(childData =>
+                childData.URL("//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/"))
                 .TableName("Products").ParentId("CategoryID").Text("ProductName")))
 )
     
@@ -723,11 +723,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public JsonResult Data(DataManager dm)
+    public JsonResult Data(DataManager dataManagerObj)
     {
-        List<loadondemand> treeData = GetTreeData();
-        IEnumerable<loadondemand> results;
-        if (dm.Where == null)
+        List<loadOnDemand> treeData = GetTreeData();
+        IEnumerable<loadOnDemand> results;
+        if (dataManagerObj.Where == null)
         {
             //return the first level nodes
             results = treeData.Where(item => item.parentId == null);
@@ -735,41 +735,41 @@ public class HomeController : Controller
         else
         {
             //return the nodes which has parentId as you request
-            results = treeData.Where(s => s.parentId == Convert.ToInt32(dm.Where[0].value));
+            results = treeData.Where(s => s.parentId == Convert.ToInt32(dataManagerObj.Where[0].value));
         }
         return Json(results, JsonRequestBehavior.AllowGet);
     }
 
-    List<loadondemand> data = new List<loadondemand>();
+    List<loadOnDemand> data = new List<loadOnDemand>();
 
-    public List<loadondemand> GetTreeData()
+    public List<loadOnDemand> GetTreeData()
     {
-        data.Add(new loadondemand { id = 1, name = "Local Disk(C:)", hasChild = true });
-        data.Add(new loadondemand { id = 2, name = "Local Disk(D:)", hasChild = true });
-        data.Add(new loadondemand { id = 3, name = "Local Disk(E:)", hasChild = true });
-        data.Add(new loadondemand { id = 4, parentId = 1, name = "Folder 1", hasChild = true });
-        data.Add(new loadondemand { id = 5, parentId = 1, name = "Folder 2" });
-        data.Add(new loadondemand { id = 6, parentId = 1, name = "Folder 3" });
-        data.Add(new loadondemand { id = 7, parentId = 2, name = "Folder 4" });
-        data.Add(new loadondemand { id = 8, parentId = 2, name = "Folder 5", hasChild = true });
-        data.Add(new loadondemand { id = 9, parentId = 2, name = "Folder 6" });
-        data.Add(new loadondemand { id = 10, parentId = 3, name = "Folder 7" });
-        data.Add(new loadondemand { id = 11, parentId = 3, name = "Folder 8" });
-        data.Add(new loadondemand { id = 12, parentId = 3, name = "Folder 9", hasChild = true });
-        data.Add(new loadondemand { id = 13, parentId = 4, name = "File 1" });
-        data.Add(new loadondemand { id = 14, parentId = 4, name = "File 2" });
-        data.Add(new loadondemand { id = 15, parentId = 4, name = "File 3" });
-        data.Add(new loadondemand { id = 16, parentId = 8, name = "File 4" });
-        data.Add(new loadondemand { id = 17, parentId = 8, name = "File 5" });
-        data.Add(new loadondemand { id = 18, parentId = 8, name = "File 6" });
-        data.Add(new loadondemand { id = 19, parentId = 12, name = "File 7" });
-        data.Add(new loadondemand { id = 20, parentId = 12, name = "File 8" });
-        data.Add(new loadondemand { id = 21, parentId = 12, name = "File 9" });
+        data.Add(new loadOnDemand { id = 1, name = "Local Disk(C:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 2, name = "Local Disk(D:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 3, name = "Local Disk(E:)", hasChild = true });
+        data.Add(new loadOnDemand { id = 4, parentId = 1, name = "Folder 1", hasChild = true });
+        data.Add(new loadOnDemand { id = 5, parentId = 1, name = "Folder 2" });
+        data.Add(new loadOnDemand { id = 6, parentId = 1, name = "Folder 3" });
+        data.Add(new loadOnDemand { id = 7, parentId = 2, name = "Folder 4" });
+        data.Add(new loadOnDemand { id = 8, parentId = 2, name = "Folder 5", hasChild = true });
+        data.Add(new loadOnDemand { id = 9, parentId = 2, name = "Folder 6" });
+        data.Add(new loadOnDemand { id = 10, parentId = 3, name = "Folder 7" });
+        data.Add(new loadOnDemand { id = 11, parentId = 3, name = "Folder 8" });
+        data.Add(new loadOnDemand { id = 12, parentId = 3, name = "Folder 9", hasChild = true });
+        data.Add(new loadOnDemand { id = 13, parentId = 4, name = "File 1" });
+        data.Add(new loadOnDemand { id = 14, parentId = 4, name = "File 2" });
+        data.Add(new loadOnDemand { id = 15, parentId = 4, name = "File 3" });
+        data.Add(new loadOnDemand { id = 16, parentId = 8, name = "File 4" });
+        data.Add(new loadOnDemand { id = 17, parentId = 8, name = "File 5" });
+        data.Add(new loadOnDemand { id = 18, parentId = 8, name = "File 6" });
+        data.Add(new loadOnDemand { id = 19, parentId = 12, name = "File 7" });
+        data.Add(new loadOnDemand { id = 20, parentId = 12, name = "File 8" });
+        data.Add(new loadOnDemand { id = 21, parentId = 12, name = "File 9" });
         return data;
     }
 }
 
-public class loadondemand
+public class loadOnDemand
 {
     public int id { get; set; }
     public int? parentId { get; set; }

@@ -34,7 +34,7 @@ The following code explains to configure the height of the Accordion content pan
 
 
 
-@{Html.EJ().Accordion("accordionfill").Items(data =>
+@{Html.EJ().Accordion("accordionFill").Items(data =>
 
         {
 

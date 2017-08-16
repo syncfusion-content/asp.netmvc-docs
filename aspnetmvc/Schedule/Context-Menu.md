@@ -80,16 +80,16 @@ The following code snippet shows how to enable the context menu settings in Sche
     CellMenu.Add(new Cells { Id = "new", Text = "New Appointment" });
     CellMenu.Add(new Cells { Id = "recurrence", Text = "New Recurring Appointment" });
     CellMenu.Add(new Cells { Id = "today", Text = "Today" });
-    CellMenu.Add(new Cells { Id = "gotodate", Text = "Go to date" });
+    CellMenu.Add(new Cells { Id = "goToDate", Text = "Go to date" });
     CellMenu.Add(new Cells { Id = "settings", Text = "Settings" });
     CellMenu.Add(new Cells { Id = "view", Text = "View", ParentId = "settings" });
-    CellMenu.Add(new Cells { Id = "timemode", Text = "TimeMode", ParentId = "settings" });
+    CellMenu.Add(new Cells { Id = "timeMode", Text = "TimeMode", ParentId = "settings" });
     CellMenu.Add(new Cells { Id = "view_Day", Text = "Day", ParentId = "view" });
     CellMenu.Add(new Cells { Id = "view_Week", Text = "Week", ParentId = "view" });
     CellMenu.Add(new Cells { Id = "view_Workweek", Text = "WorkWeek", ParentId = "view" });
     CellMenu.Add(new Cells { Id = "view_Month", Text = "Month", ParentId = "view" });
-    CellMenu.Add(new Cells { Id = "timemode_Hour12", Text = "12 Hour", ParentId = "timemode" });
-    CellMenu.Add(new Cells { Id = "timemode_Hour24", Text = "24 Hour", ParentId = "timemode" });
+    CellMenu.Add(new Cells { Id = "timeMode_Hour12", Text = "12 Hour", ParentId = "timeMode" });
+    CellMenu.Add(new Cells { Id = "timeMode_Hour24", Text = "24 Hour", ParentId = "timeMode" });
     CellMenu.Add(new Cells { Id = "workhours", Text = "Work Hours", ParentId = "settings" });
 }
 
@@ -97,7 +97,7 @@ The following code snippet shows how to enable the context menu settings in Sche
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -137,14 +137,14 @@ The following code example depicts how **to add the custom menu items** to the a
 
     <!-- List of Cell menu options -->
     List<Cells> CellMenu = new List<Cells>();
-    CellMenu.Add(new Cells { Id = "customoption", Text = "User Option" });
+    CellMenu.Add(new Cells { Id = "customOption", Text = "User Option" });
 }
 
 @(Html.EJ().Schedule("Schedule1")
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -183,8 +183,8 @@ To define specific actions for a click made on the custom menu items, the client
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
-        .ScheduleClientSideEvents(evt => evt.MenuItemClick("onMenuItemClick"))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ScheduleClientSideEvents(event => event.MenuItemClick("onMenuItemClick"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -229,8 +229,8 @@ Also, it is possible to predict the target on which the right click is made, eit
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
-        .ScheduleClientSideEvents(evt => evt.BeforeContextMenuOpen("beforeContextMenuOpen"))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ScheduleClientSideEvents(event => event.BeforeContextMenuOpen("beforeContextMenuOpen"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -277,7 +277,7 @@ To include the default categorize options within the context menu, it is necessa
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .ContextMenuSettings(cxt => cxt.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
+        .ContextMenuSettings(contextMenu => contextMenu.Enable(true).MenuItems(items => items.Appointment(AppMenu).Cells(CellMenu)))
         .CategorizeSettings(cat => cat.Enable(true))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")

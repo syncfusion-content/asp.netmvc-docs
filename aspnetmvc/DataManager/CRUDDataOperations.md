@@ -23,7 +23,7 @@ The insert method of the data manager is used to add a new record to the table. 
 
 {% highlight C# %}
 
-    public static List<Employee> emp = new List<Employee>();
+    public static List<Employee> employee = new List<Employee>();
     public ActionResult Insert()
     {
         BindDataSource();
@@ -109,7 +109,7 @@ The update method is used to update the modified changes made to a record in the
 
 {% highlight C# %}
 
-    public static List<Employee> emp = new List<Employee>();
+    public static List<Employee> employee = new List<Employee>();
     public ActionResult Update()
     {
         BindDataSource();
@@ -194,7 +194,7 @@ The remove function receives the items to be deleted in the Data Table. The func
 
 {% highlight C# %}
 
-    public static List<Employee> emp = new List<Employee>();
+    public static List<Employee> employee = new List<Employee>();
     public ActionResult Remove()
     {
         BindDataSource();
@@ -313,33 +313,33 @@ The insert method of the data manager is used to add a new record to the table. 
     {
         IEnumerable<Employee> GetAll();
         Employee Get(int EmployeeID);
-        Employee Add(Employee emp);
+        Employee Add(Employee employee);
         void Remove(int EmployeeID);
-        bool Update(Employee emp);
+        bool Update(Employee employee);
     }
 
     //EmployeeRepository class
     public class EmployeeRepository : IEmployeeRepository
     {
-        private List<Employee> emp = new List<Employee>();
+        private List<Employee> employee = new List<Employee>();
        
         public EmployeeRepository()
         {
-            emp.Add(new Employee(1, "Davolio", "Nancy"));
-            emp.Add(new Employee(2, "Fuller", "Andrew"));
-            emp.Add(new Employee(3, "Leverling", "Janet"));
-            emp.Add(new Employee(4, "Peacock", "Margaret"));
-            emp.Add(new Employee(5, "Buchanan", "Steven"));
+            employee.Add(new Employee(1, "Davolio", "Nancy"));
+            employee.Add(new Employee(2, "Fuller", "Andrew"));
+            employee.Add(new Employee(3, "Leverling", "Janet"));
+            employee.Add(new Employee(4, "Peacock", "Margaret"));
+            employee.Add(new Employee(5, "Buchanan", "Steven"));
         }
 
         public IEnumerable<Employee> GetAll()
         {
-            return emp;
+            return employee;
         }
 
         public Employee Get(int id)
         {
-            return emp.Find(p => p.EmployeeID == id);
+            return employee.Find(p => p.EmployeeID == id);
         }
 
         public Employee Add(Employee eObj)
@@ -348,13 +348,13 @@ The insert method of the data manager is used to add a new record to the table. 
             {
                 throw new ArgumentNullException("eObj");
             }
-            emp.Add(eObj);
+            employee.Add(eObj);
             return eObj;
         }
 
         public void Remove(int id)
         {
-            emp.RemoveAll(p => p.EmployeeID == id);
+            employee.RemoveAll(p => p.EmployeeID == id);
         }
 
         public bool Update(Employee eObj)
@@ -363,13 +363,13 @@ The insert method of the data manager is used to add a new record to the table. 
             {
                 throw new ArgumentNullException("eObj");
             }
-            int index = emp.FindIndex(p => p.EmployeeID == eObj.EmployeeID);
+            int index = employee.FindIndex(p => p.EmployeeID == eObj.EmployeeID);
             if (index == -1)
             {
                 return false;
             }
-            emp.RemoveAt(index);
-            emp.Add(eObj);
+            employee.RemoveAt(index);
+            employee.Add(eObj);
             return true;
         }
     }
@@ -378,12 +378,10 @@ The insert method of the data manager is used to add a new record to the table. 
     public class EmployeeController : ApiController
     {
         static readonly IEmployeeRepository repository = new EmployeeRepository();
-        // GET api/<controller>
+        // GET API/<controller>
         [HttpGet]
         public object Get()
         {
-
-
             var queryString = HttpContext.Current.Request.QueryString;
             var data = repository.GetAll().ToList();
             return new { Items = data, Count = data.Count() };
@@ -391,29 +389,29 @@ The insert method of the data manager is used to add a new record to the table. 
 
         public Employee GetEmployee(int id)
         {
-            Employee emp = repository.Get(id);
-            if (emp == null)
+            Employee employee = repository.Get(id);
+            if (employee == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-            return emp;
+            return employee;
         }
 
-        // POST api/<controller>
-        public HttpResponseMessage PostEmployee(Employee emp)
+        // POST API/<controller>
+        public HttpResponseMessage PostEmployee(Employee employee)
         {
-            emp = repository.Add(emp);
-            var response = Request.CreateResponse<Employee>(HttpStatusCode.Created, emp);
+            employee = repository.Add(employee);
+            var response = Request.CreateResponse<Employee>(HttpStatusCode.Created, employee);
 
-            string uri = Url.Link("Employee", new { id = emp.EmployeeID });
+            string uri = Url.Link("Employee", new { id = employee.EmployeeID });
             response.Headers.Location = new Uri(uri);
             return response;
         }
          [HttpPut]
-        // PUT api/<controller>
-        public void PutEmployee(Employee emp)
+        // PUT API/<controller>
+        public void PutEmployee(Employee employee)
         {
-            if (!repository.Update(emp))
+            if (!repository.Update(employee))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
@@ -422,8 +420,8 @@ The insert method of the data manager is used to add a new record to the table. 
         [HttpDelete]
         public void Delete(int id)
         {
-            Employee emp = repository.Get(id);
-            if (emp == null)
+            Employee employee = repository.Get(id);
+            if (employee == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }

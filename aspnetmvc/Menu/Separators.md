@@ -21,7 +21,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 	<div class="imgframe">
 
-		Html.EJ().Menu("menucontrol").Items(items =>
+		Html.EJ().Menu("menuControl").Items(items =>
 
 		{
 
@@ -110,7 +110,7 @@ Menu can also contain separators that are horizontal bars between menu items. Yo
 
 	<div class="imgframe">
 
-	@Html.EJ().Menu("menucontrol").Items(items =>
+	@Html.EJ().Menu("menuControl").Items(items =>
 
 		{
 

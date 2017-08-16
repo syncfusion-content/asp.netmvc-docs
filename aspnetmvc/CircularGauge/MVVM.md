@@ -51,11 +51,11 @@ angular.module('syncApp', ['ejangular'])
 
 .controller('CircularGauge', function ($scope) {
 
-$scope.nvalue = 50;
+$scope.value = 50;
 
-$scope.nminimum = 0;
+$scope.minimum = 0;
 
-$scope.nmaximum = 120;
+$scope.maximum = 120;
 
 
 });
@@ -356,11 +356,11 @@ e-radius="130" e-showScaleBar="true" e-size="1"
 
 <!—binding maximum value using angular JS -->
 
-e-maximum="nmaximum"
+e-maximum="maximum"
 
 <!—binding minimum value using angular JS -->
 
-e-minimum="nminimum"
+e-minimum="minimum"
 
 e-majorIntervalValue="20"
 
@@ -374,7 +374,7 @@ e-length="95" e-width="7"
 
 <!—binding pointer value using angular JS -->
 
-e-value="nvalue"
+e-value="value"
 
 e-pointerCap-radius="12">
 
@@ -454,11 +454,11 @@ angular.module('syncApp', ['ejangular'])
 
 .controller('CircularGauge', function ($scope) {
 
-$scope.nvalue = 50;
+$scope.value = 50;
 
-$scope.nminimum = 0;
+$scope.minimum = 0;
 
-$scope.nmaximum = 120;
+$scope.maximum = 120;
 
 
 
@@ -494,7 +494,7 @@ Circular gauge with two way binding in AngularJS
 
 data-bind="ejCircularGauge: {
 
-value:samplevalue,
+value:sampleValue,
 
 minimum:minimumValue,
 
@@ -511,7 +511,7 @@ $(function () {
 
 window.viewModel = {
 
-samplevalue: ko.observable(50),
+sampleValue: ko.observable(50),
 
 minimumValue: ko.observable(10),
 

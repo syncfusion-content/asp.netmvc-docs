@@ -17,7 +17,7 @@ If you set EnableDeferredUpdate to true, the RangeChanged event gets fired after
 
 {% highlight CSHTML %}
  [
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 . EnableDeferredUpdate (true)
 
@@ -37,16 +37,16 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-.Loaded("loadingdata")
+.Loaded("loadingData")
 
    
 .Render())
 
 <script type="text/javascript">
 
-	function loadingdata(sender) 
+	function loadingData(sender) 
 	{
 
 		 sender.model.isResponsive = false;
@@ -62,16 +62,16 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
 This event gets fired whenever the selected range changes in RangeNavigator. A parameter sender is passed to the handler. Using sender.selectedRangeSettings, you can access the start and end value of range for the selected region. 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
     
-.RangeChanged("loadingdata")
+.RangeChanged("loadingData")
 
 .Render())
 
 <script type="text/javascript">
 
-   function loadingdata(sender) 
+   function loadingData(sender) 
    {
 
 		 console.log(sender.selectedRangeSettings.start);
@@ -89,9 +89,9 @@ You can easily update the data for chart by assigning the ZoomFactor and ZoomPos
 {% highlight CSHTML %}
  
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-.RangeChanged("loadingdata")
+.RangeChanged("loadingData")
 
 .Render())
 
@@ -99,17 +99,17 @@ You can easily update the data for chart by assigning the ZoomFactor and ZoomPos
 
 	// setting zoom factor and position for chart axis in rangeChanged event.
 
-	function loadingdata(sender) 
+	function loadingData(sender) 
 	{
 
-	 var chartobj = $("#container").data("ejChart");
+	 var chart = $("#container").data("ejChart");
 
-	 if (chartobj != null) 
+	 if (chart != null) 
 	 {
 
-		 chartobj.model.axes[0].zoomPosition = sender. zoomPosition;                                                               
+		 chart.model.axes[0].zoomPosition = sender. zoomPosition;                                                               
 
-		 chartobj.model.axes[0].zoomFactor = sender. zoomFactor;
+		 chart.model.axes[0].zoomFactor = sender. zoomFactor;
 
 		}
 
@@ -156,7 +156,7 @@ You can customize Thumb template by using LeftThumbTemplate and RightThumbTempla
 
 	            // ...              
 
-      .NavigatorStyleSettings(ns=>ns.LeftThumbTemplate("left")
+      .NavigatorStyleSettings(navigator=>navigator.LeftThumbTemplate("left")
 
                  .RightThumbTemplate("right"))
 

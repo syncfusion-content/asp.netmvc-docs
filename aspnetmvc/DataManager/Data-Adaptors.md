@@ -32,21 +32,21 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
         <th> Description <br/> </th>
     </tr>
      <tr>
-        <td> processQuery(ds, query) </td>
+        <td> processQuery(dataManagerObj, query) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
             </table>
         </td>
         <td> Used to prepare query string for the request data </td>
     </tr>
     <tr>
-        <td> processResponse(data, ds, query, xhr) </td>
+        <td> processResponse(data, dataObj, query, xhr) </td>
          <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
             </table>
@@ -54,20 +54,20 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
         <td> Used to precess the response which is return from the Data Source </td>
     </tr>
     <tr>
-        <td> insert(dm, data) </td>
+        <td> insert(dataManagerObj, data) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
             </table>
         </td>
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -76,10 +76,10 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName) </td>
+        <td> update(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -139,10 +139,10 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         <th> Description <br/> </th>
     </tr>
      <tr>
-        <td> processQuery(dm, query, hierarchyFilters) </td>
+        <td> processQuery(dataManagerObj, query, hierarchyFilters) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> hierarchyFilters </td> <td> ej.Query </td> <td> The hierarchical query can be provided by using the hierarchical function.  </td> </tr>
             </table>
@@ -150,11 +150,11 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         <td> Used to prepare query string for the request data </td>
     </tr>
     <tr>
-        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+        <td> processResponse(data, dataObj, query, xhr, request, changes) </td>
          <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array of Result</td> </tr>
-                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
                 <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
@@ -164,11 +164,11 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         <td> Used to precess the response which is return from the Data Source </td>
     </tr>
     <tr>
-        <td> insert(dm, data, tableName, query) </td>
+        <td> insert(dataManagerObj, data, tableName, query) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
             </table>
@@ -176,10 +176,10 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName, query) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName, query) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -189,10 +189,10 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName, query) </td>
+        <td> update(dataManagerObj, keyField, value, tableName, query) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -234,11 +234,11 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
         {
             return View();
         }
-        public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+        public ActionResult DataSource(Syncfusion.JavaScript.DataManager dataManagerObj)
         {
             var DataSource = OrderRepository.GetAllRecords();
             DataResult result = new DataResult();
-            result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
+            result.result = DataSource.Skip(dataManagerObj.Skip).Take(dataManagerObj.Take).ToList();
             result.count = DataSource.Count();
             return Json(result, JsonRequestBehavior.AllowGet);
         }
@@ -274,11 +274,11 @@ OData Adaptor that is extended from URL Adaptor is used for consuming data throu
         <th> Description <br/> </th>
     </tr>
     <tr>
-        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+        <td> processResponse(data, dataObj, query, xhr, request, changes) </td>
          <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
                 <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
@@ -288,21 +288,21 @@ OData Adaptor that is extended from URL Adaptor is used for consuming data throu
         <td> Used to precess the response which is return from the Data Source </td>
     </tr>
      <tr>
-        <td> insert(dm, data, tableName) </td>
+        <td> insert(dataManagerObj, data, tableName) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
             </table>
         </td>
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -311,10 +311,10 @@ OData Adaptor that is extended from URL Adaptor is used for consuming data throu
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName) </td>
+        <td> update(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -363,11 +363,11 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
         <th> Description <br/> </th>
     </tr>
     <tr>
-        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+        <td> processResponse(data, dataObj, query, xhr, request, changes) </td>
          <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
                 <tr>  <td> request </td> <td> Object </td> <td>  request object to the Data Source </td> </tr>
@@ -377,21 +377,21 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
         <td> Used to precess the response which is return from the Data Source </td>
     </tr>
      <tr>
-        <td> insert(dm, data, tableName) </td>
+        <td> insert(dataManagerObj, data, tableName) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
             </table>
         </td>
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -400,10 +400,10 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName) </td>
+        <td> update(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -466,11 +466,11 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
         <th> Description <br/> </th>
     </tr>
     <tr>
-        <td> insert(dm, data, tableName, query) </td>
+        <td> insert(dataManagerObj, data, tableName, query) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
             </table>
@@ -478,10 +478,10 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName, query) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName, query) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -491,10 +491,10 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName, query) </td>
+        <td> update(dataManagerObj, keyField, value, tableName, query) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -509,7 +509,7 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
 {% highlight razor %}
 
     @(Html.EJ().Grid<object>("FlatGrid")
-                .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                .Datasource(dataSource => dataSource.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
                 .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
                 .AllowPaging()
                 .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
@@ -609,8 +609,8 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
             //new custom adaptor implementation
             //able to implement more option in custom adaptor other than insert
             var customAdaptor = new ej.Adaptor().extend({
-                insert: function (dm, data) {
-                    return dm.dataSource.json.push(data);
+                insert: function (dataManagerObj, data) {
+                    return dataManagerObj.dataSource.json.push(data);
                 },
                 processQuery: ej.JsonAdaptor.prototype.processQuery // reused process query from json adaptor
             });
@@ -682,10 +682,10 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
         <th> Description <br/> </th>
     </tr>
      <tr>
-        <td> processQuery(dm, query, hierarchyFilters) </td>
+        <td> processQuery(dataManagerObj, query, hierarchyFilters) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> hierarchyFilters </td> <td> ej.Query </td> <td> The hierarchical query can be provided by using the hierarchical function.  </td> </tr>
             </table>
@@ -693,11 +693,11 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
         <td> Used to prepare query string for the request data </td>
     </tr>
     <tr>
-        <td> processResponse(data, ds, query, xhr, request, changes) </td>
+        <td> processResponse(data, dataObj, query, xhr, request, changes) </td>
          <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> ds </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> query </td> <td> ej.Query </td> <td>  Sets the default query for the data source </td> </tr>
                 <tr>  <td> xhr </td> <td> Object </td> <td> XMLHTTPRequest object </td> </tr>
                 <tr>  <td> request </td> <td> Object </td> <td>  Sets the default query for the data source </td> </tr>
@@ -707,21 +707,21 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
         <td> Used to precess the response which is return from the Data Source </td>
     </tr>
     <tr>
-        <td> insert(dm, data, tableName) </td>
+        <td> insert(dataManagerObj, data, tableName) </td>
         <td> 
             <table>
                 <tr>  <td> data </td> <td> Object </td> <td>  JSON data or JSON array </td> </tr>
-                <tr>  <td> dm </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td> ej.DataManager object </td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
             </table>
         </td>
         <td> Inserts a data item in the data table. </td>
     </tr>
     <tr>
-        <td> remove(dm, keyField, value, tableName) </td>
+        <td> remove(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -730,10 +730,10 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
         <td> It is used to remove the data from the dataSource </td>
     </tr>
     <tr>
-        <td> update(dm, keyField, value, tableName) </td>
+        <td> update(dataManagerObj, keyField, value, tableName) </td>
         <td> 
             <table>
-                <tr>  <td> dm </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
+                <tr>  <td> dataManagerObj </td> <td> Object </td> <td>  ej.DataManager object </td> </tr>
                 <tr>  <td> keyField </td> <td> String </td> <td> KeyColumn to find the data </td> </tr>
                 <tr>  <td> String </td> <td> Object </td> <td> Specified value for the keyField</td> </tr>
                 <tr>  <td> tableName </td> <td> String </td> <td> Name of the source table </td> </tr>
@@ -747,7 +747,7 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 {% highlight CSHTML %}
 
     @(Html.EJ().Grid<OrdersView>("Grid")
-        .Datasource(ds => ds.URL(@Url.Action("DataSource"))
+        .Datasource(dataSource => dataSource.URL(@Url.Action("DataSource"))
         .EnableCaching()
         .CachingPageSize(4)
         .TimeTillExpiration(120000)
@@ -774,26 +774,26 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
     {
         return View();
     }
-    public ActionResult DataSource(DataManager dm) 
+    public ActionResult DataSource(DataManager dataManagerObj) 
     {
         IEnumerable data = OrderData;
         DataOperations operation = new DataOperations();
-        if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+        if (dataManagerObj.Sorted != null && dataManagerObj.Sorted.Count > 0) //Sorting
         {
-            data= operation.PerformSorting(data, dm.Sorted);
+            data= operation.PerformSorting(data, dataManagerObj.Sorted);
         }            
-        if (dm.Where != null && dm.Where.Count > 0) //Filtering
+        if (dataManagerObj.Where != null && dataManagerObj.Where.Count > 0) //Filtering
         {
-            data= operation.PerformWhereFilter(data, dm.Where, dm.Where[0].Operator);
+            data= operation.PerformWhereFilter(data, dataManagerObj.Where, dataManagerObj.Where[0].Operator);
         }            
         int count = data.Cast<OrdersView>().Count();
-        if (dm.Skip != 0)
+        if (dataManagerObj.Skip != 0)
         {
-            data= operation.PerformSkip(data, dm.Skip);
+            data= operation.PerformSkip(data, dataManagerObj.Skip);
         }            
-        if (dm.Take != 0)
+        if (dataManagerObj.Take != 0)
         {
-            data= operation.PerformTake(data, dm.Take);
+            data= operation.PerformTake(data, dataManagerObj.Take);
         }
         return Json(new { result = data, count = count });
         }

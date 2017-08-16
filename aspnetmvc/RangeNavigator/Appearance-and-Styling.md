@@ -16,15 +16,15 @@ RangeNavigator is enriched with lots of customization options for labels, gridli
 The labels are found along the range, displaying the value of the data it correspond, both on (higher level label) and below (lower level label) the RangeNavigator. RangeNavigator labels are further customized using “Font” property in label Settings. 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .LabelSettings(ls=>ls
 
 // customizing higher level labels.
 
-.HigherLevel(hl =>hl                                     
+.HigherLevel(higher =>higher                                     
 
-.Style(lst => lst
+.Style(style => style
 
 		  .Font(f =>f
 
@@ -48,7 +48,7 @@ The labels are found along the range, displaying the value of the data it corres
 
 .LowerLevel(ll => ll
 
-. Style(lst => lst
+. Style(style => style
 
 	  .Font(f => f
 
@@ -89,11 +89,11 @@ The following screen shot illustrates both the lower and higher level labels tha
 {% highlight CSHTML %}
 
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .LabelSettings(ls=>ls
 
-				.HigherLevel(hl =>hl.LabelPlacement("inside"))                                                                          
+				.HigherLevel(higher =>higher.LabelPlacement("inside"))                                                                          
 
 				.LowerLevel(ll => ll.LabelPlacement("inside"))                                                                                                                                                                                                                                                                                                                                                              
 
@@ -115,12 +115,12 @@ The following screenshot illustrates a RangeNavigator with labels inside the con
 RangeNavigator is customized using NavigatorStyleSettings properties. You can customize the selected and unselected region color using SelectedRegionColor, UnselectedRegionColor in NavigatorStyleSettings and the thumb of the slider using ThumbColor, ThumbRadius and ThumbStroke in NavigatorStyleSettings.  MajorGridLineStyle and MinorGridLineStyle are used to customize the grid line color and visibility. 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 
 //  To customize the navigator element     
 
-.NavigatorStyleSettings (ns=>ns
+.NavigatorStyleSettings (navigator=>navigator
 
 .Border(br=>br.Color("black").Width(3))
 
@@ -144,13 +144,13 @@ RangeNavigator is customized using NavigatorStyleSettings properties. You can cu
 
 .LabelSettings(ls=>ls
 
-.HigherLevel(hl =>hl
+.HigherLevel(higher =>higher
 
 .LabelPlacement("inside")
 
 .IntervalType(NavigatorIntervalType.Years)                                      
 
-.Style(lst => lst                                                       
+.Style(style => style                                                       
 
 .HorizontalAlignment(HorizontalAlignment.Left)
 
@@ -174,7 +174,7 @@ RangeNavigator is customized using NavigatorStyleSettings properties. You can cu
 
 .IntervalType(NavigatorIntervalType.Quarters)
 
-.Style(lst => lst                                               
+.Style(style => style                                              
 
 .HorizontalAlignment(HorizontalAlignment.Center)
 
@@ -228,7 +228,7 @@ RangeNavigator theme is a set of pre-defined options that are applied to the con
 {% highlight CSHTML %}
 
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .Theme("azuredark")
 

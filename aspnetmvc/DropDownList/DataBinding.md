@@ -251,7 +251,7 @@ Fetch the Data from SQL data source and initialize the control with DataSource p
 
 	{% highlight html %}
     
-        @Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag.Data).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
+        @Html.EJ().DropDownList("selectEmployee").Datasource((IEnumerable<Object>)ViewBag.Data).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
 		
 	{% endhighlight %}
     
@@ -305,13 +305,13 @@ Defines model class
     public class Employee
     {
         public string name { set; get; }
-        public string empID { set; get; }
+        public string employeeID { set; get; }
         public string designation { set; get; }
         public Employee() { }
         public Employee(string name, string id, string designation)
         {
             name = name;
-            empID = id;
+            employeeID = id;
             designation = designation;
         }
         
@@ -344,7 +344,7 @@ In code behind, fetch the data from Employee class and assigned to the DropDownL
 
 {% highlight html %}
 
-    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Employee>)ViewBag.datasource).DropDownListFields(df => df.ID("empID").Text("name").Value("designation")).WatermarkText("Select a Student").Width("100%")
+    @Html.EJ().DropDownList("selectCar").Datasource((IEnumerable<Employee>)ViewBag.datasource).DropDownListFields(df => df.ID("employeeID").Text("name").Value("designation")).WatermarkText("Select a Student").Width("100%")
 
 {% endhighlight %}
 
@@ -459,7 +459,7 @@ Assign the data to the DropDownList’s DataSource property. Specify the column 
 
 {% highlight Razor %}
 
-    @Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.Text("FirstName ").Value("EmployeeID ")).Width("150px")
+    @Html.EJ().DropDownList("selectEmployee").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.Text("FirstName ").Value("EmployeeID ")).Width("150px")
 
 {% endhighlight %}
 
@@ -469,7 +469,7 @@ The data can also be bound to the DropDownList using OLEDB database as depicted 
 
 {% highlight Razor %}
 
-    Html.EJ().DropDownList("selectEmp").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
+    Html.EJ().DropDownList("selectEmployee").Datasource((IEnumerable<Object>)ViewBag. DataSource).DropDownListFields(df => df.ID("Id").Text("Name").Value("Designation")).Width("150px")
 
 {% endhighlight %}
 
@@ -549,7 +549,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 
 {% highlight html %}
                
-       @Html.EJ().DropDownList("DropDownList1").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).DropDownListFields(df=>df.Text("ShipCountry").Value("OrderID"))
+       @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).DropDownListFields(df=>df.Text("ShipCountry").Value("OrderID"))
 		
 {% endhighlight %}
            
@@ -563,7 +563,7 @@ For further details about OData service please refer [the link](http://www.odata
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(ds => ds.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).DropDownListFields(df => df.Text("RegionDescription").Value("RegionID"))
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource =>dataSource.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).DropDownListFields(df => df.Text("RegionDescription").Value("RegionID"))
      
 {% endhighlight %}
            
@@ -578,7 +578,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(ds => ds.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor)).DropDownListFields(df => df.Text("Name").Value("EmployeeID"))
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("/api/Orders").Adaptor(AdaptorType.WebApiAdaptor)).DropDownListFields(df => df.Text("Name").Value("EmployeeID"))
      
 {% endhighlight %}
 
@@ -588,7 +588,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
     {
         NorthwindDataContext db = new NorthwindDataContext();
         
-        // GET api/<controller>       
+        // GET API/<controller>       
         public PageResult<EmployeePhoto> Get(ODataQueryOptions opts)
         {
             List<EmployeePhoto> photos = db.EmployeePhotos.ToList();            
@@ -619,7 +619,7 @@ It loads the data on scrolling the list of items. This can be achieved by settin
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(ds => ds.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Normal).ItemsCount(7)
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Normal).ItemsCount(7)
      
 {% endhighlight %}
 
@@ -632,6 +632,6 @@ N> In both modes, set of items will be fetched based on the count specified in t
 
 {% highlight html %}
 
-     @Html.EJ().DropDownList("DropDownList1").Datasource(ds => ds.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous).ItemsCount(7)
+     @Html.EJ().DropDownList("DropDownList1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/services/Northwnd.svc/Orders")).DropDownListFields(df => df.Text("ShipName").Value("ShipCountry")).AllowVirtualScrolling(true).VirtualScrollMode(VirtualScrollMode.Continuous).ItemsCount(7)
      
 {% endhighlight %}

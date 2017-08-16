@@ -104,8 +104,8 @@ Binds the resources working days field name in the dataSource. It's optional, an
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(false).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
-            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId").Start("WorkHourStart").End("WorkHourEnd").WorkWeek("CustomDays")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(false).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId").Start("WorkHourStart").End("WorkHourEnd").WorkWeek("CustomDays")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -150,7 +150,7 @@ The resources data can be bound to the Schedule control through the **ResourceSe
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -184,7 +184,7 @@ The resources data can be bound to the Schedule control through the **ResourceSe
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => {
-            res.ResourceSettings(flds => flds.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/Northwnd.svc")).Text("CategoryName").Id("CategoryId").Query("ej.Query().select('CategoryID', 'CategoryName').from('Categories').take(5)")).Add();
+            res.ResourceSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/Northwnd.svc")).Text("CategoryName").Id("CategoryId").Query("ej.Query().select('CategoryID', 'CategoryName').from('Categories').take(5)")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -227,7 +227,7 @@ The appointments belonging to all the resources will be displayed on the Schedul
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -279,7 +279,7 @@ This type of grouping allows the Scheduler to display all the resources at a sin
         .CurrentDate(new DateTime(2015, 11, 5))
         .Group(gr => { gr.Resources(Group); })
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -335,8 +335,8 @@ This type of grouping displays the resources in the Scheduler at multiple levels
         .CurrentDate(new DateTime(2015, 11, 5))
         .Group(gr => { gr.Resources(Group); })
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
-            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
@@ -384,9 +384,9 @@ It is possible to assign different workdays and workhours for each resources pre
 
     <!-- Datasource for Owners -->
     List<ResourceFields> Owner = new List<ResourceFields>();
-    Owner.Add(new ResourceFields { Text = "Nancy", Id= "1", GroupId = "1", Color = "#ffaa00", Start = "10", End = "18", WorkWeek = new List<string> { "monday", "wednesday", "friday" } });
-    Owner.Add(new ResourceFields { Text = "Steven", Id = "3", GroupId = "2", Color = "#f8a398", Start = "6", End = "10", WorkWeek = new List<string> { "tuesday", "thursday" } });
-    Owner.Add(new ResourceFields { Text = "Michael", Id = "5", GroupId = "1", Color = "#7499e1", Start = "11", End = "15", WorkWeek = new List<string> { "sunday", "tuesday", "thursday", "saturday" } });
+    Owner.Add(new ResourceFields { Text = "Nancy", Id= "1", GroupId = "1", Color = "#ffaa00", Start = "10", End = "18", WorkWeek = new List<string> { "Monday", "Wednesday", "Friday" } });
+    Owner.Add(new ResourceFields { Text = "Steven", Id = "3", GroupId = "2", Color = "#f8a398", Start = "6", End = "10", WorkWeek = new List<string> { "Tuesday", "Thursday" } });
+    Owner.Add(new ResourceFields { Text = "Michael", Id = "5", GroupId = "1", Color = "#7499e1", Start = "11", End = "15", WorkWeek = new List<string> { "Sunday", "Tuesday", "Thursday", "Saturday" } });
 }
 
 @(Html.EJ().Schedule("Schedule1")
@@ -395,8 +395,8 @@ It is possible to assign different workdays and workhours for each resources pre
         .CurrentDate(new DateTime(2015, 11, 5))
         .Group(gr => { gr.Resources(Group); })
         .Resources(res => {
-            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color").GroupId("GroupId").Start("Start").End("End").WorkWeek("WorkWeek")).Add();
+            res.Field("RoomId").Title("Room").Name("Rooms").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Room).Text("Text").Id("Id").Color("Color").GroupId("GroupId")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color").GroupId("GroupId").Start("Start").End("End").WorkWeek("WorkWeek")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")

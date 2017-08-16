@@ -28,7 +28,7 @@ The following code example describes the above method implementation.
 
 @section ControlsSection{
 
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
  
@@ -62,7 +62,7 @@ The following code example describes the way of using ignore all method.
 
 @section ControlsSection{
 
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
  
@@ -100,7 +100,7 @@ The ignore words option is used to ignore the collection of words from an error 
     MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters JavaScript TypeScript .
 </div><br />
    
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreWords(@ViewBag.datasource)
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreWords(@ViewBag.datasource)
  
  
    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))
@@ -159,7 +159,7 @@ The following code example uses to enable the checking of all the words formed w
     MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
 </div><br />
  
-     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
  
  
     @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))
@@ -193,7 +193,7 @@ The following code example describes the behavior of change method.
 
 @section ControlsSection{
 
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
  
@@ -224,7 +224,7 @@ The following code example uses to change all the error word occurrences.
 
 @section ControlsSection{
 
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
  
@@ -265,7 +265,7 @@ The following code example uses to add the custom word into the custom dictionar
     MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
 </div><br />
  
-     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
  
  
     @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
@@ -290,7 +290,3 @@ You can also add the custom words into the custom dictionary file through the di
 
 * Dialog Mode - Add To Dictionary button will be available in the dialog window, while checking the error in the given input string and clicking this button then the word will be added into the custom dictionary file.
 * Context Menu Mode - Add To Dictionary option will be available in the context menu while right click on the error word in the target area and clicking this option then the word will be added into the custom dictionary file.
-
-
-
-

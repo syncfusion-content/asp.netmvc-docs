@@ -146,7 +146,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 {% highlight CSHTML %}
 
-@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(evt => evt.Create("create").MouseOver("mouseover").MouseOut("mouseout").Click("click"))
+@Html.EJ().TagCloud("tagEvents").Datasource((IEnumerable<MvcApplication.Models.WebsiteCollection>)ViewBag.datasource).TagCloudFields(tag => tag.Text("text").Url("url").Frequency("frequency")).Title("Tech sites").ClientSideEvents(event => event.Create("create").MouseOver("mouseover").MouseOut("mouseout").Click("click"))
 
 
 
@@ -164,7 +164,7 @@ You can perform the event operations like MouseOver, MouseOut and Click by addin
 
 </div>
 
-@Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(evt => evt.Change("event"))
+@Html.EJ().DropDownList("selectControls_input").TargetID("tagCloudTarget").ShowCheckbox(true).CheckAll(true).ClientSideEvents(event => event.Change("event"))
 
 <style type="text/css">
 

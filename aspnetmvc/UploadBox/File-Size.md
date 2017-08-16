@@ -15,8 +15,6 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 1. Add the following code example to the corresponding View page to render the UploadBox control with the customized file size.
 
-
-
 {% highlight CSHTML %}
 
 <div class="control"> 
@@ -40,8 +38,6 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 {% endhighlight %}
 
-
-
 To know about file action, we need to refer link:
 
     <http://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
@@ -50,12 +46,7 @@ The following screenshot displays UploadBox control with customized file size.
 
 When you want to browse the file within the fileSize, you can browse and upload the files.
 
-
-
 ![](File-Size_images/File-Size_img1.png)
-
-
-
 
 
 When you try to browse the file with exceeded FileSize, an error message will be displayed as an alert.You can customize the error message by converting the file size into mb and display the corresponding value in error message.

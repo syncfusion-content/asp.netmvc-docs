@@ -104,7 +104,7 @@ The table can be dynamically sorted by using an external button click event. The
             var field = $("#field").val();
             var obj = $("#FlatGrid").ejGrid("instance")
             var query = ej.Query().sortByDesc(field).take(5)
-            var dm = window.FlatData.executeQuery(query).done(function (e1) {
+            var dataManagerObj = window.FlatData.executeQuery(query).done(function (e1) {
                 obj.dataSource(e1.result);
             })
         }

@@ -86,14 +86,14 @@ By default, legend takes 20% of the height horizontally when it was placed on th
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-      .Legend(lg => lg.Visible(true).Position(SunburstLegendPosition.Top).Size(sz=>sz.Width(200).Height(75)))
+      .Legend(lg => lg.Visible(true).Position(SunburstLegendPosition.Top).Size(size=>size.Width(200).Height(75)))
  )
 
 {% endhighlight %}
 
  ![](Legend_images/Legend_img5.png)
 
-## Legend Row and Colums
+## Legend Row and Columns
 
 You can arrange the legend items horizontally and vertically by using the **RowCount** and **ColumnCount** properties of the legend.
 •	When only the rowCount is specified, the legend items are arranged according to the rowCount and number of columns may vary based on the number of legend items.
@@ -118,7 +118,7 @@ You can select a specific category while clicking on corresponding legend item t
 
 It has three types of action
 *	ToggleSegmentSelection
-*	ToggleSegmentVisiblity
+*	ToggleSegmentVisibility
 *	None
 
 ## ToggleSegmentSelection

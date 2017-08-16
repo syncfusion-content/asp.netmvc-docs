@@ -54,7 +54,7 @@ You can populate the TreeMap data inside the controller. For example, you can po
 
 			population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "South-Eastern Asia", Growth = 1.20, Population = 618793000});
 
-			population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Western Asi", Growth = 1.98, Population = 245707000});
+			population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Western Asia", Growth = 1.98, Population = 245707000});
 
 			population.Add(new TreeMapPopulationData() { Continent = "Asia", Region = "Central Asia", Growth = 1.43, Population = 64370000});
 
@@ -386,11 +386,11 @@ The following code sample displays how the tooltip is enabled.
 
 		.ShowTooltip(true)
 
-		.LeafItemsSettings(lls =>
+		.LeafItemsSettings(leaf =>
 
 		{
    			
-			lls.LabelPath("Region");
+			leaf.LabelPath("Region");
 
 		})
 
@@ -452,11 +452,11 @@ The following code sample displays how to add labels for legend in a TreeMap.
 
 		.ShowTooltip(true)
 
-		.LeafItemsSettings(lls =>
+		.LeafItemsSettings(leaf =>
 
 		{
    			
-			lls.LabelPath("Region");
+			leaf.LabelPath("Region");
 
 		})
 

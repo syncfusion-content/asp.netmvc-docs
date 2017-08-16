@@ -25,11 +25,11 @@ documentation: ug
 
         $(function () {
 
-            $("#btnExportImage").ejButton({ width: "100px", click: "buttonclickevent", });
+            $("#btnExportImage").ejButton({ width: "100px", click: "buttonClickEvent", });
 
         });
 
-        function buttonclickevent() {
+        function buttonClickEvent() {
 
             var FileName = $("#txtFileName").val();
 

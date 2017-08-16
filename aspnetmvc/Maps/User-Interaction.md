@@ -26,17 +26,17 @@ You can select the shape by tapping the shape. The single selection is enabled b
 
 	@(Html.EJ().Map("maps") 
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		Lr.ShapeData(mapData)
+		layer.ShapeData(mapData)
 
-		.ShapeSettings(sp =>
+		.ShapeSettings(shape =>
 
 		{
 
-			sp.StrokeThickness(0.5)
+			shape.StrokeThickness(0.5)
 
 			.Fill("#9CBF4E")
 
@@ -73,11 +73,11 @@ This feature enables you to select multiple Map shapes on mouse taps accompanied
 
 	@(Html.EJ().Map("maps") 
 
-    	.Layers(lr =>
+    	.Layers(layer =>
 
         {
 
-        	Lr.ShapeData(mapData)
+        	layer.ShapeData(mapData)
             	// ...
             .EnableSelection(true)
             .SelectionMode(Multiple)
@@ -103,11 +103,11 @@ You can enable this feature by setting the property `DraggingOnSelection` in the
 
 	@(Html.EJ().Map("maps") 
    		
-		.Layers(lr =>
+		.Layers(layer =>
 
         {
 
-        	Lr
+        	layer
             	// ...
             .DraggingOnSelection(true)
                 // ...
@@ -159,21 +159,21 @@ The `MaxValue` property is used to set the maximum zoom level of the Map.
 
 	@(Html.EJ().Map("maps") 
 
-		.Layers(lr =>
+		.Layers(layer =>
 
 		{
 
-			lr.ShapeData(mapData)                  
+			layer.ShapeData(mapData)                  
 
 		 	.Add();
 
 		})
 
-		.ZoomSettings(zm=>
+		.ZoomSettings(zoom=>
 
 		{
 
-			zm.EnableZoom(true)
+			zoom.EnableZoom(true)
 
 		  	.MinValue(1)
 
@@ -232,11 +232,11 @@ When `EnableZoomOnSelection` property is set to true, then zooming of the Map co
 
 	@(Html.EJ().Map("maps") 
 
-		.ZoomSettings(zm=>
+		.ZoomSettings(zoom=>
 
 		{
 
-			zm.EnableZoomOnSelection(true);
+			zoom.EnableZoomOnSelection(true);
 
 		})                       
 
@@ -323,11 +323,11 @@ Navigation control is built-in with Maps control. With Navigation control, Maps 
 
 	@(Html.EJ().Map("maps") 
 
-		.NavigationControl(nc =>
+		.NavigationControl(navigation =>
 
 		{
    			
-			nc.EnableNavigation(true);
+			navigation.EnableNavigation(true);
 
 		})
             			 	
@@ -381,10 +381,10 @@ You can set this option by using the` DockPosition` property in `NavigationContr
 
 	@(Html.EJ().Map("maps") 
       
-		.NavigationControl(nc =>
+		.NavigationControl(navigation =>
 		{
 
-			nc.EnableNavigation(true)
+			navigation.EnableNavigation(true)
 
 			.Orientation(Orientation.Vertical)
 

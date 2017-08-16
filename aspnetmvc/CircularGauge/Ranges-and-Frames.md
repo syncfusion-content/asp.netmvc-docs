@@ -357,21 +357,21 @@ f.FrameType(Frame.HalfCircle)
 
 .BackgroundColor("#FFCCCC")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.StartAngle(180)
+scale.StartAngle(180)
 
 .SweepAngle(180)
 
-.PointerCap(pc =>pc.Radius(8))
+.PointerCap(cap =>cap.Radius(8))
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.NeedleType(NeedleType.Rectangle)
+pointer.NeedleType(NeedleType.Rectangle)
 
 .Width(1).Length(120)
 

@@ -134,12 +134,12 @@ You can customize the Leaf level TreeMap items using `LeafItemsSetting`. The Lab
 	     .ShowLabels(true)
     })
     .ShowTooltip(true)
-    .TooltipTemplate("tooltiptemplate")                
+    .TooltipTemplate("template")                
     .Render())   
     
     </div>   
 
-    <script  id="tooltiptemplate" type="application/jsrender">
+    <script  id="template" type="application/jsrender">
 
         <div  style="margin-left:17px;margin-top:-45px;">      
 

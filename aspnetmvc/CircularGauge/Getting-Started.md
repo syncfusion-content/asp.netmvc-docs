@@ -138,9 +138,9 @@ Circular Gauge with Dark Background
 
 .ReadOnly(false)
 
-.Scales(scl => {
+.Scales(scale => {
 
-scl.ShowRanges(true)
+scale.ShowRanges(true)
 
 .ShowIndicators(true)
 
@@ -198,11 +198,11 @@ To display the value around the scales, labels are used. By customizing the labe
 
 .ReadOnly(false)
 
-.Scales(scl => {scl
+.Scales(scale => {scale
 
 //Add the labels customization code here
 
-.Labels(lbl => lbl.Color("#ffffff").Add())
+.Labels(label => label.Color("#ffffff").Add())
 
 .Add();
 
@@ -247,15 +247,15 @@ Here, you have three pointers that denote the kilometer value, rotation per minu
 
 .ReadOnly(false)
 
-.Scales(scl => {scl
+.Scales(scale => {scale
 
 //Add the labels customization code here
 
 //Add the pointers customization code here
 
-.Pointers(ptr=>{
+.Pointers(pointer=>{
 
-ptr.Value(140)
+pointer.Value(140)
 
 .DistanceFromScale(60)
 
@@ -271,11 +271,11 @@ ptr.Value(140)
 
 .BackgroundColor("#FF940A")
 
-.Border(bor => bor.Color("#FF940A")).Add();
+.Border(border => border.Color("#FF940A")).Add();
 
 
 
-ptr.Value(110)
+pointer.Value(110)
 
 .ShowBackNeedle(false)
 
@@ -287,11 +287,11 @@ ptr.Value(110)
 
 .BackgroundColor("#05AFFF")
 
-.Border(bor =>bor.Color("#05AFFF")).Add();
+.Border(border =>border.Color("#05AFFF")).Add();
 
 
 
-ptr.Value(67)
+pointer.Value(67)
 
 .ShowBackNeedle(false)
 
@@ -301,7 +301,7 @@ ptr.Value(67)
 
 .BackgroundColor("#FC5D07")
 
-.Border(bor => bor.Color("#FC5D07")).Add();
+.Border(border => border.Color("#FC5D07")).Add();
 
 
 
@@ -350,9 +350,9 @@ Circular Gauge with Pointers
 
 .ReadOnly(false)
 
-.Scales(scl => {
+.Scales(scale => {
 
-scl
+scale
 
 //Add the labels customization code here
 
@@ -425,9 +425,9 @@ Circular Gauge with Ticks
 
 .ReadOnly(false)
 
-.Scales(scl => {
+.Scales(scale => {
 
-scl
+scale
 
 //Add the labels customization code here
 
@@ -437,9 +437,9 @@ scl
 
 //Add the ranges customization code here
 
-.Ranges(rng => {
+.Ranges(range => {
 
-rng.DistanceFromScale(30)
+range.DistanceFromScale(30)
 
 .StartValue(0)
 
@@ -447,11 +447,11 @@ rng.DistanceFromScale(30)
 
 .BackgroundColor("#5DF243")
 
-.Border(bor => bor.Color("#ffffff")).Add();
+.Border(border => border.Color("#ffffff")).Add();
 
 
 
-rng.DistanceFromScale(30)
+range.DistanceFromScale(30)
 
 .StartValue(70)
 
@@ -459,11 +459,11 @@ rng.DistanceFromScale(30)
 
 .BackgroundColor("#F6FF0A")
 
-.Border(bor => bor.Color("#ffffff")).Add();
+.Border(border => border.Color("#ffffff")).Add();
 
 
 
-rng.DistanceFromScale(30)
+range.DistanceFromScale(30)
 
 .StartValue(140)
 
@@ -471,7 +471,7 @@ rng.DistanceFromScale(30)
 
 .BackgroundColor("#FF1807")
 
-.Border(bor => bor.Color("#ffffff")).Add();
+.Border(border => border.Color("#ffffff")).Add();
 
 })
 
@@ -514,7 +514,7 @@ Circular Gauge with Ranges
 
 .ReadOnly(false)
 
-.Scales(scl => {
+.Scales(scale => {
 
 //Add the labels customization code here
 
@@ -538,11 +538,11 @@ ind.Height(10)
 
 .Position(loc => loc.X(210).Y(300))
 
-.StateRanges(str =>
+.StateRanges(state =>
 
 {
 
-str.EndValue(70)
+state.EndValue(70)
 
 .StartValue(0)
 
@@ -554,7 +554,7 @@ str.EndValue(70)
 
 
 
-str.EndValue(200)
+state.EndValue(200)
 
 .StartValue(70)
 
@@ -576,11 +576,11 @@ ind.Height(10)
 
 .Position(loc => loc.X(255).Y(200))
 
-.StateRanges(str =>
+.StateRanges(state =>
 
 {
 
-str.EndValue(140)
+state.EndValue(140)
 
 .StartValue(70)
 
@@ -592,7 +592,7 @@ str.EndValue(140)
 
 
 
-str.EndValue(70)
+state.EndValue(70)
 
 .StartValue(0)
 
@@ -604,7 +604,7 @@ str.EndValue(70)
 
 
 
-str.EndValue(200)
+state.EndValue(200)
 
 .StartValue(140)
 
@@ -626,11 +626,11 @@ ind.Height(10)
 
 .Position(loc => loc.X(300).Y(300))
 
-.StateRanges(str =>
+.StateRanges(state =>
 
 {
 
-str.EndValue(140)
+state.EndValue(140)
 
 .StartValue(200)
 
@@ -642,7 +642,7 @@ str.EndValue(140)
 
 
 
-str.EndValue(140)
+state.EndValue(140)
 
 .StartValue(0)
 
@@ -687,7 +687,7 @@ Custom labels are used to specify the texts that need to be displayed in the gau
 
 .ReadOnly(false)
 
-.Scales(scl => {
+.Scales(scale => {
 
 //Add the labels customization code here
 
@@ -701,21 +701,21 @@ Custom labels are used to specify the texts that need to be displayed in the gau
 
 //Add the Custom labels customization code here
 
-.CustomLabels(clbl=>{
+.CustomLabels(label=>{
 
-clbl.Value("Safe")
+label.Value("Safe")
 
 .Color("#5DF243")
 
 .Position(loc=>loc.X(200).Y(280))
 
-.Font(fnt => { fnt.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
+.Font(font => { font.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
 
 .Add();
 
 
 
-clbl.Value("Caution")
+label.Value("Caution")
 
 .Color("#F6FF0A")
 
@@ -727,13 +727,13 @@ clbl.Value("Caution")
 
 
 
-clbl.Value("Danger")
+label.Value("Danger")
 
 .Color("#FF1807")
 
 .Position(loc => loc.X(290).Y(280))
 
-.Font(fnt => { fnt.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
+.Font(font => { font.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
 
 .Add();
 

@@ -41,7 +41,7 @@ Define a button separately and add it to the page as shown below and while click
         
 {% highlight html %}
 
-    <button onclick="closerecurrence()" id="donerecur1" class='recurbutton' style="float:right;margin-right:20px;margin-bottom:10px;">Recurrence String</button>
+    <button onclick="closeRecurrence()" id="donerecur1" class='recurbutton' style="float:right;margin-right:20px;margin-bottom:10px;">Recurrence String</button>
     
  {% endhighlight %} 
  
@@ -52,7 +52,7 @@ Define a button separately and add it to the page as shown below and while click
          $("#RecurrenceEditor").after($("#donerecur1"));
 
      });
-     function closerecurrence() {
+     function closeRecurrence() {
          var obj = $(".e-recurrenceeditor").data("ejRecurrenceEditor");
          alert(obj.getRecurrenceRule()) ; // recurrence rule generated as per the options selected in the recurrence editor will be displayed here
      }

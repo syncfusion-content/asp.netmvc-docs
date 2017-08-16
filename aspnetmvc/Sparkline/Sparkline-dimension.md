@@ -37,7 +37,7 @@ You can also set the Sparkline dimension by using the `Size` property of the Spa
 
  @(Html.EJ().Sparkline("container")
  
- .Size(sz=>sz.Height("40").Width("60"))
+ .Size(size=>size.Height("40").Width("60"))
  )
 
 {% endhighlight %}

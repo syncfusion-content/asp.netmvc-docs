@@ -97,8 +97,8 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
     .RibbonTabs(tab => {
         tab.Id("home").Text("HOME").TabGroups(tabgroup => {
             tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
-                ctn.ContentGroups(ctngrp => {
-                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                ctn.ContentGroups(contentGroup => {
+                    contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
                             PrefixIcon = "e-Ribbon e-new",
@@ -145,10 +145,10 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
         });
     })
     .RibbonTabs(tab => {
-        tab.Id("home").Text("HOME").TabGroups(tabgoup => {
-            tabgoup.Text("SplitButton & Dropdown").AlignType(RibbonAlignType.Columns).Content(ctn => {
-                ctn.ContentGroups(ctngrp => {
-                    ctngrp.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
+        tab.Id("home").Text("HOME").TabGroups(tabGroup => {
+            tabGroup.Text("SplitButton & Dropdown").AlignType(RibbonAlignType.Columns).Content(ctn => {
+                ctn.ContentGroups(contentGroup => {
+                    contentGroup.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             PrefixIcon = "e-Ribbon e-Ribbonpaste",
                             TargetID = "pasteSplit",
@@ -157,8 +157,8 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
     
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.SplitButton).Width("50px").Height("70px")).Add();
-                ctn.ContentGroups(ctngrp => {
-                    ctngrp.Id("fontfamily").DropdownSettings(new DropDownListProperties() {
+                ctn.ContentGroups(contentGroup => {
+                    contentGroup.Id("fontFamily").DropdownSettings(new DropDownListProperties() {
                         DataSource = (IEnumerable < FontFamily > ) ViewBag.datasource,
                             Text = "Segoe UI",
                             Select = "executeAction",

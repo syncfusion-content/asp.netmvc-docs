@@ -107,8 +107,8 @@ function OnRender(args) {
 
     var drop = $("#DropType");
     $("#DropType").find("div").remove();
-    var droptarget = $("<input id='selectType'></div>");
-    drop.append(droptarget);
+    var dropTarget = $("<input id='selectType'></div>");
+    drop.append(dropTarget);
 
     $("#importFiles").ejUploadbox({
         saveUrl: "/saveFiles.ashx",
@@ -172,13 +172,13 @@ public string Extract(string name, string ext)
         String path = HttpContext.Server.MapPath("~/uploadfiles/" + name);
         
         Stream sfile1 = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
-        PdfLoadedDocument ldoc = new PdfLoadedDocument(sfile1);
+        PdfLoadedDocument loadDocument = new PdfLoadedDocument(sfile1);
         // Loading Page collections
-        PdfLoadedPageCollection loadedPages = ldoc.Pages;
+        PdfLoadedPageCollection loadedPages = loadDocument.Pages;
         // Extract text from PDF document pages
-        foreach (PdfLoadedPage lpage in loadedPages)
+        foreach (PdfLoadedPage loadPage in loadedPages)
         {
-            value += lpage.ExtractText();
+            value += loadPage.ExtractText();
         }
 
     }
@@ -287,10 +287,10 @@ public void CreateDocument(string rte2)
     AspectRatio dimension = AspectRatio.KeepWidth;
 
     HtmlConverter html = new HtmlConverter();
-    PdfUnitConvertor convertor = new PdfUnitConvertor();
+    PdfUnitConvertor converter = new PdfUnitConvertor();
 
-    float width = convertor.ConvertToPixels(pageSize.Width, PdfGraphicsUnit.Point);
-    float height = convertor.ConvertToPixels(pageSize.Height, PdfGraphicsUnit.Point);
+    float width = converter.ConvertToPixels(pageSize.Width, PdfGraphicsUnit.Point);
+    float height = converter.ConvertToPixels(pageSize.Height, PdfGraphicsUnit.Point);
 
     PdfMetafileLayoutFormat metafileFormat = new PdfMetafileLayoutFormat();
     metafileFormat.Break = PdfLayoutBreakType.FitPage;

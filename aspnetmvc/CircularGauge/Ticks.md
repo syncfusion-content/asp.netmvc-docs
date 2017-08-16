@@ -26,13 +26,13 @@ Tick collection is directly added to the scale object. Refer the following code 
 
 {
 
-sc1.Ticks(tc =>
+sc1.Ticks(tick =>
 
 {
 
 // For setting tick
 
-tc.Type(CircularTickTypes.Major).Color("Red").Add();
+tick.Type(CircularTickTypes.Major).Color("Red").Add();
 
 }).Add();
 
@@ -63,17 +63,17 @@ Circular Gauge with tick collection
 
 {
 
-sc1.Ticks(tc =>
+sc1.Ticks(tick =>
 
 {
 
 // For setting tick1
 
-tc.Type(CircularTickTypes.Major).Color("Red").Add();
+tick.Type(CircularTickTypes.Major).Color("Red").Add();
 
 // For setting tick2
 
-tc.Type(CircularTickTypes.Minor)
+tick.Type(CircularTickTypes.Minor)
 
 // For setting tick color
 

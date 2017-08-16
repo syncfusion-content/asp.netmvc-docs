@@ -9,14 +9,14 @@ documentation: ug
 
 # Zooming
 
-Sunburst chart provides zooming (drill down) experience with animation for both mouse and touch enabled devices. It allows you to virtualize large sets of data into minimum data view.The zooming is achieved by using the property of *zoomSettings*
+Sunburst chart provides zooming (drill down) experience with animation for both mouse and touch enabled devices. It allows you to Virtualize large sets of data into minimum data view.The zooming is achieved by using the property of *zoomSettings*
 
 The following code shows how to initialize the zooming.
 
 {% highlight cshtml %}
 @(Html.EJ().SunburstChart("chartContainer")
 
-       .ZoomSettings(zo => zo.Enable(true))
+       .ZoomSettings(zoom => zoom.Enable(true))
  )
 
 
@@ -32,7 +32,7 @@ You can align the zooming toolbar position by using *ToolbarHorizontalAlignment*
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-       .ZoomSettings(zo => zo.Enable(true).ToolbarHorizontalAlignment(SunburstHorizontalAlignment.Left))
+       .ZoomSettings(zoom => zoom.Enable(true).ToolbarHorizontalAlignment(SunburstHorizontalAlignment.Left))
  )
 
 

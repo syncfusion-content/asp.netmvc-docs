@@ -66,7 +66,7 @@ For a better appearance, you can set the background image for the Digital Gauge 
 
 .SegmentSettings(cs=> cs.Color("Black"))
 
-.Position(Pos=>Pos.X(80).Y(10)).Add();}))
+.Position(position=>position.X(80).Y(10)).Add();}))
 
 {% endhighlight %}
 
