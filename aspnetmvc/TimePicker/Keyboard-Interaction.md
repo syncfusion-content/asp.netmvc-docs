@@ -84,7 +84,7 @@ The following steps explains you on how to enable keyboard interaction for the T
 
 	@{IDictionary<string, object> parameters = new Dictionary<string, object>();
 
-		parameters.Add("accessKey", "j");
+		parameters.Add("accesskey", "j");
 
 	}
 
