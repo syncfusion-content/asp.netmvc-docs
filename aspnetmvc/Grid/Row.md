@@ -367,7 +367,7 @@ The following code example describes the above behavior.
     </div>
 
 <div style="float:right;width:49%">
-    @(Html.EJ().Grid<OrdersView>("DestignationGrid")
+    @(Html.EJ().Grid<OrdersView>("DesignationGrid")
         .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource2).Adaptor(AdaptorType.RemoteSaveAdaptor))
         .AllowSorting()
         .AllowPaging()
