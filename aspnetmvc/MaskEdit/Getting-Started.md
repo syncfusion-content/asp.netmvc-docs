@@ -122,7 +122,7 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 				</table>
 
-				<div class="paybill">
+				<div class="pay-bill">
 
 					@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("PayBill")
 
@@ -159,7 +159,7 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 
 
-		.control .paybill 
+		.control .pay-bill 
 		{
 
 			margin-left: 208px;
@@ -190,7 +190,7 @@ ASP.NET MVC MaskEdit control renders built-in features like text masking, number
 
 
 
-		.ctrllabel 
+		.ctrl-label 
 		{
 
 			padding-bottom: 3px;
@@ -251,7 +251,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 						<td>
 
-						 @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for productkey validation*@                        </td>
+						 @Html.EJ().MaskEdit("maskedit").MaskFormat("aaaa-aaaa-aaaa-aaaa").InputMode(InputMode.Text) @*creating MaskEdit control for product key validation*@                        </td>
 
 					</tr>
 
@@ -259,7 +259,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 			</table>
 
-			<div class="productkey">
+			<div class="product-key">
 
 				@Html.EJ().Button("btn").Size(ButtonSize.Small).Text("Submit")
 
@@ -296,7 +296,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 
 
-		.control .productkey 
+		.control .product-key 
 		{
 
 			margin-left: 208px;
@@ -327,7 +327,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 
 
-		.ctrllabel 
+		.ctrl-label 
 		{
 
 			padding-bottom: 3px;
