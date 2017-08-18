@@ -32,7 +32,7 @@ The following steps explains you the configuration of Height & Width properties 
 		<h5 class="ctrllabel"> 
 			Select a skill 
 		</h5>
-		@Html.EJ().ListBox("listBoxSample").Width("240").Height("302").Datasource((IEnumerable<ug_listbox.controllers.SkillSet>)ViewBag.datasource).ListBoxFields(df 
+		@Html.EJ().ListBox("listBoxSample").Width("240").Height("302").Datasource((IEnumerable<SkillSet>)ViewBag.datasource).ListBoxFields(df 
 		=> df.Text("text"))
 	</div>
 
@@ -95,7 +95,7 @@ The following steps explains you the configuration of Rounded corner of the List
 		<h5 class="ctrllabel"> 
 			Select a skill  
 		</h5> 
-		@Html.EJ().ListBox("listBoxSample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.SkillSet>)ViewBag.datasource).ListBoxFields(df =>
+		@Html.EJ().ListBox("listBoxSample").Width("240").Datasource((IEnumerable<SkillSet>)ViewBag.datasource).ListBoxFields(df =>
 		df.Text("text")).ShowRoundedCorner(true)
 	</div>
 		
