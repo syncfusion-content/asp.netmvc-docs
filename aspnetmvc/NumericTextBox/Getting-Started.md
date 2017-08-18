@@ -409,9 +409,9 @@ To customize the button, you can set the ContentType as TextAndImage to include 
 
 		// Declares Necessary variable creation 
 
-		var unitMetre, serviceTax, amountPerKm;
+		var unitMeter, serviceTax, amountPerKm;
 
-		unitMetre = $("#numeric").data("ejNumericTextbox");// Object of Numeric 
+		unitMeter = $("#numeric").data("ejNumericTextbox");// Object of Numeric 
 
 		serviceTax = $("#percent").data("ejPercentageTextbox");// Object of Percentage
 
@@ -421,7 +421,7 @@ To customize the button, you can set the ContentType as TextAndImage to include 
 
 		// This is used to calculate the Net amount
 
-		var netAmount = unitMetre.model.value * amountPerKm.model.value;
+		var netAmount = unitMeter.model.value * amountPerKm.model.value;
 
 		// This is used to calculate the service tax amount
 
