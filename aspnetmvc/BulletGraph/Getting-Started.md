@@ -72,59 +72,59 @@ publicActionResult LocalDataBinding()
 
 {
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2013", value = "90", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2013", value = "90", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2012", value = "93", comparativeMeasureValue = "99" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2012", value = "93", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2011", value = "98", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2011", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2010", value = "102", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2010", value = "102", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2009", value = "77", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2009", value = "77", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2008", value = "99", comparativeMeasureValue = "99" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2008", value = "99", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2007", value = "106", comparativeMeasureValue = "94" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2007", value = "106", comparativeMeasureValue = "94" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2006", value = "105", comparativeMeasureValue = "95" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2006", value = "105", comparativeMeasureValue = "95" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2005", value = "98", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2005", value = "98", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2004", value = "87", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2004", value = "87", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2003", value = "105", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2003", value = "105", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2002", value = "84", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2002", value = "84", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2001", value = "93", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2001", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2000", value = "96", comparativeMeasureValue = "101" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2000", value = "96", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1999", value = "107", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1999", value = "107", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1998", value = "98", comparativeMeasureValue = "101" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1998", value = "98", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1997", value = "92", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1997", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1996", value = "98", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1996", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1995", value = "96", comparativeMeasureValue = "107" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1995", value = "96", comparativeMeasureValue = "107" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1994", value = "92", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1994", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "103", comparativeMeasureValue = "92" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1993", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "93", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1993", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1991", value = "95", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1991", value = "95", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1990", value = "103", comparativeMeasureValue = "92" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1990", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1989", value = "102", comparativeMeasureValue = "103" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1989", value = "102", comparativeMeasureValue = "103" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1988", value = "112", comparativeMeasureValue = "93" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1988", value = "112", comparativeMeasureValue = "93" });
 
-	ViewBag.datasource = lclbnd;
+	ViewBag.datasource = localDataBind;
 
 	return View();
 
