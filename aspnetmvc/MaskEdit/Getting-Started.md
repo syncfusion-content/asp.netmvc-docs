@@ -327,7 +327,7 @@ You can easily create the MaskEdit control using simple HTML helper class as fol
 
 
 
-		.ctrl-label 
+		.control-label 
 		{
 
 			padding-bottom: 3px;
