@@ -17,7 +17,7 @@ This property sets the Width of a Rotator Item. The value set to this property i
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 
@@ -29,7 +29,7 @@ This property sets the Height of a Rotator Item. The value set to this property 
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 

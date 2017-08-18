@@ -151,7 +151,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 
 {% highlight html %}
 
-    @(Html.EJ().ListView("ListView1").DataSource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").FieldSettings(fs => fs.Text("CustomerID")))
+    @(Html.EJ().ListView("ListView1").DataSource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").FieldSettings(listViewFieldSettings => listViewFieldSettings.Text("CustomerID")))
 
 {% endhighlight %}
 
@@ -168,7 +168,7 @@ For further details about OData service please refer [the link](http://www.odat
 
 {% highlight html %}
 
-@(Html.EJ().ListView("ListView1").DataSource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").Width(300).FieldSettings(fs => fs.Text("CustomerID")))
+@(Html.EJ().ListView("ListView1").DataSource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").Width(300).FieldSettings(listViewFieldSettings => listViewFieldSettings.Text("CustomerID")))
 
 {% endhighlight %}
 
@@ -187,7 +187,7 @@ Now, in the following code example the data is retrieved from **Controller**.
 
 {% highlight html %}
 
- @(Html.EJ().ListView("ListView").DataSource(ds => ds.URL(Url.Action("DataSource", "ListView")).Adaptor(AdaptorType.UrlAdaptor)).Query("ej.Query()").FieldSettings(fs => fs.Text("caption")))
+ @(Html.EJ().ListView("ListView").DataSource(listViewDataSource => listViewDataSource.URL(Url.Action("DataSource", "ListView")).Adaptor(AdaptorType.UrlAdaptor)).Query("ej.Query()").FieldSettings(listViewFieldSettings => listViewFieldSettings.Text("caption")))
 
 {% endhighlight %}
 
@@ -247,7 +247,7 @@ Run the code to get the following output
 
 {% highlight html %}
 
-@(Html.EJ().ListView("ListView").DataSource(ds => ds.URL(Url.Action("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/")).Adaptor(AdaptorType.WebApiAdaptor)).Query("ej.Query().from('Customers').take(10)").FieldSettings(fs => fs.Text("CompanyName")))
+@(Html.EJ().ListView("ListView").DataSource(listViewDataSource => listViewDataSource.URL(Url.Action("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/")).Adaptor(AdaptorType.WebApiAdaptor)).Query("ej.Query().from('Customers').take(10)").FieldSettings(listViewFieldSettings => listViewFieldSettings.Text("CompanyName")))
 
 {% endhighlight %}
 
@@ -289,7 +289,7 @@ Please refer the following code examples.
 
 {
 
-    f.Text("texts").PrimaryKey("primaryKeys").ParentPrimaryKey("parentPrimaryKeyss").ChildHeaderTitle("Title").ChildHeaderBackButtonText("BackIconText");
+    f.Text("texts").PrimaryKey("primaryKeys").ParentPrimaryKey("parentPrimaryKeys").ChildHeaderTitle("Title").ChildHeaderBackButtonText("BackIconText");
 
 });
 

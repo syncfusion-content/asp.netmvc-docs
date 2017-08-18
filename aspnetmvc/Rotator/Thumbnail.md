@@ -47,7 +47,7 @@ You can refer the following code example of Thumbnail in Rotator.
 
 </ul>
 
-@Html.EJ().Rotator("slidercontent").Items(itemElement =>
+@Html.EJ().Rotator("sliderContent").Items(itemElement =>
 
 {
 

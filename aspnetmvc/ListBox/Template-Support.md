@@ -25,13 +25,13 @@ The following steps explains you the behavior of template support with ListBox.
 		<div class="ctrllabel">
 			Template support 
 		</div>  
-	@Html.EJ().ListBox("listboxsample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
-	.Template("<img class='eimg' src='../../Content/images/Employees/${eimg}.png' alt='employee' height='50px' width='50px'/>
-	<div class='ename'> 
+	@Html.EJ().ListBox("listBoxSample").Datasource((IEnumerable<employeespecialists>)ViewBag.datasource).Height("238")
+	.Template("<img class='employee-image' src='../../Content/images/Employees/${employee-image}.png' alt='employee' height='50px' width='50px'/>
+	<div class='e-name'> 
 		${text} 
 	</div>
-	<div class='desig'>
-		${desig} 
+	<div class='design'>
+		${design} 
 	</div>
 	<div class='cont'>
 		${country} 
@@ -47,18 +47,18 @@ The following steps explains you the behavior of template support with ListBox.
 	public class EmployeeSpecialists 
 	{           
 		public string text { get; set; }   
-		public string eimg { get; set; }   
-		public string desig { get; set; } 
+		public string employeeImg { get; set; }   
+		public string design { get; set; } 
 		public string country { get; set; }  
 	} 
 	public ActionResult Index() 
 	{
-		List<EmployeeSpecialists> empl = new List<EmployeeSpecialists>();
-		empl.Add(new EmployeeSpecialists { text = "Erik Linden", eimg = "3", desig = "Representative", country = "England" }); 
-		empl.Add(new EmployeeSpecialists { text = "John Linden", eimg = "6", desig = "Representative", country = "Norway" }); 
-		empl.Add(new EmployeeSpecialists { text = "Louis", eimg = "7", desig = "Representative", country = "Australia" });  
-		empl.Add(new EmployeeSpecialists { text = "Lawrence", eimg = "8", desig = "Representative", country = "India" }); 
-		ViewBag.datasource = empl;     
+		List<EmployeeSpecialists> employeeList = new List<EmployeeSpecialists>();
+		employeeList.Add(new EmployeeSpecialists { text = "Erik Linden", employeeImg = "3", design = "Representative", country = "England" }); 
+		employeeList.Add(new EmployeeSpecialists { text = "John Linden", employeeImg = "6", design = "Representative", country = "Norway" }); 
+		employeeList.Add(new EmployeeSpecialists { text = "Louis", employeeImg = "7", design = "Representative", country = "Australia" });  
+		employeeList.Add(new EmployeeSpecialists { text = "Lawrence", employeeImg = "8", design = "Representative", country = "India" }); 
+		ViewBag.datasource = employeeList;     
 		return View();
 	}
 
@@ -73,7 +73,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 	<style>
 
-		.eimg 
+		.employee-image 
 		{
 
 			margin: 0;
@@ -92,7 +92,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 
 
-		.ename 
+		.e-name 
 		{
 
 			font-weight: bold;
@@ -103,7 +103,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 
 
-		.desig, .cont 
+		.design, .cont 
 		{
 
 			font-size: smaller;
@@ -114,7 +114,7 @@ The following steps explains you the behavior of template support with ListBox.
 
 
 
-		#selectexperts li 
+		#selectExperts li 
 		{
 
 			width: 200px;

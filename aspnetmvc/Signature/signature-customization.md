@@ -19,7 +19,7 @@ In the View page, define the following code.
 
 {% highlight razor %}
 
-@Html.EJ().Signature("mysign").StrokeColor("red")
+@Html.EJ().Signature("mySign").StrokeColor("red")
 
 {% endhighlight %}
 
@@ -37,7 +37,7 @@ In the View page, define the following code.
 
 {% highlight razor %}
 
-@Html.EJ().Signature("mysign").StrokeWidth(5)
+@Html.EJ().Signature("mySign").StrokeWidth(5)
 
 {% endhighlight %}
 

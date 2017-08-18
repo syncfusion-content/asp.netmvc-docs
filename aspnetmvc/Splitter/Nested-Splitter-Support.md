@@ -21,7 +21,7 @@ The following steps explain the implementation of the “Nested Splitter” opti
 
 {% highlight CSHTML %}
 
-@{Html.EJ().Splitter("outterSplitter").Height("300").Width("600").Orientation(Orientation.Vertical).PaneProperties(
+@{Html.EJ().Splitter("outerSplitter").Height("300").Width("600").Orientation(Orientation.Vertical).PaneProperties(
 
 p =>
 
@@ -126,7 +126,7 @@ p =>
 
 <style type="text/css" >
 
-	#outterSplitter 
+	#outerSplitter 
 	{
 
 		margin: 0 auto;

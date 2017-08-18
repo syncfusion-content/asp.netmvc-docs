@@ -23,8 +23,8 @@ The following steps explains you the behavior of VirtualScrolling support in Lis
 			<h5 class="ctrllabel">
 				Select Customer ID
 			</h5>  
-			@Html.EJ().ListBox("customerList").Datasource(ds =>
-			ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers')").ListBoxFields(f => 
+			@Html.EJ().ListBox("customerList").Datasource(listBoxDatasource =>
+			listBoxDatasource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers')").ListBoxFields(f => 
 			f.Text("CustomerID")).ItemsCount(91) .AllowVirtualScrolling(true).ClientSideEvents(e => 
 			e.ActionBegin("itemRequested"))
 		</div>

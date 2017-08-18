@@ -18,7 +18,7 @@ You can add the page content with text-area by referring to this section.
 {% highlight razor %}
 
     @{
-       Html.EJ().RadialMenu("nestedradialmenu").ImageClass("imageclass").BackImageClass("backimageclass").TargetElementId("radialtarget2").Items(items =>
+       Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("image-class").BackImageClass("backimage-class").TargetElementId("radialTarget2").Items(items =>
         {
             items.Add().Text("Copy").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png"));
             items.Add().Text("Font").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png")).Children(children =>
@@ -62,7 +62,7 @@ Add the following script in your code.
 {% highlight javascript %}
 
         function radialShow(e) {
-            var target = $("#radialtarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+            var target = $("#radialTarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
             // To get Iframe positions
                 iframeY = target.offset().top + e.event.clientY, iframeX = target.offset().left + e.event.clientX,
             // To set Radial Menu position within target
@@ -78,12 +78,12 @@ Add the following styles in your code.
 {% highlight css %}
 
     <style type="text/css" class="cssStyles">
-        .e-radialmenu .imageclass
+        .e-radialmenu .image-class
         {
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/main.png");
         }
         
-        .e-radialmenu .backimageclass
+        .e-radialmenu .backimage-class
         {
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/Back_button.png");
         }

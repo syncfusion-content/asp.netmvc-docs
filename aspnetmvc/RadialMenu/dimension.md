@@ -18,7 +18,7 @@ You can customize the **Radial Menu** size by using the **Radius** property. By 
 
 {% highlight razor %}
 
-         @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+         @Html.EJ().RadialMenu("defaultRadialmMenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
         =>
         {
             items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png")).Text("Bold");
@@ -34,13 +34,13 @@ Add the following script in your code.
 {% highlight javascript %}
 
         function radialShow(e) {
-                var target = $("#radialtarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+                var target = $("#radialRarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
                 // To get Iframe positions
                     iframeY = target.offset().top + e.event.clientY, iframeX = target.offset().left + e.event.clientX,
                 // To set Radial Menu position within target
                     x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                     y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                    radialEle.ejRadialMenu("setPosition", x, y);
+                    radialElement.ejRadialMenu("setPosition", x, y);
             }
 
 {% endhighlight %}
@@ -57,7 +57,7 @@ Refer to the following code example.
 
 {% highlight razor %}
 
-         @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+         @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
         =>
         {
             items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy");
@@ -74,7 +74,7 @@ Add the following script in your code.
 {% highlight javascript %}
 
         function radialShow(e) {
-                var target = $("#radialtarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+                var target = $("#radialTarget2"), radialRadius = 150, radialDiameter = 2 * radialRadius,
                 // To get Iframe positions
                     iframeY = target.offset().top + e.event.clientY, iframeX = target.offset().left + e.event.clientX,
                 // To set Radial Menu position within target

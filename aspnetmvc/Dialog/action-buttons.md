@@ -76,7 +76,7 @@ You can add new action button in the dialog widget by configuring the `actionBut
             .Dialog("dialog")
             .Title("Dialog")
             .ActionButtons(actionButtons)
-			.ClientSideEvents(evt =>evt.ActionButtonClick("playMedia"))
+			.ClientSideEvents(event =>event.ActionButtonClick("playMedia"))
             .ContentTemplate(@<p>This is a Dialog</p>)
             .Render();			
     }
