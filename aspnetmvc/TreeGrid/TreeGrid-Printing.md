@@ -15,9 +15,9 @@ TreeGrid provides support to print the contents. To print the TreeGrid the print
 {% highlight js %}
  
 @(Html.EJ().TreeGrid("TreeGrid")
-    .ToolbarSettings(tl => {
-        tl.ShowToolbar(true);
-        tl.ToolbarItems(new List<TreeGridToolBarItems>(){
+    .ToolbarSettings(tool => {
+        tool.ShowToolbar(true);
+        tool.ToolbarItems(new List<TreeGridToolBarItems>(){
             TreeGridToolBarItems.Print        
         });        
     })
@@ -37,9 +37,9 @@ It is possible to set the printMode in [PageSettings](/api/js/ejgantt#members:pa
  @(Html.EJ().TreeGrid("TreeGrid")
     .AllowPaging(true)
     .PageSettings(pg=>pg.PrintMode(TreeGridPrintMode.CurrentPage))
-    .ToolbarSettings(tl => {
-        tl.ShowToolbar(true);
-        tl.ToolbarItems(new List<TreeGridToolBarItems>(){
+    .ToolbarSettings(tool => {
+        tool.ShowToolbar(true);
+        tool.ToolbarItems(new List<TreeGridToolBarItems>(){
             TreeGridToolBarItems.Print        
         });        
     })
@@ -59,9 +59,9 @@ BeforePrint event will be triggered once after printing initiated in TreeGrid. T
     .ClientSideEvents(cl => {
         cl.BeforePrint("beforePrint");
     })
-    .ToolbarSettings(tl => {
-        tl.ShowToolbar(true);
-        tl.ToolbarItems(new List < TreeGridToolBarItems > () {
+    .ToolbarSettings(tool => {
+        tool.ShowToolbar(true);
+        tool.ToolbarItems(new List < TreeGridToolBarItems > () {
             TreeGridToolBarItems.Print
         });
     })
