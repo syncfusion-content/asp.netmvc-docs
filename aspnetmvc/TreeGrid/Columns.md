@@ -258,7 +258,7 @@ public partial class TreeGridController : Controller
 
 <script type="text/x-jsrender" id="customColumnTemplate">     
 
-<div  style='height:20px;' unselectable='on'>{{if hasChildRecords}}<div class='intend' style='height:1px; float:left; width:{{:level*20}}px; display:inline-block;'></div>
+<div  style='height:20px;' data-unselectable='on'>{{if hasChildRecords}}<div class='intend' style='height:1px; float:left; width:{{:level*20}}px; display:inline-block;'></div>
 
 	{{else !hasChildRecords}}
 
@@ -268,9 +268,9 @@ public partial class TreeGridController : Controller
 
 	<div class='{{if expanded}}e-treegridexpand {{else hasChildRecords}}e-treegridcollapse {{/if}} {{if level===4}}e-doc{{/if}}' style='height:20px;width:30px;margin:auto;float:left;margin-left:10px;
 
-	float: left;display:inline-block;' unselectable='on'></div>
+	float: left;display:inline-block;' data-unselectable='on'></div>
 
-	<div class='e-cell' style='display:inline-block;width:100%' unselectable='on'>{{:#data['Name']}}</div>
+	<div class='e-cell' style='display:inline-block;width:100%' data-unselectable='on'>{{:#data['Name']}}</div>
 
 </div>
 
