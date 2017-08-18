@@ -60,7 +60,7 @@ In the HTML page, define the li items for RadialMenu component.
 
 {% highlight razor %}
 
-      @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").CssClass("customCss").TargetElementId("radialtarget1").Items(items
+      @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").CssClass("customCss").TargetElementId("radialtarget1").Items(items
     =>
     {
         items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png")).Text("Copy");
@@ -85,7 +85,7 @@ Customize **Radial Menu** control with cssClass in script as follows.
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                radialEle.ejRadialMenu("setPosition", x, y);
+                radialElement.ejRadialMenu("setPosition", x, y);
             }
 
 {% endhighlight %}

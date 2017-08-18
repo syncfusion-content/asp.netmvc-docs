@@ -55,7 +55,7 @@ Create the target element as follows to display the drawer by clicking target ic
 
 {% highlight CSHTML %}
 
-<div class="navi">
+<div class="navigation">
 
      <div id="target" class="icon-target"> Drawer</div>
 
@@ -101,7 +101,7 @@ To set the target icon image from sprite and to position the target icon properl
 
 	 }
 
- .navi 
+ .navigation 
 
 	{
 

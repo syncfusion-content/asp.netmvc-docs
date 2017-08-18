@@ -15,7 +15,7 @@ Enabled property is a Boolean type, which allow us to enables or disable the Rot
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px").Enabled(false)
 
@@ -33,7 +33,7 @@ IsResponsive property is Boolean type, which allow us to resizes the Rotator whe
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").IsResponsive(true)
 
@@ -45,7 +45,7 @@ The Rotator Items continuously rotate without user interference by enable the En
 
 {% highlight CSHTML %}
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").EnableAutoPlay(true)
 
@@ -59,7 +59,7 @@ StopOnHover property is Boolean type, which allow us to pause the auto play whil
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").EnableAutoPlay(true).StopOnHover(true)
 
@@ -84,7 +84,7 @@ You can specify the property PagerPosition in the script as follows.
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 .PagerPosition(Syncfusion.JavaScript.PagerPosition.TopLeft)
@@ -101,7 +101,7 @@ This property turns on or off the pager support in the Rotator control. The Page
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").ShowPager(false)
 
@@ -119,7 +119,7 @@ ShowPlayButton property is Boolean type which allow us to enable play / pause bu
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource).RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px").SlideHeight("350px").ShowPlayButton(true)
 
 {% endhighlight %}
 
@@ -133,7 +133,7 @@ This property turns on or off the slide buttons (next and previous) in the Rotat
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px").ShowNavigateButton(true)
 
@@ -149,7 +149,7 @@ When the Rotator Item is an image, you can specify a caption for the Rotator Ite
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").ShowCaption(true)
 

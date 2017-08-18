@@ -213,7 +213,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 
 {% highlight html %}
 
-    @Html.EJ().Autocomplete("selectcar").Datasource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").AutocompleteFields(af => af.Text("CustomerID")).Width("300") 
+    @Html.EJ().Autocomplete("selectCar").Datasource("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/").Query("ej.Query().from('Customers').take(10)").AutocompleteFields(af => af.Text("CustomerID")).Width("300") 
 
 {% endhighlight %}
 
@@ -230,7 +230,7 @@ For further details about OData service please refer [the link](http://www.odat
 {% highlight html %}
 
 
-@Html.EJ().Autocomplete("selectdata").Datasource(ds => ds.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).AutocompleteFields(af => af.Text("RegionDescription")).Width("300").ShowPopupButton(true) 
+@Html.EJ().Autocomplete("selectData").Datasource(dataSource => dataSource.URL("http://services.odata.org/V4/Northwind/Northwind.svc/Regions/").Adaptor(AdaptorType.ODataV4Adaptor)).AutocompleteFields(af => af.Text("RegionDescription")).Width("300").ShowPopupButton(true) 
 
 {% endhighlight %}
 
@@ -247,7 +247,7 @@ Now, in the following code example the data is retrieved from **Controller**.
 
 {% highlight html %}
 
-@Html.EJ().Autocomplete("selectcar").Datasource(ds => ds.URL(Url.Action("DataSource", "Autocomplete")).Adaptor(AdaptorType.UrlAdaptor)).Query("ej.Query()").AutocompleteFields(af => af.Text("text")).Width("300").FilterType(FilterOperatorType.Contains)
+@Html.EJ().Autocomplete("selectCar").Datasource(dataSource => dataSource.URL(Url.Action("DataSource", "Autocomplete")).Adaptor(AdaptorType.UrlAdaptor)).Query("ej.Query()").AutocompleteFields(af => af.Text("text")).Width("300").FilterType(FilterOperatorType.Contains)
 
 {% endhighlight %}
 
@@ -296,7 +296,7 @@ Run the code to get the following output
 {% highlight html %}
 
 
-   @(Html.EJ().Autocomplete("selectauto").Datasource(ds => ds.URL(Url.Action("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/")).Adaptor(AdaptorType.WebApiAdaptor)).Query("ej.Query().from('Customers')").Width("300").AutocompleteFields(fs => fs.Text("CustomerID")))
+   @(Html.EJ().Autocomplete("selectAuto").Datasource(dataSource => dataSource.URL(Url.Action("http://js.syncfusion.com/ejservices/Wcf/Northwind.svc/")).Adaptor(AdaptorType.WebApiAdaptor)).Query("ej.Query().from('Customers')").Width("300").AutocompleteFields(fieldSetting => fieldSetting.Text("CustomerID")))
 
 
 {% endhighlight %}

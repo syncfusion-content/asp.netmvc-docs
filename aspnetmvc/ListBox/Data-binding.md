@@ -97,7 +97,7 @@ The following code explains you the details of data binding with ListBox.
 		<h5 class="ctrllabel">
 			Select a skill 
 		</h5> 
-		@Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<skillset>)ViewBag.datasource).ListBoxFields(df=>
+		@Html.EJ().ListBox("listBoxSample").Width("240").Datasource((IEnumerable<SkillSet>)ViewBag.datasource).ListBoxFields(df=>
 		df.Text("text"))
 	</div>
 
@@ -107,28 +107,28 @@ The following code explains you the details of data binding with ListBox.
    ~~~ csharp
    
 	// Add the following code to add list items in the controller page
-	public class skillset 
+	public class SkillSet 
 	{   
 		public string text { get; set; } 
 	}  
 	public ActionResult Index()  
 	{  
-		List<skillset> skill = new List<skillset>(); 
-		skill.Add(new skillset { text = "ASP.NET" });
-		skill.Add(new skillset { text = "ActionScript" });
-		skill.Add(new skillset { text = "Basic" });  
-		skill.Add(new skillset { text = "C++" });  
-		skill.Add(new skillset { text = "C#" });  
-		skill.Add(new skillset { text = "dBase" });
-		skill.Add(new skillset { text = "Delphi" }); 
-		skill.Add(new skillset { text = "ESPOL" }); 
-		skill.Add(new skillset { text = "F#" });   
-		skill.Add(new skillset { text = "FoxPro" }); 
-		skill.Add(new skillset { text = "Java" });  
-		skill.Add(new skillset { text = "J#" });   
-		skill.Add(new skillset { text = "Lisp" }); 
-		skill.Add(new skillset { text = "Logo" }); 
-		skill.Add(new skillset { text = "PHP" });   
+		List<SkillSet> skill = new List<SkillSet>(); 
+		skill.Add(new SkillSet { text = "ASP.NET" });
+		skill.Add(new SkillSet { text = "ActionScript" });
+		skill.Add(new SkillSet { text = "Basic" });  
+		skill.Add(new SkillSet { text = "C++" });  
+		skill.Add(new SkillSet { text = "C#" });  
+		skill.Add(new SkillSet { text = "dBase" });
+		skill.Add(new SkillSet { text = "Delphi" }); 
+		skill.Add(new SkillSet { text = "ESPOL" }); 
+		skill.Add(new SkillSet { text = "F#" });   
+		skill.Add(new SkillSet { text = "FoxPro" }); 
+		skill.Add(new SkillSet { text = "Java" });  
+		skill.Add(new SkillSet { text = "J#" });   
+		skill.Add(new SkillSet { text = "Lisp" }); 
+		skill.Add(new SkillSet { text = "Logo" }); 
+		skill.Add(new SkillSet { text = "PHP" });   
 		ViewBag.datasource = skill;    
 		return View();
 	}
@@ -166,7 +166,7 @@ The following steps explains you the details of data binding from remote.
 
 		</div>
 
-		@Html.EJ().ListBox("listboxsample").Datasource(ds => ds.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(10)").ListBoxFields(f => f.Text("CustomerID"))
+		@Html.EJ().ListBox("listBoxSample").Datasource(listBoxDataSource => listBoxDataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/")).Query("ej.Query().from('Customers').take(10)").ListBoxFields(f => f.Text("CustomerID"))
 
 	</div>
 
