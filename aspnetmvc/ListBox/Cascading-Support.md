@@ -32,15 +32,15 @@ The following steps explains you the behavior of cascade ListBox.
 			Cascading Listbox
 		 </span>
 		 @Html.EJ().ListBox("groupsList").Datasource((IEnumerable<Groups>)ViewBag.datasource).ListBoxFields(df => 
-		 df.Value("categoryId")).CascadeTo("subcategoryList")
+		 df.Value("CategoryId")).CascadeTo("subcategoryList")
 	 </div>
 	 <div class="controlitem">
 		 @Html.EJ().ListBox("subcategoryList").Datasource((IEnumerable<Category>)ViewBag.datasource1).ListBoxFields(df => 
-		 df.Value("subCategoryId")).CascadeTo("productList").Enabled(false)
+		 df.Value("SubCategoryId")).CascadeTo("productList").Enabled(false)
 	 </div>
 	 <div class="controlitem">
 		@Html.EJ().ListBox("productList").Datasource((IEnumerable<SubCategory>)ViewBag.datasource2).ListBoxFields(df => 
-		df.Value("productId")).CascadeTo("subproductList").Enabled(false)
+		df.Value("ProductId")).CascadeTo("subproductList").Enabled(false)
 	 </div>
 	 <div class="controlitem"> 
 		@Html.EJ().ListBox("subproductList").Datasource((IEnumerable<SubProduct>)ViewBag.datasource3).Enabled(false)
@@ -60,43 +60,43 @@ The following steps explains you the behavior of cascade ListBox.
 		List<SubProduct> thirdLevel = new List<SubProduct>(); 
 		public ActionResult Cascading()  
 		{       
-			group.Add(new Groups { categoryId = "a", text = "Clothing" });  
-			group.Add(new Groups { categoryId = "b", text = "Furniture" }); 
+			group.Add(new Groups { CategoryId = "a", Text = "Clothing" });  
+			group.Add(new Groups { CategoryId = "b", Text = "Furniture" }); 
 			ViewBag.datasource = group;  
 			//first level child 
-			firstLevel.Add(new Category { subCategoryId = 11, categoryId = "a", text = "Women" });   
-			firstLevel.Add(new Category { subCategoryId = 12, categoryId = "b", text = "Home furniture" });  
-			firstLevel.Add(new Category { subCategoryId = 13, categoryId = "b", text = "Bedding" });
+			firstLevel.Add(new Category { SubCategoryId = 11, CategoryId = "a", Text = "Women" });   
+			firstLevel.Add(new Category { SubCategoryId = 12, CategoryId = "b", Text = "Home furniture" });  
+			firstLevel.Add(new Category { SubCategoryId = 13, CategoryId = "b", Text = "Bedding" });
 			ViewBag.datasource1 = firstLevel; 
 
 			//second level child  
-			secondLevel.Add(new SubCategory { productId = 101, subCategoryId = 11, text = "men shirts" }); 
-			secondLevel.Add(new SubCategory { productId = 102, subCategoryId = 11, text = "men pants" });
-			secondLevel.Add(new SubCategory { productId = 103, subCategoryId = 12, text = "women shirts" });
-			secondLevel.Add(new SubCategory { productId = 104, subCategoryId = 12, text = "women pants" });
-			secondLevel.Add(new SubCategory { productId = 105, subCategoryId = 13, text = "sofa" });   
-			secondLevel.Add(new SubCategory { productId = 106, subCategoryId = 13, text = "chairs" });
-			secondLevel.Add(new SubCategory { productId = 106, subCategoryId = 14, text = "bedsheets" }); 
-			secondLevel.Add(new SubCategory { productId = 108, subCategoryId = 14, text = "pillows" }); 
+			secondLevel.Add(new SubCategory { ProductId = 101, SubCategoryId = 11, Text = "men shirts" }); 
+			secondLevel.Add(new SubCategory { ProductId = 102, SubCategoryId = 11, Text = "men pants" });
+			secondLevel.Add(new SubCategory { ProductId = 103, SubCategoryId = 12, Text = "women shirts" });
+			secondLevel.Add(new SubCategory { ProductId = 104, SubCategoryId = 12, Text = "women pants" });
+			secondLevel.Add(new SubCategory { ProductId = 105, SubCategoryId = 13, Text = "sofa" });   
+			secondLevel.Add(new SubCategory { ProductId = 106, SubCategoryId = 13, Text = "chairs" });
+			secondLevel.Add(new SubCategory { ProductId = 106, SubCategoryId = 14, Text = "bedsheets" }); 
+			secondLevel.Add(new SubCategory { ProductId = 108, SubCategoryId = 14, Text = "pillows" }); 
 			ViewBag.datasource2 = secondLevel; 
 
 			//third level child 
-			thirdLevel.Add(new SubProduct { productId = 101, text = "red men shirts" }); 
-			thirdLevel.Add(new SubProduct { productId = 101, text = "blue men shirts" }); 
-			thirdLevel.Add(new SubProduct { productId = 102, text = "red men pants" });  
-			thirdLevel.Add(new SubProduct { productId = 102, text = "blue men pants" }); 
-			thirdLevel.Add(new SubProduct { productId = 103, text = "blue women shirts" }); 
-			thirdLevel.Add(new SubProduct { productId = 103, text = "red women shirts" });  
-			thirdLevel.Add(new SubProduct { productId = 104, text = "red women pants" });  
-			thirdLevel.Add(new SubProduct { productId = 104, text = "blue women pants" });  
-			thirdLevel.Add(new SubProduct { productId = 105, text = "red sofa" });   
-			thirdLevel.Add(new SubProduct { productId = 105, text = "blue sofa" }); 
-			thirdLevel.Add(new SubProduct { productId = 106, text = "red chairs" }); 
-			thirdLevel.Add(new SubProduct { productId = 106, text = "blue chairs" });   
-			thirdLevel.Add(new SubProduct { productId = 107, text = "red bedsheets" }); 
-			thirdLevel.Add(new SubProduct { productId = 107, text = "blue bedsheets" });
-			thirdLevel.Add(new SubProduct { productId = 108, text = "red pillows" });    
-			thirdLevel.Add(new SubProduct { productId = 108, text = "blue pillows" });  
+			thirdLevel.Add(new SubProduct { ProductId = 101, Text = "red men shirts" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 101, Text = "blue men shirts" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 102, Text = "red men pants" });  
+			thirdLevel.Add(new SubProduct { ProductId = 102, Text = "blue men pants" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 103, Text = "blue women shirts" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 103, Text = "red women shirts" });  
+			thirdLevel.Add(new SubProduct { ProductId = 104, Text = "red women pants" });  
+			thirdLevel.Add(new SubProduct { ProductId = 104, Text = "blue women pants" });  
+			thirdLevel.Add(new SubProduct { ProductId = 105, Text = "red sofa" });   
+			thirdLevel.Add(new SubProduct { ProductId = 105, Text = "blue sofa" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 106, Text = "red chairs" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 106, Text = "blue chairs" });   
+			thirdLevel.Add(new SubProduct { ProductId = 107, Text = "red bedsheets" }); 
+			thirdLevel.Add(new SubProduct { ProductId = 107, Text = "blue bedsheets" });
+			thirdLevel.Add(new SubProduct { ProductId = 108, Text = "red pillows" });    
+			thirdLevel.Add(new SubProduct { ProductId = 108, Text = "blue pillows" });  
 			ViewBag.datasource3 = thirdLevel; 
 			return View();
 		}
@@ -109,24 +109,24 @@ The following steps explains you the behavior of cascade ListBox.
 		
 	public class Groups
 	{    
-		public string text { get; set; }
-		public string categoryId { get; set; }
+		public string Text { get; set; }
+		public string CategoryId { get; set; }
 		public class Category
 		{   
-			public string text { get; set; } 
-			public string categoryId { get; set; }
-			public int subCategoryId { get; set; }
+			public string Text { get; set; } 
+			public string CategoryId { get; set; }
+			public int SubCategoryId { get; set; }
 		}
 		public class SubCategory
 		{  
-			public string text { get; set; }  
-			public int productId { get; set; }
-			public int subCategoryId { get; set; }
+			public string Text { get; set; }  
+			public int ProductId { get; set; }
+			public int SubCategoryId { get; set; }
 		}
 		public class SubProduct
 		{
-			public string text { get; set; }
-			public int productId { get; set; }
+			public string Text { get; set; }
+			public int ProductId { get; set; }
 		}
 		
 	}
