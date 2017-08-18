@@ -19,7 +19,7 @@ In the View page, define the following code.
 
 @Html.EJ().Signature("mySignature").Height("400px").StrokeWidth(3).BackgroundImage("../../Images/progressbar/water.png").IsResponsive(true).saveWithBackground(true)
 
- @Html.EJ().Button("signSave").Text("Save").ShowRoundedCorner(true).ClientSideEvents(evt => evt.Click("onSave")) 
+ @Html.EJ().Button("signSave").Text("Save").ShowRoundedCorner(true).ClientSideEvents(event => event.Click("onSave")) 
 
 {% endhighlight %}
 
