@@ -441,3 +441,81 @@ The following code example describes the tooltip template.
 The following output is displayed as a result of the above code example.
 
 ![](Cards_images/cards_img4.png)
+
+## Collapsible Cards
+
+You can set particular cards collapsed state in Kanban by defining the `CollapsibleCards` property. Based on the `CollapsibleCards` object value, it maps the cards to the collapsible area. 
+
+You can set `CollapsibleCards` as object which consists of `Field` and `Key` properties. The `Field` property map the datasource field to be used in `CollapsibleCards`. The `Key` property map the specific column key to be in collapsed state.
+
+<table>
+<tr>
+<th>
+Mapping Fields</th><th>
+Description</th></tr>
+<tr>
+<td>
+{{ 'CollapsibleCards.Field' | markdownify }} </td><td>
+ Map the collapsible card's field mapping.</td></tr>
+<tr>
+<td>
+{{ 'CollapsibleCards.Key' | markdownify }} </td><td>
+Map the collapsible card's key mapping which is available in datasource value of field mapped in {{ 'collapsibleCards.field' | markdownify }}.</td></tr>
+</table>
+
+N> 1. If the `CollapsibleCards` with `Field` is in the dataSource and `Key` values specified will available in column values, then the cards will be rendered inside the collapsible card's division.
+
+The following code example describes the collapsible cards.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .Columns(col =>
+                    {
+                       col.HeaderText("Andrew").Key("Andrew Fuller").Add();
+                       col.HeaderText("Janet").Key("Janet Leverling").Add();
+                       col.HeaderText("Nancy").Key("Nancy Davloio").Add();
+                    })
+                   .AllowTitle(true)
+                   .AllowSelection(false)
+                   .KeyField("Assignee")
+                   .Fields(field =>
+                   {
+                       field.PrimaryKey("Id");
+                       field.Content("Summary");
+                       field.Tag("Status");
+                       field.CollapsibleCards(collapsibleCards =>
+                       {
+                          collapsibleCards.Field("Status").Key("Close");
+                       });
+                    })
+    )
+
+{% endhighlight  %}
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(30).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![](Cards_images/cards_img5.png)
