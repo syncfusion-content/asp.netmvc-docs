@@ -95,6 +95,31 @@ Working hours indicates the work hour limit within the Scheduler, which is highl
 
 N> By default, work hour **Start** is set to **9** and **End** is set to **18**. Also, the Scheduler cells automatically scrolls up or down based on the starting work hour, to make the user to view that particular time initially.
 
+## Hide Weekend days
+
+The Scheduler can be customized to display only the working days, thus hiding the weekend days from it. The working days render based on the values given in the `WorkWeek` property. The days that are not mentioned in the `WorkWeek` collection is considered to be the weekend days and it can be hidden from the Scheduler by setting `false` to the `ShowWeekend` property.
+
+The following code example renders the Scheduler by hiding the weekend days.
+
+{% highlight razor %}
+
+@(Html.EJ().Schedule("Schedule1")
+    .Width("100%")
+    .Height("525px")
+    .CurrentDate(new DateTime(2015, 11, 5))
+    .ShowWeekend(false)
+    .AppointmentSettings(fields => fields
+        .Id("Id")
+        .Subject("Subject")
+        .StartTime("StartTime")
+        .EndTime("EndTime")
+        .AllDay("AllDay")
+        .Recurrence("Recurrence")
+        .RecurrenceRule("RecurrenceRule"))
+)
+
+{% endhighlight %}
+
 ## TimeScale
 
 The `TimeScale` allows the user to set the required time slot duration for the work cells that displays on the Scheduler. It provides option to customize both the major and minor slots using template option. It includes the below properties such as,

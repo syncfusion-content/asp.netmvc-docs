@@ -290,3 +290,91 @@ You can also add the custom words into the custom dictionary file through the di
 
 * Dialog Mode - Add To Dictionary button will be available in the dialog window, while checking the error in the given input string and clicking this button then the word will be added into the custom dictionary file.
 * Context Menu Mode - Add To Dictionary option will be available in the context menu while right click on the error word in the target area and clicking this option then the word will be added into the custom dictionary file.
+
+## Checking content on typing
+
+SpellCheck control provides support for checking the content, on pressing the `Enter` and `Space` key. The cursor position will also be properly retained, while processing the SpellCheck operations. If you enable “enableValidateOnType” property, the spellcheck operation will be carried out on typing.
+
+The following code example describes the above behavior.
+
+{% highlight CSHTML %}
+
+@section ControlsSection{
+<div id="TextArea" contenteditable="true" name="sentence">
+    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
+    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+</div><br />
+ 
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).EnableValidateOnType(true)
+}
+
+{% endhighlight %}
+
+The following screenshot displays the output for the above code
+
+![](functionalities_images/validateontype.png)
+
+You can also validate the content within the IFrame element or IFrame element target text, by passing the IFrame element id or class name value to the `controlsToValidate` property. 
+Detailed information is given [here](https://help.syncfusion.com/js/spellcheck/multiple-target)
+
+## Suggestion Words
+
+The `getSuggestionWords` option is used to retrieve the possible suggestion words for an error word which is provided to correct that spelling.
+
+The following code example describes the above behavior.
+
+{% highlight CSHTML %}
+
+@section ControlsSection{
+<div id="TextArea" contenteditable="true" name="sentence">
+    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
+    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+</div><br />
+ 
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+}
+ 
+@section ScriptSection{
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+			var spellObj = $("#SpellCheck").data("ejSpellCheck");
+			spellObj.getSuggestionWords("textarea");
+			setTimeout(()=>{
+				alert(spellObj._suggestedWords);
+			},800);
+		});
+    </script>
+}
+
+{% endhighlight %}
+
+N> You can get the suggestion words after some time interval once this method is called. Since, ajax request processing takes place in the background.
+
+## Synchronous request
+
+On setting `enableAsync` option to false, enables the synchronous request to the server to perform SpellCheck operations.
+
+The following code example describes the above behavior.
+
+{% highlight CSHTML %}
+
+@section ControlsSection{
+<div id="TextArea" contenteditable="true" name="sentence">
+    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
+    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+</div><br />
+ 
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).EnableAsync(false).AjaxDataType("json")
+}
+
+{% endhighlight %}
+
+N> You need to set the `ajaxDataType` value as `json` to retrieve the synchronous request result properly.
+
