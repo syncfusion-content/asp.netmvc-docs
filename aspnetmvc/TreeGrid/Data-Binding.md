@@ -561,7 +561,7 @@ The following code explains how to use Load on Demand in TreeGrid Control,
                    co.Field("Progress").HeaderText("Progress").Add();
                }
              )
-              .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas").CrossDomain(true))
+              .Datasource(dataSource => dataSource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas").CrossDomain(true))
     )
 
 {% endhighlight %}
@@ -577,7 +577,7 @@ The following code snippet shows on how to enable load on demand support using  
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
     .EnableLoadOnDemand(true)         
-    .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas"))
+    .Datasource(dataSource => dataSource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas"))
     )
 
 {% endhighlight %}
@@ -606,7 +606,7 @@ On remote data binding, for every action such as paging, sorting, filtering, the
                    co.Field("Progress").HeaderText("Progress").Add();
                }
              )
-              .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas").Offline(true))
+              .Datasource(dataSource => dataSource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas").Offline(true))
     )
 
 {% endhighlight %}
