@@ -66,9 +66,9 @@ The paging operation can be dynamically performed by using the DataManager. With
 		})
 	)
 
-	pageIndex: <input id="pageindex" type="text" placeholder="pageindex" />
+	pageIndex: <input id="pageIndex" type="text" placeholder="pageIndex" />
 
-	pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
+	pageSize:  <input id="pageSize" type="text" placeholder="pageSize" />
 
 	@Html.EJ().Button("submit").Text("Execute").ClientSideEvents(e => { e.Click("onClick"); })
 
@@ -76,12 +76,12 @@ The paging operation can be dynamically performed by using the DataManager. With
 	<script type="text/javascript" class="jsScript">
 
 		function onClick(e) {
-			var from = parseInt($("#pageindex").val());
-			var to = parseInt($("#pagesize").val());
+			var from = parseInt($("#pageIndex").val());
+			var to = parseInt($("#pageSize").val());
 			var obj = $("#FlatGrid").ejGrid("instance")
 			tempQuery = new ej.Query();
 			tempQuery.page(from, to);
-			var dm = window.FlatData.executeQuery(tempQuery).done(function (e1) {
+			var dataManagerObj = window.FlatData.executeQuery(tempQuery).done(function (e1) {
 				obj.dataSource(e1.result);
 			})
 		}

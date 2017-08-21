@@ -21,7 +21,7 @@ are stored in local storage / cookies of browser before page refreshes and reini
 
     @*persists the DatePicker model*@
 
-    @Html.EJ().DatePicker("datepick").EnablePersistence(true)
+    @Html.EJ().DatePicker("datePicker").EnablePersistence(true)
 
 
 {% endhighlight %}

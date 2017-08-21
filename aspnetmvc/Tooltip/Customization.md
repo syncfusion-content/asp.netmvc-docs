@@ -141,7 +141,7 @@ Let's create a Tooltip that slides down when shown using the [animation](http://
         TypeScript lets you write <a id="tooltip1"><u> JavaScript</u> </a>the way you really want to.
     </div>
 
-    @Html.EJ().Tooltip("tooltip1").Content("JavaScript is the programming language of HTML and the Web.").Animation(anim => anim.Effect(Effect.Slide).Speed(1000))
+    @Html.EJ().Tooltip("tooltip1").Content("JavaScript is the programming language of HTML and the Web.").Animation(animationEffect => animationEffect.Effect(Effect.Slide).Speed(1000))
    
 {% endhighlight %}
 
@@ -271,5 +271,3 @@ You can also have Tooltip with a title, in which case the button will lye within
 {% endhighlight %}
 
 ![](ClosingBehaviour_images/title.png)
-
-    

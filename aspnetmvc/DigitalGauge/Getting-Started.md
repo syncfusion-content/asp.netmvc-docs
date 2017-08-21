@@ -108,7 +108,7 @@ Items have different properties to customize the Digital Gauge.
 
 item.SegmentSettings(seg=>seg.Length(20).Width(2))            
 .Value("102")
-. CharacterSettings(cha=>{cha.Spacing(12)
+. CharacterSettings(character=>{character.Spacing(12)
 .Type(CharacterType.SevenSegment);}).Add();
 
 }))
@@ -146,7 +146,7 @@ Digital Gauge Segment Properties
 
 item.SegmentSettings(seg=>seg.Length(20).Width(2))            .Value("102")
 
-. CharacterSettings(cha=>{cha.Spacing(12)
+. CharacterSettings(character=>{character.Spacing(12)
 
 .Type(CharacterType.SevenSegment);}).Add();
 
@@ -197,7 +197,7 @@ The Location property is used to position the digital letters inside the canvas 
 
 item.SegmentSettings(seg=>seg.Length(20).Width(2))
 
-.Value("102").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("102").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 
 .Position(loc=>loc.X(15).Y(40)).Add();
 
@@ -224,27 +224,27 @@ You can further add the Items Collection to display the temperature value like D
 {
 
 item.SegmentSettings(seg=>seg.Length(20).Width(2))            
-.Value("102").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("102").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc=>loc.X(15).Y(40)).Add();
 
 item.SegmentSettings(seg=>seg.Length(5).Width(2))
-.Value("0").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("0").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(85).Y(28)).Add();
 
 item.SegmentSettings(seg=>seg.Length(20).Width(2))  
-.Value("F").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("F").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(170).Y(40)).Add();
 
 item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))
-.Value("38").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("38").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(70).Y(90)).Add();
 
 item.SegmentSettings(seg=>seg.Length(3).Width(1).Color("#F5b43f"))
-.Value("0").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("0").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(90).Y(80)).Add();
 
 item.SegmentSettings(seg=>seg.Length(9).Width(1).Color("#F5b43f"))
-.Value("c").CharacterSettings(cha=>{cha.Spacing(12).Type(CharacterType.SevenSegment);})
+.Value("c").CharacterSettings(character=>{character.Spacing(12).Type(CharacterType.SevenSegment);})
 .Position(loc => loc.X(120).Y(90)).Add();
 
 }))

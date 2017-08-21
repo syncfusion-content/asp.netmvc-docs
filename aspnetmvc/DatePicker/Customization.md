@@ -19,7 +19,7 @@ By default DatePicker has standard height and width (height: "30" and width: "14
 
         @*sets height and width of the datepicker control*@
 
-        @Html.EJ().DatePicker("datepick").Height("50px").Width("300px")
+        @Html.EJ().DatePicker("datePicker").Height("50px").Width("300px")
 
 
 {% endhighlight %}
@@ -32,7 +32,7 @@ Since EJMVC DatePicker is a form control and you can make it as responsive by sp
 
         @*sets width as 100 percentage*@
 
-        @Html.EJ().DatePicker("datepick").Width("100%")
+        @Html.EJ().DatePicker("datePicker").Width("100%")
 
 
 {% endhighlight %}
@@ -46,7 +46,7 @@ You can show or hide the footer of EJMVC DatePicker calendar by using [ShowFoote
     
     @*hides the footer in popup calendar*@
 
-    @Html.EJ().DatePicker("datepick").ShowFooter(false)
+    @Html.EJ().DatePicker("datePicker").ShowFooter(false)
     
 {% endhighlight %}
 
@@ -64,7 +64,7 @@ By hiding this button, you can open the DatePicker by focusing the input textbox
 
     @*hides the popup calendar button*@
 
-    @Html.EJ().DatePicker("datepick").ShowPopupButton(false)
+    @Html.EJ().DatePicker("datePicker").ShowPopupButton(false)
 
 
 {% endhighlight %}
@@ -77,7 +77,7 @@ You can show or hide the other month days from EJMVC DatePicker calendar by usin
 
     @*hides the days of other months in calendar*@
 
-    @Html.EJ().DatePicker("datepick").ShowOtherMonths(false)
+    @Html.EJ().DatePicker("datePicker").ShowOtherMonths(false)
 
 
 {% endhighlight %}
@@ -112,6 +112,6 @@ It specifies the mapping field of tool tip text.<br/><br/></td></tr>
 
     @*sets the special date in datepicker calendar*@
 
-    @Html.EJ().DatePicker("datepick").SpecialDates(spl => { spl.Add().Date("28/06/2015").IconClass("birthday").Tooltip("xxx birthday"); })
+    @Html.EJ().DatePicker("datePicker").SpecialDates(SpecialDate => { SpecialDate.Add().Date("28/06/2015").IconClass("birthday").Tooltip("xxx birthday"); })
        
 {% endhighlight %}

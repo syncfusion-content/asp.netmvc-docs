@@ -41,7 +41,7 @@ Usually, the `Navigation` event gets triggered whenever the views/dates are bein
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt => evt.Navigation("onNavigation"))
+        .ScheduleClientSideEvents(event => event.Navigation("onNavigation"))
 )
 
 {% endhighlight %}
@@ -90,7 +90,7 @@ To handle the date navigation actions, the `Navigation` event can be used. For e
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt => evt.Navigation("onNavigation"))
+        .ScheduleClientSideEvents(event => event.Navigation("onNavigation"))
 )
 
 {% endhighlight %}

@@ -33,9 +33,9 @@ Tick collection can be directly added to the scale object. Refer the following c
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(5).Border(bor => bor.Color("Grey").Width(1)).BackgroundColor("transparent")
+    scale.Width(5).Border(border => border.Color("Grey").Width(1)).BackgroundColor("transparent")
 
     .Type(ScaleType.RoundedRectangle)
 
@@ -45,13 +45,13 @@ Tick collection can be directly added to the scale object. Refer the following c
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
+        bar.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
 
-        bp.Width(6).BarPointerBackgroundColor("#EDC1D7")
+        bar.Width(6).BarPointerBackgroundColor("#EDC1D7")
 
         .BarPointerDistanceFromScale(-15).BarPointerValue(30)
 
@@ -69,11 +69,11 @@ Tick collection can be directly added to the scale object. Refer the following c
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(-25).Y(0)).Add(); })
 
 
 
-    //Adding tick collectin
+    //Adding tick collection
 
     .Ticks(tic =>
 
@@ -81,11 +81,11 @@ Tick collection can be directly added to the scale object. Refer the following c
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-10).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-10).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(-10).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(-10).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -124,9 +124,9 @@ Execute the above code to render the following output.
 
 //Adding scale object
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(5).Border(bor => bor.Color("Grey").Width(1)).BackgroundColor("transparent")
+    scale.Width(5).Border(border => border.Color("Grey").Width(1)).BackgroundColor("transparent")
 
     .Type(ScaleType.RoundedRectangle)
 
@@ -136,11 +136,11 @@ Execute the above code to render the following output.
 
     //Adding bar pointer value
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
+        bar.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
 
     })
 
@@ -154,7 +154,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(-25).Y(0)).Add(); })
 
 
 
@@ -166,17 +166,17 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Height(14).Angle(10).Color("Black")
 
-        .DistanceFromScale(ds =>
+        .DistanceFromScale(distance =>
 
-        ds.X(-10).Y(0)).Placement(TickPlacement.Near).Add();
+        distance.X(-10).Y(0)).Placement(TickPlacement.Near).Add();
 
 
 
         tic.Type(TickType.MinorInterval).Width(1).Height(10)
 
-        .Opacity(0.5).Color("Black").DistanceFromScale(ds =>
+        .Opacity(0.5).Color("Black").DistanceFromScale(distance =>
 
-        ds.X(-10).Y(0)).Placement(TickPlacement.Near).Height(6).Add();
+        distance.X(-10).Y(0)).Placement(TickPlacement.Near).Height(6).Add();
 
     }).Add();
 
@@ -212,9 +212,9 @@ Ticks are two types such as majorInterval and minorInterval. Major type ticks ar
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(5).Border(bor => bor.Color("Grey").Width(1)).BackgroundColor("transparent")
+    scale.Width(5).Border(border => border.Color("Grey").Width(1)).BackgroundColor("transparent")
 
     .Type(ScaleType.RoundedRectangle)
 
@@ -224,11 +224,11 @@ Ticks are two types such as majorInterval and minorInterval. Major type ticks ar
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
+        bar.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
 
     })
 
@@ -242,7 +242,7 @@ Ticks are two types such as majorInterval and minorInterval. Major type ticks ar
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(-25).Y(0)).Add(); })
 
 
 
@@ -291,9 +291,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(5).Border(bor => bor.Color("Grey").Width(1)).BackgroundColor("transparent")
+    scale.Width(5).Border(border => border.Color("Grey").Width(1)).BackgroundColor("transparent")
 
     .Type(ScaleType.RoundedRectangle)
 
@@ -303,11 +303,11 @@ Execute the above code to render the following output.
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
+        bar.Width(5).BarPointerBackgroundColor("#95C7E0").Add();
 
     })
 
@@ -321,7 +321,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(distance => distance.X(-25).Y(0)).Add(); })
 
 
 
@@ -335,11 +335,11 @@ Execute the above code to render the following output.
 
         .Placement(TickPlacement.Near).Color("Red")
 
-        .DistanceFromScale(dfs=>dfs.X(-10).Y(0)).Add();
+        .DistanceFromScale(distance=>distance.X(-10).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("Grey").Placement(TickPlacement.Near)
 
-        .DistanceFromScale(dfs => dfs.X(-10).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-10).Y(0)).Add();
 
     }).Add();
 

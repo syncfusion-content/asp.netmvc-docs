@@ -31,9 +31,9 @@ documentation: ug
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true)
 
@@ -49,11 +49,11 @@ documentation: ug
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(5).BarPointerDistanceFromScale(15)
+        bar.Width(5).BarPointerDistanceFromScale(15)
 
         .BarPointerBackgroundColor("Grey").Add();
 
@@ -69,11 +69,11 @@ documentation: ug
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
         }).Add();
 

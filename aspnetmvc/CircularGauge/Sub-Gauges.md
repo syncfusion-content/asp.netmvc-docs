@@ -21,19 +21,19 @@ Sub gauge collection is directly added to the scale object. Refer the following 
 
 .Value(50)
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Radius(190)
+scale.Radius(190)
 
 //For setting sub gauge
 
-.SubGauges(sg =>
+.SubGauges(gauge =>
 
 {
 
-sg.ControlID("Subgauge1")
+gauge.ControlID("Subgauge1")
 
 .Height(200)
 
@@ -53,7 +53,7 @@ sg.ControlID("Subgauge1")
 
 .Value(50)
 
-.Scales(sc=>{sc.Radius(150).Add();})
+.Scales(scale=>{scale.Radius(150).Add();})
 
 )
 {% endhighlight  %}
@@ -73,7 +73,7 @@ Basic attributes such as height and width property are used to set height and wi
 
 .Radius(110)
 
-.Scales(sc=>{sc.Radius(110).Add();})
+.Scales(scale=>{scale.Radius(110).Add();})
 
 )
 
@@ -86,19 +86,19 @@ Basic attributes such as height and width property are used to set height and wi
 
 .Value(50)
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Radius(190)
+scale.Radius(190)
 
-.SubGauges(sg =>
+.SubGauges(gauge =>
 
 {
 
 //For setting sub gauge control ID
 
-sg.ControlID("Subgauge1")
+gauge.ControlID("Subgauge1")
 
 //For setting sub gauge Height
 
@@ -139,7 +139,7 @@ You can set multiple sub gauges in a single Circular Gauge by adding an array of
 
 .BackgroundColor("#f5b43f")
 
-.Scales(sc => { sc.Radius(150).Add(); })
+.Scales(scale => { scale.Radius(150).Add(); })
 
 )
 
@@ -147,7 +147,7 @@ You can set multiple sub gauges in a single Circular Gauge by adding an array of
 
 .BackgroundColor("#f5b43f")
 
-.Scales(sc => { sc.Radius(150).Add(); })
+.Scales(scale => { scale.Radius(150).Add(); })
 
 )
 
@@ -157,19 +157,19 @@ You can set multiple sub gauges in a single Circular Gauge by adding an array of
 
 .Width(500)
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Radius(250)
+scale.Radius(250)
 
-.SubGauges(sg =>
+.SubGauges(gauge =>
 
 {
 
 //Sub gauge1
 
-sg.ControlID("Subgauge1")
+gauge.ControlID("Subgauge1")
 
 .Height(200)
 
@@ -179,7 +179,7 @@ sg.ControlID("Subgauge1")
 
 //Sub gauge2
 
-sg.ControlID("Subgauge2")
+gauge.ControlID("Subgauge2")
 
 .Height(200)
 

@@ -32,9 +32,9 @@ The following steps explains you the configuration of TargetID property in ListB
 
 		</h5>
 
-		@Html.EJ().ListBox("listboxsample").TargetID("targetlist")
+		@Html.EJ().ListBox("listboxsample").TargetID("targetList")
 
-		<ul id="targetlist">
+		<ul id="targetList">
 
 			<li>Algerian</li>
 
@@ -52,7 +52,7 @@ The following steps explains you the configuration of TargetID property in ListB
 
 			<li>Impact</li>
 
-			<li>New york</li>
+			<li>New York</li>
 
 			<li>Sans-Serif</li>
 
@@ -66,7 +66,7 @@ The following steps explains you the configuration of TargetID property in ListB
 
 			<li>Western</li>
 
-			<li>Zapfellipt bt</li>
+			<li>ZapfEllipt BT</li>
 
 		</ul>
 
@@ -105,7 +105,7 @@ The following steps explains you the configuration of SelectedIndex property in 
 
 			Select a skill
 
-		</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df
+		</h5>    @Html.EJ().ListBox("listboxSample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.SkillSet>)ViewBag.datasource).ListBoxFields(df
 
 		=> df.Text("text")).SelectedIndex(2)
 
@@ -143,7 +143,7 @@ The following steps explains you the configuration of Enabled property in ListBo
 
 			Select a skill
 
-		</h5>    @Html.EJ().ListBox("listboxsample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.skillset>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
+		</h5>    @Html.EJ().ListBox("listboxSample").Width("240").Datasource((IEnumerable<ug_listbox.controllers.SkillSet>)ViewBag.datasource).ListBoxFields(df => df.Text("text")).Enabled(false)
 
 	</div>
 		
@@ -154,7 +154,7 @@ The following steps explains you the configuration of Enabled property in ListBo
 
 	// Add the following code to add list items in the controller page
 
-	public class skillset
+	public class SkillSet
 
 	{
 
@@ -166,37 +166,37 @@ The following steps explains you the configuration of Enabled property in ListBo
 
 	{
 
-		List<skillset> skill = new List<skillset>();
+		List<SkillSet> skill = new List<SkillSet>();
 
-		skill.Add(new skillset { text = "ASP.NET" });
+		skill.Add(new SkillSet { text = "ASP.NET" });
 
-		skill.Add(new skillset { text = "ActionScript" });
+		skill.Add(new SkillSet { text = "ActionScript" });
 
-		skill.Add(new skillset { text = "Basic" });
+		skill.Add(new SkillSet { text = "Basic" });
 
-		skill.Add(new skillset { text = "C++" });
+		skill.Add(new SkillSet { text = "C++" });
 
-		skill.Add(new skillset { text = "C#" });
+		skill.Add(new SkillSet { text = "C#" });
 
-		skill.Add(new skillset { text = "dBase" });
+		skill.Add(new SkillSet { text = "dBase" });
 
-		skill.Add(new skillset { text = "Delphi" });
+		skill.Add(new SkillSet { text = "Delphi" });
 
-		skill.Add(new skillset { text = "ESPOL" });
+		skill.Add(new SkillSet { text = "ESPOL" });
 
-		skill.Add(new skillset { text = "F#" });
+		skill.Add(new SkillSet { text = "F#" });
 
-		skill.Add(new skillset { text = "FoxPro" });
+		skill.Add(new SkillSet { text = "FoxPro" });
 
-		skill.Add(new skillset { text = "Java" });
+		skill.Add(new SkillSet { text = "Java" });
 
-		skill.Add(new skillset { text = "J#" });
+		skill.Add(new SkillSet { text = "J#" });
 
-		skill.Add(new skillset { text = "Lisp" });
+		skill.Add(new SkillSet { text = "Lisp" });
 
-		skill.Add(new skillset { text = "Logo" });
+		skill.Add(new SkillSet { text = "Logo" });
 
-		skill.Add(new skillset { text = "PHP" });
+		skill.Add(new SkillSet { text = "PHP" });
 
 		ViewBag.datasource = skill;
 

@@ -343,7 +343,7 @@ This property specifies the number of Rotator Items to be displayed. The default
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").DisplayItemCount("3")
 
@@ -359,7 +359,7 @@ This property specifies the number of Rotator Items to navigate on a single clic
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px").SlideHeight("350px")
 .DisplayItemCount("2").NavigateSteps("2")
@@ -376,7 +376,7 @@ This property sets the index of the slide that is displayed first. The default v
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").StartIndex("4")
 
@@ -392,7 +392,7 @@ This property sets the space between the Rotator Items.  The value set to this p
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url")).SlideWidth("600px")
 .SlideHeight("350px").DisplayItemCount("2").FrameSpace("40px")
 
@@ -408,7 +408,7 @@ AnimationType property specifies the Type of Animation for the Rotator Item. Ani
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px")
 .SlideHeight("350px")
@@ -424,7 +424,7 @@ This property sets the speed of slide transition. The default value of Animation
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text")
 .Url("Url")).SlideWidth("600px")
 .SlideHeight("350px")
@@ -440,7 +440,7 @@ This property sets the delay between the Rotator Items to move after the slide t
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px")
 .SlideHeight("350px")
@@ -475,11 +475,11 @@ This property is used to set root class for Rotator control theme. The value set
 
 / / Add this code in your CSHTML page and refer local data section for binding Rotator items.
 
-@Html.EJ().Rotator("slidercontent").Datasource((IEnumerable<Localdata>)ViewBag.datasource)
+@Html.EJ().Rotator("sliderContent").Datasource((IEnumerable<LocalData>)ViewBag.datasource)
 .RotatorFields(t => t.Text("Text").Url("Url"))
 .SlideWidth("600px")
 .SlideHeight("350px")
-.CssClass("mycss")
+.CssClass("myCss")
 
 {% endhighlight %}
 

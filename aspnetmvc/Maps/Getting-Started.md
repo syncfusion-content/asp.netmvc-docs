@@ -52,13 +52,13 @@ You can store the `United States of America.json` file in App_Data folder as `us
 
 	{
 
-		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+		string data = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
 		JavaScriptSerializer ser = new JavaScriptSerializer();
 
 		ser.MaxJsonLength = int.MaxValue;
 
-		return new MapData(usajson);
+		return new MapData(data);
 
 	}
 
@@ -93,13 +93,13 @@ The dataSource is populated with USA population data inside the controller relat
 
 	{
 
-		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+		string data = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
 		JavaScriptSerializer ser = new JavaScriptSerializer();
 
 		ser.MaxJsonLength = int.MaxValue;
 
-		return new MapData(usajson);
+		return new MapData(data);
 
 	}
 
@@ -300,11 +300,11 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 		@(Html.EJ().Map("container")
 
-			.Layers(lr =>
+			.Layers(layer =>
 
 			{
 
-				lr.ShapeData(mapData).Add();
+				layer.ShapeData(mapData).Add();
 
 			})
 
@@ -353,11 +353,11 @@ You can refer to shape data and datasource as illustrated in the following “Ma
 
 			@(Html.EJ().Map("container")
 
-				.Layers(lr =>
+				.Layers(layer =>
 
 				{
 
-					lr.ShapeData(mapData).Add();
+					layer.ShapeData(mapData).Add();
 
 				})
 
@@ -406,11 +406,11 @@ The `ShapePropertyPath` property is similar to the `ShapeDataPath` that refers t
 
 	@(Html.EJ().Map("container")            
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{         
 
-		lr.ShapeData(mapData) 
+		layer.ShapeData(mapData) 
 
 		.ShapeDataPath("name")
 
@@ -437,11 +437,11 @@ You can customize the shape’s color by using `Fill`, `Stroke` and `StrokeThick
 
 	@(Html.EJ().Map("container")            
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{
 
-		lr.ShapeData(mapData)              
+		layer.ShapeData(mapData)              
 
 	 	.ShapeDataPath("name")
 
@@ -497,11 +497,11 @@ N> The `EnableGradient` property value should be true to apply gradient colors f
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{                                          
 
-		lr.ShapeData(mapData)              
+		layer.ShapeData(mapData)              
 
 		.ShapeDataPath("name")
 
@@ -581,15 +581,15 @@ The tooltip is displayed only when `ShowTooltip` is set to ‘True’ in the sha
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{                                          
 
-		.ShapeSettings(ss  =>
+		layer.ShapeSettings(ss  =>
 
 		{
 
-			.ValuePath("name")
+			ss.ValuePath("name")
 
 		})
 
@@ -630,11 +630,11 @@ You can use `LeftLabel` and `RightLabel` property to provide left and right labe
 
 	@(Html.EJ().Map("container")
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{                                          
 		
-		lr.ShapeData(mapData)              
+		layer.ShapeData(mapData)              
 
 		.ShapeDataPath("name")
 

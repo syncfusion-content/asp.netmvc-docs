@@ -34,8 +34,8 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
     .RibbonTabs(tab => {
         tab.Id("home").Text("HOME").TabGroups(tab => {
             tab.Text("New").ContentID("Contents").Type("custom").AlignType(RibbonAlignType.Rows).Content(ctn => {
-                ctn.ContentGroups(ctngrp => {
-                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                ctn.ContentGroups(contentGroup => {
+                    contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
                             PrefixIcon = "e-Ribbon e-new",
@@ -80,7 +80,7 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
 
                          DataSource = (IEnumerable < MenuJson > ) ViewBag.datasource,
                              Text = "text",
-                             ParentId = "parentid",
+                             ParentId = "parent",
                              Id = "id"
                      }
              });
@@ -88,8 +88,8 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
          .RibbonTabs(tab => {
              tab.Id("home").Text("HOME").TabGroups(tab => {
                  tab.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
-                     ctn.ContentGroups(ctngrp => {
-                         ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                     ctn.ContentGroups(contentGroup => {
+                         contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                              ContentType = ContentType.ImageOnly,
                                  ImagePosition = ImagePosition.ImageTop,
                                  PrefixIcon = "e-Ribbon e-new",
@@ -168,8 +168,8 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
     .RibbonTabs(tab => {
         tab.Id("home").Text("HOME").TabGroups(tab => {
             tab.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn => {
-                ctn.ContentGroups(ctngrp => {
-                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
+                ctn.ContentGroups(contentGroup => {
+                    contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
 
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,

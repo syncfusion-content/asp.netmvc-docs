@@ -28,7 +28,7 @@ In an ASPX page, add an element to configure ListBox.
 
         Select a skill</div>
 
-    <ej:listbox id="listboxsample" DataTextField="Name" ShowCheckbox="true" runat="server" Width="240"></ej:listbox>
+    <ej:listbox id="listBoxSample" DataTextField="Name" ShowCheckbox="true" runat="server" Width="240"></ej:listbox>
 
 </div>
 
@@ -43,7 +43,7 @@ protected void Page_Load(object sender, EventArgs e)
 
         {
 
-            listboxsample.DataSource = GetData();
+            listBoxSample.DataSource = GetData();
 
         }
 
@@ -128,7 +128,7 @@ In an ASPX page, add an element to configure ListBox.
 
      <div class="ctrllabel">Select Your skill</div>
 
-<ej:listbox id="listboxsample" DataTextField="Name" ShowCheckbox="true" CheckAll="true" runat="server" Width="240"></ej:listbox>
+<ej:listbox id="listBoxSample" DataTextField="Name" ShowCheckbox="true" CheckAll="true" runat="server" Width="240"></ej:listbox>
 
 </div>
 
@@ -142,7 +142,7 @@ protected void Page_Load(object sender, EventArgs e)
 
         {
 
-            listboxsample.DataSource = GetData();
+            listBoxSample.DataSource = GetData();
 
         }
 

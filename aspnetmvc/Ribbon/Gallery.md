@@ -32,11 +32,11 @@ N> The `ItemHeight` and `ItemWidth` for gallery item can be set, if not set defa
                 {
                     tab.Id("home").Text("HOME").TabGroups(tabgroup =>
                     {
-                        tabgroup.Text("Gallery").Type("galary").Content(ctn =>
+                        tabgroup.Text("Gallery").Type("gallery").Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                             {
-                                ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
+                                contentGroup.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                                 {
                                     gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties()
                                     {
@@ -133,11 +133,11 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
     {
         tab.Id("home").Text("HOME").TabGroups(tabgroup =>
         {
-            tabgroup.Text("Gallery").Type("galary").Content(ctn =>
+            tabgroup.Text("Gallery").Type("gallery").Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
+                    contentGroup.Id("Gallery").Type(RibbonButtonType.Gallery).ItemWidth("73").ItemHeight("54").Columns(2).ExpandedColumns(3).GalleryItems(gallery =>
                     {
                         gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties(){
                         ContentType=ContentType.ImageOnly,
@@ -162,13 +162,13 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
                             PrefixIcon = "e-gallerycontent4 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
-                    }).CustomGalleryItems(customgallery =>
+                    }).CustomGalleryItems(customGallery =>
                     {
-                        customgallery.CustomItemType(CustomItemType.Menu).MenuId("custommenu").MenuSettings(new MenuProperties()
+                        customGallery.CustomItemType(CustomItemType.Menu).MenuId("customMenu").MenuSettings(new MenuProperties()
                         {
                             OpenOnClick = false
                         }).Add();
-                        customgallery.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).ButtonSettings(new ButtonProperties()
+                        customGallery.Text("Clear Formatting").ToolTip("Clear Formatting").CustomItemType(CustomItemType.Button).ButtonSettings(new ButtonProperties()
                         {
                             CssClass = "e-extrabtnstyle"
                         }).Add();
@@ -183,7 +183,7 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
         <a>FILE</a>
     </li>
     </ul>
-    <ul id="custommenu">
+    <ul id="customMenu">
     <li>
         <a>New Quick Step</a>
         <ul>

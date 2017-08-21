@@ -19,43 +19,43 @@ In the controller page, create a data list that contains the details about tree 
 public partial class TreeViewController : Controller
 {
     // GET: MultiSelection
-    List<loadondemand> fullRowData = new List<loadondemand>();
+    List<loadOnDemand> fullRowData = new List<loadOnDemand>();
     public ActionResult FullRowSelection()
     {
-        fullRowData.Add(new loadondemand { id = 1, name = "Discover Music", hasChild = true, expanded = true });
-        fullRowData.Add(new loadondemand { id = 2, pid = 1, name = "Hot Singles", selected = true });
-        fullRowData.Add(new loadondemand { id = 3, pid = 1, name = "Rising Artists" });
-        fullRowData.Add(new loadondemand { id = 4, pid = 1, name = "Live Music" });
-        fullRowData.Add(new loadondemand { id = 6, pid = 1, name = "Best of 2013 So Far" });
-        fullRowData.Add(new loadondemand { id = 7, name = "Sales and Events", hasChild = true, expanded = true });
-        fullRowData.Add(new loadondemand { id = 8, pid = 7, name = "100 Albums - $5 Each" });
-        fullRowData.Add(new loadondemand { id = 9, pid = 7, name = "Hip-Hop and R&B Sale" });
-        fullRowData.Add(new loadondemand { id = 10, pid = 7, name = "CD Deals" });
-        fullRowData.Add(new loadondemand { id = 11, name = "Categories", hasChild = true });
-        fullRowData.Add(new loadondemand { id = 12, pid = 11, name = "Songs" });
-        fullRowData.Add(new loadondemand { id = 13, pid = 11, name = "Bestselling Albums" });
-        fullRowData.Add(new loadondemand { id = 14, pid = 11, name = "New Releases" });
-        fullRowData.Add(new loadondemand { id = 15, pid = 11, name = "Bestselling Songs" });
-        fullRowData.Add(new loadondemand { id = 16, name = "MP3 Albums", hasChild = true });
-        fullRowData.Add(new loadondemand { id = 17, pid = 16, name = "Rock" });
-        fullRowData.Add(new loadondemand { id = 18, pid = 16, name = "Gospel" });
-        fullRowData.Add(new loadondemand { id = 19, pid = 16, name = "Latin Music" });
-        fullRowData.Add(new loadondemand { id = 20, pid = 16, name = "Jazz" });
-        fullRowData.Add(new loadondemand { id = 21, name = "More in Music", hasChild = true });
-        fullRowData.Add(new loadondemand { id = 22, pid = 21, name = "Music Trade-In" });
-        fullRowData.Add(new loadondemand { id = 23, pid = 21, name = "Redeem a Gift Card" });
-        fullRowData.Add(new loadondemand { id = 24, pid = 21, name = "Band T-Shirts" });
-        fullRowData.Add(new loadondemand { id = 25, pid = 21, name = "Mobile MVC" });
+        fullRowData.Add(new loadOnDemand { id = 1, name = "Discover Music", hasChild = true, expanded = true });
+        fullRowData.Add(new loadOnDemand { id = 2, parentId = 1, name = "Hot Singles", selected = true });
+        fullRowData.Add(new loadOnDemand { id = 3, parentId = 1, name = "Rising Artists" });
+        fullRowData.Add(new loadOnDemand { id = 4, parentId = 1, name = "Live Music" });
+        fullRowData.Add(new loadOnDemand { id = 6, parentId = 1, name = "Best of 2013 So Far" });
+        fullRowData.Add(new loadOnDemand { id = 7, name = "Sales and Events", hasChild = true, expanded = true });
+        fullRowData.Add(new loadOnDemand { id = 8, parentId = 7, name = "100 Albums - $5 Each" });
+        fullRowData.Add(new loadOnDemand { id = 9, parentId = 7, name = "Hip-Hop and R&B Sale" });
+        fullRowData.Add(new loadOnDemand { id = 10, parentId = 7, name = "CD Deals" });
+        fullRowData.Add(new loadOnDemand { id = 11, name = "Categories", hasChild = true });
+        fullRowData.Add(new loadOnDemand { id = 12, parentId = 11, name = "Songs" });
+        fullRowData.Add(new loadOnDemand { id = 13, parentId = 11, name = "Bestselling Albums" });
+        fullRowData.Add(new loadOnDemand { id = 14, parentId = 11, name = "New Releases" });
+        fullRowData.Add(new loadOnDemand { id = 15, parentId = 11, name = "Bestselling Songs" });
+        fullRowData.Add(new loadOnDemand { id = 16, name = "MP3 Albums", hasChild = true });
+        fullRowData.Add(new loadOnDemand { id = 17, parentId = 16, name = "Rock" });
+        fullRowData.Add(new loadOnDemand { id = 18, parentId = 16, name = "Gospel" });
+        fullRowData.Add(new loadOnDemand { id = 19, parentId = 16, name = "Latin Music" });
+        fullRowData.Add(new loadOnDemand { id = 20, parentId = 16, name = "Jazz" });
+        fullRowData.Add(new loadOnDemand { id = 21, name = "More in Music", hasChild = true });
+        fullRowData.Add(new loadOnDemand { id = 22, parentId = 21, name = "Music Trade-In" });
+        fullRowData.Add(new loadOnDemand { id = 23, parentId = 21, name = "Redeem a Gift Card" });
+        fullRowData.Add(new loadOnDemand { id = 24, parentId = 21, name = "Band T-Shirts" });
+        fullRowData.Add(new loadOnDemand { id = 25, parentId = 21, name = "Mobile MVC" });
 
         ViewBag.datasource = fullRowData;
         return View();
     }
 }
 
-public class loadondemand
+public class loadOnDemand
 {
     public int id { get; set; }
-    public int? pid { get; set; }
+    public int? parentId { get; set; }
     public string name { get; set; }
     public bool? hasChild { get; set; }
     public bool? expanded { get; set; }
@@ -70,9 +70,9 @@ In the view page, add TreeView helper and map the properties defined in to the c
 
 {% highlight razor %}
 
-@Html.EJ().TreeView("fullrowtree").TreeViewFields(field => 
-    field.Datasource((IEnumerable<loadondemand>)ViewBag.datasource)
-    .Id("id").ParentId("pid").Text("name")
+@Html.EJ().TreeView("fullRowTree").TreeViewFields(field => 
+    field.Datasource((IEnumerable<loadOnDemand>)ViewBag.datasource)
+    .Id("id").ParentId("parentId").Text("name")
     .HasChild("hasChild").Expanded("expanded")
 ).FullRowSelect(true)
 
@@ -91,32 +91,32 @@ In the controller page, create a data list that contains the details about tree 
 public partial class TreeViewController : Controller
 {
     // GET: MultiSelection
-    List<loadondemand> fullRowData = new List<loadondemand>();
+    List<loadOnDemand> fullRowData = new List<loadOnDemand>();
     public ActionResult FullRowSelection()
     {
-        fullRowData.Add(new loadondemand { id = 1, name = "Browsers", cls = "browser", hasChild = true, expanded = true });
-        fullRowData.Add(new loadondemand { id = 2, pid = 1, name = "Internet Explorer", cls = "ieb", selected = true });
-        fullRowData.Add(new loadondemand { id = 3, pid = 1, name = "Chrome", cls = "chromeb" });
-        fullRowData.Add(new loadondemand { id = 4, pid = 1, name = "Firefox", cls = "firefoxb" });
-        fullRowData.Add(new loadondemand { id = 6, pid = 1, name = "Bitty", cls = "bittyb" });
-        fullRowData.Add(new loadondemand { id = 7, pid = 1, name = "Opera", cls = "operab" });
+        fullRowData.Add(new loadOnDemand { id = 1, name = "Browsers", className = "browser", hasChild = true, expanded = true });
+        fullRowData.Add(new loadOnDemand { id = 2, parentId = 1, name = "Internet Explorer", className = "ie-browser", selected = true });
+        fullRowData.Add(new loadOnDemand { id = 3, parentId = 1, name = "Chrome", className = "chrome-browser" });
+        fullRowData.Add(new loadOnDemand { id = 4, parentId = 1, name = "Firefox", className = "firefox-browser" });
+        fullRowData.Add(new loadOnDemand { id = 6, parentId = 1, name = "Bitty", className = "bitty-browser" });
+        fullRowData.Add(new loadOnDemand { id = 7, parentId = 1, name = "Opera", className = "opera-browser" });
 
         ViewBag.datasource = fullRowData;
         return View();
     }
 }
 
-public class loadondemand
+public class loadOnDemand
 {
     public int id { get; set; }
-    public int? pid { get; set; }
+    public int? parentId { get; set; }
     public string name { get; set; }
     public bool? hasChild { get; set; }
     public bool? expanded { get; set; }
     public bool? ischecked { get; set; }
     public bool? selected { get; set; }
     public string spriteCss { get; set; }
-    public string cls { get; set; }
+    public string className { get; set; }
 }
 
 {% endhighlight %}
@@ -125,16 +125,16 @@ In the view page, add TreeView helper and map the properties defined in to the c
 
 {% highlight razor %}
 
-@Html.EJ().TreeView("fullrowtree").TreeViewFields(field =>
-    field.Datasource((IEnumerable<loadondemand>)ViewBag.datasource)
-    .Id("id").ParentId("pid").Text("name")
+@Html.EJ().TreeView("fullRowTree").TreeViewFields(field =>
+    field.Datasource((IEnumerable<loadOnDemand>)ViewBag.datasource)
+    .Id("id").ParentId("parentId").Text("name")
     .HasChild("hasChild").Expanded("expanded")
 ).FullRowSelect(true).CssClass("custom").Template("#treeTemplate")
 
 <script id="treeTemplate" type="text/x-jsrender">
 
     {{"{{"}}if !hasChild{{}}}}
-    <span class="con-img {{"{{"}}>cls{{}}}}"></span>
+    <span class="con-img {{"{{"}}>className{{}}}}"></span>
     {{"{{"}}/if{{}}}}
     {{"{{"}}>name{{}}}}
 
@@ -165,23 +165,23 @@ In the view page, add TreeView helper and map the properties defined in to the c
         background-image: url("http://mvc.syncfusion.com/demos/web/images/toolbar/browserl.png");
     }
     
-    .custom .ieb {
+    .custom .ie-browser {
         background-position: -84px 0px;
     }
     
-    .custom .chromeb {
+    .custom .chrome-browser {
         background-position: -42px 0px;
     }
     
-    .custom .firefoxb {
+    .custom .firefox-browser {
         background-position: 0px 0px;
     }
     
-    .custom .bittyb {
+    .custom .bitty-browser {
         background-position: -126px 0px;
     }
     
-    .custom .operab {
+    .custom .opera-browser {
         background-position: -168px 0px;
     }
     
@@ -194,4 +194,3 @@ In the view page, add TreeView helper and map the properties defined in to the c
 </style>
 
 {% endhighlight %}
-

@@ -67,5 +67,3 @@ Run the above example and press [Access key](http://en.wikipedia.org/wiki/Access
 
 CurrencyTextBox focused with keyboard shortcut
 {:.caption}
-
-

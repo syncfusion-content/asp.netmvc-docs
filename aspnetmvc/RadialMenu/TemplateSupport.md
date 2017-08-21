@@ -9,17 +9,17 @@ documentation: ug
 
 ## Template Support
 
- Template support for RadialMenu items will allow you to use any type of [\<svg\>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element#SVG_elements) permittable tags inside our template. Here for example, using this template support you can use the SVG icons in Radial Menu instead of image tags. To use SVG icons in RadialMenu, you need to use [PrependTo](https://help.syncfusion.com/api/js/ejradialmenu#members:items-prependTo) property.
+ Template support for RadialMenu items will allow you to use any type of [\<svg\>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element#SVG_elements) Permittable tags inside our template. Here for example, using this template support you can use the SVG icons in Radial Menu instead of image tags. To use SVG icons in RadialMenu, you need to use [PrependTo](https://help.syncfusion.com/api/js/ejradialmenu#members:items-prependTo) property.
 
  ### Add SVG to item Icon
 
-Using SVG icon will optimize the icons quality and to reduce space occupation by normal images and svg images are scalable and zoomable. Define the text element for SVG with x and y position and code for rendering the font icons. Assign the SVG element ID to PrependTo property.
+Using SVG icon will optimize the icons quality and to reduce space occupation by normal images and svg images are Scalable and Zoomable. Define the text element for SVG with x and y position and code for rendering the font icons. Assign the SVG element ID to PrependTo property.
 
 Please refer the following code to render the svg icon in RadialMenu,
 
     {% highlight razor %}
      <div id="contentDiv">
-        <div id="radialtarget1" class="content-container-fluid">
+        <div id="radialTarget1" class="content-container-fluid">
         <div class="row">
             <div class="cols-sample-area">
                 <textarea id="rteSample1" rows="10" cols="70" style="height: 440px">
@@ -35,12 +35,12 @@ Please refer the following code to render the svg icon in RadialMenu,
                     <p>A view requests from the model the information that it needs to generate an output representation to the user.</p>
                 </textarea>
                     @{
-                        Html.EJ().RTE("rteSample1").Width("100%").MinWidth("10px").ShowContextMenu(false).ClientSideEvents(evt => evt.Create("rteCreate").Change("rteChange").Select("radialShow")).ShowToolbar(false).Render();
+                        Html.EJ().RTE("rteSample1").Width("100%").MinWidth("10px").ShowContextMenu(false).ClientSideEvents(clientSideEvent => clientSideEvent.Create("rteCreate").Change("rteChange").Select("radialShow")).ShowToolbar(false).Render();
                     }
                 </div>
             </div>
         </div>
-             @Html.EJ().RadialMenu("defaultradialmenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+             @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialTarget1").Items(items
              =>
             {
               items.Add().PrependTo("#template1").Text("Bold").Click("bold");
@@ -69,34 +69,34 @@ Add the following code in your script section.
 {% highlight javascript %}
 
     <script type="text/javascript">
-        var rteObj, rteEle = $("#rteSample1"), radialEle = $('#defaultradialmenu'), action = 0, forRedo = 0;
+        var rteObj, rteElement = $("#rteSample1"), radialElement = $('#defaultRadialMenu'), action = 0, forRedo = 0;
         $(function () {
             if (!(ej.browserInfo().name == "msie" && ej.browserInfo().version < 9)) {
-                $("#radialtarget1").parent().css("position", "relative");
+                $("#radialTarget1").parent().css("position", "relative");
             }
             else {
                 $("#contentDiv").html("Radial Menu is only supported from Internet Explorer Versioned 9 and above.").css({ "font-size": "20px", "color": "red" });
             }
 			$(window).resize(function(){
 				if(ej.isMobile() && ej.isPortrait())
-				    $('#defaultradialmenu').css({ "left": 25 })
+				    $('#defaultRadialMenu').css({ "left": 25 })
 			});
         });
         function rteCreate(e) {
             rteObj = this;
         }
         function radialShow(e) {
-            var target = $("#radialtarget1"), radialRadius = 150, radialDiameter = 2 * radialRadius,
+            var target = $("#radialTarget1"), radialRadius = 150, radialDiameter = 2 * radialRadius,
             // To get Iframe positions
                 iframeY = e.event.clientY, iframeX = e.event.clientX,
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-            radialEle.ejRadialMenu("setPosition", x, y);
+            radialElement.ejRadialMenu("setPosition", x, y);
 			$('iframe').contents().find('body').blur();
         }
         function rteChange(e) {
-            radialEle.ejRadialMenu("enableItem", "Undo");
+            radialElement.ejRadialMenu("enableItem", "Undo");
         }
         function bold(e) {
             rteObj.executeCommand("bold");
@@ -114,15 +114,15 @@ Add the following code in your script section.
             rteObj.executeCommand("undo");
             action -= 1;
             if (action == 0)
-                radialEle.ejRadialMenu("disableItem", "Undo");
-            radialEle.ejRadialMenu("enableItem", "Redo");
+                radialElement.ejRadialMenu("disableItem", "Undo");
+            radialElement.ejRadialMenu("enableItem", "Redo");
         }
         function redo(e) {
             rteObj.executeCommand("redo");
             action += 1;
             if (forRedo == action)
-                radialEle.ejRadialMenu("disableItem", "Redo");
-            radialEle.ejRadialMenu("enableItem", "Undo");
+                radialElement.ejRadialMenu("disableItem", "Redo");
+            radialElement.ejRadialMenu("enableItem", "Undo");
         }
     </script>
 

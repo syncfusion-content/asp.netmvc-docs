@@ -48,7 +48,7 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
     <span style="display:block; margin-bottom:12px">Using VisualMode</span> 
 
-        @Html.EJ().Autocomplete("autocompletevisual")
+        @Html.EJ().Autocomplete("autocompleteVisual")
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 
@@ -62,7 +62,7 @@ The following steps explain the configuration of the MultiSelectMode for an Auto
 
         <span style="display:block; margin-bottom:12px">Single selection</span>
 
-        @Html.EJ().Autocomplete("autocompletesingle")
+        @Html.EJ().Autocomplete("autocompleteSingle")
 
     .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
 

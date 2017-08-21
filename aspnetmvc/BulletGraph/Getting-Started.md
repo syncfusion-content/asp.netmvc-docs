@@ -72,59 +72,59 @@ publicActionResult LocalDataBinding()
 
 {
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2013", value = "90", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2013", value = "90", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2012", value = "93", comparativeMeasureValue = "99" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2012", value = "93", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2011", value = "98", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2011", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2010", value = "102", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2010", value = "102", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2009", value = "77", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2009", value = "77", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2008", value = "99", comparativeMeasureValue = "99" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2008", value = "99", comparativeMeasureValue = "99" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2007", value = "106", comparativeMeasureValue = "94" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2007", value = "106", comparativeMeasureValue = "94" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2006", value = "105", comparativeMeasureValue = "95" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2006", value = "105", comparativeMeasureValue = "95" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2005", value = "98", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2005", value = "98", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2004", value = "87", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2004", value = "87", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2003", value = "105", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2003", value = "105", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2002", value = "84", comparativeMeasureValue = "100" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2002", value = "84", comparativeMeasureValue = "100" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2001", value = "93", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2001", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "2000", value = "96", comparativeMeasureValue = "101" });
+	localDataBind.Add(newBulletLocalDataBind { category = "2000", value = "96", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1999", value = "107", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1999", value = "107", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1998", value = "98", comparativeMeasureValue = "101" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1998", value = "98", comparativeMeasureValue = "101" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1997", value = "92", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1997", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1996", value = "98", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1996", value = "98", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1995", value = "96", comparativeMeasureValue = "107" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1995", value = "96", comparativeMeasureValue = "107" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1994", value = "92", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1994", value = "92", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "103", comparativeMeasureValue = "92" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1993", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1993", value = "93", comparativeMeasureValue = "98" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1993", value = "93", comparativeMeasureValue = "98" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1991", value = "95", comparativeMeasureValue = "96" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1991", value = "95", comparativeMeasureValue = "96" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1990", value = "103", comparativeMeasureValue = "92" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1990", value = "103", comparativeMeasureValue = "92" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1989", value = "102", comparativeMeasureValue = "103" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1989", value = "102", comparativeMeasureValue = "103" });
 
-	lclbnd.Add(newBulletLocalDataBind { category = "1988", value = "112", comparativeMeasureValue = "93" });
+	localDataBind.Add(newBulletLocalDataBind { category = "1988", value = "112", comparativeMeasureValue = "93" });
 
-	ViewBag.datasource = lclbnd;
+	ViewBag.datasource = localDataBind;
 
 	return View();
 
@@ -176,7 +176,7 @@ Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGrap
 
     .Orientation(Orientation.Vertical).FlowDirection(FlowDirection.Backward)
 
-   .QuantitativeScaleSettings(qs=>qs.Minimum(70).Maximum(130).Interval(10)
+   .QuantitativeScaleSettings(scale=>scale.Minimum(70).Maximum(130).Interval(10)
 
     .TickPosition(TickPosition.Above)
 
@@ -223,7 +223,7 @@ By default, 3 ranges are displayed in the BulletGraph control during the initial
 
      .Orientation(Orientation.Vertical).FlowDirection(FlowDirection.Backward)
 
-    .QuantitativeScaleSettings(qs=>qs.Minimum(70).Maximum(130).Interval(10)             
+    .QuantitativeScaleSettings(scale=>scale.Minimum(70).Maximum(130).Interval(10)             
 
      .TickPosition(TickPosition.Above)
 
@@ -241,15 +241,15 @@ By default, 3 ranges are displayed in the BulletGraph control during the initial
 
       })
 
-      .QualitativeRanges(qur =>
+      .QualitativeRanges(range =>
 
        {
 
-         qur.RangeEnd(90).Add();
+         range.RangeEnd(90).Add();
 
-         qur.RangeEnd(110).Add();
+         range.RangeEnd(110).Add();
 
-         qur.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
+         range.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
 
         })
 
@@ -282,19 +282,19 @@ You can do the following code changes in the quantitative scale to customize the
 
      .Orientation(Orientation.Vertical).FlowDirection(FlowDirection.Backward)
 
-   .QuantitativeScaleSettings(qs=>qs.Minimum(70).Maximum(130).Interval(10)
+   .QuantitativeScaleSettings(scale=>scale.Minimum(70).Maximum(130).Interval(10)
 
      .TickPosition(TickPosition.Above)
 
      .LabelSettings(lb=>lb.Position(LabelPosition.Above))
 
-    .MinorTickSettings(mit => mit. Width(1))
+    .MinorTickSettings(tick => tick. Width(1))
 
 .MajorTickSettings(mat=> mat.Size(7).Width(1)) 
 
     .ComparativeMeasureSettings(cm=>cm.Color(System.Drawing.Color.Blue))
 
-    .FeaturedMeasureSettings(fm=>fm.Color(System.Drawing.Color.CadetBlue)))
+    .FeaturedMeasureSettings(measure=>measure.Color(System.Drawing.Color.CadetBlue)))
 
      .Fields(fie =>
 
@@ -308,15 +308,15 @@ You can do the following code changes in the quantitative scale to customize the
 
          })
 
-      .QualitativeRanges(qur =>
+      .QualitativeRanges(range =>
 
         {
 
-          qur.RangeEnd(90).Add();
+          range.RangeEnd(90).Add();
 
-          qur.RangeEnd(110).Add();
+          range.RangeEnd(110).Add();
 
-          qur.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
+          range.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
 
         })
 
@@ -350,19 +350,19 @@ You can add the following code example to display an appropriate Caption and Sub
 
      .Orientation(Orientation.Vertical).FlowDirection(FlowDirection.Backward)
 
-     .QuantitativeScaleSettings(qs=>qs.Minimum(70).Maximum(130).Interval(10)
+     .QuantitativeScaleSettings(scale=>scale.Minimum(70).Maximum(130).Interval(10)
 
      .TickPosition(TickPosition.Above)
 
      .LabelSettings(lb=>lb.Position(LabelPosition.Above))
 
-     .MinorTickSettings(mit => mit. Width(1))
+     .MinorTickSettings(tick => tick.Width(1))
 
 	 .MajorTickSettings(mat=> mat.Size(7).Width(1)) 
 
      .ComparativeMeasureSettings(cm=>cm.Color(System.Drawing.Color.Blue))
 
-     .FeaturedMeasureSettings(fm=>fm.Color(System.Drawing.Color.CadetBlue)))
+     .FeaturedMeasureSettings(measure=>measure.Color(System.Drawing.Color.CadetBlue)))
 
      .Fields(fie =>
 
@@ -376,31 +376,31 @@ You can add the following code example to display an appropriate Caption and Sub
 
          })
 
-        .QualitativeRanges(qur =>
+        .QualitativeRanges(range =>
  
         {
 
-          qur.RangeEnd(90).Add();
+          range.RangeEnd(90).Add();
 
-          qur.RangeEnd(110).Add();
+          range.RangeEnd(110).Add();
 
-          qur.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
+          range.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
 
         })   
 
-        .CaptionSettings(ca=>ca.TextAngle(90).Location(lc=>lc.x(470).y(270))
+        .CaptionSettings(ca=>ca.TextAngle(90).Location(location=>location.x(470).y(270))
 
            .Text("Monsoon Rainfall - Actual vs Forecast")
 
-           .Font(fn=>fn.FontFamily("Segoe UI")
+           .Font(font=>font.FontFamily("Segoe UI")
 
              .FontSize("20px").FontWeight("regular").Opacity(1))
 
-           .SubTitle(sb=>sb.TextAngle(0).Text("Rainfall (mm)")
+           .SubTitle(title=>title.TextAngle(0).Text("Rainfall (mm)")
 
-           .Location(lc=>lc.x(180).y(4))
+           .Location(location=>location.x(180).y(4))
 
-           .Font(fn=>fn.FontFamily("Segoe UI")
+           .Font(font=>font.FontFamily("Segoe UI")
 
            .FontSize("14px").FontWeight("regular").Opacity(1))))
 
@@ -436,19 +436,19 @@ You can use a Tooltip in your application to display the values of forecasted ra
 
      .Orientation(Orientation.Vertical).FlowDirection(FlowDirection.Backward)
 
-     .QuantitativeScaleSettings(qs=>qs.Minimum(70).Maximum(130).Interval(10)
+     .QuantitativeScaleSettings(scale=>scale.Minimum(70).Maximum(130).Interval(10)
 
      .TickPosition(TickPosition.Above)
 
      .LabelSettings(lb=>lb.Position(LabelPosition.Above))
 
-     .MinorTickSettings(mit => mit. Width(1))
+     .MinorTickSettings(tick => tick.Width(1))
 
 	 .MajorTickSettings(mat=> mat.Size(7).Width(1)) 
 
      .ComparativeMeasureSettings(cm=>cm.Color(System.Drawing.Color.Blue))
 
-    .FeaturedMeasureSettings(fm=>fm.Color(System.Drawing.Color.CadetBlue)))
+    .FeaturedMeasureSettings(measure=>measure.Color(System.Drawing.Color.CadetBlue)))
 
      .Fields(fie =>
 
@@ -462,31 +462,31 @@ You can use a Tooltip in your application to display the values of forecasted ra
 
          })
 
-      .QualitativeRanges(qur =>
+      .QualitativeRanges(range =>
 
         {
 
-          qur.RangeEnd(90).Add();
+          range.RangeEnd(90).Add();
 
-          qur.RangeEnd(110).Add();
+          range.RangeEnd(110).Add();
 
-          qur.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
+          range.RangeEnd(130).RangeStroke(System.Drawing.Color.DarkBlue).Add();
 
         })   
 
-      .CaptionSettings(ca=>ca.TextAngle(90).Location(lc=>lc.x(470).y(270))
+      .CaptionSettings(ca=>ca.TextAngle(90).Location(location=>location.x(470).y(270))
 
            .Text("Monsoon Rainfall - Actual vs Forecast")
 
-           .Font(fn=>fn.FontFamily("Segoe UI")
+           .Font(font=>font.FontFamily("Segoe UI")
 
              .FontSize("20px").FontWeight("regular").Opacity(1))
 
-           .SubTitle(sb=>sb.TextAngle(0).Text("Rainfall (mm)")
+           .SubTitle(title=>title.TextAngle(0).Text("Rainfall (mm)")
 
-           .Location(lc=>lc.x(180).y(4))
+           .Location(location=>location.x(180).y(4))
 
-           .Font(fn=>fn.FontFamily("Segoe UI")
+           .Font(font=>font.FontFamily("Segoe UI")
 
            .FontSize("14px").FontWeight("regular").Opacity(1))))
 

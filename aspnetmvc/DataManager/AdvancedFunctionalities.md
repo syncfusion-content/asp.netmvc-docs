@@ -68,23 +68,23 @@ You can use the following code example for implementing load on demand using Dat
             })
     )
 
-    pageIndex: <input id="pageindx" type="text" placeholder="pageindex" />
+    pageIndex: <input id="pageIndex" type="text" placeholder="pageindex" />
 
-    pageSize:  <input id="pagesize" type="text" placeholder="pagesize" />
+    pageSize:  <input id="pageSize" type="text" placeholder="pageSize" />
 
-    @Html.EJ().Button("submit").Text("Loadondemand").ClientSideEvents(e => { e.Click("onClick"); })
+    @Html.EJ().Button("submit").Text("LoadOnDemand").ClientSideEvents(e => { e.Click("onClick"); })
 
 
     <script type="text/javascript" class="jsScript">
 
         function onClick(e) {
 
-            var from = parseInt($("#pageindx").val());
-            var to = parseInt($("#pagesize").val());
+            var from = parseInt($("#pageIndex").val());
+            var to = parseInt($("#pageSize").val());
             var obj = $("#FlatGrid").ejGrid("instance")
             tempQuery = new ej.Query();
             tempQuery.page(from, to);
-            var dm = window.FlatData.executeQuery(tempQuery).done(function (e1) {
+            var dataObj = window.FlatData.executeQuery(tempQuery).done(function (e1) {
                 obj.dataSource(e1.result);
 
             })

@@ -33,7 +33,7 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
    ~~~ cshtml
 
 
-	@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>
+	@{Html.EJ().Splitter("outerSplitter").PaneProperties(p =>
 
 		{
 
@@ -128,7 +128,7 @@ Essential Studio ASP.NET MVC Splitter control has a built-in feature to split th
 
 	<style type="text/css" class="cssStyles">
 
-		#outterSplitter 
+		#outerSplitter 
 		{
 
 		margin: 0 auto;

@@ -61,7 +61,7 @@ You can refer the following code example for keyboard navigation.
 	<li>        <img src="@Url.Content("~/Images/rotator/bread.jpg")" title="Bread" /></li>
 </ul>
 
-@Html.EJ().Rotator("slidercontent").Items(itemElement =>  { 
+@Html.EJ().Rotator("sliderContent").Items(itemElement =>  { 
 
 itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/green.jpg")" /> </div>);                           
 itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~/Images/rotator/snow.jpg")"/>  </div>);                           

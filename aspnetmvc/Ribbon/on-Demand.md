@@ -61,9 +61,9 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
                 groupExp.ToolTip("Clipboard");
             }).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-ribbonpaste"
@@ -72,9 +72,9 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
             }).Add();
            tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
            {
-               ctn.ContentGroups(ctngrp =>
+               ctn.ContentGroups(contentGroup =>
                {
-                   ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                   contentGroup.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                    {
                        ContentType = ContentType.ImageOnly,
                        ImagePosition = ImagePosition.ImageTop,
@@ -87,14 +87,14 @@ Set `EnableOnDemand` as true to enable load tab and backstage contents dynamical
         {
             tabgroup.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-bullet"
                     }).Add();
-                    ctngrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-numbericon"
@@ -202,9 +202,9 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
                 groupExp.ToolTip("Clipboard");
             }).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-ribbonpaste"
@@ -213,9 +213,9 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
             }).Add();
            tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
            {
-               ctn.ContentGroups(ctngrp =>
+               ctn.ContentGroups(contentGroup =>
                {
-                   ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                   contentGroup.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                    {
                        ContentType = ContentType.ImageOnly,
                        ImagePosition = ImagePosition.ImageTop,
@@ -228,14 +228,14 @@ While using initially collapsible ribbon with `EnableOnDemand` feature improves 
         {
             tabgroup.Text("Alignment").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("bullet").Text("Bullet Format").ToolTip("Bullets").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-bullet"
                     }).Add();
-                    ctngrp.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("number").Text("Number Format").ToolTip("Numbering").EnableSeparator(true).ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-numbericon"

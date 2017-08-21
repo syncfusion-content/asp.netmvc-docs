@@ -23,17 +23,17 @@ Custom labels collection is directly added to the scale object. Refer the follow
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.CustomLabels(cl =>
+scale.CustomLabels(label =>
 
 {
 
 //custom label
 
-cl.TextAngle(10)
+label.TextAngle(10)
 
 .Color("Red")
 
@@ -64,11 +64,11 @@ cl.TextAngle(10)
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Size(2)
+scale.Size(2)
 
 .ShadowOffset(10)
 
@@ -133,11 +133,11 @@ You can set multiple custom labels in a single Circular Gauge by adding an array
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
-sc.Size(2)
+scale.Size(2)
 
 .ShadowOffset(10)
 
@@ -211,7 +211,7 @@ Circular Gauge with multiple custom labels
 .OuterCustomLabelPosition(OuterCustomLabelPosition.Right)
 
 //Defines the tooltip object.
-.Tooltip(ttp=>ttp
+.Tooltip(tooltip=>tooltip
 
 // Enables the label tooltip.
 .ShowLabelTooltip(true)

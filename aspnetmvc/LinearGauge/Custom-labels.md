@@ -31,9 +31,9 @@ Custom labels collection can be directly added to the scale object. Refer the fo
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor=>bor.Color("transparent").Width(0)).ShowMarkerPointers(false)
+    scale.Width(0).Border(border=>border.Color("transparent").Width(0)).ShowMarkerPointers(false)
 
     .ShowBarPointers(true).ShowCustomLabels(true)
 
@@ -43,11 +43,11 @@ Custom labels collection can be directly added to the scale object. Refer the fo
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(10).BarPointerBackgroundColor("#8BABFF")
+        bar.Width(10).BarPointerBackgroundColor("#8BABFF")
 
         .BarPointerValue(91).BarPointerDistanceFromScale(30).Add();
 
@@ -63,7 +63,7 @@ Custom labels collection can be directly added to the scale object. Refer the fo
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
 
 
 
@@ -75,11 +75,11 @@ Custom labels collection can be directly added to the scale object. Refer the fo
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(-7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(-7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
     })
 
@@ -87,9 +87,9 @@ Custom labels collection can be directly added to the scale object. Refer the fo
 
     //Adding custom label collection
 
-    .CustomLabels(cl => { cl.Value("Mathematics Mark").Position(pos =>
+    .CustomLabels(cl => { cl.Value("Mathematics Mark").Position(position =>
 
-    pos.X(55).Y(97)).Add(); }).Add();
+    position.X(55).Y(97)).Add(); }).Add();
 
 }))
 
@@ -129,9 +129,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor=>bor.Color("transparent").Width(0)).ShowMarkerPointers(false)
+    scale.Width(0).Border(border=>border.Color("transparent").Width(0)).ShowMarkerPointers(false)
 
     .ShowBarPointers(true).ShowCustomLabels(true)
 
@@ -141,11 +141,11 @@ Execute the above code to render the following output.
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(10).BarPointerBackgroundColor("#8BABFF")
+        bar.Width(10).BarPointerBackgroundColor("#8BABFF")
 
         .BarPointerValue(91).BarPointerDistanceFromScale(30).Add();
 
@@ -161,7 +161,7 @@ Execute the above code to render the following output.
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
 
 
 
@@ -173,11 +173,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(-7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(-7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
     })
 
@@ -195,7 +195,7 @@ Execute the above code to render the following output.
 
         .Color("Red")
 
-        .Position(pos => pos.X(55).Y(87)).Add();
+        .Position(position => position.X(55).Y(87)).Add();
 
     }).Add();
 
@@ -231,11 +231,11 @@ To set the location of the custom label in Linear Gauge, position property is us
 
 
 
-//Addingscale collection
+//Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor=>bor.Color("transparent").Width(0)).ShowMarkerPointers(false)
+    scale.Width(0).Border(border=>border.Color("transparent").Width(0)).ShowMarkerPointers(false)
 
     .ShowBarPointers(true).ShowCustomLabels(true)
 
@@ -245,11 +245,11 @@ To set the location of the custom label in Linear Gauge, position property is us
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(10).BarPointerBackgroundColor("#8BABFF")
+        bar.Width(10).BarPointerBackgroundColor("#8BABFF")
 
         .BarPointerValue(91).BarPointerDistanceFromScale(30).Add();
 
@@ -265,7 +265,7 @@ To set the location of the custom label in Linear Gauge, position property is us
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
 
 
 
@@ -277,11 +277,11 @@ To set the location of the custom label in Linear Gauge, position property is us
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(-7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(-7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
     })
 
@@ -293,7 +293,7 @@ To set the location of the custom label in Linear Gauge, position property is us
 
     cl.Value("Mathematics Mark")
 
-    .Position(pos => pos.X(55).Y(87)).Add();
+    .Position(position => position.X(55).Y(87)).Add();
 
     }).Add();
 
@@ -328,9 +328,9 @@ You can set multiple custom labels in a single Linear Gauge by adding an array o
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor=>bor.Color("transparent").Width(0)).ShowMarkerPointers(false)
+    scale.Width(0).Border(border=>border.Color("transparent").Width(0)).ShowMarkerPointers(false)
 
     .ShowBarPointers(true).ShowCustomLabels(true)
 
@@ -340,11 +340,11 @@ You can set multiple custom labels in a single Linear Gauge by adding an array o
 
     //Adding bar pointers
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
-        bp.Width(10).BarPointerBackgroundColor("#8BABFF")
+        bar.Width(10).BarPointerBackgroundColor("#8BABFF")
 
         .BarPointerValue(91).BarPointerDistanceFromScale(30).Add();
 
@@ -360,7 +360,7 @@ You can set multiple custom labels in a single Linear Gauge by adding an array o
 
     //Adding label collection
 
-    .Labels(lbl => { lbl.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
+    .Labels(label => { label.DistanceFromScale(dc => dc.X(-25).Y(0)).Add(); })
 
 
 
@@ -372,11 +372,11 @@ You can set multiple custom labels in a single Linear Gauge by adding an array o
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8c8c8c")
 
-        .DistanceFromScale(dsc => dsc.X(-7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Color("#8c8c8c").Width(1)
 
-        .Height(6).DistanceFromScale(dfs => dfs.X(-7).Y(0)).Add();
+        .Height(6).DistanceFromScale(distance => distance.X(-7).Y(0)).Add();
 
     })
 
@@ -388,13 +388,13 @@ You can set multiple custom labels in a single Linear Gauge by adding an array o
 
         cl.Value("Mathematics Mark")
 
-        .Position(pos => pos.X(55).Y(87)).Color("Red").Add();
+        .Position(position => position.X(55).Y(87)).Color("Red").Add();
 
         //Adding custom label 2
 
         cl.Value("Marks in %")
 
-        .Position(pos => pos.X(15).Y(57)).Color("Red").TextAngle(90).Add();
+        .Position(position => position.X(15).Y(57)).Color("Red").TextAngle(90).Add();
 
     }).Add();
 

@@ -41,13 +41,13 @@ You can store the `“United States of America.json”` file in App_Data folder 
 
 	{
 
-		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+		string data = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
 		JavaScriptSerializer ser = new JavaScriptSerializer();
 
 		ser.MaxJsonLength = int.MaxValue;
 
-		return new MapData(usajson);
+		return new MapData(data);
 
 	} 
 
@@ -101,13 +101,13 @@ For better understanding, “MapController.cs” is populated with data of USA P
 
 	{
 
-		string usajson = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
+		string data = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/USA.json"));
 
 		JavaScriptSerializer ser = new JavaScriptSerializer();
 
 		ser.MaxJsonLength = int.MaxValue;
 
-		return new MapData(usajson);
+		return new MapData(data);
 
 	}
 
@@ -287,11 +287,11 @@ The JSON object “populationData” is used as DataSource in the following code
 
 	@(Html.EJ().Map("container")            
 
-	.Layers(lr =>
+	.Layers(layer =>
 
 	{         
 
-		lr.ShapeData(mapData)            
+		layer.ShapeData(mapData)            
 
 		.ShapeDataPath("name")
 

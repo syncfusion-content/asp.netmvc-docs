@@ -38,9 +38,9 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                     {
                         tabgroup.Text("SplitButton").AlignType(RibbonAlignType.Columns).Content(ctn =>
                         {
-                                ctn.ContentGroups(ctngrp =>
+                                ctn.ContentGroups(contentGroup =>
                                 {
-                                    ctngrp.Id("paste").Text("Paste").ToolTip("Paste").Type(RibbonButtonType.SplitButton).QuickAccessMode(QuickAccessMode.ToolBar).SplitButtonSettings(new SplitButtonProperties()
+                                    contentGroup.Id("paste").Text("Paste").ToolTip("Paste").Type(RibbonButtonType.SplitButton).QuickAccessMode(QuickAccessMode.ToolBar).SplitButtonSettings(new SplitButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         PrefixIcon = "e-ribbon e-ribbonpaste",
@@ -52,9 +52,9 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                         }).Add();
                         tabgroup.Text("Button").AlignType(RibbonAlignType.Rows).Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                                 {
-                                    ctngrp.Id("italic").ToolTip("Italic").QuickAccessMode(QuickAccessMode.ToolBar).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                    contentGroup.Id("italic").ToolTip("Italic").QuickAccessMode(QuickAccessMode.ToolBar).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
                                         DefaultText = "Italic",
@@ -66,9 +66,9 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                         }).Add();
                         tabgroup.Text("Toggle").AlignType(RibbonAlignType.Columns).Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentGroup =>
                             {
-                                ctngrp.Id("bold").ToolTip("Bold").QuickAccessMode(QuickAccessMode.ToolBar).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                contentGroup.Id("bold").ToolTip("Bold").QuickAccessMode(QuickAccessMode.ToolBar).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                 {
                                     ContentType = ContentType.ImageOnly,
                                     DefaultText = "Bold",

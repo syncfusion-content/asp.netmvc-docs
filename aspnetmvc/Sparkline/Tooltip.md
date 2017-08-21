@@ -15,7 +15,7 @@ The Tooltip follows the pointer movement and is used to indicate the value of a 
 
 @(Html.EJ().Sparkline("container")
 
-.Tooltip(tl => tl.Visible(true))
+.Tooltip(tooltip => tooltip.Visible(true))
  
  )
 
@@ -38,7 +38,7 @@ HTML elements can be displayed in the tooltip by using the `Template` option of 
 
 @(Html.EJ().Sparkline("container")
 
-.Tooltip(tl => tl.Visible(true).Template("item"))
+.Tooltip(tooltip => tooltip.Visible(true).Template("item"))
  
  )
 

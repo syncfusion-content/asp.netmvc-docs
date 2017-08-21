@@ -39,9 +39,9 @@ Add a class named “EditorValue” in the Models folder and replace the code wi
     public class EditorValue
     {
         public int number { set; get; }
-        public EditorValue(int num)
+        public EditorValue(int value)
         {
-            number = num;
+            number = value;
         }
         public EditorValue (){}
     }
@@ -156,9 +156,9 @@ Step 2: Next, Update the number property of the “EditorValue” class as “Re
         [Required(ErrorMessage = "Numeric Textbox is Required")]
         public int number { set; get; }
         
-        public EditorValue(int num)
+        public EditorValue(int value)
         {
-            number = num;
+            number = value;
         }
     }
 
@@ -210,9 +210,9 @@ Step 2: Next, Update the number property of the “EditorValue” class as “Re
         [Required(ErrorMessage = "Numeric Textbox is Required")]
         public int number { set; get; }
         
-        public EditorValue(int num)
+        public EditorValue(int value)
         {
-            number = num;
+            number = value;
         }
     }
 

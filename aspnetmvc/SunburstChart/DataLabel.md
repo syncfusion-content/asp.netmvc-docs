@@ -99,7 +99,7 @@ You can customize the appearance of the data point using the `Font` property.
 @(Html.EJ().SunburstChart("chartContainer")
 
      //.
-    .DataLabelSettings(dt => dt.Visible(true).Font(fn=>fn.Color("Black").Font-Weight("Bold").Size("15px")))
+    .DataLabelSettings(dt => dt.Visible(true).Font(font=>font.Color("Black").Font-Weight("Bold").Size("15px")))
       //...
  )
 

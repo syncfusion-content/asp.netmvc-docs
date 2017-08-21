@@ -41,9 +41,9 @@ $("#subject").focusout(function() {
 })
 
 // To Validate the Description field.
-$("#customdescription").focusout(function() {
-    if ($.trim($("#customdescription").val()) == "") {
-        $("#customdescription").addClass("validation");
+$("#customDescription").focusout(function() {
+    if ($.trim($("#customDescription").val()) == "") {
+        $("#customDescription").addClass("validation");
         return false;
     }
 })
@@ -94,8 +94,8 @@ Initially, set the `Highlight` as false for the `WorkHours`, so as to disable th
         .ShowCurrentTimeIndicator(false)
         .WorkHours(hrs => hrs.Highlight(false))
         .Group(gr => gr.Resources(Group))
-        .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add(); })
-        .ScheduleClientSideEvents(evt => evt.Create("onCreate").ActionComplete("onCreate"))
+        .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add(); })
+        .ScheduleClientSideEvents(event => event.Create("onCreate").ActionComplete("onCreate"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -126,10 +126,10 @@ function onCreate(args) {
             resourceThreeEnd = 18;
 
         this.option("workHours.highlight", (this.currentView() != "month") ? false : true);
-        var trElements = this.$WorkCellDiv.find("tr");    // Get the Scheduler workcell rows
+        var trElements = this.$WorkCellDiv.find("tr");    // Get the Scheduler work cell rows
 
         for (var i = 0; i < trElements.length; i++) {
-            var tdElements = $(trElements[i]).find("td");  // Get the Scheduler workcell columns
+            var tdElements = $(trElements[i]).find("td");  // Get the Scheduler work cell columns
             for (var j = 0; j < tdElements.length; j++) {
                 switch (this.currentView()) {
                     case "day":
@@ -434,7 +434,7 @@ The following code example depicts the way to synchronize the Schedule with Outl
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 12))
-               .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("/Home/GetApp").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
+               .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("/Home/GetApp").CrudURL("/Home/Batch").Adaptor("UrlAdaptor"))
                .Id("Id")
                 .Subject("Subject")
                 .StartTime("StartTime")
@@ -461,7 +461,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
-using Microsoft.Office.Interop.Outlook; // required Microsoft DLL
+using Microsoft.Office.Interop.Outlook; // required Microsoft Assembly
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -488,26 +488,26 @@ namespace ScheduleCRUD.Controllers
         public List<ScheduleData> GetData() // function to return the outlook appointments
         {
             Microsoft.Office.Interop.Outlook.Application oApp = new Microsoft.Office.Interop.Outlook.Application();
-            Microsoft.Office.Interop.Outlook.NameSpace mapiNamespace = oApp.GetNamespace("MAPI");
-            Microsoft.Office.Interop.Outlook.MAPIFolder CalendarFolder = mapiNamespace.GetDefaultFolder(Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderCalendar);
+            Microsoft.Office.Interop.Outlook.NameSpace mapNamespace = oApp.GetNamespace("MAPI");
+            Microsoft.Office.Interop.Outlook.MAPIFolder CalendarFolder = mapNamespace.GetDefaultFolder(Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderCalendar);
             Microsoft.Office.Interop.Outlook.Items outlookCalendarItems = CalendarFolder.Items;
-            List<Microsoft.Office.Interop.Outlook.AppointmentItem> lst = new List<Microsoft.Office.Interop.Outlook.AppointmentItem>();
+            List<Microsoft.Office.Interop.Outlook.AppointmentItem> appointmentList = new List<Microsoft.Office.Interop.Outlook.AppointmentItem>();
 
             foreach (Microsoft.Office.Interop.Outlook.AppointmentItem item in outlookCalendarItems)
             {
-                lst.Add(item);
+                appointmentList.Add(item);
             }
 
             List<ScheduleData> newApp = new List<ScheduleData>();
             // converting COM object into IEnumerable object
-            for (var i = 0; i < lst.Count; i++)
+            for (var i = 0; i < appointmentList.Count; i++)
             {
                 ScheduleData app = new ScheduleData();
                 app.Id = i;
-                app.Subject = lst[i].Subject;
-                app.AllDay = lst[i].AllDayEvent;
-                app.StartTime = Convert.ToDateTime(lst[i].Start.ToString());
-                string endTime = lst[i].End.ToString();
+                app.Subject = appointmentList[i].Subject;
+                app.AllDay = appointmentList[i].AllDayEvent;
+                app.StartTime = Convert.ToDateTime(appointmentList[i].Start.ToString());
+                string endTime = appointmentList[i].End.ToString();
                 DateTime appEndDate = Convert.ToDateTime(endTime);
                 if (endTime.Contains("12:00:00 AM") && app.AllDay == true)
                     app.EndTime = appEndDate.AddMinutes(-1);

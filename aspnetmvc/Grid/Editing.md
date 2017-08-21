@@ -1310,7 +1310,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
-            .Datasource(ds => ds.URL("Home/DataSource").UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(AdaptorType.UrlAdaptor))
+            .Datasource(datasource => datasource.URL("Home/DataSource").UpdateURL("Home/Update").InsertURL("Home/Insert").RemoveURL("Home/Delete").Adaptor(AdaptorType.UrlAdaptor))
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
             .ToolbarSettings(toolbar =>
@@ -1345,17 +1345,17 @@ The following code example describes the above behavior.
         {
            public class GridController : Controller
               { 
-                public ActionResult DataSource(DataManager dm)
+                public ActionResult DataSource(DataManager datamanager)
                  {
                    IEnumerable DataSource = OrderRepository.GetAllRecords();
                    DataResult result = new DataResult();
                    DataOperations operation = new DataOperations();
                    result.result = DataSource;
                    result.count = result.result.AsQueryable().Count();
-                   if (dm.Skip > 0)
-                   result.result = operation.PerformSkip(result.result, dm.Skip);
-                   if (dm.Take > 0)
-                   result.result = operation.PerformTake(result.result, dm.Take);
+                   if (datamanager.Skip > 0)
+                   result.result = operation.PerformSkip(result.result, datamanager.Skip);
+                   if (datamanager.Take > 0)
+                   result.result = operation.PerformTake(result.result, datamanager.Take);
                    return Json(result, JsonRequestBehavior.AllowGet);
                }
            public class DataResult
@@ -1567,7 +1567,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
-            .Datasource(ds => ds.URL("Home/DataSource").CrudURL("Home/CrudUpdate").Adaptor(AdaptorType.UrlAdaptor))
+            .Datasource(datasource => datasource.URL("Home/DataSource").CrudURL("Home/CrudUpdate").Adaptor(AdaptorType.UrlAdaptor))
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
             .ToolbarSettings(toolbar =>
@@ -1620,7 +1620,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
     @(Html.EJ().Grid<Object>("FlatGrid")
-            .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.dataSource).BatchURL("Home/BatchUpdate").Adaptor(AdaptorType.UrlAdaptor))
+            .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.dataSource).BatchURL("Home/BatchUpdate").Adaptor(AdaptorType.UrlAdaptor))
             .AllowPaging()
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
             .ToolbarSettings(toolbar =>
@@ -1674,7 +1674,7 @@ The following code example describes the above behavior.
 {% highlight razor %}
 
     @(Html.EJ().Grid<object>("Grid")
-            .Datasource(ds => { ds.URL("/odata/Orders").Adaptor(AdaptorType.ODataV4Adaptor); })
+            .Datasource(datasource => { datasource.URL("/odata/Orders").Adaptor(AdaptorType.ODataV4Adaptor); })
             .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing().EditMode(EditMode.Normal); })
             .ToolbarSettings(toolbar =>
             {

@@ -77,7 +77,7 @@ public Array GetDataSource()
 
 {% highlight js %}
 {root: {data: [ 
-    {Name: "Steve-Ceo"},
+    {Name: "Steve-CEO"},
     {Name: "Kevin-Manager", ReportingPerson: "Steve-CEO"},
     {Name: "Peter-Manager", ReportingPerson: "Steve-CEO"},
     {Name: "John- Manager", ReportingPerson: "Peter-Manager"},

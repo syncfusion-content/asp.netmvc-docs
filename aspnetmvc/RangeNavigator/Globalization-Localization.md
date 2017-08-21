@@ -37,7 +37,7 @@ Localization is the key feature that provides solutions globally with the help o
 {% highlight CSHTML %}
 
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .Locale("fr-FR")
 
@@ -54,7 +54,7 @@ Localization is the key feature that provides solutions globally with the help o
 Right-to-Left or RTL describes the ability of application to handle and responds you to communicate with a right-to-left language, like Arabic or Japanese. EnableRTL property is used to change the rendering format to "Right to Left", by default it renders from "Left to Right" in RangeNavigator. 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .EnableRTL(true)
 

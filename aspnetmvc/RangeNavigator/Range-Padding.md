@@ -16,7 +16,7 @@ Range Padding adds padding for range in RangeNavigator. It allows you to space t
 The RangePadding property allows you to customize the automatic range calculation using the default auto range calculation for RangeNavigator. 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
 .RangePadding("none")   
 
@@ -77,7 +77,7 @@ Using the default range calculation for RangeNavigator, the RangePadding propert
 {% highlight CSHTML %}
  
 
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
    
 .RangePadding("none")   
@@ -114,9 +114,9 @@ The following code example renders a RangeNavigator with a range from 2010 Janua
 
 {% highlight CSHTML %}
  
-@(Html.EJ().RangeNavigator("rangecontainer")
+@(Html.EJ().RangeNavigator("container")
 
-. RangeSettings(rn=>rn.Start("2010/1/1").End("2012/13/1"))
+. RangeSettings(range=>range.Start("2010/1/1").End("2012/13/1"))
 
 .Render())
 

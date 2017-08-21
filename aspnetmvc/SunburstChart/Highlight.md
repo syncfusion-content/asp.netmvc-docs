@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 # Highlight 
-EcshtmlunburstChart provides highlighting support for the points on mouse hover. To enable the highlighting , set the *Enable* property to true in the **HighlightSettings**. 
+SunburstChart provides highlighting support for the points on mouse hover. To enable the highlighting , set the *Enable* property to true in the **HighlightSettings**. 
 
 {% highlight cshtml %}
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true))
+     .HighlightSettings(highlight=>highlight.Enable(true))
  )
 
 {% endhighlight %}
@@ -33,7 +33,7 @@ EcshtmlunburstChart provides highlighting support for the points on mouse hover.
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true).Type(SunburstHighlightType.Color).Color("Red"))
+     .HighlightSettings(highlight=>highlight.Enable(true).Type(SunburstHighlightType.Color).Color("Red"))
  )
 
  {% endhighlight %}
@@ -55,7 +55,7 @@ The following code shows how to set the highlight type as child
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true).Mode(SunburstHighlightMode.Child))
+     .HighlightSettings(highlight=>highlight.Enable(true).Mode(SunburstHighlightMode.Child))
  )
 
 {% endhighlight %}
@@ -70,7 +70,7 @@ The parent mode can be enabled by using the below code
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true).Mode(SunburstHighlightMode.Parent))
+     .HighlightSettings(highlight=>highlight.Enable(true).Mode(SunburstHighlightMode.Parent))
  )
 
 
@@ -86,7 +86,7 @@ To highlight the particular segment, the point mode of the highlight settings is
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true).Mode(SunburstHighlightMode.Point))
+     .HighlightSettings(highlight=>highlight.Enable(true).Mode(SunburstHighlightMode.Point))
  )
 
  {% endhighlight %}
@@ -101,7 +101,7 @@ The following code snippet is used for the all mode of highlight settings
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .HighlightSettings(hl=>hl.Enable(true).Mode(SunburstHighlightMode.All))
+     .HighlightSettings(highlight=>highlight.Enable(true).Mode(SunburstHighlightMode.All))
  )
 
 

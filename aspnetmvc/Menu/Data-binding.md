@@ -164,19 +164,16 @@ In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](htt
 
 1. Add the following code in your View page to render the menu with remote data
 
-
 {% highlight CSHTML %}
 
 @Html.EJ().Menu("SyncfusionProducts").Width("600px").MenuFields(f => f.Datasource(d =>
-d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(c => 
-c.Datasource(cd => 
-cd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))  .TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItetext").Child(cc => 
-cc.Datasource(ccd => 
-ccd.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("InnerItems").Id("InnerSubItemID").ParentId("SubItemID").Text("InnerSubItetext"))))
+d.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).Query("ej.Query().from('RootLevelItems')").Id("InfoID").Text("InfoText").Child(menuChild => 
+menuChild.Datasource(dataSource => 
+dataSource.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/"))  .TableName("SubItems").Id("SubItemID").ParentId("InfoID").Text("SubItetext").Child(subMenuChild => 
+subMenuChild.Datasource(dataSource => 
+dataSource.URL("http://mvc.syncfusion.com/UGOdataServices/Northwnd.svc/")).TableName("InnerItems").Id("InnerSubItemID").ParentId("SubItemID").Text("InnerSubItetext"))))
 
 {% endhighlight %}
-
-
 
 The following screenshot displays the output of the above code. 
 
@@ -184,4 +181,3 @@ The following screenshot displays the output of the above code.
 
 Remote data of Menu
 {:.caption}
-

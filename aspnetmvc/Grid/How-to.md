@@ -199,7 +199,7 @@ To apply tooltip for cells, You need to use `CustomAttributes` in columns. For m
            {
 
                col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-               col.Field("CustomerID").HeaderText("Customer ID").Width(80).CustomAttributes(cus => cus.AddAttribute("title","")).Add();
+               col.Field("CustomerID").HeaderText("Customer ID").Width(80).CustomAttributes(customattributes => customattributes.AddAttribute("title","")).Add();
                col.Field("EmployeeID").HeaderText("Employee ID").Width(75).TextAlign(TextAlign.Right).Add();       
 			   col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
 
@@ -297,14 +297,14 @@ Enter EmployeeID Field Value:
 
 	var value = $("#colValue").val();
 
-	//Add custom paramter to the server
+	//Add custom parameter to the server
 
 	var query = new ej.Query().addParams("EmployeeID", value);
 
 	//Creating ejDataManager with UrlAdaptor
 
-	var dm = ej.DataManager({ url: "/Home/GetData", adaptor: new ej.UrlAdaptor() });
-	var promise = dm.executeQuery(query);
+	var datamanager = ej.DataManager({ url: "/Home/GetData", adaptor: new ej.UrlAdaptor() });
+	var promise = datamanager.executeQuery(query);
 	promise.done(function (e) {
 
 	//Assign the result to the grid dataSource using "dataSource" method.
@@ -348,7 +348,7 @@ namespace EJGrid.Controllers
 
         {
 
-            var data = new DataClasses1DataContext().Orders.Where(ds => ds.EmployeeID ==        EmployeeID).ToList();
+            var data = new DataClasses1DataContext().Orders.Where(datasource => datasource.EmployeeID ==        EmployeeID).ToList();
 
             return Json(data, JsonRequestBehavior.AllowGet);
 
@@ -379,7 +379,7 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
 @(Html.EJ().Grid<EJGrid.Models.Order>("Grid")
 
-        .Datasource(ds => ds.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("Home/Update")
+        .Datasource(datasource => datasource.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("Home/Update")
 
             .InsertURL("Home/Insert").RemoveURL("Home/Remove").Adaptor("remoteSaveAdaptor"))
 
@@ -432,11 +432,11 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
     var adaptor = new ej.remoteSaveAdaptor().extend({
 
-        insert: function (dm, data, tableName) {
+        insert: function (datamanager, data, tableName) {
 
             return {
 
-                url: dm.dataSource.insertUrl,
+                url: datamanager.dataSource.insertUrl,
 
                 dataType: 'json',
 
@@ -448,13 +448,13 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
         },
 
-        update: function (dm, keyField, value, tableName) {
+        update: function (datamanager, keyField, value, tableName) {
 
             return {
 
                 type: "POST",
 
-                url: dm.dataSource.updateUrl+"?id="+value.OrderID,
+                url: datamanager.dataSource.updateUrl+"?id="+value.OrderID,
 
                 dataType: 'json',
 
@@ -506,23 +506,23 @@ namespace EJGrid.Controllers
 
         {
 
-            var ord = new EditableOrder();
+            var order = new EditableOrder();
 
-            ord.OrderID = id;
+            order.OrderID = id;
 
             if (value["EmployeeID"] != "")
 
-            ord.EmployeeID = Convert.ToInt32(value["EmployeeID"]);
+            order.EmployeeID = Convert.ToInt32(value["EmployeeID"]);
 
             if (value["Freight"] != "")
 
-            ord.Freight = Convert.ToDecimal(value["Freight"]);
+            order.Freight = Convert.ToDecimal(value["Freight"]);
 
             if (value["ShipCity"] != null)
 
-            ord.ShipCity = value["ShipCity"];
+            order.ShipCity = value["ShipCity"];
 
-            OrderRepository.Update(ord);
+            OrderRepository.Update(order);
 
             var data = OrderRepository.GetAllRecords();
 
@@ -534,23 +534,23 @@ namespace EJGrid.Controllers
 
         {
 
-            var ord = new EditableOrder();
+            var order = new EditableOrder();
 
-            ord.OrderID = Convert.ToInt32(value["OrderID"]);
+            order.OrderID = Convert.ToInt32(value["OrderID"]);
 
             if (value["EmployeeID"] != "")
 
-                ord.EmployeeID = Convert.ToInt32(value["EmployeeID"]);
+                order.EmployeeID = Convert.ToInt32(value["EmployeeID"]);
 
             if (value["Freight"] != "")
 
-                ord.Freight = Convert.ToDecimal(value["Freight"]);
+                order.Freight = Convert.ToDecimal(value["Freight"]);
 
             if (value["ShipCity"] != null)
 
-                ord.ShipCity = value["ShipCity"];
+                order.ShipCity = value["ShipCity"];
 
-            OrderRepository.Add(ord);
+            OrderRepository.Add(order);
 
             var data = OrderRepository.GetAllRecords();
 
@@ -706,9 +706,9 @@ The Grid initialization is as follows.
 
 @(Html.EJ().Grid<EmployeeMap>("Grid")
 
-.Datasource(ds =>
+.Datasource(datasource =>
 
-	ds.URL("Home/GetData") //Action which returns data
+	datasource.URL("Home/GetData") //Action which returns data
 
 	.InsertURL("Home/PerformInsert") 
 
@@ -843,15 +843,15 @@ namespace UsingNHibernate.Controllers
 
             {
 
-                var employeetoUpdate = session.Get<EmployeeMap>(key);
+                var employeeUpdate = session.Get<EmployeeMap>(key);
 
 
 
-                employeetoUpdate.Designation = value.Designation;
+                employeeUpdate.Designation = value.Designation;
 
-                employeetoUpdate.FirstName = value.FirstName;
+                employeeUpdate.FirstName = value.FirstName;
 
-                employeetoUpdate.LastName = value.LastName;
+                employeeUpdate.LastName = value.LastName;
 
 
 
@@ -859,7 +859,7 @@ namespace UsingNHibernate.Controllers
 
                 {
 
-                    session.Save(employeetoUpdate);
+                    session.Save(employeeUpdate);
 
                     transaction.Commit();
 
@@ -1048,7 +1048,7 @@ We can add comments to the word document using the AppendComment method in the W
             GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             IWordDocument document = exp.Export(gridProperty, (IEnumerable)data, "Export.docx", false, false, "flat-lime", true);
             var table = document.Sections[0].Tables[0];
-            table.AddRow();//Add new row to the gridtable                    
+            table.AddRow();//Add new row to the grid table                    
             var para = table.Rows[0].Cells[0].AddParagraph().AppendComment("*Comments added");
             document.Save("Export.docx", FormatType.Docx, System.Web.HttpContext.Current.Response, HttpContentDisposition.Attachment);
         }
@@ -1102,7 +1102,7 @@ We can add comments to a PDF documents using the annotation support provided in 
             PdfExport exp = new PdfExport();
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
-            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
+            PdfDocument document = exp.Export(gridProperty, (IEnumerable)data, "Export.pdf", false, false, "flat-lime", true);           
             RectangleF rectangle = new RectangleF(120, 20, 20, 125);
             //Creates a new pop-up annotation.
             PdfPopupAnnotation popupAnnotation = new PdfPopupAnnotation(rectangle, "*Comments added");
@@ -1112,8 +1112,8 @@ We can add comments to a PDF documents using the annotation support provided in 
             //Sets the PDF pop-up icon.
             popupAnnotation.Icon = PdfPopupIcon.Comment;
             //Adds the annotation to page.
-            pdfdocument.Pages[0].Annotations.Add(popupAnnotation);
-            pdfdocument.Save("Export.pdf", Response, HttpReadType.Save);
+            document.Pages[0].Annotations.Add(popupAnnotation);
+            document.Save("Export.pdf", Response, HttpReadType.Save);
         }
           
     }
@@ -1293,9 +1293,9 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties gridProperty = (GridProperties)Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             PdfExport exp = new PdfExport();
-            PdfDocument pdfdocument = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.pdf", false, false, "flat-lime", true);
+            PdfDocument document = exp.Export(gridProperty, (IEnumerable)DataSource, "Export.pdf", false, false, "flat-lime", true);
 
-            RectangleF rect = new RectangleF(0, 0, pdfdocument.PageSettings.Width, 50);
+            RectangleF rect = new RectangleF(0, 0, document.PageSettings.Width, 50);
 
             //create a header pager template
             PdfPageTemplateElement header = new PdfPageTemplateElement(rect);
@@ -1308,11 +1308,11 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
             PdfFont font = new PdfTrueTypeFont(f, true);
 
             header.Graphics.DrawString("Demo Report", font, PdfBrushes.Black, new Point(250, 0)); //Add custom text to the Header
-            pdfdocument.Template.Top = header; //Append custom template to the document           
+            document.Template.Top = header; //Append custom template to the document           
 
             footer.Graphics.DrawString("CopyRights", font, PdfBrushes.Gray, new Point(250, 0));//Add Custom text to footer
-            pdfdocument.Template.Bottom = footer;//Add the footer template to document
-            pdfdocument.Save(Server.MapPath("/Output/Export.pdf"));
+            document.Template.Bottom = footer;//Add the footer template to document
+            document.Save(Server.MapPath("/Output/Export.pdf"));
             return RedirectToAction("Index");
         }
           
@@ -1326,7 +1326,7 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
 Using `search` method of grid, you can search the string in grid externally without using in-built toolbar search support. While using `search` method it is necessary to set `AllowSearching` property as `true`. The following code example explains the above behavior.
 {% tabs %}
 {% highlight razor %}
-<input type="text" id="srchstr" class="e-ejinputtext" />
+<input type="text" id="search" class="e-ejinputtext" />
 
 @(Html.EJ().Button("search")
 .Text("Searching")
@@ -1353,7 +1353,7 @@ col.Field("ShipCountry").Add();
 {% highlight js %}
 function onSearching(args) {
 var obj = $("#Grid").ejGrid("instance");
-var val = $("#srchstr").val();
+var val = $("#search").val();
 obj.search(val);
 }
 {% endhighlight %}

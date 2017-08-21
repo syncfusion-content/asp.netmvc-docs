@@ -68,7 +68,7 @@ The following code example describes the above behavior.
             .AllowPaging()
             .ToolbarSettings(toolbar => { toolbar.ShowToolbar().ToolbarItems(items => { items.AddTool(ToolBarItems.Search); }); })
             .AllowSearching()  
-			.SearchSettings(col => { col.Fields(search => { search.Add("CustomerID"); }).Operator(Operator.Contains).Key("ra").IgnoreCase(false); })         
+			.SearchSettings(col => { col.Fields(search => { search.Add("CustomerID"); }).Operator(Operator.Contains).Key("frank").IgnoreCase(false); })         
             .Columns(col =>
             {
                 col.Field("OrderID").Add();

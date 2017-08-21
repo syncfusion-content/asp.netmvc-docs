@@ -21,30 +21,30 @@ Initialize the Dialog widgets by configuring as below.
 
     @{
         Html.EJ()
-            .Dialog("firstdialog")
+            .Dialog("firstDialog")
             .Title("Dialog")
             .Width(250)
-            .Position(pos => pos.XValue("20px").YValue("20px"))
+            .Position(position => position.XValue("20px").YValue("20px"))
             .ContentTemplate(@<p>This is a simple dialog</p>)
             .Render();
     }
 
     @{
         Html.EJ()
-            .Dialog("seconddialog")
+            .Dialog("secondDialog")
             .Title("Window")
             .Width(250)
-            .Position(pos => pos.XValue("300px").YValue("20px"))
+            .Position(position => position.XValue("300px").YValue("20px"))
             .ContentTemplate(@<p>This is a different dialog</p>)
             .Render();
     }
 
     @{
         Html.EJ()
-            .Dialog("thirddialog")
+            .Dialog("thirdDialog")
             .Title("Popup")
             .Width(250)
-            .Position(pos => pos.XValue("150px").YValue("150px"))
+            .Position(position => position.XValue("150px").YValue("150px"))
             .ContentTemplate(@<p>This is an another dialog</p>)
             .Render();
     }
@@ -71,29 +71,29 @@ Create a div element to render the child Dialog widget and use it as a content o
 
     @{
         Html.EJ()
-            .Button("outerbutton")
+            .Button("outerButton")
             .Text("Open Dialog")
             .Type(ButtonType.Button)
-            .ClientSideEvents(evt => evt.Click("openDialog"))
+            .ClientSideEvents(clientEvent => clientEvent.Click("openDialog"))
             .Render();
     }
 
     @{
         Html.EJ()
-            .Dialog("outerdialog")
+            .Dialog("outerDialog")
             .Title("Dialog")
             .Width(500)
             .Height(400)
             .ShowOnInit(false)
             .ContentTemplate(@<div>
-                @Html.EJ().Button("innerbutton").Text("Open Nested Dialog").ClientSideEvents(evt => evt.Click("openNestedDialog"))
+                @Html.EJ().Button("innerButton").Text("Open Nested Dialog").ClientSideEvents(clientEvent => clientEvent.Click("openNestedDialog"))
             </div>)
             .Render();
     }
 
     @{
         Html.EJ()
-            .Dialog("seconddialog")
+            .Dialog("secondDialog")
             .Title("Window")
             .Width(400)
             .Height(300)
@@ -114,10 +114,10 @@ Add the below script to the view page
 
     <script>
         function openDialog() {
-            $("#outerdialog").ejDialog("open");
+            $("#outerDialog").ejDialog("open");
         }
         function openNestedDialog() {
-            $("#seconddialog").ejDialog("open");
+            $("#secondDialog").ejDialog("open");
         }
     </script>
 

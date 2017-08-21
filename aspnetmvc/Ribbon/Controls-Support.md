@@ -93,9 +93,9 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                             {
                                 tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
                                 {
-                                    ctn.ContentGroups(ctngrp =>
+                                    ctn.ContentGroups(contentTab =>
                                     {
-                                        ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                                        contentTab.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             ImagePosition = ImagePosition.ImageTop,
@@ -105,9 +105,9 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                 }).Add();
                                 tabgroup.Text("Clipboard").AlignType(RibbonAlignType.Columns).Content(ctn =>
                                 {
-                                    ctn.ContentGroups(ctngrp =>
+                                    ctn.ContentGroups(contentTab =>
                                     {
-                                        ctngrp.Id("paste").Text("Paste").ToolTip("Paste").SplitButtonSettings(new SplitButtonProperties()
+                                        contentTab.Id("paste").Text("Paste").ToolTip("Paste").SplitButtonSettings(new SplitButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             PrefixIcon = "e-ribbon e-ribbonpaste",
@@ -119,24 +119,24 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                 }).Add();
                                 tabgroup.Text("Font").AlignType(RibbonAlignType.Rows).Content(ctn =>
                                 {
-                                    ctn.ContentGroups(ctngrp =>
+                                    ctn.ContentGroups(contentTab =>
                                     {
-                                        ctngrp.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
+                                        contentTab.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
                                         {
                                             DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
                                             Text = "Segoe UI",
                                             Width = "150px"
                                         }).Add();
-                                        ctngrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
+                                        contentTab.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
                                         {
                                             DataSource = (IEnumerable<FontPoint>)ViewBag.datasource1,
                                             Text = "1pt",
                                             Width = "65px"
                                         }).Add();
                                     }).ContentDefaults(df => df.Type(RibbonButtonType.DropDownList).Height("28px")).Add();
-                                    ctn.ContentGroups(ctngrp =>
+                                    ctn.ContentGroups(contentTab =>
                                     {
-                                        ctngrp.Id("bold").ToolTip("Bold").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                        contentTab.Id("bold").ToolTip("Bold").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Bold",
@@ -144,7 +144,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                             DefaultPrefixIcon = "e-ribbon bold",
                                             ActivePrefixIcon = "e-ribbon bold",
                                         }).Add();
-                                        ctngrp.Id("italic").ToolTip("Italic").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                                        contentTab.Id("italic").ToolTip("Italic").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Italic",
@@ -222,15 +222,15 @@ You can set `Type` as `custom` to render custom controls and Custom element id h
                     {
                         tabgroup.Text("Font").Content(ctn =>
                         {
-                            ctn.ContentGroups(ctngrp =>
+                            ctn.ContentGroups(contentTab =>
                             {
-                                ctngrp.Id("fontcolor").ToolTip("Font Color").ContentID("fontcolor").Add();
+                                contentTab.Id("fontColor").ToolTip("Font Color").ContentID("fontColor").Add();
                             }).ContentDefaults(df => df.Type(RibbonButtonType.Custom).Height("30px")).Add();
                         }).Add();
                         tabgroup.Text("Operators").Type("custom").ContentID("design").Add();
                     }).Add();
                 })
-                .ClientSideEvents(evt => evt.Create("createControl"))    )
+                .ClientSideEvents(event => event.Create("createControl"))    )
     <ul id="ribbon">
         <li>
             <a>FILE</a>
@@ -240,7 +240,7 @@ You can set `Type` as `custom` to render custom controls and Custom element id h
             </ul>
         </li>
     </ul>
-    <input id="fontcolor" />
+    <input id="fontColor" />
     <table id="design" class="e-designtablestyle">
         <tr>
             <td><input type="checkbox" id="check1" /><label for="check1">Header Row</label></td>
@@ -252,7 +252,7 @@ You can set `Type` as `custom` to render custom controls and Custom element id h
     </table>
     <script>
         function createControl(args) {
-            $("#fontcolor").ejColorPicker({ value: "#FFFF00", modelType: "palette", cssClass: "e-ribbon", toolIcon: "e-fontcoloricon" });
+            $("#fontColor").ejColorPicker({ value: "#FFFF00", modelType: "palette", cssClass: "e-ribbon", toolIcon: "e-fontcoloricon" });
         }
     </script>
 

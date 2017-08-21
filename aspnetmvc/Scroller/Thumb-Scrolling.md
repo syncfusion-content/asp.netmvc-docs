@@ -19,11 +19,11 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 	// In the CSHTML page, add a <div> element to configure Scroller widget and initialize the control.
 
-	<div id="scrollcontent">
+	<div id="scrollContent">
 
 		<div> @*Wrapper div for Scroller.*@
 
-			<div id="innercontent">  @*Content div*@
+			<div class="inner-content">  @*Content div*@
 
 				<h3>MVC </h3>
 
@@ -47,7 +47,7 @@ The following steps explains you the configuration of EnableTouchScroll property
 
 	</div>
 
-	@{Html.EJ().Scroller("scrollcontent").Height(170).Width(350).EnableTouchScroll(false).Render();}
+	@{Html.EJ().Scroller("scrollContent").Height(170).Width(350).EnableTouchScroll(false).Render();}
 
    ~~~
    

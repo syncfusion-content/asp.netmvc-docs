@@ -21,7 +21,7 @@ Add the following code example for MVC samples
 
 <style>
 
-	#appimage 
+	#appImage 
 	{
 
 		background-image: url("http://js.syncfusion.com/UG/mobile/content/google.png");
@@ -71,7 +71,7 @@ Add the following code example for MVC samples
 
 <div id="imageTemplate">
 
-        <div id="appimage">
+        <div id="appImage">
 
         </div>
 

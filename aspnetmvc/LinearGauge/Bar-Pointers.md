@@ -35,9 +35,9 @@ You can add Bar Pointer collection directly to the scale object. Refer the follo
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false)
 
@@ -45,9 +45,9 @@ You can add Bar Pointer collection directly to the scale object. Refer the follo
 
     //Adding bar pointer collection
 
-    .BarPointers(bp => {
+    .BarPointers(bar => {
 
-        bp.Width(5).BarPointerDistanceFromScale(15)
+        bar.Width(5).BarPointerDistanceFromScale(15)
 
         .BarPointerBackgroundColor("Grey").Add();
 
@@ -63,11 +63,11 @@ You can add Bar Pointer collection directly to the scale object. Refer the follo
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -103,9 +103,9 @@ Bar pointer value is also important element in the Linear Gauge as it indicates 
 
 //Adding scale object
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false)
 
@@ -113,9 +113,9 @@ Bar pointer value is also important element in the Linear Gauge as it indicates 
 
     //Adding bar pointer collection
 
-    .BarPointers(bp => {
+    .BarPointers(bar => {
 
-        bp.Width(5).BarPointerDistanceFromScale(15)
+        bar.Width(5).BarPointerDistanceFromScale(15)
 
         .BarPointerBackgroundColor("Grey").BarPointerValue(91).Add();
 
@@ -131,11 +131,11 @@ Bar pointer value is also important element in the Linear Gauge as it indicates 
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -174,9 +174,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false)
 
@@ -184,9 +184,9 @@ Execute the above code to render the following output.
 
     //Adding bar pointer collection
 
-    .BarPointers(bp => {
+    .BarPointers(bar => {
 
-        bp.Width(10).BarPointerDistanceFromScale(15).BarPointerOpacity(0.7)
+        bar.Width(10).BarPointerDistanceFromScale(15).BarPointerOpacity(0.7)
 
         .BarPointerBackgroundColor("Red").BarPointerValue(91).Add();
 
@@ -202,11 +202,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -241,9 +241,9 @@ Execute the above code to render the following output.
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false)
 
@@ -251,9 +251,9 @@ Execute the above code to render the following output.
 
     //Adding bar pointer collection
 
-    .BarPointers(bp => {
+    .BarPointers(bar => {
 
-        bp.Width(10).BarPointerDistanceFromScale(40)
+        bar.Width(10).BarPointerDistanceFromScale(40)
 
         .BarPointerBackgroundColor("#8BABFF").BarPointerValue(91).Add();
 
@@ -269,11 +269,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => ds.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => ds.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -310,9 +310,9 @@ Linear Gauge can contain multiple bar pointers on it. You can use any combinatio
 
 //Adding scale collection
 
-.Scales(sc => {
+.Scales(scale => {
 
-    sc.Width(0).Border(bor => bor.Color("transparent").Width(0))
+    scale.Width(0).Border(border => border.Color("transparent").Width(0))
 
     .ShowBarPointers(true).ShowMarkerPointers(false).ShowCustomLabels(true)
 
@@ -320,25 +320,25 @@ Linear Gauge can contain multiple bar pointers on it. You can use any combinatio
 
     //Adding bar pointer collection
 
-    .BarPointers(bp =>
+    .BarPointers(bar =>
 
     {
 
         //Adding bar pointer 1
 
-        bp.Width(10).BarPointerDistanceFromScale(60)
+        bar.Width(10).BarPointerDistanceFromScale(60)
 
         .BarPointerBackgroundColor("#8BABFF").BarPointerValue(91).Add();
 
         //Adding bar pointer 2
 
-        bp.Width(10).BarPointerDistanceFromScale(20)
+        bar.Width(10).BarPointerDistanceFromScale(20)
 
         .BarPointerBackgroundColor("#FDB761").BarPointerValue(51).Add();
 
         //Adding bar pointer 3
 
-        bp.Width(10).BarPointerDistanceFromScale(100)
+        bar.Width(10).BarPointerDistanceFromScale(100)
 
         .BarPointerBackgroundColor("Red").BarPointerValue(88).Add();
 
@@ -354,11 +354,11 @@ Linear Gauge can contain multiple bar pointers on it. You can use any combinatio
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => ds.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(ds => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => ds.X(7).Y(0)).Height(6).Add();
 
     })
 
@@ -368,13 +368,13 @@ Linear Gauge can contain multiple bar pointers on it. You can use any combinatio
 
     .CustomLabels(cl => {
 
-        cl.Value("Mathematics Mark Comparision").Position(pos => pos.X(55).Y(97)).Add();
+        cl.Value("Mathematics Mark Comparison").Position(position => position.X(55).Y(97)).Add();
 
-        cl.Value("Halfyearly").Position(pos => pos.X(72).Y(87)).TextAngle(90).Add();
+        cl.Value("Half yearly").Position(position => position.X(72).Y(87)).TextAngle(90).Add();
 
-        cl.Value("Quaterly").Position(pos => pos.X(56).Y(87)).TextAngle(90).Add();
+        cl.Value("Quarterly").Position(position => position.X(56).Y(87)).TextAngle(90).Add();
 
-        cl.Value("Annual").Position(pos => pos.X(87).Y(87)).TextAngle(90).Add();
+        cl.Value("Annual").Position(position => position.X(87).Y(87)).TextAngle(90).Add();
 
     }).Add();
 

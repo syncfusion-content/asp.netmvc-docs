@@ -21,7 +21,7 @@ The EnableRTL option allows the Menu control to display it in the right to left 
 
 <div class="imgframe">
 
-    @Html.EJ().Menu("menucontrol").Items(items =>
+    @Html.EJ().Menu("menuControl").Items(items =>
 
         {
 

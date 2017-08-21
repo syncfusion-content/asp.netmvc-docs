@@ -221,7 +221,7 @@ Getting started with your MVC RangeNavigator is simple; all you need to do is in
    
 	<div> 
 
-	   @(Html.EJ().RangeNavigator("scrollcontent")
+	   @(Html.EJ().RangeNavigator("container")
 
 	   .RangeSettings(range=>range.Start("2010/1/1").End("2010/12/31"))
 
@@ -293,37 +293,37 @@ class NavigatorData
 
 {
 
-	private DateTime xdate;
+	private DateTime date;
 
 	public DateTime xDate
 
 	{
 
-		get { return xdate; }
+		get { return date; }
 
-		set { xdate = value; }
+		set { date = value; }
 
 	}
 
-	private double yvalue;
+	private double value;
 
 	public double yValue
 
 	{
 
-		get { return yvalue; }
+		get { return value; }
 
-		set { yvalue = value; }
+		set { value = value; }
 
 	}
 
-	public NavigatorData(DateTime xdate, double yvalue)
+	public NavigatorData(DateTime date, double value)
 
 	{
 
-		this.xdate = xdate;
+		this.xdate = date;
 
-		this.yvalue = yvalue;
+		this.yvalue = value;
 
 	}
 
@@ -348,7 +348,7 @@ In SimpleRangeNavigator.cshtml specify the type of series you want to render usi
 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("scrollcontent")
+@(Html.EJ().RangeNavigator("container")
 
 .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
 
@@ -370,7 +370,7 @@ The following screenshot displays the RangeNavigator with the type series as “
 Tooltip can be customized for RangeNavigator using tooltip option. You can also use TooltipDisplayMode option in tooltip to display the tooltip “always” or “ondemand” (displays tooltip only while dragging the sliders). You can also specify label format for tooltip using LabelFormat.
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator("scrollcontent")
+@(Html.EJ().RangeNavigator("container")
 
 .TooltipSettings(tooltip=>tooltip.Visible(true).LabelFormat("MMM/yyyy").TooltipDisplayMode("always"))
 
@@ -396,7 +396,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 {% highlight CSHTML %}
  
 
-@(Html.EJ().Chart("chartcontainer")
+@(Html.EJ().Chart("container")
 
 .Title(title => title.Text("Sales Analysis"))
 
@@ -425,7 +425,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 .Render())
 
 
-@(Html.EJ().RangeNavigator("scrollcontent")
+@(Html.EJ().RangeNavigator("container")
 
 .DataSource((System.Collections.IEnumerable)ViewBag.datasource)
 
@@ -433,7 +433,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 
 .YName("yValue")
 
-.RangeChanged("onrangechanged")
+.RangeChanged("onRangeChanged")
 
 .Render())
 {% endhighlight  %}
@@ -445,17 +445,17 @@ The following code example illustrates how to use the RangeChanged event of Rang
 
 <script type="text/javascript" language="javascript">
 
-	function onrangechanged(sender) 
+	function onRangeChanged(sender) 
 	{
 
-		var chartobj = $("#chartcontainer").data("ejChart");
+		var chart = $("#container").data("ejChart");
 
-		if (chartobj != null) 
+		if (chart != null) 
 		{
 
-			chartobj.model.series[0].dataSource = sender.selectedData;
+			chart.model.series[0].dataSource = sender.selectedData;
 
-			$("#chartcontainer").ejChart("redraw");
+			$("#container").ejChart("redraw");
 
 		}
 
@@ -506,38 +506,38 @@ class NavigatorData
 
 {
 
-	private double xvalue;
+	private double xValue;
 
 	public double xValue
 
 	{
 
-		get { return xvalue; }
+		get { return xValue; }
 
-		set { xvalue = value; }
+		set { xValue = value; }
 
 	}
 
-	private double yvalue;
+	private double yValue;
 
 	public double yValue
 
 	{
 
-		get { return yvalue; }
+		get { return yValue; }
 
-		set { yvalue = value; }
+		set { yValue = value; }
 
 	}
 
-	public NavigatorData(double xvalue, double yvalue)
+	public NavigatorData(double xValue, double yValue)
 
 	{
-		this.xvalue = xvalue;
+		this.xValue = xValue;
 
 
 
-		this.yvalue = yvalue;
+		this.yValue = yValue;
 
 	}
 
@@ -562,7 +562,7 @@ In SimpleRangeNavigator.cshtml, specify the DataSource to the Series and provide
 
 {% highlight CSHTML %}
 
-@(Html.EJ().RangeNavigator ("scrollcontent")
+@(Html.EJ().RangeNavigator ("container")
 
 .Series(sr =>
 

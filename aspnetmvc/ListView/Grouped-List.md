@@ -19,11 +19,11 @@ Refer the following code example.
 
  {% highlight CSHTML %}
 
-@Html.EJ().ListView("firstlevelgrouplist").Width(400).EnableGroupList(true).Groups(gp =>
+@Html.EJ().ListView("firstLevelGroupList").Width(400).EnableGroupList(true).Groups(groupList =>
 
 {
 
-	gp.Add().Title("Network").Items(items =>
+	groupList.Add().Title("Network").Items(items =>
 
 {
 
@@ -39,7 +39,7 @@ Refer the following code example.
 
 });
 
-	gp.Add().Title("Apps").Items(items =>
+	groupList.Add().Title("Apps").Items(items =>
 
 {
 
@@ -53,7 +53,7 @@ Refer the following code example.
 
 });
 
-	gp.Add().Title("Settings").Items(items =>
+	groupList.Add().Title("Settings").Items(items =>
 
 {
 
@@ -90,11 +90,11 @@ Refer the following code examples.
 
 {% highlight CSHTML %}
 
-@Html.EJ().ListView("grouplistsamp").Width(400).ShowHeader(true).HeaderTitle("Favorites").EnableGroupList(true).Groups(gp =>
+@Html.EJ().ListView("groupListSample").Width(400).ShowHeader(true).HeaderTitle("Favorites").EnableGroupList(true).Groups(groupList =>
 
 {
 
-		gp.Add().Title("Network").Items(items =>
+		groupList.Add().Title("Network").Items(items =>
 
 	{
 
@@ -110,7 +110,7 @@ Refer the following code examples.
 
 	});
 
-		gp.Add().Title("Apps").Items(items =>
+		groupList.Add().Title("Apps").Items(items =>
 
 	{
 
@@ -134,7 +134,7 @@ Refer the following code examples.
 
 	});
 
-		gp.Add().Title("Settings").Items(items =>
+		groupList.Add().Title("Settings").Items(items =>
 
 	{
 

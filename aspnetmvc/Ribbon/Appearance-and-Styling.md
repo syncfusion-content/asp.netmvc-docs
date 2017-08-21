@@ -33,9 +33,9 @@ In an view page, define the Ribbon control and configure the Ribbon with custom 
         {
             tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("new").Text("New").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         ImagePosition = ImagePosition.ImageTop,

@@ -83,11 +83,11 @@ b.Width(3)
 
 })
 
-.Pointers(po =>
+.Pointers(pointer =>
 
 {
 
-po.Length(80).Add();
+pointer.Length(80).Add();
 
 }).Add();
 
@@ -122,13 +122,13 @@ Circular Gauge with customized scale border
 
 {
 
-SC.PointerCap(pc =>
+SC.PointerCap(cap =>
 
 {
 
 //For setting pointer cap radius
 
-pc.Radius(10)
+cap.Radius(10)
 
 // For setting pointer cap border width
 
@@ -167,13 +167,13 @@ Circular Gauge with customized pointer cap
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
 // For setting scale bar size
 
-sc.Size(30)
+scale.Size(30)
 
 // For setting scale minimum value
 
@@ -237,13 +237,13 @@ You can set Multiple scales for a single Circular Gauge control by using an arra
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-.Scales(sc =>
+.Scales(scale =>
 
 {
 
 // For setting  first scale
 
-sc.ShowScaleBar(true)
+scale.ShowScaleBar(true)
 
 .Size(10)
 
@@ -265,7 +265,7 @@ sc.ShowScaleBar(true)
 
 // For setting second scale
 
-sc.Size(10)
+scale.Size(10)
 
 .ShowScaleBar(false)
 

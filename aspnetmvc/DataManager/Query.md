@@ -103,7 +103,7 @@ The clone query of the DataManager is used to duplicate the query. The following
             var flag = true;
             function OnComplete() {
                 if (flag) {
-                    flag = flase;
+                    flag = false;
                     var query = ej.Query().select(['OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'Freight']).take(5)
                     var query1 = query.clone();
                     var proxy = $("#FlatGrid").ejGrid("instance");

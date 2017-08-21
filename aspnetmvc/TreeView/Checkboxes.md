@@ -86,7 +86,7 @@ To get checked nodes of TreeView, you can use [getCheckedNodes](http://help.sync
             // only after control creation you can get treeObj otherwise it throws exception.
             treeObj = $("#treeView").ejTreeView('instance');
     
-            //to get checkednodes
+            //to get checked nodes
             treeObj.getCheckedNodes();
         }        
     </script>

@@ -109,7 +109,7 @@ Another way to disable the quick window option at dynamic time can be achieved t
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt => evt.CellClick("onCellClick"))
+        .ScheduleClientSideEvents(event => event.CellClick("onCellClick"))
 )
 
 {% endhighlight %}
@@ -185,7 +185,7 @@ It is possible to disable the inline appointment creation and enabling only the 
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt => evt.CellClick("onCellClick"))
+        .ScheduleClientSideEvents(event => event.CellClick("onCellClick"))
 )
 
 {% endhighlight %}
@@ -244,7 +244,7 @@ To prevent the display of default appointment window on double clicking the Sche
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-         .ScheduleClientSideEvents(evt => evt.AppointmentWindowOpen("onAppointmentWindowOpen"))
+         .ScheduleClientSideEvents(event => event.AppointmentWindowOpen("onAppointmentWindowOpen"))
 )
 
 {% endhighlight %}
@@ -282,9 +282,9 @@ You can add/edit the appointments dynamically through the public method `saveApp
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-         .ScheduleClientSideEvents(evt => evt.AppointmentWindowOpen("onAppointmentWindowOpen"))
+         .ScheduleClientSideEvents(event => event.AppointmentWindowOpen("onAppointmentWindowOpen"))
 )
-@Html.EJ().Button("add").Text("Add").ClientSideEvents(evt => evt.Click("addAppointment"))
+@Html.EJ().Button("add").Text("Add").ClientSideEvents(event => event.Click("addAppointment"))
 
 {% endhighlight %}
 
@@ -394,7 +394,7 @@ The below code example depicts the way to delete the appointments using GUID pro
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-            .ScheduleClientSideEvents(evt => evt.AppointmentClick("onAppointmentClick"))
+            .ScheduleClientSideEvents(event => event.AppointmentClick("onAppointmentClick"))
     )
 
 {% endhighlight %}
@@ -433,7 +433,7 @@ The below code example depicts the way to delete the appointments using appointm
                 .AllDay("AllDay")
                 .Recurrence("Recurrence")
                 .RecurrenceRule("RecurrenceRule"))
-                .ScheduleClientSideEvents(evt => evt.AppointmentClick("onAppointmentClick"))
+                .ScheduleClientSideEvents(event => event.AppointmentClick("onAppointmentClick"))
     )
 
 {% endhighlight %}
@@ -484,7 +484,7 @@ To stop the save, edit and delete actions on the Scheduler appointments, followi
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt => evt.BeforeAppointmentCreate("onAppointmentSave").BeforeAppointmentChange("onAppointmentEdit").BeforeAppointmentRemove("onAppointmentDelete"))
+        .ScheduleClientSideEvents(event => event.BeforeAppointmentCreate("onAppointmentSave").BeforeAppointmentChange("onAppointmentEdit").BeforeAppointmentRemove("onAppointmentDelete"))
 )
 
 {% endhighlight %}
@@ -604,7 +604,7 @@ The following code example shows how to cancel the dragging functionality with t
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt=>evt.DragStop("onDragStop"))
+        .ScheduleClientSideEvents(event=>event.DragStop("onDragStop"))
 )
 
 {% endhighlight %}
@@ -657,9 +657,9 @@ The following code example lets you dragging and dropping external items to and 
         .AppointmentDragArea("body")
         .ShowCurrentTimeIndicator(false)
         .CurrentDate(new DateTime(2015, 11, 5))
-        .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(resources).Text("Text").Id("Id").Color("Color")).Add(); })
+        .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(resources).Text("Text").Id("Id").Color("Color")).Add(); })
         .Group(gr => { gr.Resources(Group); })
-        .ScheduleClientSideEvents(evt => evt.DragStop("onDragStop"))
+        .ScheduleClientSideEvents(event => event.DragStop("onDragStop"))
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")
@@ -687,7 +687,7 @@ The following code example lets you dragging and dropping external items to and 
                 <tr>
                     <td>Description:</td>
                     <td colspan="2">
-                        <textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
+                        <textarea id="customDescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -718,8 +718,8 @@ The following code example lets you dragging and dropping external items to and 
         </table>
     </form>
     <div>
-        <button type="submit" onclick="cancel()" id="btncancel" style="float:right;margin-right:20px;margin-bottom:10px;">Cancel</button>
-        <button type="submit" onclick="save()" id="btnsubmit" style="float:right;margin-right:20px;margin-bottom:10px;">Save</button>
+        <button type="submit" onclick="cancel()" id="buttonCancel" style="float:right;margin-right:20px;margin-bottom:10px;">Cancel</button>
+        <button type="submit" onclick="save()" id="buttonSubmit" style="float:right;margin-right:20px;margin-bottom:10px;">Save</button>
     </div>
 </div>
 
@@ -739,8 +739,8 @@ The following code example lets you dragging and dropping external items to and 
             allowKeyboardNavigation: false,
             close: "clearFields"
         });
-        $("#btncancel").ejButton({ width: '85px' });
-        $("#btnsubmit").ejButton({ width: '85px' });
+        $("#buttonCancel").ejButton({ width: '85px' });
+        $("#buttonSubmit").ejButton({ width: '85px' });
     });
 
     function onNodeDrag(e) {
@@ -762,8 +762,8 @@ The following code example lets you dragging and dropping external items to and 
             var _target = $($(e.target).context);
             if ($(_target).hasClass("e-workcells") && (scheduleObj.model.showTimeScale) && scheduleObj.currentView() !== "month" && !(scheduleObj._isCustomView())) {
                 var time = scheduleObj.model.orientation == "vertical" ? scheduleObj.model.startHour + ($(e.event.target).parent().index() / 2) : scheduleObj.model.startHour + (($(e.event.target).index() - (((scheduleObj.model.endHour - scheduleObj.model.startHour) * 2) * index)) / 2);
-                var timemin = time.toString().split(".");
-                var cur_StartTime = new Date(curDate).setHours(parseInt(timemin[0]), parseInt(timemin[1]) == 5 ? 30 : 00);
+                var timeMin = time.toString().split(".");
+                var cur_StartTime = new Date(curDate).setHours(parseInt(timeMin[0]), parseInt(timeMin[1]) == 5 ? 30 : 00);
                 var min = (parseInt(new Date(cur_StartTime).getHours()) == 23 && parseInt(new Date(cur_StartTime).getMinutes()) == 30) ? new Date(cur_StartTime).getMinutes() + 29 : new Date(cur_StartTime).getMinutes() + 30;
                 var cur_EndTime = new Date(new Date(cur_StartTime).setMinutes(min));
             }
@@ -784,10 +784,10 @@ The following code example lets you dragging and dropping external items to and 
             // To find the resource details
             var resource = scheduleObj._getResourceValue($($(e.target).context));
 
-            // custom appointmnt window
+            // custom appointment window
 
             $("#subject").val(e.droppedElementData.text);
-            $("#customdescription").val(e.droppedElementData.text);
+            $("#customDescription").val(e.droppedElementData.text);
             $("#StartTime").ejDateTimePicker({ value: new Date(StartTime) });
             $("#EndTime").ejDateTimePicker({ value: new Date(endTime) });
             $("#resource").val(resource.Text);
@@ -798,20 +798,20 @@ The following code example lets you dragging and dropping external items to and 
 
     function save() {
         var obj = {};
-        var formelement = $("#customWindow").find("#custom").get(0);
-        for (var index = 0; index < formelement.length; index++) {
-            var columnName = formelement[index].name, $element = $(formelement[index]);
+        var formElement = $("#customWindow").find("#custom").get(0);
+        for (var index = 0; index < formElement.length; index++) {
+            var columnName = formElement[index].name, $element = $(formElement[index]);
             if (columnName != undefined) {
                 if (columnName == "Subject")
-                    var value = formelement[index].value;
+                    var value = formElement[index].value;
                 if (columnName == "Desctiption")
-                    value = formelement[index].value;
+                    value = formElement[index].value;
                 if (columnName == "StartTime")
-                    value = new Date(formelement[index].value);
+                    value = new Date(formElement[index].value);
                 if (columnName == "EndTime")
-                    value = new Date(formelement[index].value);
+                    value = new Date(formElement[index].value);
                 if (columnName == "OwnerId")
-                    value = formelement[index].value;
+                    value = formElement[index].value;
                 if (columnName != "Resource")
                     obj[columnName] = value;
             }
@@ -905,7 +905,7 @@ The following code example shows how to cancel the resizing functionality with t
             .AllDay("AllDay")
             .Recurrence("Recurrence")
             .RecurrenceRule("RecurrenceRule"))
-        .ScheduleClientSideEvents(evt=>evt.ResizeStart("onResizeStart"))
+        .ScheduleClientSideEvents(event=>event.ResizeStart("onResizeStart"))
 )
 
 {% endhighlight %}
@@ -1418,7 +1418,7 @@ Reminder option notifies all the appointments before some specific time. By defa
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .ReminderSettings(rem => rem.Enable(true).AlertBefore(10))
-        .ScheduleClientSideEvents(evt => evt.Reminder("reminderCustom"))
+        .ScheduleClientSideEvents(event => event.Reminder("reminderCustom"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
@@ -1592,7 +1592,7 @@ The `BlockoutSettings` holds the below properties to customize the block interva
         .CurrentDate(new DateTime(2015, 11, 10))
         //Configure the blockout settings
         .BlockoutSettings(fields => fields.Enable(true)
-            .TemplateId("#blocktemplate")
+            .TemplateId("#blockTemplate")
             .Datasource(blockData)
             .Id("Id")
             .Subject("Subject")
@@ -1606,7 +1606,7 @@ The `BlockoutSettings` holds the below properties to customize the block interva
 {% highlight html %}
 
 <!--Template to apply block intervals-->
-<script id="blocktemplate" type="text/x-jsrender">
+<script id="blockTemplate" type="text/x-jsrender">
    <div style="height:100%">
       <div>{{:Subject}}</div>
    </div>
@@ -1656,7 +1656,7 @@ The `BlockoutSettings` holds the below properties to customize the block interva
         .Group(gr => { gr.Resources(Group); })
         .Resources(res =>
         {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(flds => flds.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Owner).Text("Text").Id("Id").Color("Color")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
