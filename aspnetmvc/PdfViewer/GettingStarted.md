@@ -12,7 +12,7 @@ documentation: ug
 
 This section explains briefly about how to add and use a PDF viewer control in your web application with ASP.NET MVC.
 
-##Create your first PDF viewer application in ASP.NET MVC
+### Create your first PDF viewer application in ASP.NET MVC
 
 Create a new project in the Visual Studio by selecting the ASP.NET MVC Empty Web Application template. The following screenshot displays the Project Creation Wizard in Visual Studio 2012.
 
@@ -64,7 +64,7 @@ namespace PdfViewerSample
 }
 {% endhighlight %}
 
-###Modify Web.config
+### Modify Web.config
 
 Set the value of **UnobtrusiveJavaScriptEnabled** to **false** in Web.config of Project (To enable the Unobtrusive option, please look at this [link](http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application)).
 Add below namespace in Web.config of Views.
@@ -100,8 +100,8 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the hosted service
 <body>
     <div>
         <div style="width:100%;height:780px;">
-@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("http://mvc.syncfusion.com/PDFViewer/pdfviewer.asmx/PostViewerAction")
-            .PdfService(Syncfusion.JavaScript.PdfViewerEnums.PdfService.Remote))
+@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("http://js.syncfusion.com/ejServices/api/PdfViewer")
+            .PdfService(Syncfusion.JavaScript.PdfViewerEnums.PdfService.Local))
         </div>
     </div>
     @(Html.EJ().ScriptManager())
@@ -132,31 +132,33 @@ namespace PdfViewerSample.WebApi
 {
     public class PdfViewerController : ApiController
     {
-        PdfViewerHelper helper = new PdfViewerHelper();
-        public object PostViewerAction(Dictionary<string, string> jsonResult)
+        //Post action for processing the PDF documents.
+        public object Load(Dictionary<string, string> jsonResult)
         {
+            PdfViewerHelper helper = new PdfViewerHelper();
             if (jsonResult.ContainsKey("isInitialLoading"))
-                helper.Load(Helper.GetFilePath("HTTP Succinctly.pdf"));
-            string output = JsonConvert.SerializeObject(helper.ProcessPdf(jsonResult));
-            return output;
+                helper.Load(HttpContext.Current.Server.MapPath("~/Data/HTTP Succinctly.pdf"));
+            return JsonConvert.SerializeObject(helper.ProcessPdf(jsonResult));
         }
-    }
-    public class Helper
-    {
-        public static string GetFilePath(string path)
+        //Post action for processing the PDF documents when uploading to the ejPdfviewer widget.
+        public object FileUpload(Dictionary<string, string> jsonResult)
         {
-            string _dataPath = GetCommonFolder(new DirectoryInfo(HttpContext.Current.Request.PhysicalApplicationPath));
-            _dataPath += @"\" + path;
-            return _dataPath;
-        }
-        static string GetCommonFolder(DirectoryInfo directoryInfo)
-        {
-            var _folderNames = directoryInfo.GetDirectories("App_Data");
-            if (_folderNames.Length > 0)
+            PdfViewerHelper helper = new PdfViewerHelper();
+            if (jsonResult.ContainsKey("uploadedFile"))
             {
-                return _folderNames[0].FullName;
+                var fileurl = jsonResult["uploadedFile"];
+                byte[] byteArray = Convert.FromBase64String(fileurl);
+                MemoryStream stream = new MemoryStream(byteArray);
+                helper.Load(stream);
             }
-            return directoryInfo.Parent != null ? GetCommonFolder(directoryInfo.Parent) : string.Empty;
+            return JsonConvert.SerializeObject(helper.ProcessPdf(jsonResult));
+        }
+
+        //Post action for downloading the PDF documents from the ejPdfviewer widget.
+        public object Download(Dictionary<string, string> jsonResult)
+        {
+            PdfViewerHelper helper = new PdfViewerHelper();
+            return helper.GetDocumentData(jsonResult);
         }
     }
 }
