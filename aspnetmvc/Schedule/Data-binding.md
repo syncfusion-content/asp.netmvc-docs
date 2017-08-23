@@ -187,7 +187,7 @@ public class TimezoneCollection
         .CurrentDate(new DateTime(2015, 11, 5))
         .Group(gr => { gr.Resources(Group); })
         .Resources(res => {
-            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fieldss => fieldss.Datasource(Resources).Text("Text").Id("Id").Color("Color")).Add();
+            res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(Resources).Text("Text").Id("Id").Color("Color")).Add();
         })
         .ShowLocationField(true)
         .CategorizeSettings(cat => cat.Enable(true))

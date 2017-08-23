@@ -32,26 +32,26 @@ Set `IsResponsive` as true to enable resizing in Ribbon.If client width is above
             {
                 tabgroup.Text("Clipboard").Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
+                    ctn.ContentGroups(contentGroup =>
                     {
-                        ctngrp.Id("cut").Text("Cut").Add();
-                        ctngrp.Id("copy").Text("Copy").Add();
+                        contentGroup.Id("cut").Text("Cut").Add();
+                        contentGroup.Id("copy").Text("Copy").Add();
                     }).ContentDefaults(df => df.Width("40px").Height("70px")).Add();
                 }).Add();
                 tabgroup.Text("Font").Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
+                    ctn.ContentGroups(contentGroup =>
                     {
-                        ctngrp.Id("bold").Text("Bold").Add();
-                        ctngrp.Id("italic").Text("Italic").Add();
+                        contentGroup.Id("bold").Text("Bold").Add();
+                        contentGroup.Id("italic").Text("Italic").Add();
                     }).ContentDefaults(df => df.Width("40px").Height("70px")).Add();
                 }).Add();
                 tabgroup.Text("Align").Content(ctn =>
                 {
-                    ctn.ContentGroups(ctngrp =>
+                    ctn.ContentGroups(contentGroup =>
                     {
-                        ctngrp.Id("left").Text("Left").Add();
-                        ctngrp.Id("right").Text("Right").Add();
+                        contentGroup.Id("left").Text("Left").Add();
+                        contentGroup.Id("right").Text("Right").Add();
                     }).ContentDefaults(df => df.Width("40px").Height("70px")).Add();
                 }).Add();
             }).Add();
@@ -90,9 +90,9 @@ Set `IsResponsive` as true to enable responsive mode in Ribbon.
         {
             tabgroup.Text("Font").AlignType(RibbonAlignType.Rows).Content(ctn =>
             { 
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText="Bold",
@@ -100,7 +100,7 @@ Set `IsResponsive` as true to enable responsive mode in Ribbon.
                         DefaultPrefixIcon = "e-icon e-ribbon e-resbold",
                         ActivePrefixIcon = "e-icon e-ribbon e-resbold",
                     }).Add();
-                    ctngrp.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Italic",
@@ -108,7 +108,7 @@ Set `IsResponsive` as true to enable responsive mode in Ribbon.
                         DefaultPrefixIcon = "e-icon e-ribbon e-resitalic",
                         ActivePrefixIcon = "e-icon e-ribbon e-resitalic",
                     }).Add();
-                    ctngrp.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Underline",
@@ -116,7 +116,7 @@ Set `IsResponsive` as true to enable responsive mode in Ribbon.
                         DefaultPrefixIcon = "e-icon e-ribbon e-resunderline",
                         ActivePrefixIcon = "e-icon e-ribbon e-resunderline",
                     }).Add();
-                    ctngrp.Id("strikethrough").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("strikethrough").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Strikethrough",
@@ -124,7 +124,7 @@ Set `IsResponsive` as true to enable responsive mode in Ribbon.
                         DefaultPrefixIcon = "e-icon e-ribbon strikethrough",
                         ActivePrefixIcon = "e-icon e-ribbon strikethrough",
                     }).Add();
-                    ctngrp.Id("superscript").IsMobileOnly(true).Text("Superscript").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("superscript").IsMobileOnly(true).Text("Superscript").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-superscripticon",
@@ -163,9 +163,9 @@ N> To make the Ribbon control to react as responsive in mobile devices, it is ne
         {
             tabgroup.Text("Font").AlignType(RibbonAlignType.Rows).Content(ctn =>
             { 
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("bold").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText="Bold",
@@ -173,7 +173,7 @@ N> To make the Ribbon control to react as responsive in mobile devices, it is ne
                         DefaultPrefixIcon = "e-icon e-ribbon e-resbold",
                         ActivePrefixIcon = "e-icon e-ribbon e-resbold",
                     }).Add();
-                    ctngrp.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("italic").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Italic",
@@ -181,7 +181,7 @@ N> To make the Ribbon control to react as responsive in mobile devices, it is ne
                         DefaultPrefixIcon = "e-icon e-ribbon e-resitalic",
                         ActivePrefixIcon = "e-icon e-ribbon e-resitalic",
                     }).Add();
-                    ctngrp.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("underline").IsMobileOnly(true).Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Underline",
@@ -189,7 +189,7 @@ N> To make the Ribbon control to react as responsive in mobile devices, it is ne
                         DefaultPrefixIcon = "e-icon e-ribbon e-resunderline",
                         ActivePrefixIcon = "e-icon e-ribbon e-resunderline",
                     }).Add();
-                    ctngrp.Id("strikethrough").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
+                    contentGroup.Id("strikethrough").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         DefaultText = "Strikethrough",
@@ -197,7 +197,7 @@ N> To make the Ribbon control to react as responsive in mobile devices, it is ne
                         DefaultPrefixIcon = "e-icon e-ribbon strikethrough",
                         ActivePrefixIcon = "e-icon e-ribbon strikethrough",
                     }).Add();
-                    ctngrp.Id("superscript").Text("Superscript").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("superscript").Text("Superscript").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         PrefixIcon = "e-icon e-ribbon e-superscripticon",
@@ -256,22 +256,22 @@ For each group shirked for resizing, Custom Class will be added based on group t
         {
             tabgroup.Text("Clipboard").AlignType(RibbonAlignType.Columns).EnableGroupExpander(true).Content(ctn =>
                {
-                   ctn.ContentGroups(ctngrp =>
+                   ctn.ContentGroups(contentGroup =>
                    {
-                       ctngrp.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
+                       contentGroup.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.ImageOnly,
                            PrefixIcon = "e-ribbon e-ribbonpaste",
                        }).Add();
                    }).ContentDefaults(df => df.IsBig(true).Width("50px").Height("70px")).Add();
-                   ctn.ContentGroups(ctngrp =>
+                   ctn.ContentGroups(contentGroup =>
                    {
-                       ctngrp.Id("cut").Text("Cut").ToolTip("Cut").ButtonSettings(new ButtonProperties()
+                       contentGroup.Id("cut").Text("Cut").ToolTip("Cut").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.TextAndImage,
                            PrefixIcon = "e-ribbon e-ribboncut",
                        }).Add();
-                       ctngrp.Id("copy").Text("Copy").ToolTip("Copy").ButtonSettings(new ButtonProperties()
+                       contentGroup.Id("copy").Text("Copy").ToolTip("Copy").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.TextAndImage,
                            PrefixIcon = "e-ribbon e-ribboncopy",
@@ -280,15 +280,15 @@ For each group shirked for resizing, Custom Class will be added based on group t
                }).Add();
             tabgroup.Text("Font").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("fontFamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
+                    contentGroup.Id("fontFamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
                     {
                         DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
                         Text = "Segoe UI",
                         Width = "150px"
                     }).Add();
-                    ctngrp.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
+                    contentGroup.Id("fontsize").ToolTip("FontSize").DropdownSettings(new DropDownListProperties()
                     {
                         DataSource = (IEnumerable<FontPoint>)ViewBag.datasource1,
                         Text = "1pt",
@@ -298,9 +298,9 @@ For each group shirked for resizing, Custom Class will be added based on group t
             }).Add();
             tabgroup.Text("New").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("new").Text("New").ToolTip("New").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.ImageOnly,
                         ImagePosition = ImagePosition.ImageTop,
@@ -310,15 +310,15 @@ For each group shirked for resizing, Custom Class will be added based on group t
             }).Add();
             tabgroup.Text("Actions").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("undo").Text("Undo").ToolTip("Undo").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("undo").Text("Undo").ToolTip("Undo").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,
                         PrefixIcon = "e-ribbon e-undo",
                     }).Add();
-                    ctngrp.Id("redo").Text("Redo").ToolTip("Redo").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("redo").Text("Redo").ToolTip("Redo").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,
@@ -331,9 +331,9 @@ For each group shirked for resizing, Custom Class will be added based on group t
         {
             tabgroup.Text("Print Layout").AlignType(RibbonAlignType.Rows).Content(ctn =>
             {
-                ctn.ContentGroups(ctngrp =>
+                ctn.ContentGroups(contentGroup =>
                 {
-                    ctngrp.Id("printlayout").Text("Print Layout").ToolTip("Print Layout").ButtonSettings(new ButtonProperties()
+                    contentGroup.Id("printLayout").Text("Print Layout").ToolTip("Print Layout").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,

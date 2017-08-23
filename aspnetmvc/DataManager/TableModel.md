@@ -40,7 +40,7 @@ Then the model is bound with the element using the **bindTo.**
                     <div class="form-group">
                         <label class="col-sm-4 control-label">EmployeeID</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="empId">
+                            <input type="text" class="form-control" id="employeeId">
                         </div>
                     </div>
                     <div class="form-group">
@@ -87,10 +87,10 @@ Then the model is bound with the element using the **bindTo.**
         }, 1000);
           
         $("#formSubmit").click(function (e) {
-            var empId = parseInt($("#empId").val(), 10);
+            var employeeId = parseInt($("#employeeId").val(), 10);
             var fName = $("#first").val();
             var lName = $("#last").val();
-            employee = employees.get(empId - 1);
+            employee = employees.get(employeeId - 1);
             employee.set("FirstName",fName);
             employee.set("LastName",lName);
         });
