@@ -15,7 +15,7 @@ Position property is used to specify the position whether it is in fixed or rela
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).Position(NavigationDrawerPosition.Fixed).ContentTemplate(@<div>
 
         @Html.EJ().ListView("list").Width(300).Items(items =>
 
