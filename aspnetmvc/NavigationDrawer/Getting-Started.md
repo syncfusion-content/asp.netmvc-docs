@@ -28,7 +28,7 @@ To add a Navigation Drawer control, call NavigationDrawer helper. You can displa
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -137,7 +137,7 @@ Set the TargetId property as follows.
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -174,7 +174,7 @@ You can set the images for Navigation Drawer by using the ImageClass property as
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).Width(300).Items(items =>
 
@@ -204,7 +204,7 @@ You can define the image classes specified for the list items as follows.
 
 <style>
 
-	#navpane [class*="icon-"]
+	#navigationPane [class*="icon-"]
 
 	{
 
@@ -309,7 +309,7 @@ You can load the desired content for the navigation items by updating the conten
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).TargetId("target").ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).TargetId("target").ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").ShowHeader(false).ClientSideEvents(click => click.MouseDown("slideMenuClick")).PersistSelection(true).Width(300).Items(items =>
 
@@ -346,7 +346,7 @@ In the mouse down handler, you can hide the other content and display the respec
 
 			$('#' + e.text).show(); //Displaying the content based on the text of item selected
 
-			$("#navpane").ejNavigationDrawer("close");
+			$("#navigationPane").ejNavigationDrawer("close");
 
 	}
 

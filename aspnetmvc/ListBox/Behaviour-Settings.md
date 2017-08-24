@@ -32,7 +32,7 @@ The following steps explains you the configuration of TargetID property in ListB
 
 		</h5>
 
-		@Html.EJ().ListBox("listboxsample").TargetID("targetList")
+		@Html.EJ().ListBox("listboxSample").TargetID("targetList")
 
 		<ul id="targetList">
 
