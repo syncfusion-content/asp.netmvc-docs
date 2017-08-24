@@ -484,11 +484,11 @@ The server-side code to retrieve and bind the data to DropDownList are as follow
         conn.Open();
         OleDbCommand cmd = new OleDbCommand(" SELECT * from [Employees]", conn);
         OleDbDataReader reader = null;
-        List<EmpDetails> data = new List<EmpDetails>();
+        List<EmployeeDetails> data = new List<EmployeeDetails>();
         reader = cmd.ExecuteReader();
         while (reader.Read())
         {
-            data.Add(new EmpDetails(reader["Name"].ToString(), reader["Designation"].ToString()));
+            data.Add(new EmployeeDetails(reader["Name"].ToString(), reader["Designation"].ToString()));
             
         }
         conn.Close();
@@ -496,11 +496,11 @@ The server-side code to retrieve and bind the data to DropDownList are as follow
         
 
     }
-    public class EmpDetails
+    public class EmployeeDetails
     {
         public string Name { get; set; }
         public string Designation { get; set; }
-        public EmpDetails(string name, string deg)
+        public EmployeeDetails(string name, string deg)
         {
             this.Name = name;
             this.Designation = deg;

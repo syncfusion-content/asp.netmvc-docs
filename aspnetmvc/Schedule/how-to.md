@@ -286,7 +286,7 @@ The following code example depicts the way to achieve the customization of defau
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .ShowCurrentTimeIndicator(false)
-        .ScheduleClientSideEvents(evt => evt.AppointmentWindowOpen("onAppointmentOpen"))
+        .ScheduleClientSideEvents(event => event.AppointmentWindowOpen("onAppointmentOpen"))
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
             .Subject("Subject")
