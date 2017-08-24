@@ -21,7 +21,7 @@ The following steps explain the implementation of Splitter integration.
 {% highlight CSHTML %}
 
 @{IDictionary<string, object> htmlAttribute = new Dictionary<string, object>();
-  htmlAttribute.Add("class", "_child");}@{Html.EJ().Splitter("outterSplitter").PaneProperties(p =>    {
+  htmlAttribute.Add("class", "_child");}@{Html.EJ().Splitter("outerSplitter").PaneProperties(p =>    {
   p.Add().ContentTemplate(
   @<div class="cont">
   <h3 class="h3">
@@ -74,7 +74,7 @@ Grouping and the display of hierarchical data.
 </div>
 </div>).PaneSize("200");
 }).Height("400").Width("100%").Render();}<style type="text/css">
-#outterSplitter {
+#outerSplitter {
 margin: 0 auto;
 }    .cont #treeView_Container {
 margin-bottom: 0;

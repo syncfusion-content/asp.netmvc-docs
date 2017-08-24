@@ -448,9 +448,9 @@ The following code sample explains how to add an item to a second ListBox.
 
 		var selectedItems = firstListBox.getSelectedItems();
 
-		var len = selectedItems.length;
+		var length = selectedItems.length;
 
-		for (i = 0; i < len; i++) 
+		for (i = 0; i < length; i++) 
 		{
 
 			var value = $(selectedItems[i]).html();

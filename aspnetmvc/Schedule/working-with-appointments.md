@@ -804,7 +804,7 @@ The following code example lets you dragging and dropping external items to and 
             if (columnName != undefined) {
                 if (columnName == "Subject")
                     var value = formElement[index].value;
-                if (columnName == "Desctiption")
+                if (columnName == "Description")
                     value = formElement[index].value;
                 if (columnName == "StartTime")
                     value = new Date(formElement[index].value);

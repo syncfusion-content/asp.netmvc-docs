@@ -68,7 +68,7 @@ Add the following script in your code.
             // To set Radial Menu position within target
                 x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                 y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                radialEle.ejRadialMenu("setPosition", x, y);
+                radialElement.ejRadialMenu("setPosition", x, y);
         }
         
 {% endhighlight %}

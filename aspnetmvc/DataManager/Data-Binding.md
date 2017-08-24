@@ -47,11 +47,11 @@ public class HomeController : Controller
     {
         return View();
     }
-    public ActionResult DataSource(Syncfusion.JavaScript.DataManager dm)
+    public ActionResult DataSource(Syncfusion.JavaScript.DataManager dataManagerObj)
     {
         var DataSource = OrderRepository.GetAllRecords();
         DataResult result = new DataResult();
-        result.result = DataSource.Skip(dm.Skip).Take(dm.Take).ToList();
+        result.result = DataSource.Skip(dataManagerObj.Skip).Take(dataManagerObj.Take).ToList();
         result.count = DataSource.Count();
         return Json(result, JsonRequestBehavior.AllowGet);
     }

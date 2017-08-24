@@ -18,7 +18,7 @@ You can customize the **Radial Menu** size by using the **Radius** property. By 
 
 {% highlight razor %}
 
-         @Html.EJ().RadialMenu("defaultRadialmMenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
+         @Html.EJ().RadialMenu("defaultRadialMenu").ImageClass("e-radial").TargetElementId("radialtarget1").Items(items
         =>
         {
             items.Add().ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png")).Text("Bold");
@@ -80,7 +80,7 @@ Add the following script in your code.
                 // To set Radial Menu position within target
                     x = iframeX > target.width() - radialRadius ? target.width() - radialDiameter : (iframeX > radialRadius ? iframeX - radialRadius : 0),
                     y = iframeY > target.height() - radialRadius ? target.height() - radialDiameter : (iframeY > radialRadius ? iframeY - radialRadius : 0);
-                    radialEle.ejRadialMenu("setPosition", x, y);
+                    radialElement.ejRadialMenu("setPosition", x, y);
             }
 
 {% endhighlight %}
