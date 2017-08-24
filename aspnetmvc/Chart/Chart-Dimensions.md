@@ -57,7 +57,7 @@ You can specify the chart size in percentage by using the Size property. The cha
 {% highlight cshtml %}
 
  <div id="container" style="width:700px; height:500px">
-    @(Html.EJ().Chart("chartContainer")
+    @(Html.EJ().Chart("container")
 
            // ...
          
