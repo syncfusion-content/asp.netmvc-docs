@@ -15,7 +15,7 @@ By using this property, you can set the drawer to be open from right to left dir
 
 {% highlight CSHTML %}
 
-@Html.EJ().NavigationDrawer("navpane").Width(300).Direction(NavigationDrawerDirection.Right).ContentTemplate(@<div>
+@Html.EJ().NavigationDrawer("navigationPane").Width(300).Direction(NavigationDrawerDirection.Right).ContentTemplate(@<div>
 
 @Html.EJ().ListView("list").Width(300).Items(items =>
 

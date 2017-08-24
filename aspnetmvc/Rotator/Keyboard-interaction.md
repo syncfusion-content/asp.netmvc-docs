@@ -92,7 +92,7 @@ itemElement.Add().ContentTemplate(@<div> <img class="image" src="@Url.Content("~
 
 			// j- key code.         
 			
-			$("#slidercontent")[0].focus();    
+			$("#sliderContent")[0].focus();    
 			
 		}        
 		

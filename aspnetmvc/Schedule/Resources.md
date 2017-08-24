@@ -184,7 +184,7 @@ The resources data can be bound to the Schedule control through the **ResourceSe
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => {
-            res.ResourceSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/Northwnd.svc")).Text("CategoryName").Id("CategoryId").Query("ej.Query().select('CategoryID', 'CategoryName').from('Categories').take(5)")).Add();
+            res.ResourceSettings(fields => fields.Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/OdataServices/Northwnd.svc")).Text("CategoryName").Id("CategoryId").Query("ej.Query().select('CategoryID', 'CategoryName').from('Categories').take(5)")).Add();
         })
         .AppointmentSettings(fields => fields.Datasource(Appoint)
             .Id("Id")
