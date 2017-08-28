@@ -199,7 +199,7 @@ To apply tooltip for cells, You need to use `CustomAttributes` in columns. For m
            {
 
                col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
-               col.Field("CustomerID").HeaderText("Customer ID").Width(80).CustomAttributes(customattributes => customattributes.AddAttribute("title","")).Add();
+               col.Field("CustomerID").HeaderText("Customer ID").Width(80).CustomAttributes(customAttributes => customAttributes.AddAttribute("title","")).Add();
                col.Field("EmployeeID").HeaderText("Employee ID").Width(75).TextAlign(TextAlign.Right).Add();       
 			   col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
 
@@ -303,8 +303,8 @@ Enter EmployeeID Field Value:
 
 	//Creating ejDataManager with UrlAdaptor
 
-	var datamanager = ej.DataManager({ url: "/Home/GetData", adaptor: new ej.UrlAdaptor() });
-	var promise = datamanager.executeQuery(query);
+	var dataManager = ej.DataManager({ url: "/Home/GetData", adaptor: new ej.UrlAdaptor() });
+	var promise = dataManager.executeQuery(query);
 	promise.done(function (e) {
 
 	//Assign the result to the grid dataSource using "dataSource" method.
@@ -432,11 +432,11 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
     var adaptor = new ej.remoteSaveAdaptor().extend({
 
-        insert: function (datamanager, data, tableName) {
+        insert: function (dataManager, data, tableName) {
 
             return {
 
-                url: datamanager.dataSource.insertUrl,
+                url: dataManager.dataSource.insertUrl,
 
                 dataType: 'json',
 
@@ -448,13 +448,13 @@ For instance bind the data to Grid by using “remoteSaveAdaptor” and extend i
 
         },
 
-        update: function (datamanager, keyField, value, tableName) {
+        update: function (dataManager, keyField, value, tableName) {
 
             return {
 
                 type: "POST",
 
-                url: datamanager.dataSource.updateUrl+"?id="+value.OrderID,
+                url: dataManager.dataSource.updateUrl+"?id="+value.OrderID,
 
                 dataType: 'json',
 
