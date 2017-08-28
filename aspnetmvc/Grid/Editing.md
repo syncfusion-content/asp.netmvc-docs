@@ -1345,17 +1345,17 @@ The following code example describes the above behavior.
         {
            public class GridController : Controller
               { 
-                public ActionResult DataSource(DataManager datamanager)
+                public ActionResult DataSource(DataManager dataManager)
                  {
                    IEnumerable DataSource = OrderRepository.GetAllRecords();
                    DataResult result = new DataResult();
                    DataOperations operation = new DataOperations();
                    result.result = DataSource;
                    result.count = result.result.AsQueryable().Count();
-                   if (datamanager.Skip > 0)
-                   result.result = operation.PerformSkip(result.result, datamanager.Skip);
-                   if (datamanager.Take > 0)
-                   result.result = operation.PerformTake(result.result, datamanager.Take);
+                   if (dataManager.Skip > 0)
+                   result.result = operation.PerformSkip(result.result, dataManager.Skip);
+                   if (dataManager.Take > 0)
+                   result.result = operation.PerformTake(result.result, dataManager.Take);
                    return Json(result, JsonRequestBehavior.AllowGet);
                }
            public class DataResult
