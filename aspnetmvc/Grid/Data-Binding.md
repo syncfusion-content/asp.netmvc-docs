@@ -109,10 +109,10 @@ The following code example describes the above behavior.
               dataRow[1] = "Tomps";
               dt.Rows.Add(dataRow);
 
-              datarow = dt.NewRow();
-              datarow[0] = 4;
-              datarow[1] = "Hanar";
-              dt.Rows.Add(datarow);
+              dataRow = dt.NewRow();
+              dataRow[0] = 4;
+              dataRow[1] = "Hanar";
+              dt.Rows.Add(dataRow);
 
               dataRow = dt.NewRow();
               dataRow[0] = 5;
