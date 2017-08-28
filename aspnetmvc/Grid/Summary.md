@@ -542,20 +542,20 @@ namespace MvcApplication4.Controllers
 			 return View();
            }
 
-     public ActionResult DataSource(DataManager datamanager)
+     public ActionResult DataSource(DataManager dataManager)
        {
             IEnumerable DataSource = OrderRepository.GetAllRecords();
-		    DataOperations dataoperations = new DataOperations();
+		    DataOperations dataOperations = new DataOperations();
             List<string> aggregateFields = new List<string>();
-            if (datamanager.Aggregates != null)
+            if (dataManager.Aggregates != null)
              {
                for (var i = 0; i < datamanager.Aggregates.Count; i++)
-               string.Add(datamanager.Aggregates[i].Field);
+               string.Add(dataManager.Aggregates[i].Field);
                result.aggregate = datasource.PerformSelect(DataSource, aggregateFields);
              }
 
-       DataSource = datasource.PerformSkip(DataSource, datamanager.Skip);
-       result.result = datasource.PerformTake(DataSource, datamanager.Take);
+       DataSource = datasource.PerformSkip(DataSource, dataManager.Skip);
+       result.result = datasource.PerformTake(DataSource, dataManager.Take);
        result.count = DataSource.AsQueryable().Count();
        return Json(result, JsonRequestBehavior.AllowGet);
 
