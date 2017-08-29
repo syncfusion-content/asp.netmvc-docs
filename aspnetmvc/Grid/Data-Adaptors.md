@@ -100,13 +100,13 @@ The following code example describes the above behavior.
         {
             IEnumerable data = OrderData;
             DataOperations operation = new DataOperations();
-            if (datamanager.Sorted != null && dataManager.Sorted.Count > 0) //Sorting
+            if (dataManager.Sorted != null && dataManager.Sorted.Count > 0) //Sorting
             {
                 data= operation.PerformSorting(data, dataManager.Sorted);
             }            
-            if (datamanager.Where != null && dataManager.Where.Count > 0) //Filtering
+            if (dataManager.Where != null && dataManager.Where.Count > 0) //Filtering
             {
-                data= operation.PerformWhereFilter(data, dataManager.Where, datamanager.Where[0].Operator);
+                data= operation.PerformWhereFilter(data, dataManager.Where, dataManager.Where[0].Operator);
             }            
             int count = data.Cast<OrdersView>().Count();
             if (dataManager.Skip != 0)
