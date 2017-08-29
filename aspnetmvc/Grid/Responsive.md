@@ -135,7 +135,7 @@ Searching in mobile layout
 	 .AllowFiltering()
 	 .AllowSorting()
      .AllowMultiSorting()
-	 .FilterSettings(filtersettings => filtersettings.FilterType(FilterType.Menu))
+	 .FilterSettings(filterSettings => filterSettings.FilterType(FilterType.Menu))
 	 .Columns(col =>
 	  {
 	 	col.Field("OrderID").HeaderText("Order ID").Width("90").IsPrimaryKey(true).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).TextAlign(TextAlign.Right).Add();
@@ -178,7 +178,7 @@ If the client width is between 321px and 800px, then the grid will render in tab
  	  .Datasource((IEnumerable<object>)ViewBag.datasource)
    	  .IsResponsive(true)
  	  .AllowFiltering()
- 	  .FilterSettings(filtersettings => filtersettings.FilterType(FilterType.Menu))
+ 	  .FilterSettings(filterSettings => filterSettings.FilterType(FilterType.Menu))
  	  .AllowPaging()
  	  .PageSettings(p => p.PageCount(3).PageSize(8))
  	  .Columns(col =>

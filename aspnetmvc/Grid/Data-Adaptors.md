@@ -96,26 +96,26 @@ The following code example describes the above behavior.
         {
             return View();
         }
-        public ActionResult DataSource(DataManager datamanager) 
+        public ActionResult DataSource(DataManager dataManager) 
         {
             IEnumerable data = OrderData;
             DataOperations operation = new DataOperations();
-            if (datamanager.Sorted != null && datamanager.Sorted.Count > 0) //Sorting
+            if (dataManager.Sorted != null && dataManager.Sorted.Count > 0) //Sorting
             {
-                data= operation.PerformSorting(data, datamanager.Sorted);
+                data= operation.PerformSorting(data, dataManager.Sorted);
             }            
-            if (datamanager.Where != null && datamanager.Where.Count > 0) //Filtering
+            if (dataManager.Where != null && dataManager.Where.Count > 0) //Filtering
             {
-                data= operation.PerformWhereFilter(data, datamanager.Where, datamanager.Where[0].Operator);
+                data= operation.PerformWhereFilter(data, dataManager.Where, dataManager.Where[0].Operator);
             }            
             int count = data.Cast<OrdersView>().Count();
-            if (datamanager.Skip != 0)
+            if (dataManager.Skip != 0)
             {
-                data= operation.PerformSkip(data, datamanager.Skip);
+                data= operation.PerformSkip(data, dataManager.Skip);
             }            
-            if (datamanager.Take != 0)
+            if (dataManager.Take != 0)
             {
-                data= operation.PerformTake(data, datamanager.Take);
+                data= operation.PerformTake(data, dataManager.Take);
             }
             return Json(new { result = data, count = count });
           }

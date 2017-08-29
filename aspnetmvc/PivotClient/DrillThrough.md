@@ -35,11 +35,11 @@ By dragging and dropping the respective hierarchies and finally clicking â€œOKâ€
 
 <script type="text/javascript">
     function drilledData(args) {
-       $(".e-dialog, .clientDialog, .tableDlg").remove();
+       $(".e-dialog, .e-clientDialog, .e-tableDlg").remove();
         gridData = JSON.parse(args.data);
-        var dialogContent = ej.buildTag("div#" + this._id + "_tableDlg.tableDlg", $("<div id=\"Grid1\"></div>"))[0].outerHTML;
-        var dialogFooter = ej.buildTag("div", ej.buildTag("button#btnOK.dialogBtnOK", "Hierarchy Selector")[0].outerHTML, { "float": "right", "margin": "-5px 0 6px" })[0].outerHTML
-        ejDialog = ej.buildTag("div#clientDialog.clientDialog", dialogContent + dialogFooter, { "opacity": "1" }).attr("title", "Drill Through Information")[0].outerHTML;
+        var dialogContent = ej.buildTag("div#" + this._id + "_tableDlg.e-tableDlg", $("<div id=\"Grid1\"></div>"))[0].outerHTML;
+        var dialogFooter = ej.buildTag("div", ej.buildTag("button#btnOK.e-dialogBtnOK", "Hierarchy Selector")[0].outerHTML, { "float": "right", "margin": "-5px 0 6px" })[0].outerHTML
+        ejDialog = ej.buildTag("div#clientDialog.e-clientDialog", dialogContent + dialogFooter, { "opacity": "1" }).attr("title", "Drill Through Information")[0].outerHTML;
         $(ejDialog).appendTo("#" + this._id);
         $("#btnOK").ejButton().css({ margin: "30px 0 20px 0" });
         $("#Grid1").ejGrid({
@@ -48,7 +48,7 @@ By dragging and dropping the respective hierarchies and finally clicking â€œOKâ€
             allowTextWrap: true,
             pageSettings: { pageSize: 8 }
         });
-        this.element.find(".clientDialog").ejDialog({ width: "70%", content: "#" + this._id, enableResize: false, close: ej.proxy(ej.Pivot.closePreventPanel, this) });
+        this.element.find(".e-clientDialog").ejDialog({ width: "70%", content: "#" + this._id, enableResize: false, close: ej.proxy(ej.Pivot.closePreventPanel, this) });
         var pivotClient = $("#" + this._id).data("ejPivotClient");
         $("#btnOK").click(function () {
             ej.Pivot.openHierarchySelector(pivotClient);
@@ -66,11 +66,11 @@ By dragging and dropping the respective hierarchies and finally clicking â€œOKâ€
 
 <script type="text/javascript">
     function drilledData(args) {
-        $(".e-dialog, .clientDialog, .tableDlg").remove();
+        $(".e-dialog, .e-clientDialog, .e-tableDlg").remove();
         gridData = ej.isNullOrUndefined(args.data.d) ? JSON.parse(args.data.DrillDataTable) : JSON.parse(args.data.d[1].Value);
-        var dialogContent = ej.buildTag("div#" + this._id + "_tableDlg.tableDlg", $("<div id=\"Grid1\"></div>"))[0].outerHTML;
-        var dialogFooter = ej.buildTag("div", ej.buildTag("button#btnOK.dialogBtnOK", "Hierarchy Selector")[0].outerHTML, { "float": "right", "margin": "-5px 0 6px" })[0].outerHTML
-        ejDialog = ej.buildTag("div#clientDialog.clientDialog", dialogContent + dialogFooter, { "opacity": "1" }).attr("title", "Drill Through Information")[0].outerHTML;
+        var dialogContent = ej.buildTag("div#" + this._id + "_tableDlg.e-tableDlg", $("<div id=\"Grid1\"></div>"))[0].outerHTML;
+        var dialogFooter = ej.buildTag("div", ej.buildTag("button#btnOK.e-dialogBtnOK", "Hierarchy Selector")[0].outerHTML, { "float": "right", "margin": "-5px 0 6px" })[0].outerHTML
+        ejDialog = ej.buildTag("div#clientDialog.e-clientDialog", dialogContent + dialogFooter, { "opacity": "1" }).attr("title", "Drill Through Information")[0].outerHTML;
         $(ejDialog).appendTo("#" + this._id);
         $("#btnOK").ejButton().css({ margin: "30px 0 20px 0" });
         $("#Grid1").ejGrid({
@@ -79,10 +79,10 @@ By dragging and dropping the respective hierarchies and finally clicking â€œOKâ€
             allowTextWrap: true,
             pageSettings: { pageSize: 8 }
         });
-        this.element.find(".clientDialog").ejDialog({ width: "70%", content: "#" + this._id, enableResize: false, close: ej.proxy(ej.Pivot.closePreventPanel, this) });
+        this.element.find(".e-clientDialog").ejDialog({ width: "70%", content: "#" + this._id, enableResize: false, close: ej.proxy(ej.Pivot.closePreventPanel, this) });
         var pivotClient = this;
         $("#btnOK").click(function () {
-            $(".e-dialog, .clientDialog, .tableDlg").remove();
+            $(".e-dialog, .e-clientDialog, .e-tableDlg").remove();
             if (pivotClient.model.operationalMode == ej.PivotGrid.OperationalMode.ServerMode) {
                 pivotClient._waitingPopup.show()
                 pivotClient.doAjaxPost("POST", pivotClient.model.url + "/" + pivotClient.model.serviceMethodSettings.drillThroughHierarchies, JSON.stringify({ "currentReport": pivotClient.currentReport, "layout": pivotClient.model.layout, "cellPos": "", "customObject": JSON.stringify(pivotClient.model.customObject) }), function (args) {
