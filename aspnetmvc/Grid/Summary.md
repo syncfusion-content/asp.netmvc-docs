@@ -549,7 +549,7 @@ namespace MvcApplication4.Controllers
             List<string> aggregateFields = new List<string>();
             if (dataManager.Aggregates != null)
              {
-               for (var i = 0; i < datamanager.Aggregates.Count; i++)
+               for (var i = 0; i < dataManager.Aggregates.Count; i++)
                string.Add(dataManager.Aggregates[i].Field);
                result.aggregate = datasource.PerformSelect(DataSource, aggregateFields);
              }
