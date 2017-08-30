@@ -721,7 +721,7 @@ label.Value("Caution")
 
 .Position(loc => loc.X(253).Y(212))
 
-.Font(fnt => { fnt.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
+.Font(font => { font.FontFamily("Arial").Size("12px").FontStyle("Bold"); })
 
 .Add();
 

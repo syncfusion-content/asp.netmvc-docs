@@ -269,11 +269,11 @@ Execute the above code to render the following output.
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(distance => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(distance => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     }).Add();
 
@@ -354,11 +354,11 @@ Linear Gauge can contain multiple bar pointers on it. You can use any combinatio
 
         tic.Type(TickType.MajorInterval).Width(2).Color("#8C8C8C")
 
-        .DistanceFromScale(distance => ds.X(7).Y(0)).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Add();
 
         tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 
-        .DistanceFromScale(distance => ds.X(7).Y(0)).Height(6).Add();
+        .DistanceFromScale(distance => distance.X(7).Y(0)).Height(6).Add();
 
     })
 

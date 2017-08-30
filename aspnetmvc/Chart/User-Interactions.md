@@ -397,7 +397,7 @@ Shape and size of the trackball marker can be customized by using the *Shape* an
           .Crosshair(crosshair=>crosshair
               .Visible(true)
               //Customize the trackball line color and width
-              .Line(lin=>lin.Color("#800000").Width(2))
+              .Line(line=>line.Color("#800000").Width(2))
               //Customize the trackball marker shape size and visibility
               .Marker(mr=>mr
                   //Enable/disable trackball marker

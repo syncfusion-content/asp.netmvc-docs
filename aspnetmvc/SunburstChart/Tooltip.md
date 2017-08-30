@@ -15,7 +15,7 @@ ToolTip allows you to display any information over a sunburst segment. It appear
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-      .Tooltip(tp => tp.Visible(true))
+      .Tooltip(tooltip => tooltip.Visible(true))
  )
 
 {% endhighlight %}
@@ -41,7 +41,7 @@ HTML elements can be displayed in the tooltip by using the *Template* property o
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-      .Tooltip(tp => tp.Visible(true).Template("Tooltip"))
+      .Tooltip(tooltip => tooltip.Visible(true).Template("Tooltip"))
  )
 
 

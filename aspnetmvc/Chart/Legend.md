@@ -373,10 +373,10 @@ You can get the legend item details such as *Index*, *Bounds*, *Shape* and *Seri
         //...       
     )
      //Subscribe the legend item click event
-     .LegendItemClick("onlegendclicked")
+     .LegendItemClick("onLegendClicked")
  )
         
-     function onlegendclicked(sender) {
+     function onLegendClicked(sender) {
         //Get legend item details on legend item click.
         var legendItem = sender.data;
       }
