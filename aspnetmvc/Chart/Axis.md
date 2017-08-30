@@ -962,7 +962,7 @@ You can modify the position of the axis title either inside or outside the chart
 {% highlight cshtml %}
 
     @(Html.EJ().Chart("container")
-      .PrimaryXAxis(pr => pr.Title(tl => tl
+      .PrimaryXAxis(pr => pr.Title(title => title
       .AxisTitlePosition(AxisTitlePosition.Inside).Alignment(Alignment.Near).Offset(10))
     ))
 
@@ -1008,7 +1008,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
      .PrimaryXAxis(
           //Customizing label and tick positions
-          px=>px.AxisLabelPosition(AxislabelPosition.Inside).TickLinesPosition(TickLinesPosition.Inside)
+          px=>px.AxisLabelPosition(AxisLabelPosition.Inside).TickLinesPosition(TickLinesPosition.Inside)
               //....
      )
         // ...

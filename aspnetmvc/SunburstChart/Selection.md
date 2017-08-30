@@ -87,7 +87,7 @@ To selection the particular segment, the point mode of the selection settings is
 
 @(Html.EJ().SunburstChart("chartContainer")
 
-     .SelectionSettings(hl=>hl.Enable(true).Mode(SunburstSelectionMode.Point))
+     .SelectionSettings(selection=>selection.Enable(true).Mode(SunburstSelectionMode.Point))
  )
 
 

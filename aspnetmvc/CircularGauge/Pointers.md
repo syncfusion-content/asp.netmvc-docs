@@ -272,7 +272,7 @@ sc1.ShowScaleBar(true)
 
 .BackgroundColor("#DCEBF9")
 
-.Border(boderr=>border.Color(ConsoleColor.Blue.ToString()).Width(2))
+.Border(border=>border.Color(ConsoleColor.Blue.ToString()).Width(2))
 
 .Pointers(PO =>
 
@@ -674,10 +674,10 @@ border.Color("#91B8F3")).Add();
 })
 
 // Setting pointer option
-.Pointers(pointer =>{pointer.PointerValueText(po=>
+.Pointers(pointer =>{pointer.PointerValueText(value=>
 
 // enable showValue property
-.ShowValue(true)
+value.ShowValue(true)
 
 // setting distance property
 .Distance(10)
@@ -748,7 +748,7 @@ border.Color("#91B8F3")).Add();
 })
 
 // Setting pointer option
-.Pointers(pointer =>{pointer.PointerValueText(po=>po.ShowValue(true).Distance(10)
+.Pointers(pointer =>{pointer.PointerValueText(value=>value.ShowValue(true).Distance(10)
 
 // Setting opacity property
 .Opacity(1)

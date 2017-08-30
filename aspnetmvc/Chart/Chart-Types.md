@@ -1953,7 +1953,7 @@ To create a HiLoOpenClose chart, you can set the series Type as **HiloOpenClose*
      {
              //Set chart type to series
              sr.Type(SeriesType.HiloOpenClose)
-                 //Add datasource and set xName, high and low to hiloopenclose chart
+                 //Add datasource and set xName, high and low to hilo open close chart
              .XName("Month")
              .High("High")
              .Low("Low")
@@ -2017,7 +2017,7 @@ HiLoOpenClose chart **BullFillColor** is used to specify a fill color for the se
     
      .Series(sr =>
      {
-         //Change bullFill and bearFill color of hiloopenclose chart
+         //Change bullFill and bearFill color of hilo open close chart
          sr.BearFillColor("#FF6600")
              .BullFillColor("#336600")
             //...
@@ -2612,7 +2612,7 @@ To customize the errorBar cap visibility, length, width and fill color, you can 
 
 ## Box and Whisker Chart 
 
-To render a Box and Whisker Chart, set the series *type* as **boxandwhisker** .Box and Whisker chart requires
+To render a Box and Whisker Chart, set the series *type* as **BoxAndWhisker** .Box and Whisker chart requires
 2 fields (x and y) to plot a segment. The field y requires n number of data or it should  contain minimum of five values to plot a segment.
 
 {% highlight cshtml %}
@@ -2704,7 +2704,7 @@ Outlier symbol, width and height can be customized using outlierSettings through
 [Click](http://mvc.syncfusion.com/demos/web/chart/boxandwhisker) here to view the Box and Whisker Chart online demo sample.
 
 ## Pie Of Pie Chart
-To render the pie of pie chart, set the series `Type` as **pieofpie**. Pie of pie chart is used for displaying the data of a pie slice as another pie chart. The values in the second pie is displayed based on the **splitMode**  property.
+To render the pie of pie chart, set the series `Type` as **PieOfPie**. Pie of pie chart is used for displaying the data of a pie slice as another pie chart. The values in the second pie is displayed based on the **splitMode**  property.
 
 {% highlight cshtml %}
 @(Html.EJ().Chart("container")
