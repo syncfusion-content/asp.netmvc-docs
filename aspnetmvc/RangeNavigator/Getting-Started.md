@@ -321,9 +321,9 @@ class NavigatorData
 
 	{
 
-		this.xdate = date;
+		this.xDate = date;
 
-		this.yvalue = value;
+		this.yValue = value;
 
 	}
 
