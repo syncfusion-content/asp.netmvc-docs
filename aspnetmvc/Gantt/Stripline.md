@@ -34,7 +34,7 @@ Stripline in Gantt control is used to highlight the important event in Gantt cha
 
                     LineStyle="dotted",
 
-                    LineColor="Darkblue",
+                    LineColor="DarkBlue",
 
                     LineWidth=2 }, 
         })
