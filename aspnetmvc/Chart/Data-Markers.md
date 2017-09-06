@@ -315,6 +315,81 @@ The label can be wrapped for pie, doughnut, funnel, and pyramid series by settin
 
 ![](Data-Markers_images/Data-Markers_img13.png)
 
+
+## Binding label from the datasource
+
+You can bind the text value to the datalabel from the datasource and then you need to map the text value field with the **TextMappingName** property respectively.
+
+{% highlight cshtml %}
+
+//data source for chart with label 
+var chartData = [
+          { month: 'Jan', sales: 35 , text: 'January'}, 
+          { month: 'Feb', sales: 28 , text: 'February'}
+          //..
+          ];
+          
+    function onChartLoad(sender) {
+        var data = GetData();
+        sender.model.series[0].dataSource = chartData;
+        sender.model.series[0].xName = "month";
+        sender.model.series[0].yName = "sales";
+    }
+
+@(Html.EJ().Chart("chartContainer") 
+                           //.... . . 
+              .Series(sr => {                      
+                       sr.Marker(mr => mr.DataLabel(label=>
+                              label.Visible("true")
+                              .TextMappingName("text")                                                                  
+                         ))
+                       .Add();                     
+                      //.... . . 
+               })
+               .Load("onChartLoad")
+            //.... 
+     }) 
+)
+
+
+{% endhighlight %}
+
+
+## Binding fill color to the points from the datasource
+
+You can bind the color value to the points from the datasource and then you need to map the color value field to the **PointColorMappingName** property respectively.
+
+{% highlight cshtml %}
+
+//data source for chart with fill color
+var chartData = [
+          { month: 'Jan', sales: 35 , color: 'red'}, 
+          { month: 'Feb', sales: 28 , color: 'blue'}
+          //..
+          ];
+          
+    function onChartLoad(sender) {
+        var data = GetData();
+        sender.model.series[0].dataSource = chartData;
+        sender.model.series[0].xName = "month";
+        sender.model.series[0].yName = "sales";
+    }
+
+@(Html.EJ().Chart("chartContainer") 
+                           //.... . . 
+              .Series(sr => {
+                      //Mapping the color values to the points
+                      sr.PointColorMappingName("color") .Add();                     
+                      //.... . . 
+               })
+               .Load("onChartLoad")
+            //.... 
+     }) 
+)
+
+
+{% endhighlight %}
+
 ## Customize specific points
 
 By using the ejChart, you can also customize the individual/specific markers with different colors, shapes and also with different images.
