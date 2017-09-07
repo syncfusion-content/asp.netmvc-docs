@@ -11,7 +11,7 @@ documentation: ug
 
 Customization of DateRangePicker will be easier with its flexible customization options.
 
-## Setting Dimention
+## Setting Dimension
 
 Height and width of the DateRangePicker can be changed using corresponding API (**Height**,**Width**) like below code examples.
 
@@ -60,12 +60,12 @@ We can make use of **Ranges** API for easy selection of preset ranges from the p
 ~~~ cshtml
     @*Add the following code example to the corresponding CSHTML page to enable state persistence in DateRangePicker widget*@
 
-    @{List<Object> lastweek = new List<Object>() { DateTime.Today.AddDays(-7),DateTime.Today.AddDays(-1)};}
-    @{List<Object> lastmonth = new List<Object>() { DateTime.Today.AddMonths(-1), DateTime.Today.AddDays(-1) };}
-    @{List<Object> lastyear = new List<Object>() { DateTime.Today.AddYears(-1), DateTime.Today.AddDays(-1) };}
+    @{List<Object> lastWeek = new List<Object>() { DateTime.Today.AddDays(-7),DateTime.Today.AddDays(-1)};}
+    @{List<Object> lastMonth = new List<Object>() { DateTime.Today.AddMonths(-1), DateTime.Today.AddDays(-1) };}
+    @{List<Object> lastYear = new List<Object>() { DateTime.Today.AddYears(-1), DateTime.Today.AddDays(-1) };}
     @{List<Object> special = new List<Object>() { "12/25/2017", "1/1/2018" };}
 
-    @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Last Week").Range(lastweek)).Ranges(p => p.Add().Label("Last Month").Range(lastmonth)).Ranges(m=>m.Add().Label("Last Year").Range(lastyear)).Ranges(n => n.Add().Label("Special Week").Range(special)).Width("60%")
+    @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Last Week").Range(lastWeek)).Ranges(p => p.Add().Label("Last Month").Range(lastMonth)).Ranges(m=>m.Add().Label("Last Year").Range(lastYear)).Ranges(n => n.Add().Label("Special Week").Range(special)).Width("60%")
 ~~~
 
 Execute the above code to render the following output.

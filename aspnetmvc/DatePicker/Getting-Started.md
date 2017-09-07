@@ -107,7 +107,7 @@ You can assign values to existing EJMVC DatePicker using its instance. Consider 
 
             //create instance for datePicker.
             // only after control creation we can get dateObj otherwise it throws exception.
-            var dateObj = $("#datepick").ejDatePicker('instance');
+            var dateObj = $("#datePicker").ejDatePicker('instance');
 
             //set value using date object
             dateObj.option('value', new Date());
