@@ -403,8 +403,8 @@ The insert method of the data manager is used to add a new record to the table. 
             employee = repository.Add(employee);
             var response = Request.CreateResponse<Employee>(HttpStatusCode.Created, employee);
 
-            string uri = Url.Link("Employee", new { id = employee.EmployeeID });
-            response.Headers.Location = new Uri(uri);
+            string addEmployee = Url.Link("Employee", new { id = employee.EmployeeID });
+            response.Headers.Location = new Uri(addEmployee);
             return response;
         }
          [HttpPut]

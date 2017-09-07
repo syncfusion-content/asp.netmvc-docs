@@ -526,7 +526,7 @@ The server-side action `ScheduleImportData` contains the following code example 
 {% highlight c# %}
 
 public JsonResult ScheduleImportData() {
-    var destinationPath = @"Filepath\iCalender.ics";
+    var destinationPath = @"FilePath\iCalender.ics";
     ScheduleImport importApps = new ScheduleImport();
     var app = importApps.renderingImportAppointments(destinationPath);
     int intMax = app.Max(a => a.Id);

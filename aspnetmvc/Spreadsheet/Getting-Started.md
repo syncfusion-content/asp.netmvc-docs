@@ -101,9 +101,9 @@ To apply conditional formats for a range use `CFormatRule` property.The followin
         sheet.RangeSettings(range =>
         {
             range.Datasource((IEnumerable<object>)ViewBag.Datasource).Add();
-        }).CFormatRule(cformatrule =>
+        }).CFormatRule(formatRule =>
         {
-            cformatrule.Action(SpreadsheetCFormatRuleAction.GreaterThan).Inputs(new List<string>() { "10" }).Color(SpreadsheetCFormatHighlightColor.RedFill).Range("D2:D8").Add();
+            formatRule.Action(SpreadsheetCFormatRuleAction.GreaterThan).Inputs(new List<string>() { "10" }).Color(SpreadsheetCFormatHighlightColor.RedFill).Range("D2:D8").Add();
         }).Add();
     })
 )

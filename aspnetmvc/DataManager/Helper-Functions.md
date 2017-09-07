@@ -63,7 +63,7 @@ Please refer the online (link)[https://en.wikipedia.org/wiki/Time_zone#List_of_U
 <table>
     <tr>
         Time-zone offset calculation from UTC: <br>
-        ej.serverTimezoneOffset = serverTimeZoneDiff(in hours) + ClientSideTimeZoneDiff(in hours); 
+        ej.serverTimezoneOffset = serverTimeZoneDifference(in hours) + ClientSideTimeZoneDiff(in hours); 
     </tr>
 </table>
 
@@ -77,9 +77,9 @@ Please refer the online (link)[https://en.wikipedia.org/wiki/Time_zone#List_of_U
         </div>
     </div>
     <script type="text/javascript">
-        var serverTimeZoneDiff = -5.0   // if your server is in EST time zone (UTC -5.0) (in hours)
-        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
-        ej.serverTimezoneOffset = serverTimeZoneDiff + clientSideTimeZoneDiff;
+        var serverTimeZoneDifference = -5.0   // if your server is in EST time zone (UTC -5.0) (in hours)
+        var serverTimeZoneDifference = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
+        ej.serverTimezoneOffset = serverTimeZoneDifference + serverTimeZoneDifference;
         $(function () {
             var dataManagerObj = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
             $("#Grid").ejGrid({
@@ -110,9 +110,9 @@ Let see an example, when they observe the Daylight saving time.
         </div>
     </div>
     <script type="text/javascript">
-        var serverTimeZoneDiff = -4.0  // if your server is in EDT time zone (UTC -4.0) (in hours)
-        var clientSideTimeZoneDiff = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
-        ej.serverTimezoneOffset = serverTimeZoneDiff + clientSideTimeZoneDiff;
+        var serverTimeZoneDifference = -4.0  // if your server is in EDT time zone (UTC -4.0) (in hours)
+        var serverTimeZoneDifference = new Date().getTimezoneOffset() / 60; // get client time zone differences and convert it to hours;
+        ej.serverTimezoneOffset = serverTimeZoneDifference + serverTimeZoneDifference;
         $(function () {
             var dataManagerObj = ej.DataManager({ url: "http://mvc.syncfusion.com/services/Northwnd.svc/Orders" });
             $("#Grid").ejGrid({

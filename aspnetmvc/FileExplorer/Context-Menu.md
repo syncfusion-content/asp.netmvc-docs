@@ -217,7 +217,7 @@ In the view page, add FileExplorer helper and specify the **ContextMenuSettings*
 {% highlight razor %}
 
 @* removed the "NewFolder" item from NavigationPane ContextMenu *@
-@{List<String> navBar = new List<string>() { "Upload", "|", "Delete", "Rename", "|", "Cut", "Copy", "Paste", "|", "Getinfo" }; }
+@{List<String> navigationBar = new List<string>() { "Upload", "|", "Delete", "Rename", "|", "Cut", "Copy", "Paste", "|", "Getinfo" }; }
 @* added the custom ContextMenu item (View) to Current working directory ContextMenu *@
 @{List<String> cwd = new List<string>() { "Refresh", "Paste", "|", "SortBy", "View", "|", "NewFolder", "Upload", "|", "Getinfo" };}
 @* removed "Upload" item from Selected files/ folder's ContextMenu *@
@@ -227,14 +227,14 @@ In the view page, add FileExplorer helper and specify the **ContextMenuSettings*
 
 @Html.EJ().FileExplorer("fileExplorer").Path("~/FileExplorerContent/").ContextMenuSettings(
     settings => settings.Items(
-        item => item.Navbar(navBar).Cwd(cwd).Files(files)
+        item => item.Navbar(navigationBar).Cwd(cwd).Files(files)
     ).CustomMenuFields(fields =>
     {
         fields.Add().Id("View").Text("View by").SpriteCssClass("custom-grid").Child(child =>
         {
             child.Add().Id("tile").Text("Tile view").Action("onLayout");
             child.Add().Id("grid").Text("Grid view").Action("onLayout");
-            child.Add().Id("largeicons").Text("Large icons view").Action("onLayout");
+            child.Add().Id("largeIcons").Text("Large icons view").Action("onLayout");
         });
     })
     ).AjaxAction(@Url.Content("FileActionContextMenu")).ClientSideEvents(
@@ -252,7 +252,7 @@ Icons of context menu items can be customized by overriding the default context 
         content: "\e7b9";
     }
 
-    .fe-context-menu .custom-largeicons:before {
+    .fe-context-menu .custom-largeIcons:before {
         content: "\e7bb";
     }
 
@@ -292,7 +292,7 @@ function menuOpen(args) {
 }
 function menuClick(args) {
     switch (args.text) {
-        case "largeicons":
+        case "largeIcons":
             //do your custom action here.
             break;
     }

@@ -354,7 +354,7 @@ The Schedule appointment data can also be bound through the Web API services. It
         .Width("100%")
         .Height("525px")
         .CurrentDate(new DateTime(2015, 11, 5))
-        .AppointmentSettings(fields => fields.Datasource(ds => ds.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
+        .AppointmentSettings(fields => fields.Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/OdataServices/api/ScheduleData/").CrossDomain(true))
             .Id("Id")
             .Subject("Subject")
             .StartTime("StartTime")
@@ -1063,8 +1063,8 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
             {
                 var value = param.action == "insert" ? param.value : param.added[0];
                 connection.Open();
-                sql = "insert into ScheduleData (Id,EndTime,Recurrence,StartTime,Subject,AllDay,RecurrenceRule,StartTimeZone,EndTimeZone,Description) values(" + value.Id + ",'" + value.EndTime + "','" + value.Recurrence + "','" + value.StartTime + "','" + value.Subject + "','" + value.AllDay + "','" + value.RecurrenceRule +"','" + value.StartTimeZone + "','" + value.EndTimeZone + "','" + value.Description + "')";
-                adapter1.InsertCommand = new SqlCommand(sql, connection);
+                sqlCommand = "insert into ScheduleData (Id,EndTime,Recurrence,StartTime,Subject,AllDay,RecurrenceRule,StartTimeZone,EndTimeZone,Description) values(" + value.Id + ",'" + value.EndTime + "','" + value.Recurrence + "','" + value.StartTime + "','" + value.Subject + "','" + value.AllDay + "','" + value.RecurrenceRule +"','" + value.StartTimeZone + "','" + value.EndTimeZone + "','" + value.Description + "')";
+                adapter1.InsertCommand = new SqlCommand(sqlCommand, connection);
                 adapter1.InsertCommand.ExecuteNonQuery();
                 connection.Close();
             }
@@ -1091,8 +1091,8 @@ Binding SQL data to Scheduler is quite simple and also it supports the complete 
             {
                 connection.Open();
                 var value = param.action == "update" ? param.value : param.changed[0];
-                sql = "update scheduleData set EndTime='" + value.EndTime + "',Recurrence='" + value.Recurrence + "',StartTime='" + value.StartTime + "',Subject='" + value.Subject + "',AllDay='" + value.AllDay + "',RecurrenceRule='" + value.RecurrenceRule + "',StartTimeZone = '" + value.StartTimeZone + "',EndTimeZone = '" + value.EndTimeZone + "'where Id='" + value.Id + "'";
-                adapter1.UpdateCommand = new SqlCommand(sql, connection);
+                sqlCommand = "update scheduleData set EndTime='" + value.EndTime + "',Recurrence='" + value.Recurrence + "',StartTime='" + value.StartTime + "',Subject='" + value.Subject + "',AllDay='" + value.AllDay + "',RecurrenceRule='" + value.RecurrenceRule + "',StartTimeZone = '" + value.StartTimeZone + "',EndTimeZone = '" + value.EndTimeZone + "'where Id='" + value.Id + "'";
+                adapter1.UpdateCommand = new SqlCommand(sqlCommand, connection);
                 adapter1.UpdateCommand.ExecuteNonQuery();
                 connection.Close();
             }

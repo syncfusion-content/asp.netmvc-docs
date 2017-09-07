@@ -53,15 +53,15 @@ Contextual Tabs are collection of Tabs that extended styling and can be shown ba
     </ul>
     <div id="headings" class="e-headings">
         <div>
-            <p>AaBbCcDd</p>
+            <p>First Heading</p>
             <p>No Spacing</p>
         </div>
         <div>
-            <p class="e-strong">AaBbCcDd</p>
+            <p class="e-strong">Second Heading</p>
             <p>Strong</p>
         </div>
         <div>
-            <p class="e-emphasis">AaBbCcDd</p>
+            <p class="e-emphasis">Third Heading</p>
             <p>Emphasis</p>
         </div>
     </div>
