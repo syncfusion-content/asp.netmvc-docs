@@ -44,41 +44,41 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 			List<icons> menu = new List<icons>(); 
 			public ActionResult DataBindingJson() 
 			{
-				menu.Add(new MenuJson { id = 1, text = "Group A", parent = null }); 
-				menu.Add(new MenuJson { id = 2, text = "Group B", parent = null }); 
-				menu.Add(new MenuJson { id = 3, text = "Group C", parent = null });
-				menu.Add(new MenuJson { id = 4, text = "Group D", parent = null });
-				menu.Add(new MenuJson { id = 5, text = "Group E", parent = null }); 
-				menu.Add(new MenuJson { id = 11, parent = "1", text = "Algeria", sprite = "flag-dz" });
-				menu.Add(new MenuJson { id = 12, parent = "1", text = "Armenia", sprite = "flag-am" });
-				menu.Add(new MenuJson { id = 13, parent = "1", text = "Bangladesh", sprite = "flag-bd" }); 
-				menu.Add(new MenuJson { id = 14, parent = "1", text = "Cuba", sprite = "flag-cu" });  
-				menu.Add(new MenuJson { id = 15, parent = "2", text = "Denmark", sprite = "flag-dk" }); 
-				menu.Add(new MenuJson { id = 16, parent = "2", text = "Egypt", sprite = "flag-eg" });  
-				menu.Add(new MenuJson { id = 17, parent = "3", text = "Finland", sprite = "flag-fi" });
-				menu.Add(new MenuJson { id = 18, parent = "3", text = "India", sprite = "flag-in" }); 
-				menu.Add(new MenuJson { id = 19, parent = "3", text = "Malaysia", sprite = "flag-my" });
-				menu.Add(new MenuJson { id = 20, parent = "4", text = "New Zealand", sprite = "flag-nz" });
-				menu.Add(new MenuJson { id = 21, parent = "4", text = "Norway", sprite = "flag-no" });
-				menu.Add(new MenuJson { id = 22, parent = "4", text = "Romania", sprite = "flag-ro" });
-				menu.Add(new MenuJson { id = 23, parent = "5", text = "Singapore", sprite = "flag-sg" });
-				menu.Add(new MenuJson { id = 24, parent = "5", text = "Thailand", sprite = "flag-th" }); 
-				menu.Add(new MenuJson { id = 25, parent = "5", text = "Ukraine", sprite = "flag-ua" }); 
-				menu.Add(new MenuJson { id = 26, parent = "11", text = "First Place" });  
-				menu.Add(new MenuJson { id = 27, parent = "12", text = "Second Place" }); 
-				menu.Add(new MenuJson { id = 28, parent = "13", text = "Third place" }); 
-				menu.Add(new MenuJson { id = 29, parent = "14", text = "Fourth Place" }); 
-				menu.Add(new MenuJson { id = 30, parent = "15", text = "First Place" });  
-				menu.Add(new MenuJson { id = 31, parent = "16", text = "Second Place" }); 
-				menu.Add(new MenuJson { id = 32, parent = "17", text = "Third Place" }); 
-				menu.Add(new MenuJson { id = 33, parent = "18", text = "First Place" }); 
-				menu.Add(new MenuJson { id = 34, parent = "19", text = "Second Place" }); 
-				menu.Add(new MenuJson { id = 35, parent = "20", text = "First Place" }); 
-				menu.Add(new MenuJson { id = 36, parent = "21", text = "Second Place" });
-				menu.Add(new MenuJson { id = 37, parent = "22", text = "Third place" }); 
-				menu.Add(new MenuJson { id = 38, parent = "23", text = "Third Place" }); 
-				menu.Add(new MenuJson { id = 39, parent = "24", text = "First Place" }); 
-				menu.Add(new MenuJson { id = 40, parent = "25", text = "Second Place" });
+				menu.Add(new icons { id = 1, text = "Group A", parent = null }); 
+				menu.Add(new icons { id = 2, text = "Group B", parent = null }); 
+				menu.Add(new icons { id = 3, text = "Group C", parent = null });
+				menu.Add(new icons { id = 4, text = "Group D", parent = null });
+				menu.Add(new icons { id = 5, text = "Group E", parent = null }); 
+				menu.Add(new icons { id = 11, parent = "1", text = "Algeria", sprite = "flag-dz" });
+				menu.Add(new icons { id = 12, parent = "1", text = "Armenia", sprite = "flag-am" });
+				menu.Add(new icons { id = 13, parent = "1", text = "Bangladesh", sprite = "flag-bd" }); 
+				menu.Add(new icons { id = 14, parent = "1", text = "Cuba", sprite = "flag-cu" });  
+				menu.Add(new icons { id = 15, parent = "2", text = "Denmark", sprite = "flag-dk" }); 
+				menu.Add(new icons { id = 16, parent = "2", text = "Egypt", sprite = "flag-eg" });  
+				menu.Add(new icons { id = 17, parent = "3", text = "Finland", sprite = "flag-fi" });
+				menu.Add(new icons { id = 18, parent = "3", text = "India", sprite = "flag-in" }); 
+				menu.Add(new icons { id = 19, parent = "3", text = "Malaysia", sprite = "flag-my" });
+				menu.Add(new icons { id = 20, parent = "4", text = "New Zealand", sprite = "flag-nz" });
+				menu.Add(new icons { id = 21, parent = "4", text = "Norway", sprite = "flag-no" });
+				menu.Add(new icons { id = 22, parent = "4", text = "Romania", sprite = "flag-ro" });
+				menu.Add(new icons { id = 23, parent = "5", text = "Singapore", sprite = "flag-sg" });
+				menu.Add(new icons { id = 24, parent = "5", text = "Thailand", sprite = "flag-th" }); 
+				menu.Add(new icons { id = 25, parent = "5", text = "Ukraine", sprite = "flag-ua" }); 
+				menu.Add(new icons { id = 26, parent = "11", text = "First Place" });  
+				menu.Add(new icons { id = 27, parent = "12", text = "Second Place" }); 
+				menu.Add(new icons { id = 28, parent = "13", text = "Third place" }); 
+				menu.Add(new icons { id = 29, parent = "14", text = "Fourth Place" }); 
+				menu.Add(new icons { id = 30, parent = "15", text = "First Place" });  
+				menu.Add(new icons { id = 31, parent = "16", text = "Second Place" }); 
+				menu.Add(new icons { id = 32, parent = "17", text = "Third Place" }); 
+				menu.Add(new icons { id = 33, parent = "18", text = "First Place" }); 
+				menu.Add(new icons { id = 34, parent = "19", text = "Second Place" }); 
+				menu.Add(new icons { id = 35, parent = "20", text = "First Place" }); 
+				menu.Add(new icons { id = 36, parent = "21", text = "Second Place" });
+				menu.Add(new icons { id = 37, parent = "22", text = "Third place" }); 
+				menu.Add(new icons { id = 38, parent = "23", text = "Third Place" }); 
+				menu.Add(new icons { id = 39, parent = "24", text = "First Place" }); 
+				menu.Add(new icons { id = 40, parent = "25", text = "Second Place" });
 				ViewBag.datasource = menu; 
 				return View();  
 			} 
@@ -97,7 +97,7 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 
 	<style type="text/css">
 
-			#menujson 
+			#menu
 			{
 
 				margin-left: 50px;

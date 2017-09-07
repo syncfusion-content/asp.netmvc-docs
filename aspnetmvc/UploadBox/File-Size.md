@@ -56,7 +56,7 @@ When you try to browse the file with exceeded FileSize, an error message will be
 
      <script type="text/javascript">
 
-	  function fileuploaderror(e) 
+	  function fileUploadError(e) 
 	   {
 	     alert("The selected file size is too large. Please select a file less than " + Math.round(e.model.fileSize / (1024 * 1024)) + "MB");
        }

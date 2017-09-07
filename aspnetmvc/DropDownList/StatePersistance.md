@@ -63,11 +63,11 @@ Persisted state can be accessed through local storage using corresponding key na
 {% highlight js %}
 
 	// DropDownList state as string
-	var dropdownlistStateString = window.localStorage.ejDropDownListdropdown;
+	var dropdownlistStateString = window.localStorage.ejDropDownList_dropDown;
 
 	//DropDownList state as object
-	var dropdownlistStateObject = JSON.parse(window.localStorage.ejDropDownListdropdown);
+	var dropdownlistStateObject = JSON.parse(window.localStorage.ejDropDownList_dropDown);
 
 {% endhighlight %}
 
-N> In the above example, ‘ejDropDownList’ is plugin name and ‘dropdown’ is control id.           
+N> In the above example, ‘ejDropDownList’ is plugin name and _dropDown is control id.           

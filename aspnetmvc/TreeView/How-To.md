@@ -543,7 +543,6 @@ In the view page, add TreeView helper and map the properties defined in to the 
     </div>
     <script type="text/javascript">
         var treeObj, inputObj, count = 0;
-        var onFirstChk = true;
         window._temp = [];
     
         function onCreate(args) {

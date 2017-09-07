@@ -112,6 +112,6 @@ It specifies the mapping field of tool tip text.<br/><br/></td></tr>
 
     @*sets the special date in datepicker calendar*@
 
-    @Html.EJ().DatePicker("datePicker").SpecialDates(SpecialDate => { SpecialDate.Add().Date("28/06/2015").IconClass("birthday").Tooltip("xxx birthday"); })
+    @Html.EJ().DatePicker("datePicker").SpecialDates(SpecialDate => { SpecialDate.Add().Date("28/06/2015").IconClass("birthday").Tooltip("John birthday"); })
        
 {% endhighlight %}
