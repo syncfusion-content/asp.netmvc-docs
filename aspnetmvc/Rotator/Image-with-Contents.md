@@ -26,7 +26,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 	   </div>
 
-	   <div class="rightPanel blck">
+	   <div class="rightPanel black">
 
 		   <div class="contentPanel">Tablet </div>
 
@@ -217,7 +217,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck 
+    #sliderContent .rightPanel.black 
 	{
 
             background-color: black;
@@ -226,7 +226,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck li 
+    #sliderContent .rightPanel.black li 
 	{
 
                 color: white;
@@ -239,7 +239,7 @@ This feature allows you to add text along with the image in Rotator control. Thi
 
 
 
-    #sliderContent .rightPanel.blck .contentPanel 
+    #sliderContent .rightPanel.black .contentPanel 
 	{
 
                 padding-top: 30px;

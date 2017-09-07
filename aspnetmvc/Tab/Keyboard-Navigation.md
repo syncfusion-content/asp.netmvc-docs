@@ -53,7 +53,7 @@ The following code example is used to render the Tab element in RTL format.
 	<div style="width:550px"> 
 	@{Html.EJ().Tab("dishTab").Items(data => 
 	{               
-		data.Add().ID("pizzatType").Text("Pizza Type")   
+		data.Add().ID("pizzaType").Text("Pizza Type")   
 		.ContentTemplate(@<div>             
 		Pizza cooked to perfection tossed with milk, vegetables, potatoes, poultry, 100% pure mutton, and cheese - and in creating nutritious and tasty meals to maintain good health. 
 		</div>);  

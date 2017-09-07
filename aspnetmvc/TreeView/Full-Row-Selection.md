@@ -95,7 +95,7 @@ public partial class TreeViewController : Controller
     public ActionResult FullRowSelection()
     {
         fullRowData.Add(new loadOnDemand { id = 1, name = "Browsers", className = "browser", hasChild = true, expanded = true });
-        fullRowData.Add(new loadOnDemand { id = 2, parentId = 1, name = "Internet Explorer", className = "ie-browser", selected = true });
+        fullRowData.Add(new loadOnDemand { id = 2, parentId = 1, name = "Internet Explorer", className = "internet-explorer-browser", selected = true });
         fullRowData.Add(new loadOnDemand { id = 3, parentId = 1, name = "Chrome", className = "chrome-browser" });
         fullRowData.Add(new loadOnDemand { id = 4, parentId = 1, name = "Firefox", className = "firefox-browser" });
         fullRowData.Add(new loadOnDemand { id = 6, parentId = 1, name = "Bitty", className = "bitty-browser" });
@@ -134,7 +134,7 @@ In the view page, add TreeView helper and map the properties defined in to the c
 <script id="treeTemplate" type="text/x-jsrender">
 
     {{"{{"}}if !hasChild{{}}}}
-    <span class="con-img {{"{{"}}>className{{}}}}"></span>
+    <span class="con-image {{"{{"}}>className{{}}}}"></span>
     {{"{{"}}/if{{}}}}
     {{"{{"}}>name{{}}}}
 
@@ -145,7 +145,7 @@ In the view page, add TreeView helper and map the properties defined in to the c
 {% highlight css %}
 
 <style>
-	.custom .con-img {
+	.custom .con-image {
         background-image: url("http://mvc.syncfusion.com/demos/web/images/toolbar/browserl.png");
         background-repeat: no-repeat;
         height: 32px;
@@ -157,15 +157,15 @@ In the view page, add TreeView helper and map the properties defined in to the c
         vertical-align: middle;
     }
     
-    .custom .e-li-active > .e-text-wrap .con-img {
+    .custom .e-li-active > .e-text-wrap .con-image {
         background-image: url("http://mvc.syncfusion.com/demos/web/images/toolbar/browserh.png");
     }
     
-    .custom .e-li-hover > .e-text-wrap .con-img, .e-fullrow-wrap .e-li-focus > .e-text-wrap .con-img {
+    .custom .e-li-hover > .e-text-wrap .con-image, .e-fullrow-wrap .e-li-focus > .e-text-wrap .con-image {
         background-image: url("http://mvc.syncfusion.com/demos/web/images/toolbar/browserl.png");
     }
     
-    .custom .ie-browser {
+    .custom .internet-explorer-browser {
         background-position: -84px 0px;
     }
     

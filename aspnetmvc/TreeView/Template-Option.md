@@ -80,8 +80,8 @@ In the view page, specify template format and add TreeView helper.
         <div class={{"{{"}}>ClassName{{}}}}>{{"{{"}}>Name{{}}}}</div>
         {{"{{"}}else{{}}}}
         <div class="cont-list">
-            <img class="con-img" src="http://mvc.syncfusion.com/demos/web/images/treeview/template-image-{{"{{"}}>ImgId{{}}}}.png" />
-            <div class="cont-del"></div>
+            <img class="con-image" src="http://mvc.syncfusion.com/demos/web/images/treeview/template-image-{{"{{"}}>ImgId{{}}}}.png" />
+            <div class="cont-delete"></div>
             <b>{{"{{"}}>Name{{}}}}</b><br />
             <span>{{"{{"}}>City{{}}}}</span>
             <br />
@@ -118,7 +118,7 @@ In the view page, specify template format and add TreeView helper.
             opacity: 0.8;
         }
     
-        .con-img {
+        .con-image {
             float: left;
         }
     
@@ -146,7 +146,7 @@ In the view page, specify template format and add TreeView helper.
             color: #FFFFFF !important;
         }
     
-        .cont-del {
+        .cont-delete {
             background-image: url("http://mvc.syncfusion.com/demos/web/images/treeview/remove-icon.png");
             background-position: -6px -10px;
             background-repeat: no-repeat;
@@ -166,7 +166,7 @@ In the view page, specify template format and add TreeView helper.
     <script>
         function onCreate(args) {
             var treeObj = $("#treeview").data("ejTreeView");
-            $("#treeview").find(".cont-del").bind("click", function (e) {
+            $("#treeview").find(".cont-delete").bind("click", function (e) {
                 e.preventDefault();
                 treeObj.removeNode($(e.target).parents("li").first());
             });
@@ -188,7 +188,7 @@ You can able to perform custom action in TreeView template node. You can able to
     
         function onCreate(args) {
             var treeObj = $("#treeview").data("ejTreeView");
-            $("#treeview").find(".cont-del").bind("click", function (e) {
+            $("#treeview").find(".cont-delete").bind("click", function (e) {
                 e.preventDefault();
                 treeObj.removeNode($(e.target).parents("li").first());
             });

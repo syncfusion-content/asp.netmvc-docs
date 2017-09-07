@@ -45,17 +45,17 @@ The following code example describes the above behavior.
     .Sheets(sheet =>
     {
         sheet.Datasource((IEnumerable<object>)ViewBag.Datasource)
-        .CellTypes(ctype =>
+        .CellTypes(cellType =>
         {
-            ctype.Range("A1").Setting(setting =>
+            cellType.Range("A1").Setting(setting =>
             {
                 setting.Type(CustomCellTypes.DropDownList).DataSourceRange("A2:A11");
             }).Add();
-            ctype.Range("D1").Setting(setting =>
+            cellType.Range("D1").Setting(setting =>
             {
                 setting.Type(CustomCellTypes.Button).Text("BUTTON").BackgroundColor("green");
             }).Add();
-            ctype.Range("C1").Setting(setting =>
+            cellType.Range("C1").Setting(setting =>
             {
                 setting.Type(CustomCellTypes.DropDownList).DataSourceRange("A2:A11");
             }).Add();
@@ -66,10 +66,10 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlCellType = this.XLCellType;
+        var excelCellType = this.XLCellType;
         if (!this.isImport) {
-            xlCellType.addCellTypes("B1", {"type" : ej.Spreadsheet.CustomCellType.DatePicker, 'value' : '2/12/2016'},  1);
-            xlCellType.addCellTypes("E1", {"type" : ej.Spreadsheet.CustomCellType.CheckBox, "isChecked" : true },  1);
+            excelCellType.addCellTypes("B1", {"type" : ej.Spreadsheet.CustomCellType.DatePicker, 'value' : '2/12/2016'},  1);
+            excelCellType.addCellTypes("E1", {"type" : ej.Spreadsheet.CustomCellType.CheckBox, "isChecked" : true },  1);
             this.XLCellType.removeCellTypes("C1");
         }
     }
@@ -225,14 +225,14 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlCFormat = this.XLCFormat;
+        var conditionFormat = this.XLCFormat;
         if (!this.isImport) {
-            xlCFormat.setCFRule({ "action": "greaterthan", "inputs": ["10"], "color": "redft", "range": "G2:G11" });
-            xlCFormat.setCFRule({ "action": "lessthan", "inputs": ["20"], "color": "yellowft", "range": "E1:E11" });
-            xlCFormat.setCFRule({ "action": "between", "inputs": ["300", "600"], "color": "greenft", "range": "F2:F11" });
-            xlCFormat.setCFRule({ "action": "equalto", "inputs": ["20"], "color": "redf", "range": "D2:D11" });
-            xlCFormat.setCFRule({ "action": "textcontains", "inputs": ["loafers"], "color": "redt", "range": "A1:A11" });
-            xlCFormat.setCFRule({ "action": "dateoccur", "inputs": ["02/04/2014"], "color": "redft", "range": "B1:B11" });
+           conditionFormat.setCFRule({ "action": "greaterthan", "inputs": ["10"], "color": "redft", "range": "G2:G11" });
+           conditionFormat.setCFRule({ "action": "lessthan", "inputs": ["20"], "color": "yellowft", "range": "E1:E11" });
+           conditionFormat.setCFRule({ "action": "between", "inputs": ["300", "600"], "color": "greenft", "range": "F2:F11" });
+           conditionFormat.setCFRule({ "action": "equalto", "inputs": ["20"], "color": "redf", "range": "D2:D11" });
+           conditionFormat.setCFRule({ "action": "textcontains", "inputs": ["loafers"], "color": "redt", "range": "A1:A11" });
+           conditionFormat.setCFRule({ "action": "dateoccur", "inputs": ["02/04/2014"], "color": "redft", "range": "B1:B11" });
         }
     }
 </script>
@@ -290,13 +290,13 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlCFormat = this.XLCFormat;
+        varconditionFormat = this.XLCFormat;
         if (!this.isImport) {
-            xlCFormat.setCFRule({ "action": "greaterthan", "inputs": ["10"], "color": "redft", "range": "G2:G11" });
-            xlCFormat.setCFRule({ "action": "lessthan", "inputs": ["20"], "color": "yellowft", "range": "E1:E11" });
-            xlCFormat.setCFRule({ "action": "between", "inputs": ["300", "600"], "color": "greenft", "range": "F2:F11" });
-            xlCFormat.clearCF("G2:G11");
-            xlCFormat.clearCF("F2:F11");
+           conditionFormat.setCFRule({ "action": "greaterthan", "inputs": ["10"], "color": "redft", "range": "G2:G11" });
+           conditionFormat.setCFRule({ "action": "lessthan", "inputs": ["20"], "color": "yellowft", "range": "E1:E11" });
+           conditionFormat.setCFRule({ "action": "between", "inputs": ["300", "600"], "color": "greenft", "range": "F2:F11" });
+           conditionFormat.clearCF("G2:G11");
+           conditionFormat.clearCF("F2:F11");
         }
     }
 </script>
@@ -444,11 +444,11 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlFilter = this.XLFilter;
+        var excelFilter = this.XLFilter;
         if (!this.isImport) {
             this.performSelection("E2");
-            xlFilter.filterByActiveCell();
-            xlFilter.clearFilter();
+           excelFilter.filterByActiveCell();
+           excelFilter.clearFilter();
         }
     }
 </script>
@@ -651,10 +651,10 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlSort = this.XLSort, xlFormat = this.XLFormat;
+        var excelSort = this.XLSort,excelFormat = this.XLFormat;
         if (!this.isImport) {
-            xlSort.sortByRange("A2:A10", "A", "ascending");
-            xlSort.sortByRange("E2:E10", "E", "descending"); 
+           excelSort.sortByRange("A2:A10", "A", "ascending");
+           excelSort.sortByRange("E2:E10", "E", "descending"); 
         }
     }
 </script>
@@ -739,10 +739,10 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        var xlFormat = this.XLFormat;
+        var excelFormat = this.XLFormat;
         if (!this.isImport) {
-            xlFormat.createTable({ "header": true, "formatName": "TableStyleLight8" }, "A1:B4");
-            xlFormat.createTable({ "header": true, "formatName": "TableStyleLight10" }, "D1:E4");
+           excelFormat.createTable({ "header": true, "formatName": "TableStyleLight8" }, "A1:B4");
+           excelFormat.createTable({ "header": true, "formatName": "TableStyleLight10" }, "D1:E4");
         }
     }
 </script>

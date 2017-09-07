@@ -121,7 +121,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                 {
                                     ctn.ContentGroups(contentTab =>
                                     {
-                                        contentTab.Id("fontfamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
+                                        contentTab.Id("fontFamily").ToolTip("Font").DropdownSettings(new DropDownListProperties()
                                         {
                                             DataSource = (IEnumerable<FontFamily>)ViewBag.datasource,
                                             Text = "Segoe UI",

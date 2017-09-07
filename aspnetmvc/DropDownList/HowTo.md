@@ -230,7 +230,7 @@ Once the AJAX call is success, bind the data to the dropdown list on AJAX call b
             BikeList = [
                 { id: "bk1", text: "Apache RTR" }, { id: "bk2", text: "CBR 150-R" }, { id: "bk3", text: "CBZ Xtreme" },
                 { id: "bk4", text: "Discover" }, { id: "bk5", text: "Dazzler" }, { id: "bk6", text: "Flame" },
-                { id: "bk7", text: "Fazzer" }, { id: "bk8", text: "FZ-S" }, { id: "bk9", text: "Pulsar" },
+                { id: "bk7", text: "Fazer" }, { id: "bk8", text: "FZ-S" }, { id: "bk9", text: "Pulsar" },
                 { id: "bk10", text: "Shine" }, { id: "bk11", text: "R15" }, { id: "bk12", text: "Unicorn" }
             ];
 

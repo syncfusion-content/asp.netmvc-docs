@@ -305,17 +305,17 @@ The following code example depicts the way to achieve the customization of defau
     // This function executes before the appointment window gets opened.
     function onAppointmentOpen(args) {
         // to add custom element in default appointment window
-        if (this._appointmentAddWindow.find(".customfields").length == 0) {
-    	    var customDesign = "<tr class='customfields'><td class='e-textlabel'>Event Type</td><td><input class='apptype' type='text'/></td><td class='e-textlabel'>Event Status </td><td><input class='status' type='text'/></td></tr>";
-		    $(customDesign).insertAfter(this._appointmentAddWindow.find("." + this._id + "parrow"));
+        if (this._appointmentAddWindow.find(".custom-fields").length == 0) {
+    	    var customDesign = "<tr class='custom-fields'><td class='e-textlabel'>Event Type</td><td><input class='app-type' type='text'/></td><td class='e-textlabel'>Event Status </td><td><input class='status' type='text'/></td></tr>";
+		    $(customDesign).insertAfter(this._appointmentAddWindow.find("." + this._id + "arrow"));
         }
             
 	    if (!ej.isNullOrUndefined(args.appointment)) {
-    	    // if double clicked on the appointments, retrieve the custom field values from the appointment object and fills it in the appropriate fields.               this._appointmentAddWindow.find(".apptype").val(args.appointment.AppointmentType);
+    	    // if double clicked on the appointments, retrieve the custom field values from the appointment object and fills it in the appropriate fields.               this._appointmentAddWindow.find(".app-type").val(args.appointment.AppointmentType);
 		    this._appointmentAddWindow.find(".status").val(args.appointment.Status);
 	    } else {
     	    // if double clicked on the cells, clears the field values.               
-		    this._appointmentAddWindow.find(".apptype").val("");
+		    this._appointmentAddWindow.find(".app-type").val("");
 		    this._appointmentAddWindow.find(".status").val("");
 	    }
     }

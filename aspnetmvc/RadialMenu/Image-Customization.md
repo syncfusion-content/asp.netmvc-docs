@@ -18,7 +18,7 @@ You can add the page content with text-area by referring to this section.
 {% highlight razor %}
 
     @{
-       Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("image-class").BackImageClass("backimage-class").TargetElementId("radialTarget2").Items(items =>
+       Html.EJ().RadialMenu("nestedRadialMenu").ImageClass("image-class").BackImageClass("back-image").TargetElementId("radialTarget2").Items(items =>
         {
             items.Add().Text("Copy").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/copy.png"));
             items.Add().Text("Font").ImageURL(Url.Content("mvc.syncfusion.com/demos/web/Images/RadialMenu/font.png")).Children(children =>
@@ -83,7 +83,7 @@ Add the following styles in your code.
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/main.png");
         }
         
-        .e-radialmenu .backimage-class
+        .e-radialmenu .back-image
         {
             background-image: url("mvc.syncfusion.com/demos/web/Images/RadialMenu/Back_button.png");
         }
