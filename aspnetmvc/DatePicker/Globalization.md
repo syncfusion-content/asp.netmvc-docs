@@ -69,7 +69,7 @@ Refer below code example to update those value based some culture say for exampl
 
         //create instance for datePicker.
     // only after control creation we can get dateObj otherwise it throws exception.
-    var dateObj = $("#datepick").ejDatePicker('instance');
+    var dateObj = $("#datePicker").ejDatePicker('instance');
 
     //condition to check English culture and change watermark and button text using dateObj.
     if (ej.cultureObject.name == "en-US") {

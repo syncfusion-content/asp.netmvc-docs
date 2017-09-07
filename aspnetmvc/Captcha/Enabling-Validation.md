@@ -78,7 +78,7 @@ The following code example is used to render the Captcha with manual validation.
 	 public ActionResult Default(FormCollection Values) 
 	 {        
 		if (!CaptchaService.IsValid(Values["captcha"], Values["validateText "], true))
-		ModelState.AddModelError("mycaptcha", "Invalid characters. Try again!"); 
+		ModelState.AddModelError("myCaptcha", "Invalid characters. Try again!"); 
 		return View();  
 	 }
 

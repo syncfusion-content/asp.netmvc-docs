@@ -40,10 +40,10 @@ The following steps explains you the behavior of cascade ListBox.
 	 </div>
 	 <div class="controlitem">
 		@Html.EJ().ListBox("productList").Datasource((IEnumerable<SubCategory>)ViewBag.datasource2).ListBoxFields(df => 
-		df.Value("ProductId")).CascadeTo("subproductList").Enabled(false)
+		df.Value("ProductId")).CascadeTo("subProductList").Enabled(false)
 	 </div>
 	 <div class="controlitem"> 
-		@Html.EJ().ListBox("subproductList").Datasource((IEnumerable<SubProduct>)ViewBag.datasource3).Enabled(false)
+		@Html.EJ().ListBox("subProductList").Datasource((IEnumerable<SubProduct>)ViewBag.datasource3).Enabled(false)
 	 </div>
  
    ~~~
