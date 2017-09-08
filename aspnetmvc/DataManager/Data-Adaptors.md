@@ -617,7 +617,7 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
             window.FlatData.Adaptor = new customAdaptor()
             window.FlatData.insert({ OrderID: 10240, CustomerID: "HANAR", EmployeeID: 3, ShipCity: "Reims", Freight: "23.4" });
-            window.FlatData.insert({ OrderID: 10241, CustomerID: "HANAR", EmployeeID: 2, ShipCity: "Reimse", Freight: "21.4" });
+            window.FlatData.insert({ OrderID: 10241, CustomerID: "HANAR", EmployeeID: 2, ShipCity: "Reims", Freight: "21.4" });
             window.FlatData.insert({ OrderID: 10242, CustomerID: "VINET", EmployeeID: 5, ShipCity: "Lyon", Freight: "13.4" });
             var obj = $("#FlatGrid").ejGrid("instance");
             obj.dataSource(window.FlatData.executeLocal(new ej.Query().take(7)));
