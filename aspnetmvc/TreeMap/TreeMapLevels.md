@@ -87,19 +87,19 @@ TreeMap `Hierarchical` level is used to define levels for hierarchical data coll
 
 		{
 
-			List<ContinentData> asia = new List<ContinentData>();
+			List<ContinentData> Asia = new List<ContinentData>();
 
-			asia.Add(new ContinentData() { Region = "Southern Asia", Growth = 1.32, Population = 1749046000 });
+			Asia.Add(new ContinentData() { Region = "Southern Asia", Growth = 1.32, Population = 1749046000 });
 
-			asia.Add(new ContinentData() { Region = "Eastern Asia", Growth = 0.57, Population = 1620807000 });
+			Asia.Add(new ContinentData() { Region = "Eastern Asia", Growth = 0.57, Population = 1620807000 });
 
-			asia.Add(new ContinentData() { Region = "South-Eastern Asia", Growth = 1.20, Population = 618793000 });
+			Asia.Add(new ContinentData() { Region = "South-Eastern Asia", Growth = 1.20, Population = 618793000 });
 
-			asia.Add(new ContinentData() { Region = "Western Asia", Growth = 1.98, Population = 245707000 });
+			Asia.Add(new ContinentData() { Region = "Western Asia", Growth = 1.98, Population = 245707000 });
 
-			asia.Add(new ContinentData() { Region = "Central Asia", Growth = 1.43, Population = 64370000 });
+			Asia.Add(new ContinentData() { Region = "Central Asia", Growth = 1.43, Population = 64370000 });
 
-			return asia;
+			return Asia;
 
 		}
 
@@ -107,11 +107,11 @@ TreeMap `Hierarchical` level is used to define levels for hierarchical data coll
 
 		{
 
-			List<ContinentData> europe = new List<ContinentData>();
+			List<ContinentData> Europe = new List<ContinentData>();
 
-			europe.Add(new ContinentData() { Region = "Europe", Growth = 0.10, Population = 742452000 });
+			Europe.Add(new ContinentData() { Region = "Europe", Growth = 0.10, Population = 742452000 });
 
-			return europe;
+			return Europe;
 
 		}
 
@@ -119,15 +119,15 @@ TreeMap `Hierarchical` level is used to define levels for hierarchical data coll
 
 		{
 
-			List<ContinentData> america = new List<ContinentData>();
+			List<ContinentData> America = new List<ContinentData>();
 
-			america.Add(new ContinentData() {  Region = "South America", Growth = 1.06, Population = 406740000 });
+			America.Add(new ContinentData() {  Region = "South America", Growth = 1.06, Population = 406740000 });
 
-			america.Add(new ContinentData() {  Region = "Northern America", Growth = 0.85, Population = 355361000 });
+			America.Add(new ContinentData() {  Region = "Northern America", Growth = 0.85, Population = 355361000 });
 
-			america.Add(new ContinentData() {  Region = "Central America", Growth = 1.40, Population = 167387000 });
+			America.Add(new ContinentData() {  Region = "Central America", Growth = 1.40, Population = 167387000 });
 
-			return america;
+			return America;
 
 		}
 
@@ -135,19 +135,19 @@ TreeMap `Hierarchical` level is used to define levels for hierarchical data coll
 
 		{
 
-			List<ContinentData> africa = new List<ContinentData>();
+			List<ContinentData> Africa = new List<ContinentData>();
 
-			africa.Add(new ContinentData() { Region = "Eastern Africa", Growth = 2.89, Population = 373202000 });
+			Africa.Add(new ContinentData() { Region = "Eastern Africa", Growth = 2.89, Population = 373202000 });
 
-			africa.Add(new ContinentData() { Region = "Western Africa", Growth = 2.78, Population = 331255000 });
+			Africa.Add(new ContinentData() { Region = "Western Africa", Growth = 2.78, Population = 331255000 });
 
-			africa.Add(new ContinentData() { Region = "Northern Africa", Growth = 1.70, Population = 210002000 });
+			Africa.Add(new ContinentData() { Region = "Northern Africa", Growth = 1.70, Population = 210002000 });
 
-			africa.Add(new ContinentData() { Region = "Middle Africa", Growth = 2.79, Population = 135750000 });
+			Africa.Add(new ContinentData() { Region = "Middle Africa", Growth = 2.79, Population = 135750000 });
 
-			africa.Add(new ContinentData() { Region = "Southern Africa", Growth = 0.91, Population = 60425000 });
+			Africa.Add(new ContinentData() { Region = "Southern Africa", Growth = 0.91, Population = 60425000 });
 
-			return africa;
+			return Africa;
 
 		}
 

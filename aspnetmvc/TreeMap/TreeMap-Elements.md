@@ -57,13 +57,13 @@ You can customize the labels of the legend item using `LegendLabel` property of 
 
 		{
 
-			cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+			cm.To(1).From(0).Color("#77D8D8").LegendLabel("Range1").Add();
 
-			cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+			cm.To(2).From(0).Color("#AED960").LegendLabel("Range2").Add();
 
-			cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+			cm.To(3).From(0).Color("#FFAF51").LegendLabel("Range3").Add();
 
-			cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+			cm.To(4).From(0).Color("#F3D240").LegendLabel("Range4").Add();
 
 		})
 
@@ -119,13 +119,13 @@ You can set headers for each level by setting the `ShowHeader` property of the e
 
 		{
 
-			cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+			cm.To(1).From(0).Color("#77D8D8").LegendLabel("Range1").Add();
 
-			cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+			cm.To(2).From(0).Color("#AED960").LegendLabel("Range2").Add();
 
-			cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+			cm.To(3).From(0).Color("#FFAF51").LegendLabel("Range3").Add();
 
-			cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+			cm.To(4).From(0).Color("#F3D240").LegendLabel("Range4").Add();
 
 		})
 
@@ -208,13 +208,13 @@ You can also set labels for the leaf nodes by setting the `ShowLabels` property 
 
 		{
 
-			cm.To(1).From(0).Color("#77D8D8").Legendlabel("Range1").Add();
+			cm.To(1).From(0).Color("#77D8D8").LegendLabel("Range1").Add();
 
-			cm.To(2).From(0).Color("#AED960").Legendlabel("Range2").Add();
+			cm.To(2).From(0).Color("#AED960").LegendLabel("Range2").Add();
 
-			cm.To(3).From(0).Color("#FFAF51").Legendlabel("Range3").Add();
+			cm.To(3).From(0).Color("#FFAF51").LegendLabel("Range3").Add();
 
-			cm.To(4).From(0).Color("#F3D240").Legendlabel("Range4").Add();
+			cm.To(4).From(0).Color("#F3D240").LegendLabel("Range4").Add();
 
 		})
 

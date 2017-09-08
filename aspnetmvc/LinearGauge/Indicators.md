@@ -455,7 +455,7 @@ The basic font options available for the textual type indicators in the Linear G
 
         sr.StateRangeStartValue(0).StateRangeEndValue(200)
 
-        .StateRangetext("Safe").StateRangetextColor("#94C361")
+        .StateRangeText("Safe").StateRangeTextColor("#94C361")
 
         .Add();
 
@@ -463,13 +463,13 @@ The basic font options available for the textual type indicators in the Linear G
 
         sr.StateRangeStartValue(200).StateRangeEndValue(250)
 
-        .StateRangetext("Caution").StateRangetextColor("#F9CF67")
+        .StateRangeText("Caution").StateRangeTextColor("#F9CF67")
 
         .Add();
 
         sr.StateRangeStartValue(250).StateRangeEndValue(300)
 
-        .StateRangetext("Danger").StateRangetextColor("#F89B83")
+        .StateRangeText("Danger").StateRangeTextColor("#F89B83")
 
         .Add();
 
