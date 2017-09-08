@@ -72,7 +72,7 @@ WinLoss Sparkline render as a column segment and it show the positive, negative 
 @(Html.EJ().Sparkline("container")
 
  //To customize the area type sparkline
-.Type(SparklineType.Winloss)
+.Type(SparklineType.WinLoss)
 .Fill("#69D2E7")
  
  )
