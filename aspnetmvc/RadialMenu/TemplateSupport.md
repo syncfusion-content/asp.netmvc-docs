@@ -13,9 +13,9 @@ documentation: ug
 
  ### Add SVG to item Icon
 
-Using SVG icon will optimize the icons quality and to reduce space occupation by normal images and svg images are Scalable and Zoomable. Define the text element for SVG with x and y position and code for rendering the font icons. Assign the SVG element ID to PrependTo property.
+Using SVG icon will optimize the icons quality and to reduce space occupation by normal images and SVG images are Scalable and Zoomable. Define the text element for SVG with x and y position and code for rendering the font icons. Assign the SVG element ID to PrependTo property.
 
-Please refer the following code to render the svg icon in RadialMenu,
+Please refer the following code to render the SVG icon in RadialMenu,
 
     {% highlight razor %}
      <div id="contentDiv">

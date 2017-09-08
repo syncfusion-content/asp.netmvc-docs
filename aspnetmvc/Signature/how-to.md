@@ -60,7 +60,7 @@ To clear the signature, you can simply use the **clear()** method. This method w
 {% highlight js %}
 
 <script type="text/javascript">
-    function onsave() {
+    function onClear() {
             var sign = $("#mySignature").ejSignature("instance");
             sign.clear();
         }

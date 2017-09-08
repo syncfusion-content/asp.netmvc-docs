@@ -239,7 +239,7 @@ You can set the Locale property of the editor to the new language.
             new Syncfusion.JavaScript.Models.Format { Text= "Kopf 6", Value= "h6", SpriteCssClass= "e-h6" }
         };
         rte.Format = list;
-        rte.Value = "Das Richtexteditor (RTE) Steuerung ermöglicht Ihnen, den Inhalt mit Einsatz Tisch und Bilder zu bearbeiten ," +
+        rte.Value = "Das RichTextEditor (RTE) Steuerung ermöglicht Ihnen, den Inhalt mit Einsatz Tisch und Bilder zu bearbeiten ," +
         " sondern bietet auch eine Werkzeugleiste , die Rich-Text- Format ," +
         " um die in der Textarea eingegeben Gehalt gelten können.";
         rte.Locale = "de-DE";

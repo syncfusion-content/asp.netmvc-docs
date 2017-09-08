@@ -505,7 +505,7 @@ Apply the following styles to the Tab.
 
 	/*to reuse the previous style section code and following css*/        
 
-   .sandwichImg, .pastaImg 
+   .sandwich-image, .pasta-image 
    {
 
 		height: 25px;
@@ -514,14 +514,14 @@ Apply the following styles to the Tab.
 
 	}
 
-	.sandwichImg 
+	.sandwich-image 
 	{
 
 		background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-fresh.png") no-repeat;                       
 
 	}
 
-	.pastaImg 
+	.pasta-image 
 	{
 
 		background: url("http://js.syncfusion.com/UG/Web/Content/rsz_garden-veggie.png") no-repeat;                 

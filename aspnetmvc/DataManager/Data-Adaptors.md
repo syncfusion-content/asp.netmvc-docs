@@ -418,7 +418,7 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
     public class EmployeeController : ApiController
     {
         static readonly IEmployeeRepository repository = new EmployeeRepository();
-        // GET api/<controller>
+        // GET API/<controller>
         [HttpGet]
         public object Get()
         {

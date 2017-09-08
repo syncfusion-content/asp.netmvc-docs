@@ -247,11 +247,11 @@ You can add named ranges at initial load with `NameManager` property. The follow
         }).Add();
         rows.Cells(cells =>
         {
-            cells.Value("=SUM(inputrange)").Add();
+            cells.Value("=SUM(inputRange)").Add();
         }).Add();
     }).Add();
 })
-    .NameManager(manager => { manager.Name("inputrange").RefersTo("=Sheet1!$A$1:$A$2").Add(); })
+    .NameManager(manager => { manager.Name("inputRange").RefersTo("=Sheet1!$A$1:$A$2").Add(); })
 )
 
 {% endhighlight %}
@@ -287,8 +287,8 @@ The following code example describes the above behavior,
 
 <script>
     function loadComplete() {
-        this.XLRibbon.addNamedRange("inputrange", "=Sheet1!$A$1:$A$2", "named range demo", this.getActiveSheetIndex());
-        this.XLEdit.updateCellValue({rowIndex: 2, colIndex: 0}, "=SUM(inputrange)");            
+        this.XLRibbon.addNamedRange("inputRange", "=Sheet1!$A$1:$A$2", "named range demo", this.getActiveSheetIndex());
+        this.XLEdit.updateCellValue({rowIndex: 2, colIndex: 0}, "=SUM(inputRange)");            
     }
 </script>
 
