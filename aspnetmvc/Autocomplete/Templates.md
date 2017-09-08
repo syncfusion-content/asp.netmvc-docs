@@ -86,7 +86,7 @@ The following steps explain you how to define a Template to display a text and i
 
 			flags.Add(new Flags { Text = "Thailand", Sprite = "flag-th" });
 
-			flags.Add(new Flags { Text = "Tursprite", Sprite = "flag-tr" });
+			flags.Add(new Flags { Text = "Turkey", Sprite = "flag-tr" });
 
 			flags.Add(new Flags { Text = "Ukraine", Sprite = "flag-ua" });
 
