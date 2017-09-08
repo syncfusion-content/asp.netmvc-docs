@@ -191,7 +191,7 @@ Execute the above code to render the following output.
 
         .TextAngle(30)
 
-        .CustomLabelopacity(0.5)
+        .CustomLabelOpacity(0.5)
 
         .Color("Red")
 

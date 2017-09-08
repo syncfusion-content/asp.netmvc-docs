@@ -440,13 +440,13 @@ The following code sample displays how to add labels for legend in a TreeMap.
 
 		{
   		
-			cm.To(1).From(0).Color("#DC562D").Legendlabel("0 - 1 % Growth").Add();
+			cm.To(1).From(0).Color("#DC562D").LegendLabel("0 - 1 % Growth").Add();
   	
-	  		cm.To(1.5).From(1).Color("#FED124").Legendlabel("1 - 1.5 % Growth").Add();  
+	  		cm.To(1.5).From(1).Color("#FED124").LegendLabel("1 - 1.5 % Growth").Add();  
   	
-	  		cm.To(2).From(1.5).Color("#487FC1").Legendlabel("1.5 - 2 % Growth").Add();
+	  		cm.To(2).From(1.5).Color("#487FC1").LegendLabel("1.5 - 2 % Growth").Add();
   	
-	  		cm.To(3).From(2).Color("#0E9F49").Legendlabel("2 - 3 % Growth").Add();                   
+	  		cm.To(3).From(2).Color("#0E9F49").LegendLabel("2 - 3 % Growth").Add();                   
 
 		})
 
