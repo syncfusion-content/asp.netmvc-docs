@@ -1953,7 +1953,7 @@ To create a HiLoOpenClose chart, you can set the series Type as **HiloOpenClose*
      {
              //Set chart type to series
              sr.Type(SeriesType.HiloOpenClose)
-                 //Add datasource and set xName, high and low to hilo open close chart
+                 //Add datasource and set xName, high and low to HiLo open close chart
              .XName("Month")
              .High("High")
              .Low("Low")
@@ -2017,7 +2017,7 @@ HiLoOpenClose chart **BullFillColor** is used to specify a fill color for the se
     
      .Series(sr =>
      {
-         //Change bullFill and bearFill color of hilo open close chart
+         //Change bullFill and bearFill color of HiLo open close chart
          sr.BearFillColor("#FF6600")
              .BullFillColor("#336600")
             //...
@@ -2141,7 +2141,7 @@ HiLo chart is created by setting the series Type as **Hilo** in the chart series
      {
          //Set chart type to series
          sr.Type(SeriesType.Hilo)
-             //Add datasource and set xName, high and low to hilo chart
+             //Add datasource and set xName, high and low to HiLo chart
              .XName("Month")
              .High("High")
              .Low("Low")

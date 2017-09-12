@@ -30,23 +30,23 @@ The following steps explain you how to define a Template to display a text and i
 
         {
 
-			flags.Add(new Flags { Text = "Algeria", Sprite = "flag-dz" });
+			flags.Add(new Flags { Text = "Algeria", Sprite = "flag-algeria" });
 
 			flags.Add(new Flags { Text = "Armenia", Sprite = "flag-am" });
 
 			flags.Add(new Flags { Text = "Brazil", Sprite = "flag-br" });
 
-			flags.Add(new Flags { Text = "Bangladesh", Sprite = "flag-bd" });
+			flags.Add(new Flags { Text = "Bangladesh", Sprite = "flag-bangladesh" });
 
 			flags.Add(new Flags { Text = "Canada", Sprite = "flag-ca" });
 
 			flags.Add(new Flags { Text = "Cuba", Sprite = "flag-cu" });
 
-			flags.Add(new Flags { Text = "China", Sprite = "flag-cn" });
+			flags.Add(new Flags { Text = "China", Sprite = "flag-china" });
 
-			flags.Add(new Flags { Text = "Denmark", Sprite = "flag-dk" });
+			flags.Add(new Flags { Text = "Denmark", Sprite = "flag-denmark" });
 
-			flags.Add(new Flags { Text = "Estonia", Sprite = "flag-ee" });
+			flags.Add(new Flags { Text = "Estonia", Sprite = "flag-estonia" });
 
 			flags.Add(new Flags { Text = "Egypt", Sprite = "flag-eg" });
 
@@ -62,9 +62,9 @@ The following steps explain you how to define a Template to display a text and i
 
 			flags.Add(new Flags { Text = "Malaysia", Sprite = "flag-my" });
 
-			flags.Add(new Flags { Text = "Mexico", Sprite = "flag-mx" });
+			flags.Add(new Flags { Text = "Mexico", Sprite = "flag-mexico" });
 
-			flags.Add(new Flags { Text = "New Zealand", Sprite = "flag-nz" });
+			flags.Add(new Flags { Text = "New Zealand", Sprite = "flag-new-zealand" });
 
 			flags.Add(new Flags { Text = "Netherlands", Sprite = "flag-nl" });
 
@@ -74,13 +74,13 @@ The following steps explain you how to define a Template to display a text and i
 
 			flags.Add(new Flags { Text = "Poland", Sprite = "flag-pl" });
 
-			flags.Add(new Flags { Text = "Qatar", Sprite = "flag-qa" });
+			flags.Add(new Flags { Text = "Qatar", Sprite = "flag-qatar" });
 
 			flags.Add(new Flags { Text = "Romania", Sprite = "flag-ro" });
 
 			flags.Add(new Flags { Text = "Spain", Sprite = "flag-es" });
 
-			flags.Add(new Flags { Text = "Singapore", Sprite = "flag-sg" });
+			flags.Add(new Flags { Text = "Singapore", Sprite = "flag-singapore" });
 
 			flags.Add(new Flags { Text = "Saudi Arabia", Sprite = "flag-sa" });
 
@@ -88,13 +88,13 @@ The following steps explain you how to define a Template to display a text and i
 
 			flags.Add(new Flags { Text = "Turkey", Sprite = "flag-tr" });
 
-			flags.Add(new Flags { Text = "Ukraine", Sprite = "flag-ua" });
+			flags.Add(new Flags { Text = "Ukraine", Sprite = "flag-ukraine" });
 
 			flags.Add(new Flags { Text = "United States", Sprite = "flag-us" });
 
-			flags.Add(new Flags { Text = "Uruguay", Sprite = "flag-uy" });
+			flags.Add(new Flags { Text = "Uruguay", Sprite = "flag-uruguay" });
 
-			flags.Add(new Flags { Text = "Viet Nam", Sprite = "flag-vn" });
+			flags.Add(new Flags { Text = "Viet Nam", Sprite = "flag-viet-nam" });
 
 			ViewBag.datasource = flags;
 
@@ -165,21 +165,21 @@ The following steps explain you how to define a Template to display a text and i
 
 	.flag.flag-ar {background-position: -50px 0}
 
-	.flag.flag-bd {background-position: -75px 0}
+	.flag.flag-bangladesh {background-position: -75px 0}
 
 	.flag.flag-br {background-position: -100px 0}
 
 	.flag.flag-ca {background-position: -125px 0}
 
-	.flag.flag-cn {background-position: 0 -15px}
+	.flag.flag-china {background-position: 0 -15px}
 
 	.flag.flag-cu {background-position: -25px -15px}
 
-	.flag.flag-dk {background-position: -50px -15px}
+	.flag.flag-denmark {background-position: -50px -15px}
 
-	.flag.flag-dz {background-position: -75px -15px}
+	.flag.flag-algeria {background-position: -75px -15px}
 
-	.flag.flag-ee {background-position: -100px -15px}
+	.flag.flag-estonia {background-position: -100px -15px}
 
 	.flag.flag-eg {background-position: -125px -15px}
 
@@ -195,7 +195,7 @@ The following steps explain you how to define a Template to display a text and i
 
 	.flag.flag-in {background-position: -125px -30px}
 
-	.flag.flag-mx {background-position: 0 -45px}
+	.flag.flag-mexico {background-position: 0 -45px}
 
 	.flag.flag-my {background-position: -25px -45px}
 
@@ -203,31 +203,31 @@ The following steps explain you how to define a Template to display a text and i
 
 	.flag.flag-no {background-position: -75px -45px}
 
-	.flag.flag-nz {background-position: -100px -45px}
+	.flag.flag-new-zealand {background-position: -100px -45px}
 
 	.flag.flag-pl {background-position: -125px -45px}
 
 	.flag.flag-pt {background-position: 0 -60px}
 
-	.flag.flag-qa {background-position: -25px -60px}
+	.flag.flag-qatar {background-position: -25px -60px}
 
 	.flag.flag-ro {background-position: -50px -60px}
 
 	.flag.flag-sa {background-position: -75px -60px}
 
-	.flag.flag-sg {background-position: -100px -60px}
+	.flag.flag-singapore {background-position: -100px -60px}
 
 	.flag.flag-th {background-position: -125px -60px}
 
 	.flag.flag-tr {background-position: 0 -75px}
 
-	.flag.flag-ua {background-position: -25px -75px}
+	.flag.flag-ukraine {background-position: -25px -75px}
 
 	.flag.flag-us {background-position: -50px -75px}
 
-	.flag.flag-uy {background-position: -75px -75px}
+	.flag.flag-uruguay {background-position: -75px -75px}
 
-	.flag.flag-vn {background-position: -100px -75px}
+	.flag.flag-viet-nam {background-position: -100px -75px}
 
 	.flag.flag-ye {background-position: -125px -75px}
 

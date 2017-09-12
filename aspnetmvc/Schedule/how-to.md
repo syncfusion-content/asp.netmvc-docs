@@ -552,7 +552,7 @@ namespace ScheduleCRUD.Controllers
                 newAppointment.Subject = value.Subject.ToString();
                 newAppointment.Save();
             }
-            IEnumerable data = new DataClasses1DataContext().ScheduleDatas.Take(500); // nw.Appointment.Take(5);
+            IEnumerable data = new DataClasses1DataContext().ScheduleDatas.Take(500); // new.Appointment.Take(5);
             return Json(data, JsonRequestBehavior.AllowGet);
         }
     }

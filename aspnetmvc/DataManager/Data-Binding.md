@@ -207,7 +207,7 @@ Create a sample using ASP.NET Web Services
         public DataTable Get()
         {
             SqlCommand getData = new SqlCommand();
-            getData.CommandText = "usp_DEV_ChangeLog_Select"; // Stored procedure for retrieve data from suppliers table
+            getData.CommandText = "USP_DEV_ChangeLog_Select"; // Stored procedure for retrieve data from suppliers table
             getData.CommandType = CommandType.StoredProcedure;
             getData.Connection = con;
             if (con.State != ConnectionState.Open)
@@ -233,14 +233,14 @@ In the above code snippet, we have created web services by using the ASP.NET web
         CRUD_Service.WebService1 service = new CRUD_Service.WebService1();
         var sqlData = service.Get();   // Get data from web services
         DataResult result = new DataResult();
-        List<EditableCustomer> data = (from ord in sqlData.AsEnumerable() // Perform skip take for on demand load paging
+        List<EditableCustomer> data = (from demand in sqlData.AsEnumerable() // Perform skip take for on demand load paging
                                         select new EditableCustomer
                                         {
-                                            OrderID = ord.ItemArray[0].ToString(),
-                                            CustomerID = ord.ItemArray[1].ToString(),
-                                            EmployeeID = ord.ItemArray[5].ToString(),
-                                            Freight = ord.ItemArray[7].ToString(),
-                                            ShipCity = ord.ItemArray[8].ToString()
+                                            OrderID = demand.ItemArray[0].ToString(),
+                                            CustomerID = demand.ItemArray[1].ToString(),
+                                            EmployeeID = demand.ItemArray[5].ToString(),
+                                            Freight = demand.ItemArray[7].ToString(),
+                                            ShipCity = demand.ItemArray[8].ToString()
                                         }).ToList();
 
         con.Close();

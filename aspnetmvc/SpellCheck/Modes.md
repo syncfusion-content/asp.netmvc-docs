@@ -36,7 +36,7 @@ The following code snippet shows how to open the dialog to spell check the conte
 
 @section ControlsSection{
 
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
     @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
  
@@ -60,7 +60,7 @@ To define the specific actions before the dialog window open, the client-side ev
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogBeforeOpen("onDialogBeforeOpen"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogBeforeOpen("onDialogBeforeOpen"))
  
 @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
 
@@ -88,7 +88,7 @@ The client-side event dialogOpen can be used to define the specific actions afte
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogOpen("onDialogOpen"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogOpen("onDialogOpen"))
  
 @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
 
@@ -116,7 +116,7 @@ The following code example used to define some actions after the dialog closing 
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogClose("onDialogClose"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.DialogClose("onDialogClose"))
  
 @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
 
@@ -143,7 +143,7 @@ It is possible to predict the error word details before starting the spell check
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.Start("onSpellCheckStart"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.Start("onSpellCheckStart"))
  
 @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
 
@@ -171,7 +171,7 @@ You can get the corrected text content details before updating it into target el
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.Complete("onCheckComplete"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ClientSideEvents(event => event.Complete("onCheckComplete"))
  
 @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
 
@@ -212,7 +212,7 @@ The following code snippet shows how to enable the context menu settings in Spel
 
 {% highlight CSHTML %}
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items=>items.Enable(true).MenuItems(menuItem=>menuItem.ID("IgnoreAll").Text("Ignore All")))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items=>items.Enable(true).MenuItems(menuItem=>menuItem.ID("IgnoreAll").Text("Ignore All")))
 
 
 {% endhighlight %}
@@ -226,7 +226,7 @@ The following code example depicts how to add the custom menu items into the con
 
 {% highlight CSHTML %}
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items=>items.Enable(true).MenuItems(menuItem=>menuItem.ID("IgnoreAll").Text("Ignore All")))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items=>items.Enable(true).MenuItems(menuItem=>menuItem.ID("IgnoreAll").Text("Ignore All")))
 
 {% endhighlight %}
 
@@ -240,7 +240,7 @@ The client-side event contextClick can be used to define specific actions when a
 
 @section ControlsSection{
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.ContextClick("onCustomMenuClick"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.ContextClick("onCustomMenuClick"))
 
 }
 
@@ -259,7 +259,7 @@ It is possible to predict the target (error word) on which the right click is ma
 
 {% highlight CSHTML %}
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.ContextOpen("onContextOpen"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.ContextOpen("onContextOpen"))
 
 @section ScriptSection{
     <script type="text/javascript">
@@ -276,7 +276,7 @@ You can get the current spell check operation arguments details with the client-
 
 {% highlight CSHTML %}
 
-@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictonary => dictonary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.Validating("onSpellChecking"))
+@Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary  => dictionary .CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(items => items.Enable(true).MenuItems(menuItem => menuItem.ID("IgnoreAll").Text("Ignore All"))).ClientSideEvents(events => events.Validating("onSpellChecking"))
 @section ScriptSection{
     <script type="text/javascript">
         function onSpellChecking (args) { 
