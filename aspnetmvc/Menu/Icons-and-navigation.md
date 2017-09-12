@@ -51,19 +51,19 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 				menu.Add(new icons { id = 5, text = "Group E", parent = null }); 
 				menu.Add(new icons { id = 11, parent = "1", text = "Algeria", sprite = "flag-dz" });
 				menu.Add(new icons { id = 12, parent = "1", text = "Armenia", sprite = "flag-am" });
-				menu.Add(new icons { id = 13, parent = "1", text = "Bangladesh", sprite = "flag-bd" }); 
+				menu.Add(new icons { id = 13, parent = "1", text = "Bangladesh", sprite = "flag-bangladesh" }); 
 				menu.Add(new icons { id = 14, parent = "1", text = "Cuba", sprite = "flag-cu" });  
-				menu.Add(new icons { id = 15, parent = "2", text = "Denmark", sprite = "flag-dk" }); 
+				menu.Add(new icons { id = 15, parent = "2", text = "Denmark", sprite = "flag-denmark" }); 
 				menu.Add(new icons { id = 16, parent = "2", text = "Egypt", sprite = "flag-eg" });  
 				menu.Add(new icons { id = 17, parent = "3", text = "Finland", sprite = "flag-fi" });
 				menu.Add(new icons { id = 18, parent = "3", text = "India", sprite = "flag-in" }); 
 				menu.Add(new icons { id = 19, parent = "3", text = "Malaysia", sprite = "flag-my" });
-				menu.Add(new icons { id = 20, parent = "4", text = "New Zealand", sprite = "flag-nz" });
+				menu.Add(new icons { id = 20, parent = "4", text = "New Zealand", sprite = "flag-new-zealand" });
 				menu.Add(new icons { id = 21, parent = "4", text = "Norway", sprite = "flag-no" });
 				menu.Add(new icons { id = 22, parent = "4", text = "Romania", sprite = "flag-ro" });
-				menu.Add(new icons { id = 23, parent = "5", text = "Singapore", sprite = "flag-sg" });
+				menu.Add(new icons { id = 23, parent = "5", text = "Singapore", sprite = "flag-singapore" });
 				menu.Add(new icons { id = 24, parent = "5", text = "Thailand", sprite = "flag-th" }); 
-				menu.Add(new icons { id = 25, parent = "5", text = "Ukraine", sprite = "flag-ua" }); 
+				menu.Add(new icons { id = 25, parent = "5", text = "Ukraine", sprite = "flag-ukraine" }); 
 				menu.Add(new icons { id = 26, parent = "11", text = "First Place" });  
 				menu.Add(new icons { id = 27, parent = "12", text = "Second Place" }); 
 				menu.Add(new icons { id = 28, parent = "13", text = "Third place" }); 
@@ -132,11 +132,11 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 
 			.mail-am { background-position: 91px -45px;      }
 
-			.mail-bd { background-position: -98px 0;         }
+			.mail-bangladesh { background-position: -98px 0;         }
 
 			.mail-cu { background-position: -607px -221px;   }
 
-			.mail-dk { background-position: -67px -15px;     }
+			.mail-denmark { background-position: -67px -15px;     }
 
 			.mail-eg { background-position: 600px -15px;     }
 
@@ -146,7 +146,7 @@ Icons are the images that is displayed in the Menu control. To specify the menu 
 
 			.mail-my { background-position: 240px -102px;    }
 
-			.mail-nz { background-position: -100px -45px;    }
+			.mail-new-zealand { background-position: -100px -45px;    }
 
 			.mail-no { background-position: -69px -45px;     }
 

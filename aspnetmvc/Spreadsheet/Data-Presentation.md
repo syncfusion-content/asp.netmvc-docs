@@ -290,7 +290,7 @@ The following code example describes the above behavior.
 
 <script type="text/javascript">
     function loadComplete(args) {
-        varconditionFormat = this.XLCFormat;
+        var conditionFormat = this.XLCFormat;
         if (!this.isImport) {
            conditionFormat.setCFRule({ "action": "greaterthan", "inputs": ["10"], "color": "redft", "range": "G2:G11" });
            conditionFormat.setCFRule({ "action": "lessthan", "inputs": ["20"], "color": "yellowft", "range": "E1:E11" });

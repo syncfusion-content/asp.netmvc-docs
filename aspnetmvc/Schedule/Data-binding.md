@@ -970,7 +970,7 @@ The appointment data can be bound to the Scheduler through Entity Framework whic
                 }
                 db.SaveChanges();
             }
-            IEnumerable data = new ScheduleControlDataEntities().Appointments.Take(500); // nw.Appointment.Take(5);
+            IEnumerable data = new ScheduleControlDataEntities().Appointments.Take(500); // new.Appointment.Take(5);
             return Json(data, JsonRequestBehavior.AllowGet);
         }
 

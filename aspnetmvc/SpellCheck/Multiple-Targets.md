@@ -25,21 +25,21 @@ The following code example describes the above behavior.
 
 @section ControlsSection{
     <div id="control1">
-        London, one of the most popular touist destinations in the world for a reason. A cultural and hisorical hub, London has an excellent public transportation system that allows visitors to see all the fantatic sights without spending a ton of money on a rental car.
+        London, one of the most popular tourist destinations in the world for a reason. A cultural and historical hub, London has an excellent public transportation system that allows visitors to see all the fantastic sights without spending a ton of money on a rental car.
         London contains four World Heritage Sites.
     </div><br />
     <textarea id="control2" style="width:940px">
-        Paris, the city of lihts and love - this short guide is full of ideas for how to make the most of the romnticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </textarea><br />
     <span id="control3">
-        Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
     @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-    @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
+    @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
   }
 
 {% endhighlight %}
@@ -54,21 +54,21 @@ If the user specifies multiple targets in ControlsToValidate property, the contr
 
 @section ControlsSection{
     <div id="control1">
-        London, one of the most popular touist destinations in the world for a reason. A cultural and hisorical hub, London has an excellent public transportation system that allows visitors to see all the fantatic sights without spending a ton of money on a rental car.
+        London, one of the most popular tourist destinations in the world for a reason. A cultural and historical hub, London has an excellent public transportation system that allows visitors to see all the fantastic sights without spending a ton of money on a rental car.
         London contains four World Heritage Sites.
     </div><br />
     <textarea id="control2" style="width:940px">
-        Paris, the city of lihts and love - this short guide is full of ideas for how to make the most of the romnticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </textarea><br />
     <span id="control3">
-        Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
     @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-    @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
+    @Html.EJ().Button("SpellCheck").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
   }
 @section ScriptSection{
     <script type="text/javascript">
@@ -90,21 +90,21 @@ By using ControlsToValidate property, you can spell check Multiple HTML elements
 
 @section ControlsSection{
     <div id="control1">
-        London, one of the most popular touist destinations in the world for a reason. A cultural and hisorical hub, London has an excellent public transportation system that allows visitors to see all the fantatic sights without spending a ton of money on a rental car.
+        London, one of the most popular tourist destinations in the world for a reason. A cultural and historical hub, London has an excellent public transportation system that allows visitors to see all the fantastic sights without spending a ton of money on a rental car.
          London contains four World Heritage Sites.
   </div><br />
     <textarea id="control2" style="width:940px">
-        Paris, the city of lihts and love - this short guide is full of ideas for how to make the most of the romnticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism that oozes from every one of its beautiful corners.You couldn't possibly visit Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </textarea><br />
     <span id="control3">
-        Rome, one of the world's most facinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
-        But reember what the Romans say: Even a lifetime isn't enough to see Rome.
+        Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+        But remember what the Romans say: Even a lifetime isn't enough to see Rome.
     </span><br /><br />
  
     @Html.EJ().SpellCheck("TextArea").ControlsToValidate("control1,control2,control3").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-    @Html.EJ().Button("SpellCheck").Text("Spell check using context menu").ClientSideEvents(evet => evet.Click("showContextMenu"))
+    @Html.EJ().Button("SpellCheck").Text("Spell check using context menu").ClientSideEvents(event => event.Click("showContextMenu"))
   }
    @section ScriptSection{
     <script type="text/javascript">
