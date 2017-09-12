@@ -98,7 +98,7 @@ public void ExportChart(string Data, string ChartModel)
             string fileName = obj.ExportSettings.FileName;
             string orientation = obj.ExportSettings.Orientation.ToString();
 
-            if (type == "svg")      // for svg export
+            if (type == "svg")      // for SVG export
             {
                 StringWriter oStringWriter = new StringWriter();
                 string data = HttpUtility.HtmlDecode(Data);
