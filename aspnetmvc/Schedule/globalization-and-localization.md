@@ -111,7 +111,7 @@ The following code example shows how to localize the Schedule control in **fr-FR
         Day: "jour",
         Week: "semaine",
         WorkWeek: "Semaine de travail",
-        Month: "mois",
+        Month: "Mois",
         AddEvent: "Ajouter événement",
         CustomView: "Vue personnalisée",
         Agenda: "ordre du jour",

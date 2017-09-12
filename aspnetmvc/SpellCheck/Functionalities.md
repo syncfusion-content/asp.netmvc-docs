@@ -30,7 +30,7 @@ The following code example describes the above method implementation.
 
    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
+   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
  
 }
  
@@ -38,7 +38,7 @@ The following code example describes the above method implementation.
 
     <script type="text/javascript">    
     
-        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sampeel</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sampeel</span> spell <span class="errorspan e-errorword">textarea</span> errrors';
+        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sample</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sample</span> spell <span class="errorspan e-errorword">textarea</span> errors';
        
 	   function showDialog() {
 	   
@@ -64,7 +64,7 @@ The following code example describes the way of using ignore all method.
 
    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(evet => evet.Click("showDialog"))
+   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check using dialog").ClientSideEvents(event => event.Click("showDialog"))
  
 }
  
@@ -72,7 +72,7 @@ The following code example describes the way of using ignore all method.
 
     <script type="text/javascript">        
 	
-        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sampeel</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sampeel</span> spell <span class="errorspan e-errorword">textarea</span> errrors';
+        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sample</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sample</span> spell <span class="errorspan e-errorword">textarea</span> errors';
         
 		function showDialog() {
          
@@ -94,16 +94,16 @@ The ignore words option is used to ignore the collection of words from an error 
 
 @section ControlsSection{ 
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters JavaScript TypeScript .
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters JavaScript TypeScript .
 </div><br />
    
-   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreWords(@ViewBag.datasource)
+   @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(context => context.Enable(true)).IgnoreWords(@ViewBag.datasource)
  
  
-   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))
+   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(event => event.Click("contextMenu"))
 }
  
 @section ScriptSection{
@@ -122,7 +122,7 @@ The ignore words option is used to ignore the collection of words from an error 
 
 public ActionResult ContextMenu()
  {
-   string[] spellIgnoreWords = { "colour", "Liuid", "foding" };
+   string[] spellIgnoreWords = { "color", "Liquid", "folding" };
    
    ViewBag.datasource = spellIgnoreWords;
    
@@ -153,16 +153,16 @@ The following code example uses to enable the checking of all the words formed w
 
 @section ControlsSection{
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters.
 </div><br />
  
-     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(context => context.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
  
  
-    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("contextMenu"))
+    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(event => event.Click("contextMenu"))
 }
  
 @section ScriptSection{
@@ -195,7 +195,7 @@ The following code example describes the behavior of change method.
 
    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
+   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(event => event.Click("showDialog"))
  
 }
  
@@ -203,7 +203,7 @@ The following code example describes the behavior of change method.
 
     <script type="text/javascript">     
 	
-        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sampeel</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sampeel</span> spell <span class="errorspan e-errorword">textarea</span> errrors';
+        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sample</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sample</span> spell <span class="errorspan e-errorword">textarea</span> errors';
         function showDialog() {
 		
             var spellObj = $("#TextArea").data("ejSpellCheck");
@@ -226,7 +226,7 @@ The following code example uses to change all the error word occurrences.
 
    @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
  
-   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
+   @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(event => event.Click("showDialog"))
  
 }
  
@@ -234,7 +234,7 @@ The following code example uses to change all the error word occurrences.
 
     <script type="text/javascript">  
 	
-        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sampeel</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sampeel</span> spell <span class="errorspan e-errorword">textarea</span> errrors';
+        var target = 'The first <span class="errorspan e-errorword">textarea</span> <span class="errorspan e-errorword">sample</span> uses a dialog <span class="errorspan e-errorword">textarea</span> to display the <span class="errorspan e-errorword">sample</span> spell <span class="errorspan e-errorword">textarea</span> errors';
        
 	   function showDialog() {
 
@@ -259,16 +259,16 @@ The following code example uses to add the custom word into the custom dictionar
 
 @section ControlsSection{
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters.
 </div><br />
  
-     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dictionary => dictionary.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(context => context.Enable(true)).IgnoreSettings(ignore=>ignore.IgnoreAlphaNumericWords(false).IgnoreEmailAddress(false).IgnoreFileNames(false).IgnoreHtmlTags(false).IgnoreMixedCaseWords(false).IgnoreUpperCase(false).IgnoreUrl(false))
  
  
-    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(evet => evet.Click("showDialog"))
+    @Html.EJ().Button("SpellCheck").Width("200px").Height("25px").Text("Spell check").ClientSideEvents(event => event.Click("showDialog"))
 }
  
 @section ScriptSection{
@@ -279,7 +279,7 @@ The following code example uses to add the custom word into the custom dictionar
 		
             var spellObj = $("#TextArea").data("ejSpellCheck");
 			
-            spellObj.addToDictionary("Liuid");
+            spellObj.addToDictionary("Liquid");
         }
     </script>
 }
@@ -301,13 +301,13 @@ The following code example describes the above behavior.
 
 @section ControlsSection{
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters.
 </div><br />
  
-     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(contxt => contxt.Enable(true)).EnableValidateOnType(true)
+     @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).ContextMenuSettings(context => context.Enable(true)).EnableValidateOnType(true)
 }
 
 {% endhighlight %}
@@ -329,10 +329,10 @@ The following code example describes the above behavior.
 
 @section ControlsSection{
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters.
 </div><br />
  
      @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords"))
@@ -353,7 +353,7 @@ The following code example describes the above behavior.
 
 {% endhighlight %}
 
-N> You can get the suggestion words after some time interval once this method is called. Since, ajax request processing takes place in the background.
+N> You can get the suggestion words after some time interval once this method is called. Since, Ajax request processing takes place in the background.
 
 ## Synchronous request
 
@@ -365,10 +365,10 @@ The following code example describes the above behavior.
 
 @section ControlsSection{
 <div id="TextArea" contenteditable="true" name="sentence">
-    It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood,
-    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetec emission control system,
-    quattro permanent four-wheel drve system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
-    MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+    It is a concept vehicle with Liquid Silver body color, 20-inch wheels, fabric folding roof, electrically-controlled hood,
+    4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp) and 400 (295.02 lbf ft), diesel particulate filter and Bluetech emission control system,
+    quattro permanent four-wheel drive system, Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+    MMI control panel with touch pad and dual-view technology, sound system with the prominent extending tweeters.
 </div><br />
  
      @Html.EJ().SpellCheck("TextArea").DictionarySettings(dic => dic.CustomDictionaryUrl("../api/SpellCheck/AddToDictionary").DictionaryUrl("../api/SpellCheck/CheckWords")).EnableAsync(false).AjaxDataType("json")
