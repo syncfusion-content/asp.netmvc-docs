@@ -31,7 +31,7 @@ You can bind the series **DataSource** to the indicator by setting the specific 
       })
         //Initializing Indicators  
       .Indicators(ind => { ind
-          //Set Hilo series dataSource to indicator using seriesName
+          //Set HiLo series dataSource to indicator using seriesName
           .SeriesName("Hilo").Add();
       })
         //...

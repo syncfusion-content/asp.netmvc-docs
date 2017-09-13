@@ -64,228 +64,120 @@ Simple Gantt chart
 
 1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started)  documentation to create new project and add necessary DLL’s and script files.
 
-2. Next, create a simple <div> tag in index.cshtml file to render Gantt control.
-
-
-
-   ~~~ html
-
-	<div id="GanttContainer" style="width: 100%; height: 100%"/>
-
-   ~~~
-   
-
-
-
-3. Create a data source in Controllers/HomeController.cs file, JSON data can be added to Gantt using Datasource property in Gantt.
-
-
+2. Create a data source in Controllers/HomeController.cs file, We can bind datasource to Gantt using Datasource property.
 
    ~~~ csharp
 
-    public class DefaultData
-
-	{
-
-		public string StartDate { get; set; }
-
-		public int TaskID { get; set; }
-
-		public string TaskName { get; set; }
-
-		public int Duration { get; set; }
-
-		public int Progress { get; set; }
-
-		public List<DefaultData> SubTasks { get; set; }
-
-		public string Predecessors { get; set; }
-
-		public List<int> ResourceID { get; set; }
-
-
-
-	}
-
-
-
-	public class GanttDefaultData
-
-	{
-
-
-
-		public static List<DefaultData> GetData()
-
-		{
-
-			List<DefaultData> tasks = new List<DefaultData>();
-
-
-
-			tasks.Add(new DefaultData ()
-
-			{
-
-				TaskID = 7,
-
-				TaskName = "Design",
-
-				StartDate = "02/10/2014",
-
-				EndDate = "02/14/2014",
-
-				Duration = 6,
-
-			 }
-
-
-
-			tasks[0].SubTasks= new List< DefaultData >();
-
-
-
-			tasks[0].SubTasks.Add(new DefaultData ()
-
-			{
-
-				TaskID = 8,
-
-				TaskName = "Software Specification",
-
-				StartDate = "02/10/2014",
-
-				EndDate = "02/12/2014",
-
-				Duration = 3,
-
-				Progress = "60",
-
-				Predecessors = "6FS",
-
-				ResourceID = new List<object>() { 2 }
-
-			});
-
-			tasks [0].SubTasks.Add(new DefaultData ()
-
-			{
-
-				TaskID = 9,
-
-				TaskName = "Develop prototype",
-
-				StartDate = "02/10/2014",
-
-				EndDate = "02/12/2014",
-
-				Duration = 3,
-
-				Progress = "100",
-
-				Predecessors = "6FS",
-
-				ResourceID = new List<object>() { 3 }
-
-			});
-
-			tasks[0].SubTasks.Add(new DefaultData ()
-
-			{
-
-				TaskID = 10,
-
-				TaskName = "Get approval from customer",
-
-				StartDate = "02/13/2014",
-
-				EndDate = "02/14/2014",
-
-				Duration = 2,
-
-				Progress = "100",
-
-				Predecessors = "9FS",
-
-				ResourceID = new List<object>() { 1 }
-
-			});
-
-			tasks[0].SubTasks.Add(new DefaultData ()
-
-			{
-
-				TaskID = 11,
-
-				TaskName = "Design complete",
-
-				StartDate = "02/14/2014",
-
-				EndDate = "02/14/2014",
-
-				Duration = 0,
-
-				Predecessors = "10FS"
-
-			}); 
-
-
-
-			return list;
-
-		}
-
-	}
-
-
+	public class DefaultData
+        {
+            public string StartDate { get; set; }
+            public string EndDate { get; set; }
+            public int TaskID { get; set; }
+            public string TaskName { get; set; }
+            public int Duration { get; set; }
+            public int Progress { get; set; }
+            public List<DefaultData> SubTasks { get; set; }
+            public string Predecessors { get; set; }
+            public List<int> ResourceID { get; set; }
+        }
+
+	 public class GanttDefaultData
+        {
+            public static List<DefaultData> GetData()
+            {
+                List<DefaultData> tasks = new List<DefaultData>();
+                tasks.Add(new DefaultData()
+                    {
+                        TaskID = 1,
+                        TaskName = "Design",
+                        StartDate = "02/10/2014",
+                        EndDate = "02/14/2014",
+                        Duration = 6,
+
+                    });
+                tasks[0].SubTasks = new List<DefaultData>();
+                tasks[0].SubTasks.Add(new DefaultData()
+                {
+                    TaskID = 2,
+                    TaskName = "Software Specification",
+                    StartDate = "02/10/2014",
+                    EndDate = "02/12/2014",
+                    Duration = 3,
+                    Progress = 60,
+                    ResourceID = new List<int>() { 2 }
+                });
+                tasks[0].SubTasks.Add(new DefaultData()
+                 {
+                     TaskID = 3,
+                     TaskName = "Develop prototype",
+                     StartDate = "02/10/2014",
+                     EndDate = "02/12/2014",
+                     Duration = 3,
+                     Progress = 100,
+                     Predecessors = "2FS",
+                     ResourceID = new List<int>() { 3 }
+                 });
+                tasks[0].SubTasks.Add(new DefaultData()
+                {
+                    TaskID = 4,
+                    TaskName = "Get approval from customer",
+                    StartDate = "02/13/2014",
+                    EndDate = "02/14/2014",
+                    Duration = 2,
+                    Progress = 100,
+                    Predecessors = "3FS",
+                    ResourceID = new List<int>() { 1 }
+                });
+                tasks[0].SubTasks.Add(new DefaultData()
+                {
+                    TaskID = 5,
+                    TaskName = "Design complete",
+                    StartDate = "02/14/2014",
+                    EndDate = "02/14/2014",
+                    Duration = 0,
+                    Predecessors = "4FS"
+                });
+                return tasks;
+            }
+        }
 
 	public ActionResult SimpleGantt()
-
 	{
-
 		var DataSource = GanttDefaultData.GetData();
-
 		ViewBag.datasource = DataSource;         
-
 		return View();
-
 	}       
-
-
-
    ~~~
    
-
-
-
-4. Add the following code example in the Index.cshtml file to create a Gantt control in the View page, using the id of <div> element created initially.	
+3. Add the following code example in the Index.cshtml file to create a Gantt control in the View page.	
 
    ~~~ cshtml
 
-	  <div id="GanttContainer" style="width: 100%; height: 100%">
+   @(Html.EJ().Gantt("GanttContainer")
 
-		@(Html.EJ().Gantt("GanttContainer ")
+             .TaskIdMapping("TaskID")//Provide name of the property which contains task id in the data source
 
-			 .TaskIdMapping("TaskID")//Provide name of the property which contains task id in the data source
+             .TaskNameMapping("TaskName")//Provide name of the property which contains task name in the data source
 
-			 .TaskNameMapping("TaskName")//Provide name of the property which contains task name in the data source
+             .StartDateMapping("StartDate")//Provide name of the property which contains start date of the task in the data source
 
-			 .StartDateMapping("StartDate")//Provide name of the property which contains start date of the task in the data source
+             .DurationMapping("Duration")//Provide name of the property which contains duration of the task in the data source
 
-			 .DurationMapping("Duration")//Provide name of the property which contains duration of the task in the data source
+             .ProgressMapping("Progress")//Provide name of the property which contains progress of the task in the data source
 
-			 .ProgressMapping("Progress")//Provide name of the property which contains progress of the task in the data source
+             .ScheduleStartDate("02/01/2014")//Provide schedule header start date
 
-			 .ScheduleStartDate("02/01/2014")//Provide schedule header start date
+             .ScheduleEndDate("03/14/2014")//Provide schedule header end date
 
-			 .ScheduleEndDate("03/14/2014")//Provide schedule header end date
+             .ChildMapping("SubTasks")//Provide name of the property which contains subtask of the task in the data source
 
-			 .ChildMapping("SubTasks")//Provide name of the property which contains subtask of the task in the data source                        
-
-			 .Datasource(ViewBag.datasource) //Provides data source for Gantt
-
-				  .Render())      
-	</div>
+             .TreeColumnIndex(1)
+             
+             .SizeSettings(ss=>ss.Width("700").Height("300"))
+             .Datasource(ViewBag.datasource) //Provides data source for Gantt
+             )  
+      
+	  @(Html.EJ().ScriptManager())   
 
    ~~~
    
@@ -305,58 +197,27 @@ Gantt control contains the toolbar options to edit, search, expand and collapse 
 
 {% highlight CSHTML %}
 
-<div id="GanttContainer" style="width:100%;height: 100%;"> 
-
-
 @(Html.EJ().Gantt("GanttContainer")
-
-   
-.ToolbarSettings(toolbar  => 
-
-{
-
-	toolbar.ShowToolbar(true);
-
-	toolbar.ToolbarItems(new  List<GanttToolBarItems> ()
-
-	{
-
-                  GanttToolBarItems.Add,
-
-                  GanttToolBarItems.Edit,
-
-                  GanttToolBarItems.Delete,
-
-                  GanttToolBarItems.Update,
-
-                  GanttToolBarItems.Cancel,
-
-                  GanttToolBarItems.Indent,
-
-                  GanttToolBarItems.Outdent,
-
-                  GanttToolBarItems.ExpandAll,
-
-                  GanttToolBarItems.CollapseAll,
-
-                  GanttToolBarItems.Search
-
-	});
-
-})                    
-
-.Render())
-
-</div>
-
+     .ToolbarSettings(ts=>
+     ts.ShowToolbar(true)
+      .ToolbarItems(new List<GanttToolBarItems>()
+        {
+        GanttToolBarItems.Add,
+        GanttToolBarItems.Edit,
+        GanttToolBarItems.Delete,
+        GanttToolBarItems.Update,
+        GanttToolBarItems.Cancel,
+        GanttToolBarItems.Indent,
+        GanttToolBarItems.Outdent,
+        GanttToolBarItems.ExpandAll,
+        GanttToolBarItems.CollapseAll,
+        GanttToolBarItems.Search   
+        })
+    )
+)                   
 {% endhighlight %}
 
-
-
- The following screen shot displays a Tool bar in Gantt.
-
-
-
+The following screen shot displays a Tool bar in Gantt.
 ![](Getting-Started_images/Getting-Started_img6.png)
 
 Toolbar in Gantt chart
@@ -376,9 +237,7 @@ Enable the multicolumn sorting in Gantt by setting AllowMultiSorting to “True�
 
 {% highlight html %}
 
-<div id="GanttContainer" style="width: 100%; height: 100%">
-
-  @(Html.EJ().Gantt("GanttContainer ")
+  @(Html.EJ().Gantt("GanttContainer")
 
    //...  
 
@@ -388,9 +247,7 @@ Enable the multicolumn sorting in Gantt by setting AllowMultiSorting to “True�
 
     .AllowMultiSorting(true)
 
-    .Render())
-
- </div>
+ )
 
 {% endhighlight %}
 
@@ -416,32 +273,24 @@ Modify the predecessor details of a task by using mouse interactions by setting 
 
 {% highlight html %}
 
-<div id="GanttContainer" style="width: 100%; height: 100%">
+@(Html.EJ().Gantt("GanttContainer")                           
+         
+    //...  
 
-@(Html.EJ().Gantt("GanttContainer ")                           
-                           
-
+   //...                   
    .AllowGanttChartEditing(true)
 
    .PredecessorMapping("Predecessor") // Predecessor editing
 
    .EditSettings(edit =>
-
-             {
-
-              edit.AllowEditing(true);
-
-              edit.AllowAdding(true);
-
-              edit.AllowDeleting(true);
-
-              edit.EditMode("cellEditing");
-
-})
-
-.Render())
-
-</div>        
+    {
+         edit.AllowEditing(true);
+         edit.AllowAdding(true);
+         edit.AllowDeleting(true);
+         edit.EditMode("cellEditing");
+         edit.AllowIndent(true);
+    })
+)
 
 {% endhighlight %}
 
@@ -463,25 +312,16 @@ N> Both cellEditing and normal editing operations are performed through double c
 You can enable the context menu in Gantt by setting the EnableContextMenu to “True”.
 
 
-
 {% highlight html %}
-
-<div id="GanttContainer" style="width: 100%; height: 100%">                 
- @(Html.EJ().Gantt("GanttContainer ")              
-
-                 .EnableContextMenu(true)
-
-                 .Render())
-
-</div>
+               
+ @(Html.EJ().Gantt("GanttContainer")              
+    //...
+    .EnableContextMenu(true)
+ )
 
 {% endhighlight %}
 
-
-
 The following screen shot displays Gantt chart with Enable Context menu option.
-
-
 
 ![](Getting-Started_images/Getting-Started_img10.png)
 
@@ -516,15 +356,13 @@ You can show the relationship in tasks by using the PredecessorMapping as follow
 
 {% highlight CSHTML %}
 
-<div id="GanttContainer" style="width: 100%; height: 100%">
-
-     @(Html.EJ().Gantt("GanttContainer ")
+     @(Html.EJ().Gantt("GanttContainer")
 
      //...
 
      .PredecessorMapping("Predecessor")
 
-     .Render())
+     )
 
  </div>
 
@@ -549,45 +387,26 @@ In ASP.NET MVCGantt, you can display and assign the resource for each task. Crea
 
 {% highlight C# %}
 
-public class ResourceListData
+ public class Resources
+        {
+            public int ResourceID { get; set; }
+            public string ResourceName { get; set; }
+        }
 
-{
+        public class ResourceList
+        {
 
-    public int ResourceID { get; set; }
+            public static List<Resources> GetData()
+            {
 
-    public string ResourceName { get; set; }
-
-}
-
-
-
-public class ResourceList
-
-{
-
-    public static List<ResourceListData> GetData()
-
-    {
-
-        List<Resources> resourceDetails = new List<Resources>();
-
-
-
-           resourceDetails.Add(new Resources() { ResourceID = 1, ResourceName = "Project Manager" });
-
-           resourceDetails.Add(new Resources() { ResourceID = 2, ResourceName = "Software Analyst" });
-
-           resourceDetails.Add(new Resources() { ResourceID = 3, ResourceName = "Developer" });
-
-           resourceDetails.Add(new Resources() { ResourceID = 4, ResourceName = "Testing Engineer" });
-
-
-
-          return resourceDetails;   
-
- }
-
-} 
+                List<Resources> resourceDetails = new List<Resources>();
+                resourceDetails.Add(new Resources() { ResourceID = 1, ResourceName = "Project Manager" });
+                resourceDetails.Add(new Resources() { ResourceID = 2, ResourceName = "Software Analyst" });
+                resourceDetails.Add(new Resources() { ResourceID = 3, ResourceName = "Developer" });
+                resourceDetails.Add(new Resources() { ResourceID = 4, ResourceName = "Testing Engineer" });
+                return resourceDetails;
+            }
+        } 
 
 public ActionResult SimpleGantt()
 
@@ -617,33 +436,20 @@ Add the following code example in the index.cshtml file, to create the Gantt con
 
 {% highlight CSHTML %}
 
-<div id="GanttContainer" style="width: 100%; height: 100%">
+  @(Html.EJ().Gantt("GanttContainer")
 
-  @(Html.EJ().Gantt("GanttContainer ")
-
-       //...
-
-       //...           
-
-      .ResourceInfoMapping("ResourceID ")//Field name which contains resource details for the task 
-
-      .ResourceNameMapping("ResourceName ")//resource Name mapping
-
-      .ResourceIdMapping("ResourceID ")//resource Id Mapping
-
-      .Resources(ViewBag.resources) //resource collection dataSource
-
-      .Render())
-
- </div>
+       //...          
+        .ResourceInfoMapping("ResourceID")//Field name which contains resource details for the task 
+        .ResourceNameMapping("ResourceName")//resource Name mapping
+        .ResourceIdMapping("ResourceID")//resource Id Mapping
+        //...
+        .Resources(ViewBag.resources)//resource collection dataSource
+        .Datasource(ViewBag.datasource) //Provides data source for Gantt
+      )
 
 {% endhighlight %}
 
-
 The following screen shot displays resource allocation for tasks in Gantt.
-
-
-
 ![](Getting-Started_images/Getting-Started_img12.png)
 
 Resource allocation for tasks in Gantt
