@@ -81,7 +81,7 @@ public class ReportsController : ApiController, IReportController
     /// <param name="reportOptions">The ReportViewer options.</param>
     public void OnInitReportOptions(ReportViewerOptions reportOptions)
     {
-        throw new NotImplementedException();
+        //You can update report options here
     }
     
     /// <summary>
@@ -90,7 +90,7 @@ public class ReportsController : ApiController, IReportController
     /// <param name="reportOptions">The ReportViewer options.</param>
     public void OnReportLoaded(ReportViewerOptions reportOptions)
     {
-        throw new NotImplementedException();
+        //You can update report options here
     }
     
     /// <summary>
