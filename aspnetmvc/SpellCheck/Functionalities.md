@@ -353,7 +353,7 @@ The following code example describes the above behavior.
 
 {% endhighlight %}
 
-N> You can get the suggestion words after some time interval once this method is called. Since, Ajax request processing takes place in the background.
+N> You can get the suggestion words after some time interval once this method is called. Since, AJAX request processing takes place in the background.
 
 ## Synchronous request
 

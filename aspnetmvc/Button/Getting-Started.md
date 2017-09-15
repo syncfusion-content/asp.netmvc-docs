@@ -47,7 +47,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
            </td>
 
-           <td>                   @Html.EJ().Button("Unmutes").Size(ButtonSize.Large).ShowRoundedCorner(true).Text("Unmutes")
+           <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).Text("unmute")
 
            </td>           
 
@@ -116,7 +116,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 				   </td>
 
-				   <td>                   @Html.EJ().Button("Unmutes").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("Unmutes")).Text("Unmutes")
+				   <td>                   @Html.EJ().Button("unmute").Size(ButtonSize.Large).ShowRoundedCorner(true).ClientSideEvents(e => e.Click("unmute")).Text("unmute")
 
 				   </td>           
 
@@ -185,7 +185,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 	 }
 
-	function Unmutes()
+	function unmute()
 
 	{
 
