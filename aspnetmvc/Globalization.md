@@ -48,16 +48,16 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 		if (typeof (ej.globalize) != 'undefined') {
 		console.log("en-US Culture : ");
 		ej.globalize.preferredCulture("en-US");  //set Culture. Default culture is en-US         
-		console.log(ej.globalize.format(53422, 'C')); // Formatting Price
-		console.log(ej.globalize.format(new Date(2016,07,15), 'D')); //Formatting date
-		console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number
+		console.log(ej.globalize.format(53422, 'C', "en-US")); // Formatting Price
+		console.log(ej.globalize.format(new Date(2016,07,15), 'D', "en-US")); //Formatting date
+		console.log(ej.globalize.format(123123.576, 'n2', "en-US")); // Formatting number
 
 		console.log("fr-FR Culture : ");
 		ej.globalize.preferredCulture("fr-FR");//set Culture fr-FR 
 				
-		console.log(ej.globalize.format(53422, 'C'));// Formatting Price
-		console.log(ej.globalize.format(new Date(2016, 07, 15), 'D')); //Formatting date
-		console.log(ej.globalize.format(123123.576, 'n2')); // Formatting number          
+		console.log(ej.globalize.format(53422, 'C', "fr-FR"));// Formatting Price
+		console.log(ej.globalize.format(new Date(2016, 07, 15), 'D', "fr-FR")); //Formatting date
+		console.log(ej.globalize.format(123123.576, 'n2', "fr-FR")); // Formatting number          
 			}
     </script>
 
