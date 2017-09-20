@@ -60,10 +60,10 @@ The pager control also allows to define a external message using externalMessage
 {% highlight javascript %}
 
 <div class="control">  
-      @Html.EJ().Pager("pager").PageSize(1).PageCount(3).EnableExternalMessage(true).ExternalMessage("CurrentPage :1").TotalRecordsCount(20).ClientSideEvents(eve => { eve.Change("onchange"); })
+      @Html.EJ().Pager("pager").PageSize(1).PageCount(3).EnableExternalMessage(true).ExternalMessage("CurrentPage :1").TotalRecordsCount(20).ClientSideEvents(eve => { eve.Change("onChange"); })
 </div>
 <script type="text/javascript">
-            function onchange(e) {
+            function onChange(e) {
                 var a = $("#pager").ejPager("instance");
                 a.option("externalMessage", "CurrentPage: " + e.currentPage);
             }
