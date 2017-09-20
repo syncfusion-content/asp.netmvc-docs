@@ -11,9 +11,9 @@ documentation: ug
 
 ## Page Size List
 
-The **PageSizeList** property of the pager control allows an option to have multiple options of page size values.By defining pageSizeList, a dropdown will render in a pager with given values along with the current pageSize as selected value in droodown. 
+The **PageSizeList** property of the pager control allows an option to have multiple options of page size values.By defining pageSizeList, a dropdown will render in a pager with given values along with the current pageSize as selected value in dropdown. 
 
-Selected value in a dropdown will be set to pageSize api and pager will refersh based on this new pageSize.
+Selected value in a dropdown will be set to pageSize API and pager will refresh based on this new pageSize.
 
 {% highlight javascript %}
 
