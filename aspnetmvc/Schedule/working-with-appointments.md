@@ -629,7 +629,7 @@ The following code example lets you dragging and dropping external items to and 
     <div class="col-md-2">
         <span class=""><b>Tutorials </b> </span>
         @Html.EJ().TreeView("drag").Items(items => {
-            items.Add().Text("HTML").Expanded(true).Children(child => {
+            items.Add().Text("HTML").Id("HTML").Expanded(true).Children(child => {
                 child.Add().Text("Introduction");
                 child.Add().Text("Editors");
                 child.Add().Text("Styles");
