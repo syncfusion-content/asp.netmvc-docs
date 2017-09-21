@@ -629,7 +629,7 @@ The following code example lets you dragging and dropping external items to and 
     <div class="col-md-2">
         <span class=""><b>Tutorials </b> </span>
         @Html.EJ().TreeView("drag").Items(items => {
-            items.Add().Text("HTML").Expanded(true).Children(child => {
+            items.Add().Text("HTML").Id("HTML").Expanded(true).Children(child => {
                 child.Add().Text("Introduction");
                 child.Add().Text("Editors");
                 child.Add().Text("Styles");
@@ -659,7 +659,6 @@ The following code example lets you dragging and dropping external items to and 
         .CurrentDate(new DateTime(2015, 11, 5))
         .Resources(res => { res.Field("OwnerId").Title("Owner").Name("Owners").AllowMultiple(true).ResourceSettings(fields => fields.Datasource(resources).Text("Text").Id("Id").Color("Color")).Add(); })
         .Group(gr => { gr.Resources(Group); })
-        .ScheduleClientSideEvents(event => event.DragStop("onDragStop"))
         .AppointmentSettings(fields => fields.Datasource(Model)
             .Id("Id")
             .Subject("Subject")
@@ -750,49 +749,15 @@ The following code example lets you dragging and dropping external items to and 
     function onDropped(e) {
         if ($(e.target).parents(".e-schedule").length != 0) {
             var scheduleObj = $("#Schedule1").data("ejSchedule");
-            var index = $($(e.target).context).hasClass("e-workcells") || $($(e.target).context).hasClass("e-alldaycells") ? $($(e.target).context).index() : $($(e.target).context).hasClass("e-alldaycells") ? $($(e.target).context).index() : 7 - ((parseInt($($(e.target).context).index() / 7) + 1) * 7 - $($(e.target).context).index()) + ($($(e.target).context).parent().index() * 7);
-            if (scheduleObj.model.orientation == "horizontal") {
-                index = scheduleObj.model.showTimeScale ? scheduleObj.currentView() !== "month" && !(scheduleObj._isCustomView()) ? Math.floor(index / ((scheduleObj.model.endHour - scheduleObj.model.startHour) * 2)) : index : $(e.event.target).index();
-
-            }
-            var renderDate = (scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "month") ? scheduleObj.monthDays : scheduleObj.model.orientation == "vertical" ? scheduleObj.dateRender : scheduleObj._dateRender;
-            renderDate = scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "customview" && scheduleObj._dateRender.length <= 7 ? scheduleObj._dateRender : renderDate;
-            var curDate = new Date(renderDate[index]);
-
-            var _target = $($(e.target).context);
-            if ($(_target).hasClass("e-workcells") && (scheduleObj.model.showTimeScale) && scheduleObj.currentView() !== "month" && !(scheduleObj._isCustomView())) {
-                var time = scheduleObj.model.orientation == "vertical" ? scheduleObj.model.startHour + ($(e.event.target).parent().index() / 2) : scheduleObj.model.startHour + (($(e.event.target).index() - (((scheduleObj.model.endHour - scheduleObj.model.startHour) * 2) * index)) / 2);
-                var timeMin = time.toString().split(".");
-                var cur_StartTime = new Date(curDate).setHours(parseInt(timeMin[0]), parseInt(timeMin[1]) == 5 ? 30 : 00);
-                var min = (parseInt(new Date(cur_StartTime).getHours()) == 23 && parseInt(new Date(cur_StartTime).getMinutes()) == 30) ? new Date(cur_StartTime).getMinutes() + 29 : new Date(cur_StartTime).getMinutes() + 30;
-                var cur_EndTime = new Date(new Date(cur_StartTime).setMinutes(min));
-            }
-            else if ($(_target).hasClass("e-workcells") && scheduleObj.model.orientation == "horizontal" && scheduleObj.currentView() == "month") {
-                var cur_StartTime = new Date(new Date(curDate).setHours(0, 0));
-                var cur_EndTime = new Date(new Date(curDate).setHours(23, 59));
-            }
-            else {
-                var cur_StartTime = new Date(new Date(curDate).setHours(0, 0));
-                var cur_EndTime = new Date(new Date(curDate).setHours(23, 59));
-                scheduleObj._appointmentAddWindow.find(".allday").ejCheckBox({ checked: true });
-            }
-
-            var StartDate = new Date(cur_StartTime);
-            var StartTime = new Date(cur_StartTime);
-            var endTime = cur_EndTime;
-
-            // To find the resource details
-            var resource = scheduleObj._getResourceValue($($(e.target).context));
-
-            // custom appointment window
-
+            var result = scheduleObj.getSlotByElement($(e.target));
+            // set value to custom appointmnt window fields
             $("#subject").val(e.droppedElementData.text);
-            $("#customDescription").val(e.droppedElementData.text);
-            $("#StartTime").ejDateTimePicker({ value: new Date(StartTime) });
-            $("#EndTime").ejDateTimePicker({ value: new Date(endTime) });
-            $("#resource").val(resource.Text);
-            $("#ownerId").val(resource.Id);
-            $("#customWindow").ejDialog("open");
+            $("#customdescription").val(e.droppedElementData.text);
+            $("#StartTime").ejDateTimePicker({ value: new Date(result.startTime) });
+            $("#EndTime").ejDateTimePicker({ value: new Date(result.endTime) });
+            $("#resource").val(result.resources.text);
+            $("#ownerId").val(result.resources.id);
+            $("#customWindow").ejDialog("open");       
         }
     }
 
@@ -825,16 +790,7 @@ The following code example lets you dragging and dropping external items to and 
     function cancel() {
         $("#customWindow").ejDialog("close");
     }
-
-    function onDragStop(args) {
-        if ($(args.event.target).parents(".e-treeview").length != 0) {
-            $("#drag").ejTreeView({ allowDropChild: true, allowDropSibling: true });
-            treeObj = $("#drag").ejTreeView('instance');
-            var newNode = { id: args.appointment.Id, text: args.appointment.Subject };
-            treeObj.addNode(newNode, $(args.event.target));
-            args.cancel = true;
-        }
-    }
+}
 
 {% endhighlight %}
 
