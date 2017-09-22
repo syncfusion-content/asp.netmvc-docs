@@ -17,11 +17,11 @@ The **RadialSlider** property **InnerCircleImageClass** allow to set image for t
 {% tabs %}
 {% highlight CSHTML %}
 
-    @Html.EJ().RadialSlider("slider").InnerCircleImageClass("customcircle")
+    @Html.EJ().RadialSlider("slider").InnerCircleImageClass("custom-circle")
 {% endhighlight %}
 {% highlight css %}
     <style>
-        .customcircle {
+        .e-custom-circle {
             background-image: url("../images/radialslider/diagram.png");
         }
     </style>
