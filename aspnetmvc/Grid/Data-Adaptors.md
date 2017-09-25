@@ -233,7 +233,7 @@ You can use the following code example to use WebAPI Adaptor.
                  var queryString = HttpContext.Current.Request.QueryString; 
                  int skip = Convert.ToInt32(queryString["$skip"]); 
                  int take = Convert.ToInt32(queryString["$top"]); 
-                 var data = db.Orders.Skip(skip).Take(take).ToList(); 
+                 var data = db.Orders.ToList(); 
                  return new { Items = data.Skip(skip).Take(take), Count = data.Count() }; 
               } 
             } 
