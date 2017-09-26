@@ -180,13 +180,13 @@ You can set the images for Navigation Drawer by using the ImageClass property as
 
  {
 
-	 items.Add().Text("Home").ImageClass("icon-home");
+	 items.Add().Text("Home").ImageClass("e-icon e-home");
 
-	 items.Add().Text("Profile").ImageClass("icon-profile");
+	 items.Add().Text("Profile").ImageClass("e-icon e-profile");
 
-	 items.Add().Text("Photos").ImageClass("icon-photos");
+	 items.Add().Text("Photos").ImageClass("e-icon e-photo");
 
-	 items.Add().Text("Location").ImageClass("icon-location");
+	 items.Add().Text("Location").ImageClass("e-icon e-location");
 
  });
 
@@ -204,47 +204,48 @@ You can define the image classes specified for the list items as follows.
 
 <style>
 
-	#navigationPane [class*="icon-"]
+	@font-face { 
+        font-family: 'ej-xlfont'; 
+        src: url('../../common-images/tools/icons.eot'); 
+        src: url('../../common-images/tools/icons.eot') format('embedded-opentype'), url('../../common-images/tools/icons.woff') format('woff'),url('../../common-images/tools/icons.woff') format('woff'), url('../../common-images/tools/icons.ttf') format('truetype'), url('../../common-images/tools/icons.svg') format('svg'); 
+        font-weight: normal; 
+        font-style: normal; 
+    } 
+ 
+    .e-home:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e900"; 
+    } 
+ 
+    .e-profile:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e901"; 
+    } 
+ 
+    .e-photo:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e903"; 
+    } 
+ 
+    .e-location:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e905"; 
+    } 
 
-	{
+    .e-people:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e902"; 
+    } 
+ 
+    .e-communities:before { 
+        font-family: "ej-xlfont"; 
+        content: "\e904"; 
+    }
 
-		width: 35px;
-
-		height: 35px;
-
-	}
-
-	.icon-home
-
-	{
-
-		background-position: 0 0;
-
-	}
-
-	.icon-profile
-
-	{
-
-		background-position: 0 -180px;
-
-	}
-
-	.icon-photos
-
-	{
-
-		background-position: 0 -120px;
-
-	}
-
-	.icon-location
-
-	{
-
-		background-position: 0 -58px;
-
-	}    
+    .e-home, .e-profile, .e-people, .e-photo, .e-communities, .e-location { 
+        font-size: 24px; 
+        color: black; 
+    } 
 </style>
 
 
@@ -315,13 +316,13 @@ You can load the desired content for the navigation items by updating the conten
 
  {
 
-	 items.Add().Text("Home").ImageClass("icon-home");
+	 items.Add().Text("Home").ImageClass("e-icon e-home");
 
-	 items.Add().Text("Profile").ImageClass("icon-profile");
+	 items.Add().Text("Profile").ImageClass("e-icon e-profile");
 
-	 items.Add().Text("Photos").ImageClass("icon-photos");
+	 items.Add().Text("Photos").ImageClass("e-icon e-photo");
 
-	 items.Add().Text("Location").ImageClass("icon-location");
+	 items.Add().Text("Location").ImageClass("e-icon e-location");
 
  });
 
