@@ -20,9 +20,11 @@ Add the following code in your CSHTML page to render DateRangePicker with custom
 
    
    ~~~ cshtml
-    @*Add the following code example to the corresponding CSHTML page to render DateRangePicker widget with customized height and width*@
+
+     @*Add the following code example to the corresponding CSHTML page to render DateRangePicker widget with customized height and width*@
         
-    @Html.EJ().DateRangePicker("DateRange").Height("50").Width("300")
+     @Html.EJ().DateRangePicker("DateRange").Height("50").Width("300")
+    
    ~~~  
 
 ## Rounded Corners
@@ -33,22 +35,24 @@ Add the following code in your CSHTML page to render DateRangePicker widget with
 
    ~~~ cshtml
    
-	@*Add the following code example to the corresponding CSHTML page to render DateRangePicker widget with rounded corners*@
+  	 @*Add the following code example to the corresponding CSHTML page to render DateRangePicker widget with rounded corners*@
 
-	@Html.EJ().DateRangePicker("DateRange").ShowRoundedCorner(true)
+	 @Html.EJ().DateRangePicker("DateRange").ShowRoundedCorner(true)
 
    ~~~
-   
+
+
 ## Persistence
 
 The value of DateRangePicker can be sustained even after form post back and page refreshing by enabling the **EnablePersistence** API like below code example.
-~~~ cshtml
+
+   ~~~ cshtml
     
-    @*Add the following code example to the corresponding CSHTML page to enable state persistence in rendered DateRangePicker widget*@
+     @*Add the following code example to the corresponding CSHTML page to enable state persistence in rendered DateRangePicker widget*@
 
-    @Html.EJ().DateRangePicker("DateRange").EnablePersistence(true)
+     @Html.EJ().DateRangePicker("DateRange").EnablePersistence(true)
 
-~~~
+   ~~~
 
 The DateRangePicker Model value will be stored in local storage / cookies of browser before page refreshes and reinitialized with the restored model after refresh.
 
@@ -57,16 +61,18 @@ The DateRangePicker Model value will be stored in local storage / cookies of bro
 
 We can make use of **Ranges** API for easy selection of preset ranges from the popup. Each preset range will have a label which will be displayed on the right side of the popup with user-defined name. By clicking the labels the associated date ranges will get updated in the popup, automatically.
    
-~~~ cshtml
-    @*Add the following code example to the corresponding CSHTML page to enable state persistence in DateRangePicker widget*@
+   ~~~ cshtml
 
-    @{List<Object> lastWeek = new List<Object>() { DateTime.Today.AddDays(-7),DateTime.Today.AddDays(-1)};}
-    @{List<Object> lastMonth = new List<Object>() { DateTime.Today.AddMonths(-1), DateTime.Today.AddDays(-1) };}
-    @{List<Object> lastYear = new List<Object>() { DateTime.Today.AddYears(-1), DateTime.Today.AddDays(-1) };}
-    @{List<Object> special = new List<Object>() { "12/25/2017", "1/1/2018" };}
+     @*Add the following code example to the corresponding CSHTML page to enable state persistence in DateRangePicker widget*@
 
-    @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Last Week").Range(lastWeek)).Ranges(p => p.Add().Label("Last Month").Range(lastMonth)).Ranges(m=>m.Add().Label("Last Year").Range(lastYear)).Ranges(n => n.Add().Label("Special Week").Range(special)).Width("60%")
-~~~
+     @{List<Object> lastWeek = new List<Object>() { DateTime.Today.AddDays(-7),DateTime.Today.AddDays(-1)};}
+     @{List<Object> lastMonth = new List<Object>() { DateTime.Today.AddMonths(-1), DateTime.Today.AddDays(-1) };}
+     @{List<Object> lastYear = new List<Object>() { DateTime.Today.AddYears(-1), DateTime.Today.AddDays(-1) };}
+     @{List<Object> special = new List<Object>() { "12/25/2017", "1/1/2018" };}
+
+     @Html.EJ().DateRangePicker("DateRange").Value("05/28/2016-06/27/2017").Ranges(e => e.Add().Label("Last Week").Range(lastWeek)).Ranges(p => p.Add().Label("Last Month").Range(lastMonth)).Ranges(m=>m.Add().Label("Last Year").Range(lastYear)).Ranges(n => n.Add().Label("Special Week").Range(special)).Width("60%")
+
+    ~~~
 
 Execute the above code to render the following output.
 
@@ -79,11 +85,11 @@ DateRangePicker with preset ranges
 
 The date ranges can also be selected with start time and end time by enable the TimePicker in popup using **EnableTimePicker** API. Each calendar will have separate Time Pickers in which we can select start time along with start date and end time along with end date. Please check with the below code example to enable the time picker.
 
-~~~ cshtml
+   ~~~ cshtml
    
-    @*Add the following code example to the corresponding CSHTML page to render DateRangePicker with TimePicker widget*@
+     @*Add the following code example to the corresponding CSHTML page to render DateRangePicker with TimePicker widget*@
 
-    @Html.EJ().DateRangePicker("DateRange").EnableTimePicker(true)
+     @Html.EJ().DateRangePicker("DateRange").EnableTimePicker(true)
 
    ~~~
 
