@@ -44,9 +44,10 @@ Refer the below French culture file in head section of HTML page after the refer
 If you want to change month names to your culture month just replace month names with your culture month names or your customized format.
 
 The following example is used to set DateRangePicker in French language.
+ 
+ ~~~ cshtml
 
-    ~~~ cshtml
-    calendars: {
+     calendars: {
             standard: {
                 '/': '/',
                 ':': ':',
@@ -74,19 +75,23 @@ The following example is used to set DateRangePicker in French language.
                 }
             }
         }
-    ~~~  
+
+ ~~~  
 
 Add the following code in your CSHTML page to render DateRangePicker widget.
 
-    ~~~ cshtml
+ ~~~ cshtml
 
-    @Html.EJ().DateRangePicker("DateRange").Locale("fr-FR").Width("25%")
-    
-    ~~~
+     @Html.EJ().DateRangePicker("DateRange").Locale("fr-FR").Width("25%")
+
+ ~~~
 
 The following screenshot displays the output for the above code.
 
-![](Globalization_images/Globalization_images.png)
+![](Globalization_images/localization_images.png)
 
-    Showcase for DateRangePicker with French culture
-    {:.caption}
+Showcase for DateRangePicker with French culture
+{:.caption}
+
+
+ 
