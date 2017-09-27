@@ -101,7 +101,7 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
                     contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
-                            PrefixIcon = "e-Ribbon e-new",
+                            PrefixIcon = "e-icon e-Ribbon e-new",
                             Click = "executeAction"
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
@@ -150,7 +150,7 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
                 ctn.ContentGroups(contentGroup => {
                     contentGroup.Id("paste").Text("Paste").SplitButtonSettings(new SplitButtonProperties() {
                         ContentType = ContentType.ImageOnly,
-                            PrefixIcon = "e-Ribbon e-Ribbonpaste",
+                            PrefixIcon = "e-icon e-Ribbon e-Ribbonpaste",
                             TargetID = "pasteSplit",
                             ArrowPosition = ArrowPosition.Bottom,
                             ButtonMode = ButtonMode.Dropdown

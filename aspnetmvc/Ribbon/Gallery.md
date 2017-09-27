@@ -41,25 +41,25 @@ N> The `ItemHeight` and `ItemWidth` for gallery item can be set, if not set defa
                                     gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent1 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent1 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent2 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent2 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent3 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent3 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent4 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent4 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                 }).Add();
@@ -141,25 +141,25 @@ You can also set `Text` and `ToolTip` to custom gallery item which can also be c
                     {
                         gallery.Text("GalleryContent1").ToolTip("GalleryContent1").ButtonSettings(new ButtonProperties(){
                         ContentType=ContentType.ImageOnly,
-                        PrefixIcon="e-gallerycontent1 e-gbtnimg",
+                        PrefixIcon="e-icon e-gallerycontent1 e-gbtnimg",
                         CssClass="e-gbtnposition"
                         }).Add();
                         gallery.Text("GalleryContent2").ToolTip("GalleryContent2").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
-                            PrefixIcon = "e-gallerycontent2 e-gbtnimg",
+                            PrefixIcon = "e-icon e-gallerycontent2 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
                         gallery.Text("GalleryContent3").ToolTip("GalleryContent3").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
-                            PrefixIcon = "e-gallerycontent3 e-gbtnimg",
+                            PrefixIcon = "e-icon e-gallerycontent3 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
                         gallery.Text("GalleryContent4").ToolTip("GalleryContent4").ButtonSettings(new ButtonProperties()
                         {
                             ContentType = ContentType.ImageOnly,
-                            PrefixIcon = "e-gallerycontent4 e-gbtnimg",
+                            PrefixIcon = "e-icon e-gallerycontent4 e-gbtnimg",
                             CssClass = "e-gbtnposition"
                         }).Add();
                     }).CustomGalleryItems(customGallery =>
