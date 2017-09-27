@@ -27,12 +27,12 @@ RibbonTabs is a collection of control `TabGroup` which enables you to organize r
                       contentGroup.Id("print").Text("Print").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
-                              PrefixIcon = "e-Ribbon e-print"
+                              PrefixIcon = "e-icon e-Ribbon e-print"
                       }).Add();
                       contentGroup.Id("save").Text("Save").ButtonSettings(new ButtonProperties() {
                           ContentType = ContentType.TextAndImage,
                               ImagePosition = ImagePosition.ImageTop,
-                              PrefixIcon = "e-Ribbon e-save"
+                              PrefixIcon = "e-icon e-Ribbon e-save"
                       }).Add();
                   }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("50px").Height("70px")).Add();
               }).Add();

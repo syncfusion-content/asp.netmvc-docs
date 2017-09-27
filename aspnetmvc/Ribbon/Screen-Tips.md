@@ -36,7 +36,7 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
                                 contentGroup.Id("copy").Text("Copy").ToolTip("Put a copy of selection on clipboard").ButtonSettings(new ButtonProperties()
                                 {
                                     ContentType = ContentType.TextAndImage,
-                                    PrefixIcon = "e-ribbon e-ribboncopy",
+                                    PrefixIcon = "e-icon e-ribbon e-ribboncopy",
                                 }).Add();
                             }).ContentDefaults(df => df.Width("70px").Height("60px")).Add();
                         }).Add();
@@ -86,7 +86,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
                                 {
                                     Title = "Paste",
                                     Content = "<h6>Paste the content.<br/><br/>Add content on the Clipboard to your document.</h6>",
-                                    PrefixIcon = "e-pastetip",
+                                    PrefixIcon = "e-icon e-pastetip",
                                 }).Add();
                                 contentGroup.Id("copy").Text("Copy").CustomToolTip(new CustomToolTip()
                                 {
@@ -95,7 +95,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
                                 }).ButtonSettings(new ButtonProperties()
                                 {
                                     ContentType = ContentType.TextAndImage,
-                                    PrefixIcon = "e-ribbon e-ribboncopy",
+                                    PrefixIcon = "e-icon e-ribbon e-ribboncopy",
                                 }).Add();
                             }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("70px").Height("60px")).Add();
                         }).Add();
@@ -162,7 +162,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     }).ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent1 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent1 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("Style 2").CustomToolTip(new CustomToolTip()
@@ -172,7 +172,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     }).ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent2 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent2 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("Style 3").CustomToolTip(new CustomToolTip()
@@ -182,7 +182,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     }).ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent3 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent3 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                     gallery.Text("Style 4").CustomToolTip(new CustomToolTip()
@@ -192,7 +192,7 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
                                     }).ButtonSettings(new ButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-gallerycontent4 e-gbtnimg",
+                                        PrefixIcon = "e-icon e-gallerycontent4 e-gbtnimg",
                                         CssClass = "e-gbtnposition"
                                     }).Add();
                                 }).CustomGalleryItems(galleryItems =>

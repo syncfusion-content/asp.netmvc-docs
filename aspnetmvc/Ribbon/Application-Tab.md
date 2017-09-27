@@ -38,7 +38,7 @@ Set the UL element `Id` to `MenuItemID` property to create Application Menu and 
                     contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
-                            PrefixIcon = "e-Ribbon e-new",
+                            PrefixIcon = "e-icon e-Ribbon e-new",
                             Click = "executeAction"
                     }).Add();
                 }).Add();
@@ -92,7 +92,7 @@ Application Menu can be rendered using JSON Data Source. Please refer [`this`](h
                          contentGroup.Id("new").Text("New").ButtonSettings(new ButtonProperties() {
                              ContentType = ContentType.ImageOnly,
                                  ImagePosition = ImagePosition.ImageTop,
-                                 PrefixIcon = "e-Ribbon e-new",
+                                 PrefixIcon = "e-icon e-Ribbon e-new",
                                  Click = "executeAction"
                          }).Add();
                      }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
@@ -173,7 +173,7 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
 
                         ContentType = ContentType.ImageOnly,
                             ImagePosition = ImagePosition.ImageTop,
-                            PrefixIcon = "e-ribbon e-new",
+                            PrefixIcon = "e-icon e-ribbon e-new",
                             Click = "executeAction"
                     }).Add();
                 }).Add();
@@ -197,7 +197,7 @@ To render the Ribbon with the Backstage page, refer to the following code snippe
                 width: 225,
                 contentType: "textandimage",
                 imagePosition: "imagetop",
-                prefixIcon: "e-blank e-infopageicon"
+                prefixIcon: "e-icon e-blank e-infopageicon"
             });
         }
     </script>

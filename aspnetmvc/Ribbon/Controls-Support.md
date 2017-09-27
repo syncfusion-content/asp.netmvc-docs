@@ -30,7 +30,7 @@ The following table describes about the built in controls `Type` and their corre
 	ButtonSettings: {
 					Width: 70,
 					ContentType: ej.ContentType.ImageOnly,
-					PrefixIcon: "e-ribbon e-new"
+					PrefixIcon: "e-icon e-ribbon e-new"
 				    }
  </td>
 </tr>
@@ -99,7 +99,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             ImagePosition = ImagePosition.ImageTop,
-                                            PrefixIcon = "e-ribbon e-new",      
+                                            PrefixIcon = "e-icon e-ribbon e-new",      
                                         }).Add();
                                     }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
                                 }).Add();
@@ -110,7 +110,7 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                         contentTab.Id("paste").Text("Paste").ToolTip("Paste").SplitButtonSettings(new SplitButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
-                                            PrefixIcon = "e-ribbon e-ribbonpaste",
+                                            PrefixIcon = "e-icon e-ribbon e-ribbonpaste",
                                             TargetID = "pasteSplit",
                                             ButtonMode= ButtonMode.Dropdown,
                                             ArrowPosition = ArrowPosition.Bottom,
@@ -141,16 +141,16 @@ N> 2. For `Type` property you can assign either string value (“SplitButton”)
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Bold",
                                             ActiveText = "Bold",
-                                            DefaultPrefixIcon = "e-ribbon bold",
-                                            ActivePrefixIcon = "e-ribbon bold",
+                                            DefaultPrefixIcon = "e-icon e-ribbon bold",
+                                            ActivePrefixIcon = "e-icon e-ribbon bold",
                                         }).Add();
                                         contentTab.Id("italic").ToolTip("Italic").Type(RibbonButtonType.ToggleButton).ToggleButtonSettings(new ToggleButtonProperties()
                                         {
                                             ContentType = ContentType.ImageOnly,
                                             DefaultText = "Italic",
                                             ActiveText = "Italic",
-                                            DefaultPrefixIcon = "e-ribbon e-ribbonitalic",
-                                            ActivePrefixIcon = "e-ribbon e-ribbonitalic",
+                                            DefaultPrefixIcon = "e-icon e-ribbon e-ribbonitalic",
+                                            ActivePrefixIcon = "e-icon e-ribbon e-ribbonitalic",
                                         }).Add();
                                     }).ContentDefaults(df => df.IsBig(false)).Add();
                                 }).Add();
