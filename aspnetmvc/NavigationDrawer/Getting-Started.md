@@ -205,7 +205,7 @@ You can define the image classes specified for the list items as follows.
 <style>
 
 	@font-face { 
-        font-family: 'ej-xlfont'; 
+        font-family: 'ej-font'; 
         src: url('../../common-images/tools/icons.eot'); 
         src: url('../../common-images/tools/icons.eot') format('embedded-opentype'), url('../../common-images/tools/icons.woff') format('woff'),url('../../common-images/tools/icons.woff') format('woff'), url('../../common-images/tools/icons.ttf') format('truetype'), url('../../common-images/tools/icons.svg') format('svg'); 
         font-weight: normal; 
@@ -213,32 +213,32 @@ You can define the image classes specified for the list items as follows.
     } 
  
     .e-home:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e900"; 
     } 
  
     .e-profile:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e901"; 
     } 
  
     .e-photo:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e903"; 
     } 
  
     .e-location:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e905"; 
     } 
 
     .e-people:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e902"; 
     } 
  
     .e-communities:before { 
-        font-family: "ej-xlfont"; 
+        font-family: "ej-font"; 
         content: "\e904"; 
     }
 
