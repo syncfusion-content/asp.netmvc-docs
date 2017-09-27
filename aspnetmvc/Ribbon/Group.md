@@ -54,7 +54,7 @@ Custom controls or items (such as table, div etc.) can be added when the `Type` 
                     {  contentGroup.Id("paste").Text("Paste").ToolTip("Paste").IsBig(true).Type(RibbonButtonType.SplitButton).SplitButtonSettings(new SplitButtonProperties()
                                                 {
                                                     ContentType = ContentType.ImageOnly,
-                                                    PrefixIcon = "e-ribbon e-ribbonpaste",
+                                                    PrefixIcon = "e-icon e-ribbon e-ribbonpaste",
                                                     TargetID = "pasteSplit",
                                                 }).Add();
                     }).Add();
