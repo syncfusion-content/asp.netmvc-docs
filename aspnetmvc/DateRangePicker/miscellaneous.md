@@ -11,11 +11,11 @@ documentation: ug
 
 Editing in input box can be disabled by setting the false value to **AllowEdit** API. By default this property will be true and we can edit the value in input box.
 
-    ~~~ cshtml
+  ~~~ cshtml
         
     @Html.EJ().DateRangePicker("DateRange").AllowEdit(false)
 
-    ~~~  
+  ~~~  
    
 
 # Enable/Disable
@@ -55,5 +55,5 @@ The following screenshot displays the output for the above code.
 
 ![](Miscellaneous_images/Miscellaneous.png)
 
-    BeforeClose Event of DateRangePicker
-    {:.caption}
+BeforeClose Event of DateRangePicker
+{:.caption}

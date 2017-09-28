@@ -34,7 +34,7 @@ Objects with in these Array Collections can be extended by using hyphen. E.g. `e
                                 <div e-content e-defaults-type="button" e-defaults-width="60" e-defaults-height="70">
                                     <div e-groups>
                                         <div e-group e-id="new" e-text="New" e-customtooltip-title="New" e-customtooltip-content="
-                                            <h6>New.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-ribbon e-new" e-buttonsettings-click="executeAction">
+                                            <h6>New.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-new" e-buttonsettings-click="executeAction">
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@ Objects with in these Array Collections can be extended by using hyphen. E.g. `e
                                         <div e-content>
                                             <div e-content e-defaults-type="button" e-defaults-width="60" e-defaults-height="70">
                                                 <div e-groups>
-                                                    <div e-group e-id="Design" e-text="Design" e-buttonsettings-prefixicon="e-shape" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop"></div>
+                                                    <div e-group e-id="Design" e-text="Design" e-buttonsettings-prefixicon="e-icon e-shape" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,7 +110,7 @@ Custom Tooltip is an Object of Ribbon Groups and can extend it by using hyphen. 
                                         <div e-group e-id="paste" e-text="Paste" e-customtooltip-title="Paste" e-customtooltip-content="
                                             <h6>Paste the content.
                                                 <br &#47;>
-                                                    <br &#47;>Add content on the Clipboard to your document.<&#47;h6>" e-customtooltip-prefixicon="e-pastetip">
+                                                    <br &#47;>Add content on the Clipboard to your document.<&#47;h6>" e-customtooltip-prefixicon="e-icon e-pastetip">
                                                     </div>
                                                 </div>
                                             </div>

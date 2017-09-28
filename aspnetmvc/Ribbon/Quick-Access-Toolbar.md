@@ -43,7 +43,7 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                                     contentGroup.Id("paste").Text("Paste").ToolTip("Paste").Type(RibbonButtonType.SplitButton).QuickAccessMode(QuickAccessMode.ToolBar).SplitButtonSettings(new SplitButtonProperties()
                                     {
                                         ContentType = ContentType.ImageOnly,
-                                        PrefixIcon = "e-ribbon e-ribbonpaste",
+                                        PrefixIcon = "e-icon e-ribbon e-ribbonpaste",
                                         TargetID = "pasteSplit",
                                         ArrowPosition = ArrowPosition.Bottom,
                                         ButtonMode = ButtonMode.Dropdown,
@@ -59,8 +59,8 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                                         ContentType = ContentType.ImageOnly,
                                         DefaultText = "Italic",
                                         ActiveText = "Italic",
-                                        DefaultPrefixIcon = "e-ribbon e-ribbonitalic",
-                                        ActivePrefixIcon = "e-ribbon e-ribbonitalic",                                        
+                                        DefaultPrefixIcon = "e-icon e-ribbon e-ribbonitalic",
+                                        ActivePrefixIcon = "e-icon e-ribbon e-ribbonitalic",                                        
                                     }).Add();
                         }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("40px").Height("70px")).Add();
                         }).Add();
@@ -73,8 +73,8 @@ The client side event for Quick Access Toolbar menu click is ` QatMenuItemClick`
                                     ContentType = ContentType.ImageOnly,
                                     DefaultText = "Bold",
                                     ActiveText = "Bold",
-                                    DefaultPrefixIcon = "e-ribbon bold",
-                                    ActivePrefixIcon = "e-ribbon bold",
+                                    DefaultPrefixIcon = "e-icon e-ribbon bold",
+                                    ActivePrefixIcon = "e-icon e-ribbon bold",
                                 }).Add();
                             }).ContentDefaults(df => df.IsBig(false)).Add();                                                
                         }).Add();

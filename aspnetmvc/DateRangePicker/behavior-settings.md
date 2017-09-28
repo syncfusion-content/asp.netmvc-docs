@@ -18,10 +18,13 @@ DateRangePicker value can be selected through picking two date values from avail
 Add the following code in your CSHTML page to render DateRangePicker with value.
 
    ~~~ cshtml
-     @Html.EJ().DateRangePicker("DateRangePick").Value("5/12/2017 - 12/5/2017").ClientSideEvents(p => p.Change("onChange"))
+
+      @Html.EJ().DateRangePicker("DateRangePick").Value("5/12/2017 - 12/5/2017").ClientSideEvents(p => p.Change("onChange"))
+
    ~~~  
 
    ~~~ cshtml
+
     function onChange(args) {
 
             //args contains entire model of DateRangePicker to get the value of all properties.
@@ -31,6 +34,7 @@ Add the following code in your CSHTML page to render DateRangePicker with value.
             alert(" start date is : " + args.startDate + " \n end date is : " + args.endDate);
 
         }
+
    ~~~  
 
 ## Separator
@@ -40,7 +44,9 @@ The value of the DateRangePicker popup will be presented with two date strings w
 Add the following code in your CSHTML page to render DateRangePicker widget with value separated by separator.
 
    ~~~ cshtml
-    @Html.EJ().DateRangePicker("DateRangePick").Value("7/31/2017 $ 8/31/2017").Width("25%").Separator("$")
+
+     @Html.EJ().DateRangePicker("DateRangePick").Value("7/31/2017 $ 8/31/2017").Width("25%").Separator("$")
+    
    ~~~
 
 Execute the above code to render the following output.

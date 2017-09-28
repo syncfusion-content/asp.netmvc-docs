@@ -261,7 +261,7 @@ For each group shirked for resizing, Custom Class will be added based on group t
                        contentGroup.Id("paste").Text("Paste").ToolTip("Paste").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.ImageOnly,
-                           PrefixIcon = "e-ribbon e-ribbonpaste",
+                           PrefixIcon = "e-icon e-ribbon e-ribbonpaste",
                        }).Add();
                    }).ContentDefaults(df => df.IsBig(true).Width("50px").Height("70px")).Add();
                    ctn.ContentGroups(contentGroup =>
@@ -269,12 +269,12 @@ For each group shirked for resizing, Custom Class will be added based on group t
                        contentGroup.Id("cut").Text("Cut").ToolTip("Cut").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.TextAndImage,
-                           PrefixIcon = "e-ribbon e-ribboncut",
+                           PrefixIcon = "e-icon e-ribbon e-ribboncut",
                        }).Add();
                        contentGroup.Id("copy").Text("Copy").ToolTip("Copy").ButtonSettings(new ButtonProperties()
                        {
                            ContentType = ContentType.TextAndImage,
-                           PrefixIcon = "e-ribbon e-ribboncopy",
+                           PrefixIcon = "e-icon e-ribbon e-ribboncopy",
                        }).Add();
                    }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("40px").IsBig(false)).Add();
                }).Add();
@@ -304,7 +304,7 @@ For each group shirked for resizing, Custom Class will be added based on group t
                     {
                         ContentType = ContentType.ImageOnly,
                         ImagePosition = ImagePosition.ImageTop,
-                        PrefixIcon = "e-ribbon e-new",
+                        PrefixIcon = "e-icon e-ribbon e-new",
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("40px")).Add();
             }).Add();
@@ -316,13 +316,13 @@ For each group shirked for resizing, Custom Class will be added based on group t
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,
-                        PrefixIcon = "e-ribbon e-undo",
+                        PrefixIcon = "e-icon e-ribbon e-undo",
                     }).Add();
                     contentGroup.Id("redo").Text("Redo").ToolTip("Redo").ButtonSettings(new ButtonProperties()
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,
-                        PrefixIcon = "e-ribbon e-redo",
+                        PrefixIcon = "e-icon e-ribbon e-redo",
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("40px").Height("70px")).Add();
             }).Add();
@@ -337,7 +337,7 @@ For each group shirked for resizing, Custom Class will be added based on group t
                     {
                         ContentType = ContentType.TextAndImage,
                         ImagePosition = ImagePosition.ImageTop,
-                        PrefixIcon = "e-ribbon e-printlayout",
+                        PrefixIcon = "e-icon e-ribbon e-printlayout",
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("80px").Height("70px")).Add();
             }).Add();

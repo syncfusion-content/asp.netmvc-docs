@@ -39,7 +39,7 @@ In an view page, define the Ribbon control and configure the Ribbon with custom 
                     {
                         ContentType = ContentType.ImageOnly,
                         ImagePosition = ImagePosition.ImageTop,
-                        PrefixIcon = "e-Ribbon e-new",
+                        PrefixIcon = "e-icon e-Ribbon e-new",
                         Click = "executeAction"
                     }).Add();
                 }).ContentDefaults(df => df.Type(RibbonButtonType.Button).Width("60px").Height("70px")).Add();
