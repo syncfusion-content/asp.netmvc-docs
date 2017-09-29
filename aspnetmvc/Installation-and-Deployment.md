@@ -18,6 +18,8 @@ documentation: ug
 
 Syncfusion ASP.NET MVC NuGet packages are available [here](http://nuget.syncfusion.com/package/aspnetmvc).
 
+N> If you wish to use the ASP.NET MVC NuGet packages then Essential Studio or ASP.NET MVC platform installation not required to implement with Syncfusion ASP.NET MVC controls. 
+
 ### NuGet Configuration 
 
 Syncfusion NuGet Package feed links are configured in Visual Studio in the following ways,
