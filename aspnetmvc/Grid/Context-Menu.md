@@ -348,3 +348,78 @@ Sub context menu is used to add customized sub menu to the custom context menu i
 {% endtabs %}
 
 ![](Context-Menu_images/ContextMenu_img5.png)
+
+## Sub Context Menu with Template
+
+On rendering the Sub context menu items, the customized sub menu items created by using `ContextMenuSettings.SubContextMenu.Template` property.
+
+{% tabs %}
+{% highlight RAZOR %}
+
+    @(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+         .ContextMenuSettings(contextMenu =>
+                        {
+                            contextMenu.EnableContextMenu();
+                            contextMenu.DisableDefaultItems();
+                            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContexMenuItems() { Id = "hide", Text = "Hide Column" } });
+                            contextMenu.SubContextMenu(submenu =>
+                            {
+                                submenu.ContextMenuItem("hide").Template("#template").Add();
+                            });
+                        })
+        .AllowPaging()        
+        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .Columns(col =>
+        {
+            col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
+
+            col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(90).Add();
+
+            col.Field("Freight").Format("{0:c2}").HeaderText("Freight").Width(80).TextAlign(TextAlign.Right).Add();
+
+            col.Field("ShipCountry").HeaderText("Ship Country").Width(150).Add();
+
+        })
+    )
+{% endhighlight  %}
+{% highlight js %}
+    <script type="text/javascript">
+        function contextclick(args) {
+            if (args.text == "Clear Selection")
+                this.clearSelection();
+            else if (args.text != "Hide Column")
+                this.hideColumns(args.text);
+        }
+    </script>
+    <script type= "text/x-jsrender" id=template>
+        <ul>
+            <li><a>OrderID</a></li>
+            <li><a>CustomerID</a></li>
+            <li><a>EmployeeID</a></li>
+        </ul>
+    </script>
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+    {
+        public class GridController : Controller
+        {
+            public ActionResult Index(){
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+    
+{% endtabs %}
+
+![](Context-Menu_images/ContextMenu_img5.png)
+
