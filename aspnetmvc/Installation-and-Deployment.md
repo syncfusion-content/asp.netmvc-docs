@@ -56,14 +56,12 @@ The steps to configure the Syncfusion ASP.NET MVC NuGet Packages in Visual Studi
 
    **Name**: Name of the package that listed in Available package sources  
    **Source**: Syncfusion ASP.NET MVC NuGet Package feed URL
-   [http://nuget.syncfusion.com/aspnetmvc](http://nuget.syncfusion.com/aspnetmvc)
+   [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
     
    ![](installation-and-deployment_images/NuGetConfig2.jpeg)
 
    N> The `Source` text box in the above image denotes the location of the NuGet packages and the `Name` section, allows you to provide a unique name for NuGet Packages Source.
-   Syncfusion Asp.Net.Core NuGet packages are available in [ASP.NET MVC](http://nuget.syncfusion.com/aspnetmvc) NuGet repository until v14.2.0.32. You may face the NuGet package installation/restore error while installing the Syncfusion ASP.NET Core NuGet packages from Syncfusion Public feed URL since some URL redirecting issue in NuGet Package Manager. To resolve this, use the below Syncfusion ASP.NET MVC NuGet feed link. 
-   Syncfusion ASP.NET MVC NuGet Full Feed Link: [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
- 
+   
 I> Syncfusion other platforms NuGet packages feed links are available [here](http://nuget.syncfusion.com/)
 
 ### NuGet Installation
@@ -92,7 +90,7 @@ Using the `Manage NuGet Packages` in Visual Studio, NuGet packages can be update
 
 4. Select NuGet Package in the list and click `Update`. When the update is complete, close and re-open all open instances of Visual Studio.
 
-   N> By clicking `Update All` button, all NuGet packages are getting update. When the update is complete, close and re-open all open instances of Visual Studio.
+   N> By clicking `Update All` button, all NuGet packages are getting update. When the update is complete, close and re-open all open instances of Visual Studio. If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29).  Syncfusion ASP.NET MVC NuGet package naming structure has changed from 2015 Volume 2(v13.2.0.29). Navigate below [NuGet Package Structure](https://help.syncfusion.com/aspnetmvc/installation-and-deployment#nuget-packages-structure) topic for more information about this.  
    
 ## Configuring Syncfusion NuGet Packages from command line in Linux/MAC 
    
@@ -104,7 +102,7 @@ Using the `Manage NuGet Packages` in Visual Studio, NuGet packages can be update
 
      mono nuget.exe Sources Add –Name [Source name] –Source [source location]
 
-     For Ex: mono nuget.exe Add –Name “Syncfusion Source” –Source “http://nuget.syncfusion.com/aspnetmvc”
+     For Ex: mono nuget.exe Add –Name “Syncfusion Source” –Source “http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc”
                                                                                   
 3. Once the Source gets added successfully the confirmation message will be shown like below.
 
@@ -465,7 +463,8 @@ Syncfusion.PdfViewer.Mvc.dll
 
 ## NuGet Packages Structure
 
-The following structure is maintained for the ASP.NET MVC platform NuGet packages from 2015 Volume 2.
+The following structure is maintained for ASP.NET MVC platform NuGet packages from 2015 Volume 2(v13.2.0.29). If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). In order, to update the Syncfusion NuGet packages  latest, or above version of 2015 Volume 1 Service Pack-2(v13.1.0.30), so we uninstall the existing packages, and install the following required packages manually.
+
 <table>
    <tr>
 		<td colspan="1" rowspan="2">
