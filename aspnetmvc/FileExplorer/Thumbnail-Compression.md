@@ -27,7 +27,7 @@ In the view page, add “FileExplorer” helper and specify the thumbnail image 
 
     {% endhighlight %}
 
-In the controller page, specify the “[GetImage](http://help.syncfusion.com/cr/cref_files/aspnetmvc/dociohelper/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations~GetImage.html#)” handling operation as shown below. This handling function is necessary to compress and load the images in “FileExplorer”, while “EnableThumbnailCompress” option has been enabled.
+In the controller page, specify the “[GetImage](https://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.FileExplorerOperations~GetImage.html)” handling operation as shown below. This handling function is necessary to compress and load the images in “FileExplorer”, while “EnableThumbnailCompress” option has been enabled.
 
     {% highlight c# %}
             public ActionResult FileActionThumbnailCompress(FileExplorerParams args)
