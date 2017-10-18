@@ -463,7 +463,7 @@ Syncfusion.PdfViewer.Mvc.dll
 
 ## NuGet Packages Structure
 
-The following structure is maintained for ASP.NET MVC platform NuGet packages from 2015 Volume 2(v13.2.0.29). If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). In order, to update the Syncfusion NuGet packages  latest, or above version of 2015 Volume 1 Service Pack-2(v13.1.0.30), so we uninstall the existing packages, and install the following required packages manually.
+The following structure is maintained for ASP.NET MVC platform NuGet packages from 2015 Volume 2(v13.2.0.29). If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). To update Syncfusion NuGet packages latest or above version of 2015 Volume 1 Service Pack-2(v13.1.0.30), uninstall the existing packages and install the following required package manually.
 
 <table>
    <tr>
