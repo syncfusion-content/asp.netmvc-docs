@@ -362,14 +362,14 @@ On rendering the Sub context menu items, the customized sub menu items created b
                         {
                             contextMenu.EnableContextMenu();
                             contextMenu.DisableDefaultItems();
-                            contextMenu.CustomContextMenuItems(new List<CustomContexMenuItems> { new CustomContexMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContexMenuItems() { Id = "hide", Text = "Hide Column" } });
+                            contextMenu.CustomContextMenuItems(new List<CustomContextMenuItems> { new CustomContextMenuItems() { Id = "clear", Text = "Clear Selection" }, new CustomContextMenuItems() { Id = "hide", Text = "Hide Column" } });
                             contextMenu.SubContextMenu(submenu =>
                             {
                                 submenu.ContextMenuItem("hide").Template("#template").Add();
                             });
                         })
         .AllowPaging()        
-        .ClientSideEvents(eve => {eve.ContextClick("contextclick");})
+        .ClientSideEvents(eve => {eve.ContextClick("context_click");})
         .Columns(col =>
         {
             col.Field("OrderID").IsPrimaryKey(true).HeaderText("Order ID").TextAlign(TextAlign.Right).Width(90).Add();
@@ -387,7 +387,7 @@ On rendering the Sub context menu items, the customized sub menu items created b
 {% endhighlight  %}
 {% highlight js %}
     <script type="text/javascript">
-        function contextclick(args) {
+        function context_click(args) {
             if (args.text == "Clear Selection")
                 this.clearSelection();
             else if (args.text != "Hide Column")
