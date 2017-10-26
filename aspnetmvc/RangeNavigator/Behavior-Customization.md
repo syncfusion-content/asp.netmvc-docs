@@ -21,7 +21,7 @@ If you set EnableDeferredUpdate to true, the RangeChanged event gets fired after
 
 . EnableDeferredUpdate (true)
 
-.Render())
+)
 {% endhighlight  %}
 
 ![](Behavior-Customization_images/Behavior-Customization_img1.png)
@@ -42,7 +42,7 @@ This event is handled when the RangeNavigator gets loaded. A parameter sender is
 .Loaded("loadingData")
 
    
-.Render())
+)
 
 <script type="text/javascript">
 
@@ -67,7 +67,7 @@ This event gets fired whenever the selected range changes in RangeNavigator. A p
     
 .RangeChanged("loadingData")
 
-.Render())
+)
 
 <script type="text/javascript">
 
@@ -93,7 +93,7 @@ You can easily update the data for chart by assigning the ZoomFactor and ZoomPos
 
 .RangeChanged("loadingData")
 
-.Render())
+)
 
 <script type="text/javascript">
 

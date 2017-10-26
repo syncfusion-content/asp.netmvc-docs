@@ -43,9 +43,7 @@ RangeNavigator provides support for you to customize the text display in the too
 
 )
 
-)     
-
-.Render())
+))
 
 {% endhighlight %}
 
@@ -73,7 +71,7 @@ Some of the LabelFormat for DateTime data are as follows:
 
 .TooltipSettings(tooltip=>tooltip.LabelFormat("MMM, yyyy"))
 
-.Render())
+)
 
 {% endhighlight  %}
 
@@ -108,7 +106,7 @@ Tooltip get displayed only when we move the slider.</td></tr>
 
 .TooltipSettings(tooltip=>tooltip.TooltipDisplayMode("ondemand"))
 
-.Render())
+)
 
 {% endhighlight %}
 

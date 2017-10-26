@@ -68,10 +68,7 @@ The labels are found along the range, displaying the value of the data it corres
 
 	)                                                                                                                                                                                                                                                                                                                                   
 
-)      
-
-
-.Render())
+))
 
 {% endhighlight  %}
 
@@ -99,7 +96,7 @@ The following screen shot illustrates both the lower and higher level labels tha
 
 			   )    
 
-.Render())
+)
 
 {% endhighlight  %}
 The following screenshot illustrates a RangeNavigator with labels inside the control after specifying the LabelPlacement as inside.
@@ -192,10 +189,7 @@ RangeNavigator is customized using NavigatorStyleSettings properties. You can cu
 
 )                                                                                                                                                                                                                                                                                                                                   
 
-)
-
-
-.Render())
+))
 
 {% endhighlight  %}
 
@@ -232,7 +226,7 @@ RangeNavigator theme is a set of pre-defined options that are applied to the con
 
 .Theme("azuredark")
 
-.Render())
+)
 
 {% endhighlight  %}
 
