@@ -96,7 +96,7 @@ always</td><td>
 Tooltip get displayed for RangeNavigator always.</td></tr>
 <tr>
 <td>
-ondemand</td><td>
+onDemand</td><td>
 Tooltip get displayed only when we move the slider.</td></tr>
 </table>
 
@@ -104,7 +104,7 @@ Tooltip get displayed only when we move the slider.</td></tr>
 
 @(Html.EJ().RangeNavigator("container")
 
-.TooltipSettings(tooltip=>tooltip.TooltipDisplayMode("ondemand"))
+.TooltipSettings(tooltip=>tooltip.TooltipDisplayMode("onDemand"))
 
 )
 
