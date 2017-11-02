@@ -159,7 +159,7 @@ Perform the below steps to install Syncfusion Bower Package via command prompt i
 2. Then run the command Bower install <package name>.
 
    ~~~
-   bower install syncfusion-javascript
+   Bower install syncfusion-javascript
    ~~~
    
    ![](Installation-and-Deployment_images/Installation-and-Deployment_img1.jpeg)
@@ -197,7 +197,7 @@ You can install the Syncfusion Bower package from a local directory. To perform 
 To update the installed Bower packages, run the command Bower update <package name>.
 
 ~~~
-bower update syncfusion-javascript
+Bower update syncfusion-javascript
 ~~~
 
 ![](Installation-and-Deployment_images/Installation-and-Deployment_img6.jpeg)
@@ -513,6 +513,26 @@ The following structure is maintained for ASP.NET MVC platform NuGet packages fr
 		<td>
 			Syncfusion.Web.Base<br/>
             Syncfusion.AspNet.Mvc.FileFormats<br/>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			Syncfusion.AspNet.Mvc.PdfViewer<br/>
+		</td>
+		<td>
+			Pdf Viewer<br/>
+		</td>
+		<td>
+			EJ.PdfViewer<br/>
+		</td>
+		<td>
+			-<br/>
+		</td>
+		<td>
+			-<br/>
+		</td>
+		<td>
+			Syncfusion.AspNet.Mvc<br/>
 		</td>
 	</tr>
 	<tr>
