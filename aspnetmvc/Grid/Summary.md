@@ -137,8 +137,8 @@ Summaries with `True` and `False` count aggregate can be defined by using `Summa
 	.ShowSummary()
 	.SummaryRow(row =>
 	{
-		row.Title("False Count").SummaryColumns(col => { col.SummaryType(SummaryType.Falsecount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
-		row.Title("True Count").SummaryColumns(col => { col.SummaryType(SummaryType.Truecount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
+		row.Title("False Count").SummaryColumns(col => { col.SummaryType(SummaryType.FalseCount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
+		row.Title("True Count").SummaryColumns(col => { col.SummaryType(SummaryType.TrueCount).DisplayColumn("Verified").DataMember("Verified").Add(); }).Add();
 		
 	})  
 	.AllowPaging()
