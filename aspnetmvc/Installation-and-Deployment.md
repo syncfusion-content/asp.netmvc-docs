@@ -515,6 +515,26 @@ The following structure is maintained for ASP.NET MVC platform NuGet packages fr
             Syncfusion.AspNet.Mvc.FileFormats<br/>
 		</td>
 	</tr>
+		<tr>
+		<td>
+			Syncfusion.AspNet.Mvc.PdfViewer<br/>
+		</td>
+		<td>
+			Pdf Viewer<br/>
+		</td>
+		<td>
+			EJ.PdfViewer<br/>
+		</td>
+		<td>
+			-<br/>
+		</td>
+		<td>
+			-<br/>
+		</td>
+		<td>
+			Syncfusion.AspNet.Mvc<br/>
+		</td>
+	</tr>
 	<tr>
 		<td>
 			Syncfusion.AspNet.Mvc.FileFormats<br/>
