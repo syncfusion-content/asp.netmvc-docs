@@ -22,7 +22,7 @@ The RangePadding property allows you to customize the automatic range calculatio
 
 .ValueType("numeric")
 
-.Render())
+)
 		 
 {% endhighlight  %}
 
@@ -82,7 +82,7 @@ Using the default range calculation for RangeNavigator, the RangePadding propert
    
 .RangePadding("none")   
 
-.Render())
+)
 
 {% endhighlight  %}
 
@@ -118,7 +118,7 @@ The following code example renders a RangeNavigator with a range from 2010 Janua
 
 . RangeSettings(range=>range.Start("2010/1/1").End("2012/13/1"))
 
-.Render())
+)
 
 {% endhighlight %}
 ![](Range-Padding_images/Range-Padding_img7.png)

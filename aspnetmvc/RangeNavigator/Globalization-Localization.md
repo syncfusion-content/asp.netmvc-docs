@@ -41,7 +41,7 @@ Localization is the key feature that provides solutions globally with the help o
 
 .Locale("fr-FR")
 
-.Render())
+)
 
 
 {% endhighlight %}
@@ -58,7 +58,7 @@ Right-to-Left or RTL describes the ability of application to handle and responds
 
 .EnableRTL(true)
 
-.Render())
+)
 
 {% endhighlight  %}
 
