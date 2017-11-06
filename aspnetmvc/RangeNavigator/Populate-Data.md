@@ -38,9 +38,7 @@ The Series property provides access to a collection of all series that are defin
 
  })  
 
-.Load("loadingData")    
-
-.Render())
+.Load("loadingData"))
 
 <script type="text/javascript">
 

@@ -23,7 +23,7 @@ RangeNavigator is also used with numeric data and the ValueType for this data is
 
 .ValueType("numeric")
 
-.Render())
+)
 
 {% endhighlight  %}
 
@@ -44,7 +44,7 @@ By default the ValueType of the RangeNavigator is “datetime” and represents 
 
 .ValueType("datetime")
 
-.Render())
+)
 
 {% endhighlight  %}
 
@@ -76,9 +76,7 @@ By default IntervalType for higher level labels are Years and for lower level la
 
 .LowerLevel(li=>li.IntervalType(NavigatorIntervalType.Quarters))  
 
-)       
-
-.Render())
+))
 
 {% endhighlight  %}
 

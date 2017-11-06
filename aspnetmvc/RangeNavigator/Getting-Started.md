@@ -225,7 +225,7 @@ Getting started with your MVC RangeNavigator is simple; all you need to do is in
 
 	   .RangeSettings(range=>range.Start("2010/1/1").End("2010/12/31"))
 
-	   .Render()) 
+	   ) 
 
 	</div>  
 
@@ -356,7 +356,7 @@ In SimpleRangeNavigator.cshtml specify the type of series you want to render usi
 
 .YName("yValue")
 
-.Render())
+)
 
 {% endhighlight  %}
 The following screenshot displays the RangeNavigator with the type series as “line”. 
@@ -374,7 +374,7 @@ Tooltip can be customized for RangeNavigator using tooltip option. You can also 
 
 .TooltipSettings(tooltip=>tooltip.Visible(true).LabelFormat("MMM/yyyy").TooltipDisplayMode("always"))
 
-.Render())
+)
 
 {% endhighlight  %}
 The following screen shot displays the label format Tooltip in RangeNavigator:
@@ -420,9 +420,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 
 	.Add();
 
-})
-
-.Render())
+}))
 
 
 @(Html.EJ().RangeNavigator("container")
@@ -435,7 +433,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 
 .RangeChanged("onRangeChanged")
 
-.Render())
+)
 {% endhighlight  %}
 
 The following code example illustrates how to use the RangeChanged event of RangeNavigator for updating the chart with the selected data.
@@ -580,9 +578,7 @@ In SimpleRangeNavigator.cshtml, specify the DataSource to the Series and provide
 
 })
 
-.ValueType("numeric")
-
-.Render())
+.ValueType("numeric"))
 
 {% endhighlight %}
 
