@@ -247,5 +247,53 @@ The following screenshot displays an UploadBox control with multiple files selec
 
 ![](Getting-Started_images/Getting-Started_img5.png)
 
+### Display uploaded File Details 
+
+To display the details of the uploaded files below the control, add an container element to display the details below the uploadbox control. Using the ClientSide success event we can access the details of the uploaded file and display it in the container element. Refer the following code.
+
+{% highlight CSHTML %}
+
+    <div class="frame">
+        <div class="control">
+            Select a file to upload
+            <div class="posupload">
+                @Html.EJ().Uploadbox("UploadDefault").SaveUrl("SaveDefault").RemoveUrl("RemoveDefault").AutoUpload(true).UploadBoxDialogAction(act => act.CloseOnComplete(true)).ClientSideEvents(e => e.Success("onSuccess"))
+            </div>
+        </div>
+        <br />
+        <ul id="uploaded" ></ul>
+    </div>
+
+{% endhighlight %}
+
+{% highlight js %}
+
+    function onSuccess(args) {
+        var msg = "<li class='green'><span style='display:inline-block;'><span class='e-icon e-file-empty'></span></span><span style='display:inline-block;margin-left:20px;'><span style='display:block'>" + args.files.name + "</span><span style='display:block;font-size: 10px;'>"+(args.files.size/1024).toFixed(2)+"KB</span></li>"
+        $("#uploaded").append(msg);
+    }
+
+{% endhighlight %}
+
+{% highlight css %}
+
+    #uploaded li {
+        list-style: none;
+        border: 2px solid black;
+        width:300px;;
+    }
+
+    .e-icon.e-file-empty:before {
+        font-size: 32px;
+    }
+
+{% endhighlight %}
+
+The following screenshot displays an UploadBox control with file details of the uploaded file.
+
+![](Getting-Started_images/Getting-Started_img6.png)
+
+[Sample link](http://www.syncfusion.com/downloads/support/directtrac/general/7z/UploadboxWithUploadDetails-502932105) 
+
 
 
