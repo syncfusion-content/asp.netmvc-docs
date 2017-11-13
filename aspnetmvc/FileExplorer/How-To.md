@@ -684,7 +684,7 @@ Code example [CSHTML]:
         
     {% endhighlight %}
     
-If we specify “AjaxDataType” as “jsonp”, data will be received in string format while calling “doJSONPAction” method of Web API Controller, here you need to deserialize the received “json” data into “[FileExplorerParams](#_FileExplorerParams_class_1)” object. After performing corresponding operations, you have to specify the response data in serialized format with wrapped callback function. Please refer below code snippet to handle “jsonp” operations on server.
+If we specify “AjaxDataType” as “jsonp”, data will be received in string format while calling “doJSONPAction” method of Web API Controller, here you need to deserialize the received “localData” data into “[FileExplorerParams](#_FileExplorerParams_class_1)” object. After performing corresponding operations, you have to specify the response data in serialized format with wrapped callback function. Please refer below code snippet to handle “jsonp” operations on server.
 
 Code example [C#]:
 
@@ -693,11 +693,11 @@ Code example [C#]:
     
         [HttpGet]
         [ActionName("doJSONPAction")]
-        public object doJSONPAction(string callback, string json)
+        public object doJSONPAction(string callback, string localData)
         {	
             object Data = null;
             var serializer = new JavaScriptSerializer();
-            FileExplorerParams args = (FileExplorerParams)serializer.Deserialize(json, typeof(FileExplorerParams));
+            FileExplorerParams args = (FileExplorerParams)serializer.Deserialize(localData, typeof(FileExplorerParams));
             try
             {            
                 switch (args.ActionType)
