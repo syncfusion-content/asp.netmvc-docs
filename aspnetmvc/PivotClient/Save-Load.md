@@ -61,13 +61,12 @@ public Dictionary<string, object> SaveReportToDB(Dictionary<string, object> json
         cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
     }
     cmd1.Parameters.Add("@ReportName", reportName);
-    if (operationalMode.ToLower() == "servermode" && analysisMode == "olap")
-        cmd1.Parameters.Add("@Reports", OLAPUTILS.Utils.GetReportStream(jsonResult["clientReports"].ToString()).ToArray());
-    else
-        cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(jsonResult["clientReports"].ToString()).ToArray());
+    cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(jsonResult["clientReports"].ToString()).ToArray());
     cmd1.ExecuteNonQuery();
     con.Close();
-    return null;
+    Dictionary<string, object> dictionary = new Dictionary<string, object>();
+    dictionary.Add("CurrentAction", "Save");
+    return dictionary;
 }
 
 {% endhighlight %}
@@ -97,13 +96,12 @@ public Dictionary<string, object> SaveReportToDB(string reportName, string opera
         cmd1 = new SqlCeCommand("insert into ReportsTable Values(@ReportName,@Reports)", con);
     }
     cmd1.Parameters.Add("@ReportName", reportName);
-    if (operationalMode.ToLower() == "servermode" && analysisMode == "olap")
-        cmd1.Parameters.Add("@Reports", OLAPUTILS.Utils.GetReportStream(clientReports).ToArray());
-    else
-        cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(clientReports).ToArray());
+    cmd1.Parameters.Add("@Reports", Encoding.UTF8.GetBytes(clientReports).ToArray());
     cmd1.ExecuteNonQuery();
     con.Close();
-    return null;
+    Dictionary<string, object> dictionary = new Dictionary<string, object>();
+    dictionary.Add("CurrentAction", "Save");
+    return dictionary;
 }
 
 {% endhighlight %}
@@ -187,22 +185,34 @@ public Dictionary<string, object> LoadReportFromDB(Dictionary<string, object> js
     {
         currentRptName = (row.ItemArray[0] as string).Replace("##" + operationalMode.ToLower() + "#>>#" + analysisMode.ToLower(), "");
         if (currentRptName.Equals(jsonResult["reportName"].ToString()))
-        {
+        {                  
+            byte[] reportString = new byte[2 * 1024];
+            reportString = (row.ItemArray[1] as byte[]);
             if (operationalMode.ToLower() == "servermode" && analysisMode == "olap")
             {
-                var reportString = "";
+                var repCol = Encoding.UTF8.GetString(reportString);
                 OlapDataManager DataManager = new OlapDataManager(connectionString);
-                reportString = OLAPUTILS.Utils.CompressData(row.ItemArray[1] as byte[]);
-                DataManager.Reports = olapClientHelper.DeserializedReports(reportString);
-                DataManager.SetCurrentReport(DataManager.Reports[0]);
-                return olapClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", jsonResult["reportName"].ToString());
+                if (repCol.IndexOf("<?xml version") == 0)
+                {
+                    var reportStr = "";
+                    reportStr = Syncfusion.JavaScript.Olap.Utils.CompressData(row.ItemArray[1] as byte[]);
+                    DataManager.Reports = pivotClientHelper.DeserializedReports(reportStr);
+                    DataManager.SetCurrentReport(DataManager.Reports[0]);
+                    return pivotClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", jsonResult["reportName"].ToString());
+                }
+                else
+                {
+                    dynamic customData = serializer.Deserialize<dynamic>(repCol.ToString());
+                    DataManager.Reports = pivotClientHelper.DeserializedReports(customData[customData[customData.Length - 1]["cubeIndex"]]["Reports"]);
+                    DataManager.SetCurrentReport(DataManager.Reports[customData[customData[customData.Length - 1]["cubeIndex"]]["ReportIndex"]]);
+                    dictionary = pivotClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", jsonResult["reportName"].ToString());
+                    dictionary.Add("Collection", repCol);
+                }
             }
             else
             {
-                byte[] reportString = new byte[2 * 1024];
-                reportString = (row.ItemArray[1] as byte[]);
                 if (analysisMode.ToLower() == "pivot" && operationalMode.ToLower() == "servermode")
-                    dictionary = olapClientHelper.GetJsonData("LoadReport", ProductSales.GetSalesData(), Encoding.UTF8.GetString(reportString));
+                    dictionary = pivotClientHelper.GetJsonData("LoadReport", ProductSales.GetSalesData(), Encoding.UTF8.GetString(reportString));
                 else
                     dictionary.Add("report", Encoding.UTF8.GetString(reportString));
                 break;
@@ -249,30 +259,41 @@ public Dictionary<string, object> FetchReportListFromDB(string action, string op
 
 public Dictionary<string, object> LoadReportFromDB(string reportName,string operationalMode,string analysisMode, string olapReport, string clientReports)
 {
-    
     PivotReport report = new PivotReport();
     Dictionary<string, object> dictionary = new Dictionary<string, object>();
     string currentRptName = string.Empty;
     foreach (DataRow row in GetDataTable().Rows)
     {
-        currentRptName=(row.ItemArray[0] as string).Replace("##" + operationalMode.ToLower() + "#>>#" + analysisMode.ToLower(), "");
+        currentRptName = (row.ItemArray[0] as string).Replace("##" + operationalMode.ToLower() + "#>>#" + analysisMode.ToLower(), "");
         if (currentRptName.Equals(reportName))
         {
-             if (operationalMode.ToLower() == "servermode" && analysisMode=="olap")
+            byte[] reportString = new byte[2 * 1024];
+            reportString = (row.ItemArray[1] as byte[]);
+            if (operationalMode.ToLower() == "servermode" && analysisMode == "olap")
             {
-                var reportString = "";
+                var repCol = Encoding.UTF8.GetString(reportString);
                 OlapDataManager DataManager = new OlapDataManager(connectionString);
-                reportString = OLAPUTILS.Utils.CompressData(row.ItemArray[1] as byte[]);
-                DataManager.Reports = olapClientHelper.DeserializedReports(reportString);
-                DataManager.SetCurrentReport(DataManager.Reports[0]);
-                return olapClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", reportName);
+                if (repCol.IndexOf("<?xml version") == 0)
+                {
+                    var reportStr = "";
+                    reportStr = Syncfusion.JavaScript.Olap.Utils.CompressData(row.ItemArray[1] as byte[]);
+                    DataManager.Reports = pivotClientHelper.DeserializedReports(reportStr);
+                    DataManager.SetCurrentReport(DataManager.Reports[0]);
+                    return pivotClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", reportName);
+                }
+                else
+                {
+                    dynamic customData = serializer.Deserialize<dynamic>(repCol.ToString());
+                    DataManager.Reports = pivotClientHelper.DeserializedReports(customData[customData[customData.Length - 1]["cubeIndex"]]["Reports"]);
+                    DataManager.SetCurrentReport(DataManager.Reports[customData[customData[customData.Length - 1]["cubeIndex"]]["ReportIndex"]]);
+                    dictionary = pivotClientHelper.GetJsonData("toolbarOperation", DataManager, "Load Report", reportName);
+                    dictionary.Add("Collection", repCol);
+                }
             }
             else
             {
-                byte[] reportString = new byte[2 * 1024];
-                reportString = (row.ItemArray[1] as byte[]);
                 if (analysisMode.ToLower() == "pivot" && operationalMode.ToLower() == "servermode")
-                    dictionary = olapClientHelper.GetJsonData("LoadReport", ProductSales.GetSalesData(), Encoding.UTF8.GetString(reportString));
+                    dictionary = pivotClientHelper.GetJsonData("LoadReport", ProductSales.GetSalesData(), Encoding.UTF8.GetString(reportString));
                 else
                     dictionary.Add("report", Encoding.UTF8.GetString(reportString));
                 break;
