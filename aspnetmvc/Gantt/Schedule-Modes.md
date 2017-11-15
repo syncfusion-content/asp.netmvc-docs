@@ -7,11 +7,11 @@ control: Gantt
 documentation: ug
 ---
 
-# Schedule Modes
+# Timescale customization
 
 Gantt contains built-in support to switch over to various schedule mode. You can achieve this by defining a schedule header type for the Gantt.
 
-##Schedule Header Types
+## Schedule Header Types
 
 Gantt contains the following built-in schedule header types:
 
@@ -197,3 +197,49 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 
 Hour-Minute schedule mode in Gantt control
 {:.caption}
+
+## Week start day customization
+
+In Gantt, we can customize week start day by using [`WeekStartDay`](/api/js/ejgantt#members:scheduleheadersettings-weekstartday) property.
+By default the weekStartDay will be assigned with 0 which specifies the start day of the week.
+
+In week schedule mode, week starts with Sunday by default. But we can customize the week start day by using below code example
+ 
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("ganttContainer")
+	  .ScheduleHeaderSettings(sh =>
+              {
+                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Week);                  
+                  sh.WeekStartDay(3);
+              })
+)		   
+
+{% endhighlight %}
+
+## Rounding off timescale (schedule) start date
+
+You can able to round off the schedule start date in a project by using the [`TimescaleStartDateMode`](/api/js/ejgantt#members:scheduleheadersettings-timescalestartdatemode) property. It is possible to set the following values to the property,
+
+* auto
+* month
+* week
+* year
+
+The value `Auto`, automatically calculates the schedule header depending on the datasource values, whereas the other enumeration values rounds off the schedule header accordingly. For Instance, in year schedule if you set [`TimescaleStartDateMode`](/api/js/ejgantt#members:scheduleheadersettings-timescalestartdatemode) as `Month` then the schedule header will start from the immediate month of the schedule instead of starting from beginning of the year.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("ganttContainer")
+	  .ScheduleHeaderSettings(sh =>
+              {
+                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Year);
+                  sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Month);                 
+              })
+)		   
+
+{% endhighlight %}
+
+![](Schedule-Modes_images/Schedule-Modes_img6.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/gantt/ganttschedulemodes) here to view the timescale modes in Gantt.
