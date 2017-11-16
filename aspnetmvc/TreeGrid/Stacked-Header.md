@@ -29,17 +29,17 @@ To stack columns in stacked header, you need to define `Column` property in `Sta
                }
              )
             .ShowStackedHeader(true)
-            .StackedHeaderRows(st => {
-                st.StackedHeaderColumns(cs =>
+            .StackedHeaderRows(row => {
+                row.StackedHeaderColumns(scolumn =>
                 {
-                    cs.HeaderText("Shipment Details").Column(col =>
+                    scolumn.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    cs.HeaderText("Price Details").Column(col =>
+                    scolumn.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -64,17 +64,17 @@ You can provide external CSS styles to the stacked header with the help of `CssC
      @(Html.EJ().TreeGrid("TreeGridContainer")
                 //
 	    .ShowStackedHeader(true)
-            .StackedHeaderRows(st => {
-                st.StackedHeaderColumns(cs =>
+            .StackedHeaderRows(row => {
+                row.StackedHeaderColumns(scolumn =>
                 {
-                    cs.HeaderText("Shipment Details").Column(col =>
+                    scolumn.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).CssClass("stack").Add();
-                    cs.HeaderText("Price Details").Column(col =>
+                    scolumn.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -98,17 +98,17 @@ There is an option to align the stacked header text inside the header cell using
      @(Html.EJ().TreeGrid("TreeGridContainer")
                 //		   
             .ShowStackedHeader(true)
-            .StackedHeaderRows(st => {
-                st.StackedHeaderColumns(cs =>
+            .StackedHeaderRows(row => {
+                row.StackedHeaderColumns(scolumn =>
                 {
-                    cs.TextAlign(TextAlign.Right).HeaderText("Shipment Details").Column(col =>
+                    scolumn.TextAlign(TextAlign.Right).HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    cs.TextAlign(TextAlign.Left).HeaderText("Price Details").Column(col =>
+                    scolumn.TextAlign(TextAlign.Left).HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -130,17 +130,17 @@ We can have the customized tooltip for the stacked header text with the help of 
                 //
 			.ShowGridCellTooltip(true)             
             .ShowStackedHeader(true)
-            .StackedHeaderRows(st => {
-                st.StackedHeaderColumns(cs =>
+            .StackedHeaderRows(row => {
+                row.StackedHeaderColumns(scolumn =>
                 {
-                    cs.HeaderText("Shipment Details").Column(col =>
+                    scolumn.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    cs.HeaderText("Price Details").Column(col =>
+                    scolumn.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
