@@ -408,14 +408,14 @@ diagram.updateData();
                 CrudAction = new CRUDAction()
                 {
                  //Specify the method name which is used to get the updated data from client side to the server side                         
-                    Create = "/Diagram/UpdateShape",                
+                    Update = "/Diagram/UpdateShape",                
                 },
                 ConnectionDataSource = new ConnectionDataSourceSettings()
                 {
                     CrudAction = new CRUDAction()
                     {
                         //Specify the method name which is used to get the updated data from client side to the server side                        
-                        Create = "/Diagram/UpdateConnector",
+                        Update = "/Diagram/UpdateConnector",
                     }
                 }
             };
@@ -467,14 +467,14 @@ diagram.removeData();
                 {
                     
                      //Specify the method name which is used to get the deleted data from client side to the server side                                            
-                      Create = "/Diagram/DeleteShape",                
+                      Destroy = "/Diagram/DeleteShape",                
                 },
                 ConnectionDataSource = new ConnectionDataSourceSettings()
                 {
                     CrudAction = new CRUDAction()
                     {
                       //Specify the method name which is used to get the updated data from client side to the server side                        
-                        Create = "/Diagram/DeleteConnector",
+                        Destroy = "/Diagram/DeleteConnector",
                     }
                 }
             };
