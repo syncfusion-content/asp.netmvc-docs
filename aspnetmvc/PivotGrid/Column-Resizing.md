@@ -11,7 +11,9 @@ documentation: ug
 
 Allows the user to change the column width by holding and dragging the column border using the mouse pointer.
 
-You can enable the resizing option in PivotGrid by setting the `EnableColumnResizing` property to true.
+## Column Width Based on Size
+
+The property `EnableColumnResizing` adjusts the width of each column based on size of the widget.
 
 {% highlight CSHTML %}
 
@@ -19,13 +21,14 @@ You can enable the resizing option in PivotGrid by setting the `EnableColumnResi
 
 {% endhighlight %} 
 
-![](Column-Resizing_images/columnresizing.png)
+## Column Width Based on Text
 
-
-Additionally, the property `ResizeColumnsToFit` automatically adjusts the width of each column based on the maximum content length available in the respective column.
+The property `ResizeColumnsToFit` automatically adjusts the width of each column based on the maximum content length available in the respective column.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableColumnResizing(true).ResizeColumnsToFit(true).DataSource(.....)
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ResizeColumnsToFit(true).DataSource(.....)
+
+![](Column-Resizing_images/columnresizing.png)
 
 {% endhighlight %} 

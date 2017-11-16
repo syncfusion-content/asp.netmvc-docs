@@ -308,6 +308,35 @@ function exportBtnClick(args)
 
 {% endhighlight %}  
 
+## PivotChart format selection
+
+I> This option is applicable only for PivotChart specifically when exported to Excel document.
+
+You can set an option to export PivotChart to an Excel document, either as image or PivotChart format itself by setting the boolean property `exportChartAsImage`, inside the `BeforeExport` event.
+
+N> By default PivotChart will be exported as image format to Excel document.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.BeforeExport("Exporting"))
+
+@Html.EJ().Button("Button1").ClientSideEvents(clientSideEvents => { clientSideEvents.Click("exportBtnClick"); }).Text("Export")
+<script type="text/javascript">
+        function exportBtnClick(args) {
+            var chartObj = $('#PivotChart1').data("ejPivotChart");
+            chartObj.exportPivotChart("ExcelExport","fileName");
+        }
+        function Exporting(args) {
+            args.exportChartAsImage = false; //you can set the chart format here
+        }
+</script>
+    
+{% endhighlight %}
+
+The below screenshot shows the control exported to Excel document showing its own format (Pivoting Chart).
+
+![](Export_images/Export_ExcelChartClient.png)
+
 ## Exporting Customization
 
 You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
