@@ -30,16 +30,16 @@ To stack columns in stacked header, you need to define `Column` property in `Sta
              )
             .ShowStackedHeader(true)
             .StackedHeaderRows(row => {
-                row.StackedHeaderColumns(scolumn =>
+                row.StackedHeaderColumns(scol =>
                 {
-                    scolumn.HeaderText("Shipment Details").Column(col =>
+                    scol.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    scolumn.HeaderText("Price Details").Column(col =>
+                    scol.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -65,16 +65,16 @@ You can provide external CSS styles to the stacked header with the help of `CssC
                 //
 	    .ShowStackedHeader(true)
             .StackedHeaderRows(row => {
-                row.StackedHeaderColumns(scolumn =>
+                row.StackedHeaderColumns(scol =>
                 {
-                    scolumn.HeaderText("Shipment Details").Column(col =>
+                    scol.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).CssClass("stack").Add();
-                    scolumn.HeaderText("Price Details").Column(col =>
+                    scol.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -99,16 +99,16 @@ There is an option to align the stacked header text inside the header cell using
                 //		   
             .ShowStackedHeader(true)
             .StackedHeaderRows(row => {
-                row.StackedHeaderColumns(scolumn =>
+                row.StackedHeaderColumns(scol =>
                 {
-                    scolumn.TextAlign(TextAlign.Right).HeaderText("Shipment Details").Column(col =>
+                    scol.TextAlign(TextAlign.Right).HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    scolumn.TextAlign(TextAlign.Left).HeaderText("Price Details").Column(col =>
+                    scol.TextAlign(TextAlign.Left).HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
@@ -131,16 +131,16 @@ We can have the customized tooltip for the stacked header text with the help of 
 			.ShowGridCellTooltip(true)             
             .ShowStackedHeader(true)
             .StackedHeaderRows(row => {
-                row.StackedHeaderColumns(scolumn =>
+                row.StackedHeaderColumns(scol =>
                 {
-                    scolumn.HeaderText("Shipment Details").Column(col =>
+                    scol.HeaderText("Shipment Details").Column(col =>
                     {
                         col.Add("ID");
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
                     }).Add();
-                    scolumn.HeaderText("Price Details").Column(col =>
+                    scol.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
                         col.Add("Price");
