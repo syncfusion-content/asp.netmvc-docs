@@ -73,7 +73,7 @@ You can provide external CSS styles to the stacked header with the help of `CssC
                         col.Add("Name");
                         col.Add("Category");
                         col.Add("Units");
-                    }).CssClass("stackhead").Add();
+                    }).CssClass("grouphead").Add();
                     stack.HeaderText("Price Details").Column(col =>
                     {
                         col.Add("UnitPrice");
@@ -83,7 +83,7 @@ You can provide external CSS styles to the stacked header with the help of `CssC
             })
         )    
 <style>
-  .stackhead {
+  .grouphead {
             background-color: #ffb3b3; 
         }
 </style>
