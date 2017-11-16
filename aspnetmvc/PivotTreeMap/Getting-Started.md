@@ -21,6 +21,7 @@ Select the View engine as **‘Razor’** and Project template as **‘Internet 
 Now add the following dependency libraries as references into your MVC Web Application. In order to add them to your application, right-click on **References** in Solution Explorer and select Add Reference. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries will be found.
 
 * Syncfusion.EJ
+* Syncfusion.EJ.Export
 * Syncfusion.EJ.Pivot
 * Syncfusion.EJ.MVC
 
@@ -67,6 +68,7 @@ Register the referred assemblies in Web.config files available inside Views fold
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.EJ.Export, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     </assemblies>
 </compilation>
