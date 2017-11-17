@@ -128,7 +128,7 @@ function loaded(){
 
 ### DataLabelRendering
 
-Fires before rendering the datalabel, you can use `DataLabelRendering` event. 
+Fires before rendering the data label, you can use `DataLabelRendering` event. 
 
 
 {% highlight CSHTML %}
