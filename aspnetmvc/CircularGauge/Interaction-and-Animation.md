@@ -111,7 +111,7 @@ Circular gauge can be responsive while resizing by specifying `EnableResize` pro
 
 @(Html.EJ().CircularGauge("circulargauge")
 
-    .EnabelResize(true)
+    .EnableResize(true)
 
 )
 
