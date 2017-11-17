@@ -13,7 +13,7 @@ Ranges are used to specify or group the scale values. You can describe the value
 
 ## Adding range collection
 
-Range collection can be directly added to the scale object. Refer the following code example to add range collection in a Linear Gauge control. 
+Range collection can be directly added to the scale object. Refer the following code example to add range collection in a **Linear Gauge** control. 
 
 
 
@@ -108,7 +108,7 @@ Execute the above code to render the following output.
 
 ### Appearance
 
-The major attributes for ranges are startValue and endValue. The startValue defines the start position of the range and endValue defines the end position of the range. The startWidth and endWidth are used to specify the range width at the starting and ending position of the ranges.
+The major attributes for ranges are **startValue** and **endValue**. The `startValue` defines the start position of the range and `endValue` defines the end position of the range. The `startWidth` and `endWidth` are used to specify the range width at the starting and ending position of the ranges.
 
 
 
@@ -182,8 +182,8 @@ Execute the above code to render the following output.
 
 ### Colors and Border
 
-* You can customize the ranges to improve the appearance of the Gauge. The range border is modified with the object called border. It has two border property such as color and width which are used to customize the border color of the ranges and border width of the ranges. 
-* You can set the background color to improve the look and feel of the Linear Gauge. For customizing the background color of the ranges, backgroundColor is used.You can add the gradient effects to the ranges by using gradient object.
+* You can customize the ranges to improve the appearance of the **Gauge**. The range border is modified with the object called **border**. It has two border property such as `color` and `width` which are used to customize the border color of the ranges and border width of the ranges. 
+* You can set the background color to improve the look and feel of the **Linear Gauge**. For customizing the background color of the ranges, `backgroundColor` is used.You can add the gradient effects to the ranges by using `gradient` object.
 
 
 
@@ -255,8 +255,8 @@ Execute the above code to render the following output.
 
 ## Positioning the ranges
 
-* You can position ranges using two properties such as distanceFromScale and placement. The distanceFromScale property defines the distance between the scale and range. 
-* Placement property is used to locate the pointer with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type. 
+* You can position ranges using two properties such as **distanceFromScale** and **placement**. The `distanceFromScale` property defines the distance between the scale and range. 
+* `Placement` property is used to locate the pointer with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type. 
 
 
 
