@@ -19,11 +19,11 @@ Triggers while the bar pointer are being drawn on the gauge, you can use `DrawBa
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawBarPointers("ondrawbarpointers")
+.DrawBarPointers("drawBarPointer")
 
 )
 
-function ondrawbarpointers(){
+function drawBarPointer(){
     // Do Something
 }
 
@@ -38,11 +38,11 @@ Triggers while the customLabel are being drawn on the gauge, you can use `DrawCu
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawCustomLabel("ondrawcustomlabel")
+.DrawCustomLabel("drawCustomLabel")
 
 )
 
-function ondrawcustomlabel(){
+function drawCustomLabel(){
     // Do Something
 }
 
@@ -64,11 +64,11 @@ Triggers while the Indicator are being drawn on the gauge, you can use `DrawIndi
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawIndicators("ondrawindicators")
+.DrawIndicators("drawIndicators")
 
 )
 
-function ondrawindicators(){
+function drawIndicators(){
     // Do Something
 }
 
@@ -89,11 +89,11 @@ Triggers while the label are being drawn on the gauge, you can use `DrawLabels` 
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawLabels("ondrawlabels")
+.DrawLabels("drawLabels")
 
 )
 
-function ondrawlabels(){
+function drawLabels(){
     // Do Something
 }
 
@@ -111,11 +111,11 @@ Triggers while the marker are being drawn on the gauge, you can use `DrawMarkerP
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawMarkerPointers("ondrawmarkerpointer")
+.DrawMarkerPointers("drawMarkerPointer")
 
 )
 
-function ondrawmarkerpointer(){
+function drawMarkerPointer(){
     // Do Something
 }
 
@@ -133,11 +133,11 @@ Triggers while the range are being drawn on the gauge, you can use `DrawRange` e
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawRange("ondrawrange")
+.DrawRange("drawRange")
 
 )
 
-function ondrawrange(){
+function drawRange(){
     // Do Something
 }
 
@@ -157,11 +157,11 @@ Triggers while the ticks are being drawn on the gauge, you can use `DrawTicks` e
  
 @(Html.EJ().LinearGauge("container")
 
-.DrawTicks("ondrawticks")
+.DrawTicks("drawTicks")
 
 )
 
-function ondrawticks(){
+function drawTicks(){
     // Do Something
 }
 
@@ -204,11 +204,11 @@ Triggers while the gauge start to Load, you can use `Load` event.
  
 @(Html.EJ().LinearGauge("container")
 
-.Load("onload")
+.Load("load")
 
 )
 
-function onload(){
+function load(){
     // Do Something
 }
 
@@ -229,11 +229,11 @@ Triggers when the left mouse button is clicked, you can use `MouseClick` event.
  
 @(Html.EJ().LinearGauge("container")
 
-.MouseClick("onmouseclick")
+.MouseClick("MouseClick")
 
 )
 
-function onmouseclick(){
+function MouseClick(){
     // Do Something
 }
 
@@ -255,11 +255,11 @@ Triggers when clicking and dragging the mouse pointer over the gauge pointer, yo
  
 @(Html.EJ().LinearGauge("container")
 
-.MouseClickMove("onmouseclickmove")
+.MouseClickMove("MouseClickMove")
 
 )
 
-function onmouseclickmove(){
+function MouseClickMove(){
     // Do Something
 }
 
@@ -281,11 +281,11 @@ Triggers when the mouse click is released, you can use `MouseClickUp` event.
  
 @(Html.EJ().LinearGauge("container")
 
-.MouseClickUp("onmouseclickup")
+.MouseClickUp("MouseClickUp")
 
 )
 
-function onmouseclickup(){
+function MouseClickUp(){
     // Do Something
 }
 
@@ -306,11 +306,11 @@ Triggers while the rendering of the gauge completed, you can use `RenderComplete
  
 @(Html.EJ().LinearGauge("container")
 
-.RenderComplete("onrendercomplete")
+.RenderComplete("RenderComplete")
 
 )
 
-function onrendercomplete(){
+function RenderComplete(){
     // Do Something
 }
 
