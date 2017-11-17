@@ -9,11 +9,11 @@ documentation: ug
 
 # Ticks
 
-Ticks are used to mark some values on the scale. Based on the tick’s value you can set the labels on the required position.
+`Ticks` are used to mark some values on the scale. Based on the tick’s `Value` you can set the labels on the required position.
 
 ## Adding Tick Collection 
 
-Tick collection is directly added to the scale object. Refer the following code example to add tick collection in a Gauge control.
+Tick collection is directly added to the scale object. Refer the following code example to add tick collection in a **Gauge** control.
 
 {% highlight CSHTML %}
 
@@ -50,8 +50,8 @@ Circular Gauge with tick collection
 
 ## Tick Customization
 
-* Height and width of the ticks can be applied by using the properties height and width. You can customize ticks with the properties such as angle, color, etc. angle attribute is used to display the labels in the specified angles and color attribute is used to display the labels in specified color. Ticks are two types such as major and minor.
-* Major type ticks are for major interval values and minor type ticks are for minor interval values.You can position ticks with the help of two properties such as distanceFromScale and placement. distanceFromScale property defines the distance between the scale and ticks.  Placement property is used to locate the ticks with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
+* Height and width of the ticks can be applied by using the properties `Height` and `Width`. You can customize ticks with the properties such as angle, color, etc. `Angle` attribute is used to display the labels in the specified angles and `Color` attribute is used to display the labels in specified color. Ticks are two types such as major and minor.
+* Major `Type` ticks are for major interval values and minor type ticks are for minor interval values.You can position ticks with the help of two properties such as `DistanceFromScale` and `Placement`. **DistanceFromScale** property defines the distance between the scale and ticks. **Placement** property is used to locate the ticks with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
 
 {% highlight CSHTML %}
 
