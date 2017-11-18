@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a BulletGraph in your ASP.NET MVC application.
+This section explains briefly about how to create a **BulletGraph** in your ASP.NET MVC application.
 
 ## Create your first BulletGraph in MVC
 
-This section encompasses the details on how to configure the BulletGraph control in your application. It also allows you to learn how to pass the required data to it and customize its various options according to your requirements.
+This section encompasses the details on how to configure the **BulletGraph** control in your application. It also allows you to learn how to pass the required data to it and customize its various options according to your requirements.
 
-In the following screenshot, a BulletGraph is used to compare the actual monsoon rainfall received in a state versus its forecasted values for the years ranging from 1988 to 2013.
+In the following screenshot, a **BulletGraph** is used to compare the actual monsoon rainfall received in a state versus its forecasted values for the years ranging from 1988 to 2013.
 
 
 
@@ -61,9 +61,9 @@ BulletGraph
 
 ### Provide Required Data
 
-You can customize the values of feature and comparative measure bars in a BulletGraph, either locally or remotely. The category data is optional, and it is used to display label values parallel to the measure bars. 
+You can customize the values of feature and comparative measure bars in a **BulletGraph**, either locally or remotely. The `category` data is optional, and it is used to display label values parallel to the measure bars. 
 
-Assign the data in BulletLocalDataBind variable to the DataSource property of BulletGraph as illustrated in the following code example. 
+Assign the data in BulletLocalDataBind variable to the `DataSource` property of BulletGraph as illustrated in the following code example. 
 
 
 {% highlight C# %}
@@ -134,7 +134,7 @@ publicActionResult LocalDataBinding()
 
 
 
-Once the DataSource property is assigned with the required values, you can bind the variable names used in the JSON data to the corresponding fields of the BulletGraph as shown in the following code example.
+Once the **DataSource** property is assigned with the required values, you can bind the variable names used in the **JSON** data to the corresponding fields of the **BulletGraph** as shown in the following code example.
 
 
 {% highlight CSHTML %}
@@ -161,11 +161,11 @@ Once the DataSource property is assigned with the required values, you can bind 
 
 ### Set Default and Scale Values
 
-You can plot any number of measure bars within the BulletGraph by increasing the height and width of the control to locate all the measure bars within the graph. Set the QualitativeRangeSize and QuantitativeScaleLength properties according to the following code example.
+You can plot any number of measure bars within the **BulletGraph** by increasing the `height` and `width` of the control to locate all the measure bars within the graph. Set the `QualitativeRangeSize` and `QuantitativeScaleLength` properties according to the following code example.
 
-By default, the BulletGraph is rendered in the horizontal orientation with its flow direction set to Forward. In this example, to achieve the desired output, change the horizontal orientation to vertical orientation with the flow direction set to Backward.
+By default, the **BulletGraph** is rendered in the horizontal `orientation` with its flow `direction` set to **Forward**. In this example, to achieve the desired output, change the horizontal orientation to vertical orientation with the flow direction set to **Backward**.
 
-Minimum, Maximum and Interval values for the QuantitativeScale of the BulletGraph are set, as illustrated in the following code example. The ticks and labels within the scale are also positioned.
+`Minimum`, `Maximum` and `Interval` values for the `QuantitativeScale` of the BulletGraph are set, as illustrated in the following code example. The ticks and labels within the scale are also positioned.
 
 
 {% highlight js %}
@@ -212,7 +212,7 @@ The above image illustrates the BulletGraph without any ranges displayed in the 
 
 ### Add Qualitative Ranges
 
-By default, 3 ranges are displayed in the BulletGraph control during the initial rendering of the control with its default values. To customize it, you can set appropriate values for the RangeEnd and RangeStroke properties.  Any number of QualitativeRanges can be added to the control.
+By default, 3 ranges are displayed in the **BulletGraph** control during the initial rendering of the control with its default values. To customize it, you can set appropriate values for the `RangeEnd` and `RangeStroke` properties.  Any number of `QualitativeRanges` can be added to the control.
 
 
 {% highlight js %}
@@ -259,7 +259,7 @@ By default, 3 ranges are displayed in the BulletGraph control during the initial
 
 {% endhighlight %}
 
-After adding QualitativeRanges to the BulletGraph, the control appears as follows.
+After adding **QualitativeRanges** to the **BulletGraph**, the control appears as follows.
 
 
 
@@ -271,7 +271,7 @@ BulletGraph
 
 ### Ticks and Measure Bars Customization
 
-You can do the following code changes in the quantitative scale to customize the tick size, the color of the feature bar and the comparative measure symbols.
+You can do the following code changes in the quantitative scale to customize the tick size, the color of the `feature bar` and the `comparative measure symbols`.
 
 
 {% highlight js %}
@@ -328,7 +328,7 @@ You can do the following code changes in the quantitative scale to customize the
 
 
 
-When you customize the ticks and measure bar, the BulletGraph appears as follows.
+When you customize the ticks and measure bar, the **BulletGraph** appears as follows.
 
 
 
@@ -339,7 +339,7 @@ BulletGraph
 
 ### Add Caption and Subtitle
 
-You can add the following code example to display an appropriate Caption and Subtitle to the BulletGraph.
+You can add the following code example to display an appropriate `Caption` and `Subtitle` to the **BulletGraph**.
 
 
 {% highlight js %}
@@ -412,7 +412,7 @@ You can add the following code example to display an appropriate Caption and Sub
 {% endhighlight %}
 
 
-The following screenshot displays a BulletGraph with a Caption and Subtitle.
+The following screenshot displays a **BulletGraph** with a Caption and Subtitle.
 
 
 
@@ -423,7 +423,7 @@ BulletGraph with Caption and Subtitle
 
 ### Show Tooltip
 
-You can use a Tooltip in your application to display the values of forecasted rainfall, actual rainfall received in millimeter and also the appropriate year. The Tooltip Visible property is set to True to enable the Tooltip option. To set the template Tooltip, you can pass the template id to it as illustrated in the following code example.
+You can use a `Tooltip` in your application to display the values of forecasted rainfall, actual rainfall received in millimeter and also the appropriate year. The Tooltip `Visible` property is set to **True** to enable the Tooltip option. To set the `template` Tooltip, you can pass the template id to it as illustrated in the following code example.
 
 
 {% highlight js %}
