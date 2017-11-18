@@ -251,7 +251,7 @@ You can customize the **font** of the text as per your requirement. To customize
 
 // For setting character spacing
 
-.Font(ft=>ft.FontFamily("Segou").FontStyle(FontStyle.Bold).Size("18px")) ).Add();
+.Font(ft=>ft.FontFamily("Arial").FontStyle(FontStyle.Bold).Size("18px")) ).Add();
 
 }))
 
