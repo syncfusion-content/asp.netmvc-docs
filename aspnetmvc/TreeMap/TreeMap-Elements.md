@@ -121,16 +121,16 @@ You can provide the left and right labels to interactive legend by using `LeftLa
 	@(Html.EJ().TreeMap("treemap")          
                 // ...
                  .ShowLegend(true)
-                 .TreeMapLegend(tl =>
+                 .TreeMapLegend(legend =>
                     {                                     
-                    .DockPosition(TreeMapDockPosition.Top)
+                    legend.DockPosition(TreeMapDockPosition.Top)
                     .Height(20)
                     .Width(150)
                     .Mode(LegendMode.Interactive)
                     .Title("population")
                     .LeftLabel("20000000")
                     .RightLabel("300000000");
-                })
+                	})
     )
 
 {% endhighlight %}
@@ -214,7 +214,7 @@ You can set headers for each level by setting the `ShowHeader` property of the e
 
 ## Customizing the header
 
-The text in the header can be customized by triggering the event `HaderTemplateRendering` of the **TreeMap**. This event is triggered before rendering the header template. 
+The text in the header can be customized by triggering the event `HeaderTemplateRendering` of the **TreeMap**. This event is triggered before rendering the header template. 
 
 {% highlight CSHTML %}	
 
@@ -358,9 +358,9 @@ You can handle the label overflow, by specifying any one of the following values
 {% highlight CSHTML %}
 
 	@(Html.EJ().TreeMap("treemap")
-    		.Levels(lv =>
+    		.Levels(level =>
                 {
-                    lv.GroupPath("Continent")                                    
+                    level.GroupPath("Continent")                                    
                                     .HeaderHeight(25)
 									.HeaderTemplate('Template')
                                     .ShowHeader(false)
@@ -369,9 +369,9 @@ You can handle the label overflow, by specifying any one of the following values
                                     .ShowLabels(true).Add();                 
                 })
             .HeaderTemplateRendering("loadTemplate")    
-		 	.LeafItemsSetting(lls =>
+		 	.LeafItemsSetting(leaf =>
                    {
-                       lls.ShowLabels(true)
+                       leaf.ShowLabels(true)
 						  .TextOverflow(TextOverflow.Wrap);
                    }) 
 
