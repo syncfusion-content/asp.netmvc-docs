@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a TreeMap in your application with ASP.NET MVC .
+This section explains briefly about how to create a **TreeMap** in your application with ASP.NET MVC .
 
 ## Configure a TreeMap
 
-You can configure an MVC TreeMap in simple steps. This manual provides instructions on how to configure TreeMap with grouping of populated datum based on population growth in population in each continent.  It also provides a walk-through on some of the customization feature available in TreeMap control.
+You can configure an **MVC TreeMap** in simple steps. This manual provides instructions on how to configure TreeMap with grouping of populated datum based on population growth in population in each continent.  It also provides a walk-through on some of the customization feature available in TreeMap control.
 
 ![](Getting-Started_images/Getting-Started_img1.png)
 
@@ -245,7 +245,7 @@ The following image displays a TreeMap with default properties using the above c
 
 ## GroupTreeMap Items using Levels
 
-You can group TreeMap Items using levels in TreeMap.
+You can group TreeMap Items using `Levels` in TreeMap.
 
 ### Group Path
 
@@ -288,7 +288,7 @@ The following screenshot displays grouping of TreeMapItems using Levels.
 
 ## Customize TreeMap Appearance by Range
 
-You can differentiate the nodes based on its value and color ranges using Range color. You can also define the color value range using From and To properties. 
+You can differentiate the nodes based on its value and color ranges using `RangeColorMapping `. You can also define the color value range using From and To properties. 
 
 ### Color Value Path
 
@@ -406,9 +406,9 @@ The following screenshot displays the TreeMap when the Tooltip is enabled.
 
 ## Legend
 
-You can set the color value of leaf nodes using TreeMap Legend. This legend is appropriate only for the TreeMap whose leaf nodes are colored using `RangeColorMapping`.
+You can set the color value of leaf nodes using TreeMap `LegendSettings` . This legend is appropriate only for the TreeMap whose leaf nodes are colored using `RangeColorMapping`.
 
-You can set ShowLegend property value to ‘_true_’ to make a Legend visible.
+You can set `ShowLegend` property value to ‘_true_’ to make a Legend visible.
 
 ### Label for Legend
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Line Type
 
-To render a Line type Sparkline, set the `type` as **line**. To change the color and width of the line, you can use the `fill` and `width` property.	
+To render a Line type Sparkline, set the `Type` as **line**. To change the color and width of the line, you can use the `Fill` and `Width` property.	
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ To render a Line type Sparkline, set the `type` as **line**. To change the color
 
 ## Column Type
 
-To render a Column Sparkline, set the type as **column** To change the color of the column, you can use the `fill` property.
+To render a Column Sparkline, set the type as **column** To change the color of the column, you can use the `Fill` property.
 
 {% highlight cshtml %}
 
@@ -47,7 +47,7 @@ To render a Column Sparkline, set the type as **column** To change the color of 
 
 ## Area Type
 
-To render an Area Sparkline, you can specify the type as **area**. To change the Area color, you can use the `fill` property
+To render an Area Sparkline, you can specify the type as **area**. To change the Area color, you can use the `Fill` property
 
 {% highlight cshtml %}
 
