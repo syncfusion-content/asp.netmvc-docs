@@ -59,6 +59,7 @@ N> If you have installed any version of Essential Studio, then the location of S
 * Syncfusion.Pdf.Base
 * Syncfusion.DocIO.Base
 * Syncfusion.EJ
+* Syncfusion.EJ.Export
 * Syncfusion.EJ.Pivot
 * Syncfusion.EJ.MVC
 
