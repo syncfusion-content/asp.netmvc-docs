@@ -76,7 +76,7 @@ There is an option to show or hide the additional filter options in the Menu by 
 
 N> For `FilterType` property you can assign either `string` value ("Menu") or `enum` value (`Syncfusion.JavaScript.FilterType.Menu`).
 
-We can also filter a specified range of values by using the `between` operator for the column type `number`, `date`and `datetime`.
+We can also filter a specified range of values by using the `between` operator for the column type `number`, `date` and `datetime`.
 
 The following code example describes the above behavior.
 
