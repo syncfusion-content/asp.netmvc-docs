@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Overview
 
-Sparklines are easy to interpret and also it conveys much more information to the user by visualizing the data in a small amount of space.
+**Sparklines** are easy to interpret and also it conveys much more information to the user by visualizing the data in a small amount of space.
 
 Some of the key features are,
 

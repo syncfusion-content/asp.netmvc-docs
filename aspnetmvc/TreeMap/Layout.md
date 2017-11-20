@@ -11,7 +11,7 @@ documentation: ug
 
 You can decide on the visual representation of nodes belonging to all the treemap levels using the `ItemsLayoutMode` property of the TreeMap.
 
-There are four different TreeMap layouts such as
+There are four different **TreeMap Layouts** such as
 
 * Squarified Layout
 * SliceAndDiceAuto Layout
@@ -20,7 +20,7 @@ There are four different TreeMap layouts such as
 
 ## Squarified Layout
 
-`Squarified layout` creates rectangles with best aspect ratio.
+**Squarified** layout creates rectangles with best aspect ratio.
 
 {% highlight CSHTML %}
 
@@ -54,7 +54,7 @@ There are four different TreeMap layouts such as
 
 ## SliceAndDiceAuto Layout
 
-`SliceAndDiceAuto` layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
+**SliceAndDiceAuto** layout creates rectangles with high aspect ratio and displays them sorted both horizontally and vertically.
 
 {% highlight CSHTML %}
 
@@ -72,7 +72,7 @@ There are four different TreeMap layouts such as
 
 ## SliceAndDiceHorizontal Layout
 
-`SliceAndDiceHorizontal` layout creates rectangles with high aspect ratio and displays them sorted horizontally.
+**SliceAndDiceHorizontal** layout creates rectangles with high aspect ratio and displays them sorted horizontally.
 
 {% highlight CSHTML %}
 
@@ -90,7 +90,7 @@ There are four different TreeMap layouts such as
 
 ## SliceAndDiceVertical Layout
 
-`SliceAndDiceVertical` layout creates rectangles with high aspect ratio and displays them sorted vertical.
+**SliceAndDiceVertical** layout creates rectangles with high aspect ratio and displays them sorted vertical.
 
 {% highlight CSHTML %}
 

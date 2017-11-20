@@ -9,7 +9,7 @@ documentation: ug
 
 ## Range Band  
 
-The range band feature is used to highlight a particular range along the y-axis using start and end range property. You can also customize the color and opacity of the range band. 
+The range band feature is used to highlight a particular range along the y-axis using `StartRange` and `EndRange` property. You can also customize the `Color` and `Opacity` of the `RangeBandSettings`. 
 
 {% highlight cshtml %}
 
