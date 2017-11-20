@@ -995,6 +995,55 @@ The **Font** property of the axis provides options to customize the FontFamily, 
 
 ![](Axis_images/axis_img28.png)
 
+#### Axis Labels Line Break
+
+Axis Labels can be placed in multiple lines by specifying **<br>** for data points x value and in label format.
+
+For category value type, **<br>** can be specified in x value of data points.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+      //Initializing Series
+      .Series(sr =>
+      {
+          sr
+            .Points(pt =>
+            {
+                pt.X("India").Y(61.3).Add();
+                pt.X("United<br>States<br>of<br>America").Y(31).Add();
+                pt.X("South<br>Korea").Y(39.4).Add();
+                pt.X("United<br>Arab<br>Emirates").Y(65.1).Add();
+                pt.X("United<br>Kingdom").Y(75.9).Add();
+            }).Add();
+      })
+        
+        //...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img68.png)
+
+For numeric, datetime and datetimeCategory value type, **<br>** can be specified in labelFormat.
+
+{% highlight cshtml %}
+
+@(Html.EJ().Chart("chartContainer")
+
+      // ...
+
+     .PrimaryXAxis(
+          px=>px.LabelFormat("MMM<br>dd<br>yyyy").ValueType(AxisValueType.Datetime)
+     )
+        // ...
+ )
+
+{% endhighlight %}
+
+![](Axis_images/axis_img69.png)
 
 ### Label and tick positioning
  

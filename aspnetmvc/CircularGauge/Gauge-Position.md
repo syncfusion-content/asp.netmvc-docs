@@ -9,21 +9,21 @@ documentation: ug
 
 # Gauge Position
 
-Semi-circular Gauge can be positioned within the canvas element which provides better appearance for the gauge in the canvas.
+**Semi-circular Gauge** can be positioned within the canvas element which provides better appearance for the gauge in the canvas.
 
 ## Positioning
 
-* Semi-circular Gauge can be positioned with the help of the attribute called gaugePosition. It is an enumerable value. You can position the gauge away from the corner with the help of the distanceFromCorner attribute. 
+* Semi-circular Gauge can be positioned with the help of the attribute called `GaugePosition`. It is an enumerable value. You can position the gauge away from the corner with the help of the `DistanceFromCorner` attribute. 
 * The possible enum values for the gaugePosition are as follows:
-1. TopLeft
-2. TopCenter
-3. TopRight
-4. MiddleLeft
-5. Center
-6. MiddleRight
-7. BottomLeft
-8. BottomCenter
-9. BottomRight
+	1. TopLeft
+	2. TopCenter
+	3. TopRight
+	4. MiddleLeft
+	5. Center
+	6. MiddleRight
+	7. BottomLeft
+	8. BottomCenter
+	9. BottomRight
 
 
 {% tabs %}

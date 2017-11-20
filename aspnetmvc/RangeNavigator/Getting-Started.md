@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a RangeNavigator in your ASP.NET MVC application.
+This section explains briefly about how to create a **RangeNavigator** in your ASP.NET MVC application.
 
 ## Create your first RangeNavigator in MVC
 
-This section encompasses the details on how to configure the RangeNavigator and update the chart control for RangeNavigator’s selected range. It also helps you to learn how to pass the required data to RangeNavigator and customize the scale and selected range for your requirements. In this example, you will learn how to configure the RangeNavigator to analyze sales of a product for a particular quarter in a year.
+This section encompasses the details on how to configure the **RangeNavigator** and update the **chart** control for **RangeNavigator’s** selected range. It also helps you to learn how to pass the required data to **RangeNavigator** and customize the scale and selected range for your requirements. In this example, you will learn how to configure the RangeNavigator to analyze sales of a product for a particular quarter in a year.
 
 
 
@@ -201,7 +201,7 @@ The above steps are done automatically, if you create your project with the help
 
 ### Configure RangeNavigator
 
-Getting started with your MVC RangeNavigator is simple; all you need to do is initialize the RangeNavigator by setting range values.
+Getting started with your MVC **RangeNavigator** is simple; all you need to do is initialize the **RangeNavigator** by setting range values.
 
 1. Create a simple <div> tag.
    
@@ -215,7 +215,7 @@ Getting started with your MVC RangeNavigator is simple; all you need to do is in
 
 2. Add the following code in the SimpleRangeNavigator.cshtml file, to create the RangeNavigator control in the View page. 
 
-   The following code example renders a RangeNavigator with a range from 2010 January 1st to December 31st.
+   The following code example renders a **RangeNavigator** with a range from 2010 January 1st to December 31st.
 
    ~~~ cshtml
    
@@ -249,7 +249,7 @@ Getting started with your MVC RangeNavigator is simple; all you need to do is in
 }
 {% endhighlight  %}
 
-The following Screen shot displays the RangeNavigator with a range from 2010 January 1st to December 31st.
+The following Screen shot displays the **RangeNavigator** with a range from 2010 January 1st to December 31st.
 
 ![](Getting-Started_images/Getting-Started_img9.png)
 
@@ -257,7 +257,7 @@ The following Screen shot displays the RangeNavigator with a range from 2010 Jan
 
 ### Add series
 
-To add a series to RangeNavigator, you need to set DataSource property, as given in the following code example. 
+To add a series to **RangeNavigator**, you need to set `DataSource` property, as given in the following code example. 
 
 You can add JSON data to the RangeNavigator using the Datasource property.
 
@@ -344,7 +344,7 @@ public ActionResult SimpleRangeNavigator()
 
 {% endhighlight  %}
 
-In SimpleRangeNavigator.cshtml specify the type of series you want to render using “Type” property. And specify the Datasource to the Series of RangeNavigator.
+In SimpleRangeNavigator.cshtml specify the type of series you want to render using `Type` property. And specify the `Datasource` to the Series of RangeNavigator.
 
 {% highlight CSHTML %}
 
@@ -367,7 +367,7 @@ The following screenshot displays the RangeNavigator with the type series as “
 
 ### Enable tooltip
 
-Tooltip can be customized for RangeNavigator using tooltip option. You can also use TooltipDisplayMode option in tooltip to display the tooltip “always” or “ondemand” (displays tooltip only while dragging the sliders). You can also specify label format for tooltip using LabelFormat.
+**Tooltip** can be customized for RangeNavigator using `TooltipSettings` option. You can also use `TooltipDisplayMode` option in tooltip to display the tooltip “always” or “ondemand” (displays tooltip only while dragging the sliders). You can also specify label format for tooltip using `LabelFormat`.
 {% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("container")
@@ -387,11 +387,11 @@ The following screen shot displays the label format Tooltip in RangeNavigator:
 
 ### Update Chart
 
-RangeNavigator is used along with the controls like chart and grid to view the range of data selected in RangeNavigator. 
+**RangeNavigator** is used along with the controls like **chart** and **grid** to view the range of data selected in RangeNavigator. 
 
-In order to update chart, whenever the selected range changes in RangeNavigator, you need to use RangeChanged event of RangeNavigator and then update the chart with the selected data in this event. 
+In order to update **chart**, whenever the selected range changes in **RangeNavigator**, you need to use `RangeChanged` event of **RangeNavigator** and then update the **chart** with the selected data in this event. 
 
-Now, add the DataSource to the series and provide the field name to get the values from the DataSource in XName and YName options and also trigger the RangeChanged event for updating the chart.
+Now, add the `DataSource` to the series and provide the field name to get the values from the `DataSource` in `XName` and `YName` options and also trigger the `RangeChanged` event for updating the chart.
 
 {% highlight CSHTML %}
  
@@ -436,7 +436,7 @@ Now, add the DataSource to the series and provide the field name to get the valu
 )
 {% endhighlight  %}
 
-The following code example illustrates how to use the RangeChanged event of RangeNavigator for updating the chart with the selected data.
+The following code example illustrates how to use the `RangeChanged` event of RangeNavigator for updating the chart with the selected data.
 
 {% highlight CSHTML %}
 
@@ -468,9 +468,9 @@ The following screenshot displays how the RangeNavigator is updated when the sel
 
 ### Set value type
 
-RangeNavigator can also be used with numerical values. You can specify the data type using ValueType option. 
+**RangeNavigator** can also be used with numerical values. You can specify the data type using `ValueType` option. 
 
-First let’s create a DataSource for Chart Series with integer Values. 
+First let’s create a `DataSource` for Chart Series with integer Values. 
 
 In Controllers/HomeController.cs specify the data for data source.
 
@@ -556,7 +556,7 @@ public ActionResult SimpleRangeNavigator()
 
 {% endhighlight  %}
 
-In SimpleRangeNavigator.cshtml, specify the DataSource to the Series and provide the field name to get the values from the DataSource in XName and YName options series and also set the ValueType property to “numeric” as given in the following code example. 
+In SimpleRangeNavigator.cshtml, specify the DataSource to the Series and provide the field name to get the values from the `DataSource` in `XName` and `YName` options series and also set the `ValueType` property to “numeric” as given in the following code example. 
 
 {% highlight CSHTML %}
 
