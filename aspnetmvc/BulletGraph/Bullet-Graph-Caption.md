@@ -9,11 +9,19 @@ documentation: ug
 
 # Bullet Graph Caption
 
-Bullet Graph supports title and subtitle to convey what is represented in Bullet Graph. They are customized using CaptionSettings property.
+**Bullet Graph** supports `title` and `subtitle` to convey what is represented in **Bullet Graph**. They are customized using CaptionSettings property.
 
-## Title
+### Title
 
-Title is set to Bullet Graph using Text property in CaptionSettings. Caption settings also include properties like Location, Font, and TextAngle for customizing the caption of Bullet Graph.
+**Title** is set to **Bullet Graph** using `Text` property in `CaptionSettings`. Caption settings also include properties like `Location`, `Font`, and `TextAngle` for customizing the caption of Bullet Graph.
+
+### Location
+
+Using `location` option, you can set the `X` and `Y` position of caption text.
+
+### Font
+
+Using `font` property, you can customize `font color`, `font family`, `font style`, `font weight`, `opacity`, `size` options.
 
 
 {% highlight cshtml %}
@@ -46,7 +54,7 @@ Title is set to Bullet Graph using Text property in CaptionSettings. Caption set
 
 {% endhighlight %}
 
-The following screenshot displays a Bullet Graph with customized caption using the above code
+The following screenshot displays a **Bullet Graph** with customized caption using the above code
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img1.png)
 
@@ -56,8 +64,16 @@ Bullet Graph with title
 
 ## Subtitle
 
-Subtitle is added to Bullet Graph using Text property of Subtitle in CaptionSettings. Subtitle also provides properties like Location, TextAngle and Font to customize subtitle similar to caption.
+**Subtitle** is added to **Bullet Graph** using Text property of `Subtitle` in `CaptionSettings`. Subtitle also provides properties like `Location`, `TextAngle` and `Font` to customize subtitle similar to caption.
 
+
+### Location
+
+Using `location` option, you can set the `X` and `Y` position of caption text.
+
+### Font
+
+Using `font` property, you can customize `font color`, `font family`, `font style`, `font weight`, `opacity`, `size` options.
 
 {% highlight cshtml %}
 
@@ -97,7 +113,7 @@ Subtitle is added to Bullet Graph using Text property of Subtitle in CaptionSett
 
 
 {% endhighlight %}
-The following screenshot displays Bullet Graph with a subtitle
+The following screenshot displays **Bullet Graph** with a subtitle
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img2.png)
 
@@ -106,9 +122,38 @@ Bullet Graph with subtitle
 
 ## Indicator
 
-You can add Indicator to bullet graph by enabling Visible and setting Text properties of Indicator in CaptionSettings. Indicator is used to represent whether target is achieved or not with text and symbol by comparing current and target values in bullet graph. 
+You can add **Indicator** to bullet graph by enabling `Visible` and setting `Text` properties of `Indicator` in **CaptionSettings**. Indicator is used to represent whether target is achieved or not with text and symbol by comparing current and target values in bullet graph. 
 
-Indicator displays a symbol along with text which is different from caption and subtitle. Images like logos can be used in indicator instead of symbols. Indicator has properties such as Symbol, Text, TextSpacing, TextAngle, Location and Font. 
+Indicator displays a `symbol` along with text which is different from caption and subtitle. Images like logos can be used in indicator instead of symbols. Indicator has properties such as `Symbol`, `Text`, `TextSpacing`, `TextAngle`, `Location` and `Font`. 
+
+
+### Location
+
+Using `location` option, you can set the `X` and `Y` position of caption text.
+
+### Font
+
+Using `font` property, you can customize `font color`, `font family`, `font style`, `font weight`, `opacity`, `size` options.
+
+### Symbol
+
+* Using `symbol` settings, you can customize the following symbol properties.
+
+	* You can customize the symbol border properties border `color` and border `width` using border   	
+	  settings.
+
+	* You can specify the color of the symbol using `color` property.
+
+	* You can set the `shape` of the symbol using shape property.
+
+	* Instead of setting shape for symbol, you can use image also. To use image as symbol, you need to   set `image url` for symbol.
+
+	* You can customize the size of the indicator symbol using `width` and `height` properties of    
+	  indicator’s symbol size settings.
+
+	* To customize the `opacity` of the indicator symbol, you can use the opacity property of the   
+	  symbol.
+
 {% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("Bullets").QuantitativeScaleSettings( scale=>
@@ -169,7 +214,7 @@ Indicator displays a symbol along with text which is different from caption and 
 
 {% endhighlight %}
 
-The following screenshot displays a bullet graph with indicator.
+The following screenshot displays a **bullet graph** with indicator.
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img3.png)
 
@@ -178,7 +223,7 @@ Bullet Graph with indicator
 
 ## Trim
 
-The title, subtitle and indicator text can be overlapped to the scale group. You can avoid the overlapped text by using the EnableTrim property of the CaptionSettings. The default value of the EnableTrim is true. 
+The title, subtitle and indicator text can be overlapped to the scale group. You can avoid the overlapped text by using the `EnableTrim` property of the CaptionSettings. The default value of the EnableTrim is true. 
 {% highlight html %}
 
 @(Html.EJ().BulletGraph("BulletGraph1")
@@ -198,11 +243,11 @@ BulletGraph with trim
 
 ## Text Placement
 
-All the caption group elements (caption, subtitle, and indicator) in the Bullet Graph support text positioning by using the property TextPosition available in all caption group elements. The properties, TextAlignment and TextAnchor are used to customize text placement further.
+All the caption group elements (caption, subtitle, and indicator) in the **Bullet Graph** support text positioning by using the property **TextPosition** available in all caption group elements. The properties, **TextAlignment** and **TextAnchor** are used to customize text placement further.
 
 ### Text Position
 
-The property TextPosition, is used to position the text at the top, bottom, left, and right side of the quantitative scale. The default value of this property is Float. By default, text can be placed at any desired location by using the Location property. 
+The property `TextPosition`, is used to position the text at the `top`, `bottom`, `left`, and `right` side of the quantitative scale. The default value of this property is **Float**. By default, text can be placed at any desired location by using the Location property. 
 {% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
@@ -225,7 +270,7 @@ The property TextPosition, is used to position the text at the top, bottom, left
 
 {% endhighlight %}
 
-The following screenshot displays the Bullet Graph with the title positioned above.
+The following screenshot displays the **Bullet Graph** with the title positioned above.
 
 ![](Bullet-Graph-Caption_images/Bullet-Graph-Caption_img5.png)
 
@@ -235,7 +280,7 @@ Bullet Graph with title automatically positioned above the scale
 
 ### Text Alignment
 
-Alignment of text at different positions with respect to scale can be customized by using the TextAlignment property. Text can be aligned in the near, center, and far locations of the scale. Text alignment depends upon TextPosition property and is not applicable when the value of the TextPosition property is Float. The default value of the TextAlignment property is Near. 
+**Alignment** of text at different positions with respect to scale can be customized by using the `TextAlignment` property. Text can be aligned in the `near`, `center`, and `far` locations of the scale. Text alignment depends upon TextPosition property and is not applicable when the value of the `TextPosition` property is **Float**. The default value of the `TextAlignment` property is **Near**. 
 {% highlight cshtml %}
 
 @(Html.EJ().BulletGraph("BulletGraph1").Width(650).Height(150).Value(8).ComparativeMeasureValue(5)
