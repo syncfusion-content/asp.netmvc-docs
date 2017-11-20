@@ -75,14 +75,13 @@ Circular Gauge with basic Animation property
 You can change the interior gradient of **Circular Gauge** by using `InteriorGradient` property. The `IsRadialGradient` property is used to check whether the gradient is circular or not.  
 
 {% highlight CSHTML %}
+
 @(Html.EJ().CircularGauge("circulargauge")
 
     .InteriorGradient(gradient=>gradient
-                    .ColorInfo(info=>
-                    [
-                        info.ColorStop(0).Color("#FFFFFF").Add();
-                        info.ColorStop(1).Color("#AAAAAA").Add();
-                    ]).Add();
+                    .ColorInfo(
+                        //..
+                    ).Add();
     )  
     .IsRadialGradient(true)
 )     
