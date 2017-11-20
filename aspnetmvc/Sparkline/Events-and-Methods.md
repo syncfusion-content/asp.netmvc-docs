@@ -86,7 +86,7 @@ Fires before rendering trackball tooltip. You can use `TooltipInitialize` event 
 
 @(Html.EJ().Sparkline("container")
 
-    .TooltipInitialize("onTooltipInitialze")
+    .TooltipInitialize("onTooltipInitialize")
 
 )
 
@@ -95,7 +95,7 @@ Fires before rendering trackball tooltip. You can use `TooltipInitialize` event 
 {% highlight js %}
 
  <script type="text/javascript">
-    function onTooltipInitialze(sender) {
+    function onTooltipInitialize(sender) {
                 //Do something
     }
 </script>
