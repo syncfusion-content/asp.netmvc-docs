@@ -80,3 +80,34 @@ In the above example, for Default Slider the slider value starts from “40” (
 
 For Range Slider, the value starts from “10” (min value) and ends in “90” (max value). The range shadow occupies the entire Slider, since the range (values) is specified as “[10, 90]”.
 
+### Buttons 
+
+Slider includes the button support for increment or decrement the values of the slider.
+
+#### Enabling Buttons
+
+Use the ShowButtons property to enable the button support. By default this property is disabled. Data type of this property is “Boolean”.
+
+The following steps explains you on how to enable button support in Slider.
+
+1. In an VIEW page, specify the helper elements to render the Range Slider.
+
+
+
+{% highlight CSHTML %}
+
+// Add this code in your view page
+
+@(Html.EJ().Slider("rangeSlider").SliderType(SlideType.Range).Values("30,60")
+
+.Width("500").ShowButtons(true))
+
+
+{% endhighlight %}
+
+
+Execute the above code example to render the following output.
+
+
+![](Button-Support_images/Button-Support_img1.png)
+
