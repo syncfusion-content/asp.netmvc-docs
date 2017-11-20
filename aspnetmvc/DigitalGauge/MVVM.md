@@ -11,14 +11,14 @@ documentation: ug
 
 ## AngularJS
 
-Digital Gauge contains AngularJS support. It is possible to add object as well as array object in the Digital Gauge. The two way binding support is given to the value for displaying the text.
+**Digital Gauge** contains AngularJS support. It is possible to add object as well as array object in the **Digital Gauge**. The two way binding support is given to the `value` for displaying the text.
 
 
 ## Rendering the Digital Gauge
 
 {% highlight html %}
 
-ej-DigitalGauge is the control tag, where ej is tag prefix and DigitalGauge is the control name.Digital Gauge is rendered with the following code example.
+**ej-DigitalGauge** is the control tag, where ej is tag prefix and **DigitalGauge** is the control name.**Digital Gauge** is rendered with the following code example.
 
 <div ng-app="syncApp">
 
@@ -58,7 +58,7 @@ Default Digital Gauge in AngularJS
 
 ## Adding the Digital Gauge Items
 
-Digital Gauge is rendered with the following code example. You can extend the Object in the array collection such as, position, characterSetting, segmentSetting, etc. with hyphen in the same tag.
+**Digital Gauge** is rendered with the following code example. You can extend the Object in the array collection such as, `position`, `characterSetting`, `segmentSetting`, etc. with hyphen in the same tag.
 
 ### Example: e-position-x. 
 
@@ -96,7 +96,7 @@ Digital Gauge Rendered in AngularJS
 
 ## Two Way Binding
 
-Digital Gauge supports the two way biding for the property value as mentioned earlier. Following code example explains how to achieve the two way binding to the Digital Gauge.
+**Digital Gauge** supports the two way biding for the property `value` as mentioned earlier. Following code example explains how to achieve the two way binding to the **Digital Gauge**.
 
 {% highlight html %}
 
@@ -156,8 +156,8 @@ Digital Gauge with two way binding in AngularJS
 * KnockoutJS support allows you to bind the HTML elements against any of the available data models.Two types of KnockoutJS binding is supported as of AngularJS,
 	1. one-way binding
 	2. two-way binding
-* One way binding refers to the process of applying observable values to all the available properties of the Digital Gauge control, but the changes made in it does not reflect and trigger in turn to the observable collection. This kind of binding applies to all the properties of the Digital Gauge control.
-* Two-way binding supports both the processes – it applies the observable values to the Digital Gauge properties as well as the changes made in it is also reflected back and triggered within the observable collections. Only Value of the schedule properties support two-way binding.
+* **One way binding** refers to the process of applying observable values to all the available properties of the **Digital Gauge** control, but the changes made in it does not reflect and trigger in turn to the observable collection. This kind of binding applies to all the properties of the Digital Gauge control.
+* **Two-way binding** supports both the processes – it applies the observable values to the **Digital Gauge** properties as well as the changes made in it is also reflected back and triggered within the observable collections. Only **Value** of the schedule properties support two-way binding.
 
 
 {% highlight CSHTML%}
