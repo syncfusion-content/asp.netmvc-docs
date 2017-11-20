@@ -9,11 +9,11 @@ documentation: ug
 
 # Marker Pointers
 
-Marker Pointer value points out the actual value set in the Linear Gauge. You can set values for various pointer attributes such as value, type, length, width, border and color in pointer collection. You can also customize the pointers to improve the appearance of gauge.
+**Marker Pointer** value points out the actual value set in the **Linear Gauge**. You can set values for various pointer attributes such as `value`, `type`, `length`, `width`, `border` and `color` in pointer collection. You can also customize the pointers to improve the appearance of gauge.
 
 ## Adding marker pointer collection
 
-You can add Marker Pointer collection directly to the scale object. To add pointer collection in a gauge control refer the following code example.  
+You can add **Marker Pointer** collection directly to the scale object. To add pointer collection in a gauge control refer the following code example.  
 
 
 {% highlight js %}
@@ -87,7 +87,7 @@ Execute the above code to render the following output.
 
 ## Add marker pointer value
 
-The value property is the important element in the marker pointer collection which indicates the gauge value. Real purpose of the Linear Gauge is based on the pointer value. You can set the pointer value either directly during rendering the control or it can be achieved by public method.
+The `value` property is the important element in the marker pointer collection which indicates the gauge value. Real purpose of the **Linear Gauge** is based on the pointer value. You can set the pointer value either directly during rendering the control or it can be achieved by public method.
 
 
 
@@ -162,8 +162,8 @@ Execute the above code to render the following output.
 
 ### Appearance
 
-* Based on the value, the pointer points out the label value. You can set the pointer length and width using length and width property respectively. You can also adjust the opacity of the pointer using the opacity property which holds the value between 0 and 1. You can add the gradient effects to the pointer using gradient object. 
-* The marker pointer border is modified with the border object. It contains two border property namely color and width which are used to customize the border color of the scale and border width of the marker pointer. The background color can be customized with attribute backgroundColor.
+* Based on the value, the **pointer** points out the label value. You can set the pointer length and width using `length` and `width` property respectively. You can also adjust the opacity of the pointer using the opacity property which holds the value between 0 and 1. You can add the gradient effects to the pointer using gradient object. 
+* The marker pointer border is modified with the border object. It contains two border property namely color and width which are used to customize the border color of the scale and border width of the marker pointer. The background color can be customized with attribute `backgroundColor`.
 
 
 
@@ -235,8 +235,8 @@ Execute the above code to render the following output.
 
 ## Positioning the pointer
 
-* You can position the Pointer with two properties, distanceFromScale and placement. The distanceFromScale property defines the distance between the scale and pointer. 
-* The Placement property is used to locate the pointer with respect to scale either inside or outside the scale or along the scale. It is an enumerable data type.
+* You can position the Pointer with two properties, **distanceFromScale** and **placement**. The `distanceFromScale` property defines the distance between the scale and pointer. 
+* The `Placement` property is used to locate the pointer with respect to scale either inside or outside the scale or along the scale. It is an enumerable data type.
 
 
 
@@ -328,7 +328,7 @@ It is possible to change the dimension of the marker pointer. Dimensions availab
 
 ### Multiple Marker Pointers
 
-Linear Gauge can contain multiple pointers on it. You can use any combination and any number of pointers in a gauge. That is, a gauge can contain any number of marker pointer and any number of bar pointers. Refer the following code example containing multiple marker pointers.
+**Linear Gauge** can contain multiple pointers on it. You can use any combination and any number of pointers in a gauge. That is, a gauge can contain any number of marker pointer and any number of bar pointers. Refer the following code example containing multiple marker pointers.
 
 
 

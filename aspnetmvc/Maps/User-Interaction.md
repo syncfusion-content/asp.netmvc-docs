@@ -154,7 +154,6 @@ The `MinValue` property is used to set the minimum zoom level of the Map.
 The `MaxValue` property is used to set the maximum zoom level of the Map.
 
 
-
 {% highlight CSHTML %}
 
 	@(Html.EJ().Map("maps") 
@@ -186,6 +185,41 @@ The `MaxValue` property is used to set the maximum zoom level of the Map.
 	)      
 
 {% endhighlight %}
+
+
+### Factor
+
+Specifies the zoom factor for map zoom value, you can use `factor` property.
+
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("maps") 
+
+		.Layers(layer =>
+
+		{
+
+			layer.ShapeData(mapData)                  
+
+		 	.Add();
+
+		})
+
+		.ZoomSettings(zoom=>
+
+		{
+
+			zoom.EnableZoom(true)
+
+		  	.Factor(1)
+		  	
+		})               
+
+	)      
+
+{% endhighlight %}
+
 
 ### Additional Options to Zoom the Map
 
@@ -375,6 +409,36 @@ The navigation control can be positioned in following locations within the conta
 You can set this option by using the` DockPosition` property in `NavigationControl`.
 
 
+#### Orientation
+
+Set the `orientation` value for navigation control.
+
+<table class="params">
+	<thead>
+		<tr>
+			<th>Name </th>			
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="name">horizontal</td>			
+			<td class="description">specifies the horizontal position</td>
+		</tr>
+		<tr>
+			<td class="name">vertical</td>			
+			<td class="description">specifies the vertical position</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+#### Content
+
+
+Specifies the navigation control template for map, you can use `content` property.
+
 
 {% highlight CSHTML %}
 
@@ -398,6 +462,55 @@ You can set this option by using the` DockPosition` property in `NavigationContr
 
 	)      
 {% endhighlight %}
+
+
+### Animation
+
+ **Animation** is enabled or disabled using `enable animation` property.
+
+
+{% highlight CSHTML %}
+
+
+	@(Html.EJ().Map("maps") 
+      
+		.EnableAnimation(true)
+
+	)   
+
+{% endhighlight %} 
+
+
+#### Enable Layer Change Animation 
+
+Enables or Disables the animation for layer change in map, you can use `enableLayerChangeAnimation` property and the default value is false.
+
+{% highlight CSHTML %}
+
+
+	@(Html.EJ().Map("maps") 
+      
+		.EnableLayerChangeAnimation(true)
+
+	)   
+
+{% endhighlight %} 
+
+
+### Responsiveness during browser resize
+
+**Map** is made responsive when resizing the browser by using `isResponsive` property.
+{% highlight CSHTML %}
+
+
+	@(Html.EJ().Map("maps") 
+      
+		.IsResponsive(true)
+
+	)   
+
+{% endhighlight %} 
+
 
 
 

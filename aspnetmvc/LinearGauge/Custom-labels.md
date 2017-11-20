@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom labels
 
-Custom labels are the text that can paste in any location of the Linear Gauge. It is used to define the purpose of the gauge.
+Custom labels are the text that can paste in any location of the **Linear Gauge**. It is used to define the purpose of the gauge.
 
 ## Adding Custom label collection
 
-Custom labels collection can be directly added to the scale object. Refer the following code to add custom labels collection in a Linear Gauge control.
+Custom labels collection can be directly added to the scale object. Refer the following code to add custom labels collection in a **Linear Gauge** control.
 
 
 
@@ -106,8 +106,8 @@ Execute the above code to render the following output.
 
 ### Appearance
 
-* You can customize custom labels using the properties like textAngle, color and font. The API textAngle is used to display the custom labels in the specified angles and color attribute is used to display the custom labels in specified color. You can use value attribute to set the text value in the custom labels. 
-* To display the custom labels, set showCustomLabels as ‘true’. Font option is also available on the custom labels. The basic three properties of fonts such as size, family and style can be achieved by size, fontStyle and fontFamily. You can adjust the opacity of the label with the property opacity and the value of opacity lies between 0 and 1.
+* You can customize custom labels using the properties like `textAngle`, `color` and `font`. The API **textAngle** is used to display the custom labels in the specified angles and **color** attribute is used to display the custom labels in specified color. You can use `value` attribute to set the text value in the custom labels. 
+* To display the custom labels, set `showCustomLabels` as ‘true’. Font option is also available on the custom labels. The basic three properties of fonts such as `size`, `family` and `style` can be achieved by **size**, **fontStyle** and **fontFamily**. You can adjust the opacity of the label with the property `opacity` and the value of opacity lies between 0 and 1.
 
 
 
@@ -211,7 +211,7 @@ Execute the above code to render the following output.
 
 ## Locating the Custom Labels
 
-To set the location of the custom label in Linear Gauge, position property is used. You can position the custom labels in horizontal and vertical axis using X and Y axis respectively.
+To set the location of the custom label in **Linear Gauge**, `position` property is used. You can position the custom labels in horizontal and vertical axis using `X` and `Y` axis respectively.
 
 
 
@@ -309,7 +309,7 @@ Execute the above code to render the following output.
 
 ## Multiple Custom Labels
 
-You can set multiple custom labels in a single Linear Gauge by adding an array of custom label objects. Refer the following code example for multiple custom label functionality.
+You can set multiple custom labels in a single **Linear Gauge** by adding an array of custom label objects. Refer the following code example for multiple custom label functionality.
 
 
 {% highlight js %}

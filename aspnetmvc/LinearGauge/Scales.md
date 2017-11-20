@@ -9,7 +9,7 @@ documentation: ug
 
 # Scales
 
-Scales are the basic functional block of the Linear Gauge. You can improve the appearance of scales by customizing it. The functional blocks of Linear Gauge are 
+**Scales** are the basic functional block of the **Linear Gauge**. You can improve the appearance of scales by customizing it. The functional blocks of **Linear Gauge** are 
 
 * Marker Pointers
 * Bar Pointer
@@ -23,7 +23,7 @@ Scales are the basic functional block of the Linear Gauge. You can improve the a
 
 ## Adding scale collection
 
-Scale is the basic element of Linear Gauge. Scale collection is directly added to the gauge object. Refer the following code example to add scale collection in Gauge control. 
+**Scale** is the basic element of **Linear Gauge**. Scale collection is directly added to the gauge object. Refer the following code example to add scale collection in **Gauge** control. 
 
 
 
@@ -107,8 +107,8 @@ Execute the above code to render the following output.
 
 ### Colors and Border
 
-* The Scale border is modified with border object. It has two border property, color and width  are used to customize the border color of the scale and border width of the scale. Setting the background color improves the look and feel of the Linear Gauge. You can customize the background color of the scale using backgroundColor. 
-* Scales are used to enable or disable various properties such as showRanges, showIndicators, showCustomLabels, showLabels, showTicks, showBarPointers and showMarkerPointers. Enable/disable is done by setting the property into two states either “true” or “false”. You can adjust the Opacity of the scale with opacity property.
+* The **Scale** border is modified with **border** object. It has two border property, `color` and `width`  are used to customize the border color of the scale and border width of the scale. Setting the background color improves the look and feel of the **Linear Gauge**. You can customize the background color of the scale using `backgroundColor`. 
+* Scales are used to enable or disable various properties such as `showRanges`, `showIndicators`, `showCustomLabels`, `showLabels`, `showTicks`, `showBarPointers` and `showMarkerPointers`. Enable/disable is done by setting the property into two states either “**true**” or “**false**”. You can adjust the Opacity of the scale with opacity property.
 
 
 
@@ -192,8 +192,8 @@ Execute the above code to render the following output.
 
 ### Appearance 
 
-* You can improve the appearance of Linear Gauge using various properties. You can set the interval values for the scale with major interval value and minor interval value properties and maximum and minimum value by minimum and maximum property. The width property is used to set the scale bar width. 
-* You can also adjust the Opacity of the scale with opacity property. The value for opacity lies between 0 and 1.Linear Gauge contains two scale directions, clockwise and counter clockwise. It can be set with direction property.
+* You can improve the appearance of **Linear Gauge** using various properties. You can set the interval values for the scale with `major interval` value and `minor interval` value properties and maximum and minimum value by minimum and maximum property. The width property is used to set the scale bar `width`. 
+* You can also adjust the Opacity of the scale with `opacity` property. The value for opacity lies between 0 and 1.**Linear Gauge** contains two scale directions, clockwise and counter clockwise. It can be set with `direction` property.
 
 
 
@@ -285,7 +285,7 @@ Execute the above code to render the following output.
 
 ## Scale Types
 
-Scale Type is an element which decides the appearance of the gauge. Linear Gauge contains three scale types such as,
+Scale Type is an element which decides the appearance of the gauge. **Linear Gauge** contains three scale `types` such as,
 
 * Rectangle
 * Rounded Rectangle
@@ -295,7 +295,7 @@ Scale Type is an element which decides the appearance of the gauge. Linear Gauge
 
 ### Rectangle
 
-For rectangular scale type, the scale renders with rectangular structure. Refer the following code example.
+For rectangular scale `type`, the scale renders with rectangular structure. Refer the following code example.
 
 
 
@@ -357,7 +357,7 @@ Rounded Rectangle
 
 {:.caption}
 
-For rounded rectangular scale type, the scale renders as rectangular structure but with constant radius rounded corner. Refer the following code example.
+For rounded rectangular scale `type`, the scale renders as rectangular structure but with constant radius rounded corner. Refer the following code example.
 
 
 
@@ -431,7 +431,7 @@ Execute the above code to render the following output.
 
 ## Thermometer
 
-For thermometer scale type, the scale renders as thermometer structure with rounded bottom. Refer the following code example.
+For thermometer scale `type`, the scale renders as thermometer structure with rounded bottom. Refer the following code example.
 
 
 
@@ -493,9 +493,9 @@ Execute the above code to render the following output.
 
 
 
-Adding multiple scales
+### Adding multiple scales
 
-You can set multiple scales for a single Linear Gauge control by using an array of scale objects. Each scale object is independent of each other. Refer the following code example to add multiple scale collection. 
+You can set multiple scales for a single **Linear Gauge** control by using an array of scale objects. Each scale object is independent of each other. Refer the following code example to add multiple scale collection. 
 
 {% highlight js %}
 
