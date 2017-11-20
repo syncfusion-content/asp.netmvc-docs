@@ -11,7 +11,7 @@ documentation: ug
 
 ## Local Data
 
-1. You can bind the data to the Sparkline by using `DataSource`property and then you need to map the **X** and **Y** value with **XName** and **YName** properties respectively.
+1. You can bind the data to the Sparkline by using `DataSource`property and then you need to map the **X** and **Y** value with `XName` and `YName` properties respectively.
 
 {% highlight C# %}
 

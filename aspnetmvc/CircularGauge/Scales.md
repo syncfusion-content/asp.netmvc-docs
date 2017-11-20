@@ -9,7 +9,7 @@ documentation: ug
 
 # Scales
 
-Scales are the basic functional block of the Circular Gauge. By customizing the scales, the appearance of the Gauge can be improved. The functional blocks of Circular Gauge are 
+**Scales** are the basic functional block of the **Circular Gauge**. By customizing the `Scales`, the appearance of the **Gauge** can be improved. The functional blocks of Circular Gauge are 
 
 * Pointers
 * Labels
@@ -22,7 +22,7 @@ Scales are the basic functional block of the Circular Gauge. By customizing the 
 ## Adding Scale Collection
 
 
-Scale collection is directly added to the Gauge object. Refer the following code example to add scale collection in Gauge control.
+**Scale collection** is directly added to the Gauge object. Refer the following code example to add scale collection in **Gauge** control.
 
 {% highlight CSHTML %}
 
@@ -52,8 +52,9 @@ Circular Gauge with scale radius.
 
 ### Colors and Border
 
-* The Scale border is modified with the object called border. It has two border property namely color and width which are used to customize the border color of the scale and border width of the scale. 
-* Setting the background color improves the look and feel of the Circular Gauge. You can customize the background color of the scale using backgroundColor. 
+* The Scale border is modified with the object called `Border`. It has two border property namely `Color` and `Width` which are used to customize the border color of the scale and border width of the scale. 
+* Setting the background color improves the look and feel of the **Circular Gauge**. You can customize the background color of the scale using `BackgroundColor`. 
+* The scale bar of circular gauge can be enabled by setting `ShowScaleBar` property as true.
 
 {% highlight CSHTML %}
 
@@ -108,8 +109,8 @@ Circular Gauge with customized scale border
 
 ### Pointer Cap
 
-* Pointer cap is a circular shape element that is located at the center of the Circular Gauge. The pointer cap is one of the cynosure of the Circular Gauge. By customizing the pointer cap, Gauge style is improved. The pointer cap is modified with the object pointerCap. 
-* It contains radius, borderColor, borderWidth, interiorGradient and backgroundColor properties. The property radius is used to set the radius for the pointer cap. interiorGradient is used to provide the gradient effects to the pointer cap.
+* **Pointer cap** is a circular shape element that is located at the center of the **Circular Gauge**. The pointer cap is one of the cynosure of the Circular Gauge. By customizing the pointer cap, Gauge style is improved. The pointer cap is modified with the object `PointerCap`. 
+* It contains `Radius`, `BorderColor`, `BorderWidth`, `InteriorGradient` and `BackgroundColor` properties. The property `radius` is used to set the radius for the pointer cap. `InteriorGradient` is used to provide the gradient effects to the pointer cap.
 
 {% highlight CSHTML %}
 
@@ -158,8 +159,8 @@ Circular Gauge with customized pointer cap
 
 ### Appearance
 
-* Circular Gauge contains two types of scale direction such as clockwise and counter clockwise. You can set them by enumerable property called direction. And you can set the minimum and maximum values for the scale with the properties minimum and maximum. The two properties minorIntervalValue and majorIntervalValue are the values used to set interval value for the ticks and labels. 
-* The radius property is used to set the radius value for the circular scale and the size property is used to set the scale bar width. You can also adjust the Opacity of the scale with the property opacity. The value for opacity lies between 0 and 1. You can also give some shadow effects for the scale by using the property shadowOffset. The property startAngle is used to set starting position of the scale at certain angle and sweepAngle is used to shrink or expand the scale to certain angle. 
+* Circular Gauge contains two types of scale direction such as clockwise and counter clockwise. You can set them by enumerable property called `Direction`. And you can set the minimum and maximum values for the scale with the properties `Minimum` and `Maximum`. The two properties `MinorIntervalValue` and `MajorIntervalValue` are the values used to set interval value for the ticks and labels. 
+* The `Radius` property is used to set the radius value for the circular scale and the `Size` property is used to set the scale bar width. You can also adjust the Opacity of the scale with the property `Opacity`. The value for opacity lies between 0 and 1. You can also give some shadow effects for the scale by using the property `ShadowOffset`. The property `StartAngle` is used to set starting position of the scale at certain angle and `SweepAngle` is used to shrink or expand the scale to certain angle. 
 
 {% highlight CSHTML %}
 
@@ -222,13 +223,13 @@ Circular Gauge with customized scale values
 
 ### Enable/Disable properties
 
-You can enable / disable properties in Circular Gauge using some properties in scale collection. The showIndicators property is used to enable/disable the indicators. ShowLabels, showTicks, showRanges, showPointers ans showScaleBar are used to enable/ disable labels, ticks, ranges, pointers and scale bar respectively. 
+You can enable / disable properties in Circular Gauge using some properties in scale collection. The `ShowIndicators` property is used to enable/disable the indicators. `ShowLabels`, `ShowTicks`, `ShowRanges`, `ShowPointers` ans `ShowScaleBar` are used to enable/ disable labels, ticks, ranges, pointers and scale bar respectively. 
 
 
 
 ## Multiple Scales
 
-You can set Multiple scales for a single Circular Gauge control by using an array of scale objects. Each scale object is independent of each other. The following code example refers to two scale objects in a Gauge.
+You can set **Multiple scales** for a single **Circular Gauge** control by using an array of scale objects. Each scale object is independent of each other. The following code example refers to two scale objects in a Gauge.
 
 {% highlight CSHTML %}
 

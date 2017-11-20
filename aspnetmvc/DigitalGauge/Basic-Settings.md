@@ -11,7 +11,7 @@ documentation: ug
 
 ## Height and Width Customization
 
-The basic customization for any control is to set the dimension. Here dimension refers to two major attributes such as height and width. The height and width assigned in the control will render the canvas element in the given size. The code example to set height and width is as follow. 
+The basic customization for any control is to set the dimension. Here dimension refers to two major attributes such as **height** and **width**. The height and width assigned in the control will render the canvas element in the given size. The code example to set `height` and `width` is as follow. 
 
 {% highlight CSHTML %}
 
@@ -31,7 +31,7 @@ The basic customization for any control is to set the dimension. Here dimension 
 
 {% endhighlight %}
 
-Execute the above code examples to render the DigitalGauge as follows. 
+Execute the above code examples to render the **DigitalGauge** as follows. 
 
 
 
@@ -44,8 +44,8 @@ Digital Gauge control with height and width values
 
 ## Responsive Layout
 
-* For any display devices, the control will be rendered based on the space available in that device. For this purpose, resizing property is given to the Digital Gauge control. The Digital Gauge renders with a given value. 
-* When the browser resize the canvas element checks the dimension with its parent element. If there are any changes in parent dimension, Gauge control will changes the dimension based on its parent element change. This feature is enabled by using the property IsResponsive.
+* For any display devices, the control will be rendered based on the space available in that device. For this purpose, **resizing** property is given to the **Digital Gauge** control. The **Digital Gauge** renders with a given value. 
+* When the browser resize the canvas element checks the dimension with its parent element. If there are any changes in parent dimension, **Gauge** control will changes the dimension based on its parent element change. This feature is enabled by using the property `IsResponsive`.
 
 
 
@@ -74,7 +74,7 @@ Digital Gauge control with Responsible layout
 
 ## Themes
 
-Themes give the good appearance to the control. There are two types of Themes available for DigitalGauge as follows
+**Themes** give the good appearance to the control. There are two types of `Themes` available for **DigitalGauge** as follows
 
 * flatlight
 * flatdark
@@ -106,7 +106,7 @@ Digital Gauge control with flatdark theme
 
 ## Setting Text for Digital Gauge
 
-Digital Gauge is mainly used to display the text in the digital format. We can define the value for the text with the help of value property. It is string data type. The Code example for setting the text is as follows.
+**Digital Gauge** is mainly used to display the text in the digital format. We can define the `value` for the text with the help of value property. It is string data type. The Code example for setting the text is as follows.
 
 
 

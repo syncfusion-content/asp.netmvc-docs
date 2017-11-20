@@ -13,8 +13,8 @@ Indicators simply indicates the current status of the pointer. Indicators are in
 
 ## Setting Dimension
 
-* You can enable indicators by setting showIndicators to ‘true’ in scale collection. The height and width property for the indicators are used to specify the area allocated to the indicator for the width and height respectively. 
-* You can use the position collection to position the indicators along X and Y axis. X specifies horizontal position in indicators whereas Y specifies vertical position in indicators. Indicators are of several types such as, dimensions like circle, rectangle, rounded rectangle, text and image. By using the type property it can be applied. For image type imageUrl property is used.
+* You can enable indicators by setting `showIndicators` to ‘true’ in scale collection. The `height` and `width` property for the indicators are used to specify the area allocated to the indicator for the width and height respectively. 
+* You can use the position collection to `position` the indicators along **X** and **Y** axis. `X` specifies horizontal position in indicators whereas `Y` specifies vertical position in indicators. Indicators are of several types such as, dimensions like circle, rectangle, rounded rectangle, text and image. By using the `type` property it can be applied. For image type **imageUrl** property is used.
 
 
 
@@ -108,7 +108,7 @@ Execute the above code to render the following output.
 
 ## State Ranges
 
-State ranges are used to specify the indicator behavior in the certain region. startValue and endValue are used to set the range bound for the pointer. Whenever the pointer crosses the specified region, the indicator attributes are applied for the ranges.
+State ranges are used to specify the indicator behavior in the certain region. `startValue` and `endValue` are used to set the range bound for the pointer. Whenever the pointer crosses the specified region, the indicator attributes are applied for the ranges.
 
 
 
@@ -260,7 +260,7 @@ Execute the above code to render the following output.
 
 Color and Appearance
 
-The backgroundColor and borderColor sets the appearance behavior for the indicators. You can apply this only if it lies within the state ranges. Otherwise default behavior will be applied.
+The `backgroundColor` and `borderColor` sets the appearance behavior for the indicators. You can apply this only if it lies within the state ranges. Otherwise default behavior will be applied.
 
 
 {% highlight js %}
@@ -365,7 +365,7 @@ Execute the above code to render the following output.
 
 ## Font options
 
-The basic font options available for the textual type indicators in the Linear Gauge such as Size, font style and font family are achieved by the properties size, fontStyle and fontFamily.
+The basic font options available for the textual type indicators in the **Linear Gauge** such as **Size**, **font style** and **font family** are achieved by the properties `size`, `fontStyle` and `fontFamily`.
 
 
 
@@ -523,7 +523,7 @@ Execute the above code to render the following output.
 
 ## Multiple Indicator
 
-You can set multiple indicators in a single Linear Gauge by adding an array of indicator objects. Refer the following code example for multiple indicator functionality.
+You can set multiple indicators in a single **Linear Gauge** by adding an array of indicator objects. Refer the following code example for multiple indicator functionality.
 
 
 

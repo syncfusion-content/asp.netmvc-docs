@@ -11,7 +11,7 @@ documentation: ug
 
 ## Appearance
 
-The opacity of the character is adjustable with the help of opacity property. The space between two characters are adjusted with spacing property as like in the segment settings.
+The opacity of the character is adjustable with the help of `opacity` property. The space between two characters are adjusted with `spacing` property as like in the segment settings.
 
 
 
@@ -42,7 +42,7 @@ The opacity of the character is adjustable with the help of opacity property. Th
 
 {% endhighlight %}
 
-Execute the above code examples to render the DigitalGauge as follows.
+Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 ![](Character-Settings_images/Character-Settings_img1.png)
@@ -54,7 +54,7 @@ Digital Gauge control with character setting
 
 ## Count and Type
 
-* The number of text to be displayed can be limited by the attribute called count. In Digital Gauge five different types of characters are supported. They are as follows, 
+* The number of text to be displayed can be limited by the attribute called `count`. In **Digital Gauge** five different `types` of characters are supported. They are as follows, 
 1. EightCrossEightDotMatrix
 2. SevenSegment
 3. FourteenSegment
@@ -101,7 +101,7 @@ ss.Length(8)
 {% endhighlight %}
 
 
-Execute the above code examples to render the DigitalGauge as follows.
+Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
@@ -112,7 +112,7 @@ Digital Gauge control with character type as seven segment
 
 ## Text Positioning
 
-The text in the DigitalGauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and the y variable positions the text in the vertical axis.
+The text in the **DigitalGauge** is positioned with position object. This object contains two attributes such as `x` and `y`. The `x` variable positions the text in the horizontal axis and the `y` variable positions the text in the vertical axis.
 
 {% highlight CSHTML %}
 
@@ -150,7 +150,7 @@ The text in the DigitalGauge is positioned with position object. This object con
 {% endhighlight %}
 
 
-Execute the above code examples to render the DigitalGauge as follows.
+Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
@@ -161,7 +161,15 @@ Digital Gauge control with position text based on the background image
 
 ## Shadow Effects
 
-The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
+* You can add the shadow effects for text using following properties.
+
+    * You can enable/disable the blurring effect for the shadows of the text using `shadow blur` property.
+
+    * You can specify the color of the text shadow using `shadow color` property.
+
+    * You can set the `x-offset` value for the shadow of the text, indicating the location where it needs to be displayed.
+
+    * You can set the `y-offset` value for the shadow of the text, indicating the location where it needs to be displayed.
 
 {% highlight CSHTML %}
 
@@ -202,7 +210,7 @@ cs.Length(3) .Width(3)).Add();}))
 {% endhighlight %}
 
 
-Execute the above code examples to render the DigitalGauge as follows.
+Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
@@ -210,6 +218,46 @@ Execute the above code examples to render the DigitalGauge as follows.
 
 Digital Gauge control with shadow option
 {:.caption}
+
+
+## Font Customization
+
+You can customize the **font** of the text as per your requirement. To customize the font, you have to set `enableCustomFont`. Following font customization options are available.
+
+**Font-family**- used to set the font-family of the text.
+
+**Font-style**- used to set the font-style of the text.
+
+**Font-size**- used to set the font-size of the text.
+
+
+{% highlight CSHTML %}
+
+@* For Digital Gauge rendering *@
+
+@(Html.EJ().DigitalGauge("DigitalGauge1")
+
+.Width(800)
+
+.Value("Syncfusion")
+
+.Items(it=>
+
+{ it.CharacterSettings(cs => cs
+
+// For setting character opacity
+
+.EnableCustomFont(true)
+
+// For setting character spacing
+
+.Font(ft=>ft.FontFamily("Arial").FontStyle(FontStyle.Bold).Size("18px")) ).Add();
+
+}))
+
+
+{% endhighlight %}
+
 
 
 
