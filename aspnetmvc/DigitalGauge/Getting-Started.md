@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started
 
-* The ASP.NET MVC Digital Gauge provides support to display the DigitalGauge within your web page and allows you to customize it. This section encompasses the details on how to configure DigitalGauge. Here you will learn how to provide data for a DigitalGauge and display the data in the required way. 
-* In addition, you will learn how to customize the default DigitalGauge appearance according to your requirements. As a result, you will get a DigitalGauge that shows it as Digital thermometer.
-* You can use this DigitalGauge in advertisements, decorative purposes, displaying share details in share market, game score boards, token systems, etc.
+* The ASP.NET MVC **Digital Gauge** provides support to display the **DigitalGauge** within your web page and allows you to customize it. This section encompasses the details on how to configure DigitalGauge. Here you will learn how to provide data for a **DigitalGauge** and display the data in the required way. 
+* In addition, you will learn how to customize the default **DigitalGauge** appearance according to your requirements. As a result, you will get a DigitalGauge that shows it as Digital thermometer.
+* You can use this **DigitalGauge** in advertisements, decorative purposes, displaying share details in share market, game score boards, token systems, etc.
 
 
 ![](Getting-Started_images/Getting-Started_img1.png)
@@ -59,7 +59,7 @@ Digital Gauge
 
 ## Set Height and Width values
 
-Basic attributes of each canvas elements are height and width. You can set the height and width of the gauge.
+Basic attributes of each canvas elements are `height` and `width`. You can set the height and width of the gauge.
 
 {% highlight CSHTML %}
 
@@ -87,7 +87,7 @@ Items have different properties to customize the Digital Gauge.
 ### Add Segment and Character Properties
 
 * In the Welcome Board, the text color must be attentive in nature. You can give some segment properties such as segment spacing, segment width, segment color, segment length and segment opacity.
-* Character type is to define the Digital representation of the character. The five types of character representation available are,
+* Character `type` is to define the Digital representation of the character. The five types of character representation available are,
 	1. EightCrossEightDotMatrix
 	2. SevenSegment
 	3. FourteenSegment
@@ -125,7 +125,7 @@ Digital Gauge Segment Properties
 
 ## Add Background Image
 
-* Add a <div> element to set the background for the Digital Gauge. 
+* Add a <div> element to set the background for the **Digital Gauge**. 
 * Add a style tag in the View page to add the background image for the Digital Gauge.
 * Add the required properties to show the background image such as position, margin, display, etc.,
 
@@ -187,7 +187,7 @@ Digital Gauge Background Image
 
 ## Add Location
 
-The Location property is used to position the digital letters inside the canvas element.
+The Location property is used to `position` the digital letters inside the canvas element.
 
 {% highlight CSHTML %}
 
@@ -215,7 +215,7 @@ Digital Gauge with Segment Location
 
 ## Add Items Collection 
 
-You can further add the Items Collection to display the temperature value like Digital Thermometer.
+You can further add the `Items Collection` to display the temperature value like Digital Thermometer.
 
 {% highlight CSHTML %}
 

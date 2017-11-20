@@ -19,13 +19,113 @@ The Syncfusion MVC Extension provides you with quick access so that you can crea
 
 Project Conversion is a Visual Studio add-in that converts an existing ASP.NET MVC Project into a Syncfusion ASP.NET MVC Project by adding the required assemblies and resource files.
 
-For more details - [View](https://help.syncfusion.com/extension/aspnet-mvc-extension/project-conversion)
+### Convert into Syncfusion ASP.NET MVC (Web) project
+
+The following steps help you use the Syncfusion Project Conversion in the existing ASP.NET MVC (Web) Project.
+
+1. Open an existing Microsoft MVC Project or create a new Microsoft MVC Project.
+2. Right-click on Project and select Syncfusion VS Extensions and choose the Convert to Syncfusion ASP.NET MVC (Web) Application. Refer to the following screenshot for more information.
+
+   ![](Utility_images/ProjectConversion_img1.jpeg)
+
+3. Project Conversion Wizard opens so that you can configure the project.
+
+   ![](Utility_images/ProjectConversion_img2.jpg)
+
+   The following configurations are used in the Project Conversion Wizard.
+   
+   **Assemblies From:**
+
+   Choose the assembly location:
+
+	1. Added From GAC - Refer the assemblies from the Global Assembly Cache
+	2. Added from Installed Location - Refer the assemblies from the Syncfusion Installed locations.
+    3. Add Referenced Assemblies to Solution - Copy and refer to the assemblies from project's solution file lib directory.
+
+   ![](Utility_images/Project-Conversion_img3.jpeg)
+    
+   **Choose the Theme:**
+   
+   The master page of project will be updated based on selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
+   
+   ![](Utility_images/Project-Conversion_img4.jpeg)
+   
+   **Choose CDN Support:**
+
+   The master page of the project will be updated based on required Syncfusion CDN links.
+   
+   ![](Utility_images/Project-Conversion_img20.jpeg)
+   
+   **Choose Copy Global Resources:**
+    
+   The localization culture files will be shipped into Scripts\ej\i18n directory of the project.
+   
+   ![](Utility_images/Project-Conversion_img21.jpeg)
+
+4. Choose the required controls from Components section and Click the **Convert** button to convert it into a Syncfusion Project.
+
+   ![](Utility_images/ProjectConversion_img5.jpg)
+   
+5. The **Project Backup** dialog will be opened. If click Yes it will backup the current project before converting it to Syncfusion project. If click No it will convert the project to Syncfusion project without backup. 
+   
+   ![](Utility_images/Project-Conversion_img6.jpg)
+
+
+6. The required Syncfusion Reference Assemblies, Scripts and CSS are included in the MVC Project. Refer to the following screenshots for more information.
+
+   ![](Utility_images/ProjectConversion_img7.jpeg)
+
+   ![](Utility_images/ProjectConversion_img8.jpeg)
+
+   ![](Utility_images/ProjectConversion_img9.jpeg)
+
+### Rendering Control after Syncfusion ASP.NET MVC (Web) Conversion:
+
+Once you convert your ASP.NET MVC project to Syncfusion ASP.NET MVC Project, perform the following steps to render the Syncfusion Controls to your project.               
+1. The CSS, Scripts, Syncfusion References and required Web.config file entries are added to your project by Syncfusion ASP.NET MVC Conversion.  
+
+2. Add the required Script and CSS files references in the master page (_Layout.cshtml/Layout.vbhtml file). Please refer to below screenshot for more information.
+
+   ![](Utility_images\ProjectConversion_img17.jpeg)
+
+3. Now, include the Syncfusion controls to your project. Refer to the following screenshot for more information.
+
+   ![](Utility_images\ProjectConversion_img18.jpeg)
+
+4. Run the project and the following output is displayed.
+
+   ![](Utility_images\ProjectConversion_img19.jpeg)
 
 ## Project Migration
 
 Project Migration is a Visual Studio add-in that helps migrate the existing Syncfusion ASP.NET MVC (Web) project from one Syncfusion version to another Syncfusion version.
 
-For more details - [View](https://help.syncfusion.com/extension/aspnet-mvc-extension/project-migration)
+The following steps help you migrate from one version to another version of your existing Syncfusion ASP.NET MVC(web) application.
+
+1. Right-click on Syncfusion ASP.NET MVC Project and select Syncfusion VS Extensions. Choose Migrate the project to another version.
+
+   ![](Utility_images/ProjectMigration_img1.jpeg)
+
+2. The Project Migration window appears. You can choose the required Syncfusion version that is installed in the machine that is either Syncfusion ASP.NET MVC.
+
+   ![](Utility_images/ProjectMigration_img2.jpeg)
+
+3. The Project Migration window allows you to configure the following options:
+
+   * Essential Studio Version: Select any version from the list of Installed Versions.
+	  
+   * Assemblies From: The option Assemblies from add the assembly to project from the following locations.
+	  
+	    1. Added From GAC - Refer the assemblies from the Global Assembly Cache
+		  2. Added from Installed Location - Refer the assemblies from the Syncfusion Installed locations.
+      3. Add Referenced Assemblies to Solution - Copy and refer to the assemblies from project's solution file lib directory.  
+
+4. Click the Migrate Button. The **Project Backup** dialog will be opened. If click Yes it will backup the current project before migrate the Syncfusion project. If click No it will migrate the project to required Syncfusion version without backup. 
+
+     ![](Utility_images/ProjectMigration_img3.jpeg)
+      
+5. The Syncfusion Reference Assemblies, Scripts and CSS are updated to the corresponding version in the project.
+
 
 ## Sample Creator
 

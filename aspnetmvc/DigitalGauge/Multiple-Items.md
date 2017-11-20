@@ -9,7 +9,7 @@ documentation: ug
 
 # Multiple Items 
 
-The text in the Digital Gauge is positioned with position object. This object contains two attributes such as x and y. The x variable positions the text in the horizontal axis and y variable positions the text in the vertical axis.
+The text in the **Digital Gauge** is positioned with position object. This object contains two attributes such as `x` and `y`. The `x` variable positions the text in the horizontal axis and `y` variable positions the text in the vertical axis.
 
 
 {% highlight CSHTML %}
@@ -48,7 +48,7 @@ cs.Color("Green")).Position(pos => pos.X(80).Y(40)).Add();
 
 {% endhighlight %}
 
-Execute the above code example to render the DigitalGauge as follows.
+Execute the above code example to render the **DigitalGauge** as follows.
 
 ![](Multiple-Items_images/Multiple-Items_img1.png)
 

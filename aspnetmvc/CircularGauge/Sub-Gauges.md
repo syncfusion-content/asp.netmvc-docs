@@ -9,11 +9,11 @@ documentation: ug
 
 # Sub Gauges
 
-A Circular Gauge containing another circular gauge is said to be Sub Gauges. In order to make  a sample like watch that has second gauge, minute gauge and hour gauge, sub gauges are used.
+A **Circular Gauge** containing another circular gauge is said to be `SubGauges`. In order to make  a sample like watch that has second gauge, minute gauge and hour gauge, sub gauges are used.
 
 ## Adding SubGauges
 
-Sub gauge collection is directly added to the scale object. Refer the following code example to add custom sub gauge collection in a Gauge control
+Sub gauge collection is directly added to the scale object. Refer the following code example to add custom sub gauge collection in a **Gauge** control
 
 {% highlight CSHTML %}
 
@@ -60,7 +60,7 @@ gauge.ControlID("Subgauge1")
 
 ### Basic Customization
 
-Basic attributes such as height and width property are used to set height and width of the sub gauge. You can easily position the gauge in another gauge using the position object and by giving the X and Y Coordinates value. controlID attribute is used to specify the sub gauge ID.
+Basic attributes such as `Height` and `Width` property are used to set height and width of the sub gauge. You can easily position the gauge in another gauge using the `Position` object and by giving the `X` and `Y` Coordinates value. **ControlID** attribute is used to specify the sub gauge ID.
 
 {% highlight CSHTML %}
 
@@ -130,7 +130,7 @@ Circular Gauge with sub gauge
 
 ## Multiple SubGauges
 
-You can set multiple sub gauges in a single Circular Gauge by adding an array of sub gauge objects. Refer the following code example for multiple sub gauges functionality.
+You can set multiple sub gauges in a single **Circular Gauge** by adding an array of sub gauge objects. Refer the following code example for multiple sub gauges functionality.
 
 {% highlight CSHTML %}
 

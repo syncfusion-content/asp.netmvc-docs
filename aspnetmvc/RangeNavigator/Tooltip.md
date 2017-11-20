@@ -9,11 +9,15 @@ documentation: ug
 
 # Tooltip
 
-RangeNavigator provides Tooltip support for sliders. Sliders are used to select data at particular range in the RangeNavigator control. Tooltips for sliders display the selected start and end DateTime values.
+**RangeNavigator** provides **Tooltip** support for sliders. Sliders are used to select data at particular range in the RangeNavigator control. Tooltips for sliders display the selected start and end **DateTime** values.
 
 ## Customization
 
-RangeNavigator provides support for you to customize the text display in the tooltip and background using TooltipSettings property. You can change font family, font color, font style, font weight. By default “Segoe UI” font family is set to tooltip text.
+RangeNavigator provides support for you to customize the text display in the tooltip and background using `TooltipSettings` property. You can change font family, font color, font style, font weight. By default “Segoe UI” font family is set to tooltip text.
+
+* Tooltip visibility can be enabled or disabled using `Visible` property.
+* You can change background color of tooltip using `BackgroundColor` property.
+* You can customize the `Color`, `Family`, `FontStyle`, `Opacity`, `Size` and `Weight` of tooltip text in `Font` property.
 
 {% highlight CSHTML %}
 
@@ -53,9 +57,9 @@ RangeNavigator provides support for you to customize the text display in the too
 
 ## Label Format
 
-By default, the tooltip texts are automatically determined based on the data points.  To make it readable and understandable you can format the tooltip text. For DateTime data, all globalized format are supported. By default the LabelFormat is "MM/dd/yyyy".
+By default, the **tooltip** texts are automatically determined based on the data points.  To make it readable and understandable you can format the tooltip text. For **DateTime** data, all globalized format are supported. By default the `LabelFormat` is "MM/dd/yyyy".
 
-Some of the LabelFormat for DateTime data are as follows:
+Some of the `LabelFormat` for **DateTime** data are as follows:
 
 * 'MMM, yyyy'
 * 'dd, MMM'
@@ -79,9 +83,9 @@ Some of the LabelFormat for DateTime data are as follows:
 
 
 
-Tooltip display mode
+## Tooltip display mode
 
-By default the tooltip for RangeNavigator gets displayed. You can change this behavior using the TooltipDisplayMode property in the TooltipSettings and it takes the following values.
+By default the **tooltip** for RangeNavigator gets displayed. You can change this behavior using the `TooltipDisplayMode` property in the TooltipSettings and it takes the following values.
 
 _Tooltip values_
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Legend
 
-The legend contains the list of the ranges that appear in the circular gauge  
+The `Legend` contains the list of the ranges that appear in the circular gauge  
 
 ## Legend Visibility
 
@@ -34,7 +34,7 @@ By default, the legend will not be displayed in the circular gauge. You can enab
 
 ### Legend Text
 
-The text displayed in the legend can be customized by using the `LegendText` property present in the ranges of the circular gauge. When the legendText is not specified in the ranges, then the legend item for that particular range will not displayed. By default the legendText value is null . 
+The text displayed in the legend can be customized by using the `LegendText` property present in the ranges of the circular gauge. When the legendText is not specified in the ranges, then the legend item for that particular range will not displayed. By default the legendText value is **null** . 
 
 {% highlight cshtml %}
 
@@ -97,6 +97,28 @@ You can align the legend to the *center*, *far* or *near* based on its position 
 
 ## Customization
 
+### Legend Fill and Opacity
+
+You can change the opacity and fill color of legend text using `Opacity` and `Fill` property of legend. 
+
+{% highlight cshtml %}
+
+@(Html.EJ().CircularGauge("circulargauge1")
+
+      // ...
+    
+    .Legend(lg=>lg
+                //...
+                //fill color of legend
+                 .Fill('red')
+                //opacity of legend
+                 .Opacity(0.8)
+          )
+     //...
+ )
+
+{% endhighlight %}
+
 ### Legend shape
 
 To change the legend item shape, you have to specify the desired shape in the `Shape` property of the legend. By default, the shape of the legend is **circle**.It also supports rectangle,diamond,triangle,slider,line,pentagon,trapezoid and wedge shapes.
@@ -124,7 +146,7 @@ To change the legend item shape, you have to specify the desired shape in the `S
 
 ### Legend Item Size and Border
 
-You can change the size of the legend items by using the `Width` and `Height` properties in the **itemStyle**. To change the legend item border, use `Border` property of the legend itemStyle.
+You can change the size of the legend items by using the `Width` and `Height` properties in the `ItemStyle`. To change the legend item border, use `Border` property of the legend itemStyle. The color and width of legend item border can be customized using border `Color` and `Width` property.
 
 {% highlight cshtml %}
 
@@ -148,7 +170,7 @@ You can change the size of the legend items by using the `Width` and `Height` pr
 
 ### Legend size
 
-You can change the default legend size by using the `Size` property of the legend.  
+You can change the default legend size by using the `Size` property of the legend. The height and width of legend size can customized using `Height` and `Width` property.  
 
 {% highlight cshtml %}
 
@@ -196,7 +218,7 @@ You can control the spacing between the legend items by using the `ItemPadding` 
 
 ### Legend border
 
-You can customize the legend border by using the `Border` option in the legend. 
+You can customize the legend border by using the `Border` option in the legend.  The legend border can be customized using border `Color` and `Width` property.
 
 {% highlight cshtml %}
 
@@ -219,7 +241,7 @@ You can customize the legend border by using the `Border` option in the legend.
 
 ### Font of the legend text
 
-The font of the legend item text can be customized by using the `Font`  property in legend.
+The `Font` of the legend item text can be customized by using properties such as `FontFamily`, `FontStyle`, `FontWeight` and `Size` of legend font.
 
 
 {% highlight cshtml %}
@@ -245,7 +267,7 @@ The font of the legend item text can be customized by using the `Font`  property
 
 ### Legend Item Render
 
-LegendItemRender event triggers before rendering the legend items. This event is triggered for each legend item in Circular gauge. You can use this event to customize legend item shape or add custom text to legend item dynamically
+`LegendItemRender` event triggers before rendering the legend items. This event is triggered for each legend item in Circular gauge. You can use this event to customize legend item shape or add custom text to legend item dynamically
 
 
 {% highlight cshtml %}
@@ -272,7 +294,7 @@ LegendItemRender event triggers before rendering the legend items. This event is
 
 ### Legend Item Click
 
-You can get the legend item details such as *RangeIndex, bounds and shape* by subscribing the **LegendItemClick** event of the circular gauge. When the legend item is clicked, it triggers the event and returns the legend information 
+You can get the legend item details such as *RangeIndex, bounds and shape* by subscribing the `LegendItemClick` event of the circular gauge. When the legend item is clicked, it triggers the event and returns the legend information 
 
 {% highlight cshtml %}
 
