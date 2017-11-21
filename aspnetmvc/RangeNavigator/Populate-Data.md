@@ -9,12 +9,13 @@ documentation: ug
 
 # Populate Data
 
-When you provide data to RangeNavigator, it produces limited set of data. You can populate the RangeNavigator with data using the DataSource and Series properties.
+When you provide data to **RangeNavigator**, it produces limited set of data. You can populate the RangeNavigator with data using the `DataSource` and `Series` properties.
 
 ## Add series to the RangeNavigator
 
-The Series property provides access to a collection of all series that are defined explicitly within a RangeNavigator control. Each series is assigned with type and name. It contains collection of data point, each point contains x value and y values. You can add data points to the series through DataSource property.
+The `Series` property provides access to a collection of all series that are defined explicitly within a **RangeNavigator** control. Each series is assigned with `Type` and `Name`. It contains collection of data point, each point contains x value and y values. You can add data points to the series through `DataSource` property field name to get the values from the dataSource in `XName` and `YName` options.
 
+Animation can be enabled by setting `EnableAnimation` property as true and the series color and opacity can be customized by using `Fill` and `Opacity` property in series.
 
 {% highlight CSHTML %}
  

@@ -13,7 +13,7 @@ Ticks are used to mark some values on the scale. Based on the tick’s value you
 
 Adding tick collection 
 
-Tick collection can be directly added to the scale object. Refer the following code example to add tick collection in a Linear Gauge control.
+Tick collection can be directly added to the scale object. Refer the following code example to add tick collection in a **Linear Gauge** control.
 
 
 
@@ -103,8 +103,8 @@ Execute the above code to render the following output.
 
 ### Appearance
 
-* Height and width of the ticks can be applied by using the properties height and width. You can customize ticks with the properties like angle, color, etc. angle attribute is used to display the labels in the specified angles and color attribute is used to display the labels in specified color. 
-* Ticks are two types such as major and minor. The opacity of the labels can be adjusted with the property opacity. The opacity values lies between 0 and 1.
+* Height and width of the ticks can be applied by using the properties `height` and `width`. You can customize ticks with the properties like angle, color, etc. `angle` attribute is used to display the labels in the specified angles and `color` attribute is used to display the labels in specified color. 
+* Ticks are two types such as major and minor. The opacity of the labels can be adjusted with the property `opacity`. The opacity values lies between 0 and 1.
 
 
 
@@ -192,7 +192,7 @@ Execute the above code to render the following output.
 
 ### Types
 
-Ticks are two types such as majorInterval and minorInterval. Major type ticks are for major interval values and minor type ticks are for minor interval values.
+Ticks are two `types` such as **majorInterval** and **minorInterval**. Major type ticks are for major interval values and minor type ticks are for minor interval values.
 
 
 
@@ -272,8 +272,8 @@ Execute the above code to render the following output.
 
 ### Positioning the ticks
 
-* You can position ticks with the help of two properties such as distanceFromScale and placement. The property distanceFromScale defines the distance between the scale and ticks. 
-* Placement property is used to locate the ticks with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
+* You can position ticks with the help of two properties such as **distanceFromScale** and **placement**. The property `distanceFromScale` defines the distance between the scale and ticks. 
+* `Placement` property is used to locate the ticks with respect to scale either inside the scale or outside the scale or along the scale. It is an enumerable data type.
 
 
 

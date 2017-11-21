@@ -716,9 +716,26 @@ You can use `LeftLabel` and `RightLabel` property to provide left and right labe
 {% endhighlight %}
 
 
+#### DockOnMap and Dock Position
+
+`dockOnMap` determines whether the legend should be placed outside or inside the map bounds.
+
+`dockPosition` determines the legend placement and it is valid only when dockOnMap is true.
+
+#### Icon
+
+To get `icon` value for legend setting. You can  set `iconHeight` and `iconWidth` property for legend settings.
+
+#### label Orientation
+
+Set the orientation of legend labels by using `labelOrientation` property.
+
+
+#### Show Labels
+
+Enables or Disables the `showLabels`
+
 The following screenshot illustrates a map displaying an interactive legend.
-
-
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 

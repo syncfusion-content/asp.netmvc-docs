@@ -214,7 +214,6 @@ In Equal color mapping, value property contains the values of the field set in `
 Here “MapController.cs” is populated with data of USA Election in “MapController.cs” to provide election data as input datasource.
 
 
-{% tabs %}
 
 {% highlight C# %}
 
@@ -356,7 +355,8 @@ Here “MapController.cs” is populated with data of USA Election in “MapCont
 	)  
 
 {% endhighlight %}
-{% endtabs %} 
+
+
 
 ![](Customization_images/Customization_img3.png)
 
@@ -565,3 +565,78 @@ The following screenshot illustrates a map control displaying a Tooltip with tem
 
 
 ![](Customization_images/Customization_img7.png)
+
+
+### Customize map background
+
+The Map background can be customized by using the `background` property of the Map. 
+
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")
+
+		.Background("skyblue")
+
+	)   
+
+{% endhighlight %} 
+
+
+### Base Map Index 
+
+Specifies the index of the map to determine the shape layer to be displayed, you can use `baseMapIndex` property and the default value is 0.
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")
+
+		.BaseMapIndex(0)
+
+	)   
+
+{% endhighlight %} 
+
+
+
+### Center Position 
+
+
+Specify the `centerPosition` where map should be displayed
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")
+
+		.CenterPosition([38.5000, -98])
+
+	)   
+
+{% endhighlight %} 
+
+
+### Label Settings
+
+The `labelSettings` defines the basic customization settings of labels in the map. 
+
+The below properties are used for `labelSettings`
+
+* `enableSmartLabel` - enable or disable the enableSmartLabel property.
+* `labelLength` - set the labelLength property.
+* `labelPath` - set the labelPath property.
+* `showLabels` - The property specifies whether to show labels or not
+* `smartLabelSize` - set the smartLabelSize property.
+ 
+
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")
+
+		.LabelSettings(lb=>lb.EnableSmartLabels(false).LabelLength(2).ShowLabels(false).SmartLabelSize(LabelSize.Fixed))
+
+	)   
+
+{% endhighlight %} 
+
+

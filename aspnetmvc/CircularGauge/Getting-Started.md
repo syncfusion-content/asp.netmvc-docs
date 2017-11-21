@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-* The ASP.NET MVC Circular Gauge provides support to display the Circular Gauge within your web page and allows you to customize it. This section encompasses the details on how to configure Circular Gauge. 
+* The ASP.NET MVC Circular Gauge provides support to display the **Circular Gauge** within your web page and allows you to customize it. This section encompasses the details on how to configure Circular Gauge. 
 * You will learn how to provide data for a Circular Gauge and display that data in a suitable way. In addition, you will learn how to customize the default Circular Gauge appearance, according to your requirements. 
 * As a result, you will get a Circular Gauge that shows you how the Automobile speedometer works with rpm (Rotation per Minute), kph (Kilometer per hour) and speed level indication (Safe, Caution and Danger). 
 
@@ -62,7 +62,7 @@ Circular Gauge
 
 ## Set Height and Width
 
-Pointers have different height and width so you can set the height and width of the gauge according to your requirements.Set the basic values of the gauge such as height and width of the canvas element values that are to be rendered.
+Pointers have different height and width so you can set the `Height` and `Width` of the gauge according to your requirements.Set the basic values of the gauge such as height and width of the canvas element values that are to be rendered.
 
 {% highlight CSHTML %}
 
@@ -88,7 +88,7 @@ Circular Gauge with Height and Width
 
 ## Set Background Color
 
-The speedometer must have some dark color as background so that its value is clearly visible and you can vary the speed of the pointer by setting ReadOnly as False for user interaction.
+The speedometer must have some dark `BackgroundColor` so that its value is clearly visible and you can vary the speed of the pointer by setting `ReadOnly` as False for user interaction.
 
 
 {% highlight CSHTML %}
@@ -121,9 +121,10 @@ Circular Gauge with Dark Background
 
 ## Provide Scale Values
 
-* The pointer cap can be customized with the following options. Cap radius, cap border color, cap background color, pointer cap border width are some of the properties that are customizable.
-* The speed limit in the gauge has maximum value of 200 kph. So you can set maximum value for the gauge as 200.
-* Major Ticks have the interval value of 20 and minor ticks have the interval value of 5. Show ranges and show indicators are used to display the ranges and indicators in their respective positions.
+* The `Scales` values specifies the pointers, ticks, labels, indicators and ranges of **Circular Gauge**.
+* The `PointerCap` can be customized with the following options. Cap `Radius`, cap `BorderColor`, cap `BackgroundColor`, pointer cap `BorderWidth` are some of the properties that are customizable.
+* The speed limit in the gauge has maximum value of 200 kph. So you can set `Maximum` value for the gauge as 200.
+* Major Ticks have the `MajorIntervalValue` of 20 and minor ticks have the `MinorIntervalValue` of 5. `ShowRanges` and `ShowIndicators` are used to display the ranges and indicators in their respective positions.
 
 {% highlight CSHTML %}
 
@@ -183,7 +184,7 @@ Circular Gauge with Scale Values
 
 ## Add Label Customization
 
-To display the value around the scales, labels are used. By customizing the label color it displays as specified.
+To display the value around the scales, `Labels` are used. By customizing the label `Color` it displays as specified.
 
 {% highlight CSHTML %}
 
@@ -233,7 +234,7 @@ Circular Gauge with Label
 
 ## Add Pointers
 
-Here, you have three pointers that denote the kilometer value, rotation per minute value and torque value.The torque value pointer needs not be similar to the other two pointers. You can set torque pointer as marker pointer. And you can set other attributes for pointer such as background color, border color, length, width and distance from scale.
+Here, you have three `Pointers` that denote the kilometer value, rotation per minute value and torque value.The torque value pointer needs not be similar to the other two pointers. You can set torque pointer as marker pointer. And you can set other attributes for pointer such as `Value`, `ShowBackNeedle`, `Type`, `MarkerType`, `NeedleType`, `BackgroundColor`, `Border` `Color`, `Length`, `Width`, `Radius` and `DistanceFromScale`.
 
 {% highlight CSHTML %}
 
@@ -333,8 +334,9 @@ Circular Gauge with Pointers
 
 ## Add Tick Details
 
-* You can set Major ticks with their width and height equal to Minor ticks. 
-* You can set Color according to your preference for better visibility in dark backgrounds.
+* You can set Major `Ticks` with their `Width` and `Height` equal to Minor `Ticks`. 
+* You can set `Color` according to your preference for better visibility in dark backgrounds.
+* You can specify the tick Type either major or minor type tick and `DistanceFromScale` values.
 * To display and customize the tick value add the following code example. 
 
 
@@ -407,9 +409,9 @@ Circular Gauge with Ticks
 
 ## Add Range Values
 
-* Ranges denote the property of the scale value in the speedometer. The color values of the ranges denote speed variation. Set ShowRanges as True for showing the ranges in the Circular Gauge.
+* Ranges denote the property of the scale value in the speedometer. The color values of the `Ranges` denote speed variation. Set `ShowRanges` as **True** for showing the ranges in the **Circular Gauge**.
 * For Low speed, you can mention it as safe zone; for moderate speed, you can call it as caution zone and for high speed, you can mark it as high speed.
-* You can customize the range with properties such as start value, end value, start width, end width,  background color , border color, etc.,
+* You can customize the range with properties such as `StartValue`, `EndValue`, `StartWidth`, `EndWidth`, `BackgroundColor` , `Border` `Color`, `DistanceFromScale`,etc.,
 
 
 {% highlight CSHTML %}
@@ -498,8 +500,9 @@ Circular Gauge with Ranges
 
 ## Add Indicator Details
 
-* Indicators denote whether the pointers values are in their respective zones or not. Positioning the indicator on the respective range value gives you the required changes.
-* By using Position property, you can set the location of the indicator. StateRanges defines how the indicator should behave when the pointer is in certain values. 
+* Indicators denote whether the pointers values are in their respective zones or not. Positioning the `Indicators` on the respective range value gives you the required changes.
+* By using `Position` property, you can set the location of the indicator. You can also specify `Height`, `Width` and `Type` for indicators. `StateRanges` defines how the indicator should behave when the pointer is in certain values. 
+* You can customize state ranges with properties like `EndValue`, `StartValue`, `BackgroundColor`, `BorderColor`, `Text`, `TextColor`, etc.
 
 {% highlight CSHTML %}
 
@@ -671,7 +674,7 @@ Circular Gauge with Indicators
 
 ## Add Custom Label Details
 
-Custom labels are used to specify the texts that need to be displayed in the gauge. You can customize it through various properties.To display the three range description, custom texts are used here.
+`CustomLabels` are used to specify the texts that need to be displayed in the gauge. You can customize it through various properties such as `Value`, `Position`, `Color`, `Font` `Size`, `FontFamily` and `FontStyle`. To display the three range description, custom texts are used here.
 
 
 {% highlight CSHTML %}

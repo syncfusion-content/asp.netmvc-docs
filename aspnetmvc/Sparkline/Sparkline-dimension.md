@@ -31,7 +31,7 @@ You can customize the Sparkline dimension by setting the width and height for th
 
 ## Set size in pixels 
 
-You can also set the Sparkline dimension by using the `Size` property of the Sparkline.
+You can also set the `Height` and `Width` for Sparkline by using the `Size` property of the Sparkline.
 
 {% highlight cshtml %}
 
