@@ -393,7 +393,10 @@ Treemap is having support for `PaletteColorMapping`. You can set the color for p
 
 	@(Html.EJ().TreeMap("treemap")
 
-	.TreeMapPaletteColorMappingMapping( )
+	.TreeMapPaletteColorMapping(
+
+		//..
+	 )
   
 {% endhighlight %}
 
