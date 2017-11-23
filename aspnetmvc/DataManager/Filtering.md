@@ -372,3 +372,198 @@ Result of the above code example is illustrated as follows.
 
 Result of using “or” condition
 {:.caption}
+
+## Containment Operators
+
+### notcontains
+
+This operator is used to get the records that not contains the filter value.
+
+{% highlight html %}
+
+	@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Adaptor(AdaptorType.ODataAdaptor).CrossDomain(true)
+
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("ej.Query()
+                .from('Orders').select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCountry')
+                .page(1,5).where('ShipCountry', 'notcontains', 'CAN', false)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship City").Width(110).Add();
+		})	
+	)
+
+   
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image12.png) 
+
+### contains
+
+This operator is used to get the records that contains the filter value.
+
+{% highlight html %}
+
+    @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Adaptor(AdaptorType.ODataAdaptor).CrossDomain(true)
+
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("ej.Query()
+                .from('Orders').select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCountry')
+                .page(1,5).where('ShipCountry', 'contains', 'CAN', false)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship City").Width(110).Add();
+		})	
+	)
+
+
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image111.png) 
+
+### in
+
+This operator used to fetch the records with value match with the given filter value. 
+
+{% highlight html %}
+
+    @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Adaptor(AdaptorType.ODataAdaptor).CrossDomain(true)
+
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("ej.Query()
+                .from('Orders').select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCountry')
+                .page(1,5).where('ShipCountry', 'IN', ['INDIA'], false)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship Country").Width(110).Add();
+		})	
+	)
+
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image13.png) 
+
+### notin
+
+This operator used to fetch the records with value not match with the given filter value. 
+
+{% highlight html %}
+
+    @Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").Adaptor(AdaptorType.ODataAdaptor).CrossDomain(true)
+
+	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.DataManagerID("FlatData")
+		.Query("ej.Query()
+                .from('Orders').select('OrderID', 'CustomerID', 'EmployeeID', 'Freight', 'ShipCountry')
+                .page(1,5).where('ShipCountry', 'notin', ['INDIA'], false)")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship Country").Width(110).Add();
+		})	
+	)
+
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image14.png) 
+
+![](Filtering_images/Filtering_image15.png) 
+
+## Lambda Operators
+
+### all
+
+The ALL operator returns TRUE if all the sub query values meet the condition. This operator used to fetch the records of the fields match with the given value’s fields.
+
+{% highlight html %}
+
+    	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship Country").Width(110).Add();
+		})	
+	)
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+    setTimeout(function () {
+        var gridData = [{ OrderID: 10248, CustomerID: "VINET", EmployeeID: 5, OrderDate: new Date(8364186e5), ShipName: "Vins et alcools Chevalier", ShipCity: "Reims", ShipAddress: "59 rue de l'Abbaye", ShipRegion: null, ShipPostalCode: "51100", ShipCountry: "France", Freight: 32.38, Verified: !0 }];
+        var gridData1 = [{ OrderID: 10248, CustomerID: "VINET", EmployeeID: 5, OrderDate: new Date(8364186e5), ShipName: "Vins et alcools Chevalier", ShipCity: "Reims", ShipAddress: "59 rue de l'Abbaye", ShipRegion: null, ShipPostalCode: "51100", ShipCountry: "France", Freight: 32.38, Verified: !0 }];
+        var dataManager = ej.DataManager(gridData);
+        var dataManager1 = ej.DataManager(gridData1);
+        var query1 = ej.Query().select("ShipCountry")
+        var execute1 = dataManager1.executeLocal(query1);
+        var query = ej.Query()
+            .where("ShipCountry", "equal all", execute1, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
+
+        var execute = dataManager.executeLocal(query); // executing query
+        var obj = $("#FlatGrid").ejGrid("instance");
+        obj.dataSource(execute);
+    }, 1000);
+
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image16.png) 
+
+### any
+
+The ANY operator returns TRUE if any of the sub query values meet the condition. The returned data match with any one of the field in existing table.
+
+{% highlight html %}
+
+    	@(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
+		.Columns(col =>
+		{
+			col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+			col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+			col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+			col.Field("ShipCountry").HeaderText("Ship Country").Width(110).Add();
+		})	
+	)
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+    setTimeout(function () {
+        var gridData = window.gridData;
+        var gridData1 = [{ OrderID: 10343, CustomerID: "LEHMS", EmployeeID: 4, OrderDate: new Date(8467002e5), ShipName: "Lehmanns Marktstand", ShipCity: "Frankfurt a.M.", ShipAddress: "Magazinweg 7", ShipRegion: null, ShipPostalCode: "60528", ShipCountry: "Germany", Freight: 110.37, Verified: !0 }, { OrderID: 10344, CustomerID: "WHITC", EmployeeID: 4, OrderDate: new Date(8467866e5), ShipName: "White Clover Markets", ShipCity: "Seattle", ShipAddress: "1029 - 12th Ave. S.", ShipRegion: "WA", ShipPostalCode: "98124", ShipCountry: "USA", Freight: 23.29, Verified: !1 }];
+        var dataManager = ej.DataManager(gridData);
+        var dataManager1 = ej.DataManager(gridData1);
+        var query1 = ej.Query().select("ShipCountry")
+        var execute1 = dataManager1.executeLocal(query1);
+        var query = ej.Query()
+            .where("ShipCountry", "equal any", execute1, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
+        var execute = dataManager.executeLocal(query); // executing query
+		var obj = $("#FlatGrid").ejGrid("instance");
+        obj.dataSource(execute);
+    }, 1000);
+
+{% endhighlight %}
+
+![](Filtering_images/Filtering_image17.png) 
