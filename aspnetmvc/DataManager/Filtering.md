@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering | DataManager | ASP.NET MVC | Syncfusion
-description: filtering
+description: Description about the filtering in DataManager
 platform: ejmvc
 control: DataManager
 documentation: ug
@@ -512,13 +512,13 @@ The ALL operator returns TRUE if all the sub query values meet the condition. Th
 
     setTimeout(function () {
         var gridData = [{ OrderID: 10248, CustomerID: "VINET", EmployeeID: 5, OrderDate: new Date(8364186e5), ShipName: "Vins et alcools Chevalier", ShipCity: "Reims", ShipAddress: "59 rue de l'Abbaye", ShipRegion: null, ShipPostalCode: "51100", ShipCountry: "France", Freight: 32.38, Verified: !0 }];
-        var gridData1 = [{ OrderID: 10248, CustomerID: "VINET", EmployeeID: 5, OrderDate: new Date(8364186e5), ShipName: "Vins et alcools Chevalier", ShipCity: "Reims", ShipAddress: "59 rue de l'Abbaye", ShipRegion: null, ShipPostalCode: "51100", ShipCountry: "France", Freight: 32.38, Verified: !0 }];
+        var data = [{ OrderID: 10248, CustomerID: "VINET", EmployeeID: 5, OrderDate: new Date(8364186e5), ShipName: "Vins et alcools Chevalier", ShipCity: "Reims", ShipAddress: "59 rue de l'Abbaye", ShipRegion: null, ShipPostalCode: "51100", ShipCountry: "France", Freight: 32.38, Verified: !0 }];
         var dataManager = ej.DataManager(gridData);
-        var dataManager1 = ej.DataManager(gridData1);
-        var query1 = ej.Query().select("ShipCountry")
-        var execute1 = dataManager1.executeLocal(query1);
+        var dataSource = ej.DataManager(data);
+        var result = ej.Query().select("ShipCountry")
+        var ShipCountry = dataSource.executeLocal(result);
         var query = ej.Query()
-            .where("ShipCountry", "equal all", execute1, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
+            .where("ShipCountry", "equal all", ShipCountry, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
 
         var execute = dataManager.executeLocal(query); // executing query
         var obj = $("#FlatGrid").ejGrid("instance");
@@ -552,13 +552,13 @@ The ANY operator returns TRUE if any of the sub query values meet the condition.
 
     setTimeout(function () {
         var gridData = window.gridData;
-        var gridData1 = [{ OrderID: 10343, CustomerID: "LEHMS", EmployeeID: 4, OrderDate: new Date(8467002e5), ShipName: "Lehmanns Marktstand", ShipCity: "Frankfurt a.M.", ShipAddress: "Magazinweg 7", ShipRegion: null, ShipPostalCode: "60528", ShipCountry: "Germany", Freight: 110.37, Verified: !0 }, { OrderID: 10344, CustomerID: "WHITC", EmployeeID: 4, OrderDate: new Date(8467866e5), ShipName: "White Clover Markets", ShipCity: "Seattle", ShipAddress: "1029 - 12th Ave. S.", ShipRegion: "WA", ShipPostalCode: "98124", ShipCountry: "USA", Freight: 23.29, Verified: !1 }];
+        var data = [{ OrderID: 10343, CustomerID: "LEHMS", EmployeeID: 4, OrderDate: new Date(8467002e5), ShipName: "Lehmanns Marktstand", ShipCity: "Frankfurt a.M.", ShipAddress: "Magazinweg 7", ShipRegion: null, ShipPostalCode: "60528", ShipCountry: "Germany", Freight: 110.37, Verified: !0 }, { OrderID: 10344, CustomerID: "WHITC", EmployeeID: 4, OrderDate: new Date(8467866e5), ShipName: "White Clover Markets", ShipCity: "Seattle", ShipAddress: "1029 - 12th Ave. S.", ShipRegion: "WA", ShipPostalCode: "98124", ShipCountry: "USA", Freight: 23.29, Verified: !1 }];
         var dataManager = ej.DataManager(gridData);
-        var dataManager1 = ej.DataManager(gridData1);
-        var query1 = ej.Query().select("ShipCountry")
-        var execute1 = dataManager1.executeLocal(query1);
+        var dataSource = ej.DataManager(data);
+        var result = ej.Query().select("ShipCountry")
+        var ShipCountry = dataSource.executeLocal(result);
         var query = ej.Query()
-            .where("ShipCountry", "equal any", execute1, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
+            .where("ShipCountry", "equal any", ShipCountry, false).select("OrderID", "CustomerID", "EmployeeID", "Freight", "ShipCountry");
         var execute = dataManager.executeLocal(query); // executing query
 		var obj = $("#FlatGrid").ejGrid("instance");
         obj.dataSource(execute);
