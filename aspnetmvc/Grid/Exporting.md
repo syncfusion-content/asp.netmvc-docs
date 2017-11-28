@@ -374,7 +374,7 @@ On Exporting, the default routing path to server-side that contains the action n
 
 ## ColumnTemplate Exporting
 
-To export the grid with columnTemplate we have to set `isTemplateColumnInclude` as true in the parameter of the export method. You can handle the template elements in server side event while exporting grid to various files such as Excel, PDF and Word.
+To export the grid with columnTemplate we have to set `IsTemplateColumnIncluded` as true in the parameter of the export method. You can handle the template elements in server side event while exporting grid to various files such as Excel, PDF and Word.
 
 The server side events available in template column exporting and its argument types are listed in the following table.
 
