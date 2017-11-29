@@ -661,9 +661,9 @@ The FileExplorer provides method to assign permissions or access rights to speci
     
     //"Product" is a table name, which is defined in SQL database
 
-    // SQLGetRules() which a function which returns the accees rules
+    // SQLGetRules() which a function which returns the access rules
     
-    SQLFileAccessOperations sqlobj = new SQLFileAccessOnperations("FileExplorerConnection", "Product", SQLGetRules());
+    SQLFileAccessOperations sqlObj = new SQLFileAccessOperations("FileExplorerConnection", "Product", SQLGetRules());
     
     {% endhighlight %}
 
@@ -671,7 +671,7 @@ For this, we have prepared the sample and you can get it from the below link
 
 [sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/ServerOperations-291041509.zip)
 
-N> Here we have fetched the file permissions from the sql table for the files located in sql database.
+N> Here we have fetched the file permissions from the SQL table for the files located in SQL database.
 
 To know more details about file access permission, please refer this [link](https://help.syncfusion.com/aspnetmvc/fileexplorer/access-control)
 
