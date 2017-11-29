@@ -198,10 +198,10 @@ Output for combobox control is as follows.
 
 ![](Combobox_howto_images/howto_icon.png)
 
-## Autofill supported with ComboBox
+## AutoFill supported with ComboBox
 
-The ComboBox supports the `autofill` behaviour with the help
-of `Autofill` property. Whenever you change the input value,
+The ComboBox supports the `AutoFill` behaviour with the help
+of `AutoFill` property. Whenever you change the input value,
 the ComboBox will autocomplete your data by matching the typed character. If no matches
 found, the comboBox will not suggest any item.
 
