@@ -73,8 +73,7 @@ public class Flowers
 
 ## Binding data source
 
-After initializing, populate the ComboBox with data using the **DataSource** property.
-Here, an array of string values is passed to the ComboBox component.
+After initializing, populate the ComboBox with data using the **DataSource** property. Here, an array of string values is passed to the ComboBox component.
 
 
 {% highlight html %}
@@ -98,10 +97,7 @@ Here, an array of string values is passed to the ComboBox component.
 
 ## Custom values
 
-The ComboBox allows the user to give input as custom value which is not required to be present in the predefined
-set of values. By default, this support is enabled by the **AllowCustom**
- property. In this case, both text field and value field are considered as same.
-The custom value will be sent to post back handler when a form is about to be submitted.
+The ComboBox allows the user to give input as custom value which is not required to be present in the predefined set of values. By default, this support is enabled by the **AllowCustom** property. In this case, both text field and value field are considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 
 {% highlight html %}
@@ -165,10 +161,7 @@ Output for allowCustom combobox control is as follows.
 
 By default, the width of the popup list automatically adjusts according to the ComboBox input element's width, and the height of the popup list is '300px'.
 
-The height and width of the popup list can also be customized by using the
-**popupHeight**
-&nbsp;and **popupWidth** properties
-respectively.
+The height and width of the popup list can also be customized by using the **popupHeight** &nbsp;and **popupWidth** properties respectively.
 
 In the following sample, popup list's width and height are configured.
 
