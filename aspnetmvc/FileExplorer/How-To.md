@@ -617,7 +617,7 @@ Here you need to implement new class by sub classing the existing “**BasicFile
     
 Also we have option to configure the AJAX request in client side, please refer link: [http://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings](http://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings) 
 
-### Managing files that is available in SQL database
+## Managing files that is available in SQL database
 
 You can manage the files that are available in database using our FileExplorer control. Here you may use this custom “**SQLFileExplorerOperations**" class for handling file management related operations using SQL database. This class is used to simplify the process on server side. It contains some built-in methods that are used to handle file operations (like read, copy, move, delete, etc.) using SQL database. This class is created by inheriting the abstract class “[BasicFileOperations](https://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.BasicFileOperations.html)”. If is it necessary, you may override the methods in “**SQLFileExplorerOperations**” class.
 
@@ -646,6 +646,34 @@ You can manage the files that are available in database using our FileExplorer c
 After creating the object for “SQLFileExplorerOperations” class in controller part, you have to call the corresponding built-in file operation handling methods available in “SQLFileExplorerOperations” class based on the file operation type.
 
 We have prepared the following sample based on this, [FileExplorer Sample](http://www.syncfusion.com/downloads/support/directtrac/153129/ze/ServerOperations-1702691750#)
+
+
+### File Access permission for the files that is available in SQL database
+
+The FileExplorer provides method to assign permissions or access rights to specific users and group of users. It allows you to define access permissions for folders and files using a set of access rules to user(s).
+
+
+* As per the above details, In controller part, you need to create an object of "SQLFileExplorerOperations" class and additionally you need to pass the `access rules` as a constructor parameter.
+    
+    {% highlight c# %}
+    
+    //Here "FileExplorerConnection" is a connection string name, which is defined in Web.config file. 
+    
+    //"Product" is a table name, which is defined in SQL database
+
+    // SQLGetRules() which a function which returns the accees rules
+    
+    SQLFileAccessOperations sqlobj = new SQLFileAccessOnperations("FileExplorerConnection", "Product", SQLGetRules());
+    
+    {% endhighlight %}
+
+For this, we have prepared the sample and you can get it from the below link
+
+[sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/ServerOperations-291041509.zip)
+
+N> Here we have fetched the file permissions from the sql table for the files located in sql database.
+
+To know more details about file access permission, please refer this [link](https://help.syncfusion.com/aspnetmvc/fileexplorer/access-control)
 
 ## Cross-origin resource sharing support for FileExplorer
 
