@@ -70,6 +70,11 @@ public class Flowers
 
 {% endhighlight %}
 
+Output for ComboBox control is as follows.
+
+
+![](Combobox_getting_started_images/Getting-Started.png)
+
 
 ## Binding data source
 
@@ -93,6 +98,11 @@ After initializing, populate the ComboBox with data using the **DataSource** pro
     </div>
 
 {% endhighlight %}
+
+Output for ComboBox control is as follows.
+
+
+![](Combobox_getting_started_images/Getting-Started1.png)
 
 
 ## Custom values
@@ -215,4 +225,8 @@ public class Flowers
 
 {% endhighlight %}
 
+Output for ComboBox control is as follows.
+
+
+![](Combobox_getting_started_images/popup.png)
 

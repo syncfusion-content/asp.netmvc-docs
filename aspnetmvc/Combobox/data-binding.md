@@ -5,7 +5,7 @@ description: DataBinding support to ComboBox control for Syncfusion ASP.NET MVC
 platform: mvc
 control: ComboBox
 documentation: ug
-keywords: remote date, ComboBox, json data, local data
+keywords: remote data, ComboBox, json data, local data
 ---
 
 # Data Binding
@@ -17,7 +17,7 @@ The ComboBox also supports different kinds of data services such as OData, OData
 | Fields | Type | Description |
 |------|------|-------------|
 | text |  `string` | Specifies the display text of each list item. |
-| value |  `number or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| value |  `string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
 | groupBy |  `string` | Specifies the category under which the list item has to be grouped. |
 | iconCss |  `string` | Specifies the icon class of each list item. |
 
@@ -39,7 +39,7 @@ The ComboBox has support to load array of primitive data such as strings and num
             @{
                 string[] datasource = new string[] { "Badminton", "Cricket", "Football", "Golf", "Tennis" };
                 Html.EJ()
-                    .ComboBox("select")
+                    .ComboBox("ComboBox")
                     .Width("100%")
                     .Datasource(datasource)
                     .Placeholder("Select a game")
@@ -58,7 +58,7 @@ Output for array-data ComboBox control is as follows.
 
 The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the **ComboBoxFields** property.
 
-In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
+In the following example, `id` column and `text` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 
 {% highlight html %}
@@ -67,12 +67,12 @@ In the following example, `Id` column and `Game` column from complex data have b
         <div class="control">
             @{
                 Html.EJ()
-                    .ComboBox("select")
+                    .ComboBox("ComboBoxId")
                     .Width("100%")
                     .Datasource((IEnumerable<Flowers>)ViewBag.datasource)
                     .AllowCustom(true)
                     .ComboBoxFields(f=>f.Text("text").Value("id"))
-                    .Placeholder("Select")
+                    .Placeholder("Select a flower")
                     .Render();
             }
         </div>
@@ -460,7 +460,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 
 {% highlight html %}
                
-       @Html.EJ().ComboBox("ComboBox1").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).ComboBoxFields(df=>df.Text("ShipCountry").Value("OrderID"))
+       @Html.EJ().ComboBox("ComboBoxOData").Datasource(dataSource => dataSource.URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders")).ComboBoxFields(df=>df.Text("ShipCountry").Value("OrderID"))
 		
 {% endhighlight %}
            
