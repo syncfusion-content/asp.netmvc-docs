@@ -880,7 +880,7 @@ The following output is displayed as a result of the above code example.
 
 You can add custom button in the command column by specifying the `Type` property of the `Commands` as `empty` or any other `string` instead of `enum` values.
 
-N> 1. For `Type` property you can assign either `string` value (`edit`) or `enum` value (`ej.Grid.UnboundType.Edit`).
+N> 1. For the Type property, assign any string value other than the default UnboundType.
 N> 2. In command column you can add only buttons.
 
 The following code example describes the above behavior.
