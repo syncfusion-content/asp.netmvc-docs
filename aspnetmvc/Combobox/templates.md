@@ -16,7 +16,7 @@ The ComboBox has been provided with several options to customize each list item,
 
 The content of each list item within the ComboBox can be customized with the help of **ItemTemplate** property.
 
-In the following sample, each list item is splited into two columns to display the relevant data.
+In the following sample, each list item is split into two columns to display the relevant data.
 
 
 
