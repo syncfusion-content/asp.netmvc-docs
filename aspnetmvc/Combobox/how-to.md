@@ -12,14 +12,9 @@ keywords: dataBind, ComboBox, cascading, autofill, icons
 
 ## Configure the Cascading ComboBox
 
-The cascading ComboBox is a series of ComboBox, where the value of one ComboBox depends
-upon the another value. This can be configured by using the `change` event of the parent ComboBox.
-Within that change event handler, data has to be loaded to the child ComboBox based on the selected
-value of the parent ComboBox.
+The cascading ComboBox is a series of ComboBox, where the value of one ComboBox depends upon the another value. This can be configured by using the `change` event of the parent ComboBox. Within that change event handler, data has to be loaded to the child ComboBox based on the selected value of the parent ComboBox.
 
-The following example shows the cascade behavior of the country, state, and city
-ComboBox. Here, the `dataBind` method is used to reflect the property changes immediately
-to the ComboBox.
+The following example shows the cascade behavior of the country, state, and city ComboBox. Here, the `dataBind` method is used to reflect the property changes immediately to the ComboBox.
 
 
 {% highlight html %}
@@ -95,10 +90,7 @@ Output for combobox control is as follows.
 
 ## Show the list items with icons
 
-You can render **icons** to the list items by mapping the
-`IconCss`
-&nbsp;field. This `IconCss` field create a span in the list item with mapped class name
-to allow styling as per your need.
+You can render **icons** to the list items by mapping the `IconCss` &nbsp;field. This `IconCss` field create a span in the list item with mapped class name to allow styling as per your need.
 
 In the following sample, icon classes are mapped with `IconCss` field.
 
@@ -198,12 +190,9 @@ Output for combobox control is as follows.
 
 ![](Combobox_howto_images/howto_icon.png)
 
-## Autofill supported with ComboBox
+## AutoFill supported with ComboBox
 
-The ComboBox supports the `autofill` behaviour with the help
-of `Autofill` property. Whenever you change the input value,
-the ComboBox will autocomplete your data by matching the typed character. If no matches
-found, the comboBox will not suggest any item.
+The ComboBox supports the `AutoFill` behaviour with the help of `AutoFill` property. Whenever you change the input value,the ComboBox will autocomplete your data by matching the typed character. If no matches found, the comboBox will not suggest any item.
 
 In the following sample, showcase that how to work autofill with ComboBox.
 
