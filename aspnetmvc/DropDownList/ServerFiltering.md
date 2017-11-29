@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Functionalities in the DropDownList control for Syncfusion ASP.NET MVC
-description: Functionalities in the DropDownList control for Syncfusion ASP.NET MVC
+title: Server Filtering in the DropDownList control for Syncfusion ASP.NET MVC
+description: Description about server filtering in the DropDownList control for Syncfusion ASP.NET MVC
 platform: mvc
 control: DropDownList
 documentation: ug
