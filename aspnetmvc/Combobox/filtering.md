@@ -10,16 +10,16 @@ keywords: allowFiltering, ComboBox, updateData, case sensitive filtering, filter
 
 # Filtering
 
-The ComboBox has built-in support to filter data items when `allowFiltering` is enabled. The filter
+The ComboBox has built-in support to filter data items when `AllowFiltering` is enabled. The filter
 operation starts as soon as you start typing characters in the component.
 
 To display filtered items in the popup, filter the required data and return it to the ComboBox
 via **updateData** method by using the **filtering** event.
 
-The following sample illustrates how to query the data source and pass the data to the ComboBox
-through the `updateData` method in `filtering` event.
+The following sample illustrates how to query the data source, and pass the data to the ComboBox
+through the `updateData` method in `Filtering` event.
 
-{% tabs %}
+
 
 {% highlight html %}
 
@@ -48,7 +48,7 @@ through the `updateData` method in `filtering` event.
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -73,8 +73,6 @@ through the `updateData` method in `filtering` event.
 {% endhighlight %}
 
 
-{% endtab %}
-
 Output for filtering combobox control is as follows.
 
 
@@ -87,8 +85,6 @@ When filtering the list items, you can set the limit for character count to rais
 filtered data on the ComboBox. This can be done by manual validation within the filter event handler.
 
 In the following example, the remote request does not fetch the search data until the search key contains three characters.
-
-{% tabs %}
 
 {% highlight html %}
 
@@ -122,7 +118,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -147,16 +143,14 @@ In the following example, the remote request does not fetch the search data unti
 {% endhighlight %}
 
 
-{% endtab %}
-
 ## Change the filter type
 
 While filtering, you can change the filter type to `contains`,
 `startsWith`, or `endsWith` for string type within the filter event handler.
 
-In the following examples, data filtering is done with `endsWith` type.
+In the following examples, data filtering is done with the `endsWith` type.
 
-{% tabs %}
+
 
 {% highlight html %}
 
@@ -185,7 +179,7 @@ In the following examples, data filtering is done with `endsWith` type.
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -210,7 +204,7 @@ In the following examples, data filtering is done with `endsWith` type.
 {% endhighlight %}
 
 
-{% endtab %}
+
 
 Output for filtering combobox control is as follows.
 
@@ -224,7 +218,7 @@ by passing the fourth optional parameter of the **where** clause.
 
 The following example shows how to perform case-sensitive filter.
 
-{% tabs %}
+
 
 {% highlight html %}
 
@@ -253,7 +247,7 @@ The following example shows how to perform case-sensitive filter.
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -277,8 +271,6 @@ The following example shows how to perform case-sensitive filter.
 
 {% endhighlight %}
 
-
-{% endtab %}
 
 Output for filtering combobox control is as follows.
 

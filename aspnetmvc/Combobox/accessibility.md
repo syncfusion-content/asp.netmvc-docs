@@ -13,7 +13,7 @@ keywords: keyboard support, ComboBox, aria attributes, keyboard interaction
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies
 the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
 by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who
-use assistive technologies (AT) or those who completely rely on keyboard navigation.
+uses assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
@@ -23,7 +23,7 @@ The ComboBox component uses the `combobox` role, and each list item has an `opti
 | **Properties** | **Functionalities** |
 | --- | --- |
 | aria-haspopup | Indicates whether the ComboBox input element has a popup list or not. |
-| aria-expanded | Indicates whether the popup list has expanded or not. |
+| aria-expanded | Indicates whether the popup list is expanded or not. |
 | aria-selected | Indicates the selected option. |
 | aria-readonly | Indicates the readonly state of the ComboBox element. |
 | aria-disabled | Indicates whether the ComboBox component is in a disabled state or not. |
@@ -44,13 +44,13 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 | <kbd>Enter</kbd> | Selects the focused item and popup list closes when it is in open state. |
 | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 | <kbd>Shift + tab </kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Alt + Down</kbd> | Open the popup list |
-| <kbd>Alt + Up</kbd> | Close the popup list|
+| <kbd>Alt + Down</kbd> | Opens the popup list. |
+| <kbd>Alt + Up</kbd> | Closes the popup list.|
 | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
 | <kbd>Home</kbd> | Selects the first item when popup open state. If it is in closed state, cursor moves to before of first character in input |
 | <kbd>End</kbd> | Selects the last item when popup open state. If it is in closed state, cursor moves to next of last character in input  |
 
-> In the following sample, focus the ComboBox component using <kbd>alt+t</kbd> keys.
+> In the following sample, focus the ComboBox component using the <kbd>alt+t</kbd> keys.
 
 
 {% highlight html%}
@@ -82,7 +82,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 </script>
 {% endhighlight%}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -105,7 +105,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 
 {% endhighlight %}
 
-{% endtab %}
+
 
 Output for accessibility combobox control is as follows.
 

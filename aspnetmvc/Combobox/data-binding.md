@@ -11,7 +11,7 @@ keywords: remote date, ComboBox, json data, local data
 # Data Binding
 
 The ComboBox loads the data either from local data sources or
-remote data services using the `dataSource` property. It supports
+remote data services using the `DataSource` property. It supports
 the data type of `array` or **DataManager**.
 
 The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of `DataManager` adaptors.
@@ -23,7 +23,7 @@ The ComboBox also supports different kinds of data services such as OData, OData
 | groupBy |  `string` | Specifies the category under which the list item has to be grouped. |
 | iconCss |  `string` | Specifies the icon class of each list item. |
 
-> When binding complex data to the ComboBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+> When binding complex data to the ComboBox, the fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Binding local data
 
@@ -51,15 +51,18 @@ The ComboBox has support to load array of primitive data such as strings and num
     </div>
 
 {% endhighlight %}
+Output for array-data combobox control is as follows.
+
+
+![](Combobox_data_binding_images/array_data.png) 
 
 ### 2. Array of JSON data
 
 The ComboBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the **fields** property.
+the appropriate columns should be mapped to the **ComboBoxFields** property.
 
 In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
-{% tabs %}
 
 {% highlight html %}
 
@@ -111,7 +114,6 @@ public class Flowers
 
 {% endhighlight %}
 
-{%endtabs%}
 
 Output for remote-data combobox control is as follows.
 
@@ -125,7 +127,6 @@ data from the database and bind it to the ComboBox.
 
 In the following sample, displayed first 6 contacts from the `customer` table of `Northwind` Data Service.
 
-{% tabs%}
 
 {% highlight html %}
 
@@ -155,8 +156,6 @@ public ActionResult Databindingremote()
 
 {% endhighlight %}
 
-{% endtabs %}
-
 Output for remote-data combobox control is as follows.
 
 
@@ -166,7 +165,6 @@ Output for remote-data combobox control is as follows.
 
 Fetch the Data from SQL data source and initialize the control with DataSource property. Specify the column names in the Fields property. 
 
-{% tabs %}
 
 	{% highlight html %}
     
@@ -211,11 +209,10 @@ Fetch the Data from SQL data source and initialize the control with DataSource p
         }
     {% endhighlight %}
     
-{% endtabs %}
 
 ## LINQ Data Binding
 
-Language-Integrated Query (LINQ) is not only about retrieving data. It is also a powerful tool for transforming data. By using a LINQ query, you can use a source sequence as input and modify it in many ways to create a new output sequence.
+Language-Integrated Query (LINQ) is not only about retrieving data. It is also a powerful tool for transforming data. By using a LINQ query, you can use a source sequence as input, and modify it in many ways to create a new output sequence.
 
 Defines model class
 
@@ -237,7 +234,7 @@ public class Employee
     }
 {% endhighlight %}
 
-In code behind, fetch the data from Employee class and assigned to the ComboBox as follows
+In code behind, fetch the data from Employee class and assigned to the ComboBox are as follows:
 
 {% highlight C# %}
 
@@ -268,9 +265,9 @@ In code behind, fetch the data from Employee class and assigned to the ComboBox 
 
 ## XmlDataSource
 
-XmlDataSource is used to work with XML documents. The following steps explain the details about the data binding from XmlDataSource
+The XmlDataSource is used to work with XML documents. The following steps explain the details about the data binding from XmlDataSource.
 
-Step 1: Create an XML Data source as follows
+Step 1: Create an XML Data source as follows:
 
 {% highlight xml %}
 
@@ -300,7 +297,7 @@ Step 1: Create an XML Data source as follows
     
 {% endhighlight %}
 
-Step 2: Read data from the XML file
+Step 2: Read data from the XML file.
 
 {% highlight C# %}
 
@@ -332,7 +329,7 @@ Step 2: Read data from the XML file
     
 {% endhighlight %}
 
-Step 3: Assign the data to the ComboBox’s DataSource property. Specify the column names in the fields property.
+Step 3: Assign the data to the ComboBox’s DataSource property. Specify the column names in the ComboBoxFields property.
 
 {% highlight Razor %}
 
@@ -346,11 +343,11 @@ Step 3: Assign the data to the ComboBox’s DataSource property. Specify the col
 Bind data to the ComboBox through Entity Framework. Please follow the below steps.
 
 1.	Create an entity data model
-Please refer the [link](http://www.entityframeworktutorial.net/EntityFramework5/create-dbcontext-in-entity-framework5.aspx) for more information
+Please refer to the [link](http://www.entityframeworktutorial.net/EntityFramework5/create-dbcontext-in-entity-framework5.aspx) for more information.
 
-2.	Refer the entity data model to your project and bind the data to the ComboBox
+2.	Refer the entity data model to your project and bind the data to the ComboBox.
 
-In code behind, create an object for the Entity mode (NORTHWNDEntities) and fetch the data from the Employees class and stored it to the List.
+In code behind, create an object for the Entity mode (NORTHWNDEntities), and fetch the data from the Employees class and store it in the List.
 Assign the data to the ComboBox’s DataSource property. Specify the column names in the fields property.
 
 
@@ -430,7 +427,7 @@ The server-side code to retrieve and bind the data to ComboBox are as follows. A
 
 ## LINQ to SQL Data Binding
 
-The LINQ to SQL can be used as the data source of the ComboBox in which the data model of a relational database is mapped to an object model and allow us to use the LINQ technology to access SQL database.
+The LINQ to SQL can be used as the data source of the ComboBox in that the data model of a relational database is mapped to an object model and allow us to use the LINQ technology to access SQL database.
 
 To create LINQ to SQL classes
 •	Right-click the App_Code folder and then click Add New Item.
@@ -439,7 +436,7 @@ To create LINQ to SQL classes
 •	In Server Explorer, drag the database table into the Object Relational Designer window.
 •	The table and its columns are represented as an entity in the designer window.
 
-![](Combobox_data_binding_images/LinqtoSql.png)
+![](Combobox_data_binding_images/LinqtoSql.jpg)
 
 In code behind, fetch the data from classes and stored it to the ViewBag as follows
 
@@ -477,7 +474,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 For OData Version 4 support ODataV4Adaptor should be used. By using URL property of Datasource, you can bind OData Version 4 Service link and specify  Adaptor value as enum AdaptorType.ODataV4Adaptor.
 
  
-For further details about OData service please refer [the link](http://www.odata.org/).
+For further details about OData service refer to [the link](http://www.odata.org/).
 
 {% highlight html %}
 
@@ -492,7 +489,7 @@ N> Events associated with remote data bind is listed [here](http://help.syncfusi
 
 ## WebAPI
 
-Using WebApiAdaptor, you can bind WebApi service’s data to ComboBox. The data from WebApi service must be returned as an object that has property “Items” with its value as data source and another property “Count” with its value as dataSource’s total records count.
+Using WebApiAdaptor, you can bind WebApi service’s data to ComboBox. The data from WebApi service must be returned as an object that has the property “Items” with its value as data source and another property “Count” with its value as dataSource’s total records count.
 
 {% highlight html %}
 

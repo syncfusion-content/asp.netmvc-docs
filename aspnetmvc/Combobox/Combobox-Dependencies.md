@@ -9,12 +9,11 @@ documentation: ug
 
 ##ComboBox Dependencies
 
-The external script dependencies of the ComboBox control are,
+The external script dependencies of the ComboBox control are as follows:
 
 * [jQuery 1.7.1](http://jquery.com/) and later versions.
-* [jQuery.easing](http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js) - to support the animation effects.
 
-The internal script dependency ej.web.all.js is a bundle of all Syncfusion ASP.NET MVC controls. If you use ej.web.all.js in your application, you can leave this section or else you can try to render ComboBox in your application using ej.combobox.min.js file. You can refer the following frameworks and controls in your project.
+The internal script dependency ej.web.all.js is a bundle of all Syncfusion ASP.NET MVC controls. If you use ej.web.all.js in your application, you can leave this section, or else try to render ComboBox in your application using the ej.combobox.min.js file. Refer to the following frameworks and controls in your project.
 
 
 <table>
@@ -35,11 +34,7 @@ The internal script dependency ej.web.all.js is a bundle of all Syncfusion ASP.N
 		<td>The ComboBox’s main file</td>
 	</tr>
 	<tr>
-		<td>ej.scroller.min.js</td>
-		<td>Should be referred when using scrolling in ComboBox.</td>
-	</tr>
-	<tr>
-		<td>ej.draggable.min.js</td>
-		<td>Should be referred when using popup resize functionality in ComboBox.</td>
+		<td>ej.globalize.min.js</td>
+		<td>Should be referred when localization used in ComboBox.</td>
 	</tr>
 </table>

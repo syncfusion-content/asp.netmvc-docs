@@ -13,15 +13,14 @@ keywords: dataBind, ComboBox, cascading, autofill, icons
 ## Configure the Cascading ComboBox
 
 The cascading ComboBox is a series of ComboBox, where the value of one ComboBox depends
-upon  another's value. This can be configured by using the `change` event of the parent ComboBox.
+upon the another value. This can be configured by using the `change` event of the parent ComboBox.
 Within that change event handler, data has to be loaded to the child ComboBox based on the selected
 value of the parent ComboBox.
 
-The following example, shows the cascade behavior of country, state, and city
+The following example shows the cascade behavior of the country, state, and city
 ComboBox. Here, the `dataBind` method is used to reflect the property changes immediately
 to the ComboBox.
 
-{% tabs %}
 
 {% highlight html %}
 
@@ -49,7 +48,7 @@ to the ComboBox.
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         
         List<groups> group = new List<groups>();
@@ -87,7 +86,6 @@ to the ComboBox.
 {% endhighlight %}
 
 
-{% endtab %}
 
 Output for combobox control is as follows.
 
@@ -98,13 +96,12 @@ Output for combobox control is as follows.
 ## Show the list items with icons
 
 You can render **icons** to the list items by mapping the
-[iconCss](api-comboBox.html#fields-fieldsettings)
-&nbsp;field. This `iconCss` field create a span in the list item with mapped class name
+`IconCss`
+&nbsp;field. This `IconCss` field create a span in the list item with mapped class name
 to allow styling as per your need.
 
-In the following sample, icon classes are mapped with `iconCss` field.
+In the following sample, icon classes are mapped with `IconCss` field.
 
-{% tabs %}
 
 {% highlight html %}
 
@@ -166,7 +163,7 @@ In the following sample, icon classes are mapped with `iconCss` field.
 
 {% endhighlight %}
 
-{% highliht c# %}
+{% highlight c# %}
 
         
          public string Name { get; set; }
@@ -195,7 +192,6 @@ In the following sample, icon classes are mapped with `iconCss` field.
 {% endhighlight %}
 
 
-{% endtab %}
 
 Output for combobox control is as follows.
 
@@ -205,13 +201,12 @@ Output for combobox control is as follows.
 ## Autofill supported with ComboBox
 
 The ComboBox supports the `autofill` behaviour with the help
-of [autofill](api-comboBox.html#autofill-boolean) property. Whenever you change the input value,
-the ComboBox will autocomplete your data by matching the typed character. Suppose, if no matches
-found then, comboBox doesn't suggest any item.
+of `Autofill` property. Whenever you change the input value,
+the ComboBox will autocomplete your data by matching the typed character. If no matches
+found, the comboBox will not suggest any item.
 
 In the following sample, showcase that how to work autofill with ComboBox.
 
-{% tabs %}
 
 {% highlight html%}
 
@@ -232,7 +227,7 @@ In the following sample, showcase that how to work autofill with ComboBox.
 
 {% endhighlight%}
 
-{% highliht c# %}
+{% highlight c# %}
 
         public string text { get; set; }
         public string category { get; set; }
@@ -255,7 +250,6 @@ In the following sample, showcase that how to work autofill with ComboBox.
 
 {% endhighlight %}
 
-{% endtab %}
 
 Output for grouping combobox control is as follows.
 
