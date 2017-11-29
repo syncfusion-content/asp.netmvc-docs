@@ -79,7 +79,7 @@ In the following sample, each list item is split into two columns to display the
 
 {% endhighlight %}
 
-Output for item template combobox control is as follows.
+Output for item template ComboBox control is as follows.
 
 
 ![](Combobox_templates_images/item_template.png)
@@ -153,7 +153,7 @@ In the following sample, employees are grouped according to their city.
 
 {% endhighlight %}
 
-Output for group template combobox control is as follows.
+Output for group template ComboBox control is as follows.
 
 
 ![](Combobox_templates_images/group_template.png)
@@ -233,7 +233,7 @@ In the following sample, the list items and its headers are designed and display
 {% endhighlight %}
 
 
-Output for item template combobox control is as follows.
+Output for item template ComboBox control is as follows.
 
 
 ![](Combobox_templates_images/header_template.png)
@@ -312,7 +312,7 @@ In the following sample, footer element displays the total number of list items 
 
 {% endhighlight %}
 
-Output for footer template combobox control is as follows.
+Output for footer template ComboBox control is as follows.
 
 
 ![](Combobox_templates_images/footer_template.png)
@@ -354,7 +354,7 @@ public ActionResult Databinding()
 {% endhighlight %}
 
 
-Output for no records template combobox control is as follows.
+Output for no records template ComboBox control is as follows.
 
 
 ![](Combobox_templates_images/no_records_template.png)

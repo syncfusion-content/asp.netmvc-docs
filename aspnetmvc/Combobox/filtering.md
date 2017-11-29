@@ -70,7 +70,7 @@ The following sample illustrates how to query the data source, and pass the data
 {% endhighlight %}
 
 
-Output for filtering combobox control is as follows.
+Output for filtering ComboBox control is as follows.
 
 
 ![](Combobox_filtering_images/filtering.png)
@@ -201,7 +201,7 @@ In the following examples, data filtering is done with the `endsWith` type.
 
 
 
-Output for filtering combobox control is as follows.
+Output for filtering ComboBox control is as follows.
 
 
 ![](Combobox_filtering_images/filter_type.png)
@@ -266,7 +266,7 @@ The following example shows how to perform case-sensitive filter.
 {% endhighlight %}
 
 
-Output for filtering combobox control is as follows.
+Output for filtering ComboBox control is as follows.
 
 
 ![](Combobox_filtering_images/case_sensitive_filtering.png)

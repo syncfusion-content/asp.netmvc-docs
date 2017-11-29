@@ -151,7 +151,7 @@ public class Flowers
 {% endhighlight %}
 
 
-Output for allowCustom combobox control is as follows.
+Output for allowCustom ComboBox control is as follows.
 
 
 ![](Combobox_getting_started_images/Combobox_data_binding_img1.png) 

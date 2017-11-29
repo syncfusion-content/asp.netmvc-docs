@@ -84,7 +84,7 @@ to the ComboBox.
 
 
 
-Output for combobox control is as follows.
+Output for ComboBox control is as follows.
 
 
 ![](Combobox_howto_images/howto_cascading.png)
@@ -188,7 +188,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
 
 
 
-Output for combobox control is as follows.
+Output for ComboBox control is as follows.
 
 
 ![](Combobox_howto_images/howto_icon.png)
@@ -196,7 +196,7 @@ Output for combobox control is as follows.
 ## AutoFill supported with ComboBox
 
 The ComboBox supports the `AutoFill` behavior with the help of `AutoFill` property. Whenever you change the input value,
-the ComboBox will autocomplete your data by matching the typed character. If no matches found, the comboBox will not suggest any item.
+the ComboBox will autocomplete your data by matching the typed character. If no matches found, the ComboBox will not suggest any item.
 
 In the following sample, showcase that how to work autofill with ComboBox.
 
@@ -244,7 +244,7 @@ In the following sample, showcase that how to work autofill with ComboBox.
 {% endhighlight %}
 
 
-Output for grouping combobox control is as follows.
+Output for grouping ComboBox control is as follows.
 
 
 ![](Combobox_howto_images/autofill.png)

@@ -59,7 +59,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 
 
-Output for grouping combobox control is as follows.
+Output for grouping ComboBox control is as follows.
 
 
 ![](Combobox_grouping_images/grouping.png)

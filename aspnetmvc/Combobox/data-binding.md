@@ -49,7 +49,7 @@ The ComboBox has support to load array of primitive data such as strings and num
     </div>
 
 {% endhighlight %}
-Output for array-data combobox control is as follows.
+Output for array-data ComboBox control is as follows.
 
 
 ![](Combobox_data_binding_images/array_data.png) 
@@ -112,7 +112,7 @@ public class Flowers
 {% endhighlight %}
 
 
-Output for remote-data combobox control is as follows.
+Output for remote-data ComboBox control is as follows.
 
 
 ![](Combobox_data_binding_images/json_data.png) 
@@ -152,7 +152,7 @@ public ActionResult Databindingremote()
 
 {% endhighlight %}
 
-Output for remote-data combobox control is as follows.
+Output for remote-data ComboBox control is as follows.
 
 
 ![](Combobox_data_binding_images/remote_data.png) 
