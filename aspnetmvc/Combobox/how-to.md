@@ -102,7 +102,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
 
    <div class="frame">
         <div class="control">
-            @Html.EJ().ComboBox("selectmailtools").Datasource((IEnumerable<IconCss>)ViewBag.datasource).ComboBoxFields(f => f.Text("Name").IconCss("IconClass")).Placeholder("Select a icon").Width("100%")
+            @Html.EJ().ComboBox("maillots").Datasource((IEnumerable<IconCss>)ViewBag.datasource).ComboBoxFields(f => f.Text("Name").IconCss("IconClass")).Placeholder("Select a icon").Width("100%")
         </div>
     </div>
     <style>
@@ -195,7 +195,7 @@ Output for combobox control is as follows.
 
 ## AutoFill supported with ComboBox
 
-The ComboBox supports the `AutoFill` behaviour with the helpof `AutoFill` property. Whenever you change the input value,
+The ComboBox supports the `AutoFill` behavior with the help of `AutoFill` property. Whenever you change the input value,
 the ComboBox will autocomplete your data by matching the typed character. If no matches found, the comboBox will not suggest any item.
 
 In the following sample, showcase that how to work autofill with ComboBox.
