@@ -10,7 +10,9 @@ documentation: ug
 
 The Autocomplete allows list of data to be displayed in several columns and column collection can be defined and customized through the **MultiColumnSettings** property.
 
-In AutoComplete Multiple Column search is based on **StringFormat** property which specifies column indices.
+In AutoComplete Multiple Column search is based on **searchColumnIndices** property which allows user to search text for any number of fields in the suggestion list without modifying the selected text format.
+
+In AutoComplete Multiple Column searched value is updated to autocomplete input box based on **StringFormat** property which specifies values to updated.
 
 N> **StringFormat** as “{0} ({1}) ({2})” means search based on 0, 1 and 2 columns data.
 
@@ -48,7 +50,7 @@ The following steps explain the configuration of the Multiple Columns for an Aut
     {
     obj1.Field("uniqueKey").HeaderText("Unique Key").Add();
     obj1.Field("text").HeaderText("Text").Add();
-    }).ShowHeader(true).StringFormat("{0} ({1})"))
+    }).ShowHeader(true).SearchColumnIndices(new List<int> { 0,1,2,3 }).StringFormat("{0}"))
 
         </div>
         
