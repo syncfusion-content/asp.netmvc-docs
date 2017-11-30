@@ -1,3 +1,12 @@
+---
+layout: post
+title:  ComboBox | ComboBox | ASP.NET MVC | Syncfusion
+description: overview
+platform: ejmvc
+control: ComboBox 
+documentation: ug
+---
+
 # Overview
 
 The ComboBox component allows the user to type a value or choose an option from the list of predefined options.
