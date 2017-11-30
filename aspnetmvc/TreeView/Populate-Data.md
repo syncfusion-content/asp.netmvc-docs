@@ -364,6 +364,59 @@ Above data can be directly assigned to [DataSource](http://help.syncfusion.com/c
     {% endhighlight %}
     
     
+### Nested Object Support
+
+The nested object support is provided for the TreeView component. Please find the following data list which contains the details about tree nodes.
+    
+    
+    {% highlight c# %}
+    
+        public partial class TreeViewController : Controller
+        {
+            List<LoadData> load = new List<LoadData>();
+            public ActionResult TreeViewFeatures()
+            {
+                load.Add(new LoadData { Id = 1, Parent = 0, Text = new InnerData { fName = "Item 1" } });
+                load.Add(new LoadData { Id = 2, Parent = 0, Text = new InnerData { fName = "Item 2" } });
+                load.Add(new LoadData { Id = 3, Parent = 0, Text = new InnerData { fName = "Item 3" } });
+                load.Add(new LoadData { Id = 4, Parent = 1, Text = new InnerData { fName = "Item 1.1" } });
+                load.Add(new LoadData { Id = 5, Parent = 1, Text = new InnerData { fName = "Item 1.2" } });
+                load.Add(new LoadData { Id = 6, Parent = 3, Text = new InnerData { fName = "Item 3.1" } });
+                ViewBag.datasource = load;
+                return View();
+            }
+        }
+        public class LoadData
+        {
+            public int Id { get; set; }
+            public int Parent { get; set; }
+            public InnerData Text { get; set; }
+        }
+        public class InnerData
+        {
+            public string fName { get; set; }
+        }
+
+    {% endhighlight %}
+    
+    
+    
+Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
+    
+    
+    
+    {% highlight razor %}
+    
+    @(Html.EJ().TreeView("tree")
+        .TreeViewFields(field =>
+            field.Datasource((IEnumerable<LoadData>)ViewBag.datasource)
+            .Id("Id")
+            .ParentId("Parent")
+            .Text("Text.fName")
+        )
+    )
+    
+    {% endhighlight %}
     
 ## Remote Data
 
