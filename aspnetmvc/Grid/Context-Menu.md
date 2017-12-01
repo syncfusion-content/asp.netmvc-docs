@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu
 
-Context menu is used to improve user action with Grid using popup menu. It can be shown by defining `EnableContextMenu` property of `ContextMenuSettings` as true. Context menu has option to add default items in `ContextMenuItems` property of `ContextMenuSettings` and customized items in `CustomContextMenuItems` property of `ContextMenuSettings`.
+Context menu is used to improve the user action with Grid using popup menu. It can be shown by defining the `EnableContextMenu` property of `ContextMenuSettings` as true. Context menu has option to add default items in the `ContextMenuItems` property of `ContextMenuSettings` and customized items in the `CustomContextMenuItems` property of `ContextMenuSettings`.
 
 ## Default Context Menu items
 
@@ -35,7 +35,7 @@ Please find the below table for default context menu items and its actions.
                 Sort in Ascending Order
             </td>
             <td>
-                Sort column in Ascending order
+                Sort column in Ascending order.
             </td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@ Please find the below table for default context menu items and its actions.
                 Sort in Descending Order
             </td>
             <td>
-                Sort column in Descending order
+                Sort column in Descending order.
             </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@ Please find the below table for default context menu items and its actions.
                 Group
             </td>
             <td>
-                Group the current column
+                Group the current column.
             </td>
         </tr>
         <tr>
@@ -59,7 +59,7 @@ Please find the below table for default context menu items and its actions.
                 Ungroup
             </td>
             <td>
-                Ungroup the current column if already grouped
+                Ungroup the current column if already grouped.
             </td>
         </tr>
         <tr>
@@ -70,7 +70,7 @@ Please find the below table for default context menu items and its actions.
                 Add Record
             </td>
             <td>
-                Start Add new record
+                Start Add new record.
             </td>
         </tr>
         <tr>
@@ -78,7 +78,7 @@ Please find the below table for default context menu items and its actions.
                 Edit Record
             </td>
             <td>
-                Start Edit in current record
+                Start Edit in current record.
             </td>
         </tr>
         <tr>
@@ -86,7 +86,7 @@ Please find the below table for default context menu items and its actions.
                 Delete Record
             </td>
             <td>
-                Delete the current record
+                Delete the current record.
             </td>
         </tr>
         <tr>
@@ -94,7 +94,7 @@ Please find the below table for default context menu items and its actions.
                 Save
             </td>
             <td>
-                Save the record if Add/Edit record is started
+                Save the record if Add/Edit record is started.
             </td>
         </tr>
         <tr>
@@ -102,7 +102,7 @@ Please find the below table for default context menu items and its actions.
                 Cancel
             </td>
             <td>
-                Cancel Added/Edited state
+                Cancel Added/Edited state.
             </td>
         </tr>
         <tr>
@@ -113,7 +113,7 @@ Please find the below table for default context menu items and its actions.
                 Next Page
             </td>
             <td>
-                Go to Next Page
+                Go to Next Page.
             </td>
         </tr>
         <tr>            
@@ -121,7 +121,7 @@ Please find the below table for default context menu items and its actions.
                 Last Page
             </td>
             <td>
-                Go to Last page
+                Go to Last page.
             </td>
         </tr>
         <tr>
@@ -129,7 +129,7 @@ Please find the below table for default context menu items and its actions.
                 Previous page
             </td>
             <td>
-                Go to previous page
+                Go to previous page.
             </td>
         </tr>
         <tr>
@@ -137,7 +137,7 @@ Please find the below table for default context menu items and its actions.
                 First page
             </td>
             <td>
-                Go to first page
+                Go to first page.
             </td>
         </tr>
  </table>
@@ -222,7 +222,7 @@ N> `AllowGrouping`, `AllowSorting` should be enabled to perform default context 
 
 ## Custom Context Menu
 
-Custom context menu is used to create your own menu item and its action. To add customized context menu items, you need to use `ContextMenuSettings.CustomContextMenuItems` property and to bind required actions for this, use `ContextClick` event.
+Custom context menu is used to create your own menu item and its action. To add customized context menu items, you need to use the `ContextMenuSettings.CustomContextMenuItems` property and to bind required actions for this, use the `ContextClick` event.
 
 
 {% tabs %}
@@ -284,7 +284,7 @@ Custom context menu is used to create your own menu item and its action. To add 
 
 ## Sub Context Menu
 
-Sub context menu is used to add customized sub menu to the custom context menu item. To add a sub context menu, you need to use `ContextMenuSettings.SubContextMenu` property and to bind required actions for this, use `ContextClick` event.
+Sub context menu is used to add customized sub menu to the custom context menu item. To add a sub context menu, you need to use the `ContextMenuSettings.SubContextMenu` property and to bind required actions for this, use the `ContextClick` event.
 
 {% tabs %}
 {% highlight RAZOR %}
@@ -351,7 +351,7 @@ Sub context menu is used to add customized sub menu to the custom context menu i
 
 ## Sub Context Menu with Template
 
-On rendering the Sub context menu items, the customized sub menu items created by using `ContextMenuSettings.SubContextMenu.Template` property.
+On rendering the Sub context menu items, the customized sub menu items is created by using the `ContextMenuSettings.SubContextMenu.Template` property.
 
 {% tabs %}
 {% highlight RAZOR %}
