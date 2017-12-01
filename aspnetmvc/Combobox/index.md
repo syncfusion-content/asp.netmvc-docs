@@ -20,6 +20,8 @@ When an arrow icon accompanied with this component is pressed, the dropdown disp
 
 * **[Grouping](https://help.syncfusion.com/aspnetmvc/combobox/grouping)** - Supports grouping of logically related items under a single or specific category.
 
+* **[Sorting](https://help.syncfusion.com/aspnetmvc/combobox/sorting)** - Supports sorting of list items in an alphabetical order (either ascending or descending).
+
 * **[Filtering](https://help.syncfusion.com/aspnetmvc/combobox/filtering)** - Allows filtering of list items based on a character typed in the component.
 
 * **[Templates](https://help.syncfusion.com/aspnetmvc/combobox/templates)** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.

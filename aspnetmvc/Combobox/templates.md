@@ -29,8 +29,10 @@ In the following sample, each list item is split into two columns to display the
                     .Width("100%")
                     .Datasource((IEnumerable<empList>)ViewBag.datasource)
                     .ComboBoxFields(h=>h.Text("text"))                    
-                    .ItemTemplate("<div><img class=\"eimg\" src=\"../Images/combobox/${eimg}.png\" alt=\"employee\"/><div class=\"ename\"> ${text} </div><div class=\"temp\"> ${country} </div></div>")                    
-                    .Placeholder("Select a country")
+                    .HeaderTemplate("<div class=\"head\">  Photo  <span style=\"padding-left:42px\"> Contact Info </span></div>")
+                    .ItemTemplate("<div><img class=\"eimg\" src=\"../Images/combobox/${eimg}.png\" alt=\"employee\"/><div class=\"ename\"> ${text} </div><div class=\"temp\"> ${country} </div></div>")
+                     .FooterTemplate("<div class=\"Foot\"> Total Items Count: 5 </div>")
+                    .Placeholder("Select a employee")
                     .Render();
             }
         </div>
