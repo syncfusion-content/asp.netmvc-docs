@@ -540,10 +540,10 @@ It returns the current cell and row of PDF.
 ExcelChildGridInfo
 </td>
 <td>
-currentCell, Row
+current row, row data, GridProperties
 </td>
 <td>
-current row, row data, GridProperties
+Customize the cell and child Grid
 </td>
 </tr>
 <tr>
@@ -551,10 +551,10 @@ current row, row data, GridProperties
 PdfChildGridInfo
 </td>
 <td>
-currentCell, Row
+current row, row data, GridProperties
 </td>
 <td>
-current row, row data, GridProperties
+Customize the cell and child Grid
 </td>
 </tr>
 <tr>
