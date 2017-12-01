@@ -9,11 +9,11 @@ documentation: ug
 
 # Web Accessibility
 
-Web Accessibility is achieved in the Grid control through Keyboard Navigation and WAI-ARIA Standard. 
+Web Accessibility is achieved in Grid control through the Keyboard Navigation and WAI-ARIA Standard. 
 
 ## Keyboard Navigation
 
-Supported Keyboard Interactions keys with its description are tabulated as follows
+Supported Keyboard Interactions keys with its description are tabulated as follows.
 
 <table>
 <tr>
@@ -130,7 +130,7 @@ Collapse All visible groups</td></tr>
 
 ## WAI - ARIA
 
-This helps enable better user interaction in ejGrid and uses the W3C's Widget Design Patterns in the WAI specification and added customize attributes. Please find the list of ARIA attribute used in Grid.
+This helps to enable better user interaction in ejGrid and uses the W3C's Widget Design Patterns in the WAI specification and added customize attributes. Please find the list of ARIA attribute used in Grid.
 
 * grid (role)
 * row (role)
