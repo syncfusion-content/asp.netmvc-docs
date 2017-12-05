@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting
 
-`Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar, `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is
+The `Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar the `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using the `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code snippet for this is as follows.
 
 {% tabs %}
  
@@ -119,9 +119,9 @@ documentation: ug
 
 # Hierarchy Grid Exporting
 
-Grid will be exported with its child Grid. This can be achieved by enabling `IncludeChildGrid` property of the respective Exporting classes like `GridExcelExport`, `GridWordExport` and `GridPdfExport` and Include the dataSource needed for ChildGrid in the GridProperties object after deserializing them. Remaining procedures will be same as the normal Grid Exporting.
+Grid will be exported with its child Grid. This can be achieved by enabling the `IncludeChildGrid` property of the respective Exporting classes like `GridExcelExport`, `GridWordExport` and `GridPdfExport` are included in the dataSource needed for ChildGrid in the GridProperties object after deserializing them. Remaining procedures will be same as the normal Grid Exporting.
 
-N> Excel File will be exported in the collapsed state with the expand/collapse icon whereas other file-formats like Pdf and Word will be exported in expanded state.
+N> Excel File will be exported in the collapsed state with the expand/collapse icon whereas other file-formats like Pdf and Word will be exported in the expanded state.
 
 {% tabs %}
  
@@ -233,7 +233,7 @@ N> Excel File will be exported in the collapsed state with the expand/collapse i
 
 ## Server Dependencies
 
-Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for grid Export as follows
+Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for the Grid Export is as follows.
 
     1.  Syncfusion.EJ
     2.  Syncfusion.EJ.Export
@@ -254,7 +254,7 @@ Currently server helper function allows following three types of exporting.
 
 ##  Server side handlers
 
-In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter, you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, PDF and word documents.
+In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter and you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, PDF and word documents.
 
 {% tabs %}
  
@@ -363,13 +363,13 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 {% endtabs %} 
 
-On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for PDF Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when Grid is rendered in GridFeatures View Page of Home Controller, then on Excel exporting Grid Content, the default routing path is ~/Home/ExportToExcel.
+On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for PDF Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when the Grid is rendered in GridFeatures View Page of the Home Controller, then on Excel exporting Grid Content the default routing path will be ~/Home/ExportToExcel.
 
 
 
 ## Export Mapper in MVC
 
-`Mappers` Grid property is used to modify the default routing path during exporting. By using Mappers, you can use any action name in Controller for exporting and the action can be in any controller (Need not to be in Grid View Page Controller).
+The `Mappers` Grid property is used to modify the default routing path during exporting. By using Mappers, you can use any action name in Controller for exporting and the action can be in any controller (Need not to be in Grid View Page Controller).
 
 {% tabs %}
  
@@ -488,9 +488,9 @@ On Exporting, the default routing path to server-side that contains the action n
 
 ## ColumnTemplate Exporting
 
-To export the grid with columnTemplate we have to set `IsTemplateColumnIncluded` as true in the parameter of the export method. You can handle the template elements in server side event while exporting grid to various files such as Excel, PDF and Word.
+To export the grid with columnTemplate we have to set the `IsTemplateColumnIncluded` as true in the parameter of the export method. You can handle the template elements in server-side event while exporting grid to various files such as Excel, PDF and Word.
 
-The server side events available in template column exporting and its argument types are listed in the following table.
+The server-side events available in template column exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
@@ -573,7 +573,7 @@ Customize the cell and child Grid
 
 </table>
 
-You can modify the template column of exporting files using server events. The code snippet for this is
+You can modify the template column of exporting files using server events. The code snippet for this is as follows.
 
 {% tabs %}
  
@@ -697,9 +697,9 @@ public partial class GridController : Controller
 
 ## DetailTemplate Exporting
 
-To export the grid with detail template we have to set `IncludeDetailRow` as true in the parameter of the export method. You can handle template elements using server side event while exporting grid to various files such as Excel, PDF and Word.
+To export the grid with detail template we have to set the `IncludeDetailRow` as true in the parameter of the export method. You can handle template elements using server-side event while exporting grid to various files such as Excel, PDF and Word.
 
-The server side events available in detail template exporting and its argument types are listed in the following table.
+The server-side events available in detail template exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
@@ -748,7 +748,7 @@ It returns the current cell and row of PDF.
 </tr>
 </table>
 
-You can modify the detailTemplate of exporting files using server events. The code snippet for this is
+You can modify the detailTemplate of exporting files using server events. The code snippet for this is as follows:
 
 {% tabs %}
  
@@ -898,8 +898,8 @@ public class GridController : Controller
 
 ##  Multiple Exporting
 
-`AllowMultipleExporting` property allows you to export multiple grids into same file. Once you enable `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
-In controller action method you are able to export all the grids available in current page. The code snippet for this is
+The `AllowMultipleExporting` property allows you to export multiple grids into same file. Once you enable the `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
+In controller action method you are able to export all the grids available in the current page. The code snippet for this is as follows.
 
 {% tabs %}
  
@@ -1011,7 +1011,7 @@ In controller action method you are able to export all the grids available in cu
   
 ## Export required grid in single file
 
-You can export required grids in single file using `ej.Grid.exportAll` method. This method can be used with export action and array of jQuery selector of grid which need to be export. The code snippet for it is
+You can export required grids in single file using the `ej.Grid.exportAll` method. This method can be used with export action and array of jQuery selector of grid which need to be export. The code snippet for it is as follows:
 
 {% highlight js %}
 
@@ -1023,7 +1023,7 @@ You can export required grids in single file using `ej.Grid.exportAll` method. T
 
 ## List of properties ignored on export
 
-Following are the list of properties that are exclude during grid export, to reduce the unwanted data transfer to server.  
+Following are the list of properties that are excluded during grid export, to reduce the unwanted data transfer to server.  
 
 * dataSource
 * query
@@ -1036,9 +1036,9 @@ Following are the list of properties that are exclude during grid export, to red
 ##Export only visible records
 
 
-By default `pageSettings` is ignored in export to facilitate all pages export. To achieve current visible page record export, `pageSettings` should be removed from ignore list using following code.
+By default the `pageSettings` is ignored in export to facilitate all pages export. To achieve current visible page record export, the `pageSettings` should be removed from ignore list using the following code.
 
-The snippet for this is.
+The snippet for this is as follows:
 
 {% highlight js %}
 
@@ -1081,7 +1081,7 @@ On server before calling the `Export` function, the data source should be proces
 
 ## Local data 
 
-By default, client data source is not sent to server to prevent unwanted data transfer since all data origin is server. In case, if you don't want to query the data source again for exporting in server, the grid's client [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) can be sent to server on export PostBack by removing the [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) property in grid's ignore list. The code snippet for this as follows
+By default, client data source is not sent to server to prevent the unwanted data transfer since all data origin is in server. In case, if you don't want to query the data source again for exporting in server, the grid's client [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) can be sent to server on export PostBack by removing the [`dataSource`](http://help.syncfusion.com/js/api/ejgrid#members:datasource) property in grid's ignore list. The code snippet for this is as follows.
 
 {% highlight js %}
 
@@ -1094,7 +1094,7 @@ grid.ignoreOnExport.splice(grid.ignoreOnExport.indexOf('dataSource'), 1);
 
 ## Themes
 
-The grid export have 13 theme option to match with our [built-in control themes](http://helpjs.syncfusion.com/js/theming-in-essential-javascript-components#). They are
+The grid export have 13 theme option to match with our [built-in control themes](http://helpjs.syncfusion.com/js/theming-in-essential-javascript-components#). They are as follows.
 
 <table>
 <tr><th>Enum</th><th>Equivalent string input</th></tr>
@@ -1128,7 +1128,7 @@ The grid export have 13 theme option to match with our [built-in control themes]
 <tr><td>ExportTheme.None</td><td>none</td></tr>
 </table>
 
-Also, it has `none` option which will export the grid without any theme.  The desired theme name can be passed as a parameter to `Export` method and the code snippet for this as follows
+Also, it has `none` option which will export the grid without any theme.  The desired theme name can be passed as a parameter to `Export` method and the code snippet for this is as follows.
 
 {% tabs %}
 
@@ -1263,47 +1263,47 @@ The font name</td></tr>
 <td>
 HeaderBorderColor</td><td>
 System.Drawing.Color</td><td>
-The border color of the grid header</td></tr>
+The border color of the grid header.</td></tr>
 <tr>
 <td>
 HeaderFontSize</td><td>
 int</td><td>
-The size of the grid header font</td></tr>
+The size of the grid header font.</td></tr>
 <tr>
 <td>
 GHeaderBgColor</td><td>
 System.Drawing.Color</td><td>
-The Column Header cell color and the Group Header Indent cell color</td></tr>
+The Column Header cell color and the Group Header Indent cell color.</td></tr>
 <tr>
 <td>
 ContentBgColor</td><td>
 System.Drawing.Color</td><td>
-The background color of the content</td></tr>
+The background color of the content.</td></tr>
 <tr>
 <td>
 ContentBorderColor</td><td>
 System.Drawing.Color</td><td>
-The border color of the grid content</td></tr>
+The border color of the grid content.</td></tr>
 <tr>
 <td>
 ContentFontSize</td><td>
 int</td><td>
-The font size of the grid content</td></tr>
+The font size of the grid content.</td></tr>
 <tr>
 <td>
 GContentFontColor</td><td>
 System.Drawing.Color</td><td>
-The font color of the record field cell</td></tr>
+The font color of the record field cell.</td></tr>
 <tr>
 <td>
 GCaptionBorderColor</td><td>
 System.Drawing.Color</td><td>
-The border color of the group caption cell</td></tr>
+The border color of the group caption cell.</td></tr>
 <tr>
 <td>
 AltRowBgColor</td><td>
 System.Drawing.Color</td><td>
-The background color of the alternative row of the grid content</td></tr>
+The background color of the alternative row of the grid content.</td></tr>
 </table>
 
 
@@ -1456,7 +1456,7 @@ The background color of the alternative row of the grid content</td></tr>
 
 ## Exporting server events
 
-`Exporting` feature supports server side event handler. You can handle server side event while exporting grid to various files such as Excel, PDF and Word. The various server side events available in Exporting and its argument types are listed in the following table.
+`Exporting` feature supports server-side event handler. You can handle server-side event while exporting grid to various files such as Excel, PDF and Word. The various server-side events available in Exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
@@ -1539,7 +1539,7 @@ It returns the current row of PDF.
 </table>
 
 
-You can customize the particular cell or particular  row of exporting files using server events. The code snippet for this is
+You can customize the particular cell or particular  row of exporting files using server events. The code snippet for this is as follows.
 
 {% tabs %}
  
