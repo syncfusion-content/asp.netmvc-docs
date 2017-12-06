@@ -618,3 +618,71 @@ The following code example describes the above behavior.
 The following output is displayed as a result of the above code example.
 
 ![](Columns_images/column_img8.png)
+
+## Show Empty Kanban Columns
+
+You can render empty kanban columns using the property `ShowColumnWhenEmpty`.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+             @(Html.EJ().Kanban("Kanban")
+                    .DataSource((IEnumerable<object>)ViewBag.datasource)
+                    .ShowColumnWhenEmpty(true)					
+                    .Columns(col =>
+                     {
+                       col.HeaderText("Backlog").Key("Open").Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+					   col.HeaderText("Testing").Key("Testing").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                    })
+                    .KeyField("Status")
+                    .Fields(field =>
+                    {
+                        field.Content("Summary")  
+                            .PrimaryKey("Id");
+                    })
+					.EditSettings(edit =>
+                    {
+                            edit.AllowAdding(true)
+                                .AllowEditing(true)
+                                .EditItems(e =>
+                                {
+                                    e.Field("Id").ValidationRules(rule => { rule.AddRule("required", true).AddRule("number", true); }).Add();
+                                    e.Field("Status").Add();
+                                    e.Field("Assignee").Add();
+                                    e.Field("Estimate").EditType(KanbanEditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).ValidationRules(rule => { rule.AddRule("range", "[0,1000]"); }).Add();
+                                    e.Field("Summary").EditType(KanbanEditingType.TextArea).ValidationRules(rule => { rule.AddRule("required", true); }).Add();
+                                }).EditMode(KanbanEditMode.Dialog);
+                    })
+                )
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser
+    {
+        public partial class KanbanController : Controller
+        {
+            //
+            // GET: /Kanban/
+            public ActionResult KanbanFeatures()
+            {
+                var DataSource = new NorthwindDataContext().Tasks.Take(0).ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+            }
+        }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](Columns_images/column_img10.png)
