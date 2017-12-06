@@ -12,21 +12,21 @@ documentation: ug
 This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications. There are four ways for embedding our controls into ASP.NET application:
 
 1. Through Syncfusion Project Template
-3. Through Syncfusion Project Conversion 
+3. Through Syncfusion Project Conversion
 3. Through Syncfusion NuGet Packages
 4. Through Manual Integration into the new/existing Application
 
-The procedures that are followed in manual integration process is entirely automated, when we create an application using Syncfusion Project template.
+The procedures that are followed in manual integration process are entirely automated, when we create an application using Syncfusion Project template.
 
-The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4 , MVC 5 & MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application. 
+The similar steps are followed for integrating the Syncfusion controls into MVC 3, MVC 4, MVC 5, and MVC6 applications, the only thing that makes it a little bit different is the reference assemblies version chosen for each of the target MVC application.
 
 ## Through Syncfusion Project Template
 
 Syncfusion provides the Visual Studio Project Templates for the Syncfusion ASP.NET MVC platform to create a Syncfusion MVC application.
 
-The **Project** **Configuration** **Wizard** automates the process of configuring the required Syncfusion assemblies, scripts and their styles within the newly created application. Lets look onto these topics in detail in the below sections.
+The **Project** **Configuration** **Wizard** automates the process of configuring the required Syncfusion assemblies, scripts and their styles within the newly created application. Lets look onto these topics in detail in the following sections.
 
-1. In Visual Studio, create a New **Syncfusion** **ASP.NET** **MVC** **Application** project from **Syncfusion** **Project** **Template** that you can see in the **New** **Project** pop-up as shown in the below image. Name it as SyncfusionMvcApplication1 and click **OK**
+1. In Visual Studio, create a New **Syncfusion** **ASP.NET** **MVC** **Application** project from **Syncfusion** **Project** **Template** that you can see in the **New** **Project** pop-up as shown in the following image. Name it as SyncfusionMvcApplication1 and click **OK**.
 
 	![](getting-started_images/getting-started_img3.png)
 
@@ -34,11 +34,11 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![](getting-started_images/getting-started_img4.png)
 	
-3. Next window containing the list of Syncfusion MVC controls will be shown. Choose the required controls and then click **Create**.
+3. Next window will be shown with the list of Syncfusion MVC controls. Choose the required controls and then click **Create**.
 
 	![](getting-started_images/getting-started_img5.png)
 	
-4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files
+4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files.
 
 	![](getting-started_images/getting-started_img6.png)
 	
@@ -50,7 +50,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
    ~~~
 
-6. Compile and execute the application. You can able to see the below output in the browser.
+6. Compile and execute the application. You can able to see the following output in the browser.
 
 	![](getting-started_images/getting-started_img7.png)
 	
@@ -77,21 +77,21 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
    Choose the assembly location:
 
-	1. Added From GAC - Refer the assemblies from the Global Assembly Cache
-	2. Added from Installed Location - Refer the assemblies from the Syncfusion Installed locations.
-    3. Add Referenced Assemblies to Solution - Copy and refer to the assemblies from project's solution file lib directory.
+	1. Added From GAC: Refer the assemblies from the Global Assembly Cache
+	2. Added from Installed Location: Refer the assemblies from the Syncfusion Installed locations.
+    3. Add Referenced Assemblies to Solution: Copy and refer to the assemblies from project's solution file lib directory.
 
    ![](getting-started_images/Project-Conversion_img3.jpeg)
     
    **Choose the Theme:**
    
-   The master page of project will be updated based on selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
+   The master page of project will be updated based on the selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
    
    ![](getting-started_images/Project-Conversion_img4.jpeg)
    
    **Choose CDN Support:**
 
-   The master page of the project will be updated based on required Syncfusion CDN links.
+   The master page of the project will be updated based on the required Syncfusion CDN links.
    
    ![](getting-started_images/Project-Conversion_img20.jpeg)
    
@@ -105,7 +105,7 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
    ![](getting-started_images/ProjectConversion_img5.jpeg)
    
-5. The **Project Backup** dialog will be opened. If click Yes it will backup the current project before converting it to Syncfusion project. If click No it will convert the project to Syncfusion project without backup. 
+5. The **Project Backup** dialog will be opened. If Yes is clicked, it will backup the current project before converting it to Syncfusion project. If No is clicked it will convert the project to Syncfusion project without backup.
    
    ![](getting-started_images/Project-Conversion_img6.jpeg)
 
@@ -120,17 +120,17 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
 ## Through Syncfusion NuGet Packages
 
-To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer the following steps 
+To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer to the following steps.
 
 1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](http://help.syncfusion.com/aspnetmvc/installation-and-deployment#configuring-syncfusion-nuget-packages-in-visual-studio)
 
-2. Once Configured the Packages source, search and install the **Syncfusion.AspNet.Mvc5** from **Package** **Manager** **console** using following commands
+2. Once Configured the Packages source, search and install the **Syncfusion.AspNet.Mvc5** from **Package** **Manager** **console** by using following commands.
 
    **PM>Install-Package Syncfusion.AspNet.Mvc5**
    
    ![](getting-started_images/getting-started_img1.png)
    
-3. The **Unobtrusive** setting is enabled in your applications web.config file by default, while initial creation. You need to change its value to **false** in your application as shown below,   
+3. While initial creation, by default, the **Unobtrusive** setting is enabled in your applications web.config file. You need to change its value to **false** in your application as shown in the follwoing:
 
    ~~~ cshtml
 
@@ -141,7 +141,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
    ~~~
 	  
-4. You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file
+4. You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
    ~~~ cshtml
 	</body>
@@ -152,15 +152,15 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
    ~~~		
 	  
 	
-   N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, then the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive) 
+   N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive).
 
-5. Syncfusion specific stylesheets are loaded into the **Content** folder of your application, include the below specified theme reference **(default-theme/ej.web.all.min.css)** file in the **~/Views/Shared/_Layout.cshtml** file, within the head section as this file contains the default theme styles applied for all the Syncfusion MVC controls.  
+5. Syncfusion specific stylesheets are loaded into the **Content** folder of your application, include the below specified theme reference **(default-theme/ej.web.all.min.css)** file in the **~/Views/Shared/_Layout.cshtml** file, within the head section as this file contains the default theme styles applied for all the Syncfusion MVC controls.
 
    ~~~ cshtml
    
 	<head>
 	    <title>@ViewBag.Title</title>
-	    @Styles.Render("~/Content/ej/web/bootstrap-theme/ej.web.all.min.css")    
+	    @Styles.Render("~/Content/ej/web/bootstrap-theme/ej.web.all.min.css")
 	</head>
 
    ~~~			
@@ -186,11 +186,11 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
    ~~~	
    
-	The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.  
+	The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
    
-	If your application contains duplicate/multiple references to the jQuery files, remove it as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.  
+	If your application contains duplicate/multiple references to the jQuery files, remove it as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
 
-7. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.   
+7. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
 	
    ~~~ cshtml
    
@@ -199,7 +199,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
    ~~~	
 
 
-8. Compile and execute the application. You can able to see the below output in the browser.	
+8. Compile and execute the application. You can able to see the below output in the browser.
 
 	![](getting-started_images/getting-started_img2.png)
 
@@ -207,19 +207,19 @@ For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget
 
 ## Manual Integration
 
-This topic mainly focuses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. Let’s look onto the procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application.
+This topic mainly focuses on how to integrate the Syncfusion ASP.NET MVC controls manually into the newly created/existing ASP.NET MVC application. The procedure for making use of any of our ASP.NET MVC controls within the ASP.NET MVC application are explained in the following.
 
 ### Creation of First ASP.NET MVC Application
 
-Follow the below steps to create a normal ASP.NET MVC application,
+Follow the below steps to create a normal ASP.NET MVC application.
 
-1.	Start the Visual Studio. Create a new MVC application by selecting File -> New -> Project and save it with a meaningful name as shown below,
+1.	Start the Visual Studio. Create a new MVC application by selecting File -> New -> Project and save it with a meaningful name as shown in the following.
 
 ![](getting-started_images/Manual1.png)
 
 2. Build and run your application by pressing Ctrl+F5.
 
-It’s time to add some other essential things to your application that allows you to make use of our Syncfusion ASP.NET MVC controls. For that, follow steps explained in the Existing Application section.
+It is time to add some other essential things to your application that allows you to make use of our Syncfusion ASP.NET MVC controls. For that, follow steps explained in the Existing Application section.
 
 ### For Existing Applications
 
@@ -227,7 +227,7 @@ To add our Syncfusion ASP.NET MVC controls to your existing application, open yo
 
 #### Adding the required StyleSheets
 
-To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer the required CSS files into your application. Copy all the required CSS files into your application from the following location,
+To render the Syncfusion ASP.NET MVC controls with its unique style and theme, it is necessary to refer to the required CSS files into your application. Copy all the required CSS files into your application from the following location.
 
 N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css\web
 N> For example, If you have installed the Essential Studio within C:\Program Files (x86), then navigate to the below location,
@@ -237,7 +237,7 @@ Navigate to above mentioned location, find the files as shown in the below image
 
 ![](getting-started_images/Manual2.png)
 
-Before pasting it into your application, create a folder structure with names ej/web within the Content folder of your application and place all the copied files into it as shown below,
+Before pasting it into your application, create a folder structure with names ej/web within the Content folder of your application and place all the copied files into it as shown in the following.
 
 ![](Getting-Started_images/Manual3.png)
 Solution Explorer - Project with CSS files copied into the Content folder
@@ -257,7 +257,7 @@ Once the CSS files are added in your application, include the reference to "ej.w
 
 ### Adding the required JavaScript files
 
-Adding the required JavaScript files into your application plays an important role, without which the Syncfusion controls cannot be created. It requires the following mandatory common script files,
+Adding the required JavaScript files into your application plays an important role, without that the Syncfusion controls cannot be created. It requires the following mandatory common script files.
 •	jquery.min.js ( 1.7.1 and later versions)
 •	jsrender.min.js
 
@@ -266,9 +266,9 @@ N> jQuery-2.1.4, jQuery-3.0.0 support has been given from ejVersion 13.2.0.29, 1
 
 •	ej.globalize.min.js library avails as built-in within ej.web.all.min.js file, therefore it is not necessary to externally refer it in your application (applicable for version 13.4.0.53 and higher). For version lower than 13.4.0.53, refer jQuery.globalize.min.js along with ej.web.all.min.js <BR>
 
-Apart from the above common scripts, it is also necessary to refer the ej.web.all.min.js file in your application, which plays a major role in control creation.
+Apart from the above common scripts, it is also necessary to refer the ej.web.all.min.js file in your application that plays a major role in control creation.
 
-The dependencies are available in the following locations of your machine. Please copy these files from location given
+The dependencies are available in the following locations of your machine. Please copy these files from location given.
 
 <table>
 <tr>
@@ -291,14 +291,14 @@ The dependencies are available in the following locations of your machine. Pleas
 
 N> Example for "Syncfusion Installed location" is "C:\Program Files (x86)\Syncfusion"
 
-Now, create a folder named `ej`, under the Scripts folder of your application and place the copied files ej.web.all.min.js into it as shown below,
+Now, create a folder named `ej`, under the Scripts folder of your application and place the copied files ej.web.all.min.js into it as shown in the following.
 
 ![](Getting-Started_images/Manual4.png)
 Solution Explorer - Script files copied into the Scripts folder of the project
 {:.caption}
 
-Once the scripts are added in your application, now it is necessary to include the reference to it in your application. This should be done within the Site.Master file, as we did previously for CSS files. 
-Add the below script references in the _Layout.cshtml file within the head section,
+Once the scripts are added in your application, now it is necessary to include the reference to it in your application. This should be done within the Site.Master file, as we did previously for CSS files.
+Add the following script references in the _Layout.cshtml file within the head section.
 
 {% highlight html %}
 
@@ -309,7 +309,7 @@ Add the below script references in the _Layout.cshtml file within the head secti
 
 {% endhighlight %}
 
-The **Unobtrusive** setting is enabled in your applications web.config file by default, while initial creation. You need to change its value to **false** in your application as shown below,   
+While initial creation, by default, the **Unobtrusive** setting is enabled in your applications web.config file. You need to change its value to **false** in your application as shown in the following.
 
    ~~~ cshtml
 
@@ -320,7 +320,7 @@ The **Unobtrusive** setting is enabled in your applications web.config file by d
 
    ~~~
 	  
-You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file
+You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
    ~~~ cshtml
 	</body>
@@ -331,12 +331,12 @@ You need to add the script manager code in the **_Layout.cshtml** file present w
    ~~~		
 	  
 	
-N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, then the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive) 
+N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive).
 
 
 ### CDN Link reference
 
-If you want to refer the CDN links instead of the direct script and CSS references in your application, then you need to make use of the below references in the Site.Master file,
+If you want to refer the CDN links instead of the direct script and CSS references in your application, you need to make use of the following references in the Site.Master file.
 
 {% highlight html %}
 
@@ -366,12 +366,12 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 
 ### Assembly Reference
 
-Refer the following assemblies in your newly created ASP.NET application, which allows you to use any of the Syncfusion ASP.NET controls within it.
+Refer the following assemblies in your newly created ASP.NET application that allows you to use any of the Syncfusion ASP.NET controls within it.
 
 * Syncfusion.EJ
 * Syncfusion.EJ.Web
 
-The reference to the Syncfusion assemblies can be added to your application in either of the following ways, 
+The reference to the Syncfusion assemblies can be added to your application in either of the following ways.
 -	Referring from GAC
 -	Referring from the installed location
 
@@ -392,7 +392,7 @@ Reference Manager Pop-up
 2.	Now the Reference Manager pop-up will appear on the screen. Select the Browse tab in it and navigate to the installed location of the Syncfusion Essential Studio package in your system. (As depicted in the below image.)
 
 N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
-N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location,
+N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the following location:
 N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 
 ![](Getting-Started_images/Manual6.png)
@@ -401,13 +401,13 @@ Reference Manager Pop-up with Browse button clicked
 
 N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
 
-3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC and Syncfusion.Core assemblies to your application from the below specified location,
+3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC, and Syncfusion.Core assemblies to your application from the following specified location.
 
 N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5 <BR>
 For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, <BR>
 C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5
 
-4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown below,
+4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown in the following.
 
 ![](Getting-Started_images/Manual7.png)
 Selected Assemblies added to the Project reference
@@ -434,7 +434,7 @@ In your application’s web.config file, add the below assembly information with
 
 {% endhighlight %}
 
-1.	Add the below DatePicker code as shown below in your view page,
+1.	Add the below DatePicker code in your view page as shown in the following.
 
 {% highlight html %}
 
@@ -444,7 +444,7 @@ In your application’s web.config file, add the below assembly information with
 
 N> Add the DatePicker code within the Content section, by removing the unwanted code within it.
 
-2. Finally build and run the project by pressing F5, so that you can now see the output similar to the below screenshot in your web browser,
+2. Finally build and run the project by pressing F5, so that you can now see the output similar to the following screenshot in your web browser.
 
 ![](Getting-Started_images/Manual8.png)
 DatePicker control displaying on the web browser
