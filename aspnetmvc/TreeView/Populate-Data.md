@@ -376,12 +376,12 @@ The nested object support is provided for the TreeView component. Please find th
             List<LoadData> load = new List<LoadData>();
             public ActionResult TreeViewFeatures()
             {
-                load.Add(new LoadData { Id = 1, Parent = 0, Text = new InnerData { fName = "Item 1" } });
-                load.Add(new LoadData { Id = 2, Parent = 0, Text = new InnerData { fName = "Item 2" } });
-                load.Add(new LoadData { Id = 3, Parent = 0, Text = new InnerData { fName = "Item 3" } });
-                load.Add(new LoadData { Id = 4, Parent = 1, Text = new InnerData { fName = "Item 1.1" } });
-                load.Add(new LoadData { Id = 5, Parent = 1, Text = new InnerData { fName = "Item 1.2" } });
-                load.Add(new LoadData { Id = 6, Parent = 3, Text = new InnerData { fName = "Item 3.1" } });
+                load.Add(new LoadData { Id = 1, Parent = 0, Text = new InnerData { nodeName = "Item 1" } });
+                load.Add(new LoadData { Id = 2, Parent = 0, Text = new InnerData { nodeName = "Item 2" } });
+                load.Add(new LoadData { Id = 3, Parent = 0, Text = new InnerData { nodeName = "Item 3" } });
+                load.Add(new LoadData { Id = 4, Parent = 1, Text = new InnerData { nodeName = "Item 1.1" } });
+                load.Add(new LoadData { Id = 5, Parent = 1, Text = new InnerData { nodeName = "Item 1.2" } });
+                load.Add(new LoadData { Id = 6, Parent = 3, Text = new InnerData { nodeName = "Item 3.1" } });
                 ViewBag.datasource = load;
                 return View();
             }
@@ -394,7 +394,7 @@ The nested object support is provided for the TreeView component. Please find th
         }
         public class InnerData
         {
-            public string fName { get; set; }
+            public string nodeName { get; set; }
         }
 
     {% endhighlight %}
@@ -412,7 +412,7 @@ Above data can be directly assigned to [DataSource](http://help.syncfusion.com/c
             field.Datasource((IEnumerable<LoadData>)ViewBag.datasource)
             .Id("Id")
             .ParentId("Parent")
-            .Text("Text.fName")
+            .Text("Text.nodeName")
         )
     )
     
