@@ -10,9 +10,9 @@ documentation: ug
 
 Localization is the process of customizing an application for given language and region.
 
-Find the steps to configure the Syncfusion Components to particular language from below
+Configure the Syncfusion Components to a particular language by the following steps.
 
-1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root
+1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root.
 
    ~~~ xml
    
@@ -22,7 +22,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
 
    ~~~
 
-2. Load the globalize culture file from **i18n** folder dynamically using below codes 
+2. Load the globalize culture file from **i18n** folder dynamically by using the following codes.
 
 
    ~~~ cshtml
@@ -32,12 +32,12 @@ Find the steps to configure the Syncfusion Components to particular language fro
    ~~~
    
    
-3. Download and refer the Syncfusion UI component localized text from [ej-global](https://github.com/syncfusion/ej-global/tree/master) repository.
+3. Download and refer to the Syncfusion UI component localized text from [ej-global](https://github.com/syncfusion/ej-global/tree/master) repository.
 
    
    ![](core-concepts_images/core-concepts_img1.png)
    
-4. Load the Localized text file from **localetexts** folder as like previous step   
+4. Load the Localized text file from **localetexts** folder like the previous step.
 
    ~~~ cshtml
    
@@ -45,7 +45,7 @@ Find the steps to configure the Syncfusion Components to particular language fro
 
    ~~~	
 
-5. Set the culture to Syncfusion UI components using **Locale** helper method as shown in below
+5. Set the culture to Syncfusion UI components using the **Locale** helper method as shown in the following:
   
   
    ~~~ cshtml
@@ -61,4 +61,4 @@ Find the steps to configure the Syncfusion Components to particular language fro
     )
    ~~~
    
-6. Compile and execute the application. You can able to see the below output in the browser
+6. Compile and execute the application. You can be able to see the following output in the browser.
