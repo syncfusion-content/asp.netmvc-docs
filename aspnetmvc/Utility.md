@@ -24,7 +24,7 @@ The Project Conversion is a Visual Studio add-in that converts an existing ASP.N
 The following steps help you to use the Syncfusion Project Conversion in the existing ASP.NET MVC (Web) Project.
 
 1. Open an existing Microsoft MVC Project or create a new Microsoft MVC Project.
-2. Right-click the Project and select Syncfusion VS Extensions. Choose the Convert to Syncfusion ASP.NET MVC (Web) Application. For more information, refer to the following screenshot.
+2. Right-click the Project and select Syncfusion VS Extensions. Then, choose the Convert to Syncfusion ASP.NET MVC (Web) Application. For more information, refer to the following screenshot.
 
    ![](Utility_images/ProjectConversion_img1.jpeg)
 

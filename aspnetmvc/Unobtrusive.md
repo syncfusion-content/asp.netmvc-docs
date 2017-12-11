@@ -9,7 +9,7 @@ documentation: ug
 
 # Unobtrusive
 
-Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the javascript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, [Unobtrusive JavaScript](http://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
+Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the javascript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, the [Unobtrusive JavaScript](http://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
 
 One of the main goal of the unobtrusive support is to achieve the clear separation of both the HTML content and behavior, so as to enhance the page loading time and to make the code updation easier. The **Essential JavaScript** have separate integration library to achieve the **Unobtrusive JS** support. To make use of Unobtrusive support with our Essential JavaScript components, it is necessary to refer to the **ej.unobtrusive.min.js** file in your application.
 
@@ -51,7 +51,7 @@ After setting the value as true, refer to the unobtrusive script file in the _La
 
 {% endhighlight %}
 
-N> The ej.unobtrusive.min.js script should be referred next to the ej.web.all.min.js file reference since it is dependent on it.
+N> The ej.unobtrusive.min.js script should be referred next to the ej.web.all.min.js file reference, since it is dependent on it.
 
 By default, it is necessary to add Script Manager code in the _Layout.cshtml file present within the ~/Views/Shared folder of your application.
 
@@ -65,9 +65,9 @@ By default, it is necessary to add Script Manager code in the _Layout.cshtml fil
 {% endhighlight %}
 
 N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application.<BR>
-If unobtrusive is set to true in the application, then the script manager can be excluded, as the control is initialized by using HTML5 attributes.
+If unobtrusive is set to true in the application, the script manager can be excluded, as the control is initialized by using HTML5 attributes.
 
-Let us see a simple example using DropDownList control.
+A simple example by using the DropDownList control is as follows:
 
 Render the DropDownList control as follows in your view page and enable the unobtrusive mode in your application.
 
@@ -92,7 +92,7 @@ When the above code is executed on the browser, the DropDownList control will be
 
 ## Enabling Client Side Validation
 
-We have to refer to the required jQuery validation scripts to perform Client-side Validation before postback when form is submitted. This can be enabled or disabled by ClientValidationEnabled key in app settings of web.config file.
+Refer to the required jQuery validation scripts to perform Client-side Validation before postback, when the form is submitted. This can be enabled or disabled by ClientValidationEnabled key in app settings of web.config file.
 
 In this section, how to perform Client-Side Validation for DropDownList control with DataAnnotations attribute is explained.
 
@@ -115,7 +115,7 @@ Define the view model for DropDownList control as follows.
 
 {% endhighlight %}
 
-Four sets of files are needed to implement Unobtrusive.
+Four sets of files are needed to implement the Unobtrusive.
 
 •	The jQuery library
 •	The jQuery Validate plugin
@@ -143,7 +143,7 @@ Refer to the necessary scripts files in your layout.cshtml page.
 
 {% endhighlight %}
 
-After that you need to create the controller’s action methods. These render views on the UI and bind a model with the view. So let’s create a controller as follows.
+After that you need to create the controller’s action methods. These render views on the UI and bind a model with the view. So let us create a controller as follows:
 
 {% highlight html %}
 
@@ -196,8 +196,8 @@ When the above code is executed on the browser, the DropDownList control will be
 
 ![](Core_images/unobtrusive3.png)
 
-Now we've got some interesting new attributes to look at:
+Now, some interesting new attributes are there to look at:
 •	data-val specifies that the DropDownList needs validation.
-•	data-val-required is the error message to be displayed if a value is not provided.
+•	data-val-required is the error message to be displayed, if a value is not provided.
 
-This is part of the magic of Unobtrusive: it uses HTML5-compatible "data-" attributes to store all of the information it needs to perform validation. This is why you don't need to use any other code besides attributes to enable client-side validation with this library.
+This is part of the magic of Unobtrusive: it uses HTML5-compatible "data-" attributes to store all the information it needs to perform validation. This is why you don't need to use any other code besides attributes to enable client-side validation with this library.

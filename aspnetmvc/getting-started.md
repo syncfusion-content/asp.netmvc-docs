@@ -188,7 +188,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
    
 	The order of the reference to the script files made in the above section should be maintained in the same manner as mentioned above.
    
-	If your application contains duplicate/multiple references to the jQuery files, remove it as the explicit reference to the **jquery-1.10.2.min.js** script file is added to the application as specified above.
+	If your application contains duplicate/multiple references to the jQuery files, remove it as the explicit reference to the **jquery-1.10.2.min.js** script file that is added to the application as specified above.
 
 7. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
 	
