@@ -10,29 +10,29 @@ keywords: Strongly-Typed HTML Helper, NumericTextBox, NumericTextBoxFor
 
 # Strongly-Typed HTML Helper
 
-The Syncfusion editor controls supports strongly typed HTML helpers represented by lambda expressions that have model or template passed into the view. The Extension method is used to get a value from the model.
+The Syncfusion editor controls supports the strongly typed HTML helpers represented by lambda expressions that have the model or template passed into the view. The Extension method is used to get a value from the model.
 
-The Strongly-Typed HTML helper (i.e., NumericTextBox) takes lambda as a parameter that tells the helper with element of the model to use in the typed view. 
+The Strongly-Typed HTML helper (i.e., NumericTextBox) takes lambda as a parameter that tells the helper, which element of the model to be used in the typed view.
 
-Strongly typed views are used for rendering specific types of model objects, instead of using the general ViewData structure.
+The Strongly typed views are used for rendering specific types of model objects, instead of using the general ViewData structure.
 
-The following list of controls supports Strongly-Typed HTML Helper
+The following list of controls supports the Strongly-Typed HTML Helper:
 
-* Autocomplete.
+* Autocomplete
 * Checkbox and Radio Button
-* DatePicker.
+* DatePicker
 * DateTimePicker
 * DropDownList
-* Mask Edit.
-* Numeric, Currency, and Percentage Textbox.
+* Mask Edit
+* Numeric, Currency, and Percentage Textbox
 * RichTextEditor
 * TimePicker
 
-The following steps explain how to use the strongly typed helpers to create a NumericTextBox
+The following steps explain how to use the strongly typed helpers to create a NumericTextBox.
 
-The NumericTextBox control supports strongly typed HTML helpers which uses lambda expression to refer models or view models passed to a view template. These helpers allow you to define the value of the NumericTextBoxFor from the model. 
+The NumericTextBox control supports strongly typed HTML helpers that uses lambda expression to refer to the models or view models passed to a view template. These helpers allows you to define the value of the NumericTextBoxFor from the model.
 
-Add a class named “EditorValue” in the Models folder and replace the code with the following code:
+Add a class name “EditorValue” in the Models folder and replace the code with the following code:
 
 {% highlight html %}
 
@@ -48,7 +48,7 @@ Add a class named “EditorValue” in the Models folder and replace the code wi
     
 {% endhighlight %}
 
-Create an action method that renders NumericTextBox on the view page, and passes the model to be bound to the view page.
+Create an action method that renders the NumericTextBox on the view page, and passes the model to be bound to the view page.
 
 {% highlight C# %}
 
@@ -82,8 +82,8 @@ In View, invoke the strongly typed NumericTextBoxFor helper with the lambda expr
 
 The following steps explain how to get the values by using the Scaffolding methods in Post back.
 
-1. Create an action method, FormPost that handles the Post request and processes the data. 
-In the action method, you can pass the model as the parameter. That model has the NumericTexBox’s value.
+1. Create an action method, FormPost that handles the Post request and processes the data.
+In the action method, you can pass the model as the parameter and that model has the NumericTexBox’s value.
 
 {% highlight C# %}
 
@@ -99,15 +99,15 @@ In the action method, you can pass the model as the parameter. That model has th
 
 {% endhighlight %}
 
-Upon clicking to the button the Post method will be triggered. In that, the selected value will be obtained as follows.
+On clicking the button, the Post method will be triggered. In that, the selected value will be obtained as follows.
 
 ![](stronlyTyped_images/img2.jpg)
 
 ## Client Side Validation
 
-With the client-side validation, the input data is checked as soon as they are submitted, so there is no postback to the server and there is no page refresh.
+With the client-side validation, the input data is checked as soon as they are submitted, so there is no postback to the server and no page refresh.
 
-By default, client-side validation becomes enabled. But it’s can easily enable or disable by the writing of the following app setting code snippet in the web.config file.
+By default, client-side validation is enabled. But it can be easily enabled or disabled by the writing of the following app setting code snippet in the web.config file.
 
 {% highlight html %}
 
@@ -119,7 +119,7 @@ By default, client-side validation becomes enabled. But it’s can easily enable
 {% endhighlight %}
 
 
-N> Can enable client side validation for specific view only by adding Html.EnableClientValidation(true) at the top in view page.
+N> Enable client side validation for specific view only by adding the Html.EnableClientValidation(true) at the top in view page.
 
 After setting the value as true, refer to the jQuery validation script file in the _Layout page as shown in the following code example.
 
@@ -131,9 +131,9 @@ After setting the value as true, refer to the jQuery validation script file in t
 
 {% endhighlight %}
 
-The jQuery validation plug-in takes advantage of the Data Annotation attributes defined in the model. 
+The jQuery validation plug-in takes the advantage of the Data Annotation attributes defined in the model.
 
-Step 1: Add the below namespace to “EditorValue” model.
+Step 1: Add the following namespace to the “EditorValue” model.
 
 {% highlight html %}
 
@@ -141,12 +141,12 @@ Step 1: Add the below namespace to “EditorValue” model.
     
 {% endhighlight %}
 
-Data Annotations allow us to decorate model classes with metadata. This metadata describes a set of rules that are used to validate a property. 
+The Data Annotations allows to decorate model classes with the metadata. This metadata describes a set of rules that are used to validate a property.
 
-We’ll use the following Data Annotation attributes for the Numeric Textbox.
-Required – Indicates that the property is a required field.
+The following Data Annotation attributes are used for the Numeric Textbox.
+Required: Indicates that the property is a required field.
 
-Step 2: Next, Update the number property of the “EditorValue” class as “Required Field” by adding the following line
+Step 2: Next, Update the number property of the “EditorValue” class as “Required Field” by adding the following line.
 
 {% highlight C# %}
 
@@ -164,7 +164,7 @@ Step 2: Next, Update the number property of the “EditorValue” class as “Re
 
 {% endhighlight %}
 
-Step 3: Modify the view page as follows
+Step 3: Modify the view page as follows:
 
 {% highlight Razor %}
 
@@ -183,11 +183,11 @@ Step 3: Modify the view page as follows
 
 ## Server Side Validation
 
-In the server-side validation, the page must be submitted via a postback to be validated on the server and if the model data is not valid, then the server sends a response back to the client.
+In the server-side validation, the page must be submitted via a postback to validate on the server and if the model data is not valid, the server sends a response back to the client.
 
-The best way to validate a model by using Data Annotations which has a set of attributes and classes defined in the System.ComponentModel.DataAnnotations assembly.
+The best way to validate a model is by using the Data Annotations that has a set of attributes and classes defined in the System.ComponentModel.DataAnnotations assembly.
 
-Step 1: Add the below namespace to “EditorValue” model.
+Step 1: Add the following namespace to the “EditorValue” model.
 
 {% highlight html %}
 
@@ -195,10 +195,10 @@ Step 1: Add the below namespace to “EditorValue” model.
     
 {% endhighlight %}
 
-Data Annotations allow us to decorate model classes with metadata. This metadata describes a set of rules that are used to validate a property. 
+The Data Annotations allows to decorate model classes with the metadata. This metadata describes a set of rules that are used to validate a property.
 
-We’ll use the following Data Annotation attributes for the Numeric Textbox.
-Required – Indicates that the property is a required field.
+The following Data Annotation attributes are used for the Numeric Textbox.
+Required: Indicates that the property is a required field.
 
 Step 2: Next, Update the number property of the “EditorValue” class as “Required Field” by adding the following line
 
@@ -218,11 +218,11 @@ Step 2: Next, Update the number property of the “EditorValue” class as “Re
 
 {% endhighlight %}
 
-Step 3: Modify the view page as follows
+Step 3: Modify the view page as follows:
 
 {% highlight Razor %}
 
-    @model ComplexBinding.Models.EditorValue       
+    @model ComplexBinding.Models.EditorValue
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
@@ -233,13 +233,13 @@ Step 3: Modify the view page as follows
     
 {% endhighlight %}
 
-When you press the “PayBill” button on this page then it will post the data to the server and the code written with in EditorFor action will validate the NumericTextBox value by checking ModelState.IsValid property. If NumericTextBox value is not selected, then ModelState.IsValid will return false and display error message.
+When you press the “PayBill” button on this page then it will post the data to the server and the code written with in EditorFor action will validate the NumericTextBox value by checking the ModelState.IsValid property. If the NumericTextBox value is not selected, the ModelState.IsValid will return false and display error message.
 
 ![](stronlyTyped_images/img3.jpg)
 
 ## Complex Model Binding
 
-The lambda expressions are quite powerful, allowing you to build quite complex edit models and have model binding put everything back together again. A complex view model type such as:
+The lambda expressions are quite powerful, allows you to build quite complex edit models and have model binding that put everything back together again. A complex view model type such as:
 
 {% highlight C# %}
 
@@ -313,6 +313,6 @@ When the form is submitted, it will perform an HTTP Post request to the controll
 
 {% endhighlight %}
 
-In code behind, the selected value of NumericTextBox will be obtained as follows
+In the above code, the selected value of NumericTextBox will be obtained as follows:
 
 ![](stronlyTyped_images/img5.jpg)
