@@ -11,15 +11,16 @@ documentation: ug
 
 As per MSDN, “Globalization involves designing and developing a world-ready app that supports localized interfaces and regional data for users in the multiple cultures”.
 
-The **ejGlobalize** plugin provides options parse numeric, currency and date values using culture file. The **assets/scripts/i18n** contains more than 350 cultures currently. You can load the particular culture into application using **preferredCulture** method.
+The **ejGlobalize** plugin provides options parse numeric, currency, and date values by using culture file. The **assets/scripts/i18n** contains more than 350 cultures currently. You can load the particular culture into application by using the **preferredCulture** method.
 
-The Internationalize any of our Syncfusion components/page into particular culture, please follow the below steps
 
-1. Add the reference ej.globalize.min.js script into your application. 
+To Internationalize any of our Syncfusion components/page into particular culture, please follow the below steps:
 
-   N> **ej.globalize.min.js** library already avails in within **ej.web.all.min.js** file, therefore it is not necessary to externally refer it in your application if you have referred **ej.web.all.min.js** already. For version lower than 13.4.0.53 refer **jQuery.globalize.min.js** along with **ej.web.all.min.js**
+1. Add the reference ej.globalize.min.js script into your application.
 
-2. Add the required culture file into page which is located in **assets/scripts/i18n**.
+   N> The **ej.globalize.min.js** library already avails in within **ej.web.all.min.js** file, therefore it is not necessary to externally refer it in your application if you have referred **ej.web.all.min.js** already. For version lower than 13.4.0.53 refer to the **jQuery.globalize.min.js** along with the **ej.web.all.min.js**.
+
+2. Add the required culture file into the page which is located in **assets/scripts/i18n**.
 
    ~~~ cshtml
    
@@ -28,7 +29,7 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 		
    ~~~
 
-3. Set the culture by using  **preferredCulture()** method. Here we used French (fr-FR) culture as current culture   
+3. Set the culture by using the **preferredCulture()** method. Here, French (fr-FR) culture is used as current culture.
 
    ~~~ cshtml
    
@@ -40,7 +41,7 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 
    ~~~
    
-4. Use **format()** method to format the object like numbers, date, price etc…   
+4. Use **format()** method to format the object like numbers, date, price, etc.
 
    ~~~ cshtml
    
@@ -65,9 +66,9 @@ The Internationalize any of our Syncfusion components/page into particular cultu
 
 ## Dynamic Globalization
 
-Find the steps to globalize the MVC application from below
+The steps to globalize the MVC application are as follows:
 
-1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root
+1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root.
 
    ~~~ xml
    
@@ -77,7 +78,7 @@ Find the steps to globalize the MVC application from below
 
    ~~~
 
-2. Load the culture file based on current culture which is specified in **web.config** as shown in below
+2. Load the culture file based on current culture that is specified in **web.config** as shown in the following.
 
 
    ~~~ cshtml

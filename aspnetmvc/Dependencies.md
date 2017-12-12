@@ -9,7 +9,7 @@ documentation: ug
 
 # Dependencies
 
-Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 3 common libraries –
+Other than the above specified assemblies, Scripts and StyleSheets are the two essential requirements to render the Syncfusion components. The components mainly relies on the following 3 common libraries.
 
 * jQuery 1.7.1 and later versions
 * JsRender
@@ -21,27 +21,27 @@ Other than the above specified assemblies, Scripts and StyleSheets are the two e
 
 ## Scripts
 
-* All the required scripts for rendering a component is available in a minified format in the below specified location, 
+* All the required scripts for rendering a component is available in a minified format in the following specified location.
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\ JavaScript\assets`
 
-  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86)**, then navigate to the below location,_
+  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86)**, navigate to the below location._
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets`
 
-* When you navigate to the above location, you can see the folder named **external**, where the common script libraries (like jQuery, jQuery.easing, JsRender and so on) are available and another folder named **scripts** within which the Syncfusion components UI scripts are available in a minified format. You can copy the required scripts from the location depicted below and use it in your application.
+* When you navigate to the above location, you can see the folder named **external**, where the common script libraries (like jQuery, jQuery.easing, JsRender, and so on) are available and in the **scripts** folder, the Syncfusion components UI scripts are available in a minified format. You can copy the required scripts from the location depicted below and use it in your application.
 
   ![](Dependencies_images/Dependencies_img1.jpeg)
 
 ## StyleSheet
 
-* The stylesheets required for supporting the theming and styling of the Syncfusion components (both mobile and web) is available in a minified format in the below specified location, 
+* The stylesheets required for supporting the theming and styling of the Syncfusion components (both mobile and web) is available in a minified format in the following specified location.
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\ JavaScript\assets\css`
 
-  _**For** **example**, If you have installed the Essential Studio package within **C:\Program Files (x86),** then navigate to the below location,_
+  _**For** **example**, If you have installed the Essential Studio package within **C:\Program Files (x86),** navigate to the following location,_
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\css`
 
-* When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related CSS files are present within the **mobile** folder and all the CSS files related to web components are availed within the **web** folder. You can copy the required CSS files from the location depicted below and use it in your application.
+* When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related CSS files are present within the **mobile** folder and all the CSS files related to web components are available within the **web** folder. You can copy the required CSS files from the location depicted below and use it in your application.
 
   ![](Dependencies_images/Dependencies_img2.jpeg)
 
@@ -59,7 +59,7 @@ You have to include the common-images folder in the specified theme folder for d
 
 **For example**:
 
-“default-theme” folder CSS which contains the “ej.widgets.all.min.css/ej.web.all.min.css” and “ej.theme.min.css” file. The “ej.widgets.core.min.css” file is in the outside of the default theme folder as shown below:
+The “default-theme” folder CSS contains the “ej.widgets.all.min.css/ej.web.all.min.css” and “ej.theme.min.css” files. The “ej.widgets.core.min.css” file is outside the default theme folder as shown in the following:
 
 ![](IconLibrary_images/themefolder.png)
 
@@ -142,7 +142,7 @@ Execute the above code to render the following output.
 
 **Step 3:**
 
-The complete list of EJ icons are listed in the following table. You have to use the below class names prefix with e- in your application.
+The complete list of EJ icons are listed in the following table. You have to use the following class names prefix with e- in your application.
 
   <style type="text/css" class="cssStyles"> 
       table {
@@ -153,7 +153,7 @@ The complete list of EJ icons are listed in the following table. You have to use
         text-align:center;
        }
 	  .spriteimage {
-         background-image: url('IconLibrary_images/spritesheet.png');			
+         background-image: url('IconLibrary_images/spritesheet.png');
 		 height: 50px;
 		 width: 50px;
 		 background-repeat: no-repeat;
