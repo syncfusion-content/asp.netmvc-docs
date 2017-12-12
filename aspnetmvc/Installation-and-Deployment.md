@@ -159,7 +159,7 @@ Perform the following steps to install the Syncfusion Bower Package via command 
 2. Then run the command Bower install <package name>.
 
    ~~~
-   bower install syncfusion-javascript
+   Bower install syncfusion-javascript
    ~~~
    
    ![](Installation-and-Deployment_images/Installation-and-Deployment_img1.jpeg)
@@ -197,7 +197,7 @@ You can install the Syncfusion Bower package from a local directory. To perform 
 To update the installed Bower packages, run the command Bower update <package name>.
 
 ~~~
-bower update syncfusion-javascript
+Bower update syncfusion-javascript
 ~~~
 
 ![](Installation-and-Deployment_images/Installation-and-Deployment_img6.jpeg)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Unobtrusive
 
-Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the javascript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, the [Unobtrusive JavaScript](http://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
+Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the JavaScript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, the [Unobtrusive JavaScript](http://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
 
 One of the main goal of the unobtrusive support is to achieve the clear separation of both the HTML content and behavior, so as to enhance the page loading time and to make the code updation easier. The **Essential JavaScript** have separate integration library to achieve the **Unobtrusive JS** support. To make use of Unobtrusive support with our Essential JavaScript components, it is necessary to refer to the **ej.unobtrusive.min.js** file in your application.
 

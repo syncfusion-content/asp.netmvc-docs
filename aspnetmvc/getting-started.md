@@ -130,7 +130,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
    
    ![](getting-started_images/getting-started_img1.png)
    
-3. While initial creation, by default, the **Unobtrusive** setting is enabled in your applications web.config file. You need to change its value to **false** in your application as shown in the follwoing:
+3. While initial creation, by default, the **Unobtrusive** setting is enabled in your applications web.config file. You need to change its value to **false** in your application as shown in the following:
 
    ~~~ cshtml
 
